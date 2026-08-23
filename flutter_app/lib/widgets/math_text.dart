@@ -33,8 +33,9 @@ class MathFormattedText extends StatelessWidget {
     s = s.replaceAll(r'\downarrow', '↓');
     s = s.replaceAll(r'\rightarrow', '→');
     s = s.replaceAll(r'\longrightarrow', '→');
+    s = s.replaceAll(r'\rightleftharpoons', '⇌');
 
-    // 3️⃣ Fix Complex Arrow Tags
+    // 3️⃣ Fix Complex Arrow Tags & Oversets
     s = s.replaceAllMapped(
       RegExp(r'\\overset\{\s*\\?text\{([^}]+)\}\s*\}\s*\{\s*\\?(?:long)?rightarrow\s*\}'),
       (m) => ' ⎯(${m.group(1)})→ ',
@@ -44,9 +45,9 @@ class MathFormattedText extends StatelessWidget {
       (m) => ' ⎯(${m.group(1)})→ ',
     );
 
-    // 4️⃣ Fix Single Elemental Names in Dollars ($Al$, $Fe$, $Zn$, $AgBr$)
-    s = s.replaceAllMapped(RegExp(r'\$([A-Z][a-z]?)\$'), (m) => m.group(1)!);
-    s = s.replaceAllMapped(RegExp(r'\$([A-Z][a-z]?[A-Z][a-z]?)\$'), (m) => m.group(1)!);
+    // 4️⃣ Fix Broken Dollar Encapsulations like ($NaNO_3$), ($KNO_3$), ($Fe_3O_4 / Fe_2O_3$), ($K_2O$), ($Al_2O_3$)
+    s = s.replaceAllMapped(RegExp(r'\(\s*\$([^$]+)\$\s*\)'), (m) => '(${m.group(1)})');
+    s = s.replaceAllMapped(RegExp(r'\[\s*\$([^$]+)\$\s*\]'), (m) => '[${m.group(1)}]');
 
     // 5️⃣ Universal Subscript Mapping (Both inside & outside math mode)
     final Map<String, String> subscriptMap = {
@@ -54,7 +55,7 @@ class MathFormattedText extends StatelessWidget {
       '_5': '₅', '_6': '₆', '_7': '₇', '_8': '₈', '_9': '₉',
     };
 
-    // Replace all broken OCR subscripts like Na_2S_2O_3 -> Na₂S₂O₃, Al_2O_3 -> Al₂O₃, H_2O -> H₂O
+    // Replace all broken OCR subscripts (Na_2S_2O_3 -> Na₂S₂O₃, NaNO_3 -> NaNO₃, KNO_3 -> KNO₃, Fe_3O_4 -> Fe₃O₄)
     subscriptMap.forEach((key, val) {
       s = s.replaceAll(key, val);
     });
@@ -68,7 +69,25 @@ class MathFormattedText extends StatelessWidget {
       return '${m.group(1)}$digits';
     });
 
-    // 7️⃣ Unwrap Math & Fix Dollars
+    // 7️⃣ Fix Single Element / Formula Blocks in Dollars ($Al$, $Fe$, $Zn$, $NaNO₃$, $KNO₃$)
+    s = s.replaceAllMapped(RegExp(r'\$([A-Za-z₀-₉]+)\$'), (m) => m.group(1)!);
+    s = s.replaceAllMapped(RegExp(r'\$([A-Za-z₀-₉\s/]+)\$'), (m) => m.group(1)!);
+
+    // 8️⃣ Fix Ranges, Degree & Enthalpy Spacing
+    s = s.replaceAll(r'^\circ\text{C}', '°C');
+    s = s.replaceAll(r'^\circ\text{ C}', '°C');
+    s = s.replaceAll(r'^\circ C', '°C');
+    s = s.replaceAll(r'^\circ', '°');
+    s = s.replaceAll(r'\circ', '°');
+    s = s.replaceAll(r'\sim', '~');
+    s = s.replaceAll(r'\Delta H = -92.4\text{kJ/mol}', 'ΔH = -92.4 kJ/mol');
+    s = s.replaceAll(r'\Delta H = -92.4kJ/mol', 'ΔH = -92.4 kJ/mol');
+    s = s.replaceAll(r'\Delta', 'Δ');
+    s = s.replaceAll(r'\text{kJ/mol}', 'kJ/mol');
+    s = s.replaceAll(r'\text{atm}', 'atm');
+    s = s.replaceAllMapped(RegExp(r'([0-9]+)\s*°\s*C\s*aur\s*~?\s*([0-9]+)\s*atm'), (m) => '${m.group(1)}°C aur ~ ${m.group(2)} atm');
+
+    // 9️⃣ Unwrap Math & Clean Leftovers
     s = s.replaceAll(r'$$', '');
     s = s.replaceAllMapped(RegExp(r'\$\s+'), (m) => r'$');
     s = s.replaceAllMapped(RegExp(r'\s+\$'), (m) => r'$');
