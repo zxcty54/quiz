@@ -49,38 +49,39 @@ class Question {
     return options.isNotEmpty ? options : ["Option text not available."];
   }
 
-  // 💡 SMART EXPLANATION GETTER (Handles Bilingual Explanations ee & eh)
+  // 💡 SMART EXPLANATION GETTER (Handles Direct 'e' and Bilingual 'ee'/'eh')
   String getExplanation(bool isHindi) {
     if (isHindi) {
       if (eh != null && eh!.trim().isNotEmpty) return eh!;
+      if (explanation.trim().isNotEmpty) return explanation;
       if (ee != null && ee!.trim().isNotEmpty) return ee!;
     } else {
       if (ee != null && ee!.trim().isNotEmpty) return ee!;
+      if (explanation.trim().isNotEmpty) return explanation;
       if (eh != null && eh!.trim().isNotEmpty) return eh!;
     }
     return explanation.trim().isNotEmpty ? explanation : "Explanation not available.";
   }
 
-  // 🛡️ COMPATIBILITY GETTERS (Purani aur nayi dono screens ke liye safe)
+  // 🛡️ COMPATIBILITY GETTERS
   String get question => qe.isNotEmpty ? qe : (qh ?? '');
+  String get questionHindi => qh;
   String get questionText => getText(false);
   int get answer => answerIndex;
   int get correctOptionIndex => answerIndex;
+  String? get subject => null;
 
+  // 🚀 DESERIALIZER: JSON -> Question
   factory Question.fromJson(Map<String, dynamic> json) {
-    // 1. Question Text Parsing (qe / qh / q / question)
     String mainQe = json['qe'] ?? json['q'] ?? json['question'] ?? '';
-    String? mainQh = json['qh'];
+    String? mainQh = json['qh'] ?? json['question_hindi'];
 
-    // 2. Statements List Parsing (se / sh)
     List<String>? stmtE = json['se'] != null ? List<String>.from(json['se']) : null;
     List<String>? stmtH = json['sh'] != null ? List<String>.from(json['sh']) : null;
 
-    // 3. Bilingual Options Parsing (oe / oh)
     List<String>? optsE = json['oe'] != null ? List<String>.from(json['oe']) : null;
     List<String>? optsH = json['oh'] != null ? List<String>.from(json['oh']) : null;
 
-    // 4. Default Options Fallback Parsing (o / options)
     List<String> opts = [];
     if (json['o'] != null) {
       opts = List<String>.from(json['o'].map((item) => item.toString().split('|')[0].trim()));
@@ -92,15 +93,15 @@ class Question {
       opts = optsH;
     }
 
-    // 5. Answer Index Parsing (a / answer)
     int ansIdx = 0;
     if (json['a'] != null) {
       ansIdx = json['a'] is int ? json['a'] : int.tryParse(json['a'].toString()) ?? 0;
+    } else if (json['answerIndex'] != null) {
+      ansIdx = json['answerIndex'] is int ? json['answerIndex'] : int.tryParse(json['answerIndex'].toString()) ?? 0;
     } else if (json['answer'] != null) {
       ansIdx = json['answer'] is int ? json['answer'] : int.tryParse(json['answer'].toString()) ?? 0;
     }
 
-    // 6. Explanation Parsing (ee / eh / e / explanation)
     String exp = json['e'] ?? json['explanation'] ?? '';
     String? expE = json['ee'];
     String? expH = json['eh'];
@@ -118,5 +119,24 @@ class Question {
       ee: expE,
       eh: expH,
     );
+  }
+
+  // 💾 SERIALIZER: Question -> JSON (Fixes Build Failure)
+  Map<String, dynamic> toJson() {
+    return {
+      'qe': qe,
+      'qh': qh,
+      'se': se,
+      'sh': sh,
+      'oe': oe,
+      'oh': oh,
+      'options': options,
+      'answerIndex': answerIndex,
+      'a': answerIndex,
+      'explanation': explanation,
+      'e': explanation,
+      'ee': ee,
+      'eh': eh,
+    };
   }
 }
