@@ -53,8 +53,8 @@
       "5",
       "6"
     ],
-    "a": 1,
-    "e": "Inclined plane mirrors ke beech multiple reflections se banne wale images ki sankhya geometric formula $m = \\frac{360^\\circ}{\\theta}$ par depend karti hai.\n\n• First step: $m = \\frac{360^\\circ}{72^\\circ} = 5$ (jo ki ek odd integer hai).\n• Option 1 is Incorrect because 3 tab banta jab $\\theta = 90^\\circ$ hota.\n• Option 2 is Correct because standard optical convention ke anusaar symmetric placement par images $n = m - 1 = 4$ bante hain; par agar standard multiple reflection overlap consider kiya jaye toh specific edge conditions test hoti hain.\n• Option 3 is Incorrect because symmetrical placement par $n = m - 1$ rule strictly apply hota hai.\n• Option 4 is Incorrect because 6 kisi bhi standard condition mein calculate nahi hota.\nExaminers $m = \\frac{360^\\circ}{\\theta}$ even aane par ($n = m - 1$) aur odd aane par symmetry/asymmetry cases ke beech mathematical trap set karte hain."
+    "a": 2,
+    "e": "Inclined plane mirrors ke beech multiple reflections se banne wale images ki sankhya geometric formula $m = \\frac{360^\\circ}{\\theta}$ par depend karti hai.\n\n• Calculation: $m = \\frac{360^\\circ}{72^\\circ} = 5$ (jo ki ek odd integer hai).\n• Rule: Jab $m$ odd integer ho:\n  1. Agar object symmetric position (angle bisector) par ho, toh $n = m - 1 = 4$ images bante hain.\n  2. Agar object asymmetric position (not on angle bisector) par ho, toh $n = m = 5$ images bante hain.\n• Isliye asymmetric placement ke liye correct number of images 5 hai (Option 3 / Index 2)."
   },
   {
     "p_id": "bpsc_phys_m32_04",
@@ -73,7 +73,7 @@
       "2H"
     ],
     "a": 1,
-    "e": "Plane mirror mein reflection laws ($\tangle i = \tangle r$) aur similar triangles ki geometry image field of view ko determine karti hai.\n\n• Option 1 is Incorrect because vyakti ko apni full image dekhne ke liye apne barabar lambe mirror ki zaroorat nahi hoti.\n• Option 2 is Correct because head ke top aur feet se aane wali light rays eye mein reflect hone ke liye mirror ka vertical length vyakti ki total height ka theek aadha ($H/2$) hona chahiye, aur yeh mirror person ke distance se completely independent hota hai.\n• Option 3 is Incorrect because $H/4$ par full image visible nahi hogi.\n• Option 4 is Incorrect because $2H$ unnecessary large dimension hai.\nCommon misconception: Students aksar sochte hain ki dur khade hone par chhota mirror bhi chalega, jabki minimum height hamesha strictly $H/2$ rehti hai."
+    "e": "Plane mirror mein reflection laws ($\\angle i = \\angle r$) aur similar triangles ki geometry image field of view ko determine karti hai.\n\n• Option 1 is Incorrect because vyakti ko apni full image dekhne ke liye apne barabar lambe mirror ki zaroorat nahi hoti.\n• Option 2 is Correct because head ke top aur feet se aane wali light rays eye mein reflect hone ke liye mirror ka vertical length vyakti ki total height ka theek aadha ($H/2$) hona chahiye, aur yeh mirror person ke distance se completely independent hota hai.\n• Option 3 is Incorrect because $H/4$ par full image visible nahi hogi.\n• Option 4 is Incorrect because $2H$ unnecessary large dimension hai.\nCommon misconception: Students aksar sochte hain ki dur khade hone par chhota mirror bhi chalega, jabki minimum height hamesha strictly $H/2$ rehti hai."
   },
   {
     "p_id": "bpsc_phys_m32_05",
@@ -419,8 +419,8 @@
   },
   {
     "p_id": "bpsc_phys_m33_03",
-    "qe": "A glass convex lens ($\tmu_{\ttext{lens}}$) is completely immersed in a liquid whose refractive index is strictly greater than that of the lens material ($\tmu_{\ttext{liquid}} > \tmu_{\ttext{lens}}$). How does the behavior and nature of the lens change inside this liquid?",
-    "qh": "एक कांच का उत्तल लेंस ($\tmu_{\ttext{lens}}$) एक ऐसे द्रव में पूरी तरह से डुबोया जाता है जिसका अपवर्तनांक लेंस सामग्री के अपवर्तनांक से सख्ती से अधिक है ($\tmu_{\ttext{liquid}} > \tmu_{\ttext{lens}}$)। इस द्रव के भीतर लेंस का व्यवहार और प्रकृति कैसे बदलती है?",
+    "qe": "A glass convex lens ($\\mu_{\\text{lens}}$) is completely immersed in a liquid whose refractive index is strictly greater than that of the lens material ($\\mu_{\\text{liquid}} > \\mu_{\\text{lens}}$). How does the behavior and nature of the lens change inside this liquid?",
+    "qh": "एक कांच का उत्तल लेंस ($\\mu_{\\text{lens}}$) एक ऐसे द्रव में पूरी तरह से डुबोया जाता है जिसका अपवर्तनांक लेंस सामग्री के अपवर्तनांक से सख्ती से अधिक है ($\\mu_{\\text{liquid}} > \\mu_{\\text{lens}}$)। इस द्रव के भीतर लेंस का व्यवहार और प्रकृति कैसे बदलती है?",
     "oe": [
       "Its focal length increases slightly, but it continues to act as a converging lens.",
       "Its focal length turns negative, and its nature flips completely: the convex lens begins behaving like a diverging (concave) lens.",
@@ -438,8 +438,8 @@
   },
   {
     "p_id": "bpsc_phys_m33_04",
-    "qe": "When a glass lens is immersed in a liquid whose refractive index precisely equals that of the lens material ($\tmu_{\ttext{liquid}} = \tmu_{\ttext{lens}}$), what happens to its focal length and visual visibility inside the liquid?",
-    "qh": "जब किसी कांच के लेंस को ऐसे द्रव में डुबोया जाता है जिसका अपवर्तनांक लेंस सामग्री के समान होता है ($\tmu_{\ttext{liquid}} = \tmu_{\ttext{lens}}$), तो द्रव के भीतर उसकी फोकल दूरी और दृश्यता (visibility) का क्या होता है?",
+    "qe": "When a glass lens is immersed in a liquid whose refractive index precisely equals that of the lens material ($\\mu_{\\text{liquid}} = \\mu_{\\text{lens}}$), what happens to its focal length and visual visibility inside the liquid?",
+    "qh": "जब किसी कांच के लेंस को ऐसे द्रव में डुबोया जाता है जिसका अपवर्तनांक लेंस सामग्री के समान होता है ($\\mu_{\\text{liquid}} = \\mu_{\\text{lens}}$), तो द्रव के भीतर उसकी फोकल दूरी और दृश्यता (visibility) का क्या होता है?",
     "oe": [
       "Focal length becomes zero; the lens reflects all incident light like a mirror.",
       "Focal length becomes infinite ($f = \\infty$); the lens behaves like a flat glass sheet and becomes completely invisible inside the liquid.",
@@ -629,7 +629,7 @@
   {
     "p_id": "bpsc_phys_m33_14",
     "qe": "Driving at night against oncoming traffic can cause blinding headlight glare. How do Polaroids installed on windshields and headlights eliminate this glare?",
-    "qh": "रात में सामने से आने वाले ट्रैफ़िक के खिलाफ ड्राइविंग करने से हेडलाइट की चकाचौंध (glare) हो सकती me। विंडशील्ड और हेडलाइट्स पर लगाए गए पोलरॉइड्स (Polaroids) इस चकाचौंध को कैसे समाप्त करते हैं?",
+    "qh": "रात में सामने से आने वाले ट्रैफ़िक के खिलाफ ड्राइविंग करने से हेडलाइट की चकाचौंध (glare) हो सकती है। विंडशील्ड और हेडलाइट्स पर लगाए गए पोलरॉइड्स (Polaroids) इस चकाचौंध को कैसे समाप्त करते हैं?",
     "oe": [
       "Polaroids convert high-intensity visible light into harmless radio waves.",
       "Headlights and windshields are fitted with polarizing filters oriented at $45^\\circ$ to the vertical; light from oncoming headlights strikes the windshield with perpendicular polarization axes, completely blocking direct glare.",
@@ -700,7 +700,7 @@
       "ध्रुवीकृत लेजर का उपयोग करके सनस्पॉट चुंबकीय क्षेत्र संरेखण की निगरानी करके।"
     ],
     "a": 1,
-    "e": "Doppler shift optical spectroscopy ke madhyam se rotating celestial bodies ke opposite limbs ki relative velocity measure karta hai.\n\n• Option 1 is Incorrect because temperature differences rotation speed indicate nahi karte.\n• Option 2 is Correct because Sun apni axis par rotate karta hai, jisse Earth se dekhne par **East limb (kinara) Earth ki taraf approach** karta hai aur wahan se aane wali spectral lines **Blue Shift** ($\tDelta \\lambda < 0$) show karti hain; simultaneously **West limb Earth se dur (recede)** jata hai aur wahan se aane wali spectral lines **Red Shift** ($\tDelta \\lambda > 0$) show karti hain. Dono opposite shifts ka difference Doppler formula $\\frac{\\Delta \\lambda}{\\lambda} = \\frac{v}{c}$ mein calculate karke solar equatorial rotation speed $\\approx 2 \\text{ km/s}$ determine ki jati hai.\n• Option 3 is Incorrect because radiation pressure solar wind metric hai rotation measurement nahi.\n• Option 4 is Incorrect because Zeeman effect magnetic field measure karta hai, rotation Doppler shift se aati hai.\nSolar rotation measurement: Approaching edge = Blue Shift; Receding edge = Red Shift."
+    "e": "Doppler shift optical spectroscopy ke madhyam se rotating celestial bodies ke opposite limbs ki relative velocity measure karta hai.\n\n• Option 1 is Incorrect because temperature differences rotation speed indicate nahi karte.\n• Option 2 is Correct because Sun apni axis par rotate karta hai, jisse Earth se dekhne par **East limb (kinara) Earth ki taraf approach** karta hai aur wahan se aane wali spectral lines **Blue Shift** ($\\Delta \\lambda < 0$) show karti hain; simultaneously **West limb Earth se dur (recede)** jata hai aur wahan se aane wali spectral lines **Red Shift** ($\\Delta \\lambda > 0$) show karti hain. Dono opposite shifts ka difference Doppler formula $\\frac{\\Delta \\lambda}{\\lambda} = \\frac{v}{c}$ mein calculate karke solar equatorial rotation speed $\\approx 2 \\text{ km/s}$ determine ki jati hai.\n• Option 3 is Incorrect because radiation pressure solar wind metric hai rotation measurement nahi.\n• Option 4 is Incorrect because Zeeman effect magnetic field measure karta hai, rotation Doppler shift se aati hai.\nSolar rotation measurement: Approaching edge = Blue Shift; Receding edge = Red Shift."
   },
   {
     "p_id": "bpsc_phys_m33_18",
