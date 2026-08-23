@@ -245,26 +245,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  bool _isOptionOrStatementPoint(String line) {
-    String clean = line.trim().toLowerCase();
-    return clean.startsWith('• option') ||
-        clean.startsWith('- option') ||
-        clean.startsWith('option a') ||
-        clean.startsWith('option b') ||
-        clean.startsWith('option c') ||
-        clean.startsWith('option d') ||
-        clean.startsWith('option 1') ||
-        clean.startsWith('option 2') ||
-        clean.startsWith('option 3') ||
-        clean.startsWith('option 4') ||
-        clean.startsWith('• statement') ||
-        clean.startsWith('- statement') ||
-        clean.startsWith('statement 1') ||
-        clean.startsWith('statement 2') ||
-        clean.startsWith('statement 3') ||
-        clean.startsWith('statement 4');
-  }
-
   // ✨ 2-STAGE INTELLIGENT ACCORDION SYSTEM (Main outside + Traps inside)
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
     if (rawExplanation.trim().isEmpty) return const SizedBox.shrink();
@@ -272,7 +252,8 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
         .replaceAll(r'\\text', r'\text')
-        .replaceAll(r'\\frac', r'\frac');
+        .replaceAll(r'\\frac', r'\frac')
+        .trim();
 
     List<String> rawLines = cleaned
         .split('\n')
@@ -331,7 +312,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
       if (isTakeaway) {
         takeawayBlocks.add(block);
-      } else if (!isExplicitCorrect && isExplicitIncorrect && _isOptionOrStatementPoint(block)) {
+      } else if (isExplicitIncorrect && !isExplicitCorrect) {
         trapOptionBlocks.add(block);
       } else {
         primaryCorrectBlocks.add(block);
@@ -360,7 +341,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🌿 Header Strip
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
@@ -402,7 +382,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 🟢 UNIFIED GREEN BOX: Core background + Correct option
                 if (primaryCorrectBlocks.isNotEmpty)
                   Container(
                     width: double.infinity,
@@ -443,7 +422,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     ),
                   ),
 
-                // 📌 Summary / Key Takeaways
                 ...takeawayBlocks.map((point) => Padding(
                       padding: const EdgeInsets.only(bottom: 8.0),
                       child: MathFormattedText(
@@ -457,7 +435,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                       ),
                     )),
 
-                // 🔽 Collapsible Option Traps (Incorrect statements/options)
                 if (trapOptionBlocks.isNotEmpty) ...[
                   const SizedBox(height: 6),
                   Theme(
