@@ -33,7 +33,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   bool _isBookmarked = false;
 
   Timer? _timer;
-  int _timeLeft = 30; // ⏱️ 30 Seconds Timer
+  int _timeLeft = 30;
 
   @override
   void initState() {
@@ -49,18 +49,16 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     super.dispose();
   }
 
-  // 💾 SAVE PROGRESS TO DISK
   void _saveCurrentProgress(int index) async {
     if (widget.storageKey == null) return;
     final prefs = await SharedPreferences.getInstance();
     if (index >= widget.questions.length - 1) {
-      await prefs.remove(widget.storageKey!); // Chapter complete -> Reset
+      await prefs.remove(widget.storageKey!);
     } else {
       await prefs.setInt(widget.storageKey!, index);
     }
   }
 
-  // 🔄 1-CLICK CLEAN RESTART CHAPTER TO Q.1
   void _restartChapter() {
     showDialog(
       context: context,
@@ -88,7 +86,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             onPressed: () async {
               Navigator.pop(ctx);
-
               if (widget.storageKey != null) {
                 final prefs = await SharedPreferences.getInstance();
                 await prefs.remove(widget.storageKey!);
@@ -110,15 +107,14 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // 📌 Check if current question is saved in Bookmarks
   void _checkBookmarkStatus() async {
     final savedList = await UserStatsService.getSavedQuestions();
     final currentQ = widget.questions[_currentIndex];
     String currentText = currentQ.getText(_isHindi);
 
     bool exists = savedList.any((item) {
-      String qText = item['qe'] ?? item['qh'] ?? '';
-      return qText == currentText || qText == currentQ.qe;
+      String qText = item['qe'] ?? item['qh'] ?? item['question'] ?? '';
+      return qText == currentText || qText == currentQ.question;
     });
 
     if (mounted) {
@@ -126,22 +122,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     }
   }
 
-  // 📌 Toggle Bookmark Action
   void _toggleBookmarkQuestion() async {
     final currentQ = widget.questions[_currentIndex];
-    Map<String, dynamic> qJson = {
-      'qe': currentQ.qe,
-      'qh': currentQ.qh,
-      'se': currentQ.se,
-      'sh': currentQ.sh,
-      'oe': currentQ.oe,
-      'oh': currentQ.oh,
-      'options': currentQ.getOptions(_isHindi),
-      'answerIndex': currentQ.answerIndex,
-      'explanation': currentQ.getExplanation(_isHindi),
-      'ee': currentQ.ee,
-      'eh': currentQ.eh,
-    };
+    Map<String, dynamic> qJson = currentQ.toJson();
 
     bool saved = await UserStatsService.toggleBookmark(qJson);
 
@@ -178,19 +161,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
           isCorrect: false,
           chapterName: widget.testTitle,
           chapterPath: '',
-          wrongQuestionJson: {
-            'qe': currentQ.qe,
-            'qh': currentQ.qh,
-            'se': currentQ.se,
-            'sh': currentQ.sh,
-            'oe': currentQ.oe,
-            'oh': currentQ.oh,
-            'options': currentQ.getOptions(_isHindi),
-            'answerIndex': currentQ.answerIndex,
-            'explanation': currentQ.getExplanation(_isHindi),
-            'ee': currentQ.ee,
-            'eh': currentQ.eh,
-          },
+          wrongQuestionJson: currentQ.toJson(),
         );
       }
     });
@@ -212,21 +183,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       isCorrect: isCorrect,
       chapterName: widget.testTitle,
       chapterPath: '',
-      wrongQuestionJson: isCorrect
-          ? null
-          : {
-              'qe': currentQ.qe,
-              'qh': currentQ.qh,
-              'se': currentQ.se,
-              'sh': currentQ.sh,
-              'oe': currentQ.oe,
-              'oh': currentQ.oh,
-              'options': currentQ.getOptions(_isHindi),
-              'answerIndex': currentQ.answerIndex,
-              'explanation': currentQ.getExplanation(_isHindi),
-              'ee': currentQ.ee,
-              'eh': currentQ.eh,
-            },
+      wrongQuestionJson: isCorrect ? null : currentQ.toJson(),
     );
   }
 
@@ -288,122 +245,18 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // 🛡️ Helper method to identify option/statement points
-  bool _isOptionOrStatementPoint(String line) {
-    String clean = line.trim().toLowerCase();
-    return clean.startsWith('• option') ||
-        clean.startsWith('- option') ||
-        clean.startsWith('option a') ||
-        clean.startsWith('option b') ||
-        clean.startsWith('option c') ||
-        clean.startsWith('option d') ||
-        clean.startsWith('• statement') ||
-        clean.startsWith('- statement') ||
-        clean.startsWith('statement 1') ||
-        clean.startsWith('statement 2') ||
-        clean.startsWith('statement 3') ||
-        clean.startsWith('statement 4') ||
-        clean.startsWith('• 1.') ||
-        clean.startsWith('• 2.') ||
-        clean.startsWith('• 3.') ||
-        clean.startsWith('• 4.');
-  }
-
-  // ✨ COMPLETE UNIFIED GREEN BOX & COMPREHENSIVE LATEX SANITIZER
+  // ✨ DIRECT ACCURATE EXPLANATION RENDERER (NO MORE TEXT LOSS / CORRUPTION)
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
-    // 1️⃣ Deep Clean LaTeX Delimiters, Subscripts & Nested Texts
+    if (rawExplanation.trim().isEmpty) return const SizedBox.shrink();
+
+    // 1️⃣ Sanitize Latex formatting without altering bullet lines
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
         .replaceAll(r'\\text', r'\text')
-        .replaceAll(r'\\frac', r'\frac')
-        .replaceAllMapped(RegExp(r'\$\s*\\text\{([^}]+)\}([^$]*)\$'), (m) => r'$\text{' + (m.group(1) ?? '') + r'}' + (m.group(2) ?? '') + r'$')
-        .replaceAll(r'\text{ K}', ' K')
-        .replaceAll(r'\text{K}', ' K')
-        .replaceAll(r'\text{ J}', ' J')
-        .replaceAll(r'\text{J}', ' J')
-        .replaceAll(r'\text{°C}', '°C')
-        .replaceAllMapped(RegExp(r'\$\\text\{([^}]+)\}\$'), (m) => m.group(1) ?? '')
-        .replaceAllMapped(RegExp(r'\\text\{([^}]+)\}'), (m) => m.group(1) ?? '')
-        .replaceAll(RegExp(r'\bOption 0\b', caseSensitive: false), 'Option A')
-        .replaceAll(RegExp(r'\bOption 1\b', caseSensitive: false), 'Option B')
-        .replaceAll(RegExp(r'\bOption 2\b', caseSensitive: false), 'Option C')
-        .replaceAll(RegExp(r'\bOption 3\b', caseSensitive: false), 'Option D')
-        .replaceAll(RegExp(r'•\s*Option 0', caseSensitive: false), '• Option A')
-        .replaceAll(RegExp(r'•\s*Option 1', caseSensitive: false), '• Option B')
-        .replaceAll(RegExp(r'•\s*Option 2', caseSensitive: false), '• Option C')
-        .replaceAll(RegExp(r'•\s*Option 3', caseSensitive: false), '• Option D');
-
-    List<String> rawLines = cleaned
-        .split('\n')
-        .map((p) => p.trim())
-        .where((p) => p.isNotEmpty)
-        .toList();
-
-    List<String> distinctBlocks = [];
-    String currentBlock = "";
-
-    // 2️⃣ Group into structured blocks
-    for (String line in rawLines) {
-      bool isNewBlockHeader = line.startsWith('•') ||
-          line.startsWith('-') ||
-          line.toLowerCase().startsWith('option') ||
-          line.toLowerCase().startsWith('statement') ||
-          line.startsWith('📌') ||
-          line.toLowerCase().startsWith('key takeaway') ||
-          line.toLowerCase().startsWith('conclusion') ||
-          RegExp(r'^\d+[\.\)]').hasMatch(line);
-
-      if (isNewBlockHeader && currentBlock.isNotEmpty) {
-        distinctBlocks.add(currentBlock.trim());
-        currentBlock = line;
-      } else {
-        if (currentBlock.isEmpty) {
-          currentBlock = line;
-        } else {
-          currentBlock += "\n$line";
-        }
-      }
-    }
-    if (currentBlock.isNotEmpty) distinctBlocks.add(currentBlock.trim());
-
-    List<String> primaryCorrectBlocks = [];
-    List<String> trapOptionBlocks = [];
-    List<String> takeawayBlocks = [];
-
-    for (String block in distinctBlocks) {
-      final String lower = block.trim().toLowerCase();
-      // 🎯 Sirf pehli line (Header) check karein, pure paragraph ka content nahi
-      final String firstLine = lower.split('\n').first;
-
-      bool isExplicitCorrect = firstLine.contains('is correct') ||
-          firstLine.contains('sahi hai') ||
-          firstLine.contains('bilkul sahi');
-
-      bool isExplicitIncorrect = firstLine.contains('is incorrect') ||
-          firstLine.contains('galat hai') ||
-          firstLine.contains('is false') ||
-          firstLine.contains('trap');
-
-      bool isTakeaway = firstLine.startsWith('key takeaway') ||
-          firstLine.startsWith('summary') ||
-          firstLine.startsWith('📌') ||
-          firstLine.startsWith('exam takeaway') ||
-          firstLine.startsWith('conclusion');
-
-      if (isTakeaway) {
-        takeawayBlocks.add(block);
-      } else if (!isExplicitCorrect && isExplicitIncorrect && _isOptionOrStatementPoint(block)) {
-        // 🔴 Sirf wahi options trap mein jayenge jinka header 'is incorrect' hai
-        trapOptionBlocks.add(block);
-      } else {
-        // 🟢 Intro background + Option B (Correct) dono Green Box mein aayenge
-        primaryCorrectBlocks.add(block);
-      }
-    }
+        .replaceAll(r'\\frac', r'\frac');
 
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-    final Color textColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF0F172A);
 
     return Container(
       width: double.infinity,
@@ -415,15 +268,15 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(isDark ? 0.25 : 0.04),
-            blurRadius: 12,
-            offset: const Offset(0, 4),
+            blurRadius: 10,
+            offset: const Offset(0, 3),
           )
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🌿 Header Strip: हल्का green tint
+          // 🌿 Header Bar
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
@@ -448,7 +301,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  _isHindi ? 'मुख्य व्याख्या (Core Solution)' : 'Detailed Solution',
+                  _isHindi ? 'मुख्य व्याख्या एवं विश्लेषण' : 'Detailed Solution & Analysis',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: isDark ? const Color(0xFFA7F3D0) : const Color(0xFF065F46),
@@ -465,127 +318,17 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 🟢 UNIFIED GREEN BOX: White/Light background, Halka Green Border, Dark Navy Text
-                if (primaryCorrectBlocks.isNotEmpty)
-                  Container(
-                    width: double.infinity,
-                    margin: const EdgeInsets.only(bottom: 12),
-                    padding: const EdgeInsets.all(14),
-                    decoration: BoxDecoration(
-                      color: isDark ? const Color(0xFF0F172A) : Colors.white, // White/Very light background
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                        color: isDark ? const Color(0xFF065F46) : const Color(0xFFA7F3D0), // बहुत हल्का green border
-                        width: 1.2,
-                      ),
-                      boxShadow: [
-                        BoxShadow(
-                          color: isDark ? Colors.black26 : const Color(0xFF059669).withOpacity(0.04),
-                          blurRadius: 6,
-                          offset: const Offset(0, 2),
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: primaryCorrectBlocks.map((block) {
-                        return Padding(
-                          padding: const EdgeInsets.only(bottom: 8.0),
-                          child: MathFormattedText(
-                            text: block,
-                            textStyle: TextStyle(
-                              fontSize: 14.0,
-                              fontWeight: FontWeight.w600,
-                              color: isDark ? const Color(0xFFF1F5F9) : const Color(0xFF0F172A), // Dark Navy Text
-                              height: 1.5,
-                              letterSpacing: 0.1,
-                            ),
-                          ),
-                        );
-                      }).toList(),
-                    ),
+                // 📝 Full Complete Structured Solution Rendered Seamlessly
+                MathFormattedText(
+                  text: cleaned,
+                  textStyle: TextStyle(
+                    fontSize: 13.5,
+                    fontWeight: FontWeight.w500,
+                    color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B),
+                    height: 1.55,
                   ),
-
-                // 📌 Summary / Key Takeaways
-                ...takeawayBlocks.map((point) => Padding(
-                      padding: const EdgeInsets.only(bottom: 8.0),
-                      child: MathFormattedText(
-                        text: point,
-                        textStyle: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w600,
-                          color: textColor,
-                          height: 1.45,
-                        ),
-                      ),
-                    )),
-
-                // 🔽 Collapsible Option Traps (Incorrect Statements / Options)
-                if (trapOptionBlocks.isNotEmpty) ...[
-                  const SizedBox(height: 6),
-                  Theme(
-                    data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: cardBorder),
-                      ),
-                      child: ExpansionTile(
-                        dense: true,
-                        tilePadding: const EdgeInsets.symmetric(horizontal: 12),
-                        leading: const Icon(Icons.alt_route_rounded, size: 18, color: Color(0xFF2563EB)),
-                        title: Text(
-                          _isHindi ? 'बाकी विकल्प गलत क्यों हैं? (Option Traps)' : 'Why other options are incorrect?',
-                          style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
-                        ),
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: trapOptionBlocks.map((item) {
-                                return Container(
-                                  width: double.infinity,
-                                  margin: const EdgeInsets.only(bottom: 8),
-                                  padding: const EdgeInsets.all(10),
-                                  decoration: BoxDecoration(
-                                    color: isDark ? const Color(0xFF1E293B) : Colors.white,
-                                    borderRadius: BorderRadius.circular(8),
-                                    border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
-                                  ),
-                                  child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: [
-                                      const Padding(
-                                        padding: EdgeInsets.only(top: 2),
-                                        child: Icon(Icons.cancel_outlined, size: 14, color: Colors.red),
-                                      ),
-                                      const SizedBox(width: 6),
-                                      Expanded(
-                                        child: MathFormattedText(
-                                          text: item,
-                                          textStyle: TextStyle(
-                                            fontSize: 12.5,
-                                            color: isDark ? Colors.grey.shade300 : const Color(0xFF334155),
-                                            height: 1.4,
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                );
-                              }).toList(),
-                            ),
-                          )
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-
+                ),
                 const Divider(height: 24),
-
                 RevisionTrickSubmitBox(
                   testTitle: widget.testTitle,
                   qIndex: _currentIndex,
@@ -729,7 +472,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 18),
 
-            // 🎯 1. MAIN QUESTION CARD
+            // 🎯 Main Question Text
             Card(
               elevation: 1,
               color: cardBg,
@@ -749,7 +492,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 10),
 
-            // 📋 2. DEDICATED SEPARATE STATEMENT CARDS (Numbered Badges)
+            // 📋 Dedicated Statements (if applicable)
             if (statements != null && statements.isNotEmpty) ...[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -802,7 +545,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                 }).toList(),
               ),
 
-              // 🌟 VISUAL DIVIDER & SEPARATION
               Container(
                 margin: const EdgeInsets.only(top: 14, bottom: 16),
                 child: Row(
@@ -828,7 +570,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               const SizedBox(height: 14),
             ],
 
-            // 🔘 3. BILINGUAL OPTIONS LIST
+            // 🔘 Options
             ...List.generate(currentOptions.length, (index) {
               final optionText = currentOptions[index];
               final isCorrect = index == currentQ.answerIndex;
@@ -907,7 +649,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // 💡 4. DETAILED SOLUTION (2-STAGE COLLAPSIBLE ACCORDION)
+            // 💡 Solution Block
             if (_isAnswered) ...[
               _buildEnhancedExplanation(currentExplanation, currentQ, isDark),
             ],
@@ -915,7 +657,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
           ],
         ),
       ),
-
       bottomSheet: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
         decoration: BoxDecoration(
@@ -950,7 +691,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   }
 }
 
-// 💡 COMMUNITY TRICK / DATA SUBMISSION WIDGET (Direct to Telegram)
 class RevisionTrickSubmitBox extends StatefulWidget {
   final String testTitle;
   final int qIndex;
