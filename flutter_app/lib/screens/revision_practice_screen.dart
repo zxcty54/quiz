@@ -245,18 +245,102 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // ✨ DIRECT ACCURATE EXPLANATION RENDERER (NO MORE TEXT LOSS / CORRUPTION)
+  bool _isOptionOrStatementPoint(String line) {
+    String clean = line.trim().toLowerCase();
+    return clean.startsWith('• option') ||
+        clean.startsWith('- option') ||
+        clean.startsWith('option a') ||
+        clean.startsWith('option b') ||
+        clean.startsWith('option c') ||
+        clean.startsWith('option d') ||
+        clean.startsWith('option 1') ||
+        clean.startsWith('option 2') ||
+        clean.startsWith('option 3') ||
+        clean.startsWith('option 4') ||
+        clean.startsWith('• statement') ||
+        clean.startsWith('- statement') ||
+        clean.startsWith('statement 1') ||
+        clean.startsWith('statement 2') ||
+        clean.startsWith('statement 3') ||
+        clean.startsWith('statement 4');
+  }
+
+  // ✨ 2-STAGE INTELLIGENT ACCORDION SYSTEM (Main outside + Traps inside)
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
     if (rawExplanation.trim().isEmpty) return const SizedBox.shrink();
 
-    // 1️⃣ Sanitize Latex formatting without altering bullet lines
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
         .replaceAll(r'\\text', r'\text')
         .replaceAll(r'\\frac', r'\frac');
 
+    List<String> rawLines = cleaned
+        .split('\n')
+        .map((p) => p.trim())
+        .where((p) => p.isNotEmpty)
+        .toList();
+
+    List<String> distinctBlocks = [];
+    String currentBlock = "";
+
+    for (String line in rawLines) {
+      bool isNewBlockHeader = line.startsWith('•') ||
+          line.startsWith('-') ||
+          line.toLowerCase().startsWith('option') ||
+          line.toLowerCase().startsWith('statement') ||
+          line.startsWith('📌') ||
+          line.toLowerCase().startsWith('key takeaway') ||
+          line.toLowerCase().startsWith('conclusion') ||
+          RegExp(r'^\d+[\.\)]').hasMatch(line);
+
+      if (isNewBlockHeader && currentBlock.isNotEmpty) {
+        distinctBlocks.add(currentBlock.trim());
+        currentBlock = line;
+      } else {
+        if (currentBlock.isEmpty) {
+          currentBlock = line;
+        } else {
+          currentBlock += "\n$line";
+        }
+      }
+    }
+    if (currentBlock.isNotEmpty) distinctBlocks.add(currentBlock.trim());
+
+    List<String> primaryCorrectBlocks = [];
+    List<String> trapOptionBlocks = [];
+    List<String> takeawayBlocks = [];
+
+    for (String block in distinctBlocks) {
+      final String lower = block.trim().toLowerCase();
+      final String firstLine = lower.split('\n').first;
+
+      bool isExplicitCorrect = firstLine.contains('is correct') ||
+          firstLine.contains('sahi hai') ||
+          firstLine.contains('bilkul sahi');
+
+      bool isExplicitIncorrect = firstLine.contains('is incorrect') ||
+          firstLine.contains('galat hai') ||
+          firstLine.contains('is false') ||
+          firstLine.contains('trap');
+
+      bool isTakeaway = firstLine.startsWith('key takeaway') ||
+          firstLine.startsWith('summary') ||
+          firstLine.startsWith('📌') ||
+          firstLine.startsWith('exam takeaway') ||
+          firstLine.startsWith('conclusion');
+
+      if (isTakeaway) {
+        takeawayBlocks.add(block);
+      } else if (!isExplicitCorrect && isExplicitIncorrect && _isOptionOrStatementPoint(block)) {
+        trapOptionBlocks.add(block);
+      } else {
+        primaryCorrectBlocks.add(block);
+      }
+    }
+
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+    final Color textColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF0F172A);
 
     return Container(
       width: double.infinity,
@@ -268,15 +352,15 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(isDark ? 0.25 : 0.04),
-            blurRadius: 10,
-            offset: const Offset(0, 3),
+            blurRadius: 12,
+            offset: const Offset(0, 4),
           )
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🌿 Header Bar
+          // 🌿 Header Strip
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
             decoration: BoxDecoration(
@@ -301,7 +385,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                 ),
                 const SizedBox(width: 8),
                 Text(
-                  _isHindi ? 'मुख्य व्याख्या एवं विश्लेषण' : 'Detailed Solution & Analysis',
+                  _isHindi ? 'मुख्य व्याख्या (Core Solution)' : 'Detailed Solution',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: isDark ? const Color(0xFFA7F3D0) : const Color(0xFF065F46),
@@ -318,17 +402,127 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 📝 Full Complete Structured Solution Rendered Seamlessly
-                MathFormattedText(
-                  text: cleaned,
-                  textStyle: TextStyle(
-                    fontSize: 13.5,
-                    fontWeight: FontWeight.w500,
-                    color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B),
-                    height: 1.55,
+                // 🟢 UNIFIED GREEN BOX: Core background + Correct option
+                if (primaryCorrectBlocks.isNotEmpty)
+                  Container(
+                    width: double.infinity,
+                    margin: const EdgeInsets.only(bottom: 12),
+                    padding: const EdgeInsets.all(14),
+                    decoration: BoxDecoration(
+                      color: isDark ? const Color(0xFF0F172A) : Colors.white,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: isDark ? const Color(0xFF065F46) : const Color(0xFFA7F3D0),
+                        width: 1.2,
+                      ),
+                      boxShadow: [
+                        BoxShadow(
+                          color: isDark ? Colors.black26 : const Color(0xFF059669).withOpacity(0.04),
+                          blurRadius: 6,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: primaryCorrectBlocks.map((block) {
+                        return Padding(
+                          padding: const EdgeInsets.only(bottom: 8.0),
+                          child: MathFormattedText(
+                            text: block,
+                            textStyle: TextStyle(
+                              fontSize: 14.0,
+                              fontWeight: FontWeight.w600,
+                              color: isDark ? const Color(0xFFF1F5F9) : const Color(0xFF0F172A),
+                              height: 1.5,
+                              letterSpacing: 0.1,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                    ),
                   ),
-                ),
+
+                // 📌 Summary / Key Takeaways
+                ...takeawayBlocks.map((point) => Padding(
+                      padding: const EdgeInsets.only(bottom: 8.0),
+                      child: MathFormattedText(
+                        text: point,
+                        textStyle: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                          color: textColor,
+                          height: 1.45,
+                        ),
+                      ),
+                    )),
+
+                // 🔽 Collapsible Option Traps (Incorrect statements/options)
+                if (trapOptionBlocks.isNotEmpty) ...[
+                  const SizedBox(height: 6),
+                  Theme(
+                    data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: cardBorder),
+                      ),
+                      child: ExpansionTile(
+                        dense: true,
+                        tilePadding: const EdgeInsets.symmetric(horizontal: 12),
+                        leading: const Icon(Icons.alt_route_rounded, size: 18, color: Color(0xFF2563EB)),
+                        title: Text(
+                          _isHindi ? 'बाकी विकल्प गलत क्यों हैं? (Option Traps)' : 'Why other options are incorrect?',
+                          style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                        ),
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.fromLTRB(12, 0, 12, 12),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: trapOptionBlocks.map((item) {
+                                return Container(
+                                  width: double.infinity,
+                                  margin: const EdgeInsets.only(bottom: 8),
+                                  padding: const EdgeInsets.all(10),
+                                  decoration: BoxDecoration(
+                                    color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                                  ),
+                                  child: Row(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      const Padding(
+                                        padding: EdgeInsets.only(top: 2),
+                                        child: Icon(Icons.cancel_outlined, size: 14, color: Colors.red),
+                                      ),
+                                      const SizedBox(width: 6),
+                                      Expanded(
+                                        child: MathFormattedText(
+                                          text: item,
+                                          textStyle: TextStyle(
+                                            fontSize: 12.5,
+                                            color: isDark ? Colors.grey.shade300 : const Color(0xFF334155),
+                                            height: 1.4,
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              }).toList(),
+                            ),
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+
                 const Divider(height: 24),
+
                 RevisionTrickSubmitBox(
                   testTitle: widget.testTitle,
                   qIndex: _currentIndex,
@@ -472,7 +666,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 18),
 
-            // 🎯 Main Question Text
             Card(
               elevation: 1,
               color: cardBg,
@@ -492,7 +685,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             ),
             const SizedBox(height: 10),
 
-            // 📋 Dedicated Statements (if applicable)
             if (statements != null && statements.isNotEmpty) ...[
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -570,7 +762,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               const SizedBox(height: 14),
             ],
 
-            // 🔘 Options
             ...List.generate(currentOptions.length, (index) {
               final optionText = currentOptions[index];
               final isCorrect = index == currentQ.answerIndex;
@@ -649,7 +840,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               );
             }),
 
-            // 💡 Solution Block
             if (_isAnswered) ...[
               _buildEnhancedExplanation(currentExplanation, currentQ, isDark),
             ],
