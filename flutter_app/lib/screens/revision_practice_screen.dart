@@ -245,7 +245,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // ✨ 2-STAGE INTELLIGENT ACCORDION SYSTEM (Main outside + Traps inside)
+  // ✨ COMPREHENSIVE PHYSICS & CHEMISTRY OCR SANITIZER
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
     if (rawExplanation.trim().isEmpty) return const SizedBox.shrink();
 
@@ -253,6 +253,105 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         .replaceAll(r'\n', '\n')
         .replaceAll(r'\\text', r'\text')
         .replaceAll(r'\\frac', r'\frac')
+        .replaceAll(r'\\mu', r'\mu')
+        .replaceAll(r'\\lambda', r'\lambda')
+        .replaceAll(r'\\nu', r'\nu')
+        .replaceAll(r'\\theta', r'\theta')
+        .replaceAll(r'\\rho', r'\rho')
+        .replaceAll(r'\\approx', r'\approx')
+        .replaceAll(r'\\rightarrow', r'\rightarrow');
+
+    // 🧪 1. Comprehensive Chemistry Subscripts (Common OCR Glitches)
+    final Map<String, String> chemSubscripts = {
+      r'($CO_2$)': 'CO₂', r'$CO_2$': 'CO₂', r'CO_2': 'CO₂',
+      r'($H_2O$)': 'H₂O', r'$H_2O$': 'H₂O', r'H_2O': 'H₂O',
+      r'($CH_4$)': 'CH₄', r'$CH_4$': 'CH₄', r'CH_4': 'CH₄',
+      r'($O_2$)': 'O₂', r'$O_2$': 'O₂', r'O_2': 'O₂',
+      r'($O_3$)': 'O₃', r'$O_3$': 'O₃', r'O_3': 'O₃',
+      r'($N_2$)': 'N₂', r'$N_2$': 'N₂', r'N_2': 'N₂',
+      r'($H_2$)': 'H₂', r'$H_2$': 'H₂', r'H_2': 'H₂',
+      r'($Cl_2$)': 'Cl₂', r'$Cl_2$': 'Cl₂', r'Cl_2': 'Cl₂',
+      r'($NO_2$)': 'NO₂', r'$NO_2$': 'NO₂', r'NO_2': 'NO₂',
+      r'($SO_2$)': 'SO₂', r'$SO_2$': 'SO₂', r'SO_2': 'SO₂',
+      r'($H_2SO_4$)': 'H₂SO₄', r'$H_2SO_4$': 'H₂SO₄', r'H_2SO_4': 'H₂SO₄',
+      r'($HNO_3$)': 'HNO₃', r'$HNO_3$': 'HNO₃', r'HNO_3': 'HNO₃',
+      r'($CaCO_3$)': 'CaCO₃', r'$CaCO_3$': 'CaCO₃', r'CaCO_3': 'CaCO₃',
+      r'($NH_3$)': 'NH₃', r'$NH_3$': 'NH₃', r'NH_3': 'NH₃',
+      r'($C_6H_{12}O_6$)': 'C₆H₁₂O₆', r'$C_6H_{12}O_6$': 'C₆H₁₂O₆', r'C_6H_{12}O_6': 'C₆H₁₂O₆',
+      r'($Fe_2O_3$)': 'Fe₂O₃', r'$Fe_2O_3$': 'Fe₂O₃', r'Fe_2O_3': 'Fe₂O₃',
+      r'($Al_2O_3$)': 'Al₂O₃', r'$Al_2O_3$': 'Al₂O₃', r'Al_2O_3': 'Al₂O₃',
+      r'($KMnO_4$)': 'KMnO₄', r'$KMnO_4$': 'KMnO₄', r'KMnO_4': 'KMnO₄',
+      r'($Na_2CO_3$)': 'Na₂CO₃', r'$Na_2CO_3$': 'Na₂CO₃',
+      r'($NaHCO_3$)': 'NaHCO₃', r'$NaHCO_3$': 'NaHCO₃',
+      r'($Si$)': 'Si', r'$Si$': 'Si',
+      r'($Ge$)': 'Ge', r'$Ge$': 'Ge',
+      r'($Ga$)': 'Ga', r'$Ga$': 'Ga',
+      r'($GaAs$)': 'GaAs', r'$GaAs$': 'GaAs',
+    };
+    chemSubscripts.forEach((key, val) {
+      cleaned = cleaned.replaceAll(key, val);
+    });
+
+    // 🔬 2. Physics Symbols, Range & Operators
+    final Map<String, String> physReplacements = {
+      r'($\lambda$)': 'λ', r'$\lambda$': 'λ', r'\lambda': 'λ',
+      r'($\mu$)': 'μ', r'$\mu$': 'μ', r'\mu': 'μ',
+      r'($\nu$)': 'ν', r'$\nu$': 'ν', r'\nu': 'ν',
+      r'($\theta$)': 'θ', r'$\theta$': 'θ', r'\theta': 'θ',
+      r'($\alpha$)': 'α', r'$\alpha$': 'α', r'\alpha': 'α',
+      r'($\beta$)': 'β', r'$\beta$': 'β', r'\beta': 'β',
+      r'($\gamma$)': 'γ', r'$\gamma$': 'γ', r'\gamma': 'γ',
+      r'($\rho$)': 'ρ', r'$\rho$': 'ρ', r'\rho': 'ρ',
+      r'($\omega$)': 'ω', r'$\omega$': 'ω', r'\omega': 'ω',
+      r'($\Omega$)': 'Ω', r'$\Omega$': 'Ω', r'\Omega': 'Ω',
+      r'($\Delta$)': 'Δ', r'$\Delta$': 'Δ', r'\Delta': 'Δ',
+      r'($\pi$)': 'π', r'$\pi$': 'π', r'\pi': 'π',
+      r'($\phi$)': 'φ', r'$\phi$': 'φ', r'\phi': 'φ',
+      r'\approx': '≈', r'$\approx$': '≈',
+      r'\neq': '≠', r'$\neq$': '≠',
+      r'\leq': '≤', r'$\leq$': '≤',
+      r'\geq': '≥', r'$\geq$': '≥',
+      r'\pm': '±', r'$\pm$': '±',
+      r'\times': '×', r'$\times$': '×',
+      r'\rightarrow': '→', r'$\rightarrow$': '→',
+      r'\leftarrow': '←', r'$\leftarrow$': '←',
+      r'\infty': '∞', r'$\infty$': '∞',
+      r'\propto': '∝', r'$\propto$': '∝',
+    };
+    physReplacements.forEach((key, val) {
+      cleaned = cleaned.replaceAll(key, val);
+    });
+
+    // 🌡️ 3. Temperature, Units & Exponents (Regex)
+    cleaned = cleaned
+        // Degree Fixes
+        .replaceAll(r'^\circ\text{C}', '°C')
+        .replaceAll(r'^\circ\text{ C}', '°C')
+        .replaceAll(r'^\circ C', '°C')
+        .replaceAll(r'^\circ\text{F}', '°F')
+        .replaceAll(r'^\circ\text{ F}', '°F')
+        .replaceAll(r'^\circ F', '°F')
+        .replaceAll(r'^\circ', '°')
+        .replaceAll(r'\circ', '°')
+        // Voltage / Current Range ($0.5 \text{ to } 1 \text{ V}$ -> 0.5 V to 1 V)
+        .replaceAllMapped(RegExp(r'\$\s*([0-9.]+)\s*\\text\{\s*to\s*\}\s*([0-9.]+)\s*\\text\{\s*([A-Za-z]+)\s*\}\s*\$'), 
+            (m) => '${m.group(1)} ${m.group(3)} to ${m.group(2)} ${m.group(3)}')
+        // Generic \text{...} inside math block
+        .replaceAllMapped(RegExp(r'\\text\{\s*([^}]+)\s*\}'), (m) => m.group(1) ?? '')
+        // Exponents ($10^5$ -> 10⁵, $m/s^2$ -> m/s², $cm^3$ -> cm³)
+        .replaceAll(r'$10^{-3}$', '10⁻³')
+        .replaceAll(r'$10^{-6}$', '10⁻⁶')
+        .replaceAll(r'$10^3$', '10³')
+        .replaceAll(r'$10^5$', '10⁵')
+        .replaceAll(r'$10^8$', '10⁸')
+        .replaceAll(r'm/s^2', 'm/s²')
+        .replaceAll(r'm/s^1', 'm/s')
+        .replaceAll(r'cm^3', 'cm³')
+        .replaceAll(r'm^3', 'm³')
+        .replaceAll(r'cm^2', 'cm²')
+        .replaceAll(r'm^2', 'm²')
+        // Clean leftover empty dollar blocks
+        .replaceAll(r'$$', '')
         .trim();
 
     List<String> rawLines = cleaned
