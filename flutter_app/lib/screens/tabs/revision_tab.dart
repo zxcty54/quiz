@@ -123,7 +123,7 @@ class _RevisionTabState extends State<RevisionTab> {
     if (mounted) setState(() => _isLoading = false);
   }
 
-  // 🛡️ TRUST & VERIFIED SOURCES MODAL (NCERT, Laxmikanth, Spectrum, etc.)
+  // 🛡️ TRUST & VERIFIED SOURCES MODAL
   void _showSourcesModal(BuildContext context, bool isDark) {
     showModalBottomSheet(
       context: context,
@@ -174,7 +174,7 @@ class _RevisionTabState extends State<RevisionTab> {
                   ),
                   const SizedBox(height: 6),
                   Text(
-                    'Revision Hub ke sabhi questions aur explanations standard government textbooks aur authentic reference books ke sath verified hain.',
+                    'Revision Hub ke sabhi questions aur explanations standard government textbooks aur authentic benchmark books ke sath verified hain.',
                     style: TextStyle(fontSize: 12, color: subTextColor, height: 1.4),
                   ),
                   const Divider(height: 24),
@@ -434,9 +434,108 @@ class _RevisionTabState extends State<RevisionTab> {
             ),
           ),
 
-          const SizedBox(height: 12),
+          // ⚡ 1. HIGH-IMPACT REAL-TIME SYNC BANNER (EYE-GRABBING & HIGH CONTRAST)
+          Container(
+            width: double.infinity,
+            margin: const EdgeInsets.only(top: 12),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: isDark 
+                    ? [const Color(0xFF0F2942), const Color(0xFF132F4C)] 
+                    : [const Color(0xFFEFF6FF), const Color(0xFFE0F2FE)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(
+                color: isDark ? const Color(0xFF0284C7) : const Color(0xFF38BDF8),
+                width: 1.4,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xFF0284C7).withOpacity(isDark ? 0.35 : 0.15),
+                  blurRadius: 10,
+                  offset: const Offset(0, 3),
+                ),
+              ],
+            ),
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(top: 2),
+                  padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3.5),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF059669).withOpacity(0.2),
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(color: const Color(0xFF10B981), width: 1.2),
+                  ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        width: 7,
+                        height: 7,
+                        decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: Color(0xFF10B981),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Color(0xFF10B981),
+                              blurRadius: 6,
+                              spreadRadius: 1.5,
+                            )
+                          ],
+                        ),
+                      ),
+                      const SizedBox(width: 5),
+                      const Text(
+                        'LIVE',
+                        style: TextStyle(
+                          color: Color(0xFF10B981),
+                          fontSize: 9.5,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 0.6,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 10),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Real-Time Updated with 2026 Exam Pattern',
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.w800,
+                          color: isDark ? const Color(0xFF38BDF8) : const Color(0xFF0284C7),
+                          letterSpacing: -0.1,
+                        ),
+                      ),
+                      const SizedBox(height: 3),
+                      Text(
+                        'Hamare Mocks & Revision Sets latest commission notifications, revised syllabus aur modern PYQ trends ke mutabiq dynamically update hote hain.',
+                        style: TextStyle(
+                          fontSize: 11,
+                          height: 1.35,
+                          fontWeight: FontWeight.w500,
+                          color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
 
-          // 🛡️ ACADEMIC TRUST & REFERENCE SOURCES BAR (Direct Verification)
+          const SizedBox(height: 10),
+
+          // 🛡️ 2. ACADEMIC TRUST & REFERENCE SOURCES BAR
           InkWell(
             onTap: () => _showSourcesModal(context, isDark),
             borderRadius: BorderRadius.circular(12),
