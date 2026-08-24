@@ -588,8 +588,6 @@
     "a": 3,
     "e": "Conductance resistance ka inverse hota hai, isliye iski units Ohm ke reciprocal par derive hoti hain.\n\n• Option 1 is Incorrect because Ohm meter ($\\Omega\\cdot\\text{m}$) resistivity ($\\rho$) ki SI unit hoti hai.\n\n• Option 2 is Incorrect because methylene amide polymer chemistry ka building block hai.\n\n• Option 3 is Incorrect because Faraday per mole electric charge transfer ki unit hai.\n\n• Option 4 is Correct because electrical conductance ($G$) ki standard SI unit 'Siemens' hai, jise symbol '$S$' se denote kiya jata hai; $1\\text{ S} = 1\\text{ }\\Omega^{-1}$ (ohm inverse ya mho)."
   },
-  
- 
   {
     "p_id": "bpsc_chem_v4_242",
     "qe": "What terminology defines the structural constant given by the ratio $\\frac{\\ell}{A}$ for a specific conductivity cell configuration?",
@@ -1027,9 +1025,6 @@
     "a": 3,
     "e": "Electrochemical cell voltage measurement circuit ke current state (open vs closed) par conceptually depend karta hai.\n\n• Option 1 is Incorrect because dynamic cell voltage closed circuit mein draw hone wale current ke time measure hota hai jab internal resistance active hoti hai.\n\n• Option 2 is Incorrect because overpotential current flow ke time kinetic activation barrier overcome karne ke liye extra voltage hoti hai.\n\n• Option 3 is Incorrect because internal resistance solution ke ionic resistance ko represent karti hai, potential difference ko nahi.\n\n• Option 4 is Correct because open-circuit condition mein (jab cell se koi external electrical current draw nahi ho rahi ho, $I = 0$), dono electrodes ke beech ke maximum potential difference ko formally 'Cell Electromotive Force' (Cell EMF) kaha jata hai."
   },
-
-   
-  
   {
     "p_id": "bpsc_chem_v4_265",
     "qe": "Which operational characteristic is true regarding the function of an inert electrode (such as platinum) inside an electrochemical cell?",
@@ -1656,28 +1651,6 @@
     ],
     "a": 3,
     "e": "IUPAC cell notation mein left hand side par anode oxidation half-cell aur right hand side par cathode reduction half-cell represent kiya jata hai.\n\n• Option 1 is Incorrect because ye reverse non-spontaneous reaction hai.\n\n• Option 2 is Incorrect because dono cations ek sath react karke neutral atoms bina electron source ke nahi banate.\n\n• Option 3 is Incorrect because do neutral metals spontaneous charge transfer initiate nahi karte.\n\n• Option 4 is Correct because left side par oxidation reaction $\\text{Mg}(s) \\rightarrow \\text{Mg}^{2+}(aq) + 2e^-$ hoti hai aur right side par reduction reaction $\\text{Cu}^{2+}(aq) + 2e^- \\rightarrow \\text{Cu}(s)$ hoti hai; dono ko add karne par overall spontaneous cell reaction $\\text{Mg} + \\text{Cu}^{2+} \\rightarrow \\text{Mg}^{2+} + \\text{Cu}$ banti hai."
-  },
-
-    
-
-  {
-    "p_id": "bpsc_chem_v4_268",
-    "qe": "Why is it physically impossible to measure the absolute electrode potential profile of an isolated individual half-cell directly?",
-    "qh": "किसी पृथक व्यक्तिगत हाफ-सेल के पूर्ण इलेक्ट्रोड विभव प्रोफाइल को सीधे मापना भौतिक रूप से असंभव क्यों है?",
-    "oe": [
-      "Because it requires the complete removal of all oxygen groups from the solution",
-      "Because it causes the immediate common-ion precipitation of all ionic reagents",
-      "Because a chemical oxidation or reduction half-reaction cannot take place independently without a complementary counter-reaction",
-      "Because half-cells turn volatile when isolated from structural air boundaries"
-    ],
-    "oh": [
-      "क्योंकि इसके लिए घोल से सभी ऑक्सीजन समूहों को पूरी तरह से हटाने की आवश्यकता होती है",
-      "क्योंकि यह सभी आयनिक अभिकर्मकों के तत्काल सामान्य-आयन वर्षा का कारण बनता है",
-      "क्योंकि एक रासायनिक ऑक्सीकरण या अपचयन अर्ध-प्रतिक्रिया पूरक प्रतिक्रिया के बिना स्वतंत्र रूप से नहीं हो सकती है",
-      "क्योंकि संरचनात्मक वायु सीमाओं से अलग होने पर हाफ-सेल वाष्पशील हो जाते हैं"
-    ],
-    "a": 2,
-    "e": "Redox reactions complementary charge-transfer processes hoti hain jisme electron release aur electron acceptance ek sath hona zaroori hai.\n\n• Option 1 is Incorrect because deoxygenation absolute measurement ki physical impossibility ka reason nahi hai.\n\n• Option 2 is Incorrect because common-ion precipitation single half-cell isolation se related nahi hai.\n\n• Option 3 is Correct because kisi isolated single electrode par oxidation ya reduction tab tak akele proceed nahi kar sakti jab tak circuit complete karke electrons ko accept ya donate karne wala complementary counter-electrode present na ho; isliye absolute potential ke bajaye sirf do electrodes ke beech ka potential difference (relative potential) hi measure kiya ja sakta hai.\n\n• Option 4 is Incorrect because aqueous half-cell solutions chemically stable hote hain, volatile nahi bante."
   },
   {
     "p_id": "bpsc_chem_v4_269",
