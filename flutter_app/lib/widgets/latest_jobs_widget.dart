@@ -191,6 +191,19 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
                       },
                     ),
                   ),
+                  // 🛡️ Play Store Mandatory Compliance Disclaimer
+                  Container(
+                    padding: const EdgeInsets.symmetric(vertical: 8),
+                    alignment: Alignment.center,
+                    child: Text(
+                      'Disclaimer: Information is collected from official public notifications. We do not represent any government entity.',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: widget.isDarkMode ? Colors.white38 : Colors.grey.shade600,
+                      ),
+                    ),
+                  ),
                 ],
               ),
             );
@@ -381,7 +394,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
     final String qualification = job['qualification'] ?? '';
     final String fee = job['application_fee'] ?? '';
     final String lastDate = job['last_date'] ?? '';
-    final String applyUrl = job['apply_url'] ?? job['link'] ?? '';
+    final String applyUrl = job['apply_url'] ?? job['link'] ?? job['url'] ?? '';
     final String jobType = (job['job_type'] ?? '').toString().toLowerCase();
 
     final bool isBihar = jobType.contains('bihar') ||
@@ -504,6 +517,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
               else
                 const SizedBox.shrink(),
 
+              // 🛡️ Safe 'Detail' Action Button with External Icon
               InkWell(
                 onTap: () => _openLink(applyUrl),
                 borderRadius: BorderRadius.circular(6),
