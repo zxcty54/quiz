@@ -1,12 +1,25 @@
 {
-  "generated_at": "2026-08-24 10:11:47",
+  "generated_at": "2026-08-24 14:15:19",
   "window": "Rolling 24 Hours",
   "national_count": 5,
-  "bihar_count": 0,
-  "total_count": 5,
+  "bihar_count": 3,
+  "total_count": 8,
   "national_news": [
     {
       "id": "nat_01",
+      "title": "AAI Seeks Rs 1,200-Crore Approval for New Terminal at Bhubaneswar Airport",
+      "category": "Infrastructure, Energy & Digital Projects",
+      "bullets": [
+        "The Airports Authority of India (AAI) has submitted a proposal to the Union Finance Ministry's Public Investment Board (PIB) for constructing Terminal 3 (T3) at Biju Patnaik International Airport in Bhubaneswar.",
+        "Estimated at a cost of over Rs 1,200 crore, the proposed T3 will integrate both domestic and international operations under one roof.",
+        "The new terminal is designed to handle 8.6 million passengers per annum (MPPA) and will feature six additional aerobridges."
+      ],
+      "exam_tag": "Civil Aviation & Infrastructure",
+      "date": "24 Aug 2026",
+      "timestamp": 1787561094
+    },
+    {
+      "id": "nat_02",
       "title": "Defence Minister Launches Rs 3,400 Crore Defence Infrastructure Projects in West Bengal",
       "category": "Science, Technology, Defense & Space",
       "bullets": [
@@ -19,7 +32,7 @@
       "timestamp": 1787516365
     },
     {
-      "id": "nat_02",
+      "id": "nat_03",
       "title": "BRICS Sports Ministers' Meeting Concludes in Visakhapatnam with Joint Declaration",
       "category": "International Relations, Summits & Global Organizations",
       "bullets": [
@@ -32,7 +45,7 @@
       "timestamp": 1787516365
     },
     {
-      "id": "nat_03",
+      "id": "nat_04",
       "title": "India Celebrates 3rd National Space Day Highlighting $45-Billion Space Economy Vision",
       "category": "Science, Technology, Defense & Space",
       "bullets": [
@@ -45,7 +58,7 @@
       "timestamp": 1787502129
     },
     {
-      "id": "nat_04",
+      "id": "nat_05",
       "title": "Rohit Yadav and Murali Sreeshankar Win Gold at World Athletics Continental Tour",
       "category": "Awards, Appointments, Sports, Persons & Indexes",
       "bullets": [
@@ -56,20 +69,47 @@
       "exam_tag": "Sports & World Athletics",
       "date": "23 Aug 2026",
       "timestamp": 1787502129
-    },
-    {
-      "id": "nat_05",
-      "title": "India Must Move from 'Pharmacy' to 'Laboratory of the World': Union Minister Anupriya Patel",
-      "category": "Govt Schemes, Policies & Social Welfare",
-      "bullets": [
-        "Union Minister of State for Health and Family Welfare Anupriya Patel addressed the 3rd edition of the IIMA Healthcare Summit on 'Advancing AI in Healthcare' at IIM Ahmedabad.",
-        "Highlighted the setting up of Centres of Excellence for AI in healthcare at AIIMS New Delhi, PGIMER Chandigarh, and AIIMS Rishikesh.",
-        "Emphasized the ₹5,000 crore Promotion of Research and Innovation in Pharma-MedTech Sector (PRIP) scheme to boost innovation-led industry-academia research collaboration."
-      ],
-      "exam_tag": "National Healthcare & Govt Schemes",
-      "date": "23 Aug 2026",
-      "timestamp": 1787473620
     }
   ],
-  "bihar_news": []
+  "bihar_news": [
+    {
+      "id": "bih_01",
+      "title": "Bihar Government Constitutes 5-Member Panel for Examination System Reforms",
+      "category": "Bihar Special Affairs",
+      "bullets": [
+        "The General Administration Department of Bihar formed a five-member expert committee to recommend comprehensive reforms in the state's examination framework.",
+        "The panel will review procedures across state examination boards, commissions, universities, and recruitment agencies from candidate registration to result declaration.",
+        "Primary focus areas include strengthening security protocols to prevent question paper leaks, impersonation, cheating, and result tampering."
+      ],
+      "exam_tag": "BPSC / State Services",
+      "date": "24 Aug 2026",
+      "timestamp": 1787561119
+    },
+    {
+      "id": "bih_02",
+      "title": "Parliamentary Panel Reviews Transport, Infrastructure, and Heritage Projects in Bihar",
+      "category": "Bihar Special Affairs",
+      "bullets": [
+        "The Parliamentary Standing Committee on Transport, Tourism, and Culture, chaired by Sanjay Jha, undertook a three-day review visit to Bihar.",
+        "The committee reviewed critical infrastructure projects, including the Patna-Purnia Expressway, Gorakhpur-Siliguri Expressway, NH-27 repairs, and the proposed greenfield international airport.",
+        "Assessments were conducted on heritage sites and cultural institutions including the Bihar Museum, Khuda Bakhsh Library, Kumrahar ASI site, Bodh Gaya, and Rajgir."
+      ],
+      "exam_tag": "BPSC / UPSC",
+      "date": "24 Aug 2026",
+      "timestamp": 1787561119
+    },
+    {
+      "id": "bih_03",
+      "title": "Bihar Announces New Industrial Initiatives and Governance Metrics at ET World Leaders Forum",
+      "category": "Bihar Special Affairs",
+      "bullets": [
+        "Bihar unveiled the 'Build Bihar, Believe in Bihar' initiative at the ET World Leaders Forum to push for rapid industrialization and employment generation.",
+        "The 'Sahyog Grievance Redressal Program' has enforced a strict 30-day deadline for public grievances, achieving a 96% resolution rate out of 6,42,000 applications.",
+        "State policy developments include tailored packages for Semiconductors and Global Capability Centres (GCCs), alongside increasing total irrigated area from 2.1 million to 4.4 million hectares."
+      ],
+      "exam_tag": "BPSC / State Services",
+      "date": "24 Aug 2026",
+      "timestamp": 1787561119
+    }
+  ]
 }
