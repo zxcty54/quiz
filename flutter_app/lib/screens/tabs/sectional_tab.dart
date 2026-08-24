@@ -100,7 +100,6 @@ class _SectionalTabState extends State<SectionalTab> {
               _isLoading = false;
             });
 
-            // 💾 Phone ke permanent disk storage mein save
             final prefs = await SharedPreferences.getInstance();
             await prefs.setString('persistent_sectional_data_json', jsonEncode(parsed));
             return;
@@ -239,7 +238,106 @@ class _SectionalTabState extends State<SectionalTab> {
                 style: TextStyle(color: Colors.grey, fontSize: 12)),
             const SizedBox(height: 12),
 
-            // 🚀 CLEAN NON-SCROLL WRAP (Clear, Visible & Professional)
+            // ⚡ HIGH-IMPACT REAL-TIME EXAM ENGINE BANNER (Unmissable & Authoritative)
+            Container(
+              width: double.infinity,
+              margin: const EdgeInsets.only(bottom: 14),
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: widget.isDarkMode 
+                      ? [const Color(0xFF0F2942), const Color(0xFF132F4C)] 
+                      : [const Color(0xFFEFF6FF), const Color(0xFFE0F2FE)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                  color: widget.isDarkMode ? const Color(0xFF0284C7) : const Color(0xFF38BDF8),
+                  width: 1.3,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFF0284C7).withOpacity(widget.isDarkMode ? 0.3 : 0.12),
+                    blurRadius: 8,
+                    offset: const Offset(0, 3),
+                  ),
+                ],
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(top: 2),
+                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF059669).withOpacity(0.2),
+                      borderRadius: BorderRadius.circular(20),
+                      border: Border.all(color: const Color(0xFF10B981), width: 1.2),
+                    ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Container(
+                          width: 6.5,
+                          height: 6.5,
+                          decoration: const BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Color(0xFF10B981),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Color(0xFF10B981),
+                                blurRadius: 5,
+                                spreadRadius: 1.2,
+                              )
+                            ],
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        const Text(
+                          'LIVE',
+                          style: TextStyle(
+                            color: Color(0xFF10B981),
+                            fontSize: 9,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 0.5,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'Real-Time Updated Mocks (2026 Edition)',
+                          style: TextStyle(
+                            fontSize: 12.5,
+                            fontWeight: FontWeight.w800,
+                            color: widget.isDarkMode ? const Color(0xFF38BDF8) : const Color(0xFF0284C7),
+                            letterSpacing: -0.1,
+                          ),
+                        ),
+                        const SizedBox(height: 2),
+                        Text(
+                          'Commission ke latest notification, revised syllabus aur modern PYQ trends ke aadhar par sabhi mock sets real-time dynamically update hote hain.',
+                          style: TextStyle(
+                            fontSize: 10.5,
+                            height: 1.35,
+                            fontWeight: FontWeight.w500,
+                            color: widget.isDarkMode ? const Color(0xFFCBD5E1) : const Color(0xFF334155),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // 🚀 CLEAN NON-SCROLL WRAP (Exam Selector Pills)
             Wrap(
               spacing: 8.0,
               runSpacing: 8.0,
@@ -308,7 +406,7 @@ class _SectionalTabState extends State<SectionalTab> {
                         Text(
                           title,
                           style: TextStyle(
-                            fontSize: 13.5, // 👁️ Perfect clarity, na chhota na katega
+                            fontSize: 13.5,
                             fontWeight: FontWeight.bold,
                             color: isSelected
                                 ? Colors.white
