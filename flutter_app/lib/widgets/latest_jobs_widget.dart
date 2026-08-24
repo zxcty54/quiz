@@ -517,7 +517,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        'Apply',
+                        'Detail',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 11,
