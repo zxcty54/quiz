@@ -24,7 +24,6 @@ class _RevisionTabState extends State<RevisionTab> {
   Map<String, dynamic> _liveSubjectMapping = {};
   bool _isLoading = false;
 
-  // Selected pill index tracking for each category
   int _selectedScienceSubIndex = 0;
   int _selectedGkSubIndex = 0;
   int _selectedStaticSubIndex = 0;
@@ -122,6 +121,97 @@ class _RevisionTabState extends State<RevisionTab> {
       }
     }
     if (mounted) setState(() => _isLoading = false);
+  }
+
+  // 🛡️ TRUST & VERIFIED SOURCES MODAL (NCERT, Laxmikanth, Spectrum, etc.)
+  void _showSourcesModal(BuildContext context, bool isDark) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: isDark ? const Color(0xFF0F172A) : Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (ctx) {
+        final textColor = isDark ? Colors.white : const Color(0xFF0F172A);
+        final subTextColor = isDark ? Colors.white70 : const Color(0xFF475569);
+
+        return DraggableScrollableSheet(
+          initialChildSize: 0.75,
+          maxChildSize: 0.9,
+          minChildSize: 0.5,
+          expand: false,
+          builder: (context, scrollController) {
+            return Padding(
+              padding: const EdgeInsets.all(20),
+              child: ListView(
+                controller: scrollController,
+                children: [
+                  Center(
+                    child: Container(
+                      width: 40,
+                      height: 4,
+                      decoration: BoxDecoration(
+                        color: Colors.grey.shade400,
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  Row(
+                    children: [
+                      const Icon(Icons.verified_rounded, color: Color(0xFF2563EB), size: 22),
+                      const SizedBox(width: 8),
+                      Text(
+                        'Verified Academic Sources',
+                        style: TextStyle(
+                          fontSize: 16.5,
+                          fontWeight: FontWeight.bold,
+                          color: textColor,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    'Revision Hub ke sabhi questions aur explanations standard government textbooks aur authentic reference books ke sath verified hain.',
+                    style: TextStyle(fontSize: 12, color: subTextColor, height: 1.4),
+                  ),
+                  const Divider(height: 24),
+                  _buildSourceTile('🔬 Physics, Chemistry & Biology', 'NCERT (Class 8–12), NCERT Exemplar & Previous Year State PCS/CSIR Sets', textColor, subTextColor, isDark),
+                  _buildSourceTile('🏛️ Indian Polity & Governance', 'M. Laxmikanth (Latest Edition) & NCERT Indian Constitution at Work', textColor, subTextColor, isDark),
+                  _buildSourceTile('📜 History (Ancient, Medieval, Modern)', "Spectrum's Modern India (Rajiv Ahir), Satish Chandra, RS Sharma & BPSC PYQ sets", textColor, subTextColor, isDark),
+                  _buildSourceTile('🌍 Geography (Physical & Regional)', 'NCERT Geography (Class 6–12), Ghatna Chakra Purvavalokan & Oxford Atlas', textColor, subTextColor, isDark),
+                  _buildSourceTile('📈 Indian Economy & Bihar Survey', 'NCERT Macroeconomics (Class 12), Ramesh Singh & Bihar Economic Survey', textColor, subTextColor, isDark),
+                  _buildSourceTile('📰 Current Affairs & Schemes', 'Official Press Information Bureau (PIB), The Hindu & Bihar State Gazette', textColor, subTextColor, isDark),
+                  const SizedBox(height: 16),
+                ],
+              ),
+            );
+          },
+        );
+      },
+    );
+  }
+
+  Widget _buildSourceTile(String title, String desc, Color textColor, Color subTextColor, bool isDark) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(title, style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: textColor)),
+          const SizedBox(height: 4),
+          Text(desc, style: TextStyle(fontSize: 11.5, color: subTextColor, height: 1.35)),
+        ],
+      ),
+    );
   }
 
   Future<void> _openCurrentAffairsSection({
@@ -344,13 +434,55 @@ class _RevisionTabState extends State<RevisionTab> {
             ),
           ),
 
+          const SizedBox(height: 12),
+
+          // 🛡️ ACADEMIC TRUST & REFERENCE SOURCES BAR (Direct Verification)
+          InkWell(
+            onTap: () => _showSourcesModal(context, isDark),
+            borderRadius: BorderRadius.circular(12),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+              decoration: BoxDecoration(
+                color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                  color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                ),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.shield_outlined, color: Color(0xFF10B981), size: 17),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      'Mapped with NCERT (8-12), Laxmikanth & Spectrum',
+                      style: TextStyle(
+                        fontSize: 11.5,
+                        fontWeight: FontWeight.w600,
+                        color: isDark ? Colors.white70 : const Color(0xFF334155),
+                      ),
+                    ),
+                  ),
+                  Text(
+                    'Sources ➔',
+                    style: TextStyle(
+                      fontSize: 11,
+                      fontWeight: FontWeight.bold,
+                      color: isDark ? const Color(0xFF38BDF8) : const Color(0xFF2563EB),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
           const SizedBox(height: 18),
           Text('📚 Chapterwise Revision Hub', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: textColor)),
           const SizedBox(height: 4),
           Text('Subject select karein aur direct chapter chip dabakar revision shuru karein', style: TextStyle(color: subTextColor, fontSize: 12.5, fontWeight: FontWeight.w500)),
           const SizedBox(height: 14),
 
-          // 🔬 1. General Science (Horizontal Pill Switcher)
+          // 🔬 1. General Science
           _buildSegmentedCategoryCard(
             context: context,
             title: 'General Science',
@@ -370,7 +502,7 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          // 🏛️ 2. GK & Social Science (Horizontal Pill Switcher)
+          // 🏛️ 2. GK & Social Science
           _buildSegmentedCategoryCard(
             context: context,
             title: 'GK & Social Science',
@@ -391,14 +523,14 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          // 📰 3. Current Affairs Vault (Clean Minimal List UX)
+          // 📰 3. Current Affairs Vault
           _buildCurrentAffairsCategory(
             context: context,
             isDark: isDark,
           ),
           const SizedBox(height: 12),
 
-          // 🎯 4. STATIC GK & SCIENCE FOUNDATION (Horizontal Pill Switcher)
+          // 🎯 4. STATIC GK & SCIENCE FOUNDATION
           _buildSegmentedCategoryCard(
             context: context,
             title: 'Static GK & Science Foundation',
@@ -425,7 +557,6 @@ class _RevisionTabState extends State<RevisionTab> {
     );
   }
 
-  // 🎯 REUSABLE MINIMAL HORIZONTAL SWITCHER CATEGORY (For Science, GK & Static)
   Widget _buildSegmentedCategoryCard({
     required BuildContext context,
     required String title,
@@ -491,7 +622,6 @@ class _RevisionTabState extends State<RevisionTab> {
           children: [
             const Divider(height: 16),
 
-            // Horizontal Scrollable Subject Selector Pills
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               physics: const BouncingScrollPhysics(),
@@ -532,7 +662,6 @@ class _RevisionTabState extends State<RevisionTab> {
 
             const SizedBox(height: 12),
 
-            // Selected Sub-Header & Total Sets Counter
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
               child: Row(
@@ -559,7 +688,6 @@ class _RevisionTabState extends State<RevisionTab> {
 
             const SizedBox(height: 6),
 
-            // Active Subject Chapters Chips
             activeChapters.isEmpty
                 ? Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -605,7 +733,6 @@ class _RevisionTabState extends State<RevisionTab> {
     );
   }
 
-  // ✨ CURRENT AFFAIRS ACCORDION
   Widget _buildCurrentAffairsCategory({
     required BuildContext context,
     required bool isDark,
