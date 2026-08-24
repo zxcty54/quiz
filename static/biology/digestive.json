@@ -672,18 +672,6 @@
     "e": "Digestion breaks down complex food items like carbohydrates into simpler forms like glucose for energy. / पाचन ऊर्जा के लिए कार्बोहाइड्रेट जैसे जटिल खाद्य पदार्थों को ग्लूकोज जैसे सरल रूपों में तोड़ता है।"
   },
   {
-    "qe": "'पाचन' किस प्रकार की प्रक्रिया है?",
-    "qh": "Which type of process is 'Digestion'?",
-    "o": [
-      "Only Physical",
-      "Only Chemical",
-      "Physio-Chemical | फिजियो-केमिकल",
-      "None"
-    ],
-    "a": 2,
-    "e": "It involves physical action (teeth) and chemical action (enzymes). / इसमें भौतिक क्रिया (दांत) और रासायनिक क्रिया (एंजाइम) दोनों शामिल हैं।"
-  },
-  {
     "qe": "मनुष्यों में पाचन की प्रक्रिया कहाँ से शुरू होती है?",
     "qh": "Where does the process of digestion start in humans?",
     "o": [
@@ -1150,18 +1138,6 @@
     ],
     "a": 1,
     "e": "Kwashiorkor is severe protein malnutrition characterized by edema (swelling) and an enlarged liver."
-  },
-  {
-    "qe": "Which part of the digestive system absorbs water and minerals from undigested food?",
-    "qh": "",
-    "o": [
-      "Stomach",
-      "Small Intestine",
-      "Large Intestine",
-      "Esophagus"
-    ],
-    "a": 2,
-    "e": "The primary function of the large intestine is to absorb water and electrolytes from the indigestible food matter before it is excreted."
   },
   {
     "qe": "In Jaundice, which organ is primarily affected due to the buildup of bilirubin?",
@@ -2808,114 +2784,6 @@
     "e": "Peptidases (from intestinal juice) perform the final step of breaking down small peptides into individual amino acids."
   },
   {
-    "qe": "Which hormone stimulates the 'Gallbladder' to contract and release bile?",
-    "qh": "",
-    "o": [
-      "Gastrin",
-      "Secretin",
-      "Cholecystokinin (CCK)",
-      "Insulin"
-    ],
-    "a": 2,
-    "e": "CCK is secreted by the duodenum in response to fats; it triggers gallbladder contraction and pancreatic enzyme release."
-  },
-  {
-    "qe": "What is the primary function of the 'Kupffer Cells' in the liver?",
-    "qh": "",
-    "o": [
-      "Bile production",
-      "Phagocytosis (Immunity)",
-      "Protein synthesis",
-      "Glucagon secretion"
-    ],
-    "a": 1,
-    "e": "Kupffer cells are specialized macrophages that destroy bacteria and old red blood cells in the liver."
-  },
-  {
-    "qe": "Which of the following describes 'Micelles' in the digestive process?",
-    "qh": "",
-    "o": [
-      "Protein droplets",
-      "Small droplets of fats surrounded by bile salts",
-      "Enzyme complexes",
-      "Intestinal waste"
-    ],
-    "a": 1,
-    "e": "Micelles are essential for the absorption of fat-soluble vitamins and fatty acids in the small intestine."
-  },
-  {
-    "qe": "Which enzyme converts 'Maltose' into two units of 'Glucose'?",
-    "qh": "",
-    "o": [
-      "Lactase",
-      "Sucrase",
-      "Maltase",
-      "Invertase"
-    ],
-    "a": 2,
-    "e": "Maltase is an intestinal enzyme that completes the digestion of malt sugar into simple glucose."
-  },
-  {
-    "qe": "What is 'Achalasia'?",
-    "qh": "",
-    "o": [
-      "Inability to digest milk",
-      "Failure of the lower esophageal sphincter to relax",
-      "Inflammation of the liver",
-      "Chronic diarrhea"
-    ],
-    "a": 1,
-    "e": "Achalasia makes it difficult for food and liquid to pass from the esophagus into the stomach."
-  },
-  {
-    "qe": "Which part of the Alimentary canal is the site of 'Symbiotic bacteria' that produce Vitamin K?",
-    "qh": "",
-    "o": [
-      "Stomach",
-      "Duodenum",
-      "Caecum (Large Intestine)",
-      "Esophagus"
-    ],
-    "a": 2,
-    "e": "The caecum and colon host beneficial bacteria like E. coli which synthesize Vitamin K and B12."
-  },
-  {
-    "qe": "The 'Islets of Langerhans' are found in which organ?",
-    "qh": "",
-    "o": [
-      "Liver",
-      "Spleen",
-      "Pancreas",
-      "Kidney"
-    ],
-    "a": 2,
-    "e": "These are groups of endocrine cells in the pancreas that secrete insulin and glucagon."
-  },
-  {
-    "qe": "What is 'Peristalsis'?",
-    "qh": "",
-    "o": [
-      "Mechanical chewing",
-      "Chemical digestion by enzymes",
-      "Wave-like muscular contractions of the gut",
-      "Absorption of nutrients"
-    ],
-    "a": 2,
-    "e": "Peristalsis pushes food through the esophagus, stomach, and intestines involuntarily."
-  },
-  {
-    "qe": "Which enzyme converts 'Proteins' into 'Amino Acids' in the small intestine?",
-    "qh": "",
-    "o": [
-      "Pepsin",
-      "Trypsin",
-      "Peptidases",
-      "Amylase"
-    ],
-    "a": 2,
-    "e": "Peptidases (from intestinal juice) perform the final step of breaking down small peptides into individual amino acids."
-  },
-  {
     "qe": "Which condition is caused by the lack of 'Intrinsic Factor' in the stomach?",
     "qh": "",
     "o": [
@@ -3288,18 +3156,6 @@
     "e": "The liver can synthesize glucose from non-carbohydrate sources like amino acids during fasting."
   },
   {
-    "qe": "What is the function of 'Bicarbonate' in pancreatic juice?",
-    "qh": "",
-    "o": [
-      "Digest fats",
-      "Digest proteins",
-      "Neutralize stomach acid",
-      "Absorb vitamins"
-    ],
-    "a": 2,
-    "e": "It raises the pH of chyme from acidic to slightly alkaline (pH 7-8), allowing intestinal enzymes to work."
-  },
-  {
     "qe": "Which vitamin is essential for the synthesis of 'Prothrombin' for blood clotting?",
     "qh": "",
     "o": [
@@ -3454,18 +3310,6 @@
     ],
     "a": 2,
     "e": "Tooth enamel is the most mineralized and hardest tissue in the body."
-  },
-  {
-    "qe": "Which condition is caused by the lack of 'Intrinsic Factor' in the stomach?",
-    "qh": "",
-    "o": [
-      "Scurvy",
-      "Pernicious Anemia",
-      "Rickets",
-      "Goitre"
-    ],
-    "a": 1,
-    "e": "Without intrinsic factor, Vitamin B12 cannot be absorbed, leading to failure of RBC maturation."
   },
   {
     "qe": "What is the 'pH' of the Small Intestine after the addition of pancreatic juice?",
