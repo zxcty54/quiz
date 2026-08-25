@@ -2,18 +2,15 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
-import '../screens/pdf_vault_screen.dart';
 
 class ProPdfVaultCard extends StatefulWidget {
   final bool isDarkMode;
   final String? customWebsiteUrl;
-  final List<dynamic>? dynamicPdfItems;
 
   const ProPdfVaultCard({
     super.key,
     required this.isDarkMode,
     this.customWebsiteUrl,
-    this.dynamicPdfItems,
   });
 
   @override
@@ -27,21 +24,54 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
   static const String _booksJsonUrl =
       "https://raw.githubusercontent.com/zxcty54/quiz/main/books_database.json";
 
-  List<Map<String, dynamic>> _loadedBooks = [];
-  bool _isLoading = false;
+  final List<Map<String, dynamic>> _fallbackDocs = [
+    {
+      'title': 'M. Laxmikanth: Indian Polity (6th Edition)',
+      'tag': '🏛️ STANDARD',
+      'badge': 'ADDED TODAY',
+      'meta': 'Civil Services • Hindi/En Edition',
+      'color': 0xFF7C3AED,
+      'url': 'https://www.mocktester.online',
+    },
+    {
+      'title': 'NCERT Science & GK 1-Liner Crux',
+      'tag': '🌿 NCERT CRUX',
+      'badge': 'NEW ADDED',
+      'meta': 'Class 8-12 • Complete Handnotes',
+      'color': 0xFF059669,
+      'url': 'https://www.mocktester.online',
+    },
+    {
+      'title': 'BPSC & BSSC 3000+ TCS PYQ Formula Sheet',
+      'tag': '🔥 PYQ SHEET',
+      'badge': 'ADDED TODAY',
+      'meta': 'State PCS • Quick Revision Chart',
+      'color': 0xFFD97706,
+      'url': 'https://www.mocktester.online',
+    },
+    {
+      'title': 'General Science Physics & Chemistry Formula Sheet',
+      'tag': '⚡ HIGH YIELD',
+      'badge': 'NEW ADDED',
+      'meta': 'Competitive Exams • All SI Units & Laws',
+      'color': 0xFF2563EB,
+      'url': 'https://www.mocktester.online',
+    },
+  ];
+
+  List<Map<String, dynamic>> _displayDocs = [];
 
   @override
   void initState() {
     super.initState();
-    // 💡 Smooth Blinking Badge Animation
+    _displayDocs = _fallbackDocs;
+
     _blinkController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 800),
     )..repeat(reverse: true);
 
-    if (widget.dynamicPdfItems == null || widget.dynamicPdfItems!.isEmpty) {
-      _fetchLatestBooks();
-    }
+    _fetchLiveBooks();
   }
 
   @override
@@ -50,109 +80,52 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
     super.dispose();
   }
 
-  Future<void> _fetchLatestBooks() async {
+  Future<void> _fetchLiveBooks() async {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     try {
       final res = await http
           .get(Uri.parse('$_booksJsonUrl?t=$ts'))
-          .timeout(const Duration(seconds: 5));
+          .timeout(const Duration(seconds: 4));
 
       if (res.statusCode == 200) {
         String body = utf8.decode(res.bodyBytes).trim();
         if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
 
         final decoded = jsonDecode(body);
-        if (decoded is List && mounted) {
+        if (decoded is List && decoded.isNotEmpty && mounted) {
           setState(() {
-            // Latest 5-6 entries pick kar rahe hain
-            _loadedBooks = decoded.reversed.take(6).map<Map<String, dynamic>>((item) {
-              return _formatBookItem(item);
+            _displayDocs = decoded.reversed.take(4).map<Map<String, dynamic>>((item) {
+              final String board = (item['board'] ?? 'REFERENCE').toString().toUpperCase();
+              final String cls = (item['class'] ?? 'Exam Notes').toString();
+              final String lang = (item['lang'] ?? 'Hindi/En').toString();
+
+              int colorVal = 0xFF2563EB;
+              String tag = '⚡ HIGH YIELD';
+
+              if (board.contains('NCERT')) {
+                colorVal = 0xFF059669;
+                tag = '🌿 NCERT CRUX';
+              } else if (board.contains('PYQ')) {
+                colorVal = 0xFFD97706;
+                tag = '🔥 PYQ SHEET';
+              } else if (board.contains('REFERENCE')) {
+                colorVal = 0xFF7C3AED;
+                tag = '🏛️ STANDARD';
+              }
+
+              return {
+                'title': item['chapter'] ?? 'Study Material & Notes',
+                'tag': tag,
+                'badge': 'ADDED TODAY',
+                'meta': '$cls • $lang Edition',
+                'color': colorVal,
+                'url': item['articleUrl'] ?? widget.customWebsiteUrl ?? _defaultWebsiteUrl,
+              };
             }).toList();
           });
-          return;
         }
       }
     } catch (_) {}
-  }
-
-  Map<String, dynamic> _formatBookItem(dynamic item) {
-    if (item is Map) {
-      final String board = (item['board'] ?? 'REFERENCE').toString();
-      final String cls = (item['class'] ?? 'General').toString();
-      final String lang = (item['lang'] ?? 'Hindi/En').toString();
-
-      int colorVal = 0xFF2563EB;
-      String tag = '⚡ HIGH YIELD';
-      if (board.contains('NCERT')) {
-        colorVal = 0xFF059669;
-        tag = '🌿 NCERT CRUX';
-      } else if (board.contains('PYQ')) {
-        colorVal = 0xFFD97706;
-        tag = '🔥 PYQ SHEET';
-      } else if (board.contains('REFERENCE')) {
-        colorVal = 0xFF7C3AED;
-        tag = '🏛️ STANDARD';
-      }
-
-      return {
-        'title': item['chapter'] ?? item['title'] ?? 'Study Material & Notes',
-        'tag': tag,
-        'badge': 'ADDED TODAY',
-        'meta': '$cls • $lang Edition',
-        'reads': 'Verified E-Book',
-        'color': colorVal,
-        'url': item['articleUrl'] ?? item['url'] ?? _defaultWebsiteUrl,
-      };
-    }
-    return {
-      'title': item.toString(),
-      'tag': 'FREE PDF',
-      'badge': 'NEW',
-      'meta': 'Online Notes',
-      'reads': 'Verified E-Book',
-      'color': 0xFF2563EB,
-      'url': _defaultWebsiteUrl,
-    };
-  }
-
-  List<Map<String, dynamic>> _getDocList() {
-    if (widget.dynamicPdfItems != null && widget.dynamicPdfItems!.isNotEmpty) {
-      return widget.dynamicPdfItems!.map<Map<String, dynamic>>((item) {
-        return _formatBookItem(item);
-      }).toList();
-    }
-    if (_loadedBooks.isNotEmpty) {
-      return _loadedBooks;
-    }
-    return [
-      {
-        'title': 'M. Laxmikanth: Indian Polity (6th Edition)',
-        'tag': '🏛️ STANDARD',
-        'badge': 'ADDED TODAY',
-        'meta': 'Civil Services • Hindi/En',
-        'reads': 'Verified E-Book',
-        'color': 0xFF7C3AED,
-        'url': 'https://www.mocktester.online',
-      },
-      {
-        'title': 'NCERT Science & GK 1-Liner Crux',
-        'tag': '🔥 MOST READ',
-        'badge': 'NEW ADDED',
-        'meta': 'Class 8-12 • Complete Handnotes',
-        'reads': 'Verified E-Book',
-        'color': 0xFF2563EB,
-        'url': 'https://www.mocktester.online',
-      },
-      {
-        'title': 'BPSC & BSSC 3000+ TCS PYQ Formula Sheet',
-        'tag': '⚡ HIGH YIELD',
-        'badge': 'NEW ADDED',
-        'meta': 'State PCS • Quick Revision Chart',
-        'reads': 'Verified E-Book',
-        'color': 0xFFD97706,
-        'url': 'https://www.mocktester.online',
-      },
-    ];
   }
 
   Future<void> _launchUrl(String targetUrl) async {
@@ -171,7 +144,6 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
   @override
   Widget build(BuildContext context) {
     final bool isDark = widget.isDarkMode;
-    final docs = _getDocList();
 
     return Container(
       width: double.infinity,
@@ -195,7 +167,6 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🏆 1. HEADER SECTION
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -249,14 +220,11 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                 ),
               ],
             ),
-
             const SizedBox(height: 12),
-
-            // 📋 2. STATIC DIRECT LIST (Zero Scroll Inside)
-            ...docs.map((doc) {
+            ..._displayDocs.map((doc) {
               final Color accent = Color(doc['color'] as int);
               final String badgeText = doc['badge'] ?? 'NEW ADDED';
-              final String docUrl = doc['url'] ?? (widget.customWebsiteUrl ?? _defaultWebsiteUrl);
+              final String docUrl = doc['url'] ?? _defaultWebsiteUrl;
 
               return Padding(
                 padding: const EdgeInsets.only(bottom: 8.0),
@@ -274,7 +242,6 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                     ),
                     child: Row(
                       children: [
-                        // 📄 PDF Icon Box
                         Container(
                           width: 36,
                           height: 44,
@@ -296,8 +263,6 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                           ),
                         ),
                         const SizedBox(width: 10),
-
-                        // 📝 Item Info
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -305,7 +270,6 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                             children: [
                               Row(
                                 children: [
-                                  // ✨ Blinking Pulse Tag
                                   FadeTransition(
                                     opacity: Tween<double>(begin: 0.4, end: 1.0).animate(_blinkController),
                                     child: Container(
@@ -360,7 +324,6 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                             ],
                           ),
                         ),
-
                         const SizedBox(width: 6),
                         const Icon(Icons.arrow_forward_ios_rounded, size: 14, color: Color(0xFF2563EB)),
                       ],
@@ -369,19 +332,9 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                 ),
               );
             }),
-
             const SizedBox(height: 6),
-
-            // 🚀 3. DIRECT ACTION BUTTON (Opens Full PDF Vault Search Screen)
             InkWell(
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (ctx) => PdfVaultScreen(isDarkMode: isDark),
-                  ),
-                );
-              },
+              onTap: () => _launchUrl(widget.customWebsiteUrl ?? _defaultWebsiteUrl),
               borderRadius: BorderRadius.circular(10),
               child: Container(
                 width: double.infinity,
@@ -404,10 +357,10 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.search_rounded, color: Colors.white, size: 16),
+                    Icon(Icons.open_in_browser_rounded, color: Colors.white, size: 16),
                     SizedBox(width: 6),
                     Text(
-                      'Search All Books & E-Library (Vault)',
+                      'Open PDF Vault on Website',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 12.5,
