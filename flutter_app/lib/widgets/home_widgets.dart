@@ -316,95 +316,218 @@ class WebHubCardWidget extends StatelessWidget {
   }
 }
 
-// 4️⃣ JOB ELIGIBILITY CHECKER BANNER WIDGET
+// 4️⃣ PREMIUM HIGH-CONVERTING JOB ELIGIBILITY CHECKER BANNER
 class EligibilityCheckerWidget extends StatelessWidget {
   final bool isDarkMode;
   final Function(String title, String url) onTapUrl;
 
-  const EligibilityCheckerWidget({super.key, required this.isDarkMode, required this.onTapUrl});
+  const EligibilityCheckerWidget({
+    super.key,
+    required this.isDarkMode,
+    required this.onTapUrl,
+  });
 
   @override
   Widget build(BuildContext context) {
     const String eligibilityToolUrl = "https://www.mocktester.online/p/bihar-job-eligibility-checker.html";
 
-    return Card(
-      elevation: 2,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(14),
-        side: const BorderSide(color: Color(0xFF3B82F6), width: 1.5),
-      ),
-      child: Container(
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(14),
-          gradient: LinearGradient(
-            colors: isDarkMode
-                ? [const Color(0xFF1E293B), const Color(0xFF0F172A)]
-                : [const Color(0xFFEFF6FF), Colors.white],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(18),
+        gradient: LinearGradient(
+          colors: isDarkMode
+              ? [const Color(0xFF1E293B), const Color(0xFF0F172A)]
+              : [const Color(0xFFEFF6FF), const Color(0xFFDBEAFE)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
-        padding: const EdgeInsets.all(14.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Row(
-                  children: [
-                    Text('🎯', style: TextStyle(fontSize: 20)),
-                    SizedBox(width: 8),
-                    Text('Job Eligibility Checker', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
-                  ],
+        border: Border.all(
+          color: isDarkMode ? const Color(0xFF3B82F6).withOpacity(0.4) : const Color(0xFF60A5FA),
+          width: 1.5,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF2563EB).withOpacity(isDarkMode ? 0.2 : 0.1),
+            blurRadius: 12,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      padding: const EdgeInsets.all(16.0),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // Header Tag + Title
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(7),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF2563EB).withOpacity(0.15),
+                      shape: BoxShape.circle,
+                    ),
+                    child: const Text('🎯', style: TextStyle(fontSize: 18)),
+                  ),
+                  const SizedBox(width: 8),
+                  Text(
+                    'Sarkari Eligibility Radar',
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: -0.2,
+                      color: isDarkMode ? Colors.white : const Color(0xFF1E3A8A),
+                    ),
+                  ),
+                ],
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF10B981),
+                  borderRadius: BorderRadius.circular(20),
                 ),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                  decoration: BoxDecoration(color: const Color(0xFF2563EB), borderRadius: BorderRadius.circular(20)),
-                  child: const Text('ONLINE TOOL', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w800, color: Colors.white)),
+                child: const Text(
+                  '100% FREE TOOL',
+                  style: TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: Colors.white),
                 ),
-              ],
+              ),
+            ],
+          ),
+          const SizedBox(height: 12),
+
+          // Main Callout Text
+          Text(
+            'Kaun-kaun si Sarkari Naukri aap bhar sakte hain?',
+            style: TextStyle(
+              fontSize: 13,
+              fontWeight: FontWeight.bold,
+              color: isDarkMode ? const Color(0xFF93C5FD) : const Color(0xFF1D4ED8),
             ),
-            const SizedBox(height: 8),
-            const Text(
-              'Apni DOB, Stream aur Height daal kar check karein aap Bihar ki kis-kis Sarkari Naukri ke liye eligible hain!',
-              style: TextStyle(fontSize: 11.5, color: Colors.grey, height: 1.3),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            'Bas apni Date of Birth (DOB) aur Stream (10th/12th/Graduation) chuniye — Smart tool turant bata dega aapki eligible posts!',
+            style: TextStyle(
+              fontSize: 11.5,
+              color: isDarkMode ? Colors.white70 : const Color(0xFF475569),
+              height: 1.35,
             ),
-            const SizedBox(height: 10),
-            Wrap(
-              spacing: 6, runSpacing: 6,
-              children: [
-                _buildSmallBadge("✔ BPSC / BSSC Posts"),
-                _buildSmallBadge("✔ Police & Height Check"),
-                _buildSmallBadge("✔ TRE Teacher Course"),
-              ],
-            ),
-            const SizedBox(height: 12),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF2563EB),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                ),
-                onPressed: () => onTapUrl("Job Eligibility Checker", eligibilityToolUrl),
-                icon: const Text('🚀', style: TextStyle(fontSize: 12)),
-                label: const Text('Check My Eligibility On Website', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+          ),
+          const SizedBox(height: 14),
+
+          // Visual 3-Step Action Flow
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+            decoration: BoxDecoration(
+              color: isDarkMode ? const Color(0xFF0F172A).withOpacity(0.6) : Colors.white.withOpacity(0.8),
+              borderRadius: BorderRadius.circular(12),
+              border: Border.all(
+                color: isDarkMode ? Colors.white12 : const Color(0xFFBFDBFE),
               ),
             ),
-          ],
-        ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                _buildStepBadge('1', '📅 DOB', isDarkMode),
+                const Icon(Icons.arrow_forward_ios_rounded, size: 10, color: Colors.grey),
+                _buildStepBadge('2', '🎓 Stream', isDarkMode),
+                const Icon(Icons.arrow_forward_ios_rounded, size: 10, color: Colors.grey),
+                _buildStepBadge('3', '📋 All Posts', isDarkMode, isHighlight: true),
+              ],
+            ),
+          ),
+          const SizedBox(height: 12),
+
+          // Badges Supported Exams
+          Wrap(
+            spacing: 6,
+            runSpacing: 6,
+            children: [
+              _buildSmallBadge("✔ BPSC & BSSC", isDarkMode),
+              _buildSmallBadge("✔ Bihar Police / SI", isDarkMode),
+              _buildSmallBadge("✔ Railway & SSC", isDarkMode),
+            ],
+          ),
+          const SizedBox(height: 14),
+
+          // Action Button
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF2563EB),
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(vertical: 12),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                elevation: 3,
+                shadowColor: const Color(0xFF2563EB).withOpacity(0.4),
+              ),
+              onPressed: () => onTapUrl("Job Eligibility Checker", eligibilityToolUrl),
+              child: const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Check My Eligibility Now', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w800)),
+                  SizedBox(width: 6),
+                  Icon(Icons.arrow_forward_rounded, size: 16),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
 
-  Widget _buildSmallBadge(String text) {
+  Widget _buildStepBadge(String num, String label, bool isDark, {bool isHighlight = false}) {
+    return Row(
+      children: [
+        Container(
+          width: 17,
+          height: 17,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: isHighlight ? const Color(0xFF10B981) : const Color(0xFF2563EB),
+            shape: BoxShape.circle,
+          ),
+          child: Text(
+            num,
+            style: const TextStyle(color: Colors.white, fontSize: 9.5, fontWeight: FontWeight.bold),
+          ),
+        ),
+        const SizedBox(width: 4),
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 11,
+            fontWeight: FontWeight.bold,
+            color: isHighlight
+                ? const Color(0xFF10B981)
+                : (isDark ? Colors.white : const Color(0xFF1E293B)),
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildSmallBadge(String text, bool isDark) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
-      decoration: BoxDecoration(color: const Color(0xFFDBEAFE), borderRadius: BorderRadius.circular(6)),
-      child: Text(text, style: const TextStyle(fontSize: 9.5, fontWeight: FontWeight.w600, color: Color(0xFF1E40AF))),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+      decoration: BoxDecoration(
+        color: isDark ? const Color(0xFF334155) : const Color(0xFFDBEAFE),
+        borderRadius: BorderRadius.circular(6),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontSize: 10,
+          fontWeight: FontWeight.w700,
+          color: isDark ? const Color(0xFF93C5FD) : const Color(0xFF1E40AF),
+        ),
+      ),
     );
   }
 }
