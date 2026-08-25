@@ -6,8 +6,11 @@
     <!-- Haptic Feedback Vibration -->
     <uses-permission android:name="android.permission.VIBRATE"/>
 
-    <!-- Camera for Doubt Photos (Optional/Required) -->
+    <!-- Camera for Doubt Photos -->
     <uses-permission android:name="android.permission.CAMERA"/>
+
+    <!-- Android 13+ Push Notification Permission -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
     <!-- Legacy Storage only for older Android versions (API <= 28) -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="28"/>
@@ -18,6 +21,11 @@
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="false">
+        
+        <!-- 🔥 Default Firebase Notification Channel -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="mocktester_channel" />
         
         <activity
             android:name=".MainActivity"
