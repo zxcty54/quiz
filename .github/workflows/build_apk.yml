@@ -38,12 +38,31 @@ jobs:
         working-directory: flutter_app
         run: dart run flutter_launcher_icons || true
 
-      # 🛠️ Exact Patching for Kotlin DSL (.kts) and Groovy (.gradle)
-      - name: 🔧 Auto-Patch compileSdk to 36 for App & pub-cache
+      # 🛠️ Exact Patching for SDK, Desugaring & Google Services
+      - name: 🔧 Auto-Patch Gradle, Desugaring & Google Services
         run: |
+          # 1. CompileSDK Patch
           find flutter_app/android/ ~/.pub-cache/ -type f -name "*.kts" -exec sed -i 's/compileSdk.*/compileSdk = 36/g' {} +
           find flutter_app/android/ ~/.pub-cache/ -type f -name "build.gradle" -exec sed -i 's/compileSdkVersion.*/compileSdkVersion 36/g' {} +
           find flutter_app/android/ ~/.pub-cache/ -type f -name "build.gradle" -exec sed -i 's/compileSdk .*/compileSdk 36/g' {} +
+
+          # 2. Settings Gradle Plugin Patch
+          if [ -f flutter_app/android/settings.gradle ]; then
+            sed -i 's/plugins {/plugins {\n    id "com.google.gms.google-services" version "4.4.2" apply false/' flutter_app/android/settings.gradle
+          elif [ -f flutter_app/android/settings.gradle.kts ]; then
+            sed -i 's/plugins {/plugins {\n    id("com.google.gms.google-services") version "4.4.2" apply false/' flutter_app/android/settings.gradle.kts
+          fi
+
+          # 3. App-level Desugaring & Google Services Patch
+          if [ -f flutter_app/android/app/build.gradle ]; then
+            sed -i 's/plugins {/plugins {\n    id "com.google.gms.google-services"/' flutter_app/android/app/build.gradle
+            sed -i 's/compileOptions {/compileOptions {\n        coreLibraryDesugaringEnabled true/' flutter_app/android/app/build.gradle
+            sed -i 's/dependencies {/dependencies {\n    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"/' flutter_app/android/app/build.gradle
+          elif [ -f flutter_app/android/app/build.gradle.kts ]; then
+            sed -i 's/plugins {/plugins {\n    id("com.google.gms.google-services")/' flutter_app/android/app/build.gradle.kts
+            sed -i 's/compileOptions {/compileOptions {\n        isCoreLibraryDesugaringEnabled = true/' flutter_app/android/app/build.gradle.kts
+            sed -i 's/dependencies {/dependencies {\n    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")/' flutter_app/android/app/build.gradle.kts
+          fi
 
       - name: 🛠️ Build APK (With Secrets Injected)
         working-directory: flutter_app
@@ -60,7 +79,7 @@ jobs:
           name: MockTester-Release-APK
           path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
 
-      # 🚀 DIRECT TELEGRAM APK DELIVERY (Secure Secrets Version)
+      # 🚀 DIRECT TELEGRAM APK DELIVERY
       - name: 📦 Compress APK for Telegram Delivery
         working-directory: flutter_app
         run: |
