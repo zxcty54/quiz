@@ -1,6 +1,6 @@
 {
-  "topic_id": "planning_commission_india_part1",
-  "topic_title": "Planning Commission of India & Five-Year Plans (Part 1/2)",
+  "topic_id": "planning_commission_india_part1_zero_to_hero",
+  "topic_title": "Planning Commission & Five-Year Plans (Part 1/2)",
   "target_exams": [
     "BPSC",
     "BPSC TRE",
@@ -18,52 +18,57 @@
     },
     "raju": {
       "name": "Raju",
-      "role": "student",
+      "role": "student (Class 8th Beginner)",
       "avatar": "👦"
     }
   },
   "cards": [
     {
-      "card_id": "card_01_intro",
-      "card_slug": "card_01_intro",
+      "card_id": "card_01_welcome",
+      "card_slug": "card_01_welcome",
       "type": "intro",
-      "concept_id": "planning_intro",
+      "concept_id": "zero_intro",
       "level": 1,
       "progress": {
         "current": 1,
         "total": 40
       },
       "intro_payload": {
-        "title": "📊 Indian Economic Planning Masterclass (Part 1)",
-        "subtitle": "Historical Roots to the 12th Five-Year Plan",
-        "icon": "🏛️",
+        "title": "🏛️ Desh Ki Planning: Zero Se Hero Tak",
+        "subtitle": "Class 8th Raju Ke Saath Aasaan Bhasha Mein",
+        "icon": "📚",
         "target_exams": [
           "BPSC",
           "BPSC TRE",
           "BSSC",
           "SSC CGL",
-          "UPSC Prelims"
+          "RRB NTPC"
         ],
         "learning_outcomes": [
-          "Pre-independence planning initiatives (Visvesvaraya, NPC 1938, Bombay Plan, Gandhian, People's & Sarvodaya Plan)",
-          "Establishment & composition of Planning Commission (15 March 1950)",
-          "National Development Council (NDC - 6 August 1952)",
-          "Comprehensive breakdown of all 12 Five-Year Plans and Plan Holidays",
-          "High-yield MCQs & Multi-Statement PYQs"
+          "Planning kya hoti hai aur desh ko iski zarurat kyun padi?",
+          "Azadi se pehle planning ke sapne (Visvesvaraya se Sarvodaya Plan tak)",
+          "Planning Commission (1950) aur NDC (1952) kaise bane?",
+          "First Plan (1951) se lekar 12th Plan (2017) tak ki poori kahani",
+          "BPSC aur SSC ke basic to advance MCQs",
+          "1 January 2015 ko NITI Aayog kaise aur kyun bana?",
+          "NITI Aayog ka structure: PM, VC, CEO aur Sabhi Mukhyamantri",
+          "NITI Aayog ke report card: SDG Index, Garibi Index (MPI) aur Atal Tinkering Labs",
+          "⭐ Bihar State Planning Board aur Saat Nischay (Part 1 & 2)",
+          "BPSC aur SSC level ke easy-to-advance practice sawaal"
         ],
         "estimated_time": "25 minutes",
         "total_modules": 4
       },
       "navigation": {
-        "next": "card_02_pre_independence_1",
-        "button_text": "Start Learning 🚀"
+        "next": "card_02_pocket_money_hook",
+        "button_text": "Shuru Karte Hain 🚀"
       }
     },
     {
-      "card_id": "card_02_pre_independence_1",
-      "card_slug": "card_02_pre_independence_1",
+      "card_id": "card_02_pocket_money_hook",
+      "card_slug": "card_02_pocket_money_hook",
       "type": "chat",
-      "concept_id": "pre_independence_planning",
+      "concept_id": "concept_of_planning",
       "level": 1,
       "progress": {
         "current": 2,
@@ -72,27 +77,31 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Raju, India mein economic planning 1950 se shuru nahi hui! Iska historical background 1934 se start hota hai. M. Visvesvaraya ne apni book 'Planned Economy for India' (1934) mein pehli baar 10-year plan ka proposal diya tha."
+          "text": "Raju, agar main tumhe 100 rupaye pocket money doon aur kahoon ki pure mahine ka kharcha chalao, to tum kya karoge?"
         },
         {
           "speaker": "raju",
-          "text": "Acha! To Visvesvaraya ji ko 'Father of Indian Economic Planning' bhi kaha jata hai?"
+          "text": "Sir, main pehle ek copy par likhunga ki kitne ki copy khareedni hai, kitni pencil aur kitne bachaane hain. Bina soche kharch kiya to 2 din mein paisa khatam ho jayega!"
         },
         {
           "speaker": "aman",
-          "text": "Bilkul sahi! Iske baad 1938 mein Congress President Subhash Chandra Bose ne 'National Planning Committee' (NPC) banayi, jiske Chairman bane Pandit Jawaharlal Nehru."
+          "text": "Shabash! Isi hisab-kitab aur soch-samajh kar kharch karne ko 'Planning' (Yojana) kehte hain. Ab socho, jab 1947 mein hamara desh azad hua, tab desh ke paas bhi paisa kam tha aur log bahut gareeb the. To pure desh ko chalane ke liye planning ki zarurat padi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Acha! Matlab jaise hum ghar ka budget banate hain, waise hi sarkar pure desh ke liye planning karti hai?"
         }
       ],
       "navigation": {
-        "next": "card_03_pre_independence_2",
-        "button_text": "Next: Pre-Independence Plans ➔"
+        "next": "card_03_first_thinker_visvesvaraya",
+        "button_text": "Aage Samjho ➔"
       }
     },
     {
-      "card_id": "card_03_pre_independence_2",
-      "card_slug": "card_03_pre_independence_2",
+      "card_id": "card_03_first_thinker_visvesvaraya",
+      "card_slug": "card_03_first_thinker_visvesvaraya",
       "type": "chat",
-      "concept_id": "plans_chronology",
+      "concept_id": "visvesvaraya_contribution",
       "level": 1,
       "progress": {
         "current": 3,
@@ -101,65 +110,69 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Exams ke 4 crucial pre-independence plans yaad rakho:\n1. Bombay Plan (1944) — 8 industrialist (J.R.D. Tata, G.D. Birla etc.)\n2. Gandhian Plan (1944) — Shriman Narayan Agarwal\n3. People's Plan (1945) — M.N. Roy (Marxist approach)\n4. Sarvodaya Plan (1950) — Jaiprakash Narayan (JP)!"
+          "text": "Desh mein planning ka idea sabse pehle 1934 mein ek bahut bade engineer M. Visvesvaraya ji ne diya. Unhone ek kitab likhi — 'Planned Economy for India'."
         },
         {
           "speaker": "raju",
-          "text": "Sir, JP Narayan wala question BPSC mein bar-bar aata hai!"
+          "text": "Sir, unhone kitab mein kya likha tha?"
         },
         {
           "speaker": "aman",
-          "text": "Exact! Sarvodaya Plan (Jan 1950) par hi aage chalkar Planning Commission ki broad philosophy rely karti hai."
+          "text": "Unhone kaha ki agar desh se garibi hatani hai, to agle 10 saal ke liye ek pakka plan banana padega aur karkhane (factories) lagane padenge. Isliye unhe Indian Planning ka pehla vicharak mana jata hai. Unke birthday (15 September) par hum 'Engineers' Day' manate hain!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Wah! Ye to school mein bhi bataya gaya tha!"
         }
       ],
       "navigation": {
-        "next": "card_04_quiz_pre_plans",
-        "button_text": "Test on Historical Plans 📝"
+        "next": "card_04_quiz_visvesvaraya",
+        "button_text": "Pehla Sawaal Solve Karo 📝"
       }
     },
     {
-      "card_id": "card_04_quiz_pre_plans",
-      "card_slug": "card_04_quiz_pre_plans",
+      "card_id": "card_04_quiz_visvesvaraya",
+      "card_slug": "card_04_quiz_visvesvaraya",
       "type": "quiz",
-      "concept_id": "quiz_historical_plans",
+      "concept_id": "quiz_visvesvaraya_book",
       "level": 1,
       "progress": {
         "current": 4,
         "total": 40
       },
       "quiz_payload": {
-        "question": "'Sarvodaya Plan' (1950) kiske dwara formulate kiya gaya tha?",
+        "question": "1934 mein 'Planned Economy for India' naamak mashhoor kitab kisne likhi thi?",
         "options": [
           {
             "id": "A",
-            "text": "M.N. Roy"
+            "text": "Mahatma Gandhi"
           },
           {
             "id": "B",
-            "text": "Shriman Narayan Agarwal"
+            "text": "M. Visvesvaraya"
           },
           {
             "id": "C",
-            "text": "Jaiprakash Narayan"
+            "text": "Jawaharlal Nehru"
           },
           {
             "id": "D",
-            "text": "Jawaharlal Nehru"
+            "text": "Subhash Chandra Bose"
           }
         ],
-        "correct_option_id": "C",
-        "explanation": "Sarvodaya Plan January 1950 mein Jaiprakash Narayan dwara prastut kiya gaya tha. M.N. Roy ne 'People's Plan' (1945) aur S.N. Agarwal ne 'Gandhian Plan' (1944) design kiya tha."
+        "correct_option_id": "B",
+        "explanation": "M. Visvesvaraya ji ne 1934 mein ye kitab likhi thi, jisme unhone 10-saal ke planning model ka sujhav diya tha."
       },
       "navigation": {
-        "next": "card_05_pc_formation_status",
-        "button_text": "Next: Formation Details ➔"
+        "next": "card_05_nehru_npc_1938",
+        "button_text": "Agli Kahani: 1938 ➔"
       }
     },
     {
-      "card_id": "card_05_pc_formation_status",
-      "card_slug": "card_05_pc_formation_status",
+      "card_id": "card_05_nehru_npc_1938",
+      "card_slug": "card_05_nehru_npc_1938",
       "type": "chat",
-      "concept_id": "pc_formation",
+      "concept_id": "npc_1938",
       "level": 1,
       "progress": {
         "current": 5,
@@ -168,27 +181,27 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Planning Commission 15 March 1950 ko K.C. Neogy Committee ki recommendations par bana. Ye ek Extra-Constitutional (Non-Constitutional) aur Non-Statutory body thi."
+          "text": "Fir saal 1938 aaya. Congress ke neta the Netaji Subhash Chandra Bose. Unhone kaha ki azadi ke baad desh kaise chalega, iske liye abhi se ek committee banao. Uska naam rakha 'National Planning Committee' (NPC)."
         },
         {
           "speaker": "raju",
-          "text": "Sir, Non-Statutory ka kya matlab hota hai?"
+          "text": "Sir, is committee ka head kisko banaya gaya tha?"
         },
         {
           "speaker": "aman",
-          "text": "Matlab ye Parliament ke kisi Act ke dwara nahi, balki Union Cabinet ke executive resolution se banayi gayi thi. Iska direct mention Constitution ke kisi article mein nahi hai."
+          "text": "Pandit Jawaharlal Nehru ko iska Chairman banaya gaya. Nehru ji ne alag-alag scientists aur arthshastriyon (economists) ko bulakar plan banwana shuru kiya."
         }
       ],
       "navigation": {
-        "next": "card_06_ndc_concept",
-        "button_text": "Understand NDC (1952) ➔"
+        "next": "card_06_bombay_gandhian_plans",
+        "button_text": "Ameer Log aur Gandhi Ji Ka Plan ➔"
       }
     },
     {
-      "card_id": "card_06_ndc_concept",
-      "card_slug": "card_06_ndc_concept",
+      "card_id": "card_06_bombay_gandhian_plans",
+      "card_slug": "card_06_bombay_gandhian_plans",
       "type": "chat",
-      "concept_id": "ndc_structure",
+      "concept_id": "bombay_and_gandhian_plan",
       "level": 1,
       "progress": {
         "current": 6,
@@ -197,34 +210,251 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "National Development Council (NDC / Rashtriya Vikas Parishad) 6 August 1952 ko banayi gayi. Iska kaam tha Five-Year Plans ko final approval dena aur Centre-State coordination banana. K. Santhanam ne isko 'Super Cabinet' kaha tha!"
+          "text": "1944 mein do aur plans aaye:\n1. Bombay Plan: Mumbai ke 8 bade udyogpatiyon (jaise JRD Tata, GD Birla) ne milkar plan banaya ki factories kaise lagein.\n2. Gandhian Plan: Shriman Narayan Agarwal ne banaya, unhone kaha ki factory ke bajaye kheti aur gaon ke chhote udyog (cottage industries) par zor do."
         },
         {
           "speaker": "raju",
-          "text": "NDC mein kaun-kaun log shamil hote the?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Prime Minister (Chairman), All Union Cabinet Ministers, All States ke Chief Ministers, UTs ke Administrators/Lt. Governors aur Planning Commission ke members."
+          "text": "Acha! Bombay wale factory chahte the aur Gandhi ji gaon ka vikas chahte the!"
         }
       ],
       "navigation": {
-        "next": "card_07_quiz_ndc",
-        "button_text": "Quiz on NDC 📝"
+        "next": "card_07_people_sarvodaya_plans",
+        "button_text": "Janata aur JP Ka Plan ➔"
       }
     },
     {
-      "card_id": "card_07_quiz_ndc",
-      "card_slug": "card_07_quiz_ndc",
-      "type": "quiz",
-      "concept_id": "quiz_ndc",
+      "card_id": "card_07_people_sarvodaya_plans",
+      "card_slug": "card_07_people_sarvodaya_plans",
+      "type": "chat",
+      "concept_id": "peoples_sarvodaya_plans",
       "level": 1,
       "progress": {
         "current": 7,
         "total": 40
       },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Do aur ahem plans yaad rakho:\n• People's Plan (1945): M.N. Roy ne banaya (majdooron aur kisanon ke liye).\n• Sarvodaya Plan (January 1950): Hamare Bihar ke mashhoor neta Jaiprakash Narayan (JP) ne banaya! Isme kheti, gaon aur sabke vikas ki baat thi."
+        },
+        {
+          "speaker": "raju",
+          "text": "JP Narayan ji to wahi hain na jinke naam par Patna mein airport hai?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan bilkul wahi! Aur ye sawaal BPSC mein bar-bar aata hai."
+        }
+      ],
+      "navigation": {
+        "next": "card_08_quiz_historical_plans",
+        "button_text": "Quiz: Pre-Independence Plans 📝"
+      }
+    },
+    {
+      "card_id": "card_08_quiz_historical_plans",
+      "card_slug": "card_08_quiz_historical_plans",
+      "type": "quiz",
+      "concept_id": "quiz_sarvodaya_founder",
+      "level": 1,
+      "progress": {
+        "current": 8,
+        "total": 40
+      },
       "quiz_payload": {
-        "question": "National Development Council (NDC) ka gathan kab hua tha?",
+        "question": "January 1950 mein 'Sarvodaya Plan' kisne prastut kiya tha?",
+        "options": [
+          {
+            "id": "A",
+            "text": "M.N. Roy"
+          },
+          {
+            "id": "B",
+            "text": "Jaiprakash Narayan (JP)"
+          },
+          {
+            "id": "C",
+            "text": "J.R.D. Tata"
+          },
+          {
+            "id": "D",
+            "text": "Sardar Patel"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Sarvodaya Plan Bihar ke mahan swatantrata senani Jaiprakash Narayan (JP) dwara 1950 mein taiyar kiya gaya tha."
+      },
+      "navigation": {
+        "next": "card_09_pc_birth_story",
+        "button_text": "Planning Commission Ka Janm ➔"
+      }
+    },
+    {
+      "card_id": "card_09_pc_birth_story",
+      "card_slug": "card_09_pc_birth_story",
+      "type": "chat",
+      "concept_id": "pc_formation_basic",
+      "level": 1,
+      "progress": {
+        "current": 9,
+        "total": 40
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "15 March 1950 ko sarkar ne tay kiya ki ek aisi permanent team banai jaye jo desh ka plan banaye. Uska naam rakha gaya 'Planning Commission' (Yojana Aayog). Prime Minister Jawaharlal Nehru iske pehle Chairman bane."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, ye team sarkar ne order nikal kar banayi ya samvidhan (Constitution) mein likha tha?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Bahut achha sawaal Raju! Samvidhan mein iska koi zikr nahi tha. Cabinet ke ek normal aadesh (Executive Resolution) se ise banaya gaya tha. Isliye isko 'Extra-Constitutional' aur 'Non-Statutory' body kehte hain."
+        }
+      ],
+      "navigation": {
+        "next": "card_10_extra_constitutional_meaning",
+        "button_text": "Extra-Constitutional Ka Matlab ➔"
+      }
+    },
+    {
+      "card_id": "card_10_extra_constitutional_meaning",
+      "card_slug": "card_10_extra_constitutional_meaning",
+      "type": "chat",
+      "concept_id": "extra_constitutional_simple",
+      "level": 1,
+      "progress": {
+        "current": 10,
+        "total": 40
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, mujhe 'Extra-Constitutional' word thoda mushkil lag raha hai. Aasan tarike se bataiye na?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Dekho Raju, school ke niyam-pustika mein jo rule likha hota hai, wo 'Constitutional' jaisa hai (jaise Election Commission Article 324 mein likha hai). Lekin Principal sir ne bina rule-book badle koi temporary club bana diya, to wo 'Extra-Constitutional' ho gaya. Planning Commission samvidhan ki kitaab mein nahi tha, sarkar ke aadesh se bana tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Ab samajh gaya Sir! Matlab sarkar jab chahe ise aadesh dekar band bhi kar sakti thi!"
+        }
+      ],
+      "navigation": {
+        "next": "card_11_quiz_pc_status",
+        "button_text": "Quiz: Status Check 📝"
+      }
+    },
+    {
+      "card_id": "card_11_quiz_pc_status",
+      "card_slug": "card_11_quiz_pc_status",
+      "type": "quiz",
+      "concept_id": "quiz_pc_nature",
+      "level": 1,
+      "progress": {
+        "current": 11,
+        "total": 40
+      },
+      "quiz_payload": {
+        "question": "Planning Commission (Yojana Aayog) ka samvidhanik darja (status) kya tha?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ye ek Samvidhanik body thi (Article 280)"
+          },
+          {
+            "id": "B",
+            "text": "Ye Parliament ke Kanoon se bani Statutory body thi"
+          },
+          {
+            "id": "C",
+            "text": "Ye Cabinet ke aadesh se bani Extra-Constitutional body thi"
+          },
+          {
+            "id": "D",
+            "text": "Ye Supreme Court ka hissa thi"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Planning Commission ek Extra-Constitutional (Gair-Samvidhanik) body thi, jise Union Cabinet ke resolution se banaya gaya tha."
+      },
+      "navigation": {
+        "next": "card_12_pc_members_structure",
+        "button_text": "Team Mein Kaun-Kaun Tha? ➔"
+      }
+    },
+    {
+      "card_id": "card_12_pc_members_structure",
+      "card_slug": "card_12_pc_members_structure",
+      "type": "chat",
+      "concept_id": "pc_members_role",
+      "level": 1,
+      "progress": {
+        "current": 12,
+        "total": 40
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Planning Commission ki structure dekho:\n1. Chairman: Desh ke Prime Minister (Ex-officio, matlab jo bhi PM banega, wo khud-ba-khud Chairman ban jayega).\n2. Deputy Chairman: PM dwara chuna gaya mukhya aadmi (iski power Cabinet Minister jaisi hoti thi).\n3. Members: Finance Minister, Defence Minister aur kheti/industry ke experts."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, pehle Deputy Chairman kaun the?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Pehle Deputy Chairman the Gulzarilal Nanda aur aakhiri the Montek Singh Ahluwalia. Ye dono naam exams mein seedhe aate hain!"
+        }
+      ],
+      "navigation": {
+        "next": "card_13_ndc_story",
+        "button_text": "NDC: Sabhi Mukhyamantriyon Ki Panchayat ➔"
+      }
+    },
+    {
+      "card_id": "card_13_ndc_story",
+      "card_slug": "card_13_ndc_story",
+      "type": "chat",
+      "concept_id": "ndc_foundation",
+      "level": 1,
+      "progress": {
+        "current": 13,
+        "total": 40
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Planning Commission to Delhi mein baith kar plan bana leti thi. Lekin rajyon ke Chief Ministers (jaise Bihar, UP, Bengal ke CM) bole ki 'Hamse to pucha hi nahi!'. Isliye 6 August 1952 ko sarkar ne banaya NDC — National Development Council (Rashtriya Vikas Parishad)."
+        },
+        {
+          "speaker": "raju",
+          "text": "NDC kya karti thi Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Planning Commission jo bhi 5 saal ka plan banati, NDC usko padhkar final pass (approve) karti thi. Isme sabhi rajyon ke Chief Ministers shamil hote the."
+        }
+      ],
+      "navigation": {
+        "next": "card_14_quiz_ndc_basics",
+        "button_text": "Quiz on NDC 📝"
+      }
+    },
+    {
+      "card_id": "card_14_quiz_ndc_basics",
+      "card_slug": "card_14_quiz_ndc_basics",
+      "type": "quiz",
+      "concept_id": "quiz_ndc_date",
+      "level": 1,
+      "progress": {
+        "current": 14,
+        "total": 40
+      },
+      "quiz_payload": {
+        "question": "National Development Council (NDC / Rashtriya Vikas Parishad) ki sthapna kab hui thi?",
         "options": [
           {
             "id": "A",
@@ -236,276 +466,55 @@
           },
           {
             "id": "C",
-            "text": "1 April 1951"
-          },
-          {
-            "id": "D",
             "text": "26 January 1950"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "NDC ka gathan 6 August 1952 ko hua tha. Iska mukhya karya Five Year Plans ko anumodan (approval) dena tha."
-      },
-      "navigation": {
-        "next": "card_08_fyp_framework",
-        "button_text": "Five-Year Plans Framework ➔"
-      }
-    },
-    {
-      "card_id": "card_08_fyp_framework",
-      "card_slug": "card_08_fyp_framework",
-      "type": "chat",
-      "concept_id": "fyp_overview",
-      "level": 2,
-      "progress": {
-        "current": 8,
-        "total": 40
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "India ne Five-Year Plan model USSR (Soviet Union) ke Gosplan se adopt kiya tha. Total 12 Five-Year Plans execute hue (1951–2017). Beech mein kuch interruptions (Plan Holidays, Rolling Plans) bhi aaye."
-        },
-        {
-          "speaker": "raju",
-          "text": "Sir, kya hum saare plans ke models aur core objectives sequentially padhenge?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan, BPSC aur SSC dono mein economic models (Harrod-Domar, Mahalanobis, Gadgil, etc.) aur schemes ke launch dates seedhe aate hain."
-        }
-      ],
-      "navigation": {
-        "next": "card_09_fyp_1",
-        "button_text": "1st Five-Year Plan ➔"
-      }
-    },
-    {
-      "card_id": "card_09_fyp_1",
-      "card_slug": "card_09_fyp_1",
-      "type": "chat",
-      "concept_id": "first_plan_details",
-      "level": 2,
-      "progress": {
-        "current": 9,
-        "total": 40
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "First Plan (1951–56): Harrod-Domar Model par aadharit. Focus: Agriculture, Price Stability, Irrigation. Target Growth: 2.1%, Achieved: 3.6% (Bada success!)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Is plan mein kaunse major projects banaye gaye the?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bhakra-Nangal, Damodar Valley (DVC), aur Hirakud Dams. Saath hi 2 October 1952 ko 'Community Development Programme' (CDP) launch hua!"
-        }
-      ],
-      "navigation": {
-        "next": "card_10_fyp_2",
-        "button_text": "2nd Five-Year Plan ➔"
-      }
-    },
-    {
-      "card_id": "card_10_fyp_2",
-      "card_slug": "card_10_fyp_2",
-      "type": "chat",
-      "concept_id": "second_plan_details",
-      "level": 2,
-      "progress": {
-        "current": 10,
-        "total": 40
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Second Plan (1956–61): P.C. Mahalanobis Model (4-sector model). Focus: Rapid Industrialisation & Heavy Industries. Goal: 'Socialistic Pattern of Society' establish karna (1955 Avadi Session)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Isme kaunse steel plants lagaye gaye the?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bhilai (USSR help), Rourkela (Germany help), aur Durgapur (UK help) Steel Plants. Atomic Energy Commission aur TIFR ko boost mila."
-        }
-      ],
-      "navigation": {
-        "next": "card_11_quiz_plan1_2",
-        "button_text": "Quiz: Plan 1 & 2 📝"
-      }
-    },
-    {
-      "card_id": "card_11_quiz_plan1_2",
-      "card_slug": "card_11_quiz_plan1_2",
-      "type": "quiz",
-      "concept_id": "quiz_plans_1_2",
-      "level": 2,
-      "progress": {
-        "current": 11,
-        "total": 40
-      },
-      "quiz_payload": {
-        "question": "Second Five-Year Plan (1956-61) kis arthshastri ke model par aadharit thi?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Harrod-Domar Model"
-          },
-          {
-            "id": "B",
-            "text": "P.C. Mahalanobis Model"
-          },
-          {
-            "id": "C",
-            "text": "D.R. Gadgil Model"
           },
           {
             "id": "D",
-            "text": "John W. Mellor Model"
+            "text": "1 April 1951"
           }
         ],
         "correct_option_id": "B",
-        "explanation": "Second Plan Prof. P.C. Mahalanobis ke 4-sector model par aadharit thi, jisme heavy aur basic capital goods industries par zor diya gaya."
+        "explanation": "NDC ka gathan 6 August 1952 ko hua tha taaki Five Year Plans ko sabhi rajyon ke Chief Ministers ke saath milkar final approval diya ja sake."
       },
       "navigation": {
-        "next": "card_12_fyp_3",
-        "button_text": "3rd Five-Year Plan ➔"
+        "next": "card_15_what_is_five_year_plan",
+        "button_text": "Five Year Plan Kya Hota Hai? ➔"
       }
     },
     {
-      "card_id": "card_12_fyp_3",
-      "card_slug": "card_12_fyp_3",
+      "card_id": "card_15_what_is_five_year_plan",
+      "card_slug": "card_15_what_is_five_year_plan",
       "type": "chat",
-      "concept_id": "third_plan_details",
-      "level": 2,
-      "progress": {
-        "current": 12,
-        "total": 40
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Third Plan (1961–66): John Sandy aur Sukhamoy Chakravarty Model (Gadgil Yojana se bhi prabhavit). Target: Self-reliant aur self-generating economy. Target: 5.6%, Achieved: 2.84% (Heavy Failure)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Itna bada fail hone ka kya reason tha Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "1962 Sino-Indian War, 1965 Indo-Pak War, aur 1965-66 ka severe drought! Isi plan ke dauran 1964 mein Bokaro Steel Plant (USSR help) aur 1965 mein FCI & CACP shuru hue."
-        }
-      ],
-      "navigation": {
-        "next": "card_13_plan_holiday",
-        "button_text": "Plan Holiday (1966–69) ➔"
-      }
-    },
-    {
-      "card_id": "card_13_plan_holiday",
-      "card_slug": "card_13_plan_holiday",
-      "type": "chat",
-      "concept_id": "plan_holiday_details",
-      "level": 2,
-      "progress": {
-        "current": 13,
-        "total": 40
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Plan Holiday (1966–69): 3 saal tak 3 Annual Plans lagaye gaye. Economy ruin ho chuki thi, rupee ka devaluation hua (June 1966). Lekin isi dauran M.S. Swaminathan ke netritva mein 'Green Revolution' (Harit Kranti) shuru hui!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab Plan Holiday mein hi Green Revolution ki shuruaat hui!"
-        },
-        {
-          "speaker": "aman",
-          "text": "Bilkul! High Yielding Varieties (HYV seeds), fertilizers aur tubewell irrigation ka massive adoption hua."
-        }
-      ],
-      "navigation": {
-        "next": "card_14_fyp_4",
-        "button_text": "4th Five-Year Plan ➔"
-      }
-    },
-    {
-      "card_id": "card_14_fyp_4",
-      "card_slug": "card_14_fyp_4",
-      "type": "chat",
-      "concept_id": "fourth_plan_details",
-      "level": 2,
-      "progress": {
-        "current": 14,
-        "total": 40
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Fourth Plan (1969–74): Gadgil Mukherjee Formula par aadharit. Objective: 'Growth with Stability' aur 'Progressive Achievement of Self-reliance'."
-        },
-        {
-          "speaker": "raju",
-          "text": "Is plan mein Indira Gandhi government ke major events kya the?"
-        },
-        {
-          "speaker": "aman",
-          "text": "14 Commercial Banks ka Nationalisation (1969), 1971 Indo-Pak War (Bangladesh Liberation), Drought Prone Area Programme (DPAP - 1973), aur Smiling Buddha Nuclear Test (May 1974)!"
-        }
-      ],
-      "navigation": {
-        "next": "card_15_quiz_3_4",
-        "button_text": "Quiz on Plans 3, 4 & Holiday 📝"
-      }
-    },
-    {
-      "card_id": "card_15_quiz_3_4",
-      "card_slug": "card_15_quiz_3_4",
-      "type": "quiz",
-      "concept_id": "quiz_plans_3_4",
+      "concept_id": "five_year_plan_meaning",
       "level": 2,
       "progress": {
         "current": 15,
         "total": 40
       },
-      "quiz_payload": {
-        "question": "14 Pramukh Commercial Banks ka Rashtriyakaran (Nationalisation) kis Five-Year Plan ke dauran hua?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Third Plan"
-          },
-          {
-            "id": "B",
-            "text": "Plan Holiday"
-          },
-          {
-            "id": "C",
-            "text": "Fourth Plan"
-          },
-          {
-            "id": "D",
-            "text": "Fifth Plan"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "19 July 1969 ko 14 banks ka nationalisation hua, jo Fourth Five-Year Plan (1969-74) ke antargat aata hai."
-      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, ye 'Five Year Plan' (Panchvarshiya Yojana) kya hota hai? 5 saal hi kyun?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Jaise tum school mein 1 saal ka target banate ho ki 8th class pass karni hai, waise hi sarkar 5 saal ka target banati thi ki agle 5 saal mein kitne baandh (dams) banane hain, kitne school kholne hain aur kitna anaj ugana hai. Ye 5-saal wala idea humne Russia (USSR) se seekha tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Acha! Russia se copy kiya tha!"
+        }
+      ],
       "navigation": {
-        "next": "card_16_fyp_5",
-        "button_text": "5th Five-Year Plan ➔"
+        "next": "card_16_first_plan_details",
+        "button_text": "Pehli Yojana: Kheti Aur Baandh ➔"
       }
     },
     {
-      "card_id": "card_16_fyp_5",
-      "card_slug": "card_16_fyp_5",
+      "card_id": "card_16_first_plan_details",
+      "card_slug": "card_16_first_plan_details",
       "type": "chat",
-      "concept_id": "fifth_plan_details",
+      "concept_id": "plan_1_kheti",
       "level": 2,
       "progress": {
         "current": 16,
@@ -514,56 +523,65 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Fifth Plan (1974–79): D.D. Dhar Model. Main Slogan: 'Garibi Hatao' (Poverty Eradication) aur 'Atmanirbharta'. Isme 'Minimum Needs Programme' (MNP - 1974) aur 20-Point Programme (1975) launch hue."
+          "text": "First Five-Year Plan (1951 se 1956):\n• Model: Harrod-Domar Model (do arthshastriyon ke naam par).\n• Main Focus: Kheti (Agriculture) aur Sinchai (Irrigation).\n• Bade Kaam: Bhakra Nangal Baandh, Hirakud Baandh aur Damodar Valley Project bane."
         },
         {
           "speaker": "raju",
-          "text": "Sir, kya ye plan 1979 tak poora chala tha?"
+          "text": "Pehle plan mein kheti par hi sabse zyada dhyan kyun diya?"
         },
         {
           "speaker": "aman",
-          "text": "Nahi! 1977 mein Janata Party government aayi aur Morarji Desai ne is plan ko 1978 mein hi (1 saal pehle) terminate kar diya."
+          "text": "Kyunki azadi ke time desh mein anaj ki bahut kami thi, log bhookhe mar rahe the. Pehle pet bharna zaroori tha na!"
         }
       ],
       "navigation": {
-        "next": "card_17_rolling_plan",
-        "button_text": "Rolling Plan (1978–80) ➔"
+        "next": "card_17_quiz_first_plan",
+        "button_text": "Quiz: First Plan 📝"
       }
     },
     {
-      "card_id": "card_17_rolling_plan",
-      "card_slug": "card_17_rolling_plan",
-      "type": "chat",
-      "concept_id": "rolling_plan_concept",
+      "card_id": "card_17_quiz_first_plan",
+      "card_slug": "card_17_quiz_first_plan",
+      "type": "quiz",
+      "concept_id": "quiz_first_plan_model",
       "level": 2,
       "progress": {
         "current": 17,
         "total": 40
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Rolling Plan (1978–80): Gunnar Myrdal ke concept par D.T. Lakdawala dwara design kiya gaya. Isme fixed 5 saal ke bajaye har saal plan ko revise kiya jata tha. 1980 mein Congress wapas aayi aur Rolling Plan band kar diya."
-        },
-        {
-          "speaker": "raju",
-          "text": "Gunnar Myrdal ki koi famous book hai kya Sir?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan! 'Asian Drama', jisme unhone developing nations ke liye Rolling Plan suggest kiya tha."
-        }
-      ],
+      "quiz_payload": {
+        "question": "Bharat ki Pehli Panchvarshiya Yojana (1951-56) kis model par aadharit thi?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Mahalanobis Model"
+          },
+          {
+            "id": "B",
+            "text": "Harrod-Domar Model"
+          },
+          {
+            "id": "C",
+            "text": "Gadgil Model"
+          },
+          {
+            "id": "D",
+            "text": "John Miller Model"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "First Plan Harrod-Domar model par based thi jisme agriculture aur irrigation ko sabse top priority di gayi thi."
+      },
       "navigation": {
-        "next": "card_18_fyp_6",
-        "button_text": "6th Five-Year Plan ➔"
+        "next": "card_18_second_plan_factories",
+        "button_text": "Doosri Yojana: Badi Factories ➔"
       }
     },
     {
-      "card_id": "card_18_fyp_6",
-      "card_slug": "card_18_fyp_6",
+      "card_id": "card_18_second_plan_factories",
+      "card_slug": "card_18_second_plan_factories",
       "type": "chat",
-      "concept_id": "sixth_plan_details",
+      "concept_id": "plan_2_heavy_industry",
       "level": 2,
       "progress": {
         "current": 18,
@@ -572,56 +590,65 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Sixth Plan (1980–85): Direct attack on poverty. Target: 5.2%, Achieved: 5.7%. Major institutions: NABARD establish hua (12 July 1982 - B. Sivaraman Committee), EXIM Bank (1982), IRDP, NREP, TRYSEM programs expand hue."
+          "text": "Second Five-Year Plan (1956 se 1961):\n• Model: P.C. Mahalanobis Model (ye Bharat ke bahut bade sankhyiki vidwan/statistician the).\n• Main Focus: Badi Factories aur Steel Plants (Heavy Industry).\n• Bade Karkhane: Bhilai Steel Plant (Russia ki madad se), Rourkela (Germany ki madad se) aur Durgapur (Britain ki madad se) lagaye gaye."
         },
         {
           "speaker": "raju",
-          "text": "Isme aur banks ka nationalisation bhi hua tha na?"
+          "text": "Matlab 1st Plan mein kheti, aur 2nd Plan mein factory!"
         },
         {
           "speaker": "aman",
-          "text": "Haan, 1980 mein 6 aur commercial banks ko nationalise kiya gaya."
+          "text": "Bilkul sahi sequence pakde Raju!"
         }
       ],
       "navigation": {
-        "next": "card_19_fyp_7",
-        "button_text": "7th Five-Year Plan ➔"
+        "next": "card_19_quiz_second_plan",
+        "button_text": "Quiz: Second Plan 📝"
       }
     },
     {
-      "card_id": "card_19_fyp_7",
-      "card_slug": "card_19_fyp_7",
-      "type": "chat",
-      "concept_id": "seventh_plan_details",
+      "card_id": "card_19_quiz_second_plan",
+      "card_slug": "card_19_quiz_second_plan",
+      "type": "quiz",
+      "concept_id": "quiz_second_plan_focus",
       "level": 2,
       "progress": {
         "current": 19,
         "total": 40
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Seventh Plan (1985–90): Pranab Mukherjee model / Wage-Goods Model influence. Slogan: 'Food, Work and Productivity'. Modern technology aur computerisation par zor."
-        },
-        {
-          "speaker": "raju",
-          "text": "Major schemes kaun si thi 7th plan ki?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Jawahar Rozgar Yojana (JRY - 1989), SEBI ka establishment (1988), aur SPEED Post (1986) shuru hua."
-        }
-      ],
+      "quiz_payload": {
+        "question": "Doosri Panchvarshiya Yojana (1956-61) ka mukhya focus kis par tha?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sirf Kheti"
+          },
+          {
+            "id": "B",
+            "text": "Bhaari Udyog (Heavy Industries) aur Steel Plants"
+          },
+          {
+            "id": "C",
+            "text": "Computer Technology"
+          },
+          {
+            "id": "D",
+            "text": "Banko ka Rashtriyakaran"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Second Plan (P.C. Mahalanobis Model) ka mukhya uddeshya heavy industries aur steel plants lagana tha."
+      },
       "navigation": {
-        "next": "card_20_annual_plans_90_92",
-        "button_text": "Annual Plans (1990–92) ➔"
+        "next": "card_20_third_plan_crisis",
+        "button_text": "Teesri Yojana Aur Yuddh Ka Sankat ➔"
       }
     },
     {
-      "card_id": "card_20_annual_plans_90_92",
-      "card_slug": "card_20_annual_plans_90_92",
+      "card_id": "card_20_third_plan_crisis",
+      "card_slug": "card_20_third_plan_crisis",
       "type": "chat",
-      "concept_id": "annual_plans_bop_crisis",
+      "concept_id": "plan_3_wars_failure",
       "level": 2,
       "progress": {
         "current": 20,
@@ -630,94 +657,94 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Annual Plans (1990–92): Political instability aur BoP (Balance of Payment) crisis ke karan 8th plan delay hua. Forex reserves sirf 2-3 hafton ke bache the. India ne apna gold pledge kiya."
+          "text": "Third Five-Year Plan (1961 se 1966):\n• Target tha: Kheti aur Industry dono ko aatmanirbhar banana.\n• Lekin ye yojana buri tarah fail ho gayi!"
         },
         {
           "speaker": "raju",
-          "text": "Isi crisis se bahar nikalne ke liye LPG reforms aaye the na?"
+          "text": "Fail kyun ho gayi Sir? Kya hua tha?"
         },
         {
           "speaker": "aman",
-          "text": "Sahi! 24 July 1991 ko New Economic Policy (LPG - Liberalisation, Privatisation, Globalisation) launch hui."
+          "text": "1962 mein China ne hamle kar diya, fir 1965 mein Pakistan se yuddh ho gaya, aur 1965-66 mein bhayanak sookha (drought) pad gaya. Desh ka saara paisa fauj aur anaj bachane mein chala gaya."
         }
       ],
       "navigation": {
-        "next": "card_21_quiz_5_to_7",
-        "button_text": "Mid-Way Master Quiz 📝"
+        "next": "card_21_plan_holiday_explained",
+        "button_text": "Plan Holiday: Chhuti Kyun Hui? ➔"
       }
     },
     {
-      "card_id": "card_21_quiz_5_to_7",
-      "card_slug": "card_21_quiz_5_to_7",
-      "type": "quiz",
-      "concept_id": "quiz_plans_5_to_7",
+      "card_id": "card_21_plan_holiday_explained",
+      "card_slug": "card_21_plan_holiday_explained",
+      "type": "chat",
+      "concept_id": "plan_holiday_simple",
       "level": 2,
       "progress": {
         "current": 21,
         "total": 40
       },
-      "quiz_payload": {
-        "question": "NABARD (National Bank for Agriculture and Rural Development) ki sthapna kis Five-Year Plan ke dauran hui thi?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Fourth Plan"
-          },
-          {
-            "id": "B",
-            "text": "Fifth Plan"
-          },
-          {
-            "id": "C",
-            "text": "Sixth Plan"
-          },
-          {
-            "id": "D",
-            "text": "Seventh Plan"
-          }
-        ],
-        "correct_option_id": "C",
-        "explanation": "NABARD ki sthapna 12 July 1982 ko Sixth Five-Year Plan (1980-85) ke antargat B. Sivaraman Committee ki sifarish par ki gayi thi."
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Yuddh aur sookhe ki wajah se sarkar ke paas 5 saal ka plan banane ke paise nahi bache. Isliye 1966 se 1969 tak teen saal koi 5-year plan nahi bana. Is 3 saal ke break ko 'Plan Holiday' (Yojana Avkash) kehte hain."
+        },
+        {
+          "speaker": "raju",
+          "text": "To in 3 saal mein desh bina plan ke kaise chala?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Har 1 saal ka chhota-chhota plan bana (Annual Plans). Aur isi dauran Dr. M.S. Swaminathan ne 'Harit Kranti' (Green Revolution) shuru ki — jisse gehun aur chawal ki paidawar achanak badh gayi!"
+        }
+      ],
       "navigation": {
-        "next": "card_22_fyp_8",
-        "button_text": "8th Five-Year Plan ➔"
+        "next": "card_22_quiz_plan_holiday",
+        "button_text": "Quiz: Plan Holiday 📝"
       }
     },
     {
-      "card_id": "card_22_fyp_8",
-      "card_slug": "card_22_fyp_8",
-      "type": "chat",
-      "concept_id": "eighth_plan_details",
-      "level": 3,
+      "card_id": "card_22_quiz_plan_holiday",
+      "card_slug": "card_22_quiz_plan_holiday",
+      "type": "quiz",
+      "concept_id": "quiz_holiday_years",
+      "level": 2,
       "progress": {
         "current": 22,
         "total": 40
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Eighth Plan (1992–97): John W. Miller Model. Focus: Human Resource Development (Education, Health, Employment). India WTO ka founding member bana (1 Jan 1995). Target 5.6%, achieved 6.8%!"
-        },
-        {
-          "speaker": "raju",
-          "text": "Is plan mein kaunsi major schemes start hui thi?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Pradhan Mantri Rozgar Yojana (PMRY - 1993), Mid-Day Meal Scheme (15 August 1995), aur Mahila Samriddhi Yojana."
-        }
-      ],
+      "quiz_payload": {
+        "question": "Bharat mein 'Plan Holiday' (Yojana Avkash) kis samayavadhi ke dauran raha?",
+        "options": [
+          {
+            "id": "A",
+            "text": "1951 se 1956"
+          },
+          {
+            "id": "B",
+            "text": "1966 se 1969"
+          },
+          {
+            "id": "C",
+            "text": "1974 se 1979"
+          },
+          {
+            "id": "D",
+            "text": "1990 se 1992"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "1966 se 1969 tak teen saal yuddh aur sookhe ke karan koi Five Year Plan nahi bana, jise Plan Holiday kaha jata hai."
+      },
       "navigation": {
-        "next": "card_23_fyp_9",
-        "button_text": "9th Five-Year Plan ➔"
+        "next": "card_23_fourth_plan_banks",
+        "button_text": "Chauthi Yojana: 14 Bank Sarkari Bane ➔"
       }
     },
     {
-      "card_id": "card_23_fyp_9",
-      "card_slug": "card_23_fyp_9",
+      "card_id": "card_23_fourth_plan_banks",
+      "card_slug": "card_23_fourth_plan_banks",
       "type": "chat",
-      "concept_id": "ninth_plan_details",
+      "concept_id": "plan_4_banks_nat",
       "level": 3,
       "progress": {
         "current": 23,
@@ -726,27 +753,27 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Ninth Plan (1997–2002): Theme: 'Growth with Social Justice and Equity'. 50th year of Independence par launch hua. 1997 East Asian Financial Crisis aur 1998 Pokhran-2 sanctions ka impact pada. Growth: 5.4% (Target: 6.5%)."
+          "text": "Fourth Five-Year Plan (1969 se 1974):\n• PM Indira Gandhi ke time bana.\n• Gadgil Formula par aadharit tha.\n• 1969 mein 14 bade private banko ko sarkari (Nationalise) banaya gaya taaki kisanon ko aasan loan mile."
         },
         {
           "speaker": "raju",
-          "text": "Is dauran infrastructure mein kya bada kaam hua?"
+          "text": "Sir, isi plan mein 1971 ka Bangladesh yuddh bhi hua tha na?"
         },
         {
           "speaker": "aman",
-          "text": "Golden Quadrilateral (Swarna Chaturbhuj) aur Pradhan Mantri Gram Sadak Yojana (PMGSY - Dec 2000) shuru hui!"
+          "text": "Bilkul! 1971 ka yuddh hua aur May 1974 mein Pokhran mein Bharat ne apna pehla parmanu parikshan (Smiling Buddha) kiya!"
         }
       ],
       "navigation": {
-        "next": "card_24_fyp_10",
-        "button_text": "10th Five-Year Plan ➔"
+        "next": "card_24_fifth_plan_garibi_hatao",
+        "button_text": "Paanchvi Yojana: Garibi Hatao Slogan ➔"
       }
     },
     {
-      "card_id": "card_24_fyp_10",
-      "card_slug": "card_24_fyp_10",
+      "card_id": "card_24_fifth_plan_garibi_hatao",
+      "card_slug": "card_24_fifth_plan_garibi_hatao",
       "type": "chat",
-      "concept_id": "tenth_plan_details",
+      "concept_id": "plan_5_garibi_hatao",
       "level": 3,
       "progress": {
         "current": 24,
@@ -755,526 +782,42 @@
       "messages": [
         {
           "speaker": "aman",
-          "text": "Tenth Plan (2002–07): Target: 8.0%, Achieved: 7.6%. Objective: Per capita income ko 10 saal mein double karna, poverty ratio 5% kam karna. Governance aur State-level targets ko alag se monitor kiya gaya."
+          "text": "Fifth Five-Year Plan (1974 se 1979):\n• Model: D.D. Dhar Model.\n• Slogan: 'Garibi Hatao' (Poverty Eradication).\n• Isme garibon ke liye 'Minimum Needs Programme' shuru hua."
         },
         {
           "speaker": "raju",
-          "text": "MGNREGA act isi plan mein pass hua tha na?"
+          "text": "Sir, ye plan poore 5 saal chala tha?"
         },
         {
           "speaker": "aman",
-          "text": "Bilkul! NREGA Act 2005 pass hua aur 2 Feb 2006 se implement hua. Bharat Nirman programme (2005) bhi isi plan ka hissa tha."
+          "text": "Nahi! 1977 mein sarkar badal gayi aur Morarji Desai PM bane. Unhone is plan ko 1978 mein (1 saal pehle) hi khatam kar diya!"
         }
       ],
       "navigation": {
-        "next": "card_25_fyp_11",
-        "button_text": "11th Five-Year Plan ➔"
+        "next": "card_25_quiz_fifth_plan",
+        "button_text": "Quiz: 5th Plan & Garibi Hatao 📝"
       }
     },
     {
-      "card_id": "card_25_fyp_11",
-      "card_slug": "card_25_fyp_11",
-      "type": "chat",
-      "concept_id": "eleventh_plan_details",
+      "card_id": "card_25_quiz_fifth_plan",
+      "card_slug": "card_25_quiz_fifth_plan",
+      "type": "quiz",
+      "concept_id": "quiz_garibi_hatao_plan",
       "level": 3,
       "progress": {
         "current": 25,
         "total": 40
       },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Eleventh Plan (2007–12): Theme: 'Towards Faster and More Inclusive Growth'. Model prepared by C. Rangarajan. Achieved Growth: 8.0% (Fastest ever across full plans, despite 2008 Global Financial Crisis!)."
-        },
-        {
-          "speaker": "raju",
-          "text": "Inclusive growth ka actual matlab kya tha?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Vikas ka fayda sabhi tabqo (SCs, STs, OBCs, Minorities, Women) tak pahunchna. Right to Education (RTE Act 2009) aur National Rural Livelihood Mission (NRLM) isi me aaye."
-        }
-      ],
-      "navigation": {
-        "next": "card_26_fyp_12",
-        "button_text": "12th Five-Year Plan ➔"
-      }
-    },
-    {
-      "card_id": "card_26_fyp_12",
-      "card_slug": "card_26_fyp_12",
-      "type": "chat",
-      "concept_id": "twelfth_plan_details",
-      "level": 3,
-      "progress": {
-        "current": 26,
-        "total": 40
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Twelfth Plan (2012–17): India ki LAST Five-Year Plan! Theme: 'Faster, Sustainable and More Inclusive Growth'. Target: 8.0%. Last Deputy Chairman the Montek Singh Ahluwalia. 2014 mein dissolution ke baad 2017 mein ye technically complete hui."
-        },
-        {
-          "speaker": "raju",
-          "text": "11th aur 12th ke theme mein difference kya hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "12th mein 'Sustainable' word add kiya gaya tha — environment aur long-term resilience par focus!"
-        }
-      ],
-      "navigation": {
-        "next": "card_27_summary_table_plans",
-        "button_text": "Master Summary Table 📊"
-      }
-    },
-    {
-      "card_id": "card_27_summary_table_plans",
-      "card_slug": "card_27_summary_table_plans",
-      "type": "summary",
-      "concept_id": "fyp_master_table",
-      "level": 3,
-      "progress": {
-        "current": 27,
-        "total": 40
-      },
-      "summary_payload": {
-        "title": "📋 Master Table: 12 Five-Year Plans at a Glance",
-        "revision_points": [
-          {
-            "topic": "1st (1951-56)",
-            "point": "Harrod-Domar | Agriculture & Irrigation | DVC, Bhakra, Hirakud"
-          },
-          {
-            "topic": "2nd (1956-61)",
-            "point": "Mahalanobis | Heavy Industries | Bhilai, Rourkela, Durgapur"
-          },
-          {
-            "topic": "3rd (1961-66)",
-            "point": "Chakravarty/Gadgil | Self-reliance | War & Drought (Failure)"
-          },
-          {
-            "topic": "Holiday (1966-69)",
-            "point": "3 Annual Plans | Green Revolution Launched | Devaluation"
-          },
-          {
-            "topic": "4th (1969-74)",
-            "point": "Gadgil Formula | Stability & Self-reliance | 14 Banks Nat."
-          },
-          {
-            "topic": "5th (1974-79)",
-            "point": "D.D. Dhar | Garibi Hatao & MNP | Terminated in 1978"
-          },
-          {
-            "topic": "Rolling (1978-80)",
-            "point": "Gunnar Myrdal / Lakdawala | Annual Review Model"
-          },
-          {
-            "topic": "6th (1980-85)",
-            "point": "Poverty Alleviation | NABARD & EXIM Bank (1982)"
-          },
-          {
-            "topic": "7th (1985-90)",
-            "point": "Pranab Mukherjee | Food, Work, Productivity | JRY (1989)"
-          },
-          {
-            "topic": "Annual (1990-92)",
-            "point": "BoP Crisis | LPG Reforms launched (1991)"
-          },
-          {
-            "topic": "8th (1992-97)",
-            "point": "John W. Miller | Human Resource & Modernisation | Mid-Day Meal"
-          },
-          {
-            "topic": "9th (1997-02)",
-            "point": "Growth with Social Justice | PMGSY | East Asian Crisis"
-          },
-          {
-            "topic": "10th (2002-07)",
-            "point": "Double Per Capita Income | MGNREGA & Bharat Nirman"
-          },
-          {
-            "topic": "11th (2007-12)",
-            "point": "Faster & More Inclusive Growth | RTE Act 2009 (8.0% growth)"
-          },
-          {
-            "topic": "12th (2012-17)",
-            "point": "Faster, Sustainable & More Inclusive Growth | Last FYP"
-          }
-        ]
-      },
-      "navigation": {
-        "next": "card_28_gadgil_formula",
-        "button_text": "Deep Dive: Gadgil Formula ➔"
-      }
-    },
-    {
-      "card_id": "card_28_gadgil_formula",
-      "card_slug": "card_28_gadgil_formula",
-      "type": "chat",
-      "concept_id": "gadgil_mukherjee_formula",
-      "level": 4,
-      "progress": {
-        "current": 28,
-        "total": 40
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "BPSC/UPSC Special Concept: Gadgil Formula (1969). States ko Central Assistance (grants aur loans) distribute karne ke liye banaya gaya. Isme Population (60%), Per Capita Income (20%), Tax Effort/Performance (10%), aur Special Problems (10%) weightage tha."
-        },
-        {
-          "speaker": "raju",
-          "text": "Isme aage chalkar koi changes hue the?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Haan, 1991 mein Pranab Mukherjee ne ise revise kiya ('Gadgil-Mukherjee Formula'), jisme Special Category States (SCS) ke liye 30% fund alag reserve kiya gaya."
-        }
-      ],
-      "navigation": {
-        "next": "card_29_special_category_status",
-        "button_text": "Special Category Status Concept ➔"
-      }
-    },
-    {
-      "card_id": "card_29_special_category_status",
-      "card_slug": "card_29_special_category_status",
-      "type": "chat",
-      "concept_id": "scs_concept_bihar",
-      "level": 4,
-      "progress": {
-        "current": 29,
-        "total": 40
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Special Category Status (SCS) 5th Finance Commission (1969) ke recommendation par shuru hua. Criteria: Hilly terrain, low population density/tribal share, strategic border location, economic/infra backwardness, non-viable state finances."
-        },
-        {
-          "speaker": "raju",
-          "text": "Bihar bar-bar Special Status ki maang kyun karta hai?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Kyunki SCS milne se Centrally Sponsored Schemes mein 90% Grant aur sirf 10% State share lagta hai (Normal states mein 60:40 ya 50:50 hota hai). Halanki 14th Finance Commission ke baad SCS band kar diya gaya."
-        }
-      ],
-      "navigation": {
-        "next": "card_30_quiz_gadgil",
-        "button_text": "Quiz on Formulas 📝"
-      }
-    },
-    {
-      "card_id": "card_30_quiz_gadgil",
-      "card_slug": "card_30_quiz_gadgil",
-      "type": "quiz",
-      "concept_id": "quiz_gadgil_formula",
-      "level": 4,
-      "progress": {
-        "current": 30,
-        "total": 40
-      },
       "quiz_payload": {
-        "question": "Gadgil Formula ka mukhya prayojan (primary objective) kya tha?",
+        "question": "'Garibi Hatao' aur 'Minimum Needs Programme' kis Panchvarshiya Yojana ka mukhya hissa the?",
         "options": [
           {
             "id": "A",
-            "text": "Industrial licenses issue karna"
+            "text": "Second Plan"
           },
           {
             "id": "B",
-            "text": "Rajyon ko Kendriya Sahayata (Central Assistance) aavantit karna"
-          },
-          {
-            "id": "C",
-            "text": "Import tariffs decide karna"
-          },
-          {
-            "id": "D",
-            "text": "Green revolution ke targets set karna"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Gadgil Formula (1969) Planning Commission dwara states ko Central Plan Assistance aavantit (allocate) karne ke liye use kiya jata tha."
-      },
-      "navigation": {
-        "next": "card_31_multi_statement_1",
-        "button_text": "BPSC/UPSC Multi-Statement Q1 ➔"
-      }
-    },
-    {
-      "card_id": "card_31_multi_statement_1",
-      "card_slug": "card_31_multi_statement_1",
-      "type": "quiz",
-      "concept_id": "multi_statement_plans",
-      "level": 4,
-      "progress": {
-        "current": 31,
-        "total": 40
-      },
-      "quiz_payload": {
-        "question": "Consider the following statements regarding Indian Planning:\n1. National Development Council (NDC) was established by an Act of Parliament in 1952.\n2. The concept of Rolling Plan was introduced during the Janata Party government in 1978.\n3. The slogan 'Garibi Hatao' was integrated into the Fourth Five-Year Plan document.\n\nWhich of the statements given above is/are correct?",
-        "options": [
-          {
-            "id": "A",
-            "text": "1 and 2 only"
-          },
-          {
-            "id": "B",
-            "text": "2 only"
-          },
-          {
-            "id": "C",
-            "text": "2 and 3 only"
-          },
-          {
-            "id": "D",
-            "text": "1, 2 and 3"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "Statement 1 is WRONG (NDC was created by an executive resolution, not an Act). Statement 2 is CORRECT (Janata Party under Morarji Desai introduced Rolling Plan). Statement 3 is WRONG ('Garibi Hatao' was central to the Fifth Five-Year Plan, although politically raised in 1971 elections)."
-      },
-      "navigation": {
-        "next": "card_32_multi_statement_2",
-        "button_text": "BPSC/UPSC Multi-Statement Q2 ➔"
-      }
-    },
-    {
-      "card_id": "card_32_multi_statement_2",
-      "card_slug": "card_32_multi_statement_2",
-      "type": "quiz",
-      "concept_id": "multi_statement_models",
-      "level": 4,
-      "progress": {
-        "current": 32,
-        "total": 40
-      },
-      "quiz_payload": {
-        "question": "Which of the following pairs of Plans and their respective Growth Models/Themes is/are correctly matched?\n1. First Plan — Harrod-Domar Model\n2. Second Plan — P.C. Mahalanobis Model\n3. Eighth Plan — John W. Miller Model\n4. Eleventh Plan — Faster, Sustainable and More Inclusive Growth",
-        "options": [
-          {
-            "id": "A",
-            "text": "1, 2 and 3 only"
-          },
-          {
-            "id": "B",
-            "text": "2, 3 and 4 only"
-          },
-          {
-            "id": "C",
-            "text": "1 and 2 only"
-          },
-          {
-            "id": "D",
-            "text": "1, 2, 3 and 4"
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "1, 2, and 3 are correctly matched. Pair 4 is INCORRECT because 'Sustainable' was added in the 12th Plan theme; the 11th Plan theme was 'Towards Faster and More Inclusive Growth'."
-      },
-      "navigation": {
-        "next": "card_33_pyq_bpsc_match",
-        "button_text": "BPSC Match-the-Following PYQ ➔"
-      }
-    },
-    {
-      "card_id": "card_33_pyq_bpsc_match",
-      "card_slug": "card_33_pyq_bpsc_match",
-      "type": "quiz",
-      "concept_id": "pyq_match_institutions",
-      "level": 4,
-      "progress": {
-        "current": 33,
-        "total": 40
-      },
-      "quiz_payload": {
-        "question": "Match List-I (Institutions/Events) with List-II (Five Year Plan Periods):\n(a) Community Development Programme — (1) Plan Holiday\n(b) Green Revolution Launch — (2) 1st FYP\n(c) Steel Plants (Bhilai, Durgapur) — (3) 6th FYP\n(d) Establishment of NABARD — (4) 2nd FYP\n\nChoose the correct code:",
-        "options": [
-          {
-            "id": "A",
-            "text": "(a)-2, (b)-1, (c)-4, (d)-3"
-          },
-          {
-            "id": "B",
-            "text": "(a)-1, (b)-2, (c)-3, (d)-4"
-          },
-          {
-            "id": "C",
-            "text": "(a)-2, (b)-4, (c)-1, (d)-3"
-          },
-          {
-            "id": "D",
-            "text": "(a)-3, (b)-1, (c)-4, (d)-2"
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "CDP: 1952 (1st Plan); Green Revolution: 1966-67 (Plan Holiday); Steel Plants: 1956-61 (2nd Plan); NABARD: 1982 (6th Plan)."
-      },
-      "navigation": {
-        "next": "card_34_chairpersons_history",
-        "button_text": "Chairpersons & Deputy Chairpersons ➔"
-      }
-    },
-    {
-      "card_id": "card_34_chairpersons_history",
-      "card_slug": "card_34_chairpersons_history",
-      "type": "chat",
-      "concept_id": "pc_leadership_facts",
-      "level": 4,
-      "progress": {
-        "current": 34,
-        "total": 40
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Planning Commission leadership facts for SSC/BPSC:\n• 1st Chairman: Jawaharlal Nehru\n• Last Chairman: Narendra Modi (2014)\n• 1st Deputy Chairman: Gulzarilal Nanda\n• Last Deputy Chairman: Montek Singh Ahluwalia\n• Famous Deputy Chairmen: Dr. Manmohan Singh, Pranab Mukherjee, Jaswant Singh, K.C. Pant."
-        },
-        {
-          "speaker": "raju",
-          "text": "Deputy Chairman ka rank kya hota tha protocol mein?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Cabinet Minister ke barabar ka status aur rank hota tha!"
-        }
-      ],
-      "navigation": {
-        "next": "card_35_quiz_deputy_chairmen",
-        "button_text": "Quiz on Leadership 📝"
-      }
-    },
-    {
-      "card_id": "card_35_quiz_deputy_chairmen",
-      "card_slug": "card_35_quiz_deputy_chairmen",
-      "type": "quiz",
-      "concept_id": "quiz_leadership",
-      "level": 4,
-      "progress": {
-        "current": 35,
-        "total": 40
-      },
-      "quiz_payload": {
-        "question": "Planning Commission of India ke FIRST Deputy Chairman kaun the?",
-        "options": [
-          {
-            "id": "A",
-            "text": "Jawaharlal Nehru"
-          },
-          {
-            "id": "B",
-            "text": "Gulzarilal Nanda"
-          },
-          {
-            "id": "C",
-            "text": "C.D. Deshmukh"
-          },
-          {
-            "id": "D",
-            "text": "V.T. Krishnamachari"
-          }
-        ],
-        "correct_option_id": "B",
-        "explanation": "First Deputy Chairman Gulzarilal Nanda the. Chairman Prime Minister Jawaharlal Nehru the."
-      },
-      "navigation": {
-        "next": "card_36_failures_structural_issues",
-        "button_text": "Structural Issues of Planning Commission ➔"
-      }
-    },
-    {
-      "card_id": "card_36_failures_structural_issues",
-      "card_slug": "card_36_failures_structural_issues",
-      "type": "chat",
-      "concept_id": "pc_critique_foundation",
-      "level": 5,
-      "progress": {
-        "current": 36,
-        "total": 40
-      },
-      "messages": [
-        {
-          "speaker": "aman",
-          "text": "Planning Commission par 3 main criticisms the:\n1. Top-Down Approach: Delhi mein baith kar gaon ke liye policy banana bina ground reality samjhe.\n2. One-size-fits-all: Bihar aur Kerala ki needs alag hain, par scheme ek hi thop di jaati thi.\n3. Discretionary Fund Allocation: Political bias ke arop lagte the."
-        },
-        {
-          "speaker": "raju",
-          "text": "Matlab states ke paas policy tailor karne ki azadi nahi thi?"
-        },
-        {
-          "speaker": "aman",
-          "text": "Sahi pakde! Isi wajah se 15 August 2014 ko Red Fort se PM Narendra Modi ne isko replace karne ka ailaan kiya."
-        }
-      ],
-      "navigation": {
-        "next": "card_37_part1_revision_notes",
-        "button_text": "Part 1 Quick Revision Notes ➔"
-      }
-    },
-    {
-      "card_id": "card_37_part1_revision_notes",
-      "card_slug": "card_37_part1_revision_notes",
-      "type": "summary",
-      "concept_id": "part1_high_yield_notes",
-      "level": 5,
-      "progress": {
-        "current": 37,
-        "total": 40
-      },
-      "summary_payload": {
-        "title": "⚡ High-Yield Formulae & Trap Points (Part 1)",
-        "revision_points": [
-          {
-            "topic": "Non-Constitutional",
-            "point": "Planning Commission & NDC dono non-statutory aur extra-constitutional the."
-          },
-          {
-            "topic": "Plan Holidays Count",
-            "point": "Total 3 Plan Holidays (1966-69), 1 Rolling Plan (1978-80), aur 2 Annual Plans (1990-92)."
-          },
-          {
-            "topic": "Fastest Growth Plan",
-            "point": "11th Five-Year Plan recorded highest average GDP growth (8.0%)."
-          },
-          {
-            "topic": "Worst Failure",
-            "point": "3rd Plan (due to twin wars and severe drought)."
-          },
-          {
-            "topic": "Key Distinction",
-            "point": "Finance Commission (Art 280) is Constitutional; Planning Commission was NOT."
-          }
-        ]
-      },
-      "navigation": {
-        "next": "card_38_part1_exam_drill_1",
-        "button_text": "Exam Drill Q1 ➔"
-      }
-    },
-    {
-      "card_id": "card_38_part1_exam_drill_1",
-      "card_slug": "card_38_part1_exam_drill_1",
-      "type": "quiz",
-      "concept_id": "part1_drill_q1",
-      "level": 5,
-      "progress": {
-        "current": 38,
-        "total": 40
-      },
-      "quiz_payload": {
-        "question": "Which Five-Year Plan in India was terminated one year before its scheduled completion period?",
-        "options": [
-          {
-            "id": "A",
             "text": "Third Plan"
-          },
-          {
-            "id": "B",
-            "text": "Fourth Plan"
           },
           {
             "id": "C",
@@ -1286,76 +829,536 @@
           }
         ],
         "correct_option_id": "C",
-        "explanation": "Fifth Five-Year Plan (1974-79) was terminated in 1978 by the Janata Party Government, making its effective duration only 4 years."
+        "explanation": "Fifth Five-Year Plan (1974-79) mein Garibi Hatao aur Minimum Needs Programme shuru kiya gaya tha, jise 1978 mein 1 saal pehle samapt kar diya gaya."
       },
       "navigation": {
-        "next": "card_39_part1_exam_drill_2",
-        "button_text": "Exam Drill Q2 ➔"
+        "next": "card_26_rolling_plan_concept",
+        "button_text": "Rolling Plan Kya Hai? ➔"
       }
     },
     {
-      "card_id": "card_39_part1_exam_drill_2",
-      "card_slug": "card_39_part1_exam_drill_2",
+      "card_id": "card_26_rolling_plan_concept",
+      "card_slug": "card_26_rolling_plan_concept",
+      "type": "chat",
+      "concept_id": "rolling_plan_easy",
+      "level": 3,
+      "progress": {
+        "current": 26,
+        "total": 40
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Jab 1978 mein 5th plan ruka, to nayi sarkar ne 1978 se 1980 tak 'Rolling Plan' chalaya. Ye idea Gunnar Myrdal naam ke arthshastri ne diya tha."
+        },
+        {
+          "speaker": "raju",
+          "text": "Rolling Plan matlab kya sir, pahiya ghumta tha kya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haha nahi Raju! Iska matlab tha ki 5 saal ke liye fix mat baitho, har saal plan ko check karo aur jarurat ke hisab se aage badhate raho (roll karte raho). 1980 mein jab Indira Gandhi wapas aayi, to unhone ise band karke 6th plan shuru kiya."
+        }
+      ],
+      "navigation": {
+        "next": "card_27_sixth_plan_nabard",
+        "button_text": "Chhathi Yojana: NABARD Ka Janm ➔"
+      }
+    },
+    {
+      "card_id": "card_27_sixth_plan_nabard",
+      "card_slug": "card_27_sixth_plan_nabard",
+      "type": "chat",
+      "concept_id": "plan_6_nabard",
+      "level": 3,
+      "progress": {
+        "current": 27,
+        "total": 40
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Sixth Five-Year Plan (1980 se 1985):\n• Target: Garibi par seedha hamla aur kisanon ki aarthik madad.\n• 12 July 1982 ko NABARD Bank bana (kisanon aur gaon ke vikas ke liye sabse bada bank).\n• 1982 mein EXIM Bank (videshi vyapar ke liye) bana."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, NABARD ka naam to gaon mein sabhi kisan jaante hain!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan! Aur exam mein ye date 12 July 1982 pakki aati hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_28_quiz_nabard_plan",
+        "button_text": "Quiz on NABARD 📝"
+      }
+    },
+    {
+      "card_id": "card_28_quiz_nabard_plan",
+      "card_slug": "card_28_quiz_nabard_plan",
       "type": "quiz",
-      "concept_id": "part1_drill_q2",
+      "concept_id": "quiz_nabard_plan_match",
+      "level": 3,
+      "progress": {
+        "current": 28,
+        "total": 40
+      },
+      "quiz_payload": {
+        "question": "Kheti aur gaon ke vikas ka mukhya bank 'NABARD' kis Panchvarshiya Yojana mein sthapit hua?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Fourth Plan"
+          },
+          {
+            "id": "B",
+            "text": "Sixth Plan"
+          },
+          {
+            "id": "C",
+            "text": "Eighth Plan"
+          },
+          {
+            "id": "D",
+            "text": "Tenth Plan"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "NABARD ki sthapna 12 July 1982 ko Sixth Five-Year Plan (1980-85) ke antargat B. Sivaraman Committee ki sifarish par hui thi."
+      },
+      "navigation": {
+        "next": "card_29_seventh_and_annual_plans",
+        "button_text": "7th Plan Aur 1991 Ka Crisis ➔"
+      }
+    },
+    {
+      "card_id": "card_29_seventh_and_annual_plans",
+      "card_slug": "card_29_seventh_and_annual_plans",
+      "type": "chat",
+      "concept_id": "plan_7_and_1991_crisis",
+      "level": 3,
+      "progress": {
+        "current": 29,
+        "total": 40
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Seventh Plan (1985–90): 'Food, Work & Productivity' slogan tha. Jawahar Rozgar Yojana (1989) shuru hui.\nLekin 1990–92 mein desh mein aarthik sankat (BoP Crisis) aa gaya. Desh ke paas videshi paisa khatam ho gaya tha!"
+        },
+        {
+          "speaker": "raju",
+          "text": "Fir kya hua Sir?"
+        },
+        {
+          "speaker": "aman",
+          "text": "1991 mein Dr. Manmohan Singh aur PM Narasimha Rao ne 'LPG Reforms' (Liberalisation, Privatisation, Globalisation) shuru kiye, jisse private companies ko aane ki chhoot mili."
+        }
+      ],
+      "navigation": {
+        "next": "card_30_eighth_ninth_plans",
+        "button_text": "8th Aur 9th Yojana ➔"
+      }
+    },
+    {
+      "card_id": "card_30_eighth_ninth_plans",
+      "card_slug": "card_30_eighth_ninth_plans",
+      "type": "chat",
+      "concept_id": "plans_8_and_9",
+      "level": 4,
+      "progress": {
+        "current": 30,
+        "total": 40
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Eighth Plan (1992–97): Manav Sansadhan (Education, Health, Employment) par zor. 15 August 1995 ko 'Mid-Day Meal Scheme' shuru hui taaki bache school aayein!\nNinth Plan (1997–2002): Desh ke 50 saal pure hone par bani. Slogan tha 'Samajik Nyay ke saath Vikas'."
+        },
+        {
+          "speaker": "raju",
+          "text": "Mid-Day meal to humare school mein bhi milta hai garma-garam khana!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Haan, ye 8th plan ki hi den hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_31_quiz_mid_day_meal",
+        "button_text": "Quiz: Mid-Day Meal 📝"
+      }
+    },
+    {
+      "card_id": "card_31_quiz_mid_day_meal",
+      "card_slug": "card_31_quiz_mid_day_meal",
+      "type": "quiz",
+      "concept_id": "quiz_mid_day_meal_plan",
+      "level": 4,
+      "progress": {
+        "current": 31,
+        "total": 40
+      },
+      "quiz_payload": {
+        "question": "School ke bachhon ke liye prasiddh 'Mid-Day Meal Scheme' (1995) kis plan mein shuru hui?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sixth Plan"
+          },
+          {
+            "id": "B",
+            "text": "Seventh Plan"
+          },
+          {
+            "id": "C",
+            "text": "Eighth Plan"
+          },
+          {
+            "id": "D",
+            "text": "Tenth Plan"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Mid-Day Meal Scheme 15 August 1995 ko Eighth Five-Year Plan (1992-97) ke dauran shuru ki gayi thi."
+      },
+      "navigation": {
+        "next": "card_32_tenth_eleventh_plans",
+        "button_text": "10th Aur 11th Yojana ➔"
+      }
+    },
+    {
+      "card_id": "card_32_tenth_eleventh_plans",
+      "card_slug": "card_32_tenth_eleventh_plans",
+      "type": "chat",
+      "concept_id": "plans_10_and_11",
+      "level": 4,
+      "progress": {
+        "current": 32,
+        "total": 40
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Tenth Plan (2002–07): MGNREGA kanoon (2005) pass hua, jisse har garib ko 100 din ke rozgar ki guarantee mili.\nEleventh Plan (2007–12): Theme thi 'Faster and More Inclusive Growth' (Sabka Saath Sabka Vikas type). Is plan mein Bharat ki growth rate lagbhag 8% rahi jo sabse tez thi!"
+        },
+        {
+          "speaker": "raju",
+          "text": "100 din ka rozgar gaon mein sabhi mazdooron ko milta hai!"
+        }
+      ],
+      "navigation": {
+        "next": "card_33_twelfth_last_plan",
+        "button_text": "12th Yojana: Aakhiri Five Year Plan ➔"
+      }
+    },
+    {
+      "card_id": "card_33_twelfth_last_plan",
+      "card_slug": "card_33_twelfth_last_plan",
+      "type": "chat",
+      "concept_id": "plan_12_last_plan",
+      "level": 4,
+      "progress": {
+        "current": 33,
+        "total": 40
+      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Twelfth Plan (2012–17): Ye Bharat ki LAST (aakhiri) Five-Year Plan thi! Theme thi — 'Faster, Sustainable and More Inclusive Growth'.\n2014 mein nayi sarkar aayi aur Planning Commission ko band kar diya gaya."
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, to kya 13th Five Year Plan kabhi nahi bani?"
+        },
+        {
+          "speaker": "aman",
+          "text": "Nahi! 13th plan kabhi nahi aayi. Five-Year Plans ka chapter 12th plan ke sath hamesha ke liye band ho gaya!"
+        }
+      ],
+      "navigation": {
+        "next": "card_34_summary_all_12_plans",
+        "button_text": "Revision: Sabhi 12 Plans Ek Nazar Mein ➔"
+      }
+    },
+    {
+      "card_id": "card_34_summary_all_12_plans",
+      "card_slug": "card_34_summary_all_12_plans",
+      "type": "summary",
+      "concept_id": "summary_plans_all",
+      "level": 4,
+      "progress": {
+        "current": 34,
+        "total": 40
+      },
+      "summary_payload": {
+        "title": "📋 Raju Ki Pocket Diary: 12 Plans Ka Nichod",
+        "revision_points": [
+          {
+            "topic": "1st (1951-56)",
+            "point": "Kheti & Baandh (Bhakra, Hirakud) | Harrod-Domar Model"
+          },
+          {
+            "topic": "2nd (1956-61)",
+            "point": "Badi Factories & Steel Plants | Mahalanobis Model"
+          },
+          {
+            "topic": "3rd (1961-66)",
+            "point": "War & Drought ki wajah se fail"
+          },
+          {
+            "topic": "Holiday (1966-69)",
+            "point": "3 saal ka break | Harit Kranti (Green Revolution)"
+          },
+          {
+            "topic": "4th (1969-74)",
+            "point": "14 Banks Sarkari Bane | Pokhran Test"
+          },
+          {
+            "topic": "5th (1974-79)",
+            "point": "Garibi Hatao | 1978 mein 1 saal pehle khatam"
+          },
+          {
+            "topic": "Rolling (1978-80)",
+            "point": "2 saal ka temporary revision model"
+          },
+          {
+            "topic": "6th (1980-85)",
+            "point": "NABARD Bank ki sthapna (12 July 1982)"
+          },
+          {
+            "topic": "7th (1985-90)",
+            "point": "Food, Work & Productivity | JRY Scheme"
+          },
+          {
+            "topic": "Annual (1990-92)",
+            "point": "BoP Sankat | LPG Reforms (1991)"
+          },
+          {
+            "topic": "8th (1992-97)",
+            "point": "Manav Vikas | Mid-Day Meal (1995)"
+          },
+          {
+            "topic": "9th (1997-02)",
+            "point": "Samajik Nyay | Desh ke 50 saal"
+          },
+          {
+            "topic": "10th (2002-07)",
+            "point": "MGNREGA Kanoon (2005)"
+          },
+          {
+            "topic": "11th (2007-12)",
+            "point": "Inclusive Growth | Sabse tez vikas (8%)"
+          },
+          {
+            "topic": "12th (2012-17)",
+            "point": "Aakhiri Plan | Sustainable Growth"
+          }
+        ]
+      },
+      "navigation": {
+        "next": "card_35_quiz_last_plan",
+        "button_text": "Quiz: Last Plan 📝"
+      }
+    },
+    {
+      "card_id": "card_35_quiz_last_plan",
+      "card_slug": "card_35_quiz_last_plan",
+      "type": "quiz",
+      "concept_id": "quiz_last_fyp",
+      "level": 4,
+      "progress": {
+        "current": 35,
+        "total": 40
+      },
+      "quiz_payload": {
+        "question": "Bharat ki AAKHIRI (Last) Panchvarshiya Yojana kaun si thi?",
+        "options": [
+          {
+            "id": "A",
+            "text": "10th Plan (2002-2007)"
+          },
+          {
+            "id": "B",
+            "text": "11th Plan (2007-2012)"
+          },
+          {
+            "id": "C",
+            "text": "12th Plan (2012-2017)"
+          },
+          {
+            "id": "D",
+            "text": "13th Plan (2017-2022)"
+          }
+        ],
+        "correct_option_id": "C",
+        "explanation": "Twelfth Plan (2012-2017) Bharat ki last Five-Year Plan thi. Iske baad 13th plan nahi aayi."
+      },
+      "navigation": {
+        "next": "card_36_why_pc_shut_down",
+        "button_text": "Planning Commission Ko Kyun Band Kiya? ➔"
+      }
+    },
+    {
+      "card_id": "card_36_why_pc_shut_down",
+      "card_slug": "card_36_why_pc_shut_down",
+      "type": "chat",
+      "concept_id": "pc_drawbacks_simple",
+      "level": 5,
+      "progress": {
+        "current": 36,
+        "total": 40
+      },
+      "messages": [
+        {
+          "speaker": "raju",
+          "text": "Sir, jab Planning Commission itna sara kaam kar rahi thi, to ise band kyun kiya gaya?"
+        },
+        {
+          "speaker": "aman",
+          "text": "3 badi kamiyan thi Raju:\n1. Top-Down Approach: Delhi mein baith kar neta log Bihar ke gaon ka faisla karte the, bina zameen ki haqeeqat dekhe.\n2. Sabko ek hi chashme se dekhna: Jo niyam pahadi rajya ke liye banta, wahi registan ya flood wale rajya par thop diya jata tha.\n3. Rajyon ki kam sunwai: Mukhyamantriyon ke paas zyada taqat nahi thi."
+        },
+        {
+          "speaker": "raju",
+          "text": "Matlab sabhi states ko apni marzi se plan banane ka haq nahi tha!"
+        }
+      ],
+      "navigation": {
+        "next": "card_37_bpsc_multi_statement_test",
+        "button_text": "BPSC Level Multi-Statement Test ➔"
+      }
+    },
+    {
+      "card_id": "card_37_bpsc_multi_statement_test",
+      "card_slug": "card_37_bpsc_multi_statement_test",
+      "type": "quiz",
+      "concept_id": "bpsc_drill_statements",
+      "level": 5,
+      "progress": {
+        "current": 37,
+        "total": 40
+      },
+      "quiz_payload": {
+        "question": "Nimnlikhit kathano par vichar karein:\n1. Planning Commission ka gathan samvidhan ke Article 280 ke antargat hua tha.\n2. National Development Council (NDC) mein sabhi rajyon ke Chief Ministers shamil the.\n3. First Five-Year Plan mein mukhya focus kheti aur sinchai par tha.\n\nInme se kaun se kathan SAHI hain?",
+        "options": [
+          {
+            "id": "A",
+            "text": "Keval 1 aur 2"
+          },
+          {
+            "id": "B",
+            "text": "Keval 2 aur 3"
+          },
+          {
+            "id": "C",
+            "text": "Keval 1 aur 3"
+          },
+          {
+            "id": "D",
+            "text": "1, 2 aur 3 sabhi"
+          }
+        ],
+        "correct_option_id": "B",
+        "explanation": "Kathan 1 galat hai (Article 280 mein Finance Commission hai, Planning Commission samvidhan mein nahi thi). Kathan 2 aur 3 bilkul sahi hain."
+      },
+      "navigation": {
+        "next": "card_38_bpsc_match_drill",
+        "button_text": "Match The Following Drill ➔"
+      }
+    },
+    {
+      "card_id": "card_38_bpsc_match_drill",
+      "card_slug": "card_38_bpsc_match_drill",
+      "type": "quiz",
+      "concept_id": "bpsc_drill_matching",
+      "level": 5,
+      "progress": {
+        "current": 38,
+        "total": 40
+      },
+      "quiz_payload": {
+        "question": "Sahi jodi milayein:\n(A) First Five Year Plan — (1) Mahalanobis Model (Steel Plants)\n(B) Second Five Year Plan — (2) Harrod-Domar Model (Kheti)\n(C) Sixth Five Year Plan — (3) 12 July 1982 (NABARD)\n\nSahi code chunein:",
+        "options": [
+          {
+            "id": "A",
+            "text": "(A)-2, (B)-1, (C)-3"
+          },
+          {
+            "id": "B",
+            "text": "(A)-1, (B)-2, (C)-3"
+          },
+          {
+            "id": "C",
+            "text": "(A)-3, (B)-1, (C)-2"
+          },
+          {
+            "id": "D",
+            "text": "(A)-2, (B)-3, (C)-1"
+          }
+        ],
+        "correct_option_id": "A",
+        "explanation": "1st Plan = Harrod-Domar (Kheti); 2nd Plan = Mahalanobis (Bhaari Udyog); 6th Plan = NABARD Bank (1982)."
+      },
+      "navigation": {
+        "next": "card_39_raju_confidence_check",
+        "button_text": "Raju Ka Self-Test ➔"
+      }
+    },
+    {
+      "card_id": "card_39_raju_confidence_check",
+      "card_slug": "card_39_raju_confidence_check",
+      "type": "chat",
+      "concept_id": "confidence_check_chat",
       "level": 5,
       "progress": {
         "current": 39,
         "total": 40
       },
-      "quiz_payload": {
-        "question": "BPSC Special: In the context of Indian planning, who among the following was the author of 'Planned Economy for India' (1934)?",
-        "options": [
-          {
-            "id": "A",
-            "text": "M. Visvesvaraya"
-          },
-          {
-            "id": "B",
-            "text": "G.D. Birla"
-          },
-          {
-            "id": "C",
-            "text": "Purushottamdas Thakurdas"
-          },
-          {
-            "id": "D",
-            "text": "P.C. Mahalanobis"
-          }
-        ],
-        "correct_option_id": "A",
-        "explanation": "Sir M. Visvesvaraya published 'Planned Economy for India' in 1934, laying down the earliest framework for state planning."
-      },
+      "messages": [
+        {
+          "speaker": "aman",
+          "text": "Raju, ab batao — kya tumhe 1934 se lekar 2017 tak ka poora itihaas aur saare plans clear hue?"
+        },
+        {
+          "speaker": "raju",
+          "text": "Sir, pehle mujhe ye topic bahut boring aur mushkil lagta tha. Par ab samajh aa gaya ki kaise kheti se shuru hokar factory, fir bank, fir technology aur 12th plan tak desh aage badha!"
+        },
+        {
+          "speaker": "aman",
+          "text": "Shabash Raju! Ab agle part (Part 2: Cards 41 se 80) mein hum dekhenge ki 2015 mein Planning Commission ki jagah NITI Aayog kaise aaya aur hamare Bihar mein planning kaise chalti hai!"
+        }
+      ],
       "navigation": {
-        "next": "card_40_milestone_part1",
-        "button_text": "Complete Part 1 🎯"
+        "next": "card_40_milestone_part1_success",
+        "button_text": "Part 1 Complete Karo 🏆"
       }
     },
     {
-      "card_id": "card_40_milestone_part1",
-      "card_slug": "card_40_milestone_part1",
+      "card_id": "card_40_milestone_part1_success",
+      "card_slug": "card_40_milestone_part1_success",
       "type": "milestone",
-      "concept_id": "part1_completion",
+      "concept_id": "milestone_part1_finish",
       "level": 5,
       "progress": {
         "current": 40,
         "total": 40
       },
       "milestone_payload": {
-        "title": "🎉 PART 1 COMPLETED (Cards 1–40)",
+        "title": "🎉 SHABASH RAJU! PART 1 CLEAR (Cards 1–40)",
         "badge_emoji": "🏛️",
-        "completed_topic": "Foundations, NDC & Complete Five-Year Plans Era (1950–2014)",
-        "xp_earned": 250,
-        "milestone_progress": "50% of 80-Card Full Syllabus Covered",
-        "motivational_quote": "Sensational work! You have completely mastered pre-independence planning, NDC, all 12 Five-Year Plans, and high-yield PYQ traps! Now move to Part 2 for NITI Aayog, Indices, and Bihar-Specific Planning!"
+        "completed_topic": "Zero Se Hero: Planning Commission & 12 Five-Year Plans",
+        "xp_earned": 500,
+        "milestone_progress": "40/40 Cards Completed (Part 1 Done)",
+        "motivational_quote": "Zabardast shuruaat! Tumne 8th class ke level se seekhna shuru kiya aur BPSC/SSC ke sabhi basic aur tough concepts master kar liye! Ab Part 2 (Cards 41–80) mein NITI Aayog aur Bihar State Planning par command banayenge! 🚀🔥"
       },
       "navigation": {
         "next": null,
-        "button_text": "Proceed to Part 2 ➔"
+        "button_text": "Part 2 Ke Liye Ready Ho Jao ➔"
       }
     },
     {
-      "topic_id": "planning_commission_india_part2",
+      "topic_id": "planning_commission_india_part2_zero_to_hero",
       "topic_title": "NITI Aayog, Indices & Bihar State Planning (Part 2/2)",
       "target_exams": [
         "BPSC",
@@ -1374,45 +1377,45 @@
         },
         "raju": {
           "name": "Raju",
-          "role": "student",
+          "role": "student (Class 8th Beginner)",
           "avatar": "👦"
         }
       },
       "cards": [
         {
-          "card_id": "card_41_part2_intro",
-          "card_slug": "card_41_part2_intro",
+          "card_id": "card_41_part2_welcome",
+          "card_slug": "card_41_part2_welcome",
           "type": "intro",
-          "concept_id": "part2_overview",
+          "concept_id": "part2_intro_zero",
           "level": 1,
           "progress": {
             "current": 41,
             "total": 80
           },
           "intro_payload": {
-            "title": "🚀 NITI Aayog & Bihar State Planning (Part 2)",
-            "subtitle": "New Paradigm of Cooperative Federalism & State Execution",
+            "title": "🚀 NITI Aayog Aur Hamara Bihar (Part 2)",
+            "subtitle": "Planning Commission Ke Baad Ka Naya Daur",
             "icon": "📈",
             "target_exams": [
               "BPSC",
               "BPSC TRE",
               "BSSC",
               "SSC CGL",
-              "UPSC Prelims"
+              "RRB NTPC"
             ],
             "estimated_time": "25 minutes",
             "total_modules": 4
           },
           "navigation": {
-            "next": "card_42_niti_formation_pillars",
-            "button_text": "Start Part 2 🚀"
+            "next": "card_42_niti_birth_story",
+            "button_text": "Part 2 Shuru Karein 🚀"
           }
         },
         {
-          "card_id": "card_42_niti_formation_pillars",
-          "card_slug": "card_42_niti_formation_pillars",
+          "card_id": "card_42_niti_birth_story",
+          "card_slug": "card_42_niti_birth_story",
           "type": "chat",
-          "concept_id": "niti_pillars",
+          "concept_id": "niti_formation_simple",
           "level": 1,
           "progress": {
             "current": 42,
@@ -1421,27 +1424,27 @@
           "messages": [
             {
               "speaker": "aman",
-              "text": "1 January 2015 ko Cabinet resolution se NITI Aayog (National Institution for Transforming India) bana. Ye 7 Pillars of Effective Governance par based hai:\n1. Pro-people, 2. Pro-activity, 3. Participation, 4. Empowering, 5. Inclusion of all, 6. Equality, 7. Transparency."
+              "text": "Raju, 1 January 2015 ko sarkar ne purane Planning Commission ko hata kar ek naya sansthan banaya — NITI Aayog (National Institution for Transforming India)."
             },
             {
               "speaker": "raju",
-              "text": "NITI Aayog ka core nature kya hai?"
+              "text": "Sir, NITI ka matlab wahi hota hai na jo hum Hindi mein 'neeti' (rule ya policy) kehte hain?"
             },
             {
               "speaker": "aman",
-              "text": "Ye Government ka premier policy 'Think Tank' hai jo directional aur policy inputs deta hai."
+              "text": "Haan! Iska poora naam English mein 'National Institution for Transforming India' hai. Ye bhi purane Planning Commission ki tarah Cabinet ke normal aadesh (Executive Resolution) se bana. Matlab ye bhi Extra-Constitutional aur Non-Statutory body hai."
             }
           ],
           "navigation": {
-            "next": "card_43_niti_structure_deep",
-            "button_text": "NITI Aayog Full Structure ➔"
+            "next": "card_43_think_tank_meaning",
+            "button_text": "Think Tank Kya Hota Hai? ➔"
           }
         },
         {
-          "card_id": "card_43_niti_structure_deep",
-          "card_slug": "card_43_niti_structure_deep",
+          "card_id": "card_43_think_tank_meaning",
+          "card_slug": "card_43_think_tank_meaning",
           "type": "chat",
-          "concept_id": "niti_org_structure",
+          "concept_id": "think_tank_concept",
           "level": 1,
           "progress": {
             "current": 43,
@@ -1449,67 +1452,71 @@
           },
           "messages": [
             {
+              "speaker": "raju",
+              "text": "Sir, akhbar mein likha rehta hai ki NITI Aayog sarkar ka 'Think Tank' hai. Think Tank ka kya matlab hai?"
+            },
+            {
               "speaker": "aman",
-              "text": "NITI Aayog Composition exam ke liye rat lo:\n• Chairperson: Prime Minister\n• Vice-Chairperson: Appointed by PM (Rank: Cabinet Minister)\n• CEO: Appointed by PM for fixed tenure (Rank: Secretary to GoI)\n• Governing Council: All State CMs + Delhi & Puducherry CMs + J&K LG + Other UT LGs.\n• Regional Councils: Specific inter-state issues solve karne ke liye."
+              "text": "Think Tank ka matlab hota hai 'Dimag Lagane Wali Team' (Sochne-Vicharne Wali Team)! Jaise cricket match se pehle coach aur captain baith kar strategy banate hain ki match kaise jeetna hai, waise hi NITI Aayog sarkar ko acche-acche ideas aur salah (advice) deta hai."
             },
             {
               "speaker": "raju",
-              "text": "Sir, pehle Vice-Chairperson aur CEO kaun the?"
+              "text": "Acha! To ye sarkar ko sirf salah deta hai, khud order nahi deta?"
             },
             {
               "speaker": "aman",
-              "text": "1st Vice-Chairperson: Arvind Panagariya; 1st CEO: Sindhushree Khullar."
+              "text": "Bilkul sahi pakde Raju! NITI Aayog ek Salahkar (Advisory) body hai."
             }
           ],
           "navigation": {
-            "next": "card_44_quiz_niti_1st",
-            "button_text": "Quiz on NITI Structure 📝"
+            "next": "card_44_quiz_niti_date",
+            "button_text": "Pehla Sawaal Solve Karo 📝"
           }
         },
         {
-          "card_id": "card_44_quiz_niti_1st",
-          "card_slug": "card_44_quiz_niti_1st",
+          "card_id": "card_44_quiz_niti_date",
+          "card_slug": "card_44_quiz_niti_date",
           "type": "quiz",
-          "concept_id": "quiz_niti_1st_vc",
+          "concept_id": "quiz_niti_formation_date",
           "level": 1,
           "progress": {
             "current": 44,
             "total": 80
           },
           "quiz_payload": {
-            "question": "NITI Aayog ke FIRST Vice-Chairperson kaun the?",
+            "question": "NITI Aayog ki sthapna kis din hui thi?",
             "options": [
               {
                 "id": "A",
-                "text": "Dr. Rajiv Kumar"
+                "text": "15 August 2014"
               },
               {
                 "id": "B",
-                "text": "Arvind Panagariya"
+                "text": "1 January 2015"
               },
               {
                 "id": "C",
-                "text": "Suman Bery"
+                "text": "26 January 2015"
               },
               {
                 "id": "D",
-                "text": "Amitabh Kant"
+                "text": "1 April 2017"
               }
             ],
             "correct_option_id": "B",
-            "explanation": "Arvind Panagariya NITI Aayog ke pehle Vice-Chairperson the (January 2015 to August 2017)."
+            "explanation": "NITI Aayog 1 January 2015 ko Planning Commission ko replace karke sthapit kiya gaya tha."
           },
           "navigation": {
-            "next": "card_45_planning_framework_15_7_3",
-            "button_text": "15-7-3 Year Framework ➔"
+            "next": "card_45_niti_team_members",
+            "button_text": "NITI Aayog Ki Team ➔"
           }
         },
         {
-          "card_id": "card_45_planning_framework_15_7_3",
-          "card_slug": "card_45_planning_framework_15_7_3",
+          "card_id": "card_45_niti_team_members",
+          "card_slug": "card_45_niti_team_members",
           "type": "chat",
-          "concept_id": "planning_framework_niti",
-          "level": 2,
+          "concept_id": "niti_structure_easy",
+          "level": 1,
           "progress": {
             "current": 45,
             "total": 80
@@ -1517,94 +1524,98 @@
           "messages": [
             {
               "speaker": "aman",
-              "text": "Five-Year Plans ko replace karke NITI Aayog ne 3-tier planning framework laya:\n1. 15-Year Vision Document (Long-term national goals)\n2. 7-Year National Strategy Document (Mid-term strategy)\n3. 3-Year Action Agenda (Operational short-term goals)."
+              "text": "NITI Aayog ki team ka hisab dekho:\n1. Chairperson (Adhyaksh): Desh ke Prime Minister.\n2. Vice-Chairperson (Upaadhyaksh): PM dwara appoint kiya jata hai (Cabinet Minister ka rank milta hai). Pehle VC the Arvind Panagariya.\n3. CEO (Chief Executive Officer): Ek senior IAS officer. Pehli CEO thi Sindhushree Khullar."
             },
             {
               "speaker": "raju",
-              "text": "Pehla 3-Year Action Agenda kab se kab tak tha?"
+              "text": "Sir, Governing Council kya hoti hai?"
             },
             {
               "speaker": "aman",
-              "text": "2017-18 se 2019-20 tak. Isne 12th Plan ke officially end hone ke baad planning system sambhala."
+              "text": "Governing Council sabse ahem hai! Isme Bharat ke SABHI rajyon ke Chief Ministers aur sabhi Union Territories ke Lieutenant Governors baithte hain."
             }
           ],
           "navigation": {
-            "next": "card_46_cooperative_competitive_federalism",
-            "button_text": "Federalism Concepts ➔"
+            "next": "card_46_cooperative_federalism_simple",
+            "button_text": "Cooperative Federalism: Sabka Saath ➔"
           }
         },
         {
-          "card_id": "card_46_cooperative_competitive_federalism",
-          "card_slug": "card_46_cooperative_competitive_federalism",
+          "card_id": "card_46_cooperative_federalism_simple",
+          "card_slug": "card_46_cooperative_federalism_simple",
           "type": "chat",
-          "concept_id": "federalism_twin_pillars",
-          "level": 2,
+          "concept_id": "cooperative_federalism_easy",
+          "level": 1,
           "progress": {
             "current": 46,
             "total": 80
           },
           "messages": [
             {
+              "speaker": "raju",
+              "text": "Sir, 'Cooperative Federalism' ka matlab kya hota hai?"
+            },
+            {
               "speaker": "aman",
-              "text": "NITI Aayog do principles par chalta hai:\n1. Cooperative Federalism: Centre aur States barabar partner hain (Governing Council ke through).\n2. Competitive Federalism: States ke beech swasth competition karwana through index rankings (jaise SDG Index, Innovation Index, Water Index)!"
+              "text": "Cooperative matlab 'Mil-jul kar kaam karna' aur Federalism matlab 'Centre aur State Sarkar'. Purane Planning Commission mein Delhi se aadesh aata tha aur rajya follow karte the. NITI Aayog mein Centre aur sabhi State ke CMs aamne-saamne baith kar faisla karte hain — Team India bankar!"
             },
             {
               "speaker": "raju",
-              "text": "Index ranking se states ko kya motivation milta hai?"
+              "text": "Matlab ab Bihar ke CM ki baat bhi Delhi mein seedhe suni jaati hai!"
             },
             {
               "speaker": "aman",
-              "text": "Best practices identify hoti hain aur backward states reforms adopt karne ke liye push hote hain."
+              "text": "Haan, isko kehte hain Bottom-Up Approach (Neeche se Upar ki taraf faisla)!"
             }
           ],
           "navigation": {
-            "next": "card_47_quiz_vision_framework",
-            "button_text": "Quiz: Planning Framework 📝"
+            "next": "card_47_quiz_governing_council",
+            "button_text": "Quiz: Governing Council 📝"
           }
         },
         {
-          "card_id": "card_47_quiz_vision_framework",
-          "card_slug": "card_47_quiz_vision_framework",
+          "card_id": "card_47_quiz_governing_council",
+          "card_slug": "card_47_quiz_governing_council",
           "type": "quiz",
-          "concept_id": "quiz_niti_timeframes",
-          "level": 2,
+          "concept_id": "quiz_niti_gc_members",
+          "level": 1,
           "progress": {
             "current": 47,
             "total": 80
           },
           "quiz_payload": {
-            "question": "NITI Aayog dwara Five-Year Plans ke sthan par apnaye gaye framework mein 'Action Agenda' kitne varsho ke liye hota hai?",
+            "question": "NITI Aayog ki 'Governing Council' mein nimnlikhit mein se kaun shamil hote hain?",
             "options": [
               {
                 "id": "A",
-                "text": "1 Varsh"
+                "text": "Sirf Kendra Sarkar ke Mantri"
               },
               {
                 "id": "B",
-                "text": "3 Varsh"
+                "text": "Sabhi Rajyon ke Chief Ministers aur UTs ke Lt. Governors"
               },
               {
                 "id": "C",
-                "text": "5 Varsh"
+                "text": "Sirf Supreme Court ke Judges"
               },
               {
                 "id": "D",
-                "text": "7 Varsh"
+                "text": "Sirf Banko ke Chairman"
               }
             ],
             "correct_option_id": "B",
-            "explanation": "NITI Aayog ne 15-Year Vision, 7-Year Strategy aur 3-Year Action Agenda ka framework apnaya hai."
+            "explanation": "NITI Aayog ki Governing Council mein Prime Minister ke saath sabhi rajyon ke Mukhyamantri (CMs) aur UTs ke Lt. Governors shamil hote hain."
           },
           "navigation": {
-            "next": "card_48_aim_mission",
-            "button_text": "Atal Innovation Mission (AIM) ➔"
+            "next": "card_48_biggest_difference_money",
+            "button_text": "Sabse Bada Difference: Paise Ka Power ➔"
           }
         },
         {
-          "card_id": "card_48_aim_mission",
-          "card_slug": "card_48_aim_mission",
+          "card_id": "card_48_biggest_difference_money",
+          "card_slug": "card_48_biggest_difference_money",
           "type": "chat",
-          "concept_id": "atal_innovation_mission",
+          "concept_id": "financial_power_difference",
           "level": 2,
           "progress": {
             "current": 48,
@@ -1613,95 +1624,95 @@
           "messages": [
             {
               "speaker": "aman",
-              "text": "NITI Aayog ka Atal Innovation Mission (AIM) schools aur colleges mein entrepreneurship aur innovation promote karta hai. Iske components hain:\n• Atal Tinkering Labs (ATLs) — School level par STEM skills\n• Atal Incubation Centres (AICs) — Startups support karne ke liye\n• Mentor India Network."
+              "text": "Raju, ab exam ka sabse bada trap point suno: Purane Planning Commission ke paas rajyon ko PAISA BAANTNE (fund allocate karne) ki taqat thi."
             },
             {
               "speaker": "raju",
-              "text": "Schools mein ATL labs SSC aur BPSC dono me puchha gaya hai!"
+              "text": "Kya NITI Aayog bhi rajyon ko paisa baant-ti hai?"
             },
             {
               "speaker": "aman",
-              "text": "Haan, ATL 6th se 12th class ke students ke liye innovative mindset cultivate karta hai."
+              "text": "Nahi! NITI Aayog ke paas 1 rupaye baantne ki bhi taqat nahi hai. NITI Aayog sirf salah deti hai. Paisa dene ka saara kaam ab Finance Ministry (Vitta Mantralaya) karti hai."
+            },
+            {
+              "speaker": "raju",
+              "text": "Acha! Planning Commission ke paas paise ki tijori thi, NITI Aayog ke paas sirf salah ki kitaab hai!"
             }
           ],
           "navigation": {
-            "next": "card_49_aspirational_districts",
-            "button_text": "Aspirational Districts & Blocks ➔"
+            "next": "card_49_quiz_fund_allocation",
+            "button_text": "Quiz: Fund Allocation 📝"
           }
         },
         {
-          "card_id": "card_49_aspirational_districts",
-          "card_slug": "card_49_aspirational_districts",
-          "type": "chat",
-          "concept_id": "adp_program",
+          "card_id": "card_49_quiz_fund_allocation",
+          "card_slug": "card_49_quiz_fund_allocation",
+          "type": "quiz",
+          "concept_id": "quiz_niti_no_fund_power",
           "level": 2,
           "progress": {
             "current": 49,
             "total": 80
           },
-          "messages": [
-            {
-              "speaker": "aman",
-              "text": "Aspirational Districts Programme (ADP) January 2018 mein launch hua. Desh ke 112 most backward districts ko transform karna iska target tha. Core themes: Health & Nutrition, Education, Agriculture & Water Resources, Financial Inclusion, Basic Infrastructure."
-            },
-            {
-              "speaker": "raju",
-              "text": "Isme Bihar ke kitne districts select hue the?"
-            },
-            {
-              "speaker": "aman",
-              "text": "⭐ BPSC Special: Bihar ke total 13 Districts ADP mein included hain (jaise Katihar, Begusarai, Sheikhpura, Gaya, Banka, etc.)! Ab 2023 se Aspirational Blocks Programme (ABP) bhi launch ho chuka hai."
-            }
-          ],
+          "quiz_payload": {
+            "question": "Planning Commission aur NITI Aayog ke beech sabse bada ahem antar (difference) kya hai?",
+            "options": [
+              {
+                "id": "A",
+                "text": "Planning Commission ke paas financial powers the, NITI Aayog sirf advisory hai"
+              },
+              {
+                "id": "B",
+                "text": "NITI Aayog ek samvidhanik sanstha hai"
+              },
+              {
+                "id": "C",
+                "text": "Planning Commission ke head Prime Minister nahi the"
+              },
+              {
+                "id": "D",
+                "text": "Dono bilkul ek jaise hain, koi antar nahi hai"
+              }
+            ],
+            "correct_option_id": "A",
+            "explanation": "Planning Commission rajyon ko fund allocate karti thi, jabki NITI Aayog ke paas fund allocation ka adhikar nahi hai; ye sirf advisory think-tank hai."
+          },
           "navigation": {
-            "next": "card_50_quiz_adp",
-            "button_text": "Quiz on ADP & Bihar 📝"
+            "next": "card_50_new_planning_timeline",
+            "button_text": "Naya Planning Formula: 15-7-3 ➔"
           }
         },
         {
-          "card_id": "card_50_quiz_adp",
-          "card_slug": "card_50_quiz_adp",
-          "type": "quiz",
-          "concept_id": "quiz_adp_bihar",
+          "card_id": "card_50_new_planning_timeline",
+          "card_slug": "card_50_new_planning_timeline",
+          "type": "chat",
+          "concept_id": "framework_15_7_3",
           "level": 2,
           "progress": {
             "current": 50,
             "total": 80
           },
-          "quiz_payload": {
-            "question": "⭐ NITI Aayog ke 'Aspirational Districts Programme' (ADP) mein Bihar ke kitne zile (districts) shamil hain?",
-            "options": [
-              {
-                "id": "A",
-                "text": "8"
-              },
-              {
-                "id": "B",
-                "text": "11"
-              },
-              {
-                "id": "C",
-                "text": "13"
-              },
-              {
-                "id": "D",
-                "text": "15"
-              }
-            ],
-            "correct_option_id": "C",
-            "explanation": "NITI Aayog ke Aspirational Districts Programme mein Bihar ke 13 aakankshi zile (districts) shamil kiye gaye hain."
-          },
+          "messages": [
+            {
+              "speaker": "aman",
+              "text": "Pehle 5-5 saal ke plan bante the. NITI Aayog ne 5-Year Plan band karke 3 naye time-frame banaye:\n1. 15-Year Vision Document (Lamba sapna: jaise 15 saal mein desh ko kahan pahunchana hai)\n2. 7-Year Strategy Document (Madhyam rasta: agle 7 saal ka plan)\n3. 3-Year Action Agenda (Turant karne wale kaam: agle 3 saal ka action)."
+            },
+            {
+              "speaker": "raju",
+              "text": "Matlab 5 saal ki jagah ab 15, 7 aur 3 saal ka hisab hota hai!"
+            }
+          ],
           "navigation": {
-            "next": "card_51_sdg_india_index",
-            "button_text": "SDG India Index Deep Dive ➔"
+            "next": "card_51_atl_tinkering_labs",
+            "button_text": "School Mein Atal Tinkering Lab (ATL) ➔"
           }
         },
         {
-          "card_id": "card_51_sdg_india_index",
-          "card_slug": "card_51_sdg_india_index",
+          "card_id": "card_51_atl_tinkering_labs",
+          "card_slug": "card_51_atl_tinkering_labs",
           "type": "chat",
-          "concept_id": "sdg_india_index",
-          "level": 3,
+          "concept_id": "atl_aim_concept",
+          "level": 2,
           "progress": {
             "current": 51,
             "total": 80
@@ -1709,235 +1720,229 @@
           "messages": [
             {
               "speaker": "aman",
-              "text": "NITI Aayog UN ke 17 SDGs mein se 16 goals par states ko rank karne ke liye 'SDG India Index' nikalta hai. 4 Categories hoti hain:\n1. Aspirant (0–49)\n2. Performer (50–64)\n3. Front Runner (65–99)\n4. Achiever (100)."
+              "text": "Raju, kya tumhare ya pados ke school mein 'Atal Tinkering Lab' (ATL) lagi hai, jahan robot aur 3D printer sikhate hain?"
             },
             {
               "speaker": "raju",
-              "text": "Is index mein top aur bottom states kaun rehte hain?"
+              "text": "Haan Sir! Bachhe wahan circuit aur robot banana seekhte hain!"
             },
             {
               "speaker": "aman",
-              "text": "Top state generally Kerala rehta hai aur bottom par Bihar, Jharkhand jate hain (halanki Bihar ka score year-on-year fastest grow kar raha hai)."
+              "text": "Ye labs NITI Aayog ke 'Atal Innovation Mission' (AIM) ke tehat lagai jaati hain! Taaki 6th se 12th class ke bache nayi technology aur innovation seekhein."
             }
           ],
           "navigation": {
-            "next": "card_52_mpi_index",
-            "button_text": "Multidimensional Poverty Index (MPI) ➔"
+            "next": "card_52_quiz_atl_mission",
+            "button_text": "Quiz: ATL Lab 📝"
           }
         },
         {
-          "card_id": "card_52_mpi_index",
-          "card_slug": "card_52_mpi_index",
-          "type": "chat",
-          "concept_id": "national_mpi",
-          "level": 3,
+          "card_id": "card_52_quiz_atl_mission",
+          "card_slug": "card_52_quiz_atl_mission",
+          "type": "quiz",
+          "concept_id": "quiz_atl_aim",
+          "level": 2,
           "progress": {
             "current": 52,
             "total": 80
           },
-          "messages": [
-            {
-              "speaker": "aman",
-              "text": "National Multidimensional Poverty Index (MPI) NITI Aayog release karta hai based on NFHS data. Isme 3 Dimensions aur 12 Indicators hote hain:\n• Health (Nutrition, Child-Adolescent Mortality, Maternal Health)\n• Education (Years of Schooling, Attendance)\n• Standard of Living (Cooking Fuel, Sanitation, Drinking Water, Electricity, Housing, Assets, Bank Accounts)."
-            },
-            {
-              "speaker": "raju",
-              "text": "Bihar ke context mein MPI ka kya report hai?"
-            },
-            {
-              "speaker": "aman",
-              "text": "⭐ Bihar mein Multidimensional Poverty mein sabse steep decline darj kiya gaya hai — croro log poverty se bahar nikle hain!"
-            }
-          ],
+          "quiz_payload": {
+            "question": "School ke chhatron mein science aur innovation ko badhava dene wali 'Atal Tinkering Labs' kis sanstha ka initiative hai?",
+            "options": [
+              {
+                "id": "A",
+                "text": "NITI Aayog"
+              },
+              {
+                "id": "B",
+                "text": "UPSC"
+              },
+              {
+                "id": "C",
+                "text": "Reserve Bank of India"
+              },
+              {
+                "id": "D",
+                "text": "Election Commission"
+              }
+            ],
+            "correct_option_id": "A",
+            "explanation": "Atal Tinkering Labs NITI Aayog ke Atal Innovation Mission (AIM) ka hissa hain."
+          },
           "navigation": {
-            "next": "card_53_quiz_mpi",
-            "button_text": "Quiz on MPI 📝"
+            "next": "card_53_aspirational_districts_story",
+            "button_text": "Aspirational Districts: Pichhde Zilo Ka Vikas ➔"
           }
         },
         {
-          "card_id": "card_53_quiz_mpi",
-          "card_slug": "card_53_quiz_mpi",
-          "type": "quiz",
-          "concept_id": "quiz_mpi_indicators",
-          "level": 3,
+          "card_id": "card_53_aspirational_districts_story",
+          "card_slug": "card_53_aspirational_districts_story",
+          "type": "chat",
+          "concept_id": "adp_bihar_easy",
+          "level": 2,
           "progress": {
             "current": 53,
             "total": 80
           },
-          "quiz_payload": {
-            "question": "NITI Aayog ke National Multidimensional Poverty Index (MPI) mein kitne sanketak (indicators) shamil hain?",
-            "options": [
-              {
-                "id": "A",
-                "text": "10"
-              },
-              {
-                "id": "B",
-                "text": "12"
-              },
-              {
-                "id": "C",
-                "text": "15"
-              },
-              {
-                "id": "D",
-                "text": "17"
-              }
-            ],
-            "correct_option_id": "B",
-            "explanation": "Global MPI mein 10 indicators hote hain, par NITI Aayog ke National MPI mein 12 indicators hain (Maternal Health aur Bank Accounts ko India-specific add kiya gaya hai)."
-          },
+          "messages": [
+            {
+              "speaker": "aman",
+              "text": "2018 mein NITI Aayog ne 'Aspirational Districts Programme' (Aakankshi Zila Karyakram) chalaya. Desh ke 112 pichhde zilon ko chun kar unme hospital, school aur kheti ko tezise sudhara gaya."
+            },
+            {
+              "speaker": "raju",
+              "text": "Sir, kya isme hamare Bihar ke bhi zile hain?"
+            },
+            {
+              "speaker": "aman",
+              "text": "Haan! Bihar ke total 13 Zile (jaise Katihar, Begusarai, Sheikhpura, Gaya, Banka aadi) isme shamil kiye gaye. Ye number '13' BPSC mein zaroor pucha jata hai!"
+            }
+          ],
           "navigation": {
-            "next": "card_54_other_niti_indices",
-            "button_text": "Other Crucial NITI Indices ➔"
+            "next": "card_54_quiz_aspirational_bihar",
+            "button_text": "Quiz: Bihar Ke 13 Zile 📝"
           }
         },
         {
-          "card_id": "card_54_other_niti_indices",
-          "card_slug": "card_54_other_niti_indices",
-          "type": "chat",
-          "concept_id": "all_niti_indices",
-          "level": 3,
+          "card_id": "card_54_quiz_aspirational_bihar",
+          "card_slug": "card_54_quiz_aspirational_bihar",
+          "type": "quiz",
+          "concept_id": "quiz_adp_bihar_count",
+          "level": 2,
           "progress": {
             "current": 54,
             "total": 80
           },
-          "messages": [
-            {
-              "speaker": "aman",
-              "text": "SSC aur BPSC ke liye NITI Aayog ke saare major indices ki list yaad rakho:\n• India Innovation Index\n• Export Preparedness Index (EPI)\n• State Energy & Climate Index (SECI)\n• Composite Water Management Index (CWMI)\n• School Education Quality Index (SEQI)\n• State Health Index."
-            },
-            {
-              "speaker": "raju",
-              "text": "Export Preparedness Index mein coastal states top karte honge na?"
-            },
-            {
-              "speaker": "aman",
-              "text": "Haan, Gujarat, Tamil Nadu, Maharashtra top karte hain. Landlocked states mein alag ranking nikali jaati hai."
-            }
-          ],
+          "quiz_payload": {
+            "question": "⭐ NITI Aayog ke Aspirational Districts Programme mein Bihar ke kitne zile shamil hain?",
+            "options": [
+              {
+                "id": "A",
+                "text": "8 Zile"
+              },
+              {
+                "id": "B",
+                "text": "10 Zile"
+              },
+              {
+                "id": "C",
+                "text": "13 Zile"
+              },
+              {
+                "id": "D",
+                "text": "20 Zile"
+              }
+            ],
+            "correct_option_id": "C",
+            "explanation": "Bihar ke 13 aakankshi zilon ko NITI Aayog ke Aspirational Districts Programme mein shamil kiya gaya hai."
+          },
           "navigation": {
-            "next": "card_55_pc_vs_niti_tabular",
-            "button_text": "Full Comparison Matrix ➔"
+            "next": "card_55_sdg_index_competition",
+            "button_text": "SDG Index: Rajyon Ka Report Card ➔"
           }
         },
         {
-          "card_id": "card_55_pc_vs_niti_tabular",
-          "card_slug": "card_55_pc_vs_niti_tabular",
-          "type": "summary",
-          "concept_id": "pc_vs_niti_table",
+          "card_id": "card_55_sdg_index_competition",
+          "card_slug": "card_55_sdg_index_competition",
+          "type": "chat",
+          "concept_id": "sdg_index_simple",
           "level": 3,
           "progress": {
             "current": 55,
             "total": 80
           },
-          "summary_payload": {
-            "title": "⚖️ Planning Commission vs NITI Aayog: Complete Comparison",
-            "revision_points": [
-              {
-                "topic": "Approach",
-                "point": "PC: Top-Down (Centralized) | NITI: Bottom-Up (Decentralized)"
-              },
-              {
-                "topic": "Financial Power",
-                "point": "PC: Allocated funds to Ministries & States | NITI: Advisory only (FinMin allocates)"
-              },
-              {
-                "topic": "State Role",
-                "point": "PC: States were spectators in NDC | NITI: CMs are direct members of Governing Council"
-              },
-              {
-                "topic": "Nature of Plans",
-                "point": "PC: Rigid 5-Year target plans | NITI: 15-Yr Vision, 7-Yr Strategy, 3-Yr Action"
-              },
-              {
-                "topic": "Full-Time Members",
-                "point": "PC: Large full-time body | NITI: Limited full-time + Part-time + Ex-officio ministers"
-              },
-              {
-                "topic": "Part of Constitution",
-                "point": "Dono hi Extra-Constitutional / Non-Statutory hain (Formed by Cabinet Resolution)"
-              }
-            ]
-          },
+          "messages": [
+            {
+              "speaker": "aman",
+              "text": "NITI Aayog har saal rajyon ka ek Report Card nikalta hai, jise 'SDG India Index' kehte hain. Isme dekha jata hai ki kaunsa rajya safai, padhai, paani aur bijli mein aage nikal raha hai."
+            },
+            {
+              "speaker": "raju",
+              "text": "Report card nikalne se kya hota hai Sir?"
+            },
+            {
+              "speaker": "aman",
+              "text": "Jaise class mein first aane par medal milta hai, waise hi rajyon ke beech accha kaam karne ki hod (Healthy Competition) lagti hai. Isko 'Competitive Federalism' kehte hain!"
+            }
+          ],
           "navigation": {
-            "next": "card_56_quiz_pc_vs_niti",
-            "button_text": "Quiz on Comparison 📝"
+            "next": "card_56_mpi_garibi_index",
+            "button_text": "Multidimensional Poverty Index (MPI) ➔"
           }
         },
         {
-          "card_id": "card_56_quiz_pc_vs_niti",
-          "card_slug": "card_56_quiz_pc_vs_niti",
-          "type": "quiz",
-          "concept_id": "quiz_comp_table",
+          "card_id": "card_56_mpi_garibi_index",
+          "card_slug": "card_56_mpi_garibi_index",
+          "type": "chat",
+          "concept_id": "mpi_simple_explanation",
           "level": 3,
           "progress": {
             "current": 56,
             "total": 80
           },
-          "quiz_payload": {
-            "question": "Planning Commission aur NITI Aayog ke sandarbh mein kaun sa kathan ASATYA (Incorrect) hai?",
-            "options": [
-              {
-                "id": "A",
-                "text": "Dono ka gathan Mantrimandal ke sankalp (Cabinet Resolution) se hua."
-              },
-              {
-                "id": "B",
-                "text": "Planning Commission ke paas rajyon ko fund aavantit karne ki shakti thi."
-              },
-              {
-                "id": "C",
-                "text": "NITI Aayog ke paas Five Year Plans banane ki vaidh shakti hai."
-              },
-              {
-                "id": "D",
-                "text": "NITI Aayog ki Governing Council mein sabhi Chief Ministers shamil hain."
-              }
-            ],
-            "correct_option_id": "C",
-            "explanation": "Kathan C asatya hai kyunki NITI Aayog Five-Year Plans nahi banata, balki 15-Year Vision aur Strategy documents taiyar karta hai."
-          },
+          "messages": [
+            {
+              "speaker": "aman",
+              "text": "NITI Aayog ek 'Multidimensional Poverty Index' (MPI) nikalta hai. Pehle garibi sirf paise se naapi jaati thi. Par MPI mein 3 cheezein dekhi jaati hain:\n1. Swasthya (Health)\n2. Shiksha (Education)\n3. Rehan-Sehan (Bijli, Paani, Gas, Shauchalay)."
+            },
+            {
+              "speaker": "raju",
+              "text": "Matlab sirf jeb mein paisa hona kafi nahi, achhi suvidha bhi honi chahiye!"
+            },
+            {
+              "speaker": "aman",
+              "text": "Ekdum sahi! Is report mein pata chala ki Bihar mein pichhle kuch saalon mein garibi bahut tezi se kam hui hai."
+            }
+          ],
           "navigation": {
-            "next": "card_57_bihar_state_planning_board",
-            "button_text": "⭐ Bihar State Planning Board ➔"
+            "next": "card_57_quiz_mpi_dimensions",
+            "button_text": "Quiz on MPI 📝"
           }
         },
         {
-          "card_id": "card_57_bihar_state_planning_board",
-          "card_slug": "card_57_bihar_state_planning_board",
-          "type": "chat",
-          "concept_id": "bihar_planning_board_structure",
-          "level": 4,
+          "card_id": "card_57_quiz_mpi_dimensions",
+          "card_slug": "card_57_quiz_mpi_dimensions",
+          "type": "quiz",
+          "concept_id": "quiz_mpi_three_pillars",
+          "level": 3,
           "progress": {
             "current": 57,
             "total": 80
           },
-          "messages": [
-            {
-              "speaker": "aman",
-              "text": "⭐ BPSC Special Module: Bihar State Planning Board (Bihar Rajya Yojna Parishad) ka gathan rajya ki vikas yojnayein aur sansadhan aavantan evaluate karne ke liye kiya gaya.\n• Chairman: Chief Minister of Bihar\n• Vice-Chairman: Appointed Planning Expert / Minister\n• Member Secretary: Planning Department Secretary."
-            },
-            {
-              "speaker": "raju",
-              "text": "District level par planning kaun karta hai Bihar mein?"
-            },
-            {
-              "speaker": "aman",
-              "text": "Article 243ZD ke antargat 'District Planning Committee' (DPC) har district mein banti hai, jiska kaam Panchayats aur Municipalities ke plans ko consolidate karna hai."
-            }
-          ],
+          "quiz_payload": {
+            "question": "Multidimensional Poverty Index (MPI) mein garibi naapne ke 3 mukhya aadhar kaun se hain?",
+            "options": [
+              {
+                "id": "A",
+                "text": "Health, Education aur Standard of Living"
+              },
+              {
+                "id": "B",
+                "text": "Sirf Bank Account ka Balance"
+              },
+              {
+                "id": "C",
+                "text": "Sirf Videsh Yatra"
+              },
+              {
+                "id": "D",
+                "text": "Car aur Mobile ki sankhya"
+              }
+            ],
+            "correct_option_id": "A",
+            "explanation": "MPI mein Swasthya (Health), Shiksha (Education) aur Rehan-Sehan (Standard of Living) ke kul 12 indicators par garibi naapi jaati hai."
+          },
           "navigation": {
-            "next": "card_58_bihar_finance_commission",
-            "button_text": "⭐ Bihar State Finance Commission ➔"
+            "next": "card_58_other_important_indices",
+            "button_text": "NITI Aayog Ke Anya Index ➔"
           }
         },
         {
-          "card_id": "card_58_bihar_finance_commission",
-          "card_slug": "card_58_bihar_finance_commission",
+          "card_id": "card_58_other_important_indices",
+          "card_slug": "card_58_other_important_indices",
           "type": "chat",
-          "concept_id": "bihar_sfc",
-          "level": 4,
+          "concept_id": "other_indices_list",
+          "level": 3,
           "progress": {
             "current": 58,
             "total": 80
@@ -1945,94 +1950,90 @@
           "messages": [
             {
               "speaker": "aman",
-              "text": "Constitution ke Article 243-I (Panchayats) aur Article 243-Y (Municipalities) ke tehat har 5 saal mein State Governor 'State Finance Commission' banate hain. Iska kaam State ke net tax revenue ko Panchayati Raj Institutions (PRIs) aur Urban Local Bodies (ULBs) mein distribute karna hai."
+              "text": "NITI Aayog ke kuch aur reports ke naam yaad rakhna jo SSC aur BPSC mein match karne aate hain:\n• India Innovation Index (Naye aavishkar ki ranking)\n• Export Preparedness Index (Videshon mein saman bechne ki taiyari)\n• School Education Quality Index (Schools ki quality)\n• State Health Index (Hospitals ki quality)."
             },
             {
               "speaker": "raju",
-              "text": "Ye Central Finance Commission se kaise alag hai?"
-            },
-            {
-              "speaker": "aman",
-              "text": "Central FC (Article 280) Centre aur States ke beech batwara karti hai; State FC State aur uske Gaon/Shahron ke beech!"
+              "text": "Sir, in sabhi index se har rajya ko apni kamzori pata chal jaati hai!"
             }
           ],
           "navigation": {
-            "next": "card_59_quiz_bihar_institutions",
-            "button_text": "Quiz: Bihar Planning & SFC 📝"
+            "next": "card_59_bihar_state_planning_board",
+            "button_text": "⭐ Hamare Bihar Ka State Planning Board ➔"
           }
         },
         {
-          "card_id": "card_59_quiz_bihar_institutions",
-          "card_slug": "card_59_quiz_bihar_institutions",
-          "type": "quiz",
-          "concept_id": "quiz_bihar_sfc_art",
+          "card_id": "card_59_bihar_state_planning_board",
+          "card_slug": "card_59_bihar_state_planning_board",
+          "type": "chat",
+          "concept_id": "bihar_spb_easy",
           "level": 4,
           "progress": {
             "current": 59,
             "total": 80
           },
-          "quiz_payload": {
-            "question": "⭐ Bihar Rajya Vitta Aayog (State Finance Commission) ka gathan samvidhan ke kis anuchhed ke tehat Governor dwara kiya jata hai?",
-            "options": [
-              {
-                "id": "A",
-                "text": "Article 280"
-              },
-              {
-                "id": "B",
-                "text": "Article 243-I"
-              },
-              {
-                "id": "C",
-                "text": "Article 324"
-              },
-              {
-                "id": "D",
-                "text": "Article 356"
-              }
-            ],
-            "correct_option_id": "B",
-            "explanation": "Article 243-I (Panchayato ke liye) aur 243-Y (Nagarpalikao ke liye) ke tehat Governor dwara har 5 varsh par State Finance Commission ka gathan kiya jata hai."
-          },
+          "messages": [
+            {
+              "speaker": "aman",
+              "text": "⭐ Ab aate hain Bihar ke planning par! Jaise desh ke liye Planning Commission/NITI Aayog tha, waise hi Bihar ke liye 'Bihar State Planning Board' (Bihar Rajya Yojna Parishad) hai."
+            },
+            {
+              "speaker": "raju",
+              "text": "Sir, Bihar State Planning Board ke Chairman kaun hote hain?"
+            },
+            {
+              "speaker": "aman",
+              "text": "Jaise desh mein Prime Minister Chairman hote hain, waise hi Bihar mein Bihar ke Chief Minister (Mukhyamantri) iske Chairman hote hain!"
+            }
+          ],
           "navigation": {
-            "next": "card_60_saat_nischay_1",
-            "button_text": "⭐ Saat Nischay-1 (2015–2020) ➔"
+            "next": "card_60_quiz_bihar_spb_chairman",
+            "button_text": "Quiz: Bihar Planning Board 📝"
           }
         },
         {
-          "card_id": "card_60_saat_nischay_1",
-          "card_slug": "card_60_saat_nischay_1",
-          "type": "chat",
-          "concept_id": "saat_nischay_1_details",
+          "card_id": "card_60_quiz_bihar_spb_chairman",
+          "card_slug": "card_60_quiz_bihar_spb_chairman",
+          "type": "quiz",
+          "concept_id": "quiz_bihar_board_head",
           "level": 4,
           "progress": {
             "current": 60,
             "total": 80
           },
-          "messages": [
-            {
-              "speaker": "aman",
-              "text": "⭐ Saat Nischay-1 (2015–2020) ke 7 components BPSC me poore match karne aate hain:\n1. Aarthik Hal, Yuvaon ko Bal (Student Credit Card, Kaushal Vikas, Swayam Sahayata Bhatta)\n2. Aarakshit Rozgar, Mahilaon ka Adhikar (35% reservation for women in govt jobs)\n3. Har Ghar Bijli Lagataar\n4. Har Ghar Nal ka Jal\n5. Ghar Tak Pakki Gali-Naliyan\n6. Shauchalay Nirman, Ghar ka Samman\n7. Awsar Badhe, Aage Padhe."
-            },
-            {
-              "speaker": "raju",
-              "text": "Har Ghar Nal ka Jal to national level par Jal Jeevan Mission ka inspiration bana!"
-            },
-            {
-              "speaker": "aman",
-              "text": "Exact! Bihar ke model ko Centre ne Jal Jeevan Mission ke roop mein replicate kiya."
-            }
-          ],
+          "quiz_payload": {
+            "question": "⭐ Bihar Rajya Yojna Parishad (State Planning Board) ke Adhyaksh (Chairman) kaun hote hain?",
+            "options": [
+              {
+                "id": "A",
+                "text": "Bihar ke Governor (Rajyapal)"
+              },
+              {
+                "id": "B",
+                "text": "Bihar ke Chief Minister (Mukhyamantri)"
+              },
+              {
+                "id": "C",
+                "text": "Patna High Court ke Chief Justice"
+              },
+              {
+                "id": "D",
+                "text": "Bihar ke Finance Minister"
+              }
+            ],
+            "correct_option_id": "B",
+            "explanation": "Bihar State Planning Board ke ex-officio Chairman Bihar ke Chief Minister hote hain."
+          },
           "navigation": {
-            "next": "card_61_saat_nischay_2",
-            "button_text": "⭐ Saat Nischay-2 (2020–2025) ➔"
+            "next": "card_61_saat_nischay_1_story",
+            "button_text": "⭐ Saat Nischay-1 (2015 se 2020) ➔"
           }
         },
         {
-          "card_id": "card_61_saat_nischay_2",
-          "card_slug": "card_61_saat_nischay_2",
+          "card_id": "card_61_saat_nischay_1_story",
+          "card_slug": "card_61_saat_nischay_1_story",
           "type": "chat",
-          "concept_id": "saat_nischay_2_details",
+          "concept_id": "saat_nischay_1_easy",
           "level": 4,
           "progress": {
             "current": 61,
@@ -2041,65 +2042,61 @@
           "messages": [
             {
               "speaker": "aman",
-              "text": "⭐ Saat Nischay-2 (2020–2025) ke 7 naye targets rat lo:\n1. Yuva Shakti — Bihar ki Pragati (ITI/Polytechnic upgradation, Mega Skill Centres)\n2. Sashakt Mahila — Saksham Mahila (Udyami Yojana for women, 12th pass 25k, Grad pass 50k)\n3. Har Khet Tak Sinchai ka Pani\n4. Swachh Gaon — Samriddh Gaon (Solar street lights, solid waste management)\n5. Swachh Shahar — Viksit Shahar (Storm drainage, Vridhjan aashray)\n6. Sulabh Samparkata (Bypass aur flyovers connectivity)\n7. Sabke Liye Swasthya Suvidha (Telemedicine, Bal Hriday Yojana)."
+              "text": "⭐ 2015 mein Bihar sarkar ne vikas ke 7 pakke vaade kiye, jise 'Saat Nischay-1' kaha gaya (2015–2020):\n1. Aarthik Hal, Yuvaon ko Bal (Student Credit Card)\n2. Aarakshit Rozgar, Mahilaon ka Adhikar (Naukri mein mahilaon ko 35% aarakshan)\n3. Har Ghar Bijli Lagataar\n4. Har Ghar Nal ka Jal\n5. Ghar Tak Pakki Gali-Naliyan\n6. Shauchalay Nirman, Ghar ka Samman\n7. Awsar Badhe, Aage Padhe."
             },
             {
               "speaker": "raju",
-              "text": "Bal Hriday Yojana mein kya hota hai?"
-            },
-            {
-              "speaker": "aman",
-              "text": "Hole in the heart (dil mein chhed) se pidit bachhon ka free treatment aur operation Ahmedabad/Patna mein karwaya jata hai."
+              "text": "Nal ka jal aur pakki gali to humare gaon mein bhi ban gayi hai!"
             }
           ],
           "navigation": {
-            "next": "card_62_quiz_saat_nischay_2",
-            "button_text": "Quiz on Saat Nischay-2 📝"
+            "next": "card_62_quiz_saat_nischay_1_year",
+            "button_text": "Quiz: Saat Nischay-1 📝"
           }
         },
         {
-          "card_id": "card_62_quiz_saat_nischay_2",
-          "card_slug": "card_62_quiz_saat_nischay_2",
+          "card_id": "card_62_quiz_saat_nischay_1_year",
+          "card_slug": "card_62_quiz_saat_nischay_1_year",
           "type": "quiz",
-          "concept_id": "quiz_sn2_components",
+          "concept_id": "quiz_sn1_launch_year",
           "level": 4,
           "progress": {
             "current": 62,
             "total": 80
           },
           "quiz_payload": {
-            "question": "⭐ Bihar sarkar ke 'Saat Nischay-2' (2020-2025) mein nimnlikhit mein se kaun sa component shamil NAHI hai?",
+            "question": "⭐ Bihar sarkar ka prasiddh 'Saat Nischay-1' karyakram kis varsh shuru hua tha?",
             "options": [
               {
                 "id": "A",
-                "text": "Yuva Shakti — Bihar ki Pragati"
+                "text": "2010"
               },
               {
                 "id": "B",
-                "text": "Har Ghar Bijli Lagataar"
+                "text": "2015"
               },
               {
                 "id": "C",
-                "text": "Har Khet Tak Sinchai ka Pani"
+                "text": "2020"
               },
               {
                 "id": "D",
-                "text": "Swachh Shahar — Viksit Shahar"
+                "text": "2022"
               }
             ],
             "correct_option_id": "B",
-            "explanation": "'Har Ghar Bijli Lagataar' Saat Nischay-1 (2015-20) ka hissa tha jo 100% achieve ho gaya. Saat Nischay-2 mein 'Har Khet Tak Sinchai ka Pani', 'Yuva Shakti', 'Sashakt Mahila', aadi hain."
+            "explanation": "Saat Nischay-1 karyakram 2015 mein launch kiya gaya tha (2015–2020)."
           },
           "navigation": {
-            "next": "card_63_bihar_schemes_deep",
-            "button_text": "⭐ Major Bihar Planned Schemes ➔"
+            "next": "card_63_saat_nischay_2_story",
+            "button_text": "⭐ Saat Nischay-2 (2020 se 2025) ➔"
           }
         },
         {
-          "card_id": "card_63_bihar_schemes_deep",
-          "card_slug": "card_63_bihar_schemes_deep",
+          "card_id": "card_63_saat_nischay_2_story",
+          "card_slug": "card_63_saat_nischay_2_story",
           "type": "chat",
-          "concept_id": "bihar_schemes_flagship",
+          "concept_id": "saat_nischay_2_easy",
           "level": 4,
           "progress": {
             "current": 63,
@@ -2108,65 +2105,61 @@
           "messages": [
             {
               "speaker": "aman",
-              "text": "BPSC/BSSC ke liye aur major Bihar planned schemes:\n• Mukhyamantri Kanya Utthan Yojana (Birth se Graduation tak 54,100 total assistance)\n• Bihar Udyami Yojana (SC/ST/EBC/Youth/Women ko 10 Lakh loan/grant for industries)\n• Jal-Jeevan-Hariyali Abhiyan (Oct 2019 launch — climate resilience, tree planting & pond rejuvenation)\n• Bihar Student Credit Card Scheme (4 Lakh education loan at nominal/zero interest)."
+              "text": "⭐ 2020 mein shuru hua 'Saat Nischay-2' (2020–2025). Iske 7 naye targets hain:\n1. Yuva Shakti — Bihar ki Pragati (Mega Skill Centres)\n2. Sashakt Mahila — Saksham Mahila (Girls ko graduation pass par ₹50,000)\n3. Har Khet Tak Sinchai ka Pani\n4. Swachh Gaon — Samriddh Gaon (Solar Street Light)\n5. Swachh Shahar — Viksit Shahar\n6. Sulabh Samparkata (Flyovers & bypass)\n7. Sabke Liye Swasthya Suvidha (Bal Hriday Yojana — dil mein chhed wale bachhon ka free ilaaj)."
             },
             {
               "speaker": "raju",
-              "text": "Jal-Jeevan-Hariyali Abhiyan ka human chain event bhi bana tha na?"
-            },
-            {
-              "speaker": "aman",
-              "text": "Haan! World record human chain bani thi awareness ke liye."
+              "text": "Meri didi ko graduation pass karne par 50 hazar rupaye mile the!"
             }
           ],
           "navigation": {
-            "next": "card_64_quiz_bihar_schemes",
-            "button_text": "Quiz on Bihar Schemes 📝"
+            "next": "card_64_quiz_saat_nischay_2_target",
+            "button_text": "Quiz: Saat Nischay-2 📝"
           }
         },
         {
-          "card_id": "card_64_quiz_bihar_schemes",
-          "card_slug": "card_64_quiz_bihar_schemes",
+          "card_id": "card_64_quiz_saat_nischay_2_target",
+          "card_slug": "card_64_quiz_saat_nischay_2_target",
           "type": "quiz",
-          "concept_id": "quiz_kanya_utthan",
+          "concept_id": "quiz_sn2_difference",
           "level": 4,
           "progress": {
             "current": 64,
             "total": 80
           },
           "quiz_payload": {
-            "question": "⭐ Bihar mein Jal-Jeevan-Hariyali Abhiyan ki shuruaat kab ki gayi thi?",
+            "question": "⭐ 'Har Khet Tak Sinchai ka Pani' aur 'Swachh Gaon — Samriddh Gaon' kis yojana ke hissa hain?",
             "options": [
               {
                 "id": "A",
-                "text": "October 2019"
+                "text": "Saat Nischay-1 (2015–20)"
               },
               {
                 "id": "B",
-                "text": "January 2015"
+                "text": "Saat Nischay-2 (2020–25)"
               },
               {
                 "id": "C",
-                "text": "March 2021"
+                "text": "First Five Year Plan"
               },
               {
                 "id": "D",
-                "text": "August 2017"
+                "text": "Bombay Plan"
               }
             ],
-            "correct_option_id": "A",
-            "explanation": "Jal-Jeevan-Hariyali Abhiyan 2 October 2019 ko Gandhi Jayanti ke avasar par launch kiya gaya tha, jiska mukhya uddeshya climate change mitigation aur water conservation hai."
+            "correct_option_id": "B",
+            "explanation": "'Har Khet Tak Sinchai ka Pani' Saat Nischay-2 (2020-2025) ka ahem sankalp hai."
           },
           "navigation": {
-            "next": "card_65_bihar_economic_survey_points",
-            "button_text": "⭐ Bihar Economic Survey & Planning ➔"
+            "next": "card_65_bihar_schemes_student_credit",
+            "button_text": "Bihar Ki Anya Pramukh Yojnayein ➔"
           }
         },
         {
-          "card_id": "card_65_bihar_economic_survey_points",
-          "card_slug": "card_65_bihar_economic_survey_points",
+          "card_id": "card_65_bihar_schemes_student_credit",
+          "card_slug": "card_65_bihar_schemes_student_credit",
           "type": "chat",
-          "concept_id": "bihar_economic_growth_facts",
+          "concept_id": "bihar_key_schemes_list",
           "level": 4,
           "progress": {
             "current": 65,
@@ -2175,42 +2168,67 @@
           "messages": [
             {
               "speaker": "aman",
-              "text": "Bihar State Planning ke dynamic data points (BPSC mains & prelims):\n• GSDP Growth Rate: India ke top growing states mein se ek.\n• Primary Sector (Agriculture): Growth driven by Krishi Roadmaps (Krishi Roadmap 1, 2, 3 aur ab Krishi Roadmap-4 2023-2028 active hai!).\n• Tertiary Sector (Services): GSDP mein sabse bada share holds karta hai."
+              "text": "Bihar ke 3 aur famous schemes exam ke liye rat lo:\n1. Bihar Student Credit Card: 12th ke baad aage padhai ke liye 4 Lakh rupaye tak ka aasan loan.\n2. Mukhyamantri Balika Cycle Yojana: 9th class ki ladkiyon ko school aane ke liye cycle.\n3. Jal-Jeevan-Hariyali Abhiyan (2019): Talab bachane aur ped lagane ke liye!"
             },
             {
               "speaker": "raju",
-              "text": "Krishi Roadmap-4 ka focus area kya hai?"
-            },
-            {
-              "speaker": "aman",
-              "text": "Crop diversification, organic farming along Ganga corridor, millets (Shri Anna) aur storage/processing infrastructure!"
+              "text": "School mein cycle yojana se sabhi ladkiyan ab regular school aati hain!"
             }
           ],
           "navigation": {
-            "next": "card_66_quiz_krishi_roadmap",
-            "button_text": "Quiz: Krishi Roadmap 📝"
+            "next": "card_66_bihar_krishi_roadmap",
+            "button_text": "⭐ Bihar Krishi Roadmap ➔"
           }
         },
         {
-          "card_id": "card_66_quiz_krishi_roadmap",
-          "card_slug": "card_66_quiz_krishi_roadmap",
-          "type": "quiz",
-          "concept_id": "quiz_krishi_roadmap_4",
+          "card_id": "card_66_bihar_krishi_roadmap",
+          "card_slug": "card_66_bihar_krishi_roadmap",
+          "type": "chat",
+          "concept_id": "krishi_roadmap_simple",
           "level": 4,
           "progress": {
             "current": 66,
             "total": 80
           },
+          "messages": [
+            {
+              "speaker": "aman",
+              "text": "Bihar sarkar kheti ko aage badhane ke liye 'Krishi Roadmap' banati hai:\n• 1st Krishi Roadmap: 2008\n• 2nd Krishi Roadmap: 2012–17\n• 3rd Krishi Roadmap: 2017–23\n• 4th Krishi Roadmap (Abhi active hai): 2023 se 2028 tak!"
+            },
+            {
+              "speaker": "raju",
+              "text": "Sir, 4th Krishi Roadmap ka uddeshya kya hai?"
+            },
+            {
+              "speaker": "aman",
+              "text": "Ganga kinare organic (jaivik) kheti, mote anaj (Millets/Shri Anna) aur kisanon ki aamdani badhana."
+            }
+          ],
+          "navigation": {
+            "next": "card_67_quiz_krishi_roadmap",
+            "button_text": "Quiz: Krishi Roadmap 📝"
+          }
+        },
+        {
+          "card_id": "card_67_quiz_krishi_roadmap",
+          "card_slug": "card_67_quiz_krishi_roadmap",
+          "type": "quiz",
+          "concept_id": "quiz_krishi_roadmap_active",
+          "level": 4,
+          "progress": {
+            "current": 67,
+            "total": 80
+          },
           "quiz_payload": {
-            "question": "⭐ Bihar sarkar dwara 'Chautha Krishi Roadmap' (Krishi Roadmap-4) kis samayavadhi (period) ke liye lagu kiya gaya hai?",
+            "question": "⭐ Bihar sarkar ka 'Chautha Krishi Roadmap' (Krishi Roadmap-4) kab se kab tak ke liye lagu hai?",
             "options": [
               {
                 "id": "A",
-                "text": "2020–2025"
+                "text": "2015–2020"
               },
               {
                 "id": "B",
-                "text": "2022–2027"
+                "text": "2020–2025"
               },
               {
                 "id": "C",
@@ -2218,172 +2236,283 @@
               },
               {
                 "id": "D",
-                "text": "2024–2029"
+                "text": "2025–2030"
               }
             ],
             "correct_option_id": "C",
-            "explanation": "Bihar Krishi Roadmap-4 ki samayavadhi 2023 se 2028 tak hai. Iska launch President Droupadi Murmu dwara kiya gaya tha."
+            "explanation": "Bihar Krishi Roadmap-4 ki avadhi 2023 se 2028 tak hai."
           },
           "navigation": {
-            "next": "card_67_central_sector_vs_sponsored",
-            "button_text": "Centrally Sponsored vs Central Sector Schemes ➔"
+            "next": "card_68_dpc_constitution_article",
+            "button_text": "Zila Planning Committee (Article 243ZD) ➔"
           }
         },
         {
-          "card_id": "card_67_central_sector_vs_sponsored",
-          "card_slug": "card_67_central_sector_vs_sponsored",
+          "card_id": "card_68_dpc_constitution_article",
+          "card_slug": "card_68_dpc_constitution_article",
           "type": "chat",
-          "concept_id": "scheme_classification",
-          "level": 4,
-          "progress": {
-            "current": 67,
-            "total": 80
-          },
-          "messages": [
-            {
-              "speaker": "aman",
-              "text": "UPSC/BPSC Conceptual Question: Schemes do types ki hoti hain:\n1. Central Sector Schemes: 100% funding Union Govt deti hai aur Central machinery execute karti hai (e.g., PM-KISAN, Namami Gange).\n2. Centrally Sponsored Schemes (CSS): Funding share hoti hai Centre aur State ke beech (e.g., 60:40 or 90:10 for Northeast/Hilly), execution State karti hai (e.g., MGNREGA, Samagra Shiksha)."
-            },
-            {
-              "speaker": "raju",
-              "text": "NITI Aayog ne CSS schemes ko rationalize bhi kiya tha na?"
-            },
-            {
-              "speaker": "aman",
-              "text": "Haan, Shivraj Singh Chouhan sub-committee on CSS ki recommendation par inko 'Core of the Core', 'Core', aur 'Optional' schemes mein categorize kiya gaya."
-            }
-          ],
-          "navigation": {
-            "next": "card_68_quiz_schemes_classification",
-            "button_text": "Quiz on Scheme Classification 📝"
-          }
-        },
-        {
-          "card_id": "card_68_quiz_schemes_classification",
-          "card_slug": "card_68_quiz_schemes_classification",
-          "type": "quiz",
-          "concept_id": "quiz_css_types",
+          "concept_id": "dpc_article_243zd",
           "level": 4,
           "progress": {
             "current": 68,
             "total": 80
           },
-          "quiz_payload": {
-            "question": "Nimnlikhit mein se kaun si 'Central Sector Scheme' (Kendriya Kshetra Yojna) ka udaharan hai?",
-            "options": [
-              {
-                "id": "A",
-                "text": "MGNREGA"
-              },
-              {
-                "id": "B",
-                "text": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)"
-              },
-              {
-                "id": "C",
-                "text": "Pradhan Mantri Awas Yojana (Rural)"
-              },
-              {
-                "id": "D",
-                "text": "National Health Mission (NHM)"
-              }
-            ],
-            "correct_option_id": "B",
-            "explanation": "PM-KISAN ek 100% Central Sector Scheme hai jisme poora paisa Central Govt direct benefit transfer (DBT) ke roop mein bhejti hai. Anya vikalp Centrally Sponsored Schemes (CSS) hain."
-          },
+          "messages": [
+            {
+              "speaker": "aman",
+              "text": "BPSC TRE aur BPSC ka favourite sawaal: Har zile mein gaon aur shahar ke plans ko milane ke liye ek 'District Planning Committee' (DPC - Zila Yojna Samiti) banti hai. Iska kanoon Samvidhan ke Article 243ZD mein likha hai!"
+            },
+            {
+              "speaker": "raju",
+              "text": "Article 243ZD yaad rakhna hai na Sir?"
+            },
+            {
+              "speaker": "aman",
+              "text": "Haan! ZD se yaad rakhna 'Zila Development'!"
+            }
+          ],
           "navigation": {
-            "next": "card_69_ar_bpsc_drill_1",
-            "button_text": "Assertion-Reason Drill 1 ➔"
+            "next": "card_69_quiz_article_243zd",
+            "button_text": "Quiz: Article 243ZD 📝"
           }
         },
         {
-          "card_id": "card_69_ar_bpsc_drill_1",
-          "card_slug": "card_69_ar_bpsc_drill_1",
+          "card_id": "card_69_quiz_article_243zd",
+          "card_slug": "card_69_quiz_article_243zd",
           "type": "quiz",
-          "concept_id": "ar_drill_federalism",
-          "level": 5,
+          "concept_id": "quiz_dpc_article",
+          "level": 4,
           "progress": {
             "current": 69,
             "total": 80
           },
           "quiz_payload": {
-            "question": "Assertion (A): NITI Aayog promotes competitive federalism along with cooperative federalism among Indian states.\n\nReason (R): It releases ranking indices like SDG India Index and Export Preparedness Index to benchmark performance.\n\nWhich of the following is correct?",
+            "question": "Bhartiya Samvidhan ke kis Article mein 'District Planning Committee' (Zila Yojna Samiti) ka pravdhan hai?",
             "options": [
               {
                 "id": "A",
-                "text": "Both A and R are true, and R is the correct explanation of A"
+                "text": "Article 280"
               },
               {
                 "id": "B",
-                "text": "Both A and R are true, but R is not the correct explanation of A"
+                "text": "Article 243ZD"
               },
               {
                 "id": "C",
-                "text": "A is true but R is false"
+                "text": "Article 324"
               },
               {
                 "id": "D",
-                "text": "A is false but R is true"
+                "text": "Article 370"
               }
             ],
-            "correct_option_id": "A",
-            "explanation": "Both statements are TRUE. Ranking states transparently through indices is the exact mechanism by which competitive federalism is fostered."
+            "correct_option_id": "B",
+            "explanation": "74th Constitutional Amendment ke dwara Article 243ZD ke tehat District Planning Committee (DPC) ka pravdhan kiya gaya hai."
           },
           "navigation": {
-            "next": "card_70_ar_bpsc_drill_2",
-            "button_text": "Assertion-Reason Drill 2 ➔"
+            "next": "card_70_concurrent_list_planning",
+            "button_text": "Planning Kis List Mein Aati Hai? ➔"
           }
         },
         {
-          "card_id": "card_70_ar_bpsc_drill_2",
-          "card_slug": "card_70_ar_bpsc_drill_2",
-          "type": "quiz",
-          "concept_id": "ar_drill_financial_powers",
-          "level": 5,
+          "card_id": "card_70_concurrent_list_planning",
+          "card_slug": "card_70_concurrent_list_planning",
+          "type": "chat",
+          "concept_id": "concurrent_list_planning",
+          "level": 4,
           "progress": {
             "current": 70,
             "total": 80
           },
-          "quiz_payload": {
-            "question": "⭐ Assertion (A): Bihar and other financially stressed states frequently advocate for more untied fiscal transfers rather than rigid conditional Centrally Sponsored Schemes.\n\nReason (R): State Planning Boards have full constitutional authority under Article 280 to overrule Central Finance Commission recommendations.\n\nWhich of the following is correct?",
-            "options": [
-              {
-                "id": "A",
-                "text": "Both A and R are true, and R is the correct explanation of A"
-              },
-              {
-                "id": "B",
-                "text": "Both A and R are true, but R is not the correct explanation of A"
-              },
-              {
-                "id": "C",
-                "text": "A is true but R is false"
-              },
-              {
-                "id": "D",
-                "text": "A is false but R is true"
-              }
-            ],
-            "correct_option_id": "C",
-            "explanation": "Assertion is TRUE (States want flexibility to tailor funds to local needs). Reason is FALSE (Article 280 governs the Central Finance Commission, and State Planning Boards have no authority to overrule it)."
-          },
+          "messages": [
+            {
+              "speaker": "aman",
+              "text": "Samvidhan ki 7th Schedule mein 3 lists hoti hain: Union List (Kendra), State List (Rajya), aur Concurrent List (Samvarti - dono ke liye). 'Economic and Social Planning' (Aarthik aur Samajik Yojna) Concurrent List (Item 20) mein aati hai."
+            },
+            {
+              "speaker": "raju",
+              "text": "Matlab Kendra Sarkar aur Bihar Sarkar dono vikas ke plan bana sakte hain!"
+            },
+            {
+              "speaker": "aman",
+              "text": "Bilkul sahi samjhe Raju!"
+            }
+          ],
           "navigation": {
-            "next": "card_71_multi_statement_3",
-            "button_text": "Multi-Statement Hard Drill ➔"
+            "next": "card_71_quiz_concurrent_list",
+            "button_text": "Quiz: 7th Schedule 📝"
           }
         },
         {
-          "card_id": "card_71_multi_statement_3",
-          "card_slug": "card_71_multi_statement_3",
+          "card_id": "card_71_quiz_concurrent_list",
+          "card_slug": "card_71_quiz_concurrent_list",
           "type": "quiz",
-          "concept_id": "multi_statement_niti_all",
-          "level": 5,
+          "concept_id": "quiz_seventh_sched_list",
+          "level": 4,
           "progress": {
             "current": 71,
             "total": 80
           },
           "quiz_payload": {
-            "question": "Consider the following statements regarding NITI Aayog:\n1. The Vice-Chairperson is appointed by the Prime Minister and holds the rank of Cabinet Minister.\n2. The CEO of NITI Aayog holds the rank of Secretary to the Government of India.\n3. The Governing Council includes the Chief Ministers of all states and Lieutenant Governors of Union Territories.\n4. NITI Aayog has the statutory authority to impose financial penalties on underperforming states.\n\nHow many of the above statements are CORRECT?",
+            "question": "Bhartiya Samvidhan mein 'Aarthik aur Samajik Yojna' (Planning) kis soochi (list) ka vishay hai?",
+            "options": [
+              {
+                "id": "A",
+                "text": "Union List (Sangh Soochi)"
+              },
+              {
+                "id": "B",
+                "text": "State List (Rajya Soochi)"
+              },
+              {
+                "id": "C",
+                "text": "Concurrent List (Samvarti Soochi)"
+              },
+              {
+                "id": "D",
+                "text": "Avashisht Soochi"
+              }
+            ],
+            "correct_option_id": "C",
+            "explanation": "Planning 7th Schedule ki Concurrent List (Samvarti Soochi) ke Entry 20 par darj hai."
+          },
+          "navigation": {
+            "next": "card_72_pc_vs_niti_summary_sheet",
+            "button_text": "Master Comparison Sheet ➔"
+          }
+        },
+        {
+          "card_id": "card_72_pc_vs_niti_summary_sheet",
+          "card_slug": "card_72_pc_vs_niti_summary_sheet",
+          "type": "summary",
+          "concept_id": "pc_vs_niti_sheet",
+          "level": 5,
+          "progress": {
+            "current": 72,
+            "total": 80
+          },
+          "summary_payload": {
+            "title": "⚖️ Planning Commission vs NITI Aayog: Ek Nazar Mein",
+            "revision_points": [
+              {
+                "topic": "Janm",
+                "point": "PC: 15 March 1950 | NITI: 1 January 2015"
+              },
+              {
+                "topic": "Kanooni Status",
+                "point": "Dono hi Extra-Constitutional / Non-Statutory hain (Cabinet ke aadesh se bane)"
+              },
+              {
+                "topic": "Head",
+                "point": "Dono ke Chairman Prime Minister hote hain"
+              },
+              {
+                "topic": "Paise Ka Power",
+                "point": "PC ke paas funds baantne ki power thi | NITI ke paas zero fund power hai (sirf salah)"
+              },
+              {
+                "topic": "Rajyon Ka Role",
+                "point": "PC mein states ki kam sunwai thi | NITI ki Governing Council mein sabhi CMs member hain"
+              },
+              {
+                "topic": "Planning Type",
+                "point": "PC: 5-Saal ka rigid plan | NITI: 15-Year Vision, 7-Year Strategy, 3-Year Action"
+              }
+            ]
+          },
+          "navigation": {
+            "next": "card_73_bpsc_assertion_reason_1",
+            "button_text": "BPSC Level Assertion-Reason Q1 ➔"
+          }
+        },
+        {
+          "card_id": "card_73_bpsc_assertion_reason_1",
+          "card_slug": "card_73_bpsc_assertion_reason_1",
+          "type": "quiz",
+          "concept_id": "quiz_ar_1_niti",
+          "level": 5,
+          "progress": {
+            "current": 73,
+            "total": 80
+          },
+          "quiz_payload": {
+            "question": "Kathan (A): NITI Aayog ko ek 'Think Tank' ke roop mein jaana jata hai.\n\nKaran (R): NITI Aayog kendra aur rajya sarkaron ko policy aur strategy par salah (advice) deta hai, funds allocate nahi karta.\n\nSahi vikalp chunein:",
+            "options": [
+              {
+                "id": "A",
+                "text": "A aur R dono sahi hain, aur R, A ki sahi vyakhya karta hai"
+              },
+              {
+                "id": "B",
+                "text": "A aur R dono sahi hain, par R vyakhya nahi karta"
+              },
+              {
+                "id": "C",
+                "text": "A sahi hai par R galat hai"
+              },
+              {
+                "id": "D",
+                "text": "A galat hai par R sahi hai"
+              }
+            ],
+            "correct_option_id": "A",
+            "explanation": "Dono kathan sahi hain. NITI Aayog ko think-tank isliye kehte hain kyunki ye technical aur strategic advice deta hai, financial powers nahi rakhta."
+          },
+          "navigation": {
+            "next": "card_74_bpsc_assertion_reason_2",
+            "button_text": "BPSC Level Assertion-Reason Q2 ➔"
+          }
+        },
+        {
+          "card_id": "card_74_bpsc_assertion_reason_2",
+          "card_slug": "card_74_bpsc_assertion_reason_2",
+          "type": "quiz",
+          "concept_id": "quiz_ar_2_bihar",
+          "level": 5,
+          "progress": {
+            "current": 74,
+            "total": 80
+          },
+          "quiz_payload": {
+            "question": "⭐ Kathan (A): Bihar Sarkar ka Saat Nischay Karyakram rajya ke sarvangin vikas ka blueprint hai.\n\nKaran (R): Saat Nischay-2 mein 'Yuva Shakti', 'Sashakt Mahila' aur 'Har Khet Tak Sinchai' jaise 7 ahem kshetra shamil hain.\n\nSahi vikalp chunein:",
+            "options": [
+              {
+                "id": "A",
+                "text": "A aur R dono sahi hain, aur R, A ki sahi vyakhya karta hai"
+              },
+              {
+                "id": "B",
+                "text": "A aur R dono sahi hain, par R vyakhya nahi karta"
+              },
+              {
+                "id": "C",
+                "text": "A sahi hai par R galat hai"
+              },
+              {
+                "id": "D",
+                "text": "A galat hai par R sahi hai"
+              }
+            ],
+            "correct_option_id": "A",
+            "explanation": "Dono bilkul sahi hain aur Reason ye batata hai ki Saat Nischay kaise har tabqe aur sector ko cover karke holistic development karta hai."
+          },
+          "navigation": {
+            "next": "card_75_bpsc_multi_statement_pro",
+            "button_text": "Multi-Statement Pro Test ➔"
+          }
+        },
+        {
+          "card_id": "card_75_bpsc_multi_statement_pro",
+          "card_slug": "card_75_bpsc_multi_statement_pro",
+          "type": "quiz",
+          "concept_id": "quiz_multi_statement_pro",
+          "level": 5,
+          "progress": {
+            "current": 75,
+            "total": 80
+          },
+          "quiz_payload": {
+            "question": "Consider the following statements:\n1. NITI Aayog was established on 1 January 2015.\n2. All Chief Ministers of States are members of NITI Aayog's Governing Council.\n3. Bihar State Planning Board is chaired by the Governor of Bihar.\n4. Atal Tinkering Labs are an initiative of NITI Aayog.\n\nHow many statements are CORRECT?",
             "options": [
               {
                 "id": "A",
@@ -2403,268 +2532,138 @@
               }
             ],
             "correct_option_id": "C",
-            "explanation": "Statements 1, 2, and 3 are CORRECT. Statement 4 is INCORRECT because NITI Aayog is an advisory body and possesses no statutory or punitive powers."
+            "explanation": "Statements 1, 2, and 4 are CORRECT. Statement 3 is WRONG because the Bihar State Planning Board is chaired by the Chief Minister, not the Governor."
           },
           "navigation": {
-            "next": "card_72_bpsc_tre_special_facts",
-            "button_text": "⭐ BPSC TRE Special Facts ➔"
+            "next": "card_76_ssc_cgl_speed_quiz",
+            "button_text": "SSC / Railway Speed Quiz ➔"
           }
         },
         {
-          "card_id": "card_72_bpsc_tre_special_facts",
-          "card_slug": "card_72_bpsc_tre_special_facts",
-          "type": "chat",
-          "concept_id": "tre_specific_planning",
-          "level": 5,
-          "progress": {
-            "current": 72,
-            "total": 80
-          },
-          "messages": [
-            {
-              "speaker": "aman",
-              "text": "BPSC TRE (Teacher Recruitment) ke repeated points:\n• DPC (District Planning Committee) ka article: Article 243ZD\n• Metropolitan Planning Committee (MPC): Article 243ZE\n• Planning kis List mein aati hai? 7th Schedule ki CONCURRENT LIST (Item 20: Economic and Social Planning) mein aati hai!"
-            },
-            {
-              "speaker": "raju",
-              "text": "Concurrent List matlab Centre aur State dono laws bana sakte hain?"
-            },
-            {
-              "speaker": "aman",
-              "text": "Haan! Isliye Centre (Planning Commission/NITI) aur State (State Planning Board) dono operate karte hain."
-            }
-          ],
-          "navigation": {
-            "next": "card_73_quiz_tre_concurrent",
-            "button_text": "Quiz: 7th Schedule & Planning 📝"
-          }
-        },
-        {
-          "card_id": "card_73_quiz_tre_concurrent",
-          "card_slug": "card_73_quiz_tre_concurrent",
+          "card_id": "card_76_ssc_cgl_speed_quiz",
+          "card_slug": "card_76_ssc_cgl_speed_quiz",
           "type": "quiz",
-          "concept_id": "quiz_concurrent_list",
-          "level": 5,
-          "progress": {
-            "current": 73,
-            "total": 80
-          },
-          "quiz_payload": {
-            "question": "Bhartiya Samvidhan ki 7th Schedule mein 'Aarthik aur Samajik Yojna' (Economic and Social Planning) kis soochi (list) ka vishay hai?",
-            "options": [
-              {
-                "id": "A",
-                "text": "Union List (Sangh Soochi)"
-              },
-              {
-                "id": "B",
-                "text": "State List (Rajya Soochi)"
-              },
-              {
-                "id": "C",
-                "text": "Concurrent List (Samvarti Soochi)"
-              },
-              {
-                "id": "D",
-                "text": "Residuary Powers (Avashisht Shaktiya)"
-              }
-            ],
-            "correct_option_id": "C",
-            "explanation": "Economic and Social Planning Concurrent List (Samvarti Soochi) ke Entry 20 par darj hai, jisme Parliament aur State Legislatures dono ko adhikar hai."
-          },
-          "navigation": {
-            "next": "card_74_pyq_ssc_drill",
-            "button_text": "SSC CGL / Railway Rapid PYQ ➔"
-          }
-        },
-        {
-          "card_id": "card_74_pyq_ssc_drill",
-          "card_slug": "card_74_pyq_ssc_drill",
-          "type": "quiz",
-          "concept_id": "quiz_ssc_cgl_pyq",
-          "level": 5,
-          "progress": {
-            "current": 74,
-            "total": 80
-          },
-          "quiz_payload": {
-            "question": "SSC CGL PYQ: Who was the Prime Minister of India when the Planning Commission was formally dissolved in 2014?",
-            "options": [
-              {
-                "id": "A",
-                "text": "Dr. Manmohan Singh"
-              },
-              {
-                "id": "B",
-                "text": "Narendra Modi"
-              },
-              {
-                "id": "C",
-                "text": "Atal Bihari Vajpayee"
-              },
-              {
-                "id": "D",
-                "text": "P.V. Narasimha Rao"
-              }
-            ],
-            "correct_option_id": "B",
-            "explanation": "Prime Minister Narendra Modi announced the dissolution in August 2014 from the Red Fort, followed by official notification replacing it on 1 January 2015."
-          },
-          "navigation": {
-            "next": "card_75_bihar_budget_integration",
-            "button_text": "⭐ Bihar Budget & Planned Capital Outlay ➔"
-          }
-        },
-        {
-          "card_id": "card_75_bihar_budget_integration",
-          "card_slug": "card_75_bihar_budget_integration",
-          "type": "chat",
-          "concept_id": "budget_capital_outlay",
-          "level": 5,
-          "progress": {
-            "current": 75,
-            "total": 80
-          },
-          "messages": [
-            {
-              "speaker": "aman",
-              "text": "Planning ka sabse practical tool State Budget hota hai. 2017 mein Centre aur Bihar sarkar ne 'Plan vs Non-Plan Expenditure' classification ko khatam karke 'Revenue vs Capital Expenditure' aur 'Scheme vs Establishment Expenditure' adopt kiya."
-            },
-            {
-              "speaker": "raju",
-              "text": "Is badlav ka kya fayda hua?"
-            },
-            {
-              "speaker": "aman",
-              "text": "Accounting transparent hui aur asset-creating 'Capital Outlay' (roads, bridges, schools) par clear monitoring hone lagi."
-            }
-          ],
-          "navigation": {
-            "next": "card_76_grand_officer_challenge_1",
-            "button_text": "Grand Officer Challenge 1 🏆"
-          }
-        },
-        {
-          "card_id": "card_76_grand_officer_challenge_1",
-          "card_slug": "card_76_grand_officer_challenge_1",
-          "type": "quiz",
-          "concept_id": "grand_challenge_1",
+          "concept_id": "quiz_speed_cgl",
           "level": 5,
           "progress": {
             "current": 76,
             "total": 80
           },
           "quiz_payload": {
-            "question": "⭐ GRAND UPSC/BPSC CHALLENGE (Match All):\n\nMatch the following pairs correctly:\n1. National Planning Committee (1938) — (a) Subhash Chandra Bose & Nehru\n2. People's Plan (1945) — (b) M.N. Roy\n3. Atal Innovation Mission — (c) NITI Aayog\n4. Saat Nischay Programme — (d) Bihar Government\n\nWhich code is correct?",
+            "question": "NITI Aayog ke pehle Vice-Chairperson (Upaadhyaksh) kaun the?",
             "options": [
               {
                 "id": "A",
-                "text": "1-a, 2-b, 3-c, 4-d"
+                "text": "Arvind Panagariya"
               },
               {
                 "id": "B",
-                "text": "1-b, 2-a, 3-d, 4-c"
+                "text": "Dr. Rajiv Kumar"
               },
               {
                 "id": "C",
-                "text": "1-a, 2-c, 3-b, 4-d"
+                "text": "Suman Bery"
               },
               {
                 "id": "D",
-                "text": "1-d, 2-b, 3-c, 4-a"
+                "text": "Amitabh Kant"
               }
             ],
             "correct_option_id": "A",
-            "explanation": "All 4 pairs are correctly matched in their direct chronological and administrative correspondence."
+            "explanation": "Arvind Panagariya NITI Aayog ke pehle Vice-Chairperson the."
           },
           "navigation": {
-            "next": "card_77_grand_officer_challenge_2",
-            "button_text": "Grand Officer Challenge 2 🏆"
+            "next": "card_77_bihar_tre_rapid_fire",
+            "button_text": "⭐ BPSC TRE Special Match ➔"
           }
         },
         {
-          "card_id": "card_77_grand_officer_challenge_2",
-          "card_slug": "card_77_grand_officer_challenge_2",
+          "card_id": "card_77_bihar_tre_rapid_fire",
+          "card_slug": "card_77_bihar_tre_rapid_fire",
           "type": "quiz",
-          "concept_id": "grand_challenge_2",
+          "concept_id": "quiz_tre_special_match",
           "level": 5,
           "progress": {
             "current": 77,
             "total": 80
           },
           "quiz_payload": {
-            "question": "Which of the following statements regarding the evolution of planning in India is INCORRECT?",
+            "question": "⭐ Sahi Jodi Milayein:\n(A) Saat Nischay-1 Launch — (1) 2023 se 2028\n(B) Saat Nischay-2 Launch — (2) 2015\n(C) Bihar Krishi Roadmap-4 — (3) 2020\n\nSahi option chunein:",
             "options": [
               {
                 "id": "A",
-                "text": "The First Five-Year Plan achieved a higher growth rate than its targeted growth."
+                "text": "(A)-2, (B)-3, (C)-1"
               },
               {
                 "id": "B",
-                "text": "The Planning Commission was established under Article 39(b) and 39(c) as a constitutional body."
+                "text": "(A)-1, (B)-2, (C)-3"
               },
               {
                 "id": "C",
-                "text": "The concept of 'Inclusive Growth' was formally introduced in the 11th Five-Year Plan."
+                "text": "(A)-3, (B)-1, (C)-2"
               },
               {
                 "id": "D",
-                "text": "NITI Aayog does not possess the mandate to allocate central plan funds to state governments."
+                "text": "(A)-2, (B)-1, (C)-3"
               }
             ],
-            "correct_option_id": "B",
-            "explanation": "Statement B is INCORRECT. While DPSP Articles 39(b) and (c) guided its socio-economic philosophy, the Planning Commission was NOT a constitutional body; it was created by an executive resolution."
+            "correct_option_id": "A",
+            "explanation": "Saat Nischay-1: 2015; Saat Nischay-2: 2020; Krishi Roadmap-4: 2023-2028."
           },
           "navigation": {
-            "next": "card_78_final_officer_cheat_sheet",
-            "button_text": "Final Officer Cheat Sheet ➔"
+            "next": "card_78_final_officer_sheet",
+            "button_text": "Raju Ki Master Cheat-Sheet ➔"
           }
         },
         {
-          "card_id": "card_78_final_officer_cheat_sheet",
-          "card_slug": "card_78_final_officer_cheat_sheet",
+          "card_id": "card_78_final_officer_sheet",
+          "card_slug": "card_78_final_officer_sheet",
           "type": "summary",
-          "concept_id": "master_cheat_sheet",
+          "concept_id": "full_deck_cheat_sheet",
           "level": 5,
           "progress": {
             "current": 78,
             "total": 80
           },
           "summary_payload": {
-            "title": "🎖️ Complete 80-Card Master Summary",
+            "title": "🏆 Poore 80 Cards Ka Quick Revision",
             "revision_points": [
               {
-                "topic": "Constitutional Roots",
-                "point": "7th Schedule Concurrent List Entry 20 | Both PC & NITI are Non-Constitutional/Non-Statutory"
+                "topic": "Itihaas",
+                "point": "1934 Visvesvaraya Kitaab ➔ 1938 Nehru NPC ➔ 1950 JP Sarvodaya Plan"
               },
               {
-                "topic": "Evolution Dates",
-                "point": "NPC (1938) ➔ PC (15 Mar 1950) ➔ NDC (6 Aug 1952) ➔ NITI Aayog (1 Jan 2015)"
+                "topic": "Planning Commission",
+                "point": "15 March 1950 ko bana | Extra-Constitutional | PM Chairman"
               },
               {
-                "topic": "Key Models",
-                "point": "1st: Harrod-Domar | 2nd: Mahalanobis | 5th: D.D. Dhar | 8th: John W. Miller"
+                "topic": "12 Plans",
+                "point": "1st Kheti (1951) ➔ 2nd Steel (1956) ➔ Holiday (1966-69) ➔ 12th Last Plan (2012-17)"
               },
               {
-                "topic": "NITI Architecture",
-                "point": "Chairperson (PM), VC, CEO, Governing Council (All CMs & LGs), 7 Pillars, 15-7-3 Framework"
+                "topic": "NITI Aayog",
+                "point": "1 Jan 2015 ko bana | Think Tank | Sabhi CMs member | No financial powers"
               },
               {
-                "topic": "⭐ Bihar Hub",
+                "topic": "⭐ Bihar",
                 "point": "State Planning Board (CM Head) | Saat Nischay-1 (2015) | Saat Nischay-2 (2020) | Krishi Roadmap-4 (2023-28)"
+              },
+              {
+                "topic": "Samvidhan",
+                "point": "Concurrent List Entry 20 (Planning) | Article 243ZD (District Planning Committee)"
               }
             ]
           },
           "navigation": {
-            "next": "card_79_final_affirmation",
-            "button_text": "Final Tips & Strategy ➔"
+            "next": "card_79_raju_teacher_talk",
+            "button_text": "Final Confidence Talk ➔"
           }
         },
         {
-          "card_id": "card_79_final_affirmation",
-          "card_slug": "card_79_final_affirmation",
+          "card_id": "card_79_raju_teacher_talk",
+          "card_slug": "card_79_raju_teacher_talk",
           "type": "chat",
-          "concept_id": "final_affirmation_chat",
+          "concept_id": "final_convo",
           "level": 5,
           "progress": {
             "current": 79,
@@ -2672,44 +2671,44 @@
           },
           "messages": [
             {
+              "speaker": "raju",
+              "text": "Aman Sir, sach mein maza aa gaya! 8th class ke level se shuru karke maine 1934 se lekar NITI Aayog aur Bihar Saat Nischay tak ka sab kuch bina kisi confusion ke seekh liya!"
+            },
+            {
               "speaker": "aman",
-              "text": "Raju, ab tumne complete 80 cards ka vast syllabus master kar liya hai — 1934 Visvesvaraya plan se lekar 12 FYPs, NITI Aayog reports, aur Bihar Saat Nischay-2 tak!"
+              "text": "Ye hui na baat Raju! Ab chahe BPSC ho, BPSC TRE ho ya SSC CGL — tumhara koi bhi question galat nahi hoga. Tumne zero se shuru karke officer-level ki tayyari kar li hai!"
             },
             {
               "speaker": "raju",
-              "text": "Sir, ab BPSC Prelims, Mains, TRE ya SSC CGL ka koi bhi question is topic se bahar nahi ja sakta!"
-            },
-            {
-              "speaker": "aman",
-              "text": "Shabash! Revision cards ko bar-bar dekhna aur confidence ke saath exam hall mein jana. Vijay bhavah! 🌟"
+              "text": "Thank you Aman Sir! Ab exam mein top rank laana hai! 🎯"
             }
           ],
           "navigation": {
-            "next": "card_80_final_mastery_milestone",
-            "button_text": "Claim 80-Card Master Badge 🏆"
+            "next": "card_80_grand_mastery_badge",
+            "button_text": "80/80 Mastery Badge Lo 🏆"
           }
         },
         {
-          "card_id": "card_80_final_mastery_milestone",
-          "card_slug": "card_80_final_mastery_milestone",
+          "card_id": "card_80_grand_mastery_badge",
+          "card_slug": "card_80_grand_mastery_badge",
           "type": "milestone",
-          "concept_id": "grand_chapter_mastery",
+          "concept_id": "grand_final_milestone",
           "level": 5,
           "progress": {
             "current": 80,
             "total": 80
           },
           "milestone_payload": {
-            "title": "👑 100% COMPLETE: 80-CARD MASTER DECK!",
+            "title": "👑 GRAND CONGRATULATIONS! 80/80 CARDS MASTERED!",
             "badge_emoji": "🏅",
-            "completed_topic": "Planning Commission, 12 FYPs, NITI Aayog & Bihar State Planning",
+            "completed_topic": "Zero se Hero: Planning Commission, Five-Year Plans, NITI Aayog & Bihar State Planning",
             "xp_earned": 1000,
-            "milestone_progress": "80/80 Cards Completed — 100% Exam Ready",
-            "motivational_quote": "EXTRAORDINARY FEAT! 🎉\n\nTumne poora comprehensive syllabus master kar liya:\n✅ Historical Plans (1934–1950)\n✅ Planning Commission & NDC Structure\n✅ Complete 12 Five-Year Plans, Breaks & Models\n✅ NITI Aayog, 7 Pillars, 15-7-3 Framework & Indices (SDG, MPI, ADP)\n✅ ⭐ Bihar State Planning, SFC, Saat Nischay 1 & 2, Krishi Roadmap-4\n✅ BPSC / UPSC Multi-Statement & Assertion-Reason Drills\n\nAb tumhara command is topic par absolute hai! Go conquer your exams! 🚀🔥"
+            "milestone_progress": "100% Completed — Officer Level Ready",
+            "motivational_quote": "KAMAAL KA SAFAR! 🎉\n\nClass 8th Raju ke aasan sawaal-jawab ke saath tumne poora syllabus master kar liya:\n\n✅ Pre-Independence Plans (Visvesvaraya, Bombay, Gandhian, Sarvodaya Plan)\n✅ Planning Commission & NDC (1950–1952)\n✅ Sabhi 12 Five-Year Plans, Plan Holidays aur Models\n✅ NITI Aayog, 15-7-3 Framework, ATL Labs aur Reports (SDG, MPI)\n✅ ⭐ Bihar State Planning, Saat Nischay 1 & 2, Krishi Roadmap-4, DPC (Art 243ZD)\n\nTumhara foundation aur revision ab 100% rock solid hai! Best of luck for your exams! 🚀🔥"
           },
           "navigation": {
             "next": null,
-            "button_text": "Back to Dashboard 🏠"
+            "button_text": "Dashboard Par Wapas Jao 🏠"
           }
         }
       ]
