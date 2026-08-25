@@ -6,11 +6,13 @@ import 'package:url_launcher/url_launcher.dart';
 class ProPdfVaultCard extends StatefulWidget {
   final bool isDarkMode;
   final String? customWebsiteUrl;
+  final List<dynamic>? dynamicPdfItems; // 👈 Arguments match ke liye restored
 
   const ProPdfVaultCard({
     super.key,
     required this.isDarkMode,
     this.customWebsiteUrl,
+    this.dynamicPdfItems,
   });
 
   @override
@@ -73,7 +75,13 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
       duration: const Duration(milliseconds: 800),
     )..repeat(reverse: true);
 
-    _fetchLiveBooks();
+    if (widget.dynamicPdfItems != null && widget.dynamicPdfItems!.isNotEmpty) {
+      _allLiveDocs = widget.dynamicPdfItems!.map<Map<String, dynamic>>((item) {
+        return _formatItem(item);
+      }).toList();
+    } else {
+      _fetchLiveBooks();
+    }
   }
 
   @override
@@ -81,6 +89,46 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
     _blinkController.dispose();
     _searchController.dispose();
     super.dispose();
+  }
+
+  Map<String, dynamic> _formatItem(dynamic item) {
+    if (item is Map) {
+      final String board = (item['board'] ?? 'REFERENCE').toString().toUpperCase();
+      final String cls = (item['class'] ?? 'Exam Notes').toString();
+      final String lang = (item['lang'] ?? 'Hindi/En').toString();
+      final String chapter = (item['chapter'] ?? item['title'] ?? 'Study Material & Notes').toString();
+
+      int colorVal = 0xFF2563EB;
+      String tag = '⚡ HIGH YIELD';
+
+      if (board.contains('NCERT')) {
+        colorVal = 0xFF059669;
+        tag = '🌿 NCERT CRUX';
+      } else if (board.contains('PYQ')) {
+        colorVal = 0xFFD97706;
+        tag = '🔥 PYQ SHEET';
+      } else if (board.contains('REFERENCE')) {
+        colorVal = 0xFF7C3AED;
+        tag = '🏛️ STANDARD';
+      }
+
+      return {
+        'title': chapter,
+        'tag': item['tag'] ?? tag,
+        'badge': item['badge'] ?? 'ADDED TODAY',
+        'meta': item['meta'] ?? '$cls • $lang Edition',
+        'color': item['color'] != null ? (int.tryParse(item['color'].toString()) ?? colorVal) : colorVal,
+        'url': item['articleUrl'] ?? item['url'] ?? widget.customWebsiteUrl ?? _defaultWebsiteUrl,
+      };
+    }
+    return {
+      'title': item.toString(),
+      'tag': 'FREE PDF',
+      'badge': 'NEW',
+      'meta': 'Online Notes',
+      'color': 0xFF2563EB,
+      'url': widget.customWebsiteUrl ?? _defaultWebsiteUrl,
+    };
   }
 
   Future<void> _fetchLiveBooks() async {
@@ -97,35 +145,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
         final decoded = jsonDecode(body);
         if (decoded is List && decoded.isNotEmpty && mounted) {
           setState(() {
-            _allLiveDocs = decoded.reversed.map<Map<String, dynamic>>((item) {
-              final String board = (item['board'] ?? 'REFERENCE').toString().toUpperCase();
-              final String cls = (item['class'] ?? 'Exam Notes').toString();
-              final String lang = (item['lang'] ?? 'Hindi/En').toString();
-              final String chapter = (item['chapter'] ?? 'Study Material & Notes').toString();
-
-              int colorVal = 0xFF2563EB;
-              String tag = '⚡ HIGH YIELD';
-
-              if (board.contains('NCERT')) {
-                colorVal = 0xFF059669;
-                tag = '🌿 NCERT CRUX';
-              } else if (board.contains('PYQ')) {
-                colorVal = 0xFFD97706;
-                tag = '🔥 PYQ SHEET';
-              } else if (board.contains('REFERENCE')) {
-                colorVal = 0xFF7C3AED;
-                tag = '🏛️ STANDARD';
-              }
-
-              return {
-                'title': chapter,
-                'tag': tag,
-                'badge': 'ADDED TODAY',
-                'meta': '$cls • $lang Edition',
-                'color': colorVal,
-                'url': item['articleUrl'] ?? widget.customWebsiteUrl ?? _defaultWebsiteUrl,
-              };
-            }).toList();
+            _allLiveDocs = decoded.reversed.map<Map<String, dynamic>>((item) => _formatItem(item)).toList();
           });
         }
       }
@@ -216,7 +236,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                           ),
                         ),
                         Text(
-                          'Search standard books & handwritten notes',
+                          'Search standard books & notes',
                           style: TextStyle(fontSize: 11, color: subTextColor),
                         ),
                       ],
