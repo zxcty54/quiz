@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'services/notification_service.dart';
 import 'screens/home_screen.dart';
 
 // 🌓 Poore App ke liye Global Theme Controller
@@ -9,10 +11,18 @@ final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.lig
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // ⚡ Supabase Initialization
+  // 🔥 1. Firebase Initialization (For Push Notifications)
+  try {
+    await Firebase.initializeApp();
+    await NotificationService.initialize();
+  } catch (e) {
+    debugPrint("Firebase init error: $e");
+  }
+
+  // ⚡ 2. Supabase Initialization (For App Database & Auth)
   await Supabase.initialize(
-    url: 'https://tglidhzsjxfppyrmlwxf.supabase.co', // Supabase Settings -> API se URL dalein
-    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnbGlkaHpzanhmcHB5cm1sd3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczNzA3ODEsImV4cCI6MjEwMjk0Njc4MX0.5re2plUdwg9pCIqi7jAYR3KIHTeZ-zG4ifltLScNsbk',             // Supabase Settings -> API se anon public key dalein
+    url: 'https://tglidhzsjxfppyrmlwxf.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnbGlkaHpzanhmcHB5cm1sd3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczNzA3ODEsImV4cCI6MjEwMjk0Njc4MX0.5re2plUdwg9pCIqi7jAYR3KIHTeZ-zG4ifltLScNsbk',
   );
 
   final prefs = await SharedPreferences.getInstance();
