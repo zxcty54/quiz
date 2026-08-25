@@ -38,28 +38,32 @@ jobs:
         working-directory: flutter_app
         run: dart run flutter_launcher_icons || true
 
-      # 🛠️ Exact Patching for Package Name (com.testing), SDK, Desugaring & Google Services
+      # 🛠️ Exact Patching for Package Name (com.testing), Kotlin DSL syntax, Desugaring & Google Services
       - name: 🔧 Auto-Patch Gradle, Desugaring & Google Services
         run: |
-          # 1. Match Package Name to com.testing
-          find flutter_app/android/ -type f -name "build.gradle*" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle*" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle*" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle*" -exec sed -i 's/namespace = .*/namespace = "com.testing"/g' {} +
+          # 1. Match Package Name for Groovy (.gradle)
+          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
+          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
 
-          # 2. CompileSDK Patch
+          # 2. Match Package Name for Kotlin DSL (.gradle.kts) with proper '=' operator
+          find flutter_app/android/ -type f -name "build.gradle.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
+          find flutter_app/android/ -type f -name "build.gradle.kts" -exec sed -i 's/namespace = .*/namespace = "com.testing"/g' {} +
+          find flutter_app/android/ -type f -name "build.gradle.kts" -exec sed -i 's/applicationId .*/applicationId = "com.testing"/g' {} +
+          find flutter_app/android/ -type f -name "build.gradle.kts" -exec sed -i 's/namespace .*/namespace = "com.testing"/g' {} +
+
+          # 3. CompileSDK Patch
           find flutter_app/android/ ~/.pub-cache/ -type f -name "*.kts" -exec sed -i 's/compileSdk.*/compileSdk = 36/g' {} +
           find flutter_app/android/ ~/.pub-cache/ -type f -name "build.gradle" -exec sed -i 's/compileSdkVersion.*/compileSdkVersion 36/g' {} +
           find flutter_app/android/ ~/.pub-cache/ -type f -name "build.gradle" -exec sed -i 's/compileSdk .*/compileSdk 36/g' {} +
 
-          # 3. Settings Gradle Plugin Patch
+          # 4. Settings Gradle Plugin Patch
           if [ -f flutter_app/android/settings.gradle ]; then
             sed -i 's/plugins {/plugins {\n    id "com.google.gms.google-services" version "4.4.2" apply false/' flutter_app/android/settings.gradle
           elif [ -f flutter_app/android/settings.gradle.kts ]; then
             sed -i 's/plugins {/plugins {\n    id("com.google.gms.google-services") version "4.4.2" apply false/' flutter_app/android/settings.gradle.kts
           fi
 
-          # 4. App-level Desugaring & Google Services Injection
+          # 5. App-level Desugaring & Google Services Injection
           if [ -f flutter_app/android/app/build.gradle ]; then
             sed -i 's/plugins {/plugins {\n    id "com.google.gms.google-services"/' flutter_app/android/app/build.gradle
             sed -i 's/compileOptions {/compileOptions {\n        coreLibraryDesugaringEnabled true/' flutter_app/android/app/build.gradle
