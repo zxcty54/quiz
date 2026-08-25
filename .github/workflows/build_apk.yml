@@ -53,15 +53,15 @@ jobs:
             sed -i 's/plugins {/plugins {\n    id("com.google.gms.google-services") version "4.4.2" apply false/' flutter_app/android/settings.gradle.kts
           fi
 
-          # 3. App-level Desugaring & Google Services Patch
+          # 3. App-level Desugaring & Google Services Injection
           if [ -f flutter_app/android/app/build.gradle ]; then
             sed -i 's/plugins {/plugins {\n    id "com.google.gms.google-services"/' flutter_app/android/app/build.gradle
             sed -i 's/compileOptions {/compileOptions {\n        coreLibraryDesugaringEnabled true/' flutter_app/android/app/build.gradle
-            sed -i 's/dependencies {/dependencies {\n    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"/' flutter_app/android/app/build.gradle
+            echo -e "\ndependencies {\n    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'\n}" >> flutter_app/android/app/build.gradle
           elif [ -f flutter_app/android/app/build.gradle.kts ]; then
             sed -i 's/plugins {/plugins {\n    id("com.google.gms.google-services")/' flutter_app/android/app/build.gradle.kts
             sed -i 's/compileOptions {/compileOptions {\n        isCoreLibraryDesugaringEnabled = true/' flutter_app/android/app/build.gradle.kts
-            sed -i 's/dependencies {/dependencies {\n    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")/' flutter_app/android/app/build.gradle.kts
+            echo -e "\ndependencies {\n    coreLibraryDesugaring(\"com.android.tools:desugar_jdk_libs:2.0.4\")\n}" >> flutter_app/android/app/build.gradle.kts
           fi
 
       - name: 🛠️ Build APK (With Secrets Injected)
