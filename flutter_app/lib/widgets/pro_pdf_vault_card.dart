@@ -1,5 +1,8 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
+import '../screens/pdf_vault_screen.dart';
 
 class ProPdfVaultCard extends StatefulWidget {
   final bool isDarkMode;
@@ -20,95 +23,12 @@ class ProPdfVaultCard extends StatefulWidget {
 class _ProPdfVaultCardState extends State<ProPdfVaultCard>
     with SingleTickerProviderStateMixin {
   late final AnimationController _blinkController;
-  static const String _defaultWebsiteUrl = "https://t.me/MockTester_Online";
+  static const String _defaultWebsiteUrl = "https://www.mocktester.online";
+  static const String _booksJsonUrl =
+      "https://raw.githubusercontent.com/zxcty54/quiz/main/books_database.json";
 
-  // 📝 6 DEFAULT HIGH-VALUE ITEMS (Static Clean List)
-  final List<Map<String, dynamic>> _fallbackDocs = [
-    {
-      'title': 'NCERT Science & GK 1-Liner Crux',
-      'tag': '🔥 MOST READ',
-      'badge': 'ADDED TODAY',
-      'meta': '128 Pages • Complete Handnotes',
-      'reads': '18.4k reads',
-      'color': 0xFF2563EB,
-      'url': 'https://t.me/MockTester_Online',
-    },
-    {
-      'title': 'BPSC & BSSC 3000+ TCS PYQ Formula Sheet',
-      'tag': '⚡ HIGH YIELD',
-      'badge': 'NEW ADDED',
-      'meta': '64 Pages • Quick Revision Chart',
-      'reads': '12.1k reads',
-      'color': 0xFFD97706,
-      'url': 'https://t.me/MockTester_Online',
-    },
-    {
-      'title': '2026 Monthly Current Affairs Magazine (Aug Edition)',
-      'tag': '📌 LATEST',
-      'badge': 'ADDED TODAY',
-      'meta': 'Full Edition • Bihar & National',
-      'reads': '9.8k reads',
-      'color': 0xFF059669,
-      'url': 'https://t.me/MockTester_Online',
-    },
-    {
-      'title': 'Indian Polity 100 Landmark Articles & Amendments',
-      'tag': '📜 CRUCIAL',
-      'badge': 'NEW ADDED',
-      'meta': '48 Pages • Table Summary',
-      'reads': '14.2k reads',
-      'color': 0xFF7C3AED,
-      'url': 'https://t.me/MockTester_Online',
-    },
-    {
-      'title': 'Modern Indian History: Timeline & Governor Generals',
-      'tag': '🗺️ MAP CRUX',
-      'badge': 'ADDED TODAY',
-      'meta': '52 Pages • Exam Ready Notes',
-      'reads': '8.6k reads',
-      'color': 0xFFDC2626,
-      'url': 'https://t.me/MockTester_Online',
-    },
-    {
-      'title': 'General Science Physics & Chemistry Formula Sheet',
-      'tag': '⚡ FORMULA',
-      'badge': 'NEW ADDED',
-      'meta': '36 Pages • All SI Units & Laws',
-      'reads': '11.5k reads',
-      'color': 0xFF0284C7,
-      'url': 'https://t.me/MockTester_Online',
-    },
-  ];
-
-  List<Map<String, dynamic>> _getDocList() {
-    if (widget.dynamicPdfItems != null && widget.dynamicPdfItems!.isNotEmpty) {
-      return widget.dynamicPdfItems!.map<Map<String, dynamic>>((item) {
-        if (item is Map) {
-          return {
-            'title': item['title'] ?? 'PDF Document',
-            'tag': item['tag'] ?? '🔥 POPULAR',
-            'badge': item['badge'] ?? 'NEW ADDED',
-            'meta': item['meta'] ?? 'Free E-Book',
-            'reads': item['reads'] ?? '10k+ reads',
-            'color': item['color'] != null
-                ? int.tryParse(item['color'].toString()) ?? 0xFF2563EB
-                : 0xFF2563EB,
-            'url': item['url'] ?? _defaultWebsiteUrl,
-          };
-        }
-        return {
-          'title': item.toString(),
-          'tag': 'FREE PDF',
-          'badge': 'NEW',
-          'meta': 'Online Notes',
-          'reads': '5k+ reads',
-          'color': 0xFF2563EB,
-          'url': _defaultWebsiteUrl,
-        };
-      }).toList();
-    }
-    return _fallbackDocs;
-  }
+  List<Map<String, dynamic>> _loadedBooks = [];
+  bool _isLoading = false;
 
   @override
   void initState() {
@@ -118,12 +38,121 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
       vsync: this,
       duration: const Duration(milliseconds: 800),
     )..repeat(reverse: true);
+
+    if (widget.dynamicPdfItems == null || widget.dynamicPdfItems!.isEmpty) {
+      _fetchLatestBooks();
+    }
   }
 
   @override
   void dispose() {
     _blinkController.dispose();
     super.dispose();
+  }
+
+  Future<void> _fetchLatestBooks() async {
+    final int ts = DateTime.now().millisecondsSinceEpoch;
+    try {
+      final res = await http
+          .get(Uri.parse('$_booksJsonUrl?t=$ts'))
+          .timeout(const Duration(seconds: 5));
+
+      if (res.statusCode == 200) {
+        String body = utf8.decode(res.bodyBytes).trim();
+        if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
+
+        final decoded = jsonDecode(body);
+        if (decoded is List && mounted) {
+          setState(() {
+            // Latest 5-6 entries pick kar rahe hain
+            _loadedBooks = decoded.reversed.take(6).map<Map<String, dynamic>>((item) {
+              return _formatBookItem(item);
+            }).toList();
+          });
+          return;
+        }
+      }
+    } catch (_) {}
+  }
+
+  Map<String, dynamic> _formatBookItem(dynamic item) {
+    if (item is Map) {
+      final String board = (item['board'] ?? 'REFERENCE').toString();
+      final String cls = (item['class'] ?? 'General').toString();
+      final String lang = (item['lang'] ?? 'Hindi/En').toString();
+
+      int colorVal = 0xFF2563EB;
+      String tag = '⚡ HIGH YIELD';
+      if (board.contains('NCERT')) {
+        colorVal = 0xFF059669;
+        tag = '🌿 NCERT CRUX';
+      } else if (board.contains('PYQ')) {
+        colorVal = 0xFFD97706;
+        tag = '🔥 PYQ SHEET';
+      } else if (board.contains('REFERENCE')) {
+        colorVal = 0xFF7C3AED;
+        tag = '🏛️ STANDARD';
+      }
+
+      return {
+        'title': item['chapter'] ?? item['title'] ?? 'Study Material & Notes',
+        'tag': tag,
+        'badge': 'ADDED TODAY',
+        'meta': '$cls • $lang Edition',
+        'reads': 'Verified E-Book',
+        'color': colorVal,
+        'url': item['articleUrl'] ?? item['url'] ?? _defaultWebsiteUrl,
+      };
+    }
+    return {
+      'title': item.toString(),
+      'tag': 'FREE PDF',
+      'badge': 'NEW',
+      'meta': 'Online Notes',
+      'reads': 'Verified E-Book',
+      'color': 0xFF2563EB,
+      'url': _defaultWebsiteUrl,
+    };
+  }
+
+  List<Map<String, dynamic>> _getDocList() {
+    if (widget.dynamicPdfItems != null && widget.dynamicPdfItems!.isNotEmpty) {
+      return widget.dynamicPdfItems!.map<Map<String, dynamic>>((item) {
+        return _formatBookItem(item);
+      }).toList();
+    }
+    if (_loadedBooks.isNotEmpty) {
+      return _loadedBooks;
+    }
+    return [
+      {
+        'title': 'M. Laxmikanth: Indian Polity (6th Edition)',
+        'tag': '🏛️ STANDARD',
+        'badge': 'ADDED TODAY',
+        'meta': 'Civil Services • Hindi/En',
+        'reads': 'Verified E-Book',
+        'color': 0xFF7C3AED,
+        'url': 'https://www.mocktester.online',
+      },
+      {
+        'title': 'NCERT Science & GK 1-Liner Crux',
+        'tag': '🔥 MOST READ',
+        'badge': 'NEW ADDED',
+        'meta': 'Class 8-12 • Complete Handnotes',
+        'reads': 'Verified E-Book',
+        'color': 0xFF2563EB,
+        'url': 'https://www.mocktester.online',
+      },
+      {
+        'title': 'BPSC & BSSC 3000+ TCS PYQ Formula Sheet',
+        'tag': '⚡ HIGH YIELD',
+        'badge': 'NEW ADDED',
+        'meta': 'State PCS • Quick Revision Chart',
+        'reads': 'Verified E-Book',
+        'color': 0xFFD97706,
+        'url': 'https://www.mocktester.online',
+      },
+    ];
   }
 
   Future<void> _launchUrl(String targetUrl) async {
@@ -193,7 +222,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                           ),
                         ),
                         Text(
-                          'Handwritten notes & curated test crux',
+                          'Standard textbooks & curated test crux',
                           style: TextStyle(
                             fontSize: 11,
                             color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
@@ -299,11 +328,11 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                                   ),
                                   const SizedBox(width: 5),
                                   Text(
-                                    doc['reads'],
+                                    doc['tag'],
                                     style: TextStyle(
                                       fontSize: 9.5,
-                                      color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
-                                      fontWeight: FontWeight.w500,
+                                      color: accent,
+                                      fontWeight: FontWeight.bold,
                                     ),
                                   ),
                                 ],
@@ -333,7 +362,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                         ),
 
                         const SizedBox(width: 6),
-                        const Icon(Icons.download_for_offline_rounded, size: 22, color: Color(0xFF2563EB)),
+                        const Icon(Icons.arrow_forward_ios_rounded, size: 14, color: Color(0xFF2563EB)),
                       ],
                     ),
                   ),
@@ -341,11 +370,18 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
               );
             }),
 
-            const SizedBox(height: 4),
+            const SizedBox(height: 6),
 
-            // 🚀 3. DIRECT ACTION BUTTON
+            // 🚀 3. DIRECT ACTION BUTTON (Opens Full PDF Vault Search Screen)
             InkWell(
-              onTap: () => _launchUrl(widget.customWebsiteUrl ?? _defaultWebsiteUrl),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (ctx) => PdfVaultScreen(isDarkMode: isDark),
+                  ),
+                );
+              },
               borderRadius: BorderRadius.circular(10),
               child: Container(
                 width: double.infinity,
@@ -368,10 +404,10 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Icon(Icons.lock_open_rounded, color: Colors.white, size: 15),
+                    Icon(Icons.search_rounded, color: Colors.white, size: 16),
                     SizedBox(width: 6),
                     Text(
-                      'Instant PDF Vault Access (Free Download)',
+                      'Search All Books & E-Library (Vault)',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 12.5,
