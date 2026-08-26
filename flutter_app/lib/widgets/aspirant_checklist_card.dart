@@ -119,7 +119,7 @@ class AspirantChecklistCardState extends State<AspirantChecklistCard> with Widge
       width: double.infinity,
       decoration: BoxDecoration(
         gradient: LinearGradient(
-          colors: widget.isDarkMode
+          colors: widget.isDarkMode 
               ? [const Color(0xFF1E293B), const Color(0xFF0F172A)]
               : [const Color(0xFFFFFFFF), const Color(0xFFF1F5F9)],
           begin: Alignment.topLeft,
