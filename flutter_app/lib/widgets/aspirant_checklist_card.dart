@@ -51,6 +51,18 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
     if (_firstMockDone) completedCount++;
     if (_savedNotesDone) completedCount++;
 
+    // 🚀 4/4 Complete hote hi auto-dismiss & permanently save
+    if (completedCount == 4) {
+      WidgetsBinding.instance.addPostFrameCallback((_) async {
+        final prefs = await SharedPreferences.getInstance();
+        await prefs.setBool('hide_onboarding_checklist', true);
+        if (mounted && !_isDismissed) {
+          setState(() => _isDismissed = true);
+        }
+      });
+      return const SizedBox.shrink();
+    }
+
     final double progressPercent = completedCount / 4.0;
     final int displayPercent = (progressPercent * 100).toInt();
 
@@ -84,60 +96,52 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🎯 TOP HEADER: Badge & Completion Stats
+            // 🎯 Top Badge & Progress Metric
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
-                        ),
-                        borderRadius: BorderRadius.circular(20),
-                        boxShadow: [
-                          BoxShadow(
-                            color: const Color(0xFF2563EB).withOpacity(0.35),
-                            blurRadius: 6,
-                            offset: const Offset(0, 2),
-                          ),
-                        ],
-                      ),
-                      child: const Row(
-                        children: [
-                          Text('🎯 ', style: TextStyle(fontSize: 11)),
-                          Text(
-                            'ASPIRANT ROADMAP',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 10,
-                              fontWeight: FontWeight.w900,
-                              letterSpacing: 0.5,
-                            ),
-                          ),
-                        ],
-                      ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: BoxDecoration(
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
                     ),
-                  ],
+                    borderRadius: BorderRadius.circular(20),
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xFF2563EB).withOpacity(0.35),
+                        blurRadius: 6,
+                        offset: const Offset(0, 2),
+                      ),
+                    ],
+                  ),
+                  child: const Row(
+                    children: [
+                      Text('🎯 ', style: TextStyle(fontSize: 11)),
+                      Text(
+                        'ASPIRANT ROADMAP',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 0.5,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                   decoration: BoxDecoration(
-                    color: completedCount == 4
-                        ? const Color(0xFF16A34A).withOpacity(0.15)
-                        : const Color(0xFF2563EB).withOpacity(0.12),
+                    color: const Color(0xFF2563EB).withOpacity(0.12),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
                     '$completedCount/4 Completed ($displayPercent%)',
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 11,
                       fontWeight: FontWeight.bold,
-                      color: completedCount == 4
-                          ? const Color(0xFF16A34A)
-                          : const Color(0xFF2563EB),
+                      color: Color(0xFF2563EB),
                     ),
                   ),
                 ),
@@ -145,7 +149,7 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
             ),
             const SizedBox(height: 12),
 
-            // 📢 TITLE
+            // 📢 Title & Subtitle
             Text(
               'Your Prep Launchpad 🚀',
               style: TextStyle(
@@ -166,7 +170,7 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
             ),
             const SizedBox(height: 14),
 
-            // ⚡ PROGRESS BAR
+            // ⚡ Progress Bar
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: LinearProgressIndicator(
@@ -175,16 +179,12 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
                 backgroundColor: widget.isDarkMode
                     ? const Color(0xFF334155)
                     : const Color(0xFFE2E8F0),
-                valueColor: AlwaysStoppedAnimation<Color>(
-                  completedCount == 4
-                      ? const Color(0xFF16A34A)
-                      : const Color(0xFF2563EB),
-                ),
+                valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF2563EB)),
               ),
             ),
             const SizedBox(height: 16),
 
-            // 🗺️ STEP LIST TILES
+            // 🗺️ Roadmap Steps
             _buildRoadmapTile(
               stepNum: '1',
               title: 'Personalized Profile Setup',
@@ -223,7 +223,6 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
     required bool isDone,
     bool isLast = false,
   }) {
-    final Color activeColor = const Color(0xFF2563EB);
     final Color doneColor = const Color(0xFF16A34A);
 
     return IntrinsicHeight(
@@ -277,7 +276,7 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
           ),
           const SizedBox(width: 12),
 
-          // Content
+          // Step Details
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(bottom: isLast ? 0 : 12.0),
