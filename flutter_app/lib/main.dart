@@ -4,7 +4,6 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'services/notification_service.dart';
 import 'screens/home_screen.dart';
-import 'screens/login_screen.dart'; // 👈 Login Screen import karein
 
 // 🌓 Poore App ke liye Global Theme Controller
 final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.light);
@@ -12,7 +11,7 @@ final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.lig
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 🔥 1. Firebase Initialization (For Push Notifications & Google Auth)
+  // 🔥 1. Firebase Initialization (For Push Notifications)
   try {
     await Firebase.initializeApp();
     await NotificationService.initialize();
@@ -20,25 +19,23 @@ void main() async {
     debugPrint("Firebase init error: $e");
   }
 
-  // ⚡ 2. Supabase Initialization (For App Database & Auth)
+  // ⚡ 2. Supabase Initialization (For App Database)
   await Supabase.initialize(
     url: 'https://tglidhzsjxfppyrmlwxf.supabase.co',
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnbGlkaHpzanhmcHB5cm1sd3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczNzA3ODEsImV4cCI6MjEwMjk0Njc4MX0.5re2plUdwg9pCIqi7jAYR3KIHTeZ-zG4ifltLScNsbk',
   );
 
-  // 📱 3. SharedPreferences: Theme & Login State Check
+  // 📱 3. SharedPreferences: Theme Check
   final prefs = await SharedPreferences.getInstance();
   final bool isDark = prefs.getBool('is_dark_mode') ?? false;
-  final bool isLoggedIn = prefs.getBool('is_logged_in') ?? false; // 👈 Check login state
   
   globalThemeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
 
-  runApp(MyApp(isLoggedIn: isLoggedIn));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final bool isLoggedIn;
-  const MyApp({super.key, required this.isLoggedIn});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -102,8 +99,8 @@ class MyApp extends StatelessWidget {
             ),
           ),
 
-          // 🚀 Initial Screen: Logged in hai toh Home, warna Login
-          home: isLoggedIn ? const HomeScreen() : const LoginScreen(),
+          // 🚀 Initial Screen: Seedha HomeScreen open hoga
+          home: const HomeScreen(),
         );
       },
     );
