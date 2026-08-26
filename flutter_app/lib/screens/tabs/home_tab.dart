@@ -44,6 +44,7 @@ class _HomeTabState extends State<HomeTab> {
   final GlobalKey<LatestJobsWidgetState> _jobsWidgetKey = GlobalKey<LatestJobsWidgetState>();
   final GlobalKey<DailyBulletinWidgetState> _bulletinWidgetKey = GlobalKey<DailyBulletinWidgetState>();
   final GlobalKey<FirstInIndiaWidgetState> _firstInIndiaWidgetKey = GlobalKey<FirstInIndiaWidgetState>();
+  final GlobalKey<AspirantChecklistCardState> _checklistKey = GlobalKey<AspirantChecklistCardState>(); // 👈 Checklist GlobalKey
 
   @override
   Widget build(BuildContext context) {
@@ -51,11 +52,12 @@ class _HomeTabState extends State<HomeTab> {
       color: const Color(0xFF4F46E5),
       backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
       onRefresh: () async {
-        // 🔄 REFRESH ALL THREE LIVE WIDGETS ON PULL
+        // 🔄 REFRESH ALL LIVE WIDGETS + ONBOARDING CHECKLIST ON PULL
         await Future.wait<dynamic>([
           _bulletinWidgetKey.currentState?.fetchDailyBulletins(forceRefresh: true) ?? Future.value(),
           _jobsWidgetKey.currentState?.fetchLatestJobs() ?? Future.value(),
           _firstInIndiaWidgetKey.currentState?.fetchFirstInIndia(forceRefresh: true) ?? Future.value(),
+          _checklistKey.currentState?.loadChecklistStatus() ?? Future.value(), // 👈 Auto Re-fetch status
         ]);
       },
       child: SingleChildScrollView(
@@ -73,8 +75,11 @@ class _HomeTabState extends State<HomeTab> {
               const SizedBox(height: 16),
             ],
 
-            // 🚀 2. ASPIRANT ONBOARDING CHECKLIST CARD
-            AspirantChecklistCard(isDarkMode: widget.isDarkMode),
+            // 🚀 2. ASPIRANT ONBOARDING CHECKLIST CARD (Linked with GlobalKey)
+            AspirantChecklistCard(
+              key: _checklistKey,
+              isDarkMode: widget.isDarkMode,
+            ),
             const SizedBox(height: 16),
 
             // 🛡️ 3. HERO TRUST BANNER WIDGET
