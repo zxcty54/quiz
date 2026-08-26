@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../services/auth_service.dart';
 import 'home_screen.dart';
 
@@ -12,23 +13,105 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   bool _isLoading = false;
 
+  // 1. Skip / Guest Dialog - Sirf Naam Puchne ke liye
+  void _showNameDialog() {
+    final TextEditingController nameController = TextEditingController();
+
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: const Text(
+          'Apna Naam Batayein',
+          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'Aapke test results aur profile ke liye naam zaroori hai:',
+              style: TextStyle(fontSize: 13, color: Colors.black54),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: nameController,
+              autofocus: true,
+              textCapitalization: TextCapitalization.words,
+              decoration: InputDecoration(
+                hintText: 'Jaise: Rahul Kumar',
+                prefixIcon: const Icon(Icons.person_outline),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+          ),
+          ElevatedButton(
+            onPressed: () async {
+              String enteredName = nameController.text.trim();
+              if (enteredName.isEmpty) {
+                enteredName = "Aspirant"; // Default agar khali chhod de
+              }
+
+              // Local Storage me save karein
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.setBool('is_logged_in', true);
+              await prefs.setBool('is_guest', true);
+              await prefs.setString('user_name', enteredName);
+              await prefs.setString('user_email', 'guest@mocktester.app');
+
+              if (mounted) {
+                Navigator.pop(ctx); // Dialog band karein
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (_) => const HomeScreen()),
+                );
+              }
+            },
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF2563EB),
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            ),
+            child: const Text('Aage Badhein'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // 2. Google Sign-In Handler
   void _handleGoogleSignIn() async {
     setState(() => _isLoading = true);
-    final googleUser = await AuthService.signInWithGoogle();
-    setState(() => _isLoading = false);
+    try {
+      final googleUser = await AuthService.signInWithGoogle();
+      setState(() => _isLoading = false);
 
-    if (googleUser != null && mounted) {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => const HomeScreen()),
-      );
-    } else if (mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text('⚠️ Sign-In cancel ya fail ho gaya. Dobara koshish karein.'),
-          backgroundColor: Colors.redAccent,
-        ),
-      );
+      if (googleUser != null && mounted) {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (_) => const HomeScreen()),
+        );
+      }
+    } catch (e) {
+      setState(() => _isLoading = false);
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('⚠️ Error: $e'),
+            backgroundColor: Colors.redAccent,
+          ),
+        );
+      }
     }
   }
 
@@ -44,7 +127,7 @@ class _LoginScreenState extends State<LoginScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                // App Logo / Icon
+                // App Logo
                 Container(
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
@@ -70,26 +153,25 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 8),
                 Text(
-                  'BPSC, SSC aur State Exams ki best practice aur AI Doubt Solver ke liye login karein.',
+                  'BPSC, SSC aur State Exams ki best practice aur AI Doubt Solver.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 14,
                     color: isDark ? Colors.white70 : Colors.black54,
-                    height: 1.4,
                   ),
                 ),
-                const SizedBox(height: 48),
+                const SizedBox(height: 40),
 
-                // 1-Tap Google Sign-In Button
+                // 1-Tap Google Sign-In
                 SizedBox(
                   width: double.infinity,
-                  height: 52,
+                  height: 50,
                   child: ElevatedButton(
                     onPressed: _isLoading ? null : _handleGoogleSignIn,
                     style: ElevatedButton.styleFrom(
                       backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
                       foregroundColor: isDark ? Colors.white : const Color(0xFF0F172A),
-                      elevation: 2,
+                      elevation: 1,
                       side: BorderSide(
                         color: isDark ? Colors.white12 : Colors.black12,
                       ),
@@ -99,24 +181,24 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     child: _isLoading
                         ? const SizedBox(
-                            width: 24,
-                            height: 24,
-                            child: CircularProgressIndicator(strokeWidth: 2.5),
+                            width: 22,
+                            height: 22,
+                            child: CircularProgressIndicator(strokeWidth: 2),
                           )
                         : Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Image.network(
                                 'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
-                                height: 22,
-                                width: 22,
-                                errorBuilder: (_, __, ___) => const Icon(Icons.g_mobiledata, size: 28),
+                                height: 20,
+                                width: 20,
+                                errorBuilder: (_, __, ___) => const Icon(Icons.g_mobiledata, size: 24),
                               ),
-                              const SizedBox(width: 12),
+                              const SizedBox(width: 10),
                               const Text(
                                 'Continue with Google',
                                 style: TextStyle(
-                                  fontSize: 16,
+                                  fontSize: 15,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
@@ -124,15 +206,29 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                   ),
                 ),
-                const SizedBox(height: 24),
+                const SizedBox(height: 16),
 
-                // Privacy Note
-                Text(
-                  'Sign in karne par aap hamari Privacy Policy aur Terms se sehmat hote hain.',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: 11,
-                    color: isDark ? Colors.white38 : Colors.black38,
+                // 🚀 Skip & Ask Name Button
+                SizedBox(
+                  width: double.infinity,
+                  height: 50,
+                  child: OutlinedButton.icon(
+                    onPressed: _showNameDialog,
+                    icon: const Icon(Icons.arrow_forward_rounded, size: 20),
+                    label: const Text(
+                      'Skip & Enter Name (Bina Login)',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    style: OutlinedButton.styleFrom(
+                      foregroundColor: const Color(0xFF2563EB),
+                      side: const BorderSide(color: Color(0xFF2563EB), width: 1.5),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
                   ),
                 ),
               ],
