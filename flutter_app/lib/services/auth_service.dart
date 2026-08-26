@@ -12,33 +12,46 @@ class AuthService {
   // 1-Tap Google Sign-In & Supabase Sync
   static Future<GoogleSignInAccount?> signInWithGoogle() async {
     try {
+      // 1. Purani cache clear karein taaki hamesha fresh account picker popup khule
+      try {
+        await _googleSignIn.signOut();
+      } catch (_) {}
+
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
-      if (googleUser == null) return null; // Cancelled
+      if (googleUser == null) {
+        debugPrint("⚠️ Google Sign-In: User closed account picker without selecting.");
+        return null; // User cancelled
+      }
 
       final String name = googleUser.displayName ?? "MockTester Aspirant";
       final String email = googleUser.email;
       final String photoUrl = googleUser.photoUrl ?? "";
       final String uid = googleUser.id; // Unique Google User ID
 
-      // 1. Local Storage Sync
+      // 2. Local Storage Sync (Guest flag false karein)
       final prefs = await SharedPreferences.getInstance();
       await prefs.setBool('is_logged_in', true);
+      await prefs.setBool('is_guest', false);
       await prefs.setString('user_name', name);
       await prefs.setString('user_email', email);
       await prefs.setString('user_photo', photoUrl);
 
-      // 2. Supabase Cloud Sync
-      await _syncUserToSupabase(
-        uid: uid,
-        name: name,
-        email: email,
-        photoUrl: photoUrl,
-      );
+      // 3. Supabase Cloud Sync (Try-catch wrapped taaki network issue par login block na ho)
+      try {
+        await _syncUserToSupabase(
+          uid: uid,
+          name: name,
+          email: email,
+          photoUrl: photoUrl,
+        );
+      } catch (dbError) {
+        debugPrint("⚠️ Supabase Sync skipped: $dbError");
+      }
 
       return googleUser;
     } catch (e) {
-      debugPrint("Google Sign-In Error: $e");
-      return null;
+      debugPrint("❌ GOOGLE SIGN-IN ROOT ERROR: $e");
+      rethrow; // UI ko actual exception forward karega taaki screen par error dikhe
     }
   }
 
@@ -70,6 +83,7 @@ class AuthService {
     } catch (_) {}
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove('is_logged_in');
+    await prefs.remove('is_guest');
     await prefs.remove('user_name');
     await prefs.remove('user_email');
     await prefs.remove('user_photo');
