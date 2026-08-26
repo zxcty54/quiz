@@ -12,7 +12,7 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   bool _isLoading = false;
 
-  void _handleGoogleLogin() async {
+  void _handleGoogleSignIn() async {
     setState(() => _isLoading = true);
     final userCredential = await AuthService.signInWithGoogle();
     setState(() => _isLoading = false);
@@ -24,50 +24,119 @@ class _LoginScreenState extends State<LoginScreen> {
       );
     } else if (mounted) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Sign-In failed ya cancel ho gaya')),
+        const SnackBar(
+          content: Text('⚠️ Sign-In cancel ya fail ho gaya. Dobara koshish karein.'),
+          backgroundColor: Colors.redAccent,
+        ),
       );
     }
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(24.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const Icon(Icons.school, size: 80, color: Colors.deepPurple),
-              const SizedBox(height: 20),
-              const Text(
-                'BPSC Prep Hub',
-                style: TextStyle(fontSize: 26, fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 8),
-              const Text(
-                'Instant access to Mock Tests & AI Doubt Solver',
-                textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.grey),
-              ),
-              const SizedBox(height: 40),
+    final isDark = Theme.of(context).brightness == Brightness.dark;
 
-              // 1-Tap Google Sign-In Button
-              ElevatedButton.icon(
-                onPressed: _isLoading ? null : _handleGoogleLogin,
-                icon: _isLoading 
-                    ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2))
-                    : const Icon(Icons.g_mobiledata, size: 30),
-                label: Text(
-                  _isLoading ? 'Signing in...' : 'Continue with Google',
-                  style: const TextStyle(fontSize: 16),
+    return Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(horizontal: 28.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                // App Logo / Icon
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF2563EB).withOpacity(0.1),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(
+                    Icons.school_rounded,
+                    size: 72,
+                    color: Color(0xFF2563EB),
+                  ),
                 ),
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size.fromHeight(50),
-                  elevation: 2,
+                const SizedBox(height: 24),
+
+                // Welcome Header
+                Text(
+                  'MockTester me Swagat Hai',
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: isDark ? Colors.white : const Color(0xFF0F172A),
+                  ),
                 ),
-              ),
-            ],
+                const SizedBox(height: 8),
+                Text(
+                  'BPSC, SSC aur State Exams ki best practice aur AI Doubt Solver ke liye login karein.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 14,
+                    color: isDark ? Colors.white70 : Colors.black54,
+                    height: 1.4,
+                  ),
+                ),
+                const SizedBox(height: 48),
+
+                // 1-Tap Google Sign-In Button
+                SizedBox(
+                  width: double.infinity,
+                  height: 52,
+                  child: ElevatedButton(
+                    onPressed: _isLoading ? null : _handleGoogleSignIn,
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+                      foregroundColor: isDark ? Colors.white : const Color(0xFF0F172A),
+                      elevation: 2,
+                      side: BorderSide(
+                        color: isDark ? Colors.white12 : Colors.black12,
+                      ),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12),
+                      ),
+                    ),
+                    child: _isLoading
+                        ? const SizedBox(
+                            width: 24,
+                            height: 24,
+                            child: CircularProgressIndicator(strokeWidth: 2.5),
+                          )
+                        : Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Image.network(
+                                'https://cdn-icons-png.flaticon.com/512/2991/2991148.png',
+                                height: 22,
+                                width: 22,
+                                errorBuilder: (_, __, ___) => const Icon(Icons.g_mobiledata, size: 28),
+                              ),
+                              const SizedBox(width: 12),
+                              const Text(
+                                'Continue with Google',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w600,
+                                ),
+                              ),
+                            ],
+                          ),
+                  ),
+                ),
+                const SizedBox(height: 24),
+
+                // Privacy Note
+                Text(
+                  'Sign in karne par aap hamari Privacy Policy aur Terms se sehmat hote hain.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 11,
+                    color: isDark ? Colors.white38 : Colors.black38,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
