@@ -8,6 +8,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
 import '../services/ai_explainer_service.dart';
+import '../services/auth_service.dart';
 import '../services/telegram_tracker.dart';
 import 'community_feed_screen.dart';
 import 'creator_auth_screen.dart';
@@ -369,7 +370,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                         ),
                       ),
 
-                      // ⭐ GUEST USER SIGN-IN BUTTON
+                      // ⭐ GUEST USER SIGN-IN BUTTON (DIRECT POPUP)
                       if (isGuest) ...[
                         ListTile(
                           leading: const Icon(Icons.login_rounded, color: Color(0xFF2563EB), size: 24),
@@ -379,9 +380,31 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                           ),
                           subtitle: const Text('Progress cloud par save karne ke liye', style: TextStyle(fontSize: 11)),
                           trailing: const Icon(Icons.arrow_forward_ios, size: 14, color: Color(0xFF2563EB)),
-                          onTap: () {
+                          onTap: () async {
                             Navigator.pop(context);
-                            setState(() => _currentBottomIndex = 4);
+
+                            try {
+                              final googleUser = await AuthService.signInWithGoogle();
+
+                              if (googleUser != null && context.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text('✅ Sign-In Successful! Progress sync ho gaya.'),
+                                    backgroundColor: Color(0xFF16A34A),
+                                  ),
+                                );
+                                setState(() {});
+                              }
+                            } catch (e) {
+                              if (context.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text('⚠️ Sign-In Error: $e'),
+                                    backgroundColor: Colors.redAccent,
+                                  ),
+                                );
+                              }
+                            }
                           },
                         ),
                         const Divider(),
