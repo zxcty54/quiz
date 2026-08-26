@@ -1,46 +1,46 @@
 [
   {
     "p_id": "bpsc_phys_m27_01",
-    "qe": "Evaluating the mathematical work formula $W = F \\cdot s \\cdot \\cos\\theta$ reveals distinct directional relationships between force and displacement vectors. What specific condition results in strictly Zero Work ($W = 0$) even when both force magnitude and displacement length are non-zero?",
-    "qh": "गणितीय कार्य सूत्र $W = F \\cdot s \\cdot \\cos\\theta$ का मूल्यांकन बल और विस्थापन सदिशों के बीच विशिष्ट दिशात्मक संबंधों को प्रकट करता है। बल के परिमाण और विस्थापन की लंबाई दोनों के गैर-शून्य होने पर भी कौन सी विशिष्ट स्थिति के परिणामस्वरूप strictly शून्य कार्य ($W = 0$) होता है?",
+    "qe": "Evaluating the mathematical work formula W = F · s · cos θ reveals distinct directional relationships between force and displacement vectors. What specific condition results in strictly Zero Work (W = 0) even when both force magnitude and displacement length are non-zero?",
+    "qh": "गणितीय कार्य सूत्र W = F · s · cos θ का मूल्यांकन बल और विस्थापन सदिशों के बीच विशिष्ट दिशात्मक संबंधों को प्रकट करता है। बल के परिमाण और विस्थापन की लंबाई दोनों के गैर-शून्य होने पर भी कौन सी विशिष्ट स्थिति के परिणामस्वरूप strictly शून्य कार्य (W = 0) होता है?",
     "oe": [
-      "The force vector acts directly opposite to the displacement vector ($\\theta = 180^\\circ$).",
-      "The displacement occurs along a inclined plane at an angle of $45^\\circ$.",
-      "The force vector acts strictly perpendicular to the displacement vector ($\\theta = 90^\\circ$).",
-      "The force vector acts strictly parallel to the displacement vector ($\\theta = 0^\\circ$)."
+      "The force vector acts directly opposite to the displacement vector (θ = 180°).",
+      "The displacement occurs along an inclined plane at an angle of 45°.",
+      "The force vector acts strictly perpendicular to the displacement vector (θ = 90°).",
+      "The force vector acts strictly parallel to the displacement vector (θ = 0°)."
     ],
     "oh": [
-      "बल सदिश विस्थापन सदिश के ठीक विपरीत कार्य करता है ($\\theta = 180^\\circ$)।",
-      "विस्थापन $45^\\circ$ के कोण पर एक झुके हुए तल के अनुदिश होता है।",
-      "बल सदिश विस्थापन सदिश के लंबवत कार्य करता है ($\\theta = 90^\\circ$)।",
-      "बल सदिश विस्थापन सदिश के बिल्कुल समानांतर कार्य करता है ($\\theta = 0^\\circ$)।"
+      "बल सदिश विस्थापन सदिश के ठीक विपरीत कार्य करता है (θ = 180°)।",
+      "विस्थापन 45° के कोण पर एक झुके हुए तल के अनुदिश होता है।",
+      "बल सदिश विस्थापन सदिश के लंबवत कार्य करता है (θ = 90°)।",
+      "बल सदिश विस्थापन सदिश के बिल्कुल समानांतर कार्य करता है (θ = 0°)।"
     ],
     "a": 2,
-    "e": "Mechanical work force aur displacement vector ka scalar dot product hota hai ($W = \\vec{F} \\cdot \\vec{s} = F s \\cos\\theta$).\n\n• Option 1 is Incorrect because jab force aur displacement vectors anti-parallel hote hain ($\\theta = 180^\\circ$), tab $\\cos 180^\\circ = -1$ hota hai, jisse maximum negative work ($W = -F \\cdot s$) milta hai.\n\n• Option 2 is Incorrect because $45^\\circ$ ke inclination par $\\cos 45^\\circ = 1/\\sqrt{2} \\neq 0$ hota hai, jo non-zero positive work deta hai.\n\n• Option 3 is Correct because jab applied force motion ki direction ke strictly perpendicular act karta hai ($\\theta = 90^\\circ$), tab $\\cos 90^\\circ = 0$ ho jata hai, jisse total work done strictly zero ($W = 0$) hota hai. Jaise ek coolie sar par load rakh kar horizontal platform par chale ya circular orbit mein centripetal force dwara kiya gaya work.\n\n• Option 4 is Incorrect because jab force aur displacement vectors parallel hote hain ($\\theta = 0^\\circ$), tab $\\cos 0^\\circ = 1$ hota hai, jisse maximum positive work ($W = F \\cdot s$) milta hai."
+    "e": "Mechanical work force aur displacement vector ka scalar dot product hota hai (W = F · s = F s cos θ).\n\n• Option 1 is Incorrect because jab force aur displacement vectors anti-parallel hote hain (θ = 180°), tab cos 180° = -1 hota hai, jisse maximum negative work (W = -F · s) milta hai.\n\n• Option 2 is Incorrect because 45° ke inclination par cos 45° = 1/√2 ≠ 0 hota hai, jo non-zero positive work deta hai.\n\n• Option 3 is Correct because jab applied force motion ki direction ke strictly perpendicular act karta hai (θ = 90°), tab cos 90° = 0 ho jata hai, jisse total work done strictly zero (W = 0) hota hai. Jaise ek coolie sar par load rakh kar horizontal platform par chale ya circular orbit mein centripetal force dwara kiya gaya work.\n\n• Option 4 is Incorrect because jab force aur displacement vectors parallel hote hain (θ = 0°), tab cos 0° = 1 hota hai, jisse maximum positive work (W = F · s) milta hai."
   },
   {
     "p_id": "bpsc_phys_m27_02",
     "qe": "Work and force measurements rely on standardized dimensional unit conversions across metric frameworks. What is the exact conversion factor relating 1 Joule (SI unit) to ergs (CGS unit)?",
     "qh": "कार्य और बल का माप मीट्रिक ढांचे में मानकीकृत विमीय इकाई परिवर्तनों पर निर्भर करता है। 1 जूल (SI इकाई) को अर्ग (CGS इकाई) से जोड़ने वाला सटीक रूपांतरण गुणक क्या है?",
     "oe": [
-      "$1\\text{ joule} = 3.6 \\times 10^6\\text{ ergs}$",
-      "$1\\text{ joule} = 10^{-7}\\text{ ergs}$",
-      "$1\\text{ joule} = 10^5\\text{ ergs}$",
-      "$1\\text{ joule} = 10^7\\text{ ergs}$"
+      "1 joule = 3.6 × 10⁶ ergs",
+      "1 joule = 10⁻⁷ ergs",
+      "1 joule = 10⁵ ergs",
+      "1 joule = 10⁷ ergs"
     ],
     "oh": [
-      "$1\\text{ जूल} = 3.6 \\times 10^6\\text{ अर्ग}$",
-      "$1\\text{ जूल} = 10^{-7}\\text{ अर्ग}$",
-      "$1\\text{ जूल} = 10^5\\text{ अर्ग}$",
-      "$1\\text{ जूल} = 10^7\\text{ अर्ग}$"
+      "1 जूल = 3.6 × 10⁶ अर्ग",
+      "1 जूल = 10⁻⁷ अर्ग",
+      "1 जूल = 10⁵ अर्ग",
+      "1 जूल = 10⁷ अर्ग"
     ],
     "a": 3,
-    "e": "Work dimensionally $\\text{Force} \\times \\text{Displacement}$ ($[ML^2T^{-2}]$) ke roop mein define hota hai, jahan SI unit Joule aur CGS unit erg hai.\n\n• Option 1 is Incorrect because $3.6 \\times 10^6\\text{ J}$ 1 kilowatt-hour ($1\\text{ kWh}$) ka SI equivalent hai, ergs ka nahi.\n\n• Option 2 is Incorrect because $10^{-7}$ inverse conversion factor ko represent karta hai ($1\\text{ erg} = 10^{-7}\\text{ Joules}$).\n\n• Option 3 is Incorrect because $10^5$ force ke SI aur CGS units ke beech ka conversion factor hai ($1\\text{ Newton} = 10^5\\text{ dynes}$).\n\n• Option 4 is Correct because SI system mein $1\\text{ Joule} = 1\\text{ Newton} \\times 1\\text{ meter}$ hota hai. CGS base units mein convert karne par: $1\\text{ Joule} = (10^5\\text{ dynes}) \\times (10^2\\text{ cm}) = 10^7\\text{ dyne}\\cdot\\text{cm} = 10^7\\text{ ergs}$."
+    "e": "Work dimensionally Force × Displacement ([M L² T⁻²]) ke roop mein define hota hai, jahan SI unit Joule aur CGS unit erg hai.\n\n• Option 1 is Incorrect because 3.6 × 10⁶ J 1 kilowatt-hour (1 kWh) ka SI equivalent hai, ergs ka nahi.\n\n• Option 2 is Incorrect because 10⁻⁷ inverse conversion factor ko represent karta hai (1 erg = 10⁻⁷ Joules).\n\n• Option 3 is Incorrect because 10⁵ force ke SI aur CGS units ke beech ka conversion factor hai (1 Newton = 10⁵ dynes).\n\n• Option 4 is Correct because SI system mein 1 Joule = 1 Newton × 1 meter hota hai. CGS base units mein convert karne par: 1 Joule = (10⁵ dynes) × (10² cm) = 10⁷ dyne·cm = 10⁷ ergs."
   },
   {
     "p_id": "bpsc_phys_m27_03",
-    "qe": "Analyzing negative mechanical work requires evaluating energy transfer dynamics. Which physical scenario represents Negative Work ($W < 0$)?",
-    "qh": "ऋणात्मक यांत्रिक कार्य का विश्लेषण करने के लिए ऊर्जा हस्तांतरण गतिकी का मूल्यांकन करने की आवश्यकता होती है। कौन सा भौतिक परिदृश्य ऋणात्मक कार्य ($W < 0$) का प्रतिनिधित्व करता है?",
+    "qe": "Analyzing negative mechanical work requires evaluating energy transfer dynamics. Which physical scenario represents Negative Work (W < 0)?",
+    "qh": "ऋणात्मक यांत्रिक कार्य का विश्लेषण करने के लिए ऊर्जा हस्तांतरण गतिकी का मूल्यांकन करने की आवश्यकता होती है। कौन सा भौतिक परिदृश्य ऋणात्मक कार्य (W < 0) का प्रतिनिधित्व करता है?",
     "oe": [
       "Friction acting on a block sliding across a rough horizontal surface.",
       "A satellite revolving in a stable circular orbit around the Earth.",
@@ -54,31 +54,31 @@
       "एक संपीड़ित स्प्रिंग अपनी प्राकृतिक बिना खिंची लंबाई में वापस आ रही है।"
     ],
     "a": 0,
-    "e": "Mechanical work negative hota hai jab force vector aur displacement vector ke beech ka angle obtuse ya opposite ($\\theta = 180^\\circ$) hota hai.\n\n• Option 1 is Correct because kinetic friction hamesha sliding bodies ke relative motion ko oppose karta hai aur displacement ke opposite act karta hai ($\\theta = 180^\\circ$). $W = F s \\cos 180^\\circ = -F s$ ke anusaar friction dwara kiya gaya work strictly negative ($W < 0$) hota hai.\n\n• Option 2 is Incorrect because gravitational centripetal force satellite ke instantaneous tangential displacement ke perpendicular hota hai ($\\theta = 90^\\circ$, $\\cos 90^\\circ = 0$), jo zero work ($W = 0$) represent karta hai.\n\n• Option 3 is Incorrect because pulling force aur displacement same direction mein hote hain ($\\theta = 0^\\circ$, $\\cos 0^\\circ = +1$), jo positive work ($W > 0$) describe karta hai.\n\n• Option 4 is Incorrect because spring ka restoring force expansion ki direction mein push karta hai, jo positive work describe karta hai."
+    "e": "Mechanical work negative hota hai jab force vector aur displacement vector ke beech ka angle obtuse ya opposite (θ = 180°) hota hai.\n\n• Option 1 is Correct because kinetic friction hamesha sliding bodies ke relative motion ko oppose karta hai aur displacement ke opposite act karta hai (θ = 180°). W = F s cos 180° = -F s ke anusaar friction dwara kiya gaya work strictly negative (W < 0) hota hai.\n\n• Option 2 is Incorrect because gravitational centripetal force satellite ke instantaneous tangential displacement ke perpendicular hota hai (θ = 90°, cos 90° = 0), jo zero work (W = 0) represent karta hai.\n\n• Option 3 is Incorrect because pulling force aur displacement same direction mein hote hain (θ = 0°, cos 0° = +1), jo positive work (W > 0) describe karta hai.\n\n• Option 4 is Incorrect because spring ka restoring force expansion ki direction mein push karta hai, jo positive work describe karta hai."
   },
   {
     "p_id": "bpsc_phys_m27_04",
     "qe": "Power measures the time rate of performing mechanical work or consuming energy. What is the equivalent value of 1 Horsepower (HP) and 1 kilowatt-hour (kWh) expressed in SI base units?",
     "qh": "शक्ति यांत्रिक कार्य करने या ऊर्जा की खपत की समय दर को मापती है। SI मूल इकाइयों में व्यक्त 1 हॉर्सपावर (HP) और 1 किलोवाट-घंटे (kWh) का समतुल्य मान क्या है?",
     "oe": [
-      "$1\\text{ HP} = 500\\text{ W}$; $1\\text{ kWh} = 10^6\\text{ J}$",
-      "$1\\text{ HP} = 746\\text{ kW}$; $1\\text{ kWh} = 3.6\\text{ ergs}$",
-      "$1\\text{ HP} = 1000\\text{ W}$; $1\\text{ kWh} = 3.6 \\times 10^3\\text{ J}$",
-      "$1\\text{ HP} = 746\\text{ W}$; $1\\text{ kWh} = 3.6 \\times 10^6\\text{ J}$"
+      "1 HP = 500 W; 1 kWh = 10⁶ J",
+      "1 HP = 746 kW; 1 kWh = 3.6 ergs",
+      "1 HP = 1000 W; 1 kWh = 3.6 × 10³ J",
+      "1 HP = 746 W; 1 kWh = 3.6 × 10⁶ J"
     ],
     "oh": [
-      "$1\\text{ HP} = 500\\text{ W}$; $1\\text{ kWh} = 10^6\\text{ J}$",
-      "$1\\text{ HP} = 746\\text{ kW}$; $1\\text{ kWh} = 3.6\\text{ अर्ग}$",
-      "$1\\text{ HP} = 1000\\text{ W}$; $1\\text{ kWh} = 3.6 \\times 10^3\\text{ J}$",
-      "$1\\text{ HP} = 746\\text{ W}$; $1\\text{ kWh} = 3.6 \\times 10^6\\text{ J}$"
+      "1 HP = 500 W; 1 kWh = 10⁶ J",
+      "1 HP = 746 kW; 1 kWh = 3.6 अर्ग",
+      "1 HP = 1000 W; 1 kWh = 3.6 × 10³ J",
+      "1 HP = 746 W; 1 kWh = 3.6 × 10⁶ J"
     ],
     "a": 3,
-    "e": "Power work karne ki time rate hoti hai jabki kilowatt-hour energy ki commercial unit hai.\n\n• Option 1 is Incorrect because isme arbitrary incorrect constants ($500\\text{ W}$ aur $10^6\\text{ J}$) list kiye gaye hain.\n\n• Option 2 is Incorrect because yeh HP ke liye Watts ko kilowatts ($746\\text{ kW}$) ke sath confuse karta hai aur kWh ke liye galat CGS unit ($3.6\\text{ ergs}$) deta hai.\n\n• Option 3 is Incorrect because $1000\\text{ W} = 1\\text{ kW}$ hota hai ($1\\text{ HP}$ nahi) aur $3.6 \\times 10^3\\text{ J}$ asal mein $1\\text{ Wh}$ hota hai, $1\\text{ kWh}$ nahi.\n\n• Option 4 is Correct because standard engineering conversion ke anusaar **$1\\text{ Horsepower (HP)} = 746\\text{ Watts (W)}$** hota hai aur commercial electrical energy unit **$1\\text{ kWh} = 1000\\text{ W} \\times 3600\\text{ s} = 3.6 \\times 10^6\\text{ Joules (J)}$** hoti hai."
+    "e": "Power work karne ki time rate hoti hai jabki kilowatt-hour energy ki commercial unit hai.\n\n• Option 1 is Incorrect because isme arbitrary incorrect constants (500 W aur 10⁶ J) list kiye gaye hain.\n\n• Option 2 is Incorrect because yeh HP ke liye Watts ko kilowatts (746 kW) ke sath confuse karta hai aur kWh ke liye galat CGS unit (3.6 ergs) deta hai.\n\n• Option 3 is Incorrect because 1000 W = 1 kW hota hai (1 HP nahi) aur 3.6 × 10³ J asal mein 1 Wh hota hai, 1 kWh nahi.\n\n• Option 4 is Correct because standard engineering conversion ke anusaar **1 Horsepower (HP) = 746 Watts (W)** hota hai aur commercial electrical energy unit **1 kWh = 1000 W × 3600 s = 3.6 × 10⁶ Joules (J)** hoti hai."
   },
   {
     "p_id": "bpsc_phys_m27_05",
-    "qe": "Translational kinetic energy ($KE$) can be expressed using either linear velocity ($v$) or linear momentum ($p$). If the linear momentum of a body of mass $m$ is doubled while its mass remains constant, by what factor does its Kinetic Energy increase?",
-    "qh": "स्थानांतरीय गतिज ऊर्जा ($KE$) को रैखिक वेग ($v$) या रैखिक संवेग ($p$) दोनों का उपयोग करके व्यक्त किया जा सकता है। यदि स्थिर द्रव्यमान $m$ वाले पिंड के रैखिक संवेग को दोगुना कर दिया जाए, तो उसकी गतिज ऊर्जा किस गुणांक से बढ़ जाएगी?",
+    "qe": "Translational kinetic energy (KE) can be expressed using either linear velocity (v) or linear momentum (p). If the linear momentum of a body of mass m is doubled while its mass remains constant, by what factor does its Kinetic Energy increase?",
+    "qh": "स्थानांतरीय गतिज ऊर्जा (KE) को रैखिक वेग (v) या रैखिक संवेग (p) दोनों का उपयोग करके व्यक्त किया जा सकता है। यदि स्थिर द्रव्यमान m वाले पिंड के रैखिक संवेग को दोगुना कर दिया जाए, तो उसकी गतिज ऊर्जा किस गुणांक से बढ़ जाएगी?",
     "oe": [
       "Kinetic energy remains unchanged.",
       "Kinetic energy quadruples (increases by a factor of 4).",
@@ -92,7 +92,7 @@
       "गतिज ऊर्जा दोगुनी हो जाती है (2 के गुणक से बढ़ती है)।"
     ],
     "a": 1,
-    "e": "Kinetic energy aur linear momentum ke beech mathematical relation $KE = \\frac{p^2}{2m}$ hota hai.\n\n• Option 1 is Incorrect because momentum change hone se velocity aur kinetic energy directly alter hoti hai.\n\n• Option 2 is Correct because jab mass $m$ constant rehta hai, toh $KE \\propto p^2$ hota hai. Linear momentum double karne par ($p' = 2p$), $KE' = \\frac{(2p)^2}{2m} = 4 \\cdot \\frac{p^2}{2m} = 4 \\cdot KE$, jisse kinetic energy quadruples (factor of 4) ho jaati hai.\n\n• Option 3 is Incorrect because yeh cubic dependence ($p^3$) assume karta hai jo mathematically galat hai.\n\n• Option 4 is Incorrect because yeh kinetic energy aur momentum ke beech galat direct linear relationship assume karta hai."
+    "e": "Kinetic energy aur linear momentum ke beech mathematical relation KE = p² / (2m) hota hai.\n\n• Option 1 is Incorrect because momentum change hone se velocity aur kinetic energy directly alter hoti hai.\n\n• Option 2 is Correct because jab mass m constant rehta hai, toh KE ∝ p² hota hai. Linear momentum double karne par (p' = 2p), KE' = (2p)² / (2m) = 4 · [p² / (2m)] = 4 · KE, jisse kinetic energy quadruples (factor of 4) ho jaati hai.\n\n• Option 3 is Incorrect because yeh cubic dependence (p³) assume karta hai jo mathematically galat hai.\n\n• Option 4 is Incorrect because yeh kinetic energy aur momentum ke beech galat direct linear relationship assume karta hai."
   },
   {
     "p_id": "bpsc_phys_m27_06",
@@ -111,45 +111,45 @@
       "आसपास के वातावरण में नष्ट हुई कुल ऊष्मा ऊर्जा।"
     ],
     "a": 0,
-    "e": "Work-Energy Theorem net forces dwara kiye gaye total work ko kinetic energy ke change se relate karta hai.\n\n• Option 1 is Correct because **Work-Energy Theorem** ke anusaar, kisi body par act karne wale sabhi forces dwara kiya gaya net work uski kinetic energy ke change ke barabar hota hai: $$W_{\\text{net}} = \\Delta KE = KE_f - KE_i = \\frac{1}{2}mv_f^2 - \\frac{1}{2}mv_i^2$$.\n\n• Option 2 is Incorrect because rate of change of linear momentum net force ko represent karta hai ($F_{\\text{net}} = \\frac{dp}{dt}$), work ko nahi.\n\n• Option 3 is Incorrect because potential energy mein change ($W_{\\text{cons}} = -\\Delta U$) sirf internal conservative forces se related hota hai, net total work se nahi.\n\n• Option 4 is Incorrect because thermal loss non-conservative forces ka keval ek dissipative component hai."
+    "e": "Work-Energy Theorem net forces dwara kiye gaye total work ko kinetic energy ke change se relate karta hai.\n\n• Option 1 is Correct because **Work-Energy Theorem** ke anusaar, kisi body par act karne wale sabhi forces dwara kiya gaya net work uski kinetic energy ke change ke barabar hota hai: W_net = ΔKE = KE_f - KE_i = (1/2) m v_f² - (1/2) m v_i².\n\n• Option 2 is Incorrect because rate of change of linear momentum net force ko represent karta hai (F_net = dp / dt), work ko nahi.\n\n• Option 3 is Incorrect because potential energy mein change (W_cons = -ΔU) sirf internal conservative forces se related hota hai, net total work se nahi.\n\n• Option 4 is Incorrect because thermal loss non-conservative forces ka keval ek dissipative component hai."
   },
   {
     "p_id": "bpsc_phys_m27_07",
-    "qe": "Conservation of Mechanical Energy governs ideal conservative systems. When a heavy stone dropped from rest falls freely under gravity (ignoring air drag), how do its potential energy ($PE$) and kinetic energy ($KE$) vary during the fall?",
-    "qh": "यांत्रिक ऊर्जा का संरक्षण आदर्श संरक्षी प्रणालियों को नियंत्रित करता है। जब विराम से छोड़ा गया एक भारी पत्थर गुरुत्वाकर्षण के तहत स्वतंत्र रूप से गिरता है (वायु प्रतिरोध को नजरअंदाज करते हुए), तो गिरने के दौरान उसकी स्थितिज ऊर्जा ($PE$) और गतिज ऊर्जा ($KE$) कैसे परिवर्तित होती है?",
+    "qe": "Conservation of Mechanical Energy governs ideal conservative systems. When a heavy stone dropped from rest falls freely under gravity (ignoring air drag), how do its potential energy (PE) and kinetic energy (KE) vary during the fall?",
+    "qh": "यांत्रिक ऊर्जा का संरक्षण आदर्श संरक्षी प्रणालियों को नियंत्रित करता है। जब विराम से छोड़ा गया एक भारी पत्थर गुरुत्वाकर्षण के तहत स्वतंत्र रूप से गिरता है (वायु प्रतिरोध को नजरअंदाज करते हुए), तो गिरने के दौरान उसकी स्थितिज ऊर्जा (PE) और गतिज ऊर्जा (KE) कैसे परिवर्तित होती है?",
     "oe": [
-      "$PE$ continuously decreases while $KE$ continuously increases, keeping total mechanical energy ($PE + KE$) strictly constant at every point.",
-      "Both $PE$ and $KE$ increase simultaneously due to gravitational acceleration.",
-      "Both $PE$ and $KE$ decrease to zero before impact.",
-      "$PE$ remains constant while $KE$ increases exponentially."
+      "PE continuously decreases while KE continuously increases, keeping total mechanical energy (PE + KE) strictly constant at every point.",
+      "Both PE and KE increase simultaneously due to gravitational acceleration.",
+      "Both PE and KE decrease to zero before impact.",
+      "PE remains constant while KE increases exponentially."
     ],
     "oh": [
-      "$PE$ लगातार घटती है जबकि $KE$ लगातार बढ़ती है, जिससे प्रत्येक बिंदु पर कुल यांत्रिक ऊर्जा ($PE + KE$) बिल्कुल स्थिर रहती है।",
-      "गुरुत्वाकर्षण त्वरण के कारण $PE$ और $KE$ दोनों एक साथ बढ़ते हैं।",
-      "टकराने से पहले $PE$ और $KE$ दोनों घटकर शून्य हो जाते हैं।",
-      "$PE$ स्थिर रहती है जबकि $KE$ तेजी से बढ़ती है।"
+      "PE लगातार घटती है जबकि KE लगातार बढ़ती है, जिससे प्रत्येक बिंदु पर कुल यांत्रिक ऊर्जा (PE + KE) बिल्कुल स्थिर रहती है।",
+      "गुरुत्वाकर्षण त्वरण के कारण PE और KE दोनों एक साथ बढ़ते हैं।",
+      "टकराने से पहले PE और KE दोनों घटकर शून्य हो जाते हैं।",
+      "PE स्थिर रहती है जबकि KE तेजी से बढ़ती है।"
     ],
     "a": 0,
-    "e": "Conservative gravitational field mein freely falling body ki total mechanical energy ($E = PE + KE$) hamesha constant rehti hai.\n\n• Option 1 is Correct because jaise-jaise stone niche girta hai, height $h$ kam hone se gravitational potential energy ($mgh$) continuously ghat-ti hai aur kinetic energy ($\\frac{1}{2}mv^2$) usi ratio mein badhti hai ($-\\Delta PE = \\Delta KE$), jisse total mechanical energy strictly constant rehti hai.\n\n• Option 2 is Incorrect because dono energies ka ek sath badhna Law of Conservation of Energy ko violate karta hai.\n\n• Option 3 is Incorrect because impact se theek pehle kinetic energy maximum hoti hai, zero nahi.\n\n• Option 4 is Incorrect because potential energy altitude ($h$) par depend karti hai, isliye fall ke dauran constant nahi reh sakti."
+    "e": "Conservative gravitational field mein freely falling body ki total mechanical energy (E = PE + KE) hamesha constant rehti hai.\n\n• Option 1 is Correct because jaise-jaise stone niche girta hai, height h kam hone se gravitational potential energy (mgh) continuously ghat-ti hai aur kinetic energy [(1/2) m v²] usi ratio mein badhti hai (-ΔPE = ΔKE), jisse total mechanical energy strictly constant rehti hai.\n\n• Option 2 is Incorrect because dono energies ka ek sath badhna Law of Conservation of Energy ko violate karta hai.\n\n• Option 3 is Incorrect because impact se theek pehle kinetic energy maximum hoti hai, zero nahi.\n\n• Option 4 is Incorrect because potential energy altitude (h) par depend karti hai, isliye fall ke dauran constant nahi reh sakti."
   },
   {
     "p_id": "bpsc_phys_m27_08",
-    "qe": "Albert Einstein redefined physics by establishing the equivalence of mass and energy through special relativity. According to $E = mc^2$, what is the exact physical meaning of $c$, and what happens during mass-energy transformations?",
-    "qh": "अल्बर्ट आइंस्टीन ने विशेष सापेक्षता के माध्यम से द्रव्यमान और ऊर्जा की समतुल्यता स्थापित करके भौतिकी को पुनः परिभाषित किया। $E = mc^2$ के अनुसार, $c$ का सटीक भौतिक अर्थ क्या है, और द्रव्यमान-ऊर्जा परिवर्तनों के दौरान क्या होता है?",
+    "qe": "Albert Einstein redefined physics by establishing the equivalence of mass and energy through special relativity. According to E = m · c², what is the exact physical meaning of c, and what happens during mass-energy transformations?",
+    "qh": "अल्बर्ट आइंस्टीन ने विशेष सापेक्षता के माध्यम से द्रव्यमान और ऊर्जा की समतुल्यता स्थापित करके भौतिकी को पुनः परिभाषित किया। E = m · c² के अनुसार, c का सटीक भौतिक अर्थ क्या है, और द्रव्यमान-ऊर्जा परिवर्तनों के दौरान क्या होता है?",
     "oe": [
-      "$c$ is the speed of sound ($340\\text{ m/s}$); mass and energy are independently conserved.",
-      "$c$ is the speed of light in vacuum ($3 \\times 10^8\\text{ m/s}$); mass and energy are not individually conserved, but are interconvertible, preserving unified mass-energy globally.",
-      "$c$ is the universal gravitational constant; mass converts into electrical charge.",
-      "$c$ is the specific heat capacity of water; mass remains invariant in nuclear reactions."
+      "c is the speed of sound (340 m/s); mass and energy are independently conserved.",
+      "c is the speed of light in vacuum (3 × 10⁸ m/s); mass and energy are not individually conserved, but are interconvertible, preserving unified mass-energy globally.",
+      "c is the universal gravitational constant; mass converts into electrical charge.",
+      "c is the specific heat capacity of water; mass remains invariant in nuclear reactions."
     ],
     "oh": [
-      "$c$ ध्वनि की गति ($340\\text{ m/s}$) है; द्रव्यमान और ऊर्जा स्वतंत्र रूप से संरक्षित हैं।",
-      "$c$ निर्वात में प्रकाश की गति ($3 \\times 10^8\\text{ m/s}$) है; द्रव्यमान और ऊर्जा व्यक्तिगत रूप से संरक्षित नहीं हैं, बल्कि परस्पर परिवर्तनीय हैं, जो वैश्विक स्तर पर एकीकृत द्रव्यमान-ऊर्जा को संरक्षित करते हैं।",
-      "$c$ सार्वभौमिक गुरुत्वाकर्षण स्थिरांक है; द्रव्यमान विद्युत आवेश में परिवर्तित होता है।",
-      "$c$ पानी की विशिष्ट ऊष्मा क्षमता है; परमाणु प्रतिक्रियाओं में द्रव्यमान अपरिवर्तित रहता है।"
+      "c ध्वनि की गति (340 m/s) है; द्रव्यमान और ऊर्जा स्वतंत्र रूप से संरक्षित हैं।",
+      "c निर्वात में प्रकाश की गति (3 × 10⁸ m/s) है; द्रव्यमान और ऊर्जा व्यक्तिगत रूप से संरक्षित नहीं हैं, बल्कि परस्पर परिवर्तनीय हैं, जो वैश्विक स्तर पर एकीकृत द्रव्यमान-ऊर्जा को संरक्षित करते हैं।",
+      "c सार्वभौमिक गुरुत्वाकर्षण स्थिरांक है; द्रव्यमान विद्युत आवेश में परिवर्तित होता है।",
+      "c पानी की विशिष्ट ऊष्मा क्षमता है; परमाणु प्रतिक्रियाओं में द्रव्यमान अपरिवर्तित रहता है।"
     ],
     "a": 1,
-    "e": "Special relativity mein mass-energy equivalence equation $E = mc^2$ mass aur energy ke interconversion ko define karta hai.\n\n• Option 1 is Incorrect because $c$ speed of light ko represent karta hai, sound ko nahi, aur mass tatha energy independently conserved nahi rehte.\n\n• Option 2 is Correct because **$c$ speed of light in vacuum ($3 \\times 10^8\\text{ m/s}$)** hai. Nuclear processes (fission/fusion) mein mass ($m$) directly energy ($E$) mein convert hota hai ($E = \\Delta m \\cdot c^2$), jisse individual conservation ke bajay unified mass-energy conserve rehti hai.\n\n• Option 3 is Incorrect because $c$ universal gravitational constant $G$ nahi hai.\n\n• Option 4 is Incorrect because $c$ specific heat capacity nahi hai aur nuclear reactions mein mass defect occur hota hai."
+    "e": "Special relativity mein mass-energy equivalence equation E = m · c² mass aur energy ke interconversion ko define karta hai.\n\n• Option 1 is Incorrect because c speed of light ko represent karta hai, sound ko nahi, aur mass tatha energy independently conserved nahi rehte.\n\n• Option 2 is Correct because **c speed of light in vacuum (3 × 10⁸ m/s)** hai. Nuclear processes (fission/fusion) mein mass (m) directly energy (E) mein convert hota hai (E = Δm · c²), jisse individual conservation ke bajay unified mass-energy conserve rehti hai.\n\n• Option 3 is Incorrect because c universal gravitational constant G nahi hai.\n\n• Option 4 is Incorrect because c specific heat capacity nahi hai aur nuclear reactions mein mass defect occur hota hai."
   },
   {
     "p_id": "bpsc_phys_m27_09",
@@ -187,7 +187,7 @@
       "ऊष्मीय मान (Calorific Value) और ज्वलन ताप (Ignition Temperature)"
     ],
     "a": 3,
-    "e": "Fuel efficiency aur combustion feasibility calorific value aur ignition temperature par depend karti hai.\n\n• Option 1 is Incorrect because specific heat thermal absorption capacity batati hai aur flash point momentary ignition temperature hota hai.\n\n• Option 2 is Incorrect because thermal conductivity heat transfer rate aur critical temperature gas liquefaction se sambandhit hai.\n\n• Option 3 is Incorrect because latent heat aur boiling point phase transition thermodynamics se related hain.\n\n• Option 4 is Correct because **Calorific Value** fuel ke unit mass ke complete combustion se release hone wali total heat energy quantity hoti hai ($\\text{kJ/kg}$), jabki **Ignition Temperature** wo minimum threshold temperature hota hai jis par fuel aag pakad kar continuous combustion sustain karta hai."
+    "e": "Fuel efficiency aur combustion feasibility calorific value aur ignition temperature par depend karti hai.\n\n• Option 1 is Incorrect because specific heat thermal absorption capacity batati hai aur flash point momentary ignition temperature hota hai.\n\n• Option 2 is Incorrect because thermal conductivity heat transfer rate aur critical temperature gas liquefaction se sambandhit hai.\n\n• Option 3 is Incorrect because latent heat aur boiling point phase transition thermodynamics se related hain.\n\n• Option 4 is Correct because **Calorific Value** fuel ke unit mass ke complete combustion se release hone wali total heat energy quantity hoti hai (kJ/kg), jabki **Ignition Temperature** wo minimum threshold temperature hota hai jis par fuel aag pakad kar continuous combustion sustain karta hai."
   },
   {
     "p_id": "bpsc_phys_m27_11",
@@ -197,70 +197,70 @@
       "Methane and noble helium gases",
       "Carbon monoxide and pure hydrogen gas",
       "Water vapor and ozone",
-      "Acidic oxides of sulfur ($\\text{SO}_2$) and nitrogen ($\\text{NO}_x$)"
+      "Acidic oxides of sulfur (SO₂) and nitrogen (NO_x)"
     ],
     "oh": [
       "मीथेन और उत्कृष्ट हीलियम गैसें",
       "कार्बन मोनोऑक्साइड और शुद्ध हाइड्रोजन गैस",
       "जल वाष्प और ओजोन",
-      "सल्फर के अम्लीय ऑक्साइड ($\\text{SO}_2$) और नाइट्रोजन ($\\text{NO}_x$)"
+      "सल्फर के अम्लीय ऑक्साइड (SO₂) और नाइट्रोजन (NO_x)"
     ],
     "a": 3,
-    "e": "Fossil fuel combustion ke acidic byproducts atmospheric moisture ke sath react karke acid precipitation create karte hain.\n\n• Option 1 is Incorrect because methane ek greenhouse gas hai aur helium unreactive noble gas hai.\n\n• Option 2 is Incorrect because carbon monoxide aur hydrogen gas acid precipitation ka direct cause nahi bante.\n\n• Option 3 is Incorrect because water vapor aur ozone acid rain ke primary precursor acidic oxides nahi hain.\n\n• Option 4 is Correct because fossil fuels ke dahan se release hone wale **Sulfur Dioxide ($\\text{SO}_2$)** aur **Nitrogen Oxides ($\\text{NO}_x$)** atmospheric moisture ke sath react karke Sulfuric Acid ($\\text{H}_2\\text{SO}_4$) aur Nitric Acid ($\\text{HNO}_3$) banate hain, jo precipitation ke pH ko $< 5.6$ karke **Acid Rain** ka roop lete hain."
+    "e": "Fossil fuel combustion ke acidic byproducts atmospheric moisture ke sath react karke acid precipitation create karte hain.\n\n• Option 1 is Incorrect because methane ek greenhouse gas hai aur helium unreactive noble gas hai.\n\n• Option 2 is Incorrect because carbon monoxide aur hydrogen gas acid precipitation ka direct cause nahi bante.\n\n• Option 3 is Incorrect because water vapor aur ozone acid rain ke primary precursor acidic oxides nahi hain.\n\n• Option 4 is Correct because fossil fuels ke dahan se release hone wale **Sulfur Dioxide (SO₂)** aur **Nitrogen Oxides (NO_x)** atmospheric moisture ke sath react karke Sulfuric Acid (H₂SO₄) aur Nitric Acid (HNO₃) banate hain, jo precipitation ke pH ko < 5.6 karke **Acid Rain** ka roop lete hain."
   },
   {
     "p_id": "bpsc_phys_m27_12",
     "qe": "Hydroelectric power plants generate electricity by utilizing energy transformations in impounded river water. What sequence of energy transformations drives the electrical generator turbine in a hydroelectric plant?",
     "qh": "जलविद्युत संयंत्र (Hydroelectric power plants) बांध के पानी में ऊर्जा परिवर्तनों का उपयोग करके बिजली उत्पन्न करते हैं। जलविद्युत संयंत्र में विद्युत जनरेटर टरबाइन को कौन सा ऊर्जा परिवर्तन क्रम संचालित करता है?",
     "oe": [
-      "Chemical Energy $\\to$ Heat Energy $\\to$ Electrical Energy",
-      "Gravitational Potential Energy of stored reservoir water $\\to$ Kinetic Energy of flowing water $\\to$ Mechanical Kinetic Energy of rotating turbine $\\to$ Electrical Energy",
-      "Nuclear Fission Energy $\\to$ Steam Kinetic Energy $\\to$ Electrical Energy",
-      "Solar Radiant Energy $\\to$ Chemical Potential Energy $\\to$ Electrical Energy"
+      "Chemical Energy → Heat Energy → Electrical Energy",
+      "Gravitational Potential Energy of stored reservoir water → Kinetic Energy of flowing water → Mechanical Kinetic Energy of rotating turbine → Electrical Energy",
+      "Nuclear Fission Energy → Steam Kinetic Energy → Electrical Energy",
+      "Solar Radiant Energy → Chemical Potential Energy → Electrical Energy"
     ],
     "oh": [
-      "रासायनिक ऊर्जा $\\to$ ऊष्मा ऊर्जा $\\to$ विद्युत ऊर्जा",
-      "जलाशय के पानी की गुरुत्वाकर्षण स्थितिज ऊर्जा $\\to$ बहते पानी की गतिज ऊर्जा $\\to$ घूमती हुई टरबाइन की यांत्रिक गतिज ऊर्जा $\\to$ विद्युत ऊर्जा",
-      "परमाणु विखंडन ऊर्जा $\\to$ भाप गतिज ऊर्जा $\\to$ विद्युत ऊर्जा",
-      "सौर विकिरण ऊर्जा $\\to$ रासायनिक स्थितिज ऊर्जा $\\to$ विद्युत ऊर्जा"
+      "रासायनिक ऊर्जा → ऊष्मा ऊर्जा → विद्युत ऊर्जा",
+      "जलाशय के पानी की गुरुत्वाकर्षण स्थितिज ऊर्जा → बहते पानी की गतिज ऊर्जा → घूमती हुई टरबाइन की यांत्रिक गतिज ऊर्जा → विद्युत ऊर्जा",
+      "परमाणु विखंडन ऊर्जा → भाप गतिज ऊर्जा → विद्युत ऊर्जा",
+      "सौर विकिरण ऊर्जा → रासायनिक स्थितिज ऊर्जा → विद्युत ऊर्जा"
     ],
     "a": 1,
-    "e": "Hydroelectric power plants mechanical fluids ke gravitational energy ko electrical power mein transform karte hain.\n\n• Option 1 is Incorrect because yeh fossil fuel based thermal power generation ka sequence hai.\n\n• Option 2 is Correct because reservoir mein stored water ke paas **Gravitational Potential Energy** hoti hai $\\to$ penstock se release hone par yeh **Kinetic Energy of flowing water** banti hai $\\to$ turbine runner blades strike karke **Mechanical Rotational Kinetic Energy** generate karti hai $\\to$ generator armature Faraday induction ke through ise **Electrical Energy** mein transform karta hai.\n\n• Option 3 is Incorrect because yeh nuclear power plants ka energy sequence describe karta hai.\n\n• Option 4 is Incorrect because yeh plant photosynthesis pathway ko indicate karta hai."
+    "e": "Hydroelectric power plants mechanical fluids ke gravitational energy ko electrical power mein transform karte hain.\n\n• Option 1 is Incorrect because yeh fossil fuel based thermal power generation ka sequence hai.\n\n• Option 2 is Correct because reservoir mein stored water ke paas **Gravitational Potential Energy** hoti hai → penstock se release hone par yeh **Kinetic Energy of flowing water** banti hai → turbine runner blades strike karke **Mechanical Rotational Kinetic Energy** generate karti hai → generator armature Faraday induction ke through ise **Electrical Energy** mein transform karta hai.\n\n• Option 3 is Incorrect because yeh nuclear power plants ka energy sequence describe karta hai.\n\n• Option 4 is Incorrect because yeh plant photosynthesis pathway ko indicate karta hai."
   },
   {
     "p_id": "bpsc_phys_m27_13",
     "qe": "Human physiological metabolic functions consume power at varying rates depending on activity levels. According to standard physiological averages, what is the approximate baseline power consumption of the human heart beat and a sleeping adult?",
     "qh": "मानव शारीरिक चयापचय (metabolic) कार्य गतिविधियों के स्तर के आधार पर अलग-अलग दरों पर शक्ति की खपत करते हैं। मानक शारीरिक औसतों के अनुसार, मानव हृदय की धड़कन (heart beat) और सोते हुए वयस्क की अनुमानित आधारभूत (baseline) शक्ति खपत क्या है?",
     "oe": [
-      "Heart beat: $1.2\\text{ W}$; Sleeping: $75\\text{ W}$",
-      "Heart beat: $0.1\\text{ W}$; Sleeping: $10\\text{ W}$",
-      "Heart beat: $50\\text{ W}$; Sleeping: $200\\text{ W}$",
-      "Heart beat: $100\\text{ W}$; Sleeping: $500\\text{ W}$"
+      "Heart beat: 1.2 W; Sleeping: 75 W",
+      "Heart beat: 0.1 W; Sleeping: 10 W",
+      "Heart beat: 50 W; Sleeping: 200 W",
+      "Heart beat: 100 W; Sleeping: 500 W"
     ],
     "oh": [
-      "हृदय की धड़कन: $1.2\\text{ W}$; सोते समय: $75\\text{ W}$",
-      "हृदय की धड़कन: $0.1\\text{ W}$; सोते समय: $10\\text{ W}$",
-      "हृदय की धड़कन: $50\\text{ W}$; सोते समय: $200\\text{ W}$",
-      "हृदय की धड़कन: $100\\text{ W}$; सोते समय: $500\\text{ W}$"
+      "हृदय की धड़कन: 1.2 W; सोते समय: 75 W",
+      "हृदय की धड़कन: 0.1 W; सोते समय: 10 W",
+      "हृदय की धड़कन: 50 W; सोते समय: 200 W",
+      "हृदय की धड़कन: 100 W; सोते समय: 500 W"
     ],
     "a": 0,
-    "e": "Human body ke different physiological functions activity levels ke aadhar par power consume karte hain.\n\n• Option 1 is Correct because standard biophysical data ke anusaar **human heart beat** continuous pumping action ke liye lagbhag **$1.2\\text{ to }1.33\\text{ W}$** power consume karta hai aur ek **sleeping adult** ka basal metabolic rate lagbhag **$75\\text{ W}$** hota hai.\n\n• Option 2 is Incorrect because yeh values human metabolic requirements ko significantly underestimate karti hain.\n\n• Option 3 is Incorrect because yeh values basal metabolic power expenditure ko severely overstate karti hain ($200\\text{ W}$ muscular activity ke time consume hota hai).\n\n• Option 4 is Incorrect because $100\\text{ W}$ heart power aur $500\\text{ W}$ sleep power baseline physiological expenditure se excessively high hain."
+    "e": "Human body ke different physiological functions activity levels ke aadhar par power consume karte hain.\n\n• Option 1 is Correct because standard biophysical data ke anusaar **human heart beat** continuous pumping action ke liye lagbhag **1.2 to 1.33 W** power consume karta hai aur ek **sleeping adult** ka basal metabolic rate lagbhag **75 W** hota hai.\n\n• Option 2 is Incorrect because yeh values human metabolic requirements ko significantly underestimate karti hain.\n\n• Option 3 is Incorrect because yeh values basal metabolic power expenditure ko severely overstate karti hain (200 W muscular activity ke time consume hota hai).\n\n• Option 4 is Incorrect because 100 W heart power aur 500 W sleep power baseline physiological expenditure se excessively high hain."
   },
   {
     "p_id": "bpsc_phys_m27_14",
     "qe": "Evaluating the energy transformation chain in living organisms reveals specific physiological pathways. What energy transformation occurs during plant photosynthesis and subsequent human muscular running?",
     "qh": "जीवों में ऊर्जा परिवर्तन श्रृंखला का मूल्यांकन विशिष्ट शारीरिक मार्गों को उजागर करता है। पादप प्रकाश संश्लेषण (photosynthesis) और उसके बाद मानव मांसपेशियों के दौड़ने के दौरान कौन सा ऊर्जा परिवर्तन होता है?",
     "oe": [
-      "Photosynthesis: Nuclear Energy $\\to$ Heat Energy; Running: Heat Energy $\\to$ Electrical Energy",
-      "Photosynthesis: Gravitational Energy $\\to$ Solar Energy; Running: Kinetic Energy $\\to$ Potential Energy",
-      "Photosynthesis: Solar Radiant Energy $\\to$ Chemical Energy; Running: Internal Chemical Energy $\\to$ Mechanical Kinetic Energy",
-      "Photosynthesis: Electrical Energy $\\to$ Chemical Energy; Running: Sound Energy $\\to$ Kinetic Energy"
+      "Photosynthesis: Nuclear Energy → Heat Energy; Running: Heat Energy → Electrical Energy",
+      "Photosynthesis: Gravitational Energy → Solar Energy; Running: Kinetic Energy → Potential Energy",
+      "Photosynthesis: Solar Radiant Energy → Chemical Energy; Running: Internal Chemical Energy → Mechanical Kinetic Energy",
+      "Photosynthesis: Electrical Energy → Chemical Energy; Running: Sound Energy → Kinetic Energy"
     ],
     "oh": [
-      "प्रकाश संश्लेषण: परमाणु ऊर्जा $\\to$ ऊष्मा ऊर्जा; दौड़ना: ऊष्मा ऊर्जा $\\to$ विद्युत ऊर्जा",
-      "प्रकाश संश्लेषण: गुरुत्वाकर्षण ऊर्जा $\\to$ सौर ऊर्जा; दौड़ना: गतिज ऊर्जा $\\to$ स्थितिज ऊर्जा",
-      "प्रकाश संश्लेषण: सौर विकिरण ऊर्जा $\\to$ रासायनिक ऊर्जा; दौड़ना: आंतरिक रासायनिक ऊर्जा $\\to$ यांत्रिक गतिज ऊर्जा",
-      "प्रकाश संश्लेषण: विद्युत ऊर्जा $\\to$ रासायनिक ऊर्जा; दौड़ना: ध्वनि ऊर्जा $\\to$ गतिज ऊर्जा"
+      "प्रकाश संश्लेषण: परमाणु ऊर्जा → ऊष्मा ऊर्जा; दौड़ना: ऊष्मा ऊर्जा → विद्युत ऊर्जा",
+      "प्रकाश संश्लेषण: गुरुत्वाकर्षण ऊर्जा → सौर ऊर्जा; दौड़ना: गतिज ऊर्जा → स्थितिज ऊर्जा",
+      "प्रकाश संश्लेषण: सौर विकिरण ऊर्जा → रासायनिक ऊर्जा; दौड़ना: आंतरिक रासायनिक ऊर्जा → यांत्रिक गतिज ऊर्जा",
+      "प्रकाश संश्लेषण: विद्युत ऊर्जा → रासायनिक ऊर्जा; दौड़ना: ध्वनि ऊर्जा → गतिज ऊर्जा"
     ],
     "a": 2,
     "e": "Biological systems solar radiation ko capture karke metabolic chemical energy aur mechanical locomotion mein convert karte hain.\n\n• Option 1 is Incorrect because photosynthesis nuclear reaction nahi hai aur running electrical energy generate nahi karti.\n\n• Option 2 is Incorrect because gravitational energy photosynthesis ka input source nahi hoti.\n\n• Option 3 is Correct because **Photosynthesis** mein chlorophyll pigments **Solar Radiant Energy** ko **Chemical Potential Energy** (glucose) mein convert karte hain, aur **Muscular Running** mein cellular respiration se generated **Internal Chemical Energy (ATP)** muscles dwara **Mechanical Kinetic Energy** mein transform hoti hai.\n\n• Option 4 is Incorrect because plant intake electrical energy par based nahi hota."
@@ -301,26 +301,26 @@
       "उच्च बिना जले राख अवशेषों के साथ अत्यंत कम ऊष्मीय मान"
     ],
     "a": 0,
-    "e": "Good fuels high thermal output provide karte hain aur environmental tatha operational hazards ko minimize karte hain.\n\n• Option 1 is Correct because ek **Good Fuel** mein **High Calorific Value**, **Moderate/Proper Ignition Temperature**, **Low Smoke/Toxic Emissions** aur **Safe & Economical Handling** honi chahiye.\n\n• Option 2 is Incorrect because explosive combustion hazardous aur uncontrolled hota hai.\n\n• Option 3 is Incorrect because sulfur content combustion par toxic aur acid rain causing $\\text{SO}_2$ gas liberate karta hai.\n\n• Option 4 is Incorrect because low calorific value aur high ash content ek poor quality fuel ke characteristics hain."
+    "e": "Good fuels high thermal output provide karte hain aur environmental tatha operational hazards ko minimize karte hain.\n\n• Option 1 is Correct because ek **Good Fuel** mein **High Calorific Value**, **Moderate/Proper Ignition Temperature**, **Low Smoke/Toxic Emissions** aur **Safe & Economical Handling** honi chahiye.\n\n• Option 2 is Incorrect because explosive combustion hazardous aur uncontrolled hota hai.\n\n• Option 3 is Incorrect because sulfur content combustion par toxic aur acid rain causing SO₂ gas liberate karta hai.\n\n• Option 4 is Incorrect because low calorific value aur high ash content ek poor quality fuel ke characteristics hain."
   },
   {
     "p_id": "bpsc_phys_m27_17",
-    "qe": "Gravitational potential energy ($U$) measures work done against gravity when elevating a mass. What is the gravitational potential energy formula for a body of mass $m$ raised to height $h$ near Earth's surface, and what happens if $h = 0$ at the chosen reference plane?",
-    "qh": "गुरुत्वीय स्थितिज ऊर्जा ($U$) किसी द्रव्यमान को ऊपर उठाते समय गुरुत्वाकर्षण के विरुद्ध किए गए कार्य को मापती है। पृथ्वी की सतह के पास ऊंचाई $h$ तक उठाए गए द्रव्यमान $m$ के पिंड के लिए गुरुत्वीय स्थितिज ऊर्जा का सूत्र क्या है, और यदि चुने गए संदर्भ तल पर $h = 0$ हो तो क्या होता है?",
+    "qe": "Gravitational potential energy (U) measures work done against gravity when elevating a mass. What is the gravitational potential energy formula for a body of mass m raised to height h near Earth's surface, and what happens if h = 0 at the chosen reference plane?",
+    "qh": "गुरुत्वीय स्थितिज ऊर्जा (U) किसी द्रव्यमान को ऊपर उठाते समय गुरुत्वाकर्षण के विरुद्ध किए गए कार्य को मापती है। पृथ्वी की सतह के पास ऊंचाई h तक उठाए गए द्रव्यमान m के पिंड के लिए गुरुत्वीय स्थितिज ऊर्जा का सूत्र क्या है, और यदि चुने गए संदर्भ तल पर h = 0 हो तो क्या होता है?",
     "oe": [
-      "$U = \\frac{1}{2}mgh^2$; Potential energy becomes infinite at $h = 0$.",
-      "$U = mgh + c^2$; Potential energy depends on the speed of light.",
-      "$U = mgh$; Potential energy is zero ($U = 0$) at the reference plane ($h = 0$).",
-      "$U = \\frac{mg}{h}$; Potential energy is independent of height."
+      "U = (1/2) m · g · h²; Potential energy becomes infinite at h = 0.",
+      "U = m · g · h + c²; Potential energy depends on the speed of light.",
+      "U = m · g · h; Potential energy is zero (U = 0) at the reference plane (h = 0).",
+      "U = (m · g) / h; Potential energy is independent of height."
     ],
     "oh": [
-      "$U = \\frac{1}{2}mgh^2$; $h = 0$ पर स्थितिज ऊर्जा अनंत हो जाती है।",
-      "$U = mgh + c^2$; स्थितिज ऊर्जा प्रकाश की गति पर निर्भर करती है।",
-      "$U = mgh$; संदर्भ तल ($h = 0$) पर स्थितिज ऊर्जा शून्य ($U = 0$) होती है।",
-      "$U = \\frac{mg}{h}$; स्थितिज ऊर्जा ऊंचाई से स्वतंत्र है।"
+      "U = (1/2) m · g · h²; h = 0 पर स्थितिज ऊर्जा अनंत हो जाती है।",
+      "U = m · g · h + c²; स्थितिज ऊर्जा प्रकाश की गति पर निर्भर करती है।",
+      "U = m · g · h; संदर्भ तल (h = 0) पर स्थितिज ऊर्जा शून्य (U = 0) होती है।",
+      "U = (m · g) / h; स्थितिज ऊर्जा ऊंचाई से स्वतंत्र है।"
     ],
     "a": 2,
-    "e": "Gravitational potential energy gravity force ke against lift karne mein kiye gaye work $W = mgh$ ke roop mein define hoti hai.\n\n• Option 1 is Incorrect because potential energy quadratic height formulation ($h^2$) follow nahi karti.\n\n• Option 2 is Incorrect because Newtonian gravitational potential energy formula mein speed of light ($c$) include nahi hota.\n\n• Option 3 is Correct because constant gravity ($g$) mein mass $m$ ko height $h$ tak lift karne par work done $W = (mg)h = mgh$ hota hai, isliye **$U = mgh$**; reference level ($h = 0$) par potential energy strictly zero (**$U = 0$**) hoti hai.\n\n• Option 4 is Incorrect because yeh formula dimensionally galat hai aur height ke inverse relationship ko assume karta hai."
+    "e": "Gravitational potential energy gravity force ke against lift karne mein kiye gaye work W = m · g · h ke roop mein define hoti hai.\n\n• Option 1 is Incorrect because potential energy quadratic height formulation (h²) follow nahi karti.\n\n• Option 2 is Incorrect because Newtonian gravitational potential energy formula mein speed of light (c) include nahi hota.\n\n• Option 3 is Correct because constant gravity (g) mein mass m ko height h tak lift karne par work done W = (m · g) · h = m · g · h hota hai, isliye **U = m · g · h**; reference level (h = 0) par potential energy strictly zero (**U = 0**) hoti hai.\n\n• Option 4 is Incorrect because yeh formula dimensionally galat hai aur height ke inverse relationship ko assume karta hai."
   },
   {
     "p_id": "bpsc_phys_m27_18",
@@ -358,47 +358,46 @@
       "एक ऊँचे पहाड़ी बांध के जलाशय में जमा पानी"
     ],
     "a": 0,
-    "e": "Elastic potential energy shape aur intermolecular configuration ke deformation ke viruddh work karne se store hoti hai.\n\n• Option 1 is Correct because **mechanical wrist watch ki wound spring** ($U = \\frac{1}{2}k\\theta^2$) aur **stretched bowstring** ($U = \\frac{1}{2}kx^2$) mein elastic restoring forces ke against mechanical deformation kiya jata hai, jo **Elastic Potential Energy** ke roop mein store hota hai.\n\n• Option 2 is Incorrect because cliff par rakha boulder position/height ki wajah se gravitational potential energy hold karta hai.\n\n• Option 3 is Incorrect because flying cricket ball mein motion ke karan translational kinetic energy hoti hai.\n\n• Option 4 is Incorrect because dam ka stored water height ($mgh$) ki wajah se gravitational potential energy represent karta hai."
+    "e": "Elastic potential energy shape aur intermolecular configuration ke deformation ke viruddh work karne se store hoti hai.\n\n• Option 1 is Correct because **mechanical wrist watch ki wound spring** [U = (1/2) k θ²] aur **stretched bowstring** [U = (1/2) k x²] mein elastic restoring forces ke against mechanical deformation kiya jata hai, jo **Elastic Potential Energy** ke roop mein store hota hai.\n\n• Option 2 is Incorrect because cliff par rakha boulder position/height ki wajah se gravitational potential energy hold karta hai.\n\n• Option 3 is Incorrect because flying cricket ball mein motion ke karan translational kinetic energy hoti hai.\n\n• Option 4 is Incorrect because dam ka stored water height (mgh) ki wajah se gravitational potential energy represent karta hai."
   },
   {
     "p_id": "bpsc_phys_m27_20",
-    "qe": "Mechanical power ($P$) connects work performed ($W$) to time duration ($t$). If two cranes, A and B, lift identical $1000\\text{ kg}$ masses to an equal height of $20\\text{ meters}$, but Crane A takes $10\\text{ seconds}$ while Crane B takes $40\\text{ seconds}$, how do their work done ($W$) and power output ($P$) compare?",
-    "qh": "यांत्रिक शक्ति ($P$) किए गए कार्य ($W$) को समय की अवधि ($t$) से जोड़ती है। यदि दो क्रेन, A और B, समान $1000\\text{ kg}$ द्रव्यमान को $20\\text{ मीटर}$ की समान ऊंचाई तक उठाती हैं, लेकिन क्रेन A को $10\\text{ सेकंड}$ लगते हैं जबकि क्रेन B को $40\\text{ सेकंड}$ लगते हैं, तो उनके द्वारा किए गए कार्य ($W$) और शक्ति आउटपुट ($P$) की तुलना कैसे होगी?",
+    "qe": "Mechanical power (P) connects work performed (W) to time duration (t). If two cranes, A and B, lift identical 1000 kg masses to an equal height of 20 meters, but Crane A takes 10 seconds while Crane B takes 40 seconds, how do their work done (W) and power output (P) compare?",
+    "qh": "यांत्रिक शक्ति (P) किए गए कार्य (W) को समय की अवधि (t) से जोड़ती है। यदि दो क्रेन, A और B, समान 1000 kg द्रव्यमान को 20 मीटर की समान ऊंचाई तक उठाती हैं, लेकिन क्रेन A को 10 सेकंड लगते हैं जबकि क्रेन B को 40 सेकंड लगते हैं, तो उनके द्वारा किए गए कार्य (W) और शक्ति आउटपुट (P) की तुलना कैसे होगी?",
     "oe": [
       "Crane B delivers higher power because it operates for a longer time duration.",
       "Neither crane performs work because lifting is perpendicular to Earth.",
-      "Both cranes perform identical work ($W_A = W_B = mgh$), but Crane A delivers 4 times higher power output ($P_A = 4 P_B$) because it completes the work in one-fourth the time.",
+      "Both cranes perform identical work (W_A = W_B = m · g · h), but Crane A delivers 4 times higher power output (P_A = 4 · P_B) because it completes the work in one-fourth the time.",
       "Crane A does 4 times more work than Crane B; Power outputs are equal."
     ],
     "oh": [
       "क्रेन B अधिक शक्ति प्रदान करती है क्योंकि यह लंबी समयावधि के लिए काम करती है।",
       "कोई भी क्रेन काम नहीं करती क्योंकि उठाना पृथ्वी के लंबवत है।",
-      "दोनों क्रेन समान कार्य ($W_A = W_B = mgh$) करती हैं, लेकिन क्रेन A का शक्ति आउटपुट 4 गुना अधिक ($P_A = 4 P_B$) है क्योंकि यह एक-चौथाई समय में कार्य पूरा करती है।",
+      "दोनों क्रेन समान कार्य (W_A = W_B = m · g · h) करती हैं, लेकिन क्रेन A का शक्ति आउटपुट 4 गुना अधिक (P_A = 4 · P_B) है क्योंकि यह एक-चौथाई समय में कार्य पूरा करती है।",
       "क्रेन A क्रेन B की तुलना में 4 गुना अधिक कार्य करती है; शक्ति आउटपुट बराबर हैं।"
     ],
     "a": 2,
-    "e": "Work done gravitational field mein path aur time se independent hota hai ($W = mgh$), jabki power work per unit time ($P = W/t$) hoti hai.\n\n• Option 1 is Incorrect because zyada time lene wali machine ka power output kam hota hai ($P \\propto 1/t$).\n\n• Option 2 is Incorrect because lifting force aur vertical displacement parallel hote hain ($\\theta = 0^\\circ$), isliye work non-zero hota hai.\n\n• Option 3 is Correct because dono cranes $1000\\text{ kg}$ mass ko $20\\text{ m}$ elevate karti hain, isliye **$W_A = W_B = mgh$** (identical work). Crane A $10\\text{ s}$ leti hai aur Crane B $40\\text{ s}$, jisse ratio $\\frac{P_A}{P_B} = \\frac{W/10}{W/40} = 4$ banta hai, arthat **$P_A = 4 P_B$**.\n\n• Option 4 is Incorrect because work execution time par depend nahi karta, isliye dono cranes dwara kiya gaya work identical ($W_A = W_B$) hota hai."
+    "e": "Work done gravitational field mein path aur time se independent hota hai (W = m · g · h), jabki power work per unit time (P = W / t) hoti hai.\n\n• Option 1 is Incorrect because zyada time lene wali machine ka power output kam hota hai (P ∝ 1/t).\n\n• Option 2 is Incorrect because lifting force aur vertical displacement parallel hote hain (θ = 0°), isliye work non-zero hota hai.\n\n• Option 3 is Correct because dono cranes 1000 kg mass ko 20 m elevate karti hain, isliye **W_A = W_B = m · g · h** (identical work). Crane A 10 s leti hai aur Crane B 40 s, jisse ratio P_A / P_B = (W/10) / (W/40) = 4 banta hai, arthat **P_A = 4 · P_B**.\n\n• Option 4 is Incorrect because work execution time par depend nahi karta, isliye dono cranes dwara kiya gaya work identical (W_A = W_B) hota hai."
   },
   {
     "p_id": "bpsc_phys_m28_01",
     "qe": "Anaerobic decomposition of organic waste in a bio-gas digester converts complex biomass into a combustible gaseous mixture. What are the primary chemical constituents of bio-gas, and what role does cow-dung play in the process?",
     "qh": "बायो-गैस डाइजेस्टर में जैविक कचरे का अवायवीय अपघटन (anaerobic decomposition) जटिल बायोमास को एक ज्वलनशील गैसीय मिश्रण में परिवर्तित करता है। बायो-गैस के प्राथमिक रासायनिक घटक क्या हैं, और इस प्रक्रिया में गाय के गोबर की क्या भूमिका है?",
     "oe": [
-      "Bio-gas is a mixture of methane ($CH_4$), carbon dioxide ($CO_2$), hydrogen ($H_2$), and hydrogen sulphide ($H_2S$), with methane as the major combustible component; cow-dung serves as the primary organic substrate (gobar-gas).",
+      "Bio-gas is a mixture of methane (CH₄), carbon dioxide (CO₂), hydrogen (H₂), and hydrogen sulphide (H₂S), with methane as the major combustible component; cow-dung serves as the primary organic substrate (gobar-gas).",
       "Bio-gas consists exclusively of butane and propane gas under high compression.",
       "Bio-gas consists primarily of pure oxygen and carbon monoxide; cow-dung acts as a chemical catalyst.",
       "Bio-gas is composed of nitrogen dioxide and sulfur dioxide generated by high-temperature combustion."
     ],
     "oh": [
-      "बायो-गैस मीथेन ($CH_4$), कार्बन डाइऑक्साइड ($CO_2$), हाइड्रोजन ($H_2$), और हाइड्रोजन सल्फाइड ($H_2S$) का मिश्रण है, जिसमें मीथेन प्रमुख दहनशील घटक है; गाय का गोबर प्राथमिक जैविक सब्सट्रेट (गोबर-गैस) के रूप में कार्य करता है।",
+      "बायो-गैस मीथेन (CH₄), कार्बन डाइऑक्साइड (CO₂), हाइड्रोजन (H₂), और हाइड्रोजन सल्फाइड (H₂S) का मिश्रण है, जिसमें मीथेन प्रमुख दहनशील घटक है; गाय का गोबर प्राथमिक जैविक सब्सट्रेट (गोबर-गैस) के रूप में कार्य करता है।",
       "बायो-गैस में उच्च संपीड़न के तहत विशेष रूप से ब्यूटेन और प्रोपेन गैस होती है।",
       "बायो-गैस में मुख्य रूप से शुद्ध ऑक्सीजन और कार्बन मोनोऑक्साइड होते हैं; गाय का गोबर एक रासायनिक उत्प्रेरक के रूप में कार्य करता है।",
       "बायो-गैस उच्च तापमान दहन द्वारा उत्पन्न नाइट्रोजन डाइऑक्साइड और सल्फर डाइऑक्साइड से बना है।"
     ],
     "a": 0,
-    "e": "Bio-gas organic matter ke anaerobic bacterial decomposition se generate hone wala combustible fuel mixture hai.\n\n• Option 1 is Correct because **Bio-gas** mein primarily **Methane ($CH_4$, up to $75\\%$)** combustible gas ke roop mein hoti hai, jiske sath **$CO_2$ ($20-25\\%$)**, trace **$H_2$** aur **$H_2S$** hote hain; cattle dung (gobar) primary substrate ka kaam karta hai jisse ise 'Gobar Gas' bhi kehte hain.\n\n• Option 2 is Incorrect because butane aur propane Liquefied Petroleum Gas (LPG) ke main constituents hain.\n\n• Option 3 is Incorrect because biogas oxygen-free anaerobic environment mein banti hai aur isme free oxygen nahi hoti.\n\n• Option 4 is Incorrect because $\\text{NO}_2$ aur $\\text{SO}_2$ thermal fossil fuel combustion ke pollutants hain."
+    "e": "Bio-gas organic matter ke anaerobic bacterial decomposition se generate hone wala combustible fuel mixture hai.\n\n• Option 1 is Correct because **Bio-gas** mein primarily **Methane (CH₄, up to 75%)** combustible gas ke roop mein hoti hai, jiske sath **CO₂ (20-25%)**, trace **H₂** aur **H₂S** hote hain; cattle dung (gobar) primary substrate ka kaam karta hai jisse ise 'Gobar Gas' bhi kehte hain.\n\n• Option 2 is Incorrect because butane aur propane Liquefied Petroleum Gas (LPG) ke main constituents hain.\n\n• Option 3 is Incorrect because biogas oxygen-free anaerobic environment mein banti hai aur isme free oxygen nahi hoti.\n\n• Option 4 is Incorrect because NO₂ aur SO₂ thermal fossil fuel combustion ke pollutants hain."
   },
-
   {
     "p_id": "bpsc_phys_m28_02",
     "qe": "Evaluating bio-gas production highlights agricultural and waste management benefits. What remains in the outlet chamber after anaerobic digestion in a bio-gas plant, and what is its agricultural utility?",
@@ -416,7 +415,7 @@
       "विषाक्त राख अवशेष जिसे खतरनाक लैंडफिल साइटों में दफनाया जाना चाहिए।"
     ],
     "a": 1,
-    "e": "Anaerobic digestion ke baad bacha hua organic byproduct nutrient-rich bio-fertilizer provide karta hai.\n\n• Option 1 is Incorrect because spent slurry completely biodegradable aur non-toxic organic substance hoti hai, synthetic polymer nahi.\n\n• Option 2 is Correct because carbon extract hone ke baad outlet se nikalne wali **Spent Slurry** concentrated **Nitrogen ($N$) aur Phosphorus ($P$)** se rich hoti hai, jo weed-free aur pathogen-free hone ke karan **excellent organic manure/fertilizer** ka kaam karti hai.\n\n• Option 3 is Incorrect because silicon semiconductor solar wafer manufacturing mein use hota hai, biogas plant mein nahi.\n\n• Option 4 is Incorrect because biogas production clean biochemical digestion hai jisme toxic ash residue produce nahi hoti."
+    "e": "Anaerobic digestion ke baad bacha hua organic byproduct nutrient-rich bio-fertilizer provide karta hai.\n\n• Option 1 is Incorrect because spent slurry completely biodegradable aur non-toxic organic substance hoti hai, synthetic polymer nahi.\n\n• Option 2 is Correct because carbon extract hone ke baad outlet se nikalne wali **Spent Slurry** concentrated **Nitrogen (N) aur Phosphorus (P)** se rich hoti hai, jo weed-free aur pathogen-free hone ke karan **excellent organic manure/fertilizer** ka kaam karti hai.\n\n• Option 3 is Incorrect because silicon semiconductor solar wafer manufacturing mein use hota hai, biogas plant mein nahi.\n\n• Option 4 is Incorrect because biogas production clean biochemical digestion hai jisme toxic ash residue produce nahi hoti."
   },
   {
     "p_id": "bpsc_phys_m28_03",
@@ -435,64 +434,64 @@
       "जर्मनी"
     ],
     "a": 0,
-    "e": "Wind energy ke large-scale national integration aur geographical reliance ke aadhar par specific international titles diye gaye hain.\n\n• Option 1 is Correct because **Denmark** apni domestic electricity consumption ka **$25\\%$ se $47+\\%$** hissa wind turbines se generate karta hai, isliye ise globally **'Country of Winds' (पवनों का देश)** kaha jata hai.\n\n• Option 2 is Incorrect because France world ke largest solar furnace ke liye jana jata hai.\n\n• Option 3 is Incorrect because India wind capacity mein globally 4th rank par hai, par yeh title hold nahi karta.\n\n• Option 4 is Incorrect because Germany leading producer hone ke bawajood is specific title se recognize nahi hota."
+    "e": "Wind energy ke large-scale national integration aur geographical reliance ke aadhar par specific international titles diye gaye hain.\n\n• Option 1 is Correct because **Denmark** apni domestic electricity consumption ka **25% se 47+%** hissa wind turbines se generate karta hai, isliye ise globally **'Country of Winds' (पवनों का देश)** kaha jata hai.\n\n• Option 2 is Incorrect because France world ke largest solar furnace ke liye jana jata hai.\n\n• Option 3 is Incorrect because India wind capacity mein globally 4th rank par hai, par yeh title hold nahi karta.\n\n• Option 4 is Incorrect because Germany leading producer hone ke bawajood is specific title se recognize nahi hota."
   },
   {
     "p_id": "bpsc_phys_m28_04",
     "qe": "Commercial wind energy farms require specific environmental and meteorological conditions to sustain continuous electrical power generation. What is the minimum threshold wind speed necessary for the satisfactory operational working of a wind turbine generator?",
     "qh": "वाणिज्यिक पवन ऊर्जा फार्मों (wind energy farms) को निरंतर विद्युत शक्ति उत्पादन को बनाए रखने के लिए विशिष्ट पर्यावरणीय और मौसम संबंधी स्थितियों की आवश्यकता होती है। पवन टर्बाइन जनरेटर के संतोषजनक परिचालन कार्य के लिए न्यूनतम सीमा पवन गति (minimum threshold wind speed) क्या आवश्यक है?",
     "oe": [
-      "$50 \\text{ km/h}$",
-      "$5 \\text{ km/h}$",
-      "$15 \\text{ km/h}$",
-      "$100 \\text{ km/h}$"
+      "50 km/h",
+      "5 km/h",
+      "15 km/h",
+      "100 km/h"
     ],
     "oh": [
-      "$50 \\text{ किमी/घंटा}$",
-      "$5 \\text{ किमी/घंटा}$",
-      "$15 \\text{ किमी/घंटा}$",
-      "$100 \\text{ किमी/घंटा}$"
+      "50 किमी/घंटा",
+      "5 किमी/घंटा",
+      "15 किमी/घंटा",
+      "100 किमी/घंटा"
     ],
     "a": 2,
-    "e": "Wind turbine generators ko synchronize karke commercial output produce karne ke liye minimum cut-in aerodynamic speed required hoti hai.\n\n• Option 1 is Incorrect because $50\\text{ km/h}$ high gale speeds ko represent karta hai.\n\n• Option 2 is Incorrect because $5\\text{ km/h}$ heavy rotor blades ke mechanical inertia ko turn karne ke liye insufficiently low speed hai.\n\n• Option 3 is Correct because wind turbine blades par aerodynamic lift maintain karne aur continuous commercial power generation ke liye **minimum threshold wind speed strictly $15\\text{ km/h}$ (lagbhag $4.2\\text{ m/s}$)** honi zaroori hoti hai.\n\n• Option 4 is Incorrect because $100\\text{ km/h}$ storm velocity hai jisme damage avoid karne ke liye turbines brake laga kar shut down kar di jaati hain."
+    "e": "Wind turbine generators ko synchronize karke commercial output produce karne ke liye minimum cut-in aerodynamic speed required hoti hai.\n\n• Option 1 is Incorrect because 50 km/h high gale speeds ko represent karta hai.\n\n• Option 2 is Incorrect because 5 km/h heavy rotor blades ke mechanical inertia ko turn karne ke liye insufficiently low speed hai.\n\n• Option 3 is Correct because wind turbine blades par aerodynamic lift maintain karne aur continuous commercial power generation ke liye **minimum threshold wind speed strictly 15 km/h (lagbhag 4.2 m/s)** honi zaroori hoti hai.\n\n• Option 4 is Incorrect because 100 km/h storm velocity hai jisme damage avoid karne ke liye turbines brake laga kar shut down kar di jaati hain."
   },
   {
     "p_id": "bpsc_phys_m28_05",
-    "qe": "Establishing a large-scale commercial wind energy farm involves significant spatial and technical constraints. Approximately how much land area is required to set up a $1 \\text{ MW}$ commercial wind generator installation?",
-    "qh": "बड़े पैमाने पर वाणिज्यिक पवन ऊर्जा फार्म स्थापित करने में महत्वपूर्ण स्थानिक और तकनीकी बाधाएं शामिल हैं। $1 \\text{ MW}$ वाणिज्यिक पवन जनरेटर स्थापना स्थापित करने के लिए लगभग कितनी भूमि क्षेत्र की आवश्यकता होती है?",
+    "qe": "Establishing a large-scale commercial wind energy farm involves significant spatial and technical constraints. Approximately how much land area is required to set up a 1 MW commercial wind generator installation?",
+    "qh": "बड़े पैमाने पर वाणिज्यिक पवन ऊर्जा फार्म स्थापित करने में महत्वपूर्ण स्थानिक और तकनीकी बाधाएं शामिल हैं। 1 MW वाणिज्यिक पवन जनरेटर स्थापना स्थापित करने के लिए लगभग कितनी भूमि क्षेत्र की आवश्यकता होती है?",
     "oe": [
-      "$20 \\text{ hectares}$",
-      "$100 \\text{ hectares}$",
-      "$2 \\text{ hectares}$",
-      "$0.1 \\text{ hectares}$"
+      "20 hectares",
+      "100 hectares",
+      "2 hectares",
+      "0.1 hectares"
     ],
     "oh": [
-      "$20 \\text{ हेक्टेयर}$",
-      "$100 \\text{ हेक्टेयर}$",
-      "$2 \\text{ हेक्टेयर}$",
-      "$0.1 \\text{ हेक्टेयर}$"
+      "20 हेक्टेयर",
+      "100 हेक्टेयर",
+      "2 हेक्टेयर",
+      "0.1 हेक्टेयर"
     ],
     "a": 2,
-    "e": "Wind turbine towers ke beech aerodynamic wake interference avoid karne ke liye spatial distance required hota hai.\n\n• Option 1 is Incorrect because $20\\text{ hectares}$ 1 MW plant ke footprint ke liye bohot zyada overestimate karta hai.\n\n• Option 2 is Incorrect because $100\\text{ hectares}$ massive multi-megawatt farms ke liye required hota hai.\n\n• Option 3 is Correct because wind farm mein wake turbulence prevent karne ke liye towers ke beech 5 se 7 rotor diameter ki spacing required hoti hai, jisse **$1\\text{ MW}$ wind power facility ke liye approximately $2\\text{ hectares}$ (roughly $5\\text{ acres}$) land area** lagta hai.\n\n• Option 4 is Incorrect because $0.1\\text{ hectare}$ rotor sweep clearance ke comparison mein severely insufficient hai."
+    "e": "Wind turbine towers ke beech aerodynamic wake interference avoid karne ke liye spatial distance required hota hai.\n\n• Option 1 is Incorrect because 20 hectares 1 MW plant ke footprint ke liye bohot zyada overestimate karta hai.\n\n• Option 2 is Incorrect because 100 hectares massive multi-megawatt farms ke liye required hota hai.\n\n• Option 3 is Correct because wind farm mein wake turbulence prevent karne ke liye towers ke beech 5 se 7 rotor diameter ki spacing required hoti hai, jisse **1 MW wind power facility ke liye approximately 2 hectares (roughly 5 acres) land area** lagta hai.\n\n• Option 4 is Incorrect because 0.1 hectare rotor sweep clearance ke comparison mein severely insufficient hai."
   },
   {
     "p_id": "bpsc_phys_m28_06",
     "qe": "Large-scale commercial wind power harnessing in India is concentrated in specific wind-rich coastal corridors. Where is the largest operational wind energy farm in India established, and what is its maximum generation capacity?",
     "qh": "भारत में बड़े पैमाने पर वाणिज्यिक पवन ऊर्जा दोहन विशिष्ट पवन-समृद्ध तटीय गलियारों में केंद्रित है। भारत में सबसे बड़ा परिचालन पवन ऊर्जा फार्म कहां स्थापित है, और इसकी अधिकतम उत्पादन क्षमता क्या है?",
     "oe": [
-      "Near Kanyakumari in Tamil Nadu ($380 \\text{ MW}$)",
-      "Rann of Kutch in Gujarat ($50 \\text{ MW}$)",
-      "Shimla in Himachal Pradesh ($1000 \\text{ MW}$)",
-      "Jaisalmer in Rajasthan ($100 \\text{ MW}$)"
+      "Near Kanyakumari in Tamil Nadu (380 MW)",
+      "Rann of Kutch in Gujarat (50 MW)",
+      "Shimla in Himachal Pradesh (1000 MW)",
+      "Jaisalmer in Rajasthan (100 MW)"
     ],
     "oh": [
-      "तमिलनाडु में कन्याकुमारी के पास ($380 \\text{ MW}$)",
-      "गुजरात में कच्छ का रण ($50 \\text{ MW}$)",
-      "हिमाचल प्रदेश में शिमला ($1000 \\text{ MW}$)",
-      "राजस्थान में जैसलमेर ($100 \\text{ MW}$)"
+      "तमिलनाडु में कन्याकुमारी के पास (380 MW)",
+      "गुजरात में कच्छ का रण (50 MW)",
+      "हिमाचल प्रदेश में शिमला (1000 MW)",
+      "राजस्थान में जैसलमेर (100 MW)"
     ],
     "a": 0,
-    "e": "India ke coastal aur mountain pass regions strong seasonal wind flows ke karan major wind power farms host karte hain.\n\n• Option 1 is Correct because India ka largest operational wind farm cluster **Tamil Nadu mein Kanyakumari (Muppandal region) ke paas** establish kiya gaya tha, jisko initially **$380\\text{ MW}$ capacity** ke sath setup kiya gaya tha.\n\n• Option 2 is Incorrect because Rann of Kutch major renewable zone hai par Kanyakumari landmark facility se replace nahi hota.\n\n• Option 3 is Incorrect because Himalayan mountainous valleys turbulent air currents ke karan large wind turbine grids ke liye unsuitable hain.\n\n• Option 4 is Incorrect because Jaisalmer Wind Park Rajasthan ka major hub hai par historical reference site nahi hai."
+    "e": "India ke coastal aur mountain pass regions strong seasonal wind flows ke karan major wind power farms host karte hain.\n\n• Option 1 is Correct because India ka largest operational wind farm cluster **Tamil Nadu mein Kanyakumari (Muppandal region) ke paas** establish kiya gaya tha, jisko initially **380 MW capacity** ke sath setup kiya gaya tha.\n\n• Option 2 is Incorrect because Rann of Kutch major renewable zone hai par Kanyakumari landmark facility se replace nahi hota.\n\n• Option 3 is Incorrect because Himalayan mountainous valleys turbulent air currents ke karan large wind turbine grids ke liye unsuitable hain.\n\n• Option 4 is Incorrect because Jaisalmer Wind Park Rajasthan ka major hub hai par historical reference site nahi hai."
   },
   {
     "p_id": "bpsc_phys_m28_07",
@@ -511,7 +510,7 @@
       "काला पेंट ऊष्मा अवशोषण को अधिकतम करता है; कांच की शीट कवर परावर्तित अवरक्त विकिरण (infrared radiation) को फंसाकर एक आंतरिक ग्रीनहाउस प्रभाव (Greenhouse Effect) बनाती है।"
     ],
     "a": 3,
-    "e": "Box-type solar cookers thermal radiation ke absorption aur trapping principles par operate karte hain.\n\n• Option 1 is Incorrect because black surfaces cooling nahi karti aur glass sheet heat escape allow nahi karti balki use trap karti hai.\n\n• Option 2 is Incorrect because black surfaces heat reflect nahi karti aur glass cover UV radiation generate nahi karta.\n\n• Option 3 is Incorrect because yeh properties thermal cooking dynamics se unrelated hain.\n\n• Option 4 is Correct because **Dull Black Paint** light aur thermal radiation ko maximally absorb karta hai, jabki **Transparent Glass Sheet Cover** incoming solar rays ko aane deta hai lekin emitted long-wavelength infrared radiation ko trap karke internal **Greenhouse Effect** produce karta hai ($100^\\circ\\text{C}-140^\\circ\\text{C}$)."
+    "e": "Box-type solar cookers thermal radiation ke absorption aur trapping principles par operate karte hain.\n\n• Option 1 is Incorrect because black surfaces cooling nahi karti aur glass sheet heat escape allow nahi karti balki use trap karti hai.\n\n• Option 2 is Incorrect because black surfaces heat reflect nahi karti aur glass cover UV radiation generate nahi karta.\n\n• Option 3 is Incorrect because yeh properties thermal cooking dynamics se unrelated hain.\n\n• Option 4 is Correct because **Dull Black Paint** light aur thermal radiation ko maximally absorb karta hai, jabki **Transparent Glass Sheet Cover** incoming solar rays ko aane deta hai lekin emitted long-wavelength infrared radiation ko trap karke internal **Greenhouse Effect** produce karta hai (100°C - 140°C)."
   },
   {
     "p_id": "bpsc_phys_m28_08",
@@ -521,54 +520,54 @@
       "Boiling rice and lentils (dal)",
       "Cooking vegetables slowly to retain nutrients",
       "Baking bread or chapattis, and deep frying foods",
-      "Heating water to $100^\\circ\\text{C}$"
+      "Heating water to 100°C"
     ],
     "oh": [
       "चावल और दाल उबालना",
       "पोषक तत्वों को बनाए रखने के लिए सब्जियों को धीमी गति से पकाना",
       "रोटी या चपाती पकाना (Baking), और खाद्य पदार्थों को डीप फ्राई (Deep Frying) करना",
-      "पानी को $100^\\circ\\text{C}$ तक गर्म करना"
+      "पानी को 100°C तक गर्म करना"
     ],
     "a": 2,
-    "e": "Box solar cookers moderate greenhouse temperatures deliver karte hain jo specific cooking types tak limited hote hain.\n\n• Option 1 is Incorrect because rice aur dal boil karna $\\approx 100^\\circ\\text{C}$ par box-type solar cooker mein easily ho jata hai.\n\n• Option 2 is Incorrect because slow cooking vegetables box solar cookers ka primary functional advantage hai.\n\n• Option 3 is Correct because box-type solar cookers maximum **$100^\\circ\\text{C} \\text{ to } 140^\\circ\\text{C}$** temperature hi achieve kar pate hain, isliye yeh **chapattis bake karne ya deep-frying karne ke liye required high temperature ($> 180^\\circ\\text{C}-200^\\circ\\text{C}$)** provide nahi kar sakte.\n\n• Option 4 is Incorrect because water heating standard solar cooker temperature limits ke andar aati hai."
+    "e": "Box solar cookers moderate greenhouse temperatures deliver karte hain jo specific cooking types tak limited hote hain.\n\n• Option 1 is Incorrect because rice aur dal boil karna ≈ 100°C par box-type solar cooker mein easily ho jata hai.\n\n• Option 2 is Incorrect because slow cooking vegetables box solar cookers ka primary functional advantage hai.\n\n• Option 3 is Correct because box-type solar cookers maximum **100°C to 140°C** temperature hi achieve kar pate hain, isliye yeh **chapattis bake karne ya deep-frying karne ke liye required high temperature (> 180°C - 200°C)** provide nahi kar sakte.\n\n• Option 4 is Incorrect because water heating standard solar cooker temperature limits ke andar aati hai."
   },
   {
     "p_id": "bpsc_phys_m28_09",
     "qe": "Atmospheric trapping of thermal radiation maintains Earth's habitable surface temperature. Which set of gases constitutes the primary atmospheric Greenhouse Gases responsible for the Greenhouse Effect?",
     "qh": "तापीय विकिरण का वायुमंडलीय फंसाव (trapping) पृथ्वी के रहने योग्य सतह के तापमान को बनाए रखता है। गैसों का कौन सा समूह ग्रीनहाउस प्रभाव के लिए जिम्मेदार प्राथमिक वायुमंडलीय ग्रीनहाउस गैसों (Greenhouse Gases) का गठन करता है?",
     "oe": [
-      "Chlorine ($Cl_2$), Fluorine ($F_2$), and Hydrogen ($H_2$)",
-      "Helium ($He$), Neon ($Ne$), and Krypton ($Kr$)",
-      "Carbon Dioxide ($CO_2$), Water Vapour ($H_2O$), and Methane ($CH_4$)",
-      "Nitrogen ($N_2$), Oxygen ($O_2$), and Argon ($Ar$)"
+      "Chlorine (Cl₂), Fluorine (F₂), and Hydrogen (H₂)",
+      "Helium (He), Neon (Ne), and Krypton (Kr)",
+      "Carbon Dioxide (CO₂), Water Vapour (H₂O), and Methane (CH₄)",
+      "Nitrogen (N₂), Oxygen (O₂), and Argon (Ar)"
     ],
     "oh": [
-      "क्लोरीन ($Cl_2$), फ्लोरीन ($F_2$), और हाइड्रोजन ($H_2$)",
-      "हीलियम ($He$), नियॉन ($Ne$), और क्रिप्टन ($Kr$)",
-      "कार्बन डाइऑक्साइड ($CO_2$), जल वाष्प ($H_2O$), और मीथेन ($CH_4$)",
-      "नाइट्रोजन ($N_2$), ऑक्सीजन ($O_2$), और आर्गन ($Ar$)"
+      "क्लोरीन (Cl₂), फ्लोरीन (F₂), और हाइड्रोजन (H₂)",
+      "हीलियम (He), नियॉन (Ne), और क्रिप्टन (Kr)",
+      "कार्बन डाइऑक्साइड (CO₂), जल वाष्प (H₂O), और मीथेन (CH₄)",
+      "नाइट्रोजन (N₂), ऑक्सीजन (O₂), और आर्गन (Ar)"
     ],
     "a": 2,
-    "e": "Greenhouse gases terrestrial infrared thermal radiation absorb aur re-emit karke troposphere ka temperature maintain karti hain.\n\n• Option 1 is Incorrect because elemental halogens aur hydrogen gas greenhouse heat trapping ke main components nahi hain.\n\n• Option 2 is Incorrect because monoatomic noble gases infrared photons absorb nahi karti hain.\n\n• Option 3 is Correct because **Carbon Dioxide ($CO_2$)**, **Water Vapour ($H_2O$)**, aur **Methane ($CH_4$)** polyatomic/heteronuclear molecules hain jo Earth se emit hone wali long-wave infrared radiation ko trap karke primary **Greenhouse Effect** produce karte hain.\n\n• Option 4 is Incorrect because $N_2, O_2$ aur $Ar$ diatomic/monoatomic molecules hone ke karan dipole moment change nahi karte aur infrared absorb nahi karte."
+    "e": "Greenhouse gases terrestrial infrared thermal radiation absorb aur re-emit karke troposphere ka temperature maintain karti hain.\n\n• Option 1 is Incorrect because elemental halogens aur hydrogen gas greenhouse heat trapping ke main components nahi hain.\n\n• Option 2 is Incorrect because monoatomic noble gases infrared photons absorb nahi karti hain.\n\n• Option 3 is Correct because **Carbon Dioxide (CO₂)**, **Water Vapour (H₂O)**, aur **Methane (CH₄)** polyatomic/heteronuclear molecules hain jo Earth se emit hone wali long-wave infrared radiation ko trap karke primary **Greenhouse Effect** produce karte hain.\n\n• Option 4 is Incorrect because N₂, O₂ aur Ar diatomic/monoatomic molecules hone ke karan dipole moment change nahi karte aur infrared absorb nahi karte."
   },
   {
     "p_id": "bpsc_phys_m28_10",
     "qe": "Solar photovoltaic cells convert incident sunlight directly into electrical energy via semiconductor physics. What semiconductor materials are primarily used to manufacture solar cells, and what voltage does a single cell typical unit generate?",
     "qh": "सौर फोटोवोल्टिक सेल अर्धचालक भौतिकी के माध्यम से आपतित सूर्य के प्रकाश को सीधे विद्युत ऊर्जा में परिवर्तित करते हैं। मुख्य रूप से सौर सेल के निर्माण के लिए किन अर्धचालक सामग्रियों का उपयोग किया जाता है, और एक एकल सेल विशिष्ट इकाई कितना वोल्टेज उत्पन्न करती है?",
     "oe": [
-      "Lead and Aluminum; potential difference of $12 \\text{ V}$",
-      "Graphite and Sulfur; potential difference of $50 \\text{ V}$",
-      "Semiconductors like Silicon ($Si$), Gallium ($Ga$), and Germanium ($Ge$); potential difference of $0.5\\text{-}1 \\text{ V}$",
-      "Copper and Iron; potential difference of $220 \\text{ V}$"
+      "Lead and Aluminum; potential difference of 12 V",
+      "Graphite and Sulfur; potential difference of 50 V",
+      "Semiconductors like Silicon (Si), Gallium (Ga), and Germanium (Ge); potential difference of 0.5 - 1 V",
+      "Copper and Iron; potential difference of 220 V"
     ],
     "oh": [
-      "सीसा और एल्युमिनियम; $12 \\text{ V}$ का विभवांतर",
-      "ग्रेफाइट और सल्फर; $50 \\text{ V}$ का विभवांतर",
-      "सिलिकॉन ($Si$), गैलियम ($Ga$), और जर्मेनियम ($Ge$) जैसे अर्धचालक; $0.5\\text{-}1 \\text{ V}$ का विभवांतर",
-      "तांबा और लोहा; $220 \\text{ V}$ का विभवांतर"
+      "सीसा और एल्युमिनियम; 12 V का विभवांतर",
+      "ग्रेफाइट और सल्फर; 50 V का विभवांतर",
+      "सिलिकॉन (Si), गैलियम (Ga), और जर्मेनियम (Ge) जैसे अर्धचालक; 0.5 - 1 V का विभवांतर",
+      "तांबा और लोहा; 220 V का विभवांतर"
     ],
     "a": 2,
-    "e": "Solar photovoltaic cells semiconductor materials ka use karke light energy ko directly electrical voltage mein convert karte hain.\n\n• Option 1 is Incorrect because Lead aur Aluminum batteries/structural components mein use hote hain, semiconductor solar cells mein nahi.\n\n• Option 2 is Incorrect because Graphite aur Sulfur non-semiconductor allotropes aur non-metals hain jinse solar cell nahi banta.\n\n• Option 3 is Correct because **Photovoltaic (Solar) Cells** high-purity semiconductors jaise **Silicon ($Si$)**, Gallium ($Ga$) aur Germanium ($Ge$) se banaye jaate hain; ek typical single solar cell standard sunlight mein lagbhag **$0.5 \\text{ to } 1 \\text{ V}$ ka potential difference** aur approx $0.7 \\text{ W}$ electrical power deliver karta hai.\n\n• Option 4 is Incorrect because Copper aur Iron metallic conductors hain aur 220 V household AC mains voltage hai."
+    "e": "Solar photovoltaic cells semiconductor materials ka use karke light energy ko directly electrical voltage mein convert karte hain.\n\n• Option 1 is Incorrect because Lead aur Aluminum batteries/structural components mein use hote hain, semiconductor solar cells mein nahi.\n\n• Option 2 is Incorrect because Graphite aur Sulfur non-semiconductor allotropes aur non-metals hain jinse solar cell nahi banta.\n\n• Option 3 is Correct because **Photovoltaic (Solar) Cells** high-purity semiconductors jaise **Silicon (Si)**, Gallium (Ga) aur Germanium (Ge) se banaye jaate hain; ek typical single solar cell standard sunlight mein lagbhag **0.5 to 1 V ka potential difference** aur approx 0.7 W electrical power deliver karta hai.\n\n• Option 4 is Incorrect because Copper aur Iron metallic conductors hain aur 220 V household AC mains voltage hai."
   },
   {
     "p_id": "bpsc_phys_m28_11",
@@ -590,613 +589,23 @@
     "e": "Solar cells solid-state semiconductor devices hain jo bina moving parts ke clean electricity generate karte hain.\n\n• Option 1 is Correct because **Solar Cells** mein **koi moving mechanical parts nahi hote**, inka **maintenance minimal** hota hai, yeh bina focusing mirrors ke operate karte hain aur remote/inaccessible areas (jaise satellites aur remote villages) mein easily deploy kiye ja sakte hain.\n\n• Option 2 is Incorrect because solar cell operation completely clean aur emission-free hota hai.\n\n• Option 3 is Incorrect because solar cells ko operate karne ke liye kisi natural gas combustion ki zaroorat nahi hoti.\n\n• Option 4 is Incorrect because solar cells solid-state devices hain jinme high-speed mechanical turbine rotors nahi hote."
   },
   {
-    "p_id": "bpsc_phys_m27_01",
-    "qe": "Evaluating the mathematical work formula $W = F \\cdot s \\cdot \\cos\\theta$ reveals distinct directional relationships between force and displacement vectors. What specific condition results in strictly Zero Work ($W = 0$) even when both force magnitude and displacement length are non-zero?",
-    "qh": "गणितीय कार्य सूत्र $W = F \\cdot s \\cdot \\cos\\theta$ का मूल्यांकन बल और विस्थापन सदिशों के बीच विशिष्ट दिशात्मक संबंधों को प्रकट करता है। बल के परिमाण और विस्थापन की लंबाई दोनों के गैर-शून्य होने पर भी कौन सी विशिष्ट स्थिति के परिणामस्वरूप strictly शून्य कार्य ($W = 0$) होता है?",
-    "oe": [
-      "The force vector acts strictly perpendicular to the displacement vector ($\\theta = 90^\\circ$).",
-      "The force vector acts strictly parallel to the displacement vector ($\\theta = 0^\\circ$).",
-      "The displacement occurs along a inclined plane at an angle of $45^\\circ$.",
-      "The force vector acts directly opposite to the displacement vector ($\\theta = 180^\\circ$)."
-    ],
-    "oh": [
-      "बल सदिश विस्थापन सदिश के लंबवत कार्य करता है ($\\theta = 90^\\circ$)।",
-      "बल सदिश विस्थापन सदिश के बिल्कुल समानांतर कार्य करता है ($\\theta = 0^\\circ$)।",
-      "विस्थापन $45^\\circ$ के कोण पर एक झुके हुए तल के अनुदिश होता है।",
-      "बल सदिश विस्थापन सदिश के ठीक विपरीत कार्य करता है ($\\theta = 180^\\circ$)।"
-    ],
-    "a": 0,
-    "e": "Mechanical work force aur displacement vector ka scalar dot product hota hai ($W = \\vec{F} \\cdot \\vec{s} = F s \\cos\\theta$).\n\n• Option 1 is Correct because jab applied force motion ki direction ke strictly perpendicular act karta hai ($\\theta = 90^\\circ$), tab $\\cos 90^\\circ = 0$ ho jata hai, jisse total work done strictly zero ($W = 0$) hota hai. Jaise ek coolie sar par load rakh kar horizontal platform par chale ya circular orbit mein centripetal force dwara kiya gaya work.\n\n• Option 2 is Incorrect because jab force aur displacement vectors parallel hote hain ($\\theta = 0^\\circ$), tab $\\cos 0^\\circ = 1$ hota hai, jisse maximum positive work ($W = F \\cdot s$) milta hai.\n\n• Option 3 is Incorrect because $45^\\circ$ ke inclination par $\\cos 45^\\circ = 1/\\sqrt{2} \\neq 0$ hota hai, jo non-zero positive work deta hai.\n\n• Option 4 is Incorrect because jab force aur displacement anti-parallel hote hain ($\\theta = 180^\\circ$), tab $\\cos 180^\\circ = -1$ hota hai, jisse maximum negative work ($W = -F \\cdot s$) milta hai, jaise kinetic friction dwara kiya gaya work."
-  },
-  {
-    "p_id": "bpsc_phys_m27_02",
-    "qe": "Work and force measurements rely on standardized dimensional unit conversions across metric frameworks. What is the exact conversion factor relating 1 Joule (SI unit) to ergs (CGS unit)?",
-    "qh": "कार्य और बल का माप मीट्रिक ढांचे में मानकीकृत विमीय इकाई परिवर्तनों पर निर्भर करता है। 1 जूल (SI इकाई) को अर्ग (CGS इकाई) से जोड़ने वाला सटीक रूपांतरण गुणक क्या है?",
-    "oe": [
-      "$1\\text{ joule} = 10^5\\text{ ergs}$",
-      "$1\\text{ joule} = 10^{-7}\\text{ ergs}$",
-      "$1\\text{ joule} = 10^7\\text{ ergs}$",
-      "$1\\text{ joule} = 3.6 \\times 10^6\\text{ ergs}$"
-    ],
-    "oh": [
-      "$1\\text{ जूल} = 10^5\\text{ अर्ग}$",
-      "$1\\text{ जूल} = 10^{-7}\\text{ अर्ग}$",
-      "$1\\text{ जूल} = 10^7\\text{ अर्ग}$",
-      "$1\\text{ जूल} = 3.6 \\times 10^6\\text{ अर्ग}$"
-    ],
-    "a": 2,
-    "e": "Work dimensionally $\\text{Force} \\times \\text{Displacement}$ ($[ML^2T^{-2}]$) ke roop mein define hota hai, jahan SI unit Joule aur CGS unit erg hai.\n\n• Option 1 is Incorrect because $10^5$ force ke SI aur CGS units ke beech ka conversion factor hai ($1\\text{ Newton} = 10^5\\text{ dynes}$).\n\n• Option 2 is Incorrect because $10^{-7}$ inverse conversion factor ko represent karta hai ($1\\text{ erg} = 10^{-7}\\text{ Joules}$).\n\n• Option 3 is Correct because SI system mein $1\\text{ Joule} = 1\\text{ Newton} \\times 1\\text{ meter}$ hota hai. CGS base units mein convert karne par: $1\\text{ Joule} = (10^5\\text{ dynes}) \\times (10^2\\text{ cm}) = 10^7\\text{ dyne}\\cdot\\text{cm} = 10^7\\text{ ergs}$.\n\n• Option 4 is Incorrect because $3.6 \\times 10^6\\text{ J}$ 1 kilowatt-hour ($1\\text{ kWh}$) ka SI equivalent hai, ergs ka nahi."
-  },
-  {
-    "p_id": "bpsc_phys_m27_03",
-    "qe": "Analyzing negative mechanical work requires evaluating energy transfer dynamics. Which physical scenario represents Negative Work ($W < 0$)?",
-    "qh": "ऋणात्मक यांत्रिक कार्य का विश्लेषण करने के लिए ऊर्जा हस्तांतरण गतिकी का मूल्यांकन करने की आवश्यकता होती है। कौन सा भौतिक परिदृश्य ऋणात्मक कार्य ($W < 0$) का प्रतिनिधित्व करता है?",
-    "oe": [
-      "Friction acting on a block sliding across a rough horizontal surface.",
-      "A boy pulling a toy cart along a smooth floor in his direction of motion.",
-      "A satellite revolving in a stable circular orbit around the Earth.",
-      "A compressed spring relaxing back to its natural unstretched length."
-    ],
-    "oh": [
-      "एक खुरदरी क्षैतिज सतह पर फिसलने वाले ब्लॉक पर कार्य करने वाला घर्षण बल।",
-      "एक लड़का एक चिकने फर्श पर एक खिलौना गाड़ी को अपनी गति की दिशा में खींच रहा है।",
-      "पृथ्वी के चारों ओर एक स्थिर वृत्ताकार कक्षा में चक्कर लगाता एक उपग्रह।",
-      "एक संपीड़ित स्प्रिंग अपनी प्राकृतिक बिना खिंची लंबाई में वापस आ रही है।"
-    ],
-    "a": 0,
-    "e": "Mechanical work negative hota hai jab force vector aur displacement vector ke beech ka angle obtuse ya opposite ($\\theta = 180^\\circ$) hota hai.\n\n• Option 1 is Correct because kinetic friction hamesha sliding bodies ke relative motion ko oppose karta hai aur displacement ke opposite act karta hai ($\\theta = 180^\\circ$). $W = F s \\cos 180^\\circ = -F s$ ke anusaar friction dwara kiya gaya work strictly negative ($W < 0$) hota hai.\n\n• Option 2 is Incorrect because pulling force aur displacement same direction mein hote hain ($\\theta = 0^\\circ$, $\\cos 0^\\circ = +1$), jo positive work ($W > 0$) describe karta hai.\n\n• Option 3 is Incorrect because gravitational centripetal force satellite ke instantaneous tangential displacement ke perpendicular hota hai ($\\theta = 90^\\circ$, $\\cos 90^\\circ = 0$), jo zero work ($W = 0$) represent karta hai.\n\n• Option 4 is Incorrect because spring ka restoring force expansion ki direction mein push karta hai, jo positive work describe karta hai."
-  },
-  {
-    "p_id": "bpsc_phys_m27_04",
-    "qe": "Power measures the time rate of performing mechanical work or consuming energy. What is the equivalent value of 1 Horsepower (HP) and 1 kilowatt-hour (kWh) expressed in SI base units?",
-    "qh": "शक्ति यांत्रिक कार्य करने या ऊर्जा की खपत की समय दर को मापती है। SI मूल इकाइयों में व्यक्त 1 हॉर्सपावर (HP) और 1 किलोवाट-घंटे (kWh) का समतुल्य मान क्या है?",
-    "oe": [
-      "$1\\text{ HP} = 746\\text{ W}$; $1\\text{ kWh} = 3.6 \\times 10^6\\text{ J}$",
-      "$1\\text{ HP} = 500\\text{ W}$; $1\\text{ kWh} = 10^6\\text{ J}$",
-      "$1\\text{ HP} = 746\\text{ kW}$; $1\\text{ kWh} = 3.6\\text{ ergs}$",
-      "$1\\text{ HP} = 1000\\text{ W}$; $1\\text{ kWh} = 3.6 \\times 10^3\\text{ J}$"
-    ],
-    "oh": [
-      "$1\\text{ HP} = 746\\text{ W}$; $1\\text{ kWh} = 3.6 \\times 10^6\\text{ J}$",
-      "$1\\text{ HP} = 500\\text{ W}$; $1\\text{ kWh} = 10^6\\text{ J}$",
-      "$1\\text{ HP} = 746\\text{ kW}$; $1\\text{ kWh} = 3.6\\text{ अर्ग}$",
-      "$1\\text{ HP} = 1000\\text{ W}$; $1\\text{ kWh} = 3.6 \\times 10^3\\text{ J}$"
-    ],
-    "a": 0,
-    "e": "Power work karne ki time rate hoti hai jabki kilowatt-hour energy ki commercial unit hai.\n\n• Option 1 is Correct because standard engineering conversion ke anusaar **$1\\text{ Horsepower (HP)} = 746\\text{ Watts (W)}$** hota hai aur commercial electrical energy unit **$1\\text{ kWh} = 1000\\text{ W} \\times 3600\\text{ s} = 3.6 \\times 10^6\\text{ Joules (J)}$** hoti hai.\n\n• Option 2 is Incorrect because isme arbitrary incorrect constants ($500\\text{ W}$ aur $10^6\\text{ J}$) list kiye gaye hain.\n\n• Option 3 is Incorrect because yeh HP ke liye Watts ko kilowatts ($746\\text{ kW}$) ke sath confuse karta hai aur kWh ke liye galat CGS unit ($3.6\\text{ ergs}$) deta hai.\n\n• Option 4 is Incorrect because $1000\\text{ W} = 1\\text{ kW}$ hota hai ($1\\text{ HP}$ nahi) aur $3.6 \\times 10^3\\text{ J}$ asal mein $1\\text{ Wh}$ hota hai, $1\\text{ kWh}$ nahi."
-  },
-  {
-    "p_id": "bpsc_phys_m27_05",
-    "qe": "Translational kinetic energy ($KE$) can be expressed using either linear velocity ($v$) or linear momentum ($p$). If the linear momentum of a body of mass $m$ is doubled while its mass remains constant, by what factor does its Kinetic Energy increase?",
-    "qh": "स्थानांतरीय गतिज ऊर्जा ($KE$) को रैखिक वेग ($v$) या रैखिक संवेग ($p$) दोनों का उपयोग करके व्यक्त किया जा सकता है। यदि स्थिर द्रव्यमान $m$ वाले पिंड के रैखिक संवेग को दोगुना कर दिया जाए, तो उसकी गतिज ऊर्जा किस गुणांक से बढ़ जाएगी?",
-    "oe": [
-      "Kinetic energy increases by a factor of 8.",
-      "Kinetic energy quadruples (increases by a factor of 4).",
-      "Kinetic energy remains unchanged.",
-      "Kinetic energy doubles (increases by a factor of 2)."
-    ],
-    "oh": [
-      "गतिज ऊर्जा 8 के गुणक से बढ़ जाती है।",
-      "गतिज ऊर्जा चौगुनी हो जाती है (4 के गुणक से बढ़ती है)।",
-      "गतिज ऊर्जा अपरिवर्तित रहती है।",
-      "गतिज ऊर्जा दोगुनी हो जाती है (2 के गुणक से बढ़ती है)।"
-    ],
-    "a": 1,
-    "e": "Kinetic energy aur linear momentum ke beech mathematical relation $KE = \\frac{p^2}{2m}$ hota hai.\n\n• Option 1 is Incorrect because yeh cubic dependence ($p^3$) assume karta hai jo mathematically galat hai.\n\n• Option 2 is Correct because jab mass $m$ constant rehta hai, toh $KE \\propto p^2$ hota hai. Linear momentum double karne par ($p' = 2p$), $KE' = \\frac{(2p)^2}{2m} = 4 \\cdot \\frac{p^2}{2m} = 4 \\cdot KE$, jisse kinetic energy quadruples (factor of 4) ho jaati hai.\n\n• Option 3 is Incorrect because momentum change hone se velocity aur kinetic energy directly alter hoti hai.\n\n• Option 4 is Incorrect because yeh kinetic energy aur momentum ke beech galat direct linear relationship assume karta hai."
-  },
-  {
-    "p_id": "bpsc_phys_m27_06",
-    "qe": "The Work-Energy Theorem provides a fundamental principle linking net applied forces to kinematic state changes. According to this theorem, what physical quantity equals the net work done on a body by all acting forces?",
-    "qh": "कार्य-ऊर्जा प्रमेय (Work-Energy Theorem) एक मौलिक सिद्धांत प्रदान करता है जो लागू किए गए शुद्ध बलों को गतिक अवस्था परिवर्तनों से जोड़ता है। इस प्रमेय के अनुसार, सभी कार्यरत बलों द्वारा किसी पिंड पर किया गया शुद्ध कार्य किस भौतिक राशि के बराबर होता है?",
-    "oe": [
-      "The rate of change of linear momentum per unit time.",
-      "The total change in gravitational potential energy.",
-      "The change in kinetic energy of the body.",
-      "The total heat energy dissipated into the surroundings."
-    ],
-    "oh": [
-      "प्रति इकाई समय में रैखिक संवेग के परिवर्तन की दर।",
-      "गुरुत्वाकर्षण स्थितिज ऊर्जा में कुल परिवर्तन।",
-      "पिंड की गतिज ऊर्जा में परिवर्तन।",
-      "आसपास के वातावरण में नष्ट हुई कुल ऊष्मा ऊर्जा।"
-    ],
-    "a": 2,
-    "e": "Work-Energy Theorem net forces dwara kiye gaye total work ko kinetic energy ke change se relate karta hai.\n\n• Option 1 is Incorrect because rate of change of linear momentum net force ko represent karta hai ($F_{\\text{net}} = \\frac{dp}{dt}$), work ko nahi.\n\n• Option 2 is Incorrect because potential energy mein change ($W_{\\text{cons}} = -\\Delta U$) sirf internal conservative forces se related hota hai, net total work se nahi.\n\n• Option 3 is Correct because **Work-Energy Theorem** ke anusaar, kisi body par act karne wale sabhi forces dwara kiya gaya net work uski kinetic energy ke change ke barabar hota hai: $$W_{\\text{net}} = \\Delta KE = KE_f - KE_i = \\frac{1}{2}mv_f^2 - \\frac{1}{2}mv_i^2$$.\n\n• Option 4 is Incorrect because thermal loss non-conservative forces ka keval ek dissipative component hai."
-  },
-  {
-    "p_id": "bpsc_phys_m27_07",
-    "qe": "Conservation of Mechanical Energy governs ideal conservative systems. When a heavy stone dropped from rest falls freely under gravity (ignoring air drag), how do its potential energy ($PE$) and kinetic energy ($KE$) vary during the fall?",
-    "qh": "यांत्रिक ऊर्जा का संरक्षण आदर्श संरक्षी प्रणालियों को नियंत्रित करता है। जब विराम से छोड़ा गया एक भारी पत्थर गुरुत्वाकर्षण के तहत स्वतंत्र रूप से गिरता है (वायु प्रतिरोध को नजरअंदाज करते हुए), तो गिरने के दौरान उसकी स्थितिज ऊर्जा ($PE$) और गतिज ऊर्जा ($KE$) कैसे परिवर्तित होती है?",
-    "oe": [
-      "$PE$ continuously decreases while $KE$ continuously increases, keeping total mechanical energy ($PE + KE$) strictly constant at every point.",
-      "$PE$ remains constant while $KE$ increases exponentially.",
-      "Both $PE$ and $KE$ decrease to zero before impact.",
-      "Both $PE$ and $KE$ increase simultaneously due to gravitational acceleration."
-    ],
-    "oh": [
-      "$PE$ लगातार घटती है जबकि $KE$ लगातार बढ़ती है, जिससे प्रत्येक बिंदु पर कुल यांत्रिक ऊर्जा ($PE + KE$) बिल्कुल स्थिर रहती है।",
-      "$PE$ स्थिर रहती है जबकि $KE$ तेजी से बढ़ती है।",
-      "टकराने से पहले $PE$ और $KE$ दोनों घटकर शून्य हो जाते हैं।",
-      "गुरुत्वाकर्षण त्वरण के कारण $PE$ और $KE$ दोनों एक साथ बढ़ते हैं।"
-    ],
-    "a": 0,
-    "e": "Conservative gravitational field mein freely falling body ki total mechanical energy ($E = PE + KE$) hamesha constant rehti hai.\n\n• Option 1 is Correct because jaise-jaise stone niche girta hai, height $h$ kam hone se gravitational potential energy ($mgh$) continuously ghat-ti hai aur kinetic energy ($\\frac{1}{2}mv^2$) usi ratio mein badhti hai ($-\\Delta PE = \\Delta KE$), jisse total mechanical energy strictly constant rehti hai.\n\n• Option 2 is Incorrect because potential energy altitude ($h$) par depend karti hai, isliye fall ke dauran constant nahi reh sakti.\n\n• Option 3 is Incorrect because impact se theek pehle kinetic energy maximum hoti hai, zero nahi.\n\n• Option 4 is Incorrect because dono energies ka ek sath badhna Law of Conservation of Energy ko violate karta hai."
-  },
-  {
-    "p_id": "bpsc_phys_m27_08",
-    "qe": "Albert Einstein redefined physics by establishing the equivalence of mass and energy through special relativity. According to $E = mc^2$, what is the exact physical meaning of $c$, and what happens during mass-energy transformations?",
-    "qh": "अल्बर्ट आइंस्टीन ने विशेष सापेक्षता के माध्यम से द्रव्यमान और ऊर्जा की समतुल्यता स्थापित करके भौतिकी को पुनः परिभाषित किया। $E = mc^2$ के अनुसार, $c$ का सटीक भौतिक अर्थ क्या है, और द्रव्यमान-ऊर्जा परिवर्तनों के दौरान क्या होता है?",
-    "oe": [
-      "$c$ is the universal gravitational constant; mass converts into electrical charge.",
-      "$c$ is the specific heat capacity of water; mass remains invariant in nuclear reactions.",
-      "$c$ is the speed of light in vacuum ($3 \\times 10^8\\text{ m/s}$); mass and energy are not individually conserved, but are interconvertible, preserving unified mass-energy globally.",
-      "$c$ is the speed of sound ($340\\text{ m/s}$); mass and energy are independently conserved."
-    ],
-    "oh": [
-      "$c$ सार्वभौमिक गुरुत्वाकर्षण स्थिरांक है; द्रव्यमान विद्युत आवेश में परिवर्तित होता है।",
-      "$c$ पानी की विशिष्ट ऊष्मा क्षमता है; परमाणु प्रतिक्रियाओं में द्रव्यमान अपरिवर्तित रहता है।",
-      "$c$ निर्वात में प्रकाश की गति ($3 \\times 10^8\\text{ m/s}$) है; द्रव्यमान और ऊर्जा व्यक्तिगत रूप से संरक्षित नहीं हैं, बल्कि परस्पर परिवर्तनीय हैं, जो वैश्विक स्तर पर एकीकृत द्रव्यमान-ऊर्जा को संरक्षित करते हैं।",
-      "$c$ ध्वनि की गति ($340\\text{ m/s}$) है; द्रव्यमान और ऊर्जा स्वतंत्र रूप से संरक्षित हैं।"
-    ],
-    "a": 2,
-    "e": "Special relativity mein mass-energy equivalence equation $E = mc^2$ mass aur energy ke interconversion ko define karta hai.\n\n• Option 1 is Incorrect because $c$ universal gravitational constant $G$ nahi hai.\n\n• Option 2 is Incorrect because $c$ specific heat capacity nahi hai aur nuclear reactions mein mass defect occur hota hai.\n\n• Option 3 is Correct because **$c$ speed of light in vacuum ($3 \\times 10^8\\text{ m/s}$)** hai. Nuclear processes (fission/fusion) mein mass ($m$) directly energy ($E$) mein convert hota hai ($E = \\Delta m \\cdot c^2$), jisse individual conservation ke bajay unified mass-energy conserve rehti hai.\n\n• Option 4 is Incorrect because $c$ speed of light ko represent karta hai, sound ko nahi, aur mass tatha energy independently conserved nahi rehte."
-  },
-  {
-    "p_id": "bpsc_phys_m27_09",
-    "qe": "Evaluating energy resources distinguishes renewable sources from non-renewable sources based on replenishment cycles. Which choice represents a Non-Renewable Energy Source?",
-    "qh": "ऊर्जा संसाधनों का मूल्यांकन पुनर्भरण चक्र (replenishment cycles) के आधार पर नवीकरणीय स्रोतों को गैर-नवीकरणीय स्रोतों से अलग करता है। कौन सा विकल्प गैर-नवीकरणीय ऊर्जा स्रोत (Non-Renewable Energy Source) का प्रतिनिधित्व करता है?",
-    "oe": [
-      "Bio-fuels derived from sugarcane alcohol and fuelwood",
-      "Tidal and wave energy systems",
-      "Ocean Thermal Energy Conversion (OTEC) systems",
-      "Fissionable nuclear materials (such as Uranium isotopes) and Coal deposits"
-    ],
-    "oh": [
-      "गन्ने के अल्कोहल और जलाऊ लकड़ी से प्राप्त जैव-ईंधन",
-      "ज्वारीय और तरंग ऊर्जा प्रणालियाँ",
-      "महासागरीय तापीय ऊर्जा रूपांतरण (OTEC) प्रणालियाँ",
-      "विखंडनीय परमाणु सामग्री (जैसे यूरेनियम समस्थानिक) और कोयला भंडार"
-    ],
-    "a": 3,
-    "e": "Non-renewable energy resources nature mein finite hote hain aur unka replenishment geological timescales par depend karta hai.\n\n• Option 1 is Incorrect because sugarcane alcohol aur fuelwood renewable biomass resources hain jinhe agricultural cycles se replenish kiya ja sakta hai.\n\n• Option 2 is Incorrect because tidal aur wave energy continuous natural gravitational aur wind phenomena par based renewable sources hain.\n\n• Option 3 is Incorrect because OTEC ek solar-replenished marine renewable energy source hai.\n\n• Option 4 is Correct because **fossil fuels (coal, petroleum)** aur mineral **nuclear fuels (Uranium-235, Thorium-232)** finite exhaustible resources hain jinko naturally regenerate hone mein millions of years lagte hain."
-  },
-  {
-    "p_id": "bpsc_phys_m27_10",
-    "qe": "Selecting fuels for commercial energy production requires evaluating combustion quality metrics. What technical terms define the amount of heat released per unit mass of fuel and the minimum temperature required to sustain combustion, respectively?",
-    "qh": "वाणिज्यिक ऊर्जा उत्पादन के लिए ईंधन का चयन करने के लिए दहन गुणवत्ता मेट्रिक्स का मूल्यांकन करने की आवश्यकता होती है। ईंधन के प्रति इकाई द्रव्यमान से जारी गर्मी की मात्रा और दहन को बनाए रखने के लिए आवश्यक न्यूनतम तापमान को क्रमशः कौन से तकनीकी शब्द परिभाषित करते हैं?",
-    "oe": [
-      "Thermal Conductivity and Critical Temperature",
-      "Latent Heat and Boiling Point",
-      "Calorific Value and Ignition Temperature",
-      "Specific Heat Capacity and Flash Point"
-    ],
-    "oh": [
-      "तापीय चालकता और क्रांतिक तापमान",
-      "गुप्त ऊष्मा और क्वथनांक",
-      "ऊष्मीय मान (Calorific Value) और ज्वलन ताप (Ignition Temperature)",
-      "विशिष्ट ऊष्मा क्षमता और फ्लैश प्वाइंट"
-    ],
-    "a": 2,
-    "e": "Fuel efficiency aur combustion feasibility calorific value aur ignition temperature par depend karti hai.\n\n• Option 1 is Incorrect because thermal conductivity heat transfer rate aur critical temperature gas liquefaction se sambandhit hai.\n\n• Option 2 is Incorrect because latent heat aur boiling point phase transition thermodynamics se related hain.\n\n• Option 3 is Correct because **Calorific Value** fuel ke unit mass ke complete combustion se release hone wali total heat energy quantity hoti hai ($\\text{kJ/kg}$), jabki **Ignition Temperature** wo minimum threshold temperature hota hai jis par fuel aag pakad kar continuous combustion sustain karta hai.\n\n• Option 4 is Incorrect because specific heat thermal absorption capacity batati hai aur flash point momentary ignition temperature hota hai."
-  },
-  {
-    "p_id": "bpsc_phys_m27_11",
-    "qe": "Combustion of fossil fuels in thermal power plants releases several gaseous byproducts into the atmosphere. Which gaseous emissions are primarily responsible for causing Acid Rain?",
-    "qh": "थर्मल पावर प्लांटों में जीवाश्म ईंधन के दहन से वायुमंडल में कई गैसीय उप-उत्पाद निकलते हैं। अम्ल वर्षा (Acid Rain) का कारण बनने के लिए मुख्य रूप से कौन से गैसीय उत्सर्जन जिम्मेदार हैं?",
-    "oe": [
-      "Methane and noble helium gases",
-      "Water vapor and ozone",
-      "Carbon monoxide and pure hydrogen gas",
-      "Acidic oxides of sulfur ($\\text{SO}_2$) and nitrogen ($\\text{NO}_x$)"
-    ],
-    "oh": [
-      "मीथेन और उत्कृष्ट हीलियम गैसें",
-      "जल वाष्प और ओजोन",
-      "कार्बन मोनोऑक्साइड और शुद्ध हाइड्रोजन गैस",
-      "सल्फर के अम्लीय ऑक्साइड ($\\text{SO}_2$) और नाइट्रोजन ($\\text{NO}_x$)"
-    ],
-    "a": 3,
-    "e": "Fossil fuel combustion ke acidic byproducts atmospheric moisture ke sath react karke acid precipitation create karte hain.\n\n• Option 1 is Incorrect because methane ek greenhouse gas hai aur helium unreactive noble gas hai.\n\n• Option 2 is Incorrect because water vapor aur ozone acid rain ke primary precursor acidic oxides nahi hain.\n\n• Option 3 is Incorrect because carbon monoxide aur hydrogen gas acid precipitation ka direct cause nahi bante.\n\n• Option 4 is Correct because fossil fuels ke dahan se release hone wale **Sulfur Dioxide ($\\text{SO}_2$)** aur **Nitrogen Oxides ($\\text{NO}_x$)** atmospheric moisture ke sath react karke Sulfuric Acid ($\\text{H}_2\\text{SO}_4$) aur Nitric Acid ($\\text{HNO}_3$) banate hain, jo precipitation ke pH ko $< 5.6$ karke **Acid Rain** ka roop lete hain."
-  },
-  {
-    "p_id": "bpsc_phys_m27_12",
-    "qe": "Hydroelectric power plants generate electricity by utilizing energy transformations in impounded river water. What sequence of energy transformations drives the electrical generator turbine in a hydroelectric plant?",
-    "qh": "जलविद्युत संयंत्र (Hydroelectric power plants) बांध के पानी में ऊर्जा परिवर्तनों का उपयोग करके बिजली उत्पन्न करते हैं। जलविद्युत संयंत्र में विद्युत जनरेटर टरबाइन को कौन सा ऊर्जा परिवर्तन क्रम संचालित करता है?",
-    "oe": [
-      "Solar Radiant Energy $\\to$ Chemical Potential Energy $\\to$ Electrical Energy",
-      "Chemical Energy $\\to$ Heat Energy $\\to$ Electrical Energy",
-      "Gravitational Potential Energy of stored reservoir water $\\to$ Kinetic Energy of flowing water $\\to$ Mechanical Kinetic Energy of rotating turbine $\\to$ Electrical Energy",
-      "Nuclear Fission Energy $\\to$ Steam Kinetic Energy $\\to$ Electrical Energy"
-    ],
-    "oh": [
-      "सौर विकिरण ऊर्जा $\\to$ रासायनिक स्थितिज ऊर्जा $\\to$ विद्युत ऊर्जा",
-      "रासायनिक ऊर्जा $\\to$ ऊष्मा ऊर्जा $\\to$ विद्युत ऊर्जा",
-      "जलाशय के पानी की गुरुत्वाकर्षण स्थितिज ऊर्जा $\\to$ बहते पानी की गतिज ऊर्जा $\\to$ घूमती हुई टरबाइन की यांत्रिक गतिज ऊर्जा $\\to$ विद्युत ऊर्जा",
-      "परमाणु विखंडन ऊर्जा $\\to$ भाप गतिज ऊर्जा $\\to$ विद्युत ऊर्जा"
-    ],
-    "a": 2,
-    "e": "Hydroelectric power plants mechanical fluids ke gravitational energy ko electrical power mein transform karte hain.\n\n• Option 1 is Incorrect because yeh plant photosynthesis pathway ko indicate karta hai.\n\n• Option 2 is Incorrect because yeh fossil fuel based thermal power generation ka sequence hai.\n\n• Option 3 is Correct because reservoir mein stored water ke paas **Gravitational Potential Energy** hoti hai $\\to$ penstock se release hone par yeh **Kinetic Energy of flowing water** banti hai $\\to$ turbine runner blades strike karke **Mechanical Rotational Kinetic Energy** generate karti hai $\\to$ generator armature Faraday induction ke through ise **Electrical Energy** mein transform karta hai.\n\n• Option 4 is Incorrect because yeh nuclear power plants ka energy sequence describe karta hai."
-  },
-  {
-    "p_id": "bpsc_phys_m27_13",
-    "qe": "Human physiological metabolic functions consume power at varying rates depending on activity levels. According to standard physiological averages, what is the approximate baseline power consumption of the human heart beat and a sleeping adult?",
-    "qh": "मानव शारीरिक चयापचय (metabolic) कार्य गतिविधियों के स्तर के आधार पर अलग-अलग दरों पर शक्ति की खपत करते हैं। मानक शारीरिक औसतों के अनुसार, मानव हृदय की धड़कन (heart beat) और सोते हुए वयस्क की अनुमानित आधारभूत (baseline) शक्ति खपत क्या है?",
-    "oe": [
-      "Heart beat: $1.2\\text{ W}$; Sleeping: $75\\text{ W}$",
-      "Heart beat: $50\\text{ W}$; Sleeping: $200\\text{ W}$",
-      "Heart beat: $0.1\\text{ W}$; Sleeping: $10\\text{ W}$",
-      "Heart beat: $100\\text{ W}$; Sleeping: $500\\text{ W}$"
-    ],
-    "oh": [
-      "हृदय की धड़कन: $1.2\\text{ W}$; सोते समय: $75\\text{ W}$",
-      "हृदय की धड़कन: $50\\text{ W}$; सोते समय: $200\\text{ W}$",
-      "हृदय की धड़कन: $0.1\\text{ W}$; सोते समय: $10\\text{ W}$",
-      "हृदय की धड़कन: $100\\text{ W}$; सोते समय: $500\\text{ W}$"
-    ],
-    "a": 0,
-    "e": "Human body ke different physiological functions activity levels ke aadhar par power consume karte hain.\n\n• Option 1 is Correct because standard biophysical data ke anusaar **human heart beat** continuous pumping action ke liye lagbhag **$1.2\\text{ to }1.33\\text{ W}$** power consume karta hai aur ek **sleeping adult** ka basal metabolic rate lagbhag **$75\\text{ W}$** hota hai.\n\n• Option 2 is Incorrect because $50\\text{ W}$ heart power aur $200\\text{ W}$ sleeping power basal metabolic expenditure ko overstate karti hain ($200\\text{ W}$ muscular activity ke time consume hota hai).\n\n• Option 3 is Incorrect because yeh values human metabolic requirements ko significantly underestimate karti hain.\n\n• Option 4 is Incorrect because $100\\text{ W}$ heart power aur $500\\text{ W}$ sleep power baseline physiological expenditure se excessively high hain."
-  },
-  {
-    "p_id": "bpsc_phys_m27_14",
-    "qe": "Evaluating the energy transformation chain in living organisms reveals specific physiological pathways. What energy transformation occurs during plant photosynthesis and subsequent human muscular running?",
-    "qh": "जीवों में ऊर्जा परिवर्तन श्रृंखला का मूल्यांकन विशिष्ट शारीरिक मार्गों को उजागर करता है। पादप प्रकाश संश्लेषण (photosynthesis) और उसके बाद मानव मांसपेशियों के दौड़ने के दौरान कौन सा ऊर्जा परिवर्तन होता है?",
-    "oe": [
-      "Photosynthesis: Solar Radiant Energy $\\to$ Chemical Energy; Running: Internal Chemical Energy $\\to$ Mechanical Kinetic Energy",
-      "Photosynthesis: Electrical Energy $\\to$ Chemical Energy; Running: Sound Energy $\\to$ Kinetic Energy",
-      "Photosynthesis: Nuclear Energy $\\to$ Heat Energy; Running: Heat Energy $\\to$ Electrical Energy",
-      "Photosynthesis: Gravitational Energy $\\to$ Solar Energy; Running: Kinetic Energy $\\to$ Potential Energy"
-    ],
-    "oh": [
-      "प्रकाश संश्लेषण: सौर विकिरण ऊर्जा $\\to$ रासायनिक ऊर्जा; दौड़ना: आंतरिक रासायनिक ऊर्जा $\\to$ यांत्रिक गतिज ऊर्जा",
-      "प्रकाश संश्लेषण: विद्युत ऊर्जा $\\to$ रासायनिक ऊर्जा; दौड़ना: ध्वनि ऊर्जा $\\to$ गतिज ऊर्जा",
-      "प्रकाश संश्लेषण: परमाणु ऊर्जा $\\to$ ऊष्मा ऊर्जा; दौड़ना: ऊष्मा ऊर्जा $\\to$ विद्युत ऊर्जा",
-      "प्रकाश संश्लेषण: गुरुत्वाकर्षण ऊर्जा $\\to$ सौर ऊर्जा; दौड़ना: गतिज ऊर्जा $\\to$ स्थितिज ऊर्जा"
-    ],
-    "a": 0,
-    "e": "Biological systems solar radiation ko capture karke metabolic chemical energy aur mechanical locomotion mein convert karte hain.\n\n• Option 1 is Correct because **Photosynthesis** mein chlorophyll pigments **Solar Radiant Energy** ko **Chemical Potential Energy** (glucose) mein convert karte hain, aur **Muscular Running** mein cellular respiration se generated **Internal Chemical Energy (ATP)** muscles dwara **Mechanical Kinetic Energy** mein transform hoti hai.\n\n• Option 2 is Incorrect because plant intake electrical energy par based nahi hota aur running sound energy to kinetic energy conversion nahi hai.\n\n• Option 3 is Incorrect because photosynthesis nuclear reaction nahi hai aur running electrical energy generate nahi karti.\n\n• Option 4 is Incorrect because gravitational energy photosynthesis ka input source nahi hoti."
-  },
-  {
-    "p_id": "bpsc_phys_m27_15",
-    "qe": "Energy dissipation describes the transformation of useful mechanical energy into non-recoverable forms. Which everyday example demonstrates mechanical work converting directly into thermal dissipation?",
-    "qh": "ऊर्जा क्षय (Energy dissipation) उपयोगी यांत्रिक ऊर्जा के गैर-पुनर्प्राप्त करने योग्य रूपों में परिवर्तन का वर्णन करता है। कौन सा दैनिक उदाहरण यांत्रिक कार्य के सीधे तापीय क्षय में परिवर्तित होने का प्रदर्शन करता है?",
-    "oe": [
-      "Striking two flint stones together to generate a spark, or sharpening a knife against a revolving grinding stone",
-      "Water evaporating silently in a cool shadow",
-      "A magnet attracting an iron nail across a smooth table",
-      "A satellite orbiting in deep atmospheric vacuum"
-    ],
-    "oh": [
-      "चिंगारी पैदा करने के लिए दो चकमक पत्थरों को एक साथ मारना, या घूमते हुए पत्थर पर चाकू की धार तेज करना",
-      "ठंडी छाया में धीरे-धीरे वाष्पित होता पानी",
-      "एक चुंबक एक चिकनी मेज पर लोहे की कील को आकर्षित करता है",
-      "गहरे वायुमंडलीय निर्वात में परिक्रमा करता हुआ एक उपग्रह"
-    ],
-    "a": 0,
-    "e": "Frictional resistance ke against kiya gaya mechanical work localized heat aur thermal dissipation mein badal jata hai.\n\n• Option 1 is Correct because **do flint stones ko strike karne par** ya **revolving grinding stone par knife sharpen karne par** friction ke against kiya gaya mechanical work directly localized thermal energy, incandescent sparks aur heat dissipation mein convert hota hai.\n\n• Option 2 is Incorrect because yeh ambient latent heat absorption se hone wala phase change hai, mechanical work dissipation nahi.\n\n• Option 3 is Incorrect because magnetic attraction conservative field interaction ko describe karta hai jisme direct thermal dissipation nahi hoti.\n\n• Option 4 is Incorrect because vacuum mein orbiting satellite zero frictional dissipation ke sath move karti hai."
-  },
-  {
-    "p_id": "bpsc_phys_m27_16",
-    "qe": "Ideal fuels possess specific chemical and physical characteristics to maximize combustion efficiency while minimizing hazards. Which property represents an desirable feature of a Good Fuel?",
-    "qh": "आदर्श ईंधन में खतरों को कम करते हुए दहन दक्षता को अधिकतम करने के लिए विशिष्ट रासायनिक और भौतिक विशेषताएं होती हैं। कौन सा गुण एक अच्छे ईंधन (Good Fuel) की वांछनीय विशेषता का प्रतिनिधित्व करता है?",
-    "oe": [
-      "Extremely low calorific value with high unburnt ash residue",
-      "High calorific value, proper ignition temperature, low smoke emissions, and cheap/safe handling",
-      "High concentration of sulfur impurities to maximize flame brightness",
-      "Instant explosive combustion rate at sub-zero temperatures"
-    ],
-    "oh": [
-      "उच्च बिना जले राख अवशेषों के साथ अत्यंत कम ऊष्मीय मान",
-      "उच्च ऊष्मीय मान, उचित ज्वलन ताप, कम धुआं उत्सर्जन, और सस्ता/सुरक्षित रखरखाव",
-      "लौ की चमक को अधिकतम करने के लिए सल्फर अशुद्धियों की उच्च सांद्रता",
-      "शून्य से नीचे के तापमान पर तत्काल विस्फोटक दहन दर"
-    ],
-    "a": 1,
-    "e": "Good fuels high thermal output provide karte hain aur environmental tatha operational hazards ko minimize karte hain.\n\n• Option 1 is Incorrect because low calorific value aur high ash content ek poor quality fuel ke characteristics hain.\n\n• Option 2 is Correct because ek **Good Fuel** mein **High Calorific Value**, **Moderate/Proper Ignition Temperature**, **Low Smoke/Toxic Emissions** aur **Safe & Economical Handling** honi chahiye.\n\n• Option 3 is Incorrect because sulfur content combustion par toxic aur acid rain causing $\\text{SO}_2$ gas liberate karta hai.\n\n• Option 4 is Incorrect because explosive combustion hazardous aur uncontrolled hota hai."
-  },
-  {
-    "p_id": "bpsc_phys_m27_17",
-    "qe": "Gravitational potential energy ($U$) measures work done against gravity when elevating a mass. What is the gravitational potential energy formula for a body of mass $m$ raised to height $h$ near Earth's surface, and what happens if $h = 0$ at the chosen reference plane?",
-    "qh": "गुरुत्वीय स्थितिज ऊर्जा ($U$) किसी द्रव्यमान को ऊपर उठाते समय गुरुत्वाकर्षण के विरुद्ध किए गए कार्य को मापती है। पृथ्वी की सतह के पास ऊंचाई $h$ तक उठाए गए द्रव्यमान $m$ के पिंड के लिए गुरुत्वीय स्थितिज ऊर्जा का सूत्र क्या है, और यदि चुने गए संदर्भ तल पर $h = 0$ हो तो क्या होता है?",
-    "oe": [
-      "$U = mgh$; Potential energy is zero ($U = 0$) at the reference plane ($h = 0$).",
-      "$U = mgh + c^2$; Potential energy depends on the speed of light.",
-      "$U = \\frac{mg}{h}$; Potential energy is independent of height.",
-      "$U = \\frac{1}{2}mgh^2$; Potential energy becomes infinite at $h = 0$."
-    ],
-    "oh": [
-      "$U = mgh$; संदर्भ तल ($h = 0$) पर स्थितिज ऊर्जा शून्य ($U = 0$) होती है।",
-      "$U = mgh + c^2$; स्थितिज ऊर्जा प्रकाश की गति पर निर्भर करती है।",
-      "$U = \\frac{mg}{h}$; स्थितिज ऊर्जा ऊंचाई से स्वतंत्र है।",
-      "$U = \\frac{1}{2}mgh^2$; $h = 0$ पर स्थितिज ऊर्जा अनंत हो जाती है।"
-    ],
-    "a": 0,
-    "e": "Gravitational potential energy gravity force ke against lift karne mein kiye gaye work $W = mgh$ ke roop mein define hoti hai.\n\n• Option 1 is Correct because constant gravity ($g$) mein mass $m$ ko height $h$ tak lift karne par work done $W = (mg)h = mgh$ hota hai, isliye **$U = mgh$**; reference level ($h = 0$) par potential energy strictly zero (**$U = 0$**) hoti hai.\n\n• Option 2 is Incorrect because Newtonian gravitational potential energy formula mein speed of light ($c$) include nahi hota.\n\n• Option 3 is Incorrect because yeh formula dimensionally galat hai aur height ke inverse relationship ko assume karta hai.\n\n• Option 4 is Incorrect because potential energy quadratic height formulation ($h^2$) follow nahi karti."
-  },
-  {
-    "p_id": "bpsc_phys_m27_18",
-    "qe": "Evaluating electrical power distribution highlights efficiency differences between fuel transport and high-voltage transmission. Why are thermal power stations typically constructed near coal or oil fields rather than near distant consumer cities?",
-    "qh": "विद्युत शक्ति वितरण का मूल्यांकन ईंधन परिवहन और उच्च-वोल्टेज पारेषण (transmission) के बीच दक्षता के अंतर को उजागर करता है। थर्मल पावर स्टेशन आमतौर पर दूरस्थ उपभोक्ता शहरों के बजाय कोयला या तेल क्षेत्रों के पास क्यों बनाए जाते हैं?",
-    "oe": [
-      "Because transmitting electrical energy over long distances via power lines is significantly more efficient and economical than transporting bulk coal or petroleum over identical distances.",
-      "Because burning coal near cities creates zero greenhouse gas emissions.",
-      "Because coal loses its calorific value when transported over long distances.",
-      "Because thermal turbines can only boil water if coal is burned immediately after extraction."
-    ],
-    "oh": [
-      "क्योंकि पावर लाइनों के माध्यम से लंबी दूरी पर विद्युत ऊर्जा का पारेषण समान दूरी पर भारी कोयले या पेट्रोलियम के परिवहन की तुलना में काफी अधिक कुशल और किफायती है।",
-      "क्योंकि शहरों के पास कोयला जलाने से शून्य ग्रीनहाउस गैस उत्सर्जन होता है।",
-      "क्योंकि लंबी दूरी तक परिवहन करने पर कोयला अपना ऊष्मीय मान खो देता है।",
-      "क्योंकि थर्मल टर्बाइन केवल तभी पानी उबाल सकते हैं जब निष्कर्षण के तुरंत बाद कोयला जलाया जाए।"
-    ],
-    "a": 0,
-    "e": "Bulk raw materials ke transport freight costs aur electrical transmission efficiency thermal power plant siting decide karte hain.\n\n• Option 1 is Correct because **high-voltage grid transmission lines ke through electricity transmit karna, railway/roadways se bulk coal haul karne ki tulna mein kaafi zyada economical, efficient aur continuous hota hai**, isliye power plants coal pitheads ke paas lagaye jaate hain.\n\n• Option 2 is Incorrect because coal combustion har jagah identical greenhouse gases aur pollutants emit karta hai.\n\n• Option 3 is Incorrect because coal chemically stable hota hai aur transit ke dauran calorific value lose nahi karta.\n\n• Option 4 is Incorrect because steam turbines ko sirf heat energy chahiye hoti hai, freshly extracted fuel nahi."
-  },
-  {
-    "p_id": "bpsc_phys_m27_19",
-    "qe": "Potential energy can be stored in mechanical systems through shape deformation. Which real-world example represents potential energy stored due to a change in shape/configuration rather than elevation height?",
-    "qh": "स्थितिज ऊर्जा को आकृति के विरूपण (shape deformation) के माध्यम से यांत्रिक प्रणालियों में संग्रहीत किया जा सकता है। कौन सा दैनिक उदाहरण ऊंचाई के बजाय आकृति/कॉन्फ़िगरेशन में परिवर्तन के कारण संग्रहीत स्थितिज ऊर्जा का प्रतिनिधित्व करता है?",
-    "oe": [
-      "A wound spring inside a mechanical wrist watch or a stretched rubber bowstring",
-      "A heavy boulder resting on a high cliff edge",
-      "A cricket ball flying through the air at high speed",
-      "Water impounded in a high mountain dam reservoir"
-    ],
-    "oh": [
-      "एक यांत्रिक कलाई घड़ी के अंदर एक घुमावदार (कुंडलित) स्प्रिंग या एक खींची हुई धनुष की डोरी",
-      "एक ऊँची चट्टान के किनारे पर टिका हुआ एक भारी पत्थर",
-      "हवा में तेज गति से उड़ती हुई क्रिकेट की गेंद",
-      "एक ऊँचे पहाड़ी बांध के जलाशय में जमा पानी"
-    ],
-    "a": 0,
-    "e": "Elastic potential energy shape aur intermolecular configuration ke deformation ke viruddh work karne se store hoti hai.\n\n• Option 1 is Correct because **mechanical wrist watch ki wound spring** ($U = \\frac{1}{2}k\\theta^2$) aur **stretched bowstring** ($U = \\frac{1}{2}kx^2$) mein elastic restoring forces ke against mechanical deformation kiya jata hai, jo **Elastic Potential Energy** ke roop mein store hota hai.\n\n• Option 2 is Incorrect because cliff par rakha boulder position/height ki wajah se gravitational potential energy hold karta hai.\n\n• Option 3 is Incorrect because flying cricket ball mein motion ke karan translational kinetic energy hoti hai.\n\n• Option 4 is Incorrect because dam ka stored water height ($mgh$) ki wajah se gravitational potential energy represent karta hai."
-  },
-
-  {
-    "p_id": "bpsc_phys_m27_20",
-    "qe": "Mechanical power ($P$) connects work performed ($W$) to time duration ($t$). If two cranes, A and B, lift identical $1000\\text{ kg}$ masses to an equal height of $20\\text{ meters}$, but Crane A takes $10\\text{ seconds}$ while Crane B takes $40\\text{ seconds}$, how do their work done ($W$) and power output ($P$) compare?",
-    "qh": "यांत्रिक शक्ति ($P$) किए गए कार्य ($W$) को समय की अवधि ($t$) से जोड़ती है। यदि दो क्रेन, A और B, समान $1000\\text{ kg}$ द्रव्यमान को $20\\text{ मीटर}$ की समान ऊंचाई तक उठाती हैं, लेकिन क्रेन A को $10\\text{ सेकंड}$ लगते हैं जबकि क्रेन B को $40\\text{ सेकंड}$ लगते हैं, तो उनके द्वारा किए गए कार्य ($W$) और शक्ति आउटपुट ($P$) की तुलना कैसे होगी?",
-    "oe": [
-      "Neither crane performs work because lifting is perpendicular to Earth.",
-      "Crane B delivers higher power because it operates for a longer time duration.",
-      "Both cranes perform identical work ($W_A = W_B = mgh$), but Crane A delivers 4 times higher power output ($P_A = 4 P_B$) because it completes the work in one-fourth the time.",
-      "Crane A does 4 times more work than Crane B; Power outputs are equal."
-    ],
-    "oh": [
-      "कोई भी क्रेन काम नहीं करती क्योंकि उठाना पृथ्वी के लंबवत है।",
-      "क्रेन B अधिक शक्ति प्रदान करती है क्योंकि यह लंबी समयावधि के लिए काम करती है।",
-      "दोनों क्रेन समान कार्य ($W_A = W_B = mgh$) करती हैं, लेकिन क्रेन A का शक्ति आउटपुट 4 गुना अधिक ($P_A = 4 P_B$) है क्योंकि यह एक-चौथाई समय में कार्य पूरा करती है।",
-      "क्रेन A क्रेन B की तुलना में 4 गुना अधिक कार्य करती है; शक्ति आउटपुट बराबर हैं।"
-    ],
-    "a": 2,
-    "e": "Work done gravitational field mein path aur time se independent hota hai ($W = mgh$), jabki power work per unit time ($P = W/t$) hoti hai.\n\n• Option 1 is Incorrect because lifting force aur vertical displacement parallel hote hain ($\\theta = 0^\\circ$), isliye work non-zero hota hai.\n\n• Option 2 is Incorrect because zyada time lene wali machine ka power output kam hota hai ($P \\propto 1/t$).\n\n• Option 3 is Correct because dono cranes $1000\\text{ kg}$ mass ko $20\\text{ m}$ elevate karti hain, isliye **$W_A = W_B = mgh$** (identical work). Crane A $10\\text{ s}$ leti hai aur Crane B $40\\text{ s}$, jisse ratio $\\frac{P_A}{P_B} = \\frac{W/10}{W/40} = 4$ banta hai, arthat **$P_A = 4 P_B$**.\n\n• Option 4 is Incorrect because work execution time par depend nahi karta, isliye dono cranes dwara kiya gaya work identical ($W_A = W_B$) hota hai."
-  },
-  {
-    "p_id": "bpsc_phys_m28_01",
-    "qe": "Anaerobic decomposition of organic waste in a bio-gas digester converts complex biomass into a combustible gaseous mixture. What are the primary chemical constituents of bio-gas, and what role does cow-dung play in the process?",
-    "qh": "बायो-गैस डाइजेस्टर में जैविक कचरे का अवायवीय अपघटन (anaerobic decomposition) जटिल बायोमास को एक ज्वलनशील गैसीय मिश्रण में परिवर्तित करता है। बायो-गैस के प्राथमिक रासायनिक घटक क्या हैं, और इस प्रक्रिया में गाय के गोबर की क्या भूमिका है?",
-    "oe": [
-      "Bio-gas is a mixture of methane ($CH_4$), carbon dioxide ($CO_2$), hydrogen ($H_2$), and hydrogen sulphide ($H_2S$), with methane as the major combustible component; cow-dung serves as the primary organic substrate (gobar-gas).",
-      "Bio-gas is composed of nitrogen dioxide and sulfur dioxide generated by high-temperature combustion.",
-      "Bio-gas consists exclusively of butane and propane gas under high compression.",
-      "Bio-gas consists primarily of pure oxygen and carbon monoxide; cow-dung acts as a chemical catalyst."
-    ],
-    "oh": [
-      "बायो-गैस मीथेन ($CH_4$), कार्बन डाइऑक्साइड ($CO_2$), हाइड्रोजन ($H_2$), और हाइड्रोजन सल्फाइड ($H_2S$) का मिश्रण है, जिसमें मीथेन प्रमुख दहनशील घटक है; गाय का गोबर प्राथमिक जैविक सब्सट्रेट (गोबर-गैस) के रूप में कार्य करता है।",
-      "बायो-गैस उच्च तापमान दहन द्वारा उत्पन्न नाइट्रोजन डाइऑक्साइड और सल्फर डाइऑक्साइड से बना है।",
-      "बायो-गैस में उच्च संपीड़न के तहत विशेष रूप से ब्यूटेन और प्रोपेन गैस होती है।",
-      "बायो-गैस में मुख्य रूप से शुद्ध ऑक्सीजन और कार्बन मोनोऑक्साइड होते हैं; गाय का गोबर एक रासायनिक उत्प्रेरक के रूप में कार्य करता है।"
-    ],
-    "a": 0,
-    "e": "Bio-gas organic matter ke anaerobic bacterial decomposition se generate hone wala combustible fuel mixture hai.\n\n• Option 1 is Correct because **Bio-gas** mein primarily **Methane ($CH_4$, up to $75\\%$)** combustible gas ke roop mein hoti hai, jiske sath **$CO_2$ ($20-25\\%$)**, trace **$H_2$** aur **$H_2S$** hote hain; cattle dung (gobar) primary substrate ka kaam karta hai jisse ise 'Gobar Gas' bhi kehte hain.\n\n• Option 2 is Incorrect because $\\text{NO}_2$ aur $\\text{SO}_2$ thermal fossil fuel combustion ke pollutants hain.\n\n• Option 3 is Incorrect because butane aur propane Liquefied Petroleum Gas (LPG) ke main constituents hain.\n\n• Option 4 is Incorrect because biogas oxygen-free anaerobic environment mein banti hai aur isme free oxygen nahi hoti."
-  },
-  {
-    "p_id": "bpsc_phys_m28_02",
-    "qe": "Evaluating bio-gas production highlights agricultural and waste management benefits. What remains in the outlet chamber after anaerobic digestion in a bio-gas plant, and what is its agricultural utility?",
-    "qh": "बायो-गैस उत्पादन का मूल्यांकन कृषि और अपशिष्ट प्रबंधन के लाभों को उजागर करता है। बायो-गैस संयंत्र में अवायवीय पाचन के बाद आउटलेट कक्ष में क्या बचता है, और इसकी कृषि उपयोगिता क्या है?",
-    "oe": [
-      "Non-biodegradable synthetic polymers that pollute crop soil.",
-      "Spent slurry rich in nitrogen and phosphorus, serving as an excellent organic fertilizer.",
-      "Pure silicon crystals used to manufacture photovoltaic solar cells.",
-      "Toxic ash residue that must be buried in hazardous landfill sites."
-    ],
-    "oh": [
-      "गैर-बायोडिग्रेडेबल सिंथेटिक पॉलिमर जो फसल की मिट्टी को प्रदूषित करते हैं।",
-      "नाइट्रोजन और फास्फोरस से भरपूर उपयोग की गई स्लरी (Spent slurry), जो एक उत्कृष्ट जैविक खाद (उर्वरक) के रूप में कार्य करती है।",
-      "फोटोवोल्टिक सौर सेलों के निर्माण के लिए उपयोग किए जाने वाले शुद्ध सिलिकॉन क्रिस्टल।",
-      "विषाक्त राख अवशेष जिसे खतरनाक लैंडफिल साइटों में दफनाया जाना चाहिए।"
-    ],
-    "a": 1,
-    "e": "Anaerobic digestion ke baad bacha hua organic byproduct nutrient-rich bio-fertilizer provide karta hai.\n\n• Option 1 is Incorrect because spent slurry completely biodegradable aur non-toxic organic substance hoti hai, synthetic polymer nahi.\n\n• Option 2 is Correct because carbon extract hone ke baad outlet se nikalne wali **Spent Slurry** concentrated **Nitrogen ($N$) aur Phosphorus ($P$)** se rich hoti hai, jo weed-free aur pathogen-free hone ke karan **excellent organic manure/fertilizer** ka kaam karti hai.\n\n• Option 3 is Incorrect because silicon semiconductor solar wafer manufacturing mein use hota hai.\n\n• Option 4 is Incorrect because biogas production clean biochemical digestion hai jisme toxic ash produce nahi hoti."
-  },
-  {
-    "p_id": "bpsc_phys_m28_03",
-    "qe": "Windmills convert atmospheric kinetic energy into mechanical or electrical power. What specific nation is globally designated as the 'Country of Winds' due to its massive reliance on wind-generated electricity?",
-    "qh": "पवन चक्की (Windmills) वायुमंडलीय गतिज ऊर्जा को यांत्रिक या विद्युत शक्ति में परिवर्तित करती है। पवन-जनित बिजली पर अत्यधिक निर्भरता के कारण वैश्विक स्तर पर किस राष्ट्र को 'पवनों का देश' (Country of Winds) के रूप में नामित किया गया है?",
-    "oe": [
-      "India",
-      "Denmark",
-      "Germany",
-      "France"
-    ],
-    "oh": [
-      "भारत",
-      "डेनमार्क (Denmark)",
-      "जर्मनी",
-      "फ्रांस"
-    ],
-    "a": 1,
-    "e": "Windmills atmospheric kinetic energy ko mechanical ya electrical energy mein convert karti hain aur global level par alag-alag countries iska use power generation ke liye karti hain.\n\n• Option 1 is Incorrect because India ek major global wind energy producer hai (globally 4th ranked, Kanyakumari ke Muppandal jaise massive wind farms host karta hai), lekin is title se nahi jana jata.\n\n• Option 2 is Correct because **Denmark** ko internationally **'Country of Winds' (पवनों का देश)** ke naam se jana jata hai. Steady coastal winds aur favorable maritime location ki wajah se Denmark ne wind turbine engineering mein pioneering role play kiya hai aur ye apni total domestic electrical power consumption ka **$25\\%$ se $47+\\%$ hissa wind energy se generate karta hai**, jo duniya mein highest proportion of wind power share hai.\n\n• Option 3 is Incorrect because Germany significant wind capacity ke saath major European economy hai, par ye specific geographic title hold nahi karta.\n\n• Option 4 is Incorrect because France Odeillo mein world ke largest solar furnace ke liye famous hai."
-  },
-  {
-    "p_id": "bpsc_phys_m28_04",
-    "qe": "Commercial wind energy farms require specific environmental and meteorological conditions to sustain continuous electrical power generation. What is the minimum threshold wind speed necessary for the satisfactory operational working of a wind turbine generator?",
-    "qh": "वाणिज्यिक पवन ऊर्जा फार्मों (wind energy farms) को निरंतर विद्युत शक्ति उत्पादन को बनाए रखने के लिए विशिष्ट पर्यावरणीय और मौसम संबंधी स्थितियों की आवश्यकता होती है। पवन टर्बाइन जनरेटर के संतोषजनक परिचालन कार्य के लिए न्यूनतम सीमा पवन गति (minimum threshold wind speed) क्या आवश्यक है?",
-    "oe": [
-      "$50 \\text{ km/h}$",
-      "$15 \\text{ km/h}$",
-      "$5 \\text{ km/h}$",
-      "$100 \\text{ km/h}$"
-    ],
-    "oh": [
-      "$50 \\text{ किमी/घंटा}$",
-      "$15 \\text{ किमी/घंटा}$",
-      "$5 \\text{ किमी/घंटा}$",
-      "$100 \\text{ किमी/घंटा}$"
-    ],
-    "a": 1,
-    "e": "Wind energy farms ko continuously operational rehne aur satisfactory electricity generate karne ke liye ek minimum threshold wind speed ki requirement hoti hai.\n\n• Option 1 is Incorrect because $50 \\text{ km/h}$ strong gale conditions ko describe karta hai jahan turbines rated peak output par operate karti hain.\n\n• Option 2 is Correct because wind turbine moving air currents ki kinetic energy ko capture karke operate karta hai (available power $\\propto v^3$, jahan $v$ wind velocity hai). Electric generator ko synchronous generation speeds par turn karne aur continuous commercial power deliver karne ke liye **minimum threshold wind speed strictly $15\\text{ km/h}$ (lagbhag $4.2\\text{ m/s}$)** honi zaroori hai. Is threshold ('cut-in speed') se niche hawa ki velocity girne par required aerodynamic lift generate nahi ho pata.\n\n• Option 3 is Incorrect because $5 \\text{ km/h}$ heavy turbine rotor blades ke rotational mechanical inertia aur cut-in resistance ko overcome karne ke liye bohot weak hai.\n\n• Option 4 is Incorrect because $100 \\text{ km/h}$ severe storm/cyclonic velocities represent karta hai jahan mechanical failure se bachne ke liye wind turbines ko automatically brake ya feather kiya jata hai."
-  },
-  {
-    "p_id": "bpsc_phys_m28_05",
-    "qe": "Establishing a large-scale commercial wind energy farm involves significant spatial and technical constraints. Approximately how much land area is required to set up a $1 \\text{ MW}$ commercial wind generator installation?",
-    "qh": "बड़े पैमाने पर वाणिज्यिक पवन ऊर्जा फार्म स्थापित करने में महत्वपूर्ण स्थानिक और तकनीकी बाधाएं शामिल हैं। $1 \\text{ MW}$ वाणिज्यिक पवन जनरेटर स्थापना स्थापित करने के लिए लगभग कितनी भूमि क्षेत्र की आवश्यकता होती है?",
-    "oe": [
-      "$2 \\text{ hectares}$",
-      "$20 \\text{ hectares}$",
-      "$0.1 \\text{ hectares}$",
-      "$100 \\text{ hectares}$"
-    ],
-    "oh": [
-      "$2 \\text{ हेक्टेयर}$",
-      "$20 \\text{ हेक्टेयर}$",
-      "$0.1 \\text{ हेक्टेयर}$",
-      "$100 \\text{ हेक्टेयर}$"
-    ],
-    "a": 0,
-    "e": "Commercial wind energy farms mein multiple wind turbines lagane ke liye aerodynamic interference aur proper spacing maintain karna zaroori hota hai.\n\n• Option 1 is Correct because commercial wind farm mein multiple wind turbine towers ko paas-paas nahi lagaya ja sakta; aerodynamic turbulence aur wake interference se bachne ke liye towers ke beech $5\\text{ to }7$ rotor diameters ka gap hona compulsory hota hai. Isliye, ek **$1\\text{ MW}$ commercial wind energy generation facility set up karne ke liye lagbhag $2\\text{ hectares}$ (roughly $5\\text{ acres}$) land area** ki requirement hoti hai.\n\n• Option 2 is Incorrect because $20 \\text{ hectares}$ $1\\text{ MW}$ rating ke liye required land footprint ko bohot zyada overestimate karta hai.\n\n• Option 3 is Incorrect because $0.1 \\text{ hectares}$ rotor sweeps aur aerodynamic spacing ke liye required clearance ko severely underestimate karta hai.\n\n• Option 4 is Incorrect because $100 \\text{ hectares}$ $1\\text{ MW}$ installation ke liye required area se bohot zyada excessive hai."
-  },
-  {
-    "p_id": "bpsc_phys_m28_06",
-    "qe": "Large-scale commercial wind power harnessing in India is concentrated in specific wind-rich coastal corridors. Where is the largest operational wind energy farm in India established, and what is its maximum generation capacity?",
-    "qh": "भारत में बड़े पैमाने पर वाणिज्यिक पवन ऊर्जा दोहन विशिष्ट पवन-समृद्ध तटीय गलियारों में केंद्रित है। भारत में सबसे बड़ा परिचालन पवन ऊर्जा फार्म कहां स्थापित है, और इसकी अधिकतम उत्पादन क्षमता क्या है?",
-    "oe": [
-      "Rann of Kutch in Gujarat ($50 \\text{ MW}$)",
-      "Near Kanyakumari in Tamil Nadu ($380 \\text{ MW}$)",
-      "Jaisalmer in Rajasthan ($100 \\text{ MW}$)",
-      "Shimla in Himachal Pradesh ($1000 \\text{ MW}$)"
-    ],
-    "oh": [
-      "गुजरात में कच्छ का रण ($50 \\text{ MW}$)",
-      "तमिलनाडु में कन्याकुमारी के पास ($380 \\text{ MW}$)",
-      "राजस्थान में जैसलमेर ($100 \\text{ MW}$)",
-      "हिमाचल प्रदेश में शिमला ($1000 \\text{ MW}$)"
-    ],
-    "a": 1,
-    "e": "India mein high-capacity commercial wind farms ko favorable coastal aur high-wind corridors mein establish kiya gaya hai.\n\n• Option 1 is Incorrect because Rann of Kutch (Gujarat) ek emerging energy region hai par original largest landmark cluster nahi hai.\n\n• Option 2 is Correct because India ka largest operational wind power cluster **Tamil Nadu mein Kanyakumari (Muppandal wind farm) ke paas** establish kiya gaya tha. Mountain passes se aane wali strong round-the-year monsoonal winds ka benefit lekar, is landmark facility ko initially **$380\\text{ MW}$ electricity** generate karne ke liye configure kiya gaya tha (aur ab pure complex mein $1500\\text{ MW}+$ expand ho chuka hai), jisne Tamil Nadu ko wind energy mein national leader banaya.\n\n• Option 3 is Incorrect because Jaisalmer Wind Park Rajasthan ki ek major facility hai, par ye standard academic text mein landmark original Tamil Nadu site se replace nahi hota.\n\n• Option 4 is Incorrect because mountainous Himalayan valleys jaise Shimla mein complex air turbulence hoti hai jo continuous large wind farm grids ke liye suitable nahi hoti."
-  },
-  {
-    "p_id": "bpsc_phys_m28_07",
-    "qe": "Solar heating devices (such as box-type solar cookers) utilize specific optical components to maximize thermal absorption and heat retention. Why are internal cooker box surfaces painted dull black, and what is the role of the top glass sheet cover?",
-    "qh": "सौर तापन उपकरण (जैसे बॉक्स-प्रकार के सौर कुकर) तापीय अवशोषण और गर्मी प्रतिधारण को अधिकतम करने के लिए विशिष्ट ऑप्टिकल घटकों का उपयोग करते हैं। कुकर बॉक्स की आंतरिक सतहों को सुस्त काले रंग से क्यों रंगा जाता है, और शीर्ष कांच की शीट कवर की क्या भूमिका होती है?",
-    "oe": [
-      "Black paint maximizes heat absorption; the glass sheet cover traps reflected infrared radiation to create an internal Greenhouse Effect.",
-      "Black paint cools the interior; the glass sheet allows heat to escape into the atmosphere.",
-      "Black paint prevents rusting; the glass sheet acts as an electrical insulator.",
-      "Black paint reflects sunlight; the glass cover converts light into UV radiation."
-    ],
-    "oh": [
-      "काला पेंट ऊष्मा अवशोषण को अधिकतम करता है; कांच की शीट कवर परावर्तित अवरक्त विकिरण (infrared radiation) को फंसाकर एक आंतरिक ग्रीनहाउस प्रभाव (Greenhouse Effect) बनाती है।",
-      "काला पेंट आंतरिक भाग को ठंडा करता है; कांच की शीट गर्मी को वायुमंडल में भागने की अनुमति देती है।",
-      "काला पेंट जंग लगने से रोकता है; कांच की शीट एक विद्युत इन्सुलेटर के रूप में कार्य करती है।",
-      "काला पेंट सूर्य के प्रकाश को परावर्तित करता है; कांच का कवर प्रकाश को यूवी विकिरण में परिवर्तित करता है।"
-    ],
-    "a": 0,
-    "e": "Box-type solar cookers thermal radiation ke absorption aur greenhouse heat retention ke principles par kaam karte hain.\n\n• Option 1 is Correct because:\n- **Black Paint**: Kirchhoff's Law of Thermal Radiation ke according, dull black surfaces light aur thermal radiation ki excellent absorbers hoti hain, jo incoming solar rays ka up to $95\\%$ absorb karke cooker box ke andar heat collection ko maximize karti hain.\n- **Glass Sheet Cover**: Transparent glass incoming short-wavelength solar rays ke liye transparent hota hai, par hot black interior se emit hone wali long-wavelength infrared thermal radiation ke liye opaque hota hai. Ye heat escape ko convection aur radiation se rokta hai, ek internal **Greenhouse Effect** create karta hai jo internal temperature ko **$100^\\circ\\text{C}-140^\\circ\\text{C}$** tak le jata hai.\n\n• Option 2 is Incorrect because black paint cooling nahi karta aur glass sheet heat escape ko rokti hai na ki allow karti hai.\n\n• Option 3 is Incorrect because black paint aur glass sheet electrical insulation ya rust prevention ke liye nahi balki thermal capture ke liye use hote hain.\n\n• Option 4 is Incorrect because black surfaces heat ko reflect nahi absorb karti hain, aur glass UV ko create karne ke bajaye block karta hai."
-  },
-  {
-    "p_id": "bpsc_phys_m28_08",
-    "qe": "Box-type solar cookers provide an eco-friendly cooking option but have practical culinary limitations. Which cooking operation CANNOT be performed using a standard box-type solar cooker?",
-    "qh": "बॉक्स-प्रकार के सौर कुकर एक पर्यावरण के अनुकूल खाना पकाने का विकल्प प्रदान करते हैं लेकिन उनकी व्यावहारिक पाक सीमाएं हैं। मानक बॉक्स-प्रकार के सौर कुकर का उपयोग करके कौन सा पकाने का कार्य नहीं किया जा सकता है?",
-    "oe": [
-      "Cooking vegetables slowly to retain nutrients",
-      "Baking bread or chapattis, and deep frying foods",
-      "Heating water to $100^\\circ\\text{C}$",
-      "Boiling rice and lentils (dal)"
-    ],
-    "oh": [
-      "पोषक तत्वों को बनाए रखने के लिए सब्जियों को धीमी गति से पकाना",
-      "रोटी या चपाती पकाना (Baking), और खाद्य पदार्थों को डीप फ्राई (Deep Frying) करना",
-      "पानी को $100^\\circ\\text{C}$ तक गर्म करना",
-      "चावल और दाल उबालना"
-    ],
-    "a": 1,
-    "e": "Standard box-type solar cooker greenhouse effect ke through ek moderate temperature limit tak hi heat generate kar pata hai.\n\n• Option 1 is Incorrect because slow cooking of vegetables solar cooker ka key functional benefit hai jo nutrients retain karta hai.\n\n• Option 2 is Correct because box-type solar cooker trapped greenhouse heat se maximum internal temperature **$100^\\circ\\text{C} \\text{ to } 140^\\circ\\text{C}$** hi reach kar pata hai. Halanki ye slow boiling aur steaming ke liye suitable hai bina food ko jalaye ya nutrients lose kiye, **par ye baking chapattis ya deep-frying foods ke liye required intense localized high temperatures ($> 180^\\circ\\text{C}-200^\\circ\\text{C}$) achieve nahi kar sakta**. Frying ke liye parabolic concentrator solar cookers ki zaroorat padti hai.\n\n• Option 3 is Incorrect because bright sunshine mein water ko $100^\\circ\\text{C}$ tak easily heat kiya ja sakta hai.\n\n• Option 4 is Incorrect because solar cookers mein rice aur lentils easily boil ho sakte hain kyunki inke liye $\\approx 100^\\circ\\text{C}$ temperature lagta hai."
-  },
-  {
-    "p_id": "bpsc_phys_m28_09",
-    "qe": "Atmospheric trapping of thermal radiation maintains Earth's habitable surface temperature. Which set of gases constitutes the primary atmospheric Greenhouse Gases responsible for the Greenhouse Effect?",
-    "qh": "तापीय विकिरण का वायुमंडलीय फंसाव (trapping) पृथ्वी के रहने योग्य सतह के तापमान को बनाए रखता है। गैसों का कौन सा समूह ग्रीनहाउस प्रभाव के लिए जिम्मेदार प्राथमिक वायुमंडलीय ग्रीनहाउस गैसों (Greenhouse Gases) का गठन करता है?",
-    "oe": [
-      "Nitrogen ($N_2$), Oxygen ($O_2$), and Argon ($Ar$)",
-      "Chlorine ($Cl_2$), Fluorine ($F_2$), and Hydrogen ($H_2$)",
-      "Carbon Dioxide ($CO_2$), Water Vapour ($H_2O$), and Methane ($CH_4$)",
-      "Helium ($He$), Neon ($Ne$), and Krypton ($Kr$)"
-    ],
-    "oh": [
-      "नाइट्रोजन ($N_2$), ऑक्सीजन ($O_2$), और आर्गन ($Ar$)",
-      "क्लोरीन ($Cl_2$), फ्लोरीन ($F_2$), और हाइड्रोजन ($H_2$)",
-      "कार्बन डाइऑक्साइड ($CO_2$), जल वाष्प ($H_2O$), और मीथेन ($CH_4$)",
-      "हीलियम ($He$), नियॉन ($Ne$), और क्रिप्टन ($Kr$)"
-    ],
-    "a": 2,
-    "e": "Greenhouse Effect Earth se emit hone wali thermal infrared radiation ke atmospheric absorption aur re-emission se maintain hota hai.\n\n• Option 1 is Incorrect because homonuclear diatomic gases ($N_2, O_2$) aur argon atmosphere ka $99\\%$ part hote hue bhi infrared radiation absorb nahi karte kyunki inke paas dipole moments nahi hote.\n\n• Option 2 is Incorrect because elemental halogens aur hydrogen primary greenhouse blanket ka formation nahi karte.\n\n• Option 3 is Correct because **Greenhouse Effect** tab create hota hai jab Earth ki surface se emitted long-wave infrared (thermal) radiation ko atmosphere ki polyatomic aur heteronuclear gases absorb aur re-emit karti hain. Primary natural atmospheric greenhouse gases **Carbon Dioxide ($CO_2$)**, **Water Vapour ($H_2O$)**, aur **Methane ($CH_4$)** hain, jinke sath Nitrous Oxide ($N_2O$) aur Ozone ($O_3$) bhi aate hain. Is natural blanket ke bina Earth ka average surface temperature $-18^\\circ\\text{C}$ tak freeze ho jata.\n\n• Option 4 is Incorrect because monoatomic noble gases (He, Ne, Kr) infrared photons absorb nahi karti hain."
-  },
-  {
-    "p_id": "bpsc_phys_m28_10",
-    "qe": "Solar photovoltaic cells convert incident sunlight directly into electrical energy via semiconductor physics. What semiconductor materials are primarily used to manufacture solar cells, and what voltage does a single cell typical unit generate?",
-    "qh": "सौर फोटोवोल्टिक सेल अर्धचालक भौतिकी के माध्यम से आपतित सूर्य के प्रकाश को सीधे विद्युत ऊर्जा में परिवर्तित करते हैं। मुख्य रूप से सौर सेल के निर्माण के लिए किन अर्धचालक सामग्रियों का उपयोग किया जाता है, और एक एकल सेल विशिष्ट इकाई कितना वोल्टेज उत्पन्न करती है?",
-    "oe": [
-      "Graphite and Sulfur; potential difference of $50 \\text{ V}$",
-      "Copper and Iron; potential difference of $220 \\text{ V}$",
-      "Semiconductors like Silicon ($Si$), Gallium ($Ga$), and Germanium ($Ge$); potential difference of $0.5\\text{-}1 \\text{ V}$",
-      "Lead and Aluminum; potential difference of $12 \\text{ V}$"
-    ],
-    "oh": [
-      "ग्रेफाइट और सल्फर; $50 \\text{ V}$ का विभवांतर",
-      "तांबा और लोहा; $220 \\text{ V}$ का विभवांतर",
-      "सिलिकॉन ($Si$), गैलियम ($Ga$), और जर्मेनियम ($Ge$) जैसे अर्धचालक; $0.5\\text{-}1 \\text{ V}$ का विभवांतर",
-      "सीसा और एल्युमिनियम; $12 \\text{ V}$ का विभवांतर"
-    ],
-    "a": 2,
-    "e": "Solar photovoltaic cells semiconductor p-n junctions par photons ke strike hone se photovoltage produce karte hain.\n\n• Option 1 is Incorrect because graphite aur sulfur non-semiconductor allotropes aur non-metals hain jo solar cell generation mein use nahi hote.\n\n• Option 2 is Incorrect because copper aur iron metallic conductors hain aur $220\\text{ V}$ household AC mains voltage hai.\n\n• Option 3 is Correct because **Photovoltaic (Solar) Cells** high-purity semiconductor materials jaise **Silicon ($Si$)**, Gallium Arsenide ($GaAs$), aur Germanium ($Ge$) se fabricate kiye jaate hain. Jab sunlight photons semiconductor wafer ke $p\\text{-}n$ junction par strike karte hain, toh absorbed photons free electron-hole pairs generate karte hain, jisse cell ke across photovoltage develop hoti hai. Ek typical single solar cell (approx $2\\text{ cm}^2$ silicon wafer) standard solar light ke under lagbhag **$0.5 \\text{ to } 1 \\text{ V}$ ka potential difference** aur approx $0.7 \\text{ W}$ DC electrical power deliver karta hai.\n\n• Option 4 is Incorrect because lead aur aluminum lead-acid batteries/structural components mein use hote hain, semiconductor solar cells mein nahi."
-  },
-  {
-    "p_id": "bpsc_phys_m28_11",
-    "qe": "Photovoltaic solar cell technology offers distinct operational advantages for remote energy deployment. Which operational feature represents a major advantage of Solar Cells?",
-    "qh": "फोटोवोल्टिक सोलर सेल तकनीक दूरस्थ ऊर्जा परिनियोजन के लिए विशिष्ट परिचालन लाभ प्रदान करती है। कौन सी परिचालन विशेषता सोलर सेल का एक प्रमुख लाभ दर्शाती है?",
-    "oe": [
-      "They require continuous combustion of natural gas during night hours.",
-      "They rely on mechanical high-speed turbine rotors that require frequent lubrication.",
-      "They have no moving parts, require minimal maintenance, operate without focusing devices, and can be installed in remote/inaccessible locations.",
-      "They emit greenhouse gases during operation."
-    ],
-    "oh": [
-      "उन्हें रात के समय प्राकृतिक गैस के निरंतर दहन की आवश्यकता होती है।",
-      "वे यांत्रिक उच्च गति टरबाइन रोटार पर भरोसा करते हैं जिन्हें बार-बार स्नेहन (lubrication) की आवश्यकता होती है।",
-      "इनमें कोई गतिमान भाग नहीं होता, न्यूनतम रखरखाव की आवश्यकता होती है, बिना फोकसिंग उपकरणों के काम करते हैं, और दूरदराज/दुर्गम स्थानों पर स्थापित किए जा सकते हैं।",
-      "वे संचालन के दौरान ग्रीनहाउस गैसों का उत्सर्जन करते हैं।"
-    ],
-    "a": 2,
-    "e": "Photovoltaic technology solid-state physics par based hoti hai aur remote areas mein clean energy provide karti hai.\n\n• Option 1 is Incorrect because solar cells ko operate karne ke liye kisi natural gas combustion ki zaroorat nahi hoti.\n\n• Option 2 is Incorrect because solar cells solid-state devices hain jinme high-speed mechanical turbine rotors nahi hote.\n\n• Option 3 is Correct because **Solar (Photovoltaic) Cells** ke main operational advantages hain:\n- **Solid-State Reliability**: Inme **koi moving mechanical parts nahi hote**, jisse friction wear-and-tear eliminate ho jata hai;\n- **Low Maintenance**: Bohot minimal servicing require hoti hai aur operational lifespan 20-25 years se zyada hota hai;\n- **Diffuse Light Utilization**: Ye regular sunlight ke under bina complex optical focusing mirrors ya mechanical tracking ke operate karte hain;\n- **Decentralized Deployment**: Inhe remote ya inaccessible areas (jaise artificial satellites, space stations, remote lighthouses aur villages) mein easily install kiya ja sakta hai jahan transmission grid lines bichhana economically unfeasible hota hai.\n\n• Option 4 is Incorrect because solar cells operation ke dauran zero greenhouse gas emission produce karte hain."
-  },
-  {
     "p_id": "bpsc_phys_m28_12",
     "qe": "Solar panels combine multiple individual solar cells to increase output power. What precious metal is extensively used for interconnecting individual solar cells within a solar panel, making commercial manufacturing expensive?",
     "qh": "सोलर पैनल आउटपुट पावर बढ़ाने के लिए कई व्यक्तिगत सोलर सेलों को जोड़ते हैं। सोलर पैनल के भीतर व्यक्तिगत सोलर सेलों को आपस में जोड़ने (interconnecting) के लिए किस कीमती धातु का व्यापक रूप से उपयोग किया जाता है, जिससे वाणिज्यिक निर्माण महंगा हो जाता है?",
     "oe": [
-      "Aluminum ($Al$)",
-      "Platinum ($Pt$)",
-      "Copper ($Cu$)",
-      "Silver ($Ag$)"
+      "Aluminum (Al)",
+      "Platinum (Pt)",
+      "Copper (Cu)",
+      "Silver (Ag)"
     ],
     "oh": [
-      "एल्युमिनियम ($Al$)",
-      "प्लैटिनम ($Pt$)",
-      "तांबा ($Cu$)",
-      "चांदी ($Ag$)"
+      "एल्युमिनियम (Al)",
+      "प्लैटिनम (Pt)",
+      "तांबा (Cu)",
+      "चांदी (Ag)"
     ],
     "a": 3,
-    "e": "Solar panel arrays mein cells ke series-parallel connection ke liye highly conductive aur corrosion-resistant metal interconnections ki zaroorat hoti hai.\n\n• Option 1 is Incorrect because aluminum external structural frames ke liye use hota hai, internal cell solder interconnections ke liye nahi.\n\n• Option 2 is Incorrect because platinum ek expensive catalytic metal hai jo cell ribbon interconnections ke liye use nahi hota.\n\n• Option 3 is Incorrect because copper sasta hai par silver ke mukable jaldi oxidize ho jata hai, jisse decades ke outdoor exposure ke baad higher contact resistance develop hoti hai.\n\n• Option 4 is Correct because high-power **Solar Cell Panel** assemble karne ke liye dozens of individual silicon photovoltaic cells ko series aur parallel arrays mein connect kiya jata hai. **Silver ($Ag$) metal ribbons aur paste** ka extensive use front-contact grid lines print karne aur cells ke beech soldering interconnections banane ke liye kiya jata hai. Silver sabhi metals mein lowest electrical resistivity aur highest electrical conductivity ($1.59 \\times 10^{-8}\\ \\Omega\\cdot\\text{m}$) possess karta hai, jo resistive ($I^2R$) power loss ko minimize karta hai aur oxidation ko resist karta hai. Halanki, precious silver ki high market cost solar modules ke manufacturing expense ko significantly badha deti hai."
+    "e": "Solar panel arrays mein cells ke series-parallel connection ke liye highly conductive aur corrosion-resistant metal interconnections ki zaroorat hoti hai.\n\n• Option 1 is Incorrect because aluminum external structural frames ke liye use hota hai, internal cell solder interconnections ke liye nahi.\n\n• Option 2 is Incorrect because platinum ek expensive catalytic metal hai jo cell ribbon interconnections ke liye use nahi hota.\n\n• Option 3 is Incorrect because copper sasta hai par silver ke mukable jaldi oxidize ho jata hai, jisse decades ke outdoor exposure ke baad higher contact resistance develop hoti hai.\n\n• Option 4 is Correct because high-power **Solar Cell Panel** assemble karne ke liye dozens of individual silicon photovoltaic cells ko series aur parallel arrays mein connect kiya jata hai. **Silver (Ag) metal ribbons aur paste** ka extensive use front-contact grid lines print karne aur cells ke beech soldering interconnections banane ke liye kiya jata hai. Silver sabhi metals mein lowest electrical resistivity aur highest electrical conductivity (1.59 × 10⁻⁸ Ω·m) possess karta hai, jo resistive (I²R) power loss ko minimize karta hai aur oxidation ko resist karta hai. Halanki, precious silver ki high market cost solar modules ke manufacturing expense ko significantly badha deti hai."
   },
   {
     "p_id": "bpsc_phys_m28_13",
@@ -1215,7 +624,7 @@
       "फ्रांस (France)"
     ],
     "a": 3,
-    "e": "Solar furnaces massive optical concentrators ka use karke sunlight ko small focal points par concentrate karte hain taaki extremely high temperatures achieve kiye ja sakein.\n\n• Option 1 is Incorrect because Denmark globally 'Country of Winds' ke naam se jana jata hai.\n\n• Option 2 is Incorrect because Germany photovoltaic installations mein European leader hai, par yahan largest solar furnace situated nahi hai.\n\n• Option 3 is Incorrect because India major solar parks (jaise Bhadla) host karta hai, par world ka largest parabolic research solar furnace nahi.\n\n• Option 4 is Correct because **world ka largest Solar Furnace (Odeillo Solar Furnace)** southern France ke Pyrenees mountains mein **Odeillo** mein construct kiya gaya tha. 1969 mein commissioned, isme 63 flat sun-tracking heliostat mirrors ka array hai jo sunlight ko ek massive curved parabolic concentrator ($54\\text{ meters}$ wide aur $48\\text{ meters}$ high) par reflect karta hai. Ye solar radiation ko hazaron guna concentrate karke tiny focal target par focus karta hai, jisse high-temperature material science aur metallurgical testing ke liye **$3,000^\\circ\\text{C}$ se $3,500^\\circ\\text{C}$** se zyada ka temperature achieve hota hai."
+    "e": "Solar furnaces massive optical concentrators ka use karke sunlight ko small focal points par concentrate karte hain taaki extremely high temperatures achieve kiye ja sakein.\n\n• Option 1 is Incorrect because Denmark globally 'Country of Winds' ke naam se jana jata hai.\n\n• Option 2 is Incorrect because Germany photovoltaic installations mein European leader hai, par yahan largest solar furnace situated nahi hai.\n\n• Option 3 is Incorrect because India major solar parks (jaise Bhadla) host karta hai, par world ka largest parabolic research solar furnace nahi.\n\n• Option 4 is Correct because **world ka largest Solar Furnace (Odeillo Solar Furnace)** southern France ke Pyrenees mountains mein **Odeillo** mein construct kiya gaya tha. 1969 mein commissioned, isme 63 flat sun-tracking heliostat mirrors ka array hai jo sunlight ko ek massive curved parabolic concentrator (54 meters wide aur 48 meters high) par reflect karta hai. Ye solar radiation ko hazaron guna concentrate karke tiny focal target par focus karta hai, jisse high-temperature material science aur metallurgical testing ke liye **3,000°C se 3,500°C** se zyada ka temperature achieve hota hai."
   },
   {
     "p_id": "bpsc_phys_m28_14",
@@ -1260,19 +669,19 @@
     "qe": "Photovoltaic silicon wafers must meet strict physical purity standards to achieve practical photoelectric conversion efficiency. What is the approximate electrical conversion efficiency of modern silicon solar cells?",
     "qh": "व्यावहारिक फोटोइलेक्ट्रिक रूपांतरण दक्षता प्राप्त करने के लिए फोटोवोल्टिक सिलिकॉन वेफर्स को सख्त भौतिक शुद्धता मानकों को पूरा करना चाहिए। आधुनिक सिलिकॉन सोलर सेलों की अनुमानित विद्युत रूपांतरण दक्षता क्या है?",
     "oe": [
-      "$99\\%$",
-      "$5\\%$",
-      "$75\\%$",
-      "$25\\%$"
+      "99%",
+      "5%",
+      "75%",
+      "25%"
     ],
     "oh": [
-      "$99\\%$",
-      "$5\\%$",
-      "$75\\%$",
-      "$25\\%$"
+      "99%",
+      "5%",
+      "75%",
+      "25%"
     ],
     "a": 3,
-    "e": "Silicon solar cells solar photons ko direct current electricity mein convert karte hain jinki efficiency semiconductor physics aur thermodynamic limits par depend karti hai.\n\n• Option 1 is Incorrect because $99\\%$ thermodynamic laws aur bandgap electron excitation losses ke chalte unachievable hai.\n\n• Option 2 is Incorrect because $5\\%$ conversion efficiency 1950s ke early experimental laboratory silicon cells ko represent karti hai.\n\n• Option 3 is Incorrect because $75\\%$ semiconductor bandgap limits ke mutabiq single-junction silicon cell ke liye theoretically impossible efficiency hai.\n\n• Option 4 is Correct because standard commercial monocrystalline aur polycrystalline silicon solar cells **approximately $20\\%\\text{ to }25\\%$** ki electrical conversion efficiency achieve karte hain (incident optical photon energy ke roughly one-fourth part ko usable direct-current electricity mein convert karte hain). Single $p\\text{-}n$ junction silicon cells ke liye fundamental theoretical upper thermodynamic limit (Shockley-Queisser limit) approximately $33\\%$ hai, jo $25\\%$ ko ek realistic modern high-efficiency benchmark banata hai."
+    "e": "Silicon solar cells solar photons ko direct current electricity mein convert karte hain jinki efficiency semiconductor physics aur thermodynamic limits par depend karti hai.\n\n• Option 1 is Incorrect because 99% thermodynamic laws aur bandgap electron excitation losses ke chalte unachievable hai.\n\n• Option 2 is Incorrect because 5% conversion efficiency 1950s ke early experimental laboratory silicon cells ko represent karti hai.\n\n• Option 3 is Incorrect because 75% semiconductor bandgap limits ke mutabiq single-junction silicon cell ke liye theoretically impossible efficiency hai.\n\n• Option 4 is Correct because standard commercial monocrystalline aur polycrystalline silicon solar cells **approximately 20% to 25%** ki electrical conversion efficiency achieve karte hain (incident optical photon energy ke roughly one-fourth part ko usable direct-current electricity mein convert karte hain). Single p-n junction silicon cells ke liye fundamental theoretical upper thermodynamic limit (Shockley-Queisser limit) approximately 33% hai, jo 25% ko ek realistic modern high-efficiency benchmark banata hai."
   },
   {
     "p_id": "bpsc_phys_m28_17",
@@ -1310,7 +719,7 @@
       "बायो-गैस के लिए शुरुआती बायोमास प्राप्त करने के लिए जंगलों को काटने की आवश्यकता होती है।"
     ],
     "a": 2,
-    "e": "Bio-gas agricultural aur organic animal waste se obtain hone wala ek efficient aur eco-friendly domestic fuel alternative hai.\n\n• Option 1 is Incorrect because biogas ki spent slurry soil ko nitrogen aur phosphorus se enrich karti hai na ki deplete.\n\n• Option 2 is Incorrect because indoor smoke aur particulate matter air pollution generate karte hain aur ye koi advantage nahi hai.\n\n• Option 3 is Correct because **Bio-gas** wood, dried cow-dung cakes ya coal burn karne ke mukable clear environmental, economic aur domestic advantages offer karta hai:\n- **Smokeless Blue Flame**: Harmful particulate matter emit kiye bina cleanly burn hota hai, indoor respiratory diseases ko prevent karta hai;\n- **Zero Solid Residue**: Piche koi unburnt soot ya ash nahi chhodta, household cleaning burdens ko eliminate karta hai;\n- **High Energy Output**: Up to $75\\%$ methane contain karta hai, providing high calorific value;\n- **Sanitation and Organic Manure**: Animal dung aur organic wastes ko hygienically dispose karta hai while converting them into nutrient-rich organic nitrogen/phosphorus fertilizer.\n\n• Option 4 is Incorrect because biogas deforestation ko badhava nahi deta balki fuelwood dependency kam karke forests bachata hai."
+    "e": "Bio-gas agricultural aur organic animal waste se obtain hone wala ek efficient aur eco-friendly domestic fuel alternative hai.\n\n• Option 1 is Incorrect because biogas ki spent slurry soil ko nitrogen aur phosphorus se enrich karti hai na ki deplete.\n\n• Option 2 is Incorrect because indoor smoke aur particulate matter air pollution generate karte hain aur ye koi advantage nahi hai.\n\n• Option 3 is Correct because **Bio-gas** wood, dried cow-dung cakes ya coal burn karne ke mukable clear environmental, economic aur domestic advantages offer karta hai:\n- **Smokeless Blue Flame**: Harmful particulate matter emit kiye bina cleanly burn hota hai, indoor respiratory diseases ko prevent karta hai;\n- **Zero Solid Residue**: Piche koi unburnt soot ya ash nahi chhodta, household cleaning burdens ko eliminate karta hai;\n- **High Energy Output**: Up to 75% methane contain karta hai, providing high calorific value;\n- **Sanitation and Organic Manure**: Animal dung aur organic wastes ko hygienically dispose karta hai while converting them into nutrient-rich organic nitrogen/phosphorus fertilizer.\n\n• Option 4 is Incorrect because biogas deforestation ko badhava nahi deta balki fuelwood dependency kam karke forests bachata hai."
   },
   {
     "p_id": "bpsc_phys_m28_19",
@@ -1319,17 +728,17 @@
     "oe": [
       "High emissions of sulfur dioxide causing severe acid rain",
       "Erosion of the ozone layer by rotating turbine blades",
-      "Disturbance of local rainfall patterns and requirement of large land areas ($2 \\text{ hectares/MW}$)",
+      "Disturbance of local rainfall patterns and requirement of large land areas (2 hectares/MW)",
       "Depletion of subterranean groundwater tables"
     ],
     "oh": [
       "सल्फर डाइऑक्साइड का उच्च उत्सर्जन जिससे गंभीर अम्ल वर्षा होती है",
       "घूमने वाले टर्बाइन ब्लेड द्वारा ओजोन परत का क्षरण",
-      "स्थानीय वर्षा पैटर्न में व्यवधान और बड़े भूमि क्षेत्रों की आवश्यकता ($2 \\text{ हेक्टेयर/MW}$)",
+      "स्थानीय वर्षा पैटर्न में व्यवधान और बड़े भूमि क्षेत्रों की आवश्यकता (2 हेक्टेयर/MW)",
       "भूमिगत भूजल तालिकाओं की कमी"
     ],
     "a": 2,
-    "e": "Large-scale commercial wind farms clean energy produce karte hain lekin unke sath specific spatial aur local atmospheric limitations judi hoti hain.\n\n• Option 1 is Incorrect because wind turbines me fossil fuels burn nahi hote, isliye sulfur dioxide ya acid rain ka question hi nahi uthta.\n\n• Option 2 is Incorrect because ozone depletion stratosphere mein chemical CFCs se hota hai, mechanical turbine blades se nahi.\n\n• Option 3 is Correct because operation ke dauran wind energy renewable aur non-polluting hone ke bawajood, **large-scale commercial wind farms distinct physical aur environmental limitations face karte hain**:\n- **Enormous Land Footprint**: Approx **$2\\text{ hectares of open land per 1 MW}$** generation capacity require hoti hai;\n- **Micro-climatic Alteration**: Massive turbine blades ke dense arrays local aerodynamic wind velocities aur boundary layer moisture circulation ko alter karte hain, potentially **local rainfall aur weather patterns ko disturb** kar sakte hain;\n- **High Capital and Weathering Costs**: Rotating components cyclonic winds, rain aur salt corrosion ke continuous exposure mein rehte hain;\n- **Avian Hazard**: Migratory bird populations ke liye collision hazards pose karte hain.\n\n• Option 4 is Incorrect because wind generation groundwater hydrology ko deplete nahi karta."
+    "e": "Large-scale commercial wind farms clean energy produce karte hain lekin unke sath specific spatial aur local atmospheric limitations judi hoti hain.\n\n• Option 1 is Incorrect because wind turbines me fossil fuels burn nahi hote, isliye sulfur dioxide ya acid rain ka question hi nahi uthta.\n\n• Option 2 is Incorrect because ozone depletion stratosphere mein chemical CFCs se hota hai, mechanical turbine blades se nahi.\n\n• Option 3 is Correct because operation ke dauran wind energy renewable aur non-polluting hone ke bawajood, **large-scale commercial wind farms distinct physical aur environmental limitations face karte hain**:\n- **Enormous Land Footprint**: Approx **2 hectares of open land per 1 MW** generation capacity require hoti hai;\n- **Micro-climatic Alteration**: Massive turbine blades ke dense arrays local aerodynamic wind velocities aur boundary layer moisture circulation ko alter karte hain, potentially **local rainfall aur weather patterns ko disturb** kar sakte hain;\n- **High Capital and Weathering Costs**: Rotating components cyclonic winds, rain aur salt corrosion ke continuous exposure mein rehte hain;\n- **Avian Hazard**: Migratory bird populations ke liye collision hazards pose karte hain.\n\n• Option 4 is Incorrect because wind generation groundwater hydrology ko deplete nahi karta."
   },
   {
     "p_id": "bpsc_phys_m28_20",
@@ -1348,6 +757,6 @@
       "यह सौर ऊर्जा को केंद्रित करने और आंतरिक तापमान को बढ़ाने के लिए एक बड़े सतह क्षेत्र से सूर्य के प्रकाश को एक छोटे केंद्र क्षेत्र पर केंद्रित करता है।"
     ],
     "a": 3,
-    "e": "Solar energy collectors diffuse sunlight rays ko optical surfaces ke zariye gather aur concentrate karke thermal efficiency badhate hain.\n\n• Option 1 is Incorrect because reflectors ka aim heat release ya thermal cooling nahi balki temperature raise karna hota hai.\n\n• Option 2 is Incorrect because optical reflectors light rays ko nuclear fission radiation mein convert nahi kar sakte.\n\n• Option 3 is Incorrect because optical mirrors inorganic reflective surfaces hote hain jo atmospheric gases absorb nahi karte.\n\n• Option 4 is Correct because diffuse solar radiation Earth par relatively low power density (solar constant $\\approx 1.4\\text{ kW/m}^2$) ke saath pahunchti hai. Solar concentrators, solar cookers aur solar thermal furnaces mein, ek **Reflector (jaise plane mirror ya curved parabolic/spherical mirror)** parallel sunlight ko **large optical surface aperture par intercept karta hai aur un rays ko ek bohot smaller localized focal point/absorber par reflect/focus kar deta hai**. Per unit area radiant energy flux density ko concentrate karke, ye receiver box ya boiler ke temperature ko significantly **elevate ($180^\\circ\\text{C}-3000^\\circ\\text{C}$ tak)** kar deta hai."
+    "e": "Solar energy collectors diffuse sunlight rays ko optical surfaces ke zariye gather aur concentrate karke thermal efficiency badhate hain.\n\n• Option 1 is Incorrect because reflectors ka aim heat release ya thermal cooling nahi balki temperature raise karna hota hai.\n\n• Option 2 is Incorrect because optical reflectors light rays ko nuclear fission radiation mein convert nahi kar sakte.\n\n• Option 3 is Incorrect because optical mirrors inorganic reflective surfaces hote hain jo atmospheric gases absorb nahi karte.\n\n• Option 4 is Correct because diffuse solar radiation Earth par relatively low power density (solar constant ≈ 1.4 kW/m²) ke saath pahunchti hai. Solar concentrators, solar cookers aur solar thermal furnaces mein, ek **Reflector (jaise plane mirror ya curved parabolic/spherical mirror)** parallel sunlight ko **large optical surface aperture par intercept karta hai aur un rays ko ek bohot smaller localized focal point/absorber par reflect/focus kar deta hai**. Per unit area radiant energy flux density ko concentrate karke, ye receiver box ya boiler ke temperature ko significantly **elevate (180°C - 3000°C tak)** kar deta hai."
   }
 ]
