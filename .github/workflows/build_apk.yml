@@ -40,29 +40,33 @@ jobs:
 
       - name: 🔧 Auto-Patch Gradle, Desugaring & Google Services
         run: |
+          # 1. Package name patch for Groovy & Kotlin DSL
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "namespace .*/namespace "com.testing"/g' {} +
+          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle.kts" -exec sed -i 's/namespace = .*/namespace = "com.testing"/g' {} +
 
+          # 2. CompileSDK 36 patch
           find flutter_app/android/ ~/.pub-cache/ -type f -name "*.kts" -exec sed -i 's/compileSdk.*/compileSdk = 36/g' {} +
           find flutter_app/android/ ~/.pub-cache/ -type f -name "build.gradle" -exec sed -i 's/compileSdkVersion.*/compileSdkVersion 36/g' {} +
           find flutter_app/android/ ~/.pub-cache/ -type f -name "build.gradle" -exec sed -i 's/compileSdk .*/compileSdk 36/g' {} +
 
+          # 3. Settings Gradle Plugin patch
           if [ -f flutter_app/android/settings.gradle ]; then
             sed -i 's/plugins {/plugins {\n    id "com.google.gms.google-services" version "4.4.2" apply false/' flutter_app/android/settings.gradle
           elif [ -f flutter_app/android/settings.gradle.kts ]; then
             sed -i 's/plugins {/plugins {\n    id("com.google.gms.google-services") version "4.4.2" apply false/' flutter_app/android/settings.gradle.kts
           fi
 
+          # 4. App-level Desugaring & Google Services safe injection
           if [ -f flutter_app/android/app/build.gradle ]; then
             sed -i 's/plugins {/plugins {\n    id "com.google.gms.google-services"/' flutter_app/android/app/build.gradle
             sed -i 's/compileOptions {/compileOptions {\n        coreLibraryDesugaringEnabled true/' flutter_app/android/app/build.gradle
-            echo -e "\ndependencies {\n    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'\n}" >> flutter_app/android/app/build.gradle
+            sed -i '/dependencies {/a \    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"' flutter_app/android/app/build.gradle
           elif [ -f flutter_app/android/app/build.gradle.kts ]; then
             sed -i 's/plugins {/plugins {\n    id("com.google.gms.google-services")/' flutter_app/android/app/build.gradle.kts
             sed -i 's/compileOptions {/compileOptions {\n        isCoreLibraryDesugaringEnabled = true/' flutter_app/android/app/build.gradle.kts
-            echo -e "\ndependencies {\n    coreLibraryDesugaring(\"com.android.tools:desugar_jdk_libs:2.0.4\")\n}" >> flutter_app/android/app/build.gradle.kts
+            sed -i '/dependencies {/a \    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")' flutter_app/android/app/build.gradle.kts
           fi
 
       # 🔑 1. PRINT SHA-1 KEY IN GITHUB ACTIONS LOGS
