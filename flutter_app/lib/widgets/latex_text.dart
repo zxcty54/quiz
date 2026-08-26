@@ -7,55 +7,65 @@ class LatexText extends StatelessWidget {
 
   const LatexText(this.text, {super.key, this.style});
 
-  // 🎯 1. HTML FORMATTING CLEANER (Fixes <b>, </b>, <br/> raw tags)
+  // 1. HTML Formatting Cleaner
   static String cleanHtmlFormatting(String str) {
     if (str.isEmpty) return "";
     String cleaned = str;
 
-    // A. <br>, <br/> ko clean line break (\n) me badlein
+    // <br>, <br/> ko newline (\n) me convert karein
     cleaned = cleaned.replaceAll(RegExp(r'<br\s*/?>', caseSensitive: false), '\n');
 
-    // B. Sirf specific HTML tags (<b>, </b>, <i>, </i>, <span>, <div>, <p>) ko hatayein
-    // Note: Isse Physics/Maths ke '<' aur '>' (jaise x < 5) comparison signs SAFE rahenge!
+    // Selective HTML tags clean karein (comparison symbols < aur > safe rahenge)
     cleaned = cleaned.replaceAll(
-      RegExp(r'</?(b|i|u|strong|em|p|div|span|font)[^>]*>', caseSensitive: false), 
-      ''
+      RegExp(r'</?(b|i|u|strong|em|p|div|span|font)[^>]*>', caseSensitive: false),
+      '',
     );
 
     return cleaned;
   }
 
-  // 🎯 2. EXACT WEBSITE CLEAN & FIX LATEX LOGIC IN DART
+  // 2. LaTeX Cleaner & Normalizer
   static String cleanAndFixLaTeX(String rawStr) {
     if (rawStr.isEmpty) return "";
-    
-    // Pehle HTML Tags Safai Karein
+
     String cleanText = cleanHtmlFormatting(rawStr);
 
-    // 1. Fix double backslashes from JSON escaping (\\\\ -> \)
+    // Double backslashes fix
     cleanText = cleanText.replaceAll(r'\\', r'\');
 
-    // 2. Fix spaces after backslash (\ frac -> \frac, \ theta -> \theta etc.)
+    // Fix \t tab character typos (jaise \tmu -> \mu, \ttext -> \text)
+    cleanText = cleanText.replaceAll(r'\tmu', r'\mu');
+    cleanText = cleanText.replaceAll(r'\ttext', r'\text');
+
+    // Backslash ke baad ke extra spaces remove karein
     cleanText = cleanText.replaceAllMapped(
-      RegExp(r'\\\s+(frac|sqrt|sum|int|alpha|beta|theta|pi|deg|mu|varepsilon|delta|Phi|chi)', caseSensitive: false),
+      RegExp(
+        r'\\\s+(frac|sqrt|sum|int|alpha|beta|theta|pi|deg|mu|nu|lambda|varepsilon|delta|Delta|Phi|chi|approx|times|implies|le|ge)',
+        caseSensitive: false,
+      ),
       (match) => '\\${match.group(1)}',
     );
 
-    // 3. Fix text subscripts (\textA_1 -> A_1)
-    cleanText = cleanText.replaceAllMapped(
-      RegExp(r'text([A-Z][a-z]?)(_?\{?(\d+)\}?)'),
-      (match) => '${match.group(1)}_{${match.group(3)}}',
-    );
-
-    // 4. Auto-wrap raw LaTeX commands in $...$ if $ symbol is missing
+    // Auto-wrap standalone commands in $...$ agar $ missing ho
     if (!cleanText.contains('\$')) {
+      // Bracket wali commands (\frac{a}{b}, \sqrt{x})
       cleanText = cleanText.replaceAllMapped(
-        RegExp(r'([\\](?:frac|sqrt|alpha|beta|theta|pi|mu|varepsilon|Delta|int|sum|delta|Phi|chi)\{[^}]*\}(?:\{[^}]*\})?)'),
+        RegExp(
+          r'(\\(?:frac|sqrt)\{[^}]*\}\{[^}]*\}|\\(?:sqrt)\{[^}]*\})',
+        ),
+        (match) => '\$${match.group(1)}\$',
+      );
+
+      // Standalone Greek/Math symbols (\mu, \lambda, \theta, \nu, \approx, \times)
+      cleanText = cleanText.replaceAllMapped(
+        RegExp(
+          r'(\\(?:mu|lambda|theta|nu|alpha|beta|pi|Delta|delta|approx|times|implies)(?![a-zA-Z]))',
+        ),
         (match) => '\$${match.group(1)}\$',
       );
     }
 
-    // 5. Clean up multiple dollars $$$$ -> $$
+    // Clean multiple dollars ($$$ -> $$)
     cleanText = cleanText.replaceAll(RegExp(r'\$\$+'), '\$\$');
 
     return cleanText;
@@ -63,14 +73,12 @@ class LatexText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Clean string using Website Sanitizer Algorithm
     final String sanitizedText = cleanAndFixLaTeX(text);
 
     if (!sanitizedText.contains('\$')) {
       return Text(sanitizedText, style: style);
     }
 
-    // Split text by '$' delimiter to separate normal words and math formulas
     final List<String> parts = sanitizedText.split('\$');
     final List<InlineSpan> spans = [];
 
@@ -79,22 +87,34 @@ class LatexText extends StatelessWidget {
       if (part.isEmpty) continue;
 
       if (i % 2 == 1) {
-        // Inline Math Formula Engine (KaTeX/LaTeX)
+        // LaTeX / Math mode
         spans.add(
           WidgetSpan(
             alignment: PlaceholderAlignment.middle,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 2.0),
+              padding: const EdgeInsets.symmetric(horizontal: 1.5),
               child: Math.tex(
                 part.trim(),
                 textStyle: style,
-                onErrorFallback: (err) => Text('\$$part\$', style: style),
+                mathStyle: MathStyle.text,
+                onErrorFallback: (err) {
+                  // Agar parse fail ho toh LaTeX command ko readable Unicode fallback dein
+                  String fallback = part
+                      .replaceAll(r'\mu', 'μ')
+                      .replaceAll(r'\lambda', 'λ')
+                      .replaceAll(r'\theta', 'θ')
+                      .replaceAll(r'\nu', 'ν')
+                      .replaceAll(r'\times', '×')
+                      .replaceAll(r'\approx', '≈')
+                      .replaceAll(r'\text', '');
+                  return Text(fallback, style: style);
+                },
               ),
             ),
           ),
         );
       } else {
-        // Plain Text
+        // Normal text
         spans.add(TextSpan(text: part, style: style));
       }
     }
