@@ -101,4 +101,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: "🚀 *MockTester APK Build Successful!*\n\nAPK file zip format me attached hai. Unzip karke install karein."
-          document: flutter_app/build/app/outputs/flutter-apk/mocktester-apk.zip
+          document: flutter_app/build/app/outputs/flutter-apk/app-release.apk
