@@ -95,24 +95,24 @@
     "e": "Human audition alag-alag acoustic waveforms ko frequency (pitch), energy (loudness), aur harmonic waveforms (timbre) ke parameters par decode karta hai.\n\n• Option 1 is Incorrect because yeh lion aur mosquito ke pitch aur intensity attributes ko complete swap kar deta hai.\n\n• Option 2 is Incorrect because females ke vocal cords shorter aur tighter hone ki wajah se higher frequency aur higher pitch generate karte hain.\n\n• Option 3 is Correct because Mosquito ke wings bohot rapid oscillation karte hain, jisse high frequency (High Pitch / Teekhi aawaz) generate hoti hai par low amplitude/energy ke karan intensity bohot faint hoti hai; jabki Lion ki roar mein vocal cords massive amplitude produce karte hain (High Loudness/Intensity) par frequency comparatively low hoti hai (Low Pitch/Grave sound).\n\n• Option 4 is Incorrect because identical pitch aur loudness wale do instruments/singers ko differentiate karne wali property Quality (Timbre) hoti hai, intensity nahi."
   },
   {
-    "p_id": "bpsc_phys_m29_06",
-    "qe": "Isaac Newton derived an initial formula for the speed of sound in a gaseous medium, which Pierre-Simon Laplace later corrected. What was Newton's initial thermodynamic assumption, and how did Laplace correct it?",
-    "qh": "आइजैक न्यूटन ने गैसीय माध्यम में ध्वनि की चाल के लिए एक प्रारंभिक सूत्र निकाला, जिसे बाद में पियरे-साइमन लाप्लास ने संशोधित किया। न्यूटन की प्रारंभिक ऊष्मागतिकी धारणा क्या थी, और लाप्लास ने इसे कैसे सुधारा?",
-    "oe": [
-      "Newton assumed sound speed is independent of medium density; Laplace proved sound speed depends on gravity.",
-      "Newton assumed an adiabatic process ($v = \\sqrt{\\frac{\\gamma P}{d}}$); Laplace corrected it to an isothermal process ($v = \\sqrt{\\frac{P}{d}}$).",
-      "Newton assumed sound propagation is isobaric; Laplace proved it is isochoric.",
-      "Newton assumed an isothermal process ($v = \\sqrt{\\frac{P}{d}}$); Laplace established that sound compression/rarefaction occurs too rapidly for heat exchange, making it an adiabatic process ($v = \\sqrt{\\frac{\\gamma P}{d}}$)."
-    ],
-    "oh": [
-      "न्यूटन ने माना कि ध्वनि की चाल माध्यम के घनत्व से स्वतंत्र है; लाप्लास ने साबित किया कि ध्वनि की चाल गुरुत्वाकर्षण पर निर्भर करती है।",
-      "न्यूटन ने एक रुद्धोष्म (adiabatic) प्रक्रिया ($v = \\sqrt{\\frac{\\gamma P}{d}}$) मानी; लाप्लास ने इसे समतापी (isothermal) प्रक्रिया ($v = \\sqrt{\\frac{P}{d}}$) में संशोधित किया।",
-      "न्यूटन ने माना कि ध्वनि संचरण समदाबी (isobaric) है; लाप्लास ने साबित किया कि यह समआयतनिक (isochoric) है।",
-      "न्यूटन ने एक समतापी प्रक्रिया ($v = \\sqrt{\\frac{P}{d}}$) मानी; लाप्लास ने स्थापित किया कि ध्वनि संपीड़न/विरलन ऊष्मा विनिमय के लिए बहुत तेज़ी से होता है, जिससे यह एक रुद्धोष्म प्रक्रिया ($v = \\sqrt{\\frac{\\gamma P}{d}}$) बन जाती है।"
-    ],
-    "a": 3,
-    "e": "Gaseous media mein sound wave propagation ke thermodynamics ko samajhne ke liye Newton aur Laplace ke models fundamental milestones hain.\n\n• Option 1 is Incorrect because sound speed medium density par depend karti hai aur gravity par nahi.\n\n• Option 2 is Incorrect because yeh Newton ke isothermal assumption ko Laplace ke adiabatic correction se reverse karta hai.\n\n• Option 3 is Incorrect because isobaric aur isochoric assumptions classical sound derivation ka hissa nahi the.\n\n• Option 4 is Correct because Newton ne assume kiya tha ki compressions/rarefactions ke dauran temperature constant rehta hai (Isothermal Process, $B = P \\implies v = \\sqrt{P/d} \\approx 280$ m/s at STP, jo experimental value $\\sim 331$ m/s se kam thi). Laplace ne correct kiya ki air ek poor conductor hai aur compressions itni rapid hoti hain ki heat exchange ka time nahi milta, isliye yeh ek Adiabatic Process hai ($B = \\gamma P \\implies v = \\sqrt{\\frac{\\gamma P}{d}}$, where $\\gamma = C_p/C_v \\approx 1.4$ for air)."
-  },
+  "p_id": "bpsc_phys_m29_06",
+  "qe": "Isaac Newton derived an initial formula for the speed of sound in a gaseous medium, which Pierre-Simon Laplace later corrected. What was Newton's initial thermodynamic assumption, and how did Laplace correct it?",
+  "qh": "आइजैक न्यूटन ने गैसीय माध्यम में ध्वनि की चाल के लिए एक प्रारंभिक सूत्र निकाला, जिसे बाद में पियरे-साइमन लाप्लास ने संशोधित किया। न्यूटन की प्रारंभिक ऊष्मागतिकी धारणा क्या थी, और लाप्लास ने इसे कैसे सुधारा?",
+  "oe": [
+    "Newton assumed sound speed is independent of medium density; Laplace proved sound speed depends on gravity.",
+    "Newton assumed an adiabatic process [v = √(γP / d)]; Laplace corrected it to an isothermal process [v = √(P / d)].",
+    "Newton assumed sound propagation is isobaric; Laplace proved it is isochoric.",
+    "Newton assumed an isothermal process [v = √(P / d)]; Laplace established that sound compression/rarefaction occurs too rapidly for heat exchange, making it an adiabatic process [v = √(γP / d)]."
+  ],
+  "oh": [
+    "न्यूटन ने माना कि ध्वनि की चाल माध्यम के घनत्व से स्वतंत्र है; लाप्लास ने साबित किया कि ध्वनि की चाल गुरुत्वाकर्षण पर निर्भर करती है।",
+    "न्यूटन ने एक रुद्धोष्म (adiabatic) प्रक्रिया [v = √(γP / d)] मानी; लाप्लास ने इसे समतापी (isothermal) प्रक्रिया [v = √(P / d)] में संशोधित किया।",
+    "न्यूटन ने माना कि ध्वनि संचरण समदाबी (isobaric) है; लाप्लास ने साबित किया कि यह समआयतनिक (isochoric) है।",
+    "न्यूटन ने एक समतापी प्रक्रिया [v = √(P / d)] मानी; लाप्लास ने स्थापित किया कि ध्वनि संपीड़न/विरलन ऊष्मा विनिमय के लिए बहुत तेज़ी से होता है, जिससे यह एक रुद्धोष्म प्रक्रिया [v = √(γP / d)] बन जाती है।"
+  ],
+  "a": 3,
+  "e": "Gaseous media mein sound wave propagation ke thermodynamics ko samajhne ke liye Newton aur Laplace ke models fundamental milestones hain.\n\n• Option 1 is Incorrect because sound speed medium density par depend karti hai aur gravity par nahi.\n\n• Option 2 is Incorrect because yeh Newton ke isothermal assumption ko Laplace ke adiabatic correction se reverse karta hai.\n\n• Option 3 is Incorrect because isobaric aur isochoric assumptions classical sound derivation ka hissa nahi the.\n\n• Option 4 is Correct because Newton ne assume kiya tha ki compressions/rarefactions ke dauran temperature constant rehta hai [Isothermal Process: B = P → v = √(P / d) ≈ 280 m/s at STP, jo experimental value ~ 331 m/s se kam thi]. Laplace ne correct kiya ki air ek poor conductor hai aur compressions itni rapid hoti hain ki heat exchange ka time nahi milta, isliye yeh ek Adiabatic Process hai [B = γP → v = √(γP / d), jahan γ = Cp / Cv ≈ 1.4 for air]."
+},
   {
     "p_id": "bpsc_phys_m29_07",
     "qe": "The speed of sound in a gas is influenced by ambient physical parameters like temperature and pressure. Assuming temperature remains strictly constant, what is the effect of changing gas pressure on the speed of sound?",
