@@ -14,10 +14,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   void _handleGoogleSignIn() async {
     setState(() => _isLoading = true);
-    final userCredential = await AuthService.signInWithGoogle();
+    final googleUser = await AuthService.signInWithGoogle();
     setState(() => _isLoading = false);
 
-    if (userCredential != null && mounted) {
+    if (googleUser != null && mounted) {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (_) => const HomeScreen()),
