@@ -1,44 +1,84 @@
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../services/user_stats_service.dart';
 
 class AspirantChecklistCard extends StatefulWidget {
   final bool isDarkMode;
-  final VoidCallback? onOpenRevision;
-  final VoidCallback? onOpenSectional;
-
-  const AspirantChecklistCard({
-    super.key,
-    required this.isDarkMode,
-    this.onOpenRevision,
-    this.onOpenSectional,
-  });
+  const AspirantChecklistCard({super.key, required this.isDarkMode});
 
   @override
   State<AspirantChecklistCard> createState() => _AspirantChecklistCardState();
 }
 
-class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
-  bool _profileDone = true;
-  bool _firstQuizDone = false;
-  bool _firstMockDone = false;
-  bool _savedNotesDone = false;
+class _AspirantChecklistCardState extends State<AspirantChecklistCard> with WidgetsBindingObserver {
+  bool _savedCaDone = false;        // 1. Bookmark Current Affair
+  bool _savedRevQsDone = false;     // 2. Bookmark Revision Question
+  bool _attemptedCbtDone = false;   // 3. Attempt CBT Mock 1 Time
+  bool _wrongVaultDone = false;     // 4. Analyze Trap in Wrong Question Vault
   bool _isDismissed = false;
 
   @override
   void initState() {
     super.initState();
-    _loadChecklistStatus();
+    WidgetsBinding.instance.addObserver(this);
+    loadChecklistStatus();
   }
 
-  Future<void> _loadChecklistStatus() async {
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      loadChecklistStatus();
+    }
+  }
+
+  Future<void> loadChecklistStatus() async {
     final prefs = await SharedPreferences.getInstance();
-    setState(() {
-      _profileDone = prefs.getBool('has_entered_name') ?? true;
-      _firstQuizDone = (prefs.getInt('user_solved_qs') ?? 0) > 0;
-      _firstMockDone = (prefs.getInt('user_attempted_mocks') ?? 0) > 0;
-      _savedNotesDone = (prefs.getInt('user_saved_bookmarks') ?? 0) > 0;
-      _isDismissed = prefs.getBool('hide_onboarding_checklist') ?? false;
-    });
+
+    // 1️⃣ Current Affairs Bookmarks Check
+    bool caDone = false;
+    final String? caJson = prefs.getString('saved_daily_bulletins');
+    if (caJson != null && caJson.isNotEmpty) {
+      try {
+        final List list = jsonDecode(caJson);
+        caDone = list.isNotEmpty;
+      } catch (_) {}
+    }
+
+    // 2️⃣ Revision Question Bookmarks Check via UserStatsService
+    final stats = await UserStatsService.getStats();
+    final int savedBookmarksCount = (stats['bookmarks'] as int? ?? 0);
+    final bool bookmarkDone = savedBookmarksCount > 0;
+
+    // 3️⃣ CBT Mock Attempt Check via UserStatsService
+    final int mocksAttempted = (stats['mocks'] as int? ?? 0);
+    final bool cbtDone = mocksAttempted > 0;
+
+    // 4️⃣ Wrong Question Trap Analysis Check
+    // (Checks if user analyzed errors with tags OR opened Wrong Vault)
+    bool wrongAnalyzed = prefs.getBool('wrong_vault_analyzed') ?? false;
+    if (!wrongAnalyzed) {
+      final wrongList = await UserStatsService.getWrongQuestions();
+      wrongAnalyzed = wrongList.any((q) => (q['errorTag']?.toString().isNotEmpty ?? false));
+    }
+
+    final bool dismissed = prefs.getBool('hide_onboarding_checklist') ?? false;
+
+    if (mounted) {
+      setState(() {
+        _savedCaDone = caDone;
+        _savedRevQsDone = bookmarkDone;
+        _attemptedCbtDone = cbtDone;
+        _wrongVaultDone = wrongAnalyzed;
+        _isDismissed = dismissed;
+      });
+    }
   }
 
   @override
@@ -46,10 +86,10 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
     if (_isDismissed) return const SizedBox.shrink();
 
     int completedCount = 0;
-    if (_profileDone) completedCount++;
-    if (_firstQuizDone) completedCount++;
-    if (_firstMockDone) completedCount++;
-    if (_savedNotesDone) completedCount++;
+    if (_savedCaDone) completedCount++;
+    if (_savedRevQsDone) completedCount++;
+    if (_attemptedCbtDone) completedCount++;
+    if (_wrongVaultDone) completedCount++;
 
     // 🚀 4/4 Complete hote hi auto-dismiss & permanently save
     if (completedCount == 4) {
@@ -78,9 +118,7 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: widget.isDarkMode
-              ? const Color(0xFF334155)
-              : const Color(0xFFE2E8F0),
+          color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
           width: 1.2,
         ),
         boxShadow: [
@@ -96,7 +134,7 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🎯 Top Badge & Progress Metric
+            // 🎯 Header Badge & Percentage
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -107,13 +145,6 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
                       colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
                     ),
                     borderRadius: BorderRadius.circular(20),
-                    boxShadow: [
-                      BoxShadow(
-                        color: const Color(0xFF2563EB).withOpacity(0.35),
-                        blurRadius: 6,
-                        offset: const Offset(0, 2),
-                      ),
-                    ],
                   ),
                   child: const Row(
                     children: [
@@ -149,9 +180,9 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
             ),
             const SizedBox(height: 12),
 
-            // 📢 Title & Subtitle
+            // Title
             Text(
-              'Your Prep Launchpad 🚀',
+              'Aspirant Mastery Checklist 🚀',
               style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w800,
@@ -161,53 +192,50 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
             ),
             const SizedBox(height: 4),
             Text(
-              'Complete all steps to unlock full accuracy analytics & streak rewards.',
+              'Complete all 4 key features to unlock full exam readiness.',
               style: TextStyle(
                 fontSize: 12,
                 color: widget.isDarkMode ? const Color(0xFF94A3B8) : Colors.grey.shade600,
-                height: 1.3,
               ),
             ),
             const SizedBox(height: 14),
 
-            // ⚡ Progress Bar
+            // Progress Bar
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
               child: LinearProgressIndicator(
                 value: progressPercent,
                 minHeight: 8,
-                backgroundColor: widget.isDarkMode
-                    ? const Color(0xFF334155)
-                    : const Color(0xFFE2E8F0),
+                backgroundColor: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
                 valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF2563EB)),
               ),
             ),
             const SizedBox(height: 16),
 
-            // 🗺️ Roadmap Steps
+            // Roadmap Steps
             _buildRoadmapTile(
               stepNum: '1',
-              title: 'Personalized Profile Setup',
-              desc: 'Name, target exam & study preferences',
-              isDone: _profileDone,
+              title: 'Bookmark 1 Current Affairs Bulletin',
+              desc: 'Save important daily news for quick revision',
+              isDone: _savedCaDone,
             ),
             _buildRoadmapTile(
               stepNum: '2',
-              title: 'First Revision Practice',
-              desc: 'Attempt 10 high-yield chapter questions',
-              isDone: _firstQuizDone,
+              title: 'Bookmark 1 Revision Question',
+              desc: 'Star any question while practicing chapters',
+              isDone: _savedRevQsDone,
             ),
             _buildRoadmapTile(
               stepNum: '3',
-              title: 'Sectional CBT Mock Test',
-              desc: 'Solve timed test with negative marking',
-              isDone: _firstMockDone,
+              title: 'Attempt 1 CBT Mock Test',
+              desc: 'Experience full timer-based exam simulation',
+              isDone: _attemptedCbtDone,
             ),
             _buildRoadmapTile(
               stepNum: '4',
-              title: 'Bookmark & Mistake Vault',
-              desc: 'Save tricky questions for rapid recall',
-              isDone: _savedNotesDone,
+              title: 'Analyze Traps in Wrong Question Vault',
+              desc: 'Review mistakes & tags to eliminate negative marking',
+              isDone: _wrongVaultDone,
               isLast: true,
             ),
           ],
@@ -229,7 +257,6 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Step circle with vertical connector line
           Column(
             children: [
               Container(
@@ -240,15 +267,6 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
                   color: isDone
                       ? doneColor
                       : (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
-                  boxShadow: isDone
-                      ? [
-                          BoxShadow(
-                            color: doneColor.withOpacity(0.3),
-                            blurRadius: 6,
-                            offset: const Offset(0, 2),
-                          ),
-                        ]
-                      : null,
                 ),
                 alignment: Alignment.center,
                 child: isDone
@@ -275,8 +293,6 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> {
             ],
           ),
           const SizedBox(width: 12),
-
-          // Step Details
           Expanded(
             child: Padding(
               padding: EdgeInsets.only(bottom: isLast ? 0 : 12.0),
