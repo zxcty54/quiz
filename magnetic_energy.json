@@ -54,7 +54,7 @@
       "जब कण चुंबकीय क्षेत्र रेखाओं के समानांतर या प्रति-समानांतर गति करता है ($\\theta = 0^\\circ$ या $\\theta = 180^\\circ$)।"
     ],
     "a": 3,
-    "e": "Lorentz magnetic force ka magnitude $F = q v B \\sin\\theta$ se calculate hota hai, jahan $\theta$ velocity $\\vec{v}$ aur field $\\vec{B}$ ke beech ka angle hai.\n\n• Option 1 is Incorrect because $\theta = 90^\\circ$ par $\\sin 90^\\circ = 1$ hone se force maximum ($F_{\\text{max}} = qvB$) hota hai, zero nahi.\n\n• Option 2 is Incorrect because $\\theta = 45^\\circ$ par $\\sin 45^\\circ = 1/\\sqrt{2}$ hota hai, jisse non-zero force ($F = qvB/\\sqrt{2}$) lagta hai.\n\n• Option 3 is Incorrect because rest par ($v = 0$) force zero hota hai velocity absence ke karan, orientation angle ke karan nahi.\n\n• Option 4 is Correct because jab charged particle magnetic field ke parallel ($\\theta = 0^\\circ$) ya anti-parallel ($\\theta = 180^\\circ$) move karta hai, toh $\\sin 0^\\circ = \\sin 180^\\circ = 0$ hota hai, jisse particle par acting magnetic force strictly ZERO ($F = 0$) hota hai aur particle undeflected pass ho jata hai."
+    "e": "Lorentz magnetic force ka magnitude $F = q v B \\sin\\theta$ se calculate hota hai, jahan $\\theta$ velocity $\\vec{v}$ aur field $\\vec{B}$ ke beech ka angle hai.\n\n• Option 1 is Incorrect because $\\theta = 90^\\circ$ par $\\sin 90^\\circ = 1$ hone se force maximum ($F_{\\text{max}} = qvB$) hota hai, zero nahi.\n\n• Option 2 is Incorrect because $\\theta = 45^\\circ$ par $\\sin 45^\\circ = 1/\\sqrt{2}$ hota hai, jisse non-zero force ($F = qvB/\\sqrt{2}$) lagta hai.\n\n• Option 3 is Incorrect because rest par ($v = 0$) force zero hota hai velocity absence ke karan, orientation angle ke karan nahi.\n\n• Option 4 is Correct because jab charged particle magnetic field ke parallel ($\\theta = 0^\\circ$) ya anti-parallel ($\\theta = 180^\\circ$) move karta hai, toh $\\sin 0^\\circ = \\sin 180^\\circ = 0$ hota hai, jisse particle par acting magnetic force strictly ZERO ($F = 0$) hota hai aur particle undeflected pass ho jata hai."
   },
   {
     "p_id": "bpsc_phys_m37_04",
@@ -149,7 +149,7 @@
       "$1\\text{ टेस्ला} = 10^4\\text{ गॉस}$ ($1\\text{ T} = 10^4\\text{ G}$)"
     ],
     "a": 3,
-    "e": "Magnetic field intensity $B$ ki SI unit Tesla ($\\text{T} = \\text{Wb/m}^2 = \\text{N}/(\\text{A}\\cdot\\text{m})$) aur CGS unit Gauss ($\\text{G}$) hai.\n\n• Option 1 is Incorrect because $10^2$ incorrect conversion ratio hai.\n\n• Option 2 is Incorrect because $10^8$ Weber to Maxwell conversion factor hai, Tesla to Gauss nahi.\n\n• Option 3 is Incorrect because $10^{-4}$ inverse conversion factor hai ($1\\text{ Gauss} = 10^{-4}\\text{ Tesla}$).\n\n• Option 4 is Correct because dimensional conversion ke anusaar **$1\\text{ Tesla} = 10^4\\text{ Gauss}$** ($1\\text{ T} = 10^4\\text{ G}$) hota hai."
+    "e": "Magnetic field intensity $B$ ki SI unit Tesla ($\\text{T} = \\text{Wb/m}^2 = \\text{N}/(\\text{A}\\cdot\\text{m})$) aur CGS unit Gauss (G) hai.\n\n• Option 1 is Incorrect because $10^2$ incorrect conversion ratio hai.\n\n• Option 2 is Incorrect because $10^8$ Weber to Maxwell conversion factor hai, Tesla to Gauss nahi.\n\n• Option 3 is Incorrect because $10^{-4}$ inverse conversion factor hai ($1\\text{ Gauss} = 10^{-4}\\text{ Tesla}$).\n\n• Option 4 is Correct because dimensional conversion ke anusaar **$1\\text{ Tesla} = 10^4\\text{ Gauss}$** ($1\\text{ T} = 10^4\\text{ G}$) hota hai."
   },
   {
     "p_id": "bpsc_phys_m37_09",
@@ -232,13 +232,13 @@
     "qe": "In magnetic field mapping, a Neutral Point is identified in space. What physical condition defines a Neutral Point near a bar magnet placed in Earth's field?",
     "qh": "चुंबकीय क्षेत्र मैपिंग में, अंतरिक्ष में एक उदासीन बिंदु (Neutral Point) की पहचान की जाती है। पृथ्वी के क्षेत्र में रखे गए एक बार चुंबक के पास एक उदासीन बिंदु को कौन सी भौतिक स्थिति परिभाषित करती है?",
     "oe": [
-      "The point where the external magnetic field of the magnet is completely canceled out by the horizontal component of Earth's magnetic field (B_H), resulting in a net magnetic field of ZERO.",
+      "The point where the external magnetic field of the magnet is completely canceled out by the horizontal component of Earth's magnetic field ($B_H$), resulting in a net magnetic field of ZERO.",
       "The point where a compass needle rotates continuously at supersonic speeds.",
       "The point where the magnet's external field is infinitely magnified by solar wind.",
       "The point where the vertical component of Earth's field equals 311 V."
     ],
     "oh": [
-      "वह बिंदु जहां चुंबक का बाहरी चुंबकीय क्षेत्र पृथ्वी के चुंबकीय क्षेत्र के क्षैतिज घटक (B_H) द्वारा पूरी तरह से रद्द कर दिया जाता है, जिसके परिणामस्वरूप शून्य का नेट चुंबकीय क्षेत्र होता है।",
+      "वह बिंदु जहां चुंबक का बाहरी चुंबकीय क्षेत्र पृथ्वी के चुंबकीय क्षेत्र के क्षैतिज घटक ($B_H$) द्वारा पूरी तरह से रद्द कर दिया जाता है, जिसके परिणामस्वरूप शून्य का नेट चुंबकीय क्षेत्र होता है।",
       "वह बिंदु जहां एक कंपास सुई पराध्वनिक गति से लगातार घूमती है।",
       "वह बिंदु जहां चुंबक का बाहरी क्षेत्र सौर पवन द्वारा अनंत रूप से बढ़ाया जाता है।",
       "वह बिंदु जहां पृथ्वी के क्षेत्र का ऊर्ध्वाधर घटक 311 V के बराबर है।"
@@ -272,17 +272,17 @@
     "oe": [
       "Kelvin Temperature; transforms into a Diamagnetic substance.",
       "Absolute Zero; transforms into a Permanent Magnet.",
-      "Curie Temperature (T_C); transforms into a Paramagnetic substance.",
+      "Curie Temperature ($T_C$); transforms into a Paramagnetic substance.",
       "Critical Transition Temperature; transforms into an Electromagnet."
     ],
     "oh": [
       "केल्विन तापमान; एक प्रतिचुंबकीय पदार्थ में बदल जाता है।",
       "परम शून्य; एक स्थायी चुंबक में बदल जाता है।",
-      "क्यूरी तापमान (T_C); एक अनुचुंबकीय पदार्थ में बदल जाता है।",
+      "क्यूरी तापमान ($T_C$); एक अनुचुंबकीय पदार्थ में बदल जाता है।",
       "क्रांतिक संक्रमण तापमान; एक विद्युत चुंबक में बदल जाता है।"
     ],
     "a": 2,
-    "e": "Ferromagnetic materials ke domains thermal agitation se disturb ho jaate hain.\n\n• Option 1 is Incorrect because Kelvin temperature general absolute temperature scale hai, phase transition point nahi.\n\n• Option 2 is Incorrect because Absolute Zero ($0\\text{ K}$) lowest possible thermal state hai, transition threshold nahi.\n\n• Option 3 is Correct because **Curie Temperature ($T_C$)** par thermal agitation domain alignment ko destroy kar deti hai, jisse ferromagnetic substance **Paramagnetic substance** mein convert ho jata hai (Iron ke liye $T_C \\approx 770^\\circ\\text{C}$).\n\n• Option 4 is Incorrect because heating se material electromagnet mein convert nahi hota."
+    "e": "Ferromagnetic materials ke domains thermal agitation se disturb ho jaate hain.\n\n• Option 1 is Incorrect because Kelvin temperature general absolute temperature scale hai, phase transition point nahi.\n\n• Option 2 is Incorrect because Absolute Zero ($0$ K) lowest possible thermal state hai, transition threshold nahi.\n\n• Option 3 is Correct because **Curie Temperature ($T_C$)** par thermal agitation domain alignment ko destroy kar deti hai, jisse ferromagnetic substance **Paramagnetic substance** mein convert ho jata hai (Iron ke liye $T_C \\approx 770^\\circ\\text{C}$).\n\n• Option 4 is Incorrect because heating se material electromagnet mein convert nahi hota."
   },
   {
     "p_id": "bpsc_phys_m38_06",
@@ -339,7 +339,7 @@
       "ऑप्टिकल ट्रैक के अंदर फंसी प्रकाश किरणों का पूर्ण आंतरिक परावर्तन।"
     ],
     "a": 2,
-    "e": "Maglev trains magnetic forces ka use karke friction-free high-speed travel enable karti hain.\n\n• Option 1 is Incorrect because hydrodynamic buoyancy liquid displacement se sambandhit hai, train levitation se nahi.\n\n• Option 2 is Incorrect because electrostatic shielding gravity ko cancel nahi kar sakti.\n\n• Option 3 is Correct because Maglev technology **Electromagnetic Levitation** (magnetic attraction ya repulsion) par operate karti hai, jahan train guideway ke upar magnetically suspend (float) hoti hai, jisse **track-wheel physical friction zero** ho jata hai aur train $500+\\text{ km/h}$ speeds achieve kar sakti hai.\n\n• Option 4 is Incorrect because Total Internal Reflection optical fiber physics ka principle hai, transportation levitation ka nahi."
+    "e": "Maglev trains magnetic forces ka use karke friction-free high-speed travel enable karti hain.\n\n• Option 1 is Incorrect because hydrodynamic buoyancy liquid displacement se sambandhit hai, train levitation se nahi.\n\n• Option 2 is Incorrect because electrostatic shielding gravity ko cancel nahi kar sakti.\n\n• Option 3 is Correct because Maglev technology **Electromagnetic Levitation** (magnetic attraction ya repulsion) par operate karti hai, jahan train guideway ke upar magnetically suspend (float) hoti hai, jisse **track-wheel physical friction zero** ho jata hai aur train $500+$ km/h speeds achieve kar sakti hai.\n\n• Option 4 is Incorrect because Total Internal Reflection optical fiber physics ka principle hai, transportation levitation ka nahi."
   },
   {
     "p_id": "bpsc_phys_m38_09",
@@ -498,19 +498,19 @@
     "qe": "Domestic electrical wiring schemes incorporate color-coded insulation covers and voltage potentials. What are the standardized insulation colors and potential values for Live, Neutral, and Earth wires in Indian domestic circuits?",
     "qh": "घरेलू विद्युत वायरिंग योजनाओं में रंग-कोडित इन्सुलेशन कवर और वोल्टेज विभव शामिल होते हैं। भारतीय घरेलू परिपथों में लाइव, न्यूट्रल और अर्थ तारों के लिए मानकीकृत इन्सुलेशन रंग और विभव मान क्या हैं?",
     "oe": [
-      "Live: Red insulation ($220\\text{ V}$ potential); Neutral: Black insulation ($0\\text{ V}$ potential); Earth: Green insulation (ground safety at $0\\text{ V}$ potential).",
-      "Live: Yellow ($440\\text{ V}$); Neutral: Blue ($110\\text{ V}$); Earth: Black ($220\\text{ V}$)",
-      "Live: Black ($0\\text{ V}$); Neutral: Red ($220\\text{ V}$); Earth: Green ($110\\text{ V}$)",
-      "Live: Green ($220\\text{ V}$); Neutral: White ($220\\text{ V}$); Earth: Red ($0\\text{ V}$)"
+      "Live: Red insulation ($220$ V potential); Neutral: Black insulation ($0$ V potential); Earth: Green insulation (ground safety at $0$ V potential).",
+      "Live: Yellow ($440$ V); Neutral: Blue ($110$ V); Earth: Black ($220$ V)",
+      "Live: Black ($0$ V); Neutral: Red ($220$ V); Earth: Green ($110$ V)",
+      "Live: Green ($220$ V); Neutral: White ($220$ V); Earth: Red ($0$ V)"
     ],
     "oh": [
-      "लाइव: लाल इन्सुलेशन ($220\\text{ V}$ विभव); न्यूट्रल: काला इन्सुलेशन ($0\\text{ V}$ विभव); अर्थ: हरा इन्सुलेशन ($0\\text{ V}$ विभव पर भू-सुरक्षा)।",
-      "लाइव: पीला ($440\\text{ V}$); न्यूट्रल: नीला ($110\\text{ V}$); अर्थ: काला ($220\\text{ V}$)",
-      "लाइव: काला ($0\\text{ V}$); न्यूट्रल: लाल ($220\\text{ V}$); अर्थ: हरा ($110\\text{ V}$)",
-      "लाइव: हरा ($220\\text{ V}$); न्यूट्रल: सफेद ($220\\text{ V}$); अर्थ: लाल ($0\\text{ V}$)"
+      "लाइव: लाल इन्सुलेशन ($220$ V विभव); न्यूट्रल: काला इन्सुलेशन ($0$ V विभव); अर्थ: हरा इन्सुलेशन ($0$ V विभव पर भू-सुरक्षा)।",
+      "लाइव: पीला ($440$ V); न्यूट्रल: नीला ($110$ V); अर्थ: काला ($220$ V)",
+      "लाइव: काला ($0$ V); न्यूट्रल: लाल ($220$ V); अर्थ: हरा ($110$ V)",
+      "लाइव: हरा ($220$ V); न्यूट्रल: सफेद ($220$ V); अर्थ: लाल ($0$ V)"
     ],
     "a": 0,
-    "e": "Standard Indian domestic single-phase AC wiring ($220\\text{ V}, 50\\text{ Hz}$) mein fixed color coding follow hoti hai.\n\n• Option 1 is Correct because Indian standard ke mutabiq: **Live Wire (Phase)** par **Red insulation ($220\\text{ V}$)** hoti hai, **Neutral Wire** par **Black insulation ($0\\text{ V}$)** hoti hai jo return path provide karta hai, aur **Earth Wire** par **Green insulation ($0\\text{ V}$ safety ground)** hoti hai jo appliance metallic body se leak currents ko ground karti hai.\n\n• Option 2 is Incorrect because $440\\text{ V}$ three-phase commercial supply voltage hai, domestic residential standard nahi.\n\n• Option 3 is Incorrect because Black Live wire ka color nahi hai aur Red Neutral ka nahi hai.\n\n• Option 4 is Incorrect because Green safety Earth wire ka color hota hai, Live phase ka nahi."
+    "e": "Standard Indian domestic single-phase AC wiring ($220$ V, $50$ Hz) mein fixed color coding follow hoti hai.\n\n• Option 1 is Correct because Indian standard ke mutabiq: **Live Wire (Phase)** par **Red insulation ($220$ V)** hoti hai, **Neutral Wire** par **Black insulation ($0$ V)** hoti hai jo return path provide karta hai, aur **Earth Wire** par **Green insulation ($0$ V safety ground)** hoti hai jo appliance metallic body se leak currents ko ground karti hai.\n\n• Option 2 is Incorrect because $440$ V three-phase commercial supply voltage hai, domestic residential standard nahi.\n\n• Option 3 is Incorrect because Black Live wire ka color nahi hai aur Red Neutral ka nahi hai.\n\n• Option 4 is Incorrect because Green safety Earth wire ka color hota hai, Live phase ka nahi."
   },
   {
     "p_id": "bpsc_phys_m39_08",
@@ -529,7 +529,7 @@
       "शॉर्ट-सर्किटिंग कम पावर फैक्टर के कारण होती है; ओवरलोडिंग केवल बिजली गिरने के दौरान होती है।"
     ],
     "a": 2,
-    "e": "Electrical faults circuit impedance aur current draw variations par aadharit hote hain.\n\n• Option 1 is Incorrect because short circuit live aur neutral wires ke direct contact se hota hai.\n\n• Option 2 is Incorrect because short circuit circuit resistance ko zero ke kareeb drop karta hai, infinity tak increase nahi karta (infinity open circuit hota hai).\n\n• Option 3 is Correct because **Short-Circuiting** tab hoti hai jab damaged insulation ke karan Live wire ($220\\text{ V}$) aur Neutral wire ($0\\text{ V}$) aapas mein directly touch ho jaate hain, jisse load bypass hokar circuit resistance nearly zero ($R \\approx 0$) ho jata hai aur ek massive instantaneous current surge ($I = V/R \\to \\text{extremely high}$) Joule heating produce karta hai; jabki **Overloading** tab hoti hai jab single circuit mein bohot saare high-power appliances (AC, Heater, Geyser) simultaneously switch on kar diye jaate hain, jisse total drawn current wire ki safe carrying capacity exceed kar jaati hai.\n\n• Option 4 is Incorrect because overloading domestic multiple parallel load accumulation se hoti hai, exclusive lightning strikes se nahi."
+    "e": "Electrical faults circuit impedance aur current draw variations par aadharit hote hain.\n\n• Option 1 is Incorrect because short circuit live aur neutral wires ke direct contact se hota hai.\n\n• Option 2 is Incorrect because short circuit circuit resistance ko zero ke kareeb drop karta hai, infinity tak increase nahi karta (infinity open circuit hota hai).\n\n• Option 3 is Correct because **Short-Circuiting** tab hoti hai jab damaged insulation ke karan Live wire ($220$ V) aur Neutral wire ($0$ V) aapas mein directly touch ho jaate hain, jisse load bypass hokar circuit resistance nearly zero ($R \\approx 0$) ho jata hai aur ek massive instantaneous current surge ($I = V/R \\to \\text{extremely high}$) Joule heating produce karta hai; jabki **Overloading** tab hoti hai jab single circuit mein bohot saare high-power appliances (AC, Heater, Geyser) simultaneously switch on kar diye jaate hain, jisse total drawn current wire ki safe carrying capacity exceed kar jaati hai.\n\n• Option 4 is Incorrect because overloading domestic multiple parallel load accumulation se hoti hai, exclusive lightning strikes se nahi."
   },
   {
     "p_id": "bpsc_phys_m39_09",
@@ -567,6 +567,6 @@
       "ट्रांसफॉर्मर अन्योन्य प्रेरण (Mutual Induction) पर कार्य करते हैं, जिसके लिए AC द्वारा प्रदान किया गया निरंतर परिवर्तनशील चुंबकीय फ्लक्स आवश्यक है; स्थिर DC स्थिर फ्लक्स उत्पन्न करती है, जिससे द्वितीयक कुंडली में शून्य वोल्टेज प्रेरित होता है।"
     ],
     "a": 3,
-    "e": "Transformer AC voltage transformation ke liye mutual induction principle ka use karta hai.\n\n• Option 1 is Incorrect because transformers standard power frequencies ($50\\text{-}60\\text{ Hz}$) par operate karte hain, radio waves par nahi.\n\n• Option 2 is Incorrect because transformer action electromagnetic induction par based hoti hai, electrostatic induction par nahi.\n\n• Option 3 is Incorrect because transformer power amplify nahi karta ($P_{\\text{in}} \\approx P_{\\text{out}}$), ye sirf voltage aur current levels ko trade-off karta hai.\n\n• Option 4 is Correct because Transformer **Mutual Induction** ($e_s = -M \\frac{dI_p}{dt}$) ke principle par operate karta hai, jisme primary coil mein continuously alternating current (AC) variable magnetic flux ($d\\Phi/dt \\neq 0$) generate karti hai jo secondary coil mein voltage induce karta hai; **steady Direct Current (DC)** constant magnetic field create karti hai ($d\\Phi/dt = 0$), jisse secondary coil mein koi electromotive force induce nahi hoti ($e_s = 0$)."
+    "e": "Transformer AC voltage transformation ke liye mutual induction principle ka use karta hai.\n\n• Option 1 is Incorrect because transformers standard power frequencies ($50\\text{--}60$ Hz) par operate karte hain, radio waves par nahi.\n\n• Option 2 is Incorrect because transformer action electromagnetic induction par based hoti hai, electrostatic induction par nahi.\n\n• Option 3 is Incorrect because transformer power amplify nahi karta ($P_{\\text{in}} \\approx P_{\\text{out}}$), ye sirf voltage aur current levels ko trade-off karta hai.\n\n• Option 4 is Correct because Transformer **Mutual Induction** ($e_s = -M \\frac{dI_p}{dt}$) ke principle par operate karta hai, jisme primary coil mein continuously alternating current (AC) variable magnetic flux ($d\\Phi/dt \\neq 0$) generate karti hai jo secondary coil mein voltage induce karta hai; **steady Direct Current (DC)** constant magnetic field create karti hai ($d\\Phi/dt = 0$), jisse secondary coil mein koi electromotive force induce nahi hoti ($e_s = 0$)."
   }
 ]
