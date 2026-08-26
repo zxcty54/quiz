@@ -40,7 +40,7 @@ jobs:
 
       - name: 🔧 Auto-Patch Gradle, Desugaring & Google Services
         run: |
-          # 1. Application ID & Namespace Patch
+          # 1. Package Name Patch
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
@@ -58,7 +58,7 @@ jobs:
             sed -i 's/plugins {/plugins {\n    id("com.google.gms.google-services") version "4.4.2" apply false/' flutter_app/android/settings.gradle.kts
           fi
 
-          # 4. Desugaring & Google Services Injection (Guaranteed Append)
+          # 4. Desugaring & Google Services Injection
           if [ -f flutter_app/android/app/build.gradle ]; then
             sed -i 's/plugins {/plugins {\n    id "com.google.gms.google-services"/' flutter_app/android/app/build.gradle
             sed -i 's/compileOptions {/compileOptions {\n        coreLibraryDesugaringEnabled true/' flutter_app/android/app/build.gradle
@@ -90,15 +90,21 @@ jobs:
           name: MockTester-Release-APK
           path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
 
-      - name: 📦 Compress APK for Telegram Delivery
+      # 📦 3. Auto Rename & Maximum Zip Compression (Unique Name per Build)
+      - name: 📦 Auto-Rename APK & Compress
         working-directory: flutter_app
         run: |
-          zip -j build/app/outputs/flutter-apk/mocktester-apk.zip build/app/outputs/flutter-apk/app-release.apk
+          # APK ko unique build name dena taaki extract karte samay 'already exist' na bole
+          cp build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
+          
+          # Max level compression (-9)
+          zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
 
-      - name: 📱 Send APK File Direct To Telegram
+      # 📱 4. Send Unique Zip To Telegram
+      - name: 📱 Send Zip File Direct To Telegram
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 *MockTester APK Build Successful!*\n\nAPK file zip format me attached hai. Unzip karke install karein."
-          document: flutter_app/build/app/outputs/flutter-apk/app-release.apk
+          message: "🚀 *MockTester Build #${{ github.run_number }} APK Ready!*\n\n📦 File: `MockTester_Build_${{ github.run_number }}.zip`\n✨ Unzip karke direct install karein (No duplicate conflict)."
+          document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
