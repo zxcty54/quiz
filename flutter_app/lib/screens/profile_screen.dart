@@ -30,33 +30,37 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   final List<String> _weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   int _savedCaCount = 0;
+  String _userName = 'Aspirant';
 
   @override
   void initState() {
     super.initState();
-    _loadSavedNewsCount();
+    _loadProfileData();
   }
 
-  Future<void> _loadSavedNewsCount() async {
+  Future<void> _loadProfileData() async {
     final prefs = await SharedPreferences.getInstance();
+    
+    // 👤 Load Dynamic User Name from Skip/Login
+    final String savedName = prefs.getString('user_name') ?? 'Aspirant';
+    
+    // 📌 Load Saved Current Affairs Count
+    int caCount = 0;
     final String? savedJson = prefs.getString('saved_daily_bulletins');
     if (savedJson != null) {
       try {
         final List parsed = jsonDecode(savedJson);
-        if (mounted) {
-          setState(() {
-            _savedCaCount = parsed.length;
-          });
-        }
+        caCount = parsed.length;
       } catch (e) {
         debugPrint("Error loading saved news count in Profile: $e");
       }
-    } else {
-      if (mounted) {
-        setState(() {
-          _savedCaCount = 0;
-        });
-      }
+    }
+
+    if (mounted) {
+      setState(() {
+        _userName = savedName;
+        _savedCaCount = caCount;
+      });
     }
   }
 
@@ -92,7 +96,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         return ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            // 👤 1. USER HEADER CARD
+            // 👤 1. DYNAMIC USER HEADER CARD
             Card(
               elevation: 2,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -115,7 +119,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             style: TextStyle(fontSize: 12, color: subTextColor, fontWeight: FontWeight.w600),
                           ),
                           Text(
-                            'Aspirant Aspirant',
+                            _userName,
                             style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: headerTextColor),
                           ),
                           const SizedBox(height: 6),
@@ -256,7 +260,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         context,
                         MaterialPageRoute(builder: (ctx) => const SavedCurrentAffairsScreen()),
                       );
-                      _loadSavedNewsCount();
+                      _loadProfileData();
                     },
                   ),
                 ],
@@ -264,7 +268,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 🏆 5. DYNAMIC ACHIEVEMENTS
+            // 🏆 5. ACHIEVEMENTS
             Text('🏆 Achievements', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             SizedBox(
@@ -338,7 +342,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             DonationWidget(isDarkMode: isDark),
             const SizedBox(height: 14),
 
-            // 🌟 7. ATTENTION-GRABBING AMBER/GOLD FEEDBACK BANNER (DIRECT EMBEDDED)
+            // 🌟 7. ATTENTION-GRABBING FEEDBACK BANNER
             Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
