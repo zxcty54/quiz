@@ -418,43 +418,44 @@
     "e": "Convex lens (converging lens) mein object distance ($u$) change karne par image distance ($v$) aur magnification scale linearly shift hote hain.\n\n• Option 1 is Correct because jab object ko lens ke aage **$2F_1$** (Center of Curvature equivalent) par rakha jata hai, toh refracted rays lens ke dusri taraf exactly **$2F_2$** par converge hoti hain, jisse **Real, Inverted aur Same Size ($m = -1$)** ka image banta hai.\n• Option 2 is Incorrect because $F_1$ aur Optical Center ($O$) ke beech object rakhne par virtual, erect aur magnified image banta hai.\n• Option 3 is Incorrect because Beyond $2F_1$ object rakhne par diminished real image $F_2$ aur $2F_2$ ke beech banta hai.\n• Option 4 is Incorrect because Infinity par object rakhne par highly diminished, point-sized real image focus ($F_2$) par banta hai."
   },
   {
-    "p_id": "bpsc_phys_m33_03",
-    "qe": "A glass convex lens ($\\mu_{\\text{lens}}$) is completely immersed in a liquid whose refractive index is strictly greater than that of the lens material ($\\mu_{\\text{liquid}} > \\mu_{\\text{lens}}$). How does the behavior and nature of the lens change inside this liquid?",
-    "qh": "एक कांच का उत्तल लेंस ($\\mu_{\\text{lens}}$) एक ऐसे द्रव में पूरी तरह से डुबोया जाता है जिसका अपवर्तनांक लेंस सामग्री के अपवर्तनांक से सख्ती से अधिक है ($\\mu_{\\text{liquid}} > \\mu_{\\text{lens}}$)। इस द्रव के भीतर लेंस का व्यवहार और प्रकृति कैसे बदलती है?",
-    "oe": [
-      "Its focal length turns negative, and its nature flips completely: the convex lens begins behaving like a diverging (concave) lens.",
-      "The lens completely disappears from view and stops refracting light.",
-      "Its focal length increases slightly, but it continues to act as a converging lens.",
-      "Its focal length becomes zero, turning into a perfect parabolic mirror."
-    ],
-    "oh": [
-      "इसकी फोकल दूरी ऋणात्मक हो जाती है, और इसकी प्रकृति पूरी तरह से बदल जाती है: उत्तल लेंस एक अपसारी (अवतल) लेंस की तरह व्यवहार करने लगता है।",
-      "लेंस पूरी तरह से गायब हो जाता है और प्रकाश को अपवर्तित करना बंद कर देता है।",
-      "इसकी फोकल दूरी थोड़ी बढ़ जाती है, लेकिन यह एक अभिसारी (converging) लेंस के रूप में कार्य करना जारी रखता है।",
-      "इसकी फोकल दूरी शून्य हो जाती है, जो एक आदर्श परवलयिक दर्पण में बदल जाती है।"
-    ],
-    "a": 0,
-    "e": "Lens ki focal length surrounding medium ke relative refractive index par depend karti hai jise Lens Maker's Formula describe karta hai.\n\n• Option 1 is Correct because Lens Maker's Formula $\\frac{1}{f} = \\left(\\frac{\\mu_{\\text{lens}}}{\\mu_{\\text{medium}}} - 1\\right)\\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)$ ke anusaar, jab $\\mu_{\\text{liquid}} > \\mu_{\\text{lens}}$, toh ratio $\\frac{\\mu_{\\text{lens}}}{\\mu_{\\text{liquid}}} < 1$ ho jata hai jisse bracket term **Negative** ho jata hai. Is sign reversal ke karan focal length ka sign flip ho jata hai aur **Convex (Converging) lens Concave (Diverging) lens ki tarah behave karne lagta hai**.\n• Option 2 is Incorrect because lens sirf tab invisible hota hai jab $\\mu_{\\text{liquid}} = \\mu_{\\text{lens}}$ ho.\n• Option 3 is Incorrect because medium optical density lens se zyada hone par converging nature same nahi rehta, balki reverse ho jata hai.\n• Option 4 is Incorrect because refraction properties change hone se lens mirror mein convert nahi hota.\nRefractive Index rules: $\\mu_m < \\mu_l$ (Focal length badhegi, nature same); $\\mu_m = \\mu_l$ (Invisible glass plate, $f=\\infty$); $\\mu_m > \\mu_l$ (Nature FLIPS: Convex $\\to$ Concave)."
-  },
+  "p_id": "bpsc_phys_m33_03",
+  "qe": "A glass convex lens ($\\mu_l$) is completely immersed in a liquid whose refractive index is strictly greater than that of the lens material ($\\mu_m > \\mu_l$). How does the behavior and nature of the lens change inside this liquid?",
+  "qh": "एक कांच का उत्तल लेंस ($\\mu_l$) एक ऐसे द्रव में पूरी तरह से डुबोया जाता है जिसका अपवर्तनांक लेंस सामग्री के अपवर्तनांक से सख्ती से अधिक है ($\\mu_m > \\mu_l$)। इस द्रव के भीतर लेंस का व्यवहार और प्रकृति कैसे बदलती है?",
+  "oe": [
+    "Its focal length turns negative, and its nature flips completely: the convex lens begins behaving like a diverging (concave) lens.",
+    "The lens completely disappears from view and stops refracting light.",
+    "Its focal length increases slightly, but it continues to act as a converging lens.",
+    "Its focal length becomes zero, turning into a perfect parabolic mirror."
+  ],
+  "oh": [
+    "इसकी फोकल दूरी ऋणात्मक हो जाती है, और इसकी प्रकृति पूरी तरह से बदल जाती है: उत्तल लेंस एक अपसारी (अवतल) लेंस की तरह व्यवहार करने लगता है।",
+    "लेंस पूरी तरह से गायब हो जाता है और प्रकाश को अपवर्तित करना बंद कर देता है।",
+    "इसकी फोकल दूरी थोड़ी बढ़ जाती है, लेकिन यह एक अभिसारी (converging) लेंस के रूप में कार्य करना जारी रखता है।",
+    "इसकी फोकल दूरी शून्य हो जाती है, जो एक आदर्श परवलयिक दर्पण में बदल जाती है।"
+  ],
+  "a": 0,
+  "e": "Lens ki focal length surrounding medium ke relative refractive index par depend karti hai jise Lens Maker's Formula describe karta hai.\n\n• Option 1 is Correct because Lens Maker's Formula $\\frac{1}{f} = \\left(\\frac{\\mu_l}{\\mu_m} - 1\\right)\\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)$ ke anusaar, jab $\\mu_m > \\mu_l$, toh ratio $\\frac{\\mu_l}{\\mu_m} < 1$ ho jata hai jisse bracket term **Negative** ho jata hai. Is sign reversal ke karan focal length ka sign flip ho jata hai aur **Convex (Converging) lens Concave (Diverging) lens ki tarah behave karne lagta hai**.\n• Option 2 is Incorrect because lens sirf tab invisible hota hai jab $\\mu_m = \\mu_l$ ho.\n• Option 3 is Incorrect because medium optical density lens se zyada hone par converging nature same nahi rehta, balki reverse ho jata hai.\n• Option 4 is Incorrect because refraction properties change hone se lens mirror mein convert nahi hota.\nRefractive Index rules: $\\mu_m < \\mu_l$ (Focal length badhegi, nature same); $\\mu_m = \\mu_l$ (Invisible glass plate, $f = \\infty$); $\\mu_m > \\mu_l$ (Nature FLIPS: Convex $\\to$ Concave)."
+},
   {
-    "p_id": "bpsc_phys_m33_04",
-    "qe": "When a glass lens is immersed in a liquid whose refractive index precisely equals that of the lens material ($\\mu_{\\text{liquid}} = \\mu_{\\text{lens}}$), what happens to its focal length and visual visibility inside the liquid?",
-    "qh": "जब किसी कांच के लेंस को ऐसे द्रव में डुबोया जाता है जिसका अपवर्तनांक लेंस सामग्री के समान होता है ($\\mu_{\\text{liquid}} = \\mu_{\\text{lens}}$), तो द्रव के भीतर उसकी फोकल दूरी और दृश्यता (visibility) का क्या होता है?",
-    "oe": [
-      "Focal length becomes infinite ($f = \\infty$); the lens behaves like a flat glass sheet and becomes completely invisible inside the liquid.",
-      "Focal length doubles; the lens focuses light into an intense laser beam.",
-      "Focal length becomes zero; the lens reflects all incident light like a mirror.",
-      "Focal length turns negative; the lens explodes due to thermal pressure."
-    ],
-    "oh": [
-      "फोकल दूरी अनंत हो जाती है ($f = \\infty$); लेंस एक समतल कांच की शीट की तरह व्यवहार करता है और द्रव के अंदर पूरी तरह से अदृश्य हो जाता है।",
-      "फोकल दूरी दोगुनी हो जाती है; लेंस प्रकाश को एक तीव्र लेजर किरण में केंद्रित करता है।",
-      "फोकल दूरी शून्य हो जाती है; लेंस एक दर्पण की तरह सभी आपतित प्रकाश को परावर्तित करता है।",
-      "फोकल दूरी ऋणात्मक हो जाती है; थर्मल दबाव के कारण लेंस फट जाता है।"
-    ],
-    "a": 0,
-    "e": "Refraction tabhi occur karta hai jab do adjacent media ke optical densities/refractive indices mein difference ho.\n\n• Option 1 is Correct because jab $\\mu_{\\text{liquid}} = \\mu_{\\text{lens}}$, toh Lens Maker's Formula mein $\\left(\\frac{\\mu_{\\text{lens}}}{\\mu_{\\text{liquid}}} - 1\\right) = (1 - 1) = 0$. Consequently, $\\frac{1}{f} = 0 \\implies \\mathbf{f = \\infty}$ (Infinite Focal Length). Is condition mein light ray bina kisi deviation ya bending ke straight pass ho jati hai, bilkul flat transparent glass sheet ki tarah. Boundary par reflection ya refraction na hone ke karan **lens liquid ke andar poori tarah invisible ho jata hai**.\n• Option 2 is Incorrect because focal length double nahi, infinite ho jati hai.\n• Option 3 is Incorrect because $f = \\infty$ hota hai ($f=0$ nahi) aur light reflect nahi balki undeviated transmit hoti hai.\n• Option 4 is Incorrect because refractive index equality se koi thermal pressure explosion nahi hota.\nPractical example: Glass test tube glycerin mein dalne par gayab ho jati hai kyunki dono ka refractive index equal ($1.47$) hota hai."
-  },
+  "p_id": "bpsc_phys_m33_04",
+  "qe": "When a glass lens is immersed in a liquid whose refractive index precisely equals that of the lens material ($\\mu_m = \\mu_l$), what happens to its focal length and visual visibility inside the liquid?",
+  "qh": "जब किसी कांच के लेंस को ऐसे द्रव में डुबोया जाता है जिसका अपवर्तनांक लेंस सामग्री के समान होता है ($\\mu_m = \\mu_l$), तो द्रव के भीतर उसकी फोकल दूरी और दृश्यता (visibility) का क्या होता है?",
+  "oe": [
+    "Focal length becomes infinite ($f = \\infty$); the lens behaves like a flat glass sheet and becomes completely invisible inside the liquid.",
+    "Focal length doubles; the lens focuses light into an intense laser beam.",
+    "Focal length becomes zero; the lens reflects all incident light like a mirror.",
+    "Focal length turns negative; the lens explodes due to thermal pressure."
+  ],
+  "oh": [
+    "फोकल दूरी अनंत हो जाती है ($f = \\infty$); लेंस एक समतल कांच की शीट की तरह व्यवहार करता है और द्रव के अंदर पूरी तरह से अदृश्य हो जाता है।",
+    "फोकल दूरी दोगुनी हो जाती है; लेंस प्रकाश को एक तीव्र लेजर किरण में केंद्रित करता है।",
+    "फोकल दूरी शून्य हो जाती है; लेंस एक दर्पण की तरह सभी आपतित प्रकाश को परावर्तित करता है।",
+    "फोकल दूरी ऋणात्मक हो जाती है; थर्मल दबाव के कारण लेंस फट जाता है।"
+  ],
+  "a": 0,
+  "e": "Refraction tabhi occur karta hai jab do adjacent media ke optical densities/refractive indices mein difference ho.\n\n• Option 1 is Correct because jab $\\mu_m = \\mu_l$, toh Lens Maker's Formula mein $\\left(\\frac{\\mu_l}{\\mu_m} - 1\\right) = (1 - 1) = 0$. Consequently, $\\frac{1}{f} = 0 \\implies f = \\infty$ (Infinite Focal Length). Is condition mein light ray bina kisi deviation ya bending ke straight pass ho jati hai, bilkul flat transparent glass sheet ki tarah. Boundary par reflection ya refraction na hone ke karan **lens liquid ke andar poori tarah invisible ho jata hai**.\n• Option 2 is Incorrect because focal length double nahi, infinite ho jati hai.\n• Option 3 is Incorrect because $f = \\infty$ hota hai ($f = 0$ nahi) aur light reflect nahi balki undeviated transmit hoti hai.\n• Option 4 is Incorrect because refractive index equality se koi thermal pressure explosion nahi hota.\nPractical example: Glass test tube glycerin mein dalne par gayab ho jati hai kyunki dono ka refractive index equal (1.47) hota hai."
+},
+ 
   {
     "p_id": "bpsc_phys_m33_05",
     "qe": "Isaac Newton demonstrated the dispersion of white light into a VIBGYOR spectrum using a glass prism. Why do different constituent colors of white light bend through different angles during dispersion through glass?",
