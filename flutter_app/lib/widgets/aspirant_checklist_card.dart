@@ -5,7 +5,7 @@ import '../services/user_stats_service.dart';
 
 class AspirantChecklistCard extends StatefulWidget {
   final bool isDarkMode;
-  const AspirantChecklistCard({super.key, required this.isDarkMode});
+  const AspirantChecklistCard({super.key, required this.isDarkMode}); 
 
   @override
   State<AspirantChecklistCard> createState() => AspirantChecklistCardState();
