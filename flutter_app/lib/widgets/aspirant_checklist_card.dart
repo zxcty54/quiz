@@ -8,10 +8,10 @@ class AspirantChecklistCard extends StatefulWidget {
   const AspirantChecklistCard({super.key, required this.isDarkMode});
 
   @override
-  State<AspirantChecklistCard> createState() => _AspirantChecklistCardState();
+  State<AspirantChecklistCard> createState() => AspirantChecklistCardState();
 }
 
-class _AspirantChecklistCardState extends State<AspirantChecklistCard> with WidgetsBindingObserver {
+class AspirantChecklistCardState extends State<AspirantChecklistCard> with WidgetsBindingObserver {
   bool _savedCaDone = false;        // 1. Bookmark Current Affair
   bool _savedRevQsDone = false;     // 2. Bookmark Revision Question
   bool _attemptedCbtDone = false;   // 3. Attempt CBT Mock 1 Time
@@ -38,34 +38,43 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> with Widg
     }
   }
 
+  // 🔄 Public method jisse bahar se bhi call kiya ja sake
   Future<void> loadChecklistStatus() async {
     final prefs = await SharedPreferences.getInstance();
 
-    // 1️⃣ Current Affairs Bookmarks Check
+    // 1️⃣ Current Affairs Bookmarks Check (Multiple formats check)
     bool caDone = false;
     final String? caJson = prefs.getString('saved_daily_bulletins');
+    final List<String>? caList = prefs.getStringList('saved_daily_bulletins_list');
     if (caJson != null && caJson.isNotEmpty) {
       try {
         final List list = jsonDecode(caJson);
         caDone = list.isNotEmpty;
       } catch (_) {}
+    } else if (caList != null && caList.isNotEmpty) {
+      caDone = true;
     }
 
-    // 2️⃣ Revision Question Bookmarks Check via UserStatsService
+    // 2️⃣ Revision Question Bookmarks Check via UserStatsService & Direct Keys
     final stats = await UserStatsService.getStats();
     final int savedBookmarksCount = (stats['bookmarks'] as int? ?? 0);
-    final bool bookmarkDone = savedBookmarksCount > 0;
+    final List<String>? savedList = prefs.getStringList('stats_saved_questions_json');
+    final bool bookmarkDone = savedBookmarksCount > 0 || (savedList != null && savedList.isNotEmpty);
 
-    // 3️⃣ CBT Mock Attempt Check via UserStatsService
+    // 3️⃣ CBT Mock Attempt Check via UserStatsService & Direct Keys
     final int mocksAttempted = (stats['mocks'] as int? ?? 0);
-    final bool cbtDone = mocksAttempted > 0;
+    final int rawMocks = prefs.getInt('stats_mocks_attempted') ?? prefs.getInt('user_attempted_mocks') ?? 0;
+    final bool cbtDone = mocksAttempted > 0 || rawMocks > 0;
 
     // 4️⃣ Wrong Question Trap Analysis Check
-    // (Checks if user analyzed errors with tags OR opened Wrong Vault)
     bool wrongAnalyzed = prefs.getBool('wrong_vault_analyzed') ?? false;
-    if (!wrongAnalyzed) {
-      final wrongList = await UserStatsService.getWrongQuestions();
+    final wrongList = await UserStatsService.getWrongQuestions();
+    if (!wrongAnalyzed && wrongList.isNotEmpty) {
       wrongAnalyzed = wrongList.any((q) => (q['errorTag']?.toString().isNotEmpty ?? false));
+    }
+    // Agar user ne kam se kam 1 wrong question review kiya ya vault me question hai
+    if (!wrongAnalyzed && wrongList.isNotEmpty) {
+      wrongAnalyzed = true;
     }
 
     final bool dismissed = prefs.getBool('hide_onboarding_checklist') ?? false;
@@ -134,7 +143,7 @@ class _AspirantChecklistCardState extends State<AspirantChecklistCard> with Widg
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🎯 Header Badge & Percentage
+            // 🎯 Header
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
