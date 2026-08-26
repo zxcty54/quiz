@@ -5,7 +5,8 @@ import '../../widgets/daily_bulletin_widget.dart';
 import '../../widgets/first_in_india_widget.dart';
 import '../../widgets/trust_hero_banner.dart';
 import '../../widgets/launch_roadmap_card.dart';
-import '../../widgets/pro_pdf_vault_card.dart'; // 👈 Pro PDF Vault Card Import
+import '../../widgets/pro_pdf_vault_card.dart';
+import '../../widgets/aspirant_checklist_card.dart'; // 👈 Onboarding Checklist Import
 import '../sprint_challenge_screen.dart';
 
 class HomeTab extends StatefulWidget {
@@ -72,63 +73,67 @@ class _HomeTabState extends State<HomeTab> {
               const SizedBox(height: 16),
             ],
 
-            // 🛡️ 2. HERO TRUST BANNER WIDGET
+            // 🚀 2. ASPIRANT ONBOARDING CHECKLIST CARD
+            AspirantChecklistCard(isDarkMode: widget.isDarkMode),
+            const SizedBox(height: 16),
+
+            // 🛡️ 3. HERO TRUST BANNER WIDGET
             TrustHeroBannerWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 18),
             
-            // 👨‍🏫 3. LEARN PREVIEW CARD
+            // 👨‍🏫 4. LEARN PREVIEW CARD
             _buildLearnPreviewCard(context),
             const SizedBox(height: 18),
 
-            // 📰 4. DAILY BULLETIN WIDGET
+            // 📰 5. DAILY BULLETIN WIDGET
             DailyBulletinWidget(
               key: _bulletinWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📢 5. LATEST JOBS WIDGET
+            // 📢 6. LATEST JOBS WIDGET
             LatestJobsWidget(
               key: _jobsWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 🏆 6. FIRST IN INDIA EXPRESS WIDGET
+            // 🏆 7. FIRST IN INDIA EXPRESS WIDGET
             FirstInIndiaWidget(
               key: _firstInIndiaWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📑 7. PRO STUDY MATERIAL & PDF VAULT CARD (Auto-rolling with live JSON push)
+            // 📑 8. PRO STUDY MATERIAL & PDF VAULT CARD
             ProPdfVaultCard(
               isDarkMode: widget.isDarkMode,
-              customWebsiteUrl: widget.appConfig['pdf_vault_main_url'], // 👈 Dynamic link from app_config.json
+              customWebsiteUrl: widget.appConfig['pdf_vault_main_url'],
               dynamicPdfItems: widget.appConfig['pdf_vault_items'],
             ),
             const SizedBox(height: 18),
 
-            // ⚔️ 8. SPEED RUN DUEL CARD
+            // ⚔️ 9. SPEED RUN DUEL CARD
             _buildSpeedRunChallengeCard(context),
             const SizedBox(height: 18),
 
-            // 🌐 9. DYNAMIC WEB HUB
+            // 🌐 10. DYNAMIC WEB HUB
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 18),
 
-            // 10. ELIGIBILITY CHECKER
+            // 11. ELIGIBILITY CHECKER
             EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
             const SizedBox(height: 18),
 
-            // 📅 11. LAUNCH ROADMAP WIDGET
+            // 📅 12. LAUNCH ROADMAP WIDGET
             LaunchRoadmapCardWidget(
               appConfig: widget.appConfig,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 12. TELEGRAM COMMUNITY
+            // 13. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
           ],
         ),
