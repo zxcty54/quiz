@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../main.dart';
 import '../services/user_stats_service.dart';
@@ -31,6 +32,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
   final List<String> _weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   int _savedCaCount = 0;
   String _userName = 'Aspirant';
+  String _userEmail = '';
+  String _userMobile = '';
 
   @override
   void initState() {
@@ -40,10 +43,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
   Future<void> _loadProfileData() async {
     final prefs = await SharedPreferences.getInstance();
-    
-    // 👤 Load Dynamic User Name from Skip/Login
+
+    // 👤 Load Name, Email, Mobile from SharedPreferences
     final String savedName = prefs.getString('user_name') ?? 'Aspirant';
-    
+    final String savedEmail = prefs.getString('user_email') ?? '';
+    final String savedMobile = prefs.getString('user_mobile') ?? '';
+
     // 📌 Load Saved Current Affairs Count
     int caCount = 0;
     final String? savedJson = prefs.getString('saved_daily_bulletins');
@@ -59,9 +64,113 @@ class _ProfileScreenState extends State<ProfileScreen> {
     if (mounted) {
       setState(() {
         _userName = savedName;
+        _userEmail = savedEmail;
+        _userMobile = savedMobile;
         _savedCaCount = caCount;
       });
     }
+  }
+
+  void _showEditProfileDialog(bool isDark) {
+    final nameCtrl = TextEditingController(text: _userName == 'Aspirant' ? '' : _userName);
+    final emailCtrl = TextEditingController(text: _userEmail);
+    final mobileCtrl = TextEditingController(text: _userMobile);
+    final formKey = GlobalKey<FormState>();
+
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Text(
+          'Edit Profile Details',
+          style: TextStyle(
+            color: isDark ? Colors.white : const Color(0xFF0F172A),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        content: Form(
+          key: formKey,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                TextFormField(
+                  controller: nameCtrl,
+                  style: TextStyle(color: isDark ? Colors.white : Colors.black),
+                  decoration: const InputDecoration(
+                    labelText: 'Full Name *',
+                    hintText: 'e.g. Rahul Kumar',
+                    prefixIcon: Icon(Icons.person, color: Color(0xFF2563EB)),
+                  ),
+                  validator: (v) => (v == null || v.trim().isEmpty) ? 'Naam enter karna zaroori hai' : null,
+                ),
+                const SizedBox(height: 12),
+                TextFormField(
+                  controller: emailCtrl,
+                  keyboardType: TextInputType.emailAddress,
+                  style: TextStyle(color: isDark ? Colors.white : Colors.black),
+                  decoration: const InputDecoration(
+                    labelText: 'Email Address (Optional)',
+                    hintText: 'e.g. student@gmail.com',
+                    prefixIcon: Icon(Icons.email, color: Color(0xFF2563EB)),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                TextFormField(
+                  controller: mobileCtrl,
+                  keyboardType: TextInputType.phone,
+                  inputFormatters: [
+                    FilteringTextInputFormatter.digitsOnly,
+                    LengthLimitingTextInputFormatter(10),
+                  ],
+                  style: TextStyle(color: isDark ? Colors.white : Colors.black),
+                  decoration: const InputDecoration(
+                    labelText: 'Mobile Number (Optional)',
+                    hintText: 'e.g. 9876543210',
+                    prefixIcon: Icon(Icons.phone_android, color: Color(0xFF2563EB)),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF2563EB),
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            ),
+            onPressed: () async {
+              if (formKey.currentState!.validate()) {
+                final prefs = await SharedPreferences.getInstance();
+                await prefs.setString('user_name', nameCtrl.text.trim());
+                await prefs.setString('user_email', emailCtrl.text.trim());
+                await prefs.setString('user_mobile', mobileCtrl.text.trim());
+
+                if (mounted) {
+                  Navigator.pop(ctx);
+                  _loadProfileData();
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Text('✅ Profile details updated!'),
+                      backgroundColor: Color(0xFF16A34A),
+                      duration: Duration(seconds: 1),
+                    ),
+                  );
+                }
+              }
+            },
+            child: const Text('Save Details'),
+          ),
+        ],
+      ),
+    );
   }
 
   @override
@@ -96,72 +205,111 @@ class _ProfileScreenState extends State<ProfileScreen> {
         return ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            // 👤 1. DYNAMIC USER HEADER CARD
+            // 👤 1. DYNAMIC USER HEADER CARD (WITH NAME, EMAIL, MOBILE & EDIT)
             Card(
               elevation: 2,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Row(
+                child: Column(
                   children: [
-                    const CircleAvatar(
-                      radius: 32,
-                      backgroundColor: Color(0xFF2563EB),
-                      child: Text('🎓', style: TextStyle(fontSize: 28)),
-                    ),
-                    const SizedBox(width: 14),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Welcome Back 👋',
-                            style: TextStyle(fontSize: 12, color: subTextColor, fontWeight: FontWeight.w600),
-                          ),
-                          Text(
-                            _userName,
-                            style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: headerTextColor),
-                          ),
-                          const SizedBox(height: 6),
-                          Wrap(
-                            spacing: 6,
-                            runSpacing: 4,
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const CircleAvatar(
+                          radius: 30,
+                          backgroundColor: Color(0xFF2563EB),
+                          child: Text('🎓', style: TextStyle(fontSize: 26)),
+                        ),
+                        const SizedBox(width: 14),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: isDark ? const Color(0xFF451A03) : const Color(0xFFFEF3C7),
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Text(
-                                  '🔥 $userStreak Day Streak',
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.bold,
-                                    color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
-                                  ),
-                                ),
+                              Text(
+                                'Aspirant Profile 👋',
+                                style: TextStyle(fontSize: 12, color: subTextColor, fontWeight: FontWeight.w600),
                               ),
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: isDark ? const Color(0xFF1E1B4B) : const Color(0xFFE0E7FF),
-                                  borderRadius: BorderRadius.circular(12),
+                              Text(
+                                _userName,
+                                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: headerTextColor),
+                              ),
+                              if (_userEmail.isNotEmpty) ...[
+                                const SizedBox(height: 2),
+                                Row(
+                                  children: [
+                                    Icon(Icons.email_outlined, size: 12, color: subTextColor),
+                                    const SizedBox(width: 4),
+                                    Expanded(
+                                      child: Text(
+                                        _userEmail,
+                                        style: TextStyle(fontSize: 11.5, color: subTextColor),
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                child: Text(
-                                  '🏅 Level ${_calculateLevel(solvedQs)}',
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.bold,
-                                    color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
+                              ],
+                              if (_userMobile.isNotEmpty) ...[
+                                const SizedBox(height: 2),
+                                Row(
+                                  children: [
+                                    Icon(Icons.phone_android_outlined, size: 12, color: subTextColor),
+                                    const SizedBox(width: 4),
+                                    Text(
+                                      _userMobile,
+                                      style: TextStyle(fontSize: 11.5, color: subTextColor),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                              const SizedBox(height: 6),
+                              Wrap(
+                                spacing: 6,
+                                runSpacing: 4,
+                                children: [
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                    decoration: BoxDecoration(
+                                      color: isDark ? const Color(0xFF451A03) : const Color(0xFFFEF3C7),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Text(
+                                      '🔥 $userStreak Day Streak',
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                        color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
+                                      ),
+                                    ),
                                   ),
-                                ),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                    decoration: BoxDecoration(
+                                      color: isDark ? const Color(0xFF1E1B4B) : const Color(0xFFE0E7FF),
+                                      borderRadius: BorderRadius.circular(12),
+                                    ),
+                                    child: Text(
+                                      '🏅 Level ${_calculateLevel(solvedQs)}',
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                        color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
-                          )
-                        ],
-                      ),
-                    )
+                          ),
+                        ),
+                        IconButton(
+                          icon: const Icon(Icons.edit_note_rounded, color: Color(0xFF2563EB), size: 24),
+                          tooltip: 'Edit Profile',
+                          onPressed: () => _showEditProfileDialog(isDark),
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
