@@ -8,7 +8,6 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
 import '../services/ai_explainer_service.dart';
-import '../services/auth_service.dart';
 import '../services/telegram_tracker.dart';
 import 'community_feed_screen.dart';
 import 'creator_auth_screen.dart';
@@ -333,161 +332,112 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         ],
       ),
       drawer: Drawer(
-        child: FutureBuilder<SharedPreferences>(
-          future: SharedPreferences.getInstance(),
-          builder: (context, snapshot) {
-            final prefs = snapshot.data;
-            final String userName = prefs?.getString('user_name') ?? 'Aspirant';
-            final String userEmail = prefs?.getString('user_email') ?? 'guest@mocktester.app';
-            final bool isGuest = prefs?.getBool('is_guest') ?? true;
-
-            return Column(
-              children: [
-                Expanded(
-                  child: ListView(
-                    padding: EdgeInsets.zero,
-                    children: [
-                      // 👤 DYNAMIC USER DRAWER HEADER
-                      UserAccountsDrawerHeader(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                          ),
-                        ),
-                        accountName: Text(
-                          userName,
-                          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                        ),
-                        accountEmail: Text(
-                          isGuest ? 'Guest User (Bina Login)' : userEmail,
-                          style: const TextStyle(color: Colors.white70),
-                        ),
-                        currentAccountPicture: const CircleAvatar(
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView(
+                padding: EdgeInsets.zero,
+                children: [
+                  DrawerHeader(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: const [
+                        CircleAvatar(
+                          radius: 28,
                           backgroundColor: Colors.white,
-                          child: Icon(Icons.person, color: Color(0xFF2563EB), size: 36),
+                          child: Text('🎓', style: TextStyle(fontSize: 26)),
                         ),
-                      ),
-
-                      // ⭐ GUEST USER SIGN-IN BUTTON (DIRECT POPUP)
-                      if (isGuest) ...[
-                        ListTile(
-                          leading: const Icon(Icons.login_rounded, color: Color(0xFF2563EB), size: 24),
-                          title: const Text(
-                            'Google se Sign-In Karein',
-                            style: TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold),
-                          ),
-                          subtitle: const Text('Progress cloud par save karne ke liye', style: TextStyle(fontSize: 11)),
-                          trailing: const Icon(Icons.arrow_forward_ios, size: 14, color: Color(0xFF2563EB)),
-                          onTap: () async {
-                            Navigator.pop(context);
-
-                            try {
-                              final googleUser = await AuthService.signInWithGoogle();
-
-                              if (googleUser != null && context.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text('✅ Sign-In Successful! Progress sync ho gaya.'),
-                                    backgroundColor: Color(0xFF16A34A),
-                                  ),
-                                );
-                                setState(() {});
-                              }
-                            } catch (e) {
-                              if (context.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text('⚠️ Sign-In Error: $e'),
-                                    backgroundColor: Colors.redAccent,
-                                  ),
-                                );
-                              }
-                            }
-                          },
-                        ),
-                        const Divider(),
+                        SizedBox(height: 10),
+                        Text('MockTester', style: TextStyle(color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold)),
+                        SizedBox(height: 2),
+                        Text('Aspirants Prep Platform', style: TextStyle(color: Colors.white70, fontSize: 12)),
                       ],
-
-                      ListTile(
-                        leading: const Icon(Icons.dashboard_customize_rounded, color: Color(0xFF2563EB)),
-                        title: const Text('Creator Studio & Analytics', style: TextStyle(fontWeight: FontWeight.bold)),
-                        subtitle: const Text('Dashboard, Quizzes, Notes & Mock Builder'),
-                        trailing: const Icon(Icons.arrow_forward_ios, size: 14),
-                        onTap: () {
-                          Navigator.pop(context);
-                          _openCreatorStudio();
-                        },
-                      ),
-                      const Divider(),
-                      ListTile(
-                        leading: const Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
-                        title: const Text('Community Feed'),
-                        onTap: () {
-                          Navigator.pop(context);
-                          setState(() => _currentBottomIndex = 3);
-                        },
-                      ),
-                      ListTile(
-                        leading: const Icon(Icons.school_outlined),
-                        title: const Text('Learn Hub'),
-                        onTap: () {
-                          Navigator.pop(context);
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (_) => const LearnHubScreen()),
-                          ).then((_) => _loadRealtimeProgress());
-                        },
-                      ),
-                      ListTile(
-                        leading: const Icon(Icons.person_outline),
-                        title: const Text('My Profile'),
-                        onTap: () {
-                          Navigator.pop(context);
-                          setState(() => _currentBottomIndex = 4);
-                        },
-                      ),
-                      ListTile(
-                        leading: const Icon(Icons.privacy_tip_outlined, color: Colors.grey),
-                        title: const Text('Privacy Policy', style: TextStyle(fontSize: 13.5)),
-                        onTap: () {
-                          Navigator.pop(context);
-                          _openWebsiteUrl('Privacy Policy', 'https://www.mocktester.online/p/privacy.html');
-                        },
-                      ),
-                    ],
+                    ),
                   ),
-                ),
-                Container(
-                  margin: const EdgeInsets.all(12),
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                    color: _isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                  ListTile(
+                    leading: const Icon(Icons.dashboard_customize_rounded, color: Color(0xFF2563EB)),
+                    title: const Text('Creator Studio & Analytics', style: TextStyle(fontWeight: FontWeight.bold)),
+                    subtitle: const Text('Dashboard, Quizzes, Notes & Mock Builder'),
+                    trailing: const Icon(Icons.arrow_forward_ios, size: 14),
+                    onTap: () {
+                      Navigator.pop(context);
+                      _openCreatorStudio();
+                    },
                   ),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Icon(Icons.info_outline_rounded, size: 16, color: Colors.amber),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Text(
-                          'Disclaimer: MockTester is an independent educational prep platform and is NOT affiliated with, endorsed by, or representing any government entity (BPSC, SSC, etc.).',
-                          style: TextStyle(
-                            fontSize: 10,
-                            color: _isDarkMode ? Colors.white60 : Colors.black87,
-                            height: 1.3,
-                          ),
-                        ),
+                  const Divider(),
+                  ListTile(
+                    leading: const Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
+                    title: const Text('Community Feed'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      setState(() => _currentBottomIndex = 3);
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.school_outlined),
+                    title: const Text('Learn Hub'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (_) => const LearnHubScreen()),
+                      ).then((_) => _loadRealtimeProgress());
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.person_outline),
+                    title: const Text('My Profile'),
+                    onTap: () {
+                      Navigator.pop(context);
+                      setState(() => _currentBottomIndex = 4);
+                    },
+                  ),
+                  ListTile(
+                    leading: const Icon(Icons.privacy_tip_outlined, color: Colors.grey),
+                    title: const Text('Privacy Policy', style: TextStyle(fontSize: 13.5)),
+                    onTap: () {
+                      Navigator.pop(context);
+                      _openWebsiteUrl('Privacy Policy', 'https://www.mocktester.online/p/privacy.html');
+                    },
+                  ),
+                ],
+              ),
+            ),
+            Container(
+              margin: const EdgeInsets.all(12),
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: _isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                borderRadius: BorderRadius.circular(8),
+                border: Border.all(color: Colors.grey.withOpacity(0.2)),
+              ),
+              child: Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const Icon(Icons.info_outline_rounded, size: 16, color: Colors.amber),
+                  const SizedBox(width: 8),
+                  Expanded(
+                    child: Text(
+                      'Disclaimer: MockTester is an independent educational prep platform and is NOT affiliated with, endorsed by, or representing any government entity (BPSC, SSC, etc.).',
+                      style: TextStyle(
+                        fontSize: 10,
+                        color: _isDarkMode ? Colors.white60 : Colors.black87,
+                        height: 1.3,
                       ),
-                    ],
+                    ),
                   ),
-                ),
-              ],
-            );
-          },
+                ],
+              ),
+            ),
+          ],
         ),
       ),
       body: IndexedStack(
