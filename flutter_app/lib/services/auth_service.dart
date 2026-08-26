@@ -4,7 +4,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class AuthService {
+  // 🔑 Aapka Web Client ID configure kar diya gaya hai
   static final GoogleSignIn _googleSignIn = GoogleSignIn(
+    serverClientId: '634144286548-fs3fi8hmc3j58aop4gfmdv31em43iuve.apps.googleusercontent.com',
     scopes: ['email', 'profile'],
   );
   static final SupabaseClient _supabase = Supabase.instance.client;
@@ -12,23 +14,23 @@ class AuthService {
   // 1-Tap Google Sign-In & Supabase Sync
   static Future<GoogleSignInAccount?> signInWithGoogle() async {
     try {
-      // 1. Purani cache clear karein taaki hamesha fresh account picker popup khule
+      // 1. Purana session clear karein taaki fresh account picker khule
       try {
         await _googleSignIn.signOut();
       } catch (_) {}
 
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
       if (googleUser == null) {
-        debugPrint("⚠️ Google Sign-In: User closed account picker without selecting.");
-        return null; // User cancelled
+        debugPrint("⚠️ Google Sign-In: User ne cancel kiya.");
+        return null;
       }
 
       final String name = googleUser.displayName ?? "MockTester Aspirant";
       final String email = googleUser.email;
       final String photoUrl = googleUser.photoUrl ?? "";
-      final String uid = googleUser.id; // Unique Google User ID
+      final String uid = googleUser.id;
 
-      // 2. Local Storage Sync (Guest flag false karein)
+      // 2. Local Storage Sync
       final prefs = await SharedPreferences.getInstance();
       await prefs.setBool('is_logged_in', true);
       await prefs.setBool('is_guest', false);
@@ -36,7 +38,7 @@ class AuthService {
       await prefs.setString('user_email', email);
       await prefs.setString('user_photo', photoUrl);
 
-      // 3. Supabase Cloud Sync (Try-catch wrapped taaki network issue par login block na ho)
+      // 3. Supabase Cloud Sync
       try {
         await _syncUserToSupabase(
           uid: uid,
@@ -51,7 +53,7 @@ class AuthService {
       return googleUser;
     } catch (e) {
       debugPrint("❌ GOOGLE SIGN-IN ROOT ERROR: $e");
-      rethrow; // UI ko actual exception forward karega taaki screen par error dikhe
+      rethrow;
     }
   }
 
