@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'services/notification_service.dart';
+import 'services/knowledge_base_service.dart'; // 📦 Added Knowledge Base Service
 import 'screens/home_screen.dart';
 
 // 🌓 Poore App ke liye Global Theme Controller
@@ -25,7 +26,28 @@ void main() async {
     anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnbGlkaHpzanhmcHB5cm1sd3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczNzA3ODEsImV4cCI6MjEwMjk0Njc4MX0.5re2plUdwg9pCIqi7jAYR3KIHTeZ-zG4ifltLScNsbk',
   );
 
-  // 📱 3. SharedPreferences: Theme Check
+  // 🔍 3. LOCAL KNOWLEDGE BASE (FTS5) AUTOMATIC VERIFICATION TEST
+  try {
+    debugPrint("🚀 [DB TEST] Starting decompression & FTS5 search check...");
+    final stopwatch = Stopwatch()..start();
+    
+    // Sample search keyword test (Mitochondria / BPSC term)
+    final chunks = await KnowledgeBaseService.instance.searchRelevantChunks("Mitochondria", limit: 2);
+    stopwatch.stop();
+
+    if (chunks.isNotEmpty) {
+      debugPrint("--------------------------------------------------");
+      debugPrint("✅ [DB TEST PASSED] Extracted Chunks: ${chunks.length} in ${stopwatch.elapsedMilliseconds}ms");
+      debugPrint("📄 [SAMPLE CHUNK]: ${chunks.first.substring(0, chunks.first.length > 120 ? 120 : chunks.first.length)}...");
+      debugPrint("--------------------------------------------------");
+    } else {
+      debugPrint("⚠️ [DB WARNING] Database opened successfully, but 0 chunks matched query 'Mitochondria'.");
+    }
+  } catch (e) {
+    debugPrint("❌ [DB ERROR] KnowledgeBase Extraction/Search Failed: $e");
+  }
+
+  // 📱 4. SharedPreferences: Theme Check
   final prefs = await SharedPreferences.getInstance();
   final bool isDark = prefs.getBool('is_dark_mode') ?? false;
   
@@ -84,7 +106,7 @@ class MyApp extends StatelessWidget {
             ),
             appBarTheme: const AppBarTheme(
               centerTitle: true,
-              backgroundColor: Color(0xFF1E293B),
+              backgroundColor: const Color(0xFF1E293B),
               foregroundColor: Colors.white,
               elevation: 0,
             ),
