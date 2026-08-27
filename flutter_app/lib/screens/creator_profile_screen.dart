@@ -21,8 +21,10 @@ class CreatorProfileScreen extends StatefulWidget {
 
 class _CreatorProfileScreenState extends State<CreatorProfileScreen> with SingleTickerProviderStateMixin {
   Map<String, dynamic>? _profile;
+  Map<String, dynamic>? _coachingData;
   List<dynamic> _mocks = [];
   List<dynamic> _posts = [];
+  List<dynamic> _batches = [];
   bool _isLoading = true;
   bool _isCreator = false;
   bool _isFollowing = false;
@@ -50,9 +52,16 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
           .eq('handle_id', widget.creatorHandle)
           .maybeSingle();
 
+      final coachingRes = await client
+          .from('coachings')
+          .select()
+          .eq('owner_name', widget.creatorHandle)
+          .maybeSingle();
+
       if (profileRes != null) {
         _isCreator = true;
         _profile = profileRes;
+        _coachingData = coachingRes;
 
         final mocksRes = await client
             .from('creator_mocks')
@@ -61,8 +70,16 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
             .order('created_at', ascending: false);
 
         _mocks = mocksRes;
+
+        if (coachingRes != null) {
+          final batchRes = await client
+              .from('batches')
+              .select('*, batch_tests(*)')
+              .eq('coaching_id', coachingRes['id'])
+              .order('created_at', ascending: false);
+          _batches = batchRes ?? [];
+        }
       } else {
-        // Fallback for regular Aspirant / Student
         _isCreator = false;
         _profile = {
           'name': widget.creatorHandle == 'user' ? 'Aspirant Candidate' : widget.creatorHandle,
@@ -79,7 +96,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
           .order('created_at', ascending: false);
 
       _posts = postsRes;
-      _tabController = TabController(length: _isCreator ? 2 : 1, vsync: this);
+      _tabController = TabController(length: _isCreator ? 3 : 1, vsync: this);
 
       if (mounted) {
         setState(() => _isLoading = false);
@@ -115,6 +132,73 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     }
+  }
+
+  void _openJoinBatchDialog() {
+    final codeCtrl = TextEditingController();
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+        title: const Text('🏫 Join Coaching Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text('Enter the Batch Code shared by your teacher:', style: TextStyle(fontSize: 12, color: Colors.grey)),
+            const SizedBox(height: 10),
+            TextField(
+              controller: codeCtrl,
+              textCapitalization: TextCapitalization.characters,
+              decoration: const InputDecoration(
+                hintText: 'e.g. PATNA100',
+                labelText: 'Batch Code',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+            onPressed: () async {
+              final code = codeCtrl.text.trim().toUpperCase();
+              if (code.isEmpty) return;
+
+              try {
+                final batch = await Supabase.instance.client
+                    .from('batches')
+                    .select()
+                    .eq('batch_code', code)
+                    .maybeSingle();
+
+                if (ctx.mounted) Navigator.pop(ctx);
+
+                if (batch != null) {
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        content: Text('🎉 Enrolled in "${batch['batch_name']}"!'),
+                        backgroundColor: const Color(0xFF16A34A),
+                      ),
+                    );
+                  }
+                } else {
+                  if (mounted) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Invalid Batch Code! Check with your coaching.')),
+                    );
+                  }
+                }
+              } catch (_) {}
+            },
+            child: const Text('Enroll Now'),
+          ),
+        ],
+      ),
+    );
   }
 
   void _startMockTest(Map<String, dynamic> mock) {
@@ -155,6 +239,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
     final cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final String? bannerUrl = _coachingData?['banner_url'];
 
     if (_isLoading) {
       return Scaffold(
@@ -167,7 +252,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
       backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
         title: Text(
-          _isCreator ? (_profile!['name'] ?? 'Mentor Profile') : 'Candidate Profile',
+          _isCreator ? (_coachingData?['name'] ?? _profile!['name'] ?? 'Mentor Profile') : 'Candidate Profile',
           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
         elevation: 0.5,
@@ -181,129 +266,151 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                 color: cardBg,
                 elevation: 1.5,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-                child: Padding(
-                  padding: const EdgeInsets.all(16),
-                  child: Column(
-                    children: [
-                      Row(
+                child: Column(
+                  children: [
+                    // 🎨 1. Optional Coaching Banner Billboard
+                    if (bannerUrl != null && bannerUrl.isNotEmpty)
+                      ClipRRect(
+                        borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+                        child: Image.network(
+                          bannerUrl,
+                          height: 120,
+                          width: double.infinity,
+                          fit: BoxFit.cover,
+                          errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+                        ),
+                      ),
+
+                    Padding(
+                      padding: const EdgeInsets.all(16),
+                      child: Column(
                         children: [
-                          CircleAvatar(
-                            radius: 32,
-                            backgroundColor: _isCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
-                            child: Text(
-                              (_profile!['name'] ?? 'U')[0].toUpperCase(),
-                              style: const TextStyle(fontSize: 26, color: Colors.white, fontWeight: FontWeight.bold),
-                            ),
-                          ),
-                          const SizedBox(width: 14),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
+                          Row(
+                            children: [
+                              CircleAvatar(
+                                radius: 30,
+                                backgroundColor: _isCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
+                                child: Text(
+                                  (_profile!['name'] ?? 'U')[0].toUpperCase(),
+                                  style: const TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                              const SizedBox(width: 14),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Flexible(
-                                      child: Text(
-                                        _profile!['name'] ?? '',
-                                        style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ),
-                                    const SizedBox(width: 6),
-                                    // 🏷️ Distinct Role Badge
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                      decoration: BoxDecoration(
-                                        color: _isCreator ? const Color(0xFF2563EB).withOpacity(0.12) : Colors.grey.withOpacity(0.15),
-                                        borderRadius: BorderRadius.circular(4),
-                                      ),
-                                      child: Text(
-                                        _isCreator ? 'CREATOR' : 'ASPIRANT',
-                                        style: TextStyle(
-                                          fontSize: 9.5,
-                                          fontWeight: FontWeight.w800,
-                                          color: _isCreator ? const Color(0xFF2563EB) : Colors.grey[600],
+                                    Row(
+                                      children: [
+                                        Flexible(
+                                          child: Text(
+                                            _coachingData?['name'] ?? _profile!['name'] ?? '',
+                                            style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
                                         ),
-                                      ),
+                                        const SizedBox(width: 6),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                          decoration: BoxDecoration(
+                                            color: _isCreator ? const Color(0xFF2563EB).withOpacity(0.12) : Colors.grey.withOpacity(0.15),
+                                            borderRadius: BorderRadius.circular(4),
+                                          ),
+                                          child: Text(
+                                            _isCreator ? 'INSTITUTE' : 'ASPIRANT',
+                                            style: TextStyle(
+                                              fontSize: 9.5,
+                                              fontWeight: FontWeight.w800,
+                                              color: _isCreator ? const Color(0xFF2563EB) : Colors.grey[600],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Text(
+                                      '@${widget.creatorHandle} • ${_coachingData?['city'] ?? _profile!['subject_specialty'] ?? 'Exam Expert'}',
+                                      style: TextStyle(color: Colors.grey[500], fontSize: 11.5),
                                     ),
                                   ],
                                 ),
-                                Text(
-                                  '@${widget.creatorHandle}',
-                                  style: TextStyle(color: Colors.grey[500], fontSize: 12),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 14),
+
+                          if (_isCreator) ...[
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text('${_profile!['followers_count'] ?? 0}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                                    const SizedBox(width: 4),
+                                    Text('Followers', style: TextStyle(color: Colors.grey[500], fontSize: 12.5)),
+                                    const SizedBox(width: 12),
+                                    Text('${_batches.length}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                                    const SizedBox(width: 4),
+                                    Text('Batches', style: TextStyle(color: Colors.grey[500], fontSize: 12.5)),
+                                  ],
                                 ),
-                                const SizedBox(height: 2),
-                                Text(
-                                  _profile!['subject_specialty'] ?? 'Exam Expert',
-                                  style: TextStyle(color: isDark ? Colors.white70 : Colors.grey[700], fontSize: 13),
+                                Row(
+                                  children: [
+                                    OutlinedButton.icon(
+                                      icon: const Icon(Icons.vpn_key_outlined, size: 14),
+                                      label: const Text('Join Batch', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                                      style: OutlinedButton.styleFrom(
+                                        foregroundColor: const Color(0xFF16A34A),
+                                        side: const BorderSide(color: Color(0xFF16A34A)),
+                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+                                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                                        visualDensity: VisualDensity.compact,
+                                      ),
+                                      onPressed: _openJoinBatchDialog,
+                                    ),
+                                    const SizedBox(width: 6),
+                                    ElevatedButton(
+                                      style: ElevatedButton.styleFrom(
+                                        backgroundColor: _isFollowing ? (isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)) : const Color(0xFF2563EB),
+                                        foregroundColor: _isFollowing ? (isDark ? Colors.white : Colors.black87) : Colors.white,
+                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+                                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                                        elevation: 0,
+                                        visualDensity: VisualDensity.compact,
+                                      ),
+                                      onPressed: _toggleFollow,
+                                      child: Text(_isFollowing ? 'Following' : 'Follow +', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 14),
-
-                      // Stats Row + Follow Button
-                      if (_isCreator) ...[
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
+                            if (_profile!['telegram_handle'] != null && _profile!['telegram_handle'].toString().isNotEmpty) ...[
+                              const Divider(height: 20),
+                              InkWell(
+                                onTap: () => _openTelegram(_profile!['telegram_handle']),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: const [
+                                    Icon(Icons.telegram, color: Color(0xFF0088CC), size: 18),
+                                    SizedBox(width: 6),
+                                    Text('Join Telegram Channel', style: TextStyle(color: Color(0xFF0088CC), fontWeight: FontWeight.bold, fontSize: 12.5)),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ] else ...[
                             Row(
                               children: [
-                                Text(
-                                  '${_profile!['followers_count'] ?? 0}',
-                                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                                ),
-                                const SizedBox(width: 4),
-                                Text('Followers', style: TextStyle(color: Colors.grey[500], fontSize: 13)),
-                                const SizedBox(width: 14),
-                                Text(
-                                  '${_mocks.length}',
-                                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                                ),
-                                const SizedBox(width: 4),
-                                Text('Mocks', style: TextStyle(color: Colors.grey[500], fontSize: 13)),
+                                Icon(Icons.forum_outlined, size: 16, color: Colors.grey[500]),
+                                const SizedBox(width: 6),
+                                Text('${_posts.length} Discussions Shared', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
                               ],
-                            ),
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: _isFollowing ? (isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)) : const Color(0xFF2563EB),
-                                foregroundColor: _isFollowing ? (isDark ? Colors.white : Colors.black87) : Colors.white,
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                                padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
-                                elevation: 0,
-                              ),
-                              onPressed: _toggleFollow,
-                              child: Text(_isFollowing ? 'Following' : 'Follow +', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
                             ),
                           ],
-                        ),
-                        if (_profile!['telegram_handle'] != null && _profile!['telegram_handle'].toString().isNotEmpty) ...[
-                          const Divider(height: 20),
-                          InkWell(
-                            onTap: () => _openTelegram(_profile!['telegram_handle']),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                                Icon(Icons.telegram, color: Color(0xFF0088CC), size: 20),
-                                SizedBox(width: 6),
-                                Text('Join Telegram Channel', style: TextStyle(color: Color(0xFF0088CC), fontWeight: FontWeight.bold, fontSize: 13)),
-                              ],
-                            ),
-                          ),
                         ],
-                      ] else ...[
-                        Row(
-                          children: [
-                            Icon(Icons.forum_outlined, size: 16, color: Colors.grey[500]),
-                            const SizedBox(width: 6),
-                            Text('${_posts.length} Community Discussions / Doubts', style: TextStyle(color: Colors.grey[600], fontSize: 13)),
-                          ],
-                        ),
-                      ],
-                    ],
-                  ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
@@ -317,10 +424,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                   indicatorColor: const Color(0xFF2563EB),
                   labelColor: const Color(0xFF2563EB),
                   unselectedLabelColor: Colors.grey,
-                  labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                  labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
                   tabs: [
+                    Tab(text: 'Batches (${_batches.length})'),
                     Tab(text: 'Mock Tests (${_mocks.length})'),
-                    Tab(text: 'Posts & Gossip (${_posts.length})'),
+                    Tab(text: 'Notices (${_posts.length})'),
                   ],
                 ),
                 color: cardBg,
@@ -331,12 +439,53 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
             ? TabBarView(
                 controller: _tabController,
                 children: [
+                  _buildBatchesTab(cardBg),
                   _buildMocksTab(cardBg),
                   _buildPostsTab(cardBg),
                 ],
               )
             : _buildPostsTab(cardBg),
       ),
+    );
+  }
+
+  Widget _buildBatchesTab(Color cardBg) {
+    if (_batches.isEmpty) {
+      return const Center(child: Text('No active batches right now.'));
+    }
+    return ListView.builder(
+      padding: const EdgeInsets.all(12),
+      itemCount: _batches.length,
+      itemBuilder: (context, idx) {
+        final b = _batches[idx];
+        final List tests = b['batch_tests'] ?? [];
+        return Card(
+          color: cardBg,
+          margin: const EdgeInsets.only(bottom: 10),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          child: Padding(
+            padding: const EdgeInsets.all(14),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(b['batch_name'] ?? 'Class Batch', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      decoration: BoxDecoration(color: const Color(0xFF16A34A).withOpacity(0.12), borderRadius: BorderRadius.circular(6)),
+                      child: Text('CODE: ${b['batch_code']}', style: const TextStyle(color: Color(0xFF16A34A), fontWeight: FontWeight.bold, fontSize: 11)),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 6),
+                Text('${tests.length} Scheduled CBT Mocks inside this batch.', style: TextStyle(color: Colors.grey[600], fontSize: 12)),
+              ],
+            ),
+          ),
+        );
+      },
     );
   }
 
@@ -364,10 +513,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                   children: [
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF2563EB).withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(6),
-                      ),
+                      decoration: BoxDecoration(color: const Color(0xFF2563EB).withOpacity(0.1), borderRadius: BorderRadius.circular(6)),
                       child: Text(m['subject'] ?? 'General', style: const TextStyle(color: Color(0xFF2563EB), fontSize: 11, fontWeight: FontWeight.bold)),
                     ),
                     Text('${m['attempts_count'] ?? 0} Attempts', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
@@ -402,7 +548,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
 
   Widget _buildPostsTab(Color cardBg) {
     if (_posts.isEmpty) {
-      return const Center(child: Text('No community posts shared yet.'));
+      return const Center(child: Text('No announcements shared yet.'));
     }
     return ListView.builder(
       padding: const EdgeInsets.all(12),
@@ -420,26 +566,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
               children: [
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF2563EB).withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                  child: Text(p['tag'] ?? 'Gossip', style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold)),
+                  decoration: BoxDecoration(color: const Color(0xFF2563EB).withOpacity(0.1), borderRadius: BorderRadius.circular(6)),
+                  child: Text(p['tag'] ?? 'Notice', style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold)),
                 ),
                 const SizedBox(height: 8),
                 Text(p['content'] ?? '', style: const TextStyle(fontSize: 14, height: 1.4)),
-                const SizedBox(height: 10),
-                Row(
-                  children: [
-                    Icon(Icons.arrow_upward_rounded, size: 16, color: Colors.grey[500]),
-                    const SizedBox(width: 4),
-                    Text('${p['upvotes'] ?? 0}', style: const TextStyle(fontSize: 12, color: Colors.grey)),
-                    const SizedBox(width: 14),
-                    Icon(Icons.remove_red_eye_outlined, size: 16, color: Colors.grey[500]),
-                    const SizedBox(width: 4),
-                    Text('${p['views_count'] ?? 120}', style: const TextStyle(fontSize: 12, color: Colors.grey)),
-                  ],
-                ),
               ],
             ),
           ),
