@@ -20,8 +20,10 @@ class CreatorDashboardScreen extends StatefulWidget {
 
 class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
   Map<String, dynamic>? _profile;
+  Map<String, dynamic>? _coachingData;
   List<dynamic> _posts = [];
   List<dynamic> _mocks = [];
+  List<dynamic> _batches = [];
   bool _isLoading = true;
 
   int _totalViews = 0;
@@ -29,6 +31,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
   int _totalBookmarks = 0;
   int _totalShares = 0;
   int _totalMockAttempts = 0;
+  int _totalBatchStudents = 0;
 
   @override
   void initState() {
@@ -40,11 +43,40 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     try {
       final client = Supabase.instance.client;
 
+      // 1. Fetch Profile & Coaching Details
       final profileRes = await client
           .from('creator_profiles')
           .select()
           .eq('handle_id', widget.creatorHandle)
           .maybeSingle();
+
+      final coachingRes = await client
+          .from('coachings')
+          .select()
+          .eq('owner_name', widget.creatorHandle)
+          .maybeSingle();
+
+      // 2. Fetch Batches & Submissions
+      List<dynamic> batchesRes = [];
+      int batchStudentsCount = 0;
+      if (coachingRes != null) {
+        batchesRes = await client
+            .from('batches')
+            .select('*, batch_tests(id, test_title)')
+            .eq('coaching_id', coachingRes['id'])
+            .order('created_at', ascending: false);
+
+        final submissions = await client
+            .from('batch_submissions')
+            .select('student_identifier')
+            .inFilter('batch_id', batchesRes.map((b) => b['id']).toList());
+
+        final uniqueStudents = <String>{};
+        for (var s in (submissions as List? ?? [])) {
+          if (s['student_identifier'] != null) uniqueStudents.add(s['student_identifier']);
+        }
+        batchStudentsCount = uniqueStudents.length;
+      }
 
       final postsRes = await client
           .from('community_posts')
@@ -78,6 +110,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
       if (mounted) {
         setState(() {
           _profile = profileRes;
+          _coachingData = coachingRes;
+          _batches = batchesRes;
           _posts = postsRes ?? [];
           _mocks = mocksRes ?? [];
           _totalViews = views;
@@ -85,6 +119,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           _totalBookmarks = bookmarks;
           _totalShares = shares;
           _totalMockAttempts = attempts;
+          _totalBatchStudents = batchStudentsCount;
           _isLoading = false;
         });
       }
@@ -92,6 +127,232 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
       debugPrint("Analytics load error: $e");
       if (mounted) setState(() => _isLoading = false);
     }
+  }
+
+  // 🏫 Modal to Create New Coaching Batch
+  void _openCreateBatchModal() {
+    final batchNameCtrl = TextEditingController();
+    final batchCodeCtrl = TextEditingController();
+    bool isSubmitting = false;
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setModalState) => Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(ctx).viewInsets.bottom,
+            left: 16,
+            right: 16,
+            top: 16,
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('🏫 Create Class Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                  IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                ],
+              ),
+              const SizedBox(height: 10),
+              TextField(
+                controller: batchNameCtrl,
+                decoration: const InputDecoration(
+                  labelText: 'Batch Name (e.g. BSSC CGL 2026 Target)',
+                  border: OutlineInputBorder(),
+                  isDense: true,
+                ),
+              ),
+              const SizedBox(height: 10),
+              TextField(
+                controller: batchCodeCtrl,
+                textCapitalization: TextCapitalization.characters,
+                decoration: const InputDecoration(
+                  labelText: 'Unique Join Code (e.g. PATNA100)',
+                  border: OutlineInputBorder(),
+                  isDense: true,
+                ),
+              ),
+              const SizedBox(height: 14),
+              SizedBox(
+                width: double.infinity,
+                height: 44,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF2563EB),
+                    foregroundColor: Colors.white,
+                  ),
+                  onPressed: isSubmitting
+                      ? null
+                      : () async {
+                          final bName = batchNameCtrl.text.trim();
+                          final bCode = batchCodeCtrl.text.trim().toUpperCase();
+
+                          if (bName.isEmpty || bCode.isEmpty) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('Please fill all details!')),
+                            );
+                            return;
+                          }
+
+                          setModalState(() => isSubmitting = true);
+
+                          try {
+                            String? coachingId = _coachingData?['id'];
+
+                            if (coachingId == null) {
+                              final newCoaching = await Supabase.instance.client.from('coachings').insert({
+                                'name': _profile?['name'] ?? widget.creatorHandle,
+                                'owner_name': widget.creatorHandle,
+                              }).select().single();
+                              coachingId = newCoaching['id'];
+                            }
+
+                            await Supabase.instance.client.from('batches').insert({
+                              'coaching_id': coachingId,
+                              'batch_name': bName,
+                              'batch_code': bCode,
+                            });
+
+                            if (ctx.mounted) Navigator.pop(ctx);
+                            _loadCompleteAnalytics();
+                            if (mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(content: Text('Batch "$bName" created with Code: $bCode! 🚀')),
+                              );
+                            }
+                          } catch (e) {
+                            setModalState(() => isSubmitting = false);
+                            if (ctx.mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: $e')));
+                            }
+                          }
+                        },
+                  child: isSubmitting
+                      ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                      : const Text('Create Batch Code 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              ),
+              const SizedBox(height: 16),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  // 🎨 Modal to Customize Institute Page (Banner & Details)
+  void _openInstituteCustomizerModal() {
+    final nameCtrl = TextEditingController(text: _coachingData?['name'] ?? _profile?['name'] ?? '');
+    final bannerCtrl = TextEditingController(text: _coachingData?['banner_url'] ?? '');
+    final cityCtrl = TextEditingController(text: _coachingData?['city'] ?? 'Patna');
+    final contactCtrl = TextEditingController(text: _coachingData?['contact_number'] ?? '');
+    bool isSaving = false;
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setModalState) => Padding(
+          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('🎨 Institute Branding & Details', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
+                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                  ],
+                ),
+                const SizedBox(height: 10),
+                TextField(
+                  controller: nameCtrl,
+                  decoration: const InputDecoration(labelText: 'Coaching / Institute Name', border: OutlineInputBorder(), isDense: true),
+                ),
+                const SizedBox(height: 10),
+                TextField(
+                  controller: bannerCtrl,
+                  decoration: const InputDecoration(labelText: 'Banner Poster URL (16:9 Image Link)', border: OutlineInputBorder(), isDense: true),
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    Expanded(
+                      child: TextField(
+                        controller: cityCtrl,
+                        decoration: const InputDecoration(labelText: 'City / Town', border: OutlineInputBorder(), isDense: true),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: TextField(
+                        controller: contactCtrl,
+                        decoration: const InputDecoration(labelText: 'Contact / WhatsApp', border: OutlineInputBorder(), isDense: true),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 14),
+                SizedBox(
+                  width: double.infinity,
+                  height: 44,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF16A34A), foregroundColor: Colors.white),
+                    onPressed: isSaving
+                        ? null
+                        : () async {
+                            setModalState(() => isSaving = true);
+                            try {
+                              if (_coachingData != null) {
+                                await Supabase.instance.client.from('coachings').update({
+                                  'name': nameCtrl.text.trim(),
+                                  'banner_url': bannerCtrl.text.trim(),
+                                  'city': cityCtrl.text.trim(),
+                                  'contact_number': contactCtrl.text.trim(),
+                                }).eq('id', _coachingData!['id']);
+                              } else {
+                                await Supabase.instance.client.from('coachings').insert({
+                                  'name': nameCtrl.text.trim(),
+                                  'owner_name': widget.creatorHandle,
+                                  'banner_url': bannerCtrl.text.trim(),
+                                  'city': cityCtrl.text.trim(),
+                                  'contact_number': contactCtrl.text.trim(),
+                                });
+                              }
+
+                              if (ctx.mounted) Navigator.pop(ctx);
+                              _loadCompleteAnalytics();
+                              if (mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(content: Text('Institute details updated! 🚀'), backgroundColor: Color(0xFF16A34A)),
+                                );
+                              }
+                            } catch (e) {
+                              setModalState(() => isSaving = false);
+                            }
+                          },
+                    child: isSaving
+                        ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                        : const Text('Save & Publish Branding 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ),
+                const SizedBox(height: 16),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
   }
 
   // Creator Creation Modal (Daily Quiz & PDF Notes Only)
@@ -272,7 +533,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               String targetTag = isPoll ? 'Daily Quiz ⚡' : 'Current Affairs 📰';
                               final authorName = _profile?['name'] ?? widget.creatorHandle;
 
-                              // 1. Insert to Supabase with is_approved: false (Pre-moderation)
                               final inserted = await Supabase.instance.client.from('community_posts').insert({
                                 'creator_id': widget.creatorHandle,
                                 'author_name': authorName,
@@ -287,7 +547,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                                 'bookmarks_count': 0,
                               }).select().single();
 
-                              // 2. 🚀 Send to Telegram for Interactive 1-Tap Moderation
                               AdminTelegramAlert.sendForInteractiveApproval(
                                 postId: inserted['id'] ?? 0,
                                 authorName: authorName,
@@ -348,7 +607,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     return Scaffold(
       backgroundColor: bgSurface,
       appBar: AppBar(
-        title: const Text('Creator Studio & Analytics', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+        title: const Text('Coaching Studio & Analytics', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         actions: [
           IconButton(
             icon: const Icon(Icons.account_circle_outlined),
@@ -367,7 +626,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 📊 1. Performance Overview Card
+            // 📊 1. Performance Overview Card (Batch & Public Metrics)
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -381,23 +640,23 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Text(_profile?['name'] ?? 'Creator Hub', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                      Text(_coachingData?['name'] ?? _profile?['name'] ?? 'Coaching Hub', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                         decoration: BoxDecoration(color: const Color(0xFF16A34A).withOpacity(0.12), borderRadius: BorderRadius.circular(6)),
-                        child: const Text('STUDIO', style: TextStyle(color: Color(0xFF16A34A), fontWeight: FontWeight.bold, fontSize: 11)),
+                        child: const Text('INSTITUTE', style: TextStyle(color: Color(0xFF16A34A), fontWeight: FontWeight.bold, fontSize: 11)),
                       ),
                     ],
                   ),
-                  Text('@${widget.creatorHandle} • ${_profile?['subject_specialty'] ?? 'Exam Mentor'}', style: TextStyle(color: Colors.grey[500], fontSize: 12)),
+                  Text('@${widget.creatorHandle} • ${_coachingData?['city'] ?? _profile?['subject_specialty'] ?? 'Exam Mentor'}', style: TextStyle(color: Colors.grey[500], fontSize: 12)),
                   const Divider(height: 24),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _buildMetricItem('Followers', '${_profile?['followers_count'] ?? 0}', Icons.people_alt_outlined),
-                      _buildMetricItem('Total Views', '$_totalViews', Icons.remove_red_eye_outlined),
-                      _buildMetricItem('Attempts', '$_totalMockAttempts', Icons.bolt_rounded),
-                      _buildMetricItem('Notebook Saves', '$_totalBookmarks', Icons.bookmark_border_rounded),
+                      _buildMetricItem('Students', '$_totalBatchStudents', Icons.groups_outlined),
+                      _buildMetricItem('Batches', '${_batches.length}', Icons.class_outlined),
+                      _buildMetricItem('CBT Attempts', '$_totalMockAttempts', Icons.bolt_rounded),
+                      _buildMetricItem('Public Views', '$_totalViews', Icons.remove_red_eye_outlined),
                     ],
                   ),
                 ],
@@ -405,13 +664,34 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 🚀 2. Verified Creator Studio Creation Tools (Spam-Free)
-            const Text('Creator Studio Tools', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            // 🏫 2. Coaching & Batch Management Hub
+            const Text('Coaching & Batch Management', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            const SizedBox(height: 12),
+
+            _buildActionCard(
+              title: 'Create & Manage Batches 🏫',
+              subtitle: 'Generate unique batch codes (e.g. BSSC2026) for your students.',
+              icon: Icons.add_business_outlined,
+              color: const Color(0xFF0D9488),
+              onTap: _openCreateBatchModal,
+            ),
+
+            _buildActionCard(
+              title: 'Customize Institute Page & Posters 🎨',
+              subtitle: 'Upload coaching banner poster, city, and contact details.',
+              icon: Icons.photo_library_outlined,
+              color: const Color(0xFFEA580C),
+              onTap: _openInstituteCustomizerModal,
+            ),
+            const SizedBox(height: 12),
+
+            // 🚀 3. Studio Creation Tools
+            const Text('CBT Mock & Content Tools', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
 
             _buildActionCard(
               title: 'CBT Mock Test Builder ⚡',
-              subtitle: 'Create multi-question timed CBT tests with AI Magic paste.',
+              subtitle: 'Create timed tests for private batches or public marketing feed.',
               icon: Icons.assignment_add,
               color: const Color(0xFF2563EB),
               onTap: () => Navigator.push(
