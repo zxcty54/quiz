@@ -32,7 +32,9 @@ jobs:
 
       - name: 📦 Get Flutter Dependencies
         working-directory: flutter_app
-        run: flutter pub get
+        run: |
+          flutter pub get
+          flutter pub deps
 
       - name: 🎨 Generate App Icons
         working-directory: flutter_app
@@ -80,7 +82,7 @@ jobs:
             -dname "CN=Android Debug,O=Android,C=US"
           ./gradlew signingReport
 
-      # 🛠️ 2. Build Release APK
+      # 🛠️ 2. Build Release APK (With DB Assets Included)
       - name: 🛠️ Build APK (With Secrets Injected)
         working-directory: flutter_app
         run: |
