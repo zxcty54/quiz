@@ -9,6 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/ai_explainer_service.dart';
 import '../services/telegram_tracker.dart';
+import '../services/knowledge_base_service.dart'; // 📦 Added Knowledge Base Service
 import 'community_feed_screen.dart';
 import 'creator_auth_screen.dart';
 import 'creator_dashboard_screen.dart';
@@ -49,6 +50,51 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     WidgetsBinding.instance.addObserver(this);
     TelegramTracker.initSession();
     _loadAllConfigs();
+
+    // 🔍 AUTOMATIC DATABASE RUNTIME VERIFICATION CHECK
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _runAutomaticDbCheck();
+    });
+  }
+
+  // ⚡ Test Function jo check karega ki local .db.gz extract hokar FTS search chal rahi hai ya nahi
+  Future<void> _runAutomaticDbCheck() async {
+    try {
+      final stopwatch = Stopwatch()..start();
+      final chunks = await KnowledgeBaseService.instance.searchRelevantChunks("Mitochondria", limit: 1);
+      stopwatch.stop();
+
+      if (!mounted) return;
+
+      if (chunks.isNotEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text("✅ Database Active! Loaded in ${stopwatch.elapsedMilliseconds}ms"),
+            backgroundColor: const Color(0xFF16A34A),
+            behavior: SnackBarBehavior.floating,
+            duration: const Duration(seconds: 4),
+          ),
+        );
+      } else {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text("⚠️ DB Open ho gaya par 'Mitochondria' chunk match nahi hua."),
+            backgroundColor: Colors.orange,
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+      }
+    } catch (e) {
+      if (!mounted) return;
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text("❌ DB Error: $e"),
+          backgroundColor: Colors.redAccent,
+          behavior: SnackBarBehavior.floating,
+          duration: const Duration(seconds: 5),
+        ),
+      );
+    }
   }
 
   @override
