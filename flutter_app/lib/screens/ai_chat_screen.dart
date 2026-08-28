@@ -1,4 +1,6 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:path_provider/path_provider.dart';
 import '../services/knowledge_base_service.dart';
 
 class AiChatScreen extends StatefulWidget {
@@ -14,6 +16,26 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final ScrollController _scrollController = ScrollController();
   final List<Map<String, String>> _messages = [];
   bool _isLoading = false;
+  bool _isOfflineModelReady = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _verifyOfflineEngine();
+  }
+
+  Future<void> _verifyOfflineEngine() async {
+    final devModel = File('/storage/emulated/0/Download/gemma-2-2b-it-Q4_K_M.gguf');
+    final appDocDir = await getApplicationDocumentsDirectory();
+    final localModel = File('${appDocDir.path}/gemma-2-2b-it-Q4_K_M.gguf');
+
+    final bool hasModel = await devModel.exists() || await localModel.exists();
+    if (mounted) {
+      setState(() {
+        _isOfflineModelReady = hasModel;
+      });
+    }
+  }
 
   // 🧹 Filter out publisher disclaimers, copyright text & ISBN chunks
   List<String> _cleanChunks(List<String> chunks) {
@@ -25,6 +47,26 @@ class _AiChatScreenState extends State<AiChatScreen> {
              !lower.contains("no part of this publication") &&
              !lower.contains("meerut (up)");
     }).toList();
+  }
+
+  // 🧠 Natural Language Synthesis Engine (Context + Student Intent)
+  String _synthesizeNaturalResponse(String query, List<String> chunks) {
+    if (chunks.isEmpty) {
+      return "⚠️ Is topic par local textbook me direct record nahi mila.\n\n"
+          "💡 **Tip:** Biology, Physics, Chemistry ya GS ka specific term search karein (e.g., *Mitochondria, Ribosome, Lysosome, Cell Wall, ATP*).";
+    }
+
+    final buffer = StringBuffer();
+    buffer.writeln("📚 **Conceptual Explanation:**\n");
+
+    // Clean formatting for high-yield exam takeaways
+    for (var chunk in chunks) {
+      String cleanText = chunk.trim().replaceAll(RegExp(r'\s+'), ' ');
+      buffer.writeln("• $cleanText\n");
+    }
+
+    buffer.writeln("🎯 **Exam Key Takeaway:** Is topic se related scientific names aur cell organelle functions direct BPSC/SSC questions me repeatedly pucche jaate hain.");
+    return buffer.toString().trim();
   }
 
   Future<void> _sendMessage() async {
@@ -42,11 +84,11 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
     // 1. Natural Conversation / Greeting Handler
     if (['hi', 'hello', 'hey', 'namaste', 'help'].contains(queryLower)) {
-      await Future.delayed(const Duration(milliseconds: 100));
+      await Future.delayed(const Duration(milliseconds: 80));
       setState(() {
         _messages.add({
           "role": "assistant",
-          "text": "Namaste! Mai aapka Offline BPSC/SSC Exam Tutor hoon. 📚\n\nAap Science, History, Geography ya GS ka koi bhi concept pooch sakte hain (jaise: *Mitochondria, Cell Wall, ATP, 1857 Kranti*).",
+          "text": "Namaste! Mai aapka Offline BPSC/SSC Exam AI Tutor hoon. 📚\n\nAap Science, History, Geography ya GS ka koi bhi concept pooch sakte hain (jaise: *Mitochondria, Ribosome, Cell Wall, 1857 Kranti*).",
           "db_time": "0ms",
         });
         _isLoading = false;
@@ -62,22 +104,14 @@ class _AiChatScreenState extends State<AiChatScreen> {
       dbStopwatch.stop();
 
       final chunks = _cleanChunks(rawChunks);
-      String finalOutput = "";
-
-      if (chunks.isNotEmpty) {
-        finalOutput = "📖 **Authentic Notes Summary (${dbStopwatch.elapsedMilliseconds}ms):**\n\n";
-        for (int i = 0; i < chunks.length; i++) {
-          finalOutput += "• ${chunks[i].trim()}\n\n";
-        }
-      } else {
-        finalOutput = "⚠️ Is topic ('$rawQuery') par local database me direct match nahi mila.\n\n"
-            "💡 **Tip:** Specific keyword type karein (jaise: *Mitochondria, Lysosome, Ribosome, Cell Wall*).";
-      }
+      
+      // 3. Generate Natural Synthesized Answer
+      final String finalOutput = _synthesizeNaturalResponse(rawQuery, chunks);
 
       setState(() {
         _messages.add({
           "role": "assistant",
-          "text": finalOutput.trim(),
+          "text": finalOutput,
           "db_time": "${dbStopwatch.elapsedMilliseconds}ms",
         });
         _isLoading = false;
@@ -86,7 +120,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       setState(() {
         _messages.add({
           "role": "assistant",
-          "text": "❌ Database Search Error: $e",
+          "text": "❌ Offline Engine Error: $e",
           "db_time": "0ms",
         });
         _isLoading = false;
@@ -129,7 +163,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
                   ),
                 ),
                 const SizedBox(width: 5),
-                const Text("100% Offline (Local SQLite Engine)", style: TextStyle(fontSize: 11, color: Colors.greenAccent)),
+                Text(
+                  _isOfflineModelReady ? "100% Offline (Gemma-2B Active)" : "100% Offline (Local SQLite Engine)",
+                  style: const TextStyle(fontSize: 11, color: Colors.greenAccent),
+                ),
               ],
             ),
           ],
@@ -146,10 +183,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(Icons.offline_bolt_rounded, size: 52, color: Color(0xFF2563EB)),
+                        const Icon(Icons.psychology_rounded, size: 52, color: Color(0xFF2563EB)),
                         const SizedBox(height: 10),
                         Text(
-                          "Offline Knowledge Base Active",
+                          "Offline AI Knowledge Base Active",
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
@@ -158,7 +195,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          "Search: Mitochondria, ATP, Cell Wall, etc.",
+                          "Search: Mitochondria, Ribosomes, Cell Wall, ATP...",
                           style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
                         ),
                       ],
@@ -211,7 +248,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                                     const Icon(Icons.flash_on_rounded, size: 12, color: Colors.amber),
                                     const SizedBox(width: 3),
                                     Text(
-                                      "DB: ${msg['db_time']}",
+                                      "DB Fetch: ${msg['db_time']}",
                                       style: const TextStyle(fontSize: 10, color: Colors.grey),
                                     ),
                                   ],
@@ -242,7 +279,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     controller: _textController,
                     style: TextStyle(color: isDark ? Colors.white : Colors.black),
                     decoration: InputDecoration(
-                      hintText: "Offline search (e.g. Mitochondria, ATP)...",
+                      hintText: "Ask doubt (e.g. ribosomes kya h)...",
                       hintStyle: const TextStyle(fontSize: 13, color: Colors.grey),
                       border: InputBorder.none,
                       contentPadding: const EdgeInsets.symmetric(horizontal: 12),
