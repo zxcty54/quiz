@@ -38,30 +38,75 @@ class KnowledgeBaseService {
     await targetFile.writeAsBytes(decompressedBytes, flush: true);
   }
 
-  // Fast Search with FTS5 and standard table fallback
-  Future<List<String>> searchRelevantChunks(String query, {int limit = 2}) async {
-    final db = await instance.database;
-    final cleanQuery = query.replaceAll(RegExp(r'[^\w\s]+'), ' ').trim();
-    if (cleanQuery.isEmpty) return [];
+  // 🧠 Smart Multi-Word & Prefix Search Engine (Hinglish/Natural Language Friendly)
+  Future<List<String>> searchRelevantChunks(String rawQuery, {int limit = 3}) async {
+    final db = await database;
+    if (db == null) return [];
+
+    // 1. Common Stopwords & Conversational Hinglish Noise Filter
+    final stopWords = {
+      'kya', 'hai', 'h', 'he', 'ka', 'ki', 'ke', 'ko', 'me', 'mein', 'se', 'par',
+      'batao', 'samjhao', 'karein', 'karta', 'hota', 'hoti', 'hote', 'what', 'is',
+      'the', 'about', 'explain', 'tell', 'sir', 'please', 'details', 'kaise'
+    };
+
+    // 2. Clean punctuation, lowercase, and tokenize into core search terms
+    final cleanWords = rawQuery
+        .toLowerCase()
+        .replaceAll(RegExp(r'[^\w\s]+'), ' ')
+        .split(RegExp(r'\s+'))
+        .map((w) => w.trim())
+        .where((w) => w.length > 1 && !stopWords.contains(w))
+        .toList();
+
+    // If all words were filtered out (e.g. user typed single small keyword), keep original tokens
+    if (cleanWords.isEmpty) {
+      cleanWords.addAll(
+        rawQuery
+            .toLowerCase()
+            .replaceAll(RegExp(r'[^\w\s]+'), ' ')
+            .split(RegExp(r'\s+'))
+            .where((w) => w.trim().isNotEmpty),
+      );
+    }
+
+    if (cleanWords.isEmpty) return [];
+
+    // 3. Construct FTS5 Query with Prefix Wildcard (e.g. "ribosomes* OR ribosome*")
+    final ftsQuery = cleanWords.map((w) => '$w*').join(' OR ');
 
     try {
-      // 1. Try Native FTS5 Fast Search
-      final results = await db.rawQuery('''
+      // ⚡ Try FTS5 Match with Ranking
+      final List<Map<String, dynamic>> results = await db.rawQuery(
+        '''
         SELECT content FROM fts_knowledge 
         WHERE fts_knowledge MATCH ? 
+        ORDER BY rank 
         LIMIT ?
-      ''', [cleanQuery, limit]);
+        ''',
+        [ftsQuery, limit],
+      );
 
-      return results.map((row) => row['content'] as String).toList();
-    } catch (e) {
-      // 2. Fallback to standard SQL table search if FTS5 is compiling
-      final fallbackResults = await db.rawQuery('''
-        SELECT content FROM knowledge_chunks 
+      if (results.isNotEmpty) {
+        return results.map((row) => row['content'] as String).toList();
+      }
+    } catch (_) {}
+
+    // 4. Robust Substring Fallback (standard table / LIKE search)
+    try {
+      final String searchKey = cleanWords.first;
+      final List<Map<String, dynamic>> fallbackResults = await db.rawQuery(
+        '''
+        SELECT content FROM fts_knowledge 
         WHERE content LIKE ? 
         LIMIT ?
-      ''', ['%$cleanQuery%', limit]);
+        ''',
+        ['%$searchKey%', limit],
+      );
 
       return fallbackResults.map((row) => row['content'] as String).toList();
+    } catch (_) {
+      return [];
     }
   }
 }
