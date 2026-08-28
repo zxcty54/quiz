@@ -47,11 +47,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _hasLearningHistory = false;
   bool _isLoadingConfig = true;
 
-  // 🤖 OFFLINE MODEL DOWNLOADER STATE
+  // 🤖 OFFLINE MODEL DOWNLOADER & AUTO-DETECT STATE
   bool _isModelDownloaded = false;
   bool _isDownloadingModel = false;
   double _downloadProgress = 0.0;
-  String _downloadStatusText = "One-Time Offline Setup (~980 MB)";
+  String _downloadStatusText = "One-Time Offline Setup (~1.7 GB)";
 
   @override
   void initState() {
@@ -66,21 +66,24 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     });
   }
 
-  // 🔍 1. Check if GGUF model already exists on phone
+  // 🔍 1. Smart Local Storage & Downloads Folder Auto-Detect
   Future<void> _checkLocalModelStatus() async {
-    final appDocDir = await getApplicationDocumentsDirectory();
-    final modelFile = File('${appDocDir.path}/gemma-2-2b-it-Q4_K_M.gguf');
     final devModelFile = File('/storage/emulated/0/Download/gemma-2-2b-it-Q4_K_M.gguf');
+    final appDocDir = await getApplicationDocumentsDirectory();
+    final internalModel = File('${appDocDir.path}/gemma-2-2b-it-Q4_K_M.gguf');
 
-    final bool exists = await modelFile.exists() || await devModelFile.exists();
+    final bool exists = await devModelFile.exists() || await internalModel.exists();
     if (mounted) {
       setState(() {
         _isModelDownloaded = exists;
+        if (exists) {
+          _downloadStatusText = "✅ On-Device Model Active (1.7 GB)";
+        }
       });
     }
   }
 
-  // 📥 2. Download Model with Realtime Progress & Zero Memory Freeze
+  // 📥 2. In-App Download Fallback (Agar kisi device me pehle se downloaded na ho)
   Future<void> _startModelDownload() async {
     setState(() {
       _isDownloadingModel = true;
@@ -88,7 +91,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       _downloadStatusText = "Downloading Offline AI Engine...";
     });
 
-    // Quantized lightweight model link (Hugging Face / Fast CDN Mirror)
     const String modelUrl = "https://huggingface.co/bartowski/gemma-2-2b-it-GGUF/resolve/main/gemma-2-2b-it-Q4_K_M.gguf";
 
     try {
@@ -98,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       final request = http.Request('GET', Uri.parse(modelUrl));
       final response = await http.Client().send(request);
 
-      final totalBytes = response.contentLength ?? (980 * 1024 * 1024);
+      final totalBytes = response.contentLength ?? (1710 * 1024 * 1024);
       int receivedBytes = 0;
 
       final sink = targetFile.openWrite();
@@ -123,11 +125,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             setState(() {
               _isDownloadingModel = false;
               _isModelDownloaded = true;
-              _downloadStatusText = "✅ Offline AI Ready!";
+              _downloadStatusText = "✅ On-Device Model Active (1.7 GB)";
             });
             ScaffoldMessenger.of(context).showSnackBar(
               const SnackBar(
-                content: Text("🎉 Offline AI Model 100% Downloaded & Integrated!"),
+                content: Text("🎉 Offline AI Model 100% Integrated!"),
                 backgroundColor: Color(0xFF16A34A),
               ),
             );
@@ -397,7 +399,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 🎨 OFFLINE AI DOWNLOADER BANNER WIDGET
+  // 🎨 OFFLINE AI BANNER (WITH AUTO-DETECT)
   Widget _buildAiModelDownloadBanner() {
     final isDark = _isDarkMode;
     return Container(
@@ -687,7 +689,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       ),
       body: Column(
         children: [
-          // 🚀 1. IN-APP OFFLINE AI DOWNLOADER BANNER
+          // 🚀 1. OFFLINE AI BANNER
           _buildAiModelDownloadBanner(),
 
           // 📱 2. CORE TABS
