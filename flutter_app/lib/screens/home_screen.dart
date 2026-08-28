@@ -10,6 +10,7 @@ import '../models/question_model.dart';
 import '../services/ai_explainer_service.dart';
 import '../services/telegram_tracker.dart';
 import '../services/knowledge_base_service.dart'; // 📦 Added Knowledge Base Service
+import 'ai_chat_screen.dart'; // 🤖 Added AI Chat Screen
 import 'community_feed_screen.dart';
 import 'creator_auth_screen.dart';
 import 'creator_dashboard_screen.dart';
@@ -544,6 +545,50 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
         ],
       ),
+      
+      // 🚀 FLOATING ACTION BUTTON (TRIGGER AI DOUBT CHAT)
+      floatingActionButton: Container(
+        margin: const EdgeInsets.only(bottom: 6),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          gradient: const LinearGradient(
+            colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF2563EB).withOpacity(0.38),
+              blurRadius: 12,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: FloatingActionButton.extended(
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => AiChatScreen(isDarkMode: _isDarkMode),
+              ),
+            );
+          },
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          highlightElevation: 0,
+          icon: const Icon(Icons.auto_awesome_rounded, color: Colors.white, size: 20),
+          label: const Text(
+            "Ask AI Doubt",
+            style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+              fontSize: 13,
+              letterSpacing: 0.3,
+            ),
+          ),
+        ),
+      ),
+
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentBottomIndex,
         onDestinationSelected: (idx) {
