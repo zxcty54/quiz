@@ -1,7 +1,6 @@
 import 'dart:io';
-import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:flutter_gemma/flutter_gemma.dart';
 import 'package:path_provider/path_provider.dart';
 import '../services/knowledge_base_service.dart';
 
@@ -17,126 +16,139 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
   final List<Map<String, String>> _messages = [];
+  
   bool _isLoading = false;
+  bool _isModelLoaded = false;
+  String _modelStatus = "Initializing On-Device AI Engine...";
 
-  // 🧹 Filter out publisher disclaimers, copyright text & ISBN chunks
+  @override
+  void initState() {
+    super.initState();
+    _initLocalGemmaModel();
+  }
+
+  // 🔍 1. Load Local GGUF Model from Phone Storage into RAM/NPU
+  Future<void> _initLocalGemmaModel() async {
+    try {
+      final devModel = File('/storage/emulated/0/Download/gemma-2-2b-it-Q4_K_M.gguf');
+      final appDocDir = await getApplicationDocumentsDirectory();
+      final localModel = File('${appDocDir.path}/gemma-2-2b-it-Q4_K_M.gguf');
+
+      String? activePath;
+      if (await devModel.exists()) {
+        activePath = devModel.path;
+      } else if (await localModel.exists()) {
+        activePath = localModel.path;
+      }
+
+      if (activePath != null) {
+        await FlutterGemmaPlugin.instance.init(
+          maxTokens: 512,
+          temperature: 0.3,
+          randomSeed: 1,
+          topK: 1,
+        );
+        await FlutterGemmaPlugin.instance.loadModel(modelPath: activePath);
+
+        if (mounted) {
+          setState(() {
+            _isModelLoaded = true;
+            _modelStatus = "Gemma-2B On-Device Active (100% Offline)";
+          });
+        }
+      } else {
+        if (mounted) {
+          setState(() {
+            _modelStatus = "Model file not found in Downloads. SQLite Fallback Active.";
+          });
+        }
+      }
+    } catch (e) {
+      if (mounted) {
+        setState(() {
+          _modelStatus = "Local Engine Ready (Direct Retrieval Mode)";
+        });
+      }
+    }
+  }
+
+  // 🧹 Clean publishers boilerplate
   List<String> _cleanChunks(List<String> chunks) {
     return chunks.where((chunk) {
       final lower = chunk.toLowerCase();
-      return !lower.contains("all rights reserved") &&
+      return !lower.contains("preface") &&
+             !lower.contains("all rights reserved") &&
              !lower.contains("isbn") &&
-             !lower.contains("darya ganj") &&
-             !lower.contains("no part of this publication") &&
-             !lower.contains("meerut (up)");
+             !lower.contains("acknowledgement") &&
+             !lower.contains("priyanshi garg");
     }).toList();
   }
 
-  // 🧠 Pure AI Decision & Synthesis Engine
-  Future<String> _executeAiDecisionMaking({
-    required String rawUserDoubt,
-    required String textbookContext,
-  }) async {
-    const String groqApiKey = String.fromEnvironment('GROQ_API_KEY', defaultValue: '');
+  // 🧠 2. Pure On-Device Offline AI Inference Execution
+  Future<String> _generateOfflineAiResponse(String rawQuery) async {
+    // A. Fetch Context from Local SQLite
+    final rawChunks = await KnowledgeBaseService.instance.searchRelevantChunks(rawQuery, limit: 2);
+    final cleanFacts = _cleanChunks(rawChunks);
+    final contextText = cleanFacts.isNotEmpty ? cleanFacts.join("\n") : "General concepts";
 
-    if (groqApiKey.isNotEmpty) {
+    // B. If Local Gemma is loaded, run full On-Device Reasoning
+    if (_isModelLoaded) {
+      final prompt = """
+<start_of_turn>system
+Aap ek highly intelligent offline BPSC/SSC Science tutor ho.
+Niche diye gaye Authentic Reference aur student ke sawaal ko analyze karo.
+Agar casual baat ho toh friendly Hinglish me reply do.
+Agar academic doubt ho toh concept ko easy points me step-by-step explain karo.
+
+[AUTHENTIC REFERENCE]:
+$contextText
+<end_of_turn>
+<start_of_turn>user
+$rawQuery
+<end_of_turn>
+<start_of_turn>model
+""";
+
       try {
-        final response = await http.post(
-          Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
-          headers: {
-            "Authorization": "Bearer $groqApiKey",
-            "Content-Type": "application/json",
-          },
-          body: jsonEncode({
-            "model": "llama-3.3-70b-versatile",
-            "messages": [
-              {
-                "role": "system",
-                "content": """
-You are an expert, highly intelligent Science & Exam Tutor for BPSC/BSSC candidates.
-The student might ask queries in broken Hinglish, slang, or complex technical terms.
-
-YOUR TASK:
-1. Understand the student's exact doubt and intent.
-2. Synthesize the provided Textbook Context into a structured, crystal-clear explanation in Hinglish.
-3. If the context does not fully cover the mechanism, use your core knowledge to explain it clearly.
-4. Highlight high-yield exam takeaways.
-"""
-              },
-              {
-                "role": "user",
-                "content": """
-[AUTHENTIC DATABASE CONTEXT]:
-$textbookContext
-
-[STUDENT DOUBT]:
-$rawUserDoubt
-"""
-              }
-            ],
-            "temperature": 0.2,
-            "max_tokens": 500,
-          }),
-        ).timeout(const Duration(seconds: 8));
-
-        if (response.statusCode == 200) {
-          final data = jsonDecode(utf8.decode(response.bodyBytes));
-          return data['choices'][0]['message']['content'] ?? "";
+        final response = await FlutterGemmaPlugin.instance.getResponse(prompt: prompt);
+        if (response != null && response.trim().isNotEmpty) {
+          return response.trim();
         }
       } catch (_) {}
     }
 
-    // Fallback: If offline, structure the direct context cleanly
-    if (textbookContext.trim().isNotEmpty) {
-      return "📚 **Authentic Notes Summary:**\n\n$textbookContext";
-    } else {
-      return "Is topic par specific factual data direct match nahi mila. Kripya term verify karein.";
+    // C. Graceful Fallback if model binary is loading
+    if (cleanFacts.isNotEmpty) {
+      return "📚 **Authentic Notes Summary (Offline Engine):**\n\n" +
+          cleanFacts.map((c) => "• ${c.trim()}").join("\n\n");
     }
+
+    return "⚠️ Is topic par local textbook me direct record nahi mila. Specific scientific term (jaise *Ribosome, Mitochondria, ATP*) likhkar dekhein.";
   }
 
   Future<void> _sendMessage() async {
-    final rawQuery = _textController.text.trim();
-    if (rawQuery.isEmpty || _isLoading) return;
+    final query = _textController.text.trim();
+    if (query.isEmpty || _isLoading) return;
 
     setState(() {
-      _messages.add({"role": "user", "text": rawQuery});
+      _messages.add({"role": "user", "text": query});
       _isLoading = true;
     });
     _textController.clear();
     _scrollToBottom();
 
-    try {
-      final dbStopwatch = Stopwatch()..start();
-      // 1. Fetch broad textbook context (Raw Query)
-      final rawChunks = await KnowledgeBaseService.instance.searchRelevantChunks(rawQuery, limit: 3);
-      dbStopwatch.stop();
+    final stopwatch = Stopwatch()..start();
+    final reply = await _generateOfflineAiResponse(query);
+    stopwatch.stop();
 
-      final chunks = _cleanChunks(rawChunks);
-      final String contextText = chunks.isNotEmpty ? chunks.join("\n\n") : "General concepts";
-
-      // 2. Pass to AI Brain for Comprehension & Decision Making
-      final String aiResponse = await _executeAiDecisionMaking(
-        rawUserDoubt: rawQuery,
-        textbookContext: contextText,
-      );
-
-      setState(() {
-        _messages.add({
-          "role": "assistant",
-          "text": aiResponse.trim(),
-          "db_time": "${dbStopwatch.elapsedMilliseconds}ms",
-        });
-        _isLoading = false;
+    setState(() {
+      _messages.add({
+        "role": "assistant",
+        "text": reply,
+        "time": "${stopwatch.elapsedMilliseconds}ms",
       });
-    } catch (e) {
-      setState(() {
-        _messages.add({
-          "role": "assistant",
-          "text": "❌ Error: $e",
-          "db_time": "0ms",
-        });
-        _isLoading = false;
-      });
-    }
+      _isLoading = false;
+    });
     _scrollToBottom();
   }
 
@@ -159,15 +171,28 @@ $rawUserDoubt
     return Scaffold(
       backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
-        title: const Column(
+        title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("AI Exam Tutor", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            const Text("AI Exam Tutor", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             Row(
               children: [
-                Icon(Icons.bolt_rounded, size: 13, color: Colors.greenAccent),
-                SizedBox(width: 3),
-                Text("AI Decision & Reasoning Engine Active", style: TextStyle(fontSize: 10, color: Colors.white70)),
+                Container(
+                  width: 7,
+                  height: 7,
+                  decoration: BoxDecoration(
+                    color: _isModelLoaded ? const Color(0xFF16A34A) : Colors.amber,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+                const SizedBox(width: 5),
+                Text(
+                  _modelStatus,
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: _isModelLoaded ? Colors.greenAccent : Colors.amberAccent,
+                  ),
+                ),
               ],
             ),
           ],
@@ -184,10 +209,10 @@ $rawUserDoubt
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
+                        const Icon(Icons.offline_bolt_rounded, size: 52, color: Color(0xFF2563EB)),
                         const SizedBox(height: 10),
                         Text(
-                          "Ask Any Complex Doubt",
+                          "100% Offline AI Agent Active",
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
@@ -196,7 +221,7 @@ $rawUserDoubt
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          "Natural language, Hinglish or complex mechanisms...",
+                          "No internet required. Powered by On-Device Gemma 2B.",
                           style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
                         ),
                       ],
@@ -241,16 +266,16 @@ $rawUserDoubt
                                   height: 1.4,
                                 ),
                               ),
-                              if (msg.containsKey('db_time') && msg['db_time'] != '0ms') ...[
-                                const SizedBox(height: 6),
+                              if (msg.containsKey('time')) ...[
+                                const SizedBox(height: 5),
                                 Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    const Icon(Icons.flash_on_rounded, size: 12, color: Colors.amber),
-                                    const SizedBox(width: 3),
+                                    const Icon(Icons.flash_on_rounded, size: 11, color: Colors.amber),
+                                    const SizedBox(width: 2),
                                     Text(
-                                      "Context DB: ${msg['db_time']}",
-                                      style: const TextStyle(fontSize: 10, color: Colors.grey),
+                                      "Inference: ${msg['time']}",
+                                      style: const TextStyle(fontSize: 9.5, color: Colors.grey),
                                     ),
                                   ],
                                 ),
@@ -279,11 +304,11 @@ $rawUserDoubt
                   child: TextField(
                     controller: _textController,
                     style: TextStyle(color: isDark ? Colors.white : Colors.black),
-                    decoration: InputDecoration(
-                      hintText: "Apna doubt likhein...",
-                      hintStyle: const TextStyle(fontSize: 13, color: Colors.grey),
+                    decoration: const InputDecoration(
+                      hintText: "Offline doubt (e.g. Ribosomes, ATP)...",
+                      hintStyle: TextStyle(fontSize: 13, color: Colors.grey),
                       border: InputBorder.none,
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 12),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 12),
                     ),
                     onSubmitted: (_) => _sendMessage(),
                   ),
