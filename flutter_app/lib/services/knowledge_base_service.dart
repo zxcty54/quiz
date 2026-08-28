@@ -21,7 +21,6 @@ class KnowledgeBaseService {
     final docDirectory = await getApplicationDocumentsDirectory();
     final dbPath = join(docDirectory.path, fileName);
 
-    // Agar extracted .db file exist nahi karti, tabhi gz se extract karein
     if (!await File(dbPath).exists()) {
       await _extractGzAssetToDisk(dbPath);
     }
@@ -30,31 +29,39 @@ class KnowledgeBaseService {
   }
 
   Future<void> _extractGzAssetToDisk(String targetPath) async {
-    // Exact GitHub Repo Asset Path
     ByteData data = await rootBundle.load('assets/data/database/bpsc_database.db.gz');
     List<int> bytes = data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes);
 
-    // Decompress .gz to .db
     List<int> decompressedBytes = GZipDecoder().decodeBytes(bytes);
 
-    // Write to application documents directory
     File targetFile = File(targetPath);
     await targetFile.writeAsBytes(decompressedBytes, flush: true);
   }
 
-  // FTS5 Search using your exact table: fts_knowledge
+  // Fast Search with FTS5 and standard table fallback
   Future<List<String>> searchRelevantChunks(String query, {int limit = 2}) async {
     final db = await instance.database;
-
     final cleanQuery = query.replaceAll(RegExp(r'[^\w\s]+'), ' ').trim();
     if (cleanQuery.isEmpty) return [];
 
-    final results = await db.rawQuery('''
-      SELECT content FROM fts_knowledge 
-      WHERE fts_knowledge MATCH ? 
-      LIMIT ?
-    ''', [cleanQuery, limit]);
+    try {
+      // 1. Try Native FTS5 Fast Search
+      final results = await db.rawQuery('''
+        SELECT content FROM fts_knowledge 
+        WHERE fts_knowledge MATCH ? 
+        LIMIT ?
+      ''', [cleanQuery, limit]);
 
-    return results.map((row) => row['content'] as String).toList();
+      return results.map((row) => row['content'] as String).toList();
+    } catch (e) {
+      // 2. Fallback to standard SQL table search if FTS5 is compiling
+      final fallbackResults = await db.rawQuery('''
+        SELECT content FROM knowledge_chunks 
+        WHERE content LIKE ? 
+        LIMIT ?
+      ''', ['%$cleanQuery%', limit]);
+
+      return fallbackResults.map((row) => row['content'] as String).toList();
+    }
   }
 }
