@@ -71,6 +71,29 @@ jobs:
             printf '\ndependencies {\n    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")\n}\n' >> flutter_app/android/app/build.gradle.kts
           fi
 
+      # 🛡️ 5. Auto Inject ProGuard / R8 Missing Rules (Fixes R8 minifyRelease error)
+      - name: 🛡️ Inject ProGuard Rules for R8 Optimizer
+        run: |
+          mkdir -p flutter_app/android/app
+          cat << 'EOF' > flutter_app/android/app/proguard-rules.pro
+          -dontwarn com.google.mediapipe.**
+          -keep class com.google.mediapipe.** { *; }
+          -dontwarn com.google.auto.value.**
+          -dontwarn javax.lang.model.**
+          -dontwarn autovalue.shaded.**
+          -dontwarn org.bouncycastle.jsse.**
+          -dontwarn org.conscrypt.**
+          -dontwarn org.openjsse.**
+          -dontwarn okhttp3.internal.platform.**
+          -dontwarn javax.annotation.**
+          -ignorewarnings
+          EOF
+
+          # Bind ProGuard rules in app/build.gradle
+          if [ -f flutter_app/android/app/build.gradle ]; then
+            sed -i 's/buildTypes {/buildTypes {\n        release {\n            proguardFiles getDefaultProguardFile("proguard-android.optimize.txt"), "proguard-rules.pro"\n        }/' flutter_app/android/app/build.gradle
+          fi
+
       # 🔑 1. Generate Keystore & Print SHA-1 Key
       - name: 🔑 Extract & Print SHA-1 Key
         working-directory: flutter_app/android
