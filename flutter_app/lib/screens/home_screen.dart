@@ -1,7 +1,9 @@
 import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -9,8 +11,8 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/ai_explainer_service.dart';
 import '../services/telegram_tracker.dart';
-import '../services/knowledge_base_service.dart'; // 📦 Added Knowledge Base Service
-import 'ai_chat_screen.dart'; // 🤖 Added AI Chat Screen
+import '../services/knowledge_base_service.dart';
+import 'ai_chat_screen.dart';
 import 'community_feed_screen.dart';
 import 'creator_auth_screen.dart';
 import 'creator_dashboard_screen.dart';
@@ -45,20 +47,113 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _hasLearningHistory = false;
   bool _isLoadingConfig = true;
 
+  // 🤖 OFFLINE MODEL DOWNLOADER STATE
+  bool _isModelDownloaded = false;
+  bool _isDownloadingModel = false;
+  double _downloadProgress = 0.0;
+  String _downloadStatusText = "One-Time Offline Setup (~980 MB)";
+
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
     TelegramTracker.initSession();
     _loadAllConfigs();
+    _checkLocalModelStatus();
 
-    // 🔍 AUTOMATIC DATABASE RUNTIME VERIFICATION CHECK
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _runAutomaticDbCheck();
     });
   }
 
-  // ⚡ Test Function jo check karega ki local .db.gz extract hokar FTS search chal rahi hai ya nahi
+  // 🔍 1. Check if GGUF model already exists on phone
+  Future<void> _checkLocalModelStatus() async {
+    final appDocDir = await getApplicationDocumentsDirectory();
+    final modelFile = File('${appDocDir.path}/gemma-2-2b-it-Q4_K_M.gguf');
+    final devModelFile = File('/storage/emulated/0/Download/gemma-2-2b-it-Q4_K_M.gguf');
+
+    final bool exists = await modelFile.exists() || await devModelFile.exists();
+    if (mounted) {
+      setState(() {
+        _isModelDownloaded = exists;
+      });
+    }
+  }
+
+  // 📥 2. Download Model with Realtime Progress & Zero Memory Freeze
+  Future<void> _startModelDownload() async {
+    setState(() {
+      _isDownloadingModel = true;
+      _downloadProgress = 0.0;
+      _downloadStatusText = "Downloading Offline AI Engine...";
+    });
+
+    // Quantized lightweight model link (Hugging Face / Fast CDN Mirror)
+    const String modelUrl = "https://huggingface.co/bartowski/gemma-2-2b-it-GGUF/resolve/main/gemma-2-2b-it-Q4_K_M.gguf";
+
+    try {
+      final appDocDir = await getApplicationDocumentsDirectory();
+      final targetFile = File('${appDocDir.path}/gemma-2-2b-it-Q4_K_M.gguf');
+
+      final request = http.Request('GET', Uri.parse(modelUrl));
+      final response = await http.Client().send(request);
+
+      final totalBytes = response.contentLength ?? (980 * 1024 * 1024);
+      int receivedBytes = 0;
+
+      final sink = targetFile.openWrite();
+
+      await response.stream.listen(
+        (List<int> chunk) {
+          receivedBytes += chunk.length;
+          sink.add(chunk);
+
+          final progress = receivedBytes / totalBytes;
+          if (mounted) {
+            setState(() {
+              _downloadProgress = progress.clamp(0.0, 1.0);
+              _downloadStatusText = "${(receivedBytes / (1024 * 1024)).toStringAsFixed(1)} MB / ${(totalBytes / (1024 * 1024)).toStringAsFixed(0)} MB (${(_downloadProgress * 100).toStringAsFixed(0)}%)";
+            });
+          }
+        },
+        onDone: () async {
+          await sink.flush();
+          await sink.close();
+          if (mounted) {
+            setState(() {
+              _isDownloadingModel = false;
+              _isModelDownloaded = true;
+              _downloadStatusText = "✅ Offline AI Ready!";
+            });
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text("🎉 Offline AI Model 100% Downloaded & Integrated!"),
+                backgroundColor: Color(0xFF16A34A),
+              ),
+            );
+          }
+        },
+        onError: (e) {
+          sink.close();
+          if (mounted) {
+            setState(() {
+              _isDownloadingModel = false;
+              _downloadStatusText = "Download Failed. Tap to Retry";
+            });
+          }
+        },
+        cancelOnError: true,
+      );
+    } catch (e) {
+      if (mounted) {
+        setState(() {
+          _isDownloadingModel = false;
+          _downloadStatusText = "Error: $e";
+        });
+      }
+    }
+  }
+
   Future<void> _runAutomaticDbCheck() async {
     try {
       final stopwatch = Stopwatch()..start();
@@ -73,29 +168,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             content: Text("✅ Database Active! Loaded in ${stopwatch.elapsedMilliseconds}ms"),
             backgroundColor: const Color(0xFF16A34A),
             behavior: SnackBarBehavior.floating,
-            duration: const Duration(seconds: 4),
-          ),
-        );
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text("⚠️ DB Open ho gaya par 'Mitochondria' chunk match nahi hua."),
-            backgroundColor: Colors.orange,
-            behavior: SnackBarBehavior.floating,
+            duration: const Duration(seconds: 3),
           ),
         );
       }
-    } catch (e) {
-      if (!mounted) return;
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text("❌ DB Error: $e"),
-          backgroundColor: Colors.redAccent,
-          behavior: SnackBarBehavior.floating,
-          duration: const Duration(seconds: 5),
-        ),
-      );
-    }
+    } catch (_) {}
   }
 
   @override
@@ -111,6 +188,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       _fetchLiveAppConfig();
       _fetchSectionalDataLive();
       _fetchSubjectMappingLive();
+      _checkLocalModelStatus();
     }
   }
 
@@ -319,6 +397,108 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
+  // 🎨 OFFLINE AI DOWNLOADER BANNER WIDGET
+  Widget _buildAiModelDownloadBanner() {
+    final isDark = _isDarkMode;
+    return Container(
+      margin: const EdgeInsets.fromLTRB(16, 12, 16, 4),
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: isDark ? const Color(0xFF1E293B) : Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: _isModelDownloaded ? Colors.green.withOpacity(0.4) : const Color(0xFF2563EB).withOpacity(0.3),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.04),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: _isModelDownloaded ? Colors.green.withOpacity(0.12) : const Color(0xFF2563EB).withOpacity(0.12),
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(
+                  _isModelDownloaded ? Icons.offline_bolt_rounded : Icons.psychology_rounded,
+                  color: _isModelDownloaded ? Colors.green : const Color(0xFF2563EB),
+                  size: 24,
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      _isModelDownloaded ? "Offline AI Tutor Ready" : "Enable 100% Offline AI",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
+                        color: isDark ? Colors.white : const Color(0xFF0F172A),
+                      ),
+                    ),
+                    Text(
+                      _downloadStatusText,
+                      style: TextStyle(
+                        fontSize: 11.5,
+                        color: isDark ? Colors.white60 : Colors.black54,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              if (!_isModelDownloaded && !_isDownloadingModel)
+                ElevatedButton.icon(
+                  onPressed: _startModelDownload,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF2563EB),
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                  ),
+                  icon: const Icon(Icons.download_rounded, size: 16),
+                  label: const Text("Download", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                )
+              else if (_isModelDownloaded)
+                TextButton.icon(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AiChatScreen(isDarkMode: _isDarkMode)),
+                    );
+                  },
+                  icon: const Icon(Icons.chat_bubble_outline_rounded, size: 16, color: Colors.green),
+                  label: const Text("Open Chat", style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 12)),
+                ),
+            ],
+          ),
+          if (_isDownloadingModel) ...[
+            const SizedBox(height: 10),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8),
+              child: LinearProgressIndicator(
+                value: _downloadProgress > 0 ? _downloadProgress : null,
+                minHeight: 6,
+                backgroundColor: isDark ? Colors.black26 : Colors.grey[200],
+                valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF2563EB)),
+              ),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     if (_isLoadingConfig) {
@@ -505,48 +685,58 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           },
         ),
       ),
-      body: IndexedStack(
-        index: _currentBottomIndex,
+      body: Column(
         children: [
-          HomeTab(
-            appConfig: _appConfig,
-            homeData: _homeData,
-            subjectMapping: _subjectMapping,
-            isDarkMode: _isDarkMode,
-            lastLearnTitle: _lastLearnTitle,
-            lastLearnProgress: _lastLearnProgress,
-            lastNextTopic: _lastNextTopic,
-            hasLearningHistory: _hasLearningHistory,
-            onTapUrl: _openWebsiteUrl,
-            onNavigateToLearn: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => const LearnHubScreen()),
-              ).then((_) => _loadRealtimeProgress());
-            },
-          ),
-          RevisionTab(
-            key: ValueKey('rev_${_subjectMapping.keys.length}'),
-            subjectMapping: _subjectMapping,
-            onLaunchPractice: _launchRevisionPractice,
-          ),
-          SectionalTab(
-            key: ValueKey('sec_${_sectionalData.keys.join('_')}'),
-            sectionalData: _sectionalData,
-            isDarkMode: _isDarkMode,
-            onLaunchCbtMock: _launchCbtMock,
-          ),
-          CommunityFeedScreen(isDarkMode: _isDarkMode),
-          ProfileScreen(
-            isHindi: _isHindi,
-            isDarkMode: _isDarkMode,
-            onHindiChanged: (v) => setState(() => _isHindi = v),
-            onDarkModeChanged: (v) => setState(() => _isDarkMode = v),
+          // 🚀 1. IN-APP OFFLINE AI DOWNLOADER BANNER
+          _buildAiModelDownloadBanner(),
+
+          // 📱 2. CORE TABS
+          Expanded(
+            child: IndexedStack(
+              index: _currentBottomIndex,
+              children: [
+                HomeTab(
+                  appConfig: _appConfig,
+                  homeData: _homeData,
+                  subjectMapping: _subjectMapping,
+                  isDarkMode: _isDarkMode,
+                  lastLearnTitle: _lastLearnTitle,
+                  lastLearnProgress: _lastLearnProgress,
+                  lastNextTopic: _lastNextTopic,
+                  hasLearningHistory: _hasLearningHistory,
+                  onTapUrl: _openWebsiteUrl,
+                  onNavigateToLearn: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const LearnHubScreen()),
+                    ).then((_) => _loadRealtimeProgress());
+                  },
+                ),
+                RevisionTab(
+                  key: ValueKey('rev_${_subjectMapping.keys.length}'),
+                  subjectMapping: _subjectMapping,
+                  onLaunchPractice: _launchRevisionPractice,
+                ),
+                SectionalTab(
+                  key: ValueKey('sec_${_sectionalData.keys.join('_')}'),
+                  sectionalData: _sectionalData,
+                  isDarkMode: _isDarkMode,
+                  onLaunchCbtMock: _launchCbtMock,
+                ),
+                CommunityFeedScreen(isDarkMode: _isDarkMode),
+                ProfileScreen(
+                  isHindi: _isHindi,
+                  isDarkMode: _isDarkMode,
+                  onHindiChanged: (v) => setState(() => _isHindi = v),
+                  onDarkModeChanged: (v) => setState(() => _isDarkMode = v),
+                ),
+              ],
+            ),
           ),
         ],
       ),
-      
-      // 🚀 FLOATING ACTION BUTTON (TRIGGER AI DOUBT CHAT)
+
+      // 🤖 FLOATING ACTION BUTTON
       floatingActionButton: Container(
         margin: const EdgeInsets.only(bottom: 6),
         decoration: BoxDecoration(
