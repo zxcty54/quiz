@@ -1,6 +1,4 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:path_provider/path_provider.dart';
 import '../services/knowledge_base_service.dart';
 
 class AiChatScreen extends StatefulWidget {
@@ -16,26 +14,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final ScrollController _scrollController = ScrollController();
   final List<Map<String, String>> _messages = [];
   bool _isLoading = false;
-  bool _isOfflineModelReady = false;
-
-  @override
-  void initState() {
-    super.initState();
-    _verifyOfflineEngine();
-  }
-
-  Future<void> _verifyOfflineEngine() async {
-    final appDocDir = await getApplicationDocumentsDirectory();
-    final localModel = File('${appDocDir.path}/gemma-2-2b-it-Q4_K_M.gguf');
-    final devModel = File('/storage/emulated/0/Download/gemma-2-2b-it-Q4_K_M.gguf');
-
-    final bool hasModel = await localModel.exists() || await devModel.exists();
-    if (mounted) {
-      setState(() {
-        _isOfflineModelReady = hasModel;
-      });
-    }
-  }
 
   // 🧹 Filter out publisher disclaimers, copyright text & ISBN chunks
   List<String> _cleanChunks(List<String> chunks) {
@@ -62,17 +40,13 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
     final queryLower = rawQuery.toLowerCase();
 
-    // 🤖 1. Handle Greetings & Casual queries without searching book chunks
-    if (queryLower == 'hi' ||
-        queryLower == 'hello' ||
-        queryLower == 'hey' ||
-        queryLower == 'namaste' ||
-        queryLower == 'help') {
-      await Future.delayed(const Duration(milliseconds: 150));
+    // 1. Natural Conversation / Greeting Handler
+    if (['hi', 'hello', 'hey', 'namaste', 'help'].contains(queryLower)) {
+      await Future.delayed(const Duration(milliseconds: 100));
       setState(() {
         _messages.add({
           "role": "assistant",
-          "text": "Namaste! Mai aapka Offline BPSC/SSC AI Tutor hoon. 📚\n\nAap Science, History, Geography ya Polity ka koi bhi concept ya doubt pooch sakte hain (jaise: *Mitochondria, Cell Division, 1857 Kranti, Fundamental Rights*).",
+          "text": "Namaste! Mai aapka Offline BPSC/SSC Exam Tutor hoon. 📚\n\nAap Science, History, Geography ya GS ka koi bhi concept pooch sakte hain (jaise: *Mitochondria, Cell Wall, ATP, 1857 Kranti*).",
           "db_time": "0ms",
         });
         _isLoading = false;
@@ -82,29 +56,28 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
 
     try {
-      // 2. Local SQLite FTS5 Database Retrieval
+      // 2. Direct Local SQLite FTS5 Database Retrieval
       final dbStopwatch = Stopwatch()..start();
       final rawChunks = await KnowledgeBaseService.instance.searchRelevantChunks(rawQuery, limit: 3);
       dbStopwatch.stop();
 
       final chunks = _cleanChunks(rawChunks);
-      String formattedResponse = "";
+      String finalOutput = "";
 
       if (chunks.isNotEmpty) {
-        // Clean structured concept output
-        formattedResponse = "📖 **Key Concept & Notes:**\n\n";
+        finalOutput = "📖 **Authentic Notes Summary (${dbStopwatch.elapsedMilliseconds}ms):**\n\n";
         for (int i = 0; i < chunks.length; i++) {
-          formattedResponse += "• ${chunks[i].trim()}\n\n";
+          finalOutput += "• ${chunks[i].trim()}\n\n";
         }
       } else {
-        formattedResponse = "⚠️ Is topic ('$rawQuery') par exact match nahi mila.\n\n"
-            "💡 **Tip:** Specific topic naam type karein (jaise: *Mitochondria, ATP, Lysosome, Ribosome*).";
+        finalOutput = "⚠️ Is topic ('$rawQuery') par local database me direct match nahi mila.\n\n"
+            "💡 **Tip:** Specific keyword type karein (jaise: *Mitochondria, Lysosome, Ribosome, Cell Wall*).";
       }
 
       setState(() {
         _messages.add({
           "role": "assistant",
-          "text": formattedResponse.trim(),
+          "text": finalOutput.trim(),
           "db_time": "${dbStopwatch.elapsedMilliseconds}ms",
         });
         _isLoading = false;
@@ -113,7 +86,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       setState(() {
         _messages.add({
           "role": "assistant",
-          "text": "❌ Error: $e",
+          "text": "❌ Database Search Error: $e",
           "db_time": "0ms",
         });
         _isLoading = false;
@@ -156,12 +129,13 @@ class _AiChatScreenState extends State<AiChatScreen> {
                   ),
                 ),
                 const SizedBox(width: 5),
-                const Text("100% Offline Mode (Zero Internet)", style: TextStyle(fontSize: 11, color: Colors.green)),
+                const Text("100% Offline (Local SQLite Engine)", style: TextStyle(fontSize: 11, color: Colors.greenAccent)),
               ],
             ),
           ],
         ),
-        backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+        backgroundColor: isDark ? const Color(0xFF1E293B) : const Color(0xFF2563EB),
+        foregroundColor: Colors.white,
         elevation: 0.5,
       ),
       body: Column(
@@ -172,8 +146,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.offline_bolt_rounded, size: 52, color: Colors.blue.shade400),
-                        const SizedBox(height: 12),
+                        const Icon(Icons.offline_bolt_rounded, size: 52, color: Color(0xFF2563EB)),
+                        const SizedBox(height: 10),
                         Text(
                           "Offline Knowledge Base Active",
                           style: TextStyle(
@@ -183,9 +157,9 @@ class _AiChatScreenState extends State<AiChatScreen> {
                           ),
                         ),
                         const SizedBox(height: 4),
-                        const Text(
-                          "Poochhein: Mitochondria, Cell Wall, ATP, etc.",
-                          style: TextStyle(fontSize: 12, color: Colors.grey),
+                        Text(
+                          "Search: Mitochondria, ATP, Cell Wall, etc.",
+                          style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
                         ),
                       ],
                     ),
@@ -237,7 +211,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                                     const Icon(Icons.flash_on_rounded, size: 12, color: Colors.amber),
                                     const SizedBox(width: 3),
                                     Text(
-                                      "DB Fetch: ${msg['db_time']}",
+                                      "DB: ${msg['db_time']}",
                                       style: const TextStyle(fontSize: 10, color: Colors.grey),
                                     ),
                                   ],
@@ -268,7 +242,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     controller: _textController,
                     style: TextStyle(color: isDark ? Colors.white : Colors.black),
                     decoration: InputDecoration(
-                      hintText: "Offline topic (e.g. Mitochondria)...",
+                      hintText: "Offline search (e.g. Mitochondria, ATP)...",
                       hintStyle: const TextStyle(fontSize: 13, color: Colors.grey),
                       border: InputBorder.none,
                       contentPadding: const EdgeInsets.symmetric(horizontal: 12),
