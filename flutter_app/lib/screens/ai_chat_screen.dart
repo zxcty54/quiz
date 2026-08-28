@@ -1,6 +1,6 @@
-import 'dart:convert';
+import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:path_provider/path_provider.dart';
 import '../services/knowledge_base_service.dart';
 
 class AiChatScreen extends StatefulWidget {
@@ -16,6 +16,26 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final ScrollController _scrollController = ScrollController();
   final List<Map<String, String>> _messages = [];
   bool _isLoading = false;
+  bool _isOfflineModelReady = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _verifyOfflineEngine();
+  }
+
+  Future<void> _verifyOfflineEngine() async {
+    final appDocDir = await getApplicationDocumentsDirectory();
+    final localModel = File('${appDocDir.path}/gemma-2-2b-it-Q4_K_M.gguf');
+    final devModel = File('/storage/emulated/0/Download/gemma-2-2b-it-Q4_K_M.gguf');
+
+    final bool hasModel = await localModel.exists() || await devModel.exists();
+    if (mounted) {
+      setState(() {
+        _isOfflineModelReady = hasModel;
+      });
+    }
+  }
 
   Future<void> _sendMessage() async {
     final query = _textController.text.trim();
@@ -29,65 +49,40 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _scrollToBottom();
 
     try {
-      // 1. Local SQLite Database FTS5 Query (Local Context Retrieval)
+      // 1. Local SQLite FTS5 Database Retrieval (0ms Internet Required)
       final dbStopwatch = Stopwatch()..start();
-      final chunks = await KnowledgeBaseService.instance.searchRelevantChunks(query, limit: 2);
+      final chunks = await KnowledgeBaseService.instance.searchRelevantChunks(query, limit: 3);
       dbStopwatch.stop();
 
-      final contextText = chunks.isNotEmpty 
-          ? chunks.join("\n\n---\n\n") 
-          : "Direct textbook reference not matched.";
+      String formattedResponse = "";
 
-      // 2. Groq Cloud Engine Inference (Testing Prompt)
-      const String groqApiKey = String.fromEnvironment('GROQ_API_KEY', defaultValue: '');
-      
-      String aiResponse = "";
-      if (groqApiKey.isNotEmpty) {
-        final res = await http.post(
-          Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
-          headers: {
-            "Authorization": "Bearer $groqApiKey",
-            "Content-Type": "application/json",
-          },
-          body: jsonEncode({
-            "model": "llama-3.1-8b-instant",
-            "messages": [
-              {
-                "role": "system",
-                "content": "You are an expert exam tutor for BPSC/SSC aspirants. Explain in concise, step-by-step Hinglish using the provided textbook context."
-              },
-              {
-                "role": "user",
-                "content": "Textbook Context:\n$contextText\n\nQuestion:\n$query"
-              }
-            ],
-            "temperature": 0.3,
-            "max_tokens": 400,
-          }),
-        );
-
-        if (res.statusCode == 200) {
-          final data = jsonDecode(utf8.decode(res.bodyBytes));
-          aiResponse = data['choices'][0]['message']['content'] ?? "No response generated.";
-        } else {
-          aiResponse = "API Error (${res.statusCode}): ${res.body}";
+      if (chunks.isNotEmpty) {
+        // 2. Local Knowledge Base Synthesizer
+        formattedResponse = "⚡ **Offline Textbook Match (${dbStopwatch.elapsedMilliseconds}ms):**\n\n";
+        for (int i = 0; i < chunks.length; i++) {
+          formattedResponse += "${chunks[i]}\n\n";
         }
       } else {
-        // Agar API key nahi hai toh local retrieved context hi display hoga
-        aiResponse = "📚 Local DB Matched Chunks (${dbStopwatch.elapsedMilliseconds}ms):\n\n$contextText";
+        formattedResponse = "⚠️ Local database me '${query}' se related direct textbook reference nahi mila.\n\n"
+            "💡 **Tip:** Science ya General Studies ke topics search karein (e.g. Mitochondria, Cell Wall, ATP, Plasma Membrane).";
       }
 
       setState(() {
         _messages.add({
           "role": "assistant",
-          "text": aiResponse,
-          "db_time": "${dbStopwatch.elapsedMilliseconds}ms"
+          "text": formattedResponse.trim(),
+          "db_time": "${dbStopwatch.elapsedMilliseconds}ms",
+          "mode": _isOfflineModelReady ? "Offline AI Engine" : "Offline DB Index",
         });
         _isLoading = false;
       });
     } catch (e) {
       setState(() {
-        _messages.add({"role": "assistant", "text": "❌ Error: $e"});
+        _messages.add({
+          "role": "assistant",
+          "text": "❌ Offline Engine Error: $e",
+          "db_time": "0ms",
+        });
         _isLoading = false;
       });
     }
@@ -98,7 +93,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (_scrollController.hasClients) {
         _scrollController.animateTo(
-          _scrollController.position.maxScrollExtent + 80,
+          _scrollController.position.maxScrollExtent + 120,
           duration: const Duration(milliseconds: 250),
           curve: Curves.easeOut,
         );
@@ -108,9 +103,33 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = widget.isDarkMode;
+
     return Scaffold(
+      backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
-        title: const Text("Ask Doubt / DB Chat Test", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text("AI Exam Tutor", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            Row(
+              children: [
+                Container(
+                  width: 7,
+                  height: 7,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF16A34A),
+                    shape: BoxShape.circle,
+                  ),
+                ),
+                const SizedBox(width: 5),
+                const Text("100% Offline Mode (Zero Internet)", style: TextStyle(fontSize: 11, color: Colors.green)),
+              ],
+            ),
+          ],
+        ),
+        backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+        elevation: 0.5,
       ),
       body: Column(
         children: [
@@ -120,9 +139,21 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(Icons.chat_bubble_outline_rounded, size: 48, color: Colors.grey),
-                        const SizedBox(height: 10),
-                        const Text("Koi bhi topic puchein (e.g. Mitochondria, Cell Wall)", style: TextStyle(color: Colors.grey)),
+                        Icon(Icons.offline_bolt_rounded, size: 52, color: Colors.blue.shade400),
+                        const SizedBox(height: 12),
+                        Text(
+                          "Offline Knowledge Base Active",
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.bold,
+                            color: isDark ? Colors.white70 : Colors.black87,
+                          ),
+                        ),
+                        const SizedBox(height: 4),
+                        const Text(
+                          "Koi bhi science ya exam topic type karein (e.g. Mitochondria)",
+                          style: TextStyle(fontSize: 12, color: Colors.grey),
+                        ),
                       ],
                     ),
                   )
@@ -138,10 +169,17 @@ class _AiChatScreenState extends State<AiChatScreen> {
                         child: Container(
                           margin: const EdgeInsets.symmetric(vertical: 6),
                           padding: const EdgeInsets.all(12),
-                          constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.82),
+                          constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.85),
                           decoration: BoxDecoration(
-                            color: isUser ? const Color(0xFF2563EB) : const Color(0xFFF1F5F9),
+                            color: isUser
+                                ? const Color(0xFF2563EB)
+                                : isDark
+                                    ? const Color(0xFF1E293B)
+                                    : Colors.white,
                             borderRadius: BorderRadius.circular(12),
+                            border: isUser
+                                ? null
+                                : Border.all(color: Colors.grey.withOpacity(0.2)),
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -149,16 +187,27 @@ class _AiChatScreenState extends State<AiChatScreen> {
                               Text(
                                 msg['text'] ?? '',
                                 style: TextStyle(
-                                  color: isUser ? Colors.white : const Color(0xFF0F172A),
+                                  color: isUser
+                                      ? Colors.white
+                                      : isDark
+                                          ? Colors.white
+                                          : const Color(0xFF0F172A),
                                   fontSize: 13.5,
-                                  height: 1.35,
+                                  height: 1.4,
                                 ),
                               ),
                               if (msg.containsKey('db_time')) ...[
-                                const SizedBox(height: 4),
-                                Text(
-                                  "⚡ DB Fetch: ${msg['db_time']}",
-                                  style: const TextStyle(fontSize: 10, color: Colors.blueGrey),
+                                const SizedBox(height: 6),
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    const Icon(Icons.flash_on_rounded, size: 12, color: Colors.amber),
+                                    const SizedBox(width: 3),
+                                    Text(
+                                      "DB Fetch: ${msg['db_time']}",
+                                      style: const TextStyle(fontSize: 10, color: Colors.grey),
+                                    ),
+                                  ],
                                 ),
                               ],
                             ],
@@ -170,13 +219,13 @@ class _AiChatScreenState extends State<AiChatScreen> {
           ),
           if (_isLoading)
             const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
               child: LinearProgressIndicator(minHeight: 2),
             ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
             decoration: BoxDecoration(
-              color: Theme.of(context).cardColor,
+              color: isDark ? const Color(0xFF1E293B) : Colors.white,
               border: Border(top: BorderSide(color: Colors.grey.withOpacity(0.2))),
             ),
             child: Row(
@@ -184,10 +233,12 @@ class _AiChatScreenState extends State<AiChatScreen> {
                 Expanded(
                   child: TextField(
                     controller: _textController,
-                    decoration: const InputDecoration(
-                      hintText: "Type topic (e.g. Mitochondria, ATP)...",
+                    style: TextStyle(color: isDark ? Colors.white : Colors.black),
+                    decoration: InputDecoration(
+                      hintText: "Offline search (e.g. Mitochondria, Cell Wall)...",
+                      hintStyle: const TextStyle(fontSize: 13, color: Colors.grey),
                       border: InputBorder.none,
-                      contentPadding: EdgeInsets.symmetric(horizontal: 12),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 12),
                     ),
                     onSubmitted: (_) => _sendMessage(),
                   ),
