@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:llama_cpp_dart/llama_cpp_dart.dart';
@@ -25,7 +26,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final ScrollController _scrollController = ScrollController();
 
   // ---------------------------------------------------------------------------
-  // LLM (llama_cpp_dart)
+  // LLM (llama_cpp_dart - 100% Phone CPU Engine)
   // ---------------------------------------------------------------------------
 
   LlamaProcessor? _llama;
@@ -60,7 +61,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _textController.dispose();
     _scrollController.dispose();
 
-    // Release native model memory
+    // Release native memory
     _llama?.dispose();
 
     super.dispose();
@@ -118,7 +119,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
     double score = intersection / union;
 
-    // Exact phrase bonus
     final q = query.toLowerCase().trim();
     final t = text.toLowerCase();
 
@@ -126,7 +126,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
       score += 1.0;
     }
 
-    // Keyword coverage bonus
     final coverage = intersection / queryWords.length;
     score += coverage * 0.5;
 
@@ -134,7 +133,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   }
 
   // ===========================================================================
-  // LOAD GEMMA MODEL
+  // LOAD GEMMA / GGUF MODEL ON CPU
   // ===========================================================================
 
   Future<void> _pickAndLoadModel() async {
@@ -163,20 +162,20 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Loading Gemma 2B...';
+        _modelStatus = 'Loading Model to Phone CPU...';
       });
 
-      // Dispose existing model if any
+      // Cleanup old model
       _llama?.dispose();
       _llama = null;
 
-      // Initialize llama_cpp_dart processor
+      // Initialize llama_cpp_dart with pure CPU configuration
       _llama = LlamaProcessor(
         path: path,
         modelParams: ModelParams(
           contextSize: 2048,
           nThreads: 4,
-          nGpuLayers: 0,
+          nGpuLayers: 0, // Pure CPU execution
         ),
       );
 
@@ -186,11 +185,11 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _isModelLoaded = true;
         _isModelLoading = false;
         _modelPath = path;
-        _modelStatus = 'Gemma 2B Ready';
+        _modelStatus = 'Offline AI Ready (CPU)';
       });
 
       _showSuccess(
-        '🟢 Gemma 2B successfully loaded!\nAb AI questions answer kar sakta hai.',
+        '🟢 Offline AI successfully loaded on Phone CPU!\nAb questions answer kar sakta hai.',
       );
     } catch (e) {
       if (!mounted) return;
@@ -201,7 +200,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _modelStatus = 'Model Error';
       });
 
-      _showError('Gemma loading error:\n$e');
+      _showError('Model loading error:\n$e');
     }
   }
 
@@ -230,7 +229,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     return '''
 Namaste! 🙏
 
-Main MockTester ka **Offline AI Exam Tutor** hoon.
+Main MockTester ka **100% Offline AI Exam Tutor** hoon.
 
 📚 Biology
 ⚛️ Physics
@@ -239,13 +238,13 @@ Main MockTester ka **Offline AI Exam Tutor** hoon.
 
 Aap mujhse concept, definition, reason, difference ya exam-oriented question pooch sakte hain.
 
-🟢 Internet ki zarurat nahi hai.
-🧠 Answer local Gemma AI + study database se generate hota hai.
+🟢 Internet ki koi zarurat nahi hai.
+🧠 Answer phone ke CPU aur local textbook database se generate hota hai.
 ''';
   }
 
   // ===========================================================================
-  // RETRIEVE LOCAL KNOWLEDGE
+  // RETRIEVE LOCAL KNOWLEDGE (DATABASE)
   // ===========================================================================
 
   Future<List<String>> _retrieveContext(String query) async {
@@ -284,7 +283,7 @@ Aap mujhse concept, definition, reason, difference ya exam-oriented question poo
   }
 
   // ===========================================================================
-  // BUILD GEMMA PROMPT
+  // BUILD PROMPT
   // ===========================================================================
 
   String _buildGemmaPrompt({
@@ -332,12 +331,12 @@ Now provide the best educational answer.
   }
 
   // ===========================================================================
-  // OFFLINE RAG + GEMMA STREAM
+  // OFFLINE RAG + CPU STREAM
   // ===========================================================================
 
   Future<String> _generateRagAnswer(String question) async {
     if (_llama == null || !_isModelLoaded) {
-      throw Exception('Gemma model is not loaded.');
+      throw Exception('AI Model loaded nahi hai.');
     }
 
     final context = await _retrieveContext(question);
@@ -349,7 +348,7 @@ Now provide the best educational answer.
     final buffer = StringBuffer();
     _shouldStop = false;
 
-    // Stream generated response via llama_cpp_dart
+    // llama_cpp_dart stream response
     final stream = _llama!.prompt(prompt);
 
     await for (final token in stream) {
@@ -373,7 +372,7 @@ Now provide the best educational answer.
 
     final answer = buffer.toString().trim();
     if (answer.isEmpty) {
-      throw Exception('Gemma ne empty response return kiya.');
+      throw Exception('Empty response from model.');
     }
 
     return answer;
@@ -506,7 +505,8 @@ Now provide the best educational answer.
         setState(() {
           _messages.add({
             'role': 'assistant',
-            'text': '$fallback\n\n⚠️ **AI generation unavailable:** Database answer shown instead.',
+            'text':
+                '$fallback\n\n⚠️ **Offline AI fallback:** Showing database answer.',
           });
         });
       }
@@ -655,7 +655,7 @@ Now provide the best educational answer.
         elevation: 0.5,
         actions: [
           IconButton(
-            tooltip: 'Select Gemma GGUF model',
+            tooltip: 'Select GGUF model',
             onPressed: _busy ? null : _pickAndLoadModel,
             icon: _isModelLoading
                 ? const SizedBox(
@@ -743,7 +743,7 @@ Now provide the best educational answer.
             const SizedBox(height: 12),
             Text(
               _isModelLoaded
-                  ? 'Offline AI Ready'
+                  ? 'Offline AI Ready (CPU Active)'
                   : 'Offline Study Engine Ready',
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -755,8 +755,8 @@ Now provide the best educational answer.
             const SizedBox(height: 6),
             Text(
               _isModelLoaded
-                  ? 'Gemma 2B + local textbook database active'
-                  : 'Gemma model load karne ke liye upar 📁 button dabayein.',
+                  ? 'GGUF Model + local textbook database active'
+                  : 'Model load karne ke liye upar 📁 button dabayein.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, height: 1.4, color: Colors.grey.shade600),
             ),
@@ -765,7 +765,7 @@ Now provide the best educational answer.
               ElevatedButton.icon(
                 onPressed: _isModelLoading ? null : _pickAndLoadModel,
                 icon: const Icon(Icons.folder_open),
-                label: const Text('Select Gemma GGUF'),
+                label: const Text('Select GGUF Model'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF2563EB),
                   foregroundColor: Colors.white,
@@ -794,7 +794,7 @@ Now provide the best educational answer.
                     ),
                     SizedBox(width: 8),
                     Text(
-                      'Gemma 2B Loaded',
+                      'AI Loaded on Phone CPU',
                       style: TextStyle(fontWeight: FontWeight.w600),
                     ),
                   ],
