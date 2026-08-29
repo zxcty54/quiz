@@ -14,7 +14,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
   final List<Map<String, String>> _messages = [];
-  
+
   bool _isLoading = false;
   bool _engineReady = false;
 
@@ -37,9 +37,9 @@ class _AiChatScreenState extends State<AiChatScreen> {
     return chunks.where((chunk) {
       final lower = chunk.toLowerCase();
       return !lower.contains("preface") &&
-             !lower.contains("all rights reserved") &&
-             !lower.contains("isbn") &&
-             !lower.contains("acknowledgement");
+          !lower.contains("all rights reserved") &&
+          !lower.contains("isbn") &&
+          !lower.contains("acknowledgement");
     }).toList();
   }
 
@@ -57,9 +57,11 @@ class _AiChatScreenState extends State<AiChatScreen> {
     final stopwatch = Stopwatch()..start();
 
     // 1. Fetch Local DB Context Chunks
-    final rawChunks = await KnowledgeBaseService.instance.searchRelevantChunks(rawText, limit: 2);
+    final rawChunks =
+        await KnowledgeBaseService.instance.searchRelevantChunks(rawText, limit: 2);
     final cleanFacts = _cleanChunks(rawChunks);
-    final contextString = cleanFacts.isNotEmpty ? cleanFacts.join("\n") : "General concepts";
+    final contextString =
+        cleanFacts.isNotEmpty ? cleanFacts.join("\n") : "General concepts";
 
     // 2. Run Local LLM Inference
     String aiReply = "";
@@ -71,7 +73,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
     } else {
       // Fallback if GGUF is missing
       aiReply = cleanFacts.isNotEmpty
-          ? "📚 **Local DB Summary:**\n\n" + cleanFacts.map((e) => "• $e").join("\n\n")
+          ? "📚 **Local DB Summary:**\n\n" +
+              cleanFacts.map((e) => "• $e").join("\n\n")
           : "Gemma model file storage me nahi mili. Direct match nahi mila.";
     }
 
@@ -110,7 +113,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("AI Exam Tutor", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            const Text("AI Exam Tutor",
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             Row(
               children: [
                 Container(
@@ -123,7 +127,9 @@ class _AiChatScreenState extends State<AiChatScreen> {
                 ),
                 const SizedBox(width: 5),
                 Text(
-                  _engineReady ? "100% Offline (Gemma 2B Engine Active)" : "Model Loading / DB Engine",
+                  _engineReady
+                      ? "100% Offline (Gemma 2B Engine Active)"
+                      : "Model Loading / DB Engine",
                   style: TextStyle(
                     fontSize: 10,
                     color: _engineReady ? Colors.greenAccent : Colors.amberAccent,
@@ -133,7 +139,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
             ),
           ],
         ),
-        backgroundColor: isDark ? const Color(0xFF1E293B) : const Color(0xFF2563EB),
+        backgroundColor:
+            isDark ? const Color(0xFF1E293B) : const Color(0xFF2563EB),
         foregroundColor: Colors.white,
       ),
       body: Column(
@@ -144,7 +151,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(Icons.offline_bolt_rounded, size: 52, color: Color(0xFF2563EB)),
+                        const Icon(Icons.offline_bolt_rounded,
+                            size: 52, color: Color(0xFF2563EB)),
                         const SizedBox(height: 10),
                         Text(
                           "Local On-Device Engine",
@@ -174,7 +182,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
                         child: Container(
                           margin: const EdgeInsets.symmetric(vertical: 6),
                           padding: const EdgeInsets.all(12),
-                          constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.85),
+                          constraints: BoxConstraints(
+                              maxWidth: MediaQuery.of(context).size.width * 0.85),
                           decoration: BoxDecoration(
                             color: isUser
                                 ? const Color(0xFF2563EB)
@@ -182,7 +191,9 @@ class _AiChatScreenState extends State<AiChatScreen> {
                                     ? const Color(0xFF1E293B)
                                     : Colors.white,
                             borderRadius: BorderRadius.circular(12),
-                            border: isUser ? null : Border.all(color: Colors.grey.withOpacity(0.2)),
+                            border: isUser
+                                ? null
+                                : Border.all(color: Colors.grey.withOpacity(0.2)),
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -204,11 +215,13 @@ class _AiChatScreenState extends State<AiChatScreen> {
                                 Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
-                                    const Icon(Icons.speed_rounded, size: 11, color: Colors.amber),
+                                    const Icon(Icons.speed_rounded,
+                                        size: 11, color: Colors.amber),
                                     const SizedBox(width: 2),
                                     Text(
                                       "Inference: ${msg['time']}",
-                                      style: const TextStyle(fontSize: 9.5, color: Colors.grey),
+                                      style: const TextStyle(
+                                          fontSize: 9.5, color: Colors.grey),
                                     ),
                                   ],
                                 ),
