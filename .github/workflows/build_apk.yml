@@ -11,29 +11,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. CHECKOUT
       - name: Checkout Repository Code
         uses: actions/checkout@v4
 
-      # 2. JAVA 17
       - name: Setup Java Development Kit (JDK 17)
         uses: actions/setup-java@v4
         with:
           distribution: "temurin"
           java-version: "17"
 
-      # 3. FLUTTER SETUP
       - name: Setup Flutter Environment
         uses: subosito/flutter-action@v2
         with:
           channel: "stable"
           cache: true
 
-      # 4. ANDROID SDK SETUP
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      # 5. INSTALL EXACT CMAKE 3.18.1 & NDK FOR LLM
       - name: Install CMake 3.18.1 and NDK
         run: |
           yes | sdkmanager --licenses || true
@@ -41,39 +36,30 @@ jobs:
           sdkmanager "cmake;3.18.1"
           sdkmanager "ndk;25.2.9519653"
 
-      # 6. RE-GENERATE NATIVE PROJECT
       - name: Re-generate Native Android Project Files
         working-directory: flutter_app
-        run: |
-          flutter create . --platforms=android --org com --project-name testing
+        run: flutter create . --platforms=android --org com --project-name testing
 
-      # 7. DEPENDENCIES
       - name: Get Flutter Dependencies
         working-directory: flutter_app
-        run: |
-          flutter pub get
+        run: flutter pub get
 
-      # 8. CONFIGURE CMAKE.DIR & NDK IN GRADLE (Fix for CXX1300)
       - name: Configure CMake and Android Gradle
         run: |
-          # 1. Inject exact cmake.dir and ndk.dir into local.properties
           echo "cmake.dir=/usr/local/lib/android/sdk/cmake/3.18.1" >> flutter_app/android/local.properties
           echo "ndk.dir=/usr/local/lib/android/sdk/ndk/25.2.9519653" >> flutter_app/android/local.properties
 
-          # 2. Patch package name & namespace safely
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/namespace = .*/namespace = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
 
-          # 3. Inject NDK version in build.gradle / build.gradle.kts
           if [ -f flutter_app/android/app/build.gradle.kts ]; then
             sed -i '/android {/a\    ndkVersion = "25.2.9519653"' flutter_app/android/app/build.gradle.kts
           elif [ -f flutter_app/android/app/build.gradle ]; then
             sed -i '/android {/a\    ndkVersion "25.2.9519653"' flutter_app/android/app/build.gradle
           fi
 
-      # 9. PERMISSIONS & KEYSTORE
       - name: Setup Keystore & Permissions
         working-directory: flutter_app/android
         run: |
@@ -90,12 +76,10 @@ jobs:
             -dname "CN=Android Debug,O=Android,C=US" \
             || true
 
-      # 10. BUILD RELEASE APK
       - name: Build Release APK
         working-directory: flutter_app
-        env:
-          PATH: /usr/local/lib/android/sdk/cmake/3.18.1/bin:$PATH
         run: |
+          export PATH="/usr/local/lib/android/sdk/cmake/3.18.1/bin:$PATH"
           flutter clean
           flutter pub get
           flutter build apk \
@@ -104,21 +88,18 @@ jobs:
             --dart-define=GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }} \
             --dart-define=GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}
 
-      # 11. UPLOAD ARTIFACT
       - name: Upload Build Artifact (APK)
         uses: actions/upload-artifact@v4
         with:
           name: MockTester-Release-APK
           path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
 
-      # 12. COMPRESS FOR TELEGRAM
       - name: Auto-Rename APK & Compress
         working-directory: flutter_app
         run: |
           cp build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
           zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
 
-      # 13. SEND TO TELEGRAM
       - name: Send Zip File Direct To Telegram
         uses: appleboy/telegram-action@master
         with:
