@@ -121,7 +121,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       _llama = null;
 
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU Mode
+      modelParams.nGpuLayers = 0; // Pure CPU
 
       final contextParams = ContextParams();
       contextParams.nCtx = 2048;
