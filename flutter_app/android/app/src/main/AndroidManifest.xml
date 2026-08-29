@@ -20,7 +20,9 @@
         android:label="MockTester"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
-        android:usesCleartextTraffic="false">
+        android:usesCleartextTraffic="false"
+        android:largeHeap="true"
+        android:hardwareAccelerated="true">
         
         <!-- 🔥 Default Firebase Notification Channel -->
         <meta-data
