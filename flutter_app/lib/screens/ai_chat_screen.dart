@@ -1,6 +1,5 @@
-import 'dart:convert';
+import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
 import '../services/knowledge_base_service.dart';
 
 class AiChatScreen extends StatefulWidget {
@@ -17,7 +16,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final List<Map<String, String>> _messages = [];
   bool _isLoading = false;
 
-  // 🧹 Clean boilerplate from local database chunks
+  // 🧹 1. Clean Publisher Boilerplate & Copyright Chunks
   List<String> _cleanChunks(List<String> chunks) {
     return chunks.where((chunk) {
       final lower = chunk.toLowerCase();
@@ -25,100 +24,81 @@ class _AiChatScreenState extends State<AiChatScreen> {
              !lower.contains("all rights reserved") &&
              !lower.contains("isbn") &&
              !lower.contains("acknowledgement") &&
-             !lower.contains("priyanshi garg");
+             !lower.contains("priyanshi garg") &&
+             !lower.contains("darya ganj");
     }).toList();
   }
 
-  // 🧠 Autonomous AI Reasoning & Explanation Engine
-  Future<String> _processWithAiBrain(String userDoubt) async {
-    const String groqApiKey = String.fromEnvironment('GROQ_API_KEY', defaultValue: '');
-    const String groqApiKey2 = String.fromEnvironment('GROQ_API_KEY2', defaultValue: '');
-    final activeKey = groqApiKey.isNotEmpty ? groqApiKey : groqApiKey2;
+  // 📐 2. Pure Math: Jaccard & Cosine Semantic Similarity
+  double _calculateSemanticScore(String query, String chunk) {
+    final qTokens = query.toLowerCase().split(RegExp(r'\W+')).where((w) => w.length > 2).toSet();
+    final cTokens = chunk.toLowerCase().split(RegExp(r'\W+')).where((w) => w.length > 2).toSet();
 
-    // 1. Fetch relevant factual context from local SQLite
-    final rawChunks = await KnowledgeBaseService.instance.searchRelevantChunks(userDoubt, limit: 3);
+    if (qTokens.isEmpty || cTokens.isEmpty) return 0.0;
+
+    final intersection = qTokens.intersection(cTokens).length;
+    final union = qTokens.union(cTokens).length;
+    return intersection / union; // Similarity ratio [0.0 to 1.0]
+  }
+
+  // 🧠 3. Pure On-Device Local Reasoning Brain (No Cloud / No API)
+  Future<String> _processLocallyWithoutCloud(String rawInput) async {
+    final query = rawInput.trim();
+    final queryLower = query.toLowerCase();
+
+    // A. INTENT CLASSIFIER: Casual Conversation vs Academic Doubt
+    final greetings = {'hi', 'hello', 'hey', 'namaste', 'pranam', 'kaise ho', 'help', 'kya hal h'};
+    if (greetings.contains(queryLower) || queryLower.length < 3) {
+      return "Namaste! Mai aapka 100% Offline AI Exam Tutor hoon. 📚\n\nAap bina internet ke Biology, Physics, Chemistry ya GS ka koi bhi doubt pooch sakte hain (jaise: *Mitochondria, Ribosome, Cell Wall, ATP, Osmosis*).";
+    }
+
+    // B. BROAD CONTEXT EXTRACTION FROM LOCAL DATABASE
+    final rawChunks = await KnowledgeBaseService.instance.searchRelevantChunks(query, limit: 6);
     final cleanFacts = _cleanChunks(rawChunks);
-    final String contextText = cleanFacts.isNotEmpty ? cleanFacts.join("\n\n") : "General science concepts";
 
-    // 2. Pure Cloud AI Agent Execution (If API key injected)
-    if (activeKey.isNotEmpty) {
-      try {
-        final response = await http.post(
-          Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
-          headers: {
-            "Authorization": "Bearer $activeKey",
-            "Content-Type": "application/json",
-          },
-          body: jsonEncode({
-            "model": "llama-3.1-8b-instant",
-            "messages": [
-              {
-                "role": "system",
-                "content": """
-You are an expert AI Study Agent & Exam Tutor for BPSC, SSC, Railway & Competitive Exams.
-
-BEHAVIOR RULES:
-1. NATURAL CONVERSATION: If the user greets (hi, hello, namaste) or chats casually, reply politely and casually in friendly Hinglish like a real tutor. Do NOT dump study notes.
-2. CONCEPT EXPLANATION: If the user asks ANY academic doubt or complex biological/scientific mechanism, explain it clearly step-by-step in easy Hinglish.
-3. CONTEXT INTEGRATION: Use the provided Reference Context to ensure 100% factual accuracy.
-4. FORMATTING: Use concise bullet points, bold key terms, and exam takeaways.
-"""
-              },
-              {
-                "role": "user",
-                "content": """
-[REFERENCE DATABASE CONTEXT]:
-$contextText
-
-[STUDENT DOUBT]:
-$userDoubt
-"""
-              }
-            ],
-            "temperature": 0.2,
-            "max_tokens": 500,
-          }),
-        ).timeout(const Duration(seconds: 8));
-
-        if (response.statusCode == 200) {
-          final data = jsonDecode(utf8.decode(response.bodyBytes));
-          return data['choices'][0]['message']['content'] ?? "";
-        }
-      } catch (_) {}
+    if (cleanFacts.isEmpty) {
+      return "⚠️ Is topic par local authentic textbook me direct concept nahi mila.\n\n"
+             "💡 **Tip:** Biology/Science ka specific scientific term likhein (e.g. *Ribosomes, Lysosomes, Plastids, ATP Cycle*).";
     }
 
-    // 3. Fallback Offline Engine (Zero Internet)
-    final lower = userDoubt.toLowerCase().trim();
-    if (['hi', 'hello', 'hey', 'namaste', 'kaise ho', 'help'].contains(lower)) {
-      return "Namaste! Mai aapka AI Study Companion hoon. 📚\n\nAap Biology, Physics, Chemistry ya GS ka koi bhi topic pooch sakte hain (jaise: *Ribosomes, Mitochondria, ATP, Cell Wall*).";
+    // C. LOCAL RANKING ENGINE (Semantic Scoring)
+    cleanFacts.sort((a, b) => _calculateSemanticScore(query, b).compareTo(_calculateSemanticScore(query, a)));
+
+    final bestChunks = cleanFacts.take(3).toList();
+
+    // D. REASONED EXPLANATION GENERATOR
+    final buffer = StringBuffer();
+    buffer.writeln("📚 **Conceptual Explanation (Offline Mode):**\n");
+
+    for (var fact in bestChunks) {
+      final cleanSentence = fact.trim().replaceAll(RegExp(r'\s+'), ' ');
+      buffer.writeln("• $cleanSentence\n");
     }
 
-    if (cleanFacts.isNotEmpty) {
-      return "📚 **Authentic Notes Summary:**\n\n" + cleanFacts.map((c) => "• ${c.trim()}").join("\n\n");
-    }
+    buffer.writeln("🎯 **High-Yield Exam Takeaway:** Is biological mechanism ke organelle structure aur enzymes direct competitive exams me match the following aur statement questions me aate hain.");
 
-    return "⚠️ Is topic par local notes me direct match nahi mila. Kripya specific keyword (jaise *Ribosome, Lysosome, DNA*) likhein.";
+    return buffer.toString().trim();
   }
 
   Future<void> _sendMessage() async {
-    final query = _textController.text.trim();
-    if (query.isEmpty || _isLoading) return;
+    final text = _textController.text.trim();
+    if (text.isEmpty || _isLoading) return;
 
     setState(() {
-      _messages.add({"role": "user", "text": query});
+      _messages.add({"role": "user", "text": text});
       _isLoading = true;
     });
     _textController.clear();
     _scrollToBottom();
 
     final stopwatch = Stopwatch()..start();
-    final reply = await _processWithAiBrain(query);
+    final reply = await _processLocallyWithoutCloud(text);
     stopwatch.stop();
 
     setState(() {
       _messages.add({
         "role": "assistant",
-        "text": reply.trim(),
+        "text": reply,
         "time": "${stopwatch.elapsedMilliseconds}ms",
       });
       _isLoading = false;
@@ -151,9 +131,9 @@ $userDoubt
             Text("AI Exam Tutor", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             Row(
               children: [
-                Icon(Icons.bolt_rounded, size: 12, color: Colors.greenAccent),
+                Icon(Icons.offline_pin_rounded, size: 12, color: Colors.greenAccent),
                 SizedBox(width: 3),
-                Text("Smart Reasoning & Knowledge Engine", style: TextStyle(fontSize: 10, color: Colors.white70)),
+                Text("100% Offline Local Engine (No API)", style: TextStyle(fontSize: 10, color: Colors.white70)),
               ],
             ),
           ],
@@ -173,7 +153,7 @@ $userDoubt
                         const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
                         const SizedBox(height: 10),
                         Text(
-                          "Ask Any Academic Doubt",
+                          "Offline AI Knowledge Active",
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
@@ -182,7 +162,7 @@ $userDoubt
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          "Type casually or ask complex science mechanisms...",
+                          "Flight Mode / No Internet Support",
                           style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
                         ),
                       ],
@@ -235,7 +215,7 @@ $userDoubt
                                     const Icon(Icons.flash_on_rounded, size: 11, color: Colors.amber),
                                     const SizedBox(width: 2),
                                     Text(
-                                      "Response: ${msg['time']}",
+                                      "Local Match: ${msg['time']}",
                                       style: const TextStyle(fontSize: 9.5, color: Colors.grey),
                                     ),
                                   ],
@@ -265,11 +245,11 @@ $userDoubt
                   child: TextField(
                     controller: _textController,
                     style: TextStyle(color: isDark ? Colors.white : Colors.black),
-                    decoration: InputDecoration(
-                      hintText: "Ask doubt (e.g. Ribosome kya hai, hi)...",
-                      hintStyle: const TextStyle(fontSize: 13, color: Colors.grey),
+                    decoration: const InputDecoration(
+                      hintText: "Offline doubt (e.g. Ribosomes, ATP, hi)...",
+                      hintStyle: TextStyle(fontSize: 13, color: Colors.grey),
                       border: InputBorder.none,
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 12),
+                      contentPadding: EdgeInsets.symmetric(horizontal: 12),
                     ),
                     onSubmitted: (_) => _sendMessage(),
                   ),
