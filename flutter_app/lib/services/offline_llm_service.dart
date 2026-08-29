@@ -29,12 +29,7 @@ class OfflineLlmService {
       contextParams.nCtx = 2048;
       contextParams.nThreads = 4;
 
-      final samplingParams = SamplingParams();
-      samplingParams.temp = 0.2;
-      samplingParams.topP = 0.9;
-      samplingParams.topK = 40;
-
-      _llama = Llama(path, modelParams, contextParams, samplingParams);
+      _llama = Llama(path, modelParams, contextParams);
       _modelPath = path;
       return true;
     } catch (e) {
@@ -48,9 +43,9 @@ class OfflineLlmService {
     if (_llama == null) throw Exception('AI model is not loaded.');
 
     final buffer = StringBuffer();
-    final stream = _llama!.generate(prompt: prompt);
+    _llama!.setPrompt(prompt);
 
-    await for (final token in stream) {
+    await for (final token in _llama!.stream) {
       buffer.write(token);
     }
 
@@ -61,7 +56,8 @@ class OfflineLlmService {
 
   Stream<String> generateStream(String prompt) {
     if (_llama == null) throw Exception('AI model is not loaded.');
-    return _llama!.generate(prompt: prompt);
+    _llama!.setPrompt(prompt);
+    return _llama!.stream;
   }
 
   Future<void> unload() async {
