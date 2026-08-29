@@ -44,22 +44,28 @@ jobs:
         working-directory: flutter_app
         run: flutter pub get
 
+      # ============================================================
+      # FIX: Clone missing llama.cpp into flutter_llama pub cache
+      # ============================================================
+      - name: Clone Missing llama.cpp Submodule into flutter_llama Cache
+        run: |
+          LLAMA_CACHE_DIR=$(find /home/runner/.pub-cache/hosted/pub.dev/ -maxdepth 1 -name "flutter_llama-*" | head -n 1)
+          if [ -d "$LLAMA_CACHE_DIR" ]; then
+            echo "Injecting llama.cpp into: $LLAMA_CACHE_DIR"
+            git clone --depth 1 https://github.com/ggerganov/llama.cpp.git "$LLAMA_CACHE_DIR/llama.cpp"
+          fi
+
       - name: Configure CMake & NDK 28 Alignment
         run: |
-          # 1. Point local.properties to CMake 3.18 and NDK 28
           echo "cmake.dir=/usr/local/lib/android/sdk/cmake/3.18.1" >> flutter_app/android/local.properties
           echo "ndk.dir=/usr/local/lib/android/sdk/ndk/28.2.13676358" >> flutter_app/android/local.properties
-
-          # 2. Force NDK 28 globally in gradle.properties
           echo "android.ndkVersion=28.2.13676358" >> flutter_app/android/gradle.properties
 
-          # 3. Patch package name & namespace safely
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/namespace = .*/namespace = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
 
-          # 4. Inject NDK 28 into app-level build configuration
           if [ -f flutter_app/android/app/build.gradle.kts ]; then
             sed -i '/android {/a\    ndkVersion = "28.2.13676358"' flutter_app/android/app/build.gradle.kts
           elif [ -f flutter_app/android/app/build.gradle ]; then
@@ -86,8 +92,6 @@ jobs:
         working-directory: flutter_app
         run: |
           export PATH="/usr/local/lib/android/sdk/cmake/3.18.1/bin:$PATH"
-          flutter clean
-          flutter pub get
           flutter build apk \
             --release \
             --no-tree-shake-icons \
@@ -111,5 +115,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (LLM Native Engine Active) APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} (Offline LLM Active) APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
