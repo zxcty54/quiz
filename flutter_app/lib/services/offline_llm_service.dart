@@ -45,7 +45,11 @@ class OfflineLlmService {
     final buffer = StringBuffer();
     _llama!.setPrompt(prompt);
 
-    await for (final token in _llama!.stream) {
+    while (true) {
+      final token = _llama!.getNext();
+      if (token.isEmpty || token == '<end_of_turn>' || token == '</s>') {
+        break;
+      }
       buffer.write(token);
     }
 
@@ -54,10 +58,17 @@ class OfflineLlmService {
     return result;
   }
 
-  Stream<String> generateStream(String prompt) {
+  Stream<String> generateStream(String prompt) async* {
     if (_llama == null) throw Exception('AI model is not loaded.');
     _llama!.setPrompt(prompt);
-    return _llama!.stream;
+
+    while (true) {
+      final token = _llama!.getNext();
+      if (token.isEmpty || token == '<end_of_turn>' || token == '</s>') {
+        break;
+      }
+      yield token;
+    }
   }
 
   Future<void> unload() async {
