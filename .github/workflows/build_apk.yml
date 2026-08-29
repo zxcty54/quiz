@@ -29,12 +29,13 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
+      # NDK 25 + CMake 3.22.1 (Perfect combination for llama.cpp / C++17)
       - name: Install Android Build Tools, CMake & NDK
         run: |
           yes | sdkmanager --licenses || true
           sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
-          sdkmanager "cmake;3.18.1"
-          sdkmanager "ndk;28.2.13676358"
+          sdkmanager "cmake;3.22.1"
+          sdkmanager "ndk;25.2.9519653"
 
       - name: Re-generate Native Android Project Files
         working-directory: flutter_app
@@ -44,19 +45,16 @@ jobs:
         working-directory: flutter_app
         run: flutter pub get
 
-      # ============================================================
-      # 100% Path Fix for llama.cpp required by flutter_llama
-      # ============================================================
-      - name: Inject llama.cpp Source into All Relative Paths
+      # Inject llama.cpp source directly to match flutter_llama CMake relative path
+      - name: Clone and Inject llama.cpp Source
         run: |
-          # Clone latest stable llama.cpp
           git clone --depth 1 https://github.com/ggerganov/llama.cpp.git /tmp/llama_source
 
-          # 1. Inject directly into pub.dev root level (../../../../llama.cpp target)
+          # 1. Pub Cache root level injection
           mkdir -p /home/runner/.pub-cache/hosted/pub.dev/llama.cpp
           cp -r /tmp/llama_source/* /home/runner/.pub-cache/hosted/pub.dev/llama.cpp/
 
-          # 2. Inject inside flutter_llama package folder
+          # 2. Inside flutter_llama package injection
           LLAMA_PKG_DIR=$(find /home/runner/.pub-cache/hosted/pub.dev/ -maxdepth 1 -name "flutter_llama-*" | head -n 1)
           if [ -d "$LLAMA_PKG_DIR" ]; then
             mkdir -p "$LLAMA_PKG_DIR/llama.cpp"
@@ -65,19 +63,22 @@ jobs:
 
       - name: Configure CMake, NDK & Gradle Alignment
         run: |
-          echo "cmake.dir=/usr/local/lib/android/sdk/cmake/3.18.1" >> flutter_app/android/local.properties
-          echo "ndk.dir=/usr/local/lib/android/sdk/ndk/28.2.13676358" >> flutter_app/android/local.properties
-          echo "android.ndkVersion=28.2.13676358" >> flutter_app/android/gradle.properties
+          # Align SDK tools in local.properties
+          echo "cmake.dir=/usr/local/lib/android/sdk/cmake/3.22.1" >> flutter_app/android/local.properties
+          echo "ndk.dir=/usr/local/lib/android/sdk/ndk/25.2.9519653" >> flutter_app/android/local.properties
+          echo "android.ndkVersion=25.2.9519653" >> flutter_app/android/gradle.properties
 
+          # App ID & Namespace safe patch
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/namespace = .*/namespace = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
 
+          # App module NDK Version specification
           if [ -f flutter_app/android/app/build.gradle.kts ]; then
-            sed -i '/android {/a\    ndkVersion = "28.2.13676358"' flutter_app/android/app/build.gradle.kts
+            sed -i '/android {/a\    ndkVersion = "25.2.9519653"' flutter_app/android/app/build.gradle.kts
           elif [ -f flutter_app/android/app/build.gradle ]; then
-            sed -i '/android {/a\    ndkVersion "28.2.13676358"' flutter_app/android/app/build.gradle
+            sed -i '/android {/a\    ndkVersion "25.2.9519653"' flutter_app/android/app/build.gradle
           fi
 
       - name: Setup Keystore & Permissions
@@ -99,7 +100,7 @@ jobs:
       - name: Build Release APK
         working-directory: flutter_app
         run: |
-          export PATH="/usr/local/lib/android/sdk/cmake/3.18.1/bin:$PATH"
+          export PATH="/usr/local/lib/android/sdk/cmake/3.22.1/bin:$PATH"
           flutter build apk \
             --release \
             --no-tree-shake-icons \
