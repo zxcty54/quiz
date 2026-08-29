@@ -29,7 +29,7 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Install CMake 3.18.1 and NDK
+      - name: Install Android Build Tools, CMake & NDK
         run: |
           yes | sdkmanager --licenses || true
           sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
@@ -45,17 +45,25 @@ jobs:
         run: flutter pub get
 
       # ============================================================
-      # FIX: Clone missing llama.cpp into flutter_llama pub cache
+      # 100% Path Fix for llama.cpp required by flutter_llama
       # ============================================================
-      - name: Clone Missing llama.cpp Submodule into flutter_llama Cache
+      - name: Inject llama.cpp Source into All Relative Paths
         run: |
-          LLAMA_CACHE_DIR=$(find /home/runner/.pub-cache/hosted/pub.dev/ -maxdepth 1 -name "flutter_llama-*" | head -n 1)
-          if [ -d "$LLAMA_CACHE_DIR" ]; then
-            echo "Injecting llama.cpp into: $LLAMA_CACHE_DIR"
-            git clone --depth 1 https://github.com/ggerganov/llama.cpp.git "$LLAMA_CACHE_DIR/llama.cpp"
+          # Clone latest stable llama.cpp
+          git clone --depth 1 https://github.com/ggerganov/llama.cpp.git /tmp/llama_source
+
+          # 1. Inject directly into pub.dev root level (../../../../llama.cpp target)
+          mkdir -p /home/runner/.pub-cache/hosted/pub.dev/llama.cpp
+          cp -r /tmp/llama_source/* /home/runner/.pub-cache/hosted/pub.dev/llama.cpp/
+
+          # 2. Inject inside flutter_llama package folder
+          LLAMA_PKG_DIR=$(find /home/runner/.pub-cache/hosted/pub.dev/ -maxdepth 1 -name "flutter_llama-*" | head -n 1)
+          if [ -d "$LLAMA_PKG_DIR" ]; then
+            mkdir -p "$LLAMA_PKG_DIR/llama.cpp"
+            cp -r /tmp/llama_source/* "$LLAMA_PKG_DIR/llama.cpp/"
           fi
 
-      - name: Configure CMake & NDK 28 Alignment
+      - name: Configure CMake, NDK & Gradle Alignment
         run: |
           echo "cmake.dir=/usr/local/lib/android/sdk/cmake/3.18.1" >> flutter_app/android/local.properties
           echo "ndk.dir=/usr/local/lib/android/sdk/ndk/28.2.13676358" >> flutter_app/android/local.properties
