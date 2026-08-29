@@ -120,21 +120,16 @@ class _AiChatScreenState extends State<AiChatScreen> {
       _llama?.dispose();
       _llama = null;
 
-      // 100% Phone CPU Configuration (Positional parameters for 0.0.9)
+      // Model configuration for Pure CPU
       final modelParams = ModelParams();
       modelParams.nGpuLayers = 0; // GPU OFF
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 2048; // Correct parameter name
+      contextParams.nCtx = 2048;
       contextParams.nThreads = 4; // CPU Cores
 
-      final samplingParams = SamplingParams();
-      samplingParams.temp = 0.2;
-      samplingParams.topP = 0.9;
-      samplingParams.topK = 40;
-
-      // Positional Arguments
-      _llama = Llama(path, modelParams, contextParams, samplingParams);
+      // Llama 0.0.9 standard constructor
+      _llama = Llama(path, modelParams, contextParams);
 
       if (!mounted) return;
 
@@ -244,10 +239,10 @@ Provide a concise, point-wise educational answer in simple language.
     final buffer = StringBuffer();
     _shouldStop = false;
 
-    // llama_cpp_dart generate stream
-    final stream = _llama!.generate(prompt: prompt);
+    // llama_cpp_dart 0.0.9 prompt loading and stream execution
+    _llama!.setPrompt(prompt);
 
-    await for (final token in stream) {
+    await for (final token in _llama!.stream) {
       if (_shouldStop || !mounted) break;
       buffer.write(token);
 
