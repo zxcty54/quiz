@@ -1,17 +1,17 @@
 import 'dart:io';
-
-import 'package:flutter_llama/flutter_llama.dart';
+import 'package:llama_cpp_dart/llama_cpp_dart.dart';
 
 class OfflineLlmService {
   OfflineLlmService._();
 
   static final OfflineLlmService instance = OfflineLlmService._();
 
-  final FlutterLlama _llama = FlutterLlama.instance;
+  LlamaProcessor? _llama;
+  String? _modelPath;
 
-  bool get isModelLoaded => _llama.isModelLoaded;
+  bool get isModelLoaded => _llama != null;
 
-  String? get modelPath => _llama.modelPath;
+  String? get modelPath => _modelPath;
 
   Future<bool> loadModel(String path) async {
     final file = File(path);
@@ -20,72 +20,62 @@ class OfflineLlmService {
       throw Exception('GGUF model file not found:\n$path');
     }
 
-    final config = LlamaConfig(
-      modelPath: path,
+    // Clean up previously loaded model if any
+    await unload();
 
-      // Start conservatively.
-      nThreads: 4,
+    try {
+      // Pure Phone CPU Configuration
+      _llama = LlamaProcessor(
+        path: path,
+        modelParams: ModelParams(
+          contextSize: 2048, // Safe context window for phone RAM
+          nThreads: 4,       // Efficient utilization of 4 CPU cores
+          nGpuLayers: 0,     // 0 = GPU disabled, 100% Phone CPU execution
+        ),
+      );
 
-      // -1 = try all layers on GPU.
-      // If device has problems, we will change this.
-      nGpuLayers: -1,
-
-      // 2048 is safer for mobile RAM.
-      contextSize: 2048,
-
-      batchSize: 256,
-
-      useGpu: true,
-
-      verbose: false,
-    );
-
-    return await _llama.loadModel(config);
+      _modelPath = path;
+      return true;
+    } catch (e) {
+      _llama = null;
+      _modelPath = null;
+      throw Exception('Failed to load GGUF model on Phone CPU: $e');
+    }
   }
 
   Future<String> generate(String prompt) async {
-    if (!_llama.isModelLoaded) {
-      throw Exception('Gemma model is not loaded.');
+    if (_llama == null) {
+      throw Exception('AI model is not loaded.');
     }
 
-    final params = GenerationParams(
-      prompt: prompt,
-      temperature: 0.2,
-      topP: 0.9,
-      topK: 40,
-      maxTokens: 384,
-      repeatPenalty: 1.1,
-    );
+    final buffer = StringBuffer();
+    final stream = _llama!.prompt(prompt);
 
-    final response = await _llama.generate(params);
+    await for (final token in stream) {
+      buffer.write(token);
+    }
 
-    return response.text.trim();
+    final result = buffer.toString().trim();
+    if (result.isEmpty) {
+      throw Exception('Model returned an empty response.');
+    }
+
+    return result;
   }
 
   Stream<String> generateStream(String prompt) {
-    if (!_llama.isModelLoaded) {
-      throw Exception('Gemma model is not loaded.');
+    if (_llama == null) {
+      throw Exception('AI model is not loaded.');
     }
 
-    final params = GenerationParams(
-      prompt: prompt,
-      temperature: 0.2,
-      topP: 0.9,
-      topK: 40,
-      maxTokens: 384,
-      repeatPenalty: 1.1,
-    );
-
-    return _llama.generateStream(params);
-  }
-
-  Future<Map<String, dynamic>?> getModelInfo() {
-    return _llama.getModelInfo();
+    return _llama!.prompt(prompt);
   }
 
   Future<void> unload() async {
-    if (_llama.isModelLoaded) {
-      await _llama.unloadModel();
+    if (_llama != null) {
+      _llama!.dispose();
+      _llama = null;
+      _modelPath = null;
     }
   }
 }
