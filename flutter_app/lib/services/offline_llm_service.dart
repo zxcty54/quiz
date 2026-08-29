@@ -10,7 +10,6 @@ class OfflineLlmService {
   String? _modelPath;
 
   bool get isModelLoaded => _llama != null;
-
   String? get modelPath => _modelPath;
 
   Future<bool> loadModel(String path) async {
@@ -20,23 +19,22 @@ class OfflineLlmService {
       throw Exception('GGUF model file not found:\n$path');
     }
 
-    // Cleanup previous instance
     await unload();
 
     try {
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0;
+      modelParams.nGpuLayers = 0; // CPU Mode
 
       final contextParams = ContextParams();
-      contextParams.context = 2048;
+      contextParams.nCtx = 2048;
       contextParams.nThreads = 4;
 
-      _llama = Llama(
-        path,
-        modelParams: modelParams,
-        contextParams: contextParams,
-      );
+      final samplingParams = SamplingParams();
+      samplingParams.temp = 0.2;
+      samplingParams.topP = 0.9;
+      samplingParams.topK = 40;
 
+      _llama = Llama(path, modelParams, contextParams, samplingParams);
       _modelPath = path;
       return true;
     } catch (e) {
@@ -47,31 +45,23 @@ class OfflineLlmService {
   }
 
   Future<String> generate(String prompt) async {
-    if (_llama == null) {
-      throw Exception('AI model is not loaded.');
-    }
+    if (_llama == null) throw Exception('AI model is not loaded.');
 
     final buffer = StringBuffer();
-    final stream = _llama!.prompt(prompt);
+    final stream = _llama!.generate(prompt: prompt);
 
     await for (final token in stream) {
       buffer.write(token);
     }
 
     final result = buffer.toString().trim();
-    if (result.isEmpty) {
-      throw Exception('Model returned an empty response.');
-    }
-
+    if (result.isEmpty) throw Exception('Empty response from model.');
     return result;
   }
 
   Stream<String> generateStream(String prompt) {
-    if (_llama == null) {
-      throw Exception('AI model is not loaded.');
-    }
-
-    return _llama!.prompt(prompt);
+    if (_llama == null) throw Exception('AI model is not loaded.');
+    return _llama!.generate(prompt: prompt);
   }
 
   Future<void> unload() async {
