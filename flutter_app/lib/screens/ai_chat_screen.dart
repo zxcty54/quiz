@@ -26,10 +26,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final ScrollController _scrollController = ScrollController();
 
   // ---------------------------------------------------------------------------
-  // LLM (llama_cpp_dart - 100% Phone CPU Engine)
+  // LLM (llama_cpp_dart 0.0.9 - 100% Phone CPU Engine)
   // ---------------------------------------------------------------------------
 
-  LlamaProcessor? _llama;
+  Llama? _llama;
 
   bool _isModelLoaded = false;
   bool _isModelLoading = false;
@@ -133,7 +133,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   }
 
   // ===========================================================================
-  // LOAD GEMMA / GGUF MODEL ON CPU
+  // LOAD GEMMA / GGUF MODEL ON PHONE CPU
   // ===========================================================================
 
   Future<void> _pickAndLoadModel() async {
@@ -165,18 +165,23 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _modelStatus = 'Loading Model to Phone CPU...';
       });
 
-      // Cleanup old model
+      // Dispose existing instance
       _llama?.dispose();
       _llama = null;
 
-      // Initialize llama_cpp_dart with pure CPU configuration
-      _llama = LlamaProcessor(
-        path: path,
-        modelParams: ModelParams(
-          contextSize: 2048,
-          nThreads: 4,
-          nGpuLayers: 0, // Pure CPU execution
-        ),
+      // Model configuration for Pure CPU
+      final modelParams = ModelParams();
+      modelParams.nGpuLayers = 0; // Disable GPU
+
+      final contextParams = ContextParams();
+      contextParams.context = 2048; // Safe 2k context for phone RAM
+      contextParams.nThreads = 4; // Use 4 Performance CPU cores
+
+      // Initialize Llama engine
+      _llama = Llama(
+        path,
+        modelParams: modelParams,
+        contextParams: contextParams,
       );
 
       if (!mounted) return;
@@ -348,7 +353,7 @@ Now provide the best educational answer.
     final buffer = StringBuffer();
     _shouldStop = false;
 
-    // llama_cpp_dart stream response
+    // llama_cpp_dart prompt stream
     final stream = _llama!.prompt(prompt);
 
     await for (final token in stream) {
