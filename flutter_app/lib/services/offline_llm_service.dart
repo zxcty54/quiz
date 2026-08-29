@@ -13,7 +13,7 @@ class OfflineLlmService {
   Future<bool> initializeEngine() async {
     if (_isLoaded) return true;
 
-    // 1. Check local model file locations
+    // Check potential GGUF file locations in phone storage
     final devPath = File('/storage/emulated/0/Download/gemma-2-2b-it-Q4_K_M.gguf');
     final appDocDir = await getApplicationDocumentsDirectory();
     final internalPath = File('${appDocDir.path}/gemma-2-2b-it-Q4_K_M.gguf');
@@ -30,7 +30,7 @@ class OfflineLlmService {
     try {
       final modelParams = ModelParams();
       final contextParams = ContextParams()
-        ..contextSize = 1024
+        ..nCtx = 1024
         ..nThreads = Platform.numberOfProcessors > 2 ? Platform.numberOfProcessors - 1 : 2;
 
       _llama = Llama(
@@ -72,12 +72,11 @@ $userPrompt
 """;
 
     try {
+      _llama!.setPrompt(formattedPrompt);
       final buffer = StringBuffer();
       
-      // llama_cpp_dart 0.0.9 uses prompt Stream generator
-      final stream = _llama!.prompt(formattedPrompt);
-      await for (final token in stream) {
-        buffer.write(token);
+      while (_llama!.hasMoreTokens) {
+        buffer.write(_llama!.nextToken);
       }
 
       final output = buffer.toString().trim();
