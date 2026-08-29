@@ -23,7 +23,7 @@ class OfflineLlmService {
 
     try {
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // CPU Mode
+      modelParams.nGpuLayers = 0; // Pure CPU
 
       final contextParams = ContextParams();
       contextParams.nCtx = 2048;
@@ -46,11 +46,14 @@ class OfflineLlmService {
     _llama!.setPrompt(prompt);
 
     while (true) {
-      final token = _llama!.getNext();
-      if (token.isEmpty || token == '<end_of_turn>' || token == '</s>') {
+      final tokenResult = _llama!.getNext();
+      final tokenText = tokenResult.$1;
+      final isDone = tokenResult.$2;
+
+      if (isDone || tokenText.isEmpty || tokenText == '<end_of_turn>' || tokenText == '</s>') {
         break;
       }
-      buffer.write(token);
+      buffer.write(tokenText);
     }
 
     final result = buffer.toString().trim();
@@ -63,11 +66,14 @@ class OfflineLlmService {
     _llama!.setPrompt(prompt);
 
     while (true) {
-      final token = _llama!.getNext();
-      if (token.isEmpty || token == '<end_of_turn>' || token == '</s>') {
+      final tokenResult = _llama!.getNext();
+      final tokenText = tokenResult.$1;
+      final isDone = tokenResult.$2;
+
+      if (isDone || tokenText.isEmpty || tokenText == '<end_of_turn>' || tokenText == '</s>') {
         break;
       }
-      yield token;
+      yield tokenText;
     }
   }
 
