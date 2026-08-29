@@ -1,4 +1,4 @@
-name: Build MockTester Android APK
+name: "Build MockTester Android APK"
 
 on:
   push:
@@ -113,5 +113,5 @@ EOF
 
             📦 File: `MockTester_Build_${{ github.run_number }}.zip`
 
-            ✨ Unzip karke test karein.
+            ✨ Unzip karke direct install karein.
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
