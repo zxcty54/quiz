@@ -1,5 +1,7 @@
+import 'dart:async';
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:llama_cpp_dart/llama_cpp_dart.dart';
 
@@ -121,27 +123,29 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Allocating Phone Memory...';
+        _modelStatus = 'Allocating Memory & Loading Model...';
       });
 
-      // Allow UI to render loading spinner before heavy native allocation
-      await Future.delayed(const Duration(milliseconds: 300));
+      // UI thread ko repaint hone ka proper time dein
+      await Future.delayed(const Duration(milliseconds: 400));
 
       _disposeModelSafely();
 
-      // Crash-Proof Context Configuration for Mobile Hardware
+      // Native crash-proof configuration
       final modelParams = ModelParams();
       modelParams.nGpuLayers = 0; // Pure CPU on Android
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 512; // Safe context buffer to prevent Native OOM kills
-      contextParams.nThreads = 2; // 2 CPU threads prevent thermal throttling & UI lock
+      contextParams.nCtx = 256;   // Ultra-safe context length (Prevents Out of Memory crash)
+      contextParams.nThreads = 2; // Stable CPU threads (Prevents OS Thermal/ANR kill)
 
-      _llama = Llama(path, modelParams, contextParams);
+      // Initialize Llama model instance
+      final loadedLlama = Llama(path, modelParams, contextParams);
 
       if (!mounted) return;
 
       setState(() {
+        _llama = loadedLlama;
         _isModelLoaded = true;
         _isModelLoading = false;
         _modelPath = path;
@@ -278,8 +282,8 @@ $question
         _scrollToBottom();
       }
 
-      // Allow UI event loop to process touches
-      await Future.delayed(const Duration(milliseconds: 2));
+      // UI thread breathing delay
+      await Future.delayed(const Duration(milliseconds: 3));
     }
 
     final answer = buffer.toString().trim();
