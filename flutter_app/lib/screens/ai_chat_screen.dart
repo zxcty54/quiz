@@ -91,9 +91,9 @@ class _AiChatScreenState extends State<AiChatScreen> {
     if (_busy) return;
 
     try {
+      // FIX: Use FileType.any so Android storage picker does not throw Unsupported Filter PlatformException
       final result = await FilePicker.platform.pickFiles(
-        type: FileType.custom,
-        allowedExtensions: ['gguf'],
+        type: FileType.any,
         allowMultiple: false,
       );
 
@@ -106,6 +106,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       }
 
       final fileName = result.files.single.name.toLowerCase();
+      // Code-level extension verification
       if (!fileName.endsWith('.gguf')) {
         _showError('Please sirf .gguf model file select karein.');
         return;
@@ -127,7 +128,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       final contextParams = ContextParams();
       contextParams.nCtx = 1536; // Optimized context length for 4GB phone RAM
-      contextParams.nThreads = 4; // Use 4 Performance CPU cores
+      contextParams.nThreads = 4; // Performance CPU cores
 
       _llama = Llama(path, modelParams, contextParams);
 
@@ -253,7 +254,7 @@ $question
       buffer.write(tokenText);
       tokenCount++;
 
-      // Update UI every 2 tokens for smooth 60fps rendering
+      // Update UI every 2 tokens for smooth rendering
       if (tokenCount % 2 == 0 && _messages.isNotEmpty && _messages.last['role'] == 'assistant') {
         setState(() {
           _messages[_messages.length - 1] = {
@@ -264,7 +265,7 @@ $question
         _scrollToBottom();
       }
 
-      // Crucial: Prevents UI Thread lockup on low-end phones
+      // Prevents UI thread lockup on Android
       await Future.delayed(const Duration(milliseconds: 1));
     }
 
