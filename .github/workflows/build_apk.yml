@@ -29,12 +29,12 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Install CMake 3.18.1 and NDK 25
+      - name: Install CMake 3.18.1 and NDK
         run: |
           yes | sdkmanager --licenses || true
           sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
           sdkmanager "cmake;3.18.1"
-          sdkmanager "ndk;25.2.9519653"
+          sdkmanager "ndk;28.2.13676358"
 
       - name: Re-generate Native Android Project Files
         working-directory: flutter_app
@@ -44,15 +44,14 @@ jobs:
         working-directory: flutter_app
         run: flutter pub get
 
-      - name: Configure CMake, NDK & Gradle Alignment
+      - name: Configure CMake & NDK 28 Alignment
         run: |
-          # 1. Inject exact cmake.dir and ndk.dir into local.properties
+          # 1. Point local.properties to CMake 3.18 and NDK 28
           echo "cmake.dir=/usr/local/lib/android/sdk/cmake/3.18.1" >> flutter_app/android/local.properties
-          echo "ndk.dir=/usr/local/lib/android/sdk/ndk/25.2.9519653" >> flutter_app/android/local.properties
+          echo "ndk.dir=/usr/local/lib/android/sdk/ndk/28.2.13676358" >> flutter_app/android/local.properties
 
-          # 2. Force NDK 25 across all modules via gradle.properties (Fix for CXX1104 without afterEvaluate crash)
-          echo "android.ndkVersion=25.2.9519653" >> flutter_app/android/gradle.properties
-          echo "android.ndk.overrideVersion=25.2.9519653" >> flutter_app/android/gradle.properties
+          # 2. Force NDK 28 globally in gradle.properties
+          echo "android.ndkVersion=28.2.13676358" >> flutter_app/android/gradle.properties
 
           # 3. Patch package name & namespace safely
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
@@ -60,11 +59,11 @@ jobs:
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
 
-          # 4. Set ndkVersion directly on app level
+          # 4. Inject NDK 28 into app-level build configuration
           if [ -f flutter_app/android/app/build.gradle.kts ]; then
-            sed -i '/android {/a\    ndkVersion = "25.2.9519653"' flutter_app/android/app/build.gradle.kts
+            sed -i '/android {/a\    ndkVersion = "28.2.13676358"' flutter_app/android/app/build.gradle.kts
           elif [ -f flutter_app/android/app/build.gradle ]; then
-            sed -i '/android {/a\    ndkVersion "25.2.9519653"' flutter_app/android/app/build.gradle
+            sed -i '/android {/a\    ndkVersion "28.2.13676358"' flutter_app/android/app/build.gradle
           fi
 
       - name: Setup Keystore & Permissions
