@@ -33,15 +33,38 @@ jobs:
         working-directory: flutter_app
         run: flutter create . --platforms=android --org com --project-name testing
 
-      - name: Configure Android Namespace & minSdk 24
+      - name: Get Dependencies
+        working-directory: flutter_app
+        run: flutter pub get
+
+      - name: Inject Missing llama.cpp Submodule into Package Cache
+        run: |
+          # 1. Clone compatible llama.cpp repository
+          git clone --depth 1 https://github.com/ggerganov/llama.cpp.git /tmp/llama_source
+
+          # 2. Find llama_cpp_dart location in pub-cache and link llama.cpp
+          LLAMA_DART_PKG=$(find /home/runner/.pub-cache/hosted/pub.dev/ -maxdepth 1 -name "llama_cpp_dart-*" | head -n 1)
+          if [ -d "$LLAMA_DART_PKG" ]; then
+            echo "Found llama_cpp_dart at: $LLAMA_DART_PKG"
+            mkdir -p "$LLAMA_DART_PKG/src/llama.cpp"
+            cp -r /tmp/llama_source/* "$LLAMA_DART_PKG/src/llama.cpp/"
+            
+            # Root level fallback
+            mkdir -p "$LLAMA_DART_PKG/llama.cpp"
+            cp -r /tmp/llama_source/* "$LLAMA_DART_PKG/llama.cpp/"
+          fi
+
+      - name: Configure Android Alignment (API 34 & minSdk 24)
         run: |
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/namespace = .*/namespace = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/minSdk = .*/minSdk = 24/g' {} +
+          find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/compileSdk = .*/compileSdk = 34/g' {} +
 
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/minSdkVersion .*/minSdkVersion 24/g' {} +
+          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/compileSdkVersion .*/compileSdkVersion 34/g' {} +
 
       - name: Setup Keystore & Permissions
         working-directory: flutter_app/android
@@ -62,8 +85,6 @@ jobs:
       - name: Build Pure Offline Release APK
         working-directory: flutter_app
         run: |
-          flutter clean
-          flutter pub get
           flutter build apk --release --no-tree-shake-icons
 
       - name: Upload Build Artifact (APK)
