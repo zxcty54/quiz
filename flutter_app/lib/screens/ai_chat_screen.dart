@@ -1,7 +1,6 @@
-import 'dart:io';
+import 'dart:convert';
 import 'package:flutter/material.dart';
-import 'package:flutter_gemma/flutter_gemma.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:http/http.dart' as http;
 import '../services/knowledge_base_service.dart';
 
 class AiChatScreen extends StatefulWidget {
@@ -16,63 +15,9 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
   final List<Map<String, String>> _messages = [];
-  
   bool _isLoading = false;
-  bool _isModelLoaded = false;
-  String _modelStatus = "Initializing On-Device AI Engine...";
 
-  @override
-  void initState() {
-    super.initState();
-    _initLocalGemmaModel();
-  }
-
-  // 🔍 1. Load Local GGUF Model from Phone Storage into RAM/NPU
-  Future<void> _initLocalGemmaModel() async {
-    try {
-      final devModel = File('/storage/emulated/0/Download/gemma-2-2b-it-Q4_K_M.gguf');
-      final appDocDir = await getApplicationDocumentsDirectory();
-      final localModel = File('${appDocDir.path}/gemma-2-2b-it-Q4_K_M.gguf');
-
-      String? activePath;
-      if (await devModel.exists()) {
-        activePath = devModel.path;
-      } else if (await localModel.exists()) {
-        activePath = localModel.path;
-      }
-
-      if (activePath != null) {
-        await FlutterGemmaPlugin.instance.init(
-          maxTokens: 512,
-          temperature: 0.3,
-          randomSeed: 1,
-          topK: 1,
-        );
-        await FlutterGemmaPlugin.instance.loadModel(modelPath: activePath);
-
-        if (mounted) {
-          setState(() {
-            _isModelLoaded = true;
-            _modelStatus = "Gemma-2B On-Device Active (100% Offline)";
-          });
-        }
-      } else {
-        if (mounted) {
-          setState(() {
-            _modelStatus = "Model file not found in Downloads. SQLite Fallback Active.";
-          });
-        }
-      }
-    } catch (e) {
-      if (mounted) {
-        setState(() {
-          _modelStatus = "Local Engine Ready (Direct Retrieval Mode)";
-        });
-      }
-    }
-  }
-
-  // 🧹 Clean publishers boilerplate
+  // 🧹 Clean boilerplate from local database chunks
   List<String> _cleanChunks(List<String> chunks) {
     return chunks.where((chunk) {
       final lower = chunk.toLowerCase();
@@ -84,46 +29,75 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }).toList();
   }
 
-  // 🧠 2. Pure On-Device Offline AI Inference Execution
-  Future<String> _generateOfflineAiResponse(String rawQuery) async {
-    // A. Fetch Context from Local SQLite
-    final rawChunks = await KnowledgeBaseService.instance.searchRelevantChunks(rawQuery, limit: 2);
+  // 🧠 Autonomous AI Reasoning & Explanation Engine
+  Future<String> _processWithAiBrain(String userDoubt) async {
+    const String groqApiKey = String.fromEnvironment('GROQ_API_KEY', defaultValue: '');
+    const String groqApiKey2 = String.fromEnvironment('GROQ_API_KEY2', defaultValue: '');
+    final activeKey = groqApiKey.isNotEmpty ? groqApiKey : groqApiKey2;
+
+    // 1. Fetch relevant factual context from local SQLite
+    final rawChunks = await KnowledgeBaseService.instance.searchRelevantChunks(userDoubt, limit: 3);
     final cleanFacts = _cleanChunks(rawChunks);
-    final contextText = cleanFacts.isNotEmpty ? cleanFacts.join("\n") : "General concepts";
+    final String contextText = cleanFacts.isNotEmpty ? cleanFacts.join("\n\n") : "General science concepts";
 
-    // B. If Local Gemma is loaded, run full On-Device Reasoning
-    if (_isModelLoaded) {
-      final prompt = """
-<start_of_turn>system
-Aap ek highly intelligent offline BPSC/SSC Science tutor ho.
-Niche diye gaye Authentic Reference aur student ke sawaal ko analyze karo.
-Agar casual baat ho toh friendly Hinglish me reply do.
-Agar academic doubt ho toh concept ko easy points me step-by-step explain karo.
-
-[AUTHENTIC REFERENCE]:
-$contextText
-<end_of_turn>
-<start_of_turn>user
-$rawQuery
-<end_of_turn>
-<start_of_turn>model
-""";
-
+    // 2. Pure Cloud AI Agent Execution (If API key injected)
+    if (activeKey.isNotEmpty) {
       try {
-        final response = await FlutterGemmaPlugin.instance.getResponse(prompt: prompt);
-        if (response != null && response.trim().isNotEmpty) {
-          return response.trim();
+        final response = await http.post(
+          Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
+          headers: {
+            "Authorization": "Bearer $activeKey",
+            "Content-Type": "application/json",
+          },
+          body: jsonEncode({
+            "model": "llama-3.1-8b-instant",
+            "messages": [
+              {
+                "role": "system",
+                "content": """
+You are an expert AI Study Agent & Exam Tutor for BPSC, SSC, Railway & Competitive Exams.
+
+BEHAVIOR RULES:
+1. NATURAL CONVERSATION: If the user greets (hi, hello, namaste) or chats casually, reply politely and casually in friendly Hinglish like a real tutor. Do NOT dump study notes.
+2. CONCEPT EXPLANATION: If the user asks ANY academic doubt or complex biological/scientific mechanism, explain it clearly step-by-step in easy Hinglish.
+3. CONTEXT INTEGRATION: Use the provided Reference Context to ensure 100% factual accuracy.
+4. FORMATTING: Use concise bullet points, bold key terms, and exam takeaways.
+"""
+              },
+              {
+                "role": "user",
+                "content": """
+[REFERENCE DATABASE CONTEXT]:
+$contextText
+
+[STUDENT DOUBT]:
+$userDoubt
+"""
+              }
+            ],
+            "temperature": 0.2,
+            "max_tokens": 500,
+          }),
+        ).timeout(const Duration(seconds: 8));
+
+        if (response.statusCode == 200) {
+          final data = jsonDecode(utf8.decode(response.bodyBytes));
+          return data['choices'][0]['message']['content'] ?? "";
         }
       } catch (_) {}
     }
 
-    // C. Graceful Fallback if model binary is loading
-    if (cleanFacts.isNotEmpty) {
-      return "📚 **Authentic Notes Summary (Offline Engine):**\n\n" +
-          cleanFacts.map((c) => "• ${c.trim()}").join("\n\n");
+    // 3. Fallback Offline Engine (Zero Internet)
+    final lower = userDoubt.toLowerCase().trim();
+    if (['hi', 'hello', 'hey', 'namaste', 'kaise ho', 'help'].contains(lower)) {
+      return "Namaste! Mai aapka AI Study Companion hoon. 📚\n\nAap Biology, Physics, Chemistry ya GS ka koi bhi topic pooch sakte hain (jaise: *Ribosomes, Mitochondria, ATP, Cell Wall*).";
     }
 
-    return "⚠️ Is topic par local textbook me direct record nahi mila. Specific scientific term (jaise *Ribosome, Mitochondria, ATP*) likhkar dekhein.";
+    if (cleanFacts.isNotEmpty) {
+      return "📚 **Authentic Notes Summary:**\n\n" + cleanFacts.map((c) => "• ${c.trim()}").join("\n\n");
+    }
+
+    return "⚠️ Is topic par local notes me direct match nahi mila. Kripya specific keyword (jaise *Ribosome, Lysosome, DNA*) likhein.";
   }
 
   Future<void> _sendMessage() async {
@@ -138,13 +112,13 @@ $rawQuery
     _scrollToBottom();
 
     final stopwatch = Stopwatch()..start();
-    final reply = await _generateOfflineAiResponse(query);
+    final reply = await _processWithAiBrain(query);
     stopwatch.stop();
 
     setState(() {
       _messages.add({
         "role": "assistant",
-        "text": reply,
+        "text": reply.trim(),
         "time": "${stopwatch.elapsedMilliseconds}ms",
       });
       _isLoading = false;
@@ -171,28 +145,15 @@ $rawQuery
     return Scaffold(
       backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
-        title: Column(
+        title: const Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("AI Exam Tutor", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            Text("AI Exam Tutor", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             Row(
               children: [
-                Container(
-                  width: 7,
-                  height: 7,
-                  decoration: BoxDecoration(
-                    color: _isModelLoaded ? const Color(0xFF16A34A) : Colors.amber,
-                    shape: BoxShape.circle,
-                  ),
-                ),
-                const SizedBox(width: 5),
-                Text(
-                  _modelStatus,
-                  style: TextStyle(
-                    fontSize: 10,
-                    color: _isModelLoaded ? Colors.greenAccent : Colors.amberAccent,
-                  ),
-                ),
+                Icon(Icons.bolt_rounded, size: 12, color: Colors.greenAccent),
+                SizedBox(width: 3),
+                Text("Smart Reasoning & Knowledge Engine", style: TextStyle(fontSize: 10, color: Colors.white70)),
               ],
             ),
           ],
@@ -209,10 +170,10 @@ $rawQuery
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Icon(Icons.offline_bolt_rounded, size: 52, color: Color(0xFF2563EB)),
+                        const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
                         const SizedBox(height: 10),
                         Text(
-                          "100% Offline AI Agent Active",
+                          "Ask Any Academic Doubt",
                           style: TextStyle(
                             fontSize: 15,
                             fontWeight: FontWeight.bold,
@@ -221,7 +182,7 @@ $rawQuery
                         ),
                         const SizedBox(height: 4),
                         Text(
-                          "No internet required. Powered by On-Device Gemma 2B.",
+                          "Type casually or ask complex science mechanisms...",
                           style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
                         ),
                       ],
@@ -274,7 +235,7 @@ $rawQuery
                                     const Icon(Icons.flash_on_rounded, size: 11, color: Colors.amber),
                                     const SizedBox(width: 2),
                                     Text(
-                                      "Inference: ${msg['time']}",
+                                      "Response: ${msg['time']}",
                                       style: const TextStyle(fontSize: 9.5, color: Colors.grey),
                                     ),
                                   ],
@@ -304,11 +265,11 @@ $rawQuery
                   child: TextField(
                     controller: _textController,
                     style: TextStyle(color: isDark ? Colors.white : Colors.black),
-                    decoration: const InputDecoration(
-                      hintText: "Offline doubt (e.g. Ribosomes, ATP)...",
-                      hintStyle: TextStyle(fontSize: 13, color: Colors.grey),
+                    decoration: InputDecoration(
+                      hintText: "Ask doubt (e.g. Ribosome kya hai, hi)...",
+                      hintStyle: const TextStyle(fontSize: 13, color: Colors.grey),
                       border: InputBorder.none,
-                      contentPadding: EdgeInsets.symmetric(horizontal: 12),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 12),
                     ),
                     onSubmitted: (_) => _sendMessage(),
                   ),
