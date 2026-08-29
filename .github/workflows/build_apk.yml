@@ -1,94 +1,35 @@
-name: "Build MockTester Offline Android APK"
-
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout Code
-        uses: actions/checkout@v4
-
-      - name: Setup Java JDK 17
-        uses: actions/setup-java@v4
-        with:
-          distribution: "temurin"
-          java-version: "17"
-
-      - name: Setup Flutter
-        uses: subosito/flutter-action@v2
-        with:
-          channel: "stable"
-          cache: true
-
-      - name: Setup Android SDK, NDK & CMake
-        uses: android-actions/setup-android@v3
-
-      - name: Install Android NDK 26 & CMake
+- name: Fix Desugaring for flutter_local_notifications
         run: |
-          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;26.1.10909125" "cmake;3.22.1"
+          # Kotlin DSL build.gradle.kts फिक्स
+          if [ -f "flutter_app/android/app/build.gradle.kts" ]; then
+            python3 -c '
+          with open("flutter_app/android/app/build.gradle.kts", "r") as f:
+              content = f.read()
 
-      - name: Re-generate Native Android Project Files
-        working-directory: flutter_app
-        run: flutter create . --platforms=android --org com --project-name testing
+          if "isCoreLibraryDesugaringEnabled" not in content:
+              content = content.replace("compileOptions {", "compileOptions {\n        isCoreLibraryDesugaringEnabled = true")
+              content += "\ndependencies {\n    coreLibraryDesugaring(\"com.android.tools:desugar_jdk_libs:2.0.4\")\n}\n"
 
-      - name: Get Dependencies
-        working-directory: flutter_app
-        run: flutter pub get
-
-      - name: Inject Missing llama.cpp Submodule into Package Cache
-        run: |
-          git clone --depth 1 https://github.com/ggerganov/llama.cpp.git /tmp/llama_source
-          LLAMA_DART_PKG=$(find /home/runner/.pub-cache/hosted/pub.dev/ -maxdepth 1 -name "llama_cpp_dart-*" | head -n 1)
-          if [ -n "$LLAMA_DART_PKG" ] && [ -d "$LLAMA_DART_PKG" ]; then
-            echo "Found llama_cpp_dart at: $LLAMA_DART_PKG"
-            mkdir -p "$LLAMA_DART_PKG/src/llama.cpp"
-            cp -r /tmp/llama_source/* "$LLAMA_DART_PKG/src/llama.cpp/"
-            mkdir -p "$LLAMA_DART_PKG/llama.cpp"
-            cp -r /tmp/llama_source/* "$LLAMA_DART_PKG/llama.cpp/"
+          with open("flutter_app/android/app/build.gradle.kts", "w") as f:
+              f.write(content)
+          '
           fi
 
-      - name: Configure Android SDK 34/36, ABI Filters & Desugaring
-        run: |
-          # 1. Update SDK Versions (compileSdk 34+, minSdk 24)
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/compileSdkVersion .*/compileSdkVersion 34/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/targetSdkVersion .*/targetSdkVersion 34/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/minSdkVersion .*/minSdkVersion 24/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
-
-          # 2. Inject Desugaring & NDK Filters in app/build.gradle
+          # Groovy build.gradle फिक्स
           if [ -f "flutter_app/android/app/build.gradle" ]; then
-            sed -i '/compileOptions {/a \        coreLibraryDesugaringEnabled true' flutter_app/android/app/build.gradle
-            sed -i '/dependencies {/a \    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"' flutter_app/android/app/build.gradle
+            python3 -c '
+          with open("flutter_app/android/app/build.gradle", "r") as f:
+              content = f.read()
+
+          if "coreLibraryDesugaringEnabled" not in content:
+              content = content.replace("compileOptions {", "compileOptions {\n        coreLibraryDesugaringEnabled true")
+              content += "\ndependencies {\n    coreLibraryDesugaring \"com.android.tools:desugar_jdk_libs:2.0.4\"\n}\n"
+
+          with open("flutter_app/android/app/build.gradle", "w") as f:
+              f.write(content)
+          '
           fi
 
-      - name: Build Pure Offline Release APK (arm64-v8a)
+      - name: Build Pure Offline Release APK
         working-directory: flutter_app
-        run: |
-          flutter build apk --release --target-platform android-arm64 --no-tree-shake-icons
-
-      - name: Upload Build Artifact (APK)
-        uses: actions/upload-artifact@v4
-        with:
-          name: MockTester-Release-APK
-          path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
-
-      - name: Auto-Rename APK & Compress
-        working-directory: flutter_app
-        run: |
-          cp build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
-          zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
-
-      - name: Send Zip File Direct To Telegram
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (Offline LLM + ARM64) APK Ready!"
-          document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
+        run: flutter build apk --release --target-platform android-arm64 --no-tree-shake-icons
