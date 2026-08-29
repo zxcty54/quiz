@@ -6,7 +6,7 @@ class OfflineLlmService {
 
   static final OfflineLlmService instance = OfflineLlmService._();
 
-  LlamaProcessor? _llama;
+  Llama? _llama;
   String? _modelPath;
 
   bool get isModelLoaded => _llama != null;
@@ -20,18 +20,21 @@ class OfflineLlmService {
       throw Exception('GGUF model file not found:\n$path');
     }
 
-    // Clean up previously loaded model if any
+    // Cleanup previous instance
     await unload();
 
     try {
-      // Pure Phone CPU Configuration
-      _llama = LlamaProcessor(
-        path: path,
-        modelParams: ModelParams(
-          contextSize: 2048, // Safe context window for phone RAM
-          nThreads: 4,       // Efficient utilization of 4 CPU cores
-          nGpuLayers: 0,     // 0 = GPU disabled, 100% Phone CPU execution
-        ),
+      final modelParams = ModelParams();
+      modelParams.nGpuLayers = 0;
+
+      final contextParams = ContextParams();
+      contextParams.context = 2048;
+      contextParams.nThreads = 4;
+
+      _llama = Llama(
+        path,
+        modelParams: modelParams,
+        contextParams: contextParams,
       );
 
       _modelPath = path;
