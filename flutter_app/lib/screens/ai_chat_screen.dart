@@ -1,287 +1,1479 @@
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_llama/flutter_llama.dart';
+
 import '../services/knowledge_base_service.dart';
 
 class AiChatScreen extends StatefulWidget {
   final bool isDarkMode;
-  const AiChatScreen({super.key, this.isDarkMode = false});
+
+  const AiChatScreen({
+    super.key,
+    this.isDarkMode = false,
+  });
 
   @override
   State<AiChatScreen> createState() => _AiChatScreenState();
 }
 
 class _AiChatScreenState extends State<AiChatScreen> {
-  final TextEditingController _textController = TextEditingController();
-  final ScrollController _scrollController = ScrollController();
-  final List<Map<String, String>> _messages = [];
-  bool _isLoading = false;
+  // ---------------------------------------------------------------------------
+  // Controllers
+  // ---------------------------------------------------------------------------
 
-  List<String> _cleanChunks(List<String> chunks) {
-    return chunks.where((chunk) {
-      final lower = chunk.toLowerCase();
-      return !lower.contains("preface") &&
-          !lower.contains("all rights reserved") &&
-          !lower.contains("isbn") &&
-          !lower.contains("acknowledgement") &&
-          !lower.contains("priyanshi garg");
-    }).toList();
+  final TextEditingController _textController =
+      TextEditingController();
+
+  final ScrollController _scrollController =
+      ScrollController();
+
+  // ---------------------------------------------------------------------------
+  // LLM
+  // ---------------------------------------------------------------------------
+
+  final FlutterLlama _llama = FlutterLlama.instance;
+
+  bool _isModelLoaded = false;
+  bool _isModelLoading = false;
+  bool _isGenerating = false;
+
+  String _modelStatus = 'AI Model Not Loaded';
+  String? _modelPath;
+
+  // ---------------------------------------------------------------------------
+  // Chat
+  // ---------------------------------------------------------------------------
+
+  final List<Map<String, String>> _messages = [];
+
+  bool get _busy => _isModelLoading || _isGenerating;
+
+  // ---------------------------------------------------------------------------
+  // Lifecycle
+  // ---------------------------------------------------------------------------
+
+  @override
+  void initState() {
+    super.initState();
+
+    _isModelLoaded = _llama.isModelLoaded;
+
+    if (_isModelLoaded) {
+      _modelStatus = 'Gemma 2B Ready';
+      _modelPath = _llama.modelPath;
+    }
   }
 
-  double _calculateMatchScore(String query, String text) {
+  @override
+  void dispose() {
+    _textController.dispose();
+    _scrollController.dispose();
+
+    // Release native model memory.
+    if (_llama.isModelLoaded) {
+      _llama.unloadModel();
+    }
+
+    super.dispose();
+  }
+
+  // ===========================================================================
+  // TEXT CLEANING
+  // ===========================================================================
+
+  List<String> _cleanChunks(List<String> chunks) {
+    return chunks
+        .where((chunk) {
+          final lower = chunk.toLowerCase();
+
+          return !lower.contains('preface') &&
+              !lower.contains('all rights reserved') &&
+              !lower.contains('isbn') &&
+              !lower.contains('acknowledgement') &&
+              !lower.contains('acknowledgment') &&
+              !lower.contains('priyanshi garg');
+        })
+        .map(
+          (chunk) => chunk
+              .trim()
+              .replaceAll(RegExp(r'\s+'), ' '),
+        )
+        .where((chunk) => chunk.isNotEmpty)
+        .toList();
+  }
+
+  // ===========================================================================
+  // LOCAL RANKING
+  // ===========================================================================
+
+  double _calculateMatchScore(
+    String query,
+    String text,
+  ) {
     final queryWords = query
         .toLowerCase()
         .split(RegExp(r'\W+'))
         .where((w) => w.length > 2)
         .toSet();
+
     final textWords = text
         .toLowerCase()
         .split(RegExp(r'\W+'))
         .where((w) => w.length > 2)
         .toSet();
 
-    if (queryWords.isEmpty || textWords.isEmpty) return 0.0;
-    final intersection = queryWords.intersection(textWords).length;
-    final union = queryWords.union(textWords).length;
-    return intersection / union;
+    if (queryWords.isEmpty || textWords.isEmpty) {
+      return 0.0;
+    }
+
+    final intersection =
+        queryWords.intersection(textWords).length;
+
+    final union =
+        queryWords.union(textWords).length;
+
+    if (union == 0) {
+      return 0.0;
+    }
+
+    double score = intersection / union;
+
+    // Exact phrase bonus.
+    final q = query.toLowerCase().trim();
+    final t = text.toLowerCase();
+
+    if (q.isNotEmpty && t.contains(q)) {
+      score += 1.0;
+    }
+
+    // Keyword coverage bonus.
+    final coverage =
+        intersection / queryWords.length;
+
+    score += coverage * 0.5;
+
+    return score;
   }
 
-  Future<String> _processOfflineQuery(String rawInput) async {
-    final query = rawInput.trim();
-    final queryLower = query.toLowerCase();
+  // ===========================================================================
+  // LOAD GEMMA MODEL
+  // ===========================================================================
 
-    // 1. Natural Intent Handling
-    final casualGreetings = {
+  Future<void> _pickAndLoadModel() async {
+    if (_busy) return;
+
+    try {
+      final result = await FilePicker.platform.pickFiles(
+        type: FileType.custom,
+        allowedExtensions: ['gguf'],
+        allowMultiple: false,
+      );
+
+      if (result == null) {
+        return;
+      }
+
+      final path = result.files.single.path;
+
+      if (path == null || path.isEmpty) {
+        _showError(
+          'GGUF model ka valid file path nahi mila.',
+        );
+        return;
+      }
+
+      final fileName =
+          result.files.single.name.toLowerCase();
+
+      if (!fileName.endsWith('.gguf')) {
+        _showError(
+          'Please sirf .gguf model file select karein.',
+        );
+        return;
+      }
+
+      setState(() {
+        _isModelLoading = true;
+        _modelStatus = 'Loading Gemma 2B...';
+      });
+
+      // If another model is loaded, unload it first.
+      if (_llama.isModelLoaded) {
+        await _llama.unloadModel();
+      }
+
+      // -----------------------------------------------------------------------
+      // FIRST ATTEMPT: GPU
+      // -----------------------------------------------------------------------
+
+      bool success = false;
+
+      try {
+        final config = LlamaConfig(
+          modelPath: path,
+
+          // Mobile-friendly starting configuration.
+          nThreads: 4,
+
+          // -1 = all possible layers on GPU.
+          nGpuLayers: -1,
+
+          contextSize: 2048,
+
+          batchSize: 256,
+
+          useGpu: true,
+
+          verbose: false,
+        );
+
+        success = await _llama.loadModel(config);
+      } catch (gpuError) {
+        debugPrint(
+          'GPU model loading failed: $gpuError',
+        );
+
+        // ---------------------------------------------------------------------
+        // SECOND ATTEMPT: CPU
+        // ---------------------------------------------------------------------
+
+        try {
+          if (_llama.isModelLoaded) {
+            await _llama.unloadModel();
+          }
+
+          setState(() {
+            _modelStatus =
+                'GPU unavailable • Trying CPU...';
+          });
+
+          final cpuConfig = LlamaConfig(
+            modelPath: path,
+            nThreads: 4,
+            nGpuLayers: 0,
+            contextSize: 2048,
+            batchSize: 128,
+            useGpu: false,
+            verbose: false,
+          );
+
+          success =
+              await _llama.loadModel(cpuConfig);
+        } catch (cpuError) {
+          debugPrint(
+            'CPU model loading failed: $cpuError',
+          );
+
+          throw Exception(
+            'GPU aur CPU dono mode mein model load nahi hua.\n\n'
+            'GPU Error:\n$gpuError\n\n'
+            'CPU Error:\n$cpuError',
+          );
+        }
+      }
+
+      if (!mounted) return;
+
+      if (success && _llama.isModelLoaded) {
+        _modelPath = path;
+
+        Map<String, dynamic>? info;
+
+        try {
+          info = await _llama.getModelInfo();
+        } catch (_) {}
+
+        final params = info?['nParams'];
+
+        setState(() {
+          _isModelLoaded = true;
+          _isModelLoading = false;
+
+          _modelStatus = params != null
+              ? 'Gemma 2B Ready • $params params'
+              : 'Gemma 2B Ready';
+        });
+
+        _showSuccess(
+          '🟢 Gemma 2B successfully loaded!\n'
+          'Ab AI questions answer kar sakta hai.',
+        );
+      } else {
+        setState(() {
+          _isModelLoaded = false;
+          _isModelLoading = false;
+          _modelStatus = 'Model Load Failed';
+        });
+
+        _showError(
+          'Gemma model load nahi ho saka.',
+        );
+      }
+    } catch (e) {
+      if (!mounted) return;
+
+      setState(() {
+        _isModelLoaded = false;
+        _isModelLoading = false;
+        _modelStatus = 'Model Error';
+      });
+
+      _showError(
+        'Gemma loading error:\n$e',
+      );
+    }
+  }
+
+  // ===========================================================================
+  // GREETINGS
+  // ===========================================================================
+
+  bool _isGreeting(String query) {
+    final normalized = query
+        .toLowerCase()
+        .trim();
+
+    const greetings = {
       'hi',
       'hello',
       'hey',
       'namaste',
       'pranam',
       'kaise ho',
+      'kya haal hai',
       'help',
-      'kya haal hai'
     };
 
-    if (casualGreetings.contains(queryLower) || queryLower.length < 3) {
-      return "Namaste! Mai aapka 100% Offline AI Study Tutor hoon. 📚\n\nAap bina internet ke Biology, Physics, Chemistry ya GS ka koi bhi topic pooch sakte hain (jaise: *Mitochondria, Ribosome, Cell Wall, ATP, Lysosome*).";
+    return greetings.contains(normalized);
+  }
+
+  String _greetingResponse() {
+    return '''
+Namaste! 🙏
+
+Main MockTester ka **Offline AI Exam Tutor** hoon.
+
+📚 Biology
+⚛️ Physics
+🧪 Chemistry
+🌍 General Studies
+
+Aap mujhse concept, definition, reason, difference ya exam-oriented question pooch sakte hain.
+
+🟢 Internet ki zarurat nahi hai.
+🧠 Answer local Gemma AI + study database se generate hota hai.
+''';
+  }
+
+  // ===========================================================================
+  // RETRIEVE LOCAL KNOWLEDGE
+  // ===========================================================================
+
+  Future<List<String>> _retrieveContext(
+    String query,
+  ) async {
+    try {
+      final rawChunks =
+          await KnowledgeBaseService.instance
+              .searchRelevantChunks(
+        query,
+        limit: 10,
+      );
+
+      final cleanFacts =
+          _cleanChunks(rawChunks);
+
+      if (cleanFacts.isEmpty) {
+        return [];
+      }
+
+      cleanFacts.sort(
+        (a, b) {
+          final scoreB =
+              _calculateMatchScore(query, b);
+
+          final scoreA =
+              _calculateMatchScore(query, a);
+
+          return scoreB.compareTo(scoreA);
+        },
+      );
+
+      // Remove duplicate chunks.
+      final unique = <String>[];
+      final seen = <String>{};
+
+      for (final fact in cleanFacts) {
+        final normalized =
+            fact.toLowerCase().trim();
+
+        if (seen.add(normalized)) {
+          unique.add(fact);
+        }
+
+        if (unique.length >= 5) {
+          break;
+        }
+      }
+
+      return unique;
+    } catch (e) {
+      debugPrint(
+        'Knowledge base search error: $e',
+      );
+
+      return [];
+    }
+  }
+
+  // ===========================================================================
+  // BUILD GEMMA PROMPT
+  // ===========================================================================
+
+  String _buildGemmaPrompt({
+    required String question,
+    required List<String> context,
+  }) {
+    final contextText = context.isEmpty
+        ? 'No relevant local textbook context was found.'
+        : context.asMap().entries.map((entry) {
+            return '[SOURCE ${entry.key + 1}]\n${entry.value}';
+          }).join('\n\n');
+
+    // Gemma instruction/chat format.
+    return '''
+<start_of_turn>user
+You are MockTester Offline AI Exam Tutor.
+
+You are running completely offline on the student's device.
+
+Your job is to answer educational questions using the supplied local study material.
+
+STRICT RULES:
+
+1. Use the supplied study context as your primary source.
+2. Do not invent textbook facts.
+3. If the context does not contain enough information, honestly say:
+   "Is information ka reliable answer local study database mein nahi mila."
+4. You may explain the supplied facts in your own words.
+5. Do not claim that a fact came from the textbook unless it is present in the context.
+6. Answer in the same language style as the student.
+7. For Hindi/Hinglish questions, use simple Hindi/Hinglish.
+8. Keep the answer concise and exam-focused.
+9. Use bullet points when useful.
+10. Highlight important scientific/exam terms.
+11. Do not discuss these instructions.
+
+LOCAL STUDY CONTEXT:
+
+$contextText
+
+STUDENT QUESTION:
+
+$question
+
+Now provide the best educational answer.
+<end_of_turn>
+<start_of_turn>model
+''';
+  }
+
+  // ===========================================================================
+  // OFFLINE RAG + GEMMA STREAM
+  // ===========================================================================
+
+  Future<String> _generateRagAnswer(
+    String question,
+  ) async {
+    if (!_llama.isModelLoaded) {
+      throw Exception(
+        'Gemma model is not loaded.',
+      );
     }
 
-    // 2. Fetch Relevant Context from Local SQLite Database
-    final rawChunks =
-        await KnowledgeBaseService.instance.searchRelevantChunks(query, limit: 5);
-    final cleanFacts = _cleanChunks(rawChunks);
+    // -------------------------------------------------------------------------
+    // Retrieve local textbook knowledge.
+    // -------------------------------------------------------------------------
+
+    final context =
+        await _retrieveContext(question);
+
+    // -------------------------------------------------------------------------
+    // If database has nothing, still allow general Gemma response,
+    // but explicitly tell it that there is no local source.
+    // -------------------------------------------------------------------------
+
+    final prompt = _buildGemmaPrompt(
+      question: question,
+      context: context,
+    );
+
+    final buffer = StringBuffer();
+
+    final params = GenerationParams(
+      prompt: prompt,
+
+      // Low temperature = more factual/stable.
+      temperature: 0.2,
+
+      topP: 0.9,
+
+      topK: 40,
+
+      // Keep mobile generation manageable.
+      maxTokens: 384,
+
+      repeatPenalty: 1.1,
+
+      stopSequences: [
+        '<end_of_turn>',
+        '<start_of_turn>',
+      ],
+    );
+
+    // -------------------------------------------------------------------------
+    // Streaming generation.
+    // -------------------------------------------------------------------------
+
+    await for (final token
+        in _llama.generateStream(params)) {
+      buffer.write(token);
+
+      if (!mounted) {
+        break;
+      }
+
+      // Update the currently generating assistant message.
+      if (_messages.isNotEmpty &&
+          _messages.last['role'] == 'assistant') {
+        setState(() {
+          _messages[_messages.length - 1] = {
+            'role': 'assistant',
+            'text': buffer.toString(),
+          };
+        });
+      }
+
+      _scrollToBottom();
+    }
+
+    final answer = buffer.toString().trim();
+
+    if (answer.isEmpty) {
+      throw Exception(
+        'Gemma ne empty response return kiya.',
+      );
+    }
+
+    return answer;
+  }
+
+  // ===========================================================================
+  // DATABASE FALLBACK
+  // ===========================================================================
+
+  Future<String> _processDatabaseFallback(
+    String query,
+  ) async {
+    final cleanFacts =
+        await _retrieveContext(query);
 
     if (cleanFacts.isEmpty) {
-      return "⚠️ Is topic par local textbook database mein direct match nahi mila.\n\n"
-          "💡 **Tip:** Specific scientific keyword likhein (jaise *Ribosome, Mitochondria, Plastids, DNA*).";
+      return '''
+⚠️ Local study database mein is question ka direct
+relevant content nahi mila.
+
+💡 Try a more specific keyword:
+
+• Mitochondria
+• Ribosome
+• DNA
+• Cell Wall
+• ATP
+• Photosynthesis
+''';
     }
 
-    // 3. Rank Chunks Locally
-    cleanFacts.sort((a, b) =>
-        _calculateMatchScore(query, b).compareTo(_calculateMatchScore(query, a)));
-
-    final bestFacts = cleanFacts.take(3).toList();
-
-    // 4. Construct Formatted Output
     final buffer = StringBuffer();
-    buffer.writeln("📚 **Conceptual Notes (100% Offline):**\n");
 
-    for (var fact in bestFacts) {
-      final cleanText = fact.trim().replaceAll(RegExp(r'\s+'), ' ');
-      buffer.writeln("• $cleanText\n");
+    buffer.writeln(
+      '📚 **Offline Study Notes:**\n',
+    );
+
+    for (final fact in cleanFacts.take(3)) {
+      buffer.writeln(
+        '• $fact\n',
+      );
     }
 
-    buffer.writeln("🎯 **High-Yield Exam Takeaway:** Is topic se related organelle function aur scientific terms direct objective questions mein aate hain.");
+    buffer.writeln(
+      '🎯 **Exam Tip:** '
+      'Is topic ke definition, function aur important '
+      'scientific terms ko revise karein.',
+    );
 
     return buffer.toString().trim();
   }
 
+  // ===========================================================================
+  // SEND MESSAGE
+  // ===========================================================================
+
   Future<void> _sendMessage() async {
-    final query = _textController.text.trim();
-    if (query.isEmpty || _isLoading) return;
+    final query =
+        _textController.text.trim();
 
-    setState(() {
-      _messages.add({"role": "user", "text": query});
-      _isLoading = true;
-    });
-    _textController.clear();
-    _scrollToBottom();
+    if (query.isEmpty || _busy) {
+      return;
+    }
 
-    final stopwatch = Stopwatch()..start();
-    final reply = await _processOfflineQuery(query);
-    stopwatch.stop();
+    // -------------------------------------------------------------------------
+    // Add user message.
+    // -------------------------------------------------------------------------
 
     setState(() {
       _messages.add({
-        "role": "assistant",
-        "text": reply,
-        "time": "${stopwatch.elapsedMilliseconds}ms",
+        'role': 'user',
+        'text': query,
       });
-      _isLoading = false;
+
+      _isGenerating = true;
     });
+
+    _textController.clear();
+
     _scrollToBottom();
+
+    final stopwatch =
+        Stopwatch()..start();
+
+    try {
+      // -----------------------------------------------------------------------
+      // Greeting does not need LLM.
+      // -----------------------------------------------------------------------
+
+      if (_isGreeting(query)) {
+        final reply =
+            _greetingResponse();
+
+        stopwatch.stop();
+
+        if (!mounted) return;
+
+        setState(() {
+          _messages.add({
+            'role': 'assistant',
+            'text': reply,
+            'time':
+                '${stopwatch.elapsedMilliseconds}ms',
+          });
+
+          _isGenerating = false;
+        });
+
+        _scrollToBottom();
+
+        return;
+      }
+
+      // -----------------------------------------------------------------------
+      // If model is not loaded, use database-only fallback.
+      // -----------------------------------------------------------------------
+
+      if (!_llama.isModelLoaded) {
+        final reply =
+            await _processDatabaseFallback(
+          query,
+        );
+
+        stopwatch.stop();
+
+        if (!mounted) return;
+
+        setState(() {
+          _messages.add({
+            'role': 'assistant',
+            'text': reply,
+            'time':
+                '${stopwatch.elapsedMilliseconds}ms',
+          });
+
+          _isGenerating = false;
+        });
+
+        _scrollToBottom();
+
+        return;
+      }
+
+      // -----------------------------------------------------------------------
+      // Add empty assistant message FIRST.
+      // Streaming tokens will update this message.
+      // -----------------------------------------------------------------------
+
+      if (!mounted) return;
+
+      setState(() {
+        _messages.add({
+          'role': 'assistant',
+          'text': '',
+        });
+      });
+
+      _scrollToBottom();
+
+      // -----------------------------------------------------------------------
+      // RAG + Gemma.
+      // -----------------------------------------------------------------------
+
+      try {
+        await _generateRagAnswer(query);
+      } catch (llmError) {
+        debugPrint(
+          'LLM generation failed: $llmError',
+        );
+
+        // Remove empty/failed assistant message.
+        if (mounted &&
+            _messages.isNotEmpty &&
+            _messages.last['role'] == 'assistant') {
+          setState(() {
+            _messages.removeLast();
+          });
+        }
+
+        // Database fallback.
+        final fallback =
+            await _processDatabaseFallback(
+          query,
+        );
+
+        if (!mounted) return;
+
+        setState(() {
+          _messages.add({
+            'role': 'assistant',
+            'text':
+                '$fallback\n\n'
+                '⚠️ **AI generation unavailable:** '
+                'Database answer shown instead.',
+          });
+        });
+      }
+
+      stopwatch.stop();
+
+      if (!mounted) return;
+
+      // Add generation time to final assistant message.
+      if (_messages.isNotEmpty &&
+          _messages.last['role'] == 'assistant') {
+        final currentText =
+            _messages.last['text'] ?? '';
+
+        setState(() {
+          _messages[_messages.length - 1] = {
+            'role': 'assistant',
+            'text': currentText,
+            'time':
+                '${stopwatch.elapsedMilliseconds}ms',
+          };
+
+          _isGenerating = false;
+        });
+      } else {
+        setState(() {
+          _isGenerating = false;
+        });
+      }
+
+      _scrollToBottom();
+    } catch (e) {
+      stopwatch.stop();
+
+      if (!mounted) return;
+
+      setState(() {
+        _messages.add({
+          'role': 'assistant',
+          'text':
+              '❌ Offline AI error:\n$e',
+          'time':
+              '${stopwatch.elapsedMilliseconds}ms',
+        });
+
+        _isGenerating = false;
+      });
+
+      _scrollToBottom();
+    }
   }
 
-  void _scrollToBottom() {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (_scrollController.hasClients) {
-        _scrollController.animateTo(
-          _scrollController.position.maxScrollExtent + 120,
-          duration: const Duration(milliseconds: 250),
-          curve: Curves.easeOut,
-        );
-      }
+  // ===========================================================================
+  // STOP GENERATION
+  // ===========================================================================
+
+  Future<void> _stopGeneration() async {
+    if (!_isGenerating) return;
+
+    try {
+      await _llama.stopGeneration();
+    } catch (e) {
+      debugPrint(
+        'Stop generation error: $e',
+      );
+    }
+
+    if (!mounted) return;
+
+    setState(() {
+      _isGenerating = false;
     });
   }
+
+  // ===========================================================================
+  // SCROLL
+  // ===========================================================================
+
+  void _scrollToBottom() {
+    WidgetsBinding.instance
+        .addPostFrameCallback((_) {
+      if (!_scrollController.hasClients) {
+        return;
+      }
+
+      _scrollController.animateTo(
+        _scrollController.position.maxScrollExtent +
+            160,
+        duration:
+            const Duration(milliseconds: 200),
+        curve: Curves.easeOut,
+      );
+    });
+  }
+
+  // ===========================================================================
+  // UI HELPERS
+  // ===========================================================================
+
+  void _showSuccess(String message) {
+    if (!mounted) return;
+
+    ScaffoldMessenger.of(context)
+        .showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor:
+            Colors.green.shade700,
+        duration:
+            const Duration(seconds: 3),
+      ),
+    );
+  }
+
+  void _showError(String message) {
+    if (!mounted) return;
+
+    ScaffoldMessenger.of(context)
+        .showSnackBar(
+      SnackBar(
+        content: Text(message),
+        backgroundColor:
+            Colors.red.shade700,
+        duration:
+            const Duration(seconds: 6),
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // BUILD
+  // ===========================================================================
 
   @override
   Widget build(BuildContext context) {
-    final isDark = widget.isDarkMode;
+    final isDark =
+        widget.isDarkMode;
 
     return Scaffold(
-      backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+      backgroundColor: isDark
+          ? const Color(0xFF0F172A)
+          : const Color(0xFFF8FAFC),
+
+      // -----------------------------------------------------------------------
+      // APP BAR
+      // -----------------------------------------------------------------------
+
       appBar: AppBar(
-        title: const Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        title: Column(
+          crossAxisAlignment:
+              CrossAxisAlignment.start,
           children: [
-            Text("AI Exam Tutor",
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            const Text(
+              'AI Exam Tutor',
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight:
+                    FontWeight.bold,
+              ),
+            ),
+
+            const SizedBox(height: 2),
+
             Row(
               children: [
-                Icon(Icons.offline_pin_rounded, size: 12, color: Colors.greenAccent),
-                SizedBox(width: 4),
-                Text("100% Offline Engine Active",
-                    style: TextStyle(fontSize: 10, color: Colors.white70)),
+                Icon(
+                  _isModelLoaded
+                      ? Icons.circle
+                      : Icons.circle_outlined,
+                  size: 9,
+                  color: _isModelLoaded
+                      ? Colors.greenAccent
+                      : Colors.orangeAccent,
+                ),
+
+                const SizedBox(width: 5),
+
+                Flexible(
+                  child: Text(
+                    _modelStatus,
+                    maxLines: 1,
+                    overflow:
+                        TextOverflow.ellipsis,
+                    style:
+                        const TextStyle(
+                      fontSize: 10,
+                      color:
+                          Colors.white70,
+                    ),
+                  ),
+                ),
               ],
             ),
           ],
         ),
-        backgroundColor:
-            isDark ? const Color(0xFF1E293B) : const Color(0xFF2563EB),
-        foregroundColor: Colors.white,
+
+        backgroundColor: isDark
+            ? const Color(0xFF1E293B)
+            : const Color(0xFF2563EB),
+
+        foregroundColor:
+            Colors.white,
+
         elevation: 0.5,
+
+        actions: [
+          // -------------------------------------------------------------------
+          // MODEL PICKER
+          // -------------------------------------------------------------------
+
+          IconButton(
+            tooltip:
+                'Select Gemma GGUF model',
+            onPressed:
+                _busy
+                    ? null
+                    : _pickAndLoadModel,
+            icon: _isModelLoading
+                ? const SizedBox(
+                    width: 20,
+                    height: 20,
+                    child:
+                        CircularProgressIndicator(
+                      strokeWidth: 2,
+                      color:
+                          Colors.white,
+                    ),
+                  )
+                : Icon(
+                    _isModelLoaded
+                        ? Icons
+                            .check_circle
+                        : Icons
+                            .folder_open,
+                    color:
+                        _isModelLoaded
+                            ? Colors
+                                .greenAccent
+                            : Colors
+                                .white,
+                  ),
+          ),
+
+          // -------------------------------------------------------------------
+          // UNLOAD MODEL
+          // -------------------------------------------------------------------
+
+          if (_isModelLoaded)
+            IconButton(
+              tooltip:
+                  'Unload AI model',
+              onPressed:
+                  _busy
+                      ? null
+                      : () async {
+                          await _llama
+                              .unloadModel();
+
+                          if (!mounted) {
+                            return;
+                          }
+
+                          setState(() {
+                            _isModelLoaded =
+                                false;
+                            _modelPath =
+                                null;
+                            _modelStatus =
+                                'AI Model Not Loaded';
+                          });
+
+                          _showSuccess(
+                            'AI model unloaded.',
+                          );
+                        },
+              icon: const Icon(
+                Icons.memory,
+              ),
+            ),
+        ],
       ),
+
+      // -----------------------------------------------------------------------
+      // BODY
+      // -----------------------------------------------------------------------
+
       body: Column(
         children: [
           Expanded(
             child: _messages.isEmpty
-                ? Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(Icons.psychology_rounded,
-                            size: 54, color: Color(0xFF2563EB)),
-                        const SizedBox(height: 10),
-                        Text(
-                          "Offline Study Engine Ready",
-                          style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: isDark ? Colors.white70 : Colors.black87,
-                          ),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          "Bina internet ke koi bhi concept search karein...",
-                          style: TextStyle(fontSize: 12, color: Colors.grey.shade600),
-                        ),
-                      ],
-                    ),
+                ? _buildEmptyState(
+                    isDark,
                   )
                 : ListView.builder(
-                    controller: _scrollController,
-                    padding: const EdgeInsets.all(12),
-                    itemCount: _messages.length,
-                    itemBuilder: (context, index) {
-                      final msg = _messages[index];
-                      final isUser = msg['role'] == 'user';
-                      return Align(
-                        alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
-                        child: Container(
-                          margin: const EdgeInsets.symmetric(vertical: 6),
-                          padding: const EdgeInsets.all(12),
-                          constraints: BoxConstraints(
-                              maxWidth: MediaQuery.of(context).size.width * 0.85),
-                          decoration: BoxDecoration(
-                            color: isUser
-                                ? const Color(0xFF2563EB)
-                                : isDark
-                                    ? const Color(0xFF1E293B)
-                                    : Colors.white,
-                            borderRadius: BorderRadius.circular(12),
-                            border: isUser
-                                ? null
-                                : Border.all(color: Colors.grey.withOpacity(0.2)),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                msg['text'] ?? '',
-                                style: TextStyle(
-                                  color: isUser
-                                      ? Colors.white
-                                      : isDark
-                                          ? Colors.white
-                                          : const Color(0xFF0F172A),
-                                  fontSize: 13.5,
-                                  height: 1.4,
-                                ),
-                              ),
-                              if (msg.containsKey('time')) ...[
-                                const SizedBox(height: 5),
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    const Icon(Icons.flash_on_rounded,
-                                        size: 11, color: Colors.amber),
-                                    const SizedBox(width: 2),
-                                    Text(
-                                      "Time: ${msg['time']}",
-                                      style: const TextStyle(
-                                          fontSize: 9.5, color: Colors.grey),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ],
-                          ),
-                        ),
+                    controller:
+                        _scrollController,
+                    padding:
+                        const EdgeInsets.all(
+                      12,
+                    ),
+                    itemCount:
+                        _messages.length,
+                    itemBuilder:
+                        (context, index) {
+                      return _buildMessageBubble(
+                        _messages[index],
+                        isDark,
                       );
                     },
                   ),
           ),
-          if (_isLoading)
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-              child: LinearProgressIndicator(minHeight: 2),
+
+          // -------------------------------------------------------------------
+          // GENERATING INDICATOR
+          // -------------------------------------------------------------------
+
+          if (_isGenerating)
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 4,
+              ),
+              child:
+                  LinearProgressIndicator(
+                minHeight: 2,
+                color:
+                    const Color(0xFF2563EB),
+                backgroundColor:
+                    Colors.grey
+                        .withOpacity(
+                  0.15,
+                ),
+              ),
             ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-            decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF1E293B) : Colors.white,
-              border: Border(top: BorderSide(color: Colors.grey.withOpacity(0.2))),
+
+          // -------------------------------------------------------------------
+          // INPUT
+          // -------------------------------------------------------------------
+
+          _buildInputArea(isDark),
+        ],
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // EMPTY STATE
+  // ===========================================================================
+
+  Widget _buildEmptyState(
+    bool isDark,
+  ) {
+    return Center(
+      child: Padding(
+        padding:
+            const EdgeInsets.all(24),
+        child: Column(
+          mainAxisAlignment:
+              MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons
+                  .psychology_rounded,
+              size: 58,
+              color:
+                  const Color(0xFF2563EB),
             ),
-            child: Row(
-              children: [
-                Expanded(
-                  child: TextField(
-                    controller: _textController,
-                    style: TextStyle(color: isDark ? Colors.white : Colors.black),
-                    decoration: const InputDecoration(
-                      hintText: "Offline doubt likhein (e.g. Ribosome, hi)...",
-                      hintStyle: TextStyle(fontSize: 13, color: Colors.grey),
-                      border: InputBorder.none,
-                      contentPadding: EdgeInsets.symmetric(horizontal: 12),
-                    ),
-                    onSubmitted: (_) => _sendMessage(),
+
+            const SizedBox(height: 12),
+
+            Text(
+              _isModelLoaded
+                  ? 'Offline AI Ready'
+                  : 'Offline Study Engine Ready',
+              textAlign:
+                  TextAlign.center,
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight:
+                    FontWeight.bold,
+                color: isDark
+                    ? Colors.white70
+                    : Colors.black87,
+              ),
+            ),
+
+            const SizedBox(height: 6),
+
+            Text(
+              _isModelLoaded
+                  ? 'Gemma 2B + local textbook database active'
+                  : 'Gemma model load karne ke liye upar 📁 button dabayein.',
+              textAlign:
+                  TextAlign.center,
+              style: TextStyle(
+                fontSize: 12,
+                height: 1.4,
+                color:
+                    Colors.grey.shade600,
+              ),
+            ),
+
+            const SizedBox(height: 18),
+
+            if (!_isModelLoaded)
+              ElevatedButton.icon(
+                onPressed:
+                    _isModelLoading
+                        ? null
+                        : _pickAndLoadModel,
+                icon: const Icon(
+                  Icons.folder_open,
+                ),
+                label: const Text(
+                  'Select Gemma GGUF',
+                ),
+                style:
+                    ElevatedButton.styleFrom(
+                  backgroundColor:
+                      const Color(
+                    0xFF2563EB,
+                  ),
+                  foregroundColor:
+                      Colors.white,
+                  padding:
+                      const EdgeInsets
+                          .symmetric(
+                    horizontal: 18,
+                    vertical: 12,
                   ),
                 ),
-                IconButton(
-                  icon: const Icon(Icons.send_rounded, color: Color(0xFF2563EB)),
-                  onPressed: _sendMessage,
+              ),
+
+            if (_isModelLoaded) ...[
+              const SizedBox(height: 16),
+
+              Container(
+                padding:
+                    const EdgeInsets.all(
+                  12,
                 ),
-              ],
+                decoration:
+                    BoxDecoration(
+                  color: isDark
+                      ? const Color(
+                          0xFF1E293B,
+                        )
+                      : Colors.white,
+                  borderRadius:
+                      BorderRadius.circular(
+                    12,
+                  ),
+                  border: Border.all(
+                    color: Colors.green
+                        .withOpacity(
+                      0.25,
+                    ),
+                  ),
+                ),
+                child: const Row(
+                  mainAxisSize:
+                      MainAxisSize.min,
+                  children: [
+                    Icon(
+                      Icons.check_circle,
+                      color: Colors.green,
+                      size: 18,
+                    ),
+                    SizedBox(width: 8),
+                    Text(
+                      'Gemma 2B Loaded',
+                      style: TextStyle(
+                        fontWeight:
+                            FontWeight.w600,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // MESSAGE BUBBLE
+  // ===========================================================================
+
+  Widget _buildMessageBubble(
+    Map<String, String> msg,
+    bool isDark,
+  ) {
+    final isUser =
+        msg['role'] == 'user';
+
+    final text =
+        msg['text'] ?? '';
+
+    final isEmptyAssistant =
+        !isUser &&
+        text.trim().isEmpty;
+
+    return Align(
+      alignment: isUser
+          ? Alignment.centerRight
+          : Alignment.centerLeft,
+      child: Container(
+        margin:
+            const EdgeInsets.symmetric(
+          vertical: 6,
+        ),
+        padding:
+            const EdgeInsets.all(12),
+        constraints:
+            BoxConstraints(
+          maxWidth:
+              MediaQuery.of(context)
+                      .size
+                      .width *
+                  0.88,
+        ),
+        decoration:
+            BoxDecoration(
+          color: isUser
+              ? const Color(
+                  0xFF2563EB,
+                )
+              : isDark
+                  ? const Color(
+                      0xFF1E293B,
+                    )
+                  : Colors.white,
+          borderRadius:
+              BorderRadius.circular(
+            14,
+          ),
+          border: isUser
+              ? null
+              : Border.all(
+                  color: Colors.grey
+                      .withOpacity(
+                    0.2,
+                  ),
+                ),
+        ),
+        child: Column(
+          crossAxisAlignment:
+              CrossAxisAlignment.start,
+          children: [
+            if (isEmptyAssistant)
+              const SizedBox(
+                width: 22,
+                height: 22,
+                child:
+                    CircularProgressIndicator(
+                  strokeWidth: 2,
+                ),
+              )
+            else
+              Text(
+                text,
+                style: TextStyle(
+                  color: isUser
+                      ? Colors.white
+                      : isDark
+                          ? Colors.white
+                          : const Color(
+                              0xFF0F172A,
+                            ),
+                  fontSize: 13.5,
+                  height: 1.45,
+                ),
+              ),
+
+            if (msg.containsKey(
+              'time',
+            )) ...[
+              const SizedBox(
+                height: 6,
+              ),
+
+              Row(
+                mainAxisSize:
+                    MainAxisSize.min,
+                children: [
+                  const Icon(
+                    Icons.flash_on_rounded,
+                    size: 11,
+                    color:
+                        Colors.amber,
+                  ),
+
+                  const SizedBox(
+                    width: 3,
+                  ),
+
+                  Text(
+                    'Time: ${msg['time']}',
+                    style:
+                        const TextStyle(
+                      fontSize: 9.5,
+                      color:
+                          Colors.grey,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // INPUT AREA
+  // ===========================================================================
+
+  Widget _buildInputArea(
+    bool isDark,
+  ) {
+    return Container(
+      padding:
+          const EdgeInsets.symmetric(
+        horizontal: 10,
+        vertical: 8,
+      ),
+      decoration:
+          BoxDecoration(
+        color: isDark
+            ? const Color(
+                0xFF1E293B,
+              )
+            : Colors.white,
+        border: Border(
+          top: BorderSide(
+            color: Colors.grey
+                .withOpacity(
+              0.2,
             ),
           ),
+        ),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: TextField(
+              controller:
+                  _textController,
+              enabled: !_busy,
+              minLines: 1,
+              maxLines: 4,
+              textInputAction:
+                  TextInputAction.send,
+              style: TextStyle(
+                color: isDark
+                    ? Colors.white
+                    : Colors.black,
+              ),
+              decoration:
+                  InputDecoration(
+                hintText:
+                    _isModelLoaded
+                        ? 'AI doubt likhein...'
+                        : 'Database doubt likhein...',
+                hintStyle:
+                    const TextStyle(
+                  fontSize: 13,
+                  color:
+                      Colors.grey,
+                ),
+                border:
+                    InputBorder.none,
+                contentPadding:
+                    const EdgeInsets
+                        .symmetric(
+                  horizontal: 12,
+                ),
+              ),
+              onSubmitted:
+                  (_) =>
+                      _sendMessage(),
+            ),
+          ),
+
+          // -------------------------------------------------------------------
+          // STOP BUTTON
+          // -------------------------------------------------------------------
+
+          if (_isGenerating)
+            IconButton(
+              tooltip:
+                  'Stop generating',
+              onPressed:
+                  _stopGeneration,
+              icon: const Icon(
+                Icons.stop_circle,
+                color:
+                    Colors.red,
+              ),
+            )
+          else
+            IconButton(
+              tooltip: 'Send',
+              onPressed:
+                  _busy
+                      ? null
+                      : _sendMessage,
+              icon: const Icon(
+                Icons.send_rounded,
+                color:
+                    Color(0xFF2563EB),
+              ),
+            ),
         ],
       ),
     );
