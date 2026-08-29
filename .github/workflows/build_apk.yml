@@ -29,7 +29,7 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Install CMake 3.18.1 and NDK
+      - name: Install CMake 3.18.1 and NDK 25
         run: |
           yes | sdkmanager --licenses || true
           sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
@@ -44,20 +44,49 @@ jobs:
         working-directory: flutter_app
         run: flutter pub get
 
-      - name: Configure CMake and Android Gradle
+      - name: Configure CMake, NDK & Gradle Alignment
         run: |
+          # 1. Inject exact cmake.dir and ndk.dir into local.properties
           echo "cmake.dir=/usr/local/lib/android/sdk/cmake/3.18.1" >> flutter_app/android/local.properties
           echo "ndk.dir=/usr/local/lib/android/sdk/ndk/25.2.9519653" >> flutter_app/android/local.properties
 
+          # 2. Patch package name & namespace safely
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/namespace = .*/namespace = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
 
+          # 3. Force NDK 25 on all subprojects (Fix for flutter_llama CXX1104 error)
           if [ -f flutter_app/android/app/build.gradle.kts ]; then
             sed -i '/android {/a\    ndkVersion = "25.2.9519653"' flutter_app/android/app/build.gradle.kts
           elif [ -f flutter_app/android/app/build.gradle ]; then
             sed -i '/android {/a\    ndkVersion "25.2.9519653"' flutter_app/android/app/build.gradle
+          fi
+
+          # Force subproject plugins (like flutter_llama) to use NDK 25
+          if [ -f flutter_app/android/build.gradle.kts ]; then
+            cat >> flutter_app/android/build.gradle.kts <<'EOF'
+          subprojects {
+              afterEvaluate {
+                  if (project.extensions.findByName("android") != null) {
+                      val android = project.extensions.getByName("android") as com.android.build.gradle.BaseExtension
+                      android.ndkVersion = "25.2.9519653"
+                  }
+              }
+          }
+          EOF
+          elif [ -f flutter_app/android/build.gradle ]; then
+            cat >> flutter_app/android/build.gradle <<'EOF'
+          subprojects {
+              afterEvaluate { project ->
+                  if (project.hasProperty("android")) {
+                      android {
+                          ndkVersion "25.2.9519653"
+                      }
+                  }
+              }
+          }
+          EOF
           fi
 
       - name: Setup Keystore & Permissions
