@@ -39,32 +39,42 @@ jobs:
 
       - name: Inject Missing llama.cpp Submodule into Package Cache
         run: |
-          # 1. Clone compatible llama.cpp repository
           git clone --depth 1 https://github.com/ggerganov/llama.cpp.git /tmp/llama_source
-
-          # 2. Find llama_cpp_dart location in pub-cache and link llama.cpp
           LLAMA_DART_PKG=$(find /home/runner/.pub-cache/hosted/pub.dev/ -maxdepth 1 -name "llama_cpp_dart-*" | head -n 1)
           if [ -d "$LLAMA_DART_PKG" ]; then
             echo "Found llama_cpp_dart at: $LLAMA_DART_PKG"
             mkdir -p "$LLAMA_DART_PKG/src/llama.cpp"
             cp -r /tmp/llama_source/* "$LLAMA_DART_PKG/src/llama.cpp/"
-            
-            # Root level fallback
             mkdir -p "$LLAMA_DART_PKG/llama.cpp"
             cp -r /tmp/llama_source/* "$LLAMA_DART_PKG/llama.cpp/"
           fi
 
-      - name: Configure Android Alignment (API 34 & minSdk 24)
+      - name: Configure Android SDK 36, App ID & Desugaring
         run: |
+          # 1. Update SDK Versions (compileSdk 36, targetSdk 36, minSdk 24)
+          find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/compileSdk = .*/compileSdk = 36/g' {} +
+          find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/targetSdk = .*/targetSdk = 36/g' {} +
+          find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/minSdk = .*/minSdk = 24/g' {} +
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/namespace = .*/namespace = "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/minSdk = .*/minSdk = 24/g' {} +
-          find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/compileSdk = .*/compileSdk = 34/g' {} +
 
+          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/compileSdkVersion .*/compileSdkVersion 36/g' {} +
+          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/targetSdkVersion .*/targetSdkVersion 36/g' {} +
+          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/minSdkVersion .*/minSdkVersion 24/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
           find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/minSdkVersion .*/minSdkVersion 24/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/compileSdkVersion .*/compileSdkVersion 34/g' {} +
+
+          # 2. Inject Desugaring for flutter_local_notifications in build.gradle.kts
+          if [ -f "flutter_app/android/app/build.gradle.kts" ]; then
+            sed -i '/compileOptions {/a \        isCoreLibraryDesugaringEnabled = true' flutter_app/android/app/build.gradle.kts
+            sed -i '/dependencies {/a \    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")' flutter_app/android/app/build.gradle.kts
+          fi
+
+          # 3. Inject Desugaring in Groovy build.gradle fallback
+          if [ -f "flutter_app/android/app/build.gradle" ]; then
+            sed -i '/compileOptions {/a \        coreLibraryDesugaringEnabled true' flutter_app/android/app/build.gradle
+            sed -i '/dependencies {/a \    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"' flutter_app/android/app/build.gradle
+          fi
 
       - name: Setup Keystore & Permissions
         working-directory: flutter_app/android
@@ -104,5 +114,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester 100% Offline Build #${{ github.run_number }} APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} (SDK 36 + Desugared) APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
