@@ -11,128 +11,427 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      # ============================================================
+      # 1. CHECKOUT
+      # ============================================================
       - name: 📁 Checkout Repository Code
         uses: actions/checkout@v4
 
+      # ============================================================
+      # 2. JAVA 17
+      # ============================================================
       - name: ☕ Setup Java Development Kit (JDK 17)
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
+      # ============================================================
+      # 3. FLUTTER
+      # ============================================================
       - name: ⚡ Setup Flutter Environment
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
           cache: true
 
+      # ============================================================
+      # 4. ANDROID SDK
+      # ============================================================
+      - name: 📱 Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      # ============================================================
+      # 5. INSTALL CMAKE + NDK + ANDROID BUILD TOOLS
+      #
+      # flutter_llama requires native C/C++ compilation.
+      # Your previous error was:
+      #
+      # CMake '3.18.1' was not found
+      #
+      # So we explicitly install CMake 3.18.1.
+      # ============================================================
+      - name: 🔧 Install Android Native Build Tools
+        run: |
+          yes | sdkmanager --licenses || true
+
+          sdkmanager "platform-tools"
+          sdkmanager "platforms;android-36"
+          sdkmanager "build-tools;36.0.0"
+
+          # Required by flutter_llama
+          sdkmanager "cmake;3.18.1"
+
+          # Android NDK for native llama.cpp compilation
+          sdkmanager "ndk;25.2.9519653"
+
+      # ============================================================
+      # 6. VERIFY NATIVE TOOLS
+      # ============================================================
+      - name: 🔍 Verify Android SDK / CMake / NDK
+        run: |
+          echo "======================================"
+          echo "ANDROID_HOME"
+          echo "======================================"
+          echo "$ANDROID_HOME"
+
+          echo ""
+          echo "======================================"
+          echo "CMAKE"
+          echo "======================================"
+          ls -la "$ANDROID_HOME/cmake"
+
+          echo ""
+          echo "======================================"
+          echo "NDK"
+          echo "======================================"
+          ls -la "$ANDROID_HOME/ndk"
+
+          echo ""
+          echo "======================================"
+          echo "CMAKE VERSION"
+          echo "======================================"
+          "$ANDROID_HOME/cmake/3.18.1/bin/cmake" --version
+
+      # ============================================================
+      # 7. RE-GENERATE ANDROID PROJECT
+      #
+      # YOU ASKED TO KEEP THIS.
+      # ============================================================
       - name: 🛠️ Re-generate Native Android Project Files
         working-directory: flutter_app
-        run: flutter create . --platforms=android --org com --project-name testing
+        run: |
+          flutter create . \
+            --platforms=android \
+            --org com \
+            --project-name testing
 
+      # ============================================================
+      # 8. GET DEPENDENCIES
+      # ============================================================
       - name: 📦 Get Flutter Dependencies
         working-directory: flutter_app
         run: |
           flutter pub get
           flutter pub deps
 
+      # ============================================================
+      # 9. GENERATE APP ICONS
+      # ============================================================
       - name: 🎨 Generate App Icons
         working-directory: flutter_app
-        run: dart run flutter_launcher_icons || true
+        run: |
+          dart run flutter_launcher_icons || true
 
+      # ============================================================
+      # 10. PATCH ANDROID CONFIGURATION
+      # ============================================================
       - name: 🔧 Auto-Patch Gradle, Desugaring & Google Services
         run: |
-          # 1. Package Name Patch
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle.kts" -exec sed -i 's/namespace = .*/namespace = "com.testing"/g' {} +
 
-          # 2. CompileSDK 36 Patch
-          find flutter_app/android/ ~/.pub-cache/ -type f -name "*.kts" -exec sed -i 's/compileSdk.*/compileSdk = 36/g' {} +
-          find flutter_app/android/ ~/.pub-cache/ -type f -name "build.gradle" -exec sed -i 's/compileSdkVersion.*/compileSdkVersion 36/g' {} +
-          find flutter_app/android/ ~/.pub-cache/ -type f -name "build.gradle" -exec sed -i 's/compileSdk .*/compileSdk 36/g' {} +
+          echo "======================================"
+          echo "1. Package Name Patch"
+          echo "======================================"
 
-          # 3. Settings Gradle Plugin Injection
-          if [ -f flutter_app/android/settings.gradle ]; then
-            sed -i 's/plugins {/plugins {\n    id "com.google.gms.google-services" version "4.4.2" apply false/' flutter_app/android/settings.gradle
-          elif [ -f flutter_app/android/settings.gradle.kts ]; then
-            sed -i 's/plugins {/plugins {\n    id("com.google.gms.google-services") version "4.4.2" apply false/' flutter_app/android/settings.gradle.kts
-          fi
+          find flutter_app/android/ \
+            -type f \
+            -name "build.gradle" \
+            -exec sed -i \
+            's/applicationId .*/applicationId "com.testing"/g' {} +
 
-          # 4. Desugaring & Google Services Injection
+          find flutter_app/android/ \
+            -type f \
+            -name "build.gradle" \
+            -exec sed -i \
+            's/namespace .*/namespace "com.testing"/g' {} +
+
+          find flutter_app/android/ \
+            -type f \
+            -name "build.gradle.kts" \
+            -exec sed -i \
+            's/applicationId = .*/applicationId = "com.testing"/g' {} +
+
+          find flutter_app/android/ \
+            -type f \
+            -name "build.gradle.kts" \
+            -exec sed -i \
+            's/namespace = .*/namespace = "com.testing"/g' {} +
+
+          echo "======================================"
+          echo "2. Compile SDK 36 Patch"
+          echo "======================================"
+
+          find flutter_app/android/ \
+            -type f \
+            -name "*.kts" \
+            -exec sed -i \
+            's/compileSdk.*/compileSdk = 36/g' {} +
+
+          find flutter_app/android/ \
+            -type f \
+            -name "build.gradle" \
+            -exec sed -i \
+            's/compileSdkVersion.*/compileSdkVersion 36/g' {} +
+
+          find flutter_app/android/ \
+            -type f \
+            -name "build.gradle" \
+            -exec sed -i \
+            's/compileSdk .*/compileSdk 36/g' {} +
+
+          echo "======================================"
+          echo "3. CMake / NDK Configuration"
+          echo "======================================"
+
+          # Add NDK version to app module when possible.
           if [ -f flutter_app/android/app/build.gradle ]; then
-            sed -i 's/plugins {/plugins {\n    id "com.google.gms.google-services"/' flutter_app/android/app/build.gradle
-            sed -i 's/compileOptions {/compileOptions {\n        coreLibraryDesugaringEnabled true/' flutter_app/android/app/build.gradle
-            printf '\ndependencies {\n    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"\n}\n' >> flutter_app/android/app/build.gradle
-          elif [ -f flutter_app/android/app/build.gradle.kts ]; then
-            sed -i 's/plugins {/plugins {\n    id("com.google.gms.google-services")/' flutter_app/android/app/build.gradle.kts
-            sed -i 's/compileOptions {/compileOptions {\n        isCoreLibraryDesugaringEnabled = true/' flutter_app/android/app/build.gradle.kts
-            printf '\ndependencies {\n    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")\n}\n' >> flutter_app/android/app/build.gradle.kts
+            if grep -q "android {" flutter_app/android/app/build.gradle; then
+              sed -i '/android {/a\    ndkVersion "25.2.9519653"' \
+                flutter_app/android/app/build.gradle
+            fi
           fi
 
-      # 🛡️ 5. Auto Inject ProGuard / R8 Missing Rules (Fixes R8 minifyRelease error)
+          if [ -f flutter_app/android/app/build.gradle.kts ]; then
+            if grep -q "android {" flutter_app/android/app/build.gradle.kts; then
+              sed -i '/android {/a\    ndkVersion = "25.2.9519653"' \
+                flutter_app/android/app/build.gradle.kts
+            fi
+          fi
+
+          echo "======================================"
+          echo "4. Settings Gradle Plugin Injection"
+          echo "======================================"
+
+          if [ -f flutter_app/android/settings.gradle ]; then
+
+            if ! grep -q "com.google.gms.google-services" \
+              flutter_app/android/settings.gradle; then
+
+              sed -i \
+                's/plugins {/plugins {\n    id "com.google.gms.google-services" version "4.4.2" apply false/' \
+                flutter_app/android/settings.gradle
+
+            fi
+
+          elif [ -f flutter_app/android/settings.gradle.kts ]; then
+
+            if ! grep -q "com.google.gms.google-services" \
+              flutter_app/android/settings.gradle.kts; then
+
+              sed -i \
+                's/plugins {/plugins {\n    id("com.google.gms.google-services") version "4.4.2" apply false/' \
+                flutter_app/android/settings.gradle.kts
+
+            fi
+
+          fi
+
+          echo "======================================"
+          echo "5. Desugaring & Google Services"
+          echo "======================================"
+
+          if [ -f flutter_app/android/app/build.gradle ]; then
+
+            if ! grep -q 'id "com.google.gms.google-services"' \
+              flutter_app/android/app/build.gradle; then
+
+              sed -i \
+                's/plugins {/plugins {\n    id "com.google.gms.google-services"/' \
+                flutter_app/android/app/build.gradle
+
+            fi
+
+            if grep -q "compileOptions {" \
+              flutter_app/android/app/build.gradle; then
+
+              if ! grep -q "coreLibraryDesugaringEnabled" \
+                flutter_app/android/app/build.gradle; then
+
+                sed -i \
+                  's/compileOptions {/compileOptions {\n        coreLibraryDesugaringEnabled true/' \
+                  flutter_app/android/app/build.gradle
+
+              fi
+
+            fi
+
+            if ! grep -q "desugar_jdk_libs" \
+              flutter_app/android/app/build.gradle; then
+
+              cat >> flutter_app/android/app/build.gradle <<'EOF'
+
+dependencies {
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"
+}
+EOF
+
+            fi
+
+          elif [ -f flutter_app/android/app/build.gradle.kts ]; then
+
+            if ! grep -q 'id("com.google.gms.google-services")' \
+              flutter_app/android/app/build.gradle.kts; then
+
+              sed -i \
+                's/plugins {/plugins {\n    id("com.google.gms.google-services")/' \
+                flutter_app/android/app/build.gradle.kts
+
+            fi
+
+            if grep -q "compileOptions {" \
+              flutter_app/android/app/build.gradle.kts; then
+
+              if ! grep -q "isCoreLibraryDesugaringEnabled" \
+                flutter_app/android/app/build.gradle.kts; then
+
+                sed -i \
+                  's/compileOptions {/compileOptions {\n        isCoreLibraryDesugaringEnabled = true/' \
+                  flutter_app/android/app/build.gradle.kts
+
+              fi
+
+            fi
+
+            if ! grep -q "desugar_jdk_libs" \
+              flutter_app/android/app/build.gradle.kts; then
+
+              cat >> flutter_app/android/app/build.gradle.kts <<'EOF'
+
+dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
+}
+EOF
+
+            fi
+
+          fi
+
+      # ============================================================
+      # 11. PROGUARD / R8 RULES
+      # ============================================================
       - name: 🛡️ Inject ProGuard Rules for R8 Optimizer
         run: |
+
           mkdir -p flutter_app/android/app
+
           cat << 'EOF' > flutter_app/android/app/proguard-rules.pro
+
           -dontwarn com.google.mediapipe.**
           -keep class com.google.mediapipe.** { *; }
+
           -dontwarn com.google.auto.value.**
           -dontwarn javax.lang.model.**
           -dontwarn autovalue.shaded.**
+
           -dontwarn org.bouncycastle.jsse.**
           -dontwarn org.conscrypt.**
           -dontwarn org.openjsse.**
+
           -dontwarn okhttp3.internal.platform.**
           -dontwarn javax.annotation.**
+
           -ignorewarnings
+
           EOF
 
-          # Bind ProGuard rules in app/build.gradle
           if [ -f flutter_app/android/app/build.gradle ]; then
-            sed -i 's/buildTypes {/buildTypes {\n        release {\n            proguardFiles getDefaultProguardFile("proguard-android.optimize.txt"), "proguard-rules.pro"\n        }/' flutter_app/android/app/build.gradle
+
+            if ! grep -q "proguard-rules.pro" \
+              flutter_app/android/app/build.gradle; then
+
+              sed -i \
+                's/buildTypes {/buildTypes {\n        release {\n            proguardFiles getDefaultProguardFile("proguard-android.optimize.txt"), "proguard-rules.pro"\n        }/' \
+                flutter_app/android/app/build.gradle
+
+            fi
+
           fi
 
-      # 🔑 1. Generate Keystore & Print SHA-1 Key
+      # ============================================================
+      # 12. GENERATE DEBUG KEYSTORE + SHA1
+      # ============================================================
       - name: 🔑 Extract & Print SHA-1 Key
         working-directory: flutter_app/android
         run: |
+
           mkdir -p ~/.config/.android
-          keytool -genkey -v -keystore ~/.config/.android/debug.keystore \
-            -alias AndroidDebugKey -storepass android -keypass android \
-            -keyalg RSA -keysize 2048 -validity 10000 \
-            -dname "CN=Android Debug,O=Android,C=US"
+
+          keytool -genkey -v \
+            -keystore ~/.config/.android/debug.keystore \
+            -alias AndroidDebugKey \
+            -storepass android \
+            -keypass android \
+            -keyalg RSA \
+            -keysize 2048 \
+            -validity 10000 \
+            -dname "CN=Android Debug,O=Android,C=US" \
+            || true
+
           ./gradlew signingReport
 
-      # 🛠️ 2. Build Release APK (With DB Assets Included)
+      # ============================================================
+      # 13. VERIFY FLUTTER LLAMA
+      # ============================================================
+      - name: 🦙 Verify flutter_llama Dependency
+        working-directory: flutter_app
+        run: |
+          echo "Checking flutter_llama..."
+          flutter pub deps | grep -i "flutter_llama" || true
+
+      # ============================================================
+      # 14. BUILD RELEASE APK
+      # ============================================================
       - name: 🛠️ Build APK (With Secrets Injected)
         working-directory: flutter_app
         run: |
-          flutter build apk --release --no-tree-shake-icons \
+
+          flutter clean
+          flutter pub get
+
+          flutter build apk \
+            --release \
+            --no-tree-shake-icons \
             --dart-define=GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }} \
             --dart-define=GOOGLE_API_KEY2=${{ secrets.GOOGLE_API_KEY2 }} \
             --dart-define=GROQ_API_KEY=${{ secrets.GROQ_API_KEY }} \
             --dart-define=GROQ_API_KEY2=${{ secrets.GROQ_API_KEY2 }}
 
+      # ============================================================
+      # 15. UPLOAD APK
+      # ============================================================
       - name: 📤 Upload Build Artifact (APK)
         uses: actions/upload-artifact@v4
         with:
           name: MockTester-Release-APK
           path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
 
-      # 📦 3. Auto Rename & Maximum Zip Compression
+      # ============================================================
+      # 16. RENAME + ZIP
+      # ============================================================
       - name: 📦 Auto-Rename APK & Compress
         working-directory: flutter_app
         run: |
-          cp build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
-          zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
 
-      # 📱 4. Send Unique Zip To Telegram
+          cp \
+            build/app/outputs/flutter-apk/app-release.apk \
+            build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
+
+          zip -9 -j \
+            build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip \
+            build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
+
+      # ============================================================
+      # 17. TELEGRAM
+      # ============================================================
       - name: 📱 Send Zip File Direct To Telegram
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 *MockTester Build #${{ github.run_number }} APK Ready!*\n\n📦 File: `MockTester_Build_${{ github.run_number }}.zip`\n✨ Unzip karke direct install karein (No duplicate conflict)."
-          document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
+          message: |
+            🚀 *MockTester Build #${{ github.run_number }} APK Ready!*
+
+            📦 File: `MockTester_Build_${{ github.run_number }}.zip`
+
+            ✨ Unzip karke direct install karein.
+          document: flutter_app/build/app/outputs/apk/flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
