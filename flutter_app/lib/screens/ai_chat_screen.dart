@@ -120,15 +120,13 @@ class _AiChatScreenState extends State<AiChatScreen> {
       _llama?.dispose();
       _llama = null;
 
-      // Model configuration for Pure CPU
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // GPU OFF
+      modelParams.nGpuLayers = 0; // Pure CPU Mode
 
       final contextParams = ContextParams();
       contextParams.nCtx = 2048;
-      contextParams.nThreads = 4; // CPU Cores
+      contextParams.nThreads = 4;
 
-      // Llama 0.0.9 positional constructor
       _llama = Llama(path, modelParams, contextParams);
 
       if (!mounted) return;
@@ -239,18 +237,18 @@ Provide a concise, point-wise educational answer in simple language.
     final buffer = StringBuffer();
     _shouldStop = false;
 
-    // Set prompt in llama_cpp_dart
     _llama!.setPrompt(prompt);
 
-    // Iterative token streaming using getNext()
     while (!_shouldStop && mounted) {
-      final token = _llama!.getNext();
+      final tokenResult = _llama!.getNext();
+      final tokenText = tokenResult.$1;
+      final isDone = tokenResult.$2;
 
-      if (token.isEmpty || token == '<end_of_turn>' || token == '</s>') {
+      if (isDone || tokenText.isEmpty || tokenText == '<end_of_turn>' || tokenText == '</s>') {
         break;
       }
 
-      buffer.write(token);
+      buffer.write(tokenText);
 
       if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
         setState(() {
@@ -262,7 +260,6 @@ Provide a concise, point-wise educational answer in simple language.
       }
       _scrollToBottom();
 
-      // Yield frame to keep Flutter UI interactive
       await Future.delayed(Duration.zero);
     }
 
