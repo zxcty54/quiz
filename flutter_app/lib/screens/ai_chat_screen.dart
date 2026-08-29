@@ -39,8 +39,17 @@ class _AiChatScreenState extends State<AiChatScreen> {
   void dispose() {
     _textController.dispose();
     _scrollController.dispose();
-    _llama?.dispose();
+    _disposeModelSafely();
     super.dispose();
+  }
+
+  void _disposeModelSafely() {
+    try {
+      _llama?.dispose();
+    } catch (e) {
+      debugPrint('Model dispose warning: $e');
+    }
+    _llama = null;
   }
 
   List<String> _cleanChunks(List<String> chunks) {
@@ -91,13 +100,12 @@ class _AiChatScreenState extends State<AiChatScreen> {
     if (_busy) return;
 
     try {
-      // FIX: Use FileType.any so Android storage picker does not throw Unsupported Filter PlatformException
       final result = await FilePicker.platform.pickFiles(
         type: FileType.any,
         allowMultiple: false,
       );
 
-      if (result == null) return;
+      if (result == null || result.files.isEmpty) return;
 
       final path = result.files.single.path;
       if (path == null || path.isEmpty || !File(path).existsSync()) {
@@ -106,7 +114,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
       }
 
       final fileName = result.files.single.name.toLowerCase();
-      // Code-level extension verification
       if (!fileName.endsWith('.gguf')) {
         _showError('Please sirf .gguf model file select karein.');
         return;
@@ -114,21 +121,21 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Loading Model to Phone RAM...';
+        _modelStatus = 'Allocating Phone Memory...';
       });
 
-      // Give UI a chance to render spinner
-      await Future.delayed(const Duration(milliseconds: 100));
+      // Allow UI to render loading spinner before heavy native allocation
+      await Future.delayed(const Duration(milliseconds: 300));
 
-      _llama?.dispose();
-      _llama = null;
+      _disposeModelSafely();
 
+      // Crash-Proof Context Configuration for Mobile Hardware
       final modelParams = ModelParams();
       modelParams.nGpuLayers = 0; // Pure CPU on Android
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 1536; // Optimized context length for 4GB phone RAM
-      contextParams.nThreads = 4; // Performance CPU cores
+      contextParams.nCtx = 512; // Safe context buffer to prevent Native OOM kills
+      contextParams.nThreads = 2; // 2 CPU threads prevent thermal throttling & UI lock
 
       _llama = Llama(path, modelParams, contextParams);
 
@@ -138,10 +145,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _isModelLoaded = true;
         _isModelLoading = false;
         _modelPath = path;
-        _modelStatus = 'Offline AI Ready (Gemma 2 CPU)';
+        _modelStatus = 'Offline AI Ready (CPU Active)';
       });
 
-      _showSuccess('🟢 Offline AI Loaded! Zero-internet active.');
+      _showSuccess('🟢 Offline AI Model successfully loaded!');
     } catch (e) {
       if (!mounted) return;
 
@@ -166,10 +173,12 @@ class _AiChatScreenState extends State<AiChatScreen> {
 Namaste! 🙏
 
 Main MockTester ka **100% Offline Duolingo-Style AI Exam Tutor** hoon.
-📚 General Science (Physics, Chemistry, Bio) | ⚖️ Indian Polity | 🌍 Bihar GK
+📚 General Science | ⚖️ Indian Polity | 🌍 General Studies
 
-Aap koi bhi concept ya sawal poochein, main use 3 आसान स्टेप्स में समझाऊंगा।
-🟢 Internet: OFF | CPU Mode: ACTIVE
+Aap koi bhi concept ya topic poochein:
+1. 💡 Micro Concept
+2. ⚡ 3-Step Breakdown
+3. 🎯 Instant Challenge
 ''';
   }
 
@@ -207,21 +216,21 @@ Aap koi bhi concept ya sawal poochein, main use 3 आसान स्टेप�
     required List<String> context,
   }) {
     final contextText = context.isEmpty
-        ? 'General Study Concept'
+        ? 'General Exam Study Material'
         : context.join('\n');
 
     return '''
 <start_of_turn>user
 You are a Duolingo-style structured learning AI tutor for competitive exams (BPSC, BSSC, SSC CGL).
 Explain the topic in crisp, bite-sized points:
-1. 💡 Micro Concept (1 line definition + KaTeX formula)
-2. ⚡ 3-Step Breakdown
+1. 💡 Micro Concept (1-line definition)
+2. ⚡ 3-Step Breakdown (3 short bullet points)
 3. 🎯 1 Micro Challenge MCQ with answer.
 
 STUDY CONTEXT:
 $contextText
 
-QUESTION / TOPIC:
+TOPIC:
 $question
 <end_of_turn>
 <start_of_turn>model
@@ -247,15 +256,19 @@ $question
       final tokenText = tokenResult.$1;
       final isDone = tokenResult.$2;
 
-      if (isDone || tokenText.isEmpty || tokenText == '<end_of_turn>' || tokenText == '</s>') {
+      if (isDone ||
+          tokenText.isEmpty ||
+          tokenText == '<end_of_turn>' ||
+          tokenText == '</s>') {
         break;
       }
 
       buffer.write(tokenText);
       tokenCount++;
 
-      // Update UI every 2 tokens for smooth rendering
-      if (tokenCount % 2 == 0 && _messages.isNotEmpty && _messages.last['role'] == 'assistant') {
+      if (tokenCount % 2 == 0 &&
+          _messages.isNotEmpty &&
+          _messages.last['role'] == 'assistant') {
         setState(() {
           _messages[_messages.length - 1] = {
             'role': 'assistant',
@@ -265,8 +278,8 @@ $question
         _scrollToBottom();
       }
 
-      // Prevents UI thread lockup on Android
-      await Future.delayed(const Duration(milliseconds: 1));
+      // Allow UI event loop to process touches
+      await Future.delayed(const Duration(milliseconds: 2));
     }
 
     final answer = buffer.toString().trim();
@@ -278,7 +291,7 @@ $question
   Future<String> _processDatabaseFallback(String query) async {
     final cleanFacts = await _retrieveContext(query);
     if (cleanFacts.isEmpty) {
-      return '⚠️ Local study database mein direct topic nahi mila.\n\n💡 Try: Gravitation, Article 32, Gaganyaan, Ohm\'s Law, Mitochondria.';
+      return '⚠️ Local study database mein direct topic nahi mila.\n\n💡 Try: Gravitation, Article 32, Mitochondria, Ohm\'s Law.';
     }
 
     final buffer = StringBuffer();
@@ -529,7 +542,7 @@ $question
             const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
             const SizedBox(height: 12),
             Text(
-              _isModelLoaded ? 'Gemma 2 2B Ready (Zero Lag)' : 'Offline Learning Agent Ready',
+              _isModelLoaded ? 'Gemma 2 Ready (Zero Lag)' : 'Offline Learning Agent Ready',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16,
@@ -637,7 +650,9 @@ $question
               textInputAction: TextInputAction.send,
               style: TextStyle(color: isDark ? Colors.white : Colors.black, fontSize: 13),
               decoration: InputDecoration(
-                hintText: _isModelLoaded ? 'Ask any concept (e.g. Gravitation, Writs)...' : 'Type topic name...',
+                hintText: _isModelLoaded
+                    ? 'Ask any concept (e.g. Gravitation, Writs)...'
+                    : 'Type topic name...',
                 hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
                 border: InputBorder.none,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 10),
