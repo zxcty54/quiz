@@ -1,4 +1,4 @@
-name: "Build MockTester Android APK"
+name: Build MockTester Android APK
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
       - name: Checkout Repository Code
         uses: actions/checkout@v4
 
-      - name: Setup Java Development Kit (JDK 17)
+      - name: Setup Java Development Kit
         uses: actions/setup-java@v4
         with:
           distribution: "temurin"
@@ -29,76 +29,51 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Accept Android Licenses & SDK Tools
+      - name: Accept Android Licenses
         run: |
           yes | sdkmanager --licenses || true
           sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
 
-      - name: Re-generate Native Android Project Files
+      - name: Re-generate Android Project
         working-directory: flutter_app
-        run: |
-          flutter create . --platforms=android --org com --project-name testing
+        run: flutter create . --platforms=android --org com --project-name testing
 
       - name: Get Flutter Dependencies
         working-directory: flutter_app
-        run: |
-          flutter pub get
+        run: flutter pub get
 
       - name: Auto-Patch Android Configuration
         run: |
           find flutter_app/android/ -type f \( -name "build.gradle" -o -name "build.gradle.kts" \) -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
           find flutter_app/android/ -type f \( -name "build.gradle" -o -name "build.gradle.kts" \) -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
 
-          if [ -f flutter_app/android/app/build.gradle ]; then
-            if ! grep -q "coreLibraryDesugaring" flutter_app/android/app/build.gradle; then
-              cat >> flutter_app/android/app/build.gradle <<'EOF'
-
-dependencies {
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'
-}
-EOF
-            fi
-          fi
-
-      - name: Fix Permissions & Keystore
+      - name: Setup Keystore & Permissions
         working-directory: flutter_app/android
         run: |
           chmod +x gradlew || true
           mkdir -p ~/.config/.android
-          keytool -genkey -v \
-            -keystore ~/.config/.android/debug.keystore \
-            -alias AndroidDebugKey \
-            -storepass android \
-            -keypass android \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -dname "CN=Android Debug,O=Android,C=US" \
-            || true
+          keytool -genkey -v -keystore ~/.config/.android/debug.keystore -alias AndroidDebugKey -storepass android -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US" || true
 
       - name: Build Release APK
         working-directory: flutter_app
-        run: |
-          flutter clean
-          flutter pub get
-          flutter build apk --release --no-tree-shake-icons --dart-define=GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }} --dart-define=GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}
+        run: flutter build apk --release --no-tree-shake-icons --dart-define=GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }} --dart-define=GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}
 
-      - name: Upload Build Artifact (APK)
+      - name: Upload Build Artifact
         uses: actions/upload-artifact@v4
         with:
           name: MockTester-Release-APK
           path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
 
-      - name: Auto-Rename APK & Compress
+      - name: Compress APK for Telegram
         working-directory: flutter_app
         run: |
           cp build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
           zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
 
-      - name: Send Zip File Direct To Telegram
+      - name: Send Zip To Telegram
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "MockTester Build #${{ github.run_number }} APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
