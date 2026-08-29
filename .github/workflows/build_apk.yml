@@ -1,4 +1,4 @@
-name: build MockTester Android APK
+name: Build MockTester Android APK
 
 on:
   push:
@@ -11,33 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ============================================================
-      # 1. CHECKOUT
-      # ============================================================
       - name: 📁 Checkout Repository Code
         uses: actions/checkout@v4
 
-      # ============================================================
-      # 2. JAVA 17 SETUP
-      # ============================================================
       - name: ☕ Setup Java Development Kit (JDK 17)
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
           java-version: '17'
 
-      # ============================================================
-      # 3. FLUTTER SETUP
-      # ============================================================
       - name: ⚡ Setup Flutter Environment
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
           cache: true
 
-      # ============================================================
-      # 4. ANDROID SDK SETUP
-      # ============================================================
       - name: 📱 Setup Android SDK
         uses: android-actions/setup-android@v3
 
@@ -46,9 +34,6 @@ jobs:
           yes | sdkmanager --licenses || true
           sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0"
 
-      # ============================================================
-      # 5. RE-GENERATE NATIVE ANDROID PROJECT
-      # ============================================================
       - name: 🛠️ Re-generate Native Android Project Files
         working-directory: flutter_app
         run: |
@@ -57,25 +42,17 @@ jobs:
             --org com \
             --project-name testing
 
-      # ============================================================
-      # 6. GET DEPENDENCIES & ICONS
-      # ============================================================
-      - name: 📦 Get Flutter Dependencies
+      - name: 📦 Get Flutter Dependencies & Icons
         working-directory: flutter_app
         run: |
           flutter pub get
           dart run flutter_launcher_icons || true
 
-      # ============================================================
-      # 7. AUTO-PATCH GRADLE & GOOGLE SERVICES
-      # ============================================================
       - name: 🔧 Auto-Patch Android Configuration
         run: |
-          # 1. Set App ID & Namespace
           find flutter_app/android/ -type f \( -name "build.gradle" -o -name "build.gradle.kts" \) -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
           find flutter_app/android/ -type f \( -name "build.gradle" -o -name "build.gradle.kts" \) -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
 
-          # 2. Add Desugaring & Google Services to app build.gradle
           if [ -f flutter_app/android/app/build.gradle ]; then
             if ! grep -q "coreLibraryDesugaring" flutter_app/android/app/build.gradle; then
               cat >> flutter_app/android/app/build.gradle <<'EOF'
@@ -87,10 +64,7 @@ EOF
             fi
           fi
 
-      # ============================================================
-      # 8. KEYSTORE & GRADLEW PERMISSIONS
-      # ============================================================
-      - name: 🔑 Fix Permissions & Extract SHA-1
+      - name: 🔑 Fix Permissions & Extract Keystore
         working-directory: flutter_app/android
         run: |
           chmod +x gradlew || true
@@ -106,10 +80,7 @@ EOF
             -dname "CN=Android Debug,O=Android,C=US" \
             || true
 
-      # ============================================================
-      # 9. BUILD RELEASE APK
-      # ============================================================
-      - name: 🛠️ Build APK
+      - name: 🛠️ Build Release APK
         working-directory: flutter_app
         run: |
           flutter clean
@@ -120,27 +91,18 @@ EOF
             --dart-define=GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }} \
             --dart-define=GROQ_API_KEY=${{ secrets.GROQ_API_KEY }}
 
-      # ============================================================
-      # 10. UPLOAD ARTIFACT (GITHUB UI)
-      # ============================================================
       - name: 📤 Upload Build Artifact (APK)
         uses: actions/upload-artifact@v4
         with:
           name: MockTester-Release-APK
           path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
 
-      # ============================================================
-      # 11. RENAME & COMPRESS
-      # ============================================================
       - name: 📦 Auto-Rename APK & Compress
         working-directory: flutter_app
         run: |
           cp build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
           zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
 
-      # ============================================================
-      # 12. TELEGRAM DELIVERY
-      # ============================================================
       - name: 📱 Send Zip File Direct To Telegram
         uses: appleboy/telegram-action@master
         with:
@@ -151,5 +113,5 @@ EOF
 
             📦 File: `MockTester_Build_${{ github.run_number }}.zip`
 
-            ✨ Direct install karke test karein.
+            ✨ Unzip karke test karein.
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
