@@ -51,8 +51,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
               !lower.contains('all rights reserved') &&
               !lower.contains('isbn') &&
               !lower.contains('acknowledgement') &&
-              !lower.contains('acknowledgment') &&
-              !lower.contains('priyanshi garg');
+              !lower.contains('acknowledgment');
         })
         .map((chunk) => chunk.trim().replaceAll(RegExp(r'\s+'), ' '))
         .where((chunk) => chunk.isNotEmpty)
@@ -101,7 +100,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       if (result == null) return;
 
       final path = result.files.single.path;
-      if (path == null || path.isEmpty) {
+      if (path == null || path.isEmpty || !File(path).existsSync()) {
         _showError('GGUF model ka valid file path nahi mila.');
         return;
       }
@@ -114,18 +113,21 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Loading Model to Phone CPU...';
+        _modelStatus = 'Loading Model to Phone RAM...';
       });
+
+      // Give UI a chance to render spinner
+      await Future.delayed(const Duration(milliseconds: 100));
 
       _llama?.dispose();
       _llama = null;
 
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU
+      modelParams.nGpuLayers = 0; // Pure CPU on Android
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 2048;
-      contextParams.nThreads = 4;
+      contextParams.nCtx = 1536; // Optimized context length for 4GB phone RAM
+      contextParams.nThreads = 4; // Use 4 Performance CPU cores
 
       _llama = Llama(path, modelParams, contextParams);
 
@@ -135,10 +137,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _isModelLoaded = true;
         _isModelLoading = false;
         _modelPath = path;
-        _modelStatus = 'Offline AI Ready (CPU)';
+        _modelStatus = 'Offline AI Ready (Gemma 2 CPU)';
       });
 
-      _showSuccess('🟢 Offline AI loaded on Phone CPU!');
+      _showSuccess('🟢 Offline AI Loaded! Zero-internet active.');
     } catch (e) {
       if (!mounted) return;
 
@@ -162,18 +164,18 @@ class _AiChatScreenState extends State<AiChatScreen> {
     return '''
 Namaste! 🙏
 
-Main MockTester ka **100% Offline AI Exam Tutor** hoon.
-📚 Biology | ⚛️ Physics | 🧪 Chemistry | 🌍 General Studies
+Main MockTester ka **100% Offline Duolingo-Style AI Exam Tutor** hoon.
+📚 General Science (Physics, Chemistry, Bio) | ⚖️ Indian Polity | 🌍 Bihar GK
 
-Aap mujhse koi bhi concept ya doubt pooch sakte hain.
-🟢 Internet ki zarurat nahi hai (Phone CPU execution active).
+Aap koi bhi concept ya sawal poochein, main use 3 आसान स्टेप्स में समझाऊंगा।
+🟢 Internet: OFF | CPU Mode: ACTIVE
 ''';
   }
 
   Future<List<String>> _retrieveContext(String query) async {
     try {
       final rawChunks = await KnowledgeBaseService.instance
-          .searchRelevantChunks(query, limit: 10);
+          .searchRelevantChunks(query, limit: 8);
       final cleanFacts = _cleanChunks(rawChunks);
       if (cleanFacts.isEmpty) return [];
 
@@ -189,7 +191,7 @@ Aap mujhse koi bhi concept ya doubt pooch sakte hain.
       for (final fact in cleanFacts) {
         final normalized = fact.toLowerCase().trim();
         if (seen.add(normalized)) unique.add(fact);
-        if (unique.length >= 5) break;
+        if (unique.length >= 3) break;
       }
 
       return unique;
@@ -204,23 +206,22 @@ Aap mujhse koi bhi concept ya doubt pooch sakte hain.
     required List<String> context,
   }) {
     final contextText = context.isEmpty
-        ? 'No relevant local textbook context was found.'
-        : context.asMap().entries.map((entry) {
-            return '[SOURCE ${entry.key + 1}]\n${entry.value}';
-          }).join('\n\n');
+        ? 'General Study Concept'
+        : context.join('\n');
 
     return '''
 <start_of_turn>user
-You are MockTester Offline AI Exam Tutor running on the student's device.
-Answer educational questions using the supplied local study material.
+You are a Duolingo-style structured learning AI tutor for competitive exams (BPSC, BSSC, SSC CGL).
+Explain the topic in crisp, bite-sized points:
+1. 💡 Micro Concept (1 line definition + KaTeX formula)
+2. ⚡ 3-Step Breakdown
+3. 🎯 1 Micro Challenge MCQ with answer.
 
-LOCAL STUDY CONTEXT:
+STUDY CONTEXT:
 $contextText
 
-STUDENT QUESTION:
+QUESTION / TOPIC:
 $question
-
-Provide a concise, point-wise educational answer in simple language.
 <end_of_turn>
 <start_of_turn>model
 ''';
@@ -239,6 +240,7 @@ Provide a concise, point-wise educational answer in simple language.
 
     _llama!.setPrompt(prompt);
 
+    int tokenCount = 0;
     while (!_shouldStop && mounted) {
       final tokenResult = _llama!.getNext();
       final tokenText = tokenResult.$1;
@@ -249,18 +251,21 @@ Provide a concise, point-wise educational answer in simple language.
       }
 
       buffer.write(tokenText);
+      tokenCount++;
 
-      if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
+      // Update UI every 2 tokens for smooth 60fps rendering
+      if (tokenCount % 2 == 0 && _messages.isNotEmpty && _messages.last['role'] == 'assistant') {
         setState(() {
           _messages[_messages.length - 1] = {
             'role': 'assistant',
             'text': buffer.toString(),
           };
         });
+        _scrollToBottom();
       }
-      _scrollToBottom();
 
-      await Future.delayed(Duration.zero);
+      // Crucial: Prevents UI Thread lockup on low-end phones
+      await Future.delayed(const Duration(milliseconds: 1));
     }
 
     final answer = buffer.toString().trim();
@@ -272,11 +277,11 @@ Provide a concise, point-wise educational answer in simple language.
   Future<String> _processDatabaseFallback(String query) async {
     final cleanFacts = await _retrieveContext(query);
     if (cleanFacts.isEmpty) {
-      return '⚠️ Local study database mein is question ka direct content nahi mila.\n\n💡 Try topics like: Mitochondria, DNA, Cell Wall, ATP, etc.';
+      return '⚠️ Local study database mein direct topic nahi mila.\n\n💡 Try: Gravitation, Article 32, Gaganyaan, Ohm\'s Law, Mitochondria.';
     }
 
     final buffer = StringBuffer();
-    buffer.writeln('📚 **Offline Study Notes:**\n');
+    buffer.writeln('📚 **Offline Notes:**\n');
     for (final fact in cleanFacts.take(3)) {
       buffer.writeln('• $fact\n');
     }
@@ -324,7 +329,7 @@ Provide a concise, point-wise educational answer in simple language.
           _messages.add({
             'role': 'assistant',
             'text': reply,
-            'time': '${stopwatch.elapsedMilliseconds}ms',
+            'time': '${stopwatch.elapsedMilliseconds}ms (DB Mode)',
           });
           _isGenerating = false;
         });
@@ -334,7 +339,7 @@ Provide a concise, point-wise educational answer in simple language.
 
       if (!mounted) return;
       setState(() {
-        _messages.add({'role': 'assistant', 'text': ''});
+        _messages.add({'role': 'assistant', 'text': 'Thinking...'});
       });
       _scrollToBottom();
 
@@ -342,20 +347,15 @@ Provide a concise, point-wise educational answer in simple language.
         await _generateRagAnswer(query);
       } catch (llmError) {
         debugPrint('LLM generation failed: $llmError');
-        if (mounted &&
-            _messages.isNotEmpty &&
-            _messages.last['role'] == 'assistant') {
-          setState(() {
-            _messages.removeLast();
-          });
-        }
         final fallback = await _processDatabaseFallback(query);
         if (!mounted) return;
         setState(() {
-          _messages.add({
-            'role': 'assistant',
-            'text': '$fallback\n\n⚠️ Showing database answer.',
-          });
+          if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
+            _messages[_messages.length - 1] = {
+              'role': 'assistant',
+              'text': '$fallback\n\n*(Note: Showing local DB fallback)*',
+            };
+          }
         });
       }
 
@@ -405,8 +405,8 @@ Provide a concise, point-wise educational answer in simple language.
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (!_scrollController.hasClients) return;
       _scrollController.animateTo(
-        _scrollController.position.maxScrollExtent + 160,
-        duration: const Duration(milliseconds: 200),
+        _scrollController.position.maxScrollExtent + 120,
+        duration: const Duration(milliseconds: 150),
         curve: Curves.easeOut,
       );
     });
@@ -429,7 +429,7 @@ Provide a concise, point-wise educational answer in simple language.
       SnackBar(
         content: Text(message),
         backgroundColor: Colors.red.shade700,
-        duration: const Duration(seconds: 6),
+        duration: const Duration(seconds: 5),
       ),
     );
   }
@@ -439,27 +439,24 @@ Provide a concise, point-wise educational answer in simple language.
     final isDark = widget.isDarkMode;
 
     return Scaffold(
-      backgroundColor:
-          isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+      backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'AI Exam Tutor',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              'Offline Duolingo AI Tutor',
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 2),
             Row(
               children: [
                 Icon(
                   _isModelLoaded ? Icons.circle : Icons.circle_outlined,
-                  size: 9,
-                  color: _isModelLoaded
-                      ? Colors.greenAccent
-                      : Colors.orangeAccent,
+                  size: 8,
+                  color: _isModelLoaded ? Colors.greenAccent : Colors.orangeAccent,
                 ),
-                const SizedBox(width: 5),
+                const SizedBox(width: 4),
                 Flexible(
                   child: Text(
                     _modelStatus,
@@ -472,46 +469,24 @@ Provide a concise, point-wise educational answer in simple language.
             ),
           ],
         ),
-        backgroundColor:
-            isDark ? const Color(0xFF1E293B) : const Color(0xFF2563EB),
+        backgroundColor: isDark ? const Color(0xFF1E293B) : const Color(0xFF2563EB),
         foregroundColor: Colors.white,
         elevation: 0.5,
         actions: [
           IconButton(
-            tooltip: 'Select GGUF model',
+            tooltip: 'Load Gemma 2 GGUF Model',
             onPressed: _busy ? null : _pickAndLoadModel,
             icon: _isModelLoading
                 ? const SizedBox(
-                    width: 20,
-                    height: 20,
-                    child: CircularProgressIndicator(
-                      strokeWidth: 2,
-                      color: Colors.white,
-                    ),
+                    width: 18,
+                    height: 18,
+                    child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
                   )
                 : Icon(
                     _isModelLoaded ? Icons.check_circle : Icons.folder_open,
                     color: _isModelLoaded ? Colors.greenAccent : Colors.white,
                   ),
           ),
-          if (_isModelLoaded)
-            IconButton(
-              tooltip: 'Unload AI model',
-              onPressed: _busy
-                  ? null
-                  : () {
-                      _llama?.dispose();
-                      _llama = null;
-                      if (!mounted) return;
-                      setState(() {
-                        _isModelLoaded = false;
-                        _modelPath = null;
-                        _modelStatus = 'AI Model Not Loaded';
-                      });
-                      _showSuccess('AI model unloaded.');
-                    },
-              icon: const Icon(Icons.memory),
-            ),
         ],
       ),
       body: Column(
@@ -530,7 +505,7 @@ Provide a concise, point-wise educational answer in simple language.
           ),
           if (_isGenerating)
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 2),
               child: LinearProgressIndicator(
                 minHeight: 2,
                 color: const Color(0xFF2563EB),
@@ -550,16 +525,10 @@ Provide a concise, point-wise educational answer in simple language.
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(
-              Icons.psychology_rounded,
-              size: 58,
-              color: Color(0xFF2563EB),
-            ),
+            const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
             const SizedBox(height: 12),
             Text(
-              _isModelLoaded
-                  ? 'Offline AI Ready (CPU Active)'
-                  : 'Offline Study Engine Ready',
+              _isModelLoaded ? 'Gemma 2 2B Ready (Zero Lag)' : 'Offline Learning Agent Ready',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16,
@@ -570,21 +539,21 @@ Provide a concise, point-wise educational answer in simple language.
             const SizedBox(height: 6),
             Text(
               _isModelLoaded
-                  ? 'GGUF Model + local textbook database active'
-                  : 'Model load karne ke liye upar 📁 button dabayein.',
+                  ? 'Ask any exam topic for 3-step breakdown & instant challenge!'
+                  : 'Gemma 2 2B GGUF file load karne ke liye upar 📁 button dabayein.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, height: 1.4, color: Colors.grey.shade600),
             ),
-            const SizedBox(height: 18),
+            const SizedBox(height: 16),
             if (!_isModelLoaded)
               ElevatedButton.icon(
                 onPressed: _isModelLoading ? null : _pickAndLoadModel,
-                icon: const Icon(Icons.folder_open),
-                label: const Text('Select GGUF Model'),
+                icon: const Icon(Icons.folder_open, size: 18),
+                label: const Text('Load Gemma 2 (.gguf)'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF2563EB),
                   foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 ),
               ),
           ],
@@ -596,12 +565,11 @@ Provide a concise, point-wise educational answer in simple language.
   Widget _buildMessageBubble(Map<String, String> msg, bool isDark) {
     final isUser = msg['role'] == 'user';
     final text = msg['text'] ?? '';
-    final isEmptyAssistant = !isUser && text.trim().isEmpty;
 
     return Align(
       alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
       child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 6),
+        margin: const EdgeInsets.symmetric(vertical: 5),
         padding: const EdgeInsets.all(12),
         constraints: BoxConstraints(
           maxWidth: MediaQuery.of(context).size.width * 0.88,
@@ -618,35 +586,28 @@ Provide a concise, point-wise educational answer in simple language.
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (isEmptyAssistant)
-              const SizedBox(
-                width: 22,
-                height: 22,
-                child: CircularProgressIndicator(strokeWidth: 2),
-              )
-            else
-              Text(
-                text,
-                style: TextStyle(
-                  color: isUser
-                      ? Colors.white
-                      : isDark
-                          ? Colors.white
-                          : const Color(0xFF0F172A),
-                  fontSize: 13.5,
-                  height: 1.45,
-                ),
+            Text(
+              text,
+              style: TextStyle(
+                color: isUser
+                    ? Colors.white
+                    : isDark
+                        ? Colors.white
+                        : const Color(0xFF0F172A),
+                fontSize: 13,
+                height: 1.45,
               ),
+            ),
             if (msg.containsKey('time')) ...[
-              const SizedBox(height: 6),
+              const SizedBox(height: 5),
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Icon(Icons.flash_on_rounded, size: 11, color: Colors.amber),
-                  const SizedBox(width: 3),
+                  const Icon(Icons.flash_on_rounded, size: 10, color: Colors.amber),
+                  const SizedBox(width: 2),
                   Text(
                     'Time: ${msg['time']}',
-                    style: const TextStyle(fontSize: 9.5, color: Colors.grey),
+                    style: const TextStyle(fontSize: 9, color: Colors.grey),
                   ),
                 ],
               ),
@@ -659,7 +620,7 @@ Provide a concise, point-wise educational answer in simple language.
 
   Widget _buildInputArea(bool isDark) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF1E293B) : Colors.white,
         border: Border(top: BorderSide(color: Colors.grey.withOpacity(0.2))),
@@ -671,23 +632,21 @@ Provide a concise, point-wise educational answer in simple language.
               controller: _textController,
               enabled: !_busy,
               minLines: 1,
-              maxLines: 4,
+              maxLines: 3,
               textInputAction: TextInputAction.send,
-              style: TextStyle(color: isDark ? Colors.white : Colors.black),
+              style: TextStyle(color: isDark ? Colors.white : Colors.black, fontSize: 13),
               decoration: InputDecoration(
-                hintText: _isModelLoaded
-                    ? 'AI doubt likhein...'
-                    : 'Database doubt likhein...',
-                hintStyle: const TextStyle(fontSize: 13, color: Colors.grey),
+                hintText: _isModelLoaded ? 'Ask any concept (e.g. Gravitation, Writs)...' : 'Type topic name...',
+                hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
                 border: InputBorder.none,
-                contentPadding: const EdgeInsets.symmetric(horizontal: 12),
+                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
               ),
               onSubmitted: (_) => _sendMessage(),
             ),
           ),
           if (_isGenerating)
             IconButton(
-              tooltip: 'Stop generating',
+              tooltip: 'Stop',
               onPressed: _stopGeneration,
               icon: const Icon(Icons.stop_circle, color: Colors.red),
             )
