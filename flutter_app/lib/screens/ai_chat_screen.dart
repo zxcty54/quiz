@@ -128,7 +128,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       contextParams.nCtx = 2048;
       contextParams.nThreads = 4; // CPU Cores
 
-      // Llama 0.0.9 standard constructor
+      // Llama 0.0.9 positional constructor
       _llama = Llama(path, modelParams, contextParams);
 
       if (!mounted) return;
@@ -239,11 +239,17 @@ Provide a concise, point-wise educational answer in simple language.
     final buffer = StringBuffer();
     _shouldStop = false;
 
-    // llama_cpp_dart 0.0.9 prompt loading and stream execution
+    // Set prompt in llama_cpp_dart
     _llama!.setPrompt(prompt);
 
-    await for (final token in _llama!.stream) {
-      if (_shouldStop || !mounted) break;
+    // Iterative token streaming using getNext()
+    while (!_shouldStop && mounted) {
+      final token = _llama!.getNext();
+
+      if (token.isEmpty || token == '<end_of_turn>' || token == '</s>') {
+        break;
+      }
+
       buffer.write(token);
 
       if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
@@ -255,6 +261,9 @@ Provide a concise, point-wise educational answer in simple language.
         });
       }
       _scrollToBottom();
+
+      // Yield frame to keep Flutter UI interactive
+      await Future.delayed(Duration.zero);
     }
 
     final answer = buffer.toString().trim();
