@@ -13,7 +13,7 @@ class OfflineLlmService {
   Future<bool> initializeEngine() async {
     if (_isLoaded) return true;
 
-    // Check potential GGUF file locations in phone storage
+    // 1. Check local model file locations
     final devPath = File('/storage/emulated/0/Download/gemma-2-2b-it-Q4_K_M.gguf');
     final appDocDir = await getApplicationDocumentsDirectory();
     final internalPath = File('${appDocDir.path}/gemma-2-2b-it-Q4_K_M.gguf');
@@ -72,8 +72,15 @@ $userPrompt
 """;
 
     try {
-      final response = _llama!.prompt(formattedPrompt);
-      final output = response.trim();
+      final buffer = StringBuffer();
+      
+      // llama_cpp_dart 0.0.9 uses prompt Stream generator
+      final stream = _llama!.prompt(formattedPrompt);
+      await for (final token in stream) {
+        buffer.write(token);
+      }
+
+      final output = buffer.toString().trim();
       return output.isNotEmpty ? output : "Response generate nahi ho saka.";
     } catch (e) {
       return "⚠️ Local Inference Error: $e";
