@@ -26,8 +26,12 @@ jobs:
           channel: "stable"
           cache: true
 
-      - name: Setup Android SDK
+      - name: Setup Android SDK, NDK & CMake
         uses: android-actions/setup-android@v3
+
+      - name: Install Android NDK 26 & CMake
+        run: |
+          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;26.1.10909125" "cmake;3.22.1"
 
       - name: Re-generate Native Android Project Files
         working-directory: flutter_app
@@ -41,7 +45,7 @@ jobs:
         run: |
           git clone --depth 1 https://github.com/ggerganov/llama.cpp.git /tmp/llama_source
           LLAMA_DART_PKG=$(find /home/runner/.pub-cache/hosted/pub.dev/ -maxdepth 1 -name "llama_cpp_dart-*" | head -n 1)
-          if [ -d "$LLAMA_DART_PKG" ]; then
+          if [ -n "$LLAMA_DART_PKG" ] && [ -d "$LLAMA_DART_PKG" ]; then
             echo "Found llama_cpp_dart at: $LLAMA_DART_PKG"
             mkdir -p "$LLAMA_DART_PKG/src/llama.cpp"
             cp -r /tmp/llama_source/* "$LLAMA_DART_PKG/src/llama.cpp/"
@@ -49,32 +53,52 @@ jobs:
             cp -r /tmp/llama_source/* "$LLAMA_DART_PKG/llama.cpp/"
           fi
 
-      - name: Configure Android SDK 36, App ID & Desugaring
+      - name: Perfectly Inject Desugaring & SDK 36 Configuration
         run: |
-          # 1. Update SDK Versions (compileSdk 36, targetSdk 36, minSdk 24)
-          find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/compileSdk = .*/compileSdk = 36/g' {} +
-          find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/targetSdk = .*/targetSdk = 36/g' {} +
-          find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/minSdk = .*/minSdk = 24/g' {} +
-          find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/applicationId = .*/applicationId = "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "*.kts" -exec sed -i 's/namespace = .*/namespace = "com.testing"/g' {} +
+          python3 - << 'EOF'
+          import os, glob
 
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/compileSdkVersion .*/compileSdkVersion 36/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/targetSdkVersion .*/targetSdkVersion 36/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/minSdkVersion .*/minSdkVersion 24/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/applicationId .*/applicationId "com.testing"/g' {} +
-          find flutter_app/android/ -type f -name "build.gradle" -exec sed -i 's/namespace .*/namespace "com.testing"/g' {} +
+          # 1. Update Gradle Build Files to compileSdk 36
+          for path in glob.glob("flutter_app/android/**/build.gradle*", recursive=True):
+              if not os.path.isfile(path): continue
+              with open(path, "r") as f:
+                  content = f.read()
+              
+              # SDK update (compileSdk 36 is required for modern plugins)
+              content = content.replace("minSdk = flutter.minSdkVersion", "minSdk = 24")
+              content = content.replace("minSdkVersion flutter.minSdkVersion", "minSdkVersion 24")
+              content = content.replace("compileSdk = flutter.compileSdkVersion", "compileSdk = 36")
+              content = content.replace("compileSdkVersion flutter.compileSdkVersion", "compileSdkVersion 36")
+              content = content.replace("targetSdk = flutter.targetSdkVersion", "targetSdk = 36")
+              content = content.replace("targetSdkVersion flutter.targetSdkVersion", "targetSdkVersion 36")
+              
+              with open(path, "w") as f:
+                  f.write(content)
 
-          # 2. Inject Desugaring for flutter_local_notifications in build.gradle.kts
-          if [ -f "flutter_app/android/app/build.gradle.kts" ]; then
-            sed -i '/compileOptions {/a \        isCoreLibraryDesugaringEnabled = true' flutter_app/android/app/build.gradle.kts
-            sed -i '/dependencies {/a \    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")' flutter_app/android/app/build.gradle.kts
-          fi
+          # 2. Inject Desugaring into app/build.gradle or app/build.gradle.kts
+          kts_path = "flutter_app/android/app/build.gradle.kts"
+          groovy_path = "flutter_app/android/app/build.gradle"
 
-          # 3. Inject Desugaring in Groovy build.gradle fallback
-          if [ -f "flutter_app/android/app/build.gradle" ]; then
-            sed -i '/compileOptions {/a \        coreLibraryDesugaringEnabled true' flutter_app/android/app/build.gradle
-            sed -i '/dependencies {/a \    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"' flutter_app/android/app/build.gradle
-          fi
+          if os.path.exists(kts_path):
+              with open(kts_path, "r") as f:
+                  content = f.read()
+              if "isCoreLibraryDesugaringEnabled" not in content:
+                  content = content.replace("compileOptions {", "compileOptions {\n        isCoreLibraryDesugaringEnabled = true")
+                  content += '\ndependencies {\n    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")\n}\n'
+                  with open(kts_path, "w") as f:
+                      f.write(content)
+              print("Successfully injected Desugaring in Kotlin DSL (build.gradle.kts)")
+
+          if os.path.exists(groovy_path):
+              with open(groovy_path, "r") as f:
+                  content = f.read()
+              if "coreLibraryDesugaringEnabled" not in content:
+                  content = content.replace("compileOptions {", "compileOptions {\n        coreLibraryDesugaringEnabled true")
+                  content += '\ndependencies {\n    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"\n}\n'
+                  with open(groovy_path, "w") as f:
+                      f.write(content)
+              print("Successfully injected Desugaring in Groovy DSL (build.gradle)")
+          EOF
 
       - name: Setup Keystore & Permissions
         working-directory: flutter_app/android
@@ -92,10 +116,10 @@ jobs:
             -dname "CN=Android Debug,O=Android,C=US" \
             || true
 
-      - name: Build Pure Offline Release APK
+      - name: Build Pure Offline Release APK (ARM64)
         working-directory: flutter_app
         run: |
-          flutter build apk --release --no-tree-shake-icons
+          flutter build apk --release --target-platform android-arm64 --no-tree-shake-icons
 
       - name: Upload Build Artifact (APK)
         uses: actions/upload-artifact@v4
@@ -114,5 +138,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (SDK 36 + Desugared) APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} (Offline LLM + ARM64) APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
