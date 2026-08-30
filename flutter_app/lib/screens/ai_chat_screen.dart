@@ -88,7 +88,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
   }
 
-  // --- 0.2.x MEMORY SAFE LOADER ---
+  // --- QWEN 2.5 0.5B GGUF LOADER (0.0.9 API) ---
   Future<void> _pickAndLoadQwenModel() async {
     if (_busy) return;
 
@@ -104,7 +104,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       final fileName = result.files.single.name;
 
       if (pickedPath == null || !File(pickedPath).existsSync()) {
-        _showError('GGUF file ka path invalid hai.');
+        _showError('GGUF file ka valid path nahi mila.');
         return;
       }
 
@@ -115,18 +115,18 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Loading Qwen 2.5 (0.2.x Core)...';
+        _modelStatus = 'Loading Qwen 2.5 into RAM...';
       });
 
-      await Future.delayed(const Duration(milliseconds: 250));
+      await Future.delayed(const Duration(milliseconds: 300));
       _disposeModelSafely();
 
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU on Android
+      modelParams.nGpuLayers = 0; // Pure CPU on mobile
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 256;   // Safe context size
-      contextParams.nThreads = 2; // Dual thread CPU
+      contextParams.nCtx = 128;   // Safe minimal context buffer
+      contextParams.nThreads = 1; // Single thread to avoid native race condition
 
       final loadedInstance = Llama(pickedPath, modelParams, contextParams);
 
@@ -136,7 +136,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _llama = loadedInstance;
         _isModelLoaded = true;
         _isModelLoading = false;
-        _modelStatus = 'Qwen 2.5 Active (0.2.x Safe Core)';
+        _modelStatus = 'Qwen 2.5 Active (CPU Safe Mode)';
       });
 
       _showSuccess('🟢 Model load ho gaya! Ab topic type karein.');
@@ -151,7 +151,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
   }
 
-  // --- DUOLINGO STRUCTURE PROMPT ---
+  // --- DUOLINGO STRUCTURED LEARNING PROMPT ---
   String _buildQwenPrompt({
     required String userInput,
     required String context,
@@ -177,7 +177,7 @@ Explanation: [Crisp 1-line reason]
       case AgentTaskMode.mnemonic:
         systemInstructions = '''
 You are an AI Memory Specialist.
-Create a high-impact Hindi/Hinglish mnemonic code or memory trick for the topic.
+Create a high-impact Hindi/Hinglish mnemonic or memory trick for the topic.
 ''';
         break;
 
@@ -258,7 +258,7 @@ $userInput<|im_end|>
       _llama!.setPrompt(prompt);
 
       int tokenCount = 0;
-      while (!_shouldStop && mounted && tokenCount < 220) {
+      while (!_shouldStop && mounted && tokenCount < 180) {
         final tokenResult = _llama!.getNext();
         final tokenText = tokenResult.$1;
         final isDone = tokenResult.$2;
@@ -297,7 +297,7 @@ $userInput<|im_end|>
           _messages[_messages.length - 1] = {
             'role': 'assistant',
             'text': finalAnswer.isEmpty ? '⚠️ Output blank raha.' : finalAnswer,
-            'time': '${stopwatch.elapsedMilliseconds}ms (0.2.x Engine)',
+            'time': '${stopwatch.elapsedMilliseconds}ms (0.0.9 Engine)',
           };
         }
         _isGenerating = false;
