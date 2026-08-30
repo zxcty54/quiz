@@ -26,10 +26,10 @@ class MainActivity: FlutterActivity() {
                                     .setModelPath(modelPath)
                                     .setMaxTokens(512)
                                     .build()
-                                llmInference = LlmInference.createFromOptions(context, options)
+                                llmInference = LlmInference.createFromOptions(applicationContext, options)
                                 runOnUiThread { result.success(true) }
-                            } catch (e: Exception) {
-                                runOnUiThread { result.error("INIT_FAIL", e.localizedMessage, null) }
+                            } catch (e: Throwable) {
+                                runOnUiThread { result.error("INIT_FAIL", e.message ?: "Init failed", null) }
                             }
                         }
                     } else {
@@ -37,19 +37,28 @@ class MainActivity: FlutterActivity() {
                     }
                 }
                 "generate" -> {
-                    val prompt = call.argument<String>("prompt")
+                    val rawPrompt = call.argument<String>("prompt") ?: ""
                     val engine = llmInference
-                    if (engine != null && prompt != null) {
-                        thread {
-                            try {
-                                val response = engine.generateResponse(prompt)
-                                runOnUiThread { result.success(response) }
-                            } catch (e: Exception) {
-                                runOnUiThread { result.error("GEN_FAIL", e.localizedMessage, null) }
-                            }
+                    
+                    if (engine == null) {
+                        result.error("ENGINE_NOT_READY", "Model is not initialized", null)
+                        return@setMethodCallHandler
+                    }
+
+                    if (rawPrompt.trim().isEmpty()) {
+                        result.error("EMPTY_PROMPT", "Prompt cannot be empty", null)
+                        return@setMethodCallHandler
+                    }
+
+                    thread {
+                        try {
+                            // Gemma 2B formatting wrapper to prevent parser crash
+                            val formattedPrompt = "<start_of_turn>user\n$rawPrompt<end_of_turn>\n<start_of_turn>model\n"
+                            val response = engine.generateResponse(formattedPrompt)
+                            runOnUiThread { result.success(response) }
+                        } catch (e: Throwable) {
+                            runOnUiThread { result.error("GEN_FAIL", e.message ?: "Generation error", null) }
                         }
-                    } else {
-                        result.error("ENGINE_NOT_READY", "MediaPipe Model Not Initialized", null)
                     }
                 }
                 else -> result.notImplemented()
