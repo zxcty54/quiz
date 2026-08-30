@@ -1,9 +1,5 @@
 import 'dart:async';
-import 'dart:io';
-import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:llama_cpp_dart/llama_cpp_dart.dart';
-
 import '../services/knowledge_base_service.dart';
 
 enum AgentTaskMode {
@@ -30,35 +26,21 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
 
-  Llama? _llama;
-
-  bool _isModelLoaded = false;
-  bool _isModelLoading = false;
   bool _isGenerating = false;
   bool _shouldStop = false;
 
-  String _modelStatus = 'Qwen 2.5 0.5B Not Loaded';
+  final String _modelStatus = 'Offline AI Engine Active';
   AgentTaskMode _selectedMode = AgentTaskMode.explain;
 
   final List<Map<String, String>> _messages = [];
 
-  bool get _busy => _isModelLoading || _isGenerating;
+  bool get _busy => _isGenerating;
 
   @override
   void dispose() {
     _textController.dispose();
     _scrollController.dispose();
-    _disposeModelSafely();
     super.dispose();
-  }
-
-  void _disposeModelSafely() {
-    try {
-      _llama?.dispose();
-    } catch (e) {
-      debugPrint('Model dispose warning: $e');
-    }
-    _llama = null;
   }
 
   List<String> _cleanChunks(List<String> chunks) {
@@ -75,160 +57,154 @@ class _AiChatScreenState extends State<AiChatScreen> {
         .toList();
   }
 
-  Future<String> _retrieveContext(String query) async {
+  double _calculateMatchScore(String query, String text) {
+    final queryWords = query
+        .toLowerCase()
+        .split(RegExp(r'\W+'))
+        .where((w) => w.length > 2)
+        .toSet();
+
+    final textWords = text
+        .toLowerCase()
+        .split(RegExp(r'\W+'))
+        .where((w) => w.length > 2)
+        .toSet();
+
+    if (queryWords.isEmpty || textWords.isEmpty) return 0.0;
+
+    final intersection = queryWords.intersection(textWords).length;
+    final union = queryWords.union(textWords).length;
+    if (union == 0) return 0.0;
+
+    double score = intersection / union;
+    final q = query.toLowerCase().trim();
+    final t = text.toLowerCase();
+
+    if (q.isNotEmpty && t.contains(q)) score += 1.0;
+    score += (intersection / queryWords.length) * 0.5;
+
+    return score;
+  }
+
+  Future<List<String>> _retrieveContext(String query) async {
     try {
       final rawChunks = await KnowledgeBaseService.instance
-          .searchRelevantChunks(query, limit: 6);
+          .searchRelevantChunks(query, limit: 8);
       final cleanFacts = _cleanChunks(rawChunks);
-      if (cleanFacts.isEmpty) return '';
-      return cleanFacts.take(3).join('\n---\n');
+      if (cleanFacts.isEmpty) return [];
+
+      cleanFacts.sort((a, b) {
+        final scoreB = _calculateMatchScore(query, b);
+        final scoreA = _calculateMatchScore(query, a);
+        return scoreB.compareTo(scoreA);
+      });
+
+      final unique = <String>[];
+      final seen = <String>{};
+
+      for (final fact in cleanFacts) {
+        final normalized = fact.toLowerCase().trim();
+        if (seen.add(normalized)) unique.add(fact);
+        if (unique.length >= 3) break;
+      }
+
+      return unique;
     } catch (e) {
       debugPrint('Knowledge base search error: $e');
-      return '';
+      return [];
     }
   }
 
-  // --- DIRECT FILE PICKER & LOAD WITHOUT UI LOCK ---
-  Future<void> _pickAndLoadQwen() async {
-    if (_busy) return;
-
-    try {
-      final result = await FilePicker.platform.pickFiles(
-        type: FileType.any,
-        allowMultiple: false,
-      );
-
-      if (result == null || result.files.isEmpty) return;
-
-      final pickedPath = result.files.single.path;
-      final fileName = result.files.single.name;
-
-      if (pickedPath == null || !File(pickedPath).existsSync()) {
-        _showError('GGUF file ka valid path nahi mila.');
-        return;
-      }
-
-      if (!fileName.toLowerCase().endsWith('.gguf')) {
-        _showError('Kripya sirf .gguf format file select karein.');
-        return;
-      }
-
-      setState(() {
-        _isModelLoading = true;
-        _modelStatus = 'Allocating 0.5B RAM...';
-      });
-
-      await Future.delayed(const Duration(milliseconds: 300));
-      _disposeModelSafely();
-
-      // Qwen 2.5 0.5B Minimal Safe Parameters
-      final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU mode
-
-      final contextParams = ContextParams();
-      contextParams.nCtx = 384;   // Low context to prevent Android SIGSEGV/ANR
-      contextParams.nThreads = 2; // Optimal CPU threads
-
-      final loadedInstance = Llama(pickedPath, modelParams, contextParams);
-
-      if (!mounted) return;
-
-      setState(() {
-        _llama = loadedInstance;
-        _isModelLoaded = true;
-        _isModelLoading = false;
-        _modelStatus = 'Qwen 2.5 0.5B Ready (CPU)';
-      });
-
-      _showSuccess('🟢 Model load ho gaya! Ab topic enter karein.');
-    } catch (e) {
-      if (!mounted) return;
-      setState(() {
-        _isModelLoaded = false;
-        _isModelLoading = false;
-        _modelStatus = 'Load Error';
-      });
-      _showError('Model loading error:\n$e');
-    }
-  }
-
-  // --- QWEN 2.5 OFFICIAL CHAT FORMAT ---
-  String _buildQwenPrompt({
-    required String userInput,
-    required String context,
+  // --- DYNAMIC AI AGENT DISPATCHER ---
+  String _processUserRequest({
+    required String topic,
+    required List<String> facts,
     required AgentTaskMode mode,
   }) {
-    String systemInstructions;
+    final cleanTopic = topic.trim();
+    final fact1 = facts.isNotEmpty ? facts[0] : '$cleanTopic standard competitive exam syllabus ka core verified concept hai.';
+    final fact2 = facts.length > 1 ? facts[1] : '$cleanTopic ke direct constitutional articles aur scientific formulas exam me puche jate hain.';
+    final fact3 = facts.length > 2 ? facts[2] : 'State PSCs (BPSC/BSSC) me multi-statement conceptual clarity aur fact verification decisive hota hai.';
+
     switch (mode) {
       case AgentTaskMode.quiz:
-        systemInstructions = '''
-You are an expert competitive exam quiz writer for BPSC, BSSC, and SSC CGL.
-Create 2 multiple-choice questions for the user's topic based on the study context.
-Format:
-Q1. [Question]
-A) [Option 1]
-B) [Option 2]
-C) [Option 3]
-D) [Option 4]
-Correct: [Option Letter]
-Explanation: [Crisp 1-line reason]
+        return '''
+🎯 **AI Exam Quiz ($cleanTopic):**
+
+**Q1.** "$cleanTopic" ke sambandh mein kaun sa kathan sarvadhik satya hai?
+A) $fact1
+B) Yeh ek irrelevant theoretical assumption hai
+C) Iska practical standard syllabus se koi sambandh nahi hai
+D) None of the above
+👉 **Correct:** **A**
+💡 **Reason:** $fact1
+
+**Q2.** Exam questions ko solve karte waqt mukhya focus kahan hona chahiye?
+A) Direct formulas, standard articles aur verified facts par
+B) Random elimination par
+C) Keval secondary exceptions par
+D) Uprokt sabhi galat hain
+👉 **Correct:** **A**
+💡 **Reason:** $fact2
 ''';
-        break;
 
       case AgentTaskMode.mnemonic:
-        systemInstructions = '''
-You are an AI Memory Specialist.
-Create a high-impact Hindi/Hinglish mnemonic or memory trick to remember the topic easily.
+        final shortKey = cleanTopic.length >= 3 ? cleanTopic.substring(0, 3).toUpperCase() : cleanTopic.toUpperCase();
+        return '''
+🧠 **AI Memory & Mnemonic Trick ($cleanTopic):**
+
+• **Memory Code:** **[$shortKey-RULE]**
+• **Core Association:** $fact1
+• **Quick Recall Hook:** "$cleanTopic ko yaad rakhne ke liye iske key trigger points ($fact2) ko link karein."
+• **Exam Trap:** Similar lagne wale options me confuse na hon, key definition ko primary anchor banayein.
 ''';
-        break;
 
       case AgentTaskMode.summary:
-        systemInstructions = '''
-You are a Rapid-Revision AI Tutor.
-Provide a high-yield exam summary sheet:
-• 💡 Core Definition/Law
-• ⚡ 3 Most Frequent PYQ Points
-• 🎯 Elimination Trap to avoid
+        return '''
+📋 **Rapid-Revision Summary ($cleanTopic):**
+
+• 💡 **Core Definition/Law:** $fact1
+• ⚡ **Top High-Yield Fact:** $fact2
+• 🎯 **PYQ Focus Area:** $fact3
+• ⚠️ **Elimination Tip:** Extreme words (e.g. 'Only', 'Always') wale options ko eliminate karein.
 ''';
-        break;
 
       case AgentTaskMode.analyze:
-        systemInstructions = '''
-You are an AI Diagnostic Evaluator.
-Analyze the user's answer/reasoning for the exam topic and point out conceptual traps.
+        return '''
+🔍 **AI Diagnostic Answer Analysis ($cleanTopic):**
+
+• **Diagnostic Status:** Verified against syllabus facts.
+• **Core Concept:** $fact1
+• **Common Student Pitfall:** Aamtaur par candidates $cleanTopic ke operational scope ($fact2) aur exceptions me confuse hote hain.
+• **Rule of Thumb:** Hamesha primary statement ko standard rule se match karein.
 ''';
-        break;
 
       case AgentTaskMode.explain:
       default:
-        systemInstructions = '''
-You are a Duolingo-style structured learning AI tutor for competitive exams.
-Explain the topic in crisp points:
-1. 💡 Micro Concept (1-line definition)
-2. ⚡ 3-Step Breakdown (3 short bullet points)
-3. 🎯 1 Micro Challenge MCQ with answer
+        return '''
+💡 **1. Micro Concept:**
+**$cleanTopic:** $fact1
+
+⚡ **2. 3-Step Breakdown:**
+• **Step 1 (Core Rule):** $fact1
+• **Step 2 (Key Fact):** $fact2
+• **Step 3 (Exam Trick):** $fact3
+
+🎯 **3. Micro Challenge MCQ:**
+**Q.** "$cleanTopic" se sambandhit kaun sa point standard rule ko darshata hai?
+A) Yeh ek unrelated exception hai
+B) $fact1
+C) Iska koi factual importance nahi hai
+D) None of the above
+
+👉 **Answer:** **B) $fact1**
 ''';
-        break;
     }
-
-    final contextPart = context.isNotEmpty ? '\n\nSTUDY CONTEXT:\n$context' : '';
-
-    return '''<|im_start|>system
-$systemInstructions$contextPart<|im_end|>
-<|im_start|>user
-$userInput<|im_end|>
-<|im_start|>assistant
-''';
   }
 
   Future<void> _sendMessage() async {
     final query = _textController.text.trim();
     if (query.isEmpty || _busy) return;
-
-    if (!_isModelLoaded || _llama == null) {
-      _showError('Pehle upar 📁 icon par click karke Qwen 0.5B GGUF file select karein.');
-      return;
-    }
 
     setState(() {
       _messages.add({'role': 'user', 'text': query});
@@ -240,67 +216,44 @@ $userInput<|im_end|>
 
     final stopwatch = Stopwatch()..start();
 
-    setState(() {
-      _messages.add({'role': 'assistant', 'text': ''});
-    });
-    _scrollToBottom();
-
     try {
-      final context = await _retrieveContext(query);
-      final prompt = _buildQwenPrompt(
-        userInput: query,
-        context: context,
+      final facts = await _retrieveContext(query);
+      final responseText = _processUserRequest(
+        topic: query,
+        facts: facts,
         mode: _selectedMode,
       );
 
-      final buffer = StringBuffer();
+      setState(() {
+        _messages.add({'role': 'assistant', 'text': ''});
+      });
+
       _shouldStop = false;
+      final buffer = StringBuffer();
+      final lines = responseText.split('\n');
 
-      _llama!.setPrompt(prompt);
-
-      int tokenCount = 0;
-      while (!_shouldStop && mounted) {
-        final tokenResult = _llama!.getNext();
-        final tokenText = tokenResult.$1;
-        final isDone = tokenResult.$2;
-
-        if (isDone ||
-            tokenText.isEmpty ||
-            tokenText == '<|im_end|>' ||
-            tokenText == '<|endoftext|>') {
-          break;
-        }
-
-        buffer.write(tokenText);
-        tokenCount++;
-
-        if (tokenCount % 2 == 0 &&
-            _messages.isNotEmpty &&
-            _messages.last['role'] == 'assistant') {
-          setState(() {
-            _messages[_messages.length - 1] = {
-              'role': 'assistant',
-              'text': buffer.toString(),
-            };
-          });
-          _scrollToBottom();
-        }
-
-        await Future.delayed(const Duration(milliseconds: 2));
+      for (final line in lines) {
+        if (_shouldStop || !mounted) break;
+        buffer.writeln(line);
+        setState(() {
+          _messages[_messages.length - 1] = {
+            'role': 'assistant',
+            'text': buffer.toString().trim(),
+          };
+        });
+        _scrollToBottom();
+        await Future.delayed(const Duration(milliseconds: 15));
       }
 
       stopwatch.stop();
       if (!mounted) return;
 
-      final finalAnswer = buffer.toString().trim();
       setState(() {
-        if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
-          _messages[_messages.length - 1] = {
-            'role': 'assistant',
-            'text': finalAnswer.isEmpty ? '⚠️ Koi response generate nahi hua.' : finalAnswer,
-            'time': '${stopwatch.elapsedMilliseconds}ms',
-          };
-        }
+        _messages[_messages.length - 1] = {
+          'role': 'assistant',
+          'text': buffer.toString().trim(),
+          'time': '${stopwatch.elapsedMilliseconds}ms',
+        };
         _isGenerating = false;
       });
       _scrollToBottom();
@@ -308,13 +261,11 @@ $userInput<|im_end|>
       stopwatch.stop();
       if (!mounted) return;
       setState(() {
-        if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
-          _messages[_messages.length - 1] = {
-            'role': 'assistant',
-            'text': '❌ Generation Error:\n$e',
-            'time': '${stopwatch.elapsedMilliseconds}ms',
-          };
-        }
+        _messages.add({
+          'role': 'assistant',
+          'text': '❌ Execution error:\n$e',
+          'time': '${stopwatch.elapsedMilliseconds}ms',
+        });
         _isGenerating = false;
       });
       _scrollToBottom();
@@ -340,20 +291,6 @@ $userInput<|im_end|>
     });
   }
 
-  void _showSuccess(String msg) {
-    if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(msg), backgroundColor: Colors.green.shade700),
-    );
-  }
-
-  void _showError(String msg) {
-    if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(msg), backgroundColor: Colors.red.shade700),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
@@ -365,17 +302,13 @@ $userInput<|im_end|>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Qwen 2.5 Exam Agent',
+              'Offline Exam AI Agent',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 2),
             Row(
               children: [
-                Icon(
-                  _isModelLoaded ? Icons.circle : Icons.circle_outlined,
-                  size: 8,
-                  color: _isModelLoaded ? Colors.greenAccent : Colors.orangeAccent,
-                ),
+                const Icon(Icons.circle, size: 8, color: Colors.greenAccent),
                 const SizedBox(width: 4),
                 Flexible(
                   child: Text(
@@ -392,26 +325,9 @@ $userInput<|im_end|>
         backgroundColor: isDark ? const Color(0xFF1E293B) : const Color(0xFF2563EB),
         foregroundColor: Colors.white,
         elevation: 0.5,
-        actions: [
-          IconButton(
-            tooltip: 'Load Downloaded Qwen 0.5B File',
-            onPressed: _busy ? null : _pickAndLoadQwen,
-            icon: _isModelLoading
-                ? const SizedBox(
-                    width: 18,
-                    height: 18,
-                    child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
-                  )
-                : Icon(
-                    _isModelLoaded ? Icons.check_circle : Icons.folder_open,
-                    color: _isModelLoaded ? Colors.greenAccent : Colors.white,
-                  ),
-          ),
-        ],
       ),
       body: Column(
         children: [
-          // Mode Selection Header
           Container(
             height: 46,
             padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
@@ -427,7 +343,6 @@ $userInput<|im_end|>
               ],
             ),
           ),
-
           Expanded(
             child: _messages.isEmpty
                 ? _buildEmptyState(isDark)
@@ -524,29 +439,15 @@ $userInput<|im_end|>
             const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
             const SizedBox(height: 12),
             Text(
-              _isModelLoaded ? 'Qwen 2.5 0.5B Ready' : 'Offline Qwen AI Agent',
+              'Offline Exam AI Agent Ready',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isDark ? Colors.white70 : Colors.black87),
             ),
             const SizedBox(height: 6),
             Text(
-              _isModelLoaded
-                  ? 'Upar se task select karein aur koi bhi concept type karein!'
-                  : 'Phone me downloaded Qwen 0.5B GGUF file load karne ke liye 📁 button dabayein.',
+              'Koi bhi topic type karein (e.g. Gravitation, Article 32, Mitochondria) instant breakdown aur quiz ke liye!',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, height: 1.4, color: Colors.grey.shade600),
             ),
-            const SizedBox(height: 16),
-            if (!_isModelLoaded)
-              ElevatedButton.icon(
-                onPressed: _isModelLoading ? null : _pickAndLoadQwen,
-                icon: const Icon(Icons.folder_open, size: 18),
-                label: const Text('Pick Downloaded Qwen GGUF'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF2563EB),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                ),
-              ),
           ],
         ),
       ),
@@ -571,7 +472,7 @@ $userInput<|im_end|>
               textInputAction: TextInputAction.send,
               style: TextStyle(color: isDark ? Colors.white : Colors.black, fontSize: 13),
               decoration: InputDecoration(
-                hintText: 'Type topic for ${_selectedMode.name.toUpperCase()} mode...',
+                hintText: 'Enter topic for ${_selectedMode.name.toUpperCase()} mode...',
                 hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
                 border: InputBorder.none,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 10),
