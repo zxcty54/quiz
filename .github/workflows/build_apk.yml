@@ -42,7 +42,7 @@ jobs:
           python3 - << 'EOF'
           import os
 
-          # 1. Update Root android/build.gradle to force subprojects to SDK 34
+          # 1. Update Root android/build.gradle to force SDK 34
           root_gradle = "flutter_app/android/build.gradle"
           if os.path.exists(root_gradle):
               with open(root_gradle, "r") as f:
@@ -75,25 +75,27 @@ jobs:
               print("Injected subproject SDK 34 override into root build.gradle")
 
           # 2. Inject MediaPipe GenAI & Desugaring into app/build.gradle
-          groovy_path = "flutter_app/android/app/build.gradle"
-          if os.path.exists(groovy_path):
-              with open(groovy_path, "r") as f:
+          app_gradle = "flutter_app/android/app/build.gradle"
+          if os.path.exists(app_gradle):
+              with open(app_gradle, "r") as f:
                   content = f.read()
               
-              if "coreLibraryDesugaringEnabled" not in content:
+              if "coreLibraryDesugaringEnabled" not in content and "compileOptions {" in content:
                   content = content.replace("compileOptions {", "compileOptions {\n        coreLibraryDesugaringEnabled true")
               
-              mediapipe_dep = """
+              if "tasks-genai" not in content:
+                  if "dependencies {" in content:
+                      content = content.replace("dependencies {", "dependencies {\n    implementation 'com.google.mediapipe:tasks-genai:0.10.14'\n    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'")
+                  else:
+                      content += """
           dependencies {
               coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"
               implementation 'com.google.mediapipe:tasks-genai:0.10.14'
           }
           """
-              if "tasks-genai" not in content:
-                  content += mediapipe_dep
-                  with open(groovy_path, "w") as f:
-                      f.write(content)
-              print("Injected MediaPipe GenAI & Desugaring into app build.gradle")
+              with open(app_gradle, "w") as f:
+                  f.write(content)
+              print("Successfully configured MediaPipe GenAI dependencies in app/build.gradle")
           EOF
 
       - name: Setup Keystore & Permissions
@@ -134,5 +136,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (Google MediaPipe On-Device AI) APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} (Google MediaPipe GenAI) APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
