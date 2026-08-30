@@ -33,14 +33,12 @@ jobs:
         run: |
           echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
-      # Re-generate clean V2 Android Project Files
       - name: Rebuild Android Template
         working-directory: flutter_app
         run: |
           rm -rf android/app/src/main/java
           flutter create . --platforms=android --org com --project-name testing
 
-      # Inject Custom MediaPipe MainActivity.kt
       - name: Inject MediaPipe MainActivity.kt
         run: |
           mkdir -p flutter_app/android/app/src/main/kotlin/com/testing
@@ -115,7 +113,6 @@ jobs:
           python3 - << 'EOF'
           import os
 
-          # 1. Update Root android/build.gradle if exists
           root_gradle = "flutter_app/android/build.gradle"
           if os.path.exists(root_gradle):
               with open(root_gradle, "r") as f:
@@ -145,7 +142,6 @@ jobs:
                   with open(root_gradle, "w") as f:
                       f.write(content)
 
-          # 2. Inject Desugaring into Kotlin DSL (build.gradle.kts)
           app_kts = "flutter_app/android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
@@ -164,9 +160,7 @@ jobs:
           """
               with open(app_kts, "w") as f:
                   f.write(content)
-              print("Successfully injected Desugaring in Kotlin DSL (build.gradle.kts)")
 
-          # 3. Inject Desugaring into Groovy DSL (build.gradle)
           app_groovy = "flutter_app/android/app/build.gradle"
           if os.path.exists(app_groovy):
               with open(app_groovy, "r") as f:
@@ -185,7 +179,6 @@ jobs:
           """
               with open(app_groovy, "w") as f:
                   f.write(content)
-              print("Successfully injected Desugaring in Groovy DSL (build.gradle)")
           EOF
 
       - name: Setup Keystore & Permissions
@@ -204,12 +197,10 @@ jobs:
             -dname "CN=Android Debug,O=Android,C=US" \
             || true
 
-      # Compile Flutter Dart Assets
       - name: Build Flutter Assets
         working-directory: flutter_app
         run: flutter build bundle
 
-      # Direct Native Release Compilation
       - name: Build Pure Offline Release APK via Gradle
         working-directory: flutter_app/android
         run: ./gradlew assembleRelease -PtargetPlatform=android-arm64
@@ -218,7 +209,11 @@ jobs:
         working-directory: flutter_app
         run: |
           mkdir -p build/app/outputs/flutter-apk
-          APK_FILE=$(find android/app/build/outputs/apk/release -name "*.apk" | head -n 1)
+          APK_FILE=$(find . -type f -name "*release*.apk" ! -name "*-unsigned.apk" | head -n 1)
+          if [ -z "$APK_FILE" ]; then
+            APK_FILE=$(find . -type f -name "*.apk" | head -n 1)
+          fi
+          echo "Found APK at: $APK_FILE"
           cp "$APK_FILE" build/app/outputs/flutter-apk/app-release.apk
           cp "$APK_FILE" build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
           zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
@@ -234,5 +229,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (Desugaring Fixed + MediaPipe GenAI) APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} (Google MediaPipe GenAI) APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
