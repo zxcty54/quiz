@@ -110,12 +110,12 @@ jobs:
         working-directory: flutter_app
         run: flutter pub get
 
-      - name: Configure MediaPipe GenAI & Gradle SDK 34
+      - name: Inject Desugaring & MediaPipe into Gradle DSL
         run: |
           python3 - << 'EOF'
           import os
 
-          # 1. Update Root android/build.gradle
+          # 1. Update Root android/build.gradle if exists
           root_gradle = "flutter_app/android/build.gradle"
           if os.path.exists(root_gradle):
               with open(root_gradle, "r") as f:
@@ -145,27 +145,47 @@ jobs:
                   with open(root_gradle, "w") as f:
                       f.write(content)
 
-          # 2. Update app/build.gradle
-          app_gradle = "flutter_app/android/app/build.gradle"
-          if os.path.exists(app_gradle):
-              with open(app_gradle, "r") as f:
+          # 2. Inject Desugaring into Kotlin DSL (build.gradle.kts)
+          app_kts = "flutter_app/android/app/build.gradle.kts"
+          if os.path.exists(app_kts):
+              with open(app_kts, "r") as f:
                   content = f.read()
-              
-              if "coreLibraryDesugaringEnabled" not in content and "compileOptions {" in content:
-                  content = content.replace("compileOptions {", "compileOptions {\n        coreLibraryDesugaringEnabled true")
-              
-              if "tasks-genai" not in content:
-                  if "dependencies {" in content:
-                      content = content.replace("dependencies {", "dependencies {\n    implementation 'com.google.mediapipe:tasks-genai:0.10.14'\n    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.4'")
+              if "isCoreLibraryDesugaringEnabled" not in content:
+                  if "compileOptions {" in content:
+                      content = content.replace("compileOptions {", "compileOptions {\n        isCoreLibraryDesugaringEnabled = true")
                   else:
-                      content += """
+                      content = content.replace("android {", "android {\n    compileOptions {\n        isCoreLibraryDesugaringEnabled = true\n    }")
+              if "desugar_jdk_libs" not in content:
+                  content += """
+          dependencies {
+              coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
+              implementation("com.google.mediapipe:tasks-genai:0.10.14")
+          }
+          """
+              with open(app_kts, "w") as f:
+                  f.write(content)
+              print("Successfully injected Desugaring in Kotlin DSL (build.gradle.kts)")
+
+          # 3. Inject Desugaring into Groovy DSL (build.gradle)
+          app_groovy = "flutter_app/android/app/build.gradle"
+          if os.path.exists(app_groovy):
+              with open(app_groovy, "r") as f:
+                  content = f.read()
+              if "coreLibraryDesugaringEnabled" not in content:
+                  if "compileOptions {" in content:
+                      content = content.replace("compileOptions {", "compileOptions {\n        coreLibraryDesugaringEnabled true")
+                  else:
+                      content = content.replace("android {", "android {\n    compileOptions {\n        coreLibraryDesugaringEnabled true\n    }")
+              if "tasks-genai" not in content:
+                  content += """
           dependencies {
               coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"
               implementation 'com.google.mediapipe:tasks-genai:0.10.14'
           }
           """
-              with open(app_gradle, "w") as f:
+              with open(app_groovy, "w") as f:
                   f.write(content)
+              print("Successfully injected Desugaring in Groovy DSL (build.gradle)")
           EOF
 
       - name: Setup Keystore & Permissions
@@ -189,7 +209,7 @@ jobs:
         working-directory: flutter_app
         run: flutter build bundle
 
-      # Direct Native Release Compilation (Bypasses Flutter CLI V1 False Positive)
+      # Direct Native Release Compilation
       - name: Build Pure Offline Release APK via Gradle
         working-directory: flutter_app/android
         run: ./gradlew assembleRelease -PtargetPlatform=android-arm64
@@ -214,5 +234,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (Google MediaPipe GenAI) APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} (Desugaring Fixed + MediaPipe GenAI) APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
