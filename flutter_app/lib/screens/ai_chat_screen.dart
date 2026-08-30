@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:llama_cpp_dart/llama_cpp_dart.dart';
+import 'package:path_provider/path_provider.dart';
 
 import '../services/knowledge_base_service.dart';
 
@@ -108,37 +109,52 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       if (result == null || result.files.isEmpty) return;
 
-      final path = result.files.single.path;
-      if (path == null || path.isEmpty || !File(path).existsSync()) {
+      final pickedPath = result.files.single.path;
+      final fileName = result.files.single.name;
+
+      if (pickedPath == null || pickedPath.isEmpty || !File(pickedPath).existsSync()) {
         _showError('GGUF model file ka valid path nahi mila.');
         return;
       }
 
-      final fileName = result.files.single.name.toLowerCase();
-      if (!fileName.endsWith('.gguf')) {
+      if (!fileName.toLowerCase().endsWith('.gguf')) {
         _showError('Kripya sirf .gguf model file select karein.');
         return;
       }
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Allocating Memory & Loading Gemma 2...';
+        _modelStatus = 'Copying model to app storage...';
       });
 
-      // Allow UI thread to repaint spinner before native heap allocation
-      await Future.delayed(const Duration(milliseconds: 500));
+      // 1. Android Scoped Storage Fix: Copy to internal app directory
+      final appDir = await getApplicationDocumentsDirectory();
+      final localModelPath = '${appDir.path}/$fileName';
+      final localModelFile = File(localModelPath);
+
+      if (!localModelFile.existsSync() || localModelFile.lengthSync() != File(pickedPath).lengthSync()) {
+        final sourceFile = File(pickedPath);
+        await sourceFile.copy(localModelPath);
+      }
+
+      setState(() {
+        _modelStatus = 'Allocating Phone Memory & Loading Model...';
+      });
+
+      await Future.delayed(const Duration(milliseconds: 400));
 
       _disposeModelSafely();
 
-      // Native crash-proof configuration for Gemma 2 on Android CPU
+      // 2. Mobile-Safe Zero-Crash Parameters
       final modelParams = ModelParams();
       modelParams.nGpuLayers = 0; // Pure CPU on Android
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 256;   // Compact context memory to prevent Native OOM Kill
+      contextParams.nCtx = 512;   // Stable context length to prevent Native OOM Crash
       contextParams.nThreads = 2; // 2 CPU threads prevent thermal throttling & UI lock
 
-      final loadedInstance = Llama(path, modelParams, contextParams);
+      // 3. Initialize with direct Internal POSIX file path
+      final loadedInstance = Llama(localModelPath, modelParams, contextParams);
 
       if (!mounted) return;
 
@@ -146,11 +162,11 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _llama = loadedInstance;
         _isModelLoaded = true;
         _isModelLoading = false;
-        _modelPath = path;
-        _modelStatus = 'Offline AI Ready (Gemma 2 CPU)';
+        _modelPath = localModelPath;
+        _modelStatus = 'Offline AI Ready (CPU Active)';
       });
 
-      _showSuccess('🟢 Gemma 2 Model successfully loaded!');
+      _showSuccess('🟢 Offline AI Model successfully loaded!');
     } catch (e) {
       if (!mounted) return;
 
@@ -280,8 +296,7 @@ $question
         _scrollToBottom();
       }
 
-      // UI thread breathing delay
-      await Future.delayed(const Duration(milliseconds: 3));
+      await Future.delayed(const Duration(milliseconds: 2));
     }
 
     final answer = buffer.toString().trim();
@@ -544,7 +559,7 @@ $question
             const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
             const SizedBox(height: 12),
             Text(
-              _isModelLoaded ? 'Gemma 2 Ready (Zero Lag)' : 'Offline Learning Agent Ready',
+              _isModelLoaded ? 'AI Ready (Zero Lag)' : 'Offline Learning Agent Ready',
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16,
@@ -556,7 +571,7 @@ $question
             Text(
               _isModelLoaded
                   ? 'Ask any exam topic for 3-step breakdown & instant challenge!'
-                  : 'Gemma 2 2B GGUF file load karne ke liye upar 📁 button dabayein.',
+                  : 'GGUF model file load karne ke liye upar 📁 button dabayein.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, height: 1.4, color: Colors.grey.shade600),
             ),
@@ -565,7 +580,7 @@ $question
               ElevatedButton.icon(
                 onPressed: _isModelLoading ? null : _pickAndLoadModel,
                 icon: const Icon(Icons.folder_open, size: 18),
-                label: const Text('Load Gemma 2 (.gguf)'),
+                label: const Text('Load GGUF Model'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF2563EB),
                   foregroundColor: Colors.white,
