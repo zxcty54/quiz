@@ -23,14 +23,15 @@ class MainActivity: FlutterActivity() {
                     if (modelPath != null && File(modelPath).exists()) {
                         executor.execute {
                             try {
+                                // CPU INT4 ke liye exact stable memory boundaries
                                 val options = LlmInference.LlmInferenceOptions.builder()
                                     .setModelPath(modelPath)
                                     .setMaxTokens(512)
-                                    .setMaxSequenceLength(1024)
+                                    .setMaxSequenceLength(512)
                                     .setTopK(40)
                                     .setTemperature(0.7f)
-                                    .setRandomSeed(0)
                                     .build()
+                                    
                                 llmInference = LlmInference.createFromOptions(applicationContext, options)
                                 runOnUiThread { result.success(true) }
                             } catch (e: Throwable) {
@@ -38,7 +39,7 @@ class MainActivity: FlutterActivity() {
                             }
                         }
                     } else {
-                        result.error("FILE_NOT_FOUND", "Model file not found at path", null)
+                        result.error("FILE_NOT_FOUND", "Model file not found", null)
                     }
                 }
                 "generate" -> {
@@ -46,32 +47,31 @@ class MainActivity: FlutterActivity() {
                     val engine = llmInference
                     
                     if (engine == null) {
-                        result.error("ENGINE_NOT_READY", "MediaPipe Model Not Initialized", null)
+                        result.error("ENGINE_NOT_READY", "Model is not initialized", null)
                         return@setMethodCallHandler
                     }
 
                     val cleanInput = rawPrompt.trim()
                     if (cleanInput.isEmpty()) {
-                        result.error("EMPTY_PROMPT", "Prompt cannot be empty", null)
+                        result.error("EMPTY_PROMPT", "Prompt is empty", null)
                         return@setMethodCallHandler
                     }
 
                     executor.execute {
                         try {
-                            // Stable Turn Wrapper for Gemma
-                            val promptToSend = "<start_of_turn>user\n$cleanInput<end_of_turn>\n<start_of_turn>model\n"
-                            val response = engine.generateResponse(promptToSend)
+                            // Direct plain prompt handling to avoid turn-tag tokenization crash
+                            val response = engine.generateResponse(cleanInput)
                             
                             runOnUiThread {
                                 if (!response.isNullOrBlank()) {
                                     result.success(response)
                                 } else {
-                                    result.error("EMPTY_RESPONSE", "Engine returned no output", null)
+                                    result.error("EMPTY_RESPONSE", "Engine gave no output", null)
                                 }
                             }
                         } catch (e: Throwable) {
                             runOnUiThread { 
-                                result.error("GEN_FAIL", e.localizedMessage ?: "Inference execution error", null) 
+                                result.error("GEN_FAIL", e.localizedMessage ?: "Inference failed", null) 
                             }
                         }
                     }
