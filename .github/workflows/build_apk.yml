@@ -41,6 +41,17 @@ jobs:
         working-directory: flutter_app
         run: flutter pub get
 
+      # --- DEPENDENCY TREE & LLAMA RESOLUTION LOG STEP ---
+      - name: Inspect Dependencies & Llama Resolution Logs
+        working-directory: flutter_app
+        run: |
+          echo "=================== FLUTTER PUB DEPS (LLAMA ONLY) ==================="
+          flutter pub deps | grep llama || echo "No direct llama match in filtered tree"
+          echo "=================== FULL DEPENDENCY GRAPH ==================="
+          flutter pub deps
+          echo "=================== PUB CACHE DIRECTORY CHECK ==================="
+          ls -la /home/runner/.pub-cache/hosted/pub.dev/ | grep llama || echo "No llama package found in cache"
+
       - name: Inject Missing llama.cpp Submodule into Package Cache
         run: |
           git clone --depth 1 https://github.com/ggerganov/llama.cpp.git /tmp/llama_source
@@ -140,10 +151,10 @@ jobs:
           chmod +x gradlew || true
           mkdir -p ~/.config/.android
           keytool -genkey -v \
+            -keypass android \
             -keystore ~/.config/.android/debug.keystore \
             -alias AndroidDebugKey \
             -storepass android \
-            -keypass android \
             -keyalg RSA \
             -keysize 2048 \
             -validity 10000 \
