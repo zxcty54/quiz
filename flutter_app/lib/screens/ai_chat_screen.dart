@@ -30,14 +30,14 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
 
-  Llama? _llama;
+  LlamaEngine? _engine;
+  StreamSubscription<String>? _generationSubscription;
 
   bool _isModelLoaded = false;
   bool _isModelLoading = false;
   bool _isGenerating = false;
-  bool _shouldStop = false;
 
-  String _modelStatus = 'Qwen 2.5 0.5B Not Loaded';
+  String _modelStatus = 'Qwen 2.5 Not Loaded';
   AgentTaskMode _selectedMode = AgentTaskMode.explain;
 
   final List<Map<String, String>> _messages = [];
@@ -48,17 +48,9 @@ class _AiChatScreenState extends State<AiChatScreen> {
   void dispose() {
     _textController.dispose();
     _scrollController.dispose();
-    _disposeModelSafely();
+    _generationSubscription?.cancel();
+    _engine?.dispose();
     super.dispose();
-  }
-
-  void _disposeModelSafely() {
-    try {
-      _llama?.dispose();
-    } catch (e) {
-      debugPrint('Model dispose warning: $e');
-    }
-    _llama = null;
   }
 
   List<String> _cleanChunks(List<String> chunks) {
@@ -88,8 +80,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
   }
 
-  // --- SAFE LOW-MEMORY MODEL INITIALIZATION ---
-  Future<void> _pickAndLoadQwenModel() async {
+  // --- MODERN LLAMAENGINE 0.9.x ISOLATE LOADER ---
+  Future<void> _pickAndLoadModel() async {
     if (_busy) return;
 
     try {
@@ -104,51 +96,49 @@ class _AiChatScreenState extends State<AiChatScreen> {
       final fileName = result.files.single.name;
 
       if (pickedPath == null || !File(pickedPath).existsSync()) {
-        _showError('GGUF file ka path invalid hai.');
+        _showError('GGUF file path invalid hai.');
         return;
       }
 
       if (!fileName.toLowerCase().endsWith('.gguf')) {
-        _showError('Kripya sirf .gguf format file select karein.');
+        _showError('Kripya sirf .gguf model file select karein.');
         return;
       }
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Allocating Low-Footprint RAM...';
+        _modelStatus = 'Initializing Isolate Worker...';
       });
 
-      await Future.delayed(const Duration(milliseconds: 300));
-      _disposeModelSafely();
+      _engine?.dispose();
 
-      // Crash-Proof Minimum RAM Allocation
-      final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU
-
-      final contextParams = ContextParams();
-      contextParams.nCtx = 128;   // Hard-limited context buffer to prevent OS kill
-      contextParams.nThreads = 1; // Single thread to avoid multi-thread race condition
-
-      final loadedInstance = Llama(pickedPath, modelParams, contextParams);
+      // 0.9.x Isolate Configuration
+      final engine = LlamaEngine();
+      await engine.init(
+        modelPath: pickedPath,
+        contextSize: 256,
+        threads: 2,
+        gpuLayers: 0,
+      );
 
       if (!mounted) return;
 
       setState(() {
-        _llama = loadedInstance;
+        _engine = engine;
         _isModelLoaded = true;
         _isModelLoading = false;
-        _modelStatus = 'Qwen 2.5 Active (Safe Memory Mode)';
+        _modelStatus = 'Qwen 2.5 Active (Isolate Engine)';
       });
 
-      _showSuccess('🟢 Model load ho gaya! Ab topic enter karein.');
+      _showSuccess('🟢 Model load ho gaya! Ab topic type karein.');
     } catch (e) {
       if (!mounted) return;
       setState(() {
         _isModelLoaded = false;
         _isModelLoading = false;
-        _modelStatus = 'Loading Error';
+        _modelStatus = 'Load Error';
       });
-      _showError('Model loading error:\n$e');
+      _showError('Model init error:\n$e');
     }
   }
 
@@ -203,7 +193,7 @@ Analyze the user's reasoning and point out traps.
       default:
         systemInstructions = '''
 You are a Duolingo-style structured learning AI tutor for competitive exams.
-Explain the topic in crisp points:
+Explain the topic strictly in 3 crisp points:
 1. 💡 Micro Concept (1-line definition)
 2. ⚡ 3-Step Breakdown (3 short bullet points)
 3. 🎯 1 Micro Challenge MCQ with answer
@@ -225,7 +215,7 @@ $userInput<|im_end|>
     final query = _textController.text.trim();
     if (query.isEmpty || _busy) return;
 
-    if (!_isModelLoaded || _llama == null) {
+    if (!_isModelLoaded || _engine == null) {
       _showError('Pehle upar 📁 icon par click karke Qwen 0.5B GGUF file load karein.');
       return;
     }
@@ -254,30 +244,13 @@ $userInput<|im_end|>
       );
 
       final buffer = StringBuffer();
-      _shouldStop = false;
-
-      _llama!.setPrompt(prompt);
-
-      int tokenCount = 0;
-      // Protected Generation Loop (Caps output to 180 tokens to prevent buffer crash)
-      while (!_shouldStop && mounted && tokenCount < 180) {
-        final tokenResult = _llama!.getNext();
-        final tokenText = tokenResult.$1;
-        final isDone = tokenResult.$2;
-
-        if (isDone ||
-            tokenText.isEmpty ||
-            tokenText == '<|im_end|>' ||
-            tokenText == '<|endoftext|>') {
-          break;
-        }
-
-        buffer.write(tokenText);
-        tokenCount++;
-
-        if (tokenCount % 3 == 0 &&
-            _messages.isNotEmpty &&
-            _messages.last['role'] == 'assistant') {
+      
+      // Modern 0.9.x Stream Worker
+      final stream = _engine!.generate(prompt);
+      _generationSubscription = stream.listen(
+        (token) {
+          if (token == '<|im_end|>' || token == '<|endoftext|>') return;
+          buffer.write(token);
           setState(() {
             _messages[_messages.length - 1] = {
               'role': 'assistant',
@@ -285,37 +258,33 @@ $userInput<|im_end|>
             };
           });
           _scrollToBottom();
-        }
-
-        await Future.delayed(const Duration(milliseconds: 1));
-      }
-
-      stopwatch.stop();
-      if (!mounted) return;
-
-      final finalAnswer = buffer.toString().trim();
-      setState(() {
-        if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
-          _messages[_messages.length - 1] = {
-            'role': 'assistant',
-            'text': finalAnswer.isEmpty ? '⚠️ Output blank raha.' : finalAnswer,
-            'time': '${stopwatch.elapsedMilliseconds}ms',
-          };
-        }
-        _isGenerating = false;
-      });
-      _scrollToBottom();
+        },
+        onError: (e) {
+          debugPrint('Stream error: $e');
+        },
+        onDone: () {
+          stopwatch.stop();
+          if (!mounted) return;
+          setState(() {
+            _messages[_messages.length - 1] = {
+              'role': 'assistant',
+              'text': buffer.toString().trim().isEmpty ? '⚠️ Blank response' : buffer.toString().trim(),
+              'time': '${stopwatch.elapsedMilliseconds}ms (0.9.x Isolate)',
+            };
+            _isGenerating = false;
+          });
+          _scrollToBottom();
+        },
+      );
     } catch (e) {
       stopwatch.stop();
       if (!mounted) return;
       setState(() {
-        if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
-          _messages[_messages.length - 1] = {
-            'role': 'assistant',
-            'text': '❌ Generation Error:\n$e',
-            'time': '${stopwatch.elapsedMilliseconds}ms',
-          };
-        }
+        _messages[_messages.length - 1] = {
+          'role': 'assistant',
+          'text': '❌ Generation Error:\n$e',
+          'time': '${stopwatch.elapsedMilliseconds}ms',
+        };
         _isGenerating = false;
       });
       _scrollToBottom();
@@ -323,9 +292,9 @@ $userInput<|im_end|>
   }
 
   void _stopGeneration() {
-    if (!_isGenerating) return;
+    _generationSubscription?.cancel();
+    _engine?.stop();
     setState(() {
-      _shouldStop = true;
       _isGenerating = false;
     });
   }
@@ -396,7 +365,7 @@ $userInput<|im_end|>
         actions: [
           IconButton(
             tooltip: 'Load Qwen 0.5B GGUF',
-            onPressed: _busy ? null : _pickAndLoadQwenModel,
+            onPressed: _busy ? null : _pickAndLoadModel,
             icon: _isModelLoading
                 ? const SizedBox(
                     width: 18,
@@ -523,7 +492,7 @@ $userInput<|im_end|>
             const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
             const SizedBox(height: 12),
             Text(
-              _isModelLoaded ? 'Qwen 2.5 0.5B Ready' : 'Offline Qwen AI Agent',
+              _isModelLoaded ? 'Qwen 2.5 0.9.x Isolate Ready' : 'Offline Qwen AI Agent',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isDark ? Colors.white70 : Colors.black87),
             ),
             const SizedBox(height: 6),
@@ -537,7 +506,7 @@ $userInput<|im_end|>
             const SizedBox(height: 16),
             if (!_isModelLoaded)
               ElevatedButton.icon(
-                onPressed: _isModelLoading ? null : _pickAndLoadQwenModel,
+                onPressed: _isModelLoading ? null : _pickAndLoadModel,
                 icon: const Icon(Icons.folder_open, size: 18),
                 label: const Text('Pick Downloaded Qwen GGUF'),
                 style: ElevatedButton.styleFrom(
