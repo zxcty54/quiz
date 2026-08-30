@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:llama_cpp_dart/llama_cpp_dart.dart';
-import 'package:path_provider/path_provider.dart';
 
 import '../services/knowledge_base_service.dart';
 
@@ -38,7 +37,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   bool _isGenerating = false;
   bool _shouldStop = false;
 
-  String _modelStatus = 'Qwen 2.5 Not Loaded';
+  String _modelStatus = 'Qwen 2.5 0.5B Not Loaded';
   AgentTaskMode _selectedMode = AgentTaskMode.explain;
 
   final List<Map<String, String>> _messages = [];
@@ -89,8 +88,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
   }
 
-  // --- QWEN 2.5 0.5B GGUF MODEL LOADER ---
-  Future<void> _pickAndLoadQwenModel() async {
+  // --- DIRECT FILE PICKER & LOAD WITHOUT UI LOCK ---
+  Future<void> _pickAndLoadQwen() async {
     if (_busy) return;
 
     try {
@@ -116,33 +115,21 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Copying Qwen 2.5 to App Storage...';
-      });
-
-      final appDir = await getApplicationDocumentsDirectory();
-      final localModelPath = '${appDir.path}/$fileName';
-      final localModelFile = File(localModelPath);
-
-      if (!localModelFile.existsSync() || localModelFile.lengthSync() != File(pickedPath).lengthSync()) {
-        final sourceFile = File(pickedPath);
-        await sourceFile.copy(localModelPath);
-      }
-
-      setState(() {
-        _modelStatus = 'Loading Qwen 2.5 into RAM...';
+        _modelStatus = 'Allocating 0.5B RAM...';
       });
 
       await Future.delayed(const Duration(milliseconds: 300));
       _disposeModelSafely();
 
+      // Qwen 2.5 0.5B Minimal Safe Parameters
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU on Android
+      modelParams.nGpuLayers = 0; // Pure CPU mode
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 512;   // 512 context memory
+      contextParams.nCtx = 384;   // Low context to prevent Android SIGSEGV/ANR
       contextParams.nThreads = 2; // Optimal CPU threads
 
-      final loadedInstance = Llama(localModelPath, modelParams, contextParams);
+      final loadedInstance = Llama(pickedPath, modelParams, contextParams);
 
       if (!mounted) return;
 
@@ -150,22 +137,22 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _llama = loadedInstance;
         _isModelLoaded = true;
         _isModelLoading = false;
-        _modelStatus = 'Qwen 2.5 0.5B Ready (Offline)';
+        _modelStatus = 'Qwen 2.5 0.5B Ready (CPU)';
       });
 
-      _showSuccess('🟢 Qwen 2.5 0.5B successfully loaded!');
+      _showSuccess('🟢 Model load ho gaya! Ab topic enter karein.');
     } catch (e) {
       if (!mounted) return;
       setState(() {
         _isModelLoaded = false;
         _isModelLoading = false;
-        _modelStatus = 'Loading Error';
+        _modelStatus = 'Load Error';
       });
       _showError('Model loading error:\n$e');
     }
   }
 
-  // --- DYNAMIC MULTI-AGENT CHAT TEMPLATE ---
+  // --- QWEN 2.5 OFFICIAL CHAT FORMAT ---
   String _buildQwenPrompt({
     required String userInput,
     required String context,
@@ -176,7 +163,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       case AgentTaskMode.quiz:
         systemInstructions = '''
 You are an expert competitive exam quiz writer for BPSC, BSSC, and SSC CGL.
-Create 2 multiple-choice questions for the user's topic based on study context.
+Create 2 multiple-choice questions for the user's topic based on the study context.
 Format:
 Q1. [Question]
 A) [Option 1]
@@ -190,8 +177,8 @@ Explanation: [Crisp 1-line reason]
 
       case AgentTaskMode.mnemonic:
         systemInstructions = '''
-You are an AI Memory Specialist for Indian competitive exams.
-Create a high-impact Hindi/Hinglish mnemonic, acronym, or memory trick to remember the provided topic/rules easily.
+You are an AI Memory Specialist.
+Create a high-impact Hindi/Hinglish mnemonic or memory trick to remember the topic easily.
 ''';
         break;
 
@@ -208,7 +195,7 @@ Provide a high-yield exam summary sheet:
       case AgentTaskMode.analyze:
         systemInstructions = '''
 You are an AI Diagnostic Evaluator.
-Analyze the user's answer/reasoning for the exam topic and explain where conceptual mistakes commonly happen.
+Analyze the user's answer/reasoning for the exam topic and point out conceptual traps.
 ''';
         break;
 
@@ -239,7 +226,7 @@ $userInput<|im_end|>
     if (query.isEmpty || _busy) return;
 
     if (!_isModelLoaded || _llama == null) {
-      _showError('Pehle upar 📁 icon par click karke Qwen 2.5 GGUF model load karein.');
+      _showError('Pehle upar 📁 icon par click karke Qwen 0.5B GGUF file select karein.');
       return;
     }
 
@@ -378,7 +365,7 @@ $userInput<|im_end|>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Qwen 2.5 AI Exam Agent',
+              'Qwen 2.5 Exam Agent',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 2),
@@ -407,8 +394,8 @@ $userInput<|im_end|>
         elevation: 0.5,
         actions: [
           IconButton(
-            tooltip: 'Load Qwen 2.5 GGUF File',
-            onPressed: _busy ? null : _pickAndLoadQwenModel,
+            tooltip: 'Load Downloaded Qwen 0.5B File',
+            onPressed: _busy ? null : _pickAndLoadQwen,
             icon: _isModelLoading
                 ? const SizedBox(
                     width: 18,
@@ -424,7 +411,7 @@ $userInput<|im_end|>
       ),
       body: Column(
         children: [
-          // Dynamic Multi-Agent Feature Selector Bar
+          // Mode Selection Header
           Container(
             height: 46,
             padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
@@ -537,23 +524,23 @@ $userInput<|im_end|>
             const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
             const SizedBox(height: 12),
             Text(
-              _isModelLoaded ? 'Qwen 2.5 0.5B Active' : 'Offline Qwen AI Agent',
+              _isModelLoaded ? 'Qwen 2.5 0.5B Ready' : 'Offline Qwen AI Agent',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isDark ? Colors.white70 : Colors.black87),
             ),
             const SizedBox(height: 6),
             Text(
               _isModelLoaded
-                  ? 'Upar se task select karein aur koi bhi topic type karein!'
-                  : 'GGUF model file load karne ke liye upar 📁 button dabayein.',
+                  ? 'Upar se task select karein aur koi bhi concept type karein!'
+                  : 'Phone me downloaded Qwen 0.5B GGUF file load karne ke liye 📁 button dabayein.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, height: 1.4, color: Colors.grey.shade600),
             ),
             const SizedBox(height: 16),
             if (!_isModelLoaded)
               ElevatedButton.icon(
-                onPressed: _isModelLoading ? null : _pickAndLoadQwenModel,
+                onPressed: _isModelLoading ? null : _pickAndLoadQwen,
                 icon: const Icon(Icons.folder_open, size: 18),
-                label: const Text('Load Qwen 0.5B GGUF'),
+                label: const Text('Pick Downloaded Qwen GGUF'),
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF2563EB),
                   foregroundColor: Colors.white,
