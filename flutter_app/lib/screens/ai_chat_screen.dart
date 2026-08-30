@@ -8,7 +8,7 @@ enum LlmTaskType {
   duolingoExplanation,
   quiz,
   analysis,
-  mnemonic,
+  mnemonic, 
   summary,
 }
 
