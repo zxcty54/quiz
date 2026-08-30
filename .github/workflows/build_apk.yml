@@ -33,6 +33,78 @@ jobs:
         run: |
           echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
+      # --- 1. Re-align to Pure Flutter V2 Structure ---
+      - name: Upgrade Native Android Template to V2
+        working-directory: flutter_app
+        run: |
+          flutter create . --platforms=android --org com --project-name testing
+
+      # --- 2. Re-inject Custom MediaPipe MainActivity.kt ---
+      - name: Inject MediaPipe MainActivity.kt
+        run: |
+          mkdir -p flutter_app/android/app/src/main/kotlin/com/testing
+          cat << 'EOF' > flutter_app/android/app/src/main/kotlin/com/testing/MainActivity.kt
+          package com.testing
+
+          import android.os.Bundle
+          import com.google.mediapipe.tasks.genai.llminference.LlmInference
+          import io.flutter.embedding.android.FlutterActivity
+          import io.flutter.embedding.engine.FlutterEngine
+          import io.flutter.plugin.common.MethodChannel
+          import java.io.File
+          import kotlin.concurrent.thread
+
+          class MainActivity: FlutterActivity() {
+              private val CHANNEL = "com.mocktester.ai/offline_llm"
+              private var llmInference: LlmInference? = null
+
+              override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
+                  super.configureFlutterEngine(flutterEngine)
+
+                  MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL).setMethodCallHandler { call, result ->
+                      when (call.method) {
+                          "initModel" -> {
+                              val modelPath = call.argument<String>("modelPath")
+                              if (modelPath != null && File(modelPath).exists()) {
+                                  thread {
+                                      try {
+                                          val options = LlmInference.LlmInferenceOptions.builder()
+                                              .setModelPath(modelPath)
+                                              .setMaxTokens(512)
+                                              .build()
+                                          llmInference = LlmInference.createFromOptions(context, options)
+                                          runOnUiThread { result.success(true) }
+                                      } catch (e: Exception) {
+                                          runOnUiThread { result.error("INIT_FAIL", e.localizedMessage, null) }
+                                      }
+                                  }
+                              } else {
+                                  result.error("FILE_NOT_FOUND", "Model file not found at path", null)
+                              }
+                          }
+                          "generate" -> {
+                              val prompt = call.argument<String>("prompt")
+                              val engine = llmInference
+                              if (engine != null && prompt != null) {
+                                  thread {
+                                      try {
+                                          val response = engine.generateResponse(prompt)
+                                          runOnUiThread { result.success(response) }
+                                      } catch (e: Exception) {
+                                          runOnUiThread { result.error("GEN_FAIL", e.localizedMessage, null) }
+                                      }
+                                  }
+                              } else {
+                                  result.error("ENGINE_NOT_READY", "MediaPipe Model Not Initialized", null)
+                              }
+                          }
+                          else -> result.notImplemented()
+                      }
+                  }
+              }
+          }
+          EOF
+
       - name: Get Dependencies
         working-directory: flutter_app
         run: flutter pub get
@@ -42,7 +114,7 @@ jobs:
           python3 - << 'EOF'
           import os
 
-          # 1. Update Root android/build.gradle to force SDK 34
+          # 1. Update Root android/build.gradle
           root_gradle = "flutter_app/android/build.gradle"
           if os.path.exists(root_gradle):
               with open(root_gradle, "r") as f:
@@ -72,9 +144,8 @@ jobs:
                   content += override_block
                   with open(root_gradle, "w") as f:
                       f.write(content)
-              print("Injected subproject SDK 34 override into root build.gradle")
 
-          # 2. Inject MediaPipe GenAI & Desugaring into app/build.gradle
+          # 2. Update app/build.gradle
           app_gradle = "flutter_app/android/app/build.gradle"
           if os.path.exists(app_gradle):
               with open(app_gradle, "r") as f:
@@ -95,32 +166,6 @@ jobs:
           """
               with open(app_gradle, "w") as f:
                   f.write(content)
-              print("Successfully configured MediaPipe GenAI dependencies in app/build.gradle")
-          EOF
-
-      - name: Purge Android V1 Embedding Artifacts
-        run: |
-          python3 - << 'EOF'
-          import os, re
-
-          for root, dirs, files in os.walk("flutter_app/android"):
-              for file in files:
-                  if file == "AndroidManifest.xml":
-                      manifest_path = os.path.join(root, file)
-                      with open(manifest_path, "r", encoding="utf-8", errors="ignore") as f:
-                          content = f.read()
-                      
-                      # Strip any legacy flutterEmbedding meta-data tags
-                      cleaned = re.sub(r'<meta-data\s+android:name="flutterEmbedding"[^>]*/>\s*', '', content)
-                      # Fix legacy NormalTheme syntax
-                      cleaned = cleaned.replace('android:value="@style/NormalTheme"', 'android:resource="@style/NormalTheme"')
-                      # Replace deprecated v1 Application class if hardcoded
-                      cleaned = cleaned.replace('android:name="io.flutter.app.FlutterApplication"', 'android:name="${applicationName}"')
-                      
-                      if cleaned != content:
-                          with open(manifest_path, "w", encoding="utf-8") as f:
-                              f.write(cleaned)
-                          print(f"Purged V1 embeddings from: {manifest_path}")
           EOF
 
       - name: Setup Keystore & Permissions
