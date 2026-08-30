@@ -1,12 +1,7 @@
 import 'dart:async';
-import 'dart:io';
-import 'package:file_picker/file_picker.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:llama_cpp_dart/llama_cpp_dart.dart';
-import 'package:path_provider/path_provider.dart';
-
 import '../services/knowledge_base_service.dart';
+import '../services/dynamic_ai_agent_service.dart';
 
 class AiChatScreen extends StatefulWidget {
   final bool isDarkMode;
@@ -24,69 +19,52 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
 
-  Llama? _llama;
-
   bool _isModelLoaded = false;
   bool _isModelLoading = false;
   bool _isGenerating = false;
-  bool _shouldStop = false;
 
-  String _modelStatus = 'AI Model Not Loaded';
-  String? _modelPath;
-  String _debugLog = '';
-
+  String _modelStatus = 'Offline AI Agent Initializing...';
+  AgentTaskType? _selectedTaskOverride;
   final List<Map<String, String>> _messages = [];
 
   bool get _busy => _isModelLoading || _isGenerating;
 
   @override
+  void initState() {
+    super.initState();
+    _initializeOfflineModel();
+  }
+
+  @override
   void dispose() {
     _textController.dispose();
     _scrollController.dispose();
-    _disposeModelSafely();
     super.dispose();
   }
 
-  void _disposeModelSafely() {
+  Future<void> _initializeOfflineModel() async {
+    setState(() {
+      _isModelLoading = true;
+      _modelStatus = 'Loading Dynamic Agent Engine...';
+    });
+
     try {
-      _llama?.dispose();
+      await DynamicAiAgentService.instance.initModel();
+
+      if (!mounted) return;
+      setState(() {
+        _isModelLoaded = true;
+        _isModelLoading = false;
+        _modelStatus = 'Dynamic AI Agent Ready (Multi-Task)';
+      });
     } catch (e) {
-      _logCrash('Model dispose error: $e');
+      if (!mounted) return;
+      setState(() {
+        _isModelLoaded = false;
+        _isModelLoading = false;
+        _modelStatus = 'Agent Init Error';
+      });
     }
-    _llama = null;
-  }
-
-  void _logCrash(String message) {
-    debugPrint('🚨 [AI_DEBUG_LOG]: $message');
-    _debugLog += '\n[${DateTime.now().toIso8601String().substring(11, 19)}] $message';
-  }
-
-  void _showCrashDialog(String title, String errorDetails) {
-    if (!mounted) return;
-    showDialog(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: Row(
-          children: [
-            const Icon(Icons.bug_report, color: Colors.red),
-            const SizedBox(width: 8),
-            Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
-          ],
-        ),
-        content: SingleChildScrollView(
-          child: SelectableText(
-            errorDetails,
-            style: const TextStyle(fontSize: 12, fontFamily: 'monospace', color: Colors.redAccent),
-          ),
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.of(ctx).pop(),
-            child: const Text('Close'),
-          ),
-        ],
-      ),
-    );
   }
 
   List<String> _cleanChunks(List<String> chunks) {
@@ -96,293 +74,36 @@ class _AiChatScreenState extends State<AiChatScreen> {
           return !lower.contains('preface') &&
               !lower.contains('all rights reserved') &&
               !lower.contains('isbn') &&
-              !lower.contains('acknowledgement') &&
-              !lower.contains('acknowledgment');
+              !lower.contains('acknowledgement');
         })
         .map((chunk) => chunk.trim().replaceAll(RegExp(r'\s+'), ' '))
         .where((chunk) => chunk.isNotEmpty)
         .toList();
   }
 
-  double _calculateMatchScore(String query, String text) {
-    final queryWords = query
-        .toLowerCase()
-        .split(RegExp(r'\W+'))
-        .where((w) => w.length > 2)
-        .toSet();
-
-    final textWords = text
-        .toLowerCase()
-        .split(RegExp(r'\W+'))
-        .where((w) => w.length > 2)
-        .toSet();
-
-    if (queryWords.isEmpty || textWords.isEmpty) return 0.0;
-
-    final intersection = queryWords.intersection(textWords).length;
-    final union = queryWords.union(textWords).length;
-    if (union == 0) return 0.0;
-
-    double score = intersection / union;
-    final q = query.toLowerCase().trim();
-    final t = text.toLowerCase();
-
-    if (q.isNotEmpty && t.contains(q)) score += 1.0;
-    score += (intersection / queryWords.length) * 0.5;
-
-    return score;
-  }
-
-  Future<void> _pickAndLoadModel() async {
-    if (_busy) return;
-
-    _debugLog = '--- New Load Attempt Started ---';
-    try {
-      _logCrash('Step 1: Opening file picker...');
-      final result = await FilePicker.platform.pickFiles(
-        type: FileType.any,
-        allowMultiple: false,
-      );
-
-      if (result == null || result.files.isEmpty) {
-        _logCrash('Step 1 Cancelled: User picked nothing.');
-        return;
-      }
-
-      final pickedPath = result.files.single.path;
-      final fileName = result.files.single.name;
-      final fileSize = result.files.single.size;
-
-      _logCrash('Step 2: File picked -> $fileName (${(fileSize / (1024 * 1024)).toStringAsFixed(2)} MB)');
-      _logCrash('Source path -> $pickedPath');
-
-      if (pickedPath == null || pickedPath.isEmpty || !File(pickedPath).existsSync()) {
-        final err = 'GGUF model file source path invalid ya unreadable hai.';
-        _logCrash(err);
-        _showCrashDialog('Path Error', err);
-        return;
-      }
-
-      if (!fileName.toLowerCase().endsWith('.gguf')) {
-        final err = 'Selected file is not .gguf format.';
-        _logCrash(err);
-        _showCrashDialog('File Format Error', err);
-        return;
-      }
-
-      setState(() {
-        _isModelLoading = true;
-        _modelStatus = 'Copying to App Internal Dir...';
-      });
-
-      // 1. Android Scoped Storage Direct POSIX Path Resolve
-      final appDir = await getApplicationDocumentsDirectory();
-      final localModelPath = '${appDir.path}/$fileName';
-      final localModelFile = File(localModelPath);
-
-      _logCrash('Step 3: Target app directory path -> $localModelPath');
-
-      if (!localModelFile.existsSync() || localModelFile.lengthSync() != File(pickedPath).lengthSync()) {
-        _logCrash('Step 3.1: Copying file to local app storage...');
-        final sourceFile = File(pickedPath);
-        await sourceFile.copy(localModelPath);
-        _logCrash('Step 3.2: Copy complete! Local size: ${localModelFile.lengthSync()} bytes');
-      } else {
-        _logCrash('Step 3.1: File already exists in internal storage with exact match.');
-      }
-
-      setState(() {
-        _modelStatus = 'Allocating Native RAM...';
-      });
-
-      _logCrash('Step 4: Preparing C++ native parameters...');
-      await Future.delayed(const Duration(milliseconds: 500));
-      _disposeModelSafely();
-
-      final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU
-
-      final contextParams = ContextParams();
-      contextParams.nCtx = 256;   // Ultra safe minimal context
-      contextParams.nThreads = 2; // CPU threads
-
-      _logCrash('Step 5: Calling Native Llama(path, params)...');
-      final loadedInstance = Llama(localModelPath, modelParams, contextParams);
-      _logCrash('Step 6: Native Llama instance initialized successfully!');
-
-      if (!mounted) return;
-
-      setState(() {
-        _llama = loadedInstance;
-        _isModelLoaded = true;
-        _isModelLoading = false;
-        _modelPath = localModelPath;
-        _modelStatus = 'Offline AI Ready (CPU Active)';
-      });
-
-      _showSuccess('🟢 Model RAM mein successfully load ho gaya!');
-    } catch (e, stack) {
-      _logCrash('❌ CRASH / EXCEPTION CAUGHT: $e');
-      _logCrash('STACK TRACE:\n$stack');
-
-      if (!mounted) return;
-
-      setState(() {
-        _isModelLoaded = false;
-        _isModelLoading = false;
-        _modelStatus = 'Model Error';
-      });
-
-      _showCrashDialog('Model Loading Crash Log', 'LOG TRACE:\n$_debugLog\n\nERROR:\n$e\n\nSTACK TRACE:\n$stack');
-    }
-  }
-
-  bool _isGreeting(String query) {
-    final normalized = query.toLowerCase().trim();
-    const greetings = {'hi', 'hello', 'hey', 'namaste', 'pranam', 'help'};
-    return greetings.contains(normalized);
-  }
-
-  String _greetingResponse() {
-    return '''
-Namaste! 🙏
-
-Main MockTester ka **100% Offline Duolingo-Style AI Exam Tutor** hoon.
-📚 General Science | ⚖️ Indian Polity | 🌍 General Studies
-
-Aap koi bhi concept ya topic poochein:
-1. 💡 Micro Concept
-2. ⚡ 3-Step Breakdown
-3. 🎯 Instant Challenge
-''';
-  }
-
-  Future<List<String>> _retrieveContext(String query) async {
+  Future<String> _retrieveContext(String query) async {
     try {
       final rawChunks = await KnowledgeBaseService.instance
-          .searchRelevantChunks(query, limit: 8);
+          .searchRelevantChunks(query, limit: 6);
       final cleanFacts = _cleanChunks(rawChunks);
-      if (cleanFacts.isEmpty) return [];
-
-      cleanFacts.sort((a, b) {
-        final scoreB = _calculateMatchScore(query, b);
-        final scoreA = _calculateMatchScore(query, a);
-        return scoreB.compareTo(scoreA);
-      });
-
-      final unique = <String>[];
-      final seen = <String>{};
-
-      for (final fact in cleanFacts) {
-        final normalized = fact.toLowerCase().trim();
-        if (seen.add(normalized)) unique.add(fact);
-        if (unique.length >= 3) break;
-      }
-
-      return unique;
+      if (cleanFacts.isEmpty) return '';
+      return cleanFacts.take(3).join('\n---\n');
     } catch (e) {
-      _logCrash('Knowledge base search error: $e');
-      return [];
+      debugPrint('RAG search error: $e');
+      return '';
     }
   }
 
-  String _buildGemmaPrompt({
-    required String question,
-    required List<String> context,
-  }) {
-    final contextText = context.isEmpty
-        ? 'General Exam Study Material'
-        : context.join('\n');
-
-    return '''
-<start_of_turn>user
-You are a Duolingo-style structured learning AI tutor for competitive exams (BPSC, BSSC, SSC CGL).
-Explain the topic in crisp, bite-sized points:
-1. 💡 Micro Concept (1-line definition)
-2. ⚡ 3-Step Breakdown (3 short bullet points)
-3. 🎯 1 Micro Challenge MCQ with answer.
-
-STUDY CONTEXT:
-$contextText
-
-TOPIC:
-$question
-<end_of_turn>
-<start_of_turn>model
-''';
-  }
-
-  Future<String> _generateRagAnswer(String question) async {
-    if (_llama == null || !_isModelLoaded) {
-      throw Exception('AI Model loaded nahi hai.');
-    }
-
-    final context = await _retrieveContext(question);
-    final prompt = _buildGemmaPrompt(question: question, context: context);
-
-    final buffer = StringBuffer();
-    _shouldStop = false;
-
-    _llama!.setPrompt(prompt);
-
-    int tokenCount = 0;
-    while (!_shouldStop && mounted) {
-      final tokenResult = _llama!.getNext();
-      final tokenText = tokenResult.$1;
-      final isDone = tokenResult.$2;
-
-      if (isDone ||
-          tokenText.isEmpty ||
-          tokenText == '<end_of_turn>' ||
-          tokenText == '</s>') {
-        break;
-      }
-
-      buffer.write(tokenText);
-      tokenCount++;
-
-      if (tokenCount % 2 == 0 &&
-          _messages.isNotEmpty &&
-          _messages.last['role'] == 'assistant') {
-        setState(() {
-          _messages[_messages.length - 1] = {
-            'role': 'assistant',
-            'text': buffer.toString(),
-          };
-        });
-        _scrollToBottom();
-      }
-
-      await Future.delayed(const Duration(milliseconds: 2));
-    }
-
-    final answer = buffer.toString().trim();
-    if (answer.isEmpty) throw Exception('Empty response from model.');
-
-    return answer;
-  }
-
-  Future<String> _processDatabaseFallback(String query) async {
-    final cleanFacts = await _retrieveContext(query);
-    if (cleanFacts.isEmpty) {
-      return '⚠️ Local study database mein direct topic nahi mila.\n\n💡 Try: Gravitation, Article 32, Mitochondria, Ohm\'s Law.';
-    }
-
-    final buffer = StringBuffer();
-    buffer.writeln('📚 **Offline Notes:**\n');
-    for (final fact in cleanFacts.take(3)) {
-      buffer.writeln('• $fact\n');
-    }
-    return buffer.toString().trim();
-  }
-
-  Future<void> _sendMessage() async {
-    final query = _textController.text.trim();
+  Future<void> _sendMessage({String? predefinedText, AgentTaskType? overrideTask}) async {
+    final query = (predefinedText ?? _textController.text).trim();
     if (query.isEmpty || _busy) return;
+
+    final taskToRun = overrideTask ?? _selectedTaskOverride;
 
     setState(() {
       _messages.add({'role': 'user', 'text': query});
       _isGenerating = true;
+      _selectedTaskOverride = null;
     });
 
     _textController.clear();
@@ -390,104 +111,48 @@ $question
 
     final stopwatch = Stopwatch()..start();
 
+    setState(() {
+      _messages.add({'role': 'assistant', 'text': 'Agent thinking...'});
+    });
+    _scrollToBottom();
+
     try {
-      if (_isGreeting(query)) {
-        final reply = _greetingResponse();
-        stopwatch.stop();
-        if (!mounted) return;
-
-        setState(() {
-          _messages.add({
-            'role': 'assistant',
-            'text': reply,
-            'time': '${stopwatch.elapsedMilliseconds}ms',
-          });
-          _isGenerating = false;
-        });
-        _scrollToBottom();
-        return;
-      }
-
-      if (!_isModelLoaded || _llama == null) {
-        final reply = await _processDatabaseFallback(query);
-        stopwatch.stop();
-        if (!mounted) return;
-
-        setState(() {
-          _messages.add({
-            'role': 'assistant',
-            'text': reply,
-            'time': '${stopwatch.elapsedMilliseconds}ms (DB Mode)',
-          });
-          _isGenerating = false;
-        });
-        _scrollToBottom();
-        return;
-      }
-
-      if (!mounted) return;
-      setState(() {
-        _messages.add({'role': 'assistant', 'text': 'Thinking...'});
-      });
-      _scrollToBottom();
-
-      try {
-        await _generateRagAnswer(query);
-      } catch (llmError) {
-        _logCrash('LLM generation failed: $llmError');
-        final fallback = await _processDatabaseFallback(query);
-        if (!mounted) return;
-        setState(() {
-          if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
-            _messages[_messages.length - 1] = {
-              'role': 'assistant',
-              'text': '$fallback\n\n*(Note: Showing local DB fallback)*',
-            };
-          }
-        });
-      }
+      final context = await _retrieveContext(query);
+      final response = await DynamicAiAgentService.instance.executeAgent(
+        userInput: query,
+        context: context,
+        forcedTask: taskToRun,
+      );
 
       stopwatch.stop();
       if (!mounted) return;
 
-      if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
-        final currentText = _messages.last['text'] ?? '';
-        setState(() {
+      setState(() {
+        if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
           _messages[_messages.length - 1] = {
             'role': 'assistant',
-            'text': currentText,
+            'text': response.trim(),
             'time': '${stopwatch.elapsedMilliseconds}ms',
           };
-          _isGenerating = false;
-        });
-      } else {
-        setState(() {
-          _isGenerating = false;
-        });
-      }
+        }
+        _isGenerating = false;
+      });
       _scrollToBottom();
-    } catch (e, stack) {
+    } catch (e) {
       stopwatch.stop();
-      _logCrash('Send message crash: $e\n$stack');
       if (!mounted) return;
       setState(() {
-        _messages.add({
-          'role': 'assistant',
-          'text': '❌ Offline AI error:\n$e',
-          'time': '${stopwatch.elapsedMilliseconds}ms',
-        });
+        if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
+          _messages[_messages.length - 1] = {
+            'role': 'assistant',
+            'text': '❌ Agent execution error:\n$e',
+            'time': '${stopwatch.elapsedMilliseconds}ms',
+          };
+        }
         _isGenerating = false;
       });
       _scrollToBottom();
     }
-  }
-
-  void _stopGeneration() {
-    if (!_isGenerating) return;
-    setState(() {
-      _shouldStop = true;
-      _isGenerating = false;
-    });
   }
 
   void _scrollToBottom() {
@@ -501,17 +166,6 @@ $question
     });
   }
 
-  void _showSuccess(String message) {
-    if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        backgroundColor: Colors.green.shade700,
-        duration: const Duration(seconds: 3),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
@@ -522,10 +176,7 @@ $question
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Offline Duolingo AI Tutor',
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-            ),
+            const Text('Multi-Agent AI Exam Tutor', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
             const SizedBox(height: 2),
             Row(
               children: [
@@ -550,31 +201,26 @@ $question
         backgroundColor: isDark ? const Color(0xFF1E293B) : const Color(0xFF2563EB),
         foregroundColor: Colors.white,
         elevation: 0.5,
-        actions: [
-          if (_debugLog.isNotEmpty)
-            IconButton(
-              tooltip: 'View Crash / Debug Log',
-              onPressed: () => _showCrashDialog('Debug & Crash Log', _debugLog),
-              icon: const Icon(Icons.bug_report, color: Colors.amberAccent),
-            ),
-          IconButton(
-            tooltip: 'Load GGUF Model',
-            onPressed: _busy ? null : _pickAndLoadModel,
-            icon: _isModelLoading
-                ? const SizedBox(
-                    width: 18,
-                    height: 18,
-                    child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
-                  )
-                : Icon(
-                    _isModelLoaded ? Icons.check_circle : Icons.folder_open,
-                    color: _isModelLoaded ? Colors.greenAccent : Colors.white,
-                  ),
-          ),
-        ],
       ),
       body: Column(
         children: [
+          // Dynamic Feature Action Bar
+          Container(
+            height: 48,
+            padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
+            color: isDark ? const Color(0xFF1E293B) : const Color(0xFFEEF2F6),
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                _buildActionChip('⚡ Micro Concept', AgentTaskType.duolingoExplanation, isDark),
+                _buildActionChip('🎯 Generate Quiz', AgentTaskType.quizGeneration, isDark),
+                _buildActionChip('🧠 Mnemonic Trick', AgentTaskType.mnemonicTrick, isDark),
+                _buildActionChip('📋 Rapid Summary', AgentTaskType.revisionSummary, isDark),
+                _buildActionChip('🔍 Analyze Answer', AgentTaskType.answerAnalysis, isDark),
+              ],
+            ),
+          ),
+
           Expanded(
             child: _messages.isEmpty
                 ? _buildEmptyState(isDark)
@@ -583,7 +229,45 @@ $question
                     padding: const EdgeInsets.all(12),
                     itemCount: _messages.length,
                     itemBuilder: (context, index) {
-                      return _buildMessageBubble(_messages[index], isDark);
+                      final msg = _messages[index];
+                      final isUser = msg['role'] == 'user';
+                      return Align(
+                        alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
+                        child: Container(
+                          margin: const EdgeInsets.symmetric(vertical: 5),
+                          padding: const EdgeInsets.all(12),
+                          constraints: BoxConstraints(maxWidth: MediaQuery.of(context).size.width * 0.88),
+                          decoration: BoxDecoration(
+                            color: isUser ? const Color(0xFF2563EB) : isDark ? const Color(0xFF1E293B) : Colors.white,
+                            borderRadius: BorderRadius.circular(14),
+                            border: isUser ? null : Border.all(color: Colors.grey.withOpacity(0.2)),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              SelectableText(
+                                msg['text'] ?? '',
+                                style: TextStyle(
+                                  color: isUser ? Colors.white : isDark ? Colors.white : const Color(0xFF0F172A),
+                                  fontSize: 13,
+                                  height: 1.45,
+                                ),
+                              ),
+                              if (msg.containsKey('time')) ...[
+                                const SizedBox(height: 5),
+                                Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    const Icon(Icons.flash_on_rounded, size: 10, color: Colors.amber),
+                                    const SizedBox(width: 2),
+                                    Text('Time: ${msg['time']}', style: const TextStyle(fontSize: 9, color: Colors.grey)),
+                                  ],
+                                ),
+                              ],
+                            ],
+                          ),
+                        ),
+                      );
                     },
                   ),
           ),
@@ -602,6 +286,25 @@ $question
     );
   }
 
+  Widget _buildActionChip(String label, AgentTaskType task, bool isDark) {
+    final isSelected = _selectedTaskOverride == task;
+    return Padding(
+      padding: const EdgeInsets.only(right: 6),
+      child: FilterChip(
+        label: Text(label, style: TextStyle(fontSize: 11, color: isSelected ? Colors.white : isDark ? Colors.white70 : Colors.black87)),
+        selected: isSelected,
+        backgroundColor: isDark ? const Color(0xFF0F172A) : Colors.white,
+        selectedColor: const Color(0xFF2563EB),
+        checkmarkColor: Colors.white,
+        onSelected: (selected) {
+          setState(() {
+            _selectedTaskOverride = selected ? task : null;
+          });
+        },
+      ),
+    );
+  }
+
   Widget _buildEmptyState(bool isDark) {
     return Center(
       child: Padding(
@@ -612,90 +315,15 @@ $question
             const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
             const SizedBox(height: 12),
             Text(
-              _isModelLoaded ? 'AI Ready (Zero Lag)' : 'Offline Learning Agent Ready',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: isDark ? Colors.white70 : Colors.black87,
-              ),
+              'Autonomous Multi-Agent AI Ready',
+              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isDark ? Colors.white70 : Colors.black87),
             ),
             const SizedBox(height: 6),
             Text(
-              _isModelLoaded
-                  ? 'Ask any exam topic for 3-step breakdown & instant challenge!'
-                  : 'GGUF model file load karne ke liye upar 📁 button dabayein.',
+              'Select any mode above or ask any topic (e.g. "Gravitation", "Article 32", "Fundamental Rights trick").',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, height: 1.4, color: Colors.grey.shade600),
             ),
-            const SizedBox(height: 16),
-            if (!_isModelLoaded)
-              ElevatedButton.icon(
-                onPressed: _isModelLoading ? null : _pickAndLoadModel,
-                icon: const Icon(Icons.folder_open, size: 18),
-                label: const Text('Load GGUF Model'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF2563EB),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                ),
-              ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildMessageBubble(Map<String, String> msg, bool isDark) {
-    final isUser = msg['role'] == 'user';
-    final text = msg['text'] ?? '';
-
-    return Align(
-      alignment: isUser ? Alignment.centerRight : Alignment.centerLeft,
-      child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 5),
-        padding: const EdgeInsets.all(12),
-        constraints: BoxConstraints(
-          maxWidth: MediaQuery.of(context).size.width * 0.88,
-        ),
-        decoration: BoxDecoration(
-          color: isUser
-              ? const Color(0xFF2563EB)
-              : isDark
-                  ? const Color(0xFF1E293B)
-                  : Colors.white,
-          borderRadius: BorderRadius.circular(14),
-          border: isUser ? null : Border.all(color: Colors.grey.withOpacity(0.2)),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              text,
-              style: TextStyle(
-                color: isUser
-                    ? Colors.white
-                    : isDark
-                        ? Colors.white
-                        : const Color(0xFF0F172A),
-                fontSize: 13,
-                height: 1.45,
-              ),
-            ),
-            if (msg.containsKey('time')) ...[
-              const SizedBox(height: 5),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  const Icon(Icons.flash_on_rounded, size: 10, color: Colors.amber),
-                  const SizedBox(width: 2),
-                  Text(
-                    'Time: ${msg['time']}',
-                    style: const TextStyle(fontSize: 9, color: Colors.grey),
-                  ),
-                ],
-              ),
-            ],
           ],
         ),
       ),
@@ -720,9 +348,9 @@ $question
               textInputAction: TextInputAction.send,
               style: TextStyle(color: isDark ? Colors.white : Colors.black, fontSize: 13),
               decoration: InputDecoration(
-                hintText: _isModelLoaded
-                    ? 'Ask any concept (e.g. Gravitation, Writs)...'
-                    : 'Type topic name...',
+                hintText: _selectedTaskOverride != null
+                    ? 'Type topic for ${_selectedTaskOverride!.name}...'
+                    : 'Ask any question, quiz, or topic...',
                 hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
                 border: InputBorder.none,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 10),
@@ -730,18 +358,11 @@ $question
               onSubmitted: (_) => _sendMessage(),
             ),
           ),
-          if (_isGenerating)
-            IconButton(
-              tooltip: 'Stop',
-              onPressed: _stopGeneration,
-              icon: const Icon(Icons.stop_circle, color: Colors.red),
-            )
-          else
-            IconButton(
-              tooltip: 'Send',
-              onPressed: _busy ? null : _sendMessage,
-              icon: const Icon(Icons.send_rounded, color: Color(0xFF2563EB)),
-            ),
+          IconButton(
+            tooltip: 'Send',
+            onPressed: _busy ? null : () => _sendMessage(),
+            icon: const Icon(Icons.send_rounded, color: Color(0xFF2563EB)),
+          ),
         ],
       ),
     );
