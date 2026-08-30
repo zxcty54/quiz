@@ -23,11 +23,10 @@ class MainActivity: FlutterActivity() {
                     if (modelPath != null && File(modelPath).exists()) {
                         executor.execute {
                             try {
-                                // Destroy old instance to avoid OOM
                                 llmInference = null
                                 System.gc()
 
-                                // Minimal stable parameters for low RAM & Qwen/Gemma compatibility
+                                // Gemma 2B CPU INT4 exact optimal limits
                                 val options = LlmInference.LlmInferenceOptions.builder()
                                     .setModelPath(modelPath)
                                     .setMaxTokens(384)
@@ -37,7 +36,7 @@ class MainActivity: FlutterActivity() {
                                 llmInference = LlmInference.createFromOptions(applicationContext, options)
                                 runOnUiThread { result.success(true) }
                             } catch (e: Throwable) {
-                                runOnUiThread { result.error("INIT_FAIL", e.message ?: "Init failed", null) }
+                                runOnUiThread { result.error("INIT_FAIL", e.message ?: "Model load failed", null) }
                             }
                         }
                     } else {
@@ -49,7 +48,7 @@ class MainActivity: FlutterActivity() {
                     val engine = llmInference
                     
                     if (engine == null) {
-                        result.error("ENGINE_NOT_READY", "MediaPipe Model Not Initialized", null)
+                        result.error("ENGINE_NOT_READY", "Gemma Model Not Initialized", null)
                         return@setMethodCallHandler
                     }
 
@@ -61,15 +60,17 @@ class MainActivity: FlutterActivity() {
 
                     executor.execute {
                         try {
-                            // Direct execution without extra prompt wrappers to prevent crash
-                            val response = engine.generateResponse(cleanInput)
+                            // Strict Gemma 2B Instruction Formatting
+                            val gemmaFormattedPrompt = "<start_of_turn>user\n$cleanInput<end_of_turn>\n<start_of_turn>model\n"
+                            
+                            val response = engine.generateResponse(gemmaFormattedPrompt)
                             
                             runOnUiThread {
                                 if (!response.isNullOrBlank()) {
                                     val cleanResponse = response
-                                        .replace("<|im_end|>", "")
-                                        .replace("<|endoftext|>", "")
+                                        .replace("<start_of_turn>model", "")
                                         .replace("<end_of_turn>", "")
+                                        .replace("<eos>", "")
                                         .trim()
                                     result.success(cleanResponse)
                                 } else {
@@ -78,7 +79,7 @@ class MainActivity: FlutterActivity() {
                             }
                         } catch (e: Throwable) {
                             runOnUiThread { 
-                                result.error("GEN_FAIL", e.localizedMessage ?: "Inference error", null) 
+                                result.error("GEN_FAIL", e.localizedMessage ?: "Inference execution error", null) 
                             }
                         }
                     }
