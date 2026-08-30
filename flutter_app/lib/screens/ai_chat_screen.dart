@@ -89,7 +89,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
   }
 
-  // --- QWEN 2.5 0.5B MODEL LOADER ---
+  // --- QWEN 2.5 0.5B GGUF MODEL LOADER ---
   Future<void> _pickAndLoadQwenModel() async {
     if (_busy) return;
 
@@ -116,7 +116,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Copying Qwen 2.5 to App Dir...';
+        _modelStatus = 'Copying Qwen 2.5 to App Storage...';
       });
 
       final appDir = await getApplicationDocumentsDirectory();
@@ -136,10 +136,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
       _disposeModelSafely();
 
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Android CPU
+      modelParams.nGpuLayers = 0; // Pure CPU on Android
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 512;   // 512 context length for 0.5B model
+      contextParams.nCtx = 512;   // 512 context memory
       contextParams.nThreads = 2; // Optimal CPU threads
 
       final loadedInstance = Llama(localModelPath, modelParams, contextParams);
@@ -150,10 +150,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _llama = loadedInstance;
         _isModelLoaded = true;
         _isModelLoading = false;
-        _modelStatus = 'Qwen 2.5 0.5B Active (CPU)';
+        _modelStatus = 'Qwen 2.5 0.5B Ready (Offline)';
       });
 
-      _showSuccess('🟢 Qwen 2.5 0.5B model successfully load ho gaya!');
+      _showSuccess('🟢 Qwen 2.5 0.5B successfully loaded!');
     } catch (e) {
       if (!mounted) return;
       setState(() {
@@ -165,7 +165,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
   }
 
-  // --- QWEN 2.5 CHAT TEMPLATE BUILDER ---
+  // --- DYNAMIC MULTI-AGENT CHAT TEMPLATE ---
   String _buildQwenPrompt({
     required String userInput,
     required String context,
@@ -176,7 +176,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       case AgentTaskMode.quiz:
         systemInstructions = '''
 You are an expert competitive exam quiz writer for BPSC, BSSC, and SSC CGL.
-Create 2 multiple-choice questions for the user's topic.
+Create 2 multiple-choice questions for the user's topic based on study context.
 Format:
 Q1. [Question]
 A) [Option 1]
@@ -191,7 +191,7 @@ Explanation: [Crisp 1-line reason]
       case AgentTaskMode.mnemonic:
         systemInstructions = '''
 You are an AI Memory Specialist for Indian competitive exams.
-Create a Hindi/Hinglish mnemonic, acronym, or memory trick to remember the provided topic/rules easily.
+Create a high-impact Hindi/Hinglish mnemonic, acronym, or memory trick to remember the provided topic/rules easily.
 ''';
         break;
 
@@ -208,7 +208,7 @@ Provide a high-yield exam summary sheet:
       case AgentTaskMode.analyze:
         systemInstructions = '''
 You are an AI Diagnostic Evaluator.
-Analyze the user's answer/reasoning for the exam topic and explain where mistakes commonly happen.
+Analyze the user's answer/reasoning for the exam topic and explain where conceptual mistakes commonly happen.
 ''';
         break;
 
@@ -239,7 +239,7 @@ $userInput<|im_end|>
     if (query.isEmpty || _busy) return;
 
     if (!_isModelLoaded || _llama == null) {
-      _showError('Pehle upar 📁 icon par click karke Qwen 2.5 GGUF model select karein.');
+      _showError('Pehle upar 📁 icon par click karke Qwen 2.5 GGUF model load karein.');
       return;
     }
 
@@ -311,7 +311,7 @@ $userInput<|im_end|>
           _messages[_messages.length - 1] = {
             'role': 'assistant',
             'text': finalAnswer.isEmpty ? '⚠️ Koi response generate nahi hua.' : finalAnswer,
-            'time': '${stopwatch.elapsedMilliseconds}ms (Qwen 0.5B)',
+            'time': '${stopwatch.elapsedMilliseconds}ms',
           };
         }
         _isGenerating = false;
@@ -424,7 +424,7 @@ $userInput<|im_end|>
       ),
       body: Column(
         children: [
-          // Dynamic Feature Bar
+          // Dynamic Multi-Agent Feature Selector Bar
           Container(
             height: 46,
             padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
@@ -543,7 +543,7 @@ $userInput<|im_end|>
             const SizedBox(height: 6),
             Text(
               _isModelLoaded
-                  ? 'Koi bhi topic type karein (e.g. "Gravitation", "Article 32", "Governor power")!'
+                  ? 'Upar se task select karein aur koi bhi topic type karein!'
                   : 'GGUF model file load karne ke liye upar 📁 button dabayein.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, height: 1.4, color: Colors.grey.shade600),
