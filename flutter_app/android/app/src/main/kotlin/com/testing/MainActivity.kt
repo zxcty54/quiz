@@ -38,10 +38,11 @@ class MainActivity: FlutterActivity() {
                 }
                 "generate" -> {
                     val prompt = call.argument<String>("prompt")
-                    if (llmInference != null && prompt != null) {
+                    val engine = llmInference
+                    if (engine != null && prompt != null) {
                         thread {
                             try {
-                                val response = llmInference!!.generateResponse(prompt)
+                                val response = engine.generateResponse(prompt)
                                 runOnUiThread { result.success(response) }
                             } catch (e: Exception) {
                                 runOnUiThread { result.error("GEN_FAIL", e.localizedMessage, null) }
