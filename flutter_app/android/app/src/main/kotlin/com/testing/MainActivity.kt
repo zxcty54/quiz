@@ -57,15 +57,17 @@ class MainActivity: FlutterActivity() {
 
                     executor.execute {
                         try {
-                            // 🔥 Qwen 2.5 ChatML Prompt Format (Stops native C++ crashes on actual text queries)
-                            val formattedPrompt = "<|im_start|>system\nYou are a helpful exam tutor for competitive exams.<|im_end|>\n<|im_start|>user\n$cleanInput<|im_end|>\n<|im_start|>assistant\n"
+                            // Flexible Qwen ChatML Format: Direct response according to user intent
+                            val formattedPrompt = "<|im_start|>system\nYou are a helpful and intelligent AI assistant. Respond directly, accurately, and naturally to whatever the user asks. Do not force any specific template or quiz format unless explicitly asked.<|im_end|>\n<|im_start|>user\n$cleanInput<|im_end|>\n<|im_start|>assistant\n"
                             
                             val response = engine.generateResponse(formattedPrompt)
                             
                             runOnUiThread {
                                 if (!response.isNullOrBlank()) {
-                                    // Remove trailing tags if any
-                                    val cleanResponse = response.replace("<|im_end|>", "").replace("<|endoftext|>", "").trim()
+                                    val cleanResponse = response
+                                        .replace("<|im_end|>", "")
+                                        .replace("<|endoftext|>", "")
+                                        .trim()
                                     result.success(cleanResponse)
                                 } else {
                                     result.error("EMPTY_RESPONSE", "Engine returned no output", null)
