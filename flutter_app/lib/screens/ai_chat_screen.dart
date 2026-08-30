@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AiChatScreen extends StatefulWidget {
@@ -26,7 +27,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   bool _isModelLoaded = false;
   bool _isLoading = false;
   bool _isGenerating = false;
-  String _statusMessage = "Select offline model (.bin)";
+  String _statusMessage = "Checking offline model...";
 
   @override
   void initState() {
@@ -34,13 +35,23 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _checkAndAutoLoadModel();
   }
 
-  // Auto-loads model on startup if previously picked
+  // App open hote hi permanent directory se check karke load karega
   Future<void> _checkAndAutoLoadModel() async {
-    final prefs = await SharedPreferences.getInstance();
-    final savedPath = prefs.getString('saved_offline_model_path');
+    final appDir = await getApplicationDocumentsDirectory();
+    final permanentModelFile = File('${appDir.path}/model.bin');
 
-    if (savedPath != null && File(savedPath).existsSync()) {
-      _initModel(savedPath);
+    if (await permanentModelFile.exists()) {
+      _initNativeModel(permanentModelFile.path);
+    } else {
+      final prefs = await SharedPreferences.getInstance();
+      final savedPath = prefs.getString('saved_offline_model_path');
+      if (savedPath != null && File(savedPath).existsSync()) {
+        _initNativeModel(savedPath);
+      } else {
+        setState(() {
+          _statusMessage = "Select offline model (.bin)";
+        });
+      }
     }
   }
 
@@ -51,15 +62,34 @@ class _AiChatScreenState extends State<AiChatScreen> {
     );
 
     if (result != null && result.files.single.path != null) {
-      final path = result.files.single.path!;
-      _initModel(path);
+      final pickedPath = result.files.single.path!;
+      
+      setState(() {
+        _isLoading = true;
+        _statusMessage = "Saving model permanently to App Storage...";
+      });
+
+      // Permanent App Directory me copy karte hain taaki permission expire na ho
+      try {
+        final appDir = await getApplicationDocumentsDirectory();
+        final permanentFile = File('${appDir.path}/model.bin');
+        
+        if (!await permanentFile.exists()) {
+          await File(pickedPath).copy(permanentFile.path);
+        }
+
+        _initNativeModel(permanentFile.path);
+      } catch (e) {
+        // Fallback agar copy fail ho
+        _initNativeModel(pickedPath);
+      }
     }
   }
 
-  Future<void> _initModel(String path) async {
+  Future<void> _initNativeModel(String path) async {
     setState(() {
       _isLoading = true;
-      _statusMessage = "Loading offline model into RAM...";
+      _statusMessage = "Loading offline AI into RAM...";
     });
 
     try {
@@ -71,14 +101,14 @@ class _AiChatScreenState extends State<AiChatScreen> {
         setState(() {
           _isModelLoaded = true;
           _isLoading = false;
-          _statusMessage = "Offline AI Active (On-Device)";
+          _statusMessage = "Offline AI Active";
         });
       }
     } catch (e) {
       setState(() {
         _isLoading = false;
         _isModelLoaded = false;
-        _statusMessage = "Failed to load model: $e";
+        _statusMessage = "Load failed: $e";
       });
     }
   }
@@ -95,16 +125,14 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _scrollToBottom();
 
     try {
-      // Direct user prompt passed without hardcoded quiz wraps
       final String response = await platform.invokeMethod('generate', {'prompt': text});
-      
       setState(() {
         _messages.add(_ChatMessage(text: response, isUser: false));
         _isGenerating = false;
       });
     } catch (e) {
       setState(() {
-        _messages.add(_ChatMessage(text: "Error generating response: $e", isUser: false));
+        _messages.add(_ChatMessage(text: "Error: $e", isUser: false));
         _isGenerating = false;
       });
     }
@@ -130,7 +158,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Offline AI Assistant", style: TextStyle(fontSize: 16)),
+            const Text("AI Exam Assistant", style: TextStyle(fontSize: 16)),
             Text(
               _statusMessage,
               style: TextStyle(
@@ -150,15 +178,14 @@ class _AiChatScreenState extends State<AiChatScreen> {
       ),
       body: Column(
         children: [
-          if (_isLoading)
-            const LinearProgressIndicator(),
+          if (_isLoading) const LinearProgressIndicator(),
           Expanded(
             child: _messages.isEmpty
                 ? Center(
                     child: Text(
                       _isModelLoaded
-                          ? "Type anything to ask offline AI"
-                          : "Please select your .bin model from top-right icon",
+                          ? "Ask anything to your offline AI"
+                          : "Tap folder icon to select your .bin model once",
                       style: const TextStyle(color: Colors.grey),
                     ),
                   )
@@ -199,13 +226,13 @@ class _AiChatScreenState extends State<AiChatScreen> {
                 children: const [
                   SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2)),
                   SizedBox(width: 8),
-                  Text("AI is thinking...", style: TextStyle(fontSize: 12, color: Colors.grey)),
+                  Text("AI is answering...", style: TextStyle(fontSize: 12, color: Colors.grey)),
                 ],
               ),
             ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.white,
               boxShadow: [
                 BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, -1))
@@ -218,7 +245,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     controller: _textController,
                     enabled: _isModelLoaded && !_isGenerating,
                     decoration: const InputDecoration(
-                      hintText: "Type your query...",
+                      hintText: "Ask anything...",
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.symmetric(horizontal: 12),
                     ),
