@@ -33,6 +33,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
   String _modelStatus = 'AI Model Not Loaded';
   String? _modelPath;
+  String _debugLog = '';
 
   final List<Map<String, String>> _messages = [];
 
@@ -50,9 +51,42 @@ class _AiChatScreenState extends State<AiChatScreen> {
     try {
       _llama?.dispose();
     } catch (e) {
-      debugPrint('Model dispose warning: $e');
+      _logCrash('Model dispose error: $e');
     }
     _llama = null;
+  }
+
+  void _logCrash(String message) {
+    debugPrint('🚨 [AI_DEBUG_LOG]: $message');
+    _debugLog += '\n[${DateTime.now().toIso8601String().substring(11, 19)}] $message';
+  }
+
+  void _showCrashDialog(String title, String errorDetails) {
+    if (!mounted) return;
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Row(
+          children: [
+            const Icon(Icons.bug_report, color: Colors.red),
+            const SizedBox(width: 8),
+            Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+          ],
+        ),
+        content: SingleChildScrollView(
+          child: SelectableText(
+            errorDetails,
+            style: const TextStyle(fontSize: 12, fontFamily: 'monospace', color: Colors.redAccent),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(),
+            child: const Text('Close'),
+          ),
+        ],
+      ),
+    );
   }
 
   List<String> _cleanChunks(List<String> chunks) {
@@ -102,63 +136,79 @@ class _AiChatScreenState extends State<AiChatScreen> {
   Future<void> _pickAndLoadModel() async {
     if (_busy) return;
 
+    _debugLog = '--- New Load Attempt Started ---';
     try {
+      _logCrash('Step 1: Opening file picker...');
       final result = await FilePicker.platform.pickFiles(
         type: FileType.any,
         allowMultiple: false,
       );
 
-      if (result == null || result.files.isEmpty) return;
+      if (result == null || result.files.isEmpty) {
+        _logCrash('Step 1 Cancelled: User picked nothing.');
+        return;
+      }
 
       final pickedPath = result.files.single.path;
       final fileName = result.files.single.name;
+      final fileSize = result.files.single.size;
+
+      _logCrash('Step 2: File picked -> $fileName (${(fileSize / (1024 * 1024)).toStringAsFixed(2)} MB)');
+      _logCrash('Source path -> $pickedPath');
 
       if (pickedPath == null || pickedPath.isEmpty || !File(pickedPath).existsSync()) {
-        _showError('GGUF model file ka valid path nahi mila.');
+        final err = 'GGUF model file source path invalid ya unreadable hai.';
+        _logCrash(err);
+        _showCrashDialog('Path Error', err);
         return;
       }
 
       if (!fileName.toLowerCase().endsWith('.gguf')) {
-        _showError('Kripya sirf .gguf model file select karein.');
+        final err = 'Selected file is not .gguf format.';
+        _logCrash(err);
+        _showCrashDialog('File Format Error', err);
         return;
       }
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Preparing app storage...';
+        _modelStatus = 'Copying to App Internal Dir...';
       });
 
-      // 1. Android Scoped Storage Fix: Copy file to App's Internal Directory
+      // 1. Android Scoped Storage Direct POSIX Path Resolve
       final appDir = await getApplicationDocumentsDirectory();
       final localModelPath = '${appDir.path}/$fileName';
       final localModelFile = File(localModelPath);
 
+      _logCrash('Step 3: Target app directory path -> $localModelPath');
+
       if (!localModelFile.existsSync() || localModelFile.lengthSync() != File(pickedPath).lengthSync()) {
-        setState(() {
-          _modelStatus = 'Copying model file...';
-        });
+        _logCrash('Step 3.1: Copying file to local app storage...');
         final sourceFile = File(pickedPath);
         await sourceFile.copy(localModelPath);
+        _logCrash('Step 3.2: Copy complete! Local size: ${localModelFile.lengthSync()} bytes');
+      } else {
+        _logCrash('Step 3.1: File already exists in internal storage with exact match.');
       }
 
       setState(() {
-        _modelStatus = 'Allocating memory safely...';
+        _modelStatus = 'Allocating Native RAM...';
       });
 
-      // UI thread breathing delay
-      await Future.delayed(const Duration(milliseconds: 400));
+      _logCrash('Step 4: Preparing C++ native parameters...');
+      await Future.delayed(const Duration(milliseconds: 500));
       _disposeModelSafely();
 
-      // 2. Safe Mobile Architecture Settings
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU on Android
+      modelParams.nGpuLayers = 0; // Pure CPU
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 512;   // Safe context length to prevent Native OOM Crash
-      contextParams.nThreads = 2; // 2 CPU threads prevent ANR and freeze
+      contextParams.nCtx = 256;   // Ultra safe minimal context
+      contextParams.nThreads = 2; // CPU threads
 
-      // 3. Initialize with direct Internal POSIX file path
+      _logCrash('Step 5: Calling Native Llama(path, params)...');
       final loadedInstance = Llama(localModelPath, modelParams, contextParams);
+      _logCrash('Step 6: Native Llama instance initialized successfully!');
 
       if (!mounted) return;
 
@@ -171,7 +221,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
       });
 
       _showSuccess('🟢 Model RAM mein successfully load ho gaya!');
-    } catch (e) {
+    } catch (e, stack) {
+      _logCrash('❌ CRASH / EXCEPTION CAUGHT: $e');
+      _logCrash('STACK TRACE:\n$stack');
+
       if (!mounted) return;
 
       setState(() {
@@ -180,7 +233,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _modelStatus = 'Model Error';
       });
 
-      _showError('Model loading error:\n$e');
+      _showCrashDialog('Model Loading Crash Log', 'LOG TRACE:\n$_debugLog\n\nERROR:\n$e\n\nSTACK TRACE:\n$stack');
     }
   }
 
@@ -228,7 +281,7 @@ Aap koi bhi concept ya topic poochein:
 
       return unique;
     } catch (e) {
-      debugPrint('Knowledge base search error: $e');
+      _logCrash('Knowledge base search error: $e');
       return [];
     }
   }
@@ -381,7 +434,7 @@ $question
       try {
         await _generateRagAnswer(query);
       } catch (llmError) {
-        debugPrint('LLM generation failed: $llmError');
+        _logCrash('LLM generation failed: $llmError');
         final fallback = await _processDatabaseFallback(query);
         if (!mounted) return;
         setState(() {
@@ -413,8 +466,9 @@ $question
         });
       }
       _scrollToBottom();
-    } catch (e) {
+    } catch (e, stack) {
       stopwatch.stop();
+      _logCrash('Send message crash: $e\n$stack');
       if (!mounted) return;
       setState(() {
         _messages.add({
@@ -458,17 +512,6 @@ $question
     );
   }
 
-  void _showError(String message) {
-    if (!mounted) return;
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(message),
-        backgroundColor: Colors.red.shade700,
-        duration: const Duration(seconds: 5),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
@@ -508,6 +551,12 @@ $question
         foregroundColor: Colors.white,
         elevation: 0.5,
         actions: [
+          if (_debugLog.isNotEmpty)
+            IconButton(
+              tooltip: 'View Crash / Debug Log',
+              onPressed: () => _showCrashDialog('Debug & Crash Log', _debugLog),
+              icon: const Icon(Icons.bug_report, color: Colors.amberAccent),
+            ),
           IconButton(
             tooltip: 'Load GGUF Model',
             onPressed: _busy ? null : _pickAndLoadModel,
