@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:llama_cpp_dart/llama_cpp_dart.dart';
 
@@ -111,48 +110,47 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       final path = result.files.single.path;
       if (path == null || path.isEmpty || !File(path).existsSync()) {
-        _showError('GGUF model ka valid file path nahi mila.');
+        _showError('GGUF model file ka valid path nahi mila.');
         return;
       }
 
       final fileName = result.files.single.name.toLowerCase();
       if (!fileName.endsWith('.gguf')) {
-        _showError('Please sirf .gguf model file select karein.');
+        _showError('Kripya sirf .gguf model file select karein.');
         return;
       }
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Allocating Memory & Loading Model...';
+        _modelStatus = 'Allocating Memory & Loading Gemma 2...';
       });
 
-      // UI thread ko repaint hone ka proper time dein
-      await Future.delayed(const Duration(milliseconds: 400));
+      // Allow UI thread to repaint spinner before native heap allocation
+      await Future.delayed(const Duration(milliseconds: 500));
 
       _disposeModelSafely();
 
-      // Native crash-proof configuration
+      // Native crash-proof configuration for Gemma 2 on Android CPU
       final modelParams = ModelParams();
       modelParams.nGpuLayers = 0; // Pure CPU on Android
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 256;   // Ultra-safe context length (Prevents Out of Memory crash)
-      contextParams.nThreads = 2; // Stable CPU threads (Prevents OS Thermal/ANR kill)
+      contextParams.nCtx = 256;   // Compact context memory to prevent Native OOM Kill
+      contextParams.nThreads = 2; // 2 CPU threads prevent thermal throttling & UI lock
 
-      // Initialize Llama model instance
-      final loadedLlama = Llama(path, modelParams, contextParams);
+      final loadedInstance = Llama(path, modelParams, contextParams);
 
       if (!mounted) return;
 
       setState(() {
-        _llama = loadedLlama;
+        _llama = loadedInstance;
         _isModelLoaded = true;
         _isModelLoading = false;
         _modelPath = path;
-        _modelStatus = 'Offline AI Ready (CPU Active)';
+        _modelStatus = 'Offline AI Ready (Gemma 2 CPU)';
       });
 
-      _showSuccess('🟢 Offline AI Model successfully loaded!');
+      _showSuccess('🟢 Gemma 2 Model successfully loaded!');
     } catch (e) {
       if (!mounted) return;
 
