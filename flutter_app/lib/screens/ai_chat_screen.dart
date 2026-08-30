@@ -1,7 +1,19 @@
 import 'dart:async';
+import 'dart:io';
+import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:llama_cpp_dart/llama_cpp_dart.dart';
+import 'package:path_provider/path_provider.dart';
+
 import '../services/knowledge_base_service.dart';
-import '../services/dynamic_ai_agent_service.dart';
+
+enum AgentTaskMode {
+  explain,
+  quiz,
+  mnemonic,
+  summary,
+  analyze,
+}
 
 class AiChatScreen extends StatefulWidget {
   final bool isDarkMode;
@@ -19,52 +31,35 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
 
+  Llama? _llama;
+
   bool _isModelLoaded = false;
   bool _isModelLoading = false;
   bool _isGenerating = false;
+  bool _shouldStop = false;
 
-  String _modelStatus = 'Offline AI Agent Initializing...';
-  AgentTaskType? _selectedTaskOverride;
+  String _modelStatus = 'Qwen 2.5 Not Loaded';
+  AgentTaskMode _selectedMode = AgentTaskMode.explain;
+
   final List<Map<String, String>> _messages = [];
 
   bool get _busy => _isModelLoading || _isGenerating;
 
   @override
-  void initState() {
-    super.initState();
-    _initializeOfflineModel();
-  }
-
-  @override
   void dispose() {
     _textController.dispose();
     _scrollController.dispose();
+    _disposeModelSafely();
     super.dispose();
   }
 
-  Future<void> _initializeOfflineModel() async {
-    setState(() {
-      _isModelLoading = true;
-      _modelStatus = 'Loading Dynamic Agent Engine...';
-    });
-
+  void _disposeModelSafely() {
     try {
-      await DynamicAiAgentService.instance.initModel();
-
-      if (!mounted) return;
-      setState(() {
-        _isModelLoaded = true;
-        _isModelLoading = false;
-        _modelStatus = 'Dynamic AI Agent Ready (Multi-Task)';
-      });
+      _llama?.dispose();
     } catch (e) {
-      if (!mounted) return;
-      setState(() {
-        _isModelLoaded = false;
-        _isModelLoading = false;
-        _modelStatus = 'Agent Init Error';
-      });
+      debugPrint('Model dispose warning: $e');
     }
+    _llama = null;
   }
 
   List<String> _cleanChunks(List<String> chunks) {
@@ -89,21 +84,168 @@ class _AiChatScreenState extends State<AiChatScreen> {
       if (cleanFacts.isEmpty) return '';
       return cleanFacts.take(3).join('\n---\n');
     } catch (e) {
-      debugPrint('RAG search error: $e');
+      debugPrint('Knowledge base search error: $e');
       return '';
     }
   }
 
-  Future<void> _sendMessage({String? predefinedText, AgentTaskType? overrideTask}) async {
-    final query = (predefinedText ?? _textController.text).trim();
+  // --- QWEN 2.5 0.5B MODEL LOADER ---
+  Future<void> _pickAndLoadQwenModel() async {
+    if (_busy) return;
+
+    try {
+      final result = await FilePicker.platform.pickFiles(
+        type: FileType.any,
+        allowMultiple: false,
+      );
+
+      if (result == null || result.files.isEmpty) return;
+
+      final pickedPath = result.files.single.path;
+      final fileName = result.files.single.name;
+
+      if (pickedPath == null || !File(pickedPath).existsSync()) {
+        _showError('GGUF file ka valid path nahi mila.');
+        return;
+      }
+
+      if (!fileName.toLowerCase().endsWith('.gguf')) {
+        _showError('Kripya sirf .gguf format file select karein.');
+        return;
+      }
+
+      setState(() {
+        _isModelLoading = true;
+        _modelStatus = 'Copying Qwen 2.5 to App Dir...';
+      });
+
+      final appDir = await getApplicationDocumentsDirectory();
+      final localModelPath = '${appDir.path}/$fileName';
+      final localModelFile = File(localModelPath);
+
+      if (!localModelFile.existsSync() || localModelFile.lengthSync() != File(pickedPath).lengthSync()) {
+        final sourceFile = File(pickedPath);
+        await sourceFile.copy(localModelPath);
+      }
+
+      setState(() {
+        _modelStatus = 'Loading Qwen 2.5 into RAM...';
+      });
+
+      await Future.delayed(const Duration(milliseconds: 300));
+      _disposeModelSafely();
+
+      final modelParams = ModelParams();
+      modelParams.nGpuLayers = 0; // Android CPU
+
+      final contextParams = ContextParams();
+      contextParams.nCtx = 512;   // 512 context length for 0.5B model
+      contextParams.nThreads = 2; // Optimal CPU threads
+
+      final loadedInstance = Llama(localModelPath, modelParams, contextParams);
+
+      if (!mounted) return;
+
+      setState(() {
+        _llama = loadedInstance;
+        _isModelLoaded = true;
+        _isModelLoading = false;
+        _modelStatus = 'Qwen 2.5 0.5B Active (CPU)';
+      });
+
+      _showSuccess('🟢 Qwen 2.5 0.5B model successfully load ho gaya!');
+    } catch (e) {
+      if (!mounted) return;
+      setState(() {
+        _isModelLoaded = false;
+        _isModelLoading = false;
+        _modelStatus = 'Loading Error';
+      });
+      _showError('Model loading error:\n$e');
+    }
+  }
+
+  // --- QWEN 2.5 CHAT TEMPLATE BUILDER ---
+  String _buildQwenPrompt({
+    required String userInput,
+    required String context,
+    required AgentTaskMode mode,
+  }) {
+    String systemInstructions;
+    switch (mode) {
+      case AgentTaskMode.quiz:
+        systemInstructions = '''
+You are an expert competitive exam quiz writer for BPSC, BSSC, and SSC CGL.
+Create 2 multiple-choice questions for the user's topic.
+Format:
+Q1. [Question]
+A) [Option 1]
+B) [Option 2]
+C) [Option 3]
+D) [Option 4]
+Correct: [Option Letter]
+Explanation: [Crisp 1-line reason]
+''';
+        break;
+
+      case AgentTaskMode.mnemonic:
+        systemInstructions = '''
+You are an AI Memory Specialist for Indian competitive exams.
+Create a Hindi/Hinglish mnemonic, acronym, or memory trick to remember the provided topic/rules easily.
+''';
+        break;
+
+      case AgentTaskMode.summary:
+        systemInstructions = '''
+You are a Rapid-Revision AI Tutor.
+Provide a high-yield exam summary sheet:
+• 💡 Core Definition/Law
+• ⚡ 3 Most Frequent PYQ Points
+• 🎯 Elimination Trap to avoid
+''';
+        break;
+
+      case AgentTaskMode.analyze:
+        systemInstructions = '''
+You are an AI Diagnostic Evaluator.
+Analyze the user's answer/reasoning for the exam topic and explain where mistakes commonly happen.
+''';
+        break;
+
+      case AgentTaskMode.explain:
+      default:
+        systemInstructions = '''
+You are a Duolingo-style structured learning AI tutor for competitive exams.
+Explain the topic in crisp points:
+1. 💡 Micro Concept (1-line definition)
+2. ⚡ 3-Step Breakdown (3 short bullet points)
+3. 🎯 1 Micro Challenge MCQ with answer
+''';
+        break;
+    }
+
+    final contextPart = context.isNotEmpty ? '\n\nSTUDY CONTEXT:\n$context' : '';
+
+    return '''<|im_start|>system
+$systemInstructions$contextPart<|im_end|>
+<|im_start|>user
+$userInput<|im_end|>
+<|im_start|>assistant
+''';
+  }
+
+  Future<void> _sendMessage() async {
+    final query = _textController.text.trim();
     if (query.isEmpty || _busy) return;
 
-    final taskToRun = overrideTask ?? _selectedTaskOverride;
+    if (!_isModelLoaded || _llama == null) {
+      _showError('Pehle upar 📁 icon par click karke Qwen 2.5 GGUF model select karein.');
+      return;
+    }
 
     setState(() {
       _messages.add({'role': 'user', 'text': query});
       _isGenerating = true;
-      _selectedTaskOverride = null;
     });
 
     _textController.clear();
@@ -112,27 +254,64 @@ class _AiChatScreenState extends State<AiChatScreen> {
     final stopwatch = Stopwatch()..start();
 
     setState(() {
-      _messages.add({'role': 'assistant', 'text': 'Agent thinking...'});
+      _messages.add({'role': 'assistant', 'text': ''});
     });
     _scrollToBottom();
 
     try {
       final context = await _retrieveContext(query);
-      final response = await DynamicAiAgentService.instance.executeAgent(
+      final prompt = _buildQwenPrompt(
         userInput: query,
         context: context,
-        forcedTask: taskToRun,
+        mode: _selectedMode,
       );
+
+      final buffer = StringBuffer();
+      _shouldStop = false;
+
+      _llama!.setPrompt(prompt);
+
+      int tokenCount = 0;
+      while (!_shouldStop && mounted) {
+        final tokenResult = _llama!.getNext();
+        final tokenText = tokenResult.$1;
+        final isDone = tokenResult.$2;
+
+        if (isDone ||
+            tokenText.isEmpty ||
+            tokenText == '<|im_end|>' ||
+            tokenText == '<|endoftext|>') {
+          break;
+        }
+
+        buffer.write(tokenText);
+        tokenCount++;
+
+        if (tokenCount % 2 == 0 &&
+            _messages.isNotEmpty &&
+            _messages.last['role'] == 'assistant') {
+          setState(() {
+            _messages[_messages.length - 1] = {
+              'role': 'assistant',
+              'text': buffer.toString(),
+            };
+          });
+          _scrollToBottom();
+        }
+
+        await Future.delayed(const Duration(milliseconds: 2));
+      }
 
       stopwatch.stop();
       if (!mounted) return;
 
+      final finalAnswer = buffer.toString().trim();
       setState(() {
         if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
           _messages[_messages.length - 1] = {
             'role': 'assistant',
-            'text': response.trim(),
-            'time': '${stopwatch.elapsedMilliseconds}ms',
+            'text': finalAnswer.isEmpty ? '⚠️ Koi response generate nahi hua.' : finalAnswer,
+            'time': '${stopwatch.elapsedMilliseconds}ms (Qwen 0.5B)',
           };
         }
         _isGenerating = false;
@@ -145,7 +324,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
         if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
           _messages[_messages.length - 1] = {
             'role': 'assistant',
-            'text': '❌ Agent execution error:\n$e',
+            'text': '❌ Generation Error:\n$e',
             'time': '${stopwatch.elapsedMilliseconds}ms',
           };
         }
@@ -153,6 +332,14 @@ class _AiChatScreenState extends State<AiChatScreen> {
       });
       _scrollToBottom();
     }
+  }
+
+  void _stopGeneration() {
+    if (!_isGenerating) return;
+    setState(() {
+      _shouldStop = true;
+      _isGenerating = false;
+    });
   }
 
   void _scrollToBottom() {
@@ -166,6 +353,20 @@ class _AiChatScreenState extends State<AiChatScreen> {
     });
   }
 
+  void _showSuccess(String msg) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(msg), backgroundColor: Colors.green.shade700),
+    );
+  }
+
+  void _showError(String msg) {
+    if (!mounted) return;
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text(msg), backgroundColor: Colors.red.shade700),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
@@ -176,7 +377,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Multi-Agent AI Exam Tutor', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+            const Text(
+              'Qwen 2.5 AI Exam Agent',
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 2),
             Row(
               children: [
@@ -201,22 +405,38 @@ class _AiChatScreenState extends State<AiChatScreen> {
         backgroundColor: isDark ? const Color(0xFF1E293B) : const Color(0xFF2563EB),
         foregroundColor: Colors.white,
         elevation: 0.5,
+        actions: [
+          IconButton(
+            tooltip: 'Load Qwen 2.5 GGUF File',
+            onPressed: _busy ? null : _pickAndLoadQwenModel,
+            icon: _isModelLoading
+                ? const SizedBox(
+                    width: 18,
+                    height: 18,
+                    child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                  )
+                : Icon(
+                    _isModelLoaded ? Icons.check_circle : Icons.folder_open,
+                    color: _isModelLoaded ? Colors.greenAccent : Colors.white,
+                  ),
+          ),
+        ],
       ),
       body: Column(
         children: [
-          // Dynamic Feature Action Bar
+          // Dynamic Feature Bar
           Container(
-            height: 48,
-            padding: const EdgeInsets.symmetric(vertical: 6, horizontal: 8),
+            height: 46,
+            padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
             color: isDark ? const Color(0xFF1E293B) : const Color(0xFFEEF2F6),
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                _buildActionChip('⚡ Micro Concept', AgentTaskType.duolingoExplanation, isDark),
-                _buildActionChip('🎯 Generate Quiz', AgentTaskType.quizGeneration, isDark),
-                _buildActionChip('🧠 Mnemonic Trick', AgentTaskType.mnemonicTrick, isDark),
-                _buildActionChip('📋 Rapid Summary', AgentTaskType.revisionSummary, isDark),
-                _buildActionChip('🔍 Analyze Answer', AgentTaskType.answerAnalysis, isDark),
+                _buildModeChip('💡 Concept', AgentTaskMode.explain, isDark),
+                _buildModeChip('🎯 Quiz', AgentTaskMode.quiz, isDark),
+                _buildModeChip('🧠 Mnemonic', AgentTaskMode.mnemonic, isDark),
+                _buildModeChip('📋 Summary', AgentTaskMode.summary, isDark),
+                _buildModeChip('🔍 Analyze', AgentTaskMode.analyze, isDark),
               ],
             ),
           ),
@@ -286,8 +506,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
     );
   }
 
-  Widget _buildActionChip(String label, AgentTaskType task, bool isDark) {
-    final isSelected = _selectedTaskOverride == task;
+  Widget _buildModeChip(String label, AgentTaskMode mode, bool isDark) {
+    final isSelected = _selectedMode == mode;
     return Padding(
       padding: const EdgeInsets.only(right: 6),
       child: FilterChip(
@@ -297,9 +517,11 @@ class _AiChatScreenState extends State<AiChatScreen> {
         selectedColor: const Color(0xFF2563EB),
         checkmarkColor: Colors.white,
         onSelected: (selected) {
-          setState(() {
-            _selectedTaskOverride = selected ? task : null;
-          });
+          if (selected) {
+            setState(() {
+              _selectedMode = mode;
+            });
+          }
         },
       ),
     );
@@ -315,15 +537,29 @@ class _AiChatScreenState extends State<AiChatScreen> {
             const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
             const SizedBox(height: 12),
             Text(
-              'Autonomous Multi-Agent AI Ready',
+              _isModelLoaded ? 'Qwen 2.5 0.5B Active' : 'Offline Qwen AI Agent',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isDark ? Colors.white70 : Colors.black87),
             ),
             const SizedBox(height: 6),
             Text(
-              'Select any mode above or ask any topic (e.g. "Gravitation", "Article 32", "Fundamental Rights trick").',
+              _isModelLoaded
+                  ? 'Koi bhi topic type karein (e.g. "Gravitation", "Article 32", "Governor power")!'
+                  : 'GGUF model file load karne ke liye upar 📁 button dabayein.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, height: 1.4, color: Colors.grey.shade600),
             ),
+            const SizedBox(height: 16),
+            if (!_isModelLoaded)
+              ElevatedButton.icon(
+                onPressed: _isModelLoading ? null : _pickAndLoadQwenModel,
+                icon: const Icon(Icons.folder_open, size: 18),
+                label: const Text('Load Qwen 0.5B GGUF'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF2563EB),
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                ),
+              ),
           ],
         ),
       ),
@@ -348,9 +584,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
               textInputAction: TextInputAction.send,
               style: TextStyle(color: isDark ? Colors.white : Colors.black, fontSize: 13),
               decoration: InputDecoration(
-                hintText: _selectedTaskOverride != null
-                    ? 'Type topic for ${_selectedTaskOverride!.name}...'
-                    : 'Ask any question, quiz, or topic...',
+                hintText: 'Type topic for ${_selectedMode.name.toUpperCase()} mode...',
                 hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
                 border: InputBorder.none,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 10),
@@ -358,11 +592,18 @@ class _AiChatScreenState extends State<AiChatScreen> {
               onSubmitted: (_) => _sendMessage(),
             ),
           ),
-          IconButton(
-            tooltip: 'Send',
-            onPressed: _busy ? null : () => _sendMessage(),
-            icon: const Icon(Icons.send_rounded, color: Color(0xFF2563EB)),
-          ),
+          if (_isGenerating)
+            IconButton(
+              tooltip: 'Stop',
+              onPressed: _stopGeneration,
+              icon: const Icon(Icons.stop_circle, color: Colors.red),
+            )
+          else
+            IconButton(
+              tooltip: 'Send',
+              onPressed: _busy ? null : _sendMessage,
+              icon: const Icon(Icons.send_rounded, color: Color(0xFF2563EB)),
+            ),
         ],
       ),
     );
