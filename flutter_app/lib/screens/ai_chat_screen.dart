@@ -128,7 +128,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _modelStatus = 'Preparing app storage...';
       });
 
-      // 1. Android Scoped Storage Fix
+      // 1. Copy file to internal documents directory for clean POSIX native access
       final appDir = await getApplicationDocumentsDirectory();
       final localModelPath = '${appDir.path}/$fileName';
       final localModelFile = File(localModelPath);
@@ -142,22 +142,25 @@ class _AiChatScreenState extends State<AiChatScreen> {
       }
 
       setState(() {
-        _modelStatus = 'Allocating memory in background...';
+        _modelStatus = 'Allocating memory safely...';
       });
 
-      // UI thread breathing delay
-      await Future.delayed(const Duration(milliseconds: 300));
+      // Allow UI thread to paint loading indicator
+      await Future.delayed(const Duration(milliseconds: 400));
       _disposeModelSafely();
 
-      // 2. Safe Mobile Architecture Settings
+      // 2. Crash-Proof Model Parameters (Disables mmap to prevent Android native segfaults)
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU
+      modelParams.nGpuLayers = 0; // Pure CPU on Android
+      modelParams.useMmap = false; // Prevents Native C++ segmentation fault
+      modelParams.useMlock = false;
 
+      // 3. Compact Context Memory Buffer
       final contextParams = ContextParams();
-      contextParams.nCtx = 256;   // Ultra-light memory footprint
-      contextParams.nThreads = 1; // 1 Thread for initialization prevents Watchdog killer crash
+      contextParams.nCtx = 256;   // Compact context memory
+      contextParams.nThreads = 2; // 2 CPU threads prevent ANR and thermal throttle
 
-      // 3. Native initialization with Safe Context
+      // 4. Safe Native Instantiation
       final loadedInstance = Llama(localModelPath, modelParams, contextParams);
 
       if (!mounted) return;
