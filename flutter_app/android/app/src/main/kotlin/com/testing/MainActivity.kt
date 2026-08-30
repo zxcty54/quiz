@@ -23,13 +23,17 @@ class MainActivity: FlutterActivity() {
                     if (modelPath != null && File(modelPath).exists()) {
                         executor.execute {
                             try {
+                                // Destroy old instance to avoid OOM
+                                llmInference = null
+                                System.gc()
+
+                                // Minimal stable parameters for low RAM & Qwen/Gemma compatibility
                                 val options = LlmInference.LlmInferenceOptions.builder()
                                     .setModelPath(modelPath)
-                                    .setMaxTokens(512)
-                                    .setMaxSequenceLength(1024)
-                                    .setTopK(40)
-                                    .setTemperature(0.7f)
+                                    .setMaxTokens(384)
+                                    .setMaxSequenceLength(512)
                                     .build()
+                                    
                                 llmInference = LlmInference.createFromOptions(applicationContext, options)
                                 runOnUiThread { result.success(true) }
                             } catch (e: Throwable) {
@@ -57,16 +61,15 @@ class MainActivity: FlutterActivity() {
 
                     executor.execute {
                         try {
-                            // Flexible Qwen ChatML Format: Direct response according to user intent
-                            val formattedPrompt = "<|im_start|>system\nYou are a helpful and intelligent AI assistant. Respond directly, accurately, and naturally to whatever the user asks. Do not force any specific template or quiz format unless explicitly asked.<|im_end|>\n<|im_start|>user\n$cleanInput<|im_end|>\n<|im_start|>assistant\n"
-                            
-                            val response = engine.generateResponse(formattedPrompt)
+                            // Direct execution without extra prompt wrappers to prevent crash
+                            val response = engine.generateResponse(cleanInput)
                             
                             runOnUiThread {
                                 if (!response.isNullOrBlank()) {
                                     val cleanResponse = response
                                         .replace("<|im_end|>", "")
                                         .replace("<|endoftext|>", "")
+                                        .replace("<end_of_turn>", "")
                                         .trim()
                                     result.success(cleanResponse)
                                 } else {
@@ -75,7 +78,7 @@ class MainActivity: FlutterActivity() {
                             }
                         } catch (e: Throwable) {
                             runOnUiThread { 
-                                result.error("GEN_FAIL", e.localizedMessage ?: "Inference execution error", null) 
+                                result.error("GEN_FAIL", e.localizedMessage ?: "Inference error", null) 
                             }
                         }
                     }
@@ -88,5 +91,6 @@ class MainActivity: FlutterActivity() {
     override fun onDestroy() {
         super.onDestroy()
         executor.shutdown()
+        llmInference = null
     }
 }
