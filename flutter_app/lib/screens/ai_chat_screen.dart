@@ -30,14 +30,14 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
 
-  LlamaEngine? _engine;
-  StreamSubscription<String>? _streamSub;
+  Llama? _llama;
 
   bool _isModelLoaded = false;
   bool _isModelLoading = false;
   bool _isGenerating = false;
+  bool _shouldStop = false;
 
-  String _modelStatus = 'Qwen 2.5 Not Loaded';
+  String _modelStatus = 'Qwen 2.5 0.5B Not Loaded';
   AgentTaskMode _selectedMode = AgentTaskMode.explain;
 
   final List<Map<String, String>> _messages = [];
@@ -48,9 +48,17 @@ class _AiChatScreenState extends State<AiChatScreen> {
   void dispose() {
     _textController.dispose();
     _scrollController.dispose();
-    _streamSub?.cancel();
-    _engine?.dispose();
+    _disposeModelSafely();
     super.dispose();
+  }
+
+  void _disposeModelSafely() {
+    try {
+      _llama?.dispose();
+    } catch (e) {
+      debugPrint('Model dispose warning: $e');
+    }
+    _llama = null;
   }
 
   List<String> _cleanChunks(List<String> chunks) {
@@ -80,7 +88,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
   }
 
-  // --- MODERN 0.9.x ISOLATE WORKER LOADER ---
+  // --- 0.2.x MEMORY SAFE LOADER ---
   Future<void> _pickAndLoadQwenModel() async {
     if (_busy) return;
 
@@ -96,7 +104,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       final fileName = result.files.single.name;
 
       if (pickedPath == null || !File(pickedPath).existsSync()) {
-        _showError('GGUF file ka valid path nahi mila.');
+        _showError('GGUF file ka path invalid hai.');
         return;
       }
 
@@ -107,41 +115,43 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Spawning Isolate Worker...';
+        _modelStatus = 'Loading Qwen 2.5 (0.2.x Core)...';
       });
 
-      _engine?.dispose();
+      await Future.delayed(const Duration(milliseconds: 250));
+      _disposeModelSafely();
 
-      final engine = LlamaEngine();
-      await engine.init(
-        modelPath: pickedPath,
-        contextSize: 256, // Low context for mobile RAM safety
-        threads: 2,       // Safe CPU thread count
-        gpuLayers: 0,     // Pure CPU execution
-      );
+      final modelParams = ModelParams();
+      modelParams.nGpuLayers = 0; // Pure CPU on Android
+
+      final contextParams = ContextParams();
+      contextParams.nCtx = 256;   // Safe context size
+      contextParams.nThreads = 2; // Dual thread CPU
+
+      final loadedInstance = Llama(pickedPath, modelParams, contextParams);
 
       if (!mounted) return;
 
       setState(() {
-        _engine = engine;
+        _llama = loadedInstance;
         _isModelLoaded = true;
         _isModelLoading = false;
-        _modelStatus = 'Qwen 2.5 0.5B Active (0.9.x Isolate)';
+        _modelStatus = 'Qwen 2.5 Active (0.2.x Safe Core)';
       });
 
-      _showSuccess('🟢 Model load ho gaya! Ab concept enter karein.');
+      _showSuccess('🟢 Model load ho gaya! Ab topic type karein.');
     } catch (e) {
       if (!mounted) return;
       setState(() {
         _isModelLoaded = false;
         _isModelLoading = false;
-        _modelStatus = 'Load Error';
+        _modelStatus = 'Loading Error';
       });
-      _showError('Model init error:\n$e');
+      _showError('Model loading error:\n$e');
     }
   }
 
-  // --- DUOLINGO STRUCTURED LEARNING PROMPT ---
+  // --- DUOLINGO STRUCTURE PROMPT ---
   String _buildQwenPrompt({
     required String userInput,
     required String context,
@@ -151,8 +161,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
     switch (mode) {
       case AgentTaskMode.quiz:
         systemInstructions = '''
-You are an expert exam quiz writer for BPSC, BSSC, and SSC CGL.
-Create 2 multiple-choice questions for the user's topic based on the study context.
+You are an expert exam quiz writer for BPSC, BSSC, and SSC.
+Create 2 multiple-choice questions for the user topic based on study context.
 Format:
 Q1. [Question]
 A) [Option 1]
@@ -167,7 +177,7 @@ Explanation: [Crisp 1-line reason]
       case AgentTaskMode.mnemonic:
         systemInstructions = '''
 You are an AI Memory Specialist.
-Create a high-impact Hindi/Hinglish mnemonic code or memory trick to remember the topic easily.
+Create a high-impact Hindi/Hinglish mnemonic code or memory trick for the topic.
 ''';
         break;
 
@@ -184,7 +194,7 @@ Provide a high-yield exam summary sheet:
       case AgentTaskMode.analyze:
         systemInstructions = '''
 You are an AI Diagnostic Evaluator.
-Analyze the user's reasoning/answer for the exam topic and point out conceptual traps.
+Analyze the user's reasoning and point out traps.
 ''';
         break;
 
@@ -192,7 +202,7 @@ Analyze the user's reasoning/answer for the exam topic and point out conceptual 
       default:
         systemInstructions = '''
 You are a Duolingo-style structured learning AI tutor for competitive exams.
-Explain the topic strictly following this structure:
+Explain the topic strictly in 3 crisp points:
 1. 💡 Micro Concept (1-line definition)
 2. ⚡ 3-Step Breakdown (3 short bullet points)
 3. 🎯 1 Micro Challenge MCQ with answer
@@ -200,7 +210,7 @@ Explain the topic strictly following this structure:
         break;
     }
 
-    final contextPart = context.isNotEmpty ? '\n\nSTUDY CONTEXT:\n$context' : '';
+    final contextPart = context.isNotEmpty ? '\n\nCONTEXT:\n$context' : '';
 
     return '''<|im_start|>system
 $systemInstructions$contextPart<|im_end|>
@@ -214,8 +224,8 @@ $userInput<|im_end|>
     final query = _textController.text.trim();
     if (query.isEmpty || _busy) return;
 
-    if (!_isModelLoaded || _engine == null) {
-      _showError('Pehle upar 📁 icon par click karke Qwen 0.5B GGUF file select karein.');
+    if (!_isModelLoaded || _llama == null) {
+      _showError('Pehle upar 📁 icon par click karke Qwen 0.5B GGUF load karein.');
       return;
     }
 
@@ -243,12 +253,29 @@ $userInput<|im_end|>
       );
 
       final buffer = StringBuffer();
-      final stream = _engine!.generate(prompt);
+      _shouldStop = false;
 
-      _streamSub = stream.listen(
-        (token) {
-          if (token == '<|im_end|>' || token == '<|endoftext|>') return;
-          buffer.write(token);
+      _llama!.setPrompt(prompt);
+
+      int tokenCount = 0;
+      while (!_shouldStop && mounted && tokenCount < 220) {
+        final tokenResult = _llama!.getNext();
+        final tokenText = tokenResult.$1;
+        final isDone = tokenResult.$2;
+
+        if (isDone ||
+            tokenText.isEmpty ||
+            tokenText == '<|im_end|>' ||
+            tokenText == '<|endoftext|>') {
+          break;
+        }
+
+        buffer.write(tokenText);
+        tokenCount++;
+
+        if (tokenCount % 2 == 0 &&
+            _messages.isNotEmpty &&
+            _messages.last['role'] == 'assistant') {
           setState(() {
             _messages[_messages.length - 1] = {
               'role': 'assistant',
@@ -256,33 +283,37 @@ $userInput<|im_end|>
             };
           });
           _scrollToBottom();
-        },
-        onError: (e) {
-          debugPrint('Inference stream error: $e');
-        },
-        onDone: () {
-          stopwatch.stop();
-          if (!mounted) return;
-          setState(() {
-            _messages[_messages.length - 1] = {
-              'role': 'assistant',
-              'text': buffer.toString().trim().isEmpty ? '⚠️ Blank response generated.' : buffer.toString().trim(),
-              'time': '${stopwatch.elapsedMilliseconds}ms (0.9.x Isolate)',
-            };
-            _isGenerating = false;
-          });
-          _scrollToBottom();
-        },
-      );
+        }
+
+        await Future.delayed(const Duration(milliseconds: 2));
+      }
+
+      stopwatch.stop();
+      if (!mounted) return;
+
+      final finalAnswer = buffer.toString().trim();
+      setState(() {
+        if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
+          _messages[_messages.length - 1] = {
+            'role': 'assistant',
+            'text': finalAnswer.isEmpty ? '⚠️ Output blank raha.' : finalAnswer,
+            'time': '${stopwatch.elapsedMilliseconds}ms (0.2.x Engine)',
+          };
+        }
+        _isGenerating = false;
+      });
+      _scrollToBottom();
     } catch (e) {
       stopwatch.stop();
       if (!mounted) return;
       setState(() {
-        _messages[_messages.length - 1] = {
-          'role': 'assistant',
-          'text': '❌ Generation Error:\n$e',
-          'time': '${stopwatch.elapsedMilliseconds}ms',
-        };
+        if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
+          _messages[_messages.length - 1] = {
+            'role': 'assistant',
+            'text': '❌ Generation Error:\n$e',
+            'time': '${stopwatch.elapsedMilliseconds}ms',
+          };
+        }
         _isGenerating = false;
       });
       _scrollToBottom();
@@ -290,9 +321,9 @@ $userInput<|im_end|>
   }
 
   void _stopGeneration() {
-    _streamSub?.cancel();
-    _engine?.stop();
+    if (!_isGenerating) return;
     setState(() {
+      _shouldStop = true;
       _isGenerating = false;
     });
   }
@@ -490,14 +521,14 @@ $userInput<|im_end|>
             const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
             const SizedBox(height: 12),
             Text(
-              _isModelLoaded ? 'Qwen 2.5 Isolate Engine Active' : 'Offline Qwen AI Agent',
+              _isModelLoaded ? 'Qwen 2.5 0.5B Ready' : 'Offline Qwen AI Agent',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isDark ? Colors.white70 : Colors.black87),
             ),
             const SizedBox(height: 6),
             Text(
               _isModelLoaded
-                  ? 'Upar se task select karein aur koi bhi concept type karein!'
-                  : 'Phone me downloaded Qwen 0.5B GGUF file load karne ke liye 📁 button dabayein.',
+                  ? 'Upar se task select karein aur topic type karein!'
+                  : 'Phone me downloaded Qwen 0.5B GGUF file load karne ke liye 📁 dabayein.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, height: 1.4, color: Colors.grey.shade600),
             ),
