@@ -78,17 +78,17 @@ class _AiChatScreenState extends State<AiChatScreen> {
   Future<String> _retrieveContext(String query) async {
     try {
       final rawChunks = await KnowledgeBaseService.instance
-          .searchRelevantChunks(query, limit: 6);
+          .searchRelevantChunks(query, limit: 4);
       final cleanFacts = _cleanChunks(rawChunks);
       if (cleanFacts.isEmpty) return '';
-      return cleanFacts.take(3).join('\n---\n');
+      return cleanFacts.take(2).join('\n---\n');
     } catch (e) {
       debugPrint('Knowledge base search error: $e');
       return '';
     }
   }
 
-  // --- QWEN 2.5 0.5B GGUF PICKER & LOADER ---
+  // --- SAFE LOW-MEMORY MODEL INITIALIZATION ---
   Future<void> _pickAndLoadQwenModel() async {
     if (_busy) return;
 
@@ -115,18 +115,19 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Loading Qwen 2.5 into RAM...';
+        _modelStatus = 'Allocating Low-Footprint RAM...';
       });
 
       await Future.delayed(const Duration(milliseconds: 300));
       _disposeModelSafely();
 
+      // Crash-Proof Minimum RAM Allocation
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU on Android
+      modelParams.nGpuLayers = 0; // Pure CPU
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 256;   // Ultra-safe minimal context to prevent OS kill
-      contextParams.nThreads = 2; // Optimal CPU threads
+      contextParams.nCtx = 128;   // Hard-limited context buffer to prevent OS kill
+      contextParams.nThreads = 1; // Single thread to avoid multi-thread race condition
 
       final loadedInstance = Llama(pickedPath, modelParams, contextParams);
 
@@ -136,10 +137,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _llama = loadedInstance;
         _isModelLoaded = true;
         _isModelLoading = false;
-        _modelStatus = 'Qwen 2.5 0.5B Active (CPU)';
+        _modelStatus = 'Qwen 2.5 Active (Safe Memory Mode)';
       });
 
-      _showSuccess('🟢 Qwen 2.5 0.5B model load ho gaya!');
+      _showSuccess('🟢 Model load ho gaya! Ab topic enter karein.');
     } catch (e) {
       if (!mounted) return;
       setState(() {
@@ -151,7 +152,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
   }
 
-  // --- QWEN 2.5 CHAT PROMPT TEMPLATE ---
+  // --- DUOLINGO STRUCTURE PROMPT ---
   String _buildQwenPrompt({
     required String userInput,
     required String context,
@@ -161,8 +162,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
     switch (mode) {
       case AgentTaskMode.quiz:
         systemInstructions = '''
-You are an expert exam quiz writer for BPSC, BSSC, and SSC CGL.
-Create 2 multiple-choice questions for the user's topic based on the study context.
+You are an expert exam quiz writer for BPSC, BSSC, and SSC.
+Create 2 multiple-choice questions for the user topic based on study context.
 Format:
 Q1. [Question]
 A) [Option 1]
@@ -194,7 +195,7 @@ Provide a high-yield exam summary sheet:
       case AgentTaskMode.analyze:
         systemInstructions = '''
 You are an AI Diagnostic Evaluator.
-Analyze the user's reasoning/concept and point out traps.
+Analyze the user's reasoning and point out traps.
 ''';
         break;
 
@@ -202,7 +203,7 @@ Analyze the user's reasoning/concept and point out traps.
       default:
         systemInstructions = '''
 You are a Duolingo-style structured learning AI tutor for competitive exams.
-Explain the topic strictly in 3 crisp points:
+Explain the topic in crisp points:
 1. 💡 Micro Concept (1-line definition)
 2. ⚡ 3-Step Breakdown (3 short bullet points)
 3. 🎯 1 Micro Challenge MCQ with answer
@@ -210,7 +211,7 @@ Explain the topic strictly in 3 crisp points:
         break;
     }
 
-    final contextPart = context.isNotEmpty ? '\n\nSTUDY CONTEXT:\n$context' : '';
+    final contextPart = context.isNotEmpty ? '\n\nCONTEXT:\n$context' : '';
 
     return '''<|im_start|>system
 $systemInstructions$contextPart<|im_end|>
@@ -225,7 +226,7 @@ $userInput<|im_end|>
     if (query.isEmpty || _busy) return;
 
     if (!_isModelLoaded || _llama == null) {
-      _showError('Pehle upar 📁 icon par click karke Qwen 0.5B GGUF select karein.');
+      _showError('Pehle upar 📁 icon par click karke Qwen 0.5B GGUF file load karein.');
       return;
     }
 
@@ -258,7 +259,8 @@ $userInput<|im_end|>
       _llama!.setPrompt(prompt);
 
       int tokenCount = 0;
-      while (!_shouldStop && mounted) {
+      // Protected Generation Loop (Caps output to 180 tokens to prevent buffer crash)
+      while (!_shouldStop && mounted && tokenCount < 180) {
         final tokenResult = _llama!.getNext();
         final tokenText = tokenResult.$1;
         final isDone = tokenResult.$2;
@@ -273,7 +275,7 @@ $userInput<|im_end|>
         buffer.write(tokenText);
         tokenCount++;
 
-        if (tokenCount % 2 == 0 &&
+        if (tokenCount % 3 == 0 &&
             _messages.isNotEmpty &&
             _messages.last['role'] == 'assistant') {
           setState(() {
@@ -285,7 +287,7 @@ $userInput<|im_end|>
           _scrollToBottom();
         }
 
-        await Future.delayed(const Duration(milliseconds: 2));
+        await Future.delayed(const Duration(milliseconds: 1));
       }
 
       stopwatch.stop();
@@ -296,8 +298,8 @@ $userInput<|im_end|>
         if (_messages.isNotEmpty && _messages.last['role'] == 'assistant') {
           _messages[_messages.length - 1] = {
             'role': 'assistant',
-            'text': finalAnswer.isEmpty ? '⚠️ Response generate nahi hua.' : finalAnswer,
-            'time': '${stopwatch.elapsedMilliseconds}ms (Qwen 0.5B)',
+            'text': finalAnswer.isEmpty ? '⚠️ Output blank raha.' : finalAnswer,
+            'time': '${stopwatch.elapsedMilliseconds}ms',
           };
         }
         _isGenerating = false;
