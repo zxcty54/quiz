@@ -31,7 +31,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   final ScrollController _scrollController = ScrollController();
 
   LlamaEngine? _engine;
-  StreamSubscription<String>? _generationSubscription;
+  StreamSubscription<String>? _streamSub;
 
   bool _isModelLoaded = false;
   bool _isModelLoading = false;
@@ -48,7 +48,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   void dispose() {
     _textController.dispose();
     _scrollController.dispose();
-    _generationSubscription?.cancel();
+    _streamSub?.cancel();
     _engine?.dispose();
     super.dispose();
   }
@@ -80,8 +80,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
   }
 
-  // --- MODERN LLAMAENGINE 0.9.x ISOLATE LOADER ---
-  Future<void> _pickAndLoadModel() async {
+  // --- MODERN 0.9.x ISOLATE WORKER LOADER ---
+  Future<void> _pickAndLoadQwenModel() async {
     if (_busy) return;
 
     try {
@@ -96,7 +96,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       final fileName = result.files.single.name;
 
       if (pickedPath == null || !File(pickedPath).existsSync()) {
-        _showError('GGUF file path invalid hai.');
+        _showError('GGUF file ka valid path nahi mila.');
         return;
       }
 
@@ -107,18 +107,17 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Initializing Isolate Worker...';
+        _modelStatus = 'Spawning Isolate Worker...';
       });
 
       _engine?.dispose();
 
-      // 0.9.x Isolate Configuration
       final engine = LlamaEngine();
       await engine.init(
         modelPath: pickedPath,
-        contextSize: 256,
-        threads: 2,
-        gpuLayers: 0,
+        contextSize: 256, // Low context for mobile RAM safety
+        threads: 2,       // Safe CPU thread count
+        gpuLayers: 0,     // Pure CPU execution
       );
 
       if (!mounted) return;
@@ -127,10 +126,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _engine = engine;
         _isModelLoaded = true;
         _isModelLoading = false;
-        _modelStatus = 'Qwen 2.5 Active (Isolate Engine)';
+        _modelStatus = 'Qwen 2.5 0.5B Active (0.9.x Isolate)';
       });
 
-      _showSuccess('🟢 Model load ho gaya! Ab topic type karein.');
+      _showSuccess('🟢 Model load ho gaya! Ab concept enter karein.');
     } catch (e) {
       if (!mounted) return;
       setState(() {
@@ -142,7 +141,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
   }
 
-  // --- DUOLINGO STRUCTURE PROMPT ---
+  // --- DUOLINGO STRUCTURED LEARNING PROMPT ---
   String _buildQwenPrompt({
     required String userInput,
     required String context,
@@ -152,8 +151,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
     switch (mode) {
       case AgentTaskMode.quiz:
         systemInstructions = '''
-You are an expert exam quiz writer for BPSC, BSSC, and SSC.
-Create 2 multiple-choice questions for the user topic based on study context.
+You are an expert exam quiz writer for BPSC, BSSC, and SSC CGL.
+Create 2 multiple-choice questions for the user's topic based on the study context.
 Format:
 Q1. [Question]
 A) [Option 1]
@@ -168,7 +167,7 @@ Explanation: [Crisp 1-line reason]
       case AgentTaskMode.mnemonic:
         systemInstructions = '''
 You are an AI Memory Specialist.
-Create a high-impact Hindi/Hinglish mnemonic or memory trick for the topic.
+Create a high-impact Hindi/Hinglish mnemonic code or memory trick to remember the topic easily.
 ''';
         break;
 
@@ -185,7 +184,7 @@ Provide a high-yield exam summary sheet:
       case AgentTaskMode.analyze:
         systemInstructions = '''
 You are an AI Diagnostic Evaluator.
-Analyze the user's reasoning and point out traps.
+Analyze the user's reasoning/answer for the exam topic and point out conceptual traps.
 ''';
         break;
 
@@ -193,7 +192,7 @@ Analyze the user's reasoning and point out traps.
       default:
         systemInstructions = '''
 You are a Duolingo-style structured learning AI tutor for competitive exams.
-Explain the topic strictly in 3 crisp points:
+Explain the topic strictly following this structure:
 1. 💡 Micro Concept (1-line definition)
 2. ⚡ 3-Step Breakdown (3 short bullet points)
 3. 🎯 1 Micro Challenge MCQ with answer
@@ -201,7 +200,7 @@ Explain the topic strictly in 3 crisp points:
         break;
     }
 
-    final contextPart = context.isNotEmpty ? '\n\nCONTEXT:\n$context' : '';
+    final contextPart = context.isNotEmpty ? '\n\nSTUDY CONTEXT:\n$context' : '';
 
     return '''<|im_start|>system
 $systemInstructions$contextPart<|im_end|>
@@ -216,7 +215,7 @@ $userInput<|im_end|>
     if (query.isEmpty || _busy) return;
 
     if (!_isModelLoaded || _engine == null) {
-      _showError('Pehle upar 📁 icon par click karke Qwen 0.5B GGUF file load karein.');
+      _showError('Pehle upar 📁 icon par click karke Qwen 0.5B GGUF file select karein.');
       return;
     }
 
@@ -244,10 +243,9 @@ $userInput<|im_end|>
       );
 
       final buffer = StringBuffer();
-      
-      // Modern 0.9.x Stream Worker
       final stream = _engine!.generate(prompt);
-      _generationSubscription = stream.listen(
+
+      _streamSub = stream.listen(
         (token) {
           if (token == '<|im_end|>' || token == '<|endoftext|>') return;
           buffer.write(token);
@@ -260,7 +258,7 @@ $userInput<|im_end|>
           _scrollToBottom();
         },
         onError: (e) {
-          debugPrint('Stream error: $e');
+          debugPrint('Inference stream error: $e');
         },
         onDone: () {
           stopwatch.stop();
@@ -268,7 +266,7 @@ $userInput<|im_end|>
           setState(() {
             _messages[_messages.length - 1] = {
               'role': 'assistant',
-              'text': buffer.toString().trim().isEmpty ? '⚠️ Blank response' : buffer.toString().trim(),
+              'text': buffer.toString().trim().isEmpty ? '⚠️ Blank response generated.' : buffer.toString().trim(),
               'time': '${stopwatch.elapsedMilliseconds}ms (0.9.x Isolate)',
             };
             _isGenerating = false;
@@ -292,7 +290,7 @@ $userInput<|im_end|>
   }
 
   void _stopGeneration() {
-    _generationSubscription?.cancel();
+    _streamSub?.cancel();
     _engine?.stop();
     setState(() {
       _isGenerating = false;
@@ -365,7 +363,7 @@ $userInput<|im_end|>
         actions: [
           IconButton(
             tooltip: 'Load Qwen 0.5B GGUF',
-            onPressed: _busy ? null : _pickAndLoadModel,
+            onPressed: _busy ? null : _pickAndLoadQwenModel,
             icon: _isModelLoading
                 ? const SizedBox(
                     width: 18,
@@ -492,21 +490,21 @@ $userInput<|im_end|>
             const Icon(Icons.psychology_rounded, size: 54, color: Color(0xFF2563EB)),
             const SizedBox(height: 12),
             Text(
-              _isModelLoaded ? 'Qwen 2.5 0.9.x Isolate Ready' : 'Offline Qwen AI Agent',
+              _isModelLoaded ? 'Qwen 2.5 Isolate Engine Active' : 'Offline Qwen AI Agent',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isDark ? Colors.white70 : Colors.black87),
             ),
             const SizedBox(height: 6),
             Text(
               _isModelLoaded
-                  ? 'Upar se task select karein aur topic type karein!'
-                  : 'Phone me downloaded Qwen 0.5B GGUF file load karne ke liye 📁 dabayein.',
+                  ? 'Upar se task select karein aur koi bhi concept type karein!'
+                  : 'Phone me downloaded Qwen 0.5B GGUF file load karne ke liye 📁 button dabayein.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, height: 1.4, color: Colors.grey.shade600),
             ),
             const SizedBox(height: 16),
             if (!_isModelLoaded)
               ElevatedButton.icon(
-                onPressed: _isModelLoading ? null : _pickAndLoadModel,
+                onPressed: _isModelLoading ? null : _pickAndLoadQwenModel,
                 icon: const Icon(Icons.folder_open, size: 18),
                 label: const Text('Pick Downloaded Qwen GGUF'),
                 style: ElevatedButton.styleFrom(
