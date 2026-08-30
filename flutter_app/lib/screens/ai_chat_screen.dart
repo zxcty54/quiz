@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:llama_cpp_dart/llama_cpp_dart.dart';
 import 'package:path_provider/path_provider.dart';
@@ -124,36 +125,39 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       setState(() {
         _isModelLoading = true;
-        _modelStatus = 'Copying model to app storage...';
+        _modelStatus = 'Preparing app storage...';
       });
 
-      // 1. Android Scoped Storage Fix: Copy to internal app directory
+      // 1. Android Scoped Storage Fix
       final appDir = await getApplicationDocumentsDirectory();
       final localModelPath = '${appDir.path}/$fileName';
       final localModelFile = File(localModelPath);
 
       if (!localModelFile.existsSync() || localModelFile.lengthSync() != File(pickedPath).lengthSync()) {
+        setState(() {
+          _modelStatus = 'Copying model file...';
+        });
         final sourceFile = File(pickedPath);
         await sourceFile.copy(localModelPath);
       }
 
       setState(() {
-        _modelStatus = 'Allocating Phone Memory & Loading Model...';
+        _modelStatus = 'Allocating memory in background...';
       });
 
-      await Future.delayed(const Duration(milliseconds: 400));
-
+      // UI thread breathing delay
+      await Future.delayed(const Duration(milliseconds: 300));
       _disposeModelSafely();
 
-      // 2. Mobile-Safe Zero-Crash Parameters
+      // 2. Safe Mobile Architecture Settings
       final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU on Android
+      modelParams.nGpuLayers = 0; // Pure CPU
 
       final contextParams = ContextParams();
-      contextParams.nCtx = 512;   // Stable context length to prevent Native OOM Crash
-      contextParams.nThreads = 2; // 2 CPU threads prevent thermal throttling & UI lock
+      contextParams.nCtx = 256;   // Ultra-light memory footprint
+      contextParams.nThreads = 1; // 1 Thread for initialization prevents Watchdog killer crash
 
-      // 3. Initialize with direct Internal POSIX file path
+      // 3. Native initialization with Safe Context
       final loadedInstance = Llama(localModelPath, modelParams, contextParams);
 
       if (!mounted) return;
@@ -166,7 +170,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _modelStatus = 'Offline AI Ready (CPU Active)';
       });
 
-      _showSuccess('🟢 Offline AI Model successfully loaded!');
+      _showSuccess('🟢 Model RAM mein successfully load ho gaya!');
     } catch (e) {
       if (!mounted) return;
 
@@ -505,7 +509,7 @@ $question
         elevation: 0.5,
         actions: [
           IconButton(
-            tooltip: 'Load Gemma 2 GGUF Model',
+            tooltip: 'Load GGUF Model',
             onPressed: _busy ? null : _pickAndLoadModel,
             icon: _isModelLoading
                 ? const SizedBox(
