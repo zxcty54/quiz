@@ -98,6 +98,31 @@ jobs:
               print("Successfully configured MediaPipe GenAI dependencies in app/build.gradle")
           EOF
 
+      - name: Purge Android V1 Embedding Artifacts
+        run: |
+          python3 - << 'EOF'
+          import os, re
+
+          for root, dirs, files in os.walk("flutter_app/android"):
+              for file in files:
+                  if file == "AndroidManifest.xml":
+                      manifest_path = os.path.join(root, file)
+                      with open(manifest_path, "r", encoding="utf-8", errors="ignore") as f:
+                          content = f.read()
+                      
+                      # Strip any legacy flutterEmbedding meta-data tags
+                      cleaned = re.sub(r'<meta-data\s+android:name="flutterEmbedding"[^>]*/>\s*', '', content)
+                      # Fix legacy NormalTheme syntax
+                      cleaned = cleaned.replace('android:value="@style/NormalTheme"', 'android:resource="@style/NormalTheme"')
+                      # Replace deprecated v1 Application class if hardcoded
+                      cleaned = cleaned.replace('android:name="io.flutter.app.FlutterApplication"', 'android:name="${applicationName}"')
+                      
+                      if cleaned != content:
+                          with open(manifest_path, "w", encoding="utf-8") as f:
+                              f.write(cleaned)
+                          print(f"Purged V1 embeddings from: {manifest_path}")
+          EOF
+
       - name: Setup Keystore & Permissions
         working-directory: flutter_app/android
         run: |
