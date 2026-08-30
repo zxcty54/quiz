@@ -1,87 +1,105 @@
-import 'dart:io';
-import 'package:llama_cpp_dart/llama_cpp_dart.dart';
+import 'package:flutter_gemma/flutter_gemma.dart';
 
-class OfflineLlmService {
-  OfflineLlmService._();
+enum LlmTaskType {
+  duolingoExplanation,
+  quiz,
+  analysis,
+  mnemonic,
+  summary,
+}
 
-  static final OfflineLlmService instance = OfflineLlmService._();
+class OfflineLlmAgentService {
+  static final OfflineLlmAgentService instance = OfflineLlmAgentService._internal();
+  OfflineLlmAgentService._internal();
 
-  Llama? _llama;
-  String? _modelPath;
+  final _gemma = FlutterGemmaPlugin.instance;
+  bool _isInitialized = false;
 
-  bool get isModelLoaded => _llama != null;
-  String? get modelPath => _modelPath;
+  bool get isReady => _isInitialized;
 
-  Future<bool> loadModel(String path) async {
-    final file = File(path);
-
-    if (!await file.exists()) {
-      throw Exception('GGUF model file not found:\n$path');
-    }
-
-    await unload();
-
-    try {
-      final modelParams = ModelParams();
-      modelParams.nGpuLayers = 0; // Pure CPU
-
-      final contextParams = ContextParams();
-      contextParams.nCtx = 2048;
-      contextParams.nThreads = 4;
-
-      _llama = Llama(path, modelParams, contextParams);
-      _modelPath = path;
-      return true;
-    } catch (e) {
-      _llama = null;
-      _modelPath = null;
-      throw Exception('Failed to load GGUF model on Phone CPU: $e');
-    }
+  Future<void> initEngine() async {
+    if (_isInitialized) return;
+    await _gemma.init(
+      maxTokens: 512,
+      temperature: 0.2,
+      randomSeed: 1,
+      topK: 1,
+    );
+    _isInitialized = true;
   }
 
-  Future<String> generate(String prompt) async {
-    if (_llama == null) throw Exception('AI model is not loaded.');
+  Future<String> executeLlmAgent({
+    required String userInput,
+    required String context,
+    required LlmTaskType task,
+  }) async {
+    String systemPrompt;
 
-    final buffer = StringBuffer();
-    _llama!.setPrompt(prompt);
-
-    while (true) {
-      final tokenResult = _llama!.getNext();
-      final tokenText = tokenResult.$1;
-      final isDone = tokenResult.$2;
-
-      if (isDone || tokenText.isEmpty || tokenText == '<end_of_turn>' || tokenText == '</s>') {
+    switch (task) {
+      case LlmTaskType.quiz:
+        systemPrompt = '''
+You are an autonomous AI Quiz Generator for competitive exams (BPSC, BSSC, SSC).
+Generate 2 MCQs for the user's topic based on the study context.
+Format:
+Q1. [Question]
+A) [Option 1]
+B) [Option 2]
+C) [Option 3]
+D) [Option 4]
+Correct: [Option Letter]
+Explanation: [1-line reason]
+''';
         break;
-      }
-      buffer.write(tokenText);
-    }
 
-    final result = buffer.toString().trim();
-    if (result.isEmpty) throw Exception('Empty response from model.');
-    return result;
-  }
-
-  Stream<String> generateStream(String prompt) async* {
-    if (_llama == null) throw Exception('AI model is not loaded.');
-    _llama!.setPrompt(prompt);
-
-    while (true) {
-      final tokenResult = _llama!.getNext();
-      final tokenText = tokenResult.$1;
-      final isDone = tokenResult.$2;
-
-      if (isDone || tokenText.isEmpty || tokenText == '<end_of_turn>' || tokenText == '</s>') {
+      case LlmTaskType.analysis:
+        systemPrompt = '''
+You are an AI Diagnostic Evaluator.
+Analyze the user's input/answer against the verified exam rule and explain the conceptual trap.
+''';
         break;
-      }
-      yield tokenText;
-    }
-  }
 
-  Future<void> unload() async {
-    if (_llama != null) {
-      _llama!.dispose();
-      _llama = null;
-      _modelPath = null;
+      case LlmTaskType.mnemonic:
+        systemPrompt = '''
+You are an AI Memory Specialist.
+Create a high-impact Hindi/Hinglish mnemonic code or acronym to remember this topic easily.
+''';
+        break;
+
+      case LlmTaskType.summary:
+        systemPrompt = '''
+You are a Rapid-Revision AI Agent.
+Summarize the topic into:
+• 💡 Core Law / Definition
+• ⚡ 3 Most Frequent Exam Points
+• 🎯 Elimination Strategy
+''';
+        break;
+
+      case LlmTaskType.duolingoExplanation:
+      default:
+        systemPrompt = '''
+You are a Duolingo-style structured learning AI tutor for competitive exams.
+Explain the topic in crisp points:
+1. 💡 Micro Concept (1-line definition)
+2. ⚡ 3-Step Breakdown (3 short bullet points)
+3. 🎯 1 Micro Challenge MCQ with answer.
+
+STUDY CONTEXT:
+$context
+
+TOPIC:
+$userInput
+''';
+        break;
     }
+
+    final fullPrompt = '''
+<start_of_turn>user
+$systemPrompt
+<end_of_turn>
+<start_of_turn>model
+''';
+
+    return await _gemma.getResponse(fullPrompt);
   }
 }
