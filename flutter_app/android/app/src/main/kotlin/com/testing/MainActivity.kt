@@ -23,15 +23,13 @@ class MainActivity: FlutterActivity() {
                     if (modelPath != null && File(modelPath).exists()) {
                         executor.execute {
                             try {
-                                // CPU INT4 ke liye exact stable memory boundaries
                                 val options = LlmInference.LlmInferenceOptions.builder()
                                     .setModelPath(modelPath)
                                     .setMaxTokens(512)
-                                    .setMaxSequenceLength(512)
+                                    .setMaxSequenceLength(1024)
                                     .setTopK(40)
                                     .setTemperature(0.7f)
                                     .build()
-                                    
                                 llmInference = LlmInference.createFromOptions(applicationContext, options)
                                 runOnUiThread { result.success(true) }
                             } catch (e: Throwable) {
@@ -39,7 +37,7 @@ class MainActivity: FlutterActivity() {
                             }
                         }
                     } else {
-                        result.error("FILE_NOT_FOUND", "Model file not found", null)
+                        result.error("FILE_NOT_FOUND", "Model file not found at path", null)
                     }
                 }
                 "generate" -> {
@@ -47,31 +45,35 @@ class MainActivity: FlutterActivity() {
                     val engine = llmInference
                     
                     if (engine == null) {
-                        result.error("ENGINE_NOT_READY", "Model is not initialized", null)
+                        result.error("ENGINE_NOT_READY", "MediaPipe Model Not Initialized", null)
                         return@setMethodCallHandler
                     }
 
                     val cleanInput = rawPrompt.trim()
                     if (cleanInput.isEmpty()) {
-                        result.error("EMPTY_PROMPT", "Prompt is empty", null)
+                        result.error("EMPTY_PROMPT", "Prompt cannot be empty", null)
                         return@setMethodCallHandler
                     }
 
                     executor.execute {
                         try {
-                            // Direct plain prompt handling to avoid turn-tag tokenization crash
-                            val response = engine.generateResponse(cleanInput)
+                            // 🔥 Qwen 2.5 ChatML Prompt Format (Stops native C++ crashes on actual text queries)
+                            val formattedPrompt = "<|im_start|>system\nYou are a helpful exam tutor for competitive exams.<|im_end|>\n<|im_start|>user\n$cleanInput<|im_end|>\n<|im_start|>assistant\n"
+                            
+                            val response = engine.generateResponse(formattedPrompt)
                             
                             runOnUiThread {
                                 if (!response.isNullOrBlank()) {
-                                    result.success(response)
+                                    // Remove trailing tags if any
+                                    val cleanResponse = response.replace("<|im_end|>", "").replace("<|endoftext|>", "").trim()
+                                    result.success(cleanResponse)
                                 } else {
-                                    result.error("EMPTY_RESPONSE", "Engine gave no output", null)
+                                    result.error("EMPTY_RESPONSE", "Engine returned no output", null)
                                 }
                             }
                         } catch (e: Throwable) {
                             runOnUiThread { 
-                                result.error("GEN_FAIL", e.localizedMessage ?: "Inference failed", null) 
+                                result.error("GEN_FAIL", e.localizedMessage ?: "Inference execution error", null) 
                             }
                         }
                     }
