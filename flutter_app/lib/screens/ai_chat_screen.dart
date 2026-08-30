@@ -35,21 +35,21 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _checkAndAutoLoadModel();
   }
 
-  // App open hote hi permanent directory se check karke load karega
+  // App open hote hi permanent storage se check karke load karega
   Future<void> _checkAndAutoLoadModel() async {
     final appDir = await getApplicationDocumentsDirectory();
-    final permanentModelFile = File('${appDir.path}/model.bin');
+    final permanentModelFile = File('${appDir.path}/gemma_model.bin');
 
     if (await permanentModelFile.exists()) {
       _initNativeModel(permanentModelFile.path);
     } else {
       final prefs = await SharedPreferences.getInstance();
-      final savedPath = prefs.getString('saved_offline_model_path');
+      final savedPath = prefs.getString('saved_gemma_path');
       if (savedPath != null && File(savedPath).existsSync()) {
         _initNativeModel(savedPath);
       } else {
         setState(() {
-          _statusMessage = "Select offline model (.bin)";
+          _statusMessage = "Select Gemma .bin model once";
         });
       }
     }
@@ -66,13 +66,12 @@ class _AiChatScreenState extends State<AiChatScreen> {
       
       setState(() {
         _isLoading = true;
-        _statusMessage = "Saving model permanently to App Storage...";
+        _statusMessage = "Saving Gemma model permanently...";
       });
 
-      // Permanent App Directory me copy karte hain taaki permission expire na ho
       try {
         final appDir = await getApplicationDocumentsDirectory();
-        final permanentFile = File('${appDir.path}/model.bin');
+        final permanentFile = File('${appDir.path}/gemma_model.bin');
         
         if (!await permanentFile.exists()) {
           await File(pickedPath).copy(permanentFile.path);
@@ -80,7 +79,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
         _initNativeModel(permanentFile.path);
       } catch (e) {
-        // Fallback agar copy fail ho
         _initNativeModel(pickedPath);
       }
     }
@@ -89,19 +87,19 @@ class _AiChatScreenState extends State<AiChatScreen> {
   Future<void> _initNativeModel(String path) async {
     setState(() {
       _isLoading = true;
-      _statusMessage = "Loading offline AI into RAM...";
+      _statusMessage = "Loading Gemma 2B CPU into RAM...";
     });
 
     try {
       final bool result = await platform.invokeMethod('initModel', {'modelPath': path});
       if (result) {
         final prefs = await SharedPreferences.getInstance();
-        await prefs.setString('saved_offline_model_path', path);
+        await prefs.setString('saved_gemma_path', path);
 
         setState(() {
           _isModelLoaded = true;
           _isLoading = false;
-          _statusMessage = "Offline AI Active";
+          _statusMessage = "Gemma 2B Active (Offline)";
         });
       }
     } catch (e) {
@@ -158,7 +156,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("AI Exam Assistant", style: TextStyle(fontSize: 16)),
+            const Text("Offline AI Assistant", style: TextStyle(fontSize: 16)),
             Text(
               _statusMessage,
               style: TextStyle(
@@ -184,8 +182,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
                 ? Center(
                     child: Text(
                       _isModelLoaded
-                          ? "Ask anything to your offline AI"
-                          : "Tap folder icon to select your .bin model once",
+                          ? "Gemma 2B Ready! Type anything..."
+                          : "Tap folder icon to select Gemma .bin model",
                       style: const TextStyle(color: Colors.grey),
                     ),
                   )
@@ -226,7 +224,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                 children: const [
                   SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2)),
                   SizedBox(width: 8),
-                  Text("AI is answering...", style: TextStyle(fontSize: 12, color: Colors.grey)),
+                  Text("Gemma is thinking...", style: TextStyle(fontSize: 12, color: Colors.grey)),
                 ],
               ),
             ),
@@ -245,7 +243,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     controller: _textController,
                     enabled: _isModelLoaded && !_isGenerating,
                     decoration: const InputDecoration(
-                      hintText: "Ask anything...",
+                      hintText: "Type any question...",
                       border: InputBorder.none,
                       contentPadding: EdgeInsets.symmetric(horizontal: 12),
                     ),
