@@ -32,7 +32,7 @@ dependencies:
   path: ^1.9.0
   archive: ^3.6.1
   supabase_flutter: ^2.6.0
-  llama_cpp_dart: ^0.0.9
+  flutter_gemma: ^0.1.0
 
 dev_dependencies:
   flutter_test:
@@ -44,3 +44,4 @@ flutter:
   assets:
     - assets/data/
     - assets/data/database/bpsc_database.db.gz
+    - assets/models/
