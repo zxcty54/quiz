@@ -29,66 +29,20 @@ jobs:
       - name: Setup Android SDK, NDK & CMake
         uses: android-actions/setup-android@v3
 
-      - name: Install Android NDK 26 & CMake
+      - name: Install Android SDK Components
         run: |
-          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager --install "ndk;26.1.10909125" "cmake;3.22.1" "platforms;android-34"
-
-      - name: Re-generate Native Android Project Files
-        working-directory: flutter_app
-        run: flutter create . --platforms=android --org com --project-name testing
+          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
       - name: Get Dependencies
         working-directory: flutter_app
         run: flutter pub get
 
-      # --- DEPENDENCY TREE & LLAMA RESOLUTION LOG STEP ---
-      - name: Inspect Dependencies & Llama Resolution Logs
-        working-directory: flutter_app
-        run: |
-          echo "=================== FLUTTER PUB DEPS (LLAMA ONLY) ==================="
-          flutter pub deps | grep llama || echo "No direct llama match in filtered tree"
-          echo "=================== FULL DEPENDENCY GRAPH ==================="
-          flutter pub deps
-          echo "=================== PUB CACHE DIRECTORY CHECK ==================="
-          ls -la /home/runner/.pub-cache/hosted/pub.dev/ | grep llama || echo "No llama package found in cache"
-
-      - name: Inject Missing llama.cpp Submodule into Package Cache
-        run: |
-          git clone --depth 1 https://github.com/ggerganov/llama.cpp.git /tmp/llama_source
-          LLAMA_DART_PKG=$(find /home/runner/.pub-cache/hosted/pub.dev/ -maxdepth 1 -name "llama_cpp_dart-*" | head -n 1)
-          if [ -n "$LLAMA_DART_PKG" ] && [ -d "$LLAMA_DART_PKG" ]; then
-            echo "Found llama_cpp_dart at: $LLAMA_DART_PKG"
-            mkdir -p "$LLAMA_DART_PKG/src/llama.cpp"
-            cp -r /tmp/llama_source/* "$LLAMA_DART_PKG/src/llama.cpp/"
-            mkdir -p "$LLAMA_DART_PKG/llama.cpp"
-            cp -r /tmp/llama_source/* "$LLAMA_DART_PKG/llama.cpp/"
-          fi
-
-      - name: Force Upgrade compileSdkVersion to 34 across ALL Plugins & Desugaring
+      - name: Configure MediaPipe GenAI & Gradle SDK 34
         run: |
           python3 - << 'EOF'
-          import os, glob
+          import os
 
-          # 1. Update compileSdkVersion in ALL Pub Cache plugins (including llama_cpp_dart)
-          pub_cache = os.path.expanduser("~/.pub-cache")
-          for root, dirs, files in os.walk(pub_cache):
-              for f in files:
-                  if f.startswith("build.gradle"):
-                      p = os.path.join(root, f)
-                      try:
-                          with open(p, "r", encoding="utf-8", errors="ignore") as fp:
-                              c = fp.read()
-                          c = c.replace("compileSdkVersion 31", "compileSdkVersion 34")
-                          c = c.replace("compileSdkVersion 30", "compileSdkVersion 34")
-                          c = c.replace("compileSdkVersion 29", "compileSdkVersion 34")
-                          c = c.replace("compileSdkVersion 28", "compileSdkVersion 34")
-                          c = c.replace("compileSdk = 31", "compileSdk = 34")
-                          with open(p, "w", encoding="utf-8") as fp:
-                              fp.write(c)
-                      except Exception as e:
-                          pass
-
-          # 2. Update Root android/build.gradle to force subprojects to SDK 34
+          # 1. Update Root android/build.gradle to force subprojects to SDK 34
           root_gradle = "flutter_app/android/build.gradle"
           if os.path.exists(root_gradle):
               with open(root_gradle, "r") as f:
@@ -120,29 +74,26 @@ jobs:
                       f.write(content)
               print("Injected subproject SDK 34 override into root build.gradle")
 
-          # 3. Inject Desugaring into app/build.gradle & app/build.gradle.kts
-          kts_path = "flutter_app/android/app/build.gradle.kts"
+          # 2. Inject MediaPipe GenAI & Desugaring into app/build.gradle
           groovy_path = "flutter_app/android/app/build.gradle"
-
-          if os.path.exists(kts_path):
-              with open(kts_path, "r") as f:
-                  content = f.read()
-              if "isCoreLibraryDesugaringEnabled" not in content:
-                  content = content.replace("compileOptions {", "compileOptions {\n        isCoreLibraryDesugaringEnabled = true")
-                  content += '\ndependencies {\n    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")\n}\n'
-                  with open(kts_path, "w") as f:
-                      f.write(content)
-              print("Injected Desugaring in Kotlin DSL")
-
           if os.path.exists(groovy_path):
               with open(groovy_path, "r") as f:
                   content = f.read()
+              
               if "coreLibraryDesugaringEnabled" not in content:
                   content = content.replace("compileOptions {", "compileOptions {\n        coreLibraryDesugaringEnabled true")
-                  content += '\ndependencies {\n    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"\n}\n'
+              
+              mediapipe_dep = """
+          dependencies {
+              coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"
+              implementation 'com.google.mediapipe:tasks-genai:0.10.14'
+          }
+          """
+              if "tasks-genai" not in content:
+                  content += mediapipe_dep
                   with open(groovy_path, "w") as f:
                       f.write(content)
-              print("Injected Desugaring in Groovy DSL")
+              print("Injected MediaPipe GenAI & Desugaring into app build.gradle")
           EOF
 
       - name: Setup Keystore & Permissions
@@ -183,5 +134,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (SDK 34 + llama_cpp_dart Fix) APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} (Google MediaPipe On-Device AI) APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
