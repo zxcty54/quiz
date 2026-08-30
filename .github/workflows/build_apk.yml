@@ -33,13 +33,14 @@ jobs:
         run: |
           echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0"
 
-      # --- 1. Re-align to Pure Flutter V2 Structure ---
-      - name: Upgrade Native Android Template to V2
+      # Re-generate clean V2 Android Project Files
+      - name: Rebuild Android Template
         working-directory: flutter_app
         run: |
+          rm -rf android/app/src/main/java
           flutter create . --platforms=android --org com --project-name testing
 
-      # --- 2. Re-inject Custom MediaPipe MainActivity.kt ---
+      # Inject Custom MediaPipe MainActivity.kt
       - name: Inject MediaPipe MainActivity.kt
         run: |
           mkdir -p flutter_app/android/app/src/main/kotlin/com/testing
@@ -119,7 +120,6 @@ jobs:
           if os.path.exists(root_gradle):
               with open(root_gradle, "r") as f:
                   content = f.read()
-              
               override_block = """
           allprojects {
               repositories {
@@ -184,22 +184,30 @@ jobs:
             -dname "CN=Android Debug,O=Android,C=US" \
             || true
 
-      - name: Build Pure Offline Release APK (ARM64)
+      # Compile Flutter Dart Assets
+      - name: Build Flutter Assets
+        working-directory: flutter_app
+        run: flutter build bundle
+
+      # Direct Native Release Compilation (Bypasses Flutter CLI V1 False Positive)
+      - name: Build Pure Offline Release APK via Gradle
+        working-directory: flutter_app/android
+        run: ./gradlew assembleRelease -PtargetPlatform=android-arm64
+
+      - name: Locate & Package APK
         working-directory: flutter_app
         run: |
-          flutter build apk --release --target-platform android-arm64 --no-tree-shake-icons
+          mkdir -p build/app/outputs/flutter-apk
+          APK_FILE=$(find android/app/build/outputs/apk/release -name "*.apk" | head -n 1)
+          cp "$APK_FILE" build/app/outputs/flutter-apk/app-release.apk
+          cp "$APK_FILE" build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
+          zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
 
       - name: Upload Build Artifact (APK)
         uses: actions/upload-artifact@v4
         with:
           name: MockTester-Release-APK
           path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
-
-      - name: Auto-Rename APK & Compress
-        working-directory: flutter_app
-        run: |
-          cp build/app/outputs/flutter-apk/app-release.apk build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
-          zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
 
       - name: Send Zip File Direct To Telegram
         uses: appleboy/telegram-action@master
