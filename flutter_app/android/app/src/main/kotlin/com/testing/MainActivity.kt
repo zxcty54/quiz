@@ -60,8 +60,8 @@ class MainActivity: FlutterActivity() {
 
                     executor.execute {
                         try {
-                            // Clean Gemma 2B Persona Instruction Format
-                            val gemmaFormattedPrompt = "<start_of_turn>user\nYou are a helpful and direct AI assistant. Answer the user prompt accurately, concisely, and naturally.\n\nUser Query: $cleanInput<end_of_turn>\n<start_of_turn>model\n"
+                            // Strict instruction template to prevent hallucination / runaway text
+                            val gemmaFormattedPrompt = "<start_of_turn>user\nYou are a concise exam assistant. Directly and strictly fulfill this request without background explanations or unrelated protocols.\n\n$cleanInput<end_of_turn>\n<start_of_turn>model\n"
                             
                             val response = engine.generateResponse(gemmaFormattedPrompt)
                             
