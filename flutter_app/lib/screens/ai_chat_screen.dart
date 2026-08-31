@@ -6,7 +6,9 @@ import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AiChatScreen extends StatefulWidget {
-  const AiChatScreen({Key? key}) : super(key: key);
+  final bool isDarkMode;
+
+  const AiChatScreen({Key? key, this.isDarkMode = false}) : super(key: key);
 
   @override
   State<AiChatScreen> createState() => _AiChatScreenState();
@@ -35,7 +37,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _checkAndAutoLoadModel();
   }
 
-  // App open hote hi permanent storage se check karke load karega
   Future<void> _checkAndAutoLoadModel() async {
     final appDir = await getApplicationDocumentsDirectory();
     final permanentModelFile = File('${appDir.path}/gemma_model.bin');
@@ -151,7 +152,13 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = widget.isDarkMode;
+    final bgColor = isDark ? const Color(0xFF121212) : Colors.white;
+    final cardBgColor = isDark ? const Color(0xFF1E1E1E) : Colors.grey.shade200;
+    final textColor = isDark ? Colors.white : Colors.black87;
+
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -184,7 +191,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                       _isModelLoaded
                           ? "Gemma 2B Ready! Type anything..."
                           : "Tap folder icon to select Gemma .bin model",
-                      style: const TextStyle(color: Colors.grey),
+                      style: TextStyle(color: isDark ? Colors.grey.shade400 : Colors.grey),
                     ),
                   )
                 : ListView.builder(
@@ -202,13 +209,13 @@ class _AiChatScreenState extends State<AiChatScreen> {
                             maxWidth: MediaQuery.of(context).size.width * 0.8,
                           ),
                           decoration: BoxDecoration(
-                            color: msg.isUser ? Colors.blueAccent : Colors.grey.shade200,
+                            color: msg.isUser ? Colors.blueAccent : cardBgColor,
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: Text(
                             msg.text,
                             style: TextStyle(
-                              color: msg.isUser ? Colors.white : Colors.black87,
+                              color: msg.isUser ? Colors.white : textColor,
                               fontSize: 14,
                             ),
                           ),
@@ -221,18 +228,18 @@ class _AiChatScreenState extends State<AiChatScreen> {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
               child: Row(
-                children: const [
-                  SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2)),
-                  SizedBox(width: 8),
-                  Text("Gemma is thinking...", style: TextStyle(fontSize: 12, color: Colors.grey)),
+                children: [
+                  const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2)),
+                  const SizedBox(width: 8),
+                  Text("Gemma is thinking...", style: TextStyle(fontSize: 12, color: isDark ? Colors.grey.shade400 : Colors.grey)),
                 ],
               ),
             ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-            decoration: const BoxDecoration(
-              color: Colors.white,
-              boxShadow: [
+            decoration: BoxDecoration(
+              color: isDark ? const Color(0xFF1E1E1E) : Colors.white,
+              boxShadow: const [
                 BoxShadow(color: Colors.black12, blurRadius: 4, offset: Offset(0, -1))
               ],
             ),
@@ -242,10 +249,12 @@ class _AiChatScreenState extends State<AiChatScreen> {
                   child: TextField(
                     controller: _textController,
                     enabled: _isModelLoaded && !_isGenerating,
-                    decoration: const InputDecoration(
+                    style: TextStyle(color: textColor),
+                    decoration: InputDecoration(
                       hintText: "Type any question...",
+                      hintStyle: TextStyle(color: isDark ? Colors.grey.shade500 : Colors.grey),
                       border: InputBorder.none,
-                      contentPadding: EdgeInsets.symmetric(horizontal: 12),
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 12),
                     ),
                     onSubmitted: (_) => _sendMessage(),
                   ),
