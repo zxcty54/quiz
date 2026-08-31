@@ -26,10 +26,10 @@ class MainActivity: FlutterActivity() {
                                 llmInference = null
                                 System.gc()
 
-                                // Gemma 2B CPU INT4 exact optimal limits
+                                // Gemma 2B CPU balanced limits for heating control & complete answers
                                 val options = LlmInference.LlmInferenceOptions.builder()
                                     .setModelPath(modelPath)
-                                    .setMaxTokens(384)
+                                    .setMaxTokens(320)
                                     .setMaxSequenceLength(512)
                                     .build()
                                     
@@ -60,8 +60,15 @@ class MainActivity: FlutterActivity() {
 
                     executor.execute {
                         try {
-                            // Strict instruction template to prevent hallucination / runaway text
-                            val gemmaFormattedPrompt = "<start_of_turn>user\nYou are a concise exam assistant. Directly and strictly fulfill this request without background explanations or unrelated protocols.\n\n$cleanInput<end_of_turn>\n<start_of_turn>model\n"
+                            // Balanced instruction template for clear & detailed explanations
+                            val gemmaFormattedPrompt = """
+<start_of_turn>user
+You are a helpful and knowledgeable educational AI assistant.
+Answer the question clearly with accurate facts, key concepts, and complete explanation without generating unrelated laboratory protocols or essays.
+
+Question: $cleanInput<end_of_turn>
+<start_of_turn>model
+""".trimIndent()
                             
                             val response = engine.generateResponse(gemmaFormattedPrompt)
                             
