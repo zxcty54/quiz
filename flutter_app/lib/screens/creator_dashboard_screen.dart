@@ -4,6 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../services/admin_telegram_alert.dart';
+import '../utils/bihar_location_data.dart'; // 🗺️ Bihar location dataset
 import 'creator_mock_builder_screen.dart';
 import 'creator_profile_screen.dart';
 
@@ -67,16 +68,21 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             .eq('coaching_id', coachingRes['id'])
             .order('created_at', ascending: false);
 
-        final submissions = await client
-            .from('batch_submissions')
-            .select('student_identifier')
-            .inFilter('batch_id', batchesRes.map((b) => b['id']).toList());
+        if (batchesRes.isNotEmpty) {
+          final batchIds = batchesRes.map((b) => b['id']).toList();
+          final submissions = await client
+              .from('batch_submissions')
+              .select('student_identifier')
+              .inFilter('batch_id', batchIds);
 
-        final uniqueStudents = <String>{};
-        for (var s in (submissions as List? ?? [])) {
-          if (s['student_identifier'] != null) uniqueStudents.add(s['student_identifier']);
+          final uniqueStudents = <String>{};
+          for (var s in (submissions as List? ?? [])) {
+            if (s['student_identifier'] != null) {
+              uniqueStudents.add(s['student_identifier']);
+            }
+          }
+          batchStudentsCount = uniqueStudents.length;
         }
-        batchStudentsCount = uniqueStudents.length;
       }
 
       final postsRes = await client
@@ -218,10 +224,14 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             icon: const Icon(Icons.delete_outline, size: 18, color: Colors.redAccent),
                             tooltip: 'Delete Batch',
                             onPressed: () async {
-                              await Supabase.instance.client.from('batches').delete().eq('id', b['id']);
-                              setState(() => _batches.removeAt(idx));
-                              setModalState(() {});
-                              _loadCompleteAnalytics();
+                              try {
+                                await Supabase.instance.client.from('batches').delete().eq('id', b['id']);
+                                setState(() => _batches.removeAt(idx));
+                                setModalState(() {});
+                                _loadCompleteAnalytics();
+                              } catch (err) {
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Delete error: $err')));
+                              }
                             },
                           ),
                         ],
@@ -263,7 +273,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             final bCode = batchCodeCtrl.text.trim().toUpperCase();
 
                             if (bName.isEmpty || bCode.isEmpty) {
-                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please enter name and code!')));
+                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Batch Name aur Code dono bharein!')));
                               return;
                             }
 
@@ -274,6 +284,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                                 final newCoaching = await Supabase.instance.client.from('coachings').insert({
                                   'name': _profile?['name'] ?? widget.creatorHandle,
                                   'owner_name': widget.creatorHandle,
+                                  'district': 'Patna',
+                                  'city': 'Musallahpur Hat',
                                 }).select().single();
                                 coachingId = newCoaching['id'];
                               }
@@ -285,9 +297,23 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               });
 
                               if (ctx.mounted) Navigator.pop(ctx);
-                              _loadCompleteAnalytics();
+                              await _loadCompleteAnalytics();
+
+                              if (mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text('🎉 Batch "$bName" ($bCode) successfully create ho gaya!'),
+                                    backgroundColor: const Color(0xFF16A34A),
+                                  ),
+                                );
+                              }
                             } catch (e) {
                               setModalState(() => isCreating = false);
+                              if (ctx.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(content: Text('Batch error: $e'), backgroundColor: Colors.redAccent),
+                                );
+                              }
                             }
                           },
                     child: isCreating
@@ -304,11 +330,23 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     );
   }
 
-  // 🎨 Institute Customizer Modal (Direct Phone Gallery Image Picker)
+  // 🎨 Institute Customizer Modal (Direct Phone Gallery Image Picker & 38 Bihar Districts)
   void _openInstituteCustomizerModal() {
     final nameCtrl = TextEditingController(text: _coachingData?['name'] ?? _profile?['name'] ?? '');
-    final cityCtrl = TextEditingController(text: _coachingData?['city'] ?? 'Patna');
+    final landmarkCtrl = TextEditingController(text: _coachingData?['landmark_address'] ?? _coachingData?['area_locality'] ?? '');
     final contactCtrl = TextEditingController(text: _coachingData?['contact_number'] ?? '');
+
+    String selectedDistrict = _coachingData?['district'] ?? _coachingData?['city'] ?? 'Patna';
+    if (!kBiharDistrictCityMap.containsKey(selectedDistrict)) {
+      selectedDistrict = 'Patna';
+    }
+
+    List<String> availableCities = kBiharDistrictCityMap[selectedDistrict] ?? ['Other / Rural Area'];
+    String selectedCity = _coachingData?['city'] ?? availableCities.first;
+    if (!availableCities.contains(selectedCity)) {
+      selectedCity = availableCities.first;
+    }
+
     File? selectedBannerFile;
     String currentBannerUrl = _coachingData?['banner_url'] ?? '';
     bool isSaving = false;
@@ -330,18 +368,24 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('🎨 Institute Branding & Details', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
+                    const Text('🎨 Institute Branding & Location', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
                 const SizedBox(height: 8),
 
-                // Direct Gallery Selection Container
+                // 📸 Direct Gallery Photo Picker
                 GestureDetector(
                   onTap: () async {
-                    final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
-                    if (picked != null) {
-                      setModalState(() => selectedBannerFile = File(picked.path));
+                    try {
+                      final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
+                      if (picked != null) {
+                        setModalState(() => selectedBannerFile = File(picked.path));
+                      }
+                    } catch (e) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Image pick failed: $e')),
+                      );
                     }
                   },
                   child: Container(
@@ -353,15 +397,29 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                       border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.35)),
                     ),
                     child: selectedBannerFile != null
-                        ? ClipRRect(borderRadius: BorderRadius.circular(12), child: Image.file(selectedBannerFile!, fit: BoxFit.cover, width: double.infinity))
+                        ? ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.file(selectedBannerFile!, fit: BoxFit.cover, width: double.infinity),
+                          )
                         : (currentBannerUrl.isNotEmpty
-                            ? ClipRRect(borderRadius: BorderRadius.circular(12), child: Image.network(currentBannerUrl, fit: BoxFit.cover, width: double.infinity))
+                            ? ClipRRect(
+                                borderRadius: BorderRadius.circular(12),
+                                child: Image.network(
+                                  currentBannerUrl,
+                                  fit: BoxFit.cover,
+                                  width: double.infinity,
+                                  errorBuilder: (_, __, ___) => const Center(child: Text('Image load failed')),
+                                ),
+                              )
                             : const Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Icon(Icons.add_photo_alternate_outlined, size: 34, color: Color(0xFF2563EB)),
                                   SizedBox(height: 4),
-                                  Text('Tap to pick Coaching Banner from Gallery 📷', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+                                  Text(
+                                    'Tap to pick Coaching Banner from Gallery 📷',
+                                    style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                                  ),
                                 ],
                               )),
                   ),
@@ -373,24 +431,87 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   decoration: const InputDecoration(labelText: 'Coaching / Institute Name', border: OutlineInputBorder(), isDense: true),
                 ),
                 const SizedBox(height: 10),
+
+                // 📍 1. Bihar 38 Districts Dropdown
+                DropdownButtonFormField<String>(
+                  value: selectedDistrict,
+                  decoration: const InputDecoration(
+                    labelText: 'Select Bihar District (38 Districts)',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                    prefixIcon: Icon(Icons.location_city_rounded, color: Color(0xFF2563EB), size: 20),
+                  ),
+                  items: kBiharDistrictCityMap.keys.map((dist) {
+                    return DropdownMenuItem<String>(
+                      value: dist,
+                      child: Text(dist, style: const TextStyle(fontSize: 13.5)),
+                    );
+                  }).toList(),
+                  onChanged: (val) {
+                    if (val != null) {
+                      setModalState(() {
+                        selectedDistrict = val;
+                        availableCities = kBiharDistrictCityMap[val] ?? ['Other / Rural Area'];
+                        selectedCity = availableCities.first;
+                      });
+                    }
+                  },
+                ),
+                const SizedBox(height: 10),
+
+                // 🏙️ 2. Hub Town / Sub-Division Dropdown (Cascading)
+                DropdownButtonFormField<String>(
+                  value: selectedCity,
+                  decoration: const InputDecoration(
+                    labelText: 'Select City / Educational Hub Town',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                    prefixIcon: Icon(Icons.pin_drop_outlined, color: Color(0xFF16A34A), size: 20),
+                  ),
+                  items: availableCities.map((city) {
+                    return DropdownMenuItem<String>(
+                      value: city,
+                      child: Text(city, style: const TextStyle(fontSize: 13.5)),
+                    );
+                  }).toList(),
+                  onChanged: (val) {
+                    if (val != null) {
+                      setModalState(() => selectedCity = val);
+                    }
+                  },
+                ),
+                const SizedBox(height: 10),
+
                 Row(
                   children: [
                     Expanded(
                       child: TextField(
-                        controller: cityCtrl,
-                        decoration: const InputDecoration(labelText: 'City / Town', border: OutlineInputBorder(), isDense: true),
+                        controller: landmarkCtrl,
+                        decoration: const InputDecoration(
+                          labelText: 'Street / Landmark Address',
+                          hintText: 'e.g. Near Bus Stand, 2nd Floor',
+                          border: OutlineInputBorder(),
+                          isDense: true,
+                        ),
                       ),
                     ),
                     const SizedBox(width: 8),
                     Expanded(
                       child: TextField(
                         controller: contactCtrl,
-                        decoration: const InputDecoration(labelText: 'Contact / WhatsApp', border: OutlineInputBorder(), isDense: true),
+                        keyboardType: TextInputType.phone,
+                        decoration: const InputDecoration(
+                          labelText: 'Contact / WhatsApp',
+                          hintText: '9876543210',
+                          border: OutlineInputBorder(),
+                          isDense: true,
+                        ),
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 14),
+
                 SizedBox(
                   width: double.infinity,
                   height: 44,
@@ -403,6 +524,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             try {
                               String bannerUrlToSave = currentBannerUrl;
 
+                              // 📤 Storage Upload
                               if (selectedBannerFile != null) {
                                 final bytes = await selectedBannerFile!.readAsBytes();
                                 final fileExt = selectedBannerFile!.path.split('.').last;
@@ -410,37 +532,56 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
                                 await Supabase.instance.client.storage
                                     .from('coaching_assets')
-                                    .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true));
+                                    .uploadBinary(
+                                      fileName,
+                                      bytes,
+                                      fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true),
+                                    );
 
-                                bannerUrlToSave = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
+                                bannerUrlToSave = Supabase.instance.client.storage
+                                    .from('coaching_assets')
+                                    .getPublicUrl(fileName);
                               }
 
-                              if (_coachingData != null) {
-                                await Supabase.instance.client.from('coachings').update({
-                                  'name': nameCtrl.text.trim(),
-                                  'banner_url': bannerUrlToSave,
-                                  'city': cityCtrl.text.trim(),
-                                  'contact_number': contactCtrl.text.trim(),
-                                }).eq('id', _coachingData!['id']);
+                              final payload = {
+                                'name': nameCtrl.text.trim().isEmpty ? widget.creatorHandle : nameCtrl.text.trim(),
+                                'owner_name': widget.creatorHandle,
+                                'banner_url': bannerUrlToSave,
+                                'district': selectedDistrict,
+                                'city': selectedCity,
+                                'landmark_address': landmarkCtrl.text.trim(),
+                                'contact_number': contactCtrl.text.trim(),
+                              };
+
+                              if (_coachingData != null && _coachingData!['id'] != null) {
+                                await Supabase.instance.client
+                                    .from('coachings')
+                                    .update(payload)
+                                    .eq('id', _coachingData!['id']);
                               } else {
-                                await Supabase.instance.client.from('coachings').insert({
-                                  'name': nameCtrl.text.trim(),
-                                  'owner_name': widget.creatorHandle,
-                                  'banner_url': bannerUrlToSave,
-                                  'city': cityCtrl.text.trim(),
-                                  'contact_number': contactCtrl.text.trim(),
-                                });
+                                await Supabase.instance.client
+                                    .from('coachings')
+                                    .insert(payload);
                               }
 
                               if (ctx.mounted) Navigator.pop(ctx);
-                              _loadCompleteAnalytics();
+                              await _loadCompleteAnalytics();
+
                               if (mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text('Institute branding updated successfully! 🚀'), backgroundColor: Color(0xFF16A34A)),
+                                  const SnackBar(
+                                    content: Text('✅ Institute profile & banner successfully saved!'),
+                                    backgroundColor: Color(0xFF16A34A),
+                                  ),
                                 );
                               }
                             } catch (e) {
                               setModalState(() => isSaving = false);
+                              if (ctx.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(content: Text('Save error: $e'), backgroundColor: Colors.redAccent),
+                                );
+                              }
                             }
                           },
                     child: isSaving
@@ -457,7 +598,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     );
   }
 
-  // Quiz / Handouts Creation Modal
+  // Creator Creation Modal (Daily Quiz & PDF Notes)
   void _openCreationModal(String type) {
     final textCtrl = TextEditingController();
     final linkCtrl = TextEditingController();
@@ -477,12 +618,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(
-            bottom: MediaQuery.of(ctx).viewInsets.bottom,
-            left: 16,
-            right: 16,
-            top: 16,
-          ),
+          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -710,7 +846,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             _buildActionCard(
               title: 'Customize Institute Page & Posters 🎨',
-              subtitle: 'Upload coaching banner from phone gallery, city, & WhatsApp.',
+              subtitle: 'Upload coaching banner from phone gallery, district, & WhatsApp.',
               icon: Icons.photo_library_outlined,
               color: const Color(0xFFEA580C),
               onTap: _openInstituteCustomizerModal,
