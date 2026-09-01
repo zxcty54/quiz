@@ -8,6 +8,7 @@ import '../../widgets/launch_roadmap_card.dart';
 import '../../widgets/pro_pdf_vault_card.dart';
 import '../../widgets/aspirant_checklist_card.dart';
 import '../../widgets/coaching_hub_card.dart';
+import '../../widgets/coaching_onboarding_cta_widget.dart'; // 👈 1. Added Import Here
 import '../sprint_challenge_screen.dart';
 
 class HomeTab extends StatefulWidget {
@@ -147,7 +148,13 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // 14. TELEGRAM COMMUNITY
+            // 🏫 14. SUBTLE COACHING & TEACHER ONBOARDING CTA (Added Here)
+            CoachingOnboardingCtaWidget(
+              isDarkMode: widget.isDarkMode,
+            ),
+            const SizedBox(height: 18),
+
+            // 15. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
           ],
         ),
