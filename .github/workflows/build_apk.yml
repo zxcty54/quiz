@@ -29,17 +29,17 @@ jobs:
       - name: Setup Android SDK, NDK & CMake
         uses: android-actions/setup-android@v3
 
-      - name: Install Android SDK Components (API 36 & 34)
+      - name: Install Android SDK Components
         run: |
-          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-36" "platforms;android-35" "platforms;android-34" "build-tools;36.0.0" "build-tools;34.0.0"
+          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-36" "platforms;android-34" "build-tools;36.0.0" "build-tools;34.0.0"
 
-      - name: Rebuild Android Template
+      - name: Rebuild Clean Android Scaffold
         working-directory: flutter_app
         run: |
           rm -rf android/app/src/main/java
           flutter create . --platforms=android --org com --project-name testing
 
-      - name: Set Android Project SDK Properties
+      - name: Setup Android Gradle Properties
         working-directory: flutter_app/android
         run: |
           cat << 'EOF' >> gradle.properties
@@ -147,51 +147,14 @@ jobs:
           }
           EOF
 
-      - name: Get Dependencies
-        working-directory: flutter_app
-        run: flutter pub get
-
-      - name: Inject Strict Dynamic Build Configuration
+      - name: Setup Android Build Dependencies
         working-directory: flutter_app
         run: |
+          flutter pub get
           python3 - << 'EOF'
           import os
-          import re
 
-          # 1. Pub Cache ke andar recursively sabhi plugin files ko patch karein
-          pub_cache_dir = os.path.expanduser("~/.pub-cache/hosted/pub.dev")
-          if os.path.exists(pub_cache_dir):
-              for root, _, files in os.walk(pub_cache_dir):
-                  for file in files:
-                      if file in ["build.gradle", "build.gradle.kts"]:
-                          filepath = os.path.join(root, file)
-                          try:
-                              with open(filepath, "r", encoding="utf-8") as f:
-                                  content = f.read()
-                              
-                              content = re.sub(r'compileSdk\s*=\s*\d+', 'compileSdk = 36', content)
-                              content = re.sub(r'compileSdkVersion\s*\(\s*\d+\s*\)', 'compileSdkVersion(36)', content)
-                              content = re.sub(r'compileSdkVersion\s+\d+', 'compileSdkVersion 36', content)
-                              content = re.sub(r'compileSdkVersion\s+flutter\.compileSdkVersion', 'compileSdkVersion 36', content)
-                              
-                              with open(filepath, "w", encoding="utf-8") as f:
-                                  f.write(content)
-                          except Exception:
-                              pass
-
-          # 2. Add string-based type-safe task handler in android/build.gradle.kts
-          root_build_kts = "android/build.gradle.kts"
-          if os.path.exists(root_build_kts):
-              with open(root_build_kts, "a") as f:
-                  f.write("""
-          allprojects {
-              tasks.matching { it.name.contains("AarMetadata") }.configureEach {
-                  enabled = false
-              }
-          }
-          """)
-
-          # 3. Configure App Level build.gradle.kts
+          # 1. Update android/app/build.gradle.kts (CompileSdk 36, Desugaring & MediaPipe)
           app_kts = "android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
@@ -213,6 +176,20 @@ jobs:
           """
               with open(app_kts, "w") as f:
                   f.write(content)
+
+          # 2. Update android/settings.gradle.kts to cleanly force compileSdk 36 on all subprojects
+          settings_kts = "android/settings.gradle.kts"
+          if os.path.exists(settings_kts):
+              with open(settings_kts, "a") as f:
+                  f.write("""
+          gradle.beforeProject {
+              if (plugins.hasPlugin("com.android.library") || plugins.hasPlugin("com.android.application")) {
+                  extensions.findByName("android")?.apply {
+                      setProperty("compileSdkVersion", 36)
+                  }
+              }
+          }
+          """)
           EOF
 
       - name: Setup Keystore & Permissions
@@ -231,24 +208,19 @@ jobs:
             -dname "CN=Android Debug,O=Android,C=US" \
             || true
 
-      - name: Build Flutter Assets
+      - name: Build Pure Release APK via Flutter Tooling
         working-directory: flutter_app
-        run: flutter build bundle
-
-      - name: Build Pure Offline Release APK via Gradle
-        working-directory: flutter_app/android
-        run: ./gradlew assembleRelease -PtargetPlatform=android-arm64
+        run: flutter build apk --release --target-platform=android-arm64
 
       - name: Locate & Package APK
         working-directory: flutter_app
         run: |
           mkdir -p build/app/outputs/flutter-apk
-          APK_FILE=$(find . -type f -name "*release*.apk" ! -name "*-unsigned.apk" | head -n 1)
+          APK_FILE=$(find build/app/outputs/flutter-apk -type f -name "*release*.apk" ! -name "*-unsigned.apk" | head -n 1)
           if [ -z "$APK_FILE" ]; then
             APK_FILE=$(find . -type f -name "*.apk" | head -n 1)
           fi
           echo "Found APK at: $APK_FILE"
-          cp "$APK_FILE" build/app/outputs/flutter-apk/app-release.apk
           cp "$APK_FILE" build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
           zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
 
@@ -256,7 +228,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: MockTester-Release-APK
-          path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
+          path: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
 
       - name: Send Zip File Direct To Telegram
         uses: appleboy/telegram-action@master
