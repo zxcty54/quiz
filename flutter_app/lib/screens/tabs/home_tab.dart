@@ -6,7 +6,8 @@ import '../../widgets/first_in_india_widget.dart';
 import '../../widgets/trust_hero_banner.dart';
 import '../../widgets/launch_roadmap_card.dart';
 import '../../widgets/pro_pdf_vault_card.dart';
-import '../../widgets/aspirant_checklist_card.dart'; // 👈 Onboarding Checklist Import
+import '../../widgets/aspirant_checklist_card.dart';
+import '../../widgets/coaching_hub_card.dart';
 import '../sprint_challenge_screen.dart';
 
 class HomeTab extends StatefulWidget {
@@ -44,7 +45,8 @@ class _HomeTabState extends State<HomeTab> {
   final GlobalKey<LatestJobsWidgetState> _jobsWidgetKey = GlobalKey<LatestJobsWidgetState>();
   final GlobalKey<DailyBulletinWidgetState> _bulletinWidgetKey = GlobalKey<DailyBulletinWidgetState>();
   final GlobalKey<FirstInIndiaWidgetState> _firstInIndiaWidgetKey = GlobalKey<FirstInIndiaWidgetState>();
-  final GlobalKey<AspirantChecklistCardState> _checklistKey = GlobalKey<AspirantChecklistCardState>(); // 👈 Checklist GlobalKey
+  final GlobalKey<AspirantChecklistCardState> _checklistKey = GlobalKey<AspirantChecklistCardState>();
+  final GlobalKey<CoachingHubCardState> _coachingHubKey = GlobalKey<CoachingHubCardState>();
 
   @override
   Widget build(BuildContext context) {
@@ -52,12 +54,12 @@ class _HomeTabState extends State<HomeTab> {
       color: const Color(0xFF4F46E5),
       backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
       onRefresh: () async {
-        // 🔄 REFRESH ALL LIVE WIDGETS + ONBOARDING CHECKLIST ON PULL
         await Future.wait<dynamic>([
           _bulletinWidgetKey.currentState?.fetchDailyBulletins(forceRefresh: true) ?? Future.value(),
           _jobsWidgetKey.currentState?.fetchLatestJobs() ?? Future.value(),
           _firstInIndiaWidgetKey.currentState?.fetchFirstInIndia(forceRefresh: true) ?? Future.value(),
-          _checklistKey.currentState?.loadChecklistStatus() ?? Future.value(), // 👈 Auto Re-fetch status
+          _checklistKey.currentState?.loadChecklistStatus() ?? Future.value(),
+          _coachingHubKey.currentState?.loadEnrolledBatchData() ?? Future.value(),
         ]);
       },
       child: SingleChildScrollView(
@@ -75,7 +77,7 @@ class _HomeTabState extends State<HomeTab> {
               const SizedBox(height: 16),
             ],
 
-            // 🚀 2. ASPIRANT ONBOARDING CHECKLIST CARD (Linked with GlobalKey)
+            // 🚀 2. ASPIRANT ONBOARDING CHECKLIST CARD
             AspirantChecklistCard(
               key: _checklistKey,
               isDarkMode: widget.isDarkMode,
@@ -84,34 +86,41 @@ class _HomeTabState extends State<HomeTab> {
 
             // 🛡️ 3. HERO TRUST BANNER WIDGET
             TrustHeroBannerWidget(isDarkMode: widget.isDarkMode),
+            const SizedBox(height: 16),
+
+            // 🏫 4. BIHAR COACHING & BATCH HUB (HERO BANNER KE NICHE)
+            CoachingHubCard(
+              key: _coachingHubKey,
+              isDarkMode: widget.isDarkMode,
+            ),
             const SizedBox(height: 18),
             
-            // 👨‍🏫 4. LEARN PREVIEW CARD
+            // 👨‍🏫 5. LEARN PREVIEW CARD
             _buildLearnPreviewCard(context),
             const SizedBox(height: 18),
 
-            // 📰 5. DAILY BULLETIN WIDGET
+            // 📰 6. DAILY BULLETIN WIDGET
             DailyBulletinWidget(
               key: _bulletinWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📢 6. LATEST JOBS WIDGET
+            // 📢 7. LATEST JOBS WIDGET
             LatestJobsWidget(
               key: _jobsWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 🏆 7. FIRST IN INDIA EXPRESS WIDGET
+            // 🏆 8. FIRST IN INDIA EXPRESS WIDGET
             FirstInIndiaWidget(
               key: _firstInIndiaWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📑 8. PRO STUDY MATERIAL & PDF VAULT CARD
+            // 📑 9. PRO STUDY MATERIAL & PDF VAULT CARD
             ProPdfVaultCard(
               isDarkMode: widget.isDarkMode,
               customWebsiteUrl: widget.appConfig['pdf_vault_main_url'],
@@ -119,26 +128,26 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // ⚔️ 9. SPEED RUN DUEL CARD
+            // ⚔️ 10. SPEED RUN DUEL CARD
             _buildSpeedRunChallengeCard(context),
             const SizedBox(height: 18),
 
-            // 🌐 10. DYNAMIC WEB HUB
+            // 🌐 11. DYNAMIC WEB HUB
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 18),
 
-            // 11. ELIGIBILITY CHECKER
+            // 12. ELIGIBILITY CHECKER
             EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
             const SizedBox(height: 18),
 
-            // 📅 12. LAUNCH ROADMAP WIDGET
+            // 📅 13. LAUNCH ROADMAP WIDGET
             LaunchRoadmapCardWidget(
               appConfig: widget.appConfig,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 13. TELEGRAM COMMUNITY
+            // 14. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
           ],
         ),
