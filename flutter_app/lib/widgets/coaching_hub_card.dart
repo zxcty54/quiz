@@ -75,7 +75,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
           children: [
             Icon(Icons.vpn_key_rounded, color: Color(0xFF2563EB), size: 22),
             SizedBox(width: 8),
-            Text('Join Classroom Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
+            Text('Join Batch via Code', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ],
         ),
         content: Column(
@@ -83,7 +83,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Enter the Batch Code shared by your Coaching / Teacher:',
+              'Apne coaching ya teacher dwara diya gaya private batch code enter karein:',
               style: TextStyle(fontSize: 12, color: Colors.grey),
             ),
             const SizedBox(height: 12),
@@ -127,7 +127,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                   if (mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
-                        content: Text('🎉 Successfully Enrolled in "${batch['batch_name']}"!'),
+                        content: Text('🎉 Verified! Enrolled in "${batch['batch_name']}"'),
                         backgroundColor: const Color(0xFF16A34A),
                       ),
                     );
@@ -135,13 +135,13 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                 } else {
                   if (mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Invalid Batch Code! Please verify with your coaching.')),
+                      const SnackBar(content: Text('Invalid Batch Code! Teacher se code verify karein.')),
                     );
                   }
                 }
               } catch (_) {}
             },
-            child: const Text('Enroll Now 🚀'),
+            child: const Text('Join Batch 🚀'),
           ),
         ],
       ),
@@ -155,7 +155,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
 
     if (_isLoading) return const SizedBox.shrink();
 
-    // 🎓 STATE A: ENROLLED IN A COACHING BATCH
+    // 🎓 STATE A: Jab user kisi Batch me enrolled ho chuka ho
     if (_enrolledBatchCode != null) {
       return Container(
         width: double.infinity,
@@ -232,7 +232,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                   ),
                   const SizedBox(height: 3),
                   Text(
-                    '$_enrolledBatchName • 📍 $_coachingCity • $_availableMocksCount Scheduled CBT Mocks',
+                    '$_enrolledBatchName • 📍 $_coachingCity • $_availableMocksCount CBT Mocks',
                     style: TextStyle(fontSize: 12, color: isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600),
                   ),
                   const SizedBox(height: 14),
@@ -263,7 +263,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                         children: [
                           Icon(Icons.bolt_rounded, size: 18),
                           SizedBox(width: 6),
-                          Text('Open Classroom & Live Mocks 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
+                          Text('Open Batch Tests & Notes 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
                         ],
                       ),
                     ),
@@ -276,7 +276,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
       );
     }
 
-    // 🏫 STATE B: FIRST IMPRESSION HERO GATEWAY (DEFAULT / NOT ENROLLED)
+    // 🔍 STATE B: DISCOVERY-FIRST PORTAL (Find Coaching, Teachers & Mocks)
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
@@ -297,7 +297,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🎨 Top Gradient Header
+          // 🎨 Header: Discovery Banner
           Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
@@ -319,7 +319,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                     color: Colors.white.withOpacity(0.18),
                     shape: BoxShape.circle,
                   ),
-                  child: const Icon(Icons.apartment_rounded, color: Colors.white, size: 22),
+                  child: const Icon(Icons.travel_explore_rounded, color: Colors.white, size: 22),
                 ),
                 const SizedBox(width: 12),
                 Expanded(
@@ -329,7 +329,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                       Row(
                         children: [
                           const Text(
-                            'Bihar Institutes & Batches',
+                            'Discover Bihar Coaching Hubs',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w900,
@@ -345,7 +345,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                               borderRadius: BorderRadius.circular(6),
                             ),
                             child: const Text(
-                              'DIGITAL HUB',
+                              'EXPLORE',
                               style: TextStyle(color: Color(0xFF0F172A), fontSize: 9, fontWeight: FontWeight.w900),
                             ),
                           ),
@@ -353,8 +353,8 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        'Patna, Gaya, Ara ke top offline coachings ka digital access',
-                        style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 11),
+                        'Apne city ke offline coachings, top mentors aur mocks khojein',
+                        style: TextStyle(color: Colors.white.withOpacity(0.88), fontSize: 11),
                       ),
                     ],
                   ),
@@ -363,26 +363,26 @@ class CoachingHubCardState extends State<CoachingHubCard> {
             ),
           ),
 
-          // 📋 Body Content: Feature Points + CTA Actions
+          // 📋 Content: 3-Point Filter Highlights & Actions
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 3-Point Value Row
+                // 3 Highlights Chips
                 Row(
                   children: [
-                    _buildFeatureChip('🏛️ 38 Districts', isDark),
+                    _buildFeatureChip('📍 38 Districts', isDark),
                     const SizedBox(width: 6),
-                    _buildFeatureChip('📝 Private CBT Mocks', isDark),
+                    _buildFeatureChip('👨‍🏫 Top Mentors', isDark),
                     const SizedBox(width: 6),
-                    _buildFeatureChip('📊 State Ranks', isDark),
+                    _buildFeatureChip('📝 Batch CBT Tests', isDark),
                   ],
                 ),
                 const SizedBox(height: 14),
 
                 Text(
-                  'Apne offline teacher ka batch join karein ya Bihar ke verified coaching institutes ke private tests attend karein.',
+                  'Patna, Gaya, Ara, Muzaffarpur ya apne district ke coaching centers dhundhein, study material access karein aur test series join karein.',
                   style: TextStyle(
                     fontSize: 12,
                     color: isDark ? const Color(0xFF94A3B8) : Colors.grey.shade700,
@@ -391,14 +391,14 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                 ),
                 const SizedBox(height: 14),
 
-                // 🚀 Two-Action Buttons (High Contrast & Clear Purpose)
+                // Action Buttons
                 Row(
                   children: [
                     Expanded(
                       flex: 6,
                       child: ElevatedButton.icon(
-                        icon: const Icon(Icons.explore_outlined, size: 16),
-                        label: const Text('Explore Centers', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
+                        icon: const Icon(Icons.location_city_rounded, size: 16),
+                        label: const Text('Discover Centers 🔍', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF2563EB),
                           foregroundColor: Colors.white,
@@ -421,7 +421,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                       flex: 5,
                       child: OutlinedButton.icon(
                         icon: const Icon(Icons.vpn_key_rounded, size: 15),
-                        label: const Text('Join Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
+                        label: const Text('Have Code?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
                         style: OutlinedButton.styleFrom(
                           foregroundColor: const Color(0xFF2563EB),
                           side: const BorderSide(color: Color(0xFF2563EB), width: 1.3),
