@@ -29,9 +29,9 @@ jobs:
       - name: Setup Android SDK, NDK & CMake
         uses: android-actions/setup-android@v3
 
-      - name: Install Android SDK Components
+      - name: Install Android SDK Components (API 36 & 34)
         run: |
-          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-34" "build-tools;34.0.0"
+          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-36" "platforms;android-34" "build-tools;36.0.0" "build-tools;34.0.0"
 
       - name: Rebuild Android Template
         working-directory: flutter_app
@@ -108,63 +108,72 @@ jobs:
         working-directory: flutter_app
         run: flutter pub get
 
-      - name: Inject Desugaring & MediaPipe into Gradle DSL
+      - name: Force CompileSDK 36, Desugaring & MediaPipe
         run: |
           python3 - << 'EOF'
           import os
 
+          # 1. Force subprojects to compileSdk 36 (Handles both .gradle and .gradle.kts)
+          root_gradle_kts = "flutter_app/android/build.gradle.kts"
           root_gradle = "flutter_app/android/build.gradle"
-          if os.path.exists(root_gradle):
-              with open(root_gradle, "r") as f:
-                  content = f.read()
-              override_block = """
-          allprojects {
-              repositories {
-                  google()
-                  mavenCentral()
+
+          override_block_kts = """
+          subprojects {
+              afterEvaluate {
+                  project.extensions.findByType<com.android.build.gradle.BaseExtension>()?.apply {
+                      compileSdkVersion(36)
+                  }
               }
           }
+          """
+          override_block_groovy = """
           subprojects {
               afterEvaluate { project ->
                   if (project.hasProperty('android')) {
                       project.android {
-                          compileSdkVersion 34
-                          defaultConfig {
-                              targetSdkVersion 34
-                          }
+                          compileSdkVersion 36
                       }
                   }
               }
           }
           """
-              if "subprojects {" not in content:
-                  content += override_block
-                  with open(root_gradle, "w") as f:
-                      f.write(content)
 
+          if os.path.exists(root_gradle_kts):
+              with open(root_gradle_kts, "a") as f:
+                  f.write(override_block_kts)
+          elif os.path.exists(root_gradle):
+              with open(root_gradle, "a") as f:
+                  f.write(override_block_groovy)
+
+          # 2. Configure App Level build.gradle.kts
           app_kts = "flutter_app/android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
                   content = f.read()
+              
+              content = content.replace("compileSdk = flutter.compileSdkVersion", "compileSdk = 36")
               if "isCoreLibraryDesugaringEnabled" not in content:
                   if "compileOptions {" in content:
                       content = content.replace("compileOptions {", "compileOptions {\n        isCoreLibraryDesugaringEnabled = true")
                   else:
                       content = content.replace("android {", "android {\n    compileOptions {\n        isCoreLibraryDesugaringEnabled = true\n    }")
-              if "desugar_jdk_libs" not in content:
+              
+              if "tasks-genai" not in content:
                   content += """
           dependencies {
-              coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
+              coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
               implementation("com.google.mediapipe:tasks-genai:0.10.14")
           }
           """
               with open(app_kts, "w") as f:
                   f.write(content)
 
+          # 3. Configure App Level build.gradle (Groovy fallback)
           app_groovy = "flutter_app/android/app/build.gradle"
           if os.path.exists(app_groovy):
               with open(app_groovy, "r") as f:
                   content = f.read()
+              content = content.replace("compileSdkVersion flutter.compileSdkVersion", "compileSdkVersion 36")
               if "coreLibraryDesugaringEnabled" not in content:
                   if "compileOptions {" in content:
                       content = content.replace("compileOptions {", "compileOptions {\n        coreLibraryDesugaringEnabled true")
@@ -173,7 +182,7 @@ jobs:
               if "tasks-genai" not in content:
                   content += """
           dependencies {
-              coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"
+              coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.4"
               implementation 'com.google.mediapipe:tasks-genai:0.10.14'
           }
           """
