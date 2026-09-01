@@ -31,24 +31,25 @@ jobs:
 
       - name: Install Android SDK Components
         run: |
-          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-36" "platforms;android-34" "build-tools;36.0.0" "build-tools;34.0.0"
+          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-36" "platforms;android-35" "platforms;android-34" "build-tools;36.0.0" "build-tools;34.0.0"
 
-      - name: Clean & Force Android V2 Embedding
+      - name: Clean & Force Android Scaffold
         working-directory: flutter_app
         run: |
           rm -rf android/app/src/main/java
           flutter create . --platforms=android --org com --project-name testing
 
-      - name: Setup Android Gradle Properties
+      - name: Configure Global Gradle Properties & Disable SDK Checks
         working-directory: flutter_app/android
         run: |
           cat << 'EOF' >> gradle.properties
           android.useAndroidX=true
           android.enableJetifier=false
-          android.suppressUnsupportedCompileSdk=36
+          android.suppressUnsupportedCompileSdk=36,Baklava
+          android.experimental.disableCompileSdkChecks=true
           EOF
 
-      - name: Inject MediaPipe MainActivity.kt & Manifest V2 Embedding
+      - name: Inject MediaPipe MainActivity.kt
         run: |
           mkdir -p flutter_app/android/app/src/main/kotlin/com/testing
           cat << 'EOF' > flutter_app/android/app/src/main/kotlin/com/testing/MainActivity.kt
@@ -147,25 +148,14 @@ jobs:
           }
           EOF
 
-      - name: Setup Dependencies & Patch Manifest/Gradle
+      - name: Setup Dependencies & Build Configuration
         working-directory: flutter_app
         run: |
           flutter pub get
           python3 - << 'EOF'
           import os
 
-          # 1. Ensure AndroidManifest.xml has Flutter embedding v2 meta-data
-          manifest_path = "android/app/src/main/AndroidManifest.xml"
-          if os.path.exists(manifest_path):
-              with open(manifest_path, "r") as f:
-                  m_content = f.read()
-              if "flutterEmbedding" not in m_content:
-                  v2_meta = '\n        <meta-data android:name="flutterEmbedding" android:value="2" />\n    </application>'
-                  m_content = m_content.replace('</application>', v2_meta)
-                  with open(manifest_path, "w") as f:
-                      f.write(m_content)
-
-          # 2. Update android/app/build.gradle.kts
+          # 1. Update android/app/build.gradle.kts
           app_kts = "android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
@@ -187,6 +177,24 @@ jobs:
           """
               with open(app_kts, "w") as f:
                   f.write(content)
+
+          # 2. Add buildscript allprojects hook in settings.gradle.kts
+          settings_kts = "android/settings.gradle.kts"
+          if os.path.exists(settings_kts):
+              with open(settings_kts, "a") as f:
+                  f.write("""
+          gradle.beforeProject {
+              project.plugins.whenPluginAdded {
+                  if (this.class.name.contains("com.android.build.gradle")) {
+                      project.extensions.findByName("android")?.with {
+                          try {
+                              setProperty("compileSdkVersion", 36)
+                          } catch (ignored: Exception) {}
+                      }
+                  }
+              }
+          }
+          """)
           EOF
 
       - name: Setup Keystore & Permissions
@@ -205,9 +213,9 @@ jobs:
             -dname "CN=Android Debug,O=Android,C=US" \
             || true
 
-      - name: Build Pure Release APK via Gradle Wrapper
+      - name: Build Pure Offline Release APK via Gradle
         working-directory: flutter_app/android
-        run: ./gradlew assembleRelease -PtargetPlatform=android-arm64 -Pflutter-embedding-version=2
+        run: ./gradlew assembleRelease -PtargetPlatform=android-arm64
 
       - name: Locate & Package APK
         working-directory: flutter_app
@@ -218,6 +226,7 @@ jobs:
             APK_FILE=$(find . -type f -name "*.apk" | head -n 1)
           fi
           echo "Found APK at: $APK_FILE"
+          cp "$APK_FILE" build/app/outputs/flutter-apk/app-release.apk
           cp "$APK_FILE" build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
           zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
 
@@ -225,7 +234,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: MockTester-Release-APK
-          path: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
+          path: flutter_app/build/app/outputs/flutter-apk/app-release.apk
 
       - name: Send Zip File Direct To Telegram
         uses: appleboy/telegram-action@master
