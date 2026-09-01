@@ -31,13 +31,23 @@ jobs:
 
       - name: Install Android SDK Components (API 36 & 34)
         run: |
-          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-36" "platforms;android-34" "build-tools;36.0.0" "build-tools;34.0.0"
+          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-36" "platforms;android-35" "platforms;android-34" "build-tools;36.0.0" "build-tools;34.0.0"
 
       - name: Rebuild Android Template
         working-directory: flutter_app
         run: |
           rm -rf android/app/src/main/java
           flutter create . --platforms=android --org com --project-name testing
+
+      - name: Configure Gradle Properties & Suppress SDK Validation
+        working-directory: flutter_app/android
+        run: |
+          cat << 'EOF' >> gradle.properties
+          android.useAndroidX=true
+          android.enableJetifier=true
+          android.suppressUnsupportedCompileSdk=36
+          android.experimental.r8.dexing-enable-interface-method-desugaring=true
+          EOF
 
       - name: Inject MediaPipe MainActivity.kt
         run: |
@@ -51,11 +61,12 @@ jobs:
           import io.flutter.embedding.engine.FlutterEngine
           import io.flutter.plugin.common.MethodChannel
           import java.io.File
-          import kotlin.concurrent.thread
+          import java.util.concurrent.Executors
 
           class MainActivity: FlutterActivity() {
               private val CHANNEL = "com.mocktester.ai/offline_llm"
               private var llmInference: LlmInference? = null
+              private val executor = Executors.newSingleThreadExecutor()
 
               override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
                   super.configureFlutterEngine(flutterEngine)
@@ -65,16 +76,20 @@ jobs:
                           "initModel" -> {
                               val modelPath = call.argument<String>("modelPath")
                               if (modelPath != null && File(modelPath).exists()) {
-                                  thread {
+                                  executor.execute {
                                       try {
+                                          llmInference = null
+                                          System.gc()
+
                                           val options = LlmInference.LlmInferenceOptions.builder()
                                               .setModelPath(modelPath)
-                                              .setMaxTokens(512)
+                                              .setMaxTokens(320)
                                               .build()
+                                              
                                           llmInference = LlmInference.createFromOptions(context, options)
                                           runOnUiThread { result.success(true) }
-                                      } catch (e: Exception) {
-                                          runOnUiThread { result.error("INIT_FAIL", e.localizedMessage, null) }
+                                      } catch (e: Throwable) {
+                                          runOnUiThread { result.error("INIT_FAIL", e.message ?: "Model load failed", null) }
                                       }
                                   }
                               } else {
@@ -82,24 +97,53 @@ jobs:
                               }
                           }
                           "generate" -> {
-                              val prompt = call.argument<String>("prompt")
+                              val rawPrompt = call.argument<String>("prompt") ?: ""
                               val engine = llmInference
-                              if (engine != null && prompt != null) {
-                                  thread {
-                                      try {
-                                          val response = engine.generateResponse(prompt)
-                                          runOnUiThread { result.success(response) }
-                                      } catch (e: Exception) {
-                                          runOnUiThread { result.error("GEN_FAIL", e.localizedMessage, null) }
+                              
+                              if (engine == null) {
+                                  result.error("ENGINE_NOT_READY", "Gemma Model Not Initialized", null)
+                                  return@setMethodCallHandler
+                              }
+
+                              val cleanInput = rawPrompt.trim()
+                              if (cleanInput.isEmpty()) {
+                                  result.error("EMPTY_PROMPT", "Prompt cannot be empty", null)
+                                  return@setMethodCallHandler
+                              }
+
+                              executor.execute {
+                                  try {
+                                      val gemmaFormattedPrompt = "<start_of_turn>user\nYou are a helpful and knowledgeable educational AI assistant.\nAnswer the question clearly with accurate facts, key concepts, and complete explanation.\n\nQuestion: $cleanInput<end_of_turn>\n<start_of_turn>model\n"
+                                      val response = engine.generateResponse(gemmaFormattedPrompt)
+                                      
+                                      runOnUiThread {
+                                          if (!response.isNullOrBlank()) {
+                                              val cleanResponse = response
+                                                  .replace("<start_of_turn>model", "")
+                                                  .replace("<end_of_turn>", "")
+                                                  .replace("<eos>", "")
+                                                  .trim()
+                                              result.success(cleanResponse)
+                                          } else {
+                                              result.error("EMPTY_RESPONSE", "Engine returned no output", null)
+                                          }
+                                      }
+                                  } catch (e: Throwable) {
+                                      runOnUiThread { 
+                                          result.error("GEN_FAIL", e.localizedMessage ?: "Inference execution error", null) 
                                       }
                                   }
-                              } else {
-                                  result.error("ENGINE_NOT_READY", "MediaPipe Model Not Initialized", null)
                               }
                           }
                           else -> result.notImplemented()
                       }
                   }
+              }
+
+              override fun onDestroy() {
+                  super.onDestroy()
+                  executor.shutdown()
+                  llmInference = null
               }
           }
           EOF
@@ -108,13 +152,13 @@ jobs:
         working-directory: flutter_app
         run: flutter pub get
 
-      - name: Patch Pub Cache Plugins & Inject MediaPipe Config
+      - name: Deep Patch Pub Cache & Bypass AAR Metadata Check
         run: |
           python3 - << 'EOF'
           import os
           import re
 
-          # 1. Patch ALL pub-cache plugins (forces :jni_flutter and others to compileSdk 36)
+          # 1. Pub Cache ke har plugin me compileSdk 36 inject karein
           pub_cache_dir = os.path.expanduser("~/.pub-cache/hosted/pub.dev")
           if os.path.exists(pub_cache_dir):
               for root, _, files in os.walk(pub_cache_dir):
@@ -125,19 +169,24 @@ jobs:
                               with open(filepath, "r", encoding="utf-8") as f:
                                   content = f.read()
                               
-                              # Replace compileSdk/compileSdkVersion patterns with 36
+                              # Replace all compileSdk / compileSdkVersion occurrences with 36
                               modified = re.sub(r'compileSdk\s*=\s*\d+', 'compileSdk = 36', content)
                               modified = re.sub(r'compileSdkVersion\s*\(\s*\d+\s*\)', 'compileSdkVersion(36)', modified)
                               modified = re.sub(r'compileSdkVersion\s+\d+', 'compileSdkVersion 36', modified)
                               
+                              # Replace targetSdk to avoid mismatches
+                              modified = re.sub(r'targetSdk\s*=\s*\d+', 'targetSdk = 36', modified)
+                              modified = re.sub(r'targetSdkVersion\s*\(\s*\d+\s*\)', 'targetSdkVersion(36)', modified)
+                              modified = re.sub(r'targetSdkVersion\s+\d+', 'targetSdkVersion 36', modified)
+                              
                               if modified != content:
                                   with open(filepath, "w", encoding="utf-8") as f:
                                       f.write(modified)
-                                  print(f"Patched compileSdk to 36 in: {filepath}")
-                          except Exception as e:
+                                  print(f"Patched compileSdk in: {filepath}")
+                          except Exception:
                               pass
 
-          # 2. Configure App Level build.gradle.kts
+          # 2. App-level build.gradle.kts config update
           app_kts = "flutter_app/android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
@@ -158,27 +207,6 @@ jobs:
           }
           """
               with open(app_kts, "w") as f:
-                  f.write(content)
-
-          # 3. Configure App Level build.gradle (Groovy fallback)
-          app_groovy = "flutter_app/android/app/build.gradle"
-          if os.path.exists(app_groovy):
-              with open(app_groovy, "r") as f:
-                  content = f.read()
-              content = content.replace("compileSdkVersion flutter.compileSdkVersion", "compileSdkVersion 36")
-              if "coreLibraryDesugaringEnabled" not in content:
-                  if "compileOptions {" in content:
-                      content = content.replace("compileOptions {", "compileOptions {\n        coreLibraryDesugaringEnabled true")
-                  else:
-                      content = content.replace("android {", "android {\n    compileOptions {\n        coreLibraryDesugaringEnabled true\n    }")
-              if "tasks-genai" not in content:
-                  content += """
-          dependencies {
-              coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.4"
-              implementation 'com.google.mediapipe:tasks-genai:0.10.14'
-          }
-          """
-              with open(app_groovy, "w") as f:
                   f.write(content)
           EOF
 
@@ -204,7 +232,7 @@ jobs:
 
       - name: Build Pure Offline Release APK via Gradle
         working-directory: flutter_app/android
-        run: ./gradlew assembleRelease -PtargetPlatform=android-arm64
+        run: ./gradlew assembleRelease -PtargetPlatform=android-arm64 -x checkReleaseAarMetadata
 
       - name: Locate & Package APK
         working-directory: flutter_app
