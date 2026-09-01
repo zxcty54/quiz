@@ -6,7 +6,6 @@ class AdminTelegramAlert {
   static const String _botToken = '1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo';
   static const String _adminChatId = '785009742';
 
-  /// HTML Special Character Sanitizer (Prevents Telegram parse errors)
   static String _escapeHtml(String text) {
     return text
         .replaceAll('&', '&amp;')
@@ -14,31 +13,34 @@ class AdminTelegramAlert {
         .replaceAll('>', '&gt;');
   }
 
-  /// 🏛️ Send New Coaching / Creator Onboarding Request with PIN
+  /// 🏛️ Send Coaching Registration Request With Image, Title, Address & PIN
   static Future<bool> sendCreatorApprovalRequest({
     required String name,
     required String handle,
+    required String address,
     required String specialty,
     required String generatedPin,
+    String? imageUrl,
   }) async {
     try {
       final safeName = _escapeHtml(name);
       final safeHandle = _escapeHtml(handle);
+      final safeAddress = _escapeHtml(address);
       final safeSpecialty = _escapeHtml(specialty);
 
-      final String message = '''
-🏛️ <b>NEW COACHING / CREATOR ONBOARDING REQUEST</b>
+      final String caption = '''
+🏛️ <b>NEW COACHING ONBOARDING REQUEST</b>
 ━━━━━━━━━━━━━━━━━━━━
-👤 <b>Institute / Director:</b> $safeName
+🏢 <b>Coaching Title:</b> $safeName
+📍 <b>Address:</b> $safeAddress
 🆔 <b>Handle:</b> @$safeHandle
-📚 <b>Specialty:</b> $safeSpecialty
+📚 <b>Target Domain:</b> $safeSpecialty
 🔑 <b>Generated PIN:</b> <code>$generatedPin</code>
 🕒 <b>Time:</b> ${DateTime.now().toLocal().toString().split('.')[0]}
 ━━━━━━━━━━━━━━━━━━━━
-<i>Status: Pending Admin approval & verification...</i>
+<i>Status: Awaiting Verification & Approval...</i>
 ''';
 
-      // 🔘 Interactive Buttons for Admin Approval
       final inlineKeyboard = {
         'inline_keyboard': [
           [
@@ -48,27 +50,45 @@ class AdminTelegramAlert {
         ]
       };
 
-      final uri = Uri.parse('https://api.telegram.org/bot$_botToken/sendMessage');
-      final res = await http.post(
-        uri,
-        headers: {'Content-Type': 'application/json'},
-        body: jsonEncode({
-          'chat_id': _adminChatId,
-          'text': message,
-          'parse_mode': 'HTML',
-          'reply_markup': inlineKeyboard,
-        }),
-      ).timeout(const Duration(seconds: 8));
+      http.Response res;
 
-      debugPrint("Telegram Creator Alert Response: ${res.statusCode} | ${res.body}");
+      // Agar image maujood hai toh sendPhoto chalega, warna sendMessage
+      if (imageUrl != null && imageUrl.isNotEmpty) {
+        final uri = Uri.parse('https://api.telegram.org/bot$_botToken/sendPhoto');
+        res = await http.post(
+          uri,
+          headers: {'Content-Type': 'application/json'},
+          body: jsonEncode({
+            'chat_id': _adminChatId,
+            'photo': imageUrl,
+            'caption': caption,
+            'parse_mode': 'HTML',
+            'reply_markup': inlineKeyboard,
+          }),
+        ).timeout(const Duration(seconds: 10));
+      } else {
+        final uri = Uri.parse('https://api.telegram.org/bot$_botToken/sendMessage');
+        res = await http.post(
+          uri,
+          headers: {'Content-Type': 'application/json'},
+          body: jsonEncode({
+            'chat_id': _adminChatId,
+            'text': caption,
+            'parse_mode': 'HTML',
+            'reply_markup': inlineKeyboard,
+          }),
+        ).timeout(const Duration(seconds: 8));
+      }
+
+      debugPrint("Telegram Alert Status: ${res.statusCode}");
       return res.statusCode == 200;
     } catch (e) {
-      debugPrint("❌ Telegram Creator Alert Error: $e");
+      debugPrint("❌ Telegram Alert Error: $e");
       return false;
     }
   }
 
-  /// 🚀 Send Interactive Post Approval Card to Telegram with Action Buttons
+  /// Interactive Post Approval Card
   static Future<bool> sendForInteractiveApproval({
     required int postId,
     required String authorName,
@@ -100,7 +120,6 @@ class AdminTelegramAlert {
 ⏳ <i>Status: Awaiting Moderator decision...</i>
 ''';
 
-      // 🔘 Interactive Inline Buttons for 1-Tap Control
       final inlineKeyboard = {
         'inline_keyboard': [
           [
@@ -122,32 +141,10 @@ class AdminTelegramAlert {
         }),
       ).timeout(const Duration(seconds: 8));
 
-      debugPrint("Telegram Interactive Alert Response: ${res.statusCode} | ${res.body}");
       return res.statusCode == 200;
     } catch (e) {
       debugPrint("❌ Telegram Alert Error: $e");
       return false;
     }
-  }
-
-  /// Backward compatible alias
-  static Future<bool> notifyNewPost({
-    required int postId,
-    required String authorName,
-    required String authorHandle,
-    required String tag,
-    required String content,
-    String? imageUrl,
-    bool hasPoll = false,
-  }) {
-    return sendForInteractiveApproval(
-      postId: postId,
-      authorName: authorName,
-      authorHandle: authorHandle,
-      tag: tag,
-      content: content,
-      imageUrl: imageUrl,
-      hasPoll: hasPoll,
-    );
   }
 }
