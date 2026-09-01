@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../services/admin_telegram_alert.dart';
-import '../utils/bihar_location_data.dart'; // 🗺️ Bihar location dataset
+import '../utils/bihar_location_data.dart';
 import 'creator_mock_builder_screen.dart';
 import 'creator_profile_screen.dart';
 
@@ -136,10 +136,112 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     }
   }
 
-  // 🏫 Complete Batch Manager (List, Delete, Copy Code & Create)
+  // 📝 Batch Edit & Status Dialog
+  void _openEditBatchDialog(Map<String, dynamic> batch) {
+    final nameCtrl = TextEditingController(text: batch['batch_name'] ?? '');
+    final codeCtrl = TextEditingController(text: batch['batch_code'] ?? '');
+    String status = batch['status'] ?? 'LIVE';
+    bool isSaving = false;
+
+    showDialog(
+      context: context,
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setDialogState) => AlertDialog(
+          backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          title: const Row(
+            children: [
+              Icon(Icons.edit_calendar_rounded, color: Color(0xFF2563EB), size: 22),
+              SizedBox(width: 8),
+              Text('Modify Batch Details', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+            ],
+          ),
+          content: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                TextField(
+                  controller: nameCtrl,
+                  decoration: const InputDecoration(labelText: 'Batch Name', border: OutlineInputBorder(), isDense: true),
+                ),
+                const SizedBox(height: 10),
+                TextField(
+                  controller: codeCtrl,
+                  textCapitalization: TextCapitalization.characters,
+                  decoration: const InputDecoration(labelText: 'Batch Code', border: OutlineInputBorder(), isDense: true),
+                ),
+                const SizedBox(height: 14),
+                const Text('Batch Visibility & Status:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
+                const SizedBox(height: 6),
+                Wrap(
+                  spacing: 6,
+                  children: [
+                    ChoiceChip(
+                      label: const Text('🟢 Live Batch'),
+                      selected: status == 'LIVE',
+                      selectedColor: const Color(0xFF16A34A).withOpacity(0.2),
+                      labelStyle: TextStyle(color: status == 'LIVE' ? const Color(0xFF16A34A) : Colors.grey, fontWeight: FontWeight.bold),
+                      onSelected: (v) => setDialogState(() => status = 'LIVE'),
+                    ),
+                    ChoiceChip(
+                      label: const Text('⏳ Upcoming'),
+                      selected: status == 'UPCOMING',
+                      selectedColor: Colors.amber.withOpacity(0.25),
+                      labelStyle: TextStyle(color: status == 'UPCOMING' ? Colors.amber.shade800 : Colors.grey, fontWeight: FontWeight.bold),
+                      onSelected: (v) => setDialogState(() => status = 'UPCOMING'),
+                    ),
+                    ChoiceChip(
+                      label: const Text('⚪ Hide / Grey'),
+                      selected: status == 'HIDDEN',
+                      selectedColor: Colors.grey.withOpacity(0.25),
+                      labelStyle: TextStyle(color: status == 'HIDDEN' ? Colors.black87 : Colors.grey, fontWeight: FontWeight.bold),
+                      onSelected: (v) => setDialogState(() => status = 'HIDDEN'),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+              onPressed: isSaving
+                  ? null
+                  : () async {
+                      setDialogState(() => isSaving = true);
+                      try {
+                        await Supabase.instance.client.from('batches').update({
+                          'batch_name': nameCtrl.text.trim(),
+                          'batch_code': codeCtrl.text.trim().toUpperCase(),
+                          'status': status,
+                        }).eq('id', batch['id']);
+
+                        if (ctx.mounted) Navigator.pop(ctx);
+                        _loadCompleteAnalytics();
+                        if (mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(content: Text('✅ Batch updated successfully!'), backgroundColor: Color(0xFF16A34A)),
+                          );
+                        }
+                      } catch (e) {
+                        setDialogState(() => isSaving = false);
+                      }
+                    },
+              child: const Text('Save Changes 🚀'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // 🏫 Complete Batch Manager Modal (Live, Upcoming, Hide & Edit)
   void _openBatchManagerModal() {
     final batchNameCtrl = TextEditingController();
     final batchCodeCtrl = TextEditingController();
+    String newBatchStatus = 'LIVE';
     bool isCreating = false;
 
     showModalBottomSheet(
@@ -163,7 +265,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('🏫 Manage Coaching Batches', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                    const Text('🏫 Manage & Modify Batches', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
@@ -172,93 +274,147 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 if (_batches.isEmpty)
                   Container(
                     width: double.infinity,
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(color: Colors.grey.withOpacity(0.08), borderRadius: BorderRadius.circular(10)),
-                    child: const Center(child: Text('No batches created yet. Add your first batch below!', style: TextStyle(fontSize: 12))),
+                    padding: const EdgeInsets.all(14),
+                    decoration: BoxDecoration(color: Colors.grey.withOpacity(0.08), borderRadius: BorderRadius.circular(12)),
+                    child: const Center(child: Text('No batches found. Create your first batch below!', style: TextStyle(fontSize: 12.5))),
                   )
                 else
                   ...List.generate(_batches.length, (idx) {
                     final b = _batches[idx];
                     final List tests = b['batch_tests'] ?? [];
-                    return Container(
-                      margin: const EdgeInsets.only(bottom: 8),
-                      padding: const EdgeInsets.all(12),
-                      decoration: BoxDecoration(
-                        color: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: Colors.grey.withOpacity(0.18)),
-                      ),
-                      child: Row(
-                        children: [
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(b['batch_name'] ?? 'Class Batch', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-                                const SizedBox(height: 2),
-                                Row(
-                                  children: [
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                      decoration: BoxDecoration(color: const Color(0xFF16A34A).withOpacity(0.15), borderRadius: BorderRadius.circular(4)),
-                                      child: Text('CODE: ${b['batch_code']}', style: const TextStyle(color: Color(0xFF16A34A), fontWeight: FontWeight.bold, fontSize: 11)),
-                                    ),
-                                    const SizedBox(width: 8),
-                                    Text('${tests.length} CBT Tests', style: const TextStyle(fontSize: 11, color: Colors.grey)),
-                                  ],
-                                ),
-                              ],
+                    final String bStatus = b['status'] ?? 'LIVE';
+                    final bool isHidden = bStatus == 'HIDDEN';
+
+                    Color statusColor = const Color(0xFF16A34A);
+                    String statusLabel = 'LIVE';
+                    if (bStatus == 'UPCOMING') {
+                      statusColor = Colors.amber.shade800;
+                      statusLabel = 'UPCOMING';
+                    } else if (isHidden) {
+                      statusColor = Colors.grey;
+                      statusLabel = 'HIDDEN / GREY';
+                    }
+
+                    return Opacity(
+                      opacity: isHidden ? 0.6 : 1.0,
+                      child: Container(
+                        margin: const EdgeInsets.only(bottom: 8),
+                        padding: const EdgeInsets.all(12),
+                        decoration: BoxDecoration(
+                          color: isHidden ? Colors.grey.withOpacity(0.1) : (widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC)),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(color: Colors.grey.withOpacity(0.18)),
+                        ),
+                        child: Row(
+                          children: [
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      Flexible(
+                                        child: Text(
+                                          b['batch_name'] ?? 'Class Batch',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 14.5,
+                                            decoration: isHidden ? TextDecoration.lineThrough : null,
+                                          ),
+                                          overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 6),
+                                      Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                        decoration: BoxDecoration(color: statusColor.withOpacity(0.15), borderRadius: BorderRadius.circular(4)),
+                                        child: Text(statusLabel, style: TextStyle(color: statusColor, fontWeight: FontWeight.w900, fontSize: 9.5)),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 3),
+                                  Row(
+                                    children: [
+                                      Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
+                                        decoration: BoxDecoration(color: const Color(0xFF2563EB).withOpacity(0.12), borderRadius: BorderRadius.circular(4)),
+                                        child: Text('CODE: ${b['batch_code']}', style: const TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold, fontSize: 11)),
+                                      ),
+                                      const SizedBox(width: 8),
+                                      Text('${tests.length} CBT Tests Scheduled', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-                          IconButton(
-                            icon: const Icon(Icons.copy_rounded, size: 18, color: Color(0xFF2563EB)),
-                            tooltip: 'Copy Code',
-                            onPressed: () {
-                              Clipboard.setData(ClipboardData(text: b['batch_code']));
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('Copied Batch Code: ${b['batch_code']}')),
-                              );
-                            },
-                          ),
-                          IconButton(
-                            icon: const Icon(Icons.delete_outline, size: 18, color: Colors.redAccent),
-                            tooltip: 'Delete Batch',
-                            onPressed: () async {
-                              try {
-                                await Supabase.instance.client.from('batches').delete().eq('id', b['id']);
-                                setState(() => _batches.removeAt(idx));
-                                setModalState(() {});
-                                _loadCompleteAnalytics();
-                              } catch (err) {
-                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Delete error: $err')));
-                              }
-                            },
-                          ),
-                        ],
+                            // Edit Action
+                            IconButton(
+                              icon: const Icon(Icons.edit_note_rounded, size: 22, color: Color(0xFF2563EB)),
+                              tooltip: 'Modify Batch',
+                              onPressed: () => _openEditBatchDialog(b),
+                            ),
+                            // Copy Code Action
+                            IconButton(
+                              icon: const Icon(Icons.copy_rounded, size: 18, color: Color(0xFF16A34A)),
+                              tooltip: 'Copy Code',
+                              onPressed: () {
+                                Clipboard.setData(ClipboardData(text: b['batch_code']));
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(content: Text('Copied Batch Code: ${b['batch_code']}')),
+                                );
+                              },
+                            ),
+                            // Delete Action
+                            IconButton(
+                              icon: const Icon(Icons.delete_outline, size: 18, color: Colors.redAccent),
+                              tooltip: 'Delete Batch',
+                              onPressed: () async {
+                                try {
+                                  await Supabase.instance.client.from('batches').delete().eq('id', b['id']);
+                                  setState(() => _batches.removeAt(idx));
+                                  setModalState(() {});
+                                  _loadCompleteAnalytics();
+                                } catch (err) {
+                                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Delete error: $err')));
+                                }
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   }),
 
                 const Divider(height: 24),
-                const Text('+ Add New Class Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5)),
+                const Text('+ Add New Coaching Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5)),
                 const SizedBox(height: 10),
                 TextField(
                   controller: batchNameCtrl,
-                  decoration: const InputDecoration(
-                    labelText: 'Batch Name (e.g. BSSC CGL 2026 Target)',
-                    border: OutlineInputBorder(),
-                    isDense: true,
-                  ),
+                  decoration: const InputDecoration(labelText: 'Batch Name (e.g. BSSC CGL 2026 Target)', border: OutlineInputBorder(), isDense: true),
                 ),
                 const SizedBox(height: 10),
                 TextField(
                   controller: batchCodeCtrl,
                   textCapitalization: TextCapitalization.characters,
-                  decoration: const InputDecoration(
-                    labelText: 'Unique Join Code (e.g. PATNA100)',
-                    border: OutlineInputBorder(),
-                    isDense: true,
-                  ),
+                  decoration: const InputDecoration(labelText: 'Unique Join Code (e.g. PATNA100)', border: OutlineInputBorder(), isDense: true),
+                ),
+                const SizedBox(height: 10),
+                Row(
+                  children: [
+                    const Text('Initial Status: ', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                    const SizedBox(width: 8),
+                    ChoiceChip(
+                      label: const Text('🟢 Live', style: TextStyle(fontSize: 11)),
+                      selected: newBatchStatus == 'LIVE',
+                      onSelected: (v) => setModalState(() => newBatchStatus = 'LIVE'),
+                    ),
+                    const SizedBox(width: 6),
+                    ChoiceChip(
+                      label: const Text('⏳ Upcoming', style: TextStyle(fontSize: 11)),
+                      selected: newBatchStatus == 'UPCOMING',
+                      onSelected: (v) => setModalState(() => newBatchStatus = 'UPCOMING'),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 14),
                 SizedBox(
@@ -304,6 +460,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                                 'coaching_id': coachingId,
                                 'batch_name': bName,
                                 'batch_code': bCode,
+                                'status': newBatchStatus,
                               });
 
                               if (ctx.mounted) Navigator.pop(ctx);
@@ -312,18 +469,13 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               if (mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
-                                    content: Text('🎉 Batch "$bName" ($bCode) successfully create ho gaya!'),
+                                    content: Text('🎉 Batch "$bName" ($bCode) successfully created!'),
                                     backgroundColor: const Color(0xFF16A34A),
                                   ),
                                 );
                               }
                             } catch (e) {
                               setModalState(() => isCreating = false);
-                              if (ctx.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('Batch error: $e'), backgroundColor: Colors.redAccent),
-                                );
-                              }
                             }
                           },
                     child: isCreating
@@ -340,7 +492,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     );
   }
 
-  // 🎨 Institute Customizer Modal (Direct Phone Gallery Image Picker & 38 Bihar Districts)
+  // 🎨 Institute Customizer Modal (Poster Upload with Dimensions & Guidelines)
   void _openInstituteCustomizerModal() {
     final nameCtrl = TextEditingController(text: _coachingData?['name'] ?? _profile?['name'] ?? '');
     final landmarkCtrl = TextEditingController(text: _coachingData?['landmark_address'] ?? _coachingData?['area_locality'] ?? '');
@@ -378,42 +530,63 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('🎨 Institute Branding & Location', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
+                    const Text('🎨 Coaching Poster & Branding', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 4),
 
-                // 📸 Direct Gallery Photo Picker
+                // 📐 Banner Aspect Ratio & Size Guidelines Badge
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF2563EB).withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.25)),
+                  ),
+                  child: const Row(
+                    children: [
+                      Icon(Icons.aspect_ratio_rounded, size: 16, color: Color(0xFF2563EB)),
+                      SizedBox(width: 6),
+                      Expanded(
+                        child: Text(
+                          'Recommended Size: 1200 x 675 px (16:9 Ratio, Max 5MB)',
+                          style: TextStyle(fontSize: 11, color: Color(0xFF2563EB), fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 10),
+
+                // 📸 High-Visibility Banner Container (170px Height)
                 GestureDetector(
                   onTap: () async {
                     try {
-                      final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
+                      final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 85);
                       if (picked != null) {
                         setModalState(() => selectedBannerFile = File(picked.path));
                       }
                     } catch (e) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('Image pick failed: $e')),
-                      );
+                      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Image pick failed: $e')));
                     }
                   },
                   child: Container(
-                    height: 120,
+                    height: 170, // 👈 Expanded height for crisp banner preview
                     width: double.infinity,
                     decoration: BoxDecoration(
                       color: Colors.grey.withOpacity(0.12),
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.35)),
+                      borderRadius: BorderRadius.circular(14),
+                      border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.4), width: 1.2),
                     ),
                     child: selectedBannerFile != null
                         ? ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
+                            borderRadius: BorderRadius.circular(14),
                             child: Image.file(selectedBannerFile!, fit: BoxFit.cover, width: double.infinity),
                           )
                         : (currentBannerUrl.isNotEmpty
                             ? ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
+                                borderRadius: BorderRadius.circular(14),
                                 child: Image.network(
                                   currentBannerUrl,
                                   fit: BoxFit.cover,
@@ -424,12 +597,14 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             : const Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Icon(Icons.add_photo_alternate_outlined, size: 34, color: Color(0xFF2563EB)),
-                                  SizedBox(height: 4),
+                                  Icon(Icons.add_photo_alternate_outlined, size: 40, color: Color(0xFF2563EB)),
+                                  SizedBox(height: 6),
                                   Text(
-                                    'Tap to pick Coaching Banner from Gallery 📷',
-                                    style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                                    'Tap to upload Coaching Poster / Billboard 📷',
+                                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
                                   ),
+                                  SizedBox(height: 2),
+                                  Text('Clear photo of coaching board, toppers or classroom', style: TextStyle(fontSize: 10.5, color: Colors.grey)),
                                 ],
                               )),
                   ),
@@ -469,7 +644,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 ),
                 const SizedBox(height: 10),
 
-                // 🏙️ 2. Hub Town / Sub-Division Dropdown (Cascading)
+                // 🏙️ 2. Hub Town Dropdown (Cascading)
                 DropdownButtonFormField<String>(
                   value: selectedCity,
                   decoration: const InputDecoration(
@@ -534,7 +709,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             try {
                               String bannerUrlToSave = currentBannerUrl;
 
-                              // 📤 Storage Upload to coaching_assets
                               if (selectedBannerFile != null) {
                                 final bytes = await selectedBannerFile!.readAsBytes();
                                 final fileExt = selectedBannerFile!.path.split('.').last;
@@ -563,7 +737,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                                 'contact_number': contactCtrl.text.trim(),
                               };
 
-                              // 🛡️ UPSERT with onConflict 'owner_name' to prevent Duplicate Key 23505 Error
                               await Supabase.instance.client
                                   .from('coachings')
                                   .upsert(payload, onConflict: 'owner_name');
@@ -842,15 +1015,15 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             _buildActionCard(
               title: 'Create & Manage Batches 🏫',
-              subtitle: 'View active batches, copy join codes, or delete expired batches.',
+              subtitle: 'Edit batches, set Live/Upcoming status, copy join codes, or hide batches.',
               icon: Icons.add_business_outlined,
               color: const Color(0xFF0D9488),
               onTap: _openBatchManagerModal,
             ),
 
             _buildActionCard(
-              title: 'Customize Institute Page & Posters 🎨',
-              subtitle: 'Upload coaching banner from phone gallery, district, & WhatsApp.',
+              title: 'Customize Institute Poster & Location 🎨',
+              subtitle: 'Upload 16:9 banner from gallery, set district, city & WhatsApp helpline.',
               icon: Icons.photo_library_outlined,
               color: const Color(0xFFEA580C),
               onTap: _openInstituteCustomizerModal,
