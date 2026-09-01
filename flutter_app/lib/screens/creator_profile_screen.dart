@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
@@ -28,6 +29,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
   bool _isLoading = true;
   bool _isCreator = false;
   bool _isFollowing = false;
+  String? _userEnrolledCode;
   late TabController _tabController;
 
   @override
@@ -45,6 +47,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
   Future<void> _fetchCreatorData() async {
     try {
       final client = Supabase.instance.client;
+      final prefs = await SharedPreferences.getInstance();
+      _userEnrolledCode = prefs.getString('user_enrolled_batch_code');
 
       final profileRes = await client
           .from('creator_profiles')
@@ -69,7 +73,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
             .eq('creator_id', widget.creatorHandle)
             .order('created_at', ascending: false);
 
-        _mocks = mocksRes;
+        _mocks = mocksRes ?? [];
 
         if (coachingRes != null) {
           final batchRes = await client
@@ -77,7 +81,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
               .select('*, batch_tests(*)')
               .eq('coaching_id', coachingRes['id'])
               .order('created_at', ascending: false);
-          _batches = batchRes ?? [];
+          
+          // Hidden batches are excluded from public profile
+          _batches = (batchRes as List? ?? []).where((b) => b['status'] != 'HIDDEN').toList();
         }
       } else {
         _isCreator = false;
@@ -95,7 +101,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
           .eq('creator_id', widget.creatorHandle)
           .order('created_at', ascending: false);
 
-      _posts = postsRes;
+      _posts = postsRes ?? [];
       _tabController = TabController(length: _isCreator ? 3 : 1, vsync: this);
 
       if (mounted) {
@@ -134,25 +140,42 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
     }
   }
 
-  void _openJoinBatchDialog() {
+  // 🔑 Secure Password/Code Verification Dialog
+  void _openBatchUnlockDialog(Map<String, dynamic> batch) {
     final codeCtrl = TextEditingController();
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
         backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-        title: const Text('🏫 Join Coaching Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Row(
+          children: [
+            const Icon(Icons.lock_open_rounded, color: Color(0xFF2563EB), size: 22),
+            const SizedBox(width: 8),
+            Expanded(
+              child: Text(
+                'Enroll: ${batch['batch_name']}',
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                overflow: TextOverflow.ellipsis,
+              ),
+            ),
+          ],
+        ),
         content: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Enter the Batch Code shared by your teacher:', style: TextStyle(fontSize: 12, color: Colors.grey)),
-            const SizedBox(height: 10),
+            const Text(
+              'Apne coaching / teacher dwara diya gaya secret batch code enter karein:',
+              style: TextStyle(fontSize: 12, color: Colors.grey),
+            ),
+            const SizedBox(height: 12),
             TextField(
               controller: codeCtrl,
               textCapitalization: TextCapitalization.characters,
               decoration: const InputDecoration(
                 hintText: 'e.g. PATNA100',
-                labelText: 'Batch Code',
+                labelText: 'Secret Batch Code',
                 border: OutlineInputBorder(),
                 isDense: true,
               ),
@@ -162,39 +185,38 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
           ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF2563EB),
+              foregroundColor: Colors.white,
+            ),
             onPressed: () async {
-              final code = codeCtrl.text.trim().toUpperCase();
-              if (code.isEmpty) return;
+              final enteredCode = codeCtrl.text.trim().toUpperCase();
+              final actualCode = (batch['batch_code'] ?? '').toString().toUpperCase();
 
-              try {
-                final batch = await Supabase.instance.client
-                    .from('batches')
-                    .select()
-                    .eq('batch_code', code)
-                    .maybeSingle();
+              if (enteredCode.isNotEmpty && enteredCode == actualCode) {
+                final prefs = await SharedPreferences.getInstance();
+                await prefs.setString('user_enrolled_batch_code', enteredCode);
 
                 if (ctx.mounted) Navigator.pop(ctx);
+                setState(() => _userEnrolledCode = enteredCode);
 
-                if (batch != null) {
-                  if (mounted) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        content: Text('🎉 Enrolled in "${batch['batch_name']}"!'),
-                        backgroundColor: const Color(0xFF16A34A),
-                      ),
-                    );
-                  }
-                } else {
-                  if (mounted) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Invalid Batch Code! Check with your coaching.')),
-                    );
-                  }
+                if (mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      content: Text('🎉 Verified! Welcome to "${batch['batch_name']}"'),
+                      backgroundColor: const Color(0xFF16A34A),
+                    ),
+                  );
                 }
-              } catch (_) {}
+              } else {
+                if (mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('❌ Invalid Code! Teacher se sahi password/code lein.')),
+                  );
+                }
+              }
             },
-            child: const Text('Enroll Now'),
+            child: const Text('Unlock Batch 🚀'),
           ),
         ],
       ),
@@ -240,6 +262,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
     final isDark = widget.isDarkMode;
     final cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final String? bannerUrl = _coachingData?['banner_url'];
+    final String displayName = _coachingData?['name'] ?? _profile?['name'] ?? widget.creatorHandle;
+    final String locationText = _coachingData?['district'] ?? _coachingData?['city'] ?? _profile?['subject_specialty'] ?? 'Bihar';
+    final String? landmarkText = _coachingData?['landmark_address'];
 
     if (_isLoading) {
       return Scaffold(
@@ -252,8 +277,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
       backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
         title: Text(
-          _isCreator ? (_coachingData?['name'] ?? _profile!['name'] ?? 'Mentor Profile') : 'Candidate Profile',
-          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          _isCreator ? displayName : 'Candidate Profile',
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17),
         ),
         elevation: 0.5,
       ),
@@ -261,20 +286,20 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
         headerSliverBuilder: (context, innerBoxIsScrolled) => [
           SliverToBoxAdapter(
             child: Padding(
-              padding: const EdgeInsets.all(14),
+              padding: const EdgeInsets.all(12),
               child: Card(
                 color: cardBg,
-                elevation: 1.5,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                elevation: 2,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
                 child: Column(
                   children: [
-                    // 🎨 1. Optional Coaching Banner Billboard
+                    // 🖼️ 1. BIG HIGH-VISIBILITY BANNER (Height: 185px)
                     if (bannerUrl != null && bannerUrl.isNotEmpty)
                       ClipRRect(
-                        borderRadius: const BorderRadius.vertical(top: Radius.circular(16)),
+                        borderRadius: const BorderRadius.vertical(top: Radius.circular(18)),
                         child: Image.network(
                           bannerUrl,
-                          height: 120,
+                          height: 185, // 👈 Height enhanced for billboard visibility
                           width: double.infinity,
                           fit: BoxFit.cover,
                           errorBuilder: (_, __, ___) => const SizedBox.shrink(),
@@ -288,11 +313,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                           Row(
                             children: [
                               CircleAvatar(
-                                radius: 30,
+                                radius: 28,
                                 backgroundColor: _isCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
                                 child: Text(
-                                  (_profile!['name'] ?? 'U')[0].toUpperCase(),
-                                  style: const TextStyle(fontSize: 24, color: Colors.white, fontWeight: FontWeight.bold),
+                                  displayName.isNotEmpty ? displayName[0].toUpperCase() : 'U',
+                                  style: const TextStyle(fontSize: 22, color: Colors.white, fontWeight: FontWeight.bold),
                                 ),
                               ),
                               const SizedBox(width: 14),
@@ -304,8 +329,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                                       children: [
                                         Flexible(
                                           child: Text(
-                                            _coachingData?['name'] ?? _profile!['name'] ?? '',
-                                            style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+                                            displayName,
+                                            style: const TextStyle(fontSize: 17.5, fontWeight: FontWeight.bold),
                                             overflow: TextOverflow.ellipsis,
                                           ),
                                         ),
@@ -320,15 +345,16 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                                             _isCreator ? 'INSTITUTE' : 'ASPIRANT',
                                             style: TextStyle(
                                               fontSize: 9.5,
-                                              fontWeight: FontWeight.w800,
+                                              fontWeight: FontWeight.w900,
                                               color: _isCreator ? const Color(0xFF2563EB) : Colors.grey[600],
                                             ),
                                           ),
                                         ),
                                       ],
                                     ),
+                                    const SizedBox(height: 2),
                                     Text(
-                                      '@${widget.creatorHandle} • ${_coachingData?['city'] ?? _profile!['subject_specialty'] ?? 'Exam Expert'}',
+                                      '@${widget.creatorHandle} • 📍 $locationText${landmarkText != null && landmarkText.isNotEmpty ? " • $landmarkText" : ""}',
                                       style: TextStyle(color: Colors.grey[500], fontSize: 11.5),
                                     ),
                                   ],
@@ -347,40 +373,23 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                                     Text('${_profile!['followers_count'] ?? 0}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                                     const SizedBox(width: 4),
                                     Text('Followers', style: TextStyle(color: Colors.grey[500], fontSize: 12.5)),
-                                    const SizedBox(width: 12),
+                                    const SizedBox(width: 14),
                                     Text('${_batches.length}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                                     const SizedBox(width: 4),
                                     Text('Batches', style: TextStyle(color: Colors.grey[500], fontSize: 12.5)),
                                   ],
                                 ),
-                                Row(
-                                  children: [
-                                    OutlinedButton.icon(
-                                      icon: const Icon(Icons.vpn_key_outlined, size: 14),
-                                      label: const Text('Join Batch', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                                      style: OutlinedButton.styleFrom(
-                                        foregroundColor: const Color(0xFF16A34A),
-                                        side: const BorderSide(color: Color(0xFF16A34A)),
-                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-                                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                                        visualDensity: VisualDensity.compact,
-                                      ),
-                                      onPressed: _openJoinBatchDialog,
-                                    ),
-                                    const SizedBox(width: 6),
-                                    ElevatedButton(
-                                      style: ElevatedButton.styleFrom(
-                                        backgroundColor: _isFollowing ? (isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)) : const Color(0xFF2563EB),
-                                        foregroundColor: _isFollowing ? (isDark ? Colors.white : Colors.black87) : Colors.white,
-                                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-                                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-                                        elevation: 0,
-                                        visualDensity: VisualDensity.compact,
-                                      ),
-                                      onPressed: _toggleFollow,
-                                      child: Text(_isFollowing ? 'Following' : 'Follow +', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
-                                    ),
-                                  ],
+                                ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: _isFollowing ? (isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)) : const Color(0xFF2563EB),
+                                    foregroundColor: _isFollowing ? (isDark ? Colors.white : Colors.black87) : Colors.white,
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+                                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+                                    elevation: 0,
+                                    visualDensity: VisualDensity.compact,
+                                  ),
+                                  onPressed: _toggleFollow,
+                                  child: Text(_isFollowing ? 'Following' : 'Follow +', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
                                 ),
                               ],
                             ),
@@ -427,7 +436,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                   labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
                   tabs: [
                     Tab(text: 'Batches (${_batches.length})'),
-                    Tab(text: 'Mock Tests (${_mocks.length})'),
+                    Tab(text: 'Open Mocks (${_mocks.length})'),
                     Tab(text: 'Notices (${_posts.length})'),
                   ],
                 ),
@@ -449,6 +458,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
     );
   }
 
+  // 🎓 BATCHES TAB (PASSWORD PROTECTED & CODE HIDDEN)
   Widget _buildBatchesTab(Color cardBg) {
     if (_batches.isEmpty) {
       return const Center(child: Text('No active batches right now.'));
@@ -459,10 +469,21 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
       itemBuilder: (context, idx) {
         final b = _batches[idx];
         final List tests = b['batch_tests'] ?? [];
+        final String batchCode = (b['batch_code'] ?? '').toString().toUpperCase();
+        final bool isUnlocked = _userEnrolledCode != null && _userEnrolledCode == batchCode;
+        final bool isUpcoming = b['status'] == 'UPCOMING';
+
         return Card(
           color: cardBg,
-          margin: const EdgeInsets.only(bottom: 10),
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+          margin: const EdgeInsets.only(bottom: 12),
+          elevation: 1.5,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
+            side: BorderSide(
+              color: isUnlocked ? const Color(0xFF16A34A).withOpacity(0.5) : Colors.grey.withOpacity(0.18),
+              width: isUnlocked ? 1.5 : 1,
+            ),
+          ),
           child: Padding(
             padding: const EdgeInsets.all(14),
             child: Column(
@@ -471,16 +492,71 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(b['batch_name'] ?? 'Class Batch', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                    Expanded(
+                      child: Text(
+                        b['batch_name'] ?? 'Class Batch',
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15.5),
+                      ),
+                    ),
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                      decoration: BoxDecoration(color: const Color(0xFF16A34A).withOpacity(0.12), borderRadius: BorderRadius.circular(6)),
-                      child: Text('CODE: ${b['batch_code']}', style: const TextStyle(color: Color(0xFF16A34A), fontWeight: FontWeight.bold, fontSize: 11)),
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+                      decoration: BoxDecoration(
+                        color: isUnlocked
+                            ? const Color(0xFF16A34A).withOpacity(0.15)
+                            : (isUpcoming ? Colors.amber.withOpacity(0.15) : Colors.grey.withOpacity(0.15)),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: Text(
+                        isUnlocked ? '✅ UNLOCKED' : (isUpcoming ? '⏳ UPCOMING' : '🔒 PASSWORD LOCKED'),
+                        style: TextStyle(
+                          color: isUnlocked ? const Color(0xFF16A34A) : (isUpcoming ? Colors.amber.shade800 : Colors.grey[700]),
+                          fontWeight: FontWeight.w900,
+                          fontSize: 10,
+                        ),
+                      ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 6),
-                Text('${tests.length} Scheduled CBT Mocks inside this batch.', style: TextStyle(color: Colors.grey[600], fontSize: 12)),
+                Text(
+                  '${tests.length} Private CBT Tests & Notes inside this batch.',
+                  style: TextStyle(color: Colors.grey[600], fontSize: 12),
+                ),
+                const SizedBox(height: 12),
+
+                // Action Button (Lock vs Unlock State)
+                SizedBox(
+                  width: double.infinity,
+                  height: 38,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: isUnlocked ? const Color(0xFF16A34A) : const Color(0xFF2563EB),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      elevation: 0,
+                    ),
+                    onPressed: () {
+                      if (isUnlocked) {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Accessing "${b['batch_name']}" tests!'), backgroundColor: const Color(0xFF16A34A)),
+                        );
+                      } else {
+                        _openBatchUnlockDialog(b);
+                      }
+                    },
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(isUnlocked ? Icons.play_circle_fill_rounded : Icons.lock_rounded, size: 16),
+                        const SizedBox(width: 6),
+                        Text(
+                          isUnlocked ? 'Open Classroom Mocks 🚀' : 'Enter Password to Unlock 🔑',
+                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
               ],
             ),
           ),
@@ -489,9 +565,10 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
     );
   }
 
+  // ⚡ OPEN PUBLIC MOCKS TAB
   Widget _buildMocksTab(Color cardBg) {
     if (_mocks.isEmpty) {
-      return const Center(child: Text('No mock tests published yet.'));
+      return const Center(child: Text('No open mock tests published yet.'));
     }
     return ListView.builder(
       padding: const EdgeInsets.all(12),
@@ -522,7 +599,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                 const SizedBox(height: 8),
                 Text(m['title'] ?? 'Mock Test', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                 const SizedBox(height: 4),
-                Text('${qList.length} Questions • ${m['duration_mins'] ?? 10} Mins', style: TextStyle(color: Colors.grey[600], fontSize: 12)),
+                Text('${qList.length} Questions • ${m['duration_mins'] ?? 10} Mins • Public Practice', style: TextStyle(color: Colors.grey[600], fontSize: 12)),
                 const SizedBox(height: 10),
                 SizedBox(
                   width: double.infinity,
@@ -535,7 +612,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                       elevation: 0,
                     ),
-                    child: const Text('Start Mock Test ⚡', style: TextStyle(fontWeight: FontWeight.bold)),
+                    child: const Text('Start Free Mock Test ⚡', style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                 ),
               ],
@@ -546,6 +623,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
     );
   }
 
+  // 📚 NOTICES & PUBLIC NOTES TAB
   Widget _buildPostsTab(Color cardBg) {
     if (_posts.isEmpty) {
       return const Center(child: Text('No announcements shared yet.'));
