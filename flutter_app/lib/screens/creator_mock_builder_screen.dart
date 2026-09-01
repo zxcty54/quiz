@@ -24,12 +24,52 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
   int _durationMins = 15;
   bool _isPublishing = false;
 
+  // 🎯 Target Selection & Batch Data
+  String _publishTarget = 'PUBLIC'; // 'PUBLIC' or 'BATCH'
+  String? _selectedBatchId;
+  List<Map<String, dynamic>> _myBatches = [];
+  bool _isLoadingBatches = true;
+
   List<Map<String, dynamic>> _questions = [];
 
   @override
   void initState() {
     super.initState();
     _addNewBlankQuestion();
+    _fetchCreatorBatches();
+  }
+
+  Future<void> _fetchCreatorBatches() async {
+    try {
+      final coachingRes = await Supabase.instance.client
+          .from('coachings')
+          .select('id')
+          .eq('owner_name', widget.creatorHandle)
+          .maybeSingle();
+
+      if (coachingRes != null) {
+        final batchesRes = await Supabase.instance.client
+            .from('batches')
+            .select('id, batch_name, batch_code, status, batch_tests(id)')
+            .eq('coaching_id', coachingRes['id'])
+            .neq('status', 'HIDDEN') // Only active/available batches
+            .order('created_at', ascending: false);
+
+        if (mounted) {
+          setState(() {
+            _myBatches = List<Map<String, dynamic>>.from(batchesRes ?? []);
+            if (_myBatches.isNotEmpty) {
+              _selectedBatchId = _myBatches.first['id'].toString();
+            }
+            _isLoadingBatches = false;
+          });
+        }
+      } else {
+        if (mounted) setState(() => _isLoadingBatches = false);
+      }
+    } catch (_) {
+      if (mounted) setState(() => _isLoadingBatches = false);
+    }
   }
 
   void _addNewBlankQuestion() {
@@ -163,7 +203,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                             setModalState(() => isAiProcessing = true);
 
                             try {
-                              // 🚀 Directly using AiExplainerService (Zero 400 errors, automatic 4-key rotation)
                               final List<Map<String, dynamic>> parsedList =
                                   await AiExplainerService.parseBulkQuestionsWithAi(text);
 
@@ -217,6 +256,11 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       return;
     }
 
+    if (_publishTarget == 'BATCH' && _selectedBatchId == null) {
+      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Kripya target Batch select karein!')));
+      return;
+    }
+
     final validQuestions = _questions.where((q) => (q['question'] as String).trim().isNotEmpty).toList();
     if (validQuestions.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please add at least 1 complete question!')));
@@ -226,29 +270,47 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     setState(() => _isPublishing = true);
 
     try {
-      final res = await Supabase.instance.client.from('creator_mocks').insert({
-        'creator_id': widget.creatorHandle,
-        'title': title,
-        'subject': _selectedSubject,
-        'duration_mins': _durationMins,
-        'questions_json': validQuestions,
-        'attempts_count': 0,
-      }).select().single();
+      if (_publishTarget == 'PUBLIC') {
+        // 🌐 1. Public Feed CBT Mock
+        final res = await Supabase.instance.client.from('creator_mocks').insert({
+          'creator_id': widget.creatorHandle,
+          'title': title,
+          'subject': _selectedSubject,
+          'duration_mins': _durationMins,
+          'total_questions': validQuestions.length,
+          'questions_json': validQuestions,
+          'attempts_count': 0,
+        }).select().single();
 
-      await Supabase.instance.client.from('community_posts').insert({
-        'creator_id': widget.creatorHandle,
-        'content': '⚡ New CBT Mock Test Published: "$title". Tap below to attempt now!',
-        'tag': 'Mock Tests ⚡',
-        'mock_id': res['id'],
-        'views_count': 1,
-      });
+        await Supabase.instance.client.from('community_posts').insert({
+          'creator_id': widget.creatorHandle,
+          'content': '⚡ New CBT Mock Test Published: "$title". Tap below to attempt now!',
+          'tag': 'Mock Tests ⚡',
+          'mock_id': res['id'],
+          'views_count': 1,
+        });
+      } else {
+        // 🔒 2. Private Coaching Batch CBT Mock
+        await Supabase.instance.client.from('batch_tests').insert({
+          'batch_id': int.parse(_selectedBatchId!),
+          'test_title': title,
+          'subject': _selectedSubject,
+          'duration_mins': _durationMins,
+          'total_questions': validQuestions.length,
+          'questions_json': validQuestions,
+        });
+      }
 
       if (mounted) {
         Navigator.pop(context);
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('🚀 Test Published to Profile & Community Feed!'),
-            backgroundColor: Color(0xFF16A34A),
+          SnackBar(
+            content: Text(
+              _publishTarget == 'PUBLIC'
+                  ? '🚀 Test Published to Profile & Community Feed!'
+                  : '🔒 Private CBT Mock added to Batch successfully!',
+            ),
+            backgroundColor: const Color(0xFF16A34A),
           ),
         );
       }
@@ -278,11 +340,118 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       ),
       body: Column(
         children: [
+          // 🎯 Top Settings & Target Selection Header
           Container(
             padding: const EdgeInsets.all(12),
             color: cardBg,
             child: Column(
               children: [
+                // 1. Target Selector (Public vs Batch)
+                Row(
+                  children: [
+                    Expanded(
+                      child: ChoiceChip(
+                        avatar: const Icon(Icons.public_rounded, size: 16),
+                        label: const Text('🌐 Public Feed', style: TextStyle(fontSize: 12)),
+                        selected: _publishTarget == 'PUBLIC',
+                        selectedColor: const Color(0xFF2563EB).withOpacity(0.18),
+                        labelStyle: TextStyle(
+                          color: _publishTarget == 'PUBLIC' ? const Color(0xFF2563EB) : Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        onSelected: (v) => setState(() => _publishTarget = 'PUBLIC'),
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: ChoiceChip(
+                        avatar: const Icon(Icons.lock_rounded, size: 16),
+                        label: const Text('🔒 Private Batch', style: TextStyle(fontSize: 12)),
+                        selected: _publishTarget == 'BATCH',
+                        selectedColor: const Color(0xFF16A34A).withOpacity(0.18),
+                        labelStyle: TextStyle(
+                          color: _publishTarget == 'BATCH' ? const Color(0xFF16A34A) : Colors.grey,
+                          fontWeight: FontWeight.bold,
+                        ),
+                        onSelected: (v) => setState(() => _publishTarget = 'BATCH'),
+                      ),
+                    ),
+                  ],
+                ),
+
+                // 2. Active Batch Selector Dropdown (Conditional)
+                if (_publishTarget == 'BATCH') ...[
+                  const SizedBox(height: 10),
+                  if (_isLoadingBatches)
+                    const LinearProgressIndicator()
+                  else if (_myBatches.isEmpty)
+                    Container(
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: Colors.amber.withOpacity(0.12),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: const Row(
+                        children: [
+                          Icon(Icons.warning_amber_rounded, color: Colors.amber, size: 18),
+                          SizedBox(width: 8),
+                          Expanded(
+                            child: Text(
+                              'Koi Active/Live batch nahi mila. Pehle Dashboard se Batch create karein.',
+                              style: TextStyle(fontSize: 11.5, color: Colors.amber, fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
+                      ),
+                    )
+                  else
+                    DropdownButtonFormField<String>(
+                      value: _selectedBatchId,
+                      decoration: const InputDecoration(
+                        labelText: 'Select Target Batch (Available Batches)',
+                        border: OutlineInputBorder(),
+                        isDense: true,
+                        prefixIcon: Icon(Icons.class_outlined, color: Color(0xFF16A34A), size: 20),
+                      ),
+                      items: _myBatches.map((b) {
+                        final List existingTests = b['batch_tests'] ?? [];
+                        final String status = b['status'] ?? 'LIVE';
+                        final bool isLive = status == 'LIVE';
+
+                        return DropdownMenuItem<String>(
+                          value: b['id'].toString(),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                '${b['batch_name']}',
+                                style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+                              ),
+                              const SizedBox(width: 8),
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: isLive ? const Color(0xFF16A34A).withOpacity(0.15) : Colors.amber.withOpacity(0.15),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: Text(
+                                  '${isLive ? "🟢 LIVE" : "⏳ UPCOMING"} • ${existingTests.length} Tests',
+                                  style: TextStyle(
+                                    color: isLive ? const Color(0xFF16A34A) : Colors.amber.shade800,
+                                    fontSize: 9.5,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        );
+                      }).toList(),
+                      onChanged: (val) => setState(() => _selectedBatchId = val),
+                    ),
+                ],
+
+                const SizedBox(height: 10),
                 TextField(
                   controller: _titleCtrl,
                   decoration: const InputDecoration(
@@ -299,7 +468,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                         value: _selectedSubject,
                         decoration: const InputDecoration(labelText: 'Subject', isDense: true, border: OutlineInputBorder()),
                         items: ['general', 'history', 'polity', 'geography', 'science', 'maths', 'reasoning']
-                            .map((s) => DropdownMenuItem(value: s, child: Text(s.toUpperCase())))
+                            .map((s) => DropdownMenuItem(value: s, child: Text(s.toUpperCase(), style: const TextStyle(fontSize: 12))))
                             .toList(),
                         onChanged: (v) => setState(() => _selectedSubject = v ?? _selectedSubject),
                       ),
@@ -309,7 +478,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                       child: DropdownButtonFormField<int>(
                         value: _durationMins,
                         decoration: const InputDecoration(labelText: 'Duration', isDense: true, border: OutlineInputBorder()),
-                        items: [5, 10, 15, 30, 60, 120].map((m) => DropdownMenuItem(value: m, child: Text('$m Mins'))).toList(),
+                        items: [5, 10, 15, 30, 60, 120].map((m) => DropdownMenuItem(value: m, child: Text('$m Mins', style: const TextStyle(fontSize: 12)))).toList(),
                         onChanged: (v) => setState(() => _durationMins = v ?? _durationMins),
                       ),
                     ),
@@ -320,6 +489,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
           ),
           const Divider(height: 1),
 
+          // 📝 Question Cards List
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(12),
@@ -411,6 +581,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
             ),
           ),
 
+          // 🚀 Bottom Publishing Action Bar
           Container(
             padding: const EdgeInsets.all(12),
             color: cardBg,
@@ -425,7 +596,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 Expanded(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF16A34A),
+                      backgroundColor: _publishTarget == 'PUBLIC' ? const Color(0xFF2563EB) : const Color(0xFF16A34A),
                       foregroundColor: Colors.white,
                       padding: const EdgeInsets.symmetric(vertical: 12),
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
@@ -433,7 +604,12 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                     onPressed: _isPublishing ? null : _publishMockTest,
                     child: _isPublishing
                         ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                        : Text('Publish ${_questions.length} Qs Test 🚀', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                        : Text(
+                            _publishTarget == 'PUBLIC'
+                                ? 'Publish ${_questions.length} Qs to Feed 🌐'
+                                : 'Publish ${_questions.length} Qs to Batch 🔒',
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                          ),
                   ),
                 ),
               ],
