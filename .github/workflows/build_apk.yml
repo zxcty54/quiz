@@ -113,26 +113,33 @@ jobs:
           python3 - << 'EOF'
           import os
 
-          # 1. Force subprojects to compileSdk 36 (Handles both .gradle and .gradle.kts)
+          # 1. Override compileSdk across all subprojects safely
           root_gradle_kts = "flutter_app/android/build.gradle.kts"
           root_gradle = "flutter_app/android/build.gradle"
 
           override_block_kts = """
           subprojects {
-              afterEvaluate {
-                  project.extensions.findByType<com.android.build.gradle.BaseExtension>()?.apply {
-                      compileSdkVersion(36)
-                  }
+              project.plugins.withId("com.android.library") {
+                  val android = project.extensions.getByType(com.android.build.api.dsl.LibraryExtension::class.java)
+                  android.compileSdk = 36
+              }
+              project.plugins.withId("com.android.application") {
+                  val android = project.extensions.getByType(com.android.build.api.dsl.ApplicationExtension::class.java)
+                  android.compileSdk = 36
               }
           }
           """
+
           override_block_groovy = """
           subprojects {
-              afterEvaluate { project ->
-                  if (project.hasProperty('android')) {
-                      project.android {
-                          compileSdkVersion 36
-                      }
+              plugins.withId("com.android.library") {
+                  android {
+                      compileSdkVersion 36
+                  }
+              }
+              plugins.withId("com.android.application") {
+                  android {
+                      compileSdkVersion 36
                   }
               }
           }
