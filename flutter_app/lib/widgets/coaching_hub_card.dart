@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../screens/coaching_directory_screen.dart';
 import '../screens/creator_profile_screen.dart';
 
 class CoachingHubCard extends StatefulWidget {
@@ -17,6 +18,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
   String? _coachingName;
   String? _coachingBanner;
   String? _ownerHandle;
+  String? _coachingCity;
   int _availableMocksCount = 0;
   bool _isLoading = true;
 
@@ -51,6 +53,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
           _coachingName = coaching?['name'] ?? 'Classroom Batch';
           _coachingBanner = coaching?['banner_url'];
           _ownerHandle = coaching?['owner_name'];
+          _coachingCity = coaching?['district'] ?? coaching?['city'] ?? 'Bihar';
           _availableMocksCount = tests.length;
           _isLoading = false;
         });
@@ -70,8 +73,9 @@ class CoachingHubCardState extends State<CoachingHubCard> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         title: const Row(
           children: [
-            Text('🏫 ', style: TextStyle(fontSize: 20)),
-            Text('Join Coaching Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
+            Icon(Icons.vpn_key_rounded, color: Color(0xFF2563EB), size: 22),
+            SizedBox(width: 8),
+            Text('Join Classroom Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
           ],
         ),
         content: Column(
@@ -123,7 +127,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                   if (mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
                       SnackBar(
-                        content: Text('🎉 Joined "${batch['batch_name']}"!'),
+                        content: Text('🎉 Successfully Enrolled in "${batch['batch_name']}"!'),
                         backgroundColor: const Color(0xFF16A34A),
                       ),
                     );
@@ -131,7 +135,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                 } else {
                   if (mounted) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Invalid Batch Code! Please verify with coaching.')),
+                      const SnackBar(content: Text('Invalid Batch Code! Please verify with your coaching.')),
                     );
                   }
                 }
@@ -151,7 +155,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
 
     if (_isLoading) return const SizedBox.shrink();
 
-    // 🎓 STATE A: Enrolled in a Coaching Batch
+    // 🎓 STATE A: ENROLLED IN A COACHING BATCH
     if (_enrolledBatchCode != null) {
       return Container(
         width: double.infinity,
@@ -164,8 +168,8 @@ class CoachingHubCardState extends State<CoachingHubCard> {
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(isDark ? 0.25 : 0.04),
-              blurRadius: 12,
+              color: Colors.black.withOpacity(isDark ? 0.3 : 0.05),
+              blurRadius: 14,
               offset: const Offset(0, 4),
             ),
           ],
@@ -178,7 +182,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                 borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
                 child: Image.network(
                   _coachingBanner!,
-                  height: 110,
+                  height: 120,
                   width: double.infinity,
                   fit: BoxFit.cover,
                   errorBuilder: (_, __, ___) => const SizedBox.shrink(),
@@ -193,16 +197,16 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3.5),
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                         decoration: BoxDecoration(
                           color: const Color(0xFF16A34A).withOpacity(0.12),
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: Text(
-                          'MY COACHING • $_enrolledBatchCode',
+                          'MY CLASSROOM • $_enrolledBatchCode',
                           style: const TextStyle(
                             color: Color(0xFF16A34A),
-                            fontSize: 10,
+                            fontSize: 10.5,
                             fontWeight: FontWeight.w900,
                             letterSpacing: 0.5,
                           ),
@@ -212,7 +216,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                         onTap: _openJoinBatchDialog,
                         child: const Text(
                           '+ Switch Code',
-                          style: TextStyle(color: Color(0xFF2563EB), fontSize: 11, fontWeight: FontWeight.bold),
+                          style: TextStyle(color: Color(0xFF2563EB), fontSize: 11.5, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ],
@@ -221,14 +225,14 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                   Text(
                     _coachingName ?? 'Classroom Hub',
                     style: TextStyle(
-                      fontSize: 17,
+                      fontSize: 17.5,
                       fontWeight: FontWeight.w800,
                       color: isDark ? Colors.white : const Color(0xFF0F172A),
                     ),
                   ),
-                  const SizedBox(height: 2),
+                  const SizedBox(height: 3),
                   Text(
-                    '$_enrolledBatchName • $_availableMocksCount Scheduled CBT Mocks',
+                    '$_enrolledBatchName • 📍 $_coachingCity • $_availableMocksCount Scheduled CBT Mocks',
                     style: TextStyle(fontSize: 12, color: isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600),
                   ),
                   const SizedBox(height: 14),
@@ -238,8 +242,8 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF2563EB),
                         foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                        padding: const EdgeInsets.symmetric(vertical: 11),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                        padding: const EdgeInsets.symmetric(vertical: 12),
                       ),
                       onPressed: () {
                         if (_ownerHandle != null) {
@@ -254,7 +258,14 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                           );
                         }
                       },
-                      child: const Text('Open Batch Classroom & Mocks 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.bolt_rounded, size: 18),
+                          SizedBox(width: 6),
+                          Text('Open Classroom & Live Mocks 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -265,65 +276,193 @@ class CoachingHubCardState extends State<CoachingHubCard> {
       );
     }
 
-    // 🏫 STATE B: Default / Not Enrolled Yet
+    // 🏫 STATE B: FIRST IMPRESSION HERO GATEWAY (DEFAULT / NOT ENROLLED)
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: isDark
-              ? [const Color(0xFF1E293B), const Color(0xFF0F172A)]
-              : [const Color(0xFFEFF6FF), const Color(0xFFDBEAFE)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(20),
+        color: cardBg,
+        borderRadius: BorderRadius.circular(22),
         border: Border.all(
-          color: isDark ? const Color(0xFF334155) : const Color(0xFFBFDBFE),
+          color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
           width: 1.2,
         ),
-      ),
-      child: Row(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: const Color(0xFF2563EB).withOpacity(0.15),
-              shape: BoxShape.circle,
-            ),
-            child: const Icon(Icons.school_rounded, color: Color(0xFF2563EB), size: 28),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(isDark ? 0.35 : 0.04),
+            blurRadius: 16,
+            offset: const Offset(0, 5),
           ),
-          const SizedBox(width: 14),
-          Expanded(
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          // 🎨 Top Gradient Header
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: isDark
+                    ? [const Color(0xFF1E3A8A), const Color(0xFF1E293B)]
+                    : [const Color(0xFF2563EB), const Color(0xFF1D4ED8)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(21)),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.18),
+                    shape: BoxShape.circle,
+                  ),
+                  child: const Icon(Icons.apartment_rounded, color: Colors.white, size: 22),
+                ),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          const Text(
+                            'Bihar Institutes & Batches',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.w900,
+                              fontSize: 15,
+                              letterSpacing: -0.2,
+                            ),
+                          ),
+                          const SizedBox(width: 6),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFFF59E0B),
+                              borderRadius: BorderRadius.circular(6),
+                            ),
+                            child: const Text(
+                              'DIGITAL HUB',
+                              style: TextStyle(color: Color(0xFF0F172A), fontSize: 9, fontWeight: FontWeight.w900),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        'Patna, Gaya, Ara ke top offline coachings ka digital access',
+                        style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 11),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          // 📋 Body Content: Feature Points + CTA Actions
+          Padding(
+            padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  'Join Your Coaching Hub 🏫',
-                  style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
+                // 3-Point Value Row
+                Row(
+                  children: [
+                    _buildFeatureChip('🏛️ 38 Districts', isDark),
+                    const SizedBox(width: 6),
+                    _buildFeatureChip('📝 Private CBT Mocks', isDark),
+                    const SizedBox(width: 6),
+                    _buildFeatureChip('📊 State Ranks', isDark),
+                  ],
                 ),
-                const SizedBox(height: 2),
+                const SizedBox(height: 14),
+
                 Text(
-                  'Have a class batch code? Access private CBT mocks & class ranks.',
-                  style: TextStyle(fontSize: 11, color: isDark ? Colors.grey.shade400 : Colors.grey.shade700),
-                ),
-                const SizedBox(height: 10),
-                OutlinedButton.icon(
-                  icon: const Icon(Icons.vpn_key_outlined, size: 14),
-                  label: const Text('Enter Batch Code', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: const Color(0xFF2563EB),
-                    side: const BorderSide(color: Color(0xFF2563EB)),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                    visualDensity: VisualDensity.compact,
+                  'Apne offline teacher ka batch join karein ya Bihar ke verified coaching institutes ke private tests attend karein.',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: isDark ? const Color(0xFF94A3B8) : Colors.grey.shade700,
+                    height: 1.35,
                   ),
-                  onPressed: _openJoinBatchDialog,
+                ),
+                const SizedBox(height: 14),
+
+                // 🚀 Two-Action Buttons (High Contrast & Clear Purpose)
+                Row(
+                  children: [
+                    Expanded(
+                      flex: 6,
+                      child: ElevatedButton.icon(
+                        icon: const Icon(Icons.explore_outlined, size: 16),
+                        label: const Text('Explore Centers', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF2563EB),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                          padding: const EdgeInsets.symmetric(vertical: 11),
+                          elevation: 0,
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (_) => CoachingDirectoryScreen(isDarkMode: isDark),
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      flex: 5,
+                      child: OutlinedButton.icon(
+                        icon: const Icon(Icons.vpn_key_rounded, size: 15),
+                        label: const Text('Join Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
+                        style: OutlinedButton.styleFrom(
+                          foregroundColor: const Color(0xFF2563EB),
+                          side: const BorderSide(color: Color(0xFF2563EB), width: 1.3),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                          padding: const EdgeInsets.symmetric(vertical: 11),
+                        ),
+                        onPressed: _openJoinBatchDialog,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
           ),
         ],
+      ),
+    );
+  }
+
+  Widget _buildFeatureChip(String label, bool isDark) {
+    return Expanded(
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 6),
+        decoration: BoxDecoration(
+          color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(
+            color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
+            width: 0.8,
+          ),
+        ),
+        child: Center(
+          child: Text(
+            label,
+            style: TextStyle(
+              fontSize: 10,
+              fontWeight: FontWeight.w700,
+              color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF334155),
+            ),
+          ),
+        ),
       ),
     );
   }
