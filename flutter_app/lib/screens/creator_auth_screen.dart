@@ -1,6 +1,10 @@
+import 'dart:io';
+import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import '../services/admin_telegram_alert.dart';
 import 'admin_control_hub_screen.dart';
 import 'creator_dashboard_screen.dart';
 
@@ -33,7 +37,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
     });
 
     try {
-      // 🛡️ 1. Master Admin Check (Safe single row check via limit 1)
+      // 🛡️ 1. Master Admin Check
       final adminResList = await Supabase.instance.client
           .from('admin_config')
           .select()
@@ -56,7 +60,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
         return;
       }
 
-      // 👤 2. Regular Creator / Coaching Verification (Safe limit 1)
+      // 👤 2. Regular Creator Check
       final resList = await Supabase.instance.client
           .from('creator_profiles')
           .select()
@@ -73,7 +77,6 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
 
       final res = resList.first;
 
-      // Block/Ban Check
       if (res['is_blocked'] == true) {
         setState(() {
           _isLoading = false;
@@ -83,29 +86,22 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
       }
 
       final String? storedPin = res['security_pin']?.toString();
-
-      // PIN Check
       if (storedPin != null && storedPin.isNotEmpty && storedPin != pin) {
         setState(() {
           _isLoading = false;
-          _errorMessage = 'Invalid PIN! Sahi PIN enter karein.';
+          _errorMessage = 'Invalid PIN! Admin dwara provide kiya gaya sahi PIN enter karein.';
         });
         return;
       }
 
-      // 🏫 3. Auto-Link Coaching Table (Safe limit 1 check)
-      final coachingResList = await Supabase.instance.client
-          .from('coachings')
-          .select('id')
-          .eq('owner_name', handle)
-          .limit(1);
-
-      if (coachingResList.isEmpty) {
-        await Supabase.instance.client.from('coachings').insert({
-          'name': res['name'] ?? handle,
-          'owner_name': handle,
-          'city': 'Patna',
+      // 🛑 3. Approval Check
+      final bool isApproved = res['is_approved'] ?? false;
+      if (!isApproved) {
+        setState(() {
+          _isLoading = false;
+          _errorMessage = '⏳ Aapka account abhi Admin review ke liye pending hai.';
         });
+        return;
       }
 
       // Save Session
@@ -131,13 +127,15 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
     }
   }
 
-  // 📝 Instant Coaching / Creator Registration Modal
+  // 📝 Register Modal With Image, Title & Address
   void _openRegisterDialog() {
     final regNameCtrl = TextEditingController();
     final regHandleCtrl = TextEditingController();
-    final regPinCtrl = TextEditingController();
+    final regAddressCtrl = TextEditingController();
     final regSubjectCtrl = TextEditingController(text: 'General Studies');
+    File? selectedCoachingImage;
     bool isSubmitting = false;
+    final picker = ImagePicker();
 
     showModalBottomSheet(
       context: context,
@@ -164,29 +162,89 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 8),
+
+                // 📸 Coaching Photo Picker Container
+                GestureDetector(
+                  onTap: () async {
+                    final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
+                    if (picked != null) {
+                      setModalState(() => selectedCoachingImage = File(picked.path));
+                    }
+                  },
+                  child: Container(
+                    height: 120,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.12),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.35)),
+                    ),
+                    child: selectedCoachingImage != null
+                        ? ClipRRect(
+                            borderRadius: BorderRadius.circular(12),
+                            child: Image.file(selectedCoachingImage!, fit: BoxFit.cover, width: double.infinity),
+                          )
+                        : const Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.add_photo_alternate_outlined, size: 34, color: Color(0xFF2563EB)),
+                              SizedBox(height: 4),
+                              Text(
+                                'Upload Coaching Banner / Board Image 📷',
+                                style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                              ),
+                              Text('Photo showing institute name & banner', style: TextStyle(fontSize: 10, color: Colors.grey)),
+                            ],
+                          ),
+                  ),
+                ),
+                const SizedBox(height: 12),
+
                 TextField(
                   controller: regNameCtrl,
-                  decoration: const InputDecoration(labelText: 'Institute / Director Name', border: OutlineInputBorder(), isDense: true),
+                  decoration: const InputDecoration(
+                    labelText: 'Coaching Title / Director Name',
+                    hintText: 'e.g. Paramount Coaching Hub',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
                 ),
                 const SizedBox(height: 10),
+
+                TextField(
+                  controller: regAddressCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'Full Address / Landmark',
+                    hintText: 'e.g. Musallahpur Hat, Near Main Gate, Patna',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                ),
+                const SizedBox(height: 10),
+
                 TextField(
                   controller: regHandleCtrl,
-                  decoration: const InputDecoration(labelText: 'Unique Handle ID (without @)', hintText: 'e.g. apex_patna', border: OutlineInputBorder(), isDense: true),
+                  decoration: const InputDecoration(
+                    labelText: 'Unique Handle ID (without @)',
+                    hintText: 'e.g. paramount_patna',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
                 ),
                 const SizedBox(height: 10),
+
                 TextField(
                   controller: regSubjectCtrl,
-                  decoration: const InputDecoration(labelText: 'Target Exam / Subject Specialty', hintText: 'e.g. BPSC & BSSC Specialist', border: OutlineInputBorder(), isDense: true),
-                ),
-                const SizedBox(height: 10),
-                TextField(
-                  controller: regPinCtrl,
-                  keyboardType: TextInputType.number,
-                  obscureText: true,
-                  decoration: const InputDecoration(labelText: 'Create 4-Digit Security PIN', border: OutlineInputBorder(), isDense: true),
+                  decoration: const InputDecoration(
+                    labelText: 'Target Exam Specialty',
+                    hintText: 'e.g. BPSC, BSSC, Daroga Specialist',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
                 ),
                 const SizedBox(height: 14),
+
                 SizedBox(
                   width: double.infinity,
                   height: 44,
@@ -196,18 +254,27 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                         ? null
                         : () async {
                             final name = regNameCtrl.text.trim();
+                            final address = regAddressCtrl.text.trim();
                             final h = regHandleCtrl.text.trim().toLowerCase().replaceAll('@', '');
-                            final p = regPinCtrl.text.trim();
                             final sub = regSubjectCtrl.text.trim();
 
-                            if (name.isEmpty || h.isEmpty || p.isEmpty) {
-                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Sabhi details bharein!')));
+                            if (name.isEmpty || h.isEmpty || address.isEmpty) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Coaching Title, Address aur Handle bharein!')),
+                              );
+                              return;
+                            }
+
+                            if (selectedCoachingImage == null) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Kripya coaching banner/board ki photo upload karein!')),
+                              );
                               return;
                             }
 
                             setModalState(() => isSubmitting = true);
                             try {
-                              // Check if handle already exists
+                              // Check handle existence
                               final existing = await Supabase.instance.client
                                   .from('creator_profiles')
                                   .select('handle_id')
@@ -224,28 +291,87 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                                 return;
                               }
 
-                              // 1. Insert Creator Profile
+                              // 📤 1. Upload Photo to Supabase Storage
+                              final bytes = await selectedCoachingImage!.readAsBytes();
+                              final fileExt = selectedCoachingImage!.path.split('.').last;
+                              final fileName = 'onboarding_${h}_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
+
+                              await Supabase.instance.client.storage
+                                  .from('coaching_assets')
+                                  .uploadBinary(
+                                    fileName,
+                                    bytes,
+                                    fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true),
+                                  );
+
+                              final imageUrl = Supabase.instance.client.storage
+                                  .from('coaching_assets')
+                                  .getPublicUrl(fileName);
+
+                              // 🎲 2. Generate Random PIN
+                              final randomPin = (1000 + Random().nextInt(9000)).toString();
+
+                              // 3. Insert Profile
                               await Supabase.instance.client.from('creator_profiles').insert({
                                 'handle_id': h,
                                 'name': name,
                                 'subject_specialty': sub,
-                                'security_pin': p,
+                                'security_pin': randomPin,
                                 'followers_count': 0,
                                 'is_blocked': false,
+                                'is_approved': false,
                               });
 
-                              // 2. Insert Coaching Entry
+                              // 4. Insert Coaching with Image & Address
                               await Supabase.instance.client.from('coachings').insert({
                                 'name': name,
                                 'owner_name': h,
+                                'banner_url': imageUrl,
+                                'landmark_address': address,
                                 'city': 'Patna',
+                                'is_approved': false,
                               });
+
+                              // 5. Send Photo with Details & PIN to Telegram Admin
+                              await AdminTelegramAlert.sendCreatorApprovalRequest(
+                                name: name,
+                                handle: h,
+                                address: address,
+                                specialty: sub,
+                                generatedPin: randomPin,
+                                imageUrl: imageUrl,
+                              );
 
                               if (ctx.mounted) Navigator.pop(ctx);
 
-                              _handleCtrl.text = h;
-                              _pinCtrl.text = p;
-                              _verifyAndLogin();
+                              // 6. Show Confirmation Dialog
+                              if (context.mounted) {
+                                showDialog(
+                                  context: context,
+                                  builder: (dCtx) => AlertDialog(
+                                    backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+                                    title: const Row(
+                                      children: [
+                                        Icon(Icons.mark_email_read_outlined, color: Color(0xFF16A34A), size: 24),
+                                        SizedBox(width: 8),
+                                        Text('Request Sent with Image!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                                      ],
+                                    ),
+                                    content: const Text(
+                                      'Aapki coaching image, title aur address admin ke paas verification ke liye bhej di gayi hai.\n\nApproval milne ke baad aapko PIN provide kiya jayega jisse aap Studio me login kar sakenge.',
+                                      style: TextStyle(fontSize: 13, height: 1.4),
+                                    ),
+                                    actions: [
+                                      ElevatedButton(
+                                        style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                                        onPressed: () => Navigator.pop(dCtx),
+                                        child: const Text('Understood 👍'),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              }
                             } catch (err) {
                               setModalState(() => isSubmitting = false);
                               if (ctx.mounted) {
@@ -255,7 +381,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                           },
                     child: isSubmitting
                         ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                        : const Text('Register & Access Studio 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                        : const Text('Submit Photo & Request 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -338,7 +464,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                   keyboardType: TextInputType.number,
                   decoration: const InputDecoration(
                     labelText: 'Security PIN',
-                    hintText: 'Enter 4 or 6 digit PIN',
+                    hintText: 'Enter 4-digit PIN provided by Admin',
                     prefixIcon: Icon(Icons.lock_outline_rounded),
                     border: OutlineInputBorder(),
                   ),
@@ -374,7 +500,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                 Center(
                   child: TextButton.icon(
                     icon: const Icon(Icons.app_registration_rounded, size: 18),
-                    label: const Text('New Institute? Register Handle ID', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                    label: const Text('New Institute? Request Creator Access', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
                     onPressed: _openRegisterDialog,
                   ),
                 ),
