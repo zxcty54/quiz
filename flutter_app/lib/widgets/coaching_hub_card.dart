@@ -83,7 +83,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Apne coaching ya teacher dwara diya gaya private batch code enter karein:',
+              'Apne coaching ya teacher dwara diya gaya secret batch code enter karein:',
               style: TextStyle(fontSize: 12, color: Colors.grey),
             ),
             const SizedBox(height: 12),
@@ -155,87 +155,128 @@ class CoachingHubCardState extends State<CoachingHubCard> {
 
     if (_isLoading) return const SizedBox.shrink();
 
-    // 🎓 STATE A: Jab user kisi Batch me enrolled ho chuka ho
+    // 🎓 STATE A: Premium Active Classroom Deck (When Enrolled)
     if (_enrolledBatchCode != null) {
       return Container(
         width: double.infinity,
         decoration: BoxDecoration(
           color: cardBg,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(22),
           border: Border.all(
             color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
             width: 1.2,
           ),
           boxShadow: [
             BoxShadow(
-              color: Colors.black.withOpacity(isDark ? 0.3 : 0.05),
-              blurRadius: 14,
-              offset: const Offset(0, 4),
+              color: Colors.black.withOpacity(isDark ? 0.35 : 0.06),
+              blurRadius: 16,
+              offset: const Offset(0, 5),
             ),
           ],
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            if (_coachingBanner != null && _coachingBanner!.isNotEmpty)
-              ClipRRect(
-                borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
-                child: Image.network(
-                  _coachingBanner!,
-                  height: 120,
-                  width: double.infinity,
-                  fit: BoxFit.cover,
-                  errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+            // Top Ribbon: Institute Branding & Switch Action
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  colors: isDark
+                      ? [const Color(0xFF0F172A), const Color(0xFF1E293B)]
+                      : [const Color(0xFF0F172A), const Color(0xFF1E293B)],
                 ),
+                borderRadius: const BorderRadius.vertical(top: Radius.circular(21)),
               ),
+              child: Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF16A34A),
+                      borderRadius: BorderRadius.circular(6),
+                    ),
+                    child: const Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(Icons.check_circle_rounded, size: 12, color: Colors.white),
+                        SizedBox(width: 4),
+                        Text(
+                          'MY CLASSROOM',
+                          style: TextStyle(color: Colors.white, fontSize: 9.5, fontWeight: FontWeight.w900, letterSpacing: 0.5),
+                        ),
+                      ],
+                    ),
+                  ),
+                  const Spacer(),
+                  InkWell(
+                    onTap: _openJoinBatchDialog,
+                    child: Text(
+                      'Switch Code 🔑',
+                      style: TextStyle(color: Colors.blue.shade300, fontSize: 11.5, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            // Middle Content: Billboard Banner or Clean Title Grid
+            if (_coachingBanner != null && _coachingBanner!.isNotEmpty)
+              Image.network(
+                _coachingBanner!,
+                height: 140,
+                width: double.infinity,
+                fit: BoxFit.cover,
+                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+              ),
+
             Padding(
               padding: const EdgeInsets.all(16.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF16A34A).withOpacity(0.12),
-                          borderRadius: BorderRadius.circular(6),
-                        ),
-                        child: Text(
-                          'MY CLASSROOM • $_enrolledBatchCode',
-                          style: const TextStyle(
-                            color: Color(0xFF16A34A),
-                            fontSize: 10.5,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 0.5,
-                          ),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              _coachingName ?? 'Classroom Hub',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w800,
+                                color: isDark ? Colors.white : const Color(0xFF0F172A),
+                              ),
+                            ),
+                            const SizedBox(height: 2),
+                            Text(
+                              '$_enrolledBatchName • 📍 $_coachingCity',
+                              style: TextStyle(fontSize: 12, color: isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600),
+                            ),
+                          ],
                         ),
                       ),
-                      InkWell(
-                        onTap: _openJoinBatchDialog,
-                        child: const Text(
-                          '+ Switch Code',
-                          style: TextStyle(color: Color(0xFF2563EB), fontSize: 11.5, fontWeight: FontWeight.bold),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF2563EB).withOpacity(0.12),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.2)),
+                        ),
+                        child: Column(
+                          children: [
+                            Text('$_availableMocksCount', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: Color(0xFF2563EB))),
+                            const Text('CBT Mocks', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+                          ],
                         ),
                       ),
                     ],
                   ),
-                  const SizedBox(height: 10),
-                  Text(
-                    _coachingName ?? 'Classroom Hub',
-                    style: TextStyle(
-                      fontSize: 17.5,
-                      fontWeight: FontWeight.w800,
-                      color: isDark ? Colors.white : const Color(0xFF0F172A),
-                    ),
-                  ),
-                  const SizedBox(height: 3),
-                  Text(
-                    '$_enrolledBatchName • 📍 $_coachingCity • $_availableMocksCount CBT Mocks',
-                    style: TextStyle(fontSize: 12, color: isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600),
-                  ),
-                  const SizedBox(height: 14),
+                  const SizedBox(height: 16),
+
+                  // Action Button
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -244,6 +285,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                         foregroundColor: Colors.white,
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                         padding: const EdgeInsets.symmetric(vertical: 12),
+                        elevation: 0,
                       ),
                       onPressed: () {
                         if (_ownerHandle != null) {
@@ -261,9 +303,45 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                       child: const Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.bolt_rounded, size: 18),
+                          Icon(Icons.bolt_rounded, size: 20),
                           SizedBox(width: 6),
-                          Text('Open Batch Tests & Notes 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
+                          Text('Open Batch Tests & Handouts 🚀', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 13.5)),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  const SizedBox(height: 12),
+                  const Divider(height: 1),
+                  const SizedBox(height: 10),
+
+                  // 🔍 PERSISTENT DISCOVERY STRIP (Never hidden)
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => CoachingDirectoryScreen(isDarkMode: isDark),
+                        ),
+                      );
+                    },
+                    borderRadius: BorderRadius.circular(8),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 4),
+                      child: Row(
+                        children: [
+                          const Icon(Icons.travel_explore_rounded, size: 16, color: Color(0xFF2563EB)),
+                          const SizedBox(width: 6),
+                          Expanded(
+                            child: Text(
+                              'Explore other Bihar Coaching Centers & Mocks →',
+                              style: TextStyle(
+                                fontSize: 11.5,
+                                fontWeight: FontWeight.w700,
+                                color: isDark ? const Color(0xFF93C5FD) : const Color(0xFF2563EB),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ),
@@ -276,7 +354,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
       );
     }
 
-    // 🔍 STATE B: DISCOVERY-FIRST PORTAL (Find Coaching, Teachers & Mocks)
+    // 🔍 STATE B: Discovery-First Portal (When not enrolled)
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
@@ -297,7 +375,6 @@ class CoachingHubCardState extends State<CoachingHubCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🎨 Header: Discovery Banner
           Container(
             width: double.infinity,
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
@@ -362,14 +439,11 @@ class CoachingHubCardState extends State<CoachingHubCard> {
               ],
             ),
           ),
-
-          // 📋 Content: 3-Point Filter Highlights & Actions
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 3 Highlights Chips
                 Row(
                   children: [
                     _buildFeatureChip('📍 38 Districts', isDark),
@@ -380,9 +454,8 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                   ],
                 ),
                 const SizedBox(height: 14),
-
                 Text(
-                  'Patna, Gaya, Ara, Muzaffarpur ya apne district ke coaching centers dhundhein, study material access karein aur test series join karein.',
+                  'Patna, Gaya, Ara, Muzaffarpur ya apne district ke coaching centers dhundhein aur batch test series unlock karein.',
                   style: TextStyle(
                     fontSize: 12,
                     color: isDark ? const Color(0xFF94A3B8) : Colors.grey.shade700,
@@ -390,8 +463,6 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                   ),
                 ),
                 const SizedBox(height: 14),
-
-                // Action Buttons
                 Row(
                   children: [
                     Expanded(
@@ -446,7 +517,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
       child: Container(
         padding: const EdgeInsets.symmetric(vertical: 6),
         decoration: BoxDecoration(
-          color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
+          color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
