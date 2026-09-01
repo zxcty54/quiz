@@ -1,4 +1,7 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../services/admin_telegram_alert.dart';
 import 'creator_mock_builder_screen.dart';
@@ -43,7 +46,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     try {
       final client = Supabase.instance.client;
 
-      // 1. Fetch Profile & Coaching Details
       final profileRes = await client
           .from('creator_profiles')
           .select()
@@ -56,7 +58,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           .eq('owner_name', widget.creatorHandle)
           .maybeSingle();
 
-      // 2. Fetch Batches & Submissions
       List<dynamic> batchesRes = [];
       int batchStudentsCount = 0;
       if (coachingRes != null) {
@@ -129,11 +130,11 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     }
   }
 
-  // 🏫 Modal to Create New Coaching Batch
-  void _openCreateBatchModal() {
+  // 🏫 Complete Batch Manager (List, Delete, Copy Code & Create)
+  void _openBatchManagerModal() {
     final batchNameCtrl = TextEditingController();
     final batchCodeCtrl = TextEditingController();
-    bool isSubmitting = false;
+    bool isCreating = false;
 
     showModalBottomSheet(
       context: context,
@@ -148,111 +149,170 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             right: 16,
             top: 16,
           ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text('🏫 Create Class Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
-                  IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
-                ],
-              ),
-              const SizedBox(height: 10),
-              TextField(
-                controller: batchNameCtrl,
-                decoration: const InputDecoration(
-                  labelText: 'Batch Name (e.g. BSSC CGL 2026 Target)',
-                  border: OutlineInputBorder(),
-                  isDense: true,
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text('🏫 Manage Coaching Batches', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                  ],
                 ),
-              ),
-              const SizedBox(height: 10),
-              TextField(
-                controller: batchCodeCtrl,
-                textCapitalization: TextCapitalization.characters,
-                decoration: const InputDecoration(
-                  labelText: 'Unique Join Code (e.g. PATNA100)',
-                  border: OutlineInputBorder(),
-                  isDense: true,
-                ),
-              ),
-              const SizedBox(height: 14),
-              SizedBox(
-                width: double.infinity,
-                height: 44,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF2563EB),
-                    foregroundColor: Colors.white,
-                  ),
-                  onPressed: isSubmitting
-                      ? null
-                      : () async {
-                          final bName = batchNameCtrl.text.trim();
-                          final bCode = batchCodeCtrl.text.trim().toUpperCase();
+                const SizedBox(height: 8),
 
-                          if (bName.isEmpty || bCode.isEmpty) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(content: Text('Please fill all details!')),
-                            );
-                            return;
-                          }
-
-                          setModalState(() => isSubmitting = true);
-
-                          try {
-                            String? coachingId = _coachingData?['id'];
-
-                            if (coachingId == null) {
-                              final newCoaching = await Supabase.instance.client.from('coachings').insert({
-                                'name': _profile?['name'] ?? widget.creatorHandle,
-                                'owner_name': widget.creatorHandle,
-                              }).select().single();
-                              coachingId = newCoaching['id'];
-                            }
-
-                            await Supabase.instance.client.from('batches').insert({
-                              'coaching_id': coachingId,
-                              'batch_name': bName,
-                              'batch_code': bCode,
-                            });
-
-                            if (ctx.mounted) Navigator.pop(ctx);
-                            _loadCompleteAnalytics();
-                            if (mounted) {
+                if (_batches.isEmpty)
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.all(12),
+                    decoration: BoxDecoration(color: Colors.grey.withOpacity(0.08), borderRadius: BorderRadius.circular(10)),
+                    child: const Center(child: Text('No batches created yet. Add your first batch below!', style: TextStyle(fontSize: 12))),
+                  )
+                else
+                  ...List.generate(_batches.length, (idx) {
+                    final b = _batches[idx];
+                    final List tests = b['batch_tests'] ?? [];
+                    return Container(
+                      margin: const EdgeInsets.only(bottom: 8),
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.grey.withOpacity(0.18)),
+                      ),
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(b['batch_name'] ?? 'Class Batch', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                                const SizedBox(height: 2),
+                                Row(
+                                  children: [
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                      decoration: BoxDecoration(color: const Color(0xFF16A34A).withOpacity(0.15), borderRadius: BorderRadius.circular(4)),
+                                      child: Text('CODE: ${b['batch_code']}', style: const TextStyle(color: Color(0xFF16A34A), fontWeight: FontWeight.bold, fontSize: 11)),
+                                    ),
+                                    const SizedBox(width: 8),
+                                    Text('${tests.length} CBT Tests', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
+                          IconButton(
+                            icon: const Icon(Icons.copy_rounded, size: 18, color: Color(0xFF2563EB)),
+                            tooltip: 'Copy Code',
+                            onPressed: () {
+                              Clipboard.setData(ClipboardData(text: b['batch_code']));
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('Batch "$bName" created with Code: $bCode! 🚀')),
+                                SnackBar(content: Text('Copied Batch Code: ${b['batch_code']}')),
                               );
-                            }
-                          } catch (e) {
-                            setModalState(() => isSubmitting = false);
-                            if (ctx.mounted) {
-                              ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Error: $e')));
-                            }
-                          }
-                        },
-                  child: isSubmitting
-                      ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                      : const Text('Create Batch Code 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                            },
+                          ),
+                          IconButton(
+                            icon: const Icon(Icons.delete_outline, size: 18, color: Colors.redAccent),
+                            tooltip: 'Delete Batch',
+                            onPressed: () async {
+                              await Supabase.instance.client.from('batches').delete().eq('id', b['id']);
+                              setState(() => _batches.removeAt(idx));
+                              setModalState(() {});
+                              _loadCompleteAnalytics();
+                            },
+                          ),
+                        ],
+                      ),
+                    );
+                  }),
+
+                const Divider(height: 24),
+                const Text('+ Add New Class Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5)),
+                const SizedBox(height: 10),
+                TextField(
+                  controller: batchNameCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'Batch Name (e.g. BSSC CGL 2026 Target)',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
                 ),
-              ),
-              const SizedBox(height: 16),
-            ],
+                const SizedBox(height: 10),
+                TextField(
+                  controller: batchCodeCtrl,
+                  textCapitalization: TextCapitalization.characters,
+                  decoration: const InputDecoration(
+                    labelText: 'Unique Join Code (e.g. PATNA100)',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                ),
+                const SizedBox(height: 14),
+                SizedBox(
+                  width: double.infinity,
+                  height: 44,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                    onPressed: isCreating
+                        ? null
+                        : () async {
+                            final bName = batchNameCtrl.text.trim();
+                            final bCode = batchCodeCtrl.text.trim().toUpperCase();
+
+                            if (bName.isEmpty || bCode.isEmpty) {
+                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please enter name and code!')));
+                              return;
+                            }
+
+                            setModalState(() => isCreating = true);
+                            try {
+                              String? coachingId = _coachingData?['id'];
+                              if (coachingId == null) {
+                                final newCoaching = await Supabase.instance.client.from('coachings').insert({
+                                  'name': _profile?['name'] ?? widget.creatorHandle,
+                                  'owner_name': widget.creatorHandle,
+                                }).select().single();
+                                coachingId = newCoaching['id'];
+                              }
+
+                              await Supabase.instance.client.from('batches').insert({
+                                'coaching_id': coachingId,
+                                'batch_name': bName,
+                                'batch_code': bCode,
+                              });
+
+                              if (ctx.mounted) Navigator.pop(ctx);
+                              _loadCompleteAnalytics();
+                            } catch (e) {
+                              setModalState(() => isCreating = false);
+                            }
+                          },
+                    child: isCreating
+                        ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                        : const Text('Create Batch Code 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ),
+                const SizedBox(height: 16),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 
-  // 🎨 Modal to Customize Institute Page (Banner & Details)
+  // 🎨 Institute Customizer Modal (Direct Phone Gallery Image Picker)
   void _openInstituteCustomizerModal() {
     final nameCtrl = TextEditingController(text: _coachingData?['name'] ?? _profile?['name'] ?? '');
-    final bannerCtrl = TextEditingController(text: _coachingData?['banner_url'] ?? '');
     final cityCtrl = TextEditingController(text: _coachingData?['city'] ?? 'Patna');
     final contactCtrl = TextEditingController(text: _coachingData?['contact_number'] ?? '');
+    File? selectedBannerFile;
+    String currentBannerUrl = _coachingData?['banner_url'] ?? '';
     bool isSaving = false;
+    final picker = ImagePicker();
 
     showModalBottomSheet(
       context: context,
@@ -274,15 +334,43 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 8),
+
+                // Direct Gallery Selection Container
+                GestureDetector(
+                  onTap: () async {
+                    final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
+                    if (picked != null) {
+                      setModalState(() => selectedBannerFile = File(picked.path));
+                    }
+                  },
+                  child: Container(
+                    height: 120,
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.withOpacity(0.12),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.35)),
+                    ),
+                    child: selectedBannerFile != null
+                        ? ClipRRect(borderRadius: BorderRadius.circular(12), child: Image.file(selectedBannerFile!, fit: BoxFit.cover, width: double.infinity))
+                        : (currentBannerUrl.isNotEmpty
+                            ? ClipRRect(borderRadius: BorderRadius.circular(12), child: Image.network(currentBannerUrl, fit: BoxFit.cover, width: double.infinity))
+                            : const Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.add_photo_alternate_outlined, size: 34, color: Color(0xFF2563EB)),
+                                  SizedBox(height: 4),
+                                  Text('Tap to pick Coaching Banner from Gallery 📷', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+                                ],
+                              )),
+                  ),
+                ),
+                const SizedBox(height: 12),
+
                 TextField(
                   controller: nameCtrl,
                   decoration: const InputDecoration(labelText: 'Coaching / Institute Name', border: OutlineInputBorder(), isDense: true),
-                ),
-                const SizedBox(height: 10),
-                TextField(
-                  controller: bannerCtrl,
-                  decoration: const InputDecoration(labelText: 'Banner Poster URL (16:9 Image Link)', border: OutlineInputBorder(), isDense: true),
                 ),
                 const SizedBox(height: 10),
                 Row(
@@ -313,10 +401,24 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                         : () async {
                             setModalState(() => isSaving = true);
                             try {
+                              String bannerUrlToSave = currentBannerUrl;
+
+                              if (selectedBannerFile != null) {
+                                final bytes = await selectedBannerFile!.readAsBytes();
+                                final fileExt = selectedBannerFile!.path.split('.').last;
+                                final fileName = 'banner_${widget.creatorHandle}_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
+
+                                await Supabase.instance.client.storage
+                                    .from('coaching_assets')
+                                    .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true));
+
+                                bannerUrlToSave = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
+                              }
+
                               if (_coachingData != null) {
                                 await Supabase.instance.client.from('coachings').update({
                                   'name': nameCtrl.text.trim(),
-                                  'banner_url': bannerCtrl.text.trim(),
+                                  'banner_url': bannerUrlToSave,
                                   'city': cityCtrl.text.trim(),
                                   'contact_number': contactCtrl.text.trim(),
                                 }).eq('id', _coachingData!['id']);
@@ -324,7 +426,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                                 await Supabase.instance.client.from('coachings').insert({
                                   'name': nameCtrl.text.trim(),
                                   'owner_name': widget.creatorHandle,
-                                  'banner_url': bannerCtrl.text.trim(),
+                                  'banner_url': bannerUrlToSave,
                                   'city': cityCtrl.text.trim(),
                                   'contact_number': contactCtrl.text.trim(),
                                 });
@@ -334,7 +436,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               _loadCompleteAnalytics();
                               if (mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text('Institute details updated! 🚀'), backgroundColor: Color(0xFF16A34A)),
+                                  const SnackBar(content: Text('Institute branding updated successfully! 🚀'), backgroundColor: Color(0xFF16A34A)),
                                 );
                               }
                             } catch (e) {
@@ -355,7 +457,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     );
   }
 
-  // Creator Creation Modal (Daily Quiz & PDF Notes Only)
+  // Quiz / Handouts Creation Modal
   void _openCreationModal(String type) {
     final textCtrl = TextEditingController();
     final linkCtrl = TextEditingController();
@@ -401,18 +503,13 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   controller: textCtrl,
                   maxLines: isPoll ? 2 : 3,
                   decoration: InputDecoration(
-                    hintText: isPoll
-                        ? 'Type Quiz Question text here...'
-                        : 'Explain topic or notes headline...',
+                    hintText: isPoll ? 'Type Quiz Question text here...' : 'Explain topic or notes headline...',
                     border: const OutlineInputBorder(),
                   ),
                 ),
                 const SizedBox(height: 10),
-
-                // ⚡ 1. Daily Quiz Options Setup
                 if (isPoll) ...[
-                  const Text('Options & Correct Answer (Tap letter to set correct):',
-                      style: TextStyle(fontSize: 11, color: Colors.grey)),
+                  const Text('Options & Correct Answer (Tap letter to set correct):', style: TextStyle(fontSize: 11, color: Colors.grey)),
                   const SizedBox(height: 6),
                   ...List.generate(4, (idx) {
                     final controllers = [opCtrl1, opCtrl2, opCtrl3, opCtrl4];
@@ -428,11 +525,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               backgroundColor: isCorrect ? const Color(0xFF16A34A) : Colors.grey.withOpacity(0.3),
                               child: Text(
                                 String.fromCharCode(65 + idx),
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: isCorrect ? Colors.white : Colors.black87,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                                style: TextStyle(fontSize: 12, color: isCorrect ? Colors.white : Colors.black87, fontWeight: FontWeight.bold),
                               ),
                             ),
                           ),
@@ -440,11 +533,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                           Expanded(
                             child: TextField(
                               controller: controllers[idx],
-                              decoration: InputDecoration(
-                                hintText: 'Option ${String.fromCharCode(65 + idx)}',
-                                isDense: true,
-                                border: const OutlineInputBorder(),
-                              ),
+                              decoration: InputDecoration(hintText: 'Option ${String.fromCharCode(65 + idx)}', isDense: true, border: const OutlineInputBorder()),
                             ),
                           ),
                         ],
@@ -454,78 +543,39 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   const SizedBox(height: 4),
                   TextField(
                     controller: expCtrl,
-                    decoration: const InputDecoration(
-                      labelText: 'Explanation (Optional)',
-                      isDense: true,
-                      border: OutlineInputBorder(),
-                    ),
+                    decoration: const InputDecoration(labelText: 'Explanation (Optional)', isDense: true, border: OutlineInputBorder()),
                   ),
                 ],
-
-                // 📚 2. PDF Handouts Link Setup
                 if (type == 'note') ...[
                   TextField(
                     controller: linkCtrl,
-                    decoration: const InputDecoration(
-                      labelText: 'Google Drive / Telegram PDF Link (https://...)',
-                      isDense: true,
-                      border: OutlineInputBorder(),
-                    ),
+                    decoration: const InputDecoration(labelText: 'Google Drive / Telegram PDF Link (https://...)', isDense: true, border: OutlineInputBorder()),
                   ),
                 ],
-
                 const SizedBox(height: 14),
                 SizedBox(
                   width: double.infinity,
                   height: 46,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF2563EB),
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                    ),
+                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))),
                     onPressed: isPublishing
                         ? null
                         : () async {
                             final text = textCtrl.text.trim();
-                            if (text.isEmpty) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(content: Text('Please enter content text!')),
-                              );
-                              return;
-                            }
-
-                            if (isPoll &&
-                                (opCtrl1.text.trim().isEmpty || opCtrl2.text.trim().isEmpty)) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(content: Text('Please provide at least Option A and Option B!')),
-                              );
-                              return;
-                            }
+                            if (text.isEmpty) return;
 
                             setModalState(() => isPublishing = true);
-
                             String content = text;
-                            if (type == 'note' && linkCtrl.text.trim().isNotEmpty) {
-                              content += '\n\n${linkCtrl.text.trim()}';
-                            }
+                            if (type == 'note' && linkCtrl.text.trim().isNotEmpty) content += '\n\n${linkCtrl.text.trim()}';
 
                             Map<String, dynamic>? pollJson;
                             if (isPoll) {
-                              final rawOptions = [
-                                opCtrl1.text.trim(),
-                                opCtrl2.text.trim(),
-                                opCtrl3.text.trim(),
-                                opCtrl4.text.trim(),
-                              ].where((o) => o.isNotEmpty).toList();
-
+                              final rawOptions = [opCtrl1.text.trim(), opCtrl2.text.trim(), opCtrl3.text.trim(), opCtrl4.text.trim()].where((o) => o.isNotEmpty).toList();
                               pollJson = {
                                 'options': rawOptions,
                                 'correct_idx': correctIdx < rawOptions.length ? correctIdx : 0,
                                 'votes': List.filled(rawOptions.length, 0),
-                                'exp': expCtrl.text.trim().isNotEmpty
-                                    ? expCtrl.text.trim()
-                                    : 'Explained by @${widget.creatorHandle}',
+                                'exp': expCtrl.text.trim().isNotEmpty ? expCtrl.text.trim() : 'Explained by @${widget.creatorHandle}',
                               };
                             }
 
@@ -557,31 +607,13 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               ).catchError((_) => false);
 
                               if (ctx.mounted) Navigator.pop(ctx);
-
-                              if (mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text('⏳ Post submitted! Awaiting Telegram approval.'),
-                                    backgroundColor: Color(0xFF2563EB),
-                                  ),
-                                );
-                                _loadCompleteAnalytics();
-                              }
+                              _loadCompleteAnalytics();
                             } catch (err) {
                               setModalState(() => isPublishing = false);
-                              if (ctx.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('Publish error: $err')),
-                                );
-                              }
                             }
                           },
                     child: isPublishing
-                        ? const SizedBox(
-                            width: 20,
-                            height: 20,
-                            child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2),
-                          )
+                        ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
                         : const Text('Submit for Review 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5)),
                   ),
                 ),
@@ -626,7 +658,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 📊 1. Performance Overview Card (Batch & Public Metrics)
+            // 📊 1. Performance Overview Card
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -670,15 +702,15 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             _buildActionCard(
               title: 'Create & Manage Batches 🏫',
-              subtitle: 'Generate unique batch codes (e.g. BSSC2026) for your students.',
+              subtitle: 'View active batches, copy join codes, or delete expired batches.',
               icon: Icons.add_business_outlined,
               color: const Color(0xFF0D9488),
-              onTap: _openCreateBatchModal,
+              onTap: _openBatchManagerModal,
             ),
 
             _buildActionCard(
               title: 'Customize Institute Page & Posters 🎨',
-              subtitle: 'Upload coaching banner poster, city, and contact details.',
+              subtitle: 'Upload coaching banner from phone gallery, city, & WhatsApp.',
               icon: Icons.photo_library_outlined,
               color: const Color(0xFFEA580C),
               onTap: _openInstituteCustomizerModal,
