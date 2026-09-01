@@ -275,7 +275,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                             elevation: 1.5,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(16),
-                              border: Border.all(color: Colors.grey.withOpacity(0.15)),
+                              side: BorderSide(color: Colors.grey.withOpacity(0.15)), // ✅ Fixed parameter here
                             ),
                             child: InkWell(
                               borderRadius: BorderRadius.circular(16),
