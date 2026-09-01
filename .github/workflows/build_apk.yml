@@ -39,14 +39,13 @@ jobs:
           rm -rf android/app/src/main/java
           flutter create . --platforms=android --org com --project-name testing
 
-      - name: Configure Gradle Properties & Suppress SDK Validation
+      - name: Set Android Project SDK Properties
         working-directory: flutter_app/android
         run: |
           cat << 'EOF' >> gradle.properties
           android.useAndroidX=true
           android.enableJetifier=true
           android.suppressUnsupportedCompileSdk=36
-          android.experimental.r8.dexing-enable-interface-method-desugaring=true
           EOF
 
       - name: Inject MediaPipe MainActivity.kt
@@ -152,13 +151,13 @@ jobs:
         working-directory: flutter_app
         run: flutter pub get
 
-      - name: Deep Patch Pub Cache & Bypass AAR Metadata Check
+      - name: Inject Strict CompileSDK 36 & MediaPipe Dependencies
         run: |
           python3 - << 'EOF'
           import os
           import re
 
-          # 1. Pub Cache ke har plugin me compileSdk 36 inject karein
+          # 1. Pub Cache ke andar har plugin me compileSdk 36 enforce karein
           pub_cache_dir = os.path.expanduser("~/.pub-cache/hosted/pub.dev")
           if os.path.exists(pub_cache_dir):
               for root, _, files in os.walk(pub_cache_dir):
@@ -169,24 +168,18 @@ jobs:
                               with open(filepath, "r", encoding="utf-8") as f:
                                   content = f.read()
                               
-                              # Replace all compileSdk / compileSdkVersion occurrences with 36
-                              modified = re.sub(r'compileSdk\s*=\s*\d+', 'compileSdk = 36', content)
-                              modified = re.sub(r'compileSdkVersion\s*\(\s*\d+\s*\)', 'compileSdkVersion(36)', modified)
-                              modified = re.sub(r'compileSdkVersion\s+\d+', 'compileSdkVersion 36', modified)
+                              # Replace compileSdk/compileSdkVersion patterns with 36
+                              content = re.sub(r'compileSdk\s*=\s*\d+', 'compileSdk = 36', content)
+                              content = re.sub(r'compileSdkVersion\s*\(\s*\d+\s*\)', 'compileSdkVersion(36)', content)
+                              content = re.sub(r'compileSdkVersion\s+\d+', 'compileSdkVersion 36', content)
+                              content = re.sub(r'compileSdkVersion\s+flutter\.compileSdkVersion', 'compileSdkVersion 36', content)
                               
-                              # Replace targetSdk to avoid mismatches
-                              modified = re.sub(r'targetSdk\s*=\s*\d+', 'targetSdk = 36', modified)
-                              modified = re.sub(r'targetSdkVersion\s*\(\s*\d+\s*\)', 'targetSdkVersion(36)', modified)
-                              modified = re.sub(r'targetSdkVersion\s+\d+', 'targetSdkVersion 36', modified)
-                              
-                              if modified != content:
-                                  with open(filepath, "w", encoding="utf-8") as f:
-                                      f.write(modified)
-                                  print(f"Patched compileSdk in: {filepath}")
+                              with open(filepath, "w", encoding="utf-8") as f:
+                                  f.write(content)
                           except Exception:
                               pass
 
-          # 2. App-level build.gradle.kts config update
+          # 2. App-level build.gradle.kts configure karein
           app_kts = "flutter_app/android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
@@ -207,6 +200,27 @@ jobs:
           }
           """
               with open(app_kts, "w") as f:
+                  f.write(content)
+
+          # 3. App-level build.gradle (Groovy fallback)
+          app_groovy = "flutter_app/android/app/build.gradle"
+          if os.path.exists(app_groovy):
+              with open(app_groovy, "r") as f:
+                  content = f.read()
+              content = content.replace("compileSdkVersion flutter.compileSdkVersion", "compileSdkVersion 36")
+              if "coreLibraryDesugaringEnabled" not in content:
+                  if "compileOptions {" in content:
+                      content = content.replace("compileOptions {", "compileOptions {\n        coreLibraryDesugaringEnabled true")
+                  else:
+                      content = content.replace("android {", "android {\n    compileOptions {\n        coreLibraryDesugaringEnabled true\n    }")
+              if "tasks-genai" not in content:
+                  content += """
+          dependencies {
+              coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.4"
+              implementation 'com.google.mediapipe:tasks-genai:0.10.14'
+          }
+          """
+              with open(app_groovy, "w") as f:
                   f.write(content)
           EOF
 
@@ -232,7 +246,7 @@ jobs:
 
       - name: Build Pure Offline Release APK via Gradle
         working-directory: flutter_app/android
-        run: ./gradlew assembleRelease -PtargetPlatform=android-arm64 -x checkReleaseAarMetadata
+        run: ./gradlew assembleRelease -PtargetPlatform=android-arm64
 
       - name: Locate & Package APK
         working-directory: flutter_app
