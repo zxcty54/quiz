@@ -33,15 +33,15 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
     });
 
     try {
-      // 🛡️ 1. Master Admin Check
-      final adminRes = await Supabase.instance.client
+      // 🛡️ 1. Master Admin Check (Safe single row check via limit 1)
+      final adminResList = await Supabase.instance.client
           .from('admin_config')
           .select()
           .eq('admin_handle', handle)
           .eq('master_pin', pin)
-          .maybeSingle();
+          .limit(1);
 
-      if (adminRes != null) {
+      if (adminResList.isNotEmpty) {
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString('logged_in_creator_handle', 'admin');
 
@@ -56,20 +56,22 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
         return;
       }
 
-      // 👤 2. Regular Creator / Coaching Verification
-      final res = await Supabase.instance.client
+      // 👤 2. Regular Creator / Coaching Verification (Safe limit 1)
+      final resList = await Supabase.instance.client
           .from('creator_profiles')
           .select()
           .eq('handle_id', handle)
-          .maybeSingle();
+          .limit(1);
 
-      if (res == null) {
+      if (resList.isEmpty) {
         setState(() {
           _isLoading = false;
           _errorMessage = 'Handle "@$handle" registered nahi mila. Niche register karein.';
         });
         return;
       }
+
+      final res = resList.first;
 
       // Block/Ban Check
       if (res['is_blocked'] == true) {
@@ -86,22 +88,23 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
       if (storedPin != null && storedPin.isNotEmpty && storedPin != pin) {
         setState(() {
           _isLoading = false;
-          _errorMessage = 'Invalid PIN! Kripya sahi PIN enter karein.';
+          _errorMessage = 'Invalid PIN! Sahi PIN enter karein.';
         });
         return;
       }
 
-      // 🏫 Auto-Link Coaching Table
-      final coachingRes = await Supabase.instance.client
+      // 🏫 3. Auto-Link Coaching Table (Safe limit 1 check)
+      final coachingResList = await Supabase.instance.client
           .from('coachings')
           .select('id')
           .eq('owner_name', handle)
-          .maybeSingle();
+          .limit(1);
 
-      if (coachingRes == null) {
+      if (coachingResList.isEmpty) {
         await Supabase.instance.client.from('coachings').insert({
           'name': res['name'] ?? handle,
           'owner_name': handle,
+          'city': 'Patna',
         });
       }
 
@@ -204,6 +207,23 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
 
                             setModalState(() => isSubmitting = true);
                             try {
+                              // Check if handle already exists
+                              final existing = await Supabase.instance.client
+                                  .from('creator_profiles')
+                                  .select('handle_id')
+                                  .eq('handle_id', h)
+                                  .limit(1);
+
+                              if (existing.isNotEmpty) {
+                                setModalState(() => isSubmitting = false);
+                                if (ctx.mounted) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(content: Text('Handle ID pehle se registered hai! Doosra chunein.')),
+                                  );
+                                }
+                                return;
+                              }
+
                               // 1. Insert Creator Profile
                               await Supabase.instance.client.from('creator_profiles').insert({
                                 'handle_id': h,
@@ -218,6 +238,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                               await Supabase.instance.client.from('coachings').insert({
                                 'name': name,
                                 'owner_name': h,
+                                'city': 'Patna',
                               });
 
                               if (ctx.mounted) Navigator.pop(ctx);
