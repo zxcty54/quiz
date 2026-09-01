@@ -178,19 +178,24 @@ jobs:
               with open(app_kts, "w") as f:
                   f.write(content)
 
-          # 2. Add buildscript allprojects hook in settings.gradle.kts
+          # 2. Add valid Kotlin DSL beforeProject hook in settings.gradle.kts
           settings_kts = "android/settings.gradle.kts"
           if os.path.exists(settings_kts):
               with open(settings_kts, "a") as f:
                   f.write("""
           gradle.beforeProject {
-              project.plugins.whenPluginAdded {
-                  if (this.class.name.contains("com.android.build.gradle")) {
-                      project.extensions.findByName("android")?.with {
-                          try {
-                              setProperty("compileSdkVersion", 36)
-                          } catch (ignored: Exception) {}
-                      }
+              plugins.withId("com.android.library") {
+                  extensions.findByName("android")?.let { ext ->
+                      try {
+                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
+                      } catch (_: Exception) {}
+                  }
+              }
+              plugins.withId("com.android.application") {
+                  extensions.findByName("android")?.let { ext ->
+                      try {
+                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
+                      } catch (_: Exception) {}
                   }
               }
           }
