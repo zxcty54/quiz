@@ -108,49 +108,34 @@ jobs:
         working-directory: flutter_app
         run: flutter pub get
 
-      - name: Force CompileSDK 36, Desugaring & MediaPipe
+      - name: Patch Pub Cache Plugins & Inject MediaPipe Config
         run: |
           python3 - << 'EOF'
           import os
+          import re
 
-          # 1. Override compileSdk across all subprojects safely
-          root_gradle_kts = "flutter_app/android/build.gradle.kts"
-          root_gradle = "flutter_app/android/build.gradle"
-
-          override_block_kts = """
-          subprojects {
-              project.plugins.withId("com.android.library") {
-                  val android = project.extensions.getByType(com.android.build.api.dsl.LibraryExtension::class.java)
-                  android.compileSdk = 36
-              }
-              project.plugins.withId("com.android.application") {
-                  val android = project.extensions.getByType(com.android.build.api.dsl.ApplicationExtension::class.java)
-                  android.compileSdk = 36
-              }
-          }
-          """
-
-          override_block_groovy = """
-          subprojects {
-              plugins.withId("com.android.library") {
-                  android {
-                      compileSdkVersion 36
-                  }
-              }
-              plugins.withId("com.android.application") {
-                  android {
-                      compileSdkVersion 36
-                  }
-              }
-          }
-          """
-
-          if os.path.exists(root_gradle_kts):
-              with open(root_gradle_kts, "a") as f:
-                  f.write(override_block_kts)
-          elif os.path.exists(root_gradle):
-              with open(root_gradle, "a") as f:
-                  f.write(override_block_groovy)
+          # 1. Patch ALL pub-cache plugins (forces :jni_flutter and others to compileSdk 36)
+          pub_cache_dir = os.path.expanduser("~/.pub-cache/hosted/pub.dev")
+          if os.path.exists(pub_cache_dir):
+              for root, _, files in os.walk(pub_cache_dir):
+                  for file in files:
+                      if file in ["build.gradle", "build.gradle.kts"]:
+                          filepath = os.path.join(root, file)
+                          try:
+                              with open(filepath, "r", encoding="utf-8") as f:
+                                  content = f.read()
+                              
+                              # Replace compileSdk/compileSdkVersion patterns with 36
+                              modified = re.sub(r'compileSdk\s*=\s*\d+', 'compileSdk = 36', content)
+                              modified = re.sub(r'compileSdkVersion\s*\(\s*\d+\s*\)', 'compileSdkVersion(36)', modified)
+                              modified = re.sub(r'compileSdkVersion\s+\d+', 'compileSdkVersion 36', modified)
+                              
+                              if modified != content:
+                                  with open(filepath, "w", encoding="utf-8") as f:
+                                      f.write(modified)
+                                  print(f"Patched compileSdk to 36 in: {filepath}")
+                          except Exception as e:
+                              pass
 
           # 2. Configure App Level build.gradle.kts
           app_kts = "flutter_app/android/app/build.gradle.kts"
