@@ -1,18 +1,18 @@
 {
   "month": "Sep 2026",
-  "generated_at": "2026-09-01 04:22:44",
-  "total_questions": 4,
-  "national_total": 2,
-  "bihar_total": 2,
+  "generated_at": "2026-09-02 02:34:26",
+  "total_questions": 9,
+  "national_total": 6,
+  "bihar_total": 3,
   "source_breakdown": {
     "all_current_affairs": {
-      "total_scanned": 7,
-      "mcqs_created": 3,
-      "total_dropped": 4
+      "total_scanned": 14,
+      "mcqs_created": 6,
+      "total_dropped": 8
     },
     "final_alerts_news": {
-      "total_scanned": 3,
-      "mcqs_created": 1,
+      "total_scanned": 5,
+      "mcqs_created": 3,
       "total_dropped": 2
     }
   },
@@ -64,6 +64,102 @@
       "exam_tag": "SSC CGL / State PCS",
       "domain": "National",
       "id": "nat_q_002"
+    },
+    {
+      "source_hash": "2b7305ac",
+      "source_file": "all_current_affairs",
+      "qe": "India recently rejected a ruling regarding the 1960 Indus Waters Treaty issued by which international dispute settlement body based in The Hague?",
+      "qh": "भारत ने हाल ही में द हेग में स्थित किस अंतरराष्ट्रीय विवाद समाधान निकाय द्वारा 1960 की सिंधु जल संधि पर दिए गए निर्णय को खारिज कर दिया?",
+      "oe": [
+        "Permanent Court of Arbitration",
+        "International Court of Justice",
+        "International Centre for Settlement of Investment Disputes",
+        "United Nations International Law Commission"
+      ],
+      "oh": [
+        "स्थायी मध्यस्थता न्यायालय (Permanent Court of Arbitration)",
+        "अंतरराष्ट्रीय न्यायालय (International Court of Justice)",
+        "निवेश विवादों के निपटारे का अंतरराष्ट्रीय केंद्र (ICSID)",
+        "संयुक्त राष्ट्र अंतरराष्ट्रीय विधि आयोग (UNILC)"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because India rejected the ruling of the World Bank-constituted Permanent Court of Arbitration (PCA) in The Hague, maintaining that the court lacked jurisdiction and violated provisions of the 1960 Indus Waters Treaty.\n• Option B is Incorrect because the ruling was issued by the Court of Arbitration, not the International Court of Justice (ICJ).\n• Option C is Incorrect because ICSID handles investor-state dispute settlement, not bilateral water treaties.\n• Option D is Incorrect because the UN International Law Commission is a legal drafting body, not an arbitration tribunal.",
+      "category": "International Relations, Summits & Global Organizations",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_003"
+    },
+    {
+      "source_hash": "103c3d33",
+      "source_file": "all_current_affairs",
+      "qe": "Under which central government initiative is the indigenous cardiac pacemaker chip 'iPACE-CHIP' being developed by researchers at IIT Jammu?",
+      "qh": "IIT जम्मू के शोधकर्ताओं द्वारा स्वदेशी कार्डिएक पेसमेकर चिप 'iPACE-CHIP' का विकास किस केंद्रीय योजना के तहत किया जा रहा है?",
+      "oe": [
+        "National Quantum Mission",
+        "Semiconductor India Mission",
+        "Make in India Healthcare Initiative",
+        "Chips to Start-up (C2S) Programme"
+      ],
+      "oh": [
+        "राष्ट्रीय क्वांटम मिशन",
+        "सेमीकंडक्टर इंडिया मिशन",
+        "मेक इन इंडिया हेल्थकेयर पहल",
+        "चिप्स टू स्टार्ट-अप (C2S) कार्यक्रम"
+      ],
+      "a": 3,
+      "e": "• Option D is Correct because the indigenous 'iPACE-CHIP' pacemaker chip is being developed at IIT Jammu's IC-ResQ Lab under the Ministry of Electronics and Information Technology's Chips to Start-up (C2S) Programme.\n• Option A is Incorrect because the National Quantum Mission targets quantum computing and communication systems.\n• Option B is Incorrect because Semiconductor India Mission is the broader umbrella program, whereas C2S is the specific capacity-building initiative for chip design.\n• Option C is Incorrect because Make in India Healthcare Initiative is a general sectoral banner, not the specific funding scheme for this chip design project.",
+      "category": "Science, Technology, Defense & Space",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_004"
+    },
+    {
+      "source_hash": "a006c3fc",
+      "source_file": "final_alerts_news",
+      "qe": "Which satellite launched by ISRO using GSLV-F17 represents India's first imaging satellite deployed into a Sub-Geosynchronous Transfer Orbit (Sub-GTO)?",
+      "qh": "GSLV-F17 द्वारा इसरो द्वारा प्रक्षेपित कौन सा उपग्रह सब-जियोसिंक्रोनस ट्रांसफर ऑर्बिट (Sub-GTO) में स्थापित भारत का पहला इमेजिंग उपग्रह है?",
+      "oe": [
+        "EOS-03",
+        "EOS-05",
+        "RISAT-1B",
+        "INSAT-3DS"
+      ],
+      "oh": [
+        "ईओएस-03 (EOS-03)",
+        "ईओएस-05 (EOS-05)",
+        "रीसेट-1बी (RISAT-1B)",
+        "इनसेट-3डीएस (INSAT-3DS)"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because EOS-05 is India's first imaging satellite positioned in a Sub-Geosynchronous Transfer Orbit (Sub-GTO), launched aboard GSLV-F17 from Sriharikota.\n• Option A is Incorrect because EOS-03 was an earlier earth observation satellite launched in 2021.\n• Option C is Incorrect because RISAT-1B is a radar imaging satellite operating in low earth orbit.\n• Option D is Incorrect because INSAT-3DS is a dedicated meteorological satellite, not a Sub-GTO hyper-spectral imaging satellite.",
+      "category": "Space, Science & Technology",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_005"
+    },
+    {
+      "source_hash": "22c04c7d",
+      "source_file": "final_alerts_news",
+      "qe": "In which premier technical institute has India's first fully residential postgraduate program in Artificial Intelligence and Agentic AI Engineering been launched on campus?",
+      "qh": "किस प्रमुख तकनीकी संस्थान परिसर में भारत का पहला पूर्णतः आवासीय स्नातकोत्तर कार्यक्रम (AI एवं एजेंटिक AI इंजीनियरिंग) शुरू किया गया है?",
+      "oe": [
+        "IIT Delhi",
+        "IIT Gandhinagar",
+        "IIT Madras",
+        "IIT Bombay"
+      ],
+      "oh": [
+        "IIT दिल्ली",
+        "IIT गांधीनगर",
+        "IIT मद्रास",
+        "IIT बॉम्बे"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because IIT Gandhinagar, Gujarat, launched India's first residential Postgraduate Diploma in AI-ML & Agentic AI Engineering delivered entirely on an IIT campus, aimed at preparing students for Forward Deployed Engineering roles.\n• Option A is Incorrect because IIT Delhi is not the institute launching this specific residential postgraduate diploma in Agentic AI.\n• Option C is Incorrect because IIT Madras offers various online and data science degrees, but this specific on-campus PG diploma was launched by IIT Gandhinagar.\n• Option D is Incorrect because IIT Bombay is not associated with this milestone program.",
+      "category": "Education & Research",
+      "exam_tag": "SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_006"
     }
   ],
   "bihar_questions": [
@@ -114,6 +210,30 @@
       "exam_tag": "BPSC / State PCS",
       "domain": "Bihar",
       "id": "bih_q_002"
+    },
+    {
+      "source_hash": "e0e48328",
+      "source_file": "all_current_affairs",
+      "qe": "According to the planned proposal for the high-speed rail corridor connecting Delhi to Patna, what is the estimated total length of this bullet train route?",
+      "qh": "दिल्ली से पटना को जोड़ने के लिए प्रस्तावित उच्च गति रेल (बुलेट ट्रेन) गलियारे की अनुमानित कुल लंबाई कितनी है?",
+      "oe": [
+        "945 km",
+        "1,050 km",
+        "1,170 km",
+        "1,350 km"
+      ],
+      "oh": [
+        "945 किमी",
+        "1,050 किमी",
+        "1,170 किमी",
+        "1,350 किमी"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because the proposed Delhi-Patna high-speed bullet train corridor spans approximately 1,170 km, aiming to reduce travel time between Delhi and Patna to around 4.5 hours.\n• Option A is Incorrect because 945 km refers to the distance of the Delhi-Varanasi section of the corridor.\n• Option B is Incorrect because 1,050 km is an arbitrary distance not associated with this project.\n• Option D is Incorrect because 1,350 km exceeds the total route length planned for the Delhi-Patna alignment.",
+      "category": "Infrastructure, Energy & Digital Projects",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "Bihar",
+      "id": "bih_q_003"
     }
   ]
 }
