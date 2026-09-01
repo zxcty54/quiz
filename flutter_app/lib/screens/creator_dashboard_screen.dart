@@ -281,13 +281,23 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             try {
                               String? coachingId = _coachingData?['id'];
                               if (coachingId == null) {
-                                final newCoaching = await Supabase.instance.client.from('coachings').insert({
-                                  'name': _profile?['name'] ?? widget.creatorHandle,
-                                  'owner_name': widget.creatorHandle,
-                                  'district': 'Patna',
-                                  'city': 'Musallahpur Hat',
-                                }).select().single();
-                                coachingId = newCoaching['id'];
+                                final existing = await Supabase.instance.client
+                                    .from('coachings')
+                                    .select('id')
+                                    .eq('owner_name', widget.creatorHandle)
+                                    .maybeSingle();
+
+                                if (existing != null) {
+                                  coachingId = existing['id'];
+                                } else {
+                                  final newCoaching = await Supabase.instance.client.from('coachings').insert({
+                                    'name': _profile?['name'] ?? widget.creatorHandle,
+                                    'owner_name': widget.creatorHandle,
+                                    'district': 'Patna',
+                                    'city': 'Musallahpur Hat',
+                                  }).select('id').single();
+                                  coachingId = newCoaching['id'];
+                                }
                               }
 
                               await Supabase.instance.client.from('batches').insert({
@@ -524,7 +534,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             try {
                               String bannerUrlToSave = currentBannerUrl;
 
-                              // 📤 Storage Upload
+                              // 📤 Storage Upload to coaching_assets
                               if (selectedBannerFile != null) {
                                 final bytes = await selectedBannerFile!.readAsBytes();
                                 final fileExt = selectedBannerFile!.path.split('.').last;
@@ -553,16 +563,10 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                                 'contact_number': contactCtrl.text.trim(),
                               };
 
-                              if (_coachingData != null && _coachingData!['id'] != null) {
-                                await Supabase.instance.client
-                                    .from('coachings')
-                                    .update(payload)
-                                    .eq('id', _coachingData!['id']);
-                              } else {
-                                await Supabase.instance.client
-                                    .from('coachings')
-                                    .insert(payload);
-                              }
+                              // 🛡️ UPSERT with onConflict 'owner_name' to prevent Duplicate Key 23505 Error
+                              await Supabase.instance.client
+                                  .from('coachings')
+                                  .upsert(payload, onConflict: 'owner_name');
 
                               if (ctx.mounted) Navigator.pop(ctx);
                               await _loadCompleteAnalytics();
@@ -570,7 +574,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               if (mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
-                                    content: Text('✅ Institute profile & banner successfully saved!'),
+                                    content: Text('✅ Institute profile & branding successfully saved! 🚀'),
                                     backgroundColor: Color(0xFF16A34A),
                                   ),
                                 );
