@@ -114,6 +114,231 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     }
   }
 
+  // 📝 Post / PDF / Notice Creation Sheet
+  void _openContentPublishSheet(String type) {
+    final titleCtrl = TextEditingController();
+    final contentCtrl = TextEditingController();
+    final linkCtrl = TextEditingController();
+    
+    // For Rapid Quiz
+    final opCtrl1 = TextEditingController();
+    final opCtrl2 = TextEditingController();
+    final opCtrl3 = TextEditingController();
+    final opCtrl4 = TextEditingController();
+    final expCtrl = TextEditingController();
+    int correctIdx = 0;
+
+    bool isSubmitting = false;
+
+    String sheetTitle = '📢 Share Notice & Update';
+    String tag = 'Announcement 📢';
+    if (type == 'pdf') {
+      sheetTitle = '📚 Share PDF Notes & Handouts';
+      tag = 'Study Material 📚';
+    } else if (type == 'quiz') {
+      sheetTitle = '🎯 Publish Daily Rapid Quiz';
+      tag = 'Daily Quiz ⚡';
+    }
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setModalState) => Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(ctx).viewInsets.bottom,
+            left: 16,
+            right: 16,
+            top: 16,
+          ),
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(sheetTitle, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                  ],
+                ),
+                const SizedBox(height: 10),
+
+                if (type == 'pdf') ...[
+                  TextField(
+                    controller: titleCtrl,
+                    decoration: const InputDecoration(
+                      labelText: 'PDF Title / Chapter Name',
+                      hintText: 'e.g. Modern History Top 100 Notes',
+                      border: OutlineInputBorder(),
+                      isDense: true,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  TextField(
+                    controller: linkCtrl,
+                    decoration: const InputDecoration(
+                      labelText: 'Google Drive / Telegram PDF Link',
+                      hintText: 'https://drive.google.com/... or t.me/...',
+                      border: OutlineInputBorder(),
+                      isDense: true,
+                      prefixIcon: Icon(Icons.link_rounded, color: Color(0xFF2563EB)),
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                ],
+
+                TextField(
+                  controller: contentCtrl,
+                  maxLines: type == 'quiz' ? 2 : 4,
+                  decoration: InputDecoration(
+                    labelText: type == 'quiz' ? 'Question Statement' : 'Description / Message for Students',
+                    hintText: type == 'quiz' ? 'Type quiz question here...' : 'Explain key highlights...',
+                    border: const OutlineInputBorder(),
+                  ),
+                ),
+                const SizedBox(height: 10),
+
+                // ⚡ Quiz Options Strip
+                if (type == 'quiz') ...[
+                  const Text('Options & Correct Answer (Tap letter to set correct):', style: TextStyle(fontSize: 11, color: Colors.grey)),
+                  const SizedBox(height: 6),
+                  ...List.generate(4, (idx) {
+                    final controllers = [opCtrl1, opCtrl2, opCtrl3, opCtrl4];
+                    final isCorrect = correctIdx == idx;
+                    return Padding(
+                      padding: const EdgeInsets.only(bottom: 6),
+                      child: Row(
+                        children: [
+                          GestureDetector(
+                            onTap: () => setModalState(() => correctIdx = idx),
+                            child: CircleAvatar(
+                              radius: 14,
+                              backgroundColor: isCorrect ? const Color(0xFF16A34A) : Colors.grey.withOpacity(0.3),
+                              child: Text(
+                                String.fromCharCode(65 + idx),
+                                style: TextStyle(fontSize: 12, color: isCorrect ? Colors.white : Colors.black87, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: TextField(
+                              controller: controllers[idx],
+                              decoration: InputDecoration(
+                                hintText: 'Option ${String.fromCharCode(65 + idx)}',
+                                isDense: true,
+                                border: const OutlineInputBorder(),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  }),
+                  const SizedBox(height: 4),
+                  TextField(
+                    controller: expCtrl,
+                    decoration: const InputDecoration(labelText: 'Explanation (Optional)', isDense: true, border: OutlineInputBorder()),
+                  ),
+                  const SizedBox(height: 10),
+                ],
+
+                SizedBox(
+                  width: double.infinity,
+                  height: 44,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                    onPressed: isSubmitting
+                        ? null
+                        : () async {
+                            final rawContent = contentCtrl.text.trim();
+                            if (rawContent.isEmpty) {
+                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Content likhna zaroori hai!')));
+                              return;
+                            }
+
+                            setModalState(() => isSubmitting = true);
+
+                            String finalContent = rawContent;
+                            if (type == 'pdf') {
+                              final pTitle = titleCtrl.text.trim();
+                              final pLink = linkCtrl.text.trim();
+                              finalContent = '${pTitle.isNotEmpty ? "📑 **$pTitle**\n\n" : ""}$rawContent${pLink.isNotEmpty ? "\n\n🔗 Download Link: $pLink" : ""}';
+                            }
+
+                            Map<String, dynamic>? pollJson;
+                            if (type == 'quiz') {
+                              final rawOptions = [opCtrl1.text.trim(), opCtrl2.text.trim(), opCtrl3.text.trim(), opCtrl4.text.trim()].where((o) => o.isNotEmpty).toList();
+                              if (rawOptions.length >= 2) {
+                                pollJson = {
+                                  'options': rawOptions,
+                                  'correct_idx': correctIdx < rawOptions.length ? correctIdx : 0,
+                                  'votes': List.filled(rawOptions.length, 0),
+                                  'exp': expCtrl.text.trim().isNotEmpty ? expCtrl.text.trim() : 'Provided by @${widget.creatorHandle}',
+                                };
+                              }
+                            }
+
+                            try {
+                              final authorName = _coachingData?['name'] ?? _profile?['name'] ?? widget.creatorHandle;
+
+                              final inserted = await Supabase.instance.client.from('community_posts').insert({
+                                'creator_id': widget.creatorHandle,
+                                'author_name': authorName,
+                                'content': finalContent,
+                                'tag': tag,
+                                'poll_data': pollJson,
+                                'views_count': 1,
+                                'is_approved': true,
+                                'upvotes': 0,
+                                'downvotes': 0,
+                                'shares_count': 0,
+                                'bookmarks_count': 0,
+                              }).select().single();
+
+                              // Telegram notification
+                              AdminTelegramAlert.sendForInteractiveApproval(
+                                postId: inserted['id'] ?? 0,
+                                authorName: authorName,
+                                authorHandle: widget.creatorHandle,
+                                tag: tag,
+                                content: finalContent,
+                                hasPoll: type == 'quiz',
+                              ).catchError((_) => false);
+
+                              if (ctx.mounted) Navigator.pop(ctx);
+                              _loadCompleteAnalytics();
+
+                              if (mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(content: Text('✅ $tag successfully published to Feed & Profile!'), backgroundColor: const Color(0xFF16A34A)),
+                                );
+                              }
+                            } catch (e) {
+                              setModalState(() => isSubmitting = false);
+                              if (ctx.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Publish error: $e')));
+                              }
+                            }
+                          },
+                    child: isSubmitting
+                        ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                        : const Text('Publish to Community & Profile 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                  ),
+                ),
+                const SizedBox(height: 16),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   // 🖼️ MODULAR 1: Sirf Banner / Poster Update Sheet
   void _openBannerModifierSheet() {
     File? newImage;
@@ -527,7 +752,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 🎯 SEPARATE MODULAR MODIFIERS
+            // 🎯 Modular Modifiers
             const Text('Modify Institute & Batches', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
 
@@ -554,21 +779,45 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               color: const Color(0xFFEA580C),
               onTap: _openBatchManagerModal,
             ),
-            const SizedBox(height: 14),
+            const SizedBox(height: 16),
 
-            // CBT Tools
-            const Text('CBT Mock & Content Tools', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            // 🚀 Full Studio Content Creation Suite
+            const Text('Publish Content & Tests', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
 
             _buildActionCard(
               title: 'Create CBT Mock Test ⚡',
-              subtitle: 'Build timed CBT tests for public feed or private batches.',
+              subtitle: 'Build timed CBT tests for public feed or private classroom batches.',
               icon: Icons.assignment_add,
               color: const Color(0xFF8B5CF6),
               onTap: () => Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) => CreatorMockBuilderScreen(creatorHandle: widget.creatorHandle, isDarkMode: isDark)),
               ).then((_) => _loadCompleteAnalytics()),
+            ),
+
+            _buildActionCard(
+              title: 'Share PDF Notes & Handouts 📚',
+              subtitle: 'Post Google Drive, Telegram or download links for student notes.',
+              icon: Icons.picture_as_pdf_outlined,
+              color: const Color(0xFF059669),
+              onTap: () => _openContentPublishSheet('pdf'),
+            ),
+
+            _buildActionCard(
+              title: 'Publish Daily Rapid Quiz 🎯',
+              subtitle: 'Create 4-option instant polls with solution on community feed.',
+              icon: Icons.poll_outlined,
+              color: const Color(0xFF2563EB),
+              onTap: () => _openContentPublishSheet('quiz'),
+            ),
+
+            _buildActionCard(
+              title: 'Post Notice & Announcement 📢',
+              subtitle: 'Share batch timing, examination updates, or results celebrations.',
+              icon: Icons.campaign_outlined,
+              color: const Color(0xFFD97706),
+              onTap: () => _openContentPublishSheet('notice'),
             ),
           ],
         ),
@@ -582,7 +831,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
         Icon(icon, size: 20, color: const Color(0xFF2563EB)),
         const SizedBox(height: 4),
         Text(value, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-        Text(label, style: const TextStyle(color: Colors.grey, fontSize: 11)),
+        Text(label, style: TextStyle(color: Colors.grey[500], fontSize: 11)),
       ],
     );
   }
@@ -621,7 +870,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   children: [
                     Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
                     const SizedBox(height: 2),
-                    Text(subtitle, style: const TextStyle(color: Colors.grey, fontSize: 11.5)),
+                    Text(subtitle, style: TextStyle(color: Colors.grey[500], fontSize: 11.5)),
                   ],
                 ),
               ),
