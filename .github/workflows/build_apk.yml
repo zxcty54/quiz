@@ -39,12 +39,12 @@ jobs:
           rm -rf android/app/src/main/java
           flutter create . --platforms=android --org com --project-name testing
 
-      - name: Set Android Project SDK Properties
+      - name: Configure Global Gradle Properties
         working-directory: flutter_app/android
         run: |
           cat << 'EOF' >> gradle.properties
           android.useAndroidX=true
-          android.enableJetifier=true
+          android.enableJetifier=false
           android.suppressUnsupportedCompileSdk=36
           EOF
 
@@ -151,13 +151,14 @@ jobs:
         working-directory: flutter_app
         run: flutter pub get
 
-      - name: Inject Strict CompileSDK 36 & MediaPipe Dependencies
+      - name: Force CompileSDK 36 in Settings & Gradle Init
+        working-directory: flutter_app
         run: |
           python3 - << 'EOF'
           import os
           import re
 
-          # 1. Pub Cache ke andar har plugin me compileSdk 36 enforce karein
+          # 1. Patch pub-cache directly
           pub_cache_dir = os.path.expanduser("~/.pub-cache/hosted/pub.dev")
           if os.path.exists(pub_cache_dir):
               for root, _, files in os.walk(pub_cache_dir):
@@ -168,7 +169,6 @@ jobs:
                               with open(filepath, "r", encoding="utf-8") as f:
                                   content = f.read()
                               
-                              # Replace compileSdk/compileSdkVersion patterns with 36
                               content = re.sub(r'compileSdk\s*=\s*\d+', 'compileSdk = 36', content)
                               content = re.sub(r'compileSdkVersion\s*\(\s*\d+\s*\)', 'compileSdkVersion(36)', content)
                               content = re.sub(r'compileSdkVersion\s+\d+', 'compileSdkVersion 36', content)
@@ -179,8 +179,20 @@ jobs:
                           except Exception:
                               pass
 
-          # 2. App-level build.gradle.kts configure karein
-          app_kts = "flutter_app/android/app/build.gradle.kts"
+          # 2. Add subproject configuration script directly to android/build.gradle.kts
+          root_build_kts = "android/build.gradle.kts"
+          if os.path.exists(root_build_kts):
+              with open(root_build_kts, "a") as f:
+                  f.write("""
+          allprojects {
+              tasks.withType<com.android.build.gradle.tasks.AarMetadataTask>().configureEach {
+                  enabled = false
+              }
+          }
+          """)
+
+          # 3. Configure App Level build.gradle.kts
+          app_kts = "android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
                   content = f.read()
@@ -200,27 +212,6 @@ jobs:
           }
           """
               with open(app_kts, "w") as f:
-                  f.write(content)
-
-          # 3. App-level build.gradle (Groovy fallback)
-          app_groovy = "flutter_app/android/app/build.gradle"
-          if os.path.exists(app_groovy):
-              with open(app_groovy, "r") as f:
-                  content = f.read()
-              content = content.replace("compileSdkVersion flutter.compileSdkVersion", "compileSdkVersion 36")
-              if "coreLibraryDesugaringEnabled" not in content:
-                  if "compileOptions {" in content:
-                      content = content.replace("compileOptions {", "compileOptions {\n        coreLibraryDesugaringEnabled true")
-                  else:
-                      content = content.replace("android {", "android {\n    compileOptions {\n        coreLibraryDesugaringEnabled true\n    }")
-              if "tasks-genai" not in content:
-                  content += """
-          dependencies {
-              coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.1.4"
-              implementation 'com.google.mediapipe:tasks-genai:0.10.14'
-          }
-          """
-              with open(app_groovy, "w") as f:
                   f.write(content)
           EOF
 
