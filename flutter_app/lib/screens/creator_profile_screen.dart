@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
+import 'batch_classroom_screen.dart'; // 👈 Connected Batch Classroom Screen
 import 'sectional_cbt_screen.dart';
 
 class CreatorProfileScreen extends StatefulWidget {
@@ -207,6 +208,17 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                       backgroundColor: const Color(0xFF16A34A),
                     ),
                   );
+
+                  // Direct classroom launch after successful unlock
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => BatchClassroomScreen(
+                        batchData: batch,
+                        isDarkMode: widget.isDarkMode,
+                      ),
+                    ),
+                  );
                 }
               } else {
                 if (mounted) {
@@ -299,7 +311,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                         borderRadius: const BorderRadius.vertical(top: Radius.circular(18)),
                         child: Image.network(
                           bannerUrl,
-                          height: 185, // 👈 Height enhanced for billboard visibility
+                          height: 185,
                           width: double.infinity,
                           fit: BoxFit.cover,
                           errorBuilder: (_, __, ___) => const SizedBox.shrink(),
@@ -458,7 +470,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
     );
   }
 
-  // 🎓 BATCHES TAB (PASSWORD PROTECTED & CODE HIDDEN)
+  // 🎓 BATCHES TAB (PASSWORD PROTECTED & DIRECT CLASSROOM LINK)
   Widget _buildBatchesTab(Color cardBg) {
     if (_batches.isEmpty) {
       return const Center(child: Text('No active batches right now.'));
@@ -524,7 +536,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                 ),
                 const SizedBox(height: 12),
 
-                // Action Button (Lock vs Unlock State)
+                // Action Button (Lock vs Direct Classroom Navigation)
                 SizedBox(
                   width: double.infinity,
                   height: 38,
@@ -537,8 +549,15 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen> with Single
                     ),
                     onPressed: () {
                       if (isUnlocked) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(content: Text('Accessing "${b['batch_name']}" tests!'), backgroundColor: const Color(0xFF16A34A)),
+                        // 🚀 Navigate to Unlocked Classroom Screen
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (_) => BatchClassroomScreen(
+                              batchData: b,
+                              isDarkMode: widget.isDarkMode,
+                            ),
+                          ),
                         );
                       } else {
                         _openBatchUnlockDialog(b);
