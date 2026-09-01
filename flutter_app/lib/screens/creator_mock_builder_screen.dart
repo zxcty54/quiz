@@ -290,9 +290,9 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
           'views_count': 1,
         });
       } else {
-        // 🔒 2. Private Coaching Batch CBT Mock
+        // 🔒 2. Private Coaching Batch CBT Mock (Fixed: direct UUID string passed)
         await Supabase.instance.client.from('batch_tests').insert({
-          'batch_id': int.parse(_selectedBatchId!),
+          'batch_id': _selectedBatchId,
           'test_title': title,
           'subject': _selectedSubject,
           'duration_mins': _durationMins,
@@ -316,7 +316,9 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       }
     } catch (e) {
       setState(() => _isPublishing = false);
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Publish error: $e')));
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Publish error: $e')));
+      }
     }
   }
 
