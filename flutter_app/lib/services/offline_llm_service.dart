@@ -33,7 +33,6 @@ class OfflineLlmAgentService {
 
     final modelParams = ModelParams();
 
-    // 0.2.2 exact verified constructor
     _llama = Llama(
       path,
       modelParams: modelParams,
@@ -117,16 +116,25 @@ $userInput
 <|im_start|>assistant
 ''';
 
-    // 0.2.2 Token extraction loop
     _llama!.setPrompt(fullChatmlPrompt);
 
     final buffer = StringBuffer();
+
+    // getNext() returns (String text, bool isDone)
     while (true) {
-      final token = _llama!.getNext();
-      if (token.isEmpty || token == '<|im_end|>' || token == '<|endoftext|>') {
+      final (tokenText, isDone) = _llama!.getNext();
+
+      if (isDone || tokenText.isEmpty) {
         break;
       }
-      buffer.write(token);
+
+      if (tokenText == '<|im_end|>' ||
+          tokenText == '<|endoftext|>' ||
+          tokenText == '<|im_start|>') {
+        break;
+      }
+
+      buffer.write(tokenText);
     }
 
     return buffer.toString().trim();
