@@ -249,19 +249,26 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       total: widget.questions.length,
     );
 
+    // 🎯 Live Teacher Dashboard Sync with Suresh's Real Name & Roll
     if (widget.isBatchTest && widget.batchId != null) {
       try {
         final prefs = await SharedPreferences.getInstance();
-        final studentName = prefs.getString('custom_aspirant_name') ?? 'Enrolled Student';
+        final rawName = prefs.getString('custom_aspirant_name') ?? 'Enrolled Student';
+        final rawContact = prefs.getString('student_contact_id') ?? '';
+        
+        final studentIdentifier = (rawContact.isNotEmpty && rawContact != 'N/A')
+            ? '$rawName (Roll/Ph: $rawContact)'
+            : rawName;
+
         final double accuracyPct = _userAnswers.isNotEmpty ? (correctCount / _userAnswers.length) * 100 : 0.0;
 
         await Supabase.instance.client.from('batch_submissions').insert({
           'batch_id': widget.batchId,
-          'student_identifier': studentName,
+          'student_identifier': studentIdentifier,
           'score': score,
           'accuracy': accuracyPct.round(),
-          'weak_subject': wrongCount > 0 ? 'Target Revision Area' : 'All Clear',
-          'strong_subject': correctCount > 5 ? 'Core Concepts Strong' : 'Basic Practice',
+          'weak_subject': wrongCount > 0 ? widget.subFolder.toUpperCase() : 'All Clear',
+          'strong_subject': correctCount > 5 ? 'Strong Concepts' : 'Basic Revision',
         });
       } catch (_) {}
     }
@@ -278,55 +285,95 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     return "${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}";
   }
 
-  void _openBatchCodeDialog(String coachingName) {
+  void _openBatchCodeDialog(String coachingName) async {
+    final prefs = await SharedPreferences.getInstance();
+    final existingName = prefs.getString('custom_aspirant_name') ?? '';
+    final existingContact = prefs.getString('student_contact_id') ?? '';
+
+    final nameCtrl = TextEditingController(text: existingName);
+    final contactCtrl = TextEditingController(text: existingContact != 'N/A' ? existingContact : '');
     final codeCtrl = TextEditingController();
+
+    if (!mounted) return;
+
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         title: Row(
           children: const [
-            Icon(Icons.vpn_key_rounded, color: Color(0xFF2563EB), size: 22),
+            Icon(Icons.school_rounded, color: Color(0xFF2563EB), size: 22),
             SizedBox(width: 8),
             Text('Join Classroom Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ],
         ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Enter the private batch code shared by $coachingName:',
-              style: const TextStyle(fontSize: 12, color: Colors.grey),
-            ),
-            const SizedBox(height: 12),
-            TextField(
-              controller: codeCtrl,
-              textCapitalization: TextCapitalization.characters,
-              decoration: const InputDecoration(
-                hintText: 'e.g. PATNA100',
-                labelText: 'Batch Code',
-                border: OutlineInputBorder(),
-                isDense: true,
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                'Enter details shared by $coachingName:',
+                style: const TextStyle(fontSize: 12, color: Colors.grey),
               ),
-            ),
-          ],
+              const SizedBox(height: 12),
+              TextField(
+                controller: nameCtrl,
+                textCapitalization: TextCapitalization.words,
+                decoration: const InputDecoration(
+                  labelText: 'Student Full Name (e.g. Suresh Kumar)',
+                  border: OutlineInputBorder(),
+                  isDense: true,
+                ),
+              ),
+              const SizedBox(height: 10),
+              TextField(
+                controller: contactCtrl,
+                decoration: const InputDecoration(
+                  labelText: 'Roll No. / Mobile No.',
+                  border: OutlineInputBorder(),
+                  isDense: true,
+                ),
+              ),
+              const SizedBox(height: 10),
+              TextField(
+                controller: codeCtrl,
+                textCapitalization: TextCapitalization.characters,
+                decoration: const InputDecoration(
+                  hintText: 'e.g. PATNA100',
+                  labelText: 'Secret Batch Code',
+                  border: OutlineInputBorder(),
+                  isDense: true,
+                ),
+              ),
+            ],
+          ),
         ),
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
           ElevatedButton(
             style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
             onPressed: () async {
-              final entered = codeCtrl.text.trim().toUpperCase();
-              if (entered.isEmpty) return;
+              final enteredName = nameCtrl.text.trim();
+              final enteredContact = contactCtrl.text.trim();
+              final enteredCode = codeCtrl.text.trim().toUpperCase();
 
-              final prefs = await SharedPreferences.getInstance();
-              await prefs.setString('user_enrolled_batch_code', entered);
+              if (enteredName.isEmpty || enteredCode.isEmpty) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Name and Batch Code are required!')),
+                );
+                return;
+              }
+
+              await prefs.setString('custom_aspirant_name', enteredName);
+              await prefs.setString('student_contact_id', enteredContact.isNotEmpty ? enteredContact : 'N/A');
+              await prefs.setString('user_enrolled_batch_code', enteredCode);
+
               if (ctx.mounted) Navigator.pop(ctx);
 
               if (mounted) {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(content: Text('🎉 Verified! Enrolled with code $entered'), backgroundColor: const Color(0xFF16A34A)),
+                  SnackBar(content: Text('🎉 Verified! Enrolled $enteredName with code $enteredCode'), backgroundColor: const Color(0xFF16A34A)),
                 );
               }
             },
