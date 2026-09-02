@@ -27,18 +27,18 @@ class OfflineLlmAgentService {
       throw Exception("GGUF Model file nahi mili: $path");
     }
 
-    // Context parameters configuration
+    // 0.2.2 API: nCtx for context tokens limit
     final contextParams = ContextParams()
-      ..context = 768
+      ..nCtx = 768
       ..nThreads = 4;
 
     final modelParams = ModelParams();
 
-    // Correct class for llama_cpp_dart 0.2.x
+    // 0.2.2 API: path is positional, params are named
     _llama = Llama(
       path,
-      modelParams,
-      contextParams,
+      modelParams: modelParams,
+      contextParams: contextParams,
     );
 
     _isInitialized = true;
@@ -118,11 +118,9 @@ $userInput
 <|im_start|>assistant
 ''';
 
-    // Set prompt & generate text
-    _llama!.setPrompt(fullChatmlPrompt);
-
+    // 0.2.2 API: generate(prompt: ...) stream
     final buffer = StringBuffer();
-    await for (final token in _llama!.prompt()) {
+    await for (final token in _llama!.generate(prompt: fullChatmlPrompt)) {
       buffer.write(token);
     }
 
