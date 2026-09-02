@@ -69,14 +69,14 @@ jobs:
           }
           EOF
 
-      - name: Setup Build Configuration & Inject v2 Embedding
+      - name: Setup Build Configuration, Permissions & Native SO Packaging
         working-directory: flutter_app
         run: |
           flutter pub get
           python3 - << 'EOF'
           import os
 
-          # 1. Update android/app/build.gradle.kts to compileSdk = 36
+          # 1. Update android/app/build.gradle.kts (API 36 + Desugaring + Native SO Packaging)
           app_kts = "android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
@@ -90,13 +90,28 @@ jobs:
                       content = content.replace("compileOptions {", "compileOptions {\n        isCoreLibraryDesugaringEnabled = true")
                   else:
                       content = content.replace("android {", "android {\n    compileOptions {\n        isCoreLibraryDesugaringEnabled = true\n    }")
+
+              packaging_block = """
+      packaging {
+          resources {
+              pickFirsts.add("**/libmtmd.so")
+              pickFirsts.add("**/libllama.so")
+              pickFirsts.add("**/libc++_shared.so")
+          }
+          jniLibs {
+              useLegacyPackaging = true
+          }
+      }
+  """
+              if "packaging {" not in content:
+                  content = content.replace("android {", "android {" + packaging_block)
               
               if "desugar_jdk_libs" not in content:
                   content += """
-          dependencies {
-              coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
-          }
-          """
+  dependencies {
+      coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+  }
+  """
               with open(app_kts, "w") as f:
                   f.write(content)
 
@@ -105,40 +120,54 @@ jobs:
           if os.path.exists(settings_kts):
               with open(settings_kts, "a") as f:
                   f.write("""
-          gradle.beforeProject {
-              plugins.withId("com.android.library") {
-                  extensions.findByName("android")?.let { ext ->
-                      try {
-                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
-                      } catch (_: Exception) {}
-                  }
-              }
-              plugins.withId("com.android.application") {
-                  extensions.findByName("android")?.let { ext ->
-                      try {
-                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
-                      } catch (_: Exception) {}
-                  }
-              }
+  gradle.beforeProject {
+      plugins.withId("com.android.library") {
+          extensions.findByName("android")?.let { ext ->
+              try {
+                  ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
+              } catch (_: Exception) {}
           }
-          """)
+      }
+      plugins.withId("com.android.application") {
+          extensions.findByName("android")?.let { ext ->
+              try {
+                  ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
+              } catch (_: Exception) {}
+          }
+      }
+  }
+  """)
 
-          # 3. Inject Flutter v2 Embedding into AndroidManifest.xml
+          # 3. Inject Full Storage Permissions & Flutter v2 Embedding into AndroidManifest.xml
           manifest_path = "android/app/src/main/AndroidManifest.xml"
           if os.path.exists(manifest_path):
               with open(manifest_path, "r") as f:
                   m_content = f.read()
 
+              storage_permissions = """
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+      <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+      <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+      <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+  """
+              if "MANAGE_EXTERNAL_STORAGE" not in m_content:
+                  parts = m_content.split(">", 1)
+                  m_content = parts[0] + ">" + storage_permissions + parts[1]
+
+              if 'android:requestLegacyExternalStorage' not in m_content:
+                  m_content = m_content.replace("<application", '<application android:requestLegacyExternalStorage="true" android:largeHeap="true"', 1)
+
               v2_tag = '\n        <meta-data android:name="flutterEmbedding" android:value="2" />\n'
               if 'android:name="flutterEmbedding"' not in m_content:
                   if "</application>" in m_content:
                       m_content = m_content.replace("</application>", f"{v2_tag}    </application>")
-                  elif "<application" in m_content:
-                      m_content = m_content.replace("<application", "<application" + v2_tag, 1)
 
               with open(manifest_path, "w") as f:
                   f.write(m_content)
-          print("Build configurations & Android API 36 hooks applied successfully.")
+          print("Applied Storage Permissions, API 36, and SO packaging rules.")
           EOF
 
       - name: Setup Keystore & Permissions
