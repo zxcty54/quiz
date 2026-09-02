@@ -1,4 +1,5 @@
-import 'package:flutter_gemma/flutter_gemma.dart';
+import 'dart:io';
+import 'package:llama_cpp_dart/llama_cpp_dart.dart';
 
 enum LlmTaskType {
   duolingoExplanation,
@@ -12,19 +13,31 @@ class OfflineLlmAgentService {
   static final OfflineLlmAgentService instance = OfflineLlmAgentService._internal();
   OfflineLlmAgentService._internal();
 
-  final _gemma = FlutterGemmaPlugin.instance;
+  LlamaProcessor? _processor;
   bool _isInitialized = false;
 
   bool get isReady => _isInitialized;
 
-  Future<void> initEngine() async {
+  Future<void> initEngine({String? modelPath}) async {
     if (_isInitialized) return;
-    await _gemma.init(
-      maxTokens: 512,
-      temperature: 0.2,
-      randomSeed: 1,
-      topK: 1,
+
+    // Default test path agar pass na kiya ho
+    final path = modelPath ?? '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
+
+    if (!await File(path).exists()) {
+      throw Exception("GGUF Model file nahi mili: $path");
+    }
+
+    // Context size ko 512-768 par limit rakha hai taaki RAM 1.2GB ke andar rahe
+    final contextParams = ContextParams()
+      ..nCtx = 768
+      ..nThreads = 4;
+
+    _processor = LlamaProcessor(
+      modelPath: path,
+      contextParams: contextParams,
     );
+
     _isInitialized = true;
   }
 
@@ -33,73 +46,88 @@ class OfflineLlmAgentService {
     required String context,
     required LlmTaskType task,
   }) async {
-    String systemPrompt;
+    if (!_isInitialized || _processor == null) {
+      await initEngine();
+    }
+
+    String systemInstruction;
 
     switch (task) {
       case LlmTaskType.quiz:
-        systemPrompt = '''
-You are an autonomous AI Quiz Generator for competitive exams (BPSC, BSSC, SSC).
-Generate 2 MCQs for the user's topic based on the study context.
+        systemInstruction = '''
+You are an AI Quiz Generator for competitive exams (BPSC, BSSC, SSC).
+Generate 2 MCQs based on the context.
 Format:
 Q1. [Question]
-A) [Option 1]
-B) [Option 2]
-C) [Option 3]
-D) [Option 4]
-Correct: [Option Letter]
-Explanation: [1-line reason]
+A) [Option 1] | B) [Option 2] | C) [Option 3] | D) [Option 4]
+Correct: [Letter]
+Explanation: [1 line]
 ''';
         break;
 
       case LlmTaskType.analysis:
-        systemPrompt = '''
+        systemInstruction = '''
 You are an AI Diagnostic Evaluator.
-Analyze the user's input/answer against the verified exam rule and explain the conceptual trap.
+Analyze the user's answer against the concept and point out the trap in 2 crisp Hinglish lines.
 ''';
         break;
 
       case LlmTaskType.mnemonic:
-        systemPrompt = '''
+        systemInstruction = '''
 You are an AI Memory Specialist.
-Create a high-impact Hindi/Hinglish mnemonic code or acronym to remember this topic easily.
+Create a high-impact Hindi/Hinglish mnemonic code or trick to remember this topic easily.
 ''';
         break;
 
       case LlmTaskType.summary:
-        systemPrompt = '''
+        systemInstruction = '''
 You are a Rapid-Revision AI Agent.
-Summarize the topic into:
-• 💡 Core Law / Definition
-• ⚡ 3 Most Frequent Exam Points
-• 🎯 Elimination Strategy
+Summarize into:
+• 💡 Core Concept
+• ⚡ 3 High-Yield Exam Points
+• 🎯 Elimination Tip
 ''';
         break;
 
       case LlmTaskType.duolingoExplanation:
       default:
-        systemPrompt = '''
-You are a Duolingo-style structured learning AI tutor for competitive exams.
-Explain the topic in crisp points:
+        systemInstruction = '''
+You are a Duolingo-style structured learning AI tutor for Indian competitive exams.
+Explain in crisp points using simple Hinglish:
 1. 💡 Micro Concept (1-line definition)
 2. ⚡ 3-Step Breakdown (3 short bullet points)
 3. 🎯 1 Micro Challenge MCQ with answer.
-
-STUDY CONTEXT:
-$context
-
-TOPIC:
-$userInput
 ''';
         break;
     }
 
-    final fullPrompt = '''
-<start_of_turn>user
-$systemPrompt
-<end_of_turn>
-<start_of_turn>model
+    // Qwen 2.5/3 ChatML Template format
+    final fullChatmlPrompt = '''
+<|im_start|>system
+$systemInstruction
+<|im_end|>
+<|im_start|>user
+STUDY CONTEXT:
+$context
+
+TOPIC / INPUT:
+$userInput
+<|im_end|>
+<|im_start|>assistant
 ''';
 
-    return await _gemma.getResponse(fullPrompt);
+    // Model se inference call
+    final response = await _processor!.process(
+      fullChatmlPrompt,
+      temperature: 0.2,
+      topK: 30,
+    );
+
+    return response.trim();
+  }
+
+  void dispose() {
+    _processor?.unloadModel();
+    _isInitialized = false;
   }
 }
