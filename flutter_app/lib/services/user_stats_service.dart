@@ -14,6 +14,11 @@ class UserStatsService {
   static const String _keyWrongQuestions = 'stats_wrong_questions_json';
   static const String _keySavedQuestions = 'stats_saved_questions_json';
 
+  // 🎯 Student Identity Keys
+  static const String _keyStudentName = 'custom_aspirant_name';
+  static const String _keyStudentContact = 'student_contact_id';
+  static const String _keySubjectPerformance = 'stats_subject_performance_map';
+
   // 1️⃣ Get All Live Dynamic Stats
   static Future<Map<String, dynamic>> getStats() async {
     final prefs = await SharedPreferences.getInstance();
@@ -40,19 +45,80 @@ class UserStatsService {
       'bookmarks': savedList.length,
       'streak': prefs.getInt(_keyStreak) ?? 1,
       'accuracy': accuracy,
-      'last_chapter_name': prefs.getString(_keyLastChapterName) ?? 'Cell Biology',
+      'last_chapter_name': prefs.getString(_keyLastChapterName) ?? 'General Studies',
       'last_chapter_path': prefs.getString(_keyLastChapterPath) ?? '',
       'weekly_progress': weeklyProgress,
+      'student_name': prefs.getString(_keyStudentName) ?? 'Aspirant',
+      'student_contact': prefs.getString(_keyStudentContact) ?? '',
     };
   }
 
-  // 2️⃣ Record Question Attempt & Wrong Vault Auto-Save (Saves User's Selected Option)
+  // 2️⃣ Student Profile Identity Helper
+  static Future<void> saveStudentProfile({
+    required String name,
+    required String contactOrRoll,
+  }) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_keyStudentName, name.trim());
+    await prefs.setString(_keyStudentContact, contactOrRoll.trim());
+  }
+
+  static Future<Map<String, String>> getStudentProfile() async {
+    final prefs = await SharedPreferences.getInstance();
+    return {
+      'name': prefs.getString(_keyStudentName) ?? 'Aspirant',
+      'contact': prefs.getString(_keyStudentContact) ?? '',
+    };
+  }
+
+  // 3️⃣ Subject-Wise Accuracy Tracker (For Suresh's Deep Analytics)
+  static Future<void> recordSubjectPerformance({
+    required String subject,
+    required int correct,
+    required int total,
+  }) async {
+    if (total <= 0) return;
+    final prefs = await SharedPreferences.getInstance();
+    final cleanSubject = subject.trim().toUpperCase();
+
+    Map<String, dynamic> perfMap = {};
+    final raw = prefs.getString(_keySubjectPerformance);
+    if (raw != null) {
+      try {
+        perfMap = jsonDecode(raw);
+      } catch (_) {}
+    }
+
+    int prevCorrect = (perfMap[cleanSubject]?['correct'] as int?) ?? 0;
+    int prevTotal = (perfMap[cleanSubject]?['total'] as int?) ?? 0;
+
+    perfMap[cleanSubject] = {
+      'correct': prevCorrect + correct,
+      'total': prevTotal + total,
+      'accuracy': (((prevCorrect + correct) / (prevTotal + total)) * 100).round(),
+    };
+
+    await prefs.setString(_keySubjectPerformance, jsonEncode(perfMap));
+  }
+
+  static Future<Map<String, dynamic>> getSubjectAnalytics() async {
+    final prefs = await SharedPreferences.getInstance();
+    final raw = prefs.getString(_keySubjectPerformance);
+    if (raw == null) return {};
+    try {
+      return jsonDecode(raw) as Map<String, dynamic>;
+    } catch (_) {
+      return {};
+    }
+  }
+
+  // 4️⃣ Record Question Attempt & Wrong Vault Auto-Save
   static Future<void> recordQuestionAttempt({
     required bool isCorrect,
     required String chapterName,
     required String chapterPath,
     Map<String, dynamic>? wrongQuestionJson,
-    String? userSelectedOption, // 👈 Saves user's personal choice
+    String? userSelectedOption,
   }) async {
     final prefs = await SharedPreferences.getInstance();
 
@@ -65,21 +131,18 @@ class UserStatsService {
     } else if (wrongQuestionJson != null) {
       List<String> wrongList = prefs.getStringList(_keyWrongQuestions) ?? [];
       
-      // Auto-add Date & Default Vault Metadata
       DateTime now = DateTime.now();
       wrongQuestionJson['dateAdded'] = "${now.day}/${now.month}/${now.year}";
       wrongQuestionJson['chapterName'] = chapterName;
       wrongQuestionJson['masteryStreak'] = wrongQuestionJson['masteryStreak'] ?? 0;
       wrongQuestionJson['errorTag'] = wrongQuestionJson['errorTag'] ?? '';
       
-      // 🎯 SAVE USER'S PERSONAL WRONG CHOICE
       if (userSelectedOption != null && userSelectedOption.isNotEmpty) {
         wrongQuestionJson['userSelectedOption'] = userSelectedOption;
       }
 
       String encoded = jsonEncode(wrongQuestionJson);
       
-      // Prevent duplicates by checking Question text
       String qText = wrongQuestionJson['qe'] ?? wrongQuestionJson['qh'] ?? '';
       bool alreadyExists = wrongList.any((item) {
         try {
@@ -107,7 +170,7 @@ class UserStatsService {
     await prefs.setInt(dateKey, todayCount + 1);
   }
 
-  // 3️⃣ Update Error Tag Persistent (50-50 Trap vs Concept Gap)
+  // 5️⃣ Update Error Tag Persistent
   static Future<void> updateWrongQuestionTag(int index, String tag) async {
     final prefs = await SharedPreferences.getInstance();
     List<String> rawList = prefs.getStringList(_keyWrongQuestions) ?? [];
@@ -121,7 +184,7 @@ class UserStatsService {
     } catch (_) {}
   }
 
-  // 4️⃣ Smart Revision Ladder: Increment Mastery Streak & Auto-Graduate on 2/2
+  // 6️⃣ Smart Revision Ladder: Auto-Graduate on 2/2
   static Future<bool> incrementQuestionMastery(int index) async {
     final prefs = await SharedPreferences.getInstance();
     List<String> rawList = prefs.getStringList(_keyWrongQuestions) ?? [];
@@ -132,10 +195,9 @@ class UserStatsService {
       int currentStreak = (qMap['masteryStreak'] ?? 0) + 1;
 
       if (currentStreak >= 2) {
-        // 🎯 Auto-Graduate / Delete from Vault on 2/2
         rawList.removeAt(index);
         await prefs.setStringList(_keyWrongQuestions, rawList);
-        return true; // Indicates graduated!
+        return true;
       } else {
         qMap['masteryStreak'] = currentStreak;
         rawList[index] = jsonEncode(qMap);
@@ -147,7 +209,7 @@ class UserStatsService {
     }
   }
 
-  // 5️⃣ Toggle Save/Bookmark Question
+  // 7️⃣ Toggle Save/Bookmark Question
   static Future<bool> toggleBookmark(Map<String, dynamic> questionJson) async {
     final prefs = await SharedPreferences.getInstance();
     List<String> savedList = prefs.getStringList(_keySavedQuestions) ?? [];
@@ -165,21 +227,21 @@ class UserStatsService {
     return isSaved;
   }
 
-  // 6️⃣ Get Bookmarked Questions
+  // 8️⃣ Get Bookmarked Questions
   static Future<List<Map<String, dynamic>>> getSavedQuestions() async {
     final prefs = await SharedPreferences.getInstance();
     List<String> rawList = prefs.getStringList(_keySavedQuestions) ?? [];
     return rawList.map((item) => jsonDecode(item) as Map<String, dynamic>).toList();
   }
 
-  // 7️⃣ Get Wrong Questions
+  // 9️⃣ Get Wrong Questions
   static Future<List<Map<String, dynamic>>> getWrongQuestions() async {
     final prefs = await SharedPreferences.getInstance();
     List<String> rawList = prefs.getStringList(_keyWrongQuestions) ?? [];
     return rawList.map((item) => jsonDecode(item) as Map<String, dynamic>).toList();
   }
 
-  // 8️⃣ Clear Wrong Vault Questions
+  // 🔟 Clear Wrong Vault Questions
   static Future<void> clearWrongQuestions() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_keyWrongQuestions);
