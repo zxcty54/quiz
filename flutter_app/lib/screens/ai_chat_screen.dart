@@ -1,9 +1,10 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+// Apne project path ke mutabiq service import karein
+import 'offline_llm_agent_service.dart';
 
 class AiChatScreen extends StatefulWidget {
   final bool isDarkMode;
@@ -21,7 +22,6 @@ class _ChatMessage {
 }
 
 class _AiChatScreenState extends State<AiChatScreen> {
-  static const platform = MethodChannel('com.mocktester.ai/offline_llm');
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
   final List<_ChatMessage> _messages = [];
@@ -29,7 +29,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   bool _isModelLoaded = false;
   bool _isLoading = false;
   bool _isGenerating = false;
-  String _statusMessage = "Checking offline model...";
+  String _statusMessage = "Checking offline Qwen model...";
 
   @override
   void initState() {
@@ -38,71 +38,62 @@ class _AiChatScreenState extends State<AiChatScreen> {
   }
 
   Future<void> _checkAndAutoLoadModel() async {
-    final appDir = await getApplicationDocumentsDirectory();
-    final permanentModelFile = File('${appDir.path}/gemma_model.bin');
+    // 1. Check Download folder default path
+    const defaultDownloadPath = '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
+    if (await File(defaultDownloadPath).exists()) {
+      await _initQwenModel(defaultDownloadPath);
+      return;
+    }
 
-    if (await permanentModelFile.exists()) {
-      _initNativeModel(permanentModelFile.path);
+    // 2. Check internal documents directory
+    final appDir = await getApplicationDocumentsDirectory();
+    final internalFile = File('${appDir.path}/qwen3-5-2B-Q4_K_M.gguf');
+    if (await internalFile.exists()) {
+      await _initQwenModel(internalFile.path);
+      return;
+    }
+
+    // 3. Check SharedPreferences saved path
+    final prefs = await SharedPreferences.getInstance();
+    final savedPath = prefs.getString('saved_qwen_path');
+    if (savedPath != null && File(savedPath).existsSync()) {
+      await _initQwenModel(savedPath);
     } else {
-      final prefs = await SharedPreferences.getInstance();
-      final savedPath = prefs.getString('saved_gemma_path');
-      if (savedPath != null && File(savedPath).existsSync()) {
-        _initNativeModel(savedPath);
-      } else {
-        setState(() {
-          _statusMessage = "Select Gemma .bin model once";
-        });
-      }
+      setState(() {
+        _statusMessage = "Select Qwen .gguf model";
+      });
     }
   }
 
   Future<void> _pickModelFile() async {
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
-      allowedExtensions: ['bin'],
+      allowedExtensions: ['gguf', 'bin'],
     );
 
     if (result != null && result.files.single.path != null) {
       final pickedPath = result.files.single.path!;
-      
-      setState(() {
-        _isLoading = true;
-        _statusMessage = "Saving Gemma model permanently...";
-      });
-
-      try {
-        final appDir = await getApplicationDocumentsDirectory();
-        final permanentFile = File('${appDir.path}/gemma_model.bin');
-        
-        if (!await permanentFile.exists()) {
-          await File(pickedPath).copy(permanentFile.path);
-        }
-
-        _initNativeModel(permanentFile.path);
-      } catch (e) {
-        _initNativeModel(pickedPath);
-      }
+      await _initQwenModel(pickedPath);
     }
   }
 
-  Future<void> _initNativeModel(String path) async {
+  Future<void> _initQwenModel(String path) async {
     setState(() {
       _isLoading = true;
-      _statusMessage = "Loading Gemma 2B CPU into RAM...";
+      _statusMessage = "Loading Qwen GGUF into RAM...";
     });
 
     try {
-      final bool result = await platform.invokeMethod('initModel', {'modelPath': path});
-      if (result) {
-        final prefs = await SharedPreferences.getInstance();
-        await prefs.setString('saved_gemma_path', path);
+      await OfflineLlmAgentService.instance.initEngine(modelPath: path);
 
-        setState(() {
-          _isModelLoaded = true;
-          _isLoading = false;
-          _statusMessage = "Gemma 2B Active (Offline)";
-        });
-      }
+      final prefs = await SharedPreferences.getInstance();
+      await prefs.setString('saved_qwen_path', path);
+
+      setState(() {
+        _isModelLoaded = true;
+        _isLoading = false;
+        _statusMessage = "Qwen 2B GGUF Active (Offline)";
+      });
     } catch (e) {
       setState(() {
         _isLoading = false;
@@ -124,14 +115,19 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _scrollToBottom();
 
     try {
-      final String response = await platform.invokeMethod('generate', {'prompt': text});
+      final String response = await OfflineLlmAgentService.instance.executeLlmAgent(
+        userInput: text,
+        context: "BPSC / BSSC Exam Preparation Study Guide",
+        task: LlmTaskType.duolingoExplanation,
+      );
+
       setState(() {
         _messages.add(_ChatMessage(text: response, isUser: false));
         _isGenerating = false;
       });
     } catch (e) {
       setState(() {
-        _messages.add(_ChatMessage(text: "Error: $e", isUser: false));
+        _messages.add(_ChatMessage(text: "Inference Error: $e", isUser: false));
         _isGenerating = false;
       });
     }
@@ -176,7 +172,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.folder_open),
-            tooltip: "Select Model (.bin)",
+            tooltip: "Select Model (.gguf)",
             onPressed: _isLoading ? null : _pickModelFile,
           ),
         ],
@@ -189,8 +185,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
                 ? Center(
                     child: Text(
                       _isModelLoaded
-                          ? "Gemma 2B Ready! Type anything..."
-                          : "Tap folder icon to select Gemma .bin model",
+                          ? "Qwen 2B Ready! Ask any question..."
+                          : "Tap folder icon to select .gguf model",
                       style: TextStyle(color: isDark ? Colors.grey.shade400 : Colors.grey),
                     ),
                   )
@@ -231,7 +227,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                 children: [
                   const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2)),
                   const SizedBox(width: 8),
-                  Text("Gemma is thinking...", style: TextStyle(fontSize: 12, color: isDark ? Colors.grey.shade400 : Colors.grey)),
+                  Text("Qwen is formulating analysis...", style: TextStyle(fontSize: 12, color: isDark ? Colors.grey.shade400 : Colors.grey)),
                 ],
               ),
             ),
