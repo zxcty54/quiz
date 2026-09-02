@@ -150,9 +150,18 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     }
   }
 
-  // 🔑 Secret Batch Code Modal
-  void _openBatchUnlockDialog(Map<String, dynamic> batch) {
+  // 🎓 Verified Admission / Unlock Dialog with Student Identity
+  void _openBatchUnlockDialog(Map<String, dynamic> batch) async {
+    final prefs = await SharedPreferences.getInstance();
+    final existingName = prefs.getString('custom_aspirant_name') ?? '';
+    final existingContact = prefs.getString('student_contact_id') ?? '';
+
+    final nameCtrl = TextEditingController(text: existingName);
+    final contactCtrl = TextEditingController(text: existingContact != 'N/A' ? existingContact : '');
     final codeCtrl = TextEditingController();
+
+    if (!mounted) return;
+
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
@@ -161,56 +170,98 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
         title: Row(
           children: [
-            const Icon(Icons.lock_open_rounded,
-                color: Color(0xFF2563EB), size: 22),
+            const Icon(Icons.school_rounded, color: Color(0xFF2563EB), size: 22),
             const SizedBox(width: 8),
             Expanded(
               child: Text(
                 'Enroll: ${batch['batch_name']}',
-                style: const TextStyle(
-                    fontWeight: FontWeight.bold, fontSize: 16),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 overflow: TextOverflow.ellipsis,
               ),
             ),
           ],
         ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Text(
-              'Apne coaching / teacher dwara diya gaya secret batch code enter karein:',
-              style: TextStyle(fontSize: 12, color: Colors.grey),
-            ),
-            const SizedBox(height: 12),
-            TextField(
-              controller: codeCtrl,
-              textCapitalization: TextCapitalization.characters,
-              decoration: const InputDecoration(
-                hintText: 'e.g. PATNA100',
-                labelText: 'Secret Batch Code',
-                border: OutlineInputBorder(),
-                isDense: true,
+        content: SingleChildScrollView(
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Text(
+                'Classroom batch me judne ke liye apna poora naam, roll number aur secret batch code bharein:',
+                style: TextStyle(fontSize: 12, color: Colors.grey),
               ),
-            ),
-          ],
+              const SizedBox(height: 14),
+
+              // 1. Student Real Name
+              TextField(
+                controller: nameCtrl,
+                textCapitalization: TextCapitalization.words,
+                decoration: const InputDecoration(
+                  labelText: 'Student Full Name (e.g. Suresh Kumar)',
+                  hintText: 'Apna poora naam likhein',
+                  border: OutlineInputBorder(),
+                  isDense: true,
+                  prefixIcon: Icon(Icons.person_outline, size: 20),
+                ),
+              ),
+              const SizedBox(height: 10),
+
+              // 2. Roll No / Mobile No
+              TextField(
+                controller: contactCtrl,
+                decoration: const InputDecoration(
+                  labelText: 'Roll No. ya Mobile No.',
+                  hintText: 'e.g. Roll-104 ya 9876543210',
+                  border: OutlineInputBorder(),
+                  isDense: true,
+                  prefixIcon: Icon(Icons.badge_outlined, size: 20),
+                ),
+              ),
+              const SizedBox(height: 10),
+
+              // 3. Batch Secret Code
+              TextField(
+                controller: codeCtrl,
+                textCapitalization: TextCapitalization.characters,
+                decoration: const InputDecoration(
+                  labelText: 'Secret Batch Code',
+                  hintText: 'e.g. PATNA100',
+                  border: OutlineInputBorder(),
+                  isDense: true,
+                  prefixIcon: Icon(Icons.vpn_key_outlined, size: 20),
+                ),
+              ),
+            ],
+          ),
         ),
         actions: [
           TextButton(
-              onPressed: () => Navigator.pop(ctx),
-              child: const Text('Cancel')),
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Cancel'),
+          ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: const Color(0xFF2563EB),
               foregroundColor: Colors.white,
             ),
             onPressed: () async {
+              final enteredName = nameCtrl.text.trim();
+              final enteredContact = contactCtrl.text.trim();
               final enteredCode = codeCtrl.text.trim().toUpperCase();
               final actualCode =
                   (batch['batch_code'] ?? '').toString().toUpperCase();
 
-              if (enteredCode.isNotEmpty && enteredCode == actualCode) {
-                final prefs = await SharedPreferences.getInstance();
+              if (enteredName.isEmpty || enteredCode.isEmpty) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('Naam aur Batch Code dono likhna anivarya hai!')),
+                );
+                return;
+              }
+
+              if (enteredCode == actualCode) {
+                // Identity locally locked so every future test tags Suresh Kumar
+                await prefs.setString('custom_aspirant_name', enteredName);
+                await prefs.setString('student_contact_id', enteredContact.isNotEmpty ? enteredContact : 'N/A');
                 await prefs.setString('user_enrolled_batch_code', enteredCode);
 
                 if (ctx.mounted) Navigator.pop(ctx);
@@ -219,8 +270,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 if (mounted) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      content: Text(
-                          '🎉 Verified! Welcome to "${batch['batch_name']}"'),
+                      content: Text('🎉 Verified! Welcome $enteredName to "${batch['batch_name']}"'),
                       backgroundColor: const Color(0xFF16A34A),
                     ),
                   );
@@ -236,16 +286,14 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                   );
                 }
               } else {
-                if (mounted) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    const SnackBar(
-                        content: Text(
-                            '❌ Invalid Code! Teacher se sahi password/code lein.')),
-                  );
-                }
+                ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(
+                    content: Text('❌ Galat Code! Coaching teacher se sahi batch password lein.'),
+                  ),
+                );
               }
             },
-            child: const Text('Unlock Batch 🚀'),
+            child: const Text('Verify & Unlock 🚀'),
           ),
         ],
       ),
@@ -335,7 +383,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 1. High-Visibility Billboard Poster
+                // 1. Billboard Poster
                 if (bannerUrl != null && bannerUrl.isNotEmpty)
                   Image.network(
                     bannerUrl,
