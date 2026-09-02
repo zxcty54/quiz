@@ -50,40 +50,89 @@ jobs:
       - name: Configure Global Gradle Properties
         working-directory: flutter_app/android
         run: |
-          echo "android.useAndroidX=true" >> gradle.properties
-          echo "android.enableJetifier=false" >> gradle.properties
-          echo "android.suppressUnsupportedCompileSdk=36,Baklava" >> gradle.properties
-          echo "android.experimental.disableCompileSdkChecks=true" >> gradle.properties
+          cat << 'EOF' >> gradle.properties
+          android.useAndroidX=true
+          android.enableJetifier=false
+          android.suppressUnsupportedCompileSdk=36,Baklava
+          android.experimental.disableCompileSdkChecks=true
+          EOF
 
       - name: Inject Clean Flutter MainActivity.kt
         run: |
           mkdir -p flutter_app/android/app/src/main/kotlin/com/testing
-          echo "package com.testing" > flutter_app/android/app/src/main/kotlin/com/testing/MainActivity.kt
-          echo "import io.flutter.embedding.android.FlutterActivity" >> flutter_app/android/app/src/main/kotlin/com/testing/MainActivity.kt
-          echo "class MainActivity: FlutterActivity() {}" >> flutter_app/android/app/src/main/kotlin/com/testing/MainActivity.kt
+          cat << 'EOF' > flutter_app/android/app/src/main/kotlin/com/testing/MainActivity.kt
+          package com.testing
 
-      - name: Setup Build Configuration, Permissions & Native SO Packaging
+          import io.flutter.embedding.android.FlutterActivity
+
+          class MainActivity: FlutterActivity() {
+          }
+          EOF
+
+      - name: Inject Valid AndroidManifest.xml
+        run: |
+          cat << 'EOF' > flutter_app/android/app/src/main/AndroidManifest.xml
+          <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+              package="com.testing">
+
+              <uses-permission android:name="android.permission.INTERNET"/>
+              <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+              <uses-permission android:name="android.permission.VIBRATE"/>
+              <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+              <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+              <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+              <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+              <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
+              <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
+
+              <application
+                  android:label="MockTester"
+                  android:name="${applicationName}"
+                  android:icon="@mipmap/ic_launcher"
+                  android:usesCleartextTraffic="false"
+                  android:requestLegacyExternalStorage="true"
+                  android:largeHeap="true"
+                  android:hardwareAccelerated="true">
+
+                  <meta-data
+                      android:name="flutterEmbedding"
+                      android:value="2" />
+
+                  <activity
+                      android:name=".MainActivity"
+                      android:exported="true"
+                      android:launchMode="singleTop"
+                      android:taskAffinity=""
+                      android:theme="@style/LaunchTheme"
+                      android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+                      android:hardwareAccelerated="true"
+                      android:windowSoftInputMode="adjustResize">
+
+                      <meta-data
+                          android:name="io.flutter.embedding.android.NormalTheme"
+                          android:resource="@style/NormalTheme" />
+
+                      <intent-filter>
+                          <action android:name="android.intent.action.MAIN"/>
+                          <category android:name="android.intent.category.LAUNCHER"/>
+                      </intent-filter>
+                  </activity>
+              </application>
+          </manifest>
+          EOF
+
+      - name: Setup Build Configuration & SO Packaging
         working-directory: flutter_app
         run: |
           flutter pub get
 
-          # 1. Update android/app/build.gradle.kts (API 36 & Packaging)
+          # Packaging fix for libmtmd.so and API 36 inside build.gradle.kts
           APP_KTS="android/app/build.gradle.kts"
           if [ -f "$APP_KTS" ]; then
             sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/g' "$APP_KTS"
             sed -i 's/compileSdk = 34/compileSdk = 36/g' "$APP_KTS"
             
-            # Add packaging block for native SO files
             sed -i '/android {/a \    packaging {\n        resources {\n            pickFirsts.add("**/libmtmd.so")\n            pickFirsts.add("**/libllama.so")\n            pickFirsts.add("**/libc++_shared.so")\n        }\n        jniLibs {\n            useLegacyPackaging = true\n        }\n    }' "$APP_KTS"
-          fi
-
-          # 2. Inject Storage Permissions into AndroidManifest.xml
-          MANIFEST="android/app/src/main/AndroidManifest.xml"
-          if [ -f "$MANIFEST" ]; then
-            PERMS='    <uses-permission android:name="android.permission.INTERNET"/>\n    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>\n    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>\n    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>\n    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>\n    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>\n    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>'
-            sed -i "/<manifest/a $PERMS" "$MANIFEST"
-            sed -i 's/<application/<application android:requestLegacyExternalStorage="true" android:largeHeap="true"/g' "$MANIFEST"
-            sed -i '/<\/application>/i \        <meta-data android:name="flutterEmbedding" android:value="2" />' "$MANIFEST"
           fi
 
       - name: Setup Keystore & Permissions
