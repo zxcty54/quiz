@@ -24,7 +24,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
   int _durationMins = 15;
   bool _isPublishing = false;
 
-  // 🎯 Target Selection & Batch Data
   String _publishTarget = 'PUBLIC'; // 'PUBLIC' or 'BATCH'
   String? _selectedBatchId;
   List<Map<String, dynamic>> _myBatches = [];
@@ -52,7 +51,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
             .from('batches')
             .select('id, batch_name, batch_code, status, batch_tests(id)')
             .eq('coaching_id', coachingRes['id'])
-            .neq('status', 'HIDDEN') // Only active/available batches
+            .neq('status', 'HIDDEN')
             .order('created_at', ascending: false);
 
         if (mounted) {
@@ -89,6 +88,278 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       _questions.removeAt(index);
       if (_questions.isEmpty) _addNewBlankQuestion();
     });
+  }
+
+  // 🛡️ Strict Question Validator
+  String? _validateQuestions() {
+    if (_questions.isEmpty) {
+      return 'Please add at least 1 question.';
+    }
+
+    for (int i = 0; i < _questions.length; i++) {
+      final q = _questions[i];
+      final qText = (q['question'] as String? ?? '').trim();
+      final options = (q['options'] as List? ?? []).map((e) => e.toString().trim()).toList();
+      final answer = q['answer'];
+
+      if (qText.isEmpty) {
+        return '⚠️ Question ${i + 1} is empty. Please enter question text.';
+      }
+
+      if (options.length < 4) {
+        return '⚠️ Question ${i + 1} is incomplete. 4 options required.';
+      }
+
+      for (int o = 0; o < 4; o++) {
+        if (options[o].isEmpty) {
+          final letter = String.fromCharCode(65 + o);
+          return '⚠️ Question ${i + 1} is incomplete.\nPlease fill Option $letter.';
+        }
+      }
+
+      if (answer == null || answer is! int || answer < 0 || answer > 3) {
+        return '⚠️ Question ${i + 1} has an invalid answer selection.';
+      }
+    }
+    return null; // All valid
+  }
+
+  // 👁️ Live Student Preview Bottom Sheet
+  void _openStudentPreview() {
+    final validationError = _validateQuestions();
+    if (validationError != null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(validationError),
+          backgroundColor: Colors.red.shade800,
+          duration: const Duration(seconds: 3),
+        ),
+      );
+      return;
+    }
+
+    int previewCurrentIndex = 0;
+    int? selectedOption;
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white,
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setPreviewState) {
+          final q = _questions[previewCurrentIndex];
+          final options = (q['options'] as List).map((e) => e.toString()).toList();
+          final qText = q['question'] as String;
+
+          return Container(
+            height: MediaQuery.of(ctx).size.height * 0.82,
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Modal Top Bar
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF2563EB).withOpacity(0.12),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: const Row(
+                        children: [
+                          Icon(Icons.remove_red_eye_outlined, size: 14, color: Color(0xFF2563EB)),
+                          SizedBox(width: 4),
+                          Text(
+                            'STUDENT PREVIEW MODE',
+                            style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.w900, color: Color(0xFF2563EB)),
+                          ),
+                        ],
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.close),
+                      visualDensity: VisualDensity.compact,
+                      onPressed: () => Navigator.pop(ctx),
+                    ),
+                  ],
+                ),
+                const Divider(height: 14),
+
+                // Header Mock Specs (Title, Question Counter & Timer)
+                Text(
+                  _titleCtrl.text.trim().isNotEmpty ? _titleCtrl.text.trim() : 'Mock Test Preview',
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+                const SizedBox(height: 4),
+                Row(
+                  children: [
+                    Text(
+                      '${_questions.length} Questions',
+                      style: const TextStyle(fontSize: 12, color: Colors.grey, fontWeight: FontWeight.w600),
+                    ),
+                    const SizedBox(width: 8),
+                    const Text('•', style: TextStyle(color: Colors.grey)),
+                    const SizedBox(width: 8),
+                    const Icon(Icons.timer_outlined, size: 14, color: Colors.amber),
+                    const SizedBox(width: 4),
+                    Text(
+                      '⏱ $_durationMins Minutes',
+                      style: const TextStyle(fontSize: 12, color: Colors.amber, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 14),
+
+                // Question Counter Bar
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'Question ${previewCurrentIndex + 1} of ${_questions.length}',
+                      style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                    ),
+                    Text(
+                      '+1 / -0.25 Mark',
+                      style: TextStyle(fontSize: 11, color: Colors.grey.shade500),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 8),
+
+                // Question Box
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.all(14),
+                          decoration: BoxDecoration(
+                            color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                          ),
+                          child: Text(
+                            qText,
+                            style: const TextStyle(fontSize: 15, height: 1.4, fontWeight: FontWeight.w600),
+                          ),
+                        ),
+                        const SizedBox(height: 14),
+
+                        // Options A, B, C, D
+                        ...List.generate(4, (oIdx) {
+                          final isSelected = selectedOption == oIdx;
+                          final letter = String.fromCharCode(65 + oIdx);
+
+                          return Padding(
+                            padding: const EdgeInsets.only(bottom: 8),
+                            child: InkWell(
+                              onTap: () => setPreviewState(() => selectedOption = oIdx),
+                              borderRadius: BorderRadius.circular(10),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 11),
+                                decoration: BoxDecoration(
+                                  color: isSelected
+                                      ? const Color(0xFF2563EB).withOpacity(0.1)
+                                      : (widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white),
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                    color: isSelected ? const Color(0xFF2563EB) : Colors.grey.withOpacity(0.25),
+                                    width: isSelected ? 1.4 : 1,
+                                  ),
+                                ),
+                                child: Row(
+                                  children: [
+                                    CircleAvatar(
+                                      radius: 13,
+                                      backgroundColor: isSelected ? const Color(0xFF2563EB) : Colors.grey.withOpacity(0.2),
+                                      child: Text(
+                                        letter,
+                                        style: TextStyle(
+                                          fontSize: 11,
+                                          fontWeight: FontWeight.bold,
+                                          color: isSelected ? Colors.white : (widget.isDarkMode ? Colors.white70 : Colors.black87),
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(width: 10),
+                                    Expanded(
+                                      child: Text(
+                                        options[oIdx],
+                                        style: const TextStyle(fontSize: 13.5),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                          );
+                        }),
+                      ],
+                    ),
+                  ),
+                ),
+
+                // Preview Navigation Buttons
+                Row(
+                  children: [
+                    if (previewCurrentIndex > 0)
+                      Expanded(
+                        child: OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          ),
+                          onPressed: () {
+                            setPreviewState(() {
+                              previewCurrentIndex--;
+                              selectedOption = null;
+                            });
+                          },
+                          child: const Text('← Previous'),
+                        ),
+                      ),
+                    if (previewCurrentIndex > 0) const SizedBox(width: 10),
+                    Expanded(
+                      flex: 2,
+                      child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF2563EB),
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                        ),
+                        onPressed: () {
+                          if (previewCurrentIndex < _questions.length - 1) {
+                            setPreviewState(() {
+                              previewCurrentIndex++;
+                              selectedOption = null;
+                            });
+                          } else {
+                            Navigator.pop(ctx);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('Preview completed. Ready to publish! 👍')),
+                            );
+                          }
+                        },
+                        child: Text(
+                          previewCurrentIndex < _questions.length - 1 ? 'Next Question →' : 'Done Previewing ✓',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          );
+        },
+      ),
+    );
   }
 
   Future<void> _openAiStudioModal() async {
@@ -261,9 +532,16 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       return;
     }
 
-    final validQuestions = _questions.where((q) => (q['question'] as String).trim().isNotEmpty).toList();
-    if (validQuestions.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Please add at least 1 complete question!')));
+    // 🛑 STRICT VALIDATION CHECK
+    final validationError = _validateQuestions();
+    if (validationError != null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(validationError),
+          backgroundColor: Colors.red.shade800,
+          duration: const Duration(seconds: 4),
+        ),
+      );
       return;
     }
 
@@ -271,14 +549,13 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
 
     try {
       if (_publishTarget == 'PUBLIC') {
-        // 🌐 1. Public Feed CBT Mock
         final res = await Supabase.instance.client.from('creator_mocks').insert({
           'creator_id': widget.creatorHandle,
           'title': title,
           'subject': _selectedSubject,
           'duration_mins': _durationMins,
-          'total_questions': validQuestions.length,
-          'questions_json': validQuestions,
+          'total_questions': _questions.length,
+          'questions_json': _questions,
           'attempts_count': 0,
         }).select().single();
 
@@ -290,14 +567,13 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
           'views_count': 1,
         });
       } else {
-        // 🔒 2. Private Coaching Batch CBT Mock (Fixed: direct UUID string passed)
         await Supabase.instance.client.from('batch_tests').insert({
           'batch_id': _selectedBatchId,
           'test_title': title,
           'subject': _selectedSubject,
           'duration_mins': _durationMins,
-          'total_questions': validQuestions.length,
-          'questions_json': validQuestions,
+          'total_questions': _questions.length,
+          'questions_json': _questions,
         });
       }
 
@@ -342,13 +618,12 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       ),
       body: Column(
         children: [
-          // 🎯 Top Settings & Target Selection Header
+          // Top Settings & Target Selection Header
           Container(
             padding: const EdgeInsets.all(12),
             color: cardBg,
             child: Column(
               children: [
-                // 1. Target Selector (Public vs Batch)
                 Row(
                   children: [
                     Expanded(
@@ -381,7 +656,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                   ],
                 ),
 
-                // 2. Active Batch Selector Dropdown (Conditional)
                 if (_publishTarget == 'BATCH') ...[
                   const SizedBox(height: 10),
                   if (_isLoadingBatches)
@@ -491,7 +765,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
           ),
           const Divider(height: 1),
 
-          // 📝 Question Cards List
+          // Question Cards List
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(12),
@@ -527,7 +801,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                         TextFormField(
                           initialValue: q['question'],
                           maxLines: 2,
-                          decoration: const InputDecoration(hintText: 'Type question here...', isDense: true, border: OutlineInputBorder()),
+                          decoration: const InputDecoration(hintText: 'Type question statement...', isDense: true, border: OutlineInputBorder()),
                           onChanged: (val) => q['question'] = val,
                         ),
                         const SizedBox(height: 10),
@@ -559,7 +833,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                   child: TextFormField(
                                     initialValue: options[oIdx],
                                     decoration: InputDecoration(
-                                      hintText: 'Option ${String.fromCharCode(65 + oIdx)}',
+                                      hintText: 'Option ${String.fromCharCode(65 + oIdx)} (Required)',
                                       isDense: true,
                                       border: const OutlineInputBorder(),
                                     ),
@@ -583,18 +857,36 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
             ),
           ),
 
-          // 🚀 Bottom Publishing Action Bar
+          // Bottom Action Bar: [Add 1 Card] [ Preview 👁️ ] [ Publish 🚀 ]
           Container(
             padding: const EdgeInsets.all(12),
             color: cardBg,
             child: Row(
               children: [
                 OutlinedButton.icon(
-                  icon: const Icon(Icons.add_rounded),
-                  label: const Text('Add 1 Card'),
+                  icon: const Icon(Icons.add_rounded, size: 18),
+                  label: const Text('Add Card'),
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 12),
+                  ),
                   onPressed: _addNewBlankQuestion,
                 ),
-                const SizedBox(width: 10),
+                const SizedBox(width: 8),
+
+                // 👁️ PREVIEW BUTTON
+                OutlinedButton.icon(
+                  icon: const Icon(Icons.remove_red_eye_outlined, size: 17, color: Color(0xFF2563EB)),
+                  label: const Text('Preview', style: TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold)),
+                  style: OutlinedButton.styleFrom(
+                    side: const BorderSide(color: Color(0xFF2563EB)),
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  ),
+                  onPressed: _openStudentPreview,
+                ),
+                const SizedBox(width: 8),
+
+                // 🚀 PUBLISH BUTTON
                 Expanded(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
@@ -608,9 +900,9 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                         ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
                         : Text(
                             _publishTarget == 'PUBLIC'
-                                ? 'Publish ${_questions.length} Qs to Feed 🌐'
-                                : 'Publish ${_questions.length} Qs to Batch 🔒',
-                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                                ? 'Publish ${_questions.length} Qs 🌐'
+                                : 'Publish ${_questions.length} Qs 🔒',
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
                           ),
                   ),
                 ),
