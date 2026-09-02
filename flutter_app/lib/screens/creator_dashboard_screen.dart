@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../services/admin_telegram_alert.dart';
 import '../utils/bihar_location_data.dart';
 import 'creator_mock_builder_screen.dart';
@@ -78,10 +79,22 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
           final Map<String, Map<String, dynamic>> studentMap = {};
           for (var s in (submissions as List? ?? [])) {
-            final id = s['student_identifier'] ?? 'Aspirant';
-            if (!studentMap.containsKey(id)) {
-              studentMap[id] = {
-                'name': id,
+            final String rawIdentifier = s['student_identifier'] ?? 'Aspirant';
+            
+            // Name & Roll parsing (e.g. "Suresh Kumar (Roll/Ph: 104)")
+            String nameOnly = rawIdentifier;
+            String contactInfo = '';
+            if (rawIdentifier.contains('(') && rawIdentifier.contains(')')) {
+              final parts = rawIdentifier.split('(');
+              nameOnly = parts[0].trim();
+              contactInfo = parts[1].replaceAll(')', '').replaceAll('Roll/Ph:', '').trim();
+            }
+
+            if (!studentMap.containsKey(rawIdentifier)) {
+              studentMap[rawIdentifier] = {
+                'raw_id': rawIdentifier,
+                'name': nameOnly,
+                'contact': contactInfo,
                 'batch_name': s['batches']?['batch_name'] ?? 'Classroom Batch',
                 'tests_count': 1,
                 'scores': [s['score'] ?? 0],
@@ -90,8 +103,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 'strong_subject': s['strong_subject'] ?? 'History & Bihar GK',
               };
             } else {
-              studentMap[id]!['tests_count'] = (studentMap[id]!['tests_count'] as int) + 1;
-              (studentMap[id]!['scores'] as List).add(s['score'] ?? 0);
+              studentMap[rawIdentifier]!['tests_count'] = (studentMap[rawIdentifier]!['tests_count'] as int) + 1;
+              (studentMap[rawIdentifier]!['scores'] as List).add(s['score'] ?? 0);
             }
           }
           batchStudentsList = studentMap.values.toList();
@@ -118,11 +131,13 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
         attempts += (m['attempts_count'] as int? ?? 0);
       }
 
-      // Sample fallback data for demonstration if no submissions yet
+      // Sample Demo Data if batch has zero attempts
       if (batchStudentsList.isEmpty) {
         batchStudentsList = [
           {
+            'raw_id': 'Suresh Kumar (Roll: 104)',
             'name': 'Suresh Kumar',
+            'contact': 'Roll: 104',
             'batch_name': 'Patna Target 72 Batch',
             'tests_count': 8,
             'accuracy': 74,
@@ -130,7 +145,9 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             'strong_subject': 'Modern History & Bihar Special',
           },
           {
+            'raw_id': 'Pooja Kumari (Ph: 9876543210)',
             'name': 'Pooja Kumari',
+            'contact': 'Ph: 9876543210',
             'batch_name': 'Daroga Rapid Drill',
             'tests_count': 12,
             'accuracy': 81,
@@ -143,6 +160,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
       final openList = [
         {
           'name': 'Ramesh Verma',
+          'contact': 'Public Aspirant',
           'source': 'Public Feed Free Mock',
           'tests_count': 2,
           'accuracy': 62,
@@ -167,6 +185,13 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     } catch (_) {
       if (mounted) setState(() => _isLoading = false);
     }
+  }
+
+  void _callOrMessageStudent(String contact) async {
+    final clean = contact.replaceAll(RegExp(r'[^0-9]'), '');
+    if (clean.isEmpty) return;
+    final uri = Uri.parse('tel:$clean');
+    if (await canLaunchUrl(uri)) await launchUrl(uri);
   }
 
   // 🔍 Student Individual Detailed Report Modal
@@ -199,7 +224,13 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                     children: [
                       Row(
                         children: [
-                          Text(student['name'], style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                          Flexible(
+                            child: Text(
+                              student['name'],
+                              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
                           const SizedBox(width: 6),
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
@@ -218,7 +249,10 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                           ),
                         ],
                       ),
-                      Text(student['batch_name'] ?? student['source'] ?? '', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
+                      Text(
+                        '${student['contact'] != null && student['contact'].toString().isNotEmpty ? "${student['contact']} • " : ""}${student['batch_name'] ?? student['source'] ?? ''}',
+                        style: const TextStyle(fontSize: 11.5, color: Colors.grey),
+                      ),
                     ],
                   ),
                 ),
@@ -325,25 +359,43 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 18),
 
-            // Action / Guidance Button
-            SizedBox(
-              width: double.infinity,
-              height: 42,
-              child: ElevatedButton.icon(
-                icon: const Icon(Icons.chat_bubble_outline_rounded, size: 16),
-                label: Text('Send Guidance to ${student['name']}'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF2563EB),
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            // Direct Call / Guidance Action
+            Row(
+              children: [
+                if (student['contact'] != null && student['contact'].toString().contains(RegExp(r'[0-9]'))) ...[
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      icon: const Icon(Icons.phone_in_talk_rounded, size: 16),
+                      label: const Text('Contact'),
+                      style: OutlinedButton.styleFrom(
+                        foregroundColor: const Color(0xFF2563EB),
+                        side: const BorderSide(color: Color(0xFF2563EB)),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      ),
+                      onPressed: () => _callOrMessageStudent(student['contact']),
+                    ),
+                  ),
+                  const SizedBox(width: 8),
+                ],
+                Expanded(
+                  flex: 2,
+                  child: ElevatedButton.icon(
+                    icon: const Icon(Icons.chat_bubble_outline_rounded, size: 16),
+                    label: Text('Guide ${student['name']}'),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF2563EB),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    ),
+                    onPressed: () {
+                      Navigator.pop(ctx);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Guidance notification sent to ${student['name']}!')),
+                      );
+                    },
+                  ),
                 ),
-                onPressed: () {
-                  Navigator.pop(ctx);
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(content: Text('Guidance note sent to ${student['name']}!')),
-                  );
-                },
-              ),
+              ],
             ),
             const SizedBox(height: 12),
           ],
@@ -432,7 +484,10 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
                           ),
                         ),
-                        title: Text(s['name'], style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                        title: Text(
+                          '${s['name']} ${s['contact'] != null && s['contact'].toString().isNotEmpty ? "(${s['contact']})" : ""}',
+                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                        ),
                         subtitle: Text(
                           '${s['tests_count']} Tests • Weak: ${s['weak_subject']}',
                           style: const TextStyle(fontSize: 11.5, color: Colors.grey),
