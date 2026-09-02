@@ -20,7 +20,7 @@ class SectionalCbtScreen extends StatefulWidget {
   final String? creatorHandle;
   final bool isBatchTest;
   final String? batchId;
-  final dynamic mockId; // 👈 Required for updating attempts_count in creator_mocks
+  final dynamic mockId; // 👈 creator_mocks ya batch_tests ki test ID
 
   const SectionalCbtScreen({
     super.key,
@@ -30,7 +30,7 @@ class SectionalCbtScreen extends StatefulWidget {
     this.creatorHandle,
     this.isBatchTest = false,
     this.batchId,
-    this.mockId, // 👈 Added
+    this.mockId,
   });
 
   @override
@@ -253,26 +253,31 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     final client = Supabase.instance.client;
 
-    // 1️⃣ UPDATE ATTEMPTS COUNT IN CREATOR_MOCKS
+    // 1️⃣ UPDATE ATTEMPTS COUNT: Targets 'batch_tests' if Batch Test, else 'creator_mocks'
     if (widget.mockId != null) {
       try {
+        final dynamic targetId = int.tryParse(widget.mockId.toString()) ?? widget.mockId;
+        final String targetTable = widget.isBatchTest ? 'batch_tests' : 'creator_mocks';
+
         final current = await client
-            .from('creator_mocks')
+            .from(targetTable)
             .select('attempts_count')
-            .eq('id', widget.mockId)
+            .eq('id', targetId)
             .maybeSingle();
-        int currentCount = current?['attempts_count'] ?? 0;
+
+        int currentCount = (current?['attempts_count'] as int?) ?? 0;
         await client
-            .from('creator_mocks')
+            .from(targetTable)
             .update({'attempts_count': currentCount + 1})
-            .eq('id', widget.mockId);
-        debugPrint("✅ [SECTIONAL_CBT] Attempts count incremented successfully!");
+            .eq('id', targetId);
+
+        debugPrint("✅ [SECTIONAL_CBT] Attempts count (+1) updated in $targetTable for ID: $targetId");
       } catch (e) {
-        debugPrint("❌ [SECTIONAL_CBT] Error incrementing attempts_count: $e");
+        debugPrint("❌ [SECTIONAL_CBT] Error updating attempts_count: $e");
       }
     }
 
-    // 2️⃣ SYNC BATCH SUBMISSIONS FOR CREATOR DASHBOARD
+    // 2️⃣ SYNC BATCH SUBMISSIONS FOR CREATOR DASHBOARD INTELLIGENCE
     if (widget.isBatchTest && widget.batchId != null) {
       try {
         final prefs = await SharedPreferences.getInstance();
