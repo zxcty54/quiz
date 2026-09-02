@@ -9,7 +9,6 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
 import '../services/admin_telegram_alert.dart';
-import '../utils/security_content_guard.dart';
 import 'creator_profile_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -27,8 +26,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   String _activeFilter = 'All';
   String _customUserName = 'Aspirant';
   String _currentLoggedInHandle = 'user';
-  
-  // 🔍 Search Controls
+
   bool _isSearching = false;
   String _searchQuery = '';
   final TextEditingController _searchCtrl = TextEditingController();
@@ -39,12 +37,11 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   final List<String> _filters = [
     'All',
+    'Mock Tests ⚡',
+    'Study Material 📚',
     'Daily Quiz ⚡',
     'Doubts ❓',
-    'BPSC 70th 🎯',
-    'BSSC CGL 📚',
-    'Exam Gossip 🔥',
-    'Current Affairs 📰',
+    'Announcement 📢',
     'Saved 📌'
   ];
 
@@ -60,11 +57,13 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     final saved = prefs.getStringList('community_saved_posts_ids') ?? [];
     final name = prefs.getString('custom_aspirant_name') ?? 'Aspirant';
     final handle = prefs.getString('logged_in_creator_handle') ?? 'user';
-    setState(() {
-      _savedPostIds.addAll(saved.map((e) => int.tryParse(e) ?? 0));
-      _customUserName = name;
-      _currentLoggedInHandle = handle;
-    });
+    if (mounted) {
+      setState(() {
+        _savedPostIds.addAll(saved.map((e) => int.tryParse(e) ?? 0));
+        _customUserName = name;
+        _currentLoggedInHandle = handle;
+      });
+    }
   }
 
   Future<void> _fetchFeedPosts() async {
@@ -74,14 +73,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
       final res = await Supabase.instance.client
           .from('community_posts')
-          .select('*, creator_profiles(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
+          .select('*, creator_profiles(name, handle_id, subject_specialty, followers_count, is_blocked), creator_mocks(*)')
           .eq('is_approved', true)
           .gte('created_at', sixtyDaysAgo)
           .order('created_at', ascending: false);
 
       if (mounted) {
         setState(() {
-          _posts = res;
+          _posts = res ?? [];
           _isLoading = false;
         });
       }
@@ -91,231 +90,51 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     }
   }
 
-  // 🗑️ Delete Post (Own Post or Master Admin)
-  Future<void> _deletePost(int postId) async {
-    final confirm = await showDialog<bool>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-        title: const Text('Delete Post?'),
-        content: const Text('Are you sure you want to permanently delete this post?'),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Cancel')),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.red, foregroundColor: Colors.white),
-            onPressed: () => Navigator.pop(ctx, true),
-            child: const Text('Delete'),
-          ),
-        ],
+  void _navigateToCreator(String handle) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => CreatorProfileScreen(
+          creatorHandle: handle,
+          isDarkMode: widget.isDarkMode,
+        ),
       ),
     );
+  }
 
-    if (confirm != true) return;
+  void _launchAttachedMock(Map<String, dynamic> mock, String coachingName, String handle) {
+    final List rawList = mock['questions_json'] ?? [];
+    if (rawList.isEmpty) return;
 
-    try {
-      await Supabase.instance.client.from('community_posts').delete().eq('id', postId);
-      setState(() {
-        _posts.removeWhere((p) => p['id'] == postId);
-      });
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('🗑️ Post deleted successfully!'), backgroundColor: Colors.red),
-        );
+    List<Question> qList = [];
+    for (var item in rawList) {
+      if (item is Map) {
+        qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
       }
-    } catch (e) {
-      debugPrint("Delete error: $e");
     }
-  }
 
-  // ✏️ Edit Post Modal
-  void _openEditPostModal(Map<String, dynamic> post) {
-    final editCtrl = TextEditingController(text: post['content'] ?? '');
-    String selectedTag = post['tag'] ?? 'Doubts ❓';
-    bool isSaving = false;
+    if (qList.isEmpty) return;
 
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text('✏️ Edit Post', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
-                  IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
-                ],
-              ),
-              const SizedBox(height: 8),
-              DropdownButtonFormField<String>(
-                value: _filters.contains(selectedTag) ? selectedTag : 'Doubts ❓',
-                decoration: const InputDecoration(labelText: 'Category', isDense: true, border: OutlineInputBorder()),
-                items: _filters.where((f) => f != 'All' && f != 'Saved 📌').map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
-                onChanged: (val) => setModalState(() => selectedTag = val ?? selectedTag),
-              ),
-              const SizedBox(height: 10),
-              TextField(
-                controller: editCtrl,
-                maxLines: 4,
-                decoration: const InputDecoration(border: OutlineInputBorder(), hintText: 'Update your question/doubt...'),
-              ),
-              const SizedBox(height: 14),
-              SizedBox(
-                width: double.infinity,
-                height: 44,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
-                  onPressed: isSaving
-                      ? null
-                      : () async {
-                          final newText = editCtrl.text.trim();
-                          if (newText.isEmpty) return;
+    final updatedAttempts = (mock['attempts_count'] ?? 0) + 1;
+    setState(() => mock['attempts_count'] = updatedAttempts);
 
-                          setModalState(() => isSaving = true);
-                          try {
-                            // Edit updates content and resets approval for safety
-                            await Supabase.instance.client.from('community_posts').update({
-                              'content': newText,
-                              'tag': selectedTag,
-                              'is_approved': false, // Re-verify on edit
-                            }).eq('id', post['id']);
+    Supabase.instance.client
+        .from('creator_mocks')
+        .update({'attempts_count': updatedAttempts})
+        .eq('id', mock['id'])
+        .then((_) {});
 
-                            AdminTelegramAlert.sendForInteractiveApproval(
-                              postId: post['id'],
-                              authorName: post['author_name'] ?? _customUserName,
-                              authorHandle: post['creator_id'] ?? 'user',
-                              tag: selectedTag,
-                              content: '$newText\n\n[✏️ EDITED POST]',
-                            ).catchError((_) => false);
-
-                            if (ctx.mounted) Navigator.pop(ctx);
-                            _fetchFeedPosts();
-
-                            if (mounted) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text('⏳ Post updated! Sent for quick Telegram re-approval.'),
-                                  backgroundColor: Color(0xFF2563EB),
-                                ),
-                              );
-                            }
-                          } catch (e) {
-                            setModalState(() => isSaving = false);
-                          }
-                        },
-                  child: isSaving
-                      ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                      : const Text('Save & Update 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
-                ),
-              ),
-              const SizedBox(height: 16),
-            ],
-          ),
+    // Free Open CBT launch without password
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => SectionalCbtScreen(
+          testTitle: mock['title'] ?? 'Free Open Mock Drill',
+          questions: qList,
+          subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
         ),
       ),
     );
-  }
-
-  Future<void> _editMyNameDialog() async {
-    final nameCtrl = TextEditingController(text: _customUserName);
-    showDialog(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text('👤 Edit Your Name', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-        content: TextField(
-          controller: nameCtrl,
-          decoration: const InputDecoration(
-            hintText: 'Enter your name / alias',
-            labelText: 'Display Name',
-            border: OutlineInputBorder(),
-          ),
-        ),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
-            onPressed: () async {
-              final val = nameCtrl.text.trim();
-              if (val.isEmpty) return;
-              final prefs = await SharedPreferences.getInstance();
-              await prefs.setString('custom_aspirant_name', val);
-              setState(() => _customUserName = val);
-              Navigator.pop(ctx);
-            },
-            child: const Text('Save Name'),
-          ),
-        ],
-      ),
-    );
-  }
-
-  void _sharePost(Map<String, dynamic> post) async {
-    HapticFeedback.lightImpact();
-    final postId = post['id'];
-    final content = post['content'] ?? 'Check out this question on MockTester!';
-    final author = post['author_name'] ?? 'Aspirant';
-
-    final shareText = '''
-📝 *MockTester Study Drill*
-👤 *Shared by:* $author
-
-$content
-
-⚡ Solve this & practice 10,000+ BPSC/BSSC CBT Mock Questions:
-📲 Download Free: https://play.google.com/store/apps/details?id=com.mocktester.online
-''';
-
-    Clipboard.setData(ClipboardData(text: shareText));
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('📋 Post copied! Share on WhatsApp / Telegram.'),
-        backgroundColor: Color(0xFF2563EB),
-      ),
-    );
-
-    try {
-      final currentShares = (post['shares_count'] ?? 0) + 1;
-      setState(() => post['shares_count'] = currentShares);
-      await Supabase.instance.client.from('community_posts').update({'shares_count': currentShares}).eq('id', postId);
-    } catch (_) {}
-  }
-
-  void _toggleBookmark(int postId, Map<String, dynamic> post) async {
-    HapticFeedback.mediumImpact();
-    final prefs = await SharedPreferences.getInstance();
-    final bool isSaving = !_savedPostIds.contains(postId);
-
-    setState(() {
-      if (isSaving) {
-        _savedPostIds.add(postId);
-        post['bookmarks_count'] = (post['bookmarks_count'] ?? 0) + 1;
-      } else {
-        _savedPostIds.remove(postId);
-        post['bookmarks_count'] = ((post['bookmarks_count'] ?? 1) - 1).clamp(0, 99999);
-      }
-    });
-
-    await prefs.setStringList('community_saved_posts_ids', _savedPostIds.map((e) => e.toString()).toList());
-    
-    try {
-      await Supabase.instance.client.from('community_posts').update({'bookmarks_count': post['bookmarks_count']}).eq('id', postId);
-    } catch (_) {}
-
-    if (mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(isSaving ? '📌 Saved in Community tab!' : 'Removed from Saved!'),
-          duration: const Duration(seconds: 1),
-          backgroundColor: const Color(0xFF2563EB),
-        ),
-      );
-    }
   }
 
   void _handleVote(int index, bool isUpvote) {
@@ -353,10 +172,30 @@ $content
 
     Supabase.instance.client
         .from('community_posts')
-        .update({
-          'upvotes': post['upvotes'],
-          'downvotes': post['downvotes'],
-        })
+        .update({'upvotes': post['upvotes'], 'downvotes': post['downvotes']})
+        .eq('id', postId)
+        .then((_) {});
+  }
+
+  void _toggleBookmark(int postId, Map<String, dynamic> post) async {
+    HapticFeedback.mediumImpact();
+    final prefs = await SharedPreferences.getInstance();
+    final bool isSaving = !_savedPostIds.contains(postId);
+
+    setState(() {
+      if (isSaving) {
+        _savedPostIds.add(postId);
+        post['bookmarks_count'] = (post['bookmarks_count'] ?? 0) + 1;
+      } else {
+        _savedPostIds.remove(postId);
+        post['bookmarks_count'] = ((post['bookmarks_count'] ?? 1) - 1).clamp(0, 99999);
+      }
+    });
+
+    await prefs.setStringList('community_saved_posts_ids', _savedPostIds.map((e) => e.toString()).toList());
+    Supabase.instance.client
+        .from('community_posts')
+        .update({'bookmarks_count': post['bookmarks_count']})
         .eq('id', postId)
         .then((_) {});
   }
@@ -379,40 +218,6 @@ $content
         .update({'poll_data': pollData})
         .eq('id', postId)
         .then((_) {});
-  }
-
-  void _launchAttachedMock(Map<String, dynamic> mock) {
-    final List rawList = mock['questions_json'] ?? [];
-    if (rawList.isEmpty) return;
-
-    List<Question> qList = [];
-    for (var item in rawList) {
-      if (item is Map) {
-        qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
-      }
-    }
-
-    if (qList.isEmpty) return;
-
-    final updatedAttempts = (mock['attempts_count'] ?? 0) + 1;
-    setState(() => mock['attempts_count'] = updatedAttempts);
-
-    Supabase.instance.client
-        .from('creator_mocks')
-        .update({'attempts_count': updatedAttempts})
-        .eq('id', mock['id'])
-        .then((_) {});
-
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => SectionalCbtScreen(
-          testTitle: mock['title'] ?? 'Community Mock Drill',
-          questions: qList,
-          subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
-        ),
-      ),
-    );
   }
 
   void _openCreatePostModal() {
@@ -438,7 +243,7 @@ $content
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('✍️ Post as $_customUserName', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                    Text('✍️ Ask Doubt / Share Notice', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
@@ -454,33 +259,17 @@ $content
                   controller: contentCtrl,
                   maxLines: 4,
                   decoration: const InputDecoration(
-                    hintText: 'Share exam updates, question screenshot, or doubt...',
+                    hintText: 'Share exam questions, doubts or important study insights...',
                     border: OutlineInputBorder(),
                   ),
                 ),
                 const SizedBox(height: 10),
                 if (selectedImage != null) ...[
-                  Stack(
-                    children: [
-                      ClipRRect(
-                        borderRadius: BorderRadius.circular(10),
-                        child: Image.file(selectedImage!, width: double.infinity, height: 150, fit: BoxFit.cover),
-                      ),
-                      Positioned(
-                        top: 6,
-                        right: 6,
-                        child: GestureDetector(
-                          onTap: () => setModalState(() => selectedImage = null),
-                          child: Container(
-                            padding: const EdgeInsets.all(4),
-                            decoration: const BoxDecoration(color: Colors.black54, shape: BoxShape.circle),
-                            child: const Icon(Icons.close, color: Colors.white, size: 16),
-                          ),
-                        ),
-                      ),
-                    ],
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(10),
+                    child: Image.file(selectedImage!, width: double.infinity, height: 140, fit: BoxFit.cover),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 8),
                 ],
                 Row(
                   children: [
@@ -492,17 +281,9 @@ $content
                         if (picked != null) setModalState(() => selectedImage = File(picked.path));
                       },
                     ),
-                    const SizedBox(width: 8),
-                    IconButton(
-                      icon: const Icon(Icons.camera_alt_outlined, color: Color(0xFF2563EB)),
-                      onPressed: () async {
-                        final picked = await picker.pickImage(source: ImageSource.camera, imageQuality: 75);
-                        if (picked != null) setModalState(() => selectedImage = File(picked.path));
-                      },
-                    ),
                   ],
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 14),
                 SizedBox(
                   width: double.infinity,
                   height: 44,
@@ -556,19 +337,14 @@ $content
                                 Navigator.pop(ctx);
                                 _fetchFeedPosts();
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text('⏳ Post submitted! Awaiting Telegram Moderator approval.'),
-                                    backgroundColor: Color(0xFF2563EB),
-                                  ),
+                                  const SnackBar(content: Text('⏳ Post submitted for review!'), backgroundColor: Color(0xFF2563EB)),
                                 );
                               }
-                            } catch (e) {
+                            } catch (_) {
                               setModalState(() => isUploading = false);
                             }
                           },
-                    child: isUploading
-                        ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                        : const Text('Post to Community 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                    child: isUploading ? const CircularProgressIndicator(color: Colors.white) : const Text('Publish Post 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -580,7 +356,7 @@ $content
     );
   }
 
-  Widget _buildRichTextContent(String text, {double fontSize = 14.5}) {
+  Widget _buildRichTextContent(String text, {double fontSize = 14}) {
     final RegExp exp = RegExp(r'((https?:\/\/|www\.)[^\s]+)|(#[a-zA-Z0-9_]+)|(@[a-zA-Z0-9_]+)');
     final matches = exp.allMatches(text);
 
@@ -604,10 +380,7 @@ $content
             text: matchText,
             style: const TextStyle(color: Color(0xFF2563EB), decoration: TextDecoration.underline, fontWeight: FontWeight.w600),
             recognizer: TapGestureRecognizer()
-              ..onTap = () => launchUrl(
-                    Uri.parse(matchText.startsWith('http') ? matchText : 'https://$matchText'),
-                    mode: LaunchMode.externalApplication,
-                  ),
+              ..onTap = () => launchUrl(Uri.parse(matchText.startsWith('http') ? matchText : 'https://$matchText'), mode: LaunchMode.externalApplication),
           ),
         );
       } else if (matchText.startsWith('#')) {
@@ -624,15 +397,7 @@ $content
           TextSpan(
             text: matchText,
             style: const TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold),
-            recognizer: TapGestureRecognizer()
-              ..onTap = () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => CreatorProfileScreen(creatorHandle: handle, isDarkMode: widget.isDarkMode),
-                  ),
-                );
-              },
+            recognizer: TapGestureRecognizer()..onTap = () => _navigateToCreator(handle),
           ),
         );
       }
@@ -656,95 +421,138 @@ $content
     );
   }
 
-  Widget _buildInteractivePollCard(int postId, Map<String, dynamic> pollData, bool isDark) {
-    final List options = pollData['options'] ?? [];
-    final int correctIdx = pollData['correct_idx'] ?? 0;
-    final List votes = pollData['votes'] ?? List.filled(options.length, 0);
-    final String explanation = pollData['exp'] ?? '';
-    final bool hasVoted = _userPollSelections.containsKey(postId);
-    final int? selectedIdx = _userPollSelections[postId];
-
-    int totalVotes = 0;
-    for (var v in votes) {
-      totalVotes += (v is int) ? v : (int.tryParse(v.toString()) ?? 0);
-    }
-    if (totalVotes == 0) totalVotes = 1;
+  // 🎯 Premium Free Mock Test Discovery Card
+  Widget _buildMockDiscoveryCard(Map<String, dynamic> mock, String authorName, String handle, bool isDark) {
+    final int totalQs = (mock['questions_json'] as List?)?.length ?? 0;
+    final int duration = mock['duration_mins'] ?? 15;
+    final int attempts = mock['attempts_count'] ?? 0;
 
     return Container(
       margin: const EdgeInsets.only(top: 10),
-      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.2)),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.25), width: 1.1),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: const [
-              Icon(Icons.bolt_rounded, color: Colors.amber, size: 18),
-              SizedBox(width: 4),
-              Text('Live Daily Quiz • Tap to Solve', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
-            ],
-          ),
-          const SizedBox(height: 8),
-          ...List.generate(options.length, (idx) {
-            final optText = options[idx];
-            final int optVotes = (idx < votes.length) ? (votes[idx] as int) : 0;
-            final double percent = (optVotes / totalVotes) * 100;
-            final bool isSelected = selectedIdx == idx;
-            final bool isCorrect = correctIdx == idx;
+          Padding(
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF16A34A).withOpacity(0.12),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: const Row(
+                        children: [
+                          Icon(Icons.bolt_rounded, size: 13, color: Color(0xFF16A34A)),
+                          SizedBox(width: 3),
+                          Text('FREE CBT MOCK', style: TextStyle(color: Color(0xFF16A34A), fontSize: 9.5, fontWeight: FontWeight.w900)),
+                        ],
+                      ),
+                    ),
+                    Text('$attempts Aspirants Attempted', style: TextStyle(fontSize: 11, color: Colors.grey.shade500)),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  mock['title'] ?? 'Comprehensive Mock Drill',
+                  style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  '$totalQs Concept Questions • ⏱ $duration Mins • Detailed Analytics',
+                  style: TextStyle(fontSize: 11.5, color: Colors.grey.shade600),
+                ),
+                const SizedBox(height: 12),
 
-            Color tileColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-            if (hasVoted) {
-              if (isCorrect) {
-                tileColor = const Color(0xFF16A34A).withOpacity(0.2);
-              } else if (isSelected) {
-                tileColor = Colors.redAccent.withOpacity(0.2);
-              }
-            }
-
-            return Padding(
-              padding: const EdgeInsets.only(bottom: 6),
-              child: InkWell(
-                onTap: () => _submitPollVote(postId, idx, pollData),
-                borderRadius: BorderRadius.circular(8),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                  decoration: BoxDecoration(
-                    color: tileColor,
-                    borderRadius: BorderRadius.circular(8),
-                    border: hasVoted && isCorrect ? Border.all(color: const Color(0xFF16A34A), width: 1.5) : null,
-                  ),
-                  child: Row(
-                    children: [
-                      Text(String.fromCharCode(65 + idx), style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                      const SizedBox(width: 10),
-                      Expanded(child: Text(optText, style: const TextStyle(fontSize: 13.5))),
-                      if (hasVoted)
-                        Text('${percent.toStringAsFixed(0)}%', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.grey)),
-                    ],
+                SizedBox(
+                  width: double.infinity,
+                  height: 38,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF2563EB),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      elevation: 0,
+                    ),
+                    onPressed: () => _launchAttachedMock(mock, authorName, handle),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.play_circle_fill_rounded, size: 16),
+                        SizedBox(width: 6),
+                        Text('Attempt Free Mock Now 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                      ],
+                    ),
                   ),
                 ),
+              ],
+            ),
+          ),
+
+          // 🔗 Direct Classroom Funnel Ribbon
+          InkWell(
+            onTap: () => _navigateToCreator(handle),
+            borderRadius: const BorderRadius.vertical(bottom: Radius.circular(13)),
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                color: const Color(0xFF2563EB).withOpacity(0.08),
+                borderRadius: const BorderRadius.vertical(bottom: Radius.circular(13)),
               ),
-            );
-          }),
-          if (hasVoted && explanation.isNotEmpty) ...[
-            const SizedBox(height: 6),
-            Container(
-              padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(color: Colors.blue.withOpacity(0.08), borderRadius: BorderRadius.circular(6)),
               child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Icon(Icons.lightbulb_outline_rounded, size: 16, color: Color(0xFF2563EB)),
+                  const Icon(Icons.school_outlined, size: 14, color: Color(0xFF2563EB)),
                   const SizedBox(width: 6),
-                  Expanded(child: Text('Explanation: $explanation', style: const TextStyle(fontSize: 12, height: 1.35))),
+                  Expanded(
+                    child: Text(
+                      'Curated by $authorName • Explore Classroom Batches →',
+                      style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Color(0xFF2563EB)),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
                 ],
               ),
             ),
-          ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  // 📚 Dedicated Study Material Card
+  Widget _buildStudyMaterialCard(String content, bool isDark) {
+    return Container(
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: const Color(0xFF059669).withOpacity(0.08),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: const Color(0xFF059669).withOpacity(0.2)),
+      ),
+      child: const Row(
+        children: [
+          Icon(Icons.picture_as_pdf_rounded, color: Color(0xFF059669), size: 28),
+          SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Class Handout / Study Material Attached', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                Text('Tap download link inside the post to access full PDF', style: TextStyle(color: Colors.grey, fontSize: 11)),
+              ],
+            ),
+          ),
         ],
       ),
     );
@@ -754,44 +562,39 @@ $content
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
     final bgSurface = isDark ? const Color(0xFF0F172A) : Colors.white;
+    final dividerColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
 
-    // 🔍 Multi-layer Instant Filter (Category + Search Query)
     final filteredList = _posts.where((p) {
-      // 1. Tag & Saved Filter
       bool matchesFilter = true;
       if (_activeFilter == 'Saved 📌') {
         matchesFilter = _savedPostIds.contains(p['id']);
       } else if (_activeFilter != 'All') {
         matchesFilter = p['tag'].toString().contains(_activeFilter.split(' ').first);
       }
-
       if (!matchesFilter) return false;
 
-      // 2. Search Query Match
       if (_searchQuery.trim().isEmpty) return true;
       final q = _searchQuery.toLowerCase().trim();
-      final content = (p['content'] ?? '').toString().toLowerCase();
-      final author = (p['author_name'] ?? '').toString().toLowerCase();
-      final tag = (p['tag'] ?? '').toString().toLowerCase();
-
-      return content.contains(q) || author.contains(q) || tag.contains(q);
+      return (p['content'] ?? '').toString().toLowerCase().contains(q) ||
+          (p['author_name'] ?? '').toString().toLowerCase().contains(q) ||
+          (p['tag'] ?? '').toString().toLowerCase().contains(q);
     }).toList();
 
     return Scaffold(
       backgroundColor: bgSurface,
       appBar: AppBar(
+        backgroundColor: bgSurface,
+        elevation: 0,
+        scrolledUnderElevation: 0,
         title: _isSearching
             ? TextField(
                 controller: _searchCtrl,
                 autofocus: true,
                 style: TextStyle(color: isDark ? Colors.white : Colors.black87),
-                decoration: const InputDecoration(
-                  hintText: 'Search BPSC, questions, notes, #topics...',
-                  border: InputBorder.none,
-                ),
+                decoration: const InputDecoration(hintText: 'Search feed, mocks, tags...', border: InputBorder.none),
                 onChanged: (val) => setState(() => _searchQuery = val),
               )
-            : const Text('Community Feed', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+            : const Text('Community Feed', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
         actions: [
           IconButton(
             icon: Icon(_isSearching ? Icons.close_rounded : Icons.search_rounded),
@@ -805,62 +608,56 @@ $content
               });
             },
           ),
-          IconButton(
-            icon: const Icon(Icons.badge_outlined),
-            tooltip: 'Change My Display Name',
-            onPressed: _editMyNameDialog,
-          ),
           IconButton(icon: const Icon(Icons.refresh_rounded), onPressed: _fetchFeedPosts),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: const Color(0xFF2563EB),
         foregroundColor: Colors.white,
-        icon: const Icon(Icons.edit_rounded),
-        label: const Text('Post / Doubt', style: TextStyle(fontWeight: FontWeight.bold)),
+        icon: const Icon(Icons.edit_rounded, size: 18),
+        label: const Text('Share Doubt / Post', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
         onPressed: _openCreatePostModal,
       ),
       body: Column(
         children: [
+          // Filter Chips Strip
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
             child: Row(
               children: _filters.map((f) {
-                final isSelected = _activeFilter == f;
+                final isSel = _activeFilter == f;
                 return Padding(
                   padding: const EdgeInsets.only(right: 6),
                   child: ChoiceChip(
-                    label: Text(f, style: TextStyle(fontSize: 12, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal)),
-                    selected: isSelected,
+                    label: Text(f),
+                    selected: isSel,
+                    selectedColor: const Color(0xFF2563EB),
+                    backgroundColor: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                    labelStyle: TextStyle(
+                      fontSize: 11.5,
+                      fontWeight: isSel ? FontWeight.bold : FontWeight.w500,
+                      color: isSel ? Colors.white : (isDark ? Colors.white70 : const Color(0xFF334155)),
+                    ),
+                    visualDensity: VisualDensity.compact,
                     onSelected: (_) => setState(() => _activeFilter = f),
                   ),
                 );
               }).toList(),
             ),
           ),
-          const Divider(height: 1, thickness: 1),
+          Divider(height: 1, thickness: 0.8, color: dividerColor),
 
           Expanded(
             child: _isLoading
-                ? const Center(child: CircularProgressIndicator())
+                ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
                 : RefreshIndicator(
                     onRefresh: _fetchFeedPosts,
                     child: filteredList.isEmpty
-                        ? Center(
-                            child: Text(
-                              _searchQuery.isNotEmpty ? 'No posts matching "$_searchQuery"' : 'No posts found in this section.',
-                              style: const TextStyle(color: Colors.grey),
-                            ),
-                          )
+                        ? Center(child: Text('No posts found in this section.', style: TextStyle(color: Colors.grey.shade500)))
                         : ListView.separated(
-                            padding: EdgeInsets.zero,
                             itemCount: filteredList.length,
-                            separatorBuilder: (context, index) => Divider(
-                              height: 1,
-                              thickness: 1,
-                              color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-                            ),
+                            separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
                             itemBuilder: (context, idx) {
                               final item = filteredList[idx];
                               final creator = item['creator_profiles'] ?? {};
@@ -871,158 +668,110 @@ $content
                               final String? imgUrl = item['image_url'];
                               final Map<String, dynamic>? pollData = item['poll_data'];
                               final bool isSaved = _savedPostIds.contains(postId);
+
                               final bool isVerifiedCreator = creator['name'] != null && (item['creator_id'] != 'user');
                               final String authorHandle = (creator['handle_id'] ?? item['creator_id'] ?? 'user').toString();
-                              final String authorDisplayName = isVerifiedCreator
-                                  ? (creator['name'] ?? 'Verified Mentor')
-                                  : (item['author_name'] ?? 'Aspirant');
-
-                              // 🔑 Ownership Check: Is this my post or am I master admin?
-                              final bool isMyPost = (item['creator_id'] == _currentLoggedInHandle && _currentLoggedInHandle != 'user') ||
-                                  (item['author_name'] == _customUserName) ||
-                                  (_currentLoggedInHandle == 'admin');
+                              final String authorDisplayName = isVerifiedCreator ? (creator['name'] ?? 'Verified Mentor') : (item['author_name'] ?? 'Aspirant');
 
                               return Container(
                                 color: bgSurface,
-                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Row(
-                                      children: [
-                                        CircleAvatar(
-                                          radius: 18,
-                                          backgroundColor: isVerifiedCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
-                                          child: Text(
-                                            isVerifiedCreator ? ((creator['name'] ?? 'M')[0]).toUpperCase() : 'A',
-                                            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                                    // 👤 Clickable Author Header (Transitions to Profile)
+                                    InkWell(
+                                      onTap: () {
+                                        if (isVerifiedCreator) _navigateToCreator(authorHandle);
+                                      },
+                                      borderRadius: BorderRadius.circular(8),
+                                      child: Row(
+                                        children: [
+                                          CircleAvatar(
+                                            radius: 18,
+                                            backgroundColor: isVerifiedCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
+                                            child: Text(
+                                              authorDisplayName.isNotEmpty ? authorDisplayName[0].toUpperCase() : 'A',
+                                              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                                            ),
                                           ),
-                                        ),
-                                        const SizedBox(width: 10),
-                                        Expanded(
-                                          child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.start,
-                                            children: [
-                                              Row(
-                                                children: [
-                                                  Text(authorDisplayName, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
-                                                  const SizedBox(width: 4),
-                                                  if (isVerifiedCreator) const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
-                                                  const SizedBox(width: 6),
-                                                  Text('@$authorHandle', style: TextStyle(color: Colors.grey[500], fontSize: 11.5)),
-                                                ],
-                                              ),
-                                              Text(
-                                                isVerifiedCreator ? '🎓 ${creator['subject_specialty'] ?? 'Exam Mentor'}' : 'Aspirant • Community Member',
-                                                style: TextStyle(color: isVerifiedCreator ? const Color(0xFF2563EB) : Colors.grey[600], fontSize: 10.5),
-                                              ),
-                                            ],
-                                          ),
-                                        ),
-                                        Container(
-                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                          decoration: BoxDecoration(color: const Color(0xFF2563EB).withOpacity(0.08), borderRadius: BorderRadius.circular(4)),
-                                          child: Text(item['tag'] ?? 'General', style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.bold)),
-                                        ),
-                                        // ⚙️ 3-Dot Control Menu (Edit / Delete)
-                                        if (isMyPost)
-                                          PopupMenuButton<String>(
-                                            icon: const Icon(Icons.more_vert_rounded, size: 18, color: Colors.grey),
-                                            onSelected: (val) {
-                                              if (val == 'edit') _openEditPostModal(item);
-                                              if (val == 'delete') _deletePost(postId);
-                                            },
-                                            itemBuilder: (ctx) => [
-                                              const PopupMenuItem(
-                                                value: 'edit',
-                                                child: Row(
+                                          const SizedBox(width: 10),
+                                          Expanded(
+                                            child: Column(
+                                              crossAxisAlignment: CrossAxisAlignment.start,
+                                              children: [
+                                                Row(
                                                   children: [
-                                                    Icon(Icons.edit_outlined, size: 16, color: Color(0xFF2563EB)),
-                                                    SizedBox(width: 8),
-                                                    Text('Edit Post', style: TextStyle(fontSize: 13)),
+                                                    Flexible(
+                                                      child: Text(
+                                                        authorDisplayName,
+                                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                                        overflow: TextOverflow.ellipsis,
+                                                      ),
+                                                    ),
+                                                    if (isVerifiedCreator) ...[
+                                                      const SizedBox(width: 4),
+                                                      const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
+                                                    ],
+                                                    const SizedBox(width: 6),
+                                                    Text('@$authorHandle', style: TextStyle(color: Colors.grey[500], fontSize: 11)),
                                                   ],
                                                 ),
-                                              ),
-                                              const PopupMenuItem(
-                                                value: 'delete',
-                                                child: Row(
-                                                  children: [
-                                                    Icon(Icons.delete_outline_rounded, size: 16, color: Colors.red),
-                                                    SizedBox(width: 8),
-                                                    Text('Delete Post', style: TextStyle(fontSize: 13, color: Colors.red)),
-                                                  ],
+                                                Text(
+                                                  isVerifiedCreator ? '🎓 ${creator['subject_specialty'] ?? 'Coaching Mentor'}' : 'Aspirant • Community Member',
+                                                  style: TextStyle(color: isVerifiedCreator ? const Color(0xFF2563EB) : Colors.grey[600], fontSize: 10.5),
                                                 ),
-                                              ),
-                                            ],
+                                              ],
+                                            ),
                                           ),
-                                      ],
+                                          Container(
+                                            padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                                            decoration: BoxDecoration(color: const Color(0xFF2563EB).withOpacity(0.08), borderRadius: BorderRadius.circular(4)),
+                                            child: Text(item['tag'] ?? 'General', style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10, fontWeight: FontWeight.bold)),
+                                          ),
+                                        ],
+                                      ),
                                     ),
                                     const SizedBox(height: 10),
 
+                                    // Post Content
                                     _buildRichTextContent(item['content'] ?? ''),
 
-                                    if (pollData != null) _buildInteractivePollCard(postId, pollData, isDark),
+                                    // Special Material Card if PDF
+                                    if (item['tag'] == 'Study Material 📚') _buildStudyMaterialCard(item['content'] ?? '', isDark),
+
+                                    // Attached Mock Test Discovery Card
+                                    if (attachedMock != null) _buildMockDiscoveryCard(attachedMock, authorDisplayName, authorHandle, isDark),
 
                                     if (imgUrl != null && imgUrl.isNotEmpty) ...[
                                       const SizedBox(height: 10),
                                       ClipRRect(
-                                        borderRadius: BorderRadius.circular(12),
-                                        child: Image.network(imgUrl, fit: BoxFit.cover, width: double.infinity, height: 200),
-                                      ),
-                                    ],
-
-                                    if (attachedMock != null) ...[
-                                      const SizedBox(height: 10),
-                                      Container(
-                                        padding: const EdgeInsets.all(12),
-                                        decoration: BoxDecoration(
-                                          color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                                          borderRadius: BorderRadius.circular(10),
-                                          border: Border.all(color: Colors.grey.withOpacity(0.2)),
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            const Icon(Icons.quiz_rounded, color: Color(0xFF2563EB), size: 26),
-                                            const SizedBox(width: 10),
-                                            Expanded(
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(attachedMock['title'] ?? 'Mock Drill', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
-                                                  Text(
-                                                    '${(attachedMock['questions_json'] as List?)?.length ?? 0} Qs • ${attachedMock['duration_mins']} Mins • ⚡ ${attachedMock['attempts_count'] ?? 0} Attempts',
-                                                    style: TextStyle(color: Colors.grey[600], fontSize: 11),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            ElevatedButton(
-                                              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white, visualDensity: VisualDensity.compact),
-                                              onPressed: () => _launchAttachedMock(attachedMock),
-                                              child: const Text('Start', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                                            ),
-                                          ],
-                                        ),
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: Image.network(imgUrl, fit: BoxFit.cover, width: double.infinity, height: 180),
                                       ),
                                     ],
 
                                     const SizedBox(height: 12),
 
+                                    // Interaction Footer (Upvote, Views, Save, Share)
                                     Row(
                                       children: [
                                         Container(
-                                          height: 32,
-                                          decoration: BoxDecoration(color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(20)),
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                            color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                                            borderRadius: BorderRadius.circular(18),
+                                          ),
                                           child: Row(
                                             children: [
                                               IconButton(
-                                                icon: Icon(Icons.arrow_upward_rounded, size: 16, color: userVote == 1 ? const Color(0xFFFF4500) : Colors.grey[600]),
+                                                icon: Icon(Icons.arrow_upward_rounded, size: 15, color: userVote == 1 ? const Color(0xFFFF4500) : Colors.grey[600]),
                                                 onPressed: () => _handleVote(idx, true),
                                                 visualDensity: VisualDensity.compact,
                                               ),
-                                              Text('$score', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: userVote == 1 ? const Color(0xFFFF4500) : (userVote == -1 ? const Color(0xFF7193FF) : null))),
+                                              Text('$score', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: userVote == 1 ? const Color(0xFFFF4500) : null)),
                                               IconButton(
-                                                icon: Icon(Icons.arrow_downward_rounded, size: 16, color: userVote == -1 ? const Color(0xFF7193FF) : Colors.grey[600]),
+                                                icon: Icon(Icons.arrow_downward_rounded, size: 15, color: userVote == -1 ? const Color(0xFF7193FF) : Colors.grey[600]),
                                                 onPressed: () => _handleVote(idx, false),
                                                 visualDensity: VisualDensity.compact,
                                               ),
@@ -1035,17 +784,16 @@ $content
                                           children: [
                                             const Icon(Icons.remove_red_eye_outlined, size: 14, color: Colors.grey),
                                             const SizedBox(width: 3),
-                                            Text('${item['views_count'] ?? 120}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                                            Text('${item['views_count'] ?? 100}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
                                           ],
                                         ),
                                         const SizedBox(width: 8),
 
                                         InkWell(
                                           onTap: () => _toggleBookmark(postId, item),
-                                          borderRadius: BorderRadius.circular(20),
                                           child: Row(
                                             children: [
-                                              Icon(isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded, size: 16, color: isSaved ? const Color(0xFF2563EB) : Colors.grey),
+                                              Icon(isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded, size: 15, color: isSaved ? const Color(0xFF2563EB) : Colors.grey),
                                               const SizedBox(width: 2),
                                               Text('${item['bookmarks_count'] ?? 0}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
                                             ],
@@ -1053,19 +801,12 @@ $content
                                         ),
                                         const Spacer(),
 
-                                        InkWell(
-                                          onTap: () => _sharePost(item),
-                                          borderRadius: BorderRadius.circular(6),
-                                          child: Padding(
-                                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-                                            child: Row(
-                                              children: [
-                                                const Icon(Icons.share_outlined, size: 16, color: Colors.grey),
-                                                const SizedBox(width: 3),
-                                                Text('${item['shares_count'] ?? 0}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
-                                              ],
-                                            ),
-                                          ),
+                                        IconButton(
+                                          icon: const Icon(Icons.share_outlined, size: 16, color: Colors.grey),
+                                          onPressed: () {
+                                            Clipboard.setData(ClipboardData(text: item['content'] ?? ''));
+                                            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Copied to clipboard!')));
+                                          },
                                         ),
                                       ],
                                     ),
