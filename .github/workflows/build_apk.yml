@@ -66,7 +66,6 @@ jobs:
           import io.flutter.embedding.android.FlutterActivity
 
           class MainActivity: FlutterActivity() {
-              // llama_cpp_dart handles FFI bindings directly
           }
           EOF
 
@@ -77,7 +76,6 @@ jobs:
           python3 - << 'EOF'
           import os
 
-          # 1. Update android/app/build.gradle.kts (API 36 + Desugaring + Native SO Packaging)
           app_kts = "android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
@@ -116,7 +114,6 @@ jobs:
               with open(app_kts, "w") as f:
                   f.write(content)
 
-          # 2. Hook subprojects to compile with API 36 in settings.gradle.kts
           settings_kts = "android/settings.gradle.kts"
           if os.path.exists(settings_kts):
               with open(settings_kts, "a") as f:
@@ -139,7 +136,6 @@ jobs:
   }
   """)
 
-          # 3. Inject Full Storage Permissions & Flutter v2 Embedding into AndroidManifest.xml
           manifest_path = "android/app/src/main/AndroidManifest.xml"
           if os.path.exists(manifest_path):
               with open(manifest_path, "r") as f:
@@ -168,7 +164,7 @@ jobs:
 
               with open(manifest_path, "w") as f:
                   f.write(m_content)
-          print("Applied Storage Permissions, API 36, and SO packaging rules.")
+          print("Permissions and native configs applied.")
           EOF
 
       - name: Setup Keystore & Permissions
