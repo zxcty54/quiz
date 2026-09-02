@@ -29,177 +29,70 @@ jobs:
       - name: Setup Android SDK, NDK & CMake
         uses: android-actions/setup-android@v3
 
-      - name: Install Android SDK Components
+      - name: Install Android SDK Components & NDK
         run: |
-          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager "platforms;android-36" "platforms;android-35" "platforms;android-34" "build-tools;36.0.0" "build-tools;34.0.0"
+          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager \
+            "platforms;android-34" \
+            "build-tools;34.0.0" \
+            "ndk;25.2.9519653" \
+            "cmake;3.22.1"
 
-      - name: Clean & Force Android Scaffold
+      - name: Clean & Force Standard Android Scaffold
         working-directory: flutter_app
         run: |
           rm -rf android/app/src/main/java
           flutter create . --platforms=android --org com --project-name testing
 
-      - name: Configure Global Gradle Properties & Disable SDK Checks
+      - name: Configure Global Gradle Properties
         working-directory: flutter_app/android
         run: |
           cat << 'EOF' >> gradle.properties
           android.useAndroidX=true
           android.enableJetifier=false
-          android.suppressUnsupportedCompileSdk=36,Baklava
-          android.experimental.disableCompileSdkChecks=true
           EOF
 
-      - name: Inject MediaPipe MainActivity.kt
+      - name: Inject Clean Flutter MainActivity.kt
         run: |
           mkdir -p flutter_app/android/app/src/main/kotlin/com/testing
           cat << 'EOF' > flutter_app/android/app/src/main/kotlin/com/testing/MainActivity.kt
           package com.testing
 
-          import android.os.Bundle
-          import com.google.mediapipe.tasks.genai.llminference.LlmInference
           import io.flutter.embedding.android.FlutterActivity
-          import io.flutter.embedding.engine.FlutterEngine
-          import io.flutter.plugin.common.MethodChannel
-          import java.io.File
-          import java.util.concurrent.Executors
 
           class MainActivity: FlutterActivity() {
-              private val CHANNEL = "com.mocktester.ai/offline_llm"
-              private var llmInference: LlmInference? = null
-              private val executor = Executors.newSingleThreadExecutor()
-
-              override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
-                  super.configureFlutterEngine(flutterEngine)
-
-                  MethodChannel(flutterEngine.dartExecutor.binaryMessenger, CHANNEL).setMethodCallHandler { call, result ->
-                      when (call.method) {
-                          "initModel" -> {
-                              val modelPath = call.argument<String>("modelPath")
-                              if (modelPath != null && File(modelPath).exists()) {
-                                  executor.execute {
-                                      try {
-                                          llmInference = null
-                                          System.gc()
-
-                                          val options = LlmInference.LlmInferenceOptions.builder()
-                                              .setModelPath(modelPath)
-                                              .setMaxTokens(320)
-                                              .build()
-                                              
-                                          llmInference = LlmInference.createFromOptions(context, options)
-                                          runOnUiThread { result.success(true) }
-                                      } catch (e: Throwable) {
-                                          runOnUiThread { result.error("INIT_FAIL", e.message ?: "Model load failed", null) }
-                                      }
-                                  }
-                              } else {
-                                  result.error("FILE_NOT_FOUND", "Model file not found at path", null)
-                              }
-                          }
-                          "generate" -> {
-                              val rawPrompt = call.argument<String>("prompt") ?: ""
-                              val engine = llmInference
-                              
-                              if (engine == null) {
-                                  result.error("ENGINE_NOT_READY", "Gemma Model Not Initialized", null)
-                                  return@setMethodCallHandler
-                              }
-
-                              val cleanInput = rawPrompt.trim()
-                              if (cleanInput.isEmpty()) {
-                                  result.error("EMPTY_PROMPT", "Prompt cannot be empty", null)
-                                  return@setMethodCallHandler
-                              }
-
-                              executor.execute {
-                                  try {
-                                      val gemmaFormattedPrompt = "<start_of_turn>user\nYou are a helpful and knowledgeable educational AI assistant.\nAnswer the question clearly with accurate facts, key concepts, and complete explanation.\n\nQuestion: $cleanInput<end_of_turn>\n<start_of_turn>model\n"
-                                      val response = engine.generateResponse(gemmaFormattedPrompt)
-                                      
-                                      runOnUiThread {
-                                          if (!response.isNullOrBlank()) {
-                                              val cleanResponse = response
-                                                  .replace("<start_of_turn>model", "")
-                                                  .replace("<end_of_turn>", "")
-                                                  .replace("<eos>", "")
-                                                  .trim()
-                                              result.success(cleanResponse)
-                                          } else {
-                                              result.error("EMPTY_RESPONSE", "Engine returned no output", null)
-                                          }
-                                      }
-                                  } catch (e: Throwable) {
-                                      runOnUiThread { 
-                                          result.error("GEN_FAIL", e.localizedMessage ?: "Inference execution error", null) 
-                                      }
-                                  }
-                              }
-                          }
-                          else -> result.notImplemented()
-                      }
-                  }
-              }
-
-              override fun onDestroy() {
-                  super.onDestroy()
-                  executor.shutdown()
-                  llmInference = null
-              }
+              // llama_cpp_dart directly handles FFI bindings from Dart layer
           }
           EOF
 
-      - name: Setup Dependencies & Build Configuration
+      - name: Setup Build Configuration
         working-directory: flutter_app
         run: |
           flutter pub get
           python3 - << 'EOF'
           import os
 
-          # 1. Update android/app/build.gradle.kts
           app_kts = "android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
                   content = f.read()
               
-              content = content.replace("compileSdk = flutter.compileSdkVersion", "compileSdk = 36")
+              # Standard compileSdk for llama_cpp_dart
+              content = content.replace("compileSdk = flutter.compileSdkVersion", "compileSdk = 34")
+              
               if "isCoreLibraryDesugaringEnabled" not in content:
                   if "compileOptions {" in content:
                       content = content.replace("compileOptions {", "compileOptions {\n        isCoreLibraryDesugaringEnabled = true")
                   else:
                       content = content.replace("android {", "android {\n    compileOptions {\n        isCoreLibraryDesugaringEnabled = true\n    }")
               
-              if "tasks-genai" not in content:
+              if "desugar_jdk_libs" not in content:
                   content += """
           dependencies {
               coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
-              implementation("com.google.mediapipe:tasks-genai:0.10.14")
           }
           """
               with open(app_kts, "w") as f:
                   f.write(content)
-
-          # 2. Add valid Kotlin DSL beforeProject hook in settings.gradle.kts
-          settings_kts = "android/settings.gradle.kts"
-          if os.path.exists(settings_kts):
-              with open(settings_kts, "a") as f:
-                  f.write("""
-          gradle.beforeProject {
-              plugins.withId("com.android.library") {
-                  extensions.findByName("android")?.let { ext ->
-                      try {
-                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
-                      } catch (_: Exception) {}
-                  }
-              }
-              plugins.withId("com.android.application") {
-                  extensions.findByName("android")?.let { ext ->
-                      try {
-                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
-                      } catch (_: Exception) {}
-                  }
-              }
-          }
-          """)
           EOF
 
       - name: Setup Keystore & Permissions
@@ -218,17 +111,17 @@ jobs:
             -dname "CN=Android Debug,O=Android,C=US" \
             || true
 
-      - name: Build Pure Offline Release APK via Gradle
-        working-directory: flutter_app/android
-        run: ./gradlew assembleRelease -PtargetPlatform=android-arm64
+      - name: Build Pure Offline Release APK via Flutter
+        working-directory: flutter_app
+        run: flutter build apk --release --target-platform=android-arm64
 
       - name: Locate & Package APK
         working-directory: flutter_app
         run: |
           mkdir -p build/app/outputs/flutter-apk
-          APK_FILE=$(find . -type f -name "*release*.apk" ! -name "*-unsigned.apk" | head -n 1)
+          APK_FILE=$(find build/app/outputs -type f -name "*release*.apk" | head -n 1)
           if [ -z "$APK_FILE" ]; then
-            APK_FILE=$(find . -type f -name "*.apk" | head -n 1)
+            APK_FILE=$(find build/app/outputs -type f -name "*.apk" | head -n 1)
           fi
           echo "Found APK at: $APK_FILE"
           cp "$APK_FILE" build/app/outputs/flutter-apk/app-release.apk
@@ -246,5 +139,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (Google MediaPipe GenAI) APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} (llama.cpp GGUF Core) APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
