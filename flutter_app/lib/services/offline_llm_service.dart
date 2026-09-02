@@ -13,7 +13,7 @@ class OfflineLlmAgentService {
   static final OfflineLlmAgentService instance = OfflineLlmAgentService._internal();
   OfflineLlmAgentService._internal();
 
-  Llama? _llama;
+  LlamaCpp? _llamaCpp;
   bool _isInitialized = false;
 
   bool get isReady => _isInitialized;
@@ -27,16 +27,15 @@ class OfflineLlmAgentService {
       throw Exception("GGUF Model file nahi mili: $path");
     }
 
-    final contextParams = ContextParams()
-      ..nCtx = 768
-      ..nThreads = 4;
-
-    final modelParams = ModelParams();
-
-    _llama = Llama(
+    _llamaCpp = LlamaCpp();
+    
+    // Model initialization for 0.2.2
+    _llamaCpp!.loadModel(
       path,
-      modelParams: modelParams,
-      contextParams: contextParams,
+      modelParams: ModelParams(),
+      contextParams: ContextParams()
+        ..nCtx = 768
+        ..nThreads = 4,
     );
 
     _isInitialized = true;
@@ -47,7 +46,7 @@ class OfflineLlmAgentService {
     required String context,
     required LlmTaskType task,
   }) async {
-    if (!_isInitialized || _llama == null) {
+    if (!_isInitialized || _llamaCpp == null) {
       await initEngine();
     }
 
@@ -116,8 +115,10 @@ $userInput
 <|im_start|>assistant
 ''';
 
+    // 0.2.2 standard token streaming
     final buffer = StringBuffer();
-    await for (final token in _llama!.prompt(fullChatmlPrompt)) {
+    final stream = _llamaCpp!.generate(fullChatmlPrompt);
+    await for (final token in stream) {
       buffer.write(token);
     }
 
@@ -125,7 +126,7 @@ $userInput
   }
 
   void dispose() {
-    _llama?.dispose();
+    _llamaCpp?.dispose();
     _isInitialized = false;
   }
 }
