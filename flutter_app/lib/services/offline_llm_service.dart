@@ -27,6 +27,11 @@ class OfflineLlmAgentService {
       throw Exception("GGUF Model file nahi mili: $path");
     }
 
+    // Android native .so dynamic loading fix
+    try {
+      Llama.librarySearchPath = null;
+    } catch (_) {}
+
     final contextParams = ContextParams()
       ..nCtx = 768
       ..nThreads = 4;
