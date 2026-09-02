@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-// Apne project path ke mutabiq service import karein
 import 'package:mocktester/services/offline_llm_service.dart';
 
 class AiChatScreen extends StatefulWidget {
@@ -29,61 +28,83 @@ class _AiChatScreenState extends State<AiChatScreen> {
   bool _isModelLoaded = false;
   bool _isLoading = false;
   bool _isGenerating = false;
-  String _statusMessage = "Checking offline Qwen model...";
+  String _statusMessage = "Tap folder icon to select .gguf model";
 
   @override
   void initState() {
     super.initState();
-    _checkAndAutoLoadModel();
+    _checkSavedModel();
   }
 
-  Future<void> _checkAndAutoLoadModel() async {
-    // 1. Check Download folder default path
-    const defaultDownloadPath = '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
-    if (await File(defaultDownloadPath).exists()) {
-      await _initQwenModel(defaultDownloadPath);
-      return;
-    }
-
-    // 2. Check internal documents directory
-    final appDir = await getApplicationDocumentsDirectory();
-    final internalFile = File('${appDir.path}/qwen3-5-2B-Q4_K_M.gguf');
-    if (await internalFile.exists()) {
-      await _initQwenModel(internalFile.path);
-      return;
-    }
-
-    // 3. Check SharedPreferences saved path
+  Future<void> _checkSavedModel() async {
     final prefs = await SharedPreferences.getInstance();
     final savedPath = prefs.getString('saved_qwen_path');
-    if (savedPath != null && File(savedPath).existsSync()) {
-      await _initQwenModel(savedPath);
-    } else {
-      setState(() {
-        _statusMessage = "Select Qwen .gguf model";
-      });
+    if (savedPath != null && await File(savedPath).exists()) {
+      _initQwenModel(savedPath);
     }
   }
 
   Future<void> _pickModelFile() async {
-    FilePickerResult? result = await FilePicker.platform.pickFiles(
-      type: FileType.custom,
-      allowedExtensions: ['gguf', 'bin'],
-    );
+    setState(() {
+      _isLoading = true;
+      _statusMessage = "Opening file picker...";
+    });
 
-    if (result != null && result.files.single.path != null) {
+    try {
+      FilePickerResult? result = await FilePicker.platform.pickFiles(
+        type: FileType.any,
+      );
+
+      if (result == null || result.files.single.path == null) {
+        setState(() {
+          _isLoading = false;
+          _statusMessage = "Selection cancelled";
+        });
+        return;
+      }
+
       final pickedPath = result.files.single.path!;
+
+      if (!pickedPath.toLowerCase().endsWith('.gguf')) {
+        setState(() {
+          _isLoading = false;
+          _statusMessage = "Galat file format: sirf .gguf select karein";
+        });
+        return;
+      }
+
+      // Direct internal storage path pass karein (No copy, zero storage duplicate)
       await _initQwenModel(pickedPath);
+
+    } catch (e) {
+      setState(() {
+        _isLoading = false;
+        _statusMessage = "Picker error: $e";
+      });
     }
   }
 
   Future<void> _initQwenModel(String path) async {
     setState(() {
       _isLoading = true;
-      _statusMessage = "Loading Qwen GGUF into RAM...";
+      _statusMessage = "Reading file directly from storage...";
     });
 
     try {
+      final file = File(path);
+      if (!await file.exists()) {
+        throw Exception("File path read nahi ho raha: $path");
+      }
+
+      final sizeMB = (await file.length()) / (1024 * 1024);
+      setState(() {
+        _statusMessage = "Allocating ${sizeMB.toStringAsFixed(0)}MB directly to RAM...";
+      });
+
+      // Micro delay taaki UI loader aur text update display ho sake
+      await Future.delayed(const Duration(milliseconds: 150));
+
+      // Native C++ Engine Init (llama_cpp_dart)
       await OfflineLlmAgentService.instance.initEngine(modelPath: path);
 
       final prefs = await SharedPreferences.getInstance();
@@ -117,7 +138,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     try {
       final String response = await OfflineLlmAgentService.instance.executeLlmAgent(
         userInput: text,
-        context: "BPSC / BSSC Exam Preparation Study Guide",
+        context: "BPSC / BSSC Exam General Studies Concept Revision",
         task: LlmTaskType.duolingoExplanation,
       );
 
@@ -164,7 +185,11 @@ class _AiChatScreenState extends State<AiChatScreen> {
               _statusMessage,
               style: TextStyle(
                 fontSize: 11,
-                color: _isModelLoaded ? Colors.greenAccent : Colors.white70,
+                color: _isModelLoaded
+                    ? Colors.greenAccent
+                    : (_statusMessage.contains("failed") || _statusMessage.contains("error")
+                        ? Colors.redAccent
+                        : Colors.white70),
               ),
             ),
           ],
@@ -183,11 +208,15 @@ class _AiChatScreenState extends State<AiChatScreen> {
           Expanded(
             child: _messages.isEmpty
                 ? Center(
-                    child: Text(
-                      _isModelLoaded
-                          ? "Qwen 2B Ready! Ask any question..."
-                          : "Tap folder icon to select .gguf model",
-                      style: TextStyle(color: isDark ? Colors.grey.shade400 : Colors.grey),
+                    child: Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: Text(
+                        _isModelLoaded
+                            ? "Qwen 2B Ready! Ask any question..."
+                            : _statusMessage,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: isDark ? Colors.grey.shade400 : Colors.grey),
+                      ),
                     ),
                   )
                 : ListView.builder(
@@ -247,7 +276,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     enabled: _isModelLoaded && !_isGenerating,
                     style: TextStyle(color: textColor),
                     decoration: InputDecoration(
-                      hintText: "Type any question...",
+                      hintText: _isModelLoaded ? "Type any question..." : "Select model first...",
                       hintStyle: TextStyle(color: isDark ? Colors.grey.shade500 : Colors.grey),
                       border: InputBorder.none,
                       contentPadding: const EdgeInsets.symmetric(horizontal: 12),
