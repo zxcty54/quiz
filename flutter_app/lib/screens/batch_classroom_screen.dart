@@ -102,10 +102,11 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
           subFolder: (test['subject'] ?? 'General').toString().toLowerCase(),
           isBatchTest: true, // 👈 Classroom test: promotion card hide rahega
           batchId: widget.batchData['id']?.toString(), // 👈 Teacher dashboard sync
+          mockId: test['id'], // 👈 Attempts count update karne ke liye ZAROORI hai
         ),
       ),
     ).then((_) {
-      // Test submit ya exit hone par status refresh karein
+      // Test submit ya exit hone par status aur progress bar refresh karein
       _loadBatchTests();
     });
   }
