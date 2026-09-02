@@ -10,14 +10,16 @@ import '../widgets/latex_text.dart';
 import '../widgets/cbt_widgets.dart';
 import '../services/telegram_tracker.dart';
 import '../services/user_stats_service.dart';
+import '../services/cbt_progress_service.dart'; // 👈 Auto-save & Resume Service
 import 'creator_profile_screen.dart';
 
 class SectionalCbtScreen extends StatefulWidget {
   final String testTitle;
   final List<Question> questions;
   final String subFolder;
-  final String? creatorHandle; // 👈 Public mock me coaching handle pass hoga
-  final bool isBatchTest;      // 👈 Batch classroom me true pass hoga
+  final String? creatorHandle; // Public mock me coaching handle
+  final bool isBatchTest;      // Batch classroom check
+  final String? batchId;       // 👈 Teacher dashboard sync ke liye batch ID
 
   const SectionalCbtScreen({
     super.key,
@@ -25,7 +27,8 @@ class SectionalCbtScreen extends StatefulWidget {
     required this.questions,
     required this.subFolder,
     this.creatorHandle,
-    this.isBatchTest = false, // Default false (Public Free Mock)
+    this.isBatchTest = false,
+    this.batchId,
   });
 
   @override
@@ -47,7 +50,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   bool _isExamSubmitted = false;
   bool _isBookmarked = false;
 
-  // 🎯 Coaching Lead Conversion Data
+  // Coaching Lead Conversion Data
   Map<String, dynamic>? _coachingInfo;
 
   @override
@@ -56,13 +59,28 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     _isHindi = widget.subFolder.contains('bssc') ||
         widget.subFolder.contains('bpsc') ||
         widget.subFolder.contains('bihar_si');
-    _startTimers();
+    
+    _loadSavedProgressAndStart();
     _checkBookmarkStatus();
     _fetchCoachingDetails();
   }
 
+  // 🔄 1. Load saved progress to support RESUME feature
+  Future<void> _loadSavedProgressAndStart() async {
+    final saved = await CbtProgressService.getTestStatus(widget.testTitle);
+    if (saved != null && saved['status'] == 'IN_PROGRESS') {
+      setState(() {
+        _currentIndex = saved['currentIndex'] ?? 0;
+        _totalTimeSeconds = saved['remainingSeconds'] ?? _totalTimeSeconds;
+        if (saved['parsedUserAnswers'] != null) {
+          _userAnswers.addAll(saved['parsedUserAnswers'] as Map<int, int>);
+        }
+      });
+    }
+    _startTimers();
+  }
+
   Future<void> _fetchCoachingDetails() async {
-    // Agar batch test hai ya creator handle nahi hai toh fetch karne ki zaroorat nahi
     if (widget.isBatchTest || widget.creatorHandle == null || widget.creatorHandle == 'user') {
       return;
     }
@@ -101,7 +119,18 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     super.dispose();
   }
 
-  void _selectOption(int optionIndex) => setState(() => _userAnswers[_currentIndex] = optionIndex);
+  // 💾 2. Auto-save progress whenever user selects an option
+  void _selectOption(int optionIndex) {
+    setState(() => _userAnswers[_currentIndex] = optionIndex);
+
+    CbtProgressService.saveProgress(
+      testId: widget.testTitle,
+      currentIndex: _currentIndex,
+      userAnswers: _userAnswers,
+      remainingSeconds: _totalTimeSeconds,
+      totalQuestions: widget.questions.length,
+    );
+  }
 
   void _toggleReview() {
     setState(() {
@@ -204,6 +233,45 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     await UserStatsService.recordMockTest(questionsAttempted: _userAnswers.length);
 
+    // Calculate Final Score for local & teacher sync
+    double score = 0.0;
+    if (widget.subFolder.contains('bssc')) {
+      score = (correctCount * 4) - (wrongCount * 1.0);
+    } else if (widget.subFolder.contains('bpsc')) {
+      score = (correctCount * 1.0) - (wrongCount * 0.33);
+    } else if (widget.subFolder.contains('bihar_si')) {
+      score = (correctCount * 2.0) - (wrongCount * 0.40);
+    } else {
+      score = (correctCount * 1.0) - (wrongCount * 0.25);
+    }
+
+    // 🏆 3. Mark Completed in local storage cache
+    await CbtProgressService.markCompleted(
+      testId: widget.testTitle,
+      score: score,
+      correct: correctCount,
+      wrong: wrongCount,
+      total: widget.questions.length,
+    );
+
+    // 🌐 4. Sync live result to Supabase for Teacher Dashboard Intelligence Hub
+    if (widget.isBatchTest && widget.batchId != null) {
+      try {
+        final prefs = await SharedPreferences.getInstance();
+        final studentName = prefs.getString('custom_aspirant_name') ?? 'Enrolled Student';
+        final double accuracyPct = _userAnswers.isNotEmpty ? (correctCount / _userAnswers.length) * 100 : 0.0;
+
+        await Supabase.instance.client.from('batch_submissions').insert({
+          'batch_id': widget.batchId,
+          'student_identifier': studentName,
+          'score': score,
+          'accuracy': accuracyPct.round(),
+          'weak_subject': wrongCount > 0 ? 'Target Revision Area' : 'All Clear',
+          'strong_subject': correctCount > 5 ? 'Core Concepts Strong' : 'Basic Practice',
+        });
+      } catch (_) {}
+    }
+
     TelegramTracker.recordTestCompletion(
       widget.testTitle,
       "Sahi: $correctCount, Galat: $wrongCount / Total: ${widget.questions.length}",
@@ -216,7 +284,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     return "${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}";
   }
 
-  // 🔑 Dialog: Have Batch Code
   void _openBatchCodeDialog(String coachingName) {
     final codeCtrl = TextEditingController();
     showDialog(
@@ -584,7 +651,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             ),
 
             // 🎯 COACHING LEAD CONVERSION AD DECK
-            // Rule: Sirf Public Free Mock me show hoga (Classroom batch me HIDE)
             if (!widget.isBatchTest && _coachingInfo != null) ...[
               const SizedBox(height: 16),
               Container(
