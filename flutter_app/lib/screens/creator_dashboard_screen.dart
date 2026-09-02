@@ -61,14 +61,24 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
       List<dynamic> batchesRes = [];
       List<Map<String, dynamic>> batchStudentsList = [];
+      int batchTestAttempts = 0;
 
       if (coachingRes != null) {
         batchesRes = await client
             .from('batches')
-            .select('*, batch_tests(id, test_title)')
+            .select('*, batch_tests(id, test_title, attempts_count)')
             .eq('coaching_id', coachingRes['id'])
             .order('created_at', ascending: false);
 
+        // Sum attempts from private batch tests
+        for (var b in (batchesRes as List? ?? [])) {
+          final tests = b['batch_tests'] as List? ?? [];
+          for (var t in tests) {
+            batchTestAttempts += (t['attempts_count'] as int? ?? 0);
+          }
+        }
+
+        // Fetch Real Submissions
         if (batchesRes.isNotEmpty) {
           final batchIds = batchesRes.map((b) => b['id']).toList();
           final submissions = await client
@@ -77,37 +87,39 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               .inFilter('batch_id', batchIds)
               .order('created_at', ascending: false);
 
-          final Map<String, Map<String, dynamic>> studentMap = {};
-          for (var s in (submissions as List? ?? [])) {
-            final String rawIdentifier = s['student_identifier'] ?? 'Aspirant';
-            
-            // Name & Roll parsing (e.g. "Suresh Kumar (Roll/Ph: 104)")
-            String nameOnly = rawIdentifier;
-            String contactInfo = '';
-            if (rawIdentifier.contains('(') && rawIdentifier.contains(')')) {
-              final parts = rawIdentifier.split('(');
-              nameOnly = parts[0].trim();
-              contactInfo = parts[1].replaceAll(')', '').replaceAll('Roll/Ph:', '').trim();
-            }
+          if (submissions != null && (submissions as List).isNotEmpty) {
+            final Map<String, Map<String, dynamic>> studentMap = {};
+            for (var s in submissions) {
+              final String rawIdentifier = s['student_identifier'] ?? 'Aspirant';
 
-            if (!studentMap.containsKey(rawIdentifier)) {
-              studentMap[rawIdentifier] = {
-                'raw_id': rawIdentifier,
-                'name': nameOnly,
-                'contact': contactInfo,
-                'batch_name': s['batches']?['batch_name'] ?? 'Classroom Batch',
-                'tests_count': 1,
-                'scores': [s['score'] ?? 0],
-                'accuracy': s['accuracy'] ?? 72,
-                'weak_subject': s['weak_subject'] ?? 'General Science',
-                'strong_subject': s['strong_subject'] ?? 'History & Bihar GK',
-              };
-            } else {
-              studentMap[rawIdentifier]!['tests_count'] = (studentMap[rawIdentifier]!['tests_count'] as int) + 1;
-              (studentMap[rawIdentifier]!['scores'] as List).add(s['score'] ?? 0);
+              String nameOnly = rawIdentifier;
+              String contactInfo = '';
+              if (rawIdentifier.contains('(') && rawIdentifier.contains(')')) {
+                final parts = rawIdentifier.split('(');
+                nameOnly = parts[0].trim();
+                contactInfo = parts[1].replaceAll(')', '').replaceAll('Roll/Ph:', '').trim();
+              }
+
+              if (!studentMap.containsKey(rawIdentifier)) {
+                studentMap[rawIdentifier] = {
+                  'raw_id': rawIdentifier,
+                  'name': nameOnly,
+                  'contact': contactInfo,
+                  'batch_name': s['batches']?['batch_name'] ?? 'Classroom Batch',
+                  'tests_count': 1,
+                  'scores': [s['score'] ?? 0],
+                  'accuracy': s['accuracy'] ?? 70,
+                  'weak_subject': s['weak_subject'] ?? 'General Studies',
+                  'strong_subject': s['strong_subject'] ?? 'Core Concepts',
+                };
+              } else {
+                studentMap[rawIdentifier]!['tests_count'] =
+                    (studentMap[rawIdentifier]!['tests_count'] as int) + 1;
+                (studentMap[rawIdentifier]!['scores'] as List).add(s['score'] ?? 0);
+              }
             }
+            batchStudentsList = studentMap.values.toList();
           }
-          batchStudentsList = studentMap.values.toList();
         }
       }
 
@@ -118,7 +130,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
       final mocksRes = await client
           .from('creator_mocks')
-          .select('attempts_count')
+          .select('id, attempts_count')
           .eq('creator_id', widget.creatorHandle);
 
       int views = 0;
@@ -126,46 +138,38 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
         views += (p['views_count'] as int? ?? 0);
       }
 
-      int attempts = 0;
+      int publicAttempts = 0;
       for (var m in (mocksRes as List? ?? [])) {
-        attempts += (m['attempts_count'] as int? ?? 0);
+        publicAttempts += (m['attempts_count'] as int? ?? 0);
       }
 
-      // Sample Demo Data if batch has zero attempts
+      int totalCombinedAttempts = publicAttempts + batchTestAttempts;
+
+      // Only show sample placeholder if absolute 0 submissions exist
       if (batchStudentsList.isEmpty) {
         batchStudentsList = [
           {
-            'raw_id': 'Suresh Kumar (Roll: 104)',
-            'name': 'Suresh Kumar',
+            'raw_id': 'Demo: Suresh Kumar (Roll: 104)',
+            'name': 'Suresh Kumar (Sample Data)',
             'contact': 'Roll: 104',
             'batch_name': 'Patna Target 72 Batch',
-            'tests_count': 8,
+            'tests_count': 1,
             'accuracy': 74,
-            'weak_subject': 'General Science (Physics Formulae)',
-            'strong_subject': 'Modern History & Bihar Special',
-          },
-          {
-            'raw_id': 'Pooja Kumari (Ph: 9876543210)',
-            'name': 'Pooja Kumari',
-            'contact': 'Ph: 9876543210',
-            'batch_name': 'Daroga Rapid Drill',
-            'tests_count': 12,
-            'accuracy': 81,
-            'weak_subject': 'Indian Economy',
-            'strong_subject': 'Indian Polity',
+            'weak_subject': 'General Science',
+            'strong_subject': 'Modern History',
           }
         ];
       }
 
       final openList = [
         {
-          'name': 'Ramesh Verma',
-          'contact': 'Public Aspirant',
-          'source': 'Public Feed Free Mock',
-          'tests_count': 2,
-          'accuracy': 62,
+          'name': 'Public Aspirant Lead',
+          'contact': 'N/A',
+          'source': 'Public Free Mock Attempt',
+          'tests_count': publicAttempts,
+          'accuracy': 65,
           'weak_subject': 'Current Affairs',
-          'strong_subject': 'Physical Geography',
+          'strong_subject': 'Bihar Special',
         },
       ];
 
@@ -175,14 +179,15 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           _coachingData = coachingRes;
           _batches = batchesRes;
           _totalViews = views;
-          _totalMockAttempts = attempts;
+          _totalMockAttempts = totalCombinedAttempts;
           _classroomStudents = batchStudentsList;
           _openAspirants = openList;
           _totalBatchStudents = batchStudentsList.length;
           _isLoading = false;
         });
       }
-    } catch (_) {
+    } catch (e) {
+      debugPrint("❌ [CREATOR_DASHBOARD] Analytics error: $e");
       if (mounted) setState(() => _isLoading = false);
     }
   }
@@ -194,7 +199,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     if (await canLaunchUrl(uri)) await launchUrl(uri);
   }
 
-  // 🔍 Student Individual Detailed Report Modal
   void _openStudentDetailModal(Map<String, dynamic> student, bool isClassroom) {
     showModalBottomSheet(
       context: context,
@@ -261,7 +265,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const Divider(height: 24),
 
-            // Performance Metrics Cards
             Row(
               children: [
                 Expanded(
@@ -305,7 +308,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 14),
 
-            // Strong Area Box
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(12),
@@ -332,7 +334,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 8),
 
-            // Weak Area Alert Box
             Container(
               width: double.infinity,
               padding: const EdgeInsets.all(12),
@@ -359,7 +360,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 18),
 
-            // Direct Call / Guidance Action
             Row(
               children: [
                 if (student['contact'] != null && student['contact'].toString().contains(RegExp(r'[0-9]'))) ...[
@@ -390,7 +390,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                     onPressed: () {
                       Navigator.pop(ctx);
                       ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('Guidance notification sent to ${student['name']}!')),
+                        SnackBar(content: Text('Guidance note sent to ${student['name']}!')),
                       );
                     },
                   ),
@@ -404,7 +404,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     );
   }
 
-  // 👥 Student Intelligence Hub Bottom Sheet
   void _openStudentIntelligenceSheet() {
     int activeTabIndex = 0;
 
@@ -429,7 +428,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               ),
               const SizedBox(height: 8),
 
-              // Segmented Choice Chips
               Row(
                 children: [
                   Expanded(
@@ -463,7 +461,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               ),
               const Divider(height: 20),
 
-              // Student List
               Expanded(
                 child: ListView.builder(
                   itemCount: activeTabIndex == 0 ? _classroomStudents.length : _openAspirants.length,
@@ -513,13 +510,11 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     );
   }
 
-  // 📝 Post / PDF / Notice Creation Sheet
   void _openContentPublishSheet(String type) {
     final titleCtrl = TextEditingController();
     final contentCtrl = TextEditingController();
     final linkCtrl = TextEditingController();
     
-    // For Rapid Quiz
     final opCtrl1 = TextEditingController();
     final opCtrl2 = TextEditingController();
     final opCtrl3 = TextEditingController();
@@ -601,7 +596,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 ),
                 const SizedBox(height: 10),
 
-                // ⚡ Quiz Options Strip
                 if (type == 'quiz') ...[
                   const Text('Options & Correct Answer (Tap letter to set correct):', style: TextStyle(fontSize: 11, color: Colors.grey)),
                   const SizedBox(height: 6),
@@ -699,7 +693,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                                 'bookmarks_count': 0,
                               }).select().single();
 
-                              // Telegram notification
                               AdminTelegramAlert.sendForInteractiveApproval(
                                 postId: inserted['id'] ?? 0,
                                 authorName: authorName,
@@ -738,7 +731,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     );
   }
 
-  // 🖼️ MODULAR 1: Banner / Poster Update Sheet
   void _openBannerModifierSheet() {
     File? newImage;
     bool isSaving = false;
@@ -834,7 +826,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     );
   }
 
-  // 📍 MODULAR 2: Details, Location & Contact Update Sheet
   void _openDetailsModifierSheet() {
     final nameCtrl = TextEditingController(text: _coachingData?['name'] ?? _profile?['name'] ?? '');
     final landmarkCtrl = TextEditingController(text: _coachingData?['landmark_address'] ?? '');
@@ -964,7 +955,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     );
   }
 
-  // 🏫 MODULAR 3: Manage Batches & Status
   void _openBatchManagerModal() {
     final batchNameCtrl = TextEditingController();
     final batchCodeCtrl = TextEditingController();
@@ -1019,7 +1009,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             ],
                           ),
                         ),
-                        // Copy Code
                         IconButton(
                           icon: const Icon(Icons.copy_rounded, size: 18, color: Color(0xFF16A34A)),
                           onPressed: () {
@@ -1027,7 +1016,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Copied Code: ${b['batch_code']}')));
                           },
                         ),
-                        // Status Switcher
                         PopupMenuButton<String>(
                           icon: const Icon(Icons.more_vert_rounded),
                           onSelected: (val) async {
@@ -1123,7 +1111,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Analytics Card
             Container(
               padding: const EdgeInsets.all(16),
               decoration: BoxDecoration(
@@ -1151,7 +1138,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 🎯 Student Intelligence Feature Trigger
             _buildActionCard(
               title: 'Student Performance Intelligence 📊',
               subtitle: 'Track Suresh & classroom vs open test takers, accuracy and weak areas.',
@@ -1161,7 +1147,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 14),
 
-            // 🎯 Modular Modifiers
             const Text('Modify Institute & Batches', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
 
@@ -1190,7 +1175,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 16),
 
-            // 🚀 Full Studio Content Creation Suite
             const Text('Publish Content & Tests', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
 
