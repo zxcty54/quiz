@@ -37,7 +37,7 @@ jobs:
             "ndk;25.2.9519653" \
             "cmake;3.22.1"
 
-      - name: Clean & Force Standard Android Scaffold
+      - name: Clean & Force Android Scaffold
         working-directory: flutter_app
         run: |
           rm -rf android/app/src/main/java
@@ -64,19 +64,19 @@ jobs:
           }
           EOF
 
-      - name: Setup Build Configuration
+      - name: Setup Build Configuration & Inject v2 Embedding
         working-directory: flutter_app
         run: |
           flutter pub get
           python3 - << 'EOF'
           import os
 
+          # 1. Update android/app/build.gradle.kts
           app_kts = "android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
                   content = f.read()
               
-              # Standard compileSdk for llama_cpp_dart
               content = content.replace("compileSdk = flutter.compileSdkVersion", "compileSdk = 34")
               
               if "isCoreLibraryDesugaringEnabled" not in content:
@@ -93,6 +93,23 @@ jobs:
           """
               with open(app_kts, "w") as f:
                   f.write(content)
+
+          # 2. Inject Flutter v2 Embedding directly into AndroidManifest.xml
+          manifest_path = "android/app/src/main/AndroidManifest.xml"
+          if os.path.exists(manifest_path):
+              with open(manifest_path, "r") as f:
+                  m_content = f.read()
+
+              v2_tag = '\n        <meta-data android:name="flutterEmbedding" android:value="2" />\n'
+              if 'android:name="flutterEmbedding"' not in m_content:
+                  if "</application>" in m_content:
+                      m_content = m_content.replace("</application>", f"{v2_tag}    </application>")
+                  elif "<application" in m_content:
+                      m_content = m_content.replace("<application", "<application" + v2_tag, 1)
+
+              with open(manifest_path, "w") as f:
+                  f.write(m_content)
+              print("Successfully injected flutterEmbedding v2 into AndroidManifest.xml")
           EOF
 
       - name: Setup Keystore & Permissions
@@ -113,7 +130,7 @@ jobs:
 
       - name: Build Pure Offline Release APK via Flutter
         working-directory: flutter_app
-        run: flutter build apk --release --target-platform=android-arm64
+        run: flutter build apk --release --target-platform=android-arm64 --no-tree-shake-icons
 
       - name: Locate & Package APK
         working-directory: flutter_app
