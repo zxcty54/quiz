@@ -27,14 +27,12 @@ class OfflineLlmAgentService {
       throw Exception("GGUF Model file nahi mili: $path");
     }
 
-    // 0.2.2 API: nCtx for context tokens limit
     final contextParams = ContextParams()
       ..nCtx = 768
       ..nThreads = 4;
 
     final modelParams = ModelParams();
 
-    // 0.2.2 API: path is positional, params are named
     _llama = Llama(
       path,
       modelParams: modelParams,
@@ -118,9 +116,8 @@ $userInput
 <|im_start|>assistant
 ''';
 
-    // 0.2.2 API: generate(prompt: ...) stream
     final buffer = StringBuffer();
-    await for (final token in _llama!.generate(prompt: fullChatmlPrompt)) {
+    await for (final token in _llama!.prompt(fullChatmlPrompt)) {
       buffer.write(token);
     }
 
