@@ -10,16 +10,16 @@ import '../widgets/latex_text.dart';
 import '../widgets/cbt_widgets.dart';
 import '../services/telegram_tracker.dart';
 import '../services/user_stats_service.dart';
-import '../services/cbt_progress_service.dart'; // 👈 Auto-save & Resume Service
+import '../services/cbt_progress_service.dart';
 import 'creator_profile_screen.dart';
 
 class SectionalCbtScreen extends StatefulWidget {
   final String testTitle;
   final List<Question> questions;
   final String subFolder;
-  final String? creatorHandle; // Public mock me coaching handle
-  final bool isBatchTest;      // Batch classroom check
-  final String? batchId;       // 👈 Teacher dashboard sync ke liye batch ID
+  final String? creatorHandle;
+  final bool isBatchTest;
+  final String? batchId;
 
   const SectionalCbtScreen({
     super.key,
@@ -50,7 +50,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   bool _isExamSubmitted = false;
   bool _isBookmarked = false;
 
-  // Coaching Lead Conversion Data
   Map<String, dynamic>? _coachingInfo;
 
   @override
@@ -65,7 +64,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     _fetchCoachingDetails();
   }
 
-  // 🔄 1. Load saved progress to support RESUME feature
   Future<void> _loadSavedProgressAndStart() async {
     final saved = await CbtProgressService.getTestStatus(widget.testTitle);
     if (saved != null && saved['status'] == 'IN_PROGRESS') {
@@ -119,7 +117,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     super.dispose();
   }
 
-  // 💾 2. Auto-save progress whenever user selects an option
   void _selectOption(int optionIndex) {
     setState(() => _userAnswers[_currentIndex] = optionIndex);
 
@@ -233,7 +230,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     await UserStatsService.recordMockTest(questionsAttempted: _userAnswers.length);
 
-    // Calculate Final Score for local & teacher sync
     double score = 0.0;
     if (widget.subFolder.contains('bssc')) {
       score = (correctCount * 4) - (wrongCount * 1.0);
@@ -245,7 +241,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       score = (correctCount * 1.0) - (wrongCount * 0.25);
     }
 
-    // 🏆 3. Mark Completed in local storage cache
     await CbtProgressService.markCompleted(
       testId: widget.testTitle,
       score: score,
@@ -254,7 +249,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       total: widget.questions.length,
     );
 
-    // 🌐 4. Sync live result to Supabase for Teacher Dashboard Intelligence Hub
     if (widget.isBatchTest && widget.batchId != null) {
       try {
         final prefs = await SharedPreferences.getInstance();
@@ -546,7 +540,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     );
   }
 
-  // 🏆 Scorecard Screen
   Widget _buildResultReportScreen() {
     int total = widget.questions.length;
     int correct = 0;
@@ -582,7 +575,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     bool isCleared = score >= cutoffTarget;
 
-    // Coaching Conversion Details
     final coachingName = _coachingInfo?['name'] ?? 'Classroom Academy';
     final district = _coachingInfo?['district'] ?? _coachingInfo?['city'] ?? 'Bihar';
     final helpline = _coachingInfo?['contact_number'];
@@ -650,7 +642,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               ),
             ),
 
-            // 🎯 COACHING LEAD CONVERSION AD DECK
             if (!widget.isBatchTest && _coachingInfo != null) ...[
               const SizedBox(height: 16),
               Container(
