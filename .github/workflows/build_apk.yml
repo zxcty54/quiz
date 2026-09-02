@@ -32,7 +32,10 @@ jobs:
       - name: Install Android SDK Components & NDK
         run: |
           echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager \
+            "platforms;android-36" \
+            "platforms;android-35" \
             "platforms;android-34" \
+            "build-tools;36.0.0" \
             "build-tools;34.0.0" \
             "ndk;25.2.9519653" \
             "cmake;3.22.1"
@@ -49,6 +52,8 @@ jobs:
           cat << 'EOF' >> gradle.properties
           android.useAndroidX=true
           android.enableJetifier=false
+          android.suppressUnsupportedCompileSdk=36,Baklava
+          android.experimental.disableCompileSdkChecks=true
           EOF
 
       - name: Inject Clean Flutter MainActivity.kt
@@ -60,7 +65,7 @@ jobs:
           import io.flutter.embedding.android.FlutterActivity
 
           class MainActivity: FlutterActivity() {
-              // llama_cpp_dart directly handles FFI bindings from Dart layer
+              // llama_cpp_dart handles FFI bindings directly
           }
           EOF
 
@@ -71,13 +76,14 @@ jobs:
           python3 - << 'EOF'
           import os
 
-          # 1. Update android/app/build.gradle.kts
+          # 1. Update android/app/build.gradle.kts to compileSdk = 36
           app_kts = "android/app/build.gradle.kts"
           if os.path.exists(app_kts):
               with open(app_kts, "r") as f:
                   content = f.read()
               
-              content = content.replace("compileSdk = flutter.compileSdkVersion", "compileSdk = 34")
+              content = content.replace("compileSdk = flutter.compileSdkVersion", "compileSdk = 36")
+              content = content.replace("compileSdk = 34", "compileSdk = 36")
               
               if "isCoreLibraryDesugaringEnabled" not in content:
                   if "compileOptions {" in content:
@@ -94,7 +100,30 @@ jobs:
               with open(app_kts, "w") as f:
                   f.write(content)
 
-          # 2. Inject Flutter v2 Embedding directly into AndroidManifest.xml
+          # 2. Hook subprojects to compile with API 36 in settings.gradle.kts
+          settings_kts = "android/settings.gradle.kts"
+          if os.path.exists(settings_kts):
+              with open(settings_kts, "a") as f:
+                  f.write("""
+          gradle.beforeProject {
+              plugins.withId("com.android.library") {
+                  extensions.findByName("android")?.let { ext ->
+                      try {
+                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
+                      } catch (_: Exception) {}
+                  }
+              }
+              plugins.withId("com.android.application") {
+                  extensions.findByName("android")?.let { ext ->
+                      try {
+                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
+                      } catch (_: Exception) {}
+                  }
+              }
+          }
+          """)
+
+          # 3. Inject Flutter v2 Embedding into AndroidManifest.xml
           manifest_path = "android/app/src/main/AndroidManifest.xml"
           if os.path.exists(manifest_path):
               with open(manifest_path, "r") as f:
@@ -109,7 +138,7 @@ jobs:
 
               with open(manifest_path, "w") as f:
                   f.write(m_content)
-              print("Successfully injected flutterEmbedding v2 into AndroidManifest.xml")
+          print("Build configurations & Android API 36 hooks applied successfully.")
           EOF
 
       - name: Setup Keystore & Permissions
