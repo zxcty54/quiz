@@ -318,13 +318,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
 
     if (parsedQuestions.isEmpty) return;
 
-    Supabase.instance.client
-        .from('creator_mocks')
-        .update({'attempts_count': (mock['attempts_count'] ?? 0) + 1})
-        .eq('id', mock['id'])
-        .then((_) {});
-
-    // Free Open CBT: isBatchTest = false (Shows Coaching Promotion Ad on Scorecard)
+    // Free Open CBT: mockId passed so attempt counter increments
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -334,9 +328,13 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
           creatorHandle: widget.creatorHandle,
           isBatchTest: false,
+          mockId: mock['id'], // 👈 Attempts count update karne ke liye ZAROORI hai
         ),
       ),
-    );
+    ).then((_) {
+      // Test dekar wapas aane par updated attempt count load karein
+      _fetchCreatorData();
+    });
   }
 
   @override
