@@ -13,7 +13,7 @@ class OfflineLlmAgentService {
   static final OfflineLlmAgentService instance = OfflineLlmAgentService._internal();
   OfflineLlmAgentService._internal();
 
-  LlamaProcessor? _processor;
+  Llama? _llama;
   bool _isInitialized = false;
 
   bool get isReady => _isInitialized;
@@ -21,21 +21,24 @@ class OfflineLlmAgentService {
   Future<void> initEngine({String? modelPath}) async {
     if (_isInitialized) return;
 
-    // Default test path agar pass na kiya ho
     final path = modelPath ?? '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
 
     if (!await File(path).exists()) {
       throw Exception("GGUF Model file nahi mili: $path");
     }
 
-    // Context size ko 512-768 par limit rakha hai taaki RAM 1.2GB ke andar rahe
+    // Context parameters configuration
     final contextParams = ContextParams()
-      ..nCtx = 768
+      ..context = 768
       ..nThreads = 4;
 
-    _processor = LlamaProcessor(
-      modelPath: path,
-      contextParams: contextParams,
+    final modelParams = ModelParams();
+
+    // Correct class for llama_cpp_dart 0.2.x
+    _llama = Llama(
+      path,
+      modelParams,
+      contextParams,
     );
 
     _isInitialized = true;
@@ -46,7 +49,7 @@ class OfflineLlmAgentService {
     required String context,
     required LlmTaskType task,
   }) async {
-    if (!_isInitialized || _processor == null) {
+    if (!_isInitialized || _llama == null) {
       await initEngine();
     }
 
@@ -101,7 +104,6 @@ Explain in crisp points using simple Hinglish:
         break;
     }
 
-    // Qwen 2.5/3 ChatML Template format
     final fullChatmlPrompt = '''
 <|im_start|>system
 $systemInstruction
@@ -116,18 +118,19 @@ $userInput
 <|im_start|>assistant
 ''';
 
-    // Model se inference call
-    final response = await _processor!.process(
-      fullChatmlPrompt,
-      temperature: 0.2,
-      topK: 30,
-    );
+    // Set prompt & generate text
+    _llama!.setPrompt(fullChatmlPrompt);
 
-    return response.trim();
+    final buffer = StringBuffer();
+    await for (final token in _llama!.prompt()) {
+      buffer.write(token);
+    }
+
+    return buffer.toString().trim();
   }
 
   void dispose() {
-    _processor?.unloadModel();
+    _llama?.dispose();
     _isInitialized = false;
   }
 }
