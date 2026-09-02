@@ -27,11 +27,6 @@ class OfflineLlmAgentService {
       throw Exception("GGUF Model file nahi mili: $path");
     }
 
-    // Android native .so dynamic loading fix
-    try {
-      Llama.librarySearchPath = null;
-    } catch (_) {}
-
     final contextParams = ContextParams()
       ..nCtx = 768
       ..nThreads = 4;
@@ -99,10 +94,21 @@ Summarize into:
       default:
         systemInstruction = '''
 You are a Duolingo-style structured learning AI tutor for Indian competitive exams.
-Explain in crisp points using simple Hinglish:
-1. 💡 Micro Concept (1-line definition)
-2. ⚡ 3-Step Breakdown (3 short bullet points)
-3. 🎯 1 Micro Challenge MCQ with answer.
+Explain strictly using this exact 3-section format in simple Hinglish:
+
+💡 Micro Concept:
+[1 crisp line definition]
+
+⚡ 3-Step Breakdown:
+• [Step 1: Core rule or fact]
+• [Step 2: Key application or formula]
+• [Step 3: Common exam trap to avoid]
+
+🎯 Micro Challenge:
+Q: [One line question based on above concept]
+A) [Option 1]  B) [Option 2]  C) [Option 3]  D) [Option 4]
+Correct Answer: [Letter]
+Explanation: [1 crisp line]
 ''';
         break;
     }
