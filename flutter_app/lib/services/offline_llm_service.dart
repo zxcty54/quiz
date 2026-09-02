@@ -13,7 +13,7 @@ class OfflineLlmAgentService {
   static final OfflineLlmAgentService instance = OfflineLlmAgentService._internal();
   OfflineLlmAgentService._internal();
 
-  LlamaCpp? _llamaCpp;
+  Llama? _llama;
   bool _isInitialized = false;
 
   bool get isReady => _isInitialized;
@@ -27,15 +27,17 @@ class OfflineLlmAgentService {
       throw Exception("GGUF Model file nahi mili: $path");
     }
 
-    _llamaCpp = LlamaCpp();
-    
-    // Model initialization for 0.2.2
-    _llamaCpp!.loadModel(
+    final contextParams = ContextParams()
+      ..nCtx = 768
+      ..nThreads = 4;
+
+    final modelParams = ModelParams();
+
+    // 0.2.2 exact verified constructor
+    _llama = Llama(
       path,
-      modelParams: ModelParams(),
-      contextParams: ContextParams()
-        ..nCtx = 768
-        ..nThreads = 4,
+      modelParams: modelParams,
+      contextParams: contextParams,
     );
 
     _isInitialized = true;
@@ -46,7 +48,7 @@ class OfflineLlmAgentService {
     required String context,
     required LlmTaskType task,
   }) async {
-    if (!_isInitialized || _llamaCpp == null) {
+    if (!_isInitialized || _llama == null) {
       await initEngine();
     }
 
@@ -115,10 +117,15 @@ $userInput
 <|im_start|>assistant
 ''';
 
-    // 0.2.2 standard token streaming
+    // 0.2.2 Token extraction loop
+    _llama!.setPrompt(fullChatmlPrompt);
+
     final buffer = StringBuffer();
-    final stream = _llamaCpp!.generate(fullChatmlPrompt);
-    await for (final token in stream) {
+    while (true) {
+      final token = _llama!.getNext();
+      if (token.isEmpty || token == '<|im_end|>' || token == '<|endoftext|>') {
+        break;
+      }
       buffer.write(token);
     }
 
@@ -126,7 +133,7 @@ $userInput
   }
 
   void dispose() {
-    _llamaCpp?.dispose();
+    _llama?.dispose();
     _isInitialized = false;
   }
 }
