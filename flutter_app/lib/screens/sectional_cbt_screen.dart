@@ -20,6 +20,7 @@ class SectionalCbtScreen extends StatefulWidget {
   final String? creatorHandle;
   final bool isBatchTest;
   final String? batchId;
+  final dynamic mockId; // 👈 Required for updating attempts_count in creator_mocks
 
   const SectionalCbtScreen({
     super.key,
@@ -29,6 +30,7 @@ class SectionalCbtScreen extends StatefulWidget {
     this.creatorHandle,
     this.isBatchTest = false,
     this.batchId,
+    this.mockId, // 👈 Added
   });
 
   @override
@@ -58,7 +60,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     _isHindi = widget.subFolder.contains('bssc') ||
         widget.subFolder.contains('bpsc') ||
         widget.subFolder.contains('bihar_si');
-    
+
     _loadSavedProgressAndStart();
     _checkBookmarkStatus();
     _fetchCoachingDetails();
@@ -249,28 +251,57 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       total: widget.questions.length,
     );
 
-    // 🎯 Live Teacher Dashboard Sync with Suresh's Real Name & Roll
+    final client = Supabase.instance.client;
+
+    // 1️⃣ UPDATE ATTEMPTS COUNT IN CREATOR_MOCKS
+    if (widget.mockId != null) {
+      try {
+        final current = await client
+            .from('creator_mocks')
+            .select('attempts_count')
+            .eq('id', widget.mockId)
+            .maybeSingle();
+        int currentCount = current?['attempts_count'] ?? 0;
+        await client
+            .from('creator_mocks')
+            .update({'attempts_count': currentCount + 1})
+            .eq('id', widget.mockId);
+        debugPrint("✅ [SECTIONAL_CBT] Attempts count incremented successfully!");
+      } catch (e) {
+        debugPrint("❌ [SECTIONAL_CBT] Error incrementing attempts_count: $e");
+      }
+    }
+
+    // 2️⃣ SYNC BATCH SUBMISSIONS FOR CREATOR DASHBOARD
     if (widget.isBatchTest && widget.batchId != null) {
       try {
         final prefs = await SharedPreferences.getInstance();
         final rawName = prefs.getString('custom_aspirant_name') ?? 'Enrolled Student';
         final rawContact = prefs.getString('student_contact_id') ?? '';
-        
+
         final studentIdentifier = (rawContact.isNotEmpty && rawContact != 'N/A')
             ? '$rawName (Roll/Ph: $rawContact)'
             : rawName;
 
-        final double accuracyPct = _userAnswers.isNotEmpty ? (correctCount / _userAnswers.length) * 100 : 0.0;
+        final double accuracyPct = _userAnswers.isNotEmpty
+            ? (correctCount / _userAnswers.length) * 100
+            : 0.0;
 
-        await Supabase.instance.client.from('batch_submissions').insert({
-          'batch_id': widget.batchId,
+        dynamic finalBatchId = int.tryParse(widget.batchId.toString()) ?? widget.batchId;
+
+        final insertRes = await client.from('batch_submissions').insert({
+          'batch_id': finalBatchId,
           'student_identifier': studentIdentifier,
           'score': score,
           'accuracy': accuracyPct.round(),
           'weak_subject': wrongCount > 0 ? widget.subFolder.toUpperCase() : 'All Clear',
-          'strong_subject': correctCount > 5 ? 'Strong Concepts' : 'Basic Revision',
-        });
-      } catch (_) {}
+          'strong_subject': correctCount > 5 ? 'Core Concepts Strong' : 'Basic Revision',
+        }).select();
+
+        debugPrint("✅ [SECTIONAL_CBT] Batch submission inserted: $insertRes");
+      } catch (e) {
+        debugPrint("❌ [SECTIONAL_CBT] Error inserting batch submission: $e");
+      }
     }
 
     TelegramTracker.recordTestCompletion(
