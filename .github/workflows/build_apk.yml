@@ -194,14 +194,32 @@ jobs:
         working-directory: flutter_app
         run: |
           mkdir -p build/app/outputs/flutter-apk
-          APK_FILE=$(find build/app/outputs -type f -name "*release*.apk" | head -n 1)
+          
+          # Exact recursive search for release APK
+          APK_FILE=$(find build/app/outputs -type f -name "*.apk" | grep -i "release" | head -n 1)
           if [ -z "$APK_FILE" ]; then
             APK_FILE=$(find build/app/outputs -type f -name "*.apk" | head -n 1)
           fi
-          echo "Found APK at: $APK_FILE"
-          cp "$APK_FILE" build/app/outputs/flutter-apk/app-release.apk
-          cp "$APK_FILE" build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
-          zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
+          
+          echo "Discovered APK Path: $APK_FILE"
+          
+          if [ -z "$APK_FILE" ]; then
+            echo "ERROR: Release APK file build output me nahi mili!"
+            exit 1
+          fi
+
+          TARGET_APK="build/app/outputs/flutter-apk/app-release.apk"
+          BUILD_APK="build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk"
+          TARGET_ZIP="build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip"
+
+          cp "$APK_FILE" "$TARGET_APK"
+          cp "$APK_FILE" "$BUILD_APK"
+          
+          # Direct zip compression
+          zip -9 -j "$TARGET_ZIP" "$BUILD_APK"
+          
+          echo "Final Zip details:"
+          ls -lh "$TARGET_ZIP"
 
       - name: Upload Build Artifact (APK)
         uses: actions/upload-artifact@v4
