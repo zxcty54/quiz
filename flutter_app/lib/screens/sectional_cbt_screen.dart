@@ -1,21 +1,31 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+
 import '../models/question_model.dart';
 import '../widgets/latex_text.dart';
 import '../widgets/cbt_widgets.dart';
 import '../services/telegram_tracker.dart';
 import '../services/user_stats_service.dart';
+import 'creator_profile_screen.dart';
 
 class SectionalCbtScreen extends StatefulWidget {
   final String testTitle;
   final List<Question> questions;
   final String subFolder;
+  final String? creatorHandle; // 👈 Public mock me coaching handle pass hoga
+  final bool isBatchTest;      // 👈 Batch classroom me true pass hoga
 
   const SectionalCbtScreen({
     super.key,
     required this.testTitle,
     required this.questions,
     required this.subFolder,
+    this.creatorHandle,
+    this.isBatchTest = false, // Default false (Public Free Mock)
   });
 
   @override
@@ -37,6 +47,9 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   bool _isExamSubmitted = false;
   bool _isBookmarked = false;
 
+  // 🎯 Coaching Lead Conversion Data
+  Map<String, dynamic>? _coachingInfo;
+
   @override
   void initState() {
     super.initState();
@@ -45,6 +58,25 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         widget.subFolder.contains('bihar_si');
     _startTimers();
     _checkBookmarkStatus();
+    _fetchCoachingDetails();
+  }
+
+  Future<void> _fetchCoachingDetails() async {
+    // Agar batch test hai ya creator handle nahi hai toh fetch karne ki zaroorat nahi
+    if (widget.isBatchTest || widget.creatorHandle == null || widget.creatorHandle == 'user') {
+      return;
+    }
+    try {
+      final res = await Supabase.instance.client
+          .from('coachings')
+          .select('*, batches(id, batch_name, batch_code)')
+          .eq('owner_name', widget.creatorHandle!)
+          .maybeSingle();
+
+      if (mounted) {
+        setState(() => _coachingInfo = res);
+      }
+    } catch (_) {}
   }
 
   void _startTimers() {
@@ -126,6 +158,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   void _submitExam() async {
     _examTimer?.cancel();
     _qTimer?.cancel();
+    HapticFeedback.heavyImpact();
     setState(() => _isExamSubmitted = true);
 
     int correctCount = 0;
@@ -181,6 +214,73 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     int m = totalSec ~/ 60;
     int s = totalSec % 60;
     return "${m.toString().padLeft(2, '0')}:${s.toString().padLeft(2, '0')}";
+  }
+
+  // 🔑 Dialog: Have Batch Code
+  void _openBatchCodeDialog(String coachingName) {
+    final codeCtrl = TextEditingController();
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Row(
+          children: const [
+            Icon(Icons.vpn_key_rounded, color: Color(0xFF2563EB), size: 22),
+            SizedBox(width: 8),
+            Text('Join Classroom Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+          ],
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Enter the private batch code shared by $coachingName:',
+              style: const TextStyle(fontSize: 12, color: Colors.grey),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: codeCtrl,
+              textCapitalization: TextCapitalization.characters,
+              decoration: const InputDecoration(
+                hintText: 'e.g. PATNA100',
+                labelText: 'Batch Code',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+            onPressed: () async {
+              final entered = codeCtrl.text.trim().toUpperCase();
+              if (entered.isEmpty) return;
+
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.setString('user_enrolled_batch_code', entered);
+              if (ctx.mounted) Navigator.pop(ctx);
+
+              if (mounted) {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(content: Text('🎉 Verified! Enrolled with code $entered'), backgroundColor: const Color(0xFF16A34A)),
+                );
+              }
+            },
+            child: const Text('Join Batch 🚀'),
+          ),
+        ],
+      ),
+    );
+  }
+
+  void _callOrWhatsApp(String? phone) async {
+    if (phone == null || phone.isEmpty) return;
+    final clean = phone.replaceAll(RegExp(r'[^0-9]'), '');
+    final uri = Uri.parse('tel:$clean');
+    if (await canLaunchUrl(uri)) await launchUrl(uri);
   }
 
   @override
@@ -379,6 +479,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     );
   }
 
+  // 🏆 Scorecard Screen
   Widget _buildResultReportScreen() {
     int total = widget.questions.length;
     int correct = 0;
@@ -413,6 +514,12 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     }
 
     bool isCleared = score >= cutoffTarget;
+
+    // Coaching Conversion Details
+    final coachingName = _coachingInfo?['name'] ?? 'Classroom Academy';
+    final district = _coachingInfo?['district'] ?? _coachingInfo?['city'] ?? 'Bihar';
+    final helpline = _coachingInfo?['contact_number'];
+    final ownerHandle = _coachingInfo?['owner_name'] ?? widget.creatorHandle;
 
     return Scaffold(
       appBar: AppBar(title: const Text("Performance Summary")),
@@ -475,8 +582,108 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
 
+            // 🎯 COACHING LEAD CONVERSION AD DECK
+            // Rule: Sirf Public Free Mock me show hoga (Classroom batch me HIDE)
+            if (!widget.isBatchTest && _coachingInfo != null) ...[
+              const SizedBox(height: 16),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFFEFF6FF), Colors.white],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(16),
+                  border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.25), width: 1.2),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF2563EB),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: const Text(
+                            'OFFICIAL CLASSROOM BATCH',
+                            style: TextStyle(color: Colors.white, fontSize: 9.5, fontWeight: FontWeight.w900),
+                          ),
+                        ),
+                        const Spacer(),
+                        if (ownerHandle != null)
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => CreatorProfileScreen(
+                                    creatorHandle: ownerHandle,
+                                    isDarkMode: Theme.of(context).brightness == Brightness.dark,
+                                  ),
+                                ),
+                              );
+                            },
+                            child: const Text('View Center →', style: TextStyle(color: Color(0xFF2563EB), fontSize: 11.5, fontWeight: FontWeight.bold)),
+                          ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+                    Text(
+                      'Liked this Mock Drill? 🚀',
+                      style: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w800),
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      'Enroll in $coachingName ($district) classroom batch for 20+ Full CBT Tests, Rank Analysis & Complete Handouts.',
+                      style: TextStyle(fontSize: 12, color: Colors.grey.shade700, height: 1.35),
+                    ),
+                    const SizedBox(height: 12),
+
+                    Row(
+                      children: [
+                        Expanded(
+                          child: ElevatedButton.icon(
+                            icon: const Icon(Icons.vpn_key_rounded, size: 14),
+                            label: const Text('Have Code? Unlock', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFF16A34A),
+                              foregroundColor: Colors.white,
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                              padding: const EdgeInsets.symmetric(vertical: 10),
+                            ),
+                            onPressed: () => _openBatchCodeDialog(coachingName),
+                          ),
+                        ),
+                        if (helpline != null && helpline.isNotEmpty) ...[
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: OutlinedButton.icon(
+                              icon: const Icon(Icons.phone_in_talk_rounded, size: 14),
+                              label: const Text('Contact Helpline', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                              style: OutlinedButton.styleFrom(
+                                foregroundColor: const Color(0xFF2563EB),
+                                side: const BorderSide(color: Color(0xFF2563EB)),
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                                padding: const EdgeInsets.symmetric(vertical: 10),
+                              ),
+                              onPressed: () => _callOrWhatsApp(helpline),
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+
+            const SizedBox(height: 20),
             const Align(alignment: Alignment.centerLeft, child: Text("Detailed Review & Explanations", style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold))),
             const SizedBox(height: 10),
 
