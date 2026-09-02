@@ -1,19 +1,19 @@
 {
   "month": "Sep 2026",
-  "generated_at": "2026-09-02 02:34:26",
-  "total_questions": 9,
-  "national_total": 6,
-  "bihar_total": 3,
+  "generated_at": "2026-09-03 02:36:40",
+  "total_questions": 21,
+  "national_total": 15,
+  "bihar_total": 6,
   "source_breakdown": {
     "all_current_affairs": {
-      "total_scanned": 14,
-      "mcqs_created": 6,
-      "total_dropped": 8
+      "total_scanned": 34,
+      "mcqs_created": 14,
+      "total_dropped": 20
     },
     "final_alerts_news": {
-      "total_scanned": 5,
-      "mcqs_created": 3,
-      "total_dropped": 2
+      "total_scanned": 15,
+      "mcqs_created": 7,
+      "total_dropped": 8
     }
   },
   "national_questions": [
@@ -160,6 +160,222 @@
       "exam_tag": "SSC CGL / State PCS",
       "domain": "National",
       "id": "nat_q_006"
+    },
+    {
+      "source_hash": "220a5a27",
+      "source_file": "all_current_affairs",
+      "qe": "Who appointed Retd Air Marshal Jeetendra Mishra as the first CEO of Shri Ram Janmabhoomi Kshetra Trust?",
+      "qh": "श्री राम जन्मभूमि क्षेत्र ट्रस्ट के पहले सीईओ के रूप में रिटायर्ड एयर मार्शल जीतेंद्र मिश्रा को किसने नियुक्त किया?",
+      "oe": [
+        "Prime Minister of India",
+        "President of India",
+        "Ministry of Home Affairs",
+        "A three‑member search committee headed by retired Justice Pramod Kohli"
+      ],
+      "oh": [
+        "भारत के प्रधानमंत्री",
+        "भारत के राष्ट्रपति",
+        "गृह मंत्रालय",
+        "सेवानिवृत्त न्यायाधीश प्रमोद कोहली के नेतृत्व में तीन सदस्यीय खोज समिति"
+      ],
+      "a": 3,
+      "e": "• Option D is Correct because the appointment was made by a three‑member search committee chaired by retired Justice Pramod Kohli.\n• Option A is Incorrect; the Prime Minister did not directly appoint the CEO.\n• Option B is Incorrect; the President’s role is ceremonial in such appointments.\n• Option C is Incorrect; while the Ministry of Home Affairs oversees the trust, the specific appointment was through the search committee.",
+      "category": "Awards, Appointments, Sports, Persons & Indexes",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_007"
+    },
+    {
+      "source_hash": "048df4b0",
+      "source_file": "all_current_affairs",
+      "qe": "What base year was adopted for the revised GDP series released by the Ministry of Statistics and Programme Implementation in 2026?",
+      "qh": "2026 में MoSPI द्वारा जारी किए गए संशोधित जीडीपी श्रृंखला के लिए कौन सा बेस वर्ष अपनाया गया?",
+      "oe": [
+        "2022-23",
+        "2021-22",
+        "2020-21",
+        "2023-24"
+      ],
+      "oh": [
+        "2022-23",
+        "2021-22",
+        "2020-21",
+        "2023-24"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because MoSPI announced that the revised annual and quarterly GDP estimates use 2022‑23 as the base year.\n• Option B is Incorrect because 2021‑22 was the previous base year, not the one adopted in 2026.\n• Option C is Incorrect because 2020‑21 is not mentioned in the release.\n• Option D is Incorrect because 2023‑24 was not yet a base year at the time of the announcement.",
+      "category": "National Economy, Union Budget & Banking",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_008"
+    },
+    {
+      "source_hash": "b34569fa",
+      "source_file": "all_current_affairs",
+      "qe": "Ahmedabad airport became the third Indian airport to join which government aviation initiative?",
+      "qh": "अहमदाबाद हवाई अड्डा भारत का तीसरा हवाई अड्डा बनकर किस सरकारी एयरोस्पेस पहल में शामिल हुआ?",
+      "oe": [
+        "Regional Connectivity Scheme (RCS)",
+        "International Aviation Hub Strategy",
+        "UDAN",
+        "Bharat Gati Shakti"
+      ],
+      "oh": [
+        "क्षेत्रीय कनेक्टिविटी योजना (RCS)",
+        "अंतर्राष्ट्रीय एविएशन हब स्ट्रैटेजी",
+        "उड़ान",
+        "भारत गति शक्ति"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because the Union Civil Aviation Minister launched Hub‑&‑Spoke operations at Sardar Vallabhbhai Patel International Airport under the International Aviation Hub Strategy.\n• Option A is Incorrect as RCS (UDAN) is a separate regional connectivity programme.\n• Option C is Incorrect because UDAN pertains to domestic connectivity, not the Hub‑&‑Spoke international framework.\n• Option D is Incorrect; Bharat Gati Shakti relates to multi‑modal logistics, not aviation hub policy.",
+      "category": "Infrastructure, Energy & Digital Projects",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_009"
+    },
+    {
+      "source_hash": "50428f78",
+      "source_file": "all_current_affairs",
+      "qe": "The PM Dhan‑Dhaanya Krishi Yojana converges how many central schemes across ministries?",
+      "qh": "पीएम धान‑धान्य कृषि योजना किन मंत्रालयों में कुल कितनी केंद्रीय योजनाओं को एकीकृत करती है?",
+      "oe": [
+        "24",
+        "30",
+        "36",
+        "42"
+      ],
+      "oh": [
+        "२४",
+        "३०",
+        "३६",
+        "४२"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because the scheme integrates 36 central schemes spanning 11 ministries and departments.\n• Option A is Incorrect; 24 schemes are not the figure cited in the official review.\n• Option B is Incorrect; 30 schemes are lower than the actual count.\n• Option D is Incorrect; 42 schemes exceed the announced number.",
+      "category": "Govt Schemes, Policies & Social Welfare",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_010"
+    },
+    {
+      "source_hash": "4e7ce4b4",
+      "source_file": "all_current_affairs",
+      "qe": "Under which article of the Constitution did the Supreme Court quash FIRs against protesting students in July 2024?",
+      "qh": "जुलाई 2024 में छात्रों के विरोध के खिलाफ दर्ज FIR को निरस्त करने के लिए सुप्रीम कोर्ट ने संविधान के किस अनुच्छेद का प्रयोग किया?",
+      "oe": [
+        "Article 32",
+        "Article 136",
+        "Article 141",
+        "Article 142"
+      ],
+      "oh": [
+        "अनुच्छेद 32",
+        "अनुच्छेद 136",
+        "अनुच्छेद 141",
+        "अनुच्छेद 142"
+      ],
+      "a": 3,
+      "e": "• Option D is Correct because the bench invoked the special powers under Article 142 to direct the quashing of nationwide FIRs.\n• Option A is Incorrect; Article 32 deals with the right to constitutional remedies, not judicial directives of this nature.\n• Option B is Incorrect; Article 136 pertains to the Supreme Court’s advisory jurisdiction.\n• Option C is Incorrect; Article 141 relates to the doctrine of precedent, not to the power used here.",
+      "category": "National Polity, Judiciary & Governance",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_011"
+    },
+    {
+      "source_hash": "76b811f3",
+      "source_file": "final_alerts_news",
+      "qe": "What is the name of India's first geosynchronous Earth‑observation imaging satellite launched on GSLV‑F17?",
+      "qh": "GSLV‑F17 द्वारा प्रक्षेपित भारत का पहला भू‑सिंक्रोनस पृथ्वी‑पर्यवेक्षण इमेजिंग उपग्रह कौन सा है?",
+      "oe": [
+        "EOS‑05",
+        "Cartosat‑3",
+        "RISAT‑2B",
+        "GSAT‑30"
+      ],
+      "oh": [
+        "EOS‑05",
+        "कार्टोसैट‑3",
+        "RISAT‑2B",
+        "GSAT‑30"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because EOS‑05 is the first Indian Earth‑observation imaging satellite intended for a geosynchronous orbit, launched aboard GSLV‑F17 on 4 September 2026.\n• Option B is Incorrect; Cartosat‑3 is a high‑resolution optical satellite in low‑Earth orbit.\n• Option C is Incorrect; RISAT‑2B is a radar‑imaging satellite in low‑Earth orbit.\n• Option D is Incorrect; GSAT‑30 is a communication satellite in geostationary orbit, not an imaging payload.",
+      "category": "Space, Science & Technology",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_012"
+    },
+    {
+      "source_hash": "356e23fa",
+      "source_file": "final_alerts_news",
+      "qe": "Which Indian state launched the country's first state‑level Sports Genomics Programme?",
+      "qh": "भारत में पहला राज्य‑स्तरीय स्पोर्ट्स जीनोमिक्स प्रोग्राम किस राज्य ने शुरू किया?",
+      "oe": [
+        "Maharashtra",
+        "Karnataka",
+        "Gujarat",
+        "Tamil Nadu"
+      ],
+      "oh": [
+        "महाराष्ट्र",
+        "कर्नाटक",
+        "गुजरात",
+        "तमिलनाडु"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because Gujarat, through the Gujarat Biotechnology Research Centre under DST, launched the first Sports Genomics Programme, aiming to build a genome database of athletes.\n• Option A is Incorrect; Maharashtra has sports initiatives but not the first genomics programme.\n• Option B is Incorrect; Karnataka focuses on biotech research but has not launched this specific programme.\n• Option D is Incorrect; Tamil Nadu has sports schemes but not the inaugural state‑level genomics programme.",
+      "category": "Education & Research",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_013"
+    },
+    {
+      "source_hash": "70534ea2",
+      "source_file": "final_alerts_news",
+      "qe": "Who became the first woman officer from the non‑medical branch of the Indian Armed Forces to be promoted to the rank of Air Vice Marshal?",
+      "qh": "भारतीय सशस्त्र बलों की गैर‑चिकित्सा शाखा से पहली महिला अधिकारी कौन बनीं, जिन्हें एयर वाइस मार्शल की उपाधि मिली?",
+      "oe": [
+        "Air Vice Marshal Nivedita Sharma",
+        "Air Vice Marshal Shakti Sharma",
+        "Air Vice Marshal Anjali Singh",
+        "Air Vice Marshal Priya Kumar"
+      ],
+      "oh": [
+        "एयर वाइस मार्शल नवीदिता शर्मा",
+        "एयर वाइस मार्शल शक्ति शर्मा",
+        "एयर वाइस मार्शल अंजलि सिंह",
+        "एयर वाइस मार्शल प्रिया कुमार"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because Air Vice Marshal Shakti Sharma was promoted on 1 September 2026, becoming the first woman from the non‑medical branch to attain this rank and appointed Assistant Chief of the Air Staff (Education).\n• Option A is Incorrect; Nivedita Sharma is a senior officer but has not achieved this historic milestone.\n• Option C is Incorrect; Anjali Singh holds a different rank.\n• Option D is Incorrect; Priya Kumar is not the first non‑medical woman officer at this rank.",
+      "category": "Governance, Judiciary & Public Administration",
+      "exam_tag": "BPSC",
+      "domain": "National",
+      "id": "nat_q_014"
+    },
+    {
+      "source_hash": "3a6136e5",
+      "source_file": "final_alerts_news",
+      "qe": "Which state has launched India's first state‑led electric truck corridor on National Highway 66?",
+      "qh": "कौन से राज्य ने राष्ट्रीय राजमार्ग 66 पर भारत का पहला राज्य‑प्रमुख इलेक्ट्रिक ट्रक कॉरिडोर शुरू किया है?",
+      "oe": [
+        "Kerala",
+        "Tamil Nadu",
+        "Karnataka",
+        "Maharashtra"
+      ],
+      "oh": [
+        "केरल",
+        "तमिलनाडु",
+        "कर्नाटक",
+        "महाराष्ट्र"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because Kerala State Electricity Board (KSEB) is leading the project to set up India's first electric truck corridor on the 622 km stretch of NH 66 in Kerala, requiring 12.5 MW charging capacity and an investment of Rs 19 crore with 207 fast‑charging stations.\n• Option B is Incorrect because Tamil Nadu has not announced a state‑led electric truck corridor on NH 66.\n• Option C is Incorrect because Karnataka is not the state mentioned in the announcement.\n• Option D is Incorrect because Maharashtra is not involved in this specific corridor project.",
+      "category": "Aviation & Transport",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_015"
     }
   ],
   "bihar_questions": [
@@ -234,6 +450,78 @@
       "exam_tag": "BPSC / SSC CGL / State PCS",
       "domain": "Bihar",
       "id": "bih_q_003"
+    },
+    {
+      "source_hash": "fabcf6d7",
+      "source_file": "all_current_affairs",
+      "qe": "Under which central mission has Bihar identified over 8 lakh manuscripts for digitisation?",
+      "qh": "बिहार ने 8 लाख से अधिक पांडुलिपियों के डिजिटलीकरण के लिए किस केंद्रीय मिशन के तहत पहचान की है?",
+      "oe": [
+        "Gyan Bharatam Mission",
+        "Digital India Programme",
+        "National Mission on Manuscripts",
+        "Swachh Bharat Mission"
+      ],
+      "oh": [
+        "ज्ञान भारत मिशन",
+        "डिजिटल इंडिया कार्यक्रम",
+        "राष्ट्रीय पांडुलिपि मिशन",
+        "स्वच्छ भारत मिशन"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because the manuscript digitisation drive is being executed under the centrally sponsored Gyan Bharatam Mission with Rs 6.23 crore approval.\n• Option B is Incorrect because Digital India focuses on broader digital infrastructure, not specifically manuscript preservation.\n• Option C is Incorrect as the National Mission on Manuscripts is a separate scheme not mentioned in the Bihar announcement.\n• Option D is Incorrect; Swachh Bharat deals with sanitation, unrelated to manuscript digitisation.",
+      "category": "Bihar Special Affairs",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "Bihar",
+      "id": "bih_q_004"
+    },
+    {
+      "source_hash": "a4b7a32e",
+      "source_file": "all_current_affairs",
+      "qe": "The 'Jaanch evam Upchar, Chikitsa Aapke Dwar' campaign in Bihar aims to screen approximately how many people?",
+      "qh": "'जाँच एवं उपचार, चिकित्सा आपके द्वार' अभियान में बिहार लगभग कितने लोगों की स्क्रीनिंग करने का लक्ष्य रख रहा है?",
+      "oe": [
+        "2 crore people",
+        "6 crore people",
+        "8 crore people",
+        "10 crore people"
+      ],
+      "oh": [
+        "2 करोड़ लोग",
+        "6 करोड़ लोग",
+        "8 करोड़ लोग",
+        "10 करोड़ लोग"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because the campaign, running from 2 Sept 2026 to 30 Nov 2026, targets around 6 crore individuals aged 30 years and above.\n• Option A is Incorrect; the target is far higher than 2 crore.\n• Option C is Incorrect; 8 crore exceeds the announced figure.\n• Option D is Incorrect; 10 crore is not mentioned in the official rollout.",
+      "category": "Bihar Special Affairs",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "Bihar",
+      "id": "bih_q_005"
+    },
+    {
+      "source_hash": "b402ab8e",
+      "source_file": "all_current_affairs",
+      "qe": "The scheme announced by Bihar Power Minister to provide free rooftop solar systems to BPL families offers what capacity per household?",
+      "qh": "बिहार के पावर मंत्री द्वारा बीपीएल परिवारों को मुफ्त रूफटॉप सोलर सिस्टम देने वाले योजना में प्रत्येक घर को कितनी क्षमता दी जाएगी?",
+      "oe": [
+        "0.5 kW",
+        "0.75 kW",
+        "1.1 kW",
+        "2 kW"
+      ],
+      "oh": [
+        "0.5 किलोवॉट",
+        "0.75 किलोवॉट",
+        "1.1 किलोवॉट",
+        "2 किलोवॉट"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because the announced free rooftop solar scheme provides a 1.1 kW system to each of the 2.5 lakh BPL households.\n• Option A is Incorrect; 0.5 kW is half of the actual capacity.\n• Option B is Incorrect; 0.75 kW is not the figure disclosed.\n• Option D is Incorrect; 2 kW exceeds the scheme’s specification.",
+      "category": "Bihar Special Affairs",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "Bihar",
+      "id": "bih_q_006"
     }
   ]
 }
