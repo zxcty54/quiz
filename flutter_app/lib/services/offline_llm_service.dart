@@ -25,7 +25,7 @@ class OfflineLlmAgentService {
       '/storage/emulated/0/Download/qwen2.5-0.5b-instruct-q4_k_m.gguf';
 
   // ------------------------------------------------------------
-  // 1. SAFE MODEL LOADER (Expanded 1024 Context to Prevent Decode Errors)
+  // 1. SAFE MODEL LOADER (2048 Context to Prevent Token Overflow)
   // ------------------------------------------------------------
   Future<void> loadModelManually({String? modelPath}) async {
     if (_isInitializing) return;
@@ -45,11 +45,11 @@ class OfflineLlmAgentService {
       }
 
       final controller = LlamaController();
-      // Context 1024 prevents "Failed to decode prompt" buffer overflow
+      // 2048 Context buffer: Input + Output ke liye sufficient headroom
       await controller.loadModel(
         modelPath: targetPath,
         threads: 2,
-        contextSize: 1024,
+        contextSize: 2048,
       );
 
       _controller = controller;
@@ -79,7 +79,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // 3. EXECUTE INFERENCE (Zero Decode Failure Stream)
+  // 3. EXECUTE INFERENCE (Zero Decode Error Stream)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -92,16 +92,16 @@ class OfflineLlmAgentService {
 
     final activeController = _controller;
     if (activeController == null) {
-      throw Exception("Model load nahi hai. Folder icon se file load karein.");
+      throw Exception("Model load nahi hai. Folder icon se file select karein.");
     }
 
     final systemInstruction = _buildSystemInstruction(task);
     
-    // Qwen2.5 ChatML format
+    // Qwen2.5 ChatML template format
     final formattedPrompt = '''<|im_start|>system
 $systemInstruction<|im_end|>
 <|im_start|>user
-${context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : ""}OBSERVATION / QUERY:
+${context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : ""}TOPIC / QUERY:
 $userInput<|im_end|>
 <|im_start|>assistant
 ''';
@@ -111,10 +111,11 @@ $userInput<|im_end|>
     StreamSubscription<String>? subscription;
 
     try {
+      // Direct raw generate stream: Prevents pigeon ChatML serialization mismatch
       final stream = activeController.generate(
         prompt: formattedPrompt,
         temperature: 0.1,
-        maxTokens: 300,
+        maxTokens: 400,
       );
 
       subscription = stream.listen(
@@ -135,13 +136,13 @@ $userInput<|im_end|>
       );
 
       final result = await completer.future.timeout(
-        const Duration(seconds: 40),
+        const Duration(seconds: 45),
         onTimeout: () {
           subscription?.cancel();
           if (buffer.isNotEmpty) {
             return buffer.toString();
           }
-          throw Exception("Inference timeout: 40s tak output complete nahi hua.");
+          throw Exception("Inference timeout: 45s tak output complete nahi hua.");
         },
       );
 
@@ -151,7 +152,7 @@ $userInput<|im_end|>
           .trim();
 
       if (cleanText.isEmpty) {
-        throw Exception("Engine ne blank output return kiya.");
+        throw Exception("Engine ne blank output diya.");
       }
 
       return cleanText;
@@ -161,7 +162,7 @@ $userInput<|im_end|>
   }
 
   // ------------------------------------------------------------
-  // 4. NOTEBOOK PEDAGOGICAL FORMAT (Duolingo Style WhatsApp Card)
+  // 4. DUOLINGO PEDAGOGICAL STRUCTURE (1-Screen WhatsApp Card)
   // ------------------------------------------------------------
   String _buildSystemInstruction(LlmTaskType task) {
     return '''
@@ -172,15 +173,15 @@ Strictly output in this 1-screen WhatsApp conversational card format in clear sp
 - Aman Sir clears it directly with no textbook formality.
 
 Micro Concept:
-[1 crisp line definition of core rule]
+[1 crisp line definition explaining WHY before WHAT]
 
 Raju vs Aman Sir:
-Raju: [Real-life observation or doubt]
-Aman Sir: [Direct spoken logic resolving Raju's doubt]
+Raju: [Real-life observation or natural daily doubt]
+Aman Sir: [Direct spoken Hinglish logic resolving Raju's doubt]
 
 3-Step Breakdown:
 • Mool Tathya: [Core factual rule]
-• Karyapranali: [Direct application]
+• Karyapranali: [Direct application / formula]
 • Pariksha Savdhani: [Elimination trap to avoid]
 
 Micro Challenge:
@@ -192,7 +193,7 @@ D) [Option 4]
 Correct Answer: [Letter]
 Explanation: [1 crisp line trap reason]
 
-Do not write any extra conversational text outside this format.
+Do not write any introductory greetings or conversational filler outside this format.
 ''';
   }
 }
