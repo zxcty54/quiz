@@ -27,22 +27,21 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   String _customUserName = 'Aspirant';
   String _currentLoggedInHandle = 'user';
 
-  bool _isSearching = false;
   String _searchQuery = '';
   final TextEditingController _searchCtrl = TextEditingController();
 
-  final Map<int, int> _userVoteState = {};
+  final Set<int> _likedPostIds = {};
   final Map<int, int> _userPollSelections = {};
   final Set<int> _savedPostIds = {};
 
   final List<String> _filters = [
     'All',
-    'Mock Tests ⚡',
-    'Study Material 📚',
-    'Daily Quiz ⚡',
-    'Doubts ❓',
-    'Announcement 📢',
-    'Saved 📌'
+    'Mocks',
+    'Study',
+    'Quiz',
+    'Doubts',
+    'Notices',
+    'Saved',
   ];
 
   @override
@@ -55,11 +54,13 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   Future<void> _loadUserPreferences() async {
     final prefs = await SharedPreferences.getInstance();
     final saved = prefs.getStringList('community_saved_posts_ids') ?? [];
+    final liked = prefs.getStringList('community_liked_posts_ids') ?? [];
     final name = prefs.getString('custom_aspirant_name') ?? 'Aspirant';
     final handle = prefs.getString('logged_in_creator_handle') ?? 'user';
     if (mounted) {
       setState(() {
         _savedPostIds.addAll(saved.map((e) => int.tryParse(e) ?? 0));
+        _likedPostIds.addAll(liked.map((e) => int.tryParse(e) ?? 0));
         _customUserName = name;
         _currentLoggedInHandle = handle;
       });
@@ -124,7 +125,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         .eq('id', mock['id'])
         .then((_) {});
 
-    // Free Open CBT launch without password
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -137,42 +137,28 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  void _handleVote(int index, bool isUpvote) {
+  void _handleLike(int index) async {
     HapticFeedback.lightImpact();
     final post = _posts[index];
     final int postId = post['id'];
-    int currentVote = _userVoteState[postId] ?? 0;
-    int upDelta = 0;
-    int downDelta = 0;
+    final bool isCurrentlyLiked = _likedPostIds.contains(postId);
 
     setState(() {
-      if (isUpvote) {
-        if (currentVote == 1) {
-          _userVoteState[postId] = 0;
-          upDelta = -1;
-        } else {
-          if (currentVote == -1) downDelta = -1;
-          _userVoteState[postId] = 1;
-          upDelta = 1;
-        }
+      if (isCurrentlyLiked) {
+        _likedPostIds.remove(postId);
+        post['upvotes'] = ((post['upvotes'] ?? 1) - 1).clamp(0, 999999);
       } else {
-        if (currentVote == -1) {
-          _userVoteState[postId] = 0;
-          downDelta = -1;
-        } else {
-          if (currentVote == 1) upDelta = -1;
-          _userVoteState[postId] = -1;
-          downDelta = 1;
-        }
+        _likedPostIds.add(postId);
+        post['upvotes'] = (post['upvotes'] ?? 0) + 1;
       }
-
-      post['upvotes'] = (post['upvotes'] ?? 0) + upDelta;
-      post['downvotes'] = (post['downvotes'] ?? 0) + downDelta;
     });
+
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList('community_liked_posts_ids', _likedPostIds.map((e) => e.toString()).toList());
 
     Supabase.instance.client
         .from('community_posts')
-        .update({'upvotes': post['upvotes'], 'downvotes': post['downvotes']})
+        .update({'upvotes': post['upvotes']})
         .eq('id', postId)
         .then((_) {});
   }
@@ -222,7 +208,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   void _openCreatePostModal() {
     final contentCtrl = TextEditingController();
-    String selectedTag = 'Doubts ❓';
+    String selectedTag = 'Doubts';
     File? selectedImage;
     bool isUploading = false;
     final picker = ImagePicker();
@@ -243,7 +229,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('✍️ Ask Doubt / Share Notice', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                    const Text('Ask Doubt / Share Update', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
@@ -251,7 +237,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 DropdownButtonFormField<String>(
                   value: selectedTag,
                   decoration: const InputDecoration(labelText: 'Category', isDense: true, border: OutlineInputBorder()),
-                  items: _filters.where((f) => f != 'All' && f != 'Saved 📌').map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
+                  items: _filters.where((f) => f != 'All' && f != 'Saved').map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
                   onChanged: (val) => setModalState(() => selectedTag = val ?? selectedTag),
                 ),
                 const SizedBox(height: 10),
@@ -288,7 +274,11 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                   width: double.infinity,
                   height: 44,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF2563EB),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
+                    ),
                     onPressed: isUploading
                         ? null
                         : () async {
@@ -337,14 +327,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 Navigator.pop(ctx);
                                 _fetchFeedPosts();
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text('⏳ Post submitted for review!'), backgroundColor: Color(0xFF2563EB)),
+                                  const SnackBar(content: Text('Post submitted for review!'), backgroundColor: Color(0xFF2563EB)),
                                 );
                               }
                             } catch (_) {
                               setModalState(() => isUploading = false);
                             }
                           },
-                    child: isUploading ? const CircularProgressIndicator(color: Colors.white) : const Text('Publish Post 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                    child: isUploading ? const CircularProgressIndicator(color: Colors.white) : const Text('Publish Post', style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -361,7 +351,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     final matches = exp.allMatches(text);
 
     if (matches.isEmpty) {
-      return Text(text, style: TextStyle(fontSize: fontSize, height: 1.45));
+      return Text(
+        text,
+        style: TextStyle(
+          fontSize: fontSize,
+          height: 1.45,
+          color: widget.isDarkMode ? const Color(0xFFF1F5F9) : const Color(0xFF1E293B),
+        ),
+      );
     }
 
     List<InlineSpan> spans = [];
@@ -414,25 +411,23 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         style: TextStyle(
           fontSize: fontSize,
           height: 1.45,
-          color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+          color: widget.isDarkMode ? const Color(0xFFF1F5F9) : const Color(0xFF1E293B),
         ),
         children: spans,
       ),
     );
   }
 
-  // 🎯 Premium Free Mock Test Discovery Card
   Widget _buildMockDiscoveryCard(Map<String, dynamic> mock, String authorName, String handle, bool isDark) {
     final int totalQs = (mock['questions_json'] as List?)?.length ?? 0;
     final int duration = mock['duration_mins'] ?? 15;
-    final int attempts = mock['attempts_count'] ?? 0;
 
     return Container(
       margin: const EdgeInsets.only(top: 10),
       decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.25), width: 1.1),
+        color: isDark ? const Color(0xFF172554) : const Color(0xFFEFF6FF),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: isDark ? const Color(0xFF1E40AF) : const Color(0xFFDBEAFE), width: 1),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -443,72 +438,50 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF16A34A).withOpacity(0.12),
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: const Row(
-                        children: [
-                          Icon(Icons.bolt_rounded, size: 13, color: Color(0xFF16A34A)),
-                          SizedBox(width: 3),
-                          Text('FREE CBT MOCK', style: TextStyle(color: Color(0xFF16A34A), fontSize: 9.5, fontWeight: FontWeight.w900)),
-                        ],
+                    const Icon(Icons.bolt_rounded, size: 16, color: Color(0xFF2563EB)),
+                    const SizedBox(width: 4),
+                    Expanded(
+                      child: Text(
+                        mock['title'] ?? 'Mock Drill',
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
-                    Text('$attempts Aspirants Attempted', style: TextStyle(fontSize: 11, color: Colors.grey.shade500)),
                   ],
                 ),
-                const SizedBox(height: 8),
+                const SizedBox(height: 6),
                 Text(
-                  mock['title'] ?? 'Comprehensive Mock Drill',
-                  style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
+                  '$totalQs Questions • $duration Minutes • Instant Result',
+                  style: TextStyle(fontSize: 11.5, color: isDark ? Colors.grey.shade300 : const Color(0xFF475569)),
                 ),
-                const SizedBox(height: 4),
-                Text(
-                  '$totalQs Concept Questions • ⏱ $duration Mins • Detailed Analytics',
-                  style: TextStyle(fontSize: 11.5, color: Colors.grey.shade600),
-                ),
-                const SizedBox(height: 12),
-
+                const SizedBox(height: 10),
                 SizedBox(
                   width: double.infinity,
-                  height: 38,
+                  height: 40,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF2563EB),
                       foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
                       elevation: 0,
                     ),
                     onPressed: () => _launchAttachedMock(mock, authorName, handle),
-                    child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.play_circle_fill_rounded, size: 16),
-                        SizedBox(width: 6),
-                        Text('Attempt Free Mock Now 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                      ],
-                    ),
+                    child: const Text('Attempt Free Mock →', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
                   ),
                 ),
               ],
             ),
           ),
-
-          // 🔗 Direct Classroom Funnel Ribbon
           InkWell(
             onTap: () => _navigateToCreator(handle),
-            borderRadius: const BorderRadius.vertical(bottom: Radius.circular(13)),
+            borderRadius: const BorderRadius.vertical(bottom: Radius.circular(10)),
             child: Container(
               width: double.infinity,
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
               decoration: BoxDecoration(
-                color: const Color(0xFF2563EB).withOpacity(0.08),
-                borderRadius: const BorderRadius.vertical(bottom: Radius.circular(13)),
+                color: isDark ? const Color(0xFF1E3A8A).withOpacity(0.5) : const Color(0xFFDBEAFE).withOpacity(0.5),
+                borderRadius: const BorderRadius.vertical(bottom: Radius.circular(10)),
               ),
               child: Row(
                 children: [
@@ -516,11 +489,12 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                   const SizedBox(width: 6),
                   Expanded(
                     child: Text(
-                      'Curated by $authorName • Explore Classroom Batches →',
-                      style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Color(0xFF2563EB)),
+                      '🎓 View Coaching: $authorName',
+                      style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Color(0xFF2563EB)),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
+                  const Icon(Icons.chevron_right, size: 15, color: Color(0xFF2563EB)),
                 ],
               ),
             ),
@@ -530,27 +504,51 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  // 📚 Dedicated Study Material Card
   Widget _buildStudyMaterialCard(String content, bool isDark) {
     return Container(
-      margin: const EdgeInsets.only(top: 8),
+      margin: const EdgeInsets.only(top: 10),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: const Color(0xFF059669).withOpacity(0.08),
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF059669).withOpacity(0.2)),
+        color: isDark ? const Color(0xFF064E3B).withOpacity(0.4) : const Color(0xFFF0FDF4),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: isDark ? const Color(0xFF065F46) : const Color(0xFFBBF7D0), width: 1),
       ),
-      child: const Row(
+      child: Row(
         children: [
-          Icon(Icons.picture_as_pdf_rounded, color: Color(0xFF059669), size: 28),
-          SizedBox(width: 10),
-          Expanded(
+          const Icon(Icons.description_outlined, color: Color(0xFF059669), size: 26),
+          const SizedBox(width: 10),
+          const Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('Class Handout / Study Material Attached', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                Text('Tap download link inside the post to access full PDF', style: TextStyle(color: Colors.grey, fontSize: 11)),
+                Text('Study Material Attached', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: Color(0xFF059669))),
+                Text('Tap download link inside the post to view PDF', style: TextStyle(color: Colors.grey, fontSize: 11)),
               ],
+            ),
+          ),
+          const Icon(Icons.arrow_forward_rounded, size: 16, color: Color(0xFF059669)),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildNoticeCard(String content, bool isDark) {
+    return Container(
+      margin: const EdgeInsets.only(top: 10),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: isDark ? const Color(0xFF78350F).withOpacity(0.3) : const Color(0xFFFFFBEB),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: isDark ? const Color(0xFF92400E) : const Color(0xFFFDE68A), width: 1),
+      ),
+      child: const Row(
+        children: [
+          Icon(Icons.campaign_outlined, color: Color(0xFFD97706), size: 24),
+          SizedBox(width: 8),
+          Expanded(
+            child: Text(
+              'Official Announcement / Notice',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5, color: Color(0xFFD97706)),
             ),
           ),
         ],
@@ -562,14 +560,16 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
     final bgSurface = isDark ? const Color(0xFF0F172A) : Colors.white;
-    final dividerColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+    final dividerColor = isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0);
 
     final filteredList = _posts.where((p) {
       bool matchesFilter = true;
-      if (_activeFilter == 'Saved 📌') {
+      if (_activeFilter == 'Saved') {
         matchesFilter = _savedPostIds.contains(p['id']);
       } else if (_activeFilter != 'All') {
-        matchesFilter = p['tag'].toString().contains(_activeFilter.split(' ').first);
+        final tag = (p['tag'] ?? '').toString().toLowerCase();
+        final target = _activeFilter.toLowerCase();
+        matchesFilter = tag.contains(target);
       }
       if (!matchesFilter) return false;
 
@@ -586,67 +586,105 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         backgroundColor: bgSurface,
         elevation: 0,
         scrolledUnderElevation: 0,
-        title: _isSearching
-            ? TextField(
-                controller: _searchCtrl,
-                autofocus: true,
-                style: TextStyle(color: isDark ? Colors.white : Colors.black87),
-                decoration: const InputDecoration(hintText: 'Search feed, mocks, tags...', border: InputBorder.none),
-                onChanged: (val) => setState(() => _searchQuery = val),
-              )
-            : const Text('Community Feed', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18)),
+        titleSpacing: 16,
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Community',
+              style: TextStyle(
+                fontWeight: FontWeight.w700,
+                fontSize: 18,
+                color: isDark ? Colors.white : const Color(0xFF0F172A),
+              ),
+            ),
+            Text(
+              'Learn • Discuss • Practice',
+              style: TextStyle(fontSize: 11, color: Colors.grey.shade500, fontWeight: FontWeight.normal),
+            ),
+          ],
+        ),
         actions: [
           IconButton(
-            icon: Icon(_isSearching ? Icons.close_rounded : Icons.search_rounded),
-            onPressed: () {
-              setState(() {
-                if (_isSearching) {
-                  _searchCtrl.clear();
-                  _searchQuery = '';
-                }
-                _isSearching = !_isSearching;
-              });
-            },
+            icon: Icon(Icons.refresh_rounded, color: isDark ? Colors.white70 : Colors.black87, size: 22),
+            onPressed: _fetchFeedPosts,
           ),
-          IconButton(icon: const Icon(Icons.refresh_rounded), onPressed: _fetchFeedPosts),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: const Color(0xFF2563EB),
         foregroundColor: Colors.white,
         icon: const Icon(Icons.edit_rounded, size: 18),
-        label: const Text('Share Doubt / Post', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+        label: const Text('Ask Doubt', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
         onPressed: _openCreatePostModal,
       ),
       body: Column(
         children: [
-          // Filter Chips Strip
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+            child: Container(
+              height: 44,
+              decoration: BoxDecoration(
+                color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: TextField(
+                controller: _searchCtrl,
+                style: TextStyle(fontSize: 13, color: isDark ? Colors.white : Colors.black87),
+                decoration: InputDecoration(
+                  hintText: 'Search mocks, coaching, doubts, topics...',
+                  hintStyle: TextStyle(fontSize: 12.5, color: Colors.grey.shade500),
+                  prefixIcon: Icon(Icons.search_rounded, size: 19, color: Colors.grey.shade500),
+                  suffixIcon: _searchQuery.isNotEmpty
+                      ? IconButton(
+                          icon: const Icon(Icons.close_rounded, size: 16),
+                          onPressed: () {
+                            _searchCtrl.clear();
+                            setState(() => _searchQuery = '');
+                          },
+                        )
+                      : null,
+                  border: InputBorder.none,
+                  contentPadding: const EdgeInsets.symmetric(vertical: 12),
+                ),
+                onChanged: (val) => setState(() => _searchQuery = val),
+              ),
+            ),
+          ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
             child: Row(
               children: _filters.map((f) {
                 final isSel = _activeFilter == f;
                 return Padding(
                   padding: const EdgeInsets.only(right: 6),
-                  child: ChoiceChip(
-                    label: Text(f),
-                    selected: isSel,
-                    selectedColor: const Color(0xFF2563EB),
-                    backgroundColor: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                    labelStyle: TextStyle(
-                      fontSize: 11.5,
-                      fontWeight: isSel ? FontWeight.bold : FontWeight.w500,
-                      color: isSel ? Colors.white : (isDark ? Colors.white70 : const Color(0xFF334155)),
+                  child: GestureDetector(
+                    onTap: () => setState(() => _activeFilter = f),
+                    child: Container(
+                      height: 34,
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                        color: isSel ? const Color(0xFF2563EB) : (isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9)),
+                        borderRadius: BorderRadius.circular(17),
+                      ),
+                      child: Text(
+                        f,
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: isSel ? FontWeight.w600 : FontWeight.normal,
+                          color: isSel ? Colors.white : (isDark ? Colors.white70 : const Color(0xFF475569)),
+                        ),
+                      ),
                     ),
-                    visualDensity: VisualDensity.compact,
-                    onSelected: (_) => setState(() => _activeFilter = f),
                   ),
                 );
               }).toList(),
             ),
           ),
-          Divider(height: 1, thickness: 0.8, color: dividerColor),
+          const SizedBox(height: 2),
+          Divider(height: 1, thickness: 0.6, color: dividerColor),
 
           Expanded(
             child: _isLoading
@@ -657,21 +695,21 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                         ? Center(child: Text('No posts found in this section.', style: TextStyle(color: Colors.grey.shade500)))
                         : ListView.separated(
                             itemCount: filteredList.length,
-                            separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
+                            separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.6, color: dividerColor),
                             itemBuilder: (context, idx) {
                               final item = filteredList[idx];
                               final creator = item['creator_profiles'] ?? {};
                               final attachedMock = item['creator_mocks'];
                               final postId = item['id'];
-                              final userVote = _userVoteState[postId] ?? 0;
-                              final int score = (item['upvotes'] ?? 0) - (item['downvotes'] ?? 0);
+                              final bool isLiked = _likedPostIds.contains(postId);
+                              final int likesCount = item['upvotes'] ?? 0;
                               final String? imgUrl = item['image_url'];
-                              final Map<String, dynamic>? pollData = item['poll_data'];
                               final bool isSaved = _savedPostIds.contains(postId);
 
                               final bool isVerifiedCreator = creator['name'] != null && (item['creator_id'] != 'user');
                               final String authorHandle = (creator['handle_id'] ?? item['creator_id'] ?? 'user').toString();
                               final String authorDisplayName = isVerifiedCreator ? (creator['name'] ?? 'Verified Mentor') : (item['author_name'] ?? 'Aspirant');
+                              final String tag = (item['tag'] ?? 'General').toString();
 
                               return Container(
                                 color: bgSurface,
@@ -679,16 +717,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    // 👤 Clickable Author Header (Transitions to Profile)
                                     InkWell(
                                       onTap: () {
                                         if (isVerifiedCreator) _navigateToCreator(authorHandle);
                                       },
-                                      borderRadius: BorderRadius.circular(8),
                                       child: Row(
                                         children: [
                                           CircleAvatar(
-                                            radius: 18,
+                                            radius: 17,
                                             backgroundColor: isVerifiedCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
                                             child: Text(
                                               authorDisplayName.isNotEmpty ? authorDisplayName[0].toUpperCase() : 'A',
@@ -705,7 +741,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                                     Flexible(
                                                       child: Text(
                                                         authorDisplayName,
-                                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                                        style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13.5),
                                                         overflow: TextOverflow.ellipsis,
                                                       ),
                                                     ),
@@ -714,95 +750,108 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                                       const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
                                                     ],
                                                     const SizedBox(width: 6),
-                                                    Text('@$authorHandle', style: TextStyle(color: Colors.grey[500], fontSize: 11)),
+                                                    Text(
+                                                      '• $tag',
+                                                      style: TextStyle(color: Colors.grey.shade500, fontSize: 11),
+                                                    ),
                                                   ],
                                                 ),
                                                 Text(
-                                                  isVerifiedCreator ? '🎓 ${creator['subject_specialty'] ?? 'Coaching Mentor'}' : 'Aspirant • Community Member',
-                                                  style: TextStyle(color: isVerifiedCreator ? const Color(0xFF2563EB) : Colors.grey[600], fontSize: 10.5),
+                                                  isVerifiedCreator ? (creator['subject_specialty'] ?? 'Coaching Mentor') : 'Aspirant',
+                                                  style: TextStyle(color: Colors.grey.shade500, fontSize: 11),
                                                 ),
                                               ],
                                             ),
-                                          ),
-                                          Container(
-                                            padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
-                                            decoration: BoxDecoration(color: const Color(0xFF2563EB).withOpacity(0.08), borderRadius: BorderRadius.circular(4)),
-                                            child: Text(item['tag'] ?? 'General', style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10, fontWeight: FontWeight.bold)),
                                           ),
                                         ],
                                       ),
                                     ),
                                     const SizedBox(height: 10),
 
-                                    // Post Content
                                     _buildRichTextContent(item['content'] ?? ''),
 
-                                    // Special Material Card if PDF
-                                    if (item['tag'] == 'Study Material 📚') _buildStudyMaterialCard(item['content'] ?? '', isDark),
+                                    if (tag.toLowerCase().contains('study')) _buildStudyMaterialCard(item['content'] ?? '', isDark),
 
-                                    // Attached Mock Test Discovery Card
+                                    if (tag.toLowerCase().contains('notice') || tag.toLowerCase().contains('announcement'))
+                                      _buildNoticeCard(item['content'] ?? '', isDark),
+
                                     if (attachedMock != null) _buildMockDiscoveryCard(attachedMock, authorDisplayName, authorHandle, isDark),
 
                                     if (imgUrl != null && imgUrl.isNotEmpty) ...[
                                       const SizedBox(height: 10),
                                       ClipRRect(
                                         borderRadius: BorderRadius.circular(10),
-                                        child: Image.network(imgUrl, fit: BoxFit.cover, width: double.infinity, height: 180),
+                                        child: Image.network(
+                                          imgUrl,
+                                          fit: BoxFit.contain,
+                                          width: double.infinity,
+                                        ),
                                       ),
                                     ],
 
                                     const SizedBox(height: 12),
 
-                                    // Interaction Footer (Upvote, Views, Save, Share)
                                     Row(
                                       children: [
-                                        Container(
-                                          height: 30,
-                                          decoration: BoxDecoration(
-                                            color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                                            borderRadius: BorderRadius.circular(18),
-                                          ),
+                                        InkWell(
+                                          onTap: () => _handleLike(idx),
                                           child: Row(
                                             children: [
-                                              IconButton(
-                                                icon: Icon(Icons.arrow_upward_rounded, size: 15, color: userVote == 1 ? const Color(0xFFFF4500) : Colors.grey[600]),
-                                                onPressed: () => _handleVote(idx, true),
-                                                visualDensity: VisualDensity.compact,
+                                              Icon(
+                                                isLiked ? Icons.thumb_up : Icons.thumb_up_alt_outlined,
+                                                size: 15,
+                                                color: isLiked ? const Color(0xFF2563EB) : Colors.grey.shade600,
                                               ),
-                                              Text('$score', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: userVote == 1 ? const Color(0xFFFF4500) : null)),
-                                              IconButton(
-                                                icon: Icon(Icons.arrow_downward_rounded, size: 15, color: userVote == -1 ? const Color(0xFF7193FF) : Colors.grey[600]),
-                                                onPressed: () => _handleVote(idx, false),
-                                                visualDensity: VisualDensity.compact,
+                                              const SizedBox(width: 4),
+                                              Text(
+                                                '$likesCount',
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                  fontWeight: isLiked ? FontWeight.bold : FontWeight.normal,
+                                                  color: isLiked ? const Color(0xFF2563EB) : Colors.grey.shade600,
+                                                ),
                                               ),
                                             ],
                                           ),
                                         ),
-                                        const SizedBox(width: 8),
+                                        const SizedBox(width: 18),
 
                                         Row(
                                           children: [
-                                            const Icon(Icons.remove_red_eye_outlined, size: 14, color: Colors.grey),
-                                            const SizedBox(width: 3),
-                                            Text('${item['views_count'] ?? 100}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                                            Icon(Icons.chat_bubble_outline_rounded, size: 15, color: Colors.grey.shade600),
+                                            const SizedBox(width: 4),
+                                            Text('0', style: TextStyle(fontSize: 12, color: Colors.grey.shade600)),
                                           ],
                                         ),
-                                        const SizedBox(width: 8),
+                                        const SizedBox(width: 18),
 
                                         InkWell(
                                           onTap: () => _toggleBookmark(postId, item),
                                           child: Row(
                                             children: [
-                                              Icon(isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded, size: 15, color: isSaved ? const Color(0xFF2563EB) : Colors.grey),
-                                              const SizedBox(width: 2),
-                                              Text('${item['bookmarks_count'] ?? 0}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                                              Icon(
+                                                isSaved ? Icons.bookmark : Icons.bookmark_border_rounded,
+                                                size: 16,
+                                                color: isSaved ? const Color(0xFF2563EB) : Colors.grey.shade600,
+                                              ),
+                                              const SizedBox(width: 4),
+                                              Text(
+                                                '${item['bookmarks_count'] ?? 0}',
+                                                style: TextStyle(
+                                                  fontSize: 12,
+                                                  fontWeight: isSaved ? FontWeight.bold : FontWeight.normal,
+                                                  color: isSaved ? const Color(0xFF2563EB) : Colors.grey.shade600,
+                                                ),
+                                              ),
                                             ],
                                           ),
                                         ),
                                         const Spacer(),
 
                                         IconButton(
-                                          icon: const Icon(Icons.share_outlined, size: 16, color: Colors.grey),
+                                          icon: Icon(Icons.share_outlined, size: 16, color: Colors.grey.shade600),
+                                          padding: EdgeInsets.zero,
+                                          constraints: const BoxConstraints(),
                                           onPressed: () {
                                             Clipboard.setData(ClipboardData(text: item['content'] ?? ''));
                                             ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Copied to clipboard!')));
