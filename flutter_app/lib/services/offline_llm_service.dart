@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:llama_flutter_android/llama_flutter_android.dart';
-import 'offline_db_service.dart';
 
 enum LlmTaskType {
   duolingoExplanation,
@@ -27,7 +26,7 @@ class OfflineLlmAgentService {
       '/storage/emulated/0/Download/Llama-3.2-1B-Instruct-Q4_K_M.gguf';
 
   // ------------------------------------------------------------
-  // 1. SAFE MODEL LOADER (2048 Context Length for Llama 3.2)
+  // 1. SAFE MODEL LOADER (2048 Context Length)
   // ------------------------------------------------------------
   Future<void> loadModelManually({String? modelPath}) async {
     if (_isInitializing) return;
@@ -93,7 +92,7 @@ class OfflineLlmAgentService {
 
     final activeController = _controller;
     if (activeController == null) {
-      throw Exception("Model load nahi hai. Folder icon se file load karein.");
+      throw Exception("Model load nahi hai. Pehle model file load karein.");
     }
 
     final cleanInput = userInput.trim();
@@ -102,21 +101,6 @@ class OfflineLlmAgentService {
     // Natural conversation filter
     if (lower == 'hi' || lower == 'hello' || lower == 'hey' || lower == 'kaise ho') {
       return "Aman Sir: Namaste! Main bilkul theek hoon. Aaj kaun sa topic samajhna hai—Science me Cell/Biology, ya Polity ka koi Article?";
-    }
-
-    // Optional background SQLite lookup (Secondary fact check)
-    String optionalDbNotes = context.trim();
-    if (optionalDbNotes.isEmpty) {
-      try {
-        final dbResult = await OfflineDbService.instance
-            .searchRelevantContext(cleanInput)
-            .timeout(const Duration(milliseconds: 300));
-        if (dbResult.isNotEmpty) {
-          optionalDbNotes = dbResult;
-        }
-      } catch (_) {
-        optionalDbNotes = "";
-      }
     }
 
     // Official Llama 3.2 Native Header Template with Duolingo Card Structure
@@ -151,7 +135,7 @@ Explanation: [Crisp 1-line reason]
 
 Important: Square brackets mat print karna. Real facts aur natural Hinglish likhna.<|eot_id|><|start_header_id|>user<|end_header_id|>
 
-${optionalDbNotes.isNotEmpty ? "OPTIONAL REFERENCE NOTES:\n$optionalDbNotes\n\n" : ""}TOPIC: $cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+${context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : ""}TOPIC: $cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
 Micro Concept:
 ''';
 
