@@ -192,14 +192,29 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     int correctCount = 0;
     int wrongCount = 0;
 
+    // 📋 Creator Dashboard ke liye Question-by-Question detailed CBT responses compile karein
+    List<Map<String, dynamic>> detailedResponses = [];
+
     for (int i = 0; i < widget.questions.length; i++) {
       final q = widget.questions[i];
       final userAns = _userAnswers[i];
+      final currentOptions = q.getOptions(_isHindi);
+      final bool isCorrect = (userAns != null && userAns == q.answerIndex);
+
+      detailedResponses.add({
+        'q_no': i + 1,
+        'question': q.getText(_isHindi),
+        'options': currentOptions,
+        'selected_idx': userAns,
+        'selected_text': userAns != null ? currentOptions[userAns] : 'Skipped',
+        'correct_idx': q.answerIndex,
+        'correct_text': currentOptions[q.answerIndex],
+        'is_correct': isCorrect,
+        'time_spent': _questionTimers[i] ?? 0,
+        'explanation': q.explanation,
+      });
 
       if (userAns != null) {
-        bool isCorrect = (userAns == q.answerIndex);
-        final currentOptions = q.getOptions(_isHindi);
-
         if (isCorrect) {
           correctCount++;
           await UserStatsService.recordQuestionAttempt(
@@ -296,8 +311,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             ? (correctCount / _userAnswers.length) * 100
             : 0.0;
 
-        // Compatible insert: Table ke exact schema (student_name, batch_id, test_id) ke sath
-        // sath hi extra analytics columns agar table me maujood hon
+        // Full Payload (Schema matched with Table Columns + detailed_responses)
         final Map<String, dynamic> submissionData = {
           'batch_id': widget.batchId,
           'test_id': widget.mockId,
@@ -307,19 +321,20 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           'accuracy': accuracyPct.round(),
           'weak_subject': wrongCount > 0 ? widget.subFolder.toUpperCase() : 'All Clear',
           'strong_subject': correctCount > 5 ? 'Core Concepts Strong' : 'Basic Revision',
+          'detailed_responses': detailedResponses, // 👈 Pura answer paper
         };
 
         try {
           await client.from('batch_submissions').insert(submissionData);
-          debugPrint("✅ [SECTIONAL_CBT] Batch submission inserted successfully with full analytics!");
+          debugPrint("✅ [SECTIONAL_CBT] Full Batch Submission with detailed responses inserted!");
         } catch (_) {
-          // Fallback agar table me sirf original columns (batch_id, test_id, student_name) hi hon
+          // Fallback schema agar extra columns Supabase me available na hon
           await client.from('batch_submissions').insert({
             'batch_id': widget.batchId,
             'test_id': widget.mockId,
             'student_name': studentIdentifier,
           });
-          debugPrint("✅ [SECTIONAL_CBT] Batch submission inserted using basic schema fallback!");
+          debugPrint("✅ [SECTIONAL_CBT] Fallback Batch Submission inserted!");
         }
       } catch (e) {
         debugPrint("❌ [SECTIONAL_CBT] Critical Error inserting batch submission: $e");
