@@ -72,7 +72,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // DIRECT EXPLANATION PIPELINE (Zero Counter-Questions)
+  // THINKING & REASONING INFERENCE PIPELINE (Up to 200 words)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -93,17 +93,21 @@ class OfflineLlmAgentService {
       return "Kripya apna sawal ya topic likhein.";
     }
 
-    // Direct, factual, no counter-questions prompt
+    // Two-Phase Brain Prompt:
+    // 1. Model pehle query analyze karega (Intent determine karega)
+    // 2. Fir seedhe 150-200 words me crystal-clear Hinglish explanation dega
     final prompt = '''<|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
-You are an expert educational AI assistant.
-Answer the user's question directly, clearly, and factually in simple Hinglish.
+You are an expert AI mentor for competitive exams.
+Before answering, silently analyze the user's input:
+- What is the exact intent? (Greeting, core science concept, polity article, or exam details?)
+- How to make it immediately clear to a student in everyday terms?
 
-Strict Rules:
-1. NEVER ask a counter-question back to the user (do not say "kya aapko pata hai?", "aap kya janna chahte hain?").
-2. Give the direct explanation immediately based on the user's input.
-3. If the user asks about an exam or organization (like BPSC, UPSC), state its full form, role, and main purpose clearly.
-4. Keep the answer crisp, helpful, and natural without placeholders or robotic text.<|eot_id|><|start_header_id|>user<|end_header_id|>
+Response Guidelines:
+1. Natural Spoken Hinglish: Explain like a real mentor sitting in front of the student.
+2. Conceptual Depth: Start with real-life intuition (WHY before WHAT), explain the core factual mechanism, and point out what trap examiners set.
+3. Length: Provide a complete, thoughtful explanation within 150 to 200 words.
+4. Directness: Never ask counter-questions. Do not output meta-tags, thought processes, or template brackets. Speak directly to the student.<|eot_id|><|start_header_id|>user<|end_header_id|>
 
 ${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
 ''';
@@ -113,10 +117,11 @@ ${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|
     StreamSubscription<String>? subscription;
 
     try {
+      // 200 words = lagbhag 260-320 tokens. maxTokens 350 rakha hai taaki answer beech me na kate.
       final stream = activeController.generate(
         prompt: prompt,
-        temperature: 0.1, // Zero randomness -> Direct factual answers
-        maxTokens: 300,
+        temperature: 0.3, // Accurate reasoning bina bhatke
+        maxTokens: 350,
       );
 
       subscription = stream.listen(
@@ -137,11 +142,11 @@ ${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|
       );
 
       final result = await completer.future.timeout(
-        const Duration(seconds: 40),
+        const Duration(seconds: 45),
         onTimeout: () {
           subscription?.cancel();
           if (buffer.isNotEmpty) return buffer.toString();
-          throw Exception("Inference timeout.");
+          throw Exception("Inference timeout: 45s.");
         },
       );
 
