@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:llama_flutter_android/llama_flutter_android.dart';
+import 'offline_db_service.dart';
 
 enum LlmTaskType {
   duolingoExplanation,
@@ -21,17 +22,21 @@ class OfflineLlmAgentService {
   bool get isReady => _controller != null;
   String? get activeModelName => _loadedModelPath?.split('/').last;
 
-  static const String verified05BPath =
-      '/storage/emulated/0/Download/qwen2.5-0.5b-instruct-q4_k_m.gguf';
+  // Llama 3.2 1B Instruct GGUF path
+  static const String defaultLlamaPath =
+      '/storage/emulated/0/Download/Llama-3.2-1B-Instruct-Q4_K_M.gguf';
 
+  // ------------------------------------------------------------
+  // 1. SAFE MODEL LOADER (2048 Context Length for Llama 3.2)
+  // ------------------------------------------------------------
   Future<void> loadModelManually({String? modelPath}) async {
     if (_isInitializing) return;
 
-    final targetPath = modelPath ?? verified05BPath;
+    final targetPath = modelPath ?? defaultLlamaPath;
     final file = File(targetPath);
 
     if (!await file.exists()) {
-      throw Exception("GGUF model file nahi mili:\n$targetPath");
+      throw Exception("Llama 3.2 GGUF file nahi mili:\n$targetPath");
     }
 
     _isInitializing = true;
@@ -53,7 +58,7 @@ class OfflineLlmAgentService {
     } catch (e) {
       _controller = null;
       _loadedModelPath = null;
-      throw Exception("Model load fail: $e");
+      throw Exception("Llama 3.2 load fail: $e");
     } finally {
       _isInitializing = false;
     }
@@ -63,6 +68,9 @@ class OfflineLlmAgentService {
     await loadModelManually(modelPath: modelPath);
   }
 
+  // ------------------------------------------------------------
+  // 2. UNLOAD / DISPOSE ENGINE
+  // ------------------------------------------------------------
   Future<void> unloadModel() async {
     try {
       await _controller?.dispose();
@@ -71,6 +79,9 @@ class OfflineLlmAgentService {
     _loadedModelPath = null;
   }
 
+  // ------------------------------------------------------------
+  // 3. ADAPTIVE INFERENCE PIPELINE
+  // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
     required String context,
@@ -82,44 +93,66 @@ class OfflineLlmAgentService {
 
     final activeController = _controller;
     if (activeController == null) {
-      throw Exception("Model engine load nahi hua.");
+      throw Exception("Model load nahi hai. Folder icon se file load karein.");
     }
 
     final cleanInput = userInput.trim();
     final lower = cleanInput.toLowerCase();
 
-    // 1. Natural Greeting Filter (Instant human reply)
+    // Natural conversation filter
     if (lower == 'hi' || lower == 'hello' || lower == 'hey' || lower == 'kaise ho') {
-      return "Namaste! Main tayyar hoon. Aaj kaun sa topic samajhna hai—Science me Cell, ya Indian Constitution ka koi Article?";
+      return "Aman Sir: Namaste! Main bilkul theek hoon. Aaj kaun sa topic samajhna hai—Science me Cell/Biology, ya Polity ka koi Article?";
     }
 
-    // 2. Gemma-style Clean Structured Prompt (Exact UI match)
-    final prompt = '''<|im_start|>system
-You are a structured learning AI tutor for competitive exams (BPSC/BSSC).
-Explain the user's topic in clear Hinglish following this format:
+    // Optional background SQLite lookup (Secondary fact check)
+    String optionalDbNotes = context.trim();
+    if (optionalDbNotes.isEmpty) {
+      try {
+        final dbResult = await OfflineDbService.instance
+            .searchRelevantContext(cleanInput)
+            .timeout(const Duration(milliseconds: 300));
+        if (dbResult.isNotEmpty) {
+          optionalDbNotes = dbResult;
+        }
+      } catch (_) {
+        optionalDbNotes = "";
+      }
+    }
 
-1. 💡 Micro Concept
-(1 crisp line explaining why it matters in daily life before what it is)
+    // Official Llama 3.2 Native Header Template with Duolingo Card Structure
+    final prompt = '''<|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
-2. ⚡ 3-Step Breakdown
-• Mool Tathya: Core rule or fact.
-• Karyapranali: How it works in real life.
-• Pariksha Savdhani: Exam elimination trap.
+Cutting Knowledge Date: December 2023
+Today Date: 26 Jul 2024
 
-3. 🎯 Micro Challenge
-Q: One direct exam question.
+Aap Aman Sir hain, BPSC aur competitive exams ke intuitive teacher.
+Student ke topic ko samajh kar is 1-screen conversational card format me Hinglish me samjhaiye:
+
+Micro Concept:
+[Real-life analogy se WHY before WHAT 1 line me]
+
+Raju vs Aman Sir:
+Raju: [Natural daily-life doubt ya curiosity]
+Aman Sir: [Spoken Hinglish practical logic]
+
+3-Step Breakdown:
+• Mool Tathya: [Core factual ya scientific rule]
+• Karyapranali: [Real life application ya formula]
+• Pariksha Savdhani: [Elimination trap to avoid]
+
+Micro Challenge:
+Q: [One line direct exam question]
 A) Option A
 B) Option B
 C) Option C
 D) Option D
-Correct: Option letter
-Explanation: 1-line reason.
+Correct Answer: [Option letter]
+Explanation: [Crisp 1-line reason]
 
-Rule: Do not output brackets, instructions, or meta talk. Write real facts.<|im_end|>
-<|im_start|>user
-${context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : ""}TOPIC: $cleanInput<|im_end|>
-<|im_start|>assistant
-1. 💡 Micro Concept
+Important: Square brackets mat print karna. Real facts aur natural Hinglish likhna.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+${optionalDbNotes.isNotEmpty ? "OPTIONAL REFERENCE NOTES:\n$optionalDbNotes\n\n" : ""}TOPIC: $cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+Micro Concept:
 ''';
 
     final completer = Completer<String>();
@@ -129,7 +162,7 @@ ${context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : ""}TOPIC: $cleanI
     try {
       final stream = activeController.generate(
         prompt: prompt,
-        temperature: 0.15,
+        temperature: 0.2,
         maxTokens: 400,
       );
 
@@ -160,17 +193,16 @@ ${context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : ""}TOPIC: $cleanI
       );
 
       String cleanText = result
-          .replaceAll('<|im_end|>', '')
-          .replaceAll('<|endoftext|>', '')
+          .replaceAll('<|eot_id|>', '')
+          .replaceAll('<|end_of_text|>', '')
           .trim();
 
       if (cleanText.isEmpty) {
-        throw Exception("Model ne blank response diya.");
+        throw Exception("Engine ne blank output diya.");
       }
 
-      // UI Parser ko header ensure karke pass karein
-      if (!cleanText.startsWith("1. 💡 Micro Concept")) {
-        cleanText = "1. 💡 Micro Concept\n$cleanText";
+      if (!cleanText.startsWith("Micro Concept:")) {
+        cleanText = "Micro Concept:\n$cleanText";
       }
 
       return cleanText;
