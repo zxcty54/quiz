@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:mocktester/services/offline_llm_service.dart';
-import 'package:mocktester/models/duolingo_payload.dart';
-import 'package:mocktester/widgets/duolingo_card.dart';
 
 class AiChatScreen extends StatefulWidget {
   final bool isDarkMode;
@@ -40,9 +38,9 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
   Future<void> _checkSavedModel() async {
     final prefs = await SharedPreferences.getInstance();
-    final savedPath = prefs.getString('saved_qwen_path');
+    final savedPath = prefs.getString('saved_model_path');
     if (savedPath != null && await File(savedPath).exists()) {
-      _initQwenModel(savedPath);
+      _initModel(savedPath);
     }
   }
 
@@ -75,7 +73,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
         return;
       }
 
-      await _initQwenModel(pickedPath);
+      await _initModel(pickedPath);
 
     } catch (e) {
       setState(() {
@@ -85,7 +83,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
     }
   }
 
-  Future<void> _initQwenModel(String path) async {
+  Future<void> _initModel(String path) async {
     setState(() {
       _isLoading = true;
       _statusMessage = "Reading file directly from storage...";
@@ -106,11 +104,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       await Future.delayed(const Duration(milliseconds: 150));
 
-      // Manual model loading via official service
       await OfflineLlmAgentService.instance.loadModelManually(modelPath: path);
 
       final prefs = await SharedPreferences.getInstance();
-      await prefs.setString('saved_qwen_path', path);
+      await prefs.setString('saved_model_path', path);
 
       setState(() {
         _isModelLoaded = true;
@@ -139,9 +136,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _scrollToBottom();
 
     try {
+      // Clean context pass kiya hai bina kisi hardcoded syllabus text ke
       final String response = await OfflineLlmAgentService.instance.executeLlmAgent(
         userInput: text,
-        context: "BPSC / BSSC Exam General Studies Concept Revision",
+        context: "",
         task: LlmTaskType.duolingoExplanation,
       );
 
@@ -215,7 +213,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                       padding: const EdgeInsets.all(24.0),
                       child: Text(
                         _isModelLoaded
-                            ? "$_currentModelName Ready! Real-life observation ya concept enter karein..."
+                            ? "$_currentModelName Ready! Apna sawal puchiye..."
                             : _statusMessage,
                         textAlign: TextAlign.center,
                         style: TextStyle(color: isDark ? Colors.grey.shade400 : Colors.grey),
@@ -224,39 +222,37 @@ class _AiChatScreenState extends State<AiChatScreen> {
                   )
                 : ListView.builder(
                     controller: _scrollController,
-                    padding: const EdgeInsets.all(12),
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                     itemCount: _messages.length,
                     itemBuilder: (context, index) {
                       final msg = _messages[index];
 
-                      if (msg.isUser) {
-                        return Align(
-                          alignment: Alignment.centerRight,
-                          child: Container(
-                            margin: const EdgeInsets.symmetric(vertical: 4),
-                            padding: const EdgeInsets.all(12),
-                            constraints: BoxConstraints(
-                              maxWidth: MediaQuery.of(context).size.width * 0.8,
-                            ),
-                            decoration: BoxDecoration(
-                              color: Colors.blueAccent,
-                              borderRadius: BorderRadius.circular(12),
-                            ),
-                            child: Text(
-                              msg.text,
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 14,
-                              ),
+                      return Align(
+                        alignment: msg.isUser ? Alignment.centerRight : Alignment.centerLeft,
+                        child: Container(
+                          margin: const EdgeInsets.symmetric(vertical: 4),
+                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                          constraints: BoxConstraints(
+                            maxWidth: MediaQuery.of(context).size.width * 0.82,
+                          ),
+                          decoration: BoxDecoration(
+                            // User ke liye blue, Assistant ke liye subtle neutral background
+                            color: msg.isUser
+                                ? Colors.blueAccent
+                                : (isDark ? const Color(0xFF242424) : const Color(0xFFF1F1F4)),
+                            borderRadius: BorderRadius.circular(14),
+                          ),
+                          child: SelectableText(
+                            msg.text.trim(),
+                            style: TextStyle(
+                              color: msg.isUser
+                                  ? Colors.white
+                                  : (isDark ? Colors.white : Colors.black87),
+                              fontSize: 14.5,
+                              height: 1.35,
                             ),
                           ),
-                        );
-                      }
-
-                      // Render structured pedagogical card
-                      return DuolingoCard(
-                        payload: DuolingoPayload.fromLlmText(msg.text),
-                        isDarkMode: isDark,
+                        ),
                       );
                     },
                   ),
@@ -269,7 +265,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                   const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2)),
                   const SizedBox(width: 8),
                   Text(
-                    "AI Agent is formulating card...",
+                    "AI soch raha hai...",
                     style: TextStyle(fontSize: 12, color: isDark ? Colors.grey.shade400 : Colors.grey),
                   ),
                 ],
@@ -291,7 +287,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     enabled: _isModelLoaded && !_isGenerating,
                     style: TextStyle(color: textColor),
                     decoration: InputDecoration(
-                      hintText: _isModelLoaded ? "Type concept or observation..." : "Select model first...",
+                      hintText: _isModelLoaded ? "Type your question..." : "Select model first...",
                       hintStyle: TextStyle(color: isDark ? Colors.grey.shade500 : Colors.grey),
                       border: InputBorder.none,
                       contentPadding: const EdgeInsets.symmetric(horizontal: 12),
