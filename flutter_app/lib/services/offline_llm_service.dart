@@ -25,7 +25,7 @@ class OfflineLlmAgentService {
       '/storage/emulated/0/Download/qwen2.5-0.5b-instruct-q4_k_m.gguf';
 
   // ------------------------------------------------------------
-  // 1. SAFE MODEL LOADER (Pre-compiled Android C++ Engine)
+  // 1. SAFE MODEL LOADER (Expanded 1024 Context to Prevent Decode Errors)
   // ------------------------------------------------------------
   Future<void> loadModelManually({String? modelPath}) async {
     if (_isInitializing) return;
@@ -45,10 +45,11 @@ class OfflineLlmAgentService {
       }
 
       final controller = LlamaController();
+      // Context 1024 prevents "Failed to decode prompt" buffer overflow
       await controller.loadModel(
         modelPath: targetPath,
         threads: 2,
-        contextSize: 512,
+        contextSize: 1024,
       );
 
       _controller = controller;
@@ -78,7 +79,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // 3. EXECUTE INFERENCE (Zero NullPointer Type-Safe Bridge)
+  // 3. EXECUTE INFERENCE (Zero Decode Failure Stream)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -91,27 +92,29 @@ class OfflineLlmAgentService {
 
     final activeController = _controller;
     if (activeController == null) {
-      throw Exception("Model load nahi hai. Pehle file select karein.");
+      throw Exception("Model load nahi hai. Folder icon se file load karein.");
     }
 
     final systemInstruction = _buildSystemInstruction(task);
-    final userContent = context.trim().isNotEmpty
-        ? "STUDY CONTEXT:\n$context\n\nOBSERVATION / QUERY:\n$userInput"
-        : "OBSERVATION / QUERY:\n$userInput";
+    
+    // Qwen2.5 ChatML format
+    final formattedPrompt = '''<|im_start|>system
+$systemInstruction<|im_end|>
+<|im_start|>user
+${context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : ""}OBSERVATION / QUERY:
+$userInput<|im_end|>
+<|im_start|>assistant
+''';
 
     final completer = Completer<String>();
     final StringBuffer buffer = StringBuffer();
     StreamSubscription<String>? subscription;
 
     try {
-      final stream = activeController.generateChat(
-        messages: [
-          ChatMessage(role: 'system', content: systemInstruction),
-          ChatMessage(role: 'user', content: userContent),
-        ],
-        template: 'chatml',
+      final stream = activeController.generate(
+        prompt: formattedPrompt,
         temperature: 0.1,
-        maxTokens: 350,
+        maxTokens: 300,
       );
 
       subscription = stream.listen(
@@ -148,7 +151,7 @@ class OfflineLlmAgentService {
           .trim();
 
       if (cleanText.isEmpty) {
-        throw Exception("Engine returned blank output.");
+        throw Exception("Engine ne blank output return kiya.");
       }
 
       return cleanText;
@@ -158,7 +161,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // PEDAGOGICAL STRUCTURE (Notebook Standard Format)
+  // 4. NOTEBOOK PEDAGOGICAL FORMAT (Duolingo Style WhatsApp Card)
   // ------------------------------------------------------------
   String _buildSystemInstruction(LlmTaskType task) {
     return '''
@@ -189,7 +192,7 @@ D) [Option 4]
 Correct Answer: [Letter]
 Explanation: [1 crisp line trap reason]
 
-Do not write any introductory greetings or conversational filler outside this format.
+Do not write any extra conversational text outside this format.
 ''';
   }
 }
