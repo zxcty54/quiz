@@ -265,13 +265,17 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             .eq('id', targetId)
             .maybeSingle();
 
-        int currentCount = (current?['attempts_count'] as int?) ?? 0;
+        int currentCount = 0;
+        if (current != null && current['attempts_count'] != null) {
+          currentCount = int.tryParse(current['attempts_count'].toString()) ?? 0;
+        }
+
         await client
             .from(targetTable)
             .update({'attempts_count': currentCount + 1})
             .eq('id', targetId);
 
-        debugPrint("✅ [SECTIONAL_CBT] Attempts count (+1) updated in $targetTable for ID: $targetId");
+        debugPrint("✅ [SECTIONAL_CBT] Attempts count updated in $targetTable for ID: $targetId");
       } catch (e) {
         debugPrint("❌ [SECTIONAL_CBT] Error updating attempts_count: $e");
       }
@@ -292,20 +296,33 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             ? (correctCount / _userAnswers.length) * 100
             : 0.0;
 
-        dynamic finalBatchId = int.tryParse(widget.batchId.toString()) ?? widget.batchId;
-
-        final insertRes = await client.from('batch_submissions').insert({
-          'batch_id': finalBatchId,
+        // Compatible insert: Table ke exact schema (student_name, batch_id, test_id) ke sath
+        // sath hi extra analytics columns agar table me maujood hon
+        final Map<String, dynamic> submissionData = {
+          'batch_id': widget.batchId,
+          'test_id': widget.mockId,
+          'student_name': studentIdentifier,
           'student_identifier': studentIdentifier,
           'score': score,
           'accuracy': accuracyPct.round(),
           'weak_subject': wrongCount > 0 ? widget.subFolder.toUpperCase() : 'All Clear',
           'strong_subject': correctCount > 5 ? 'Core Concepts Strong' : 'Basic Revision',
-        }).select();
+        };
 
-        debugPrint("✅ [SECTIONAL_CBT] Batch submission inserted: $insertRes");
+        try {
+          await client.from('batch_submissions').insert(submissionData);
+          debugPrint("✅ [SECTIONAL_CBT] Batch submission inserted successfully with full analytics!");
+        } catch (_) {
+          // Fallback agar table me sirf original columns (batch_id, test_id, student_name) hi hon
+          await client.from('batch_submissions').insert({
+            'batch_id': widget.batchId,
+            'test_id': widget.mockId,
+            'student_name': studentIdentifier,
+          });
+          debugPrint("✅ [SECTIONAL_CBT] Batch submission inserted using basic schema fallback!");
+        }
       } catch (e) {
-        debugPrint("❌ [SECTIONAL_CBT] Error inserting batch submission: $e");
+        debugPrint("❌ [SECTIONAL_CBT] Critical Error inserting batch submission: $e");
       }
     }
 
