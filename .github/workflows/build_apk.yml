@@ -69,31 +69,6 @@ jobs:
           }
           EOF
 
-      - name: Build and Inject Native arm64 libmtmd.so Stub
-        run: |
-          sudo apt-get update && sudo apt-get install -y gcc-aarch64-linux-gnu
-          mkdir -p flutter_app/android/app/src/main/jniLibs/arm64-v8a
-          
-          # C source with mtmd init and llama_log_set stub symbol
-          cat << 'EOF' > dummy_mtmd.c
-          #include <stdint.h>
-          #include <stddef.h>
-
-          __attribute__((visibility("default"))) int mtmd_stub_init() {
-              return 0;
-          }
-
-          typedef void (*llama_log_callback)(int level, const char * text, void * user_data);
-          __attribute__((visibility("default"))) void llama_log_set(llama_log_callback log_callback, void * user_data) {
-              // no-op stub: prevents FFI lookup crash
-          }
-          EOF
-
-          # Compile into arm64-v8a shared library
-          aarch64-linux-gnu-gcc -shared -fPIC -Wl,-soname,libmtmd.so dummy_mtmd.c -o flutter_app/android/app/src/main/jniLibs/arm64-v8a/libmtmd.so
-
-          echo "Successfully created native libmtmd.so stub with llama_log_set export for arm64-v8a."
-
       - name: Inject Valid AndroidManifest.xml
         run: |
           cat << 'EOF' > flutter_app/android/app/src/main/AndroidManifest.xml
@@ -185,8 +160,6 @@ jobs:
               }
               packaging {
                   resources {
-                      pickFirsts.add("**/libmtmd.so")
-                      pickFirsts.add("**/libllama.so")
                       pickFirsts.add("**/libc++_shared.so")
                   }
                   jniLibs {
@@ -244,5 +217,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (llama.cpp GGUF Core) APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} (fllama Pure Text Core) APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
