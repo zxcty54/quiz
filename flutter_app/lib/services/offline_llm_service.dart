@@ -85,6 +85,11 @@ class OfflineLlmAgentService {
     }
   }
 
+  /// Backward compatibility for existing UI calls in ai_chat_screen.dart
+  Future<void> initEngine({String? modelPath}) async {
+    await loadModelManually(modelPath: modelPath);
+  }
+
   // ------------------------------------------------------------
   // 2. MANUAL UNLOAD / DISPOSE
   // ------------------------------------------------------------
@@ -111,7 +116,7 @@ class OfflineLlmAgentService {
     // Model manual load hona anivarya hai
     if (_contextId == null) {
       throw Exception(
-        "Model load nahi hai! Pehle loadModelManually() call karke model initialize karein.",
+        "Model load nahi hai! Pehle loadModelManually() ya initEngine() call karke model initialize karein.",
       );
     }
 
@@ -127,7 +132,7 @@ class OfflineLlmAgentService {
       'contextId': currentId,
       'prompt': prompt,
       'temperature': 0.2,
-      'nPredict': 300,
+      'nPredict': 350,
       'nThreads': 2,
       'stop': const [
         '<|im_end|>',
@@ -164,7 +169,7 @@ $userInput
   }
 
   // ------------------------------------------------------------
-  // NOTEBOOK STRUCTURE PROMPTS
+  // NOTEBOOK STRUCTURE PROMPTS (Raju vs Aman Sir & 3-Step Format)
   // ------------------------------------------------------------
   String _buildSystemInstruction(LlmTaskType task) {
     switch (task) {
@@ -220,16 +225,24 @@ Summarize the supplied context using exactly this format:
       case LlmTaskType.duolingoExplanation:
       default:
         return '''
-You are an AI educational engine for Indian competitive exams.
-Explain strictly using this exact 3-part card format in simple, clear Hinglish:
+You are an AI pedagogical engine for Indian competitive exams (BPSC/BSSC/SSC).
+Explain strictly using this exact 1-screen conversational card format in simple, spoken Hinglish.
+Rules:
+- Explain WHY before WHAT.
+- Raju asks a natural real-life doubt or curiosity.
+- Aman Sir clarifies directly without textbook jargon.
 
 Micro Concept:
 [1 crisp line definition of the core rule]
 
+Raju vs Aman Sir:
+Raju: [Natural real-life doubt]
+Aman Sir: [Direct, crisp clarification]
+
 3-Step Breakdown:
-• Mool Tathya: [Core rule or constitutional/scientific fact]
+• Mool Tathya: [Core rule or factual data point]
 • Karyapranali: [Direct application or formula]
-• Pariksha Savdhani: [Common exam trap or elimination rule]
+• Pariksha Savdhani: [Elimination rule or common trap to avoid]
 
 Micro Challenge:
 Q: [One line question based on the concept]
