@@ -44,6 +44,17 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     'Saved',
   ];
 
+  // Signature accent — ink & answer-sheet theme
+  static const Color _ink = Color(0xFF322D66);
+  static const Color _inkLight = Color(0xFFB3ACEE);
+  static const Color _onInk = Color(0xFFF3F1FF);
+  static const Color _paperBg = Color(0xFFFAF6ED);
+  static const Color _paperCard = Color(0xFFFFFDF8);
+  static const Color _paperBorder = Color(0xFFE7DFCC);
+  static const Color _inkDarkBg = Color(0xFF16141F);
+  static const Color _inkDarkCard = Color(0xFF201D2C);
+  static const Color _inkDarkBorder = Color(0xFF322C46);
+
   @override
   void initState() {
     super.initState();
@@ -275,7 +286,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                   height: 44,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF2563EB),
+                      backgroundColor: const Color(0xFF322D66),
                       foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
                     ),
@@ -327,7 +338,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 Navigator.pop(ctx);
                                 _fetchFeedPosts();
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text('Post submitted for review!'), backgroundColor: Color(0xFF2563EB)),
+                                  const SnackBar(content: Text('Post submitted for review!'), backgroundColor: Color(0xFF322D66)),
                                 );
                               }
                             } catch (_) {
@@ -375,7 +386,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         spans.add(
           TextSpan(
             text: matchText,
-            style: const TextStyle(color: Color(0xFF2563EB), decoration: TextDecoration.underline, fontWeight: FontWeight.w600),
+            style: const TextStyle(color: Color(0xFF322D66), decoration: TextDecoration.underline, fontWeight: FontWeight.w600),
             recognizer: TapGestureRecognizer()
               ..onTap = () => launchUrl(Uri.parse(matchText.startsWith('http') ? matchText : 'https://$matchText'), mode: LaunchMode.externalApplication),
           ),
@@ -384,7 +395,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         spans.add(
           TextSpan(
             text: matchText,
-            style: const TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold),
+            style: const TextStyle(color: Color(0xFF322D66), fontWeight: FontWeight.bold),
             recognizer: TapGestureRecognizer()..onTap = () => setState(() => _searchCtrl.text = matchText),
           ),
         );
@@ -393,7 +404,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         spans.add(
           TextSpan(
             text: matchText,
-            style: const TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold),
+            style: const TextStyle(color: Color(0xFF322D66), fontWeight: FontWeight.bold),
             recognizer: TapGestureRecognizer()..onTap = () => _navigateToCreator(handle),
           ),
         );
@@ -439,7 +450,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
               children: [
                 Row(
                   children: [
-                    const Icon(Icons.bolt_rounded, size: 16, color: Color(0xFF2563EB)),
+                    const Icon(Icons.bolt_rounded, size: 16, color: Color(0xFF322D66)),
                     const SizedBox(width: 4),
                     Expanded(
                       child: Text(
@@ -461,7 +472,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                   height: 40,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF2563EB),
+                      backgroundColor: const Color(0xFF322D66),
                       foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
                       elevation: 0,
@@ -485,16 +496,16 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.school_outlined, size: 14, color: Color(0xFF2563EB)),
+                  const Icon(Icons.school_outlined, size: 14, color: Color(0xFF322D66)),
                   const SizedBox(width: 6),
                   Expanded(
                     child: Text(
                       '🎓 View Coaching: $authorName',
-                      style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Color(0xFF2563EB)),
+                      style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Color(0xFF322D66)),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  const Icon(Icons.chevron_right, size: 15, color: Color(0xFF2563EB)),
+                  const Icon(Icons.chevron_right, size: 15, color: Color(0xFF322D66)),
                 ],
               ),
             ),
@@ -559,8 +570,10 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
-    final bgSurface = isDark ? const Color(0xFF0F172A) : Colors.white;
-    final dividerColor = isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0);
+    final bgSurface = isDark ? _inkDarkBg : _paperBg;
+    final cardSurface = isDark ? _inkDarkCard : _paperCard;
+    final cardBorder = isDark ? _inkDarkBorder : _paperBorder;
+    final dividerColor = isDark ? _inkDarkBorder : _paperBorder;
 
     final filteredList = _posts.where((p) {
       bool matchesFilter = true;
@@ -595,12 +608,12 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
               style: TextStyle(
                 fontWeight: FontWeight.w700,
                 fontSize: 18,
-                color: isDark ? Colors.white : const Color(0xFF0F172A),
+                color: isDark ? _onInk : _ink,
               ),
             ),
             Text(
               'Learn • Discuss • Practice',
-              style: TextStyle(fontSize: 11, color: Colors.grey.shade500, fontWeight: FontWeight.normal),
+              style: TextStyle(fontSize: 11, color: isDark ? _inkLight : const Color(0xFF8A8268), fontWeight: FontWeight.normal),
             ),
           ],
         ),
@@ -612,7 +625,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: const Color(0xFF2563EB),
+        backgroundColor: const Color(0xFF322D66),
         foregroundColor: Colors.white,
         icon: const Icon(Icons.edit_rounded, size: 18),
         label: const Text('Ask Doubt', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
@@ -625,8 +638,9 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
             child: Container(
               height: 44,
               decoration: BoxDecoration(
-                color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                color: isDark ? _inkDarkCard : _paperCard,
                 borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: isDark ? _inkDarkBorder : _paperBorder, width: 1),
               ),
               child: TextField(
                 controller: _searchCtrl,
@@ -666,15 +680,16 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 12),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        color: isSel ? const Color(0xFF2563EB) : (isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9)),
+                        color: isSel ? _ink : (isDark ? _inkDarkCard : _paperCard),
                         borderRadius: BorderRadius.circular(17),
+                        border: Border.all(color: isSel ? _ink : (isDark ? _inkDarkBorder : _paperBorder), width: 1),
                       ),
                       child: Text(
                         f,
                         style: TextStyle(
                           fontSize: 12,
                           fontWeight: isSel ? FontWeight.w600 : FontWeight.normal,
-                          color: isSel ? Colors.white : (isDark ? Colors.white70 : const Color(0xFF475569)),
+                          color: isSel ? _onInk : (isDark ? _inkLight : const Color(0xFF5C5540)),
                         ),
                       ),
                     ),
@@ -693,9 +708,9 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                     onRefresh: _fetchFeedPosts,
                     child: filteredList.isEmpty
                         ? Center(child: Text('No posts found in this section.', style: TextStyle(color: Colors.grey.shade500)))
-                        : ListView.separated(
+                        : ListView.builder(
+                            padding: const EdgeInsets.fromLTRB(12, 8, 12, 90),
                             itemCount: filteredList.length,
-                            separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.6, color: dividerColor),
                             itemBuilder: (context, idx) {
                               final item = filteredList[idx];
                               final creator = item['creator_profiles'] ?? {};
@@ -712,8 +727,22 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                               final String tag = (item['tag'] ?? 'General').toString();
 
                               return Container(
-                                color: bgSurface,
-                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                                margin: const EdgeInsets.only(bottom: 10),
+                                decoration: BoxDecoration(
+                                  color: cardSurface,
+                                  borderRadius: BorderRadius.circular(14),
+                                  border: Border.all(color: cardBorder, width: 1),
+                                  boxShadow: isDark
+                                      ? null
+                                      : [
+                                          BoxShadow(
+                                            color: const Color(0xFF322D66).withOpacity(0.05),
+                                            blurRadius: 8,
+                                            offset: const Offset(0, 2),
+                                          ),
+                                        ],
+                                ),
+                                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
@@ -725,10 +754,10 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                         children: [
                                           CircleAvatar(
                                             radius: 17,
-                                            backgroundColor: isVerifiedCreator ? const Color(0xFF2563EB) : const Color(0xFF64748B),
+                                            backgroundColor: isVerifiedCreator ? _ink : (isDark ? _inkDarkBorder : const Color(0xFFBFB8A0)),
                                             child: Text(
                                               authorDisplayName.isNotEmpty ? authorDisplayName[0].toUpperCase() : 'A',
-                                              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                                              style: TextStyle(color: _onInk, fontWeight: FontWeight.bold, fontSize: 13),
                                             ),
                                           ),
                                           const SizedBox(width: 10),
@@ -747,7 +776,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                                     ),
                                                     if (isVerifiedCreator) ...[
                                                       const SizedBox(width: 4),
-                                                      const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
+                                                      const Icon(Icons.verified, size: 14, color: Color(0xFF322D66)),
                                                     ],
                                                     const SizedBox(width: 6),
                                                     Text(
@@ -800,7 +829,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                               Icon(
                                                 isLiked ? Icons.thumb_up : Icons.thumb_up_alt_outlined,
                                                 size: 15,
-                                                color: isLiked ? const Color(0xFF2563EB) : Colors.grey.shade600,
+                                                color: isLiked ? const Color(0xFF322D66) : Colors.grey.shade600,
                                               ),
                                               const SizedBox(width: 4),
                                               Text(
@@ -808,7 +837,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                                 style: TextStyle(
                                                   fontSize: 12,
                                                   fontWeight: isLiked ? FontWeight.bold : FontWeight.normal,
-                                                  color: isLiked ? const Color(0xFF2563EB) : Colors.grey.shade600,
+                                                  color: isLiked ? const Color(0xFF322D66) : Colors.grey.shade600,
                                                 ),
                                               ),
                                             ],
@@ -832,7 +861,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                               Icon(
                                                 isSaved ? Icons.bookmark : Icons.bookmark_border_rounded,
                                                 size: 16,
-                                                color: isSaved ? const Color(0xFF2563EB) : Colors.grey.shade600,
+                                                color: isSaved ? const Color(0xFF322D66) : Colors.grey.shade600,
                                               ),
                                               const SizedBox(width: 4),
                                               Text(
@@ -840,7 +869,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                                 style: TextStyle(
                                                   fontSize: 12,
                                                   fontWeight: isSaved ? FontWeight.bold : FontWeight.normal,
-                                                  color: isSaved ? const Color(0xFF2563EB) : Colors.grey.shade600,
+                                                  color: isSaved ? const Color(0xFF322D66) : Colors.grey.shade600,
                                                 ),
                                               ),
                                             ],
