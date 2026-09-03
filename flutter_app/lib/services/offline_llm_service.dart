@@ -1,6 +1,5 @@
-import 'dart:async';
 import 'dart:io';
-import 'package:fllama/fllama.dart';
+import 'package:flutter/services.dart';
 
 enum LlmTaskType {
   duolingoExplanation,
@@ -14,6 +13,8 @@ class OfflineLlmAgentService {
   static final OfflineLlmAgentService instance = OfflineLlmAgentService._internal();
   OfflineLlmAgentService._internal();
 
+  static const MethodChannel _channel = MethodChannel('fllama');
+
   double? _contextId;
   String? _loadedModelPath;
   bool _isInitializing = false;
@@ -25,7 +26,7 @@ class OfflineLlmAgentService {
       '/storage/emulated/0/Download/qwen2.5-0.5b-instruct-q4_k_m.gguf';
 
   // ------------------------------------------------------------
-  // 1. MANUAL MODEL LOADER (Using Fllama.initContext)
+  // 1. MANUAL MODEL LOADER
   // ------------------------------------------------------------
   Future<void> loadModelManually({String? modelPath}) async {
     if (_isInitializing) return;
@@ -44,52 +45,33 @@ class OfflineLlmAgentService {
         await unloadModel();
       }
 
-      final completer = Completer<void>();
-      String? initError;
+      final Map<dynamic, dynamic>? result = await _channel.invokeMethod('initContext', <String, dynamic>{
+        'model': targetPath,
+        'embedding': false,
+        'nCtx': 512,
+        'nBatch': 64,
+        'nThreads': 2,
+        'nGpuLayers': 0,
+        'useMmap': true,
+        'useMlock': false,
+      });
 
-      // Official Fllama class methods
-      Fllama.initContext(
-        OpenAI(
-          modelUrl: targetPath,
-          contextSize: 512,
-          batchSize: 64,
-          threads: 2,
-          gpuLayers: 0,
-        ),
-        (double? contextId, String? err) {
-          if (err != null && err.isNotEmpty) {
-            initError = err;
-          }
-          if (contextId != null && contextId > 0) {
-            _contextId = contextId;
-            _loadedModelPath = targetPath;
-          }
-          if (!completer.isCompleted) {
-            completer.complete();
-          }
-        },
-      );
-
-      await completer.future.timeout(
-        const Duration(seconds: 25),
-        onTimeout: () {
-          throw Exception("Model init timeout: 25s me engine initialize nahi hua.");
-        },
-      );
-
-      if (initError != null && initError!.isNotEmpty) {
-        throw Exception("fllama native initialization error: $initError");
+      if (result == null) {
+        throw Exception("Native engine ne initContext par null return kiya.");
       }
 
-      if (_contextId == null) {
-        throw Exception("Invalid contextId pointer received from native engine.");
+      final dynamic rawId = result['contextId'] ?? result['id'];
+      if (rawId == null) {
+        throw Exception("ContextId null mila. Native response: $result");
       }
+
+      _contextId = (rawId as num).toDouble();
+      _loadedModelPath = targetPath;
     } finally {
       _isInitializing = false;
     }
   }
 
-  /// Backward compatibility for UI
   Future<void> initEngine({String? modelPath}) async {
     await loadModelManually(modelPath: modelPath);
   }
@@ -102,7 +84,9 @@ class OfflineLlmAgentService {
     if (id == null) return;
 
     try {
-      Fllama.dispose(contextId: id);
+      await _channel.invokeMethod('releaseContext', <String, dynamic>{
+        'contextId': id,
+      });
     } catch (_) {}
 
     _contextId = null;
@@ -110,7 +94,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // 3. EXECUTE INFERENCE (Using Fllama.inference)
+  // 3. EXECUTE INFERENCE (Zero-NPE Parameter Map)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -123,7 +107,7 @@ class OfflineLlmAgentService {
 
     final currentId = _contextId;
     if (currentId == null) {
-      throw Exception("Model load nahi hai. Pehle file load karein.");
+      throw Exception("Model load nahi hai. Pehle loadModelManually() call karein.");
     }
 
     final systemInstruction = _buildSystemInstruction(task);
@@ -133,55 +117,23 @@ class OfflineLlmAgentService {
       userInput: userInput,
     );
 
-    final StringBuffer buffer = StringBuffer();
-    final completer = Completer<String>();
-    String? inferenceError;
+    // Sabhi expected native fields explicitly provided with concrete types to avoid getClass() NPE
+    final Map<dynamic, dynamic>? result = await _channel.invokeMethod('completion', <String, dynamic>{
+      'contextId': currentId,
+      'prompt': prompt,
+      'temperature': 0.2,
+      'nPredict': 300,
+      'nThreads': 2,
+      'penaltyRepeat': 1.1,
+      'repeatPenalty': 1.1,
+      'stop': <String>['<|im_end|>', '<|endoftext|>'],
+    });
 
-    // Official Fllama.inference method
-    Fllama.inference(
-      Inference(
-        contextId: currentId,
-        prompt: prompt,
-        temperature: 0.2,
-        predictLength: 350,
-        threads: 2,
-        penaltyRepeat: 1.1,
-        stop: ['<|im_end|>', '<|endoftext|>'],
-      ),
-      (String? result, String? err) {
-        if (err != null && err.isNotEmpty) {
-          inferenceError = err;
-        }
-        if (result != null) {
-          buffer.write(result);
-        }
-      },
-    );
-
-    // Stream/Callback completion wait (with safe fallback timer)
-    await Future.delayed(const Duration(milliseconds: 300));
-    int elapsed = 0;
-    while (elapsed < 30000) {
-      await Future.delayed(const Duration(milliseconds: 200));
-      elapsed += 200;
-      final currentText = buffer.toString();
-      if (currentText.contains('<|im_end|>') || 
-          currentText.contains('Explanation:') || 
-          (currentText.isNotEmpty && elapsed > 4000 && !currentText.endsWith(' '))) {
-        break;
-      }
+    if (result == null) {
+      throw Exception("Native completion ne null response return kiya.");
     }
 
-    if (inferenceError != null && inferenceError!.isNotEmpty) {
-      throw Exception("Inference Error: $inferenceError");
-    }
-
-    final output = buffer.toString().replaceAll('<|im_end|>', '').replaceAll('<|endoftext|>', '').trim();
-    if (output.isEmpty) {
-      throw Exception("Engine ne empty text return kiya.");
-    }
-
-    return output;
+    return _extractText(result);
   }
 
   // ------------------------------------------------------------
@@ -198,7 +150,7 @@ class OfflineLlmAgentService {
 $systemInstruction
 <|im_end|>
 <|im_start|>user
-${contextBlock}DAILY OBSERVATION / QUERY:
+${contextBlock}DAILY OBSERVATION / TOPIC:
 $userInput
 <|im_end|>
 <|im_start|>assistant
@@ -206,7 +158,7 @@ $userInput
   }
 
   // ------------------------------------------------------------
-  // PEDAGOGICAL STRUCTURE (Notebook Standard Format)
+  // NOTEBOOK STRUCTURE PROMPT
   // ------------------------------------------------------------
   String _buildSystemInstruction(LlmTaskType task) {
     switch (task) {
@@ -218,6 +170,11 @@ Q1. [Question]
 A) [Option 1] | B) [Option 2] | C) [Option 3] | D) [Option 4]
 Correct: [Letter]
 Explanation: [One short line]
+Q2. [Question]
+A) [Option 1] | B) [Option 2] | C) [Option 3] | D) [Option 4]
+Correct: [Letter]
+Explanation: [One short line]
+No conversational fluff.
 ''';
 
       case LlmTaskType.duolingoExplanation:
@@ -226,7 +183,7 @@ Explanation: [One short line]
 You are an AI pedagogical engine for Indian competitive exams (BPSC/BSSC/SSC).
 Explain strictly using this exact 1-screen conversational card format in clear Hinglish:
 - Explain WHY before WHAT.
-- Raju shares a natural daily-life doubt or curiosity.
+- Raju shares a natural daily-life observation or doubt.
 - Aman Sir clears it directly with no textbook formality.
 
 Micro Concept:
@@ -234,11 +191,11 @@ Micro Concept:
 
 Raju vs Aman Sir:
 Raju: [Real-life observation or doubt]
-Aman Sir: [Direct logic clearing the confusion]
+Aman Sir: [Direct logic resolving the doubt]
 
 3-Step Breakdown:
 • Mool Tathya: [Core factual rule]
-• Karyapranali: [Direct application]
+• Karyapranali: [Direct application / formula]
 • Pariksha Savdhani: [Elimination trap to avoid]
 
 Micro Challenge:
@@ -253,5 +210,30 @@ Explanation: [1 crisp line trap reason]
 Do not write introductory greetings or extra text outside this format.
 ''';
     }
+  }
+
+  // ------------------------------------------------------------
+  // EXTRACT RESULT TEXT
+  // ------------------------------------------------------------
+  String _extractText(Map<dynamic, dynamic> result) {
+    dynamic text = result['text'] ??
+        result['completion'] ??
+        result['content'] ??
+        result['result'];
+
+    if (text == null && result.isNotEmpty) {
+      final firstValue = result.values.first;
+      if (firstValue is Map) {
+        text = firstValue['text'] ?? firstValue['token'] ?? firstValue['content'];
+      } else {
+        text = firstValue;
+      }
+    }
+
+    if (text == null) {
+      throw Exception("Native completion map me valid text nahi mila: $result");
+    }
+
+    return text.toString().trim();
   }
 }
