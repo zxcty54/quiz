@@ -24,7 +24,7 @@ class OfflineLlmAgentService {
   static const String defaultModelPath = '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
 
   // ------------------------------------------------------------
-  // INITIALIZE MODEL
+  // INITIALIZE MODEL (LOW-MEMORY CRASH-PROOF CONFIG)
   // ------------------------------------------------------------
   Future<void> initEngine({String? modelPath}) async {
     if (_contextId != null) return;
@@ -39,15 +39,16 @@ class OfflineLlmAgentService {
         throw Exception('GGUF model file nahi mili:\n$path');
       }
 
+      // Memory-optimized allocation to prevent 1212MB OOM crash
       final Map<dynamic, dynamic>? result = await _channel.invokeMethod('initContext', {
         'model': path,
         'embedding': false,
-        'nCtx': 768,
-        'nBatch': 768,
-        'nThreads': 4,
+        'nCtx': 512,        // 768 se ghata kar 512 kiya
+        'nBatch': 128,      // 768 se ghata kar 128 kiya (Allocating 1212MB spike khatam)
+        'nThreads': 2,      // 4 ke bajaye 2 threads se RAM & CPU bus choke nahi hoti
         'nGpuLayers': 0,
         'useMmap': true,
-        'useMlock': false,
+        'useMlock': false,  // Memory lock false taaki system RAM force na ho
       });
 
       if (result == null) {
@@ -99,14 +100,14 @@ class OfflineLlmAgentService {
     );
 
     // ----------------------------------------------------------
-    // GENERATE
+    // GENERATE (LIGHTWEIGHT BUFFER)
     // ----------------------------------------------------------
     final Map<dynamic, dynamic>? result = await _channel.invokeMethod('completion', {
       'contextId': contextId,
       'prompt': prompt,
       'temperature': 0.2,
-      'nPredict': 512,
-      'nThreads': 4,
+      'nPredict': 256,     // 512 se ghata kar 256 kiya (Micro card ke liye perfect)
+      'nThreads': 2,
       'stop': const [
         '<|im_end|>',
         '<|endoftext|>',
