@@ -27,7 +27,7 @@ jobs:
           channel: "stable"
           cache: true
 
-      - name: Setup Android SDK, NDK & CMake
+      - name: Setup Android SDK, NDK & Base Tools
         uses: android-actions/setup-android@v3
 
       - name: Install Android SDK Components & NDK
@@ -38,8 +38,16 @@ jobs:
             "platforms;android-34" \
             "build-tools;36.0.0" \
             "build-tools;34.0.0" \
-            "ndk;25.2.9519653" \
+            "ndk;28.0.12433566" \
             "cmake;3.22.1"
+
+      - name: Install & Register CMake 3.31.0 for Fllama
+        run: |
+          mkdir -p ${ANDROID_HOME}/cmake/3.31.0
+          curl -L -o cmake-3.31.0.tar.gz https://github.com/Kitware/CMake/releases/download/v3.31.0/cmake-3.31.0-linux-x86_64.tar.gz
+          tar -xzf cmake-3.31.0.tar.gz --strip-components=1 -C ${ANDROID_HOME}/cmake/3.31.0
+          rm -f cmake-3.31.0.tar.gz
+          echo "${ANDROID_HOME}/cmake/3.31.0/bin" >> $GITHUB_PATH
 
       - name: Clean & Force Android Scaffold
         working-directory: flutter_app
@@ -126,7 +134,7 @@ jobs:
         run: |
           flutter pub get
 
-          # Patch deprecated proguard-android.txt inside cached fllama plugin
+          # Patch fllama deprecated proguard rule in cached source
           find /home/runner/.pub-cache/hosted/pub.dev/fllama* -name "build.gradle" -exec sed -i "s/proguard-android.txt/proguard-android-optimize.txt/g" {} + || true
 
           # 1. Update android/settings.gradle.kts (API 36 hook)
@@ -220,5 +228,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (fllama Pure Text Core) APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} (fllama Native Engine) APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
