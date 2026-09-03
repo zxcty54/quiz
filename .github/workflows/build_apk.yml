@@ -74,18 +74,25 @@ jobs:
           sudo apt-get update && sudo apt-get install -y gcc-aarch64-linux-gnu
           mkdir -p flutter_app/android/app/src/main/jniLibs/arm64-v8a
           
-          # 1. C source file create karein
+          # C source with mtmd init and llama_log_set stub symbol
           cat << 'EOF' > dummy_mtmd.c
           #include <stdint.h>
+          #include <stddef.h>
+
           __attribute__((visibility("default"))) int mtmd_stub_init() {
               return 0;
           }
+
+          typedef void (*llama_log_callback)(int level, const char * text, void * user_data);
+          __attribute__((visibility("default"))) void llama_log_set(llama_log_callback log_callback, void * user_data) {
+              // no-op stub: prevents FFI lookup crash
+          }
           EOF
 
-          # 2. Linux native toolchain se valid ARM64 shared library build karein
+          # Compile into arm64-v8a shared library
           aarch64-linux-gnu-gcc -shared -fPIC -Wl,-soname,libmtmd.so dummy_mtmd.c -o flutter_app/android/app/src/main/jniLibs/arm64-v8a/libmtmd.so
 
-          echo "Successfully created native libmtmd.so stub for arm64-v8a."
+          echo "Successfully created native libmtmd.so stub with llama_log_set export for arm64-v8a."
 
       - name: Inject Valid AndroidManifest.xml
         run: |
