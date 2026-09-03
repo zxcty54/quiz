@@ -71,9 +71,10 @@ jobs:
 
       - name: Build and Inject Native arm64 libmtmd.so Stub
         run: |
+          sudo apt-get update && sudo apt-get install -y gcc-aarch64-linux-gnu
           mkdir -p flutter_app/android/app/src/main/jniLibs/arm64-v8a
           
-          # 1. Dummy C source create karein
+          # 1. C source file create karein
           cat << 'EOF' > dummy_mtmd.c
           #include <stdint.h>
           __attribute__((visibility("default"))) int mtmd_stub_init() {
@@ -81,9 +82,8 @@ jobs:
           }
           EOF
 
-          # 2. NDK toolchain se valid ELF shared library compile karein
-          $ANDROID_HOME/ndk/25.2.9519653/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android34-clang \
-            -shared -fPIC -Wl,-soname,libmtmd.so dummy_mtmd.c -o flutter_app/android/app/src/main/jniLibs/arm64-v8a/libmtmd.so
+          # 2. Linux native toolchain se valid ARM64 shared library build karein
+          aarch64-linux-gnu-gcc -shared -fPIC -Wl,-soname,libmtmd.so dummy_mtmd.c -o flutter_app/android/app/src/main/jniLibs/arm64-v8a/libmtmd.so
 
           echo "Successfully created native libmtmd.so stub for arm64-v8a."
 
