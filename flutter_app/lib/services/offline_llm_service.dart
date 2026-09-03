@@ -21,7 +21,6 @@ class OfflineLlmAgentService {
   bool get isReady => _controller != null;
   String? get activeModelName => _loadedModelPath?.split('/').last;
 
-  // Aap jo bhi model use kar rahe hain (Llama 3.2 1B ya Qwen 0.5B) uska path
   static const String defaultModelPath =
       '/storage/emulated/0/Download/Llama-3.2-1B-Instruct-Q4_K_M.gguf';
 
@@ -73,7 +72,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // NATURAL AI CONVERSATION (Zero Script, Input-Driven)
+  // DYNAMIC NATURAL INFERENCE PIPELINE (Zero Hardcoding)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -94,15 +93,16 @@ class OfflineLlmAgentService {
       return "Kripya apna sawal ya topic likhein.";
     }
 
-    // Bilkul clean, open instruction: Na koi Raju, na koi forced format
+    // Grounded identity prompt: Guides reasoning without forcing hardcoded formats
     final prompt = '''<|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
-You are a helpful, knowledgeable, and direct educational AI mentor for competitive exams.
-Always understand the user's specific input carefully and respond naturally in clear spoken Hinglish.
-Explain concepts simply, provide direct facts when asked, and answer conversational queries naturally.
-Do not repeat templates, instructions, or fixed scripts. Give real, relevant answers based on what the user actually asked.<|eot_id|><|start_header_id|>user<|end_header_id|>
+You are Aman Sir, an intelligent and grounded pedagogical AI mentor.
+Think carefully about what the user is saying and respond appropriately in clear, natural Hinglish:
+1. If the user engages in normal conversation or greeting, respond warmly and directly as a teacher without inventing random topics or examinations.
+2. If the user asks about a concept, fact, or science/polity topic, explain the practical intuition first (connect with everyday reality), state the core factual rule, and highlight the main exam pitfall.
+3. Keep your reasoning sharp, factual, and direct. Never invent context that was not mentioned.<|eot_id|><|start_header_id|>user<|end_header_id|>
 
-${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+${context.trim().isNotEmpty ? "Study Context:\n$context\n\n" : ""}User: $cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
 ''';
 
     final completer = Completer<String>();
@@ -110,9 +110,10 @@ ${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|
     StreamSubscription<String>? subscription;
 
     try {
+      // Anchored decoding parameters: Prevents hallucinations and wandering
       final stream = activeController.generate(
         prompt: prompt,
-        temperature: 0.5, // Natural, thoughtful variation bina rigid repetition ke
+        temperature: 0.1, // Tight sampling stops hallucination
         maxTokens: 350,
       );
 
@@ -134,7 +135,7 @@ ${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|
       );
 
       final result = await completer.future.timeout(
-        const Duration(seconds: 45),
+        const Duration(seconds: 40),
         onTimeout: () {
           subscription?.cancel();
           if (buffer.isNotEmpty) return buffer.toString();
@@ -148,7 +149,7 @@ ${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|
           .trim();
 
       if (cleanText.isEmpty) {
-        throw Exception("Model ne blank output diya.");
+        throw Exception("Model ne blank response diya.");
       }
 
       return cleanText;
