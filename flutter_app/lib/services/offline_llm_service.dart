@@ -25,7 +25,7 @@ class OfflineLlmAgentService {
       '/storage/emulated/0/Download/qwen2.5-0.5b-instruct-q4_k_m.gguf';
 
   // ------------------------------------------------------------
-  // 1. SAFE MODEL LOADER (2048 Context to Prevent Token Overflow)
+  // 1. SAFE MODEL LOADER (2048 Context Buffer)
   // ------------------------------------------------------------
   Future<void> loadModelManually({String? modelPath}) async {
     if (_isInitializing) return;
@@ -45,7 +45,6 @@ class OfflineLlmAgentService {
       }
 
       final controller = LlamaController();
-      // 2048 Context buffer: Input + Output ke liye sufficient headroom
       await controller.loadModel(
         modelPath: targetPath,
         threads: 2,
@@ -79,7 +78,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // 3. EXECUTE INFERENCE (Zero Decode Error Stream)
+  // 3. ADAPTIVE INFERENCE ENGINE (True AI Behavior)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -92,18 +91,26 @@ class OfflineLlmAgentService {
 
     final activeController = _controller;
     if (activeController == null) {
-      throw Exception("Model load nahi hai. Folder icon se file select karein.");
+      throw Exception("Model load nahi hai. Pehle file load karein.");
+    }
+
+    final cleanInput = userInput.trim();
+    final lower = cleanInput.toLowerCase();
+
+    // Natural conversation handling
+    if (lower == 'hi' || lower == 'hello' || lower == 'hey' || lower == 'kaise ho') {
+      return "Aman Sir: Namaste! Main bilkul theek hoon. Aaj kaun sa topic samajhna hai—Science me Cell/Biology ya Polity ka koi Article?";
     }
 
     final systemInstruction = _buildSystemInstruction(task);
     
-    // Qwen2.5 ChatML template format
     final formattedPrompt = '''<|im_start|>system
 $systemInstruction<|im_end|>
 <|im_start|>user
 ${context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : ""}TOPIC / QUERY:
-$userInput<|im_end|>
+$cleanInput<|im_end|>
 <|im_start|>assistant
+Micro Concept:
 ''';
 
     final completer = Completer<String>();
@@ -111,10 +118,9 @@ $userInput<|im_end|>
     StreamSubscription<String>? subscription;
 
     try {
-      // Direct raw generate stream: Prevents pigeon ChatML serialization mismatch
       final stream = activeController.generate(
         prompt: formattedPrompt,
-        temperature: 0.1,
+        temperature: 0.2,
         maxTokens: 400,
       );
 
@@ -146,13 +152,17 @@ $userInput<|im_end|>
         },
       );
 
-      final cleanText = result
+      String cleanText = result
           .replaceAll('<|im_end|>', '')
           .replaceAll('<|endoftext|>', '')
           .trim();
 
       if (cleanText.isEmpty) {
         throw Exception("Engine ne blank output diya.");
+      }
+
+      if (!cleanText.startsWith("Micro Concept:")) {
+        cleanText = "Micro Concept:\n$cleanText";
       }
 
       return cleanText;
@@ -162,38 +172,42 @@ $userInput<|im_end|>
   }
 
   // ------------------------------------------------------------
-  // 4. DUOLINGO PEDAGOGICAL STRUCTURE (1-Screen WhatsApp Card)
+  // 4. NOTEBOOK DUOLINGO CARD FORMAT (Zero Placeholders)
   // ------------------------------------------------------------
   String _buildSystemInstruction(LlmTaskType task) {
     return '''
 You are Aman Sir, an expert pedagogical tutor for Indian competitive exams (BPSC/BSSC).
-Strictly output in this 1-screen WhatsApp conversational card format in clear spoken Hinglish:
+Explain the concept using real facts in clear spoken Hinglish:
 - Explain WHY before WHAT.
-- Raju shares a natural daily-life doubt or curiosity.
+- Raju shares a natural daily-life doubt.
 - Aman Sir clears it directly with no textbook formality.
 
+Structure your response strictly as follows:
+
 Micro Concept:
-[1 crisp line definition explaining WHY before WHAT]
+State the core rule or definition in 1 crisp line explaining why it matters before what it is.
 
 Raju vs Aman Sir:
-Raju: [Real-life observation or natural daily doubt]
-Aman Sir: [Direct spoken Hinglish logic resolving Raju's doubt]
+Raju: State a practical, daily-life doubt regarding this topic.
+Aman Sir: Give direct, spoken-logic reasoning resolving Raju's confusion.
 
 3-Step Breakdown:
-• Mool Tathya: [Core factual rule]
-• Karyapranali: [Direct application / formula]
-• Pariksha Savdhani: [Elimination trap to avoid]
+• Mool Tathya: State the foundational factual or scientific rule.
+• Karyapranali: Explain how it functions or applies in practice.
+• Pariksha Savdhani: Highlight the common exam trap or point of confusion to avoid.
 
 Micro Challenge:
-Q: [One line question based on the concept]
-A) [Option 1]
-B) [Option 2]
-C) [Option 3]
-D) [Option 4]
-Correct Answer: [Letter]
-Explanation: [1 crisp line trap reason]
+Q: One direct exam-style question on this topic
+A) Option 1
+B) Option 2
+C) Option 3
+D) Option 4
+Correct Answer: Option letter
+Explanation: One concise line explaining why other options fail.
 
-Do not write any introductory greetings or conversational filler outside this format.
+Important Rules:
+1. Never output square brackets or placeholder texts.
+2. Fill every section with concrete, accurate facts based on the user's specific query.
 ''';
   }
 }
