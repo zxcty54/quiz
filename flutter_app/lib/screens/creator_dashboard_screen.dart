@@ -46,17 +46,20 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
   Future<void> _loadCompleteAnalytics() async {
     try {
       final client = Supabase.instance.client;
+      final handle = widget.creatorHandle.trim();
 
+      // 1. Fetch Creator Profile
       final profileRes = await client
           .from('creator_profiles')
           .select()
-          .eq('handle_id', widget.creatorHandle)
+          .eq('handle_id', handle)
           .maybeSingle();
 
+      // 2. Fetch Coaching Data (Case insensitive / Trim safe)
       final coachingRes = await client
           .from('coachings')
           .select()
-          .eq('owner_name', widget.creatorHandle)
+          .ilike('owner_name', handle)
           .maybeSingle();
 
       List<dynamic> batchesRes = [];
@@ -70,7 +73,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             .eq('coaching_id', coachingRes['id'])
             .order('created_at', ascending: false);
 
-        // Sum attempts from private batch tests
+        // Sum private classroom mock attempts
         for (var b in (batchesRes as List? ?? [])) {
           final tests = b['batch_tests'] as List? ?? [];
           for (var t in tests) {
@@ -78,19 +81,28 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           }
         }
 
-        // Fetch Real Submissions
+        // 3. Fetch Batch Submissions safely without broken nested join
         if (batchesRes.isNotEmpty) {
-          final batchIds = batchesRes.map((b) => b['id']).toList();
-          final submissions = await client
+          final List batchIds = batchesRes.map((b) => b['id']).toList();
+
+          final List<dynamic> submissions = await client
               .from('batch_submissions')
-              .select('*, batches(batch_name)')
+              .select()
               .inFilter('batch_id', batchIds)
               .order('created_at', ascending: false);
 
-          if (submissions != null && (submissions as List).isNotEmpty) {
+          debugPrint("📊 [DASHBOARD] Batch IDs: $batchIds | Submissions: ${submissions.length}");
+
+          if (submissions.isNotEmpty) {
             final Map<String, Map<String, dynamic>> studentMap = {};
+
+            // Batch ID to Name map for fast lookup
+            final Map<dynamic, String> batchNameMap = {
+              for (var b in batchesRes) b['id']: (b['batch_name'] ?? 'Classroom Batch').toString()
+            };
+
             for (var s in submissions) {
-              final String rawIdentifier = s['student_identifier'] ?? 'Aspirant';
+              final String rawIdentifier = (s['student_identifier'] ?? 'Aspirant').toString();
 
               String nameOnly = rawIdentifier;
               String contactInfo = '';
@@ -100,22 +112,26 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 contactInfo = parts[1].replaceAll(')', '').replaceAll('Roll/Ph:', '').trim();
               }
 
+              final String assignedBatchName = batchNameMap[s['batch_id']] ?? 'Classroom Batch';
+              final double userScore = (s['score'] is num) ? (s['score'] as num).toDouble() : 0.0;
+              final int userAccuracy = (s['accuracy'] is num) ? (s['accuracy'] as num).toInt() : 70;
+
               if (!studentMap.containsKey(rawIdentifier)) {
                 studentMap[rawIdentifier] = {
                   'raw_id': rawIdentifier,
                   'name': nameOnly,
                   'contact': contactInfo,
-                  'batch_name': s['batches']?['batch_name'] ?? 'Classroom Batch',
+                  'batch_name': assignedBatchName,
                   'tests_count': 1,
-                  'scores': [s['score'] ?? 0],
-                  'accuracy': s['accuracy'] ?? 70,
+                  'scores': [userScore],
+                  'accuracy': userAccuracy,
                   'weak_subject': s['weak_subject'] ?? 'General Studies',
                   'strong_subject': s['strong_subject'] ?? 'Core Concepts',
                 };
               } else {
                 studentMap[rawIdentifier]!['tests_count'] =
                     (studentMap[rawIdentifier]!['tests_count'] as int) + 1;
-                (studentMap[rawIdentifier]!['scores'] as List).add(s['score'] ?? 0);
+                (studentMap[rawIdentifier]!['scores'] as List).add(userScore);
               }
             }
             batchStudentsList = studentMap.values.toList();
@@ -123,20 +139,22 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
         }
       }
 
+      // 4. Fetch Community Views
       final postsRes = await client
           .from('community_posts')
           .select('views_count')
-          .eq('creator_id', widget.creatorHandle);
-
-      final mocksRes = await client
-          .from('creator_mocks')
-          .select('id, attempts_count')
-          .eq('creator_id', widget.creatorHandle);
+          .eq('creator_id', handle);
 
       int views = 0;
       for (var p in (postsRes as List? ?? [])) {
         views += (p['views_count'] as int? ?? 0);
       }
+
+      // 5. Fetch Public Mock Attempts
+      final mocksRes = await client
+          .from('creator_mocks')
+          .select('id, attempts_count')
+          .eq('creator_id', handle);
 
       int publicAttempts = 0;
       for (var m in (mocksRes as List? ?? [])) {
@@ -145,14 +163,14 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
       int totalCombinedAttempts = publicAttempts + batchTestAttempts;
 
-      // Only show sample placeholder if absolute 0 submissions exist
+      // Fallback preview only if zero real submissions exist
       if (batchStudentsList.isEmpty) {
         batchStudentsList = [
           {
-            'raw_id': 'Demo: Suresh Kumar (Roll: 104)',
-            'name': 'Suresh Kumar (Sample Data)',
+            'raw_id': 'Demo: Suresh Kumar',
+            'name': 'Suresh Kumar (Sample Test Data)',
             'contact': 'Roll: 104',
-            'batch_name': 'Patna Target 72 Batch',
+            'batch_name': 'Sample Batch',
             'tests_count': 1,
             'accuracy': 74,
             'weak_subject': 'General Science',
@@ -166,7 +184,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           'name': 'Public Aspirant Lead',
           'contact': 'N/A',
           'source': 'Public Free Mock Attempt',
-          'tests_count': publicAttempts,
+          'tests_count': publicAttempts > 0 ? publicAttempts : 1,
           'accuracy': 65,
           'weak_subject': 'Current Affairs',
           'strong_subject': 'Bihar Special',
@@ -186,8 +204,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           _isLoading = false;
         });
       }
-    } catch (e) {
-      debugPrint("❌ [CREATOR_DASHBOARD] Analytics error: $e");
+    } catch (e, stack) {
+      debugPrint("❌ [CREATOR_DASHBOARD] Analytics error: $e\n$stack");
       if (mounted) setState(() => _isLoading = false);
     }
   }
@@ -514,7 +532,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     final titleCtrl = TextEditingController();
     final contentCtrl = TextEditingController();
     final linkCtrl = TextEditingController();
-    
+
     final opCtrl1 = TextEditingController();
     final opCtrl2 = TextEditingController();
     final opCtrl3 = TextEditingController();
@@ -1096,6 +1114,14 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
       appBar: AppBar(
         title: const Text('Institute Studio & Hub', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         actions: [
+          IconButton(
+            icon: const Icon(Icons.refresh_rounded),
+            tooltip: 'Refresh Analytics',
+            onPressed: () {
+              setState(() => _isLoading = true);
+              _loadCompleteAnalytics();
+            },
+          ),
           IconButton(
             icon: const Icon(Icons.storefront_outlined),
             tooltip: 'View Profile',
