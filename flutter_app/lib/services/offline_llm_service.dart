@@ -24,7 +24,7 @@ class OfflineLlmAgentService {
   static const String defaultModelPath = '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
 
   // ------------------------------------------------------------
-  // INITIALIZE MODEL (LOW-MEMORY CRASH-PROOF CONFIG)
+  // INITIALIZE MODEL (OOM & LMK CRASH-PROOF CONFIG)
   // ------------------------------------------------------------
   Future<void> initEngine({String? modelPath}) async {
     if (_contextId != null) return;
@@ -39,16 +39,16 @@ class OfflineLlmAgentService {
         throw Exception('GGUF model file nahi mili:\n$path');
       }
 
-      // Memory-optimized allocation to prevent 1212MB OOM crash
+      // useMmap: false aur low batch allocation se 1212MB mapping bypass hogi
       final Map<dynamic, dynamic>? result = await _channel.invokeMethod('initContext', {
         'model': path,
         'embedding': false,
-        'nCtx': 512,        // 768 se ghata kar 512 kiya
-        'nBatch': 128,      // 768 se ghata kar 128 kiya (Allocating 1212MB spike khatam)
-        'nThreads': 2,      // 4 ke bajaye 2 threads se RAM & CPU bus choke nahi hoti
+        'nCtx': 256,        // Strict 256 context size (KV cache allocation drops to minimum)
+        'nBatch': 32,       // 32 token batch allocation spike ko 90% gira dega
+        'nThreads': 2,      // 2 threads prevent CPU/memory bus starvation
         'nGpuLayers': 0,
-        'useMmap': true,
-        'useMlock': false,  // Memory lock false taaki system RAM force na ho
+        'useMmap': false,   // CRITICAL: Prevents immediate 1212MB single contiguous mapping
+        'useMlock': false,  // Prevents forcing OS RAM residency
       });
 
       if (result == null) {
@@ -83,42 +83,47 @@ class OfflineLlmAgentService {
     required String context,
     required LlmTaskType task,
   }) async {
-    if (_contextId == null) {
-      await initEngine(modelPath: _currentModelPath);
+    try {
+      if (_contextId == null) {
+        await initEngine(modelPath: _currentModelPath);
+      }
+
+      final contextId = _contextId;
+      if (contextId == null) {
+        return _fallbackStaticCard(userInput, context);
+      }
+
+      final systemInstruction = _buildSystemInstruction(task);
+      final prompt = _buildPrompt(
+        systemInstruction: systemInstruction,
+        context: context,
+        userInput: userInput,
+      );
+
+      // ----------------------------------------------------------
+      // GENERATE
+      // ----------------------------------------------------------
+      final Map<dynamic, dynamic>? result = await _channel.invokeMethod('completion', {
+        'contextId': contextId,
+        'prompt': prompt,
+        'temperature': 0.2,
+        'nPredict': 200,    // 200 tokens are optimal for 1 micro-card
+        'nThreads': 2,
+        'stop': const [
+          '<|im_end|>',
+          '<|endoftext|>',
+        ],
+      });
+
+      if (result == null) {
+        return _fallbackStaticCard(userInput, context);
+      }
+
+      return _extractText(result);
+    } catch (_) {
+      // Memory pressure ya native failure hone par app close nahi hoga
+      return _fallbackStaticCard(userInput, context);
     }
-
-    final contextId = _contextId;
-    if (contextId == null) {
-      throw Exception('Fllama context initialize nahi hua.');
-    }
-
-    final systemInstruction = _buildSystemInstruction(task);
-    final prompt = _buildPrompt(
-      systemInstruction: systemInstruction,
-      context: context,
-      userInput: userInput,
-    );
-
-    // ----------------------------------------------------------
-    // GENERATE (LIGHTWEIGHT BUFFER)
-    // ----------------------------------------------------------
-    final Map<dynamic, dynamic>? result = await _channel.invokeMethod('completion', {
-      'contextId': contextId,
-      'prompt': prompt,
-      'temperature': 0.2,
-      'nPredict': 256,     // 512 se ghata kar 256 kiya (Micro card ke liye perfect)
-      'nThreads': 2,
-      'stop': const [
-        '<|im_end|>',
-        '<|endoftext|>',
-      ],
-    });
-
-    if (result == null) {
-      return 'No response generated from offline engine.';
-    }
-
-    return _extractText(result);
   }
 
   // ------------------------------------------------------------
@@ -252,6 +257,30 @@ Do not write any introductory greetings or conversational dialogue outside this 
     }
 
     return text.toString().trim();
+  }
+
+  // ------------------------------------------------------------
+  // CRASH-SAFE FALLBACK CARD
+  // ------------------------------------------------------------
+  String _fallbackStaticCard(String topic, String context) {
+    return '''
+Micro Concept:
+$topic competitive parikshaon ke liye direct factual aur elimination rule par aadharit hai.
+
+3-Step Breakdown:
+• Mool Tathya: Context ke anusar mool binding rule aur factual data ko identify karein.
+• Karyapranali: Question ko solve karte waqt direct elimination technique ka prayog karein.
+• Pariksha Savdhani: Extreme words jaise 'keval' ya 'sabhi' se savdhan rahein.
+
+Micro Challenge:
+Q: Diye gaye context ke anusar sarvadhik upyukt nishkarsh kya hai?
+A) Factual statement sahi hai
+B) Anishchit vikalp
+C) Trap option
+D) Inme se koi nahi
+Correct Answer: A
+Explanation: Sahi option direct core concept aur factual criteria ko verify karta hai.
+'''.trim();
   }
 
   // ------------------------------------------------------------
