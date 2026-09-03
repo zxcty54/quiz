@@ -1,6 +1,5 @@
 import 'dart:io';
-import 'package:fllama/fllama.dart';
-import 'package:fllama_platform_interface/fllama_platform_interface.dart';
+import 'package:flutter/services.dart';
 
 enum LlmTaskType {
   duolingoExplanation,
@@ -14,6 +13,8 @@ class OfflineLlmAgentService {
   static final OfflineLlmAgentService instance = OfflineLlmAgentService._internal();
   OfflineLlmAgentService._internal();
 
+  static const MethodChannel _channel = MethodChannel('fllama');
+
   double? _contextId;
   String? _currentModelPath;
   bool _isInitializing = false;
@@ -22,6 +23,7 @@ class OfflineLlmAgentService {
 
   static const String defaultModelPath = '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
 
+  /// Initialize the native llama.cpp context via direct platform channel
   Future<void> initEngine({String? modelPath}) async {
     if (_contextId != null) return;
     if (_isInitializing) return;
@@ -35,14 +37,16 @@ class OfflineLlmAgentService {
         throw Exception('GGUF model file nahi mili:\n$path');
       }
 
-      final result = await FllamaPlatform.instance.initContext(
-        path,
-        nCtx: 768,
-        nBatch: 768,
-        nThreads: 4,
-        useMmap: true,
-        useMlock: false,
-      );
+      final Map<dynamic, dynamic>? result = await _channel.invokeMethod('initContext', {
+        'model': path,
+        'embedding': false,
+        'nCtx': 768,
+        'nBatch': 768,
+        'nThreads': 4,
+        'nGpuLayers': 0,
+        'useMmap': true,
+        'useMlock': false,
+      });
 
       if (result == null) {
         throw Exception('Fllama context initialize nahi ho paya.');
@@ -63,6 +67,7 @@ class OfflineLlmAgentService {
     }
   }
 
+  /// Execute an offline LLM task
   Future<String> executeLlmAgent({
     required String userInput,
     required String context,
@@ -86,39 +91,30 @@ TOPIC / INPUT:
 $userInput
 ''';
 
-    final messages = <RoleContent>[
-      RoleContent(
-        role: 'system',
-        content: systemInstruction,
-      ),
-      RoleContent(
-        role: 'user',
-        content: userContent,
-      ),
-    ];
-
+    // Format chat prompt using native template or ChatML fallback
     String formattedPrompt;
     try {
-      final formatted = await FllamaPlatform.instance.getFormattedChat(
-        contextId,
-        messages: messages,
-      );
-      formattedPrompt = formatted ?? _fallbackPrompt(systemInstruction, userContent);
+      final String? nativeFormatted = await _channel.invokeMethod('getFormattedChat', {
+        'contextId': contextId,
+        'messages': [
+          {'role': 'system', 'content': systemInstruction},
+          {'role': 'user', 'content': userContent},
+        ],
+      });
+      formattedPrompt = nativeFormatted ?? _fallbackPrompt(systemInstruction, userContent);
     } catch (_) {
       formattedPrompt = _fallbackPrompt(systemInstruction, userContent);
     }
 
-    final result = await FllamaPlatform.instance.completion(
-      contextId,
-      prompt: formattedPrompt,
-      temperature: 0.2,
-      nPredict: 512,
-      nThreads: 4,
-      stop: const [
-        '<|im_end|>',
-        '<|endoftext|>',
-      ],
-    );
+    // Call native completion
+    final Map<dynamic, dynamic>? result = await _channel.invokeMethod('completion', {
+      'contextId': contextId,
+      'prompt': formattedPrompt,
+      'temperature': 0.2,
+      'nPredict': 512,
+      'nThreads': 4,
+      'stop': ['<|im_end|>', '<|endoftext|>'],
+    });
 
     if (result == null) {
       return 'No response generated from offline engine.';
@@ -163,7 +159,7 @@ Requirements:
 - Easy to remember.
 - Short.
 - Exam focused.
-- Prefer a catchy word, phrase or story.
+- Catchy word, phrase or story.
 - Explain the connection in one short line.
 ''';
 
@@ -220,7 +216,7 @@ $userContent
 ''';
   }
 
-  String _extractCompletionText(Map<Object?, dynamic> result) {
+  String _extractCompletionText(Map<dynamic, dynamic> result) {
     dynamic text = result['text'] ?? result['completion'] ?? result['content'];
     if (text == null && result.isNotEmpty) {
       text = result.values.first;
@@ -236,7 +232,7 @@ $userContent
     if (contextId == null) return;
 
     try {
-      await FllamaPlatform.instance.releaseContext(contextId);
+      await _channel.invokeMethod('releaseContext', {'contextId': contextId});
     } finally {
       _contextId = null;
       _currentModelPath = null;
