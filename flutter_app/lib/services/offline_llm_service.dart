@@ -13,20 +13,35 @@ class OfflineLlmAgentService {
   static final OfflineLlmAgentService instance = OfflineLlmAgentService._internal();
   OfflineLlmAgentService._internal();
 
-  String? _modelPath;
-  bool _isInitialized = false;
+  int? _contextId;
+  String? _currentModelPath;
+  bool _isInitializing = false;
 
-  bool get isReady => _isInitialized;
+  bool get isReady => _contextId != null;
 
   Future<void> initEngine({String? modelPath}) async {
+    if (_contextId != null) return;
+    if (_isInitializing) return;
+
+    _isInitializing = true;
     final path = modelPath ?? '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
 
     if (!await File(path).exists()) {
+      _isInitializing = false;
       throw Exception("GGUF Model file nahi mili: $path");
     }
 
-    _modelPath = path;
-    _isInitialized = true;
+    try {
+      // fllama 0.0.1 documented context initialization
+      _contextId = await Fllama.initContext(
+        path,
+        contextSize: 768,
+        nThreads: 4,
+      );
+      _currentModelPath = path;
+    } finally {
+      _isInitializing = false;
+    }
   }
 
   Future<String> executeLlmAgent({
@@ -34,8 +49,12 @@ class OfflineLlmAgentService {
     required String context,
     required LlmTaskType task,
   }) async {
-    if (!_isInitialized || _modelPath == null) {
-      await initEngine();
+    if (_contextId == null) {
+      await initEngine(modelPath: _currentModelPath);
+    }
+
+    if (_contextId == null) {
+      throw Exception("Failed to initialize fllama native context.");
     }
 
     String systemInstruction;
@@ -108,29 +127,36 @@ TOPIC / INPUT:
 $userInput
 ''';
 
-    final request = OpenAiChatRequest(
-      modelPath: _modelPath!,
-      messages: [
+    // 1. Format chat template using fllama's chat formatter
+    final formattedPrompt = await Fllama.getFormattedChat(
+      _contextId!,
+      [
         {'role': 'system', 'content': systemInstruction},
         {'role': 'user', 'content': userContent},
       ],
-      temperature: 0.2,
-      contextSize: 768,
-      threads: 4,
     );
 
     final StringBuffer buffer = StringBuffer();
 
-    await fllama.chat(request, (response, done) {
-      if (response != null && response.isNotEmpty) {
-        buffer.write(response);
-      }
-    });
+    // 2. Token completion generation
+    await Fllama.completion(
+      _contextId!,
+      formattedPrompt ?? userContent,
+      temperature: 0.2,
+      onToken: (token) {
+        if (token.isNotEmpty) {
+          buffer.write(token);
+        }
+      },
+    );
 
     return buffer.toString().trim();
   }
 
-  void dispose() {
-    _isInitialized = false;
+  Future<void> dispose() async {
+    if (_contextId != null) {
+      await Fllama.releaseContext(_contextId!);
+      _contextId = null;
+    }
   }
 }
