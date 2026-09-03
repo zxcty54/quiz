@@ -15,28 +15,27 @@ class OfflineLlmAgentService {
 
   static const MethodChannel _channel = MethodChannel('fllama');
 
-  dynamic _contextId;
+  num? _contextId;
   String? _loadedModelPath;
   bool _isInitializing = false;
 
   bool get isReady => _contextId != null;
   String? get activeModelName => _loadedModelPath?.split('/').last;
 
-  // Phone ka verified 0.5B path
-  static const String default05BPath =
+  static const String verified05BPath =
       '/storage/emulated/0/Download/qwen2.5-0.5b-instruct-q4_k_m.gguf';
 
   // ------------------------------------------------------------
-  // 1. MANUAL LOADER (Crash-Free Native Binding)
+  // 1. MANUAL MODEL LOADER
   // ------------------------------------------------------------
   Future<void> loadModelManually({String? modelPath}) async {
     if (_isInitializing) return;
 
-    final targetPath = modelPath ?? default05BPath;
+    final targetPath = modelPath ?? verified05BPath;
     final file = File(targetPath);
 
     if (!await file.exists()) {
-      throw Exception('GGUF file nahi mili:\n$targetPath');
+      throw Exception("GGUF file nahi mili: $targetPath");
     }
 
     _isInitializing = true;
@@ -46,7 +45,6 @@ class OfflineLlmAgentService {
         await unloadModel();
       }
 
-      // Memory parameters strictly sized for mobile stability
       final Map<dynamic, dynamic>? result = await _channel.invokeMethod('initContext', {
         'model': targetPath,
         'embedding': false,
@@ -59,36 +57,38 @@ class OfflineLlmAgentService {
       });
 
       if (result == null) {
-        throw Exception('Native init failed: null response returned.');
+        throw Exception("Native engine init failed.");
       }
 
-      // Null check: Native reference preserve rakhein
-      final dynamic rawId = result['contextId'] ?? result['id'] ?? result['context'];
+      final dynamic rawId = result['contextId'] ?? result['id'];
       if (rawId == null) {
-        throw Exception('Native engine contextId null mila. Result: $result');
+        throw Exception("Invalid contextId: null returned from native layer.");
       }
 
-      _contextId = rawId;
+      // Safe numeric assignment
+      _contextId = rawId as num;
       _loadedModelPath = targetPath;
     } finally {
       _isInitializing = false;
     }
   }
 
-  /// Backward compatibility for UI
   Future<void> initEngine({String? modelPath}) async {
     await loadModelManually(modelPath: modelPath);
   }
 
   // ------------------------------------------------------------
-  // 2. UNLOAD CONTEXT
+  // 2. UNLOAD MODEL
   // ------------------------------------------------------------
   Future<void> unloadModel() async {
     final id = _contextId;
     if (id == null) return;
 
     try {
-      await _channel.invokeMethod('releaseContext', {'contextId': id});
+      // Force double to prevent casting crashes in releaseContext
+      await _channel.invokeMethod('releaseContext', {
+        'contextId': id.toDouble(),
+      });
     } catch (_) {}
 
     _contextId = null;
@@ -96,7 +96,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // 3. RUN INFERENCE (Strict Null-Safe Call)
+  // 3. EXECUTE INFERENCE (Casting Bug Fixed)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -107,9 +107,9 @@ class OfflineLlmAgentService {
       await loadModelManually(modelPath: _loadedModelPath);
     }
 
-    final validId = _contextId;
-    if (validId == null) {
-      throw Exception('ContextId is null! Model pehle load karein.');
+    final currentId = _contextId;
+    if (currentId == null) {
+      throw Exception("Engine context is null. Please load model first.");
     }
 
     final systemInstruction = _buildSystemInstruction(task);
@@ -119,9 +119,9 @@ class OfflineLlmAgentService {
       userInput: userInput,
     );
 
-    // Native layer ko exact validId pass karein
+    // CRITICAL FIX: Explicit `.toDouble()` ensures Java receives java.lang.Double
     final Map<dynamic, dynamic>? result = await _channel.invokeMethod('completion', {
-      'contextId': validId,
+      'contextId': currentId.toDouble(),
       'prompt': prompt,
       'temperature': 0.2,
       'nPredict': 300,
@@ -133,7 +133,7 @@ class OfflineLlmAgentService {
     });
 
     if (result == null) {
-      throw Exception('Native completion null return hua.');
+      throw Exception("Native completion ne null response diya.");
     }
 
     return _extractText(result);
@@ -153,7 +153,7 @@ class OfflineLlmAgentService {
 $systemInstruction
 <|im_end|>
 <|im_start|>user
-${contextBlock}OBSERVATION / QUERY:
+${contextBlock}DAILY OBSERVATION / QUERY:
 $userInput
 <|im_end|>
 <|im_start|>assistant
@@ -161,13 +161,13 @@ $userInput
   }
 
   // ------------------------------------------------------------
-  // NOTEBOOK WHATSAPP CHAT PEDAGOGY PROMPT
+  // PEDAGOGICAL CARD INSTRUCTION
   // ------------------------------------------------------------
   String _buildSystemInstruction(LlmTaskType task) {
     switch (task) {
       case LlmTaskType.quiz:
         return '''
-Generate 2 MCQs based strictly on the context.
+Generate 2 standard MCQs based strictly on the context.
 Format:
 Q1. [Question]
 A) [Option 1] | B) [Option 2] | C) [Option 3] | D) [Option 4]
@@ -179,41 +179,36 @@ Explanation: [One short line]
       default:
         return '''
 You are an AI pedagogical engine for Indian competitive exams (BPSC/BSSC/SSC).
+Explain strictly using this 1-screen WhatsApp conversational card format in clear Hinglish.
 Rules:
 - Explain WHY before WHAT.
-- Raju observes real life or raises a doubt.
-- Aman Sir resolves the doubt directly without textbook jargon.
-- Strictly follow this 1-screen WhatsApp card format:
+- Raju shares a natural daily-life doubt or curiosity.
+- Aman Sir clears it directly with no textbook formality.
 
 Micro Concept:
 [1 crisp line definition of core rule]
 
 Raju vs Aman Sir:
 Raju: [Real-life observation or doubt]
-Aman Sir: [Clear, direct explanation solving Raju's doubt]
+Aman Sir: [Direct logic clearing the confusion]
 
 3-Step Breakdown:
 • Mool Tathya: [Core factual rule]
-• Karyapranali: [Direct application / formula]
+• Karyapranali: [Direct application]
 • Pariksha Savdhani: [Elimination trap to avoid]
 
 Micro Challenge:
-Q: [One line standard MCQ question]
+Q: [One line question based on the concept]
 A) [Option 1]
 B) [Option 2]
 C) [Option 3]
 D) [Option 4]
 Correct Answer: [Letter]
-Explanation: [1 crisp line trap explanation]
-
-Do not write any introductory greetings or conversational dialogue outside this format.
+Explanation: [1 crisp line trap reason]
 ''';
     }
   }
 
-  // ------------------------------------------------------------
-  // TEXT EXTRACTOR
-  // ------------------------------------------------------------
   String _extractText(Map<dynamic, dynamic> result) {
     dynamic text = result['text'] ??
         result['completion'] ??
@@ -230,7 +225,7 @@ Do not write any introductory greetings or conversational dialogue outside this 
     }
 
     if (text == null) {
-      throw Exception('Completion output me koi valid text nahi mila: $result');
+      throw Exception("Completion result me text nahi mila: $result");
     }
 
     return text.toString().trim();
