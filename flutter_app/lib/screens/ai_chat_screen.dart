@@ -4,6 +4,8 @@ import 'package:file_picker/file_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:mocktester/services/offline_llm_service.dart';
+import 'package:mocktester/models/duolingo_payload.dart';
+import 'package:mocktester/widgets/duolingo_card.dart';
 
 class AiChatScreen extends StatefulWidget {
   final bool isDarkMode;
@@ -101,7 +103,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
         _statusMessage = "Allocating ${sizeMB.toStringAsFixed(0)}MB directly to RAM...";
       });
 
-      // Micro delay taaki UI loader aur text update display ho sake
       await Future.delayed(const Duration(milliseconds: 150));
 
       // Native C++ Engine Init (llama_cpp_dart)
@@ -171,7 +172,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
     final bgColor = isDark ? const Color(0xFF121212) : Colors.white;
-    final cardBgColor = isDark ? const Color(0xFF1E1E1E) : Colors.grey.shade200;
     final textColor = isDark ? Colors.white : Colors.black87;
 
     return Scaffold(
@@ -212,7 +212,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                       padding: const EdgeInsets.all(24.0),
                       child: Text(
                         _isModelLoaded
-                            ? "Qwen 2B Ready! Ask any question..."
+                            ? "Qwen 2B Ready! Ask any concept..."
                             : _statusMessage,
                         textAlign: TextAlign.center,
                         style: TextStyle(color: isDark ? Colors.grey.shade400 : Colors.grey),
@@ -225,26 +225,36 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     itemCount: _messages.length,
                     itemBuilder: (context, index) {
                       final msg = _messages[index];
-                      return Align(
-                        alignment: msg.isUser ? Alignment.centerRight : Alignment.centerLeft,
-                        child: Container(
-                          margin: const EdgeInsets.symmetric(vertical: 4),
-                          padding: const EdgeInsets.all(12),
-                          constraints: BoxConstraints(
-                            maxWidth: MediaQuery.of(context).size.width * 0.8,
-                          ),
-                          decoration: BoxDecoration(
-                            color: msg.isUser ? Colors.blueAccent : cardBgColor,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          child: Text(
-                            msg.text,
-                            style: TextStyle(
-                              color: msg.isUser ? Colors.white : textColor,
-                              fontSize: 14,
+
+                      // User message: blue bubble
+                      if (msg.isUser) {
+                        return Align(
+                          alignment: Alignment.centerRight,
+                          child: Container(
+                            margin: const EdgeInsets.symmetric(vertical: 4),
+                            padding: const EdgeInsets.all(12),
+                            constraints: BoxConstraints(
+                              maxWidth: MediaQuery.of(context).size.width * 0.8,
+                            ),
+                            decoration: BoxDecoration(
+                              color: Colors.blueAccent,
+                              borderRadius: BorderRadius.circular(12),
+                            ),
+                            child: Text(
+                              msg.text,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                              ),
                             ),
                           ),
-                        ),
+                        );
+                      }
+
+                      // Assistant message: Structured Duolingo UI card
+                      return DuolingoCard(
+                        payload: DuolingoPayload.fromLlmText(msg.text),
+                        isDarkMode: isDark,
                       );
                     },
                   ),
@@ -256,7 +266,10 @@ class _AiChatScreenState extends State<AiChatScreen> {
                 children: [
                   const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2)),
                   const SizedBox(width: 8),
-                  Text("Qwen is formulating analysis...", style: TextStyle(fontSize: 12, color: isDark ? Colors.grey.shade400 : Colors.grey)),
+                  Text(
+                    "Qwen is formulating analysis...",
+                    style: TextStyle(fontSize: 12, color: isDark ? Colors.grey.shade400 : Colors.grey),
+                  ),
                 ],
               ),
             ),
