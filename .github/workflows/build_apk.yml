@@ -126,10 +126,8 @@ jobs:
         run: |
           flutter pub get
 
-          # 1. Update android/settings.gradle.kts to hook subprojects to compileSdk = 36
-          settings_kts="android/settings.gradle.kts"
-          if [ -f "$settings_kts" ]; then
-            cat << 'EOF' >> "$settings_kts"
+          # 1. Update android/settings.gradle.kts (API 36 hook)
+          cat << 'EOF' >> android/settings.gradle.kts
 
           gradle.beforeProject {
               plugins.withId("com.android.library") {
@@ -148,65 +146,25 @@ jobs:
               }
           }
           EOF
-          fi
 
-          # 2. Inject Desugaring and Packaging rules safely into build.gradle.kts
+          # 2. Update android/app/build.gradle.kts safely using sed
           APP_KTS="android/app/build.gradle.kts"
-          if [ -f "$APP_KTS" ]; then
-            python3 - << 'EOF'
-          import os
+          sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/g' "$APP_KTS"
+          sed -i 's/compileSdk = 34/compileSdk = 36/g' "$APP_KTS"
+          
+          # Enable desugaring inside compileOptions
+          sed -i '/compileOptions {/a \        isCoreLibraryDesugaringEnabled = true' "$APP_KTS"
 
-          path = "android/app/build.gradle.kts"
-          with open(path, "r") as f:
-              content = f.read()
+          # Add native packaging options for libmtmd.so and libllama.so
+          sed -i '/android {/a \    packaging {\n        resources {\n            pickFirsts.add("**/libmtmd.so")\n            pickFirsts.add("**/libllama.so")\n            pickFirsts.add("**/libc++_shared.so")\n        }\n        jniLibs {\n            useLegacyPackaging = true\n        }\n    }' "$APP_KTS"
 
-          # Force compileSdk to 36
-          content = content.replace("compileSdk = flutter.compileSdkVersion", "compileSdk = 36")
-          content = content.replace("compileSdk = 34", "compileSdk = 36")
+          # Add desugar_jdk_libs dependency
+          cat << 'EOF' >> "$APP_KTS"
 
-          # Inject isCoreLibraryDesugaringEnabled
-          if "isCoreLibraryDesugaringEnabled" not in content:
-              if "compileOptions {" in content:
-                  content = content.replace(
-                      "compileOptions {",
-                      "compileOptions {\n        isCoreLibraryDesugaringEnabled = true"
-                  )
-              else:
-                  content = content.replace(
-                      "android {",
-                      "android {\n    compileOptions {\n        isCoreLibraryDesugaringEnabled = true\n    }"
-                  )
-
-          # Add native SO packaging block
-          packaging_block = """
-      packaging {
-          resources {
-              pickFirsts.add("**/libmtmd.so")
-              pickFirsts.add("**/libllama.so")
-              pickFirsts.add("**/libc++_shared.so")
+          dependencies {
+              coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
           }
-          jniLibs {
-              useLegacyPackaging = true
-          }
-      }
-  """
-          if "packaging {" not in content:
-              content = content.replace("android {", "android {" + packaging_block)
-
-          # Add desugar dependency to dependencies block
-          desugar_dep = '    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")\n'
-          if "desugar_jdk_libs" not in content:
-              if "dependencies {" in content:
-                  content = content.replace("dependencies {", f"dependencies {{\n{desugar_dep}")
-              else:
-                  content += f"\ndependencies {{\n{desugar_dep}}}\n"
-
-          with open(path, "w") as f:
-              f.write(content)
-
-          print("Successfully injected desugaring, packaging, and compileSdk 36.")
           EOF
-          fi
 
       - name: Setup Keystore & Permissions
         working-directory: flutter_app/android
