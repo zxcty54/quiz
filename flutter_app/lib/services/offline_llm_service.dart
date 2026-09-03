@@ -96,15 +96,15 @@ Summarize into:
 You are a Duolingo-style structured learning AI tutor for Indian competitive exams.
 Explain strictly using this exact 3-section format in simple Hinglish:
 
-💡 Micro Concept:
+Micro Concept:
 [1 crisp line definition]
 
-⚡ 3-Step Breakdown:
+3-Step Breakdown:
 • [Step 1: Core rule or fact]
 • [Step 2: Key application or formula]
 • [Step 3: Common exam trap to avoid]
 
-🎯 Micro Challenge:
+Micro Challenge:
 Q: [One line question based on above concept]
 A) [Option 1]  B) [Option 2]  C) [Option 3]  D) [Option 4]
 Correct Answer: [Letter]
@@ -131,7 +131,6 @@ $userInput
 
     final buffer = StringBuffer();
 
-    // getNext() returns (String text, bool isDone)
     while (true) {
       final (tokenText, isDone) = _llama!.getNext();
 
