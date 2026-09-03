@@ -28,6 +28,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   String _customUserName = 'Aspirant';
   String _currentLoggedInHandle = 'user';
 
+  String _searchQuery = '';
   final TextEditingController _searchCtrl = TextEditingController();
 
   final Set<int> _likedPostIds = {};
@@ -36,15 +37,15 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   final List<String> _filters = [
     'All',
+    'Mock Tests ⚡',
+    'Study Material 📚',
     'Daily Quiz ⚡',
     'Doubts ❓',
-    'BPSC 70th 🎯',
-    'BSSC CGL 📚',
-    'Exam Gossip 🔥',
-    'Current Affairs 📰',
+    'Announcement 📢',
     'Saved 📌'
   ];
 
+  // AAPKA ORIGINAL UNIFIED COLOR PALETTE
   static const Color _ink = Color(0xFF322D66);
   static const Color _inkLight = Color(0xFFB3ACEE);
   static const Color _onInk = Color(0xFFF3F1FF);
@@ -80,7 +81,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       });
     }
 
-    // 1. Fetch Saved Posts from user_saved_posts table
+    // 1. Fetch Saved Posts
     try {
       final savedRes = await Supabase.instance.client
           .from('user_saved_posts')
@@ -98,7 +99,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       }
     } catch (_) {}
 
-    // 2. Fetch User Likes from post_likes table
+    // 2. Fetch User Likes
     try {
       final likesRes = await Supabase.instance.client
           .from('post_likes')
@@ -116,7 +117,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       }
     } catch (_) {}
 
-    // 3. Fetch User Poll Votes from poll_votes table
+    // 3. Fetch User Poll Votes
     try {
       final votesRes = await Supabase.instance.client
           .from('poll_votes')
@@ -163,10 +164,21 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
             onPressed: () async {
               final val = nameCtrl.text.trim();
               if (val.isEmpty) return;
+
               final prefs = await SharedPreferences.getInstance();
               await prefs.setString('custom_aspirant_name', val);
-              setState(() => _customUserName = val);
-              Navigator.pop(ctx);
+
+              if (_currentLoggedInHandle != 'user') {
+                try {
+                  await Supabase.instance.client
+                      .from('creator_profiles')
+                      .update({'name': val})
+                      .eq('handle_id', _currentLoggedInHandle);
+                } catch (_) {}
+              }
+
+              if (mounted) setState(() => _customUserName = val);
+              if (ctx.mounted) Navigator.pop(ctx);
             },
             child: const Text('Save Name'),
           ),
@@ -175,6 +187,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
+  // 🛡️ ONLY FETCH APPROVED POSTS
   Future<void> _fetchFeedPosts() async {
     setState(() => _isLoading = true);
     try {
@@ -182,7 +195,8 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
       final res = await Supabase.instance.client
           .from('community_posts')
-          .select('*, creator_profiles(name, handle_id, subject_specialty, telegram_handle, followers_count, is_blocked), creator_mocks(*)')
+          .select('*, creator_profiles(name, handle_id, subject_specialty, followers_count, is_blocked), creator_mocks(*)')
+          .eq('is_approved', true) // Only live moderated posts
           .gte('created_at', sixtyDaysAgo)
           .order('created_at', ascending: false);
 
@@ -198,6 +212,18 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     }
   }
 
+  void _navigateToCreator(String handle) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => CreatorProfileScreen(
+          creatorHandle: handle,
+          isDarkMode: widget.isDarkMode,
+        ),
+      ),
+    );
+  }
+
   void _sharePost(Map<String, dynamic> post) async {
     HapticFeedback.lightImpact();
     final postId = post['id'];
@@ -210,7 +236,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
 $content
 
-⚡ Solve this & practice 10,000+ BPSC/BSSC CBT Mock Questions:
+⚡ Solve this & practice 10,000+ CBT Mock Questions:
 📲 Download Free: https://play.google.com/store/apps/details?id=com.mocktester.online
 ''';
 
@@ -234,7 +260,6 @@ $content
     } catch (_) {}
   }
 
-  // ATOMIC BOOKMARK METHOD
   void _toggleBookmark(int postId, Map<String, dynamic> post) async {
     HapticFeedback.mediumImpact();
     final bool isSaving = !_savedPostIds.contains(postId);
@@ -272,7 +297,7 @@ $content
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(isSaving ? '📌 Saved to Revision Notebook!' : 'Removed from Saved!'),
+            content: Text(isSaving ? '📌 Saved to Notebook!' : 'Removed from Saved!'),
             duration: const Duration(seconds: 1),
             backgroundColor: _ink,
           ),
@@ -289,14 +314,10 @@ $content
           }
           post['bookmarks_count'] = ((post['bookmarks_count'] ?? 0) - delta).clamp(0, 999999);
         });
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Failed to update bookmark. Check connection.')),
-        );
       }
     }
   }
 
-  // ATOMIC DEDICATED LIKE METHOD
   void _handleLike(int index) async {
     HapticFeedback.lightImpact();
     final post = _posts[index];
@@ -344,7 +365,6 @@ $content
     }
   }
 
-  // ATOMIC DEDICATED POLL VOTE METHOD
   void _submitPollVote(int postId, int optionIdx, Map<String, dynamic> pollData) async {
     if (_userPollSelections.containsKey(postId)) return;
     HapticFeedback.heavyImpact();
@@ -406,131 +426,23 @@ $content
 
     if (qList.isEmpty) return;
 
+    // Increment attempts count
+    final updatedAttempts = (mock['attempts_count'] ?? 0) + 1;
+    setState(() => mock['attempts_count'] = updatedAttempts);
+    Supabase.instance.client
+        .from('creator_mocks')
+        .update({'attempts_count': updatedAttempts})
+        .eq('id', mock['id'])
+        .then((_) {});
+
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (_) => SectionalCbtScreen(
-          testTitle: mock['title'] ?? 'Community Mock Drill',
+          testTitle: mock['title'] ?? 'Free Open Mock Drill',
           questions: qList,
           subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
           mockId: mock['id'],
-        ),
-      ),
-    );
-  }
-
-  void _openPostAnalyticsSheet(Map<String, dynamic> post) {
-    final int views = post['views_count'] ?? 120;
-    final int upvotes = post['upvotes'] ?? 0;
-    final int bookmarks = post['bookmarks_count'] ?? 0;
-    final int shares = post['shares_count'] ?? 0;
-    final attachedMock = post['creator_mocks'];
-    final int attempts = attachedMock?['attempts_count'] ?? 0;
-
-    final int totalInteractions = upvotes + bookmarks + shares + attempts;
-    final double engagementScore = views > 0 ? ((totalInteractions / views) * 100) : 0.0;
-
-    showModalBottomSheet(
-      context: context,
-      backgroundColor: widget.isDarkMode ? _inkDarkCard : _paperCard,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (ctx) => Padding(
-        padding: const EdgeInsets.all(18),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
-                  children: const [
-                    Icon(Icons.insights_rounded, color: _ink, size: 20),
-                    SizedBox(width: 8),
-                    Text('Post Performance Insights', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                  ],
-                ),
-                IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
-              ],
-            ),
-            Text('Live interaction breakdown for this post:', style: TextStyle(fontSize: 11.5, color: Colors.grey[500])),
-            const SizedBox(height: 14),
-
-            Row(
-              children: [
-                _buildMiniMetricCard('Views / Seen 👁️', '$views', 'Total Impressions', Colors.blue),
-                const SizedBox(width: 8),
-                _buildMiniMetricCard('Saves 📌', '$bookmarks', 'Added to Notebooks', Colors.amber.shade800),
-              ],
-            ),
-            const SizedBox(height: 8),
-            Row(
-              children: [
-                _buildMiniMetricCard('Applauds / Likes 👍', '$upvotes', 'Positive Aspirant Votes', Colors.green),
-                const SizedBox(width: 8),
-                _buildMiniMetricCard('Shares 🔗', '$shares', 'Shared External Link', Colors.indigo),
-              ],
-            ),
-
-            if (attachedMock != null) ...[
-              const SizedBox(height: 12),
-              Container(
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: widget.isDarkMode ? const Color(0xFF1E1A33) : const Color(0xFFF4F2FC),
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: _ink.withOpacity(0.2)),
-                ),
-                child: Row(
-                  children: [
-                    const Icon(Icons.bolt_rounded, color: Colors.amber, size: 22),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Mock Drill Activity: $attempts Test Submissions', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
-                          Text('Completed evaluation sheets synced', style: TextStyle(color: Colors.grey[500], fontSize: 10.5)),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-
-            const SizedBox(height: 12),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text('Engagement Quality Score:', style: TextStyle(fontSize: 12, color: Colors.grey[600])),
-                Text('${engagementScore.toStringAsFixed(1)}%', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),
-              ],
-            ),
-            const SizedBox(height: 10),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildMiniMetricCard(String label, String value, String desc, Color color) {
-    return Expanded(
-      child: Container(
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-          color: widget.isDarkMode ? _inkDarkBg : _paperBg,
-          borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: widget.isDarkMode ? _inkDarkBorder : _paperBorder),
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(label, style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.grey[600])),
-            const SizedBox(height: 3),
-            Text(value, style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: color)),
-            Text(desc, style: TextStyle(fontSize: 9, color: Colors.grey[500]), maxLines: 1, overflow: TextOverflow.ellipsis),
-          ],
         ),
       ),
     );
@@ -730,6 +642,7 @@ $content
     );
   }
 
+  // 📝 CREATE POST WITH TELEGRAM APPROVAL WORKFLOW
   void _openCreatePostModal() {
     final contentCtrl = TextEditingController();
     String selectedTag = 'Doubts ❓';
@@ -753,7 +666,7 @@ $content
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('✍️ Post as $_customUserName', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17, color: widget.isDarkMode ? _onInk : _ink)),
+                    Text('✍️ Ask Doubt / Post', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17, color: widget.isDarkMode ? _onInk : _ink)),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
@@ -769,7 +682,7 @@ $content
                   controller: contentCtrl,
                   maxLines: 4,
                   decoration: const InputDecoration(
-                    hintText: 'Share exam updates, question screenshot, or doubt...',
+                    hintText: 'Share exam questions, doubts or important study insights...',
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -817,7 +730,7 @@ $content
                     ),
                   ],
                 ),
-                const SizedBox(height: 12),
+                const SizedBox(height: 14),
                 SizedBox(
                   width: double.infinity,
                   height: 44,
@@ -844,12 +757,14 @@ $content
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
 
+                              // 🛡️ Set is_approved: false for moderation
                               final insertedPost = await Supabase.instance.client.from('community_posts').insert({
                                 'creator_id': _currentLoggedInHandle,
                                 'author_name': _customUserName,
                                 'content': text,
                                 'tag': selectedTag,
                                 'image_url': uploadedImageUrl,
+                                'is_approved': false,
                                 'views_count': 1,
                                 'upvotes': 0,
                                 'downvotes': 0,
@@ -857,19 +772,26 @@ $content
                                 'bookmarks_count': 0,
                               }).select().single();
 
-                              // CHANGED: Yahan AdminTelegramAlert ka maujooda method call kiya gaya hai
+                              // 📡 Send Telegram interactive card with Approve & Reject buttons
                               AdminTelegramAlert.sendForInteractiveApproval(
                                 postId: insertedPost['id'] ?? 0,
                                 authorName: _customUserName,
-                                authorHandle: 'candidate',
+                                authorHandle: _currentLoggedInHandle,
                                 tag: selectedTag,
                                 content: text,
                                 imageUrl: uploadedImageUrl,
-                              );
+                              ).catchError((_) => false);
 
                               if (context.mounted) {
                                 Navigator.pop(ctx);
                                 _fetchFeedPosts();
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text('⏳ Post submitted for review! It will appear once approved.'),
+                                    backgroundColor: _ink,
+                                    duration: Duration(seconds: 3),
+                                  ),
+                                );
                               }
                             } catch (e) {
                               debugPrint("Upload Error: $e");
@@ -878,7 +800,7 @@ $content
                           },
                     child: isUploading
                         ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                        : const Text('Post to Community 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                        : const Text('Publish Post 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -932,7 +854,15 @@ $content
           TextSpan(
             text: matchText,
             style: const TextStyle(color: _ink, fontWeight: FontWeight.bold),
-            recognizer: TapGestureRecognizer()..onTap = () => setState(() => _activeFilter = matchText),
+            recognizer: TapGestureRecognizer()
+              ..onTap = () {
+                final cleaned = matchText.replaceAll('#', '').toLowerCase();
+                final found = _filters.firstWhere(
+                  (f) => f.toLowerCase().contains(cleaned),
+                  orElse: () => 'All',
+                );
+                setState(() => _activeFilter = found);
+              },
           ),
         );
       } else if (matchText.startsWith('@')) {
@@ -942,14 +872,7 @@ $content
             text: matchText,
             style: const TextStyle(color: _ink, fontWeight: FontWeight.bold),
             recognizer: TapGestureRecognizer()
-              ..onTap = () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => CreatorProfileScreen(creatorHandle: handle, isDarkMode: widget.isDarkMode),
-                  ),
-                );
-              },
+              ..onTap = () => _navigateToCreator(handle),
           ),
         );
       }
@@ -973,50 +896,144 @@ $content
     );
   }
 
-  Widget _buildDocumentLinkResolver(String content, bool isDark) {
-    final match = RegExp(r'https?:\/\/[^\s]+').firstMatch(content);
-    if (match == null) return const SizedBox.shrink();
-
-    final link = match.group(0)!;
-    String label = 'Open Study Material / Handout';
-    IconData docIcon = Icons.link_rounded;
-
-    if (link.contains('drive.google.com')) {
-      label = 'Google Drive PDF Notes';
-      docIcon = Icons.picture_as_pdf_rounded;
-    } else if (link.contains('t.me')) {
-      label = 'Telegram Channel Asset / File';
-      docIcon = Icons.telegram;
-    }
+  // 🎯 RESTORED: PREMIUM FREE CBT MOCK DISCOVERY CARD (WITH FUNNEL RIBBON)
+  Widget _buildMockDiscoveryCard(Map<String, dynamic> mock, String authorName, String handle, bool isDark) {
+    final int totalQs = (mock['questions_json'] as List?)?.length ?? 0;
+    final int duration = mock['duration_mins'] ?? 15;
+    final int attempts = mock['attempts_count'] ?? 0;
 
     return Container(
-      margin: const EdgeInsets.only(top: 8),
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      margin: const EdgeInsets.only(top: 10),
       decoration: BoxDecoration(
-        color: isDark ? _inkDarkBg : _paperBg,
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: _ink.withOpacity(0.3)),
+        color: isDark ? const Color(0xFF1E1A33) : const Color(0xFFF4F2FC),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _ink.withOpacity(0.22), width: 1.1),
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(docIcon, color: _ink, size: 20),
-          const SizedBox(width: 8),
-          Expanded(
-            child: Text(
-              label,
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5),
-              overflow: TextOverflow.ellipsis,
+          Padding(
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF16A34A).withOpacity(0.14),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: const Row(
+                        children: [
+                          Icon(Icons.bolt_rounded, size: 14, color: Color(0xFF16A34A)),
+                          SizedBox(width: 3),
+                          Text(
+                            'FREE CBT MOCK',
+                            style: TextStyle(color: Color(0xFF16A34A), fontSize: 10, fontWeight: FontWeight.w900),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Text(
+                      '$attempts Aspirants Attempted',
+                      style: TextStyle(fontSize: 11, color: isDark ? _inkLight : Colors.grey.shade600),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  mock['title'] ?? 'Comprehensive Mock Drill',
+                  style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
+                ),
+                const SizedBox(height: 4),
+                Text(
+                  '$totalQs Concept Questions • ⏱ $duration Mins • Detailed Analytics',
+                  style: TextStyle(fontSize: 11.5, color: isDark ? _inkLight : const Color(0xFF5C5540)),
+                ),
+                const SizedBox(height: 12),
+
+                // Main Launch Button
+                SizedBox(
+                  width: double.infinity,
+                  height: 40,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: _ink,
+                      foregroundColor: _onInk,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      elevation: 0,
+                    ),
+                    onPressed: () => _launchAttachedMock(mock),
+                    child: const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.play_circle_fill_rounded, size: 17),
+                        SizedBox(width: 6),
+                        Text('Attempt Free Mock Now 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-              backgroundColor: _ink,
-              foregroundColor: _onInk,
-              visualDensity: VisualDensity.compact,
-              padding: const EdgeInsets.symmetric(horizontal: 12),
+
+          // 🔗 Direct Classroom Funnel Ribbon
+          InkWell(
+            onTap: () => _navigateToCreator(handle),
+            borderRadius: const BorderRadius.vertical(bottom: Radius.circular(13)),
+            child: Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+              decoration: BoxDecoration(
+                color: _ink.withOpacity(0.08),
+                borderRadius: const BorderRadius.vertical(bottom: Radius.circular(13)),
+              ),
+              child: Row(
+                children: [
+                  const Icon(Icons.school_outlined, size: 14, color: _ink),
+                  const SizedBox(width: 6),
+                  Expanded(
+                    child: Text(
+                      'Curated by $authorName • Explore Classroom Batches →',
+                      style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: _ink),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                ],
+              ),
             ),
-            onPressed: () => launchUrl(Uri.parse(link), mode: LaunchMode.externalApplication),
-            child: const Text('Open ↗', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // 📚 Dedicated Study Material Card
+  Widget _buildStudyMaterialCard(String content, bool isDark) {
+    return Container(
+      margin: const EdgeInsets.only(top: 8),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: const Color(0xFF059669).withOpacity(0.08),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(color: const Color(0xFF059669).withOpacity(0.2)),
+      ),
+      child: const Row(
+        children: [
+          Icon(Icons.picture_as_pdf_rounded, color: Color(0xFF059669), size: 28),
+          SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Class Handout / Study Material Attached', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                Text('Tap download link inside the post to access full PDF', style: TextStyle(color: Colors.grey, fontSize: 11)),
+              ],
+            ),
           ),
         ],
       ),
@@ -1042,8 +1059,8 @@ $content
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: isDark ? _inkDarkBg : _paperBg,
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: _ink.withOpacity(0.2)),
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(color: _ink.withOpacity(0.18)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1066,9 +1083,9 @@ $content
             Color tileColor = isDark ? _inkDarkCard : _paperCard;
             if (hasVoted) {
               if (isCorrect) {
-                tileColor = const Color(0xFF16A34A).withOpacity(0.2);
+                tileColor = const Color(0xFF16A34A).withOpacity(0.18);
               } else if (isSelected) {
-                tileColor = Colors.redAccent.withOpacity(0.2);
+                tileColor = Colors.redAccent.withOpacity(0.18);
               }
             }
 
@@ -1082,7 +1099,9 @@ $content
                   decoration: BoxDecoration(
                     color: tileColor,
                     borderRadius: BorderRadius.circular(8),
-                    border: hasVoted && isCorrect ? Border.all(color: const Color(0xFF16A34A), width: 1.5) : Border.all(color: isDark ? _inkDarkBorder : _paperBorder),
+                    border: hasVoted && isCorrect
+                        ? Border.all(color: const Color(0xFF16A34A), width: 1.5)
+                        : Border.all(color: isDark ? _inkDarkBorder : _paperBorder),
                   ),
                   child: Row(
                     children: [
@@ -1121,22 +1140,43 @@ $content
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
     final bgSurface = isDark ? _inkDarkBg : _paperBg;
-    final cardSurface = isDark ? _inkDarkCard : _paperCard;
-    final cardBorder = isDark ? _inkDarkBorder : _paperBorder;
     final dividerColor = isDark ? _inkDarkBorder : _paperBorder;
+    final cardSurface = isDark ? _inkDarkCard : _paperCard;
 
-    final filteredList = _activeFilter == 'All'
-        ? _posts
-        : (_activeFilter == 'Saved 📌'
-            ? _posts.where((p) => _savedPostIds.contains(p['id'])).toList()
-            : _posts.where((p) {
-                final tag = (p['tag'] ?? '').toString().toLowerCase();
-                final target = _activeFilter.split(' ').first.toLowerCase();
-                final mockData = p['creator_mocks'] as Map?;
-                final mockTitle = (mockData?['title'] ?? '').toString().toLowerCase();
-                final mockSubject = (mockData?['subject'] ?? '').toString().toLowerCase();
-                return tag.contains(target) || mockTitle.contains(target) || mockSubject.contains(target);
-              }).toList());
+    final filteredList = _posts.where((p) {
+      bool matchesCategory = true;
+      if (_activeFilter == 'Saved 📌') {
+        matchesCategory = _savedPostIds.contains(p['id']);
+      } else if (_activeFilter != 'All') {
+        final tag = (p['tag'] ?? '').toString().toLowerCase();
+        final target = _activeFilter.split(' ').first.toLowerCase();
+        final mockData = p['creator_mocks'] as Map?;
+        final mockTitle = (mockData?['title'] ?? '').toString().toLowerCase();
+        final mockSubject = (mockData?['subject'] ?? '').toString().toLowerCase();
+        matchesCategory = tag.contains(target) || mockTitle.contains(target) || mockSubject.contains(target);
+      }
+
+      if (!matchesCategory) return false;
+
+      if (_searchQuery.isEmpty) return true;
+
+      final q = _searchQuery.toLowerCase();
+      final content = (p['content'] ?? '').toString().toLowerCase();
+      final author = (p['author_name'] ?? '').toString().toLowerCase();
+      final tag = (p['tag'] ?? '').toString().toLowerCase();
+      final creator = (p['creator_profiles'] as Map?) ?? {};
+      final creatorName = (creator['name'] ?? '').toString().toLowerCase();
+      final creatorHandle = (creator['handle_id'] ?? '').toString().toLowerCase();
+      final mockData = p['creator_mocks'] as Map?;
+      final mockTitle = (mockData?['title'] ?? '').toString().toLowerCase();
+
+      return content.contains(q) ||
+          author.contains(q) ||
+          tag.contains(q) ||
+          creatorName.contains(q) ||
+          creatorHandle.contains(q) ||
+          mockTitle.contains(q);
+    }).toList();
 
     return Scaffold(
       backgroundColor: bgSurface,
@@ -1169,23 +1209,62 @@ $content
       ),
       body: Column(
         children: [
+          // 🔍 Top Persistent Search Bar (Blended with Original Theme)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(14, 4, 14, 8),
+            child: Container(
+              height: 44,
+              decoration: BoxDecoration(
+                color: cardSurface,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: dividerColor, width: 1),
+              ),
+              child: TextField(
+                controller: _searchCtrl,
+                style: TextStyle(fontSize: 13.5, color: isDark ? _onInk : _ink),
+                onChanged: (val) => setState(() => _searchQuery = val.trim()),
+                decoration: InputDecoration(
+                  hintText: '🔍 Search mocks, doubts, topics, mentor...',
+                  hintStyle: TextStyle(fontSize: 13, color: Colors.grey[500]),
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+                  border: InputBorder.none,
+                  suffixIcon: _searchQuery.isNotEmpty
+                      ? IconButton(
+                          icon: const Icon(Icons.close, size: 18, color: Colors.grey),
+                          onPressed: () {
+                            _searchCtrl.clear();
+                            setState(() => _searchQuery = '');
+                          },
+                        )
+                      : null,
+                ),
+              ),
+            ),
+          ),
+
+          // 🏷️ Category Filter Chips Strip
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
             child: Row(
               children: _filters.map((f) {
                 final isSelected = _activeFilter == f;
                 return Padding(
                   padding: const EdgeInsets.only(right: 6),
                   child: ChoiceChip(
-                    label: Text(f, style: TextStyle(fontSize: 12, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal)),
+                    label: Text(
+                      f,
+                      style: TextStyle(fontSize: 12, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal),
+                    ),
                     selected: isSelected,
                     selectedColor: _ink,
-                    backgroundColor: isDark ? _inkDarkCard : _paperCard,
-                    labelStyle: TextStyle(color: isSelected ? _onInk : (isDark ? _inkLight : const Color(0xFF5C5540))),
+                    backgroundColor: cardSurface,
+                    labelStyle: TextStyle(
+                      color: isSelected ? _onInk : (isDark ? _inkLight : const Color(0xFF5C5540)),
+                    ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17),
-                      side: BorderSide(color: isSelected ? _ink : cardBorder),
+                      side: BorderSide(color: isSelected ? _ink : dividerColor),
                     ),
                     onSelected: (_) => setState(() => _activeFilter = f),
                   ),
@@ -1193,19 +1272,37 @@ $content
               }).toList(),
             ),
           ),
+
+          const SizedBox(height: 4),
           Divider(height: 1, thickness: 1, color: dividerColor),
 
+          // 📜 Flat Sheet Post Stream
           Expanded(
             child: _isLoading
                 ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
                 : RefreshIndicator(
                     onRefresh: _fetchFeedPosts,
                     child: filteredList.isEmpty
-                        ? const Center(child: Text('No posts yet in this section.\nBe the first to share!'))
+                        ? Center(
+                            child: Padding(
+                              padding: const EdgeInsets.all(24),
+                              child: Text(
+                                _searchQuery.isNotEmpty
+                                    ? 'No posts matching "$_searchQuery"'
+                                    : 'No posts yet in this section.\nBe the first to share!',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(color: Colors.grey[500], fontSize: 13.5),
+                              ),
+                            ),
+                          )
                         : ListView.separated(
-                            padding: const EdgeInsets.fromLTRB(12, 8, 12, 90),
+                            padding: const EdgeInsets.only(bottom: 90),
                             itemCount: filteredList.length,
-                            separatorBuilder: (context, index) => const SizedBox(height: 10),
+                            separatorBuilder: (context, index) => Divider(
+                              height: 1,
+                              thickness: 1,
+                              color: dividerColor,
+                            ),
                             itemBuilder: (context, idx) {
                               final item = filteredList[idx];
                               final creator = item['creator_profiles'] ?? {};
@@ -1225,44 +1322,23 @@ $content
                                   : (item['author_name'] ?? 'Aspirant');
 
                               return Container(
-                                decoration: BoxDecoration(
-                                  color: cardSurface,
-                                  borderRadius: BorderRadius.circular(14),
-                                  border: Border.all(color: cardBorder, width: 1),
-                                  boxShadow: isDark
-                                      ? null
-                                      : [
-                                          BoxShadow(
-                                            color: _ink.withOpacity(0.05),
-                                            blurRadius: 8,
-                                            offset: const Offset(0, 2),
-                                          ),
-                                        ],
-                                ),
-                                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
+                                color: bgSurface,
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     GestureDetector(
                                       onTap: () {
-                                        Navigator.push(
-                                          context,
-                                          MaterialPageRoute(
-                                            builder: (_) => CreatorProfileScreen(
-                                              creatorHandle: authorHandle,
-                                              isDarkMode: isDark,
-                                            ),
-                                          ),
-                                        );
+                                        if (isVerifiedCreator) _navigateToCreator(authorHandle);
                                       },
                                       child: Row(
                                         children: [
                                           CircleAvatar(
-                                            radius: 18,
+                                            radius: 19,
                                             backgroundColor: isVerifiedCreator ? _ink : (isDark ? _inkDarkBorder : const Color(0xFFBFB8A0)),
                                             child: Text(
                                               isVerifiedCreator ? ((creator['name'] ?? 'M')[0]).toUpperCase() : 'A',
-                                              style: const TextStyle(color: _onInk, fontWeight: FontWeight.bold, fontSize: 13),
+                                              style: TextStyle(color: _onInk, fontWeight: FontWeight.bold, fontSize: 13),
                                             ),
                                           ),
                                           const SizedBox(width: 10),
@@ -1274,7 +1350,7 @@ $content
                                                   children: [
                                                     Text(
                                                       authorDisplayName,
-                                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
                                                     ),
                                                     const SizedBox(width: 4),
                                                     if (isVerifiedCreator)
@@ -1282,14 +1358,14 @@ $content
                                                     const SizedBox(width: 6),
                                                     Text(
                                                       '@$authorHandle',
-                                                      style: TextStyle(color: Colors.grey[500], fontSize: 11.5),
+                                                      style: TextStyle(color: Colors.grey[500], fontSize: 12),
                                                     ),
                                                   ],
                                                 ),
                                                 Text(
                                                   isVerifiedCreator
                                                       ? '🎓 ${creator['subject_specialty'] ?? 'Exam Mentor'} • ${creator['followers_count'] ?? 0} Followers'
-                                                      : 'Aspirant • Active Community Member',
+                                                      : 'Aspirant • Active Member',
                                                   style: TextStyle(
                                                     color: isVerifiedCreator ? _ink : Colors.grey[600],
                                                     fontSize: 10.5,
@@ -1300,10 +1376,10 @@ $content
                                             ),
                                           ),
                                           Container(
-                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                                             decoration: BoxDecoration(
                                               color: _ink.withOpacity(0.08),
-                                              borderRadius: BorderRadius.circular(4),
+                                              borderRadius: BorderRadius.circular(5),
                                             ),
                                             child: Text(item['tag'] ?? 'General', style: const TextStyle(color: _ink, fontSize: 10.5, fontWeight: FontWeight.bold)),
                                           ),
@@ -1314,88 +1390,45 @@ $content
 
                                     _buildRichTextContent(item['content'] ?? ''),
 
-                                    _buildDocumentLinkResolver(item['content'] ?? '', isDark),
+                                    // Special Material Card if PDF
+                                    if (item['tag'] == 'Study Material 📚')
+                                      _buildStudyMaterialCard(item['content'] ?? '', isDark),
 
                                     if (pollData != null)
                                       _buildInteractivePollCard(postId, pollData, isDark),
 
                                     if (imgUrl != null && imgUrl.isNotEmpty) ...[
-                                      const SizedBox(height: 10),
+                                      const SizedBox(height: 12),
                                       ClipRRect(
-                                        borderRadius: BorderRadius.circular(12),
-                                        child: ConstrainedBox(
-                                          constraints: const BoxConstraints(maxHeight: 320),
-                                          child: Image.network(
-                                            imgUrl,
-                                            fit: BoxFit.cover,
-                                            width: double.infinity,
-                                            errorBuilder: (_, __, ___) => const SizedBox.shrink(),
-                                          ),
+                                        borderRadius: BorderRadius.circular(10),
+                                        child: Image.network(
+                                          imgUrl,
+                                          fit: BoxFit.cover,
+                                          width: double.infinity,
+                                          errorBuilder: (_, __, ___) => const SizedBox.shrink(),
                                         ),
                                       ),
                                     ],
 
-                                    if (attachedMock != null) ...[
-                                      const SizedBox(height: 10),
-                                      Container(
-                                        padding: const EdgeInsets.all(12),
-                                        decoration: BoxDecoration(
-                                          color: isDark ? const Color(0xFF1E1A33) : const Color(0xFFF4F2FC),
-                                          borderRadius: BorderRadius.circular(10),
-                                          border: Border.all(color: isDark ? const Color(0xFF38315E) : const Color(0xFFDCD7F5)),
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            const Icon(Icons.quiz_rounded, color: _ink, size: 26),
-                                            const SizedBox(width: 10),
-                                            Expanded(
-                                              child: Column(
-                                                crossAxisAlignment: CrossAxisAlignment.start,
-                                                children: [
-                                                  Text(attachedMock['title'] ?? 'Mock Drill', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
-                                                  Text(
-                                                    '${(attachedMock['questions_json'] as List?)?.length ?? 0} Qs • ${attachedMock['duration_mins']} Mins • ⚡ ${attachedMock['attempts_count'] ?? 0} Attempts',
-                                                    style: TextStyle(color: isDark ? _inkLight : const Color(0xFF5C5540), fontSize: 11),
-                                                  ),
-                                                ],
-                                              ),
-                                            ),
-                                            ElevatedButton(
-                                              style: ElevatedButton.styleFrom(
-                                                backgroundColor: _ink,
-                                                foregroundColor: _onInk,
-                                                visualDensity: VisualDensity.compact,
-                                              ),
-                                              onPressed: () => _launchAttachedMock(attachedMock),
-                                              child: const Text('Start', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ],
+                                    // 🎯 Discovery Mock Card with Funnel
+                                    if (attachedMock != null)
+                                      _buildMockDiscoveryCard(attachedMock, authorDisplayName, authorHandle, isDark),
 
-                                    const SizedBox(height: 12),
+                                    const SizedBox(height: 14),
 
-                                    // Action Bar: Like, Comments/Replies, Stats, Saved, Share
+                                    // Action Bar: Like, Comment, Views, Bookmark, Share
                                     Row(
                                       children: [
-                                        // 👍 Like Button (Atomic Database-driven)
                                         InkWell(
                                           onTap: () => _handleLike(idx),
-                                          borderRadius: BorderRadius.circular(20),
-                                          child: Container(
-                                            height: 32,
-                                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                                            decoration: BoxDecoration(
-                                              color: isDark ? _inkDarkBg : _paperBg,
-                                              borderRadius: BorderRadius.circular(20),
-                                              border: Border.all(color: isLiked ? _ink : (isDark ? _inkDarkBorder : _paperBorder)),
-                                            ),
+                                          borderRadius: BorderRadius.circular(18),
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
                                             child: Row(
                                               children: [
                                                 Icon(
                                                   isLiked ? Icons.thumb_up_rounded : Icons.thumb_up_alt_outlined,
-                                                  size: 15,
+                                                  size: 16,
                                                   color: isLiked ? _ink : Colors.grey[600],
                                                 ),
                                                 const SizedBox(width: 5),
@@ -1403,7 +1436,7 @@ $content
                                                   '$likesCount',
                                                   style: TextStyle(
                                                     fontWeight: FontWeight.bold,
-                                                    fontSize: 12,
+                                                    fontSize: 12.5,
                                                     color: isLiked ? _ink : (isDark ? _onInk : const Color(0xFF1E293B)),
                                                   ),
                                                 ),
@@ -1411,28 +1444,21 @@ $content
                                             ),
                                           ),
                                         ),
-                                        const SizedBox(width: 8),
+                                        const SizedBox(width: 16),
 
-                                        // 💬 Reply / Comments Button (Local State Reactive)
                                         InkWell(
                                           onTap: () => _openCommentsSheet(postId, item),
-                                          borderRadius: BorderRadius.circular(20),
-                                          child: Container(
-                                            height: 32,
-                                            padding: const EdgeInsets.symmetric(horizontal: 10),
-                                            decoration: BoxDecoration(
-                                              color: isDark ? _inkDarkBg : _paperBg,
-                                              borderRadius: BorderRadius.circular(20),
-                                              border: Border.all(color: isDark ? _inkDarkBorder : _paperBorder),
-                                            ),
+                                          borderRadius: BorderRadius.circular(18),
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
                                             child: Row(
                                               children: [
-                                                const Icon(Icons.chat_bubble_outline_rounded, size: 14, color: Colors.grey),
-                                                const SizedBox(width: 4),
+                                                const Icon(Icons.chat_bubble_outline_rounded, size: 15, color: Colors.grey),
+                                                const SizedBox(width: 5),
                                                 Text(
                                                   '$commentsCount',
                                                   style: TextStyle(
-                                                    fontSize: 12,
+                                                    fontSize: 12.5,
                                                     color: isDark ? _onInk : _ink,
                                                     fontWeight: FontWeight.bold,
                                                   ),
@@ -1441,65 +1467,43 @@ $content
                                             ),
                                           ),
                                         ),
-                                        const SizedBox(width: 8),
+                                        const SizedBox(width: 16),
 
-                                        // 📊 Stats Action Sheet
+                                        Row(
+                                          children: [
+                                            const Icon(Icons.remove_red_eye_outlined, size: 15, color: Colors.grey),
+                                            const SizedBox(width: 4),
+                                            Text('${item['views_count'] ?? 100}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
+                                          ],
+                                        ),
+                                        const SizedBox(width: 16),
+
                                         InkWell(
-                                          onTap: () => _openPostAnalyticsSheet(item),
-                                          borderRadius: BorderRadius.circular(20),
-                                          child: Container(
-                                            height: 32,
-                                            padding: const EdgeInsets.symmetric(horizontal: 8),
-                                            decoration: BoxDecoration(
-                                              color: isDark ? _inkDarkBg : _paperBg,
-                                              borderRadius: BorderRadius.circular(20),
-                                              border: Border.all(color: _ink.withOpacity(0.2)),
-                                            ),
+                                          onTap: () => _toggleBookmark(postId, item),
+                                          borderRadius: BorderRadius.circular(18),
+                                          child: Padding(
+                                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
                                             child: Row(
-                                              children: const [
-                                                Icon(Icons.insights_rounded, size: 13, color: _ink),
-                                                SizedBox(width: 4),
-                                                Text('Stats', style: TextStyle(fontSize: 11.5, color: _ink, fontWeight: FontWeight.bold)),
+                                              children: [
+                                                Icon(isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded, size: 17, color: isSaved ? _ink : Colors.grey),
+                                                const SizedBox(width: 3),
+                                                Text('${item['bookmarks_count'] ?? 0}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
                                               ],
                                             ),
                                           ),
                                         ),
-                                        const SizedBox(width: 8),
-
-                                        Row(
-                                          children: [
-                                            const Icon(Icons.remove_red_eye_outlined, size: 14, color: Colors.grey),
-                                            const SizedBox(width: 3),
-                                            Text('${item['views_count'] ?? 120}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
-                                          ],
-                                        ),
-                                        const SizedBox(width: 8),
-
-                                        // 📌 Bookmark (Atomic RPC + user_saved_posts)
-                                        InkWell(
-                                          onTap: () => _toggleBookmark(postId, item),
-                                          borderRadius: BorderRadius.circular(20),
-                                          child: Row(
-                                            children: [
-                                              Icon(isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded, size: 16, color: isSaved ? _ink : Colors.grey),
-                                              const SizedBox(width: 2),
-                                              Text('${item['bookmarks_count'] ?? 0}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
-                                            ],
-                                          ),
-                                        ),
                                         const Spacer(),
 
-                                        // 🔗 Share Link
                                         InkWell(
                                           onTap: () => _sharePost(item),
-                                          borderRadius: BorderRadius.circular(6),
+                                          borderRadius: BorderRadius.circular(18),
                                           child: Padding(
                                             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
                                             child: Row(
                                               children: [
                                                 const Icon(Icons.share_outlined, size: 16, color: Colors.grey),
-                                                const SizedBox(width: 3),
-                                                Text('${item['shares_count'] ?? 0}', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                                                const SizedBox(width: 4),
+                                                Text('${item['shares_count'] ?? 0}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
                                               ],
                                             ),
                                           ),
