@@ -41,14 +41,6 @@ jobs:
             "ndk;28.0.12433566" \
             "cmake;3.22.1"
 
-      - name: Install & Register CMake 3.31.0 for Fllama
-        run: |
-          mkdir -p ${ANDROID_HOME}/cmake/3.31.0
-          curl -L -o cmake-3.31.0.tar.gz https://github.com/Kitware/CMake/releases/download/v3.31.0/cmake-3.31.0-linux-x86_64.tar.gz
-          tar -xzf cmake-3.31.0.tar.gz --strip-components=1 -C ${ANDROID_HOME}/cmake/3.31.0
-          rm -f cmake-3.31.0.tar.gz
-          echo "${ANDROID_HOME}/cmake/3.31.0/bin" >> $GITHUB_PATH
-
       - name: Clean & Force Android Scaffold
         working-directory: flutter_app
         run: |
@@ -129,13 +121,10 @@ jobs:
           </manifest>
           EOF
 
-      - name: Setup Build Configuration, Desugaring & SO Packaging
+      - name: Setup Build Configuration, Desugaring & MinSDK 26
         working-directory: flutter_app
         run: |
           flutter pub get
-
-          # Patch fllama deprecated proguard rule in cached source
-          find /home/runner/.pub-cache/hosted/pub.dev/fllama* -name "build.gradle" -exec sed -i "s/proguard-android.txt/proguard-android-optimize.txt/g" {} + || true
 
           # 1. Update android/settings.gradle.kts (API 36 hook)
           cat << 'EOF' >> android/settings.gradle.kts
@@ -158,31 +147,67 @@ jobs:
           }
           EOF
 
-          # 2. Append Packaging & Desugaring safely to build.gradle.kts
+          # 2. Append Packaging, Desugaring & Force minSdk 26
           APP_KTS="android/app/build.gradle.kts"
-          sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/g' "$APP_KTS"
-          sed -i 's/compileSdk = 34/compileSdk = 36/g' "$APP_KTS"
+          APP_GROOVY="android/app/build.gradle"
 
-          cat << 'EOF' >> "$APP_KTS"
+          if [ -f "$APP_KTS" ]; then
+            sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/g' "$APP_KTS"
+            sed -i 's/compileSdk = 34/compileSdk = 36/g' "$APP_KTS"
+            sed -i 's/minSdk = flutter.minSdkVersion/minSdk = 26/g' "$APP_KTS"
+            sed -i 's/minSdk = 24/minSdk = 26/g' "$APP_KTS"
 
-          android {
-              compileOptions {
-                  isCoreLibraryDesugaringEnabled = true
-              }
-              packaging {
-                  resources {
-                      pickFirsts.add("**/libc++_shared.so")
-                  }
-                  jniLibs {
-                      useLegacyPackaging = true
-                  }
-              }
-          }
+            cat << 'EOF' >> "$APP_KTS"
 
-          dependencies {
-              coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
-          }
+            android {
+                defaultConfig {
+                    minSdk = 26
+                }
+                compileOptions {
+                    isCoreLibraryDesugaringEnabled = true
+                }
+                packaging {
+                    resources {
+                        pickFirsts.add("**/libc++_shared.so")
+                    }
+                    jniLibs {
+                        useLegacyPackaging = true
+                    }
+                }
+            }
+
+            dependencies {
+                coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+            }
           EOF
+          elif [ -f "$APP_GROOVY" ]; then
+            sed -i 's/compileSdkVersion flutter.compileSdkVersion/compileSdkVersion 36/g' "$APP_GROOVY"
+            sed -i 's/compileSdkVersion 34/compileSdkVersion 36/g' "$APP_GROOVY"
+            sed -i 's/minSdkVersion flutter.minSdkVersion/minSdkVersion 26/g' "$APP_GROOVY"
+            sed -i 's/minSdkVersion 24/minSdkVersion 26/g' "$APP_GROOVY"
+
+            cat << 'EOF' >> "$APP_GROOVY"
+
+            android {
+                defaultConfig {
+                    minSdkVersion 26
+                }
+                compileOptions {
+                    coreLibraryDesugaringEnabled true
+                }
+                packagingOptions {
+                    pickFirst '**/libc++_shared.so'
+                    jniLibs {
+                        useLegacyPackaging = true
+                    }
+                }
+            }
+
+            dependencies {
+                coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.1.4'
+            }
+          EOF
+          fi
 
       - name: Setup Keystore & Permissions
         working-directory: flutter_app/android
@@ -228,5 +253,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (fllama Native Engine) APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} (Offline Native Qwen Engine) APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
