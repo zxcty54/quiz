@@ -24,9 +24,6 @@ class OfflineLlmAgentService {
   static const String verified05BPath =
       '/storage/emulated/0/Download/qwen2.5-0.5b-instruct-q4_k_m.gguf';
 
-  // ------------------------------------------------------------
-  // 1. SAFE MODEL LOADER (2048 Context Buffer)
-  // ------------------------------------------------------------
   Future<void> loadModelManually({String? modelPath}) async {
     if (_isInitializing) return;
 
@@ -66,9 +63,6 @@ class OfflineLlmAgentService {
     await loadModelManually(modelPath: modelPath);
   }
 
-  // ------------------------------------------------------------
-  // 2. UNLOAD MODEL
-  // ------------------------------------------------------------
   Future<void> unloadModel() async {
     try {
       await _controller?.dispose();
@@ -77,9 +71,6 @@ class OfflineLlmAgentService {
     _loadedModelPath = null;
   }
 
-  // ------------------------------------------------------------
-  // 3. ADAPTIVE INFERENCE ENGINE (True AI Behavior)
-  // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
     required String context,
@@ -91,26 +82,44 @@ class OfflineLlmAgentService {
 
     final activeController = _controller;
     if (activeController == null) {
-      throw Exception("Model load nahi hai. Pehle file load karein.");
+      throw Exception("Model engine load nahi hua.");
     }
 
     final cleanInput = userInput.trim();
     final lower = cleanInput.toLowerCase();
 
-    // Natural conversation handling
+    // 1. Natural Greeting Filter (Instant human reply)
     if (lower == 'hi' || lower == 'hello' || lower == 'hey' || lower == 'kaise ho') {
-      return "Aman Sir: Namaste! Main bilkul theek hoon. Aaj kaun sa topic samajhna hai—Science me Cell/Biology ya Polity ka koi Article?";
+      return "Namaste! Main tayyar hoon. Aaj kaun sa topic samajhna hai—Science me Cell, ya Indian Constitution ka koi Article?";
     }
 
-    final systemInstruction = _buildSystemInstruction(task);
-    
-    final formattedPrompt = '''<|im_start|>system
-$systemInstruction<|im_end|>
+    // 2. Gemma-style Clean Structured Prompt (Exact UI match)
+    final prompt = '''<|im_start|>system
+You are a structured learning AI tutor for competitive exams (BPSC/BSSC).
+Explain the user's topic in clear Hinglish following this format:
+
+1. 💡 Micro Concept
+(1 crisp line explaining why it matters in daily life before what it is)
+
+2. ⚡ 3-Step Breakdown
+• Mool Tathya: Core rule or fact.
+• Karyapranali: How it works in real life.
+• Pariksha Savdhani: Exam elimination trap.
+
+3. 🎯 Micro Challenge
+Q: One direct exam question.
+A) Option A
+B) Option B
+C) Option C
+D) Option D
+Correct: Option letter
+Explanation: 1-line reason.
+
+Rule: Do not output brackets, instructions, or meta talk. Write real facts.<|im_end|>
 <|im_start|>user
-${context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : ""}TOPIC / QUERY:
-$cleanInput<|im_end|>
+${context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : ""}TOPIC: $cleanInput<|im_end|>
 <|im_start|>assistant
-Micro Concept:
+1. 💡 Micro Concept
 ''';
 
     final completer = Completer<String>();
@@ -119,8 +128,8 @@ Micro Concept:
 
     try {
       final stream = activeController.generate(
-        prompt: formattedPrompt,
-        temperature: 0.2,
+        prompt: prompt,
+        temperature: 0.15,
         maxTokens: 400,
       );
 
@@ -145,10 +154,8 @@ Micro Concept:
         const Duration(seconds: 45),
         onTimeout: () {
           subscription?.cancel();
-          if (buffer.isNotEmpty) {
-            return buffer.toString();
-          }
-          throw Exception("Inference timeout: 45s tak output complete nahi hua.");
+          if (buffer.isNotEmpty) return buffer.toString();
+          throw Exception("Inference timeout: 45s.");
         },
       );
 
@@ -158,56 +165,17 @@ Micro Concept:
           .trim();
 
       if (cleanText.isEmpty) {
-        throw Exception("Engine ne blank output diya.");
+        throw Exception("Model ne blank response diya.");
       }
 
-      if (!cleanText.startsWith("Micro Concept:")) {
-        cleanText = "Micro Concept:\n$cleanText";
+      // UI Parser ko header ensure karke pass karein
+      if (!cleanText.startsWith("1. 💡 Micro Concept")) {
+        cleanText = "1. 💡 Micro Concept\n$cleanText";
       }
 
       return cleanText;
     } finally {
       await subscription?.cancel();
     }
-  }
-
-  // ------------------------------------------------------------
-  // 4. NOTEBOOK DUOLINGO CARD FORMAT (Zero Placeholders)
-  // ------------------------------------------------------------
-  String _buildSystemInstruction(LlmTaskType task) {
-    return '''
-You are Aman Sir, an expert pedagogical tutor for Indian competitive exams (BPSC/BSSC).
-Explain the concept using real facts in clear spoken Hinglish:
-- Explain WHY before WHAT.
-- Raju shares a natural daily-life doubt.
-- Aman Sir clears it directly with no textbook formality.
-
-Structure your response strictly as follows:
-
-Micro Concept:
-State the core rule or definition in 1 crisp line explaining why it matters before what it is.
-
-Raju vs Aman Sir:
-Raju: State a practical, daily-life doubt regarding this topic.
-Aman Sir: Give direct, spoken-logic reasoning resolving Raju's confusion.
-
-3-Step Breakdown:
-• Mool Tathya: State the foundational factual or scientific rule.
-• Karyapranali: Explain how it functions or applies in practice.
-• Pariksha Savdhani: Highlight the common exam trap or point of confusion to avoid.
-
-Micro Challenge:
-Q: One direct exam-style question on this topic
-A) Option 1
-B) Option 2
-C) Option 3
-D) Option 4
-Correct Answer: Option letter
-Explanation: One concise line explaining why other options fail.
-
-Important Rules:
-1. Never output square brackets or placeholder texts.
-2. Fill every section with concrete, accurate facts based on the user's specific query.
-''';
   }
 }
