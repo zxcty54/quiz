@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'package:fllama/fllama.dart';
 
@@ -24,7 +25,7 @@ class OfflineLlmAgentService {
       '/storage/emulated/0/Download/qwen2.5-0.5b-instruct-q4_k_m.gguf';
 
   // ------------------------------------------------------------
-  // 1. MANUAL MODEL LOADER (Strict Type-Safe Official Binding)
+  // 1. MANUAL MODEL LOADER (Using Fllama.initContext)
   // ------------------------------------------------------------
   Future<void> loadModelManually({String? modelPath}) async {
     if (_isInitializing) return;
@@ -43,11 +44,11 @@ class OfflineLlmAgentService {
         await unloadModel();
       }
 
+      final completer = Completer<void>();
       String? initError;
-      double? assignedContextId;
 
-      // fllama typed initialization method to prevent Java reflection NPE
-      fllama.initContext(
+      // Official Fllama class methods
+      Fllama.initContext(
         OpenAI(
           modelUrl: targetPath,
           contextSize: 512,
@@ -59,7 +60,20 @@ class OfflineLlmAgentService {
           if (err != null && err.isNotEmpty) {
             initError = err;
           }
-          assignedContextId = contextId;
+          if (contextId != null && contextId > 0) {
+            _contextId = contextId;
+            _loadedModelPath = targetPath;
+          }
+          if (!completer.isCompleted) {
+            completer.complete();
+          }
+        },
+      );
+
+      await completer.future.timeout(
+        const Duration(seconds: 25),
+        onTimeout: () {
+          throw Exception("Model init timeout: 25s me engine initialize nahi hua.");
         },
       );
 
@@ -67,12 +81,9 @@ class OfflineLlmAgentService {
         throw Exception("fllama native initialization error: $initError");
       }
 
-      if (assignedContextId == null || assignedContextId! <= 0) {
-        throw Exception("Invalid contextId received from native engine: $assignedContextId");
+      if (_contextId == null) {
+        throw Exception("Invalid contextId pointer received from native engine.");
       }
-
-      _contextId = assignedContextId;
-      _loadedModelPath = targetPath;
     } finally {
       _isInitializing = false;
     }
@@ -91,7 +102,7 @@ class OfflineLlmAgentService {
     if (id == null) return;
 
     try {
-      fllama.dispose(contextId: id);
+      Fllama.dispose(contextId: id);
     } catch (_) {}
 
     _contextId = null;
@@ -99,7 +110,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // 3. EXECUTE INFERENCE (Zero Crash Typed Wrapper)
+  // 3. EXECUTE INFERENCE (Using Fllama.inference)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -112,7 +123,7 @@ class OfflineLlmAgentService {
 
     final currentId = _contextId;
     if (currentId == null) {
-      throw Exception("Model load nahi hai. Pehle loadModelManually() trigger karein.");
+      throw Exception("Model load nahi hai. Pehle file load karein.");
     }
 
     final systemInstruction = _buildSystemInstruction(task);
@@ -123,10 +134,11 @@ class OfflineLlmAgentService {
     );
 
     final StringBuffer buffer = StringBuffer();
+    final completer = Completer<String>();
     String? inferenceError;
 
-    // Type-safe inference call: guarantees all required keys to FLlama.java
-    await fllama.inference(
+    // Official Fllama.inference method
+    Fllama.inference(
       Inference(
         contextId: currentId,
         prompt: prompt,
@@ -146,16 +158,30 @@ class OfflineLlmAgentService {
       },
     );
 
+    // Stream/Callback completion wait (with safe fallback timer)
+    await Future.delayed(const Duration(milliseconds: 300));
+    int elapsed = 0;
+    while (elapsed < 30000) {
+      await Future.delayed(const Duration(milliseconds: 200));
+      elapsed += 200;
+      final currentText = buffer.toString();
+      if (currentText.contains('<|im_end|>') || 
+          currentText.contains('Explanation:') || 
+          (currentText.isNotEmpty && elapsed > 4000 && !currentText.endsWith(' '))) {
+        break;
+      }
+    }
+
     if (inferenceError != null && inferenceError!.isNotEmpty) {
       throw Exception("Inference Error: $inferenceError");
     }
 
-    final text = buffer.toString().trim();
-    if (text.isEmpty) {
-      throw Exception("Engine ne koi response generate nahi kiya.");
+    final output = buffer.toString().replaceAll('<|im_end|>', '').replaceAll('<|endoftext|>', '').trim();
+    if (output.isEmpty) {
+      throw Exception("Engine ne empty text return kiya.");
     }
 
-    return text;
+    return output;
   }
 
   // ------------------------------------------------------------
@@ -172,7 +198,7 @@ class OfflineLlmAgentService {
 $systemInstruction
 <|im_end|>
 <|im_start|>user
-${contextBlock}DAILY OBSERVATION / TOPIC:
+${contextBlock}DAILY OBSERVATION / QUERY:
 $userInput
 <|im_end|>
 <|im_start|>assistant
@@ -180,7 +206,7 @@ $userInput
   }
 
   // ------------------------------------------------------------
-  // NOTEBOOK STRUCTURE PEDAGOGY PROMPT
+  // PEDAGOGICAL STRUCTURE (Notebook Standard Format)
   // ------------------------------------------------------------
   String _buildSystemInstruction(LlmTaskType task) {
     switch (task) {
@@ -192,20 +218,15 @@ Q1. [Question]
 A) [Option 1] | B) [Option 2] | C) [Option 3] | D) [Option 4]
 Correct: [Letter]
 Explanation: [One short line]
-Q2. [Question]
-A) [Option 1] | B) [Option 2] | C) [Option 3] | D) [Option 4]
-Correct: [Letter]
-Explanation: [One short line]
-No conversational fluff.
 ''';
 
       case LlmTaskType.duolingoExplanation:
       default:
         return '''
 You are an AI pedagogical engine for Indian competitive exams (BPSC/BSSC/SSC).
-Explain strictly using this exact 1-screen conversational micro-learning format in simple Hinglish:
+Explain strictly using this exact 1-screen conversational card format in clear Hinglish:
 - Explain WHY before WHAT.
-- Raju shares a natural daily-life observation or doubt.
+- Raju shares a natural daily-life doubt or curiosity.
 - Aman Sir clears it directly with no textbook formality.
 
 Micro Concept:
@@ -213,11 +234,11 @@ Micro Concept:
 
 Raju vs Aman Sir:
 Raju: [Real-life observation or doubt]
-Aman Sir: [Direct logic resolving the doubt]
+Aman Sir: [Direct logic clearing the confusion]
 
 3-Step Breakdown:
 • Mool Tathya: [Core factual rule]
-• Karyapranali: [Direct application / formula]
+• Karyapranali: [Direct application]
 • Pariksha Savdhani: [Elimination trap to avoid]
 
 Micro Challenge:
