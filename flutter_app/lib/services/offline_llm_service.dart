@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:fllama/fllama.dart';
+import 'package:fllama_platform_interface/fllama_platform_interface.dart';
 
 enum LlmTaskType {
   duolingoExplanation,
@@ -13,42 +14,28 @@ class OfflineLlmAgentService {
   static final OfflineLlmAgentService instance = OfflineLlmAgentService._internal();
   OfflineLlmAgentService._internal();
 
-  // fllama context ID
   double? _contextId;
   String? _currentModelPath;
   bool _isInitializing = false;
 
   bool get isReady => _contextId != null;
 
-  // Default Qwen GGUF model
   static const String defaultModelPath = '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
 
-  /// Initialize the native llama.cpp context.
   Future<void> initEngine({String? modelPath}) async {
-    // Already initialized
-    if (_contextId != null) {
-      return;
-    }
-
-    // Prevent duplicate initialization
-    if (_isInitializing) {
-      return;
-    }
+    if (_contextId != null) return;
+    if (_isInitializing) return;
 
     _isInitializing = true;
     final path = modelPath ?? defaultModelPath;
 
     try {
-      // Check model file
       final modelFile = File(path);
       if (!await modelFile.exists()) {
         throw Exception('GGUF model file nahi mili:\n$path');
       }
 
-      final fllama = FllamaPlatform.instance;
-
-      // Initialize llama.cpp context
-      final result = await fllama.initContext(
+      final result = await FllamaPlatform.instance.initContext(
         path,
         nCtx: 768,
         nBatch: 768,
@@ -76,13 +63,11 @@ class OfflineLlmAgentService {
     }
   }
 
-  /// Execute an offline LLM task.
   Future<String> executeLlmAgent({
     required String userInput,
     required String context,
     required LlmTaskType task,
   }) async {
-    // Initialize model if required.
     if (_contextId == null) {
       await initEngine(modelPath: _currentModelPath);
     }
@@ -101,9 +86,6 @@ TOPIC / INPUT:
 $userInput
 ''';
 
-    final fllama = FllamaPlatform.instance;
-
-    // Build chat messages.
     final messages = <RoleContent>[
       RoleContent(
         role: 'system',
@@ -115,21 +97,18 @@ $userInput
       ),
     ];
 
-    // Let fllama/llama.cpp format the chat according to the model.
     String formattedPrompt;
     try {
-      final formatted = await fllama.getFormattedChat(
+      final formatted = await FllamaPlatform.instance.getFormattedChat(
         contextId,
         messages: messages,
       );
       formattedPrompt = formatted ?? _fallbackPrompt(systemInstruction, userContent);
     } catch (_) {
-      // Fallback if chat template is unavailable.
       formattedPrompt = _fallbackPrompt(systemInstruction, userContent);
     }
 
-    // Generate completion.
-    final result = await fllama.completion(
+    final result = await FllamaPlatform.instance.completion(
       contextId,
       prompt: formattedPrompt,
       temperature: 0.2,
@@ -148,7 +127,6 @@ $userInput
     return _extractCompletionText(result);
   }
 
-  /// Creates the system prompt for each task.
   String _buildSystemInstruction(LlmTaskType task) {
     switch (task) {
       case LlmTaskType.quiz:
@@ -230,11 +208,7 @@ Do not add anything outside this format.
     }
   }
 
-  /// Fallback prompt if the model/package cannot provide its native chat template.
-  String _fallbackPrompt(
-    String systemInstruction,
-    String userContent,
-  ) {
+  String _fallbackPrompt(String systemInstruction, String userContent) {
     return '''
 <|im_start|>system
 $systemInstruction
@@ -246,16 +220,8 @@ $userContent
 ''';
   }
 
-  /// Extract generated text safely from fllama result.
   String _extractCompletionText(Map<Object?, dynamic> result) {
-    dynamic text;
-    text = result['text'];
-    if (text == null) {
-      text = result['completion'];
-    }
-    if (text == null) {
-      text = result['content'];
-    }
+    dynamic text = result['text'] ?? result['completion'] ?? result['content'];
     if (text == null && result.isNotEmpty) {
       text = result.values.first;
     }
@@ -265,12 +231,10 @@ $userContent
     return text.toString().trim();
   }
 
-  /// Release native context.
   Future<void> dispose() async {
     final contextId = _contextId;
-    if (contextId == null) {
-      return;
-    }
+    if (contextId == null) return;
+
     try {
       await FllamaPlatform.instance.releaseContext(contextId);
     } finally {
