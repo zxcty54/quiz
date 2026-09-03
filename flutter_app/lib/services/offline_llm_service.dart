@@ -1,5 +1,5 @@
 import 'dart:io';
-import 'package:llama_cpp_dart/llama_cpp_dart.dart';
+import 'package:fllama/fllama.dart';
 
 enum LlmTaskType {
   duolingoExplanation,
@@ -13,32 +13,19 @@ class OfflineLlmAgentService {
   static final OfflineLlmAgentService instance = OfflineLlmAgentService._internal();
   OfflineLlmAgentService._internal();
 
-  Llama? _llama;
+  String? _modelPath;
   bool _isInitialized = false;
 
   bool get isReady => _isInitialized;
 
   Future<void> initEngine({String? modelPath}) async {
-    if (_isInitialized) return;
-
     final path = modelPath ?? '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
 
     if (!await File(path).exists()) {
       throw Exception("GGUF Model file nahi mili: $path");
     }
 
-    final contextParams = ContextParams()
-      ..nCtx = 768
-      ..nThreads = 4;
-
-    final modelParams = ModelParams();
-
-    _llama = Llama(
-      path,
-      modelParams: modelParams,
-      contextParams: contextParams,
-    );
-
+    _modelPath = path;
     _isInitialized = true;
   }
 
@@ -47,7 +34,7 @@ class OfflineLlmAgentService {
     required String context,
     required LlmTaskType task,
   }) async {
-    if (!_isInitialized || _llama == null) {
+    if (!_isInitialized || _modelPath == null) {
       await initEngine();
     }
 
@@ -93,7 +80,7 @@ Summarize into:
       case LlmTaskType.duolingoExplanation:
       default:
         systemInstruction = '''
-You are a Duolingo-style structured learning AI tutor for Indian competitive exams.
+You are a Duolingo-style micro-learning AI tutor for Indian competitive exams.
 Explain strictly using this exact 3-section format in simple Hinglish:
 
 Micro Concept:
@@ -113,7 +100,7 @@ Explanation: [1 crisp line]
         break;
     }
 
-    final fullChatmlPrompt = '''
+    final prompt = '''
 <|im_start|>system
 $systemInstruction
 <|im_end|>
@@ -127,31 +114,26 @@ $userInput
 <|im_start|>assistant
 ''';
 
-    _llama!.setPrompt(fullChatmlPrompt);
+    final request = OpenAiRequest(
+      modelPath: _modelPath!,
+      prompt: prompt,
+      temperature: 0.2,
+      contextSize: 768,
+      threads: 4,
+    );
 
-    final buffer = StringBuffer();
+    final StringBuffer buffer = StringBuffer();
 
-    while (true) {
-      final (tokenText, isDone) = _llama!.getNext();
-
-      if (isDone || tokenText.isEmpty) {
-        break;
+    await fllamaChat(request, (response, done) {
+      if (response.isNotEmpty) {
+        buffer.write(response);
       }
-
-      if (tokenText == '<|im_end|>' ||
-          tokenText == '<|endoftext|>' ||
-          tokenText == '<|im_start|>') {
-        break;
-      }
-
-      buffer.write(tokenText);
-    }
+    });
 
     return buffer.toString().trim();
   }
 
   void dispose() {
-    _llama?.dispose();
     _isInitialized = false;
   }
 }
