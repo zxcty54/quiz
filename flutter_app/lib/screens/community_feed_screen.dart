@@ -366,7 +366,6 @@ $content
       });
 
       if (res != true && mounted) {
-        // Vote rejected (already voted from another device)
         setState(() {
           _userPollSelections.remove(postId);
           List votes = List.from(pollData['votes'] ?? [0, 0, 0, 0]);
@@ -858,7 +857,8 @@ $content
                                 'bookmarks_count': 0,
                               }).select().single();
 
-                              AdminTelegramAlert.notifyNewPost(
+                              // CHANGED: Yahan AdminTelegramAlert ka maujooda method call kiya gaya hai
+                              AdminTelegramAlert.sendForInteractiveApproval(
                                 postId: insertedPost['id'] ?? 0,
                                 authorName: _customUserName,
                                 authorHandle: 'candidate',
@@ -1262,7 +1262,7 @@ $content
                                             backgroundColor: isVerifiedCreator ? _ink : (isDark ? _inkDarkBorder : const Color(0xFFBFB8A0)),
                                             child: Text(
                                               isVerifiedCreator ? ((creator['name'] ?? 'M')[0]).toUpperCase() : 'A',
-                                              style: TextStyle(color: _onInk, fontWeight: FontWeight.bold, fontSize: 13),
+                                              style: const TextStyle(color: _onInk, fontWeight: FontWeight.bold, fontSize: 13),
                                             ),
                                           ),
                                           const SizedBox(width: 10),
