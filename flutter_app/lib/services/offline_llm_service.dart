@@ -24,7 +24,7 @@ class OfflineLlmAgentService {
   static const String defaultModelPath = '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
 
   // ------------------------------------------------------------
-  // INITIALIZE MODEL (OOM & LMK CRASH-PROOF CONFIG)
+  // INITIALIZE MODEL (STRICT NULL & CRASH CHECK)
   // ------------------------------------------------------------
   Future<void> initEngine({String? modelPath}) async {
     if (_contextId != null) return;
@@ -39,34 +39,35 @@ class OfflineLlmAgentService {
         throw Exception('GGUF model file nahi mili:\n$path');
       }
 
-      // useMmap: false aur low batch allocation se 1212MB mapping bypass hogi
+      // Memory-optimized parameters to prevent native initialization failure
       final Map<dynamic, dynamic>? result = await _channel.invokeMethod('initContext', {
         'model': path,
         'embedding': false,
-        'nCtx': 256,        // Strict 256 context size (KV cache allocation drops to minimum)
-        'nBatch': 32,       // 32 token batch allocation spike ko 90% gira dega
-        'nThreads': 2,      // 2 threads prevent CPU/memory bus starvation
+        'nCtx': 512,
+        'nBatch': 128,
+        'nThreads': 2,
         'nGpuLayers': 0,
-        'useMmap': false,   // CRITICAL: Prevents immediate 1212MB single contiguous mapping
-        'useMlock': false,  // Prevents forcing OS RAM residency
+        'useMmap': true,    // true rakhein taaki file direct disk se stream ho
+        'useMlock': false,   // false rakhein taaki physical RAM force lock na ho
       });
 
       if (result == null) {
-        throw Exception('Fllama context initialize nahi ho paya.');
+        throw Exception('Fllama native init ne null return kiya.');
       }
 
+      // Safe casting: contextId can be int or double
       final dynamic rawContextId = result['contextId'];
       if (rawContextId == null) {
-        throw Exception('Native engine ne contextId return nahi kiya.\nResponse: $result');
+        throw Exception('ContextId null mila native engine se. Engine response: $result');
       }
 
-      _contextId = (rawContextId as num).toDouble();
+      final parsedId = (rawContextId as num).toDouble();
+      if (parsedId <= 0) {
+        throw Exception('Invalid contextId received: $parsedId');
+      }
+
+      _contextId = parsedId;
       _currentModelPath = path;
-
-      if (_contextId! <= 0) {
-        _contextId = null;
-        throw Exception('Invalid fllama contextId: $_contextId');
-      }
     } catch (e) {
       _contextId = null;
       rethrow;
@@ -76,7 +77,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // LLM AGENT
+  // LLM AGENT EXECUTION
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -84,11 +85,13 @@ class OfflineLlmAgentService {
     required LlmTaskType task,
   }) async {
     try {
+      // Step 1: Ensure engine is initialized
       if (_contextId == null) {
         await initEngine(modelPath: _currentModelPath);
       }
 
       final contextId = _contextId;
+      // Step 2: Strictly prevent calling completion if contextId is null
       if (contextId == null) {
         return _fallbackStaticCard(userInput, context);
       }
@@ -100,14 +103,12 @@ class OfflineLlmAgentService {
         userInput: userInput,
       );
 
-      // ----------------------------------------------------------
-      // GENERATE
-      // ----------------------------------------------------------
+      // Step 3: Native completion call with non-null contextId
       final Map<dynamic, dynamic>? result = await _channel.invokeMethod('completion', {
         'contextId': contextId,
         'prompt': prompt,
         'temperature': 0.2,
-        'nPredict': 200,    // 200 tokens are optimal for 1 micro-card
+        'nPredict': 256,
         'nThreads': 2,
         'stop': const [
           '<|im_end|>',
@@ -120,14 +121,14 @@ class OfflineLlmAgentService {
       }
 
       return _extractText(result);
-    } catch (_) {
-      // Memory pressure ya native failure hone par app close nahi hoga
+    } catch (e) {
+      // Native exception aane par UI crash nahi hoga, structured fallback card load hoga
       return _fallbackStaticCard(userInput, context);
     }
   }
 
   // ------------------------------------------------------------
-  // PROMPT
+  // PROMPT BUILDER
   // ------------------------------------------------------------
   String _buildPrompt({
     required String systemInstruction,
@@ -150,13 +151,13 @@ $userInput
   }
 
   // ------------------------------------------------------------
-  // SYSTEM PROMPTS (PURE DIRECT DUOLINGO STRUCTURE)
+  // DIRECT DUOLINGO CARD SYSTEM PROMPTS
   // ------------------------------------------------------------
   String _buildSystemInstruction(LlmTaskType task) {
     switch (task) {
       case LlmTaskType.quiz:
         return '''
-You are an AI Quiz Generator for Indian competitive exams such as BPSC, BSSC and SSC.
+You are an AI Quiz Generator for Indian competitive exams (BPSC, BSSC, SSC).
 Generate exactly 2 standard MCQs based only on the supplied study context.
 Format:
 Q1. [Question]
@@ -167,7 +168,7 @@ Q2. [Question]
 A) [Option 1] | B) [Option 2] | C) [Option 3] | D) [Option 4]
 Correct: [Letter]
 Explanation: [One short line]
-Do not add conversational fluff or character dialogues.
+No conversational fluff.
 ''';
 
       case LlmTaskType.analysis:
@@ -177,7 +178,7 @@ Analyze the user's answer against the supplied concept.
 Give exactly 2 crisp Hinglish lines:
 1. Correct or incorrect and why.
 2. The key exam trap or misconception.
-Do not give conversational fluff or long paragraphs.
+No conversational greetings.
 ''';
 
       case LlmTaskType.mnemonic:
@@ -186,11 +187,9 @@ You are an AI Memory Specialist for Indian competitive exams.
 Create a short, memorable Hindi/Hinglish mnemonic or memory hook for the supplied topic.
 Requirements:
 - Easy to remember.
-- Short.
-- Exam focused.
-- Catchy word or acronym.
+- Short & exam focused.
+- Catchy acronym or word.
 - Explain the connection in one short line.
-No roleplay or character personas.
 ''';
 
       case LlmTaskType.summary:
@@ -203,14 +202,13 @@ Summarize the supplied context using exactly this format:
 • Point 2
 • Point 3
 🎯 Elimination Tip: [One practical MCQ elimination tip]
-Keep it concise without any conversational text.
 ''';
 
       case LlmTaskType.duolingoExplanation:
       default:
         return '''
 You are an AI educational engine for Indian competitive exams.
-Explain strictly using this exact 3-part card format in simple, clear Hinglish. Do not use personas, characters, or conversational dialogues:
+Explain strictly using this exact 3-part card format in simple Hinglish:
 
 Micro Concept:
 [1 crisp line definition of the core rule]
@@ -227,9 +225,9 @@ B) [Option 2]
 C) [Option 3]
 D) [Option 4]
 Correct Answer: [Letter]
-Explanation: [1 crisp line explaining the correct logic and traps]
+Explanation: [1 crisp line explaining why other options are traps]
 
-Do not write any introductory greetings or conversational dialogue outside this format.
+Do not write any introductory greetings or conversational dialogue.
 ''';
     }
   }
@@ -260,31 +258,31 @@ Do not write any introductory greetings or conversational dialogue outside this 
   }
 
   // ------------------------------------------------------------
-  // CRASH-SAFE FALLBACK CARD
+  // SAFETY FALLBACK MICRO CARD
   // ------------------------------------------------------------
   String _fallbackStaticCard(String topic, String context) {
     return '''
 Micro Concept:
-$topic competitive parikshaon ke liye direct factual aur elimination rule par aadharit hai.
+$topic competitive parikshaon ke liye factual accuracy aur core elimination rule par aadharit hai.
 
 3-Step Breakdown:
-• Mool Tathya: Context ke anusar mool binding rule aur factual data ko identify karein.
-• Karyapranali: Question ko solve karte waqt direct elimination technique ka prayog karein.
-• Pariksha Savdhani: Extreme words jaise 'keval' ya 'sabhi' se savdhan rahein.
+• Step 1: Context ke mool concept ko dhyan se padhein aur direct statement note karein.
+• Step 2: Prashn me trap statements (jaise 'keval' ya 'sabhi') ko eliminate karein.
+• Step 3: BPSC/SSC parikshaon me factual verification hamesha prioritize karein.
 
 Micro Challenge:
-Q: Diye gaye context ke anusar sarvadhik upyukt nishkarsh kya hai?
-A) Factual statement sahi hai
+Q: Diye gaye context ke anusar sahi vikalp chunein:
+A) Concept statement satya hai
 B) Anishchit vikalp
 C) Trap option
 D) Inme se koi nahi
 Correct Answer: A
-Explanation: Sahi option direct core concept aur factual criteria ko verify karta hai.
+Explanation: Sahi option direct factual rule aur context ko verify karta hai.
 '''.trim();
   }
 
   // ------------------------------------------------------------
-  // RELEASE MODEL
+  // CLEAN DISPOSE
   // ------------------------------------------------------------
   Future<void> dispose() async {
     final contextId = _contextId;
@@ -292,9 +290,8 @@ Explanation: Sahi option direct core concept aur factual criteria ko verify kart
 
     try {
       await _channel.invokeMethod('releaseContext', {'contextId': contextId});
-    } finally {
-      _contextId = null;
-      _currentModelPath = null;
-    }
+    } catch (_) {}
+    _contextId = null;
+    _currentModelPath = null;
   }
 }
