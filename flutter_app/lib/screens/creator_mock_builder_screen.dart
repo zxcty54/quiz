@@ -28,6 +28,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
   String? _selectedBatchId;
   List<Map<String, dynamic>> _myBatches = [];
   bool _isLoadingBatches = true;
+  String _authorDisplayName = '';
 
   List<Map<String, dynamic>> _questions = [];
 
@@ -42,11 +43,12 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     try {
       final coachingRes = await Supabase.instance.client
           .from('coachings')
-          .select('id')
+          .select('id, name')
           .eq('owner_name', widget.creatorHandle)
           .maybeSingle();
 
       if (coachingRes != null) {
+        _authorDisplayName = coachingRes['name'] ?? widget.creatorHandle;
         final batchesRes = await Supabase.instance.client
             .from('batches')
             .select('id, batch_name, batch_code, status, batch_tests(id)')
@@ -64,9 +66,11 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
           });
         }
       } else {
+        _authorDisplayName = widget.creatorHandle;
         if (mounted) setState(() => _isLoadingBatches = false);
       }
     } catch (_) {
+      _authorDisplayName = widget.creatorHandle;
       if (mounted) setState(() => _isLoadingBatches = false);
     }
   }
@@ -158,7 +162,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Modal Top Bar
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -188,7 +191,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const Divider(height: 14),
 
-                // Header Mock Specs (Title, Question Counter & Timer)
                 Text(
                   _titleCtrl.text.trim().isNotEmpty ? _titleCtrl.text.trim() : 'Mock Test Preview',
                   style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -213,7 +215,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 14),
 
-                // Question Counter Bar
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -229,7 +230,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 8),
 
-                // Question Box
                 Expanded(
                   child: SingleChildScrollView(
                     child: Column(
@@ -250,7 +250,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                         ),
                         const SizedBox(height: 14),
 
-                        // Options A, B, C, D
                         ...List.generate(4, (oIdx) {
                           final isSelected = selectedOption == oIdx;
                           final letter = String.fromCharCode(65 + oIdx);
@@ -304,7 +303,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                   ),
                 ),
 
-                // Preview Navigation Buttons
                 Row(
                   children: [
                     if (previewCurrentIndex > 0)
@@ -548,8 +546,12 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     setState(() => _isPublishing = true);
 
     try {
+      final client = Supabase.instance.client;
+      final authorName = _authorDisplayName.isNotEmpty ? _authorDisplayName : widget.creatorHandle;
+
       if (_publishTarget == 'PUBLIC') {
-        final res = await Supabase.instance.client.from('creator_mocks').insert({
+        // 1. Insert into creator_mocks
+        final res = await client.from('creator_mocks').insert({
           'creator_id': widget.creatorHandle,
           'title': title,
           'subject': _selectedSubject,
@@ -559,21 +561,29 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
           'attempts_count': 0,
         }).select().single();
 
-        await Supabase.instance.client.from('community_posts').insert({
+        // 2. Publish to community_posts with is_approved=true and author_name
+        await client.from('community_posts').insert({
           'creator_id': widget.creatorHandle,
-          'content': '⚡ New CBT Mock Test Published: "$title". Tap below to attempt now!',
+          'author_name': authorName,
+          'content': '⚡ New CBT Mock Test Published: "$title". Tap below to attempt now! Total ${_questions.length} Questions.',
           'tag': 'Mock Tests ⚡',
           'mock_id': res['id'],
+          'is_approved': true, // 👈 Visible on feed instantly
           'views_count': 1,
+          'upvotes': 0,
+          'downvotes': 0,
+          'shares_count': 0,
+          'bookmarks_count': 0,
         });
       } else {
-        await Supabase.instance.client.from('batch_tests').insert({
+        await client.from('batch_tests').insert({
           'batch_id': _selectedBatchId,
           'test_title': title,
           'subject': _selectedSubject,
           'duration_mins': _durationMins,
           'total_questions': _questions.length,
           'questions_json': _questions,
+          'attempts_count': 0,
         });
       }
 
@@ -873,7 +883,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(width: 8),
 
-                // 👁️ PREVIEW BUTTON
                 OutlinedButton.icon(
                   icon: const Icon(Icons.remove_red_eye_outlined, size: 17, color: Color(0xFF2563EB)),
                   label: const Text('Preview', style: TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold)),
@@ -886,7 +895,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(width: 8),
 
-                // 🚀 PUBLISH BUTTON
                 Expanded(
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
