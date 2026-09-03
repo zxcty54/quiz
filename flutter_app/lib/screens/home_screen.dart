@@ -66,7 +66,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     });
   }
 
-  // 🔍 1. Smart Local Storage & Downloads Folder Auto-Detect
   Future<void> _checkLocalModelStatus() async {
     final devModelFile = File('/storage/emulated/0/Download/gemma-2-2b-it-Q4_K_M.gguf');
     final appDocDir = await getApplicationDocumentsDirectory();
@@ -83,7 +82,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 📥 2. In-App Download Fallback (Agar kisi device me pehle se downloaded na ho)
   Future<void> _startModelDownload() async {
     setState(() {
       _isDownloadingModel = true;
@@ -399,108 +397,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     }
   }
 
-  // 🎨 OFFLINE AI BANNER (WITH AUTO-DETECT)
-  Widget _buildAiModelDownloadBanner() {
-    final isDark = _isDarkMode;
-    return Container(
-      margin: const EdgeInsets.fromLTRB(16, 12, 16, 4),
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF1E293B) : Colors.white,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: _isModelDownloaded ? Colors.green.withOpacity(0.4) : const Color(0xFF2563EB).withOpacity(0.3),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.04),
-            blurRadius: 10,
-            offset: const Offset(0, 4),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: _isModelDownloaded ? Colors.green.withOpacity(0.12) : const Color(0xFF2563EB).withOpacity(0.12),
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  _isModelDownloaded ? Icons.offline_bolt_rounded : Icons.psychology_rounded,
-                  color: _isModelDownloaded ? Colors.green : const Color(0xFF2563EB),
-                  size: 24,
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      _isModelDownloaded ? "Offline AI Tutor Ready" : "Enable 100% Offline AI",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 14,
-                        color: isDark ? Colors.white : const Color(0xFF0F172A),
-                      ),
-                    ),
-                    Text(
-                      _downloadStatusText,
-                      style: TextStyle(
-                        fontSize: 11.5,
-                        color: isDark ? Colors.white60 : Colors.black54,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              if (!_isModelDownloaded && !_isDownloadingModel)
-                ElevatedButton.icon(
-                  onPressed: _startModelDownload,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF2563EB),
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-                  ),
-                  icon: const Icon(Icons.download_rounded, size: 16),
-                  label: const Text("Download", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                )
-              else if (_isModelDownloaded)
-                TextButton.icon(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => AiChatScreen(isDarkMode: _isDarkMode)),
-                    );
-                  },
-                  icon: const Icon(Icons.chat_bubble_outline_rounded, size: 16, color: Colors.green),
-                  label: const Text("Open Chat", style: TextStyle(color: Colors.green, fontWeight: FontWeight.bold, fontSize: 12)),
-                ),
-            ],
-          ),
-          if (_isDownloadingModel) ...[
-            const SizedBox(height: 10),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(8),
-              child: LinearProgressIndicator(
-                value: _downloadProgress > 0 ? _downloadProgress : null,
-                minHeight: 6,
-                backgroundColor: isDark ? Colors.black26 : Colors.grey[200],
-                valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF2563EB)),
-              ),
-            ),
-          ],
-        ],
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     if (_isLoadingConfig) {
@@ -513,6 +409,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     final cardColor = _isDarkMode ? const Color(0xFF1E293B) : Colors.white;
 
     return Scaffold(
+      backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
         title: Text(
           'MockTester',
@@ -618,6 +515,46 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                         },
                       ),
                       const Divider(),
+
+                      // 🤖 ENABLE OFFLINE AI (DRAWER MEIN INTEGRATED)
+                      ListTile(
+                        leading: Icon(
+                          _isModelDownloaded ? Icons.offline_bolt_rounded : Icons.psychology_rounded,
+                          color: _isModelDownloaded ? Colors.green : const Color(0xFF2563EB),
+                        ),
+                        title: Text(
+                          _isModelDownloaded ? 'Offline AI Ready' : 'Enable Offline AI',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        subtitle: Text(
+                          _isDownloadingModel ? 'Downloading engine...' : _downloadStatusText,
+                          style: const TextStyle(fontSize: 11),
+                        ),
+                        trailing: _isDownloadingModel
+                            ? const SizedBox(
+                                width: 20,
+                                height: 20,
+                                child: CircularProgressIndicator(strokeWidth: 2),
+                              )
+                            : Icon(
+                                _isModelDownloaded ? Icons.check_circle_outline : Icons.download_rounded,
+                                color: _isModelDownloaded ? Colors.green : const Color(0xFF2563EB),
+                                size: 20,
+                              ),
+                        onTap: () {
+                          Navigator.pop(context);
+                          if (!_isModelDownloaded && !_isDownloadingModel) {
+                            _startModelDownload();
+                          } else if (_isModelDownloaded) {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => AiChatScreen(isDarkMode: _isDarkMode)),
+                            );
+                          }
+                        },
+                      ),
+                      const Divider(),
+
                       ListTile(
                         leading: const Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
                         title: const Text('Community Feed'),
@@ -687,99 +624,91 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           },
         ),
       ),
-      body: Column(
+      body: IndexedStack(
+        index: _currentBottomIndex,
         children: [
-          // 🚀 1. OFFLINE AI BANNER
-          _buildAiModelDownloadBanner(),
-
-          // 📱 2. CORE TABS
-          Expanded(
-            child: IndexedStack(
-              index: _currentBottomIndex,
-              children: [
-                HomeTab(
-                  appConfig: _appConfig,
-                  homeData: _homeData,
-                  subjectMapping: _subjectMapping,
-                  isDarkMode: _isDarkMode,
-                  lastLearnTitle: _lastLearnTitle,
-                  lastLearnProgress: _lastLearnProgress,
-                  lastNextTopic: _lastNextTopic,
-                  hasLearningHistory: _hasLearningHistory,
-                  onTapUrl: _openWebsiteUrl,
-                  onNavigateToLearn: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (_) => const LearnHubScreen()),
-                    ).then((_) => _loadRealtimeProgress());
-                  },
-                ),
-                RevisionTab(
-                  key: ValueKey('rev_${_subjectMapping.keys.length}'),
-                  subjectMapping: _subjectMapping,
-                  onLaunchPractice: _launchRevisionPractice,
-                ),
-                SectionalTab(
-                  key: ValueKey('sec_${_sectionalData.keys.join('_')}'),
-                  sectionalData: _sectionalData,
-                  isDarkMode: _isDarkMode,
-                  onLaunchCbtMock: _launchCbtMock,
-                ),
-                CommunityFeedScreen(isDarkMode: _isDarkMode),
-                ProfileScreen(
-                  isHindi: _isHindi,
-                  isDarkMode: _isDarkMode,
-                  onHindiChanged: (v) => setState(() => _isHindi = v),
-                  onDarkModeChanged: (v) => setState(() => _isDarkMode = v),
-                ),
-              ],
-            ),
+          HomeTab(
+            appConfig: _appConfig,
+            homeData: _homeData,
+            subjectMapping: _subjectMapping,
+            isDarkMode: _isDarkMode,
+            lastLearnTitle: _lastLearnTitle,
+            lastLearnProgress: _lastLearnProgress,
+            lastNextTopic: _lastNextTopic,
+            hasLearningHistory: _hasLearningHistory,
+            onTapUrl: _openWebsiteUrl,
+            onNavigateToLearn: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => const LearnHubScreen()),
+              ).then((_) => _loadRealtimeProgress());
+            },
+          ),
+          RevisionTab(
+            key: ValueKey('rev_${_subjectMapping.keys.length}'),
+            subjectMapping: _subjectMapping,
+            onLaunchPractice: _launchRevisionPractice,
+          ),
+          SectionalTab(
+            key: ValueKey('sec_${_sectionalData.keys.join('_')}'),
+            sectionalData: _sectionalData,
+            isDarkMode: _isDarkMode,
+            onLaunchCbtMock: _launchCbtMock,
+          ),
+          CommunityFeedScreen(isDarkMode: _isDarkMode),
+          ProfileScreen(
+            isHindi: _isHindi,
+            isDarkMode: _isDarkMode,
+            onHindiChanged: (v) => setState(() => _isHindi = v),
+            onDarkModeChanged: (v) => setState(() => _isDarkMode = v),
           ),
         ],
       ),
 
-      // 🤖 FLOATING ACTION BUTTON
-      floatingActionButton: Container(
-        margin: const EdgeInsets.only(bottom: 6),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(30),
-          gradient: const LinearGradient(
-            colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0xFF2563EB).withOpacity(0.38),
-              blurRadius: 12,
-              offset: const Offset(0, 4),
-            ),
-          ],
-        ),
-        child: FloatingActionButton.extended(
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => AiChatScreen(isDarkMode: _isDarkMode),
+      // 🤖 ASK AI FLOATING BUTTON (SIRF HOME SCREEN / TAB INDEX 0 PE ACTIVE)
+      floatingActionButton: _currentBottomIndex == 0
+          ? Container(
+              margin: const EdgeInsets.only(bottom: 6),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(30),
+                gradient: const LinearGradient(
+                  colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                boxShadow: [
+                  BoxShadow(
+                    color: const Color(0xFF2563EB).withOpacity(0.38),
+                    blurRadius: 12,
+                    offset: const Offset(0, 4),
+                  ),
+                ],
               ),
-            );
-          },
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          highlightElevation: 0,
-          icon: const Icon(Icons.auto_awesome_rounded, color: Colors.white, size: 20),
-          label: const Text(
-            "Ask AI Doubt",
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 13,
-              letterSpacing: 0.3,
-            ),
-          ),
-        ),
-      ),
+              child: FloatingActionButton.extended(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => AiChatScreen(isDarkMode: _isDarkMode),
+                    ),
+                  );
+                },
+                backgroundColor: Colors.transparent,
+                elevation: 0,
+                highlightElevation: 0,
+                icon: const Icon(Icons.auto_awesome_rounded, color: Colors.white, size: 20),
+                label: const Text(
+                  "Ask AI Doubt",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 13,
+                    letterSpacing: 0.3,
+                  ),
+                ),
+              ),
+            )
+          : null,
 
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentBottomIndex,
