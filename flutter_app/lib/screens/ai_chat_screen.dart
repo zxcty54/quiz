@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:mocktester/services/offline_llm_service.dart';
 import 'package:mocktester/models/duolingo_payload.dart';
@@ -31,6 +30,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   bool _isLoading = false;
   bool _isGenerating = false;
   String _statusMessage = "Tap folder icon to select .gguf model";
+  String _currentModelName = "";
 
   @override
   void initState() {
@@ -60,7 +60,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       if (result == null || result.files.single.path == null) {
         setState(() {
           _isLoading = false;
-          _statusMessage = "Selection cancelled";
+          _statusMessage = _isModelLoaded ? "$_currentModelName Active" : "Selection cancelled";
         });
         return;
       }
@@ -75,7 +75,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
         return;
       }
 
-      // Direct internal storage path pass karein (No copy, zero storage duplicate)
       await _initQwenModel(pickedPath);
 
     } catch (e) {
@@ -98,15 +97,17 @@ class _AiChatScreenState extends State<AiChatScreen> {
         throw Exception("File path read nahi ho raha: $path");
       }
 
+      final fileName = path.split('/').last;
       final sizeMB = (await file.length()) / (1024 * 1024);
+      
       setState(() {
-        _statusMessage = "Allocating ${sizeMB.toStringAsFixed(0)}MB directly to RAM...";
+        _statusMessage = "Allocating ${sizeMB.toStringAsFixed(0)}MB to engine...";
       });
 
       await Future.delayed(const Duration(milliseconds: 150));
 
-      // Native C++ Engine Init (llama_cpp_dart)
-      await OfflineLlmAgentService.instance.initEngine(modelPath: path);
+      // Native service call
+      await OfflineLlmAgentService.instance.loadModelManually(modelPath: path);
 
       final prefs = await SharedPreferences.getInstance();
       await prefs.setString('saved_qwen_path', path);
@@ -114,7 +115,8 @@ class _AiChatScreenState extends State<AiChatScreen> {
       setState(() {
         _isModelLoaded = true;
         _isLoading = false;
-        _statusMessage = "Qwen 2B GGUF Active (Offline)";
+        _currentModelName = fileName;
+        _statusMessage = "$fileName Active (Offline)";
       });
     } catch (e) {
       setState(() {
@@ -191,6 +193,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                         ? Colors.redAccent
                         : Colors.white70),
               ),
+              overflow: TextOverflow.ellipsis,
             ),
           ],
         ),
@@ -212,7 +215,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                       padding: const EdgeInsets.all(24.0),
                       child: Text(
                         _isModelLoaded
-                            ? "Qwen 2B Ready! Ask any concept..."
+                            ? "$_currentModelName Ready! Real-life observation ya concept enter karein..."
                             : _statusMessage,
                         textAlign: TextAlign.center,
                         style: TextStyle(color: isDark ? Colors.grey.shade400 : Colors.grey),
@@ -226,7 +229,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     itemBuilder: (context, index) {
                       final msg = _messages[index];
 
-                      // User message: blue bubble
                       if (msg.isUser) {
                         return Align(
                           alignment: Alignment.centerRight,
@@ -251,7 +253,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                         );
                       }
 
-                      // Assistant message: Structured Duolingo UI card
+                      // Render pedagogical card from notebook spec
                       return DuolingoCard(
                         payload: DuolingoPayload.fromLlmText(msg.text),
                         isDarkMode: isDark,
@@ -267,7 +269,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                   const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2)),
                   const SizedBox(width: 8),
                   Text(
-                    "Qwen is formulating analysis...",
+                    "AI Agent is formulating card...",
                     style: TextStyle(fontSize: 12, color: isDark ? Colors.grey.shade400 : Colors.grey),
                   ),
                 ],
@@ -289,7 +291,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                     enabled: _isModelLoaded && !_isGenerating,
                     style: TextStyle(color: textColor),
                     decoration: InputDecoration(
-                      hintText: _isModelLoaded ? "Type any question..." : "Select model first...",
+                      hintText: _isModelLoaded ? "Type concept or observation..." : "Select model first...",
                       hintStyle: TextStyle(color: isDark ? Colors.grey.shade500 : Colors.grey),
                       border: InputBorder.none,
                       contentPadding: const EdgeInsets.symmetric(horizontal: 12),
