@@ -112,39 +112,39 @@ class OfflineLlmAgentService {
     }
 
     // Dynamic Search: Only trigger when explicitly asking for live news/current affairs
-    String retrievedKnowledge = context.trim();
-    if (retrievedKnowledge.isEmpty && _needsLiveSearch(cleanInput)) {
+    String retrievedKnowledge = "";
+    if (_needsLiveSearch(cleanInput)) {
       try {
         final webResult = await WebSearchService.instance
             .searchWebContext(cleanInput)
             .timeout(const Duration(seconds: 4));
         if (webResult.isNotEmpty) {
-          retrievedKnowledge = "Relevant retrieved knowledge:\n$webResult";
+          retrievedKnowledge = "Relevant retrieved live data:\n$webResult\n\n";
         }
       } catch (_) {
         retrievedKnowledge = "";
       }
     }
 
-    // Exact Prompt Architecture as requested
+    // Conversation Context Formatting
+    final conversationBlock = context.trim().isNotEmpty
+        ? "Recent Conversation Context:\n$context\n\n"
+        : "";
+
+    // Exact Prompt Architecture with Direct Answering Lock
     final prompt = '''<|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
-You are a helpful AI assistant.
+You are an educational AI assistant running offline locally.
 
-Answer the user's actual question directly in simple, clear Hinglish or English as appropriate.
+Directives:
+- Answer the user's actual question directly, factually, and concisely in simple Hinglish or English.
+- NEVER repeat or echo the user's question back as a question (Do not output "What is cell?" or similar counter-questions).
+- If the user asks "do you know about [topic]", provide the direct explanation of that topic immediately.
+- If asked about your name or model, state that you are an offline AI assistant.
+- If the user says follow-up words like "yes", "aur batao", or "explain", continue directly from the recent conversation context.
+- Stay strictly on topic. Do not invent unrelated topics or placeholder text. Plain text only.<|eot_id|><|start_header_id|>user<|end_header_id|>
 
-Rules:
-- Stay focused on the user's question.
-- Do not introduce unrelated topics.
-- Do not invent facts when you are uncertain.
-- Use the conversation context when relevant.
-- If the question is ambiguous, ask a clarification question.
-- If you don't know the answer, say so instead of guessing.
-- Keep the answer proportional to the question.
-- Before producing the final answer, check whether it actually answers the user's question.
-- Never output meta thoughts, JSON, brackets, or card templates. Output clean plain text only.<|eot_id|><|start_header_id|>user<|end_header_id|>
-
-${retrievedKnowledge.isNotEmpty ? "$retrievedKnowledge\n\n" : ""}$cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+$retrievedKnowledge$conversationBlock$cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
 ''';
 
     final completer = Completer<String>();
@@ -154,7 +154,7 @@ ${retrievedKnowledge.isNotEmpty ? "$retrievedKnowledge\n\n" : ""}$cleanInput<|eo
     try {
       final stream = activeController.generate(
         prompt: prompt,
-        temperature: 0.2, // Balanced factual adherence
+        temperature: 0.15, // Anchored decoding stops random hallucinations
         maxTokens: 300,
       );
 
