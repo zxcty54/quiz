@@ -28,7 +28,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   String _customUserName = 'Aspirant';
   String _currentLoggedInHandle = 'user';
 
-  String _searchQuery = '';
   final TextEditingController _searchCtrl = TextEditingController();
 
   final Set<int> _likedPostIds = {};
@@ -63,6 +62,12 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     _fetchFeedPosts();
   }
 
+  @override
+  void dispose() {
+    _searchCtrl.dispose();
+    super.dispose();
+  }
+
   Future<void> _loadUserPreferences() async {
     final prefs = await SharedPreferences.getInstance();
     final liked = prefs.getStringList('local_liked_post_ids') ?? [];
@@ -77,14 +82,13 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       });
     }
 
-    // Existing 'user_saved_posts' table se account-level bookmarks fetch karein
     try {
       final savedRes = await Supabase.instance.client
           .from('user_saved_posts')
           .select('post_id')
           .eq('user_handle', _currentLoggedInHandle);
 
-      if (savedRes != null && mounted) {
+      if (mounted) {
         setState(() {
           _savedPostIds.clear();
           for (var row in savedRes) {
@@ -183,23 +187,28 @@ $content
     try {
       final currentShares = (post['shares_count'] ?? 0) + 1;
       setState(() => post['shares_count'] = currentShares);
-      await Supabase.instance.client.from('community_posts').update({'shares_count': currentShares}).eq('id', postId);
+
+      await Supabase.instance.client.rpc('increment_post_metric', params: {
+        'post_id_param': postId,
+        'metric_field': 'shares_count',
+        'amount': 1,
+      });
     } catch (_) {}
   }
 
-  // Existing 'user_saved_posts' table ke sath sync
+  // ATOMIC BOOKMARK METHOD
   void _toggleBookmark(int postId, Map<String, dynamic> post) async {
     HapticFeedback.mediumImpact();
     final bool isSaving = !_savedPostIds.contains(postId);
+    final int delta = isSaving ? 1 : -1;
 
     setState(() {
       if (isSaving) {
         _savedPostIds.add(postId);
-        post['bookmarks_count'] = (post['bookmarks_count'] ?? 0) + 1;
       } else {
         _savedPostIds.remove(postId);
-        post['bookmarks_count'] = ((post['bookmarks_count'] ?? 1) - 1).clamp(0, 99999);
       }
+      post['bookmarks_count'] = ((post['bookmarks_count'] ?? 0) + delta).clamp(0, 999999);
     });
 
     try {
@@ -216,47 +225,78 @@ $content
             .eq('post_id', postId);
       }
 
-      await Supabase.instance.client
-          .from('community_posts')
-          .update({'bookmarks_count': post['bookmarks_count']})
-          .eq('id', postId);
-    } catch (_) {}
+      await Supabase.instance.client.rpc('increment_post_metric', params: {
+        'post_id_param': postId,
+        'metric_field': 'bookmarks_count',
+        'amount': delta,
+      });
 
-    if (mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(isSaving ? '📌 Saved to Revision Notebook!' : 'Removed from Saved!'),
-          duration: const Duration(seconds: 1),
-          backgroundColor: _ink,
-        ),
-      );
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(isSaving ? '📌 Saved to Revision Notebook!' : 'Removed from Saved!'),
+            duration: const Duration(seconds: 1),
+            backgroundColor: _ink,
+          ),
+        );
+      }
+    } catch (e) {
+      debugPrint("Bookmark Error: $e");
+      if (mounted) {
+        setState(() {
+          if (isSaving) {
+            _savedPostIds.remove(postId);
+          } else {
+            _savedPostIds.add(postId);
+          }
+          post['bookmarks_count'] = ((post['bookmarks_count'] ?? 0) - delta).clamp(0, 999999);
+        });
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Failed to update bookmark. Check connection.')),
+        );
+      }
     }
   }
 
+  // ATOMIC LIKE METHOD
   void _handleLike(int index) async {
     HapticFeedback.lightImpact();
     final post = _posts[index];
     final int postId = post['id'];
     final bool isCurrentlyLiked = _likedPostIds.contains(postId);
+    final int delta = isCurrentlyLiked ? -1 : 1;
 
     setState(() {
       if (isCurrentlyLiked) {
         _likedPostIds.remove(postId);
-        post['upvotes'] = ((post['upvotes'] ?? 1) - 1).clamp(0, 999999);
       } else {
         _likedPostIds.add(postId);
-        post['upvotes'] = (post['upvotes'] ?? 0) + 1;
       }
+      post['upvotes'] = ((post['upvotes'] ?? 0) + delta).clamp(0, 999999);
     });
 
     final prefs = await SharedPreferences.getInstance();
     await prefs.setStringList('local_liked_post_ids', _likedPostIds.map((e) => e.toString()).toList());
 
-    Supabase.instance.client
-        .from('community_posts')
-        .update({'upvotes': post['upvotes']})
-        .eq('id', postId)
-        .then((_) {});
+    try {
+      await Supabase.instance.client.rpc('increment_post_metric', params: {
+        'post_id_param': postId,
+        'metric_field': 'upvotes',
+        'amount': delta,
+      });
+    } catch (e) {
+      debugPrint("Like RPC Error: $e");
+      if (mounted) {
+        setState(() {
+          if (isCurrentlyLiked) {
+            _likedPostIds.add(postId);
+          } else {
+            _likedPostIds.remove(postId);
+          }
+          post['upvotes'] = ((post['upvotes'] ?? 0) - delta).clamp(0, 999999);
+        });
+      }
+    }
   }
 
   void _submitPollVote(int postId, int optionIdx, Map<String, dynamic> pollData) {
@@ -279,7 +319,6 @@ $content
         .then((_) {});
   }
 
-  // Real Mock Launch: Attempts count section_cbt_screen me submit hone par update hota hai
   void _launchAttachedMock(Map<String, dynamic> mock) {
     final List rawList = mock['questions_json'] ?? [];
     if (rawList.isEmpty) return;
@@ -423,13 +462,14 @@ $content
     );
   }
 
-  // Existing 'post_comments' table ke sath nested reply system
-  void _openCommentsSheet(int postId, String postAuthorId) {
+  // FIXED: Comments & Replies BottomSheet with dynamic local insertion
+  void _openCommentsSheet(int postId, Map<String, dynamic> post) {
     final commentCtrl = TextEditingController();
     int? replyingToCommentId;
     String? replyingToName;
-    int refreshKey = 0;
     bool isSubmitting = false;
+    List<Map<String, dynamic>> comments = [];
+    bool isLoadingComments = true;
 
     showModalBottomSheet(
       context: context,
@@ -437,162 +477,183 @@ $content
       backgroundColor: widget.isDarkMode ? _inkDarkCard : _paperCard,
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setSheetState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
-          child: SizedBox(
-            height: MediaQuery.of(ctx).size.height * 0.70,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Text('💬 Discussion & Solution Replies', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: widget.isDarkMode ? _onInk : _ink)),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
-                  ],
-                ),
-                Divider(color: widget.isDarkMode ? _inkDarkBorder : _paperBorder),
-                Expanded(
-                  child: FutureBuilder<List<Map<String, dynamic>>>(
-                    key: ValueKey('comments_${postId}_$refreshKey'),
-                    future: Supabase.instance.client
-                        .from('post_comments')
-                        .select()
-                        .eq('post_id', postId)
-                        .order('created_at', ascending: true),
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.waiting) {
-                        return const Center(child: CircularProgressIndicator(strokeWidth: 2));
-                      }
-                      final comments = snapshot.data ?? [];
-                      if (comments.isEmpty) {
-                        return const Center(child: Text('No replies yet. Be the first to solve!'));
-                      }
-                      return ListView.builder(
-                        itemCount: comments.length,
-                        itemBuilder: (context, cIdx) {
-                          final c = comments[cIdx];
-                          final bool isReply = c['parent_comment_id'] != null;
+        builder: (ctx, setSheetState) {
+          if (isLoadingComments) {
+            Supabase.instance.client
+                .from('post_comments')
+                .select()
+                .eq('post_id', postId)
+                .order('created_at', ascending: true)
+                .then((data) {
+              if (ctx.mounted) {
+                setSheetState(() {
+                  comments = List<Map<String, dynamic>>.from(data);
+                  isLoadingComments = false;
+                });
+              }
+            }).catchError((_) {
+              if (ctx.mounted) setSheetState(() => isLoadingComments = false);
+            });
+          }
 
-                          return Container(
-                            margin: EdgeInsets.only(left: isReply ? 24.0 : 0.0, bottom: 8),
-                            padding: const EdgeInsets.all(10),
-                            decoration: BoxDecoration(
-                              color: isReply ? (widget.isDarkMode ? const Color(0xFF262140) : const Color(0xFFF4F2FC)) : Colors.transparent,
-                              borderRadius: BorderRadius.circular(8),
-                              border: isReply ? const Border(left: BorderSide(color: _ink, width: 3)) : null,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text(c['user_name'] ?? 'Aspirant', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
-                                    const SizedBox(width: 6),
-                                    if (c['is_creator'] == true)
-                                      const Icon(Icons.verified, color: _ink, size: 14),
-                                    const Spacer(),
-                                    GestureDetector(
-                                      onTap: () {
-                                        setSheetState(() {
-                                          replyingToCommentId = c['id'];
-                                          replyingToName = c['user_name'] ?? 'Aspirant';
-                                        });
-                                      },
-                                      child: const Text('Reply', style: TextStyle(color: _ink, fontSize: 11, fontWeight: FontWeight.bold)),
+          return Padding(
+            padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+            child: SizedBox(
+              height: MediaQuery.of(ctx).size.height * 0.72,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        '💬 Discussion & Replies',
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: widget.isDarkMode ? _onInk : _ink),
+                      ),
+                      IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                    ],
+                  ),
+                  Divider(color: widget.isDarkMode ? _inkDarkBorder : _paperBorder),
+                  Expanded(
+                    child: isLoadingComments
+                        ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
+                        : comments.isEmpty
+                            ? const Center(child: Text('No replies yet. Be the first to solve!'))
+                            : ListView.builder(
+                                itemCount: comments.length,
+                                itemBuilder: (context, cIdx) {
+                                  final c = comments[cIdx];
+                                  final bool isReply = c['parent_comment_id'] != null;
+
+                                  return Container(
+                                    margin: EdgeInsets.only(left: isReply ? 24.0 : 0.0, bottom: 8),
+                                    padding: const EdgeInsets.all(10),
+                                    decoration: BoxDecoration(
+                                      color: isReply
+                                          ? (widget.isDarkMode ? const Color(0xFF262140) : const Color(0xFFF4F2FC))
+                                          : Colors.transparent,
+                                      borderRadius: BorderRadius.circular(8),
+                                      border: isReply ? const Border(left: BorderSide(color: _ink, width: 3)) : null,
                                     ),
-                                  ],
-                                ),
-                                const SizedBox(height: 4),
-                                _buildRichTextContent(c['comment_text'] ?? c['content'] ?? '', fontSize: 13),
-                              ],
-                            ),
-                          );
-                        },
-                      );
-                    },
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Text(c['user_name'] ?? 'Aspirant', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                                            const SizedBox(width: 6),
+                                            if (c['is_creator'] == true)
+                                              const Icon(Icons.verified, color: _ink, size: 14),
+                                            const Spacer(),
+                                            GestureDetector(
+                                              onTap: () {
+                                                setSheetState(() {
+                                                  replyingToCommentId = c['id'];
+                                                  replyingToName = c['user_name'] ?? 'Aspirant';
+                                                });
+                                              },
+                                              child: const Text('Reply', style: TextStyle(color: _ink, fontSize: 11, fontWeight: FontWeight.bold)),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(height: 4),
+                                        _buildRichTextContent(c['comment_text'] ?? c['content'] ?? '', fontSize: 13),
+                                      ],
+                                    ),
+                                  );
+                                },
+                              ),
                   ),
-                ),
-                if (replyingToCommentId != null) ...[
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                    color: _ink.withOpacity(0.1),
-                    child: Row(
-                      children: [
-                        Text('Replying to @$replyingToName', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _ink)),
-                        const Spacer(),
-                        IconButton(
-                          icon: const Icon(Icons.close, size: 14),
-                          onPressed: () => setSheetState(() {
-                            replyingToCommentId = null;
-                            replyingToName = null;
-                          }),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-                Divider(color: widget.isDarkMode ? _inkDarkBorder : _paperBorder),
-                Row(
-                  children: [
-                    Expanded(
-                      child: TextField(
-                        controller: commentCtrl,
-                        textInputAction: TextInputAction.send,
-                        decoration: InputDecoration(
-                          hintText: replyingToName != null ? 'Reply to @$replyingToName...' : 'Add solution or reply as $_customUserName...',
-                          border: InputBorder.none,
-                        ),
+                  if (replyingToCommentId != null)
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                      color: _ink.withOpacity(0.1),
+                      child: Row(
+                        children: [
+                          Text('Replying to @$replyingToName', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _ink)),
+                          const Spacer(),
+                          IconButton(
+                            icon: const Icon(Icons.close, size: 14),
+                            onPressed: () => setSheetState(() {
+                              replyingToCommentId = null;
+                              replyingToName = null;
+                            }),
+                          ),
+                        ],
                       ),
                     ),
-                    IconButton(
-                      icon: isSubmitting
-                          ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2))
-                          : const Icon(Icons.send_rounded, color: _ink),
-                      onPressed: isSubmitting
-                          ? null
-                          : () async {
-                              final text = commentCtrl.text.trim();
-                              if (text.isEmpty) return;
+                  Divider(color: widget.isDarkMode ? _inkDarkBorder : _paperBorder),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          controller: commentCtrl,
+                          textInputAction: TextInputAction.send,
+                          decoration: InputDecoration(
+                            hintText: replyingToName != null ? 'Reply to @$replyingToName...' : 'Add solution as $_customUserName...',
+                            border: InputBorder.none,
+                          ),
+                        ),
+                      ),
+                      IconButton(
+                        icon: isSubmitting
+                            ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2))
+                            : const Icon(Icons.send_rounded, color: _ink),
+                        onPressed: isSubmitting
+                            ? null
+                            : () async {
+                                final text = commentCtrl.text.trim();
+                                if (text.isEmpty) return;
 
-                              final validationError = SecurityContentGuard.validateContent(text);
-                              if (validationError != null) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text(validationError), backgroundColor: Colors.red.shade800),
-                                );
-                                return;
-                              }
+                                final validationError = SecurityContentGuard.validateContent(text);
+                                if (validationError != null) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(content: Text(validationError), backgroundColor: Colors.red.shade800),
+                                  );
+                                  return;
+                                }
 
-                              setSheetState(() => isSubmitting = true);
-                              try {
-                                await Supabase.instance.client.from('post_comments').insert({
-                                  'post_id': postId,
-                                  'user_handle': _currentLoggedInHandle,
-                                  'user_name': _customUserName,
-                                  'comment_text': text,
-                                  'parent_comment_id': replyingToCommentId,
-                                  'is_creator': _currentLoggedInHandle != 'user',
-                                });
+                                setSheetState(() => isSubmitting = true);
+                                try {
+                                  final inserted = await Supabase.instance.client.from('post_comments').insert({
+                                    'post_id': postId,
+                                    'user_handle': _currentLoggedInHandle,
+                                    'user_name': _customUserName,
+                                    'comment_text': text,
+                                    'parent_comment_id': replyingToCommentId,
+                                    'is_creator': _currentLoggedInHandle != 'user',
+                                  }).select().single();
 
-                                commentCtrl.clear();
-                                setSheetState(() {
-                                  replyingToCommentId = null;
-                                  replyingToName = null;
-                                  refreshKey++;
-                                  isSubmitting = false;
-                                });
-                              } catch (e) {
-                                setSheetState(() => isSubmitting = false);
-                              }
-                            },
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-              ],
+                                  commentCtrl.clear();
+                                  setSheetState(() {
+                                    comments.add(inserted);
+                                    replyingToCommentId = null;
+                                    replyingToName = null;
+                                    isSubmitting = false;
+                                  });
+
+                                  // Parent Feed counter sync
+                                  setState(() {
+                                    post['comments_count'] = (post['comments_count'] ?? 0) + 1;
+                                  });
+                                } catch (e) {
+                                  setSheetState(() => isSubmitting = false);
+                                  if (context.mounted) {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(content: Text('Failed to post reply. Please try again.')),
+                                    );
+                                  }
+                                }
+                              },
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                ],
+              ),
             ),
-          ),
-        ),
+          );
+        },
       ),
     );
   }
@@ -1242,9 +1303,10 @@ $content
 
                                     const SizedBox(height: 12),
 
+                                    // Action Bar: Like, Comments/Replies, Stats, Saved, Share
                                     Row(
                                       children: [
-                                        // 👍 Like Button (Single Action, Positive Only)
+                                        // 👍 Like Button (Atomic RPC)
                                         InkWell(
                                           onTap: () => _handleLike(idx),
                                           borderRadius: BorderRadius.circular(20),
@@ -1278,9 +1340,9 @@ $content
                                         ),
                                         const SizedBox(width: 8),
 
-                                        // 💬 Reply / Comments Button
+                                        // 💬 Reply / Comments Button (Local State Reactive)
                                         InkWell(
-                                          onTap: () => _openCommentsSheet(postId, item['creator_id'] ?? 'user'),
+                                          onTap: () => _openCommentsSheet(postId, item),
                                           borderRadius: BorderRadius.circular(20),
                                           child: Container(
                                             height: 32,
@@ -1340,7 +1402,7 @@ $content
                                         ),
                                         const SizedBox(width: 8),
 
-                                        // 📌 Bookmark (user_saved_posts se linked)
+                                        // 📌 Bookmark (Atomic RPC + user_saved_posts)
                                         InkWell(
                                           onTap: () => _toggleBookmark(postId, item),
                                           borderRadius: BorderRadius.circular(20),
