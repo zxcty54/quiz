@@ -6,6 +6,8 @@ enum LlmTaskType {
   duolingoExplanation,
   quiz,
   analysis,
+  mnemonic,
+  summary,
 }
 
 class OfflineLlmAgentService {
@@ -102,7 +104,6 @@ class OfflineLlmAgentService {
     StreamSubscription<String>? subscription;
 
     try {
-      // Type-safe pigeon call specifically built for Android GGUF inference
       final stream = activeController.generateChat(
         messages: [
           ChatMessage(role: 'system', content: systemInstruction),
