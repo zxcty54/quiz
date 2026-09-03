@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 import 'package:llama_flutter_android/llama_flutter_android.dart';
+import 'web_search_service.dart';
 
 enum LlmTaskType {
   duolingoExplanation,
@@ -71,8 +72,25 @@ class OfflineLlmAgentService {
     _loadedModelPath = null;
   }
 
+  bool _needsLiveSearch(String input) {
+    final lower = input.toLowerCase();
+    final triggers = [
+      'latest',
+      'current affairs',
+      'current affair',
+      'aaj ka',
+      'recent',
+      'new update',
+      'breaking',
+      'news',
+      'taaza',
+      '2026',
+    ];
+    return triggers.any((word) => lower.contains(word));
+  }
+
   // ------------------------------------------------------------
-  // THINKING & REASONING INFERENCE PIPELINE (Up to 200 words)
+  // CLEAN DIRECT INFERENCE PIPELINE
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -90,26 +108,43 @@ class OfflineLlmAgentService {
 
     final cleanInput = userInput.trim();
     if (cleanInput.isEmpty) {
-      return "Kripya apna sawal ya topic likhein.";
+      return "Kripya apna sawal likhein.";
     }
 
-    // Two-Phase Brain Prompt:
-    // 1. Model pehle query analyze karega (Intent determine karega)
-    // 2. Fir seedhe 150-200 words me crystal-clear Hinglish explanation dega
+    // Dynamic Search: Only trigger when explicitly asking for live news/current affairs
+    String retrievedKnowledge = context.trim();
+    if (retrievedKnowledge.isEmpty && _needsLiveSearch(cleanInput)) {
+      try {
+        final webResult = await WebSearchService.instance
+            .searchWebContext(cleanInput)
+            .timeout(const Duration(seconds: 4));
+        if (webResult.isNotEmpty) {
+          retrievedKnowledge = "Relevant retrieved knowledge:\n$webResult";
+        }
+      } catch (_) {
+        retrievedKnowledge = "";
+      }
+    }
+
+    // Exact Prompt Architecture as requested
     final prompt = '''<|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
-You are an expert AI mentor for competitive exams.
-Before answering, silently analyze the user's input:
-- What is the exact intent? (Greeting, core science concept, polity article, or exam details?)
-- How to make it immediately clear to a student in everyday terms?
+You are a helpful AI assistant.
 
-Response Guidelines:
-1. Natural Spoken Hinglish: Explain like a real mentor sitting in front of the student.
-2. Conceptual Depth: Start with real-life intuition (WHY before WHAT), explain the core factual mechanism, and point out what trap examiners set.
-3. Length: Provide a complete, thoughtful explanation within 150 to 200 words.
-4. Directness: Never ask counter-questions. Do not output meta-tags, thought processes, or template brackets. Speak directly to the student.<|eot_id|><|start_header_id|>user<|end_header_id|>
+Answer the user's actual question directly in simple, clear Hinglish or English as appropriate.
 
-${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+Rules:
+- Stay focused on the user's question.
+- Do not introduce unrelated topics.
+- Do not invent facts when you are uncertain.
+- Use the conversation context when relevant.
+- If the question is ambiguous, ask a clarification question.
+- If you don't know the answer, say so instead of guessing.
+- Keep the answer proportional to the question.
+- Before producing the final answer, check whether it actually answers the user's question.
+- Never output meta thoughts, JSON, brackets, or card templates. Output clean plain text only.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+${retrievedKnowledge.isNotEmpty ? "$retrievedKnowledge\n\n" : ""}$cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
 ''';
 
     final completer = Completer<String>();
@@ -117,11 +152,10 @@ ${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|
     StreamSubscription<String>? subscription;
 
     try {
-      // 200 words = lagbhag 260-320 tokens. maxTokens 350 rakha hai taaki answer beech me na kate.
       final stream = activeController.generate(
         prompt: prompt,
-        temperature: 0.3, // Accurate reasoning bina bhatke
-        maxTokens: 350,
+        temperature: 0.2, // Balanced factual adherence
+        maxTokens: 300,
       );
 
       subscription = stream.listen(
@@ -142,11 +176,11 @@ ${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|
       );
 
       final result = await completer.future.timeout(
-        const Duration(seconds: 45),
+        const Duration(seconds: 40),
         onTimeout: () {
           subscription?.cancel();
           if (buffer.isNotEmpty) return buffer.toString();
-          throw Exception("Inference timeout: 45s.");
+          throw Exception("Inference timeout: 40s.");
         },
       );
 
