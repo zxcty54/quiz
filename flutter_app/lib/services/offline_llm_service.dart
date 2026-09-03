@@ -100,23 +100,20 @@ Explanation: [1 crisp line]
         break;
     }
 
-    final prompt = '''
-<|im_start|>system
-$systemInstruction
-<|im_end|>
-<|im_start|>user
+    final userContent = '''
 STUDY CONTEXT:
 $context
 
 TOPIC / INPUT:
 $userInput
-<|im_end|>
-<|im_start|>assistant
 ''';
 
-    final request = OpenAiRequest(
+    final request = OpenAiChatRequest(
       modelPath: _modelPath!,
-      prompt: prompt,
+      messages: [
+        {'role': 'system', 'content': systemInstruction},
+        {'role': 'user', 'content': userContent},
+      ],
       temperature: 0.2,
       contextSize: 768,
       threads: 4,
@@ -124,8 +121,8 @@ $userInput
 
     final StringBuffer buffer = StringBuffer();
 
-    await fllamaChat(request, (response, done) {
-      if (response.isNotEmpty) {
+    await fllama.chat(request, (response, done) {
+      if (response != null && response.isNotEmpty) {
         buffer.write(response);
       }
     });
