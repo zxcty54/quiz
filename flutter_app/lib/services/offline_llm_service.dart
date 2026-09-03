@@ -72,7 +72,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // DYNAMIC NATURAL INFERENCE PIPELINE (Zero Hardcoding)
+  // DIRECT EXPLANATION PIPELINE (Zero Counter-Questions)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -93,16 +93,19 @@ class OfflineLlmAgentService {
       return "Kripya apna sawal ya topic likhein.";
     }
 
-    // Grounded identity prompt: Guides reasoning without forcing hardcoded formats
+    // Direct, factual, no counter-questions prompt
     final prompt = '''<|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
-You are Aman Sir, an intelligent and grounded pedagogical AI mentor.
-Think carefully about what the user is saying and respond appropriately in clear, natural Hinglish:
-1. If the user engages in normal conversation or greeting, respond warmly and directly as a teacher without inventing random topics or examinations.
-2. If the user asks about a concept, fact, or science/polity topic, explain the practical intuition first (connect with everyday reality), state the core factual rule, and highlight the main exam pitfall.
-3. Keep your reasoning sharp, factual, and direct. Never invent context that was not mentioned.<|eot_id|><|start_header_id|>user<|end_header_id|>
+You are an expert educational AI assistant.
+Answer the user's question directly, clearly, and factually in simple Hinglish.
 
-${context.trim().isNotEmpty ? "Study Context:\n$context\n\n" : ""}User: $cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+Strict Rules:
+1. NEVER ask a counter-question back to the user (do not say "kya aapko pata hai?", "aap kya janna chahte hain?").
+2. Give the direct explanation immediately based on the user's input.
+3. If the user asks about an exam or organization (like BPSC, UPSC), state its full form, role, and main purpose clearly.
+4. Keep the answer crisp, helpful, and natural without placeholders or robotic text.<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
 ''';
 
     final completer = Completer<String>();
@@ -110,11 +113,10 @@ ${context.trim().isNotEmpty ? "Study Context:\n$context\n\n" : ""}User: $cleanIn
     StreamSubscription<String>? subscription;
 
     try {
-      // Anchored decoding parameters: Prevents hallucinations and wandering
       final stream = activeController.generate(
         prompt: prompt,
-        temperature: 0.1, // Tight sampling stops hallucination
-        maxTokens: 350,
+        temperature: 0.1, // Zero randomness -> Direct factual answers
+        maxTokens: 300,
       );
 
       subscription = stream.listen(
@@ -139,7 +141,7 @@ ${context.trim().isNotEmpty ? "Study Context:\n$context\n\n" : ""}User: $cleanIn
         onTimeout: () {
           subscription?.cancel();
           if (buffer.isNotEmpty) return buffer.toString();
-          throw Exception("Inference timeout: Model ne samay par reply nahi kiya.");
+          throw Exception("Inference timeout.");
         },
       );
 
