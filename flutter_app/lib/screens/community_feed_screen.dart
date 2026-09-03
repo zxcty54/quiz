@@ -26,7 +26,12 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   bool _isLoading = true;
   String _activeFilter = 'All';
   String _customUserName = 'Aspirant';
-  final Map<int, int> _userVoteState = {};
+  String _currentLoggedInHandle = 'user';
+
+  String _searchQuery = '';
+  final TextEditingController _searchCtrl = TextEditingController();
+
+  final Set<int> _likedPostIds = {};
   final Map<int, int> _userPollSelections = {};
   final Set<int> _savedPostIds = {};
 
@@ -41,7 +46,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     'Saved 📌'
   ];
 
-  // Signature accent — ink & answer-sheet theme
   static const Color _ink = Color(0xFF322D66);
   static const Color _inkLight = Color(0xFFB3ACEE);
   static const Color _onInk = Color(0xFFF3F1FF);
@@ -61,12 +65,35 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   Future<void> _loadUserPreferences() async {
     final prefs = await SharedPreferences.getInstance();
-    final saved = prefs.getStringList('local_saved_post_ids') ?? [];
+    final liked = prefs.getStringList('local_liked_post_ids') ?? [];
     final name = prefs.getString('custom_aspirant_name') ?? 'Aspirant';
-    setState(() {
-      _savedPostIds.addAll(saved.map((e) => int.tryParse(e) ?? 0));
-      _customUserName = name;
-    });
+    final handle = prefs.getString('logged_in_creator_handle') ?? 'user';
+
+    if (mounted) {
+      setState(() {
+        _likedPostIds.addAll(liked.map((e) => int.tryParse(e) ?? 0));
+        _customUserName = name;
+        _currentLoggedInHandle = handle;
+      });
+    }
+
+    // Existing 'user_saved_posts' table se account-level bookmarks fetch karein
+    try {
+      final savedRes = await Supabase.instance.client
+          .from('user_saved_posts')
+          .select('post_id')
+          .eq('user_handle', _currentLoggedInHandle);
+
+      if (savedRes != null && mounted) {
+        setState(() {
+          _savedPostIds.clear();
+          for (var row in savedRes) {
+            final pid = int.tryParse(row['post_id'].toString());
+            if (pid != null) _savedPostIds.add(pid);
+          }
+        });
+      }
+    } catch (_) {}
   }
 
   Future<void> _editMyNameDialog() async {
@@ -119,7 +146,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
       if (mounted) {
         setState(() {
-          _posts = res;
+          _posts = res ?? [];
           _isLoading = false;
         });
       }
@@ -160,9 +187,9 @@ $content
     } catch (_) {}
   }
 
+  // Existing 'user_saved_posts' table ke sath sync
   void _toggleBookmark(int postId, Map<String, dynamic> post) async {
     HapticFeedback.mediumImpact();
-    final prefs = await SharedPreferences.getInstance();
     final bool isSaving = !_savedPostIds.contains(postId);
 
     setState(() {
@@ -175,10 +202,24 @@ $content
       }
     });
 
-    await prefs.setStringList('local_saved_post_ids', _savedPostIds.map((e) => e.toString()).toList());
-    
     try {
-      await Supabase.instance.client.from('community_posts').update({'bookmarks_count': post['bookmarks_count']}).eq('id', postId);
+      if (isSaving) {
+        await Supabase.instance.client.from('user_saved_posts').insert({
+          'user_handle': _currentLoggedInHandle,
+          'post_id': postId,
+        });
+      } else {
+        await Supabase.instance.client
+            .from('user_saved_posts')
+            .delete()
+            .eq('user_handle', _currentLoggedInHandle)
+            .eq('post_id', postId);
+      }
+
+      await Supabase.instance.client
+          .from('community_posts')
+          .update({'bookmarks_count': post['bookmarks_count']})
+          .eq('id', postId);
     } catch (_) {}
 
     if (mounted) {
@@ -192,45 +233,28 @@ $content
     }
   }
 
-  void _handleVote(int index, bool isUpvote) {
+  void _handleLike(int index) async {
     HapticFeedback.lightImpact();
     final post = _posts[index];
     final int postId = post['id'];
-    int currentVote = _userVoteState[postId] ?? 0;
-    int upDelta = 0;
-    int downDelta = 0;
+    final bool isCurrentlyLiked = _likedPostIds.contains(postId);
 
     setState(() {
-      if (isUpvote) {
-        if (currentVote == 1) {
-          _userVoteState[postId] = 0;
-          upDelta = -1;
-        } else {
-          if (currentVote == -1) downDelta = -1;
-          _userVoteState[postId] = 1;
-          upDelta = 1;
-        }
+      if (isCurrentlyLiked) {
+        _likedPostIds.remove(postId);
+        post['upvotes'] = ((post['upvotes'] ?? 1) - 1).clamp(0, 999999);
       } else {
-        if (currentVote == -1) {
-          _userVoteState[postId] = 0;
-          downDelta = -1;
-        } else {
-          if (currentVote == 1) upDelta = -1;
-          _userVoteState[postId] = -1;
-          downDelta = 1;
-        }
+        _likedPostIds.add(postId);
+        post['upvotes'] = (post['upvotes'] ?? 0) + 1;
       }
-
-      post['upvotes'] = (post['upvotes'] ?? 0) + upDelta;
-      post['downvotes'] = (post['downvotes'] ?? 0) + downDelta;
     });
+
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setStringList('local_liked_post_ids', _likedPostIds.map((e) => e.toString()).toList());
 
     Supabase.instance.client
         .from('community_posts')
-        .update({
-          'upvotes': post['upvotes'],
-          'downvotes': post['downvotes'],
-        })
+        .update({'upvotes': post['upvotes']})
         .eq('id', postId)
         .then((_) {});
   }
@@ -255,6 +279,7 @@ $content
         .then((_) {});
   }
 
+  // Real Mock Launch: Attempts count section_cbt_screen me submit hone par update hota hai
   void _launchAttachedMock(Map<String, dynamic> mock) {
     final List rawList = mock['questions_json'] ?? [];
     if (rawList.isEmpty) return;
@@ -268,15 +293,6 @@ $content
 
     if (qList.isEmpty) return;
 
-    final updatedAttempts = (mock['attempts_count'] ?? 0) + 1;
-    setState(() => mock['attempts_count'] = updatedAttempts);
-
-    Supabase.instance.client
-        .from('creator_mocks')
-        .update({'attempts_count': updatedAttempts})
-        .eq('id', mock['id'])
-        .then((_) {});
-
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -284,6 +300,7 @@ $content
           testTitle: mock['title'] ?? 'Community Mock Drill',
           questions: qList,
           subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
+          mockId: mock['id'],
         ),
       ),
     );
@@ -292,14 +309,11 @@ $content
   void _openPostAnalyticsSheet(Map<String, dynamic> post) {
     final int views = post['views_count'] ?? 120;
     final int upvotes = post['upvotes'] ?? 0;
-    final int downvotes = post['downvotes'] ?? 0;
     final int bookmarks = post['bookmarks_count'] ?? 0;
     final int shares = post['shares_count'] ?? 0;
     final attachedMock = post['creator_mocks'];
     final int attempts = attachedMock?['attempts_count'] ?? 0;
 
-    final int totalVotes = upvotes + downvotes;
-    final double upvoteRatio = totalVotes > 0 ? ((upvotes / totalVotes) * 100) : 100.0;
     final int totalInteractions = upvotes + bookmarks + shares + attempts;
     final double engagementScore = views > 0 ? ((totalInteractions / views) * 100) : 0.0;
 
@@ -339,7 +353,7 @@ $content
             const SizedBox(height: 8),
             Row(
               children: [
-                _buildMiniMetricCard('Likes Ratio 🔼', '${upvoteRatio.toStringAsFixed(0)}%', '$upvotes Upvotes vs $downvotes Downvotes', Colors.green),
+                _buildMiniMetricCard('Applauds / Likes 👍', '$upvotes', 'Positive Aspirant Votes', Colors.green),
                 const SizedBox(width: 8),
                 _buildMiniMetricCard('Shares 🔗', '$shares', 'Shared External Link', Colors.indigo),
               ],
@@ -362,8 +376,8 @@ $content
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Mock Drill Conversion: $attempts Attempts', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
-                          Text('Aspirants completed this test drill', style: TextStyle(color: Colors.grey[500], fontSize: 10.5)),
+                          Text('Mock Drill Activity: $attempts Test Submissions', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
+                          Text('Completed evaluation sheets synced', style: TextStyle(color: Colors.grey[500], fontSize: 10.5)),
                         ],
                       ),
                     ),
@@ -409,6 +423,7 @@ $content
     );
   }
 
+  // Existing 'post_comments' table ke sath nested reply system
   void _openCommentsSheet(int postId, String postAuthorId) {
     final commentCtrl = TextEditingController();
     int? replyingToCommentId;
@@ -489,7 +504,7 @@ $content
                                   ],
                                 ),
                                 const SizedBox(height: 4),
-                                _buildRichTextContent(c['content'] ?? '', fontSize: 13),
+                                _buildRichTextContent(c['comment_text'] ?? c['content'] ?? '', fontSize: 13),
                               ],
                             ),
                           );
@@ -552,10 +567,11 @@ $content
                               try {
                                 await Supabase.instance.client.from('post_comments').insert({
                                   'post_id': postId,
-                                  'user_handle': 'user',
+                                  'user_handle': _currentLoggedInHandle,
                                   'user_name': _customUserName,
-                                  'content': text,
+                                  'comment_text': text,
                                   'parent_comment_id': replyingToCommentId,
+                                  'is_creator': _currentLoggedInHandle != 'user',
                                 });
 
                                 commentCtrl.clear();
@@ -696,7 +712,7 @@ $content
                               }
 
                               final insertedPost = await Supabase.instance.client.from('community_posts').insert({
-                                'creator_id': 'user',
+                                'creator_id': _currentLoggedInHandle,
                                 'author_name': _customUserName,
                                 'content': text,
                                 'tag': selectedTag,
@@ -1061,8 +1077,8 @@ $content
                               final creator = item['creator_profiles'] ?? {};
                               final attachedMock = item['creator_mocks'];
                               final postId = item['id'];
-                              final userVote = _userVoteState[postId] ?? 0;
-                              final int score = (item['upvotes'] ?? 0) - (item['downvotes'] ?? 0);
+                              final bool isLiked = _likedPostIds.contains(postId);
+                              final int likesCount = item['upvotes'] ?? 0;
                               final String? imgUrl = item['image_url'];
                               final Map<String, dynamic>? pollData = item['poll_data'];
                               final bool isSaved = _savedPostIds.contains(postId);
@@ -1228,31 +1244,41 @@ $content
 
                                     Row(
                                       children: [
-                                        Container(
-                                          height: 32,
-                                          decoration: BoxDecoration(
-                                            color: isDark ? _inkDarkBg : _paperBg,
-                                            borderRadius: BorderRadius.circular(20),
-                                            border: Border.all(color: isDark ? _inkDarkBorder : _paperBorder),
-                                          ),
-                                          child: Row(
-                                            children: [
-                                              IconButton(
-                                                icon: Icon(Icons.arrow_upward_rounded, size: 16, color: userVote == 1 ? const Color(0xFFFF4500) : Colors.grey[600]),
-                                                onPressed: () => _handleVote(idx, true),
-                                                visualDensity: VisualDensity.compact,
-                                              ),
-                                              Text('$score', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: userVote == 1 ? const Color(0xFFFF4500) : (userVote == -1 ? const Color(0xFF7193FF) : null))),
-                                              IconButton(
-                                                icon: Icon(Icons.arrow_downward_rounded, size: 16, color: userVote == -1 ? const Color(0xFF7193FF) : Colors.grey[600]),
-                                                onPressed: () => _handleVote(idx, false),
-                                                visualDensity: VisualDensity.compact,
-                                              ),
-                                            ],
+                                        // 👍 Like Button (Single Action, Positive Only)
+                                        InkWell(
+                                          onTap: () => _handleLike(idx),
+                                          borderRadius: BorderRadius.circular(20),
+                                          child: Container(
+                                            height: 32,
+                                            padding: const EdgeInsets.symmetric(horizontal: 10),
+                                            decoration: BoxDecoration(
+                                              color: isDark ? _inkDarkBg : _paperBg,
+                                              borderRadius: BorderRadius.circular(20),
+                                              border: Border.all(color: isLiked ? _ink : (isDark ? _inkDarkBorder : _paperBorder)),
+                                            ),
+                                            child: Row(
+                                              children: [
+                                                Icon(
+                                                  isLiked ? Icons.thumb_up_rounded : Icons.thumb_up_alt_outlined,
+                                                  size: 15,
+                                                  color: isLiked ? _ink : Colors.grey[600],
+                                                ),
+                                                const SizedBox(width: 5),
+                                                Text(
+                                                  '$likesCount',
+                                                  style: TextStyle(
+                                                    fontWeight: FontWeight.bold,
+                                                    fontSize: 12,
+                                                    color: isLiked ? _ink : (isDark ? _onInk : const Color(0xFF1E293B)),
+                                                  ),
+                                                ),
+                                              ],
+                                            ),
                                           ),
                                         ),
                                         const SizedBox(width: 8),
 
+                                        // 💬 Reply / Comments Button
                                         InkWell(
                                           onTap: () => _openCommentsSheet(postId, item['creator_id'] ?? 'user'),
                                           borderRadius: BorderRadius.circular(20),
@@ -1282,6 +1308,7 @@ $content
                                         ),
                                         const SizedBox(width: 8),
 
+                                        // 📊 Stats Action Sheet
                                         InkWell(
                                           onTap: () => _openPostAnalyticsSheet(item),
                                           borderRadius: BorderRadius.circular(20),
@@ -1313,6 +1340,7 @@ $content
                                         ),
                                         const SizedBox(width: 8),
 
+                                        // 📌 Bookmark (user_saved_posts se linked)
                                         InkWell(
                                           onTap: () => _toggleBookmark(postId, item),
                                           borderRadius: BorderRadius.circular(20),
@@ -1326,6 +1354,7 @@ $content
                                         ),
                                         const Spacer(),
 
+                                        // 🔗 Share Link
                                         InkWell(
                                           onTap: () => _sharePost(item),
                                           borderRadius: BorderRadius.circular(6),
