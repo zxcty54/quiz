@@ -121,18 +121,91 @@ jobs:
           </manifest>
           EOF
 
-      - name: Setup Build Configuration & SO Packaging
+      - name: Setup Build Configuration, Desugaring & SO Packaging
         working-directory: flutter_app
         run: |
           flutter pub get
 
-          # Packaging fix for libmtmd.so and API 36 inside build.gradle.kts
+          # 1. Update android/settings.gradle.kts to hook subprojects to compileSdk = 36
+          settings_kts="android/settings.gradle.kts"
+          if [ -f "$settings_kts" ]; then
+            cat << 'EOF' >> "$settings_kts"
+
+          gradle.beforeProject {
+              plugins.withId("com.android.library") {
+                  extensions.findByName("android")?.let { ext ->
+                      try {
+                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
+                      } catch (_: Exception) {}
+                  }
+              }
+              plugins.withId("com.android.application") {
+                  extensions.findByName("android")?.let { ext ->
+                      try {
+                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
+                      } catch (_: Exception) {}
+                  }
+              }
+          }
+          EOF
+          fi
+
+          # 2. Inject Desugaring and Packaging rules safely into build.gradle.kts
           APP_KTS="android/app/build.gradle.kts"
           if [ -f "$APP_KTS" ]; then
-            sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/g' "$APP_KTS"
-            sed -i 's/compileSdk = 34/compileSdk = 36/g' "$APP_KTS"
-            
-            sed -i '/android {/a \    packaging {\n        resources {\n            pickFirsts.add("**/libmtmd.so")\n            pickFirsts.add("**/libllama.so")\n            pickFirsts.add("**/libc++_shared.so")\n        }\n        jniLibs {\n            useLegacyPackaging = true\n        }\n    }' "$APP_KTS"
+            python3 - << 'EOF'
+          import os
+
+          path = "android/app/build.gradle.kts"
+          with open(path, "r") as f:
+              content = f.read()
+
+          # Force compileSdk to 36
+          content = content.replace("compileSdk = flutter.compileSdkVersion", "compileSdk = 36")
+          content = content.replace("compileSdk = 34", "compileSdk = 36")
+
+          # Inject isCoreLibraryDesugaringEnabled
+          if "isCoreLibraryDesugaringEnabled" not in content:
+              if "compileOptions {" in content:
+                  content = content.replace(
+                      "compileOptions {",
+                      "compileOptions {\n        isCoreLibraryDesugaringEnabled = true"
+                  )
+              else:
+                  content = content.replace(
+                      "android {",
+                      "android {\n    compileOptions {\n        isCoreLibraryDesugaringEnabled = true\n    }"
+                  )
+
+          # Add native SO packaging block
+          packaging_block = """
+      packaging {
+          resources {
+              pickFirsts.add("**/libmtmd.so")
+              pickFirsts.add("**/libllama.so")
+              pickFirsts.add("**/libc++_shared.so")
+          }
+          jniLibs {
+              useLegacyPackaging = true
+          }
+      }
+  """
+          if "packaging {" not in content:
+              content = content.replace("android {", "android {" + packaging_block)
+
+          # Add desugar dependency to dependencies block
+          desugar_dep = '    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")\n'
+          if "desugar_jdk_libs" not in content:
+              if "dependencies {" in content:
+                  content = content.replace("dependencies {", f"dependencies {{\n{desugar_dep}")
+              else:
+                  content += f"\ndependencies {{\n{desugar_dep}}}\n"
+
+          with open(path, "w") as f:
+              f.write(content)
+
+          print("Successfully injected desugaring, packaging, and compileSdk 36.")
+          EOF
           fi
 
       - name: Setup Keystore & Permissions
