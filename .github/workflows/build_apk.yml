@@ -126,6 +126,9 @@ jobs:
         run: |
           flutter pub get
 
+          # Patch deprecated proguard-android.txt inside cached fllama plugin
+          find /home/runner/.pub-cache/hosted/pub.dev/fllama* -name "build.gradle" -exec sed -i "s/proguard-android.txt/proguard-android-optimize.txt/g" {} + || true
+
           # 1. Update android/settings.gradle.kts (API 36 hook)
           cat << 'EOF' >> android/settings.gradle.kts
 
