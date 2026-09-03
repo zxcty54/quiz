@@ -56,8 +56,8 @@ class OfflineLlmAgentService {
     switch (task) {
       case LlmTaskType.quiz:
         systemInstruction = '''
-You are an AI Quiz Generator for competitive exams (BPSC, BSSC, SSC).
-Generate 2 MCQs based on the context.
+You are an AI Quiz Generator for Indian competitive exams (BPSC, BSSC, SSC).
+Generate 2 standard MCQs based on the context.
 Format:
 Q1. [Question]
 A) [Option 1] | B) [Option 2] | C) [Option 3] | D) [Option 4]
@@ -76,7 +76,7 @@ Analyze the user's answer against the concept and point out the trap in 2 crisp 
       case LlmTaskType.mnemonic:
         systemInstruction = '''
 You are an AI Memory Specialist.
-Create a high-impact Hindi/Hinglish mnemonic code or trick to remember this topic easily.
+Create a high-impact Hindi/Hinglish mnemonic code or memory hook to remember this topic easily.
 ''';
         break;
 
