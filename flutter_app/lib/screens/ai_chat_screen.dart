@@ -74,7 +74,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
       }
 
       await _initModel(pickedPath);
-
     } catch (e) {
       setState(() {
         _isLoading = false;
@@ -136,10 +135,21 @@ class _AiChatScreenState extends State<AiChatScreen> {
     _scrollToBottom();
 
     try {
-      // Clean context pass kiya hai bina kisi hardcoded syllabus text ke
+      String chatHistory = "";
+      if (_messages.length > 1) {
+        final previousMessages = _messages.sublist(0, _messages.length - 1);
+        final recent = previousMessages.length > 4
+            ? previousMessages.sublist(previousMessages.length - 4)
+            : previousMessages;
+
+        chatHistory = recent
+            .map((m) => "${m.isUser ? 'User' : 'Assistant'}: ${m.text.trim()}")
+            .join("\n");
+      }
+
       final String response = await OfflineLlmAgentService.instance.executeLlmAgent(
         userInput: text,
-        context: "",
+        context: chatHistory,
         task: LlmTaskType.duolingoExplanation,
       );
 
@@ -236,7 +246,6 @@ class _AiChatScreenState extends State<AiChatScreen> {
                             maxWidth: MediaQuery.of(context).size.width * 0.82,
                           ),
                           decoration: BoxDecoration(
-                            // User ke liye blue, Assistant ke liye subtle neutral background
                             color: msg.isUser
                                 ? Colors.blueAccent
                                 : (isDark ? const Color(0xFF242424) : const Color(0xFFF1F1F4)),
