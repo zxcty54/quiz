@@ -1,19 +1,19 @@
 {
   "month": "Sep 2026",
-  "generated_at": "2026-09-03 02:36:40",
-  "total_questions": 21,
-  "national_total": 15,
-  "bihar_total": 6,
+  "generated_at": "2026-09-04 02:36:48",
+  "total_questions": 35,
+  "national_total": 26,
+  "bihar_total": 9,
   "source_breakdown": {
     "all_current_affairs": {
-      "total_scanned": 34,
-      "mcqs_created": 14,
-      "total_dropped": 20
+      "total_scanned": 45,
+      "mcqs_created": 23,
+      "total_dropped": 22
     },
     "final_alerts_news": {
-      "total_scanned": 15,
-      "mcqs_created": 7,
-      "total_dropped": 8
+      "total_scanned": 19,
+      "mcqs_created": 12,
+      "total_dropped": 7
     }
   },
   "national_questions": [
@@ -376,6 +376,270 @@
       "exam_tag": "BPSC / SSC CGL / State PCS",
       "domain": "National",
       "id": "nat_q_015"
+    },
+    {
+      "source_hash": "0ae06ae2",
+      "source_file": "all_current_affairs",
+      "qe": "India's Central Bureau of Investigation (CBI) signed a Memorandum of Understanding to strengthen cooperation against cybercrime and transnational crime with the Federal Police of which country?",
+      "qh": "भारत के केंद्रीय अन्वेषण ब्यूरो (CBI) ने साइबर अपराध और अंतरराष्ट्रीय अपराध से निपटने में सहयोग बढ़ाने के लिए किस देश की संघीय पुलिस के साथ समझौता ज्ञापन पर हस्ताक्षर किए?",
+      "oe": [
+        "Belgium",
+        "France",
+        "Germany",
+        "Australia"
+      ],
+      "oh": [
+        "बेल्जियम",
+        "फ्रांस",
+        "जर्मनी",
+        "ऑस्ट्रेलिया"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because the CBI signed an MoU with the Federal Police of Belgium to combat cybercrime and transnational crime during the launch of the India-Belgium Strategic Dialogue.\n• Option B is Incorrect because France was not the nation signing this specific law enforcement agreement during the dialogue.\n• Option C is Incorrect because Germany shares intelligence through Interpol channels rather than this bilateral deal.\n• Option D is Incorrect because Australia's police cooperation agreements with India fall under a different treaty mechanism.",
+      "category": "International Relations, Summits & Global Organizations",
+      "exam_tag": "State PCS",
+      "domain": "National",
+      "id": "nat_q_016"
+    },
+    {
+      "source_hash": "d6de1a9b",
+      "source_file": "all_current_affairs",
+      "qe": "Which strategic framework document was recently unveiled by the Union Defence Minister to serve as a 10-year roadmap for India's global defence diplomacy?",
+      "qh": "हाल ही में केंद्रीय रक्षा मंत्री द्वारा भारत की वैश्विक रक्षा कूटनीति के लिए 10-वर्षीय रोडमैप के रूप में किस रणनीतिक रूपरेखा दस्तावेज का अनावरण किया गया?",
+      "oe": [
+        "RAKSHA",
+        "SURAKSHA",
+        "KAVACH",
+        "SAMARTH"
+      ],
+      "oh": [
+        "रक्षा (RAKSHA)",
+        "सुरक्षा (SURAKSHA)",
+        "कवच (KAVACH)",
+        "समर्थ (SAMARTH)"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because the Defence Minister unveiled 'RAKSHA', a comprehensive strategic framework document laying out India's 10-year roadmap for global defence diplomacy and partnerships.\n• Option B is Incorrect because SURAKSHA is a general security term and not the title of this 10-year strategic roadmap.\n• Option C is Incorrect because KAVACH is the indigenous Automatic Train Protection system developed by Indian Railways.\n• Option D is Incorrect because SAMARTH is a flagship scheme for capacity building and skill development under the Ministry of Textiles.",
+      "category": "Science, Technology, Defense & Space",
+      "exam_tag": "State PCS / SSC CGL",
+      "domain": "National",
+      "id": "nat_q_017"
+    },
+    {
+      "source_hash": "10ab1d3e",
+      "source_file": "all_current_affairs",
+      "qe": "On which river basin is the proposed 1,856 MW Sawalkot Hydroelectric Project located in Jammu & Kashmir?",
+      "qh": "जम्मू और कश्मीर में स्थित 1,856 मेगावाट की प्रस्तावित सावलकोट जलविद्युत परियोजना किस नदी बेसिन पर स्थित है?",
+      "oe": [
+        "Jhelum Basin",
+        "Chenab Basin",
+        "Ravi Basin",
+        "Satluj Basin"
+      ],
+      "oh": [
+        "झेलम बेसिन",
+        "चिनाब बेसिन",
+        "रावी बेसिन",
+        "सतलुज बेसिन"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because the 1,856 MW Sawalkot Hydroelectric Project is located on the Chenab River basin across Ramban, Udhampur, and Reasi districts of Jammu & Kashmir.\n• Option A is Incorrect because the Jhelum basin houses projects like Uri and Kishanganga, not Sawalkot.\n• Option C is Incorrect because the Ravi basin includes projects such as the Chamera and Thein (Ranjit Sagar) dams.\n• Option D is Incorrect because the Satluj basin features major infrastructure like the Bhakra Nangal and Nathpa Jhakri projects.",
+      "category": "Infrastructure, Energy & Digital Projects",
+      "exam_tag": "BPSC / State PCS",
+      "domain": "National",
+      "id": "nat_q_018"
+    },
+    {
+      "source_hash": "0c0827dc",
+      "source_file": "all_current_affairs",
+      "qe": "Which nodal body under the Ministry of Commerce and Industry implements the 'Districts as Export Hubs' (DEH) initiative across Indian districts?",
+      "qh": "वाणिज्य और उद्योग मंत्रालय के तहत कौन सा नोडल निकाय भारतीय जिलों में 'डिस्ट्रिक्ट्स एज एक्सपोर्ट हब्स' (DEH) पहल का कार्यान्वयन करता है?",
+      "oe": [
+        "Export Credit Guarantee Corporation (ECGC)",
+        "Federation of Indian Export Organisations (FIEO)",
+        "Directorate General of Foreign Trade (DGFT)",
+        "Agricultural and Processed Food Products Export Development Authority (APEDA)"
+      ],
+      "oh": [
+        "निर्यात क्रेडिट गारंटी निगम (ECGC)",
+        "भारतीय निर्यात संगठनों का महासंघ (FIEO)",
+        "विदेश व्यापार महानिदेशालय (DGFT)",
+        "कृषि और प्रसंस्कृत खाद्य उत्पाद निर्यात विकास प्राधिकरण (APEDA)"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because the Directorate General of Foreign Trade (DGFT) under the Department of Commerce, Ministry of Commerce and Industry, serves as the main implementing body for the 'Districts as Export Hubs' (DEH) initiative.\n• Option A is Incorrect because ECGC provides credit risk insurance to exporters.\n• Option B is Incorrect because FIEO is an apex body set up jointly by government and trade to promote export trade.\n• Option D is Incorrect because APEDA specifically targets the export development of scheduled agricultural and processed food products.",
+      "category": "Govt Schemes, Policies & Social Welfare",
+      "exam_tag": "SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_019"
+    },
+    {
+      "source_hash": "dedd058e",
+      "source_file": "all_current_affairs",
+      "qe": "Which sail training ship of the Indian Navy is undertaking the 10-month transoceanic expedition named 'Lokayan 2026'?",
+      "qh": "भारतीय नौसेना का कौन सा नौकायन प्रशिक्षण पोत 'लोकायन 2026' नामक 10 महीने के ट्रांस-ओशनिक अभियान पर है?",
+      "oe": [
+        "INS Tarangini",
+        "INS Mhadei",
+        "INS Trikand",
+        "INS Sudarshini"
+      ],
+      "oh": [
+        "आईएनएस तरंगिणी",
+        "आईएनएस महादेई",
+        "आईएनएस त्रिकंड",
+        "आईएनएस सुदर्शन"
+      ],
+      "a": 3,
+      "e": "• Option D is Correct because INS Sudarshini is the Indian Navy's sail training ship executing the 10-month transoceanic expedition titled 'Lokayan 2026'.\n• Option A is Incorrect because while INS Tarangini is also a sail training ship, it is INS Sudarshini that was deployed for Lokayan 2026.\n• Option B is Incorrect because INS Mhadei is a sail training vessel notable for circumnavigation voyages.\n• Option C is Incorrect because INS Trikand is a Teg-class guided-missile stealth frigate, not a sail training ship.",
+      "category": "Science, Technology, Defense & Space",
+      "exam_tag": "BPSC / SSC CGL",
+      "domain": "National",
+      "id": "nat_q_020"
+    },
+    {
+      "source_hash": "c7f91f13",
+      "source_file": "all_current_affairs",
+      "qe": "What is the official theme of the 11th Vibrant Gujarat Global Summit organized in Gandhinagar?",
+      "qh": "गांधीनगर में आयोजित होने वाले 11वें वाइब्रेंट गुजरात वैश्विक शिखर सम्मेलन का आधिकारिक विषय (थीम) क्या है?",
+      "oe": [
+        "Viksit Gujarat – Shaping Global Future",
+        "Sustainable Growth for Viksit Bharat",
+        "Green Energy and Semiconductor Innovation",
+        "Global Partnerships for Future Prosperity"
+      ],
+      "oh": [
+        "विकसित गुजरात - शेपिंग ग्लोबल फ्यूचर",
+        "विकसित भारत के लिए सतत विकास",
+        "हरित ऊर्जा और सेमीकंडक्टर नवाचार",
+        "भावी समृद्धि के लिए वैश्विक साझेदारी"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because the 11th Vibrant Gujarat Global Summit held in Gandhinagar is centered on the theme 'Viksit Gujarat – Shaping Global Future'.\n• Option B is Incorrect because it is a general framing not associated with the summit's official tagline.\n• Option C is Incorrect because while green energy and semiconductors are key focus sectors, they do not form the main theme.\n• Option D is Incorrect because it is a generic summit slogan.",
+      "category": "National Economy, Union Budget & Banking",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_021"
+    },
+    {
+      "source_hash": "ae37172c",
+      "source_file": "final_alerts_news",
+      "qe": "Which launch vehicle was used by ISRO to launch EOS-05, India's first Earth observation satellite placed in a geosynchronous orbit?",
+      "qh": "भू-तुल्यकालिक कक्षा (Geosynchronous Orbit) में स्थापित किए जाने वाले भारत के पहले अर्थ ऑब्जर्वेशन सैटेलाइट EOS-05 को प्रक्षेपित करने के लिए ISRO द्वारा किस रॉकेट का उपयोग किया गया?",
+      "oe": [
+        "PSLV-C58",
+        "GSLV-F17",
+        "LVM3-M4",
+        "SSLV-D2"
+      ],
+      "oh": [
+        "पीएसएलवी-C58",
+        "जीएसएलवी-F17",
+        "एलवीएम3-M4",
+        "एसएसएलवी-D2"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because ISRO launched EOS-05 aboard the GSLV-F17 rocket from Sriharikota, making it India's first imaging satellite placed in a geosynchronous orbit.\n• Option A is Incorrect because PSLV-C58 was utilized for launching the XPoSAT mission.\n• Option C is Incorrect because LVM3-M4 was used to launch Chandrayaan-3.\n• Option D is Incorrect because SSLV-D2 was used for launching EOS-07.",
+      "category": "Space, Science & Technology",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_022"
+    },
+    {
+      "source_hash": "4afb83d1",
+      "source_file": "final_alerts_news",
+      "qe": "Which Indian city was selected to host India’s first Hyundai World Archery Para Series along the Sabarmati Riverfront?",
+      "qh": "साबरमती रिवरफ्रंट के किनारे भारत की पहली 'हुंडई वर्ल्ड आर्चरी पैरा सीरीज' आयोजित करने के लिए किस भारतीय शहर को चुना गया है?",
+      "oe": [
+        "Gandhinagar",
+        "Surat",
+        "Ahmedabad",
+        "Vadodara"
+      ],
+      "oh": [
+        "गांधीनगर",
+        "सूरत",
+        "अहमदाबाद",
+        "वडोदरा"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because Ahmedabad is the designated host city for India’s first Hyundai World Archery Para Series held along the Sabarmati Riverfront.\n• Option A is Incorrect because Gandhinagar is the state capital, not the event venue.\n• Option B is Incorrect because Surat is not the host location.\n• Option D is Incorrect because Vadodara is not hosting this international para-archery event.",
+      "category": "Sports & Gaming",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_023"
+    },
+    {
+      "source_hash": "42c389fb",
+      "source_file": "final_alerts_news",
+      "qe": "Which state has proposed India’s first state-led dedicated electric truck corridor spanning 622 km along National Highway 66?",
+      "qh": "राष्ट्रीय राजमार्ग 66 के किनारे 622 किमी लंबे भारत के पहले राज्य-नेतृत्व वाले समर्पित इलेक्ट्रिक ट्रक कॉरिडोर का प्रस्ताव किस राज्य द्वारा रखा गया है?",
+      "oe": [
+        "Gujarat",
+        "Tamil Nadu",
+        "Karnataka",
+        "Kerala"
+      ],
+      "oh": [
+        "गुजरात",
+        "तमिलनाडु",
+        "कर्नाटक",
+        "केरल"
+      ],
+      "a": 3,
+      "e": "• Option D is Correct because Kerala (via KSEB) proposed India's first electric truck corridor along NH 66, covering 622 km from Kasaragod to Thiruvananthapuram.\n• Option A is Incorrect because Gujarat is not leading this NH 66 electric corridor initiative.\n• Option B is Incorrect because Tamil Nadu is not the proposing state authority.\n• Option C is Incorrect because Karnataka is not executing this specific state-led EV corridor.",
+      "category": "Aviation & Transport",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_024"
+    },
+    {
+      "source_hash": "dda4fa12",
+      "source_file": "final_alerts_news",
+      "qe": "Which satellite is India’s first imaging satellite to operate from a geosynchronous orbit, launched on GSLV‑F17?",
+      "qh": "कौन सा उपग्रह भारत का पहला इमेजिंग उपग्रह है जो भूस्थिर कक्षा में कार्य करता है और GSLV‑F17 से लॉन्च किया गया?",
+      "oe": [
+        "EOS‑05",
+        "GSAT‑30",
+        "Cartosat‑3",
+        "RISAT‑2B"
+      ],
+      "oh": [
+        "EOS‑05",
+        "GSAT‑30",
+        "Cartosat‑3",
+        "RISAT‑2B"
+      ],
+      "a": 0,
+      "e": "• Option A is Correct because EOS‑05 is the first Indian imaging satellite placed in a geosynchronous orbit (≈36,000 km) and was launched on 4 Sept 2026 aboard GSLV‑F17, enabling continuous disaster‑monitoring.\n• Option B is Incorrect because GSAT‑30 is a communication satellite, not an imaging payload.\n• Option C is Incorrect because Cartosat‑3 operates in a low‑Earth orbit.\n• Option D is Incorrect because RISAT‑2B is a radar‑imaging satellite in low‑Earth orbit.",
+      "category": "Space, Science & Technology",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_025"
+    },
+    {
+      "source_hash": "2f553f96",
+      "source_file": "final_alerts_news",
+      "qe": "Which hospital performed India’s first combined Pulsed Field Ablation and Left Atrial Appendage Occlusion procedure?",
+      "qh": "कौन से अस्पताल ने भारत में पहली बार पल्स्ड फील्ड एब्लेशन और लेफ्ट एट्रियल अपेंडेज़ ऑक्लूज़न प्रक्रिया का संयुक्त रूप से संचालन किया?",
+      "oe": [
+        "All India Institute of Medical Sciences, New Delhi",
+        "Lilavati Hospital, Mumbai",
+        "Apollo Hospital, Chennai",
+        "Fortis Hospital, Bangalore"
+      ],
+      "oh": [
+        "ऑल इंडिया इंस्टीट्यूट ऑफ मेडिकल साइंसेज़, नई दिल्ली",
+        "लिलावती अस्पताल, मुंबई",
+        "अपोले अस्पताल, चेन्नई",
+        "फोर्टिस अस्पताल, बेंगलुरु"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because Lilavati Hospital, Mumbai performed the first combined Pulsed Field Ablation (PFA) for atrial fibrillation and Left Atrial Appendage Occlusion (LAAO) on 14 August 2026.\n• Option A is Incorrect because AIIMS Delhi has not reported this combined procedure.\n• Option C is Incorrect because Apollo Hospital Chennai has not reported this specific combined intervention.\n• Option D is Incorrect because Fortis Hospital Bangalore has not reported this combined procedure.",
+      "category": "Health & Medical Sciences",
+      "exam_tag": "BPSC / SSC CGL / State PCS",
+      "domain": "National",
+      "id": "nat_q_026"
     }
   ],
   "bihar_questions": [
@@ -522,6 +786,78 @@
       "exam_tag": "BPSC / SSC CGL / State PCS",
       "domain": "Bihar",
       "id": "bih_q_006"
+    },
+    {
+      "source_hash": "41220adb",
+      "source_file": "all_current_affairs",
+      "qe": "Under the liberalized trade policy regulations introduced to boost agricultural exports, into which category were specified wheat varieties, atta, maida, and semolina placed?",
+      "qh": "कृषि निर्यात को बढ़ावा देने के लिए लागू किए गए उदारीकृत व्यापार नीति नियमों के तहत, निर्दिष्ट गेहूं किस्मों, आटा, मैदा और सूजी को किस श्रेणी में रखा गया है?",
+      "oe": [
+        "Restricted",
+        "Free",
+        "Prohibited",
+        "State Trading Enterprise"
+      ],
+      "oh": [
+        "प्रतिबंधित (Restricted)",
+        "मुक्त (Free)",
+        "निषिद्ध (Prohibited)",
+        "राज्य व्यापार उद्यम (State Trading Enterprise)"
+      ],
+      "a": 1,
+      "e": "• Option B is Correct because the Government of India liberalized wheat export regulations by shifting specified wheat varieties, atta, maida, and semolina from 'Prohibited' to 'Free' to capitalize on a record wheat output of 121 MMT.\n• Option A is Incorrect because 'Restricted' requires specific government licensing, which is not the new classification.\n• Option C is Incorrect because 'Prohibited' was the previous regulatory status prior to this policy relaxation.\n• Option D is Incorrect because exports are no longer restricted exclusively through State Trading Enterprises.",
+      "category": "National Economy, Union Budget & Banking",
+      "exam_tag": "SSC CGL",
+      "domain": "Bihar",
+      "id": "bih_q_007"
+    },
+    {
+      "source_hash": "1c57fbd1",
+      "source_file": "all_current_affairs",
+      "qe": "Which financial institution signed an MoU worth ₹25,000 crore with the Bihar Government to finance industrial infrastructure and land acquisition through the state's Infrastructure Development Authority?",
+      "qh": "किस वित्तीय संस्थान ने राज्य के ढांचागत विकास प्राधिकरण के माध्यम से औद्योगिक बुनियादी ढांचे और भूमि अधिग्रहण को वित्तपोषित करने के लिए बिहार सरकार के साथ ₹25,000 करोड़ के समझौता ज्ञापन पर हस्ताक्षर किए?",
+      "oe": [
+        "NABARD",
+        "PFC",
+        "HUDCO",
+        "REC Limited"
+      ],
+      "oh": [
+        "नाबार्ड (NABARD)",
+        "पीएफसी (PFC)",
+        "हडको (HUDCO)",
+        "आरईसी लिमिटेड (REC Limited)"
+      ],
+      "a": 2,
+      "e": "• Option C is Correct because the Housing & Urban Development Corporation (HUDCO) signed a ₹25,000 crore MoU with the Bihar Government to provide term loans over five years for industrial infrastructure and land acquisition through the Infrastructure Development Authority (IDA).\n• Option A is Incorrect because NABARD primarily finances rural infrastructure and agriculture projects.\n• Option B is Incorrect because Power Finance Corporation (PFC) provides funding specifically for power sector infrastructure.\n• Option D is Incorrect because REC Limited focuses on power distribution, generation, and transmission financing.",
+      "category": "Bihar Special Affairs",
+      "exam_tag": "BPSC",
+      "domain": "Bihar",
+      "id": "bih_q_008"
+    },
+    {
+      "source_hash": "7d93276c",
+      "source_file": "all_current_affairs",
+      "qe": "Under which section of the Indian Nursing Council Act, 1947 did the Indian Nursing Council withdraw recognition from 40 nursing institutions in Bihar due to infrastructure deficiencies?",
+      "qh": "भारतीय नर्सिंग परिषद (INC) ने बुनियादी ढांचे की कमियों के कारण बिहार के 40 नर्सिंग संस्थानों की मान्यता भारतीय नर्सिंग परिषद अधिनियम, 1947 की किस धारा के तहत वापस ली?",
+      "oe": [
+        "Section 10",
+        "Section 12",
+        "Section 18",
+        "Section 14"
+      ],
+      "oh": [
+        "धारा 10",
+        "धारा 12",
+        "धारा 18",
+        "धारा 14"
+      ],
+      "a": 3,
+      "e": "• Option D is Correct because the Indian Nursing Council (INC) invoked Section 14 of the INC Act, 1947 to withdraw recognition from 40 government and private nursing colleges in Bihar due to deficiencies in faculty and infrastructure.\n• Option A is Incorrect because Section 10 relates to the recognition of qualifications granted by nursing institutions in India.\n• Option B is Incorrect because Section 12 pertains to the inspection of nursing examinations and training institutions.\n• Option C is Incorrect because Section 18 deals with the general power to make regulations under the Act.",
+      "category": "Bihar Special Affairs",
+      "exam_tag": "BPSC",
+      "domain": "Bihar",
+      "id": "bih_q_009"
     }
   ]
 }
