@@ -13,7 +13,7 @@ class OfflineLlmAgentService {
   static final OfflineLlmAgentService instance = OfflineLlmAgentService._internal();
   OfflineLlmAgentService._internal();
 
-  int? _contextId;
+  double? _contextId;
   String? _currentModelPath;
   bool _isInitializing = false;
 
@@ -32,13 +32,22 @@ class OfflineLlmAgentService {
     }
 
     try {
-      // fllama 0.0.1 documented context initialization
-      _contextId = await Fllama.initContext(
+      // FllamaPlatform initContext call: returns Map<Object?, dynamic>?
+      final res = await FllamaPlatform.instance.initContext(
         path,
-        contextSize: 768,
+        nCtx: 768,
+        nBatch: 768,
         nThreads: 4,
+        useMmap: true,
+        useMlock: false,
       );
-      _currentModelPath = path;
+
+      if (res != null && res.containsKey('contextId')) {
+        _contextId = (res['contextId'] as num).toDouble();
+        _currentModelPath = path;
+      } else {
+        throw Exception("Failed to retrieve valid contextId from native engine.");
+      }
     } finally {
       _isInitializing = false;
     }
@@ -54,7 +63,7 @@ class OfflineLlmAgentService {
     }
 
     if (_contextId == null) {
-      throw Exception("Failed to initialize fllama native context.");
+      throw Exception("fllama native context initialize nahi ho paya.");
     }
 
     String systemInstruction;
@@ -127,35 +136,53 @@ TOPIC / INPUT:
 $userInput
 ''';
 
-    // 1. Format chat template using fllama's chat formatter
-    final formattedPrompt = await Fllama.getFormattedChat(
+    // RoleContent format matching FllamaPlatform
+    final messages = [
+      RoleContent(role: 'system', content: systemInstruction),
+      RoleContent(role: 'user', content: userContent),
+    ];
+
+    final formattedPrompt = await FllamaPlatform.instance.getFormattedChat(
       _contextId!,
-      [
-        {'role': 'system', 'content': systemInstruction},
-        {'role': 'user', 'content': userContent},
-      ],
+      messages: messages,
     );
 
-    final StringBuffer buffer = StringBuffer();
+    final finalPrompt = formattedPrompt ?? '''
+<|im_start|>system
+$systemInstruction
+<|im_end|>
+<|im_start|>user
+$userContent
+<|im_end|>
+<|im_start|>assistant
+''';
 
-    // 2. Token completion generation
-    await Fllama.completion(
+    // FllamaPlatform completion returns Future<Map<Object?, dynamic>?>
+    final completionResult = await FllamaPlatform.instance.completion(
       _contextId!,
-      formattedPrompt ?? userContent,
+      prompt: finalPrompt,
       temperature: 0.2,
-      onToken: (token) {
-        if (token.isNotEmpty) {
-          buffer.write(token);
-        }
-      },
+      nThreads: 4,
+      nPredict: 512,
+      stop: ['<|im_end|>', '<|endoftext|>'],
     );
 
-    return buffer.toString().trim();
+    if (completionResult != null) {
+      if (completionResult.containsKey('text')) {
+        return (completionResult['text'] as String).trim();
+      }
+      if (completionResult.containsKey('completion')) {
+        return (completionResult['completion'] as String).trim();
+      }
+      return completionResult.values.first.toString().trim();
+    }
+
+    return "No response generated from offline engine.";
   }
 
   Future<void> dispose() async {
     if (_contextId != null) {
-      await Fllama.releaseContext(_contextId!);
+      await FllamaPlatform.instance.releaseContext(_contextId!);
       _contextId = null;
     }
   }
