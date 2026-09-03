@@ -21,21 +21,18 @@ class OfflineLlmAgentService {
   bool get isReady => _controller != null;
   String? get activeModelName => _loadedModelPath?.split('/').last;
 
-  // Llama 3.2 1B Instruct GGUF path
-  static const String defaultLlamaPath =
+  // Aap jo bhi model use kar rahe hain (Llama 3.2 1B ya Qwen 0.5B) uska path
+  static const String defaultModelPath =
       '/storage/emulated/0/Download/Llama-3.2-1B-Instruct-Q4_K_M.gguf';
 
-  // ------------------------------------------------------------
-  // 1. SAFE MODEL LOADER (2048 Context Length)
-  // ------------------------------------------------------------
   Future<void> loadModelManually({String? modelPath}) async {
     if (_isInitializing) return;
 
-    final targetPath = modelPath ?? defaultLlamaPath;
+    final targetPath = modelPath ?? defaultModelPath;
     final file = File(targetPath);
 
     if (!await file.exists()) {
-      throw Exception("Llama 3.2 GGUF file nahi mili:\n$targetPath");
+      throw Exception("Model file nahi mili:\n$targetPath");
     }
 
     _isInitializing = true;
@@ -57,7 +54,7 @@ class OfflineLlmAgentService {
     } catch (e) {
       _controller = null;
       _loadedModelPath = null;
-      throw Exception("Llama 3.2 load fail: $e");
+      throw Exception("Model load fail: $e");
     } finally {
       _isInitializing = false;
     }
@@ -67,9 +64,6 @@ class OfflineLlmAgentService {
     await loadModelManually(modelPath: modelPath);
   }
 
-  // ------------------------------------------------------------
-  // 2. UNLOAD / DISPOSE ENGINE
-  // ------------------------------------------------------------
   Future<void> unloadModel() async {
     try {
       await _controller?.dispose();
@@ -79,7 +73,7 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // 3. ADAPTIVE INFERENCE PIPELINE
+  // NATURAL AI CONVERSATION (Zero Script, Input-Driven)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
@@ -96,47 +90,19 @@ class OfflineLlmAgentService {
     }
 
     final cleanInput = userInput.trim();
-    final lower = cleanInput.toLowerCase();
-
-    // Natural conversation filter
-    if (lower == 'hi' || lower == 'hello' || lower == 'hey' || lower == 'kaise ho') {
-      return "Aman Sir: Namaste! Main bilkul theek hoon. Aaj kaun sa topic samajhna hai—Science me Cell/Biology, ya Polity ka koi Article?";
+    if (cleanInput.isEmpty) {
+      return "Kripya apna sawal ya topic likhein.";
     }
 
-    // Official Llama 3.2 Native Header Template with Duolingo Card Structure
+    // Bilkul clean, open instruction: Na koi Raju, na koi forced format
     final prompt = '''<|begin_of_text|><|start_header_id|>system<|end_header_id|>
 
-Cutting Knowledge Date: December 2023
-Today Date: 26 Jul 2024
+You are a helpful, knowledgeable, and direct educational AI mentor for competitive exams.
+Always understand the user's specific input carefully and respond naturally in clear spoken Hinglish.
+Explain concepts simply, provide direct facts when asked, and answer conversational queries naturally.
+Do not repeat templates, instructions, or fixed scripts. Give real, relevant answers based on what the user actually asked.<|eot_id|><|start_header_id|>user<|end_header_id|>
 
-Aap Aman Sir hain, BPSC aur competitive exams ke intuitive teacher.
-Student ke topic ko samajh kar is 1-screen conversational card format me Hinglish me samjhaiye:
-
-Micro Concept:
-[Real-life analogy se WHY before WHAT 1 line me]
-
-Raju vs Aman Sir:
-Raju: [Natural daily-life doubt ya curiosity]
-Aman Sir: [Spoken Hinglish practical logic]
-
-3-Step Breakdown:
-• Mool Tathya: [Core factual ya scientific rule]
-• Karyapranali: [Real life application ya formula]
-• Pariksha Savdhani: [Elimination trap to avoid]
-
-Micro Challenge:
-Q: [One line direct exam question]
-A) Option A
-B) Option B
-C) Option C
-D) Option D
-Correct Answer: [Option letter]
-Explanation: [Crisp 1-line reason]
-
-Important: Square brackets mat print karna. Real facts aur natural Hinglish likhna.<|eot_id|><|start_header_id|>user<|end_header_id|>
-
-${context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : ""}TOPIC: $cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
-Micro Concept:
+${context.trim().isNotEmpty ? "Context:\n$context\n\n" : ""}$cleanInput<|eot_id|><|start_header_id|>assistant<|end_header_id|>
 ''';
 
     final completer = Completer<String>();
@@ -146,8 +112,8 @@ Micro Concept:
     try {
       final stream = activeController.generate(
         prompt: prompt,
-        temperature: 0.2,
-        maxTokens: 400,
+        temperature: 0.5, // Natural, thoughtful variation bina rigid repetition ke
+        maxTokens: 350,
       );
 
       subscription = stream.listen(
@@ -172,21 +138,17 @@ Micro Concept:
         onTimeout: () {
           subscription?.cancel();
           if (buffer.isNotEmpty) return buffer.toString();
-          throw Exception("Inference timeout: 45s.");
+          throw Exception("Inference timeout: Model ne samay par reply nahi kiya.");
         },
       );
 
-      String cleanText = result
+      final cleanText = result
           .replaceAll('<|eot_id|>', '')
           .replaceAll('<|end_of_text|>', '')
           .trim();
 
       if (cleanText.isEmpty) {
-        throw Exception("Engine ne blank output diya.");
-      }
-
-      if (!cleanText.startsWith("Micro Concept:")) {
-        cleanText = "Micro Concept:\n$cleanText";
+        throw Exception("Model ne blank output diya.");
       }
 
       return cleanText;
