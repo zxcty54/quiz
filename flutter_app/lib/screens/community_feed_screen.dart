@@ -70,18 +70,17 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   Future<void> _loadUserPreferences() async {
     final prefs = await SharedPreferences.getInstance();
-    final liked = prefs.getStringList('local_liked_post_ids') ?? [];
     final name = prefs.getString('custom_aspirant_name') ?? 'Aspirant';
     final handle = prefs.getString('logged_in_creator_handle') ?? 'user';
 
     if (mounted) {
       setState(() {
-        _likedPostIds.addAll(liked.map((e) => int.tryParse(e) ?? 0));
         _customUserName = name;
         _currentLoggedInHandle = handle;
       });
     }
 
+    // 1. Fetch Saved Posts from user_saved_posts table
     try {
       final savedRes = await Supabase.instance.client
           .from('user_saved_posts')
@@ -94,6 +93,45 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           for (var row in savedRes) {
             final pid = int.tryParse(row['post_id'].toString());
             if (pid != null) _savedPostIds.add(pid);
+          }
+        });
+      }
+    } catch (_) {}
+
+    // 2. Fetch User Likes from post_likes table
+    try {
+      final likesRes = await Supabase.instance.client
+          .from('post_likes')
+          .select('post_id')
+          .eq('user_handle', _currentLoggedInHandle);
+
+      if (mounted) {
+        setState(() {
+          _likedPostIds.clear();
+          for (var row in likesRes) {
+            final pid = int.tryParse(row['post_id'].toString());
+            if (pid != null) _likedPostIds.add(pid);
+          }
+        });
+      }
+    } catch (_) {}
+
+    // 3. Fetch User Poll Votes from poll_votes table
+    try {
+      final votesRes = await Supabase.instance.client
+          .from('poll_votes')
+          .select('post_id, option_index')
+          .eq('user_handle', _currentLoggedInHandle);
+
+      if (mounted) {
+        setState(() {
+          _userPollSelections.clear();
+          for (var row in votesRes) {
+            final pid = int.tryParse(row['post_id'].toString());
+            final opt = int.tryParse(row['option_index'].toString());
+            if (pid != null && opt != null) {
+              _userPollSelections[pid] = opt;
+            }
           }
         });
       }
@@ -258,7 +296,7 @@ $content
     }
   }
 
-  // ATOMIC LIKE METHOD
+  // ATOMIC DEDICATED LIKE METHOD
   void _handleLike(int index) async {
     HapticFeedback.lightImpact();
     final post = _posts[index];
@@ -275,15 +313,22 @@ $content
       post['upvotes'] = ((post['upvotes'] ?? 0) + delta).clamp(0, 999999);
     });
 
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setStringList('local_liked_post_ids', _likedPostIds.map((e) => e.toString()).toList());
-
     try {
-      await Supabase.instance.client.rpc('increment_post_metric', params: {
-        'post_id_param': postId,
-        'metric_field': 'upvotes',
-        'amount': delta,
+      final res = await Supabase.instance.client.rpc('toggle_post_like', params: {
+        'target_post_id': postId,
+        'aspirant_handle': _currentLoggedInHandle,
       });
+
+      final bool likedConfirmed = res == true;
+      if (mounted && likedConfirmed != !isCurrentlyLiked) {
+        setState(() {
+          if (likedConfirmed) {
+            _likedPostIds.add(postId);
+          } else {
+            _likedPostIds.remove(postId);
+          }
+        });
+      }
     } catch (e) {
       debugPrint("Like RPC Error: $e");
       if (mounted) {
@@ -299,24 +344,54 @@ $content
     }
   }
 
-  void _submitPollVote(int postId, int optionIdx, Map<String, dynamic> pollData) {
+  // ATOMIC DEDICATED POLL VOTE METHOD
+  void _submitPollVote(int postId, int optionIdx, Map<String, dynamic> pollData) async {
     if (_userPollSelections.containsKey(postId)) return;
     HapticFeedback.heavyImpact();
 
     setState(() {
       _userPollSelections[postId] = optionIdx;
-      List votes = pollData['votes'] ?? [0, 0, 0, 0];
+      List votes = List.from(pollData['votes'] ?? [0, 0, 0, 0]);
       if (optionIdx < votes.length) {
         votes[optionIdx] = (votes[optionIdx] as int) + 1;
       }
       pollData['votes'] = votes;
     });
 
-    Supabase.instance.client
-        .from('community_posts')
-        .update({'poll_data': pollData})
-        .eq('id', postId)
-        .then((_) {});
+    try {
+      final res = await Supabase.instance.client.rpc('submit_poll_vote_safe', params: {
+        'target_post_id': postId,
+        'aspirant_handle': _currentLoggedInHandle,
+        'opt_idx': optionIdx,
+      });
+
+      if (res != true && mounted) {
+        // Vote rejected (already voted from another device)
+        setState(() {
+          _userPollSelections.remove(postId);
+          List votes = List.from(pollData['votes'] ?? [0, 0, 0, 0]);
+          if (optionIdx < votes.length) {
+            votes[optionIdx] = ((votes[optionIdx] as int) - 1).clamp(0, 999999);
+          }
+          pollData['votes'] = votes;
+        });
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('You have already voted in this quiz!')),
+        );
+      }
+    } catch (e) {
+      debugPrint("Poll RPC Error: $e");
+      if (mounted) {
+        setState(() {
+          _userPollSelections.remove(postId);
+          List votes = List.from(pollData['votes'] ?? [0, 0, 0, 0]);
+          if (optionIdx < votes.length) {
+            votes[optionIdx] = ((votes[optionIdx] as int) - 1).clamp(0, 999999);
+          }
+          pollData['votes'] = votes;
+        });
+      }
+    }
   }
 
   void _launchAttachedMock(Map<String, dynamic> mock) {
@@ -462,7 +537,6 @@ $content
     );
   }
 
-  // FIXED: Comments & Replies BottomSheet with dynamic local insertion
   void _openCommentsSheet(int postId, Map<String, dynamic> post) {
     final commentCtrl = TextEditingController();
     int? replyingToCommentId;
@@ -632,7 +706,6 @@ $content
                                     isSubmitting = false;
                                   });
 
-                                  // Parent Feed counter sync
                                   setState(() {
                                     post['comments_count'] = (post['comments_count'] ?? 0) + 1;
                                   });
@@ -1306,7 +1379,7 @@ $content
                                     // Action Bar: Like, Comments/Replies, Stats, Saved, Share
                                     Row(
                                       children: [
-                                        // 👍 Like Button (Atomic RPC)
+                                        // 👍 Like Button (Atomic Database-driven)
                                         InkWell(
                                           onTap: () => _handleLike(idx),
                                           borderRadius: BorderRadius.circular(20),
