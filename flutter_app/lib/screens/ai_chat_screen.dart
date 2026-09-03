@@ -70,7 +70,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
       if (!pickedPath.toLowerCase().endsWith('.gguf')) {
         setState(() {
           _isLoading = false;
-          _statusMessage = "Galat file format: sirf .gguf select karein";
+          _statusMessage = "Galat format: sirf .gguf select karein";
         });
         return;
       }
@@ -99,14 +99,14 @@ class _AiChatScreenState extends State<AiChatScreen> {
 
       final fileName = path.split('/').last;
       final sizeMB = (await file.length()) / (1024 * 1024);
-      
+
       setState(() {
         _statusMessage = "Allocating ${sizeMB.toStringAsFixed(0)}MB to engine...";
       });
 
       await Future.delayed(const Duration(milliseconds: 150));
 
-      // Native service call
+      // Manual model loading via official service
       await OfflineLlmAgentService.instance.loadModelManually(modelPath: path);
 
       final prefs = await SharedPreferences.getInstance();
@@ -253,7 +253,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
                         );
                       }
 
-                      // Render pedagogical card from notebook spec
+                      // Render structured pedagogical card
                       return DuolingoCard(
                         payload: DuolingoPayload.fromLlmText(msg.text),
                         isDarkMode: isDark,
