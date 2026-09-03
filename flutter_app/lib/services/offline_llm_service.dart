@@ -15,83 +15,73 @@ class OfflineLlmAgentService {
 
   static const MethodChannel _channel = MethodChannel('fllama');
 
-  double? _contextId;
+  dynamic _contextId;
   String? _loadedModelPath;
   bool _isInitializing = false;
 
   bool get isReady => _contextId != null;
-  String? get activeModelPath => _loadedModelPath;
   String? get activeModelName => _loadedModelPath?.split('/').last;
 
-  // Phone me verified path
-  static const String verified05BPath =
+  // Phone ka verified 0.5B path
+  static const String default05BPath =
       '/storage/emulated/0/Download/qwen2.5-0.5b-instruct-q4_k_m.gguf';
 
   // ------------------------------------------------------------
-  // 1. STRICT MANUAL MODEL LOADER
+  // 1. MANUAL LOADER (Crash-Free Native Binding)
   // ------------------------------------------------------------
   Future<void> loadModelManually({String? modelPath}) async {
-    if (_isInitializing) {
-      throw Exception("Pehle se ek model initialize ho raha hai, kripya intezar karein.");
-    }
+    if (_isInitializing) return;
 
-    final targetPath = modelPath ?? verified05BPath;
+    final targetPath = modelPath ?? default05BPath;
     final file = File(targetPath);
 
     if (!await file.exists()) {
-      throw Exception(
-        "GGUF model file nahi mili:\n$targetPath\nKripya phone ke Download folder me check karein.",
-      );
+      throw Exception('GGUF file nahi mili:\n$targetPath');
     }
 
     _isInitializing = true;
 
     try {
-      // Purana loaded context memory se free karein
       if (_contextId != null) {
         await unloadModel();
       }
 
-      // Memory-optimized parameters to prevent LMK Allocating crash
+      // Memory parameters strictly sized for mobile stability
       final Map<dynamic, dynamic>? result = await _channel.invokeMethod('initContext', {
         'model': targetPath,
         'embedding': false,
         'nCtx': 512,
-        'nBatch': 64,       // Buffer allocation spike control
-        'nThreads': 2,      // Smooth execution without heating
+        'nBatch': 64,
+        'nThreads': 2,
         'nGpuLayers': 0,
         'useMmap': true,
         'useMlock': false,
       });
 
       if (result == null) {
-        throw Exception("Native engine ne initContext par null return kiya.");
+        throw Exception('Native init failed: null response returned.');
       }
 
-      final dynamic rawContextId = result['contextId'];
-      if (rawContextId == null) {
-        throw Exception("Native engine se contextId null mila. Result: $result");
+      // Null check: Native reference preserve rakhein
+      final dynamic rawId = result['contextId'] ?? result['id'] ?? result['context'];
+      if (rawId == null) {
+        throw Exception('Native engine contextId null mila. Result: $result');
       }
 
-      final parsedId = (rawContextId as num).toDouble();
-      if (parsedId <= 0) {
-        throw Exception("Invalid contextId pointer: $parsedId");
-      }
-
-      _contextId = parsedId;
+      _contextId = rawId;
       _loadedModelPath = targetPath;
     } finally {
       _isInitializing = false;
     }
   }
 
-  /// Backward compatibility for existing UI calls in ai_chat_screen.dart
+  /// Backward compatibility for UI
   Future<void> initEngine({String? modelPath}) async {
     await loadModelManually(modelPath: modelPath);
   }
 
   // ------------------------------------------------------------
-  // 2. MANUAL UNLOAD / DISPOSE
+  // 2. UNLOAD CONTEXT
   // ------------------------------------------------------------
   Future<void> unloadModel() async {
     final id = _contextId;
@@ -106,21 +96,22 @@ class OfflineLlmAgentService {
   }
 
   // ------------------------------------------------------------
-  // 3. EXECUTE LLM (Pure Dynamic Generation - No Fake Fallbacks)
+  // 3. RUN INFERENCE (Strict Null-Safe Call)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
     required String context,
     required LlmTaskType task,
   }) async {
-    // Model manual load hona anivarya hai
     if (_contextId == null) {
-      throw Exception(
-        "Model load nahi hai! Pehle loadModelManually() ya initEngine() call karke model initialize karein.",
-      );
+      await loadModelManually(modelPath: _loadedModelPath);
     }
 
-    final currentId = _contextId!;
+    final validId = _contextId;
+    if (validId == null) {
+      throw Exception('ContextId is null! Model pehle load karein.');
+    }
+
     final systemInstruction = _buildSystemInstruction(task);
     final prompt = _buildPrompt(
       systemInstruction: systemInstruction,
@@ -128,11 +119,12 @@ class OfflineLlmAgentService {
       userInput: userInput,
     );
 
+    // Native layer ko exact validId pass karein
     final Map<dynamic, dynamic>? result = await _channel.invokeMethod('completion', {
-      'contextId': currentId,
+      'contextId': validId,
       'prompt': prompt,
       'temperature': 0.2,
-      'nPredict': 350,
+      'nPredict': 300,
       'nThreads': 2,
       'stop': const [
         '<|im_end|>',
@@ -141,7 +133,7 @@ class OfflineLlmAgentService {
     });
 
     if (result == null) {
-      throw Exception("Native completion ne null response diya.");
+      throw Exception('Native completion null return hua.');
     }
 
     return _extractText(result);
@@ -161,7 +153,7 @@ class OfflineLlmAgentService {
 $systemInstruction
 <|im_end|>
 <|im_start|>user
-${contextBlock}TOPIC / INPUT:
+${contextBlock}OBSERVATION / QUERY:
 $userInput
 <|im_end|>
 <|im_start|>assistant
@@ -169,97 +161,58 @@ $userInput
   }
 
   // ------------------------------------------------------------
-  // NOTEBOOK STRUCTURE PROMPTS (Raju vs Aman Sir & 3-Step Format)
+  // NOTEBOOK WHATSAPP CHAT PEDAGOGY PROMPT
   // ------------------------------------------------------------
   String _buildSystemInstruction(LlmTaskType task) {
     switch (task) {
       case LlmTaskType.quiz:
         return '''
-You are an AI Quiz Generator for Indian competitive exams (BPSC, BSSC, SSC).
-Generate exactly 2 standard MCQs based strictly on the supplied study context.
+Generate 2 MCQs based strictly on the context.
 Format:
 Q1. [Question]
 A) [Option 1] | B) [Option 2] | C) [Option 3] | D) [Option 4]
 Correct: [Letter]
 Explanation: [One short line]
-Q2. [Question]
-A) [Option 1] | B) [Option 2] | C) [Option 3] | D) [Option 4]
-Correct: [Letter]
-Explanation: [One short line]
-No conversational fluff.
-''';
-
-      case LlmTaskType.analysis:
-        return '''
-You are an AI Diagnostic Evaluator for Indian competitive exams.
-Analyze the user's answer against the supplied concept.
-Give exactly 2 crisp Hinglish lines:
-1. Correct or incorrect and why.
-2. The key exam trap or misconception.
-No conversational greetings.
-''';
-
-      case LlmTaskType.mnemonic:
-        return '''
-You are an AI Memory Specialist for Indian competitive exams.
-Create a short, memorable Hindi/Hinglish mnemonic code or hook for the supplied topic.
-Requirements:
-- Easy to remember.
-- Short & exam focused.
-- Catchy acronym or word.
-- Explain the connection in one short line.
-''';
-
-      case LlmTaskType.summary:
-        return '''
-You are a Rapid Revision AI Agent for Indian competitive exams.
-Summarize the supplied context using exactly this format:
-💡 Core Concept: [One crisp explanation]
-⚡ 3 High-Yield Exam Points:
-• Point 1
-• Point 2
-• Point 3
-🎯 Elimination Tip: [One practical MCQ elimination tip]
 ''';
 
       case LlmTaskType.duolingoExplanation:
       default:
         return '''
 You are an AI pedagogical engine for Indian competitive exams (BPSC/BSSC/SSC).
-Explain strictly using this exact 1-screen conversational card format in simple, spoken Hinglish.
 Rules:
 - Explain WHY before WHAT.
-- Raju asks a natural real-life doubt or curiosity.
-- Aman Sir clarifies directly without textbook jargon.
+- Raju observes real life or raises a doubt.
+- Aman Sir resolves the doubt directly without textbook jargon.
+- Strictly follow this 1-screen WhatsApp card format:
 
 Micro Concept:
-[1 crisp line definition of the core rule]
+[1 crisp line definition of core rule]
 
 Raju vs Aman Sir:
-Raju: [Natural real-life doubt]
-Aman Sir: [Direct, crisp clarification]
+Raju: [Real-life observation or doubt]
+Aman Sir: [Clear, direct explanation solving Raju's doubt]
 
 3-Step Breakdown:
-• Mool Tathya: [Core rule or factual data point]
-• Karyapranali: [Direct application or formula]
-• Pariksha Savdhani: [Elimination rule or common trap to avoid]
+• Mool Tathya: [Core factual rule]
+• Karyapranali: [Direct application / formula]
+• Pariksha Savdhani: [Elimination trap to avoid]
 
 Micro Challenge:
-Q: [One line question based on the concept]
+Q: [One line standard MCQ question]
 A) [Option 1]
 B) [Option 2]
 C) [Option 3]
 D) [Option 4]
 Correct Answer: [Letter]
-Explanation: [1 crisp line explaining why other options are traps]
+Explanation: [1 crisp line trap explanation]
 
-Do not write introductory greetings or extra text outside this format.
+Do not write any introductory greetings or conversational dialogue outside this format.
 ''';
     }
   }
 
   // ------------------------------------------------------------
-  // EXTRACT RESPONSE
+  // TEXT EXTRACTOR
   // ------------------------------------------------------------
   String _extractText(Map<dynamic, dynamic> result) {
     dynamic text = result['text'] ??
@@ -277,7 +230,7 @@ Do not write introductory greetings or extra text outside this format.
     }
 
     if (text == null) {
-      throw Exception("Native completion Map me valid text key nahi mili: $result");
+      throw Exception('Completion output me koi valid text nahi mila: $result');
     }
 
     return text.toString().trim();
