@@ -16,115 +16,130 @@ class OfflineLlmAgentService {
   static const MethodChannel _channel = MethodChannel('fllama');
 
   double? _contextId;
-  String? _currentModelPath;
+  String? _loadedModelPath;
   bool _isInitializing = false;
 
   bool get isReady => _contextId != null;
+  String? get activeModelPath => _loadedModelPath;
+  String? get activeModelName => _loadedModelPath?.split('/').last;
 
-  static const String defaultModelPath = '/sdcard/Download/qwen3-5-2B-Q4_K_M.gguf';
+  // Phone me verified path
+  static const String verified05BPath =
+      '/storage/emulated/0/Download/qwen2.5-0.5b-instruct-q4_k_m.gguf';
 
   // ------------------------------------------------------------
-  // INITIALIZE MODEL (STRICT NULL & CRASH CHECK)
+  // 1. STRICT MANUAL MODEL LOADER
   // ------------------------------------------------------------
-  Future<void> initEngine({String? modelPath}) async {
-    if (_contextId != null) return;
-    if (_isInitializing) return;
+  Future<void> loadModelManually({String? modelPath}) async {
+    if (_isInitializing) {
+      throw Exception("Pehle se ek model initialize ho raha hai, kripya intezar karein.");
+    }
+
+    final targetPath = modelPath ?? verified05BPath;
+    final file = File(targetPath);
+
+    if (!await file.exists()) {
+      throw Exception(
+        "GGUF model file nahi mili:\n$targetPath\nKripya phone ke Download folder me check karein.",
+      );
+    }
 
     _isInitializing = true;
-    final path = modelPath ?? defaultModelPath;
 
     try {
-      final file = File(path);
-      if (!await file.exists()) {
-        throw Exception('GGUF model file nahi mili:\n$path');
+      // Purana loaded context memory se free karein
+      if (_contextId != null) {
+        await unloadModel();
       }
 
-      // Memory-optimized parameters to prevent native initialization failure
+      // Memory-optimized parameters to prevent LMK Allocating crash
       final Map<dynamic, dynamic>? result = await _channel.invokeMethod('initContext', {
-        'model': path,
+        'model': targetPath,
         'embedding': false,
         'nCtx': 512,
-        'nBatch': 128,
-        'nThreads': 2,
+        'nBatch': 64,       // Buffer allocation spike control
+        'nThreads': 2,      // Smooth execution without heating
         'nGpuLayers': 0,
-        'useMmap': true,    // true rakhein taaki file direct disk se stream ho
-        'useMlock': false,   // false rakhein taaki physical RAM force lock na ho
+        'useMmap': true,
+        'useMlock': false,
       });
 
       if (result == null) {
-        throw Exception('Fllama native init ne null return kiya.');
+        throw Exception("Native engine ne initContext par null return kiya.");
       }
 
-      // Safe casting: contextId can be int or double
       final dynamic rawContextId = result['contextId'];
       if (rawContextId == null) {
-        throw Exception('ContextId null mila native engine se. Engine response: $result');
+        throw Exception("Native engine se contextId null mila. Result: $result");
       }
 
       final parsedId = (rawContextId as num).toDouble();
       if (parsedId <= 0) {
-        throw Exception('Invalid contextId received: $parsedId');
+        throw Exception("Invalid contextId pointer: $parsedId");
       }
 
       _contextId = parsedId;
-      _currentModelPath = path;
-    } catch (e) {
-      _contextId = null;
-      rethrow;
+      _loadedModelPath = targetPath;
     } finally {
       _isInitializing = false;
     }
   }
 
   // ------------------------------------------------------------
-  // LLM AGENT EXECUTION
+  // 2. MANUAL UNLOAD / DISPOSE
+  // ------------------------------------------------------------
+  Future<void> unloadModel() async {
+    final id = _contextId;
+    if (id == null) return;
+
+    try {
+      await _channel.invokeMethod('releaseContext', {'contextId': id});
+    } catch (_) {}
+
+    _contextId = null;
+    _loadedModelPath = null;
+  }
+
+  // ------------------------------------------------------------
+  // 3. EXECUTE LLM (Pure Dynamic Generation - No Fake Fallbacks)
   // ------------------------------------------------------------
   Future<String> executeLlmAgent({
     required String userInput,
     required String context,
     required LlmTaskType task,
   }) async {
-    try {
-      // Step 1: Ensure engine is initialized
-      if (_contextId == null) {
-        await initEngine(modelPath: _currentModelPath);
-      }
-
-      final contextId = _contextId;
-      // Step 2: Strictly prevent calling completion if contextId is null
-      if (contextId == null) {
-        return _fallbackStaticCard(userInput, context);
-      }
-
-      final systemInstruction = _buildSystemInstruction(task);
-      final prompt = _buildPrompt(
-        systemInstruction: systemInstruction,
-        context: context,
-        userInput: userInput,
+    // Model manual load hona anivarya hai
+    if (_contextId == null) {
+      throw Exception(
+        "Model load nahi hai! Pehle loadModelManually() call karke model initialize karein.",
       );
-
-      // Step 3: Native completion call with non-null contextId
-      final Map<dynamic, dynamic>? result = await _channel.invokeMethod('completion', {
-        'contextId': contextId,
-        'prompt': prompt,
-        'temperature': 0.2,
-        'nPredict': 256,
-        'nThreads': 2,
-        'stop': const [
-          '<|im_end|>',
-          '<|endoftext|>',
-        ],
-      });
-
-      if (result == null) {
-        return _fallbackStaticCard(userInput, context);
-      }
-
-      return _extractText(result);
-    } catch (e) {
-      // Native exception aane par UI crash nahi hoga, structured fallback card load hoga
-      return _fallbackStaticCard(userInput, context);
     }
+
+    final currentId = _contextId!;
+    final systemInstruction = _buildSystemInstruction(task);
+    final prompt = _buildPrompt(
+      systemInstruction: systemInstruction,
+      context: context,
+      userInput: userInput,
+    );
+
+    final Map<dynamic, dynamic>? result = await _channel.invokeMethod('completion', {
+      'contextId': currentId,
+      'prompt': prompt,
+      'temperature': 0.2,
+      'nPredict': 300,
+      'nThreads': 2,
+      'stop': const [
+        '<|im_end|>',
+        '<|endoftext|>',
+      ],
+    });
+
+    if (result == null) {
+      throw Exception("Native completion ne null response diya.");
+    }
+
+    return _extractText(result);
   }
 
   // ------------------------------------------------------------
@@ -135,15 +150,13 @@ class OfflineLlmAgentService {
     required String context,
     required String userInput,
   }) {
+    final contextBlock = context.trim().isNotEmpty ? "STUDY CONTEXT:\n$context\n\n" : "";
     return '''
 <|im_start|>system
 $systemInstruction
 <|im_end|>
 <|im_start|>user
-STUDY CONTEXT:
-$context
-
-TOPIC / INPUT:
+${contextBlock}TOPIC / INPUT:
 $userInput
 <|im_end|>
 <|im_start|>assistant
@@ -151,14 +164,14 @@ $userInput
   }
 
   // ------------------------------------------------------------
-  // DIRECT DUOLINGO CARD SYSTEM PROMPTS
+  // NOTEBOOK STRUCTURE PROMPTS
   // ------------------------------------------------------------
   String _buildSystemInstruction(LlmTaskType task) {
     switch (task) {
       case LlmTaskType.quiz:
         return '''
 You are an AI Quiz Generator for Indian competitive exams (BPSC, BSSC, SSC).
-Generate exactly 2 standard MCQs based only on the supplied study context.
+Generate exactly 2 standard MCQs based strictly on the supplied study context.
 Format:
 Q1. [Question]
 A) [Option 1] | B) [Option 2] | C) [Option 3] | D) [Option 4]
@@ -184,7 +197,7 @@ No conversational greetings.
       case LlmTaskType.mnemonic:
         return '''
 You are an AI Memory Specialist for Indian competitive exams.
-Create a short, memorable Hindi/Hinglish mnemonic or memory hook for the supplied topic.
+Create a short, memorable Hindi/Hinglish mnemonic code or hook for the supplied topic.
 Requirements:
 - Easy to remember.
 - Short & exam focused.
@@ -208,15 +221,15 @@ Summarize the supplied context using exactly this format:
       default:
         return '''
 You are an AI educational engine for Indian competitive exams.
-Explain strictly using this exact 3-part card format in simple Hinglish:
+Explain strictly using this exact 3-part card format in simple, clear Hinglish:
 
 Micro Concept:
 [1 crisp line definition of the core rule]
 
 3-Step Breakdown:
-• Step 1: [Core rule or constitutional/scientific fact]
-• Step 2: [Key application or formula]
-• Step 3: [Common exam trap or elimination rule]
+• Mool Tathya: [Core rule or constitutional/scientific fact]
+• Karyapranali: [Direct application or formula]
+• Pariksha Savdhani: [Common exam trap or elimination rule]
 
 Micro Challenge:
 Q: [One line question based on the concept]
@@ -227,7 +240,7 @@ D) [Option 4]
 Correct Answer: [Letter]
 Explanation: [1 crisp line explaining why other options are traps]
 
-Do not write any introductory greetings or conversational dialogue.
+Do not write introductory greetings or extra text outside this format.
 ''';
     }
   }
@@ -251,47 +264,9 @@ Do not write any introductory greetings or conversational dialogue.
     }
 
     if (text == null) {
-      return 'No response generated from offline engine.';
+      throw Exception("Native completion Map me valid text key nahi mili: $result");
     }
 
     return text.toString().trim();
-  }
-
-  // ------------------------------------------------------------
-  // SAFETY FALLBACK MICRO CARD
-  // ------------------------------------------------------------
-  String _fallbackStaticCard(String topic, String context) {
-    return '''
-Micro Concept:
-$topic competitive parikshaon ke liye factual accuracy aur core elimination rule par aadharit hai.
-
-3-Step Breakdown:
-• Step 1: Context ke mool concept ko dhyan se padhein aur direct statement note karein.
-• Step 2: Prashn me trap statements (jaise 'keval' ya 'sabhi') ko eliminate karein.
-• Step 3: BPSC/SSC parikshaon me factual verification hamesha prioritize karein.
-
-Micro Challenge:
-Q: Diye gaye context ke anusar sahi vikalp chunein:
-A) Concept statement satya hai
-B) Anishchit vikalp
-C) Trap option
-D) Inme se koi nahi
-Correct Answer: A
-Explanation: Sahi option direct factual rule aur context ko verify karta hai.
-'''.trim();
-  }
-
-  // ------------------------------------------------------------
-  // CLEAN DISPOSE
-  // ------------------------------------------------------------
-  Future<void> dispose() async {
-    final contextId = _contextId;
-    if (contextId == null) return;
-
-    try {
-      await _channel.invokeMethod('releaseContext', {'contextId': contextId});
-    } catch (_) {}
-    _contextId = null;
-    _currentModelPath = null;
   }
 }
