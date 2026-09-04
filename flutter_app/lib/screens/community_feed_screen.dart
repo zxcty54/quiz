@@ -36,6 +36,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     'Study Material 📚',
     'Daily Quiz ⚡',
     'Doubts ❓',
+    'General 💬',
     'Announcement 📢',
     'Saved 📌'
   ];
@@ -172,6 +173,23 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   void _openCreatePostModal() {
     final contentCtrl = TextEditingController();
+    final bool isCreator = _currentLoggedInHandle != 'user';
+
+    final List<String> availableTags = isCreator
+        ? [
+            'Mock Tests ⚡',
+            'Study Material 📚',
+            'Daily Quiz ⚡',
+            'Announcement 📢',
+            'Doubts ❓',
+            'General 💬',
+          ]
+        : [
+            'Doubts ❓',
+            'Study Material 📚',
+            'General 💬',
+          ];
+
     String selectedTag = 'Doubts ❓';
     File? selectedImage;
     bool isUploading = false;
@@ -192,7 +210,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('✍️ Ask Doubt / Post', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17, color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A))),
+                    Text(
+                      '✍️ Ask Doubt / Post',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17,
+                        color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                      ),
+                    ),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
@@ -200,14 +225,17 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 DropdownButtonFormField<String>(
                   value: selectedTag,
                   decoration: const InputDecoration(labelText: 'Category', isDense: true, border: OutlineInputBorder()),
-                  items: _filters.where((f) => f != 'All' && f != 'Saved 📌').map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
+                  items: availableTags.map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
                   onChanged: (val) => setModalState(() => selectedTag = val ?? selectedTag),
                 ),
                 const SizedBox(height: 10),
                 TextField(
                   controller: contentCtrl,
                   maxLines: 4,
-                  decoration: const InputDecoration(hintText: 'Share exam questions, doubts or important study insights...', border: OutlineInputBorder()),
+                  decoration: const InputDecoration(
+                    hintText: 'Share exam questions, doubts or important study insights...',
+                    border: OutlineInputBorder(),
+                  ),
                 ),
                 const SizedBox(height: 10),
                 if (selectedImage != null)
