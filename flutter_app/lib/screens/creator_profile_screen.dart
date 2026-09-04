@@ -341,39 +341,47 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Transform.translate(
-                      offset: const Offset(0, -28),
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.end,
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(
-                                color: cardSurface,
-                                width: 3.5,
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: [
+                        Container(
+                          margin: const EdgeInsets.only(top: 12),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: cardSurface,
+                              width: 3.5,
+                            ),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.08),
+                                blurRadius: 8,
+                                offset: const Offset(0, 2),
                               ),
-                            ),
-                            child: CircleAvatar(
-                              radius: 36,
-                              backgroundColor: _primaryBlue,
-                              backgroundImage: (logoUrl != null && logoUrl.toString().isNotEmpty)
-                                  ? NetworkImage(logoUrl)
-                                  : null,
-                              child: (logoUrl == null || logoUrl.toString().isEmpty)
-                                  ? Text(
-                                      name.isNotEmpty ? name[0].toUpperCase() : 'E',
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 26,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    )
-                                  : null,
-                            ),
+                            ],
                           ),
-                          const Spacer(),
-                          OutlinedButton.icon(
+                          child: CircleAvatar(
+                            radius: 34,
+                            backgroundColor: _primaryBlue,
+                            backgroundImage: (logoUrl != null && logoUrl.toString().isNotEmpty)
+                                ? NetworkImage(logoUrl)
+                                : null,
+                            child: (logoUrl == null || logoUrl.toString().isEmpty)
+                                ? Text(
+                                    name.isNotEmpty ? name[0].toUpperCase() : 'E',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 24,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  )
+                                : null,
+                          ),
+                        ),
+                        const Spacer(),
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 6),
+                          child: OutlinedButton.icon(
                             style: OutlinedButton.styleFrom(
                               backgroundColor: _isFollowing ? _primaryBlue : Colors.transparent,
                               foregroundColor: _isFollowing ? Colors.white : _primaryBlue,
@@ -391,116 +399,110 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                             ),
                             onPressed: _toggleFollow,
                           ),
-                        ],
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Flexible(
+                          child: Text(
+                            name,
+                            style: const TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 20,
+                              letterSpacing: -0.2,
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                        const SizedBox(width: 5),
+                        const Icon(Icons.verified, size: 17, color: _primaryBlue),
+                      ],
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      '@$handle',
+                      style: TextStyle(color: Colors.grey[500], fontSize: 12.5),
+                    ),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: [
+                        const Icon(Icons.location_on_outlined, size: 14, color: Colors.grey),
+                        const SizedBox(width: 4),
+                        Expanded(
+                          child: Text(
+                            landmark != null && landmark.toString().isNotEmpty
+                                ? '$landmark, $district'
+                                : '$district, Bihar',
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: isDark ? Colors.grey[300] : const Color(0xFF475569),
+                            ),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      specialty,
+                      style: const TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w600,
+                        color: _primaryBlue,
                       ),
                     ),
-                    Transform.translate(
-                      offset: const Offset(0, -16),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Flexible(
-                                child: Text(
-                                  name,
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 19,
-                                  ),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ),
-                              const SizedBox(width: 5),
-                              const Icon(Icons.verified, size: 17, color: _primaryBlue),
-                            ],
+                    const SizedBox(height: 16),
+                    Row(
+                      children: [
+                        _buildStatBlock('$_followersCount', 'Followers'),
+                        const SizedBox(width: 28),
+                        _buildStatBlock('${_batches.length}', 'Batches'),
+                        const SizedBox(width: 28),
+                        _buildStatBlock('${_mocks.length}', 'Open Mocks'),
+                      ],
+                    ),
+                    if (telegram != null && telegram.toString().isNotEmpty) ...[
+                      const SizedBox(height: 14),
+                      InkWell(
+                        onTap: () => _openTelegram(telegram),
+                        borderRadius: BorderRadius.circular(10),
+                        child: Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                          decoration: BoxDecoration(
+                            color: isDark
+                                ? const Color(0xFF1E3A8A).withOpacity(0.3)
+                                : const Color(0xFFF0F9FF),
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: isDark
+                                  ? const Color(0xFF1E3A8A)
+                                  : const Color(0xFFBAE6FD),
+                              width: 1,
+                            ),
                           ),
-                          const SizedBox(height: 2),
-                          Text(
-                            '@$handle',
-                            style: TextStyle(color: Colors.grey[500], fontSize: 12),
-                          ),
-                          const SizedBox(height: 8),
-                          Row(
+                          child: const Row(
                             children: [
-                              const Icon(Icons.location_on_outlined, size: 14, color: Colors.grey),
-                              const SizedBox(width: 4),
+                              Icon(Icons.near_me_rounded, color: Color(0xFF0284C7), size: 16),
+                              SizedBox(width: 8),
                               Expanded(
                                 child: Text(
-                                  landmark != null && landmark.toString().isNotEmpty
-                                      ? '$landmark, $district'
-                                      : '$district, Bihar',
+                                  'Join Official Telegram Channel',
                                   style: TextStyle(
-                                    fontSize: 12,
-                                    color: isDark ? Colors.grey[300] : const Color(0xFF475569),
-                                  ),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 3),
-                          Text(
-                            specialty,
-                            style: const TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.w600,
-                              color: _primaryBlue,
-                            ),
-                          ),
-                          const SizedBox(height: 14),
-                          Row(
-                            children: [
-                              _buildStatBlock('$_followersCount', 'Followers'),
-                              const SizedBox(width: 24),
-                              _buildStatBlock('${_batches.length}', 'Batches'),
-                              const SizedBox(width: 24),
-                              _buildStatBlock('${_mocks.length}', 'Open Mocks'),
-                            ],
-                          ),
-                          if (telegram != null && telegram.toString().isNotEmpty) ...[
-                            const SizedBox(height: 14),
-                            InkWell(
-                              onTap: () => _openTelegram(telegram),
-                              borderRadius: BorderRadius.circular(10),
-                              child: Container(
-                                width: double.infinity,
-                                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                                decoration: BoxDecoration(
-                                  color: isDark
-                                      ? const Color(0xFF1E3A8A).withOpacity(0.3)
-                                      : const Color(0xFFF0F9FF),
-                                  borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(
-                                    color: isDark
-                                        ? const Color(0xFF1E3A8A)
-                                        : const Color(0xFFBAE6FD),
-                                    width: 1,
+                                    fontSize: 12.5,
+                                    fontWeight: FontWeight.w700,
+                                    color: Color(0xFF0284C7),
                                   ),
                                 ),
-                                child: const Row(
-                                  children: [
-                                    Icon(Icons.near_me_rounded, color: Color(0xFF0284C7), size: 16),
-                                    SizedBox(width: 8),
-                                    Expanded(
-                                      child: Text(
-                                        'Join Official Telegram Channel',
-                                        style: TextStyle(
-                                          fontSize: 12.5,
-                                          fontWeight: FontWeight.w700,
-                                          color: Color(0xFF0284C7),
-                                        ),
-                                      ),
-                                    ),
-                                    Icon(Icons.arrow_forward_rounded, size: 15, color: Color(0xFF0284C7)),
-                                  ],
-                                ),
                               ),
-                            ),
-                          ],
-                        ],
+                              Icon(Icons.arrow_forward_rounded, size: 15, color: Color(0xFF0284C7)),
+                            ],
+                          ),
+                        ),
                       ),
-                    ),
+                    ],
                   ],
                 ),
               ),
