@@ -9,7 +9,7 @@ import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
 import '../services/admin_telegram_alert.dart';
-import '../utils/security_content_guard.dart';
+import '../widgets/community_comments_sheet.dart'; // 👈 New Import
 import 'creator_profile_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -45,16 +45,13 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     'Saved 📌'
   ];
 
-  // AAPKA ORIGINAL UNIFIED COLOR PALETTE
-  static const Color _ink = Color(0xFF322D66);
-  static const Color _inkLight = Color(0xFFB3ACEE);
-  static const Color _onInk = Color(0xFFF3F1FF);
-  static const Color _paperBg = Color(0xFFFAF6ED);
-  static const Color _paperCard = Color(0xFFFFFDF8);
-  static const Color _paperBorder = Color(0xFFE7DFCC);
-  static const Color _inkDarkBg = Color(0xFF16141F);
-  static const Color _inkDarkCard = Color(0xFF201D2C);
-  static const Color _inkDarkBorder = Color(0xFF322C46);
+  static const Color _primaryBlue = Color(0xFF2563EB);
+  static const Color _lightBg = Color(0xFFF8FAFC);
+  static const Color _lightCard = Colors.white;
+  static const Color _lightDivider = Color(0xFFE2E8F0);
+  static const Color _darkBg = Color(0xFF0F172A);
+  static const Color _darkCard = Color(0xFF1E293B);
+  static const Color _darkDivider = Color(0xFF334155);
 
   @override
   void initState() {
@@ -81,7 +78,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       });
     }
 
-    // 1. Fetch Saved Posts (user_saved_posts table)
     try {
       final savedRes = await Supabase.instance.client
           .from('user_saved_posts')
@@ -99,7 +95,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       }
     } catch (_) {}
 
-    // 2. Fetch User Likes (post_likes table)
     try {
       final likesRes = await Supabase.instance.client
           .from('post_likes')
@@ -117,7 +112,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       }
     } catch (_) {}
 
-    // 3. Fetch User Poll Votes (poll_votes table)
     try {
       final votesRes = await Supabase.instance.client
           .from('poll_votes')
@@ -144,10 +138,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor: widget.isDarkMode ? _inkDarkCard : _paperCard,
+        backgroundColor: widget.isDarkMode ? _darkCard : _lightCard,
         title: Text(
           '👤 Edit Your Name',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: widget.isDarkMode ? _onInk : _ink),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 16,
+            color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+          ),
         ),
         content: TextField(
           controller: nameCtrl,
@@ -160,7 +158,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         actions: [
           TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
           ElevatedButton(
-            style: ElevatedButton.styleFrom(backgroundColor: _ink, foregroundColor: _onInk),
+            style: ElevatedButton.styleFrom(backgroundColor: _primaryBlue, foregroundColor: Colors.white),
             onPressed: () async {
               final val = nameCtrl.text.trim();
               if (val.isEmpty) return;
@@ -243,7 +241,7 @@ $content
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
         content: Text('📋 Post copied! Share on WhatsApp / Telegram.'),
-        backgroundColor: _ink,
+        backgroundColor: _primaryBlue,
       ),
     );
 
@@ -296,7 +294,7 @@ $content
           SnackBar(
             content: Text(isSaving ? '📌 Saved to Notebook!' : 'Removed from Saved!'),
             duration: const Duration(seconds: 1),
-            backgroundColor: _ink,
+            backgroundColor: _primaryBlue,
           ),
         );
       }
@@ -406,217 +404,24 @@ $content
     );
   }
 
+  // 💬 Opens the isolated comments bottom sheet
   void _openCommentsSheet(int postId, Map<String, dynamic> post) {
-    final commentCtrl = TextEditingController();
-    int? replyingToCommentId;
-    String? replyingToName;
-    bool isSubmitting = false;
-    List<Map<String, dynamic>> comments = [];
-    bool isLoadingComments = true;
-
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? _inkDarkCard : _paperCard,
+      backgroundColor: widget.isDarkMode ? _darkCard : _lightCard,
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setSheetState) {
-          if (isLoadingComments) {
-            Supabase.instance.client
-                .from('post_comments')
-                .select()
-                .eq('post_id', postId)
-                .order('created_at', ascending: true)
-                .then((data) {
-              if (ctx.mounted) {
-                setSheetState(() {
-                  comments = List<Map<String, dynamic>>.from(data);
-                  isLoadingComments = false;
-                });
-              }
-            }).catchError((_) {
-              if (ctx.mounted) setSheetState(() => isLoadingComments = false);
-            });
-          }
-
-          return Padding(
-            padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
-            child: SizedBox(
-              height: MediaQuery.of(ctx).size.height * 0.72,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        '💬 Discussion & Replies',
-                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: widget.isDarkMode ? _onInk : _ink),
-                      ),
-                      IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
-                    ],
-                  ),
-                  Divider(color: widget.isDarkMode ? _inkDarkBorder : _paperBorder),
-                  Expanded(
-                    child: isLoadingComments
-                        ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
-                        : comments.isEmpty
-                            ? const Center(child: Text('No replies yet. Be the first to solve!'))
-                            : ListView.builder(
-                                itemCount: comments.length,
-                                itemBuilder: (context, cIdx) {
-                                  final c = comments[cIdx];
-                                  final bool isReply = c['parent_comment_id'] != null;
-
-                                  return Container(
-                                    margin: EdgeInsets.only(left: isReply ? 24.0 : 0.0, bottom: 8),
-                                    padding: const EdgeInsets.all(10),
-                                    decoration: BoxDecoration(
-                                      color: isReply
-                                          ? (widget.isDarkMode ? const Color(0xFF262140) : const Color(0xFFF4F2FC))
-                                          : Colors.transparent,
-                                      borderRadius: BorderRadius.circular(8),
-                                      border: isReply ? const Border(left: BorderSide(color: _ink, width: 3)) : null,
-                                    ),
-                                    child: Column(
-                                      crossAxisAlignment: CrossAxisAlignment.start,
-                                      children: [
-                                        Row(
-                                          children: [
-                                            Text(c['user_name'] ?? 'Aspirant', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
-                                            const SizedBox(width: 6),
-                                            if (c['is_creator'] == true)
-                                              const Icon(Icons.verified, color: _ink, size: 14),
-                                            const Spacer(),
-                                            GestureDetector(
-                                              onTap: () {
-                                                setSheetState(() {
-                                                  replyingToCommentId = c['id'];
-                                                  replyingToName = c['user_name'] ?? 'Aspirant';
-                                                });
-                                              },
-                                              child: const Text('Reply', style: TextStyle(color: _ink, fontSize: 11, fontWeight: FontWeight.bold)),
-                                            ),
-                                          ],
-                                        ),
-                                        const SizedBox(height: 4),
-                                        _buildRichTextContent(c['comment_text'] ?? c['content'] ?? '', fontSize: 13),
-                                      ],
-                                    ),
-                                  );
-                                },
-                              ),
-                  ),
-                  if (replyingToCommentId != null)
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                      color: _ink.withOpacity(0.1),
-                      child: Row(
-                        children: [
-                          Text('Replying to @$replyingToName', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _ink)),
-                          const Spacer(),
-                          IconButton(
-                            icon: const Icon(Icons.close, size: 14),
-                            onPressed: () => setSheetState(() {
-                              replyingToCommentId = null;
-                              replyingToName = null;
-                            }),
-                          ),
-                        ],
-                      ),
-                    ),
-                  Divider(color: widget.isDarkMode ? _inkDarkBorder : _paperBorder),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: TextField(
-                          controller: commentCtrl,
-                          textInputAction: TextInputAction.send,
-                          decoration: InputDecoration(
-                            hintText: replyingToName != null ? 'Reply to @$replyingToName...' : 'Add solution as $_customUserName...',
-                            border: InputBorder.none,
-                          ),
-                        ),
-                      ),
-                      IconButton(
-                        icon: isSubmitting
-                            ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2))
-                            : const Icon(Icons.send_rounded, color: _ink),
-                        onPressed: isSubmitting
-                            ? null
-                            : () async {
-                                final text = commentCtrl.text.trim();
-                                if (text.isEmpty) return;
-
-                                final validationError = SecurityContentGuard.validateContent(text);
-                                if (validationError != null) {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(content: Text(validationError), backgroundColor: Colors.red.shade800),
-                                  );
-                                  return;
-                                }
-
-                                setSheetState(() => isSubmitting = true);
-                                try {
-                                  // 🛡️ Adaptive column payload to prevent schema rejection
-                                  Map<String, dynamic> insertData = {
-                                    'post_id': postId,
-                                    'user_handle': _currentLoggedInHandle,
-                                    'user_name': _customUserName,
-                                    'comment_text': text,
-                                    'is_creator': _currentLoggedInHandle != 'user',
-                                  };
-
-                                  if (replyingToCommentId != null) {
-                                    insertData['parent_comment_id'] = replyingToCommentId;
-                                  }
-
-                                  dynamic inserted;
-                                  try {
-                                    inserted = await Supabase.instance.client
-                                        .from('post_comments')
-                                        .insert(insertData)
-                                        .select()
-                                        .single();
-                                  } catch (primaryErr) {
-                                    // Fallback to 'content' column if table uses 'content' instead of 'comment_text'
-                                    insertData.remove('comment_text');
-                                    insertData['content'] = text;
-                                    inserted = await Supabase.instance.client
-                                        .from('post_comments')
-                                        .insert(insertData)
-                                        .select()
-                                        .single();
-                                  }
-
-                                  commentCtrl.clear();
-                                  setSheetState(() {
-                                    comments.add(inserted);
-                                    replyingToCommentId = null;
-                                    replyingToName = null;
-                                    isSubmitting = false;
-                                  });
-
-                                  setState(() {
-                                    post['comments_count'] = (post['comments_count'] ?? 0) + 1;
-                                  });
-                                } catch (e) {
-                                  setSheetState(() => isSubmitting = false);
-                                  if (context.mounted) {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(content: Text('Error posting reply: $e')),
-                                    );
-                                  }
-                                }
-                              },
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                ],
-              ),
-            ),
-          );
+      builder: (ctx) => CommunityCommentsSheet(
+        postId: postId,
+        post: post,
+        currentLoggedInHandle: _currentLoggedInHandle,
+        customUserName: _customUserName,
+        isDarkMode: widget.isDarkMode,
+        buildRichTextContent: _buildRichTextContent,
+        onCommentAdded: () {
+          setState(() {
+            post['comments_count'] = (post['comments_count'] ?? 0) + 1;
+          });
         },
       ),
     );
@@ -632,7 +437,7 @@ $content
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? _inkDarkCard : _paperCard,
+      backgroundColor: widget.isDarkMode ? _darkCard : _lightCard,
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
@@ -645,7 +450,14 @@ $content
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('✍️ Ask Doubt / Post', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17, color: widget.isDarkMode ? _onInk : _ink)),
+                    Text(
+                      '✍️ Ask Doubt / Post',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 17,
+                        color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                      ),
+                    ),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
@@ -701,7 +513,7 @@ $content
                     ),
                     const SizedBox(width: 8),
                     IconButton(
-                      icon: const Icon(Icons.camera_alt_outlined, color: _ink),
+                      icon: const Icon(Icons.camera_alt_outlined, color: _primaryBlue),
                       onPressed: () async {
                         final picked = await picker.pickImage(source: ImageSource.camera, imageQuality: 75);
                         if (picked != null) setModalState(() => selectedImage = File(picked.path));
@@ -714,7 +526,7 @@ $content
                   width: double.infinity,
                   height: 44,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: _ink, foregroundColor: _onInk),
+                    style: ElevatedButton.styleFrom(backgroundColor: _primaryBlue, foregroundColor: Colors.white),
                     onPressed: isUploading
                         ? null
                         : () async {
@@ -765,7 +577,7 @@ $content
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
                                     content: Text('⏳ Post submitted for review! It will appear once approved.'),
-                                    backgroundColor: _ink,
+                                    backgroundColor: _primaryBlue,
                                     duration: Duration(seconds: 3),
                                   ),
                                 );
@@ -799,7 +611,7 @@ $content
         style: TextStyle(
           fontSize: fontSize,
           height: 1.45,
-          color: widget.isDarkMode ? _onInk : const Color(0xFF1E293B),
+          color: widget.isDarkMode ? const Color(0xFFF1F5F9) : const Color(0xFF1E293B),
         ),
       );
     }
@@ -818,7 +630,7 @@ $content
         spans.add(
           TextSpan(
             text: matchText,
-            style: const TextStyle(color: _ink, decoration: TextDecoration.underline, fontWeight: FontWeight.w600),
+            style: const TextStyle(color: _primaryBlue, decoration: TextDecoration.underline, fontWeight: FontWeight.w600),
             recognizer: TapGestureRecognizer()
               ..onTap = () => launchUrl(
                     Uri.parse(matchText.startsWith('http') ? matchText : 'https://$matchText'),
@@ -830,7 +642,7 @@ $content
         spans.add(
           TextSpan(
             text: matchText,
-            style: const TextStyle(color: _ink, fontWeight: FontWeight.bold),
+            style: const TextStyle(color: _primaryBlue, fontWeight: FontWeight.bold),
             recognizer: TapGestureRecognizer()
               ..onTap = () {
                 final cleaned = matchText.replaceAll('#', '').toLowerCase();
@@ -847,7 +659,7 @@ $content
         spans.add(
           TextSpan(
             text: matchText,
-            style: const TextStyle(color: _ink, fontWeight: FontWeight.bold),
+            style: const TextStyle(color: _primaryBlue, fontWeight: FontWeight.bold),
             recognizer: TapGestureRecognizer()
               ..onTap = () => _navigateToCreator(handle),
           ),
@@ -866,7 +678,7 @@ $content
         style: TextStyle(
           fontSize: fontSize,
           height: 1.45,
-          color: widget.isDarkMode ? _onInk : const Color(0xFF0F172A),
+          color: widget.isDarkMode ? const Color(0xFFF1F5F9) : const Color(0xFF0F172A),
         ),
         children: spans,
       ),
@@ -881,9 +693,9 @@ $content
     return Container(
       margin: const EdgeInsets.only(top: 10),
       decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF1E1A33) : const Color(0xFFF4F2FC),
+        color: isDark ? const Color(0xFF172554) : const Color(0xFFEFF6FF),
         borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: _ink.withOpacity(0.22), width: 1.1),
+        border: Border.all(color: isDark ? const Color(0xFF1E40AF) : const Color(0xFFDBEAFE), width: 1.1),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -915,7 +727,7 @@ $content
                     ),
                     Text(
                       '$attempts Aspirants Attempted',
-                      style: TextStyle(fontSize: 11, color: isDark ? _inkLight : Colors.grey.shade600),
+                      style: TextStyle(fontSize: 11, color: isDark ? Colors.grey[400] : const Color(0xFF64748B)),
                     ),
                   ],
                 ),
@@ -927,7 +739,7 @@ $content
                 const SizedBox(height: 4),
                 Text(
                   '$totalQs Concept Questions • ⏱ $duration Mins • Detailed Analytics',
-                  style: TextStyle(fontSize: 11.5, color: isDark ? _inkLight : const Color(0xFF5C5540)),
+                  style: TextStyle(fontSize: 11.5, color: isDark ? Colors.grey[300] : const Color(0xFF475569)),
                 ),
                 const SizedBox(height: 12),
                 SizedBox(
@@ -935,8 +747,8 @@ $content
                   height: 40,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: _ink,
-                      foregroundColor: _onInk,
+                      backgroundColor: _primaryBlue,
+                      foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                       elevation: 0,
                     ),
@@ -961,17 +773,17 @@ $content
               width: double.infinity,
               padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
               decoration: BoxDecoration(
-                color: _ink.withOpacity(0.08),
+                color: isDark ? const Color(0xFF1E3A8A).withOpacity(0.5) : const Color(0xFFDBEAFE).withOpacity(0.5),
                 borderRadius: const BorderRadius.vertical(bottom: Radius.circular(13)),
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.school_outlined, size: 14, color: _ink),
+                  const Icon(Icons.school_outlined, size: 14, color: _primaryBlue),
                   const SizedBox(width: 6),
                   Expanded(
                     child: Text(
                       'Curated by $authorName • Explore Classroom Batches →',
-                      style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: _ink),
+                      style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: _primaryBlue),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
@@ -989,9 +801,9 @@ $content
       margin: const EdgeInsets.only(top: 8),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: const Color(0xFF059669).withOpacity(0.08),
+        color: isDark ? const Color(0xFF064E3B).withOpacity(0.3) : const Color(0xFFECFDF5),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFF059669).withOpacity(0.2)),
+        border: Border.all(color: isDark ? const Color(0xFF065F46) : const Color(0xFFA7F3D0)),
       ),
       child: const Row(
         children: [
@@ -1029,9 +841,9 @@ $content
       margin: const EdgeInsets.only(top: 10),
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: isDark ? _inkDarkBg : _paperBg,
+        color: isDark ? _darkBg : const Color(0xFFF1F5F9),
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: _ink.withOpacity(0.18)),
+        border: Border.all(color: _primaryBlue.withOpacity(0.18)),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1040,7 +852,7 @@ $content
             children: const [
               Icon(Icons.bolt_rounded, color: Colors.amber, size: 18),
               SizedBox(width: 4),
-              Text('Live Daily Quiz • Tap to Solve', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: _ink)),
+              Text('Live Daily Quiz • Tap to Solve', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: _primaryBlue)),
             ],
           ),
           const SizedBox(height: 8),
@@ -1051,7 +863,7 @@ $content
             final bool isSelected = selectedIdx == idx;
             final bool isCorrect = correctIdx == idx;
 
-            Color tileColor = isDark ? _inkDarkCard : _paperCard;
+            Color tileColor = isDark ? _darkCard : Colors.white;
             if (hasVoted) {
               if (isCorrect) {
                 tileColor = const Color(0xFF16A34A).withOpacity(0.18);
@@ -1072,7 +884,7 @@ $content
                     borderRadius: BorderRadius.circular(8),
                     border: hasVoted && isCorrect
                         ? Border.all(color: const Color(0xFF16A34A), width: 1.5)
-                        : Border.all(color: isDark ? _inkDarkBorder : _paperBorder),
+                        : Border.all(color: isDark ? _darkDivider : _lightDivider),
                   ),
                   child: Row(
                     children: [
@@ -1091,11 +903,11 @@ $content
             const SizedBox(height: 6),
             Container(
               padding: const EdgeInsets.all(8),
-              decoration: BoxDecoration(color: _ink.withOpacity(0.08), borderRadius: BorderRadius.circular(6)),
+              decoration: BoxDecoration(color: _primaryBlue.withOpacity(0.08), borderRadius: BorderRadius.circular(6)),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Icon(Icons.lightbulb_outline_rounded, size: 16, color: _ink),
+                  const Icon(Icons.lightbulb_outline_rounded, size: 16, color: _primaryBlue),
                   const SizedBox(width: 6),
                   Expanded(child: Text('Explanation: $explanation', style: const TextStyle(fontSize: 12, height: 1.35))),
                 ],
@@ -1110,9 +922,9 @@ $content
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
-    final bgSurface = isDark ? _inkDarkBg : _paperBg;
-    final dividerColor = isDark ? _inkDarkBorder : _paperBorder;
-    final cardSurface = isDark ? _inkDarkCard : _paperCard;
+    final bgSurface = isDark ? _darkBg : _lightBg;
+    final dividerColor = isDark ? _darkDivider : _lightDivider;
+    final cardSurface = isDark ? _darkCard : _lightCard;
 
     final filteredList = _posts.where((p) {
       bool matchesCategory = true;
@@ -1152,28 +964,32 @@ $content
     return Scaffold(
       backgroundColor: bgSurface,
       appBar: AppBar(
-        backgroundColor: bgSurface,
+        backgroundColor: cardSurface,
         elevation: 0,
         scrolledUnderElevation: 0,
         title: Text(
           'Community Feed',
-          style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: isDark ? _onInk : _ink),
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+            color: isDark ? Colors.white : const Color(0xFF0F172A),
+          ),
         ),
         actions: [
           IconButton(
-            icon: Icon(Icons.badge_outlined, color: isDark ? _inkLight : _ink),
+            icon: Icon(Icons.badge_outlined, color: isDark ? Colors.white70 : const Color(0xFF334155)),
             tooltip: 'Change My Display Name',
             onPressed: _editMyNameDialog,
           ),
           IconButton(
-            icon: Icon(Icons.refresh_rounded, color: isDark ? _inkLight : _ink),
+            icon: Icon(Icons.refresh_rounded, color: isDark ? Colors.white70 : const Color(0xFF334155)),
             onPressed: _fetchFeedPosts,
           ),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        backgroundColor: _ink,
-        foregroundColor: _onInk,
+        backgroundColor: _primaryBlue,
+        foregroundColor: Colors.white,
         icon: const Icon(Icons.edit_rounded),
         label: const Text('Post / Doubt', style: TextStyle(fontWeight: FontWeight.bold)),
         onPressed: _openCreatePostModal,
@@ -1191,7 +1007,7 @@ $content
               ),
               child: TextField(
                 controller: _searchCtrl,
-                style: TextStyle(fontSize: 13.5, color: isDark ? _onInk : _ink),
+                style: TextStyle(fontSize: 13.5, color: isDark ? Colors.white : const Color(0xFF0F172A)),
                 onChanged: (val) => setState(() => _searchQuery = val.trim()),
                 decoration: InputDecoration(
                   hintText: '🔍 Search mocks, doubts, topics, mentor...',
@@ -1225,14 +1041,14 @@ $content
                       style: TextStyle(fontSize: 12, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal),
                     ),
                     selected: isSelected,
-                    selectedColor: _ink,
+                    selectedColor: _primaryBlue,
                     backgroundColor: cardSurface,
                     labelStyle: TextStyle(
-                      color: isSelected ? _onInk : (isDark ? _inkLight : const Color(0xFF5C5540)),
+                      color: isSelected ? Colors.white : (isDark ? Colors.white70 : const Color(0xFF475569)),
                     ),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(17),
-                      side: BorderSide(color: isSelected ? _ink : dividerColor),
+                      side: BorderSide(color: isSelected ? _primaryBlue : dividerColor),
                     ),
                     onSelected: (_) => setState(() => _activeFilter = f),
                   ),
@@ -1287,7 +1103,7 @@ $content
                                   : (item['author_name'] ?? 'Aspirant');
 
                               return Container(
-                                color: bgSurface,
+                                color: cardSurface,
                                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -1300,10 +1116,10 @@ $content
                                         children: [
                                           CircleAvatar(
                                             radius: 19,
-                                            backgroundColor: isVerifiedCreator ? _ink : (isDark ? _inkDarkBorder : const Color(0xFFBFB8A0)),
+                                            backgroundColor: isVerifiedCreator ? _primaryBlue : (isDark ? _darkDivider : const Color(0xFF64748B)),
                                             child: Text(
                                               isVerifiedCreator ? ((creator['name'] ?? 'M')[0]).toUpperCase() : 'A',
-                                              style: TextStyle(color: _onInk, fontWeight: FontWeight.bold, fontSize: 13),
+                                              style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
                                             ),
                                           ),
                                           const SizedBox(width: 10),
@@ -1319,7 +1135,7 @@ $content
                                                     ),
                                                     const SizedBox(width: 4),
                                                     if (isVerifiedCreator)
-                                                      const Icon(Icons.verified, size: 14, color: _ink),
+                                                      const Icon(Icons.verified, size: 14, color: _primaryBlue),
                                                     const SizedBox(width: 6),
                                                     Text(
                                                       '@$authorHandle',
@@ -1332,7 +1148,7 @@ $content
                                                       ? '🎓 ${creator['subject_specialty'] ?? 'Exam Mentor'} • ${creator['followers_count'] ?? 0} Followers'
                                                       : 'Aspirant • Active Member',
                                                   style: TextStyle(
-                                                    color: isVerifiedCreator ? _ink : Colors.grey[600],
+                                                    color: isVerifiedCreator ? _primaryBlue : Colors.grey[600],
                                                     fontSize: 10.5,
                                                     fontWeight: isVerifiedCreator ? FontWeight.bold : FontWeight.normal,
                                                   ),
@@ -1343,10 +1159,10 @@ $content
                                           Container(
                                             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                                             decoration: BoxDecoration(
-                                              color: _ink.withOpacity(0.08),
+                                              color: _primaryBlue.withOpacity(0.08),
                                               borderRadius: BorderRadius.circular(5),
                                             ),
-                                            child: Text(item['tag'] ?? 'General', style: const TextStyle(color: _ink, fontSize: 10.5, fontWeight: FontWeight.bold)),
+                                            child: Text(item['tag'] ?? 'General', style: const TextStyle(color: _primaryBlue, fontSize: 10.5, fontWeight: FontWeight.bold)),
                                           ),
                                         ],
                                       ),
@@ -1391,7 +1207,7 @@ $content
                                                 Icon(
                                                   isLiked ? Icons.thumb_up_rounded : Icons.thumb_up_alt_outlined,
                                                   size: 16,
-                                                  color: isLiked ? _ink : Colors.grey[600],
+                                                  color: isLiked ? _primaryBlue : Colors.grey[600],
                                                 ),
                                                 const SizedBox(width: 5),
                                                 Text(
@@ -1399,7 +1215,7 @@ $content
                                                   style: TextStyle(
                                                     fontWeight: FontWeight.bold,
                                                     fontSize: 12.5,
-                                                    color: isLiked ? _ink : (isDark ? _onInk : const Color(0xFF1E293B)),
+                                                    color: isLiked ? _primaryBlue : (isDark ? Colors.white : const Color(0xFF1E293B)),
                                                   ),
                                                 ),
                                               ],
@@ -1421,7 +1237,7 @@ $content
                                                   '$commentsCount',
                                                   style: TextStyle(
                                                     fontSize: 12.5,
-                                                    color: isDark ? _onInk : _ink,
+                                                    color: isDark ? Colors.white : _primaryBlue,
                                                     fontWeight: FontWeight.bold,
                                                   ),
                                                 ),
@@ -1447,7 +1263,7 @@ $content
                                             padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
                                             child: Row(
                                               children: [
-                                                Icon(isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded, size: 17, color: isSaved ? _ink : Colors.grey),
+                                                Icon(isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded, size: 17, color: isSaved ? _primaryBlue : Colors.grey),
                                                 const SizedBox(width: 3),
                                                 Text('${item['bookmarks_count'] ?? 0}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
                                               ],
