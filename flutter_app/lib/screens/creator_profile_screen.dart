@@ -5,7 +5,6 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
-import 'batch_classroom_screen.dart';
 import 'sectional_cbt_screen.dart';
 
 class CreatorProfileScreen extends StatefulWidget {
@@ -24,21 +23,31 @@ class CreatorProfileScreen extends StatefulWidget {
 
 class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     with SingleTickerProviderStateMixin {
-  Map<String, dynamic>? _profile;
-  Map<String, dynamic>? _coachingData;
-  List<dynamic> _mocks = [];
-  List<dynamic> _posts = [];
-  List<dynamic> _batches = [];
-  bool _isLoading = true;
-  bool _isCreator = false;
-  bool _isFollowing = false;
-  String? _userEnrolledCode;
   late TabController _tabController;
+
+  Map<String, dynamic>? _profile;
+  Map<String, dynamic>? _coaching;
+  List<dynamic> _batches = [];
+  List<dynamic> _mocks = [];
+  List<dynamic> _updates = [];
+
+  bool _isLoading = true;
+  bool _isFollowing = false;
+  int _followersCount = 0;
+  String _currentLoggedInHandle = 'user';
+
+  static const Color _primaryBlue = Color(0xFF2563EB);
+  static const Color _lightBg = Color(0xFFF8FAFC);
+  static const Color _darkBg = Color(0xFF0F172A);
+  static const Color _darkCard = Color(0xFF1E293B);
+  static const Color _lightDivider = Color(0xFFE2E8F0);
+  static const Color _darkDivider = Color(0xFF334155);
 
   @override
   void initState() {
     super.initState();
-    _fetchCreatorData();
+    _tabController = TabController(length: 3, vsync: this);
+    _loadInitialData();
   }
 
   @override
@@ -47,562 +56,522 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     super.dispose();
   }
 
-  Future<void> _fetchCreatorData() async {
-    try {
-      final client = Supabase.instance.client;
-      final prefs = await SharedPreferences.getInstance();
-      _userEnrolledCode = prefs.getString('user_enrolled_batch_code');
+  Future<void> _loadInitialData() async {
+    final prefs = await SharedPreferences.getInstance();
+    _currentLoggedInHandle = prefs.getString('logged_in_creator_handle') ?? 'user';
 
-      final profileRes = await client
+    await Future.wait([
+      _fetchProfileAndStats(),
+      _fetchBatches(),
+      _fetchMocks(),
+      _fetchUpdates(),
+      _checkFollowStatus(),
+    ]);
+
+    if (mounted) setState(() => _isLoading = false);
+  }
+
+  Future<void> _fetchProfileAndStats() async {
+    try {
+      final profRes = await Supabase.instance.client
           .from('creator_profiles')
-          .select()
+          .select('*')
           .eq('handle_id', widget.creatorHandle)
           .maybeSingle();
 
-      final coachingRes = await client
-          .from('coachings')
-          .select()
-          .eq('owner_name', widget.creatorHandle)
-          .maybeSingle();
+      if (profRes != null) {
+        _profile = profRes;
+        _followersCount = profRes['followers_count'] ?? 0;
 
-      if (profileRes != null) {
-        _isCreator = true;
-        _profile = profileRes;
-        _coachingData = coachingRes;
+        final coachRes = await Supabase.instance.client
+            .from('coachings')
+            .select('*')
+            .eq('creator_handle', widget.creatorHandle)
+            .maybeSingle();
 
-        final mocksRes = await client
-            .from('creator_mocks')
-            .select()
-            .eq('creator_id', widget.creatorHandle)
-            .order('created_at', ascending: false);
-
-        _mocks = mocksRes ?? [];
-
-        if (coachingRes != null) {
-          final batchRes = await client
-              .from('batches')
-              .select('*, batch_tests(*)')
-              .eq('coaching_id', coachingRes['id'])
-              .order('created_at', ascending: false);
-
-          _batches = (batchRes as List? ?? [])
-              .where((b) => b['status'] != 'HIDDEN')
-              .toList();
-        }
-      } else {
-        _isCreator = false;
-        _profile = {
-          'name': widget.creatorHandle == 'user'
-              ? 'Aspirant Candidate'
-              : widget.creatorHandle,
-          'handle_id': widget.creatorHandle,
-          'subject_specialty': 'Competitive Exam Aspirant',
-          'followers_count': 0,
-        };
+        _coaching = coachRes;
       }
-
-      final postsRes = await client
-          .from('community_posts')
-          .select()
-          .eq('creator_id', widget.creatorHandle)
-          .order('created_at', ascending: false);
-
-      _posts = postsRes ?? [];
-      _tabController = TabController(length: _isCreator ? 3 : 1, vsync: this);
-
-      if (mounted) {
-        setState(() => _isLoading = false);
-      }
-    } catch (_) {
-      if (mounted) setState(() => _isLoading = false);
+    } catch (e) {
+      debugPrint("Profile fetch error: $e");
     }
   }
 
-  void _toggleFollow() {
-    HapticFeedback.selectionClick();
-    if (_profile == null || !_isCreator) return;
+  Future<void> _fetchBatches() async {
+    try {
+      final res = await Supabase.instance.client
+          .from('batches')
+          .select('*')
+          .eq('creator_handle', widget.creatorHandle)
+          .order('created_at', ascending: false);
 
-    final currentFollowers = _profile!['followers_count'] ?? 0;
-    final newFollowers = _isFollowing
-        ? (currentFollowers - 1).clamp(0, 999999)
-        : currentFollowers + 1;
+      _batches = res ?? [];
+    } catch (e) {
+      debugPrint("Batches fetch error: $e");
+    }
+  }
+
+  Future<void> _fetchMocks() async {
+    try {
+      final res = await Supabase.instance.client
+          .from('creator_mocks')
+          .select('*')
+          .eq('creator_id', widget.creatorHandle)
+          .order('created_at', ascending: false);
+
+      _mocks = res ?? [];
+    } catch (e) {
+      debugPrint("Mocks fetch error: $e");
+    }
+  }
+
+  Future<void> _fetchUpdates() async {
+    try {
+      final res = await Supabase.instance.client
+          .from('community_posts')
+          .select('*')
+          .eq('creator_id', widget.creatorHandle)
+          .eq('is_approved', true)
+          .order('created_at', ascending: false);
+
+      _updates = res ?? [];
+    } catch (e) {
+      debugPrint("Updates fetch error: $e");
+    }
+  }
+
+  Future<void> _checkFollowStatus() async {
+    final prefs = await SharedPreferences.getInstance();
+    final followedList = prefs.getStringList('followed_creators') ?? [];
+    _isFollowing = followedList.contains(widget.creatorHandle);
+  }
+
+  Future<void> _toggleFollow() async {
+    HapticFeedback.lightImpact();
+    final prefs = await SharedPreferences.getInstance();
+    final followedList = prefs.getStringList('followed_creators') ?? [];
 
     setState(() {
-      _isFollowing = !_isFollowing;
-      _profile!['followers_count'] = newFollowers;
+      if (_isFollowing) {
+        _isFollowing = false;
+        _followersCount = (_followersCount - 1).clamp(0, 999999);
+        followedList.remove(widget.creatorHandle);
+      } else {
+        _isFollowing = true;
+        _followersCount += 1;
+        followedList.add(widget.creatorHandle);
+      }
     });
 
-    Supabase.instance.client
-        .from('creator_profiles')
-        .update({'followers_count': newFollowers})
-        .eq('handle_id', widget.creatorHandle)
-        .then((_) {});
+    await prefs.setStringList('followed_creators', followedList);
+
+    try {
+      await Supabase.instance.client
+          .from('creator_profiles')
+          .update({'followers_count': _followersCount})
+          .eq('handle_id', widget.creatorHandle);
+    } catch (_) {}
+  }
+
+  void _launchAttachedMock(Map<String, dynamic> mock) {
+    final List rawList = mock['questions_json'] ?? [];
+    if (rawList.isEmpty) return;
+
+    List<Question> qList = [];
+    for (var item in rawList) {
+      if (item is Map) {
+        qList.add(Question.fromJson(Map<String, dynamic>.from(item)));
+      }
+    }
+
+    if (qList.isEmpty) return;
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => SectionalCbtScreen(
+          testTitle: mock['title'] ?? 'Mock Drill',
+          questions: qList,
+          subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
+        ),
+      ),
+    );
   }
 
   void _openTelegram(String? urlOrHandle) async {
     if (urlOrHandle == null || urlOrHandle.isEmpty) return;
     String cleanUrl = urlOrHandle.startsWith('http')
         ? urlOrHandle
-        : 'https://t.me/$urlOrHandle';
+        : 'https://t.me/${urlOrHandle.replaceAll('@', '')}';
     final uri = Uri.parse(cleanUrl);
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     }
   }
 
-  // 🎓 Verified Admission / Unlock Dialog with Student Identity
-  void _openBatchUnlockDialog(Map<String, dynamic> batch) async {
-    final prefs = await SharedPreferences.getInstance();
-    final existingName = prefs.getString('custom_aspirant_name') ?? '';
-    final existingContact = prefs.getString('student_contact_id') ?? '';
-
-    final nameCtrl = TextEditingController(text: existingName);
-    final contactCtrl = TextEditingController(text: existingContact != 'N/A' ? existingContact : '');
+  void _openUnlockBatchDialog(Map<String, dynamic> batch) {
     final codeCtrl = TextEditingController();
-
-    if (!mounted) return;
-
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
-        backgroundColor:
-            widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: Row(
+        backgroundColor: widget.isDarkMode ? _darkCard : Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+        title: Text(
+          batch['title'] ?? 'Unlock Classroom Batch',
+          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Icon(Icons.school_rounded, color: Color(0xFF2563EB), size: 22),
-            const SizedBox(width: 8),
-            Expanded(
-              child: Text(
-                'Enroll: ${batch['batch_name']}',
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                overflow: TextOverflow.ellipsis,
+            const Text(
+              'Enter the classroom admission code provided by your coaching mentor:',
+              style: TextStyle(fontSize: 12.5, color: Colors.grey),
+            ),
+            const SizedBox(height: 12),
+            TextField(
+              controller: codeCtrl,
+              textCapitalization: TextCapitalization.characters,
+              decoration: const InputDecoration(
+                hintText: 'e.g. BPSC2026',
+                labelText: 'Batch Secret Code',
+                border: OutlineInputBorder(),
+                isDense: true,
               ),
             ),
           ],
         ),
-        content: SingleChildScrollView(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const Text(
-                'Classroom batch me judne ke liye apna poora naam, roll number aur secret batch code bharein:',
-                style: TextStyle(fontSize: 12, color: Colors.grey),
-              ),
-              const SizedBox(height: 14),
-
-              // 1. Student Real Name
-              TextField(
-                controller: nameCtrl,
-                textCapitalization: TextCapitalization.words,
-                decoration: const InputDecoration(
-                  labelText: 'Student Full Name (e.g. Suresh Kumar)',
-                  hintText: 'Apna poora naam likhein',
-                  border: OutlineInputBorder(),
-                  isDense: true,
-                  prefixIcon: Icon(Icons.person_outline, size: 20),
-                ),
-              ),
-              const SizedBox(height: 10),
-
-              // 2. Roll No / Mobile No
-              TextField(
-                controller: contactCtrl,
-                decoration: const InputDecoration(
-                  labelText: 'Roll No. ya Mobile No.',
-                  hintText: 'e.g. Roll-104 ya 9876543210',
-                  border: OutlineInputBorder(),
-                  isDense: true,
-                  prefixIcon: Icon(Icons.badge_outlined, size: 20),
-                ),
-              ),
-              const SizedBox(height: 10),
-
-              // 3. Batch Secret Code
-              TextField(
-                controller: codeCtrl,
-                textCapitalization: TextCapitalization.characters,
-                decoration: const InputDecoration(
-                  labelText: 'Secret Batch Code',
-                  hintText: 'e.g. PATNA100',
-                  border: OutlineInputBorder(),
-                  isDense: true,
-                  prefixIcon: Icon(Icons.vpn_key_outlined, size: 20),
-                ),
-              ),
-            ],
-          ),
-        ),
         actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(ctx),
-            child: const Text('Cancel'),
-          ),
+          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF2563EB),
+              backgroundColor: _primaryBlue,
               foregroundColor: Colors.white,
             ),
-            onPressed: () async {
-              final enteredName = nameCtrl.text.trim();
-              final enteredContact = contactCtrl.text.trim();
-              final enteredCode = codeCtrl.text.trim().toUpperCase();
-              final actualCode =
-                  (batch['batch_code'] ?? '').toString().toUpperCase();
+            onPressed: () {
+              final entered = codeCtrl.text.trim();
+              final actual = (batch['access_code'] ?? '').toString().trim();
+              Navigator.pop(ctx);
 
-              if (enteredName.isEmpty || enteredCode.isEmpty) {
+              if (entered.isNotEmpty && entered.toUpperCase() == actual.toUpperCase()) {
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('Naam aur Batch Code dono likhna anivarya hai!')),
+                  const SnackBar(
+                    content: Text('Batch Unlocked Successfully!'),
+                    backgroundColor: Color(0xFF16A34A),
+                  ),
                 );
-                return;
-              }
-
-              if (enteredCode == actualCode) {
-                // Identity locally locked so every future test tags Suresh Kumar
-                await prefs.setString('custom_aspirant_name', enteredName);
-                await prefs.setString('student_contact_id', enteredContact.isNotEmpty ? enteredContact : 'N/A');
-                await prefs.setString('user_enrolled_batch_code', enteredCode);
-
-                if (ctx.mounted) Navigator.pop(ctx);
-                setState(() => _userEnrolledCode = enteredCode);
-
-                if (mounted) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      content: Text('🎉 Verified! Welcome $enteredName to "${batch['batch_name']}"'),
-                      backgroundColor: const Color(0xFF16A34A),
-                    ),
-                  );
-
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => BatchClassroomScreen(
-                        batchData: batch,
-                        isDarkMode: widget.isDarkMode,
-                      ),
-                    ),
-                  );
-                }
               } else {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
-                    content: Text('❌ Galat Code! Coaching teacher se sahi batch password lein.'),
+                    content: Text('Incorrect Batch Code. Please contact coaching.'),
+                    backgroundColor: Colors.red,
                   ),
                 );
               }
             },
-            child: const Text('Verify & Unlock 🚀'),
+            child: const Text('Unlock Batch'),
           ),
         ],
       ),
     );
-  }
-
-  // ⚡ Open Public Free Mock (Direct 0-Friction Start)
-  void _startMockTest(Map<String, dynamic> mock) {
-    final List rawList = mock['questions_json'] ?? [];
-    if (rawList.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('No questions in this test!')));
-      return;
-    }
-
-    List<Question> parsedQuestions = [];
-    for (var item in rawList) {
-      if (item is Map) {
-        parsedQuestions.add(Question.fromJson(Map<String, dynamic>.from(item)));
-      }
-    }
-
-    if (parsedQuestions.isEmpty) return;
-
-    // Free Open CBT: mockId passed so attempt counter increments
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => SectionalCbtScreen(
-          testTitle: mock['title'] ?? 'Mock Test',
-          questions: parsedQuestions,
-          subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
-          creatorHandle: widget.creatorHandle,
-          isBatchTest: false,
-          mockId: mock['id'], // 👈 Attempts count update karne ke liye ZAROORI hai
-        ),
-      ),
-    ).then((_) {
-      // Test dekar wapas aane par updated attempt count load karein
-      _fetchCreatorData();
-    });
   }
 
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
-    final bgSurface = isDark ? const Color(0xFF0F172A) : Colors.white;
-    final dividerColor =
-        isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-    final textMuted =
-        isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
-    final textHeading = isDark ? Colors.white : const Color(0xFF0F172A);
-
-    final String? bannerUrl = _coachingData?['banner_url'];
-    final String displayName =
-        _coachingData?['name'] ?? _profile?['name'] ?? widget.creatorHandle;
-    final String locationText = _coachingData?['district'] ??
-        _coachingData?['city'] ??
-        _profile?['subject_specialty'] ??
-        'Bihar';
-    final String? landmarkText = _coachingData?['landmark_address'];
+    final bgSurface = isDark ? _darkBg : _lightBg;
+    final cardSurface = isDark ? _darkCard : Colors.white;
+    final dividerColor = isDark ? _darkDivider : _lightDivider;
 
     if (_isLoading) {
       return Scaffold(
         backgroundColor: bgSurface,
+        appBar: AppBar(backgroundColor: bgSurface, elevation: 0),
         body: const Center(child: CircularProgressIndicator(strokeWidth: 2)),
       );
     }
 
+    final name = _coaching?['coaching_name'] ?? _profile?['name'] ?? 'Educator';
+    final handle = widget.creatorHandle;
+    final specialty = _profile?['subject_specialty'] ?? 'Exam Mentor';
+    final district = _coaching?['district'] ?? 'Bihar';
+    final landmark = _coaching?['landmark'];
+    final logoUrl = _coaching?['logo_url'] ?? _profile?['profile_image'];
+    final bannerUrl = _coaching?['banner_url'] ?? _profile?['banner_url'];
+    final telegram = _profile?['telegram_handle'] ?? _coaching?['telegram_link'];
+
     return Scaffold(
       backgroundColor: bgSurface,
-      appBar: AppBar(
-        backgroundColor: bgSurface,
-        elevation: 0,
-        scrolledUnderElevation: 0,
-        title: Text(
-          _isCreator ? displayName : 'Candidate Profile',
-          style: TextStyle(
-              fontWeight: FontWeight.w800, fontSize: 17, color: textHeading),
-        ),
-      ),
       body: NestedScrollView(
-        headerSliverBuilder: (context, innerBoxIsScrolled) => [
-          SliverToBoxAdapter(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // 1. Billboard Poster
-                if (bannerUrl != null && bannerUrl.isNotEmpty)
-                  Image.network(
-                    bannerUrl,
-                    height: 185,
-                    width: double.infinity,
-                    fit: BoxFit.cover,
-                    errorBuilder: (_, __, ___) => const SizedBox.shrink(),
-                  ),
-
-                // 2. Profile Details Flat Strip (Twitter/X Style)
-                Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 16, vertical: 14),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
+        headerSliverBuilder: (context, innerBoxIsScrolled) {
+          return [
+            SliverAppBar(
+              expandedHeight: 140,
+              pinned: true,
+              backgroundColor: isDark ? _darkCard : Colors.white,
+              elevation: 0,
+              scrolledUnderElevation: 0,
+              leading: IconButton(
+                icon: Icon(
+                  Icons.arrow_back_rounded,
+                  color: isDark ? Colors.white : const Color(0xFF0F172A),
+                ),
+                onPressed: () => Navigator.pop(context),
+              ),
+              flexibleSpace: FlexibleSpaceBar(
+                background: bannerUrl != null && bannerUrl.toString().isNotEmpty
+                    ? Image.network(bannerUrl, fit: BoxFit.cover)
+                    : Container(
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [
+                              _primaryBlue.withOpacity(0.85),
+                              const Color(0xFF1E3A8A),
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                        ),
+                      ),
+              ),
+            ),
+            SliverToBoxAdapter(
+              child: Container(
+                color: cardSurface,
+                padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Transform.translate(
+                      offset: const Offset(0, -28),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
-                          CircleAvatar(
-                            radius: 26,
-                            backgroundColor: _isCreator
-                                ? const Color(0xFF2563EB)
-                                : const Color(0xFF64748B),
-                            child: Text(
-                              displayName.isNotEmpty
-                                  ? displayName[0].toUpperCase()
-                                  : 'U',
-                              style: const TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold),
+                          Container(
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(
+                                color: cardSurface,
+                                width: 3.5,
+                              ),
+                            ),
+                            child: CircleAvatar(
+                              radius: 36,
+                              backgroundColor: _primaryBlue,
+                              backgroundImage: (logoUrl != null && logoUrl.toString().isNotEmpty)
+                                  ? NetworkImage(logoUrl)
+                                  : null,
+                              child: (logoUrl == null || logoUrl.toString().isEmpty)
+                                  ? Text(
+                                      name.isNotEmpty ? name[0].toUpperCase() : 'E',
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 26,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    )
+                                  : null,
                             ),
                           ),
-                          const SizedBox(width: 14),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Row(
-                                  children: [
-                                    Flexible(
-                                      child: Text(
-                                        displayName,
-                                        style: TextStyle(
-                                            fontSize: 17,
-                                            fontWeight: FontWeight.bold,
-                                            color: textHeading),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ),
-                                    const SizedBox(width: 4),
-                                    if (_isCreator)
-                                      const Icon(Icons.verified,
-                                          size: 15, color: Color(0xFF2563EB)),
-                                  ],
-                                ),
-                                const SizedBox(height: 2),
-                                Text(
-                                  '@${widget.creatorHandle} • 📍 $locationText${landmarkText != null && landmarkText.isNotEmpty ? " • $landmarkText" : ""}',
-                                  style: TextStyle(
-                                      color: textMuted, fontSize: 12),
-                                ),
-                              ],
+                          const Spacer(),
+                          OutlinedButton.icon(
+                            style: OutlinedButton.styleFrom(
+                              backgroundColor: _isFollowing ? _primaryBlue : Colors.transparent,
+                              foregroundColor: _isFollowing ? Colors.white : _primaryBlue,
+                              side: const BorderSide(color: _primaryBlue, width: 1.2),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                             ),
+                            icon: Icon(
+                              _isFollowing ? Icons.check_rounded : Icons.add_rounded,
+                              size: 16,
+                            ),
+                            label: Text(
+                              _isFollowing ? 'Following' : 'Follow',
+                              style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
+                            ),
+                            onPressed: _toggleFollow,
                           ),
                         ],
                       ),
-                      const SizedBox(height: 14),
-
-                      if (_isCreator) ...[
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Text('${_profile!['followers_count'] ?? 0}',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 14,
-                                        color: textHeading)),
-                                const SizedBox(width: 4),
-                                Text('Followers',
-                                    style: TextStyle(
-                                        color: textMuted, fontSize: 12)),
-                                const SizedBox(width: 14),
-                                Text('${_batches.length}',
-                                    style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 14,
-                                        color: textHeading)),
-                                const SizedBox(width: 4),
-                                Text('Batches',
-                                    style: TextStyle(
-                                        color: textMuted, fontSize: 12)),
-                              ],
-                            ),
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: _isFollowing
-                                    ? (isDark
-                                        ? const Color(0xFF334155)
-                                        : const Color(0xFFE2E8F0))
-                                    : const Color(0xFF2563EB),
-                                foregroundColor: _isFollowing
-                                    ? (isDark ? Colors.white : Colors.black87)
-                                    : Colors.white,
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(18)),
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 16, vertical: 6),
-                                elevation: 0,
-                                visualDensity: VisualDensity.compact,
-                              ),
-                              onPressed: _toggleFollow,
-                              child: Text(
-                                  _isFollowing ? 'Following' : 'Follow +',
+                    ),
+                    Transform.translate(
+                      offset: const Offset(0, -16),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Flexible(
+                                child: Text(
+                                  name,
                                   style: const TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 12)),
-                            ),
-                          ],
-                        ),
-                        if (_profile!['telegram_handle'] != null &&
-                            _profile!['telegram_handle']
-                                .toString()
-                                .isNotEmpty) ...[
-                          const SizedBox(height: 10),
-                          InkWell(
-                            onTap: () =>
-                                _openTelegram(_profile!['telegram_handle']),
-                            child: Row(
-                              children: const [
-                                Icon(Icons.telegram,
-                                    color: Color(0xFF0088CC), size: 18),
-                                SizedBox(width: 6),
-                                Text('Join Official Telegram Channel',
-                                    style: TextStyle(
-                                        color: Color(0xFF0088CC),
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 12)),
-                              ],
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 19,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              const SizedBox(width: 5),
+                              const Icon(Icons.verified, size: 17, color: _primaryBlue),
+                            ],
+                          ),
+                          const SizedBox(height: 2),
+                          Text(
+                            '@$handle',
+                            style: TextStyle(color: Colors.grey[500], fontSize: 12),
+                          ),
+                          const SizedBox(height: 8),
+                          Row(
+                            children: [
+                              const Icon(Icons.location_on_outlined, size: 14, color: Colors.grey),
+                              const SizedBox(width: 4),
+                              Expanded(
+                                child: Text(
+                                  landmark != null && landmark.toString().isNotEmpty
+                                      ? '$landmark, $district'
+                                      : '$district, Bihar',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: isDark ? Colors.grey[300] : const Color(0xFF475569),
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 3),
+                          Text(
+                            specialty,
+                            style: const TextStyle(
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: _primaryBlue,
                             ),
                           ),
-                        ],
-                      ] else ...[
-                        Row(
-                          children: [
-                            Icon(Icons.forum_outlined,
-                                size: 16, color: textMuted),
-                            const SizedBox(width: 6),
-                            Text('${_posts.length} Discussions Shared',
-                                style: TextStyle(
-                                    color: textMuted, fontSize: 12.5)),
+                          const SizedBox(height: 14),
+                          Row(
+                            children: [
+                              _buildStatBlock('$_followersCount', 'Followers'),
+                              const SizedBox(width: 24),
+                              _buildStatBlock('${_batches.length}', 'Batches'),
+                              const SizedBox(width: 24),
+                              _buildStatBlock('${_mocks.length}', 'Open Mocks'),
+                            ],
+                          ),
+                          if (telegram != null && telegram.toString().isNotEmpty) ...[
+                            const SizedBox(height: 14),
+                            InkWell(
+                              onTap: () => _openTelegram(telegram),
+                              borderRadius: BorderRadius.circular(10),
+                              child: Container(
+                                width: double.infinity,
+                                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                                decoration: BoxDecoration(
+                                  color: isDark
+                                      ? const Color(0xFF1E3A8A).withOpacity(0.3)
+                                      : const Color(0xFFF0F9FF),
+                                  borderRadius: BorderRadius.circular(10),
+                                  border: Border.all(
+                                    color: isDark
+                                        ? const Color(0xFF1E3A8A)
+                                        : const Color(0xFFBAE6FD),
+                                    width: 1,
+                                  ),
+                                ),
+                                child: const Row(
+                                  children: [
+                                    Icon(Icons.near_me_rounded, color: Color(0xFF0284C7), size: 16),
+                                    SizedBox(width: 8),
+                                    Expanded(
+                                      child: Text(
+                                        'Join Official Telegram Channel',
+                                        style: TextStyle(
+                                          fontSize: 12.5,
+                                          fontWeight: FontWeight.w700,
+                                          color: Color(0xFF0284C7),
+                                        ),
+                                      ),
+                                    ),
+                                    Icon(Icons.arrow_forward_rounded, size: 15, color: Color(0xFF0284C7)),
+                                  ],
+                                ),
+                              ),
+                            ),
                           ],
-                        ),
-                      ],
-                    ],
-                  ),
-                ),
-                Divider(height: 1, thickness: 0.8, color: dividerColor),
-              ],
-            ),
-          ),
-          if (_isCreator)
-            SliverPersistentHeader(
-              pinned: true,
-              delegate: _SliverAppBarDelegate(
-                TabBar(
-                  controller: _tabController,
-                  indicatorColor: const Color(0xFF2563EB),
-                  labelColor: const Color(0xFF2563EB),
-                  unselectedLabelColor: textMuted,
-                  labelStyle: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 13),
-                  tabs: [
-                    Tab(text: 'Batches (${_batches.length})'),
-                    Tab(text: 'Open Mocks (${_mocks.length})'),
-                    Tab(text: 'Notices (${_posts.length})'),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-                color: bgSurface,
               ),
             ),
-        ],
-        body: _isCreator
-            ? TabBarView(
-                controller: _tabController,
-                children: [
-                  _buildBatchesTab(dividerColor, textMuted, textHeading),
-                  _buildMocksTab(dividerColor, textMuted, textHeading),
-                  _buildPostsTab(dividerColor, textMuted, textHeading),
-                ],
-              )
-            : _buildPostsTab(dividerColor, textMuted, textHeading),
+            SliverPersistentHeader(
+              pinned: true,
+              delegate: _SliverTabHeaderDelegate(
+                TabBar(
+                  controller: _tabController,
+                  indicatorColor: _primaryBlue,
+                  indicatorWeight: 2.8,
+                  labelColor: isDark ? Colors.white : _primaryBlue,
+                  unselectedLabelColor: const Color(0xFF64748B),
+                  labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                  tabs: [
+                    Tab(text: 'Batches (${_batches.length})'),
+                    Tab(text: 'Mocks (${_mocks.length})'),
+                    Tab(text: 'Updates (${_updates.length})'),
+                  ],
+                ),
+                cardSurface,
+                dividerColor,
+              ),
+            ),
+          ];
+        },
+        body: TabBarView(
+          controller: _tabController,
+          children: [
+            _buildBatchesTab(cardSurface, dividerColor, isDark),
+            _buildMocksTab(cardSurface, dividerColor, isDark),
+            _buildUpdatesTab(cardSurface, dividerColor, isDark),
+          ],
+        ),
       ),
     );
   }
 
-  // 🎓 BATCHES TAB (PASSWORD PROTECTED & DIRECT CLASSROOM LINK)
-  Widget _buildBatchesTab(
-      Color dividerColor, Color textMuted, Color textHeading) {
+  Widget _buildStatBlock(String value, String label) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          value,
+          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16),
+        ),
+        Text(
+          label,
+          style: TextStyle(color: Colors.grey[500], fontSize: 11.5),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildBatchesTab(Color cardSurface, Color dividerColor, bool isDark) {
     if (_batches.isEmpty) {
       return Center(
-          child: Text('No active batches right now.',
-              style: TextStyle(color: textMuted, fontSize: 13)));
+        child: Text('No active batches listed yet.', style: TextStyle(color: Colors.grey[500])),
+      );
     }
+
     return ListView.separated(
       padding: EdgeInsets.zero,
       itemCount: _batches.length,
-      separatorBuilder: (_, __) =>
-          Divider(height: 1, thickness: 0.8, color: dividerColor),
+      separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
       itemBuilder: (context, idx) {
         final b = _batches[idx];
-        final List tests = b['batch_tests'] ?? [];
-        final String batchCode =
-            (b['batch_code'] ?? '').toString().toUpperCase();
-        final bool isUnlocked =
-            _userEnrolledCode != null && _userEnrolledCode == batchCode;
-        final bool isUpcoming = b['status'] == 'UPCOMING';
+        final bool isLocked = (b['is_locked'] ?? true) == true;
 
-        return Padding(
+        return Container(
+          color: cardSurface,
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -612,97 +581,56 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 children: [
                   Expanded(
                     child: Text(
-                      b['batch_name'] ?? 'Class Batch',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15,
-                          color: textHeading),
+                      b['title'] ?? 'Classroom Batch',
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
                     ),
                   ),
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 8, vertical: 3),
+                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
                     decoration: BoxDecoration(
-                      color: isUnlocked
-                          ? const Color(0xFF16A34A).withOpacity(0.15)
-                          : (isUpcoming
-                              ? Colors.amber.withOpacity(0.15)
-                              : Colors.grey.withOpacity(0.15)),
-                      borderRadius: BorderRadius.circular(6),
+                      color: isLocked
+                          ? Colors.grey.withOpacity(0.12)
+                          : const Color(0xFF16A34A).withOpacity(0.12),
+                      borderRadius: BorderRadius.circular(4),
                     ),
-                    child: Text(
-                      isUnlocked
-                          ? '✅ UNLOCKED'
-                          : (isUpcoming
-                              ? '⏳ UPCOMING'
-                              : '🔒 CODE LOCKED'),
-                      style: TextStyle(
-                        color: isUnlocked
-                            ? const Color(0xFF16A34A)
-                            : (isUpcoming
-                                ? Colors.amber.shade800
-                                : Colors.grey.shade700),
-                        fontWeight: FontWeight.w900,
-                        fontSize: 9.5,
-                      ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Icon(
+                          isLocked ? Icons.lock_outline_rounded : Icons.lock_open_rounded,
+                          size: 12,
+                          color: isLocked ? Colors.grey[600] : const Color(0xFF16A34A),
+                        ),
+                        const SizedBox(width: 3),
+                        Text(
+                          isLocked ? 'LOCKED' : 'UNLOCKED',
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.bold,
+                            color: isLocked ? Colors.grey[600] : const Color(0xFF16A34A),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 6),
               Text(
-                '${tests.length} Private CBT Tests & Handouts inside this batch.',
-                style: TextStyle(color: textMuted, fontSize: 12),
+                b['description'] ?? 'Curated Private CBT Mock Drills & Daily Classroom Handouts',
+                style: TextStyle(fontSize: 12, color: Colors.grey[600]),
               ),
               const SizedBox(height: 10),
-
-              // Action Button (Lock vs Direct Classroom Navigation)
               SizedBox(
-                width: double.infinity,
-                height: 38,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: isUnlocked
-                        ? const Color(0xFF16A34A)
-                        : const Color(0xFF2563EB),
-                    foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
-                    elevation: 0,
+                height: 34,
+                child: OutlinedButton(
+                  style: OutlinedButton.styleFrom(
+                    foregroundColor: _primaryBlue,
+                    side: const BorderSide(color: _primaryBlue, width: 1),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   ),
-                  onPressed: () {
-                    if (isUnlocked) {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (_) => BatchClassroomScreen(
-                            batchData: b,
-                            isDarkMode: widget.isDarkMode,
-                          ),
-                        ),
-                      );
-                    } else {
-                      _openBatchUnlockDialog(b);
-                    }
-                  },
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(
-                          isUnlocked
-                              ? Icons.play_circle_fill_rounded
-                              : Icons.lock_rounded,
-                          size: 15),
-                      const SizedBox(width: 6),
-                      Text(
-                        isUnlocked
-                            ? 'Open Classroom Mocks 🚀'
-                            : 'Enter Secret Code to Unlock 🔑',
-                        style: const TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 12.5),
-                      ),
-                    ],
-                  ),
+                  onPressed: () => _openUnlockBatchDialog(b),
+                  child: const Text('Unlock Classroom', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                 ),
               ),
             ],
@@ -712,24 +640,25 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     );
   }
 
-  // ⚡ OPEN PUBLIC FREE MOCKS TAB
-  Widget _buildMocksTab(
-      Color dividerColor, Color textMuted, Color textHeading) {
+  Widget _buildMocksTab(Color cardSurface, Color dividerColor, bool isDark) {
     if (_mocks.isEmpty) {
       return Center(
-          child: Text('No open mock tests published yet.',
-              style: TextStyle(color: textMuted, fontSize: 13)));
+        child: Text('No open practice mocks available.', style: TextStyle(color: Colors.grey[500])),
+      );
     }
+
     return ListView.separated(
       padding: EdgeInsets.zero,
       itemCount: _mocks.length,
-      separatorBuilder: (_, __) =>
-          Divider(height: 1, thickness: 0.8, color: dividerColor),
+      separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
       itemBuilder: (context, idx) {
         final m = _mocks[idx];
-        final List qList = m['questions_json'] ?? [];
+        final totalQs = (m['questions_json'] as List?)?.length ?? 0;
+        final duration = m['duration_mins'] ?? 15;
+        final attempts = m['attempts_count'] ?? 0;
 
-        return Padding(
+        return Container(
+          color: cardSurface,
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -738,47 +667,44 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                     decoration: BoxDecoration(
-                        color: const Color(0xFF2563EB).withOpacity(0.1),
-                        borderRadius: BorderRadius.circular(6)),
-                    child: Text(m['subject'] ?? 'General',
-                        style: const TextStyle(
-                            color: Color(0xFF2563EB),
-                            fontSize: 10.5,
-                            fontWeight: FontWeight.bold)),
+                      color: _primaryBlue.withOpacity(0.08),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Text(
+                      (m['subject'] ?? 'General').toString().toUpperCase(),
+                      style: const TextStyle(color: _primaryBlue, fontSize: 10.5, fontWeight: FontWeight.bold),
+                    ),
                   ),
-                  Text('${m['attempts_count'] ?? 0} Attempts',
-                      style: TextStyle(fontSize: 11, color: textMuted)),
+                  Text(
+                    '$attempts attempts',
+                    style: TextStyle(fontSize: 11.5, color: Colors.grey[500]),
+                  ),
                 ],
               ),
               const SizedBox(height: 6),
-              Text(m['title'] ?? 'Mock Test',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
-                      color: textHeading)),
-              const SizedBox(height: 3),
               Text(
-                  '${qList.length} Questions • ${m['duration_mins'] ?? 10} Mins • Public Practice',
-                  style: TextStyle(color: textMuted, fontSize: 12)),
+                m['title'] ?? 'Practice Mock Test',
+                style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                '$totalQs Questions • $duration mins • Instant Result',
+                style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+              ),
               const SizedBox(height: 10),
               SizedBox(
-                width: double.infinity,
-                height: 38,
+                height: 34,
                 child: ElevatedButton(
-                  onPressed: () => _startMockTest(m),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF2563EB),
+                    backgroundColor: _primaryBlue,
                     foregroundColor: Colors.white,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
                     elevation: 0,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   ),
-                  child: const Text('Start Free Mock Test ⚡',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 12.5)),
+                  onPressed: () => _launchAttachedMock(m),
+                  child: const Text('Start Mock →', style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
                 ),
               ),
             ],
@@ -788,42 +714,65 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     );
   }
 
-  // 📚 NOTICES & PUBLIC NOTES TAB
-  Widget _buildPostsTab(
-      Color dividerColor, Color textMuted, Color textHeading) {
-    if (_posts.isEmpty) {
+  Widget _buildUpdatesTab(Color cardSurface, Color dividerColor, bool isDark) {
+    if (_updates.isEmpty) {
       return Center(
-          child: Text('No announcements shared yet.',
-              style: TextStyle(color: textMuted, fontSize: 13)));
+        child: Text('No community updates posted yet.', style: TextStyle(color: Colors.grey[500])),
+      );
     }
+
     return ListView.separated(
       padding: EdgeInsets.zero,
-      itemCount: _posts.length,
-      separatorBuilder: (_, __) =>
-          Divider(height: 1, thickness: 0.8, color: dividerColor),
+      itemCount: _updates.length,
+      separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
       itemBuilder: (context, idx) {
-        final p = _posts[idx];
-        return Padding(
+        final p = _updates[idx];
+        final String? imgUrl = p['image_url'];
+        final tag = p['tag'] ?? 'Update';
+
+        return Container(
+          color: cardSurface,
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
-                decoration: BoxDecoration(
-                    color: const Color(0xFF2563EB).withOpacity(0.08),
-                    borderRadius: BorderRadius.circular(5)),
-                child: Text(p['tag'] ?? 'Notice',
-                    style: const TextStyle(
-                        color: Color(0xFF2563EB),
-                        fontSize: 10,
-                        fontWeight: FontWeight.bold)),
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                    decoration: BoxDecoration(
+                      color: _primaryBlue.withOpacity(0.08),
+                      borderRadius: BorderRadius.circular(4),
+                    ),
+                    child: Text(
+                      tag.toString().toUpperCase(),
+                      style: const TextStyle(color: _primaryBlue, fontSize: 10, fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                ],
               ),
               const SizedBox(height: 8),
-              Text(p['content'] ?? '',
-                  style:
-                      TextStyle(fontSize: 13.5, height: 1.4, color: textHeading)),
+              Text(
+                p['content'] ?? '',
+                style: TextStyle(
+                  fontSize: 13.5,
+                  height: 1.4,
+                  color: isDark ? const Color(0xFFF1F5F9) : const Color(0xFF1E293B),
+                ),
+              ),
+              if (imgUrl != null && imgUrl.isNotEmpty) ...[
+                const SizedBox(height: 10),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8),
+                  child: Image.network(
+                    imgUrl,
+                    fit: BoxFit.cover,
+                    width: double.infinity,
+                    height: 180,
+                    errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+                  ),
+                ),
+              ],
             ],
           ),
         );
@@ -832,22 +781,33 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   }
 }
 
-class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
-  _SliverAppBarDelegate(this._tabBar, {required this.color});
+class _SliverTabHeaderDelegate extends SliverPersistentHeaderDelegate {
   final TabBar _tabBar;
-  final Color color;
+  final Color _bgColor;
+  final Color _dividerColor;
+
+  _SliverTabHeaderDelegate(this._tabBar, this._bgColor, this._dividerColor);
 
   @override
-  double get minExtent => _tabBar.preferredSize.height;
+  double get minExtent => _tabBar.preferredSize.height + 1;
   @override
-  double get maxExtent => _tabBar.preferredSize.height;
+  double get maxExtent => _tabBar.preferredSize.height + 1;
 
   @override
-  Widget build(
-      BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return Container(color: color, child: _tabBar);
+  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return Container(
+      color: _bgColor,
+      child: Column(
+        children: [
+          _tabBar,
+          Divider(height: 1, thickness: 1, color: _dividerColor),
+        ],
+      ),
+    );
   }
 
   @override
-  bool shouldRebuild(_SliverAppBarDelegate oldDelegate) => false;
+  bool shouldRebuild(_SliverTabHeaderDelegate oldDelegate) {
+    return false;
+  }
 }
