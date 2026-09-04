@@ -81,14 +81,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       });
     }
 
-    // 1. Fetch Saved Posts
+    // 1. Fetch Saved Posts (user_saved_posts table)
     try {
       final savedRes = await Supabase.instance.client
           .from('user_saved_posts')
           .select('post_id')
           .eq('user_handle', _currentLoggedInHandle);
 
-      if (mounted) {
+      if (mounted && savedRes != null) {
         setState(() {
           _savedPostIds.clear();
           for (var row in savedRes) {
@@ -99,14 +99,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       }
     } catch (_) {}
 
-    // 2. Fetch User Likes
+    // 2. Fetch User Likes (post_likes table)
     try {
       final likesRes = await Supabase.instance.client
           .from('post_likes')
           .select('post_id')
           .eq('user_handle', _currentLoggedInHandle);
 
-      if (mounted) {
+      if (mounted && likesRes != null) {
         setState(() {
           _likedPostIds.clear();
           for (var row in likesRes) {
@@ -117,14 +117,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       }
     } catch (_) {}
 
-    // 3. Fetch User Poll Votes
+    // 3. Fetch User Poll Votes (poll_votes table)
     try {
       final votesRes = await Supabase.instance.client
           .from('poll_votes')
           .select('post_id, option_index')
           .eq('user_handle', _currentLoggedInHandle);
 
-      if (mounted) {
+      if (mounted && votesRes != null) {
         setState(() {
           _userPollSelections.clear();
           for (var row in votesRes) {
@@ -187,7 +187,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
-  // 🛡️ ONLY FETCH APPROVED POSTS
   Future<void> _fetchFeedPosts() async {
     setState(() => _isLoading = true);
     try {
@@ -196,7 +195,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       final res = await Supabase.instance.client
           .from('community_posts')
           .select('*, creator_profiles(name, handle_id, subject_specialty, followers_count, is_blocked), creator_mocks(*)')
-          .eq('is_approved', true) // Only live moderated posts
+          .eq('is_approved', true)
           .gte('created_at', sixtyDaysAgo)
           .order('created_at', ascending: false);
 
@@ -252,11 +251,10 @@ $content
       final currentShares = (post['shares_count'] ?? 0) + 1;
       setState(() => post['shares_count'] = currentShares);
 
-      await Supabase.instance.client.rpc('increment_post_metric', params: {
-        'post_id_param': postId,
-        'metric_field': 'shares_count',
-        'amount': 1,
-      });
+      await Supabase.instance.client
+          .from('community_posts')
+          .update({'shares_count': currentShares})
+          .eq('id', postId);
     } catch (_) {}
   }
 
@@ -288,11 +286,10 @@ $content
             .eq('post_id', postId);
       }
 
-      await Supabase.instance.client.rpc('increment_post_metric', params: {
-        'post_id_param': postId,
-        'metric_field': 'bookmarks_count',
-        'amount': delta,
-      });
+      await Supabase.instance.client
+          .from('community_posts')
+          .update({'bookmarks_count': post['bookmarks_count']})
+          .eq('id', postId);
 
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -305,16 +302,6 @@ $content
       }
     } catch (e) {
       debugPrint("Bookmark Error: $e");
-      if (mounted) {
-        setState(() {
-          if (isSaving) {
-            _savedPostIds.remove(postId);
-          } else {
-            _savedPostIds.add(postId);
-          }
-          post['bookmarks_count'] = ((post['bookmarks_count'] ?? 0) - delta).clamp(0, 999999);
-        });
-      }
     }
   }
 
@@ -335,33 +322,25 @@ $content
     });
 
     try {
-      final res = await Supabase.instance.client.rpc('toggle_post_like', params: {
-        'target_post_id': postId,
-        'aspirant_handle': _currentLoggedInHandle,
-      });
+      if (isCurrentlyLiked) {
+        await Supabase.instance.client
+            .from('post_likes')
+            .delete()
+            .eq('post_id', postId)
+            .eq('user_handle', _currentLoggedInHandle);
+      } else {
+        await Supabase.instance.client.from('post_likes').insert({
+          'post_id': postId,
+          'user_handle': _currentLoggedInHandle,
+        });
+      }
 
-      final bool likedConfirmed = res == true;
-      if (mounted && likedConfirmed != !isCurrentlyLiked) {
-        setState(() {
-          if (likedConfirmed) {
-            _likedPostIds.add(postId);
-          } else {
-            _likedPostIds.remove(postId);
-          }
-        });
-      }
+      await Supabase.instance.client
+          .from('community_posts')
+          .update({'upvotes': post['upvotes']})
+          .eq('id', postId);
     } catch (e) {
-      debugPrint("Like RPC Error: $e");
-      if (mounted) {
-        setState(() {
-          if (isCurrentlyLiked) {
-            _likedPostIds.add(postId);
-          } else {
-            _likedPostIds.remove(postId);
-          }
-          post['upvotes'] = ((post['upvotes'] ?? 0) - delta).clamp(0, 999999);
-        });
-      }
+      debugPrint("Like update error: $e");
     }
   }
 
@@ -379,37 +358,18 @@ $content
     });
 
     try {
-      final res = await Supabase.instance.client.rpc('submit_poll_vote_safe', params: {
-        'target_post_id': postId,
-        'aspirant_handle': _currentLoggedInHandle,
-        'opt_idx': optionIdx,
+      await Supabase.instance.client.from('poll_votes').insert({
+        'post_id': postId,
+        'user_handle': _currentLoggedInHandle,
+        'option_index': optionIdx,
       });
 
-      if (res != true && mounted) {
-        setState(() {
-          _userPollSelections.remove(postId);
-          List votes = List.from(pollData['votes'] ?? [0, 0, 0, 0]);
-          if (optionIdx < votes.length) {
-            votes[optionIdx] = ((votes[optionIdx] as int) - 1).clamp(0, 999999);
-          }
-          pollData['votes'] = votes;
-        });
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('You have already voted in this quiz!')),
-        );
-      }
+      await Supabase.instance.client
+          .from('community_posts')
+          .update({'poll_data': pollData})
+          .eq('id', postId);
     } catch (e) {
-      debugPrint("Poll RPC Error: $e");
-      if (mounted) {
-        setState(() {
-          _userPollSelections.remove(postId);
-          List votes = List.from(pollData['votes'] ?? [0, 0, 0, 0]);
-          if (optionIdx < votes.length) {
-            votes[optionIdx] = ((votes[optionIdx] as int) - 1).clamp(0, 999999);
-          }
-          pollData['votes'] = votes;
-        });
-      }
+      debugPrint("Poll vote error: $e");
     }
   }
 
@@ -426,7 +386,6 @@ $content
 
     if (qList.isEmpty) return;
 
-    // Increment attempts count
     final updatedAttempts = (mock['attempts_count'] ?? 0) + 1;
     setState(() => mock['attempts_count'] = updatedAttempts);
     Supabase.instance.client
@@ -442,7 +401,6 @@ $content
           testTitle: mock['title'] ?? 'Free Open Mock Drill',
           questions: qList,
           subFolder: (mock['subject'] ?? 'general').toString().toLowerCase(),
-          mockId: mock['id'],
         ),
       ),
     );
@@ -600,14 +558,36 @@ $content
 
                                 setSheetState(() => isSubmitting = true);
                                 try {
-                                  final inserted = await Supabase.instance.client.from('post_comments').insert({
+                                  // 🛡️ Adaptive column payload to prevent schema rejection
+                                  Map<String, dynamic> insertData = {
                                     'post_id': postId,
                                     'user_handle': _currentLoggedInHandle,
                                     'user_name': _customUserName,
                                     'comment_text': text,
-                                    'parent_comment_id': replyingToCommentId,
                                     'is_creator': _currentLoggedInHandle != 'user',
-                                  }).select().single();
+                                  };
+
+                                  if (replyingToCommentId != null) {
+                                    insertData['parent_comment_id'] = replyingToCommentId;
+                                  }
+
+                                  dynamic inserted;
+                                  try {
+                                    inserted = await Supabase.instance.client
+                                        .from('post_comments')
+                                        .insert(insertData)
+                                        .select()
+                                        .single();
+                                  } catch (primaryErr) {
+                                    // Fallback to 'content' column if table uses 'content' instead of 'comment_text'
+                                    insertData.remove('comment_text');
+                                    insertData['content'] = text;
+                                    inserted = await Supabase.instance.client
+                                        .from('post_comments')
+                                        .insert(insertData)
+                                        .select()
+                                        .single();
+                                  }
 
                                   commentCtrl.clear();
                                   setSheetState(() {
@@ -624,7 +604,7 @@ $content
                                   setSheetState(() => isSubmitting = false);
                                   if (context.mounted) {
                                     ScaffoldMessenger.of(context).showSnackBar(
-                                      const SnackBar(content: Text('Failed to post reply. Please try again.')),
+                                      SnackBar(content: Text('Error posting reply: $e')),
                                     );
                                   }
                                 }
@@ -642,7 +622,6 @@ $content
     );
   }
 
-  // 📝 CREATE POST WITH TELEGRAM APPROVAL WORKFLOW
   void _openCreatePostModal() {
     final contentCtrl = TextEditingController();
     String selectedTag = 'Doubts ❓';
@@ -757,7 +736,6 @@ $content
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
 
-                              // 🛡️ Set is_approved: false for moderation
                               final insertedPost = await Supabase.instance.client.from('community_posts').insert({
                                 'creator_id': _currentLoggedInHandle,
                                 'author_name': _customUserName,
@@ -772,7 +750,6 @@ $content
                                 'bookmarks_count': 0,
                               }).select().single();
 
-                              // 📡 Send Telegram interactive card with Approve & Reject buttons
                               AdminTelegramAlert.sendForInteractiveApproval(
                                 postId: insertedPost['id'] ?? 0,
                                 authorName: _customUserName,
@@ -896,7 +873,6 @@ $content
     );
   }
 
-  // 🎯 RESTORED: PREMIUM FREE CBT MOCK DISCOVERY CARD (WITH FUNNEL RIBBON)
   Widget _buildMockDiscoveryCard(Map<String, dynamic> mock, String authorName, String handle, bool isDark) {
     final int totalQs = (mock['questions_json'] as List?)?.length ?? 0;
     final int duration = mock['duration_mins'] ?? 15;
@@ -954,8 +930,6 @@ $content
                   style: TextStyle(fontSize: 11.5, color: isDark ? _inkLight : const Color(0xFF5C5540)),
                 ),
                 const SizedBox(height: 12),
-
-                // Main Launch Button
                 SizedBox(
                   width: double.infinity,
                   height: 40,
@@ -980,8 +954,6 @@ $content
               ],
             ),
           ),
-
-          // 🔗 Direct Classroom Funnel Ribbon
           InkWell(
             onTap: () => _navigateToCreator(handle),
             borderRadius: const BorderRadius.vertical(bottom: Radius.circular(13)),
@@ -1012,7 +984,6 @@ $content
     );
   }
 
-  // 📚 Dedicated Study Material Card
   Widget _buildStudyMaterialCard(String content, bool isDark) {
     return Container(
       margin: const EdgeInsets.only(top: 8),
@@ -1209,7 +1180,6 @@ $content
       ),
       body: Column(
         children: [
-          // 🔍 Top Persistent Search Bar (Blended with Original Theme)
           Padding(
             padding: const EdgeInsets.fromLTRB(14, 4, 14, 8),
             child: Container(
@@ -1241,8 +1211,6 @@ $content
               ),
             ),
           ),
-
-          // 🏷️ Category Filter Chips Strip
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
@@ -1272,11 +1240,8 @@ $content
               }).toList(),
             ),
           ),
-
           const SizedBox(height: 4),
           Divider(height: 1, thickness: 1, color: dividerColor),
-
-          // 📜 Flat Sheet Post Stream
           Expanded(
             child: _isLoading
                 ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
@@ -1390,7 +1355,6 @@ $content
 
                                     _buildRichTextContent(item['content'] ?? ''),
 
-                                    // Special Material Card if PDF
                                     if (item['tag'] == 'Study Material 📚')
                                       _buildStudyMaterialCard(item['content'] ?? '', isDark),
 
@@ -1410,13 +1374,11 @@ $content
                                       ),
                                     ],
 
-                                    // 🎯 Discovery Mock Card with Funnel
                                     if (attachedMock != null)
                                       _buildMockDiscoveryCard(attachedMock, authorDisplayName, authorHandle, isDark),
 
                                     const SizedBox(height: 14),
 
-                                    // Action Bar: Like, Comment, Views, Bookmark, Share
                                     Row(
                                       children: [
                                         InkWell(
