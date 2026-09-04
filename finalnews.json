@@ -1,12 +1,38 @@
 {
-  "generated_at": "2026-09-04 08:25:54",
+  "generated_at": "2026-09-04 14:01:23",
   "window": "Rolling 24 Hours",
-  "national_count": 12,
-  "bihar_count": 7,
-  "total_count": 19,
+  "national_count": 14,
+  "bihar_count": 8,
+  "total_count": 22,
   "national_news": [
     {
       "id": "nat_01",
+      "title": "CSIR-IIIM Showcases Biotech and Aroma Initiatives at Kathua Industrial Biotech Park",
+      "category": "Science, Technology, Defense & Space",
+      "bullets": [
+        "A press delegation visited the Industrial Biotech Park (IBTP) in Kathua, J&K, coordinated by PIB to review biotechnology and agricultural initiatives executed by CSIR-IIIM Jammu.",
+        "The IBTP Kathua hosts the BioNEST Bioincubation Centre and Centre of Excellence (CoE) to provide scientific facilities, mentorship, and testing infrastructure to tech startups in biotechnology, health, and agriculture.",
+        "Key initiatives highlighted include the CSIR Aroma Mission and Floriculture Mission, which connect laboratory scientific research directly with farmers cultivating medicinal and aromatic plants."
+      ],
+      "exam_tag": "CSIR Aroma Mission & Innovation",
+      "date": "04 Sep 2026",
+      "timestamp": 1788510512
+    },
+    {
+      "id": "nat_02",
+      "title": "Commerce Ministry Launches Nationwide FTA Outreach Drive to Expand Trade Footprint",
+      "category": "National Economy, Union Budget & Banking",
+      "bullets": [
+        "Union Minister Piyush Goyal addressed the National Workshop on 'Leveraging FTAs an Outreach Programme' in New Delhi to maximize FTA utilization across all 780 districts for MSMEs, startups, and traders.",
+        "India currently holds 9 Free Trade Agreements covering economies worth approximately $60 trillion in GDP, offering preferential access to nearly two-thirds of global trade, with targets to reach 75% coverage.",
+        "India achieved a Q1 GDP growth rate of 7.8% at constant prices and recorded exports of nearly $317 billion during the April-July period, up by $36-37 billion over the previous year."
+      ],
+      "exam_tag": "Free Trade Agreements & Foreign Trade Policy",
+      "date": "04 Sep 2026",
+      "timestamp": 1788510512
+    },
+    {
+      "id": "nat_03",
       "title": "India to Appoint Defence Attaché to Brussels During Belgian PM's Visit",
       "category": "International Relations, Summits & Global Organizations",
       "bullets": [
@@ -19,7 +45,7 @@
       "timestamp": 1788490511
     },
     {
-      "id": "nat_02",
+      "id": "nat_04",
       "title": "EAM S. Jaishankar Holds High-Level Bilateral Talks in Kyiv, Ukraine",
       "category": "International Relations, Summits & Global Organizations",
       "bullets": [
@@ -32,7 +58,7 @@
       "timestamp": 1788490511
     },
     {
-      "id": "nat_03",
+      "id": "nat_05",
       "title": "Ukraine Welcomes India's Diplomatic Push for Conflict Resolution",
       "category": "International Relations, Summits & Global Organizations",
       "bullets": [
@@ -45,7 +71,7 @@
       "timestamp": 1788490511
     },
     {
-      "id": "nat_04",
+      "id": "nat_06",
       "title": "India and Belgium Sign MoUs on Defence, Cybercrime, and Launch Strategic Dialogue",
       "category": "International Relations, Summits & Global Organizations",
       "bullets": [
@@ -58,7 +84,7 @@
       "timestamp": 1788490511
     },
     {
-      "id": "nat_05",
+      "id": "nat_07",
       "title": "Union Minister Piyush Goyal Urges Nationwide FTA Utilisation Drive",
       "category": "National Economy, Union Budget & Banking",
       "bullets": [
@@ -71,7 +97,7 @@
       "timestamp": 1788490547
     },
     {
-      "id": "nat_06",
+      "id": "nat_08",
       "title": "EAM S. Jaishankar Visits Ukraine, Reaffirms Support for Peaceful Resolution",
       "category": "International Relations, Summits & Global Organizations",
       "bullets": [
@@ -84,7 +110,7 @@
       "timestamp": 1788473780
     },
     {
-      "id": "nat_07",
+      "id": "nat_09",
       "title": "FM Sitharaman Reaffirms India's Growth Focus at New York Business Roundtable",
       "category": "National Economy, Union Budget & Banking",
       "bullets": [
@@ -97,7 +123,7 @@
       "timestamp": 1788450790
     },
     {
-      "id": "nat_08",
+      "id": "nat_10",
       "title": "PM Modi Calls for Urban Water Planning at National Departmental Summit on Water",
       "category": "Agriculture, Environment, Climate & GI Tags",
       "bullets": [
@@ -110,7 +136,7 @@
       "timestamp": 1788450790
     },
     {
-      "id": "nat_09",
+      "id": "nat_11",
       "title": "NHPC Prepared to Begin Execution of 1,856 MW Sawalkot Hydropower Project in J&K",
       "category": "Infrastructure, Energy & Digital Projects",
       "bullets": [
@@ -123,7 +149,7 @@
       "timestamp": 1788450833
     },
     {
-      "id": "nat_10",
+      "id": "nat_12",
       "title": "Defence Minister Unveils 'RAKSHA' Strategic Framework for Defence Diplomacy",
       "category": "Science, Technology, Defense & Space",
       "bullets": [
@@ -136,7 +162,7 @@
       "timestamp": 1788450833
     },
     {
-      "id": "nat_11",
+      "id": "nat_13",
       "title": "18th BRICS Intellectual Property Heads Meeting Held in New Delhi",
       "category": "International Relations, Summits & Global Organizations",
       "bullets": [
@@ -149,7 +175,7 @@
       "timestamp": 1788450833
     },
     {
-      "id": "nat_12",
+      "id": "nat_14",
       "title": "Japan Credit Rating Agency upgrades India's sovereign credit rating to 'A-' with Stable Outlook",
       "category": "National Economy, Union Budget & Banking",
       "bullets": [
@@ -165,32 +191,46 @@
   "bihar_news": [
     {
       "id": "bih_01",
-      "title": "India Receives 20 Bids for $7.74 Billion Rare Earth Permanent Magnet Manufacturing Scheme",
-      "category": "Govt Schemes, Policies & Social Welfare",
+      "title": "Riga Sugar Mill in Sitamarhi Introduces QR-Based Token System for Cane Procurement",
+      "category": "Bihar Special Affairs",
       "bullets": [
-        "The Ministry of Heavy Industries received 20 bids from prominent firms, including Coal India, L&T, ReNew, and Attero, under the $7.74 billion Rare-Earth Permanent Magnet (REPM) scheme.",
-        "The initiative aims to build 6,000 metric tonnes per annum (MTPA) of integrated REPM manufacturing capacity, supporting up to five beneficiaries with a maximum quota of 1,200 MTPA each.",
-        "The scheme focuses on establishing a complete midstream to downstream industrial chain, converting Neodymium-Praseodymium (NdPr) oxide into finished high-value magnets for electric mobility, semiconductors, and green energy."
+        "Riga Sugar Mill located in Bihar's Sitamarhi district is introducing an unmanned electronic weighing system with digital QR-code tokens for sugarcane procurement.",
+        "The initiative aims to enhance transparency during the crushing season, addressing demands raised by the Sugarcane Producers Association.",
+        "Farmers' demands during the review meeting included a minimum sugarcane price of Rs 650 per quintal and adherence to mandatory 14-day payment rules under the Cane Act."
       ],
-      "exam_tag": "UPSC / Central Level Exams",
+      "exam_tag": "BPSC",
       "date": "04 Sep 2026",
-      "timestamp": 1788490554
+      "timestamp": 1788510610
     },
     {
       "id": "bih_02",
-      "title": "India's Foodgrain Production Estimated at 376.5 Million Tonnes in 2025-26 Third Advance Estimates",
-      "category": "Agriculture, Environment, Climate & GI Tags",
+      "title": "India Receives 20 Bids for Rare Earth Magnet Manufacturing Scheme",
+      "category": "Science, Technology, Defense & Space",
       "bullets": [
-        "According to the Third Advance Estimates (2025-26), India's total foodgrain production is projected at 376.563 million tonnes, marking a 5.3% increase over the previous year's 357.732 million tonnes.",
-        "Under the Decentralised Grain Storage Plan in the Cooperative Sector (launched in 2023), over 1.80 lakh metric tonnes (LMT) of storage capacity has been established across 313 Primary Agricultural Credit Societies (PACS) as of July 2026.",
-        "The plan integrates storage, processing, procurement, and distribution at the PACS level to reduce post-harvest grain losses, eliminate distress sales, and minimize transport costs to Fair Price Shops."
+        "India has received 20 bids from various domestic and international companies to build integrated rare-earth permanent magnet (REPM) manufacturing facilities.",
+        "The $7.74 billion rare-earth scheme, anchored by the Ministry of Heavy Industries, targets creating 6,000 metric tonnes per annum of integrated manufacturing capacity.",
+        "The initiative focuses on midstream and downstream value addition, connecting critical-mineral resources with high-growth sectors like electronics, electric mobility, and renewable energy."
       ],
-      "exam_tag": "UPSC / Central Level Exams",
+      "exam_tag": "UPSC",
       "date": "04 Sep 2026",
-      "timestamp": 1788490554
+      "timestamp": 1788510610
     },
     {
       "id": "bih_03",
+      "title": "India's Foodgrain Production and Decentralised Grain Storage Plan",
+      "category": "Agriculture, Environment, Climate & GI Tags",
+      "bullets": [
+        "Total foodgrain production for 2025-26 is estimated at 376.563 million tonnes, a 5.3% increase from the previous year's 357.732 million tonnes.",
+        "The Decentralised Grain Storage Plan in Cooperative Sector, launched in 2023, aims to strengthen food security via Primary Agricultural Credit Societies (PACS).",
+        "As of July 2026, 313 PACS have completed godown construction, creating over 1.80 lakh metric tonnes (LMT) of storage capacity.",
+        "The initiative aims to reduce post-harvest wastage, prevent distress sales by farmers, and lower transportation costs by integrating storage, processing, and distribution at the local level."
+      ],
+      "exam_tag": "UPSC/SSC CGL",
+      "date": "04 Sep 2026",
+      "timestamp": 1788510683
+    },
+    {
+      "id": "bih_04",
       "title": "Bihar Flood Alert: Ganga River Water Level Rises in Patna and Other Districts",
       "category": "Bihar Special Affairs",
       "bullets": [
@@ -203,7 +243,7 @@
       "timestamp": 1788450880
     },
     {
-      "id": "bih_04",
+      "id": "bih_05",
       "title": "HUDCO Signs Rs 25,000 Crore MoU with Bihar Government for Industrial Infrastructure",
       "category": "Bihar Special Affairs",
       "bullets": [
@@ -216,7 +256,7 @@
       "timestamp": 1788450880
     },
     {
-      "id": "bih_05",
+      "id": "bih_06",
       "title": "India's Record Wheat Harvest Opens $1.5 Billion Export Window",
       "category": "National Economy, Union Budget & Banking",
       "bullets": [
@@ -229,7 +269,7 @@
       "timestamp": 1788451022
     },
     {
-      "id": "bih_06",
+      "id": "bih_07",
       "title": "Bihar Fisheries Department Advises Against Consuming Flood-Caught Fish",
       "category": "Bihar Special Affairs",
       "bullets": [
@@ -242,7 +282,7 @@
       "timestamp": 1788451022
     },
     {
-      "id": "bih_07",
+      "id": "bih_08",
       "title": "Severe Flood Situation Worsens Across Bihar as Major Rivers Rise",
       "category": "Bihar Special Affairs",
       "bullets": [
