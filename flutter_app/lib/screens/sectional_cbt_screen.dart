@@ -192,7 +192,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     int correctCount = 0;
     int wrongCount = 0;
 
-    // 📋 Creator Dashboard & Student Report Screen ke exact format me compile karein
     List<Map<String, dynamic>> detailedResponses = [];
 
     for (int i = 0; i < widget.questions.length; i++) {
@@ -209,9 +208,9 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         'question': q.getText(_isHindi),
         'options': currentOptions,
         'selected_idx': userAns,
-        'selected_option': selectedText, // 👈 Report screen matching key
+        'selected_option': selectedText,
         'correct_idx': q.answerIndex,
-        'correct_option': correctText,   // 👈 Report screen matching key
+        'correct_option': correctText,
         'is_correct': isCorrect,
         'time_spent': _questionTimers[i] ?? 0,
         'explanation': q.explanation,
@@ -271,7 +270,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     final client = Supabase.instance.client;
 
-    // 1️⃣ UPDATE ATTEMPTS COUNT: Safe for both integer and UUID keys
+    // 1️⃣ UPDATE ATTEMPTS COUNT
     if (widget.mockId != null) {
       try {
         final String targetTable = widget.isBatchTest ? 'batch_tests' : 'creator_mocks';
@@ -293,13 +292,19 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             .update({'attempts_count': currentCount + 1})
             .eq('id', targetId);
 
-        debugPrint("✅ [SECTIONAL_CBT] Attempts updated in $targetTable for ID: $targetId");
+        debugPrint("✅ [CBT_DEBUG] Attempts updated in $targetTable for ID: $targetId");
       } catch (e) {
-        debugPrint("❌ [SECTIONAL_CBT] Error updating attempts_count: $e");
+        debugPrint("❌ [CBT_DEBUG] Error updating attempts_count: $e");
       }
     }
 
-    // 2️⃣ SYNC BATCH SUBMISSIONS FOR TEACHER DASHBOARD
+    // 2️⃣ SYNC BATCH SUBMISSIONS WITH FULL DEBUGGING
+    debugPrint("==================================================");
+    debugPrint("🔍 [CBT_DEBUG] SUBMIT TRIGGERED");
+    debugPrint("🔍 [CBT_DEBUG] isBatchTest: ${widget.isBatchTest}");
+    debugPrint("🔍 [CBT_DEBUG] batchId: '${widget.batchId}'");
+    debugPrint("🔍 [CBT_DEBUG] mockId: '${widget.mockId}'");
+
     if (widget.isBatchTest && widget.batchId != null) {
       try {
         final prefs = await SharedPreferences.getInstance();
@@ -315,25 +320,66 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             : 0.0;
 
         final Map<String, dynamic> submissionData = {
-          'batch_id': widget.batchId.toString(),
-          'test_id': widget.mockId?.toString(),
+          'batch_id': widget.batchId.toString().trim(),
+          'test_id': widget.mockId?.toString().trim(),
           'student_name': rawName,
           'student_identifier': studentIdentifier,
           'score': score,
           'accuracy': accuracyPct.round(),
           'weak_subject': wrongCount > 0 ? widget.subFolder.toUpperCase() : 'All Clear',
           'strong_subject': correctCount > 0 ? 'General Studies' : 'Basic Revision',
-          'detailed_responses': detailedResponses, // 👈 Question-by-question data
+          'detailed_responses': detailedResponses,
         };
 
-        debugPrint("🚀 [SECTIONAL_CBT] Inserting to batch_submissions: BatchId=${widget.batchId}");
+        debugPrint("🚀 [CBT_DEBUG] Sending Payload to 'batch_submissions':");
+        debugPrint("    batch_id: ${submissionData['batch_id']}");
+        debugPrint("    student: ${submissionData['student_identifier']}");
+        debugPrint("    score: ${submissionData['score']}");
+        debugPrint("    responses_count: ${detailedResponses.length}");
 
-        await client.from('batch_submissions').insert(submissionData);
-        debugPrint("✅ [SECTIONAL_CBT] Batch Submission Successfully Recorded in Supabase!");
+        final insertRes = await client
+            .from('batch_submissions')
+            .insert(submissionData)
+            .select();
+
+        debugPrint("🎉 [CBT_DEBUG] SUPABASE INSERT SUCCESSFUL! Response: $insertRes");
+
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text('✅ Mock Result Synced to Classroom Dashboard!'),
+              backgroundColor: Color(0xFF16A34A),
+              duration: Duration(seconds: 3),
+            ),
+          );
+        }
       } catch (e, stack) {
-        debugPrint("❌ [SECTIONAL_CBT] Batch submission insert failed: $e\n$stack");
+        debugPrint("❌ [CBT_DEBUG] CRITICAL SUPABASE INSERT FAILED: $e");
+        debugPrint("❌ [CBT_DEBUG] StackTrace: $stack");
+
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('❌ DB Submission Failed: $e'),
+              backgroundColor: Colors.red,
+              duration: const Duration(seconds: 5),
+            ),
+          );
+        }
+      }
+    } else {
+      debugPrint("⚠️ [CBT_DEBUG] SKIPPED: isBatchTest is false OR batchId is null!");
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('⚠️ Not saved: isBatchTest=${widget.isBatchTest}, batchId=${widget.batchId}'),
+            backgroundColor: Colors.orange,
+            duration: const Duration(seconds: 4),
+          ),
+        );
       }
     }
+    debugPrint("==================================================");
 
     TelegramTracker.recordTestCompletion(
       widget.testTitle,
@@ -362,8 +408,8 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       context: context,
       builder: (ctx) => AlertDialog(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: Row(
-          children: const [
+        title: const Row(
+          children: [
             Icon(Icons.school_rounded, color: Color(0xFF2563EB), size: 22),
             SizedBox(width: 8),
             Text('Join Classroom Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
@@ -800,9 +846,9 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                       ],
                     ),
                     const SizedBox(height: 8),
-                    Text(
+                    const Text(
                       'Liked this Mock Drill? 🚀',
-                      style: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w800),
+                      style: TextStyle(fontSize: 15.5, fontWeight: FontWeight.w800),
                     ),
                     const SizedBox(height: 3),
                     Text(
