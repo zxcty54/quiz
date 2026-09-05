@@ -171,7 +171,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     if (await canLaunchUrl(uri)) await launchUrl(uri);
   }
 
-  // 🎯 Crash-Safe Test-Wise Intelligence Hub with Overall Analytics
+  // 🎯 Dynamic Batch-wise & Overall Performance Intelligence Hub
   void _openStudentIntelligenceSheet() {
     if (_batches.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -183,7 +183,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
       return;
     }
 
-    String selectedBatchId = (_batches.first['id'] ?? '').toString();
+    // Default selection is 'ALL' for overall metrics
+    String selectedBatchFilter = 'ALL';
     String selectedTestId = 'ALL';
 
     showModalBottomSheet(
@@ -195,24 +196,21 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setSheetState) {
-          final validBatchItems = _batches.where((b) => b['id'] != null).toList();
-          final bool hasSelectedMatch = validBatchItems
-              .any((b) => b['id'].toString() == selectedBatchId);
-          
-          if (!hasSelectedMatch && validBatchItems.isNotEmpty) {
-            selectedBatchId = validBatchItems.first['id'].toString();
-          }
-
+          // 1. Filter submissions based on selected batch
           final batchSubmissions = _allRawSubmissions.where((s) {
+            if (selectedBatchFilter == 'ALL') return true;
             final bId = (s['batch_id'] ?? '').toString().trim();
-            return bId == selectedBatchId.trim();
+            return bId == selectedBatchFilter.trim();
           }).toList();
 
+          // 2. Filter tests based on selected batch
           final batchTests = _allBatchTests.where((t) {
+            if (selectedBatchFilter == 'ALL') return true;
             final bId = (t['batch_id'] ?? '').toString().trim();
-            return bId == selectedBatchId.trim();
+            return bId == selectedBatchFilter.trim();
           }).toList();
 
+          // 3. Analytics Calculation for selected scope
           double totalScoreSum = 0.0;
           final Map<String, int> weakFrequency = {};
 
@@ -231,6 +229,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               ? weakFrequency.entries.reduce((a, b) => a.value > b.value ? a : b).key
               : 'All Concepts Stable';
 
+          // 4. Test-specific filtered list
           final filteredSubmissions = batchSubmissions.where((s) {
             if (selectedTestId == 'ALL') return true;
             final sTestId = (s['test_id'] ?? '').toString().trim();
@@ -239,7 +238,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
           return SafeArea(
             child: Container(
-              height: MediaQuery.of(ctx).size.height * 0.88,
+              height: MediaQuery.of(ctx).size.height * 0.90,
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -250,9 +249,9 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('📊 Batch Intelligence & CBT Hub',
+                          const Text('📊 Batch Performance & Intelligence Hub',
                               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
-                          Text('Granular CBT Breakdown for Classroom Mocks',
+                          Text('View overall or batch-wise student analytics',
                               style: TextStyle(fontSize: 11.5, color: Colors.grey[500])),
                         ],
                       ),
@@ -261,48 +260,62 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                           onPressed: () => Navigator.pop(ctx)),
                     ],
                   ),
-                  const SizedBox(height: 8),
+                  const SizedBox(height: 10),
 
-                  // 1️⃣ BATCH SELECTOR DROPDOWN
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 12),
-                    decoration: BoxDecoration(
-                      color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.grey.withOpacity(0.2)),
-                    ),
-                    child: DropdownButtonHideUnderline(
-                      child: DropdownButton<String>(
-                        value: selectedBatchId,
-                        isExpanded: true,
-                        dropdownColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-                        items: validBatchItems.map<DropdownMenuItem<String>>((b) {
-                          final bId = b['id'].toString();
-                          final bName = b['batch_name'] ?? 'Classroom Batch';
-                          final bCode = b['batch_code'] ?? 'N/A';
-                          return DropdownMenuItem<String>(
-                            value: bId,
-                            child: Text(
-                              '🏫 $bName (Code: $bCode)',
-                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
-                              overflow: TextOverflow.ellipsis,
+                  // 1️⃣ BATCH SELECTOR CHIPS (All + Specific Batches)
+                  const Text('Select Classroom Batch Filter:',
+                      style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Colors.grey)),
+                  const SizedBox(height: 6),
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: ChoiceChip(
+                            label: const Text('🌐 All Batches (Overall)'),
+                            selected: selectedBatchFilter == 'ALL',
+                            selectedColor: const Color(0xFF2563EB),
+                            labelStyle: TextStyle(
+                              fontSize: 11.5,
+                              fontWeight: FontWeight.bold,
+                              color: selectedBatchFilter == 'ALL' ? Colors.white : Colors.black87,
+                            ),
+                            onSelected: (_) => setSheetState(() {
+                              selectedBatchFilter = 'ALL';
+                              selectedTestId = 'ALL';
+                            }),
+                          ),
+                        ),
+                        ..._batches.map((b) {
+                          final bId = (b['id'] ?? '').toString();
+                          final bName = b['batch_name'] ?? 'Batch';
+                          final bool isSelected = selectedBatchFilter == bId;
+
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: ChoiceChip(
+                              label: Text('🏫 $bName'),
+                              selected: isSelected,
+                              selectedColor: const Color(0xFF2563EB),
+                              labelStyle: TextStyle(
+                                fontSize: 11.5,
+                                fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                                color: isSelected ? Colors.white : Colors.black87,
+                              ),
+                              onSelected: (_) => setSheetState(() {
+                                selectedBatchFilter = bId;
+                                selectedTestId = 'ALL';
+                              }),
                             ),
                           );
                         }).toList(),
-                        onChanged: (val) {
-                          if (val != null) {
-                            setSheetState(() {
-                              selectedBatchId = val;
-                              selectedTestId = 'ALL';
-                            });
-                          }
-                        },
-                      ),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 12),
 
-                  // 2️⃣ OVERALL BATCH PERFORMANCE SUMMARY
+                  // 2️⃣ DYNAMIC PERFORMANCE SUMMARY CARD
                   Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
@@ -316,11 +329,15 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('OVERALL BATCH PERFORMANCE',
-                                style: TextStyle(
-                                    fontSize: 10.5,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.grey[500])),
+                            Text(
+                              selectedBatchFilter == 'ALL' 
+                                  ? 'OVERALL INSTITUTE PERFORMANCE' 
+                                  : 'BATCH-WISE PERFORMANCE',
+                              style: TextStyle(
+                                  fontSize: 10.5,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey[500]),
+                            ),
                             Container(
                               padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                               decoration: BoxDecoration(
@@ -406,7 +423,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               .where((s) => (s['test_id'] ?? '').toString() == tId)
                               .length;
                           
-                          // 🎯 Dynamic Mock Title Resolution
                           final String testName = t['title'] ?? t['test_title'] ?? t['testTitle'] ?? 'Classroom Mock';
 
                           return Padding(
@@ -440,9 +456,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                                     size: 44, color: Colors.grey.withOpacity(0.4)),
                                 const SizedBox(height: 10),
                                 Text(
-                                  selectedTestId == 'ALL'
-                                      ? 'Is batch me abhi tak koi test attempt nahi hua hai.'
-                                      : 'Is mock drill me koi submission nahi mila.',
+                                  'Is selection me koi submission record nahi mila.',
                                   style: TextStyle(color: Colors.grey[500], fontSize: 12.5),
                                 ),
                               ],
@@ -473,7 +487,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               final List responses =
                                   (s['detailed_responses'] is List) ? s['detailed_responses'] : [];
 
-                              // 🛡️ Safe Original Mock Title Resolution
                               String matchedTestTitle = 'Classroom CBT Test';
                               final matchingTestList = batchTests.where(
                                 (t) => (t['id'] ?? '').toString() == (s['test_id'] ?? '').toString(),
