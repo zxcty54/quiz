@@ -11,6 +11,7 @@ import '../widgets/cbt_widgets.dart';
 import '../services/telegram_tracker.dart';
 import '../services/user_stats_service.dart';
 import '../services/cbt_progress_service.dart';
+import '../utils/subtopic_engine.dart'; // 👈 Subtopic Engine Integration
 import 'creator_profile_screen.dart';
 
 class SectionalCbtScreen extends StatefulWidget {
@@ -194,6 +195,11 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     List<Map<String, dynamic>> detailedResponses = [];
 
+    // 🔍 Subtopic Performance Tracking Engine Maps
+    final Map<String, int> topicAttempted = {};
+    final Map<String, int> topicCorrect = {};
+    final Map<String, int> topicWrong = {};
+
     for (int i = 0; i < widget.questions.length; i++) {
       final q = widget.questions[i];
       final userAns = _userAnswers[i];
@@ -202,6 +208,17 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
       final String selectedText = userAns != null ? currentOptions[userAns] : 'Skipped';
       final String correctText = currentOptions[q.answerIndex];
+
+      // 🎯 Subtopic Extraction via Multi-Statement Engine
+      final String detectedConcept = SubtopicEngine.extractSubtopic(
+        chapterName: (q.chapter != null && q.chapter!.isNotEmpty)
+            ? q.chapter!
+            : widget.testTitle,
+        qe: q.qe,
+        qh: q.qh,
+        se: q.se,
+        sh: q.sh,
+      );
 
       detailedResponses.add({
         'q_no': i + 1,
@@ -214,11 +231,15 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         'is_correct': isCorrect,
         'time_spent': _questionTimers[i] ?? 0,
         'explanation': q.explanation,
+        'subtopic': detectedConcept,
       });
 
       if (userAns != null) {
+        topicAttempted[detectedConcept] = (topicAttempted[detectedConcept] ?? 0) + 1;
+
         if (isCorrect) {
           correctCount++;
+          topicCorrect[detectedConcept] = (topicCorrect[detectedConcept] ?? 0) + 1;
           await UserStatsService.recordQuestionAttempt(
             isCorrect: true,
             chapterName: widget.testTitle,
@@ -226,6 +247,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           );
         } else {
           wrongCount++;
+          topicWrong[detectedConcept] = (topicWrong[detectedConcept] ?? 0) + 1;
           await UserStatsService.recordQuestionAttempt(
             isCorrect: false,
             chapterName: widget.testTitle,
@@ -246,6 +268,29 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         }
       }
     }
+
+    // 📊 Granular Intelligence Resolution for Weak and Strong Areas
+    String determinedStrong = 'Core Concepts Strong';
+    String determinedWeak = 'All Clear (No Critical Traps)';
+
+    int maxWrongs = 0;
+    int maxCorrect = 0;
+
+    topicAttempted.forEach((concept, total) {
+      final wrong = topicWrong[concept] ?? 0;
+      final correct = topicCorrect[concept] ?? 0;
+
+      if (wrong > maxWrongs) {
+        maxWrongs = wrong;
+        final int acc = (total > 0) ? ((correct / total) * 100).round() : 0;
+        determinedWeak = '$concept ($wrong Wrong, $acc% Acc)';
+      }
+
+      if (correct > maxCorrect && wrong == 0) {
+        maxCorrect = correct;
+        determinedStrong = '$concept (100% Acc)';
+      }
+    });
 
     await UserStatsService.recordMockTest(questionsAttempted: _userAnswers.length);
 
@@ -298,7 +343,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       }
     }
 
-    // 2️⃣ SYNC BATCH SUBMISSIONS WITH FULL DEBUGGING
+    // 2️⃣ SYNC BATCH SUBMISSIONS WITH SUBTOPIC INTELLIGENCE
     debugPrint("==================================================");
     debugPrint("🔍 [CBT_DEBUG] SUBMIT TRIGGERED");
     debugPrint("🔍 [CBT_DEBUG] isBatchTest: ${widget.isBatchTest}");
@@ -326,16 +371,19 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           'student_identifier': studentIdentifier,
           'score': score,
           'accuracy': accuracyPct.round(),
-          'weak_subject': wrongCount > 0 ? widget.subFolder.toUpperCase() : 'All Clear',
-          'strong_subject': correctCount > 0 ? 'General Studies' : 'Basic Revision',
+          'accuracy_percent': accuracyPct.round(),
+          'attempted_count': _userAnswers.length,
+          'correct_count': correctCount,
+          'wrong_count': wrongCount,
+          'total_questions': widget.questions.length,
+          'weak_subject': determinedWeak,     // 👈 Subtopic Intelligence Output
+          'strong_subject': determinedStrong, // 👈 Subtopic Intelligence Output
           'detailed_responses': detailedResponses,
         };
 
         debugPrint("🚀 [CBT_DEBUG] Sending Payload to 'batch_submissions':");
-        debugPrint("    batch_id: ${submissionData['batch_id']}");
-        debugPrint("    student: ${submissionData['student_identifier']}");
-        debugPrint("    score: ${submissionData['score']}");
-        debugPrint("    responses_count: ${detailedResponses.length}");
+        debugPrint("    weak_subject: $determinedWeak");
+        debugPrint("    strong_subject: $determinedStrong");
 
         final insertRes = await client
             .from('batch_submissions')
@@ -369,15 +417,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       }
     } else {
       debugPrint("⚠️ [CBT_DEBUG] SKIPPED: isBatchTest is false OR batchId is null!");
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('⚠️ Not saved: isBatchTest=${widget.isBatchTest}, batchId=${widget.batchId}'),
-            backgroundColor: Colors.orange,
-            duration: const Duration(seconds: 4),
-          ),
-        );
-      }
     }
     debugPrint("==================================================");
 
