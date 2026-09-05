@@ -377,7 +377,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   ),
                   const SizedBox(height: 12),
 
-                  // 3️⃣ TEST/MOCK SELECTOR CHIPS
+                  // 3️⃣ TEST/MOCK SELECTOR CHIPS (Using Actual Test Title)
                   const Text('Filter by CBT Mock Drill:',
                       style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Colors.grey)),
                   const SizedBox(height: 6),
@@ -405,10 +405,14 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                           final count = batchSubmissions
                               .where((s) => (s['test_id'] ?? '').toString() == tId)
                               .length;
+                          
+                          // 🎯 Dynamic Mock Title Resolution
+                          final String testName = t['title'] ?? t['test_title'] ?? t['testTitle'] ?? 'Classroom Mock';
+
                           return Padding(
                             padding: const EdgeInsets.only(right: 8),
                             child: ChoiceChip(
-                              label: Text('🎯 ${t['title'] ?? 'Mock Drill'} ($count)'),
+                              label: Text('🎯 $testName ($count)'),
                               selected: isSelected,
                               selectedColor: const Color(0xFF2563EB),
                               labelStyle: TextStyle(
@@ -469,12 +473,14 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               final List responses =
                                   (s['detailed_responses'] is List) ? s['detailed_responses'] : [];
 
+                              // 🛡️ Safe Original Mock Title Resolution
                               String matchedTestTitle = 'Classroom CBT Test';
                               final matchingTestList = batchTests.where(
                                 (t) => (t['id'] ?? '').toString() == (s['test_id'] ?? '').toString(),
                               );
-                              if (matchingTestList.isNotEmpty && matchingTestList.first['title'] != null) {
-                                matchedTestTitle = matchingTestList.first['title'].toString();
+                              if (matchingTestList.isNotEmpty) {
+                                final tMatch = matchingTestList.first;
+                                matchedTestTitle = tMatch['title'] ?? tMatch['test_title'] ?? tMatch['testTitle'] ?? 'Classroom CBT Test';
                               }
 
                               return Card(
@@ -582,7 +588,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                                                 borderRadius: BorderRadius.circular(8)),
                                           ),
                                           onPressed: () {
-                                            Navigator.pop(ctx);
                                             if (responses.isEmpty) {
                                               ScaffoldMessenger.of(context).showSnackBar(
                                                 const SnackBar(
