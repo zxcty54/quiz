@@ -6,7 +6,7 @@ import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../services/ai_explainer_service.dart';
 import '../services/ai_rate_limiter_service.dart';
-import '../widgets/math_text.dart'; // 👈 Correct path to widget
+import '../widgets/math_text.dart';
 
 // 🎯 Safe Question Data Structure with dedicated controllers
 class QuestionCardData {
@@ -23,7 +23,8 @@ class QuestionCardData {
   })  : questionCtrl = TextEditingController(text: question),
         optionCtrls = List.generate(
           4,
-          (i) => TextEditingController(text: (options != null && options.length > i) ? options[i] : ''),
+          (i) => TextEditingController(
+              text: (options != null && options.length > i) ? options[i] : ''),
         ),
         explanationCtrl = TextEditingController(text: explanation);
 
@@ -157,7 +158,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     return null;
   }
 
-  // 📷 ML Kit OCR Scanner Engine
   Future<String?> _scanTextFromCameraOrGallery(ImageSource source) async {
     try {
       final XFile? photo = await _imagePicker.pickImage(source: source, imageQuality: 90);
@@ -177,23 +177,69 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     }
   }
 
-  // ⚡ Smart Offline Heuristic Parser
+  // ⚡ Upgraded Robust Chunk-Based Parser (Fixed Single-Q Bug)
   List<QuestionCardData> _parseRawCoachingInput(String text) {
     final List<QuestionCardData> result = [];
-    final lines = text.replaceAll('\r\n', '\n').split('\n');
+    final cleanText = text.replaceAll('\r\n', '\n').replaceAll('\r', '\n').trim();
+    if (cleanText.isEmpty) return result;
 
-    StringBuffer qBuf = StringBuffer();
-    List<String> opts = [];
-    int ansIdx = 0;
-    StringBuffer expBuf = StringBuffer();
+    // Boundary marker for new questions
+    final qMarker = RegExp(
+      r'(?:^|\n)\s*(?:Q\s*\.?\s*\d+|प्रश्न\s*\d*|\d+[\.\)])[\s\.:\-_]+',
+      caseSensitive: false,
+    );
 
-    final qStartRegex = RegExp(r'^(Q\s*\.?\s*\d+|^\d+[\.\)])\s+', caseSensitive: false);
-    final optRegex = RegExp(r'^(\([A-Da-d1-4]\)|[A-Da-d1-4][\.\)])\s*');
-    final ansRegex = RegExp(r'^(Ans|Answer|उत्तर|सही उत्तर)[\s\.:\-_]+([A-Da-d1-4])', caseSensitive: false);
-    final expRegex = RegExp(r'^(Exp|Explanation|व्याख्या|हल)[\s\.:\-_]*', caseSensitive: false);
+    final matches = qMarker.allMatches(cleanText).toList();
+    if (matches.isEmpty) return result;
 
-    void pushQuestion() {
-      if (qBuf.isNotEmpty && opts.isNotEmpty) {
+    for (int i = 0; i < matches.length; i++) {
+      final start = matches[i].end;
+      final end = (i + 1 < matches.length) ? matches[i + 1].start : cleanText.length;
+      final block = cleanText.substring(start, end).trim();
+
+      final lines = block.split('\n').map((l) => l.trim()).where((l) => l.isNotEmpty).toList();
+      if (lines.isEmpty) continue;
+
+      StringBuffer qBuf = StringBuffer();
+      List<String> opts = [];
+      int ansIdx = 0;
+      StringBuffer expBuf = StringBuffer();
+
+      final optRegex = RegExp(r'^(\([A-Da-d1-4]\)|[A-Da-d1-4][\.\)])\s*');
+      final ansRegex = RegExp(r'^(Ans|Answer|उत्तर|सही उत्तर)[\s\.:\-_]+([A-Da-d1-4])', caseSensitive: false);
+      final expRegex = RegExp(r'^(Exp|Explanation|व्याख्या|हल)[\s\.:\-_]*', caseSensitive: false);
+
+      String mode = 'Q';
+
+      for (var line in lines) {
+        if (ansRegex.hasMatch(line)) {
+          mode = 'ANS';
+          final m = ansRegex.firstMatch(line);
+          if (m != null) {
+            final key = m.group(2)!.toUpperCase();
+            if (key == 'A' || key == '1') ansIdx = 0;
+            if (key == 'B' || key == '2') ansIdx = 1;
+            if (key == 'C' || key == '3') ansIdx = 2;
+            if (key == 'D' || key == '4') ansIdx = 3;
+          }
+        } else if (expRegex.hasMatch(line)) {
+          mode = 'EXP';
+          expBuf.writeln(line.replaceFirst(expRegex, '').trim());
+        } else if (optRegex.hasMatch(line)) {
+          mode = 'OPT';
+          opts.add(line.replaceFirst(optRegex, '').trim());
+        } else {
+          if (mode == 'OPT' && opts.isNotEmpty) {
+            opts[opts.length - 1] = "${opts.last} $line";
+          } else if (mode == 'EXP') {
+            expBuf.writeln(line);
+          } else {
+            qBuf.writeln(line);
+          }
+        }
+      }
+
+      if (qBuf.isNotEmpty) {
         while (opts.length < 4) {
           opts.add('Option ${String.fromCharCode(65 + opts.length)}');
         }
@@ -204,53 +250,10 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
           explanation: expBuf.toString().trim(),
         ));
       }
-      qBuf.clear();
-      opts = [];
-      ansIdx = 0;
-      expBuf.clear();
     }
-
-    String mode = 'Q';
-
-    for (var rawLine in lines) {
-      final line = rawLine.trim();
-      if (line.isEmpty) continue;
-
-      if (qStartRegex.hasMatch(line)) {
-        pushQuestion();
-        mode = 'Q';
-        qBuf.writeln(line.replaceFirst(qStartRegex, '').trim());
-      } else if (ansRegex.hasMatch(line)) {
-        mode = 'ANS';
-        final m = ansRegex.firstMatch(line);
-        if (m != null) {
-          final key = m.group(2)!.toUpperCase();
-          if (key == 'A' || key == '1') ansIdx = 0;
-          if (key == 'B' || key == '2') ansIdx = 1;
-          if (key == 'C' || key == '3') ansIdx = 2;
-          if (key == 'D' || key == '4') ansIdx = 3;
-        }
-      } else if (expRegex.hasMatch(line)) {
-        mode = 'EXP';
-        expBuf.writeln(line.replaceFirst(expRegex, '').trim());
-      } else if (optRegex.hasMatch(line)) {
-        mode = 'OPT';
-        opts.add(line.replaceFirst(optRegex, '').trim());
-      } else {
-        if (mode == 'OPT' && opts.isNotEmpty) {
-          opts[opts.length - 1] = "${opts.last} $line";
-        } else if (mode == 'EXP') {
-          expBuf.writeln(line);
-        } else {
-          qBuf.writeln(line);
-        }
-      }
-    }
-    pushQuestion();
     return result;
   }
 
-  // 🌟 Smart Studio Modal: OCR + Text Paste + AI Fallback
   void _openSmartPaperModal() {
     final rawTextCtrl = TextEditingController();
     bool isAiLoading = false;
@@ -283,7 +286,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 4),
 
-                // OCR Image Trigger Action Chips
                 Row(
                   children: [
                     ActionChip(
@@ -322,10 +324,10 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 12),
 
-                // 1. FAST LOCAL CONVERT (Primary - Free)
+                // 1. FAST LOCAL CONVERT (Primary)
                 SizedBox(
                   width: double.infinity,
-                  height: 44,
+                  height: 46,
                   child: ElevatedButton.icon(
                     style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
                     icon: const Icon(Icons.flash_on_rounded, size: 18),
@@ -361,24 +363,29 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 8),
 
-                // 2. AI FALLBACK (Single Call - Safe Quota Deduction)
+                // 2. AI FALLBACK (With explicit error handling)
                 SizedBox(
                   width: double.infinity,
-                  height: 42,
+                  height: 44,
                   child: OutlinedButton.icon(
                     style: OutlinedButton.styleFrom(
                       foregroundColor: const Color(0xFF8B5CF6),
                       side: const BorderSide(color: Color(0xFF8B5CF6)),
                     ),
                     icon: isAiLoading
-                        ? const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF8B5CF6)))
+                        ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF8B5CF6)))
                         : const Icon(Icons.auto_awesome_rounded, size: 16),
-                    label: Text(isAiLoading ? 'AI Processing Single Batch...' : 'AI Auto-Clean & Fix (Messy Notes/OCR) 🪄'),
+                    label: Text(isAiLoading ? 'AI Processing Questions...' : 'AI Auto-Clean & Fix (Messy Notes/OCR) 🪄'),
                     onPressed: isAiLoading
                         ? null
                         : () async {
                             final text = rawTextCtrl.text.trim();
-                            if (text.isEmpty) return;
+                            if (text.isEmpty) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('Pehle text paste karein!')),
+                              );
+                              return;
+                            }
 
                             setModalState(() => isAiLoading = true);
 
@@ -391,10 +398,15 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
 
                                 final converted = aiResult.map((m) {
                                   final opts = (m['options'] as List? ?? []).map((e) => e.toString()).toList();
+                                  while (opts.length < 4) {
+                                    opts.add('Option ${String.fromCharCode(65 + opts.length)}');
+                                  }
                                   return QuestionCardData(
                                     question: m['question']?.toString() ?? '',
-                                    options: opts,
-                                    answerIndex: m['answer'] is int ? m['answer'] : 0,
+                                    options: opts.sublist(0, 4),
+                                    answerIndex: (m['answer'] is int && m['answer'] >= 0 && m['answer'] < 4)
+                                        ? m['answer']
+                                        : 0,
                                     explanation: m['explanation']?.toString() ?? '',
                                   );
                                 }).toList();
@@ -413,13 +425,19 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                   );
                                 }
                               } else {
-                                throw Exception('Invalid response structure');
+                                throw Exception('Format samajh nahi aaya ya response empty hai.');
                               }
                             } catch (err) {
                               setModalState(() => isAiLoading = false);
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(content: Text('AI Format parse nahi kar saka. Quota deduct nahi hua hai.'), backgroundColor: Colors.redAccent),
-                              );
+                              if (context.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text('AI Error: $err'),
+                                    backgroundColor: Colors.redAccent,
+                                    duration: const Duration(seconds: 4),
+                                  ),
+                                );
+                              }
                             }
                           },
                   ),
@@ -433,7 +451,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     );
   }
 
-  // 👁️ Live Student Preview with LaTeX Math
   void _openStudentPreview() {
     final validationError = _validateQuestions();
     if (validationError != null) {
@@ -586,7 +603,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     );
   }
 
-  // 🚀 Publish Mock Test to Supabase
   Future<void> _publishMockTest() async {
     final title = _titleCtrl.text.trim();
     if (title.isEmpty) {
@@ -683,7 +699,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       ),
       body: Column(
         children: [
-          // Target Selector and Settings
+          // Top Header Settings
           Container(
             padding: const EdgeInsets.all(12),
             color: cardBg,
@@ -734,7 +750,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
           ),
           const Divider(height: 1),
 
-          // Cards Review List with dedicated TextEditingControllers
+          // Cards List
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(12),
@@ -807,38 +823,86 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
             ),
           ),
 
-          // Bottom Bar Actions
+          // 🛠️ Uncompressed, Clean 2-Tier Bottom Action Bar
           Container(
-            padding: const EdgeInsets.all(12),
-            color: cardBg,
-            child: Row(
-              children: [
-                OutlinedButton.icon(
-                  icon: const Icon(Icons.add_rounded, size: 18),
-                  label: const Text('Add 1 Card'),
-                  onPressed: _addNewBlankQuestion,
-                ),
-                const SizedBox(width: 8),
-                OutlinedButton.icon(
-                  icon: const Icon(Icons.remove_red_eye_outlined, size: 17, color: Color(0xFF2563EB)),
-                  label: const Text('Preview 👁️'),
-                  onPressed: _openStudentPreview,
-                ),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: _publishTarget == 'PUBLIC' ? const Color(0xFF2563EB) : const Color(0xFF16A34A),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 12),
-                    ),
-                    onPressed: _isPublishing ? null : _publishMockTest,
-                    child: _isPublishing
-                        ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                        : Text('Publish ${_questionCards.length} Qs 🚀', style: const TextStyle(fontWeight: FontWeight.bold)),
-                  ),
+            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
+            decoration: BoxDecoration(
+              color: cardBg,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.06),
+                  blurRadius: 10,
+                  offset: const Offset(0, -3),
                 ),
               ],
+            ),
+            child: SafeArea(
+              top: false,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  // Row 1: Add Card + Preview
+                  Row(
+                    children: [
+                      Expanded(
+                        child: OutlinedButton.icon(
+                          icon: const Icon(Icons.add_rounded, size: 18),
+                          label: const Text('Add 1 Card'),
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          ),
+                          onPressed: _addNewBlankQuestion,
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: OutlinedButton.icon(
+                          icon: const Icon(Icons.remove_red_eye_outlined, size: 17, color: Color(0xFF2563EB)),
+                          label: const Text('Preview 👁️', style: TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold)),
+                          style: OutlinedButton.styleFrom(
+                            side: const BorderSide(color: Color(0xFF2563EB)),
+                            padding: const EdgeInsets.symmetric(vertical: 10),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          ),
+                          onPressed: _openStudentPreview,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+
+                  // Row 2: Full-Width Prominent Publish Button
+                  SizedBox(
+                    width: double.infinity,
+                    height: 48,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: _publishTarget == 'PUBLIC' ? const Color(0xFF2563EB) : const Color(0xFF16A34A),
+                        foregroundColor: Colors.white,
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      ),
+                      onPressed: _isPublishing ? null : _publishMockTest,
+                      child: _isPublishing
+                          ? const SizedBox(width: 22, height: 22, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2.2))
+                          : Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(_publishTarget == 'PUBLIC' ? Icons.public_rounded : Icons.lock_rounded, size: 18),
+                                const SizedBox(width: 8),
+                                Text(
+                                  _publishTarget == 'PUBLIC'
+                                      ? 'Publish Test to Public Feed (${_questionCards.length} Qs) 🚀'
+                                      : 'Save & Publish to Batch (${_questionCards.length} Qs) 🔒',
+                                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                ),
+                              ],
+                            ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ],
