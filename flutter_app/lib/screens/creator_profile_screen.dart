@@ -60,8 +60,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     final prefs = await SharedPreferences.getInstance();
     _currentLoggedInHandle = prefs.getString('logged_in_creator_handle') ?? 'user';
 
+    // Pehle Profile aur Coaching load karein taaki Coaching ID mil sake
+    await _fetchProfileAndCoaching();
+
+    // Coaching ID milne ke baad Batches, Mocks aur Updates layein
     await Future.wait([
-      _fetchProfileAndStats(),
       _fetchBatches(),
       _fetchMocks(),
       _fetchUpdates(),
@@ -71,40 +74,57 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     if (mounted) setState(() => _isLoading = false);
   }
 
-  Future<void> _fetchProfileAndStats() async {
+  Future<void> _fetchProfileAndCoaching() async {
     try {
-      final profRes = await Supabase.instance.client
+      final client = Supabase.instance.client;
+      final handle = widget.creatorHandle.trim();
+
+      // 1. Fetch Profile
+      final profRes = await client
           .from('creator_profiles')
           .select('*')
-          .eq('handle_id', widget.creatorHandle)
+          .eq('handle_id', handle)
           .maybeSingle();
 
       if (profRes != null) {
         _profile = profRes;
         _followersCount = profRes['followers_count'] ?? 0;
-
-        final coachRes = await Supabase.instance.client
-            .from('coachings')
-            .select('*')
-            .eq('creator_handle', widget.creatorHandle)
-            .maybeSingle();
-
-        _coaching = coachRes;
       }
+
+      // 2. Fetch Coaching (owner_name ya creator_handle dono check karein)
+      dynamic coachRes = await client
+          .from('coachings')
+          .select('*')
+          .ilike('owner_name', handle)
+          .maybeSingle();
+
+      coachRes ??= await client
+          .from('coachings')
+          .select('*')
+          .ilike('creator_handle', handle)
+          .maybeSingle();
+
+      _coaching = coachRes;
     } catch (e) {
-      debugPrint("Profile fetch error: $e");
+      debugPrint("Profile/Coaching fetch error: $e");
     }
   }
 
   Future<void> _fetchBatches() async {
     try {
+      if (_coaching == null) return;
+      final coachingId = _coaching!['id'];
+
+      // ✅ SAHI QUERY: batches table coaching_id se link hai
       final res = await Supabase.instance.client
           .from('batches')
           .select('*')
-          .eq('creator_handle', widget.creatorHandle)
+          .eq('coaching_id', coachingId)
+          .neq('status', 'HIDDEN') // Hidden wale na dikhein
           .order('created_at', ascending: false);
 
       _batches = res ?? [];
+      debugPrint("✅ Profile Batches Loaded: ${_batches.length}");
     } catch (e) {
       debugPrint("Batches fetch error: $e");
     }
@@ -216,7 +236,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
         backgroundColor: widget.isDarkMode ? _darkCard : Colors.white,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
         title: Text(
-          batch['title'] ?? 'Unlock Classroom Batch',
+          batch['batch_name'] ?? 'Unlock Classroom Batch',
           style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
         ),
         content: Column(
@@ -232,7 +252,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
               controller: codeCtrl,
               textCapitalization: TextCapitalization.characters,
               decoration: const InputDecoration(
-                hintText: 'e.g. BPSC2026',
+                hintText: 'e.g. 111',
                 labelText: 'Batch Secret Code',
                 border: OutlineInputBorder(),
                 isDense: true,
@@ -247,15 +267,19 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
               backgroundColor: _primaryBlue,
               foregroundColor: Colors.white,
             ),
-            onPressed: () {
+            onPressed: () async {
               final entered = codeCtrl.text.trim();
-              final actual = (batch['access_code'] ?? '').toString().trim();
+              final actual = (batch['batch_code'] ?? '').toString().trim();
               Navigator.pop(ctx);
 
               if (entered.isNotEmpty && entered.toUpperCase() == actual.toUpperCase()) {
+                final prefs = await SharedPreferences.getInstance();
+                await prefs.setString('unlocked_batch_${batch['id']}', 'true');
+                setState(() {});
+
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
-                    content: Text('Batch Unlocked Successfully!'),
+                    content: Text('🎉 Batch Unlocked Successfully!'),
                     backgroundColor: Color(0xFF16A34A),
                   ),
                 );
@@ -290,11 +314,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       );
     }
 
-    final name = _coaching?['coaching_name'] ?? _profile?['name'] ?? 'Educator';
+    final name = _coaching?['name'] ?? _profile?['name'] ?? 'Educator';
     final handle = widget.creatorHandle;
     final specialty = _profile?['subject_specialty'] ?? 'Exam Mentor';
-    final district = _coaching?['district'] ?? 'Bihar';
-    final landmark = _coaching?['landmark'];
+    final district = _coaching?['district'] ?? _coaching?['city'] ?? 'Bihar';
+    final landmark = _coaching?['landmark_address'] ?? _coaching?['landmark'];
     final logoUrl = _coaching?['logo_url'] ?? _profile?['profile_image'];
     final bannerUrl = _coaching?['banner_url'] ?? _profile?['banner_url'];
     final telegram = _profile?['telegram_handle'] ?? _coaching?['telegram_link'];
@@ -570,7 +594,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
       itemBuilder: (context, idx) {
         final b = _batches[idx];
-        final bool isLocked = (b['is_locked'] ?? true) == true;
+        final String status = b['status'] ?? 'LIVE';
+        final isLive = status == 'LIVE';
 
         return Container(
           color: cardSurface,
@@ -583,56 +608,46 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 children: [
                   Expanded(
                     child: Text(
-                      b['title'] ?? 'Classroom Batch',
+                      b['batch_name'] ?? 'Classroom Batch',
                       style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
                     ),
                   ),
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
                     decoration: BoxDecoration(
-                      color: isLocked
-                          ? Colors.grey.withOpacity(0.12)
-                          : const Color(0xFF16A34A).withOpacity(0.12),
+                      color: isLive
+                          ? const Color(0xFF16A34A).withOpacity(0.12)
+                          : Colors.amber.withOpacity(0.15),
                       borderRadius: BorderRadius.circular(4),
                     ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Icon(
-                          isLocked ? Icons.lock_outline_rounded : Icons.lock_open_rounded,
-                          size: 12,
-                          color: isLocked ? Colors.grey[600] : const Color(0xFF16A34A),
-                        ),
-                        const SizedBox(width: 3),
-                        Text(
-                          isLocked ? 'LOCKED' : 'UNLOCKED',
-                          style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.bold,
-                            color: isLocked ? Colors.grey[600] : const Color(0xFF16A34A),
-                          ),
-                        ),
-                      ],
+                    child: Text(
+                      status,
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.bold,
+                        color: isLive ? const Color(0xFF16A34A) : Colors.amber.shade900,
+                      ),
                     ),
                   ),
                 ],
               ),
               const SizedBox(height: 6),
               Text(
-                b['description'] ?? 'Curated Private CBT Mock Drills & Daily Classroom Handouts',
+                b['target_pattern'] ?? 'Based on standard examination pattern',
                 style: TextStyle(fontSize: 12, color: Colors.grey[600]),
               ),
               const SizedBox(height: 10),
               SizedBox(
                 height: 34,
-                child: OutlinedButton(
+                child: OutlinedButton.icon(
+                  icon: const Icon(Icons.vpn_key_rounded, size: 14),
                   style: OutlinedButton.styleFrom(
                     foregroundColor: _primaryBlue,
                     side: const BorderSide(color: _primaryBlue, width: 1),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   ),
                   onPressed: () => _openUnlockBatchDialog(b),
-                  child: const Text('Unlock Classroom', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                  label: const Text('Unlock Classroom', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                 ),
               ),
             ],
