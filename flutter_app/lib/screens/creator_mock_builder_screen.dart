@@ -158,16 +158,15 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     return null;
   }
 
-  // 🔍 Screen Par Live Error Dikhane Wala Dialog
   void _showDebugPopup(String title, String details) {
     showDialog(
       context: context,
       builder: (ctx) => AlertDialog(
         title: Row(
           children: [
-            const Icon(Icons.bug_report, color: Colors.red),
+            const Icon(Icons.info_outline, color: Colors.blueAccent),
             const SizedBox(width: 8),
-            Text(title, style: const TextStyle(fontSize: 16)),
+            Text(title, style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
           ],
         ),
         content: SingleChildScrollView(
@@ -203,85 +202,98 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     }
   }
 
-  // ⚡ Bullet-Proof Local Multi-Question Parser (With Detailed Tracing)
-  List<QuestionCardData> _parseRawCoachingInput(String text) {
+  // ⚡ 100% Flawless Block-Slicing Parser
+  List<QuestionCardData> _parseRawCoachingInput(String rawText) {
     final List<QuestionCardData> result = [];
-    final cleanText = text.replaceAll('\r\n', '\n').replaceAll('\r', '\n').trim();
-    if (cleanText.isEmpty) return result;
+    if (rawText.trim().isEmpty) return result;
 
-    final lines = cleanText.split('\n');
-    debugPrint('[DEBUG] Total Lines in Text: ${lines.length}');
+    // 1. Sanitize all invisible and unicode clipboard artifacts
+    final cleanText = rawText
+        .replaceAll('\uFEFF', '') // Zero-width No-Break space
+        .replaceAll('\u200B', '') // Zero-width space
+        .replaceAll('\u00A0', ' ') // Non-breaking space
+        .replaceAll('\r\n', '\n')
+        .replaceAll('\r', '\n')
+        .trim();
 
-    // Pattern to catch Q1., 1., 1), प्रश्न 1, etc.
-    final qStartRegex = RegExp(r'^(?:Q\s*\.?\s*\d+|प्रश्न\s*\d*|\d+[\.\)])\s*', caseSensitive: false);
-    final optRegex = RegExp(r'^(?:\([A-Da-d1-4]\)|[A-Da-d1-4][\.\)])\s*');
-    final ansRegex = RegExp(r'^(?:Ans|Answer|उत्तर|सही उत्तर)[\s\.:\-_]+([A-Da-d1-4])', caseSensitive: false);
-    final expRegex = RegExp(r'^(?:Exp|Explanation|व्याख्या|हल)[\s\.:\-_]*', caseSensitive: false);
+    // 2. Identify Question Boundaries (Q1., Q.1, 1., 1), etc.)
+    final qBoundaryRegex = RegExp(
+      r'(?:^|\n)\s*(?:Q\s*\.?\s*\d+|प्रश्न\s*\d*|\d+[\.\)]|\(\d+\))[\s\.:\-_]*',
+      caseSensitive: false,
+    );
 
-    StringBuffer qBuf = StringBuffer();
-    List<String> currentOpts = [];
-    int currentAns = 0;
-    StringBuffer expBuf = StringBuffer();
-    String currentMode = 'NONE';
+    final matches = qBoundaryRegex.allMatches(cleanText).toList();
+    List<String> rawBlocks = [];
 
-    void commitCurrentQuestion() {
-      if (qBuf.isNotEmpty) {
-        while (currentOpts.length < 4) {
-          currentOpts.add('Option ${String.fromCharCode(65 + currentOpts.length)}');
-        }
-        final extracted = QuestionCardData(
-          question: qBuf.toString().trim(),
-          options: currentOpts.sublist(0, 4),
-          answerIndex: (currentAns >= 0 && currentAns < 4) ? currentAns : 0,
-          explanation: expBuf.toString().trim(),
-        );
-        result.add(extracted);
-        debugPrint('[DEBUG] Successfully parsed Question #${result.length}: ${extracted.questionCtrl.text.substring(0, extracted.questionCtrl.text.length > 20 ? 20 : extracted.questionCtrl.text.length)}...');
+    if (matches.isNotEmpty) {
+      for (int i = 0; i < matches.length; i++) {
+        final start = matches[i].end;
+        final end = (i + 1 < matches.length) ? matches[i + 1].start : cleanText.length;
+        rawBlocks.add(cleanText.substring(start, end).trim());
       }
-      qBuf.clear();
-      currentOpts = [];
-      currentAns = 0;
-      expBuf.clear();
-      currentMode = 'NONE';
+    } else {
+      // Fallback: Split by double newlines if no Q numbers exist
+      rawBlocks = cleanText.split(RegExp(r'\n\s*\n')).map((b) => b.trim()).where((b) => b.isNotEmpty).toList();
     }
 
-    for (int lineIndex = 0; lineIndex < lines.length; lineIndex++) {
-      final line = lines[lineIndex].trim();
-      if (line.isEmpty) continue;
+    // 3. Process Each Question Block Independently
+    final optARegex = RegExp(r'(?:^|\n)\s*(?:\([Aa1]\)|[Aa1][\.\)])\s*');
+    final optBRegex = RegExp(r'(?:^|\n)\s*(?:\([Bb2]\)|[Bb2][\.\)])\s*');
+    final optCRegex = RegExp(r'(?:^|\n)\s*(?:\([Cc3]\)|[Cc3][\.\)])\s*');
+    final optDRegex = RegExp(r'(?:^|\n)\s*(?:\([Dd4]\)|[Dd4][\.\)])\s*');
+    final ansRegex = RegExp(r'(?:^|\n)\s*(?:Ans|Answer|उत्तर|सही उत्तर)[\s\.:\-_]*([A-Da-d1-4])', caseSensitive: false);
+    final expRegex = RegExp(r'(?:^|\n)\s*(?:Exp|Explanation|व्याख्या|हल)[\s\.:\-_]*', caseSensitive: false);
 
-      if (qStartRegex.hasMatch(line)) {
-        commitCurrentQuestion();
-        currentMode = 'Q';
-        qBuf.writeln(line.replaceFirst(qStartRegex, '').trim());
-      } else if (ansRegex.hasMatch(line)) {
-        currentMode = 'ANS';
-        final m = ansRegex.firstMatch(line);
-        if (m != null) {
-          final key = m.group(1)!.toUpperCase();
-          if (key == 'A' || key == '1') currentAns = 0;
-          if (key == 'B' || key == '2') currentAns = 1;
-          if (key == 'C' || key == '3') currentAns = 2;
-          if (key == 'D' || key == '4') currentAns = 3;
-        }
-      } else if (expRegex.hasMatch(line)) {
-        currentMode = 'EXP';
-        expBuf.writeln(line.replaceFirst(expRegex, '').trim());
-      } else if (optRegex.hasMatch(line)) {
-        currentMode = 'OPT';
-        currentOpts.add(line.replaceFirst(optRegex, '').trim());
-      } else {
-        if (currentMode == 'OPT' && currentOpts.isNotEmpty) {
-          currentOpts[currentOpts.length - 1] = "${currentOpts.last} $line";
-        } else if (currentMode == 'EXP') {
-          expBuf.writeln(line);
-        } else if (currentMode == 'Q') {
-          qBuf.writeln(line);
-        }
+    for (final block in rawBlocks) {
+      final mA = optARegex.firstMatch(block);
+      final mB = optBRegex.firstMatch(block);
+      final mC = optCRegex.firstMatch(block);
+      final mD = optDRegex.firstMatch(block);
+      final mAns = ansRegex.firstMatch(block);
+      final mExp = expRegex.firstMatch(block);
+
+      if (mA == null) continue; // Not a valid MCQ
+
+      final qText = block.substring(0, mA.start).replaceAll('\n', ' ').trim();
+      final optA = (mB != null) ? block.substring(mA.end, mB.start).replaceAll('\n', ' ').trim() : '';
+      final optB = (mC != null) ? block.substring(mB!.end, mC.start).replaceAll('\n', ' ').trim() : '';
+      final optC = (mD != null) ? block.substring(mC!.end, mD.start).replaceAll('\n', ' ').trim() : '';
+
+      int dEnd = block.length;
+      if (mAns != null && mAns.start > (mD?.end ?? 0)) dEnd = mAns.start;
+      else if (mExp != null && mExp.start > (mD?.end ?? 0)) dEnd = mExp.start;
+
+      final optD = (mD != null) ? block.substring(mD.end, dEnd).replaceAll('\n', ' ').trim() : '';
+
+      int ansIdx = 0;
+      if (mAns != null) {
+        final key = mAns.group(1)!.toUpperCase();
+        if (key == 'A' || key == '1') ansIdx = 0;
+        if (key == 'B' || key == '2') ansIdx = 1;
+        if (key == 'C' || key == '3') ansIdx = 2;
+        if (key == 'D' || key == '4') ansIdx = 3;
+      }
+
+      String expText = '';
+      if (mExp != null) {
+        expText = block.substring(mExp.end).trim();
+      }
+
+      if (qText.isNotEmpty) {
+        result.add(QuestionCardData(
+          question: qText,
+          options: [
+            optA.isNotEmpty ? optA : 'Option A',
+            optB.isNotEmpty ? optB : 'Option B',
+            optC.isNotEmpty ? optC : 'Option C',
+            optD.isNotEmpty ? optD : 'Option D',
+          ],
+          answerIndex: ansIdx,
+          explanation: expText,
+        ));
       }
     }
 
-    commitCurrentQuestion();
-    debugPrint('[DEBUG] Total Questions Parsed: ${result.length}');
     return result;
   }
 
@@ -355,7 +367,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 12),
 
-                // 1. FAST LOCAL CONVERT WITH DEBUG LOGS
+                // 1. FAST LOCAL CONVERT
                 SizedBox(
                   width: double.infinity,
                   height: 46,
@@ -397,7 +409,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                             } else {
                               _showDebugPopup(
                                 'Local Parser Zero Output',
-                                'Text mila: ${text.length} characters.\nLines count: ${text.split('\n').length}\nPattern Q1/1./Ans match nahi ho paaya.\n\nRaw Preview:\n${text.substring(0, text.length > 250 ? 250 : text.length)}...',
+                                'Text mila: ${text.length} characters.\n\nOption A) B) C) D) ya Question marker detect nahi ho saka. Format check karein.',
                               );
                             }
                           },
@@ -405,7 +417,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 8),
 
-                // 2. AI FALLBACK WITH TRACE POPUP
+                // 2. AI FALLBACK
                 SizedBox(
                   width: double.infinity,
                   height: 44,
@@ -418,7 +430,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                     icon: isAiLoading
                         ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF8B5CF6)))
                         : const Icon(Icons.auto_awesome_rounded, size: 16),
-                    label: Text(isAiLoading ? 'AI Calling API...' : 'AI Auto-Clean & Fix 🪄'),
+                    label: Text(isAiLoading ? 'AI Processing Questions...' : 'AI Auto-Clean & Fix 🪄'),
                     onPressed: isAiLoading
                         ? null
                         : () async {
@@ -433,20 +445,15 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                             setModalState(() => isAiLoading = true);
 
                             try {
-                              debugPrint('[DEBUG] Step 1: Checking AI eligibility...');
                               final eligibility = await AiRateLimiterService.checkEligibility();
-                              debugPrint('[DEBUG] Eligibility response: $eligibility');
-
                               if (eligibility['allowed'] == false) {
                                 setModalState(() => isAiLoading = false);
                                 _showDebugPopup('AI Quota Blocked', eligibility['message'] ?? 'Daily limit reach ho chuki hai.');
                                 return;
                               }
 
-                              debugPrint('[DEBUG] Step 2: Calling AiExplainerService.parseBulkQuestionsWithAi...');
                               final List<Map<String, dynamic>> aiResult =
                                   await AiExplainerService.parseBulkQuestionsWithAi(text);
-                              debugPrint('[DEBUG] AI Result Count: ${aiResult.length}');
 
                               if (aiResult.isNotEmpty) {
                                 await AiRateLimiterService.recordSuccess();
@@ -483,13 +490,12 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                 setModalState(() => isAiLoading = false);
                                 _showDebugPopup(
                                   'AI Empty Output',
-                                  'AI Service ne koi question parse karke return nahi kiya (List size 0 hai). AiExplainerService ka response format verify karein.',
+                                  'AI Service ne 0 questions return kiye. Format verify karein.',
                                 );
                               }
                             } catch (err, stack) {
                               setModalState(() => isAiLoading = false);
-                              debugPrint('[DEBUG] AI Crash Trace: $stack');
-                              _showDebugPopup('AI Execution Crash', 'Error: $err\n\nStack:\n$stack');
+                              _showDebugPopup('AI Execution Error', 'Error: $err\n\nStack:\n$stack');
                             }
                           },
                   ),
