@@ -6,7 +6,7 @@ import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../services/ai_explainer_service.dart';
 import '../services/ai_rate_limiter_service.dart';
-import 'math_text.dart';
+import '../widgets/math_text.dart'; // 👈 Correct path to widget
 
 // 🎯 Safe Question Data Structure with dedicated controllers
 class QuestionCardData {
@@ -164,7 +164,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       if (photo == null) return null;
 
       final inputImage = InputImage.fromFilePath(photo.path);
-      final textRecognizer = TextRecognizer(script: TextRecognitionScript.devanagari); // Hindi + English support
+      final textRecognizer = TextRecognizer(script: TextRecognitionScript.latin);
       final RecognizedText recognizedText = await textRecognizer.processImage(inputImage);
       await textRecognizer.close();
 
@@ -387,7 +387,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                   await AiExplainerService.parseBulkQuestionsWithAi(text);
 
                               if (aiResult.isNotEmpty) {
-                                await AiRateLimiterService.recordSuccess(); // Only deducts on success
+                                await AiRateLimiterService.recordSuccess();
 
                                 final converted = aiResult.map((m) {
                                   final opts = (m['options'] as List? ?? []).map((e) => e.toString()).toList();
@@ -674,7 +674,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       appBar: AppBar(
         title: const Text('Creator Studio Builder', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
         actions: [
-          // ⚡ Fast Smart Paper Button
           TextButton.icon(
             icon: const Icon(Icons.bolt_rounded, color: Colors.amber, size: 18),
             label: const Text('Smart Paste / OCR', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
