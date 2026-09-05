@@ -6,6 +6,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../services/cbt_progress_service.dart';
 import 'sectional_cbt_screen.dart';
+import 'student_cbt_report_screen.dart';
 
 class BatchClassroomScreen extends StatefulWidget {
   final Map<String, dynamic> batchData;
@@ -45,10 +46,12 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
 
   Future<void> _loadBatchTests() async {
     try {
+      final batchId = widget.batchData['id']?.toString() ?? '';
+
       final res = await Supabase.instance.client
           .from('batch_tests')
-          .select()
-          .eq('batch_id', widget.batchData['id'])
+          .select('*')
+          .eq('batch_id', batchId)
           .order('created_at', ascending: false);
 
       final tests = res ?? [];
@@ -69,6 +72,7 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
         });
       }
     } catch (e) {
+      debugPrint("❌ [BATCH_CLASSROOM] Load tests error: $e");
       if (mounted) setState(() => _isLoading = false);
     }
   }
@@ -93,6 +97,43 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
       return;
     }
 
+    final testId = (test['id'] ?? test['test_title']).toString();
+    final progress = _progressCache[testId];
+    final bool isCompleted = progress?['status'] == 'COMPLETED';
+
+    // Agar pehle se completed hai, toh review dialog ya re-attempt confirmation dein
+    if (isCompleted) {
+      showDialog(
+        context: context,
+        builder: (ctx) => AlertDialog(
+          title: const Text('Test Completed'),
+          content: Text('Aapne yeh test pehle hi de diya hai (Score: ${progress?['score'] ?? 0} Marks).\n\nKya aap ise dobara attempt karna chahte hain?'),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(ctx),
+              child: const Text('Cancel'),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+              onPressed: () {
+                Navigator.pop(ctx);
+                _openTestScreen(test, parsedQuestions);
+              },
+              child: const Text('Re-attempt Test 🔄'),
+            ),
+          ],
+        ),
+      );
+      return;
+    }
+
+    _openTestScreen(test, parsedQuestions);
+  }
+
+  void _openTestScreen(Map<String, dynamic> test, List<Question> parsedQuestions) {
+    final batchId = widget.batchData['id']?.toString();
+    final testId = test['id']?.toString();
+
     Navigator.push(
       context,
       MaterialPageRoute(
@@ -100,13 +141,12 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
           testTitle: test['test_title'] ?? 'Batch CBT Test',
           questions: parsedQuestions,
           subFolder: (test['subject'] ?? 'General').toString().toLowerCase(),
-          isBatchTest: true, // 👈 Classroom test: promotion card hide rahega
-          batchId: widget.batchData['id']?.toString(), // 👈 Teacher dashboard sync
-          mockId: test['id'], // 👈 Attempts count update karne ke liye ZAROORI hai
+          isBatchTest: true, // 👈 Ensures batch submission pipeline triggers
+          batchId: batchId, // 👈 Valid batch UUID
+          mockId: testId, // 👈 Targets batch_tests row
         ),
       ),
     ).then((_) {
-      // Test submit ya exit hone par status aur progress bar refresh karein
       _loadBatchTests();
     });
   }
@@ -272,7 +312,7 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
                                       ),
                                       label: Text(
                                         isCompleted
-                                            ? 'Review Performance Card 📊'
+                                            ? 'Retake / Review Test 📊'
                                             : (isInProgress ? 'Resume Test ($answered/$totalQs) 🔄' : 'Start Timed CBT Test 🚀'),
                                         style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5),
                                       ),
