@@ -8,6 +8,7 @@ import '../services/admin_telegram_alert.dart';
 import '../utils/bihar_location_data.dart';
 import 'creator_mock_builder_screen.dart';
 import 'creator_profile_screen.dart';
+import 'student_cbt_report_screen.dart';
 
 class CreatorDashboardScreen extends StatefulWidget {
   final String creatorHandle;
@@ -33,7 +34,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
   int _totalMockAttempts = 0;
   int _totalBatchStudents = 0;
 
-  // 📊 Student Intelligence Lists
+  // 📊 Student Intelligence Lists (Only Real Submissions)
   List<Map<String, dynamic>> _classroomStudents = [];
   List<Map<String, dynamic>> _openAspirants = [];
 
@@ -55,7 +56,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           .eq('handle_id', handle)
           .maybeSingle();
 
-      // 2. Fetch Coaching Data (Case insensitive / Trim safe)
+      // 2. Fetch Coaching Data
       final coachingRes = await client
           .from('coachings')
           .select()
@@ -73,7 +74,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             .eq('coaching_id', coachingRes['id'])
             .order('created_at', ascending: false);
 
-        // Sum private classroom mock attempts
         for (var b in (batchesRes as List? ?? [])) {
           final tests = b['batch_tests'] as List? ?? [];
           for (var t in tests) {
@@ -81,7 +81,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           }
         }
 
-        // 3. Fetch Batch Submissions safely without broken nested join
+        // 3. Fetch Real Batch Submissions only
         if (batchesRes.isNotEmpty) {
           final List batchIds = batchesRes.map((b) => b['id']).toList();
 
@@ -91,18 +91,15 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               .inFilter('batch_id', batchIds)
               .order('created_at', ascending: false);
 
-          debugPrint("📊 [DASHBOARD] Batch IDs: $batchIds | Submissions: ${submissions.length}");
-
           if (submissions.isNotEmpty) {
             final Map<String, Map<String, dynamic>> studentMap = {};
 
-            // Batch ID to Name map for fast lookup
             final Map<dynamic, String> batchNameMap = {
               for (var b in batchesRes) b['id']: (b['batch_name'] ?? 'Classroom Batch').toString()
             };
 
             for (var s in submissions) {
-              final String rawIdentifier = (s['student_identifier'] ?? 'Aspirant').toString();
+              final String rawIdentifier = (s['student_identifier'] ?? s['student_name'] ?? 'Aspirant').toString();
 
               String nameOnly = rawIdentifier;
               String contactInfo = '';
@@ -114,7 +111,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
               final String assignedBatchName = batchNameMap[s['batch_id']] ?? 'Classroom Batch';
               final double userScore = (s['score'] is num) ? (s['score'] as num).toDouble() : 0.0;
-              final int userAccuracy = (s['accuracy'] is num) ? (s['accuracy'] as num).toInt() : 70;
+              final int userAccuracy = (s['accuracy'] is num) ? (s['accuracy'] as num).toInt() : 0;
+              final List rawResponses = (s['detailed_responses'] is List) ? (s['detailed_responses'] as List) : [];
 
               if (!studentMap.containsKey(rawIdentifier)) {
                 studentMap[rawIdentifier] = {
@@ -127,11 +125,15 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   'accuracy': userAccuracy,
                   'weak_subject': s['weak_subject'] ?? 'General Studies',
                   'strong_subject': s['strong_subject'] ?? 'Core Concepts',
+                  'detailed_responses': rawResponses,
                 };
               } else {
                 studentMap[rawIdentifier]!['tests_count'] =
                     (studentMap[rawIdentifier]!['tests_count'] as int) + 1;
                 (studentMap[rawIdentifier]!['scores'] as List).add(userScore);
+                if (rawResponses.isNotEmpty) {
+                  studentMap[rawIdentifier]!['detailed_responses'] = rawResponses;
+                }
               }
             }
             batchStudentsList = studentMap.values.toList();
@@ -163,34 +165,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
       int totalCombinedAttempts = publicAttempts + batchTestAttempts;
 
-      // Fallback preview only if zero real submissions exist
-      if (batchStudentsList.isEmpty) {
-        batchStudentsList = [
-          {
-            'raw_id': 'Demo: Suresh Kumar',
-            'name': 'Suresh Kumar (Sample Test Data)',
-            'contact': 'Roll: 104',
-            'batch_name': 'Sample Batch',
-            'tests_count': 1,
-            'accuracy': 74,
-            'weak_subject': 'General Science',
-            'strong_subject': 'Modern History',
-          }
-        ];
-      }
-
-      final openList = [
-        {
-          'name': 'Public Aspirant Lead',
-          'contact': 'N/A',
-          'source': 'Public Free Mock Attempt',
-          'tests_count': publicAttempts > 0 ? publicAttempts : 1,
-          'accuracy': 65,
-          'weak_subject': 'Current Affairs',
-          'strong_subject': 'Bihar Special',
-        },
-      ];
-
       if (mounted) {
         setState(() {
           _profile = profileRes;
@@ -198,8 +172,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           _batches = batchesRes;
           _totalViews = views;
           _totalMockAttempts = totalCombinedAttempts;
-          _classroomStudents = batchStudentsList;
-          _openAspirants = openList;
+          _classroomStudents = batchStudentsList; // Sirf real submissions
+          _openAspirants = [];                    // Koi hardcoded lead nahi
           _totalBatchStudents = batchStudentsList.length;
           _isLoading = false;
         });
@@ -218,6 +192,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
   }
 
   void _openStudentDetailModal(Map<String, dynamic> student, bool isClassroom) {
+    final List responses = (student['detailed_responses'] as List?) ?? [];
+
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -272,7 +248,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                         ],
                       ),
                       Text(
-                        '${student['contact'] != null && student['contact'].toString().isNotEmpty ? "${student['contact']} • " : ""}${student['batch_name'] ?? student['source'] ?? ''}',
+                        '${student['contact'] != null && student['contact'].toString().isNotEmpty ? "${student['contact']} • " : ""}${student['batch_name'] ?? ''}',
                         style: const TextStyle(fontSize: 11.5, color: Colors.grey),
                       ),
                     ],
@@ -376,7 +352,52 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 ],
               ),
             ),
-            const SizedBox(height: 18),
+            const SizedBox(height: 14),
+
+            // 🚀 REAL QUESTION BREAKDOWN BUTTON
+            SizedBox(
+              width: double.infinity,
+              height: 44,
+              child: ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF1E293B),
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  elevation: 0,
+                ),
+                icon: const Icon(Icons.assignment_turned_in_rounded, size: 18),
+                label: const Text(
+                  'View Full Question-by-Question Paper',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                ),
+                onPressed: () {
+                  Navigator.pop(ctx);
+                  if (responses.isEmpty) {
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      const SnackBar(content: Text('Is submission ka detailed response record available nahi hai.')),
+                    );
+                    return;
+                  }
+
+                  final double finalScore = (student['scores'] != null && (student['scores'] as List).isNotEmpty)
+                      ? (student['scores'] as List).last
+                      : 0.0;
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => StudentCbtReportScreen(
+                        studentName: student['name'] ?? 'Student',
+                        testTitle: student['batch_name'] ?? 'Classroom CBT Test',
+                        score: finalScore,
+                        responseBreakdown: responses,
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+            const SizedBox(height: 14),
 
             Row(
               children: [
@@ -480,46 +501,63 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               const Divider(height: 20),
 
               Expanded(
-                child: ListView.builder(
-                  itemCount: activeTabIndex == 0 ? _classroomStudents.length : _openAspirants.length,
-                  itemBuilder: (ctx, idx) {
-                    final s = activeTabIndex == 0 ? _classroomStudents[idx] : _openAspirants[idx];
-                    final isClassroom = activeTabIndex == 0;
-
-                    return Card(
-                      margin: const EdgeInsets.only(bottom: 8),
-                      elevation: 0.5,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                      child: ListTile(
-                        leading: CircleAvatar(
-                          radius: 18,
-                          backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
-                          child: Text(
-                            (s['name'] as String)[0].toUpperCase(),
-                            style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
-                          ),
-                        ),
-                        title: Text(
-                          '${s['name']} ${s['contact'] != null && s['contact'].toString().isNotEmpty ? "(${s['contact']})" : ""}',
-                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
-                        ),
-                        subtitle: Text(
-                          '${s['tests_count']} Tests • Weak: ${s['weak_subject']}',
-                          style: const TextStyle(fontSize: 11.5, color: Colors.grey),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        trailing: Row(
-                          mainAxisSize: MainAxisSize.min,
+                child: (activeTabIndex == 0 ? _classroomStudents : _openAspirants).isEmpty
+                    ? Center(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('${s['accuracy']}%', style: const TextStyle(fontWeight: FontWeight.w900, color: Color(0xFF16A34A), fontSize: 14)),
-                            const Icon(Icons.chevron_right, size: 18, color: Colors.grey),
+                            Icon(Icons.assignment_late_outlined, size: 48, color: Colors.grey.withOpacity(0.5)),
+                            const SizedBox(height: 12),
+                            Text(
+                              activeTabIndex == 0
+                                  ? 'Abhi tak kisi classroom student ne test submit nahi kiya hai.'
+                                  : 'Koi open lead available nahi hai.',
+                              style: const TextStyle(color: Colors.grey, fontSize: 13),
+                              textAlign: TextAlign.center,
+                            ),
                           ],
                         ),
-                        onTap: () => _openStudentDetailModal(s, isClassroom),
+                      )
+                    : ListView.builder(
+                        itemCount: activeTabIndex == 0 ? _classroomStudents.length : _openAspirants.length,
+                        itemBuilder: (ctx, idx) {
+                          final s = activeTabIndex == 0 ? _classroomStudents[idx] : _openAspirants[idx];
+                          final isClassroom = activeTabIndex == 0;
+
+                          return Card(
+                            margin: const EdgeInsets.only(bottom: 8),
+                            elevation: 0.5,
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                            child: ListTile(
+                              leading: CircleAvatar(
+                                radius: 18,
+                                backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
+                                child: Text(
+                                  (s['name'] as String)[0].toUpperCase(),
+                                  style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                                ),
+                              ),
+                              title: Text(
+                                '${s['name']} ${s['contact'] != null && s['contact'].toString().isNotEmpty ? "(${s['contact']})" : ""}',
+                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                              ),
+                              subtitle: Text(
+                                '${s['tests_count']} Tests • Weak: ${s['weak_subject']}',
+                                style: const TextStyle(fontSize: 11.5, color: Colors.grey),
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                              trailing: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text('${s['accuracy']}%', style: const TextStyle(fontWeight: FontWeight.w900, color: Color(0xFF16A34A), fontSize: 14)),
+                                  const Icon(Icons.chevron_right, size: 18, color: Colors.grey),
+                                ],
+                              ),
+                              onTap: () => _openStudentDetailModal(s, isClassroom),
+                            ),
+                          );
+                        },
                       ),
-                    );
-                  },
-                ),
               ),
             ],
           ),
@@ -1166,7 +1204,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             _buildActionCard(
               title: 'Student Performance Intelligence 📊',
-              subtitle: 'Track Suresh & classroom vs open test takers, accuracy and weak areas.',
+              subtitle: 'Track classroom student submissions, accuracy and weak areas.',
               icon: Icons.insights_rounded,
               color: const Color(0xFF2563EB),
               onTap: _openStudentIntelligenceSheet,
