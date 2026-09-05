@@ -20,7 +20,7 @@ class SectionalCbtScreen extends StatefulWidget {
   final String? creatorHandle;
   final bool isBatchTest;
   final String? batchId;
-  final dynamic mockId; // 👈 creator_mocks ya batch_tests ki test ID
+  final dynamic mockId;
 
   const SectionalCbtScreen({
     super.key,
@@ -192,7 +192,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     int correctCount = 0;
     int wrongCount = 0;
 
-    // 📋 Creator Dashboard ke liye Question-by-Question detailed CBT responses compile karein
+    // 📋 Creator Dashboard & Student Report Screen ke exact format me compile karein
     List<Map<String, dynamic>> detailedResponses = [];
 
     for (int i = 0; i < widget.questions.length; i++) {
@@ -201,14 +201,17 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       final currentOptions = q.getOptions(_isHindi);
       final bool isCorrect = (userAns != null && userAns == q.answerIndex);
 
+      final String selectedText = userAns != null ? currentOptions[userAns] : 'Skipped';
+      final String correctText = currentOptions[q.answerIndex];
+
       detailedResponses.add({
         'q_no': i + 1,
         'question': q.getText(_isHindi),
         'options': currentOptions,
         'selected_idx': userAns,
-        'selected_text': userAns != null ? currentOptions[userAns] : 'Skipped',
+        'selected_option': selectedText, // 👈 Report screen matching key
         'correct_idx': q.answerIndex,
-        'correct_text': currentOptions[q.answerIndex],
+        'correct_option': correctText,   // 👈 Report screen matching key
         'is_correct': isCorrect,
         'time_spent': _questionTimers[i] ?? 0,
         'explanation': q.explanation,
@@ -268,11 +271,11 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     final client = Supabase.instance.client;
 
-    // 1️⃣ UPDATE ATTEMPTS COUNT: Targets 'batch_tests' if Batch Test, else 'creator_mocks'
+    // 1️⃣ UPDATE ATTEMPTS COUNT: Safe for both integer and UUID keys
     if (widget.mockId != null) {
       try {
-        final dynamic targetId = int.tryParse(widget.mockId.toString()) ?? widget.mockId;
         final String targetTable = widget.isBatchTest ? 'batch_tests' : 'creator_mocks';
+        final targetId = widget.mockId.toString();
 
         final current = await client
             .from(targetTable)
@@ -290,13 +293,13 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             .update({'attempts_count': currentCount + 1})
             .eq('id', targetId);
 
-        debugPrint("✅ [SECTIONAL_CBT] Attempts count updated in $targetTable for ID: $targetId");
+        debugPrint("✅ [SECTIONAL_CBT] Attempts updated in $targetTable for ID: $targetId");
       } catch (e) {
         debugPrint("❌ [SECTIONAL_CBT] Error updating attempts_count: $e");
       }
     }
 
-    // 2️⃣ SYNC BATCH SUBMISSIONS FOR CREATOR DASHBOARD INTELLIGENCE
+    // 2️⃣ SYNC BATCH SUBMISSIONS FOR TEACHER DASHBOARD
     if (widget.isBatchTest && widget.batchId != null) {
       try {
         final prefs = await SharedPreferences.getInstance();
@@ -311,33 +314,24 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             ? (correctCount / _userAnswers.length) * 100
             : 0.0;
 
-        // Full Payload (Schema matched with Table Columns + detailed_responses)
         final Map<String, dynamic> submissionData = {
-          'batch_id': widget.batchId,
-          'test_id': widget.mockId,
-          'student_name': studentIdentifier,
+          'batch_id': widget.batchId.toString(),
+          'test_id': widget.mockId?.toString(),
+          'student_name': rawName,
           'student_identifier': studentIdentifier,
           'score': score,
           'accuracy': accuracyPct.round(),
           'weak_subject': wrongCount > 0 ? widget.subFolder.toUpperCase() : 'All Clear',
-          'strong_subject': correctCount > 5 ? 'Core Concepts Strong' : 'Basic Revision',
-          'detailed_responses': detailedResponses, // 👈 Pura answer paper
+          'strong_subject': correctCount > 0 ? 'General Studies' : 'Basic Revision',
+          'detailed_responses': detailedResponses, // 👈 Question-by-question data
         };
 
-        try {
-          await client.from('batch_submissions').insert(submissionData);
-          debugPrint("✅ [SECTIONAL_CBT] Full Batch Submission with detailed responses inserted!");
-        } catch (_) {
-          // Fallback schema agar extra columns Supabase me available na hon
-          await client.from('batch_submissions').insert({
-            'batch_id': widget.batchId,
-            'test_id': widget.mockId,
-            'student_name': studentIdentifier,
-          });
-          debugPrint("✅ [SECTIONAL_CBT] Fallback Batch Submission inserted!");
-        }
-      } catch (e) {
-        debugPrint("❌ [SECTIONAL_CBT] Critical Error inserting batch submission: $e");
+        debugPrint("🚀 [SECTIONAL_CBT] Inserting to batch_submissions: BatchId=${widget.batchId}");
+
+        await client.from('batch_submissions').insert(submissionData);
+        debugPrint("✅ [SECTIONAL_CBT] Batch Submission Successfully Recorded in Supabase!");
+      } catch (e, stack) {
+        debugPrint("❌ [SECTIONAL_CBT] Batch submission insert failed: $e\n$stack");
       }
     }
 
@@ -408,7 +402,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                 controller: codeCtrl,
                 textCapitalization: TextCapitalization.characters,
                 decoration: const InputDecoration(
-                  hintText: 'e.g. PATNA100',
+                  hintText: 'e.g. 111',
                   labelText: 'Secret Batch Code',
                   border: OutlineInputBorder(),
                   isDense: true,
