@@ -177,81 +177,99 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     }
   }
 
-  // ⚡ Upgraded Robust Chunk-Based Parser (Fixed Single-Q Bug)
+  // ⚡ Bullet-Proof Local Multi-Question Parser
   List<QuestionCardData> _parseRawCoachingInput(String text) {
     final List<QuestionCardData> result = [];
     final cleanText = text.replaceAll('\r\n', '\n').replaceAll('\r', '\n').trim();
     if (cleanText.isEmpty) return result;
 
-    // Boundary marker for new questions
+    // Split entire text at Question boundaries (Q1, 1., 1), etc.)
     final qMarker = RegExp(
-      r'(?:^|\n)\s*(?:Q\s*\.?\s*\d+|प्रश्न\s*\d*|\d+[\.\)])[\s\.:\-_]+',
+      r'(?:^|\n)\s*(?:Q\s*\.?\s*\d+|प्रश्न\s*\d*|\d+[\.\)]|\(\d+\))[\s\.:\-_]+',
       caseSensitive: false,
     );
 
     final matches = qMarker.allMatches(cleanText).toList();
-    if (matches.isEmpty) return result;
+
+    // Fallback: If no Q numbers found, try double newlines
+    if (matches.isEmpty) {
+      final paragraphs = cleanText.split(RegExp(r'\n\s*\n'));
+      for (var p in paragraphs) {
+        final parsed = _extractSingleQuestionBlock(p.trim());
+        if (parsed != null) result.add(parsed);
+      }
+      return result;
+    }
 
     for (int i = 0; i < matches.length; i++) {
       final start = matches[i].end;
       final end = (i + 1 < matches.length) ? matches[i + 1].start : cleanText.length;
       final block = cleanText.substring(start, end).trim();
 
-      final lines = block.split('\n').map((l) => l.trim()).where((l) => l.isNotEmpty).toList();
-      if (lines.isEmpty) continue;
-
-      StringBuffer qBuf = StringBuffer();
-      List<String> opts = [];
-      int ansIdx = 0;
-      StringBuffer expBuf = StringBuffer();
-
-      final optRegex = RegExp(r'^(\([A-Da-d1-4]\)|[A-Da-d1-4][\.\)])\s*');
-      final ansRegex = RegExp(r'^(Ans|Answer|उत्तर|सही उत्तर)[\s\.:\-_]+([A-Da-d1-4])', caseSensitive: false);
-      final expRegex = RegExp(r'^(Exp|Explanation|व्याख्या|हल)[\s\.:\-_]*', caseSensitive: false);
-
-      String mode = 'Q';
-
-      for (var line in lines) {
-        if (ansRegex.hasMatch(line)) {
-          mode = 'ANS';
-          final m = ansRegex.firstMatch(line);
-          if (m != null) {
-            final key = m.group(2)!.toUpperCase();
-            if (key == 'A' || key == '1') ansIdx = 0;
-            if (key == 'B' || key == '2') ansIdx = 1;
-            if (key == 'C' || key == '3') ansIdx = 2;
-            if (key == 'D' || key == '4') ansIdx = 3;
-          }
-        } else if (expRegex.hasMatch(line)) {
-          mode = 'EXP';
-          expBuf.writeln(line.replaceFirst(expRegex, '').trim());
-        } else if (optRegex.hasMatch(line)) {
-          mode = 'OPT';
-          opts.add(line.replaceFirst(optRegex, '').trim());
-        } else {
-          if (mode == 'OPT' && opts.isNotEmpty) {
-            opts[opts.length - 1] = "${opts.last} $line";
-          } else if (mode == 'EXP') {
-            expBuf.writeln(line);
-          } else {
-            qBuf.writeln(line);
-          }
-        }
-      }
-
-      if (qBuf.isNotEmpty) {
-        while (opts.length < 4) {
-          opts.add('Option ${String.fromCharCode(65 + opts.length)}');
-        }
-        result.add(QuestionCardData(
-          question: qBuf.toString().trim(),
-          options: opts.sublist(0, 4),
-          answerIndex: ansIdx < 4 ? ansIdx : 0,
-          explanation: expBuf.toString().trim(),
-        ));
+      final parsed = _extractSingleQuestionBlock(block);
+      if (parsed != null) {
+        result.add(parsed);
       }
     }
     return result;
+  }
+
+  // Helper: Safely parses a single delimited question chunk
+  QuestionCardData? _extractSingleQuestionBlock(String block) {
+    final lines = block.split('\n').map((l) => l.trim()).where((l) => l.isNotEmpty).toList();
+    if (lines.isEmpty) return null;
+
+    StringBuffer qBuf = StringBuffer();
+    List<String> opts = [];
+    int ansIdx = 0;
+    StringBuffer expBuf = StringBuffer();
+
+    final optRegex = RegExp(r'^(\([A-Da-d1-4]\)|[A-Da-d1-4][\.\)])\s*');
+    final ansRegex = RegExp(r'^(Ans|Answer|उत्तर|सही उत्तर)[\s\.:\-_]+([A-Da-d1-4])', caseSensitive: false);
+    final expRegex = RegExp(r'^(Exp|Explanation|व्याख्या|हल)[\s\.:\-_]*', caseSensitive: false);
+
+    String mode = 'Q';
+
+    for (var line in lines) {
+      if (ansRegex.hasMatch(line)) {
+        mode = 'ANS';
+        final m = ansRegex.firstMatch(line);
+        if (m != null) {
+          final key = m.group(2)!.toUpperCase();
+          if (key == 'A' || key == '1') ansIdx = 0;
+          if (key == 'B' || key == '2') ansIdx = 1;
+          if (key == 'C' || key == '3') ansIdx = 2;
+          if (key == 'D' || key == '4') ansIdx = 3;
+        }
+      } else if (expRegex.hasMatch(line)) {
+        mode = 'EXP';
+        expBuf.writeln(line.replaceFirst(expRegex, '').trim());
+      } else if (optRegex.hasMatch(line)) {
+        mode = 'OPT';
+        opts.add(line.replaceFirst(optRegex, '').trim());
+      } else {
+        if (mode == 'OPT' && opts.isNotEmpty) {
+          opts[opts.length - 1] = "${opts.last} $line";
+        } else if (mode == 'EXP') {
+          expBuf.writeln(line);
+        } else {
+          qBuf.writeln(line);
+        }
+      }
+    }
+
+    if (qBuf.isEmpty) return null;
+
+    while (opts.length < 4) {
+      opts.add('Option ${String.fromCharCode(65 + opts.length)}');
+    }
+
+    return QuestionCardData(
+      question: qBuf.toString().trim(),
+      options: opts.sublist(0, 4),
+      answerIndex: ansIdx < 4 ? ansIdx : 0,
+      explanation: expBuf.toString().trim(),
+    );
   }
 
   void _openSmartPaperModal() {
@@ -324,7 +342,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 12),
 
-                // 1. FAST LOCAL CONVERT (Primary)
+                // 1. FAST LOCAL CONVERT
                 SizedBox(
                   width: double.infinity,
                   height: 46,
@@ -348,7 +366,10 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                               });
                               Navigator.pop(ctx);
                               ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(content: Text('✅ ${localParsed.length} Questions added!'), backgroundColor: const Color(0xFF16A34A)),
+                                SnackBar(
+                                  content: Text('✅ Added ${localParsed.length} Questions successfully!'),
+                                  backgroundColor: const Color(0xFF16A34A),
+                                ),
                               );
                             } else {
                               ScaffoldMessenger.of(context).showSnackBar(
@@ -363,7 +384,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 8),
 
-                // 2. AI FALLBACK (With explicit error handling)
+                // 2. AI FALLBACK (With transparent diagnostics)
                 SizedBox(
                   width: double.infinity,
                   height: 44,
@@ -425,14 +446,14 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                   );
                                 }
                               } else {
-                                throw Exception('Format samajh nahi aaya ya response empty hai.');
+                                throw Exception('AI ne empty result diya. Kripya check karein text mein questions hain ya nahi.');
                               }
                             } catch (err) {
                               setModalState(() => isAiLoading = false);
                               if (context.mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
-                                    content: Text('AI Error: $err'),
+                                    content: Text('AI Failure: $err'),
                                     backgroundColor: Colors.redAccent,
                                     duration: const Duration(seconds: 4),
                                   ),
@@ -699,7 +720,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       ),
       body: Column(
         children: [
-          // Top Header Settings
           Container(
             padding: const EdgeInsets.all(12),
             color: cardBg,
@@ -750,7 +770,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
           ),
           const Divider(height: 1),
 
-          // Cards List
           Expanded(
             child: ListView.builder(
               padding: const EdgeInsets.all(12),
@@ -823,7 +842,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
             ),
           ),
 
-          // 🛠️ Uncompressed, Clean 2-Tier Bottom Action Bar
+          // 🛠️ Uncompressed 2-Tier Bottom Action Bar
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
             decoration: BoxDecoration(
@@ -841,7 +860,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  // Row 1: Add Card + Preview
                   Row(
                     children: [
                       Expanded(
@@ -872,7 +890,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                   ),
                   const SizedBox(height: 8),
 
-                  // Row 2: Full-Width Prominent Publish Button
                   SizedBox(
                     width: double.infinity,
                     height: 48,
