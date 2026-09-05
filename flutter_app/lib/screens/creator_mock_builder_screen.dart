@@ -118,7 +118,8 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
         _authorDisplayName = widget.creatorHandle;
         if (mounted) setState(() => _isLoadingBatches = false);
       }
-    } catch (_) {
+    } catch (e) {
+      debugPrint('[DEBUG] Batch fetch error: $e');
       _authorDisplayName = widget.creatorHandle;
       if (mounted) setState(() => _isLoadingBatches = false);
     }
@@ -157,6 +158,34 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     return null;
   }
 
+  // 🔍 Screen Par Live Error Dikhane Wala Dialog
+  void _showDebugPopup(String title, String details) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        title: Row(
+          children: [
+            const Icon(Icons.bug_report, color: Colors.red),
+            const SizedBox(width: 8),
+            Text(title, style: const TextStyle(fontSize: 16)),
+          ],
+        ),
+        content: SingleChildScrollView(
+          child: SelectableText(
+            details,
+            style: const TextStyle(fontFamily: 'monospace', fontSize: 12),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Close'),
+          ),
+        ],
+      ),
+    );
+  }
+
   Future<String?> _scanTextFromCameraOrGallery(ImageSource source) async {
     try {
       final XFile? photo = await _imagePicker.pickImage(source: source, imageQuality: 90);
@@ -169,21 +198,21 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
 
       return recognizedText.text;
     } catch (e) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('OCR Error: $e')));
-      }
+      _showDebugPopup('OCR Exception', e.toString());
       return null;
     }
   }
 
-  // ⚡ 100% Reliable Sequential Question Extractor
+  // ⚡ Bullet-Proof Local Multi-Question Parser (With Detailed Tracing)
   List<QuestionCardData> _parseRawCoachingInput(String text) {
     final List<QuestionCardData> result = [];
     final cleanText = text.replaceAll('\r\n', '\n').replaceAll('\r', '\n').trim();
     if (cleanText.isEmpty) return result;
 
     final lines = cleanText.split('\n');
+    debugPrint('[DEBUG] Total Lines in Text: ${lines.length}');
 
+    // Pattern to catch Q1., 1., 1), प्रश्न 1, etc.
     final qStartRegex = RegExp(r'^(?:Q\s*\.?\s*\d+|प्रश्न\s*\d*|\d+[\.\)])\s*', caseSensitive: false);
     final optRegex = RegExp(r'^(?:\([A-Da-d1-4]\)|[A-Da-d1-4][\.\)])\s*');
     final ansRegex = RegExp(r'^(?:Ans|Answer|उत्तर|सही उत्तर)[\s\.:\-_]+([A-Da-d1-4])', caseSensitive: false);
@@ -200,12 +229,14 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
         while (currentOpts.length < 4) {
           currentOpts.add('Option ${String.fromCharCode(65 + currentOpts.length)}');
         }
-        result.add(QuestionCardData(
+        final extracted = QuestionCardData(
           question: qBuf.toString().trim(),
           options: currentOpts.sublist(0, 4),
           answerIndex: (currentAns >= 0 && currentAns < 4) ? currentAns : 0,
           explanation: expBuf.toString().trim(),
-        ));
+        );
+        result.add(extracted);
+        debugPrint('[DEBUG] Successfully parsed Question #${result.length}: ${extracted.questionCtrl.text.substring(0, extracted.questionCtrl.text.length > 20 ? 20 : extracted.questionCtrl.text.length)}...');
       }
       qBuf.clear();
       currentOpts = [];
@@ -214,12 +245,11 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       currentMode = 'NONE';
     }
 
-    for (var rawLine in lines) {
-      final line = rawLine.trim();
+    for (int lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+      final line = lines[lineIndex].trim();
       if (line.isEmpty) continue;
 
       if (qStartRegex.hasMatch(line)) {
-        // Commit previous question and start new one
         commitCurrentQuestion();
         currentMode = 'Q';
         qBuf.writeln(line.replaceFirst(qStartRegex, '').trim());
@@ -250,8 +280,8 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       }
     }
 
-    // Commit final question
     commitCurrentQuestion();
+    debugPrint('[DEBUG] Total Questions Parsed: ${result.length}');
     return result;
   }
 
@@ -325,7 +355,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 12),
 
-                // 1. FAST LOCAL CONVERT
+                // 1. FAST LOCAL CONVERT WITH DEBUG LOGS
                 SizedBox(
                   width: double.infinity,
                   height: 46,
@@ -349,6 +379,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                             }
 
                             final localParsed = _parseRawCoachingInput(text);
+
                             if (localParsed.isNotEmpty) {
                               setState(() {
                                 if (_questionCards.length == 1 && _questionCards[0].questionCtrl.text.isEmpty) {
@@ -364,11 +395,9 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                 ),
                               );
                             } else {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text('⚠️ Ek bhi question detect nahi hua. Format check karein ya AI Auto-Fix use karein.'),
-                                  backgroundColor: Colors.orange,
-                                ),
+                              _showDebugPopup(
+                                'Local Parser Zero Output',
+                                'Text mila: ${text.length} characters.\nLines count: ${text.split('\n').length}\nPattern Q1/1./Ans match nahi ho paaya.\n\nRaw Preview:\n${text.substring(0, text.length > 250 ? 250 : text.length)}...',
                               );
                             }
                           },
@@ -376,7 +405,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 8),
 
-                // 2. AI FALLBACK
+                // 2. AI FALLBACK WITH TRACE POPUP
                 SizedBox(
                   width: double.infinity,
                   height: 44,
@@ -389,7 +418,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                     icon: isAiLoading
                         ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF8B5CF6)))
                         : const Icon(Icons.auto_awesome_rounded, size: 16),
-                    label: Text(isAiLoading ? 'AI Processing Questions...' : 'AI Auto-Clean & Fix 🪄'),
+                    label: Text(isAiLoading ? 'AI Calling API...' : 'AI Auto-Clean & Fix 🪄'),
                     onPressed: isAiLoading
                         ? null
                         : () async {
@@ -404,8 +433,20 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                             setModalState(() => isAiLoading = true);
 
                             try {
+                              debugPrint('[DEBUG] Step 1: Checking AI eligibility...');
+                              final eligibility = await AiRateLimiterService.checkEligibility();
+                              debugPrint('[DEBUG] Eligibility response: $eligibility');
+
+                              if (eligibility['allowed'] == false) {
+                                setModalState(() => isAiLoading = false);
+                                _showDebugPopup('AI Quota Blocked', eligibility['message'] ?? 'Daily limit reach ho chuki hai.');
+                                return;
+                              }
+
+                              debugPrint('[DEBUG] Step 2: Calling AiExplainerService.parseBulkQuestionsWithAi...');
                               final List<Map<String, dynamic>> aiResult =
                                   await AiExplainerService.parseBulkQuestionsWithAi(text);
+                              debugPrint('[DEBUG] AI Result Count: ${aiResult.length}');
 
                               if (aiResult.isNotEmpty) {
                                 await AiRateLimiterService.recordSuccess();
@@ -439,19 +480,16 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                   );
                                 }
                               } else {
-                                throw Exception('AI returned 0 questions. Format verify karein.');
-                              }
-                            } catch (err) {
-                              setModalState(() => isAiLoading = false);
-                              if (context.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text('AI Error: $err'),
-                                    backgroundColor: Colors.redAccent,
-                                    duration: const Duration(seconds: 4),
-                                  ),
+                                setModalState(() => isAiLoading = false);
+                                _showDebugPopup(
+                                  'AI Empty Output',
+                                  'AI Service ne koi question parse karke return nahi kiya (List size 0 hai). AiExplainerService ka response format verify karein.',
                                 );
                               }
+                            } catch (err, stack) {
+                              setModalState(() => isAiLoading = false);
+                              debugPrint('[DEBUG] AI Crash Trace: $stack');
+                              _showDebugPopup('AI Execution Crash', 'Error: $err\n\nStack:\n$stack');
                             }
                           },
                   ),
@@ -689,7 +727,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       }
     } catch (e) {
       setState(() => _isPublishing = false);
-      if (mounted) ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Publish error: $e')));
+      _showDebugPopup('Publish Error', e.toString());
     }
   }
 
