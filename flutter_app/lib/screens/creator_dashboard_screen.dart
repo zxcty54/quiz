@@ -34,9 +34,9 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
   int _totalMockAttempts = 0;
   int _totalBatchStudents = 0;
 
-  // 📊 Student Intelligence Lists
-  List<Map<String, dynamic>> _classroomStudents = [];
-  List<Map<String, dynamic>> _openAspirants = [];
+  // 📊 Test-Wise Submissions Storage
+  List<dynamic> _allRawSubmissions = [];
+  List<dynamic> _allBatchTests = [];
 
   @override
   void initState() {
@@ -56,7 +56,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           .eq('handle_id', handle)
           .maybeSingle();
 
-      // 2. Fetch Coaching Data (Flexible Match)
+      // 2. Fetch Coaching Data
       dynamic coachingRes = await client
           .from('coachings')
           .select()
@@ -70,106 +70,58 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           .maybeSingle();
 
       List<dynamic> batchesRes = [];
-      List<Map<String, dynamic>> batchStudentsList = [];
+      List<dynamic> batchTestsRes = [];
+      List<dynamic> submissionsRes = [];
       int batchTestAttempts = 0;
+      final Set<String> uniqueStudentKeys = {};
 
       if (coachingRes != null) {
         final coachingId = coachingRes['id'];
 
-        // Safe fetch without hard inner-join break
         batchesRes = await client
             .from('batches')
             .select('*')
             .eq('coaching_id', coachingId)
             .order('created_at', ascending: false);
 
-        debugPrint("✅ [DASHBOARD] Batches Found: ${batchesRes.length}");
-
-        // Attempt counts fetch
-        try {
-          final testsRes = await client
-              .from('batch_tests')
-              .select('id, attempts_count, batch_id');
-          for (var t in (testsRes as List? ?? [])) {
-            batchTestAttempts += (t['attempts_count'] as int? ?? 0);
-          }
-        } catch (_) {}
-
-        // 3. Fetch Real Submissions safely
         if (batchesRes.isNotEmpty) {
           final List<String> batchIds =
               batchesRes.map((b) => b['id'].toString()).toList();
 
-          final List<dynamic> submissions = await client
-              .from('batch_submissions')
-              .select('*')
-              .inFilter('batch_id', batchIds)
-              .order('created_at', ascending: false);
+          // Fetch all tests created in these batches
+          try {
+            batchTestsRes = await client
+                .from('batch_tests')
+                .select('*')
+                .inFilter('batch_id', batchIds)
+                .order('created_at', ascending: false);
 
-          debugPrint("📊 [DASHBOARD] Submissions Count: ${submissions.length}");
-
-          if (submissions.isNotEmpty) {
-            final Map<String, Map<String, dynamic>> studentMap = {};
-
-            final Map<String, String> batchNameMap = {
-              for (var b in batchesRes)
-                b['id'].toString(): (b['batch_name'] ?? 'Classroom Batch').toString()
-            };
-
-            for (var s in submissions) {
-              final String rawIdentifier =
-                  (s['student_identifier'] ?? s['student_name'] ?? 'Aspirant')
-                      .toString();
-
-              String nameOnly = rawIdentifier;
-              String contactInfo = '';
-              if (rawIdentifier.contains('(') && rawIdentifier.contains(')')) {
-                final parts = rawIdentifier.split('(');
-                nameOnly = parts[0].trim();
-                contactInfo = parts[1]
-                    .replaceAll(')', '')
-                    .replaceAll('Roll/Ph:', '')
-                    .trim();
-              }
-
-              final String assignedBatchName =
-                  batchNameMap[s['batch_id']?.toString()] ?? 'Classroom Batch';
-              final double userScore =
-                  (s['score'] is num) ? (s['score'] as num).toDouble() : 0.0;
-              final int userAccuracy =
-                  (s['accuracy'] is num) ? (s['accuracy'] as num).toInt() : 0;
-              final List rawResponses = (s['detailed_responses'] is List)
-                  ? (s['detailed_responses'] as List)
-                  : [];
-
-              if (!studentMap.containsKey(rawIdentifier)) {
-                studentMap[rawIdentifier] = {
-                  'raw_id': rawIdentifier,
-                  'name': nameOnly,
-                  'contact': contactInfo,
-                  'batch_name': assignedBatchName,
-                  'tests_count': 1,
-                  'scores': [userScore],
-                  'accuracy': userAccuracy,
-                  'weak_subject': s['weak_subject'] ?? 'General Studies',
-                  'strong_subject': s['strong_subject'] ?? 'Core Concepts',
-                  'detailed_responses': rawResponses,
-                };
-              } else {
-                studentMap[rawIdentifier]!['tests_count'] =
-                    (studentMap[rawIdentifier]!['tests_count'] as int) + 1;
-                (studentMap[rawIdentifier]!['scores'] as List).add(userScore);
-                if (rawResponses.isNotEmpty) {
-                  studentMap[rawIdentifier]!['detailed_responses'] = rawResponses;
-                }
-              }
+            for (var t in batchTestsRes) {
+              batchTestAttempts += (t['attempts_count'] as int? ?? 0);
             }
-            batchStudentsList = studentMap.values.toList();
+          } catch (e) {
+            debugPrint("Batch tests fetch error: $e");
+          }
+
+          // Fetch all student submissions
+          try {
+            submissionsRes = await client
+                .from('batch_submissions')
+                .select('*')
+                .inFilter('batch_id', batchIds)
+                .order('created_at', ascending: false);
+
+            for (var s in submissionsRes) {
+              final rawId = (s['student_identifier'] ?? s['student_name'] ?? 'student').toString();
+              uniqueStudentKeys.add(rawId);
+            }
+          } catch (e) {
+            debugPrint("Batch submissions fetch error: $e");
           }
         }
       }
 
-      // 4. Fetch Community Views
+      // 3. Fetch Community Views
       final postsRes = await client
           .from('community_posts')
           .select('views_count')
@@ -180,7 +132,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
         views += (p['views_count'] as int? ?? 0);
       }
 
-      // 5. Fetch Public Mock Attempts
+      // 4. Fetch Public Mock Attempts
       final mocksRes = await client
           .from('creator_mocks')
           .select('id, attempts_count')
@@ -198,11 +150,11 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           _profile = profileRes;
           _coachingData = coachingRes;
           _batches = batchesRes;
+          _allBatchTests = batchTestsRes;
+          _allRawSubmissions = submissionsRes;
           _totalViews = views;
           _totalMockAttempts = totalCombinedAttempts;
-          _classroomStudents = batchStudentsList;
-          _openAspirants = [];
-          _totalBatchStudents = batchStudentsList.length;
+          _totalBatchStudents = uniqueStudentKeys.length;
           _isLoading = false;
         });
       }
@@ -219,311 +171,17 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     if (await canLaunchUrl(uri)) await launchUrl(uri);
   }
 
-  void _openStudentDetailModal(Map<String, dynamic> student) {
-    final List responses = (student['detailed_responses'] as List?) ?? [];
-
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor:
-          widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (ctx) => Padding(
-        padding: const EdgeInsets.all(18),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                CircleAvatar(
-                  radius: 22,
-                  backgroundColor: const Color(0xFF2563EB).withOpacity(0.15),
-                  child: Text(
-                    (student['name'] as String)[0].toUpperCase(),
-                    style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Color(0xFF2563EB)),
-                  ),
-                ),
-                const SizedBox(width: 12),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Flexible(
-                            child: Text(
-                              student['name'],
-                              style: const TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.bold),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ),
-                          const SizedBox(width: 6),
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 6, vertical: 2),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFF16A34A).withOpacity(0.12),
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                            child: const Text(
-                              'CLASSROOM',
-                              style: TextStyle(
-                                fontSize: 9.5,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFF16A34A),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Text(
-                        '${student['contact'] != null && student['contact'].toString().isNotEmpty ? "${student['contact']} • " : ""}${student['batch_name'] ?? ''}',
-                        style:
-                            const TextStyle(fontSize: 11.5, color: Colors.grey),
-                      ),
-                    ],
-                  ),
-                ),
-                IconButton(
-                    icon: const Icon(Icons.close),
-                    onPressed: () => Navigator.pop(ctx)),
-              ],
-            ),
-            const Divider(height: 24),
-
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: widget.isDarkMode
-                          ? const Color(0xFF0F172A)
-                          : const Color(0xFFF8FAFC),
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.grey.withOpacity(0.18)),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text('Overall Accuracy',
-                            style:
-                                TextStyle(fontSize: 11, color: Colors.grey)),
-                        const SizedBox(height: 4),
-                        Text('${student['accuracy']}%',
-                            style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w900,
-                                color: Color(0xFF2563EB))),
-                      ],
-                    ),
-                  ),
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      color: widget.isDarkMode
-                          ? const Color(0xFF0F172A)
-                          : const Color(0xFFF8FAFC),
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.grey.withOpacity(0.18)),
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text('Mocks Completed',
-                            style:
-                                TextStyle(fontSize: 11, color: Colors.grey)),
-                        const SizedBox(height: 4),
-                        Text('${student['tests_count']} Tests',
-                            style: const TextStyle(
-                                fontSize: 20,
-                                fontWeight: FontWeight.w900,
-                                color: Color(0xFF16A34A))),
-                      ],
-                    ),
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 14),
-
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: const Color(0xFF16A34A).withOpacity(0.08),
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.2)),
-              ),
-              child: Row(
-                children: [
-                  const Icon(Icons.check_circle_outline_rounded,
-                      color: Color(0xFF16A34A), size: 20),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text('Strongest Subject',
-                            style: TextStyle(
-                                fontSize: 10.5,
-                                color: Color(0xFF16A34A),
-                                fontWeight: FontWeight.bold)),
-                        Text(student['strong_subject'],
-                            style: const TextStyle(
-                                fontSize: 13, fontWeight: FontWeight.bold)),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 8),
-
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.all(12),
-              decoration: BoxDecoration(
-                color: Colors.redAccent.withOpacity(0.08),
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.redAccent.withOpacity(0.2)),
-              ),
-              child: Row(
-                children: [
-                  const Icon(Icons.warning_amber_rounded,
-                      color: Colors.redAccent, size: 20),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Text('Critical Weak Area (Focus Needed)',
-                            style: TextStyle(
-                                fontSize: 10.5,
-                                color: Colors.redAccent,
-                                fontWeight: FontWeight.bold)),
-                        Text(student['weak_subject'],
-                            style: const TextStyle(
-                                fontSize: 13, fontWeight: FontWeight.bold)),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 14),
-
-            // 🚀 VIEW FULL QUESTION PAPER BUTTON
-            SizedBox(
-              width: double.infinity,
-              height: 44,
-              child: ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF1E293B),
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10)),
-                  elevation: 0,
-                ),
-                icon: const Icon(Icons.assignment_turned_in_rounded, size: 18),
-                label: const Text(
-                  'View Full Question-by-Question Paper',
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
-                ),
-                onPressed: () {
-                  Navigator.pop(ctx);
-                  if (responses.isEmpty) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
-                          content: Text(
-                              'Is submission ka detailed response sheet available nahi hai.')),
-                    );
-                    return;
-                  }
-
-                  final double finalScore = (student['scores'] != null &&
-                          (student['scores'] as List).isNotEmpty)
-                      ? (student['scores'] as List).last
-                      : 0.0;
-
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => StudentCbtReportScreen(
-                        studentName: student['name'] ?? 'Student',
-                        testTitle:
-                            student['batch_name'] ?? 'Classroom CBT Test',
-                        score: finalScore,
-                        responseBreakdown: responses,
-                      ),
-                    ),
-                  );
-                },
-              ),
-            ),
-            const SizedBox(height: 14),
-
-            Row(
-              children: [
-                if (student['contact'] != null &&
-                    student['contact'].toString().contains(RegExp(r'[0-9]'))) ...[
-                  Expanded(
-                    child: OutlinedButton.icon(
-                      icon: const Icon(Icons.phone_in_talk_rounded, size: 16),
-                      label: const Text('Contact'),
-                      style: OutlinedButton.styleFrom(
-                        foregroundColor: const Color(0xFF2563EB),
-                        side: const BorderSide(color: Color(0xFF2563EB)),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8)),
-                      ),
-                      onPressed: () => _callOrMessageStudent(student['contact']),
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                ],
-                Expanded(
-                  flex: 2,
-                  child: ElevatedButton.icon(
-                    icon:
-                        const Icon(Icons.chat_bubble_outline_rounded, size: 16),
-                    label: Text('Guide ${student['name']}'),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF2563EB),
-                      foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8)),
-                    ),
-                    onPressed: () {
-                      Navigator.pop(ctx);
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                            content: Text(
-                                'Guidance note sent to ${student['name']}!')),
-                      );
-                    },
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 12),
-          ],
-        ),
-      ),
-    );
-  }
-
+  // 🎯 Test-Wise Intelligence Hub with Overall Analytics
   void _openStudentIntelligenceSheet() {
-    String selectedBatchFilter = 'All';
+    if (_batches.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Aapke coaching ke paas abhi koi active batch nahi hai.')),
+      );
+      return;
+    }
+
+    String selectedBatchId = _batches.first['id'].toString();
+    String selectedTestId = 'ALL';
 
     showModalBottomSheet(
       context: context,
@@ -534,22 +192,57 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setSheetState) {
-          final List<String> batchOptions = ['All'];
-          for (var b in _batches) {
-            final bName = (b['batch_name'] ?? '').toString().trim();
-            if (bName.isNotEmpty && !batchOptions.contains(bName)) {
-              batchOptions.add(bName);
+          final currentBatch = _batches.firstWhere(
+            (b) => b['id'].toString() == selectedBatchId,
+            orElse: () => _batches.first,
+          );
+          final String currentBatchName = currentBatch['batch_name'] ?? 'Classroom Batch';
+
+          // All submissions for selected batch
+          final batchSubmissions = _allRawSubmissions
+              .where((s) => s['batch_id'].toString() == selectedBatchId)
+              .toList();
+
+          // All tests belonging to this batch
+          final batchTests = _allBatchTests
+              .where((t) => t['batch_id'].toString() == selectedBatchId)
+              .toList();
+
+          // Overall Batch Analysis Calculation
+          double totalScoreSum = 0.0;
+          final Map<String, int> weakFrequency = {};
+          final Map<String, int> strongFrequency = {};
+
+          for (var s in batchSubmissions) {
+            totalScoreSum += (s['score'] as num?)?.toDouble() ?? 0.0;
+            final weak = s['weak_subject']?.toString();
+            final strong = s['strong_subject']?.toString();
+            if (weak != null && weak.isNotEmpty && weak != 'All Clear') {
+              weakFrequency[weak] = (weakFrequency[weak] ?? 0) + 1;
+            }
+            if (strong != null && strong.isNotEmpty) {
+              strongFrequency[strong] = (strongFrequency[strong] ?? 0) + 1;
             }
           }
 
-          final filteredStudents = _classroomStudents.where((s) {
-            if (selectedBatchFilter == 'All') return true;
-            return (s['batch_name'] ?? '').toString().toLowerCase() ==
-                selectedBatchFilter.toLowerCase();
+          final double avgBatchScore = batchSubmissions.isNotEmpty
+              ? totalScoreSum / batchSubmissions.length
+              : 0.0;
+          final String topWeakArea = weakFrequency.isNotEmpty
+              ? weakFrequency.entries.reduce((a, b) => a.value > b.value ? a : b).key
+              : 'All Concepts Stable';
+          final String topStrongArea = strongFrequency.isNotEmpty
+              ? strongFrequency.entries.reduce((a, b) => a.value > b.value ? a : b).key
+              : 'General Revision';
+
+          // Filter student submissions for selected test
+          final filteredSubmissions = batchSubmissions.where((s) {
+            if (selectedTestId == 'ALL') return true;
+            return s['test_id']?.toString() == selectedTestId;
           }).toList();
 
           return Container(
-            height: MediaQuery.of(ctx).size.height * 0.85,
+            height: MediaQuery.of(ctx).size.height * 0.90,
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -560,12 +253,10 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text('📊 Batch Performance Hub',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 17)),
-                        Text('Batch-wise student test evaluation',
-                            style: TextStyle(
-                                fontSize: 11.5, color: Colors.grey[500])),
+                        const Text('📊 Batch Intelligence & CBT Hub',
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                        Text('Granular CBT Breakdown for Classroom Mocks',
+                            style: TextStyle(fontSize: 11.5, color: Colors.grey[500])),
                       ],
                     ),
                     IconButton(
@@ -573,173 +264,352 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                         onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
+                const SizedBox(height: 8),
+
+                // 1️⃣ BATCH SELECTOR DROPDOWN
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 12),
+                  decoration: BoxDecoration(
+                    color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                  ),
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton<String>(
+                      value: selectedBatchId,
+                      isExpanded: true,
+                      dropdownColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+                      items: _batches.map<DropdownMenuItem<String>>((b) {
+                        return DropdownMenuItem<String>(
+                          value: b['id'].toString(),
+                          child: Text(
+                            '🏫 ${b['batch_name']} (Code: ${b['batch_code']})',
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                          ),
+                        );
+                      }).toList(),
+                      onChanged: (val) {
+                        if (val != null) {
+                          setSheetState(() {
+                            selectedBatchId = val;
+                            selectedTestId = 'ALL';
+                          });
+                        }
+                      },
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+
+                // 2️⃣ OVERALL BATCH SCORE & PERFORMANCE CARD
+                Container(
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.25)),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text('OVERALL BATCH PERFORMANCE',
+                              style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.grey[500])),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF2563EB).withOpacity(0.1),
+                              borderRadius: BorderRadius.circular(6),
+                            ),
+                            child: Text(
+                              '${batchSubmissions.length} Total Submissions',
+                              style: const TextStyle(
+                                  fontSize: 10.5,
+                                  color: Color(0xFF2563EB),
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 8),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text('Avg Batch Score',
+                                    style: TextStyle(fontSize: 11, color: Colors.grey)),
+                                Text(avgBatchScore.toStringAsFixed(2),
+                                    style: const TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w900,
+                                        color: Color(0xFF2563EB))),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text('Most Common Trap',
+                                    style: TextStyle(fontSize: 11, color: Colors.redAccent)),
+                                Text(topWeakArea,
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.bold,
+                                        color: Colors.redAccent)),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
                 const SizedBox(height: 12),
 
-                const Text('Select Classroom Batch:',
-                    style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.grey)),
+                // 3️⃣ TEST/MOCK SELECTOR CHIPS
+                const Text('Filter by Specific CBT Mock Drill:',
+                    style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Colors.grey)),
                 const SizedBox(height: 6),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    children: batchOptions.map((bName) {
-                      final isSelected = selectedBatchFilter == bName;
-                      return Padding(
+                    children: [
+                      Padding(
                         padding: const EdgeInsets.only(right: 8),
                         child: ChoiceChip(
-                          label: Text(bName == 'All'
-                              ? '🏫 All Batches (${_classroomStudents.length})'
-                              : '📚 $bName'),
-                          selected: isSelected,
+                          label: Text('All Mocks (${batchSubmissions.length})'),
+                          selected: selectedTestId == 'ALL',
                           selectedColor: const Color(0xFF2563EB),
-                          backgroundColor: widget.isDarkMode
-                              ? const Color(0xFF1E293B)
-                              : Colors.white,
                           labelStyle: TextStyle(
-                            fontSize: 12,
-                            fontWeight: isSelected
-                                ? FontWeight.bold
-                                : FontWeight.normal,
-                            color: isSelected
-                                ? Colors.white
-                                : (widget.isDarkMode
-                                    ? Colors.white70
-                                    : const Color(0xFF334155)),
+                            fontSize: 11.5,
+                            fontWeight: FontWeight.bold,
+                            color: selectedTestId == 'ALL' ? Colors.white : Colors.black87,
                           ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(16),
-                            side: BorderSide(
-                                color: isSelected
-                                    ? const Color(0xFF2563EB)
-                                    : Colors.grey.withOpacity(0.2)),
-                          ),
-                          onSelected: (_) => setSheetState(
-                              () => selectedBatchFilter = bName),
+                          onSelected: (_) => setSheetState(() => selectedTestId = 'ALL'),
                         ),
-                      );
-                    }).toList(),
+                      ),
+                      ...batchTests.map((t) {
+                        final String tId = t['id'].toString();
+                        final bool isSelected = selectedTestId == tId;
+                        final count = batchSubmissions
+                            .where((s) => s['test_id']?.toString() == tId)
+                            .length;
+                        return Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: ChoiceChip(
+                            label: Text('🎯 ${t['title']} ($count)'),
+                            selected: isSelected,
+                            selectedColor: const Color(0xFF2563EB),
+                            labelStyle: TextStyle(
+                              fontSize: 11.5,
+                              fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                              color: isSelected ? Colors.white : Colors.black87,
+                            ),
+                            onSelected: (_) => setSheetState(() => selectedTestId = tId),
+                          ),
+                        );
+                      }).toList(),
+                    ],
                   ),
                 ),
-                const SizedBox(height: 8),
-                const Divider(),
+                const Divider(height: 16),
 
+                // 4️⃣ STUDENT SUBMISSIONS LIST FOR SELECTED TEST
                 Expanded(
-                  child: filteredStudents.isEmpty
+                  child: filteredSubmissions.isEmpty
                       ? Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.assignment_late_outlined,
-                                  size: 48,
-                                  color: Colors.grey.withOpacity(0.4)),
+                              Icon(Icons.assignment_turned_in_outlined,
+                                  size: 44, color: Colors.grey.withOpacity(0.4)),
                               const SizedBox(height: 10),
                               Text(
-                                selectedBatchFilter == 'All'
-                                    ? 'Abhi tak kisi student ne submission nahi kiya hai.'
-                                    : 'Is batch ($selectedBatchFilter) me koi submission nahi mila.',
-                                style: TextStyle(
-                                    color: Colors.grey[500], fontSize: 13),
-                                textAlign: TextAlign.center,
+                                selectedTestId == 'ALL'
+                                    ? 'Is batch me abhi tak koi test attempt nahi hua hai.'
+                                    : 'Is mock drill me koi submission record nahi hai.',
+                                style: TextStyle(color: Colors.grey[500], fontSize: 12.5),
                               ),
                             ],
                           ),
                         )
                       : ListView.builder(
-                          itemCount: filteredStudents.length,
+                          itemCount: filteredSubmissions.length,
                           itemBuilder: (ctx, idx) {
-                            final s = filteredStudents[idx];
+                            final s = filteredSubmissions[idx];
+                            final rawIdentifier =
+                                (s['student_identifier'] ?? s['student_name'] ?? 'Aspirant').toString();
+
+                            String nameOnly = rawIdentifier;
+                            String contactInfo = '';
+                            if (rawIdentifier.contains('(') && rawIdentifier.contains(')')) {
+                              final parts = rawIdentifier.split('(');
+                              nameOnly = parts[0].trim();
+                              contactInfo = parts[1]
+                                  .replaceAll(')', '')
+                                  .replaceAll('Roll/Ph:', '')
+                                  .trim();
+                            }
+
+                            final double score = (s['score'] as num?)?.toDouble() ?? 0.0;
+                            final int acc = (s['accuracy'] as num?)?.toInt() ?? 0;
+                            final int correct = s['correct_count'] ?? 0;
+                            final int wrong = s['wrong_count'] ?? 0;
+                            final List responses =
+                                (s['detailed_responses'] is List) ? s['detailed_responses'] : [];
+
+                            // Find test name
+                            String matchedTestTitle = 'Classroom CBT Test';
+                            try {
+                              final tMatch = batchTests.firstWhere(
+                                (t) => t['id'].toString() == s['test_id']?.toString(),
+                                orElse: () => null,
+                              );
+                              if (tMatch != null) {
+                                matchedTestTitle = tMatch['title'] ?? 'CBT Mock';
+                              }
+                            } catch (_) {}
 
                             return Card(
                               margin: const EdgeInsets.only(bottom: 10),
-                              elevation: 0.5,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
-                                side: BorderSide(
-                                    color: Colors.grey.withOpacity(0.15)),
+                                side: BorderSide(color: Colors.grey.withOpacity(0.15)),
                               ),
-                              child: ListTile(
-                                contentPadding: const EdgeInsets.symmetric(
-                                    horizontal: 14, vertical: 6),
-                                leading: CircleAvatar(
-                                  radius: 20,
-                                  backgroundColor: const Color(0xFF2563EB)
-                                      .withOpacity(0.12),
-                                  child: Text(
-                                    (s['name'] as String)[0].toUpperCase(),
-                                    style: const TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                        color: Color(0xFF2563EB),
-                                        fontSize: 16),
-                                  ),
-                                ),
-                                title: Row(
+                              child: Padding(
+                                padding: const EdgeInsets.all(12),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    Expanded(
-                                      child: Text(
-                                        s['name'],
-                                        style: const TextStyle(
-                                            fontWeight: FontWeight.bold,
-                                            fontSize: 14),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ),
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 7, vertical: 2),
-                                      decoration: BoxDecoration(
-                                        color: const Color(0xFF2563EB)
-                                            .withOpacity(0.1),
-                                        borderRadius:
-                                            BorderRadius.circular(6),
-                                      ),
-                                      child: Text(
-                                        s['batch_name'] ?? 'Classroom',
-                                        style: const TextStyle(
-                                            fontSize: 10.5,
-                                            fontWeight: FontWeight.bold,
-                                            color: Color(0xFF2563EB)),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                subtitle: Padding(
-                                  padding: const EdgeInsets.only(top: 4),
-                                  child: Text(
-                                    '${s['contact'] != null && s['contact'].toString().isNotEmpty ? "${s['contact']} • " : ""}${s['tests_count']} Tests Attempted',
-                                    style: const TextStyle(
-                                        fontSize: 12, color: Colors.grey),
-                                  ),
-                                ),
-                                trailing: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.end,
+                                    Row(
                                       children: [
-                                        Text(
-                                          '${s['accuracy']}%',
-                                          style: const TextStyle(
-                                              fontWeight: FontWeight.w900,
-                                              color: Color(0xFF16A34A),
-                                              fontSize: 15),
+                                        CircleAvatar(
+                                          radius: 18,
+                                          backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
+                                          child: Text(
+                                            nameOnly.isNotEmpty ? nameOnly[0].toUpperCase() : 'S',
+                                            style: const TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Color(0xFF2563EB),
+                                                fontSize: 14),
+                                          ),
                                         ),
-                                        const Text('Accuracy',
-                                            style: TextStyle(
-                                                fontSize: 10,
-                                                color: Colors.grey)),
+                                        const SizedBox(width: 10),
+                                        Expanded(
+                                          child: Column(
+                                            crossAxisAlignment: CrossAxisAlignment.start,
+                                            children: [
+                                              Text(nameOnly,
+                                                  style: const TextStyle(
+                                                      fontWeight: FontWeight.bold, fontSize: 14)),
+                                              Text(
+                                                '$matchedTestTitle ${contactInfo.isNotEmpty ? "• $contactInfo" : ""}',
+                                                style: const TextStyle(
+                                                    fontSize: 11, color: Colors.grey),
+                                              ),
+                                            ],
+                                          ),
+                                        ),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFFEFF6FF),
+                                            borderRadius: BorderRadius.circular(6),
+                                          ),
+                                          child: Text(
+                                            'Score: ${score.toStringAsFixed(1)}',
+                                            style: const TextStyle(
+                                                fontWeight: FontWeight.bold,
+                                                color: Color(0xFF2563EB),
+                                                fontSize: 12),
+                                          ),
+                                        ),
                                       ],
                                     ),
-                                    const SizedBox(width: 6),
-                                    const Icon(Icons.arrow_forward_ios_rounded,
-                                        size: 14, color: Colors.grey),
+                                    const SizedBox(height: 8),
+                                    Row(
+                                      children: [
+                                        Text('✅ $correct Sahi',
+                                            style: const TextStyle(
+                                                color: Colors.green,
+                                                fontSize: 11.5,
+                                                fontWeight: FontWeight.bold)),
+                                        const SizedBox(width: 12),
+                                        Text('❌ $wrong Galat',
+                                            style: const TextStyle(
+                                                color: Colors.red,
+                                                fontSize: 11.5,
+                                                fontWeight: FontWeight.bold)),
+                                        const SizedBox(width: 12),
+                                        Text('🎯 $acc% Acc',
+                                            style: const TextStyle(
+                                                color: Colors.purple,
+                                                fontSize: 11.5,
+                                                fontWeight: FontWeight.bold)),
+                                      ],
+                                    ),
+                                    if (s['weak_subject'] != null && s['weak_subject'] != 'All Clear') ...[
+                                      const SizedBox(height: 6),
+                                      Text(
+                                        '⚠️ Weak Topic: ${s['weak_subject']}',
+                                        style: const TextStyle(
+                                            fontSize: 11,
+                                            color: Colors.redAccent,
+                                            fontWeight: FontWeight.w600),
+                                      ),
+                                    ],
+                                    const Divider(height: 14),
+
+                                    // View Specific CBT Question Paper Button
+                                    SizedBox(
+                                      width: double.infinity,
+                                      height: 34,
+                                      child: OutlinedButton.icon(
+                                        icon: const Icon(Icons.assignment_outlined, size: 14),
+                                        label: const Text('View Test Breakdown (Q-by-Q)',
+                                            style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
+                                        style: OutlinedButton.styleFrom(
+                                          foregroundColor: const Color(0xFF2563EB),
+                                          side: const BorderSide(color: Color(0xFF2563EB), width: 0.8),
+                                          shape: RoundedRectangleBorder(
+                                              borderRadius: BorderRadius.circular(8)),
+                                        ),
+                                        onPressed: () {
+                                          Navigator.pop(ctx);
+                                          if (responses.isEmpty) {
+                                            ScaffoldMessenger.of(context).showSnackBar(
+                                              const SnackBar(
+                                                  content: Text(
+                                                      'Is attempt ka question-by-question data record nahi hai.')),
+                                            );
+                                            return;
+                                          }
+                                          Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                              builder: (_) => StudentCbtReportScreen(
+                                                studentName: nameOnly,
+                                                testTitle: matchedTestTitle,
+                                                score: score,
+                                                responseBreakdown: responses,
+                                              ),
+                                            ),
+                                          );
+                                        },
+                                      ),
+                                    ),
                                   ],
                                 ),
-                                onTap: () => _openStudentDetailModal(s),
                               ),
                             );
                           },
@@ -1608,7 +1478,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             _buildActionCard(
               title: 'Student Performance Intelligence 📊',
               subtitle:
-                  'Track batch students, accuracy and detailed question breakdowns.',
+                  'Filter by specific mock drill, view student score and exact question breakdown.',
               icon: Icons.insights_rounded,
               color: const Color(0xFF2563EB),
               onTap: _openStudentIntelligenceSheet,
