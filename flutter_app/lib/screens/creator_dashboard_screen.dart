@@ -56,11 +56,17 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           .eq('handle_id', handle)
           .maybeSingle();
 
-      // 2. Fetch Coaching Data (Case insensitive / Trim safe)
-      final coachingRes = await client
+      // 2. Fetch Coaching Data (owner_name ya creator_handle dono check karein)
+      dynamic coachingRes = await client
           .from('coachings')
           .select()
           .ilike('owner_name', handle)
+          .maybeSingle();
+
+      coachingRes ??= await client
+          .from('coachings')
+          .select()
+          .ilike('creator_handle', handle)
           .maybeSingle();
 
       List<dynamic> batchesRes = [];
@@ -84,7 +90,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
         // 3. Fetch Batch Submissions safely without broken nested join
         if (batchesRes.isNotEmpty) {
-          final List batchIds = batchesRes.map((b) => b['id']).toList();
+          final List batchIds = batchesRes.map((b) => b['id'].toString()).toList();
 
           final List<dynamic> submissions = await client
               .from('batch_submissions')
@@ -99,11 +105,11 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             // Batch ID to Name map for fast lookup
             final Map<dynamic, String> batchNameMap = {
-              for (var b in batchesRes) b['id']: (b['batch_name'] ?? 'Classroom Batch').toString()
+              for (var b in batchesRes) b['id'].toString(): (b['batch_name'] ?? 'Classroom Batch').toString()
             };
 
             for (var s in submissions) {
-              final String rawIdentifier = (s['student_identifier'] ?? 'Aspirant').toString();
+              final String rawIdentifier = (s['student_identifier'] ?? s['student_name'] ?? 'Aspirant').toString();
 
               String nameOnly = rawIdentifier;
               String contactInfo = '';
@@ -113,7 +119,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 contactInfo = parts[1].replaceAll(')', '').replaceAll('Roll/Ph:', '').trim();
               }
 
-              final String assignedBatchName = batchNameMap[s['batch_id']] ?? 'Classroom Batch';
+              final String assignedBatchName = batchNameMap[s['batch_id']?.toString()] ?? 'Classroom Batch';
               final double userScore = (s['score'] is num) ? (s['score'] as num).toDouble() : 0.0;
               final int userAccuracy = (s['accuracy'] is num) ? (s['accuracy'] as num).toInt() : 70;
               final List rawResponses = (s['detailed_responses'] is List) ? (s['detailed_responses'] as List) : [];
@@ -509,7 +515,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
   }
 
   void _openStudentIntelligenceSheet() {
-    int activeTabIndex = 0;
+    String selectedBatchFilter = 'All';
 
     showModalBottomSheet(
       context: context,
@@ -517,99 +523,170 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
       backgroundColor: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setSheetState) => Container(
-          height: MediaQuery.of(ctx).size.height * 0.82,
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text('📊 Student Performance Hub', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
-                  IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
-                ],
-              ),
-              const SizedBox(height: 8),
+        builder: (ctx, setSheetState) {
+          final List<String> batchOptions = ['All'];
+          for (var b in _batches) {
+            final bName = (b['batch_name'] ?? '').toString().trim();
+            if (bName.isNotEmpty && !batchOptions.contains(bName)) {
+              batchOptions.add(bName);
+            }
+          }
 
-              Row(
-                children: [
-                  Expanded(
-                    child: ChoiceChip(
-                      label: Text('🏫 Classroom (${_classroomStudents.length})'),
-                      selected: activeTabIndex == 0,
-                      selectedColor: const Color(0xFF2563EB),
-                      labelStyle: TextStyle(
-                        fontSize: 11.5,
-                        fontWeight: FontWeight.bold,
-                        color: activeTabIndex == 0 ? Colors.white : Colors.grey,
-                      ),
-                      onSelected: (_) => setSheetState(() => activeTabIndex = 0),
+          final filteredStudents = _classroomStudents.where((s) {
+            if (selectedBatchFilter == 'All') return true;
+            return (s['batch_name'] ?? '').toString().toLowerCase() == selectedBatchFilter.toLowerCase();
+          }).toList();
+
+          return Container(
+            height: MediaQuery.of(ctx).size.height * 0.85,
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Text('📊 Batch Performance Hub', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+                        Text('Batch-wise student test evaluation', style: TextStyle(fontSize: 11.5, color: Colors.grey[500])),
+                      ],
                     ),
-                  ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: ChoiceChip(
-                      label: Text('🌐 Open Leads (${_openAspirants.length})'),
-                      selected: activeTabIndex == 1,
-                      selectedColor: const Color(0xFF2563EB),
-                      labelStyle: TextStyle(
-                        fontSize: 11.5,
-                        fontWeight: FontWeight.bold,
-                        color: activeTabIndex == 1 ? Colors.white : Colors.grey,
-                      ),
-                      onSelected: (_) => setSheetState(() => activeTabIndex = 1),
-                    ),
-                  ),
-                ],
-              ),
-              const Divider(height: 20),
-
-              Expanded(
-                child: ListView.builder(
-                  itemCount: activeTabIndex == 0 ? _classroomStudents.length : _openAspirants.length,
-                  itemBuilder: (ctx, idx) {
-                    final s = activeTabIndex == 0 ? _classroomStudents[idx] : _openAspirants[idx];
-                    final isClassroom = activeTabIndex == 0;
-
-                    return Card(
-                      margin: const EdgeInsets.only(bottom: 8),
-                      elevation: 0.5,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                      child: ListTile(
-                        leading: CircleAvatar(
-                          radius: 18,
-                          backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
-                          child: Text(
-                            (s['name'] as String)[0].toUpperCase(),
-                            style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
-                          ),
-                        ),
-                        title: Text(
-                          '${s['name']} ${s['contact'] != null && s['contact'].toString().isNotEmpty ? "(${s['contact']})" : ""}',
-                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
-                        ),
-                        subtitle: Text(
-                          '${s['tests_count']} Tests • Weak: ${s['weak_subject']}',
-                          style: const TextStyle(fontSize: 11.5, color: Colors.grey),
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        trailing: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text('${s['accuracy']}%', style: const TextStyle(fontWeight: FontWeight.w900, color: Color(0xFF16A34A), fontSize: 14)),
-                            const Icon(Icons.chevron_right, size: 18, color: Colors.grey),
-                          ],
-                        ),
-                        onTap: () => _openStudentDetailModal(s, isClassroom),
-                      ),
-                    );
-                  },
+                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                  ],
                 ),
-              ),
-            ],
-          ),
-        ),
+                const SizedBox(height: 12),
+
+                const Text('Select Classroom Batch:', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.grey)),
+                const SizedBox(height: 6),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: batchOptions.map((bName) {
+                      final isSelected = selectedBatchFilter == bName;
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: ChoiceChip(
+                          label: Text(bName == 'All' ? '🏫 All Batches (${_classroomStudents.length})' : '📚 $bName'),
+                          selected: isSelected,
+                          selectedColor: const Color(0xFF2563EB),
+                          backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+                          labelStyle: TextStyle(
+                            fontSize: 12,
+                            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                            color: isSelected ? Colors.white : (widget.isDarkMode ? Colors.white70 : const Color(0xFF334155)),
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(16),
+                            side: BorderSide(color: isSelected ? const Color(0xFF2563EB) : Colors.grey.withOpacity(0.2)),
+                          ),
+                          onSelected: (_) => setSheetState(() => selectedBatchFilter = bName),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                const Divider(),
+
+                Expanded(
+                  child: filteredStudents.isEmpty
+                      ? Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.assignment_late_outlined, size: 48, color: Colors.grey.withOpacity(0.4)),
+                              const SizedBox(height: 10),
+                              Text(
+                                selectedBatchFilter == 'All'
+                                    ? 'Abhi tak kisi student ne submission nahi kiya hai.'
+                                    : 'Is batch ($selectedBatchFilter) me koi submission nahi mila.',
+                                style: TextStyle(color: Colors.grey[500], fontSize: 13),
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                        )
+                      : ListView.builder(
+                          itemCount: filteredStudents.length,
+                          itemBuilder: (ctx, idx) {
+                            final s = filteredStudents[idx];
+
+                            return Card(
+                              margin: const EdgeInsets.only(bottom: 10),
+                              elevation: 0.5,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12),
+                                side: BorderSide(color: Colors.grey.withOpacity(0.15)),
+                              ),
+                              child: ListTile(
+                                contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                                leading: CircleAvatar(
+                                  radius: 20,
+                                  backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
+                                  child: Text(
+                                    (s['name'] as String)[0].toUpperCase(),
+                                    style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB), fontSize: 16),
+                                  ),
+                                ),
+                                title: Row(
+                                  children: [
+                                    Expanded(
+                                      child: Text(
+                                        s['name'],
+                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFF2563EB).withOpacity(0.1),
+                                        borderRadius: BorderRadius.circular(6),
+                                      ),
+                                      child: Text(
+                                        s['batch_name'] ?? 'Classroom',
+                                        style: const TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                subtitle: Padding(
+                                  padding: const EdgeInsets.only(top: 4),
+                                  child: Text(
+                                    '${s['contact'] != null && s['contact'].toString().isNotEmpty ? "${s['contact']} • " : ""}${s['tests_count']} Tests Attempted',
+                                    style: const TextStyle(fontSize: 12, color: Colors.grey),
+                                  ),
+                                ),
+                                trailing: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Column(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      children: [
+                                        Text(
+                                          '${s['accuracy']}%',
+                                          style: const TextStyle(fontWeight: FontWeight.w900, color: Color(0xFF16A34A), fontSize: 15),
+                                        ),
+                                        const Text('Accuracy', style: TextStyle(fontSize: 10, color: Colors.grey)),
+                                      ],
+                                    ),
+                                    const SizedBox(width: 6),
+                                    const Icon(Icons.arrow_forward_ios_rounded, size: 14, color: Colors.grey),
+                                  ],
+                                ),
+                                onTap: () => _openStudentDetailModal(s, true),
+                              ),
+                            );
+                          },
+                        ),
+                ),
+              ],
+            ),
+          );
+        },
       ),
     );
   }
@@ -1252,7 +1329,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             _buildActionCard(
               title: 'Student Performance Intelligence 📊',
-              subtitle: 'Track Suresh & classroom vs open test takers, accuracy and weak areas.',
+              subtitle: 'Track batch students, accuracy and detailed question breakdowns.',
               icon: Icons.insights_rounded,
               color: const Color(0xFF2563EB),
               onTap: _openStudentIntelligenceSheet,
