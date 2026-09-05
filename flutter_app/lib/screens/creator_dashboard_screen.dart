@@ -56,7 +56,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           .eq('handle_id', handle)
           .maybeSingle();
 
-      // 2. Fetch Coaching Data (owner_name ya creator_handle dono check karein)
+      // 2. Fetch Coaching Data (Flexible Match)
       dynamic coachingRes = await client
           .from('coachings')
           .select()
@@ -74,55 +74,73 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
       int batchTestAttempts = 0;
 
       if (coachingRes != null) {
+        final coachingId = coachingRes['id'];
+
+        // Safe fetch without hard inner-join break
         batchesRes = await client
             .from('batches')
-            .select('*, batch_tests(id, test_title, attempts_count)')
-            .eq('coaching_id', coachingRes['id'])
+            .select('*')
+            .eq('coaching_id', coachingId)
             .order('created_at', ascending: false);
 
-        // Sum private classroom mock attempts
-        for (var b in (batchesRes as List? ?? [])) {
-          final tests = b['batch_tests'] as List? ?? [];
-          for (var t in tests) {
+        debugPrint("✅ [DASHBOARD] Batches Found: ${batchesRes.length}");
+
+        // Attempt counts fetch
+        try {
+          final testsRes = await client
+              .from('batch_tests')
+              .select('id, attempts_count, batch_id');
+          for (var t in (testsRes as List? ?? [])) {
             batchTestAttempts += (t['attempts_count'] as int? ?? 0);
           }
-        }
+        } catch (_) {}
 
-        // 3. Fetch Batch Submissions safely without broken nested join
+        // 3. Fetch Real Submissions safely
         if (batchesRes.isNotEmpty) {
-          final List batchIds = batchesRes.map((b) => b['id'].toString()).toList();
+          final List<String> batchIds =
+              batchesRes.map((b) => b['id'].toString()).toList();
 
           final List<dynamic> submissions = await client
               .from('batch_submissions')
-              .select()
+              .select('*')
               .inFilter('batch_id', batchIds)
               .order('created_at', ascending: false);
 
-          debugPrint("📊 [DASHBOARD] Batch IDs: $batchIds | Submissions: ${submissions.length}");
+          debugPrint("📊 [DASHBOARD] Submissions Count: ${submissions.length}");
 
           if (submissions.isNotEmpty) {
             final Map<String, Map<String, dynamic>> studentMap = {};
 
-            // Batch ID to Name map for fast lookup
-            final Map<dynamic, String> batchNameMap = {
-              for (var b in batchesRes) b['id'].toString(): (b['batch_name'] ?? 'Classroom Batch').toString()
+            final Map<String, String> batchNameMap = {
+              for (var b in batchesRes)
+                b['id'].toString(): (b['batch_name'] ?? 'Classroom Batch').toString()
             };
 
             for (var s in submissions) {
-              final String rawIdentifier = (s['student_identifier'] ?? s['student_name'] ?? 'Aspirant').toString();
+              final String rawIdentifier =
+                  (s['student_identifier'] ?? s['student_name'] ?? 'Aspirant')
+                      .toString();
 
               String nameOnly = rawIdentifier;
               String contactInfo = '';
               if (rawIdentifier.contains('(') && rawIdentifier.contains(')')) {
                 final parts = rawIdentifier.split('(');
                 nameOnly = parts[0].trim();
-                contactInfo = parts[1].replaceAll(')', '').replaceAll('Roll/Ph:', '').trim();
+                contactInfo = parts[1]
+                    .replaceAll(')', '')
+                    .replaceAll('Roll/Ph:', '')
+                    .trim();
               }
 
-              final String assignedBatchName = batchNameMap[s['batch_id']?.toString()] ?? 'Classroom Batch';
-              final double userScore = (s['score'] is num) ? (s['score'] as num).toDouble() : 0.0;
-              final int userAccuracy = (s['accuracy'] is num) ? (s['accuracy'] as num).toInt() : 70;
-              final List rawResponses = (s['detailed_responses'] is List) ? (s['detailed_responses'] as List) : [];
+              final String assignedBatchName =
+                  batchNameMap[s['batch_id']?.toString()] ?? 'Classroom Batch';
+              final double userScore =
+                  (s['score'] is num) ? (s['score'] as num).toDouble() : 0.0;
+              final int userAccuracy =
+                  (s['accuracy'] is num) ? (s['accuracy'] as num).toInt() : 0;
+              final List rawResponses = (s['detailed_responses'] is List)
+                  ? (s['detailed_responses'] as List)
+                  : [];
 
               if (!studentMap.containsKey(rawIdentifier)) {
                 studentMap[rawIdentifier] = {
@@ -175,67 +193,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
       int totalCombinedAttempts = publicAttempts + batchTestAttempts;
 
-      // Fallback preview only if zero real submissions exist
-      if (batchStudentsList.isEmpty) {
-        batchStudentsList = [
-          {
-            'raw_id': 'Demo: Suresh Kumar',
-            'name': 'Suresh Kumar (Sample Test Data)',
-            'contact': 'Roll: 104',
-            'batch_name': 'Sample Batch',
-            'tests_count': 1,
-            'scores': [18.5],
-            'accuracy': 74,
-            'weak_subject': 'General Science',
-            'strong_subject': 'Modern History',
-            'detailed_responses': [
-              {
-                'q_no': 1,
-                'question': 'Bihar me 1857 ki kranti ka netritva kisne kiya tha?',
-                'selected_option': 'Kunwar Singh',
-                'correct_option': 'Kunwar Singh',
-                'is_correct': true,
-              },
-              {
-                'q_no': 2,
-                'question': 'Patliputra nagar ki sthapna kis shasak ne ki thi?',
-                'selected_option': 'Bimbisara',
-                'correct_option': 'Udayin',
-                'is_correct': false,
-              },
-              {
-                'q_no': 3,
-                'question': 'Champaran Satyagraha kis varsh hua tha?',
-                'selected_option': '1917',
-                'correct_option': '1917',
-                'is_correct': true,
-              },
-              {
-                'q_no': 4,
-                'question': 'Bihar ka shok kis nadi ko kaha jata hai?',
-                'selected_option': 'Gandak',
-                'correct_option': 'Kosi',
-                'is_correct': false,
-              }
-            ],
-          }
-        ];
-      }
-
-      final openList = [
-        {
-          'name': 'Public Aspirant Lead',
-          'contact': 'N/A',
-          'source': 'Public Free Mock Attempt',
-          'tests_count': publicAttempts > 0 ? publicAttempts : 1,
-          'scores': [12.0],
-          'accuracy': 65,
-          'weak_subject': 'Current Affairs',
-          'strong_subject': 'Bihar Special',
-          'detailed_responses': [],
-        },
-      ];
-
       if (mounted) {
         setState(() {
           _profile = profileRes;
@@ -244,7 +201,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
           _totalViews = views;
           _totalMockAttempts = totalCombinedAttempts;
           _classroomStudents = batchStudentsList;
-          _openAspirants = openList;
+          _openAspirants = [];
           _totalBatchStudents = batchStudentsList.length;
           _isLoading = false;
         });
@@ -262,14 +219,16 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     if (await canLaunchUrl(uri)) await launchUrl(uri);
   }
 
-  void _openStudentDetailModal(Map<String, dynamic> student, bool isClassroom) {
+  void _openStudentDetailModal(Map<String, dynamic> student) {
     final List responses = (student['detailed_responses'] as List?) ?? [];
 
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      backgroundColor:
+          widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => Padding(
         padding: const EdgeInsets.all(18),
         child: Column(
@@ -283,7 +242,10 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   backgroundColor: const Color(0xFF2563EB).withOpacity(0.15),
                   child: Text(
                     (student['name'] as String)[0].toUpperCase(),
-                    style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                    style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Color(0xFF2563EB)),
                   ),
                 ),
                 const SizedBox(width: 12),
@@ -296,36 +258,41 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                           Flexible(
                             child: Text(
                               student['name'],
-                              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                              style: const TextStyle(
+                                  fontSize: 16, fontWeight: FontWeight.bold),
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
                           const SizedBox(width: 6),
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 6, vertical: 2),
                             decoration: BoxDecoration(
-                              color: isClassroom ? const Color(0xFF16A34A).withOpacity(0.12) : Colors.amber.withOpacity(0.15),
+                              color: const Color(0xFF16A34A).withOpacity(0.12),
                               borderRadius: BorderRadius.circular(4),
                             ),
-                            child: Text(
-                              isClassroom ? 'CLASSROOM' : 'OPEN LEAD',
+                            child: const Text(
+                              'CLASSROOM',
                               style: TextStyle(
                                 fontSize: 9.5,
                                 fontWeight: FontWeight.bold,
-                                color: isClassroom ? const Color(0xFF16A34A) : Colors.amber.shade900,
+                                color: Color(0xFF16A34A),
                               ),
                             ),
                           ),
                         ],
                       ),
                       Text(
-                        '${student['contact'] != null && student['contact'].toString().isNotEmpty ? "${student['contact']} • " : ""}${student['batch_name'] ?? student['source'] ?? ''}',
-                        style: const TextStyle(fontSize: 11.5, color: Colors.grey),
+                        '${student['contact'] != null && student['contact'].toString().isNotEmpty ? "${student['contact']} • " : ""}${student['batch_name'] ?? ''}',
+                        style:
+                            const TextStyle(fontSize: 11.5, color: Colors.grey),
                       ),
                     ],
                   ),
                 ),
-                IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                IconButton(
+                    icon: const Icon(Icons.close),
+                    onPressed: () => Navigator.pop(ctx)),
               ],
             ),
             const Divider(height: 24),
@@ -336,16 +303,24 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   child: Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                      color: widget.isDarkMode
+                          ? const Color(0xFF0F172A)
+                          : const Color(0xFFF8FAFC),
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(color: Colors.grey.withOpacity(0.18)),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text('Overall Accuracy', style: TextStyle(fontSize: 11, color: Colors.grey)),
+                        const Text('Overall Accuracy',
+                            style:
+                                TextStyle(fontSize: 11, color: Colors.grey)),
                         const SizedBox(height: 4),
-                        Text('${student['accuracy']}%', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Color(0xFF2563EB))),
+                        Text('${student['accuracy']}%',
+                            style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w900,
+                                color: Color(0xFF2563EB))),
                       ],
                     ),
                   ),
@@ -355,16 +330,24 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   child: Container(
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                      color: widget.isDarkMode
+                          ? const Color(0xFF0F172A)
+                          : const Color(0xFFF8FAFC),
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(color: Colors.grey.withOpacity(0.18)),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text('Mocks Completed', style: TextStyle(fontSize: 11, color: Colors.grey)),
+                        const Text('Mocks Completed',
+                            style:
+                                TextStyle(fontSize: 11, color: Colors.grey)),
                         const SizedBox(height: 4),
-                        Text('${student['tests_count']} Tests', style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Color(0xFF16A34A))),
+                        Text('${student['tests_count']} Tests',
+                            style: const TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w900,
+                                color: Color(0xFF16A34A))),
                       ],
                     ),
                   ),
@@ -383,14 +366,21 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.check_circle_outline_rounded, color: Color(0xFF16A34A), size: 20),
+                  const Icon(Icons.check_circle_outline_rounded,
+                      color: Color(0xFF16A34A), size: 20),
                   const SizedBox(width: 8),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text('Strongest Subject', style: TextStyle(fontSize: 10.5, color: Color(0xFF16A34A), fontWeight: FontWeight.bold)),
-                        Text(student['strong_subject'], style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
+                        const Text('Strongest Subject',
+                            style: TextStyle(
+                                fontSize: 10.5,
+                                color: Color(0xFF16A34A),
+                                fontWeight: FontWeight.bold)),
+                        Text(student['strong_subject'],
+                            style: const TextStyle(
+                                fontSize: 13, fontWeight: FontWeight.bold)),
                       ],
                     ),
                   ),
@@ -409,14 +399,21 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               ),
               child: Row(
                 children: [
-                  const Icon(Icons.warning_amber_rounded, color: Colors.redAccent, size: 20),
+                  const Icon(Icons.warning_amber_rounded,
+                      color: Colors.redAccent, size: 20),
                   const SizedBox(width: 8),
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text('Critical Weak Area (Focus Needed)', style: TextStyle(fontSize: 10.5, color: Colors.redAccent, fontWeight: FontWeight.bold)),
-                        Text(student['weak_subject'], style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold)),
+                        const Text('Critical Weak Area (Focus Needed)',
+                            style: TextStyle(
+                                fontSize: 10.5,
+                                color: Colors.redAccent,
+                                fontWeight: FontWeight.bold)),
+                        Text(student['weak_subject'],
+                            style: const TextStyle(
+                                fontSize: 13, fontWeight: FontWeight.bold)),
                       ],
                     ),
                   ),
@@ -425,7 +422,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 14),
 
-            // 🚀 VIEW DETAILED ANSWER SHEET (Wrong / Correct Breakdown)
+            // 🚀 VIEW FULL QUESTION PAPER BUTTON
             SizedBox(
               width: double.infinity,
               height: 44,
@@ -433,7 +430,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF1E293B),
                   foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
                   elevation: 0,
                 ),
                 icon: const Icon(Icons.assignment_turned_in_rounded, size: 18),
@@ -445,12 +443,15 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   Navigator.pop(ctx);
                   if (responses.isEmpty) {
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('Is student ka question breakdown record available nahi hai.')),
+                      const SnackBar(
+                          content: Text(
+                              'Is submission ka detailed response sheet available nahi hai.')),
                     );
                     return;
                   }
 
-                  final double finalScore = (student['scores'] != null && (student['scores'] as List).isNotEmpty)
+                  final double finalScore = (student['scores'] != null &&
+                          (student['scores'] as List).isNotEmpty)
                       ? (student['scores'] as List).last
                       : 0.0;
 
@@ -459,7 +460,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                     MaterialPageRoute(
                       builder: (_) => StudentCbtReportScreen(
                         studentName: student['name'] ?? 'Student',
-                        testTitle: student['batch_name'] ?? 'Classroom CBT Test',
+                        testTitle:
+                            student['batch_name'] ?? 'Classroom CBT Test',
                         score: finalScore,
                         responseBreakdown: responses,
                       ),
@@ -472,7 +474,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             Row(
               children: [
-                if (student['contact'] != null && student['contact'].toString().contains(RegExp(r'[0-9]'))) ...[
+                if (student['contact'] != null &&
+                    student['contact'].toString().contains(RegExp(r'[0-9]'))) ...[
                   Expanded(
                     child: OutlinedButton.icon(
                       icon: const Icon(Icons.phone_in_talk_rounded, size: 16),
@@ -480,7 +483,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                       style: OutlinedButton.styleFrom(
                         foregroundColor: const Color(0xFF2563EB),
                         side: const BorderSide(color: Color(0xFF2563EB)),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8)),
                       ),
                       onPressed: () => _callOrMessageStudent(student['contact']),
                     ),
@@ -490,17 +494,21 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 Expanded(
                   flex: 2,
                   child: ElevatedButton.icon(
-                    icon: const Icon(Icons.chat_bubble_outline_rounded, size: 16),
+                    icon:
+                        const Icon(Icons.chat_bubble_outline_rounded, size: 16),
                     label: Text('Guide ${student['name']}'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF2563EB),
                       foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(8)),
                     ),
                     onPressed: () {
                       Navigator.pop(ctx);
                       ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('Guidance note sent to ${student['name']}!')),
+                        SnackBar(
+                            content: Text(
+                                'Guidance note sent to ${student['name']}!')),
                       );
                     },
                   ),
@@ -520,8 +528,10 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      backgroundColor:
+          widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setSheetState) {
           final List<String> batchOptions = ['All'];
@@ -534,7 +544,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
           final filteredStudents = _classroomStudents.where((s) {
             if (selectedBatchFilter == 'All') return true;
-            return (s['batch_name'] ?? '').toString().toLowerCase() == selectedBatchFilter.toLowerCase();
+            return (s['batch_name'] ?? '').toString().toLowerCase() ==
+                selectedBatchFilter.toLowerCase();
           }).toList();
 
           return Container(
@@ -549,16 +560,26 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text('📊 Batch Performance Hub', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
-                        Text('Batch-wise student test evaluation', style: TextStyle(fontSize: 11.5, color: Colors.grey[500])),
+                        const Text('📊 Batch Performance Hub',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 17)),
+                        Text('Batch-wise student test evaluation',
+                            style: TextStyle(
+                                fontSize: 11.5, color: Colors.grey[500])),
                       ],
                     ),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                    IconButton(
+                        icon: const Icon(Icons.close),
+                        onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
                 const SizedBox(height: 12),
 
-                const Text('Select Classroom Batch:', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.grey)),
+                const Text('Select Classroom Batch:',
+                    style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.grey)),
                 const SizedBox(height: 6),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
@@ -568,20 +589,34 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                       return Padding(
                         padding: const EdgeInsets.only(right: 8),
                         child: ChoiceChip(
-                          label: Text(bName == 'All' ? '🏫 All Batches (${_classroomStudents.length})' : '📚 $bName'),
+                          label: Text(bName == 'All'
+                              ? '🏫 All Batches (${_classroomStudents.length})'
+                              : '📚 $bName'),
                           selected: isSelected,
                           selectedColor: const Color(0xFF2563EB),
-                          backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+                          backgroundColor: widget.isDarkMode
+                              ? const Color(0xFF1E293B)
+                              : Colors.white,
                           labelStyle: TextStyle(
                             fontSize: 12,
-                            fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
-                            color: isSelected ? Colors.white : (widget.isDarkMode ? Colors.white70 : const Color(0xFF334155)),
+                            fontWeight: isSelected
+                                ? FontWeight.bold
+                                : FontWeight.normal,
+                            color: isSelected
+                                ? Colors.white
+                                : (widget.isDarkMode
+                                    ? Colors.white70
+                                    : const Color(0xFF334155)),
                           ),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(16),
-                            side: BorderSide(color: isSelected ? const Color(0xFF2563EB) : Colors.grey.withOpacity(0.2)),
+                            side: BorderSide(
+                                color: isSelected
+                                    ? const Color(0xFF2563EB)
+                                    : Colors.grey.withOpacity(0.2)),
                           ),
-                          onSelected: (_) => setSheetState(() => selectedBatchFilter = bName),
+                          onSelected: (_) => setSheetState(
+                              () => selectedBatchFilter = bName),
                         ),
                       );
                     }).toList(),
@@ -596,13 +631,16 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(Icons.assignment_late_outlined, size: 48, color: Colors.grey.withOpacity(0.4)),
+                              Icon(Icons.assignment_late_outlined,
+                                  size: 48,
+                                  color: Colors.grey.withOpacity(0.4)),
                               const SizedBox(height: 10),
                               Text(
                                 selectedBatchFilter == 'All'
                                     ? 'Abhi tak kisi student ne submission nahi kiya hai.'
                                     : 'Is batch ($selectedBatchFilter) me koi submission nahi mila.',
-                                style: TextStyle(color: Colors.grey[500], fontSize: 13),
+                                style: TextStyle(
+                                    color: Colors.grey[500], fontSize: 13),
                                 textAlign: TextAlign.center,
                               ),
                             ],
@@ -618,16 +656,22 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               elevation: 0.5,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(12),
-                                side: BorderSide(color: Colors.grey.withOpacity(0.15)),
+                                side: BorderSide(
+                                    color: Colors.grey.withOpacity(0.15)),
                               ),
                               child: ListTile(
-                                contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                                contentPadding: const EdgeInsets.symmetric(
+                                    horizontal: 14, vertical: 6),
                                 leading: CircleAvatar(
                                   radius: 20,
-                                  backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
+                                  backgroundColor: const Color(0xFF2563EB)
+                                      .withOpacity(0.12),
                                   child: Text(
                                     (s['name'] as String)[0].toUpperCase(),
-                                    style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB), fontSize: 16),
+                                    style: const TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        color: Color(0xFF2563EB),
+                                        fontSize: 16),
                                   ),
                                 ),
                                 title: Row(
@@ -635,19 +679,27 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                                     Expanded(
                                       child: Text(
                                         s['name'],
-                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                        style: const TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 14),
                                         overflow: TextOverflow.ellipsis,
                                       ),
                                     ),
                                     Container(
-                                      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                                      padding: const EdgeInsets.symmetric(
+                                          horizontal: 7, vertical: 2),
                                       decoration: BoxDecoration(
-                                        color: const Color(0xFF2563EB).withOpacity(0.1),
-                                        borderRadius: BorderRadius.circular(6),
+                                        color: const Color(0xFF2563EB)
+                                            .withOpacity(0.1),
+                                        borderRadius:
+                                            BorderRadius.circular(6),
                                       ),
                                       child: Text(
                                         s['batch_name'] ?? 'Classroom',
-                                        style: const TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                                        style: const TextStyle(
+                                            fontSize: 10.5,
+                                            fontWeight: FontWeight.bold,
+                                            color: Color(0xFF2563EB)),
                                       ),
                                     ),
                                   ],
@@ -656,28 +708,38 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                                   padding: const EdgeInsets.only(top: 4),
                                   child: Text(
                                     '${s['contact'] != null && s['contact'].toString().isNotEmpty ? "${s['contact']} • " : ""}${s['tests_count']} Tests Attempted',
-                                    style: const TextStyle(fontSize: 12, color: Colors.grey),
+                                    style: const TextStyle(
+                                        fontSize: 12, color: Colors.grey),
                                   ),
                                 ),
                                 trailing: Row(
                                   mainAxisSize: MainAxisSize.min,
                                   children: [
                                     Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      crossAxisAlignment: CrossAxisAlignment.end,
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.end,
                                       children: [
                                         Text(
                                           '${s['accuracy']}%',
-                                          style: const TextStyle(fontWeight: FontWeight.w900, color: Color(0xFF16A34A), fontSize: 15),
+                                          style: const TextStyle(
+                                              fontWeight: FontWeight.w900,
+                                              color: Color(0xFF16A34A),
+                                              fontSize: 15),
                                         ),
-                                        const Text('Accuracy', style: TextStyle(fontSize: 10, color: Colors.grey)),
+                                        const Text('Accuracy',
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                color: Colors.grey)),
                                       ],
                                     ),
                                     const SizedBox(width: 6),
-                                    const Icon(Icons.arrow_forward_ios_rounded, size: 14, color: Colors.grey),
+                                    const Icon(Icons.arrow_forward_ios_rounded,
+                                        size: 14, color: Colors.grey),
                                   ],
                                 ),
-                                onTap: () => _openStudentDetailModal(s, true),
+                                onTap: () => _openStudentDetailModal(s),
                               ),
                             );
                           },
@@ -718,8 +780,10 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      backgroundColor:
+          widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
           padding: EdgeInsets.only(
@@ -736,8 +800,12 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(sheetTitle, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                    Text(sheetTitle,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16)),
+                    IconButton(
+                        icon: const Icon(Icons.close),
+                        onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
                 const SizedBox(height: 10),
@@ -760,7 +828,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                       hintText: 'https://drive.google.com/... or t.me/...',
                       border: OutlineInputBorder(),
                       isDense: true,
-                      prefixIcon: Icon(Icons.link_rounded, color: Color(0xFF2563EB)),
+                      prefixIcon:
+                          Icon(Icons.link_rounded, color: Color(0xFF2563EB)),
                     ),
                   ),
                   const SizedBox(height: 10),
@@ -770,15 +839,21 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   controller: contentCtrl,
                   maxLines: type == 'quiz' ? 2 : 4,
                   decoration: InputDecoration(
-                    labelText: type == 'quiz' ? 'Question Statement' : 'Description / Message for Students',
-                    hintText: type == 'quiz' ? 'Type quiz question here...' : 'Explain key highlights...',
+                    labelText: type == 'quiz'
+                        ? 'Question Statement'
+                        : 'Description / Message for Students',
+                    hintText: type == 'quiz'
+                        ? 'Type quiz question here...'
+                        : 'Explain key highlights...',
                     border: const OutlineInputBorder(),
                   ),
                 ),
                 const SizedBox(height: 10),
 
                 if (type == 'quiz') ...[
-                  const Text('Options & Correct Answer (Tap letter to set correct):', style: TextStyle(fontSize: 11, color: Colors.grey)),
+                  const Text(
+                      'Options & Correct Answer (Tap letter to set correct):',
+                      style: TextStyle(fontSize: 11, color: Colors.grey)),
                   const SizedBox(height: 6),
                   ...List.generate(4, (idx) {
                     final controllers = [opCtrl1, opCtrl2, opCtrl3, opCtrl4];
@@ -791,10 +866,17 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             onTap: () => setModalState(() => correctIdx = idx),
                             child: CircleAvatar(
                               radius: 14,
-                              backgroundColor: isCorrect ? const Color(0xFF16A34A) : Colors.grey.withOpacity(0.3),
+                              backgroundColor: isCorrect
+                                  ? const Color(0xFF16A34A)
+                                  : Colors.grey.withOpacity(0.3),
                               child: Text(
                                 String.fromCharCode(65 + idx),
-                                style: TextStyle(fontSize: 12, color: isCorrect ? Colors.white : Colors.black87, fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                    fontSize: 12,
+                                    color: isCorrect
+                                        ? Colors.white
+                                        : Colors.black87,
+                                    fontWeight: FontWeight.bold),
                               ),
                             ),
                           ),
@@ -803,7 +885,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             child: TextField(
                               controller: controllers[idx],
                               decoration: InputDecoration(
-                                hintText: 'Option ${String.fromCharCode(65 + idx)}',
+                                hintText:
+                                    'Option ${String.fromCharCode(65 + idx)}',
                                 isDense: true,
                                 border: const OutlineInputBorder(),
                               ),
@@ -816,7 +899,10 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   const SizedBox(height: 4),
                   TextField(
                     controller: expCtrl,
-                    decoration: const InputDecoration(labelText: 'Explanation (Optional)', isDense: true, border: OutlineInputBorder()),
+                    decoration: const InputDecoration(
+                        labelText: 'Explanation (Optional)',
+                        isDense: true,
+                        border: OutlineInputBorder()),
                   ),
                   const SizedBox(height: 10),
                 ],
@@ -825,13 +911,18 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   width: double.infinity,
                   height: 44,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF2563EB),
+                        foregroundColor: Colors.white),
                     onPressed: isSubmitting
                         ? null
                         : () async {
                             final rawContent = contentCtrl.text.trim();
                             if (rawContent.isEmpty) {
-                              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Content likhna zaroori hai!')));
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content:
+                                          Text('Content likhna zaroori hai!')));
                               return;
                             }
 
@@ -841,26 +932,40 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                             if (type == 'pdf') {
                               final pTitle = titleCtrl.text.trim();
                               final pLink = linkCtrl.text.trim();
-                              finalContent = '${pTitle.isNotEmpty ? "📑 **$pTitle**\n\n" : ""}$rawContent${pLink.isNotEmpty ? "\n\n🔗 Download Link: $pLink" : ""}';
+                              finalContent =
+                                  '${pTitle.isNotEmpty ? "📑 **$pTitle**\n\n" : ""}$rawContent${pLink.isNotEmpty ? "\n\n🔗 Download Link: $pLink" : ""}';
                             }
 
                             Map<String, dynamic>? pollJson;
                             if (type == 'quiz') {
-                              final rawOptions = [opCtrl1.text.trim(), opCtrl2.text.trim(), opCtrl3.text.trim(), opCtrl4.text.trim()].where((o) => o.isNotEmpty).toList();
+                              final rawOptions = [
+                                opCtrl1.text.trim(),
+                                opCtrl2.text.trim(),
+                                opCtrl3.text.trim(),
+                                opCtrl4.text.trim()
+                              ].where((o) => o.isNotEmpty).toList();
                               if (rawOptions.length >= 2) {
                                 pollJson = {
                                   'options': rawOptions,
-                                  'correct_idx': correctIdx < rawOptions.length ? correctIdx : 0,
+                                  'correct_idx': correctIdx < rawOptions.length
+                                      ? correctIdx
+                                      : 0,
                                   'votes': List.filled(rawOptions.length, 0),
-                                  'exp': expCtrl.text.trim().isNotEmpty ? expCtrl.text.trim() : 'Provided by @${widget.creatorHandle}',
+                                  'exp': expCtrl.text.trim().isNotEmpty
+                                      ? expCtrl.text.trim()
+                                      : 'Provided by @${widget.creatorHandle}',
                                 };
                               }
                             }
 
                             try {
-                              final authorName = _coachingData?['name'] ?? _profile?['name'] ?? widget.creatorHandle;
+                              final authorName = _coachingData?['name'] ??
+                                  _profile?['name'] ??
+                                  widget.creatorHandle;
 
-                              final inserted = await Supabase.instance.client.from('community_posts').insert({
+                              final inserted = await Supabase.instance.client
+                                  .from('community_posts')
+                                  .insert({
                                 'creator_id': widget.creatorHandle,
                                 'author_name': authorName,
                                 'content': finalContent,
@@ -888,19 +993,29 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
                               if (mounted) {
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('✅ $tag successfully published to Feed & Profile!'), backgroundColor: const Color(0xFF16A34A)),
+                                  SnackBar(
+                                      content: Text(
+                                          '✅ $tag successfully published to Feed & Profile!'),
+                                      backgroundColor:
+                                          const Color(0xFF16A34A)),
                                 );
                               }
                             } catch (e) {
                               setModalState(() => isSubmitting = false);
                               if (ctx.mounted) {
-                                ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Publish error: $e')));
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(content: Text('Publish error: $e')));
                               }
                             }
                           },
                     child: isSubmitting
-                        ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                        : const Text('Publish to Community & Profile 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                        ? const SizedBox(
+                            width: 20,
+                            height: 20,
+                            child: CircularProgressIndicator(
+                                color: Colors.white, strokeWidth: 2))
+                        : const Text('Publish to Community & Profile 🚀',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -921,8 +1036,10 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      backgroundColor:
+          widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
           padding: const EdgeInsets.all(16),
@@ -933,17 +1050,24 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text('🖼️ Modify Institute Poster', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                  IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                  const Text('🖼️ Modify Institute Poster',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 16)),
+                  IconButton(
+                      icon: const Icon(Icons.close),
+                      onPressed: () => Navigator.pop(ctx)),
                 ],
               ),
               const SizedBox(height: 6),
-              const Text('Recommended: 1200 x 675 px (16:9 Ratio). High quality photo of billboard/toppers.', style: TextStyle(fontSize: 11.5, color: Colors.grey)),
+              const Text(
+                  'Recommended: 1200 x 675 px (16:9 Ratio). High quality photo of billboard/toppers.',
+                  style: TextStyle(fontSize: 11.5, color: Colors.grey)),
               const SizedBox(height: 12),
 
               GestureDetector(
                 onTap: () async {
-                  final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 85);
+                  final picked = await picker.pickImage(
+                      source: ImageSource.gallery, imageQuality: 85);
                   if (picked != null) {
                     setModalState(() => newImage = File(picked.path));
                   }
@@ -954,13 +1078,24 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   decoration: BoxDecoration(
                     color: Colors.grey.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.3)),
+                    border: Border.all(
+                        color: const Color(0xFF2563EB).withOpacity(0.3)),
                   ),
                   child: newImage != null
-                      ? ClipRRect(borderRadius: BorderRadius.circular(14), child: Image.file(newImage!, fit: BoxFit.cover))
+                      ? ClipRRect(
+                          borderRadius: BorderRadius.circular(14),
+                          child: Image.file(newImage!, fit: BoxFit.cover))
                       : (currentUrl.isNotEmpty
-                          ? ClipRRect(borderRadius: BorderRadius.circular(14), child: Image.network(currentUrl, fit: BoxFit.cover))
-                          : const Center(child: Text('Tap to pick image from gallery 📷', style: TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold)))),
+                          ? ClipRRect(
+                              borderRadius: BorderRadius.circular(14),
+                              child: Image.network(currentUrl,
+                                  fit: BoxFit.cover))
+                          : const Center(
+                              child: Text(
+                                  'Tap to pick image from gallery 📷',
+                                  style: TextStyle(
+                                      color: Color(0xFF2563EB),
+                                      fontWeight: FontWeight.bold)))),
                 ),
               ),
               const SizedBox(height: 16),
@@ -969,7 +1104,9 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 width: double.infinity,
                 height: 44,
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF2563EB),
+                      foregroundColor: Colors.white),
                   onPressed: (isSaving || newImage == null)
                       ? null
                       : () async {
@@ -977,27 +1114,41 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                           try {
                             final bytes = await newImage!.readAsBytes();
                             final fileExt = newImage!.path.split('.').last;
-                            final fileName = 'banner_${widget.creatorHandle}_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
+                            final fileName =
+                                'banner_${widget.creatorHandle}_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
 
                             await Supabase.instance.client.storage
                                 .from('coaching_assets')
-                                .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true));
+                                .uploadBinary(fileName, bytes,
+                                    fileOptions: FileOptions(
+                                        contentType: 'image/$fileExt',
+                                        upsert: true));
 
-                            final updatedUrl = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
+                            final updatedUrl = Supabase.instance.client.storage
+                                .from('coaching_assets')
+                                .getPublicUrl(fileName);
 
                             await Supabase.instance.client
                                 .from('coachings')
-                                .update({'banner_url': updatedUrl})
-                                .eq('owner_name', widget.creatorHandle);
+                                .update({'banner_url': updatedUrl}).eq(
+                                    'id', _coachingData?['id']);
 
                             if (ctx.mounted) Navigator.pop(ctx);
                             _loadCompleteAnalytics();
-                            if (mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('✅ Banner Updated!'), backgroundColor: Color(0xFF16A34A)));
+                            if (mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content: Text('✅ Banner Updated!'),
+                                      backgroundColor: Color(0xFF16A34A)));
+                            }
                           } catch (e) {
                             setModalState(() => isSaving = false);
                           }
                         },
-                  child: isSaving ? const CircularProgressIndicator(color: Colors.white) : const Text('Save New Poster 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                  child: isSaving
+                      ? const CircularProgressIndicator(color: Colors.white)
+                      : const Text('Save New Poster 🚀',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
               ),
             ],
@@ -1008,26 +1159,40 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
   }
 
   void _openDetailsModifierSheet() {
-    final nameCtrl = TextEditingController(text: _coachingData?['name'] ?? _profile?['name'] ?? '');
-    final landmarkCtrl = TextEditingController(text: _coachingData?['landmark_address'] ?? '');
-    final contactCtrl = TextEditingController(text: _coachingData?['contact_number'] ?? '');
+    final nameCtrl = TextEditingController(
+        text: _coachingData?['name'] ?? _profile?['name'] ?? '');
+    final landmarkCtrl =
+        TextEditingController(text: _coachingData?['landmark_address'] ?? '');
+    final contactCtrl =
+        TextEditingController(text: _coachingData?['contact_number'] ?? '');
 
     String selectedDistrict = _coachingData?['district'] ?? 'Patna';
-    if (!kBiharDistrictCityMap.containsKey(selectedDistrict)) selectedDistrict = 'Patna';
-    List<String> availableCities = kBiharDistrictCityMap[selectedDistrict] ?? ['Other / Rural Area'];
+    if (!kBiharDistrictCityMap.containsKey(selectedDistrict)) {
+      selectedDistrict = 'Patna';
+    }
+    List<String> availableCities =
+        kBiharDistrictCityMap[selectedDistrict] ?? ['Other / Rural Area'];
     String selectedCity = _coachingData?['city'] ?? availableCities.first;
-    if (!availableCities.contains(selectedCity)) selectedCity = availableCities.first;
+    if (!availableCities.contains(selectedCity)) {
+      selectedCity = availableCities.first;
+    }
 
     bool isSaving = false;
 
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      backgroundColor:
+          widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          padding: EdgeInsets.only(
+              bottom: MediaQuery.of(ctx).viewInsets.bottom,
+              left: 16,
+              right: 16,
+              top: 16),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -1036,27 +1201,40 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('📍 Modify Coaching Details', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                    const Text('📍 Modify Coaching Details',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16)),
+                    IconButton(
+                        icon: const Icon(Icons.close),
+                        onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
                 const SizedBox(height: 10),
 
                 TextField(
                   controller: nameCtrl,
-                  decoration: const InputDecoration(labelText: 'Coaching Title', border: OutlineInputBorder(), isDense: true),
+                  decoration: const InputDecoration(
+                      labelText: 'Coaching Title',
+                      border: OutlineInputBorder(),
+                      isDense: true),
                 ),
                 const SizedBox(height: 10),
 
                 DropdownButtonFormField<String>(
                   value: selectedDistrict,
-                  decoration: const InputDecoration(labelText: 'District (38 Districts)', border: OutlineInputBorder(), isDense: true),
-                  items: kBiharDistrictCityMap.keys.map((d) => DropdownMenuItem(value: d, child: Text(d))).toList(),
+                  decoration: const InputDecoration(
+                      labelText: 'District (38 Districts)',
+                      border: OutlineInputBorder(),
+                      isDense: true),
+                  items: kBiharDistrictCityMap.keys
+                      .map((d) => DropdownMenuItem(value: d, child: Text(d)))
+                      .toList(),
                   onChanged: (val) {
                     if (val != null) {
                       setModalState(() {
                         selectedDistrict = val;
-                        availableCities = kBiharDistrictCityMap[val] ?? ['Other / Rural Area'];
+                        availableCities = kBiharDistrictCityMap[val] ??
+                            ['Other / Rural Area'];
                         selectedCity = availableCities.first;
                       });
                     }
@@ -1066,8 +1244,13 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
                 DropdownButtonFormField<String>(
                   value: selectedCity,
-                  decoration: const InputDecoration(labelText: 'Town / Education Hub', border: OutlineInputBorder(), isDense: true),
-                  items: availableCities.map((c) => DropdownMenuItem(value: c, child: Text(c))).toList(),
+                  decoration: const InputDecoration(
+                      labelText: 'Town / Education Hub',
+                      border: OutlineInputBorder(),
+                      isDense: true),
+                  items: availableCities
+                      .map((c) => DropdownMenuItem(value: c, child: Text(c)))
+                      .toList(),
                   onChanged: (val) => setModalState(() => selectedCity = val!),
                 ),
                 const SizedBox(height: 10),
@@ -1077,7 +1260,10 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                     Expanded(
                       child: TextField(
                         controller: landmarkCtrl,
-                        decoration: const InputDecoration(labelText: 'Landmark / Area', border: OutlineInputBorder(), isDense: true),
+                        decoration: const InputDecoration(
+                            labelText: 'Landmark / Area',
+                            border: OutlineInputBorder(),
+                            isDense: true),
                       ),
                     ),
                     const SizedBox(width: 8),
@@ -1085,7 +1271,10 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                       child: TextField(
                         controller: contactCtrl,
                         keyboardType: TextInputType.phone,
-                        decoration: const InputDecoration(labelText: 'Helpline No.', border: OutlineInputBorder(), isDense: true),
+                        decoration: const InputDecoration(
+                            labelText: 'Helpline No.',
+                            border: OutlineInputBorder(),
+                            isDense: true),
                       ),
                     ),
                   ],
@@ -1096,35 +1285,50 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                   width: double.infinity,
                   height: 44,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF16A34A), foregroundColor: Colors.white),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF16A34A),
+                        foregroundColor: Colors.white),
                     onPressed: isSaving
                         ? null
                         : () async {
                             setModalState(() => isSaving = true);
                             try {
-                              final updatedName = nameCtrl.text.trim().isNotEmpty ? nameCtrl.text.trim() : (_coachingData?['name'] ?? widget.creatorHandle);
+                              final updatedName = nameCtrl.text.trim().isNotEmpty
+                                  ? nameCtrl.text.trim()
+                                  : (_coachingData?['name'] ??
+                                      widget.creatorHandle);
 
-                              await Supabase.instance.client.from('coachings').update({
+                              await Supabase.instance.client
+                                  .from('coachings')
+                                  .update({
                                 'name': updatedName,
                                 'district': selectedDistrict,
                                 'city': selectedCity,
                                 'landmark_address': landmarkCtrl.text.trim(),
                                 'contact_number': contactCtrl.text.trim(),
-                              }).eq('owner_name', widget.creatorHandle);
+                              }).eq('id', _coachingData?['id']);
 
                               await Supabase.instance.client
                                   .from('creator_profiles')
-                                  .update({'name': updatedName})
-                                  .eq('handle_id', widget.creatorHandle);
+                                  .update({'name': updatedName}).eq(
+                                      'handle_id', widget.creatorHandle);
 
                               if (ctx.mounted) Navigator.pop(ctx);
                               _loadCompleteAnalytics();
-                              if (mounted) ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('✅ Details Saved!'), backgroundColor: Color(0xFF16A34A)));
+                              if (mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                    const SnackBar(
+                                        content: Text('✅ Details Saved!'),
+                                        backgroundColor: Color(0xFF16A34A)));
+                              }
                             } catch (_) {
                               setModalState(() => isSaving = false);
                             }
                           },
-                    child: isSaving ? const CircularProgressIndicator(color: Colors.white) : const Text('Save Details 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                    child: isSaving
+                        ? const CircularProgressIndicator(color: Colors.white)
+                        : const Text('Save Details 🚀',
+                            style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -1145,11 +1349,17 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      backgroundColor:
+          widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          padding: EdgeInsets.only(
+              bottom: MediaQuery.of(ctx).viewInsets.bottom,
+              left: 16,
+              right: 16,
+              top: 16),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -1158,15 +1368,28 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('🏫 Manage Classroom Batches', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                    const Text('🏫 Manage Classroom Batches',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 16)),
+                    IconButton(
+                        icon: const Icon(Icons.close),
+                        onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
                 const SizedBox(height: 8),
 
+                if (_batches.isEmpty)
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 14),
+                    child: Center(
+                      child: Text('Koi purana batch nahi mila.',
+                          style: TextStyle(
+                              color: Colors.grey[500], fontSize: 12)),
+                    ),
+                  ),
+
                 ...List.generate(_batches.length, (idx) {
                   final b = _batches[idx];
-                  final List tests = b['batch_tests'] ?? [];
                   final String bStatus = b['status'] ?? 'LIVE';
                   final bool isHidden = bStatus == 'HIDDEN';
 
@@ -1174,7 +1397,11 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                     margin: const EdgeInsets.only(bottom: 8),
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: isHidden ? Colors.grey.withOpacity(0.1) : (widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC)),
+                      color: isHidden
+                          ? Colors.grey.withOpacity(0.1)
+                          : (widget.isDarkMode
+                              ? const Color(0xFF0F172A)
+                              : const Color(0xFFF8FAFC)),
                       borderRadius: BorderRadius.circular(12),
                       border: Border.all(color: Colors.grey.withOpacity(0.18)),
                     ),
@@ -1184,30 +1411,46 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(b['batch_name'] ?? 'Batch', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                              Text(b['batch_name'] ?? 'Batch',
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 14)),
                               const SizedBox(height: 2),
-                              Text('CODE: ${b['batch_code']} • ${tests.length} CBT Tests', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                              Text(
+                                  'CODE: ${b['batch_code']} • Status: $bStatus',
+                                  style: const TextStyle(
+                                      fontSize: 11, color: Colors.grey)),
                             ],
                           ),
                         ),
                         IconButton(
-                          icon: const Icon(Icons.copy_rounded, size: 18, color: Color(0xFF16A34A)),
+                          icon: const Icon(Icons.copy_rounded,
+                              size: 18, color: Color(0xFF16A34A)),
                           onPressed: () {
-                            Clipboard.setData(ClipboardData(text: b['batch_code']));
-                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Copied Code: ${b['batch_code']}')));
+                            Clipboard.setData(
+                                ClipboardData(text: b['batch_code'] ?? ''));
+                            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                                content:
+                                    Text('Copied Code: ${b['batch_code']}')));
                           },
                         ),
                         PopupMenuButton<String>(
                           icon: const Icon(Icons.more_vert_rounded),
                           onSelected: (val) async {
-                            await Supabase.instance.client.from('batches').update({'status': val}).eq('id', b['id']);
+                            await Supabase.instance.client
+                                .from('batches')
+                                .update({'status': val}).eq('id', b['id']);
                             _loadCompleteAnalytics();
                             Navigator.pop(ctx);
                           },
                           itemBuilder: (_) => [
-                            const PopupMenuItem(value: 'LIVE', child: Text('🟢 Set LIVE')),
-                            const PopupMenuItem(value: 'UPCOMING', child: Text('⏳ Set UPCOMING')),
-                            const PopupMenuItem(value: 'HIDDEN', child: Text('⚪ HIDE Batch')),
+                            const PopupMenuItem(
+                                value: 'LIVE', child: Text('🟢 Set LIVE')),
+                            const PopupMenuItem(
+                                value: 'UPCOMING',
+                                child: Text('⏳ Set UPCOMING')),
+                            const PopupMenuItem(
+                                value: 'HIDDEN', child: Text('⚪ HIDE Batch')),
                           ],
                         ),
                       ],
@@ -1216,29 +1459,47 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 }),
 
                 const Divider(height: 20),
-                const Text('+ Add New Batch', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                const Text('+ Add New Batch',
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
                 const SizedBox(height: 8),
 
-                TextField(controller: batchNameCtrl, decoration: const InputDecoration(labelText: 'Batch Name', border: OutlineInputBorder(), isDense: true)),
+                TextField(
+                    controller: batchNameCtrl,
+                    decoration: const InputDecoration(
+                        labelText: 'Batch Name',
+                        border: OutlineInputBorder(),
+                        isDense: true)),
                 const SizedBox(height: 8),
-                TextField(controller: batchCodeCtrl, textCapitalization: TextCapitalization.characters, decoration: const InputDecoration(labelText: 'Join Code (Password)', border: OutlineInputBorder(), isDense: true)),
+                TextField(
+                    controller: batchCodeCtrl,
+                    textCapitalization: TextCapitalization.characters,
+                    decoration: const InputDecoration(
+                        labelText: 'Join Code (Password)',
+                        border: OutlineInputBorder(),
+                        isDense: true)),
                 const SizedBox(height: 12),
 
                 SizedBox(
                   width: double.infinity,
                   height: 42,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF2563EB),
+                        foregroundColor: Colors.white),
                     onPressed: isCreating
                         ? null
                         : () async {
                             final bName = batchNameCtrl.text.trim();
-                            final bCode = batchCodeCtrl.text.trim().toUpperCase();
+                            final bCode =
+                                batchCodeCtrl.text.trim().toUpperCase();
                             if (bName.isEmpty || bCode.isEmpty) return;
 
                             setModalState(() => isCreating = true);
                             try {
-                              await Supabase.instance.client.from('batches').insert({
+                              await Supabase.instance.client
+                                  .from('batches')
+                                  .insert({
                                 'coaching_id': _coachingData?['id'],
                                 'batch_name': bName,
                                 'batch_code': bCode,
@@ -1250,7 +1511,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                               setModalState(() => isCreating = false);
                             }
                           },
-                    child: const Text('Create Batch Code 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                    child: const Text('Create Batch Code 🚀',
+                        style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                 ),
                 const SizedBox(height: 12),
@@ -1265,17 +1527,21 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
-    final bgSurface = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
+    final bgSurface =
+        isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
     final cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
 
     if (_isLoading) {
-      return Scaffold(backgroundColor: bgSurface, body: const Center(child: CircularProgressIndicator()));
+      return Scaffold(
+          backgroundColor: bgSurface,
+          body: const Center(child: CircularProgressIndicator()));
     }
 
     return Scaffold(
       backgroundColor: bgSurface,
       appBar: AppBar(
-        title: const Text('Institute Studio & Hub', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
+        title: const Text('Institute Studio & Hub',
+            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)),
         actions: [
           IconButton(
             icon: const Icon(Icons.refresh_rounded),
@@ -1290,7 +1556,9 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             tooltip: 'View Profile',
             onPressed: () => Navigator.push(
               context,
-              MaterialPageRoute(builder: (_) => CreatorProfileScreen(creatorHandle: widget.creatorHandle, isDarkMode: isDark)),
+              MaterialPageRoute(
+                  builder: (_) => CreatorProfileScreen(
+                      creatorHandle: widget.creatorHandle, isDarkMode: isDark)),
             ),
           ),
         ],
@@ -1305,21 +1573,31 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               decoration: BoxDecoration(
                 color: cardBg,
                 borderRadius: BorderRadius.circular(16),
-                border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.2)),
+                border: Border.all(
+                    color: const Color(0xFF2563EB).withOpacity(0.2)),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(_coachingData?['name'] ?? 'Coaching Hub', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                  Text('@${widget.creatorHandle} • ${_coachingData?['city'] ?? "Bihar"}', style: const TextStyle(color: Colors.grey, fontSize: 12)),
+                  Text(_coachingData?['name'] ?? 'Coaching Hub',
+                      style: const TextStyle(
+                          fontSize: 18, fontWeight: FontWeight.bold)),
+                  Text(
+                      '@${widget.creatorHandle} • ${_coachingData?['city'] ?? "Bihar"}',
+                      style:
+                          const TextStyle(color: Colors.grey, fontSize: 12)),
                   const Divider(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _buildMetricItem('Students', '$_totalBatchStudents', Icons.groups_outlined),
-                      _buildMetricItem('Batches', '${_batches.length}', Icons.class_outlined),
-                      _buildMetricItem('Attempts', '$_totalMockAttempts', Icons.bolt_rounded),
-                      _buildMetricItem('Views', '$_totalViews', Icons.remove_red_eye_outlined),
+                      _buildMetricItem('Students', '$_totalBatchStudents',
+                          Icons.groups_outlined),
+                      _buildMetricItem('Batches', '${_batches.length}',
+                          Icons.class_outlined),
+                      _buildMetricItem('Attempts', '$_totalMockAttempts',
+                          Icons.bolt_rounded),
+                      _buildMetricItem('Views', '$_totalViews',
+                          Icons.remove_red_eye_outlined),
                     ],
                   ),
                 ],
@@ -1329,19 +1607,22 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             _buildActionCard(
               title: 'Student Performance Intelligence 📊',
-              subtitle: 'Track batch students, accuracy and detailed question breakdowns.',
+              subtitle:
+                  'Track batch students, accuracy and detailed question breakdowns.',
               icon: Icons.insights_rounded,
               color: const Color(0xFF2563EB),
               onTap: _openStudentIntelligenceSheet,
             ),
             const SizedBox(height: 14),
 
-            const Text('Modify Institute & Batches', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            const Text('Modify Institute & Batches',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
 
             _buildActionCard(
               title: 'Modify Banner / Poster 🖼️',
-              subtitle: 'Change 16:9 billboard photo without affecting address or details.',
+              subtitle:
+                  'Change 16:9 billboard photo without affecting address or details.',
               icon: Icons.photo_library_outlined,
               color: const Color(0xFF2563EB),
               onTap: _openBannerModifierSheet,
@@ -1349,7 +1630,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             _buildActionCard(
               title: 'Edit Location & Details 📍',
-              subtitle: 'Update district, education hub, landmark address or helpline number.',
+              subtitle:
+                  'Update district, education hub, landmark address or helpline number.',
               icon: Icons.edit_location_alt_outlined,
               color: const Color(0xFF16A34A),
               onTap: _openDetailsModifierSheet,
@@ -1357,30 +1639,37 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             _buildActionCard(
               title: 'Manage Batches & Codes 🏫',
-              subtitle: 'Add new batch, toggle LIVE / UPCOMING / HIDE, copy secret code.',
+              subtitle:
+                  'Add new batch, toggle LIVE / UPCOMING / HIDE, copy secret code.',
               icon: Icons.vpn_key_outlined,
               color: const Color(0xFFEA580C),
               onTap: _openBatchManagerModal,
             ),
             const SizedBox(height: 16),
 
-            const Text('Publish Content & Tests', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            const Text('Publish Content & Tests',
+                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
 
             _buildActionCard(
               title: 'Create CBT Mock Test ⚡',
-              subtitle: 'Build timed CBT tests for public feed or private classroom batches.',
+              subtitle:
+                  'Build timed CBT tests for public feed or private classroom batches.',
               icon: Icons.assignment_add,
               color: const Color(0xFF8B5CF6),
               onTap: () => Navigator.push(
                 context,
-                MaterialPageRoute(builder: (_) => CreatorMockBuilderScreen(creatorHandle: widget.creatorHandle, isDarkMode: isDark)),
+                MaterialPageRoute(
+                    builder: (_) => CreatorMockBuilderScreen(
+                        creatorHandle: widget.creatorHandle,
+                        isDarkMode: isDark)),
               ).then((_) => _loadCompleteAnalytics()),
             ),
 
             _buildActionCard(
               title: 'Share PDF Notes & Handouts 📚',
-              subtitle: 'Post Google Drive, Telegram or download links for student notes.',
+              subtitle:
+                  'Post Google Drive, Telegram or download links for student notes.',
               icon: Icons.picture_as_pdf_outlined,
               color: const Color(0xFF059669),
               onTap: () => _openContentPublishSheet('pdf'),
@@ -1388,7 +1677,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             _buildActionCard(
               title: 'Publish Daily Rapid Quiz 🎯',
-              subtitle: 'Create 4-option instant polls with solution on community feed.',
+              subtitle:
+                  'Create 4-option instant polls with solution on community feed.',
               icon: Icons.poll_outlined,
               color: const Color(0xFF2563EB),
               onTap: () => _openContentPublishSheet('quiz'),
@@ -1396,7 +1686,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
 
             _buildActionCard(
               title: 'Post Notice & Announcement 📢',
-              subtitle: 'Share batch timing, examination updates, or results celebrations.',
+              subtitle:
+                  'Share batch timing, examination updates, or results celebrations.',
               icon: Icons.campaign_outlined,
               color: const Color(0xFFD97706),
               onTap: () => _openContentPublishSheet('notice'),
@@ -1412,7 +1703,9 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
       children: [
         Icon(icon, size: 20, color: const Color(0xFF2563EB)),
         const SizedBox(height: 4),
-        Text(value, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+        Text(value,
+            style:
+                const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
         Text(label, style: TextStyle(color: Colors.grey[500], fontSize: 11)),
       ],
     );
@@ -1442,7 +1735,9 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             children: [
               Container(
                 padding: const EdgeInsets.all(10),
-                decoration: BoxDecoration(color: color.withOpacity(0.12), borderRadius: BorderRadius.circular(10)),
+                decoration: BoxDecoration(
+                    color: color.withOpacity(0.12),
+                    borderRadius: BorderRadius.circular(10)),
                 child: Icon(icon, color: color, size: 22),
               ),
               const SizedBox(width: 12),
@@ -1450,9 +1745,13 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                    Text(title,
+                        style: const TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 14)),
                     const SizedBox(height: 2),
-                    Text(subtitle, style: TextStyle(color: Colors.grey[500], fontSize: 11.5)),
+                    Text(subtitle,
+                        style: TextStyle(
+                            color: Colors.grey[500], fontSize: 11.5)),
                   ],
                 ),
               ),
