@@ -5,6 +5,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
+import 'batch_classroom_screen.dart';
 import 'sectional_cbt_screen.dart';
 
 class CreatorProfileScreen extends StatefulWidget {
@@ -58,7 +59,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
 
   Future<void> _loadInitialData() async {
     final prefs = await SharedPreferences.getInstance();
-    _currentLoggedInHandle = prefs.getString('logged_in_creator_handle') ?? 'user';
+    _currentLoggedInHandle =
+        prefs.getString('logged_in_creator_handle') ?? 'user';
 
     // Pehle Profile aur Coaching load karein taaki Coaching ID mil sake
     await _fetchProfileAndCoaching();
@@ -115,12 +117,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       if (_coaching == null) return;
       final coachingId = _coaching!['id'];
 
-      // ✅ SAHI QUERY: batches table coaching_id se link hai
       final res = await Supabase.instance.client
           .from('batches')
           .select('*')
           .eq('coaching_id', coachingId)
-          .neq('status', 'HIDDEN') // Hidden wale na dikhein
+          .neq('status', 'HIDDEN')
           .order('created_at', ascending: false);
 
       _batches = res ?? [];
@@ -261,7 +262,10 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           ],
         ),
         actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Cancel'),
+          ),
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor: _primaryBlue,
@@ -272,21 +276,38 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
               final actual = (batch['batch_code'] ?? '').toString().trim();
               Navigator.pop(ctx);
 
-              if (entered.isNotEmpty && entered.toUpperCase() == actual.toUpperCase()) {
+              if (entered.isNotEmpty &&
+                  entered.toUpperCase() == actual.toUpperCase()) {
                 final prefs = await SharedPreferences.getInstance();
-                await prefs.setString('unlocked_batch_${batch['id']}', 'true');
-                setState(() {});
+                await prefs.setBool('unlocked_batch_${batch['id']}', true);
+
+                if (!mounted) return;
 
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
-                    content: Text('🎉 Batch Unlocked Successfully!'),
+                    content: Text('🎉 Batch Unlocked Successfully! Entering Classroom...'),
                     backgroundColor: Color(0xFF16A34A),
+                    duration: Duration(seconds: 1),
+                  ),
+                );
+
+                setState(() {});
+
+                // 🚀 Code verify hone par seedhe BatchClassroomScreen kholenge
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => BatchClassroomScreen(
+                      batchData: batch,
+                      isDarkMode: widget.isDarkMode,
+                    ),
                   ),
                 );
               } else {
+                if (!mounted) return;
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
-                    content: Text('Incorrect Batch Code. Please contact coaching.'),
+                    content: Text('❌ Incorrect Batch Code. Please contact coaching.'),
                     backgroundColor: Colors.red,
                   ),
                 );
@@ -387,7 +408,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                           child: CircleAvatar(
                             radius: 34,
                             backgroundColor: _primaryBlue,
-                            backgroundImage: (logoUrl != null && logoUrl.toString().isNotEmpty)
+                            backgroundImage: (logoUrl != null &&
+                                    logoUrl.toString().isNotEmpty)
                                 ? NetworkImage(logoUrl)
                                 : null,
                             child: (logoUrl == null || logoUrl.toString().isEmpty)
@@ -407,19 +429,28 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                           padding: const EdgeInsets.only(bottom: 6),
                           child: OutlinedButton.icon(
                             style: OutlinedButton.styleFrom(
-                              backgroundColor: _isFollowing ? _primaryBlue : Colors.transparent,
-                              foregroundColor: _isFollowing ? Colors.white : _primaryBlue,
-                              side: const BorderSide(color: _primaryBlue, width: 1.2),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                              backgroundColor: _isFollowing
+                                  ? _primaryBlue
+                                  : Colors.transparent,
+                              foregroundColor:
+                                  _isFollowing ? Colors.white : _primaryBlue,
+                              side: const BorderSide(
+                                  color: _primaryBlue, width: 1.2),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20)),
+                              padding: const EdgeInsets.symmetric(
+                                  horizontal: 16, vertical: 8),
                             ),
                             icon: Icon(
-                              _isFollowing ? Icons.check_rounded : Icons.add_rounded,
+                              _isFollowing
+                                  ? Icons.check_rounded
+                                  : Icons.add_rounded,
                               size: 16,
                             ),
                             label: Text(
                               _isFollowing ? 'Following' : 'Follow',
-                              style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.w700, fontSize: 13),
                             ),
                             onPressed: _toggleFollow,
                           ),
@@ -452,7 +483,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                     const SizedBox(height: 8),
                     Row(
                       children: [
-                        const Icon(Icons.location_on_outlined, size: 14, color: Colors.grey),
+                        const Icon(Icons.location_on_outlined,
+                            size: 14, color: Colors.grey),
                         const SizedBox(width: 4),
                         Expanded(
                           child: Text(
@@ -461,7 +493,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                                 : '$district, Bihar',
                             style: TextStyle(
                               fontSize: 12,
-                              color: isDark ? Colors.grey[300] : const Color(0xFF475569),
+                              color: isDark
+                                  ? Colors.grey[300]
+                                  : const Color(0xFF475569),
                             ),
                             overflow: TextOverflow.ellipsis,
                           ),
@@ -494,7 +528,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                         borderRadius: BorderRadius.circular(10),
                         child: Container(
                           width: double.infinity,
-                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 14, vertical: 10),
                           decoration: BoxDecoration(
                             color: isDark
                                 ? const Color(0xFF1E3A8A).withOpacity(0.3)
@@ -509,7 +544,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                           ),
                           child: const Row(
                             children: [
-                              Icon(Icons.near_me_rounded, color: Color(0xFF0284C7), size: 16),
+                              Icon(Icons.near_me_rounded,
+                                  color: Color(0xFF0284C7), size: 16),
                               SizedBox(width: 8),
                               Expanded(
                                 child: Text(
@@ -521,7 +557,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                                   ),
                                 ),
                               ),
-                              Icon(Icons.arrow_forward_rounded, size: 15, color: Color(0xFF0284C7)),
+                              Icon(Icons.arrow_forward_rounded,
+                                  size: 15, color: Color(0xFF0284C7)),
                             ],
                           ),
                         ),
@@ -540,7 +577,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                   indicatorWeight: 2.8,
                   labelColor: isDark ? Colors.white : _primaryBlue,
                   unselectedLabelColor: const Color(0xFF64748B),
-                  labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                  labelStyle: const TextStyle(
+                      fontWeight: FontWeight.bold, fontSize: 13.5),
                   tabs: [
                     Tab(text: 'Batches (${_batches.length})'),
                     Tab(text: 'Mocks (${_mocks.length})'),
@@ -584,74 +622,143 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   Widget _buildBatchesTab(Color cardSurface, Color dividerColor, bool isDark) {
     if (_batches.isEmpty) {
       return Center(
-        child: Text('No active batches listed yet.', style: TextStyle(color: Colors.grey[500])),
+        child: Text('No active batches listed yet.',
+            style: TextStyle(color: Colors.grey[500])),
       );
     }
 
-    return ListView.separated(
-      padding: EdgeInsets.zero,
-      itemCount: _batches.length,
-      separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
-      itemBuilder: (context, idx) {
-        final b = _batches[idx];
-        final String status = b['status'] ?? 'LIVE';
-        final isLive = status == 'LIVE';
+    return FutureBuilder<SharedPreferences>(
+      future: SharedPreferences.getInstance(),
+      builder: (context, snapshot) {
+        final prefs = snapshot.data;
 
-        return Container(
-          color: cardSurface,
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        return ListView.separated(
+          padding: EdgeInsets.zero,
+          itemCount: _batches.length,
+          separatorBuilder: (_, __) =>
+              Divider(height: 1, thickness: 0.8, color: dividerColor),
+          itemBuilder: (context, idx) {
+            final b = _batches[idx];
+            final String batchId = b['id']?.toString() ?? '';
+
+            // Check: Kya user ne ye specific batch unlock kiya hua hai?
+            final bool isUnlocked =
+                prefs?.getBool('unlocked_batch_$batchId') ?? false;
+
+            return Container(
+              color: cardSurface,
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(
-                    child: Text(
-                      b['batch_name'] ?? 'Classroom Batch',
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
-                    ),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
-                    decoration: BoxDecoration(
-                      color: isLive
-                          ? const Color(0xFF16A34A).withOpacity(0.12)
-                          : Colors.amber.withOpacity(0.15),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: Text(
-                      status,
-                      style: TextStyle(
-                        fontSize: 10,
-                        fontWeight: FontWeight.bold,
-                        color: isLive ? const Color(0xFF16A34A) : Colors.amber.shade900,
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: Text(
+                          b['batch_name'] ?? 'Classroom Batch',
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 14.5),
+                        ),
                       ),
-                    ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 7, vertical: 2.5),
+                        decoration: BoxDecoration(
+                          color: isUnlocked
+                              ? const Color(0xFF16A34A).withOpacity(0.12)
+                              : Colors.redAccent.withOpacity(0.12),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(
+                              isUnlocked
+                                  ? Icons.lock_open_rounded
+                                  : Icons.lock_outline_rounded,
+                              size: 12,
+                              color: isUnlocked
+                                  ? const Color(0xFF16A34A)
+                                  : Colors.redAccent,
+                            ),
+                            const SizedBox(width: 3),
+                            Text(
+                              isUnlocked ? 'UNLOCKED' : 'LOCKED',
+                              style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.bold,
+                                color: isUnlocked
+                                    ? const Color(0xFF16A34A)
+                                    : Colors.redAccent,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 6),
+                  Text(
+                    b['target_pattern'] ??
+                        'Based on standard examination pattern',
+                    style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                  ),
+                  const SizedBox(height: 10),
+
+                  // Dynamic Action Button: Unlocked -> Direct Entry, Locked -> Code Input
+                  SizedBox(
+                    height: 34,
+                    child: isUnlocked
+                        ? ElevatedButton.icon(
+                            icon: const Icon(Icons.meeting_room_rounded,
+                                size: 15),
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFF16A34A),
+                              foregroundColor: Colors.white,
+                              elevation: 0,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
+                            ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (_) => BatchClassroomScreen(
+                                    batchData: b,
+                                    isDarkMode: isDark,
+                                  ),
+                                ),
+                              );
+                            },
+                            label: const Text(
+                              'Enter Classroom 🚀',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold),
+                            ),
+                          )
+                        : OutlinedButton.icon(
+                            icon: const Icon(Icons.vpn_key_rounded, size: 14),
+                            style: OutlinedButton.styleFrom(
+                              foregroundColor: _primaryBlue,
+                              side: const BorderSide(
+                                  color: _primaryBlue, width: 1),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
+                            ),
+                            onPressed: () => _openUnlockBatchDialog(b),
+                            label: const Text(
+                              'Unlock with Code',
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold),
+                            ),
+                          ),
                   ),
                 ],
               ),
-              const SizedBox(height: 6),
-              Text(
-                b['target_pattern'] ?? 'Based on standard examination pattern',
-                style: TextStyle(fontSize: 12, color: Colors.grey[600]),
-              ),
-              const SizedBox(height: 10),
-              SizedBox(
-                height: 34,
-                child: OutlinedButton.icon(
-                  icon: const Icon(Icons.vpn_key_rounded, size: 14),
-                  style: OutlinedButton.styleFrom(
-                    foregroundColor: _primaryBlue,
-                    side: const BorderSide(color: _primaryBlue, width: 1),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                  ),
-                  onPressed: () => _openUnlockBatchDialog(b),
-                  label: const Text('Unlock Classroom', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                ),
-              ),
-            ],
-          ),
+            );
+          },
         );
       },
     );
@@ -660,14 +767,16 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   Widget _buildMocksTab(Color cardSurface, Color dividerColor, bool isDark) {
     if (_mocks.isEmpty) {
       return Center(
-        child: Text('No open practice mocks available.', style: TextStyle(color: Colors.grey[500])),
+        child: Text('No open practice mocks available.',
+            style: TextStyle(color: Colors.grey[500])),
       );
     }
 
     return ListView.separated(
       padding: EdgeInsets.zero,
       itemCount: _mocks.length,
-      separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
+      separatorBuilder: (_, __) =>
+          Divider(height: 1, thickness: 0.8, color: dividerColor),
       itemBuilder: (context, idx) {
         final m = _mocks[idx];
         final totalQs = (m['questions_json'] as List?)?.length ?? 0;
@@ -676,7 +785,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
 
         return Container(
           color: cardSurface,
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          padding:
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -684,26 +794,32 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 7, vertical: 2),
                     decoration: BoxDecoration(
                       color: _primaryBlue.withOpacity(0.08),
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Text(
                       (m['subject'] ?? 'General').toString().toUpperCase(),
-                      style: const TextStyle(color: _primaryBlue, fontSize: 10.5, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          color: _primaryBlue,
+                          fontSize: 10.5,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                   Text(
                     '$attempts attempts',
-                    style: TextStyle(fontSize: 11.5, color: Colors.grey[500]),
+                    style:
+                        TextStyle(fontSize: 11.5, color: Colors.grey[500]),
                   ),
                 ],
               ),
               const SizedBox(height: 6),
               Text(
                 m['title'] ?? 'Practice Mock Test',
-                style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
+                style: const TextStyle(
+                    fontWeight: FontWeight.w700, fontSize: 15),
               ),
               const SizedBox(height: 4),
               Text(
@@ -718,10 +834,13 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                     backgroundColor: _primaryBlue,
                     foregroundColor: Colors.white,
                     elevation: 0,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
                   ),
                   onPressed: () => _launchAttachedMock(m),
-                  child: const Text('Start Mock →', style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
+                  child: const Text('Start Mock →',
+                      style: TextStyle(
+                          fontSize: 12.5, fontWeight: FontWeight.bold)),
                 ),
               ),
             ],
@@ -734,14 +853,16 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   Widget _buildUpdatesTab(Color cardSurface, Color dividerColor, bool isDark) {
     if (_updates.isEmpty) {
       return Center(
-        child: Text('No community updates posted yet.', style: TextStyle(color: Colors.grey[500])),
+        child: Text('No community updates posted yet.',
+            style: TextStyle(color: Colors.grey[500])),
       );
     }
 
     return ListView.separated(
       padding: EdgeInsets.zero,
       itemCount: _updates.length,
-      separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
+      separatorBuilder: (_, __) =>
+          Divider(height: 1, thickness: 0.8, color: dividerColor),
       itemBuilder: (context, idx) {
         final p = _updates[idx];
         final String? imgUrl = p['image_url'];
@@ -749,21 +870,26 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
 
         return Container(
           color: cardSurface,
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          padding:
+              const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 7, vertical: 2),
                     decoration: BoxDecoration(
                       color: _primaryBlue.withOpacity(0.08),
                       borderRadius: BorderRadius.circular(4),
                     ),
                     child: Text(
                       tag.toString().toUpperCase(),
-                      style: const TextStyle(color: _primaryBlue, fontSize: 10, fontWeight: FontWeight.bold),
+                      style: const TextStyle(
+                          color: _primaryBlue,
+                          fontSize: 10,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                 ],
@@ -774,7 +900,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 style: TextStyle(
                   fontSize: 13.5,
                   height: 1.4,
-                  color: isDark ? const Color(0xFFF1F5F9) : const Color(0xFF1E293B),
+                  color: isDark
+                      ? const Color(0xFFF1F5F9)
+                      : const Color(0xFF1E293B),
                 ),
               ),
               if (imgUrl != null && imgUrl.isNotEmpty) ...[
@@ -811,7 +939,8 @@ class _SliverTabHeaderDelegate extends SliverPersistentHeaderDelegate {
   double get maxExtent => _tabBar.preferredSize.height + 1;
 
   @override
-  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
+  Widget build(
+      BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Container(
       color: _bgColor,
       child: Column(
