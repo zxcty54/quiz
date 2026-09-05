@@ -11,7 +11,7 @@ import '../widgets/cbt_widgets.dart';
 import '../services/telegram_tracker.dart';
 import '../services/user_stats_service.dart';
 import '../services/cbt_progress_service.dart';
-import '../utils/subtopic_engine.dart'; // 👈 Subtopic Engine Integration
+import '../utils/subtopic_engine.dart';
 import 'creator_profile_screen.dart';
 
 class SectionalCbtScreen extends StatefulWidget {
@@ -209,11 +209,9 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       final String selectedText = userAns != null ? currentOptions[userAns] : 'Skipped';
       final String correctText = currentOptions[q.answerIndex];
 
-      // 🎯 Subtopic Extraction via Multi-Statement Engine
+      // 🎯 Subtopic Extraction via Multi-Statement Engine (Fixed Chapter Getter)
       final String detectedConcept = SubtopicEngine.extractSubtopic(
-        chapterName: (q.chapter != null && q.chapter!.isNotEmpty)
-            ? q.chapter!
-            : widget.testTitle,
+        chapterName: widget.testTitle,
         qe: q.qe,
         qh: q.qh,
         se: q.se,
@@ -376,8 +374,8 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           'correct_count': correctCount,
           'wrong_count': wrongCount,
           'total_questions': widget.questions.length,
-          'weak_subject': determinedWeak,     // 👈 Subtopic Intelligence Output
-          'strong_subject': determinedStrong, // 👈 Subtopic Intelligence Output
+          'weak_subject': determinedWeak,
+          'strong_subject': determinedStrong,
           'detailed_responses': detailedResponses,
         };
 
