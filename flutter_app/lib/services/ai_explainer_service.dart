@@ -321,18 +321,18 @@ $userChoiceContext$tagContext
     );
   }
 
-  // 5️⃣ 🚀 BULK QUESTIONS PARSER FOR TEXT
+  // 5️⃣ 🚀 BULK QUESTIONS PARSER FOR TEXT (Raw string r''' used to prevent interpolation errors)
   static Future<List<Map<String, dynamic>>> parseBulkQuestionsWithAi(String rawText) async {
     if (rawText.trim().isEmpty) return [];
 
-    const String systemPrompt = """
+    const String systemPrompt = r'''
 You are an expert exam data extractor for Indian competitive exams (BPSC, SSC, UPSC, Railway).
 Parse the raw unstructured questions or notes text into a strict JSON Array format.
 
 Output ONLY a pure JSON array matching this exact schema:
 [
   {
-    "question": "Question text in Hindi or English (use \$...$ for LaTeX math)",
+    "question": "Question text in Hindi or English (use $...$ for LaTeX math)",
     "options": ["Option A", "Option B", "Option C", "Option D"],
     "answer": 0,
     "explanation": "Short 1-line solution explanation"
@@ -343,7 +343,7 @@ RULES:
 1. Always return a valid JSON array. Do not include markdown wraps or conversational chatter.
 2. Ensure options list always contains exactly 4 options.
 3. If the answer is missing in raw text, deduce the logically correct answer index (0 to 3).
-""";
+''';
 
     final String responseText = await _generateWithHybridRouting(
       systemPrompt,
@@ -367,14 +367,14 @@ RULES:
 
     final base64Img = base64Encode(imageBytes);
 
-    const String visionPrompt = """
+    const String visionPrompt = r'''
 You are a top-tier Indian Competitive Exam Multimodal OCR Engine specialized in Math, Physics, and Handwritten notes.
 Examine this image carefully (which may contain handwritten or printed exam questions with equations/diagrams).
 
 Extract ALL questions found into a valid JSON array matching this schema:
 [
   {
-    "question": "Question text in Hindi or English. Format mathematical equations or fractions in LaTeX enclosed in \$ like \$\\frac{a}{b}\$, \$x^2\$, \$\\sqrt{x}\$",
+    "question": "Question text in Hindi or English. Format mathematical equations or fractions in LaTeX enclosed in $ like $\frac{a}{b}$, $x^2$, $\sqrt{x}$",
     "options": ["Option A", "Option B", "Option C", "Option D"],
     "answer": 0,
     "explanation": "Brief step-by-step solution"
@@ -383,12 +383,11 @@ Extract ALL questions found into a valid JSON array matching this schema:
 
 CRITICAL RULES:
 1. Read handwritten Hindi and English cleanly without skipping math symbols.
-2. Wrap every formula, power, root, fraction, or symbol in LaTeX dollars: e.g. \$\\theta\$, \$\\pi\$, \$\\int\$.
+2. Wrap every formula, power, root, fraction, or symbol in LaTeX dollars: e.g. $\theta$, $\pi$, $\int$.
 3. Output strictly RAW JSON array. No ```json markdown block and no extra conversational text.
 4. Each item must have exactly 4 options. If not marked in image, infer reasonable options.
-""";
+''';
 
-    // Multimodal Vision models list
     final List<String> visionModels = ["gemini-2.0-flash", "gemini-1.5-flash"];
 
     for (final model in visionModels) {
@@ -440,7 +439,7 @@ CRITICAL RULES:
     return [];
   }
 
-  // 🧹 Helper: JSON extraction from LLM responses
+  // 🧹 Helper: Clean & Parse JSON Array
   static List<Map<String, dynamic>> _sanitizeAndParseJson(String responseText) {
     try {
       String cleanJson = responseText
