@@ -15,13 +15,11 @@ class CoachingHubCard extends StatefulWidget {
 class CoachingHubCardState extends State<CoachingHubCard> {
   String? _enrolledBatchCode;
   String? _enrolledBatchName;
-  String? _coachingId;
   String? _coachingName;
   String? _coachingBanner;
   String? _ownerHandle;
   String? _coachingCity;
   int _availableMocksCount = 0;
-  int _verifiedSelectionsCount = 0; // 👈 Added: Success Selections
   bool _isLoading = true;
 
   @override
@@ -49,30 +47,14 @@ class CoachingHubCardState extends State<CoachingHubCard> {
       if (batchRes != null && mounted) {
         final coaching = batchRes['coachings'];
         final tests = (batchRes['batch_tests'] as List?) ?? [];
-        final cId = coaching?['id']?.toString();
-
-        int selections = 0;
-        if (cId != null) {
-          try {
-            final countRes = await Supabase.instance.client
-                .from('coaching_selections')
-                .count(CountOption.exact)
-                .eq('coaching_id', cId)
-                .eq('is_verified', true);
-            selections = countRes;
-          } catch (_) {}
-        }
-
         setState(() {
           _enrolledBatchCode = batchCode;
           _enrolledBatchName = batchRes['batch_name'];
-          _coachingId = cId;
           _coachingName = coaching?['name'] ?? 'Classroom Batch';
           _coachingBanner = coaching?['banner_url'];
           _ownerHandle = coaching?['owner_name'];
           _coachingCity = coaching?['district'] ?? coaching?['city'] ?? 'Bihar';
           _availableMocksCount = tests.length;
-          _verifiedSelectionsCount = selections;
           _isLoading = false;
         });
         return;
@@ -195,7 +177,6 @@ class CoachingHubCardState extends State<CoachingHubCard> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Top Ribbon: Institute Branding & Switch Action
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
               decoration: BoxDecoration(
@@ -238,7 +219,6 @@ class CoachingHubCardState extends State<CoachingHubCard> {
               ),
             ),
 
-            // Middle Content: Billboard Banner or Clean Title Grid
             if (_coachingBanner != null && _coachingBanner!.isNotEmpty)
               Image.network(
                 _coachingBanner!,
@@ -276,50 +256,24 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                           ],
                         ),
                       ),
-                      // 🏆 Selections & Mocks Counter
-                      Row(
-                        children: [
-                          if (_verifiedSelectionsCount > 0) ...[
-                            Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
-                              margin: const EdgeInsets.only(right: 6),
-                              decoration: BoxDecoration(
-                                color: const Color(0xFF16A34A).withOpacity(0.12),
-                                borderRadius: BorderRadius.circular(8),
-                                border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.25)),
-                              ),
-                              child: Column(
-                                children: [
-                                  Text(
-                                    '$_verifiedSelectionsCount',
-                                    style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 15, color: Color(0xFF16A34A)),
-                                  ),
-                                  const Text('Selected 🎓', style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),
-                                ],
-                              ),
-                            ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF2563EB).withOpacity(0.12),
+                          borderRadius: BorderRadius.circular(8),
+                          border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.2)),
+                        ),
+                        child: Column(
+                          children: [
+                            Text('$_availableMocksCount', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: Color(0xFF2563EB))),
+                            const Text('CBT Mocks', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
                           ],
-                          Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                            decoration: BoxDecoration(
-                              color: const Color(0xFF2563EB).withOpacity(0.12),
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.2)),
-                            ),
-                            child: Column(
-                              children: [
-                                Text('$_availableMocksCount', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: Color(0xFF2563EB))),
-                                const Text('CBT Mocks', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
-                              ],
-                            ),
-                          ),
-                        ],
+                        ),
                       ),
                     ],
                   ),
                   const SizedBox(height: 16),
 
-                  // Action Button
                   SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
@@ -358,7 +312,6 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                   const Divider(height: 1),
                   const SizedBox(height: 10),
 
-                  // 🔍 PERSISTENT DISCOVERY STRIP
                   InkWell(
                     onTap: () {
                       Navigator.push(
@@ -373,11 +326,11 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                       padding: const EdgeInsets.symmetric(vertical: 4),
                       child: Row(
                         children: [
-                          const Icon(Icons.leaderboard_rounded, size: 16, color: Color(0xFF2563EB)),
+                          const Icon(Icons.travel_explore_rounded, size: 16, color: Color(0xFF2563EB)),
                           const SizedBox(width: 6),
                           Expanded(
                             child: Text(
-                              'Explore Top Ranked Coaching Centers & Results →',
+                              'Explore other Bihar Coaching Centers & Mocks →',
                               style: TextStyle(
                                 fontSize: 11.5,
                                 fontWeight: FontWeight.w700,
@@ -465,7 +418,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                               borderRadius: BorderRadius.circular(6),
                             ),
                             child: const Text(
-                              'LEADERBOARD',
+                              'EXPLORE',
                               style: TextStyle(color: Color(0xFF0F172A), fontSize: 9, fontWeight: FontWeight.w900),
                             ),
                           ),
@@ -473,7 +426,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        'Top rankers, verified selections aur city coaching leaderboard dekhein',
+                        'Apne city ke offline coachings, top mentors aur mocks khojein',
                         style: TextStyle(color: Colors.white.withOpacity(0.88), fontSize: 11),
                       ),
                     ],
@@ -489,16 +442,16 @@ class CoachingHubCardState extends State<CoachingHubCard> {
               children: [
                 Row(
                   children: [
-                    _buildFeatureChip('🏆 Live Ranks', isDark),
+                    _buildFeatureChip('📍 38 Districts', isDark),
                     const SizedBox(width: 6),
-                    _buildFeatureChip('🎓 Selections', isDark),
+                    _buildFeatureChip('👨‍🏫 Top Mentors', isDark),
                     const SizedBox(width: 6),
-                    _buildFeatureChip('📝 Batch CBTs', isDark),
+                    _buildFeatureChip('📝 Batch CBT Tests', isDark),
                   ],
                 ),
                 const SizedBox(height: 14),
                 Text(
-                  'Patna, Gaya, Ara ya apne district ki top coachings ke verified results dekhein aur unki test series unlock karein.',
+                  'Patna, Gaya, Ara, Muzaffarpur ya apne district ke coaching centers dhundhein aur batch test series unlock karein.',
                   style: TextStyle(
                     fontSize: 12,
                     color: isDark ? const Color(0xFF94A3B8) : Colors.grey.shade700,
@@ -511,8 +464,8 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                     Expanded(
                       flex: 6,
                       child: ElevatedButton.icon(
-                        icon: const Icon(Icons.leaderboard_rounded, size: 16),
-                        label: const Text('View Rankings 🏆', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
+                        icon: const Icon(Icons.location_city_rounded, size: 16),
+                        label: const Text('Discover Centers 🔍', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
                         style: ElevatedButton.styleFrom(
                           backgroundColor: const Color(0xFF2563EB),
                           foregroundColor: Colors.white,
