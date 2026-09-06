@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
@@ -30,12 +31,12 @@ class AiExplainerService {
     return key;
   }
 
-  // 🌐 Dynamic Fallback Models (Cloud app_config.json aate hi replace ho jayenge)
+  // 🌐 Dynamic Fallback Models
   static List<String> activeModelHierarchy = [
-    "llama-3.3-70b-versatile",
+    "gemini-2.0-flash",
     "gemini-1.5-flash",
-    "llama-3.1-8b-instant",
-    "gemini-2.0-flash"
+    "llama-3.3-70b-versatile",
+    "llama-3.1-8b-instant"
   ];
   static bool isAiActive = true;
 
@@ -69,11 +70,11 @@ class AiExplainerService {
     }
   }
 
-  // 🔄 KEYWORD-BASED HYBRID ROUTING ENGINE (With 1200 Max Tokens & Safe Buffer)
+  // 🔄 KEYWORD-BASED HYBRID ROUTING ENGINE (For Text Prompts)
   static Future<String> _generateWithHybridRouting(
     String systemPrompt,
     String userPrompt, {
-    int maxTokens = 1200, // 🚀 Complete responses without truncation
+    int maxTokens = 1200,
     double temperature = 0.4,
   }) async {
     if (!isAiActive) {
@@ -87,7 +88,7 @@ class AiExplainerService {
       final String mLower = model.toLowerCase();
 
       try {
-        debugPrint("⚡ AI Routing [${i + 1}/${activeModelHierarchy.length}] attempting: $model");
+        debugPrint("⚡ AI Routing [${i + 1}/${activeModelHierarchy.length}] attempting:$model");
 
         // 🟢 1. GOOGLE AI STUDIO (Keywords: gemini, gemma)
         if (mLower.contains('gemini') || mLower.contains('gemma')) {
@@ -127,7 +128,7 @@ class AiExplainerService {
               }
             }
           } else {
-            debugPrint("Google AI Studio Status ${response.statusCode} on $model, trying next model...");
+            debugPrint("Google AI Studio Status ${response.statusCode} on$model, trying next model...");
           }
         }
         // 🔵 2. GROQ API (Keywords: llama, mixtral, gpt-oss, qwen, etc.)
@@ -162,18 +163,18 @@ class AiExplainerService {
               return content.toString().trim();
             }
           } else {
-            debugPrint("Groq API Status ${response.statusCode} on $model, trying next model...");
+            debugPrint("Groq API Status ${response.statusCode} on$model, trying next model...");
           }
         }
       } catch (e) {
-        debugPrint("AI Connection Error on $model: $e");
+        debugPrint("AI Connection Error on $model:$e");
       }
     }
 
     return "⚠️ AI Service busy hai. Kripya thodi der baad dobara try karein.";
   }
 
-  // 1️⃣ SMART CUSTOM DOUBT SOLVER (With full sentence completion)
+  // 1️⃣ SMART CUSTOM DOUBT SOLVER
   static Future<String> askCustomDoubt({
     required String question,
     required List<String> options,
@@ -218,7 +219,7 @@ STUDENT'S DOUBT: "$userDoubt"
       if (tag == 'concept') conceptGapCount++;
 
       String chapter = q['chapterName'] ?? q['chapter'] ?? 'Sectional Mock';
-      return "- [Chapter: $chapter | Tag: $tag] Q: $qText";
+      return "- [Chapter: $chapter | Tag: $tag] Q:$qText";
     }).toList();
 
     const String systemPrompt = """
@@ -254,7 +255,7 @@ ${qSummaries.join('\n')}
     return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 800, temperature: 0.3);
   }
 
-  // 3️⃣ SMART "WHY WRONG?" EXPLAINER (Fixed Hallucination & Clean Distractor Breakdown)
+  // 3️⃣ SMART "WHY WRONG?" EXPLAINER
   static Future<String> explainWhyWrong({
     required String question,
     required List<String> options,
@@ -300,14 +301,13 @@ FORMAT YOUR RESPONSE IN THIS EXACT STRUCTURE:
 QUESTION: $question
 OPTIONS: ${options.join(', ')}
 CORRECT ANSWER: $correctAnswer
-$userChoiceContext
-$tagContext
+$userChoiceContext$tagContext
 """;
 
     return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 1100, temperature: 0.4);
   }
 
-  // 4️⃣ COMPATIBILITY METHOD FOR OLD WIDGETS
+  // 4️⃣ COMPATIBILITY METHOD
   static Future<String> getExplanation({
     required String question,
     required List<String> options,
@@ -321,7 +321,7 @@ $tagContext
     );
   }
 
-  // 5️⃣ 🚀 BULK QUESTIONS PARSER FOR CREATOR STUDIO (No 400 Error, Uses Full Model Pool)
+  // 5️⃣ 🚀 BULK QUESTIONS PARSER FOR TEXT
   static Future<List<Map<String, dynamic>>> parseBulkQuestionsWithAi(String rawText) async {
     if (rawText.trim().isEmpty) return [];
 
@@ -332,7 +332,7 @@ Parse the raw unstructured questions or notes text into a strict JSON Array form
 Output ONLY a pure JSON array matching this exact schema:
 [
   {
-    "question": "Question text in Hindi or English",
+    "question": "Question text in Hindi or English (use \$...$ for LaTeX math)",
     "options": ["Option A", "Option B", "Option C", "Option D"],
     "answer": 0,
     "explanation": "Short 1-line solution explanation"
@@ -352,13 +352,102 @@ RULES:
       temperature: 0.1,
     );
 
+    return _sanitizeAndParseJson(responseText);
+  }
+
+  // 6️⃣ 📸 VISION MULTIMODAL OCR (For Handwritten Notes, Maths & Diagram Questions)
+  static Future<List<Map<String, dynamic>>> parseBulkQuestionsFromImage(Uint8List imageBytes) async {
+    if (imageBytes.isEmpty) return [];
+
+    final googleKey = _getGoogleApiKey();
+    if (googleKey.isEmpty) {
+      debugPrint("⚠️ Google API Key missing for Vision OCR");
+      return [];
+    }
+
+    final base64Img = base64Encode(imageBytes);
+
+    const String visionPrompt = """
+You are a top-tier Indian Competitive Exam Multimodal OCR Engine specialized in Math, Physics, and Handwritten notes.
+Examine this image carefully (which may contain handwritten or printed exam questions with equations/diagrams).
+
+Extract ALL questions found into a valid JSON array matching this schema:
+[
+  {
+    "question": "Question text in Hindi or English. Format mathematical equations or fractions in LaTeX enclosed in \$ like \$\\frac{a}{b}\$, \$x^2\$, \$\\sqrt{x}\$",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 0,
+    "explanation": "Brief step-by-step solution"
+  }
+]
+
+CRITICAL RULES:
+1. Read handwritten Hindi and English cleanly without skipping math symbols.
+2. Wrap every formula, power, root, fraction, or symbol in LaTeX dollars: e.g. \$\\theta\$, \$\\pi\$, \$\\int\$.
+3. Output strictly RAW JSON array. No ```json markdown block and no extra conversational text.
+4. Each item must have exactly 4 options. If not marked in image, infer reasonable options.
+""";
+
+    // Multimodal Vision models list
+    final List<String> visionModels = ["gemini-2.0-flash", "gemini-1.5-flash"];
+
+    for (final model in visionModels) {
+      try {
+        final url = "[https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent?key=$googleKey](https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent?key=$googleKey)";
+        final response = await http.post(
+          Uri.parse(url),
+          headers: {"Content-Type": "application/json; charset=utf-8"},
+          body: jsonEncode({
+            "contents": [
+              {
+                "parts": [
+                  {"text": visionPrompt},
+                  {
+                    "inline_data": {
+                      "mime_type": "image/jpeg",
+                      "data": base64Img,
+                    }
+                  }
+                ]
+              }
+            ],
+            "generationConfig": {
+              "temperature": 0.1,
+              "maxOutputTokens": 2500,
+            }
+          }),
+        ).timeout(const Duration(seconds: 20));
+
+        if (response.statusCode == 200) {
+          final Map<String, dynamic> data = jsonDecode(utf8.decode(response.bodyBytes));
+          final candidates = data['candidates'] as List?;
+          if (candidates != null && candidates.isNotEmpty) {
+            final parts = candidates[0]['content']['parts'] as List?;
+            if (parts != null && parts.isNotEmpty) {
+              final text = parts[0]['text'].toString().trim();
+              final result = _sanitizeAndParseJson(text);
+              if (result.isNotEmpty) return result;
+            }
+          }
+        } else {
+          debugPrint("Vision OCR Failed on $model (Code: ${response.statusCode}), trying next...");
+        }
+      } catch (e) {
+        debugPrint("Vision OCR error on $model: $e");
+      }
+    }
+
+    return [];
+  }
+
+  // 🧹 Helper: JSON extraction from LLM responses
+  static List<Map<String, dynamic>> _sanitizeAndParseJson(String responseText) {
     try {
       String cleanJson = responseText
           .replaceAll('```json', '')
           .replaceAll('```', '')
           .trim();
 
-      // Find JSON array bounds if surrounded by extra text
       final int startIdx = cleanJson.indexOf('[');
       final int endIdx = cleanJson.lastIndexOf(']');
       if (startIdx != -1 && endIdx != -1 && endIdx > startIdx) {
@@ -370,7 +459,7 @@ RULES:
         return List<Map<String, dynamic>>.from(parsed);
       }
     } catch (e) {
-      debugPrint("AI JSON Parse Error: $e\nResponse was: $responseText");
+      debugPrint("AI JSON Parse Helper Error: $e\nRaw: $responseText");
     }
     return [];
   }
