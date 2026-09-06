@@ -5,7 +5,6 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
-import '../widgets/selection_proof_system.dart';
 import 'batch_classroom_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -31,13 +30,12 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   Map<String, dynamic>? _coaching;
   List<dynamic> _batches = [];
   List<dynamic> _mocks = [];
-  List<dynamic> _updates = [];
   List<dynamic> _selections = [];
+  List<dynamic> _galleryImages = [];
 
   bool _isLoading = true;
   bool _isFollowing = false;
   int _followersCount = 0;
-  String _currentLoggedInHandle = 'user';
 
   static const Color _primaryBlue = Color(0xFF2563EB);
   static const Color _lightBg = Color(0xFFF8FAFC);
@@ -49,7 +47,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   @override
   void initState() {
     super.initState();
-    // 4 Tabs: Batches, Mocks, Selections, Updates
+    // 4 Flat Tabs: Batches, Mocks, Wall of Fame, About
     _tabController = TabController(length: 4, vsync: this);
     _loadInitialData();
   }
@@ -61,16 +59,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   }
 
   Future<void> _loadInitialData() async {
-    final prefs = await SharedPreferences.getInstance();
-    _currentLoggedInHandle =
-        prefs.getString('logged_in_creator_handle') ?? 'user';
-
     await _fetchProfileAndCoaching();
 
     await Future.wait([
       _fetchBatches(),
       _fetchMocks(),
-      _fetchUpdates(),
       _fetchSelections(),
       _checkFollowStatus(),
     ]);
@@ -107,6 +100,10 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .maybeSingle();
 
       _coaching = coachRes;
+
+      if (_coaching != null) {
+        _galleryImages = (_coaching!['gallery_images'] as List?) ?? [];
+      }
     } catch (e) {
       debugPrint("Profile/Coaching fetch error: $e");
     }
@@ -144,22 +141,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     }
   }
 
-  Future<void> _fetchUpdates() async {
-    try {
-      final res = await Supabase.instance.client
-          .from('community_posts')
-          .select('*')
-          .eq('creator_id', widget.creatorHandle)
-          .eq('is_approved', true)
-          .order('created_at', ascending: false);
-
-      _updates = res ?? [];
-    } catch (e) {
-      debugPrint("Updates fetch error: $e");
-    }
-  }
-
-  // 🏆 Coaching-Specific Verified Selections Fetch
   Future<void> _fetchSelections() async {
     try {
       if (_coaching == null) return;
@@ -169,14 +150,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .from('coaching_selections')
           .select('*')
           .eq('coaching_id', coachingId)
-          .order('is_verified', ascending: false)
           .order('created_at', ascending: false);
 
-      if (mounted) {
-        setState(() {
-          _selections = res ?? [];
-        });
-      }
+      _selections = res ?? [];
     } catch (e) {
       debugPrint("Selections fetch error: $e");
     }
@@ -240,12 +216,26 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     );
   }
 
-  void _openTelegram(String? urlOrHandle) async {
-    if (urlOrHandle == null || urlOrHandle.isEmpty) return;
-    String cleanUrl = urlOrHandle.startsWith('http')
-        ? urlOrHandle
-        : 'https://t.me/${urlOrHandle.replaceAll('@', '')}';
-    final uri = Uri.parse(cleanUrl);
+  void _openExternalUrl(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
+  }
+
+  void _openDialer(String phone) async {
+    final uri = Uri.parse('tel:$phone');
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    }
+  }
+
+  void _openWhatsApp(String phone) async {
+    String cleanNumber = phone.replaceAll(RegExp(r'[^0-9]'), '');
+    if (!cleanNumber.startsWith('91') && cleanNumber.length == 10) {
+      cleanNumber = '91$cleanNumber';
+    }
+    final uri = Uri.parse('https://wa.me/$cleanNumber?text=Hello,%20I%20want%20information%20regarding%20batches.');
     if (await canLaunchUrl(uri)) {
       await launchUrl(uri, mode: LaunchMode.externalApplication);
     }
@@ -307,7 +297,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
 
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
-                    content: Text('🎉 Batch Unlocked Successfully! Entering Classroom...'),
+                    content: Text('🎉 Batch Unlocked! Entering Classroom...'),
                     backgroundColor: Color(0xFF16A34A),
                     duration: Duration(seconds: 1),
                   ),
@@ -341,28 +331,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     );
   }
 
-  void _openClaimSelectionModal() {
-    if (_coaching == null) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Coaching profile not found.')),
-      );
-      return;
-    }
-
-    final coachingId = _coaching!['id'].toString();
-    final coachingName = _coaching!['name'] ?? widget.creatorHandle;
-
-    StudentClaimSelectionSheet.show(
-      context,
-      coachingId: coachingId,
-      coachingName: coachingName,
-      isDarkMode: widget.isDarkMode,
-      onSuccess: () {
-        _fetchSelections();
-      },
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
@@ -380,15 +348,13 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
 
     final name = _coaching?['name'] ?? _profile?['name'] ?? 'Educator';
     final handle = widget.creatorHandle;
-    final specialty = _profile?['subject_specialty'] ?? 'Exam Mentor';
+    final specialty = _profile?['subject_specialty'] ?? _coaching?['tagline'] ?? 'Exam Guidance Hub';
     final district = _coaching?['district'] ?? _coaching?['city'] ?? 'Bihar';
     final landmark = _coaching?['landmark_address'] ?? _coaching?['landmark'];
     final logoUrl = _coaching?['logo_url'] ?? _profile?['profile_image'];
     final bannerUrl = _coaching?['banner_url'] ?? _profile?['banner_url'];
     final telegram = _profile?['telegram_handle'] ?? _coaching?['telegram_link'];
-
-    final verifiedCount =
-        _selections.where((s) => s['is_verified'] == true).length;
+    final contactPhone = _coaching?['phone'] ?? _coaching?['contact_number'];
 
     return Scaffold(
       backgroundColor: bgSurface,
@@ -558,128 +524,73 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                       ),
                     ),
                     const SizedBox(height: 16),
+
+                    // Quick Stats
                     Row(
                       children: [
                         _buildStatBlock('$_followersCount', 'Followers'),
-                        const SizedBox(width: 22),
+                        const SizedBox(width: 24),
                         _buildStatBlock('${_batches.length}', 'Batches'),
-                        const SizedBox(width: 22),
+                        const SizedBox(width: 24),
                         _buildStatBlock('${_mocks.length}', 'Open Mocks'),
-                        const SizedBox(width: 22),
-                        _buildStatBlock('$verifiedCount', 'Selections 🎓'),
+                        const SizedBox(width: 24),
+                        _buildStatBlock('${_selections.length}', 'Selections 🎓'),
                       ],
                     ),
 
-                    // 🎓 PROMINENT CLAIM SELECTION CTA BANNER
-                    const SizedBox(height: 16),
-                    InkWell(
-                      onTap: _openClaimSelectionModal,
-                      borderRadius: BorderRadius.circular(12),
-                      child: Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 14, vertical: 11),
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: isDark
-                                ? [const Color(0xFF064E3B), const Color(0xFF022C22)]
-                                : [const Color(0xFFDCFCE7), const Color(0xFFBBF7D0)],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                          ),
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(
-                            color: const Color(0xFF16A34A).withOpacity(0.4),
-                          ),
-                        ),
-                        child: Row(
-                          children: [
-                            Container(
-                              padding: const EdgeInsets.all(7),
-                              decoration: BoxDecoration(
-                                color: const Color(0xFF16A34A).withOpacity(0.18),
-                                shape: BoxShape.circle,
+                    // Direct Enquiry Quick Actions Strip
+                    const SizedBox(height: 14),
+                    Row(
+                      children: [
+                        if (contactPhone != null && contactPhone.toString().isNotEmpty) ...[
+                          Expanded(
+                            child: OutlinedButton.icon(
+                              style: OutlinedButton.styleFrom(
+                                side: BorderSide(color: dividerColor),
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                                padding: const EdgeInsets.symmetric(vertical: 9),
                               ),
-                              child: const Icon(Icons.military_tech_rounded,
-                                  color: Color(0xFF16A34A), size: 20),
+                              icon: const Icon(Icons.phone_outlined, size: 15, color: Color(0xFF16A34A)),
+                              label: const Text('Call', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                              onPressed: () => _openDialer(contactPhone.toString()),
                             ),
-                            const SizedBox(width: 10),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Selected Aspirant? Claim Credit 🎓',
-                                    style: TextStyle(
-                                      fontSize: 13,
-                                      fontWeight: FontWeight.w800,
-                                      color: isDark
-                                          ? Colors.white
-                                          : const Color(0xFF14532D),
-                                    ),
-                                  ),
-                                  Text(
-                                    'Get your verified badge on this coaching\'s Wall of Fame',
-                                    style: TextStyle(
-                                      fontSize: 11,
-                                      color: isDark
-                                          ? Colors.white70
-                                          : const Color(0xFF166534),
-                                    ),
-                                  ),
-                                ],
+                          ),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: OutlinedButton.icon(
+                              style: OutlinedButton.styleFrom(
+                                side: BorderSide(color: dividerColor),
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                                padding: const EdgeInsets.symmetric(vertical: 9),
                               ),
+                              icon: const Icon(Icons.chat_bubble_outline_rounded, size: 15, color: Color(0xFF25D366)),
+                              label: const Text('WhatsApp', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                              onPressed: () => _openWhatsApp(contactPhone.toString()),
                             ),
-                            const Icon(Icons.arrow_forward_ios_rounded,
-                                size: 14, color: Color(0xFF16A34A)),
-                          ],
-                        ),
-                      ),
+                          ),
+                          const SizedBox(width: 8),
+                        ],
+                        if (telegram != null && telegram.toString().isNotEmpty) ...[
+                          Expanded(
+                            child: OutlinedButton.icon(
+                              style: OutlinedButton.styleFrom(
+                                side: BorderSide(color: dividerColor),
+                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                                padding: const EdgeInsets.symmetric(vertical: 9),
+                              ),
+                              icon: const Icon(Icons.near_me_rounded, size: 15, color: Color(0xFF0284C7)),
+                              label: const Text('Telegram', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                              onPressed: () {
+                                String clean = telegram.toString().startsWith('http')
+                                    ? telegram.toString()
+                                    : 'https://t.me/${telegram.toString().replaceAll('@', '')}';
+                                _openExternalUrl(clean);
+                              },
+                            ),
+                          ),
+                        ],
+                      ],
                     ),
-
-                    if (telegram != null && telegram.toString().isNotEmpty) ...[
-                      const SizedBox(height: 12),
-                      InkWell(
-                        onTap: () => _openTelegram(telegram),
-                        borderRadius: BorderRadius.circular(10),
-                        child: Container(
-                          width: double.infinity,
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 14, vertical: 10),
-                          decoration: BoxDecoration(
-                            color: isDark
-                                ? const Color(0xFF1E3A8A).withOpacity(0.3)
-                                : const Color(0xFFF0F9FF),
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: isDark
-                                  ? const Color(0xFF1E3A8A)
-                                  : const Color(0xFFBAE6FD),
-                              width: 1,
-                            ),
-                          ),
-                          child: const Row(
-                            children: [
-                              Icon(Icons.near_me_rounded,
-                                  color: Color(0xFF0284C7), size: 16),
-                              SizedBox(width: 8),
-                              Expanded(
-                                child: Text(
-                                  'Join Official Telegram Channel',
-                                  style: TextStyle(
-                                    fontSize: 12.5,
-                                    fontWeight: FontWeight.w700,
-                                    color: Color(0xFF0284C7),
-                                  ),
-                                ),
-                              ),
-                              Icon(Icons.arrow_forward_rounded,
-                                  size: 15, color: Color(0xFF0284C7)),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
                   ],
                 ),
               ),
@@ -700,8 +611,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                   tabs: [
                     Tab(text: 'Batches (${_batches.length})'),
                     Tab(text: 'Mocks (${_mocks.length})'),
-                    Tab(text: 'Selections ($verifiedCount) 🏆'),
-                    Tab(text: 'Updates (${_updates.length})'),
+                    Tab(text: 'Wall of Fame (${_selections.length})'),
+                    const Tab(text: 'About & Campus'),
                   ],
                 ),
                 cardSurface,
@@ -715,8 +626,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           children: [
             _buildBatchesTab(cardSurface, dividerColor, isDark),
             _buildMocksTab(cardSurface, dividerColor, isDark),
-            _buildSelectionsTab(cardSurface, dividerColor, isDark),
-            _buildUpdatesTab(cardSurface, dividerColor, isDark),
+            _buildWallOfFameTab(cardSurface, dividerColor, isDark),
+            _buildAboutCampusTab(cardSurface, dividerColor, isDark),
           ],
         ),
       ),
@@ -760,14 +671,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           itemBuilder: (context, idx) {
             final b = _batches[idx];
             final String batchId = b['id']?.toString() ?? '';
-
-            final bool isUnlocked =
-                prefs?.getBool('unlocked_batch_$batchId') ?? false;
+            final bool isUnlocked = prefs?.getBool('unlocked_batch_$batchId') ?? false;
 
             return Container(
               color: cardSurface,
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -777,13 +685,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                       Expanded(
                         child: Text(
                           b['batch_name'] ?? 'Classroom Batch',
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 14.5),
+                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
                         ),
                       ),
                       Container(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 7, vertical: 2.5),
+                        padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
                         decoration: BoxDecoration(
                           color: isUnlocked
                               ? const Color(0xFF16A34A).withOpacity(0.12)
@@ -794,13 +700,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Icon(
-                              isUnlocked
-                                  ? Icons.lock_open_rounded
-                                  : Icons.lock_outline_rounded,
+                              isUnlocked ? Icons.lock_open_rounded : Icons.lock_outline_rounded,
                               size: 12,
-                              color: isUnlocked
-                                  ? const Color(0xFF16A34A)
-                                  : Colors.redAccent,
+                              color: isUnlocked ? const Color(0xFF16A34A) : Colors.redAccent,
                             ),
                             const SizedBox(width: 3),
                             Text(
@@ -808,9 +710,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                               style: TextStyle(
                                 fontSize: 10,
                                 fontWeight: FontWeight.bold,
-                                color: isUnlocked
-                                    ? const Color(0xFF16A34A)
-                                    : Colors.redAccent,
+                                color: isUnlocked ? const Color(0xFF16A34A) : Colors.redAccent,
                               ),
                             ),
                           ],
@@ -820,8 +720,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                   ),
                   const SizedBox(height: 6),
                   Text(
-                    b['target_pattern'] ??
-                        'Based on standard examination pattern',
+                    b['target_pattern'] ?? 'Based on standard examination pattern',
                     style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                   ),
                   const SizedBox(height: 10),
@@ -829,14 +728,12 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                     height: 34,
                     child: isUnlocked
                         ? ElevatedButton.icon(
-                            icon: const Icon(Icons.meeting_room_rounded,
-                                size: 15),
+                            icon: const Icon(Icons.meeting_room_rounded, size: 15),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: const Color(0xFF16A34A),
                               foregroundColor: Colors.white,
                               elevation: 0,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8)),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                             ),
                             onPressed: () {
                               Navigator.push(
@@ -851,24 +748,20 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                             },
                             label: const Text(
                               'Enter Classroom 🚀',
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.bold),
+                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                             ),
                           )
                         : OutlinedButton.icon(
                             icon: const Icon(Icons.vpn_key_rounded, size: 14),
                             style: OutlinedButton.styleFrom(
                               foregroundColor: _primaryBlue,
-                              side: const BorderSide(
-                                  color: _primaryBlue, width: 1),
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(8)),
+                              side: const BorderSide(color: _primaryBlue, width: 1),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                             ),
                             onPressed: () => _openUnlockBatchDialog(b),
                             label: const Text(
                               'Unlock with Code',
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.bold),
+                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
                             ),
                           ),
                   ),
@@ -902,8 +795,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
 
         return Container(
           color: cardSurface,
-          padding:
-              const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -911,8 +803,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 7, vertical: 2),
+                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                     decoration: BoxDecoration(
                       color: _primaryBlue.withOpacity(0.08),
                       borderRadius: BorderRadius.circular(4),
@@ -920,23 +811,17 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                     child: Text(
                       (m['subject'] ?? 'General').toString().toUpperCase(),
                       style: const TextStyle(
-                          color: _primaryBlue,
-                          fontSize: 10.5,
-                          fontWeight: FontWeight.bold),
+                          color: _primaryBlue, fontSize: 10.5, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  Text(
-                    '$attempts attempts',
-                    style:
-                        TextStyle(fontSize: 11.5, color: Colors.grey[500]),
-                  ),
+                  Text('$attempts attempts',
+                      style: TextStyle(fontSize: 11.5, color: Colors.grey[500])),
                 ],
               ),
               const SizedBox(height: 6),
               Text(
                 m['title'] ?? 'Practice Mock Test',
-                style: const TextStyle(
-                    fontWeight: FontWeight.w700, fontSize: 15),
+                style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
               ),
               const SizedBox(height: 4),
               Text(
@@ -951,13 +836,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                     backgroundColor: _primaryBlue,
                     foregroundColor: Colors.white,
                     elevation: 0,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8)),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   ),
                   onPressed: () => _launchAttachedMock(m),
                   child: const Text('Start Mock →',
-                      style: TextStyle(
-                          fontSize: 12.5, fontWeight: FontWeight.bold)),
+                      style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
                 ),
               ),
             ],
@@ -967,45 +850,26 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     );
   }
 
-  // 🏆 3. COACHING SELECTIONS / WALL OF FAME TAB
-  Widget _buildSelectionsTab(
-      Color cardSurface, Color dividerColor, bool isDark) {
+  // 🏆 Wall of Fame / Success Testimonials (Flat Twitter Style Rows)
+  Widget _buildWallOfFameTab(Color cardSurface, Color dividerColor, bool isDark) {
     if (_selections.isEmpty) {
       return Center(
         child: Padding(
-          padding: const EdgeInsets.all(24),
+          padding: const EdgeInsets.all(32),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.military_tech_outlined,
-                  size: 44, color: Colors.grey[400]),
+              Icon(Icons.military_tech_outlined, size: 40, color: Colors.grey[400]),
               const SizedBox(height: 10),
               Text(
-                'No verified selections recorded yet.',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                    color: Colors.grey[600]),
+                'No student selections listed yet.',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.grey[600]),
               ),
               const SizedBox(height: 4),
               Text(
-                'Aspirants mentored by this coaching can claim their selection to show here.',
+                'Coaching will showcase its star achievers and success results here.',
                 textAlign: TextAlign.center,
                 style: TextStyle(fontSize: 12, color: Colors.grey[500]),
-              ),
-              const SizedBox(height: 14),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF16A34A),
-                  foregroundColor: Colors.white,
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)),
-                ),
-                icon: const Icon(Icons.add_task_rounded, size: 16),
-                label: const Text('Claim Your Selection',
-                    style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
-                onPressed: _openClaimSelectionModal,
               ),
             ],
           ),
@@ -1013,91 +877,179 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       );
     }
 
-    return ListView.builder(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+    return ListView.separated(
+      padding: EdgeInsets.zero,
       itemCount: _selections.length,
+      separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
       itemBuilder: (context, idx) {
-        final item = Map<String, dynamic>.from(_selections[idx]);
-        return StarSelectionCard(
-          data: item,
-          isDarkMode: isDark,
+        final s = _selections[idx];
+        final name = s['student_name'] ?? 'Candidate';
+        final post = s['post_cleared'] ?? 'Officer';
+        final exam = s['target_exam'] ?? 'Competitive Exam';
+        final quote = s['testimonial_text'] ?? '';
+        final isVerified = s['is_verified'] == true;
+
+        return Container(
+          color: cardSurface,
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              CircleAvatar(
+                radius: 20,
+                backgroundColor: const Color(0xFF16A34A).withOpacity(0.12),
+                child: Text(
+                  name.isNotEmpty ? name[0].toUpperCase() : 'A',
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF16A34A)),
+                ),
+              ),
+              const SizedBox(width: 12),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Flexible(
+                          child: Text(
+                            name,
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                            overflow: TextOverflow.ellipsis,
+                          ),
+                        ),
+                        if (isVerified) ...[
+                          const SizedBox(width: 4),
+                          const Icon(Icons.verified, size: 14, color: Color(0xFF16A34A)),
+                        ],
+                      ],
+                    ),
+                    const SizedBox(height: 2),
+                    Text(
+                      '$post • $exam',
+                      style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _primaryBlue),
+                    ),
+                    if (quote.isNotEmpty) ...[
+                      const SizedBox(height: 6),
+                      Text(
+                        '“$quote”',
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          height: 1.4,
+                          fontStyle: FontStyle.italic,
+                          color: isDark ? Colors.grey[300] : const Color(0xFF475569),
+                        ),
+                      ),
+                    ],
+                  ],
+                ),
+              ),
+            ],
+          ),
         );
       },
     );
   }
 
-  Widget _buildUpdatesTab(Color cardSurface, Color dividerColor, bool isDark) {
-    if (_updates.isEmpty) {
-      return Center(
-        child: Text('No community updates posted yet.',
-            style: TextStyle(color: Colors.grey[500])),
-      );
-    }
+  // 🏛️ About, Campus Photos & Full Coaching Info
+  Widget _buildAboutCampusTab(Color cardSurface, Color dividerColor, bool isDark) {
+    final aboutText = _coaching?['description'] ??
+        _profile?['bio'] ??
+        'Premier preparation institute providing focused guidance and test series for competitive exams.';
+    final fullAddress = _coaching?['landmark_address'] ?? _coaching?['landmark'] ?? 'Bihar, India';
+    final establishedYear = _coaching?['established_year'] ?? 'Active';
 
-    return ListView.separated(
-      padding: EdgeInsets.zero,
-      itemCount: _updates.length,
-      separatorBuilder: (_, __) =>
-          Divider(height: 1, thickness: 0.8, color: dividerColor),
-      itemBuilder: (context, idx) {
-        final p = _updates[idx];
-        final String? imgUrl = p['image_url'];
-        final tag = p['tag'] ?? 'Update';
-
-        return Container(
-          color: cardSurface,
-          padding:
-              const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 7, vertical: 2),
-                    decoration: BoxDecoration(
-                      color: _primaryBlue.withOpacity(0.08),
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                    child: Text(
-                      tag.toString().toUpperCase(),
-                      style: const TextStyle(
-                          color: _primaryBlue,
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                ],
+    return SingleChildScrollView(
+      child: Container(
+        color: cardSurface,
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const Text(
+              'About the Institute',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+            ),
+            const SizedBox(height: 8),
+            Text(
+              aboutText,
+              style: TextStyle(
+                fontSize: 13,
+                height: 1.45,
+                color: isDark ? Colors.grey[300] : const Color(0xFF334155),
               ),
-              const SizedBox(height: 8),
-              Text(
-                p['content'] ?? '',
-                style: TextStyle(
-                  fontSize: 13.5,
-                  height: 1.4,
-                  color: isDark
-                      ? const Color(0xFFF1F5F9)
-                      : const Color(0xFF1E293B),
+            ),
+            const SizedBox(height: 20),
+
+            // Classroom & Campus Highlights
+            if (_galleryImages.isNotEmpty) ...[
+              const Text(
+                'Classroom & Campus Facilities',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
+              ),
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 130,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: _galleryImages.length,
+                  separatorBuilder: (_, __) => const SizedBox(width: 10),
+                  itemBuilder: (context, i) {
+                    return ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.network(
+                        _galleryImages[i].toString(),
+                        width: 180,
+                        height: 130,
+                        fit: BoxFit.cover,
+                        errorBuilder: (_, __, ___) => Container(
+                          width: 180,
+                          color: Colors.grey.withOpacity(0.1),
+                          child: const Icon(Icons.image_not_supported_outlined, color: Colors.grey),
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
-              if (imgUrl != null && imgUrl.isNotEmpty) ...[
-                const SizedBox(height: 10),
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(8),
-                  child: Image.network(
-                    imgUrl,
-                    fit: BoxFit.cover,
-                    width: double.infinity,
-                    height: 180,
-                    errorBuilder: (_, __, ___) => const SizedBox.shrink(),
-                  ),
-                ),
-              ],
+              const SizedBox(height: 20),
             ],
-          ),
-        );
-      },
+
+            // Details Grid
+            Divider(height: 1, thickness: 0.8, color: dividerColor),
+            const SizedBox(height: 14),
+            _buildInfoRow(Icons.pin_drop_outlined, 'Address', fullAddress, isDark),
+            const SizedBox(height: 12),
+            _buildInfoRow(Icons.calendar_today_outlined, 'Serving Since', establishedYear.toString(), isDark),
+            const SizedBox(height: 12),
+            _buildInfoRow(Icons.shield_outlined, 'Status', 'Registered Coaching Centre', isDark),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildInfoRow(IconData icon, String label, String value, bool isDark) {
+    return Row(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Icon(icon, size: 16, color: _primaryBlue),
+        const SizedBox(width: 10),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(label, style: TextStyle(fontSize: 11, color: Colors.grey[500])),
+            const SizedBox(height: 1),
+            Text(
+              value,
+              style: TextStyle(
+                fontSize: 12.5,
+                fontWeight: FontWeight.w600,
+                color: isDark ? Colors.white70 : const Color(0xFF1E293B),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 }
