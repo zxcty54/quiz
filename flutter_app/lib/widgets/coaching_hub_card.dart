@@ -59,7 +59,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                 .count(CountOption.exact)
                 .eq('coaching_id', cId)
                 .eq('is_verified', true);
-            selections = countRes.count;
+            selections = countRes;
           } catch (_) {}
         }
 
