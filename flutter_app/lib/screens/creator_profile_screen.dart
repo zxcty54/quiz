@@ -87,7 +87,13 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       dynamic coachRes = await client
           .from('coachings')
           .select('*')
-          .or('owner_name.ilike.$handle,creator_handle.ilike.$handle,name.ilike.$handle')
+          .ilike('owner_name', handle)
+          .maybeSingle();
+
+      coachRes ??= await client
+          .from('coachings')
+          .select('*')
+          .ilike('creator_handle', handle)
           .maybeSingle();
 
       _coaching = coachRes;
@@ -96,37 +102,23 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
         _galleryImages = (_coaching!['gallery_images'] as List?) ?? [];
       }
     } catch (e) {
-      debugPrint("Profile/Coaching fetch error: $e");
+      debugPrint("Profile fetch error: $e");
     }
   }
 
   Future<void> _fetchBatches() async {
     try {
-      final client = Supabase.instance.client;
-      final handle = widget.creatorHandle.trim();
+      if (_coaching == null) return;
+      final coachingId = _coaching!['id'];
 
-      dynamic res;
-      if (_coaching != null && _coaching!['id'] != null) {
-        res = await client
-            .from('batches')
-            .select('*, batch_tests(id), batch_notes(id)')
-            .eq('coaching_id', _coaching!['id'])
-            .neq('status', 'HIDDEN')
-            .order('created_at', ascending: false);
-      } else {
-        res = await client
-            .from('batches')
-            .select('*, batch_tests(id), batch_notes(id), coachings(*)')
-            .ilike('coachings.owner_name', handle)
-            .neq('status', 'HIDDEN')
-            .order('created_at', ascending: false);
-      }
+      final res = await Supabase.instance.client
+          .from('batches')
+          .select('*')
+          .eq('coaching_id', coachingId)
+          .neq('status', 'HIDDEN')
+          .order('created_at', ascending: false);
 
       _batches = res ?? [];
-
-      if (_coaching == null && _batches.isNotEmpty && _batches[0]['coachings'] != null) {
-        _coaching = _batches[0]['coachings'];
-      }
     } catch (e) {
       debugPrint("Batches fetch error: $e");
     }
@@ -202,6 +194,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     final bgSurface = isDark ? _darkBg : _lightBg;
     final cardSurface = isDark ? _darkCard : Colors.white;
     final dividerColor = isDark ? _darkDivider : _lightDivider;
+
     final bannerUrl = _coaching?['banner_url'] ?? _profile?['banner_url'];
 
     if (_isLoading) {
@@ -231,8 +224,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 onPressed: () => Navigator.pop(context),
               ),
               flexibleSpace: FlexibleSpaceBar(
-                background: bannerUrl != null && bannerUrl.toString().isNotEmpty
-                    ? Image.network(bannerUrl, fit: BoxFit.cover)
+                background: bannerUrl != null && bannerUrl.toString().trim().isNotEmpty
+                    ? Image.network(bannerUrl.toString().trim(), fit: BoxFit.cover)
                     : Container(
                         decoration: BoxDecoration(
                           gradient: LinearGradient(
