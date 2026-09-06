@@ -11,7 +11,7 @@ class CoachingDirectoryScreen extends StatefulWidget {
 }
 
 class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
-  List<Map<String, dynamic>> _coachings = [];
+  List<dynamic> _coachings = [];
   List<String> _liveCities = [];
   bool _isLoading = true;
   String _searchQuery = '';
@@ -30,52 +30,23 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
     try {
       final res = await Supabase.instance.client
           .from('coachings')
-          .select('*, batches(id, batch_name, status, batch_tests(id)), coaching_selections(id, is_verified, testimonial_text, target_exam)')
-          .eq('is_approved', true);
+          .select('*, batches(id, batch_name, status, batch_tests(id))')
+          .eq('is_approved', true)
+          .order('created_at', ascending: false);
 
-      final List rawData = res ?? [];
-      List<Map<String, dynamic>> processedList = [];
+      final List data = res ?? [];
 
       final Set<String> activeCities = {'All'};
-
-      for (var item in rawData) {
-        final c = Map<String, dynamic>.from(item);
+      for (var c in data) {
         final city = (c['district'] ?? c['city'] ?? '').toString().trim();
         if (city.isNotEmpty) {
           activeCities.add(city);
         }
-
-        // Calculate verified selections & impact score
-        final List selectionsList = (c['coaching_selections'] as List?) ?? [];
-        int verifiedCount = 0;
-        int impactScore = 0;
-
-        for (var s in selectionsList) {
-          if (s['is_verified'] == true) {
-            verifiedCount++;
-            final String quote = (s['testimonial_text'] ?? '').toString().trim();
-            impactScore += (quote.length > 20) ? 15 : 10;
-          }
-        }
-
-        c['verified_selections_count'] = verifiedCount;
-        c['impact_score'] = impactScore;
-        processedList.add(c);
       }
-
-      // 🏆 Highest Impact Score & Selections top par aayenge
-      processedList.sort((a, b) {
-        int scoreA = a['impact_score'] ?? 0;
-        int scoreB = b['impact_score'] ?? 0;
-        if (scoreB != scoreA) return scoreB.compareTo(scoreA);
-        int countA = a['verified_selections_count'] ?? 0;
-        int countB = b['verified_selections_count'] ?? 0;
-        return countB.compareTo(countA);
-      });
 
       if (mounted) {
         setState(() {
-          _coachings = processedList;
+          _coachings = data;
           _liveCities = activeCities.toList();
           _isLoading = false;
         });
@@ -93,7 +64,6 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
     final textMuted = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
     final textHeading = isDark ? Colors.white : const Color(0xFF0F172A);
 
-    // Filter Logic: Search, City & Exam
     final filteredList = _coachings.where((c) {
       final name = (c['name'] ?? '').toString().toLowerCase();
       final city = (c['district'] ?? c['city'] ?? '').toString().toLowerCase();
@@ -108,12 +78,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
         final batchesStr = ((c['batches'] as List?) ?? [])
             .map((b) => (b['batch_name'] ?? '').toString().toLowerCase())
             .join(' ');
-        final selectionsExamStr = ((c['coaching_selections'] as List?) ?? [])
-            .map((s) => (s['target_exam'] ?? '').toString().toLowerCase())
-            .join(' ');
-
         matchesExam = batchesStr.contains(_selectedExam.toLowerCase()) ||
-            selectionsExamStr.contains(_selectedExam.toLowerCase()) ||
             landmark.contains(_selectedExam.toLowerCase()) ||
             name.contains(_selectedExam.toLowerCase());
       }
@@ -128,7 +93,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
         elevation: 0,
         scrolledUnderElevation: 0,
         title: Text(
-          'Coaching Leaderboard & Hub',
+          'Explore Coaching',
           style: TextStyle(fontWeight: FontWeight.w800, fontSize: 18, color: textHeading),
         ),
       ),
@@ -136,7 +101,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
           ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
           : CustomScrollView(
               slivers: [
-                // 1. Header & Filters
+                // 1. Top Header & Search Area
                 SliverToBoxAdapter(
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -144,12 +109,12 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Verified Selections & Success Leaderboard 🏆',
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w800, color: textHeading),
+                          'Bihar ke Students aur Local Coaching Centres ka Digital Hub',
+                          style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w700, color: textHeading),
                         ),
                         const SizedBox(height: 3),
                         Text(
-                          'Ranked by authenticated results, student proofs and active batches',
+                          'Coaching ke Mocks • Notes • Batches — Ek Hi Platform Par',
                           style: TextStyle(fontSize: 11.5, color: textMuted),
                         ),
                         const SizedBox(height: 14),
@@ -158,7 +123,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                         TextField(
                           style: TextStyle(color: textHeading, fontSize: 13.5),
                           decoration: InputDecoration(
-                            hintText: 'Search coaching, teacher, or city...',
+                            hintText: 'Search any coaching, teacher or city...',
                             hintStyle: TextStyle(color: textMuted, fontSize: 13),
                             prefixIcon: Icon(Icons.search, color: textMuted, size: 20),
                             suffixIcon: _searchQuery.isNotEmpty
@@ -177,8 +142,8 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                         ),
                         const SizedBox(height: 14),
 
-                        // Popular Exams Filter
-                        Text('Filter by Exam', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: textMuted)),
+                        // Popular Exams
+                        Text('Popular Exams', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: textMuted)),
                         const SizedBox(height: 6),
                         Wrap(
                           spacing: 6,
@@ -202,8 +167,8 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                         ),
                         const SizedBox(height: 10),
 
-                        // District Filter
-                        Text('Coaching Available in Bihar', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: textMuted)),
+                        // Live Cities
+                        Text('Coaching available in Bihar', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: textMuted)),
                         const SizedBox(height: 6),
                         Wrap(
                           spacing: 6,
@@ -243,7 +208,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
-                              '${filteredList.length} Ranked Centres',
+                              '${filteredList.length} Coaching Centres',
                               style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold, color: textHeading),
                             ),
                             if (_selectedCity != 'All' || _selectedExam != 'All')
@@ -265,7 +230,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                   ),
                 ),
 
-                // 3. Ranked Feed Rows
+                // 3. Flat Feed Rows
                 if (filteredList.isEmpty)
                   SliverToBoxAdapter(
                     child: Padding(
@@ -287,18 +252,6 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                         final district = c['district'] ?? c['city'] ?? 'Bihar';
                         final landmark = c['landmark_address'] ?? '';
                         final ownerHandle = c['owner_name'] ?? 'creator';
-                        final verifiedSelections = c['verified_selections_count'] ?? 0;
-                        final impactScore = c['impact_score'] ?? 0;
-
-                        final rank = idx + 1;
-                        final isTop3 = rank <= 3;
-                        final Color badgeColor = rank == 1
-                            ? const Color(0xFFF59E0B) // Gold
-                            : rank == 2
-                                ? const Color(0xFF94A3B8) // Silver
-                                : rank == 3
-                                    ? const Color(0xFFB45309) // Bronze
-                                    : const Color(0xFF2563EB);
 
                         final List allBatches = c['batches'] ?? [];
                         final List visibleBatches = allBatches.where((b) => b['status'] != 'HIDDEN').toList();
@@ -307,6 +260,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                         for (var b in visibleBatches) {
                           totalTests += ((b['batch_tests'] as List?) ?? []).length;
                         }
+                        int notesCount = visibleBatches.length * 5;
 
                         return InkWell(
                           onTap: () {
@@ -324,28 +278,16 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Padding(
-                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
                                 child: Row(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    // 🥇 Rank Position Indicator
-                                    Container(
-                                      width: 32,
-                                      height: 32,
-                                      decoration: BoxDecoration(
-                                        color: badgeColor.withOpacity(0.12),
-                                        shape: BoxShape.circle,
-                                        border: Border.all(color: badgeColor, width: isTop3 ? 1.5 : 1.0),
-                                      ),
-                                      child: Center(
-                                        child: Text(
-                                          '#$rank',
-                                          style: TextStyle(
-                                            fontWeight: FontWeight.w900,
-                                            fontSize: 12,
-                                            color: badgeColor,
-                                          ),
-                                        ),
+                                    CircleAvatar(
+                                      radius: 20,
+                                      backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
+                                      child: Text(
+                                        coachingName.isNotEmpty ? coachingName[0].toUpperCase() : 'C',
+                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF2563EB)),
                                       ),
                                     ),
                                     const SizedBox(width: 12),
@@ -354,41 +296,16 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Row(
-                                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                             children: [
                                               Flexible(
-                                                child: Row(
-                                                  children: [
-                                                    Flexible(
-                                                      child: Text(
-                                                        coachingName,
-                                                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: textHeading),
-                                                        overflow: TextOverflow.ellipsis,
-                                                      ),
-                                                    ),
-                                                    const SizedBox(width: 4),
-                                                    const Icon(Icons.verified, size: 15, color: Color(0xFF2563EB)),
-                                                  ],
-                                                ),
-                                              ),
-                                              // 🎓 Verified Selections Count Pill
-                                              Container(
-                                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                                                decoration: BoxDecoration(
-                                                  color: (verifiedSelections > 0 ? const Color(0xFF16A34A) : Colors.grey).withOpacity(0.12),
-                                                  borderRadius: BorderRadius.circular(12),
-                                                ),
                                                 child: Text(
-                                                  verifiedSelections > 0
-                                                      ? '$verifiedSelections Selected 🎓'
-                                                      : 'New Center',
-                                                  style: TextStyle(
-                                                    fontSize: 10.5,
-                                                    fontWeight: FontWeight.w800,
-                                                    color: verifiedSelections > 0 ? const Color(0xFF16A34A) : Colors.grey,
-                                                  ),
+                                                  coachingName,
+                                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: textHeading),
+                                                  overflow: TextOverflow.ellipsis,
                                                 ),
                                               ),
+                                              const SizedBox(width: 4),
+                                              const Icon(Icons.verified, size: 14, color: Color(0xFF2563EB)),
                                             ],
                                           ),
                                           const SizedBox(height: 3),
@@ -396,22 +313,20 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                                             '📍 $district${landmark.isNotEmpty ? ", $landmark" : ""}',
                                             style: TextStyle(fontSize: 12, color: textMuted),
                                           ),
+                                          const SizedBox(height: 5),
+                                          Text(
+                                            'BPSC · BSSC · SSC',
+                                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: textHeading.withOpacity(0.85)),
+                                          ),
                                           const SizedBox(height: 4),
                                           Text(
-                                            '${visibleBatches.length} Batches · $totalTests CBT Tests · $impactScore Impact Pts',
+                                            '${visibleBatches.length} Batches · $totalTests Tests · $notesCount Notes',
                                             style: TextStyle(fontSize: 11.5, color: textMuted),
                                           ),
                                           const SizedBox(height: 8),
-
-                                          // Mini Impact Progress Bar
-                                          ClipRRect(
-                                            borderRadius: BorderRadius.circular(4),
-                                            child: LinearProgressIndicator(
-                                              value: (impactScore / 150).clamp(0.06, 1.0),
-                                              minHeight: 4,
-                                              backgroundColor: isDark ? Colors.white12 : const Color(0xFFE2E8F0),
-                                              valueColor: AlwaysStoppedAnimation<Color>(badgeColor),
-                                            ),
+                                          const Text(
+                                            'View Coaching →',
+                                            style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
                                           ),
                                         ],
                                       ),
@@ -428,14 +343,23 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                     ),
                   ),
 
-                // 4. Bottom Notice
+                // 4. Bottom Notice Strip
                 SliverToBoxAdapter(
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 26),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 30),
                     child: Center(
-                      child: Text(
-                        "Rankings update automatically upon selection verification.",
-                        style: TextStyle(fontSize: 11, color: textMuted),
+                      child: Column(
+                        children: [
+                          Text(
+                            "Can't find your city?",
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: textHeading),
+                          ),
+                          const SizedBox(height: 4),
+                          Text(
+                            "We're adding coaching centres across all 38 districts.",
+                            style: TextStyle(fontSize: 11.5, color: textMuted),
+                          ),
+                        ],
                       ),
                     ),
                   ),
