@@ -40,8 +40,12 @@ class CreatorProfileHeader extends StatelessWidget {
 
   void _openDialer(String phone) async {
     try {
-      final uri = Uri.parse('tel:$phone');
-      if (await canLaunchUrl(uri)) await launchUrl(uri);
+      // Space aur unwanted symbols remove karke clean number dial karna
+      final cleanPhone = phone.replaceAll(RegExp(r'[^0-9+]'), '');
+      final uri = Uri(scheme: 'tel', path: cleanPhone);
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri);
+      }
     } catch (_) {}
   }
 
@@ -69,11 +73,18 @@ class CreatorProfileHeader extends StatelessWidget {
     final landmark = coaching?['landmark_address'] ?? coaching?['landmark'];
     final logoUrl = coaching?['logo_url'] ?? profile?['profile_image'];
 
-    final contactPhone = coaching?['phone'] ?? coaching?['contact_number'] ?? profile?['phone'];
-    final telegram = coaching?['telegram_link'] ?? profile?['telegram_handle'];
-    final youtube = coaching?['youtube_url'] ?? profile?['youtube_handle'];
-    final facebook = coaching?['facebook_url'] ?? profile?['facebook_handle'];
-    final website = coaching?['website_url'] ?? profile?['website_url'];
+    // Deep Read for Contact & Social Fields
+    final contactPhone = (coaching?['phone'] ?? coaching?['contact_number'] ?? profile?['phone'] ?? '').toString().trim();
+    final telegram = (coaching?['telegram_link'] ?? profile?['telegram_handle'] ?? '').toString().trim();
+    final youtube = (coaching?['youtube_url'] ?? profile?['youtube_handle'] ?? '').toString().trim();
+    final facebook = (coaching?['facebook_url'] ?? profile?['facebook_handle'] ?? '').toString().trim();
+    final website = (coaching?['website_url'] ?? profile?['website_url'] ?? '').toString().trim();
+
+    final hasAnySocial = contactPhone.isNotEmpty ||
+        telegram.isNotEmpty ||
+        youtube.isNotEmpty ||
+        facebook.isNotEmpty ||
+        website.isNotEmpty;
 
     return Container(
       color: cardSurface,
@@ -176,73 +187,73 @@ class CreatorProfileHeader extends StatelessWidget {
               _buildStat('$selectionsCount', 'Selections 🎓'),
             ],
           ),
-          const SizedBox(height: 14),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: [
-              if (contactPhone != null && contactPhone.toString().trim().isNotEmpty) ...[
-                _buildSocialPill(
-                  icon: Icons.phone_outlined,
-                  label: 'Call',
-                  iconColor: const Color(0xFF16A34A),
-                  dividerColor: dividerColor,
-                  onTap: () => _openDialer(contactPhone.toString()),
-                ),
-                _buildSocialPill(
-                  icon: Icons.chat_bubble_outline_rounded,
-                  label: 'WhatsApp',
-                  iconColor: const Color(0xFF25D366),
-                  dividerColor: dividerColor,
-                  onTap: () => _openWhatsApp(contactPhone.toString()),
-                ),
+
+          // 🌐 Social Links Strip (Only appears when at least 1 link exists)
+          if (hasAnySocial) ...[
+            const SizedBox(height: 14),
+            Wrap(
+              spacing: 8,
+              runSpacing: 8,
+              children: [
+                if (contactPhone.isNotEmpty) ...[
+                  _buildSocialPill(
+                    icon: Icons.phone_outlined,
+                    label: 'Call',
+                    iconColor: const Color(0xFF16A34A),
+                    dividerColor: dividerColor,
+                    onTap: () => _openDialer(contactPhone),
+                  ),
+                  _buildSocialPill(
+                    icon: Icons.chat_bubble_outline_rounded,
+                    label: 'WhatsApp',
+                    iconColor: const Color(0xFF25D366),
+                    dividerColor: dividerColor,
+                    onTap: () => _openWhatsApp(contactPhone),
+                  ),
+                ],
+                if (telegram.isNotEmpty)
+                  _buildSocialPill(
+                    icon: Icons.near_me_rounded,
+                    label: 'Telegram',
+                    iconColor: const Color(0xFF0284C7),
+                    dividerColor: dividerColor,
+                    onTap: () {
+                      _openUrl(telegram.startsWith('http') ? telegram : 'https://t.me/${telegram.replaceAll('@', '')}');
+                    },
+                  ),
+                if (youtube.isNotEmpty)
+                  _buildSocialPill(
+                    icon: Icons.smart_display_outlined,
+                    label: 'YouTube',
+                    iconColor: const Color(0xFFEF4444),
+                    dividerColor: dividerColor,
+                    onTap: () {
+                      _openUrl(youtube.startsWith('http') ? youtube : 'https://youtube.com/${youtube.startsWith('@') ? youtube : "@$youtube"}');
+                    },
+                  ),
+                if (facebook.isNotEmpty)
+                  _buildSocialPill(
+                    icon: Icons.facebook_rounded,
+                    label: 'Facebook',
+                    iconColor: const Color(0xFF1877F2),
+                    dividerColor: dividerColor,
+                    onTap: () {
+                      _openUrl(facebook.startsWith('http') ? facebook : 'https://facebook.com/$facebook');
+                    },
+                  ),
+                if (website.isNotEmpty)
+                  _buildSocialPill(
+                    icon: Icons.language_rounded,
+                    label: 'Website',
+                    iconColor: _primaryBlue,
+                    dividerColor: dividerColor,
+                    onTap: () {
+                      _openUrl(website.startsWith('http') ? website : 'https://$website');
+                    },
+                  ),
               ],
-              if (telegram != null && telegram.toString().trim().isNotEmpty)
-                _buildSocialPill(
-                  icon: Icons.near_me_rounded,
-                  label: 'Telegram',
-                  iconColor: const Color(0xFF0284C7),
-                  dividerColor: dividerColor,
-                  onTap: () {
-                    final tg = telegram.toString().trim();
-                    _openUrl(tg.startsWith('http') ? tg : 'https://t.me/${tg.replaceAll('@', '')}');
-                  },
-                ),
-              if (youtube != null && youtube.toString().trim().isNotEmpty)
-                _buildSocialPill(
-                  icon: Icons.smart_display_outlined,
-                  label: 'YouTube',
-                  iconColor: const Color(0xFFEF4444),
-                  dividerColor: dividerColor,
-                  onTap: () {
-                    final yt = youtube.toString().trim();
-                    _openUrl(yt.startsWith('http') ? yt : 'https://youtube.com/${yt.startsWith('@') ? yt : "@$yt"}');
-                  },
-                ),
-              if (facebook != null && facebook.toString().trim().isNotEmpty)
-                _buildSocialPill(
-                  icon: Icons.facebook_rounded,
-                  label: 'Facebook',
-                  iconColor: const Color(0xFF1877F2),
-                  dividerColor: dividerColor,
-                  onTap: () {
-                    final fb = facebook.toString().trim();
-                    _openUrl(fb.startsWith('http') ? fb : 'https://facebook.com/$fb');
-                  },
-                ),
-              if (website != null && website.toString().trim().isNotEmpty)
-                _buildSocialPill(
-                  icon: Icons.language_rounded,
-                  label: 'Website',
-                  iconColor: _primaryBlue,
-                  dividerColor: dividerColor,
-                  onTap: () {
-                    final web = website.toString().trim();
-                    _openUrl(web.startsWith('http') ? web : 'https://$web');
-                  },
-                ),
-            ],
-          ),
+            ),
+          ],
         ],
       ),
     );
