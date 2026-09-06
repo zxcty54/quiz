@@ -134,7 +134,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     }
   }
 
-  // 🎯 Open Modular Performance Sheet
   void _openStudentIntelligenceSheet() {
     if (_batches.isEmpty) {
       ScaffoldMessenger.of(context).showSnackBar(
@@ -157,7 +156,6 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
     );
   }
 
-  // 🏫 Open Modular Batch Manager
   void _openBatchManagerModal() {
     showModalBottomSheet(
       context: context,
@@ -245,7 +243,7 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
             const SizedBox(height: 14),
 
-            const Text('Modify Institute & Batches', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+            const Text('Modify Institute & Landing Page', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
             const SizedBox(height: 12),
 
             _buildActionCard(
@@ -264,8 +262,8 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
             ),
 
             _buildActionCard(
-              title: 'Edit Location & Details 📍',
-              subtitle: 'Update district, education hub, landmark address or helpline number.',
+              title: 'Edit Location, Bio & Helpline 📍',
+              subtitle: 'Update district, landmark address, about text or established year.',
               icon: Icons.edit_location_alt_outlined,
               color: const Color(0xFF16A34A),
               onTap: () => CoachingEditorSheets.openDetailsModifierSheet(
@@ -277,9 +275,53 @@ class _CreatorDashboardScreenState extends State<CreatorDashboardScreen> {
               ),
             ),
 
+            // 🌐 Social Links Editor Card
             _buildActionCard(
-              title: 'Manage Batches & Codes 🏫',
-              subtitle: 'Add new batch, toggle LIVE / UPCOMING / HIDE, copy secret code.',
+              title: 'Social & Connect Links 🌐',
+              subtitle: 'Update WhatsApp, Phone, Telegram, YouTube, Facebook & Website.',
+              icon: Icons.share_rounded,
+              color: const Color(0xFF0284C7),
+              onTap: () => CoachingEditorSheets.openSocialLinksModifierSheet(
+                context: context,
+                coachingData: _coachingData,
+                isDarkMode: isDark,
+                onSaved: _loadCompleteAnalytics,
+              ),
+            ),
+
+            // 👨‍🏫 Faculty Editor Card
+            _buildActionCard(
+              title: 'Manage Faculty & Mentors 👨‍🏫',
+              subtitle: 'Add or remove teachers, paper subjects and teaching experience.',
+              icon: Icons.school_outlined,
+              color: const Color(0xFF9333EA),
+              onTap: () => CoachingEditorSheets.openFacultyModifierSheet(
+                context: context,
+                coachingId: _coachingData?['id'],
+                currentFaculty: _coachingData?['faculty_list'],
+                isDarkMode: isDark,
+                onSaved: _loadCompleteAnalytics,
+              ),
+            ),
+
+            // 🏆 Wall of Fame & Gallery Card
+            _buildActionCard(
+              title: 'Wall of Fame & Campus Gallery 🏆',
+              subtitle: 'Add student selections, testimonials & upload classroom photos.',
+              icon: Icons.military_tech_outlined,
+              color: const Color(0xFFD97706),
+              onTap: () => CoachingEditorSheets.openWallOfFameModifierSheet(
+                context: context,
+                coachingId: _coachingData?['id'],
+                currentGallery: _coachingData?['gallery_images'],
+                isDarkMode: isDark,
+                onSaved: _loadCompleteAnalytics,
+              ),
+            ),
+
+            _buildActionCard(
+              title: 'Manage Batches, Codes & Fees 🏫',
+              subtitle: 'Add new batch, toggle LIVE / HIDE, copy secret code, set fee price.',
               icon: Icons.vpn_key_outlined,
               color: const Color(0xFFEA580C),
               onTap: _openBatchManagerModal,
