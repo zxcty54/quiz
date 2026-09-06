@@ -22,8 +22,7 @@ class CoachingEditorSheets {
       context: context,
       isScrollControlled: true,
       backgroundColor: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
           padding: const EdgeInsets.all(16),
@@ -34,8 +33,7 @@ class CoachingEditorSheets {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text('🖼️ Modify Institute Poster',
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                  const Text('🖼️ Modify Institute Poster', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                   IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                 ],
               ),
@@ -84,15 +82,17 @@ class CoachingEditorSheets {
                                 .from('coaching_assets')
                                 .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true));
 
-                            final updatedUrl = Supabase.instance.client.storage
-                                .from('coaching_assets')
-                                .getPublicUrl(fileName);
+                            final updatedUrl = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
 
-                            await Supabase.instance.client.from('coachings').update({'banner_url': updatedUrl}).eq('id', coachingId!);
+                            if (coachingId != null) {
+                              await Supabase.instance.client.from('coachings').update({'banner_url': updatedUrl}).eq('id', coachingId);
+                            }
+                            await Supabase.instance.client.from('creator_profiles').update({'banner_url': updatedUrl}).eq('handle_id', creatorHandle);
 
                             if (ctx.mounted) Navigator.pop(ctx);
                             onSaved();
                           } catch (e) {
+                            debugPrint("Banner save error: $e");
                             setModalState(() => isSaving = false);
                           }
                         },
@@ -153,7 +153,7 @@ class CoachingEditorSheets {
                 const SizedBox(height: 10),
                 TextField(controller: nameCtrl, decoration: const InputDecoration(labelText: 'Coaching Title', border: OutlineInputBorder(), isDense: true)),
                 const SizedBox(height: 10),
-                TextField(controller: taglineCtrl, decoration: const InputDecoration(labelText: 'Tagline / Specialty (e.g. BPSC & Bihar SI Hub)', border: OutlineInputBorder(), isDense: true)),
+                TextField(controller: taglineCtrl, decoration: const InputDecoration(labelText: 'Tagline / Specialty', border: OutlineInputBorder(), isDense: true)),
                 const SizedBox(height: 10),
                 DropdownButtonFormField<String>(
                   value: selectedDistrict,
@@ -199,15 +199,17 @@ class CoachingEditorSheets {
                             try {
                               final updatedName = nameCtrl.text.trim().isNotEmpty ? nameCtrl.text.trim() : (coachingData?['name'] ?? creatorHandle);
 
-                              await Supabase.instance.client.from('coachings').update({
-                                'name': updatedName,
-                                'district': selectedDistrict,
-                                'city': selectedCity,
-                                'landmark_address': landmarkCtrl.text.trim(),
-                                'tagline': taglineCtrl.text.trim(),
-                                'established_year': yearCtrl.text.trim(),
-                                'description': descCtrl.text.trim(),
-                              }).eq('id', coachingData?['id']);
+                              if (coachingData?['id'] != null) {
+                                await Supabase.instance.client.from('coachings').update({
+                                  'name': updatedName,
+                                  'district': selectedDistrict,
+                                  'city': selectedCity,
+                                  'landmark_address': landmarkCtrl.text.trim(),
+                                  'tagline': taglineCtrl.text.trim(),
+                                  'established_year': yearCtrl.text.trim(),
+                                  'description': descCtrl.text.trim(),
+                                }).eq('id', coachingData!['id']);
+                              }
 
                               await Supabase.instance.client.from('creator_profiles').update({'name': updatedName}).eq('handle_id', creatorHandle);
 
@@ -264,18 +266,16 @@ class CoachingEditorSheets {
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
                 ),
-                const Text('Ye links creator profile par student connect pills mein dikhte hain.',
-                    style: TextStyle(fontSize: 11.5, color: Colors.grey)),
                 const SizedBox(height: 12),
-                TextField(controller: phoneCtrl, keyboardType: TextInputType.phone, decoration: const InputDecoration(labelText: 'Call & WhatsApp Number', hintText: 'e.g. 9876543210', border: OutlineInputBorder(), isDense: true)),
+                TextField(controller: phoneCtrl, keyboardType: TextInputType.phone, decoration: const InputDecoration(labelText: 'Call & WhatsApp Number', border: OutlineInputBorder(), isDense: true)),
                 const SizedBox(height: 10),
-                TextField(controller: tgCtrl, decoration: const InputDecoration(labelText: 'Telegram Channel / Group Link', hintText: 'e.g. https://t.me/patna_ias', border: OutlineInputBorder(), isDense: true)),
+                TextField(controller: tgCtrl, decoration: const InputDecoration(labelText: 'Telegram Channel Link', border: OutlineInputBorder(), isDense: true)),
                 const SizedBox(height: 10),
-                TextField(controller: ytCtrl, decoration: const InputDecoration(labelText: 'YouTube Channel Link / Handle', hintText: 'e.g. @BiharSiddhiClasses', border: OutlineInputBorder(), isDense: true)),
+                TextField(controller: ytCtrl, decoration: const InputDecoration(labelText: 'YouTube Channel Link', border: OutlineInputBorder(), isDense: true)),
                 const SizedBox(height: 10),
-                TextField(controller: fbCtrl, decoration: const InputDecoration(labelText: 'Facebook Page URL', hintText: 'e.g. https://facebook.com/myinstitute', border: OutlineInputBorder(), isDense: true)),
+                TextField(controller: fbCtrl, decoration: const InputDecoration(labelText: 'Facebook Page URL', border: OutlineInputBorder(), isDense: true)),
                 const SizedBox(height: 10),
-                TextField(controller: webCtrl, decoration: const InputDecoration(labelText: 'Official Website (Optional)', hintText: 'e.g. www.mycoaching.com', border: OutlineInputBorder(), isDense: true)),
+                TextField(controller: webCtrl, decoration: const InputDecoration(labelText: 'Website Link', border: OutlineInputBorder(), isDense: true)),
                 const SizedBox(height: 16),
                 SizedBox(
                   width: double.infinity,
@@ -351,7 +351,7 @@ class CoachingEditorSheets {
                       final sCtrl = TextEditingController();
                       final eCtrl = TextEditingController();
                       File? mentorPhoto;
-                      bool isUploadingPhoto = false;
+                      bool isUploading = false;
 
                       showDialog(
                         context: context,
@@ -370,39 +370,33 @@ class CoachingEditorSheets {
                                       }
                                     },
                                     child: CircleAvatar(
-                                      radius: 36,
+                                      radius: 32,
                                       backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
                                       backgroundImage: mentorPhoto != null ? FileImage(mentorPhoto!) : null,
                                       child: mentorPhoto == null
-                                          ? const Column(
-                                              mainAxisAlignment: MainAxisAlignment.center,
-                                              children: [
-                                                Icon(Icons.camera_alt_outlined, color: Color(0xFF2563EB), size: 22),
-                                                Text('Photo', style: TextStyle(fontSize: 10, color: Color(0xFF2563EB))),
-                                              ],
-                                            )
+                                          ? const Icon(Icons.add_a_photo_outlined, color: Color(0xFF2563EB), size: 24)
                                           : null,
                                     ),
                                   ),
                                   const SizedBox(height: 12),
-                                  TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Teacher Name (e.g. Anand Sir)', border: OutlineInputBorder(), isDense: true)),
+                                  TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Teacher Name', border: OutlineInputBorder(), isDense: true)),
                                   const SizedBox(height: 10),
-                                  TextField(controller: sCtrl, decoration: const InputDecoration(labelText: 'Subject (e.g. Modern History)', border: OutlineInputBorder(), isDense: true)),
+                                  TextField(controller: sCtrl, decoration: const InputDecoration(labelText: 'Subject', border: OutlineInputBorder(), isDense: true)),
                                   const SizedBox(height: 10),
-                                  TextField(controller: eCtrl, keyboardType: TextInputType.number, decoration: const InputDecoration(labelText: 'Experience (Years, e.g. 8)', border: OutlineInputBorder(), isDense: true)),
+                                  TextField(controller: eCtrl, keyboardType: TextInputType.number, decoration: const InputDecoration(labelText: 'Experience (Years)', border: OutlineInputBorder(), isDense: true)),
                                 ],
                               ),
                             ),
                             actions: [
                               TextButton(onPressed: () => Navigator.pop(dCtx), child: const Text('Cancel')),
                               ElevatedButton(
-                                onPressed: isUploadingPhoto
+                                onPressed: isUploading
                                     ? null
                                     : () async {
                                         if (nCtrl.text.trim().isEmpty) return;
-                                        setDialogState(() => isUploadingPhoto = true);
+                                        setDialogState(() => isUploading = true);
 
-                                        String uploadedPhotoUrl = '';
+                                        String uploadedPhoto = '';
                                         if (mentorPhoto != null) {
                                           try {
                                             final bytes = await mentorPhoto!.readAsBytes();
@@ -411,9 +405,7 @@ class CoachingEditorSheets {
                                             await Supabase.instance.client.storage
                                                 .from('coaching_assets')
                                                 .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$ext', upsert: true));
-                                            uploadedPhotoUrl = Supabase.instance.client.storage
-                                                .from('coaching_assets')
-                                                .getPublicUrl(fileName);
+                                            uploadedPhoto = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
                                           } catch (_) {}
                                         }
 
@@ -422,12 +414,12 @@ class CoachingEditorSheets {
                                             'name': nCtrl.text.trim(),
                                             'subject': sCtrl.text.trim(),
                                             'exp': eCtrl.text.trim(),
-                                            'photo_url': uploadedPhotoUrl,
+                                            'photo_url': uploadedPhoto,
                                           });
                                         });
                                         Navigator.pop(dCtx);
                                       },
-                                child: isUploadingPhoto
+                                child: isUploading
                                     ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
                                     : const Text('Add'),
                               ),
@@ -439,13 +431,11 @@ class CoachingEditorSheets {
                   ),
                 ],
               ),
-              const Text('Yeh teachers "About & Campus" tab ke Star Mentors section mein show hote hain.',
-                  style: TextStyle(fontSize: 11.5, color: Colors.grey)),
               const SizedBox(height: 10),
               if (facultyList.isEmpty)
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 24),
-                  child: Center(child: Text('No faculty added yet. Tap "+ Add Mentor" above.', style: TextStyle(color: Colors.grey))),
+                  child: Center(child: Text('No faculty added yet.', style: TextStyle(color: Colors.grey))),
                 )
               else
                 ConstrainedBox(
@@ -461,7 +451,7 @@ class CoachingEditorSheets {
                         dense: true,
                         contentPadding: EdgeInsets.zero,
                         leading: CircleAvatar(
-                          radius: 20,
+                          radius: 18,
                           backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
                           backgroundImage: photoUrl.isNotEmpty ? NetworkImage(photoUrl) : null,
                           child: photoUrl.isEmpty
@@ -472,7 +462,7 @@ class CoachingEditorSheets {
                               : null,
                         ),
                         title: Text(f['name'] ?? '', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                        subtitle: Text('${f['subject'] ?? ''} • Exp: ${f['exp'] ?? ''} Yrs', style: const TextStyle(fontSize: 11.5)),
+                        subtitle: Text('${f['subject'] ?? ''} • ${f['exp'] ?? ''} Yrs', style: const TextStyle(fontSize: 11.5)),
                         trailing: IconButton(
                           icon: const Icon(Icons.delete_outline_rounded, color: Colors.redAccent, size: 18),
                           onPressed: () => setModalState(() => facultyList.removeAt(idx)),
@@ -493,10 +483,7 @@ class CoachingEditorSheets {
                           setModalState(() => isSaving = true);
                           try {
                             if (coachingId != null) {
-                              await Supabase.instance.client
-                                  .from('coachings')
-                                  .update({'faculty_list': facultyList})
-                                  .eq('id', coachingId);
+                              await Supabase.instance.client.from('coachings').update({'faculty_list': facultyList}).eq('id', coachingId);
                             }
                             if (ctx.mounted) Navigator.pop(ctx);
                             onSaved();
@@ -515,7 +502,7 @@ class CoachingEditorSheets {
     );
   }
 
-  // 🏆 5. Wall of Fame & Campus Gallery Modifier (With Student Photo & Image Fix)
+  // 🏆 5. Wall of Fame Modifier (Photo upload + safe Supabase insert)
   static void openWallOfFameModifierSheet({
     required BuildContext context,
     required dynamic coachingId,
@@ -562,7 +549,7 @@ class CoachingEditorSheets {
                     final pCtrl = TextEditingController();
                     final tCtrl = TextEditingController();
                     File? studentPhoto;
-                    bool isUploadingResult = false;
+                    bool isUploading = false;
 
                     showDialog(
                       context: context,
@@ -581,26 +568,20 @@ class CoachingEditorSheets {
                                     }
                                   },
                                   child: CircleAvatar(
-                                    radius: 34,
+                                    radius: 32,
                                     backgroundColor: const Color(0xFF16A34A).withOpacity(0.12),
                                     backgroundImage: studentPhoto != null ? FileImage(studentPhoto!) : null,
                                     child: studentPhoto == null
-                                        ? const Column(
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            children: [
-                                              Icon(Icons.camera_alt_outlined, color: Color(0xFF16A34A), size: 20),
-                                              Text('Student Photo', style: TextStyle(fontSize: 9, color: Color(0xFF16A34A))),
-                                            ],
-                                          )
+                                        ? const Icon(Icons.add_a_photo_outlined, color: Color(0xFF16A34A), size: 24)
                                         : null,
                                   ),
                                 ),
                                 const SizedBox(height: 12),
-                                TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Student Name (e.g. Rahul Kumar)', border: OutlineInputBorder(), isDense: true)),
+                                TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Student Name', border: OutlineInputBorder(), isDense: true)),
                                 const SizedBox(height: 10),
-                                TextField(controller: eCtrl, decoration: const InputDecoration(labelText: 'Exam Cleared (e.g. BPSC 70th)', border: OutlineInputBorder(), isDense: true)),
+                                TextField(controller: eCtrl, decoration: const InputDecoration(labelText: 'Exam Cleared', border: OutlineInputBorder(), isDense: true)),
                                 const SizedBox(height: 10),
-                                TextField(controller: pCtrl, decoration: const InputDecoration(labelText: 'Post / Rank (e.g. Revenue Officer)', border: OutlineInputBorder(), isDense: true)),
+                                TextField(controller: pCtrl, decoration: const InputDecoration(labelText: 'Post / Rank', border: OutlineInputBorder(), isDense: true)),
                                 const SizedBox(height: 10),
                                 TextField(controller: tCtrl, maxLines: 2, decoration: const InputDecoration(labelText: 'Student Feedback Quote', border: OutlineInputBorder(), isDense: true)),
                               ],
@@ -610,43 +591,53 @@ class CoachingEditorSheets {
                             TextButton(onPressed: () => Navigator.pop(dCtx), child: const Text('Cancel')),
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF16A34A), foregroundColor: Colors.white),
-                              onPressed: isUploadingResult
+                              onPressed: isUploading
                                   ? null
                                   : () async {
-                                      if (nCtrl.text.trim().isNotEmpty && coachingId != null) {
-                                        setDialogState(() => isUploadingResult = true);
-                                        String uploadedStudentUrl = '';
-                                        if (studentPhoto != null) {
-                                          try {
-                                            final bytes = await studentPhoto!.readAsBytes();
-                                            final ext = studentPhoto!.path.split('.').last;
-                                            final fileName = 'student_${DateTime.now().millisecondsSinceEpoch}.$ext';
-                                            await Supabase.instance.client.storage
-                                                .from('coaching_assets')
-                                                .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$ext', upsert: true));
-                                            uploadedStudentUrl = Supabase.instance.client.storage
-                                                .from('coaching_assets')
-                                                .getPublicUrl(fileName);
-                                          } catch (_) {}
-                                        }
+                                      if (nCtrl.text.trim().isEmpty) return;
+                                      setDialogState(() => isUploading = true);
 
-                                        await Supabase.instance.client.from('coaching_selections').insert({
-                                          'coaching_id': coachingId,
+                                      String photoUrl = '';
+                                      if (studentPhoto != null) {
+                                        try {
+                                          final bytes = await studentPhoto!.readAsBytes();
+                                          final ext = studentPhoto!.path.split('.').last;
+                                          final fileName = 'student_${DateTime.now().millisecondsSinceEpoch}.$ext';
+                                          await Supabase.instance.client.storage
+                                              .from('coaching_assets')
+                                              .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$ext', upsert: true));
+                                          photoUrl = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
+                                        } catch (e) {
+                                          debugPrint("Student photo upload error: $e");
+                                        }
+                                      }
+
+                                      try {
+                                        final Map<String, dynamic> insertData = {
                                           'student_name': nCtrl.text.trim(),
                                           'target_exam': eCtrl.text.trim(),
                                           'post_cleared': pCtrl.text.trim(),
                                           'testimonial_text': tCtrl.text.trim(),
-                                          'photo_url': uploadedStudentUrl,
                                           'is_verified': true,
-                                          'verified_by': 'TEACHER_DIRECT',
-                                          'created_at': DateTime.now().toIso8601String(),
-                                        });
+                                        };
+
+                                        if (coachingId != null) {
+                                          insertData['coaching_id'] = coachingId;
+                                        }
+                                        if (photoUrl.isNotEmpty) {
+                                          insertData['photo_url'] = photoUrl;
+                                        }
+
+                                        await Supabase.instance.client.from('coaching_selections').insert(insertData);
 
                                         if (dCtx.mounted) Navigator.pop(dCtx);
                                         onSaved();
+                                      } catch (e) {
+                                        debugPrint("Selection insert error: $e");
+                                        setDialogState(() => isUploading = false);
                                       }
                                     },
-                              child: isUploadingResult
+                              child: isUploading
                                   ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
                                   : const Text('Publish Result'),
                             ),
@@ -693,7 +684,7 @@ class CoachingEditorSheets {
                 if (gallery.isEmpty)
                   const Padding(
                     padding: EdgeInsets.symmetric(vertical: 12),
-                    child: Text('No classroom photos yet. Upload classroom or library photos for students.', style: TextStyle(color: Colors.grey, fontSize: 12)),
+                    child: Text('No classroom photos yet.', style: TextStyle(color: Colors.grey, fontSize: 12)),
                   )
                 else
                   ConstrainedBox(
@@ -729,10 +720,7 @@ class CoachingEditorSheets {
                             setModalState(() => isSaving = true);
                             try {
                               if (coachingId != null) {
-                                await Supabase.instance.client
-                                    .from('coachings')
-                                    .update({'gallery_images': gallery})
-                                    .eq('id', coachingId);
+                                await Supabase.instance.client.from('coachings').update({'gallery_images': gallery}).eq('id', coachingId);
                               }
                               if (ctx.mounted) Navigator.pop(ctx);
                               onSaved();
