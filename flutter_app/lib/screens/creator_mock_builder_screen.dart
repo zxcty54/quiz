@@ -202,21 +202,19 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     }
   }
 
-  // ⚡ 100% Flawless Block-Slicing Parser
+  // ⚡ Flawless Block-Slicing Parser
   List<QuestionCardData> _parseRawCoachingInput(String rawText) {
     final List<QuestionCardData> result = [];
     if (rawText.trim().isEmpty) return result;
 
-    // 1. Sanitize all invisible and unicode clipboard artifacts
     final cleanText = rawText
-        .replaceAll('\uFEFF', '') // Zero-width No-Break space
-        .replaceAll('\u200B', '') // Zero-width space
-        .replaceAll('\u00A0', ' ') // Non-breaking space
+        .replaceAll('\uFEFF', '')
+        .replaceAll('\u200B', '')
+        .replaceAll('\u00A0', ' ')
         .replaceAll('\r\n', '\n')
         .replaceAll('\r', '\n')
         .trim();
 
-    // 2. Identify Question Boundaries (Q1., Q.1, 1., 1), etc.)
     final qBoundaryRegex = RegExp(
       r'(?:^|\n)\s*(?:Q\s*\.?\s*\d+|प्रश्न\s*\d*|\d+[\.\)]|\(\d+\))[\s\.:\-_]*',
       caseSensitive: false,
@@ -232,11 +230,13 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
         rawBlocks.add(cleanText.substring(start, end).trim());
       }
     } else {
-      // Fallback: Split by double newlines if no Q numbers exist
-      rawBlocks = cleanText.split(RegExp(r'\n\s*\n')).map((b) => b.trim()).where((b) => b.isNotEmpty).toList();
+      rawBlocks = cleanText
+          .split(RegExp(r'\n\s*\n'))
+          .map((b) => b.trim())
+          .where((b) => b.isNotEmpty)
+          .toList();
     }
 
-    // 3. Process Each Question Block Independently
     final optARegex = RegExp(r'(?:^|\n)\s*(?:\([Aa1]\)|[Aa1][\.\)])\s*');
     final optBRegex = RegExp(r'(?:^|\n)\s*(?:\([Bb2]\)|[Bb2][\.\)])\s*');
     final optCRegex = RegExp(r'(?:^|\n)\s*(?:\([Cc3]\)|[Cc3][\.\)])\s*');
@@ -252,7 +252,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       final mAns = ansRegex.firstMatch(block);
       final mExp = expRegex.firstMatch(block);
 
-      if (mA == null) continue; // Not a valid MCQ
+      if (mA == null) continue;
 
       final qText = block.substring(0, mA.start).replaceAll('\n', ' ').trim();
       final optA = (mB != null) ? block.substring(mA.end, mB.start).replaceAll('\n', ' ').trim() : '';
@@ -409,7 +409,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                             } else {
                               _showDebugPopup(
                                 'Local Parser Zero Output',
-                                'Text mila: ${text.length} characters.\n\nOption A) B) C) D) ya Question marker detect nahi ho saka. Format check karein.',
+                                'Text mila: ${text.length} characters.\n\nOption A) B) C) D) detect nahi ho paya.',
                               );
                             }
                           },
@@ -490,7 +490,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                 setModalState(() => isAiLoading = false);
                                 _showDebugPopup(
                                   'AI Empty Output',
-                                  'AI Service ne 0 questions return kiye. Format verify karein.',
+                                  'AI Service ne 0 questions return kiye.',
                                 );
                               }
                             } catch (err, stack) {
@@ -509,10 +509,13 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     );
   }
 
+  // 👁️ Fully Fixed Live Student Preview with High-Contrast Text & Step-by-Step Navigation
   void _openStudentPreview() {
     final validationError = _validateQuestions();
     if (validationError != null) {
-      ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(validationError), backgroundColor: Colors.red.shade800));
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(validationError), backgroundColor: Colors.red.shade800),
+      );
       return;
     }
 
@@ -523,91 +526,168 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       context: context,
       isScrollControlled: true,
       backgroundColor: widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setPreviewState) {
+          final totalCount = _questionCards.length;
           final q = _questionCards[previewCurrentIndex];
+          final isDark = widget.isDarkMode;
+
+          // 🎯 Contrast Colors to prevent white-on-white overlay
+          final primaryTextColor = isDark ? Colors.white : const Color(0xFF0F172A);
+          final cardFillColor = isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9);
+          final borderColor = isDark ? Colors.white24 : Colors.grey.shade300;
 
           return Container(
-            height: MediaQuery.of(ctx).size.height * 0.84,
+            height: MediaQuery.of(ctx).size.height * 0.88,
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // Header
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                       decoration: BoxDecoration(
                         color: const Color(0xFF2563EB).withOpacity(0.12),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Row(
                         children: [
-                          Icon(Icons.remove_red_eye_outlined, size: 14, color: Color(0xFF2563EB)),
-                          SizedBox(width: 4),
-                          Text('STUDENT CBT PREVIEW', style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.w900, color: Color(0xFF2563EB))),
+                          Icon(Icons.remove_red_eye_outlined, size: 15, color: Color(0xFF2563EB)),
+                          SizedBox(width: 5),
+                          Text(
+                            'CBT PREVIEW MODE',
+                            style: TextStyle(
+                              fontSize: 11,
+                              fontWeight: FontWeight.w900,
+                              color: Color(0xFF2563EB),
+                            ),
+                          ),
                         ],
                       ),
                     ),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                    IconButton(
+                      icon: Icon(Icons.close, color: primaryTextColor),
+                      onPressed: () => Navigator.pop(ctx),
+                    ),
                   ],
                 ),
-                const Divider(height: 14),
-                Text(_titleCtrl.text.trim().isNotEmpty ? _titleCtrl.text.trim() : 'Mock Test', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                const SizedBox(height: 4),
-                Text('${_questionCards.length} Questions • ⏱ $_durationMins Mins', style: const TextStyle(fontSize: 12, color: Colors.grey)),
-                const SizedBox(height: 14),
+                const Divider(height: 12),
 
+                // Title & Live Counter
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Text(
+                        _titleCtrl.text.trim().isNotEmpty ? _titleCtrl.text.trim() : 'Mock Test',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                          color: primaryTextColor,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF2563EB).withOpacity(0.1),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: Text(
+                        'Q ${previewCurrentIndex + 1} of $totalCount',
+                        style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13,
+                          color: Color(0xFF2563EB),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 12),
+
+                // Question & Options Area
                 Expanded(
                   child: SingleChildScrollView(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // Question Box
                         Container(
                           width: double.infinity,
-                          padding: const EdgeInsets.all(14),
+                          padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
+                            color: cardFillColor,
                             borderRadius: BorderRadius.circular(12),
-                            border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                            border: Border.all(color: borderColor),
                           ),
                           child: MathFormattedText(
                             text: q.questionCtrl.text,
-                            textStyle: const TextStyle(fontSize: 15, height: 1.4, fontWeight: FontWeight.w600),
+                            textStyle: TextStyle(
+                              fontSize: 15,
+                              height: 1.5,
+                              fontWeight: FontWeight.w600,
+                              color: primaryTextColor, // 👈 Ensures question text is visible
+                            ),
                           ),
                         ),
-                        const SizedBox(height: 14),
+                        const SizedBox(height: 16),
 
+                        // Options
                         ...List.generate(4, (oIdx) {
                           final isSelected = selectedOption == oIdx;
                           final letter = String.fromCharCode(65 + oIdx);
 
                           return Padding(
-                            padding: const EdgeInsets.only(bottom: 8),
+                            padding: const EdgeInsets.only(bottom: 10),
                             child: InkWell(
                               onTap: () => setPreviewState(() => selectedOption = oIdx),
                               borderRadius: BorderRadius.circular(10),
                               child: Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 11),
+                                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                                 decoration: BoxDecoration(
-                                  color: isSelected ? const Color(0xFF2563EB).withOpacity(0.1) : (widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white),
+                                  color: isSelected
+                                      ? const Color(0xFF2563EB).withOpacity(0.12)
+                                      : (isDark ? const Color(0xFF1E293B) : Colors.white),
                                   borderRadius: BorderRadius.circular(10),
-                                  border: Border.all(color: isSelected ? const Color(0xFF2563EB) : Colors.grey.withOpacity(0.25)),
+                                  border: Border.all(
+                                    color: isSelected ? const Color(0xFF2563EB) : borderColor,
+                                    width: isSelected ? 1.8 : 1,
+                                  ),
                                 ),
                                 child: Row(
                                   children: [
                                     CircleAvatar(
-                                      radius: 13,
-                                      backgroundColor: isSelected ? const Color(0xFF2563EB) : Colors.grey.withOpacity(0.2),
-                                      child: Text(letter, style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: isSelected ? Colors.white : Colors.black87)),
+                                      radius: 14,
+                                      backgroundColor: isSelected
+                                          ? const Color(0xFF2563EB)
+                                          : (isDark ? Colors.grey.shade700 : Colors.grey.shade300),
+                                      child: Text(
+                                        letter,
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.bold,
+                                          color: isSelected
+                                              ? Colors.white
+                                              : (isDark ? Colors.white : Colors.black87),
+                                        ),
+                                      ),
                                     ),
-                                    const SizedBox(width: 10),
+                                    const SizedBox(width: 12),
                                     Expanded(
                                       child: MathFormattedText(
                                         text: q.optionCtrls[oIdx].text,
-                                        textStyle: const TextStyle(fontSize: 13.5),
+                                        textStyle: TextStyle(
+                                          fontSize: 14,
+                                          color: primaryTextColor, // 👈 Ensures option text is visible
+                                        ),
                                       ),
                                     ),
                                   ],
@@ -621,25 +701,38 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                   ),
                 ),
 
+                const SizedBox(height: 10),
+
+                // Bottom Navigation Bar
                 Row(
                   children: [
                     if (previewCurrentIndex > 0)
                       Expanded(
-                        child: OutlinedButton(
+                        child: OutlinedButton.icon(
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(vertical: 12),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          ),
+                          icon: const Icon(Icons.arrow_back_rounded, size: 16),
+                          label: const Text('Previous'),
                           onPressed: () => setPreviewState(() {
                             previewCurrentIndex--;
                             selectedOption = null;
                           }),
-                          child: const Text('← Previous'),
                         ),
                       ),
                     if (previewCurrentIndex > 0) const SizedBox(width: 10),
                     Expanded(
                       flex: 2,
                       child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF2563EB),
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                        ),
                         onPressed: () {
-                          if (previewCurrentIndex < _questionCards.length - 1) {
+                          if (previewCurrentIndex < totalCount - 1) {
                             setPreviewState(() {
                               previewCurrentIndex++;
                               selectedOption = null;
@@ -648,7 +741,12 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                             Navigator.pop(ctx);
                           }
                         },
-                        child: Text(previewCurrentIndex < _questionCards.length - 1 ? 'Next Question →' : 'Done Previewing ✓'),
+                        child: Text(
+                          previewCurrentIndex < totalCount - 1
+                              ? 'Next (${previewCurrentIndex + 2}/$totalCount) →'
+                              : 'Done Previewing ✓',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
                       ),
                     ),
                   ],
@@ -684,7 +782,11 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     try {
       final client = Supabase.instance.client;
       final authorName = _authorDisplayName.isNotEmpty ? _authorDisplayName : widget.creatorHandle;
-      final formattedQuestions = _questionCards.map((q) => q.toJson()).toList();
+      final formattedQuestions = _questionCards.map((q) {
+        final data = q.toJson();
+        data['subject'] = _selectedSubject;
+        return data;
+      }).toList();
 
       if (_publishTarget == 'PUBLIC') {
         final res = await client.from('creator_mocks').insert({
