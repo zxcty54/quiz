@@ -118,7 +118,6 @@ class CoachingEditorSheets {
   }) {
     final nameCtrl = TextEditingController(text: coachingData?['name'] ?? '');
     final landmarkCtrl = TextEditingController(text: coachingData?['landmark_address'] ?? coachingData?['landmark'] ?? '');
-    final contactCtrl = TextEditingController(text: coachingData?['contact_number'] ?? coachingData?['phone'] ?? '');
     final taglineCtrl = TextEditingController(text: coachingData?['tagline'] ?? '');
     final yearCtrl = TextEditingController(text: coachingData?['established_year']?.toString() ?? '');
     final descCtrl = TextEditingController(text: coachingData?['description'] ?? '');
@@ -316,7 +315,7 @@ class CoachingEditorSheets {
     );
   }
 
-  // 👨‍🏫 4. Faculty & Mentors Modifier
+  // 👨‍🏫 4. Faculty & Mentors Modifier (With Photo Support)
   static void openFacultyModifierSheet({
     required BuildContext context,
     required dynamic coachingId,
@@ -326,6 +325,7 @@ class CoachingEditorSheets {
   }) {
     List<dynamic> facultyList = List<dynamic>.from(currentFaculty is List ? currentFaculty : []);
     bool isSaving = false;
+    final picker = ImagePicker();
 
     showModalBottomSheet(
       context: context,
@@ -350,39 +350,89 @@ class CoachingEditorSheets {
                       final nCtrl = TextEditingController();
                       final sCtrl = TextEditingController();
                       final eCtrl = TextEditingController();
+                      File? mentorPhoto;
+                      bool isUploadingPhoto = false;
+
                       showDialog(
                         context: context,
-                        builder: (dCtx) => AlertDialog(
-                          title: const Text('Add Faculty Mentor'),
-                          content: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Teacher Name (e.g. Anand Sir)', border: OutlineInputBorder(), isDense: true)),
-                              const SizedBox(height: 10),
-                              TextField(controller: sCtrl, decoration: const InputDecoration(labelText: 'Subject (e.g. Modern History)', border: OutlineInputBorder(), isDense: true)),
-                              const SizedBox(height: 10),
-                              TextField(controller: eCtrl, decoration: const InputDecoration(labelText: 'Experience (e.g. 10+ Yrs Exp)', border: OutlineInputBorder(), isDense: true)),
+                        builder: (dCtx) => StatefulBuilder(
+                          builder: (dCtx, setDialogState) => AlertDialog(
+                            title: const Text('Add Faculty Mentor'),
+                            content: SingleChildScrollView(
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  GestureDetector(
+                                    onTap: () async {
+                                      final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
+                                      if (picked != null) {
+                                        setDialogState(() => mentorPhoto = File(picked.path));
+                                      }
+                                    },
+                                    child: CircleAvatar(
+                                      radius: 36,
+                                      backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
+                                      backgroundImage: mentorPhoto != null ? FileImage(mentorPhoto!) : null,
+                                      child: mentorPhoto == null
+                                          ? const Column(
+                                              mainAxisAlignment: MainAxisAlignment.center,
+                                              children: [
+                                                Icon(Icons.camera_alt_outlined, color: Color(0xFF2563EB), size: 22),
+                                                Text('Photo', style: TextStyle(fontSize: 10, color: Color(0xFF2563EB))),
+                                              ],
+                                            )
+                                          : null,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 12),
+                                  TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Teacher Name (e.g. Anand Sir)', border: OutlineInputBorder(), isDense: true)),
+                                  const SizedBox(height: 10),
+                                  TextField(controller: sCtrl, decoration: const InputDecoration(labelText: 'Subject (e.g. Modern History)', border: OutlineInputBorder(), isDense: true)),
+                                  const SizedBox(height: 10),
+                                  TextField(controller: eCtrl, keyboardType: TextInputType.number, decoration: const InputDecoration(labelText: 'Experience (Years, e.g. 8)', border: OutlineInputBorder(), isDense: true)),
+                                ],
+                              ),
+                            ),
+                            actions: [
+                              TextButton(onPressed: () => Navigator.pop(dCtx), child: const Text('Cancel')),
+                              ElevatedButton(
+                                onPressed: isUploadingPhoto
+                                    ? null
+                                    : () async {
+                                        if (nCtrl.text.trim().isEmpty) return;
+                                        setDialogState(() => isUploadingPhoto = true);
+
+                                        String uploadedPhotoUrl = '';
+                                        if (mentorPhoto != null) {
+                                          try {
+                                            final bytes = await mentorPhoto!.readAsBytes();
+                                            final ext = mentorPhoto!.path.split('.').last;
+                                            final fileName = 'mentor_${DateTime.now().millisecondsSinceEpoch}.$ext';
+                                            await Supabase.instance.client.storage
+                                                .from('coaching_assets')
+                                                .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$ext', upsert: true));
+                                            uploadedPhotoUrl = Supabase.instance.client.storage
+                                                .from('coaching_assets')
+                                                .getPublicUrl(fileName);
+                                          } catch (_) {}
+                                        }
+
+                                        setModalState(() {
+                                          facultyList.add({
+                                            'name': nCtrl.text.trim(),
+                                            'subject': sCtrl.text.trim(),
+                                            'exp': eCtrl.text.trim(),
+                                            'photo_url': uploadedPhotoUrl,
+                                          });
+                                        });
+                                        Navigator.pop(dCtx);
+                                      },
+                                child: isUploadingPhoto
+                                    ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                                    : const Text('Add'),
+                              ),
                             ],
                           ),
-                          actions: [
-                            TextButton(onPressed: () => Navigator.pop(dCtx), child: const Text('Cancel')),
-                            ElevatedButton(
-                              onPressed: () {
-                                if (nCtrl.text.trim().isNotEmpty) {
-                                  setModalState(() {
-                                    facultyList.add({
-                                      'name': nCtrl.text.trim(),
-                                      'subject': sCtrl.text.trim(),
-                                      'exp': eCtrl.text.trim(),
-                                      'photo_url': '',
-                                    });
-                                  });
-                                }
-                                Navigator.pop(dCtx);
-                              },
-                              child: const Text('Add'),
-                            ),
-                          ],
                         ),
                       );
                     },
@@ -406,18 +456,23 @@ class CoachingEditorSheets {
                     separatorBuilder: (_, __) => const Divider(height: 1),
                     itemBuilder: (_, idx) {
                       final f = facultyList[idx];
+                      final photoUrl = (f['photo_url'] ?? '').toString().trim();
                       return ListTile(
                         dense: true,
                         contentPadding: EdgeInsets.zero,
                         leading: CircleAvatar(
+                          radius: 20,
                           backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
-                          child: Text(
-                            (f['name'] != null && f['name'].toString().isNotEmpty) ? f['name'][0].toUpperCase() : 'T',
-                            style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
-                          ),
+                          backgroundImage: photoUrl.isNotEmpty ? NetworkImage(photoUrl) : null,
+                          child: photoUrl.isEmpty
+                              ? Text(
+                                  (f['name'] != null && f['name'].toString().isNotEmpty) ? f['name'][0].toUpperCase() : 'T',
+                                  style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                                )
+                              : null,
                         ),
                         title: Text(f['name'] ?? '', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                        subtitle: Text('${f['subject'] ?? ''} • ${f['exp'] ?? ''}', style: const TextStyle(fontSize: 11.5)),
+                        subtitle: Text('${f['subject'] ?? ''} • Exp: ${f['exp'] ?? ''} Yrs', style: const TextStyle(fontSize: 11.5)),
                         trailing: IconButton(
                           icon: const Icon(Icons.delete_outline_rounded, color: Colors.redAccent, size: 18),
                           onPressed: () => setModalState(() => facultyList.removeAt(idx)),
@@ -460,7 +515,7 @@ class CoachingEditorSheets {
     );
   }
 
-  // 🏆 5. Wall of Fame & Campus Gallery Modifier
+  // 🏆 5. Wall of Fame & Campus Gallery Modifier (With Student Photo & Image Fix)
   static void openWallOfFameModifierSheet({
     required BuildContext context,
     required dynamic coachingId,
@@ -506,47 +561,97 @@ class CoachingEditorSheets {
                     final eCtrl = TextEditingController();
                     final pCtrl = TextEditingController();
                     final tCtrl = TextEditingController();
+                    File? studentPhoto;
+                    bool isUploadingResult = false;
 
                     showDialog(
                       context: context,
-                      builder: (dCtx) => AlertDialog(
-                        title: const Text('Add Star Selection Result'),
-                        content: SingleChildScrollView(
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Student Name (e.g. Rahul Kumar)', border: OutlineInputBorder(), isDense: true)),
-                              const SizedBox(height: 10),
-                              TextField(controller: eCtrl, decoration: const InputDecoration(labelText: 'Exam Cleared (e.g. BPSC 70th)', border: OutlineInputBorder(), isDense: true)),
-                              const SizedBox(height: 10),
-                              TextField(controller: pCtrl, decoration: const InputDecoration(labelText: 'Post / Rank (e.g. Revenue Officer)', border: OutlineInputBorder(), isDense: true)),
-                              const SizedBox(height: 10),
-                              TextField(controller: tCtrl, maxLines: 2, decoration: const InputDecoration(labelText: 'Student Feedback Quote', border: OutlineInputBorder(), isDense: true)),
-                            ],
+                      builder: (dCtx) => StatefulBuilder(
+                        builder: (dCtx, setDialogState) => AlertDialog(
+                          title: const Text('Add Star Selection Result'),
+                          content: SingleChildScrollView(
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                GestureDetector(
+                                  onTap: () async {
+                                    final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
+                                    if (picked != null) {
+                                      setDialogState(() => studentPhoto = File(picked.path));
+                                    }
+                                  },
+                                  child: CircleAvatar(
+                                    radius: 34,
+                                    backgroundColor: const Color(0xFF16A34A).withOpacity(0.12),
+                                    backgroundImage: studentPhoto != null ? FileImage(studentPhoto!) : null,
+                                    child: studentPhoto == null
+                                        ? const Column(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Icon(Icons.camera_alt_outlined, color: Color(0xFF16A34A), size: 20),
+                                              Text('Student Photo', style: TextStyle(fontSize: 9, color: Color(0xFF16A34A))),
+                                            ],
+                                          )
+                                        : null,
+                                  ),
+                                ),
+                                const SizedBox(height: 12),
+                                TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Student Name (e.g. Rahul Kumar)', border: OutlineInputBorder(), isDense: true)),
+                                const SizedBox(height: 10),
+                                TextField(controller: eCtrl, decoration: const InputDecoration(labelText: 'Exam Cleared (e.g. BPSC 70th)', border: OutlineInputBorder(), isDense: true)),
+                                const SizedBox(height: 10),
+                                TextField(controller: pCtrl, decoration: const InputDecoration(labelText: 'Post / Rank (e.g. Revenue Officer)', border: OutlineInputBorder(), isDense: true)),
+                                const SizedBox(height: 10),
+                                TextField(controller: tCtrl, maxLines: 2, decoration: const InputDecoration(labelText: 'Student Feedback Quote', border: OutlineInputBorder(), isDense: true)),
+                              ],
+                            ),
                           ),
+                          actions: [
+                            TextButton(onPressed: () => Navigator.pop(dCtx), child: const Text('Cancel')),
+                            ElevatedButton(
+                              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF16A34A), foregroundColor: Colors.white),
+                              onPressed: isUploadingResult
+                                  ? null
+                                  : () async {
+                                      if (nCtrl.text.trim().isNotEmpty && coachingId != null) {
+                                        setDialogState(() => isUploadingResult = true);
+                                        String uploadedStudentUrl = '';
+                                        if (studentPhoto != null) {
+                                          try {
+                                            final bytes = await studentPhoto!.readAsBytes();
+                                            final ext = studentPhoto!.path.split('.').last;
+                                            final fileName = 'student_${DateTime.now().millisecondsSinceEpoch}.$ext';
+                                            await Supabase.instance.client.storage
+                                                .from('coaching_assets')
+                                                .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$ext', upsert: true));
+                                            uploadedStudentUrl = Supabase.instance.client.storage
+                                                .from('coaching_assets')
+                                                .getPublicUrl(fileName);
+                                          } catch (_) {}
+                                        }
+
+                                        await Supabase.instance.client.from('coaching_selections').insert({
+                                          'coaching_id': coachingId,
+                                          'student_name': nCtrl.text.trim(),
+                                          'target_exam': eCtrl.text.trim(),
+                                          'post_cleared': pCtrl.text.trim(),
+                                          'testimonial_text': tCtrl.text.trim(),
+                                          'photo_url': uploadedStudentUrl,
+                                          'is_verified': true,
+                                          'verified_by': 'TEACHER_DIRECT',
+                                          'created_at': DateTime.now().toIso8601String(),
+                                        });
+
+                                        if (dCtx.mounted) Navigator.pop(dCtx);
+                                        onSaved();
+                                      }
+                                    },
+                              child: isUploadingResult
+                                  ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                                  : const Text('Publish Result'),
+                            ),
+                          ],
                         ),
-                        actions: [
-                          TextButton(onPressed: () => Navigator.pop(dCtx), child: const Text('Cancel')),
-                          ElevatedButton(
-                            style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF16A34A), foregroundColor: Colors.white),
-                            onPressed: () async {
-                              if (nCtrl.text.trim().isNotEmpty && coachingId != null) {
-                                await Supabase.instance.client.from('coaching_selections').insert({
-                                  'coaching_id': coachingId,
-                                  'student_name': nCtrl.text.trim(),
-                                  'target_exam': eCtrl.text.trim(),
-                                  'post_cleared': pCtrl.text.trim(),
-                                  'testimonial_text': tCtrl.text.trim(),
-                                  'is_verified': true,
-                                  'verified_by': 'TEACHER_DIRECT',
-                                });
-                              }
-                              if (dCtx.mounted) Navigator.pop(dCtx);
-                              onSaved();
-                            },
-                            child: const Text('Publish Result'),
-                          ),
-                        ],
                       ),
                     );
                   },
