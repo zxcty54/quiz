@@ -5,6 +5,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../models/question_model.dart';
+import '../widgets/selection_proof_system.dart';
 import 'batch_classroom_screen.dart';
 import 'sectional_cbt_screen.dart';
 
@@ -31,6 +32,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   List<dynamic> _batches = [];
   List<dynamic> _mocks = [];
   List<dynamic> _updates = [];
+  List<dynamic> _selections = [];
 
   bool _isLoading = true;
   bool _isFollowing = false;
@@ -47,7 +49,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    // 4 Tabs: Batches, Mocks, Selections, Updates
+    _tabController = TabController(length: 4, vsync: this);
     _loadInitialData();
   }
 
@@ -62,14 +65,13 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     _currentLoggedInHandle =
         prefs.getString('logged_in_creator_handle') ?? 'user';
 
-    // Pehle Profile aur Coaching load karein taaki Coaching ID mil sake
     await _fetchProfileAndCoaching();
 
-    // Coaching ID milne ke baad Batches, Mocks aur Updates layein
     await Future.wait([
       _fetchBatches(),
       _fetchMocks(),
       _fetchUpdates(),
+      _fetchSelections(),
       _checkFollowStatus(),
     ]);
 
@@ -81,7 +83,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       final client = Supabase.instance.client;
       final handle = widget.creatorHandle.trim();
 
-      // 1. Fetch Profile
       final profRes = await client
           .from('creator_profiles')
           .select('*')
@@ -93,7 +94,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
         _followersCount = profRes['followers_count'] ?? 0;
       }
 
-      // 2. Fetch Coaching (owner_name ya creator_handle dono check karein)
       dynamic coachRes = await client
           .from('coachings')
           .select('*')
@@ -125,7 +125,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .order('created_at', ascending: false);
 
       _batches = res ?? [];
-      debugPrint("✅ Profile Batches Loaded: ${_batches.length}");
     } catch (e) {
       debugPrint("Batches fetch error: $e");
     }
@@ -157,6 +156,29 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       _updates = res ?? [];
     } catch (e) {
       debugPrint("Updates fetch error: $e");
+    }
+  }
+
+  // 🏆 Coaching-Specific Verified Selections Fetch
+  Future<void> _fetchSelections() async {
+    try {
+      if (_coaching == null) return;
+      final coachingId = _coaching!['id'];
+
+      final res = await Supabase.instance.client
+          .from('coaching_selections')
+          .select('*')
+          .eq('coaching_id', coachingId)
+          .order('is_verified', ascending: false)
+          .order('created_at', ascending: false);
+
+      if (mounted) {
+        setState(() {
+          _selections = res ?? [];
+        });
+      }
+    } catch (e) {
+      debugPrint("Selections fetch error: $e");
     }
   }
 
@@ -293,7 +315,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
 
                 setState(() {});
 
-                // 🚀 Code verify hone par seedhe BatchClassroomScreen kholenge
                 Navigator.push(
                   context,
                   MaterialPageRoute(
@@ -320,6 +341,28 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     );
   }
 
+  void _openClaimSelectionModal() {
+    if (_coaching == null) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Coaching profile not found.')),
+      );
+      return;
+    }
+
+    final coachingId = _coaching!['id'].toString();
+    final coachingName = _coaching!['name'] ?? widget.creatorHandle;
+
+    StudentClaimSelectionSheet.show(
+      context,
+      coachingId: coachingId,
+      coachingName: coachingName,
+      isDarkMode: widget.isDarkMode,
+      onSuccess: () {
+        _fetchSelections();
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
@@ -343,6 +386,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     final logoUrl = _coaching?['logo_url'] ?? _profile?['profile_image'];
     final bannerUrl = _coaching?['banner_url'] ?? _profile?['banner_url'];
     final telegram = _profile?['telegram_handle'] ?? _coaching?['telegram_link'];
+
+    final verifiedCount =
+        _selections.where((s) => s['is_verified'] == true).length;
 
     return Scaffold(
       backgroundColor: bgSurface,
@@ -515,14 +561,84 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                     Row(
                       children: [
                         _buildStatBlock('$_followersCount', 'Followers'),
-                        const SizedBox(width: 28),
+                        const SizedBox(width: 22),
                         _buildStatBlock('${_batches.length}', 'Batches'),
-                        const SizedBox(width: 28),
+                        const SizedBox(width: 22),
                         _buildStatBlock('${_mocks.length}', 'Open Mocks'),
+                        const SizedBox(width: 22),
+                        _buildStatBlock('$verifiedCount', 'Selections 🎓'),
                       ],
                     ),
+
+                    // 🎓 PROMINENT CLAIM SELECTION CTA BANNER
+                    const SizedBox(height: 16),
+                    InkWell(
+                      onTap: _openClaimSelectionModal,
+                      borderRadius: BorderRadius.circular(12),
+                      child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 14, vertical: 11),
+                        decoration: BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: isDark
+                                ? [const Color(0xFF064E3B), const Color(0xFF022C22)]
+                                : [const Color(0xFFDCFCE7), const Color(0xFFBBF7D0)],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(12),
+                          border: Border.all(
+                            color: const Color(0xFF16A34A).withOpacity(0.4),
+                          ),
+                        ),
+                        child: Row(
+                          children: [
+                            Container(
+                              padding: const EdgeInsets.all(7),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFF16A34A).withOpacity(0.18),
+                                shape: BoxShape.circle,
+                              ),
+                              child: const Icon(Icons.military_tech_rounded,
+                                  color: Color(0xFF16A34A), size: 20),
+                            ),
+                            const SizedBox(width: 10),
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    'Selected Aspirant? Claim Credit 🎓',
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w800,
+                                      color: isDark
+                                          ? Colors.white
+                                          : const Color(0xFF14532D),
+                                    ),
+                                  ),
+                                  Text(
+                                    'Get your verified badge on this coaching\'s Wall of Fame',
+                                    style: TextStyle(
+                                      fontSize: 11,
+                                      color: isDark
+                                          ? Colors.white70
+                                          : const Color(0xFF166534),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const Icon(Icons.arrow_forward_ios_rounded,
+                                size: 14, color: Color(0xFF16A34A)),
+                          ],
+                        ),
+                      ),
+                    ),
+
                     if (telegram != null && telegram.toString().isNotEmpty) ...[
-                      const SizedBox(height: 14),
+                      const SizedBox(height: 12),
                       InkWell(
                         onTap: () => _openTelegram(telegram),
                         borderRadius: BorderRadius.circular(10),
@@ -578,10 +694,13 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                   labelColor: isDark ? Colors.white : _primaryBlue,
                   unselectedLabelColor: const Color(0xFF64748B),
                   labelStyle: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 13.5),
+                      fontWeight: FontWeight.bold, fontSize: 13),
+                  isScrollable: true,
+                  tabAlignment: TabAlignment.start,
                   tabs: [
                     Tab(text: 'Batches (${_batches.length})'),
                     Tab(text: 'Mocks (${_mocks.length})'),
+                    Tab(text: 'Selections ($verifiedCount) 🏆'),
                     Tab(text: 'Updates (${_updates.length})'),
                   ],
                 ),
@@ -596,6 +715,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           children: [
             _buildBatchesTab(cardSurface, dividerColor, isDark),
             _buildMocksTab(cardSurface, dividerColor, isDark),
+            _buildSelectionsTab(cardSurface, dividerColor, isDark),
             _buildUpdatesTab(cardSurface, dividerColor, isDark),
           ],
         ),
@@ -641,7 +761,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
             final b = _batches[idx];
             final String batchId = b['id']?.toString() ?? '';
 
-            // Check: Kya user ne ye specific batch unlock kiya hua hai?
             final bool isUnlocked =
                 prefs?.getBool('unlocked_batch_$batchId') ?? false;
 
@@ -706,8 +825,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                     style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                   ),
                   const SizedBox(height: 10),
-
-                  // Dynamic Action Button: Unlocked -> Direct Entry, Locked -> Code Input
                   SizedBox(
                     height: 34,
                     child: isUnlocked
@@ -845,6 +962,65 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
               ),
             ],
           ),
+        );
+      },
+    );
+  }
+
+  // 🏆 3. COACHING SELECTIONS / WALL OF FAME TAB
+  Widget _buildSelectionsTab(
+      Color cardSurface, Color dividerColor, bool isDark) {
+    if (_selections.isEmpty) {
+      return Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.military_tech_outlined,
+                  size: 44, color: Colors.grey[400]),
+              const SizedBox(height: 10),
+              Text(
+                'No verified selections recorded yet.',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                    color: Colors.grey[600]),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                'Aspirants mentored by this coaching can claim their selection to show here.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 12, color: Colors.grey[500]),
+              ),
+              const SizedBox(height: 14),
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF16A34A),
+                  foregroundColor: Colors.white,
+                  elevation: 0,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8)),
+                ),
+                icon: const Icon(Icons.add_task_rounded, size: 16),
+                label: const Text('Claim Your Selection',
+                    style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
+                onPressed: _openClaimSelectionModal,
+              ),
+            ],
+          ),
+        ),
+      );
+    }
+
+    return ListView.builder(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+      itemCount: _selections.length,
+      itemBuilder: (context, idx) {
+        final item = Map<String, dynamic>.from(_selections[idx]);
+        return StarSelectionCard(
+          data: item,
+          isDarkMode: isDark,
         );
       },
     );
