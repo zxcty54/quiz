@@ -379,7 +379,7 @@ class CreatorFreeMocksTab extends StatelessWidget {
   }
 }
 
-// 3. Wall of Fame Tab
+// 3. Wall of Fame Tab (Supports Candidate Images)
 class CreatorWallOfFameTab extends StatelessWidget {
   final List<dynamic> selections;
   final bool isDarkMode;
@@ -426,6 +426,7 @@ class CreatorWallOfFameTab extends StatelessWidget {
         final exam = s['target_exam'] ?? 'Competitive Exam';
         final quote = s['testimonial_text'] ?? '';
         final isVerified = s['is_verified'] == true;
+        final photoUrl = (s['photo_url'] ?? '').toString().trim();
 
         return Container(
           color: cardSurface,
@@ -434,12 +435,15 @@ class CreatorWallOfFameTab extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CircleAvatar(
-                radius: 20,
+                radius: 22,
                 backgroundColor: const Color(0xFF16A34A).withOpacity(0.12),
-                child: Text(
-                  name.isNotEmpty ? name[0].toUpperCase() : 'A',
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF16A34A)),
-                ),
+                backgroundImage: photoUrl.isNotEmpty ? NetworkImage(photoUrl) : null,
+                child: photoUrl.isEmpty
+                    ? Text(
+                        name.isNotEmpty ? name[0].toUpperCase() : 'A',
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF16A34A)),
+                      )
+                    : null,
               ),
               const SizedBox(width: 12),
               Expanded(
@@ -482,7 +486,7 @@ class CreatorWallOfFameTab extends StatelessWidget {
   }
 }
 
-// 4. About & Campus Tab
+// 4. About & Campus Tab (Upgraded Faculty Layout & Prominent Logos)
 class CreatorAboutCampusTab extends StatelessWidget {
   final Map<String, dynamic>? profile;
   final Map<String, dynamic>? coaching;
@@ -509,6 +513,7 @@ class CreatorAboutCampusTab extends StatelessWidget {
         'Premier preparation institute providing focused guidance and test series for competitive exams.';
     final fullAddress = coaching?['landmark_address'] ?? coaching?['landmark'] ?? 'Bihar, India';
     final establishedYear = coaching?['established_year'] ?? 'Active';
+    final List facultyList = (coaching?['faculty_list'] as List?) ?? [];
 
     return SingleChildScrollView(
       child: Container(
@@ -528,6 +533,102 @@ class CreatorAboutCampusTab extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
+
+            // 👨‍🏫 Upgraded Faculty Cards Strip
+            if (facultyList.isNotEmpty) ...[
+              const Text(
+                'Star Mentors & Faculty',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
+              ),
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 135,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: facultyList.length,
+                  separatorBuilder: (_, __) => const SizedBox(width: 12),
+                  itemBuilder: (context, i) {
+                    final f = facultyList[i];
+                    final String name = f['name'] ?? 'Faculty Mentor';
+                    final String subject = f['subject'] ?? 'Subject Expert';
+                    final String rawExp = (f['exp'] ?? '').toString().trim();
+                    final String expText = rawExp.isNotEmpty
+                        ? (rawExp.toLowerCase().contains('yr') || rawExp.toLowerCase().contains('year')
+                            ? rawExp
+                            : 'Exp: $rawExp+ Years')
+                        : 'Senior Faculty';
+                    final String photoUrl = (f['photo_url'] ?? '').toString().trim();
+
+                    return Container(
+                      width: 230,
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        color: isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: dividerColor, width: 0.9),
+                      ),
+                      child: Row(
+                        children: [
+                          // 📸 52px Prominent Mentor Avatar / Logo
+                          CircleAvatar(
+                            radius: 26,
+                            backgroundColor: _primaryBlue.withOpacity(0.12),
+                            backgroundImage: photoUrl.isNotEmpty ? NetworkImage(photoUrl) : null,
+                            child: photoUrl.isEmpty
+                                ? Text(
+                                    name.isNotEmpty ? name[0].toUpperCase() : 'M',
+                                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: _primaryBlue),
+                                  )
+                                : null,
+                          ),
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  name,
+                                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  subject,
+                                  style: const TextStyle(fontSize: 11.5, color: _primaryBlue, fontWeight: FontWeight.w600),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                const SizedBox(height: 6),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF16A34A).withOpacity(0.1),
+                                    borderRadius: BorderRadius.circular(4),
+                                  ),
+                                  child: Text(
+                                    expText,
+                                    style: const TextStyle(
+                                      fontSize: 10.5,
+                                      fontWeight: FontWeight.w700,
+                                      color: Color(0xFF16A34A),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(height: 20),
+            ],
+
+            // Classroom & Campus Facilities
             if (galleryImages.isNotEmpty) ...[
               const Text('Classroom & Campus Facilities', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5)),
               const SizedBox(height: 10),
@@ -557,6 +658,7 @@ class CreatorAboutCampusTab extends StatelessWidget {
               ),
               const SizedBox(height: 20),
             ],
+
             Divider(height: 1, thickness: 0.8, color: dividerColor),
             const SizedBox(height: 14),
             _buildInfoRow(Icons.pin_drop_outlined, 'Address', fullAddress),
