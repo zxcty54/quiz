@@ -4,7 +4,7 @@ import '../models/question_model.dart';
 import 'batch_classroom_screen.dart';
 import 'sectional_cbt_screen.dart';
 
-// 1. Batches Tab
+// 1. Batches Tab (Working logic, no "Free Batch" tag)
 class CreatorBatchesTab extends StatelessWidget {
   final List<dynamic> batches;
   final bool isDarkMode;
@@ -31,7 +31,7 @@ class CreatorBatchesTab extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Admission/Fee receipt par diya gaya secret batch code enter karein:',
+              'Enter the classroom admission code provided by your coaching mentor:',
               style: TextStyle(fontSize: 12.5, color: Colors.grey),
             ),
             const SizedBox(height: 12),
@@ -39,7 +39,7 @@ class CreatorBatchesTab extends StatelessWidget {
               controller: codeCtrl,
               textCapitalization: TextCapitalization.characters,
               decoration: const InputDecoration(
-                hintText: 'e.g. PATNA100',
+                hintText: 'e.g. 111',
                 labelText: 'Batch Secret Code',
                 border: OutlineInputBorder(),
                 isDense: true,
@@ -123,10 +123,6 @@ class CreatorBatchesTab extends StatelessWidget {
             final String batchId = b['id']?.toString() ?? '';
             final bool isUnlocked = prefs?.getBool('unlocked_batch_$batchId') ?? false;
 
-            final int testsCount = ((b['batch_tests'] as List?) ?? []).length;
-            final int notesCount = ((b['batch_notes'] as List?) ?? []).length;
-            final String targetExam = b['target_pattern'] ?? b['exam_type'] ?? 'Standard Exam Curriculum';
-
             return Container(
               color: cardSurface,
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
@@ -139,11 +135,11 @@ class CreatorBatchesTab extends StatelessWidget {
                       Expanded(
                         child: Text(
                           b['batch_name'] ?? 'Classroom Batch',
-                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
                         ),
                       ),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                        padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
                         decoration: BoxDecoration(
                           color: isUnlocked
                               ? const Color(0xFF16A34A).withOpacity(0.12)
@@ -158,12 +154,12 @@ class CreatorBatchesTab extends StatelessWidget {
                               size: 12,
                               color: isUnlocked ? const Color(0xFF16A34A) : Colors.redAccent,
                             ),
-                            const SizedBox(width: 4),
+                            const SizedBox(width: 3),
                             Text(
-                              isUnlocked ? 'ENROLLED' : 'LOCKED',
+                              isUnlocked ? 'UNLOCKED' : 'LOCKED',
                               style: TextStyle(
                                 fontSize: 10,
-                                fontWeight: FontWeight.w800,
+                                fontWeight: FontWeight.bold,
                                 color: isUnlocked ? const Color(0xFF16A34A) : Colors.redAccent,
                               ),
                             ),
@@ -172,58 +168,12 @@ class CreatorBatchesTab extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 5),
-                  Text(
-                    targetExam,
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: isDarkMode ? const Color(0xFFCBD5E1) : const Color(0xFF475569),
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
                   const SizedBox(height: 6),
-                  Row(
-                    children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
-                        decoration: BoxDecoration(
-                          color: _primaryBlue.withOpacity(0.08),
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const Icon(Icons.quiz_outlined, size: 12.5, color: _primaryBlue),
-                            const SizedBox(width: 4),
-                            Text(
-                              '$testsCount CBT Mocks',
-                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: _primaryBlue),
-                            ),
-                          ],
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF16A34A).withOpacity(0.08),
-                          borderRadius: BorderRadius.circular(4),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const Icon(Icons.menu_book_outlined, size: 12.5, color: Color(0xFF16A34A)),
-                            const SizedBox(width: 4),
-                            Text(
-                              '$notesCount Study Notes',
-                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Color(0xFF16A34A)),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
+                  Text(
+                    b['target_pattern'] ?? 'Based on standard examination pattern',
+                    style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                   ),
-                  const SizedBox(height: 12),
+                  const SizedBox(height: 10),
                   SizedBox(
                     height: 34,
                     child: isUnlocked
@@ -256,7 +206,7 @@ class CreatorBatchesTab extends StatelessWidget {
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                             ),
                             onPressed: () => _openUnlockBatchDialog(context, b),
-                            label: const Text('Unlock with Admission Code', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                            label: const Text('Unlock with Code', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                           ),
                   ),
                 ],
@@ -278,7 +228,7 @@ class CreatorFreeMocksTab extends StatelessWidget {
 
   static const Color _primaryBlue = Color(0xFF2563EB);
 
-  void _launchMock(BuildContext context, Map<String, dynamic> mock) {
+  void _launchAttachedMock(BuildContext context, Map<String, dynamic> mock) {
     final List rawList = mock['questions_json'] ?? [];
     if (rawList.isEmpty) return;
 
@@ -349,7 +299,7 @@ class CreatorFreeMocksTab extends StatelessWidget {
               ),
               const SizedBox(height: 6),
               Text(
-                m['title'] ?? 'Free Practice Mock Drill',
+                m['title'] ?? 'Practice Mock Test',
                 style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
               ),
               const SizedBox(height: 4),
@@ -367,8 +317,8 @@ class CreatorFreeMocksTab extends StatelessWidget {
                     elevation: 0,
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                   ),
-                  onPressed: () => _launchMock(context, m),
-                  child: const Text('Start Free Mock →', style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
+                  onPressed: () => _launchAttachedMock(context, m),
+                  child: const Text('Start Mock →', style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
                 ),
               ),
             ],
@@ -379,7 +329,7 @@ class CreatorFreeMocksTab extends StatelessWidget {
   }
 }
 
-// 3. Wall of Fame Tab (Supports Candidate Images)
+// 3. Wall of Fame Tab (Candidate Image + Initials Fallback)
 class CreatorWallOfFameTab extends StatelessWidget {
   final List<dynamic> selections;
   final bool isDarkMode;
@@ -402,7 +352,10 @@ class CreatorWallOfFameTab extends StatelessWidget {
             children: [
               Icon(Icons.military_tech_outlined, size: 40, color: Colors.grey[400]),
               const SizedBox(height: 10),
-              Text('No student selections listed yet.', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.grey[600])),
+              Text(
+                'No student selections listed yet.',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.grey[600]),
+              ),
               const SizedBox(height: 4),
               Text(
                 'Coaching will showcase its star achievers and success results here.',
@@ -426,7 +379,7 @@ class CreatorWallOfFameTab extends StatelessWidget {
         final exam = s['target_exam'] ?? 'Competitive Exam';
         final quote = s['testimonial_text'] ?? '';
         final isVerified = s['is_verified'] == true;
-        final photoUrl = (s['photo_url'] ?? '').toString().trim();
+        final photo = s['photo_url'];
 
         return Container(
           color: cardSurface,
@@ -435,13 +388,15 @@ class CreatorWallOfFameTab extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CircleAvatar(
-                radius: 22,
+                radius: 20,
                 backgroundColor: const Color(0xFF16A34A).withOpacity(0.12),
-                backgroundImage: photoUrl.isNotEmpty ? NetworkImage(photoUrl) : null,
-                child: photoUrl.isEmpty
+                backgroundImage: (photo != null && photo.toString().trim().isNotEmpty)
+                    ? NetworkImage(photo.toString().trim())
+                    : null,
+                child: (photo == null || photo.toString().trim().isEmpty)
                     ? Text(
                         name.isNotEmpty ? name[0].toUpperCase() : 'A',
-                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Color(0xFF16A34A)),
+                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF16A34A)),
                       )
                     : null,
               ),
@@ -453,7 +408,11 @@ class CreatorWallOfFameTab extends StatelessWidget {
                     Row(
                       children: [
                         Flexible(
-                          child: Text(name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15), overflow: TextOverflow.ellipsis),
+                          child: Text(
+                            name,
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                            overflow: TextOverflow.ellipsis,
+                          ),
                         ),
                         if (isVerified) ...[
                           const SizedBox(width: 4),
@@ -462,7 +421,10 @@ class CreatorWallOfFameTab extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 2),
-                    Text('$post • $exam', style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _primaryBlue)),
+                    Text(
+                      '$post • $exam',
+                      style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _primaryBlue),
+                    ),
                     if (quote.isNotEmpty) ...[
                       const SizedBox(height: 6),
                       Text(
@@ -486,7 +448,7 @@ class CreatorWallOfFameTab extends StatelessWidget {
   }
 }
 
-// 4. About & Campus Tab (Upgraded Faculty Layout & Prominent Logos)
+// 4. About & Campus Tab (Faculty Section Restored with Good Layout)
 class CreatorAboutCampusTab extends StatelessWidget {
   final Map<String, dynamic>? profile;
   final Map<String, dynamic>? coaching;
@@ -534,88 +496,57 @@ class CreatorAboutCampusTab extends StatelessWidget {
             ),
             const SizedBox(height: 20),
 
-            // 👨‍🏫 Upgraded Faculty Cards Strip
+            // 👨‍🏫 Faculty & Mentors Section
             if (facultyList.isNotEmpty) ...[
-              const Text(
-                'Star Mentors & Faculty',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
-              ),
+              const Text('Our Faculty & Mentors', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5)),
               const SizedBox(height: 10),
               SizedBox(
-                height: 135,
+                height: 100,
                 child: ListView.separated(
                   scrollDirection: Axis.horizontal,
                   itemCount: facultyList.length,
-                  separatorBuilder: (_, __) => const SizedBox(width: 12),
+                  separatorBuilder: (_, __) => const SizedBox(width: 10),
                   itemBuilder: (context, i) {
                     final f = facultyList[i];
-                    final String name = f['name'] ?? 'Faculty Mentor';
-                    final String subject = f['subject'] ?? 'Subject Expert';
-                    final String rawExp = (f['exp'] ?? '').toString().trim();
-                    final String expText = rawExp.isNotEmpty
-                        ? (rawExp.toLowerCase().contains('yr') || rawExp.toLowerCase().contains('year')
-                            ? rawExp
-                            : 'Exp: $rawExp+ Years')
-                        : 'Senior Faculty';
-                    final String photoUrl = (f['photo_url'] ?? '').toString().trim();
+                    final String name = f['name'] ?? 'Faculty';
+                    final String subject = f['subject'] ?? 'Mentor';
+                    final String exp = (f['exp'] ?? '').toString().trim();
+                    final String photo = (f['photo_url'] ?? '').toString().trim();
 
                     return Container(
-                      width: 230,
-                      padding: const EdgeInsets.all(12),
+                      width: 200,
+                      padding: const EdgeInsets.all(10),
                       decoration: BoxDecoration(
                         color: isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: dividerColor, width: 0.9),
+                        borderRadius: BorderRadius.circular(8),
+                        border: Border.all(color: dividerColor, width: 0.8),
                       ),
                       child: Row(
                         children: [
-                          // 📸 52px Prominent Mentor Avatar / Logo
                           CircleAvatar(
-                            radius: 26,
+                            radius: 24,
                             backgroundColor: _primaryBlue.withOpacity(0.12),
-                            backgroundImage: photoUrl.isNotEmpty ? NetworkImage(photoUrl) : null,
-                            child: photoUrl.isEmpty
+                            backgroundImage: photo.isNotEmpty ? NetworkImage(photo) : null,
+                            child: photo.isEmpty
                                 ? Text(
-                                    name.isNotEmpty ? name[0].toUpperCase() : 'M',
-                                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: _primaryBlue),
+                                    name.isNotEmpty ? name[0].toUpperCase() : 'T',
+                                    style: const TextStyle(fontWeight: FontWeight.bold, color: _primaryBlue),
                                   )
                                 : null,
                           ),
-                          const SizedBox(width: 12),
+                          const SizedBox(width: 10),
                           Expanded(
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
-                                  name,
-                                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
+                                Text(name, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13), maxLines: 1, overflow: TextOverflow.ellipsis),
                                 const SizedBox(height: 2),
-                                Text(
-                                  subject,
-                                  style: const TextStyle(fontSize: 11.5, color: _primaryBlue, fontWeight: FontWeight.w600),
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                                const SizedBox(height: 6),
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
-                                  decoration: BoxDecoration(
-                                    color: const Color(0xFF16A34A).withOpacity(0.1),
-                                    borderRadius: BorderRadius.circular(4),
-                                  ),
-                                  child: Text(
-                                    expText,
-                                    style: const TextStyle(
-                                      fontSize: 10.5,
-                                      fontWeight: FontWeight.w700,
-                                      color: Color(0xFF16A34A),
-                                    ),
-                                  ),
-                                ),
+                                Text(subject, style: const TextStyle(fontSize: 11, color: _primaryBlue, fontWeight: FontWeight.w600), maxLines: 1, overflow: TextOverflow.ellipsis),
+                                if (exp.isNotEmpty) ...[
+                                  const SizedBox(height: 2),
+                                  Text(exp.contains('Yr') ? exp : '$exp Yrs Exp', style: TextStyle(fontSize: 10.5, color: Colors.grey[500]), maxLines: 1),
+                                ],
                               ],
                             ),
                           ),
