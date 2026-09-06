@@ -32,6 +32,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   List<dynamic> _mocks = [];
   List<dynamic> _selections = [];
   List<dynamic> _galleryImages = [];
+  List<dynamic> _facultyList = [];
 
   bool _isLoading = true;
   bool _isFollowing = false;
@@ -86,9 +87,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       if (profRes != null) {
         _profile = profRes;
         _followersCount = profRes['followers_count'] ?? 0;
-        debugPrint("✅ [PROFILE] Creator Profile Found: ${profRes['name']}");
-      } else {
-        debugPrint("⚠️ [PROFILE] No creator_profiles record found for: $handle");
       }
 
       // 2. Fetch Coaching Row
@@ -107,17 +105,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       _coaching = coachRes;
 
       if (_coaching != null) {
-        debugPrint("✅ [COACHING] Coaching Found: ${_coaching!['name']} (ID: ${_coaching!['id']})");
-        debugPrint("📞 [COACHING RAW DATA] Phone: ${_coaching!['phone']} | Contact: ${_coaching!['contact_number']}");
-        debugPrint("🌐 [COACHING RAW DATA] Telegram: ${_coaching!['telegram_link']} | YouTube: ${_coaching!['youtube_url']}");
-        debugPrint("🌐 [COACHING RAW DATA] Facebook: ${_coaching!['facebook_url']} | Website: ${_coaching!['website_url']}");
         _galleryImages = (_coaching!['gallery_images'] as List?) ?? [];
-      } else {
-        debugPrint("❌ [COACHING] No coaching row matched with handle: $handle. Verify owner_name / creator_handle column in DB!");
+        _facultyList = (_coaching!['faculty_list'] as List?) ?? [];
       }
     } catch (e, stack) {
-      debugPrint("🔥 [ERROR] Profile/Coaching fetch error: $e");
-      debugPrint("$stack");
+      debugPrint("🔥 [ERROR] Profile/Coaching fetch error: $e\n$stack");
     }
   }
 
@@ -134,7 +126,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .order('created_at', ascending: false);
 
       _batches = res ?? [];
-      debugPrint("📦 [BATCHES] Loaded: ${_batches.length} batches");
     } catch (e) {
       debugPrint("🔥 [ERROR] Batches fetch error: $e");
     }
@@ -149,7 +140,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .order('created_at', ascending: false);
 
       _mocks = res ?? [];
-      debugPrint("📝 [MOCKS] Loaded: ${_mocks.length} mocks");
     } catch (e) {
       debugPrint("🔥 [ERROR] Mocks fetch error: $e");
     }
@@ -167,7 +157,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .order('created_at', ascending: false);
 
       _selections = res ?? [];
-      debugPrint("🎓 [SELECTIONS] Loaded: ${_selections.length} achievements");
     } catch (e) {
       debugPrint("🔥 [ERROR] Selections fetch error: $e");
     }
@@ -234,31 +223,21 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   }
 
   void _openExternalUrl(String url) async {
-    debugPrint("🌐 [LAUNCH] Attempting to open URL: $url");
     try {
       final uri = Uri.parse(url);
       if (await canLaunchUrl(uri)) {
         await launchUrl(uri, mode: LaunchMode.externalApplication);
-      } else {
-        debugPrint("❌ [LAUNCH ERROR] System reports cannot launch URL: $url");
       }
-    } catch (e) {
-      debugPrint("🔥 [LAUNCH EXCEPTION] $e");
-    }
+    } catch (_) {}
   }
 
   void _openDialer(String phone) async {
-    debugPrint("📞 [DIALER] Calling: $phone");
     try {
       final uri = Uri.parse('tel:$phone');
       if (await canLaunchUrl(uri)) {
         await launchUrl(uri);
-      } else {
-        debugPrint("❌ [DIALER ERROR] Cannot launch dialer for $phone");
       }
-    } catch (e) {
-      debugPrint("🔥 [DIALER EXCEPTION] $e");
-    }
+    } catch (_) {}
   }
 
   void _openWhatsApp(String phone) async {
@@ -267,16 +246,12 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       if (!cleanNumber.startsWith('91') && cleanNumber.length == 10) {
         cleanNumber = '91$cleanNumber';
       }
-      debugPrint("💬 [WHATSAPP] Opening chat with: $cleanNumber");
-      final uri = Uri.parse('https://wa.me/$cleanNumber?text=Hello,%20I%20want%20information%20regarding%20batches.');
+      final uri = Uri.parse(
+          'https://wa.me/$cleanNumber?text=Hello,%20I%20want%20information%20regarding%20batches.');
       if (await canLaunchUrl(uri)) {
         await launchUrl(uri, mode: LaunchMode.externalApplication);
-      } else {
-        debugPrint("❌ [WHATSAPP ERROR] Cannot launch WhatsApp for $cleanNumber");
       }
-    } catch (e) {
-      debugPrint("🔥 [WHATSAPP EXCEPTION] $e");
-    }
+    } catch (_) {}
   }
 
   void _openUnlockBatchDialog(Map<String, dynamic> batch) {
@@ -398,14 +373,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     final youtube = _coaching?['youtube_url'] ?? _profile?['youtube_handle'];
     final facebook = _coaching?['facebook_url'] ?? _profile?['facebook_handle'];
     final website = _coaching?['website_url'];
-
-    final hasAnySocial = (contactPhone != null && contactPhone.toString().trim().isNotEmpty) ||
-        (telegram != null && telegram.toString().trim().isNotEmpty) ||
-        (youtube != null && youtube.toString().trim().isNotEmpty) ||
-        (facebook != null && facebook.toString().trim().isNotEmpty) ||
-        (website != null && website.toString().trim().isNotEmpty);
-
-    debugPrint("📱 [RENDER CHECK] Has Any Social Link to Render: $hasAnySocial");
 
     return Scaffold(
       backgroundColor: bgSurface,
@@ -589,13 +556,12 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                       ],
                     ),
 
-                    // 🌐 Complete Social & Contact Hub (Clean Flat Buttons)
+                    // 🌐 Complete Social & Contact Hub
                     const SizedBox(height: 14),
                     Wrap(
                       spacing: 8,
                       runSpacing: 8,
                       children: [
-                        // Phone Call
                         if (contactPhone != null &&
                             contactPhone.toString().trim().isNotEmpty) ...[
                           _buildSocialPill(
@@ -605,7 +571,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                             dividerColor: dividerColor,
                             onTap: () => _openDialer(contactPhone.toString()),
                           ),
-                          // WhatsApp
                           _buildSocialPill(
                             icon: Icons.chat_bubble_outline_rounded,
                             label: 'WhatsApp',
@@ -614,7 +579,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                             onTap: () => _openWhatsApp(contactPhone.toString()),
                           ),
                         ],
-                        // Telegram
                         if (telegram != null &&
                             telegram.toString().trim().isNotEmpty)
                           _buildSocialPill(
@@ -630,7 +594,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                               _openExternalUrl(url);
                             },
                           ),
-                        // YouTube
                         if (youtube != null &&
                             youtube.toString().trim().isNotEmpty)
                           _buildSocialPill(
@@ -646,7 +609,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                               _openExternalUrl(url);
                             },
                           ),
-                        // Facebook
                         if (facebook != null &&
                             facebook.toString().trim().isNotEmpty)
                           _buildSocialPill(
@@ -662,7 +624,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                               _openExternalUrl(url);
                             },
                           ),
-                        // Official Website
                         if (website != null &&
                             website.toString().trim().isNotEmpty)
                           _buildSocialPill(
@@ -770,6 +731,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     );
   }
 
+  // 📦 Batches Tab with Fee Pricing Badges
   Widget _buildBatchesTab(Color cardSurface, Color dividerColor, bool isDark) {
     if (_batches.isEmpty) {
       return Center(
@@ -791,7 +753,11 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           itemBuilder: (context, idx) {
             final b = _batches[idx];
             final String batchId = b['id']?.toString() ?? '';
-            final bool isUnlocked = prefs?.getBool('unlocked_batch_$batchId') ?? false;
+            final bool isUnlocked =
+                prefs?.getBool('unlocked_batch_$batchId') ?? false;
+
+            final feeType = (b['fee_type'] ?? 'FREE').toString().toUpperCase();
+            final feeDesc = b['fee_description']?.toString();
 
             return Container(
               color: cardSurface,
@@ -800,16 +766,48 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
                         child: Text(
                           b['batch_name'] ?? 'Classroom Batch',
-                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
+                          style: const TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 14.5),
                         ),
                       ),
+                      const SizedBox(width: 8),
+
+                      // 🏷️ Fee Model Pill
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 6, vertical: 2.5),
+                        decoration: BoxDecoration(
+                          color: feeType == 'FREE'
+                              ? const Color(0xFF16A34A).withOpacity(0.12)
+                              : const Color(0xFFF59E0B).withOpacity(0.15),
+                          borderRadius: BorderRadius.circular(4),
+                        ),
+                        child: Text(
+                          feeDesc != null && feeDesc.isNotEmpty
+                              ? feeDesc
+                              : (feeType == 'FREE'
+                                  ? 'FREE BATCH'
+                                  : 'OFFLINE FEE'),
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w800,
+                            color: feeType == 'FREE'
+                                ? const Color(0xFF16A34A)
+                                : const Color(0xFFD97706),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 6),
+
+                      // Unlocked / Locked Status Tag
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 6, vertical: 2.5),
                         decoration: BoxDecoration(
                           color: isUnlocked
                               ? const Color(0xFF16A34A).withOpacity(0.12)
@@ -820,17 +818,23 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Icon(
-                              isUnlocked ? Icons.lock_open_rounded : Icons.lock_outline_rounded,
-                              size: 12,
-                              color: isUnlocked ? const Color(0xFF16A34A) : Colors.redAccent,
+                              isUnlocked
+                                  ? Icons.lock_open_rounded
+                                  : Icons.lock_outline_rounded,
+                              size: 11,
+                              color: isUnlocked
+                                  ? const Color(0xFF16A34A)
+                                  : Colors.redAccent,
                             ),
                             const SizedBox(width: 3),
                             Text(
                               isUnlocked ? 'UNLOCKED' : 'LOCKED',
                               style: TextStyle(
-                                fontSize: 10,
+                                fontSize: 9.5,
                                 fontWeight: FontWeight.bold,
-                                color: isUnlocked ? const Color(0xFF16A34A) : Colors.redAccent,
+                                color: isUnlocked
+                                  ? const Color(0xFF16A34A)
+                                  : Colors.redAccent,
                               ),
                             ),
                           ],
@@ -840,7 +844,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                   ),
                   const SizedBox(height: 6),
                   Text(
-                    b['target_pattern'] ?? 'Based on standard examination pattern',
+                    b['target_pattern'] ??
+                        'Based on standard examination pattern',
                     style: TextStyle(fontSize: 12, color: Colors.grey[600]),
                   ),
                   const SizedBox(height: 10),
@@ -848,12 +853,14 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                     height: 34,
                     child: isUnlocked
                         ? ElevatedButton.icon(
-                            icon: const Icon(Icons.meeting_room_rounded, size: 15),
+                            icon:
+                                const Icon(Icons.meeting_room_rounded, size: 15),
                             style: ElevatedButton.styleFrom(
                               backgroundColor: const Color(0xFF16A34A),
                               foregroundColor: Colors.white,
                               elevation: 0,
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
                             ),
                             onPressed: () {
                               Navigator.push(
@@ -868,20 +875,24 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                             },
                             label: const Text(
                               'Enter Classroom 🚀',
-                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold),
                             ),
                           )
                         : OutlinedButton.icon(
                             icon: const Icon(Icons.vpn_key_rounded, size: 14),
                             style: OutlinedButton.styleFrom(
                               foregroundColor: _primaryBlue,
-                              side: const BorderSide(color: _primaryBlue, width: 1),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                              side: const BorderSide(
+                                  color: _primaryBlue, width: 1),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(8)),
                             ),
                             onPressed: () => _openUnlockBatchDialog(b),
                             label: const Text(
                               'Unlock with Code',
-                              style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold),
                             ),
                           ),
                   ),
@@ -923,7 +934,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                     decoration: BoxDecoration(
                       color: _primaryBlue.withOpacity(0.08),
                       borderRadius: BorderRadius.circular(4),
@@ -931,17 +943,21 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                     child: Text(
                       (m['subject'] ?? 'General').toString().toUpperCase(),
                       style: const TextStyle(
-                          color: _primaryBlue, fontSize: 10.5, fontWeight: FontWeight.bold),
+                          color: _primaryBlue,
+                          fontSize: 10.5,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                   Text('$attempts attempts',
-                      style: TextStyle(fontSize: 11.5, color: Colors.grey[500])),
+                      style:
+                          TextStyle(fontSize: 11.5, color: Colors.grey[500])),
                 ],
               ),
               const SizedBox(height: 6),
               Text(
                 m['title'] ?? 'Practice Mock Test',
-                style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
+                style:
+                    const TextStyle(fontWeight: FontWeight.w700, fontSize: 15),
               ),
               const SizedBox(height: 4),
               Text(
@@ -956,11 +972,13 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                     backgroundColor: _primaryBlue,
                     foregroundColor: Colors.white,
                     elevation: 0,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
                   ),
                   onPressed: () => _launchAttachedMock(m),
                   child: const Text('Start Mock →',
-                      style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
+                      style: TextStyle(
+                          fontSize: 12.5, fontWeight: FontWeight.bold)),
                 ),
               ),
             ],
@@ -970,7 +988,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     );
   }
 
-  Widget _buildWallOfFameTab(Color cardSurface, Color dividerColor, bool isDark) {
+  Widget _buildWallOfFameTab(
+      Color cardSurface, Color dividerColor, bool isDark) {
     if (_selections.isEmpty) {
       return Center(
         child: Padding(
@@ -978,11 +997,15 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.military_tech_outlined, size: 40, color: Colors.grey[400]),
+              Icon(Icons.military_tech_outlined,
+                  size: 40, color: Colors.grey[400]),
               const SizedBox(height: 10),
               Text(
                 'No student selections listed yet.',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.grey[600]),
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 14,
+                    color: Colors.grey[600]),
               ),
               const SizedBox(height: 4),
               Text(
@@ -999,7 +1022,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     return ListView.separated(
       padding: EdgeInsets.zero,
       itemCount: _selections.length,
-      separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
+      separatorBuilder: (_, __) =>
+          Divider(height: 1, thickness: 0.8, color: dividerColor),
       itemBuilder: (context, idx) {
         final s = _selections[idx];
         final name = s['student_name'] ?? 'Candidate';
@@ -1019,7 +1043,10 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                 backgroundColor: const Color(0xFF16A34A).withOpacity(0.12),
                 child: Text(
                   name.isNotEmpty ? name[0].toUpperCase() : 'A',
-                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF16A34A)),
+                  style: const TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Color(0xFF16A34A)),
                 ),
               ),
               const SizedBox(width: 12),
@@ -1032,20 +1059,25 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                         Flexible(
                           child: Text(
                             name,
-                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
+                            style: const TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 15),
                             overflow: TextOverflow.ellipsis,
                           ),
                         ),
                         if (isVerified) ...[
                           const SizedBox(width: 4),
-                          const Icon(Icons.verified, size: 14, color: Color(0xFF16A34A)),
+                          const Icon(Icons.verified,
+                              size: 14, color: Color(0xFF16A34A)),
                         ],
                       ],
                     ),
                     const SizedBox(height: 2),
                     Text(
                       '$post • $exam',
-                      style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _primaryBlue),
+                      style: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w600,
+                          color: _primaryBlue),
                     ),
                     if (quote.isNotEmpty) ...[
                       const SizedBox(height: 6),
@@ -1055,7 +1087,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                           fontSize: 12.5,
                           height: 1.4,
                           fontStyle: FontStyle.italic,
-                          color: isDark ? Colors.grey[300] : const Color(0xFF475569),
+                          color: isDark
+                              ? Colors.grey[300]
+                              : const Color(0xFF475569),
                         ),
                       ),
                     ],
@@ -1069,11 +1103,15 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     );
   }
 
-  Widget _buildAboutCampusTab(Color cardSurface, Color dividerColor, bool isDark) {
+  // 🏛️ About, Star Faculty, Campus Photos & Details
+  Widget _buildAboutCampusTab(
+      Color cardSurface, Color dividerColor, bool isDark) {
     final aboutText = _coaching?['description'] ??
         _profile?['bio'] ??
         'Premier preparation institute providing focused guidance and test series for competitive exams.';
-    final fullAddress = _coaching?['landmark_address'] ?? _coaching?['landmark'] ?? 'Bihar, India';
+    final fullAddress = _coaching?['landmark_address'] ??
+        _coaching?['landmark'] ??
+        'Bihar, India';
     final establishedYear = _coaching?['established_year'] ?? 'Active';
 
     return SingleChildScrollView(
@@ -1098,6 +1136,103 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
             ),
             const SizedBox(height: 20),
 
+            // 👨‍🏫 Star Mentors & Faculty Members List
+            if (_facultyList.isNotEmpty) ...[
+              const Text(
+                'Star Mentors & Faculty',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
+              ),
+              const SizedBox(height: 10),
+              SizedBox(
+                height: 105,
+                child: ListView.separated(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: _facultyList.length,
+                  separatorBuilder: (_, __) => const SizedBox(width: 10),
+                  itemBuilder: (context, i) {
+                    final f = _facultyList[i];
+                    final fName = f['name'] ?? 'Mentor';
+                    final fSubj = f['subject'] ?? 'General Studies';
+                    final fExp = f['exp'] ?? '';
+                    final fPhoto = f['photo_url'];
+
+                    return Container(
+                      width: 175,
+                      padding: const EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                        color: isDark ? _darkBg : _lightBg,
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: dividerColor, width: 0.8),
+                      ),
+                      child: Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 20,
+                            backgroundColor: _primaryBlue.withOpacity(0.15),
+                            backgroundImage: (fPhoto != null &&
+                                    fPhoto.toString().isNotEmpty)
+                                ? NetworkImage(fPhoto.toString())
+                                : null,
+                            child: (fPhoto == null ||
+                                    fPhoto.toString().isEmpty)
+                                ? Text(
+                                    fName.isNotEmpty ? fName[0].toUpperCase() : 'M',
+                                    style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      color: _primaryBlue,
+                                      fontSize: 14,
+                                    ),
+                                  )
+                                : null,
+                          ),
+                          const SizedBox(width: 9),
+                          Expanded(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  fName,
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontSize: 12.5),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  fSubj,
+                                  style: const TextStyle(
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w600,
+                                    color: _primaryBlue,
+                                  ),
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                                if (fExp.isNotEmpty) ...[
+                                  const SizedBox(height: 2),
+                                  Text(
+                                    fExp,
+                                    style: TextStyle(
+                                        fontSize: 10, color: Colors.grey[500]),
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ],
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+              const SizedBox(height: 20),
+            ],
+
+            // 🏛️ Classroom & Facilities Photos
             if (_galleryImages.isNotEmpty) ...[
               const Text(
                 'Classroom & Campus Facilities',
@@ -1121,7 +1256,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                         errorBuilder: (_, __, ___) => Container(
                           width: 180,
                           color: Colors.grey.withOpacity(0.1),
-                          child: const Icon(Icons.image_not_supported_outlined, color: Colors.grey),
+                          child: const Icon(
+                              Icons.image_not_supported_outlined,
+                              color: Colors.grey),
                         ),
                       ),
                     );
@@ -1133,18 +1270,22 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
 
             Divider(height: 1, thickness: 0.8, color: dividerColor),
             const SizedBox(height: 14),
-            _buildInfoRow(Icons.pin_drop_outlined, 'Address', fullAddress, isDark),
+            _buildInfoRow(
+                Icons.pin_drop_outlined, 'Address', fullAddress, isDark),
             const SizedBox(height: 12),
-            _buildInfoRow(Icons.calendar_today_outlined, 'Serving Since', establishedYear.toString(), isDark),
+            _buildInfoRow(Icons.calendar_today_outlined, 'Serving Since',
+                establishedYear.toString(), isDark),
             const SizedBox(height: 12),
-            _buildInfoRow(Icons.shield_outlined, 'Status', 'Registered Coaching Centre', isDark),
+            _buildInfoRow(Icons.shield_outlined, 'Status',
+                'Registered Coaching Centre', isDark),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildInfoRow(IconData icon, String label, String value, bool isDark) {
+  Widget _buildInfoRow(
+      IconData icon, String label, String value, bool isDark) {
     return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -1153,7 +1294,8 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(label, style: TextStyle(fontSize: 11, color: Colors.grey[500])),
+            Text(label,
+                style: TextStyle(fontSize: 11, color: Colors.grey[500])),
             const SizedBox(height: 1),
             Text(
               value,
