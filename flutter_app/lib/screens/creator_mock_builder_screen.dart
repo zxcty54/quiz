@@ -13,12 +13,16 @@ class QuestionCardData {
   final List<TextEditingController> optionCtrls;
   final TextEditingController explanationCtrl;
   int answerIndex;
+  String? questionImageUrl;
+  String? explanationImageUrl;
 
   QuestionCardData({
     String question = '',
     List<String>? options,
     this.answerIndex = 0,
     String explanation = '',
+    this.questionImageUrl,
+    this.explanationImageUrl,
   })  : questionCtrl = TextEditingController(text: question),
         optionCtrls = List.generate(
           4,
@@ -32,6 +36,8 @@ class QuestionCardData {
         'options': optionCtrls.map((c) => c.text.trim()).toList(),
         'answer': answerIndex,
         'explanation': explanationCtrl.text.trim(),
+        'question_image_url': questionImageUrl,
+        'explanation_image_url': explanationImageUrl,
       };
 
   void dispose() {
@@ -71,6 +77,8 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
 
   final List<QuestionCardData> _questionCards = [];
   final ImagePicker _imagePicker = ImagePicker();
+  final ScrollController _cardScrollController = ScrollController();
+  int _activeJumpIndex = 0;
 
   @override
   void initState() {
@@ -82,10 +90,28 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
   @override
   void dispose() {
     _titleCtrl.dispose();
+    _cardScrollController.dispose();
     for (var q in _questionCards) {
       q.dispose();
     }
     super.dispose();
+  }
+
+  void _jumpToCard(int index) {
+    setState(() => _activeJumpIndex = index);
+    HapticFeedback.selectionClick();
+    if (_cardScrollController.hasClients) {
+      // Estimated card height + margins
+      final targetOffset = (index * 420.0).clamp(
+        0.0,
+        _cardScrollController.position.maxScrollExtent,
+      );
+      _cardScrollController.animateTo(
+        targetOffset,
+        duration: const Duration(milliseconds: 320),
+        curve: Curves.easeInOut,
+      );
+    }
   }
 
   Future<void> _fetchCreatorBatches() async {
@@ -128,6 +154,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
   void _addNewBlankQuestion() {
     setState(() {
       _questionCards.add(QuestionCardData());
+      _activeJumpIndex = _questionCards.length - 1;
     });
   }
 
@@ -136,7 +163,11 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     setState(() {
       _questionCards[index].dispose();
       _questionCards.removeAt(index);
-      if (_questionCards.isEmpty) _addNewBlankQuestion();
+      if (_questionCards.isEmpty) {
+        _addNewBlankQuestion();
+      } else if (_activeJumpIndex >= _questionCards.length) {
+        _activeJumpIndex = _questionCards.length - 1;
+      }
     });
   }
 
@@ -145,8 +176,8 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
 
     for (int i = 0; i < _questionCards.length; i++) {
       final q = _questionCards[i];
-      if (q.questionCtrl.text.trim().isEmpty) {
-        return '⚠️ Question #${i + 1} empty hai.';
+      if (q.questionCtrl.text.trim().isEmpty && (q.questionImageUrl == null || q.questionImageUrl!.isEmpty)) {
+        return '⚠️ Question #${i + 1} empty hai. Text likhein ya image attach karein.';
       }
       for (int o = 0; o < 4; o++) {
         if (q.optionCtrls[o].text.trim().isEmpty) {
@@ -156,6 +187,79 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       }
     }
     return null;
+  }
+
+  // 📷 Direct Gallery / Camera Upload to Supabase Storage
+  Future<String?> _uploadAttachmentImage(ImageSource source, String folder) async {
+    try {
+      final XFile? file = await _imagePicker.pickImage(
+        source: source,
+        imageQuality: 82,
+        maxWidth: 1200,
+      );
+      if (file == null) return null;
+
+      final bytes = await file.readAsBytes();
+      final fileExt = file.name.split('.').last;
+      final fileName = '${folder}_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
+      final filePath = '$folder/$fileName';
+
+      await Supabase.instance.client.storage
+          .from('mock_attachments')
+          .uploadBinary(filePath, bytes);
+
+      final publicUrl = Supabase.instance.client.storage
+          .from('mock_attachments')
+          .getPublicUrl(filePath);
+
+      return publicUrl;
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Upload failed: $e (Ensure "mock_attachments" bucket exists)'),
+            backgroundColor: Colors.redAccent,
+          ),
+        );
+      }
+      return null;
+    }
+  }
+
+  Future<void> _showImagePickerChoice({
+    required Function(String url) onUploaded,
+    required String folder,
+  }) async {
+    showModalBottomSheet(
+      context: context,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(16)),
+      ),
+      builder: (bCtx) => SafeArea(
+        child: Wrap(
+          children: [
+            ListTile(
+              leading: const Icon(Icons.photo_library_outlined, color: Color(0xFF16A34A)),
+              title: const Text('Gallery se Select Karein (Direct)'),
+              onTap: () async {
+                Navigator.pop(bCtx);
+                final url = await _uploadAttachmentImage(ImageSource.gallery, folder);
+                if (url != null) onUploaded(url);
+              },
+            ),
+            ListTile(
+              leading: const Icon(Icons.camera_alt_outlined, color: Color(0xFF2563EB)),
+              title: const Text('Camera se Photo Kheechein'),
+              onTap: () async {
+                Navigator.pop(bCtx);
+                final url = await _uploadAttachmentImage(ImageSource.camera, folder);
+                if (url != null) onUploaded(url);
+              },
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   void _showDebugPopup(String title, String details) {
@@ -202,7 +306,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     }
   }
 
-  // ⚡ Flawless Block-Slicing Parser
+  // ⚡ Block-Slicing Parser
   List<QuestionCardData> _parseRawCoachingInput(String rawText) {
     final List<QuestionCardData> result = [];
     if (rawText.trim().isEmpty) return result;
@@ -301,6 +405,70 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
     final rawTextCtrl = TextEditingController();
     bool isAiLoading = false;
 
+    Future<void> triggerAiProcessing(BuildContext modalCtx, void Function(void Function()) setModalState) async {
+      final text = rawTextCtrl.text.trim();
+      if (text.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Pehle text paste karein!')),
+        );
+        return;
+      }
+
+      setModalState(() => isAiLoading = true);
+
+      try {
+        final eligibility = await AiRateLimiterService.checkEligibility();
+        if (eligibility['allowed'] == false) {
+          setModalState(() => isAiLoading = false);
+          _showDebugPopup('AI Quota Blocked', eligibility['message'] ?? 'Daily limit reach ho chuki hai.');
+          return;
+        }
+
+        final List<Map<String, dynamic>> aiResult =
+            await AiExplainerService.parseBulkQuestionsWithAi(text);
+
+        if (aiResult.isNotEmpty) {
+          await AiRateLimiterService.recordSuccess();
+
+          final converted = aiResult.map((m) {
+            final opts = (m['options'] as List? ?? []).map((e) => e.toString()).toList();
+            while (opts.length < 4) {
+              opts.add('Option ${String.fromCharCode(65 + opts.length)}');
+            }
+            return QuestionCardData(
+              question: m['question']?.toString() ?? '',
+              options: opts.sublist(0, 4),
+              answerIndex: (m['answer'] is int && m['answer'] >= 0 && m['answer'] < 4)
+                  ? m['answer']
+                  : 0,
+              explanation: m['explanation']?.toString() ?? '',
+            );
+          }).toList();
+
+          setState(() {
+            if (_questionCards.length == 1 && _questionCards[0].questionCtrl.text.isEmpty) {
+              _questionCards.clear();
+            }
+            _questionCards.addAll(converted);
+            _activeJumpIndex = _questionCards.length - 1;
+          });
+
+          if (context.mounted) {
+            Navigator.pop(modalCtx);
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('✨ AI added ${converted.length} Questions successfully!'), backgroundColor: const Color(0xFF16A34A)),
+            );
+          }
+        } else {
+          setModalState(() => isAiLoading = false);
+          _showDebugPopup('AI Empty Output', 'AI Service ne 0 questions return kiye.');
+        }
+      } catch (err, stack) {
+        setModalState(() => isAiLoading = false);
+        _showDebugPopup('AI Execution Error', 'Error: $err\n\nStack:\n$stack');
+      }
+    }
+
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
@@ -356,6 +524,29 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 10),
 
+                // 💡 Context helper for Math/Numericals
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                  decoration: BoxDecoration(
+                    color: const Color(0xFF8B5CF6).withOpacity(0.09),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: const Color(0xFF8B5CF6).withOpacity(0.25)),
+                  ),
+                  child: const Row(
+                    children: [
+                      Icon(Icons.auto_awesome, size: 16, color: Color(0xFF8B5CF6)),
+                      SizedBox(width: 6),
+                      Expanded(
+                        child: Text(
+                          'Handwritten notes, Maths formulas (LaTeX) ya diagrams ke liye "AI Auto-Clean & Fix" use karein.',
+                          style: TextStyle(fontSize: 11, color: Color(0xFF8B5CF6), fontWeight: FontWeight.w600),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 10),
+
                 TextField(
                   controller: rawTextCtrl,
                   maxLines: 9,
@@ -367,7 +558,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 12),
 
-                // 1. FAST LOCAL CONVERT
+                // 1. FAST LOCAL CONVERT (With Math Warning)
                 SizedBox(
                   width: double.infinity,
                   height: 46,
@@ -381,13 +572,49 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                     label: const Text('Instant Auto Convert (Free & Fast)', style: TextStyle(fontWeight: FontWeight.bold)),
                     onPressed: isAiLoading
                         ? null
-                        : () {
+                        : () async {
                             final text = rawTextCtrl.text.trim();
                             if (text.isEmpty) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(content: Text('Pehle text paste karein!')),
                               );
                               return;
+                            }
+
+                            // Math Symbols Detection Trigger
+                            final hasMathSymbols = RegExp(r'[\^√∫πθ±÷×λ∑]|(\b\d+/\d+\b)|[a-zA-Z]\^[0-9]').hasMatch(text);
+                            if (hasMathSymbols) {
+                              final useAi = await showDialog<bool>(
+                                context: context,
+                                builder: (dCtx) => AlertDialog(
+                                  title: const Row(
+                                    children: [
+                                      Icon(Icons.functions_rounded, color: Color(0xFF8B5CF6)),
+                                      SizedBox(width: 8),
+                                      Text('Maths Symbols Detected', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                                    ],
+                                  ),
+                                  content: const Text(
+                                    'Is question text me mathematical equations/symbols detect hue hain.\n\nLocal parser formulas ko tod sakta hai. Kya aap isse "AI Auto-Clean (LaTeX)" se parse karna chahte hain?',
+                                  ),
+                                  actions: [
+                                    TextButton(
+                                      onPressed: () => Navigator.pop(dCtx, false),
+                                      child: const Text('Continue Normal (Regex)'),
+                                    ),
+                                    ElevatedButton(
+                                      style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF8B5CF6)),
+                                      onPressed: () => Navigator.pop(dCtx, true),
+                                      child: const Text('Use AI (Recommended)', style: TextStyle(color: Colors.white)),
+                                    ),
+                                  ],
+                                ),
+                              );
+
+                              if (useAi == true) {
+                                triggerAiProcessing(ctx, setModalState);
+                                return;
+                              }
                             }
 
                             final localParsed = _parseRawCoachingInput(text);
@@ -398,6 +625,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                   _questionCards.clear();
                                 }
                                 _questionCards.addAll(localParsed);
+                                _activeJumpIndex = _questionCards.length - 1;
                               });
                               Navigator.pop(ctx);
                               ScaffoldMessenger.of(context).showSnackBar(
@@ -409,7 +637,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                             } else {
                               _showDebugPopup(
                                 'Local Parser Zero Output',
-                                'Text mila: ${text.length} characters.\n\nOption A) B) C) D) detect nahi ho paya.',
+                                'Text mila: ${text.length} characters.\n\nOption A) B) C) D) detect nahi ho paya. "AI Auto-Clean" try karein.',
                               );
                             }
                           },
@@ -431,73 +659,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                         ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF8B5CF6)))
                         : const Icon(Icons.auto_awesome_rounded, size: 16),
                     label: Text(isAiLoading ? 'AI Processing Questions...' : 'AI Auto-Clean & Fix 🪄'),
-                    onPressed: isAiLoading
-                        ? null
-                        : () async {
-                            final text = rawTextCtrl.text.trim();
-                            if (text.isEmpty) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(content: Text('Pehle text paste karein!')),
-                              );
-                              return;
-                            }
-
-                            setModalState(() => isAiLoading = true);
-
-                            try {
-                              final eligibility = await AiRateLimiterService.checkEligibility();
-                              if (eligibility['allowed'] == false) {
-                                setModalState(() => isAiLoading = false);
-                                _showDebugPopup('AI Quota Blocked', eligibility['message'] ?? 'Daily limit reach ho chuki hai.');
-                                return;
-                              }
-
-                              final List<Map<String, dynamic>> aiResult =
-                                  await AiExplainerService.parseBulkQuestionsWithAi(text);
-
-                              if (aiResult.isNotEmpty) {
-                                await AiRateLimiterService.recordSuccess();
-
-                                final converted = aiResult.map((m) {
-                                  final opts = (m['options'] as List? ?? []).map((e) => e.toString()).toList();
-                                  while (opts.length < 4) {
-                                    opts.add('Option ${String.fromCharCode(65 + opts.length)}');
-                                  }
-                                  return QuestionCardData(
-                                    question: m['question']?.toString() ?? '',
-                                    options: opts.sublist(0, 4),
-                                    answerIndex: (m['answer'] is int && m['answer'] >= 0 && m['answer'] < 4)
-                                        ? m['answer']
-                                        : 0,
-                                    explanation: m['explanation']?.toString() ?? '',
-                                  );
-                                }).toList();
-
-                                setState(() {
-                                  if (_questionCards.length == 1 && _questionCards[0].questionCtrl.text.isEmpty) {
-                                    _questionCards.clear();
-                                  }
-                                  _questionCards.addAll(converted);
-                                });
-
-                                if (context.mounted) {
-                                  Navigator.pop(ctx);
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(content: Text('✨ AI added ${converted.length} Questions successfully!'), backgroundColor: const Color(0xFF16A34A)),
-                                  );
-                                }
-                              } else {
-                                setModalState(() => isAiLoading = false);
-                                _showDebugPopup(
-                                  'AI Empty Output',
-                                  'AI Service ne 0 questions return kiye.',
-                                );
-                              }
-                            } catch (err, stack) {
-                              setModalState(() => isAiLoading = false);
-                              _showDebugPopup('AI Execution Error', 'Error: $err\n\nStack:\n$stack');
-                            }
-                          },
+                    onPressed: isAiLoading ? null : () => triggerAiProcessing(ctx, setModalState),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -535,18 +697,16 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
           final q = _questionCards[previewCurrentIndex];
           final isDark = widget.isDarkMode;
 
-          // 🎯 Contrast Colors to prevent white-on-white overlay
           final primaryTextColor = isDark ? Colors.white : const Color(0xFF0F172A);
           final cardFillColor = isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9);
           final borderColor = isDark ? Colors.white24 : Colors.grey.shade300;
 
           return Container(
-            height: MediaQuery.of(ctx).size.height * 0.88,
+            height: MediaQuery.of(ctx).size.height * 0.90,
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Header
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -579,7 +739,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const Divider(height: 12),
 
-                // Title & Live Counter
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -613,34 +772,47 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                 ),
                 const SizedBox(height: 12),
 
-                // Question & Options Area
                 Expanded(
                   child: SingleChildScrollView(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Question Box
                         Container(
                           width: double.infinity,
-                          padding: const EdgeInsets.all(16),
+                          padding: const EdgeInsets.all(14),
                           decoration: BoxDecoration(
                             color: cardFillColor,
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(color: borderColor),
                           ),
-                          child: MathFormattedText(
-                            text: q.questionCtrl.text,
-                            textStyle: TextStyle(
-                              fontSize: 15,
-                              height: 1.5,
-                              fontWeight: FontWeight.w600,
-                              color: primaryTextColor, // 👈 Ensures question text is visible
-                            ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              MathFormattedText(
+                                text: q.questionCtrl.text,
+                                textStyle: TextStyle(
+                                  fontSize: 15,
+                                  height: 1.5,
+                                  fontWeight: FontWeight.w600,
+                                  color: primaryTextColor,
+                                ),
+                              ),
+                              if (q.questionImageUrl != null && q.questionImageUrl!.isNotEmpty) ...[
+                                const SizedBox(height: 10),
+                                ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Image.network(
+                                    q.questionImageUrl!,
+                                    fit: BoxFit.contain,
+                                    loadingBuilder: (c, child, p) => p == null ? child : const LinearProgressIndicator(),
+                                  ),
+                                ),
+                              ],
+                            ],
                           ),
                         ),
                         const SizedBox(height: 16),
 
-                        // Options
                         ...List.generate(4, (oIdx) {
                           final isSelected = selectedOption == oIdx;
                           final letter = String.fromCharCode(65 + oIdx);
@@ -686,7 +858,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                         text: q.optionCtrls[oIdx].text,
                                         textStyle: TextStyle(
                                           fontSize: 14,
-                                          color: primaryTextColor, // 👈 Ensures option text is visible
+                                          color: primaryTextColor,
                                         ),
                                       ),
                                     ),
@@ -696,6 +868,45 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                             ),
                           );
                         }),
+
+                        if (q.explanationCtrl.text.isNotEmpty || q.explanationImageUrl != null) ...[
+                          const SizedBox(height: 14),
+                          Container(
+                            width: double.infinity,
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: const Color(0xFF16A34A).withOpacity(0.08),
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.3)),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                const Text(
+                                  '💡 Solution / Explanation:',
+                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5, color: Color(0xFF16A34A)),
+                                ),
+                                const SizedBox(height: 6),
+                                if (q.explanationCtrl.text.isNotEmpty)
+                                  MathFormattedText(
+                                    text: q.explanationCtrl.text,
+                                    textStyle: TextStyle(fontSize: 13, color: primaryTextColor),
+                                  ),
+                                if (q.explanationImageUrl != null && q.explanationImageUrl!.isNotEmpty) ...[
+                                  const SizedBox(height: 8),
+                                  ClipRRect(
+                                    borderRadius: BorderRadius.circular(6),
+                                    child: Image.network(
+                                      q.explanationImageUrl!,
+                                      height: 140,
+                                      fit: BoxFit.contain,
+                                    ),
+                                  ),
+                                ],
+                              ],
+                            ),
+                          ),
+                        ],
                       ],
                     ),
                   ),
@@ -703,7 +914,6 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
 
                 const SizedBox(height: 10),
 
-                // Bottom Navigation Bar
                 Row(
                   children: [
                     if (previewCurrentIndex > 0)
@@ -859,6 +1069,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
       ),
       body: Column(
         children: [
+          // 🏷️ Top Config Bar
           Container(
             padding: const EdgeInsets.all(12),
             color: cardBg,
@@ -909,8 +1120,72 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
           ),
           const Divider(height: 1),
 
+          // ⚡ JUMP TO QUESTION BAR
+          Container(
+            height: 46,
+            color: cardBg,
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            child: Row(
+              children: [
+                const Icon(Icons.touch_app_outlined, size: 16, color: Color(0xFF2563EB)),
+                const SizedBox(width: 6),
+                const Text('Jump:', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                const SizedBox(width: 6),
+                Expanded(
+                  child: ListView.builder(
+                    scrollDirection: Axis.horizontal,
+                    itemCount: _questionCards.length,
+                    itemBuilder: (ctx, i) {
+                      final isActive = _activeJumpIndex == i;
+                      final hasImg = _questionCards[i].questionImageUrl != null || _questionCards[i].explanationImageUrl != null;
+
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 6),
+                        child: InkWell(
+                          onTap: () => _jumpToCard(i),
+                          borderRadius: BorderRadius.circular(6),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                            decoration: BoxDecoration(
+                              color: isActive
+                                  ? const Color(0xFF2563EB)
+                                  : (isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9)),
+                              borderRadius: BorderRadius.circular(6),
+                              border: Border.all(
+                                color: isActive ? const Color(0xFF2563EB) : (hasImg ? const Color(0xFF16A34A) : Colors.grey.shade300),
+                              ),
+                            ),
+                            child: Row(
+                              children: [
+                                Text(
+                                  'Q${i + 1}',
+                                  style: TextStyle(
+                                    fontSize: 11.5,
+                                    fontWeight: FontWeight.bold,
+                                    color: isActive ? Colors.white : (isDark ? Colors.white70 : Colors.black87),
+                                  ),
+                                ),
+                                if (hasImg) ...[
+                                  const SizedBox(width: 3),
+                                  Icon(Icons.image, size: 11, color: isActive ? Colors.white : const Color(0xFF16A34A)),
+                                ],
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Divider(height: 1),
+
+          // 📝 EDITABLE QUESTION CARDS LIST
           Expanded(
             child: ListView.builder(
+              controller: _cardScrollController,
               padding: const EdgeInsets.all(12),
               itemCount: _questionCards.length,
               itemBuilder: (context, idx) {
@@ -918,7 +1193,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
 
                 return Card(
                   key: ObjectKey(q),
-                  margin: const EdgeInsets.only(bottom: 12),
+                  margin: const EdgeInsets.only(bottom: 14),
                   color: cardBg,
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   child: Padding(
@@ -926,21 +1201,80 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // Card Header
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text('Question #${idx + 1}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF2563EB))),
-                            IconButton(icon: const Icon(Icons.delete_outline, color: Colors.redAccent, size: 18), onPressed: () => _removeQuestion(idx)),
+                            Text(
+                              'Question #${idx + 1}',
+                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF2563EB)),
+                            ),
+                            Row(
+                              children: [
+                                IconButton(
+                                  tooltip: 'Attach Question Diagram',
+                                  icon: Icon(
+                                    q.questionImageUrl == null ? Icons.add_photo_alternate_outlined : Icons.image_rounded,
+                                    color: q.questionImageUrl == null ? const Color(0xFF2563EB) : const Color(0xFF16A34A),
+                                    size: 20,
+                                  ),
+                                  onPressed: () => _showImagePickerChoice(
+                                    folder: 'questions',
+                                    onUploaded: (url) => setState(() => q.questionImageUrl = url),
+                                  ),
+                                ),
+                                IconButton(
+                                  icon: const Icon(Icons.delete_outline, color: Colors.redAccent, size: 18),
+                                  onPressed: () => _removeQuestion(idx),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
+
+                        // Question Statement
                         TextField(
                           controller: q.questionCtrl,
                           maxLines: 2,
-                          decoration: const InputDecoration(hintText: 'Type question statement...', border: OutlineInputBorder(), isDense: true),
+                          decoration: const InputDecoration(
+                            hintText: 'Type question statement...',
+                            border: OutlineInputBorder(),
+                            isDense: true,
+                          ),
                         ),
+
+                        // Question Attached Image Display
+                        if (q.questionImageUrl != null && q.questionImageUrl!.isNotEmpty) ...[
+                          const SizedBox(height: 8),
+                          Stack(
+                            alignment: Alignment.topRight,
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(8),
+                                child: Image.network(
+                                  q.questionImageUrl!,
+                                  height: 120,
+                                  width: double.infinity,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              IconButton(
+                                icon: const CircleAvatar(
+                                  radius: 12,
+                                  backgroundColor: Colors.redAccent,
+                                  child: Icon(Icons.close, size: 14, color: Colors.white),
+                                ),
+                                onPressed: () => setState(() => q.questionImageUrl = null),
+                              ),
+                            ],
+                          ),
+                        ],
+
                         const SizedBox(height: 10),
                         const Text('Options (Tap letter to set correct answer):', style: TextStyle(fontSize: 11, color: Colors.grey)),
                         const SizedBox(height: 6),
+
+                        // Options A, B, C, D
                         ...List.generate(4, (oIdx) {
                           final isCorrect = q.answerIndex == oIdx;
                           return Padding(
@@ -954,7 +1288,11 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                     backgroundColor: isCorrect ? const Color(0xFF16A34A) : Colors.grey.withOpacity(0.3),
                                     child: Text(
                                       String.fromCharCode(65 + oIdx),
-                                      style: TextStyle(fontSize: 12, color: isCorrect ? Colors.white : Colors.black87, fontWeight: FontWeight.bold),
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        color: isCorrect ? Colors.white : Colors.black87,
+                                        fontWeight: FontWeight.bold,
+                                      ),
                                     ),
                                   ),
                                 ),
@@ -962,17 +1300,72 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
                                 Expanded(
                                   child: TextField(
                                     controller: q.optionCtrls[oIdx],
-                                    decoration: InputDecoration(hintText: 'Option ${String.fromCharCode(65 + oIdx)}', isDense: true, border: const OutlineInputBorder()),
+                                    decoration: InputDecoration(
+                                      hintText: 'Option ${String.fromCharCode(65 + oIdx)}',
+                                      isDense: true,
+                                      border: const OutlineInputBorder(),
+                                    ),
                                   ),
                                 ),
                               ],
                             ),
                           );
                         }),
-                        TextField(
-                          controller: q.explanationCtrl,
-                          decoration: const InputDecoration(labelText: 'Explanation (Optional)', isDense: true, border: OutlineInputBorder()),
+
+                        const SizedBox(height: 4),
+
+                        // Explanation input & image trigger
+                        Row(
+                          children: [
+                            Expanded(
+                              child: TextField(
+                                controller: q.explanationCtrl,
+                                decoration: const InputDecoration(
+                                  labelText: 'Explanation / Solution (Optional)',
+                                  isDense: true,
+                                  border: OutlineInputBorder(),
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: 6),
+                            IconButton(
+                              tooltip: 'Attach Explanation Diagram',
+                              icon: Icon(
+                                q.explanationImageUrl == null ? Icons.photo_size_select_actual_outlined : Icons.check_circle,
+                                color: q.explanationImageUrl == null ? const Color(0xFF2563EB) : const Color(0xFF16A34A),
+                                size: 21,
+                              ),
+                              onPressed: () => _showImagePickerChoice(
+                                folder: 'explanations',
+                                onUploaded: (url) => setState(() => q.explanationImageUrl = url),
+                              ),
+                            ),
+                          ],
                         ),
+
+                        // Explanation Image Display
+                        if (q.explanationImageUrl != null && q.explanationImageUrl!.isNotEmpty) ...[
+                          const SizedBox(height: 8),
+                          Row(
+                            children: [
+                              ClipRRect(
+                                borderRadius: BorderRadius.circular(6),
+                                child: Image.network(
+                                  q.explanationImageUrl!,
+                                  height: 55,
+                                  width: 75,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              TextButton.icon(
+                                icon: const Icon(Icons.delete_outline, size: 16, color: Colors.redAccent),
+                                label: const Text('Remove Solution Image', style: TextStyle(color: Colors.redAccent, fontSize: 12)),
+                                onPressed: () => setState(() => q.explanationImageUrl = null),
+                              ),
+                            ],
+                          ),
+                        ],
                       ],
                     ),
                   ),
@@ -981,7 +1374,7 @@ class _CreatorMockBuilderScreenState extends State<CreatorMockBuilderScreen> {
             ),
           ),
 
-          // 🛠️ Uncompressed 2-Tier Bottom Action Bar
+          // 🛠️ 2-Tier Bottom Action Bar
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
             decoration: BoxDecoration(
