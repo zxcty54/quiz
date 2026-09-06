@@ -47,7 +47,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   @override
   void initState() {
     super.initState();
-    // 4 Flat Tabs: Batches, Mocks, Wall of Fame, About
     _tabController = TabController(length: 4, vsync: this);
     _loadInitialData();
   }
@@ -59,6 +58,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   }
 
   Future<void> _loadInitialData() async {
+    debugPrint("🔍 [PROFILE] Loading data for handle: ${widget.creatorHandle}");
     await _fetchProfileAndCoaching();
 
     await Future.wait([
@@ -76,6 +76,7 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       final client = Supabase.instance.client;
       final handle = widget.creatorHandle.trim();
 
+      // 1. Fetch Creator Profile
       final profRes = await client
           .from('creator_profiles')
           .select('*')
@@ -85,8 +86,12 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       if (profRes != null) {
         _profile = profRes;
         _followersCount = profRes['followers_count'] ?? 0;
+        debugPrint("✅ [PROFILE] Creator Profile Found: ${profRes['name']}");
+      } else {
+        debugPrint("⚠️ [PROFILE] No creator_profiles record found for: $handle");
       }
 
+      // 2. Fetch Coaching Row
       dynamic coachRes = await client
           .from('coachings')
           .select('*')
@@ -102,10 +107,17 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
       _coaching = coachRes;
 
       if (_coaching != null) {
+        debugPrint("✅ [COACHING] Coaching Found: ${_coaching!['name']} (ID: ${_coaching!['id']})");
+        debugPrint("📞 [COACHING RAW DATA] Phone: ${_coaching!['phone']} | Contact: ${_coaching!['contact_number']}");
+        debugPrint("🌐 [COACHING RAW DATA] Telegram: ${_coaching!['telegram_link']} | YouTube: ${_coaching!['youtube_url']}");
+        debugPrint("🌐 [COACHING RAW DATA] Facebook: ${_coaching!['facebook_url']} | Website: ${_coaching!['website_url']}");
         _galleryImages = (_coaching!['gallery_images'] as List?) ?? [];
+      } else {
+        debugPrint("❌ [COACHING] No coaching row matched with handle: $handle. Verify owner_name / creator_handle column in DB!");
       }
-    } catch (e) {
-      debugPrint("Profile/Coaching fetch error: $e");
+    } catch (e, stack) {
+      debugPrint("🔥 [ERROR] Profile/Coaching fetch error: $e");
+      debugPrint("$stack");
     }
   }
 
@@ -122,8 +134,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .order('created_at', ascending: false);
 
       _batches = res ?? [];
+      debugPrint("📦 [BATCHES] Loaded: ${_batches.length} batches");
     } catch (e) {
-      debugPrint("Batches fetch error: $e");
+      debugPrint("🔥 [ERROR] Batches fetch error: $e");
     }
   }
 
@@ -136,8 +149,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .order('created_at', ascending: false);
 
       _mocks = res ?? [];
+      debugPrint("📝 [MOCKS] Loaded: ${_mocks.length} mocks");
     } catch (e) {
-      debugPrint("Mocks fetch error: $e");
+      debugPrint("🔥 [ERROR] Mocks fetch error: $e");
     }
   }
 
@@ -153,8 +167,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .order('created_at', ascending: false);
 
       _selections = res ?? [];
+      debugPrint("🎓 [SELECTIONS] Loaded: ${_selections.length} achievements");
     } catch (e) {
-      debugPrint("Selections fetch error: $e");
+      debugPrint("🔥 [ERROR] Selections fetch error: $e");
     }
   }
 
@@ -188,7 +203,9 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
           .from('creator_profiles')
           .update({'followers_count': _followersCount})
           .eq('handle_id', widget.creatorHandle);
-    } catch (_) {}
+    } catch (e) {
+      debugPrint("🔥 [ERROR] Follow update error: $e");
+    }
   }
 
   void _launchAttachedMock(Map<String, dynamic> mock) {
@@ -217,27 +234,48 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
   }
 
   void _openExternalUrl(String url) async {
-    final uri = Uri.parse(url);
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    debugPrint("🌐 [LAUNCH] Attempting to open URL: $url");
+    try {
+      final uri = Uri.parse(url);
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri, mode: LaunchMode.externalApplication);
+      } else {
+        debugPrint("❌ [LAUNCH ERROR] System reports cannot launch URL: $url");
+      }
+    } catch (e) {
+      debugPrint("🔥 [LAUNCH EXCEPTION] $e");
     }
   }
 
   void _openDialer(String phone) async {
-    final uri = Uri.parse('tel:$phone');
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri);
+    debugPrint("📞 [DIALER] Calling: $phone");
+    try {
+      final uri = Uri.parse('tel:$phone');
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri);
+      } else {
+        debugPrint("❌ [DIALER ERROR] Cannot launch dialer for $phone");
+      }
+    } catch (e) {
+      debugPrint("🔥 [DIALER EXCEPTION] $e");
     }
   }
 
   void _openWhatsApp(String phone) async {
-    String cleanNumber = phone.replaceAll(RegExp(r'[^0-9]'), '');
-    if (!cleanNumber.startsWith('91') && cleanNumber.length == 10) {
-      cleanNumber = '91$cleanNumber';
-    }
-    final uri = Uri.parse('https://wa.me/$cleanNumber?text=Hello,%20I%20want%20information%20regarding%20batches.');
-    if (await canLaunchUrl(uri)) {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    try {
+      String cleanNumber = phone.replaceAll(RegExp(r'[^0-9]'), '');
+      if (!cleanNumber.startsWith('91') && cleanNumber.length == 10) {
+        cleanNumber = '91$cleanNumber';
+      }
+      debugPrint("💬 [WHATSAPP] Opening chat with: $cleanNumber");
+      final uri = Uri.parse('https://wa.me/$cleanNumber?text=Hello,%20I%20want%20information%20regarding%20batches.');
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri, mode: LaunchMode.externalApplication);
+      } else {
+        debugPrint("❌ [WHATSAPP ERROR] Cannot launch WhatsApp for $cleanNumber");
+      }
+    } catch (e) {
+      debugPrint("🔥 [WHATSAPP EXCEPTION] $e");
     }
   }
 
@@ -353,8 +391,21 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     final landmark = _coaching?['landmark_address'] ?? _coaching?['landmark'];
     final logoUrl = _coaching?['logo_url'] ?? _profile?['profile_image'];
     final bannerUrl = _coaching?['banner_url'] ?? _profile?['banner_url'];
-    final telegram = _profile?['telegram_handle'] ?? _coaching?['telegram_link'];
+
+    // Social Links
     final contactPhone = _coaching?['phone'] ?? _coaching?['contact_number'];
+    final telegram = _coaching?['telegram_link'] ?? _profile?['telegram_handle'];
+    final youtube = _coaching?['youtube_url'] ?? _profile?['youtube_handle'];
+    final facebook = _coaching?['facebook_url'] ?? _profile?['facebook_handle'];
+    final website = _coaching?['website_url'];
+
+    final hasAnySocial = (contactPhone != null && contactPhone.toString().trim().isNotEmpty) ||
+        (telegram != null && telegram.toString().trim().isNotEmpty) ||
+        (youtube != null && youtube.toString().trim().isNotEmpty) ||
+        (facebook != null && facebook.toString().trim().isNotEmpty) ||
+        (website != null && website.toString().trim().isNotEmpty);
+
+    debugPrint("📱 [RENDER CHECK] Has Any Social Link to Render: $hasAnySocial");
 
     return Scaffold(
       backgroundColor: bgSurface,
@@ -538,57 +589,95 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
                       ],
                     ),
 
-                    // Direct Enquiry Quick Actions Strip
+                    // 🌐 Complete Social & Contact Hub (Clean Flat Buttons)
                     const SizedBox(height: 14),
-                    Row(
+                    Wrap(
+                      spacing: 8,
+                      runSpacing: 8,
                       children: [
-                        if (contactPhone != null && contactPhone.toString().isNotEmpty) ...[
-                          Expanded(
-                            child: OutlinedButton.icon(
-                              style: OutlinedButton.styleFrom(
-                                side: BorderSide(color: dividerColor),
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                                padding: const EdgeInsets.symmetric(vertical: 9),
-                              ),
-                              icon: const Icon(Icons.phone_outlined, size: 15, color: Color(0xFF16A34A)),
-                              label: const Text('Call', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                              onPressed: () => _openDialer(contactPhone.toString()),
-                            ),
+                        // Phone Call
+                        if (contactPhone != null &&
+                            contactPhone.toString().trim().isNotEmpty) ...[
+                          _buildSocialPill(
+                            icon: Icons.phone_outlined,
+                            label: 'Call',
+                            iconColor: const Color(0xFF16A34A),
+                            dividerColor: dividerColor,
+                            onTap: () => _openDialer(contactPhone.toString()),
                           ),
-                          const SizedBox(width: 8),
-                          Expanded(
-                            child: OutlinedButton.icon(
-                              style: OutlinedButton.styleFrom(
-                                side: BorderSide(color: dividerColor),
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                                padding: const EdgeInsets.symmetric(vertical: 9),
-                              ),
-                              icon: const Icon(Icons.chat_bubble_outline_rounded, size: 15, color: Color(0xFF25D366)),
-                              label: const Text('WhatsApp', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                              onPressed: () => _openWhatsApp(contactPhone.toString()),
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                        ],
-                        if (telegram != null && telegram.toString().isNotEmpty) ...[
-                          Expanded(
-                            child: OutlinedButton.icon(
-                              style: OutlinedButton.styleFrom(
-                                side: BorderSide(color: dividerColor),
-                                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                                padding: const EdgeInsets.symmetric(vertical: 9),
-                              ),
-                              icon: const Icon(Icons.near_me_rounded, size: 15, color: Color(0xFF0284C7)),
-                              label: const Text('Telegram', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-                              onPressed: () {
-                                String clean = telegram.toString().startsWith('http')
-                                    ? telegram.toString()
-                                    : 'https://t.me/${telegram.toString().replaceAll('@', '')}';
-                                _openExternalUrl(clean);
-                              },
-                            ),
+                          // WhatsApp
+                          _buildSocialPill(
+                            icon: Icons.chat_bubble_outline_rounded,
+                            label: 'WhatsApp',
+                            iconColor: const Color(0xFF25D366),
+                            dividerColor: dividerColor,
+                            onTap: () => _openWhatsApp(contactPhone.toString()),
                           ),
                         ],
+                        // Telegram
+                        if (telegram != null &&
+                            telegram.toString().trim().isNotEmpty)
+                          _buildSocialPill(
+                            icon: Icons.near_me_rounded,
+                            label: 'Telegram',
+                            iconColor: const Color(0xFF0284C7),
+                            dividerColor: dividerColor,
+                            onTap: () {
+                              final tg = telegram.toString().trim();
+                              final url = tg.startsWith('http')
+                                  ? tg
+                                  : 'https://t.me/${tg.replaceAll('@', '')}';
+                              _openExternalUrl(url);
+                            },
+                          ),
+                        // YouTube
+                        if (youtube != null &&
+                            youtube.toString().trim().isNotEmpty)
+                          _buildSocialPill(
+                            icon: Icons.smart_display_outlined,
+                            label: 'YouTube',
+                            iconColor: const Color(0xFFEF4444),
+                            dividerColor: dividerColor,
+                            onTap: () {
+                              final yt = youtube.toString().trim();
+                              final url = yt.startsWith('http')
+                                  ? yt
+                                  : 'https://youtube.com/${yt.startsWith('@') ? yt : "@$yt"}';
+                              _openExternalUrl(url);
+                            },
+                          ),
+                        // Facebook
+                        if (facebook != null &&
+                            facebook.toString().trim().isNotEmpty)
+                          _buildSocialPill(
+                            icon: Icons.facebook_rounded,
+                            label: 'Facebook',
+                            iconColor: const Color(0xFF1877F2),
+                            dividerColor: dividerColor,
+                            onTap: () {
+                              final fb = facebook.toString().trim();
+                              final url = fb.startsWith('http')
+                                  ? fb
+                                  : 'https://facebook.com/$fb';
+                              _openExternalUrl(url);
+                            },
+                          ),
+                        // Official Website
+                        if (website != null &&
+                            website.toString().trim().isNotEmpty)
+                          _buildSocialPill(
+                            icon: Icons.language_rounded,
+                            label: 'Website',
+                            iconColor: _primaryBlue,
+                            dividerColor: dividerColor,
+                            onTap: () {
+                              final web = website.toString().trim();
+                              final url = web.startsWith('http')
+                                  ? web
+                                  : 'https://$web';
+                              _openExternalUrl(url);
+                            },
+                          ),
                       ],
                     ),
                   ],
@@ -628,6 +717,37 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
             _buildMocksTab(cardSurface, dividerColor, isDark),
             _buildWallOfFameTab(cardSurface, dividerColor, isDark),
             _buildAboutCampusTab(cardSurface, dividerColor, isDark),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildSocialPill({
+    required IconData icon,
+    required String label,
+    required Color iconColor,
+    required Color dividerColor,
+    required VoidCallback onTap,
+  }) {
+    return InkWell(
+      onTap: onTap,
+      borderRadius: BorderRadius.circular(8),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          border: Border.all(color: dividerColor, width: 0.9),
+        ),
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 14, color: iconColor),
+            const SizedBox(width: 5),
+            Text(
+              label,
+              style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w700),
+            ),
           ],
         ),
       ),
@@ -850,7 +970,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     );
   }
 
-  // 🏆 Wall of Fame / Success Testimonials (Flat Twitter Style Rows)
   Widget _buildWallOfFameTab(Color cardSurface, Color dividerColor, bool isDark) {
     if (_selections.isEmpty) {
       return Center(
@@ -950,7 +1069,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
     );
   }
 
-  // 🏛️ About, Campus Photos & Full Coaching Info
   Widget _buildAboutCampusTab(Color cardSurface, Color dividerColor, bool isDark) {
     final aboutText = _coaching?['description'] ??
         _profile?['bio'] ??
@@ -980,7 +1098,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
             ),
             const SizedBox(height: 20),
 
-            // Classroom & Campus Highlights
             if (_galleryImages.isNotEmpty) ...[
               const Text(
                 'Classroom & Campus Facilities',
@@ -1014,7 +1131,6 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
               const SizedBox(height: 20),
             ],
 
-            // Details Grid
             Divider(height: 1, thickness: 0.8, color: dividerColor),
             const SizedBox(height: 14),
             _buildInfoRow(Icons.pin_drop_outlined, 'Address', fullAddress, isDark),
