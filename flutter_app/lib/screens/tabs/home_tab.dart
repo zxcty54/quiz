@@ -8,7 +8,8 @@ import '../../widgets/launch_roadmap_card.dart';
 import '../../widgets/pro_pdf_vault_card.dart';
 import '../../widgets/aspirant_checklist_card.dart';
 import '../../widgets/coaching_hub_card.dart';
-import '../../widgets/coaching_onboarding_cta_widget.dart'; // 👈 1. Added Import Here
+import '../../widgets/coaching_onboarding_cta_widget.dart';
+import '../../widgets/hall_of_fame_carousel_widget.dart'; // 👈 1. Added Hall Of Fame Widget Import
 import '../sprint_challenge_screen.dart';
 
 class HomeTab extends StatefulWidget {
@@ -48,6 +49,7 @@ class _HomeTabState extends State<HomeTab> {
   final GlobalKey<FirstInIndiaWidgetState> _firstInIndiaWidgetKey = GlobalKey<FirstInIndiaWidgetState>();
   final GlobalKey<AspirantChecklistCardState> _checklistKey = GlobalKey<AspirantChecklistCardState>();
   final GlobalKey<CoachingHubCardState> _coachingHubKey = GlobalKey<CoachingHubCardState>();
+  final GlobalKey<HallOfFameCarouselWidgetState> _hallOfFameKey = GlobalKey<HallOfFameCarouselWidgetState>(); // 👈 2. Added GlobalKey
 
   @override
   Widget build(BuildContext context) {
@@ -61,6 +63,7 @@ class _HomeTabState extends State<HomeTab> {
           _firstInIndiaWidgetKey.currentState?.fetchFirstInIndia(forceRefresh: true) ?? Future.value(),
           _checklistKey.currentState?.loadChecklistStatus() ?? Future.value(),
           _coachingHubKey.currentState?.loadEnrolledBatchData() ?? Future.value(),
+          _hallOfFameKey.currentState?.fetchHallOfFame() ?? Future.value(), // 👈 3. Pull-To-Refresh Sync
         ]);
       },
       child: SingleChildScrollView(
@@ -148,7 +151,7 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // 🏫 14. SUBTLE COACHING & TEACHER ONBOARDING CTA (Added Here)
+            // 🏫 14. SUBTLE COACHING & TEACHER ONBOARDING CTA
             CoachingOnboardingCtaWidget(
               isDarkMode: widget.isDarkMode,
             ),
@@ -156,6 +159,14 @@ class _HomeTabState extends State<HomeTab> {
 
             // 15. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
+            const SizedBox(height: 20),
+
+            // 🏆 16. HALL OF FAME & CLAIM SELECTION (SBSE LAST MEIN)
+            HallOfFameCarouselWidget(
+              key: _hallOfFameKey,
+              isDarkMode: widget.isDarkMode,
+            ),
+            const SizedBox(height: 12),
           ],
         ),
       ),
