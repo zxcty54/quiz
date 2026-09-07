@@ -4,7 +4,7 @@ import '../models/question_model.dart';
 import 'batch_classroom_screen.dart';
 import 'sectional_cbt_screen.dart';
 
-// 1. Batches Tab (Working logic, no "Free Batch" tag)
+// 1. Batches Tab (Rich EdTech Cards with Mocks, Notes & Fee Details)
 class CreatorBatchesTab extends StatelessWidget {
   final List<dynamic> batches;
   final bool isDarkMode;
@@ -31,7 +31,7 @@ class CreatorBatchesTab extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Enter the classroom admission code provided by your coaching mentor:',
+              'Admission/Fee receipt par diya gaya secret batch code enter karein:',
               style: TextStyle(fontSize: 12.5, color: Colors.grey),
             ),
             const SizedBox(height: 12),
@@ -105,7 +105,23 @@ class CreatorBatchesTab extends StatelessWidget {
 
     if (batches.isEmpty) {
       return Center(
-        child: Text('No active batches listed yet.', style: TextStyle(color: Colors.grey[500])),
+        child: Padding(
+          padding: const EdgeInsets.all(32),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(Icons.class_outlined, size: 40, color: Colors.grey[400]),
+              const SizedBox(height: 10),
+              Text('No active batches listed yet.', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.grey[600])),
+              const SizedBox(height: 4),
+              Text(
+                'Classroom test series and notes batches will appear here.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 12, color: Colors.grey[500]),
+              ),
+            ],
+          ),
+        ),
       );
     }
 
@@ -115,36 +131,54 @@ class CreatorBatchesTab extends StatelessWidget {
         final prefs = snapshot.data;
 
         return ListView.separated(
-          padding: EdgeInsets.zero,
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
           itemCount: batches.length,
-          separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
+          separatorBuilder: (_, __) => const SizedBox(height: 12),
           itemBuilder: (context, idx) {
             final b = batches[idx];
             final String batchId = b['id']?.toString() ?? '';
             final bool isUnlocked = prefs?.getBool('unlocked_batch_$batchId') ?? false;
 
+            final int testsCount = (b['tests_count'] as int?) ?? ((b['batch_tests'] as List?)?.length ?? 0);
+            final int notesCount = (b['notes_count'] as int?) ?? ((b['batch_notes'] as List?)?.length ?? 0);
+            final String targetExam = b['target_pattern'] ?? b['exam_type'] ?? 'Standard Exam Curriculum';
+            final String fee = (b['fee_amount'] ?? b['price'] ?? '').toString().trim();
+
             return Container(
-              color: cardSurface,
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+              decoration: BoxDecoration(
+                color: cardSurface,
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(color: dividerColor, width: 1),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(isDarkMode ? 0.2 : 0.04),
+                    blurRadius: 6,
+                    offset: const Offset(0, 2),
+                  ),
+                ],
+              ),
+              padding: const EdgeInsets.all(14),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Title + Enrolled/Locked Status Pill
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
                         child: Text(
                           b['batch_name'] ?? 'Classroom Batch',
-                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
+                          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15.5, letterSpacing: -0.2),
                         ),
                       ),
+                      const SizedBox(width: 8),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                         decoration: BoxDecoration(
                           color: isUnlocked
                               ? const Color(0xFF16A34A).withOpacity(0.12)
                               : Colors.redAccent.withOpacity(0.12),
-                          borderRadius: BorderRadius.circular(4),
+                          borderRadius: BorderRadius.circular(6),
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -154,12 +188,12 @@ class CreatorBatchesTab extends StatelessWidget {
                               size: 12,
                               color: isUnlocked ? const Color(0xFF16A34A) : Colors.redAccent,
                             ),
-                            const SizedBox(width: 3),
+                            const SizedBox(width: 4),
                             Text(
-                              isUnlocked ? 'UNLOCKED' : 'LOCKED',
+                              isUnlocked ? 'ENROLLED' : 'LOCKED',
                               style: TextStyle(
                                 fontSize: 10,
-                                fontWeight: FontWeight.bold,
+                                fontWeight: FontWeight.w800,
                                 color: isUnlocked ? const Color(0xFF16A34A) : Colors.redAccent,
                               ),
                             ),
@@ -168,14 +202,94 @@ class CreatorBatchesTab extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(height: 6),
+                  const SizedBox(height: 5),
+
+                  // Target Pattern
                   Text(
-                    b['target_pattern'] ?? 'Based on standard examination pattern',
-                    style: TextStyle(fontSize: 12, color: Colors.grey[600]),
+                    targetExam,
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: isDarkMode ? const Color(0xFFCBD5E1) : const Color(0xFF475569),
+                      fontWeight: FontWeight.w500,
+                    ),
                   ),
                   const SizedBox(height: 10),
+
+                  // Batch Material Overview Chips (CBT Mocks + Study Notes + Fee)
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 6,
+                    children: [
+                      // CBT Mocks Pill
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+                        decoration: BoxDecoration(
+                          color: _primaryBlue.withOpacity(0.08),
+                          borderRadius: BorderRadius.circular(6),
+                          border: Border.all(color: _primaryBlue.withOpacity(0.25), width: 0.8),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(Icons.quiz_outlined, size: 13, color: _primaryBlue),
+                            const SizedBox(width: 4),
+                            Text(
+                              '$testsCount CBT Mocks',
+                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: _primaryBlue),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      // Study Notes / PDFs Pill
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF16A34A).withOpacity(0.08),
+                          borderRadius: BorderRadius.circular(6),
+                          border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.25), width: 0.8),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Icon(Icons.menu_book_outlined, size: 13, color: Color(0xFF16A34A)),
+                            const SizedBox(width: 4),
+                            Text(
+                              '$notesCount Study Notes / PDFs',
+                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Color(0xFF16A34A)),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      // Fee Tag (if defined)
+                      if (fee.isNotEmpty && fee != '0')
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFD97706).withOpacity(0.08),
+                            borderRadius: BorderRadius.circular(6),
+                            border: Border.all(color: const Color(0xFFD97706).withOpacity(0.25), width: 0.8),
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              const Icon(Icons.currency_rupee_rounded, size: 12.5, color: Color(0xFFD97706)),
+                              Text(
+                                fee,
+                                style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Color(0xFFD97706)),
+                              ),
+                            ],
+                          ),
+                        ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+
+                  // Button Row (Enter Classroom or Unlock)
                   SizedBox(
-                    height: 34,
+                    height: 36,
+                    width: double.infinity,
                     child: isUnlocked
                         ? ElevatedButton.icon(
                             icon: const Icon(Icons.meeting_room_rounded, size: 15),
@@ -196,17 +310,17 @@ class CreatorBatchesTab extends StatelessWidget {
                                 ),
                               );
                             },
-                            label: const Text('Enter Classroom 🚀', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                            label: const Text('Enter Classroom 🚀', style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
                           )
                         : OutlinedButton.icon(
                             icon: const Icon(Icons.vpn_key_rounded, size: 14),
                             style: OutlinedButton.styleFrom(
                               foregroundColor: _primaryBlue,
-                              side: const BorderSide(color: _primaryBlue, width: 1),
+                              side: const BorderSide(color: _primaryBlue, width: 1.1),
                               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                             ),
                             onPressed: () => _openUnlockBatchDialog(context, b),
-                            label: const Text('Unlock with Code', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                            label: const Text('Unlock with Admission Code', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
                           ),
                   ),
                 ],
