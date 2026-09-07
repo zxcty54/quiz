@@ -329,7 +329,7 @@ class CreatorFreeMocksTab extends StatelessWidget {
   }
 }
 
-// 3. Wall of Fame Tab (Candidate Image + Initials Fallback)
+// 3. Wall of Fame Tab (Upgraded Premium EdTech Cards)
 class CreatorWallOfFameTab extends StatelessWidget {
   final List<dynamic> selections;
   final bool isDarkMode;
@@ -350,17 +350,28 @@ class CreatorWallOfFameTab extends StatelessWidget {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(Icons.military_tech_outlined, size: 40, color: Colors.grey[400]),
-              const SizedBox(height: 10),
-              Text(
-                'No student selections listed yet.',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.grey[600]),
+              Container(
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFD97706).withOpacity(0.1),
+                  shape: BoxShape.circle,
+                ),
+                child: const Icon(Icons.military_tech_rounded, size: 42, color: Color(0xFFD97706)),
               ),
-              const SizedBox(height: 4),
+              const SizedBox(height: 14),
               Text(
-                'Coaching will showcase its star achievers and success results here.',
+                'Wall of Fame is Empty',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  color: isDarkMode ? Colors.white : const Color(0xFF1E293B),
+                ),
+              ),
+              const SizedBox(height: 6),
+              Text(
+                'Star achievers, qualifying ranks & student testimonials will be highlighted here.',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 12, color: Colors.grey[500]),
+                style: TextStyle(fontSize: 12, color: Colors.grey[500], height: 1.4),
               ),
             ],
           ),
@@ -369,78 +380,164 @@ class CreatorWallOfFameTab extends StatelessWidget {
     }
 
     return ListView.separated(
-      padding: EdgeInsets.zero,
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
       itemCount: selections.length,
-      separatorBuilder: (_, __) => Divider(height: 1, thickness: 0.8, color: dividerColor),
+      separatorBuilder: (_, __) => const SizedBox(height: 12),
       itemBuilder: (context, idx) {
         final s = selections[idx];
-        final name = s['student_name'] ?? 'Candidate';
-        final post = s['post_cleared'] ?? 'Officer';
-        final exam = s['target_exam'] ?? 'Competitive Exam';
-        final quote = s['testimonial_text'] ?? '';
-        final isVerified = s['is_verified'] == true;
-        final photo = s['photo_url'];
+        final String name = (s['student_name'] ?? 'Star Candidate').toString().trim();
+        final String post = (s['post_cleared'] ?? '').toString().trim();
+        final String exam = (s['target_exam'] ?? '').toString().trim();
+        final String quote = (s['testimonial_text'] ?? '').toString().trim();
+        final String photo = (s['photo_url'] ?? '').toString().trim();
+        final bool isVerified = s['is_verified'] == true;
 
         return Container(
-          color: cardSurface,
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              CircleAvatar(
-                radius: 20,
-                backgroundColor: const Color(0xFF16A34A).withOpacity(0.12),
-                backgroundImage: (photo != null && photo.toString().trim().isNotEmpty)
-                    ? NetworkImage(photo.toString().trim())
-                    : null,
-                child: (photo == null || photo.toString().trim().isEmpty)
-                    ? Text(
-                        name.isNotEmpty ? name[0].toUpperCase() : 'A',
-                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: Color(0xFF16A34A)),
-                      )
-                    : null,
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Flexible(
-                          child: Text(
-                            name,
-                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                        ),
-                        if (isVerified) ...[
-                          const SizedBox(width: 4),
-                          const Icon(Icons.verified, size: 14, color: Color(0xFF16A34A)),
-                        ],
-                      ],
-                    ),
-                    const SizedBox(height: 2),
-                    Text(
-                      '$post • $exam',
-                      style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _primaryBlue),
-                    ),
-                    if (quote.isNotEmpty) ...[
-                      const SizedBox(height: 6),
-                      Text(
-                        '“$quote”',
-                        style: TextStyle(
-                          fontSize: 12.5,
-                          height: 1.4,
-                          fontStyle: FontStyle.italic,
-                          color: isDarkMode ? Colors.grey[300] : const Color(0xFF475569),
-                        ),
-                      ),
-                    ],
-                  ],
-                ),
+          decoration: BoxDecoration(
+            color: cardSurface,
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              color: isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+              width: 1,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(isDarkMode ? 0.25 : 0.04),
+                blurRadius: 8,
+                offset: const Offset(0, 2),
               ),
             ],
+          ),
+          child: Padding(
+            padding: const EdgeInsets.all(14),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                // Top Header Row: Student Avatar + Info + Exam Badge
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(2),
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: _primaryBlue.withOpacity(0.35), width: 1.5),
+                      ),
+                      child: CircleAvatar(
+                        radius: 26,
+                        backgroundColor: _primaryBlue.withOpacity(0.1),
+                        backgroundImage: photo.isNotEmpty ? NetworkImage(photo) : null,
+                        child: photo.isEmpty
+                            ? Text(
+                                name.isNotEmpty ? name[0].toUpperCase() : 'A',
+                                style: const TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18,
+                                  color: _primaryBlue,
+                                ),
+                              )
+                            : null,
+                      ),
+                    ),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Flexible(
+                                child: Text(
+                                  name,
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.w800,
+                                    fontSize: 15,
+                                    letterSpacing: -0.2,
+                                  ),
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ),
+                              if (isVerified) ...[
+                                const SizedBox(width: 5),
+                                const Icon(Icons.verified_rounded, size: 16, color: Color(0xFF16A34A)),
+                              ],
+                            ],
+                          ),
+                          const SizedBox(height: 3),
+                          if (post.isNotEmpty)
+                            Text(
+                              post,
+                              style: TextStyle(
+                                fontSize: 12.5,
+                                fontWeight: FontWeight.w600,
+                                color: isDarkMode ? const Color(0xFF93C5FD) : const Color(0xFF1D4ED8),
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                        ],
+                      ),
+                    ),
+                    if (exam.isNotEmpty)
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF16A34A).withOpacity(0.12),
+                          borderRadius: BorderRadius.circular(6),
+                          border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.25), width: 0.8),
+                        ),
+                        child: Text(
+                          exam.toUpperCase(),
+                          style: const TextStyle(
+                            fontSize: 10.5,
+                            fontWeight: FontWeight.w800,
+                            color: Color(0xFF16A34A),
+                            letterSpacing: 0.3,
+                          ),
+                        ),
+                      ),
+                  ],
+                ),
+
+                // Testimonial Quote Bubble
+                if (quote.isNotEmpty) ...[
+                  const SizedBox(height: 12),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                    decoration: BoxDecoration(
+                      color: isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: dividerColor.withOpacity(0.6),
+                        width: 0.8,
+                      ),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Icon(
+                          Icons.format_quote_rounded,
+                          size: 18,
+                          color: Colors.grey[400],
+                        ),
+                        const SizedBox(width: 6),
+                        Expanded(
+                          child: Text(
+                            quote,
+                            style: TextStyle(
+                              fontSize: 12,
+                              height: 1.45,
+                              fontStyle: FontStyle.italic,
+                              color: isDarkMode ? const Color(0xFFCBD5E1) : const Color(0xFF475569),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ],
+            ),
           ),
         );
       },
@@ -448,7 +545,7 @@ class CreatorWallOfFameTab extends StatelessWidget {
   }
 }
 
-// 4. About & Campus Tab (Faculty Section Restored with Good Layout)
+// 4. About & Campus Tab (Faculty Section with Responsive Card Layout)
 class CreatorAboutCampusTab extends StatelessWidget {
   final Map<String, dynamic>? profile;
   final Map<String, dynamic>? coaching;
