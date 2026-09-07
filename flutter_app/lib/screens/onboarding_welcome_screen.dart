@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'home_screen.dart';
 
 class OnboardingOverviewScreen extends StatefulWidget {
-  final VoidCallback onGetStarted;
-  final VoidCallback onSkip;
-  final VoidCallback onOpenLogin;
-  final VoidCallback onOpenCoachingRegister;
+  final VoidCallback? onGetStarted;
+  final VoidCallback? onSkip;
+  final VoidCallback? onOpenLogin;
+  final VoidCallback? onOpenCoachingRegister;
 
   const OnboardingOverviewScreen({
     super.key,
-    required this.onGetStarted,
-    required this.onSkip,
-    required this.onOpenLogin,
-    required this.onOpenCoachingRegister,
+    this.onGetStarted,
+    this.onSkip,
+    this.onOpenLogin,
+    this.onOpenCoachingRegister,
   });
 
   @override
@@ -37,6 +38,28 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
     {'id': 'IBPS', 'label': 'IBPS & SBI PO'},
     {'id': 'RLY', 'label': 'Railway NTPC'},
   ];
+
+  void _navigateToHome() {
+    if (widget.onGetStarted != null) {
+      widget.onGetStarted!();
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => const HomeScreen()),
+      );
+    }
+  }
+
+  void _skipToHome() {
+    if (widget.onSkip != null) {
+      widget.onSkip!();
+    } else {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => const HomeScreen()),
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -149,7 +172,7 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
               ),
               const SizedBox(width: 6),
               InkWell(
-                onTap: widget.onSkip,
+                onTap: _skipToHome,
                 borderRadius: BorderRadius.circular(16),
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -394,7 +417,7 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
     return Container(height: 24, width: 1, color: _borderColor.withOpacity(0.5));
   }
 
-  // 🛠️ 5. CORE FEATURES SECTION (9 SMART TOOLS)
+  // 🛠️ 5. CORE FEATURES SECTION
   Widget _buildFeaturesSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -421,7 +444,6 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
         ),
         const SizedBox(height: 10),
 
-        // 1. Real CBT Simulation
         _buildFeatureCard(
           icon: Icons.monitor_rounded,
           iconBg: const Color(0xFF1D4ED8).withOpacity(0.1),
@@ -434,7 +456,6 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
         ),
         const SizedBox(height: 8),
 
-        // 2. AI Trap Detector & Vault (Highlighted)
         _buildFeatureCard(
           icon: Icons.psychology_rounded,
           iconBg: _saffronAccent,
@@ -448,7 +469,6 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
         ),
         const SizedBox(height: 8),
 
-        // 3. All India Coaching Hub
         _buildFeatureCard(
           icon: Icons.apartment_rounded,
           iconBg: const Color(0xFF004F35).withOpacity(0.1),
@@ -461,7 +481,6 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
         ),
         const SizedBox(height: 8),
 
-        // 4. Live Classes: Raju & Aman Sir
         _buildFeatureCard(
           icon: Icons.school_rounded,
           iconBg: const Color(0xFFDCE1FF),
@@ -474,7 +493,6 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
         ),
         const SizedBox(height: 8),
 
-        // 2-Column Mini Tools Grid
         Row(
           children: [
             Expanded(
@@ -521,7 +539,6 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
         ),
         const SizedBox(height: 8),
 
-        // Sarkari Job Alerts Banner
         Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
@@ -656,7 +673,7 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
     );
   }
 
-  // 🏆 6. TESTIMONIAL QUOTE CARD
+  // 🏆 6. TESTIMONIAL CARD
   Widget _buildTestimonialCard() {
     return Container(
       padding: const EdgeInsets.all(12),
@@ -693,7 +710,7 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
     );
   }
 
-  // 🚀 7. INLINE BOTTOM ACTION SECTION (SCROLLABLE AT END)
+  // 🚀 7. INLINE BOTTOM ACTION SECTION
   Widget _buildInlineActionSection() {
     return Container(
       padding: const EdgeInsets.all(16),
@@ -717,7 +734,7 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
                 elevation: 1.5,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
               ),
-              onPressed: widget.onGetStarted,
+              onPressed: _navigateToHome,
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -733,13 +750,13 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               TextButton(
-                onPressed: widget.onOpenLogin,
+                onPressed: widget.onOpenLogin ?? () {},
                 child: const Text('Already a Member? Log In',
                     style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: _primaryBlue)),
               ),
               Container(height: 14, width: 1, color: _borderColor),
               TextButton(
-                onPressed: widget.onOpenCoachingRegister,
+                onPressed: widget.onOpenCoachingRegister ?? () {},
                 child: const Text('Coaching Center? Register',
                     style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: _saffronDark)),
               ),
