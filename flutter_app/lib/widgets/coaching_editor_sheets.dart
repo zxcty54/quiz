@@ -502,7 +502,7 @@ class CoachingEditorSheets {
     );
   }
 
-  // 🏆 5. Wall of Fame Modifier (Fixed Execution & UI Sync)
+  // 🏆 5. Wall of Fame & Campus Gallery Modifier (Full Debug & Guaranteed Flow)
   static void openWallOfFameModifierSheet({
     required BuildContext context,
     required dynamic coachingId,
@@ -510,6 +510,7 @@ class CoachingEditorSheets {
     required bool isDarkMode,
     required VoidCallback onSaved,
   }) {
+    debugPrint("🚀 [WALL OF FAME SHEET OPENED] Received coachingId: $coachingId");
     List<dynamic> gallery = List<dynamic>.from(currentGallery is List ? currentGallery : []);
     bool isSaving = false;
     final picker = ImagePicker();
@@ -544,6 +545,7 @@ class CoachingEditorSheets {
                   icon: const Icon(Icons.military_tech_outlined, size: 18),
                   label: const Text('Add Star Selection / Result 🎓', style: TextStyle(fontWeight: FontWeight.bold)),
                   onPressed: () {
+                    debugPrint("🔘 [ADD SELECTION CLICKED] Opening dialog...");
                     final nCtrl = TextEditingController();
                     final eCtrl = TextEditingController();
                     final pCtrl = TextEditingController();
@@ -562,26 +564,36 @@ class CoachingEditorSheets {
                               children: [
                                 GestureDetector(
                                   onTap: () async {
+                                    debugPrint("📸 [PICKER] Opening gallery for student photo...");
                                     final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
                                     if (picked != null) {
+                                      debugPrint("📸 [PHOTO SELECTED] Path: ${picked.path}");
                                       setDialogState(() => studentPhoto = File(picked.path));
+                                    } else {
+                                      debugPrint("⚠️ [PHOTO CANCELLED] No image selected.");
                                     }
                                   },
                                   child: CircleAvatar(
-                                    radius: 32,
+                                    radius: 34,
                                     backgroundColor: const Color(0xFF16A34A).withOpacity(0.12),
                                     backgroundImage: studentPhoto != null ? FileImage(studentPhoto!) : null,
                                     child: studentPhoto == null
-                                        ? const Icon(Icons.add_a_photo_outlined, color: Color(0xFF16A34A), size: 24)
+                                        ? const Column(
+                                            mainAxisAlignment: MainAxisAlignment.center,
+                                            children: [
+                                              Icon(Icons.camera_alt_outlined, color: Color(0xFF16A34A), size: 22),
+                                              Text('Tap Photo', style: TextStyle(fontSize: 9.5, color: Color(0xFF16A34A))),
+                                            ],
+                                          )
                                         : null,
                                   ),
                                 ),
                                 const SizedBox(height: 12),
                                 TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Student Name *', border: OutlineInputBorder(), isDense: true)),
                                 const SizedBox(height: 10),
-                                TextField(controller: eCtrl, decoration: const InputDecoration(labelText: 'Exam Cleared', border: OutlineInputBorder(), isDense: true)),
+                                TextField(controller: eCtrl, decoration: const InputDecoration(labelText: 'Exam Cleared (e.g. BPSC 70th)', border: OutlineInputBorder(), isDense: true)),
                                 const SizedBox(height: 10),
-                                TextField(controller: pCtrl, decoration: const InputDecoration(labelText: 'Post / Rank', border: OutlineInputBorder(), isDense: true)),
+                                TextField(controller: pCtrl, decoration: const InputDecoration(labelText: 'Post / Rank (e.g. Revenue Officer)', border: OutlineInputBorder(), isDense: true)),
                                 const SizedBox(height: 10),
                                 TextField(controller: tCtrl, maxLines: 2, decoration: const InputDecoration(labelText: 'Student Feedback Quote', border: OutlineInputBorder(), isDense: true)),
                               ],
@@ -594,32 +606,50 @@ class CoachingEditorSheets {
                               onPressed: isUploading
                                   ? null
                                   : () async {
+                                      debugPrint("🔘 [PUBLISH CLICKED] Attempting to submit selection...");
                                       final studentName = nCtrl.text.trim();
-                                      if (studentName.isEmpty) return;
-                                      if (coachingId == null) {
-                                        debugPrint("🔥 [ERROR] coachingId is null!");
+
+                                      if (studentName.isEmpty) {
+                                        debugPrint("❌ [VALIDATION FAILED] Student Name is empty!");
+                                        ScaffoldMessenger.of(context).showSnackBar(
+                                          const SnackBar(content: Text('Kripya student name daalein!'), backgroundColor: Colors.red),
+                                        );
+                                        return;
+                                      }
+
+                                      if (coachingId == null || coachingId.toString().trim().isEmpty) {
+                                        debugPrint("❌ [COACHING ID MISSING] coachingId: $coachingId");
+                                        ScaffoldMessenger.of(context).showSnackBar(
+                                          const SnackBar(content: Text('Error: Coaching ID nahi mili! Profile refresh karein.'), backgroundColor: Colors.red),
+                                        );
                                         return;
                                       }
 
                                       setDialogState(() => isUploading = true);
+                                      debugPrint("⏳ [PROGRESS STARTED] Uploading data...");
 
                                       String? photoUrl;
                                       if (studentPhoto != null) {
                                         try {
+                                          debugPrint("📦 [UPLOADING PHOTO] Uploading to coaching_assets...");
                                           final bytes = await studentPhoto!.readAsBytes();
                                           final ext = studentPhoto!.path.split('.').last;
-                                          final fileName = 'student_${DateTime.now().millisecondsSinceEpoch}.$ext';
+                                          final fileName = 'selection_${DateTime.now().millisecondsSinceEpoch}.$ext';
+
                                           await Supabase.instance.client.storage
                                               .from('coaching_assets')
                                               .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$ext', upsert: true));
+
                                           photoUrl = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
+                                          debugPrint("✅ [PHOTO UPLOADED] Public URL: $photoUrl");
                                         } catch (e) {
-                                          debugPrint("Photo upload warning: $e");
+                                          debugPrint("🔥 [PHOTO UPLOAD ERROR] $e");
                                         }
+                                      } else {
+                                        debugPrint("ℹ️ [PHOTO SKIPPED] No image chosen.");
                                       }
 
                                       try {
-                                        // Working minimal schema payload without strict constraint failures
                                         final Map<String, dynamic> insertData = {
                                           'coaching_id': coachingId,
                                           'student_name': studentName,
@@ -634,16 +664,25 @@ class CoachingEditorSheets {
                                           insertData['photo_url'] = photoUrl;
                                         }
 
+                                        debugPrint("📤 [DB INSERT PAYLOAD] $insertData");
                                         await Supabase.instance.client.from('coaching_selections').insert(insertData);
-                                        debugPrint("✅ [SELECTION SAVED TO SUPABASE]");
+                                        debugPrint("🎉 [DB INSERT SUCCESS] Row inserted cleanly in coaching_selections!");
 
-                                        // Dismiss Dialog and Dismiss Parent BottomSheet cleanly
                                         if (dCtx.mounted) Navigator.pop(dCtx);
                                         if (ctx.mounted) Navigator.pop(ctx);
                                         onSaved();
-                                      } catch (e) {
-                                        debugPrint("🔥 [SELECTION INSERT CRASH] $e");
+
+                                        ScaffoldMessenger.of(context).showSnackBar(
+                                          const SnackBar(content: Text('🎉 Star Selection published successfully!'), backgroundColor: Color(0xFF16A34A)),
+                                        );
+                                      } catch (dbErr, stack) {
+                                        debugPrint("🔥 [DB INSERT CRASH] $dbErr\n$stack");
                                         setDialogState(() => isUploading = false);
+                                        if (dCtx.mounted) {
+                                          ScaffoldMessenger.of(dCtx).showSnackBar(
+                                            SnackBar(content: Text('Save error: $dbErr'), backgroundColor: Colors.red),
+                                          );
+                                        }
                                       }
                                     },
                               child: isUploading
