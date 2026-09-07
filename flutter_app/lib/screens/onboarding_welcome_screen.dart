@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class OnboardingWelcomeScreen extends StatefulWidget {
   final Widget nextScreen;
@@ -18,33 +20,49 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
 
   int _currentPage = 0;
 
-  static const Color _primaryBlue = Color(0xFF2563EB);
+  static const Color _primaryBlue = Color(0xFF1D4ED8);
+  static const Color _biharSaffron = Color(0xFFD97706);
   static const Color _darkNavy = Color(0xFF0F172A);
 
-  final List<Map<String, dynamic>> _slides = [
+  final List<Map<String, dynamic>> _featureSlides = [
+    // 🏛️ SLIDE 1: CBT MOCK, REVISION HUB & FREE PDF NOTES
     {
-      'icon': Icons.bolt_rounded,
-      'gradient': [Color(0xFF2563EB), Color(0xFF1D4ED8)],
-      'badge': 'EXAM LEVEL CBT SIMULATION',
-      'title': 'Real Exam Hall\nCBT Experience',
-      'desc': 'BPSC, BSSC aur state exams ke liye timed testing, negative marking calculation aur dynamic question navigation.',
-      'highlights': ['⏱️ Sectional Timers', '🎯 Live Negative Penalty', '📊 Instant Scorecard'],
+      'tag': 'BIHAR GOVT EXAMS • CBT ENGINE',
+      'title': 'Exam-Hall Level CBT\nMock & Revision Hub',
+      'desc': 'BPSC 70th, BSSC CGL, Bihar SI & Police ke liye live timed CBT tests, static GK revision aur comprehensive free PDF notes.',
+      'accentColor': Color(0xFF2563EB),
+      'previewType': 'cbt',
+      'pills': ['BPSC / BSSC CBT', 'Bilingual (HI/EN)', 'Static GK & PDFs'],
     },
+
+    // 🧠 SLIDE 2: AI WRONG QUESTION VAULT & TRAP DIAGNOSTICS
     {
-      'icon': Icons.psychology_rounded,
-      'gradient': [Color(0xFFDC2626), Color(0xFF991B1B)],
-      'badge': 'AI ERROR DIAGNOSTICS',
-      'title': 'AI Wrong Question\nVault & Mastery',
-      'desc': 'Galtiyon ko bhulne ke bajaye deep trap analysis karein aur 1-click mistake re-quiz se kamzori ko taaqat banayein.',
-      'highlights': ['🧠 Trap Detection (50-50)', '🔁 1-Click Re-Quiz', '💬 Socratic AI Doubt Tutor'],
+      'tag': 'DEEP LEARNING DIAGNOSTICS',
+      'title': 'AI Wrong Question Vault\n& Examination Traps',
+      'desc': 'Galti hone par AI se jaanein examiner ka distractor trap (50-50), aur 1-click mistake drill se zero error achieve karein.',
+      'accentColor': Color(0xFFDC2626),
+      'previewType': 'vault',
+      'pills': ['AI Trap Analysis', '1-Click Re-Quiz', 'Socratic AI Tutor'],
     },
+
+    // 🏫 SLIDE 3: LOCAL COACHING NETWORK & SYLLABUS
     {
-      'icon': Icons.workspace_premium_rounded,
-      'gradient': [Color(0xFF059669), Color(0xFF047857)],
-      'badge': 'CLASSROOM NETWORK',
-      'title': 'Top Institutes &\nPrivate Batches',
-      'desc': 'Apne coaching center se judkar exclusive classroom tests, study handouts aur real-time batch percentile dekhein.',
-      'highlights': ['🏫 Secret Batch Unlock', '📚 PDF Handouts', '🏆 Wall of Fame Selections'],
+      'tag': 'ALL BIHAR CITIES INTEGRATED',
+      'title': 'Patna, Gaya, Arrah Coaching\nAb Ek Platform Par',
+      'desc': 'Sabhi offline coaching centers ab Mocktester par launch kar rahe hain apne private classroom batches. Plus Raju & Aman Sir ka complete syllabus.',
+      'accentColor': Color(0xFF059669),
+      'previewType': 'coaching',
+      'pills': ['Raju & Aman Sir Prep', 'Local Institute Hub', 'Secret Batch Codes'],
+    },
+
+    // 📢 SLIDE 4: COMMUNITY, CURRENT AFFAIRS & VACANCY NOTIFICATIONS
+    {
+      'tag': 'ASPIRANT ECOSYSTEM',
+      'title': 'Daily Current Affairs,\nCommunity & Job Alerts',
+      'desc': 'Har subah verified Bihar current affairs, live aspirant community discussions aur latest recruitment notifications sabse pehle.',
+      'accentColor': Color(0xFFD97706),
+      'previewType': 'community',
+      'pills': ['Bihar Daily News', 'Aspirant Hub', 'Fast Job Alerts'],
     },
   ];
 
@@ -57,7 +75,23 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('is_onboarded', true);
     await prefs.setString('custom_aspirant_name', name);
+    await prefs.setString('user_name', name);
+    await prefs.setString('user_display_name', name);
     await prefs.setString('student_contact_id', phone.isNotEmpty ? phone : 'N/A');
+    await prefs.setString('user_mobile', phone);
+
+    // Clean Mobile Sync directly to Supabase Table
+    if (phone.isNotEmpty) {
+      try {
+        await Supabase.instance.client.from('app_users').upsert({
+          'mobile_number': phone,
+          'full_name': name,
+          'updated_at': DateTime.now().toIso8601String(),
+        });
+      } catch (e) {
+        debugPrint("Supabase Onboarding Save Error: $e");
+      }
+    }
 
     if (!mounted) return;
     Navigator.pushReplacement(
@@ -81,108 +115,113 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // 🔝 Top Action Header
+            // 🔝 Header with Bihar Saffron & Blue Brand Accent
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
                       Container(
-                        padding: const EdgeInsets.all(6),
+                        padding: const EdgeInsets.all(7),
                         decoration: BoxDecoration(
-                          gradient: const LinearGradient(colors: [_primaryBlue, Color(0xFF1D4ED8)]),
-                          borderRadius: BorderRadius.circular(8),
+                          gradient: const LinearGradient(
+                            colors: [_biharSaffron, _primaryBlue],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                          borderRadius: BorderRadius.circular(10),
                         ),
-                        child: const Icon(Icons.quiz_rounded, color: Colors.white, size: 18),
+                        child: const Icon(Icons.menu_book_rounded, color: Colors.white, size: 18),
                       ),
                       const SizedBox(width: 8),
-                      const Text(
-                        'MockTester',
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.w900,
-                          color: _darkNavy,
-                          letterSpacing: -0.4,
-                        ),
+                      const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'MockTester',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w900,
+                              color: _darkNavy,
+                              letterSpacing: -0.5,
+                            ),
+                          ),
+                          Text(
+                            'Bihar Competitive Exam Studio',
+                            style: TextStyle(fontSize: 9.5, color: Color(0xFF64748B), fontWeight: FontWeight.bold),
+                          ),
+                        ],
                       ),
                     ],
                   ),
-                  if (_currentPage < _slides.length)
-                    InkWell(
-                      borderRadius: BorderRadius.circular(20),
-                      onTap: () {
+                  if (_currentPage < _featureSlides.length)
+                    TextButton(
+                      style: TextButton.styleFrom(
+                        backgroundColor: Colors.grey.withOpacity(0.1),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                      ),
+                      onPressed: () {
                         _pageController.animateToPage(
-                          _slides.length,
+                          _featureSlides.length,
                           duration: const Duration(milliseconds: 350),
                           curve: Curves.easeInOut,
                         );
                       },
-                      child: Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                        decoration: BoxDecoration(
-                          color: Colors.grey.withOpacity(0.12),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: const Text(
-                          'Skip',
-                          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF475569)),
-                        ),
+                      child: const Text(
+                        'Skip',
+                        style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF475569)),
                       ),
                     ),
                 ],
               ),
             ),
 
-            // 📱 Carousel & Form PageView
+            // 📱 Main Carousel & Registration Screen
             Expanded(
               child: PageView(
                 controller: _pageController,
                 onPageChanged: (idx) => setState(() => _currentPage = idx),
                 children: [
-                  ..._slides.map((s) => _buildCarouselCard(s)),
+                  ..._featureSlides.map((s) => _buildVisualFeatureSlide(s)),
                   _buildRegistrationForm(),
                 ],
               ),
             ),
 
-            // 📍 Bottom Dynamic Indicator & CTA
-            if (_currentPage < _slides.length)
+            // 📍 Navigation Footer (Slides 1 to 4)
+            if (_currentPage < _featureSlides.length)
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 18),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 14),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    // Dynamic Smooth Expanding Dots
+                    // Dynamic Smooth Dot Expansion
                     Row(
                       children: List.generate(
-                        _slides.length + 1,
+                        _featureSlides.length + 1,
                         (index) => AnimatedContainer(
                           duration: const Duration(milliseconds: 250),
                           margin: const EdgeInsets.only(right: 6),
-                          height: 7,
-                          width: _currentPage == index ? 26 : 7,
+                          height: 6.5,
+                          width: _currentPage == index ? 24 : 6.5,
                           decoration: BoxDecoration(
-                            gradient: _currentPage == index
-                                ? const LinearGradient(colors: [_primaryBlue, Color(0xFF60A5FA)])
-                                : null,
-                            color: _currentPage == index ? null : const Color(0xFFCBD5E1),
+                            color: _currentPage == index ? _primaryBlue : const Color(0xFFCBD5E1),
                             borderRadius: BorderRadius.circular(4),
                           ),
                         ),
                       ),
                     ),
 
-                    // Next Circular Action Button
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: _primaryBlue,
                         foregroundColor: Colors.white,
-                        elevation: 4,
-                        shadowColor: _primaryBlue.withOpacity(0.4),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                        padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+                        elevation: 2,
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 11),
                       ),
                       onPressed: () {
                         _pageController.nextPage(
@@ -192,9 +231,9 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                       },
                       child: const Row(
                         children: [
-                          Text('Next', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
+                          Text('Next Feature', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
                           SizedBox(width: 6),
-                          Icon(Icons.arrow_forward_rounded, size: 16),
+                          Icon(Icons.arrow_forward_rounded, size: 15),
                         ],
                       ),
                     ),
@@ -207,120 +246,86 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     );
   }
 
-  // 🎨 High-Standard Feature Carousel Page
-  Widget _buildCarouselCard(Map<String, dynamic> slide) {
-    final List<Color> gradient = slide['gradient'];
+  // 🎨 Visual Mockup Cards (In place of flat text)
+  Widget _buildVisualFeatureSlide(Map<String, dynamic> slide) {
+    final Color accent = slide['accentColor'];
 
     return SingleChildScrollView(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
       child: Column(
         children: [
-          const SizedBox(height: 10),
-          // Layered Glow Card Icon
-          Stack(
-            alignment: Alignment.center,
-            children: [
-              Container(
-                height: 130,
-                width: 130,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: gradient.first.withOpacity(0.12),
-                ),
-              ),
-              Container(
-                height: 96,
-                width: 96,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(colors: gradient, begin: Alignment.topLeft, end: Alignment.bottomRight),
-                  shape: BoxShape.circle,
-                  boxShadow: [
-                    BoxShadow(
-                      color: gradient.first.withOpacity(0.35),
-                      blurRadius: 20,
-                      offset: const Offset(0, 8),
-                    ),
-                  ],
-                ),
-                child: Icon(slide['icon'], size: 48, color: Colors.white),
-              ),
-            ],
-          ),
-          const SizedBox(height: 28),
-
-          // Upper Pill Tag
+          // 🖼️ Mockup Graphic Preview Container
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+            width: double.infinity,
+            height: 220,
             decoration: BoxDecoration(
-              color: gradient.first.withOpacity(0.1),
+              gradient: LinearGradient(
+                colors: [accent.withOpacity(0.08), Colors.white],
+                begin: Alignment.topCenter,
+                end: Alignment.bottomCenter,
+              ),
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: gradient.first.withOpacity(0.25)),
+              border: Border.all(color: accent.withOpacity(0.2), width: 1.2),
+              boxShadow: [
+                BoxShadow(color: accent.withOpacity(0.06), blurRadius: 16, offset: const Offset(0, 6)),
+              ],
+            ),
+            child: _buildGraphicByType(slide['previewType'], accent),
+          ),
+          const SizedBox(height: 18),
+
+          // Upper Tag Badge
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3.5),
+            decoration: BoxDecoration(
+              color: accent.withOpacity(0.1),
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color: accent.withOpacity(0.25)),
             ),
             child: Text(
-              slide['badge'],
-              style: TextStyle(
-                fontSize: 10.5,
-                fontWeight: FontWeight.w800,
-                color: gradient.first,
-                letterSpacing: 0.5,
-              ),
+              slide['tag'],
+              style: TextStyle(fontSize: 10, fontWeight: FontWeight.w900, color: accent, letterSpacing: 0.6),
             ),
           ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 10),
 
           // Heading
           Text(
             slide['title'],
             textAlign: TextAlign.center,
             style: const TextStyle(
-              fontSize: 24,
+              fontSize: 21,
               fontWeight: FontWeight.w900,
               color: _darkNavy,
               height: 1.25,
-              letterSpacing: -0.4,
             ),
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 8),
 
           // Description
           Text(
             slide['desc'],
             textAlign: TextAlign.center,
-            style: const TextStyle(
-              fontSize: 13,
-              color: Color(0xFF64748B),
-              height: 1.5,
-            ),
+            style: const TextStyle(fontSize: 12.5, color: Color(0xFF64748B), height: 1.45),
           ),
-          const SizedBox(height: 24),
+          const SizedBox(height: 14),
 
-          // Feature Highlights Pills
+          // Highlights Chips
           Wrap(
-            spacing: 8,
-            runSpacing: 8,
+            spacing: 6,
+            runSpacing: 6,
             alignment: WrapAlignment.center,
-            children: (slide['highlights'] as List<String>).map((tag) {
+            children: (slide['pills'] as List<String>).map((pill) {
               return Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
                   color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(8),
                   border: Border.all(color: const Color(0xFFE2E8F0)),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.02),
-                      blurRadius: 4,
-                      offset: const Offset(0, 2),
-                    ),
-                  ],
                 ),
                 child: Text(
-                  tag,
-                  style: const TextStyle(
-                    fontSize: 11.5,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xFF334155),
-                  ),
+                  pill,
+                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF334155)),
                 ),
               );
             }).toList(),
@@ -330,10 +335,203 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     );
   }
 
-  // 📝 Student Name (Mandatory) & Mobile (Optional) Card
+  // 🖼️ Realistic In-App Feature Visual Mockups
+  Widget _buildGraphicByType(String type, Color color) {
+    switch (type) {
+      case 'cbt':
+        return Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    decoration: BoxDecoration(color: const Color(0xFFFEF3C7), borderRadius: BorderRadius.circular(6)),
+                    child: const Text('⏱️ 14:58 Left', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFFB45309))),
+                  ),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    decoration: BoxDecoration(color: color, borderRadius: BorderRadius.circular(6)),
+                    child: const Text('BPSC Mock #04', style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: Colors.white)),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 14),
+              const Text('Q14. 1857 ki kranti me Jagdishpur se netritva kisne kiya tha?',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13, color: _darkNavy)),
+              const SizedBox(height: 12),
+              _buildMockOptionTile('A', 'Nana Saheb', false),
+              const SizedBox(height: 6),
+              _buildMockOptionTile('B', 'Veer Kunwar Singh', true),
+            ],
+          ),
+        );
+
+      case 'vault':
+        return Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    decoration: BoxDecoration(color: const Color(0xFFFEE2E2), borderRadius: BorderRadius.circular(6)),
+                    child: const Text('⚠️ 50-50 Trap Detected', style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: Color(0xFFB91C1C))),
+                  ),
+                  const Spacer(),
+                  const Text('AI Diagnostic 🩺', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Colors.grey)),
+                ],
+              ),
+              const SizedBox(height: 14),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(color: const Color(0xFFFFF1F2), borderRadius: BorderRadius.circular(8), border: Border.all(color: const Color(0xFFFECDD3))),
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Professor\'s Distractor Trap:', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: Color(0xFF991B1B))),
+                    SizedBox(height: 3),
+                    Text('Aapne Champaran ki jagah Kheda date choose kar li. Dono me Gandhiji the par saal alag tha.',
+                        style: TextStyle(fontSize: 11, color: Color(0xFF4C0519), height: 1.3)),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 12),
+              Center(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                  decoration: BoxDecoration(color: const Color(0xFFDC2626), borderRadius: BorderRadius.circular(20)),
+                  child: const Text('Fix Error: 1-Click Re-Quiz ➔', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
+                ),
+              ),
+            ],
+          ),
+        );
+
+      case 'coaching':
+        return Padding(
+          padding: const EdgeInsets.all(14.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(10), border: Border.all(color: const Color(0xFFE2E8F0))),
+                child: Row(
+                  children: [
+                    const CircleAvatar(backgroundColor: Color(0xFF059669), radius: 16, child: Icon(Icons.school, color: Colors.white, size: 16)),
+                    const SizedBox(width: 8),
+                    const Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Sankalp Academy • Patna', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
+                          Text('Target BPSC Batch 2026-27', style: TextStyle(fontSize: 10, color: Colors.grey)),
+                        ],
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                      decoration: BoxDecoration(color: const Color(0xFFECFDF5), borderRadius: BorderRadius.circular(6)),
+                      child: const Text('BATCH #111', style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.w900, color: Color(0xFF059669))),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 10),
+              Container(
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(colors: [Color(0xFF1E293B), Color(0xFF0F172A)]),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: const Row(
+                  children: [
+                    Icon(Icons.play_circle_fill_rounded, color: Colors.amber, size: 24),
+                    SizedBox(width: 8),
+                    Expanded(
+                      child: Text('Learn with Raju & Aman Sir\nComplete History & Bihar Special Handouts',
+                          style: TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.bold, height: 1.3)),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        );
+
+      case 'community':
+      default:
+        return Padding(
+          padding: const EdgeInsets.all(14.0),
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8), border: Border.all(color: const Color(0xFFE2E8F0))),
+                child: const Row(
+                  children: [
+                    Text('📢', style: TextStyle(fontSize: 16)),
+                    SizedBox(width: 8),
+                    Expanded(child: Text('BSSC 4th Graduate Notification Released • 2,640 Posts', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold))),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 8),
+              Container(
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(color: const Color(0xFFFEF3C7), borderRadius: BorderRadius.circular(8)),
+                child: const Row(
+                  children: [
+                    Text('💡', style: TextStyle(fontSize: 16)),
+                    SizedBox(width: 8),
+                    Expanded(child: Text('Daily Rapid Quiz: Bihar ke kis jile me Sonpur mela lagta hai?', style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.w600, color: Color(0xFF78350F)))),
+                  ],
+                ),
+              ),
+              const SizedBox(height: 8),
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.chat_bubble_outline_rounded, size: 13, color: Colors.grey),
+                  SizedBox(width: 4),
+                  Text('412 Aspirants Active in Community Feed', style: TextStyle(fontSize: 10, color: Colors.grey, fontWeight: FontWeight.bold)),
+                ],
+              )
+            ],
+          ),
+        );
+    }
+  }
+
+  Widget _buildMockOptionTile(String prefix, String text, bool isCorrect) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+      decoration: BoxDecoration(
+        color: isCorrect ? const Color(0xFFF0FDF4) : Colors.white,
+        borderRadius: BorderRadius.circular(8),
+        border: Border.all(color: isCorrect ? const Color(0xFF16A34A) : const Color(0xFFCBD5E1), width: isCorrect ? 1.4 : 1),
+      ),
+      child: Row(
+        children: [
+          Text('$prefix. ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: isCorrect ? const Color(0xFF16A34A) : Colors.black87)),
+          Expanded(child: Text(text, style: TextStyle(fontSize: 11.5, fontWeight: isCorrect ? FontWeight.bold : FontWeight.normal))),
+          if (isCorrect) const Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 16),
+        ],
+      ),
+    );
+  }
+
+  // 📝 User Setup Page: Name (Mandatory) & Mobile Number (Optional + 10 Digits 8/9 prefix)
   Widget _buildRegistrationForm() {
     return SingleChildScrollView(
-      padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: Form(
         key: _formKey,
         child: Column(
@@ -343,21 +541,21 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
               padding: const EdgeInsets.all(12),
               decoration: BoxDecoration(
                 color: _primaryBlue.withOpacity(0.1),
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(12),
               ),
-              child: const Icon(Icons.school_rounded, color: _primaryBlue, size: 28),
+              child: const Icon(Icons.badge_rounded, color: _primaryBlue, size: 28),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 14),
             const Text(
               "Setup Aspirant Profile 🚀",
               style: TextStyle(fontSize: 22, fontWeight: FontWeight.w900, color: _darkNavy, letterSpacing: -0.4),
             ),
-            const SizedBox(height: 6),
+            const SizedBox(height: 4),
             const Text(
-              "Yeh naam aapke mock scorecard, batch ranking aur coaching certificates par print hoga.",
-              style: TextStyle(fontSize: 12.5, color: Color(0xFF64748B), height: 1.4),
+              "Yeh naam aapke CBT test scorecard aur batch rank sheets par display hoga.",
+              style: TextStyle(fontSize: 12, color: Color(0xFF64748B), height: 1.4),
             ),
-            const SizedBox(height: 22),
+            const SizedBox(height: 20),
 
             Container(
               padding: const EdgeInsets.all(16),
@@ -366,13 +564,13 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(color: const Color(0xFFE2E8F0)),
                 boxShadow: [
-                  BoxShadow(color: Colors.black.withOpacity(0.03), blurRadius: 10, offset: const Offset(0, 3)),
+                  BoxShadow(color: Colors.black.withOpacity(0.02), blurRadius: 10, offset: const Offset(0, 3)),
                 ],
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // 1. Student Name (Mandatory)
+                  // 1. Full Name (Mandatory)
                   Row(
                     children: const [
                       Text("Full Name", style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold, color: _darkNavy)),
@@ -395,17 +593,17 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                       focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _primaryBlue, width: 1.5)),
                     ),
                     validator: (val) {
-                      if (val == null || val.trim().isEmpty) return 'Kripya apna naam daalein!';
+                      if (val == null || val.trim().isEmpty) return 'Kripya apna naam enter karein!';
                       if (val.trim().length < 2) return 'Kam se kam 2 characters ka naam daalein';
                       return null;
                     },
                   ),
                   const SizedBox(height: 16),
 
-                  // 2. Mobile / Roll Number (Optional)
+                  // 2. Mobile Number (Sirf Mobile No, Optional + 10 Digits & 8/9 Starts)
                   Row(
                     children: const [
-                      Text("Mobile / Roll No.", style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold, color: _darkNavy)),
+                      Text("Mobile Number", style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold, color: _darkNavy)),
                       SizedBox(width: 6),
                       Text("(Optional)", style: TextStyle(fontSize: 11, color: Colors.grey)),
                     ],
@@ -414,10 +612,14 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                   TextFormField(
                     controller: _phoneController,
                     keyboardType: TextInputType.phone,
+                    inputFormatters: [
+                      FilteringTextInputFormatter.digitsOnly,
+                      LengthLimitingTextInputFormatter(10),
+                    ],
                     decoration: InputDecoration(
                       hintText: 'e.g. 9876543210 (Classroom sync ke liye)',
                       hintStyle: const TextStyle(fontSize: 12.5, color: Colors.grey),
-                      prefixIcon: const Icon(Icons.phone_outlined, color: Colors.grey, size: 20),
+                      prefixIcon: const Icon(Icons.phone_android_rounded, color: Colors.grey, size: 20),
                       filled: true,
                       fillColor: const Color(0xFFF8FAFC),
                       contentPadding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
@@ -425,11 +627,28 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                       enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: Color(0xFFE2E8F0))),
                       focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _primaryBlue, width: 1.5)),
                     ),
+                    validator: (val) {
+                      if (val == null || val.trim().isEmpty) return null; // Optional
+
+                      final clean = val.trim();
+                      final regex = RegExp(r'^[89]\d{9}$');
+
+                      if (!regex.hasMatch(clean)) {
+                        if (!clean.startsWith('8') && !clean.startsWith('9')) {
+                          return 'Number 9 ya 8 se shuru hona chahiye';
+                        }
+                        if (clean.length != 10) {
+                          return 'Poora 10-digit number enter karein';
+                        }
+                        return 'Kripya valid 10-digit mobile number daalein';
+                      }
+                      return null;
+                    },
                   ),
                 ],
               ),
             ),
-            const SizedBox(height: 24),
+            const SizedBox(height: 22),
 
             // Submit Button
             SizedBox(
@@ -439,18 +658,17 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: _primaryBlue,
                   foregroundColor: Colors.white,
-                  elevation: 4,
-                  shadowColor: _primaryBlue.withOpacity(0.4),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                  elevation: 2,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                 ),
                 onPressed: _completeOnboarding,
-                child: const Text('Start Practicing 🚀', style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.bold)),
+                child: const Text('Start Preparation 🚀', style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.bold)),
               ),
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 10),
             const Center(
               child: Text(
-                '🔒 Your data is stored safely on your device.',
+                '🔒 No OTP required • Instant Access to Mocks & Vault',
                 style: TextStyle(fontSize: 11, color: Colors.grey),
               ),
             ),
