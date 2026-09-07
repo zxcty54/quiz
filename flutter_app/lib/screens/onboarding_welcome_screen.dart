@@ -17,7 +17,7 @@ class OnboardingWelcomeScreen extends StatefulWidget {
 }
 
 class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
-  final PageController _carouselController = PageController();
+  final PageController _pageController = PageController();
   final _formKey = GlobalKey<FormState>();
   final _nameController = TextEditingController();
   final _phoneController = TextEditingController();
@@ -26,7 +26,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
   int _currentIndex = 0;
   bool _isLoading = false;
   String _selectedExam = 'ALL';
-  String _slide2Persona = 'aspirant';
+  String _coachingPersona = 'aspirant';
+  String _selectedCity = 'Mukherjee Nagar (Delhi)';
 
   static const Color _brandBlue = Color(0xFF0038B8);
   static const Color _darkHeader = Color(0xFF0A1128);
@@ -78,8 +79,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
 
   void _nextSlide() {
     if (_currentIndex < 2) {
-      _carouselController.nextPage(
-        duration: const Duration(milliseconds: 300),
+      _pageController.nextPage(
+        duration: const Duration(milliseconds: 280),
         curve: Curves.easeInOut,
       );
     }
@@ -87,8 +88,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
 
   void _prevSlide() {
     if (_currentIndex > 0) {
-      _carouselController.previousPage(
-        duration: const Duration(milliseconds: 300),
+      _pageController.previousPage(
+        duration: const Duration(milliseconds: 280),
         curve: Curves.easeInOut,
       );
     }
@@ -96,7 +97,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
 
   @override
   void dispose() {
-    _carouselController.dispose();
+    _pageController.dispose();
     _nameController.dispose();
     _phoneController.dispose();
     _batchCodeController.dispose();
@@ -110,22 +111,19 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            // Top Bar
             _buildTopBar(),
-
-            // Exam Chips
             _buildExamChips(),
             const SizedBox(height: 6),
 
-            // 3-Slide Carousel Viewport
+            // 3-Slide Carousel
             Expanded(
               child: PageView(
-                controller: _carouselController,
+                controller: _pageController,
                 physics: const BouncingScrollPhysics(),
                 onPageChanged: (idx) => setState(() => _currentIndex = idx),
                 children: [
-                  _buildSlideCard(_buildFeature1TcsEngine()),
-                  _buildSlideCard(_buildFeature2AiTrapAndCoaching()),
+                  _buildSlideCard(_buildFeature1TcsSimulator()),
+                  _buildSlideCard(_buildFeature2TrapAndCoachingHub()),
                   _buildSlideCard(_buildFeature3ProfileSetup()),
                 ],
               ),
@@ -136,7 +134,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     );
   }
 
-  // TOP BAR
+  // --- TOP BAR (MockTester + Overview/Walkthrough Toggle) ---
   Widget _buildTopBar() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -154,7 +152,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                 ),
                 child: const Icon(Icons.check_rounded, color: Colors.white, size: 20),
               ),
-              const SizedBox(width: 6),
+              const SizedBox(width: 7),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -196,7 +194,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
             ],
           ),
 
-          // Walkthrough Slide Progress Counter
+          // Walkthrough progress badge
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
@@ -256,7 +254,6 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     );
   }
 
-  // BASE CARD CONTAINER (Edge-to-edge layout)
   Widget _buildSlideCard(Widget content) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 8),
@@ -295,16 +292,18 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     );
   }
 
-  // --- FEATURE 1: ASLI EXAM CBT INTERFACE (SLIDE 1) ---
-  Widget _buildFeature1TcsEngine() {
+  // =========================================================================
+  // SLIDE 1 (FEATURE 1): ASLI EXAM HALL CBT INTERFACE (Capture 1, 2 & 3)
+  // =========================================================================
+  Widget _buildFeature1TcsSimulator() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
           children: [
-            // Top Badge
+            // Exact Capture 3 Top Badge
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4.5),
               decoration: BoxDecoration(
                 color: const Color(0xFFDCE6FF),
                 borderRadius: BorderRadius.circular(16),
@@ -323,7 +322,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
             ),
             const SizedBox(height: 8),
 
-            // Simulated Dark TCS CBT Screen
+            // TCS Dark Terminal Simulation Box (Capture 3)
             Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
@@ -334,19 +333,39 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Mock Title Bar with Green Indicator
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text('• SSC CGL (Tier-1) Mock #01', style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: Colors.white)),
+                      const Row(
+                        children: [
+                          CircleAvatar(radius: 3.5, backgroundColor: Colors.green),
+                          SizedBox(width: 5),
+                          Text(
+                            'SSC CGL (Tier-1) Mock #01',
+                            style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: Colors.white),
+                          ),
+                        ],
+                      ),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
-                        decoration: BoxDecoration(color: const Color(0xFF1E293B), borderRadius: BorderRadius.circular(4)),
-                        child: const Text('⏳ 58:42 Left', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.amber)),
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF1E293B),
+                          borderRadius: BorderRadius.circular(4),
+                          border: Border.all(color: Colors.amber.withValues(alpha: 0.3)),
+                        ),
+                        child: const Row(
+                          children: [
+                            Text('⏳ ', style: TextStyle(fontSize: 9)),
+                            Text('58:42 Left', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.amber)),
+                          ],
+                        ),
                       ),
                     ],
                   ),
                   const SizedBox(height: 6),
 
+                  // Section Tabs
                   Row(
                     children: [
                       Container(
@@ -358,13 +377,17 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                       const Text('GK/GA (25)', style: TextStyle(fontSize: 8.5, color: Colors.grey)),
                       const SizedBox(width: 8),
                       const Text('Quants (25)', style: TextStyle(fontSize: 8.5, color: Colors.grey)),
+                      const SizedBox(width: 8),
+                      const Text('English (25)', style: TextStyle(fontSize: 8.5, color: Colors.grey)),
                     ],
                   ),
                   const SizedBox(height: 8),
 
+                  // Split View: Question Area & 25-Question Palette
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      // Question Column
                       Expanded(
                         flex: 3,
                         child: Column(
@@ -377,19 +400,34 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                                 Text('+2.00 / -0.50', style: TextStyle(color: Colors.greenAccent, fontSize: 9, fontWeight: FontWeight.bold)),
                               ],
                             ),
-                            const SizedBox(height: 3),
+                            const SizedBox(height: 4),
                             const Text(
                               'Find the odd letter pair out of the following given alternatives:',
-                              style: TextStyle(color: Color(0xFFE2E8F0), fontSize: 10),
+                              style: TextStyle(color: Color(0xFFE2E8F0), fontSize: 10, height: 1.25),
                             ),
-                            const SizedBox(height: 5),
+                            const SizedBox(height: 6),
                             _buildTcsOption('[A] BCD : EFG', false),
                             _buildTcsOption('[B] FGH : JKL (Saved)', true),
                             _buildTcsOption('[C] LMN : OPQ', false),
+
+                            const SizedBox(height: 4),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                const Text('Mark Review', style: TextStyle(fontSize: 8, color: Colors.purpleAccent, fontWeight: FontWeight.bold)),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                  decoration: BoxDecoration(color: _brandBlue, borderRadius: BorderRadius.circular(3)),
+                                  child: const Text('Save & Next >', style: TextStyle(fontSize: 8, color: Colors.white, fontWeight: FontWeight.bold)),
+                                ),
+                              ],
+                            ),
                           ],
                         ),
                       ),
                       const SizedBox(width: 6),
+
+                      // NTA 25-Button Matrix (Exact Capture 3)
                       Expanded(
                         flex: 2,
                         child: Container(
@@ -397,7 +435,13 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                           decoration: BoxDecoration(color: const Color(0xFF1E293B), borderRadius: BorderRadius.circular(6)),
                           child: Column(
                             children: [
-                              const Text('PALETTE 25 QS', style: TextStyle(color: Colors.grey, fontSize: 8, fontWeight: FontWeight.bold)),
+                              const Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text('PALETTE ', style: TextStyle(color: Colors.grey, fontSize: 8, fontWeight: FontWeight.bold)),
+                                  Text('25 QS', style: TextStyle(color: Colors.white, fontSize: 8, fontWeight: FontWeight.bold)),
+                                ],
+                              ),
                               const SizedBox(height: 4),
                               Wrap(
                                 spacing: 3,
@@ -417,6 +461,12 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                                   _buildDot('17', Colors.purple),
                                 ],
                               ),
+                              const SizedBox(height: 4),
+                              const Divider(height: 1, color: Color(0xFF334155)),
+                              const SizedBox(height: 3),
+                              _buildPaletteStatRow('Answered', '18', Colors.green),
+                              _buildPaletteStatRow('Not Ans', '05', Colors.red),
+                              _buildPaletteStatRow('Review', '02', Colors.purple),
                             ],
                           ),
                         ),
@@ -428,6 +478,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
             ),
             const SizedBox(height: 10),
 
+            // Capture 1 & 3 Headline & Description
             const Text(
               'Asli Exam Hall Jaisa Real CBT Interface!',
               textAlign: TextAlign.center,
@@ -441,6 +492,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
             ),
             const SizedBox(height: 8),
 
+            // Performance spec row (Capture 1 & 2)
             Row(
               children: [
                 Expanded(child: _buildMiniSpecTile(Icons.language, '99.8% NTA Match', 'Real exam simulation')),
@@ -452,9 +504,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
         ),
         const SizedBox(height: 10),
 
-        // Carousel Controls
         _buildCarouselActionRow(
-          btnLabel: 'Next: AI Trap & Coaching Hub',
+          btnLabel: 'Launch Live TCS Mock Engine',
           onNext: _nextSlide,
           showBack: false,
         ),
@@ -462,21 +513,23 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     );
   }
 
-  // --- FEATURE 2: AI TRAP DETECTOR & REGIONAL COACHING HUB (SLIDE 2) ---
-  Widget _buildFeature2AiTrapAndCoaching() {
+  // =========================================================================
+  // SLIDE 2 (FEATURE 2): AI TRAP + MISTAKE VAULT + COACHING HUB (Capture 4, 5, 6)
+  // =========================================================================
+  Widget _buildFeature2TrapAndCoachingHub() {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
           children: [
-            // Top Badges
+            // Top Badges (Capture 4)
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                   decoration: BoxDecoration(color: const Color(0xFFFEF3C7), borderRadius: BorderRadius.circular(14)),
-                  child: const Text('🧠 AI Trap Detector', style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: Color(0xFF92400E))),
+                  child: const Text('🧠 AI Trap Detector & Vault', style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: Color(0xFF92400E))),
                 ),
                 const SizedBox(width: 6),
                 Container(
@@ -488,7 +541,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
             ),
             const SizedBox(height: 6),
 
-            // AI Trap Card Box
+            // AI Trap Card Box (Capture 4)
             Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
@@ -510,7 +563,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                         ],
                       ),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                         decoration: BoxDecoration(color: const Color(0xFFF43F5E), borderRadius: BorderRadius.circular(6)),
                         child: const Text('TRAP ALERT', style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold, color: Colors.white)),
                       ),
@@ -518,43 +571,104 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                   ),
                   const SizedBox(height: 6),
 
-                  // Question Box
                   Container(
                     padding: const EdgeInsets.all(8),
                     decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(8), border: Border.all(color: _borderSubtle)),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text('Algebra Trap Sample • SSC CGL Tier-1', style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.bold, color: _brandBlue)),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                              decoration: BoxDecoration(color: const Color(0xFFFFE4E6), borderRadius: BorderRadius.circular(4)),
+                              child: const Text('64% Aspirants Trapped', style: TextStyle(fontSize: 7.5, fontWeight: FontWeight.bold, color: Color(0xFFE11D48))),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
                         const Text('If x + 1/x = -4, then find x³ + 1/x³ = ?', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _darkHeader)),
                         const SizedBox(height: 5),
                         Row(
                           children: [
-                            Expanded(child: _buildTrapOpt('Opt A (+48)', false)),
+                            Expanded(child: _buildTrapOpt('Option A (+48)', false)),
                             const SizedBox(width: 4),
-                            Expanded(child: _buildTrapOpt('Opt B (-48)', false)),
+                            Expanded(child: _buildTrapOpt('Option B (-48)', false)),
+                          ],
+                        ),
+                        const SizedBox(height: 4),
+                        Row(
+                          children: [
+                            Expanded(child: _buildTrapOpt('Option C (+52)', false)),
                             const SizedBox(width: 4),
-                            Expanded(child: _buildTrapOpt('Opt D (-52) ✓', true)),
+                            Expanded(child: _buildTrapOpt('Option D (-52) ✓ Ans', true)),
                           ],
                         ),
                       ],
                     ),
                   ),
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 5),
 
+                  // Trap logic explanation
                   Container(
                     padding: const EdgeInsets.all(6),
                     decoration: BoxDecoration(color: const Color(0xFFFFF1F2), borderRadius: BorderRadius.circular(6)),
-                    child: const Text(
-                      '⚠️ Formula k³ - 3k gives -52. Bait options +48 & -48 trap hasty calculations.',
-                      style: TextStyle(fontSize: 9, color: Color(0xFF475569), height: 1.3),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text('⚠️ Why this is a trap:', style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.bold, color: Color(0xFFBE123C))),
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                              decoration: BoxDecoration(color: const Color(0xFFFFE4E6), borderRadius: BorderRadius.circular(3)),
+                              child: const Text('Sign Inversion Error', style: TextStyle(fontSize: 7.5, fontWeight: FontWeight.bold, color: Color(0xFF9F1239))),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 2),
+                        const Text(
+                          'Using identity (k³ - 3k) for k = -4: (-4)³ - 3(-4) = -64 + 12 = -52. Bait options +48 & -48 trap hasty calculations under timer pressure.',
+                          style: TextStyle(fontSize: 8.5, color: Color(0xFF475569), height: 1.3),
+                        ),
+                      ],
                     ),
+                  ),
+                  const SizedBox(height: 6),
+
+                  // Auto-saved & Re-attempt bar (Capture 4)
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Row(
+                        children: [
+                          Icon(Icons.lock_outline, size: 12, color: Color(0xFF0F766E)),
+                          SizedBox(width: 4),
+                          Text('Auto-saved in your Mistake Vault', style: TextStyle(fontSize: 9, color: Color(0xFF475569))),
+                        ],
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                        decoration: BoxDecoration(color: _brandBlue, borderRadius: BorderRadius.circular(6)),
+                        child: const Row(
+                          children: [
+                            Text('Re-attempt Trap', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.white)),
+                            SizedBox(width: 3),
+                            Icon(Icons.refresh, size: 10, color: Colors.white),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
             ),
             const SizedBox(height: 8),
 
-            // Regional Coaching Pass Box
+            // Verified Institute Pass Box with Live City Radar (Capture 6)
             Container(
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
@@ -568,7 +682,13 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text('VERIFIED INSTITUTE CBT PASS', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: _brandBlue)),
+                      const Row(
+                        children: [
+                          Icon(Icons.storefront, size: 14, color: _brandBlue),
+                          SizedBox(width: 4),
+                          Text('VERIFIED INSTITUTE CBT PASS', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: _brandBlue)),
+                        ],
+                      ),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
                         decoration: BoxDecoration(
@@ -576,7 +696,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(color: const Color(0xFFA7F3D0)),
                         ),
-                        child: const Text('LIVE PASS', style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold, color: Color(0xFF059669))),
+                        child: const Text('LIVE CBT PASS', style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold, color: Color(0xFF059669))),
                       ),
                     ],
                   ),
@@ -606,6 +726,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                   ),
                   const SizedBox(height: 6),
 
+                  // Code Entry Row
                   Row(
                     children: [
                       Expanded(
@@ -642,6 +763,22 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                       ),
                     ],
                   ),
+                  const SizedBox(height: 6),
+
+                  // Live City Radar Chips (Capture 6)
+                  SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        const Text('Live Radar: ', style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.bold, color: Color(0xFF64748B))),
+                        _buildCityChip('Mukherjee Nagar (Delhi)', true),
+                        const SizedBox(width: 4),
+                        _buildCityChip('Patna (Boring Rd)', false),
+                        const SizedBox(width: 4),
+                        _buildCityChip('Prayagraj', false),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -649,7 +786,6 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
         ),
         const SizedBox(height: 10),
 
-        // Controls
         _buildCarouselActionRow(
           btnLabel: 'Proceed to Profile Setup',
           onNext: _nextSlide,
@@ -660,7 +796,9 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     );
   }
 
-  // --- FEATURE 3: FINAL PROFILE ENTRY (SLIDE 3) ---
+  // =========================================================================
+  // SLIDE 3 (FINAL ENTRY): ASPIRANT PROFILE & REGISTRATION
+  // =========================================================================
   Widget _buildFeature3ProfileSetup() {
     return Form(
       key: _formKey,
@@ -773,7 +911,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
           ),
           const SizedBox(height: 10),
 
-          // Submit Action Row with Back button
+          // Action Button Row
           Row(
             children: [
               InkWell(
@@ -814,7 +952,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     );
   }
 
-  // --- CAROUSEL BUTTON NAVIGATION ROW ---
+  // --- REUSABLE CAROUSEL NAVIGATOR (< & >) ---
   Widget _buildCarouselActionRow({
     required String btnLabel,
     required VoidCallback onNext,
@@ -874,7 +1012,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     );
   }
 
-  // --- HELPER PILLS & TILES ---
+  // Helper Widget Renderers
   Widget _buildTcsOption(String text, bool isChecked) {
     return Container(
       margin: const EdgeInsets.only(bottom: 3),
@@ -899,6 +1037,25 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
       ),
       alignment: Alignment.center,
       child: Text(label, style: const TextStyle(color: Colors.white, fontSize: 7, fontWeight: FontWeight.bold)),
+    );
+  }
+
+  Widget _buildPaletteStatRow(String title, String val, Color col) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 1),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              CircleAvatar(radius: 2.5, backgroundColor: col),
+              const SizedBox(width: 3),
+              Text(title, style: const TextStyle(fontSize: 7, color: Colors.grey)),
+            ],
+          ),
+          Text(val, style: TextStyle(fontSize: 7, fontWeight: FontWeight.bold, color: col)),
+        ],
+      ),
     );
   }
 
@@ -936,6 +1093,20 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
         label,
         textAlign: TextAlign.center,
         style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.bold, color: isCorrect ? const Color(0xFF065F46) : _darkHeader),
+      ),
+    );
+  }
+
+  Widget _buildCityChip(String label, bool isSelected) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+      decoration: BoxDecoration(
+        color: isSelected ? _brandBlue : const Color(0xFFEFF6FF),
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Text(
+        label,
+        style: TextStyle(fontSize: 8, fontWeight: FontWeight.bold, color: isSelected ? Colors.white : _brandBlue),
       ),
     );
   }
