@@ -44,10 +44,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Future<void> _loadProfileData() async {
     final prefs = await SharedPreferences.getInstance();
 
-    // 👤 Load Name, Email, Mobile from SharedPreferences
-    final String savedName = prefs.getString('user_name') ?? 'Aspirant';
+    // 👤 Load Name & Mobile from Welcome/Onboarding screen or local fallback
+    final String savedName = prefs.getString('custom_aspirant_name') ??
+        prefs.getString('user_name') ??
+        prefs.getString('user_display_name') ??
+        'Aspirant';
+
+    final String? contactId = prefs.getString('student_contact_id');
+    final String savedMobile = (contactId != null && contactId != 'N/A')
+        ? contactId
+        : (prefs.getString('user_mobile') ?? '');
+
     final String savedEmail = prefs.getString('user_email') ?? '';
-    final String savedMobile = prefs.getString('user_mobile') ?? '';
 
     // 📌 Load Saved Current Affairs Count
     int caCount = 0;
@@ -149,9 +157,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
             onPressed: () async {
               if (formKey.currentState!.validate()) {
                 final prefs = await SharedPreferences.getInstance();
-                await prefs.setString('user_name', nameCtrl.text.trim());
-                await prefs.setString('user_email', emailCtrl.text.trim());
-                await prefs.setString('user_mobile', mobileCtrl.text.trim());
+                final String updatedName = nameCtrl.text.trim();
+                final String updatedEmail = emailCtrl.text.trim();
+                final String updatedMobile = mobileCtrl.text.trim();
+
+                // Dono keys me save hoga taaki welcome screen aur CBT dono update rahein
+                await prefs.setString('custom_aspirant_name', updatedName);
+                await prefs.setString('user_name', updatedName);
+                await prefs.setString('user_email', updatedEmail);
+                await prefs.setString('user_mobile', updatedMobile);
+                await prefs.setString('student_contact_id', updatedMobile.isNotEmpty ? updatedMobile : 'N/A');
 
                 if (mounted) {
                   Navigator.pop(ctx);
