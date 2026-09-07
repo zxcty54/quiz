@@ -169,10 +169,10 @@ class MyApp extends StatelessWidget {
             ),
           ),
 
-          // 🚀 Initial Route Gate: First-time install -> Onboarding screen, else HomeScreen
+          // 🚀 FIX: Removed invalid 'const' here
           home: isOnboarded
               ? const HomeScreen()
-              : const OnboardingWelcomeScreen(nextScreen: HomeScreen()),
+              : OnboardingWelcomeScreen(nextScreen: const HomeScreen()),
         );
       },
     );
