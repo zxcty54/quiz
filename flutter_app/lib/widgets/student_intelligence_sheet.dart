@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../screens/student_cbt_report_screen.dart';
+import '../utils/subtopic_engine.dart';
 
 class StudentIntelligenceSheet extends StatefulWidget {
   final List<dynamic> batches;
@@ -23,6 +24,53 @@ class _StudentIntelligenceSheetState extends State<StudentIntelligenceSheet> {
   String _selectedBatchFilter = 'ALL';
   String _selectedTestId = 'ALL';
 
+  /// 🧠 Dynamic Evaluator: Detailed responses se real-time weak topic calculate karna
+  String _resolveAccurateWeakTopic(Map<String, dynamic> submission, Map<String, dynamic>? parentTest) {
+    final List responses = (submission['detailed_responses'] is List) ? submission['detailed_responses'] : [];
+    
+    if (responses.isEmpty) {
+      return submission['weak_subject']?.toString() ?? 'All Clear';
+    }
+
+    final Map<String, int> wrongTopicFrequencies = {};
+
+    for (var item in responses) {
+      if (item is Map) {
+        final bool isCorrect = item['is_correct'] == true || item['isCorrect'] == true;
+        
+        // Sirf galat sawalon ka topic analyze karein
+        if (!isCorrect) {
+          final String chapter = (item['chapter'] ?? item['topic'] ?? '').toString();
+          final String qe = (item['question_en'] ?? item['qe'] ?? item['question'] ?? '').toString();
+          final String qh = (item['question_hi'] ?? item['qh'] ?? '').toString();
+          final List<dynamic>? se = item['statements_en'] is List ? item['statements_en'] : null;
+          final List<dynamic>? sh = item['statements_hi'] is List ? item['statements_hi'] : null;
+
+          // Question-level subject -> Fallback to Test-level subject
+          final String subject = (item['subject'] ?? item['subFolder'] ?? parentTest?['subject'] ?? '').toString();
+
+          final String detectedTopic = SubtopicEngine.extractSubtopic(
+            chapterName: chapter,
+            subjectName: subject,
+            qe: qe,
+            qh: qh,
+            se: se,
+            sh: sh,
+          );
+
+          wrongTopicFrequencies[detectedTopic] = (wrongTopicFrequencies[detectedTopic] ?? 0) + 1;
+        }
+      }
+    }
+
+    if (wrongTopicFrequencies.isNotEmpty) {
+      // Sabse zyada galat hone wala topic
+      return wrongTopicFrequencies.entries.reduce((a, b) => a.value > b.value ? a : b).key;
+    }
+
+    return 'All Clear';
+  }
+
   @override
   Widget build(BuildContext context) {
     // 1. Filter submissions based on batch
@@ -37,14 +85,22 @@ class _StudentIntelligenceSheetState extends State<StudentIntelligenceSheet> {
       return (t['batch_id'] ?? '').toString().trim() == _selectedBatchFilter.trim();
     }).toList();
 
-    // 3. Analytics calculation
+    // 3. Analytics calculation with Real-Time Subtopic Recalculation
     double totalScoreSum = 0.0;
     final Map<String, int> weakFrequency = {};
 
     for (var s in batchSubmissions) {
       totalScoreSum += (s['score'] as num?)?.toDouble() ?? 0.0;
-      final weak = s['weak_subject']?.toString();
-      if (weak != null && weak.isNotEmpty && weak != 'All Clear') {
+      
+      // Match parent test for subject context
+      Map<String, dynamic>? parentTest;
+      final testMatches = widget.batchTests.where((t) => (t['id'] ?? '').toString() == (s['test_id'] ?? '').toString());
+      if (testMatches.isNotEmpty) {
+        parentTest = Map<String, dynamic>.from(testMatches.first);
+      }
+
+      final weak = _resolveAccurateWeakTopic(Map<String, dynamic>.from(s), parentTest);
+      if (weak.isNotEmpty && weak != 'All Clear') {
         weakFrequency[weak] = (weakFrequency[weak] ?? 0) + 1;
       }
     }
@@ -313,13 +369,18 @@ class _StudentIntelligenceSheetState extends State<StudentIntelligenceSheet> {
                             (s['detailed_responses'] is List) ? s['detailed_responses'] : [];
 
                         String matchedTestTitle = 'Classroom CBT Test';
+                        Map<String, dynamic>? parentTest;
                         final matchingTestList = batchTests.where(
                           (t) => (t['id'] ?? '').toString() == (s['test_id'] ?? '').toString(),
                         );
                         if (matchingTestList.isNotEmpty) {
                           final tMatch = matchingTestList.first;
+                          parentTest = Map<String, dynamic>.from(tMatch);
                           matchedTestTitle = tMatch['title'] ?? tMatch['test_title'] ?? tMatch['testTitle'] ?? 'Classroom CBT Test';
                         }
+
+                        // 🔍 Real-time re-evaluated weak topic
+                        final String evaluatedWeakTopic = _resolveAccurateWeakTopic(Map<String, dynamic>.from(s), parentTest);
 
                         return Card(
                           margin: const EdgeInsets.only(bottom: 10),
@@ -399,10 +460,10 @@ class _StudentIntelligenceSheetState extends State<StudentIntelligenceSheet> {
                                             fontWeight: FontWeight.bold)),
                                   ],
                                 ),
-                                if (s['weak_subject'] != null && s['weak_subject'] != 'All Clear') ...[
+                                if (evaluatedWeakTopic.isNotEmpty && evaluatedWeakTopic != 'All Clear') ...[
                                   const SizedBox(height: 6),
                                   Text(
-                                    '⚠️ Weak Topic: ${s['weak_subject']}',
+                                    '⚠️ Weak Topic: $evaluatedWeakTopic',
                                     style: const TextStyle(
                                         fontSize: 11,
                                         color: Colors.redAccent,
