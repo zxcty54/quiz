@@ -108,19 +108,72 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
 
   Future<void> _fetchBatches() async {
     try {
-      if (_coaching == null) return;
-      final coachingId = _coaching!['id'];
+      final client = Supabase.instance.client;
+      final handle = widget.creatorHandle.trim();
+      List<dynamic> res = [];
 
-      final res = await Supabase.instance.client
-          .from('batches')
-          .select('*')
-          .eq('coaching_id', coachingId)
-          .neq('status', 'HIDDEN')
-          .order('created_at', ascending: false);
+      if (_coaching != null && _coaching!['id'] != null) {
+        res = await client
+            .from('batches')
+            .select('*')
+            .eq('coaching_id', _coaching!['id'])
+            .neq('status', 'HIDDEN')
+            .order('created_at', ascending: false);
+      }
 
-      _batches = res ?? [];
+      if (res.isEmpty) {
+        try {
+          res = await client
+              .from('batches')
+              .select('*')
+              .or('creator_id.ilike.$handle,created_by.ilike.$handle')
+              .neq('status', 'HIDDEN')
+              .order('created_at', ascending: false);
+        } catch (_) {}
+      }
+
+      // 🔍 Real-time CBT Mocks aur Study Notes Count mapping
+      if (res.isNotEmpty) {
+        final List<String> batchIds = res.map((b) => b['id'].toString()).toList();
+
+        // 1. Fetch batch tests count
+        Map<String, int> testsCountMap = {};
+        try {
+          final testsData = await client
+              .from('batch_tests')
+              .select('batch_id')
+              .inFilter('batch_id', batchIds);
+          for (var item in (testsData as List? ?? [])) {
+            final bId = item['batch_id']?.toString() ?? '';
+            testsCountMap[bId] = (testsCountMap[bId] ?? 0) + 1;
+          }
+        } catch (_) {}
+
+        // 2. Fetch batch notes count
+        Map<String, int> notesCountMap = {};
+        try {
+          final notesData = await client
+              .from('batch_notes')
+              .select('batch_id')
+              .inFilter('batch_id', batchIds);
+          for (var item in (notesData as List? ?? [])) {
+            final bId = item['batch_id']?.toString() ?? '';
+            notesCountMap[bId] = (notesCountMap[bId] ?? 0) + 1;
+          }
+        } catch (_) {}
+
+        // 3. Inject counts into batch records
+        for (var b in res) {
+          final id = b['id'].toString();
+          b['tests_count'] = testsCountMap[id] ?? ((b['batch_tests'] as List?)?.length ?? 0);
+          b['notes_count'] = notesCountMap[id] ?? ((b['batch_notes'] as List?)?.length ?? 0);
+        }
+      }
+
+      _batches = res;
     } catch (e) {
       debugPrint("Batches fetch error: $e");
+      _batches = [];
     }
   }
 
@@ -207,91 +260,96 @@ class _CreatorProfileScreenState extends State<CreatorProfileScreen>
 
     return Scaffold(
       backgroundColor: bgSurface,
-      body: NestedScrollView(
-        headerSliverBuilder: (context, innerBoxIsScrolled) {
-          return [
-            SliverAppBar(
-              expandedHeight: 140,
-              pinned: true,
-              backgroundColor: isDark ? _darkCard : Colors.white,
-              elevation: 0,
-              scrolledUnderElevation: 0,
-              leading: IconButton(
-                icon: Icon(
-                  Icons.arrow_back_rounded,
-                  color: isDark ? Colors.white : const Color(0xFF0F172A),
+      body: RefreshIndicator(
+        color: _primaryBlue,
+        backgroundColor: cardSurface,
+        onRefresh: _loadInitialData,
+        child: NestedScrollView(
+          headerSliverBuilder: (context, innerBoxIsScrolled) {
+            return [
+              SliverAppBar(
+                expandedHeight: 140,
+                pinned: true,
+                backgroundColor: isDark ? _darkCard : Colors.white,
+                elevation: 0,
+                scrolledUnderElevation: 0,
+                leading: IconButton(
+                  icon: Icon(
+                    Icons.arrow_back_rounded,
+                    color: isDark ? Colors.white : const Color(0xFF0F172A),
+                  ),
+                  onPressed: () => Navigator.pop(context),
                 ),
-                onPressed: () => Navigator.pop(context),
-              ),
-              flexibleSpace: FlexibleSpaceBar(
-                background: bannerUrl != null && bannerUrl.toString().trim().isNotEmpty
-                    ? Image.network(bannerUrl.toString().trim(), fit: BoxFit.cover)
-                    : Container(
-                        decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              _primaryBlue.withOpacity(0.85),
-                              const Color(0xFF1E3A8A),
-                            ],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
+                flexibleSpace: FlexibleSpaceBar(
+                  background: bannerUrl != null && bannerUrl.toString().trim().isNotEmpty
+                      ? Image.network(bannerUrl.toString().trim(), fit: BoxFit.cover)
+                      : Container(
+                          decoration: BoxDecoration(
+                            gradient: LinearGradient(
+                              colors: [
+                                _primaryBlue.withOpacity(0.85),
+                                const Color(0xFF1E3A8A),
+                              ],
+                              begin: Alignment.topLeft,
+                              end: Alignment.bottomRight,
+                            ),
                           ),
                         ),
-                      ),
+                ),
               ),
-            ),
-            SliverToBoxAdapter(
-              child: CreatorProfileHeader(
+              SliverToBoxAdapter(
+                child: CreatorProfileHeader(
+                  profile: _profile,
+                  coaching: _coaching,
+                  handle: widget.creatorHandle,
+                  isDarkMode: isDark,
+                  isFollowing: _isFollowing,
+                  followersCount: _followersCount,
+                  batchesCount: _batches.length,
+                  mocksCount: _mocks.length,
+                  selectionsCount: _selections.length,
+                  onToggleFollow: _toggleFollow,
+                ),
+              ),
+              SliverPersistentHeader(
+                pinned: true,
+                delegate: _SliverTabHeaderDelegate(
+                  TabBar(
+                    controller: _tabController,
+                    indicatorColor: _primaryBlue,
+                    indicatorWeight: 2.8,
+                    labelColor: isDark ? Colors.white : _primaryBlue,
+                    unselectedLabelColor: const Color(0xFF64748B),
+                    labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                    isScrollable: true,
+                    tabAlignment: TabAlignment.start,
+                    tabs: [
+                      Tab(text: 'Batches (${_batches.length})'),
+                      Tab(text: 'Free Mocks (${_mocks.length})'),
+                      Tab(text: 'Wall of Fame (${_selections.length})'),
+                      const Tab(text: 'About & Campus'),
+                    ],
+                  ),
+                  cardSurface,
+                  dividerColor,
+                ),
+              ),
+            ];
+          },
+          body: TabBarView(
+            controller: _tabController,
+            children: [
+              CreatorBatchesTab(batches: _batches, isDarkMode: isDark),
+              CreatorFreeMocksTab(mocks: _mocks, isDarkMode: isDark),
+              CreatorWallOfFameTab(selections: _selections, isDarkMode: isDark),
+              CreatorAboutCampusTab(
                 profile: _profile,
                 coaching: _coaching,
-                handle: widget.creatorHandle,
+                galleryImages: _galleryImages,
                 isDarkMode: isDark,
-                isFollowing: _isFollowing,
-                followersCount: _followersCount,
-                batchesCount: _batches.length,
-                mocksCount: _mocks.length,
-                selectionsCount: _selections.length,
-                onToggleFollow: _toggleFollow,
               ),
-            ),
-            SliverPersistentHeader(
-              pinned: true,
-              delegate: _SliverTabHeaderDelegate(
-                TabBar(
-                  controller: _tabController,
-                  indicatorColor: _primaryBlue,
-                  indicatorWeight: 2.8,
-                  labelColor: isDark ? Colors.white : _primaryBlue,
-                  unselectedLabelColor: const Color(0xFF64748B),
-                  labelStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
-                  isScrollable: true,
-                  tabAlignment: TabAlignment.start,
-                  tabs: [
-                    Tab(text: 'Batches (${_batches.length})'),
-                    Tab(text: 'Free Mocks (${_mocks.length})'),
-                    Tab(text: 'Wall of Fame (${_selections.length})'),
-                    const Tab(text: 'About & Campus'),
-                  ],
-                ),
-                cardSurface,
-                dividerColor,
-              ),
-            ),
-          ];
-        },
-        body: TabBarView(
-          controller: _tabController,
-          children: [
-            CreatorBatchesTab(batches: _batches, isDarkMode: isDark),
-            CreatorFreeMocksTab(mocks: _mocks, isDarkMode: isDark),
-            CreatorWallOfFameTab(selections: _selections, isDarkMode: isDark),
-            CreatorAboutCampusTab(
-              profile: _profile,
-              coaching: _coaching,
-              galleryImages: _galleryImages,
-              isDarkMode: isDark,
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
