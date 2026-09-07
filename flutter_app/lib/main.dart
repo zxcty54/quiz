@@ -7,6 +7,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'services/notification_service.dart';
 import 'services/knowledge_base_service.dart';
 import 'screens/home_screen.dart';
+import 'screens/onboarding_welcome_screen.dart';
 
 // 🌓 Global Theme Controller
 final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.light);
@@ -86,13 +87,14 @@ void main() {
       debugPrint("❌ [DB ERROR] KnowledgeBase Extraction/Search Failed: $e");
     }
 
-    // 📱 5. SharedPreferences: Theme Check
+    // 📱 5. SharedPreferences: Theme & Onboarding Check
     final prefs = await SharedPreferences.getInstance();
     final bool isDark = prefs.getBool('is_dark_mode') ?? false;
+    final bool isOnboarded = prefs.getBool('is_onboarded') ?? false;
     
     globalThemeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
 
-    runApp(const MyApp());
+    runApp(MyApp(isOnboarded: isOnboarded));
   }, (error, stackTrace) {
     // 6. Global Async / LLM Inference / Isolate Crash Handler
     debugPrint("Caught Global Async Crash: $error");
@@ -101,7 +103,9 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final bool isOnboarded;
+
+  const MyApp({super.key, required this.isOnboarded});
 
   @override
   Widget build(BuildContext context) {
@@ -127,7 +131,7 @@ class MyApp extends StatelessWidget {
             appBarTheme: const AppBarTheme(
               centerTitle: true,
               backgroundColor: Colors.white,
-              foregroundColor: const Color(0xFF0F172A),
+              foregroundColor: Color(0xFF0F172A),
               elevation: 0,
             ),
             cardTheme: CardThemeData(
@@ -165,7 +169,10 @@ class MyApp extends StatelessWidget {
             ),
           ),
 
-          home: const HomeScreen(),
+          // 🚀 Initial Route Gate: First-time install -> Onboarding screen, else HomeScreen
+          home: isOnboarded
+              ? const HomeScreen()
+              : const OnboardingWelcomeScreen(nextScreen: HomeScreen()),
         );
       },
     );
