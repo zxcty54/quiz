@@ -315,7 +315,7 @@ class CoachingEditorSheets {
     );
   }
 
-  // 👨‍🏫 4. Faculty & Mentors Modifier (With Photo Support)
+  // 👨‍🏫 4. Faculty & Mentors Modifier
   static void openFacultyModifierSheet({
     required BuildContext context,
     required dynamic coachingId,
@@ -502,7 +502,7 @@ class CoachingEditorSheets {
     );
   }
 
-  // 🏆 5. Wall of Fame Modifier (Photo upload + safe Supabase insert)
+  // 🏆 5. Wall of Fame Modifier (Fixed Execution & UI Sync)
   static void openWallOfFameModifierSheet({
     required BuildContext context,
     required dynamic coachingId,
@@ -577,7 +577,7 @@ class CoachingEditorSheets {
                                   ),
                                 ),
                                 const SizedBox(height: 12),
-                                TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Student Name', border: OutlineInputBorder(), isDense: true)),
+                                TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Student Name *', border: OutlineInputBorder(), isDense: true)),
                                 const SizedBox(height: 10),
                                 TextField(controller: eCtrl, decoration: const InputDecoration(labelText: 'Exam Cleared', border: OutlineInputBorder(), isDense: true)),
                                 const SizedBox(height: 10),
@@ -594,10 +594,16 @@ class CoachingEditorSheets {
                               onPressed: isUploading
                                   ? null
                                   : () async {
-                                      if (nCtrl.text.trim().isEmpty) return;
+                                      final studentName = nCtrl.text.trim();
+                                      if (studentName.isEmpty) return;
+                                      if (coachingId == null) {
+                                        debugPrint("🔥 [ERROR] coachingId is null!");
+                                        return;
+                                      }
+
                                       setDialogState(() => isUploading = true);
 
-                                      String photoUrl = '';
+                                      String? photoUrl;
                                       if (studentPhoto != null) {
                                         try {
                                           final bytes = await studentPhoto!.readAsBytes();
@@ -608,32 +614,35 @@ class CoachingEditorSheets {
                                               .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$ext', upsert: true));
                                           photoUrl = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
                                         } catch (e) {
-                                          debugPrint("Student photo upload error: $e");
+                                          debugPrint("Photo upload warning: $e");
                                         }
                                       }
 
                                       try {
+                                        // Working minimal schema payload without strict constraint failures
                                         final Map<String, dynamic> insertData = {
-                                          'student_name': nCtrl.text.trim(),
-                                          'target_exam': eCtrl.text.trim(),
-                                          'post_cleared': pCtrl.text.trim(),
+                                          'coaching_id': coachingId,
+                                          'student_name': studentName,
+                                          'target_exam': eCtrl.text.trim().isNotEmpty ? eCtrl.text.trim() : 'Competitive Exam',
+                                          'post_cleared': pCtrl.text.trim().isNotEmpty ? pCtrl.text.trim() : 'Officer',
                                           'testimonial_text': tCtrl.text.trim(),
                                           'is_verified': true,
+                                          'created_at': DateTime.now().toIso8601String(),
                                         };
 
-                                        if (coachingId != null) {
-                                          insertData['coaching_id'] = coachingId;
-                                        }
-                                        if (photoUrl.isNotEmpty) {
+                                        if (photoUrl != null && photoUrl.isNotEmpty) {
                                           insertData['photo_url'] = photoUrl;
                                         }
 
                                         await Supabase.instance.client.from('coaching_selections').insert(insertData);
+                                        debugPrint("✅ [SELECTION SAVED TO SUPABASE]");
 
+                                        // Dismiss Dialog and Dismiss Parent BottomSheet cleanly
                                         if (dCtx.mounted) Navigator.pop(dCtx);
+                                        if (ctx.mounted) Navigator.pop(ctx);
                                         onSaved();
                                       } catch (e) {
-                                        debugPrint("Selection insert error: $e");
+                                        debugPrint("🔥 [SELECTION INSERT CRASH] $e");
                                         setDialogState(() => isUploading = false);
                                       }
                                     },
