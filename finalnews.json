@@ -1,12 +1,38 @@
 {
-  "generated_at": "2026-09-07 08:22:33",
+  "generated_at": "2026-09-07 14:26:30",
   "window": "Rolling 24 Hours",
-  "national_count": 6,
-  "bihar_count": 7,
-  "total_count": 13,
+  "national_count": 8,
+  "bihar_count": 10,
+  "total_count": 18,
   "national_news": [
     {
       "id": "nat_01",
+      "title": "PM Modi Highlights Growing India-France Strategic and Cultural Ties at Paris Temple Inauguration",
+      "category": "International Relations, Summits & Global Organizations",
+      "bullets": [
+        "PM Narendra Modi virtually addressed the inauguration of the BAPS Swaminarayan Hindu Mandir in Paris, describing the partnership as 'Made in India and Built in France'.",
+        "Both nations are celebrating the ongoing year as the 'India-France Year of Innovation', focusing on AI, defense, space, technology, and climate action.",
+        "The Prime Minister emphasized historical and spiritual connections, noting the contributions of French scholars to Sanskrit and spiritual links through ISKCON and Aurobindo Ashram."
+      ],
+      "exam_tag": "India-France Bilateral Relations",
+      "date": "07 Sep 2026",
+      "timestamp": 1788771305
+    },
+    {
+      "id": "nat_02",
+      "title": "ISRO Clarifies Space Sector Reforms Focus on Ecosystem Expansion, Not Privatization",
+      "category": "Science, Technology, Defense & Space",
+      "bullets": [
+        "ISRO clarified that recent space sector reforms aim to build a larger, globally competitive ecosystem rather than privatize the agency or diminish its role.",
+        "Private sector participation will allow industry to scale mature technologies and commercialization, expanding India's global market presence.",
+        "The division of operational tasks allows ISRO's scientific workforce to focus on high-end research, next-generation technologies, and complex national space missions."
+      ],
+      "exam_tag": "Space Sector Reforms",
+      "date": "07 Sep 2026",
+      "timestamp": 1788771305
+    },
+    {
+      "id": "nat_03",
       "title": "Vice President Addresses Golden Jubilee of Geetanagar College in Assam",
       "category": "Govt Schemes, Policies & Social Welfare",
       "bullets": [
@@ -19,7 +45,7 @@
       "timestamp": 1788749552
     },
     {
-      "id": "nat_02",
+      "id": "nat_04",
       "title": "IAF Sarang Team Participates in Egypt's El Alamein International Airshow",
       "category": "Science, Technology, Defense & Space",
       "bullets": [
@@ -32,7 +58,7 @@
       "timestamp": 1788717646
     },
     {
-      "id": "nat_03",
+      "id": "nat_05",
       "title": "Indore Metro Priority Corridor-2 Inaugurated, Network Expands to 17 Km",
       "category": "Infrastructure, Energy & Digital Projects",
       "bullets": [
@@ -45,7 +71,7 @@
       "timestamp": 1788717684
     },
     {
-      "id": "nat_04",
+      "id": "nat_06",
       "title": "16th National Meet of State Biodiversity Boards Held in Chandigarh",
       "category": "Agriculture, Environment, Climate & GI Tags",
       "bullets": [
@@ -58,7 +84,7 @@
       "timestamp": 1788717684
     },
     {
-      "id": "nat_05",
+      "id": "nat_07",
       "title": "PM Addresses Centenary Celebrations of SRCC, Highlights Economic Progress",
       "category": "National Economy, Union Budget & Banking",
       "bullets": [
@@ -71,7 +97,7 @@
       "timestamp": 1788706507
     },
     {
-      "id": "nat_06",
+      "id": "nat_08",
       "title": "India to Host Inaugural iBRICS Summit Alongside 18th BRICS Summit in New Delhi",
       "category": "International Relations, Summits & Global Organizations",
       "bullets": [
@@ -87,6 +113,45 @@
   "bihar_news": [
     {
       "id": "bih_01",
+      "title": "Supreme Court Reviews Airfare Regulation and Bharatiya Vayuyan Adhiniyam, 2024 Rules",
+      "category": "National Polity, Judiciary & Governance",
+      "bullets": [
+        "The Supreme Court heard a plea seeking regulatory guidelines to control unpredictable airfare fluctuations and ancillary charges imposed by private airlines.",
+        "The Union Government informed the court that rules under the new Bharatiya Vayuyan Adhiniyam, 2024 are being fast-tracked to modernize the aviation sector.",
+        "The petition highlights the need for an independent regulator to enhance transparency and passenger protection across the civil aviation industry."
+      ],
+      "exam_tag": "UPSC / Civil Services",
+      "date": "07 Sep 2026",
+      "timestamp": 1788771343
+    },
+    {
+      "id": "bih_02",
+      "title": "Vice President Launches India's First National Heart Valve Registry in Chennai",
+      "category": "Science, Technology, Defense & Space",
+      "bullets": [
+        "Vice President C.P. Radhakrishnan inaugurated the 'India Valve Registry' during the 9th edition of the India Valves 2026 conference held in Chennai.",
+        "The registry functions as a multicentre national database collecting secure, de-identified real-world clinical data on heart valve interventions across Indian hospitals.",
+        "It provides India's first continuous national platform to document regional clinical variations, patient demographics, and long-term treatment outcomes for structural heart disease."
+      ],
+      "exam_tag": "UPSC / SSC CGL",
+      "date": "07 Sep 2026",
+      "timestamp": 1788771343
+    },
+    {
+      "id": "bih_03",
+      "title": "India's Progress in Tuberculosis Elimination through Indigenous Innovation",
+      "category": "Govt Schemes, Policies & Social Welfare",
+      "bullets": [
+        "According to the WHO Global TB Report 2025, India’s TB incidence declined by 21% from 237 to 187 cases per lakh population between 2015 and 2024.",
+        "During the same period, TB mortality fell by 25% and treatment coverage improved from 53% to 92%, supported by initiatives like the National TB Elimination Programme (NTEP) and Ni-kshay Poshan Yojana.",
+        "Key institutions driving indigenous research and diagnostics include the Indian Council of Medical Research (ICMR), National Institute for Research in Tuberculosis (NIRT), and Department of Biotechnology (DBT)."
+      ],
+      "exam_tag": "UPSC Prelims",
+      "date": "07 Sep 2026",
+      "timestamp": 1788771390
+    },
+    {
+      "id": "bih_04",
       "title": "Finance Ministry Data Highlights Status of PM Jan Dhan Yojana Accounts",
       "category": "Govt Schemes, Policies & Social Welfare",
       "bullets": [
@@ -99,7 +164,7 @@
       "timestamp": 1788717712
     },
     {
-      "id": "bih_02",
+      "id": "bih_05",
       "title": "NHSRCL Proposes 1,170 km Delhi-Bihar High-Speed Rail Corridor",
       "category": "Infrastructure, Energy & Digital Projects",
       "bullets": [
@@ -112,7 +177,7 @@
       "timestamp": 1788717712
     },
     {
-      "id": "bih_03",
+      "id": "bih_06",
       "title": "Bihar to Establish 700 Model Schools and Dedicated Teacher Training University",
       "category": "Bihar Special Affairs",
       "bullets": [
@@ -125,7 +190,7 @@
       "timestamp": 1788717751
     },
     {
-      "id": "bih_04",
+      "id": "bih_07",
       "title": "IIT Madras Patents Chemical-Free Antibacterial Surface to Combat AMR",
       "category": "Science, Technology, Defense & Space",
       "bullets": [
@@ -138,7 +203,7 @@
       "timestamp": 1788717751
     },
     {
-      "id": "bih_05",
+      "id": "bih_08",
       "title": "NMC Grants Approval for Two New Medical Colleges in Bihar",
       "category": "Bihar Special Affairs",
       "bullets": [
@@ -151,7 +216,7 @@
       "timestamp": 1788717751
     },
     {
-      "id": "bih_06",
+      "id": "bih_09",
       "title": "Cross-Border Himalayan River Management and Nepal-India Floods",
       "category": "Bihar Special Affairs",
       "bullets": [
@@ -164,7 +229,7 @@
       "timestamp": 1788717818
     },
     {
-      "id": "bih_07",
+      "id": "bih_10",
       "title": "India-Nepal Transboundary Cooperation Needed for Himalayan Flood Management",
       "category": "Bihar Special Affairs",
       "bullets": [
