@@ -1,25 +1,19 @@
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
 
-class OnboardingOverviewScreen extends StatefulWidget {
-  final VoidCallback? onGetStarted;
-  final VoidCallback? onSkip;
-  final VoidCallback? onOpenLogin;
-  final VoidCallback? onOpenCoachingRegister;
+class OnboardingWelcomeScreen extends StatefulWidget {
+  final Widget nextScreen;
 
-  const OnboardingOverviewScreen({
+  const OnboardingWelcomeScreen({
     super.key,
-    this.onGetStarted,
-    this.onSkip,
-    this.onOpenLogin,
-    this.onOpenCoachingRegister,
+    this.nextScreen = const HomeScreen(),
   });
 
   @override
-  State<OnboardingOverviewScreen> createState() => _OnboardingOverviewScreenState();
+  State<OnboardingWelcomeScreen> createState() => _OnboardingWelcomeScreenState();
 }
 
-class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
+class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
   String _activeExam = 'ALL';
   String _viewMode = 'overview';
 
@@ -39,26 +33,11 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
     {'id': 'RLY', 'label': 'Railway NTPC'},
   ];
 
-  void _navigateToHome() {
-    if (widget.onGetStarted != null) {
-      widget.onGetStarted!();
-    } else {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => const HomeScreen()),
-      );
-    }
-  }
-
-  void _skipToHome() {
-    if (widget.onSkip != null) {
-      widget.onSkip!();
-    } else {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(builder: (_) => const HomeScreen()),
-      );
-    }
+  void _navigateToNext() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (_) => widget.nextScreen),
+    );
   }
 
   @override
@@ -172,7 +151,7 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
               ),
               const SizedBox(width: 6),
               InkWell(
-                onTap: _skipToHome,
+                onTap: _navigateToNext,
                 borderRadius: BorderRadius.circular(16),
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -262,7 +241,7 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
     );
   }
 
-  // 🎯 3. HERO SECTION
+  // 🎯 3. HERO SECTION WITH BADGES
   Widget _buildHeroSection() {
     return Column(
       children: [
@@ -417,7 +396,7 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
     return Container(height: 24, width: 1, color: _borderColor.withOpacity(0.5));
   }
 
-  // 🛠️ 5. CORE FEATURES SECTION
+  // 🛠️ 5. CORE FEATURES SECTION (9 SMART TOOLS)
   Widget _buildFeaturesSection() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -734,7 +713,7 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
                 elevation: 1.5,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
               ),
-              onPressed: _navigateToHome,
+              onPressed: _navigateToNext,
               child: const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -750,13 +729,13 @@ class _OnboardingOverviewScreenState extends State<OnboardingOverviewScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               TextButton(
-                onPressed: widget.onOpenLogin ?? () {},
+                onPressed: _navigateToNext,
                 child: const Text('Already a Member? Log In',
                     style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: _primaryBlue)),
               ),
               Container(height: 14, width: 1, color: _borderColor),
               TextButton(
-                onPressed: widget.onOpenCoachingRegister ?? () {},
+                onPressed: () {},
                 child: const Text('Coaching Center? Register',
                     style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: _saffronDark)),
               ),
