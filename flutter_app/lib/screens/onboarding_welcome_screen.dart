@@ -17,25 +17,27 @@ class OnboardingWelcomeScreen extends StatefulWidget {
 }
 
 class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
-  final PageController _pageController = PageController();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
-  final _nameController = TextEditingController();
-  final _phoneController = TextEditingController();
 
-  int _currentIndex = 0;
+  String _activeExam = 'ALL';
   bool _isLoading = false;
-  String _selectedExam = 'ALL';
 
-  static const Color _brandBlue = Color(0xFF0038B8);
-  static const Color _darkHeader = Color(0xFF0A1128);
-  static const Color _accentGold = Color(0xFFF59E0B);
-  static const Color _borderSubtle = Color(0xFFE2E8F0);
+  static const Color _primaryBlue = Color(0xFF0038B8);
+  static const Color _darkNavy = Color(0xFF0A1128);
+  static const Color _saffronAccent = Color(0xFFFEA619);
+  static const Color _saffronDark = Color(0xFF855300);
+  static const Color _borderColor = Color(0xFFE2E8F0);
+  static const Color _bgSoft = Color(0xFFF8FAFC);
 
-  final List<Map<String, String>> _examTabs = const [
+  final List<Map<String, String>> _exams = const [
     {'id': 'ALL', 'label': '⚡ Sabhi Exams (All)'},
+    {'id': 'BPSC', 'label': 'BPSC & BSSC'},
     {'id': 'SSC', 'label': 'SSC CGL & CHSL'},
+    {'id': 'BIHAR_SI', 'label': 'Bihar SI & Police'},
     {'id': 'IBPS', 'label': 'IBPS & SBI PO'},
-    {'id': 'BPSC', 'label': 'BPSC & State PCS'},
+    {'id': 'RLY', 'label': 'Railway NTPC'},
   ];
 
   Future<void> _completeOnboarding() async {
@@ -51,6 +53,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
       await prefs.setBool('is_onboarded', true);
       await prefs.setString('custom_aspirant_name', name);
       await prefs.setString('user_name', name);
+      await prefs.setString('user_display_name', name);
+      await prefs.setString('student_contact_id', phone.isNotEmpty ? phone : 'N/A');
       await prefs.setString('user_mobile', phone);
 
       if (phone.isNotEmpty) {
@@ -61,7 +65,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
             'updated_at': DateTime.now().toIso8601String(),
           });
         } catch (e) {
-          debugPrint("Supabase save warning: $e");
+          debugPrint("Supabase sync warning: $e");
         }
       }
 
@@ -77,27 +81,15 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     }
   }
 
-  void _nextSlide() {
-    if (_currentIndex < 3) {
-      _pageController.nextPage(
-        duration: const Duration(milliseconds: 280),
-        curve: Curves.easeInOut,
-      );
-    }
-  }
-
-  void _prevSlide() {
-    if (_currentIndex > 0) {
-      _pageController.previousPage(
-        duration: const Duration(milliseconds: 280),
-        curve: Curves.easeInOut,
-      );
-    }
+  void _skip() {
+    Navigator.pushReplacement(
+      context,
+      MaterialPageRoute(builder: (_) => widget.nextScreen),
+    );
   }
 
   @override
   void dispose() {
-    _pageController.dispose();
     _nameController.dispose();
     _phoneController.dispose();
     super.dispose();
@@ -110,50 +102,54 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
       body: SafeArea(
         child: Column(
           children: [
-            _buildTopBar(),
-            _buildExamChips(),
-            const SizedBox(height: 6),
-
-            // 4-Slide Main Carousel Viewport (Seamless Screen Fit)
+            _buildHeader(),
+            _buildExamFilterBar(),
             Expanded(
-              child: PageView(
-                controller: _pageController,
+              child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
-                onPageChanged: (idx) => setState(() => _currentIndex = idx),
-                children: [
-                  _buildSlideCard(_buildSlide1OverviewHero()),
-                  _buildSlideCard(_buildSlide2TcsSimulator()),
-                  _buildSlideCard(_buildSlide3CoachingHubShowcase()),
-                  _buildSlideCard(_buildSlide4ProfileSetupForm()),
-                ],
+                padding: const EdgeInsets.fromLTRB(16, 12, 16, 28),
+                child: Column(
+                  children: [
+                    _buildHeroSection(),
+                    const SizedBox(height: 18),
+                    _buildSocialProofBar(),
+                    const SizedBox(height: 24),
+                    _buildFeaturesSection(),
+                    const SizedBox(height: 18),
+                    _buildTestimonialCard(),
+                    const SizedBox(height: 22),
+                    _buildProfileRegistrationCard(),
+                  ],
+                ),
               ),
             ),
-
-            // Unified Bottom Indicator & Navigation
-            _buildGlobalBottomNavbar(),
           ],
         ),
       ),
     );
   }
 
-  // --- TOP HEADER ---
-  Widget _buildTopBar() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+  // 🔝 1. TOP BRAND HEADER
+  Widget _buildHeader() {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        border: Border(bottom: BorderSide(color: _borderColor.withOpacity(0.6))),
+      ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Row(
             children: [
               Container(
-                width: 32,
-                height: 32,
+                width: 36,
+                height: 36,
                 decoration: BoxDecoration(
-                  color: _brandBlue,
-                  borderRadius: BorderRadius.circular(8),
+                  color: _primaryBlue,
+                  borderRadius: BorderRadius.circular(10),
                 ),
-                child: const Icon(Icons.check_rounded, color: Colors.white, size: 20),
+                child: const Icon(Icons.check_circle_rounded, color: Colors.white, size: 22),
               ),
               const SizedBox(width: 8),
               Column(
@@ -164,99 +160,84 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
                       const Text(
                         'MockTester',
                         style: TextStyle(
-                          fontSize: 15.5,
+                          fontSize: 16.5,
                           fontWeight: FontWeight.w900,
-                          color: _darkHeader,
+                          color: _darkNavy,
+                          letterSpacing: -0.3,
                         ),
                       ),
-                      const SizedBox(width: 4),
+                      const SizedBox(width: 5),
                       Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
+                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFFEF3C7),
-                          borderRadius: BorderRadius.circular(4),
-                          border: Border.all(color: const Color(0xFFFDE68A)),
+                          color: _saffronAccent.withOpacity(0.25),
+                          borderRadius: BorderRadius.circular(6),
+                          border: Border.all(color: _saffronAccent.withOpacity(0.35)),
                         ),
                         child: const Text(
                           'CBT',
-                          style: TextStyle(
-                            fontSize: 8.5,
-                            fontWeight: FontWeight.w900,
-                            color: Color(0xFF92400E),
-                          ),
+                          style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.w900, color: _saffronDark),
                         ),
                       ),
                     ],
                   ),
                   const Text(
                     'Smart CBT Prep Platform',
-                    style: TextStyle(fontSize: 9, color: Color(0xFF64748B), fontWeight: FontWeight.w600),
+                    style: TextStyle(fontSize: 10, color: Color(0xFF64748B), fontWeight: FontWeight.w600),
                   ),
                 ],
               ),
             ],
           ),
-
-          if (_currentIndex < 3)
-            InkWell(
-              onTap: () {
-                _pageController.animateToPage(
-                  3,
-                  duration: const Duration(milliseconds: 350),
-                  curve: Curves.easeInOut,
-                );
-              },
-              borderRadius: BorderRadius.circular(16),
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4.5),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFEBF2FF),
-                  borderRadius: BorderRadius.circular(16),
-                  border: Border.all(color: _brandBlue.withOpacity(0.35)),
-                ),
-                child: const Text(
-                  'Skip',
-                  style: TextStyle(
-                    fontSize: 11,
-                    fontWeight: FontWeight.bold,
-                    color: _brandBlue,
-                  ),
-                ),
+          InkWell(
+            onTap: _skip,
+            borderRadius: BorderRadius.circular(16),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
+              decoration: BoxDecoration(
+                color: const Color(0xFFEFF6FF),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: _primaryBlue.withOpacity(0.2)),
+              ),
+              child: const Text(
+                'Skip',
+                style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: _primaryBlue),
               ),
             ),
+          ),
         ],
       ),
     );
   }
 
-  Widget _buildExamChips() {
-    return SizedBox(
-      height: 30,
+  // 🏷️ 2. HORIZONTAL EXAM PILLS
+  Widget _buildExamFilterBar() {
+    return Container(
+      height: 40,
+      padding: const EdgeInsets.symmetric(vertical: 5),
+      color: Colors.white,
       child: ListView.separated(
-        padding: const EdgeInsets.symmetric(horizontal: 14),
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         scrollDirection: Axis.horizontal,
-        itemCount: _examTabs.length,
+        itemCount: _exams.length,
         separatorBuilder: (_, __) => const SizedBox(width: 6),
         itemBuilder: (ctx, idx) {
-          final tab = _examTabs[idx];
-          final isSelected = _selectedExam == tab['id'];
-
+          final exam = _exams[idx];
+          final bool isSelected = _activeExam == exam['id'];
           return InkWell(
-            borderRadius: BorderRadius.circular(15),
-            onTap: () => setState(() => _selectedExam = tab['id']!),
+            borderRadius: BorderRadius.circular(16),
+            onTap: () => setState(() => _activeExam = exam['id']!),
             child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 4),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
               decoration: BoxDecoration(
-                color: isSelected ? _brandBlue : Colors.white,
-                borderRadius: BorderRadius.circular(15),
-                border: Border.all(
-                  color: isSelected ? _brandBlue : _borderSubtle,
-                ),
+                color: isSelected ? _primaryBlue : const Color(0xFFF1F5F9),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: isSelected ? _primaryBlue : _borderColor),
               ),
               child: Text(
-                tab['label']!,
+                exam['label']!,
                 style: TextStyle(
-                  fontSize: 10,
+                  fontSize: 10.5,
                   fontWeight: FontWeight.bold,
                   color: isSelected ? Colors.white : const Color(0xFF475569),
                 ),
@@ -268,422 +249,281 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     );
   }
 
-  // Pure seamless scrolling content container: eliminates floating card gap
-  Widget _buildSlideCard(Widget content) {
-    return SingleChildScrollView(
-      physics: const BouncingScrollPhysics(),
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
-      child: content,
-    );
-  }
-
-  // =========================================================================
-  // SLIDE 1: OVERVIEW HERO
-  // =========================================================================
-  Widget _buildSlide1OverviewHero() {
-    return Column(
-      children: [
-        Stack(
-          clipBehavior: Clip.none,
-          alignment: Alignment.center,
-          children: [
-            Container(
-              width: double.infinity,
-              height: 180,
-              decoration: BoxDecoration(
-                gradient: const RadialGradient(
-                  center: Alignment(0, -0.3),
-                  radius: 0.85,
-                  colors: [Color(0xFFEFF6FF), Color(0xFFDBEAFE), Color(0xFFF1F5F9)],
-                ),
-                borderRadius: BorderRadius.circular(18),
-              ),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  Positioned(
-                    bottom: 20,
-                    child: Container(
-                      width: 200,
-                      height: 45,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFFDE68A),
-                        borderRadius: BorderRadius.circular(22),
-                      ),
-                    ),
-                  ),
-                  Positioned(
-                    bottom: 30,
-                    child: Container(
-                      width: 120,
-                      height: 75,
-                      padding: const EdgeInsets.all(5),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF0F172A),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(width: 18, height: 3, color: Colors.greenAccent),
-                              Container(width: 12, height: 3, color: Colors.amber),
-                            ],
-                          ),
-                          const SizedBox(height: 5),
-                          Container(width: 60, height: 3, color: Colors.white70),
-                          const SizedBox(height: 3),
-                          Container(width: 45, height: 3, color: Colors.white38),
-                          const Spacer(),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(width: 26, height: 5, decoration: BoxDecoration(color: _brandBlue, borderRadius: BorderRadius.circular(2))),
-                              Container(width: 18, height: 5, decoration: BoxDecoration(color: Colors.green, borderRadius: BorderRadius.circular(2))),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  const Positioned(
-                    right: 18,
-                    top: 16,
-                    child: Icon(Icons.emoji_events_rounded, color: Color(0xFFF59E0B), size: 34),
-                  ),
-                  Positioned(
-                    top: 24,
-                    child: CircleAvatar(
-                      radius: 22,
-                      backgroundColor: _brandBlue,
-                      child: const Icon(Icons.person, color: Colors.white, size: 28),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            Positioned(
-              top: 8,
-              right: 10,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3.5),
-                decoration: BoxDecoration(
-                  color: _accentGold,
-                  borderRadius: BorderRadius.circular(12),
-                ),
-                child: const Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.bolt, color: Colors.white, size: 12),
-                    SizedBox(width: 2),
-                    Text('Exam Ready', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: Colors.white)),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              bottom: -10,
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(color: const Color(0xFFCBD5E1)),
-                  boxShadow: [
-                    BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 4, offset: const Offset(0, 2)),
-                  ],
-                ),
-                child: const Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.check_circle_outline, color: Colors.green, size: 12),
-                    SizedBox(width: 4),
-                    Text('100% NTA Pattern', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: _darkHeader)),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-        const SizedBox(height: 16),
-
-        RichText(
-          textAlign: TextAlign.center,
-          text: const TextSpan(
-            style: TextStyle(fontSize: 19, fontWeight: FontWeight.w900, color: _darkHeader, letterSpacing: -0.4),
-            children: [
-              TextSpan(text: 'Aapki Manzil, '),
-              TextSpan(text: 'MockTester', style: TextStyle(color: _brandBlue)),
-              TextSpan(text: ' Ka\nSankalp'),
-            ],
-          ),
-        ),
-        const SizedBox(height: 6),
-        const Text(
-          'All-in-one CBT Mocks, Question Vault, Coaching Batches\n& Real Time Analysis ek hi platform par!',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 11, color: Color(0xFF64748B), height: 1.35),
-        ),
-        const SizedBox(height: 14),
-
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
-          decoration: BoxDecoration(
-            color: const Color(0xFFF8FAFF),
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: _borderSubtle),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              _buildStatCol('100% Free', 'Practice Mode', const Color(0xFFD97706)),
-              Container(height: 20, width: 1, color: _borderSubtle),
-              _buildStatCol('TCS Engine', 'NTA Simulation', _brandBlue),
-              Container(height: 20, width: 1, color: _borderSubtle),
-              _buildStatCol('Instant', 'Score Analysis', const Color(0xFF0F766E)),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-
-  // =========================================================================
-  // SLIDE 2: TCS CBT SIMULATOR
-  // =========================================================================
-  Widget _buildSlide2TcsSimulator() {
+  // 🎯 3. HERO SECTION WITH BADGES
+  Widget _buildHeroSection() {
     return Column(
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
           decoration: BoxDecoration(
-            color: const Color(0xFFDCE6FF),
-            borderRadius: BorderRadius.circular(16),
+            color: const Color(0xFFEFF6FF),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: _primaryBlue.withOpacity(0.15)),
           ),
           child: const Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              CircleAvatar(radius: 3.5, backgroundColor: _brandBlue),
-              SizedBox(width: 5),
+              Icon(Icons.star_rounded, color: _saffronAccent, size: 14),
+              SizedBox(width: 4),
               Text(
-                'Exact TCS Server Sync & Negative Marking (-0.50)',
-                style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: Color(0xFF002277)),
+                "India's 1st Smart CBT Prep App 🎯",
+                style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _primaryBlue),
               ),
             ],
           ),
         ),
-        const SizedBox(height: 10),
+        const SizedBox(height: 14),
 
-        Container(
-          padding: const EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            color: const Color(0xFF0F172A),
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(color: const Color(0xFF334155)),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+        SizedBox(
+          width: 220,
+          height: 175,
+          child: Stack(
+            alignment: Alignment.center,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Row(
-                    children: [
-                      CircleAvatar(radius: 3.5, backgroundColor: Colors.green),
-                      SizedBox(width: 5),
-                      Text(
-                        'SSC CGL (Tier-1) Mock #01',
-                        style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: Colors.white),
-                      ),
+              Container(
+                width: 160,
+                height: 160,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  gradient: RadialGradient(
+                    colors: [const Color(0xFFDBEAFE).withOpacity(0.7), Colors.transparent],
+                  ),
+                ),
+              ),
+              Container(
+                width: 125,
+                height: 125,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(26),
+                  border: Border.all(color: const Color(0xFFDBEAFE)),
+                  boxShadow: [
+                    BoxShadow(color: _primaryBlue.withOpacity(0.08), blurRadius: 20, offset: const Offset(0, 8)),
+                  ],
+                ),
+                child: const Icon(Icons.school_rounded, size: 64, color: _primaryBlue),
+              ),
+              Positioned(
+                bottom: 4,
+                left: 0,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: _borderColor),
+                    boxShadow: [
+                      BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 4, offset: const Offset(0, 2)),
                     ],
                   ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF1E293B),
-                      borderRadius: BorderRadius.circular(4),
-                      border: Border.all(color: Colors.amber.withOpacity(0.3)),
-                    ),
-                    child: const Row(
-                      children: [
-                        Text('⏳ ', style: TextStyle(fontSize: 9)),
-                        Text('58:42 Left', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Colors.amber)),
-                      ],
-                    ),
+                  child: const Row(
+                    children: [
+                      Icon(Icons.check_circle_rounded, color: Color(0xFF059669), size: 12),
+                      SizedBox(width: 4),
+                      Text('100% NTA Pattern', style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: Color(0xFF059669))),
+                    ],
                   ),
-                ],
+                ),
               ),
-              const SizedBox(height: 6),
-
-              Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
-                    decoration: BoxDecoration(color: _brandBlue, borderRadius: BorderRadius.circular(4)),
-                    child: const Text('Reasoning (25)', style: TextStyle(fontSize: 8.5, color: Colors.white, fontWeight: FontWeight.bold)),
+              Positioned(
+                top: 6,
+                right: 0,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: _saffronAccent,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: [
+                      BoxShadow(color: _saffronAccent.withOpacity(0.3), blurRadius: 6, offset: const Offset(0, 2)),
+                    ],
                   ),
-                  const SizedBox(width: 6),
-                  const Text('GK/GA (25)', style: TextStyle(fontSize: 8.5, color: Colors.grey)),
-                  const SizedBox(width: 8),
-                  const Text('Quants (25)', style: TextStyle(fontSize: 8.5, color: Colors.grey)),
-                  const SizedBox(width: 8),
-                  const Text('English (25)', style: TextStyle(fontSize: 8.5, color: Colors.grey)),
-                ],
-              ),
-              const SizedBox(height: 8),
-
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(
-                    flex: 3,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text('Question 14', style: TextStyle(color: Colors.white, fontSize: 9.5, fontWeight: FontWeight.bold)),
-                            Text('+2.00 / -0.50', style: TextStyle(color: Colors.greenAccent, fontSize: 9, fontWeight: FontWeight.bold)),
-                          ],
-                        ),
-                        const SizedBox(height: 4),
-                        const Text(
-                          'Find the odd letter pair out of the following given alternatives:',
-                          style: TextStyle(color: Color(0xFFE2E8F0), fontSize: 10, height: 1.25),
-                        ),
-                        const SizedBox(height: 6),
-                        _buildTcsOption('[A] BCD : EFG', false),
-                        _buildTcsOption('[B] FGH : JKL (Saved)', true),
-                        _buildTcsOption('[C] LMN : OPQ', false),
-                        const SizedBox(height: 4),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            const Text('Mark Review', style: TextStyle(fontSize: 8, color: Colors.purpleAccent, fontWeight: FontWeight.bold)),
-                            Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                              decoration: BoxDecoration(color: _brandBlue, borderRadius: BorderRadius.circular(3)),
-                              child: const Text('Save & Next >', style: TextStyle(fontSize: 8, color: Colors.white, fontWeight: FontWeight.bold)),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
+                  child: const Row(
+                    children: [
+                      Icon(Icons.local_fire_department_rounded, color: Color(0xFF855300), size: 12),
+                      SizedBox(width: 3),
+                      Text('AIR #1 Ready', style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.w900, color: Color(0xFF684000))),
+                    ],
                   ),
-                  const SizedBox(width: 6),
-                  Expanded(
-                    flex: 2,
-                    child: Container(
-                      padding: const EdgeInsets.all(5),
-                      decoration: BoxDecoration(color: const Color(0xFF1E293B), borderRadius: BorderRadius.circular(6)),
-                      child: Column(
-                        children: [
-                          const Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Text('PALETTE ', style: TextStyle(color: Colors.grey, fontSize: 8, fontWeight: FontWeight.bold)),
-                              Text('25 QS', style: TextStyle(color: Colors.white, fontSize: 8, fontWeight: FontWeight.bold)),
-                            ],
-                          ),
-                          const SizedBox(height: 4),
-                          Wrap(
-                            spacing: 3,
-                            runSpacing: 3,
-                            children: [
-                              _buildDot('1', Colors.green),
-                              _buildDot('2', Colors.green),
-                              _buildDot('3', Colors.red),
-                              _buildDot('4', Colors.green),
-                              _buildDot('5', Colors.purple),
-                              _buildDot('6', Colors.green),
-                              _buildDot('7', Colors.green),
-                              _buildDot('8', Colors.red),
-                              _buildDot('14', Colors.green, isSelected: true),
-                              _buildDot('15', Colors.grey),
-                              _buildDot('16', Colors.grey),
-                              _buildDot('17', Colors.purple),
-                            ],
-                          ),
-                          const SizedBox(height: 4),
-                          const Divider(height: 1, color: Color(0xFF334155)),
-                          const SizedBox(height: 3),
-                          _buildPaletteStatRow('Answered', '18', Colors.green),
-                          _buildPaletteStatRow('Not Ans', '05', Colors.red),
-                          _buildPaletteStatRow('Review', '02', Colors.purple),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
+                ),
               ),
             ],
           ),
         ),
         const SizedBox(height: 12),
 
-        const Text(
-          'Asli Exam Hall Jaisa Real CBT Interface!',
+        RichText(
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: _darkHeader),
+          text: const TextSpan(
+            style: TextStyle(fontSize: 21, fontWeight: FontWeight.w900, color: _darkNavy, letterSpacing: -0.4),
+            children: [
+              TextSpan(text: 'Aapki Manzil, '),
+              TextSpan(text: 'MockTester', style: TextStyle(color: _primaryBlue)),
+              TextSpan(text: ' Ka Sankalp'),
+            ],
+          ),
         ),
-        const SizedBox(height: 4),
+        const SizedBox(height: 5),
         const Text(
-          'Exam se pehle exam ka darr khatam. Same timer, same navigation palette, aur negative mark calculation direct TCS pattern par.',
+          'All-in-one CBT Mocks, AI Question Vault, Top Coaching & Expert Mentorship ek hi platform par!',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 10.5, color: Color(0xFF64748B), height: 1.35),
-        ),
-        const SizedBox(height: 10),
-
-        Row(
-          children: [
-            Expanded(child: _buildMiniSpecTile(Icons.language, '100% TCS Match', 'Exam hall simulation')),
-            const SizedBox(width: 6),
-            Expanded(child: _buildMiniSpecTile(Icons.bar_chart, 'Live Percentile', 'Instant score comparison')),
-          ],
+          style: TextStyle(fontSize: 11.5, color: Color(0xFF64748B), height: 1.4),
         ),
       ],
     );
   }
 
-  // =========================================================================
-  // SLIDE 3: COACHING HUB SHOWCASE
-  // =========================================================================
-  Widget _buildSlide3CoachingHubShowcase() {
+  // 📊 4. SOCIAL PROOF STRIP
+  Widget _buildSocialProofBar() {
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 12),
+      decoration: BoxDecoration(
+        color: _bgSoft,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: _borderColor),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          _buildStatCol('★ 4.9/5', 'Top Rated', const Color(0xFFD97706)),
+          _buildStatDivider(),
+          _buildStatCol('2.5 Lakh+', 'Aspirants', _primaryBlue),
+          _buildStatDivider(),
+          _buildStatCol('1,000+', 'Institutes', const Color(0xFF059669)),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildStatCol(String val, String lbl, Color color) {
     return Column(
       children: [
+        Text(val, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w900, color: color)),
+        const SizedBox(height: 1),
+        Text(lbl, style: const TextStyle(fontSize: 10, color: Color(0xFF64748B), fontWeight: FontWeight.w600)),
+      ],
+    );
+  }
+
+  Widget _buildStatDivider() {
+    return Container(height: 22, width: 1, color: _borderColor);
+  }
+
+  // 🛠️ 5. CORE FEATURES SECTION (9 SMART TOOLS)
+  Widget _buildFeaturesSection() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3.5),
-              decoration: BoxDecoration(
-                color: const Color(0xFFE0E7FF),
-                borderRadius: BorderRadius.circular(16),
-              ),
-              child: const Row(
-                children: [
-                  Icon(Icons.check_circle, size: 12, color: _brandBlue),
-                  SizedBox(width: 4),
-                  Text('Coaching Integration USP', style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: _brandBlue)),
-                ],
+            Row(
+              children: [
+                Container(
+                  width: 8,
+                  height: 8,
+                  decoration: const BoxDecoration(color: _primaryBlue, shape: BoxShape.circle),
+                ),
+                const SizedBox(width: 6),
+                const Text(
+                  'Khas Feature Mocks Ke Liye',
+                  style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: _darkNavy),
+                ),
+              ],
+            ),
+            const Text('9 Smart Tools', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _primaryBlue)),
+          ],
+        ),
+        const SizedBox(height: 12),
+
+        _buildFeatureCard(
+          icon: Icons.monitor_rounded,
+          iconBg: const Color(0xFFEFF6FF),
+          iconColor: _primaryBlue,
+          title: 'Real CBT Simulation',
+          badgeText: 'TCS Engine',
+          badgeBg: _primaryBlue.withOpacity(0.1),
+          badgeColor: _primaryBlue,
+          desc: 'Exact countdown timer, sectional navigation, real negative marking & live All-India percentile rank calculation.',
+        ),
+        const SizedBox(height: 10),
+
+        _buildFeatureCard(
+          icon: Icons.psychology_rounded,
+          iconBg: _saffronAccent.withOpacity(0.18),
+          iconColor: const Color(0xFF855300),
+          title: 'AI Trap Detector & Vault',
+          badgeText: 'AI Powered',
+          badgeBg: _saffronAccent,
+          badgeColor: const Color(0xFF684000),
+          desc: 'Analyze recurring negative marks, silly traps & examiner tricks automatically with step-by-step reasoning.',
+          isHighlighted: true,
+        ),
+        const SizedBox(height: 10),
+
+        _buildFeatureCard(
+          icon: Icons.apartment_rounded,
+          iconBg: const Color(0xFFECFDF5),
+          iconColor: const Color(0xFF059669),
+          title: 'All India Coaching Hub',
+          badgeText: 'Verified',
+          badgeBg: const Color(0xFFD1FAE5),
+          badgeColor: const Color(0xFF065F46),
+          desc: '"Aapki City Ki Famous Coaching Ab MockTester Pe!" Local institutes create verified CBT papers for their batch students.',
+        ),
+        const SizedBox(height: 10),
+
+        _buildFeatureCard(
+          icon: Icons.school_rounded,
+          iconBg: const Color(0xFFE0E7FF),
+          iconColor: const Color(0xFF3730A3),
+          title: 'Live Classes: Raju & Aman Sir',
+          badgeText: 'Top Faculty',
+          badgeBg: const Color(0xFFFEE2E2),
+          badgeColor: const Color(0xFF991B1B),
+          desc: 'Complete syllabus coverage, daily live doubt sessions, time-management masterclasses & conceptual clarity.',
+        ),
+        const SizedBox(height: 10),
+
+        Row(
+          children: [
+            Expanded(
+              child: _buildMiniToolTile(
+                icon: Icons.refresh_rounded,
+                title: '10-Min Revision',
+                desc: 'Rapid-fire interactive flashcards before tests.',
+                iconColor: _primaryBlue,
               ),
             ),
-            const SizedBox(width: 6),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3.5),
-              decoration: BoxDecoration(
-                color: const Color(0xFFD1FAE5),
-                borderRadius: BorderRadius.circular(16),
+            const SizedBox(width: 10),
+            Expanded(
+              child: _buildMiniToolTile(
+                icon: Icons.newspaper_rounded,
+                title: 'Daily GK Capsule',
+                desc: 'Daily bilingual current affairs booster drill.',
+                iconColor: const Color(0xFF059669),
               ),
-              child: const Row(
-                children: [
-                  Icon(Icons.hub_outlined, size: 12, color: Color(0xFF065F46)),
-                  SizedBox(width: 4),
-                  Text('Digital Classroom Sync', style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: Color(0xFF065F46))),
-                ],
+            ),
+          ],
+        ),
+        const SizedBox(height: 10),
+
+        Row(
+          children: [
+            Expanded(
+              child: _buildMiniToolTile(
+                icon: Icons.menu_book_rounded,
+                title: 'Free PYQ & Notes',
+                desc: '10-year solved papers & short trick cheat-sheets.',
+                iconColor: const Color(0xFFD97706),
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: _buildMiniToolTile(
+                icon: Icons.groups_rounded,
+                title: 'Aspirant Adda',
+                desc: 'Peer doubt resolution & topper rank boards.',
+                iconColor: _primaryBlue,
               ),
             ),
           ],
@@ -691,543 +531,309 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
         const SizedBox(height: 10),
 
         Container(
-          padding: const EdgeInsets.all(10),
+          padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: const Color(0xFFF8FAFF),
+            color: const Color(0xFFEFF6FF),
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: const Color(0xFFDBEAFE)),
+            border: Border.all(color: const Color(0xFFBFDBFE)),
           ),
-          child: Column(
+          child: Row(
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: const Color(0xFFCBD5E1)),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                width: 38,
+                height: 38,
+                decoration: const BoxDecoration(color: _saffronAccent, shape: BoxShape.circle),
+                child: const Icon(Icons.notifications_active_rounded, color: Color(0xFF684000), size: 18),
+              ),
+              const SizedBox(width: 10),
+              const Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
-                      children: const [
-                        Icon(Icons.key, size: 14, color: _brandBlue),
-                        SizedBox(width: 6),
-                        Text('Batch Code: ', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: _darkHeader)),
-                        Text('#PATNA99', style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: _brandBlue)),
+                      children: [
+                        Text('Real-Time Sarkari Job Alerts', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: _darkNavy)),
+                        SizedBox(width: 4),
+                        CircleAvatar(radius: 3, backgroundColor: Colors.red),
                       ],
                     ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2.5),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFD1FAE5),
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: const Text('Verified Batch', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFF065F46))),
-                    ),
+                    SizedBox(height: 2),
+                    Text('Instant push updates for SSC, Railway, Banking vacancies & admit cards.',
+                        style: TextStyle(fontSize: 10.5, color: Color(0xFF64748B))),
                   ],
                 ),
               ),
-              const SizedBox(height: 6),
-
-              _buildCoachingListItem(
-                avatarText: 'LA',
-                avatarColor: const Color(0xFFDBEAFE),
-                avatarTextColor: _brandBlue,
-                title: 'Lakshya Academy',
-                subtitle: 'Patna, Bihar • Special Target Batch',
-                trailingBadgeText: 'CBT Live',
-                trailingBadgeBg: const Color(0xFFEFF6FF),
-                trailingBadgeTextColor: _brandBlue,
-              ),
-              const SizedBox(height: 5),
-
-              _buildCoachingListItem(
-                avatarText: 'SC',
-                avatarColor: const Color(0xFFFEF3C7),
-                avatarTextColor: const Color(0xFFB45309),
-                title: 'Sankalp Classes',
-                subtitle: 'Jaipur & Sikar • Dedicated Mock Series',
-                trailingBadgeText: 'Verified',
-                trailingBadgeBg: const Color(0xFFD1FAE5),
-                trailingBadgeTextColor: const Color(0xFF065F46),
-              ),
-              const SizedBox(height: 5),
-
-              _buildCoachingListItem(
-                avatarText: 'PS',
-                avatarColor: const Color(0xFFD1FAE5),
-                avatarTextColor: const Color(0xFF065F46),
-                title: 'Pioneer SSC Hub',
-                subtitle: 'Mukherjee Nagar, Delhi • Test Series',
-                trailingBadgeText: '• Test #14',
-                trailingBadgeBg: const Color(0xFFFEF3C7),
-                trailingBadgeTextColor: const Color(0xFFB45309),
-              ),
-              const SizedBox(height: 8),
-
-              Row(
-                children: [
-                  const Text('TOP HUBS: ', style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.bold, color: Color(0xFF64748B))),
-                  Expanded(
-                    child: SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: ['Patna', 'Mukherjee Nagar', 'Prayagraj', 'Jaipur', 'Indore', 'Kota'].map((hub) {
-                          return Padding(
-                            padding: const EdgeInsets.only(right: 4),
-                            child: Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(6),
-                                border: Border.all(color: const Color(0xFFE2E8F0)),
-                              ),
-                              child: Text(hub, style: const TextStyle(fontSize: 8.5, color: Color(0xFF475569), fontWeight: FontWeight.w600)),
-                            ),
-                          );
-                        }).toList(),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             ],
           ),
         ),
-        const SizedBox(height: 12),
-
-        const Text(
-          'Aapki City Ki Famous Coaching Ab\nMockTester Pe!',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: _darkHeader, height: 1.25),
-        ),
-        const SizedBox(height: 4),
-        const Text(
-          'Local institute test series directly on MockTester TCS engine. Teachers upload mock papers easily; students practice on real exam software!',
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 10.5, color: Color(0xFF64748B), height: 1.35),
-        ),
-        const SizedBox(height: 10),
-
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _buildSmallFeaturePill(Icons.login, 'Direct Batch Code Login'),
-            const SizedBox(width: 5),
-            _buildSmallFeaturePill(Icons.bar_chart, 'Classroom Live Ranking'),
-          ],
-        ),
-        const SizedBox(height: 4),
-        _buildSmallFeaturePill(Icons.cloud_upload_outlined, 'Easy Digital Paper Upload'),
       ],
     );
   }
 
-  // =========================================================================
-  // SLIDE 4: PROFILE SETUP FORM
-  // =========================================================================
-  Widget _buildSlide4ProfileSetupForm() {
-    return Form(
-      key: _formKey,
-      child: Column(
+  Widget _buildFeatureCard({
+    required IconData icon,
+    required Color iconBg,
+    required Color iconColor,
+    required String title,
+    required String badgeText,
+    required Color badgeBg,
+    required Color badgeColor,
+    required String desc,
+    bool isHighlighted = false,
+  }) {
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: isHighlighted ? _saffronAccent.withOpacity(0.55) : _borderColor,
+          width: isHighlighted ? 1.4 : 1,
+        ),
+        boxShadow: isHighlighted
+            ? [BoxShadow(color: _saffronAccent.withOpacity(0.08), blurRadius: 10, offset: const Offset(0, 3))]
+            : [BoxShadow(color: Colors.black.withOpacity(0.02), blurRadius: 4, offset: const Offset(0, 2))],
+      ),
+      child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(color: _brandBlue.withOpacity(0.1), borderRadius: BorderRadius.circular(10)),
-                child: const Icon(Icons.badge_rounded, color: _brandBlue, size: 22),
-              ),
-              const SizedBox(width: 8),
-              const Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text("Setup Aspirant Profile 🚀", style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900, color: _darkHeader)),
-                  Text("Yeh details aapke scorecard & batch rank par aayegi", style: TextStyle(fontSize: 10, color: Color(0xFF64748B))),
-                ],
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-
           Container(
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-              color: const Color(0xFFFAF8FF),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: _borderSubtle),
-            ),
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(color: iconBg, borderRadius: BorderRadius.circular(12)),
+            child: Icon(icon, color: iconColor, size: 20),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("Full Name *", style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _darkHeader)),
-                const SizedBox(height: 4),
-                TextFormField(
-                  controller: _nameController,
-                  textCapitalization: TextCapitalization.words,
-                  decoration: InputDecoration(
-                    hintText: 'e.g. Anand Sharma',
-                    hintStyle: const TextStyle(fontSize: 11.5, color: Colors.grey),
-                    prefixIcon: const Icon(Icons.person_outline_rounded, color: _brandBlue, size: 16),
-                    filled: true,
-                    fillColor: Colors.white,
-                    contentPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: const BorderSide(color: _borderSubtle)),
-                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: const BorderSide(color: _borderSubtle)),
-                  ),
-                  validator: (val) => (val == null || val.trim().length < 2) ? 'Kripya apna naam enter karein' : null,
-                ),
-                const SizedBox(height: 10),
-
-                const Text("Mobile Number (Optional)", style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _darkHeader)),
-                const SizedBox(height: 4),
-                TextFormField(
-                  controller: _phoneController,
-                  keyboardType: TextInputType.phone,
-                  inputFormatters: [FilteringTextInputFormatter.digitsOnly, LengthLimitingTextInputFormatter(10)],
-                  decoration: InputDecoration(
-                    hintText: 'e.g. 9876543210 (Classroom sync ke liye)',
-                    hintStyle: const TextStyle(fontSize: 11.5, color: Colors.grey),
-                    prefixIcon: const Icon(Icons.phone_android_rounded, color: Colors.grey, size: 16),
-                    filled: true,
-                    fillColor: Colors.white,
-                    contentPadding: const EdgeInsets.symmetric(vertical: 8, horizontal: 10),
-                    border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: const BorderSide(color: _borderSubtle)),
-                    enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: const BorderSide(color: _borderSubtle)),
-                  ),
-                  validator: (val) {
-                    if (val == null || val.trim().isEmpty) return null;
-                    if (!RegExp(r'^[6-9]\d{9}$').hasMatch(val.trim())) return 'Valid 10-digit number enter karein';
-                    return null;
-                  },
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 10),
-
-          Container(
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(color: const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(10)),
-            child: const Column(
-              children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.check_circle, size: 14, color: Colors.green),
-                    SizedBox(width: 6),
-                    Text('100% Free NTA/TCS Pattern Mocks unlocked', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: _darkHeader)),
-                  ],
-                ),
-                SizedBox(height: 4),
-                Row(
-                  children: [
-                    Icon(Icons.check_circle, size: 14, color: Colors.green),
-                    SizedBox(width: 6),
-                    Text('Coaching Classroom Live Sync activated', style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: _darkHeader)),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 16),
-
-          SizedBox(
-            width: double.infinity,
-            height: 46,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: _brandBlue,
-                foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-              ),
-              onPressed: _isLoading ? null : _completeOnboarding,
-              child: _isLoading
-                  ? const SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
-                  : const Text('Start Preparation 🚀', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // --- BOTTOM NAV BAR ---
-  Widget _buildGlobalBottomNavbar() {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(14, 4, 14, 10),
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Slide ${_currentIndex + 1} of 4 • ${_getSlideCategoryLabel()}',
-                style: const TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: _darkHeader),
-              ),
-              Row(
-                children: List.generate(
-                  4,
-                  (index) => AnimatedContainer(
-                    duration: const Duration(milliseconds: 250),
-                    margin: const EdgeInsets.symmetric(horizontal: 2.5),
-                    height: 5.5,
-                    width: _currentIndex == index ? 20 : 6,
-                    decoration: BoxDecoration(
-                      color: _currentIndex == index ? _brandBlue : const Color(0xFFCBD5E1),
-                      borderRadius: BorderRadius.circular(3),
-                    ),
-                  ),
-                ),
-              ),
-              InkWell(
-                onTap: _nextSlide,
-                child: const Row(
-                  children: [
-                    Text('Swipe', style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: Color(0xFF64748B))),
-                    SizedBox(width: 2),
-                    Icon(Icons.arrow_forward_rounded, size: 12, color: Color(0xFF64748B)),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 8),
-
-          if (_currentIndex < 3)
-            Row(
-              children: [
-                if (_currentIndex > 0) ...[
-                  InkWell(
-                    onTap: _prevSlide,
-                    borderRadius: BorderRadius.circular(10),
-                    child: Container(
-                      height: 42,
-                      width: 42,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF1F5F9),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: _borderSubtle),
-                      ),
-                      child: const Icon(Icons.arrow_back_ios_new_rounded, size: 14, color: _darkHeader),
-                    ),
-                  ),
-                  const SizedBox(width: 8),
-                ],
-                Expanded(
-                  child: SizedBox(
-                    height: 42,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: _brandBlue,
-                        foregroundColor: Colors.white,
-                        elevation: 0,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                      ),
-                      onPressed: _nextSlide,
+                    Expanded(
                       child: Text(
-                        _currentIndex == 0
-                            ? 'Explore Real CBT Engine'
-                            : _currentIndex == 1
-                                ? 'Next: Coaching Hub Integration'
-                                : 'Setup Aspirant Profile',
-                        style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold),
+                        title,
+                        style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: _darkNavy),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
                       ),
                     ),
-                  ),
-                ),
-                const SizedBox(width: 8),
-                InkWell(
-                  onTap: _nextSlide,
-                  borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    height: 42,
-                    width: 42,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFFF1F5F9),
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: _borderSubtle),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                      decoration: BoxDecoration(color: badgeBg, borderRadius: BorderRadius.circular(8)),
+                      child: Text(badgeText, style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: badgeColor)),
                     ),
-                    child: const Icon(Icons.arrow_forward_ios_rounded, size: 14, color: _darkHeader),
-                  ),
+                  ],
                 ),
+                const SizedBox(height: 4),
+                Text(desc, style: const TextStyle(fontSize: 11, color: Color(0xFF64748B), height: 1.35)),
               ],
             ),
+          ),
         ],
       ),
     );
   }
 
-  // --- COMPONENT HELPERS ---
-  Widget _buildStatCol(String top, String bottom, Color topColor) {
-    return Column(
-      children: [
-        Text(top, style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w900, color: topColor)),
-        const SizedBox(height: 1),
-        Text(bottom, style: const TextStyle(fontSize: 9.5, color: Color(0xFF64748B), fontWeight: FontWeight.w600)),
-      ],
-    );
-  }
-
-  Widget _buildCoachingListItem({
-    required String avatarText,
-    required Color avatarColor,
-    required Color avatarTextColor,
+  Widget _buildMiniToolTile({
+    required IconData icon,
     required String title,
-    required String subtitle,
-    required String trailingBadgeText,
-    required Color trailingBadgeBg,
-    required Color trailingBadgeTextColor,
+    required String desc,
+    required Color iconColor,
   }) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 7),
+      padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-        border: Border.all(color: const Color(0xFFE2E8F0)),
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: _borderColor),
       ),
-      child: Row(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
             width: 32,
             height: 32,
-            decoration: BoxDecoration(
-              color: avatarColor,
-              borderRadius: BorderRadius.circular(8),
-            ),
-            alignment: Alignment.center,
-            child: Text(avatarText, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: avatarTextColor)),
+            decoration: BoxDecoration(color: _bgSoft, borderRadius: BorderRadius.circular(8)),
+            child: Icon(icon, size: 16, color: iconColor),
           ),
-          const SizedBox(width: 8),
-          Expanded(
+          const SizedBox(height: 8),
+          Text(title, style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: _darkNavy)),
+          const SizedBox(height: 3),
+          Text(desc, style: const TextStyle(fontSize: 10, color: Color(0xFF64748B), height: 1.25), maxLines: 2, overflow: TextOverflow.ellipsis),
+        ],
+      ),
+    );
+  }
+
+  // 🏆 6. TESTIMONIAL CARD
+  Widget _buildTestimonialCard() {
+    return Container(
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: _bgSoft,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: _borderColor),
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 38,
+            height: 38,
+            decoration: BoxDecoration(color: _primaryBlue.withOpacity(0.1), shape: BoxShape.circle),
+            child: const Icon(Icons.workspace_premium_rounded, color: _primaryBlue, size: 22),
+          ),
+          const SizedBox(width: 12),
+          const Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
+                Text(
+                  '"MockTester ke trap analysis ne mere negative score ko 18 se ghatakar 2 par la diya!"',
+                  style: TextStyle(fontSize: 11, fontStyle: FontStyle.italic, color: _darkNavy, height: 1.35),
+                ),
+                SizedBox(height: 3),
+                Text('— Rakesh Verma (Selected, SSC CGL 2023)',
+                    style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: Color(0xFF64748B))),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // 📝 7. PROFILE SETUP FORM (Inline Seamless Box)
+  Widget _buildProfileRegistrationCard() {
+    return Container(
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: _borderColor),
+        boxShadow: [
+          BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 14, offset: const Offset(0, 4)),
+        ],
+      ),
+      child: Form(
+        key: _formKey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(color: _primaryBlue.withOpacity(0.1), borderRadius: BorderRadius.circular(10)),
+                  child: const Icon(Icons.person_add_alt_1_rounded, color: _primaryBlue, size: 22),
+                ),
+                const SizedBox(width: 10),
+                const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(title, style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _darkHeader)),
-                    const SizedBox(width: 3),
-                    const Icon(Icons.check_circle, size: 11, color: Color(0xFF059669)),
+                    Text('Start Free Preparation 🚀', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: _darkNavy)),
+                    Text('Enter details for test scorecard & batch sync', style: TextStyle(fontSize: 10.5, color: Color(0xFF64748B))),
                   ],
                 ),
-                Text(subtitle, style: const TextStyle(fontSize: 8.5, color: Color(0xFF64748B))),
               ],
             ),
-          ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
-            decoration: BoxDecoration(
-              color: trailingBadgeBg,
-              borderRadius: BorderRadius.circular(5),
+            const SizedBox(height: 16),
+
+            const Text('Full Name *', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: _darkNavy)),
+            const SizedBox(height: 5),
+            TextFormField(
+              controller: _nameController,
+              textCapitalization: TextCapitalization.words,
+              style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+              decoration: InputDecoration(
+                hintText: 'e.g. Anand Sharma',
+                hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
+                prefixIcon: const Icon(Icons.person_outline_rounded, color: _primaryBlue, size: 18),
+                filled: true,
+                fillColor: _bgSoft,
+                contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _borderColor)),
+                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _borderColor)),
+              ),
+              validator: (val) {
+                if (val == null || val.trim().isEmpty) return 'Kripya apna naam enter karein!';
+                if (val.trim().length < 2) return 'Kam se kam 2 characters ka naam daalein';
+                return null;
+              },
             ),
-            child: Text(trailingBadgeText, style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.bold, color: trailingBadgeTextColor)),
-          ),
-        ],
-      ),
-    );
-  }
+            const SizedBox(height: 12),
 
-  Widget _buildSmallFeaturePill(IconData icon, String text) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
-      decoration: BoxDecoration(
-        color: const Color(0xFFEFF6FF),
-        borderRadius: BorderRadius.circular(6),
-        border: Border.all(color: const Color(0xFFBFDBFE)),
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, size: 11, color: _brandBlue),
-          const SizedBox(width: 4),
-          Text(text, style: const TextStyle(fontSize: 8.5, fontWeight: FontWeight.bold, color: _darkHeader)),
-        ],
-      ),
-    );
-  }
+            const Text('Mobile Number (Optional)', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: _darkNavy)),
+            const SizedBox(height: 5),
+            TextFormField(
+              controller: _phoneController,
+              keyboardType: TextInputType.phone,
+              inputFormatters: [
+                FilteringTextInputFormatter.digitsOnly,
+                LengthLimitingTextInputFormatter(10),
+              ],
+              style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+              decoration: InputDecoration(
+                hintText: 'e.g. 9876543210 (Classroom sync ke liye)',
+                hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
+                prefixIcon: const Icon(Icons.phone_android_rounded, color: Colors.grey, size: 18),
+                filled: true,
+                fillColor: _bgSoft,
+                contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+                border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _borderColor)),
+                enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _borderColor)),
+              ),
+              validator: (val) {
+                if (val == null || val.trim().isEmpty) return null;
+                final clean = val.trim();
+                final regex = RegExp(r'^[6-9]\d{9}$');
+                if (!regex.hasMatch(clean)) {
+                  if (clean.length != 10) return 'Poora 10-digit number enter karein';
+                  return 'Valid mobile number enter karein';
+                }
+                return null;
+              },
+            ),
+            const SizedBox(height: 16),
 
-  Widget _buildTcsOption(String text, bool isChecked) {
-    return Container(
-      margin: const EdgeInsets.only(bottom: 3),
-      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
-      decoration: BoxDecoration(
-        color: isChecked ? const Color(0xFF1E3A8A).withOpacity(0.3) : const Color(0xFF1E293B),
-        borderRadius: BorderRadius.circular(4),
-        border: Border.all(color: isChecked ? Colors.greenAccent : Colors.transparent),
-      ),
-      child: Text(text, style: TextStyle(fontSize: 8.5, color: isChecked ? Colors.greenAccent : Colors.white70)),
-    );
-  }
+            SizedBox(
+              width: double.infinity,
+              height: 48,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: _primaryBlue,
+                  foregroundColor: Colors.white,
+                  elevation: 1.5,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                ),
+                onPressed: _isLoading ? null : _completeOnboarding,
+                child: _isLoading
+                    ? const SizedBox(height: 20, width: 20, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                    : const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text('Get Started / Shuru Karein', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+                          SizedBox(width: 6),
+                          Icon(Icons.arrow_forward_rounded, size: 16),
+                        ],
+                      ),
+              ),
+            ),
+            const SizedBox(height: 10),
 
-  Widget _buildDot(String label, Color color, {bool isSelected = false}) {
-    return Container(
-      width: 15,
-      height: 15,
-      decoration: BoxDecoration(
-        color: color,
-        borderRadius: BorderRadius.circular(3),
-        border: isSelected ? Border.all(color: Colors.white, width: 1.5) : null,
-      ),
-      alignment: Alignment.center,
-      child: Text(label, style: const TextStyle(color: Colors.white, fontSize: 7, fontWeight: FontWeight.bold)),
-    );
-  }
-
-  Widget _buildPaletteStatRow(String title, String val, Color col) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 1),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Row(
-            children: [
-              CircleAvatar(radius: 2.5, backgroundColor: col),
-              const SizedBox(width: 3),
-              Text(title, style: const TextStyle(fontSize: 7, color: Colors.grey)),
-            ],
-          ),
-          Text(val, style: TextStyle(fontSize: 7, fontWeight: FontWeight.bold, color: col)),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildMiniSpecTile(IconData icon, String title, String subtitle) {
-    return Container(
-      padding: const EdgeInsets.all(8),
-      decoration: BoxDecoration(color: const Color(0xFFF8FAFF), borderRadius: BorderRadius.circular(10), border: Border.all(color: _borderSubtle)),
-      child: Row(
-        children: [
-          Icon(icon, size: 18, color: _brandBlue),
-          const SizedBox(width: 6),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            const Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(title, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: _darkHeader)),
-                Text(subtitle, style: const TextStyle(fontSize: 8, color: Color(0xFF64748B))),
+                Icon(Icons.check_circle_rounded, color: Color(0xFF059669), size: 13),
+                SizedBox(width: 4),
+                Text('Free Daily Quizzes • No Password Required',
+                    style: TextStyle(fontSize: 10.5, color: Color(0xFF64748B), fontWeight: FontWeight.w500)),
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
-  }
-
-  String _getSlideCategoryLabel() {
-    switch (_currentIndex) {
-      case 0:
-        return 'Overview';
-      case 1:
-        return 'TCS Simulation';
-      case 2:
-        return 'Coaching Hub';
-      case 3:
-        return 'Aspirant Profile';
-      default:
-        return '';
-    }
   }
 }
