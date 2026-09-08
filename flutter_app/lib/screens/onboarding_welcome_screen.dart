@@ -23,52 +23,50 @@ class OnboardingWelcomeScreen extends StatefulWidget {
 class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     with TickerProviderStateMixin {
   final PageController _pageController = PageController();
-  final _formKey = GlobalKey<FormState>();
+
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
 
-  late final AnimationController _fadeController;
-  late final AnimationController _floatController;
+  late final AnimationController _pageAnimation;
+  late final AnimationController _floatAnimation;
 
   int _currentIndex = 0;
   bool _isLoading = false;
 
-  // ---------------------------------------------------------------------------
-  // PREMIUM EDU-TECH DESIGN SYSTEM
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
+  // PREMIUM DESIGN SYSTEM
+  // ===========================================================================
 
-  static const Color _background = Color(0xFFF7F9FC);
-  static const Color _surface = Colors.white;
+  static const Color _background = Color(0xFFF8FAFC);
+  static const Color _white = Colors.white;
 
-  static const Color _navy = Color(0xFF081A3A);
+  static const Color _navy = Color(0xFF101828);
   static const Color _primary = Color(0xFF155EEF);
-  static const Color _primaryDark = Color(0xFF0B46C1);
-  static const Color _primaryLight = Color(0xFFEAF2FF);
+  static const Color _primaryDark = Color(0xFF0040C1);
 
-  static const Color _textPrimary = Color(0xFF101828);
-  static const Color _textSecondary = Color(0xFF667085);
-  static const Color _textTertiary = Color(0xFF98A2B3);
+  static const Color _secondary = Color(0xFF667085);
+  static const Color _muted = Color(0xFF98A2B3);
 
   static const Color _border = Color(0xFFE4E7EC);
 
-  static const Color _orange = Color(0xFFFF9F1C);
   static const Color _green = Color(0xFF12B76A);
   static const Color _purple = Color(0xFF7F56D9);
-  static const Color _cyan = Color(0xFF06AED4);
+  static const Color _orange = Color(0xFFF79009);
 
   @override
   void initState() {
     super.initState();
 
-    _fadeController = AnimationController(
+    _pageAnimation = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 650),
+      duration: const Duration(milliseconds: 600),
     )..forward();
 
-    _floatController = AnimationController(
+    _floatAnimation = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 2800),
+      duration: const Duration(milliseconds: 2600),
     )..repeat(reverse: true);
   }
 
@@ -77,33 +75,60 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     _pageController.dispose();
     _nameController.dispose();
     _phoneController.dispose();
-    _fadeController.dispose();
-    _floatController.dispose();
+    _pageAnimation.dispose();
+    _floatAnimation.dispose();
     super.dispose();
   }
 
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
+  // NAVIGATION
+  // ===========================================================================
+
+  void _nextPage() {
+    if (_currentIndex < 2) {
+      _pageController.nextPage(
+        duration: const Duration(milliseconds: 450),
+        curve: Curves.easeOutCubic,
+      );
+    }
+  }
+
+  void _skipToProfile() {
+    _pageController.animateToPage(
+      2,
+      duration: const Duration(milliseconds: 450),
+      curve: Curves.easeOutCubic,
+    );
+  }
+
+  // ===========================================================================
   // REGISTRATION
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
 
   Future<void> _completeRegistration() async {
     FocusScope.of(context).unfocus();
 
-    if (!_formKey.currentState!.validate() || _isLoading) return;
+    if (!_formKey.currentState!.validate() || _isLoading) {
+      return;
+    }
 
-    setState(() => _isLoading = true);
+    setState(() {
+      _isLoading = true;
+    });
 
-    final name = _nameController.text.trim();
-    final phone = _phoneController.text.trim();
+    final String name = _nameController.text.trim();
+    final String phone = _phoneController.text.trim();
 
     try {
-      final prefs = await SharedPreferences.getInstance();
+      final SharedPreferences prefs =
+          await SharedPreferences.getInstance();
 
       await prefs.setBool('is_onboarded', true);
       await prefs.setString('custom_aspirant_name', name);
       await prefs.setString('user_name', name);
       await prefs.setString('user_mobile', phone);
 
+      // Supabase sync
       if (phone.isNotEmpty) {
         try {
           await Supabase.instance.client.from('app_users').upsert({
@@ -127,123 +152,169 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     } catch (e) {
       debugPrint('Storage error: $e');
 
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            behavior: SnackBarBehavior.floating,
-            backgroundColor: _navy,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(14),
-            ),
-            content: const Text(
-              'Something went wrong. Please try again.',
-            ),
+      if (!mounted) return;
+
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          behavior: SnackBarBehavior.floating,
+          backgroundColor: _navy,
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(14),
           ),
-        );
-      }
+          content: const Text(
+            'Something went wrong. Please try again.',
+          ),
+        ),
+      );
     } finally {
       if (mounted) {
-        setState(() => _isLoading = false);
+        setState(() {
+          _isLoading = false;
+        });
       }
     }
   }
 
-  void _goNext() {
-    if (_currentIndex < 2) {
-      _pageController.nextPage(
-        duration: const Duration(milliseconds: 450),
-        curve: Curves.easeOutCubic,
-      );
-    }
-  }
-
-  void _skip() {
-    _pageController.animateToPage(
-      2,
-      duration: const Duration(milliseconds: 450),
-      curve: Curves.easeOutCubic,
-    );
-  }
-
-  // ---------------------------------------------------------------------------
-  // BUILD
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
+  // MAIN BUILD
+  // ===========================================================================
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: _background,
-      resizeToAvoidBottomInset: true,
-      body: SafeArea(
-        child: Column(
-          children: [
-            _buildTopBar(),
+    return AnnotatedRegion<SystemUiOverlayStyle>(
+      value: const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+        systemNavigationBarColor: _background,
+        systemNavigationBarIconBrightness: Brightness.dark,
+      ),
+      child: Scaffold(
+        backgroundColor: _background,
+        resizeToAvoidBottomInset: true,
+        body: SafeArea(
+          child: Stack(
+            children: [
+              // Extremely subtle premium background lighting.
+              _buildBackgroundGlow(),
 
-            Expanded(
-              child: PageView(
-                controller: _pageController,
-                physics: const BouncingScrollPhysics(),
-                onPageChanged: (index) {
-                  setState(() {
-                    _currentIndex = index;
-                  });
-
-                  _fadeController
-                    ..reset()
-                    ..forward();
-                },
+              Column(
                 children: [
-                  _buildWelcomePage(),
-                  _buildFeaturesPage(),
-                  _buildProfilePage(),
+                  _buildTopBar(),
+
+                  Expanded(
+                    child: PageView(
+                      controller: _pageController,
+                      physics: const BouncingScrollPhysics(),
+                      onPageChanged: (index) {
+                        setState(() {
+                          _currentIndex = index;
+                        });
+
+                        _pageAnimation
+                          ..reset()
+                          ..forward();
+                      },
+                      children: [
+                        _buildWelcomePage(),
+                        _buildCoachingPage(),
+                        _buildProfilePage(),
+                      ],
+                    ),
+                  ),
+
+                  _buildBottomProgress(),
                 ],
               ),
-            ),
-
-            _buildBottomProgress(),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
+  // BACKGROUND
+  // ===========================================================================
+
+  Widget _buildBackgroundGlow() {
+    return IgnorePointer(
+      child: Stack(
+        children: [
+          Positioned(
+            top: -100,
+            right: -100,
+            child: Container(
+              width: 280,
+              height: 280,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: RadialGradient(
+                  colors: [
+                    _primary.withValues(alpha: 0.065),
+                    Colors.transparent,
+                  ],
+                ),
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: -140,
+            left: -120,
+            child: Container(
+              width: 300,
+              height: 300,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: RadialGradient(
+                  colors: [
+                    _purple.withValues(alpha: 0.045),
+                    Colors.transparent,
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ===========================================================================
   // TOP BAR
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
 
   Widget _buildTopBar() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 14, 20, 8),
+      padding: const EdgeInsets.fromLTRB(20, 12, 18, 4),
       child: Row(
         children: [
-          // Brand
           Row(
             children: [
               Container(
-                width: 38,
-                height: 38,
+                width: 40,
+                height: 40,
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
                     colors: [
-                      Color(0xFF155EEF),
-                      Color(0xFF0040C1),
+                      Color(0xFF1677FF),
+                      Color(0xFF0047D9),
                     ],
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
                   ),
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(13),
                   boxShadow: [
                     BoxShadow(
-                      color: _primary.withValues(alpha: 0.22),
-                      blurRadius: 14,
-                      offset: const Offset(0, 6),
+                      color: _primary.withValues(alpha: 0.20),
+                      blurRadius: 16,
+                      offset: const Offset(0, 7),
                     ),
                   ],
                 ),
                 child: const Icon(
                   Icons.school_rounded,
                   color: Colors.white,
-                  size: 21,
+                  size: 22,
                 ),
               ),
               const SizedBox(width: 10),
@@ -253,19 +324,20 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
                   const Text(
                     'MockTester',
                     style: TextStyle(
-                      color: _textPrimary,
-                      fontSize: 16,
+                      color: _navy,
+                      fontSize: 17,
                       fontWeight: FontWeight.w900,
-                      letterSpacing: -0.4,
+                      letterSpacing: -0.6,
                     ),
                   ),
+                  const SizedBox(height: 1),
                   Text(
                     'SMART EXAM PREP',
                     style: TextStyle(
                       color: _primary,
                       fontSize: 7.5,
                       fontWeight: FontWeight.w900,
-                      letterSpacing: 1.2,
+                      letterSpacing: 1.15,
                     ),
                   ),
                 ],
@@ -277,19 +349,20 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
 
           if (_currentIndex < 2)
             TextButton(
-              onPressed: _skip,
+              onPressed: _skipToProfile,
               style: TextButton.styleFrom(
-                foregroundColor: _textSecondary,
+                foregroundColor: _secondary,
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
+                  horizontal: 10,
                   vertical: 8,
                 ),
+                minimumSize: const Size(48, 42),
               ),
               child: const Text(
                 'Skip',
                 style: TextStyle(
                   fontSize: 13,
-                  fontWeight: FontWeight.w700,
+                  fontWeight: FontWeight.w800,
                 ),
               ),
             ),
@@ -298,51 +371,51 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     );
   }
 
-  // ---------------------------------------------------------------------------
-  // PAGE 1 — HERO
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
+  // PAGE 1 — BRAND HERO
+  // ===========================================================================
 
   Widget _buildWelcomePage() {
     return FadeTransition(
       opacity: CurvedAnimation(
-        parent: _fadeController,
+        parent: _pageAnimation,
         curve: Curves.easeOut,
       ),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(22, 12, 22, 8),
+        padding: const EdgeInsets.fromLTRB(22, 8, 22, 6),
         child: Column(
           children: [
             const Spacer(flex: 1),
 
             AnimatedBuilder(
-              animation: _floatController,
+              animation: _floatAnimation,
               builder: (context, child) {
-                final offset =
-                    lerpDouble(-5, 5, _floatController.value) ?? 0;
+                final double y =
+                    lerpDouble(-4, 4, _floatAnimation.value) ?? 0;
 
                 return Transform.translate(
-                  offset: Offset(0, offset),
+                  offset: Offset(0, y),
                   child: child,
                 );
               },
-              child: _buildHeroIllustration(),
+              child: _buildHeroVisual(),
             ),
 
-            const SizedBox(height: 32),
+            const SizedBox(height: 26),
 
             const Text(
-              'Your Preparation.',
+              'Prepare Better.',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: _textPrimary,
-                fontSize: 30,
-                fontWeight: FontWeight.w900,
-                letterSpacing: -1.1,
+                color: _navy,
+                fontSize: 31,
                 height: 1.05,
+                fontWeight: FontWeight.w900,
+                letterSpacing: -1.3,
               ),
             ),
 
-            const SizedBox(height: 3),
+            const SizedBox(height: 1),
 
             ShaderMask(
               shaderCallback: (bounds) {
@@ -354,185 +427,183 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
                 ).createShader(bounds);
               },
               child: const Text(
-                'Your Selection.',
+                'Perform Better.',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: -1.1,
+                  fontSize: 31,
                   height: 1.05,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: -1.3,
                 ),
               ),
             ),
 
-            const SizedBox(height: 18),
+            const SizedBox(height: 15),
 
-            Text(
+            const Text(
               'Bihar competitive exams ke liye\n'
-              'real exam experience ke saath practice karein.',
+              'real exam environment mein practice karein.',
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: _textSecondary,
-                fontSize: 14,
+                color: _secondary,
+                fontSize: 13.5,
                 height: 1.55,
                 fontWeight: FontWeight.w500,
               ),
             ),
 
-            const SizedBox(height: 22),
-
-            _buildTrustPill(),
-
             const Spacer(flex: 2),
 
             _buildPrimaryButton(
-              label: 'Explore MockTester',
+              label: 'Start Exploring',
               icon: Icons.arrow_forward_rounded,
-              onPressed: _goNext,
+              onPressed: _nextPage,
             ),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 8),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildHeroIllustration() {
+  // ===========================================================================
+  // HERO VISUAL
+  // ===========================================================================
+
+  Widget _buildHeroVisual() {
     return SizedBox(
-      width: 240,
-      height: 205,
+      width: 255,
+      height: 220,
       child: Stack(
+        clipBehavior: Clip.none,
         alignment: Alignment.center,
         children: [
-          // Glow
+          // Soft glow
           Container(
-            width: 175,
-            height: 175,
+            width: 210,
+            height: 210,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               gradient: RadialGradient(
                 colors: [
-                  _primary.withValues(alpha: 0.16),
+                  _primary.withValues(alpha: 0.11),
                   _primary.withValues(alpha: 0),
                 ],
               ),
             ),
           ),
 
-          // Main card
+          // Main dashboard
           Container(
-            width: 190,
-            height: 145,
+            width: 205,
+            height: 158,
+            padding: const EdgeInsets.all(18),
             decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(24),
+              color: _white,
+              borderRadius: BorderRadius.circular(25),
               border: Border.all(
                 color: Colors.white,
-                width: 2,
+                width: 1.5,
               ),
               boxShadow: [
                 BoxShadow(
                   color: _navy.withValues(alpha: 0.10),
-                  blurRadius: 30,
-                  offset: const Offset(0, 16),
+                  blurRadius: 32,
+                  offset: const Offset(0, 18),
                 ),
               ],
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(18),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        width: 35,
-                        height: 35,
-                        decoration: BoxDecoration(
-                          color: _primaryLight,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                        child: const Icon(
-                          Icons.analytics_rounded,
-                          color: _primary,
-                          size: 20,
-                        ),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      width: 39,
+                      height: 39,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFEAF2FF),
+                        borderRadius: BorderRadius.circular(11),
                       ),
-                      const SizedBox(width: 10),
-                      const Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Mock Test',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w800,
-                                fontSize: 12,
-                                color: _textPrimary,
-                              ),
-                            ),
-                            SizedBox(height: 3),
-                            Text(
-                              'Bihar Exams',
-                              style: TextStyle(
-                                fontSize: 9,
-                                color: _textTertiary,
-                              ),
-                            ),
-                          ],
-                        ),
+                      child: const Icon(
+                        Icons.analytics_rounded,
+                        color: _primary,
+                        size: 21,
                       ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 7,
-                          vertical: 4,
-                        ),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFFEAFBF3),
-                          borderRadius: BorderRadius.circular(20),
-                        ),
-                        child: const Text(
-                          'LIVE',
-                          style: TextStyle(
-                            color: _green,
-                            fontSize: 7,
-                            fontWeight: FontWeight.w900,
+                    ),
+                    const SizedBox(width: 10),
+                    const Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Mock Test',
+                            style: TextStyle(
+                              color: _navy,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w900,
+                            ),
                           ),
-                        ),
+                          SizedBox(height: 3),
+                          Text(
+                            'Bihar Exams',
+                            style: TextStyle(
+                              color: _muted,
+                              fontSize: 9.5,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                        ],
                       ),
-                    ],
-                  ),
-                  const Spacer(),
-                  Row(
-                    children: [
-                      _miniStat('85%', 'Accuracy'),
-                      const SizedBox(width: 8),
-                      _miniStat('124', 'Rank'),
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                    Container(
+                      width: 8,
+                      height: 8,
+                      decoration: const BoxDecoration(
+                        color: _green,
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                  ],
+                ),
+
+                const Spacer(),
+
+                Row(
+                  children: [
+                    _buildHeroStat(
+                      value: '85%',
+                      label: 'Accuracy',
+                    ),
+                    const SizedBox(width: 8),
+                    _buildHeroStat(
+                      value: '124',
+                      label: 'Rank',
+                    ),
+                  ],
+                ),
+              ],
             ),
           ),
 
-          // Floating check
+          // Check badge
           Positioned(
+            top: 13,
             right: 8,
-            top: 15,
-            child: _floatingBadge(
-              Icons.check_rounded,
-              _green,
+            child: _buildFloatingBadge(
+              icon: Icons.check_rounded,
+              color: _green,
             ),
           ),
 
-          // Floating rocket
+          // Small progress badge
           Positioned(
-            left: 5,
-            bottom: 10,
-            child: _floatingBadge(
-              Icons.rocket_launch_rounded,
-              _orange,
+            bottom: 7,
+            left: 8,
+            child: _buildFloatingBadge(
+              icon: Icons.trending_up_rounded,
+              color: _primary,
             ),
           ),
         ],
@@ -540,24 +611,27 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     );
   }
 
-  Widget _miniStat(String value, String label) {
+  Widget _buildHeroStat({
+    required String value,
+    required String label,
+  }) {
     return Expanded(
       child: Container(
         padding: const EdgeInsets.symmetric(
-          horizontal: 8,
-          vertical: 8,
+          vertical: 9,
+          horizontal: 6,
         ),
         decoration: BoxDecoration(
-          color: _background,
-          borderRadius: BorderRadius.circular(10),
+          color: const Color(0xFFF8FAFC),
+          borderRadius: BorderRadius.circular(12),
         ),
         child: Column(
           children: [
             Text(
               value,
               style: const TextStyle(
-                color: _textPrimary,
-                fontSize: 13,
+                color: _navy,
+                fontSize: 15,
                 fontWeight: FontWeight.w900,
               ),
             ),
@@ -565,9 +639,9 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
             Text(
               label,
               style: const TextStyle(
-                color: _textTertiary,
-                fontSize: 8,
-                fontWeight: FontWeight.w600,
+                color: _muted,
+                fontSize: 8.5,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ],
@@ -576,153 +650,74 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     );
   }
 
-  Widget _floatingBadge(IconData icon, Color color) {
+  Widget _buildFloatingBadge({
+    required IconData icon,
+    required Color color,
+  }) {
     return Container(
-      width: 46,
-      height: 46,
+      width: 51,
+      height: 51,
       decoration: BoxDecoration(
         color: Colors.white,
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(
-            color: color.withValues(alpha: 0.20),
+            color: color.withValues(alpha: 0.18),
             blurRadius: 18,
-            offset: const Offset(0, 8),
+            offset: const Offset(0, 7),
           ),
         ],
       ),
       child: Center(
         child: Container(
-          width: 32,
-          height: 32,
+          width: 35,
+          height: 35,
           decoration: BoxDecoration(
-            color: color.withValues(alpha: 0.11),
+            color: color.withValues(alpha: 0.10),
             shape: BoxShape.circle,
           ),
           child: Icon(
             icon,
             color: color,
-            size: 17,
+            size: 18,
           ),
         ),
       ),
     );
   }
 
-  Widget _buildTrustPill() {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 13,
-        vertical: 9,
-      ),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(30),
-        border: Border.all(color: _border),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withValues(alpha: 0.03),
-            blurRadius: 12,
-            offset: const Offset(0, 5),
-          ),
-        ],
-      ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Container(
-            width: 23,
-            height: 23,
-            decoration: const BoxDecoration(
-              color: Color(0xFFEAFBF3),
-              shape: BoxShape.circle,
-            ),
-            child: const Icon(
-              Icons.verified_rounded,
-              color: _green,
-              size: 14,
-            ),
-          ),
-          const SizedBox(width: 8),
-          const Text(
-            'Built for serious aspirants',
-            style: TextStyle(
-              color: _textSecondary,
-              fontSize: 11,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
+  // ===========================================================================
+  // PAGE 2 — COACHING + CBT
+  // ===========================================================================
 
-  // ---------------------------------------------------------------------------
-  // PAGE 2 — FEATURES
-  // ---------------------------------------------------------------------------
-
-  Widget _buildFeaturesPage() {
+  Widget _buildCoachingPage() {
     return FadeTransition(
       opacity: CurvedAnimation(
-        parent: _fadeController,
+        parent: _pageAnimation,
         curve: Curves.easeOut,
       ),
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(22, 14, 22, 8),
+        padding: const EdgeInsets.fromLTRB(22, 15, 22, 6),
         child: Column(
           children: [
-            _buildPageHeading(
-              eyebrow: 'ONE PLATFORM',
-              title: 'Everything you need\nto prepare smarter.',
-              subtitle:
-                  'Practice like the real exam. Analyse mistakes. Improve every day.',
-            ),
+            _buildSectionHeader(),
 
-            const SizedBox(height: 22),
+            const SizedBox(height: 24),
 
             Expanded(
               child: SingleChildScrollView(
                 physics: const BouncingScrollPhysics(),
                 child: Column(
                   children: [
-                    _buildPremiumFeature(
-                      icon: Icons.monitor_rounded,
-                      iconColor: _primary,
-                      title: 'Real CBT Experience',
-                      description:
-                          'Exam-like timer, question palette, navigation aur negative marking.',
-                      tag: 'EXAM MODE',
-                    ),
-                    const SizedBox(height: 12),
+                    _buildCBTCard(),
 
-                    _buildPremiumFeature(
-                      icon: Icons.psychology_rounded,
-                      iconColor: _purple,
-                      title: 'Smart Mistake Analysis',
-                      description:
-                          'Tricky questions aur common mistakes identify karke accuracy improve karein.',
-                      tag: 'SMART AI',
-                    ),
-                    const SizedBox(height: 12),
+                    const SizedBox(height: 14),
 
-                    _buildPremiumFeature(
-                      icon: Icons.groups_rounded,
-                      iconColor: _green,
-                      title: 'Coaching & Batch Sync',
-                      description:
-                          'Apne institute ke batch ke saath tests aur performance seamlessly sync karein.',
-                      tag: 'CONNECTED',
-                    ),
-                    const SizedBox(height: 12),
+                    _buildCoachingCard(),
 
-                    _buildPremiumFeature(
-                      icon: Icons.bolt_rounded,
-                      iconColor: _orange,
-                      title: 'Daily Fast Practice',
-                      description:
-                          'Current affairs, formulas aur quick drills se daily preparation consistent rakhein.',
-                      tag: '10 MIN DAILY',
-                    ),
+                    const SizedBox(height: 14),
+
+                    _buildMiniFeatureStrip(),
                   ],
                 ),
               ),
@@ -733,61 +728,62 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
             _buildPrimaryButton(
               label: 'Create My Profile',
               icon: Icons.arrow_forward_rounded,
-              onPressed: _goNext,
+              onPressed: _nextPage,
             ),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 8),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildPageHeading({
-    required String eyebrow,
-    required String title,
-    required String subtitle,
-  }) {
+  Widget _buildSectionHeader() {
     return Column(
       children: [
         Container(
           padding: const EdgeInsets.symmetric(
-            horizontal: 10,
+            horizontal: 11,
             vertical: 6,
           ),
           decoration: BoxDecoration(
-            color: _primaryLight,
-            borderRadius: BorderRadius.circular(20),
+            color: const Color(0xFFEAF2FF),
+            borderRadius: BorderRadius.circular(30),
           ),
-          child: Text(
-            eyebrow,
-            style: const TextStyle(
+          child: const Text(
+            'ONE PLATFORM',
+            style: TextStyle(
               color: _primary,
-              fontSize: 8.5,
+              fontSize: 8,
               fontWeight: FontWeight.w900,
               letterSpacing: 1.1,
             ),
           ),
         ),
+
         const SizedBox(height: 12),
-        Text(
-          title,
+
+        const Text(
+          'Your exam. Your coaching.\nOne platform.',
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: _textPrimary,
+          style: TextStyle(
+            color: _navy,
             fontSize: 26,
             height: 1.12,
             fontWeight: FontWeight.w900,
             letterSpacing: -0.8,
           ),
         ),
+
         const SizedBox(height: 9),
-        Text(
-          subtitle,
+
+        const Text(
+          'Real exam practice aur local coaching tests —\n'
+          'sab kuch ek hi experience mein.',
           textAlign: TextAlign.center,
-          style: const TextStyle(
-            color: _textSecondary,
-            fontSize: 12,
+          style: TextStyle(
+            color: _secondary,
+            fontSize: 11.5,
             height: 1.5,
             fontWeight: FontWeight.w500,
           ),
@@ -796,24 +792,145 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     );
   }
 
-  Widget _buildPremiumFeature({
-    required IconData icon,
-    required Color iconColor,
-    required String title,
-    required String description,
-    required String tag,
-  }) {
+  // ---------------------------------------------------------------------------
+  // CBT CARD
+  // ---------------------------------------------------------------------------
+
+  Widget _buildCBTCard() {
     return Container(
-      padding: const EdgeInsets.all(15),
+      width: double.infinity,
+      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: _surface,
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: _border),
+        color: _navy,
+        borderRadius: BorderRadius.circular(22),
         boxShadow: [
           BoxShadow(
-            color: _navy.withValues(alpha: 0.035),
-            blurRadius: 16,
-            offset: const Offset(0, 7),
+            color: _navy.withValues(alpha: 0.16),
+            blurRadius: 24,
+            offset: const Offset(0, 12),
+          ),
+        ],
+      ),
+      child: Stack(
+        children: [
+          Positioned(
+            right: -30,
+            top: -35,
+            child: Container(
+              width: 120,
+              height: 120,
+              decoration: BoxDecoration(
+                shape: BoxShape.circle,
+                color: _primary.withValues(alpha: 0.16),
+              ),
+            ),
+          ),
+
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    width: 43,
+                    height: 43,
+                    decoration: BoxDecoration(
+                      color: Colors.white.withValues(alpha: 0.10),
+                      borderRadius: BorderRadius.circular(13),
+                    ),
+                    child: const Icon(
+                      Icons.monitor_rounded,
+                      color: Colors.white,
+                      size: 22,
+                    ),
+                  ),
+                  const SizedBox(width: 12),
+                  const Expanded(
+                    child: Text(
+                      'Real CBT Experience',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 14),
+
+              const Text(
+                'Timer • Question Palette • Navigation\n'
+                'Negative Marking • Exam-like Interface',
+                style: TextStyle(
+                  color: Color(0xFFBFC9D9),
+                  fontSize: 10.5,
+                  height: 1.5,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+
+              const SizedBox(height: 15),
+
+              Row(
+                children: [
+                  _darkPill('CBT MODE'),
+                  const SizedBox(width: 7),
+                  _darkPill('EXAM READY'),
+                ],
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _darkPill(String text) {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 9,
+        vertical: 5,
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white.withValues(alpha: 0.08),
+        borderRadius: BorderRadius.circular(7),
+        border: Border.all(
+          color: Colors.white.withValues(alpha: 0.08),
+        ),
+      ),
+      child: Text(
+        text,
+        style: const TextStyle(
+          color: Color(0xFFD8E4F7),
+          fontSize: 7,
+          fontWeight: FontWeight.w900,
+          letterSpacing: 0.6,
+        ),
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // COACHING CARD
+  // ---------------------------------------------------------------------------
+
+  Widget _buildCoachingCard() {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(17),
+      decoration: BoxDecoration(
+        color: _white,
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(
+          color: _border,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: _navy.withValues(alpha: 0.045),
+            blurRadius: 18,
+            offset: const Offset(0, 8),
           ),
         ],
       ),
@@ -821,65 +938,46 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            width: 46,
-            height: 46,
+            width: 47,
+            height: 47,
             decoration: BoxDecoration(
-              color: iconColor.withValues(alpha: 0.09),
+              gradient: const LinearGradient(
+                colors: [
+                  Color(0xFFEAF2FF),
+                  Color(0xFFF1ECFF),
+                ],
+              ),
               borderRadius: BorderRadius.circular(14),
             ),
-            child: Icon(
-              icon,
-              color: iconColor,
-              size: 22,
+            child: const Icon(
+              Icons.groups_rounded,
+              color: _primary,
+              size: 23,
             ),
           ),
 
           const SizedBox(width: 13),
 
-          Expanded(
+          const Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    Expanded(
-                      child: Text(
-                        title,
-                        style: const TextStyle(
-                          color: _textPrimary,
-                          fontSize: 13.5,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 6,
-                        vertical: 3,
-                      ),
-                      decoration: BoxDecoration(
-                        color: _background,
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: Text(
-                        tag,
-                        style: TextStyle(
-                          color: iconColor,
-                          fontSize: 6.5,
-                          fontWeight: FontWeight.w900,
-                          letterSpacing: 0.5,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 5),
                 Text(
-                  description,
-                  style: const TextStyle(
-                    color: _textSecondary,
+                  'Your Coaching. Now Digital.',
+                  style: TextStyle(
+                    color: _navy,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                SizedBox(height: 5),
+                Text(
+                  'Apne local coaching centre ke mock tests bhi '
+                  'isi platform par digitally attempt karein.',
+                  style: TextStyle(
+                    color: _secondary,
                     fontSize: 10.5,
-                    height: 1.4,
+                    height: 1.45,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -892,128 +990,95 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   }
 
   // ---------------------------------------------------------------------------
-  // PAGE 3 — PROFILE
+  // MINI STRIP
   // ---------------------------------------------------------------------------
+
+  Widget _buildMiniFeatureStrip() {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.symmetric(
+        horizontal: 15,
+        vertical: 13,
+      ),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: _border,
+        ),
+      ),
+      child: const Row(
+        children: [
+          Expanded(
+            child: _MiniFeature(
+              icon: Icons.language_rounded,
+              title: 'Bilingual',
+            ),
+          ),
+          _VerticalDivider(),
+          Expanded(
+            child: _MiniFeature(
+              icon: Icons.insights_rounded,
+              title: 'Performance',
+            ),
+          ),
+          _VerticalDivider(),
+          Expanded(
+            child: _MiniFeature(
+              icon: Icons.bolt_rounded,
+              title: 'Fast Practice',
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // PAGE 3 — PROFILE
+  // ===========================================================================
 
   Widget _buildProfilePage() {
     return GestureDetector(
       onTap: () => FocusScope.of(context).unfocus(),
       child: FadeTransition(
         opacity: CurvedAnimation(
-          parent: _fadeController,
+          parent: _pageAnimation,
           curve: Curves.easeOut,
         ),
         child: SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
-          padding: const EdgeInsets.fromLTRB(22, 10, 22, 12),
+          padding: const EdgeInsets.fromLTRB(22, 12, 22, 15),
           child: Form(
             key: _formKey,
             child: Column(
               children: [
                 _buildProfileHeader(),
 
-                const SizedBox(height: 20),
+                const SizedBox(height: 22),
 
-                Container(
-                  padding: const EdgeInsets.all(18),
-                  decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(22),
-                    border: Border.all(color: _border),
-                    boxShadow: [
-                      BoxShadow(
-                        color: _navy.withValues(alpha: 0.045),
-                        blurRadius: 22,
-                        offset: const Offset(0, 10),
-                      ),
-                    ],
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      _buildInputLabel(
-                        'FULL NAME',
-                        required: true,
-                      ),
-                      const SizedBox(height: 8),
-                      _buildTextField(
-                        controller: _nameController,
-                        hint: 'Enter your full name',
-                        icon: Icons.person_outline_rounded,
-                        textCapitalization: TextCapitalization.words,
-                        validator: (value) {
-                          if (value == null || value.trim().length < 2) {
-                            return 'Please enter your name';
-                          }
-                          return null;
-                        },
-                      ),
-
-                      const SizedBox(height: 17),
-
-                      _buildInputLabel(
-                        'MOBILE NUMBER',
-                        required: false,
-                      ),
-                      const SizedBox(height: 3),
-                      const Text(
-                        'Optional • Useful for coaching & classroom sync',
-                        style: TextStyle(
-                          color: _textTertiary,
-                          fontSize: 9.5,
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                      const SizedBox(height: 8),
-
-                      _buildTextField(
-                        controller: _phoneController,
-                        hint: '10-digit mobile number',
-                        icon: Icons.phone_android_rounded,
-                        keyboardType: TextInputType.phone,
-                        inputFormatters: [
-                          FilteringTextInputFormatter.digitsOnly,
-                          LengthLimitingTextInputFormatter(10),
-                        ],
-                        validator: (value) {
-                          if (value == null || value.trim().isEmpty) {
-                            return null;
-                          }
-
-                          if (!RegExp(r'^[6-9]\d{9}$')
-                              .hasMatch(value.trim())) {
-                            return 'Enter a valid 10-digit number';
-                          }
-
-                          return null;
-                        },
-                      ),
-
-                      const SizedBox(height: 15),
-
-                      _buildPrivacyNote(),
-                    ],
-                  ),
-                ),
+                _buildProfileForm(),
 
                 const SizedBox(height: 18),
 
                 _buildPrimaryButton(
                   label: _isLoading
-                      ? 'Setting up your preparation...'
+                      ? 'Setting up...'
                       : 'Start My Preparation',
-                  icon: Icons.rocket_launch_rounded,
-                  onPressed: _isLoading ? null : _completeRegistration,
+                  icon: Icons.arrow_forward_rounded,
+                  onPressed: _isLoading
+                      ? null
+                      : _completeRegistration,
                   isLoading: _isLoading,
                 ),
 
-                const SizedBox(height: 8),
+                const SizedBox(height: 9),
 
                 const Text(
-                  'You can update your profile later from Settings.',
+                  'You can update your profile anytime from Settings.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: _textTertiary,
+                    color: _muted,
                     fontSize: 9.5,
                     fontWeight: FontWeight.w500,
                   ),
@@ -1036,10 +1101,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
             gradient: const LinearGradient(
               colors: [
                 Color(0xFFEAF2FF),
-                Color(0xFFF0EAFF),
+                Color(0xFFF0EBFF),
               ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
             ),
             shape: BoxShape.circle,
           ),
@@ -1053,29 +1116,122 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
         const SizedBox(height: 13),
 
         const Text(
-          'Let’s personalize your journey',
+          'Let’s get you started.',
           textAlign: TextAlign.center,
           style: TextStyle(
-            color: _textPrimary,
-            fontSize: 23,
+            color: _navy,
+            fontSize: 25,
             fontWeight: FontWeight.w900,
-            letterSpacing: -0.6,
+            letterSpacing: -0.8,
           ),
         ),
 
         const SizedBox(height: 6),
 
         const Text(
-          'Your name will appear on scorecards,\nrank lists and your preparation dashboard.',
+          'Create your profile to personalize your\n'
+          'MockTester preparation experience.',
           textAlign: TextAlign.center,
           style: TextStyle(
-            color: _textSecondary,
+            color: _secondary,
             fontSize: 11.5,
             height: 1.5,
             fontWeight: FontWeight.w500,
           ),
         ),
       ],
+    );
+  }
+
+  Widget _buildProfileForm() {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(18),
+      decoration: BoxDecoration(
+        color: _white,
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(
+          color: _border,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: _navy.withValues(alpha: 0.045),
+            blurRadius: 20,
+            offset: const Offset(0, 9),
+          ),
+        ],
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _buildInputLabel(
+            'FULL NAME',
+            required: true,
+          ),
+
+          const SizedBox(height: 8),
+
+          _buildTextField(
+            controller: _nameController,
+            hint: 'Enter your full name',
+            icon: Icons.person_outline_rounded,
+            textCapitalization: TextCapitalization.words,
+            validator: (value) {
+              if (value == null || value.trim().length < 2) {
+                return 'Please enter your name';
+              }
+
+              return null;
+            },
+          ),
+
+          const SizedBox(height: 18),
+
+          _buildInputLabel(
+            'MOBILE NUMBER',
+            required: false,
+          ),
+
+          const SizedBox(height: 4),
+
+          const Text(
+            'Optional • Useful for coaching & classroom sync',
+            style: TextStyle(
+              color: _muted,
+              fontSize: 9.5,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+
+          const SizedBox(height: 8),
+
+          _buildTextField(
+            controller: _phoneController,
+            hint: '10-digit mobile number',
+            icon: Icons.phone_android_rounded,
+            keyboardType: TextInputType.phone,
+            inputFormatters: [
+              FilteringTextInputFormatter.digitsOnly,
+              LengthLimitingTextInputFormatter(10),
+            ],
+            validator: (value) {
+              if (value == null || value.trim().isEmpty) {
+                return null;
+              }
+
+              if (!RegExp(r'^[6-9]\d{9}$').hasMatch(value.trim())) {
+                return 'Enter a valid 10-digit number';
+              }
+
+              return null;
+            },
+          ),
+
+          const SizedBox(height: 15),
+
+          _buildPrivacyNote(),
+        ],
+      ),
     );
   }
 
@@ -1088,23 +1244,21 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
         Text(
           text,
           style: const TextStyle(
-            color: _textPrimary,
+            color: _navy,
             fontSize: 9.5,
             fontWeight: FontWeight.w900,
-            letterSpacing: 0.7,
+            letterSpacing: 0.75,
           ),
         ),
-        if (required) ...[
-          const SizedBox(width: 3),
+        if (required)
           const Text(
-            '*',
+            ' *',
             style: TextStyle(
               color: Color(0xFFD92D20),
               fontSize: 10,
               fontWeight: FontWeight.w900,
             ),
           ),
-        ],
       ],
     );
   }
@@ -1124,16 +1278,16 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
       textCapitalization: textCapitalization,
       inputFormatters: inputFormatters,
       validator: validator,
+      cursorColor: _primary,
       style: const TextStyle(
-        color: _textPrimary,
+        color: _navy,
         fontSize: 13,
         fontWeight: FontWeight.w600,
       ),
-      cursorColor: _primary,
       decoration: InputDecoration(
         hintText: hint,
         hintStyle: const TextStyle(
-          color: _textTertiary,
+          color: _muted,
           fontSize: 12,
           fontWeight: FontWeight.w500,
         ),
@@ -1190,9 +1344,6 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
       decoration: BoxDecoration(
         color: const Color(0xFFF8FAFC),
         borderRadius: BorderRadius.circular(12),
-        border: Border.all(
-          color: _border,
-        ),
       ),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -1201,7 +1352,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
             width: 27,
             height: 27,
             decoration: BoxDecoration(
-              color: _primaryLight,
+              color: const Color(0xFFEAF2FF),
               borderRadius: BorderRadius.circular(8),
             ),
             child: const Icon(
@@ -1213,10 +1364,10 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
           const SizedBox(width: 9),
           const Expanded(
             child: Text(
-              'Your information is used only to personalize your '
-              'MockTester experience and sync your classroom profile.',
+              'Your details are used to personalize your experience '
+              'and connect your coaching profile.',
               style: TextStyle(
-                color: _textSecondary,
+                color: _secondary,
                 fontSize: 9.5,
                 height: 1.4,
                 fontWeight: FontWeight.w500,
@@ -1228,9 +1379,9 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     );
   }
 
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
   // PRIMARY BUTTON
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
 
   Widget _buildPrimaryButton({
     required String label,
@@ -1238,36 +1389,38 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     required VoidCallback? onPressed,
     bool isLoading = false,
   }) {
+    final bool enabled = onPressed != null;
+
     return SizedBox(
       width: double.infinity,
-      height: 54,
+      height: 55,
       child: DecoratedBox(
         decoration: BoxDecoration(
-          gradient: onPressed == null
+          gradient: enabled
               ? const LinearGradient(
                   colors: [
-                    Color(0xFF98A2B3),
-                    Color(0xFF98A2B3),
-                  ],
-                )
-              : const LinearGradient(
-                  colors: [
-                    Color(0xFF155EEF),
-                    Color(0xFF0040C1),
+                    Color(0xFF1677FF),
+                    Color(0xFF0047D9),
                   ],
                   begin: Alignment.topLeft,
                   end: Alignment.bottomRight,
+                )
+              : const LinearGradient(
+                  colors: [
+                    Color(0xFF98A2B3),
+                    Color(0xFF98A2B3),
+                  ],
                 ),
-          borderRadius: BorderRadius.circular(15),
-          boxShadow: onPressed == null
-              ? null
-              : [
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: enabled
+              ? [
                   BoxShadow(
-                    color: _primary.withValues(alpha: 0.24),
+                    color: _primary.withValues(alpha: 0.22),
                     blurRadius: 18,
                     offset: const Offset(0, 8),
                   ),
-                ],
+                ]
+              : null,
         ),
         child: ElevatedButton(
           onPressed: onPressed,
@@ -1277,7 +1430,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
             shadowColor: Colors.transparent,
             elevation: 0,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
+              borderRadius: BorderRadius.circular(16),
             ),
           ),
           child: isLoading
@@ -1312,70 +1465,143 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     );
   }
 
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
   // BOTTOM PROGRESS
-  // ---------------------------------------------------------------------------
+  // ===========================================================================
 
   Widget _buildBottomProgress() {
+    final String title;
+
+    switch (_currentIndex) {
+      case 0:
+        title = 'Intro';
+        break;
+      case 1:
+        title = 'Platform';
+        break;
+      default:
+        title = 'Profile';
+    }
+
     return Padding(
-      padding: const EdgeInsets.fromLTRB(24, 5, 24, 14),
+      padding: const EdgeInsets.fromLTRB(24, 4, 24, 13),
       child: Row(
         children: [
           Text(
-            '${_currentIndex + 1} / 3',
+            '0${_currentIndex + 1}',
             style: const TextStyle(
-              color: _textTertiary,
+              color: _muted,
               fontSize: 10,
-              fontWeight: FontWeight.w800,
+              fontWeight: FontWeight.w900,
             ),
           ),
 
           const SizedBox(width: 12),
 
           Expanded(
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Container(
-                height: 5,
-                color: const Color(0xFFE4E7EC),
-                child: AnimatedAlign(
-                  duration: const Duration(milliseconds: 400),
-                  curve: Curves.easeOutCubic,
-                  alignment: Alignment.centerLeft,
-                  child: FractionallySizedBox(
-                    widthFactor: (_currentIndex + 1) / 3,
-                    child: Container(
-                      decoration: const BoxDecoration(
-                        gradient: LinearGradient(
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                return Stack(
+                  children: [
+                    Container(
+                      height: 4,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFE4E7EC),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                    ),
+                    AnimatedContainer(
+                      duration: const Duration(milliseconds: 450),
+                      curve: Curves.easeOutCubic,
+                      height: 4,
+                      width: constraints.maxWidth *
+                          ((_currentIndex + 1) / 3),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
                           colors: [
                             Color(0xFF155EEF),
                             Color(0xFF7F56D9),
                           ],
                         ),
+                        borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                  ),
-                ),
-              ),
+                  ],
+                );
+              },
             ),
           ),
 
           const SizedBox(width: 12),
 
           Text(
-            _currentIndex == 0
-                ? 'Welcome'
-                : _currentIndex == 1
-                    ? 'Features'
-                    : 'Profile',
+            title,
             style: const TextStyle(
-              color: _textSecondary,
+              color: _secondary,
               fontSize: 10,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w800,
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+// =============================================================================
+// MINI FEATURE
+// =============================================================================
+
+class _MiniFeature extends StatelessWidget {
+  final IconData icon;
+  final String title;
+
+  const _MiniFeature({
+    required this.icon,
+    required this.title,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          icon,
+          color: const Color(0xFF155EEF),
+          size: 15,
+        ),
+        const SizedBox(width: 5),
+        Flexible(
+          child: Text(
+            title,
+            overflow: TextOverflow.ellipsis,
+            style: const TextStyle(
+              color: Color(0xFF475467),
+              fontSize: 8.5,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+// =============================================================================
+// VERTICAL DIVIDER
+// =============================================================================
+
+class _VerticalDivider extends StatelessWidget {
+  const _VerticalDivider();
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 1,
+      height: 18,
+      color: const Color(0xFFE4E7EC),
     );
   }
 }
