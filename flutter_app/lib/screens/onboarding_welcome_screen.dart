@@ -1,7 +1,10 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+
 import 'home_screen.dart';
 
 class OnboardingWelcomeScreen extends StatefulWidget {
@@ -13,39 +16,89 @@ class OnboardingWelcomeScreen extends StatefulWidget {
   });
 
   @override
-  State<OnboardingWelcomeScreen> createState() => _OnboardingWelcomeScreenState();
+  State<OnboardingWelcomeScreen> createState() =>
+      _OnboardingWelcomeScreenState();
 }
 
-class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
+class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
+    with TickerProviderStateMixin {
   final PageController _pageController = PageController();
   final _formKey = GlobalKey<FormState>();
+
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
+
+  late final AnimationController _fadeController;
+  late final AnimationController _floatController;
 
   int _currentIndex = 0;
   bool _isLoading = false;
 
-  // Eye-Friendly Authentic Palette
-  static const Color _bgScreen = Color(0xFFF8FAFC);
-  static const Color _cardBg = Colors.white;
-  static const Color _primaryBlue = Color(0xFF0038B8);
-  static const Color _primarySoft = Color(0xFFEFF6FF);
-  static const Color _textDark = Color(0xFF0F172A);
-  static const Color _textMuted = Color(0xFF64748B);
-  static const Color _borderSubtle = Color(0xFFE2E8F0);
-  static const Color _saffronAccent = Color(0xFFFEA619);
-  static const Color _saffronDark = Color(0xFF855300);
+  // ---------------------------------------------------------------------------
+  // PREMIUM EDU-TECH DESIGN SYSTEM
+  // ---------------------------------------------------------------------------
+
+  static const Color _background = Color(0xFFF7F9FC);
+  static const Color _surface = Colors.white;
+
+  static const Color _navy = Color(0xFF081A3A);
+  static const Color _primary = Color(0xFF155EEF);
+  static const Color _primaryDark = Color(0xFF0B46C1);
+  static const Color _primaryLight = Color(0xFFEAF2FF);
+
+  static const Color _textPrimary = Color(0xFF101828);
+  static const Color _textSecondary = Color(0xFF667085);
+  static const Color _textTertiary = Color(0xFF98A2B3);
+
+  static const Color _border = Color(0xFFE4E7EC);
+
+  static const Color _orange = Color(0xFFFF9F1C);
+  static const Color _green = Color(0xFF12B76A);
+  static const Color _purple = Color(0xFF7F56D9);
+  static const Color _cyan = Color(0xFF06AED4);
+
+  @override
+  void initState() {
+    super.initState();
+
+    _fadeController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 650),
+    )..forward();
+
+    _floatController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2800),
+    )..repeat(reverse: true);
+  }
+
+  @override
+  void dispose() {
+    _pageController.dispose();
+    _nameController.dispose();
+    _phoneController.dispose();
+    _fadeController.dispose();
+    _floatController.dispose();
+    super.dispose();
+  }
+
+  // ---------------------------------------------------------------------------
+  // REGISTRATION
+  // ---------------------------------------------------------------------------
 
   Future<void> _completeRegistration() async {
     FocusScope.of(context).unfocus();
+
     if (!_formKey.currentState!.validate() || _isLoading) return;
 
     setState(() => _isLoading = true);
+
     final name = _nameController.text.trim();
     final phone = _phoneController.text.trim();
 
     try {
       final prefs = await SharedPreferences.getInstance();
+
       await prefs.setBool('is_onboarded', true);
       await prefs.setString('custom_aspirant_name', name);
       await prefs.setString('user_name', name);
@@ -59,543 +112,1266 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
             'updated_at': DateTime.now().toIso8601String(),
           });
         } catch (e) {
-          debugPrint("Supabase sync issue: $e");
+          debugPrint('Supabase sync issue: $e');
         }
       }
 
       if (!mounted) return;
+
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (_) => widget.nextScreen),
+        MaterialPageRoute(
+          builder: (_) => widget.nextScreen,
+        ),
       );
     } catch (e) {
-      debugPrint("Storage error: $e");
+      debugPrint('Storage error: $e');
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            behavior: SnackBarBehavior.floating,
+            backgroundColor: _navy,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(14),
+            ),
+            content: const Text(
+              'Something went wrong. Please try again.',
+            ),
+          ),
+        );
+      }
     } finally {
-      if (mounted) setState(() => _isLoading = false);
+      if (mounted) {
+        setState(() => _isLoading = false);
+      }
     }
   }
 
-  void _goToNextSlide() {
-    _pageController.nextPage(
-      duration: const Duration(milliseconds: 300),
-      curve: Curves.easeInOut,
+  void _goNext() {
+    if (_currentIndex < 2) {
+      _pageController.nextPage(
+        duration: const Duration(milliseconds: 450),
+        curve: Curves.easeOutCubic,
+      );
+    }
+  }
+
+  void _skip() {
+    _pageController.animateToPage(
+      2,
+      duration: const Duration(milliseconds: 450),
+      curve: Curves.easeOutCubic,
     );
   }
 
-  @override
-  void dispose() {
-    _pageController.dispose();
-    _nameController.dispose();
-    _phoneController.dispose();
-    super.dispose();
-  }
+  // ---------------------------------------------------------------------------
+  // BUILD
+  // ---------------------------------------------------------------------------
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: _bgScreen,
+      backgroundColor: _background,
+      resizeToAvoidBottomInset: true,
       body: SafeArea(
         child: Column(
           children: [
-            // Top Bar
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        width: 32,
-                        height: 32,
-                        decoration: BoxDecoration(
-                          color: _primaryBlue,
-                          borderRadius: BorderRadius.circular(8),
-                        ),
-                        child: const Icon(Icons.check_rounded, color: Colors.white, size: 20),
-                      ),
-                      const SizedBox(width: 8),
-                      const Text(
-                        'MockTester',
-                        style: TextStyle(
-                          fontSize: 16.5,
-                          fontWeight: FontWeight.w900,
-                          color: _textDark,
-                          letterSpacing: -0.3,
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
-                        decoration: BoxDecoration(
-                          color: _saffronAccent.withOpacity(0.2),
-                          borderRadius: BorderRadius.circular(5),
-                        ),
-                        child: const Text(
-                          'CBT',
-                          style: TextStyle(
-                            fontSize: 9,
-                            fontWeight: FontWeight.w900,
-                            color: _saffronDark,
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  if (_currentIndex < 2)
-                    TextButton(
-                      onPressed: () {
-                        _pageController.animateToPage(
-                          2,
-                          duration: const Duration(milliseconds: 300),
-                          curve: Curves.easeInOut,
-                        );
-                      },
-                      child: const Text(
-                        'Skip',
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.bold,
-                          color: _textMuted,
-                        ),
-                      ),
-                    ),
-                ],
-              ),
-            ),
+            _buildTopBar(),
 
-            // 3-Slide Carousel
             Expanded(
               child: PageView(
                 controller: _pageController,
                 physics: const BouncingScrollPhysics(),
-                onPageChanged: (idx) => setState(() => _currentIndex = idx),
+                onPageChanged: (index) {
+                  setState(() {
+                    _currentIndex = index;
+                  });
+
+                  _fadeController
+                    ..reset()
+                    ..forward();
+                },
                 children: [
-                  _buildScreen1Welcome(),
-                  _buildScreen2Features(),
-                  _buildScreen3Registration(),
+                  _buildWelcomePage(),
+                  _buildFeaturesPage(),
+                  _buildProfilePage(),
                 ],
               ),
             ),
 
-            // Light-theme Animated Indicator Dots
-            Padding(
-              padding: const EdgeInsets.only(bottom: 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: List.generate(
-                  3,
-                  (index) => AnimatedContainer(
-                    duration: const Duration(milliseconds: 220),
-                    margin: const EdgeInsets.symmetric(horizontal: 3.5),
-                    width: _currentIndex == index ? 22 : 7,
-                    height: 7,
-                    decoration: BoxDecoration(
-                      color: _currentIndex == index ? _primaryBlue : _borderSubtle,
-                      borderRadius: BorderRadius.circular(4),
-                    ),
-                  ),
-                ),
-              ),
-            ),
+            _buildBottomProgress(),
           ],
         ),
       ),
     );
   }
 
-  // 1️⃣ SLIDE 1: Welcome & Bihar Selection Hook
-  Widget _buildScreen1Welcome() {
+  // ---------------------------------------------------------------------------
+  // TOP BAR
+  // ---------------------------------------------------------------------------
+
+  Widget _buildTopBar() {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: Column(
+      padding: const EdgeInsets.fromLTRB(20, 14, 20, 8),
+      child: Row(
         children: [
-          const Spacer(flex: 2),
-
-          Container(
-            width: 88,
-            height: 88,
-            decoration: BoxDecoration(
-              color: _cardBg,
-              borderRadius: BorderRadius.circular(24),
-              border: Border.all(color: _borderSubtle),
-              boxShadow: [
-                BoxShadow(
-                  color: _primaryBlue.withOpacity(0.08),
-                  blurRadius: 18,
-                  offset: const Offset(0, 8),
-                ),
-              ],
-            ),
-            child: const Icon(
-              Icons.school_rounded,
-              size: 48,
-              color: _primaryBlue,
-            ),
-          ),
-
-          const SizedBox(height: 28),
-
-          const Text(
-            'Welcome to',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: _textMuted,
-              fontSize: 20,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
-
-          const SizedBox(height: 4),
-
-          const Text(
-            'MockTester',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: _textDark,
-              fontSize: 34,
-              fontWeight: FontWeight.w900,
-              letterSpacing: -0.6,
-            ),
-          ),
-
-          const SizedBox(height: 18),
-
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
-            decoration: BoxDecoration(
-              color: _primarySoft,
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: _primaryBlue.withOpacity(0.2)),
-            ),
-            child: const Text(
-              'Yahan Test Pass Kiya,\nToh Bihar Me Selection Pakka!',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: _primaryBlue,
-                fontSize: 16,
-                height: 1.4,
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-          ),
-
-          const Spacer(flex: 3),
-
-          SizedBox(
-            width: double.infinity,
-            height: 52,
-            child: ElevatedButton(
-              onPressed: _goToNextSlide,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: _primaryBlue,
-                foregroundColor: Colors.white,
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(14),
-                ),
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'EXPLORE FEATURES',
-                    style: TextStyle(
-                      fontSize: 14.5,
-                      fontWeight: FontWeight.w800,
-                      letterSpacing: 0.4,
+          // Brand
+          Row(
+            children: [
+              Container(
+                width: 38,
+                height: 38,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [
+                      Color(0xFF155EEF),
+                      Color(0xFF0040C1),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: _primary.withValues(alpha: 0.22),
+                      blurRadius: 14,
+                      offset: const Offset(0, 6),
                     ),
-                  ),
-                  SizedBox(width: 8),
-                  Icon(Icons.arrow_forward_rounded, size: 18),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 14),
-        ],
-      ),
-    );
-  }
-
-  // 2️⃣ SLIDE 2: Functional Features
-  Widget _buildScreen2Features() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 22),
-      child: Column(
-        children: [
-          const SizedBox(height: 10),
-          const Text(
-            'Platform Features',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: _textDark,
-              fontSize: 24,
-              fontWeight: FontWeight.w900,
-            ),
-          ),
-          const SizedBox(height: 4),
-          const Text(
-            'Strictly aligned with state competitive exams',
-            textAlign: TextAlign.center,
-            style: TextStyle(color: _textMuted, fontSize: 12),
-          ),
-          const Spacer(),
-
-          _buildFeatureCard(
-            Icons.laptop_chromebook_rounded,
-            'Real CBT Engine',
-            'Same countdown timer, palette, aur negative mark calculation direct TCS pattern par.',
-            const Color(0xFF0284C7),
-          ),
-          const SizedBox(height: 10),
-
-          _buildFeatureCard(
-            Icons.warning_amber_rounded,
-            'AI Trap Vault',
-            'Examiner ke tricky options aur silly mistakes ko identify karke zero negative marks banayein.',
-            const Color(0xFFD97706),
-          ),
-          const SizedBox(height: 10),
-
-          _buildFeatureCard(
-            Icons.apartment_rounded,
-            'Coaching Hub Sync',
-            'Apne coaching institute ke batch code se judein aur class ke tests live online attempt karein.',
-            const Color(0xFF059669),
-          ),
-          const SizedBox(height: 10),
-
-          _buildFeatureCard(
-            Icons.menu_book_rounded,
-            'Bilingual Daily Practice',
-            '10-Minute current affairs capsule aur formula cheat sheets daily fast drill ke liye.',
-            _primaryBlue,
-          ),
-
-          const Spacer(),
-
-          SizedBox(
-            width: double.infinity,
-            height: 52,
-            child: ElevatedButton(
-              onPressed: _goToNextSlide,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: _primaryBlue,
-                foregroundColor: Colors.white,
-                elevation: 0,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(14),
+                  ],
+                ),
+                child: const Icon(
+                  Icons.school_rounded,
+                  color: Colors.white,
+                  size: 21,
                 ),
               ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'SETUP PROFILE',
-                    style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w800),
-                  ),
-                  SizedBox(width: 8),
-                  Icon(Icons.arrow_forward_rounded, size: 18),
-                ],
-              ),
-            ),
-          ),
-          const SizedBox(height: 14),
-        ],
-      ),
-    );
-  }
-
-  // 3️⃣ SLIDE 3: Profile Registration Form
-  Widget _buildScreen3Registration() {
-    return SingleChildScrollView(
-      physics: const BouncingScrollPhysics(),
-      padding: const EdgeInsets.symmetric(horizontal: 22),
-      child: Form(
-        key: _formKey,
-        child: Column(
-          children: [
-            const SizedBox(height: 14),
-            Container(
-              width: 60,
-              height: 60,
-              decoration: BoxDecoration(
-                color: _primarySoft,
-                shape: BoxShape.circle,
-                border: Border.all(color: _primaryBlue.withOpacity(0.15)),
-              ),
-              child: const Icon(Icons.badge_rounded, color: _primaryBlue, size: 30),
-            ),
-            const SizedBox(height: 12),
-
-            const Text(
-              'Aspirant Profile',
-              style: TextStyle(
-                color: _textDark,
-                fontSize: 24,
-                fontWeight: FontWeight.w900,
-              ),
-            ),
-            const SizedBox(height: 4),
-            const Text(
-              'Yeh details aapke CBT scorecard aur rank list par dikhengi',
-              textAlign: TextAlign.center,
-              style: TextStyle(color: _textMuted, fontSize: 12),
-            ),
-            const SizedBox(height: 20),
-
-            Container(
-              padding: const EdgeInsets.all(16),
-              decoration: BoxDecoration(
-                color: _cardBg,
-                borderRadius: BorderRadius.circular(18),
-                border: Border.all(color: _borderSubtle),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.black.withOpacity(0.03),
-                    blurRadius: 12,
-                    offset: const Offset(0, 4),
-                  ),
-                ],
-              ),
-              child: Column(
+              const SizedBox(width: 10),
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
-                    'Full Name *',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: _textDark),
-                  ),
-                  const SizedBox(height: 6),
-                  TextFormField(
-                    controller: _nameController,
-                    textCapitalization: TextCapitalization.words,
-                    style: const TextStyle(fontSize: 13, color: _textDark),
-                    decoration: InputDecoration(
-                      hintText: 'e.g. Anand Sharma',
-                      hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
-                      filled: true,
-                      fillColor: _bgScreen,
-                      prefixIcon: const Icon(Icons.person_outline_rounded, color: _primaryBlue, size: 18),
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 11),
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _borderSubtle)),
-                      enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _borderSubtle)),
-                      focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _primaryBlue)),
+                    'MockTester',
+                    style: TextStyle(
+                      color: _textPrimary,
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: -0.4,
                     ),
-                    validator: (v) => (v == null || v.trim().length < 2) ? 'Kripya apna naam enter karein' : null,
                   ),
-                  const SizedBox(height: 12),
-
-                  const Text(
-                    'Mobile Number (Optional)',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: _textDark),
-                  ),
-                  const SizedBox(height: 6),
-                  TextFormField(
-                    controller: _phoneController,
-                    keyboardType: TextInputType.phone,
-                    inputFormatters: [
-                      FilteringTextInputFormatter.digitsOnly,
-                      LengthLimitingTextInputFormatter(10),
-                    ],
-                    style: const TextStyle(fontSize: 13, color: _textDark),
-                    decoration: InputDecoration(
-                      hintText: 'e.g. 9876543210 (Classroom sync)',
-                      hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
-                      filled: true,
-                      fillColor: _bgScreen,
-                      prefixIcon: const Icon(Icons.phone_android_rounded, color: _textMuted, size: 18),
-                      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 11),
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _borderSubtle)),
-                      enabledBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _borderSubtle)),
-                      focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: const BorderSide(color: _primaryBlue)),
+                  Text(
+                    'SMART EXAM PREP',
+                    style: TextStyle(
+                      color: _primary,
+                      fontSize: 7.5,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 1.2,
                     ),
-                    validator: (val) {
-                      if (val == null || val.trim().isEmpty) return null;
-                      if (!RegExp(r'^[6-9]\d{9}$').hasMatch(val.trim())) {
-                        return 'Valid 10-digit number enter karein';
-                      }
-                      return null;
-                    },
                   ),
                 ],
               ),
-            ),
-            const SizedBox(height: 20),
+            ],
+          ),
 
-            SizedBox(
-              width: double.infinity,
-              height: 52,
-              child: ElevatedButton(
-                onPressed: _isLoading ? null : _completeRegistration,
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: _primaryBlue,
-                  foregroundColor: Colors.white,
-                  elevation: 0,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(14),
-                  ),
+          const Spacer(),
+
+          if (_currentIndex < 2)
+            TextButton(
+              onPressed: _skip,
+              style: TextButton.styleFrom(
+                foregroundColor: _textSecondary,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 8,
                 ),
-                child: _isLoading
-                    ? const SizedBox(
-                        height: 20,
-                        width: 20,
-                        child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
-                      )
-                    : const Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Text(
-                            'START PREPARATION',
-                            style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w800),
-                          ),
-                          SizedBox(width: 8),
-                          Icon(Icons.rocket_launch_rounded, size: 18),
-                        ],
-                      ),
+              ),
+              child: const Text(
+                'Skip',
+                style: TextStyle(
+                  fontSize: 13,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
-            const SizedBox(height: 14),
+        ],
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // PAGE 1 — HERO
+  // ---------------------------------------------------------------------------
+
+  Widget _buildWelcomePage() {
+    return FadeTransition(
+      opacity: CurvedAnimation(
+        parent: _fadeController,
+        curve: Curves.easeOut,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(22, 12, 22, 8),
+        child: Column(
+          children: [
+            const Spacer(flex: 1),
+
+            AnimatedBuilder(
+              animation: _floatController,
+              builder: (context, child) {
+                final offset =
+                    lerpDouble(-5, 5, _floatController.value) ?? 0;
+
+                return Transform.translate(
+                  offset: Offset(0, offset),
+                  child: child,
+                );
+              },
+              child: _buildHeroIllustration(),
+            ),
+
+            const SizedBox(height: 32),
+
+            const Text(
+              'Your Preparation.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: _textPrimary,
+                fontSize: 30,
+                fontWeight: FontWeight.w900,
+                letterSpacing: -1.1,
+                height: 1.05,
+              ),
+            ),
+
+            const SizedBox(height: 3),
+
+            ShaderMask(
+              shaderCallback: (bounds) {
+                return const LinearGradient(
+                  colors: [
+                    Color(0xFF155EEF),
+                    Color(0xFF7F56D9),
+                  ],
+                ).createShader(bounds);
+              },
+              child: const Text(
+                'Your Selection.',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: -1.1,
+                  height: 1.05,
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 18),
+
+            Text(
+              'Bihar competitive exams ke liye\\n'
+              'real exam experience ke saath practice karein.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: _textSecondary,
+                fontSize: 14,
+                height: 1.55,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+
+            const SizedBox(height: 22),
+
+            _buildTrustPill(),
+
+            const Spacer(flex: 2),
+
+            _buildPrimaryButton(
+              label: 'Explore MockTester',
+              icon: Icons.arrow_forward_rounded,
+              onPressed: _goNext,
+            ),
+
+            const SizedBox(height: 10),
           ],
         ),
       ),
     );
   }
 
-  // Eye-friendly clean feature card builder
-  Widget _buildFeatureCard(IconData icon, String title, String desc, Color iconColor) {
+  Widget _buildHeroIllustration() {
+    return SizedBox(
+      width: 240,
+      height: 205,
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          // Glow
+          Container(
+            width: 175,
+            height: 175,
+            decoration: BoxDecoration(
+              shape: BoxShape.circle,
+              gradient: RadialGradient(
+                colors: [
+                  _primary.withValues(alpha: 0.16),
+                  _primary.withValues(alpha: 0),
+                ],
+              ),
+            ),
+          ),
+
+          // Main card
+          Container(
+            width: 190,
+            height: 145,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(24),
+              border: Border.all(
+                color: Colors.white,
+                width: 2,
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: _navy.withValues(alpha: 0.10),
+                  blurRadius: 30,
+                  offset: const Offset(0, 16),
+                ),
+              ],
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(18),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Container(
+                        width: 35,
+                        height: 35,
+                        decoration: BoxDecoration(
+                          color: _primaryLight,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: const Icon(
+                          Icons.analytics_rounded,
+                          color: _primary,
+                          size: 20,
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      const Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Mock Test',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w800,
+                                fontSize: 12,
+                                color: _textPrimary,
+                              ),
+                            ),
+                            SizedBox(height: 3),
+                            Text(
+                              'Bihar Exams',
+                              style: TextStyle(
+                                fontSize: 9,
+                                color: _textTertiary,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 7,
+                          vertical: 4,
+                        ),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFEAFBF3),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: const Text(
+                          'LIVE',
+                          style: TextStyle(
+                            color: _green,
+                            fontSize: 7,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const Spacer(),
+                  Row(
+                    children: [
+                      _miniStat('85%', 'Accuracy'),
+                      const SizedBox(width: 8),
+                      _miniStat('124', 'Rank'),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          // Floating check
+          Positioned(
+            right: 8,
+            top: 15,
+            child: _floatingBadge(
+              Icons.check_rounded,
+              _green,
+            ),
+          ),
+
+          // Floating rocket
+          Positioned(
+            left: 5,
+            bottom: 10,
+            child: _floatingBadge(
+              Icons.rocket_launch_rounded,
+              _orange,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _miniStat(String value, String label) {
+    return Expanded(
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 8,
+          vertical: 8,
+        ),
+        decoration: BoxDecoration(
+          color: _background,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Column(
+          children: [
+            Text(
+              value,
+              style: const TextStyle(
+                color: _textPrimary,
+                fontSize: 13,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+            const SizedBox(height: 2),
+            Text(
+              label,
+              style: const TextStyle(
+                color: _textTertiary,
+                fontSize: 8,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _floatingBadge(IconData icon, Color color) {
     return Container(
-      padding: const EdgeInsets.all(12),
+      width: 46,
+      height: 46,
       decoration: BoxDecoration(
-        color: _cardBg,
-        borderRadius: BorderRadius.circular(14),
-        border: Border.all(color: _borderSubtle),
+        color: Colors.white,
+        shape: BoxShape.circle,
+        boxShadow: [
+          BoxShadow(
+            color: color.withValues(alpha: 0.20),
+            blurRadius: 18,
+            offset: const Offset(0, 8),
+          ),
+        ],
+      ),
+      child: Center(
+        child: Container(
+          width: 32,
+          height: 32,
+          decoration: BoxDecoration(
+            color: color.withValues(alpha: 0.11),
+            shape: BoxShape.circle,
+          ),
+          child: Icon(
+            icon,
+            color: color,
+            size: 17,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTrustPill() {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 13,
+        vertical: 9,
+      ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(30),
+        border: Border.all(color: _border),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.03),
+            blurRadius: 12,
+            offset: const Offset(0, 5),
+          ),
+        ],
       ),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              color: iconColor.withOpacity(0.1),
-              borderRadius: BorderRadius.circular(10),
+            width: 23,
+            height: 23,
+            decoration: const BoxDecoration(
+              color: Color(0xFFEAFBF3),
+              shape: BoxShape.circle,
             ),
-            child: Icon(icon, color: iconColor, size: 20),
+            child: const Icon(
+              Icons.verified_rounded,
+              color: _green,
+              size: 14,
+            ),
           ),
-          const SizedBox(width: 12),
+          const SizedBox(width: 8),
+          const Text(
+            'Built for serious aspirants',
+            style: TextStyle(
+              color: _textSecondary,
+              fontSize: 11,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // PAGE 2 — FEATURES
+  // ---------------------------------------------------------------------------
+
+  Widget _buildFeaturesPage() {
+    return FadeTransition(
+      opacity: CurvedAnimation(
+        parent: _fadeController,
+        curve: Curves.easeOut,
+      ),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(22, 14, 22, 8),
+        child: Column(
+          children: [
+            _buildPageHeading(
+              eyebrow: 'ONE PLATFORM',
+              title: 'Everything you need\nto prepare smarter.',
+              subtitle:
+                  'Practice like the real exam. Analyse mistakes. Improve every day.',
+            ),
+
+            const SizedBox(height: 22),
+
+            Expanded(
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Column(
+                  children: [
+                    _buildPremiumFeature(
+                      icon: Icons.monitor_rounded,
+                      iconColor: _primary,
+                      title: 'Real CBT Experience',
+                      description:
+                          'Exam-like timer, question palette, navigation aur negative marking.',
+                      tag: 'EXAM MODE',
+                    ),
+                    const SizedBox(height: 12),
+
+                    _buildPremiumFeature(
+                      icon: Icons.psychology_rounded,
+                      iconColor: _purple,
+                      title: 'Smart Mistake Analysis',
+                      description:
+                          'Tricky questions aur common mistakes identify karke accuracy improve karein.',
+                      tag: 'SMART AI',
+                    ),
+                    const SizedBox(height: 12),
+
+                    _buildPremiumFeature(
+                      icon: Icons.groups_rounded,
+                      iconColor: _green,
+                      title: 'Coaching & Batch Sync',
+                      description:
+                          'Apne institute ke batch ke saath tests aur performance seamlessly sync karein.',
+                      tag: 'CONNECTED',
+                    ),
+                    const SizedBox(height: 12),
+
+                    _buildPremiumFeature(
+                      icon: Icons.bolt_rounded,
+                      iconColor: _orange,
+                      title: 'Daily Fast Practice',
+                      description:
+                          'Current affairs, formulas aur quick drills se daily preparation consistent rakhein.',
+                      tag: '10 MIN DAILY',
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 12),
+
+            _buildPrimaryButton(
+              label: 'Create My Profile',
+              icon: Icons.arrow_forward_rounded,
+              onPressed: _goNext,
+            ),
+
+            const SizedBox(height: 10),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPageHeading({
+    required String eyebrow,
+    required String title,
+    required String subtitle,
+  }) {
+    return Column(
+      children: [
+        Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 10,
+            vertical: 6,
+          ),
+          decoration: BoxDecoration(
+            color: _primaryLight,
+            borderRadius: BorderRadius.circular(20),
+          ),
+          child: Text(
+            eyebrow,
+            style: const TextStyle(
+              color: _primary,
+              fontSize: 8.5,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 1.1,
+            ),
+          ),
+        ),
+        const SizedBox(height: 12),
+        Text(
+          title,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            color: _textPrimary,
+            fontSize: 26,
+            height: 1.12,
+            fontWeight: FontWeight.w900,
+            letterSpacing: -0.8,
+          ),
+        ),
+        const SizedBox(height: 9),
+        Text(
+          subtitle,
+          textAlign: TextAlign.center,
+          style: const TextStyle(
+            color: _textSecondary,
+            fontSize: 12,
+            height: 1.5,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildPremiumFeature({
+    required IconData icon,
+    required Color iconColor,
+    required String title,
+    required String description,
+    required String tag,
+  }) {
+    return Container(
+      padding: const EdgeInsets.all(15),
+      decoration: BoxDecoration(
+        color: _surface,
+        borderRadius: BorderRadius.circular(18),
+        border: Border.all(color: _border),
+        boxShadow: [
+          BoxShadow(
+            color: _navy.withValues(alpha: 0.035),
+            blurRadius: 16,
+            offset: const Offset(0, 7),
+          ),
+        ],
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 46,
+            height: 46,
+            decoration: BoxDecoration(
+              color: iconColor.withValues(alpha: 0.09),
+              borderRadius: BorderRadius.circular(14),
+            ),
+            child: Icon(
+              icon,
+              color: iconColor,
+              size: 22,
+            ),
+          ),
+
+          const SizedBox(width: 13),
+
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  title,
-                  style: const TextStyle(color: _textDark, fontWeight: FontWeight.bold, fontSize: 13),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        title,
+                        style: const TextStyle(
+                          color: _textPrimary,
+                          fontSize: 13.5,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 6,
+                        vertical: 3,
+                      ),
+                      decoration: BoxDecoration(
+                        color: _background,
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: Text(
+                        tag,
+                        style: TextStyle(
+                          color: iconColor,
+                          fontSize: 6.5,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 0.5,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 2),
+                const SizedBox(height: 5),
                 Text(
-                  desc,
-                  style: const TextStyle(color: _textMuted, fontSize: 11, height: 1.3),
+                  description,
+                  style: const TextStyle(
+                    color: _textSecondary,
+                    fontSize: 10.5,
+                    height: 1.4,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // PAGE 3 — PROFILE
+  // ---------------------------------------------------------------------------
+
+  Widget _buildProfilePage() {
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: FadeTransition(
+        opacity: CurvedAnimation(
+          parent: _fadeController,
+          curve: Curves.easeOut,
+        ),
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          padding: const EdgeInsets.fromLTRB(22, 10, 22, 12),
+          child: Form(
+            key: _formKey,
+            child: Column(
+              children: [
+                _buildProfileHeader(),
+
+                const SizedBox(height: 20),
+
+                Container(
+                  padding: const EdgeInsets.all(18),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(22),
+                    border: Border.all(color: _border),
+                    boxShadow: [
+                      BoxShadow(
+                        color: _navy.withValues(alpha: 0.045),
+                        blurRadius: 22,
+                        offset: const Offset(0, 10),
+                      ),
+                    ],
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      _buildInputLabel(
+                        'FULL NAME',
+                        required: true,
+                      ),
+                      const SizedBox(height: 8),
+                      _buildTextField(
+                        controller: _nameController,
+                        hint: 'Enter your full name',
+                        icon: Icons.person_outline_rounded,
+                        textCapitalization: TextCapitalization.words,
+                        validator: (value) {
+                          if (value == null || value.trim().length < 2) {
+                            return 'Please enter your name';
+                          }
+                          return null;
+                        },
+                      ),
+
+                      const SizedBox(height: 17),
+
+                      _buildInputLabel(
+                        'MOBILE NUMBER',
+                        required: false,
+                      ),
+                      const SizedBox(height: 3),
+                      const Text(
+                        'Optional • Useful for coaching & classroom sync',
+                        style: TextStyle(
+                          color: _textTertiary,
+                          fontSize: 9.5,
+                          fontWeight: FontWeight.w500,
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+
+                      _buildTextField(
+                        controller: _phoneController,
+                        hint: '10-digit mobile number',
+                        icon: Icons.phone_android_rounded,
+                        keyboardType: TextInputType.phone,
+                        inputFormatters: [
+                          FilteringTextInputFormatter.digitsOnly,
+                          LengthLimitingTextInputFormatter(10),
+                        ],
+                        validator: (value) {
+                          if (value == null || value.trim().isEmpty) {
+                            return null;
+                          }
+
+                          if (!RegExp(r'^[6-9]\d{9}$')
+                              .hasMatch(value.trim())) {
+                            return 'Enter a valid 10-digit number';
+                          }
+
+                          return null;
+                        },
+                      ),
+
+                      const SizedBox(height: 15),
+
+                      _buildPrivacyNote(),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 18),
+
+                _buildPrimaryButton(
+                  label: _isLoading
+                      ? 'Setting up your preparation...'
+                      : 'Start My Preparation',
+                  icon: Icons.rocket_launch_rounded,
+                  onPressed: _isLoading ? null : _completeRegistration,
+                  isLoading: _isLoading,
+                ),
+
+                const SizedBox(height: 8),
+
+                const Text(
+                  'You can update your profile later from Settings.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: _textTertiary,
+                    fontSize: 9.5,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildProfileHeader() {
+    return Column(
+      children: [
+        Container(
+          width: 64,
+          height: 64,
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [
+                Color(0xFFEAF2FF),
+                Color(0xFFF0EAFF),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            shape: BoxShape.circle,
+          ),
+          child: const Icon(
+            Icons.person_add_alt_1_rounded,
+            color: _primary,
+            size: 29,
+          ),
+        ),
+
+        const SizedBox(height: 13),
+
+        const Text(
+          'Let’s personalize your journey',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: _textPrimary,
+            fontSize: 23,
+            fontWeight: FontWeight.w900,
+            letterSpacing: -0.6,
+          ),
+        ),
+
+        const SizedBox(height: 6),
+
+        const Text(
+          'Your name will appear on scorecards,\nrank lists and your preparation dashboard.',
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: _textSecondary,
+            fontSize: 11.5,
+            height: 1.5,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _buildInputLabel(
+    String text, {
+    required bool required,
+  }) {
+    return Row(
+      children: [
+        Text(
+          text,
+          style: const TextStyle(
+            color: _textPrimary,
+            fontSize: 9.5,
+            fontWeight: FontWeight.w900,
+            letterSpacing: 0.7,
+          ),
+        ),
+        if (required) ...[
+          const SizedBox(width: 3),
+          const Text(
+            '*',
+            style: TextStyle(
+              color: Color(0xFFD92D20),
+              fontSize: 10,
+              fontWeight: FontWeight.w900,
+            ),
+          ),
+        ],
+      ],
+    );
+  }
+
+  Widget _buildTextField({
+    required TextEditingController controller,
+    required String hint,
+    required IconData icon,
+    TextInputType? keyboardType,
+    TextCapitalization textCapitalization = TextCapitalization.none,
+    List<TextInputFormatter>? inputFormatters,
+    String? Function(String?)? validator,
+  }) {
+    return TextFormField(
+      controller: controller,
+      keyboardType: keyboardType,
+      textCapitalization: textCapitalization,
+      inputFormatters: inputFormatters,
+      validator: validator,
+      style: const TextStyle(
+        color: _textPrimary,
+        fontSize: 13,
+        fontWeight: FontWeight.w600,
+      ),
+      cursorColor: _primary,
+      decoration: InputDecoration(
+        hintText: hint,
+        hintStyle: const TextStyle(
+          color: _textTertiary,
+          fontSize: 12,
+          fontWeight: FontWeight.w500,
+        ),
+        prefixIcon: Icon(
+          icon,
+          color: _primary,
+          size: 19,
+        ),
+        filled: true,
+        fillColor: const Color(0xFFF8FAFC),
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 13,
+          vertical: 14,
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(13),
+          borderSide: const BorderSide(
+            color: _border,
+          ),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(13),
+          borderSide: const BorderSide(
+            color: _border,
+          ),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(13),
+          borderSide: const BorderSide(
+            color: _primary,
+            width: 1.5,
+          ),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(13),
+          borderSide: const BorderSide(
+            color: Color(0xFFD92D20),
+          ),
+        ),
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(13),
+          borderSide: const BorderSide(
+            color: Color(0xFFD92D20),
+            width: 1.5,
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildPrivacyNote() {
+    return Container(
+      padding: const EdgeInsets.all(11),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: _border,
+        ),
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            width: 27,
+            height: 27,
+            decoration: BoxDecoration(
+              color: _primaryLight,
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: const Icon(
+              Icons.shield_outlined,
+              color: _primary,
+              size: 15,
+            ),
+          ),
+          const SizedBox(width: 9),
+          const Expanded(
+            child: Text(
+              'Your information is used only to personalize your '
+              'MockTester experience and sync your classroom profile.',
+              style: TextStyle(
+                color: _textSecondary,
+                fontSize: 9.5,
+                height: 1.4,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // PRIMARY BUTTON
+  // ---------------------------------------------------------------------------
+
+  Widget _buildPrimaryButton({
+    required String label,
+    required IconData icon,
+    required VoidCallback? onPressed,
+    bool isLoading = false,
+  }) {
+    return SizedBox(
+      width: double.infinity,
+      height: 54,
+      child: DecoratedBox(
+        decoration: BoxDecoration(
+          gradient: onPressed == null
+              ? const LinearGradient(
+                  colors: [
+                    Color(0xFF98A2B3),
+                    Color(0xFF98A2B3),
+                  ],
+                )
+              : const LinearGradient(
+                  colors: [
+                    Color(0xFF155EEF),
+                    Color(0xFF0040C1),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: onPressed == null
+              ? null
+              : [
+                  BoxShadow(
+                    color: _primary.withValues(alpha: 0.24),
+                    blurRadius: 18,
+                    offset: const Offset(0, 8),
+                  ),
+                ],
+        ),
+        child: ElevatedButton(
+          onPressed: onPressed,
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.transparent,
+            foregroundColor: Colors.white,
+            shadowColor: Colors.transparent,
+            elevation: 0,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(15),
+            ),
+          ),
+          child: isLoading
+              ? const SizedBox(
+                  width: 21,
+                  height: 21,
+                  child: CircularProgressIndicator(
+                    strokeWidth: 2,
+                    color: Colors.white,
+                  ),
+                )
+              : Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      label,
+                      style: const TextStyle(
+                        fontSize: 13.5,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0.1,
+                      ),
+                    ),
+                    const SizedBox(width: 9),
+                    Icon(
+                      icon,
+                      size: 18,
+                    ),
+                  ],
+                ),
+        ),
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // BOTTOM PROGRESS
+  // ---------------------------------------------------------------------------
+
+  Widget _buildBottomProgress() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(24, 5, 24, 14),
+      child: Row(
+        children: [
+          Text(
+            '${_currentIndex + 1} / 3',
+            style: const TextStyle(
+              color: _textTertiary,
+              fontSize: 10,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+
+          const SizedBox(width: 12),
+
+          Expanded(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Container(
+                height: 5,
+                color: const Color(0xFFE4E7EC),
+                child: AnimatedAlign(
+                  duration: const Duration(milliseconds: 400),
+                  curve: Curves.easeOutCubic,
+                  alignment: Alignment.centerLeft,
+                  child: FractionallySizedBox(
+                    widthFactor: (_currentIndex + 1) / 3,
+                    child: Container(
+                      decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            Color(0xFF155EEF),
+                            Color(0xFF7F56D9),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          const SizedBox(width: 12),
+
+          Text(
+            _currentIndex == 0
+                ? 'Welcome'
+                : _currentIndex == 1
+                    ? 'Features'
+                    : 'Profile',
+            style: const TextStyle(
+              color: _textSecondary,
+              fontSize: 10,
+              fontWeight: FontWeight.w700,
             ),
           ),
         ],
