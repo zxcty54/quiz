@@ -369,7 +369,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
             const SizedBox(height: 18),
 
             Text(
-              'Bihar competitive exams ke liye\\n'
+              'Bihar competitive exams ke liye\n'
               'real exam experience ke saath practice karein.',
               textAlign: TextAlign.center,
               style: TextStyle(
