@@ -5,7 +5,9 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import '../utils/bihar_location_data.dart';
 
 class CoachingEditorSheets {
-  // 🖼️ 1. Poster Modification Modal
+  // ===========================================================================
+  // 🖼️ 1. POSTER MODIFICATION MODAL
+  // ===========================================================================
   static void openBannerModifierSheet({
     required BuildContext context,
     required String? coachingId,
@@ -22,7 +24,9 @@ class CoachingEditorSheets {
       context: context,
       isScrollControlled: true,
       backgroundColor: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
           padding: const EdgeInsets.all(16),
@@ -33,17 +37,28 @@ class CoachingEditorSheets {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text('🖼️ Modify Institute Poster', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                  IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                  const Text(
+                    '🖼️ Modify Institute Poster',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.close),
+                    onPressed: () => Navigator.pop(ctx),
+                  ),
                 ],
               ),
               const SizedBox(height: 6),
-              const Text('Recommended: 1200 x 675 px (16:9 Ratio). High quality photo of billboard.',
-                  style: TextStyle(fontSize: 11.5, color: Colors.grey)),
+              const Text(
+                'Recommended: 1200 x 675 px (16:9 Ratio). High quality photo of billboard.',
+                style: TextStyle(fontSize: 11.5, color: Colors.grey),
+              ),
               const SizedBox(height: 12),
               GestureDetector(
                 onTap: () async {
-                  final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 85);
+                  final picked = await picker.pickImage(
+                    source: ImageSource.gallery,
+                    imageQuality: 85,
+                  );
                   if (picked != null) {
                     setModalState(() => newImage = File(picked.path));
                   }
@@ -54,13 +69,29 @@ class CoachingEditorSheets {
                   decoration: BoxDecoration(
                     color: Colors.grey.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(14),
-                    border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.3)),
+                    border: Border.all(
+                      color: const Color(0xFF2563EB).withOpacity(0.3),
+                    ),
                   ),
                   child: newImage != null
-                      ? ClipRRect(borderRadius: BorderRadius.circular(14), child: Image.file(newImage!, fit: BoxFit.cover))
+                      ? ClipRRect(
+                          borderRadius: BorderRadius.circular(14),
+                          child: Image.file(newImage!, fit: BoxFit.cover),
+                        )
                       : (currentUrl != null && currentUrl.isNotEmpty
-                          ? ClipRRect(borderRadius: BorderRadius.circular(14), child: Image.network(currentUrl, fit: BoxFit.cover))
-                          : const Center(child: Text('Tap to pick image from gallery 📷', style: TextStyle(color: Color(0xFF2563EB), fontWeight: FontWeight.bold)))),
+                          ? ClipRRect(
+                              borderRadius: BorderRadius.circular(14),
+                              child: Image.network(currentUrl, fit: BoxFit.cover),
+                            )
+                          : const Center(
+                              child: Text(
+                                'Tap to pick image from gallery 📷',
+                                style: TextStyle(
+                                  color: Color(0xFF2563EB),
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            )),
                 ),
               ),
               const SizedBox(height: 16),
@@ -68,7 +99,10 @@ class CoachingEditorSheets {
                 width: double.infinity,
                 height: 44,
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF2563EB),
+                    foregroundColor: Colors.white,
+                  ),
                   onPressed: (isSaving || newImage == null)
                       ? null
                       : () async {
@@ -76,18 +110,34 @@ class CoachingEditorSheets {
                           try {
                             final bytes = await newImage!.readAsBytes();
                             final fileExt = newImage!.path.split('.').last;
-                            final fileName = 'banner_${creatorHandle}_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
+                            final fileName =
+                                'banner_${creatorHandle}_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
 
                             await Supabase.instance.client.storage
                                 .from('coaching_assets')
-                                .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true));
+                                .uploadBinary(
+                                  fileName,
+                                  bytes,
+                                  fileOptions: FileOptions(
+                                    contentType: 'image/$fileExt',
+                                    upsert: true,
+                                  ),
+                                );
 
-                            final updatedUrl = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
+                            final updatedUrl = Supabase.instance.client.storage
+                                .from('coaching_assets')
+                                .getPublicUrl(fileName);
 
                             if (coachingId != null) {
-                              await Supabase.instance.client.from('coachings').update({'banner_url': updatedUrl}).eq('id', coachingId);
+                              await Supabase.instance.client
+                                  .from('coachings')
+                                  .update({'banner_url': updatedUrl})
+                                  .eq('id', coachingId);
                             }
-                            await Supabase.instance.client.from('creator_profiles').update({'banner_url': updatedUrl}).eq('handle_id', creatorHandle);
+                            await Supabase.instance.client
+                                .from('creator_profiles')
+                                .update({'banner_url': updatedUrl})
+                                .eq('handle_id', creatorHandle);
 
                             if (ctx.mounted) Navigator.pop(ctx);
                             onSaved();
@@ -98,7 +148,10 @@ class CoachingEditorSheets {
                         },
                   child: isSaving
                       ? const CircularProgressIndicator(color: Colors.white)
-                      : const Text('Save New Poster 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                      : const Text(
+                          'Save New Poster 🚀',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                 ),
               ),
             ],
@@ -108,7 +161,9 @@ class CoachingEditorSheets {
     );
   }
 
-  // 📍 2. Location Details Modification Modal
+  // ===========================================================================
+  // 📍 2. LOCATION & DETAILS MODIFICATION MODAL
+  // ===========================================================================
   static void openDetailsModifierSheet({
     required BuildContext context,
     required Map<String, dynamic>? coachingData,
@@ -117,16 +172,25 @@ class CoachingEditorSheets {
     required VoidCallback onSaved,
   }) {
     final nameCtrl = TextEditingController(text: coachingData?['name'] ?? '');
-    final landmarkCtrl = TextEditingController(text: coachingData?['landmark_address'] ?? coachingData?['landmark'] ?? '');
+    final landmarkCtrl = TextEditingController(
+      text: coachingData?['landmark_address'] ?? coachingData?['landmark'] ?? '',
+    );
     final taglineCtrl = TextEditingController(text: coachingData?['tagline'] ?? '');
-    final yearCtrl = TextEditingController(text: coachingData?['established_year']?.toString() ?? '');
+    final yearCtrl = TextEditingController(
+      text: coachingData?['established_year']?.toString() ?? '',
+    );
     final descCtrl = TextEditingController(text: coachingData?['description'] ?? '');
 
     String selectedDistrict = coachingData?['district'] ?? 'Patna';
-    if (!kBiharDistrictCityMap.containsKey(selectedDistrict)) selectedDistrict = 'Patna';
-    List<String> availableCities = kBiharDistrictCityMap[selectedDistrict] ?? ['Other / Rural Area'];
+    if (!kBiharDistrictCityMap.containsKey(selectedDistrict)) {
+      selectedDistrict = 'Patna';
+    }
+    List<String> availableCities =
+        kBiharDistrictCityMap[selectedDistrict] ?? ['Other / Rural Area'];
     String selectedCity = coachingData?['city'] ?? availableCities.first;
-    if (!availableCities.contains(selectedCity)) selectedCity = availableCities.first;
+    if (!availableCities.contains(selectedCity)) {
+      selectedCity = availableCities.first;
+    }
 
     bool isSaving = false;
 
@@ -134,10 +198,17 @@ class CoachingEditorSheets {
       context: context,
       isScrollControlled: true,
       backgroundColor: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(ctx).viewInsets.bottom,
+            left: 16,
+            right: 16,
+            top: 16,
+          ),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -146,24 +217,51 @@ class CoachingEditorSheets {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('📍 Modify Coaching Details', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                    const Text(
+                      '📍 Modify Coaching Details',
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.close),
+                      onPressed: () => Navigator.pop(ctx),
+                    ),
                   ],
                 ),
                 const SizedBox(height: 10),
-                TextField(controller: nameCtrl, decoration: const InputDecoration(labelText: 'Coaching Title', border: OutlineInputBorder(), isDense: true)),
+                TextField(
+                  controller: nameCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'Coaching Title',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                ),
                 const SizedBox(height: 10),
-                TextField(controller: taglineCtrl, decoration: const InputDecoration(labelText: 'Tagline / Specialty', border: OutlineInputBorder(), isDense: true)),
+                TextField(
+                  controller: taglineCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'Tagline / Specialty',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                ),
                 const SizedBox(height: 10),
                 DropdownButtonFormField<String>(
                   value: selectedDistrict,
-                  decoration: const InputDecoration(labelText: 'District', border: OutlineInputBorder(), isDense: true),
-                  items: kBiharDistrictCityMap.keys.map((d) => DropdownMenuItem(value: d, child: Text(d))).toList(),
+                  decoration: const InputDecoration(
+                    labelText: 'District',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                  items: kBiharDistrictCityMap.keys
+                      .map((d) => DropdownMenuItem(value: d, child: Text(d)))
+                      .toList(),
                   onChanged: (val) {
                     if (val != null) {
                       setModalState(() {
                         selectedDistrict = val;
-                        availableCities = kBiharDistrictCityMap[val] ?? ['Other / Rural Area'];
+                        availableCities =
+                            kBiharDistrictCityMap[val] ?? ['Other / Rural Area'];
                         selectedCity = availableCities.first;
                       });
                     }
@@ -172,35 +270,75 @@ class CoachingEditorSheets {
                 const SizedBox(height: 10),
                 DropdownButtonFormField<String>(
                   value: selectedCity,
-                  decoration: const InputDecoration(labelText: 'Town / Education Hub', border: OutlineInputBorder(), isDense: true),
-                  items: availableCities.map((c) => DropdownMenuItem(value: c, child: Text(c))).toList(),
+                  decoration: const InputDecoration(
+                    labelText: 'Town / Education Hub',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                  items: availableCities
+                      .map((c) => DropdownMenuItem(value: c, child: Text(c)))
+                      .toList(),
                   onChanged: (val) => setModalState(() => selectedCity = val!),
                 ),
                 const SizedBox(height: 10),
                 Row(
                   children: [
-                    Expanded(child: TextField(controller: landmarkCtrl, decoration: const InputDecoration(labelText: 'Landmark / Area', border: OutlineInputBorder(), isDense: true))),
+                    Expanded(
+                      child: TextField(
+                        controller: landmarkCtrl,
+                        decoration: const InputDecoration(
+                          labelText: 'Landmark / Area',
+                          border: OutlineInputBorder(),
+                          isDense: true,
+                        ),
+                      ),
+                    ),
                     const SizedBox(width: 8),
-                    Expanded(child: TextField(controller: yearCtrl, keyboardType: TextInputType.number, decoration: const InputDecoration(labelText: 'Serving Since (Yr)', border: OutlineInputBorder(), isDense: true))),
+                    Expanded(
+                      child: TextField(
+                        controller: yearCtrl,
+                        keyboardType: TextInputType.number,
+                        decoration: const InputDecoration(
+                          labelText: 'Serving Since (Yr)',
+                          border: OutlineInputBorder(),
+                          isDense: true,
+                        ),
+                      ),
+                    ),
                   ],
                 ),
                 const SizedBox(height: 10),
-                TextField(controller: descCtrl, maxLines: 2, decoration: const InputDecoration(labelText: 'About the Institute', border: OutlineInputBorder(), isDense: true)),
+                TextField(
+                  controller: descCtrl,
+                  maxLines: 2,
+                  decoration: const InputDecoration(
+                    labelText: 'About the Institute',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                ),
                 const SizedBox(height: 16),
                 SizedBox(
                   width: double.infinity,
                   height: 44,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF16A34A), foregroundColor: Colors.white),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF16A34A),
+                      foregroundColor: Colors.white,
+                    ),
                     onPressed: isSaving
                         ? null
                         : () async {
                             setModalState(() => isSaving = true);
                             try {
-                              final updatedName = nameCtrl.text.trim().isNotEmpty ? nameCtrl.text.trim() : (coachingData?['name'] ?? creatorHandle);
+                              final updatedName = nameCtrl.text.trim().isNotEmpty
+                                  ? nameCtrl.text.trim()
+                                  : (coachingData?['name'] ?? creatorHandle);
 
                               if (coachingData?['id'] != null) {
-                                await Supabase.instance.client.from('coachings').update({
+                                await Supabase.instance.client
+                                    .from('coachings')
+                                    .update({
                                   'name': updatedName,
                                   'district': selectedDistrict,
                                   'city': selectedCity,
@@ -211,7 +349,10 @@ class CoachingEditorSheets {
                                 }).eq('id', coachingData!['id']);
                               }
 
-                              await Supabase.instance.client.from('creator_profiles').update({'name': updatedName}).eq('handle_id', creatorHandle);
+                              await Supabase.instance.client
+                                  .from('creator_profiles')
+                                  .update({'name': updatedName}).eq(
+                                      'handle_id', creatorHandle);
 
                               if (ctx.mounted) Navigator.pop(ctx);
                               onSaved();
@@ -219,7 +360,12 @@ class CoachingEditorSheets {
                               setModalState(() => isSaving = false);
                             }
                           },
-                    child: isSaving ? const CircularProgressIndicator(color: Colors.white) : const Text('Save Details 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                    child: isSaving
+                        ? const CircularProgressIndicator(color: Colors.white)
+                        : const Text(
+                            'Save Details 🚀',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -231,14 +377,18 @@ class CoachingEditorSheets {
     );
   }
 
-  // 🌐 3. Social & Direct Connect Links Modifier
+  // ===========================================================================
+  // 🌐 3. SOCIAL & DIRECT CONNECT LINKS MODIFIER
+  // ===========================================================================
   static void openSocialLinksModifierSheet({
     required BuildContext context,
     required Map<String, dynamic>? coachingData,
     required bool isDarkMode,
     required VoidCallback onSaved,
   }) {
-    final phoneCtrl = TextEditingController(text: coachingData?['phone'] ?? coachingData?['contact_number'] ?? '');
+    final phoneCtrl = TextEditingController(
+      text: coachingData?['phone'] ?? coachingData?['contact_number'] ?? '',
+    );
     final tgCtrl = TextEditingController(text: coachingData?['telegram_link'] ?? '');
     final ytCtrl = TextEditingController(text: coachingData?['youtube_url'] ?? '');
     final fbCtrl = TextEditingController(text: coachingData?['facebook_url'] ?? '');
@@ -250,10 +400,17 @@ class CoachingEditorSheets {
       context: context,
       isScrollControlled: true,
       backgroundColor: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(ctx).viewInsets.bottom,
+            left: 16,
+            right: 16,
+            top: 16,
+          ),
           child: SingleChildScrollView(
             child: Column(
               mainAxisSize: MainAxisSize.min,
@@ -262,33 +419,80 @@ class CoachingEditorSheets {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text('🌐 Social & Connect Links', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+                    const Text(
+                      '🌐 Social & Connect Links',
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.close),
+                      onPressed: () => Navigator.pop(ctx),
+                    ),
                   ],
                 ),
                 const SizedBox(height: 12),
-                TextField(controller: phoneCtrl, keyboardType: TextInputType.phone, decoration: const InputDecoration(labelText: 'Call & WhatsApp Number', border: OutlineInputBorder(), isDense: true)),
+                TextField(
+                  controller: phoneCtrl,
+                  keyboardType: TextInputType.phone,
+                  decoration: const InputDecoration(
+                    labelText: 'Call & WhatsApp Number',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                ),
                 const SizedBox(height: 10),
-                TextField(controller: tgCtrl, decoration: const InputDecoration(labelText: 'Telegram Channel Link', border: OutlineInputBorder(), isDense: true)),
+                TextField(
+                  controller: tgCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'Telegram Channel Link',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                ),
                 const SizedBox(height: 10),
-                TextField(controller: ytCtrl, decoration: const InputDecoration(labelText: 'YouTube Channel Link', border: OutlineInputBorder(), isDense: true)),
+                TextField(
+                  controller: ytCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'YouTube Channel Link',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                ),
                 const SizedBox(height: 10),
-                TextField(controller: fbCtrl, decoration: const InputDecoration(labelText: 'Facebook Page URL', border: OutlineInputBorder(), isDense: true)),
+                TextField(
+                  controller: fbCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'Facebook Page URL',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                ),
                 const SizedBox(height: 10),
-                TextField(controller: webCtrl, decoration: const InputDecoration(labelText: 'Website Link', border: OutlineInputBorder(), isDense: true)),
+                TextField(
+                  controller: webCtrl,
+                  decoration: const InputDecoration(
+                    labelText: 'Website Link',
+                    border: OutlineInputBorder(),
+                    isDense: true,
+                  ),
+                ),
                 const SizedBox(height: 16),
                 SizedBox(
                   width: double.infinity,
                   height: 44,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF0284C7), foregroundColor: Colors.white),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF0284C7),
+                      foregroundColor: Colors.white,
+                    ),
                     onPressed: isSaving
                         ? null
                         : () async {
                             setModalState(() => isSaving = true);
                             try {
                               if (coachingData?['id'] != null) {
-                                await Supabase.instance.client.from('coachings').update({
+                                await Supabase.instance.client
+                                    .from('coachings')
+                                    .update({
                                   'phone': phoneCtrl.text.trim(),
                                   'contact_number': phoneCtrl.text.trim(),
                                   'telegram_link': tgCtrl.text.trim(),
@@ -303,7 +507,12 @@ class CoachingEditorSheets {
                               setModalState(() => isSaving = false);
                             }
                           },
-                    child: isSaving ? const CircularProgressIndicator(color: Colors.white) : const Text('Save Social Links 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                    child: isSaving
+                        ? const CircularProgressIndicator(color: Colors.white)
+                        : const Text(
+                            'Save Social Links 🚀',
+                            style: TextStyle(fontWeight: FontWeight.bold),
+                          ),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -315,7 +524,9 @@ class CoachingEditorSheets {
     );
   }
 
-  // 👨‍🏫 4. Faculty & Mentors Modifier
+  // ===========================================================================
+  // 👨‍🏫 4. FACULTY & MENTORS MODIFIER
+  // ===========================================================================
   static void openFacultyModifierSheet({
     required BuildContext context,
     required dynamic coachingId,
@@ -323,7 +534,8 @@ class CoachingEditorSheets {
     required bool isDarkMode,
     required VoidCallback onSaved,
   }) {
-    List<dynamic> facultyList = List<dynamic>.from(currentFaculty is List ? currentFaculty : []);
+    List<dynamic> facultyList =
+        List<dynamic>.from(currentFaculty is List ? currentFaculty : []);
     bool isSaving = false;
     final picker = ImagePicker();
 
@@ -331,10 +543,17 @@ class CoachingEditorSheets {
       context: context,
       isScrollControlled: true,
       backgroundColor: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(ctx).viewInsets.bottom,
+            left: 16,
+            right: 16,
+            top: 16,
+          ),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -342,7 +561,10 @@ class CoachingEditorSheets {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Text('👨‍🏫 Manage Faculty & Mentors', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                  const Text(
+                    '👨‍🏫 Manage Faculty & Mentors',
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  ),
                   TextButton.icon(
                     icon: const Icon(Icons.add_rounded, size: 16),
                     label: const Text('Add Mentor'),
@@ -364,31 +586,68 @@ class CoachingEditorSheets {
                                 children: [
                                   GestureDetector(
                                     onTap: () async {
-                                      final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
+                                      final picked = await picker.pickImage(
+                                        source: ImageSource.gallery,
+                                        imageQuality: 80,
+                                      );
                                       if (picked != null) {
-                                        setDialogState(() => mentorPhoto = File(picked.path));
+                                        setDialogState(
+                                          () => mentorPhoto = File(picked.path),
+                                        );
                                       }
                                     },
                                     child: CircleAvatar(
                                       radius: 32,
-                                      backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
-                                      backgroundImage: mentorPhoto != null ? FileImage(mentorPhoto!) : null,
+                                      backgroundColor: const Color(0xFF2563EB)
+                                          .withOpacity(0.12),
+                                      backgroundImage: mentorPhoto != null
+                                          ? FileImage(mentorPhoto!)
+                                          : null,
                                       child: mentorPhoto == null
-                                          ? const Icon(Icons.add_a_photo_outlined, color: Color(0xFF2563EB), size: 24)
+                                          ? const Icon(
+                                              Icons.add_a_photo_outlined,
+                                              color: Color(0xFF2563EB),
+                                              size: 24,
+                                            )
                                           : null,
                                     ),
                                   ),
                                   const SizedBox(height: 12),
-                                  TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Teacher Name', border: OutlineInputBorder(), isDense: true)),
+                                  TextField(
+                                    controller: nCtrl,
+                                    decoration: const InputDecoration(
+                                      labelText: 'Teacher Name',
+                                      border: OutlineInputBorder(),
+                                      isDense: true,
+                                    ),
+                                  ),
                                   const SizedBox(height: 10),
-                                  TextField(controller: sCtrl, decoration: const InputDecoration(labelText: 'Subject', border: OutlineInputBorder(), isDense: true)),
+                                  TextField(
+                                    controller: sCtrl,
+                                    decoration: const InputDecoration(
+                                      labelText: 'Subject',
+                                      border: OutlineInputBorder(),
+                                      isDense: true,
+                                    ),
+                                  ),
                                   const SizedBox(height: 10),
-                                  TextField(controller: eCtrl, keyboardType: TextInputType.number, decoration: const InputDecoration(labelText: 'Experience (Years)', border: OutlineInputBorder(), isDense: true)),
+                                  TextField(
+                                    controller: eCtrl,
+                                    keyboardType: TextInputType.number,
+                                    decoration: const InputDecoration(
+                                      labelText: 'Experience (Years)',
+                                      border: OutlineInputBorder(),
+                                      isDense: true,
+                                    ),
+                                  ),
                                 ],
                               ),
                             ),
                             actions: [
-                              TextButton(onPressed: () => Navigator.pop(dCtx), child: const Text('Cancel')),
+                              TextButton(
+                                onPressed: () => Navigator.pop(dCtx),
+                                child: const Text('Cancel'),
+                              ),
                               ElevatedButton(
                                 onPressed: isUploading
                                     ? null
@@ -399,13 +658,27 @@ class CoachingEditorSheets {
                                         String uploadedPhoto = '';
                                         if (mentorPhoto != null) {
                                           try {
-                                            final bytes = await mentorPhoto!.readAsBytes();
-                                            final ext = mentorPhoto!.path.split('.').last;
-                                            final fileName = 'mentor_${DateTime.now().millisecondsSinceEpoch}.$ext';
+                                            final bytes =
+                                                await mentorPhoto!.readAsBytes();
+                                            final ext = mentorPhoto!.path
+                                                .split('.')
+                                                .last;
+                                            final fileName =
+                                                'mentor_${DateTime.now().millisecondsSinceEpoch}.$ext';
                                             await Supabase.instance.client.storage
                                                 .from('coaching_assets')
-                                                .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$ext', upsert: true));
-                                            uploadedPhoto = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
+                                                .uploadBinary(
+                                                  fileName,
+                                                  bytes,
+                                                  fileOptions: FileOptions(
+                                                    contentType: 'image/$ext',
+                                                    upsert: true,
+                                                  ),
+                                                );
+                                            uploadedPhoto = Supabase
+                                                .instance.client.storage
+                                                .from('coaching_assets')
+                                                .getPublicUrl(fileName);
                                           } catch (_) {}
                                         }
 
@@ -420,7 +693,14 @@ class CoachingEditorSheets {
                                         Navigator.pop(dCtx);
                                       },
                                 child: isUploading
-                                    ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
+                                    ? const SizedBox(
+                                        width: 16,
+                                        height: 16,
+                                        child: CircularProgressIndicator(
+                                          strokeWidth: 2,
+                                          color: Colors.white,
+                                        ),
+                                      )
                                     : const Text('Add'),
                               ),
                             ],
@@ -435,7 +715,12 @@ class CoachingEditorSheets {
               if (facultyList.isEmpty)
                 const Padding(
                   padding: EdgeInsets.symmetric(vertical: 24),
-                  child: Center(child: Text('No faculty added yet.', style: TextStyle(color: Colors.grey))),
+                  child: Center(
+                    child: Text(
+                      'No faculty added yet.',
+                      style: TextStyle(color: Colors.grey),
+                    ),
+                  ),
                 )
               else
                 ConstrainedBox(
@@ -452,20 +737,43 @@ class CoachingEditorSheets {
                         contentPadding: EdgeInsets.zero,
                         leading: CircleAvatar(
                           radius: 18,
-                          backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
-                          backgroundImage: photoUrl.isNotEmpty ? NetworkImage(photoUrl) : null,
+                          backgroundColor:
+                              const Color(0xFF2563EB).withOpacity(0.12),
+                          backgroundImage:
+                              photoUrl.isNotEmpty ? NetworkImage(photoUrl) : null,
                           child: photoUrl.isEmpty
                               ? Text(
-                                  (f['name'] != null && f['name'].toString().isNotEmpty) ? f['name'][0].toUpperCase() : 'T',
-                                  style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                                  (f['name'] != null &&
+                                          f['name'].toString().isNotEmpty)
+                                      ? f['name'][0].toUpperCase()
+                                      : 'T',
+                                  style: const TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFF2563EB),
+                                  ),
                                 )
                               : null,
                         ),
-                        title: Text(f['name'] ?? '', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                        subtitle: Text('${f['subject'] ?? ''} • ${f['exp'] ?? ''} Yrs', style: const TextStyle(fontSize: 11.5)),
+                        title: Text(
+                          f['name'] ?? '',
+                          style: const TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 13,
+                          ),
+                        ),
+                        subtitle: Text(
+                          '${f['subject'] ?? ''} • ${f['exp'] ?? ''} Yrs',
+                          style: const TextStyle(fontSize: 11.5),
+                        ),
                         trailing: IconButton(
-                          icon: const Icon(Icons.delete_outline_rounded, color: Colors.redAccent, size: 18),
-                          onPressed: () => setModalState(() => facultyList.removeAt(idx)),
+                          icon: const Icon(
+                            Icons.delete_outline_rounded,
+                            color: Colors.redAccent,
+                            size: 18,
+                          ),
+                          onPressed: () => setModalState(
+                            () => facultyList.removeAt(idx),
+                          ),
                         ),
                       );
                     },
@@ -476,14 +784,20 @@ class CoachingEditorSheets {
                 width: double.infinity,
                 height: 44,
                 child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF9333EA), foregroundColor: Colors.white),
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFF9333EA),
+                    foregroundColor: Colors.white,
+                  ),
                   onPressed: isSaving
                       ? null
                       : () async {
                           setModalState(() => isSaving = true);
                           try {
                             if (coachingId != null) {
-                              await Supabase.instance.client.from('coachings').update({'faculty_list': facultyList}).eq('id', coachingId);
+                              await Supabase.instance.client
+                                  .from('coachings')
+                                  .update({'faculty_list': facultyList}).eq(
+                                      'id', coachingId);
                             }
                             if (ctx.mounted) Navigator.pop(ctx);
                             onSaved();
@@ -491,7 +805,12 @@ class CoachingEditorSheets {
                             setModalState(() => isSaving = false);
                           }
                         },
-                  child: isSaving ? const CircularProgressIndicator(color: Colors.white) : const Text('Save Faculty List 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                  child: isSaving
+                      ? const CircularProgressIndicator(color: Colors.white)
+                      : const Text(
+                          'Save Faculty List 🚀',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
                 ),
               ),
               const SizedBox(height: 16),
@@ -502,7 +821,9 @@ class CoachingEditorSheets {
     );
   }
 
-  // 🏆 5. Wall of Fame & Campus Gallery Modifier (Full Debug & Guaranteed Flow)
+  // ===========================================================================
+  // 🏆 5. WALL OF FAME (VIEW, EDIT, DELETE & ADD) & CAMPUS GALLERY MODIFIER
+  // ===========================================================================
   static void openWallOfFameModifierSheet({
     required BuildContext context,
     required dynamic coachingId,
@@ -510,8 +831,10 @@ class CoachingEditorSheets {
     required bool isDarkMode,
     required VoidCallback onSaved,
   }) {
-    debugPrint("🚀 [WALL OF FAME SHEET OPENED] Received coachingId: $coachingId");
-    List<dynamic> gallery = List<dynamic>.from(currentGallery is List ? currentGallery : []);
+    List<dynamic> gallery =
+        List<dynamic>.from(currentGallery is List ? currentGallery : []);
+    List<Map<String, dynamic>> existingSelections = [];
+    bool isLoadingSelections = true;
     bool isSaving = false;
     final picker = ImagePicker();
 
@@ -519,272 +842,559 @@ class CoachingEditorSheets {
       context: context,
       isScrollControlled: true,
       backgroundColor: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
       builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(bottom: MediaQuery.of(ctx).viewInsets.bottom, left: 16, right: 16, top: 16),
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text('🏆 Wall of Fame & Gallery', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-                    IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+        builder: (ctx, setModalState) {
+          // Coaching ke published Hall of Fame items fetch karna
+          if (isLoadingSelections) {
+            Supabase.instance.client
+                .from('coaching_selections')
+                .select()
+                .eq('coaching_id', coachingId)
+                .order('created_at', ascending: false)
+                .then((data) {
+              setModalState(() {
+                existingSelections = List<Map<String, dynamic>>.from(data);
+                isLoadingSelections = false;
+              });
+            }).catchError((err) {
+              debugPrint("Error fetching selections: $err");
+              setModalState(() => isLoadingSelections = false);
+            });
+          }
+
+          // -------------------------------------------------------------------
+          // Sub-dialog: Selection Add / Edit Modal
+          // -------------------------------------------------------------------
+          void showSelectionDialog({Map<String, dynamic>? existingItem}) {
+            final isEditing = existingItem != null;
+            final nCtrl = TextEditingController(
+              text: existingItem?['student_name'] ?? '',
+            );
+            final eCtrl = TextEditingController(
+              text: existingItem?['target_exam'] ?? '',
+            );
+            final pCtrl = TextEditingController(
+              text: existingItem?['post_cleared'] ?? '',
+            );
+            final tCtrl = TextEditingController(
+              text: existingItem?['testimonial_text'] ?? '',
+            );
+            File? studentPhoto;
+            String currentPhotoUrl = existingItem?['photo_url'] ?? '';
+            bool isUploading = false;
+
+            showDialog(
+              context: context,
+              builder: (dCtx) => StatefulBuilder(
+                builder: (dCtx, setDialogState) => AlertDialog(
+                  title: Text(
+                    isEditing ? 'Modify Selection ✏️' : 'Add Star Selection 🎓',
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  content: SingleChildScrollView(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        GestureDetector(
+                          onTap: () async {
+                            final picked = await picker.pickImage(
+                              source: ImageSource.gallery,
+                              imageQuality: 80,
+                            );
+                            if (picked != null) {
+                              setDialogState(
+                                () => studentPhoto = File(picked.path),
+                              );
+                            }
+                          },
+                          child: CircleAvatar(
+                            radius: 34,
+                            backgroundColor:
+                                const Color(0xFF16A34A).withOpacity(0.12),
+                            backgroundImage: studentPhoto != null
+                                ? FileImage(studentPhoto!)
+                                : (currentPhotoUrl.isNotEmpty
+                                    ? NetworkImage(currentPhotoUrl)
+                                        as ImageProvider
+                                    : null),
+                            child: (studentPhoto == null && currentPhotoUrl.isEmpty)
+                                ? const Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.camera_alt_outlined,
+                                        color: Color(0xFF16A34A),
+                                        size: 22,
+                                      ),
+                                      Text(
+                                        'Tap Photo',
+                                        style: TextStyle(
+                                          fontSize: 9.5,
+                                          color: Color(0xFF16A34A),
+                                        ),
+                                      ),
+                                    ],
+                                  )
+                                : null,
+                          ),
+                        ),
+                        const SizedBox(height: 12),
+                        TextField(
+                          controller: nCtrl,
+                          decoration: const InputDecoration(
+                            labelText: 'Student Name *',
+                            border: OutlineInputBorder(),
+                            isDense: true,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        TextField(
+                          controller: eCtrl,
+                          decoration: const InputDecoration(
+                            labelText: 'Exam Cleared (e.g. BPSC 70th)',
+                            border: OutlineInputBorder(),
+                            isDense: true,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        TextField(
+                          controller: pCtrl,
+                          decoration: const InputDecoration(
+                            labelText: 'Post / Rank (e.g. Revenue Officer)',
+                            border: OutlineInputBorder(),
+                            isDense: true,
+                          ),
+                        ),
+                        const SizedBox(height: 10),
+                        TextField(
+                          controller: tCtrl,
+                          maxLines: 2,
+                          decoration: const InputDecoration(
+                            labelText: 'Student Feedback Quote',
+                            border: OutlineInputBorder(),
+                            isDense: true,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  actions: [
+                    TextButton(
+                      onPressed: () => Navigator.pop(dCtx),
+                      child: const Text('Cancel'),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF16A34A),
+                        foregroundColor: Colors.white,
+                      ),
+                      onPressed: isUploading
+                          ? null
+                          : () async {
+                              final studentName = nCtrl.text.trim();
+                              if (studentName.isEmpty) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text('Student name daalna zaroori hai!'),
+                                    backgroundColor: Colors.red,
+                                  ),
+                                );
+                                return;
+                              }
+
+                              setDialogState(() => isUploading = true);
+
+                              String photoUrl = currentPhotoUrl;
+                              if (studentPhoto != null) {
+                                try {
+                                  final bytes = await studentPhoto!.readAsBytes();
+                                  final ext = studentPhoto!.path.split('.').last;
+                                  final fileName =
+                                      'selection_${DateTime.now().millisecondsSinceEpoch}.$ext';
+                                  await Supabase.instance.client.storage
+                                      .from('coaching_assets')
+                                      .uploadBinary(
+                                        fileName,
+                                        bytes,
+                                        fileOptions: FileOptions(
+                                          contentType: 'image/$ext',
+                                          upsert: true,
+                                        ),
+                                      );
+                                  photoUrl = Supabase.instance.client.storage
+                                      .from('coaching_assets')
+                                      .getPublicUrl(fileName);
+                                } catch (e) {
+                                  debugPrint("Photo upload error: $e");
+                                }
+                              }
+
+                              final Map<String, dynamic> payload = {
+                                'coaching_id': coachingId,
+                                'student_name': studentName,
+                                'target_exam': eCtrl.text.trim().isNotEmpty
+                                    ? eCtrl.text.trim()
+                                    : 'Competitive Exam',
+                                'post_cleared': pCtrl.text.trim().isNotEmpty
+                                    ? pCtrl.text.trim()
+                                    : 'Selected',
+                                'testimonial_text': tCtrl.text.trim(),
+                                'photo_url': photoUrl,
+                                'updated_at': DateTime.now().toIso8601String(),
+                              };
+
+                              try {
+                                if (isEditing) {
+                                  await Supabase.instance.client
+                                      .from('coaching_selections')
+                                      .update(payload)
+                                      .eq('id', existingItem['id']);
+                                } else {
+                                  payload['is_verified'] = true;
+                                  payload['created_at'] =
+                                      DateTime.now().toIso8601String();
+                                  await Supabase.instance.client
+                                      .from('coaching_selections')
+                                      .insert(payload);
+                                }
+
+                                if (dCtx.mounted) Navigator.pop(dCtx);
+                                setModalState(() => isLoadingSelections = true);
+                                onSaved();
+
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                      isEditing
+                                          ? 'Selection update ho gaya!'
+                                          : 'Star selection publish ho gaya!',
+                                    ),
+                                    backgroundColor: const Color(0xFF16A34A),
+                                  ),
+                                );
+                              } catch (e) {
+                                setDialogState(() => isUploading = false);
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text('Error: $e'),
+                                    backgroundColor: Colors.red,
+                                  ),
+                                );
+                              }
+                            },
+                      child: isUploading
+                          ? const SizedBox(
+                              width: 16,
+                              height: 16,
+                              child: CircularProgressIndicator(
+                                strokeWidth: 2,
+                                color: Colors.white,
+                              ),
+                            )
+                          : Text(isEditing ? 'Save Changes' : 'Publish Result'),
+                    ),
                   ],
                 ),
-                const SizedBox(height: 6),
-                OutlinedButton.icon(
-                  style: OutlinedButton.styleFrom(
-                    minimumSize: const Size(double.infinity, 42),
-                    foregroundColor: const Color(0xFFD97706),
-                    side: const BorderSide(color: Color(0xFFD97706)),
-                  ),
-                  icon: const Icon(Icons.military_tech_outlined, size: 18),
-                  label: const Text('Add Star Selection / Result 🎓', style: TextStyle(fontWeight: FontWeight.bold)),
-                  onPressed: () {
-                    debugPrint("🔘 [ADD SELECTION CLICKED] Opening dialog...");
-                    final nCtrl = TextEditingController();
-                    final eCtrl = TextEditingController();
-                    final pCtrl = TextEditingController();
-                    final tCtrl = TextEditingController();
-                    File? studentPhoto;
-                    bool isUploading = false;
+              ),
+            );
+          }
 
-                    showDialog(
-                      context: context,
-                      builder: (dCtx) => StatefulBuilder(
-                        builder: (dCtx, setDialogState) => AlertDialog(
-                          title: const Text('Add Star Selection Result'),
-                          content: SingleChildScrollView(
-                            child: Column(
+          return Padding(
+            padding: EdgeInsets.only(
+              bottom: MediaQuery.of(ctx).viewInsets.bottom,
+              left: 16,
+              right: 16,
+              top: 16,
+            ),
+            child: SingleChildScrollView(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        '🏆 Wall of Fame & Gallery',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 16,
+                        ),
+                      ),
+                      IconButton(
+                        icon: const Icon(Icons.close),
+                        onPressed: () => Navigator.pop(ctx),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 6),
+
+                  // Button: Add new selection
+                  OutlinedButton.icon(
+                    style: OutlinedButton.styleFrom(
+                      minimumSize: const Size(double.infinity, 42),
+                      foregroundColor: const Color(0xFFD97706),
+                      side: const BorderSide(color: Color(0xFFD97706)),
+                    ),
+                    icon: const Icon(Icons.military_tech_outlined, size: 18),
+                    label: const Text(
+                      'Add Star Selection / Result 🎓',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    onPressed: () => showSelectionDialog(),
+                  ),
+                  const SizedBox(height: 14),
+
+                  // -----------------------------------------------------------
+                  // LIST OF EXISTING SELECTIONS WITH EDIT & DELETE
+                  // -----------------------------------------------------------
+                  const Text(
+                    'Published Star Selections',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13.5,
+                    ),
+                  ),
+                  const SizedBox(height: 6),
+                  if (isLoadingSelections)
+                    const Center(
+                      child: Padding(
+                        padding: EdgeInsets.all(12),
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      ),
+                    )
+                  else if (existingSelections.isEmpty)
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 8),
+                      child: Text(
+                        'No selections added yet.',
+                        style: TextStyle(color: Colors.grey, fontSize: 12),
+                      ),
+                    )
+                  else
+                    ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 180),
+                      child: ListView.separated(
+                        shrinkWrap: true,
+                        itemCount: existingSelections.length,
+                        separatorBuilder: (_, __) => const Divider(height: 1),
+                        itemBuilder: (_, idx) {
+                          final item = existingSelections[idx];
+                          final photo = (item['photo_url'] ?? '').toString();
+                          return ListTile(
+                            dense: true,
+                            contentPadding: EdgeInsets.zero,
+                            leading: CircleAvatar(
+                              radius: 16,
+                              backgroundImage:
+                                  photo.isNotEmpty ? NetworkImage(photo) : null,
+                              child: photo.isEmpty
+                                  ? const Icon(Icons.person, size: 16)
+                                  : null,
+                            ),
+                            title: Text(
+                              item['student_name'] ?? '',
+                              style: const TextStyle(
+                                fontWeight: FontWeight.bold,
+                                fontSize: 12.5,
+                              ),
+                            ),
+                            subtitle: Text(
+                              '${item['post_cleared'] ?? ''} • ${item['target_exam'] ?? ''}',
+                              style: const TextStyle(fontSize: 11),
+                            ),
+                            trailing: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
-                                GestureDetector(
-                                  onTap: () async {
-                                    debugPrint("📸 [PICKER] Opening gallery for student photo...");
-                                    final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
-                                    if (picked != null) {
-                                      debugPrint("📸 [PHOTO SELECTED] Path: ${picked.path}");
-                                      setDialogState(() => studentPhoto = File(picked.path));
-                                    } else {
-                                      debugPrint("⚠️ [PHOTO CANCELLED] No image selected.");
+                                IconButton(
+                                  icon: const Icon(
+                                    Icons.edit_outlined,
+                                    color: Color(0xFF2563EB),
+                                    size: 18,
+                                  ),
+                                  onPressed: () =>
+                                      showSelectionDialog(existingItem: item),
+                                ),
+                                IconButton(
+                                  icon: const Icon(
+                                    Icons.delete_outline_rounded,
+                                    color: Colors.redAccent,
+                                    size: 18,
+                                  ),
+                                  onPressed: () async {
+                                    try {
+                                      await Supabase.instance.client
+                                          .from('coaching_selections')
+                                          .delete()
+                                          .eq('id', item['id']);
+
+                                      setModalState(
+                                        () => existingSelections.removeAt(idx),
+                                      );
+                                      onSaved();
+                                    } catch (e) {
+                                      debugPrint("Delete error: $e");
                                     }
                                   },
-                                  child: CircleAvatar(
-                                    radius: 34,
-                                    backgroundColor: const Color(0xFF16A34A).withOpacity(0.12),
-                                    backgroundImage: studentPhoto != null ? FileImage(studentPhoto!) : null,
-                                    child: studentPhoto == null
-                                        ? const Column(
-                                            mainAxisAlignment: MainAxisAlignment.center,
-                                            children: [
-                                              Icon(Icons.camera_alt_outlined, color: Color(0xFF16A34A), size: 22),
-                                              Text('Tap Photo', style: TextStyle(fontSize: 9.5, color: Color(0xFF16A34A))),
-                                            ],
-                                          )
-                                        : null,
-                                  ),
                                 ),
-                                const SizedBox(height: 12),
-                                TextField(controller: nCtrl, decoration: const InputDecoration(labelText: 'Student Name *', border: OutlineInputBorder(), isDense: true)),
-                                const SizedBox(height: 10),
-                                TextField(controller: eCtrl, decoration: const InputDecoration(labelText: 'Exam Cleared (e.g. BPSC 70th)', border: OutlineInputBorder(), isDense: true)),
-                                const SizedBox(height: 10),
-                                TextField(controller: pCtrl, decoration: const InputDecoration(labelText: 'Post / Rank (e.g. Revenue Officer)', border: OutlineInputBorder(), isDense: true)),
-                                const SizedBox(height: 10),
-                                TextField(controller: tCtrl, maxLines: 2, decoration: const InputDecoration(labelText: 'Student Feedback Quote', border: OutlineInputBorder(), isDense: true)),
                               ],
                             ),
-                          ),
-                          actions: [
-                            TextButton(onPressed: () => Navigator.pop(dCtx), child: const Text('Cancel')),
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF16A34A), foregroundColor: Colors.white),
-                              onPressed: isUploading
-                                  ? null
-                                  : () async {
-                                      debugPrint("🔘 [PUBLISH CLICKED] Attempting to submit selection...");
-                                      final studentName = nCtrl.text.trim();
-
-                                      if (studentName.isEmpty) {
-                                        debugPrint("❌ [VALIDATION FAILED] Student Name is empty!");
-                                        ScaffoldMessenger.of(context).showSnackBar(
-                                          const SnackBar(content: Text('Kripya student name daalein!'), backgroundColor: Colors.red),
-                                        );
-                                        return;
-                                      }
-
-                                      if (coachingId == null || coachingId.toString().trim().isEmpty) {
-                                        debugPrint("❌ [COACHING ID MISSING] coachingId: $coachingId");
-                                        ScaffoldMessenger.of(context).showSnackBar(
-                                          const SnackBar(content: Text('Error: Coaching ID nahi mili! Profile refresh karein.'), backgroundColor: Colors.red),
-                                        );
-                                        return;
-                                      }
-
-                                      setDialogState(() => isUploading = true);
-                                      debugPrint("⏳ [PROGRESS STARTED] Uploading data...");
-
-                                      String? photoUrl;
-                                      if (studentPhoto != null) {
-                                        try {
-                                          debugPrint("📦 [UPLOADING PHOTO] Uploading to coaching_assets...");
-                                          final bytes = await studentPhoto!.readAsBytes();
-                                          final ext = studentPhoto!.path.split('.').last;
-                                          final fileName = 'selection_${DateTime.now().millisecondsSinceEpoch}.$ext';
-
-                                          await Supabase.instance.client.storage
-                                              .from('coaching_assets')
-                                              .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$ext', upsert: true));
-
-                                          photoUrl = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
-                                          debugPrint("✅ [PHOTO UPLOADED] Public URL: $photoUrl");
-                                        } catch (e) {
-                                          debugPrint("🔥 [PHOTO UPLOAD ERROR] $e");
-                                        }
-                                      } else {
-                                        debugPrint("ℹ️ [PHOTO SKIPPED] No image chosen.");
-                                      }
-
-                                      try {
-                                        final Map<String, dynamic> insertData = {
-                                          'coaching_id': coachingId,
-                                          'student_name': studentName,
-                                          'target_exam': eCtrl.text.trim().isNotEmpty ? eCtrl.text.trim() : 'Competitive Exam',
-                                          'post_cleared': pCtrl.text.trim().isNotEmpty ? pCtrl.text.trim() : 'Officer',
-                                          'testimonial_text': tCtrl.text.trim(),
-                                          'is_verified': true,
-                                          'created_at': DateTime.now().toIso8601String(),
-                                        };
-
-                                        if (photoUrl != null && photoUrl.isNotEmpty) {
-                                          insertData['photo_url'] = photoUrl;
-                                        }
-
-                                        debugPrint("📤 [DB INSERT PAYLOAD] $insertData");
-                                        await Supabase.instance.client.from('coaching_selections').insert(insertData);
-                                        debugPrint("🎉 [DB INSERT SUCCESS] Row inserted cleanly in coaching_selections!");
-
-                                        if (dCtx.mounted) Navigator.pop(dCtx);
-                                        if (ctx.mounted) Navigator.pop(ctx);
-                                        onSaved();
-
-                                        ScaffoldMessenger.of(context).showSnackBar(
-                                          const SnackBar(content: Text('🎉 Star Selection published successfully!'), backgroundColor: Color(0xFF16A34A)),
-                                        );
-                                      } catch (dbErr, stack) {
-                                        debugPrint("🔥 [DB INSERT CRASH] $dbErr\n$stack");
-                                        setDialogState(() => isUploading = false);
-                                        if (dCtx.mounted) {
-                                          ScaffoldMessenger.of(dCtx).showSnackBar(
-                                            SnackBar(content: Text('Save error: $dbErr'), backgroundColor: Colors.red),
-                                          );
-                                        }
-                                      }
-                                    },
-                              child: isUploading
-                                  ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
-                                  : const Text('Publish Result'),
-                            ),
-                          ],
-                        ),
-                      ),
-                    );
-                  },
-                ),
-                const SizedBox(height: 16),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text('Classroom & Campus Photos', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
-                    TextButton.icon(
-                      icon: const Icon(Icons.add_a_photo_outlined, size: 16),
-                      label: const Text('Upload Photo'),
-                      onPressed: () async {
-                        final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
-                        if (picked != null) {
-                          setModalState(() => isSaving = true);
-                          try {
-                            final bytes = await File(picked.path).readAsBytes();
-                            final ext = picked.path.split('.').last;
-                            final fileName = 'campus_${DateTime.now().millisecondsSinceEpoch}.$ext';
-
-                            await Supabase.instance.client.storage
-                                .from('coaching_assets')
-                                .uploadBinary(fileName, bytes, fileOptions: FileOptions(contentType: 'image/$ext', upsert: true));
-
-                            final url = Supabase.instance.client.storage.from('coaching_assets').getPublicUrl(fileName);
-                            setModalState(() {
-                              gallery.add(url);
-                              isSaving = false;
-                            });
-                          } catch (_) {
-                            setModalState(() => isSaving = false);
-                          }
-                        }
-                      },
-                    ),
-                  ],
-                ),
-                if (gallery.isEmpty)
-                  const Padding(
-                    padding: EdgeInsets.symmetric(vertical: 12),
-                    child: Text('No classroom photos yet.', style: TextStyle(color: Colors.grey, fontSize: 12)),
-                  )
-                else
-                  ConstrainedBox(
-                    constraints: const BoxConstraints(maxHeight: 180),
-                    child: ListView.separated(
-                      shrinkWrap: true,
-                      itemCount: gallery.length,
-                      separatorBuilder: (_, __) => const Divider(height: 1),
-                      itemBuilder: (_, i) => ListTile(
-                        dense: true,
-                        contentPadding: EdgeInsets.zero,
-                        leading: ClipRRect(
-                          borderRadius: BorderRadius.circular(6),
-                          child: Image.network(gallery[i], width: 44, height: 44, fit: BoxFit.cover, errorBuilder: (_, __, ___) => const Icon(Icons.image)),
-                        ),
-                        title: Text('Facility Photo ${i + 1}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
-                        trailing: IconButton(
-                          icon: const Icon(Icons.delete_outline_rounded, color: Colors.redAccent, size: 18),
-                          onPressed: () => setModalState(() => gallery.removeAt(i)),
-                        ),
+                          );
+                        },
                       ),
                     ),
-                  ),
-                const SizedBox(height: 14),
-                SizedBox(
-                  width: double.infinity,
-                  height: 44,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFFD97706), foregroundColor: Colors.white),
-                    onPressed: isSaving
-                        ? null
-                        : () async {
+
+                  const SizedBox(height: 16),
+                  const Divider(),
+
+                  // -----------------------------------------------------------
+                  // CAMPUS PHOTOS SECTION
+                  // -----------------------------------------------------------
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Text(
+                        'Classroom & Campus Photos',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                        ),
+                      ),
+                      TextButton.icon(
+                        icon: const Icon(Icons.add_a_photo_outlined, size: 16),
+                        label: const Text('Upload Photo'),
+                        onPressed: () async {
+                          final picked = await picker.pickImage(
+                            source: ImageSource.gallery,
+                            imageQuality: 80,
+                          );
+                          if (picked != null) {
                             setModalState(() => isSaving = true);
                             try {
-                              if (coachingId != null) {
-                                await Supabase.instance.client.from('coachings').update({'gallery_images': gallery}).eq('id', coachingId);
-                              }
-                              if (ctx.mounted) Navigator.pop(ctx);
-                              onSaved();
+                              final bytes = await File(picked.path).readAsBytes();
+                              final ext = picked.path.split('.').last;
+                              final fileName =
+                                  'campus_${DateTime.now().millisecondsSinceEpoch}.$ext';
+
+                              await Supabase.instance.client.storage
+                                  .from('coaching_assets')
+                                  .uploadBinary(
+                                    fileName,
+                                    bytes,
+                                    fileOptions: FileOptions(
+                                      contentType: 'image/$ext',
+                                      upsert: true,
+                                    ),
+                                  );
+
+                              final url = Supabase.instance.client.storage
+                                  .from('coaching_assets')
+                                  .getPublicUrl(fileName);
+
+                              setModalState(() {
+                                gallery.add(url);
+                                isSaving = false;
+                              });
                             } catch (_) {
                               setModalState(() => isSaving = false);
                             }
-                          },
-                    child: isSaving ? const CircularProgressIndicator(color: Colors.white) : const Text('Save Gallery Photos 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                          }
+                        },
+                      ),
+                    ],
+                  ),
+                  if (gallery.isEmpty)
+                    const Padding(
+                      padding: EdgeInsets.symmetric(vertical: 12),
+                      child: Text(
+                        'No classroom photos yet.',
+                        style: TextStyle(color: Colors.grey, fontSize: 12),
+                      ),
+                    )
+                  else
+                    ConstrainedBox(
+                      constraints: const BoxConstraints(maxHeight: 150),
+                      child: ListView.separated(
+                        shrinkWrap: true,
+                        itemCount: gallery.length,
+                        separatorBuilder: (_, __) => const Divider(height: 1),
+                        itemBuilder: (_, i) => ListTile(
+                          dense: true,
+                          contentPadding: EdgeInsets.zero,
+                          leading: ClipRRect(
+                            borderRadius: BorderRadius.circular(6),
+                            child: Image.network(
+                              gallery[i],
+                              width: 44,
+                              height: 44,
+                              fit: BoxFit.cover,
+                              errorBuilder: (_, __, ___) =>
+                                  const Icon(Icons.image),
+                            ),
+                          ),
+                          title: Text(
+                            'Facility Photo ${i + 1}',
+                            style: const TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12.5,
+                            ),
+                          ),
+                          trailing: IconButton(
+                            icon: const Icon(
+                              Icons.delete_outline_rounded,
+                              color: Colors.redAccent,
+                              size: 18,
+                            ),
+                            onPressed: () =>
+                                setModalState(() => gallery.removeAt(i)),
+                          ),
+                        ),
+                      ),
+                    ),
+                  const SizedBox(height: 14),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 44,
+                    child: ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFFD97706),
+                        foregroundColor: Colors.white,
+                      ),
+                      onPressed: isSaving
+                          ? null
+                          : () async {
+                              setModalState(() => isSaving = true);
+                              try {
+                                if (coachingId != null) {
+                                  await Supabase.instance.client
+                                      .from('coachings')
+                                      .update({'gallery_images': gallery}).eq(
+                                          'id', coachingId);
+                                }
+                                if (ctx.mounted) Navigator.pop(ctx);
+                                onSaved();
+                              } catch (_) {
+                                setModalState(() => isSaving = false);
+                              }
+                            },
+                      child: isSaving
+                          ? const CircularProgressIndicator(color: Colors.white)
+                          : const Text(
+                              'Save Gallery Photos 🚀',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            ),
                   ),
                 ),
                 const SizedBox(height: 16),
               ],
             ),
           ),
-        ),
-      ),
-    );
-  }
+        );
+      },
+    ),
+  );
+}
 }
