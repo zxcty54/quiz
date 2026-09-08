@@ -43,7 +43,7 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // FETCH
+  // FETCH HALL OF FAME
   // ===========================================================================
 
   Future<void> fetchHallOfFame() async {
@@ -108,7 +108,7 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // CLAIM
+  // OPEN CLAIM / SHARE SUCCESS STORY
   // ===========================================================================
 
   Future<void> _openClaimSelectionModal() async {
@@ -148,9 +148,15 @@ class HallOfFameCarouselWidgetState
           }
         }
       } catch (e) {
-        debugPrint('[DEBUG] Coaching lookup error: $e');
+        debugPrint(
+          '[DEBUG] Coaching lookup error: $e',
+        );
       }
     }
+
+    // -------------------------------------------------------------------------
+    // FALLBACK COACHING
+    // -------------------------------------------------------------------------
 
     if (targetCoachingId.isEmpty) {
       try {
@@ -169,7 +175,9 @@ class HallOfFameCarouselWidgetState
                   'Coaching Institute';
         }
       } catch (e) {
-        debugPrint('[DEBUG] Fallback coaching error: $e');
+        debugPrint(
+          '[DEBUG] Fallback coaching error: $e',
+        );
       }
     }
 
@@ -218,7 +226,7 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // CLAIM BANNER
+  // SHARE SUCCESS STORY BANNER
   // ===========================================================================
 
   Widget _claimBanner() {
@@ -236,6 +244,8 @@ class HallOfFameCarouselWidgetState
                   Color(0xFFF1F5FF),
                   Color(0xFFE8EDFF),
                 ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
@@ -245,6 +255,7 @@ class HallOfFameCarouselWidgetState
       ),
       child: Row(
         children: [
+          // ICON
           Container(
             width: 48,
             height: 48,
@@ -262,6 +273,7 @@ class HallOfFameCarouselWidgetState
 
           const SizedBox(width: 12),
 
+          // TEXT
           Expanded(
             child: Column(
               crossAxisAlignment:
@@ -296,6 +308,7 @@ class HallOfFameCarouselWidgetState
 
           const SizedBox(width: 8),
 
+          // SHARE BUTTON
           ElevatedButton(
             onPressed: _openClaimSelectionModal,
             style: ElevatedButton.styleFrom(
@@ -337,7 +350,8 @@ class HallOfFameCarouselWidgetState
           height: 34,
           decoration: BoxDecoration(
             color: const Color(0xFFFFF7E6),
-            borderRadius: BorderRadius.circular(10),
+            borderRadius:
+                BorderRadius.circular(10),
           ),
           child: const Icon(
             Icons.workspace_premium_rounded,
@@ -361,6 +375,7 @@ class HallOfFameCarouselWidgetState
                       : const Color(0xFF0F172A),
                   fontSize: 16,
                   fontWeight: FontWeight.w900,
+                  letterSpacing: -.3,
                 ),
               ),
               Text(
@@ -377,6 +392,7 @@ class HallOfFameCarouselWidgetState
           ),
         ),
 
+        // VERIFIED BADGE
         Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 9,
@@ -385,7 +401,8 @@ class HallOfFameCarouselWidgetState
           decoration: BoxDecoration(
             color: const Color(0xFF16A34A)
                 .withOpacity(.10),
-            borderRadius: BorderRadius.circular(8),
+            borderRadius:
+                BorderRadius.circular(8),
           ),
           child: const Row(
             mainAxisSize: MainAxisSize.min,
@@ -441,7 +458,7 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // CARD
+  // SINGLE SELECTION CARD
   // ===========================================================================
 
   Widget _selectionCard(
@@ -467,8 +484,12 @@ class HallOfFameCarouselWidgetState
         item['testimonial_text']?.toString() ??
             '';
 
-    // IMPORTANT:
-    // Same working image logic retained.
+    // -------------------------------------------------------------------------
+    // IMAGE FIELDS
+    //
+    // Existing working logic is preserved.
+    // -------------------------------------------------------------------------
+
     final imageUrl =
         item['profile_image_url'] ??
             item['student_image_url'] ??
@@ -479,7 +500,8 @@ class HallOfFameCarouselWidgetState
         color: widget.isDarkMode
             ? const Color(0xFF172033)
             : Colors.white,
-        borderRadius: BorderRadius.circular(24),
+        borderRadius:
+            BorderRadius.circular(24),
         border: Border.all(
           color: widget.isDarkMode
               ? Colors.white.withOpacity(.08)
@@ -499,9 +521,9 @@ class HallOfFameCarouselWidgetState
         children: [
           const SizedBox(height: 18),
 
-          // -------------------------------------------------------------------
-          // PHOTO - LARGE + CENTER
-          // -------------------------------------------------------------------
+          // ===================================================================
+          // LARGE CENTERED STUDENT PHOTO
+          // ===================================================================
 
           _largeStudentPhoto(
             studentName,
@@ -510,9 +532,9 @@ class HallOfFameCarouselWidgetState
 
           const SizedBox(height: 11),
 
-          // -------------------------------------------------------------------
-          // NAME
-          // -------------------------------------------------------------------
+          // ===================================================================
+          // STUDENT NAME
+          // ===================================================================
 
           Padding(
             padding: const EdgeInsets.symmetric(
@@ -526,7 +548,8 @@ class HallOfFameCarouselWidgetState
                   child: Text(
                     studentName,
                     maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
+                    overflow:
+                        TextOverflow.ellipsis,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: widget.isDarkMode
@@ -549,9 +572,9 @@ class HallOfFameCarouselWidgetState
 
           const SizedBox(height: 5),
 
-          // -------------------------------------------------------------------
-          // POST
-          // -------------------------------------------------------------------
+          // ===================================================================
+          // SELECTED POST
+          // ===================================================================
 
           Container(
             padding: const EdgeInsets.symmetric(
@@ -561,7 +584,8 @@ class HallOfFameCarouselWidgetState
             decoration: BoxDecoration(
               color: const Color(0xFF2563EB)
                   .withOpacity(.09),
-              borderRadius: BorderRadius.circular(20),
+              borderRadius:
+                  BorderRadius.circular(20),
             ),
             child: Text(
               post,
@@ -577,6 +601,10 @@ class HallOfFameCarouselWidgetState
           ),
 
           const SizedBox(height: 4),
+
+          // ===================================================================
+          // EXAM
+          // ===================================================================
 
           Padding(
             padding: const EdgeInsets.symmetric(
@@ -597,11 +625,11 @@ class HallOfFameCarouselWidgetState
             ),
           ),
 
-          const SizedBox(height: 14),
+          const SizedBox(height: 13),
 
-          // -------------------------------------------------------------------
+          // ===================================================================
           // DIVIDER
-          // -------------------------------------------------------------------
+          // ===================================================================
 
           Padding(
             padding: const EdgeInsets.symmetric(
@@ -615,11 +643,13 @@ class HallOfFameCarouselWidgetState
             ),
           ),
 
-          const SizedBox(height: 13),
+          const SizedBox(height: 12),
 
-          // -------------------------------------------------------------------
-          // SUCCESS STATEMENT
-          // -------------------------------------------------------------------
+          // ===================================================================
+          // DIRECT SUCCESS STATEMENT
+          //
+          // No "My Success Story" label.
+          // ===================================================================
 
           Expanded(
             child: Padding(
@@ -629,10 +659,10 @@ class HallOfFameCarouselWidgetState
               child: Container(
                 width: double.infinity,
                 padding: const EdgeInsets.fromLTRB(
-                  14,
-                  12,
-                  14,
-                  12,
+                  15,
+                  13,
+                  15,
+                  13,
                 ),
                 decoration: BoxDecoration(
                   color: widget.isDarkMode
@@ -641,62 +671,24 @@ class HallOfFameCarouselWidgetState
                   borderRadius:
                       BorderRadius.circular(16),
                 ),
-                child: Column(
-                  crossAxisAlignment:
-                      CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          width: 30,
-                          height: 30,
-                          decoration: BoxDecoration(
-                            color: const Color(
-                              0xFF2563EB,
-                            ).withOpacity(.10),
-                            borderRadius:
-                                BorderRadius.circular(9),
-                          ),
-                          child: const Icon(
-                            Icons.format_quote_rounded,
-                            color: Color(0xFF2563EB),
-                            size: 18,
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        Text(
-                          'My Success Story',
-                          style: TextStyle(
-                            color: widget.isDarkMode
-                                ? Colors.white70
-                                : const Color(0xFF475569),
-                            fontSize: 10.5,
-                            fontWeight: FontWeight.w800,
-                          ),
-                        ),
-                      ],
+                child: Align(
+                  alignment: Alignment.topLeft,
+                  child: Text(
+                    quote.isNotEmpty
+                        ? '“$quote”'
+                        : '“I am proud to share my selection journey.”',
+                    maxLines: 7,
+                    overflow:
+                        TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: widget.isDarkMode
+                          ? Colors.white
+                          : const Color(0xFF334155),
+                      fontSize: 12.5,
+                      height: 1.5,
+                      fontWeight: FontWeight.w600,
                     ),
-
-                    const SizedBox(height: 9),
-
-                    Expanded(
-                      child: Text(
-                        quote.isNotEmpty
-                            ? '“$quote”'
-                            : '“I am proud to share my selection journey.”',
-                        maxLines: 6,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: widget.isDarkMode
-                              ? Colors.white
-                              : const Color(0xFF334155),
-                          fontSize: 12,
-                          height: 1.5,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ),
@@ -704,9 +696,9 @@ class HallOfFameCarouselWidgetState
 
           const SizedBox(height: 12),
 
-          // -------------------------------------------------------------------
-          // COACHING
-          // -------------------------------------------------------------------
+          // ===================================================================
+          // COACHING FOOTER
+          // ===================================================================
 
           Padding(
             padding: const EdgeInsets.fromLTRB(
@@ -760,7 +752,8 @@ class HallOfFameCarouselWidgetState
                                 ? Colors.white38
                                 : const Color(0xFF94A3B8),
                             fontSize: 7.5,
-                            fontWeight: FontWeight.w600,
+                            fontWeight:
+                                FontWeight.w600,
                           ),
                         ),
                         const SizedBox(height: 2),
@@ -774,7 +767,8 @@ class HallOfFameCarouselWidgetState
                                 ? Colors.white
                                 : const Color(0xFF334155),
                             fontSize: 10.5,
-                            fontWeight: FontWeight.w800,
+                            fontWeight:
+                                FontWeight.w800,
                           ),
                         ),
                       ],
@@ -790,7 +784,7 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // LARGE PASSPORT-STYLE PHOTO
+  // LARGE PASSPORT STYLE PHOTO
   // ===========================================================================
 
   Widget _largeStudentPhoto(
@@ -809,7 +803,8 @@ class HallOfFameCarouselWidgetState
         color: widget.isDarkMode
             ? const Color(0xFF24304A)
             : Colors.white,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius:
+            BorderRadius.circular(16),
         border: Border.all(
           color: const Color(0xFF2563EB)
               .withOpacity(.22),
@@ -825,7 +820,8 @@ class HallOfFameCarouselWidgetState
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(12),
+        borderRadius:
+            BorderRadius.circular(12),
         child: hasImage
             ? Image.network(
                 imageUrl.toString(),
@@ -834,7 +830,9 @@ class HallOfFameCarouselWidgetState
                 fit: BoxFit.cover,
                 errorBuilder:
                     (_, __, ___) =>
-                        _photoFallback(studentName),
+                        _photoFallback(
+                  studentName,
+                ),
                 loadingBuilder:
                     (context, child, progress) {
                   if (progress == null) {
@@ -844,7 +842,9 @@ class HallOfFameCarouselWidgetState
                   return _photoLoading();
                 },
               )
-            : _photoFallback(studentName),
+            : _photoFallback(
+                studentName,
+              ),
       ),
     );
   }
@@ -858,7 +858,9 @@ class HallOfFameCarouselWidgetState
   ) {
     final initial =
         studentName.trim().isNotEmpty
-            ? studentName.trim()[0].toUpperCase()
+            ? studentName
+                .trim()[0]
+                .toUpperCase()
             : 'A';
 
     return Container(
