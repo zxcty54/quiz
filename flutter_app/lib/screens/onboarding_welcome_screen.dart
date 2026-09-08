@@ -4,19 +4,19 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'home_screen.dart';
 
-class OnboardingScreen extends StatefulWidget {
+class OnboardingWelcomeScreen extends StatefulWidget {
   final Widget nextScreen;
 
-  const OnboardingScreen({
+  const OnboardingWelcomeScreen({
     super.key,
     this.nextScreen = const HomeScreen(),
   });
 
   @override
-  State<OnboardingScreen> createState() => _OnboardingScreenState();
+  State<OnboardingWelcomeScreen> createState() => _OnboardingWelcomeScreenState();
 }
 
-class _OnboardingScreenState extends State<OnboardingScreen> {
+class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
   final PageController _pageController = PageController();
   final _formKey = GlobalKey<FormState>();
   final TextEditingController _nameController = TextEditingController();
@@ -371,7 +371,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             ),
             const SizedBox(height: 24),
 
-            // White Floating Input Container
             Container(
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
@@ -478,7 +477,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
     );
   }
 
-  // Feature Card Builder for Screen 2
   Widget _buildFeatureTile(IconData icon, String title, String desc) {
     return Container(
       padding: const EdgeInsets.all(12),
