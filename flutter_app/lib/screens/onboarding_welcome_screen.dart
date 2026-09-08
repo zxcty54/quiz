@@ -30,7 +30,6 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
   static const Color _darkHeader = Color(0xFF0A1128);
   static const Color _accentGold = Color(0xFFF59E0B);
   static const Color _borderSubtle = Color(0xFFE2E8F0);
-  static const Color _bgScreen = Color(0xFFF6F8FD);
 
   final List<Map<String, String>> _examTabs = const [
     {'id': 'ALL', 'label': '⚡ Sabhi Exams (All)'},
@@ -107,7 +106,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: _bgScreen,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Column(
           children: [
@@ -115,7 +114,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
             _buildExamChips(),
             const SizedBox(height: 6),
 
-            // 4-Slide Main Carousel (Clean Vertical Flow)
+            // 4-Slide Main Carousel Viewport (Seamless Screen Fit)
             Expanded(
               child: PageView(
                 controller: _pageController,
@@ -269,33 +268,12 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
     );
   }
 
-  // Card without artificial stretch: solves bottom white deadspace
+  // Pure seamless scrolling content container: eliminates floating card gap
   Widget _buildSlideCard(Widget content) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(14, 2, 14, 6),
-      child: Container(
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(24),
-          border: Border.all(color: _borderSubtle),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.03),
-              blurRadius: 10,
-              offset: const Offset(0, 3),
-            ),
-          ],
-        ),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(24),
-          child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
-            child: content,
-          ),
-        ),
-      ),
+    return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
+      child: content,
     );
   }
 
@@ -473,7 +451,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
   }
 
   // =========================================================================
-  // SLIDE 2: TCS CBT SIMULATOR (IMAGE 3 MATCH)
+  // SLIDE 2: TCS CBT SIMULATOR
   // =========================================================================
   Widget _buildSlide2TcsSimulator() {
     return Column(
@@ -671,7 +649,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
   }
 
   // =========================================================================
-  // SLIDE 3: COACHING HUB SHOWCASE (IMAGE 2 MATCH)
+  // SLIDE 3: COACHING HUB SHOWCASE
   // =========================================================================
   Widget _buildSlide3CoachingHubShowcase() {
     return Column(
@@ -847,7 +825,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
   }
 
   // =========================================================================
-  // SLIDE 4: PROFILE SETUP FORM (IMAGE 1 MATCH - ZERO WHITE SPACE)
+  // SLIDE 4: PROFILE SETUP FORM
   // =========================================================================
   Widget _buildSlide4ProfileSetupForm() {
     return Form(
@@ -930,7 +908,6 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
           ),
           const SizedBox(height: 10),
 
-          // Unlocked features card
           Container(
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(color: const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(10)),
@@ -954,12 +931,11 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 16),
 
-          // In-card Action Button (Eliminates dead space before bottom)
           SizedBox(
             width: double.infinity,
-            height: 44,
+            height: 46,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 backgroundColor: _brandBlue,
@@ -969,7 +945,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen> {
               onPressed: _isLoading ? null : _completeOnboarding,
               child: _isLoading
                   ? const SizedBox(height: 18, width: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
-                  : const Text('Start Preparation 🚀', style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.bold)),
+                  : const Text('Start Preparation 🚀', style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
             ),
           ),
         ],
