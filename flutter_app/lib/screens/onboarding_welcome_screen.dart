@@ -24,50 +24,45 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     with TickerProviderStateMixin {
   final PageController _pageController = PageController();
 
-  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final _formKey = GlobalKey<FormState>();
+  final _nameController = TextEditingController();
+  final _phoneController = TextEditingController();
 
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _phoneController = TextEditingController();
+  late AnimationController _floatController;
+  late AnimationController _entryController;
 
-  late final AnimationController _pageAnimation;
-  late final AnimationController _floatAnimation;
-
-  int _currentIndex = 0;
+  int _currentPage = 0;
   bool _isLoading = false;
 
-  // ===========================================================================
-  // PREMIUM DESIGN SYSTEM
-  // ===========================================================================
+  // ---------------------------------------------------------------------------
+  // COLORS
+  // ---------------------------------------------------------------------------
 
-  static const Color _background = Color(0xFFF8FAFC);
-  static const Color _white = Colors.white;
+  static const Color bg = Color(0xFFF7F9FC);
+  static const Color ink = Color(0xFF101828);
+  static const Color muted = Color(0xFF667085);
+  static const Color faint = Color(0xFF98A2B3);
 
-  static const Color _navy = Color(0xFF101828);
-  static const Color _primary = Color(0xFF155EEF);
-  static const Color _primaryDark = Color(0xFF0040C1);
+  static const Color blue = Color(0xFF155EEF);
+  static const Color blueDeep = Color(0xFF0039B7);
+  static const Color violet = Color(0xFF6941C6);
 
-  static const Color _secondary = Color(0xFF667085);
-  static const Color _muted = Color(0xFF98A2B3);
-
-  static const Color _border = Color(0xFFE4E7EC);
-
-  static const Color _green = Color(0xFF12B76A);
-  static const Color _purple = Color(0xFF7F56D9);
-  static const Color _orange = Color(0xFFF79009);
+  static const Color green = Color(0xFF12B76A);
+  static const Color orange = Color(0xFFF79009);
 
   @override
   void initState() {
     super.initState();
 
-    _pageAnimation = AnimationController(
+    _floatController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 600),
-    )..forward();
-
-    _floatAnimation = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 2600),
+      duration: const Duration(seconds: 3),
     )..repeat(reverse: true);
+
+    _entryController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 700),
+    )..forward();
   }
 
   @override
@@ -75,30 +70,9 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     _pageController.dispose();
     _nameController.dispose();
     _phoneController.dispose();
-    _pageAnimation.dispose();
-    _floatAnimation.dispose();
+    _floatController.dispose();
+    _entryController.dispose();
     super.dispose();
-  }
-
-  // ===========================================================================
-  // NAVIGATION
-  // ===========================================================================
-
-  void _nextPage() {
-    if (_currentIndex < 2) {
-      _pageController.nextPage(
-        duration: const Duration(milliseconds: 450),
-        curve: Curves.easeOutCubic,
-      );
-    }
-  }
-
-  void _skipToProfile() {
-    _pageController.animateToPage(
-      2,
-      duration: const Duration(milliseconds: 450),
-      curve: Curves.easeOutCubic,
-    );
   }
 
   // ===========================================================================
@@ -108,27 +82,21 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   Future<void> _completeRegistration() async {
     FocusScope.of(context).unfocus();
 
-    if (!_formKey.currentState!.validate() || _isLoading) {
-      return;
-    }
+    if (!_formKey.currentState!.validate() || _isLoading) return;
 
-    setState(() {
-      _isLoading = true;
-    });
+    setState(() => _isLoading = true);
 
-    final String name = _nameController.text.trim();
-    final String phone = _phoneController.text.trim();
+    final name = _nameController.text.trim();
+    final phone = _phoneController.text.trim();
 
     try {
-      final SharedPreferences prefs =
-          await SharedPreferences.getInstance();
+      final prefs = await SharedPreferences.getInstance();
 
       await prefs.setBool('is_onboarded', true);
       await prefs.setString('custom_aspirant_name', name);
       await prefs.setString('user_name', name);
       await prefs.setString('user_mobile', phone);
 
-      // Supabase sync
       if (phone.isNotEmpty) {
         try {
           await Supabase.instance.client.from('app_users').upsert({
@@ -145,38 +113,43 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
 
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(
-          builder: (_) => widget.nextScreen,
+        PageRouteBuilder(
+          transitionDuration: const Duration(milliseconds: 450),
+          pageBuilder: (_, __, ___) => widget.nextScreen,
+          transitionsBuilder: (_, animation, __, child) {
+            return FadeTransition(
+              opacity: animation,
+              child: child,
+            );
+          },
         ),
       );
     } catch (e) {
-      debugPrint('Storage error: $e');
-
-      if (!mounted) return;
-
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          behavior: SnackBarBehavior.floating,
-          backgroundColor: _navy,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(14),
-          ),
-          content: const Text(
-            'Something went wrong. Please try again.',
-          ),
-        ),
-      );
+      debugPrint('Registration error: $e');
     } finally {
       if (mounted) {
-        setState(() {
-          _isLoading = false;
-        });
+        setState(() => _isLoading = false);
       }
     }
   }
 
+  void _next() {
+    _pageController.nextPage(
+      duration: const Duration(milliseconds: 550),
+      curve: Curves.easeOutCubic,
+    );
+  }
+
+  void _profile() {
+    _pageController.animateToPage(
+      2,
+      duration: const Duration(milliseconds: 550),
+      curve: Curves.easeOutCubic,
+    );
+  }
+
   // ===========================================================================
-  // MAIN BUILD
+  // ROOT
   // ===========================================================================
 
   @override
@@ -185,46 +158,36 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarColor: _background,
+        systemNavigationBarColor: bg,
         systemNavigationBarIconBrightness: Brightness.dark,
       ),
       child: Scaffold(
-        backgroundColor: _background,
-        resizeToAvoidBottomInset: true,
+        backgroundColor: bg,
         body: SafeArea(
-          child: Stack(
+          child: Column(
             children: [
-              // Extremely subtle premium background lighting.
-              _buildBackgroundGlow(),
+              _header(),
 
-              Column(
-                children: [
-                  _buildTopBar(),
+              Expanded(
+                child: PageView(
+                  controller: _pageController,
+                  physics: const BouncingScrollPhysics(),
+                  onPageChanged: (value) {
+                    setState(() => _currentPage = value);
 
-                  Expanded(
-                    child: PageView(
-                      controller: _pageController,
-                      physics: const BouncingScrollPhysics(),
-                      onPageChanged: (index) {
-                        setState(() {
-                          _currentIndex = index;
-                        });
-
-                        _pageAnimation
-                          ..reset()
-                          ..forward();
-                      },
-                      children: [
-                        _buildWelcomePage(),
-                        _buildCoachingPage(),
-                        _buildProfilePage(),
-                      ],
-                    ),
-                  ),
-
-                  _buildBottomProgress(),
-                ],
+                    _entryController
+                      ..reset()
+                      ..forward();
+                  },
+                  children: [
+                    _pageOne(),
+                    _pageTwo(),
+                    _pageThree(),
+                  ],
+                ),
               ),
+
+              _bottomProgress(),
             ],
           ),
         ),
@@ -233,136 +196,64 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   }
 
   // ===========================================================================
-  // BACKGROUND
+  // HEADER
   // ===========================================================================
 
-  Widget _buildBackgroundGlow() {
-    return IgnorePointer(
-      child: Stack(
-        children: [
-          Positioned(
-            top: -100,
-            right: -100,
-            child: Container(
-              width: 280,
-              height: 280,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                gradient: RadialGradient(
-                  colors: [
-                    _primary.withValues(alpha: 0.065),
-                    Colors.transparent,
-                  ],
-                ),
-              ),
-            ),
-          ),
-          Positioned(
-            bottom: -140,
-            left: -120,
-            child: Container(
-              width: 300,
-              height: 300,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                gradient: RadialGradient(
-                  colors: [
-                    _purple.withValues(alpha: 0.045),
-                    Colors.transparent,
-                  ],
-                ),
-              ),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ===========================================================================
-  // TOP BAR
-  // ===========================================================================
-
-  Widget _buildTopBar() {
+  Widget _header() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 12, 18, 4),
+      padding: const EdgeInsets.fromLTRB(20, 13, 18, 8),
       child: Row(
         children: [
-          Row(
-            children: [
-              Container(
-                width: 40,
-                height: 40,
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [
-                      Color(0xFF1677FF),
-                      Color(0xFF0047D9),
-                    ],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
+          // Minimal brand instead of boxed logo.
+          RichText(
+            text: const TextSpan(
+              children: [
+                TextSpan(
+                  text: 'mock',
+                  style: TextStyle(
+                    color: ink,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: -1,
                   ),
-                  borderRadius: BorderRadius.circular(13),
-                  boxShadow: [
-                    BoxShadow(
-                      color: _primary.withValues(alpha: 0.20),
-                      blurRadius: 16,
-                      offset: const Offset(0, 7),
-                    ),
-                  ],
                 ),
-                child: const Icon(
-                  Icons.school_rounded,
-                  color: Colors.white,
-                  size: 22,
+                TextSpan(
+                  text: 'tester',
+                  style: TextStyle(
+                    color: blue,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: -1,
+                  ),
                 ),
-              ),
-              const SizedBox(width: 10),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Text(
-                    'MockTester',
-                    style: TextStyle(
-                      color: _navy,
-                      fontSize: 17,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: -0.6,
-                    ),
-                  ),
-                  const SizedBox(height: 1),
-                  Text(
-                    'SMART EXAM PREP',
-                    style: TextStyle(
-                      color: _primary,
-                      fontSize: 7.5,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: 1.15,
-                    ),
-                  ),
-                ],
-              ),
-            ],
+              ],
+            ),
           ),
 
           const Spacer(),
 
-          if (_currentIndex < 2)
-            TextButton(
-              onPressed: _skipToProfile,
-              style: TextButton.styleFrom(
-                foregroundColor: _secondary,
+          if (_currentPage < 2)
+            GestureDetector(
+              onTap: _profile,
+              child: Container(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 8,
+                  horizontal: 12,
+                  vertical: 7,
                 ),
-                minimumSize: const Size(48, 42),
-              ),
-              child: const Text(
-                'Skip',
-                style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w800,
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(30),
+                  border: Border.all(
+                    color: const Color(0xFFE4E7EC),
+                  ),
+                ),
+                child: const Text(
+                  'Skip',
+                  style: TextStyle(
+                    color: muted,
+                    fontSize: 10,
+                    fontWeight: FontWeight.w800,
+                  ),
                 ),
               ),
             ),
@@ -372,93 +263,90 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   }
 
   // ===========================================================================
-  // PAGE 1 — BRAND HERO
+  // PAGE 1
   // ===========================================================================
 
-  Widget _buildWelcomePage() {
+  Widget _pageOne() {
     return FadeTransition(
-      opacity: CurvedAnimation(
-        parent: _pageAnimation,
-        curve: Curves.easeOut,
-      ),
+      opacity: _entryController,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(22, 8, 22, 6),
+        padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            const Spacer(flex: 1),
+            const SizedBox(height: 8),
 
-            AnimatedBuilder(
-              animation: _floatAnimation,
-              builder: (context, child) {
-                final double y =
-                    lerpDouble(-4, 4, _floatAnimation.value) ?? 0;
-
-                return Transform.translate(
-                  offset: Offset(0, y),
-                  child: child,
-                );
-              },
-              child: _buildHeroVisual(),
-            ),
-
-            const SizedBox(height: 26),
-
-            const Text(
-              'Prepare Better.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: _navy,
-                fontSize: 31,
-                height: 1.05,
-                fontWeight: FontWeight.w900,
-                letterSpacing: -1.3,
+            // Small eyebrow
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Row(
+                children: [
+                  Container(
+                    width: 7,
+                    height: 7,
+                    decoration: const BoxDecoration(
+                      color: green,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                  const SizedBox(width: 7),
+                  const Text(
+                    'BUILT FOR SERIOUS ASPIRANTS',
+                    style: TextStyle(
+                      color: muted,
+                      fontSize: 8,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: 1,
+                    ),
+                  ),
+                ],
               ),
             ),
 
-            const SizedBox(height: 1),
+            const SizedBox(height: 14),
 
-            ShaderMask(
-              shaderCallback: (bounds) {
-                return const LinearGradient(
-                  colors: [
-                    Color(0xFF155EEF),
-                    Color(0xFF7F56D9),
-                  ],
-                ).createShader(bounds);
-              },
-              child: const Text(
-                'Perform Better.',
-                textAlign: TextAlign.center,
+            // Large typography.
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Your exam.\nYour edge.',
                 style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 31,
-                  height: 1.05,
+                  color: ink,
+                  fontSize: 43,
+                  height: .98,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: -1.3,
+                  letterSpacing: -2.4,
                 ),
               ),
             ),
 
-            const SizedBox(height: 15),
+            const SizedBox(height: 11),
 
-            const Text(
-              'Bihar competitive exams ke liye\n'
-              'real exam environment mein practice karein.',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: _secondary,
-                fontSize: 13.5,
-                height: 1.55,
-                fontWeight: FontWeight.w500,
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Practice in a real CBT environment.\n'
+                'Build speed, accuracy and confidence.',
+                style: TextStyle(
+                  color: muted,
+                  fontSize: 12,
+                  height: 1.5,
+                  fontWeight: FontWeight.w500,
+                ),
               ),
             ),
 
-            const Spacer(flex: 2),
+            const SizedBox(height: 18),
 
-            _buildPrimaryButton(
-              label: 'Start Exploring',
-              icon: Icons.arrow_forward_rounded,
-              onPressed: _nextPage,
+            Expanded(
+              child: _examDashboard(),
+            ),
+
+            const SizedBox(height: 10),
+
+            _blueButton(
+              'Enter MockTester',
+              Icons.arrow_forward_rounded,
+              _next,
             ),
 
             const SizedBox(height: 8),
@@ -469,141 +357,197 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   }
 
   // ===========================================================================
-  // HERO VISUAL
+  // EXAM DASHBOARD VISUAL
   // ===========================================================================
 
-  Widget _buildHeroVisual() {
-    return SizedBox(
-      width: 255,
-      height: 220,
+  Widget _examDashboard() {
+    return AnimatedBuilder(
+      animation: _floatController,
+      builder: (_, child) {
+        final y = lerpDouble(
+          -5,
+          5,
+          _floatController.value,
+        )!;
+
+        return Transform.translate(
+          offset: Offset(0, y),
+          child: child,
+        );
+      },
       child: Stack(
         clipBehavior: Clip.none,
         alignment: Alignment.center,
         children: [
-          // Soft glow
-          Container(
-            width: 210,
-            height: 210,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: RadialGradient(
-                colors: [
-                  _primary.withValues(alpha: 0.11),
-                  _primary.withValues(alpha: 0),
-                ],
+          // Large gradient backdrop.
+          Positioned(
+            top: 20,
+            left: 7,
+            right: 7,
+            bottom: 5,
+            child: Container(
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [
+                    Color(0xFFE8F1FF),
+                    Color(0xFFF0ECFF),
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                borderRadius: BorderRadius.circular(34),
               ),
             ),
           ),
 
-          // Main dashboard
-          Container(
-            width: 205,
-            height: 158,
-            padding: const EdgeInsets.all(18),
-            decoration: BoxDecoration(
-              color: _white,
-              borderRadius: BorderRadius.circular(25),
-              border: Border.all(
-                color: Colors.white,
-                width: 1.5,
+          // Dashboard
+          Positioned(
+            top: 37,
+            left: 17,
+            right: 17,
+            bottom: 20,
+            child: Transform.rotate(
+              angle: -.012,
+              child: Container(
+                padding: const EdgeInsets.all(15),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(25),
+                  boxShadow: [
+                    BoxShadow(
+                      color: ink.withValues(alpha: .12),
+                      blurRadius: 35,
+                      offset: const Offset(0, 18),
+                    ),
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          width: 34,
+                          height: 34,
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFEAF2FF),
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: const Icon(
+                            Icons.timer_outlined,
+                            color: blue,
+                            size: 18,
+                          ),
+                        ),
+                        const SizedBox(width: 9),
+                        const Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'BPSC Full Mock',
+                                style: TextStyle(
+                                  color: ink,
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.w900,
+                                ),
+                              ),
+                              Text(
+                                'Question 48 of 150',
+                                style: TextStyle(
+                                  color: faint,
+                                  fontSize: 8,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const Text(
+                          '01:24:18',
+                          style: TextStyle(
+                            color: ink,
+                            fontSize: 11,
+                            fontWeight: FontWeight.w900,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    const SizedBox(height: 14),
+
+                    Align(
+                      alignment: Alignment.centerLeft,
+                      child: Container(
+                        width: 60,
+                        height: 5,
+                        decoration: BoxDecoration(
+                          color: blue,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                    ),
+
+                    const SizedBox(height: 14),
+
+                    const Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'Which of the following is known as '
+                        'the "Sorrow of Bihar"?',
+                        style: TextStyle(
+                          color: ink,
+                          fontSize: 11,
+                          height: 1.4,
+                          fontWeight: FontWeight.w800,
+                        ),
+                      ),
+                    ),
+
+                    const SizedBox(height: 12),
+
+                    _answer('A', 'Kosi River', true),
+                    const SizedBox(height: 6),
+                    _answer('B', 'Ganga River', false),
+                    const SizedBox(height: 6),
+                    _answer('C', 'Son River', false),
+
+                    const Spacer(),
+
+                    Row(
+                      children: [
+                        _miniStat('68%', 'Accuracy'),
+                        const SizedBox(width: 7),
+                        _miniStat('↑ 12', 'Rank'),
+                        const SizedBox(width: 7),
+                        _miniStat('24', 'Correct'),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-              boxShadow: [
-                BoxShadow(
-                  color: _navy.withValues(alpha: 0.10),
-                  blurRadius: 32,
-                  offset: const Offset(0, 18),
-                ),
-              ],
-            ),
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    Container(
-                      width: 39,
-                      height: 39,
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFEAF2FF),
-                        borderRadius: BorderRadius.circular(11),
-                      ),
-                      child: const Icon(
-                        Icons.analytics_rounded,
-                        color: _primary,
-                        size: 21,
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    const Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Mock Test',
-                            style: TextStyle(
-                              color: _navy,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w900,
-                            ),
-                          ),
-                          SizedBox(height: 3),
-                          Text(
-                            'Bihar Exams',
-                            style: TextStyle(
-                              color: _muted,
-                              fontSize: 9.5,
-                              fontWeight: FontWeight.w600,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 8,
-                      height: 8,
-                      decoration: const BoxDecoration(
-                        color: _green,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                  ],
-                ),
-
-                const Spacer(),
-
-                Row(
-                  children: [
-                    _buildHeroStat(
-                      value: '85%',
-                      label: 'Accuracy',
-                    ),
-                    const SizedBox(width: 8),
-                    _buildHeroStat(
-                      value: '124',
-                      label: 'Rank',
-                    ),
-                  ],
-                ),
-              ],
             ),
           ),
 
-          // Check badge
+          // Score badge
           Positioned(
-            top: 13,
-            right: 8,
-            child: _buildFloatingBadge(
-              icon: Icons.check_rounded,
-              color: _green,
-            ),
-          ),
-
-          // Small progress badge
-          Positioned(
-            bottom: 7,
-            left: 8,
-            child: _buildFloatingBadge(
+            right: 1,
+            top: 5,
+            child: _floatingBadge(
               icon: Icons.trending_up_rounded,
-              color: _primary,
+              title: '+12',
+              subtitle: 'Rank',
+              color: green,
+            ),
+          ),
+
+          // CBT badge
+          Positioned(
+            left: 1,
+            bottom: 8,
+            child: _floatingBadge(
+              icon: Icons.verified_rounded,
+              title: 'REAL',
+              subtitle: 'CBT Mode',
+              color: blue,
             ),
           ),
         ],
@@ -611,37 +555,87 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     );
   }
 
-  Widget _buildHeroStat({
-    required String value,
-    required String label,
-  }) {
+  Widget _answer(
+    String letter,
+    String text,
+    bool selected,
+  ) {
+    return Container(
+      height: 31,
+      padding: const EdgeInsets.symmetric(horizontal: 9),
+      decoration: BoxDecoration(
+        color: selected
+            ? const Color(0xFFEAF2FF)
+            : const Color(0xFFF8FAFC),
+        borderRadius: BorderRadius.circular(9),
+        border: Border.all(
+          color: selected
+              ? blue.withValues(alpha: .3)
+              : const Color(0xFFEAECF0),
+        ),
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 20,
+            height: 20,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: selected ? blue : Colors.white,
+              shape: BoxShape.circle,
+              border: Border.all(
+                color: selected ? blue : const Color(0xFFD0D5DD),
+              ),
+            ),
+            child: Text(
+              letter,
+              style: TextStyle(
+                color: selected ? Colors.white : muted,
+                fontSize: 7,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+          ),
+          const SizedBox(width: 8),
+          Text(
+            text,
+            style: TextStyle(
+              color: selected ? blueDeep : muted,
+              fontSize: 8.5,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _miniStat(
+    String value,
+    String label,
+  ) {
     return Expanded(
       child: Container(
-        padding: const EdgeInsets.symmetric(
-          vertical: 9,
-          horizontal: 6,
-        ),
+        padding: const EdgeInsets.symmetric(vertical: 7),
         decoration: BoxDecoration(
           color: const Color(0xFFF8FAFC),
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: BorderRadius.circular(8),
         ),
         child: Column(
           children: [
             Text(
               value,
               style: const TextStyle(
-                color: _navy,
-                fontSize: 15,
+                color: ink,
+                fontSize: 9,
                 fontWeight: FontWeight.w900,
               ),
             ),
-            const SizedBox(height: 2),
             Text(
               label,
               style: const TextStyle(
-                color: _muted,
-                fontSize: 8.5,
-                fontWeight: FontWeight.w700,
+                color: faint,
+                fontSize: 6.5,
               ),
             ),
           ],
@@ -650,36 +644,70 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     );
   }
 
-  Widget _buildFloatingBadge({
+  Widget _floatingBadge({
     required IconData icon,
+    required String title,
+    required String subtitle,
     required Color color,
   }) {
-    return Container(
-      width: 51,
-      height: 51,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        shape: BoxShape.circle,
-        boxShadow: [
-          BoxShadow(
-            color: color.withValues(alpha: 0.18),
-            blurRadius: 18,
-            offset: const Offset(0, 7),
-          ),
-        ],
-      ),
-      child: Center(
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(15),
+      child: BackdropFilter(
+        filter: ImageFilter.blur(
+          sigmaX: 8,
+          sigmaY: 8,
+        ),
         child: Container(
-          width: 35,
-          height: 35,
+          padding: const EdgeInsets.all(8),
           decoration: BoxDecoration(
-            color: color.withValues(alpha: 0.10),
-            shape: BoxShape.circle,
+            color: Colors.white.withValues(alpha: .92),
+            borderRadius: BorderRadius.circular(15),
+            boxShadow: [
+              BoxShadow(
+                color: ink.withValues(alpha: .08),
+                blurRadius: 18,
+                offset: const Offset(0, 8),
+              ),
+            ],
           ),
-          child: Icon(
-            icon,
-            color: color,
-            size: 18,
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 28,
+                height: 28,
+                decoration: BoxDecoration(
+                  color: color.withValues(alpha: .1),
+                  shape: BoxShape.circle,
+                ),
+                child: Icon(
+                  icon,
+                  color: color,
+                  size: 15,
+                ),
+              ),
+              const SizedBox(width: 6),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: const TextStyle(
+                      color: ink,
+                      fontSize: 8,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
+                  Text(
+                    subtitle,
+                    style: const TextStyle(
+                      color: faint,
+                      fontSize: 6.5,
+                    ),
+                  ),
+                ],
+              ),
+            ],
           ),
         ),
       ),
@@ -687,48 +715,99 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   }
 
   // ===========================================================================
-  // PAGE 2 — COACHING + CBT
+  // PAGE 2 — COACHING → DIGITAL
   // ===========================================================================
 
-  Widget _buildCoachingPage() {
+  Widget _pageTwo() {
     return FadeTransition(
-      opacity: CurvedAnimation(
-        parent: _pageAnimation,
-        curve: Curves.easeOut,
-      ),
+      opacity: _entryController,
       child: Padding(
-        padding: const EdgeInsets.fromLTRB(22, 15, 22, 6),
+        padding: const EdgeInsets.fromLTRB(20, 8, 20, 5),
         child: Column(
           children: [
-            _buildSectionHeader(),
+            const SizedBox(height: 6),
 
-            const SizedBox(height: 24),
-
-            Expanded(
-              child: SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
-                child: Column(
-                  children: [
-                    _buildCBTCard(),
-
-                    const SizedBox(height: 14),
-
-                    _buildCoachingCard(),
-
-                    const SizedBox(height: 14),
-
-                    _buildMiniFeatureStrip(),
-                  ],
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'FROM CLASSROOM',
+                style: TextStyle(
+                  color: blue,
+                  fontSize: 8,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: 1.3,
                 ),
               ),
             ),
 
+            const SizedBox(height: 7),
+
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'To digital.\nWithout losing the teacher.',
+                style: TextStyle(
+                  color: ink,
+                  fontSize: 31,
+                  height: 1.04,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: -1.4,
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 9),
+
+            const Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'Your local coaching can now deliver mocks, '
+                'track performance and keep students connected — '
+                'right inside MockTester.',
+                style: TextStyle(
+                  color: muted,
+                  fontSize: 11.5,
+                  height: 1.5,
+                ),
+              ),
+            ),
+
+            const SizedBox(height: 19),
+
+            Expanded(
+              child: _coachingTransformation(),
+            ),
+
             const SizedBox(height: 12),
 
-            _buildPrimaryButton(
-              label: 'Create My Profile',
-              icon: Icons.arrow_forward_rounded,
-              onPressed: _nextPage,
+            Row(
+              children: [
+                _simpleBenefit(
+                  Icons.flash_on_rounded,
+                  'Live Mocks',
+                  blue,
+                ),
+                const SizedBox(width: 8),
+                _simpleBenefit(
+                  Icons.analytics_rounded,
+                  'Performance',
+                  violet,
+                ),
+                const SizedBox(width: 8),
+                _simpleBenefit(
+                  Icons.translate_rounded,
+                  'Bilingual',
+                  orange,
+                ),
+              ],
+            ),
+
+            const SizedBox(height: 13),
+
+            _blueButton(
+              'Continue',
+              Icons.arrow_forward_rounded,
+              _next,
             ),
 
             const SizedBox(height: 8),
@@ -738,658 +817,523 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     );
   }
 
-  Widget _buildSectionHeader() {
-    return Column(
+  Widget _coachingTransformation() {
+    return Stack(
+      alignment: Alignment.center,
       children: [
+        // Background stage
         Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 11,
-            vertical: 6,
-          ),
+          width: double.infinity,
           decoration: BoxDecoration(
-            color: const Color(0xFFEAF2FF),
+            gradient: const LinearGradient(
+              colors: [
+                Color(0xFF0B2A78),
+                Color(0xFF17104D),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
             borderRadius: BorderRadius.circular(30),
           ),
-          child: const Text(
-            'ONE PLATFORM',
-            style: TextStyle(
-              color: _primary,
-              fontSize: 8,
-              fontWeight: FontWeight.w900,
-              letterSpacing: 1.1,
+        ),
+
+        Positioned(
+          top: -35,
+          right: -30,
+          child: Container(
+            width: 150,
+            height: 150,
+            decoration: BoxDecoration(
+              color: blue.withValues(alpha: .18),
+              shape: BoxShape.circle,
             ),
           ),
         ),
 
-        const SizedBox(height: 12),
-
-        const Text(
-          'Your exam. Your coaching.\nOne platform.',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: _navy,
-            fontSize: 26,
-            height: 1.12,
-            fontWeight: FontWeight.w900,
-            letterSpacing: -0.8,
-          ),
-        ),
-
-        const SizedBox(height: 9),
-
-        const Text(
-          'Real exam practice aur local coaching tests —\n'
-          'sab kuch ek hi experience mein.',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: _secondary,
-            fontSize: 11.5,
-            height: 1.5,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ],
-    );
-  }
-
-  // ---------------------------------------------------------------------------
-  // CBT CARD
-  // ---------------------------------------------------------------------------
-
-  Widget _buildCBTCard() {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: _navy,
-        borderRadius: BorderRadius.circular(22),
-        boxShadow: [
-          BoxShadow(
-            color: _navy.withValues(alpha: 0.16),
-            blurRadius: 24,
-            offset: const Offset(0, 12),
-          ),
-        ],
-      ),
-      child: Stack(
-        children: [
-          Positioned(
-            right: -30,
-            top: -35,
-            child: Container(
-              width: 120,
-              height: 120,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: _primary.withValues(alpha: 0.16),
-              ),
+        Positioned(
+          bottom: -45,
+          left: -35,
+          child: Container(
+            width: 150,
+            height: 150,
+            decoration: BoxDecoration(
+              color: violet.withValues(alpha: .15),
+              shape: BoxShape.circle,
             ),
           ),
+        ),
 
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+        Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
             children: [
               Row(
                 children: [
-                  Container(
-                    width: 43,
-                    height: 43,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.10),
-                      borderRadius: BorderRadius.circular(13),
-                    ),
-                    child: const Icon(
-                      Icons.monitor_rounded,
-                      color: Colors.white,
-                      size: 22,
+                  Expanded(
+                    child: _coachingSide(),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 8),
+                    child: Container(
+                      width: 35,
+                      height: 35,
+                      decoration: BoxDecoration(
+                        color: Colors.white.withValues(alpha: .1),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(
+                        Icons.arrow_forward_rounded,
+                        color: Colors.white,
+                        size: 17,
+                      ),
                     ),
                   ),
-                  const SizedBox(width: 12),
-                  const Expanded(
+
+                  Expanded(
+                    child: _digitalSide(),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 24),
+
+              Container(
+                height: 1,
+                color: Colors.white.withValues(alpha: .12),
+              ),
+
+              const SizedBox(height: 18),
+
+              const Row(
+                children: [
+                  Icon(
+                    Icons.check_circle_rounded,
+                    color: Color(0xFF32D583),
+                    size: 16,
+                  ),
+                  SizedBox(width: 7),
+                  Expanded(
                     child: Text(
-                      'Real CBT Experience',
+                      'Coaching test → Digital mock → Result → Analysis',
                       style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 15,
-                        fontWeight: FontWeight.w900,
+                        color: Color(0xFFD0D5DD),
+                        fontSize: 9,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ),
                 ],
               ),
-
-              const SizedBox(height: 14),
-
-              const Text(
-                'Timer • Question Palette • Navigation\n'
-                'Negative Marking • Exam-like Interface',
-                style: TextStyle(
-                  color: Color(0xFFBFC9D9),
-                  fontSize: 10.5,
-                  height: 1.5,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-
-              const SizedBox(height: 15),
-
-              Row(
-                children: [
-                  _darkPill('CBT MODE'),
-                  const SizedBox(width: 7),
-                  _darkPill('EXAM READY'),
-                ],
-              ),
             ],
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
-  Widget _darkPill(String text) {
-    return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 9,
-        vertical: 5,
-      ),
-      decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.08),
-        borderRadius: BorderRadius.circular(7),
-        border: Border.all(
-          color: Colors.white.withValues(alpha: 0.08),
-        ),
-      ),
-      child: Text(
-        text,
-        style: const TextStyle(
-          color: Color(0xFFD8E4F7),
-          fontSize: 7,
-          fontWeight: FontWeight.w900,
-          letterSpacing: 0.6,
-        ),
-      ),
-    );
-  }
-
-  // ---------------------------------------------------------------------------
-  // COACHING CARD
-  // ---------------------------------------------------------------------------
-
-  Widget _buildCoachingCard() {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(17),
-      decoration: BoxDecoration(
-        color: _white,
-        borderRadius: BorderRadius.circular(22),
-        border: Border.all(
-          color: _border,
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: _navy.withValues(alpha: 0.045),
-            blurRadius: 18,
-            offset: const Offset(0, 8),
-          ),
-        ],
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: 47,
-            height: 47,
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [
-                  Color(0xFFEAF2FF),
-                  Color(0xFFF1ECFF),
-                ],
-              ),
-              borderRadius: BorderRadius.circular(14),
-            ),
-            child: const Icon(
-              Icons.groups_rounded,
-              color: _primary,
-              size: 23,
-            ),
-          ),
-
-          const SizedBox(width: 13),
-
-          const Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Your Coaching. Now Digital.',
-                  style: TextStyle(
-                    color: _navy,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-                SizedBox(height: 5),
-                Text(
-                  'Apne local coaching centre ke mock tests bhi '
-                  'isi platform par digitally attempt karein.',
-                  style: TextStyle(
-                    color: _secondary,
-                    fontSize: 10.5,
-                    height: 1.45,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ---------------------------------------------------------------------------
-  // MINI STRIP
-  // ---------------------------------------------------------------------------
-
-  Widget _buildMiniFeatureStrip() {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.symmetric(
-        horizontal: 15,
-        vertical: 13,
-      ),
-      decoration: BoxDecoration(
-        color: const Color(0xFFF8FAFC),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: _border,
-        ),
-      ),
-      child: const Row(
-        children: [
-          Expanded(
-            child: _MiniFeature(
-              icon: Icons.language_rounded,
-              title: 'Bilingual',
-            ),
-          ),
-          _VerticalDivider(),
-          Expanded(
-            child: _MiniFeature(
-              icon: Icons.insights_rounded,
-              title: 'Performance',
-            ),
-          ),
-          _VerticalDivider(),
-          Expanded(
-            child: _MiniFeature(
-              icon: Icons.bolt_rounded,
-              title: 'Fast Practice',
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ===========================================================================
-  // PAGE 3 — PROFILE
-  // ===========================================================================
-
-  Widget _buildProfilePage() {
-    return GestureDetector(
-      onTap: () => FocusScope.of(context).unfocus(),
-      child: FadeTransition(
-        opacity: CurvedAnimation(
-          parent: _pageAnimation,
-          curve: Curves.easeOut,
-        ),
-        child: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          padding: const EdgeInsets.fromLTRB(22, 12, 22, 15),
-          child: Form(
-            key: _formKey,
-            child: Column(
-              children: [
-                _buildProfileHeader(),
-
-                const SizedBox(height: 22),
-
-                _buildProfileForm(),
-
-                const SizedBox(height: 18),
-
-                _buildPrimaryButton(
-                  label: _isLoading
-                      ? 'Setting up...'
-                      : 'Start My Preparation',
-                  icon: Icons.arrow_forward_rounded,
-                  onPressed: _isLoading
-                      ? null
-                      : _completeRegistration,
-                  isLoading: _isLoading,
-                ),
-
-                const SizedBox(height: 9),
-
-                const Text(
-                  'You can update your profile anytime from Settings.',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: _muted,
-                    fontSize: 9.5,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildProfileHeader() {
+  Widget _coachingSide() {
     return Column(
       children: [
         Container(
-          width: 64,
-          height: 64,
+          width: 62,
+          height: 62,
           decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [
-                Color(0xFFEAF2FF),
-                Color(0xFFF0EBFF),
-              ],
-            ),
-            shape: BoxShape.circle,
+            color: Colors.white.withValues(alpha: .09),
+            borderRadius: BorderRadius.circular(19),
           ),
           child: const Icon(
-            Icons.person_add_alt_1_rounded,
-            color: _primary,
+            Icons.groups_rounded,
+            color: Colors.white,
             size: 29,
           ),
         ),
-
-        const SizedBox(height: 13),
-
+        const SizedBox(height: 11),
         const Text(
-          'Let’s get you started.',
+          'YOUR\nCOACHING',
           textAlign: TextAlign.center,
           style: TextStyle(
-            color: _navy,
-            fontSize: 25,
+            color: Colors.white,
+            fontSize: 9,
+            height: 1.2,
             fontWeight: FontWeight.w900,
-            letterSpacing: -0.8,
+            letterSpacing: .5,
           ),
         ),
-
         const SizedBox(height: 6),
-
         const Text(
-          'Create your profile to personalize your\n'
-          'MockTester preparation experience.',
+          'Local',
+          style: TextStyle(
+            color: Color(0xFF98A2B3),
+            fontSize: 8,
+          ),
+        ),
+      ],
+    );
+  }
+
+  Widget _digitalSide() {
+    return Column(
+      children: [
+        Container(
+          width: 62,
+          height: 62,
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              colors: [
+                Color(0xFF2585FF),
+                Color(0xFF6941C6),
+              ],
+            ),
+            borderRadius: BorderRadius.circular(19),
+          ),
+          child: const Icon(
+            Icons.phone_android_rounded,
+            color: Colors.white,
+            size: 29,
+          ),
+        ),
+        const SizedBox(height: 11),
+        const Text(
+          'MOCK\nTESTER',
           textAlign: TextAlign.center,
           style: TextStyle(
-            color: _secondary,
-            fontSize: 11.5,
-            height: 1.5,
-            fontWeight: FontWeight.w500,
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _buildProfileForm() {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(18),
-      decoration: BoxDecoration(
-        color: _white,
-        borderRadius: BorderRadius.circular(22),
-        border: Border.all(
-          color: _border,
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: _navy.withValues(alpha: 0.045),
-            blurRadius: 20,
-            offset: const Offset(0, 9),
-          ),
-        ],
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _buildInputLabel(
-            'FULL NAME',
-            required: true,
-          ),
-
-          const SizedBox(height: 8),
-
-          _buildTextField(
-            controller: _nameController,
-            hint: 'Enter your full name',
-            icon: Icons.person_outline_rounded,
-            textCapitalization: TextCapitalization.words,
-            validator: (value) {
-              if (value == null || value.trim().length < 2) {
-                return 'Please enter your name';
-              }
-
-              return null;
-            },
-          ),
-
-          const SizedBox(height: 18),
-
-          _buildInputLabel(
-            'MOBILE NUMBER',
-            required: false,
-          ),
-
-          const SizedBox(height: 4),
-
-          const Text(
-            'Optional • Useful for coaching & classroom sync',
-            style: TextStyle(
-              color: _muted,
-              fontSize: 9.5,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-
-          const SizedBox(height: 8),
-
-          _buildTextField(
-            controller: _phoneController,
-            hint: '10-digit mobile number',
-            icon: Icons.phone_android_rounded,
-            keyboardType: TextInputType.phone,
-            inputFormatters: [
-              FilteringTextInputFormatter.digitsOnly,
-              LengthLimitingTextInputFormatter(10),
-            ],
-            validator: (value) {
-              if (value == null || value.trim().isEmpty) {
-                return null;
-              }
-
-              if (!RegExp(r'^[6-9]\d{9}$').hasMatch(value.trim())) {
-                return 'Enter a valid 10-digit number';
-              }
-
-              return null;
-            },
-          ),
-
-          const SizedBox(height: 15),
-
-          _buildPrivacyNote(),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildInputLabel(
-    String text, {
-    required bool required,
-  }) {
-    return Row(
-      children: [
-        Text(
-          text,
-          style: const TextStyle(
-            color: _navy,
-            fontSize: 9.5,
+            color: Colors.white,
+            fontSize: 9,
+            height: 1.2,
             fontWeight: FontWeight.w900,
-            letterSpacing: 0.75,
+            letterSpacing: .5,
           ),
         ),
-        if (required)
-          const Text(
-            ' *',
-            style: TextStyle(
-              color: Color(0xFFD92D20),
-              fontSize: 10,
-              fontWeight: FontWeight.w900,
-            ),
+        const SizedBox(height: 6),
+        const Text(
+          'Digital',
+          style: TextStyle(
+            color: Color(0xFF98A2B3),
+            fontSize: 8,
           ),
+        ),
       ],
     );
   }
 
-  Widget _buildTextField({
+  Widget _simpleBenefit(
+    IconData icon,
+    String text,
+    Color color,
+  ) {
+    return Expanded(
+      child: Container(
+        height: 55,
+        padding: const EdgeInsets.symmetric(horizontal: 5),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(15),
+          border: Border.all(
+            color: const Color(0xFFE4E7EC),
+          ),
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              icon,
+              color: color,
+              size: 17,
+            ),
+            const SizedBox(height: 4),
+            Text(
+              text,
+              style: const TextStyle(
+                color: ink,
+                fontSize: 7.5,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // PAGE 3 — CONVERSATIONAL PROFILE
+  // ===========================================================================
+
+  Widget _pageThree() {
+    return GestureDetector(
+      onTap: () => FocusScope.of(context).unfocus(),
+      child: FadeTransition(
+        opacity: _entryController,
+        child: Column(
+          children: [
+            Expanded(
+              child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                padding: const EdgeInsets.fromLTRB(22, 20, 22, 20),
+                child: Form(
+                  key: _formKey,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      // Number
+                      const Text(
+                        '03',
+                        style: TextStyle(
+                          color: blue,
+                          fontSize: 11,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 1,
+                        ),
+                      ),
+
+                      const SizedBox(height: 18),
+
+                      const Text(
+                        'First,\nwhat should we call you?',
+                        style: TextStyle(
+                          color: ink,
+                          fontSize: 34,
+                          height: 1.03,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: -1.6,
+                        ),
+                      ),
+
+                      const SizedBox(height: 10),
+
+                      const Text(
+                        'Your name will appear on your scorecard '
+                        'and personalised experience.',
+                        style: TextStyle(
+                          color: muted,
+                          fontSize: 11.5,
+                          height: 1.5,
+                        ),
+                      ),
+
+                      const SizedBox(height: 30),
+
+                      _conversationField(
+                        label: 'MY NAME IS',
+                        controller: _nameController,
+                        hint: 'Your full name',
+                        icon: Icons.person_outline_rounded,
+                        capitalization: TextCapitalization.words,
+                        validator: (value) {
+                          if (value == null ||
+                              value.trim().length < 2) {
+                            return 'Please enter your name';
+                          }
+                          return null;
+                        },
+                      ),
+
+                      const SizedBox(height: 24),
+
+                      _conversationField(
+                        label: 'MOBILE NUMBER',
+                        controller: _phoneController,
+                        hint: '10-digit number',
+                        icon: Icons.phone_android_rounded,
+                        keyboardType: TextInputType.phone,
+                        formatters: [
+                          FilteringTextInputFormatter.digitsOnly,
+                          LengthLimitingTextInputFormatter(10),
+                        ],
+                        validator: (value) {
+                          if (value == null ||
+                              value.trim().isEmpty) {
+                            return null;
+                          }
+
+                          if (!RegExp(r'^[6-9]\d{9}$')
+                              .hasMatch(value.trim())) {
+                            return 'Enter a valid 10-digit number';
+                          }
+
+                          return null;
+                        },
+                      ),
+
+                      const SizedBox(height: 12),
+
+                      Row(
+                        children: [
+                          const Icon(
+                            Icons.info_outline_rounded,
+                            color: faint,
+                            size: 14,
+                          ),
+                          const SizedBox(width: 6),
+                          const Expanded(
+                            child: Text(
+                              'Optional — useful when your coaching centre '
+                              'uses MockTester.',
+                              style: TextStyle(
+                                color: faint,
+                                fontSize: 8.5,
+                                height: 1.4,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+
+                      const SizedBox(height: 35),
+
+                      Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.all(14),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFFEFF6FF),
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: const Row(
+                          children: [
+                            Icon(
+                              Icons.rocket_launch_rounded,
+                              color: blue,
+                              size: 19,
+                            ),
+                            SizedBox(width: 10),
+                            Expanded(
+                              child: Text(
+                                'Ready? Your preparation starts here.',
+                                style: TextStyle(
+                                  color: blueDeep,
+                                  fontSize: 10,
+                                  fontWeight: FontWeight.w800,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+
+            // Sticky action area
+            Container(
+              padding: const EdgeInsets.fromLTRB(20, 10, 20, 10),
+              decoration: BoxDecoration(
+                color: bg.withValues(alpha: .96),
+              ),
+              child: _blueButton(
+                _isLoading
+                    ? 'Setting up...'
+                    : 'Start My Preparation',
+                Icons.arrow_forward_rounded,
+                _isLoading ? null : _completeRegistration,
+                loading: _isLoading,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _conversationField({
+    required String label,
     required TextEditingController controller,
     required String hint,
     required IconData icon,
     TextInputType? keyboardType,
-    TextCapitalization textCapitalization = TextCapitalization.none,
-    List<TextInputFormatter>? inputFormatters,
+    TextCapitalization capitalization = TextCapitalization.none,
+    List<TextInputFormatter>? formatters,
     String? Function(String?)? validator,
   }) {
-    return TextFormField(
-      controller: controller,
-      keyboardType: keyboardType,
-      textCapitalization: textCapitalization,
-      inputFormatters: inputFormatters,
-      validator: validator,
-      cursorColor: _primary,
-      style: const TextStyle(
-        color: _navy,
-        fontSize: 13,
-        fontWeight: FontWeight.w600,
-      ),
-      decoration: InputDecoration(
-        hintText: hint,
-        hintStyle: const TextStyle(
-          color: _muted,
-          fontSize: 12,
-          fontWeight: FontWeight.w500,
-        ),
-        prefixIcon: Icon(
-          icon,
-          color: _primary,
-          size: 19,
-        ),
-        filled: true,
-        fillColor: const Color(0xFFF8FAFC),
-        contentPadding: const EdgeInsets.symmetric(
-          horizontal: 13,
-          vertical: 14,
-        ),
-        border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(13),
-          borderSide: const BorderSide(
-            color: _border,
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          label,
+          style: const TextStyle(
+            color: muted,
+            fontSize: 8,
+            fontWeight: FontWeight.w900,
+            letterSpacing: 1.1,
           ),
         ),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(13),
-          borderSide: const BorderSide(
-            color: _border,
-          ),
-        ),
-        focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(13),
-          borderSide: const BorderSide(
-            color: _primary,
-            width: 1.5,
-          ),
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(13),
-          borderSide: const BorderSide(
-            color: Color(0xFFD92D20),
-          ),
-        ),
-        focusedErrorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(13),
-          borderSide: const BorderSide(
-            color: Color(0xFFD92D20),
-            width: 1.5,
-          ),
-        ),
-      ),
-    );
-  }
 
-  Widget _buildPrivacyNote() {
-    return Container(
-      padding: const EdgeInsets.all(11),
-      decoration: BoxDecoration(
-        color: const Color(0xFFF8FAFC),
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: 27,
-            height: 27,
-            decoration: BoxDecoration(
-              color: const Color(0xFFEAF2FF),
-              borderRadius: BorderRadius.circular(8),
-            ),
-            child: const Icon(
-              Icons.shield_outlined,
-              color: _primary,
-              size: 15,
-            ),
+        const SizedBox(height: 8),
+
+        TextFormField(
+          controller: controller,
+          keyboardType: keyboardType,
+          textCapitalization: capitalization,
+          inputFormatters: formatters,
+          validator: validator,
+          cursorColor: blue,
+          style: const TextStyle(
+            color: ink,
+            fontSize: 17,
+            fontWeight: FontWeight.w700,
           ),
-          const SizedBox(width: 9),
-          const Expanded(
-            child: Text(
-              'Your details are used to personalize your experience '
-              'and connect your coaching profile.',
-              style: TextStyle(
-                color: _secondary,
-                fontSize: 9.5,
-                height: 1.4,
-                fontWeight: FontWeight.w500,
+          decoration: InputDecoration(
+            hintText: hint,
+            hintStyle: const TextStyle(
+              color: Color(0xFFB0B7C3),
+              fontSize: 17,
+              fontWeight: FontWeight.w500,
+            ),
+            prefixIcon: Icon(
+              icon,
+              color: blue,
+              size: 21,
+            ),
+            filled: true,
+            fillColor: Colors.white,
+            contentPadding: const EdgeInsets.symmetric(
+              horizontal: 15,
+              vertical: 17,
+            ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
+              borderSide: const BorderSide(
+                color: Color(0xFFE4E7EC),
+              ),
+            ),
+            enabledBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
+              borderSide: const BorderSide(
+                color: Color(0xFFE4E7EC),
+              ),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
+              borderSide: const BorderSide(
+                color: blue,
+                width: 1.5,
+              ),
+            ),
+            errorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
+              borderSide: const BorderSide(
+                color: Color(0xFFD92D20),
               ),
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 
   // ===========================================================================
-  // PRIMARY BUTTON
+  // BUTTON
   // ===========================================================================
 
-  Widget _buildPrimaryButton({
-    required String label,
-    required IconData icon,
-    required VoidCallback? onPressed,
-    bool isLoading = false,
+  Widget _blueButton(
+    String text,
+    IconData icon,
+    VoidCallback? onPressed, {
+    bool loading = false,
   }) {
-    final bool enabled = onPressed != null;
+    final enabled = onPressed != null;
 
     return SizedBox(
       width: double.infinity,
@@ -1399,7 +1343,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
           gradient: enabled
               ? const LinearGradient(
                   colors: [
-                    Color(0xFF1677FF),
+                    Color(0xFF2585FF),
                     Color(0xFF0047D9),
                   ],
                   begin: Alignment.topLeft,
@@ -1411,13 +1355,13 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
                     Color(0xFF98A2B3),
                   ],
                 ),
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(17),
           boxShadow: enabled
               ? [
                   BoxShadow(
-                    color: _primary.withValues(alpha: 0.22),
-                    blurRadius: 18,
-                    offset: const Offset(0, 8),
+                    color: blue.withValues(alpha: .22),
+                    blurRadius: 20,
+                    offset: const Offset(0, 9),
                   ),
                 ]
               : null,
@@ -1427,13 +1371,13 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.transparent,
             foregroundColor: Colors.white,
-            shadowColor: Colors.transparent,
             elevation: 0,
+            shadowColor: Colors.transparent,
             shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: BorderRadius.circular(17),
             ),
           ),
-          child: isLoading
+          child: loading
               ? const SizedBox(
                   width: 21,
                   height: 21,
@@ -1446,11 +1390,10 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      label,
+                      text,
                       style: const TextStyle(
-                        fontSize: 13.5,
+                        fontSize: 13,
                         fontWeight: FontWeight.w900,
-                        letterSpacing: 0.1,
                       ),
                     ),
                     const SizedBox(width: 9),
@@ -1469,139 +1412,62 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   // BOTTOM PROGRESS
   // ===========================================================================
 
-  Widget _buildBottomProgress() {
-    final String title;
-
-    switch (_currentIndex) {
-      case 0:
-        title = 'Intro';
-        break;
-      case 1:
-        title = 'Platform';
-        break;
-      default:
-        title = 'Profile';
-    }
-
+  Widget _bottomProgress() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(24, 4, 24, 13),
+      padding: const EdgeInsets.fromLTRB(22, 3, 22, 13),
       child: Row(
         children: [
           Text(
-            '0${_currentIndex + 1}',
+            '0${_currentPage + 1}',
             style: const TextStyle(
-              color: _muted,
-              fontSize: 10,
+              color: ink,
+              fontSize: 9,
               fontWeight: FontWeight.w900,
             ),
           ),
 
-          const SizedBox(width: 12),
+          const SizedBox(width: 10),
 
           Expanded(
-            child: LayoutBuilder(
-              builder: (context, constraints) {
-                return Stack(
-                  children: [
-                    Container(
-                      height: 4,
-                      width: double.infinity,
+            child: Row(
+              children: List.generate(
+                3,
+                (index) {
+                  final active = index == _currentPage;
+                  final completed = index < _currentPage;
+
+                  return Expanded(
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 350),
+                      margin: EdgeInsets.only(
+                        right: index == 2 ? 0 : 5,
+                      ),
+                      height: active ? 4 : 3,
                       decoration: BoxDecoration(
-                        color: const Color(0xFFE4E7EC),
+                        color: active || completed
+                            ? blue
+                            : const Color(0xFFE4E7EC),
                         borderRadius: BorderRadius.circular(10),
                       ),
                     ),
-                    AnimatedContainer(
-                      duration: const Duration(milliseconds: 450),
-                      curve: Curves.easeOutCubic,
-                      height: 4,
-                      width: constraints.maxWidth *
-                          ((_currentIndex + 1) / 3),
-                      decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                          colors: [
-                            Color(0xFF155EEF),
-                            Color(0xFF7F56D9),
-                          ],
-                        ),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                    ),
-                  ],
-                );
-              },
+                  );
+                },
+              ),
             ),
           ),
 
-          const SizedBox(width: 12),
+          const SizedBox(width: 10),
 
           Text(
-            title,
-            style: const TextStyle(
-              color: _secondary,
-              fontSize: 10,
-              fontWeight: FontWeight.w800,
+            '03',
+            style: TextStyle(
+              color: _currentPage == 2 ? blue : faint,
+              fontSize: 9,
+              fontWeight: FontWeight.w900,
             ),
           ),
         ],
       ),
-    );
-  }
-}
-
-// =============================================================================
-// MINI FEATURE
-// =============================================================================
-
-class _MiniFeature extends StatelessWidget {
-  final IconData icon;
-  final String title;
-
-  const _MiniFeature({
-    required this.icon,
-    required this.title,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        Icon(
-          icon,
-          color: const Color(0xFF155EEF),
-          size: 15,
-        ),
-        const SizedBox(width: 5),
-        Flexible(
-          child: Text(
-            title,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              color: Color(0xFF475467),
-              fontSize: 8.5,
-              fontWeight: FontWeight.w800,
-            ),
-          ),
-        ),
-      ],
-    );
-  }
-}
-
-// =============================================================================
-// VERTICAL DIVIDER
-// =============================================================================
-
-class _VerticalDivider extends StatelessWidget {
-  const _VerticalDivider();
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 1,
-      height: 18,
-      color: const Color(0xFFE4E7EC),
     );
   }
 }
