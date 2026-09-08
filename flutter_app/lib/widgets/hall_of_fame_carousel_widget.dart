@@ -4,6 +4,19 @@ import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'selection_proof_system.dart';
 
+// -----------------------------------------------------------------------------
+// HELPER EXTENSION: Auto Title Case & Upper Case
+// -----------------------------------------------------------------------------
+extension StringCasingExtension on String {
+  String toTitleCase() {
+    if (trim().isEmpty) return '';
+    return split(' ')
+        .where((w) => w.isNotEmpty)
+        .map((w) => w[0].toUpperCase() + w.substring(1).toLowerCase())
+        .join(' ');
+  }
+}
+
 class HallOfFameCarouselWidget extends StatefulWidget {
   final bool isDarkMode;
 
@@ -154,6 +167,10 @@ class HallOfFameCarouselWidgetState
       }
     }
 
+    // -------------------------------------------------------------------------
+    // FALLBACK COACHING
+    // -------------------------------------------------------------------------
+
     if (targetCoachingId.isEmpty) {
       try {
         final coaching = await client
@@ -245,16 +262,19 @@ class HallOfFameCarouselWidgetState
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: const Color(0xFF6366F1).withOpacity(.25),
+          color: const Color(0xFF6366F1)
+              .withOpacity(.25),
         ),
       ),
       child: Row(
         children: [
+          // ICON
           Container(
             width: 48,
             height: 48,
             decoration: BoxDecoration(
-              color: const Color(0xFF6366F1).withOpacity(.12),
+              color: const Color(0xFF6366F1)
+                  .withOpacity(.12),
               shape: BoxShape.circle,
             ),
             child: const Icon(
@@ -263,10 +283,14 @@ class HallOfFameCarouselWidgetState
               size: 25,
             ),
           ),
+
           const SizedBox(width: 12),
+
+          // TEXT
           Expanded(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment:
+                  CrossAxisAlignment.start,
               children: [
                 Text(
                   'Crack Kiya Koi Exam? 🎓',
@@ -294,11 +318,15 @@ class HallOfFameCarouselWidgetState
               ],
             ),
           ),
+
           const SizedBox(width: 8),
+
+          // SHARE BUTTON
           ElevatedButton(
             onPressed: _openClaimSelectionModal,
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF6366F1),
+              backgroundColor:
+                  const Color(0xFF6366F1),
               foregroundColor: Colors.white,
               elevation: 0,
               padding: const EdgeInsets.symmetric(
@@ -306,7 +334,8 @@ class HallOfFameCarouselWidgetState
                 vertical: 10,
               ),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(11),
+                borderRadius:
+                    BorderRadius.circular(11),
               ),
             ),
             child: const Text(
@@ -334,7 +363,8 @@ class HallOfFameCarouselWidgetState
           height: 34,
           decoration: BoxDecoration(
             color: const Color(0xFFFFF7E6),
-            borderRadius: BorderRadius.circular(10),
+            borderRadius:
+                BorderRadius.circular(10),
           ),
           child: const Icon(
             Icons.workspace_premium_rounded,
@@ -342,10 +372,13 @@ class HallOfFameCarouselWidgetState
             size: 20,
           ),
         ),
+
         const SizedBox(width: 9),
+
         Expanded(
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment:
+                CrossAxisAlignment.start,
             children: [
               Text(
                 'Hall of Fame',
@@ -371,14 +404,18 @@ class HallOfFameCarouselWidgetState
             ],
           ),
         ),
+
+        // VERIFIED BADGE
         Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 9,
             vertical: 5,
           ),
           decoration: BoxDecoration(
-            color: const Color(0xFF16A34A).withOpacity(.10),
-            borderRadius: BorderRadius.circular(8),
+            color: const Color(0xFF16A34A)
+                .withOpacity(.10),
+            borderRadius:
+                BorderRadius.circular(8),
           ),
           child: const Row(
             mainAxisSize: MainAxisSize.min,
@@ -410,7 +447,7 @@ class HallOfFameCarouselWidgetState
 
   Widget _hallOfFameCards() {
     return SizedBox(
-      height: 350,
+      height: 355,
       child: PageView.builder(
         controller: _pageController,
         itemCount: _hallOfFameList.length,
@@ -434,31 +471,27 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // SINGLE SELECTION CARD (CIRCULAR OVERLAP & NO DOUBLE QUOTES)
+  // SINGLE SELECTION CARD (ENHANCED TYPOGRAPHY & OVERLAPPING AVATAR)
   // ===========================================================================
 
   Widget _selectionCard(
     Map<String, dynamic> item,
   ) {
+    final rawCoaching = item['coachings']?['name']?.toString().trim() ?? '';
     final coachingName =
-        item['coachings']?['name']?.toString().trim().isNotEmpty == true
-            ? item['coachings']['name'].toString().trim()
-            : 'Mentored Coaching';
+        rawCoaching.isNotEmpty ? rawCoaching.toTitleCase() : 'Mentored Coaching';
 
+    final rawName = item['student_name']?.toString().trim() ?? '';
     final studentName =
-        item['student_name']?.toString().trim().isNotEmpty == true
-            ? item['student_name'].toString().trim()
-            : 'Candidate';
+        rawName.isNotEmpty ? rawName.toTitleCase() : 'Candidate';
 
+    final rawPost = item['post_cleared']?.toString().trim() ?? '';
     final post =
-        item['post_cleared']?.toString().trim().isNotEmpty == true
-            ? item['post_cleared'].toString().trim()
-            : 'Selected';
+        rawPost.isNotEmpty ? rawPost.toTitleCase() : 'Selected';
 
+    final rawExam = item['target_exam']?.toString().trim() ?? '';
     final exam =
-        item['target_exam']?.toString().trim().isNotEmpty == true
-            ? item['target_exam'].toString().trim()
-            : 'Competitive Exam';
+        rawExam.isNotEmpty ? rawExam.toUpperCase() : 'COMPETITIVE EXAM';
 
     final quote =
         item['testimonial_text']?.toString().trim() ?? '';
@@ -468,7 +501,7 @@ class HallOfFameCarouselWidgetState
             item['student_image_url'] ??
             item['photo_url'];
 
-    const double avatarRadius = 40;
+    const double avatarRadius = 42;
 
     return Stack(
       clipBehavior: Clip.none,
@@ -477,7 +510,7 @@ class HallOfFameCarouselWidgetState
         // Background Base Card
         Container(
           margin: const EdgeInsets.only(top: avatarRadius),
-          padding: const EdgeInsets.fromLTRB(16, avatarRadius + 10, 16, 14),
+          padding: const EdgeInsets.fromLTRB(16, avatarRadius + 12, 16, 14),
           decoration: BoxDecoration(
             color: widget.isDarkMode
                 ? const Color(0xFF172033)
@@ -514,7 +547,7 @@ class HallOfFameCarouselWidgetState
                         color: widget.isDarkMode
                             ? Colors.white
                             : const Color(0xFF0F172A),
-                        fontSize: 16,
+                        fontSize: 16.5,
                         fontWeight: FontWeight.w900,
                         letterSpacing: -0.3,
                       ),
@@ -528,33 +561,66 @@ class HallOfFameCarouselWidgetState
                   ),
                 ],
               ),
-              const SizedBox(height: 5),
+              const SizedBox(height: 6),
 
               // 2. Post & Exam Capsule
               Container(
                 padding: const EdgeInsets.symmetric(
-                  horizontal: 10,
-                  vertical: 3.5,
+                  horizontal: 11,
+                  vertical: 4,
                 ),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF2563EB).withOpacity(.09),
-                  borderRadius: BorderRadius.circular(18),
-                ),
-                child: Text(
-                  '$post • $exam',
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.center,
-                  style: const TextStyle(
-                    color: Color(0xFF2563EB),
-                    fontSize: 10.5,
-                    fontWeight: FontWeight.w800,
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFFEFF6FF), Color(0xFFF0FDF4)],
                   ),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: const Color(0xFFBFDBFE)),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(
+                      Icons.military_tech_rounded,
+                      size: 14,
+                      color: Color(0xFF2563EB),
+                    ),
+                    const SizedBox(width: 4),
+                    Text(
+                      post,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Color(0xFF1E40AF),
+                        fontSize: 10.5,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 6),
+                      width: 3.5,
+                      height: 3.5,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF93C5FD),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    Text(
+                      exam,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Color(0xFF059669),
+                        fontSize: 9.5,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0.3,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 11),
 
-              // 3. Clean Journey Text (Without quotes)
+              // 3. Clean Journey Text (Without double quotes)
               Expanded(
                 child: Container(
                   width: double.infinity,
@@ -573,20 +639,22 @@ class HallOfFameCarouselWidgetState
                           : const Color(0xFFF1F5F9),
                     ),
                   ),
-                  child: Text(
-                    quote.isNotEmpty
-                        ? quote
-                        : 'I am proud to share my selection journey.',
-                    maxLines: 4,
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: widget.isDarkMode
-                          ? Colors.white70
-                          : const Color(0xFF475569),
-                      fontSize: 11.5,
-                      height: 1.45,
-                      fontWeight: FontWeight.w500,
+                  child: Center(
+                    child: Text(
+                      quote.isNotEmpty
+                          ? quote
+                          : 'I am proud to share my selection journey.',
+                      maxLines: 4,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: widget.isDarkMode
+                            ? Colors.white70
+                            : const Color(0xFF475569),
+                        fontSize: 11.5,
+                        height: 1.45,
+                        fontWeight: FontWeight.w500,
+                      ),
                     ),
                   ),
                 ),
@@ -604,7 +672,7 @@ class HallOfFameCarouselWidgetState
                   color: widget.isDarkMode
                       ? Colors.white.withOpacity(.04)
                       : const Color(0xFFF8FAFC),
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(11),
                   border: Border.all(
                     color: widget.isDarkMode
                         ? Colors.white.withOpacity(0.05)
@@ -678,7 +746,7 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // CIRCULAR OVERLAPPING PHOTO WITH SHADOW & RING
+  // CIRCULAR OVERLAPPING PHOTO WITH DUAL GRADIENT RING & SHADOW
   // ===========================================================================
 
   Widget _circularStudentPhoto(
@@ -698,31 +766,42 @@ class HallOfFameCarouselWidgetState
         shape: BoxShape.circle,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(widget.isDarkMode ? 0.35 : 0.12),
-            blurRadius: 14,
-            offset: const Offset(0, 5),
+            color: const Color(0xFF2563EB).withOpacity(0.18),
+            blurRadius: 16,
+            offset: const Offset(0, 6),
           ),
         ],
       ),
-      child: CircleAvatar(
-        radius: radius - 3.5,
-        backgroundColor: widget.isDarkMode
-            ? const Color(0xFF24304A)
-            : const Color(0xFFE8F1FF),
-        child: ClipOval(
-          child: hasImage
-              ? Image.network(
-                  imageUrl.toString(),
-                  width: (radius - 3.5) * 2,
-                  height: (radius - 3.5) * 2,
-                  fit: BoxFit.cover,
-                  errorBuilder: (_, __, ___) => _photoFallback(studentName),
-                  loadingBuilder: (context, child, progress) {
-                    if (progress == null) return child;
-                    return _photoLoading();
-                  },
-                )
-              : _photoFallback(studentName),
+      child: Container(
+        padding: const EdgeInsets.all(2),
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle,
+          gradient: LinearGradient(
+            colors: [Color(0xFF2563EB), Color(0xFF10B981)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: CircleAvatar(
+          radius: radius - 5,
+          backgroundColor: widget.isDarkMode
+              ? const Color(0xFF24304A)
+              : const Color(0xFFE8F1FF),
+          child: ClipOval(
+            child: hasImage
+                ? Image.network(
+                    imageUrl.toString(),
+                    width: (radius - 5) * 2,
+                    height: (radius - 5) * 2,
+                    fit: BoxFit.cover,
+                    errorBuilder: (_, __, ___) => _photoFallback(studentName),
+                    loadingBuilder: (context, child, progress) {
+                      if (progress == null) return child;
+                      return _photoLoading();
+                    },
+                  )
+                : _photoFallback(studentName),
+          ),
         ),
       ),
     );
