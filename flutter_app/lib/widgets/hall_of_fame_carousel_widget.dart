@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'selection_proof_system.dart';
@@ -20,14 +22,28 @@ class HallOfFameCarouselWidgetState
   List<Map<String, dynamic>> _hallOfFameList = [];
   bool _isLoading = true;
 
+  final PageController _pageController = PageController(
+    viewportFraction: 0.86,
+  );
+
+  Timer? _autoScrollTimer;
+  int _currentPage = 0;
+
   @override
   void initState() {
     super.initState();
     fetchHallOfFame();
   }
 
+  @override
+  void dispose() {
+    _autoScrollTimer?.cancel();
+    _pageController.dispose();
+    super.dispose();
+  }
+
   // ===========================================================================
-  // FETCH HALL OF FAME
+  // FETCH
   // ===========================================================================
 
   Future<void> fetchHallOfFame() async {
@@ -46,10 +62,10 @@ class HallOfFameCarouselWidgetState
             List<Map<String, dynamic>>.from(res);
         _isLoading = false;
       });
+
+      _startAutoScroll();
     } catch (e) {
-      debugPrint(
-        '[DEBUG] Hall of Fame fetch error: $e',
-      );
+      debugPrint('[DEBUG] Hall of Fame fetch error: $e');
 
       if (mounted) {
         setState(() {
@@ -60,7 +76,39 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // OPEN CLAIM MODAL
+  // AUTO CAROUSEL
+  // ===========================================================================
+
+  void _startAutoScroll() {
+    _autoScrollTimer?.cancel();
+
+    if (_hallOfFameList.length <= 1) return;
+
+    _autoScrollTimer = Timer.periodic(
+      const Duration(seconds: 4),
+      (_) {
+        if (!_pageController.hasClients ||
+            _hallOfFameList.isEmpty) {
+          return;
+        }
+
+        _currentPage++;
+
+        if (_currentPage >= _hallOfFameList.length) {
+          _currentPage = 0;
+        }
+
+        _pageController.animateToPage(
+          _currentPage,
+          duration: const Duration(milliseconds: 650),
+          curve: Curves.easeInOut,
+        );
+      },
+    );
+  }
+
+  // ===========================================================================
+  // CLAIM
   // ===========================================================================
 
   Future<void> _openClaimSelectionModal() async {
@@ -69,10 +117,6 @@ class HallOfFameCarouselWidgetState
 
     String targetCoachingId = '';
     String targetCoachingName = 'Coaching Institute';
-
-    // -------------------------------------------------------------------------
-    // FIND USER'S RECENT COACHING
-    // -------------------------------------------------------------------------
 
     if (user != null) {
       try {
@@ -87,8 +131,7 @@ class HallOfFameCarouselWidgetState
 
         if (recentSub != null &&
             recentSub['batch_tests'] != null) {
-          final batchTests =
-              recentSub['batch_tests'];
+          final batchTests = recentSub['batch_tests'];
 
           if (batchTests['batches'] != null) {
             final coaching =
@@ -105,15 +148,9 @@ class HallOfFameCarouselWidgetState
           }
         }
       } catch (e) {
-        debugPrint(
-          '[DEBUG] Coaching lookup error: $e',
-        );
+        debugPrint('[DEBUG] Coaching lookup error: $e');
       }
     }
-
-    // -------------------------------------------------------------------------
-    // FALLBACK COACHING
-    // -------------------------------------------------------------------------
 
     if (targetCoachingId.isEmpty) {
       try {
@@ -132,9 +169,7 @@ class HallOfFameCarouselWidgetState
                   'Coaching Institute';
         }
       } catch (e) {
-        debugPrint(
-          '[DEBUG] Fallback coaching error: $e',
-        );
+        debugPrint('[DEBUG] Fallback coaching error: $e');
       }
     }
 
@@ -150,10 +185,6 @@ class HallOfFameCarouselWidgetState
       );
       return;
     }
-
-    // -------------------------------------------------------------------------
-    // OPEN CLAIM SHEET
-    // -------------------------------------------------------------------------
 
     StudentClaimSelectionSheet.show(
       context,
@@ -171,8 +202,7 @@ class HallOfFameCarouselWidgetState
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment:
-          CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _claimBanner(),
 
@@ -206,8 +236,6 @@ class HallOfFameCarouselWidgetState
                   Color(0xFFF1F5FF),
                   Color(0xFFE8EDFF),
                 ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
@@ -217,7 +245,6 @@ class HallOfFameCarouselWidgetState
       ),
       child: Row(
         children: [
-          // ICON
           Container(
             width: 48,
             height: 48,
@@ -235,7 +262,6 @@ class HallOfFameCarouselWidgetState
 
           const SizedBox(width: 12),
 
-          // TEXT
           Expanded(
             child: Column(
               crossAxisAlignment:
@@ -249,12 +275,11 @@ class HallOfFameCarouselWidgetState
                         : const Color(0xFF0F172A),
                     fontSize: 14,
                     fontWeight: FontWeight.w800,
-                    letterSpacing: -.2,
                   ),
                 ),
                 const SizedBox(height: 3),
                 Text(
-                  'Apna selection share karein aur apni coaching ko credit dein.',
+                  'Apni success story share karein aur apni coaching ko credit dein.',
                   maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -271,28 +296,24 @@ class HallOfFameCarouselWidgetState
 
           const SizedBox(width: 8),
 
-          // BUTTON
           ElevatedButton(
-            onPressed:
-                _openClaimSelectionModal,
+            onPressed: _openClaimSelectionModal,
             style: ElevatedButton.styleFrom(
               backgroundColor:
                   const Color(0xFF6366F1),
               foregroundColor: Colors.white,
               elevation: 0,
-              padding:
-                  const EdgeInsets.symmetric(
+              padding: const EdgeInsets.symmetric(
                 horizontal: 13,
                 vertical: 10,
               ),
-              shape:
-                  RoundedRectangleBorder(
+              shape: RoundedRectangleBorder(
                 borderRadius:
                     BorderRadius.circular(11),
               ),
             ),
             child: const Text(
-              'Claim',
+              'Share',
               style: TextStyle(
                 fontSize: 12,
                 fontWeight: FontWeight.w800,
@@ -316,8 +337,7 @@ class HallOfFameCarouselWidgetState
           height: 34,
           decoration: BoxDecoration(
             color: const Color(0xFFFFF7E6),
-            borderRadius:
-                BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: const Icon(
             Icons.workspace_premium_rounded,
@@ -341,7 +361,6 @@ class HallOfFameCarouselWidgetState
                       : const Color(0xFF0F172A),
                   fontSize: 16,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: -.3,
                 ),
               ),
               Text(
@@ -358,18 +377,15 @@ class HallOfFameCarouselWidgetState
           ),
         ),
 
-        // VERIFIED BADGE
         Container(
-          padding:
-              const EdgeInsets.symmetric(
+          padding: const EdgeInsets.symmetric(
             horizontal: 9,
             vertical: 5,
           ),
           decoration: BoxDecoration(
             color: const Color(0xFF16A34A)
                 .withOpacity(.10),
-            borderRadius:
-                BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(8),
           ),
           child: const Row(
             mainAxisSize: MainAxisSize.min,
@@ -396,20 +412,28 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // HALL OF FAME CARDS
+  // CAROUSEL
   // ===========================================================================
 
   Widget _hallOfFameCards() {
     return SizedBox(
-      height: 325,
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal,
-        physics:
-            const BouncingScrollPhysics(),
+      height: 430,
+      child: PageView.builder(
+        controller: _pageController,
         itemCount: _hallOfFameList.length,
+        physics: const BouncingScrollPhysics(),
+        onPageChanged: (index) {
+          _currentPage = index;
+        },
         itemBuilder: (context, index) {
-          return _selectionCard(
-            _hallOfFameList[index],
+          return Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 6,
+              vertical: 3,
+            ),
+            child: _selectionCard(
+              _hallOfFameList[index],
+            ),
           );
         },
       ),
@@ -417,273 +441,258 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // SINGLE SELECTION CARD
+  // CARD
   // ===========================================================================
 
   Widget _selectionCard(
     Map<String, dynamic> item,
   ) {
     final coachingName =
-        item['coachings']?['name'] ??
+        item['coachings']?['name']?.toString() ??
             'Mentored Coaching';
 
     final studentName =
-        item['student_name'] ??
+        item['student_name']?.toString() ??
             'Candidate';
 
     final post =
-        item['post_cleared'] ??
-            'Officer';
+        item['post_cleared']?.toString() ??
+            'Selected';
 
     final exam =
-        item['target_exam'] ??
+        item['target_exam']?.toString() ??
             'Competitive Exam';
 
     final quote =
-        item['testimonial_text'] ??
+        item['testimonial_text']?.toString() ??
             '';
 
-    // Optional image support.
-    //
-    // If your database later contains a field
-    // such as profile_image_url, this card will
-    // automatically use it.
+    // IMPORTANT:
+    // Same working image logic retained.
     final imageUrl =
         item['profile_image_url'] ??
             item['student_image_url'] ??
             item['photo_url'];
 
     return Container(
-      width: 285,
-      margin:
-          const EdgeInsets.only(right: 13),
       decoration: BoxDecoration(
         color: widget.isDarkMode
             ? const Color(0xFF172033)
             : Colors.white,
-        borderRadius:
-            BorderRadius.circular(22),
+        borderRadius: BorderRadius.circular(24),
         border: Border.all(
           color: widget.isDarkMode
-              ? Colors.white.withOpacity(.07)
+              ? Colors.white.withOpacity(.08)
               : const Color(0xFFE2E8F0),
         ),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(
-              widget.isDarkMode ? .20 : .055,
+              widget.isDarkMode ? .22 : .07,
             ),
-            blurRadius: 18,
-            offset: const Offset(0, 7),
+            blurRadius: 22,
+            offset: const Offset(0, 9),
           ),
         ],
       ),
       child: Column(
-        crossAxisAlignment:
-            CrossAxisAlignment.start,
         children: [
-          // ===================================================================
-          // TOP PROFILE AREA
-          // ===================================================================
+          const SizedBox(height: 18),
+
+          // -------------------------------------------------------------------
+          // PHOTO - LARGE + CENTER
+          // -------------------------------------------------------------------
+
+          _largeStudentPhoto(
+            studentName,
+            imageUrl,
+          ),
+
+          const SizedBox(height: 11),
+
+          // -------------------------------------------------------------------
+          // NAME
+          // -------------------------------------------------------------------
 
           Padding(
-            padding:
-                const EdgeInsets.fromLTRB(
-              16,
-              16,
-              16,
-              0,
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16,
             ),
             child: Row(
+              mainAxisAlignment:
+                  MainAxisAlignment.center,
               children: [
-                // -------------------------------------------------------------
-                // STUDENT IMAGE
-                // -------------------------------------------------------------
-
-                _studentAvatar(
-                  studentName,
-                  imageUrl,
-                ),
-
-                const SizedBox(width: 11),
-
-                // -------------------------------------------------------------
-                // NAME + POST
-                // -------------------------------------------------------------
-
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment:
-                        CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Flexible(
-                            child: Text(
-                              studentName,
-                              maxLines: 1,
-                              overflow:
-                                  TextOverflow.ellipsis,
-                              style: TextStyle(
-                                color: widget
-                                        .isDarkMode
-                                    ? Colors.white
-                                    : const Color(
-                                        0xFF0F172A,
-                                      ),
-                                fontSize: 14,
-                                fontWeight:
-                                    FontWeight.w900,
-                              ),
-                            ),
-                          ),
-                          const SizedBox(width: 5),
-                          const Icon(
-                            Icons.verified_rounded,
-                            color:
-                                Color(0xFF16A34A),
-                            size: 15,
-                          ),
-                        ],
-                      ),
-
-                      const SizedBox(height: 4),
-
-                      Text(
-                        post,
-                        maxLines: 1,
-                        overflow:
-                            TextOverflow.ellipsis,
-                        style: const TextStyle(
-                          color: Color(0xFF2563EB),
-                          fontSize: 11.5,
-                          fontWeight:
-                              FontWeight.w800,
-                        ),
-                      ),
-
-                      const SizedBox(height: 2),
-
-                      Text(
-                        exam,
-                        maxLines: 1,
-                        overflow:
-                            TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: widget
-                                  .isDarkMode
-                              ? Colors.white54
-                              : const Color(
-                                  0xFF94A3B8,
-                                ),
-                          fontSize: 9.5,
-                          fontWeight:
-                              FontWeight.w500,
-                        ),
-                      ),
-                    ],
+                Flexible(
+                  child: Text(
+                    studentName,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: widget.isDarkMode
+                          ? Colors.white
+                          : const Color(0xFF0F172A),
+                      fontSize: 17,
+                      fontWeight: FontWeight.w900,
+                    ),
                   ),
+                ),
+                const SizedBox(width: 5),
+                const Icon(
+                  Icons.verified_rounded,
+                  color: Color(0xFF16A34A),
+                  size: 17,
                 ),
               ],
             ),
           ),
 
-          const SizedBox(height: 14),
+          const SizedBox(height: 5),
 
-          // ===================================================================
-          // SEPARATOR
-          // ===================================================================
+          // -------------------------------------------------------------------
+          // POST
+          // -------------------------------------------------------------------
 
-          Padding(
-            padding:
-                const EdgeInsets.symmetric(
-              horizontal: 16,
+          Container(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 12,
+              vertical: 6,
             ),
-            child: Container(
-              height: 1,
-              color: widget.isDarkMode
-                  ? Colors.white
-                      .withOpacity(.07)
-                  : const Color(0xFFF1F5F9),
+            decoration: BoxDecoration(
+              color: const Color(0xFF2563EB)
+                  .withOpacity(.09),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Text(
+              post,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                color: Color(0xFF2563EB),
+                fontSize: 11.5,
+                fontWeight: FontWeight.w800,
+              ),
             ),
           ),
 
-          // ===================================================================
-          // STATEMENT
-          // ===================================================================
+          const SizedBox(height: 4),
+
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16,
+            ),
+            child: Text(
+              exam,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: widget.isDarkMode
+                    ? Colors.white54
+                    : const Color(0xFF94A3B8),
+                fontSize: 10,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 14),
+
+          // -------------------------------------------------------------------
+          // DIVIDER
+          // -------------------------------------------------------------------
+
+          Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 18,
+            ),
+            child: Divider(
+              height: 1,
+              color: widget.isDarkMode
+                  ? Colors.white.withOpacity(.08)
+                  : const Color(0xFFE2E8F0),
+            ),
+          ),
+
+          const SizedBox(height: 13),
+
+          // -------------------------------------------------------------------
+          // SUCCESS STATEMENT
+          // -------------------------------------------------------------------
 
           Expanded(
             child: Padding(
-              padding:
-                  const EdgeInsets.fromLTRB(
-                16,
-                13,
-                16,
-                8,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 18,
               ),
               child: Container(
                 width: double.infinity,
-                padding:
-                    const EdgeInsets.all(13),
+                padding: const EdgeInsets.fromLTRB(
+                  14,
+                  12,
+                  14,
+                  12,
+                ),
                 decoration: BoxDecoration(
                   color: widget.isDarkMode
                       ? const Color(0xFF0F172A)
                       : const Color(0xFFF8FAFC),
                   borderRadius:
-                      BorderRadius.circular(15),
+                      BorderRadius.circular(16),
                 ),
                 child: Column(
                   crossAxisAlignment:
                       CrossAxisAlignment.start,
                   children: [
-                    // QUOTE ICON
-                    Container(
-                      width: 27,
-                      height: 27,
-                      decoration:
-                          BoxDecoration(
-                        color: const Color(
-                          0xFF2563EB,
-                        ).withOpacity(.10),
-                        borderRadius:
-                            BorderRadius.circular(
-                          8,
+                    Row(
+                      children: [
+                        Container(
+                          width: 30,
+                          height: 30,
+                          decoration: BoxDecoration(
+                            color: const Color(
+                              0xFF2563EB,
+                            ).withOpacity(.10),
+                            borderRadius:
+                                BorderRadius.circular(9),
+                          ),
+                          child: const Icon(
+                            Icons.format_quote_rounded,
+                            color: Color(0xFF2563EB),
+                            size: 18,
+                          ),
                         ),
-                      ),
-                      child: const Icon(
-                        Icons.format_quote_rounded,
-                        color:
-                            Color(0xFF2563EB),
-                        size: 17,
-                      ),
+                        const SizedBox(width: 8),
+                        Text(
+                          'My Success Story',
+                          style: TextStyle(
+                            color: widget.isDarkMode
+                                ? Colors.white70
+                                : const Color(0xFF475569),
+                            fontSize: 10.5,
+                            fontWeight: FontWeight.w800,
+                          ),
+                        ),
+                      ],
                     ),
 
-                    const SizedBox(height: 8),
+                    const SizedBox(height: 9),
 
-                    // MAIN STATEMENT
                     Expanded(
-                      child: Align(
-                        alignment:
-                            Alignment.topLeft,
-                        child: Text(
-                          quote.isNotEmpty
-                              ? quote
-                              : 'I am proud to share my selection journey.',
-                          maxLines: 5,
-                          overflow:
-                              TextOverflow.ellipsis,
-                          style: TextStyle(
-                            color: widget
-                                    .isDarkMode
-                                ? Colors.white
-                                : const Color(
-                                    0xFF334155,
-                                  ),
-                            fontSize: 11.5,
-                            height: 1.45,
-                            fontWeight:
-                                FontWeight.w600,
-                          ),
+                      child: Text(
+                        quote.isNotEmpty
+                            ? '“$quote”'
+                            : '“I am proud to share my selection journey.”',
+                        maxLines: 6,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: widget.isDarkMode
+                              ? Colors.white
+                              : const Color(0xFF334155),
+                          fontSize: 12,
+                          height: 1.5,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                     ),
@@ -693,53 +702,47 @@ class HallOfFameCarouselWidgetState
             ),
           ),
 
-          // ===================================================================
-          // COACHING FOOTER
-          // ===================================================================
+          const SizedBox(height: 12),
+
+          // -------------------------------------------------------------------
+          // COACHING
+          // -------------------------------------------------------------------
 
           Padding(
-            padding:
-                const EdgeInsets.fromLTRB(
-              16,
+            padding: const EdgeInsets.fromLTRB(
+              18,
               0,
-              16,
-              15,
+              18,
+              17,
             ),
             child: Container(
               width: double.infinity,
-              padding:
-                  const EdgeInsets.symmetric(
-                horizontal: 10,
-                vertical: 8,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 11,
+                vertical: 9,
               ),
               decoration: BoxDecoration(
                 color: widget.isDarkMode
-                    ? Colors.white
-                        .withOpacity(.05)
+                    ? Colors.white.withOpacity(.05)
                     : const Color(0xFFF8FAFC),
                 borderRadius:
-                    BorderRadius.circular(10),
+                    BorderRadius.circular(11),
               ),
               child: Row(
                 children: [
                   Container(
-                    width: 25,
-                    height: 25,
-                    decoration:
-                        BoxDecoration(
-                      color: const Color(
-                        0xFF6366F1,
-                      ).withOpacity(.10),
+                    width: 28,
+                    height: 28,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF6366F1)
+                          .withOpacity(.10),
                       borderRadius:
-                          BorderRadius.circular(
-                        7,
-                      ),
+                          BorderRadius.circular(8),
                     ),
                     child: const Icon(
-                      Icons.apartment_rounded,
-                      color:
-                          Color(0xFF6366F1),
-                      size: 14,
+                      Icons.school_rounded,
+                      color: Color(0xFF6366F1),
+                      size: 15,
                     ),
                   ),
 
@@ -751,35 +754,27 @@ class HallOfFameCarouselWidgetState
                           CrossAxisAlignment.start,
                       children: [
                         Text(
-                          'Coaching',
+                          'Prepared at',
                           style: TextStyle(
-                            color: widget
-                                    .isDarkMode
+                            color: widget.isDarkMode
                                 ? Colors.white38
-                                : const Color(
-                                    0xFF94A3B8,
-                                  ),
+                                : const Color(0xFF94A3B8),
                             fontSize: 7.5,
-                            fontWeight:
-                                FontWeight.w600,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
-                        const SizedBox(height: 1),
+                        const SizedBox(height: 2),
                         Text(
-                          coachingName.toString(),
+                          coachingName,
                           maxLines: 1,
                           overflow:
                               TextOverflow.ellipsis,
                           style: TextStyle(
-                            color: widget
-                                    .isDarkMode
+                            color: widget.isDarkMode
                                 ? Colors.white
-                                : const Color(
-                                    0xFF334155,
-                                  ),
+                                : const Color(0xFF334155),
                             fontSize: 10.5,
-                            fontWeight:
-                                FontWeight.w800,
+                            fontWeight: FontWeight.w800,
                           ),
                         ),
                       ],
@@ -795,10 +790,10 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // STUDENT AVATAR / IMAGE
+  // LARGE PASSPORT-STYLE PHOTO
   // ===========================================================================
 
-  Widget _studentAvatar(
+  Widget _largeStudentPhoto(
     String studentName,
     dynamic imageUrl,
   ) {
@@ -807,53 +802,97 @@ class HallOfFameCarouselWidgetState
             imageUrl.toString().trim().isNotEmpty;
 
     return Container(
-      width: 52,
-      height: 52,
+      width: 112,
+      height: 132,
+      padding: const EdgeInsets.all(3),
       decoration: BoxDecoration(
-        shape: BoxShape.circle,
+        color: widget.isDarkMode
+            ? const Color(0xFF24304A)
+            : Colors.white,
+        borderRadius: BorderRadius.circular(16),
         border: Border.all(
           color: const Color(0xFF2563EB)
-              .withOpacity(.18),
+              .withOpacity(.22),
           width: 2,
         ),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF2563EB)
+                .withOpacity(.10),
+            blurRadius: 14,
+            offset: const Offset(0, 5),
+          ),
+        ],
       ),
-      child: ClipOval(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(12),
         child: hasImage
             ? Image.network(
                 imageUrl.toString(),
+                width: 106,
+                height: 126,
                 fit: BoxFit.cover,
                 errorBuilder:
                     (_, __, ___) =>
-                        _avatarFallback(
-                  studentName,
-                ),
+                        _photoFallback(studentName),
+                loadingBuilder:
+                    (context, child, progress) {
+                  if (progress == null) {
+                    return child;
+                  }
+
+                  return _photoLoading();
+                },
               )
-            : _avatarFallback(
-                studentName,
-              ),
+            : _photoFallback(studentName),
       ),
     );
   }
 
-  Widget _avatarFallback(
+  // ===========================================================================
+  // PHOTO FALLBACK
+  // ===========================================================================
+
+  Widget _photoFallback(
     String studentName,
   ) {
     final initial =
         studentName.trim().isNotEmpty
-            ? studentName
-                .trim()[0]
-                .toUpperCase()
+            ? studentName.trim()[0].toUpperCase()
             : 'A';
 
     return Container(
-      color: const Color(0xFFE8F1FF),
+      color: widget.isDarkMode
+          ? const Color(0xFF24304A)
+          : const Color(0xFFE8F1FF),
       alignment: Alignment.center,
       child: Text(
         initial,
         style: const TextStyle(
           color: Color(0xFF2563EB),
-          fontSize: 19,
+          fontSize: 38,
           fontWeight: FontWeight.w900,
+        ),
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // PHOTO LOADING
+  // ===========================================================================
+
+  Widget _photoLoading() {
+    return Container(
+      color: widget.isDarkMode
+          ? const Color(0xFF24304A)
+          : const Color(0xFFF1F5F9),
+      alignment: Alignment.center,
+      child: const SizedBox(
+        width: 22,
+        height: 22,
+        child: CircularProgressIndicator(
+          strokeWidth: 2,
+          color: Color(0xFF2563EB),
         ),
       ),
     );
