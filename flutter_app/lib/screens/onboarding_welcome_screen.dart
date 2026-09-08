@@ -489,7 +489,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
 
                         const Expanded(
                           child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                            crossAxisAlignment:
+                                CrossAxisAlignment.start,
                             children: [
                               Text(
                                 'BPSC Full Mock',
@@ -774,7 +775,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
               const SizedBox(width: 6),
 
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment:
+                    CrossAxisAlignment.start,
                 children: [
                   Text(
                     title,
@@ -801,7 +803,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   }
 
   // ===========================================================================
-  // PAGE 2 (REDESIGNED FOR CLEAR MESSAGING)
+  // PAGE 2
   // ===========================================================================
 
   Widget _pageTwo() {
@@ -810,47 +812,21 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
       child: Padding(
         padding: const EdgeInsets.fromLTRB(
           20,
-          8,
+          7,
           20,
           5,
         ),
         child: Column(
           children: [
-            const SizedBox(height: 6),
-
-            // -----------------------------------------------------------------
-            // SECTION LABEL
-            // -----------------------------------------------------------------
-
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'YOUR COACHING GOES ONLINE',
+                'YOUR COACHING. NOW DIGITAL.',
                 style: TextStyle(
                   color: blue,
                   fontSize: 9,
                   fontWeight: FontWeight.w900,
-                  letterSpacing: 1.3,
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 7),
-
-            // -----------------------------------------------------------------
-            // HEADLINE
-            // -----------------------------------------------------------------
-
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Aapki Apni Coaching,\nAb Digital Mock Tests Par.',
-                style: TextStyle(
-                  color: ink,
-                  fontSize: 27,
-                  height: 1.15,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: -0.9,
+                  letterSpacing: 1.2,
                 ),
               ),
             ),
@@ -860,58 +836,103 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                'Padhai wahi aapke classroom teachers se, practice official exam-level CBT portal par.',
+                'Your coaching.\nNow on MockTester.',
                 style: TextStyle(
-                  color: muted,
-                  fontSize: 12,
-                  height: 1.45,
-                  fontWeight: FontWeight.w500,
+                  color: ink,
+                  fontSize: 31,
+                  height: 1.06,
+                  fontWeight: FontWeight.w800,
+                  letterSpacing: -1.15,
                 ),
               ),
             ),
 
-            const SizedBox(height: 16),
+            const SizedBox(height: 9),
 
             // -----------------------------------------------------------------
-            // TRANSFORMATION VISUAL
+            // MAIN MESSAGE
+            // -----------------------------------------------------------------
+
+            Container(
+              width: double.infinity,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 14,
+                vertical: 12,
+              ),
+              decoration: BoxDecoration(
+                color: blueLight,
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(
+                  color: blue.withValues(alpha: .10),
+                ),
+              ),
+              child: const Row(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Icon(
+                    Icons.school_rounded,
+                    color: blue,
+                    size: 21,
+                  ),
+                  SizedBox(width: 10),
+                  Expanded(
+                    child: Text(
+                      'Your coaching can conduct mock tests '
+                      'on MockTester — just like a real CBT exam.',
+                      style: TextStyle(
+                        color: blueDeep,
+                        fontSize: 11,
+                        height: 1.45,
+                        fontWeight: FontWeight.w800,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+
+            const SizedBox(height: 14),
+
+            // -----------------------------------------------------------------
+            // FLOW
             // -----------------------------------------------------------------
 
             Expanded(
-              child: _coachingTransformation(),
+              child: _simpleTestFlow(),
             ),
 
-            const SizedBox(height: 12),
+            const SizedBox(height: 11),
 
             // -----------------------------------------------------------------
-            // READABLE BENEFITS
+            // BENEFITS
             // -----------------------------------------------------------------
 
             Row(
               children: [
                 _premiumBenefit(
-                  Icons.menu_book_rounded,
-                  'Teacher Tests',
-                  'Coaching faculty papers',
+                  Icons.computer_rounded,
+                  'Real CBT',
+                  'Exam-like practice',
                   blue,
                 ),
-                const SizedBox(width: 9),
+                const SizedBox(width: 8),
                 _premiumBenefit(
-                  Icons.timer_outlined,
-                  'Exam Mode',
-                  'Negative marking & rank',
-                  violet,
-                ),
-                const SizedBox(width: 9),
-                _premiumBenefit(
-                  Icons.query_stats_rounded,
-                  'Instant Score',
-                  'Solutions & rank sheet',
+                  Icons.emoji_events_rounded,
+                  'Result',
+                  'See your score',
                   green,
+                ),
+                const SizedBox(width: 8),
+                _premiumBenefit(
+                  Icons.analytics_rounded,
+                  'Analysis',
+                  'Find weak areas',
+                  violet,
                 ),
               ],
             ),
 
-            const SizedBox(height: 13),
+            const SizedBox(height: 11),
 
             _blueButton(
               'Continue',
@@ -919,7 +940,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
               _next,
             ),
 
-            const SizedBox(height: 8),
+            const SizedBox(height: 7),
           ],
         ),
       ),
@@ -927,251 +948,117 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   }
 
   // ===========================================================================
-  // COACHING TRANSFORMATION (REDESIGNED)
+  // SIMPLE TEST FLOW
   // ===========================================================================
 
-  Widget _coachingTransformation() {
-    return Stack(
-      alignment: Alignment.center,
-      children: [
-        // Background Container
-        Container(
-          width: double.infinity,
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [
-                Color(0xFF0A1C47),
-                Color(0xFF140D36),
-              ],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-            borderRadius: BorderRadius.circular(24),
-            border: Border.all(
-              color: Colors.white.withValues(alpha: 0.08),
-            ),
-          ],
-        ),
-
-        // Glow effects
-        Positioned(
-          top: -25,
-          right: -25,
-          child: Container(
-            width: 140,
-            height: 140,
-            decoration: BoxDecoration(
-              color: blue.withValues(alpha: .22),
-              shape: BoxShape.circle,
-            ),
-          ),
-        ),
-
-        Positioned(
-          bottom: -35,
-          left: -25,
-          child: Container(
-            width: 130,
-            height: 130,
-            decoration: BoxDecoration(
-              color: violet.withValues(alpha: .18),
-              shape: BoxShape.circle,
-            ),
-          ),
-        ),
-
-        // Core Visual Cards
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Row(
-                children: [
-                  Expanded(
-                    child: _pillarCard(
-                      icon: Icons.school_rounded,
-                      iconBg: const Color(0xFF2E90FA),
-                      tag: 'OFFLINE',
-                      tagColor: const Color(0xFF53B1FD),
-                      title: 'Aapke Teachers',
-                      desc: 'Classroom teaching & doubt sessions',
-                    ),
-                  ),
-
-                  Container(
-                    width: 32,
-                    height: 32,
-                    margin: const EdgeInsets.symmetric(horizontal: 6),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: .12),
-                      shape: BoxShape.circle,
-                      border: Border.all(
-                        color: Colors.white.withValues(alpha: .15),
-                      ),
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.add_rounded,
-                        color: Colors.white,
-                        size: 20,
-                      ),
-                    ),
-                  ),
-
-                  Expanded(
-                    child: _pillarCard(
-                      icon: Icons.laptop_chromebook_rounded,
-                      iconBg: const Color(0xFF7F56D9),
-                      tag: 'ONLINE',
-                      tagColor: const Color(0xFF9B8AFB),
-                      title: 'MockTester',
-                      desc: 'Real exam pattern CBT tests',
-                    ),
-                  ),
-                ],
-              ),
-
-              // Bottom Integration Card
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 10,
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.07),
-                  borderRadius: BorderRadius.circular(14),
-                  border: Border.all(
-                    color: Colors.white.withValues(alpha: 0.12),
-                  ),
-                ),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(6),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF12B76A).withValues(alpha: 0.18),
-                        shape: BoxShape.circle,
-                      ),
-                      child: const Icon(
-                        Icons.check_rounded,
-                        color: Color(0xFF32D583),
-                        size: 15,
-                      ),
-                    ),
-                    const SizedBox(width: 10),
-                    const Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Local Guidance + Modern CBT Tech',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 10.5,
-                              fontWeight: FontWeight.w800,
-                            ),
-                          ),
-                          SizedBox(height: 2),
-                          Text(
-                            'Teacher ke questions direct aapke mobile screen par',
-                            style: TextStyle(
-                              color: Color(0xFF98A2B3),
-                              fontSize: 8,
-                              fontWeight: FontWeight.w500,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-
-  Widget _pillarCard({
-    required IconData icon,
-    required Color iconBg,
-    required String tag,
-    required Color tagColor,
-    required String title,
-    required String desc,
-  }) {
+  Widget _simpleTestFlow() {
     return Container(
-      padding: const EdgeInsets.all(12),
+      width: double.infinity,
+      padding: const EdgeInsets.fromLTRB(
+        15,
+        17,
+        15,
+        15,
+      ),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.06),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: Colors.white.withValues(alpha: 0.1),
+        gradient: const LinearGradient(
+          colors: [
+            Color(0xFF0D2D78),
+            Color(0xFF17104D),
+          ],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
         ),
+        borderRadius: BorderRadius.circular(27),
+        boxShadow: [
+          BoxShadow(
+            color: blue.withValues(alpha: .13),
+            blurRadius: 25,
+            offset: const Offset(0, 12),
+          ),
+        ],
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                width: 34,
-                height: 34,
-                decoration: BoxDecoration(
-                  color: iconBg.withValues(alpha: 0.2),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Icon(
-                  icon,
-                  color: iconBg,
-                  size: 18,
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 6,
-                  vertical: 2,
-                ),
-                decoration: BoxDecoration(
-                  color: tagColor.withValues(alpha: 0.15),
-                  borderRadius: BorderRadius.circular(5),
-                ),
-                child: Text(
-                  tag,
-                  style: TextStyle(
-                    color: tagColor,
-                    fontSize: 7,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 10),
-          Text(
-            title,
-            maxLines: 1,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
-              color: Colors.white,
-              fontSize: 11,
-              fontWeight: FontWeight.w800,
-            ),
-          ),
-          const SizedBox(height: 3),
-          Text(
-            desc,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: const TextStyle(
+          const Text(
+            'HOW IT WORKS',
+            style: TextStyle(
               color: Color(0xFF98A2B3),
               fontSize: 8,
-              height: 1.3,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 1.1,
+            ),
+          ),
+
+          const SizedBox(height: 15),
+
+          _flowStep(
+            number: '1',
+            icon: Icons.school_rounded,
+            title: 'Your Coaching',
+            subtitle: 'Conducts the test',
+            color: orange,
+          ),
+
+          _flowLine(),
+
+          _flowStep(
+            number: '2',
+            icon: Icons.phone_android_rounded,
+            title: 'MockTester',
+            subtitle: 'You take the CBT mock',
+            color: blue,
+            highlight: true,
+          ),
+
+          _flowLine(),
+
+          _flowStep(
+            number: '3',
+            icon: Icons.insights_rounded,
+            title: 'Your Result',
+            subtitle: 'Score, rank & weak areas',
+            color: green,
+          ),
+
+          const Spacer(),
+
+          const SizedBox(height: 13),
+
+          Container(
+            width: double.infinity,
+            padding: const EdgeInsets.symmetric(
+              horizontal: 12,
+              vertical: 11,
+            ),
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: .08),
+              borderRadius: BorderRadius.circular(13),
+              border: Border.all(
+                color: Colors.white.withValues(alpha: .08),
+              ),
+            ),
+            child: const Row(
+              children: [
+                Icon(
+                  Icons.check_circle_rounded,
+                  color: Color(0xFF32D583),
+                  size: 17,
+                ),
+                SizedBox(width: 8),
+                Expanded(
+                  child: Text(
+                    'Your coaching stays the same. '
+                    'Your test experience gets better.',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 9,
+                      height: 1.35,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
         ],
@@ -1180,7 +1067,115 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   }
 
   // ===========================================================================
-  // PREMIUM BENEFIT CARDS
+  // FLOW STEP
+  // ===========================================================================
+
+  Widget _flowStep({
+    required String number,
+    required IconData icon,
+    required String title,
+    required String subtitle,
+    required Color color,
+    bool highlight = false,
+  }) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(11),
+      decoration: BoxDecoration(
+        color: highlight
+            ? Colors.white.withValues(alpha: .12)
+            : Colors.white.withValues(alpha: .055),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(
+          color: highlight
+              ? Colors.white.withValues(alpha: .15)
+              : Colors.white.withValues(alpha: .05),
+        ),
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 34,
+            height: 34,
+            decoration: BoxDecoration(
+              color: color.withValues(alpha: .14),
+              borderRadius: BorderRadius.circular(11),
+            ),
+            child: Icon(
+              icon,
+              color: color,
+              size: 19,
+            ),
+          ),
+
+          const SizedBox(width: 10),
+
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 10.5,
+                    fontWeight: FontWeight.w900,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  subtitle,
+                  style: const TextStyle(
+                    color: Color(0xFFB5BDD0),
+                    fontSize: 8,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          Container(
+            width: 22,
+            height: 22,
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: Colors.white.withValues(alpha: .08),
+              shape: BoxShape.circle,
+            ),
+            child: Text(
+              number,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 8,
+                fontWeight: FontWeight.w900,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // FLOW LINE
+  // ===========================================================================
+
+  Widget _flowLine() {
+    return SizedBox(
+      height: 20,
+      child: Center(
+        child: Container(
+          width: 1.5,
+          height: 16,
+          color: Colors.white.withValues(alpha: .18),
+        ),
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // BENEFIT CARDS
   // ===========================================================================
 
   Widget _premiumBenefit(
@@ -1191,16 +1186,16 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   ) {
     return Expanded(
       child: Container(
-        height: 92,
+        height: 82,
         padding: const EdgeInsets.fromLTRB(
-          10,
-          11,
+          9,
+          9,
+          7,
           8,
-          10,
         ),
         decoration: BoxDecoration(
           color: Colors.white,
-          borderRadius: BorderRadius.circular(17),
+          borderRadius: BorderRadius.circular(15),
           border: Border.all(
             color: border,
           ),
@@ -1216,16 +1211,16 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Container(
-              width: 30,
-              height: 30,
+              width: 28,
+              height: 28,
               decoration: BoxDecoration(
                 color: color.withValues(alpha: .10),
-                borderRadius: BorderRadius.circular(9),
+                borderRadius: BorderRadius.circular(8),
               ),
               child: Icon(
                 icon,
                 color: color,
-                size: 17,
+                size: 16,
               ),
             ),
 
@@ -1237,12 +1232,12 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(
                 color: ink,
-                fontSize: 10.5,
+                fontSize: 9.5,
                 fontWeight: FontWeight.w900,
               ),
             ),
 
-            const SizedBox(height: 2),
+            const SizedBox(height: 1),
 
             Text(
               subtitle,
@@ -1250,7 +1245,7 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(
                 color: muted,
-                fontSize: 7.5,
+                fontSize: 7,
                 fontWeight: FontWeight.w500,
               ),
             ),
@@ -1285,7 +1280,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
                 child: Form(
                   key: _formKey,
                   child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment:
+                        CrossAxisAlignment.start,
                     children: [
                       const Text(
                         '03',
@@ -1324,15 +1320,16 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
 
                       const SizedBox(height: 30),
 
-                      // NAME
                       _conversationField(
                         label: 'MY NAME IS',
                         controller: _nameController,
                         hint: 'Your full name',
                         icon: Icons.person_outline_rounded,
-                        capitalization: TextCapitalization.words,
+                        capitalization:
+                            TextCapitalization.words,
                         validator: (value) {
-                          if (value == null || value.trim().length < 2) {
+                          if (value == null ||
+                              value.trim().length < 2) {
                             return 'Please enter your name';
                           }
 
@@ -1342,7 +1339,6 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
 
                       const SizedBox(height: 24),
 
-                      // MOBILE
                       _conversationField(
                         label: 'MOBILE NUMBER',
                         controller: _phoneController,
@@ -1354,11 +1350,14 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
                           LengthLimitingTextInputFormatter(10),
                         ],
                         validator: (value) {
-                          if (value == null || value.trim().isEmpty) {
+                          if (value == null ||
+                              value.trim().isEmpty) {
                             return null;
                           }
 
-                          if (!RegExp(r'^[6-9]\d{9}$').hasMatch(value.trim())) {
+                          if (!RegExp(
+                            r'^[6-9]\d{9}$',
+                          ).hasMatch(value.trim())) {
                             return 'Enter a valid 10-digit number';
                           }
 
@@ -1397,7 +1396,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
                         padding: const EdgeInsets.all(14),
                         decoration: BoxDecoration(
                           color: blueLight,
-                          borderRadius: BorderRadius.circular(16),
+                          borderRadius:
+                              BorderRadius.circular(16),
                         ),
                         child: const Row(
                           children: [
@@ -1437,9 +1437,13 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
                 color: bg.withValues(alpha: .96),
               ),
               child: _blueButton(
-                _isLoading ? 'Setting up...' : 'Start My Preparation',
+                _isLoading
+                    ? 'Setting up...'
+                    : 'Start My Preparation',
                 Icons.arrow_forward_rounded,
-                _isLoading ? null : _completeRegistration,
+                _isLoading
+                    ? null
+                    : _completeRegistration,
                 loading: _isLoading,
               ),
             ),
@@ -1459,7 +1463,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     required String hint,
     required IconData icon,
     TextInputType? keyboardType,
-    TextCapitalization capitalization = TextCapitalization.none,
+    TextCapitalization capitalization =
+        TextCapitalization.none,
     List<TextInputFormatter>? formatters,
     String? Function(String?)? validator,
   }) {
@@ -1504,7 +1509,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
             ),
             filled: true,
             fillColor: Colors.white,
-            contentPadding: const EdgeInsets.symmetric(
+            contentPadding:
+                const EdgeInsets.symmetric(
               horizontal: 15,
               vertical: 17,
             ),
@@ -1603,7 +1609,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
                   ),
                 )
               : Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment:
+                      MainAxisAlignment.center,
                   children: [
                     Text(
                       text,
@@ -1654,12 +1661,16 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
               children: List.generate(
                 3,
                 (index) {
-                  final active = index == _currentPage;
-                  final completed = index < _currentPage;
+                  final active =
+                      index == _currentPage;
+
+                  final completed =
+                      index < _currentPage;
 
                   return Expanded(
                     child: AnimatedContainer(
-                      duration: const Duration(milliseconds: 350),
+                      duration:
+                          const Duration(milliseconds: 350),
                       margin: EdgeInsets.only(
                         right: index == 2 ? 0 : 5,
                       ),
@@ -1668,7 +1679,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
                         color: active || completed
                             ? blue
                             : const Color(0xFFE4E7EC),
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius:
+                            BorderRadius.circular(10),
                       ),
                     ),
                   );
@@ -1682,7 +1694,9 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
           Text(
             '03',
             style: TextStyle(
-              color: _currentPage == 2 ? blue : faint,
+              color: _currentPage == 2
+                  ? blue
+                  : faint,
               fontSize: 9,
               fontWeight: FontWeight.w900,
             ),
