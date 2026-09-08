@@ -1,1400 +1,741 @@
-import 'dart:io';
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import '../utils/bihar_location_data.dart';
+import 'selection_proof_system.dart';
 
-class CoachingEditorSheets {
-  // ===========================================================================
-  // 🖼️ 1. POSTER MODIFICATION MODAL
-  // ===========================================================================
-  static void openBannerModifierSheet({
-    required BuildContext context,
-    required String? coachingId,
-    required String? currentUrl,
-    required String creatorHandle,
-    required bool isDarkMode,
-    required VoidCallback onSaved,
-  }) {
-    File? newImage;
-    bool isSaving = false;
-    final picker = ImagePicker();
+// -----------------------------------------------------------------------------
+// STRING CASING EXTENSION (Auto Capitalizes Lowercase Input)
+// -----------------------------------------------------------------------------
+extension StringCasingExtension on String {
+  String toTitleCase() {
+    if (trim().isEmpty) return '';
+    return split(' ')
+        .where((word) => word.isNotEmpty)
+        .map((word) => word[0].toUpperCase() + word.substring(1).toLowerCase())
+        .join(' ');
+  }
+}
 
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+class HallOfFameCarouselWidget extends StatefulWidget {
+  final bool isDarkMode;
+
+  const HallOfFameCarouselWidget({
+    super.key,
+    required this.isDarkMode,
+  });
+
+  @override
+  State<HallOfFameCarouselWidget> createState() =>
+      HallOfFameCarouselWidgetState();
+}
+
+class HallOfFameCarouselWidgetState
+    extends State<HallOfFameCarouselWidget> {
+  List<Map<String, dynamic>> _hallOfFameList = [];
+  bool _isLoading = true;
+
+  final PageController _pageController = PageController(
+    viewportFraction: 0.86,
+  );
+
+  Timer? _autoScrollTimer;
+  int _currentPage = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    fetchHallOfFame();
+  }
+
+  @override
+  void dispose() {
+    _autoScrollTimer?.cancel();
+    _pageController.dispose();
+    super.dispose();
+  }
+
+  // ===========================================================================
+  // FETCH HALL OF FAME
+  // ===========================================================================
+  Future<void> fetchHallOfFame() async {
+    try {
+      final res = await Supabase.instance.client
+          .from('coaching_selections')
+          .select('*, coachings(name)')
+          .eq('is_verified', true)
+          .order('created_at', ascending: false)
+          .limit(10);
+
+      if (!mounted) return;
+
+      setState(() {
+        _hallOfFameList = List<Map<String, dynamic>>.from(res);
+        _isLoading = false;
+      });
+
+      _startAutoScroll();
+    } catch (e) {
+      debugPrint('[DEBUG] Hall of Fame fetch error: $e');
+
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
+    }
+  }
+
+  // ===========================================================================
+  // AUTO CAROUSEL
+  // ===========================================================================
+  void _startAutoScroll() {
+    _autoScrollTimer?.cancel();
+
+    if (_hallOfFameList.length <= 1) return;
+
+    _autoScrollTimer = Timer.periodic(
+      const Duration(seconds: 4),
+      (_) {
+        if (!_pageController.hasClients || _hallOfFameList.isEmpty) {
+          return;
+        }
+
+        _currentPage++;
+
+        if (_currentPage >= _hallOfFameList.length) {
+          _currentPage = 0;
+        }
+
+        _pageController.animateToPage(
+          _currentPage,
+          duration: const Duration(milliseconds: 650),
+          curve: Curves.easeInOut,
+        );
+      },
+    );
+  }
+
+  // ===========================================================================
+  // OPEN CLAIM / SHARE SUCCESS STORY
+  // ===========================================================================
+  Future<void> _openClaimSelectionModal() async {
+    final client = Supabase.instance.client;
+    final user = client.auth.currentUser;
+
+    String targetCoachingId = '';
+    String targetCoachingName = 'Coaching Institute';
+
+    if (user != null) {
+      try {
+        final recentSub = await client
+            .from('batch_submissions')
+            .select(
+              'batch_tests(batches(coaching_id, coachings(id, name)))',
+            )
+            .eq('user_id', user.id)
+            .limit(1)
+            .maybeSingle();
+
+        if (recentSub != null && recentSub['batch_tests'] != null) {
+          final batchTests = recentSub['batch_tests'];
+
+          if (batchTests['batches'] != null) {
+            final coaching = batchTests['batches']['coachings'];
+
+            if (coaching != null) {
+              targetCoachingId = coaching['id'].toString();
+              targetCoachingName =
+                  coaching['name']?.toString() ?? 'Coaching Institute';
+            }
+          }
+        }
+      } catch (e) {
+        debugPrint('[DEBUG] Coaching lookup error: $e');
+      }
+    }
+
+    if (targetCoachingId.isEmpty) {
+      try {
+        final coaching = await client
+            .from('coachings')
+            .select('id, name')
+            .limit(1)
+            .maybeSingle();
+
+        if (coaching != null) {
+          targetCoachingId = coaching['id'].toString();
+          targetCoachingName =
+              coaching['name']?.toString() ?? 'Coaching Institute';
+        }
+      } catch (e) {
+        debugPrint('[DEBUG] Fallback coaching error: $e');
+      }
+    }
+
+    if (!mounted) return;
+
+    if (targetCoachingId.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(
+          content: Text('Filhal koi coaching registered nahi mili.'),
+        ),
+      );
+      return;
+    }
+
+    StudentClaimSelectionSheet.show(
+      context,
+      coachingId: targetCoachingId,
+      coachingName: targetCoachingName,
+      isDarkMode: widget.isDarkMode,
+      onSuccess: fetchHallOfFame,
+    );
+  }
+
+  // ===========================================================================
+  // BUILD
+  // ===========================================================================
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        _claimBanner(),
+        if (!_isLoading && _hallOfFameList.isNotEmpty) ...[
+          const SizedBox(height: 22),
+          _sectionHeader(),
+          const SizedBox(height: 12),
+          _hallOfFameCards(),
+        ],
+      ],
+    );
+  }
+
+  // ===========================================================================
+  // SHARE SUCCESS STORY BANNER
+  // ===========================================================================
+  Widget _claimBanner() {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: widget.isDarkMode
+              ? const [Color(0xFF211B4B), Color(0xFF121A31)]
+              : const [Color(0xFFF1F5FF), Color(0xFFE8EDFF)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(
+          color: const Color(0xFF6366F1).withOpacity(.25),
+        ),
       ),
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setModalState) => Padding(
-          padding: const EdgeInsets.all(16),
+      child: Row(
+        children: [
+          Container(
+            width: 48,
+            height: 48,
+            decoration: BoxDecoration(
+              color: const Color(0xFF6366F1).withOpacity(.12),
+              shape: BoxShape.circle,
+            ),
+            child: const Icon(
+              Icons.emoji_events_rounded,
+              color: Color(0xFF6366F1),
+              size: 25,
+            ),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Crack Kiya Koi Exam? 🎓',
+                  style: TextStyle(
+                    color: widget.isDarkMode
+                        ? Colors.white
+                        : const Color(0xFF0F172A),
+                    fontSize: 14,
+                    fontWeight: FontWeight.w800,
+                  ),
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  'Apni success story share karein aur apni coaching ko credit dein.',
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: widget.isDarkMode
+                        ? Colors.white70
+                        : const Color(0xFF64748B),
+                    fontSize: 11,
+                    height: 1.35,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 8),
+          ElevatedButton(
+            onPressed: _openClaimSelectionModal,
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF6366F1),
+              foregroundColor: Colors.white,
+              elevation: 0,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 13,
+                vertical: 10,
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(11),
+              ),
+            ),
+            child: const Text(
+              'Share',
+              style: TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w800,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // SECTION HEADER
+  // ===========================================================================
+  Widget _sectionHeader() {
+    return Row(
+      children: [
+        Container(
+          width: 34,
+          height: 34,
+          decoration: BoxDecoration(
+            color: const Color(0xFFFFF7E6),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: const Icon(
+            Icons.workspace_premium_rounded,
+            color: Color(0xFFF59E0B),
+            size: 20,
+          ),
+        ),
+        const SizedBox(width: 9),
+        Expanded(
           child: Column(
-            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text(
+                'Hall of Fame',
+                style: TextStyle(
+                  color: widget.isDarkMode
+                      ? Colors.white
+                      : const Color(0xFF0F172A),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: -.3,
+                ),
+              ),
+              Text(
+                'Real students. Real selections.',
+                style: TextStyle(
+                  color: widget.isDarkMode
+                      ? Colors.white54
+                      : const Color(0xFF94A3B8),
+                  fontSize: 10,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 9,
+            vertical: 5,
+          ),
+          decoration: BoxDecoration(
+            color: const Color(0xFF16A34A).withOpacity(.10),
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: const Row(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Icon(
+                Icons.verified_rounded,
+                color: Color(0xFF16A34A),
+                size: 12,
+              ),
+              SizedBox(width: 4),
+              Text(
+                'VERIFIED',
+                style: TextStyle(
+                  color: Color(0xFF16A34A),
+                  fontSize: 8.5,
+                  fontWeight: FontWeight.w900,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ],
+    );
+  }
+
+  // ===========================================================================
+  // CAROUSEL LIST
+  // ===========================================================================
+  Widget _hallOfFameCards() {
+    return SizedBox(
+      height: 355,
+      child: PageView.builder(
+        controller: _pageController,
+        itemCount: _hallOfFameList.length,
+        physics: const BouncingScrollPhysics(),
+        onPageChanged: (index) {
+          _currentPage = index;
+        },
+        itemBuilder: (context, index) {
+          return Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 6,
+              vertical: 2,
+            ),
+            child: _selectionCard(
+              _hallOfFameList[index],
+            ),
+          );
+        },
+      ),
+    );
+  }
+
+  // ===========================================================================
+  // ENHANCED SELECTION CARD (Title Case + Overlapping Ring + Dual Badge)
+  // ===========================================================================
+  Widget _selectionCard(Map<String, dynamic> item) {
+    final rawName = item['student_name']?.toString().trim() ?? '';
+    final studentName = rawName.isNotEmpty ? rawName.toTitleCase() : 'Candidate';
+
+    final rawPost = item['post_cleared']?.toString().trim() ?? '';
+    final post = rawPost.isNotEmpty ? rawPost.toTitleCase() : 'Selected Officer';
+
+    final rawExam = item['target_exam']?.toString().trim() ?? '';
+    final exam = rawExam.isNotEmpty ? rawExam.toUpperCase() : 'COMPETITIVE EXAM';
+
+    final rawCoaching = item['coachings']?['name']?.toString().trim() ?? '';
+    final coachingName =
+        rawCoaching.isNotEmpty ? rawCoaching.toTitleCase() : 'Mentored Coaching';
+
+    final quote = item['testimonial_text']?.toString().trim() ?? '';
+    final imageUrl = item['profile_image_url'] ??
+        item['student_image_url'] ??
+        item['photo_url'];
+
+    const double avatarRadius = 42;
+
+    return Stack(
+      clipBehavior: Clip.none,
+      alignment: Alignment.topCenter,
+      children: [
+        // 🎴 BASE CARD
+        Container(
+          margin: const EdgeInsets.only(top: avatarRadius),
+          padding: const EdgeInsets.fromLTRB(16, avatarRadius + 12, 16, 14),
+          decoration: BoxDecoration(
+            color: widget.isDarkMode ? const Color(0xFF172033) : Colors.white,
+            borderRadius: BorderRadius.circular(22),
+            border: Border.all(
+              color: widget.isDarkMode
+                  ? Colors.white.withOpacity(0.08)
+                  : const Color(0xFFE2E8F0),
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: const Color(0xFF0F172A)
+                    .withOpacity(widget.isDarkMode ? 0.35 : 0.06),
+                blurRadius: 20,
+                offset: const Offset(0, 10),
+              ),
+            ],
+          ),
+          child: Column(
+            children: [
+              // 1. Candidate Name & Verified Check
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Text(
-                    '🖼️ Modify Institute Poster',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                  Flexible(
+                    child: Text(
+                      studentName,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: widget.isDarkMode
+                            ? Colors.white
+                            : const Color(0xFF0F172A),
+                        fontSize: 16.5,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: -0.3,
+                      ),
+                    ),
                   ),
-                  IconButton(
-                    icon: const Icon(Icons.close),
-                    onPressed: () => Navigator.pop(ctx),
+                  const SizedBox(width: 4),
+                  const Icon(
+                    Icons.verified_rounded,
+                    color: Color(0xFF10B981),
+                    size: 17,
                   ),
                 ],
               ),
               const SizedBox(height: 6),
-              const Text(
-                'Recommended: 1200 x 675 px (16:9 Ratio). High quality photo of billboard.',
-                style: TextStyle(fontSize: 11.5, color: Colors.grey),
-              ),
-              const SizedBox(height: 12),
-              GestureDetector(
-                onTap: () async {
-                  final picked = await picker.pickImage(
-                    source: ImageSource.gallery,
-                    imageQuality: 85,
-                  );
-                  if (picked != null) {
-                    setModalState(() => newImage = File(picked.path));
-                  }
-                },
-                child: Container(
-                  height: 160,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.withOpacity(0.1),
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(
-                      color: const Color(0xFF2563EB).withOpacity(0.3),
-                    ),
+
+              // 2. Dual Badge Pill (Post Cleared & Target Exam)
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 4),
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFFEFF6FF), Color(0xFFF0FDF4)],
                   ),
-                  child: newImage != null
-                      ? ClipRRect(
-                          borderRadius: BorderRadius.circular(14),
-                          child: Image.file(newImage!, fit: BoxFit.cover),
-                        )
-                      : (currentUrl != null && currentUrl.isNotEmpty
-                          ? ClipRRect(
-                              borderRadius: BorderRadius.circular(14),
-                              child: Image.network(currentUrl, fit: BoxFit.cover),
-                            )
-                          : const Center(
-                              child: Text(
-                                'Tap to pick image from gallery 📷',
-                                style: TextStyle(
-                                  color: Color(0xFF2563EB),
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            )),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: const Color(0xFFBFDBFE)),
                 ),
-              ),
-              const SizedBox(height: 16),
-              SizedBox(
-                width: double.infinity,
-                height: 44,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF2563EB),
-                    foregroundColor: Colors.white,
-                  ),
-                  onPressed: (isSaving || newImage == null)
-                      ? null
-                      : () async {
-                          setModalState(() => isSaving = true);
-                          try {
-                            final bytes = await newImage!.readAsBytes();
-                            final fileExt = newImage!.path.split('.').last;
-                            final fileName =
-                                'banner_${creatorHandle}_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
-
-                            await Supabase.instance.client.storage
-                                .from('coaching_assets')
-                                .uploadBinary(
-                                  fileName,
-                                  bytes,
-                                  fileOptions: FileOptions(
-                                    contentType: 'image/$fileExt',
-                                    upsert: true,
-                                  ),
-                                );
-
-                            final updatedUrl = Supabase.instance.client.storage
-                                .from('coaching_assets')
-                                .getPublicUrl(fileName);
-
-                            if (coachingId != null) {
-                              await Supabase.instance.client
-                                  .from('coachings')
-                                  .update({'banner_url': updatedUrl})
-                                  .eq('id', coachingId);
-                            }
-                            await Supabase.instance.client
-                                .from('creator_profiles')
-                                .update({'banner_url': updatedUrl})
-                                .eq('handle_id', creatorHandle);
-
-                            if (ctx.mounted) Navigator.pop(ctx);
-                            onSaved();
-                          } catch (e) {
-                            debugPrint("Banner save error: $e");
-                            setModalState(() => isSaving = false);
-                          }
-                        },
-                  child: isSaving
-                      ? const CircularProgressIndicator(color: Colors.white)
-                      : const Text(
-                          'Save New Poster 🚀',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  // ===========================================================================
-  // 📍 2. LOCATION & DETAILS MODIFICATION MODAL
-  // ===========================================================================
-  static void openDetailsModifierSheet({
-    required BuildContext context,
-    required Map<String, dynamic>? coachingData,
-    required String creatorHandle,
-    required bool isDarkMode,
-    required VoidCallback onSaved,
-  }) {
-    final nameCtrl = TextEditingController(text: coachingData?['name'] ?? '');
-    final landmarkCtrl = TextEditingController(
-      text: coachingData?['landmark_address'] ?? coachingData?['landmark'] ?? '',
-    );
-    final taglineCtrl = TextEditingController(text: coachingData?['tagline'] ?? '');
-    final yearCtrl = TextEditingController(
-      text: coachingData?['established_year']?.toString() ?? '',
-    );
-    final descCtrl = TextEditingController(text: coachingData?['description'] ?? '');
-
-    String selectedDistrict = coachingData?['district'] ?? 'Patna';
-    if (!kBiharDistrictCityMap.containsKey(selectedDistrict)) {
-      selectedDistrict = 'Patna';
-    }
-    List<String> availableCities =
-        kBiharDistrictCityMap[selectedDistrict] ?? ['Other / Rural Area'];
-    String selectedCity = coachingData?['city'] ?? availableCities.first;
-    if (!availableCities.contains(selectedCity)) {
-      selectedCity = availableCities.first;
-    }
-
-    bool isSaving = false;
-
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(
-            bottom: MediaQuery.of(ctx).viewInsets.bottom,
-            left: 16,
-            right: 16,
-            top: 16,
-          ),
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Text(
-                      '📍 Modify Coaching Details',
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                    const Icon(
+                      Icons.military_tech_rounded,
+                      size: 14,
+                      color: Color(0xFF2563EB),
                     ),
-                    IconButton(
-                      icon: const Icon(Icons.close),
-                      onPressed: () => Navigator.pop(ctx),
+                    const SizedBox(width: 4),
+                    Text(
+                      post,
+                      style: const TextStyle(
+                        color: Color(0xFF1E40AF),
+                        fontSize: 10.5,
+                        fontWeight: FontWeight.w900,
+                      ),
+                    ),
+                    Container(
+                      margin: const EdgeInsets.symmetric(horizontal: 6),
+                      width: 3.5,
+                      height: 3.5,
+                      decoration: const BoxDecoration(
+                        color: Color(0xFF93C5FD),
+                        shape: BoxShape.circle,
+                      ),
+                    ),
+                    Text(
+                      exam,
+                      style: const TextStyle(
+                        color: Color(0xFF059669),
+                        fontSize: 9.5,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0.3,
+                      ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
-                TextField(
-                  controller: nameCtrl,
-                  decoration: const InputDecoration(
-                    labelText: 'Coaching Title',
-                    border: OutlineInputBorder(),
-                    isDense: true,
+              ),
+              const SizedBox(height: 11),
+
+              // 3. Clean Testimonial Box (Without broken quotes)
+              Expanded(
+                child: Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 10),
+                  decoration: BoxDecoration(
+                    color: widget.isDarkMode
+                        ? const Color(0xFF0F172A)
+                        : const Color(0xFFF8FAFC),
+                    borderRadius: BorderRadius.circular(13),
+                    border: Border.all(
+                      color: widget.isDarkMode
+                          ? Colors.white.withOpacity(0.04)
+                          : const Color(0xFFF1F5F9),
+                    ),
+                  ),
+                  child: Center(
+                    child: Text(
+                      quote.isNotEmpty
+                          ? quote
+                          : 'Dedicated hard work and regular CBT mock test practice made this selection possible.',
+                      maxLines: 4,
+                      overflow: TextOverflow.ellipsis,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: widget.isDarkMode
+                            ? Colors.white70
+                            : const Color(0xFF475569),
+                        fontSize: 11.5,
+                        height: 1.45,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
                   ),
                 ),
-                const SizedBox(height: 10),
-                TextField(
-                  controller: taglineCtrl,
-                  decoration: const InputDecoration(
-                    labelText: 'Tagline / Specialty',
-                    border: OutlineInputBorder(),
-                    isDense: true,
-                  ),
+              ),
+              const SizedBox(height: 10),
+
+              // 4. Prepared at Coaching Footnote
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 8),
+                decoration: BoxDecoration(
+                  color: widget.isDarkMode
+                      ? Colors.white.withOpacity(0.04)
+                      : const Color(0xFFF1F5F9),
+                  borderRadius: BorderRadius.circular(11),
                 ),
-                const SizedBox(height: 10),
-                DropdownButtonFormField<String>(
-                  value: selectedDistrict,
-                  decoration: const InputDecoration(
-                    labelText: 'District',
-                    border: OutlineInputBorder(),
-                    isDense: true,
-                  ),
-                  items: kBiharDistrictCityMap.keys
-                      .map((d) => DropdownMenuItem(value: d, child: Text(d)))
-                      .toList(),
-                  onChanged: (val) {
-                    if (val != null) {
-                      setModalState(() {
-                        selectedDistrict = val;
-                        availableCities =
-                            kBiharDistrictCityMap[val] ?? ['Other / Rural Area'];
-                        selectedCity = availableCities.first;
-                      });
-                    }
-                  },
-                ),
-                const SizedBox(height: 10),
-                DropdownButtonFormField<String>(
-                  value: selectedCity,
-                  decoration: const InputDecoration(
-                    labelText: 'Town / Education Hub',
-                    border: OutlineInputBorder(),
-                    isDense: true,
-                  ),
-                  items: availableCities
-                      .map((c) => DropdownMenuItem(value: c, child: Text(c)))
-                      .toList(),
-                  onChanged: (val) => setModalState(() => selectedCity = val!),
-                ),
-                const SizedBox(height: 10),
-                Row(
+                child: Row(
                   children: [
-                    Expanded(
-                      child: TextField(
-                        controller: landmarkCtrl,
-                        decoration: const InputDecoration(
-                          labelText: 'Landmark / Area',
-                          border: OutlineInputBorder(),
-                          isDense: true,
-                        ),
+                    Container(
+                      padding: const EdgeInsets.all(5),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF2563EB).withOpacity(0.12),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: const Icon(
+                        Icons.school_rounded,
+                        color: Color(0xFF2563EB),
+                        size: 15,
                       ),
                     ),
                     const SizedBox(width: 8),
                     Expanded(
-                      child: TextField(
-                        controller: yearCtrl,
-                        keyboardType: TextInputType.number,
-                        decoration: const InputDecoration(
-                          labelText: 'Serving Since (Yr)',
-                          border: OutlineInputBorder(),
-                          isDense: true,
-                        ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'PREPARED AT',
+                            style: TextStyle(
+                              color: Color(0xFF94A3B8),
+                              fontSize: 7.5,
+                              fontWeight: FontWeight.w800,
+                              letterSpacing: 0.5,
+                            ),
+                          ),
+                          Text(
+                            coachingName,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: widget.isDarkMode
+                                  ? Colors.white
+                                  : const Color(0xFF0F172A),
+                              fontSize: 11,
+                              fontWeight: FontWeight.w900,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 10),
-                TextField(
-                  controller: descCtrl,
-                  maxLines: 2,
-                  decoration: const InputDecoration(
-                    labelText: 'About the Institute',
-                    border: OutlineInputBorder(),
-                    isDense: true,
-                  ),
-                ),
-                const SizedBox(height: 16),
-                SizedBox(
-                  width: double.infinity,
-                  height: 44,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF16A34A),
-                      foregroundColor: Colors.white,
-                    ),
-                    onPressed: isSaving
-                        ? null
-                        : () async {
-                            setModalState(() => isSaving = true);
-                            try {
-                              final updatedName = nameCtrl.text.trim().isNotEmpty
-                                  ? nameCtrl.text.trim()
-                                  : (coachingData?['name'] ?? creatorHandle);
-
-                              if (coachingData?['id'] != null) {
-                                await Supabase.instance.client
-                                    .from('coachings')
-                                    .update({
-                                  'name': updatedName,
-                                  'district': selectedDistrict,
-                                  'city': selectedCity,
-                                  'landmark_address': landmarkCtrl.text.trim(),
-                                  'tagline': taglineCtrl.text.trim(),
-                                  'established_year': yearCtrl.text.trim(),
-                                  'description': descCtrl.text.trim(),
-                                }).eq('id', coachingData!['id']);
-                              }
-
-                              await Supabase.instance.client
-                                  .from('creator_profiles')
-                                  .update({'name': updatedName}).eq(
-                                      'handle_id', creatorHandle);
-
-                              if (ctx.mounted) Navigator.pop(ctx);
-                              onSaved();
-                            } catch (_) {
-                              setModalState(() => isSaving = false);
-                            }
-                          },
-                    child: isSaving
-                        ? const CircularProgressIndicator(color: Colors.white)
-                        : const Text(
-                            'Save Details 🚀',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  // ===========================================================================
-  // 🌐 3. SOCIAL & DIRECT CONNECT LINKS MODIFIER
-  // ===========================================================================
-  static void openSocialLinksModifierSheet({
-    required BuildContext context,
-    required Map<String, dynamic>? coachingData,
-    required bool isDarkMode,
-    required VoidCallback onSaved,
-  }) {
-    final phoneCtrl = TextEditingController(
-      text: coachingData?['phone'] ?? coachingData?['contact_number'] ?? '',
-    );
-    final tgCtrl = TextEditingController(text: coachingData?['telegram_link'] ?? '');
-    final ytCtrl = TextEditingController(text: coachingData?['youtube_url'] ?? '');
-    final fbCtrl = TextEditingController(text: coachingData?['facebook_url'] ?? '');
-    final webCtrl = TextEditingController(text: coachingData?['website_url'] ?? '');
-
-    bool isSaving = false;
-
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(
-            bottom: MediaQuery.of(ctx).viewInsets.bottom,
-            left: 16,
-            right: 16,
-            top: 16,
-          ),
-          child: SingleChildScrollView(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Text(
-                      '🌐 Social & Connect Links',
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.close),
-                      onPressed: () => Navigator.pop(ctx),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 12),
-                TextField(
-                  controller: phoneCtrl,
-                  keyboardType: TextInputType.phone,
-                  decoration: const InputDecoration(
-                    labelText: 'Call & WhatsApp Number',
-                    border: OutlineInputBorder(),
-                    isDense: true,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                TextField(
-                  controller: tgCtrl,
-                  decoration: const InputDecoration(
-                    labelText: 'Telegram Channel Link',
-                    border: OutlineInputBorder(),
-                    isDense: true,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                TextField(
-                  controller: ytCtrl,
-                  decoration: const InputDecoration(
-                    labelText: 'YouTube Channel Link',
-                    border: OutlineInputBorder(),
-                    isDense: true,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                TextField(
-                  controller: fbCtrl,
-                  decoration: const InputDecoration(
-                    labelText: 'Facebook Page URL',
-                    border: OutlineInputBorder(),
-                    isDense: true,
-                  ),
-                ),
-                const SizedBox(height: 10),
-                TextField(
-                  controller: webCtrl,
-                  decoration: const InputDecoration(
-                    labelText: 'Website Link',
-                    border: OutlineInputBorder(),
-                    isDense: true,
-                  ),
-                ),
-                const SizedBox(height: 16),
-                SizedBox(
-                  width: double.infinity,
-                  height: 44,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF0284C7),
-                      foregroundColor: Colors.white,
-                    ),
-                    onPressed: isSaving
-                        ? null
-                        : () async {
-                            setModalState(() => isSaving = true);
-                            try {
-                              if (coachingData?['id'] != null) {
-                                await Supabase.instance.client
-                                    .from('coachings')
-                                    .update({
-                                  'phone': phoneCtrl.text.trim(),
-                                  'contact_number': phoneCtrl.text.trim(),
-                                  'telegram_link': tgCtrl.text.trim(),
-                                  'youtube_url': ytCtrl.text.trim(),
-                                  'facebook_url': fbCtrl.text.trim(),
-                                  'website_url': webCtrl.text.trim(),
-                                }).eq('id', coachingData!['id']);
-                              }
-                              if (ctx.mounted) Navigator.pop(ctx);
-                              onSaved();
-                            } catch (_) {
-                              setModalState(() => isSaving = false);
-                            }
-                          },
-                    child: isSaving
-                        ? const CircularProgressIndicator(color: Colors.white)
-                        : const Text(
-                            'Save Social Links 🚀',
-                            style: TextStyle(fontWeight: FontWeight.bold),
-                          ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-              ],
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-
-  // ===========================================================================
-  // 👨‍🏫 4. FACULTY & MENTORS MODIFIER
-  // ===========================================================================
-  static void openFacultyModifierSheet({
-    required BuildContext context,
-    required dynamic coachingId,
-    required dynamic currentFaculty,
-    required bool isDarkMode,
-    required VoidCallback onSaved,
-  }) {
-    List<dynamic> facultyList =
-        List<dynamic>.from(currentFaculty is List ? currentFaculty : []);
-    bool isSaving = false;
-    final picker = ImagePicker();
-
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setModalState) => Padding(
-          padding: EdgeInsets.only(
-            bottom: MediaQuery.of(ctx).viewInsets.bottom,
-            left: 16,
-            right: 16,
-            top: 16,
-          ),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    '👨‍🏫 Manage Faculty & Mentors',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                  ),
-                  TextButton.icon(
-                    icon: const Icon(Icons.add_rounded, size: 16),
-                    label: const Text('Add Mentor'),
-                    onPressed: () {
-                      final nCtrl = TextEditingController();
-                      final sCtrl = TextEditingController();
-                      final eCtrl = TextEditingController();
-                      File? mentorPhoto;
-                      bool isUploading = false;
-
-                      showDialog(
-                        context: context,
-                        builder: (dCtx) => StatefulBuilder(
-                          builder: (dCtx, setDialogState) => AlertDialog(
-                            title: const Text('Add Faculty Mentor'),
-                            content: SingleChildScrollView(
-                              child: Column(
-                                mainAxisSize: MainAxisSize.min,
-                                children: [
-                                  GestureDetector(
-                                    onTap: () async {
-                                      final picked = await picker.pickImage(
-                                        source: ImageSource.gallery,
-                                        imageQuality: 80,
-                                      );
-                                      if (picked != null) {
-                                        setDialogState(
-                                          () => mentorPhoto = File(picked.path),
-                                        );
-                                      }
-                                    },
-                                    child: CircleAvatar(
-                                      radius: 32,
-                                      backgroundColor: const Color(0xFF2563EB)
-                                          .withOpacity(0.12),
-                                      backgroundImage: mentorPhoto != null
-                                          ? FileImage(mentorPhoto!)
-                                          : null,
-                                      child: mentorPhoto == null
-                                          ? const Icon(
-                                              Icons.add_a_photo_outlined,
-                                              color: Color(0xFF2563EB),
-                                              size: 24,
-                                            )
-                                          : null,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 12),
-                                  TextField(
-                                    controller: nCtrl,
-                                    decoration: const InputDecoration(
-                                      labelText: 'Teacher Name',
-                                      border: OutlineInputBorder(),
-                                      isDense: true,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  TextField(
-                                    controller: sCtrl,
-                                    decoration: const InputDecoration(
-                                      labelText: 'Subject',
-                                      border: OutlineInputBorder(),
-                                      isDense: true,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  TextField(
-                                    controller: eCtrl,
-                                    keyboardType: TextInputType.number,
-                                    decoration: const InputDecoration(
-                                      labelText: 'Experience (Years)',
-                                      border: OutlineInputBorder(),
-                                      isDense: true,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            actions: [
-                              TextButton(
-                                onPressed: () => Navigator.pop(dCtx),
-                                child: const Text('Cancel'),
-                              ),
-                              ElevatedButton(
-                                onPressed: isUploading
-                                    ? null
-                                    : () async {
-                                        if (nCtrl.text.trim().isEmpty) return;
-                                        setDialogState(() => isUploading = true);
-
-                                        String uploadedPhoto = '';
-                                        if (mentorPhoto != null) {
-                                          try {
-                                            final bytes =
-                                                await mentorPhoto!.readAsBytes();
-                                            final ext = mentorPhoto!.path
-                                                .split('.')
-                                                .last;
-                                            final fileName =
-                                                'mentor_${DateTime.now().millisecondsSinceEpoch}.$ext';
-                                            await Supabase.instance.client.storage
-                                                .from('coaching_assets')
-                                                .uploadBinary(
-                                                  fileName,
-                                                  bytes,
-                                                  fileOptions: FileOptions(
-                                                    contentType: 'image/$ext',
-                                                    upsert: true,
-                                                  ),
-                                                );
-                                            uploadedPhoto = Supabase
-                                                .instance.client.storage
-                                                .from('coaching_assets')
-                                                .getPublicUrl(fileName);
-                                          } catch (_) {}
-                                        }
-
-                                        setModalState(() {
-                                          facultyList.add({
-                                            'name': nCtrl.text.trim(),
-                                            'subject': sCtrl.text.trim(),
-                                            'exp': eCtrl.text.trim(),
-                                            'photo_url': uploadedPhoto,
-                                          });
-                                        });
-                                        Navigator.pop(dCtx);
-                                      },
-                                child: isUploading
-                                    ? const SizedBox(
-                                        width: 16,
-                                        height: 16,
-                                        child: CircularProgressIndicator(
-                                          strokeWidth: 2,
-                                          color: Colors.white,
-                                        ),
-                                      )
-                                    : const Text('Add'),
-                              ),
-                            ],
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ],
               ),
-              const SizedBox(height: 10),
-              if (facultyList.isEmpty)
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 24),
-                  child: Center(
-                    child: Text(
-                      'No faculty added yet.',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ),
-                )
-              else
-                ConstrainedBox(
-                  constraints: const BoxConstraints(maxHeight: 220),
-                  child: ListView.separated(
-                    shrinkWrap: true,
-                    itemCount: facultyList.length,
-                    separatorBuilder: (_, __) => const Divider(height: 1),
-                    itemBuilder: (_, idx) {
-                      final f = facultyList[idx];
-                      final photoUrl = (f['photo_url'] ?? '').toString().trim();
-                      return ListTile(
-                        dense: true,
-                        contentPadding: EdgeInsets.zero,
-                        leading: CircleAvatar(
-                          radius: 18,
-                          backgroundColor:
-                              const Color(0xFF2563EB).withOpacity(0.12),
-                          backgroundImage:
-                              photoUrl.isNotEmpty ? NetworkImage(photoUrl) : null,
-                          child: photoUrl.isEmpty
-                              ? Text(
-                                  (f['name'] != null &&
-                                          f['name'].toString().isNotEmpty)
-                                      ? f['name'][0].toUpperCase()
-                                      : 'T',
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xFF2563EB),
-                                  ),
-                                )
-                              : null,
-                        ),
-                        title: Text(
-                          f['name'] ?? '',
-                          style: const TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 13,
-                          ),
-                        ),
-                        subtitle: Text(
-                          '${f['subject'] ?? ''} • ${f['exp'] ?? ''} Yrs',
-                          style: const TextStyle(fontSize: 11.5),
-                        ),
-                        trailing: IconButton(
-                          icon: const Icon(
-                            Icons.delete_outline_rounded,
-                            color: Colors.redAccent,
-                            size: 18,
-                          ),
-                          onPressed: () => setModalState(
-                            () => facultyList.removeAt(idx),
-                          ),
-                        ),
-                      );
-                    },
-                  ),
-                ),
-              const SizedBox(height: 14),
-              SizedBox(
-                width: double.infinity,
-                height: 44,
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF9333EA),
-                    foregroundColor: Colors.white,
-                  ),
-                  onPressed: isSaving
-                      ? null
-                      : () async {
-                          setModalState(() => isSaving = true);
-                          try {
-                            if (coachingId != null) {
-                              await Supabase.instance.client
-                                  .from('coachings')
-                                  .update({'faculty_list': facultyList}).eq(
-                                      'id', coachingId);
-                            }
-                            if (ctx.mounted) Navigator.pop(ctx);
-                            onSaved();
-                          } catch (_) {
-                            setModalState(() => isSaving = false);
-                          }
-                        },
-                  child: isSaving
-                      ? const CircularProgressIndicator(color: Colors.white)
-                      : const Text(
-                          'Save Faculty List 🚀',
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                ),
-              ),
-              const SizedBox(height: 16),
             ],
           ),
         ),
-      ),
+
+        // 🎖️ OVERLAPPING AVATAR WITH ACCENT GRADIENT RING
+        Positioned(
+          top: 0,
+          child: Container(
+            padding: const EdgeInsets.all(3.5),
+            decoration: BoxDecoration(
+              color: widget.isDarkMode ? const Color(0xFF172033) : Colors.white,
+              shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xFF2563EB).withOpacity(0.18),
+                  blurRadius: 16,
+                  offset: const Offset(0, 6),
+                ),
+              ],
+            ),
+            child: Container(
+              padding: const EdgeInsets.all(2),
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                gradient: LinearGradient(
+                  colors: [Color(0xFF2563EB), Color(0xFF10B981)],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+              ),
+              child: CircleAvatar(
+                radius: avatarRadius - 5,
+                backgroundColor: widget.isDarkMode
+                    ? const Color(0xFF24304A)
+                    : const Color(0xFFE8F1FF),
+                child: ClipOval(
+                  child: (imageUrl != null && imageUrl.toString().trim().isNotEmpty)
+                      ? Image.network(
+                          imageUrl.toString(),
+                          width: (avatarRadius - 5) * 2,
+                          height: (avatarRadius - 5) * 2,
+                          fit: BoxFit.cover,
+                          errorBuilder: (_, __, ___) => _photoFallback(studentName),
+                          loadingBuilder: (context, child, progress) {
+                            if (progress == null) return child;
+                            return _photoLoading();
+                          },
+                        )
+                      : _photoFallback(studentName),
+                ),
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 
   // ===========================================================================
-  // 🏆 5. WALL OF FAME (VIEW, EDIT, DELETE & ADD) & CAMPUS GALLERY MODIFIER
+  // PHOTO FALLBACK & LOADING HELPERS
   // ===========================================================================
-  static void openWallOfFameModifierSheet({
-    required BuildContext context,
-    required dynamic coachingId,
-    required dynamic currentGallery,
-    required bool isDarkMode,
-    required VoidCallback onSaved,
-  }) {
-    List<dynamic> gallery =
-        List<dynamic>.from(currentGallery is List ? currentGallery : []);
-    List<Map<String, dynamic>> existingSelections = [];
-    bool isLoadingSelections = true;
-    bool isSaving = false;
-    final picker = ImagePicker();
+  Widget _photoFallback(String studentName) {
+    final initial = studentName.trim().isNotEmpty
+        ? studentName.trim()[0].toUpperCase()
+        : 'A';
 
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+    return Container(
+      color: widget.isDarkMode
+          ? const Color(0xFF24304A)
+          : const Color(0xFFE8F1FF),
+      alignment: Alignment.center,
+      child: Text(
+        initial,
+        style: const TextStyle(
+          color: Color(0xFF2563EB),
+          fontSize: 28,
+          fontWeight: FontWeight.w900,
+        ),
       ),
-      builder: (ctx) => StatefulBuilder(
-        builder: (ctx, setModalState) {
-          // Coaching ke published Hall of Fame items fetch karna
-          if (isLoadingSelections) {
-            Supabase.instance.client
-                .from('coaching_selections')
-                .select()
-                .eq('coaching_id', coachingId)
-                .order('created_at', ascending: false)
-                .then((data) {
-              setModalState(() {
-                existingSelections = List<Map<String, dynamic>>.from(data);
-                isLoadingSelections = false;
-              });
-            }).catchError((err) {
-              debugPrint("Error fetching selections: $err");
-              setModalState(() => isLoadingSelections = false);
-            });
-          }
+    );
+  }
 
-          // -------------------------------------------------------------------
-          // Sub-dialog: Selection Add / Edit Modal
-          // -------------------------------------------------------------------
-          void showSelectionDialog({Map<String, dynamic>? existingItem}) {
-            final isEditing = existingItem != null;
-            final nCtrl = TextEditingController(
-              text: existingItem?['student_name'] ?? '',
-            );
-            final eCtrl = TextEditingController(
-              text: existingItem?['target_exam'] ?? '',
-            );
-            final pCtrl = TextEditingController(
-              text: existingItem?['post_cleared'] ?? '',
-            );
-            final tCtrl = TextEditingController(
-              text: existingItem?['testimonial_text'] ?? '',
-            );
-            File? studentPhoto;
-            String currentPhotoUrl = existingItem?['photo_url'] ?? '';
-            bool isUploading = false;
-
-            showDialog(
-              context: context,
-              builder: (dCtx) => StatefulBuilder(
-                builder: (dCtx, setDialogState) => AlertDialog(
-                  title: Text(
-                    isEditing ? 'Modify Selection ✏️' : 'Add Star Selection 🎓',
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  content: SingleChildScrollView(
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        GestureDetector(
-                          onTap: () async {
-                            final picked = await picker.pickImage(
-                              source: ImageSource.gallery,
-                              imageQuality: 80,
-                            );
-                            if (picked != null) {
-                              setDialogState(
-                                () => studentPhoto = File(picked.path),
-                              );
-                            }
-                          },
-                          child: CircleAvatar(
-                            radius: 34,
-                            backgroundColor:
-                                const Color(0xFF16A34A).withOpacity(0.12),
-                            backgroundImage: studentPhoto != null
-                                ? FileImage(studentPhoto!)
-                                : (currentPhotoUrl.isNotEmpty
-                                    ? NetworkImage(currentPhotoUrl)
-                                        as ImageProvider
-                                    : null),
-                            child: (studentPhoto == null && currentPhotoUrl.isEmpty)
-                                ? const Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
-                                      Icon(
-                                        Icons.camera_alt_outlined,
-                                        color: Color(0xFF16A34A),
-                                        size: 22,
-                                      ),
-                                      Text(
-                                        'Tap Photo',
-                                        style: TextStyle(
-                                          fontSize: 9.5,
-                                          color: Color(0xFF16A34A),
-                                        ),
-                                      ),
-                                    ],
-                                  )
-                                : null,
-                          ),
-                        ),
-                        const SizedBox(height: 12),
-                        TextField(
-                          controller: nCtrl,
-                          decoration: const InputDecoration(
-                            labelText: 'Student Name *',
-                            border: OutlineInputBorder(),
-                            isDense: true,
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        TextField(
-                          controller: eCtrl,
-                          decoration: const InputDecoration(
-                            labelText: 'Exam Cleared (e.g. BPSC 70th)',
-                            border: OutlineInputBorder(),
-                            isDense: true,
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        TextField(
-                          controller: pCtrl,
-                          decoration: const InputDecoration(
-                            labelText: 'Post / Rank (e.g. Revenue Officer)',
-                            border: OutlineInputBorder(),
-                            isDense: true,
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        TextField(
-                          controller: tCtrl,
-                          maxLines: 2,
-                          decoration: const InputDecoration(
-                            labelText: 'Student Feedback Quote',
-                            border: OutlineInputBorder(),
-                            isDense: true,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  actions: [
-                    TextButton(
-                      onPressed: () => Navigator.pop(dCtx),
-                      child: const Text('Cancel'),
-                    ),
-                    ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF16A34A),
-                        foregroundColor: Colors.white,
-                      ),
-                      onPressed: isUploading
-                          ? null
-                          : () async {
-                              final studentName = nCtrl.text.trim();
-                              if (studentName.isEmpty) {
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
-                                    content: Text('Student name daalna zaroori hai!'),
-                                    backgroundColor: Colors.red,
-                                  ),
-                                );
-                                return;
-                              }
-
-                              setDialogState(() => isUploading = true);
-
-                              String photoUrl = currentPhotoUrl;
-                              if (studentPhoto != null) {
-                                try {
-                                  final bytes = await studentPhoto!.readAsBytes();
-                                  final ext = studentPhoto!.path.split('.').last;
-                                  final fileName =
-                                      'selection_${DateTime.now().millisecondsSinceEpoch}.$ext';
-                                  await Supabase.instance.client.storage
-                                      .from('coaching_assets')
-                                      .uploadBinary(
-                                        fileName,
-                                        bytes,
-                                        fileOptions: FileOptions(
-                                          contentType: 'image/$ext',
-                                          upsert: true,
-                                        ),
-                                      );
-                                  photoUrl = Supabase.instance.client.storage
-                                      .from('coaching_assets')
-                                      .getPublicUrl(fileName);
-                                } catch (e) {
-                                  debugPrint("Photo upload error: $e");
-                                }
-                              }
-
-                              final Map<String, dynamic> payload = {
-                                'coaching_id': coachingId,
-                                'student_name': studentName,
-                                'target_exam': eCtrl.text.trim().isNotEmpty
-                                    ? eCtrl.text.trim()
-                                    : 'Competitive Exam',
-                                'post_cleared': pCtrl.text.trim().isNotEmpty
-                                    ? pCtrl.text.trim()
-                                    : 'Selected',
-                                'testimonial_text': tCtrl.text.trim(),
-                                'photo_url': photoUrl,
-                                'updated_at': DateTime.now().toIso8601String(),
-                              };
-
-                              try {
-                                if (isEditing) {
-                                  await Supabase.instance.client
-                                      .from('coaching_selections')
-                                      .update(payload)
-                                      .eq('id', existingItem['id']);
-                                } else {
-                                  payload['is_verified'] = true;
-                                  payload['created_at'] =
-                                      DateTime.now().toIso8601String();
-                                  await Supabase.instance.client
-                                      .from('coaching_selections')
-                                      .insert(payload);
-                                }
-
-                                if (dCtx.mounted) Navigator.pop(dCtx);
-                                setModalState(() => isLoadingSelections = true);
-                                onSaved();
-
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text(
-                                      isEditing
-                                          ? 'Selection update ho gaya!'
-                                          : 'Star selection publish ho gaya!',
-                                    ),
-                                    backgroundColor: const Color(0xFF16A34A),
-                                  ),
-                                );
-                              } catch (e) {
-                                setDialogState(() => isUploading = false);
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    content: Text('Error: $e'),
-                                    backgroundColor: Colors.red,
-                                  ),
-                                );
-                              }
-                            },
-                      child: isUploading
-                          ? const SizedBox(
-                              width: 16,
-                              height: 16,
-                              child: CircularProgressIndicator(
-                                strokeWidth: 2,
-                                color: Colors.white,
-                              ),
-                            )
-                          : Text(isEditing ? 'Save Changes' : 'Publish Result'),
-                    ),
-                  ],
-                ),
-              ),
-            );
-          }
-
-          return Padding(
-            padding: EdgeInsets.only(
-              bottom: MediaQuery.of(ctx).viewInsets.bottom,
-              left: 16,
-              right: 16,
-              top: 16,
-            ),
-            child: SingleChildScrollView(
-              child: Column(
-                mainAxisSize: MainAxisSize.min,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        '🏆 Wall of Fame & Gallery',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                      IconButton(
-                        icon: const Icon(Icons.close),
-                        onPressed: () => Navigator.pop(ctx),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 6),
-
-                  // Button: Add new selection
-                  OutlinedButton.icon(
-                    style: OutlinedButton.styleFrom(
-                      minimumSize: const Size(double.infinity, 42),
-                      foregroundColor: const Color(0xFFD97706),
-                      side: const BorderSide(color: Color(0xFFD97706)),
-                    ),
-                    icon: const Icon(Icons.military_tech_outlined, size: 18),
-                    label: const Text(
-                      'Add Star Selection / Result 🎓',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                    onPressed: () => showSelectionDialog(),
-                  ),
-                  const SizedBox(height: 14),
-
-                  // -----------------------------------------------------------
-                  // LIST OF EXISTING SELECTIONS WITH EDIT & DELETE
-                  // -----------------------------------------------------------
-                  const Text(
-                    'Published Star Selections',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 13.5,
-                    ),
-                  ),
-                  const SizedBox(height: 6),
-                  if (isLoadingSelections)
-                    const Center(
-                      child: Padding(
-                        padding: EdgeInsets.all(12),
-                        child: CircularProgressIndicator(strokeWidth: 2),
-                      ),
-                    )
-                  else if (existingSelections.isEmpty)
-                    const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 8),
-                      child: Text(
-                        'No selections added yet.',
-                        style: TextStyle(color: Colors.grey, fontSize: 12),
-                      ),
-                    )
-                  else
-                    ConstrainedBox(
-                      constraints: const BoxConstraints(maxHeight: 180),
-                      child: ListView.separated(
-                        shrinkWrap: true,
-                        itemCount: existingSelections.length,
-                        separatorBuilder: (_, __) => const Divider(height: 1),
-                        itemBuilder: (_, idx) {
-                          final item = existingSelections[idx];
-                          final photo = (item['photo_url'] ?? '').toString();
-                          return ListTile(
-                            dense: true,
-                            contentPadding: EdgeInsets.zero,
-                            leading: CircleAvatar(
-                              radius: 16,
-                              backgroundImage:
-                                  photo.isNotEmpty ? NetworkImage(photo) : null,
-                              child: photo.isEmpty
-                                  ? const Icon(Icons.person, size: 16)
-                                  : null,
-                            ),
-                            title: Text(
-                              item['student_name'] ?? '',
-                              style: const TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 12.5,
-                              ),
-                            ),
-                            subtitle: Text(
-                              '${item['post_cleared'] ?? ''} • ${item['target_exam'] ?? ''}',
-                              style: const TextStyle(fontSize: 11),
-                            ),
-                            trailing: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.edit_outlined,
-                                    color: Color(0xFF2563EB),
-                                    size: 18,
-                                  ),
-                                  onPressed: () =>
-                                      showSelectionDialog(existingItem: item),
-                                ),
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.delete_outline_rounded,
-                                    color: Colors.redAccent,
-                                    size: 18,
-                                  ),
-                                  onPressed: () async {
-                                    try {
-                                      await Supabase.instance.client
-                                          .from('coaching_selections')
-                                          .delete()
-                                          .eq('id', item['id']);
-
-                                      setModalState(
-                                        () => existingSelections.removeAt(idx),
-                                      );
-                                      onSaved();
-                                    } catch (e) {
-                                      debugPrint("Delete error: $e");
-                                    }
-                                  },
-                                ),
-                              ],
-                            ),
-                          );
-                        },
-                      ),
-                    ),
-
-                  const SizedBox(height: 16),
-                  const Divider(),
-
-                  // -----------------------------------------------------------
-                  // CAMPUS PHOTOS SECTION
-                  // -----------------------------------------------------------
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Text(
-                        'Classroom & Campus Photos',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                        ),
-                      ),
-                      TextButton.icon(
-                        icon: const Icon(Icons.add_a_photo_outlined, size: 16),
-                        label: const Text('Upload Photo'),
-                        onPressed: () async {
-                          final picked = await picker.pickImage(
-                            source: ImageSource.gallery,
-                            imageQuality: 80,
-                          );
-                          if (picked != null) {
-                            setModalState(() => isSaving = true);
-                            try {
-                              final bytes = await File(picked.path).readAsBytes();
-                              final ext = picked.path.split('.').last;
-                              final fileName =
-                                  'campus_${DateTime.now().millisecondsSinceEpoch}.$ext';
-
-                              await Supabase.instance.client.storage
-                                  .from('coaching_assets')
-                                  .uploadBinary(
-                                    fileName,
-                                    bytes,
-                                    fileOptions: FileOptions(
-                                      contentType: 'image/$ext',
-                                      upsert: true,
-                                    ),
-                                  );
-
-                              final url = Supabase.instance.client.storage
-                                  .from('coaching_assets')
-                                  .getPublicUrl(fileName);
-
-                              setModalState(() {
-                                gallery.add(url);
-                                isSaving = false;
-                              });
-                            } catch (_) {
-                              setModalState(() => isSaving = false);
-                            }
-                          }
-                        },
-                      ),
-                    ],
-                  ),
-                  if (gallery.isEmpty)
-                    const Padding(
-                      padding: EdgeInsets.symmetric(vertical: 12),
-                      child: Text(
-                        'No classroom photos yet.',
-                        style: TextStyle(color: Colors.grey, fontSize: 12),
-                      ),
-                    )
-                  else
-                    ConstrainedBox(
-                      constraints: const BoxConstraints(maxHeight: 150),
-                      child: ListView.separated(
-                        shrinkWrap: true,
-                        itemCount: gallery.length,
-                        separatorBuilder: (_, __) => const Divider(height: 1),
-                        itemBuilder: (_, i) => ListTile(
-                          dense: true,
-                          contentPadding: EdgeInsets.zero,
-                          leading: ClipRRect(
-                            borderRadius: BorderRadius.circular(6),
-                            child: Image.network(
-                              gallery[i],
-                              width: 44,
-                              height: 44,
-                              fit: BoxFit.cover,
-                              errorBuilder: (_, __, ___) =>
-                                  const Icon(Icons.image),
-                            ),
-                          ),
-                          title: Text(
-                            'Facility Photo ${i + 1}',
-                            style: const TextStyle(
-                              fontWeight: FontWeight.bold,
-                              fontSize: 12.5,
-                            ),
-                          ),
-                          trailing: IconButton(
-                            icon: const Icon(
-                              Icons.delete_outline_rounded,
-                              color: Colors.redAccent,
-                              size: 18,
-                            ),
-                            onPressed: () =>
-                                setModalState(() => gallery.removeAt(i)),
-                          ),
-                        ),
-                      ),
-                    ),
-                  const SizedBox(height: 14),
-                  SizedBox(
-                    width: double.infinity,
-                    height: 44,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFFD97706),
-                        foregroundColor: Colors.white,
-                      ),
-                      onPressed: isSaving
-                          ? null
-                          : () async {
-                              setModalState(() => isSaving = true);
-                              try {
-                                if (coachingId != null) {
-                                  await Supabase.instance.client
-                                      .from('coachings')
-                                      .update({'gallery_images': gallery}).eq(
-                                          'id', coachingId);
-                                }
-                                if (ctx.mounted) Navigator.pop(ctx);
-                                onSaved();
-                              } catch (_) {
-                                setModalState(() => isSaving = false);
-                              }
-                            },
-                      child: isSaving
-                          ? const CircularProgressIndicator(color: Colors.white)
-                          : const Text(
-                              'Save Gallery Photos 🚀',
-                              style: TextStyle(fontWeight: FontWeight.bold),
-                            ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-              ],
-            ),
-          ),
-        );
-      },
-    ),
-  );
-}
+  Widget _photoLoading() {
+    return Container(
+      color: widget.isDarkMode
+          ? const Color(0xFF24304A)
+          : const Color(0xFFF1F5F9),
+      alignment: Alignment.center,
+      child: const SizedBox(
+        width: 18,
+        height: 18,
+        child: CircularProgressIndicator(
+          strokeWidth: 2,
+          color: Color(0xFF2563EB),
+        ),
+      ),
+    );
+  }
 }
