@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../services/admin_telegram_alert.dart';
 import 'admin_control_hub_screen.dart';
 import 'creator_dashboard_screen.dart';
@@ -127,12 +128,27 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
     }
   }
 
-  // 📝 Register Modal With Image, Title & Address
+  // 📝 Register Modal With Image, Standardized Handle, Dropdown & WhatsApp Proof Action
   void _openRegisterDialog() {
     final regNameCtrl = TextEditingController();
     final regHandleCtrl = TextEditingController();
     final regAddressCtrl = TextEditingController();
-    final regSubjectCtrl = TextEditingController(text: 'General Studies');
+
+    // 🎯 Standard Comprehensive Exam Categories
+    final List<String> examCategories = [
+      'BPSC CCE / PCS Exams',
+      'BSSC CGL & Inter Level',
+      'Bihar Daroga (SI) & Police Constable',
+      'BPSC TRE (Teacher Recruitment)',
+      'Railway (NTPC, Group D, ALP)',
+      'SSC (CGL, CHSL, MTS, GD)',
+      'Banking (IBPS, SBI PO / Clerk)',
+      'Defence (NDA, CDS, AFCAT)',
+      'UPSC Civil Services',
+      'Foundation / All-in-One General Studies',
+    ];
+    String selectedCategory = examCategories.first;
+
     File? selectedCoachingImage;
     bool isSubmitting = false;
     final picker = ImagePicker();
@@ -226,41 +242,95 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                 TextField(
                   controller: regHandleCtrl,
                   decoration: const InputDecoration(
-                    labelText: 'Unique Handle ID (without @)',
+                    labelText: 'Unique Handle ID',
                     hintText: 'e.g. paramount_patna',
+                    prefixText: '@ ',
                     border: OutlineInputBorder(),
                     isDense: true,
+                  ),
+                ),
+                const SizedBox(height: 4),
+
+                // 📌 Handle Format Guidelines
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFEFF6FF),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                      color: widget.isDarkMode ? Colors.white12 : const Color(0xFFDBEAFE),
+                    ),
+                  ),
+                  child: const Row(
+                    children: [
+                      Icon(Icons.info_outline, size: 14, color: Color(0xFF2563EB)),
+                      SizedBox(width: 6),
+                      Expanded(
+                        child: Text(
+                          'Only lowercase letters (a-z), numbers (0-9) and underscore (_). No spaces or symbols. (3-25 chars)',
+                          style: TextStyle(fontSize: 10.5, color: Color(0xFF2563EB), fontWeight: FontWeight.w500),
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 const SizedBox(height: 10),
 
-                TextField(
-                  controller: regSubjectCtrl,
+                // 🎯 Target Exam Dropdown
+                DropdownButtonFormField<String>(
+                  value: selectedCategory,
+                  isExpanded: true,
                   decoration: const InputDecoration(
                     labelText: 'Target Exam Specialty',
-                    hintText: 'e.g. BPSC, BSSC, Daroga Specialist',
                     border: OutlineInputBorder(),
                     isDense: true,
                   ),
+                  items: examCategories
+                      .map((cat) => DropdownMenuItem(
+                            value: cat,
+                            child: Text(cat, style: const TextStyle(fontSize: 13)),
+                          ))
+                      .toList(),
+                  onChanged: (val) {
+                    if (val != null) {
+                      setModalState(() => selectedCategory = val);
+                    }
+                  },
                 ),
-                const SizedBox(height: 14),
+                const SizedBox(height: 16),
 
                 SizedBox(
                   width: double.infinity,
-                  height: 44,
+                  height: 46,
                   child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF16A34A), foregroundColor: Colors.white),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color(0xFF16A34A),
+                      foregroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                    ),
                     onPressed: isSubmitting
                         ? null
                         : () async {
                             final name = regNameCtrl.text.trim();
                             final address = regAddressCtrl.text.trim();
                             final h = regHandleCtrl.text.trim().toLowerCase().replaceAll('@', '');
-                            final sub = regSubjectCtrl.text.trim();
 
                             if (name.isEmpty || h.isEmpty || address.isEmpty) {
                               ScaffoldMessenger.of(context).showSnackBar(
                                 const SnackBar(content: Text('Coaching Title, Address aur Handle bharein!')),
+                              );
+                              return;
+                            }
+
+                            // 🛡️ Strict Professional Handle Validation
+                            final handleRegex = RegExp(r'^[a-z0-9_]{3,25}$');
+                            if (!handleRegex.hasMatch(h)) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text('Handle format invalid! Sirf a-z, 0-9 aur _ use karein (No spaces/symbols).'),
+                                  backgroundColor: Colors.red,
+                                ),
                               );
                               return;
                             }
@@ -315,7 +385,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                               await Supabase.instance.client.from('creator_profiles').insert({
                                 'handle_id': h,
                                 'name': name,
-                                'subject_specialty': sub,
+                                'subject_specialty': selectedCategory,
                                 'security_pin': randomPin,
                                 'followers_count': 0,
                                 'is_blocked': false,
@@ -337,36 +407,71 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                                 name: name,
                                 handle: h,
                                 address: address,
-                                specialty: sub,
+                                specialty: selectedCategory,
                                 generatedPin: randomPin,
                                 imageUrl: imageUrl,
                               );
 
                               if (ctx.mounted) Navigator.pop(ctx);
 
-                              // 6. Show Confirmation Dialog
+                              // 6. Show Confirmation Dialog with WhatsApp Hook
                               if (context.mounted) {
                                 showDialog(
                                   context: context,
+                                  barrierDismissible: false,
                                   builder: (dCtx) => AlertDialog(
                                     backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
                                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                                     title: const Row(
                                       children: [
-                                        Icon(Icons.mark_email_read_outlined, color: Color(0xFF16A34A), size: 24),
+                                        Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 24),
                                         SizedBox(width: 8),
-                                        Text('Request Sent with Image!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                                        Text('Request Submitted!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                                       ],
                                     ),
-                                    content: const Text(
-                                      'Aapki coaching image, title aur address admin ke paas verification ke liye bhej di gayi hai.\n\nApproval milne ke baad aapko PIN provide kiya jayega jisse aap Studio me login kar sakenge.',
-                                      style: TextStyle(fontSize: 13, height: 1.4),
+                                    content: Column(
+                                      mainAxisSize: MainAxisSize.min,
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        const Text(
+                                          'Aapki coaching request review ke liye submit ho chuki hai.\n\nVerification complete karne aur Login PIN prapt karne ke liye kripya apni Coaching Board aur Classroom ki photos WhatsApp par bhejein.',
+                                          style: TextStyle(fontSize: 13, height: 1.4),
+                                        ),
+                                        const SizedBox(height: 10),
+                                        Text(
+                                          'Assigned Handle: @$h',
+                                          style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Color(0xFF2563EB)),
+                                        ),
+                                      ],
                                     ),
                                     actions: [
-                                      ElevatedButton(
-                                        style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                                      TextButton(
                                         onPressed: () => Navigator.pop(dCtx),
-                                        child: const Text('Understood 👍'),
+                                        child: const Text('Later'),
+                                      ),
+                                      ElevatedButton.icon(
+                                        style: ElevatedButton.styleFrom(
+                                          backgroundColor: const Color(0xFF16A34A),
+                                          foregroundColor: Colors.white,
+                                        ),
+                                        icon: const Icon(Icons.chat_rounded, size: 16),
+                                        label: const Text('Send on WhatsApp'),
+                                        onPressed: () async {
+                                          Navigator.pop(dCtx);
+                                          const String whatsappNumber = '916203921558'; // 👈 Apna 10-digit number yahan dalein
+                                          final String text = Uri.encodeComponent(
+                                            'Hello MockTester Team, maine coaching register ki hai.\n'
+                                            'Handle ID: @$h\n'
+                                            'Coaching: $name\n\n'
+                                            'Main yahan classroom aur board ki photos bhej raha hoon. Kripya verification karke Studio PIN share karein.',
+                                          );
+                                          final Uri url = Uri.parse('https://wa.me/$whatsappNumber?text=$text');
+                                          try {
+                                            await launchUrl(url, mode: LaunchMode.externalApplication);
+                                          } catch (e) {
+                                            debugPrint('WhatsApp launch error: $e');
+                                          }
+                                        },
                                       ),
                                     ],
                                   ),
@@ -381,7 +486,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                           },
                     child: isSubmitting
                         ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                        : const Text('Submit Photo & Request 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                        : const Text('Submit Registration for Review 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
                   ),
                 ),
                 const SizedBox(height: 16),
