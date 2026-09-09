@@ -1,7 +1,5 @@
-import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -128,13 +126,12 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
     }
   }
 
-  // 📝 Register Modal With Image, Standardized Handle, Dropdown & WhatsApp Proof Action
+  // 📝 Register Modal (Without in-app image picker, photos via WhatsApp)
   void _openRegisterDialog() {
     final regNameCtrl = TextEditingController();
     final regHandleCtrl = TextEditingController();
     final regAddressCtrl = TextEditingController();
 
-    // 🎯 Standard Comprehensive Exam Categories
     final List<String> examCategories = [
       'BPSC CCE / PCS Exams',
       'BSSC CGL & Inter Level',
@@ -148,10 +145,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
       'Foundation / All-in-One General Studies',
     ];
     String selectedCategory = examCategories.first;
-
-    File? selectedCoachingImage;
     bool isSubmitting = false;
-    final picker = ImagePicker();
 
     showModalBottomSheet(
       context: context,
@@ -177,43 +171,6 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                     const Text('🏫 Register Coaching / Mentor', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.5)),
                     IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
                   ],
-                ),
-                const SizedBox(height: 8),
-
-                // 📸 Coaching Photo Picker Container
-                GestureDetector(
-                  onTap: () async {
-                    final picked = await picker.pickImage(source: ImageSource.gallery, imageQuality: 80);
-                    if (picked != null) {
-                      setModalState(() => selectedCoachingImage = File(picked.path));
-                    }
-                  },
-                  child: Container(
-                    height: 120,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      color: Colors.grey.withOpacity(0.12),
-                      borderRadius: BorderRadius.circular(12),
-                      border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.35)),
-                    ),
-                    child: selectedCoachingImage != null
-                        ? ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: Image.file(selectedCoachingImage!, fit: BoxFit.cover, width: double.infinity),
-                          )
-                        : const Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.add_photo_alternate_outlined, size: 34, color: Color(0xFF2563EB)),
-                              SizedBox(height: 4),
-                              Text(
-                                'Upload Coaching Banner / Board Image 📷',
-                                style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
-                              ),
-                              Text('Photo showing institute name & banner', style: TextStyle(fontSize: 10, color: Colors.grey)),
-                            ],
-                          ),
-                  ),
                 ),
                 const SizedBox(height: 12),
 
@@ -335,13 +292,6 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                               return;
                             }
 
-                            if (selectedCoachingImage == null) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(content: Text('Kripya coaching banner/board ki photo upload karein!')),
-                              );
-                              return;
-                            }
-
                             setModalState(() => isSubmitting = true);
                             try {
                               // Check handle existence
@@ -361,27 +311,10 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                                 return;
                               }
 
-                              // 📤 1. Upload Photo to Supabase Storage
-                              final bytes = await selectedCoachingImage!.readAsBytes();
-                              final fileExt = selectedCoachingImage!.path.split('.').last;
-                              final fileName = 'onboarding_${h}_${DateTime.now().millisecondsSinceEpoch}.$fileExt';
-
-                              await Supabase.instance.client.storage
-                                  .from('coaching_assets')
-                                  .uploadBinary(
-                                    fileName,
-                                    bytes,
-                                    fileOptions: FileOptions(contentType: 'image/$fileExt', upsert: true),
-                                  );
-
-                              final imageUrl = Supabase.instance.client.storage
-                                  .from('coaching_assets')
-                                  .getPublicUrl(fileName);
-
-                              // 🎲 2. Generate Random PIN
+                              // 🎲 Generate Random PIN
                               final randomPin = (1000 + Random().nextInt(9000)).toString();
 
-                              // 3. Insert Profile
+                              // 1. Insert Profile
                               await Supabase.instance.client.from('creator_profiles').insert({
                                 'handle_id': h,
                                 'name': name,
@@ -392,29 +325,28 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                                 'is_approved': false,
                               });
 
-                              // 4. Insert Coaching with Image & Address
+                              // 2. Insert Coaching
                               await Supabase.instance.client.from('coachings').insert({
                                 'name': name,
                                 'owner_name': h,
-                                'banner_url': imageUrl,
                                 'landmark_address': address,
                                 'city': 'Patna',
                                 'is_approved': false,
                               });
 
-                              // 5. Send Photo with Details & PIN to Telegram Admin
+                              // 3. Send Details to Telegram Admin
                               await AdminTelegramAlert.sendCreatorApprovalRequest(
                                 name: name,
                                 handle: h,
                                 address: address,
                                 specialty: selectedCategory,
                                 generatedPin: randomPin,
-                                imageUrl: imageUrl,
+                                imageUrl: '',
                               );
 
                               if (ctx.mounted) Navigator.pop(ctx);
 
-                              // 6. Show Confirmation Dialog with WhatsApp Hook
+                              // 4. Show Confirmation Dialog with WhatsApp Action
                               if (context.mounted) {
                                 showDialog(
                                   context: context,
@@ -434,7 +366,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         const Text(
-                                          'Aapki coaching request review ke liye submit ho chuki hai.\n\nVerification complete karne aur Login PIN prapt karne ke liye kripya apni Coaching Board aur Classroom ki photos WhatsApp par bhejein.',
+                                          'Aapki registration request submit ho gayi hai.\n\nVerification complete karne aur Login PIN prapt karne ke liye apni Coaching Billboard aur Classroom ki photos WhatsApp par bhejein.',
                                           style: TextStyle(fontSize: 13, height: 1.4),
                                         ),
                                         const SizedBox(height: 10),
@@ -458,7 +390,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                                         label: const Text('Send on WhatsApp'),
                                         onPressed: () async {
                                           Navigator.pop(dCtx);
-                                          const String whatsappNumber = '916203921558'; // 👈 Apna 10-digit number yahan dalein
+                                          const String whatsappNumber = '91XXXXXXXXXX'; // 👈 Apna 10-digit number dalein
                                           final String text = Uri.encodeComponent(
                                             'Hello MockTester Team, maine coaching register ki hai.\n'
                                             'Handle ID: @$h\n'
