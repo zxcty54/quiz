@@ -84,7 +84,8 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
         return;
       }
 
-      final String? storedPin = res['security_pin']?.toString();
+      // 🔑 PIN verification using secret_pin (with security_pin fallback)
+      final String? storedPin = (res['secret_pin'] ?? res['security_pin'])?.toString();
       if (storedPin != null && storedPin.isNotEmpty && storedPin != pin) {
         setState(() {
           _isLoading = false;
@@ -314,12 +315,12 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                               // 🎲 Generate Random PIN
                               final randomPin = (1000 + Random().nextInt(9000)).toString();
 
-                              // 1. Insert Profile
+                              // 1. Insert Profile (Matches DB 'secret_pin' column)
                               await Supabase.instance.client.from('creator_profiles').insert({
                                 'handle_id': h,
                                 'name': name,
                                 'subject_specialty': selectedCategory,
-                                'security_pin': randomPin,
+                                'secret_pin': randomPin,
                                 'followers_count': 0,
                                 'is_blocked': false,
                                 'is_approved': false,
@@ -390,7 +391,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                                         label: const Text('Send on WhatsApp'),
                                         onPressed: () async {
                                           Navigator.pop(dCtx);
-                                          const String whatsappNumber = '91XXXXXXXXXX'; // 👈 Apna 10-digit number dalein
+                                          const String whatsappNumber = '91XXXXXXXXXX'; // 👈 Apna WhatsApp number dalein
                                           final String text = Uri.encodeComponent(
                                             'Hello MockTester Team, maine coaching register ki hai.\n'
                                             'Handle ID: @$h\n'
