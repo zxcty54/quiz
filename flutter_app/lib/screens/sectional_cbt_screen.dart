@@ -70,17 +70,18 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   }
 
   Future<void> _loadSavedProgressAndStart() async {
-    var saved = await CbtProgressService.getTestStatus(_testKey);
+    Map<String, dynamic>? saved = await CbtProgressService.getTestStatus(_testKey);
     if (saved == null && widget.mockId != null) {
       saved = await CbtProgressService.getTestStatus(widget.testTitle);
     }
 
     if (saved != null && saved['status'] == 'IN_PROGRESS') {
+      final progressData = saved;
       setState(() {
-        _currentIndex = saved['currentIndex'] ?? 0;
-        _totalTimeSeconds = saved['remainingSeconds'] ?? _totalTimeSeconds;
-        
-        final rawAnswers = saved['parsedUserAnswers'] ?? saved['userAnswers'];
+        _currentIndex = progressData['currentIndex'] ?? 0;
+        _totalTimeSeconds = progressData['remainingSeconds'] ?? _totalTimeSeconds;
+
+        final rawAnswers = progressData['parsedUserAnswers'] ?? progressData['userAnswers'];
         if (rawAnswers is Map) {
           _userAnswers.clear();
           rawAnswers.forEach((key, val) {
@@ -215,7 +216,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     List<Map<String, dynamic>> detailedResponses = [];
 
-    // 🔍 Subtopic Tracking Maps
     final Map<String, int> topicAttempted = {};
     final Map<String, int> topicCorrect = {};
     final Map<String, int> topicWrong = {};
@@ -286,7 +286,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       }
     }
 
-    // 📊 Granular Intelligence Resolution
     String determinedStrong = 'Core Concepts Strong';
     String determinedWeak = 'All Clear (No Critical Traps)';
 
@@ -332,7 +331,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     final client = Supabase.instance.client;
 
-    // 1️⃣ UPDATE ATTEMPTS COUNT
     if (widget.mockId != null) {
       try {
         final String targetTable = widget.isBatchTest ? 'batch_tests' : 'creator_mocks';
@@ -358,12 +356,10 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       }
     }
 
-    // 2️⃣ SYNC BATCH SUBMISSIONS WITH SUBTOPIC INTELLIGENCE
     if (widget.isBatchTest && widget.batchId != null) {
       try {
         final prefs = await SharedPreferences.getInstance();
 
-        // 👤 Get Real Name from Onboarding
         final authUser = client.auth.currentUser;
         final authMetaName = authUser?.userMetadata?['full_name'] ??
             authUser?.userMetadata?['name'] ??
@@ -374,13 +370,11 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             authMetaName ??
             'Aspirant';
 
-        // 📱 Get Contact / Mobile Number
         final rawContact = prefs.getString('user_mobile') ??
             prefs.getString('student_contact_id') ??
             authUser?.phone ??
             '';
 
-        // 🎓 Check Enrollment Status & Format Identifier Tag
         final enrolledBatchCode = prefs.getString('user_enrolled_batch_code');
         final bool isEnrolled = widget.isBatchTest || (enrolledBatchCode != null && enrolledBatchCode.isNotEmpty);
 
@@ -708,7 +702,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               ),
             ),
 
-            // 🧭 CLEAN 2-TIER BOTTOM ACTION BAR
             Container(
               padding: const EdgeInsets.fromLTRB(16, 6, 16, 12),
               decoration: const BoxDecoration(
@@ -718,7 +711,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  // Row 1: Clear Response & Mark for Review
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -768,7 +760,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                   ),
                   const SizedBox(height: 6),
 
-                  // Row 2: Prev | Submit | Save & Next
                   Row(
                     children: [
                       Expanded(
