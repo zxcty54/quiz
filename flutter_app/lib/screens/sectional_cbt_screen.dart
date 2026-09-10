@@ -55,6 +55,8 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
   Map<String, dynamic>? _coachingInfo;
 
+  String get _testKey => widget.mockId?.toString() ?? widget.testTitle;
+
   @override
   void initState() {
     super.initState();
@@ -68,17 +70,42 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   }
 
   Future<void> _loadSavedProgressAndStart() async {
-    final saved = await CbtProgressService.getTestStatus(widget.testTitle);
+    var saved = await CbtProgressService.getTestStatus(_testKey);
+    if (saved == null && widget.mockId != null) {
+      saved = await CbtProgressService.getTestStatus(widget.testTitle);
+    }
+
     if (saved != null && saved['status'] == 'IN_PROGRESS') {
       setState(() {
-        _currentIndex = saved['currentIndex'] ?? 0;
-        _totalTimeSeconds = saved['remainingSeconds'] ?? _totalTimeSeconds;
-        if (saved['parsedUserAnswers'] != null) {
-          _userAnswers.addAll(saved['parsedUserAnswers'] as Map<int, int>);
+        _currentIndex = saved?['currentIndex'] ?? 0;
+        _totalTimeSeconds = saved?['remainingSeconds'] ?? _totalTimeSeconds;
+        
+        final rawAnswers = saved?['parsedUserAnswers'] ?? saved?['userAnswers'];
+        if (rawAnswers is Map) {
+          _userAnswers.clear();
+          rawAnswers.forEach((key, val) {
+            final parsedKey = int.tryParse(key.toString());
+            final parsedVal = int.tryParse(val.toString());
+            if (parsedKey != null && parsedVal != null) {
+              _userAnswers[parsedKey] = parsedVal;
+            }
+          });
         }
       });
     }
     _startTimers();
+  }
+
+  Future<void> _saveCurrentProgressImmediate() async {
+    if (_isExamSubmitted) return;
+
+    await CbtProgressService.saveProgress(
+      testId: _testKey,
+      currentIndex: _currentIndex,
+      userAnswers: _userAnswers,
+      remainingSeconds: _totalTimeSeconds,
+      totalQuestions: widget.questions.length,
+    );
   }
 
   Future<void> _fetchCoachingDetails() async {
@@ -124,7 +151,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     setState(() => _userAnswers[_currentIndex] = optionIndex);
 
     CbtProgressService.saveProgress(
-      testId: widget.testTitle,
+      testId: _testKey,
       currentIndex: _currentIndex,
       userAnswers: _userAnswers,
       remainingSeconds: _totalTimeSeconds,
@@ -304,7 +331,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     }
 
     await CbtProgressService.markCompleted(
-      testId: widget.testTitle,
+      testId: _testKey,
       score: score,
       correct: correctCount,
       wrong: wrongCount,
@@ -389,7 +416,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           'test_id': widget.mockId?.toString().trim(),
           'student_name': rawName,
           'student_identifier': studentIdentifier,
-          'is_enrolled': isEnrolled,
           'score': score,
           'accuracy': accuracyPct.round(),
           'accuracy_percent': accuracyPct.round(),
@@ -574,189 +600,200 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     final List<String> currentOptions = currentQ.getOptions(_isHindi);
     final List<String>? statements = _isHindi ? currentQ.sh : currentQ.se;
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        backgroundColor: const Color(0xFF1E293B),
-        foregroundColor: Colors.white,
-        title: Text(widget.testTitle, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
-        actions: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-            margin: const EdgeInsets.symmetric(vertical: 10),
-            decoration: BoxDecoration(color: const Color(0xFFFFF5F5), borderRadius: BorderRadius.circular(6)),
-            child: Text(_formatTime(_totalTimeSeconds), style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: 13)),
-          ),
-          const SizedBox(width: 8),
-          TextButton(
-            onPressed: () => setState(() => _isHindi = !_isHindi),
-            child: Text(_isHindi ? "EN 🇬🇧" : "HI 🇮🇳", style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
-          ),
-          IconButton(
-            icon: const Icon(Icons.grid_view_rounded, color: Colors.white),
-            onPressed: () => showModalBottomSheet(
-              context: context,
-              isScrollControlled: true,
-              builder: (ctx) => CbtPaletteDrawer(
-                totalQuestions: widget.questions.length,
-                currentIndex: _currentIndex,
-                userAnswers: _userAnswers,
-                markedForReview: _markedForReview,
-                onSelectQuestion: (idx) {
-                  setState(() => _currentIndex = idx);
-                  _checkBookmarkStatus();
-                },
+    return PopScope(
+      canPop: true,
+      onPopInvokedWithResult: (didPop, result) async {
+        if (didPop) {
+          await _saveCurrentProgressImmediate();
+        }
+      },
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF1E293B),
+          foregroundColor: Colors.white,
+          title: Text(widget.testTitle, style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold)),
+          actions: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+              margin: const EdgeInsets.symmetric(vertical: 10),
+              decoration: BoxDecoration(color: const Color(0xFFFFF5F5), borderRadius: BorderRadius.circular(6)),
+              child: Text(_formatTime(_totalTimeSeconds), style: const TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: 13)),
+            ),
+            const SizedBox(width: 8),
+            TextButton(
+              onPressed: () => setState(() => _isHindi = !_isHindi),
+              child: Text(_isHindi ? "EN 🇬🇧" : "HI 🇮🇳", style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+            ),
+            IconButton(
+              icon: const Icon(Icons.grid_view_rounded, color: Colors.white),
+              onPressed: () => showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                builder: (ctx) => CbtPaletteDrawer(
+                  totalQuestions: widget.questions.length,
+                  currentIndex: _currentIndex,
+                  userAnswers: _userAnswers,
+                  markedForReview: _markedForReview,
+                  onSelectQuestion: (idx) {
+                    setState(() => _currentIndex = idx);
+                    _checkBookmarkStatus();
+                    _saveCurrentProgressImmediate();
+                  },
+                ),
               ),
-            ),
-          )
-        ],
-      ),
-      body: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-            color: const Color(0xFFF8FAFC),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text("QUESTION ${_currentIndex + 1} OF ${widget.questions.length}", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.grey)),
-                Row(
-                  children: [
-                    IconButton(
-                      icon: Icon(
-                        _isBookmarked ? Icons.bookmark : Icons.bookmark_outline,
-                        color: _isBookmarked ? const Color(0xFF2563EB) : Colors.grey,
-                      ),
-                      onPressed: _toggleBookmarkQuestion,
-                      tooltip: "Bookmark Question",
-                    ),
-                    IconButton(
-                      icon: Icon(_markedForReview.contains(_currentIndex) ? Icons.rate_review : Icons.rate_review_outlined, color: _markedForReview.contains(_currentIndex) ? const Color(0xFF8E44AD) : Colors.grey),
-                      onPressed: _toggleReview,
-                      tooltip: "Mark for Review",
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
-          const Divider(height: 1),
-
-          Expanded(
-            child: SingleChildScrollView(
-              padding: const EdgeInsets.all(16),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+            )
+          ],
+        ),
+        body: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              color: const Color(0xFFF8FAFC),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  LatexText("Q${_currentIndex + 1}. $qText", style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black87, height: 1.4)),
-                  const SizedBox(height: 12),
-
-                  if (statements != null && statements.isNotEmpty) ...[
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: statements.asMap().entries.map((entry) {
-                        int index = entry.key + 1;
-                        String stmtText = entry.value.trim().replaceFirst(RegExp(r'^(\(\d+\)|\d+\.)\s*'), '');
-
-                        return Container(
-                          width: double.infinity,
-                          margin: const EdgeInsets.symmetric(vertical: 4.0),
-                          padding: const EdgeInsets.all(10.0),
-                          decoration: BoxDecoration(color: const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(8), border: const Border(left: BorderSide(color: Color(0xFF2575FC), width: 4))),
-                          child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: const Color(0xFF2575FC), borderRadius: BorderRadius.circular(4)), child: Text("($index)", style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold))),
-                              const SizedBox(width: 8),
-                              Expanded(child: LatexText(stmtText, style: const TextStyle(fontSize: 13.5, color: Color(0xFF1E293B), height: 1.4))),
-                            ],
-                          ),
-                        );
-                      }).toList(),
-                    ),
-                    const SizedBox(height: 12),
-                  ],
-
-                  ...List.generate(currentOptions.length, (optIdx) {
-                    final isSelected = _userAnswers[_currentIndex] == optIdx;
-                    return Container(
-                      margin: const EdgeInsets.symmetric(vertical: 6),
-                      child: InkWell(
-                        onTap: () => _selectOption(optIdx),
-                        borderRadius: BorderRadius.circular(10),
-                        child: Container(
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: isSelected ? const Color(0xFFEFF6FF) : Colors.white,
-                            border: Border.all(color: isSelected ? const Color(0xFF2575FC) : const Color(0xFFE2E8F0), width: isSelected ? 2 : 1),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Row(
-                            children: [
-                              CircleAvatar(
-                                radius: 12,
-                                backgroundColor: isSelected ? const Color(0xFF2575FC) : Colors.grey.shade200,
-                                child: Text(String.fromCharCode(65 + optIdx), style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: isSelected ? Colors.white : Colors.black87)),
-                              ),
-                              const SizedBox(width: 12),
-                              Expanded(child: LatexText(currentOptions[optIdx], style: TextStyle(fontSize: 13.5, color: Colors.black87, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal))),
-                            ],
-                          ),
+                  Text("QUESTION ${_currentIndex + 1} OF ${widget.questions.length}", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.grey)),
+                  Row(
+                    children: [
+                      IconButton(
+                        icon: Icon(
+                          _isBookmarked ? Icons.bookmark : Icons.bookmark_outline,
+                          color: _isBookmarked ? const Color(0xFF2563EB) : Colors.grey,
                         ),
+                        onPressed: _toggleBookmarkQuestion,
+                        tooltip: "Bookmark Question",
                       ),
-                    );
-                  }),
+                      IconButton(
+                        icon: Icon(_markedForReview.contains(_currentIndex) ? Icons.rate_review : Icons.rate_review_outlined, color: _markedForReview.contains(_currentIndex) ? const Color(0xFF8E44AD) : Colors.grey),
+                        onPressed: _toggleReview,
+                        tooltip: "Mark for Review",
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
-          ),
+            const Divider(height: 1),
 
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-            decoration: const BoxDecoration(color: Colors.white, border: Border(top: BorderSide(color: Color(0xFFE2E8F0)))),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                ElevatedButton(
-                  onPressed: _currentIndex > 0
-                      ? () {
-                          setState(() => _currentIndex--);
-                          _checkBookmarkStatus();
-                        }
-                      : null,
-                  child: const Text("← PREV"),
+            Expanded(
+              child: SingleChildScrollView(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    LatexText("Q${_currentIndex + 1}. $qText", style: const TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black87, height: 1.4)),
+                    const SizedBox(height: 12),
+
+                    if (statements != null && statements.isNotEmpty) ...[
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: statements.asMap().entries.map((entry) {
+                          int index = entry.key + 1;
+                          String stmtText = entry.value.trim().replaceFirst(RegExp(r'^(\(\d+\)|\d+\.)\s*'), '');
+
+                          return Container(
+                            width: double.infinity,
+                            margin: const EdgeInsets.symmetric(vertical: 4.0),
+                            padding: const EdgeInsets.all(10.0),
+                            decoration: BoxDecoration(color: const Color(0xFFF1F5F9), borderRadius: BorderRadius.circular(8), border: const Border(left: BorderSide(color: Color(0xFF2575FC), width: 4))),
+                            child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2), decoration: BoxDecoration(color: const Color(0xFF2575FC), borderRadius: BorderRadius.circular(4)), child: Text("($index)", style: const TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold))),
+                                const SizedBox(width: 8),
+                                Expanded(child: LatexText(stmtText, style: const TextStyle(fontSize: 13.5, color: Color(0xFF1E293B), height: 1.4))),
+                              ],
+                            ),
+                          );
+                        }).toList(),
+                      ),
+                      const SizedBox(height: 12),
+                    ],
+
+                    ...List.generate(currentOptions.length, (optIdx) {
+                      final isSelected = _userAnswers[_currentIndex] == optIdx;
+                      return Container(
+                        margin: const EdgeInsets.symmetric(vertical: 6),
+                        child: InkWell(
+                          onTap: () => _selectOption(optIdx),
+                          borderRadius: BorderRadius.circular(10),
+                          child: Container(
+                            padding: const EdgeInsets.all(12),
+                            decoration: BoxDecoration(
+                              color: isSelected ? const Color(0xFFEFF6FF) : Colors.white,
+                              border: Border.all(color: isSelected ? const Color(0xFF2575FC) : const Color(0xFFE2E8F0), width: isSelected ? 2 : 1),
+                              borderRadius: BorderRadius.circular(10),
+                            ),
+                            child: Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 12,
+                                  backgroundColor: isSelected ? const Color(0xFF2575FC) : Colors.grey.shade200,
+                                  child: Text(String.fromCharCode(65 + optIdx), style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: isSelected ? Colors.white : Colors.black87)),
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(child: LatexText(currentOptions[optIdx], style: TextStyle(fontSize: 13.5, color: Colors.black87, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal))),
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    }),
+                  ],
                 ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2ED573), foregroundColor: Colors.white),
-                  onPressed: () => showDialog(
-                    context: context,
-                    builder: (ctx) => AlertDialog(
-                      title: const Text("Submit Mock Test?"),
-                      content: Text("Attempted: ${_userAnswers.length} / ${widget.questions.length}"),
-                      actions: [
-                        TextButton(onPressed: () => Navigator.pop(ctx), child: const Text("Cancel")),
-                        ElevatedButton(onPressed: () { Navigator.pop(ctx); _submitExam(); }, child: const Text("Submit 🚀"))
-                      ],
-                    ),
-                  ),
-                  child: const Text("SUBMIT TEST"),
-                ),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2575FC), foregroundColor: Colors.white),
-                  onPressed: () {
-                    if (_currentIndex < widget.questions.length - 1) {
-                      setState(() => _currentIndex++);
-                      _checkBookmarkStatus();
-                    } else {
-                      _submitExam();
-                    }
-                  },
-                  child: Text(_currentIndex < widget.questions.length - 1 ? "SAVE & NEXT →" : "FINISH"),
-                ),
-              ],
+              ),
             ),
-          ),
-        ],
+
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+              decoration: const BoxDecoration(color: Colors.white, border: Border(top: BorderSide(color: Color(0xFFE2E8F0)))),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  ElevatedButton(
+                    onPressed: _currentIndex > 0
+                        ? () {
+                            setState(() => _currentIndex--);
+                            _checkBookmarkStatus();
+                            _saveCurrentProgressImmediate();
+                          }
+                        : null,
+                    child: const Text("← PREV"),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2ED573), foregroundColor: Colors.white),
+                    onPressed: () => showDialog(
+                      context: context,
+                      builder: (ctx) => AlertDialog(
+                        title: const Text("Submit Mock Test?"),
+                        content: Text("Attempted: ${_userAnswers.length} / ${widget.questions.length}"),
+                        actions: [
+                          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text("Cancel")),
+                          ElevatedButton(onPressed: () { Navigator.pop(ctx); _submitExam(); }, child: const Text("Submit 🚀"))
+                        ],
+                      ),
+                    ),
+                    child: const Text("SUBMIT TEST"),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2575FC), foregroundColor: Colors.white),
+                    onPressed: () {
+                      if (_currentIndex < widget.questions.length - 1) {
+                        setState(() => _currentIndex++);
+                        _checkBookmarkStatus();
+                        _saveCurrentProgressImmediate();
+                      } else {
+                        _submitExam();
+                      }
+                    },
+                    child: Text(_currentIndex < widget.questions.length - 1 ? "SAVE & NEXT →" : "FINISH"),
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
