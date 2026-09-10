@@ -59,7 +59,12 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
       // Load local progress for each test
       for (var test in tests) {
         final testId = (test['id'] ?? test['test_title']).toString();
-        final progress = await CbtProgressService.getTestStatus(testId);
+        // Check progress by ID first, fallback to test_title
+        var progress = await CbtProgressService.getTestStatus(testId);
+        if (progress == null && test['test_title'] != null) {
+          progress = await CbtProgressService.getTestStatus(test['test_title'].toString());
+        }
+
         if (progress != null) {
           _progressCache[testId] = progress;
         }
@@ -141,12 +146,13 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
           testTitle: test['test_title'] ?? 'Batch CBT Test',
           questions: parsedQuestions,
           subFolder: (test['subject'] ?? 'General').toString().toLowerCase(),
-          isBatchTest: true, // 👈 Ensures batch submission pipeline triggers
-          batchId: batchId, // 👈 Valid batch UUID
-          mockId: testId, // 👈 Targets batch_tests row
+          isBatchTest: true,
+          batchId: batchId,
+          mockId: testId,
         ),
       ),
     ).then((_) {
+      // 🔄 Back aane par cached progress dobara refresh karein
       _loadBatchTests();
     });
   }
@@ -211,7 +217,10 @@ class _BatchClassroomScreenState extends State<BatchClassroomScreen>
 
                           final int totalQs = t['total_questions'] ?? ((t['questions_json'] as List?)?.length ?? 15);
                           final int duration = t['duration_mins'] ?? 15;
-                          final int answered = (progress?['userAnswers'] as Map? ?? {}).length;
+                          
+                          // Answer count extraction
+                          final rawAns = progress?['userAnswers'] ?? progress?['parsedUserAnswers'];
+                          final int answered = (rawAns is Map) ? rawAns.length : 0;
                           final double progressFraction = totalQs > 0 ? (answered / totalQs) : 0.0;
 
                           return Card(
