@@ -27,6 +27,85 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
   bool isCreating = false;
 
   @override
+  void dispose() {
+    batchNameCtrl.dispose();
+    batchCodeCtrl.dispose();
+    super.dispose();
+  }
+
+  Future<void> _confirmAndDeleteBatch(String batchId, String batchName) async {
+    final bool? confirm = await showDialog<bool>(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: const Row(
+          children: [
+            Icon(Icons.warning_amber_rounded, color: Colors.red, size: 24),
+            SizedBox(width: 8),
+            Text(
+              'Delete Batch?',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+            ),
+          ],
+        ),
+        content: Text(
+          'Kya aap "$batchName" ko delete karna chahte hain?\n\nIs batch ke tests aur student response records hamesha ke liye hat jayenge.',
+          style: const TextStyle(fontSize: 13, height: 1.4),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, false),
+            child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.red,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            ),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: const Text('Delete Batch', style: TextStyle(fontWeight: FontWeight.bold)),
+          ),
+        ],
+      ),
+    );
+
+    if (confirm != true) return;
+
+    try {
+      final client = Supabase.instance.client;
+
+      // Type mismatch / foreign-key safe delete: Pehle linked rows clean karein
+      await client.from('batch_submissions').delete().eq('batch_id', batchId);
+      await client.from('batch_tests').delete().eq('batch_id', batchId);
+
+      // Main batch delete
+      await client.from('batches').delete().eq('id', batchId);
+
+      widget.onRefresh();
+
+      if (mounted) {
+        Navigator.pop(context);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('🗑️ Batch "$batchName" successfully delete ho gaya!'),
+            backgroundColor: Colors.red.shade700,
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('❌ Delete failed: $e'),
+            backgroundColor: Colors.black87,
+          ),
+        );
+      }
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
@@ -62,6 +141,8 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
 
             ...List.generate(widget.batches.length, (idx) {
               final b = widget.batches[idx];
+              final String bId = b['id'].toString();
+              final String bName = b['batch_name'] ?? 'Batch';
               final String bStatus = b['status'] ?? 'LIVE';
               final bool isHidden = bStatus == 'HIDDEN';
 
@@ -83,7 +164,7 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(b['batch_name'] ?? 'Batch',
+                          Text(bName,
                               style: const TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 14)),
                           const SizedBox(height: 2),
@@ -104,16 +185,31 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
                     PopupMenuButton<String>(
                       icon: const Icon(Icons.more_vert_rounded),
                       onSelected: (val) async {
-                        await Supabase.instance.client
-                            .from('batches')
-                            .update({'status': val}).eq('id', b['id']);
-                        widget.onRefresh();
-                        if (mounted) Navigator.pop(context);
+                        if (val == 'DELETE') {
+                          await _confirmAndDeleteBatch(bId, bName);
+                        } else {
+                          await Supabase.instance.client
+                              .from('batches')
+                              .update({'status': val}).eq('id', b['id']);
+                          widget.onRefresh();
+                          if (mounted) Navigator.pop(context);
+                        }
                       },
                       itemBuilder: (_) => [
                         const PopupMenuItem(value: 'LIVE', child: Text('🟢 Set LIVE')),
                         const PopupMenuItem(value: 'UPCOMING', child: Text('⏳ Set UPCOMING')),
                         const PopupMenuItem(value: 'HIDDEN', child: Text('⚪ HIDE Batch')),
+                        const PopupMenuDivider(),
+                        const PopupMenuItem(
+                          value: 'DELETE',
+                          child: Row(
+                            children: [
+                              Icon(Icons.delete_outline_rounded, color: Colors.red, size: 18),
+                              SizedBox(width: 8),
+                              Text('🗑️ Delete Batch', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ],
