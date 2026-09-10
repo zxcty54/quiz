@@ -77,10 +77,10 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     if (saved != null && saved['status'] == 'IN_PROGRESS') {
       setState(() {
-        _currentIndex = saved?['currentIndex'] ?? 0;
-        _totalTimeSeconds = saved?['remainingSeconds'] ?? _totalTimeSeconds;
+        _currentIndex = saved['currentIndex'] ?? 0;
+        _totalTimeSeconds = saved['remainingSeconds'] ?? _totalTimeSeconds;
         
-        final rawAnswers = saved?['parsedUserAnswers'] ?? saved?['userAnswers'];
+        final rawAnswers = saved['parsedUserAnswers'] ?? saved['userAnswers'];
         if (rawAnswers is Map) {
           _userAnswers.clear();
           rawAnswers.forEach((key, val) {
@@ -149,14 +149,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
   void _selectOption(int optionIndex) {
     setState(() => _userAnswers[_currentIndex] = optionIndex);
-
-    CbtProgressService.saveProgress(
-      testId: _testKey,
-      currentIndex: _currentIndex,
-      userAnswers: _userAnswers,
-      remainingSeconds: _totalTimeSeconds,
-      totalQuestions: widget.questions.length,
-    );
+    _saveCurrentProgressImmediate();
   }
 
   void _toggleReview() {
@@ -222,7 +215,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     List<Map<String, dynamic>> detailedResponses = [];
 
-    // 🔍 Subtopic Performance Tracking Engine Maps
+    // 🔍 Subtopic Tracking Maps
     final Map<String, int> topicAttempted = {};
     final Map<String, int> topicCorrect = {};
     final Map<String, int> topicWrong = {};
@@ -236,7 +229,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       final String selectedText = userAns != null ? currentOptions[userAns] : 'Skipped';
       final String correctText = currentOptions[q.answerIndex];
 
-      // 🎯 Subtopic Extraction via Multi-Statement Engine (Fixed Chapter Getter)
       final String detectedConcept = SubtopicEngine.extractSubtopic(
         chapterName: widget.testTitle,
         qe: q.qe,
@@ -294,7 +286,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       }
     }
 
-    // 📊 Granular Intelligence Resolution for Weak and Strong Areas
+    // 📊 Granular Intelligence Resolution
     String determinedStrong = 'Core Concepts Strong';
     String determinedWeak = 'All Clear (No Critical Traps)';
 
@@ -361,25 +353,17 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             .from(targetTable)
             .update({'attempts_count': currentCount + 1})
             .eq('id', targetId);
-
-        debugPrint("✅ [CBT_DEBUG] Attempts updated in $targetTable for ID: $targetId");
       } catch (e) {
         debugPrint("❌ [CBT_DEBUG] Error updating attempts_count: $e");
       }
     }
 
     // 2️⃣ SYNC BATCH SUBMISSIONS WITH SUBTOPIC INTELLIGENCE
-    debugPrint("==================================================");
-    debugPrint("🔍 [CBT_DEBUG] SUBMIT TRIGGERED");
-    debugPrint("🔍 [CBT_DEBUG] isBatchTest: ${widget.isBatchTest}");
-    debugPrint("🔍 [CBT_DEBUG] batchId: '${widget.batchId}'");
-    debugPrint("🔍 [CBT_DEBUG] mockId: '${widget.mockId}'");
-
     if (widget.isBatchTest && widget.batchId != null) {
       try {
         final prefs = await SharedPreferences.getInstance();
 
-        // 👤 1. Get Real Name from Onboarding / Profile Storage
+        // 👤 Get Real Name from Onboarding
         final authUser = client.auth.currentUser;
         final authMetaName = authUser?.userMetadata?['full_name'] ??
             authUser?.userMetadata?['name'] ??
@@ -390,13 +374,13 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             authMetaName ??
             'Aspirant';
 
-        // 📱 2. Get Contact / Mobile Number
+        // 📱 Get Contact / Mobile Number
         final rawContact = prefs.getString('user_mobile') ??
             prefs.getString('student_contact_id') ??
             authUser?.phone ??
             '';
 
-        // 🎓 3. Check Enrollment Status & Format Identifier Tag
+        // 🎓 Check Enrollment Status & Format Identifier Tag
         final enrolledBatchCode = prefs.getString('user_enrolled_batch_code');
         final bool isEnrolled = widget.isBatchTest || (enrolledBatchCode != null && enrolledBatchCode.isNotEmpty);
 
@@ -428,18 +412,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           'detailed_responses': detailedResponses,
         };
 
-        debugPrint("🚀 [CBT_DEBUG] Sending Payload to 'batch_submissions':");
-        debugPrint("    student_name: $rawName");
-        debugPrint("    student_identifier: $studentIdentifier");
-        debugPrint("    weak_subject: $determinedWeak");
-        debugPrint("    strong_subject: $determinedStrong");
-
-        final insertRes = await client
-            .from('batch_submissions')
-            .insert(submissionData)
-            .select();
-
-        debugPrint("🎉 [CBT_DEBUG] SUPABASE INSERT SUCCESSFUL! Response: $insertRes");
+        await client.from('batch_submissions').insert(submissionData);
 
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
@@ -450,10 +423,8 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             ),
           );
         }
-      } catch (e, stack) {
+      } catch (e) {
         debugPrint("❌ [CBT_DEBUG] CRITICAL SUPABASE INSERT FAILED: $e");
-        debugPrint("❌ [CBT_DEBUG] StackTrace: $stack");
-
         if (mounted) {
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
@@ -464,10 +435,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           );
         }
       }
-    } else {
-      debugPrint("⚠️ [CBT_DEBUG] SKIPPED: isBatchTest is false OR batchId is null!");
     }
-    debugPrint("==================================================");
 
     TelegramTracker.recordTestCompletion(
       widget.testTitle,
@@ -627,9 +595,13 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             ),
             IconButton(
               icon: const Icon(Icons.grid_view_rounded, color: Colors.white),
+              tooltip: "Question Palette",
               onPressed: () => showModalBottomSheet(
                 context: context,
                 isScrollControlled: true,
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+                ),
                 builder: (ctx) => CbtPaletteDrawer(
                   totalQuestions: widget.questions.length,
                   currentIndex: _currentIndex,
@@ -654,23 +626,14 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text("QUESTION ${_currentIndex + 1} OF ${widget.questions.length}", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.grey)),
-                  Row(
-                    children: [
-                      IconButton(
-                        icon: Icon(
-                          _isBookmarked ? Icons.bookmark : Icons.bookmark_outline,
-                          color: _isBookmarked ? const Color(0xFF2563EB) : Colors.grey,
-                        ),
-                        onPressed: _toggleBookmarkQuestion,
-                        tooltip: "Bookmark Question",
-                      ),
-                      IconButton(
-                        icon: Icon(_markedForReview.contains(_currentIndex) ? Icons.rate_review : Icons.rate_review_outlined, color: _markedForReview.contains(_currentIndex) ? const Color(0xFF8E44AD) : Colors.grey),
-                        onPressed: _toggleReview,
-                        tooltip: "Mark for Review",
-                      ),
-                    ],
-                  )
+                  IconButton(
+                    icon: Icon(
+                      _isBookmarked ? Icons.bookmark : Icons.bookmark_outline,
+                      color: _isBookmarked ? const Color(0xFF2563EB) : Colors.grey,
+                    ),
+                    onPressed: _toggleBookmarkQuestion,
+                    tooltip: "Bookmark Question",
+                  ),
                 ],
               ),
             ),
@@ -745,49 +708,152 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               ),
             ),
 
+            // 🧭 CLEAN 2-TIER BOTTOM ACTION BAR
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-              decoration: const BoxDecoration(color: Colors.white, border: Border(top: BorderSide(color: Color(0xFFE2E8F0)))),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              padding: const EdgeInsets.fromLTRB(16, 6, 16, 12),
+              decoration: const BoxDecoration(
+                color: Colors.white,
+                border: Border(top: BorderSide(color: Color(0xFFE2E8F0))),
+              ),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
                 children: [
-                  ElevatedButton(
-                    onPressed: _currentIndex > 0
-                        ? () {
-                            setState(() => _currentIndex--);
-                            _checkBookmarkStatus();
-                            _saveCurrentProgressImmediate();
-                          }
-                        : null,
-                    child: const Text("← PREV"),
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2ED573), foregroundColor: Colors.white),
-                    onPressed: () => showDialog(
-                      context: context,
-                      builder: (ctx) => AlertDialog(
-                        title: const Text("Submit Mock Test?"),
-                        content: Text("Attempted: ${_userAnswers.length} / ${widget.questions.length}"),
-                        actions: [
-                          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text("Cancel")),
-                          ElevatedButton(onPressed: () { Navigator.pop(ctx); _submitExam(); }, child: const Text("Submit 🚀"))
-                        ],
+                  // Row 1: Clear Response & Mark for Review
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      TextButton.icon(
+                        style: TextButton.styleFrom(
+                          foregroundColor: _userAnswers[_currentIndex] != null 
+                              ? Colors.red.shade600 
+                              : Colors.grey.shade400,
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          visualDensity: VisualDensity.compact,
+                        ),
+                        icon: const Icon(Icons.clear_all_rounded, size: 16),
+                        label: const Text(
+                          "Clear Response", 
+                          style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600),
+                        ),
+                        onPressed: _userAnswers[_currentIndex] != null
+                            ? () {
+                                setState(() {
+                                  _userAnswers.remove(_currentIndex);
+                                });
+                                _saveCurrentProgressImmediate();
+                              }
+                            : null,
                       ),
-                    ),
-                    child: const Text("SUBMIT TEST"),
+                      TextButton.icon(
+                        style: TextButton.styleFrom(
+                          foregroundColor: _markedForReview.contains(_currentIndex)
+                              ? const Color(0xFF8E44AD)
+                              : Colors.grey.shade600,
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                          visualDensity: VisualDensity.compact,
+                        ),
+                        icon: Icon(
+                          _markedForReview.contains(_currentIndex)
+                              ? Icons.bookmark_rounded
+                              : Icons.bookmark_outline_rounded,
+                          size: 16,
+                        ),
+                        label: Text(
+                          _markedForReview.contains(_currentIndex) ? "Marked" : "Review Later",
+                          style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600),
+                        ),
+                        onPressed: _toggleReview,
+                      ),
+                    ],
                   ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(backgroundColor: const Color(0xFF2575FC), foregroundColor: Colors.white),
-                    onPressed: () {
-                      if (_currentIndex < widget.questions.length - 1) {
-                        setState(() => _currentIndex++);
-                        _checkBookmarkStatus();
-                        _saveCurrentProgressImmediate();
-                      } else {
-                        _submitExam();
-                      }
-                    },
-                    child: Text(_currentIndex < widget.questions.length - 1 ? "SAVE & NEXT →" : "FINISH"),
+                  const SizedBox(height: 6),
+
+                  // Row 2: Prev | Submit | Save & Next
+                  Row(
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: OutlinedButton(
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(vertical: 11),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
+                            side: const BorderSide(color: Color(0xFFCBD5E1)),
+                          ),
+                          onPressed: _currentIndex > 0
+                              ? () {
+                                  setState(() => _currentIndex--);
+                                  _checkBookmarkStatus();
+                                  _saveCurrentProgressImmediate();
+                                }
+                              : null,
+                          child: const Text("← PREV", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+
+                      Expanded(
+                        flex: 3,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF16A34A),
+                            foregroundColor: Colors.white,
+                            elevation: 0,
+                            padding: const EdgeInsets.symmetric(vertical: 11),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
+                          ),
+                          onPressed: () => showDialog(
+                            context: context,
+                            builder: (ctx) => AlertDialog(
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                              title: const Text("Submit Mock Test?"),
+                              content: Text("Attempted: ${_userAnswers.length} / ${widget.questions.length}"),
+                              actions: [
+                                TextButton(onPressed: () => Navigator.pop(ctx), child: const Text("Cancel")),
+                                ElevatedButton(
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: const Color(0xFF16A34A), 
+                                    foregroundColor: Colors.white,
+                                  ),
+                                  onPressed: () { 
+                                    Navigator.pop(ctx); 
+                                    _submitExam(); 
+                                  }, 
+                                  child: const Text("Submit 🚀"),
+                                ),
+                              ],
+                            ),
+                          ),
+                          child: const Text("SUBMIT", style: TextStyle(fontSize: 12, fontWeight: FontWeight.w900)),
+                        ),
+                      ),
+                      const SizedBox(width: 8),
+
+                      Expanded(
+                        flex: 3,
+                        child: ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: const Color(0xFF2563EB),
+                            foregroundColor: Colors.white,
+                            elevation: 0,
+                            padding: const EdgeInsets.symmetric(vertical: 11),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(9)),
+                          ),
+                          onPressed: () {
+                            if (_currentIndex < widget.questions.length - 1) {
+                              setState(() => _currentIndex++);
+                              _checkBookmarkStatus();
+                              _saveCurrentProgressImmediate();
+                            } else {
+                              _submitExam();
+                            }
+                          },
+                          child: Text(
+                            _currentIndex < widget.questions.length - 1 ? "SAVE & NEXT →" : "FINISH",
+                            style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
