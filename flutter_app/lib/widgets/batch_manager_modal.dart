@@ -33,6 +33,7 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
     super.dispose();
   }
 
+  // 🗑️ CENTRAL SAFE DELETION (Har jagah se batch wipe-out karega)
   Future<void> _confirmAndDeleteBatch(String batchId, String batchName) async {
     final bool? confirm = await showDialog<bool>(
       context: context,
@@ -43,14 +44,14 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
             Icon(Icons.warning_amber_rounded, color: Colors.red, size: 24),
             SizedBox(width: 8),
             Text(
-              'Delete Batch?',
+              'Delete Batch Permanently?',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
             ),
           ],
         ),
         content: Text(
-          'Kya aap "$batchName" ko delete karna chahte hain?\n\nIs batch ke tests aur student response records hamesha ke liye hat jayenge.',
-          style: const TextStyle(fontSize: 13, height: 1.4),
+          'Kya aap "$batchName" ko delete karna chahte hain?\n\n• Is batch ke tests har screen se hat jayenge.\n• Students ke attempts aur submission data clear ho jayenge.\n• Ye action undo nahi kiya ja sakta.',
+          style: const TextStyle(fontSize: 13, height: 1.45),
         ),
         actions: [
           TextButton(
@@ -61,10 +62,11 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.red,
               foregroundColor: Colors.white,
+              elevation: 0,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
             ),
             onPressed: () => Navigator.pop(ctx, true),
-            child: const Text('Delete Batch', style: TextStyle(fontWeight: FontWeight.bold)),
+            child: const Text('Yes, Delete Batch', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
         ],
       ),
@@ -75,25 +77,30 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
     try {
       final client = Supabase.instance.client;
 
-      // Type mismatch / foreign-key safe delete: Pehle linked rows clean karein
+      // 1️⃣ Linked student submissions clean karein (Cascade safe)
       await client.from('batch_submissions').delete().eq('batch_id', batchId);
+
+      // 2️⃣ Batch tests clean karein
       await client.from('batch_tests').delete().eq('batch_id', batchId);
 
-      // Main batch delete
+      // 3️⃣ Main batch record delete karein
       await client.from('batches').delete().eq('id', batchId);
 
+      // 4️⃣ Dashboard refresh trigger karein
       widget.onRefresh();
 
       if (mounted) {
-        Navigator.pop(context);
+        Navigator.pop(context); // Modal band karein
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text('🗑️ Batch "$batchName" successfully delete ho gaya!'),
+            content: Text('🗑️ Batch "$batchName" har jagah se delete ho gaya!'),
             backgroundColor: Colors.red.shade700,
+            duration: const Duration(seconds: 2),
           ),
         );
       }
     } catch (e) {
+      debugPrint("❌ Batch delete error: $e");
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
@@ -109,10 +116,11 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-          bottom: MediaQuery.of(context).viewInsets.bottom,
-          left: 16,
-          right: 16,
-          top: 16),
+        bottom: MediaQuery.of(context).viewInsets.bottom,
+        left: 16,
+        right: 16,
+        top: 16,
+      ),
       child: SingleChildScrollView(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -121,21 +129,26 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Text('🏫 Manage Classroom Batches',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+                const Text(
+                  '🏫 Manage Classroom Batches',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
+                ),
                 IconButton(
-                    icon: const Icon(Icons.close),
-                    onPressed: () => Navigator.pop(context)),
+                  icon: const Icon(Icons.close),
+                  onPressed: () => Navigator.pop(context),
+                ),
               ],
             ),
             const SizedBox(height: 8),
 
             if (widget.batches.isEmpty)
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 14),
+                padding: const EdgeInsets.symmetric(vertical: 18),
                 child: Center(
-                  child: Text('Koi purana batch nahi mila.',
-                      style: TextStyle(color: Colors.grey[500], fontSize: 12)),
+                  child: Text(
+                    'Koi active batch nahi mila.',
+                    style: TextStyle(color: Colors.grey[500], fontSize: 12),
+                  ),
                 ),
               ),
 
@@ -164,26 +177,31 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(bName,
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.bold, fontSize: 14)),
+                          Text(
+                            bName,
+                            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                          ),
                           const SizedBox(height: 2),
-                          Text('CODE: ${b['batch_code']} • Status: $bStatus',
-                              style: const TextStyle(fontSize: 11, color: Colors.grey)),
+                          Text(
+                            'CODE: ${b['batch_code']} • Status: $bStatus',
+                            style: const TextStyle(fontSize: 11, color: Colors.grey),
+                          ),
                         ],
                       ),
                     ),
                     IconButton(
-                      icon: const Icon(Icons.copy_rounded,
-                          size: 18, color: Color(0xFF16A34A)),
+                      icon: const Icon(Icons.copy_rounded, size: 18, color: Color(0xFF16A34A)),
+                      tooltip: 'Copy Batch Code',
                       onPressed: () {
                         Clipboard.setData(ClipboardData(text: b['batch_code'] ?? ''));
-                        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                            content: Text('Copied Code: ${b['batch_code']}')));
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text('Copied Code: ${b['batch_code']}')),
+                        );
                       },
                     ),
                     PopupMenuButton<String>(
                       icon: const Icon(Icons.more_vert_rounded),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       onSelected: (val) async {
                         if (val == 'DELETE') {
                           await _confirmAndDeleteBatch(bId, bName);
@@ -206,7 +224,10 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
                             children: [
                               Icon(Icons.delete_outline_rounded, color: Colors.red, size: 18),
                               SizedBox(width: 8),
-                              Text('🗑️ Delete Batch', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold)),
+                              Text(
+                                '🗑️ Delete Batch',
+                                style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+                              ),
                             ],
                           ),
                         ),
@@ -218,22 +239,30 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
             }),
 
             const Divider(height: 20),
-            const Text('+ Add New Batch',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+            const Text(
+              '+ Add New Batch',
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+            ),
             const SizedBox(height: 8),
 
             TextField(
-                controller: batchNameCtrl,
-                decoration: const InputDecoration(
-                    labelText: 'Batch Name', border: OutlineInputBorder(), isDense: true)),
+              controller: batchNameCtrl,
+              decoration: const InputDecoration(
+                labelText: 'Batch Name',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+            ),
             const SizedBox(height: 8),
             TextField(
-                controller: batchCodeCtrl,
-                textCapitalization: TextCapitalization.characters,
-                decoration: const InputDecoration(
-                    labelText: 'Join Code (Password)',
-                    border: OutlineInputBorder(),
-                    isDense: true)),
+              controller: batchCodeCtrl,
+              textCapitalization: TextCapitalization.characters,
+              decoration: const InputDecoration(
+                labelText: 'Join Code (Password)',
+                border: OutlineInputBorder(),
+                isDense: true,
+              ),
+            ),
             const SizedBox(height: 12),
 
             SizedBox(
@@ -241,7 +270,9 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
               height: 42,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF2563EB), foregroundColor: Colors.white),
+                  backgroundColor: const Color(0xFF2563EB),
+                  foregroundColor: Colors.white,
+                ),
                 onPressed: isCreating
                     ? null
                     : () async {
@@ -263,8 +294,10 @@ class _BatchManagerModalState extends State<BatchManagerModal> {
                           if (mounted) setState(() => isCreating = false);
                         }
                       },
-                child: const Text('Create Batch Code 🚀',
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+                child: const Text(
+                  'Create Batch Code 🚀',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                ),
               ),
             ),
             const SizedBox(height: 12),
