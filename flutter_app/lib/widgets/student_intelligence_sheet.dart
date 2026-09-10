@@ -1216,7 +1216,7 @@ class _StudentIntelligenceSheetState
                             ),
                             const SizedBox(width: 8),
                             _metricCard(
-                              title: 'ACCURACY',
+                              title: 'OVERALL ACCURACY',
                               value:
                                   '$overallAccuracy%',
                               icon:
@@ -1224,16 +1224,67 @@ class _StudentIntelligenceSheetState
                                       .track_changes_rounded,
                               color: purple,
                             ),
-                            const SizedBox(width: 8),
-                            _metricCard(
-                              title: 'WEAK AREA',
-                              value: topWeakArea,
-                              icon:
-                                  Icons
-                                      .priority_high_rounded,
-                              color: danger,
-                            ),
                           ],
+                        ),
+                        const SizedBox(height: 8),
+
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 12,
+                            vertical: 9,
+                          ),
+                          decoration: BoxDecoration(
+                            color: cardColor,
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                              color: widget.isDarkMode
+                                  ? const Color(0xFF263449)
+                                  : const Color(0xFFE2E8F0),
+                            ),
+                          ),
+                          child: Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.all(6),
+                                decoration: BoxDecoration(
+                                  color: danger.withOpacity(.10),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: const Icon(
+                                  Icons.priority_high_rounded,
+                                  color: danger,
+                                  size: 16,
+                                ),
+                              ),
+                              const SizedBox(width: 10),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      'TOP WEAK AREA',
+                                      style: TextStyle(
+                                        color: mutedTextColor,
+                                        fontSize: 8.5,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      topWeakArea,
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        color: textColor,
+                                        fontSize: 13,
+                                        fontWeight: FontWeight.w800,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
