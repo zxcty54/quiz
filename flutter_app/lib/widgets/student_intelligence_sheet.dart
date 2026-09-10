@@ -347,18 +347,37 @@ class _StudentIntelligenceSheetState extends State<StudentIntelligenceSheet> {
                       itemCount: filteredSubmissions.length,
                       itemBuilder: (ctx, idx) {
                         final s = filteredSubmissions[idx];
-                        final rawIdentifier =
-                            (s['student_identifier'] ?? s['student_name'] ?? 'Aspirant').toString();
+                        
+                        // 🔍 1. Real Name & Identifier Parsing (From Onboarding & CBT Sync)
+                        final String directName = (s['student_name'] ?? '').toString().trim();
+                        final String rawIdentifier = (s['student_identifier'] ?? '').toString().trim();
 
-                        String nameOnly = rawIdentifier;
+                        String displayName = directName.isNotEmpty 
+                            ? directName 
+                            : (rawIdentifier.isNotEmpty ? rawIdentifier : 'Aspirant');
+
+                        // Clean agar koi tags ya symbols pehle se hon
+                        if (displayName.contains('•')) {
+                          displayName = displayName.split('•')[0].trim();
+                        }
+                        if (displayName.contains('(')) {
+                          displayName = displayName.split('(')[0].trim();
+                        }
+                        if (displayName.isEmpty || displayName.toLowerCase() == 'enrolled student') {
+                          displayName = 'Aspirant';
+                        }
+
+                        // 🎓 2. Enrollment Detection
+                        final bool isEnrolled = s['is_enrolled'] == true || 
+                            rawIdentifier.contains('🎓 Enrolled') || 
+                            rawIdentifier.contains('Enrolled');
+
+                        // 📱 3. Phone/Roll extraction (agar identifier me available ho)
                         String contactInfo = '';
-                        if (rawIdentifier.contains('(') && rawIdentifier.contains(')')) {
-                          final parts = rawIdentifier.split('(');
-                          nameOnly = parts[0].trim();
-                          contactInfo = parts[1]
-                              .replaceAll(')', '')
-                              .replaceAll('Roll/Ph:', '')
-                              .trim();
+                        if (rawIdentifier.contains('Ph:')) {
+                          contactInfo = rawIdentifier.split('Ph:').last.replaceAll(')', '').trim();
+                        } else if (rawIdentifier.contains('Roll/Ph:')) {
+                          contactInfo = rawIdentifier.split('Roll/Ph:').last.replaceAll(')', '').trim();
                         }
 
                         final double score = (s['score'] as num?)?.toDouble() ?? 0.0;
@@ -399,7 +418,7 @@ class _StudentIntelligenceSheetState extends State<StudentIntelligenceSheet> {
                                       radius: 18,
                                       backgroundColor: const Color(0xFF2563EB).withOpacity(0.12),
                                       child: Text(
-                                        nameOnly.isNotEmpty ? nameOnly[0].toUpperCase() : 'S',
+                                        displayName.isNotEmpty ? displayName[0].toUpperCase() : 'A',
                                         style: const TextStyle(
                                             fontWeight: FontWeight.bold,
                                             color: Color(0xFF2563EB),
@@ -411,9 +430,41 @@ class _StudentIntelligenceSheetState extends State<StudentIntelligenceSheet> {
                                       child: Column(
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
-                                          Text(nameOnly,
-                                              style: const TextStyle(
-                                                  fontWeight: FontWeight.bold, fontSize: 14)),
+                                          Row(
+                                            children: [
+                                              // 👤 Student Real Name
+                                              Flexible(
+                                                child: Text(
+                                                  displayName,
+                                                  maxLines: 1,
+                                                  overflow: TextOverflow.ellipsis,
+                                                  style: const TextStyle(
+                                                      fontWeight: FontWeight.bold, fontSize: 14),
+                                                ),
+                                              ),
+                                              // 🎓 Enrolled Student Badge
+                                              if (isEnrolled) ...[
+                                                const SizedBox(width: 6),
+                                                Container(
+                                                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
+                                                  decoration: BoxDecoration(
+                                                    color: const Color(0xFFDCFCE7),
+                                                    borderRadius: BorderRadius.circular(4),
+                                                    border: Border.all(color: const Color(0xFF86EFAC), width: 0.8),
+                                                  ),
+                                                  child: const Text(
+                                                    '🎓 Enrolled',
+                                                    style: TextStyle(
+                                                      fontSize: 9.5,
+                                                      fontWeight: FontWeight.bold,
+                                                      color: Color(0xFF15803D),
+                                                    ),
+                                                  ),
+                                                ),
+                                              ],
+                                            ],
+                                          ),
+                                          const SizedBox(height: 2),
                                           Text(
                                             '$matchedTestTitle ${contactInfo.isNotEmpty ? "• $contactInfo" : ""}',
                                             style: const TextStyle(
@@ -498,7 +549,7 @@ class _StudentIntelligenceSheetState extends State<StudentIntelligenceSheet> {
                                         context,
                                         MaterialPageRoute(
                                           builder: (_) => StudentCbtReportScreen(
-                                            studentName: nameOnly,
+                                            studentName: displayName,
                                             testTitle: matchedTestTitle,
                                             score: score,
                                             responseBreakdown: responses,
