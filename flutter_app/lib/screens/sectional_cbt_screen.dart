@@ -351,12 +351,34 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
     if (widget.isBatchTest && widget.batchId != null) {
       try {
         final prefs = await SharedPreferences.getInstance();
-        final rawName = prefs.getString('custom_aspirant_name') ?? 'Enrolled Student';
-        final rawContact = prefs.getString('student_contact_id') ?? '';
 
-        final studentIdentifier = (rawContact.isNotEmpty && rawContact != 'N/A')
-            ? '$rawName (Roll/Ph: $rawContact)'
-            : rawName;
+        // 👤 1. Get Real Name from Onboarding / Profile Storage
+        final authUser = client.auth.currentUser;
+        final authMetaName = authUser?.userMetadata?['full_name'] ??
+            authUser?.userMetadata?['name'] ??
+            authUser?.email?.split('@').first;
+
+        final rawName = prefs.getString('user_name') ??
+            prefs.getString('custom_aspirant_name') ??
+            authMetaName ??
+            'Aspirant';
+
+        // 📱 2. Get Contact / Mobile Number
+        final rawContact = prefs.getString('user_mobile') ??
+            prefs.getString('student_contact_id') ??
+            authUser?.phone ??
+            '';
+
+        // 🎓 3. Check Enrollment Status & Format Identifier Tag
+        final enrolledBatchCode = prefs.getString('user_enrolled_batch_code');
+        final bool isEnrolled = widget.isBatchTest || (enrolledBatchCode != null && enrolledBatchCode.isNotEmpty);
+
+        String studentIdentifier = rawName;
+        if (isEnrolled) {
+          studentIdentifier = (rawContact.isNotEmpty && rawContact != 'N/A')
+              ? '$rawName • 🎓 Enrolled (Ph: $rawContact)'
+              : '$rawName • 🎓 Enrolled';
+        }
 
         final double accuracyPct = _userAnswers.isNotEmpty
             ? (correctCount / _userAnswers.length) * 100
@@ -367,6 +389,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
           'test_id': widget.mockId?.toString().trim(),
           'student_name': rawName,
           'student_identifier': studentIdentifier,
+          'is_enrolled': isEnrolled,
           'score': score,
           'accuracy': accuracyPct.round(),
           'accuracy_percent': accuracyPct.round(),
@@ -380,6 +403,8 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         };
 
         debugPrint("🚀 [CBT_DEBUG] Sending Payload to 'batch_submissions':");
+        debugPrint("    student_name: $rawName");
+        debugPrint("    student_identifier: $studentIdentifier");
         debugPrint("    weak_subject: $determinedWeak");
         debugPrint("    strong_subject: $determinedStrong");
 
@@ -432,8 +457,8 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
   void _openBatchCodeDialog(String coachingName) async {
     final prefs = await SharedPreferences.getInstance();
-    final existingName = prefs.getString('custom_aspirant_name') ?? '';
-    final existingContact = prefs.getString('student_contact_id') ?? '';
+    final existingName = prefs.getString('user_name') ?? prefs.getString('custom_aspirant_name') ?? '';
+    final existingContact = prefs.getString('user_mobile') ?? prefs.getString('student_contact_id') ?? '';
 
     final nameCtrl = TextEditingController(text: existingName);
     final contactCtrl = TextEditingController(text: existingContact != 'N/A' ? existingContact : '');
@@ -511,7 +536,11 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               }
 
               await prefs.setString('custom_aspirant_name', enteredName);
+              await prefs.setString('user_name', enteredName);
               await prefs.setString('student_contact_id', enteredContact.isNotEmpty ? enteredContact : 'N/A');
+              if (enteredContact.isNotEmpty) {
+                await prefs.setString('user_mobile', enteredContact);
+              }
               await prefs.setString('user_enrolled_batch_code', enteredCode);
 
               if (ctx.mounted) Navigator.pop(ctx);
