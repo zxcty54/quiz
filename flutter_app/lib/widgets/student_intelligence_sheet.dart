@@ -25,6 +25,10 @@ class _StudentIntelligenceSheetState
     extends State<StudentIntelligenceSheet> {
   String _selectedBatchFilter = 'ALL';
   String _selectedTestId = 'ALL';
+  bool _showOnlyEnrolledRoster = false;
+
+  final TextEditingController _searchController = TextEditingController();
+  String _searchQuery = '';
 
   static const Color primary = Color(0xFF2563EB);
   static const Color success = Color(0xFF16A34A);
@@ -43,6 +47,12 @@ class _StudentIntelligenceSheetState
 
   Color get mutedTextColor =>
       widget.isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
 
   // ---------------------------------------------------------------------------
   // WEAK TOPIC ENGINE
@@ -221,10 +231,6 @@ class _StudentIntelligenceSheetState
         : [];
   }
 
-  // ---------------------------------------------------------------------------
-  // WEAKNESS SEVERITY
-  // ---------------------------------------------------------------------------
-
   String _weaknessLabel(Map<String, dynamic> submission) {
     final int accuracy = _accuracy(submission);
 
@@ -239,6 +245,44 @@ class _StudentIntelligenceSheetState
     if (accuracy < 40) return danger;
     if (accuracy < 70) return warning;
     return const Color(0xFFCA8A04);
+  }
+
+  List<Map<String, dynamic>> _getUniqueEnrolledStudents(List<dynamic> submissions) {
+    final Map<String, Map<String, dynamic>> uniqueStudents = {};
+
+    for (var raw in submissions) {
+      final s = Map<String, dynamic>.from(raw);
+      if (!_isEnrolled(s)) continue;
+
+      final String name = _studentName(s);
+      final String contact = _contactInfo(s);
+      final String key = contact.isNotEmpty ? contact : name.toLowerCase();
+
+      if (!uniqueStudents.containsKey(key)) {
+        uniqueStudents[key] = {
+          'name': name,
+          'contact': contact,
+          'total_attempts': 1,
+          'total_score': _score(s),
+          'highest_score': _score(s),
+          'last_attempted_test': _findParentTest(s) != null
+              ? _testTitle(_findParentTest(s)!)
+              : 'Classroom Mock',
+        };
+      } else {
+        uniqueStudents[key]!['total_attempts'] =
+            (uniqueStudents[key]!['total_attempts'] as int) + 1;
+        uniqueStudents[key]!['total_score'] =
+            (uniqueStudents[key]!['total_score'] as double) + _score(s);
+
+        final currentScore = _score(s);
+        if (currentScore > (uniqueStudents[key]!['highest_score'] as double)) {
+          uniqueStudents[key]!['highest_score'] = currentScore;
+        }
+      }
+    }
+
+    return uniqueStudents.values.toList();
   }
 
   // ---------------------------------------------------------------------------
@@ -335,6 +379,121 @@ class _StudentIntelligenceSheetState
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _searchBar(String hint) {
+    return Container(
+      height: 42,
+      margin: const EdgeInsets.only(bottom: 12),
+      decoration: BoxDecoration(
+        color: cardColor,
+        borderRadius: BorderRadius.circular(10),
+        border: Border.all(
+          color: widget.isDarkMode
+              ? const Color(0xFF263449)
+              : const Color(0xFFCBD5E1),
+        ),
+      ),
+      child: TextField(
+        controller: _searchController,
+        onChanged: (val) {
+          setState(() {
+            _searchQuery = val.trim().toLowerCase();
+          });
+        },
+        style: TextStyle(color: textColor, fontSize: 13),
+        decoration: InputDecoration(
+          hintText: hint,
+          hintStyle: TextStyle(color: mutedTextColor, fontSize: 11.5),
+          prefixIcon: Icon(Icons.search_rounded, size: 18, color: mutedTextColor),
+          suffixIcon: _searchQuery.isNotEmpty
+              ? IconButton(
+                  icon: const Icon(Icons.clear, size: 16),
+                  color: mutedTextColor,
+                  onPressed: () {
+                    _searchController.clear();
+                    setState(() => _searchQuery = '');
+                  },
+                )
+              : null,
+          border: InputBorder.none,
+          contentPadding: const EdgeInsets.symmetric(vertical: 10),
+        ),
+      ),
+    );
+  }
+
+  Widget _rosterToggleTabs(int totalAttempts, int totalEnrolled) {
+    return Container(
+      margin: const EdgeInsets.only(bottom: 14),
+      padding: const EdgeInsets.all(4),
+      decoration: BoxDecoration(
+        color: widget.isDarkMode
+            ? const Color(0xFF1E293B)
+            : const Color(0xFFE2E8F0),
+        borderRadius: BorderRadius.circular(11),
+      ),
+      child: Row(
+        children: [
+          Expanded(
+            child: InkWell(
+              borderRadius: BorderRadius.circular(8),
+              onTap: () {
+                setState(() {
+                  _showOnlyEnrolledRoster = false;
+                  _searchController.clear();
+                  _searchQuery = '';
+                });
+              },
+              child: Container(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                decoration: BoxDecoration(
+                  color: !_showOnlyEnrolledRoster ? primary : Colors.transparent,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                alignment: Alignment.center,
+                child: Text(
+                  'Test Attempts ($totalAttempts)',
+                  style: TextStyle(
+                    color: !_showOnlyEnrolledRoster ? Colors.white : mutedTextColor,
+                    fontSize: 11.5,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Expanded(
+            child: InkWell(
+              borderRadius: BorderRadius.circular(8),
+              onTap: () {
+                setState(() {
+                  _showOnlyEnrolledRoster = true;
+                  _searchController.clear();
+                  _searchQuery = '';
+                });
+              },
+              child: Container(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                decoration: BoxDecoration(
+                  color: _showOnlyEnrolledRoster ? success : Colors.transparent,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                alignment: Alignment.center,
+                child: Text(
+                  '🎓 Enrolled Roster ($totalEnrolled)',
+                  style: TextStyle(
+                    color: _showOnlyEnrolledRoster ? Colors.white : mutedTextColor,
+                    fontSize: 11.5,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -506,7 +665,125 @@ class _StudentIntelligenceSheetState
   }
 
   // ---------------------------------------------------------------------------
-  // STUDENT CARD
+  // ENROLLED DIRECTORY CARD
+  // ---------------------------------------------------------------------------
+
+  Widget _enrolledDirectoryCard(Map<String, dynamic> student) {
+    final int attempts = student['total_attempts'] as int;
+    final double totalScore = student['total_score'] as double;
+    final double highestScore = student['highest_score'] as double;
+    final double avgScore = attempts > 0 ? (totalScore / attempts) : 0.0;
+
+    return Container(
+      margin: const EdgeInsets.only(bottom: 10),
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: cardColor,
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(
+          color: success.withOpacity(0.25),
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(widget.isDarkMode ? .10 : .03),
+            blurRadius: 8,
+            offset: const Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          CircleAvatar(
+            radius: 20,
+            backgroundColor: success.withOpacity(0.12),
+            child: Text(
+              student['name'].toString().isNotEmpty
+                  ? student['name'][0].toUpperCase()
+                  : 'A',
+              style: const TextStyle(
+                color: success,
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+              ),
+            ),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Flexible(
+                      child: Text(
+                        student['name'],
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          color: textColor,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 13.5,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    const Icon(Icons.verified, size: 14, color: success),
+                  ],
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  student['contact'].toString().isNotEmpty
+                      ? 'Ph: ${student['contact']}'
+                      : 'Classroom Verified Member',
+                  style: TextStyle(color: mutedTextColor, fontSize: 11),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  'Recent: ${student['last_attempted_test']}',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(color: primary, fontSize: 10, fontWeight: FontWeight.w600),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 8),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+                decoration: BoxDecoration(
+                  color: primary.withOpacity(0.1),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: Text(
+                  '$attempts Mocks',
+                  style: const TextStyle(
+                    color: primary,
+                    fontSize: 10,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              const SizedBox(height: 3),
+              Text(
+                'Avg: ${avgScore.toStringAsFixed(1)}',
+                style: TextStyle(color: textColor, fontSize: 11.5, fontWeight: FontWeight.w700),
+              ),
+              Text(
+                'Max: ${highestScore.toStringAsFixed(1)}',
+                style: TextStyle(color: mutedTextColor, fontSize: 9.5),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  // ---------------------------------------------------------------------------
+  // STUDENT ATTEMPT CARD
   // ---------------------------------------------------------------------------
 
   Widget _studentCard(Map<String, dynamic> s) {
@@ -562,7 +839,6 @@ class _StudentIntelligenceSheetState
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Student Header
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -656,7 +932,6 @@ class _StudentIntelligenceSheetState
 
             const SizedBox(height: 13),
 
-            // Accuracy Progress
             Row(
               mainAxisAlignment:
                   MainAxisAlignment.spaceBetween,
@@ -702,7 +977,6 @@ class _StudentIntelligenceSheetState
 
             const SizedBox(height: 12),
 
-            // Correct / Wrong / Accuracy
             Row(
               children: [
                 _statItem(
@@ -726,7 +1000,6 @@ class _StudentIntelligenceSheetState
               ],
             ),
 
-            // Weak Topic
             if (hasWeakTopic) ...[
               const SizedBox(height: 12),
               Container(
@@ -818,7 +1091,6 @@ class _StudentIntelligenceSheetState
 
             const SizedBox(height: 12),
 
-            // CTA
             SizedBox(
               width: double.infinity,
               height: 38,
@@ -900,6 +1172,9 @@ class _StudentIntelligenceSheetState
               _selectedBatchFilter.trim();
         }).toList();
 
+    // Unique Enrolled Students
+    final enrolledStudents = _getUniqueEnrolledStudents(batchSubmissions);
+
     // Analytics
     double totalScoreSum = 0;
     final Map<String, int> weakFrequency = {};
@@ -938,15 +1213,39 @@ class _StudentIntelligenceSheetState
                 .key
             : 'All Concepts Stable';
 
-    final filteredSubmissions =
-        batchSubmissions.where((s) {
-          if (_selectedTestId == 'ALL') return true;
+    // Filter by Assessment
+    final baseSubmissions = batchSubmissions.where((s) {
+      if (_selectedTestId == 'ALL') return true;
 
-          return (s['test_id'] ?? '')
-                  .toString()
-                  .trim() ==
-              _selectedTestId.trim();
-        }).toList();
+      return (s['test_id'] ?? '')
+              .toString()
+              .trim() ==
+          _selectedTestId.trim();
+    }).toList();
+
+    // Filter by Search Query
+    final filteredSubmissions = baseSubmissions.where((s) {
+      if (_searchQuery.isEmpty) return true;
+
+      final name = _studentName(s).toLowerCase();
+      final contact = _contactInfo(s).toLowerCase();
+      final identifier = (s['student_identifier'] ?? '').toString().toLowerCase();
+      final weak = (s['weak_subject'] ?? '').toString().toLowerCase();
+
+      return name.contains(_searchQuery) ||
+          contact.contains(_searchQuery) ||
+          identifier.contains(_searchQuery) ||
+          weak.contains(_searchQuery);
+    }).toList();
+
+    // Filter Enrolled Roster by Search Query
+    final filteredEnrolled = enrolledStudents.where((st) {
+      if (_searchQuery.isEmpty) return true;
+
+      final name = st['name'].toString().toLowerCase();
+      final contact = st['contact'].toString().toLowerCase();
+      return name.contains(_searchQuery) || contact.contains(_searchQuery);
+    }).toList();
 
     final int totalCorrect = batchSubmissions.fold(
       0,
@@ -981,7 +1280,6 @@ class _StudentIntelligenceSheetState
         ),
         child: Column(
           children: [
-            // Drag Handle
             const SizedBox(height: 8),
             Container(
               width: 38,
@@ -992,7 +1290,6 @@ class _StudentIntelligenceSheetState
               ),
             ),
 
-            // Header
             Padding(
               padding: const EdgeInsets.fromLTRB(
                 16,
@@ -1061,14 +1358,9 @@ class _StudentIntelligenceSheetState
                   24,
                 ),
                 children: [
-                  // ------------------------------------------------------------
-                  // BATCH FILTER
-                  // ------------------------------------------------------------
-
                   _sectionTitle(
                     'Classroom',
-                    subtitle:
-                        'Choose a batch to view performance',
+                    subtitle: 'Choose a batch to view performance',
                   ),
                   const SizedBox(height: 8),
 
@@ -1079,45 +1371,28 @@ class _StudentIntelligenceSheetState
                         _filterButton(
                           label: 'All Batches',
                           icon: Icons.public_rounded,
-                          selected:
-                              _selectedBatchFilter ==
-                              'ALL',
+                          selected: _selectedBatchFilter == 'ALL',
                           onTap: () {
                             setState(() {
-                              _selectedBatchFilter =
-                                  'ALL';
+                              _selectedBatchFilter = 'ALL';
                               _selectedTestId = 'ALL';
                             });
                           },
                         ),
                         ...widget.batches.map((b) {
-                          final String id =
-                              (b['id'] ?? '').toString();
-
-                          final String name =
-                              (b['batch_name'] ??
-                                      'Batch')
-                                  .toString();
+                          final String id = (b['id'] ?? '').toString();
+                          final String name = (b['batch_name'] ?? 'Batch').toString();
 
                           return Padding(
-                            padding:
-                                const EdgeInsets.only(
-                                  left: 7,
-                                ),
+                            padding: const EdgeInsets.only(left: 7),
                             child: _filterButton(
                               label: name,
-                              icon:
-                                  Icons
-                                      .school_outlined,
-                              selected:
-                                  _selectedBatchFilter ==
-                                  id,
+                              icon: Icons.school_outlined,
+                              selected: _selectedBatchFilter == id,
                               onTap: () {
                                 setState(() {
-                                  _selectedBatchFilter =
-                                      id;
-                                  _selectedTestId =
-                                      'ALL';
+                                  _selectedBatchFilter = id;
+                                  _selectedTestId = 'ALL';
                                 });
                               },
                             ),
@@ -1129,349 +1404,319 @@ class _StudentIntelligenceSheetState
 
                   const SizedBox(height: 14),
 
-                  // ------------------------------------------------------------
-                  // SUMMARY
-                  // ------------------------------------------------------------
+                  // Segmented Tab Switcher (Attempts vs Enrolled Directory)
+                  _rosterToggleTabs(batchSubmissions.length, enrolledStudents.length),
 
-                  Container(
-                    padding: const EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      gradient: LinearGradient(
-                        colors:
-                            widget.isDarkMode
-                                ? const [
-                                  Color(0xFF172554),
-                                  Color(0xFF172033),
-                                ]
-                                : const [
-                                  Color(0xFFEFF6FF),
-                                  Colors.white,
-                                ],
-                      ),
-                      borderRadius:
-                          BorderRadius.circular(16),
-                      border: Border.all(
-                        color: primary.withOpacity(.14),
-                      ),
-                    ),
-                    child: Column(
-                      crossAxisAlignment:
-                          CrossAxisAlignment.start,
+                  if (_showOnlyEnrolledRoster) ...[
+                    // VIEW 1: ENROLLED DIRECTORY
+                    _searchBar('Search by enrolled student name or phone...'),
+
+                    Row(
                       children: [
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Text(
-                                _selectedBatchFilter ==
-                                        'ALL'
-                                    ? 'Overall Performance'
-                                    : 'Batch Performance',
-                                style: TextStyle(
-                                  color: textColor,
-                                  fontSize: 12,
-                                  fontWeight:
-                                      FontWeight.w800,
-                                ),
-                              ),
-                            ),
-                            Container(
-                              padding:
-                                  const EdgeInsets.symmetric(
-                                    horizontal: 8,
-                                    vertical: 4,
-                                  ),
-                              decoration: BoxDecoration(
-                                color: primary
-                                    .withOpacity(.09),
-                                borderRadius:
-                                    BorderRadius.circular(
-                                      6,
-                                    ),
-                              ),
-                              child: Text(
-                                '${batchSubmissions.length} attempts',
-                                style: const TextStyle(
-                                  color: primary,
-                                  fontSize: 9,
-                                  fontWeight:
-                                      FontWeight.w800,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 10),
-
-                        Row(
-                          children: [
-                            _metricCard(
-                              title: 'AVERAGE SCORE',
-                              value:
-                                  avgBatchScore
-                                      .toStringAsFixed(1),
-                              icon:
-                                  Icons
-                                      .leaderboard_outlined,
-                              color: primary,
-                            ),
-                            const SizedBox(width: 8),
-                            _metricCard(
-                              title: 'OVERALL ACCURACY',
-                              value:
-                                  '$overallAccuracy%',
-                              icon:
-                                  Icons
-                                      .track_changes_rounded,
-                              color: purple,
-                            ),
-                          ],
-                        ),
-                        const SizedBox(height: 8),
-
-                        Container(
-                          width: double.infinity,
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 12,
-                            vertical: 9,
-                          ),
-                          decoration: BoxDecoration(
-                            color: cardColor,
-                            borderRadius: BorderRadius.circular(12),
-                            border: Border.all(
-                              color: widget.isDarkMode
-                                  ? const Color(0xFF263449)
-                                  : const Color(0xFFE2E8F0),
+                        Expanded(
+                          child: Text(
+                            'Verified Classroom Roster',
+                            style: TextStyle(
+                              color: textColor,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w800,
                             ),
                           ),
-                          child: Row(
+                        ),
+                        Text(
+                          '${filteredEnrolled.length} enrolled',
+                          style: TextStyle(
+                            color: mutedTextColor,
+                            fontSize: 9.5,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 8),
+
+                    if (filteredEnrolled.isEmpty)
+                      _emptyStateContainer(
+                        icon: Icons.person_off_outlined,
+                        title: 'No enrolled students found',
+                        subtitle: 'No candidates enrolled in this batch yet or match the search.',
+                      )
+                    else
+                      ...filteredEnrolled.map((st) => _enrolledDirectoryCard(st)),
+                  ] else ...[
+                    // VIEW 2: TEST ATTEMPTS & ANALYTICS
+                    Container(
+                      padding: const EdgeInsets.all(12),
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: widget.isDarkMode
+                              ? const [Color(0xFF172554), Color(0xFF172033)]
+                              : const [Color(0xFFEFF6FF), Colors.white],
+                        ),
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(color: primary.withOpacity(.14)),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
                             children: [
-                              Container(
-                                padding: const EdgeInsets.all(6),
-                                decoration: BoxDecoration(
-                                  color: danger.withOpacity(.10),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: const Icon(
-                                  Icons.priority_high_rounded,
-                                  color: danger,
-                                  size: 16,
+                              Expanded(
+                                child: Text(
+                                  _selectedBatchFilter == 'ALL'
+                                      ? 'Overall Performance'
+                                      : 'Batch Performance',
+                                  style: TextStyle(
+                                    color: textColor,
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w800,
+                                  ),
                                 ),
                               ),
-                              const SizedBox(width: 10),
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'TOP WEAK AREA',
-                                      style: TextStyle(
-                                        color: mutedTextColor,
-                                        fontSize: 8.5,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Text(
-                                      topWeakArea,
-                                      maxLines: 1,
-                                      overflow: TextOverflow.ellipsis,
-                                      style: TextStyle(
-                                        color: textColor,
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w800,
-                                      ),
-                                    ),
-                                  ],
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                decoration: BoxDecoration(
+                                  color: primary.withOpacity(.09),
+                                  borderRadius: BorderRadius.circular(6),
+                                ),
+                                child: Text(
+                                  '${batchSubmissions.length} attempts',
+                                  style: const TextStyle(
+                                    color: primary,
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w800,
+                                  ),
                                 ),
                               ),
                             ],
                           ),
-                        ),
-                      ],
-                    ),
-                  ),
+                          const SizedBox(height: 10),
 
-                  const SizedBox(height: 16),
-
-                  // ------------------------------------------------------------
-                  // TEST FILTER
-                  // ------------------------------------------------------------
-
-                  _sectionTitle(
-                    'Assessment',
-                    subtitle:
-                        'Filter students by CBT mock drill',
-                  ),
-                  const SizedBox(height: 8),
-
-                  SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: [
-                        _filterButton(
-                          label:
-                              'All Tests (${batchSubmissions.length})',
-                          icon:
-                              Icons
-                                  .view_list_outlined,
-                          selected:
-                              _selectedTestId ==
-                              'ALL',
-                          onTap: () {
-                            setState(() {
-                              _selectedTestId =
-                                  'ALL';
-                            });
-                          },
-                        ),
-                        ...batchTests.map((t) {
-                          final String testId =
-                              (t['id'] ?? '')
-                                  .toString();
-
-                          final int count =
-                              batchSubmissions
-                                  .where(
-                                    (s) =>
-                                        (s['test_id'] ??
-                                                '')
-                                            .toString() ==
-                                        testId,
-                                  )
-                                  .length;
-
-                          return Padding(
-                            padding:
-                                const EdgeInsets.only(
-                                  left: 7,
-                                ),
-                            child: _filterButton(
-                              label:
-                                  '${_testTitle(t)} ($count)',
-                              icon:
-                                  Icons
-                                      .assignment_outlined,
-                              selected:
-                                  _selectedTestId ==
-                                  testId,
-                              onTap: () {
-                                setState(() {
-                                  _selectedTestId =
-                                      testId;
-                                });
-                              },
-                            ),
-                          );
-                        }),
-                      ],
-                    ),
-                  ),
-
-                  const SizedBox(height: 14),
-
-                  // ------------------------------------------------------------
-                  // LIST HEADER
-                  // ------------------------------------------------------------
-
-                  Row(
-                    children: [
-                      Expanded(
-                        child: Text(
-                          'Student Attempts',
-                          style: TextStyle(
-                            color: textColor,
-                            fontSize: 13,
-                            fontWeight: FontWeight.w800,
+                          Row(
+                            children: [
+                              _metricCard(
+                                title: 'AVERAGE SCORE',
+                                value: avgBatchScore.toStringAsFixed(1),
+                                icon: Icons.leaderboard_outlined,
+                                color: primary,
+                              ),
+                              const SizedBox(width: 8),
+                              _metricCard(
+                                title: 'OVERALL ACCURACY',
+                                value: '$overallAccuracy%',
+                                icon: Icons.track_changes_rounded,
+                                color: purple,
+                              ),
+                            ],
                           ),
-                        ),
-                      ),
-                      Text(
-                        '${filteredSubmissions.length} shown',
-                        style: TextStyle(
-                          color: mutedTextColor,
-                          fontSize: 9.5,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
-                  ),
+                          const SizedBox(height: 8),
 
-                  const SizedBox(height: 8),
-
-                  // ------------------------------------------------------------
-                  // STUDENTS
-                  // ------------------------------------------------------------
-
-                  if (filteredSubmissions.isEmpty)
-                    Container(
-                      padding: const EdgeInsets.symmetric(
-                        vertical: 55,
-                        horizontal: 20,
-                      ),
-                      decoration: BoxDecoration(
-                        color: cardColor,
-                        borderRadius:
-                            BorderRadius.circular(15),
-                        border: Border.all(
-                          color:
-                              widget.isDarkMode
-                                  ? const Color(
-                                    0xFF263449,
-                                  )
-                                  : const Color(
-                                    0xFFE2E8F0,
-                                  ),
-                        ),
-                      ),
-                      child: Column(
-                        children: [
                           Container(
-                            width: 54,
-                            height: 54,
+                            width: double.infinity,
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
                             decoration: BoxDecoration(
-                              color: primary
-                                  .withOpacity(.08),
-                              shape: BoxShape.circle,
+                              color: cardColor,
+                              borderRadius: BorderRadius.circular(12),
+                              border: Border.all(
+                                color: widget.isDarkMode
+                                    ? const Color(0xFF263449)
+                                    : const Color(0xFFE2E8F0),
+                              ),
                             ),
-                            child: const Icon(
-                              Icons
-                                  .assignment_turned_in_outlined,
-                              color: primary,
-                              size: 25,
-                            ),
-                          ),
-                          const SizedBox(height: 12),
-                          Text(
-                            'No attempts found',
-                            style: TextStyle(
-                              color: textColor,
-                              fontSize: 13,
-                              fontWeight:
-                                  FontWeight.w800,
-                            ),
-                          ),
-                          const SizedBox(height: 4),
-                          Text(
-                            'Try changing the selected batch or assessment.',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: mutedTextColor,
-                              fontSize: 10.5,
+                            child: Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.all(6),
+                                  decoration: BoxDecoration(
+                                    color: danger.withOpacity(.10),
+                                    borderRadius: BorderRadius.circular(8),
+                                  ),
+                                  child: const Icon(
+                                    Icons.priority_high_rounded,
+                                    color: danger,
+                                    size: 16,
+                                  ),
+                                ),
+                                const SizedBox(width: 10),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'TOP WEAK AREA',
+                                        style: TextStyle(
+                                          color: mutedTextColor,
+                                          fontSize: 8.5,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                      ),
+                                      Text(
+                                        topWeakArea,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          color: textColor,
+                                          fontSize: 13,
+                                          fontWeight: FontWeight.w800,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],
                       ),
-                    )
-                  else
-                    ...filteredSubmissions.map(
-                      (raw) => _studentCard(
-                        Map<String, dynamic>.from(raw),
+                    ),
+
+                    const SizedBox(height: 16),
+
+                    _sectionTitle(
+                      'Assessment',
+                      subtitle: 'Filter students by CBT mock drill',
+                    ),
+                    const SizedBox(height: 8),
+
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        children: [
+                          _filterButton(
+                            label: 'All Tests (${batchSubmissions.length})',
+                            icon: Icons.view_list_outlined,
+                            selected: _selectedTestId == 'ALL',
+                            onTap: () {
+                              setState(() {
+                                _selectedTestId = 'ALL';
+                              });
+                            },
+                          ),
+                          ...batchTests.map((t) {
+                            final String testId = (t['id'] ?? '').toString();
+                            final int count = batchSubmissions
+                                .where((s) => (s['test_id'] ?? '').toString() == testId)
+                                .length;
+
+                            return Padding(
+                              padding: const EdgeInsets.only(left: 7),
+                              child: _filterButton(
+                                label: '${_testTitle(t)} ($count)',
+                                icon: Icons.assignment_outlined,
+                                selected: _selectedTestId == testId,
+                                onTap: () {
+                                  setState(() {
+                                    _selectedTestId = testId;
+                                  });
+                                },
+                              ),
+                            );
+                          }),
+                        ],
                       ),
                     ),
+
+                    const SizedBox(height: 14),
+
+                    // Search input
+                    _searchBar('Search student name, phone, or weak concept...'),
+
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            'Student Attempts',
+                            style: TextStyle(
+                              color: textColor,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                        ),
+                        Text(
+                          '${filteredSubmissions.length} shown',
+                          style: TextStyle(
+                            color: mutedTextColor,
+                            fontSize: 9.5,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    const SizedBox(height: 8),
+
+                    if (filteredSubmissions.isEmpty)
+                      _emptyStateContainer(
+                        icon: Icons.assignment_turned_in_outlined,
+                        title: 'No attempts found',
+                        subtitle: 'Try changing your search query or assessment filter.',
+                      )
+                    else
+                      ...filteredSubmissions.map(
+                        (raw) => _studentCard(
+                          Map<String, dynamic>.from(raw),
+                        ),
+                      ),
+                  ],
                 ],
               ),
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _emptyStateContainer({
+    required IconData icon,
+    required String title,
+    required String subtitle,
+  }) {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        vertical: 48,
+        horizontal: 20,
+      ),
+      decoration: BoxDecoration(
+        color: cardColor,
+        borderRadius: BorderRadius.circular(15),
+        border: Border.all(
+          color: widget.isDarkMode
+              ? const Color(0xFF263449)
+              : const Color(0xFFE2E8F0),
+        ),
+      ),
+      child: Column(
+        children: [
+          Container(
+            width: 50,
+            height: 50,
+            decoration: BoxDecoration(
+              color: primary.withOpacity(.08),
+              shape: BoxShape.circle,
+            ),
+            child: Icon(icon, color: primary, size: 24),
+          ),
+          const SizedBox(height: 12),
+          Text(
+            title,
+            style: TextStyle(
+              color: textColor,
+              fontSize: 13,
+              fontWeight: FontWeight.w800,
+            ),
+          ),
+          const SizedBox(height: 4),
+          Text(
+            subtitle,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: mutedTextColor,
+              fontSize: 10.5,
+            ),
+          ),
+        ],
       ),
     );
   }
