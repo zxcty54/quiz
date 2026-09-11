@@ -30,11 +30,12 @@ class _QuizScreenState extends State<QuizScreen> {
 
   Future<void> _fetchQuestions() async {
     try {
-      final url = "https://raw.githubusercontent.com/zxcty54/quiz/main/${widget.jsonPath}";
+      // 🚀 Updated Base URL to content_base repository
+      final url = "https://raw.githubusercontent.com/zxcty54/content_base/main/${widget.jsonPath}";
       final res = await http.get(Uri.parse(url));
 
       if (res.statusCode == 200) {
-        List body = jsonDecode(res.body);
+        List body = jsonDecode(utf8.decode(res.bodyBytes));
         List<Question> questions = body.map((i) => Question.fromJson(i)).toList();
 
         if (mounted && questions.isNotEmpty) {
