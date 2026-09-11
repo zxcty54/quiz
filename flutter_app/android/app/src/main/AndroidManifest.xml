@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.testing">
+    package="online.mocktester.app">
 
     <!-- Network Access -->
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -8,18 +8,15 @@
     <!-- Haptic Feedback Vibration -->
     <uses-permission android:name="android.permission.VIBRATE"/>
 
-    <!-- Camera for Doubt Photos -->
+    <!-- Camera for Doubt Photos / Profile Uploads -->
     <uses-permission android:name="android.permission.CAMERA"/>
 
     <!-- Android 13+ Push Notification Permission -->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
 
-    <!-- Storage Permissions for All Android Versions -->
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    
-    <!-- Android 11+ (API 30+) Full File Access for Offline GGUF Models -->
-    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <!-- Standard Storage Permissions -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
 
     <!-- Android 13+ (API 33+) Media Permissions -->
     <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
