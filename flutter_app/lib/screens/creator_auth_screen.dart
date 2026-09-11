@@ -36,15 +36,13 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
     });
 
     try {
-      // 🛡️ 1. Master Admin Check
-      final adminResList = await Supabase.instance.client
-          .from('admin_config')
-          .select()
-          .eq('admin_handle', handle)
-          .eq('master_pin', pin)
-          .limit(1);
+      // 🛡️ 1. Master Admin Check (Via Secure Server-Side RPC Function)
+      final bool isMasterAdmin = await Supabase.instance.client.rpc(
+        'verify_admin_pin',
+        params: {'input_handle': handle, 'input_pin': pin},
+      );
 
-      if (adminResList.isNotEmpty) {
+      if (isMasterAdmin) {
         final prefs = await SharedPreferences.getInstance();
         await prefs.setString('logged_in_creator_handle', 'admin');
 
@@ -127,7 +125,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
     }
   }
 
-  // 📝 Register Modal (Without in-app image picker, photos via WhatsApp)
+  // 📝 Register Modal
   void _openRegisterDialog() {
     final regNameCtrl = TextEditingController();
     final regHandleCtrl = TextEditingController();
@@ -209,7 +207,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                 ),
                 const SizedBox(height: 4),
 
-                // 📌 Handle Format Guidelines
+                // Handle format hint
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
@@ -235,7 +233,6 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                 ),
                 const SizedBox(height: 10),
 
-                // 🎯 Target Exam Dropdown
                 DropdownButtonFormField<String>(
                   value: selectedCategory,
                   isExpanded: true,
@@ -281,7 +278,6 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                               return;
                             }
 
-                            // 🛡️ Strict Professional Handle Validation
                             final handleRegex = RegExp(r'^[a-z0-9_]{3,25}$');
                             if (!handleRegex.hasMatch(h)) {
                               ScaffoldMessenger.of(context).showSnackBar(
@@ -295,7 +291,6 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
 
                             setModalState(() => isSubmitting = true);
                             try {
-                              // Check handle existence
                               final existing = await Supabase.instance.client
                                   .from('creator_profiles')
                                   .select('handle_id')
@@ -312,10 +307,8 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                                 return;
                               }
 
-                              // 🎲 Generate Random PIN
                               final randomPin = (1000 + Random().nextInt(9000)).toString();
 
-                              // 1. Insert Profile (Matches DB 'secret_pin' column)
                               await Supabase.instance.client.from('creator_profiles').insert({
                                 'handle_id': h,
                                 'name': name,
@@ -326,7 +319,6 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                                 'is_approved': false,
                               });
 
-                              // 2. Insert Coaching
                               await Supabase.instance.client.from('coachings').insert({
                                 'name': name,
                                 'owner_name': h,
@@ -335,7 +327,6 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                                 'is_approved': false,
                               });
 
-                              // 3. Send Details to Telegram Admin
                               await AdminTelegramAlert.sendCreatorApprovalRequest(
                                 name: name,
                                 handle: h,
@@ -347,7 +338,6 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
 
                               if (ctx.mounted) Navigator.pop(ctx);
 
-                              // 4. Show Confirmation Dialog with WhatsApp Action
                               if (context.mounted) {
                                 showDialog(
                                   context: context,
@@ -391,7 +381,7 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                                         label: const Text('Send on WhatsApp'),
                                         onPressed: () async {
                                           Navigator.pop(dCtx);
-                                          const String whatsappNumber = '91XXXXXXXXXX'; // 👈 Apna WhatsApp number dalein
+                                          const String whatsappNumber = '91XXXXXXXXXX';
                                           final String text = Uri.encodeComponent(
                                             'Hello MockTester Team, maine coaching register ki hai.\n'
                                             'Handle ID: @$h\n'
@@ -474,9 +464,9 @@ class _CreatorAuthScreenState extends State<CreatorAuthScreen> {
                       child: const Icon(Icons.verified_user_rounded, color: Color(0xFF2563EB), size: 28),
                     ),
                     const SizedBox(width: 12),
-                    Column(
+                    const Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         Text('Institute Studio Portal', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
                         Text('Manage Batches, Mocks & Analytics', style: TextStyle(color: Colors.grey, fontSize: 12)),
                       ],
