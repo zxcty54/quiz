@@ -45,7 +45,8 @@ jobs:
         working-directory: flutter_app
         run: |
           rm -rf android/app/src/main/java
-          flutter create . --platforms=android --org com --project-name testing
+          rm -rf android/app/src/main/kotlin
+          flutter create . --platforms=android --org com.mocktester --project-name mocktester
 
       - name: Configure Global Gradle Properties
         working-directory: flutter_app/android
@@ -59,9 +60,9 @@ jobs:
 
       - name: Inject Clean Flutter MainActivity.kt
         run: |
-          mkdir -p flutter_app/android/app/src/main/kotlin/com/testing
-          cat << 'EOF' > flutter_app/android/app/src/main/kotlin/com/testing/MainActivity.kt
-          package com.testing
+          mkdir -p flutter_app/android/app/src/main/kotlin/com/mocktester/app
+          cat << 'EOF' > flutter_app/android/app/src/main/kotlin/com/mocktester/app/MainActivity.kt
+          package com.mocktester.app
 
           import io.flutter.embedding.android.FlutterActivity
 
@@ -73,7 +74,7 @@ jobs:
         run: |
           cat << 'EOF' > flutter_app/android/app/src/main/AndroidManifest.xml
           <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-              package="com.testing">
+              package="com.mocktester.app">
 
               <uses-permission android:name="android.permission.INTERNET"/>
               <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -160,7 +161,9 @@ jobs:
             cat << 'EOF' >> "$APP_KTS"
 
             android {
+                namespace = "com.mocktester.app"
                 defaultConfig {
+                    applicationId = "com.mocktester.app"
                     minSdk = 26
                 }
                 compileOptions {
@@ -189,7 +192,9 @@ jobs:
             cat << 'EOF' >> "$APP_GROOVY"
 
             android {
+                namespace 'com.mocktester.app'
                 defaultConfig {
+                    applicationId "com.mocktester.app"
                     minSdkVersion 26
                 }
                 compileOptions {
@@ -227,7 +232,14 @@ jobs:
 
       - name: Build Pure Offline Release APK via Flutter
         working-directory: flutter_app
-        run: flutter build apk --release --target-platform=android-arm64 --no-tree-shake-icons
+        run: |
+          flutter build apk --release --target-platform=android-arm64 --no-tree-shake-icons \
+            --dart-define=GOOGLE_API_KEY=${{ secrets.GOOGLE_API_KEY }} \
+            --dart-define=GOOGLE_API_KEY2=${{ secrets.GOOGLE_API_KEY2 }} \
+            --dart-define=GROQ_API_KEY=${{ secrets.GROQ_API_KEY }} \
+            --dart-define=GROQ_API_KEY2=${{ secrets.GROQ_API_KEY2 }} \
+            --dart-define=TELEGRAM_TOKEN=${{ secrets.TELEGRAM_TOKEN }} \
+            --dart-define=TELEGRAM_TO=${{ secrets.TELEGRAM_TO }}
 
       - name: Locate & Package APK
         working-directory: flutter_app
@@ -253,5 +265,5 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} (Offline Native Qwen Engine) APK Ready!"
+          message: "🚀 MockTester Build #${{ github.run_number }} APK Ready!"
           document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
