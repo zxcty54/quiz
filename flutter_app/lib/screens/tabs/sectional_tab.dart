@@ -41,7 +41,7 @@ class _SectionalTabState extends State<SectionalTab> {
     }
   }
 
-  // 1️⃣ Pehle Disk Storage se padho (0ms instant load), fir background live fetch
+  // 1️⃣ Disk Storage load (0ms instant load), background live fetch
   Future<void> _loadFromDiskAndFetch() async {
     final prefs = await SharedPreferences.getInstance();
     final String? savedJson = prefs.getString('persistent_sectional_data_json');
@@ -76,16 +76,16 @@ class _SectionalTabState extends State<SectionalTab> {
     }
   }
 
-  // 🚀 DIRECT GITHUB FETCHER + PERMANENT DISK SAVE
+  // 🚀 DIRECT GITHUB FETCHER (content_base) + PERMANENT DISK SAVE
   Future<void> _fetchLiveGitHubData() async {
     if (!mounted) return;
     setState(() => _isLoading = true);
 
     final int ts = DateTime.now().millisecondsSinceEpoch;
     final List<String> urls = [
-      "https://raw.githubusercontent.com/zxcty54/quiz/main/sectional_data.json?t=$ts",
-      "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/sectional_data.json?t=$ts",
-      "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/sectional_data.json?t=$ts",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/sectional_data.json?t=$ts",
+      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/sectional_data.json?t=$ts",
+      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/sectional_data.json?t=$ts",
     ];
 
     for (String url in urls) {
@@ -238,7 +238,7 @@ class _SectionalTabState extends State<SectionalTab> {
                 style: TextStyle(color: Colors.grey, fontSize: 12)),
             const SizedBox(height: 12),
 
-            // ⚡ HIGH-IMPACT REAL-TIME EXAM ENGINE BANNER (Unmissable & Authoritative)
+            // Banner
             Container(
               width: double.infinity,
               margin: const EdgeInsets.only(bottom: 14),
@@ -337,7 +337,7 @@ class _SectionalTabState extends State<SectionalTab> {
               ),
             ),
 
-            // 🚀 CLEAN NON-SCROLL WRAP (Exam Selector Pills)
+            // Exam Selector Pills
             Wrap(
               spacing: 8.0,
               runSpacing: 8.0,
@@ -423,7 +423,7 @@ class _SectionalTabState extends State<SectionalTab> {
             const Divider(height: 1, thickness: 0.8),
             const SizedBox(height: 14),
 
-            // 📋 SETS PANEL
+            // Sets Panel
             if (_selectedExamPanel != null)
               _buildDynamicSectionalSetsPanel(context, _selectedExamPanel!),
           ],
@@ -436,7 +436,7 @@ class _SectionalTabState extends State<SectionalTab> {
     final dynamic panelData = _liveData[examKey];
     if (panelData == null) return const SizedBox.shrink();
 
-    // 1️⃣ Map Format (BPSC PCS)
+    // Map Format
     if (panelData is Map && panelData.containsKey('total_sets')) {
       int count = panelData['total_sets'] ?? 10;
       int upcomingCount = panelData['upcoming_sets'] ?? 0;
@@ -491,7 +491,7 @@ class _SectionalTabState extends State<SectionalTab> {
       );
     }
 
-    // 2️⃣ List / Items Format (Bihar Amin, BSSC, SSC, Bihar SI, etc.)
+    // List / Items Format
     List items = [];
     if (panelData is List) {
       items = panelData;
