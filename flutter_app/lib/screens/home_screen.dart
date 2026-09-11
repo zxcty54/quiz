@@ -129,6 +129,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   Future<dynamic> _fetchRobustJson(String path) async {
     String cleanPath = path.trim();
     cleanPath = cleanPath
+        .replaceAll('https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/', '')
+        .replaceAll('https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/', '')
+        .replaceAll('https://raw.githubusercontent.com/zxcty54/content_base/main/', '')
+        .replaceAll('https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/', '')
+        .replaceAll('https://cdn.statically.io/gh/zxcty54/content_base/main/', '')
+        .replaceAll('https://raw.githack.com/zxcty54/content_base/main/', '')
         .replaceAll('https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/', '')
         .replaceAll('https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/', '')
         .replaceAll('https://raw.githubusercontent.com/zxcty54/quiz/main/', '')
@@ -142,7 +148,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(cleanPath);
 
-    final String apiUrl = "https://api.github.com/repos/zxcty54/quiz/contents/$encodedPath?ref=main&t=$ts";
+    // 🚀 Updated: Point to public content_base repo
+    final String apiUrl = "https://api.github.com/repos/zxcty54/content_base/contents/$encodedPath?ref=main&t=$ts";
     try {
       final apiRes = await http.get(
         Uri.parse(apiUrl),
@@ -165,12 +172,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       }
     } catch (_) {}
 
+    // 🚀 Updated: Mirror URLs pointing to content_base
     List<String> mirrorUrls = [
-      "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
-      "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
-      "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
-      "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
-      "https://raw.githubusercontent.com/zxcty54/quiz/main/$encodedPath?t=$ts",
+      "https://raw.githack.com/zxcty54/content_base/main/$encodedPath",
+      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
+      "https://cdn.statically.io/gh/zxcty54/content_base/main/$encodedPath",
+      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/$encodedPath?t=$ts",
     ];
 
     for (String url in mirrorUrls) {
