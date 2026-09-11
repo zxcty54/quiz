@@ -39,34 +39,51 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
         });
       }
     } catch (e) {
+      debugPrint("Admin Control Load Error: $e");
       if (mounted) setState(() => _isLoading = false);
     }
   }
 
-  // 🔴 1. Delete Any Post Instantly
-  Future<void> _deletePost(int postId) async {
+  // 🔴 1. Delete Any Post Instantly (Dynamic Post ID)
+  Future<void> _deletePost(dynamic postId) async {
     HapticFeedback.heavyImpact();
-    await client.from('community_posts').delete().eq('id', postId);
-    _loadAllAdminData();
-    if (mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('🗑️ Post purged permanently from feed!'), backgroundColor: Colors.red),
-      );
+    try {
+      await client.from('community_posts').delete().eq('id', postId);
+      _loadAllAdminData();
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('🗑️ Post purged permanently from feed!'), backgroundColor: Colors.red),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Delete failed: $e'), backgroundColor: Colors.black87),
+        );
+      }
     }
   }
 
   // ⚡ 2. Toggle Creator Block / Ban
   Future<void> _toggleCreatorBlock(String handle, bool currentStatus) async {
     HapticFeedback.mediumImpact();
-    await client.from('creator_profiles').update({'is_blocked': !currentStatus}).eq('handle_id', handle);
-    _loadAllAdminData();
-    if (mounted) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text(!currentStatus ? '🚫 Creator @$handle Blocked!' : '✅ Creator @$handle Unblocked!'),
-          backgroundColor: !currentStatus ? Colors.red : Colors.green,
-        ),
-      );
+    try {
+      await client.from('creator_profiles').update({'is_blocked': !currentStatus}).eq('handle_id', handle);
+      _loadAllAdminData();
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text(!currentStatus ? '🚫 Creator @$handle Blocked!' : '✅ Creator @$handle Unblocked!'),
+            backgroundColor: !currentStatus ? Colors.red : Colors.green,
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Action failed: $e'), backgroundColor: Colors.black87),
+        );
+      }
     }
   }
 
@@ -109,19 +126,27 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
                   if (text.isEmpty) return;
 
                   Navigator.pop(ctx);
-                  await client.from('community_posts').insert({
-                    'creator_id': 'admin',
-                    'author_name': 'Official Admin 🛡️',
-                    'content': '🚨 **${titleCtrl.text.trim()}**\n\n$text',
-                    'tag': 'Exam Gossip 🔥',
-                    'views_count': 500,
-                  });
+                  try {
+                    await client.from('community_posts').insert({
+                      'creator_id': 'admin',
+                      'author_name': 'Official Admin 🛡️',
+                      'content': '🚨 **${titleCtrl.text.trim()}**\n\n$text',
+                      'tag': 'Exam Gossip 🔥',
+                      'views_count': 500,
+                    });
 
-                  if (mounted) {
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(content: Text('🚀 Official Admin Alert live on feed!'), backgroundColor: Color(0xFF16A34A)),
-                    );
-                    _loadAllAdminData();
+                    if (mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        const SnackBar(content: Text('🚀 Official Admin Alert live on feed!'), backgroundColor: Color(0xFF16A34A)),
+                      );
+                      _loadAllAdminData();
+                    }
+                  } catch (e) {
+                    if (mounted) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(content: Text('Broadcast failed: $e'), backgroundColor: Colors.black87),
+                      );
+                    }
                   }
                 },
                 child: const Text('Broadcast Pinned Notice 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
