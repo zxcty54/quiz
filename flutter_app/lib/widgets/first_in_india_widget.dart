@@ -18,7 +18,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
   int _activeIndex = 0;
   final PageController _pageController = PageController();
 
-  // ✅ FIX: 'static const' added here
+  // ✅ Static Website Reference
   static const String _websiteFullDataUrl = "https://www.mocktester.online/p/indias-first-in-news-2026.html";
 
   @override
@@ -70,7 +70,8 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
     }
 
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
-    final String newsUrl = "https://raw.githubusercontent.com/zxcty54/quiz/refs/heads/main/app_alerts_news.json?t=$timestamp";
+    // 🚀 Updated: Pointing to public content_base repository
+    final String newsUrl = "https://raw.githubusercontent.com/zxcty54/content_base/main/app_alerts_news.json?t=$timestamp";
 
     try {
       final res = await http.get(Uri.parse(newsUrl)).timeout(const Duration(seconds: 5));
@@ -183,11 +184,9 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
             setState(() => _activeIndex = index);
           },
           itemBuilder: (context, index) {
-            // IF LAST CARD ➔ SHOW WEBSITE LINK CARD
             if (index == _alertNewsList.length) {
               return _buildWebsiteRedirectLastCard();
             }
-            // REGULAR NEWS CARDS
             return _buildAlertNewsCard(_alertNewsList[index]);
           },
         ),
