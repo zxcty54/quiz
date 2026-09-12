@@ -104,7 +104,8 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
     }
 
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
-    final String newsUrl = "https://raw.githubusercontent.com/zxcty54/quiz/main/finalnews.json?t=$timestamp";
+    // 🚀 Updated: Point to public content_base repository
+    final String newsUrl = "https://raw.githubusercontent.com/zxcty54/content_base/main/finalnews.json?t=$timestamp";
 
     try {
       final res = await http.get(Uri.parse(newsUrl)).timeout(const Duration(seconds: 5));
@@ -141,7 +142,6 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
         national = data['national_news'];
       }
     } else if (data is List) {
-      // Fallback in case JSON is flat list
       national = data;
     }
 
@@ -246,9 +246,8 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
             ),
           )
         else ...[
-          // DYNAMIC EXPANDABLE PAGE VIEW (WITHOUT VERTICAL SCROLL)
           ExpandablePageView(
-            key: ValueKey(_selectedNewsTab), // Reset on tab switch
+            key: ValueKey(_selectedNewsTab),
             controller: _newsPageController,
             itemCount: activeList.length,
             onPageChanged: (index) {
@@ -320,7 +319,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
     );
   }
 
-  // 📇 FULL NEWS CARD (CLEAN & DYNAMIC)
+  // 📇 FULL NEWS CARD
   Widget _buildUltraPremiumNewsCard(Map<String, dynamic> news) {
     final List bullets = (news['bullets'] as List?) ?? [];
     bool isSaved = _savedNewsList.any((item) => item['title'] == news['title']);
@@ -347,7 +346,6 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          // 1. EXAM TAG, DATE & BOOKMARK
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -407,7 +405,6 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
           ),
           const SizedBox(height: 10),
 
-          // 2. FULL TITLE (NO CUTTING / NO TRUNCATION)
           Text(
             news['title'] ?? '',
             style: TextStyle(
@@ -420,7 +417,6 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
           ),
           const SizedBox(height: 10),
 
-          // 3. BULLET POINTS
           Column(
             children: bullets.map((bullet) {
               return Padding(
