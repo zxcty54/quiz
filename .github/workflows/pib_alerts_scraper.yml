@@ -19,16 +19,26 @@ jobs:
 
     steps:
       # =====================================================
-      # 1. CHECKOUT CODE
+      # 1. CHECKOUT PRIVATE CODE
       # =====================================================
-      - name: Checkout Code
+      - name: Checkout Code from Private Repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: main
 
       # =====================================================
-      # 2. SETUP PYTHON
+      # 2. CHECKOUT TARGET PUBLIC REPO (content_base)
+      # =====================================================
+      - name: Checkout Public Content Base
+        uses: actions/checkout@v4
+        with:
+          repository: 'zxcty54/content_base'
+          token: ${{ secrets.GH_PAT_TOKEN }}
+          path: 'content_base_repo'
+
+      # =====================================================
+      # 3. SETUP PYTHON
       # =====================================================
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -36,7 +46,7 @@ jobs:
           python-version: "3.10"
 
       # =====================================================
-      # 3. INSTALL ALL DEPENDENCIES
+      # 4. INSTALL ALL DEPENDENCIES
       # =====================================================
       - name: Install Dependencies
         run: |
@@ -50,26 +60,36 @@ jobs:
             curl_cffi
 
       # =====================================================
-      # 4. RUN SCRAPER SCRIPT
+      # 5. RUN SCRAPER SCRIPT
       # =====================================================
       - name: Run PIB Alerts Scraper Script
         env:
           PIB_ALERT_FEED_URL: "https://www.google.com/alerts/feeds/18398184577640792063/4294037665781559395"
         run: |
+          echo "📥 Checking existing rawnews.json from content_base..."
+          if [ -f content_base_repo/rawnews.json ]; then
+            cp content_base_repo/rawnews.json ./rawnews.json
+            echo "✅ Existing rawnews.json loaded from content_base."
+          fi
+
           python pib_alerts_scraper.py
 
+          echo "📋 Copying updated rawnews.json to content_base folder..."
+          cp rawnews.json content_base_repo/rawnews.json
+
       # =====================================================
-      # 5. COMMIT & PUSH RAWNEWS.JSON
+      # 6. COMMIT & PUSH TO content_base REPO
       # =====================================================
-      - name: Commit and Push rawnews.json
+      - name: Commit and Push rawnews.json to content_base
         run: |
+          cd content_base_repo
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
 
           git add rawnews.json
 
           if git diff --cached --quiet; then
-            echo "ℹ️ No changes to commit in rawnews.json"
+            echo "ℹ️ No changes to commit. rawnews.json is already up to date in content_base."
             exit 0
           fi
 
@@ -77,4 +97,4 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
 
-          echo "✅ rawnews.json pushed successfully."
+          echo "🚀 [SUCCESS] rawnews.json successfully updated with PIB alerts and pushed to zxcty54/content_base!"
