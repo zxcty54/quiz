@@ -18,20 +18,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. CHECKOUT
-      - name: Checkout Code
+      # 1. CHECKOUT PRIVATE SCRAPER CODE
+      - name: Checkout Scraper Code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: main
 
-      # 2. SETUP PYTHON
+      # 2. CHECKOUT TARGET PUBLIC REPO (content_base)
+      - name: Checkout Public Content Base
+        uses: actions/checkout@v4
+        with:
+          repository: 'zxcty54/content_base'
+          token: ${{ secrets.GH_PAT_TOKEN }}
+          path: 'content_base_repo'
+
+      # 3. SETUP PYTHON
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # 3. INSTALL DEPENDENCIES
+      # 4. INSTALL DEPENDENCIES
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
@@ -45,15 +53,21 @@ jobs:
             feedparser \
             googlenewsdecoder
 
-      # 4. RUN SCRAPER
+      # 5. RUN SCRAPER
       - name: Run Scraper Script
         env:
           SCRAPINGANT_API_KEY: ${{ secrets.SCRAPINGANT_API_KEY }}
         run: |
+          # Agar content_base me pehle se rawnews.json maujood hai, to use base banane ke liye load karein
+          if [ -f content_base_repo/rawnews.json ]; then
+            cp content_base_repo/rawnews.json ./rawnews.json
+            echo "✅ Existing rawnews.json loaded from content_base."
+          fi
+
           python scraper.py
 
-      # 5. CHECK JSON
-      - name: Check rawnews.json
+      # 6. CHECK & VALIDATE JSON
+      - name: Check and Validate rawnews.json
         run: |
           if [ ! -f rawnews.json ]; then
             echo "❌ rawnews.json was not created."
@@ -63,13 +77,7 @@ jobs:
           echo "========================================="
           echo "✅ rawnews.json exists"
           echo "========================================="
-
-          echo ""
-          echo "📦 File size:"
           du -h rawnews.json
-
-          echo ""
-          echo "🔎 JSON validation:"
 
           python - << 'PY'
           import json
@@ -80,28 +88,22 @@ jobs:
                   data = json.load(f)
 
               print("✅ Valid JSON")
-              print("🇮🇳 National:", data.get("national_raw_count", 0))
-              print("🏛️ Bihar:", data.get("bihar_raw_count", 0))
-
               national = data.get("national_raw_news", [])
               bihar = data.get("bihar_raw_news", [])
 
-              print("\nNational records:", len(national))
-              print("Bihar records:", len(bihar))
+              print("🇮🇳 National records:", len(national))
+              print("🏛️ Bihar records:", len(bihar))
 
               if len(national) == 0 and len(bihar) == 0:
                   print("\n❌ SCRAPER RETURNED ZERO NEWS")
-                  print("❌ Existing rawnews.json will NOT be committed.")
                   sys.exit(2)
 
               all_items = national + bihar
               bad = 0
-
-              for i, item in enumerate(all_items, 1):
+              for item in all_items:
                   title = str(item.get("title", "")).strip()
                   content = str(item.get("content", "")).strip()
                   url = str(item.get("url", "")).strip()
-
                   if not title or not url or not content or content == title:
                       bad += 1
 
@@ -113,51 +115,20 @@ jobs:
               sys.exit(1)
           PY
 
-      # 6. SAVE GENERATED JSON TEMPORARILY
-      - name: Protect Generated JSON
+      # 7. COMMIT AND PUSH TO content_base REPO
+      - name: Commit and Push rawnews.json to content_base
         run: |
-          cp rawnews.json /tmp/rawnews.generated.json
-          echo "✅ Generated rawnews.json backed up."
+          echo "📋 Copying fresh rawnews.json into content_base folder..."
+          cp rawnews.json content_base_repo/rawnews.json
 
-      # 7. SYNC WITH LATEST MAIN
-      - name: Sync With Latest Main
-        run: |
-          echo "🔄 Fetching latest main..."
-          git fetch origin main
-          echo "🔄 Resetting working tree to latest main..."
-          git reset --hard origin/main
-          echo "✅ Repository synchronized with latest main."
-
-      # 8. RESTORE SCRAPED JSON
-      - name: Restore Generated JSON
-        run: |
-          cp /tmp/rawnews.generated.json rawnews.json
-          echo "✅ New scraped rawnews.json restored."
-
-      # 9. CHECK DIFF
-      - name: Check Changes
-        run: |
-          echo "========================================="
-          echo "📊 Git changes"
-          echo "========================================="
-          git status --short
-
-          if git diff --quiet -- rawnews.json; then
-            echo "ℹ️ rawnews.json has no changes."
-          else
-            echo "📝 rawnews.json has changed."
-          fi
-
-      # 10. COMMIT AND PUSH
-      - name: Commit and Push rawnews.json
-        run: |
+          cd content_base_repo
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
 
           git add rawnews.json
 
           if git diff --cached --quiet; then
-            echo "ℹ️ No changes to commit."
+            echo "ℹ️ No changes to commit. rawnews.json is already up to date in content_base."
             exit 0
           fi
 
@@ -165,4 +136,4 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
 
-          echo "✅ rawnews.json pushed successfully."
+          echo "🚀 [SUCCESS] rawnews.json successfully attached and pushed to zxcty54/content_base!"
