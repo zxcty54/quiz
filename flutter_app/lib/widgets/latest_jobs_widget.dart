@@ -26,12 +26,12 @@ class LatestJobsWidgetState extends State<LatestJobsWidget> {
   Future<void> fetchLatestJobs() async {
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
 
-    // 🚀 Cache-Proof Mirrored Endpoints
+    // 🚀 Cache-Proof Mirrored Endpoints (Updated to public content_base repo)
     final List<String> endpoints = [
-      "https://raw.githubusercontent.com/zxcty54/quiz/main/sarkarijob.json?t=$timestamp",
-      "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/sarkarijob.json?t=$timestamp",
-      "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/sarkarijob.json?t=$timestamp",
-      "https://raw.githack.com/zxcty54/quiz/main/sarkarijob.json",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/sarkarijob.json?t=$timestamp",
+      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/sarkarijob.json?t=$timestamp",
+      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/sarkarijob.json?t=$timestamp",
+      "https://raw.githack.com/zxcty54/content_base/main/sarkarijob.json",
     ];
 
     for (String url in endpoints) {
