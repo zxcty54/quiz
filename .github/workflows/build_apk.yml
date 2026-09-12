@@ -10,6 +10,7 @@ jobs:
   build:
     name: Build Release APK
     runs-on: ubuntu-latest
+    timeout-minutes: 25
 
     steps:
       - name: Checkout Code
@@ -27,20 +28,6 @@ jobs:
           channel: "stable"
           cache: true
 
-      - name: Setup Android SDK, NDK & Base Tools
-        uses: android-actions/setup-android@v3
-
-      - name: Install Android SDK Components & NDK
-        run: |
-          echo "y" | ${ANDROID_HOME}/cmdline-tools/latest/bin/sdkmanager \
-            "platforms;android-36" \
-            "platforms;android-35" \
-            "platforms;android-34" \
-            "build-tools;36.0.0" \
-            "build-tools;34.0.0" \
-            "ndk;28.0.12433566" \
-            "cmake;3.22.1"
-
       - name: Clean & Force Android Scaffold
         working-directory: flutter_app
         run: |
@@ -54,8 +41,10 @@ jobs:
           cat << 'EOF' >> gradle.properties
           android.useAndroidX=true
           android.enableJetifier=false
-          android.suppressUnsupportedCompileSdk=36,Baklava
-          android.experimental.disableCompileSdkChecks=true
+          org.gradle.jvmargs=-Xmx3072m -XX:MaxMetaspaceSize=768m -XX:+HeapDumpOnOutOfMemoryError
+          org.gradle.daemon=false
+          org.gradle.parallel=true
+          org.gradle.vfs.watch=false
           EOF
 
       - name: Inject Clean Flutter MainActivity.kt
@@ -79,20 +68,12 @@ jobs:
               <uses-permission android:name="android.permission.INTERNET"/>
               <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
               <uses-permission android:name="android.permission.VIBRATE"/>
-              <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-              <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-              <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
-              <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
-              <uses-permission android:name="android.permission.READ_MEDIA_VIDEO"/>
-              <uses-permission android:name="android.permission.READ_MEDIA_AUDIO"/>
 
               <application
                   android:label="MockTester"
                   android:name="${applicationName}"
                   android:icon="@mipmap/ic_launcher"
                   android:usesCleartextTraffic="false"
-                  android:requestLegacyExternalStorage="true"
-                  android:largeHeap="true"
                   android:hardwareAccelerated="true">
 
                   <meta-data
@@ -127,34 +108,10 @@ jobs:
         run: |
           flutter pub get
 
-          # 1. Update android/settings.gradle.kts (API 36 hook)
-          cat << 'EOF' >> android/settings.gradle.kts
-
-          gradle.beforeProject {
-              plugins.withId("com.android.library") {
-                  extensions.findByName("android")?.let { ext ->
-                      try {
-                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
-                      } catch (_: Exception) {}
-                  }
-              }
-              plugins.withId("com.android.application") {
-                  extensions.findByName("android")?.let { ext ->
-                      try {
-                          ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
-                      } catch (_: Exception) {}
-                  }
-              }
-          }
-          EOF
-
-          # 2. Append Packaging, Desugaring & Force minSdk 26
           APP_KTS="android/app/build.gradle.kts"
           APP_GROOVY="android/app/build.gradle"
 
           if [ -f "$APP_KTS" ]; then
-            sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/g' "$APP_KTS"
-            sed -i 's/compileSdk = 34/compileSdk = 36/g' "$APP_KTS"
             sed -i 's/minSdk = flutter.minSdkVersion/minSdk = 26/g' "$APP_KTS"
             sed -i 's/minSdk = 24/minSdk = 26/g' "$APP_KTS"
 
@@ -169,14 +126,6 @@ jobs:
                 compileOptions {
                     isCoreLibraryDesugaringEnabled = true
                 }
-                packaging {
-                    resources {
-                        pickFirsts.add("**/libc++_shared.so")
-                    }
-                    jniLibs {
-                        useLegacyPackaging = true
-                    }
-                }
             }
 
             dependencies {
@@ -184,8 +133,6 @@ jobs:
             }
           EOF
           elif [ -f "$APP_GROOVY" ]; then
-            sed -i 's/compileSdkVersion flutter.compileSdkVersion/compileSdkVersion 36/g' "$APP_GROOVY"
-            sed -i 's/compileSdkVersion 34/compileSdkVersion 36/g' "$APP_GROOVY"
             sed -i 's/minSdkVersion flutter.minSdkVersion/minSdkVersion 26/g' "$APP_GROOVY"
             sed -i 's/minSdkVersion 24/minSdkVersion 26/g' "$APP_GROOVY"
 
@@ -200,12 +147,6 @@ jobs:
                 compileOptions {
                     coreLibraryDesugaringEnabled true
                 }
-                packagingOptions {
-                    pickFirst '**/libc++_shared.so'
-                    jniLibs {
-                        useLegacyPackaging = true
-                    }
-                }
             }
 
             dependencies {
@@ -213,22 +154,6 @@ jobs:
             }
           EOF
           fi
-
-      - name: Setup Keystore & Permissions
-        working-directory: flutter_app/android
-        run: |
-          chmod +x gradlew || true
-          mkdir -p ~/.config/.android
-          keytool -genkey -v \
-            -keypass android \
-            -keystore ~/.config/.android/debug.keystore \
-            -alias AndroidDebugKey \
-            -storepass android \
-            -keyalg RSA \
-            -keysize 2048 \
-            -validity 10000 \
-            -dname "CN=Android Debug,O=Android,C=US" \
-            || true
 
       - name: Build Pure Offline Release APK via Flutter
         working-directory: flutter_app
@@ -244,7 +169,6 @@ jobs:
             APK_FILE=$(find build/app/outputs -type f -name "*.apk" | head -n 1)
           fi
           echo "Found APK at: $APK_FILE"
-          cp "$APK_FILE" build/app/outputs/flutter-apk/app-release.apk
           cp "$APK_FILE" build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
           zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
 
