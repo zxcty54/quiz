@@ -6,45 +6,106 @@ on:
     - cron: '0 */4 * * *'
   workflow_dispatch: # GitHub Actions tab se manual run karne ke liye
 
+concurrency:
+  group: news-summarizer
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
 jobs:
   summarize-news:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
+      # =====================================================
+      # 1. CHECKOUT PRIVATE CODE
+      # =====================================================
+      - name: Checkout Code from Private Repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: main
 
+      # =====================================================
+      # 2. CHECKOUT TARGET PUBLIC REPO (content_base)
+      # =====================================================
+      - name: Checkout Public Content Base
+        uses: actions/checkout@v4
+        with:
+          repository: 'zxcty54/content_base'
+          token: ${{ secrets.GH_PAT_TOKEN }}
+          path: 'content_base_repo'
+
+      # =====================================================
+      # 3. SETUP PYTHON
+      # =====================================================
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
+      # =====================================================
+      # 4. INSTALL DEPENDENCIES
+      # =====================================================
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
           pip install google-genai requests
 
+      # =====================================================
+      # 5. RUN SUMMARIZER SCRIPT
+      # =====================================================
       - name: Run Summarizer Script
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-        run: python summarizer.py
-
-      - name: Commit and Push Summary JSONs
         run: |
+          echo "📥 Loading required JSON inputs from content_base..."
+          if [ -f content_base_repo/rawnews.json ]; then
+            cp content_base_repo/rawnews.json ./rawnews.json
+            echo "✅ Loaded rawnews.json from content_base."
+          fi
+          if [ -f content_base_repo/finalnews.json ]; then
+            cp content_base_repo/finalnews.json ./finalnews.json
+            echo "✅ Loaded finalnews.json from content_base."
+          fi
+          if [ -f content_base_repo/all_current_affairs.json ]; then
+            cp content_base_repo/all_current_affairs.json ./all_current_affairs.json
+            echo "✅ Loaded all_current_affairs.json from content_base."
+          fi
+
+          python summarizer.py
+
+          echo "📋 Copying generated summary JSONs into content_base folder..."
+          if [ -f finalnews.json ]; then
+            cp finalnews.json content_base_repo/finalnews.json
+          fi
+          if [ -f rawnews.json ]; then
+            cp rawnews.json content_base_repo/rawnews.json
+          fi
+          if [ -f all_current_affairs.json ]; then
+            cp all_current_affairs.json content_base_repo/all_current_affairs.json
+          fi
+
+      # =====================================================
+      # 6. COMMIT & PUSH TO content_base REPO
+      # =====================================================
+      - name: Commit and Push Summary JSONs to content_base
+        run: |
+          cd content_base_repo
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
 
-          # Daily finalnews, rawnews, aur Master Archive all_current_affairs push hoga
+          # Daily finalnews, rawnews, aur Master Archive all_current_affairs add hoga
           git add finalnews.json rawnews.json all_current_affairs.json
 
           if git diff --cached --quiet; then
-            echo "ℹ️ No changes to commit"
+            echo "ℹ️ No changes to commit. All news JSON files are already up to date in content_base."
             exit 0
           fi
 
           git commit -m "Update Daily and Master Archive News JSONs [skip ci]"
           git pull --rebase origin main
           git push origin HEAD:main
+
+          echo "🚀 [SUCCESS] finalnews.json, rawnews.json & all_current_affairs.json successfully attached and pushed to zxcty54/content_base!"
