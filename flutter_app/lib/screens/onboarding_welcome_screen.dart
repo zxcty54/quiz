@@ -8,7 +8,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'home_screen.dart';
 
 class OnboardingWelcomeScreen extends StatefulWidget {
-  final Widget nextScreen;
+  final Widget nextScreen; 
 
   const OnboardingWelcomeScreen({
     super.key,
