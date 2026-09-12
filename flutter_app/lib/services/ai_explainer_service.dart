@@ -1,7 +1,54 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
+// ⏱️ CLIENT-SIDE RATE LIMITER SERVICE
+class AiRateLimiterService {
+  static const int maxInputChars = 3500;
+  static const int cooldownSeconds = 30;
+  static const int dailyGenerationLimit = 6;
+
+  static Future<Map<String, dynamic>> checkEligibility() async {
+    final prefs = await SharedPreferences.getInstance();
+    final now = DateTime.now().millisecondsSinceEpoch;
+
+    final lastCall = prefs.getInt('ai_last_call_timestamp') ?? 0;
+    final diffSeconds = (now - lastCall) ~/ 1000;
+    if (diffSeconds < cooldownSeconds) {
+      return {
+        'allowed': false,
+        'message': '⏱️ Cooldown active! Please wait ${cooldownSeconds - diffSeconds}s before next AI generation.',
+      };
+    }
+
+    final todayKey = 'ai_usage_${DateTime.now().toIso8601String().split('T').first}';
+    final currentUsage = prefs.getInt(todayKey) ?? 0;
+    if (currentUsage >= dailyGenerationLimit) {
+      return {
+        'allowed': false,
+        'message': '🚫 Daily AI Limit Reached ($dailyGenerationLimit/$dailyGenerationLimit). Try manual card addition or come back tomorrow.',
+      };
+    }
+
+    return {
+      'allowed': true,
+      'remainingToday': dailyGenerationLimit - currentUsage,
+    };
+  }
+
+  static Future<void> recordSuccess() async {
+    final prefs = await SharedPreferences.getInstance();
+    final now = DateTime.now().millisecondsSinceEpoch;
+    final todayKey = 'ai_usage_${DateTime.now().toIso8601String().split('T').first}';
+    final currentUsage = prefs.getInt(todayKey) ?? 0;
+
+    await prefs.setInt('ai_last_call_timestamp', now);
+    await prefs.setInt(todayKey, currentUsage + 1);
+  }
+}
+
+// 🤖 AI EXPLAINER & BULK PARSER SERVICE
 class AiExplainerService {
   // 🌐 Dynamic Fallback Models
   static List<String> activeModelHierarchy = [
@@ -42,18 +89,29 @@ class AiExplainerService {
     }
   }
 
-  // 🔄 CLOUDFLARE SECURE ROUTING ENGINE (Zero Keys Stored in App)
+  // 🔄 CLOUDFLARE SECURE ROUTING ENGINE (Calls your Worker proxy)
   static Future<String> _generateWithHybridRouting(
     String systemPrompt,
     String userPrompt, {
     int maxTokens = 1200,
     double temperature = 0.4,
+    bool applyRateLimit = false,
   }) async {
     if (!isAiActive) {
       return "⚠️ AI Doubt service is temporarily paused for maintenance.";
     }
 
-    // 🌐 Aapka Cloudflare Worker Live Endpoint
+    if (applyRateLimit) {
+      final eligibility = await AiRateLimiterService.checkEligibility();
+      if (eligibility['allowed'] == false) {
+        return eligibility['message'] as String;
+      }
+      if (userPrompt.length > AiRateLimiterService.maxInputChars) {
+        return "⚠️ Input prompt is too long! Maximum ${AiRateLimiterService.maxInputChars} characters allowed.";
+      }
+    }
+
+    // 🌐 Aapka Cloudflare Worker URL
     const String proxyUrl = "https://ai-proxy.nitesh-skyhigh.workers.dev";
 
     try {
@@ -69,11 +127,18 @@ class AiExplainerService {
           "maxTokens": maxTokens,
           "temperature": temperature,
         }),
-      ).timeout(const Duration(seconds: 15));
+      ).timeout(const Duration(seconds: 20));
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> data = jsonDecode(utf8.decode(response.bodyBytes));
-        return data['text']?.toString().trim() ?? "⚠️ Response khali aaya.";
+        final text = data['text']?.toString().trim();
+        if (text != null && text.isNotEmpty) {
+          if (applyRateLimit) {
+            await AiRateLimiterService.recordSuccess();
+          }
+          return text;
+        }
+        return "⚠️ Response khali aaya.";
       } else {
         debugPrint("Proxy Worker Error: ${response.statusCode} - ${response.body}");
       }
@@ -229,5 +294,64 @@ $userChoiceContext$tagContext
       correctAnswer: correctAnswer,
       userDoubt: "Mujhe is question ka conceptual logic aasan daily life example ke sath samjhayein.",
     );
+  }
+
+  // 5️⃣ 🚀 BULK QUESTIONS PARSER (Restored for creator_mock_builder_screen.dart)
+  static Future<List<Map<String, dynamic>>> parseBulkQuestionsWithAi(String rawText) async {
+    if (rawText.trim().isEmpty) return [];
+
+    const String systemPrompt = r'''
+You are an expert exam data extractor for Indian competitive exams (BPSC, SSC, UPSC, Railway).
+Parse the raw unstructured questions or notes text into a strict JSON Array format.
+
+Output ONLY a pure JSON array matching this exact schema:
+[
+  {
+    "question": "Question text in Hindi or English (use $...$ for LaTeX math)",
+    "options": ["Option A", "Option B", "Option C", "Option D"],
+    "answer": 0,
+    "explanation": "Short 1-line solution explanation"
+  }
+]
+
+RULES:
+1. Always return a valid JSON array. Do not include markdown wraps or conversational chatter.
+2. Ensure options list always contains exactly 4 options.
+3. If the answer is missing in raw text, deduce the logically correct answer index (0 to 3).
+''';
+
+    final String responseText = await _generateWithHybridRouting(
+      systemPrompt,
+      "Raw Questions Text:\n\"\"\"\n$rawText\n\"\"\"",
+      maxTokens: 2400,
+      temperature: 0.1,
+      applyRateLimit: true,
+    );
+
+    return _sanitizeAndParseJson(responseText);
+  }
+
+  // 🧹 Helper: Clean & Parse JSON Array
+  static List<Map<String, dynamic>> _sanitizeAndParseJson(String responseText) {
+    try {
+      String cleanJson = responseText
+          .replaceAll('```json', '')
+          .replaceAll('```', '')
+          .trim();
+
+      final int startIdx = cleanJson.indexOf('[');
+      final int endIdx = cleanJson.lastIndexOf(']');
+      if (startIdx != -1 && endIdx != -1 && endIdx > startIdx) {
+        cleanJson = cleanJson.substring(startIdx, endIdx + 1);
+      }
+
+      final dynamic parsed = jsonDecode(cleanJson);
+      if (parsed is List) {
+        return List<Map<String, dynamic>>.from(parsed);
+      }
+    } catch (e) {
+      debugPrint("AI JSON Parse Helper Error: $e\nRaw: $responseText");
+    }
+    return [];
   }
 }
