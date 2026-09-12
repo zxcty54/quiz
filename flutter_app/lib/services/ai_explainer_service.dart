@@ -1,36 +1,8 @@
 import 'dart:convert';
-import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 class AiExplainerService {
-  // 🔐 Environment Variables Se Keys Fetch Ho Rahi Hain (4 Keys Pool)
-  static const String _gKey1 = String.fromEnvironment('GOOGLE_API_KEY');
-  static const String _gKey2 = String.fromEnvironment('GOOGLE_API_KEY2');
-  static const String _groqKey1 = String.fromEnvironment('GROQ_API_KEY');
-  static const String _groqKey2 = String.fromEnvironment('GROQ_API_KEY2');
-
-  static int _gIndex = 0;
-  static int _groqIndex = 0;
-
-  // 🔄 Google Keys Auto-Rotator
-  static String _getGoogleApiKey() {
-    final validKeys = [_gKey1, _gKey2].where((k) => k.trim().isNotEmpty).toList();
-    if (validKeys.isEmpty) return "";
-    final key = validKeys[_gIndex % validKeys.length];
-    _gIndex++;
-    return key;
-  }
-
-  // 🔄 Groq Keys Auto-Rotator
-  static String _getGroqApiKey() {
-    final validKeys = [_groqKey1, _groqKey2].where((k) => k.trim().isNotEmpty).toList();
-    if (validKeys.isEmpty) return "";
-    final key = validKeys[_groqIndex % validKeys.length];
-    _groqIndex++;
-    return key;
-  }
-
   // 🌐 Dynamic Fallback Models
   static List<String> activeModelHierarchy = [
     "gemini-2.0-flash",
@@ -70,7 +42,7 @@ class AiExplainerService {
     }
   }
 
-  // 🔄 KEYWORD-BASED HYBRID ROUTING ENGINE (For Text Prompts)
+  // 🔄 CLOUDFLARE SECURE ROUTING ENGINE (Zero Keys Stored in App)
   static Future<String> _generateWithHybridRouting(
     String systemPrompt,
     String userPrompt, {
@@ -81,94 +53,32 @@ class AiExplainerService {
       return "⚠️ AI Doubt service is temporarily paused for maintenance.";
     }
 
-    final String fullPrompt = "$systemPrompt\n\n$userPrompt";
+    // 🌐 Aapka Cloudflare Worker Live Endpoint
+    const String proxyUrl = "https://ai-proxy.nitesh-skyhigh.workers.dev";
 
-    for (int i = 0; i < activeModelHierarchy.length; i++) {
-      final String model = activeModelHierarchy[i];
-      final String mLower = model.toLowerCase();
+    try {
+      final response = await http.post(
+        Uri.parse(proxyUrl),
+        headers: {
+          "Content-Type": "application/json; charset=utf-8",
+        },
+        body: jsonEncode({
+          "systemPrompt": systemPrompt,
+          "userPrompt": userPrompt,
+          "activeModelHierarchy": activeModelHierarchy,
+          "maxTokens": maxTokens,
+          "temperature": temperature,
+        }),
+      ).timeout(const Duration(seconds: 15));
 
-      try {
-        debugPrint("⚡ AI Routing [${i + 1}/${activeModelHierarchy.length}] attempting:$model");
-
-        // 🟢 1. GOOGLE AI STUDIO (Keywords: gemini, gemma)
-        if (mLower.contains('gemini') || mLower.contains('gemma')) {
-          final googleKey = _getGoogleApiKey();
-          if (googleKey.isEmpty) {
-            debugPrint("⚠️ Google API Key missing, skipping $model");
-            continue;
-          }
-
-          final url = "https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent?key=$googleKey";
-          final response = await http.post(
-            Uri.parse(url),
-            headers: {"Content-Type": "application/json; charset=utf-8"},
-            body: jsonEncode({
-              "contents": [
-                {
-                  "parts": [
-                    {"text": fullPrompt}
-                  ]
-                }
-              ],
-              "generationConfig": {
-                "temperature": temperature,
-                "maxOutputTokens": maxTokens,
-              }
-            }),
-          ).timeout(const Duration(seconds: 12));
-
-          if (response.statusCode == 200) {
-            final Map<String, dynamic> data = jsonDecode(utf8.decode(response.bodyBytes));
-            final candidates = data['candidates'] as List?;
-            if (candidates != null && candidates.isNotEmpty) {
-              final parts = candidates[0]['content']['parts'] as List?;
-              if (parts != null && parts.isNotEmpty) {
-                String text = parts[0]['text'].toString().trim();
-                if (text.isNotEmpty) return text;
-              }
-            }
-          } else {
-            debugPrint("Google AI Studio Status ${response.statusCode} on$model, trying next model...");
-          }
-        }
-        // 🔵 2. GROQ API (Keywords: llama, mixtral, gpt-oss, qwen, etc.)
-        else {
-          final groqKey = _getGroqApiKey();
-          if (groqKey.isEmpty) {
-            debugPrint("⚠️ Groq API Key missing, skipping $model");
-            continue;
-          }
-
-          final response = await http.post(
-            Uri.parse("https://api.groq.com/openai/v1/chat/completions"),
-            headers: {
-              "Authorization": "Bearer $groqKey",
-              "Content-Type": "application/json; charset=utf-8",
-            },
-            body: jsonEncode({
-              "model": model,
-              "messages": [
-                {"role": "system", "content": systemPrompt},
-                {"role": "user", "content": userPrompt}
-              ],
-              "max_tokens": maxTokens,
-              "temperature": temperature,
-            }),
-          ).timeout(const Duration(seconds: 14));
-
-          if (response.statusCode == 200) {
-            final data = jsonDecode(utf8.decode(response.bodyBytes));
-            final content = data['choices']?[0]?['message']?['content'];
-            if (content != null && content.toString().trim().isNotEmpty) {
-              return content.toString().trim();
-            }
-          } else {
-            debugPrint("Groq API Status ${response.statusCode} on$model, trying next model...");
-          }
-        }
-      } catch (e) {
-        debugPrint("AI Connection Error on $model:$e");
+      if (response.statusCode == 200) {
+        final Map<String, dynamic> data = jsonDecode(utf8.decode(response.bodyBytes));
+        return data['text']?.toString().trim() ?? "⚠️ Response khali aaya.";
+      } else {
+        debugPrint("Proxy Worker Error: ${response.statusCode} - ${response.body}");
       }
+    } catch (e) {
+      debugPrint("Cloudflare Proxy Connection Error: $e");
     }
 
     return "⚠️ AI Service busy hai. Kripya thodi der baad dobara try karein.";
@@ -319,147 +229,5 @@ $userChoiceContext$tagContext
       correctAnswer: correctAnswer,
       userDoubt: "Mujhe is question ka conceptual logic aasan daily life example ke sath samjhayein.",
     );
-  }
-
-  // 5️⃣ 🚀 BULK QUESTIONS PARSER FOR TEXT (Raw string r''' used to prevent interpolation errors)
-  static Future<List<Map<String, dynamic>>> parseBulkQuestionsWithAi(String rawText) async {
-    if (rawText.trim().isEmpty) return [];
-
-    const String systemPrompt = r'''
-You are an expert exam data extractor for Indian competitive exams (BPSC, SSC, UPSC, Railway).
-Parse the raw unstructured questions or notes text into a strict JSON Array format.
-
-Output ONLY a pure JSON array matching this exact schema:
-[
-  {
-    "question": "Question text in Hindi or English (use $...$ for LaTeX math)",
-    "options": ["Option A", "Option B", "Option C", "Option D"],
-    "answer": 0,
-    "explanation": "Short 1-line solution explanation"
-  }
-]
-
-RULES:
-1. Always return a valid JSON array. Do not include markdown wraps or conversational chatter.
-2. Ensure options list always contains exactly 4 options.
-3. If the answer is missing in raw text, deduce the logically correct answer index (0 to 3).
-''';
-
-    final String responseText = await _generateWithHybridRouting(
-      systemPrompt,
-      "Raw Questions Text:\n\"\"\"\n$rawText\n\"\"\"",
-      maxTokens: 2400,
-      temperature: 0.1,
-    );
-
-    return _sanitizeAndParseJson(responseText);
-  }
-
-  // 6️⃣ 📸 VISION MULTIMODAL OCR (For Handwritten Notes, Maths & Diagram Questions)
-  static Future<List<Map<String, dynamic>>> parseBulkQuestionsFromImage(Uint8List imageBytes) async {
-    if (imageBytes.isEmpty) return [];
-
-    final googleKey = _getGoogleApiKey();
-    if (googleKey.isEmpty) {
-      debugPrint("⚠️ Google API Key missing for Vision OCR");
-      return [];
-    }
-
-    final base64Img = base64Encode(imageBytes);
-
-    const String visionPrompt = r'''
-You are a top-tier Indian Competitive Exam Multimodal OCR Engine specialized in Math, Physics, and Handwritten notes.
-Examine this image carefully (which may contain handwritten or printed exam questions with equations/diagrams).
-
-Extract ALL questions found into a valid JSON array matching this schema:
-[
-  {
-    "question": "Question text in Hindi or English. Format mathematical equations or fractions in LaTeX enclosed in $ like $\frac{a}{b}$, $x^2$, $\sqrt{x}$",
-    "options": ["Option A", "Option B", "Option C", "Option D"],
-    "answer": 0,
-    "explanation": "Brief step-by-step solution"
-  }
-]
-
-CRITICAL RULES:
-1. Read handwritten Hindi and English cleanly without skipping math symbols.
-2. Wrap every formula, power, root, fraction, or symbol in LaTeX dollars: e.g. $\theta$, $\pi$, $\int$.
-3. Output strictly RAW JSON array. No ```json markdown block and no extra conversational text.
-4. Each item must have exactly 4 options. If not marked in image, infer reasonable options.
-''';
-
-    final List<String> visionModels = ["gemini-2.0-flash", "gemini-1.5-flash"];
-
-    for (final model in visionModels) {
-      try {
-        final url = "[https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent?key=$googleKey](https://generativelanguage.googleapis.com/v1beta/models/$model:generateContent?key=$googleKey)";
-        final response = await http.post(
-          Uri.parse(url),
-          headers: {"Content-Type": "application/json; charset=utf-8"},
-          body: jsonEncode({
-            "contents": [
-              {
-                "parts": [
-                  {"text": visionPrompt},
-                  {
-                    "inline_data": {
-                      "mime_type": "image/jpeg",
-                      "data": base64Img,
-                    }
-                  }
-                ]
-              }
-            ],
-            "generationConfig": {
-              "temperature": 0.1,
-              "maxOutputTokens": 2500,
-            }
-          }),
-        ).timeout(const Duration(seconds: 20));
-
-        if (response.statusCode == 200) {
-          final Map<String, dynamic> data = jsonDecode(utf8.decode(response.bodyBytes));
-          final candidates = data['candidates'] as List?;
-          if (candidates != null && candidates.isNotEmpty) {
-            final parts = candidates[0]['content']['parts'] as List?;
-            if (parts != null && parts.isNotEmpty) {
-              final text = parts[0]['text'].toString().trim();
-              final result = _sanitizeAndParseJson(text);
-              if (result.isNotEmpty) return result;
-            }
-          }
-        } else {
-          debugPrint("Vision OCR Failed on $model (Code: ${response.statusCode}), trying next...");
-        }
-      } catch (e) {
-        debugPrint("Vision OCR error on $model: $e");
-      }
-    }
-
-    return [];
-  }
-
-  // 🧹 Helper: Clean & Parse JSON Array
-  static List<Map<String, dynamic>> _sanitizeAndParseJson(String responseText) {
-    try {
-      String cleanJson = responseText
-          .replaceAll('```json', '')
-          .replaceAll('```', '')
-          .trim();
-
-      final int startIdx = cleanJson.indexOf('[');
-      final int endIdx = cleanJson.lastIndexOf(']');
-      if (startIdx != -1 && endIdx != -1 && endIdx > startIdx) {
-        cleanJson = cleanJson.substring(startIdx, endIdx + 1);
-      }
-
-      final dynamic parsed = jsonDecode(cleanJson);
-      if (parsed is List) {
-        return List<Map<String, dynamic>>.from(parsed);
-      }
-    } catch (e) {
-      debugPrint("AI JSON Parse Helper Error: $e\nRaw: $responseText");
-    }
-    return [];
   }
 }
