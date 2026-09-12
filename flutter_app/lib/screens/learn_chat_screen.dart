@@ -101,7 +101,14 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
       rawPath = 'learn/biology/cell.json';
     }
 
+    // 🚀 Clean all legacy and current repo paths
     String cleanPath = rawPath
+        .replaceAll('https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/', '')
+        .replaceAll('https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/', '')
+        .replaceAll('https://raw.githubusercontent.com/zxcty54/content_base/main/', '')
+        .replaceAll('https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/', '')
+        .replaceAll('https://cdn.statically.io/gh/zxcty54/content_base/main/', '')
+        .replaceAll('https://raw.githack.com/zxcty54/content_base/main/', '')
         .replaceAll('https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/', '')
         .replaceAll('https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/', '')
         .replaceAll('https://raw.githubusercontent.com/zxcty54/quiz/main/', '')
@@ -115,16 +122,16 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(cleanPath);
 
-    // 🚀 Robust Multi-CDN Fallback Order
+    // 🚀 Robust Multi-CDN Fallback Order targeting content_base
     List<String> mirrorUrls = [
       // 1. Direct Raw GitHub with Cache Buster (100% Guaranteed Source)
-      "https://raw.githubusercontent.com/zxcty54/quiz/main/$encodedPath?t=$ts",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/$encodedPath?t=$ts",
       // 2. GitHack Cloudflare Dev Gateway
-      "https://raw.githack.com/zxcty54/quiz/main/$encodedPath",
+      "https://raw.githack.com/zxcty54/content_base/main/$encodedPath",
       // 3. Statically CDN
-      "https://cdn.statically.io/gh/zxcty54/quiz/main/$encodedPath",
+      "https://cdn.statically.io/gh/zxcty54/content_base/main/$encodedPath",
       // 4. Fastly CDN
-      "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/$encodedPath?t=$ts",
+      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
     ];
 
     for (String url in mirrorUrls) {
