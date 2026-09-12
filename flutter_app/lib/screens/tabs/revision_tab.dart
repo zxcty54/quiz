@@ -73,12 +73,13 @@ class _RevisionTabState extends State<RevisionTab> {
     setState(() => _isLoading = true);
 
     final int ts = DateTime.now().millisecondsSinceEpoch;
+    // 🚀 Updated: Pointing to public content_base repo
     final List<String> urls = [
-      "https://raw.githack.com/zxcty54/quiz/main/subject_mapping.json",
-      "https://fastly.jsdelivr.net/gh/zxcty54/quiz@main/subject_mapping.json?t=$ts",
-      "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/subject_mapping.json?t=$ts",
-      "https://cdn.statically.io/gh/zxcty54/quiz/main/subject_mapping.json",
-      "https://raw.githubusercontent.com/zxcty54/quiz/main/subject_mapping.json?t=$ts",
+      "https://raw.githack.com/zxcty54/content_base/main/subject_mapping.json",
+      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/subject_mapping.json?t=$ts",
+      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/subject_mapping.json?t=$ts",
+      "https://cdn.statically.io/gh/zxcty54/content_base/main/subject_mapping.json",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/subject_mapping.json?t=$ts",
     ];
 
     for (String url in urls) {
@@ -217,7 +218,8 @@ class _RevisionTabState extends State<RevisionTab> {
   Future<void> _openCurrentAffairsSection({
     required bool isBihar,
     required String title,
-    String jsonPath = "https://raw.githubusercontent.com/zxcty54/quiz/main/current_affair/august_2026.json",
+    // 🚀 Updated: Default path set to content_base
+    String jsonPath = "https://raw.githubusercontent.com/zxcty54/content_base/main/current_affair/august_2026.json",
   }) async {
     showDialog(
       context: context,
@@ -240,9 +242,10 @@ class _RevisionTabState extends State<RevisionTab> {
     );
 
     try {
+      // 🚀 Updated: Relative path construct karne ke liye content_base
       final String fetchUrl = jsonPath.startsWith('http')
           ? '$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}'
-          : 'https://raw.githubusercontent.com/zxcty54/quiz/main/$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}';
+          : 'https://raw.githubusercontent.com/zxcty54/content_base/main/$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}';
 
       final res = await http.get(Uri.parse(fetchUrl)).timeout(const Duration(seconds: 10));
 
@@ -434,7 +437,7 @@ class _RevisionTabState extends State<RevisionTab> {
             ),
           ),
 
-          // ⚡ 1. HIGH-IMPACT REAL-TIME SYNC BANNER (EYE-GRABBING & HIGH CONTRAST)
+          // ⚡ HIGH-IMPACT REAL-TIME SYNC BANNER
           Container(
             width: double.infinity,
             margin: const EdgeInsets.only(top: 12),
@@ -535,7 +538,7 @@ class _RevisionTabState extends State<RevisionTab> {
 
           const SizedBox(height: 10),
 
-          // 🛡️ 2. ACADEMIC TRUST & REFERENCE SOURCES BAR
+          // 🛡️ ACADEMIC TRUST & REFERENCE SOURCES BAR
           InkWell(
             onTap: () => _showSourcesModal(context, isDark),
             borderRadius: BorderRadius.circular(12),
@@ -851,7 +854,8 @@ class _RevisionTabState extends State<RevisionTab> {
         "isLive": true,
         "natCount": 218,
         "biharCount": 89,
-        "jsonUrl": "https://raw.githubusercontent.com/zxcty54/quiz/main/current_affair/august_2026.json"
+        // 🚀 Updated: content_base raw link
+        "jsonUrl": "https://raw.githubusercontent.com/zxcty54/content_base/main/current_affair/august_2026.json"
       },
       {
         "month": "September 2026",
