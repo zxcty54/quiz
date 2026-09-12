@@ -18,20 +18,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout Code
-      - name: Checkout Code
+      # 1. Checkout Scraper Code from Private Repo
+      - name: Checkout Scraper Code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: main
 
-      # 2. Setup Python
+      # 2. Checkout Target Public Repo (content_base)
+      - name: Checkout Public Content Base
+        uses: actions/checkout@v4
+        with:
+          repository: 'zxcty54/content_base'
+          token: ${{ secrets.GH_PAT_TOKEN }}
+          path: 'content_base_repo'
+
+      # 3. Setup Python
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      # 3. Install Dependencies
+      # 4. Install Dependencies
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
@@ -43,21 +51,31 @@ jobs:
             feedparser \
             lxml
 
-      # 4. Run Script
+      # 5. Run Script (Syncing with content_base)
       - name: Run Google Alerts Scraper Script
         run: |
+          echo "📥 Checking existing alerts_news.json from content_base..."
+          if [ -f content_base_repo/alerts_news.json ]; then
+            cp content_base_repo/alerts_news.json ./alerts_news.json
+            echo "✅ Existing alerts_news.json loaded from content_base."
+          fi
+
           python alerts_scraper.py
 
-      # 5. Commit and Push JSON
-      - name: Commit and Push alerts_news.json
+          echo "📋 Copying freshly scraped alerts_news.json to content_base..."
+          cp alerts_news.json content_base_repo/alerts_news.json
+
+      # 6. Commit and Push JSON to content_base
+      - name: Commit and Push alerts_news.json to content_base
         run: |
+          cd content_base_repo
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
 
           git add alerts_news.json
 
           if git diff --cached --quiet; then
-            echo "ℹ️ No changes to commit in alerts_news.json"
+            echo "ℹ️ No changes to commit. alerts_news.json is already up to date in content_base."
             exit 0
           fi
 
@@ -65,4 +83,4 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
 
-          echo "✅ alerts_news.json pushed successfully."
+          echo "🚀 [SUCCESS] alerts_news.json successfully attached and pushed to zxcty54/content_base!"
