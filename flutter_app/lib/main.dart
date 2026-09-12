@@ -1,15 +1,41 @@
 import 'dart:async';
+import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'services/notification_service.dart';
+import 'services/ai_explainer_service.dart';
 import 'screens/home_screen.dart';
 import 'screens/onboarding_welcome_screen.dart';
 
 // 🌓 Global Theme Controller
 final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.light);
+
+// 🔄 GitHub Remote Config Fetcher (Aapka Exact Raw URL)
+Future<void> _syncAppConfig() async {
+  try {
+    final Uri url = Uri.parse(
+      'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/app_config.json',
+    );
+
+    final response = await http.get(url).timeout(const Duration(seconds: 10));
+
+    if (response.statusCode == 200) {
+      final Map<String, dynamic> config = jsonDecode(utf8.decode(response.bodyBytes));
+      
+      // 🎯 App config se seedha AI models update honge
+      AiExplainerService.updateModelFromConfig(config);
+      debugPrint("✅ App config successfully synced with AiExplainerService");
+    } else {
+      debugPrint("⚠️ Failed to load app_config.json: Status ${response.statusCode}");
+    }
+  } catch (e) {
+    debugPrint("Config sync network error: $e");
+  }
+}
 
 // 📝 Public Download Folder Crash Logger
 Future<void> _saveCrashToPublicDownloads(String error, String stackTrace) async {
@@ -60,7 +86,7 @@ void main() {
       debugPrint("Firebase init error: $e");
     }
 
-    // ⚡ 3. Supabase Initialization (Secure via Dart-Define / Environment)
+    // ⚡ 3. Supabase Initialization
     const String supabaseUrl = String.fromEnvironment(
       'SUPABASE_URL',
       defaultValue: 'https://tglidhzsjxfppyrmlwxf.supabase.co',
@@ -82,9 +108,11 @@ void main() {
     
     globalThemeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
 
+    // 🌐 5. Launch Background Remote Config Sync
+    unawaited(_syncAppConfig());
+
     runApp(MyApp(isOnboarded: isOnboarded));
   }, (error, stackTrace) {
-    // 5. Global Async Crash Handler
     debugPrint("Caught Global Async Crash: $error");
     _saveCrashToPublicDownloads(error.toString(), stackTrace.toString());
   });
