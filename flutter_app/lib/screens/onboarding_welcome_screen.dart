@@ -1,4 +1,4 @@
-import 'dart:ui';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -20,25 +20,32 @@ class OnboardingWelcomeScreen extends StatefulWidget {
       _OnboardingWelcomeScreenState();
 }
 
-class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
+class _OnboardingWelcomeScreenState
+    extends State<OnboardingWelcomeScreen>
     with TickerProviderStateMixin {
   final PageController _pageController = PageController();
 
-  final _formKey = GlobalKey<FormState>();
-  final _nameController = TextEditingController();
-  final _phoneController = TextEditingController();
+  final GlobalKey<FormState> _formKey =
+      GlobalKey<FormState>();
 
+  final TextEditingController _nameController =
+      TextEditingController();
+
+  final TextEditingController _phoneController =
+      TextEditingController();
+
+  late AnimationController _introController;
   late AnimationController _floatController;
-  late AnimationController _entryController;
+  late AnimationController _formController;
 
   int _currentPage = 0;
   bool _isLoading = false;
 
-  // ===========================================================================
-  // PREMIUM PALETTE
-  // ===========================================================================
+  // ============================================================
+  // COLORS
+  // ============================================================
 
-  static const Color bg = Color(0xFFF7F9FC);
+  static const Color bg = Color(0xFFF8FAFC);
   static const Color ink = Color(0xFF101828);
   static const Color muted = Color(0xFF667085);
   static const Color faint = Color(0xFF98A2B3);
@@ -47,29 +54,61 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
   static const Color blueDeep = Color(0xFF0039B7);
   static const Color blueLight = Color(0xFFEAF2FF);
 
-  static const Color violet = Color(0xFF6941C6);
-  static const Color green = Color(0xFF12B76A);
-  static const Color orange = Color(0xFFF79009);
-
   static const Color border = Color(0xFFE4E7EC);
 
-  // ===========================================================================
+  // ============================================================
   // LIFECYCLE
-  // ===========================================================================
+  // ============================================================
 
   @override
   void initState() {
     super.initState();
 
+    _setSystemUi();
+
+    _introController = AnimationController(
+      vsync: this,
+      duration: const Duration(
+        milliseconds: 1100,
+      ),
+    );
+
     _floatController = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 3),
-    )..repeat(reverse: true);
+      duration: const Duration(seconds: 7),
+    )..repeat();
 
-    _entryController = AnimationController(
+    _formController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 650),
-    )..forward();
+      duration: const Duration(
+        milliseconds: 650,
+      ),
+    );
+
+    Future.delayed(
+      const Duration(milliseconds: 150),
+      () {
+        if (mounted) {
+          _introController.forward();
+        }
+      },
+    );
+  }
+
+  void _setSystemUi() {
+    SystemChrome.setEnabledSystemUIMode(
+      SystemUiMode.edgeToEdge,
+    );
+
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(
+        statusBarColor: Colors.transparent,
+        systemNavigationBarColor: Colors.transparent,
+        statusBarIconBrightness: Brightness.dark,
+        systemNavigationBarIconBrightness:
+            Brightness.dark,
+      ),
+    );
   }
 
   @override
@@ -77,1079 +116,428 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     _pageController.dispose();
     _nameController.dispose();
     _phoneController.dispose();
+
+    _introController.dispose();
     _floatController.dispose();
-    _entryController.dispose();
+    _formController.dispose();
 
     super.dispose();
   }
 
-  // ===========================================================================
-  // REGISTRATION
-  // ===========================================================================
+  // ============================================================
+  // NAVIGATION
+  // ============================================================
 
-  Future<void> _completeRegistration() async {
+  void _nextPage() {
     FocusScope.of(context).unfocus();
 
-    if (!_formKey.currentState!.validate() || _isLoading) {
-      return;
-    }
+    _pageController.animateToPage(
+      1,
+      duration: const Duration(
+        milliseconds: 600,
+      ),
+      curve: Curves.easeOutCubic,
+    );
+  }
 
+  void _pageChanged(int page) {
     setState(() {
-      _isLoading = true;
+      _currentPage = page;
     });
 
-    final name = _nameController.text.trim();
-    final phone = _phoneController.text.trim();
-
-    try {
-      final prefs = await SharedPreferences.getInstance();
-
-      await prefs.setBool('is_onboarded', true);
-      await prefs.setString('custom_aspirant_name', name);
-      await prefs.setString('user_name', name);
-      await prefs.setString('user_mobile', phone);
-
-      // Supabase sync
-      if (phone.isNotEmpty) {
-        try {
-          await Supabase.instance.client.from('app_users').upsert({
-            'mobile_number': phone,
-            'full_name': name,
-            'updated_at': DateTime.now().toIso8601String(),
-          });
-        } catch (e) {
-          debugPrint('Supabase sync issue: $e');
-        }
-      }
-
-      if (!mounted) return;
-
-      Navigator.pushReplacement(
-        context,
-        PageRouteBuilder(
-          transitionDuration: const Duration(milliseconds: 450),
-          pageBuilder: (_, __, ___) => widget.nextScreen,
-          transitionsBuilder: (_, animation, __, child) {
-            return FadeTransition(
-              opacity: animation,
-              child: child,
-            );
-          },
-        ),
-      );
-    } catch (e) {
-      debugPrint('Registration error: $e');
-    } finally {
-      if (mounted) {
-        setState(() {
-          _isLoading = false;
-        });
-      }
+    if (page == 1) {
+      _formController
+        ..reset()
+        ..forward();
     }
   }
 
-  // ===========================================================================
-  // NAVIGATION
-  // ===========================================================================
-
-  void _next() {
-    _pageController.nextPage(
-      duration: const Duration(milliseconds: 550),
-      curve: Curves.easeOutCubic,
-    );
-  }
-
-  void _profile() {
-    _pageController.animateToPage(
-      2,
-      duration: const Duration(milliseconds: 550),
-      curve: Curves.easeOutCubic,
-    );
-  }
-
-  // ===========================================================================
+  // ============================================================
   // ROOT
-  // ===========================================================================
+  // ============================================================
 
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion<SystemUiOverlayStyle>(
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
+        systemNavigationBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarColor: bg,
-        systemNavigationBarIconBrightness: Brightness.dark,
+        systemNavigationBarIconBrightness:
+            Brightness.dark,
       ),
       child: Scaffold(
+        extendBody: true,
+        extendBodyBehindAppBar: true,
         backgroundColor: bg,
-        body: SafeArea(
-          child: Column(
-            children: [
-              _header(),
-
-              Expanded(
-                child: PageView(
-                  controller: _pageController,
-                  physics: const BouncingScrollPhysics(),
-                  onPageChanged: (index) {
-                    setState(() {
-                      _currentPage = index;
-                    });
-
-                    _entryController
-                      ..reset()
-                      ..forward();
-                  },
-                  children: [
-                    _pageOne(),
-                    _pageTwo(),
-                    _pageThree(),
-                  ],
-                ),
+        body: Stack(
+          children: [
+            Positioned.fill(
+              child: AnimatedBuilder(
+                animation: _floatController,
+                builder: (_, __) {
+                  return CustomPaint(
+                    painter: _BackgroundPainter(
+                      _floatController.value,
+                    ),
+                  );
+                },
               ),
+            ),
 
-              _bottomProgress(),
-            ],
-          ),
+            // ==================================================
+            // FULL SCREEN PAGE VIEW
+            // ==================================================
+
+            Positioned.fill(
+              child: PageView(
+                controller: _pageController,
+                physics:
+                    const BouncingScrollPhysics(),
+                onPageChanged: _pageChanged,
+                children: [
+                  _welcomeScreen(),
+                  _nameScreen(),
+                ],
+              ),
+            ),
+
+            // ==================================================
+            // HEADER
+            // ==================================================
+
+            Positioned(
+              top:
+                  MediaQuery.of(context).padding.top +
+                      10,
+              left: 22,
+              right: 22,
+              child: _header(),
+            ),
+
+            // ==================================================
+            // PROGRESS
+            // ==================================================
+
+            Positioned(
+              left: 22,
+              right: 22,
+              bottom:
+                  MediaQuery.of(context).padding.bottom +
+                      12,
+              child: _bottomProgress(),
+            ),
+          ],
         ),
       ),
     );
   }
 
-  // ===========================================================================
-  // HEADER / BRAND
-  // ===========================================================================
+  // ============================================================
+  // HEADER
+  // ============================================================
 
   Widget _header() {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(20, 13, 18, 8),
-      child: Row(
-        children: [
-          Container(
-            width: 34,
-            height: 34,
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [
-                  Color(0xFF2585FF),
-                  Color(0xFF0047D9),
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              borderRadius: BorderRadius.circular(10),
-              boxShadow: [
-                BoxShadow(
-                  color: blue.withValues(alpha: .18),
-                  blurRadius: 12,
-                  offset: const Offset(0, 5),
-                ),
-              ],
-            ),
-            child: const Center(
-              child: Text(
-                'M',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: -1,
-                ),
-              ),
-            ),
-          ),
-
-          const SizedBox(width: 10),
-
-          const Text(
-            'MockTester',
-            style: TextStyle(
-              color: ink,
-              fontSize: 20,
-              fontWeight: FontWeight.w900,
-              letterSpacing: -0.65,
-            ),
-          ),
-
-          const SizedBox(width: 7),
-
-          Container(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 6,
-              vertical: 3,
-            ),
-            decoration: BoxDecoration(
-              color: const Color(0xFFFFF4E5),
-              borderRadius: BorderRadius.circular(6),
-            ),
-            child: const Text(
-              'CBT',
-              style: TextStyle(
-                color: Color(0xFFB54708),
-                fontSize: 8,
-                fontWeight: FontWeight.w900,
-                letterSpacing: .4,
-              ),
-            ),
-          ),
-
-          const Spacer(),
-
-          if (_currentPage < 2)
-            GestureDetector(
-              onTap: _profile,
-              child: Container(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 12,
-                  vertical: 7,
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(30),
-                  border: Border.all(
-                    color: border,
-                  ),
-                ),
-                child: const Text(
-                  'Skip',
-                  style: TextStyle(
-                    color: muted,
-                    fontSize: 10,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-              ),
-            ),
-        ],
-      ),
-    );
-  }
-
-  // ===========================================================================
-  // PAGE 1
-  // ===========================================================================
-
-  Widget _pageOne() {
-    return FadeTransition(
-      opacity: _entryController,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          children: [
-            const SizedBox(height: 9),
-
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'PREPARE SMARTER WITH MOCKTESTER',
-                style: TextStyle(
-                  color: blue,
-                  fontSize: 9,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 1.15,
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 13),
-
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Your exam.\nYour edge.',
-                style: TextStyle(
-                  color: ink,
-                  fontSize: 34,
-                  height: 1.08,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: -1.15,
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 10),
-
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Practice in a real CBT environment.\n'
-                'Build speed, accuracy and confidence.',
-                style: TextStyle(
-                  color: muted,
-                  fontSize: 12,
-                  height: 1.5,
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 16),
-
-            Expanded(
-              child: _examDashboard(),
-            ),
-
-            const SizedBox(height: 10),
-
-            _blueButton(
-              'Enter MockTester',
-              Icons.arrow_forward_rounded,
-              _next,
-            ),
-
-            const SizedBox(height: 8),
-          ],
-        ),
-      ),
-    );
-  }
-
-  // ===========================================================================
-  // EXAM DASHBOARD
-  // ===========================================================================
-
-  Widget _examDashboard() {
-    return AnimatedBuilder(
-      animation: _floatController,
-      builder: (_, child) {
-        final y = lerpDouble(
-          -4,
-          4,
-          _floatController.value,
-        )!;
-
-        return Transform.translate(
-          offset: Offset(0, y),
-          child: child,
-        );
-      },
-      child: Stack(
-        clipBehavior: Clip.none,
-        alignment: Alignment.center,
-        children: [
-          Positioned(
-            top: 18,
-            left: 7,
-            right: 7,
-            bottom: 5,
-            child: Container(
-              decoration: BoxDecoration(
-                gradient: const LinearGradient(
-                  colors: [
-                    Color(0xFFE8F1FF),
-                    Color(0xFFF0ECFF),
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.circular(34),
-              ),
-            ),
-          ),
-
-          Positioned(
-            top: 34,
-            left: 17,
-            right: 17,
-            bottom: 19,
-            child: Transform.rotate(
-              angle: -.012,
-              child: Container(
-                padding: const EdgeInsets.all(15),
-                decoration: BoxDecoration(
-                  color: Colors.white,
-                  borderRadius: BorderRadius.circular(25),
-                  boxShadow: [
-                    BoxShadow(
-                      color: ink.withValues(alpha: .12),
-                      blurRadius: 35,
-                      offset: const Offset(0, 18),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        Container(
-                          width: 34,
-                          height: 34,
-                          decoration: BoxDecoration(
-                            color: blueLight,
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: const Icon(
-                            Icons.timer_outlined,
-                            color: blue,
-                            size: 18,
-                          ),
-                        ),
-
-                        const SizedBox(width: 9),
-
-                        const Expanded(
-                          child: Column(
-                            crossAxisAlignment:
-                                CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                'BPSC Full Mock',
-                                style: TextStyle(
-                                  color: ink,
-                                  fontSize: 11,
-                                  fontWeight: FontWeight.w900,
-                                ),
-                              ),
-                              Text(
-                                'Question 48 of 150',
-                                style: TextStyle(
-                                  color: faint,
-                                  fontSize: 8,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-
-                        const Text(
-                          '01:24:18',
-                          style: TextStyle(
-                            color: ink,
-                            fontSize: 11,
-                            fontWeight: FontWeight.w900,
-                          ),
-                        ),
-                      ],
-                    ),
-
-                    const SizedBox(height: 14),
-
-                    Align(
-                      alignment: Alignment.centerLeft,
-                      child: Container(
-                        width: 60,
-                        height: 5,
-                        decoration: BoxDecoration(
-                          color: blue,
-                          borderRadius: BorderRadius.circular(10),
-                        ),
-                      ),
-                    ),
-
-                    const SizedBox(height: 14),
-
-                    const Align(
-                      alignment: Alignment.centerLeft,
-                      child: Text(
-                        'Which of the following is known as '
-                        'the "Sorrow of Bihar"?',
-                        style: TextStyle(
-                          color: ink,
-                          fontSize: 11,
-                          height: 1.4,
-                          fontWeight: FontWeight.w800,
-                        ),
-                      ),
-                    ),
-
-                    const SizedBox(height: 12),
-
-                    _answer(
-                      'A',
-                      'Kosi River',
-                      true,
-                    ),
-
-                    const SizedBox(height: 6),
-
-                    _answer(
-                      'B',
-                      'Ganga River',
-                      false,
-                    ),
-
-                    const SizedBox(height: 6),
-
-                    _answer(
-                      'C',
-                      'Son River',
-                      false,
-                    ),
-
-                    const Spacer(),
-
-                    Row(
-                      children: [
-                        _miniStat(
-                          '68%',
-                          'Accuracy',
-                        ),
-                        const SizedBox(width: 7),
-                        _miniStat(
-                          '↑ 12',
-                          'Rank',
-                        ),
-                        const SizedBox(width: 7),
-                        _miniStat(
-                          '24',
-                          'Correct',
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ),
-
-          Positioned(
-            right: 1,
-            top: 3,
-            child: _floatingBadge(
-              icon: Icons.trending_up_rounded,
-              title: '+12',
-              subtitle: 'Rank',
-              color: green,
-            ),
-          ),
-
-          Positioned(
-            left: 1,
-            bottom: 7,
-            child: _floatingBadge(
-              icon: Icons.verified_rounded,
-              title: 'REAL',
-              subtitle: 'CBT Mode',
-              color: blue,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _answer(
-    String letter,
-    String text,
-    bool selected,
-  ) {
-    return Container(
-      height: 31,
-      padding: const EdgeInsets.symmetric(horizontal: 9),
-      decoration: BoxDecoration(
-        color: selected
-            ? blueLight
-            : const Color(0xFFF8FAFC),
-        borderRadius: BorderRadius.circular(9),
-        border: Border.all(
-          color: selected
-              ? blue.withValues(alpha: .3)
-              : const Color(0xFFEAECF0),
-        ),
-      ),
-      child: Row(
-        children: [
-          Container(
-            width: 20,
-            height: 20,
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: selected
-                  ? blue
-                  : Colors.white,
-              shape: BoxShape.circle,
-              border: Border.all(
-                color: selected
-                    ? blue
-                    : const Color(0xFFD0D5DD),
-              ),
-            ),
-            child: Text(
-              letter,
-              style: TextStyle(
-                color: selected
-                    ? Colors.white
-                    : muted,
-                fontSize: 7,
-                fontWeight: FontWeight.w900,
-              ),
-            ),
-          ),
-
-          const SizedBox(width: 8),
-
-          Text(
-            text,
-            style: TextStyle(
-              color: selected
-                  ? blueDeep
-                  : muted,
-              fontSize: 8.5,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _miniStat(
-    String value,
-    String label,
-  ) {
-    return Expanded(
-      child: Container(
-        padding: const EdgeInsets.symmetric(
-          vertical: 7,
-        ),
-        decoration: BoxDecoration(
-          color: const Color(0xFFF8FAFC),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Column(
-          children: [
-            Text(
-              value,
-              style: const TextStyle(
-                color: ink,
-                fontSize: 9,
-                fontWeight: FontWeight.w900,
-              ),
-            ),
-            Text(
-              label,
-              style: const TextStyle(
-                color: faint,
-                fontSize: 6.5,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _floatingBadge({
-    required IconData icon,
-    required String title,
-    required String subtitle,
-    required Color color,
-  }) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(15),
-      child: BackdropFilter(
-        filter: ImageFilter.blur(
-          sigmaX: 8,
-          sigmaY: 8,
-        ),
-        child: Container(
-          padding: const EdgeInsets.all(8),
+    return Row(
+      children: [
+        Container(
+          width: 36,
+          height: 36,
           decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: .94),
-            borderRadius: BorderRadius.circular(15),
+            gradient: const LinearGradient(
+              colors: [
+                Color(0xFF2585FF),
+                Color(0xFF0047D9),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            borderRadius:
+                BorderRadius.circular(11),
             boxShadow: [
               BoxShadow(
-                color: ink.withValues(alpha: .08),
-                blurRadius: 18,
-                offset: const Offset(0, 8),
+                color: blue.withOpacity(.18),
+                blurRadius: 14,
+                offset:
+                    const Offset(0, 6),
               ),
             ],
           ),
-          child: Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                width: 28,
-                height: 28,
-                decoration: BoxDecoration(
-                  color: color.withValues(alpha: .1),
-                  shape: BoxShape.circle,
-                ),
-                child: Icon(
-                  icon,
-                  color: color,
-                  size: 15,
-                ),
+          child: const Center(
+            child: Text(
+              'M',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 19,
+                fontWeight: FontWeight.w900,
               ),
-
-              const SizedBox(width: 6),
-
-              Column(
-                crossAxisAlignment:
-                    CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    title,
-                    style: const TextStyle(
-                      color: ink,
-                      fontSize: 8,
-                      fontWeight: FontWeight.w900,
-                    ),
-                  ),
-                  Text(
-                    subtitle,
-                    style: const TextStyle(
-                      color: faint,
-                      fontSize: 6.5,
-                    ),
-                  ),
-                ],
-              ),
-            ],
+            ),
           ),
         ),
-      ),
-    );
-  }
 
-  // ===========================================================================
-  // PAGE 2
-  // ===========================================================================
+        const SizedBox(width: 10),
 
-  Widget _pageTwo() {
-    return FadeTransition(
-      opacity: _entryController,
-      child: Padding(
-        padding: const EdgeInsets.fromLTRB(
-          20,
-          7,
-          20,
-          5,
-        ),
-        child: Column(
-          children: [
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'YOUR COACHING. NOW DIGITAL.',
-                style: TextStyle(
-                  color: blue,
-                  fontSize: 9,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 1.2,
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 9),
-
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Your coaching.\nNow on MockTester.',
-                style: TextStyle(
-                  color: ink,
-                  fontSize: 31,
-                  height: 1.06,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: -1.15,
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 9),
-
-            // -----------------------------------------------------------------
-            // MAIN MESSAGE
-            // -----------------------------------------------------------------
-
-            Container(
-              width: double.infinity,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 14,
-                vertical: 12,
-              ),
-              decoration: BoxDecoration(
-                color: blueLight,
-                borderRadius: BorderRadius.circular(16),
-                border: Border.all(
-                  color: blue.withValues(alpha: .10),
-                ),
-              ),
-              child: const Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Icon(
-                    Icons.school_rounded,
-                    color: blue,
-                    size: 21,
-                  ),
-                  SizedBox(width: 10),
-                  Expanded(
-                    child: Text(
-                      'Your coaching can conduct mock tests '
-                      'on MockTester — just like a real CBT exam.',
-                      style: TextStyle(
-                        color: blueDeep,
-                        fontSize: 11,
-                        height: 1.45,
-                        fontWeight: FontWeight.w800,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 14),
-
-            // -----------------------------------------------------------------
-            // FLOW
-            // -----------------------------------------------------------------
-
-            Expanded(
-              child: _simpleTestFlow(),
-            ),
-
-            const SizedBox(height: 11),
-
-            // -----------------------------------------------------------------
-            // BENEFITS
-            // -----------------------------------------------------------------
-
-            Row(
-              children: [
-                _premiumBenefit(
-                  Icons.computer_rounded,
-                  'Real CBT',
-                  'Exam-like practice',
-                  blue,
-                ),
-                const SizedBox(width: 8),
-                _premiumBenefit(
-                  Icons.emoji_events_rounded,
-                  'Result',
-                  'See your score',
-                  green,
-                ),
-                const SizedBox(width: 8),
-                _premiumBenefit(
-                  Icons.analytics_rounded,
-                  'Analysis',
-                  'Find weak areas',
-                  violet,
-                ),
-              ],
-            ),
-
-            const SizedBox(height: 11),
-
-            _blueButton(
-              'Continue',
-              Icons.arrow_forward_rounded,
-              _next,
-            ),
-
-            const SizedBox(height: 7),
-          ],
-        ),
-      ),
-    );
-  }
-
-  // ===========================================================================
-  // SIMPLE TEST FLOW
-  // ===========================================================================
-
-  Widget _simpleTestFlow() {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.fromLTRB(
-        15,
-        17,
-        15,
-        15,
-      ),
-      decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [
-            Color(0xFF0D2D78),
-            Color(0xFF17104D),
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(27),
-        boxShadow: [
-          BoxShadow(
-            color: blue.withValues(alpha: .13),
-            blurRadius: 25,
-            offset: const Offset(0, 12),
+        const Text(
+          'MockTester',
+          style: TextStyle(
+            color: ink,
+            fontSize: 19,
+            fontWeight: FontWeight.w900,
+            letterSpacing: -.6,
           ),
-        ],
-      ),
-      child: Column(
-        children: [
-          const Text(
-            'HOW IT WORKS',
+        ),
+
+        const SizedBox(width: 7),
+
+        Container(
+          padding:
+              const EdgeInsets.symmetric(
+            horizontal: 7,
+            vertical: 4,
+          ),
+          decoration: BoxDecoration(
+            color:
+                const Color(0xFFFFF4E5),
+            borderRadius:
+                BorderRadius.circular(6),
+          ),
+          child: const Text(
+            'CBT',
             style: TextStyle(
-              color: Color(0xFF98A2B3),
+              color:
+                  Color(0xFFB54708),
               fontSize: 8,
               fontWeight: FontWeight.w900,
-              letterSpacing: 1.1,
+              letterSpacing: .4,
             ),
           ),
+        ),
 
-          const SizedBox(height: 15),
+        const Spacer(),
 
-          _flowStep(
-            number: '1',
-            icon: Icons.school_rounded,
-            title: 'Your Coaching',
-            subtitle: 'Conducts the test',
-            color: orange,
+        Text(
+          '0${_currentPage + 1} / 02',
+          style: const TextStyle(
+            color: faint,
+            fontSize: 9,
+            fontWeight: FontWeight.w900,
           ),
+        ),
+      ],
+    );
+  }
 
-          _flowLine(),
+  // ============================================================
+  // SCREEN 1 — WELCOME
+  // ============================================================
 
-          _flowStep(
-            number: '2',
-            icon: Icons.phone_android_rounded,
-            title: 'MockTester',
-            subtitle: 'You take the CBT mock',
-            color: blue,
-            highlight: true,
+  Widget _welcomeScreen() {
+    return LayoutBuilder(
+      builder: (context, constraints) {
+        return SingleChildScrollView(
+          physics:
+              const BouncingScrollPhysics(),
+          padding: EdgeInsets.only(
+            left: 24,
+            right: 24,
+            top:
+                MediaQuery.of(context).padding.top +
+                    100,
+            bottom:
+                MediaQuery.of(context).padding.bottom +
+                    75,
           ),
-
-          _flowLine(),
-
-          _flowStep(
-            number: '3',
-            icon: Icons.insights_rounded,
-            title: 'Your Result',
-            subtitle: 'Score, rank & weak areas',
-            color: green,
-          ),
-
-          const Spacer(),
-
-          const SizedBox(height: 13),
-
-          Container(
-            width: double.infinity,
-            padding: const EdgeInsets.symmetric(
-              horizontal: 12,
-              vertical: 11,
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight:
+                  constraints.maxHeight -
+                      MediaQuery.of(context)
+                          .padding
+                          .top -
+                      MediaQuery.of(context)
+                          .padding
+                          .bottom -
+                      50,
             ),
-            decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: .08),
-              borderRadius: BorderRadius.circular(13),
-              border: Border.all(
-                color: Colors.white.withValues(alpha: .08),
-              ),
-            ),
-            child: const Row(
+            child: Column(
+              mainAxisAlignment:
+                  MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.check_circle_rounded,
-                  color: Color(0xFF32D583),
-                  size: 17,
-                ),
-                SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    'Your coaching stays the same. '
-                    'Your test experience gets better.',
+                FadeSlide(
+                  animation:
+                      _introController,
+                  delay: .05,
+                  child: const Text(
+                    'YOUR PREPARATION STARTS HERE',
+                    textAlign:
+                        TextAlign.center,
                     style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 9,
-                      height: 1.35,
-                      fontWeight: FontWeight.w700,
+                      color: blue,
+                      fontSize: 9.5,
+                      fontWeight:
+                          FontWeight.w900,
+                      letterSpacing: 1.45,
                     ),
                   ),
                 ),
+
+                const SizedBox(height: 25),
+
+                _AnimatedTitle(
+                  text:
+                      'Welcome to MockTester',
+                  animation:
+                      _introController,
+                ),
+
+                const SizedBox(height: 17),
+
+                FadeSlide(
+                  animation:
+                      _introController,
+                  delay: .40,
+                  child: const Text(
+                    'Padhai Pe Sabka Haq Hai',
+                    textAlign:
+                        TextAlign.center,
+                    style: TextStyle(
+                      color: ink,
+                      fontSize: 20,
+                      fontWeight:
+                          FontWeight.w700,
+                      letterSpacing: -.3,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 11),
+
+                FadeSlide(
+                  animation:
+                      _introController,
+                  delay: .52,
+                  child: const Text(
+                    'Bihar ke sabhi exams ki latest mock test series, '
+                    'ab ek hi app par.',
+                    textAlign:
+                        TextAlign.center,
+                    style: TextStyle(
+                      color: muted,
+                      fontSize: 12,
+                      height: 1.55,
+                      fontWeight:
+                          FontWeight.w500,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 28),
+
+                FadeSlide(
+                  animation:
+                      _introController,
+                  delay: .22,
+                  child: _studyVisual(),
+                ),
+
+                const SizedBox(height: 25),
+
+                FadeSlide(
+                  animation:
+                      _introController,
+                  delay: .72,
+                  child: _primaryButton(
+                    text: 'Continue',
+                    icon:
+                        Icons.arrow_forward_rounded,
+                    onTap: _nextPage,
+                  ),
+                ),
               ],
             ),
           ),
-        ],
-      ),
+        );
+      },
     );
   }
 
-  // ===========================================================================
-  // FLOW STEP
-  // ===========================================================================
+  // ============================================================
+  // VISUAL
+  // ============================================================
 
-  Widget _flowStep({
-    required String number,
-    required IconData icon,
-    required String title,
-    required String subtitle,
-    required Color color,
-    bool highlight = false,
-  }) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(11),
-      decoration: BoxDecoration(
-        color: highlight
-            ? Colors.white.withValues(alpha: .12)
-            : Colors.white.withValues(alpha: .055),
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: highlight
-              ? Colors.white.withValues(alpha: .15)
-              : Colors.white.withValues(alpha: .05),
-        ),
-      ),
-      child: Row(
+  Widget _studyVisual() {
+    return SizedBox(
+      height: 150,
+      child: Stack(
+        alignment: Alignment.center,
         children: [
           Container(
-            width: 34,
-            height: 34,
+            width: 145,
+            height: 145,
             decoration: BoxDecoration(
-              color: color.withValues(alpha: .14),
-              borderRadius: BorderRadius.circular(11),
-            ),
-            child: Icon(
-              icon,
-              color: color,
-              size: 19,
-            ),
-          ),
-
-          const SizedBox(width: 10),
-
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontSize: 10.5,
-                    fontWeight: FontWeight.w900,
-                  ),
-                ),
-                const SizedBox(height: 2),
-                Text(
-                  subtitle,
-                  style: const TextStyle(
-                    color: Color(0xFFB5BDD0),
-                    fontSize: 8,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-              ],
+              shape: BoxShape.circle,
+              color:
+                  blue.withOpacity(.045),
             ),
           ),
 
           Container(
-            width: 22,
-            height: 22,
-            alignment: Alignment.center,
+            width: 96,
+            height: 96,
             decoration: BoxDecoration(
-              color: Colors.white.withValues(alpha: .08),
               shape: BoxShape.circle,
-            ),
-            child: Text(
-              number,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 8,
-                fontWeight: FontWeight.w900,
+              gradient:
+                  const LinearGradient(
+                colors: [
+                  Color(0xFFEAF2FF),
+                  Color(0xFFDCEAFF),
+                ],
               ),
+              border: Border.all(
+                color:
+                    const Color(0xFFB9D3FF),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color:
+                      blue.withOpacity(.09),
+                  blurRadius: 25,
+                  offset:
+                      const Offset(0, 10),
+                ),
+              ],
+            ),
+            child: const Icon(
+              Icons.school_rounded,
+              color: blue,
+              size: 43,
+            ),
+          ),
+
+          Positioned(
+            left: 35,
+            top: 17,
+            child: _floatingIcon(
+              Icons.check_rounded,
+              const Color(0xFF12B76A),
+            ),
+          ),
+
+          Positioned(
+            right: 32,
+            bottom: 14,
+            child: _floatingIcon(
+              Icons.trending_up_rounded,
+              const Color(0xFF6941C6),
+            ),
+          ),
+
+          Positioned(
+            right: 44,
+            top: 12,
+            child: _floatingIcon(
+              Icons.timer_outlined,
+              blue,
             ),
           ),
         ],
@@ -1157,307 +545,257 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     );
   }
 
-  // ===========================================================================
-  // FLOW LINE
-  // ===========================================================================
-
-  Widget _flowLine() {
-    return SizedBox(
-      height: 20,
-      child: Center(
-        child: Container(
-          width: 1.5,
-          height: 16,
-          color: Colors.white.withValues(alpha: .18),
-        ),
-      ),
-    );
-  }
-
-  // ===========================================================================
-  // BENEFIT CARDS
-  // ===========================================================================
-
-  Widget _premiumBenefit(
+  Widget _floatingIcon(
     IconData icon,
-    String title,
-    String subtitle,
     Color color,
   ) {
-    return Expanded(
-      child: Container(
-        height: 82,
-        padding: const EdgeInsets.fromLTRB(
-          9,
-          9,
-          7,
-          8,
+    return Container(
+      width: 37,
+      height: 37,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius:
+            BorderRadius.circular(11),
+        border: Border.all(
+          color: border,
         ),
-        decoration: BoxDecoration(
-          color: Colors.white,
-          borderRadius: BorderRadius.circular(15),
-          border: Border.all(
-            color: border,
+        boxShadow: [
+          BoxShadow(
+            color:
+                Colors.black.withOpacity(.06),
+            blurRadius: 14,
+            offset:
+                const Offset(0, 6),
           ),
-          boxShadow: [
-            BoxShadow(
-              color: Colors.black.withValues(alpha: .025),
-              blurRadius: 12,
-              offset: const Offset(0, 5),
-            ),
-          ],
-        ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Container(
-              width: 28,
-              height: 28,
-              decoration: BoxDecoration(
-                color: color.withValues(alpha: .10),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Icon(
-                icon,
-                color: color,
-                size: 16,
-              ),
-            ),
-
-            const Spacer(),
-
-            Text(
-              title,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                color: ink,
-                fontSize: 9.5,
-                fontWeight: FontWeight.w900,
-              ),
-            ),
-
-            const SizedBox(height: 1),
-
-            Text(
-              subtitle,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: const TextStyle(
-                color: muted,
-                fontSize: 7,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-        ),
+        ],
+      ),
+      child: Icon(
+        icon,
+        color: color,
+        size: 17,
       ),
     );
   }
 
-  // ===========================================================================
-  // PAGE 3
-  // ===========================================================================
+  // ============================================================
+  // SCREEN 2 — NAME ENTRY
+  // ============================================================
 
-  Widget _pageThree() {
-    return GestureDetector(
-      onTap: () {
-        FocusScope.of(context).unfocus();
-      },
-      child: FadeTransition(
-        opacity: _entryController,
-        child: Column(
-          children: [
-            Expanded(
-              child: SingleChildScrollView(
-                physics: const BouncingScrollPhysics(),
-                padding: const EdgeInsets.fromLTRB(
-                  22,
-                  20,
-                  22,
-                  20,
+  Widget _nameScreen() {
+    return FadeTransition(
+      opacity: _formController,
+      child: SlideTransition(
+        position: Tween<Offset>(
+          begin:
+              const Offset(0, .035),
+          end: Offset.zero,
+        ).animate(
+          CurvedAnimation(
+            parent:
+                _formController,
+            curve:
+                Curves.easeOutCubic,
+          ),
+        ),
+        child: GestureDetector(
+          onTap: () =>
+              FocusScope.of(context)
+                  .unfocus(),
+          child: Form(
+            key: _formKey,
+            child: ListView(
+              physics:
+                  const BouncingScrollPhysics(),
+              padding: EdgeInsets.fromLTRB(
+                22,
+                MediaQuery.of(context)
+                        .padding
+                        .top +
+                    95,
+                22,
+                MediaQuery.of(context)
+                        .padding
+                        .bottom +
+                    80,
+              ),
+              children: [
+                const Text(
+                  '02',
+                  style: TextStyle(
+                    color: blue,
+                    fontSize: 11,
+                    fontWeight:
+                        FontWeight.w900,
+                    letterSpacing: 1,
+                  ),
                 ),
-                child: Form(
-                  key: _formKey,
-                  child: Column(
-                    crossAxisAlignment:
-                        CrossAxisAlignment.start,
+
+                const SizedBox(height: 17),
+
+                const Text(
+                  'First,\nwhat should we call you?',
+                  style: TextStyle(
+                    color: ink,
+                    fontSize: 34,
+                    height: 1.04,
+                    fontWeight:
+                        FontWeight.w800,
+                    letterSpacing: -1.25,
+                  ),
+                ),
+
+                const SizedBox(height: 12),
+
+                const Text(
+                  'Your name will appear on your scorecard '
+                  'and personalised experience.',
+                  style: TextStyle(
+                    color: muted,
+                    fontSize: 11.5,
+                    height: 1.5,
+                  ),
+                ),
+
+                const SizedBox(height: 30),
+
+                _inputField(
+                  label: 'MY NAME IS',
+                  controller:
+                      _nameController,
+                  hint: 'Your full name',
+                  icon:
+                      Icons.person_outline_rounded,
+                  capitalization:
+                      TextCapitalization.words,
+                  validator: (value) {
+                    if (value == null ||
+                        value.trim().length < 2) {
+                      return 'Please enter your name';
+                    }
+                    return null;
+                  },
+                ),
+
+                const SizedBox(height: 22),
+
+                _inputField(
+                  label: 'MOBILE NUMBER',
+                  controller:
+                      _phoneController,
+                  hint: '10-digit number',
+                  icon:
+                      Icons.phone_android_rounded,
+                  keyboardType:
+                      TextInputType.phone,
+                  formatters: [
+                    FilteringTextInputFormatter
+                        .digitsOnly,
+                    LengthLimitingTextInputFormatter(
+                      10,
+                    ),
+                  ],
+                  validator: (value) {
+                    if (value == null ||
+                        value.trim().isEmpty) {
+                      return null;
+                    }
+
+                    if (!RegExp(
+                      r'^[6-9]\d{9}$',
+                    ).hasMatch(
+                      value.trim(),
+                    )) {
+                      return 'Enter a valid 10-digit number';
+                    }
+
+                    return null;
+                  },
+                ),
+
+                const SizedBox(height: 10),
+
+                const Row(
+                  children: [
+                    Icon(
+                      Icons.info_outline_rounded,
+                      color: faint,
+                      size: 14,
+                    ),
+                    SizedBox(width: 6),
+                    Text(
+                      'Mobile number is optional.',
+                      style: TextStyle(
+                        color: faint,
+                        fontSize: 8.5,
+                      ),
+                    ),
+                  ],
+                ),
+
+                const SizedBox(height: 28),
+
+                Container(
+                  padding:
+                      const EdgeInsets.all(14),
+                  decoration: BoxDecoration(
+                    color: blueLight,
+                    borderRadius:
+                        BorderRadius.circular(16),
+                    border: Border.all(
+                      color:
+                          blue.withOpacity(.08),
+                    ),
+                  ),
+                  child: const Row(
                     children: [
-                      const Text(
-                        '03',
-                        style: TextStyle(
-                          color: blue,
-                          fontSize: 11,
-                          fontWeight: FontWeight.w900,
-                          letterSpacing: 1,
-                        ),
+                      Icon(
+                        Icons
+                            .rocket_launch_rounded,
+                        color: blue,
+                        size: 19,
                       ),
-
-                      const SizedBox(height: 18),
-
-                      const Text(
-                        'First,\nwhat should we call you?',
-                        style: TextStyle(
-                          color: ink,
-                          fontSize: 34,
-                          height: 1.03,
-                          fontWeight: FontWeight.w800,
-                          letterSpacing: -1.25,
-                        ),
-                      ),
-
-                      const SizedBox(height: 10),
-
-                      const Text(
-                        'Your name will appear on your scorecard '
-                        'and personalised experience.',
-                        style: TextStyle(
-                          color: muted,
-                          fontSize: 11.5,
-                          height: 1.5,
-                        ),
-                      ),
-
-                      const SizedBox(height: 30),
-
-                      _conversationField(
-                        label: 'MY NAME IS',
-                        controller: _nameController,
-                        hint: 'Your full name',
-                        icon: Icons.person_outline_rounded,
-                        capitalization:
-                            TextCapitalization.words,
-                        validator: (value) {
-                          if (value == null ||
-                              value.trim().length < 2) {
-                            return 'Please enter your name';
-                          }
-
-                          return null;
-                        },
-                      ),
-
-                      const SizedBox(height: 24),
-
-                      _conversationField(
-                        label: 'MOBILE NUMBER',
-                        controller: _phoneController,
-                        hint: '10-digit number',
-                        icon: Icons.phone_android_rounded,
-                        keyboardType: TextInputType.phone,
-                        formatters: [
-                          FilteringTextInputFormatter.digitsOnly,
-                          LengthLimitingTextInputFormatter(10),
-                        ],
-                        validator: (value) {
-                          if (value == null ||
-                              value.trim().isEmpty) {
-                            return null;
-                          }
-
-                          if (!RegExp(
-                            r'^[6-9]\d{9}$',
-                          ).hasMatch(value.trim())) {
-                            return 'Enter a valid 10-digit number';
-                          }
-
-                          return null;
-                        },
-                      ),
-
-                      const SizedBox(height: 12),
-
-                      Row(
-                        children: [
-                          const Icon(
-                            Icons.info_outline_rounded,
-                            color: faint,
-                            size: 14,
+                      SizedBox(width: 10),
+                      Expanded(
+                        child: Text(
+                          'Ready? Your preparation starts here.',
+                          style: TextStyle(
+                            color: blueDeep,
+                            fontSize: 10,
+                            fontWeight:
+                                FontWeight.w800,
                           ),
-                          const SizedBox(width: 6),
-                          const Expanded(
-                            child: Text(
-                              'Optional — useful when your coaching '
-                              'centre uses MockTester.',
-                              style: TextStyle(
-                                color: faint,
-                                fontSize: 8.5,
-                                height: 1.4,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-
-                      const SizedBox(height: 35),
-
-                      Container(
-                        width: double.infinity,
-                        padding: const EdgeInsets.all(14),
-                        decoration: BoxDecoration(
-                          color: blueLight,
-                          borderRadius:
-                              BorderRadius.circular(16),
-                        ),
-                        child: const Row(
-                          children: [
-                            Icon(
-                              Icons.rocket_launch_rounded,
-                              color: blue,
-                              size: 19,
-                            ),
-                            SizedBox(width: 10),
-                            Expanded(
-                              child: Text(
-                                'Ready? Your preparation starts here.',
-                                style: TextStyle(
-                                  color: blueDeep,
-                                  fontSize: 10,
-                                  fontWeight: FontWeight.w800,
-                                ),
-                              ),
-                            ),
-                          ],
                         ),
                       ),
                     ],
                   ),
                 ),
-              ),
-            ),
 
-            Container(
-              padding: const EdgeInsets.fromLTRB(
-                20,
-                10,
-                20,
-                10,
-              ),
-              decoration: BoxDecoration(
-                color: bg.withValues(alpha: .96),
-              ),
-              child: _blueButton(
-                _isLoading
-                    ? 'Setting up...'
-                    : 'Start My Preparation',
-                Icons.arrow_forward_rounded,
-                _isLoading
-                    ? null
-                    : _completeRegistration,
-                loading: _isLoading,
-              ),
+                const SizedBox(height: 25),
+
+                _primaryButton(
+                  text: _isLoading
+                      ? 'Setting up...'
+                      : 'Start My Preparation',
+                  icon:
+                      Icons.arrow_forward_rounded,
+                  onTap: _isLoading
+                      ? null
+                      : _completeRegistration,
+                  loading: _isLoading,
+                ),
+              ],
             ),
-          ],
+          ),
         ),
       ),
     );
   }
 
-  // ===========================================================================
-  // FORM FIELD
-  // ===========================================================================
+  // ============================================================
+  // INPUT FIELD
+  // ============================================================
 
-  Widget _conversationField({
+  Widget _inputField({
     required String label,
     required TextEditingController controller,
     required String hint,
@@ -1469,7 +807,8 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     String? Function(String?)? validator,
   }) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment:
+          CrossAxisAlignment.start,
       children: [
         Text(
           label,
@@ -1486,8 +825,10 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
         TextFormField(
           controller: controller,
           keyboardType: keyboardType,
-          textCapitalization: capitalization,
-          inputFormatters: formatters,
+          textCapitalization:
+              capitalization,
+          inputFormatters:
+              formatters,
           validator: validator,
           cursorColor: blue,
           style: const TextStyle(
@@ -1495,12 +836,16 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
             fontSize: 17,
             fontWeight: FontWeight.w700,
           ),
-          decoration: InputDecoration(
+          decoration:
+              InputDecoration(
             hintText: hint,
-            hintStyle: const TextStyle(
-              color: Color(0xFFB0B7C3),
+            hintStyle:
+                const TextStyle(
+              color:
+                  Color(0xFFB0B7C3),
               fontSize: 17,
-              fontWeight: FontWeight.w500,
+              fontWeight:
+                  FontWeight.w500,
             ),
             prefixIcon: Icon(
               icon,
@@ -1508,35 +853,60 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
               size: 21,
             ),
             filled: true,
-            fillColor: Colors.white,
+            fillColor:
+                Colors.white,
             contentPadding:
                 const EdgeInsets.symmetric(
               horizontal: 15,
               vertical: 17,
             ),
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
-              borderSide: const BorderSide(
+            border:
+                OutlineInputBorder(
+              borderRadius:
+                  BorderRadius.circular(16),
+              borderSide:
+                  const BorderSide(
                 color: border,
               ),
             ),
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
-              borderSide: const BorderSide(
+            enabledBorder:
+                OutlineInputBorder(
+              borderRadius:
+                  BorderRadius.circular(16),
+              borderSide:
+                  const BorderSide(
                 color: border,
               ),
             ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
-              borderSide: const BorderSide(
+            focusedBorder:
+                OutlineInputBorder(
+              borderRadius:
+                  BorderRadius.circular(16),
+              borderSide:
+                  const BorderSide(
                 color: blue,
                 width: 1.5,
               ),
             ),
-            errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
-              borderSide: const BorderSide(
-                color: Color(0xFFD92D20),
+            errorBorder:
+                OutlineInputBorder(
+              borderRadius:
+                  BorderRadius.circular(16),
+              borderSide:
+                  const BorderSide(
+                color:
+                    Color(0xFFD92D20),
+              ),
+            ),
+            focusedErrorBorder:
+                OutlineInputBorder(
+              borderRadius:
+                  BorderRadius.circular(16),
+              borderSide:
+                  const BorderSide(
+                color:
+                    Color(0xFFD92D20),
+                width: 1.5,
               ),
             ),
           ),
@@ -1545,164 +915,425 @@ class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     );
   }
 
-  // ===========================================================================
-  // PREMIUM BLUE BUTTON
-  // ===========================================================================
+  // ============================================================
+  // REGISTRATION
+  // ============================================================
 
-  Widget _blueButton(
-    String text,
-    IconData icon,
-    VoidCallback? onPressed, {
+  Future<void> _completeRegistration() async {
+    FocusScope.of(context).unfocus();
+
+    if (!_formKey.currentState!.validate() ||
+        _isLoading) {
+      return;
+    }
+
+    setState(() {
+      _isLoading = true;
+    });
+
+    final name =
+        _nameController.text.trim();
+
+    final phone =
+        _phoneController.text.trim();
+
+    try {
+      final prefs =
+          await SharedPreferences.getInstance();
+
+      await prefs.setBool(
+        'is_onboarded',
+        true,
+      );
+
+      await prefs.setString(
+        'custom_aspirant_name',
+        name,
+      );
+
+      await prefs.setString(
+        'user_name',
+        name,
+      );
+
+      if (phone.isNotEmpty) {
+        await prefs.setString(
+          'user_mobile',
+          phone,
+        );
+      }
+
+      // ========================================================
+      // SUPABASE SYNC
+      // ========================================================
+
+      if (phone.isNotEmpty) {
+        try {
+          await Supabase.instance.client
+              .from('app_users')
+              .upsert({
+            'mobile_number': phone,
+            'full_name': name,
+            'updated_at':
+                DateTime.now()
+                    .toIso8601String(),
+          });
+        } catch (e) {
+          debugPrint(
+            'Supabase sync issue: $e',
+          );
+        }
+      }
+
+      if (!mounted) return;
+
+      Navigator.pushReplacement(
+        context,
+        PageRouteBuilder(
+          transitionDuration:
+              const Duration(
+            milliseconds: 450,
+          ),
+          pageBuilder:
+              (_, __, ___) =>
+                  widget.nextScreen,
+          transitionsBuilder:
+              (_, animation, __, child) {
+            return FadeTransition(
+              opacity: animation,
+              child: child,
+            );
+          },
+        ),
+      );
+    } catch (e) {
+      debugPrint(
+        'Registration error: $e',
+      );
+
+      if (!mounted) return;
+
+      ScaffoldMessenger.of(context)
+          .showSnackBar(
+        const SnackBar(
+          content: Text(
+            'Something went wrong. Please try again.',
+          ),
+          behavior:
+              SnackBarBehavior.floating,
+        ),
+      );
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isLoading = false;
+        });
+      }
+    }
+  }
+
+  // ============================================================
+  // BUTTON
+  // ============================================================
+
+  Widget _primaryButton({
+    required String text,
+    required IconData icon,
+    required VoidCallback? onTap,
     bool loading = false,
   }) {
-    final enabled = onPressed != null;
-
-    return SizedBox(
-      width: double.infinity,
-      height: 55,
-      child: DecoratedBox(
-        decoration: BoxDecoration(
-          gradient: enabled
-              ? const LinearGradient(
-                  colors: [
-                    Color(0xFF2585FF),
-                    Color(0xFF0047D9),
-                  ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                )
-              : const LinearGradient(
-                  colors: [
-                    Color(0xFF98A2B3),
-                    Color(0xFF98A2B3),
-                  ],
-                ),
-          borderRadius: BorderRadius.circular(17),
-          boxShadow: enabled
-              ? [
-                  BoxShadow(
-                    color: blue.withValues(alpha: .22),
-                    blurRadius: 20,
-                    offset: const Offset(0, 9),
-                  ),
-                ]
-              : null,
-        ),
-        child: ElevatedButton(
-          onPressed: onPressed,
-          style: ElevatedButton.styleFrom(
-            backgroundColor: Colors.transparent,
-            foregroundColor: Colors.white,
-            elevation: 0,
-            shadowColor: Colors.transparent,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(17),
+    return GestureDetector(
+      onTap: onTap,
+      child: AnimatedOpacity(
+        duration:
+            const Duration(milliseconds: 200),
+        opacity:
+            onTap == null ? .55 : 1,
+        child: Container(
+          width: double.infinity,
+          height: 56,
+          decoration: BoxDecoration(
+            gradient:
+                const LinearGradient(
+              colors: [
+                Color(0xFF2585FF),
+                Color(0xFF0047D9),
+              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
+            borderRadius:
+                BorderRadius.circular(17),
+            boxShadow: [
+              BoxShadow(
+                color:
+                    blue.withOpacity(.22),
+                blurRadius: 20,
+                offset:
+                    const Offset(0, 9),
+              ),
+            ],
           ),
-          child: loading
-              ? const SizedBox(
-                  width: 21,
-                  height: 21,
-                  child: CircularProgressIndicator(
-                    strokeWidth: 2,
-                    color: Colors.white,
-                  ),
-                )
-              : Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      text,
-                      style: const TextStyle(
-                        fontSize: 13,
-                        fontWeight: FontWeight.w900,
+          child: Center(
+            child: loading
+                ? const SizedBox(
+                    width: 21,
+                    height: 21,
+                    child:
+                        CircularProgressIndicator(
+                      strokeWidth: 2,
+                      color: Colors.white,
+                    ),
+                  )
+                : Row(
+                    mainAxisAlignment:
+                        MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        text,
+                        style:
+                            const TextStyle(
+                          color:
+                              Colors.white,
+                          fontSize: 13,
+                          fontWeight:
+                              FontWeight.w900,
+                        ),
                       ),
-                    ),
-                    const SizedBox(width: 9),
-                    Icon(
-                      icon,
-                      size: 18,
-                    ),
-                  ],
-                ),
+                      const SizedBox(
+                        width: 9,
+                      ),
+                      Icon(
+                        icon,
+                        color:
+                            Colors.white,
+                        size: 18,
+                      ),
+                    ],
+                  ),
+          ),
         ),
       ),
     );
   }
 
-  // ===========================================================================
+  // ============================================================
   // PROGRESS
-  // ===========================================================================
+  // ============================================================
 
   Widget _bottomProgress() {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(
-        22,
-        3,
-        22,
-        13,
-      ),
-      child: Row(
-        children: [
-          Text(
-            '0${_currentPage + 1}',
-            style: const TextStyle(
-              color: ink,
-              fontSize: 9,
-              fontWeight: FontWeight.w900,
-            ),
+    return Row(
+      children: [
+        AnimatedContainer(
+          duration:
+              const Duration(milliseconds: 350),
+          width:
+              _currentPage == 0 ? 34 : 12,
+          height: 4,
+          decoration: BoxDecoration(
+            color: blue,
+            borderRadius:
+                BorderRadius.circular(10),
           ),
+        ),
 
-          const SizedBox(width: 10),
+        const SizedBox(width: 5),
 
-          Expanded(
-            child: Row(
-              children: List.generate(
-                3,
-                (index) {
-                  final active =
-                      index == _currentPage;
+        AnimatedContainer(
+          duration:
+              const Duration(milliseconds: 350),
+          width:
+              _currentPage == 1 ? 34 : 12,
+          height: 4,
+          decoration: BoxDecoration(
+            color: _currentPage == 1
+                ? blue
+                : const Color(
+                    0xFFE4E7EC,
+                  ),
+            borderRadius:
+                BorderRadius.circular(10),
+          ),
+        ),
 
-                  final completed =
-                      index < _currentPage;
+        const Spacer(),
 
-                  return Expanded(
-                    child: AnimatedContainer(
-                      duration:
-                          const Duration(milliseconds: 350),
-                      margin: EdgeInsets.only(
-                        right: index == 2 ? 0 : 5,
-                      ),
-                      height: active ? 4 : 3,
-                      decoration: BoxDecoration(
-                        color: active || completed
-                            ? blue
-                            : const Color(0xFFE4E7EC),
-                        borderRadius:
-                            BorderRadius.circular(10),
-                      ),
-                    ),
-                  );
-                },
+        Text(
+          _currentPage == 0
+              ? '01 / 02'
+              : '02 / 02',
+          style: const TextStyle(
+            color: faint,
+            fontSize: 9,
+            fontWeight:
+                FontWeight.w900,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+// ============================================================================
+// ANIMATED TITLE
+// ============================================================================
+
+class _AnimatedTitle extends StatelessWidget {
+  final String text;
+  final AnimationController animation;
+
+  const _AnimatedTitle({
+    required this.text,
+    required this.animation,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: animation,
+      builder: (_, __) {
+        final value =
+            Curves.easeOutCubic.transform(
+          animation.value,
+        );
+
+        return Opacity(
+          opacity: value,
+          child: Transform.translate(
+            offset: Offset(
+              0,
+              18 * (1 - value),
+            ),
+            child: Transform.scale(
+              scale:
+                  .965 + (.035 * value),
+              child: Text(
+                text,
+                textAlign:
+                    TextAlign.center,
+                style: const TextStyle(
+                  color: ink,
+                  fontSize: 34,
+                  height: 1.08,
+                  fontWeight:
+                      FontWeight.w800,
+                  letterSpacing: -1.3,
+                ),
               ),
             ),
           ),
-
-          const SizedBox(width: 10),
-
-          Text(
-            '03',
-            style: TextStyle(
-              color: _currentPage == 2
-                  ? blue
-                  : faint,
-              fontSize: 9,
-              fontWeight: FontWeight.w900,
-            ),
-          ),
-        ],
-      ),
+        );
+      },
     );
+  }
+}
+
+// ============================================================================
+// FADE SLIDE
+// ============================================================================
+
+class FadeSlide extends StatelessWidget {
+  final AnimationController animation;
+  final double delay;
+  final Widget child;
+
+  const FadeSlide({
+    super.key,
+    required this.animation,
+    required this.child,
+    this.delay = 0,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedBuilder(
+      animation: animation,
+      builder: (_, child) {
+        final raw =
+            ((animation.value - delay) /
+                    (1 - delay))
+                .clamp(0.0, 1.0);
+
+        final value =
+            Curves.easeOutCubic.transform(
+          raw,
+        );
+
+        return Opacity(
+          opacity: value,
+          child: Transform.translate(
+            offset: Offset(
+              0,
+              12 * (1 - value),
+            ),
+            child: child,
+          ),
+        );
+      },
+      child: child,
+    );
+  }
+}
+
+// ============================================================================
+// BACKGROUND PAINTER
+// ============================================================================
+
+class _BackgroundPainter
+    extends CustomPainter {
+  final double animation;
+
+  _BackgroundPainter(this.animation);
+
+  @override
+  void paint(
+    Canvas canvas,
+    Size size,
+  ) {
+    final bluePaint = Paint()
+      ..color = const Color(0xFF155EEF)
+          .withOpacity(.035);
+
+    final violetPaint = Paint()
+      ..color = const Color(0xFF6941C6)
+          .withOpacity(.025);
+
+    final move1 =
+        math.sin(
+              animation * math.pi * 2,
+            ) *
+            18;
+
+    final move2 =
+        math.cos(
+              animation * math.pi * 2,
+            ) *
+            15;
+
+    canvas.drawCircle(
+      Offset(
+        size.width + 30,
+        100 + move1,
+      ),
+      120,
+      bluePaint,
+    );
+
+    canvas.drawCircle(
+      Offset(
+        -35,
+        size.height - 90 + move2,
+      ),
+      140,
+      violetPaint,
+    );
+  }
+
+  @override
+  bool shouldRepaint(
+    covariant _BackgroundPainter oldDelegate,
+  ) {
+    return oldDelegate.animation !=
+        animation;
   }
 }
