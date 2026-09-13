@@ -26,6 +26,7 @@ class _RevisionTabState extends State<RevisionTab> {
 
   int _selectedScienceSubIndex = 0;
   int _selectedGkSubIndex = 0;
+  int _selectedAptitudeSubIndex = 0;
   int _selectedStaticSubIndex = 0;
 
   @override
@@ -73,7 +74,6 @@ class _RevisionTabState extends State<RevisionTab> {
     setState(() => _isLoading = true);
 
     final int ts = DateTime.now().millisecondsSinceEpoch;
-    // 🚀 Updated: Pointing to public content_base repo
     final List<String> urls = [
       "https://raw.githack.com/zxcty54/content_base/main/subject_mapping.json",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/subject_mapping.json?t=$ts",
@@ -184,6 +184,7 @@ class _RevisionTabState extends State<RevisionTab> {
                   _buildSourceTile('📜 History (Ancient, Medieval, Modern)', "Spectrum's Modern India (Rajiv Ahir), Satish Chandra, RS Sharma & BPSC PYQ sets", textColor, subTextColor, isDark),
                   _buildSourceTile('🌍 Geography (Physical & Regional)', 'NCERT Geography (Class 6–12), Ghatna Chakra Purvavalokan & Oxford Atlas', textColor, subTextColor, isDark),
                   _buildSourceTile('📈 Indian Economy & Bihar Survey', 'NCERT Macroeconomics (Class 12), Ramesh Singh & Bihar Economic Survey', textColor, subTextColor, isDark),
+                  _buildSourceTile('📐 Quantitative Aptitude & Reasoning', 'R.S. Aggarwal, Kiran SSC Mathematics Chapterwise & Rakesh Yadav Class Notes', textColor, subTextColor, isDark),
                   _buildSourceTile('📰 Current Affairs & Schemes', 'Official Press Information Bureau (PIB), The Hindu & Bihar State Gazette', textColor, subTextColor, isDark),
                   const SizedBox(height: 16),
                 ],
@@ -215,10 +216,115 @@ class _RevisionTabState extends State<RevisionTab> {
     );
   }
 
+  // 🎯 NESTED SUB-TOPIC / TYPE SELECTION MODAL
+  void _showSubTopicModal({
+    required BuildContext context,
+    required String chapterTitle,
+    required Map<String, dynamic> subTypes,
+    required bool isDark,
+    required Color themeColor,
+  }) {
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (ctx) {
+        return SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Center(
+                  child: Container(
+                    width: 40,
+                    height: 4,
+                    decoration: BoxDecoration(
+                      color: Colors.grey.shade400,
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 16),
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                        color: themeColor.withOpacity(0.15),
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+                      child: Icon(Icons.folder_open_rounded, color: themeColor, size: 20),
+                    ),
+                    const SizedBox(width: 10),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            chapterTitle,
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.bold,
+                              color: isDark ? Colors.white : const Color(0xFF0F172A),
+                            ),
+                          ),
+                          Text(
+                            'Select topic / type to practice',
+                            style: TextStyle(fontSize: 11.5, color: Colors.grey.shade500),
+                          ),
+                        ],
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.close_rounded, size: 20),
+                      onPressed: () => Navigator.pop(ctx),
+                    )
+                  ],
+                ),
+                const Divider(height: 24),
+                Wrap(
+                  spacing: 9,
+                  runSpacing: 9,
+                  children: subTypes.entries.map((entry) {
+                    return ActionChip(
+                      elevation: 1,
+                      backgroundColor: isDark ? themeColor.withOpacity(0.2) : const Color(0xFFFFF7ED),
+                      side: BorderSide(color: themeColor.withOpacity(0.4)),
+                      label: Text(
+                        entry.key,
+                        style: TextStyle(
+                          fontSize: 12.5,
+                          fontWeight: FontWeight.bold,
+                          color: isDark ? Colors.white : themeColor,
+                        ),
+                      ),
+                      onPressed: () {
+                        Navigator.pop(ctx);
+                        widget.onLaunchPractice(
+                          context,
+                          "$chapterTitle: ${entry.key}",
+                          entry.value.toString(),
+                        );
+                      },
+                    );
+                  }).toList(),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   Future<void> _openCurrentAffairsSection({
     required bool isBihar,
     required String title,
-    // 🚀 Updated: Default path set to content_base
     String jsonPath = "https://raw.githubusercontent.com/zxcty54/content_base/main/current_affair/august_2026.json",
   }) async {
     showDialog(
@@ -242,7 +348,6 @@ class _RevisionTabState extends State<RevisionTab> {
     );
 
     try {
-      // 🚀 Updated: Relative path construct karne ke liye content_base
       final String fetchUrl = jsonPath.startsWith('http')
           ? '$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}'
           : 'https://raw.githubusercontent.com/zxcty54/content_base/main/$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}';
@@ -625,14 +730,33 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          // 📰 3. Current Affairs Vault
+          // 📐 3. Quantitative Aptitude & Reasoning
+          _buildSegmentedCategoryCard(
+            context: context,
+            title: 'Quantitative Aptitude & Logic',
+            badgeText: '🎯 High Scoring Type-Wise (BSSC, SSC & RLY)',
+            icon: '📐',
+            color: const Color(0xFFEA580C),
+            isDark: isDark,
+            selectedIndex: _selectedAptitudeSubIndex,
+            onPillSelected: (index) {
+              setState(() => _selectedAptitudeSubIndex = index);
+            },
+            subjects: [
+              {'title': '🔢 Arithmetic Math', 'key': 'aptitude_math_mapping'},
+              {'title': '🧩 Reasoning Ability', 'key': 'aptitude_reasoning_mapping'},
+            ],
+          ),
+          const SizedBox(height: 12),
+
+          // 📰 4. Current Affairs Vault
           _buildCurrentAffairsCategory(
             context: context,
             isDark: isDark,
           ),
           const SizedBox(height: 12),
 
-          // 🎯 4. STATIC GK & SCIENCE FOUNDATION
+          // 🎯 5. STATIC GK & SCIENCE FOUNDATION
           _buildSegmentedCategoryCard(
             context: context,
             title: 'Static GK & Science Foundation',
@@ -807,13 +931,15 @@ class _RevisionTabState extends State<RevisionTab> {
                       spacing: 8,
                       runSpacing: 8,
                       children: activeChapters.entries.map((entry) {
-                        String path = entry.value.toString();
+                        final bool hasSubTypes = entry.value is Map;
+
                         return ActionChip(
                           elevation: 1,
                           backgroundColor: isDark ? color.withOpacity(0.2) : Colors.white,
                           side: BorderSide(
                             color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.35),
                           ),
+                          avatar: hasSubTypes ? Icon(Icons.folder, size: 15, color: color) : null,
                           label: Text(
                             entry.key,
                             style: TextStyle(
@@ -823,7 +949,17 @@ class _RevisionTabState extends State<RevisionTab> {
                             ),
                           ),
                           onPressed: () {
-                            widget.onLaunchPractice(context, entry.key, path);
+                            if (hasSubTypes) {
+                              _showSubTopicModal(
+                                context: context,
+                                chapterTitle: entry.key,
+                                subTypes: Map<String, dynamic>.from(entry.value),
+                                isDark: isDark,
+                                themeColor: color,
+                              );
+                            } else {
+                              widget.onLaunchPractice(context, entry.key, entry.value.toString());
+                            }
                           },
                         );
                       }).toList(),
@@ -854,7 +990,6 @@ class _RevisionTabState extends State<RevisionTab> {
         "isLive": true,
         "natCount": 218,
         "biharCount": 89,
-        // 🚀 Updated: content_base raw link
         "jsonUrl": "https://raw.githubusercontent.com/zxcty54/content_base/main/current_affair/august_2026.json"
       },
       {
