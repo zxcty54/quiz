@@ -26,8 +26,6 @@ class _RevisionTabState extends State<RevisionTab> {
 
   int _selectedScienceSubIndex = 0;
   int _selectedGkSubIndex = 0;
-  int _selectedMathSubIndex = 0;      // 🎯 Quantitative Aptitude Index
-  int _selectedReasoningSubIndex = 0; // 🎯 Reasoning Ability Index
   int _selectedStaticSubIndex = 0;
 
   @override
@@ -124,7 +122,6 @@ class _RevisionTabState extends State<RevisionTab> {
     if (mounted) setState(() => _isLoading = false);
   }
 
-  // 🛡️ ACADEMIC SOURCES BOTTOM SHEET
   void _showSourcesModal(BuildContext context, bool isDark) {
     showModalBottomSheet(
       context: context,
@@ -217,7 +214,6 @@ class _RevisionTabState extends State<RevisionTab> {
     );
   }
 
-  // 🎯 SUB-TOPIC / TYPE SELECTION BOTTOM SHEET
   void _showSubTopicModal({
     required BuildContext context,
     required String chapterTitle,
@@ -294,7 +290,7 @@ class _RevisionTabState extends State<RevisionTab> {
                   children: subTypes.entries.map((entry) {
                     return ActionChip(
                       elevation: 1,
-                      backgroundColor: isDark ? themeColor.withOpacity(0.2) : const Color(0xFFFFF7ED),
+                      backgroundColor: isDark ? themeColor.withOpacity(0.2) : const Color(0xFFEEF2FF),
                       side: BorderSide(color: themeColor.withOpacity(0.4)),
                       label: Text(
                         entry.key,
@@ -504,145 +500,11 @@ class _RevisionTabState extends State<RevisionTab> {
                     fontWeight: FontWeight.w500,
                   ),
                 ),
-                const SizedBox(height: 12),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.08),
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: Colors.white.withOpacity(0.15)),
-                  ),
-                  child: const Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      Row(
-                        children: [
-                          Icon(Icons.verified_rounded, color: Color(0xFF60A5FA), size: 14),
-                          SizedBox(width: 4),
-                          Text('100% PYQ Base', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.lightbulb_outline_rounded, color: Color(0xFFFBBF24), size: 14),
-                          SizedBox(width: 4),
-                          Text('Trap Breakdown', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Icon(Icons.timer_outlined, color: Color(0xFF4ADE80), size: 14),
-                          SizedBox(width: 4),
-                          Text('Fast Revision', style: TextStyle(color: Colors.white, fontSize: 11, fontWeight: FontWeight.bold)),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
               ],
             ),
           ),
 
-          // ⚡ HIGH-IMPACT REAL-TIME SYNC BANNER
-          Container(
-            width: double.infinity,
-            margin: const EdgeInsets.only(top: 12),
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: isDark 
-                    ? [const Color(0xFF0F2942), const Color(0xFF132F4C)] 
-                    : [const Color(0xFFEFF6FF), const Color(0xFFE0F2FE)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(
-                color: isDark ? const Color(0xFF0284C7) : const Color(0xFF38BDF8),
-                width: 1.4,
-              ),
-              boxShadow: [
-                BoxShadow(
-                  color: const Color(0xFF0284C7).withOpacity(isDark ? 0.35 : 0.15),
-                  blurRadius: 10,
-                  offset: const Offset(0, 3),
-                ),
-              ],
-            ),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  margin: const EdgeInsets.only(top: 2),
-                  padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3.5),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFF059669).withOpacity(0.2),
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(color: const Color(0xFF10B981), width: 1.2),
-                  ),
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      Container(
-                        width: 7,
-                        height: 7,
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Color(0xFF10B981),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Color(0xFF10B981),
-                              blurRadius: 6,
-                              spreadRadius: 1.5,
-                            )
-                          ],
-                        ),
-                      ),
-                      const SizedBox(width: 5),
-                      const Text(
-                        'LIVE',
-                        style: TextStyle(
-                          color: Color(0xFF10B981),
-                          fontSize: 9.5,
-                          fontWeight: FontWeight.w900,
-                          letterSpacing: 0.6,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-                const SizedBox(width: 10),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'Real-Time Updated with 2026 Exam Pattern',
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w800,
-                          color: isDark ? const Color(0xFF38BDF8) : const Color(0xFF0284C7),
-                          letterSpacing: -0.1,
-                        ),
-                      ),
-                      const SizedBox(height: 3),
-                      Text(
-                        'Hamare Mocks & Revision Sets latest commission notifications, revised syllabus aur modern PYQ trends ke mutabiq dynamically update hote hain.',
-                        style: TextStyle(
-                          fontSize: 11,
-                          height: 1.35,
-                          fontWeight: FontWeight.w500,
-                          color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          const SizedBox(height: 10),
+          const SizedBox(height: 14),
 
           // 🛡️ ACADEMIC TRUST BAR
           InkWell(
@@ -727,37 +589,31 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          // 📐 3. QUANTITATIVE APTITUDE (MATHEMATICS DEDICATED)
-          _buildSegmentedCategoryCard(
+          // 📐 3. QUANTITATIVE APTITUDE (Direct Chapters, No Sub-pills, Indigo Theme)
+          _buildDirectSectionCard(
             context: context,
             title: 'Quantitative Aptitude (Maths)',
-            badgeText: '🎯 Type-Wise Practice (SSC, BSSC & RLY)',
+            badgeText: '🎯 Chapterwise & Type-Wise (SSC, BSSC & RLY)',
+            headerLabel: 'Mathematics Chapters',
             icon: '📐',
-            color: const Color(0xFFEA580C), // Orange Theme
+            mappingKey: 'aptitude_mapping',
+            fallbackKey: 'aptitude_math_mapping',
+            brandColor: const Color(0xFF6366F1), // Royal Indigo
             isDark: isDark,
-            selectedIndex: _selectedMathSubIndex,
-            onPillSelected: (index) => setState(() => _selectedMathSubIndex = index),
-            subjects: [
-              {'title': '🔢 Arithmetic Math', 'key': 'aptitude_math_mapping'},
-              {'title': '📐 Advance Math', 'key': 'aptitude_advance_mapping'},
-            ],
           ),
           const SizedBox(height: 12),
 
-          // 🧩 4. LOGICAL & ANALYTICAL REASONING (DEDICATED SECTION)
-          _buildSegmentedCategoryCard(
+          // 🧩 4. REASONING ABILITY (Direct Chapters, No Verbal/Non-Verbal Sub-pills, Cyan Theme)
+          _buildDirectSectionCard(
             context: context,
             title: 'Reasoning Ability & Logic',
-            badgeText: '🧩 High Scoring Speed Section',
+            badgeText: '🧩 High Scoring Speed & Logic Section',
+            headerLabel: 'Reasoning Chapters',
             icon: '🧩',
-            color: const Color(0xFF0284C7), // Sky Blue Theme
+            mappingKey: 'reasoning_mapping',
+            fallbackKey: 'reasoning_verbal_mapping',
+            brandColor: const Color(0xFF0284C7), // Sky Blue / Cyan
             isDark: isDark,
-            selectedIndex: _selectedReasoningSubIndex,
-            onPillSelected: (index) => setState(() => _selectedReasoningSubIndex = index),
-            subjects: [
-              {'title': '🧠 Verbal Reasoning', 'key': 'reasoning_verbal_mapping'},
-              {'title': '👁️ Non-Verbal Reasoning', 'key': 'reasoning_nonverbal_mapping'},
-            ],
           ),
           const SizedBox(height: 12),
 
@@ -788,6 +644,150 @@ class _RevisionTabState extends State<RevisionTab> {
               {'title': '📈 Economy', 'key': 'static_eco_mapping'},
             ],
           ),
+        ],
+      ),
+    );
+  }
+
+  // 🎯 REUSABLE DIRECT CARD (Used for both Aptitude and Reasoning - Direct Chips without filter pills)
+  Widget _buildDirectSectionCard({
+    required BuildContext context,
+    required String title,
+    required String badgeText,
+    required String headerLabel,
+    required String icon,
+    required String mappingKey,
+    required String fallbackKey,
+    required Color brandColor,
+    required bool isDark,
+  }) {
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color textColor = isDark ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A);
+    final Color subTextColor = isDark ? const Color(0xFFCBD5E1) : const Color(0xFF334155);
+
+    Map<String, dynamic> activeChapters = {};
+    if (_liveSubjectMapping.containsKey(mappingKey) &&
+        _liveSubjectMapping[mappingKey] is Map) {
+      activeChapters = Map<String, dynamic>.from(_liveSubjectMapping[mappingKey]);
+    } else if (_liveSubjectMapping.containsKey(fallbackKey) &&
+        _liveSubjectMapping[fallbackKey] is Map) {
+      activeChapters = Map<String, dynamic>.from(_liveSubjectMapping[fallbackKey]);
+    }
+
+    return Card(
+      color: cardBg,
+      elevation: 1.5,
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(14),
+        side: BorderSide(
+          color: isDark ? brandColor.withOpacity(0.5) : brandColor.withOpacity(0.3),
+          width: 1.2,
+        ),
+      ),
+      child: ExpansionTile(
+        initiallyExpanded: false,
+        iconColor: brandColor,
+        collapsedIconColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
+        leading: Text(icon, style: const TextStyle(fontSize: 22)),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              title,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.5, color: brandColor),
+            ),
+            const SizedBox(height: 2),
+            Text(
+              badgeText,
+              style: TextStyle(
+                fontSize: 11,
+                color: isDark ? brandColor.withOpacity(0.95) : brandColor.withOpacity(0.9),
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ],
+        ),
+        childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 14),
+        children: [
+          const Divider(height: 16),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  headerLabel,
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: textColor),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  decoration: BoxDecoration(
+                    color: brandColor.withOpacity(0.12),
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Text(
+                    "${activeChapters.length} Chapters",
+                    style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: brandColor),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 8),
+          activeChapters.isEmpty
+              ? Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
+                    _isLoading ? "Loading chapters..." : "No chapters added yet.",
+                    style: TextStyle(fontSize: 11.5, color: subTextColor),
+                  ),
+                )
+              : Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF0F172A).withOpacity(0.5) : const Color(0xFFF8FAFC),
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                  ),
+                  child: Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: activeChapters.entries.map((entry) {
+                      final bool hasSubTypes = entry.value is Map;
+
+                      return ActionChip(
+                        elevation: 1,
+                        backgroundColor: isDark ? brandColor.withOpacity(0.2) : Colors.white,
+                        side: BorderSide(
+                          color: isDark ? brandColor.withOpacity(0.5) : brandColor.withOpacity(0.35),
+                        ),
+                        avatar: hasSubTypes ? Icon(Icons.folder, size: 15, color: brandColor) : null,
+                        label: Text(
+                          entry.key,
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: isDark ? Colors.white : brandColor,
+                          ),
+                        ),
+                        onPressed: () {
+                          if (hasSubTypes) {
+                            _showSubTopicModal(
+                              context: context,
+                              chapterTitle: entry.key,
+                              subTypes: Map<String, dynamic>.from(entry.value),
+                              isDark: isDark,
+                              themeColor: brandColor,
+                            );
+                          } else {
+                            widget.onLaunchPractice(context, entry.key, entry.value.toString());
+                          }
+                        },
+                      );
+                    }).toList(),
+                  ),
+                ),
         ],
       ),
     );
