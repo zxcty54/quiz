@@ -26,7 +26,8 @@ class _RevisionTabState extends State<RevisionTab> {
 
   int _selectedScienceSubIndex = 0;
   int _selectedGkSubIndex = 0;
-  int _selectedAptitudeSubIndex = 0;
+  int _selectedMathSubIndex = 0;      // 🎯 Quantitative Aptitude Index
+  int _selectedReasoningSubIndex = 0; // 🎯 Reasoning Ability Index
   int _selectedStaticSubIndex = 0;
 
   @override
@@ -75,11 +76,10 @@ class _RevisionTabState extends State<RevisionTab> {
 
     final int ts = DateTime.now().millisecondsSinceEpoch;
     final List<String> urls = [
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/subject_mapping.json?t=$ts",
       "https://raw.githack.com/zxcty54/content_base/main/subject_mapping.json",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/subject_mapping.json?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/subject_mapping.json?t=$ts",
-      "https://cdn.statically.io/gh/zxcty54/content_base/main/subject_mapping.json",
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/subject_mapping.json?t=$ts",
     ];
 
     for (String url in urls) {
@@ -124,7 +124,7 @@ class _RevisionTabState extends State<RevisionTab> {
     if (mounted) setState(() => _isLoading = false);
   }
 
-  // 🛡️ TRUST & VERIFIED SOURCES MODAL
+  // 🛡️ ACADEMIC SOURCES BOTTOM SHEET
   void _showSourcesModal(BuildContext context, bool isDark) {
     showModalBottomSheet(
       context: context,
@@ -179,13 +179,14 @@ class _RevisionTabState extends State<RevisionTab> {
                     style: TextStyle(fontSize: 12, color: subTextColor, height: 1.4),
                   ),
                   const Divider(height: 24),
-                  _buildSourceTile('🔬 Physics, Chemistry & Biology', 'NCERT (Class 8–12), NCERT Exemplar & Previous Year State PCS/CSIR Sets', textColor, subTextColor, isDark),
+                  _buildSourceTile('🔬 Physics, Chemistry & Biology', 'NCERT (Class 8–12), NCERT Exemplar & Previous Year State PCS Sets', textColor, subTextColor, isDark),
                   _buildSourceTile('🏛️ Indian Polity & Governance', 'M. Laxmikanth (Latest Edition) & NCERT Indian Constitution at Work', textColor, subTextColor, isDark),
-                  _buildSourceTile('📜 History (Ancient, Medieval, Modern)', "Spectrum's Modern India (Rajiv Ahir), Satish Chandra, RS Sharma & BPSC PYQ sets", textColor, subTextColor, isDark),
+                  _buildSourceTile('📜 History (Ancient, Medieval, Modern)', "Spectrum's Modern India (Rajiv Ahir), Satish Chandra & RS Sharma", textColor, subTextColor, isDark),
                   _buildSourceTile('🌍 Geography (Physical & Regional)', 'NCERT Geography (Class 6–12), Ghatna Chakra Purvavalokan & Oxford Atlas', textColor, subTextColor, isDark),
                   _buildSourceTile('📈 Indian Economy & Bihar Survey', 'NCERT Macroeconomics (Class 12), Ramesh Singh & Bihar Economic Survey', textColor, subTextColor, isDark),
-                  _buildSourceTile('📐 Quantitative Aptitude & Reasoning', 'R.S. Aggarwal, Kiran SSC Mathematics Chapterwise & Rakesh Yadav Class Notes', textColor, subTextColor, isDark),
-                  _buildSourceTile('📰 Current Affairs & Schemes', 'Official Press Information Bureau (PIB), The Hindu & Bihar State Gazette', textColor, subTextColor, isDark),
+                  _buildSourceTile('📐 Quantitative Aptitude', 'R.S. Aggarwal & Kiran SSC Mathematics Chapterwise PYQ Sets', textColor, subTextColor, isDark),
+                  _buildSourceTile('🧩 Reasoning Ability', 'R.S. Aggarwal Verbal & Non-Verbal Reasoning & Previous Year State Tests', textColor, subTextColor, isDark),
+                  _buildSourceTile('📰 Current Affairs & Schemes', 'Official Press Information Bureau (PIB) & Bihar State Gazette', textColor, subTextColor, isDark),
                   const SizedBox(height: 16),
                 ],
               ),
@@ -216,7 +217,7 @@ class _RevisionTabState extends State<RevisionTab> {
     );
   }
 
-  // 🎯 NESTED SUB-TOPIC / TYPE SELECTION MODAL
+  // 🎯 SUB-TOPIC / TYPE SELECTION BOTTOM SHEET
   void _showSubTopicModal({
     required BuildContext context,
     required String chapterTitle,
@@ -643,7 +644,7 @@ class _RevisionTabState extends State<RevisionTab> {
 
           const SizedBox(height: 10),
 
-          // 🛡️ ACADEMIC TRUST & REFERENCE SOURCES BAR
+          // 🛡️ ACADEMIC TRUST BAR
           InkWell(
             onTap: () => _showSourcesModal(context, isDark),
             borderRadius: BorderRadius.circular(12),
@@ -662,7 +663,7 @@ class _RevisionTabState extends State<RevisionTab> {
                   const SizedBox(width: 8),
                   Expanded(
                     child: Text(
-                      'Mapped with NCERT (8-12), Laxmikanth & Spectrum',
+                      'Mapped with NCERT (8-12), Laxmikanth & Standard PYQs',
                       style: TextStyle(
                         fontSize: 11.5,
                         fontWeight: FontWeight.w600,
@@ -698,9 +699,7 @@ class _RevisionTabState extends State<RevisionTab> {
             color: const Color(0xFF2563EB),
             isDark: isDark,
             selectedIndex: _selectedScienceSubIndex,
-            onPillSelected: (index) {
-              setState(() => _selectedScienceSubIndex = index);
-            },
+            onPillSelected: (index) => setState(() => _selectedScienceSubIndex = index),
             subjects: [
               {'title': '⚡ Physics', 'key': 'phy_mapping'},
               {'title': '🧬 Biology', 'key': 'bio_mapping'},
@@ -718,9 +717,7 @@ class _RevisionTabState extends State<RevisionTab> {
             color: const Color(0xFF4F46E5),
             isDark: isDark,
             selectedIndex: _selectedGkSubIndex,
-            onPillSelected: (index) {
-              setState(() => _selectedGkSubIndex = index);
-            },
+            onPillSelected: (index) => setState(() => _selectedGkSubIndex = index),
             subjects: [
               {'title': '📜 Indian Polity', 'key': 'polity_mapping'},
               {'title': '🏛️ History', 'key': 'history_mapping'},
@@ -730,33 +727,48 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
-          // 📐 3. Quantitative Aptitude & Reasoning
+          // 📐 3. QUANTITATIVE APTITUDE (MATHEMATICS DEDICATED)
           _buildSegmentedCategoryCard(
             context: context,
-            title: 'Quantitative Aptitude & Logic',
-            badgeText: '🎯 High Scoring Type-Wise (BSSC, SSC & RLY)',
+            title: 'Quantitative Aptitude (Maths)',
+            badgeText: '🎯 Type-Wise Practice (SSC, BSSC & RLY)',
             icon: '📐',
-            color: const Color(0xFFEA580C),
+            color: const Color(0xFFEA580C), // Orange Theme
             isDark: isDark,
-            selectedIndex: _selectedAptitudeSubIndex,
-            onPillSelected: (index) {
-              setState(() => _selectedAptitudeSubIndex = index);
-            },
+            selectedIndex: _selectedMathSubIndex,
+            onPillSelected: (index) => setState(() => _selectedMathSubIndex = index),
             subjects: [
               {'title': '🔢 Arithmetic Math', 'key': 'aptitude_math_mapping'},
-              {'title': '🧩 Reasoning Ability', 'key': 'aptitude_reasoning_mapping'},
+              {'title': '📐 Advance Math', 'key': 'aptitude_advance_mapping'},
             ],
           ),
           const SizedBox(height: 12),
 
-          // 📰 4. Current Affairs Vault
+          // 🧩 4. LOGICAL & ANALYTICAL REASONING (DEDICATED SECTION)
+          _buildSegmentedCategoryCard(
+            context: context,
+            title: 'Reasoning Ability & Logic',
+            badgeText: '🧩 High Scoring Speed Section',
+            icon: '🧩',
+            color: const Color(0xFF0284C7), // Sky Blue Theme
+            isDark: isDark,
+            selectedIndex: _selectedReasoningSubIndex,
+            onPillSelected: (index) => setState(() => _selectedReasoningSubIndex = index),
+            subjects: [
+              {'title': '🧠 Verbal Reasoning', 'key': 'reasoning_verbal_mapping'},
+              {'title': '👁️ Non-Verbal Reasoning', 'key': 'reasoning_nonverbal_mapping'},
+            ],
+          ),
+          const SizedBox(height: 12),
+
+          // 📰 5. Current Affairs Vault
           _buildCurrentAffairsCategory(
             context: context,
             isDark: isDark,
           ),
           const SizedBox(height: 12),
 
-          // 🎯 5. STATIC GK & SCIENCE FOUNDATION
+          // 🎯 6. STATIC GK & SCIENCE FOUNDATION
           _buildSegmentedCategoryCard(
             context: context,
             title: 'Static GK & Science Foundation',
@@ -765,9 +777,7 @@ class _RevisionTabState extends State<RevisionTab> {
             color: const Color(0xFF0D9488),
             isDark: isDark,
             selectedIndex: _selectedStaticSubIndex,
-            onPillSelected: (index) {
-              setState(() => _selectedStaticSubIndex = index);
-            },
+            onPillSelected: (index) => setState(() => _selectedStaticSubIndex = index),
             subjects: [
               {'title': '⚡ Physics', 'key': 'static_phy_mapping'},
               {'title': '🧬 Biology', 'key': 'static_bio_mapping'},
@@ -816,157 +826,138 @@ class _RevisionTabState extends State<RevisionTab> {
           width: 1.2,
         ),
       ),
-      child: Theme(
-        data: Theme.of(context).copyWith(
-          dividerColor: Colors.transparent,
-          unselectedWidgetColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
-        ),
-        child: ExpansionTile(
-          initiallyExpanded: false,
-          iconColor: color,
-          collapsedIconColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
-          leading: Text(icon, style: const TextStyle(fontSize: 22)),
-          title: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.5, color: color),
-              ),
-              const SizedBox(height: 2),
-              Text(
-                badgeText,
-                style: TextStyle(
-                  fontSize: 11,
-                  color: isDark ? color.withOpacity(0.95) : color.withOpacity(0.9),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ],
-          ),
-          childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 14),
+      child: ExpansionTile(
+        initiallyExpanded: false,
+        iconColor: color,
+        collapsedIconColor: isDark ? Colors.grey.shade300 : Colors.grey.shade700,
+        leading: Text(icon, style: const TextStyle(fontSize: 22)),
+        title: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Divider(height: 16),
-
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              physics: const BouncingScrollPhysics(),
-              child: Row(
-                children: List.generate(subjects.length, (idx) {
-                  final item = subjects[idx];
-                  final bool isSelected = selectedIndex == idx;
-
-                  return Padding(
-                    padding: const EdgeInsets.only(right: 8.0),
-                    child: ChoiceChip(
-                      selected: isSelected,
-                      showCheckmark: false,
-                      elevation: 0,
-                      label: Text(
-                        item['title'],
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: isSelected ? FontWeight.bold : FontWeight.w600,
-                          color: isSelected
-                              ? Colors.white
-                              : (isDark ? Colors.grey.shade300 : const Color(0xFF334155)),
-                        ),
-                      ),
-                      selectedColor: color,
-                      backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
-                      side: BorderSide(
-                        color: isSelected ? color : (isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
-                      ),
-                      onSelected: (val) {
-                        if (val) onPillSelected(idx);
-                      },
-                    ),
-                  );
-                }),
+            Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.5, color: color)),
+            const SizedBox(height: 2),
+            Text(
+              badgeText,
+              style: TextStyle(
+                fontSize: 11,
+                color: isDark ? color.withOpacity(0.95) : color.withOpacity(0.9),
+                fontWeight: FontWeight.bold,
               ),
             ),
-
-            const SizedBox(height: 12),
-
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    "${currentSub['title']} Sets",
-                    style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: textColor),
-                  ),
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                    decoration: BoxDecoration(
-                      color: color.withOpacity(0.12),
-                      borderRadius: BorderRadius.circular(6),
-                    ),
-                    child: Text(
-                      "${activeChapters.length} Chapters",
-                      style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: color),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            const SizedBox(height: 6),
-
-            activeChapters.isEmpty
-                ? Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Text("Loading chapters...", style: TextStyle(fontSize: 11.5, color: subTextColor)),
-                  )
-                : Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                      color: isDark ? const Color(0xFF0F172A).withOpacity(0.5) : const Color(0xFFF8FAFC),
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
-                    ),
-                    child: Wrap(
-                      spacing: 8,
-                      runSpacing: 8,
-                      children: activeChapters.entries.map((entry) {
-                        final bool hasSubTypes = entry.value is Map;
-
-                        return ActionChip(
-                          elevation: 1,
-                          backgroundColor: isDark ? color.withOpacity(0.2) : Colors.white,
-                          side: BorderSide(
-                            color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.35),
-                          ),
-                          avatar: hasSubTypes ? Icon(Icons.folder, size: 15, color: color) : null,
-                          label: Text(
-                            entry.key,
-                            style: TextStyle(
-                              fontSize: 12,
-                              fontWeight: FontWeight.bold,
-                              color: isDark ? Colors.white : color,
-                            ),
-                          ),
-                          onPressed: () {
-                            if (hasSubTypes) {
-                              _showSubTopicModal(
-                                context: context,
-                                chapterTitle: entry.key,
-                                subTypes: Map<String, dynamic>.from(entry.value),
-                                isDark: isDark,
-                                themeColor: color,
-                              );
-                            } else {
-                              widget.onLaunchPractice(context, entry.key, entry.value.toString());
-                            }
-                          },
-                        );
-                      }).toList(),
-                    ),
-                  ),
           ],
         ),
+        childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 14),
+        children: [
+          const Divider(height: 16),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            physics: const BouncingScrollPhysics(),
+            child: Row(
+              children: List.generate(subjects.length, (idx) {
+                final item = subjects[idx];
+                final bool isSelected = selectedIndex == idx;
+
+                return Padding(
+                  padding: const EdgeInsets.only(right: 8.0),
+                  child: ChoiceChip(
+                    selected: isSelected,
+                    showCheckmark: false,
+                    label: Text(
+                      item['title'],
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: isSelected ? FontWeight.bold : FontWeight.w600,
+                        color: isSelected ? Colors.white : (isDark ? Colors.grey.shade300 : const Color(0xFF334155)),
+                      ),
+                    ),
+                    selectedColor: color,
+                    backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
+                    onSelected: (val) {
+                      if (val) onPillSelected(idx);
+                    },
+                  ),
+                );
+              }),
+            ),
+          ),
+          const SizedBox(height: 12),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 4.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "${currentSub['title']} Sets",
+                  style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: textColor),
+                ),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                  decoration: BoxDecoration(
+                    color: color.withOpacity(0.12),
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Text(
+                    "${activeChapters.length} Chapters",
+                    style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: color),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 6),
+          activeChapters.isEmpty
+              ? Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
+                    _isLoading ? "Loading chapters..." : "No chapters added yet.",
+                    style: TextStyle(fontSize: 11.5, color: subTextColor),
+                  ),
+                )
+              : Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF0F172A).withOpacity(0.5) : const Color(0xFFF8FAFC),
+                    borderRadius: BorderRadius.circular(10),
+                    border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                  ),
+                  child: Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: activeChapters.entries.map((entry) {
+                      final bool hasSubTypes = entry.value is Map;
+
+                      return ActionChip(
+                        elevation: 1,
+                        backgroundColor: isDark ? color.withOpacity(0.2) : Colors.white,
+                        side: BorderSide(color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.35)),
+                        avatar: hasSubTypes ? Icon(Icons.folder, size: 15, color: color) : null,
+                        label: Text(
+                          entry.key,
+                          style: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold,
+                            color: isDark ? Colors.white : color,
+                          ),
+                        ),
+                        onPressed: () {
+                          if (hasSubTypes) {
+                            _showSubTopicModal(
+                              context: context,
+                              chapterTitle: entry.key,
+                              subTypes: Map<String, dynamic>.from(entry.value),
+                              isDark: isDark,
+                              themeColor: color,
+                            );
+                          } else {
+                            widget.onLaunchPractice(context, entry.key, entry.value.toString());
+                          }
+                        },
+                      );
+                    }).toList(),
+                  ),
+                ),
+        ],
       ),
     );
   }
@@ -1105,7 +1096,6 @@ class _RevisionTabState extends State<RevisionTab> {
                         ),
                       ),
                       const SizedBox(height: 4),
-
                       _buildCleanCurrentRow(
                         context: context,
                         icon: '🌐',
@@ -1126,9 +1116,7 @@ class _RevisionTabState extends State<RevisionTab> {
                           );
                         },
                       ),
-
                       const SizedBox(height: 8),
-
                       _buildCleanCurrentRow(
                         context: context,
                         icon: '📍',
