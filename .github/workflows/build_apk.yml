@@ -108,34 +108,20 @@ jobs:
       - name: Force CompileSdk 36 on All Plugins (Fix file_picker)
         working-directory: flutter_app
         run: |
-          # Sabhi plugins aur libraries par compileSdk 36 enforce karne ke liye root build.gradle update
-          cat << 'EOF' >> android/build.gradle
+          SETTINGS_KTS="android/settings.gradle.kts"
+          SETTINGS_GROOVY="android/settings.gradle"
 
-          subprojects {
-              afterEvaluate { project ->
-                  if (project.hasProperty("android")) {
-                      project.android {
-                          compileSdkVersion 36
-                      }
-                  }
-              }
-          }
-          EOF
+          if [ -f "$SETTINGS_KTS" ]; then
+            printf "\n\ngradle.beforeProject {\n    plugins.withId(\"com.android.library\") {\n        extensions.findByName(\"android\")?.let { ext ->\n            try {\n                ext.javaClass.getMethod(\"setCompileSdkVersion\", Int::class.javaPrimitiveType).invoke(ext, 36)\n            } catch (_: Exception) {}\n        }\n    }\n}\n" >> "$SETTINGS_KTS"
+          fi
 
-          # settings.gradle.kts ke liye bhi hook add karein agar project KTS use kar raha ho
-          if [ -f "android/settings.gradle.kts" ]; then
-            cat << 'EOF' >> android/settings.gradle.kts
+          if [ -f "$SETTINGS_GROOVY" ]; then
+            printf "\n\ngradle.beforeProject { project ->\n    project.plugins.withId('com.android.library') { plugin ->\n        project.android.compileSdkVersion = 36\n    }\n}\n" >> "$SETTINGS_GROOVY"
+          fi
 
-            gradle.beforeProject {
-                plugins.withId("com.android.library") {
-                    extensions.findByName("android")?.let { ext ->
-                        try {
-                            ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
-                        } catch (_: Exception) {}
-                    }
-                }
-            }
-            EOF
+          ROOT_BUILD="android/build.gradle"
+          if [ -f "$ROOT_BUILD" ]; then
+            printf "\n\nsubprojects {\n    afterEvaluate { project ->\n        if (project.hasProperty('android')) {\n            project.android {\n                compileSdkVersion 36\n            }\n        }\n    }\n}\n" >> "$ROOT_BUILD"
           fi
 
       - name: Setup Build Configuration, Desugaring & MinSDK 26
