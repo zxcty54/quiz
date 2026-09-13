@@ -41,7 +41,9 @@ jobs:
           cat << 'EOF' >> gradle.properties
           android.useAndroidX=true
           android.enableJetifier=false
-          org.gradle.jvmargs=-Xmx3072m -XX:MaxMetaspaceSize=768m -XX:+HeapDumpOnOutOfMemoryError
+          android.suppressUnsupportedCompileSdk=36,Baklava
+          android.experimental.disableCompileSdkChecks=true
+          org.gradle.jvmargs=-Xmx3072m -XX:MaxMetaspaceSize=768m
           org.gradle.daemon=false
           org.gradle.parallel=true
           org.gradle.vfs.watch=false
@@ -103,6 +105,39 @@ jobs:
           </manifest>
           EOF
 
+      - name: Force CompileSdk 36 on All Plugins (Fix file_picker)
+        working-directory: flutter_app
+        run: |
+          # Sabhi plugins aur libraries par compileSdk 36 enforce karne ke liye root build.gradle update
+          cat << 'EOF' >> android/build.gradle
+
+          subprojects {
+              afterEvaluate { project ->
+                  if (project.hasProperty("android")) {
+                      project.android {
+                          compileSdkVersion 36
+                      }
+                  }
+              }
+          }
+          EOF
+
+          # settings.gradle.kts ke liye bhi hook add karein agar project KTS use kar raha ho
+          if [ -f "android/settings.gradle.kts" ]; then
+            cat << 'EOF' >> android/settings.gradle.kts
+
+            gradle.beforeProject {
+                plugins.withId("com.android.library") {
+                    extensions.findByName("android")?.let { ext ->
+                        try {
+                            ext.javaClass.getMethod("setCompileSdkVersion", Int::class.javaPrimitiveType).invoke(ext, 36)
+                        } catch (_: Exception) {}
+                    }
+                }
+            }
+            EOF
+          fi
+
       - name: Setup Build Configuration, Desugaring & MinSDK 26
         working-directory: flutter_app
         run: |
@@ -112,6 +147,8 @@ jobs:
           APP_GROOVY="android/app/build.gradle"
 
           if [ -f "$APP_KTS" ]; then
+            sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/g' "$APP_KTS"
+            sed -i 's/compileSdk = 34/compileSdk = 36/g' "$APP_KTS"
             sed -i 's/minSdk = flutter.minSdkVersion/minSdk = 26/g' "$APP_KTS"
             sed -i 's/minSdk = 24/minSdk = 26/g' "$APP_KTS"
 
@@ -119,9 +156,11 @@ jobs:
 
             android {
                 namespace = "com.mocktester.app"
+                compileSdk = 36
                 defaultConfig {
                     applicationId = "com.mocktester.app"
                     minSdk = 26
+                    targetSdk = 34
                 }
                 compileOptions {
                     isCoreLibraryDesugaringEnabled = true
@@ -133,6 +172,8 @@ jobs:
             }
           EOF
           elif [ -f "$APP_GROOVY" ]; then
+            sed -i 's/compileSdkVersion flutter.compileSdkVersion/compileSdkVersion 36/g' "$APP_GROOVY"
+            sed -i 's/compileSdkVersion 34/compileSdkVersion 36/g' "$APP_GROOVY"
             sed -i 's/minSdkVersion flutter.minSdkVersion/minSdkVersion 26/g' "$APP_GROOVY"
             sed -i 's/minSdkVersion 24/minSdkVersion 26/g' "$APP_GROOVY"
 
@@ -140,9 +181,11 @@ jobs:
 
             android {
                 namespace 'com.mocktester.app'
+                compileSdkVersion 36
                 defaultConfig {
                     applicationId "com.mocktester.app"
                     minSdkVersion 26
+                    targetSdkVersion 34
                 }
                 compileOptions {
                     coreLibraryDesugaringEnabled true
