@@ -33,7 +33,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   bool _isBookmarked = false;
 
   Timer? _timer;
-  int _timeLeft = 30;
+  int _timeLeft = 90; // 🎯 Sabhi ke liye 90s standard timer
 
   @override
   void initState() {
@@ -142,7 +142,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
   void _startTimer() {
     _timer?.cancel();
     setState(() {
-      _timeLeft = 30;
+      _timeLeft = 90; // 🎯 90s reset on each question
       _isAnswered = false;
       _selectedOptionIndex = null;
     });
@@ -245,7 +245,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     );
   }
 
-  // ✨ COMPREHENSIVE PHYSICS & CHEMISTRY OCR SANITIZER
+  // ✨ COMPREHENSIVE OCR SANITIZER
   Widget _buildEnhancedExplanation(String rawExplanation, Question currentQ, bool isDark) {
     if (rawExplanation.trim().isEmpty) return const SizedBox.shrink();
 
@@ -259,9 +259,11 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         .replaceAll(r'\\theta', r'\theta')
         .replaceAll(r'\\rho', r'\rho')
         .replaceAll(r'\\approx', r'\approx')
-        .replaceAll(r'\\rightarrow', r'\rightarrow');
+        .replaceAll(r'\\rightarrow', r'\rightarrow')
+        .replaceAll(r'\\%', '%')
+        .replaceAll(r'\%', '%');
 
-    // 🧪 1. Comprehensive Chemistry Subscripts (Common OCR Glitches)
+    // 🧪 1. Comprehensive Chemistry Subscripts
     final Map<String, String> chemSubscripts = {
       r'($CO_2$)': 'CO₂', r'$CO_2$': 'CO₂', r'CO_2': 'CO₂',
       r'($H_2O$)': 'H₂O', r'$H_2O$': 'H₂O', r'H_2O': 'H₂O',
@@ -292,7 +294,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       cleaned = cleaned.replaceAll(key, val);
     });
 
-    // 🔬 2. Physics Symbols, Range & Operators
+    // 🔬 2. Physics & Math Symbols
     final Map<String, String> physReplacements = {
       r'($\lambda$)': 'λ', r'$\lambda$': 'λ', r'\lambda': 'λ',
       r'($\mu$)': 'μ', r'$\mu$': 'μ', r'\mu': 'μ',
@@ -322,9 +324,8 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       cleaned = cleaned.replaceAll(key, val);
     });
 
-    // 🌡️ 3. Temperature, Units & Exponents (Regex)
+    // 🌡️ 3. Temperature & Exponents
     cleaned = cleaned
-        // Degree Fixes
         .replaceAll(r'^\circ\text{C}', '°C')
         .replaceAll(r'^\circ\text{ C}', '°C')
         .replaceAll(r'^\circ C', '°C')
@@ -333,12 +334,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         .replaceAll(r'^\circ F', '°F')
         .replaceAll(r'^\circ', '°')
         .replaceAll(r'\circ', '°')
-        // Voltage / Current Range ($0.5 \text{ to } 1 \text{ V}$ -> 0.5 V to 1 V)
         .replaceAllMapped(RegExp(r'\$\s*([0-9.]+)\s*\\text\{\s*to\s*\}\s*([0-9.]+)\s*\\text\{\s*([A-Za-z]+)\s*\}\s*\$'), 
             (m) => '${m.group(1)} ${m.group(3)} to ${m.group(2)} ${m.group(3)}')
-        // Generic \text{...} inside math block
         .replaceAllMapped(RegExp(r'\\text\{\s*([^}]+)\s*\}'), (m) => m.group(1) ?? '')
-        // Exponents ($10^5$ -> 10⁵, $m/s^2$ -> m/s², $cm^3$ -> cm³)
         .replaceAll(r'$10^{-3}$', '10⁻³')
         .replaceAll(r'$10^{-6}$', '10⁻⁶')
         .replaceAll(r'$10^3$', '10³')
@@ -350,7 +348,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         .replaceAll(r'm^3', 'm³')
         .replaceAll(r'cm^2', 'cm²')
         .replaceAll(r'm^2', 'm²')
-        // Clean leftover empty dollar blocks
         .replaceAll(r'$$', '')
         .trim();
 
@@ -475,7 +472,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
               ],
             ),
           ),
-
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Column(
@@ -520,7 +516,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                       }).toList(),
                     ),
                   ),
-
                 ...takeawayBlocks.map((point) => Padding(
                       padding: const EdgeInsets.only(bottom: 8.0),
                       child: MathFormattedText(
@@ -533,7 +528,6 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                         ),
                       ),
                     )),
-
                 if (trapOptionBlocks.isNotEmpty) ...[
                   const SizedBox(height: 6),
                   Theme(
@@ -596,9 +590,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                     ),
                   ),
                 ],
-
                 const Divider(height: 24),
-
                 RevisionTrickSubmitBox(
                   testTitle: widget.testTitle,
                   qIndex: _currentIndex,
@@ -628,6 +620,11 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
     final List<String>? statements = _isHindi ? currentQ.sh : currentQ.se;
     final List<String> currentOptions = currentQ.getOptions(_isHindi);
     final String currentExplanation = currentQ.getExplanation(_isHindi);
+
+    // ⏱️ Format mm:ss string
+    final int minutes = _timeLeft ~/ 60;
+    final int seconds = _timeLeft % 60;
+    final String formattedTime = '${minutes.toString().padLeft(2, '0')}:${seconds.toString().padLeft(2, '0')}';
 
     return Scaffold(
       backgroundColor: bgColor,
@@ -678,22 +675,22 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             margin: const EdgeInsets.only(right: 12),
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
             decoration: BoxDecoration(
-              color: _timeLeft <= 5
+              color: _timeLeft <= 10
                   ? (isDark ? const Color(0xFF7F1D1D) : Colors.red.shade100)
                   : (isDark ? const Color(0xFF1E293B) : const Color(0xFFEFF6FF)),
               borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: _timeLeft <= 5 ? Colors.red : const Color(0xFF2563EB)),
+              border: Border.all(color: _timeLeft <= 10 ? Colors.red : const Color(0xFF2563EB)),
             ),
             child: Row(
               children: [
-                Icon(Icons.timer_outlined, size: 15, color: _timeLeft <= 5 ? Colors.red : const Color(0xFF2563EB)),
+                Icon(Icons.timer_outlined, size: 15, color: _timeLeft <= 10 ? Colors.red : const Color(0xFF2563EB)),
                 const SizedBox(width: 4),
                 Text(
-                  '${_timeLeft}s',
+                  formattedTime,
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 12,
-                    color: _timeLeft <= 5 ? Colors.red : const Color(0xFF2563EB),
+                    color: _timeLeft <= 10 ? Colors.red : const Color(0xFF2563EB),
                   ),
                 ),
               ],
@@ -919,38 +916,56 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
             if (_isAnswered) ...[
               _buildEnhancedExplanation(currentExplanation, currentQ, isDark),
             ],
-            const SizedBox(height: 70),
+            const SizedBox(height: 90), // Spacing for raised bottomSheet
           ],
         ),
       ),
-      bottomSheet: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-        decoration: BoxDecoration(
-          color: cardBg,
-          boxShadow: [BoxShadow(color: Colors.black.withOpacity(isDark ? 0.3 : 0.05), blurRadius: 5)],
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            ElevatedButton.icon(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: isDark ? const Color(0xFF334155) : Colors.grey.shade200,
-                foregroundColor: isDark ? Colors.white : Colors.black87,
+      // 🛡️ BOTTOM BAR WITH SAFE AREA & PROPER ELEVATION
+      bottomSheet: SafeArea(
+        child: Container(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+          decoration: BoxDecoration(
+            color: cardBg,
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(isDark ? 0.35 : 0.08),
+                blurRadius: 8,
+                offset: const Offset(0, -3),
+              )
+            ],
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: isDark ? const Color(0xFF334155) : Colors.grey.shade200,
+                  foregroundColor: isDark ? Colors.white : Colors.black87,
+                  padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 12),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  elevation: 0,
+                ),
+                onPressed: _currentIndex > 0 ? _goToPreviousQuestion : null,
+                icon: const Icon(Icons.arrow_back_ios_rounded, size: 14),
+                label: const Text('Previous', style: TextStyle(fontWeight: FontWeight.w600, fontSize: 13)),
               ),
-              onPressed: _currentIndex > 0 ? _goToPreviousQuestion : null,
-              icon: const Icon(Icons.arrow_back_ios_rounded, size: 14),
-              label: const Text('Previous'),
-            ),
-            ElevatedButton.icon(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF2563EB),
-                foregroundColor: Colors.white,
+              ElevatedButton.icon(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF2563EB),
+                  foregroundColor: Colors.white,
+                  padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 12),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  elevation: 2,
+                ),
+                onPressed: _goToNextQuestion,
+                label: Text(
+                  _currentIndex == widget.questions.length - 1 ? 'Finish 🏁' : 'Next ➔',
+                  style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5),
+                ),
+                icon: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
               ),
-              onPressed: _goToNextQuestion,
-              label: Text(_currentIndex == widget.questions.length - 1 ? 'Finish 🏁' : 'Next ➔'),
-              icon: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
