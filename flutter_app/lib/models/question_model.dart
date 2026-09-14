@@ -47,7 +47,6 @@ class Question {
     return options.isNotEmpty ? options : ["Option text not available."];
   }
 
-  // 💡 FIXED GETTER: Prioritizes direct 'e' field when 'ee'/'eh' are empty
   String getExplanation(bool isHindi) {
     if (isHindi) {
       if (eh != null && eh!.trim().isNotEmpty) return eh!;
@@ -89,16 +88,29 @@ class Question {
       opts = optsH;
     }
 
+    // 🎯 FIXED: Robust Answer Index Parser (Handles "A", "B", "C", "D", 0, 1, 2, 3, etc.)
     int ansIdx = 0;
-    if (json['a'] != null) {
-      ansIdx = json['a'] is int ? json['a'] : int.tryParse(json['a'].toString()) ?? 0;
-    } else if (json['answerIndex'] != null) {
-      ansIdx = json['answerIndex'] is int ? json['answerIndex'] : int.tryParse(json['answerIndex'].toString()) ?? 0;
-    } else if (json['answer'] != null) {
-      ansIdx = json['answer'] is int ? json['answer'] : int.tryParse(json['answer'].toString()) ?? 0;
+    final dynamic rawAns = json['a'] ?? json['answerIndex'] ?? json['answer'];
+
+    if (rawAns != null) {
+      if (rawAns is int) {
+        ansIdx = rawAns;
+      } else {
+        final String cleanAns = rawAns.toString().trim().toUpperCase();
+        if (cleanAns == 'A' || cleanAns == '(A)') {
+          ansIdx = 0;
+        } else if (cleanAns == 'B' || cleanAns == '(B)') {
+          ansIdx = 1;
+        } else if (cleanAns == 'C' || cleanAns == '(C)') {
+          ansIdx = 2;
+        } else if (cleanAns == 'D' || cleanAns == '(D)') {
+          ansIdx = 3;
+        } else {
+          ansIdx = int.tryParse(cleanAns) ?? 0;
+        }
+      }
     }
 
-    // 🚀 Exact 'e' parameter priority
     String exp = json['e'] ?? json['explanation'] ?? '';
     String? expE = json['ee'];
     String? expH = json['eh'];
