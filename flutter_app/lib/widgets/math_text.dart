@@ -13,34 +13,52 @@ class MathFormattedText extends StatelessWidget {
     this.textAlign = TextAlign.start,
   });
 
-  // 🧹 UNIVERSAL ZERO-GLITCH SANITIZER FOR CHEMISTRY & PHYSICS
+  // 🧹 UNIVERSAL ZERO-GLITCH SANITIZER FOR MATH, PHYSICS & CHEMISTRY
   static String sanitizeInput(String raw) {
-    if (raw.isEmpty) return "";
+    if (raw.trim().isEmpty) return "";
     String s = raw;
 
-    // 1️⃣ Normalize JSON Escaping & Fix Double Backslashes
+    // 1️⃣ Protect Greek Nu (\nu) BEFORE Newline replacement
+    s = s.replaceAll(r'\\nu', 'ν');
+    s = s.replaceAll(r'\nu', 'ν');
+
+    // Normalize JSON Escaping & Fix Double Backslashes
     s = s.replaceAll(r'\n', '\n');
-    s = s.replaceAll(r'\\', r'\');
     s = s.replaceAll('&nbsp;', ' ').replaceAll('&lt;', '<').replaceAll('&gt;', '>');
-    
-    // Fix Tab-corrupted \text & \mu typos from JSON
-    s = s.replaceAll(r'\tmu', r'\mu');
+
+    // Typos & Corrupted text fixes
+    s = s.replaceAll(r'\tmu', 'μ');
     s = s.replaceAll(r'\ttext', r'\text');
     s = s.replaceAll(RegExp(r'(?:\\t|\t|\b)ext\{', caseSensitive: false), r'\text{');
 
-    // 2️⃣ Fix Chemistry Dot Products, Arrows & State Subscripts
-    s = s.replaceAll(r'\cdot', ' · ');
+    // 2️⃣ Common Physics & Math Symbols
+    s = s.replaceAll(r'\lambda', 'λ').replaceAll(r'\\lambda', 'λ');
+    s = s.replaceAll(r'\mu', 'μ').replaceAll(r'\\mu', 'μ');
+    s = s.replaceAll(r'\theta', 'θ').replaceAll(r'\\theta', 'θ');
+    s = s.replaceAll(r'\alpha', 'α').replaceAll(r'\\alpha', 'α');
+    s = s.replaceAll(r'\beta', 'β').replaceAll(r'\\beta', 'β');
+    s = s.replaceAll(r'\sigma', 'σ').replaceAll(r'\\sigma', 'σ');
+    s = s.replaceAll(r'\cdot', ' · ').replaceAll(r'\\cdot', ' · ');
+    s = s.replaceAll(r'\times', ' × ').replaceAll(r'\\times', ' × ');
+    s = s.replaceAll(r'\approx', ' ≈ ').replaceAll(r'\\approx', ' ≈ ');
+    s = s.replaceAll(r'\implies', ' ⟹ ').replaceAll(r'\\implies', ' ⟹ ').replaceAll('==>', ' ⟹ ');
+    s = s.replaceAll(r'\rightarrow', ' → ').replaceAll(r'\\rightarrow', ' → ');
+    s = s.replaceAll(r'\rightleftharpoons', ' ⇌ ');
+    s = s.replaceAll(r'\uparrow', '↑').replaceAll(r'\downarrow', '↓');
+    s = s.replaceAll(r'\\%', '%').replaceAll(r'\%', '%');
+
+    // 3️⃣ Fix \text{...} commands
+    s = s.replaceAllMapped(
+      RegExp(r'\\+text\{([^}]+)\}'),
+      (m) => ' ${m.group(1)?.trim()} ',
+    );
+
+    // 4️⃣ Fix Chemistry Dot Products, Arrows & State Subscripts
     s = s.replaceAll(r'_{(g)}', ' (g)');
     s = s.replaceAll(r'_{(l)}', ' (l)');
     s = s.replaceAll(r'_{(s)}', ' (s)');
     s = s.replaceAll(r'_{(aq)}', ' (aq)');
-    s = s.replaceAll(r'\uparrow', '↑');
-    s = s.replaceAll(r'\downarrow', '↓');
-    s = s.replaceAll(r'\rightarrow', '→');
-    s = s.replaceAll(r'\longrightarrow', '→');
-    s = s.replaceAll(r'\rightleftharpoons', '⇌');
 
-    // 3️⃣ Fix Complex Arrow Tags & Oversets
     s = s.replaceAllMapped(
       RegExp(r'\\overset\{\s*\\?text\{([^}]+)\}\s*\}\s*\{\s*\\?(?:long)?rightarrow\s*\}'),
       (m) => ' ⎯(${m.group(1)})→ ',
@@ -50,58 +68,66 @@ class MathFormattedText extends StatelessWidget {
       (m) => ' ⎯(${m.group(1)})→ ',
     );
 
-    // 4️⃣ Fix Broken Dollar Encapsulations like ($NaNO_3$), ($KNO_3$), ($Fe_3O_4 / Fe_2O_3$)
+    // 5️⃣ Fix Broken Dollar Encapsulations like ($NaNO_3$)
     s = s.replaceAllMapped(RegExp(r'\(\s*\$([^$]+)\$\s*\)'), (m) => '(${m.group(1)})');
     s = s.replaceAllMapped(RegExp(r'\[\s*\$([^$]+)\$\s*\]'), (m) => '[${m.group(1)}]');
 
-    // 5️⃣ Universal Subscript Mapping (For plain text chemistry)
+    // 6️⃣ Subscripts (₀ - ₉)
     final Map<String, String> subscriptMap = {
       '_0': '₀', '_1': '₁', '_2': '₂', '_3': '₃', '_4': '₄',
       '_5': '₅', '_6': '₆', '_7': '₇', '_8': '₈', '_9': '₉',
     };
+    subscriptMap.forEach((key, val) => s = s.replaceAll(key, val));
 
-    subscriptMap.forEach((key, val) {
-      s = s.replaceAll(key, val);
-    });
-
-    // 6️⃣ Clean Leftover Underscores & Brackets in Formulas
     s = s.replaceAllMapped(RegExp(r'([A-Za-z]+)_\{([0-9]+)\}'), (m) {
       String digits = m.group(2)!;
-      subscriptMap.forEach((key, val) {
-        digits = digits.replaceAll(key.replaceAll('_', ''), val);
-      });
+      subscriptMap.forEach((key, val) => digits = digits.replaceAll(key.replaceAll('_', ''), val));
       return '${m.group(1)}$digits';
     });
 
-    // 7️⃣ Fix Degree, Enthalpy & Spacing Units
-    s = s.replaceAll(r'^\circ\text{C}', '°C');
-    s = s.replaceAll(r'^\circ\text{ C}', '°C');
-    s = s.replaceAll(r'^\circ C', '°C');
-    s = s.replaceAll(r'^\circ', '°');
-    s = s.replaceAll(r'\circ', '°');
-    s = s.replaceAll(r'\sim', '~');
-    s = s.replaceAll(r'\Delta H = -92.4\text{kJ/mol}', 'ΔH = -92.4 kJ/mol');
-    s = s.replaceAll(r'\Delta H = -92.4kJ/mol', 'ΔH = -92.4 kJ/mol');
-    s = s.replaceAll(r'\Delta', 'Δ');
-    s = s.replaceAll(r'\text{kJ/mol}', 'kJ/mol');
-    s = s.replaceAll(r'\text{atm}', 'atm');
+    // 7️⃣ Superscripts & Exponents
+    s = s
+        .replaceAll(r'^2', '²')
+        .replaceAll(r'^3', '³')
+        .replaceAll(r'^\circ\text{C}', '°C')
+        .replaceAll(r'^\circ C', '°C')
+        .replaceAll(r'^\circ\text{F}', '°F')
+        .replaceAll(r'^\circ F', '°F')
+        .replaceAll(r'^\circ', '°')
+        .replaceAll(r'\circ', '°')
+        .replaceAll(r'$10^{-3}$', '10⁻³')
+        .replaceAll(r'$10^{-6}$', '10⁻⁶')
+        .replaceAll(r'$10^3$', '10³')
+        .replaceAll(r'$10^5$', '10⁵')
+        .replaceAll(r'$10^8$', '10⁸')
+        .replaceAll(r'm/s^2', 'm/s²')
+        .replaceAll(r'm/s^1', 'm/s')
+        .replaceAll(r'cm^3', 'cm³')
+        .replaceAll(r'm^3', 'm³');
+
+    // 8️⃣ Clean \frac Everywhere (Converts raw LaTeX fractions to clean readable text)
+    s = s.replaceAll(r'\\frac', r'\frac');
     s = s.replaceAllMapped(
-      RegExp(r'([0-9]+)\s*°\s*C\s*aur\s*~?\s*([0-9]+)\s*atm'),
-      (m) => '${m.group(1)}°C aur ~ ${m.group(2)} atm',
+      RegExp(r'\\frac\{([^{}]+)\}\{([^{}]+)\}'),
+      (match) {
+        String num = match.group(1)!.trim();
+        String den = match.group(2)!.trim();
+        if (num.contains('×') || num.contains('+') || num.contains('-') || num.contains('·')) {
+          return '($num) / $den';
+        }
+        return '$num / $den';
+      },
     );
 
-    // 8️⃣ Auto-wrap bare math commands if not wrapped inside $...$
-    if (!s.contains('\$')) {
-      s = s.replaceAllMapped(
-        RegExp(r'(\\(?:frac|sqrt)\{[^}]+\}(?:\{[^}]+\})?)'),
-        (m) => '\$${m.group(1)}\$',
-      );
-      s = s.replaceAllMapped(
-        RegExp(r'(\\(?:mu|lambda|theta|nu|alpha|beta|pi|times|approx|infty)(?:_[a-zA-Z0-9]+)?)'),
-        (m) => '\$${m.group(1)}\$',
-      );
-    }
+    // Double pass for nested fractions
+    s = s.replaceAllMapped(
+      RegExp(r'\\frac\{([^{}]+)\}\{([^{}]+)\}'),
+      (match) => '(${match.group(1)!.trim()}) / ${match.group(2)!.trim()}',
+    );
 
+    // 9️⃣ Remove dangling $ signs when not needed
+    s = s.replaceAll(r'$$', '').trim();
+    
     return s;
   }
 
@@ -109,7 +135,7 @@ class MathFormattedText extends StatelessWidget {
   static String fallbackToUnicode(String input) {
     String res = input;
     res = res.replaceAllMapped(RegExp(r'\\text\{([^}]+)\}'), (m) => m[1] ?? '');
-    res = res.replaceAllMapped(RegExp(r'\\frac\{([^}]+)\}\{([^}]+)\}'), (m) => '(${m[1]}/${m[2]})');
+    res = res.replaceAllMapped(RegExp(r'\\frac\{([^}]+)\}\{([^}]+)\}'), (m) => '(${m[1]} / ${m[2]})');
     res = res.replaceAllMapped(RegExp(r'\\sqrt\{([^}]+)\}'), (m) => '√(${m[1]})');
     res = res.replaceAll(r'\Delta', 'Δ');
     res = res.replaceAll(r'\pi', 'π');
@@ -120,19 +146,19 @@ class MathFormattedText extends StatelessWidget {
     res = res.replaceAll(r'\sigma', 'σ');
     res = res.replaceAll(r'\approx', '≈');
     res = res.replaceAll(r'\times', '×');
+    res = res.replaceAll(r'\cdot', '·');
     res = res.replaceAll(r'\infty', '∞');
     res = res.replaceAll(r'\implies', '⇒');
     res = res.replaceAll(r'\sim', '~');
     res = res.replaceAll(r'^\circ', '°');
     res = res.replaceAll(r'\circ', '°');
-    res = res.replaceAll(r'\AA', 'Å');
     res = res.replaceAll('{', '').replaceAll('}', '').replaceAll(r'\', '').replaceAll(r'$', '');
     return res;
   }
 
   @override
   Widget build(BuildContext context) {
-    if (text.isEmpty) return const SizedBox.shrink();
+    if (text.trim().isEmpty) return const SizedBox.shrink();
 
     final TextStyle defaultStyle = textStyle ??
         TextStyle(
@@ -172,7 +198,7 @@ class MathFormattedText extends StatelessWidget {
           alignment: PlaceholderAlignment.middle,
           child: Container(
             width: double.infinity,
-            padding: const EdgeInsets.symmetric(vertical: 6.0),
+            padding: const EdgeInsets.symmetric(vertical: 4.0),
             alignment: Alignment.center,
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -222,7 +248,7 @@ class MathFormattedText extends StatelessWidget {
           style: defaultStyle.copyWith(fontWeight: FontWeight.bold),
         ));
       }
-      // 4️⃣ HTML Bold Tags (<b> or <strong>)
+      // 4️⃣ HTML Bold Tags
       else if (fullMatch.toLowerCase().startsWith('<b>') ||
           fullMatch.toLowerCase().startsWith('<strong>')) {
         final boldContent = match.group(3) ?? match.group(4) ?? '';
@@ -231,7 +257,7 @@ class MathFormattedText extends StatelessWidget {
           style: defaultStyle.copyWith(fontWeight: FontWeight.bold),
         ));
       }
-      // 5️⃣ Line Break Tags (<br>)
+      // 5️⃣ Line Breaks
       else if (fullMatch.toLowerCase().startsWith('<br')) {
         spans.add(const TextSpan(text: '\n'));
       }
