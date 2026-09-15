@@ -27,7 +27,6 @@ class RevisionExplanationCard extends StatelessWidget {
 
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
-        .replaceAll(r'\\text', r'\text')
         .replaceAll(r'\\mu', 'μ')
         .replaceAll(r'\\lambda', 'λ')
         .replaceAll(r'\\nu', 'ν')
@@ -43,10 +42,16 @@ class RevisionExplanationCard extends StatelessWidget {
         .replaceAll(r'\\%', '%')
         .replaceAll(r'\%', '%');
 
-    // 🎯 1. Double backslash aur single backslash dono types ke \frac ko normalize karein
+    // 🎯 1. \text{...} aur \\text{...} ko clean karke andar ka normal text bahar nikalo
+    cleaned = cleaned.replaceAllMapped(
+      RegExp(r'\\+text\{([^}]+)\}'),
+      (match) => ' ${match.group(1)?.trim()} ',
+    );
+
+    // 🎯 2. Double backslash aur single backslash dono types ke \frac ko normalize karein
     cleaned = cleaned.replaceAll(r'\\frac', r'\frac');
 
-    // 🎯 2. Robust Fraction Cleaner (Fractions ko readable bracket/slash format me convert karega)
+    // 🎯 3. Fractions ko readable (numerator) / denominator format me convert karein
     cleaned = cleaned.replaceAllMapped(
       RegExp(r'\\frac\{([^{}]+)\}\{([^{}]+)\}'),
       (match) {
@@ -61,13 +66,13 @@ class RevisionExplanationCard extends StatelessWidget {
       },
     );
 
-    // Agar nested fraction reh gaya ho toh second pass clean
+    // Nested fraction check
     cleaned = cleaned.replaceAllMapped(
       RegExp(r'\\frac\{([^{}]+)\}\{([^{}]+)\}'),
       (match) => '(${match.group(1)!.trim()}) / ${match.group(2)!.trim()}',
     );
 
-    // 🧪 3. Chemistry Subscripts
+    // 🧪 4. Chemistry Subscripts
     final Map<String, String> chemSubscripts = {
       r'($CO_2$)': 'CO₂', r'$CO_2$': 'CO₂', r'CO_2': 'CO₂',
       r'($H_2O$)': 'H₂O', r'$H_2O$': 'H₂O', r'H_2O': 'H₂O',
@@ -312,7 +317,11 @@ class RevisionExplanationCard extends StatelessWidget {
                         leading: const Icon(Icons.alt_route_rounded, size: 19, color: Color(0xFF2563EB)),
                         title: Text(
                           isHindi ? 'बाकी विकल्प गलत क्यों हैं?' : 'Why other options are incorrect?',
-                          style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: Color(0xFF2563EB)),
+                          style: const TextStyle(
+                            fontSize: 12.5,
+                            fontWeight: FontWeight.w800,
+                            color: Color(0xFF2563EB),
+                          ),
                         ),
                         children: [
                           Padding(
