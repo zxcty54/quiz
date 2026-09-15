@@ -13,122 +13,71 @@ class MathFormattedText extends StatelessWidget {
     this.textAlign = TextAlign.start,
   });
 
-  // 🧹 UNIVERSAL ZERO-GLITCH SANITIZER FOR MATH, PHYSICS & CHEMISTRY
+  // 🧹 CLEAN & SAFE SANITIZER (Valid LaTeX ko bina tode space aur syntax fix karega)
   static String sanitizeInput(String raw) {
     if (raw.trim().isEmpty) return "";
     String s = raw;
 
-    // 1️⃣ Protect Greek Nu (\nu) BEFORE Newline replacement
-    s = s.replaceAll(r'\\nu', 'ν');
-    s = s.replaceAll(r'\nu', 'ν');
-
-    // Normalize JSON Escaping & Fix Double Backslashes
-    s = s.replaceAll(r'\n', '\n');
+    // 1. Line breaks aur HTML spaces normalize karein
+    s = s.replaceAll(r'\r\n', '\n').replaceAll(r'\n', '\n');
     s = s.replaceAll('&nbsp;', ' ').replaceAll('&lt;', '<').replaceAll('&gt;', '>');
 
-    // Typos & Corrupted text fixes
-    s = s.replaceAll(r'\tmu', 'μ');
+    // 2. Typos & backslash issues fix karein
+    s = s.replaceAll(r'\tmu', r'\mu');
     s = s.replaceAll(r'\ttext', r'\text');
-    s = s.replaceAll(RegExp(r'(?:\\t|\t|\b)ext\{', caseSensitive: false), r'\text{');
+    s = s.replaceAll(r'- -', '– ').replaceAll(r'-- ', '– ').replaceAll(r'\text{--}', '–');
 
-    // 2️⃣ Common Physics & Math Symbols
-    s = s.replaceAll(r'\lambda', 'λ').replaceAll(r'\\lambda', 'λ');
-    s = s.replaceAll(r'\mu', 'μ').replaceAll(r'\\mu', 'μ');
-    s = s.replaceAll(r'\theta', 'θ').replaceAll(r'\\theta', 'θ');
-    s = s.replaceAll(r'\alpha', 'α').replaceAll(r'\\alpha', 'α');
-    s = s.replaceAll(r'\beta', 'β').replaceAll(r'\\beta', 'β');
-    s = s.replaceAll(r'\sigma', 'σ').replaceAll(r'\\sigma', 'σ');
-    s = s.replaceAll(r'\cdot', ' · ').replaceAll(r'\\cdot', ' · ');
-    s = s.replaceAll(r'\times', ' × ').replaceAll(r'\\times', ' × ');
-    s = s.replaceAll(r'\approx', ' ≈ ').replaceAll(r'\\approx', ' ≈ ');
-    s = s.replaceAll(r'\implies', ' ⟹ ').replaceAll(r'\\implies', ' ⟹ ').replaceAll('==>', ' ⟹ ');
-    s = s.replaceAll(r'\rightarrow', ' → ').replaceAll(r'\\rightarrow', ' → ');
-    s = s.replaceAll(r'\rightleftharpoons', ' ⇌ ');
-    s = s.replaceAll(r'\uparrow', '↑').replaceAll(r'\downarrow', '↓');
-    s = s.replaceAll(r'\\%', '%').replaceAll(r'\%', '%');
-
-    // 3️⃣ Fix \text{...} commands
+    // Double backslash (JSON escaped) ko single LaTeX slash me badlein
     s = s.replaceAllMapped(
-      RegExp(r'\\+text\{([^}]+)\}'),
-      (m) => ' ${m.group(1)?.trim()} ',
+      RegExp(r'\\\\([a-zA-Z]+)'),
+      (m) => '\\${m.group(1)}',
     );
 
-    // 4️⃣ Fix Chemistry Dot Products, Arrows & State Subscripts
-    s = s.replaceAll(r'_{(g)}', ' (g)');
-    s = s.replaceAll(r'_{(l)}', ' (l)');
-    s = s.replaceAll(r'_{(s)}', ' (s)');
-    s = s.replaceAll(r'_{(aq)}', ' (aq)');
-
+    // 3. Bracketed Formulas/Isotopes jinme $ missing hai unhe $...$ me wrap karein
+    // Example: ( ^{133}_{55} Cs ) ya ( ^{9}_{4} Be )
     s = s.replaceAllMapped(
-      RegExp(r'\\overset\{\s*\\?text\{([^}]+)\}\s*\}\s*\{\s*\\?(?:long)?rightarrow\s*\}'),
-      (m) => ' ⎯(${m.group(1)})→ ',
-    );
-    s = s.replaceAllMapped(
-      RegExp(r'\\xrightarrow\{([^}]+)\}'),
-      (m) => ' ⎯(${m.group(1)})→ ',
-    );
-
-    // 5️⃣ Fix Broken Dollar Encapsulations like ($NaNO_3$)
-    s = s.replaceAllMapped(RegExp(r'\(\s*\$([^$]+)\$\s*\)'), (m) => '(${m.group(1)})');
-    s = s.replaceAllMapped(RegExp(r'\[\s*\$([^$]+)\$\s*\]'), (m) => '[${m.group(1)}]');
-
-    // 6️⃣ Subscripts (₀ - ₉)
-    final Map<String, String> subscriptMap = {
-      '_0': '₀', '_1': '₁', '_2': '₂', '_3': '₃', '_4': '₄',
-      '_5': '₅', '_6': '₆', '_7': '₇', '_8': '₈', '_9': '₉',
-    };
-    subscriptMap.forEach((key, val) => s = s.replaceAll(key, val));
-
-    s = s.replaceAllMapped(RegExp(r'([A-Za-z]+)_\{([0-9]+)\}'), (m) {
-      String digits = m.group(2)!;
-      subscriptMap.forEach((key, val) => digits = digits.replaceAll(key.replaceAll('_', ''), val));
-      return '${m.group(1)}$digits';
-    });
-
-    // 7️⃣ Superscripts & Exponents
-    s = s
-        .replaceAll(r'^2', '²')
-        .replaceAll(r'^3', '³')
-        .replaceAll(r'^\circ\text{C}', '°C')
-        .replaceAll(r'^\circ C', '°C')
-        .replaceAll(r'^\circ\text{F}', '°F')
-        .replaceAll(r'^\circ F', '°F')
-        .replaceAll(r'^\circ', '°')
-        .replaceAll(r'\circ', '°')
-        .replaceAll(r'$10^{-3}$', '10⁻³')
-        .replaceAll(r'$10^{-6}$', '10⁻⁶')
-        .replaceAll(r'$10^3$', '10³')
-        .replaceAll(r'$10^5$', '10⁵')
-        .replaceAll(r'$10^8$', '10⁸')
-        .replaceAll(r'm/s^2', 'm/s²')
-        .replaceAll(r'm/s^1', 'm/s')
-        .replaceAll(r'cm^3', 'cm³')
-        .replaceAll(r'm^3', 'm³');
-
-    // 8️⃣ Clean \frac Everywhere (Converts raw LaTeX fractions to clean readable text)
-    s = s.replaceAll(r'\\frac', r'\frac');
-    s = s.replaceAllMapped(
-      RegExp(r'\\frac\{([^{}]+)\}\{([^{}]+)\}'),
-      (match) {
-        String num = match.group(1)!.trim();
-        String den = match.group(2)!.trim();
-        if (num.contains('×') || num.contains('+') || num.contains('-') || num.contains('·')) {
-          return '($num) / $den';
+      RegExp(r'\(\s*(\^\{?\d+\}?[^)]*?)\s*\)'),
+      (m) {
+        String inner = m.group(1)!.trim();
+        if (inner.startsWith(r'$') && inner.endsWith(r'$')) return '($inner)';
+        if (inner.contains(r'\rightarrow') || inner.contains('→')) {
+          return '\$\$$inner\$\$';
         }
-        return '$num / $den';
+        return '\$$inner\$';
       },
     );
 
-    // Double pass for nested fractions
+    // 4. Bracketed scientific notation: (1.675 × 10^{-27} kg) -> $1.675 \times 10^{-27}\text{ kg}$
     s = s.replaceAllMapped(
-      RegExp(r'\\frac\{([^{}]+)\}\{([^{}]+)\}'),
-      (match) => '(${match.group(1)!.trim()}) / ${match.group(2)!.trim()}',
+      RegExp(r'\(\s*([\d\.]+\s*(?:\\times|×)\s*10\^\{?-?\d+\}?\s*([A-Za-z/]+)?)\s*\)'),
+      (m) {
+        final val = m.group(1)!.replaceAll('×', r'\times');
+        return '\$$val\$';
+      },
     );
 
-    // 9️⃣ Remove dangling $ signs when not needed
-    s = s.replaceAll(r'$$', '').trim();
-    
-    return s;
+    // 5. Math mode ($...$) ke andar ke accidental spaces hatana: "$ C _{60} $" -> "$C_{60}$"
+    s = s.replaceAllMapped(
+      RegExp(r'\$([^\$]+?)\$'),
+      (match) {
+        String inner = match.group(1)!.trim();
+        inner = inner.replaceAll(RegExp(r'\s*_\s*'), '_');
+        inner = inner.replaceAll(RegExp(r'\s*\^\s*'), '^');
+        inner = inner.replaceAllMapped(
+          RegExp(r'([A-Za-z0-9])\s+([A-Za-z0-9])'),
+          (m) => '${m[1]}${m[2]}',
+        );
+        return '\$$inner\$';
+      },
+    );
+
+    // 6. Dollar delimiter boundary spacing fix: "$ x $" -> "$x$"
+    s = s.replaceAllMapped(
+      RegExp(r'\$\s+([^\$]+?)\s+\$'),
+      (match) => '\$${match.group(1)?.trim()}\$',
+    );
+
+    return s.trim();
   }
 
   // 🧹 COMPREHENSIVE FALLBACK ENGINE FOR FAILING LATEX
