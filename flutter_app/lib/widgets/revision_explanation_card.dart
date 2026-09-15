@@ -21,84 +21,15 @@ class RevisionExplanationCard extends StatelessWidget {
     required this.currentIndex,
   });
 
-  /// Root-cause generic sanitizer: 
-  /// Bina kisi formula/element ko hardcode kiye spacing, delimiters aur broken wrappers theek karta hai.
-  String _sanitizeLatex(String text) {
-    if (text.trim().isEmpty) return '';
-
-    String cleaned = text
-        .replaceAll(r'\r\n', '\n')
-        .replaceAll(r'\n', '\n');
-
-    // 1. Double/repeated hyphens ko dash me badalna (-- / - - -> –)
-    cleaned = cleaned
-        .replaceAll(r'- -', '– ')
-        .replaceAll(r'-- ', '– ')
-        .replaceAll(r'\text{--}', '–');
-
-    // 2. Generic Backslash Un-escaping (JSON double-backslash ko single LaTeX command me lana)
-    cleaned = cleaned.replaceAllMapped(
-      RegExp(r'\\\\([a-zA-Z]+)'),
-      (match) => '\\${match.group(1)}',
-    );
-
-    // 3. Math mode ($...$) ke andar spaces aur tokens ko normalize karna
-    // Example: "$ Fe _3 O _4 $" ya "$ C _{60} $" -> "$Fe_3O_4$" / "$C_{60}$"
-    cleaned = cleaned.replaceAllMapped(
-      RegExp(r'\$([^\$]+?)\$'),
-      (match) {
-        String inner = match.group(1)!.trim();
-        // Underscore aur caret ke aas-paas ke spaces hatana
-        inner = inner.replaceAll(RegExp(r'\s*_\s*'), '_');
-        inner = inner.replaceAll(RegExp(r'\s*\^\s*'), '^');
-        // Alphanumeric tokens ke beech accidental spaces hatana (jaise Fe _3 O _4)
-        inner = inner.replaceAllMapped(
-          RegExp(r'([A-Za-z0-9])\s+([A-Za-z0-9])'),
-          (m) => '${m[1]}${m[2]}',
-        );
-        return '\$$inner\$';
-      },
-    );
-
-    // 4. Bracketed formulas jinme math symbols hain par '$' missing hai:
-    // Example: ( K _2 O ), ( ^{133}_{55} Cs ), ya (1.675 × 10^{-27} kg)
-    cleaned = cleaned.replaceAllMapped(
-      RegExp(r'\(\s*([^\(\)]*?[\^_\\].*?)\s*\)'),
-      (match) {
-        String inner = match.group(1)!.trim();
-        if (inner.startsWith('\$') && inner.endsWith('\$')) {
-          return '($inner)';
-        }
-        // Agar arrow hai to display math $$ me wrap karein, warna inline $ me
-        if (inner.contains(r'\rightarrow') || inner.contains('→')) {
-          return '\$\$$inner\$\$';
-        }
-        inner = inner.replaceAll(RegExp(r'\s*_\s*'), '_');
-        inner = inner.replaceAll(RegExp(r'\s*\^\s*'), '^');
-        return '\$$inner\$';
-      },
-    );
-
-    // 5. Single group bondings jaise "(- H )" ya "(= O )"
-    cleaned = cleaned.replaceAllMapped(
-      RegExp(r'\(\s*([=\-]\s*[A-Za-z]+)\s*\)'),
-      (m) => '(${m.group(1)!.replaceAll(' ', '')})',
-    );
-
-    // 6. KaTeX Delimiter boundary check: opening/closing $ ke andar ka extra space hatana
-    cleaned = cleaned.replaceAllMapped(
-      RegExp(r'\$\s+([^\$]+?)\s+\$'),
-      (match) => '\$${match.group(1)?.trim()}\$',
-    );
-
-    return cleaned.trim();
-  }
-
   @override
   Widget build(BuildContext context) {
     if (rawExplanation.trim().isEmpty) return const SizedBox.shrink();
 
-    final String cleaned = _sanitizeLatex(rawExplanation);
+    // Line breaks normalize karein
+    final String cleaned = rawExplanation
+        .replaceAll(r'\r\n', '\n')
+        .replaceAll(r'\n', '\n')
+        .trim();
 
     // Line blocks ko identify karein bina math environments ($$) ko tode
     final rawLines = cleaned
