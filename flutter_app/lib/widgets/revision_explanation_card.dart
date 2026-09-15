@@ -21,108 +21,57 @@ class RevisionExplanationCard extends StatelessWidget {
     required this.currentIndex,
   });
 
+  String _sanitizeLatex(String text) {
+    if (text.trim().isEmpty) return '';
+
+    // 1. Literal escape characters ko normalize karein
+    String cleaned = text
+        .replaceAll(r'\r\n', '\n')
+        .replaceAll(r'\n', '\n');
+
+    // 2. JSON escaped double-backslash ko KaTeX compatible single-backslash banayein
+    cleaned = cleaned
+        .replaceAll(r'\\rightarrow', r'\rightarrow')
+        .replaceAll(r'\\implies', r'\implies')
+        .replaceAll(r'\\approx', r'\approx')
+        .replaceAll(r'\\times', r'\times')
+        .replaceAll(r'\\frac', r'\frac')
+        .replaceAll(r'\\text', r'\text')
+        .replaceAll(r'\\bar', r'\bar')
+        .replaceAll(r'\\nu', r'\nu')
+        .replaceAll(r'\\mu', r'\mu')
+        .replaceAll(r'\\lambda', r'\lambda')
+        .replaceAll(r'\\theta', r'\theta')
+        .replaceAll(r'\\rho', r'\rho')
+        .replaceAll(r'\\beta', r'\beta')
+        .replaceAll(r'\\sigma', r'\sigma')
+        .replaceAll(r'\\pi', r'\pi')
+        .replaceAll(r'\\Delta', r'\Delta')
+        .replaceAll(r'\\circ', r'\circ')
+        .replaceAll(r'\\xrightarrow', r'\xrightarrow');
+
+    // 3. KaTeX delimiter spacing errors ko clean karein ($ x $ -> $x$)
+    cleaned = cleaned.replaceAllMapped(
+      RegExp(r'\$\s+([^\$]+?)\s+\$'),
+      (match) => '\$${match.group(1)}\$',
+    );
+
+    // 4. Bracketed isotopes agar raw string me bache hon: "( ^{12} C )" -> "$^{12}\text{C}$"
+    cleaned = cleaned.replaceAllMapped(
+      RegExp(r'\(\s*\^\{?(\d+)\}?\s*([A-Za-z]+)\s*\)'),
+      (match) => '\$^{${match.group(1)}}\\text{${match.group(2)}}\$',
+    );
+
+    return cleaned.trim();
+  }
+
   @override
   Widget build(BuildContext context) {
     if (rawExplanation.trim().isEmpty) return const SizedBox.shrink();
 
-    String cleaned = rawExplanation
-        .replaceAll(r'\n', '\n')
-        .replaceAll(r'\\mu', 'μ')
-        .replaceAll(r'\\lambda', 'λ')
-        .replaceAll(r'\\nu', 'ν')
-        .replaceAll(r'\\theta', 'θ')
-        .replaceAll(r'\\rho', 'ρ')
-        .replaceAll(r'\\approx', '≈')
-        .replaceAll(r'\\rightarrow', '→')
-        .replaceAll(r'\\implies', ' ⟹ ')
-        .replaceAll(r'\implies', ' ⟹ ')
-        .replaceAll(r'==>', ' ⟹ ')
-        .replaceAll(r'\\times', '×')
-        .replaceAll(r'\times', '×')
-        .replaceAll(r'\\%', '%')
-        .replaceAll(r'\%', '%');
+    final String cleaned = _sanitizeLatex(rawExplanation);
 
-    // 🎯 1. \text{...} aur \\text{...} ko clean karke andar ka normal text bahar nikalo
-    cleaned = cleaned.replaceAllMapped(
-      RegExp(r'\\+text\{([^}]+)\}'),
-      (match) => ' ${match.group(1)?.trim()} ',
-    );
-
-    // 🎯 2. Double backslash aur single backslash dono types ke \frac ko normalize karein
-    cleaned = cleaned.replaceAll(r'\\frac', r'\frac');
-
-    // 🎯 3. Fractions ko readable (numerator) / denominator format me convert karein
-    cleaned = cleaned.replaceAllMapped(
-      RegExp(r'\\frac\{([^{}]+)\}\{([^{}]+)\}'),
-      (match) {
-        String num = match.group(1)!.trim();
-        String den = match.group(2)!.trim();
-
-        if (num.contains('×') || num.contains('+') || num.contains('-') || num.contains('*')) {
-          return '($num) / $den';
-        } else {
-          return '$num / $den';
-        }
-      },
-    );
-
-    // Nested fraction check
-    cleaned = cleaned.replaceAllMapped(
-      RegExp(r'\\frac\{([^{}]+)\}\{([^{}]+)\}'),
-      (match) => '(${match.group(1)!.trim()}) / ${match.group(2)!.trim()}',
-    );
-
-    // 🧪 4. Chemistry Subscripts
-    final Map<String, String> chemSubscripts = {
-      r'($CO_2$)': 'CO₂', r'$CO_2$': 'CO₂', r'CO_2': 'CO₂',
-      r'($H_2O$)': 'H₂O', r'$H_2O$': 'H₂O', r'H_2O': 'H₂O',
-      r'($CH_4$)': 'CH₄', r'$CH_4$': 'CH₄', r'CH_4': 'CH₄',
-      r'($O_2$)': 'O₂', r'$O_2$': 'O₂', r'O_2': 'O₂',
-      r'($O_3$)': 'O₃', r'$O_3$': 'O₃', r'O_3': 'O₃',
-      r'($N_2$)': 'N₂', r'$N_2$': 'N₂', r'N_2': 'N₂',
-      r'($H_2$)': 'H₂', r'$H_2$': 'H₂', r'H_2': 'H₂',
-      r'($Cl_2$)': 'Cl₂', r'$Cl_2$': 'Cl₂', r'Cl_2': 'Cl₂',
-      r'($NO_2$)': 'NO₂', r'$NO_2$': 'NO₂', r'NO_2': 'NO₂',
-      r'($SO_2$)': 'SO₂', r'$SO_2$': 'SO₂', r'SO_2': 'SO₂',
-      r'($H_2SO_4$)': 'H₂SO₄', r'$H_2SO_4$': 'H₂SO₄', r'H_2SO_4': 'H₂SO₄',
-      r'($HNO_3$)': 'HNO₃', r'$HNO_3$': 'HNO₃', r'HNO_3': 'HNO₃',
-      r'($CaCO_3$)': 'CaCO₃', r'$CaCO_3$': 'CaCO₃', r'CaCO_3': 'CaCO₃',
-      r'($NH_3$)': 'NH₃', r'$NH_3$': 'NH₃', r'NH_3': 'NH₃',
-      r'($C_6H_{12}O_6$)': 'C₆H₁₂O₆', r'$C_6H_{12}O_6$': 'C₆H₁₂O₆', r'C_6H_{12}O_6': 'C₆H₁₂O₆',
-      r'($Fe_2O_3$)': 'Fe₂O₃', r'$Fe_2O_3$': 'Fe₂O₃', r'Fe_2O_3': 'Fe₂O₃',
-      r'($Al_2O_3$)': 'Al₂O₃', r'$Al_2O_3$': 'Al₂O₃', r'Al_2O_3': 'Al₂O₃',
-      r'($KMnO_4$)': 'KMnO₄', r'$KMnO_4$': 'KMnO₄', r'KMnO_4': 'KMnO₄',
-      r'($Na_2CO_3$)': 'Na₂CO₃', r'$Na_2CO_3$': 'Na₂CO₃',
-      r'($NaHCO_3$)': 'NaHCO₃', r'$NaHCO_3$': 'NaHCO₃',
-      r'($Si$)': 'Si', r'$Si$': 'Si',
-      r'($Ge$)': 'Ge', r'$Ge$': 'Ge',
-      r'($Ga$)': 'Ga', r'$Ga$': 'Ga',
-      r'($GaAs$)': 'GaAs', r'$GaAs$': 'GaAs',
-    };
-    chemSubscripts.forEach((key, val) => cleaned = cleaned.replaceAll(key, val));
-
-    // Exponents & Units Clean
-    cleaned = cleaned
-        .replaceAll(r'^\circ\text{C}', '°C')
-        .replaceAll(r'^\circ C', '°C')
-        .replaceAll(r'^\circ\text{F}', '°F')
-        .replaceAll(r'^\circ F', '°F')
-        .replaceAll(r'^\circ', '°')
-        .replaceAll(r'\circ', '°')
-        .replaceAll(r'$10^{-3}$', '10⁻³')
-        .replaceAll(r'$10^{-6}$', '10⁻⁶')
-        .replaceAll(r'$10^3$', '10³')
-        .replaceAll(r'$10^5$', '10⁵')
-        .replaceAll(r'$10^8$', '10⁸')
-        .replaceAll(r'm/s^2', 'm/s²')
-        .replaceAll(r'm/s^1', 'm/s')
-        .replaceAll(r'cm^3', 'cm³')
-        .replaceAll(r'm^3', 'm³')
-        .replaceAll(r'cm^2', 'cm²')
-        .replaceAll(r'm^2', 'm²')
-        .replaceAll(r'$$', '')
-        .trim();
-
+    // Line blocks ko identify karein bina math environments ko tode
     final rawLines = cleaned
         .split('\n')
         .map((p) => p.trim())
@@ -131,18 +80,25 @@ class RevisionExplanationCard extends StatelessWidget {
 
     final List<String> distinctBlocks = [];
     String currentBlock = '';
+    bool insideBlockMath = false;
 
     for (final line in rawLines) {
-      final isNewBlockHeader =
-          line.startsWith('•') ||
-          line.startsWith('-') ||
-          line.toLowerCase().startsWith('option') ||
-          line.toLowerCase().startsWith('statement') ||
-          line.startsWith('📌') ||
-          line.toLowerCase().startsWith('key takeaway') ||
-          line.toLowerCase().startsWith('conclusion') ||
-          line.toLowerCase().startsWith('method') ||
-          RegExp(r'^[0-9]{1,2}[\.\)]\s').hasMatch(line);
+      // Check if block math ($$) is active
+      final countOfDoubleDollar = RegExp(r'\$\$').allMatches(line).length;
+      if (countOfDoubleDollar % 2 != 0) {
+        insideBlockMath = !insideBlockMath;
+      }
+
+      final isNewBlockHeader = !insideBlockMath &&
+          (line.startsWith('•') ||
+              line.startsWith('-') ||
+              line.toLowerCase().startsWith('option') ||
+              line.toLowerCase().startsWith('statement') ||
+              line.startsWith('📌') ||
+              line.toLowerCase().startsWith('key takeaway') ||
+              line.toLowerCase().startsWith('conclusion') ||
+              line.toLowerCase().startsWith('method') ||
+              RegExp(r'^[0-9]{1,2}[\.\)]\s').hasMatch(line));
 
       if (isNewBlockHeader && currentBlock.isNotEmpty) {
         distinctBlocks.add(currentBlock.trim());
@@ -370,7 +326,6 @@ class RevisionExplanationCard extends StatelessWidget {
                 const SizedBox(height: 6),
                 Divider(height: 24, color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
 
-                // Trick Submission Component
                 RevisionTrickSubmitBox(
                   testTitle: testTitle,
                   qIndex: currentIndex,
