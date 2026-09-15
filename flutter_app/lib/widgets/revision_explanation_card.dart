@@ -28,37 +28,46 @@ class RevisionExplanationCard extends StatelessWidget {
     String cleaned = rawExplanation
         .replaceAll(r'\n', '\n')
         .replaceAll(r'\\text', r'\text')
-        .replaceAll(r'\\frac', r'\frac')
-        .replaceAll(r'\\mu', r'\mu')
-        .replaceAll(r'\\lambda', r'\lambda')
-        .replaceAll(r'\\nu', r'\nu')
-        .replaceAll(r'\\theta', r'\theta')
-        .replaceAll(r'\\rho', r'\rho')
-        .replaceAll(r'\\approx', r'\approx')
-        .replaceAll(r'\\rightarrow', r'\rightarrow')
-        .replaceAll(r'\\implies', r'\implies')
-        .replaceAll(r'\\times', r'\times')
+        .replaceAll(r'\\mu', 'μ')
+        .replaceAll(r'\\lambda', 'λ')
+        .replaceAll(r'\\nu', 'ν')
+        .replaceAll(r'\\theta', 'θ')
+        .replaceAll(r'\\rho', 'ρ')
+        .replaceAll(r'\\approx', '≈')
+        .replaceAll(r'\\rightarrow', '→')
+        .replaceAll(r'\\implies', ' ⟹ ')
+        .replaceAll(r'\implies', ' ⟹ ')
+        .replaceAll(r'==>', ' ⟹ ')
+        .replaceAll(r'\\times', '×')
+        .replaceAll(r'\times', '×')
         .replaceAll(r'\\%', '%')
         .replaceAll(r'\%', '%');
 
-    // 🎯 1. Display Math ($$) ko inline ($) me normalize karein (Delete NA karein)
-    cleaned = cleaned.replaceAll(r'$$', r'$');
+    // 🎯 1. Double backslash aur single backslash dono types ke \frac ko normalize karein
+    cleaned = cleaned.replaceAll(r'\\frac', r'\frac');
 
-    // 🎯 2. Jahan \frac ke aage-peeche $ nahi hai, wahan auto $...$ lagayein
+    // 🎯 2. Robust Fraction Cleaner (Fractions ko readable bracket/slash format me convert karega)
     cleaned = cleaned.replaceAllMapped(
-      RegExp(r'(?<!\$)\\frac\{([^{}]+)\}\{([^{}]+)\}(?!\$)'),
-      (m) => '\$\\frac{${m.group(1)}}{${m.group(2)}}\$',
+      RegExp(r'\\frac\{([^{}]+)\}\{([^{}]+)\}'),
+      (match) {
+        String num = match.group(1)!.trim();
+        String den = match.group(2)!.trim();
+
+        if (num.contains('×') || num.contains('+') || num.contains('-') || num.contains('*')) {
+          return '($num) / $den';
+        } else {
+          return '$num / $den';
+        }
+      },
     );
 
-    // 🎯 3. Text symbols ko clean unicode me badlein
-    cleaned = cleaned
-        .replaceAll(r'\implies', ' ⟹ ')
-        .replaceAll(r'==>', ' ⟹ ')
-        .replaceAll(r'\approx', ' ≈ ')
-        .replaceAll(r'\times', ' × ')
-        .replaceAll(r'\rightarrow', ' → ');
+    // Agar nested fraction reh gaya ho toh second pass clean
+    cleaned = cleaned.replaceAllMapped(
+      RegExp(r'\\frac\{([^{}]+)\}\{([^{}]+)\}'),
+      (match) => '(${match.group(1)!.trim()}) / ${match.group(2)!.trim()}',
+    );
 
-    // 🧪 4. Chemistry Subscripts
+    // 🧪 3. Chemistry Subscripts
     final Map<String, String> chemSubscripts = {
       r'($CO_2$)': 'CO₂', r'$CO_2$': 'CO₂', r'CO_2': 'CO₂',
       r'($H_2O$)': 'H₂O', r'$H_2O$': 'H₂O', r'H_2O': 'H₂O',
@@ -67,10 +76,27 @@ class RevisionExplanationCard extends StatelessWidget {
       r'($O_3$)': 'O₃', r'$O_3$': 'O₃', r'O_3': 'O₃',
       r'($N_2$)': 'N₂', r'$N_2$': 'N₂', r'N_2': 'N₂',
       r'($H_2$)': 'H₂', r'$H_2$': 'H₂', r'H_2': 'H₂',
+      r'($Cl_2$)': 'Cl₂', r'$Cl_2$': 'Cl₂', r'Cl_2': 'Cl₂',
+      r'($NO_2$)': 'NO₂', r'$NO_2$': 'NO₂', r'NO_2': 'NO₂',
+      r'($SO_2$)': 'SO₂', r'$SO_2$': 'SO₂', r'SO_2': 'SO₂',
+      r'($H_2SO_4$)': 'H₂SO₄', r'$H_2SO_4$': 'H₂SO₄', r'H_2SO_4': 'H₂SO₄',
+      r'($HNO_3$)': 'HNO₃', r'$HNO_3$': 'HNO₃', r'HNO_3': 'HNO₃',
+      r'($CaCO_3$)': 'CaCO₃', r'$CaCO_3$': 'CaCO₃', r'CaCO_3': 'CaCO₃',
+      r'($NH_3$)': 'NH₃', r'$NH_3$': 'NH₃', r'NH_3': 'NH₃',
+      r'($C_6H_{12}O_6$)': 'C₆H₁₂O₆', r'$C_6H_{12}O_6$': 'C₆H₁₂O₆', r'C_6H_{12}O_6': 'C₆H₁₂O₆',
+      r'($Fe_2O_3$)': 'Fe₂O₃', r'$Fe_2O_3$': 'Fe₂O₃', r'Fe_2O_3': 'Fe₂O₃',
+      r'($Al_2O_3$)': 'Al₂O₃', r'$Al_2O_3$': 'Al₂O₃', r'Al_2O_3': 'Al₂O₃',
+      r'($KMnO_4$)': 'KMnO₄', r'$KMnO_4$': 'KMnO₄', r'KMnO_4': 'KMnO₄',
+      r'($Na_2CO_3$)': 'Na₂CO₃', r'$Na_2CO_3$': 'Na₂CO₃',
+      r'($NaHCO_3$)': 'NaHCO₃', r'$NaHCO_3$': 'NaHCO₃',
+      r'($Si$)': 'Si', r'$Si$': 'Si',
+      r'($Ge$)': 'Ge', r'$Ge$': 'Ge',
+      r'($Ga$)': 'Ga', r'$Ga$': 'Ga',
+      r'($GaAs$)': 'GaAs', r'$GaAs$': 'GaAs',
     };
     chemSubscripts.forEach((key, val) => cleaned = cleaned.replaceAll(key, val));
 
-    // Exponents & Units
+    // Exponents & Units Clean
     cleaned = cleaned
         .replaceAll(r'^\circ\text{C}', '°C')
         .replaceAll(r'^\circ C', '°C')
@@ -89,14 +115,21 @@ class RevisionExplanationCard extends StatelessWidget {
         .replaceAll(r'm^3', 'm³')
         .replaceAll(r'cm^2', 'cm²')
         .replaceAll(r'm^2', 'm²')
+        .replaceAll(r'$$', '')
         .trim();
 
-    final rawLines = cleaned.split('\n').map((p) => p.trim()).where((p) => p.isNotEmpty).toList();
+    final rawLines = cleaned
+        .split('\n')
+        .map((p) => p.trim())
+        .where((p) => p.isNotEmpty)
+        .toList();
+
     final List<String> distinctBlocks = [];
     String currentBlock = '';
 
     for (final line in rawLines) {
-      final isNewBlockHeader = line.startsWith('•') ||
+      final isNewBlockHeader =
+          line.startsWith('•') ||
           line.startsWith('-') ||
           line.toLowerCase().startsWith('option') ||
           line.toLowerCase().startsWith('statement') ||
@@ -135,7 +168,9 @@ class RevisionExplanationCard extends StatelessWidget {
               firstLine.contains('galat hai') ||
               firstLine.contains('is false') ||
               firstLine.startsWith('trap')) &&
-          (firstLine.startsWith('option') || firstLine.startsWith('(') || firstLine.startsWith('trap'));
+          (firstLine.startsWith('option') ||
+              firstLine.startsWith('(') ||
+              firstLine.startsWith('trap'));
 
       final isTakeaway = firstLine.startsWith('key takeaway') ||
           firstLine.startsWith('summary') ||
@@ -174,6 +209,7 @@ class RevisionExplanationCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // Solution Card Header
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 13),
             decoration: BoxDecoration(
@@ -207,6 +243,8 @@ class RevisionExplanationCard extends StatelessWidget {
               ],
             ),
           ),
+
+          // Solution Body
           Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
@@ -241,6 +279,7 @@ class RevisionExplanationCard extends StatelessWidget {
                       }).toList(),
                     ),
                   ),
+
                 ...takeawayBlocks.map(
                   (point) => Padding(
                     padding: const EdgeInsets.only(top: 10),
@@ -255,6 +294,8 @@ class RevisionExplanationCard extends StatelessWidget {
                     ),
                   ),
                 ),
+
+                // Option Traps Expansion Box
                 if (trapOptionBlocks.isNotEmpty) ...[
                   const SizedBox(height: 10),
                   Theme(
@@ -316,8 +357,11 @@ class RevisionExplanationCard extends StatelessWidget {
                     ),
                   ),
                 ],
+
                 const SizedBox(height: 6),
                 Divider(height: 24, color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+
+                // Trick Submission Component
                 RevisionTrickSubmitBox(
                   testTitle: testTitle,
                   qIndex: currentIndex,
