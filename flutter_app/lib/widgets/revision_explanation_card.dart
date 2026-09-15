@@ -41,6 +41,24 @@ class RevisionExplanationCard extends StatelessWidget {
         .replaceAll(r'\\%', '%')
         .replaceAll(r'\%', '%');
 
+    // 🎯 1. Display Math ($$) ko inline ($) me normalize karein (Delete NA karein)
+    cleaned = cleaned.replaceAll(r'$$', r'$');
+
+    // 🎯 2. Jahan \frac ke aage-peeche $ nahi hai, wahan auto $...$ lagayein
+    cleaned = cleaned.replaceAllMapped(
+      RegExp(r'(?<!\$)\\frac\{([^{}]+)\}\{([^{}]+)\}(?!\$)'),
+      (m) => '\$\\frac{${m.group(1)}}{${m.group(2)}}\$',
+    );
+
+    // 🎯 3. Text symbols ko clean unicode me badlein
+    cleaned = cleaned
+        .replaceAll(r'\implies', ' ⟹ ')
+        .replaceAll(r'==>', ' ⟹ ')
+        .replaceAll(r'\approx', ' ≈ ')
+        .replaceAll(r'\times', ' × ')
+        .replaceAll(r'\rightarrow', ' → ');
+
+    // 🧪 4. Chemistry Subscripts
     final Map<String, String> chemSubscripts = {
       r'($CO_2$)': 'CO₂', r'$CO_2$': 'CO₂', r'CO_2': 'CO₂',
       r'($H_2O$)': 'H₂O', r'$H_2O$': 'H₂O', r'H_2O': 'H₂O',
@@ -49,67 +67,17 @@ class RevisionExplanationCard extends StatelessWidget {
       r'($O_3$)': 'O₃', r'$O_3$': 'O₃', r'O_3': 'O₃',
       r'($N_2$)': 'N₂', r'$N_2$': 'N₂', r'N_2': 'N₂',
       r'($H_2$)': 'H₂', r'$H_2$': 'H₂', r'H_2': 'H₂',
-      r'($Cl_2$)': 'Cl₂', r'$Cl_2$': 'Cl₂', r'Cl_2': 'Cl₂',
-      r'($NO_2$)': 'NO₂', r'$NO_2$': 'NO₂', r'NO_2': 'NO₂',
-      r'($SO_2$)': 'SO₂', r'$SO_2$': 'SO₂', r'SO_2': 'SO₂',
-      r'($H_2SO_4$)': 'H₂SO₄', r'$H_2SO_4$': 'H₂SO₄', r'H_2SO_4': 'H₂SO₄',
-      r'($HNO_3$)': 'HNO₃', r'$HNO_3$': 'HNO₃', r'HNO_3': 'HNO₃',
-      r'($CaCO_3$)': 'CaCO₃', r'$CaCO_3$': 'CaCO₃', r'CaCO_3': 'CaCO₃',
-      r'($NH_3$)': 'NH₃', r'$NH_3$': 'NH₃', r'NH_3': 'NH₃',
-      r'($C_6H_{12}O_6$)': 'C₆H₁₂O₆', r'$C_6H_{12}O_6$': 'C₆H₁₂O₆', r'C_6H_{12}O_6': 'C₆H₁₂O₆',
-      r'($Fe_2O_3$)': 'Fe₂O₃', r'$Fe_2O_3$': 'Fe₂O₃', r'Fe_2O_3': 'Fe₂O₃',
-      r'($Al_2O_3$)': 'Al₂O₃', r'$Al_2O_3$': 'Al₂O₃', r'Al_2O_3': 'Al₂O₃',
-      r'($KMnO_4$)': 'KMnO₄', r'$KMnO_4$': 'KMnO₄', r'KMnO_4': 'KMnO₄',
-      r'($Na_2CO_3$)': 'Na₂CO₃', r'$Na_2CO_3$': 'Na₂CO₃',
-      r'($NaHCO_3$)': 'NaHCO₃', r'$NaHCO_3$': 'NaHCO₃',
-      r'($Si$)': 'Si', r'$Si$': 'Si',
-      r'($Ge$)': 'Ge', r'$Ge$': 'Ge',
-      r'($Ga$)': 'Ga', r'$Ga$': 'Ga',
-      r'($GaAs$)': 'GaAs', r'$GaAs$': 'GaAs',
     };
     chemSubscripts.forEach((key, val) => cleaned = cleaned.replaceAll(key, val));
 
-    final Map<String, String> physReplacements = {
-      r'($\lambda$)': 'λ', r'$\lambda$': 'λ', r'\lambda': 'λ',
-      r'($\mu$)': 'μ', r'$\mu$': 'μ', r'\mu': 'μ',
-      r'($\nu$)': 'ν', r'$\nu$': 'ν', r'\nu': 'ν',
-      r'($\theta$)': 'θ', r'$\theta$': 'θ', r'\theta': 'θ',
-      r'($\alpha$)': 'α', r'$\alpha$': 'α', r'\alpha': 'α',
-      r'($\beta$)': 'β', r'$\beta$': 'β', r'\beta': 'β',
-      r'($\gamma$)': 'γ', r'$\gamma$': 'γ', r'\gamma': 'γ',
-      r'($\rho$)': 'ρ', r'$\rho$': 'ρ', r'\rho': 'ρ',
-      r'($\omega$)': 'ω', r'$\omega$': 'ω', r'\omega': 'ω',
-      r'($\Omega$)': 'Ω', r'$\Omega$': 'Ω', r'\Omega': 'Ω',
-      r'($\Delta$)': 'Δ', r'$\Delta$': 'Δ', r'\Delta': 'Δ',
-      r'($\pi$)': 'π', r'$\pi$': 'π', r'\pi': 'π',
-      r'($\phi$)': 'φ', r'$\phi$': 'φ', r'\phi': 'φ',
-      r'\approx': '≈', r'$\approx$': '≈',
-      r'\neq': '≠', r'$\neq$': '≠',
-      r'\leq': '≤', r'$\leq$': '≤',
-      r'\geq': '≥', r'$\geq$': '≥',
-      r'\pm': '±', r'$\pm$': '±',
-      r'\times': '×', r'$\times$': '×',
-      r'\rightarrow': '→', r'$\rightarrow$': '→',
-      r'\leftarrow': '←', r'$\leftarrow$': '←',
-      r'\infty': '∞', r'$\infty$': '∞',
-      r'\propto': '∝', r'$\propto$': '∝',
-    };
-    physReplacements.forEach((key, val) => cleaned = cleaned.replaceAll(key, val));
-
+    // Exponents & Units
     cleaned = cleaned
         .replaceAll(r'^\circ\text{C}', '°C')
-        .replaceAll(r'^\circ\text{ C}', '°C')
         .replaceAll(r'^\circ C', '°C')
         .replaceAll(r'^\circ\text{F}', '°F')
-        .replaceAll(r'^\circ\text{ F}', '°F')
         .replaceAll(r'^\circ F', '°F')
         .replaceAll(r'^\circ', '°')
         .replaceAll(r'\circ', '°')
-        .replaceAllMapped(
-          RegExp(r'\$\s*([0-9.]+)\s*\\text\{\s*to\s*\}\s*([0-9.]+)\s*\\text\{\s*([A-Za-z]+)\s*\}\s*\$'),
-          (m) => '${m.group(1)} ${m.group(3)} to ${m.group(2)} ${m.group(3)}',
-        )
-        .replaceAllMapped(RegExp(r'\\text\{\s*([^}]+)\s*\}'), (m) => m.group(1) ?? '')
         .replaceAll(r'$10^{-3}$', '10⁻³')
         .replaceAll(r'$10^{-6}$', '10⁻⁶')
         .replaceAll(r'$10^3$', '10³')
@@ -121,7 +89,6 @@ class RevisionExplanationCard extends StatelessWidget {
         .replaceAll(r'm^3', 'm³')
         .replaceAll(r'cm^2', 'cm²')
         .replaceAll(r'm^2', 'm²')
-        .replaceAll(r'$$', '')
         .trim();
 
     final rawLines = cleaned.split('\n').map((p) => p.trim()).where((p) => p.isNotEmpty).toList();
@@ -260,14 +227,14 @@ class RevisionExplanationCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: primaryCorrectBlocks.map((block) {
                         return Padding(
-                          padding: const EdgeInsets.only(bottom: 8),
+                          padding: const EdgeInsets.only(bottom: 10),
                           child: MathFormattedText(
                             text: block,
                             textStyle: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w600,
                               color: isDark ? const Color(0xFFF1F5F9) : const Color(0xFF0F172A),
-                              height: 1.55,
+                              height: 1.6,
                             ),
                           ),
                         );
@@ -350,10 +317,7 @@ class RevisionExplanationCard extends StatelessWidget {
                   ),
                 ],
                 const SizedBox(height: 6),
-                Divider(
-                  height: 24,
-                  color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-                ),
+                Divider(height: 24, color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
                 RevisionTrickSubmitBox(
                   testTitle: testTitle,
                   qIndex: currentIndex,
