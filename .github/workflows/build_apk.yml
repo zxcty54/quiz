@@ -124,10 +124,13 @@ jobs:
             printf "\n\nsubprojects {\n    afterEvaluate { project ->\n        if (project.hasProperty('android')) {\n            project.android {\n                compileSdkVersion 36\n            }\n        }\n    }\n}\n" >> "$ROOT_BUILD"
           fi
 
-      - name: Setup Build Configuration, Desugaring & MinSDK 26
+      - name: Setup Build Configuration, Desugaring & Permanent Signing
         working-directory: flutter_app
         run: |
           flutter pub get
+
+          # 🔑 1. Decode Permanent Keystore into android/app
+          echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 -d > android/app/mocktester_key.jks
 
           APP_KTS="android/app/build.gradle.kts"
           APP_GROOVY="android/app/build.gradle"
@@ -147,6 +150,21 @@ jobs:
                     applicationId = "com.mocktester.app"
                     minSdk = 26
                     targetSdk = 34
+                }
+                signingConfigs {
+                    create("release") {
+                        storeFile = file("mocktester_key.jks")
+                        storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "mocktester123"
+                        keyAlias = System.getenv("KEY_ALIAS") ?: "mocktester"
+                        keyPassword = System.getenv("KEY_PASSWORD") ?: "mocktester123"
+                    }
+                }
+                buildTypes {
+                    getByName("release") {
+                        signingConfig = signingConfigs.getByName("release")
+                        isMinifyEnabled = false
+                        isShrinkResources = false
+                    }
                 }
                 compileOptions {
                     isCoreLibraryDesugaringEnabled = true
@@ -173,6 +191,21 @@ jobs:
                     minSdkVersion 26
                     targetSdkVersion 34
                 }
+                signingConfigs {
+                    release {
+                        storeFile file("mocktester_key.jks")
+                        storePassword System.getenv("KEYSTORE_PASSWORD") ?: "mocktester123"
+                        keyAlias System.getenv("KEY_ALIAS") ?: "mocktester"
+                        keyPassword System.getenv("KEY_PASSWORD") ?: "mocktester123"
+                    }
+                }
+                buildTypes {
+                    release {
+                        signingConfig signingConfigs.release
+                        minifyEnabled false
+                        shrinkResources false
+                    }
+                }
                 compileOptions {
                     coreLibraryDesugaringEnabled true
                 }
@@ -186,8 +219,13 @@ jobs:
 
       - name: Build Pure Offline Release APK via Flutter
         working-directory: flutter_app
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          flutter build apk --release --target-platform=android-arm64 --no-tree-shake-icons
+          # 🚀 Auto-increment version code based on GitHub Run Number to allow direct overwrite/update
+          flutter build apk --release --target-platform=android-arm64 --no-tree-shake-icons --build-number=${{ github.run_number }}
 
       - name: Locate & Package APK
         working-directory: flutter_app
