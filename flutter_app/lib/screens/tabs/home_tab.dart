@@ -6,10 +6,9 @@ import '../../widgets/first_in_india_widget.dart';
 import '../../widgets/trust_hero_banner.dart';
 import '../../widgets/launch_roadmap_card.dart';
 import '../../widgets/pro_pdf_vault_card.dart';
-import '../../widgets/aspirant_checklist_card.dart';
 import '../../widgets/coaching_hub_card.dart';
 import '../../widgets/coaching_onboarding_cta_widget.dart';
-import '../../widgets/hall_of_fame_carousel_widget.dart'; // 👈 1. Added Hall Of Fame Widget Import
+import '../../widgets/hall_of_fame_carousel_widget.dart';
 import '../sprint_challenge_screen.dart';
 
 class HomeTab extends StatefulWidget {
@@ -47,9 +46,8 @@ class _HomeTabState extends State<HomeTab> {
   final GlobalKey<LatestJobsWidgetState> _jobsWidgetKey = GlobalKey<LatestJobsWidgetState>();
   final GlobalKey<DailyBulletinWidgetState> _bulletinWidgetKey = GlobalKey<DailyBulletinWidgetState>();
   final GlobalKey<FirstInIndiaWidgetState> _firstInIndiaWidgetKey = GlobalKey<FirstInIndiaWidgetState>();
-  final GlobalKey<AspirantChecklistCardState> _checklistKey = GlobalKey<AspirantChecklistCardState>();
   final GlobalKey<CoachingHubCardState> _coachingHubKey = GlobalKey<CoachingHubCardState>();
-  final GlobalKey<HallOfFameCarouselWidgetState> _hallOfFameKey = GlobalKey<HallOfFameCarouselWidgetState>(); // 👈 2. Added GlobalKey
+  final GlobalKey<HallOfFameCarouselWidgetState> _hallOfFameKey = GlobalKey<HallOfFameCarouselWidgetState>();
 
   @override
   Widget build(BuildContext context) {
@@ -61,9 +59,8 @@ class _HomeTabState extends State<HomeTab> {
           _bulletinWidgetKey.currentState?.fetchDailyBulletins(forceRefresh: true) ?? Future.value(),
           _jobsWidgetKey.currentState?.fetchLatestJobs() ?? Future.value(),
           _firstInIndiaWidgetKey.currentState?.fetchFirstInIndia(forceRefresh: true) ?? Future.value(),
-          _checklistKey.currentState?.loadChecklistStatus() ?? Future.value(),
           _coachingHubKey.currentState?.loadEnrolledBatchData() ?? Future.value(),
-          _hallOfFameKey.currentState?.fetchHallOfFame() ?? Future.value(), // 👈 3. Pull-To-Refresh Sync
+          _hallOfFameKey.currentState?.fetchHallOfFame() ?? Future.value(),
         ]);
       },
       child: SingleChildScrollView(
@@ -81,50 +78,43 @@ class _HomeTabState extends State<HomeTab> {
               const SizedBox(height: 16),
             ],
 
-            // 🚀 2. ASPIRANT ONBOARDING CHECKLIST CARD
-            AspirantChecklistCard(
-              key: _checklistKey,
-              isDarkMode: widget.isDarkMode,
-            ),
-            const SizedBox(height: 16),
-
-            // 🛡️ 3. HERO TRUST BANNER WIDGET
+            // 🛡️ 2. HERO TRUST BANNER WIDGET
             TrustHeroBannerWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 16),
 
-            // 🏫 4. BIHAR COACHING & BATCH HUB (HERO BANNER KE NICHE)
+            // 🏫 3. BIHAR COACHING & BATCH HUB (HERO BANNER KE NICHE)
             CoachingHubCard(
               key: _coachingHubKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
             
-            // 👨‍🏫 5. LEARN PREVIEW CARD
+            // 👨‍🏫 4. LEARN PREVIEW CARD
             _buildLearnPreviewCard(context),
             const SizedBox(height: 18),
 
-            // 📰 6. DAILY BULLETIN WIDGET
+            // 📰 5. DAILY BULLETIN WIDGET
             DailyBulletinWidget(
               key: _bulletinWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📢 7. LATEST JOBS WIDGET
+            // 📢 6. LATEST JOBS WIDGET
             LatestJobsWidget(
               key: _jobsWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 🏆 8. FIRST IN INDIA EXPRESS WIDGET
+            // 🏆 7. FIRST IN INDIA EXPRESS WIDGET
             FirstInIndiaWidget(
               key: _firstInIndiaWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📑 9. PRO STUDY MATERIAL & PDF VAULT CARD
+            // 📑 8. PRO STUDY MATERIAL & PDF VAULT CARD
             ProPdfVaultCard(
               isDarkMode: widget.isDarkMode,
               customWebsiteUrl: widget.appConfig['pdf_vault_main_url'],
@@ -132,36 +122,36 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // ⚔️ 10. SPEED RUN DUEL CARD
+            // ⚔️ 9. SPEED RUN DUEL CARD
             _buildSpeedRunChallengeCard(context),
             const SizedBox(height: 18),
 
-            // 🌐 11. DYNAMIC WEB HUB
+            // 🌐 10. DYNAMIC WEB HUB
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 18),
 
-            // 12. ELIGIBILITY CHECKER
+            // 11. ELIGIBILITY CHECKER
             EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
             const SizedBox(height: 18),
 
-            // 📅 13. LAUNCH ROADMAP WIDGET
+            // 📅 12. LAUNCH ROADMAP WIDGET
             LaunchRoadmapCardWidget(
               appConfig: widget.appConfig,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 🏫 14. SUBTLE COACHING & TEACHER ONBOARDING CTA
+            // 🏫 13. SUBTLE COACHING & TEACHER ONBOARDING CTA
             CoachingOnboardingCtaWidget(
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 15. TELEGRAM COMMUNITY
+            // 14. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
             const SizedBox(height: 20),
 
-            // 🏆 16. HALL OF FAME & CLAIM SELECTION (SBSE LAST MEIN)
+            // 🏆 15. HALL OF FAME & CLAIM SELECTION (SBSE LAST MEIN)
             HallOfFameCarouselWidget(
               key: _hallOfFameKey,
               isDarkMode: widget.isDarkMode,
