@@ -527,7 +527,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   }
 
   // ---------------------------------------------------------------------------
-  // FILTERS (Safer "Central Govt" Label)
+  // FILTERS
   // ---------------------------------------------------------------------------
 
   Widget _buildFilters() {
@@ -543,7 +543,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
           const SizedBox(width: 8),
           _filterChip(keyName: 'bihar', label: '🏛️ Bihar Govt', count: biharCount),
           const SizedBox(width: 8),
-          // 🎯 Fix 1: Safer "Central Govt" Label
           _filterChip(keyName: 'central', label: '🇮🇳 Central Govt', count: centralCount),
         ],
       ),
@@ -591,7 +590,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   }
 
   // ---------------------------------------------------------------------------
-  // JOB CARD (Prominent Deadline + View Details Action)
+  // JOB CARD (Direct Link Open + "View Notification" Only)
   // ---------------------------------------------------------------------------
 
   Widget _buildJobCard(
@@ -721,10 +720,9 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
 
           const SizedBox(height: 9),
 
-          // 🎯 Fix 2 & 3: Prominent Last Date + "View Details" CTA
+          // Prominent Last Date + Direct "View Notification" Link
           Row(
             children: [
-              // Prominent Deadline Container
               Expanded(
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 7),
@@ -765,11 +763,11 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                 ),
               ),
 
-              // 🎯 Fix 3: Home Card par "View Details" button jo Sheet kholta hai
+              // Home Card View Notification Button (Direct Link Open)
               if (isCompact) ...[
                 const SizedBox(width: 8),
                 InkWell(
-                  onTap: _showAllJobs,
+                  onTap: applyUrl.isEmpty ? null : () => _openLink(applyUrl),
                   borderRadius: BorderRadius.circular(8),
                   child: Container(
                     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
@@ -782,15 +780,15 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Text(
-                          'View Details',
+                          'View Notification',
                           style: TextStyle(
                             color: primaryBlue,
                             fontSize: 10.5,
                             fontWeight: FontWeight.w800,
                           ),
                         ),
-                        SizedBox(width: 3),
-                        Icon(Icons.arrow_forward_rounded, size: 12, color: primaryBlue),
+                        SizedBox(width: 4),
+                        Icon(Icons.open_in_new_rounded, size: 12, color: primaryBlue),
                       ],
                     ),
                   ),
@@ -799,7 +797,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
             ],
           ),
 
-          // Detailed View Inside Bottom Sheet
+          // Detailed Bottom Sheet View Button
           if (!isCompact) ...[
             const SizedBox(height: 10),
             SizedBox(
@@ -816,7 +814,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                 child: const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Apply on Official Website', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800)),
+                    Text('View Notification', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800)),
                     SizedBox(width: 5),
                     Icon(Icons.open_in_new_rounded, size: 14),
                   ],
