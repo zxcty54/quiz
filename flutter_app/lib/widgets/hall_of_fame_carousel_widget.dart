@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import 'selection_proof_system.dart';
 
 // -----------------------------------------------------------------------------
 // HELPER EXTENSION: Auto Title Case & Upper Case
@@ -71,8 +70,7 @@ class HallOfFameCarouselWidgetState
       if (!mounted) return;
 
       setState(() {
-        _hallOfFameList =
-            List<Map<String, dynamic>>.from(res);
+        _hallOfFameList = List<Map<String, dynamic>>.from(res);
         _isLoading = false;
       });
 
@@ -100,8 +98,7 @@ class HallOfFameCarouselWidgetState
     _autoScrollTimer = Timer.periodic(
       const Duration(seconds: 4),
       (_) {
-        if (!_pageController.hasClients ||
-            _hallOfFameList.isEmpty) {
+        if (!_pageController.hasClients || _hallOfFameList.isEmpty) {
           return;
         }
 
@@ -121,233 +118,22 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // OPEN CLAIM / SHARE SUCCESS STORY
-  // ===========================================================================
-
-  Future<void> _openClaimSelectionModal() async {
-    final client = Supabase.instance.client;
-    final user = client.auth.currentUser;
-
-    String targetCoachingId = '';
-    String targetCoachingName = 'Coaching Institute';
-
-    if (user != null) {
-      try {
-        final recentSub = await client
-            .from('batch_submissions')
-            .select(
-              'batch_tests(batches(coaching_id, coachings(id, name)))',
-            )
-            .eq('user_id', user.id)
-            .limit(1)
-            .maybeSingle();
-
-        if (recentSub != null &&
-            recentSub['batch_tests'] != null) {
-          final batchTests = recentSub['batch_tests'];
-
-          if (batchTests['batches'] != null) {
-            final coaching =
-                batchTests['batches']['coachings'];
-
-            if (coaching != null) {
-              targetCoachingId =
-                  coaching['id'].toString();
-
-              targetCoachingName =
-                  coaching['name']?.toString() ??
-                      'Coaching Institute';
-            }
-          }
-        }
-      } catch (e) {
-        debugPrint(
-          '[DEBUG] Coaching lookup error: $e',
-        );
-      }
-    }
-
-    // -------------------------------------------------------------------------
-    // FALLBACK COACHING
-    // -------------------------------------------------------------------------
-
-    if (targetCoachingId.isEmpty) {
-      try {
-        final coaching = await client
-            .from('coachings')
-            .select('id, name')
-            .limit(1)
-            .maybeSingle();
-
-        if (coaching != null) {
-          targetCoachingId =
-              coaching['id'].toString();
-
-          targetCoachingName =
-              coaching['name']?.toString() ??
-                  'Coaching Institute';
-        }
-      } catch (e) {
-        debugPrint(
-          '[DEBUG] Fallback coaching error: $e',
-        );
-      }
-    }
-
-    if (!mounted) return;
-
-    if (targetCoachingId.isEmpty) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text(
-            'Filhal koi coaching registered nahi mili.',
-          ),
-        ),
-      );
-      return;
-    }
-
-    StudentClaimSelectionSheet.show(
-      context,
-      coachingId: targetCoachingId,
-      coachingName: targetCoachingName,
-      isDarkMode: widget.isDarkMode,
-      onSuccess: fetchHallOfFame,
-    );
-  }
-
-  // ===========================================================================
-  // BUILD
+  // BUILD (Only Hall of Fame)
   // ===========================================================================
 
   @override
   Widget build(BuildContext context) {
+    if (_isLoading || _hallOfFameList.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _claimBanner(),
-
-        if (!_isLoading &&
-            _hallOfFameList.isNotEmpty) ...[
-          const SizedBox(height: 22),
-          _sectionHeader(),
-          const SizedBox(height: 12),
-          _hallOfFameCards(),
-        ],
+        _sectionHeader(),
+        const SizedBox(height: 12),
+        _hallOfFameCards(),
       ],
-    );
-  }
-
-  // ===========================================================================
-  // SHARE SUCCESS STORY BANNER
-  // ===========================================================================
-
-  Widget _claimBanner() {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: widget.isDarkMode
-              ? const [
-                  Color(0xFF211B4B),
-                  Color(0xFF121A31),
-                ]
-              : const [
-                  Color(0xFFF1F5FF),
-                  Color(0xFFE8EDFF),
-                ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(
-          color: const Color(0xFF6366F1)
-              .withOpacity(.25),
-        ),
-      ),
-      child: Row(
-        children: [
-          // ICON
-          Container(
-            width: 48,
-            height: 48,
-            decoration: BoxDecoration(
-              color: const Color(0xFF6366F1)
-                  .withOpacity(.12),
-              shape: BoxShape.circle,
-            ),
-            child: const Icon(
-              Icons.emoji_events_rounded,
-              color: Color(0xFF6366F1),
-              size: 25,
-            ),
-          ),
-
-          const SizedBox(width: 12),
-
-          // TEXT
-          Expanded(
-            child: Column(
-              crossAxisAlignment:
-                  CrossAxisAlignment.start,
-              children: [
-                Text(
-                  'Crack Kiya Koi Exam? 🎓',
-                  style: TextStyle(
-                    color: widget.isDarkMode
-                        ? Colors.white
-                        : const Color(0xFF0F172A),
-                    fontSize: 14,
-                    fontWeight: FontWeight.w800,
-                  ),
-                ),
-                const SizedBox(height: 3),
-                Text(
-                  'Apni success story share karein aur apni coaching ko credit dein.',
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                  style: TextStyle(
-                    color: widget.isDarkMode
-                        ? Colors.white70
-                        : const Color(0xFF64748B),
-                    fontSize: 11,
-                    height: 1.35,
-                  ),
-                ),
-              ],
-            ),
-          ),
-
-          const SizedBox(width: 8),
-
-          // SHARE BUTTON
-          ElevatedButton(
-            onPressed: _openClaimSelectionModal,
-            style: ElevatedButton.styleFrom(
-              backgroundColor:
-                  const Color(0xFF6366F1),
-              foregroundColor: Colors.white,
-              elevation: 0,
-              padding: const EdgeInsets.symmetric(
-                horizontal: 13,
-                vertical: 10,
-              ),
-              shape: RoundedRectangleBorder(
-                borderRadius:
-                    BorderRadius.circular(11),
-              ),
-            ),
-            child: const Text(
-              'Share',
-              style: TextStyle(
-                fontSize: 12,
-                fontWeight: FontWeight.w800,
-              ),
-            ),
-          ),
-        ],
-      ),
     );
   }
 
@@ -363,8 +149,7 @@ class HallOfFameCarouselWidgetState
           height: 34,
           decoration: BoxDecoration(
             color: const Color(0xFFFFF7E6),
-            borderRadius:
-                BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(10),
           ),
           child: const Icon(
             Icons.workspace_premium_rounded,
@@ -372,13 +157,10 @@ class HallOfFameCarouselWidgetState
             size: 20,
           ),
         ),
-
         const SizedBox(width: 9),
-
         Expanded(
           child: Column(
-            crossAxisAlignment:
-                CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
                 'Hall of Fame',
@@ -404,18 +186,14 @@ class HallOfFameCarouselWidgetState
             ],
           ),
         ),
-
-        // VERIFIED BADGE
         Container(
           padding: const EdgeInsets.symmetric(
             horizontal: 9,
             vertical: 5,
           ),
           decoration: BoxDecoration(
-            color: const Color(0xFF16A34A)
-                .withOpacity(.10),
-            borderRadius:
-                BorderRadius.circular(8),
+            color: const Color(0xFF16A34A).withOpacity(.10),
+            borderRadius: BorderRadius.circular(8),
           ),
           child: const Row(
             mainAxisSize: MainAxisSize.min,
@@ -471,7 +249,7 @@ class HallOfFameCarouselWidgetState
   }
 
   // ===========================================================================
-  // SINGLE SELECTION CARD (ENHANCED TYPOGRAPHY & OVERLAPPING AVATAR)
+  // SINGLE SELECTION CARD
   // ===========================================================================
 
   Widget _selectionCard(
@@ -486,20 +264,17 @@ class HallOfFameCarouselWidgetState
         rawName.isNotEmpty ? rawName.toTitleCase() : 'Candidate';
 
     final rawPost = item['post_cleared']?.toString().trim() ?? '';
-    final post =
-        rawPost.isNotEmpty ? rawPost.toTitleCase() : 'Selected';
+    final post = rawPost.isNotEmpty ? rawPost.toTitleCase() : 'Selected';
 
     final rawExam = item['target_exam']?.toString().trim() ?? '';
     final exam =
         rawExam.isNotEmpty ? rawExam.toUpperCase() : 'COMPETITIVE EXAM';
 
-    final quote =
-        item['testimonial_text']?.toString().trim() ?? '';
+    final quote = item['testimonial_text']?.toString().trim() ?? '';
 
-    final imageUrl =
-        item['profile_image_url'] ??
-            item['student_image_url'] ??
-            item['photo_url'];
+    final imageUrl = item['profile_image_url'] ??
+        item['student_image_url'] ??
+        item['photo_url'];
 
     const double avatarRadius = 42;
 
@@ -620,7 +395,7 @@ class HallOfFameCarouselWidgetState
               ),
               const SizedBox(height: 11),
 
-              // 3. Clean Journey Text (Without double quotes)
+              // 3. Clean Journey Text
               Expanded(
                 child: Container(
                   width: double.infinity,
@@ -807,17 +582,12 @@ class HallOfFameCarouselWidgetState
     );
   }
 
-  // ===========================================================================
-  // PHOTO FALLBACK
-  // ===========================================================================
-
   Widget _photoFallback(
     String studentName,
   ) {
-    final initial =
-        studentName.trim().isNotEmpty
-            ? studentName.trim()[0].toUpperCase()
-            : 'A';
+    final initial = studentName.trim().isNotEmpty
+        ? studentName.trim()[0].toUpperCase()
+        : 'A';
 
     return Container(
       color: widget.isDarkMode
@@ -834,10 +604,6 @@ class HallOfFameCarouselWidgetState
       ),
     );
   }
-
-  // ===========================================================================
-  // PHOTO LOADING
-  // ===========================================================================
 
   Widget _photoLoading() {
     return Container(
