@@ -12,8 +12,9 @@ class CoachingOnboardingCtaWidget extends StatelessWidget {
     final prefs = await SharedPreferences.getInstance();
     final savedHandle = prefs.getString('logged_in_creator_handle');
 
-    // 1. Agar teacher pehle se logged in hai -> Direct Studio Dashboard
-    if (savedHandle != null && savedHandle.isNotEmpty && context.mounted) {
+    if (!context.mounted) return;
+
+    if (savedHandle != null && savedHandle.isNotEmpty) {
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -23,11 +24,7 @@ class CoachingOnboardingCtaWidget extends StatelessWidget {
           ),
         ),
       );
-      return;
-    }
-
-    // 2. Naya coaching hai -> Direct CreatorAuthScreen open karega (Telegram approval flow)
-    if (context.mounted) {
+    } else {
       Navigator.push(
         context,
         MaterialPageRoute(
@@ -39,132 +36,241 @@ class CoachingOnboardingCtaWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cardBg = isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC);
-    final borderColor = isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-    final titleColor = isDarkMode ? Colors.white : const Color(0xFF0F172A);
-    final textColor = isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+    final isDark = isDarkMode;
 
     return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(16),
+      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
       decoration: BoxDecoration(
-        color: cardBg,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: borderColor, width: 1.2),
+        borderRadius: BorderRadius.circular(22),
+        gradient: LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: isDark
+              ? [
+                  const Color(0xFF1E293B),
+                  const Color(0xFF0F172A),
+                ]
+              : [
+                  const Color(0xFFFFFFFF),
+                  const Color(0xFFF1F5F9),
+                ],
+        ),
+        border: Border.all(
+          color: isDark
+              ? Colors.white.withValues(alpha: 0.08)
+              : const Color(0xFFCBD5E1).withValues(alpha: 0.7),
+          width: 1.2,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: isDark
+                ? Colors.black.withValues(alpha: 0.4)
+                : const Color(0xFF1E293B).withValues(alpha: 0.06),
+            blurRadius: 18,
+            offset: const Offset(0, 8),
+          ),
+        ],
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF2563EB).withValues(alpha: 0.12),
-                  shape: BoxShape.circle,
-                ),
-                child: const Text('🏫', style: TextStyle(fontSize: 18)),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(22),
+        child: Stack(
+          children: [
+            // Background Decorative Watermark Icon
+            Positioned(
+              right: -15,
+              bottom: -20,
+              child: Icon(
+                Icons.school_rounded,
+                size: 130,
+                color: isDark
+                    ? Colors.white.withValues(alpha: 0.03)
+                    : const Color(0xFF2563EB).withValues(alpha: 0.04),
               ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      'Are you a teacher or coaching institute?',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w700,
-                        color: titleColor,
-                      ),
-                    ),
-                    const SizedBox(height: 2),
-                    Text(
-                      'Create your free digital classroom.',
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: textColor,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 14),
+            ),
 
-          // Feature Grid
-          Row(
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _buildFeatureItem('Create Mock Tests', isDarkMode),
-                    const SizedBox(height: 6),
-                    _buildFeatureItem('Private Batch Tests', isDarkMode),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    _buildFeatureItem('Publish Notes', isDarkMode),
-                    const SizedBox(height: 6),
-                    _buildFeatureItem('Student Performance Analytics', isDarkMode),
-                  ],
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 14),
-
-          // CTA Action Button -> Opens CreatorAuthScreen
-          SizedBox(
-            width: double.infinity,
-            height: 40,
-            child: OutlinedButton(
-              style: OutlinedButton.styleFrom(
-                foregroundColor: const Color(0xFF2563EB),
-                side: const BorderSide(color: Color(0xFF2563EB), width: 1.2),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                padding: EdgeInsets.zero,
-              ),
-              onPressed: () => _handleDirectOnboarding(context),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+            Padding(
+              padding: const EdgeInsets.all(18),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  // Top Pill Badge & Icon
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF2563EB).withValues(alpha: 0.12),
+                          borderRadius: BorderRadius.circular(30),
+                          border: Border.all(
+                            color: const Color(0xFF2563EB).withValues(alpha: 0.25),
+                          ),
+                        ),
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'INSTITUTE & TEACHERS',
+                              style: TextStyle(
+                                color: Color(0xFF2563EB),
+                                fontSize: 10,
+                                fontWeight: FontWeight.w900,
+                                letterSpacing: 0.6,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        width: 36,
+                        height: 36,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: const Color(0xFF16A34A).withValues(alpha: 0.12),
+                        ),
+                        alignment: Alignment.center,
+                        child: const Text('🏫', style: TextStyle(fontSize: 18)),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 12),
+
+                  // Heading & Subtitle
                   Text(
-                    'Create Coaching →',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                    'Apna Coaching Digital Banayein',
+                    style: TextStyle(
+                      fontSize: 17,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: -0.3,
+                      color: isDark ? Colors.white : const Color(0xFF0F172A),
+                    ),
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    'Private batch tests lijiye, mocks host karein aur rank list generate kijiye.',
+                    style: TextStyle(
+                      fontSize: 12.5,
+                      height: 1.4,
+                      fontWeight: FontWeight.w500,
+                      color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+
+                  // Feature Cards
+                  Row(
+                    children: [
+                      Expanded(
+                        child: _buildMiniFeatureBadge(
+                          icon: Icons.quiz_outlined,
+                          title: 'Mock Maker',
+                          sub: 'Custom Tests',
+                          isDark: isDark,
+                        ),
+                      ),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: _buildMiniFeatureBadge(
+                          icon: Icons.insights_rounded,
+                          title: 'Analytics',
+                          sub: 'Live Results',
+                          isDark: isDark,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 18),
+
+                  // Action Button
+                  InkWell(
+                    onTap: () => _handleDirectOnboarding(context),
+                    borderRadius: BorderRadius.circular(14),
+                    child: Container(
+                      width: double.infinity,
+                      height: 48,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
+                        ),
+                        borderRadius: BorderRadius.circular(14),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0xFF2563EB).withValues(alpha: 0.35),
+                            blurRadius: 12,
+                            offset: const Offset(0, 5),
+                          ),
+                        ],
+                      ),
+                      child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.add_business_rounded, color: Colors.white, size: 18),
+                          SizedBox(width: 8),
+                          Text(
+                            'Launch Digital Classroom',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 14,
+                              fontWeight: FontWeight.w800,
+                            ),
+                          ),
+                          SizedBox(width: 6),
+                          Icon(Icons.arrow_forward_rounded, color: Colors.white, size: 16),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
 
-  Widget _buildFeatureItem(String text, bool isDark) {
-    return Row(
-      children: [
-        const Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 14),
-        const SizedBox(width: 6),
-        Flexible(
-          child: Text(
-            text,
-            style: TextStyle(
-              fontSize: 11.5,
-              fontWeight: FontWeight.w500,
-              color: isDark ? Colors.white70 : const Color(0xFF334155),
-            ),
-            overflow: TextOverflow.ellipsis,
-          ),
+  Widget _buildMiniFeatureBadge({
+    required IconData icon,
+    required String title,
+    required String sub,
+    required bool isDark,
+  }) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+      decoration: BoxDecoration(
+        color: isDark ? Colors.white.withValues(alpha: 0.04) : Colors.white,
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: isDark ? Colors.white.withValues(alpha: 0.06) : const Color(0xFFE2E8F0),
         ),
-      ],
+      ),
+      child: Row(
+        children: [
+          Icon(icon, size: 18, color: const Color(0xFF2563EB)),
+          const SizedBox(width: 8),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                title,
+                style: TextStyle(
+                  fontSize: 11.5,
+                  fontWeight: FontWeight.w700,
+                  color: isDark ? Colors.white : const Color(0xFF1E293B),
+                ),
+              ),
+              Text(
+                sub,
+                style: TextStyle(
+                  fontSize: 10,
+                  color: isDark ? Colors.white38 : const Color(0xFF94A3B8),
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }
