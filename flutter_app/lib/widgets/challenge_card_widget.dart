@@ -21,16 +21,39 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
       final challengeData = await ChallengeService.generateDailyChallenge();
       if (!mounted) return;
 
+      final List questions = challengeData['questions'] ?? [];
+
+      // 🛡️ Empty question guard: crash aur white screen se bachata hai
+      if (questions.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('⚠️ Sawaal load nahi ho paye. Kripya internet connection check karein!'),
+            backgroundColor: Color(0xFFDC2626),
+            duration: Duration(seconds: 2),
+          ),
+        );
+        return;
+      }
+
       Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => ChallengeQuizScreen(
-            questions: challengeData['questions'],
-            challengeCode: challengeData['challenge_code'],
+            questions: List<Map<String, dynamic>>.from(questions),
+            challengeCode: challengeData['challenge_code'] ?? '',
             isDarkMode: widget.isDarkMode,
           ),
         ),
       );
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Test shuru karne me samasya aayi: $e'),
+            backgroundColor: const Color(0xFFDC2626),
+          ),
+        );
+      }
     } finally {
       if (mounted) setState(() => _isLoading = false);
     }
@@ -139,9 +162,12 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
                   ),
                   child: _isLoading
                       ? const SizedBox(
-                          width: 16,
-                          height: 16,
-                          child: CircularProgressIndicator(strokeWidth: 2),
+                          width: 18,
+                          height: 18,
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2.2,
+                            valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF4F46E5)),
+                          ),
                         )
                       : const Text(
                           'Start Quiz ⚡',
