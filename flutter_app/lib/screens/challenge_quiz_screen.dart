@@ -57,21 +57,15 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
     if (widget.questions.isEmpty) return;
     final currentQ = widget.questions[_currentIndex];
 
-    final dynamic correctAns = currentQ['correct_index'] ?? 
-                               currentQ['answer_index'] ?? 
-                               currentQ['answer'] ?? 
-                               currentQ['correct'];
+    // Aapke JSON format me correct answer key "a" hai
+    final dynamic correctAns = currentQ['a'] ?? currentQ['answer_index'];
 
     if (correctAns != null) {
       if (correctAns is int && selectedIdx == correctAns) {
         _score++;
       } else if (correctAns is String) {
-        final options = (currentQ['options_hi'] ?? 
-                         currentQ['options'] ?? 
-                         currentQ['options_en']) as List<dynamic>?;
-        if (options != null && 
-            selectedIdx < options.length && 
-            options[selectedIdx].toString().trim() == correctAns.trim()) {
+        int? parsedIdx = int.tryParse(correctAns);
+        if (parsedIdx != null && selectedIdx == parsedIdx) {
           _score++;
         }
       }
@@ -132,17 +126,18 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
 
     final q = widget.questions[_currentIndex];
 
-    // 🚀 Robust Fallbacks: Hindi / English / General Keys
-    final String questionText = (q['question_hi'] ?? 
-                                 q['question'] ?? 
-                                 q['question_en'] ?? 
-                                 q['title'] ?? 
-                                 '').toString();
+    // Aapke format ke hisaab se: pehle "qh" agar khali na ho, warna "qe"
+    String questionText = '';
+    if (q['qh'] != null && q['qh'].toString().trim().isNotEmpty) {
+      questionText = q['qh'].toString().trim();
+    } else if (q['qe'] != null && q['qe'].toString().trim().isNotEmpty) {
+      questionText = q['qe'].toString().trim();
+    } else {
+      questionText = (q['question'] ?? 'Question ${_currentIndex + 1}').toString();
+    }
 
-    final List<dynamic> options = (q['options_hi'] ?? 
-                                   q['options'] ?? 
-                                   q['options_en'] ?? 
-                                   []) as List<dynamic>;
+    // Options list "o" se fetch hogi
+    final List<dynamic> options = (q['o'] is List) ? q['o'] : (q['options'] ?? []);
 
     return PopScope(
       canPop: false,
@@ -193,7 +188,7 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
               ),
               const SizedBox(height: 24),
               Text(
-                questionText.isNotEmpty ? questionText : 'Q.${_currentIndex + 1}: Prashn load ho raha hai...',
+                questionText,
                 style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w800,
@@ -203,39 +198,32 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
               ),
               const SizedBox(height: 24),
               Expanded(
-                child: options.isEmpty
-                    ? Center(
-                        child: Text(
-                          'Options uplabdh nahi hain.',
-                          style: TextStyle(color: textColor.withOpacity(0.6)),
+                child: ListView.separated(
+                  itemCount: options.length,
+                  separatorBuilder: (_, __) => const SizedBox(height: 12),
+                  itemBuilder: (context, idx) {
+                    return ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        elevation: 0,
+                        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                        backgroundColor: cardColor,
+                        foregroundColor: textColor,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(14),
+                          side: BorderSide(
+                            color: widget.isDarkMode ? Colors.white10 : const Color(0xFFE2E8F0),
+                          ),
                         ),
-                      )
-                    : ListView.separated(
-                        itemCount: options.length,
-                        separatorBuilder: (_, __) => const SizedBox(height: 12),
-                        itemBuilder: (context, idx) {
-                          return ElevatedButton(
-                            style: ElevatedButton.styleFrom(
-                              elevation: 0,
-                              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                              backgroundColor: cardColor,
-                              foregroundColor: textColor,
-                              shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(14),
-                                side: BorderSide(
-                                  color: widget.isDarkMode ? Colors.white10 : const Color(0xFFE2E8F0),
-                                ),
-                              ),
-                              alignment: Alignment.centerLeft,
-                            ),
-                            onPressed: () => _onSelectOption(idx),
-                            child: Text(
-                              '${String.fromCharCode(65 + idx)}. ${options[idx]}',
-                              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
-                            ),
-                          );
-                        },
+                        alignment: Alignment.centerLeft,
                       ),
+                      onPressed: () => _onSelectOption(idx),
+                      child: Text(
+                        '${String.fromCharCode(65 + idx)}. ${options[idx]}',
+                        style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                      ),
+                    );
+                  },
+                ),
               ),
             ],
           ),
