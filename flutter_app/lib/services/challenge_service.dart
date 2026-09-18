@@ -1,55 +1,81 @@
 import 'dart:convert';
 import 'dart:math';
-import 'package:flutter/services.dart';
+import 'package:flutter/foundation.dart';
+import 'package:http/http.dart' as http;
 
 class ChallengeService {
-  // Saare core files ki list jahan se balance 10 questions uthane hain
+  // Saare 10 core files ke paths
   static final List<String> challengePoolFiles = [
-    'assets/static/history/ancient.json',
-    'assets/static/history/modern.json',
-    'assets/static/polity/rights.json',
-    'assets/static/polity/parliament.json',
-    'assets/static/geography/mapping.json',
-    'assets/static/economy/schemes.json',
-    'assets/static/biology/disease.json',
-    'assets/static/biology/cell.json',
-    'assets/static/physics/light.json',
-    'assets/static/chemistry/acidbase.json',
+    'static/history/ancient.json',
+    'static/history/modern.json',
+    'static/polity/rights.json',
+    'static/polity/parliament.json',
+    'static/geography/mapping.json',
+    'static/economy/schemes.json',
+    'static/biology/disease.json',
+    'static/biology/cell.json',
+    'static/physics/light.json',
+    'static/chemistry/acidbase.json',
   ];
 
-  // 🎲 1. Solo Player ke liye Random 10 Questions Pick Karna
+  // 🌐 GitHub se live fetch karega
+  static Future<dynamic> _fetchOnline(String relativePath) async {
+    final List<String> urls = [
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/$relativePath",
+      "https://raw.githack.com/zxcty54/content_base/main/$relativePath",
+      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$relativePath",
+    ];
+
+    for (String url in urls) {
+      try {
+        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 4));
+        if (res.statusCode == 200) {
+          String rawBody = utf8.decode(res.bodyBytes).trim();
+          if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
+          return jsonDecode(rawBody);
+        }
+      } catch (_) {
+        continue;
+      }
+    }
+    return null;
+  }
+
+  // 🎲 Random 10 Sawaal Pick Karna
   static Future<Map<String, dynamic>> generateDailyChallenge() async {
     final random = Random();
     List<Map<String, dynamic>> selectedQuestions = [];
-    List<String> encodedIds = []; // e.g. "0:4", "2:11" (fileIndex : questionIndex)
+    List<String> encodedIds = [];
 
-    // Pool se 10 alag-alag files choose karke 1-1 question pick karna (Diversified GK)
-    for (int i = 0; i < 10; i++) {
-      int fileIdx = i % challengePoolFiles.length;
-      String filePath = challengePoolFiles[fileIdx];
+    for (int i = 0; i < challengePoolFiles.length; i++) {
+      String filePath = challengePoolFiles[i];
+      final dynamic data = await _fetchOnline(filePath);
 
-      try {
-        final String jsonStr = await rootBundle.loadString(filePath);
-        final List<dynamic> list = jsonDecode(jsonStr);
+      if (data != null) {
+        List<dynamic> list = [];
+        if (data is List) {
+          list = data;
+        } else if (data is Map) {
+          list = data['questions'] ?? data['data'] ?? data['items'] ?? [];
+        }
+
         if (list.isNotEmpty) {
           int qIdx = random.nextInt(list.length);
           var q = Map<String, dynamic>.from(list[qIdx]);
-          q['encoded_ref'] = '$fileIdx:$qIdx';
+          q['encoded_ref'] = '$i:$qIdx';
           selectedQuestions.add(q);
-          encodedIds.add('$fileIdx:$qIdx');
+          encodedIds.add('$i:$qIdx');
         }
-      } catch (e) {
-        // Fallback if file load fails
       }
     }
 
     return {
       'questions': selectedQuestions,
-      'challenge_code': encodedIds.join('-'), // "0:2-1:5-2:8..." -> WhatsApp link ke liye
+      'challenge_code': encodedIds.join('-'),
     };
   }
 
-  // 🔗 2. WhatsApp Link se exact wahi 10 Questions wapas nikalna
+  // 🔗 WhatsApp link se wahi 10 sawaal reload karna
   static Future<List<Map<String, dynamic>>> loadQuestionsFromCode(String challengeCode) async {
     List<Map<String, dynamic>> questions = [];
     List<String> tokens = challengeCode.split('-');
@@ -57,15 +83,17 @@ class ChallengeService {
     for (String token in tokens) {
       final parts = token.split(':');
       if (parts.length == 2) {
-        int fileIdx = int.parse(parts[0]);
-        int qIdx = int.parse(parts[1]);
+        int fileIdx = int.tryParse(parts[0]) ?? -1;
+        int qIdx = int.tryParse(parts[1]) ?? -1;
 
-        if (fileIdx < challengePoolFiles.length) {
+        if (fileIdx >= 0 && fileIdx < challengePoolFiles.length) {
           String filePath = challengePoolFiles[fileIdx];
-          final String jsonStr = await rootBundle.loadString(filePath);
-          final List<dynamic> list = jsonDecode(jsonStr);
-          if (qIdx < list.length) {
-            questions.add(Map<String, dynamic>.from(list[qIdx]));
+          final dynamic data = await _fetchOnline(filePath);
+          if (data != null) {
+            List<dynamic> list = (data is List) ? data : (data['questions'] ?? []);
+            if (qIdx >= 0 && qIdx < list.length) {
+              questions.add(Map<String, dynamic>.from(list[qIdx]));
+            }
           }
         }
       }
