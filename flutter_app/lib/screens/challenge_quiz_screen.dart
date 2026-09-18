@@ -80,6 +80,58 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
     });
   }
 
+  // 🚪 Exit Confirmation Dialog (Back gesture aur Close button dono ke liye)
+  Future<bool> _confirmExit() async {
+    final shouldExit = await showDialog<bool>(
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: widget.isDarkMode ? const Color(0xFF1F2937) : Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+        title: Text(
+          'Quiz chhodna chahte hain?',
+          style: TextStyle(
+            fontSize: 17,
+            fontWeight: FontWeight.w700,
+            color: widget.isDarkMode ? Colors.white : const Color(0xFF111827),
+          ),
+        ),
+        content: Text(
+          'Agar aap abhi exit karenge toh aapka score leaderboard par save nahi hoga.',
+          style: TextStyle(
+            fontSize: 14,
+            color: widget.isDarkMode ? const Color(0xFF9CA3AF) : const Color(0xFF4B5563),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx, false),
+            child: const Text('Nahi, Continue', style: TextStyle(fontWeight: FontWeight.w600)),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFFDC2626),
+              foregroundColor: Colors.white,
+              elevation: 0,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            ),
+            onPressed: () => Navigator.pop(ctx, true),
+            child: const Text('Ha, Exit karein', style: TextStyle(fontWeight: FontWeight.w700)),
+          ),
+        ],
+      ),
+    );
+
+    if (shouldExit == true) {
+      _timer?.cancel();
+      if (mounted) {
+        Navigator.of(context).pop();
+      }
+      return true;
+    }
+    return false;
+  }
+
   int? _getCorrectAnswer(dynamic value) {
     if (value == null) return null;
     if (value is int) return value;
@@ -206,13 +258,26 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
 
     return PopScope(
       canPop: false,
+      onPopInvokedWithResult: (didPop, _) {
+        if (!didPop) {
+          _confirmExit();
+        }
+      },
       child: Scaffold(
         backgroundColor: scaffoldBg,
         appBar: AppBar(
           backgroundColor: cardBg,
           elevation: 0.5,
           automaticallyImplyLeading: false,
-          titleSpacing: 16,
+          leading: IconButton(
+            icon: Icon(
+              Icons.close_rounded,
+              color: isDark ? Colors.white70 : const Color(0xFF4B5563),
+            ),
+            tooltip: 'Exit Quiz',
+            onPressed: _confirmExit,
+          ),
+          titleSpacing: 0,
           title: Row(
             children: [
               Text(
