@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -5,9 +6,12 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:app_links/app_links.dart';
 
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
+import '../services/challenge_service.dart';
+import 'challenge_quiz_screen.dart';
 import 'community_feed_screen.dart';
 import 'creator_auth_screen.dart';
 import 'creator_dashboard_screen.dart';
@@ -42,18 +46,66 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _hasLearningHistory = false;
   bool _isLoadingConfig = true;
 
+  // 🔗 Step 5: WhatsApp Deep Link Listener
+  late final AppLinks _appLinks;
+  StreamSubscription<Uri>? _linkSubscription;
+
   @override
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
     TelegramTracker.initSession();
     _loadAllConfigs();
+    _initChallengeDeepLinks();
   }
 
   @override
   void dispose() {
+    _linkSubscription?.cancel();
     WidgetsBinding.instance.removeObserver(this);
     super.dispose();
+  }
+
+  void _initChallengeDeepLinks() {
+    _appLinks = AppLinks();
+
+    // Link incoming stream (app running/background)
+    _linkSubscription = _appLinks.uriLinkStream.listen(
+      (uri) => _handleIncomingChallengeUri(uri),
+      onError: (err) => debugPrint("DeepLink stream error: $err"),
+    );
+
+    // Initial link (cold start/app launched via link)
+    _appLinks.getInitialLink().then((uri) {
+      if (uri != null) _handleIncomingChallengeUri(uri);
+    }).catchError((err) => debugPrint("DeepLink initial error: $err"));
+  }
+
+  Future<void> _handleIncomingChallengeUri(Uri uri) async {
+    final uriStr = uri.toString();
+    if (uriStr.contains('challenge') || uriStr.contains('duel')) {
+      final code = uri.queryParameters['code'];
+      final challengerName = uri.queryParameters['by'] ?? 'Dost';
+      final challengerScore = int.tryParse(uri.queryParameters['score'] ?? '0') ?? 0;
+
+      if (code != null && code.isNotEmpty) {
+        final questions = await ChallengeService.loadQuestionsFromCode(code);
+        if (questions.isNotEmpty && mounted) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => ChallengeQuizScreen(
+                questions: questions,
+                challengeCode: code,
+                challengerName: challengerName,
+                challengerScore: challengerScore,
+                isDarkMode: _isDarkMode,
+              ),
+            ),
+          );
+        }
+      }
+    }
   }
 
   @override
@@ -148,7 +200,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(cleanPath);
 
-    // 🚀 Updated: Point to public content_base repo
     final String apiUrl = "https://api.github.com/repos/zxcty54/content_base/contents/$encodedPath?ref=main&t=$ts";
     try {
       final apiRes = await http.get(
@@ -172,7 +223,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       }
     } catch (_) {}
 
-    // 🚀 Updated: Mirror URLs pointing to content_base
     List<String> mirrorUrls = [
       "https://raw.githack.com/zxcty54/content_base/main/$encodedPath",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
