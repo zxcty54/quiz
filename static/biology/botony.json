@@ -3,22 +3,22 @@
     "qe": "Which 'Plant Hormone' is known as the 'Stress Hormone' of plants?",
     "qh": "",
     "o": [
-      "Auxin",
+      "Ethylene",
       "Gibberellin",
-      "Abscisic Acid (ABA)",
-      "Ethylene"
+      "Auxin",
+      "Abscisic Acid (ABA)"
     ],
-    "a": 2,
+    "a": 3,
     "e": "ABA closes stomata during water stress and promotes seed dormancy."
   },
   {
     "qe": "Which hormone is a 'Gas' and is responsible for the 'Ripening of Fruits'?",
     "qh": "",
     "o": [
-      "Cytokinin",
-      "Ethylene",
       "Auxin",
-      "ABA"
+      "Ethylene",
+      "ABA",
+      "Cytokinin"
     ],
     "a": 1,
     "e": "Ethylene is unique because it acts as a gaseous hormone to ripen fruits like bananas and mangoes."
@@ -27,9 +27,9 @@
     "qe": "The 'Apical Dominance' (growth of the tip) in plants is caused by which hormone?",
     "qh": "",
     "o": [
-      "Gibberellin",
-      "Auxin",
       "Cytokinin",
+      "Auxin",
+      "Gibberellin",
       "Ethylene"
     ],
     "a": 1,
@@ -40,9 +40,9 @@
     "qh": "",
     "o": [
       "Auxins and Gibberellins",
+      "Cytokinin",
       "Ethylene",
-      "ABA",
-      "Cytokinin"
+      "ABA"
     ],
     "a": 0,
     "e": "Applying these hormones can induce fruit formation without fertilization, resulting in seedless varieties."
@@ -51,58 +51,58 @@
     "qe": "The 'Bolting' effect (sudden elongation of stems) is caused by:",
     "qh": "",
     "o": [
-      "Auxin",
-      "Gibberellin",
+      "Ethylene",
       "Cytokinin",
-      "Ethylene"
+      "Gibberellin",
+      "Auxin"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Gibberellins promote cell elongation and are used to increase the size of grapes and sugarcane."
   },
   {
     "qe": "Which hormone promotes 'Cell Division' and delays leaf aging (senescence)?",
     "qh": "",
     "o": [
-      "Auxin",
-      "Cytokinin",
       "ABA",
-      "Ethylene"
+      "Ethylene",
+      "Cytokinin",
+      "Auxin"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Cytokinins are often used in tissue culture to stimulate plant growth and keep leaves green."
   },
   {
     "qe": "Which plant tissue is responsible for the transport of 'Water and Minerals' from roots to leaves?",
     "qh": "",
     "o": [
-      "Phloem",
-      "Xylem",
+      "Collenchyma",
       "Parenchyma",
-      "Collenchyma"
+      "Phloem",
+      "Xylem"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Xylem acts as the 'plumbing' system of the plant, moving water upward through tracheids and vessels."
   },
   {
     "qe": "Which tissue is known as the 'Food-conducting' tissue in plants?",
     "qh": "",
     "o": [
-      "Xylem",
       "Phloem",
-      "Sclerenchyma",
-      "Epidermis"
+      "Xylem",
+      "Epidermis",
+      "Sclerenchyma"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Phloem transports glucose and nutrients from the leaves (source) to the rest of the plant (sink)."
   },
   {
     "qe": "What is the primary site of 'Photosynthesis' in a plant cell?",
     "qh": "",
     "o": [
-      "Mitochondria",
+      "Nucleus",
       "Chloroplast",
       "Vacuole",
-      "Nucleus"
+      "Mitochondria"
     ],
     "a": 1,
     "e": "Chloroplasts contain chlorophyll which captures solar energy to produce glucose."
@@ -111,12 +111,12 @@
     "qe": "Which gas is 'Released' as a byproduct during photosynthesis?",
     "qh": "",
     "o": [
-      "Carbon Dioxide",
-      "Oxygen",
+      "Methane",
       "Nitrogen",
-      "Methane"
+      "Oxygen",
+      "Carbon Dioxide"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Plants take in CO2 and release Oxygen ($O_2$) during the light-dependent reactions."
   },
   {
@@ -124,21 +124,21 @@
     "qh": "",
     "o": [
       "Dead cells",
-      "Cells that divide continuously",
+      "Large vacuoles",
       "Permanent shape",
-      "Large vacuoles"
+      "Cells that divide continuously"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Meristems are found at the tips of roots and shoots, allowing the plant to grow in length and girth."
   },
   {
     "qe": "Which plant hormone is primarily responsible for 'Fruit Ripening'?",
     "qh": "",
     "o": [
+      "Cytokinin",
       "Auxin",
-      "Gibberellin",
       "Ethylene",
-      "Cytokinin"
+      "Gibberellin"
     ],
     "a": 2,
     "e": "Ethylene is a gaseous hormone that triggers the ripening process in fruits like bananas and mangoes."
@@ -148,35 +148,35 @@
     "qh": "",
     "o": [
       "Absorption of water",
-      "Loss of water vapor from the surface of leaves",
       "Movement of food",
-      "Growth of roots"
+      "Growth of roots",
+      "Loss of water vapor from the surface of leaves"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Transpiration creates a 'suction pull' that helps draw water up from the roots to the top of the plant."
   },
   {
     "qe": "The pores on the surface of leaves through which gas exchange occurs are called:",
     "qh": "",
     "o": [
+      "Cuticle",
       "Lenticels",
       "Stomata",
-      "Xylem",
-      "Cuticle"
+      "Xylem"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Stomata are guarded by 'Guard Cells' which open or close the pore to regulate water loss."
   },
   {
     "qe": "Which metal is present at the center of the 'Chlorophyll' molecule?",
     "qh": "",
     "o": [
-      "Iron",
       "Magnesium",
+      "Zinc",
       "Calcium",
-      "Zinc"
+      "Iron"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Magnesium ($Mg$) is the central atom of chlorophyll, similar to how Iron is at the center of Hemoglobin."
   },
   {
@@ -197,8 +197,8 @@
     "o": [
       "Stroma",
       "Grana (Thylakoids)",
-      "Cytoplasm",
-      "Cell Wall"
+      "Cell Wall",
+      "Cytoplasm"
     ],
     "a": 1,
     "e": "Grana are stacks of thylakoids where sunlight is converted into chemical energy (ATP//NADPH)."
@@ -208,11 +208,11 @@
     "qh": "",
     "o": [
       "Apical Meristem",
+      "Parenchyma",
       "Lateral Meristem (Cambium)",
-      "Intercalary Meristem",
-      "Parenchyma"
+      "Intercalary Meristem"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Lateral meristems are responsible for secondary growth, which makes trees thicker over time."
   },
   {
@@ -220,33 +220,33 @@
     "qh": "",
     "o": [
       "Growth towards gravity",
-      "Growth towards light",
+      "Response to touch",
       "Growth towards water",
-      "Response to touch"
+      "Growth towards light"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Auxins accumulate on the shaded side of the stem, causing it to bend toward the light source."
   },
   {
     "qe": "Which of the following is a 'C4' plant (highly efficient in hot climates)?",
     "qh": "",
     "o": [
-      "Rice",
-      "Wheat",
       "Maize (Corn)",
+      "Wheat",
+      "Rice",
       "Potato"
     ],
-    "a": 2,
+    "a": 0,
     "e": "C4 plants like Maize and Sugarcane have a specialized anatomy (Kranz anatomy) to minimize water loss."
   },
   {
     "qe": "The 'Hardness' of fruits like pears is due to the presence of:",
     "qh": "",
     "o": [
-      "Parenchyma",
+      "Chlorenchyma",
       "Sclereids",
-      "Aerenchyma",
-      "Chlorenchyma"
+      "Parenchyma",
+      "Aerenchyma"
     ],
     "a": 1,
     "e": "Sclereids are a type of sclerenchyma cell that provides a gritty texture and strength."
@@ -255,10 +255,10 @@
     "qe": "What is 'Guttation'?",
     "qh": "",
     "o": [
-      "Loss of water through stomata",
+      "Wilting of plants",
       "Loss of water in liquid form from the margins of leaves",
-      "Absorption of minerals",
-      "Wilting of plants"
+      "Loss of water through stomata",
+      "Absorption of minerals"
     ],
     "a": 1,
     "e": "Guttation occurs through specialized pores called 'Hydathodes' during periods of high humidity and root pressure."
@@ -267,12 +267,12 @@
     "qe": "Which tissue provides 'Buoyancy' to aquatic plants (Hydrophytes)?",
     "qh": "",
     "o": [
-      "Aerenchyma",
       "Collenchyma",
-      "Sclerenchyma",
-      "Xylem"
+      "Aerenchyma",
+      "Xylem",
+      "Sclerenchyma"
     ],
-    "a": 0,
+    "a": 1,
     "e": "Aerenchyma is a type of parenchyma with large air cavities that help plants float on water."
   },
   {
@@ -280,23 +280,23 @@
     "qh": "",
     "o": [
       "Grana",
-      "Stroma",
       "Mitochondria",
+      "Stroma",
       "Nucleus"
     ],
-    "a": 1,
+    "a": 2,
     "e": "In the stroma, $CO_2$ is fixed into sugar using the energy (ATP) generated in the light reaction."
   },
   {
     "qe": "Which part of the plant is scientifically known as the 'Kitchen of the Plant'?",
     "qh": "",
     "o": [
-      "Root",
-      "Stem",
       "Leaf",
-      "Flower"
+      "Flower",
+      "Stem",
+      "Root"
     ],
-    "a": 2,
+    "a": 0,
     "e": "Leaves are the primary organs for photosynthesis where food is prepared."
   },
   {
@@ -305,8 +305,8 @@
     "o": [
       "Response to light",
       "Response to gravity",
-      "Response to chemicals",
-      "Response to magnetism"
+      "Response to magnetism",
+      "Response to chemicals"
     ],
     "a": 1,
     "e": "Roots show positive geotropism (grow down), while shoots show negative geotropism (grow up)."
@@ -315,57 +315,57 @@
     "qe": "Which part of the flower develops into a 'Fruit' after fertilization?",
     "qh": "",
     "o": [
-      "Ovule",
-      "Ovary",
+      "Petal",
       "Stamen",
-      "Petal"
+      "Ovary",
+      "Ovule"
     ],
-    "a": 1,
+    "a": 2,
     "e": "The ovary ripens into the fruit, while the ovules inside become the seeds."
   },
   {
     "qe": "What is 'Double Fertilization' a characteristic of?",
     "qh": "",
     "o": [
-      "Algae",
       "Gymnosperms",
       "Angiosperms (Flowering plants)",
+      "Algae",
       "Bryophytes"
     ],
-    "a": 2,
+    "a": 1,
     "e": "In angiosperms, one male gamete fuses with the egg, and another fuses with the polar nuclei to form the endosperm."
   },
   {
     "qe": "The 'Sticky' part of the carpel that receives pollen grains is called:",
     "qh": "",
     "o": [
-      "Style",
-      "Stigma",
       "Anther",
-      "Filament"
+      "Filament",
+      "Stigma",
+      "Style"
     ],
-    "a": 1,
+    "a": 2,
     "e": "The stigma is specially designed to capture and hold pollen during pollination."
   },
   {
     "qe": "Which bacterium lives in the 'Root Nodules' of leguminous plants to fix Nitrogen?",
     "qh": "",
     "o": [
-      "E. coli",
-      "Rhizobium",
       "Lactobacillus",
-      "Streptococcus"
+      "Streptococcus",
+      "E. coli",
+      "Rhizobium"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Rhizobium converts atmospheric nitrogen into ammonia, which the plant can use for growth."
   },
   {
     "qe": "What is 'Hydroponics'?",
     "qh": "",
     "o": [
-      "Growing plants in water",
-      "Growing plants in a soil-less nutrient solution",
       "Growing plants in sand",
+      "Growing plants in a soil-less nutrient solution",
+      "Growing plants in water",
       "Growing plants without sunlight"
     ],
     "a": 1,
@@ -375,10 +375,10 @@
     "qe": "Which part of the 'Seed' provides food to the developing embryo?",
     "qh": "",
     "o": [
-      "Seed coat",
-      "Endosperm",
       "Radicle",
-      "Plumule"
+      "Endosperm",
+      "Plumule",
+      "Seed coat"
     ],
     "a": 1,
     "e": "The endosperm is a nutrient-rich tissue that supports the plant until it can perform photosynthesis."
@@ -389,8 +389,8 @@
     "o": [
       "Pollination by insects",
       "Pollination by wind",
-      "Pollination by water",
-      "Pollination by birds"
+      "Pollination by birds",
+      "Pollination by water"
     ],
     "a": 1,
     "e": "Wind-pollinated flowers (like grass and maize) usually have light pollen and large, feathery stigmas."
@@ -399,9 +399,9 @@
     "qe": "The movement of 'Water' through the xylem is primarily driven by:",
     "qh": "",
     "o": [
-      "Photosynthesis",
-      "Transpiration Pull",
       "Gravity",
+      "Transpiration Pull",
+      "Photosynthesis",
       "Active Transport"
     ],
     "a": 1,
@@ -411,48 +411,48 @@
     "qe": "Which mineral is essential for the 'Opening and Closing' of Stomata?",
     "qh": "",
     "o": [
-      "Iron",
       "Potassium (K+)",
+      "Iron",
       "Phosphorus",
       "Calcium"
     ],
-    "a": 1,
+    "a": 0,
     "e": "The movement of Potassium ions into guard cells causes them to swell and open the stomatal pore."
   },
   {
     "qe": "What is 'Parthenocarpy'?",
     "qh": "",
     "o": [
-      "Formation of fruit without fertilization",
+      "Pollination by bats",
       "Formation of seed without fruit",
-      "Death of a plant",
-      "Pollination by bats"
+      "Formation of fruit without fertilization",
+      "Death of a plant"
     ],
-    "a": 0,
+    "a": 2,
     "e": "Parthenocarpic fruits, like seedless bananas and grapes, develop without the need for pollen."
   },
   {
     "qe": "The 'Venus Flytrap' is an example of a:",
     "qh": "",
     "o": [
-      "Parasitic plant",
-      "Insectivorous plant",
+      "Symbiotic plant",
       "Saprophytic plant",
-      "Symbiotic plant"
+      "Insectivorous plant",
+      "Parasitic plant"
     ],
-    "a": 1,
+    "a": 2,
     "e": "These plants grow in nitrogen-poor soil and catch insects to fulfill their nitrogen requirements."
   },
   {
     "qe": "Which tissue makes up the 'Bark' of a tree?",
     "qh": "",
     "o": [
-      "Xylem",
       "Cork (Phellem)",
+      "Endodermis",
       "Pith",
-      "Endodermis"
+      "Xylem"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Cork cells are dead at maturity and are filled with suberin, making them waterproof and protective."
   },
   {
@@ -460,21 +460,21 @@
     "qh": "",
     "o": [
       "Response to light",
-      "Response to gravity",
       "Response to touch (contact)",
-      "Response to water"
+      "Response to water",
+      "Response to gravity"
     ],
-    "a": 2,
+    "a": 1,
     "e": "Tendrils of climbing plants (like money plants or peas) show thigmotropism when they coil around a support."
   },
   {
     "qe": "Which gas is used for the 'Artificial Ripening' of green fruits?",
     "qh": "",
     "o": [
+      "Oxygen",
       "Ethylene",
-      "Acetylene",
       "Both 1 and 2",
-      "Oxygen"
+      "Acetylene"
     ],
     "a": 2,
     "e": "While ethylene is the natural hormone, calcium carbide is often used to produce acetylene for artificial ripening."
@@ -485,8 +485,8 @@
     "o": [
       "Chlorophyll",
       "Lycopene",
-      "Anthocyanin",
-      "Beta-carotene"
+      "Beta-carotene",
+      "Anthocyanin"
     ],
     "a": 1,
     "e": "Lycopene is a carotenoid pigment found in red fruits like tomatoes and watermelons."
@@ -495,36 +495,36 @@
     "qe": "Which part of the plant is responsible for 'Vegetative Propagation' in Ginger?",
     "qh": "",
     "o": [
+      "Leaf",
       "Root",
       "Rhizome (Stem)",
-      "Leaf",
       "Bulb"
     ],
-    "a": 1,
+    "a": 2,
     "e": "A rhizome is an underground modified stem that can grow into a new plant."
   },
   {
     "qe": "What is 'Photoperiodism'?",
     "qh": "",
     "o": [
-      "Reaction to light intensity",
       "Response of plants to the relative lengths of day and night",
+      "Reaction to light intensity",
       "Photosynthesis speed",
       "Bending towards light"
     ],
-    "a": 1,
+    "a": 0,
     "e": "This determines when a plant will flower (Short-day vs. Long-day plants)."
   },
   {
     "qe": "The 'Pulvinus' is a specialized structure at the base of the leaf in:",
     "qh": "",
     "o": [
+      "Wheat",
       "Mango",
-      "Touch-me-not (Mimosa pudica)",
       "Rose",
-      "Wheat"
+      "Touch-me-not (Mimosa pudica)"
     ],
-    "a": 1,
+    "a": 3,
     "e": "The pulvinus handles the rapid movement of water to close the leaves when touched."
   },
   {
@@ -532,11 +532,11 @@
     "qh": "",
     "o": [
       "Mushroom",
-      "Cuscuta (Amarbel)",
+      "Lichen",
       "Pitcher plant",
-      "Lichen"
+      "Cuscuta (Amarbel)"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Cuscuta lacks chlorophyll and draws all its nutrition from the host plant."
   },
   {
@@ -544,44 +544,44 @@
     "qh": "",
     "o": [
       "Apical Meristem",
-      "Vascular Cambium",
+      "Endodermis",
       "Parenchyma",
-      "Endodermis"
+      "Vascular Cambium"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Vascular cambium is a lateral meristem that produces secondary xylem (wood) and secondary phloem."
   },
   {
     "qe": "The 'Annual Rings' seen in a cross-section of a tree trunk are used to estimate its age. These rings are made of:",
     "qh": "",
     "o": [
-      "Primary Phloem",
       "Secondary Xylem",
+      "Primary Phloem",
       "Cortex",
       "Pith"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Each year, the cambium produces a layer of spring wood and autumn wood, which together form one annual ring."
   },
   {
     "qe": "What is the science of determining the age of a tree by counting its rings called?",
     "qh": "",
     "o": [
+      "Paleontology",
       "Dendrochronology",
       "Pomology",
-      "Paleontology",
       "Horticulture"
     ],
-    "a": 0,
+    "a": 1,
     "e": "Dendrochronology uses tree rings to study past climates and the age of the tree."
   },
   {
     "qe": "In a large tree, the central, dark-colored, non-functional part of the wood is called:",
     "qh": "",
     "o": [
-      "Sapwood",
-      "Heartwood (Duramen)",
       "Softwood",
+      "Heartwood (Duramen)",
+      "Sapwood",
       "Bark"
     ],
     "a": 1,
@@ -591,24 +591,24 @@
     "qe": "Which part of the 'Wood' is responsible for the conduction of water in a 50-year-old tree?",
     "qh": "",
     "o": [
+      "Pith",
       "Heartwood",
       "Sapwood (Alburnum)",
-      "Pith",
       "Cork"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Sapwood is the younger, outer layer of secondary xylem that actively transports water and minerals."
   },
   {
     "qe": "The 'Kranz Anatomy' is a characteristic feature of which type of plants?",
     "qh": "",
     "o": [
-      "C3 Plants",
       "C4 Plants (e.g., Maize, Sugarcane)",
       "CAM Plants",
-      "Hydrophytes"
+      "Hydrophytes",
+      "C3 Plants"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Kranz anatomy involves a wreath-like arrangement of bundle sheath cells that helps the plant avoid photorespiration."
   },
   {
@@ -616,11 +616,11 @@
     "qh": "",
     "o": [
       "Pepsin",
+      "DNA Polymerase",
       "RuBisCO",
-      "Amylase",
-      "DNA Polymerase"
+      "Amylase"
     ],
-    "a": 1,
+    "a": 2,
     "e": "RuBisCO fixes carbon dioxide into organic molecules during photosynthesis."
   },
   {
@@ -629,8 +629,8 @@
     "o": [
       "Water storage",
       "Loading and unloading of sugar into sieve tubes",
-      "Photosynthesis",
-      "Providing rigid support"
+      "Providing rigid support",
+      "Photosynthesis"
     ],
     "a": 1,
     "e": "Companion cells are closely associated with sieve tube elements and manage their metabolic activities."
@@ -639,45 +639,45 @@
     "qe": "Which of the following is a 'Short-Day Plant' (flowers only when days are short)?",
     "qh": "",
     "o": [
-      "Wheat",
-      "Soybean//Rice",
       "Radish",
-      "Spinach"
+      "Spinach",
+      "Soybean//Rice",
+      "Wheat"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Short-day plants require a long period of darkness to trigger flowering."
   },
   {
     "qe": "The 'Velamen' tissue, used for absorbing moisture from the air, is found in the roots of:",
     "qh": "",
     "o": [
-      "Mango",
-      "Orchids (Epiphytes)",
+      "Wheat",
       "Banyan",
-      "Wheat"
+      "Orchids (Epiphytes)",
+      "Mango"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Orchids have hanging aerial roots with velamen to suck water vapor from a humid atmosphere."
   },
   {
     "qe": "What is 'Photolysis' of water?",
     "qh": "",
     "o": [
-      "Formation of water from gas",
       "Splitting of water using light energy in Photosystem II",
-      "Absorption of water by roots",
-      "Boiling of water"
+      "Boiling of water",
+      "Formation of water from gas",
+      "Absorption of water by roots"
     ],
-    "a": 1,
+    "a": 0,
     "e": "This process releases electrons, protons, and oxygen as a byproduct of photosynthesis."
   },
   {
     "qe": "Which plant group is known as the 'Amphibians of the Plant Kingdom'?",
     "qh": "",
     "o": [
-      "Thallophyta",
-      "Bryophyta (Mosses)",
       "Pteridophyta",
+      "Bryophyta (Mosses)",
+      "Thallophyta",
       "Gymnosperms"
     ],
     "a": 1,
@@ -687,46 +687,46 @@
     "qe": "The 'Sago' (Sabudana) is obtained from which plant?",
     "qh": "",
     "o": [
-      "Cycas",
+      "Wheat",
       "Pinus",
-      "Rice",
-      "Wheat"
+      "Cycas",
+      "Rice"
     ],
-    "a": 0,
+    "a": 2,
     "e": "Sago is a starch extracted from the pith of the Cycas plant, which is a Gymnosperm."
   },
   {
     "qe": "Which plant tissue has 'Pectin' deposits at the corners of its cells to provide flexibility?",
     "qh": "",
     "o": [
-      "Parenchyma",
       "Collenchyma",
       "Sclerenchyma",
+      "Parenchyma",
       "Xylem"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Collenchyma allows young stems and leaves to bend without breaking."
   },
   {
     "qe": "What is 'Vernalization'?",
     "qh": "",
     "o": [
-      "Growth towards light",
-      "Induction of flowering by exposure to prolonged cold",
       "Response to touch",
-      "Seed dispersal by wind"
+      "Growth towards light",
+      "Seed dispersal by wind",
+      "Induction of flowering by exposure to prolonged cold"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Many plants in temperate climates require a cold winter period before they can flower in the spring."
   },
   {
     "qe": "Which part of the plant is modified to form the 'Spines' in a Cactus?",
     "qh": "",
     "o": [
-      "Stem",
+      "Flower",
       "Leaves",
-      "Root",
-      "Flower"
+      "Stem",
+      "Root"
     ],
     "a": 1,
     "e": "Cactus leaves are modified into spines to reduce water loss (transpiration) and protect against animals."
@@ -735,36 +735,36 @@
     "qe": "The 'Pneumatophores' (Respiratory roots) are found in:",
     "qh": "",
     "o": [
+      "Aquatic plants",
       "Desert plants",
       "Mangrove plants (e.g., Rhizophora)",
-      "Aquatic plants",
       "Climbing plants"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Mangroves grow in salty, oxygen-poor marshes; pneumatophores grow upward to 'breathe' air."
   },
   {
     "qe": "Which plant hormone is also known as the 'Anti-Transpirant'?",
     "qh": "",
     "o": [
-      "Auxin",
-      "Gibberellin",
       "Abscisic Acid (ABA)",
-      "Cytokinin"
+      "Cytokinin",
+      "Gibberellin",
+      "Auxin"
     ],
-    "a": 2,
+    "a": 0,
     "e": "ABA closes the stomata during drought to prevent the plant from wilting."
   },
   {
     "qe": "What is the function of 'Inulin' in plants like Dahlia?",
     "qh": "",
     "o": [
+      "Protection",
       "Photosynthesis",
       "Storage of Carbohydrates (Fructans) in roots",
-      "Transport of water",
-      "Protection"
+      "Transport of water"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Inulin is a storage polysaccharide often found in the roots or tubers of some plants."
   },
   {
@@ -772,35 +772,35 @@
     "qh": "",
     "o": [
       "Cellulose",
-      "Chitin",
       "Lignin",
+      "Chitin",
       "Pectin"
     ],
-    "a": 1,
+    "a": 2,
     "e": "While plants use cellulose, fungi use chitin (the same material found in insect shells) for their cell walls."
   },
   {
     "qe": "Which part of the 'Clove' (Laung) is used as a spice?",
     "qh": "",
     "o": [
-      "Fruit",
-      "Dried Flower Bud",
       "Seed",
-      "Bark"
+      "Bark",
+      "Dried Flower Bud",
+      "Fruit"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Cloves are the aromatic, dried flower buds of the Syzygium aromaticum tree."
   },
   {
     "qe": "The 'Saffron' (Kesar) of commerce is obtained from which part of the Crocus plant?",
     "qh": "",
     "o": [
-      "Petals",
       "Stigma and Style",
-      "Roots",
-      "Anthers"
+      "Petals",
+      "Anthers",
+      "Roots"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Saffron is the most expensive spice in the world, made from the dried stigmas of the Crocus flower."
   },
   {
@@ -808,11 +808,11 @@
     "qh": "",
     "o": [
       "Citrus Canker",
+      "Late Blight",
       "Red Rot",
-      "Black Rust",
-      "Late Blight"
+      "Black Rust"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Red Rot is caused by the fungus Colletotrichum falcatum and is a major threat to sugarcane crops in Bihar."
   },
   {
@@ -820,11 +820,11 @@
     "qh": "",
     "o": [
       "Fungus",
-      "Bacteria (Xanthomonas)",
+      "Nematode",
       "Virus",
-      "Nematode"
+      "Bacteria (Xanthomonas)"
     ],
-    "a": 1,
+    "a": 3,
     "e": "It causes lesions on the leaves, stems, and fruit of citrus trees."
   },
   {
@@ -832,11 +832,11 @@
     "qh": "",
     "o": [
       "Fruit",
-      "Inner Bark",
       "Leaf",
+      "Inner Bark",
       "Root"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Cinnamon is harvested by peeling the inner bark of the Cinnamomum tree."
   },
   {
@@ -845,8 +845,8 @@
     "o": [
       "Ovary",
       "Fleshy Thalamus",
-      "Endosperm",
-      "Pericarp"
+      "Pericarp",
+      "Endosperm"
     ],
     "a": 1,
     "e": "Apple is a 'False Fruit' because the edible part develops from the thalamus, not the ovary."
@@ -855,24 +855,24 @@
     "qe": "The 'Late Blight of Potato', which caused the Irish Famine, is caused by:",
     "qh": "",
     "o": [
-      "Bacteria",
-      "Fungus (Phytophthora)",
+      "Algae",
       "Virus",
-      "Algae"
+      "Bacteria",
+      "Fungus (Phytophthora)"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Phytophthora infestans is a water mold that can destroy entire potato crops in wet weather."
   },
   {
     "qe": "Which plant is known as the 'Terror of Bengal' because it clogs waterways?",
     "qh": "",
     "o": [
-      "Lotus",
       "Water Hyacinth (Eichhornia)",
+      "Pistia",
       "Hydrilla",
-      "Pistia"
+      "Lotus"
     ],
-    "a": 1,
+    "a": 0,
     "e": "It is an invasive species that depletes oxygen from the water, killing fish."
   },
   {
@@ -880,47 +880,47 @@
     "qh": "",
     "o": [
       "Eucalyptus",
-      "Cinchona",
       "Neem",
+      "Cinchona",
       "Teak"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Cinchona bark was the first effective treatment for malaria."
   },
   {
     "qe": "Which part of the 'Turmeric' (Haldi) plant is used in cooking?",
     "qh": "",
     "o": [
-      "Root",
       "Underground Stem (Rhizome)",
       "Fruit",
+      "Root",
       "Leaf"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Turmeric is a rhizome, just like ginger."
   },
   {
     "qe": "What is 'Epiphytic' growth?",
     "qh": "",
     "o": [
-      "Plants growing in water",
-      "Plants growing on other plants for support but not for nutrition",
       "Parasitic plants",
-      "Desert plants"
+      "Plants growing in water",
+      "Desert plants",
+      "Plants growing on other plants for support but not for nutrition"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Orchids are common epiphytes that use trees for height to reach sunlight."
   },
   {
     "qe": "Which hormone is responsible for the 'Sleep movements' of leaves in pulses?",
     "qh": "",
     "o": [
-      "Auxin",
-      "Abscisic Acid (ABA)",
+      "Cytokinin",
       "Ethylene",
-      "Cytokinin"
+      "Auxin",
+      "Abscisic Acid (ABA)"
     ],
-    "a": 1,
+    "a": 3,
     "e": "ABA and Turgor pressure changes in the pulvinus cause leaves to fold at night."
   },
   {
@@ -929,8 +929,8 @@
     "o": [
       "Fruit",
       "Seed",
-      "Leaf",
-      "Bark"
+      "Bark",
+      "Leaf"
     ],
     "a": 1,
     "e": "Coffee beans are the processed seeds found inside the 'cherry' fruit of the Coffea plant."
@@ -939,24 +939,24 @@
     "qe": "Which plant tissue is called the 'Wood' of the tree?",
     "qh": "",
     "o": [
-      "Primary Xylem",
-      "Secondary Xylem",
       "Phloem",
-      "Cortex"
+      "Primary Xylem",
+      "Cortex",
+      "Secondary Xylem"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Wood is essentially a massive accumulation of secondary xylem produced by the vascular cambium."
   },
   {
     "qe": "What is 'Hydrotropism'?",
     "qh": "",
     "o": [
-      "Growth towards light",
-      "Growth towards water",
+      "Growth towards gravity",
       "Growth towards chemicals",
-      "Growth towards gravity"
+      "Growth towards water",
+      "Growth towards light"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Plant roots show positive hydrotropism as they grow toward moist soil areas."
   },
   {
@@ -964,35 +964,35 @@
     "qh": "",
     "o": [
       "Chlorophyll",
+      "Xanthophyll",
       "Anthocyanin",
-      "Carotene",
-      "Xanthophyll"
+      "Carotene"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Anthocyanins are water-soluble vacuolar pigments that change color based on pH."
   },
   {
     "qe": "The 'Vascular Bundles' in Monocot stems are usually:",
     "qh": "",
     "o": [
-      "Arranged in a ring",
-      "Scattered in the ground tissue",
       "Absent",
-      "Only found in roots"
+      "Arranged in a ring",
+      "Only found in roots",
+      "Scattered in the ground tissue"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Unlike dicots where they form a ring, monocot bundles (like in maize) are scattered."
   },
   {
     "qe": "Which part of the 'Onion' is edible?",
     "qh": "",
     "o": [
+      "Fruit",
       "Root",
-      "Fleshy Scale Leaves (Bulb)",
       "Flower",
-      "Fruit"
+      "Fleshy Scale Leaves (Bulb)"
     ],
-    "a": 1,
+    "a": 3,
     "e": "The onion is a modified underground shoot where the leaves store food."
   },
   {
@@ -1011,12 +1011,12 @@
     "qe": "Which of the following is an 'Oil-yielding' plant?",
     "qh": "",
     "o": [
-      "Wheat",
       "Mustard",
       "Sugarcane",
-      "Potato"
+      "Potato",
+      "Wheat"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Mustard seeds are rich in oils used for cooking and medicinal purposes."
   },
   {
@@ -1024,40 +1024,40 @@
     "qh": "",
     "o": [
       "Photosynthesis",
+      "Seed dispersal",
       "Gaseous exchange in woody stems",
-      "Water absorption",
-      "Seed dispersal"
+      "Water absorption"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Lenticels are small pores in the bark that allow oxygen to reach the living tissues of the stem."
   },
   {
-    "qe": "'वनस्पति विज्ञान' के जनक कौन हैं?",
-    "qh": "Who is the Father of Botany?",
+    "qe": "Who is the Father of Botany?",
+    "qh": "'वनस्पति विज्ञान' के जनक कौन हैं?",
     "o": [
-      "Aristotle",
       "Theophrastus | थियोफ्रेस्टस",
       "Mendel",
-      "Hooke"
+      "Hooke",
+      "Aristotle"
     ],
-    "a": 1,
+    "a": 0,
     "e": "Theophrastus is recognized as the father of Botany. / थियोफ्रेस्टस को वनस्पति विज्ञान के जनक के रूप में जाना जाता है।"
   },
   {
-    "qe": "'फलों' में मुख्य रूप से कौन सी शर्करा पाई जाती है?",
-    "qh": "Which sugar is specifically found in 'Fruits'?",
+    "qe": "Which sugar is specifically found in 'Fruits'?",
+    "qh": "'फलों' में मुख्य रूप से कौन सी शर्करा पाई जाती है?",
     "o": [
-      "Glucose",
       "Sucrose",
+      "Lactose",
       "Fructose | फ्रुक्टोज़",
-      "Lactose"
+      "Glucose"
     ],
     "a": 2,
     "e": "Fructose is often called fruit sugar as it is naturally found in fruits and honey. / फ्रुक्टोज़ को अक्सर फल शर्करा कहा जाता है क्योंकि यह प्राकृतिक रूप से फलों और शहद में पाया जाता है।"
   },
   {
-    "qe": "पौधों में कौन सा अंगक हरा रंग प्रदान करता है और भोजन बनाने में मदद करता है?",
-    "qh": "Which organelle provides green color and helps in making food in plants?",
+    "qe": "Which organelle provides green color and helps in making food in plants?",
+    "qh": "पौधों में कौन सा अंगक हरा रंग प्रदान करता है और भोजन बनाने में मदद करता है?",
     "o": [
       "Leucoplast",
       "Chloroplast | क्लोरोप्लास्ट",
@@ -1068,44 +1068,44 @@
     "e": "Chloroplasts contain chlorophyll for photosynthesis. / क्लोरोप्लास्ट में प्रकाश संश्लेषण के लिए क्लोरोफिल होता है।"
   },
   {
-    "qe": "पादप कोशिका भित्ति में कौन सा पदार्थ कागज बनाने के लिए उपयोग किया जाता है?",
-    "qh": "Which substance in plant cell walls is used to make paper?",
+    "qe": "Which substance in plant cell walls is used to make paper?",
+    "qh": "पादप कोशिका भित्ति में कौन सा पदार्थ कागज बनाने के लिए उपयोग किया जाता है?",
     "o": [
+      "Starch",
       "Protein",
       "Cellulose | सेलुलोज",
-      "Starch",
       "Fat"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Cellulose is a fibrous carbohydrate found in plants that is the main ingredient of paper. / सेलुलोज पौधों में पाया जाने वाला एक रेशेदार कार्बोहाइड्रेट है जो कागज का मुख्य घटक है।"
   },
   {
-    "qe": "पौधों में 'लवक' (Plastids) किसके लिए जिम्मेदार होते हैं?",
-    "qh": "What are 'Plastids' responsible for in plants?",
+    "qe": "What are 'Plastids' responsible for in plants?",
+    "qh": "पौधों में 'लवक' (Plastids) किसके लिए जिम्मेदार होते हैं?",
     "o": [
-      "Movement",
-      "Food making and storage | भोजन बनाना और संचय",
       "Nervous system",
-      "Hearing"
+      "Movement",
+      "Hearing",
+      "Food making and storage | भोजन बनाना और संचय"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Plastids like Chloroplasts help in photosynthesis and food storage. / क्लोरोप्लास्ट जैसे लवक प्रकाश संश्लेषण और भोजन संचय में मदद करते हैं।"
   },
   {
-    "qe": "कौन सा लवक पत्तियों को हरा रंग देता है?",
-    "qh": "Which plastid gives green color to the leaves?",
+    "qe": "Which plastid gives green color to the leaves?",
+    "qh": "कौन सा लवक पत्तियों को हरा रंग देता है?",
     "o": [
       "Chromoplast",
       "Chloroplast | क्लोरोप्लास्ट",
-      "Leucoplast",
-      "Centrosome"
+      "Centrosome",
+      "Leucoplast"
     ],
     "a": 1,
     "e": "Chloroplast contains chlorophyll, which absorbs sunlight and gives green color. / क्लोरोप्लास्ट में क्लोरोफिल होता है, जो सूर्य के प्रकाश को सोखता है और हरा रंग देता है।"
   },
   {
-    "qe": "कौन सी सुरक्षात्मक परत केवल पादप कोशिकाओं में पाई जाती है, जंतु कोशिकाओं में नहीं?",
-    "qh": "Which protective layer is found only in plant cells and not in animal cells?",
+    "qe": "Which protective layer is found only in plant cells and not in animal cells?",
+    "qh": "कौन सी सुरक्षात्मक परत केवल पादप कोशिकाओं में पाई जाती है, जंतु कोशिकाओं में नहीं?",
     "o": [
       "Cell Membrane",
       "Cell Wall | कोशिका भित्ति",
@@ -1116,123 +1116,123 @@
     "e": "Plant cells have an outer cell wall for extra safety, while animals only have a cell membrane. / पादप कोशिकाओं में अतिरिक्त सुरक्षा के लिए कोशिका भित्ति होती है, जबकि जंतुओं में केवल कोशिका झिल्ली होती है।"
   },
   {
-    "qe": "पेड़-पौधों की कोशिका भित्ति मुख्य रूप से किसकी बनी होती है?",
-    "qh": "What is the cell wall of plants primarily made of?",
+    "qe": "What is the cell wall of plants primarily made of?",
+    "qh": "पेड़-पौधों की कोशिका भित्ति मुख्य रूप से किसकी बनी होती है?",
     "o": [
       "Protein",
+      "Lipids",
       "Chitin",
-      "Cellulose | सेलुलोज",
-      "Lipids"
+      "Cellulose | सेलुलोज"
     ],
-    "a": 2,
+    "a": 3,
     "e": "Cellulose is a complex carbohydrate that provides structural strength to plants. / सेलुलोज एक जटिल कार्बोहाइड्रेट है जो पौधों को संरचनात्मक मजबूती प्रदान करता है।"
   },
   {
-    "qe": "नोट और कागज किस जैविक पदार्थ से बने होते हैं?",
-    "qh": "The currency notes and paper are made from which biological substance?",
+    "qe": "The currency notes and paper are made from which biological substance?",
+    "qh": "नोट और कागज किस जैविक पदार्थ से बने होते हैं?",
     "o": [
       "Starch",
-      "Cellulose | सेलुलोज",
       "Glycogen",
+      "Cellulose | सेलुलोज",
       "Chitin"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Paper and cotton clothes are made from cellulose derived from plant cell walls. / कागज और सूती कपड़े पादप कोशिका भित्ति से प्राप्त सेलुलोज से बने होते हैं।"
   },
   {
-    "qe": "पौधों में प्रकाश संश्लेषण के लिए कौन सा अंगक जिम्मेदार है?",
-    "qh": "Which organelle is responsible for photosynthesis in plants?",
+    "qe": "Which organelle is responsible for photosynthesis in plants?",
+    "qh": "पौधों में प्रकाश संश्लेषण के लिए कौन सा अंगक जिम्मेदार है?",
     "o": [
+      "Lysosome",
       "Leucoplast",
       "Chromoplast",
-      "Chloroplast | क्लोरोप्लास्ट",
-      "Lysosome"
+      "Chloroplast | क्लोरोप्लास्ट"
     ],
-    "a": 2,
+    "a": 3,
     "e": "Chloroplast contains chlorophyll which helps plants make their own food. / क्लोरोप्लास्ट में क्लोरोफिल होता है जो पौधों को अपना भोजन बनाने में मदद करता है।"
   },
   {
-    "qe": "क्लोरोप्लास्ट, क्रोमोप्लास्ट और ल्यूकोप्लास्ट के लिए सामूहिक शब्द क्या है?",
-    "qh": "What is the collective term for Chloroplast, Chromoplast, and Leucoplast?",
+    "qe": "What is the collective term for Chloroplast, Chromoplast, and Leucoplast?",
+    "qh": "क्लोरोप्लास्ट, क्रोमोप्लास्ट और ल्यूकोप्लास्ट के लिए सामूहिक शब्द क्या है?",
     "o": [
-      "Vacuoles",
-      "Plastids | लवक",
+      "Ribosomes",
       "Mitochondria",
-      "Ribosomes"
+      "Vacuoles",
+      "Plastids | लवक"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Plastids are organelles found in plant cells that help in food making and storage. / लवक पादप कोशिकाओं में पाए जाने वाले अंगक हैं जो भोजन बनाने और संचय में मदद करते हैं।"
   },
   {
-    "qe": "कौन सा लवक जड़ों और बीजों में भोजन संचय के लिए जिम्मेदार है?",
-    "qh": "Which plastid is responsible for storing food in roots and seeds?",
+    "qe": "Which plastid is responsible for storing food in roots and seeds?",
+    "qh": "कौन सा लवक जड़ों और बीजों में भोजन संचय के लिए जिम्मेदार है?",
     "o": [
+      "Centrosome",
       "Chloroplast",
-      "Leucoplast | ल्यूकोप्लास्ट",
       "Chromoplast",
-      "Centrosome"
+      "Leucoplast | ल्यूकोप्लास्ट"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Leucoplast is colorless and stores starch, fats, and proteins. / ल्यूकोप्लास्ट रंगहीन होता है और स्टार्च, वसा और प्रोटीन का संचय करता है।"
   },
   {
-    "qe": "कौन सा लवक टमाटर को 'लाल' और गाजर को 'नारंगी' रंग देता है?",
-    "qh": "Which plastid gives 'Red' color to tomatoes and 'Orange' to carrots?",
+    "qe": "Which plastid gives 'Red' color to tomatoes and 'Orange' to carrots?",
+    "qh": "कौन सा लवक टमाटर को 'लाल' और गाजर को 'नारंगी' रंग देता है?",
     "o": [
-      "Chloroplast",
       "Leucoplast",
       "Chromoplast | क्रोमोप्लास्ट",
+      "Chloroplast",
       "Ribosome"
     ],
-    "a": 2,
+    "a": 1,
     "e": "Chromoplast provides various colors to fruits and flowers. / क्रोमोप्लास्ट फलों और फूलों को विभिन्न रंग प्रदान करता है।"
   },
   {
-    "qe": "किस लवक को 'कोशिका का रसोईघर' कहा जाता है?",
-    "qh": "Which plastid is known as the 'Kitchen of the cell'?",
+    "qe": "Which plastid is known as the 'Kitchen of the cell'?",
+    "qh": "किस लवक को 'कोशिका का रसोईघर' कहा जाता है?",
     "o": [
       "Chromoplast",
-      "Chloroplast | क्लोरोप्लास्ट",
       "Leucoplast",
+      "Chloroplast | क्लोरोप्लास्ट",
       "Nucleus"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Food is synthesized here through photosynthesis. / यहाँ प्रकाश संश्लेषण के माध्यम से भोजन का संश्लेषण होता है।"
   },
   {
-    "qe": "कपास (रुई) लगभग किसका शुद्ध रूप है?",
-    "qh": "Cotton (रुई) is almost pure form of ____.",
+    "qe": "Cotton (रुई) is almost pure form of ____.",
+    "qh": "कपास (रुई) लगभग किसका शुद्ध रूप है?",
     "o": [
-      "Protein",
-      "Cellulose | सेलुलोज",
       "Fat",
-      "Starch"
+      "Starch",
+      "Cellulose | सेलुलोज",
+      "Protein"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Cotton fibers are nearly 90% cellulose. / कपास के रेशे लगभग 90% सेलुलोज होते हैं।"
   },
   {
-    "qe": "किस लवक में कोई वर्णक (रंग) नहीं होता है?",
-    "qh": "Which plastid contains no pigment?",
+    "qe": "Which plastid contains no pigment?",
+    "qh": "किस लवक में कोई वर्णक (रंग) नहीं होता है?",
     "o": [
-      "Chloroplast",
-      "Leucoplast | ल्यूकोप्लास्ट",
       "Chromoplast",
-      "None"
+      "Chloroplast",
+      "None",
+      "Leucoplast | ल्यूकोप्लास्ट"
     ],
-    "a": 1,
+    "a": 3,
     "e": "Leucoplasts are non-pigmented plastids used for storage. / ल्यूकोप्लास्ट गैर-वर्णकित लवक हैं जिनका उपयोग भंडारण के लिए किया जाता है।"
   },
   {
-    "qe": "किनमें 'रसधानी' (Vacuoles) सबसे बड़ी होती है?",
-    "qh": "Which organ has the largest 'Vacuoles'?",
+    "qe": "Which organ has the largest 'Vacuoles'?",
+    "qh": "किनमें 'रसधानी' (Vacuoles) सबसे बड़ी होती है?",
     "o": [
-      "Animals",
-      "Plants | पेड़-पौधे",
+      "Viruses",
       "Bacteria",
-      "Viruses"
+      "Plants | पेड़-पौधे",
+      "Animals"
     ],
-    "a": 1,
+    "a": 2,
     "e": "Plants need more water storage, hence they have larger vacuoles. / पौधों को अधिक जल संचय की आवश्यकता होती है, इसलिए उनकी रसधानी बड़ी होती है।"
   }
 ]
