@@ -39,7 +39,8 @@ class CoachingOnboardingCtaWidget extends StatelessWidget {
     final isDark = isDarkMode;
 
     return Container(
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+      width: double.infinity, // 👈 Pura space lega
+      margin: EdgeInsets.zero, // 👈 Horizontal margin 0 kiya taaki 1v1 Challenge card jitna wide ho sake
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(22),
         gradient: LinearGradient(
@@ -75,7 +76,7 @@ class CoachingOnboardingCtaWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(22),
         child: Stack(
           children: [
-            // Background Decorative Watermark Icon
+            // Background Watermark Icon
             Positioned(
               right: -15,
               bottom: -20,
@@ -93,7 +94,7 @@ class CoachingOnboardingCtaWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Top Pill Badge & Icon
+                  // Top Pill Badge & Emoji Icon
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -106,19 +107,14 @@ class CoachingOnboardingCtaWidget extends StatelessWidget {
                             color: const Color(0xFF2563EB).withValues(alpha: 0.25),
                           ),
                         ),
-                        child: const Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              'INSTITUTE & TEACHERS',
-                              style: TextStyle(
-                                color: Color(0xFF2563EB),
-                                fontSize: 10,
-                                fontWeight: FontWeight.w900,
-                                letterSpacing: 0.6,
-                              ),
-                            ),
-                          ],
+                        child: const Text(
+                          'INSTITUTE & TEACHERS',
+                          style: TextStyle(
+                            color: Color(0xFF2563EB),
+                            fontSize: 10,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 0.6,
+                          ),
                         ),
                       ),
                       Container(
@@ -181,7 +177,7 @@ class CoachingOnboardingCtaWidget extends StatelessWidget {
                   ),
                   const SizedBox(height: 18),
 
-                  // Action Button
+                  // Launch Digital Classroom CTA Button
                   InkWell(
                     onTap: () => _handleDirectOnboarding(context),
                     borderRadius: BorderRadius.circular(14),
@@ -248,26 +244,28 @@ class CoachingOnboardingCtaWidget extends StatelessWidget {
         children: [
           Icon(icon, size: 18, color: const Color(0xFF2563EB)),
           const SizedBox(width: 8),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                title,
-                style: TextStyle(
-                  fontSize: 11.5,
-                  fontWeight: FontWeight.w700,
-                  color: isDark ? Colors.white : const Color(0xFF1E293B),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: TextStyle(
+                    fontSize: 11.5,
+                    fontWeight: FontWeight.w700,
+                    color: isDark ? Colors.white : const Color(0xFF1E293B),
+                  ),
                 ),
-              ),
-              Text(
-                sub,
-                style: TextStyle(
-                  fontSize: 10,
-                  color: isDark ? Colors.white38 : const Color(0xFF94A3B8),
-                  fontWeight: FontWeight.w500,
+                Text(
+                  sub,
+                  style: TextStyle(
+                    fontSize: 10,
+                    color: isDark ? Colors.white38 : const Color(0xFF94A3B8),
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),
