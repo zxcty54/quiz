@@ -16,19 +16,22 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
   bool _isLoading = false;
 
   Future<void> _startNewChallenge() async {
+    if (_isLoading) return;
     setState(() => _isLoading = true);
+
     try {
       final challengeData = await ChallengeService.generateDailyChallenge();
       if (!mounted) return;
 
       final List questions = challengeData['questions'] ?? [];
 
-      // 🛡️ Empty question guard: crash aur white screen se bachata hai
+      // 🛡️ Empty question guard
       if (questions.isEmpty) {
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('⚠️ Sawaal load nahi ho paye. Kripya internet connection check karein!'),
             backgroundColor: Color(0xFFDC2626),
+            behavior: SnackBarBehavior.floating,
             duration: Duration(seconds: 2),
           ),
         );
@@ -51,11 +54,14 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
           SnackBar(
             content: Text('Test shuru karne me samasya aayi: $e'),
             backgroundColor: const Color(0xFFDC2626),
+            behavior: SnackBarBehavior.floating,
           ),
         );
       }
     } finally {
-      if (mounted) setState(() => _isLoading = false);
+      if (mounted) {
+        setState(() => _isLoading = false);
+      }
     }
   }
 
@@ -73,7 +79,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF4F46E5).withOpacity(0.35),
+            color: const Color(0xFF4F46E5).withValues(alpha: 0.35),
             blurRadius: 14,
             offset: const Offset(0, 6),
           ),
@@ -87,7 +93,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
                 width: 48,
                 height: 48,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.18),
+                  color: Colors.white.withValues(alpha: 0.18),
                   borderRadius: BorderRadius.circular(14),
                 ),
                 alignment: Alignment.center,
