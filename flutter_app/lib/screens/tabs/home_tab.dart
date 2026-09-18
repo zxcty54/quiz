@@ -9,7 +9,11 @@ import '../../widgets/pro_pdf_vault_card.dart';
 import '../../widgets/coaching_hub_card.dart';
 import '../../widgets/coaching_onboarding_cta_widget.dart';
 import '../../widgets/hall_of_fame_carousel_widget.dart';
-import '../sprint_challenge_screen.dart';
+
+// ⚔️ Challenge screens & service
+import '../challenge_quiz_screen.dart';
+import '../district_leaderboard_screen.dart';
+import '../../services/challenge_service.dart';
 
 class HomeTab extends StatefulWidget {
   final Map<String, dynamic> appConfig;
@@ -42,12 +46,35 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
-  // GlobalKeys for Pull-To-Refresh Trigger
   final GlobalKey<LatestJobsWidgetState> _jobsWidgetKey = GlobalKey<LatestJobsWidgetState>();
   final GlobalKey<DailyBulletinWidgetState> _bulletinWidgetKey = GlobalKey<DailyBulletinWidgetState>();
   final GlobalKey<FirstInIndiaWidgetState> _firstInIndiaWidgetKey = GlobalKey<FirstInIndiaWidgetState>();
   final GlobalKey<CoachingHubCardState> _coachingHubKey = GlobalKey<CoachingHubCardState>();
   final GlobalKey<HallOfFameCarouselWidgetState> _hallOfFameKey = GlobalKey<HallOfFameCarouselWidgetState>();
+
+  bool _isChallengeLoading = false;
+
+  // 🎲 10-Question Challenge Start Handler
+  Future<void> _startChallengeSprint() async {
+    setState(() => _isChallengeLoading = true);
+    try {
+      final challengeData = await ChallengeService.generateDailyChallenge();
+      if (!mounted) return;
+
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ChallengeQuizScreen(
+            questions: challengeData['questions'],
+            challengeCode: challengeData['challenge_code'],
+            isDarkMode: widget.isDarkMode,
+          ),
+        ),
+      );
+    } finally {
+      if (mounted) setState(() => _isChallengeLoading = false);
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -69,7 +96,7 @@ class _HomeTabState extends State<HomeTab> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 1. TODAY TICKER (Short Version)
+            // 1. TODAY TICKER
             if (widget.appConfig['today_update']?['show'] == true) ...[
               TodayUpdateTickerWidget(
                 updateData: widget.appConfig['today_update'],
@@ -78,43 +105,43 @@ class _HomeTabState extends State<HomeTab> {
               const SizedBox(height: 16),
             ],
 
-            // 🛡️ 2. HERO TRUST BANNER WIDGET
+            // 🛡️ 2. HERO TRUST BANNER
             TrustHeroBannerWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 16),
 
-            // 🏫 3. BIHAR COACHING & BATCH HUB (HERO BANNER KE NICHE)
+            // 🏫 3. BIHAR COACHING HUB
             CoachingHubCard(
               key: _coachingHubKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
-            
+
             // 👨‍🏫 4. LEARN PREVIEW CARD
             _buildLearnPreviewCard(context),
             const SizedBox(height: 18),
 
-            // 📰 5. DAILY BULLETIN WIDGET
+            // 📰 5. DAILY BULLETIN
             DailyBulletinWidget(
               key: _bulletinWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📢 6. LATEST JOBS WIDGET
+            // 📢 6. LATEST JOBS
             LatestJobsWidget(
               key: _jobsWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 🏆 7. FIRST IN INDIA EXPRESS WIDGET
+            // 🏆 7. FIRST IN INDIA EXPRESS
             FirstInIndiaWidget(
               key: _firstInIndiaWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📑 8. PRO STUDY MATERIAL & PDF VAULT CARD
+            // 📑 8. PDF VAULT CARD
             ProPdfVaultCard(
               isDarkMode: widget.isDarkMode,
               customWebsiteUrl: widget.appConfig['pdf_vault_main_url'],
@@ -122,7 +149,7 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // ⚔️ 9. SPEED RUN DUEL CARD
+            // ⚔️ 9. 1v1 DUEL & DISTRICT LEADERBOARD CARD
             _buildSpeedRunChallengeCard(context),
             const SizedBox(height: 18),
 
@@ -134,14 +161,14 @@ class _HomeTabState extends State<HomeTab> {
             EligibilityCheckerWidget(isDarkMode: widget.isDarkMode, onTapUrl: widget.onTapUrl),
             const SizedBox(height: 18),
 
-            // 📅 12. LAUNCH ROADMAP WIDGET
+            // 📅 12. LAUNCH ROADMAP
             LaunchRoadmapCardWidget(
               appConfig: widget.appConfig,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 🏫 13. SUBTLE COACHING & TEACHER ONBOARDING CTA
+            // 🏫 13. COACHING ONBOARDING CTA
             CoachingOnboardingCtaWidget(
               isDarkMode: widget.isDarkMode,
             ),
@@ -151,7 +178,7 @@ class _HomeTabState extends State<HomeTab> {
             const TelegramCreatorWidget(),
             const SizedBox(height: 20),
 
-            // 🏆 15. HALL OF FAME & CLAIM SELECTION (SBSE LAST MEIN)
+            // 🏆 15. HALL OF FAME
             HallOfFameCarouselWidget(
               key: _hallOfFameKey,
               isDarkMode: widget.isDarkMode,
@@ -163,7 +190,6 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // 👨‍🏫 LEARN PREVIEW CARD
   Widget _buildLearnPreviewCard(BuildContext context) {
     int percentDisplay = (widget.lastLearnProgress * 100).toInt();
 
@@ -294,21 +320,20 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // ⚔️ LIVE DUEL SPRINT CARD
   Widget _buildSpeedRunChallengeCard(BuildContext context) {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFFEA580C), Color(0xFF9A3412)],
+          colors: [Color(0xFF4F46E5), Color(0xFF7C3AED)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(22),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFFEA580C).withOpacity(0.35),
+            color: const Color(0xFF4F46E5).withOpacity(0.35),
             blurRadius: 16,
             offset: const Offset(0, 6),
           ),
@@ -331,7 +356,7 @@ class _HomeTabState extends State<HomeTab> {
                   children: [
                     Text('⚔️ ', style: TextStyle(fontSize: 11)),
                     Text(
-                      'LIVE DUEL SPRINT',
+                      '1v1 DUEL & DISTRICT RANK',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 10,
@@ -353,7 +378,7 @@ class _HomeTabState extends State<HomeTab> {
                     Icon(Icons.timer_outlined, size: 12, color: Colors.amberAccent),
                     SizedBox(width: 4),
                     Text(
-                      '5 Mins • 10 Levels',
+                      '10 Qs • 15s Timer',
                       style: TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.bold),
                     ),
                   ],
@@ -373,46 +398,71 @@ class _HomeTabState extends State<HomeTab> {
           ),
           const SizedBox(height: 5),
           Text(
-            '10 High-yield concepts solve karo, result dost ko WhatsApp par bhejo aur dekho kon jeet-ta hai!',
+            '10 rapid sawal bina calculation ke solve karo, WhatsApp par dost ko challenge karo aur District Topper bano!',
             style: TextStyle(
-              color: Colors.white.withOpacity(0.8),
+              color: Colors.white.withOpacity(0.85),
               fontSize: 12,
               height: 1.35,
             ),
           ),
           const SizedBox(height: 16),
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => SprintChallengeScreen(
-                      subjectMapping: widget.subjectMapping,
-                    ),
+          Row(
+            children: [
+              Expanded(
+                child: OutlinedButton.icon(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DistrictLeaderboardScreen(
+                          isDarkMode: widget.isDarkMode,
+                        ),
+                      ),
+                    );
+                  },
+                  icon: const Icon(Icons.leaderboard_rounded, size: 16, color: Colors.white),
+                  label: const Text(
+                    'Leaderboard',
+                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.white),
                   ),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.white,
-                foregroundColor: const Color(0xFFC2410C),
-                elevation: 0,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                padding: const EdgeInsets.symmetric(vertical: 12),
-              ),
-              child: const Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(Icons.bolt_rounded, size: 20, color: Color(0xFFEA580C)),
-                  SizedBox(width: 6),
-                  Text(
-                    'Start Challenge Sprint 🚀',
-                    style: TextStyle(fontWeight: FontWeight.w900, fontSize: 13.5),
+                  style: OutlinedButton.styleFrom(
+                    side: const BorderSide(color: Colors.white38),
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   ),
-                ],
+                ),
               ),
-            ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: ElevatedButton(
+                  onPressed: _isChallengeLoading ? null : _startChallengeSprint,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.white,
+                    foregroundColor: const Color(0xFF4F46E5),
+                    elevation: 0,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    padding: const EdgeInsets.symmetric(vertical: 12),
+                  ),
+                  child: _isChallengeLoading
+                      ? const SizedBox(
+                          width: 16,
+                          height: 16,
+                          child: CircularProgressIndicator(strokeWidth: 2),
+                        )
+                      : const Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.bolt_rounded, size: 18, color: Color(0xFF4F46E5)),
+                            SizedBox(width: 4),
+                            Text(
+                              'Start Duel 🚀',
+                              style: TextStyle(fontWeight: FontWeight.w900, fontSize: 13),
+                            ),
+                          ],
+                        ),
+                ),
+              ),
+            ],
           ),
         ],
       ),
