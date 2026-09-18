@@ -1716,18 +1716,6 @@
     "e": "Also known as flux density. / Ise flux ghnatv bhi kehte hain."
   },
   {
-    "qe": "Which material has 'Large and Positive' susceptibility?",
-    "qh": "Kaun sa padarth 'badi aur dhanatmak' pravritti dikhata hai?",
-    "o": [
-      "Paramagnetic",
-      "Ferromagnetic | Louh-chumbakiya",
-      "Diamagnetic",
-      "None"
-    ],
-    "a": 1,
-    "e": "Ferromagnetic materials are strongly magnetized. / Louh-chumbakiya padarth mazbooti se chumbakit hote hain."
-  },
-  {
     "qe": "What is the 'Angle of Dip' at Earth's magnetic equator?",
     "qh": "Prithvi ki chumbakiya bhumadhya rekha par 'nati kon' kya hai?",
     "o": [
@@ -1846,18 +1834,6 @@
     ],
     "a": 1,
     "e": "Basis for transformer operation. / Transformer ke kaam karne ka aadhar."
-  },
-  {
-    "qe": "What is 'Tesla-meter/Ampere' the unit of?",
-    "qh": "'Tesla-meter/Ampere' kiski ikai hai?",
-    "o": [
-      "Flux",
-      "Permeability ($\\mu$) | Pargamyata ($\\mu$)",
-      "Inductance",
-      "None"
-    ],
-    "a": 1,
-    "e": "Standard unit for $\\mu$. / $\\mu$ ki manak ikai."
   },
   {
     "qe": "What happens if you 'Cut' a bar magnet into 4 pieces?",
@@ -2014,30 +1990,6 @@
     ],
     "a": 1,
     "e": "$1 Tesla = 10,000 Gauss$."
-  },
-  {
-    "qe": "What is 'Agonic Line'?",
-    "qh": "'Agonic Line' kya hai?",
-    "o": [
-      "Zero Dip",
-      "Zero Declination | Shunya dikpat bindu",
-      "Max Force",
-      "None"
-    ],
-    "a": 1,
-    "e": "Joins places with zero magnetic declination. / Shunya chumbakiya dikpat wale sthano ko jodti hai."
-  },
-  {
-    "qe": "What is 'Isogonic Line'?",
-    "qh": "'Isogonic Line' kya hai?",
-    "o": [
-      "Same Dip",
-      "Same Declination | Saman dikpat bindu",
-      "Same Force",
-      "None"
-    ],
-    "a": 1,
-    "e": "Joins places with equal magnetic declination. / Saman chumbakiya dikpat wale sthano ko jodti hai."
   },
   {
     "qe": "What is the unit of 'Magnetic Dipole Moment' per unit volume?",
@@ -2364,30 +2316,6 @@
     "e": "To make the magnetic field radial and strong. / chumbakiya kshetra ko trijya aur mazboot banane ke liye."
   },
   {
-    "qe": "What is 'Agonic Line'?",
-    "qh": "'agonic rekha' kya hai?",
-    "o": [
-      "Line of equal dip",
-      "Line of zero declination | shunya dikpat wali rekha",
-      "Line of max dip",
-      "None"
-    ],
-    "a": 1,
-    "e": "Joins places where magnetic north and true north are the same. / un sthanon ko jodti hai jahan chumbakiya aur satya uttar ek hi hain."
-  },
-  {
-    "qe": "What is the 'Flux' linkage unit?",
-    "qh": "'flux linkage' ki ikai kya hai?",
-    "o": [
-      "Tesla",
-      "Weber-turn | Weber-turn",
-      "Henry",
-      "None"
-    ],
-    "a": 1,
-    "e": "Total flux through all turns of a coil. / coil ke sabhi phero se guzarne wala kul flux."
-  },
-  {
     "qe": "Which 'Law' relates the total magnetic flux through a closed surface to zero?",
     "qh": "kaun sa niyam band satah se kul chumbakiya flux ko shunya ke barabar batata hai?",
     "o": [
@@ -2434,18 +2362,6 @@
     ],
     "a": 1,
     "e": "They resist magnetic flux, making relative permeability less than 1. / ye chumbakiya flux ka virodh karte hain."
-  },
-  {
-    "qe": "What is 'Aclinic Line' joining?",
-    "qh": "'aclinic rekha' kise jodti hai?",
-    "o": [
-      "Same dip",
-      "Zero dip points | shunya nati kon wale bindu",
-      "Same force",
-      "None"
-    ],
-    "a": 1,
-    "e": "It represents the magnetic equator. / yah chumbakiya bhumadhya rekha ko darshati hai."
   },
   {
     "qe": "What is the speed of EM waves in vacuum formula?",
@@ -2520,18 +2436,6 @@
     "e": "$100 \\times 0.2 = 20$. Total flux linkage. / kul flux linkage."
   },
   {
-    "qe": "What is 'Coercivity' of Soft Iron?",
-    "qh": "narm lohe ki 'nigrahita' (Coercivity) kya hoti hai?",
-    "o": [
-      "Very High",
-      "Very Low | bahut kam",
-      "Infinite",
-      "None"
-    ],
-    "a": 1,
-    "e": "Makes it easy to magnetize and demagnetize in AC circuits. / AC circuits mein ise chumbakit aur vichumbakit karna aasan banata hai."
-  },
-  {
     "qe": "Which part of ear is 'Pinna'?",
     "qh": "kaan ka kaun sa bhag 'pinna' hai?",
     "o": [
@@ -2542,30 +2446,6 @@
     ],
     "a": 2,
     "e": "Collects sound waves. / dhwani tarango ko ikatha karta hai."
-  },
-  {
-    "qe": "What is 'Tesla' in terms of Gauss?",
-    "qh": "Gauss ke sandarbh mein 'Tesla' kya hai?",
-    "o": [
-      "$10^2$",
-      "$10^4$ | $10^4$",
-      "$10^6$",
-      "None"
-    ],
-    "a": 1,
-    "e": "$1 Tesla = 10,000 Gauss$."
-  },
-  {
-    "qe": "What is 'Magnetic Potential' unit?",
-    "qh": "'chumbakiya vibhav' ki ikai kya hai?",
-    "o": [
-      "Tesla",
-      "Joule/Weber | Joule/Weber",
-      "Weber",
-      "Henry"
-    ],
-    "a": 1,
-    "e": "Analogous to electric potential. / vidyut vibhav ke saman."
   },
   {
     "qe": "Which 'Substance' has susceptibility $\\chi < 0$?",
@@ -2590,18 +2470,6 @@
     ],
     "a": 1,
     "e": "Also called magnetic flux density. / ise chumbakiya flux ghnatv bhi kehte hain."
-  },
-  {
-    "qe": "What is 'Intensity of Magnetization' for a vacuum?",
-    "qh": "nirvat ke liye 'chumbakan ki teevrata' kya hai?",
-    "o": [
-      "Infinite",
-      "Zero | shunya (Zero)",
-      "One",
-      "None"
-    ],
-    "a": 1,
-    "e": "Vacuum has no material to magnetize. / nirvat mein chumbakit hone ke liye koi padarth nahi hota."
   },
   {
     "qe": "Which 'Rule' gives the direction of magnetic field for a solenoid?",
@@ -2770,18 +2638,6 @@
     ],
     "a": 1,
     "e": "Ratio of magnetic moment to angular momentum. / चुंबकीय आघूर्ण और कोणीय संवेग का अनुपात।"
-  },
-  {
-    "qe": "What is the 'SI Unit' of Magnetic Susceptibility?",
-    "qh": "'चुंबकीय प्रवृत्ति' की 'SI इकाई' क्या है?",
-    "o": [
-      "Tesla",
-      "Ampere/meter",
-      "Dimensionless | मात्रकहीन",
-      "Henry"
-    ],
-    "a": 2,
-    "e": "It is a ratio, so it has no unit. / यह एक अनुपात है, इसलिए इसका कोई मात्रक नहीं है।"
   },
   {
     "qe": "Which 'Rule' gives the direction of eddy currents?",
@@ -3432,30 +3288,6 @@
     "e": "Tesla is flux per unit area. / टेस्ला प्रति इकाई क्षेत्रफल फ्लक्स है।"
   },
   {
-    "qe": "Which 'Substance' has susceptibility $\\chi < 0$?",
-    "qh": "किस 'पदार्थ' की प्रवृत्ति $\\chi < 0$ होती है?",
-    "o": [
-      "Iron",
-      "Aluminium",
-      "Copper | तांबा (Diamagnetic)",
-      "None"
-    ],
-    "a": 2,
-    "e": "Diamagnetic substances have small negative susceptibility. / प्रति-चुंबकीय पदार्थों की प्रवृत्ति ऋणात्मक होती है।"
-  },
-  {
-    "qe": "What is the 'SI Unit' of intensity of magnetization ($I$)?",
-    "qh": "चुंबकन की तीव्रता (I) की 'SI इकाई' क्या है?",
-    "o": [
-      "Tesla",
-      "Ampere/meter | एम्पीयर/मीटर (A/m)",
-      "Weber",
-      "Henry"
-    ],
-    "a": 1,
-    "e": "Magnetic moment per unit volume. / प्रति इकाई आयतन चुंबकीय आघूर्ण।"
-  },
-  {
     "qe": "What is 'Step-up Transformer' effect on 'Current'?",
     "qh": "'स्टेप-अप ट्रांसफार्मर' का 'करंट' (Current) पर क्या प्रभाव पड़ता है?",
     "o": [
@@ -3744,18 +3576,6 @@
     "e": "Inductance depends on the square of the turns. / Prerakatva phero ke varg par nirbhar karta hai."
   },
   {
-    "qe": "What is 'Agonic Line'?",
-    "qh": "'Agonic Line' kya hai?",
-    "o": [
-      "Zero Dip",
-      "Zero Declination | Shunya dikpat rekha",
-      "Max Force",
-      "None"
-    ],
-    "a": 1,
-    "e": "Line joining places where magnetic north and true north coincide. / Shunya chumbakiya dikpat wale sthano ko jodne wali rekha."
-  },
-  {
     "qe": "What is 'Relative Permeability' ($\\mu_r$) of a paramagnetic material?",
     "qh": "Anu-chumbakiya padarth ki 'sapeksh pargamyata' ($\\mu_r$) kya hoti hai?",
     "o": [
@@ -3792,18 +3612,6 @@
     "e": "Water is a diamagnetic substance. / Pani ek prati-chumbakiya padarth hai."
   },
   {
-    "qe": "What is the 'Flux' through a unit area called?",
-    "qh": "Ikai kshetraphal se guzarne wala 'Flux' kya kehlata hai?",
-    "o": [
-      "Inductance",
-      "Magnetic Induction (B) | Chumbakiya preran (B)",
-      "Susceptibility",
-      "None"
-    ],
-    "a": 1,
-    "e": "Also known as magnetic flux density. / Ise flux ghnatv bhi kehte hain."
-  },
-  {
     "qe": "What is 'Self Inductance' of a long solenoid proportional to?",
     "qh": "perinalika ka sw-prerakatva kiske samanupati hai?",
     "o": [
@@ -3828,18 +3636,6 @@
     "e": "Steel has higher energy loss. / steel mein oorja hani zyada hoti hai."
   },
   {
-    "qe": "Which 'Rule' gives the direction of magnetic field for a solenoid?",
-    "qh": "perinalika ke liye chumbakiya kshetra ki disha kaun sa niyam deta hai?",
-    "o": [
-      "Right-hand Palm rule | dayein hath ki hatheli ka niyam",
-      "Lenz's Law",
-      "Ohm's Law",
-      "None"
-    ],
-    "a": 0,
-    "e": "Thumb = North pole. / angutha = uttar dhruv."
-  },
-  {
     "qe": "What is 'Tesla' unit for?",
     "qh": "'Tesla' kiski ikai hai?",
     "o": [
@@ -3862,30 +3658,6 @@
     ],
     "a": 0,
     "e": "Requires a loop for flux linkage. / flux linkage ke liye loop chahiye."
-  },
-  {
-    "qe": "What is 'Magnetic Susceptibility' of 'Liquid Oxygen'?",
-    "qh": "'liquid oxygen' ki chumbakiya pravritti kya hai?",
-    "o": [
-      "Positive | dhanatmak",
-      "Negative",
-      "Zero",
-      "None"
-    ],
-    "a": 0,
-    "e": "It is paramagnetic. / ye anu-chumbakiya hai."
-  },
-  {
-    "qe": "What is 'Coercivity' of soft iron?",
-    "qh": "soft iron ki 'nigrahita' kaisi hoti hai?",
-    "o": [
-      "Very Low | bahut kam",
-      "Very High",
-      "Infinite",
-      "None"
-    ],
-    "a": 0,
-    "e": "Easy to demagnetize. / vichumbakit karna aasan hai."
   },
   {
     "qe": "What is the magnetism target completed now?",
@@ -3934,18 +3706,6 @@
     ],
     "a": 1,
     "e": "Unequal opposite moments."
-  },
-  {
-    "qe": "What is 'Magnetic Intensity' (H) independent of?",
-    "qh": "'chumbakiya teevrata' (H) kisse swatantra hai?",
-    "o": [
-      "Current",
-      "Medium | madhyam",
-      "Turns",
-      "None"
-    ],
-    "a": 1,
-    "e": "H depends on I and n only."
   },
   {
     "qe": "What is 'Hysteresis Loop' area energy loss form?",
@@ -4044,54 +3804,6 @@
     "e": "The critical field required to destroy superconductivity drops to zero at $T_c$. / $T_c$ पर अतिचालकता नष्ट करने के लिए आवश्यक क्षेत्र शून्य हो जाता है।"
   },
   {
-    "qe": "What is 'Magnetic Intensity' (H) independent of?",
-    "qh": "'चुंबकीय तीव्रता' (H) किससे स्वतंत्र है?",
-    "o": [
-      "Current",
-      "Medium properties | माध्यम के गुण",
-      "Number of turns",
-      "None"
-    ],
-    "a": 1,
-    "e": "Depends only on excitation current and geometry. / केवल उत्तेजना करंट और ज्यामिति पर निर्भर करता है।"
-  },
-  {
-    "qe": "What is the magnetism target completed now?",
-    "qh": "मैग्नेटिज्म में अब तक कुल कितने प्रश्न पूरे हो चुके हैं?",
-    "o": [
-      "900",
-      "950 | 950",
-      "1000",
-      "500"
-    ],
-    "a": 1,
-    "e": "Almost reached the 1000 mark! / 1000 के लक्ष्य के करीब!"
-  },
-  {
-    "qe": "What is 'Coercivity' of soft iron?",
-    "qh": "नरम लोहे की 'निग्राहिता' क्या है?",
-    "o": [
-      "Very High",
-      "Very Low | बहुत कम (Very Low)",
-      "Infinite",
-      "None"
-    ],
-    "a": 1,
-    "e": "Easy to demagnetize. / विचुंबकित करना आसान है।"
-  },
-  {
-    "qe": "Which material is used for 'Permanent Magnets' like Alnico?",
-    "qh": "Alnico जैसे 'स्थायी चुंबक' के लिए किस सामग्री का उपयोग होता है?",
-    "o": [
-      "Steel / Alnico | स्टील / एलनिको",
-      "Soft iron",
-      "Copper",
-      "None"
-    ],
-    "a": 0,
-    "e": "Needs high retentivity and coercivity. / उच्च धारणशीलता और निग्राहिता की आवश्यकता।"
-  },
-  {
     "qe": "What is 'Curie Temperature' of Nickel?",
     "qh": "निकल का क्यूरी तापमान क्या है?",
     "o": [
@@ -4102,30 +3814,6 @@
     ],
     "a": 0,
     "e": "Lower than iron. / लोहे से कम।"
-  },
-  {
-    "qe": "What is 'Isogonic Line'?",
-    "qh": "'आइसोगोनिक रेखा' क्या है?",
-    "o": [
-      "Same declination points | समान दिकपात के बिंदु",
-      "Same dip",
-      "Zero dip",
-      "None"
-    ],
-    "a": 0,
-    "e": "Joins places with equal magnetic declination. / समान चुंबकीय दिकपात वाले स्थानों को जोड़ती है।"
-  },
-  {
-    "qe": "What is 'Retentivity' of Steel compared to Soft Iron?",
-    "qh": "नरम लोहे की तुलना में स्टील की 'धारणशीलता' क्या है?",
-    "o": [
-      "Lower | कम (Lower)",
-      "Higher",
-      "Equal",
-      "None"
-    ],
-    "a": 0,
-    "e": "Soft iron has higher initial retentivity. / नरम लोहे की शुरूआती धारणशीलता अधिक होती है।"
   },
   {
     "qe": "What is 'Hysteresis Loop' area representing energy loss as?",
@@ -4176,30 +3864,6 @@
     "e": "Vacuum cannot be polarized or magnetized. / निर्वात को ध्रुवित या चुंबकित नहीं किया जा सकता।"
   },
   {
-    "qe": "What is 'Magnetic Susceptibility' of 'Antimony'?",
-    "qh": "'एंटीमनी' की चुंबकीय प्रवृत्ति क्या है?",
-    "o": [
-      "Negative | ऋणात्मक",
-      "Positive",
-      "Zero",
-      "None"
-    ],
-    "a": 0,
-    "e": "It is a diamagnetic substance. / यह एक प्रति-चुंबकीय पदार्थ है।"
-  },
-  {
-    "qe": "What is 'Mutual Inductance' unit?",
-    "qh": "'अन्योन्य प्रेरकत्व' की इकाई क्या है?",
-    "o": [
-      "Henry | हेनरी",
-      "Tesla",
-      "Weber",
-      "None"
-    ],
-    "a": 0,
-    "e": "Same as self-inductance. / स्व-प्रेरकत्व के समान।"
-  },
-  {
     "qe": "What is 'Self Inductance' of a long solenoid proportional to turns $N$?",
     "qh": "स्व-प्रेरकत्व फेरों $N$ के कैसे संबंधित है?",
     "o": [
@@ -4212,54 +3876,6 @@
     "e": "Square of the number of turns. / फेरों की संख्या का वर्ग।"
   },
   {
-    "qe": "What is 'Isogonic Line'?",
-    "qh": "'आइसोगोनिक रेखा' क्या है?",
-    "o": [
-      "Same declination points | समान दिकपात के बिंदु",
-      "Same dip",
-      "Zero dip",
-      "None"
-    ],
-    "a": 0,
-    "e": "Connects equal declination values. / समान दिकपात मानों को जोड़ती है।"
-  },
-  {
-    "qe": "What is the magnetism target completed now?",
-    "qh": "मैग्नेटिज्म में अब तक कितने प्रश्न पूरे हो चुके हैं?",
-    "o": [
-      "950",
-      "1000 | 1000",
-      "500",
-      "2000"
-    ],
-    "a": 1,
-    "e": "Mission Magnetism 1000 Completed! / मिशन मैग्नेटिज्म 1000 पूरा हुआ!"
-  },
-  {
-    "qe": "What is 'Retentivity' of Steel compared to Soft Iron?",
-    "qh": "सॉफ्ट आयरन की तुलना में स्टील की धारणशीलता क्या है?",
-    "o": [
-      "Lower | कम",
-      "Higher",
-      "Equal",
-      "None"
-    ],
-    "a": 0,
-    "e": "Initially lower than soft iron. / नरम लोहे से कम।"
-  },
-  {
-    "qe": "What is 'Magnetic Susceptibility' of 'Liquid Oxygen'?",
-    "qh": "'Liquid oxygen' ki chumbakiya pravritti kya hai?",
-    "o": [
-      "Positive | Dhanatmak",
-      "Negative",
-      "Zero",
-      "None"
-    ],
-    "a": 0,
-    "e": "Oxygen is paramagnetic. / Oxygen anu-chumbakiya hai."
-  },
-  {
     "qe": "What is 'Barkhausen Effect' evidence of?",
     "qh": "'Barkhausen effect' kiska praman hai?",
     "o": [
@@ -4270,42 +3886,6 @@
     ],
     "a": 0,
     "e": "Shows domain alignment steps. / Domain sanrekhan dikhata hai."
-  },
-  {
-    "qe": "What is 'Isogonic Line'?",
-    "qh": "'आइसोगोनिक रेखा' क्या है?",
-    "o": [
-      "Same declination points | समान दिकपात के बिंदु",
-      "Same dip",
-      "Zero dip",
-      "None"
-    ],
-    "a": 0,
-    "e": "Joins places with equal magnetic declination. / समान चुंबकीय दिकपात वाले स्थानों को जोड़ती है।"
-  },
-  {
-    "qe": "What is 'Retentivity' of Steel compared to Soft Iron?",
-    "qh": "नरम लोहे की तुलना में स्टील की 'धारणशीलता' क्या है?",
-    "o": [
-      "Lower | कम (Lower)",
-      "Higher",
-      "Equal",
-      "None"
-    ],
-    "a": 0,
-    "e": "Soft iron has higher initial retentivity. / नरम लोहे की शुरूआती धारणशीलता अधिक होती है।"
-  },
-  {
-    "qe": "What is 'Isogonic Line' on a map?",
-    "qh": "'Isogonic Line' kya hai?",
-    "o": [
-      "Same declination points | Saman dikpat bindu",
-      "Same dip",
-      "Zero dip",
-      "None"
-    ],
-    "a": 0,
-    "e": "Joins places with equal magnetic declination. / Saman chumbakiya dikpat wale sthano ko jodti hai."
   },
   {
     "qe": "Magnetic field lines are mathematically represented as continuous, unbroken closed loops. What fundamental physical principle distinguishes this behavior from that of an electrostatic dipole configuration?",
@@ -4584,78 +4164,6 @@
     "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
   },
   {
-    "qe": "What is 'Aclinic Line'?",
-    "qh": "'एक्लिनिक रेखा' क्या है?",
-    "o": [
-      "Zero Dip | शून्य नति (Zero Dip)",
-      "Zero Declination",
-      "Max force",
-      "None"
-    ],
-    "a": 0,
-    "e": "Magnetic equator revision point. / मैग्नेटिज्म रिवीजन पॉइंट।"
-  },
-  {
-    "qe": "What is 'Tesla' in Gauss?",
-    "qh": "'टेस्la' गॉस में कितना है?",
-    "o": [
-      "$10^4$ | $10^4$ Gauss",
-      "$10^2$",
-      "$10^6$",
-      "None"
-    ],
-    "a": 0,
-    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
-  },
-  {
-    "qe": "What is 'Aclinic Line'?",
-    "qh": "'एक्लिनिक रेखा' क्या है?",
-    "o": [
-      "Zero Dip | शून्य नति (Zero Dip)",
-      "Zero Declination",
-      "Max force",
-      "None"
-    ],
-    "a": 0,
-    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
-  },
-  {
-    "qe": "What is 'Tesla' in Gauss?",
-    "qh": "'टेस्ला' गॉस में कितना है?",
-    "o": [
-      "$10^4$ | $10^4$ Gauss",
-      "$10^2$",
-      "$10^6$",
-      "None"
-    ],
-    "a": 0,
-    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
-  },
-  {
-    "qe": "What is 'Tesla' in Gauss?",
-    "qh": "'टेस्ला' गॉस में:",
-    "o": [
-      "$10^4$ | $10^4$ Gauss",
-      "$10^2$",
-      "$10^6$",
-      "None"
-    ],
-    "a": 0,
-    "e": "Revision Point. / रिवीजन पॉइंट।"
-  },
-  {
-    "qe": "What is 'Aclinic Line'?",
-    "qh": "'एक्लिनिक रेखा' है:",
-    "o": [
-      "Zero Dip | शून्य नति",
-      "Zero Declination",
-      "Max force",
-      "None"
-    ],
-    "a": 0,
-    "e": "Revision Point. / रिवीजन पॉइंट।"
-  },
-  {
     "qe": "What is 'Tesla' unit of?",
     "qh": "'टेस्ला' किसकी इकाई है?",
     "o": [
@@ -4666,101 +4174,5 @@
     ],
     "a": 0,
     "e": "Physics Revision. / भौतिकी रिवीजन।"
-  },
-  {
-    "qe": "What is 'Aclinic Line'?",
-    "qh": "'एक्लिनिक रेखा' है:",
-    "o": [
-      "Zero Dip | शून्य नति",
-      "Zero Declination",
-      "Max force",
-      "None"
-    ],
-    "a": 0,
-    "e": "Revision Point. / रिवीजन पॉइंट।"
-  },
-  {
-    "qe": "What is 'Tesla' unit of?",
-    "qh": "'टेस्ला' किसकी इकाई है?",
-    "o": [
-      "Magnetic field | चुंबकीय क्षेत्र",
-      "Power",
-      "Sound",
-      "None"
-    ],
-    "a": 0,
-    "e": "Physics Revision. / भौतिकी रिवीजन।"
-  },
-  {
-    "qe": "What is 'Aclinic Line'?",
-    "qh": "'एक्लिनिक रेखा' है:",
-    "o": [
-      "Zero Dip | शून्य नति",
-      "Zero Declination",
-      "Max force",
-      "None"
-    ],
-    "a": 0,
-    "e": "Magnetic equator. / चुंबकीय भूमध्य रेखा।"
-  },
-  {
-    "qe": "What is 'Tesla' unit of?",
-    "qh": "'टेस्ला' किसकी इकाई है?",
-    "o": [
-      "Flux",
-      "Magnetic field | चुंबकीय क्षेत्र",
-      "Sound",
-      "None"
-    ],
-    "a": 1,
-    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
-  },
-  {
-    "qe": "What is 'Tesla' unit of?",
-    "qh": "'टेस्ला' किसकी इकाई है?",
-    "o": [
-      "Magnetic field | चुंबकीय क्षेत्र",
-      "Power",
-      "Sound",
-      "None"
-    ],
-    "a": 0,
-    "e": "Physics Revision. / भौतिकी रिवीजन।"
-  },
-  {
-    "qe": "What is 'Aclinic Line'?",
-    "qh": "'एक्लिनिक रेखा' है:",
-    "o": [
-      "Zero Dip | शून्य नति",
-      "Zero Declination",
-      "Max force",
-      "None"
-    ],
-    "a": 0,
-    "e": "Magnetic equator. / चुंबकीय भूमध्य रेखा।"
-  },
-  {
-    "qe": "What is 'Tesla' in Gauss?",
-    "qh": "'टेस्ला' गॉस में:",
-    "o": [
-      "$10^4$ | $10^4$ Gauss",
-      "$10^2$",
-      "$10^6$",
-      "None"
-    ],
-    "a": 0,
-    "e": "Magnetism Revision. / मैग्नेटिज्म रिवीजन।"
-  },
-  {
-    "qe": "What is 'Tesla' unit of?",
-    "qh": "'टेस्ला' किसकी इकाई है?",
-    "o": [
-      "Magnetic field | चुंबकीय क्षेत्र",
-      "Power",
-      "Sound",
-      "None"
-    ],
-    "a": 0,
-    "e": "Revision Point. / रिवीजन पॉइंट।"
   }
 ]
