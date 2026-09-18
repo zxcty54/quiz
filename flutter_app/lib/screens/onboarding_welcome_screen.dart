@@ -1,5 +1,4 @@
 import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -8,7 +7,7 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'home_screen.dart';
 
 class OnboardingWelcomeScreen extends StatefulWidget {
-  final Widget nextScreen; 
+  final Widget nextScreen;
 
   const OnboardingWelcomeScreen({
     super.key,
@@ -24,15 +23,21 @@ class _OnboardingWelcomeScreenState
     extends State<OnboardingWelcomeScreen>
     with TickerProviderStateMixin {
   final PageController _pageController = PageController();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final TextEditingController _nameController = TextEditingController();
+  final TextEditingController _phoneController = TextEditingController();
 
-  final GlobalKey<FormState> _formKey =
-      GlobalKey<FormState>();
+  // 📍 Bihar ke sabhi 38 districts
+  final List<String> _biharDistricts = const [
+    'Araria', 'Arwal', 'Aurangabad', 'Banka', 'Begusarai', 'Bhagalpur', 'Bhojpur',
+    'Buxar', 'Darbhanga', 'East Champaran', 'Gaya', 'Gopalganj', 'Jamui', 'Jehanabad',
+    'Kaimur', 'Katihar', 'Khagaria', 'Kishanganj', 'Lakhisarai', 'Madhepura',
+    'Madhubani', 'Munger', 'Muzaffarpur', 'Nalanda', 'Nawada', 'Patna', 'Purnia',
+    'Rohtas', 'Saharsa', 'Samastipur', 'Saran', 'Sheikhpura', 'Sheohar',
+    'Sitamarhi', 'Siwan', 'Supaul', 'Vaishali', 'West Champaran'
+  ];
 
-  final TextEditingController _nameController =
-      TextEditingController();
-
-  final TextEditingController _phoneController =
-      TextEditingController();
+  String _selectedDistrict = 'Patna';
 
   late AnimationController _introController;
   late AnimationController _floatController;
@@ -56,17 +61,13 @@ class _OnboardingWelcomeScreenState
   void initState() {
     super.initState();
 
-    SystemChrome.setEnabledSystemUIMode(
-      SystemUiMode.edgeToEdge,
-    );
-
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.edgeToEdge);
     SystemChrome.setSystemUIOverlayStyle(
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         systemNavigationBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarIconBrightness:
-            Brightness.dark,
+        systemNavigationBarIconBrightness: Brightness.dark,
       ),
     );
 
@@ -85,14 +86,9 @@ class _OnboardingWelcomeScreenState
       duration: const Duration(milliseconds: 650),
     );
 
-    Future.delayed(
-      const Duration(milliseconds: 150),
-      () {
-        if (mounted) {
-          _introController.forward();
-        }
-      },
-    );
+    Future.delayed(const Duration(milliseconds: 150), () {
+      if (mounted) _introController.forward();
+    });
   }
 
   @override
@@ -110,7 +106,6 @@ class _OnboardingWelcomeScreenState
 
   void _nextPage() {
     FocusScope.of(context).unfocus();
-
     _pageController.animateToPage(
       1,
       duration: const Duration(milliseconds: 600),
@@ -119,10 +114,7 @@ class _OnboardingWelcomeScreenState
   }
 
   void _pageChanged(int page) {
-    setState(() {
-      _currentPage = page;
-    });
-
+    setState(() => _currentPage = page);
     if (page == 1) {
       _formController
         ..reset()
@@ -137,8 +129,7 @@ class _OnboardingWelcomeScreenState
         statusBarColor: Colors.transparent,
         systemNavigationBarColor: Colors.transparent,
         statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarIconBrightness:
-            Brightness.dark,
+        systemNavigationBarIconBrightness: Brightness.dark,
       ),
       child: Scaffold(
         extendBody: true,
@@ -151,19 +142,15 @@ class _OnboardingWelcomeScreenState
                 animation: _floatController,
                 builder: (_, __) {
                   return CustomPaint(
-                    painter: _BackgroundPainter(
-                      _floatController.value,
-                    ),
+                    painter: _BackgroundPainter(_floatController.value),
                   );
                 },
               ),
             ),
-
             Positioned.fill(
               child: PageView(
                 controller: _pageController,
-                physics:
-                    const BouncingScrollPhysics(),
+                physics: const BouncingScrollPhysics(),
                 onPageChanged: _pageChanged,
                 children: [
                   _welcomeScreen(),
@@ -171,22 +158,16 @@ class _OnboardingWelcomeScreenState
                 ],
               ),
             ),
-
             Positioned(
-              top:
-                  MediaQuery.of(context).padding.top +
-                      10,
+              top: MediaQuery.of(context).padding.top + 10,
               left: 22,
               right: 22,
               child: _header(),
             ),
-
             Positioned(
               left: 22,
               right: 22,
-              bottom:
-                  MediaQuery.of(context).padding.bottom +
-                      12,
+              bottom: MediaQuery.of(context).padding.bottom + 12,
               child: _bottomProgress(),
             ),
           ],
@@ -203,10 +184,7 @@ class _OnboardingWelcomeScreenState
           height: 36,
           decoration: BoxDecoration(
             gradient: const LinearGradient(
-              colors: [
-                Color(0xFF2585FF),
-                Color(0xFF0047D9),
-              ],
+              colors: [Color(0xFF2585FF), Color(0xFF0047D9)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
@@ -230,9 +208,7 @@ class _OnboardingWelcomeScreenState
             ),
           ),
         ),
-
         const SizedBox(width: 10),
-
         const Text(
           'MockTester',
           style: TextStyle(
@@ -242,14 +218,9 @@ class _OnboardingWelcomeScreenState
             letterSpacing: -.6,
           ),
         ),
-
         const SizedBox(width: 7),
-
         Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 7,
-            vertical: 4,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 4),
           decoration: BoxDecoration(
             color: const Color(0xFFFFF4E5),
             borderRadius: BorderRadius.circular(6),
@@ -264,9 +235,7 @@ class _OnboardingWelcomeScreenState
             ),
           ),
         ),
-
         const Spacer(),
-
         Text(
           '0${_currentPage + 1} / 02',
           style: const TextStyle(
@@ -279,10 +248,6 @@ class _OnboardingWelcomeScreenState
     );
   }
 
-  // ============================================================
-  // SCREEN 1
-  // ============================================================
-
   Widget _welcomeScreen() {
     return LayoutBuilder(
       builder: (context, constraints) {
@@ -291,28 +256,18 @@ class _OnboardingWelcomeScreenState
           padding: EdgeInsets.only(
             left: 24,
             right: 24,
-            top:
-                MediaQuery.of(context).padding.top +
-                    100,
-            bottom:
-                MediaQuery.of(context).padding.bottom +
-                    75,
+            top: MediaQuery.of(context).padding.top + 100,
+            bottom: MediaQuery.of(context).padding.bottom + 75,
           ),
           child: ConstrainedBox(
             constraints: BoxConstraints(
-              minHeight:
-                  constraints.maxHeight -
-                      MediaQuery.of(context)
-                          .padding
-                          .top -
-                      MediaQuery.of(context)
-                          .padding
-                          .bottom -
-                      50,
+              minHeight: constraints.maxHeight -
+                  MediaQuery.of(context).padding.top -
+                  MediaQuery.of(context).padding.bottom -
+                  50,
             ),
             child: Column(
-              mainAxisAlignment:
-                  MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 FadeSlide(
                   animation: _introController,
@@ -328,16 +283,12 @@ class _OnboardingWelcomeScreenState
                     ),
                   ),
                 ),
-
                 const SizedBox(height: 25),
-
                 _AnimatedTitle(
                   text: 'Welcome to MockTester',
                   animation: _introController,
                 ),
-
                 const SizedBox(height: 17),
-
                 FadeSlide(
                   animation: _introController,
                   delay: .40,
@@ -352,15 +303,12 @@ class _OnboardingWelcomeScreenState
                     ),
                   ),
                 ),
-
                 const SizedBox(height: 11),
-
                 FadeSlide(
                   animation: _introController,
                   delay: .52,
                   child: const Text(
-                    'Bihar ke sabhi exams ki latest mock test series, '
-                    'ab ek hi app par.',
+                    'Bihar ke sabhi exams ki latest mock test series, ab ek hi app par.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Color(0xFF667085),
@@ -370,17 +318,13 @@ class _OnboardingWelcomeScreenState
                     ),
                   ),
                 ),
-
                 const SizedBox(height: 28),
-
                 FadeSlide(
                   animation: _introController,
                   delay: .22,
                   child: _studyVisual(),
                 ),
-
                 const SizedBox(height: 25),
-
                 FadeSlide(
                   animation: _introController,
                   delay: .72,
@@ -412,21 +356,15 @@ class _OnboardingWelcomeScreenState
               color: blue.withOpacity(.045),
             ),
           ),
-
           Container(
             width: 96,
             height: 96,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               gradient: const LinearGradient(
-                colors: [
-                  Color(0xFFEAF2FF),
-                  Color(0xFFDCEAFF),
-                ],
+                colors: [Color(0xFFEAF2FF), Color(0xFFDCEAFF)],
               ),
-              border: Border.all(
-                color: const Color(0xFFB9D3FF),
-              ),
+              border: Border.all(color: const Color(0xFFB9D3FF)),
               boxShadow: [
                 BoxShadow(
                   color: blue.withOpacity(.09),
@@ -441,51 +379,34 @@ class _OnboardingWelcomeScreenState
               size: 43,
             ),
           ),
-
           Positioned(
             left: 35,
             top: 17,
-            child: _floatingIcon(
-              Icons.check_rounded,
-              const Color(0xFF12B76A),
-            ),
+            child: _floatingIcon(Icons.check_rounded, const Color(0xFF12B76A)),
           ),
-
           Positioned(
             right: 32,
             bottom: 14,
-            child: _floatingIcon(
-              Icons.trending_up_rounded,
-              const Color(0xFF6941C6),
-            ),
+            child: _floatingIcon(Icons.trending_up_rounded, const Color(0xFF6941C6)),
           ),
-
           Positioned(
             right: 44,
             top: 12,
-            child: _floatingIcon(
-              Icons.timer_outlined,
-              const Color(0xFF155EEF),
-            ),
+            child: _floatingIcon(Icons.timer_outlined, const Color(0xFF155EEF)),
           ),
         ],
       ),
     );
   }
 
-  Widget _floatingIcon(
-    IconData icon,
-    Color color,
-  ) {
+  Widget _floatingIcon(IconData icon, Color color) {
     return Container(
       width: 37,
       height: 37,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(11),
-        border: Border.all(
-          color: border,
-        ),
+        border: Border.all(color: border),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(.06),
@@ -494,17 +415,9 @@ class _OnboardingWelcomeScreenState
           ),
         ],
       ),
-      child: Icon(
-        icon,
-        color: color,
-        size: 17,
-      ),
+      child: Icon(icon, color: color, size: 17),
     );
   }
-
-  // ============================================================
-  // SCREEN 2
-  // ============================================================
 
   Widget _nameScreen() {
     return FadeTransition(
@@ -520,24 +433,16 @@ class _OnboardingWelcomeScreenState
           ),
         ),
         child: GestureDetector(
-          onTap: () =>
-              FocusScope.of(context).unfocus(),
+          onTap: () => FocusScope.of(context).unfocus(),
           child: Form(
             key: _formKey,
             child: ListView(
-              physics:
-                  const BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               padding: EdgeInsets.fromLTRB(
                 22,
-                MediaQuery.of(context)
-                        .padding
-                        .top +
-                    95,
+                MediaQuery.of(context).padding.top + 95,
                 22,
-                MediaQuery.of(context)
-                        .padding
-                        .bottom +
-                    80,
+                MediaQuery.of(context).padding.bottom + 80,
               ),
               children: [
                 const Text(
@@ -549,9 +454,7 @@ class _OnboardingWelcomeScreenState
                     letterSpacing: 1,
                   ),
                 ),
-
                 const SizedBox(height: 17),
-
                 const Text(
                   'First,\nwhat should we call you?',
                   style: TextStyle(
@@ -562,75 +465,60 @@ class _OnboardingWelcomeScreenState
                     letterSpacing: -1.25,
                   ),
                 ),
-
                 const SizedBox(height: 12),
-
                 const Text(
-                  'Your name will appear on your scorecard '
-                  'and personalised experience.',
+                  'Your name & district will appear on your scorecard and district leaderboard.',
                   style: TextStyle(
                     color: Color(0xFF667085),
                     fontSize: 11.5,
                     height: 1.5,
                   ),
                 ),
+                const SizedBox(height: 28),
 
-                const SizedBox(height: 30),
-
+                // 1. Name Field
                 _inputField(
                   label: 'MY NAME IS',
                   controller: _nameController,
                   hint: 'Your full name',
-                  icon:
-                      Icons.person_outline_rounded,
-                  capitalization:
-                      TextCapitalization.words,
+                  icon: Icons.person_outline_rounded,
+                  capitalization: TextCapitalization.words,
                   validator: (value) {
-                    if (value == null ||
-                        value.trim().length < 2) {
+                    if (value == null || value.trim().length < 2) {
                       return 'Please enter your name';
                     }
                     return null;
                   },
                 ),
+                const SizedBox(height: 18),
 
-                const SizedBox(height: 22),
+                // 2. District Dropdown Field
+                _districtDropdownField(),
 
+                const SizedBox(height: 18),
+
+                // 3. Mobile Number Field
                 _inputField(
                   label: 'MOBILE NUMBER',
                   controller: _phoneController,
                   hint: '10-digit number',
-                  icon:
-                      Icons.phone_android_rounded,
-                  keyboardType:
-                      TextInputType.phone,
+                  icon: Icons.phone_android_rounded,
+                  keyboardType: TextInputType.phone,
                   formatters: [
-                    FilteringTextInputFormatter
-                        .digitsOnly,
-                    LengthLimitingTextInputFormatter(
-                      10,
-                    ),
+                    FilteringTextInputFormatter.digitsOnly,
+                    LengthLimitingTextInputFormatter(10),
                   ],
                   validator: (value) {
-                    if (value == null ||
-                        value.trim().isEmpty) {
+                    if (value == null || value.trim().isEmpty) {
                       return null;
                     }
-
-                    if (!RegExp(
-                      r'^[6-9]\d{9}$',
-                    ).hasMatch(
-                      value.trim(),
-                    )) {
+                    if (!RegExp(r'^[6-9]\d{9}$').hasMatch(value.trim())) {
                       return 'Enter a valid 10-digit number';
                     }
-
                     return null;
                   },
                 ),
-
-                const SizedBox(height: 10),
-
+                const SizedBox(height: 8),
                 const Row(
                   children: [
                     Icon(
@@ -648,18 +536,15 @@ class _OnboardingWelcomeScreenState
                     ),
                   ],
                 ),
-
-                const SizedBox(height: 28),
+                const SizedBox(height: 24),
 
                 Container(
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
                     color: const Color(0xFFEAF2FF),
-                    borderRadius:
-                        BorderRadius.circular(16),
+                    borderRadius: BorderRadius.circular(16),
                     border: Border.all(
-                      color:
-                          blue.withOpacity(.08),
+                      color: blue.withOpacity(.08),
                     ),
                   ),
                   child: const Row(
@@ -676,26 +561,19 @@ class _OnboardingWelcomeScreenState
                           style: TextStyle(
                             color: Color(0xFF0039B7),
                             fontSize: 10,
-                            fontWeight:
-                                FontWeight.w800,
+                            fontWeight: FontWeight.w800,
                           ),
                         ),
                       ),
                     ],
                   ),
                 ),
-
                 const SizedBox(height: 25),
 
                 _primaryButton(
-                  text: _isLoading
-                      ? 'Setting up...'
-                      : 'Start My Preparation',
-                  icon:
-                      Icons.arrow_forward_rounded,
-                  onTap: _isLoading
-                      ? null
-                      : _completeRegistration,
+                  text: _isLoading ? 'Setting up...' : 'Start My Preparation',
+                  icon: Icons.arrow_forward_rounded,
+                  onTap: _isLoading ? null : _completeRegistration,
                   loading: _isLoading,
                 ),
               ],
@@ -706,20 +584,78 @@ class _OnboardingWelcomeScreenState
     );
   }
 
+  // 📍 District Dropdown Widget matching App Style
+  Widget _districtDropdownField() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        const Text(
+          'SELECT YOUR DISTRICT',
+          style: TextStyle(
+            color: Color(0xFF667085),
+            fontSize: 8,
+            fontWeight: FontWeight.w900,
+            letterSpacing: 1.1,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: border),
+          ),
+          child: DropdownButtonHideUnderline(
+            child: DropdownButton<String>(
+              isExpanded: true,
+              value: _selectedDistrict,
+              icon: const Icon(Icons.keyboard_arrow_down_rounded, color: blue),
+              style: const TextStyle(
+                color: Color(0xFF101828),
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
+              ),
+              items: _biharDistricts.map((String district) {
+                return DropdownMenuItem<String>(
+                  value: district,
+                  child: Row(
+                    children: [
+                      const Icon(
+                        Icons.location_on_outlined,
+                        color: blue,
+                        size: 20,
+                      ),
+                      const SizedBox(width: 10),
+                      Text(district),
+                    ],
+                  ),
+                );
+              }).toList(),
+              onChanged: (String? newVal) {
+                if (newVal != null) {
+                  setState(() => _selectedDistrict = newVal);
+                }
+              },
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
   Widget _inputField({
     required String label,
     required TextEditingController controller,
     required String hint,
     required IconData icon,
     TextInputType? keyboardType,
-    TextCapitalization capitalization =
-        TextCapitalization.none,
+    TextCapitalization capitalization = TextCapitalization.none,
     List<TextInputFormatter>? formatters,
     String? Function(String?)? validator,
   }) {
     return Column(
-      crossAxisAlignment:
-          CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
           label,
@@ -730,9 +666,7 @@ class _OnboardingWelcomeScreenState
             letterSpacing: 1.1,
           ),
         ),
-
         const SizedBox(height: 8),
-
         TextFormField(
           controller: controller,
           keyboardType: keyboardType,
@@ -752,55 +686,32 @@ class _OnboardingWelcomeScreenState
               fontSize: 17,
               fontWeight: FontWeight.w500,
             ),
-            prefixIcon: Icon(
-              icon,
-              color: blue,
-              size: 21,
-            ),
+            prefixIcon: Icon(icon, color: blue, size: 21),
             filled: true,
             fillColor: Colors.white,
-            contentPadding:
-                const EdgeInsets.symmetric(
+            contentPadding: const EdgeInsets.symmetric(
               horizontal: 15,
               vertical: 17,
             ),
             border: OutlineInputBorder(
-              borderRadius:
-                  BorderRadius.circular(16),
-              borderSide: const BorderSide(
-                color: border,
-              ),
+              borderRadius: BorderRadius.circular(16),
+              borderSide: const BorderSide(color: border),
             ),
             enabledBorder: OutlineInputBorder(
-              borderRadius:
-                  BorderRadius.circular(16),
-              borderSide: const BorderSide(
-                color: border,
-              ),
+              borderRadius: BorderRadius.circular(16),
+              borderSide: const BorderSide(color: border),
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius:
-                  BorderRadius.circular(16),
-              borderSide: const BorderSide(
-                color: blue,
-                width: 1.5,
-              ),
+              borderRadius: BorderRadius.circular(16),
+              borderSide: const BorderSide(color: blue, width: 1.5),
             ),
             errorBorder: OutlineInputBorder(
-              borderRadius:
-                  BorderRadius.circular(16),
-              borderSide: const BorderSide(
-                color: Color(0xFFD92D20),
-              ),
+              borderRadius: BorderRadius.circular(16),
+              borderSide: const BorderSide(color: Color(0xFFD92D20)),
             ),
-            focusedErrorBorder:
-                OutlineInputBorder(
-              borderRadius:
-                  BorderRadius.circular(16),
-              borderSide: const BorderSide(
-                color: Color(0xFFD92D20),
-                width: 1.5,
-              ),
+            focusedErrorBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(16),
+              borderSide: const BorderSide(color: Color(0xFFD92D20), width: 1.5),
             ),
           ),
         ),
@@ -808,70 +719,49 @@ class _OnboardingWelcomeScreenState
     );
   }
 
-  // ============================================================
-  // REGISTRATION
-  // ============================================================
-
   Future<void> _completeRegistration() async {
     FocusScope.of(context).unfocus();
 
-    if (!_formKey.currentState!.validate() ||
-        _isLoading) {
+    if (!_formKey.currentState!.validate() || _isLoading) {
       return;
     }
 
-    setState(() {
-      _isLoading = true;
-    });
+    setState(() => _isLoading = true);
 
-    final name =
-        _nameController.text.trim();
-
-    final phone =
-        _phoneController.text.trim();
+    final name = _nameController.text.trim();
+    final phone = _phoneController.text.trim();
 
     try {
-      final prefs =
-          await SharedPreferences.getInstance();
+      final prefs = await SharedPreferences.getInstance();
 
-      await prefs.setBool(
-        'is_onboarded',
-        true,
-      );
+      await prefs.setBool('is_onboarded', true);
+      await prefs.setString('custom_aspirant_name', name);
+      await prefs.setString('user_name', name);
 
-      await prefs.setString(
-        'custom_aspirant_name',
-        name,
-      );
-
-      await prefs.setString(
-        'user_name',
-        name,
-      );
+      // 📍 District permanently SharedPreferences me save
+      await prefs.setString('user_district', _selectedDistrict);
 
       if (phone.isNotEmpty) {
-        await prefs.setString(
-          'user_mobile',
-          phone,
-        );
+        await prefs.setString('user_mobile', phone);
       }
 
-      if (phone.isNotEmpty) {
-        try {
-          await Supabase.instance.client
-              .from('app_users')
-              .upsert({
-            'mobile_number': phone,
-            'full_name': name,
-            'updated_at':
-                DateTime.now()
-                    .toIso8601String(),
-          });
-        } catch (e) {
-          debugPrint(
-            'Supabase sync issue: $e',
-          );
+      // Supabase user profile sync
+      try {
+        final Map<String, dynamic> userPayload = {
+          'full_name': name,
+          'district': _selectedDistrict,
+          'updated_at': DateTime.now().toIso8601String(),
+        };
+
+        if (phone.isNotEmpty) {
+          userPayload['mobile_number'] = phone;
         }
+
+        await Supabase.instance.client
+            .from('app_users')
+            .upsert(userPayload);
+      } catch (e) {
+        debugPrint('Supabase sync issue: $e');
       }
 
       if (!mounted) return;
@@ -879,51 +769,27 @@ class _OnboardingWelcomeScreenState
       Navigator.pushReplacement(
         context,
         PageRouteBuilder(
-          transitionDuration:
-              const Duration(
-            milliseconds: 450,
-          ),
-          pageBuilder:
-              (_, __, ___) =>
-                  widget.nextScreen,
-          transitionsBuilder:
-              (_, animation, __, child) {
-            return FadeTransition(
-              opacity: animation,
-              child: child,
-            );
+          transitionDuration: const Duration(milliseconds: 450),
+          pageBuilder: (_, __, ___) => widget.nextScreen,
+          transitionsBuilder: (_, animation, __, child) {
+            return FadeTransition(opacity: animation, child: child);
           },
         ),
       );
     } catch (e) {
-      debugPrint(
-        'Registration error: $e',
-      );
-
+      debugPrint('Registration error: $e');
       if (!mounted) return;
 
-      ScaffoldMessenger.of(context)
-          .showSnackBar(
+      ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text(
-            'Something went wrong. Please try again.',
-          ),
-          behavior:
-              SnackBarBehavior.floating,
+          content: Text('Something went wrong. Please try again.'),
+          behavior: SnackBarBehavior.floating,
         ),
       );
     } finally {
-      if (mounted) {
-        setState(() {
-          _isLoading = false;
-        });
-      }
+      if (mounted) setState(() => _isLoading = false);
     }
   }
-
-  // ============================================================
-  // BUTTON
-  // ============================================================
 
   Widget _primaryButton({
     required String text,
@@ -934,32 +800,23 @@ class _OnboardingWelcomeScreenState
     return GestureDetector(
       onTap: onTap,
       child: AnimatedOpacity(
-        duration:
-            const Duration(milliseconds: 200),
-        opacity:
-            onTap == null ? .55 : 1,
+        duration: const Duration(milliseconds: 200),
+        opacity: onTap == null ? .55 : 1,
         child: Container(
           width: double.infinity,
           height: 56,
           decoration: BoxDecoration(
-            gradient:
-                const LinearGradient(
-              colors: [
-                Color(0xFF2585FF),
-                Color(0xFF0047D9),
-              ],
+            gradient: const LinearGradient(
+              colors: [Color(0xFF2585FF), Color(0xFF0047D9)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
-            borderRadius:
-                BorderRadius.circular(17),
+            borderRadius: BorderRadius.circular(17),
             boxShadow: [
               BoxShadow(
-                color:
-                    blue.withOpacity(.22),
+                color: blue.withOpacity(.22),
                 blurRadius: 20,
-                offset:
-                    const Offset(0, 9),
+                offset: const Offset(0, 9),
               ),
             ],
           ),
@@ -968,34 +825,24 @@ class _OnboardingWelcomeScreenState
                 ? const SizedBox(
                     width: 21,
                     height: 21,
-                    child:
-                        CircularProgressIndicator(
+                    child: CircularProgressIndicator(
                       strokeWidth: 2,
                       color: Colors.white,
                     ),
                   )
                 : Row(
-                    mainAxisAlignment:
-                        MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
                         text,
-                        style:
-                            const TextStyle(
+                        style: const TextStyle(
                           color: Colors.white,
                           fontSize: 13,
-                          fontWeight:
-                              FontWeight.w900,
+                          fontWeight: FontWeight.w900,
                         ),
                       ),
-                      const SizedBox(
-                        width: 9,
-                      ),
-                      Icon(
-                        icon,
-                        color: Colors.white,
-                        size: 18,
-                      ),
+                      const SizedBox(width: 9),
+                      Icon(icon, color: Colors.white, size: 18),
                     ],
                   ),
           ),
@@ -1004,64 +851,41 @@ class _OnboardingWelcomeScreenState
     );
   }
 
-  // ============================================================
-  // PROGRESS
-  // ============================================================
-
   Widget _bottomProgress() {
     return Row(
       children: [
         AnimatedContainer(
-          duration:
-              const Duration(milliseconds: 350),
-          width:
-              _currentPage == 0 ? 34 : 12,
+          duration: const Duration(milliseconds: 350),
+          width: _currentPage == 0 ? 34 : 12,
           height: 4,
           decoration: BoxDecoration(
             color: blue,
-            borderRadius:
-                BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(10),
           ),
         ),
-
         const SizedBox(width: 5),
-
         AnimatedContainer(
-          duration:
-              const Duration(milliseconds: 350),
-          width:
-              _currentPage == 1 ? 34 : 12,
+          duration: const Duration(milliseconds: 350),
+          width: _currentPage == 1 ? 34 : 12,
           height: 4,
           decoration: BoxDecoration(
-            color: _currentPage == 1
-                ? blue
-                : const Color(0xFFE4E7EC),
-            borderRadius:
-                BorderRadius.circular(10),
+            color: _currentPage == 1 ? blue : const Color(0xFFE4E7EC),
+            borderRadius: BorderRadius.circular(10),
           ),
         ),
-
         const Spacer(),
-
         Text(
-          _currentPage == 0
-              ? '01 / 02'
-              : '02 / 02',
+          _currentPage == 0 ? '01 / 02' : '02 / 02',
           style: const TextStyle(
             color: Color(0xFF98A2B3),
             fontSize: 9,
-            fontWeight:
-                FontWeight.w900,
+            fontWeight: FontWeight.w900,
           ),
         ),
       ],
     );
   }
 }
-
-// ============================================================================
-// ANIMATED TITLE
-// ============================================================================
 
 class _AnimatedTitle extends StatelessWidget {
   final String text;
@@ -1077,21 +901,13 @@ class _AnimatedTitle extends StatelessWidget {
     return AnimatedBuilder(
       animation: animation,
       builder: (_, __) {
-        final value =
-            Curves.easeOutCubic.transform(
-          animation.value,
-        );
-
+        final value = Curves.easeOutCubic.transform(animation.value);
         return Opacity(
           opacity: value,
           child: Transform.translate(
-            offset: Offset(
-              0,
-              18 * (1 - value),
-            ),
+            offset: Offset(0, 18 * (1 - value)),
             child: Transform.scale(
-              scale:
-                  .965 + (.035 * value),
+              scale: .965 + (.035 * value),
               child: const Text(
                 'Welcome to MockTester',
                 textAlign: TextAlign.center,
@@ -1111,10 +927,6 @@ class _AnimatedTitle extends StatelessWidget {
   }
 }
 
-// ============================================================================
-// FADE SLIDE
-// ============================================================================
-
 class FadeSlide extends StatelessWidget {
   final AnimationController animation;
   final double delay;
@@ -1132,23 +944,12 @@ class FadeSlide extends StatelessWidget {
     return AnimatedBuilder(
       animation: animation,
       builder: (_, child) {
-        final raw =
-            ((animation.value - delay) /
-                    (1 - delay))
-                .clamp(0.0, 1.0);
-
-        final value =
-            Curves.easeOutCubic.transform(
-          raw,
-        );
-
+        final raw = ((animation.value - delay) / (1 - delay)).clamp(0.0, 1.0);
+        final value = Curves.easeOutCubic.transform(raw);
         return Opacity(
           opacity: value,
           child: Transform.translate(
-            offset: Offset(
-              0,
-              12 * (1 - value),
-            ),
+            offset: Offset(0, 12 * (1 - value)),
             child: child,
           ),
         );
@@ -1158,65 +959,34 @@ class FadeSlide extends StatelessWidget {
   }
 }
 
-// ============================================================================
-// BACKGROUND
-// ============================================================================
-
-class _BackgroundPainter
-    extends CustomPainter {
+class _BackgroundPainter extends CustomPainter {
   final double animation;
 
   _BackgroundPainter(this.animation);
 
   @override
-  void paint(
-    Canvas canvas,
-    Size size,
-  ) {
-    final bluePaint = Paint()
-      ..color = const Color(0xFF155EEF)
-          .withOpacity(.035);
+  void paint(Canvas canvas, Size size) {
+    final bluePaint = Paint()..color = const Color(0xFF155EEF).withOpacity(.035);
+    final violetPaint = Paint()..color = const Color(0xFF6941C6).withOpacity(.025);
 
-    final violetPaint = Paint()
-      ..color = const Color(0xFF6941C6)
-          .withOpacity(.025);
-
-    final move1 =
-        math.sin(
-              animation * math.pi * 2,
-            ) *
-            18;
-
-    final move2 =
-        math.cos(
-              animation * math.pi * 2,
-            ) *
-            15;
+    final move1 = math.sin(animation * math.pi * 2) * 18;
+    final move2 = math.cos(animation * math.pi * 2) * 15;
 
     canvas.drawCircle(
-      Offset(
-        size.width + 30,
-        100 + move1,
-      ),
+      Offset(size.width + 30, 100 + move1),
       120,
       bluePaint,
     );
 
     canvas.drawCircle(
-      Offset(
-        -35,
-        size.height - 90 + move2,
-      ),
+      Offset(-35, size.height - 90 + move2),
       140,
       violetPaint,
     );
   }
 
   @override
-  bool shouldRepaint(
-    covariant _BackgroundPainter oldDelegate,
-  ) {
-    return oldDelegate.animation !=
-        animation;
+  bool shouldRepaint(covariant _BackgroundPainter oldDelegate) {
+    return oldDelegate.animation != animation;
   }
 }
