@@ -35,14 +35,14 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
     _submitScoreToSupabase();
   }
 
-  // Supabase Leaderboard me score sync karna
+  // 🏆 Leaderboard par Best Score update/insert karne ka logic
   Future<void> _submitScoreToSupabase() async {
     setState(() => _isSubmitting = true);
     try {
       final prefs = await SharedPreferences.getInstance();
       final user = Supabase.instance.client.auth.currentUser;
 
-      // 1. Pehle SharedPreferences check karein, fir Supabase Auth, fir Fallback
+      // 1. SharedPreferences se data lein (Drawer / Login state)
       String userName = prefs.getString('user_name') ?? '';
       if (userName.isEmpty) {
         userName = user?.userMetadata?['full_name'] ??
@@ -57,24 +57,53 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
 
       final todayDate = DateTime.now().toIso8601String().substring(0, 10);
 
-      final Map<String, dynamic> insertData = {
-        'user_name': userName,
-        'district': district,
-        'score': widget.myScore,
-        'time_taken_seconds': widget.totalTimeTaken,
-        'challenge_date': todayDate,
-      };
-
-      // Sirf tab bhejein jab user authenticated ho
-      if (user?.id != null) {
-        insertData['user_id'] = user!.id;
-      }
-
-      await Supabase.instance.client
+      // 2. Check karein ki user ka aaj ka attempt pehle se record me hai ya nahi
+      final existing = await Supabase.instance.client
           .from('daily_challenge_submissions')
-          .insert(insertData);
+          .select()
+          .eq('user_name', userName)
+          .eq('challenge_date', todayDate)
+          .maybeSingle();
 
-      debugPrint("✅ Supabase: Score submitted successfully for $userName!");
+      if (existing != null) {
+        final int oldScore = existing['score'] ?? 0;
+        final int oldTime = existing['time_taken_seconds'] ?? 9999;
+
+        // Sirf behtar performance par hi update karein
+        bool shouldUpdate = widget.myScore > oldScore ||
+            (widget.myScore == oldScore && widget.totalTimeTaken < oldTime);
+
+        if (shouldUpdate) {
+          await Supabase.instance.client
+              .from('daily_challenge_submissions')
+              .update({
+                'score': widget.myScore,
+                'time_taken_seconds': widget.totalTimeTaken,
+                'district': district,
+              })
+              .eq('id', existing['id']);
+          debugPrint("✅ Purana rank behtar score ke sath update ho gaya!");
+        } else {
+          debugPrint("ℹ️ Purana score behtar tha, koi change nahi.");
+        }
+      } else {
+        // Pehla attempt: Nayi entry banayein
+        final Map<String, dynamic> insertData = {
+          'user_name': userName,
+          'district': district,
+          'score': widget.myScore,
+          'time_taken_seconds': widget.totalTimeTaken,
+          'challenge_date': todayDate,
+        };
+        if (user?.id != null) {
+          insertData['user_id'] = user!.id;
+        }
+
+        await Supabase.instance.client
+            .from('daily_challenge_submissions')
+            .insert(insertData);
+        debugPrint("✅ Naya score submit hua!");
+      }
 
       if (mounted) {
         setState(() {
@@ -90,8 +119,8 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
     }
   }
 
-  // WhatsApp par 1v1 challenge link bhejna
-  void _shareOnWhatsApp() async {
+  // 📲 WhatsApp Challenge Link Generation
+  Future<void> _shareOnWhatsApp() async {
     final prefs = await SharedPreferences.getInstance();
     final user = Supabase.instance.client.auth.currentUser;
 
@@ -106,30 +135,33 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
         'https://mocktester.app/challenge?code=${widget.challengeCode}&by=$myName&score=${widget.myScore}';
 
     final String message = '''
-⚔️ *MOCKTESTER 1v1 BIHAR GK CHALLENGE* ⚔️
+⚔️ *MOCKTESTER 1v1 RAPID GK CHALLENGE* ⚔️
 
-Maine 10 sawaalo ka rapid GK challenge pura kiya hai:
+Maine 10 sawaalo ka challenge compete kiya hai:
 🎯 *Score:* ${widget.myScore}/10
-⏱ *Time:* ${widget.totalTimeTaken} Seconds
+⏱ *Total Time:* ${widget.totalTimeTaken}s
 
-Dum hai toh mujhe hara ke dikhao! Same question set par live test do:
+Dum hai toh mujhe hara ke dikhao! Same questions par live test do:
 👉 $appLink
 
-App open karo aur seedhe match compete karo! 🏆
+App open karo aur seedhe rank ke liye compete karo! 🏆
 ''';
 
-    Share.share(message);
+    await Share.share(message);
   }
 
   @override
   Widget build(BuildContext context) {
+    final isDark = widget.isDarkMode;
     final bool isDuel = widget.challengerScore > 0;
     final bool won = widget.myScore > widget.challengerScore;
     final bool tie = widget.myScore == widget.challengerScore;
 
-    final bgColor = widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
-    final cardColor = widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white;
-    final textColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
+    final scaffoldBg = isDark ? const Color(0xFF111827) : const Color(0xFFF9FAFB);
+    final cardBg = isDark ? const Color(0xFF1F2937) : Colors.white;
+    final textColor = isDark ? const Color(0xFFF3F4F6) : const Color(0xFF111827);
+    final subTextColor = isDark ? const Color(0xFF9CA3AF) : const Color(0xFF4B5563);
+    final borderColor = isDark ? const Color(0xFF374151) : const Color(0xFFE5E7EB);
 
     return PopScope(
       canPop: false,
@@ -139,15 +171,21 @@ App open karo aur seedhe match compete karo! 🏆
         }
       },
       child: Scaffold(
-        backgroundColor: bgColor,
+        backgroundColor: scaffoldBg,
         appBar: AppBar(
-          title: const Text('Match Summary', style: TextStyle(fontWeight: FontWeight.w800)),
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          leading: IconButton(
-            icon: const Icon(Icons.close_rounded),
-            onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
+          backgroundColor: cardBg,
+          elevation: 0.5,
+          automaticallyImplyLeading: false,
+          title: Text(
+            'Challenge Summary',
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: textColor),
           ),
+          actions: [
+            IconButton(
+              icon: Icon(Icons.close_rounded, color: subTextColor),
+              onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
+            )
+          ],
         ),
         body: SafeArea(
           child: Padding(
@@ -156,21 +194,19 @@ App open karo aur seedhe match compete karo! 🏆
               children: [
                 const Spacer(),
 
-                // Score card container
+                // Main Metric Card
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(24),
                   decoration: BoxDecoration(
-                    color: cardColor,
-                    borderRadius: BorderRadius.circular(24),
-                    border: Border.all(
-                      color: widget.isDarkMode ? Colors.white10 : const Color(0xFFE2E8F0),
-                    ),
+                    color: cardBg,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(color: borderColor),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.05),
-                        blurRadius: 20,
-                        offset: const Offset(0, 8),
+                        color: Colors.black.withOpacity(0.04),
+                        blurRadius: 10,
+                        offset: const Offset(0, 4),
                       ),
                     ],
                   ),
@@ -178,70 +214,73 @@ App open karo aur seedhe match compete karo! 🏆
                     children: [
                       Text(
                         isDuel
-                            ? (won ? '🎉 Jeet Gaye!' : (tie ? '🤝 Match Tie!' : '💔 Haar Gaye!'))
-                            : '🎯 Challenge Complete!',
+                            ? (won ? '🎉 Match Jeet Gaye!' : (tie ? '🤝 Match Tie!' : '💔 Match Haar Gaye!'))
+                            : 'Test Completed!',
                         style: TextStyle(
-                          fontSize: 22,
-                          fontWeight: FontWeight.w900,
-                          color: isDuel && won ? const Color(0xFF10B981) : textColor,
+                          fontSize: 20,
+                          fontWeight: FontWeight.w800,
+                          color: isDuel && won ? const Color(0xFF16A34A) : textColor,
                         ),
                       ),
-                      const SizedBox(height: 18),
+                      const SizedBox(height: 20),
 
                       if (isDuel) ...[
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            _avatarColumn(widget.challengerName, widget.challengerScore, false),
-                            const Text(
+                            _avatarColumn(widget.challengerName, widget.challengerScore, false, isDark),
+                            Text(
                               'VS',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 fontWeight: FontWeight.w900,
-                                color: Colors.grey,
+                                color: subTextColor,
                               ),
                             ),
-                            _avatarColumn('You', widget.myScore, true),
+                            _avatarColumn('You', widget.myScore, true, isDark),
                           ],
                         ),
                       ] else ...[
                         Text(
                           '${widget.myScore} / 10',
                           style: const TextStyle(
-                            fontSize: 38,
+                            fontSize: 42,
                             fontWeight: FontWeight.w900,
-                            color: Color(0xFF4F46E5),
+                            color: Color(0xFF2563EB),
                           ),
                         ),
                         const SizedBox(height: 6),
                         Text(
-                          'Total Time: ${widget.totalTimeTaken}s',
-                          style: const TextStyle(
+                          'Time Taken: ${widget.totalTimeTaken}s',
+                          style: TextStyle(
                             fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.grey,
+                            fontWeight: FontWeight.w500,
+                            color: subTextColor,
                           ),
                         ),
                       ],
 
                       const SizedBox(height: 20),
-                      Divider(color: widget.isDarkMode ? Colors.white10 : const Color(0xFFE2E8F0)),
+                      Divider(color: borderColor),
                       const SizedBox(height: 10),
 
+                      // Live Supabase Sync Status
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
-                            _isSubmitted ? Icons.check_circle_rounded : (_isSubmitting ? Icons.sync_rounded : Icons.cloud_off_rounded),
+                            _isSubmitted
+                                ? Icons.check_circle_rounded
+                                : (_isSubmitting ? Icons.sync_rounded : Icons.cloud_off_rounded),
                             size: 16,
-                            color: _isSubmitted ? const Color(0xFF10B981) : Colors.grey,
+                            color: _isSubmitted ? const Color(0xFF16A34A) : subTextColor,
                           ),
                           const SizedBox(width: 6),
                           Text(
                             _isSubmitted
                                 ? 'District Leaderboard par save ho gaya!'
-                                : (_isSubmitting ? 'Rank sync ho raha hai...' : 'Submission failed / Offline'),
-                            style: const TextStyle(fontSize: 12, color: Colors.grey),
+                                : (_isSubmitting ? 'Syncing rank...' : 'Offline mode'),
+                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: subTextColor),
                           ),
                         ],
                       ),
@@ -251,39 +290,42 @@ App open karo aur seedhe match compete karo! 🏆
 
                 const Spacer(),
 
-                // WhatsApp Share Action Button
+                // Action Buttons
                 SizedBox(
                   width: double.infinity,
-                  height: 54,
+                  height: 48,
                   child: ElevatedButton.icon(
                     onPressed: _shareOnWhatsApp,
-                    icon: const Icon(Icons.share_rounded, color: Colors.white),
+                    icon: const Icon(Icons.share_rounded, size: 18, color: Colors.white),
                     label: const Text(
                       'Dost ko WhatsApp par Challenge karein',
-                      style: TextStyle(fontSize: 15, fontWeight: FontWeight.w800),
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF25D366),
                       foregroundColor: Colors.white,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
                       elevation: 0,
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
                     ),
                   ),
                 ),
                 const SizedBox(height: 12),
 
-                // Home Navigation Button
                 SizedBox(
                   width: double.infinity,
-                  height: 50,
-                  child: TextButton(
+                  height: 46,
+                  child: OutlinedButton(
                     onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
+                    style: OutlinedButton.styleFrom(
+                      side: BorderSide(color: borderColor),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                    ),
                     child: Text(
                       'Home Screen par Wapas Jayein',
                       style: TextStyle(
                         fontSize: 14,
-                        fontWeight: FontWeight.w700,
-                        color: textColor.withOpacity(0.7),
+                        fontWeight: FontWeight.w600,
+                        color: textColor,
                       ),
                     ),
                   ),
@@ -296,28 +338,32 @@ App open karo aur seedhe match compete karo! 🏆
     );
   }
 
-  Widget _avatarColumn(String name, int score, bool isMe) {
+  Widget _avatarColumn(String name, int score, bool isMe, bool isDark) {
     return Column(
       children: [
         CircleAvatar(
-          radius: 28,
-          backgroundColor: isMe ? const Color(0xFF4F46E5) : const Color(0xFFF59E0B),
+          radius: 26,
+          backgroundColor: isMe ? const Color(0xFF2563EB) : const Color(0xFFD97706),
           child: Text(
             name.isNotEmpty ? name[0].toUpperCase() : 'P',
-            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w900, fontSize: 20),
+            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 18),
           ),
         ),
         const SizedBox(height: 8),
         Text(
           name,
-          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 13),
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 13,
+            color: isDark ? Colors.white : const Color(0xFF111827),
+          ),
         ),
         Text(
           '$score / 10',
           style: TextStyle(
-            fontSize: 16,
-            fontWeight: FontWeight.w900,
-            color: isMe ? const Color(0xFF4F46E5) : const Color(0xFFF59E0B),
+            fontSize: 15,
+            fontWeight: FontWeight.w800,
+            color: isMe ? const Color(0xFF2563EB) : const Color(0xFFD97706),
           ),
         ),
       ],
