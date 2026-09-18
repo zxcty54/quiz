@@ -32,13 +32,16 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
   @override
   void initState() {
     super.initState();
-    _startTimer();
+    if (widget.questions.isNotEmpty) {
+      _startTimer();
+    }
   }
 
   void _startTimer() {
     _timeLeft = 15;
     _timer?.cancel();
     _timer = Timer.periodic(const Duration(seconds: 1), (t) {
+      if (!mounted) return;
       if (_timeLeft > 0) {
         setState(() {
           _timeLeft--;
@@ -51,18 +54,21 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
   }
 
   void _onSelectOption(int selectedIdx) {
+    if (widget.questions.isEmpty) return;
     final currentQ = widget.questions[_currentIndex];
-    
-    // JSON keys check: correct_index, answer_index ya answer
+
     final dynamic correctAns = currentQ['correct_index'] ?? 
                                currentQ['answer_index'] ?? 
-                               currentQ['answer'];
+                               currentQ['answer'] ?? 
+                               currentQ['correct'];
 
     if (correctAns != null) {
       if (correctAns is int && selectedIdx == correctAns) {
         _score++;
       } else if (correctAns is String) {
-        final options = currentQ['options'] as List<dynamic>?;
+        final options = (currentQ['options_hi'] ?? 
+                         currentQ['options'] ?? 
+                         currentQ['options_en']) as List<dynamic>?;
         if (options != null && 
             selectedIdx < options.length && 
             options[selectedIdx].toString().trim() == correctAns.trim()) {
@@ -107,21 +113,45 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final q = widget.questions[_currentIndex];
-    final List<dynamic> options = q['options'] ?? [];
-
     final bgColor = widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
     final cardColor = widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white;
     final textColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
 
-    return WillPopScope(
-      onWillPop: () async => false, // Accidental back-press block
+    if (widget.questions.isEmpty) {
+      return Scaffold(
+        backgroundColor: bgColor,
+        appBar: AppBar(title: const Text('Challenge')),
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Wapas Jayein'),
+          ),
+        ),
+      );
+    }
+
+    final q = widget.questions[_currentIndex];
+
+    // 🚀 Robust Fallbacks: Hindi / English / General Keys
+    final String questionText = (q['question_hi'] ?? 
+                                 q['question'] ?? 
+                                 q['question_en'] ?? 
+                                 q['title'] ?? 
+                                 '').toString();
+
+    final List<dynamic> options = (q['options_hi'] ?? 
+                                   q['options'] ?? 
+                                   q['options_en'] ?? 
+                                   []) as List<dynamic>;
+
+    return PopScope(
+      canPop: false,
       child: Scaffold(
         backgroundColor: bgColor,
         appBar: AppBar(
           automaticallyImplyLeading: false,
           title: Text(
-            'Challenge (${_currentIndex + 1}/10)',
+            'Challenge (${_currentIndex + 1}/${widget.questions.length})',
             style: const TextStyle(fontWeight: FontWeight.w800),
           ),
           backgroundColor: Colors.transparent,
@@ -163,7 +193,7 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
               ),
               const SizedBox(height: 24),
               Text(
-                q['question'] ?? '',
+                questionText.isNotEmpty ? questionText : 'Q.${_currentIndex + 1}: Prashn load ho raha hai...',
                 style: TextStyle(
                   fontSize: 17,
                   fontWeight: FontWeight.w800,
@@ -173,32 +203,39 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
               ),
               const SizedBox(height: 24),
               Expanded(
-                child: ListView.separated(
-                  itemCount: options.length,
-                  separatorBuilder: (_, __) => const SizedBox(height: 12),
-                  itemBuilder: (context, idx) {
-                    return ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        elevation: 0,
-                        padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-                        backgroundColor: cardColor,
-                        foregroundColor: textColor,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(14),
-                          side: BorderSide(
-                            color: widget.isDarkMode ? Colors.white10 : const Color(0xFFE2E8F0),
-                          ),
+                child: options.isEmpty
+                    ? Center(
+                        child: Text(
+                          'Options uplabdh nahi hain.',
+                          style: TextStyle(color: textColor.withOpacity(0.6)),
                         ),
-                        alignment: Alignment.centerLeft,
+                      )
+                    : ListView.separated(
+                        itemCount: options.length,
+                        separatorBuilder: (_, __) => const SizedBox(height: 12),
+                        itemBuilder: (context, idx) {
+                          return ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                              elevation: 0,
+                              padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                              backgroundColor: cardColor,
+                              foregroundColor: textColor,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(14),
+                                side: BorderSide(
+                                  color: widget.isDarkMode ? Colors.white10 : const Color(0xFFE2E8F0),
+                                ),
+                              ),
+                              alignment: Alignment.centerLeft,
+                            ),
+                            onPressed: () => _onSelectOption(idx),
+                            child: Text(
+                              '${String.fromCharCode(65 + idx)}. ${options[idx]}',
+                              style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
+                            ),
+                          );
+                        },
                       ),
-                      onPressed: () => _onSelectOption(idx),
-                      child: Text(
-                        '${String.fromCharCode(65 + idx)}. ${options[idx]}',
-                        style: const TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
-                      ),
-                    );
-                  },
-                ),
               ),
             ],
           ),
