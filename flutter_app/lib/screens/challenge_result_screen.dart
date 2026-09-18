@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class ChallengeResultScreen extends StatefulWidget {
   final String challengerName;
@@ -38,20 +39,42 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
   Future<void> _submitScoreToSupabase() async {
     setState(() => _isSubmitting = true);
     try {
+      final prefs = await SharedPreferences.getInstance();
       final user = Supabase.instance.client.auth.currentUser;
-      final userName = user?.userMetadata?['full_name'] ?? 
-                       user?.userMetadata?['name'] ?? 
-                       'Aspirant';
-      final district = user?.userMetadata?['district'] ?? 'Patna';
 
-      await Supabase.instance.client.from('daily_challenge_submissions').insert({
-        'user_id': user?.id,
+      // 1. Pehle SharedPreferences check karein, fir Supabase Auth, fir Fallback
+      String userName = prefs.getString('user_name') ?? '';
+      if (userName.isEmpty) {
+        userName = user?.userMetadata?['full_name'] ??
+            user?.userMetadata?['name'] ??
+            'Aspirant';
+      }
+
+      String district = prefs.getString('user_district') ?? '';
+      if (district.isEmpty) {
+        district = user?.userMetadata?['district'] ?? 'Patna';
+      }
+
+      final todayDate = DateTime.now().toIso8601String().substring(0, 10);
+
+      final Map<String, dynamic> insertData = {
         'user_name': userName,
         'district': district,
         'score': widget.myScore,
         'time_taken_seconds': widget.totalTimeTaken,
-        'challenge_date': DateTime.now().toIso8601String().substring(0, 10),
-      });
+        'challenge_date': todayDate,
+      };
+
+      // Sirf tab bhejein jab user authenticated ho
+      if (user?.id != null) {
+        insertData['user_id'] = user!.id;
+      }
+
+      await Supabase.instance.client
+          .from('daily_challenge_submissions')
+          .insert(insertData);
+
+      debugPrint("✅ Supabase: Score submitted successfully for $userName!");
 
       if (mounted) {
         setState(() {
@@ -60,6 +83,7 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
         });
       }
     } catch (e) {
+      debugPrint("❌ Supabase Submit Error: $e");
       if (mounted) {
         setState(() => _isSubmitting = false);
       }
@@ -67,11 +91,16 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
   }
 
   // WhatsApp par 1v1 challenge link bhejna
-  void _shareOnWhatsApp() {
+  void _shareOnWhatsApp() async {
+    final prefs = await SharedPreferences.getInstance();
     final user = Supabase.instance.client.auth.currentUser;
-    final myName = user?.userMetadata?['full_name'] ?? 
-                   user?.userMetadata?['name'] ?? 
-                   'Mera Dost';
+
+    String myName = prefs.getString('user_name') ?? '';
+    if (myName.isEmpty) {
+      myName = user?.userMetadata?['full_name'] ??
+          user?.userMetadata?['name'] ??
+          'Dost';
+    }
 
     final String appLink =
         'https://mocktester.app/challenge?code=${widget.challengeCode}&by=$myName&score=${widget.myScore}';
@@ -79,14 +108,14 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
     final String message = '''
 ⚔️ *MOCKTESTER 1v1 BIHAR GK CHALLENGE* ⚔️
 
-Maine 10 sawaalo ka challenge complete kiya hai:
+Maine 10 sawaalo ka rapid GK challenge pura kiya hai:
 🎯 *Score:* ${widget.myScore}/10
 ⏱ *Time:* ${widget.totalTimeTaken} Seconds
 
 Dum hai toh mujhe hara ke dikhao! Same question set par live test do:
 👉 $appLink
 
-App download karo ya link khol kar seedhe match shuru karo! 🏆
+App open karo aur seedhe match compete karo! 🏆
 ''';
 
     Share.share(message);
@@ -102,10 +131,12 @@ App download karo ya link khol kar seedhe match shuru karo! 🏆
     final cardColor = widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white;
     final textColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
 
-    return WillPopScope(
-      onWillPop: () async {
-        Navigator.of(context).popUntil((route) => route.isFirst);
-        return false;
+    return PopScope(
+      canPop: false,
+      onPopInvoked: (didPop) {
+        if (!didPop) {
+          Navigator.of(context).popUntil((route) => route.isFirst);
+        }
       },
       child: Scaffold(
         backgroundColor: bgColor,
@@ -201,7 +232,7 @@ App download karo ya link khol kar seedhe match shuru karo! 🏆
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Icon(
-                            _isSubmitted ? Icons.check_circle_rounded : Icons.sync_rounded,
+                            _isSubmitted ? Icons.check_circle_rounded : (_isSubmitting ? Icons.sync_rounded : Icons.cloud_off_rounded),
                             size: 16,
                             color: _isSubmitted ? const Color(0xFF10B981) : Colors.grey,
                           ),
@@ -209,7 +240,7 @@ App download karo ya link khol kar seedhe match shuru karo! 🏆
                           Text(
                             _isSubmitted
                                 ? 'District Leaderboard par save ho gaya!'
-                                : (_isSubmitting ? 'Rank sync ho raha hai...' : 'Offline mode'),
+                                : (_isSubmitting ? 'Rank sync ho raha hai...' : 'Submission failed / Offline'),
                             style: const TextStyle(fontSize: 12, color: Colors.grey),
                           ),
                         ],
