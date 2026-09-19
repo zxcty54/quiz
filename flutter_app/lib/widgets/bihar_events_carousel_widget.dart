@@ -17,9 +17,12 @@ class BiharEventsCarouselWidget extends StatefulWidget {
       _BiharEventsCarouselWidgetState();
 }
 
-class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
+class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
+    with SingleTickerProviderStateMixin {
   List<Map<String, dynamic>> _filteredEvents = [];
   bool _isLoading = true;
+  late AnimationController _pulseController;
+  late Animation<double> _pulseAnimation;
 
   static const String _jsonUrl =
       'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/biharevents.json';
@@ -27,7 +30,24 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
   @override
   void initState() {
     super.initState();
+
+    // 🔴 Subtle Pulse Animation for LIVE cards
+    _pulseController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1400),
+    )..repeat(reverse: true);
+
+    _pulseAnimation = Tween<double>(begin: 0.25, end: 0.85).animate(
+      CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
+    );
+
     _loadEvents();
+  }
+
+  @override
+  void dispose() {
+    _pulseController.dispose();
+    super.dispose();
   }
 
   Future<void> _loadEvents() async {
@@ -57,16 +77,19 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
 
     if (mounted) {
       setState(() {
-        _filteredEvents = _filterAndSortEvents(rawList);
+        _filteredEvents = _filterCurrentMonthOnly(rawList);
         _isLoading = false;
       });
     }
   }
 
-  // ⚡ Filter: Only LIVE & UPCOMING (Past/Completed excluded)
-  List<Map<String, dynamic>> _filterAndSortEvents(List<dynamic> rawList) {
+  // 🎯 STRICT FILTER: Only LIVE & Current Month's Upcoming
+  List<Map<String, dynamic>> _filterCurrentMonthOnly(List<dynamic> rawList) {
     final now = DateTime.now();
     final todayStr = now.toIso8601String().substring(0, 10);
+    final currentYear = now.year;
+    final currentMonth = now.month;
+
     List<Map<String, dynamic>> result = [];
 
     for (var item in rawList) {
@@ -78,19 +101,37 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
 
       if (startStr.isEmpty || endStr.isEmpty) continue;
 
-      // Completed / Past events drop karein
+      final startDate = DateTime.tryParse(startStr);
+      final endDate = DateTime.tryParse(endStr);
+
+      if (startDate == null || endDate == null) continue;
+
+      // 1. Past events drop
       if (todayStr.compareTo(endStr) > 0) {
         continue;
       }
 
-      final isLive =
-          todayStr.compareTo(startStr) >= 0 && todayStr.compareTo(endStr) <= 0;
-      map['ui_status'] = isLive ? 'LIVE NOW' : 'UPCOMING';
-      map['is_live'] = isLive;
-      result.add(map);
+      final isLive = todayStr.compareTo(startStr) >= 0 && todayStr.compareTo(endStr) <= 0;
+
+      if (isLive) {
+        map['ui_status'] = 'LIVE NOW';
+        map['is_live'] = true;
+        result.add(map);
+      } else {
+        // 2. Upcoming strictly in current month & year
+        final isUpcomingThisMonth = startDate.year == currentYear &&
+            startDate.month == currentMonth &&
+            todayStr.compareTo(startStr) < 0;
+
+        if (isUpcomingThisMonth) {
+          map['ui_status'] = 'UPCOMING';
+          map['is_live'] = false;
+          result.add(map);
+        }
+      }
     }
 
-    // Sort: Live events hamesha sabse pehle, fir date-wise upcoming
+    // Live pehle, fir date-wise sorted
     result.sort((a, b) {
       if (a['is_live'] == true && b['is_live'] == false) return -1;
       if (a['is_live'] == false && b['is_live'] == true) return 1;
@@ -100,16 +141,30 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
     return result;
   }
 
+  String _getStartDayMonth(String? dateRange, String? startIso) {
+    if (dateRange != null && dateRange.contains('-')) {
+      return dateRange.split('-').first.trim();
+    }
+    if (startIso != null && startIso.length >= 10) {
+      final dt = DateTime.tryParse(startIso);
+      if (dt != null) {
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        return "${dt.day} ${months[dt.month - 1]}";
+      }
+    }
+    return dateRange ?? '';
+  }
+
   void _handleCardTap(BuildContext context, Map<String, dynamic> event) {
     final bool isLive = event['is_live'] == true;
 
     if (!isLive) {
+      final availableDate = _getStartDayMonth(event['date_range'], event['start_iso']);
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           behavior: SnackBarBehavior.floating,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
           backgroundColor:
               widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFF1E293B),
           content: Row(
@@ -119,7 +174,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
               const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  'Yeh event ${event['date_range'] ?? 'dates'} ko LIVE hone par unlock hoga!',
+                  'Yeh notes $availableDate ko event LIVE hone par open honge!',
                   style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600),
                 ),
               ),
@@ -187,12 +242,22 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
                     ),
                   ),
                 ),
-                Text(
-                  event['date_range'] ?? '',
-                  style: TextStyle(
-                    fontSize: 12,
-                    color: isDark ? Colors.white60 : Colors.black54,
-                    fontWeight: FontWeight.w600,
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF334155) : const Color(0xFFEFF6FF),
+                    borderRadius: BorderRadius.circular(6),
+                    border: Border.all(
+                      color: isDark ? Colors.white12 : const Color(0xFFBFDBFE),
+                    ),
+                  ),
+                  child: Text(
+                    event['date_range'] ?? '',
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: isDark ? Colors.white : const Color(0xFF1E40AF),
+                      fontWeight: FontWeight.w800,
+                    ),
                   ),
                 ),
               ],
@@ -217,7 +282,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
             ),
             const SizedBox(height: 12),
 
-            // Target Exam Badges
             Wrap(
               spacing: 6,
               children: ((edu['target_exams'] as List?) ?? []).map((exam) {
@@ -247,7 +311,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
               color: isDark ? Colors.white12 : const Color(0xFFE2E8F0),
             ),
 
-            // 1. History
             _buildSectionHeader(Icons.history_edu_rounded, 'History & Dynasties'),
             const SizedBox(height: 8),
             _buildInfoCard([
@@ -257,7 +320,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
             ]),
             const SizedBox(height: 16),
 
-            // 2. Geography
             _buildSectionHeader(Icons.map_rounded, 'Geography & Circuits'),
             const SizedBox(height: 8),
             _buildInfoCard([
@@ -267,7 +329,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
             ]),
             const SizedBox(height: 16),
 
-            // 3. Culture
             _buildSectionHeader(Icons.festival_rounded, 'Culture, Folklore & Offerings'),
             const SizedBox(height: 8),
             _buildInfoCard([
@@ -341,20 +402,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (_isLoading) {
-      return const SizedBox(
-        height: 140,
-        child: Center(
-          child: SizedBox(
-            width: 24,
-            height: 24,
-            child: CircularProgressIndicator(strokeWidth: 2),
-          ),
-        ),
-      );
-    }
-
-    if (_filteredEvents.isEmpty) {
+    if (_isLoading || _filteredEvents.isEmpty) {
       return const SizedBox.shrink();
     }
 
@@ -363,7 +411,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Universal Header
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 2),
           child: Row(
@@ -402,9 +449,8 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
         ),
         const SizedBox(height: 12),
 
-        // Cards Carousel
         SizedBox(
-          height: 155,
+          height: 162,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             physics: const BouncingScrollPhysics(),
@@ -413,28 +459,27 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
             itemBuilder: (context, index) {
               final ev = _filteredEvents[index];
               final bool isLive = ev['is_live'] == true;
+              final availableDate = _getStartDayMonth(ev['date_range'], ev['start_iso']);
 
-              return InkWell(
-                onTap: () => _handleCardTap(context, ev),
-                borderRadius: BorderRadius.circular(18),
-                child: Container(
-                  width: 260,
+              Widget cardContent(double pulseAlpha) {
+                return Container(
+                  width: 268,
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
                     color: isDark ? const Color(0xFF1E293B) : Colors.white,
                     borderRadius: BorderRadius.circular(18),
                     border: Border.all(
                       color: isLive
-                          ? const Color(0xFFDC2626)
+                          ? const Color(0xFFDC2626).withValues(alpha: pulseAlpha)
                           : (isDark ? Colors.white12 : const Color(0xFFE2E8F0)),
-                      width: isLive ? 1.5 : 1,
+                      width: isLive ? 1.8 : 1,
                     ),
                     boxShadow: [
                       BoxShadow(
                         color: isLive
-                            ? const Color(0xFFDC2626).withValues(alpha: 0.1)
+                            ? const Color(0xFFDC2626).withValues(alpha: pulseAlpha * 0.25)
                             : Colors.black.withValues(alpha: isDark ? 0.25 : 0.04),
-                        blurRadius: 10,
+                        blurRadius: isLive ? 12 : 8,
                         offset: const Offset(0, 4),
                       ),
                     ],
@@ -442,13 +487,13 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      // Status & Date Range
+                      // Top Row: Status Tag & Prominent Date Pill
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
                             padding: const EdgeInsets.symmetric(
-                                horizontal: 7, vertical: 3.5),
+                                horizontal: 8, vertical: 4),
                             decoration: BoxDecoration(
                               color: isLive
                                   ? const Color(0xFFDC2626)
@@ -459,18 +504,45 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
                               isLive ? '● LIVE NOW' : 'UPCOMING',
                               style: const TextStyle(
                                 color: Colors.white,
-                                fontSize: 9,
+                                fontSize: 9.5,
                                 fontWeight: FontWeight.w900,
                                 letterSpacing: 0.4,
                               ),
                             ),
                           ),
-                          Text(
-                            ev['date_range'] ?? '',
-                            style: TextStyle(
-                              fontSize: 10.5,
-                              color: isDark ? Colors.white60 : Colors.grey.shade600,
-                              fontWeight: FontWeight.w600,
+
+                          // 📅 Prominent Date Badge
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+                            decoration: BoxDecoration(
+                              color: isDark
+                                  ? const Color(0xFF0F172A)
+                                  : const Color(0xFFF1F5F9),
+                              borderRadius: BorderRadius.circular(6),
+                              border: Border.all(
+                                color: isDark
+                                    ? Colors.white12
+                                    : const Color(0xFFCBD5E1),
+                              ),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(
+                                  Icons.calendar_today_rounded,
+                                  size: 11,
+                                  color: isDark ? Colors.white70 : const Color(0xFF475569),
+                                ),
+                                const SizedBox(width: 4.5),
+                                Text(
+                                  ev['date_range'] ?? '',
+                                  style: TextStyle(
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w800,
+                                    color: isDark ? Colors.white : const Color(0xFF1E293B),
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ],
@@ -502,40 +574,52 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget> {
                       ),
                       const Spacer(),
 
-                      // Lock / Unlock Action
+                      // Action row: Live vs Unlock on Date
                       Row(
                         children: isLive
                             ? const [
                                 Text(
                                   'Unlock Exam Notes',
                                   style: TextStyle(
-                                    fontSize: 11,
+                                    fontSize: 11.5,
                                     fontWeight: FontWeight.w800,
                                     color: Color(0xFF16A34A),
                                   ),
                                 ),
                                 SizedBox(width: 4),
                                 Icon(Icons.arrow_forward_rounded,
-                                    size: 12, color: Color(0xFF16A34A)),
+                                    size: 13, color: Color(0xFF16A34A)),
                               ]
                             : [
-                                Icon(Icons.lock_rounded,
+                                Icon(Icons.lock_clock_rounded,
                                     size: 13,
-                                    color: isDark ? Colors.white38 : Colors.grey.shade500),
-                                const SizedBox(width: 4),
+                                    color: isDark ? Colors.amber.shade400 : const Color(0xFFD97706)),
+                                const SizedBox(width: 4.5),
                                 Text(
-                                  'Notes Locked (Upcoming)',
+                                  'Available on $availableDate',
                                   style: TextStyle(
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w600,
-                                    color: isDark ? Colors.white38 : Colors.grey.shade600,
+                                    fontSize: 11.5,
+                                    fontWeight: FontWeight.w700,
+                                    color: isDark ? Colors.white70 : const Color(0xFF475569),
                                   ),
                                 ),
                               ],
                       ),
                     ],
                   ),
-                ),
+                );
+              }
+
+              // Apply pulse animation to LIVE card
+              return InkWell(
+                onTap: () => _handleCardTap(context, ev),
+                borderRadius: BorderRadius.circular(18),
+                child: isLive
+                    ? AnimatedBuilder(
+                        animation: _pulseAnimation,
+                        builder: (context, _) => cardContent(_pulseAnimation.value),
+                      )
+                    : cardContent(1.0),
               );
             },
           ),
