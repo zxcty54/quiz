@@ -32,12 +32,10 @@ MONTH_MAP = {
     "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12
 }
 
-# Genuine event keywords (inme se koi ek title me hona zaroori hai)
 GENUINE_EVENT_KEYWORDS = [
     "mahotsav", "mela", "festival", "utsav", "fair", "jayanti", "diwas", "samaroh"
 ]
 
-# Navigation / Footer junk keywords (inhe turant reject kiya jayega)
 NAVIGATION_JUNK = [
     "circuit", "destination", "district", "map", "touch", "see", "taste",
     "stories from bihar", "events calender", "contest", "video gallery",
@@ -46,111 +44,41 @@ NAVIGATION_JUNK = [
     "tender", "hotel", "gallery", "terms", "privacy", "feedback"
 ]
 
-# Regex to parse date ranges: e.g. "14th Jan - 18th Jan"
-DATE_PARSER = re.compile(
-    r'(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3})\s*-\s*(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3})',
+# Date detector pattern
+DATE_DETECTOR = re.compile(
+    r'\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3}\s*-\s*\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3}',
     re.IGNORECASE
 )
 
-# Regex to match full format: "<Title> <Date-Range>, <District>"
-EVENT_PATTERN = re.compile(
-    r'^(.*?)\s*(\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3}\s*-\s*\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3})\s*,\s*([A-Za-z\s]+)$',
+# Atomic event regex pattern
+EVENT_ATOMIC_PATTERN = re.compile(
+    r'([A-Za-z0-9\s\'\.\(\)]+?(?:' + '|'.join(GENUINE_EVENT_KEYWORDS) + r')[A-Za-z0-9\s\'\.\(\)]*?)\s+'
+    r'(\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3}\s*-\s*\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3})\s*,\s*'
+    r'([A-Za-z\s]+)',
     re.IGNORECASE
 )
 
-# ============================================================
-# EVENT PARSING & VALIDATION ENGINE
-# ============================================================
-
-def is_junk(text):
-    t = text.lower().strip()
-    return any(j in t for j in NAVIGATION_JUNK)
-
-def parse_event_string(raw_text, link):
-    text = " ".join(raw_text.split()).strip()
+def parse_date_components(date_str):
+    m = re.search(
+        r'(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3})\s*-\s*(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3})',
+        date_str,
+        re.I
+    )
+    if not m:
+        return None
     
-    if is_junk(text):
+    start_d, start_m_str, end_d, end_m_str = int(m.group(1)), m.group(2).lower()[:3], int(m.group(3)), m.group(4).lower()[:3]
+    start_m = MONTH_MAP.get(start_m_str)
+    end_m = MONTH_MAP.get(end_m_str)
+    
+    if not start_m or not end_m:
         return None
-
-    # Step 1: Extract Title, Date string, and District
-    match = EVENT_PATTERN.match(text)
-    if match:
-        raw_title = match.group(1).strip()
-        raw_date = match.group(2).strip()
-        district = match.group(3).strip()
-    else:
-        # Fallback extraction using comma separation for location
-        loc_match = re.search(r',\s*([A-Za-z\s]+)$', text)
-        if not loc_match:
-            return None
-        district = loc_match.group(1).strip()
-
-        date_m = DATE_PARSER.search(text)
-        if not date_m:
-            return None
-        raw_date = date_m.group(0).strip()
-        raw_title = text[:date_m.start()].strip()
-
-    # Rule 1: Reject if title is too short or empty (No guessing/inventing titles)
-    if not raw_title or len(raw_title) < 4:
-        return None
-
-    # Rule 2: Title me genuine cultural keyword (Mahotsav, Mela, Festival) hona mandatory hai
-    has_event_keyword = any(kw in raw_title.lower() for kw in GENUINE_EVENT_KEYWORDS)
-    if not has_event_keyword:
-        return None
-
-    # Step 2: Parse day and month
-    d_match = DATE_PARSER.search(raw_date)
-    if not d_match:
-        return None
-
-    start_day = int(d_match.group(1))
-    start_mon_str = d_match.group(2).lower()[:3]
-    start_mon = MONTH_MAP.get(start_mon_str)
-
-    end_day = int(d_match.group(3))
-    end_mon_str = d_match.group(4).lower()[:3]
-    end_mon = MONTH_MAP.get(end_mon_str)
-
-    if not start_mon or not end_mon:
-        return None
-
-    # Rule 3: Portal ka dummy placeholder "24th Dec - 24th Dec" explicitly block karein
-    if start_day == 24 and start_mon == 12 and end_day == 24 and end_mon == 12:
-        return None
-
-    # Step 3: Rolling Calendar Year Assignment (2026 vs 2027)
-    # Agar event ka month guzar chuka hai -> Next Year (2027)
-    # Agar event aage aane wala hai -> Current Year (2026)
-    if start_mon < NOW.month:
-        event_year = NOW.year + 1  # 2027
-    else:
-        event_year = NOW.year      # 2026
-
-    start_dt = datetime(event_year, start_mon, start_day, tzinfo=IST)
-    end_dt = datetime(event_year, end_mon, end_day, tzinfo=IST)
-    is_upcoming = end_dt >= NOW
-
-    return {
-        "title": raw_title,
-        "district": district,
-        "year": event_year,
-        "date_range": f"{start_day} {start_mon_str.capitalize()} - {end_day} {end_mon_str.capitalize()} {event_year}",
-        "start_iso": start_dt.strftime("%Y-%m-%d"),
-        "end_iso": end_dt.strftime("%Y-%m-%d"),
-        "is_upcoming": is_upcoming,
-        "status": "Upcoming" if is_upcoming else "Completed",
-        "url": link
-    }
-
-# ============================================================
-# MAIN SCRAPER EXECUTION
-# ============================================================
+        
+    return start_d, start_m, start_m_str, end_d, end_m, end_m_str
 
 def scrape_bihar_events():
     print("=" * 80)
-    print(f"🚀 SCRAPING BIHAR TOURISM GENUINE EVENTS (2026-2027)")
+    print(f"🚀 SCRAPING ATOMIC BIHAR TOURISM EVENTS (2026-2027)")
     print(f"🔗 Target: {TARGET_URL}")
     print("=" * 80)
 
@@ -163,35 +91,87 @@ def scrape_bihar_events():
 
     soup = BeautifulSoup(resp.text, "html.parser")
 
-    # Header, footer, scripts ko DOM se hata dein taaki menu text process hi na ho
-    for unwanted in soup(['header', 'footer', 'nav', 'script', 'style']):
+    # Remove irrelevant structural sections
+    for unwanted in soup(['header', 'footer', 'nav', 'script', 'style', 'noscript']):
         unwanted.decompose()
 
     parsed_events = []
-    seen_keys = set()
+    seen_dedup_keys = set()
 
-    # Potential event container elements check karein
-    elements = soup.find_all(['div', 'p', 'li', 'article', 'tr'])
-
-    for el in elements:
-        text = el.get_text(separator=" ", strip=True)
-        
-        # Fast filter: Sirf wahi lines scan karo jisme month aur hyphen ho
-        if not re.search(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s*-\s*\d{1,2}', text, re.I):
+    # Step 1: Find leaf text blocks
+    for element in soup.find_all(['li', 'div', 'p', 'article', 'tr']):
+        # Ignore if it has block children (prevents parent-container concatenation)
+        if element.find(['li', 'div', 'p', 'article']):
             continue
 
-        link_el = el.find('a', href=True)
+        raw_text = " ".join(element.get_text(separator=" ", strip=True).split())
+        
+        # Quick skip for short or junk text
+        if len(raw_text) < 15 or any(j in raw_text.lower() for j in NAVIGATION_JUNK):
+            continue
+
+        # 🛑 RULE 1: Agar ek hi tag ke andar MULTIPLE dates hain, to yeh parent container hai, discard karo!
+        date_matches = DATE_DETECTOR.findall(raw_text)
+        if len(date_matches) != 1:
+            continue
+
+        # 🛑 RULE 2: Atomic Regex extraction
+        atomic_match = EVENT_ATOMIC_PATTERN.search(raw_text)
+        if not atomic_match:
+            continue
+
+        clean_title = atomic_match.group(1).strip()
+        raw_date = atomic_match.group(2).strip()
+        raw_district = atomic_match.group(3).strip()
+
+        # Clean district (remove trailing noise)
+        clean_district = re.split(r'[\r\n\t\|]', raw_district)[0].strip()
+
+        # Reject dummy placeholder
+        if "24th dec - 24th dec" in raw_date.lower() and "jehanabad" in clean_district.lower():
+            continue
+
+        # Parse date parts
+        date_parts = parse_date_components(raw_date)
+        if not date_parts:
+            continue
+
+        start_day, start_mon, start_mon_str, end_day, end_mon, end_mon_str = date_parts
+
+        # Rolling Year Assignment (2026 / 2027)
+        if start_mon < NOW.month:
+            event_year = NOW.year + 1  # 2027
+        else:
+            event_year = NOW.year      # 2026
+
+        start_dt = datetime(event_year, start_mon, start_day, tzinfo=IST)
+        end_dt = datetime(event_year, end_mon, end_day, tzinfo=IST)
+        is_upcoming = end_dt >= NOW
+
+        dedup_key = f"{clean_title.lower()}_{start_dt.strftime('%Y-%m-%d')}"
+        if dedup_key in seen_dedup_keys:
+            continue
+        seen_dedup_keys.add(dedup_key)
+
+        link_el = element.find('a', href=True)
         link = urljoin(BASE_URL, link_el['href']) if link_el else TARGET_URL
 
-        event = parse_event_string(text, link)
-        if event:
-            dedup_key = f"{event['title'].lower()}_{event['start_iso']}"
-            if dedup_key not in seen_keys:
-                seen_keys.add(dedup_key)
-                parsed_events.append(event)
-                print(f"   ✅ [Real Event Found]: {event['title']} | {event['date_range']} ({event['district']})")
+        clean_event = {
+            "title": clean_title,
+            "district": clean_district,
+            "year": event_year,
+            "date_range": f"{start_day} {start_mon_str.capitalize()} - {end_day} {end_mon_str.capitalize()} {event_year}",
+            "start_iso": start_dt.strftime("%Y-%m-%d"),
+            "end_iso": end_dt.strftime("%Y-%m-%d"),
+            "is_upcoming": is_upcoming,
+            "status": "Upcoming" if is_upcoming else "Completed",
+            "url": link
+        }
 
-    # Start date ke mutabiq chronological sorting
+        parsed_events.append(clean_event)
+        print(f"   ✅ [Atomic Event]: {clean_title} | {clean_event['date_range']} ({clean_district})")
+
+    # Chronological sort
     parsed_events.sort(key=lambda x: x['start_iso'])
 
     output_payload = {
@@ -205,7 +185,7 @@ def scrape_bihar_events():
         json.dump(output_payload, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 Clean Events Output Saved to: '{OUTPUT_FILE}' (Total: {len(parsed_events)})")
+    print(f"💾 File Saved: '{OUTPUT_FILE}' | Pure Events Count: {len(parsed_events)}")
     print("=" * 80)
 
 if __name__ == "__main__":
