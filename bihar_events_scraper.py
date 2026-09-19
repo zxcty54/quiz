@@ -5,6 +5,10 @@ import re
 from urllib.parse import urljoin
 from datetime import datetime, timezone, timedelta
 
+# ============================================================
+# CONFIGURATION & CONSTANTS
+# ============================================================
+
 TARGET_URL = "https://tourism.bihar.gov.in/en/events"
 BASE_URL = "https://tourism.bihar.gov.in"
 OUTPUT_FILE = "bihar_events_2026_2027.json"
@@ -28,30 +32,39 @@ MONTH_MAP = {
     "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12
 }
 
-# 1. Navigation Menu Blacklist (Menu aur Footer ko drop karne ke liye)
+# Genuine event keywords (inme se koi ek title me hona zaroori hai)
+GENUINE_EVENT_KEYWORDS = [
+    "mahotsav", "mela", "festival", "utsav", "fair", "jayanti", "diwas", "samaroh"
+]
+
+# Navigation / Footer junk keywords (inhe turant reject kiya jayega)
 NAVIGATION_JUNK = [
     "circuit", "destination", "district", "map", "touch", "see", "taste",
     "stories from bihar", "events calender", "contest", "video gallery",
     "about us", "news", "download", "contact", "tourism policy", "scheme",
     "department", "travel", "important links", "there are no upcoming events",
-    "tender", "hotel", "gallery", "terms", "privacy"
+    "tender", "hotel", "gallery", "terms", "privacy", "feedback"
 ]
 
-def is_junk(text):
-    t = text.lower().strip()
-    return any(j in t for j in NAVIGATION_JUNK)
+# Regex to parse date ranges: e.g. "14th Jan - 18th Jan"
+DATE_PARSER = re.compile(
+    r'(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3})\s*-\s*(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3})',
+    re.IGNORECASE
+)
 
-# 2. Main Regex: Matches "<Title> <Date-Range>, <District>"
-# Example: "Mandar Mahotsav 14th Jan - 18th Jan, Banka"
+# Regex to match full format: "<Title> <Date-Range>, <District>"
 EVENT_PATTERN = re.compile(
     r'^(.*?)\s*(\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3}\s*-\s*\d{1,2}(?:st|nd|rd|th)?\s+[A-Za-z]{3})\s*,\s*([A-Za-z\s]+)$',
     re.IGNORECASE
 )
 
-DATE_PARSER = re.compile(
-    r'(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3})\s*-\s*(\d{1,2})(?:st|nd|rd|th)?\s+([A-Za-z]{3})',
-    re.IGNORECASE
-)
+# ============================================================
+# EVENT PARSING & VALIDATION ENGINE
+# ============================================================
+
+def is_junk(text):
+    t = text.lower().strip()
+    return any(j in t for j in NAVIGATION_JUNK)
 
 def parse_event_string(raw_text, link):
     text = " ".join(raw_text.split()).strip()
@@ -59,15 +72,14 @@ def parse_event_string(raw_text, link):
     if is_junk(text):
         return None
 
-    # Try full match: Title + Date + District
+    # Step 1: Extract Title, Date string, and District
     match = EVENT_PATTERN.match(text)
-    
     if match:
         raw_title = match.group(1).strip()
         raw_date = match.group(2).strip()
         district = match.group(3).strip()
     else:
-        # Fallback: Agar district comma ke sath end me ho
+        # Fallback extraction using comma separation for location
         loc_match = re.search(r',\s*([A-Za-z\s]+)$', text)
         if not loc_match:
             return None
@@ -79,11 +91,16 @@ def parse_event_string(raw_text, link):
         raw_date = date_m.group(0).strip()
         raw_title = text[:date_m.start()].strip()
 
-    # Agar title empty reh jaye
-    if not raw_title or len(raw_title) < 3:
-        raw_title = f"{district} Mahotsav"
+    # Rule 1: Reject if title is too short or empty (No guessing/inventing titles)
+    if not raw_title or len(raw_title) < 4:
+        return None
 
-    # Date Breakdown
+    # Rule 2: Title me genuine cultural keyword (Mahotsav, Mela, Festival) hona mandatory hai
+    has_event_keyword = any(kw in raw_title.lower() for kw in GENUINE_EVENT_KEYWORDS)
+    if not has_event_keyword:
+        return None
+
+    # Step 2: Parse day and month
     d_match = DATE_PARSER.search(raw_date)
     if not d_match:
         return None
@@ -99,9 +116,13 @@ def parse_event_string(raw_text, link):
     if not start_mon or not end_mon:
         return None
 
-    # Rolling Year Logic:
-    # Agar event ka month current month (September) se nikal chuka hai -> 2027
-    # Agar event aage aane wala hai (October, November, December) -> 2026
+    # Rule 3: Portal ka dummy placeholder "24th Dec - 24th Dec" explicitly block karein
+    if start_day == 24 and start_mon == 12 and end_day == 24 and end_mon == 12:
+        return None
+
+    # Step 3: Rolling Calendar Year Assignment (2026 vs 2027)
+    # Agar event ka month guzar chuka hai -> Next Year (2027)
+    # Agar event aage aane wala hai -> Current Year (2026)
     if start_mon < NOW.month:
         event_year = NOW.year + 1  # 2027
     else:
@@ -123,10 +144,14 @@ def parse_event_string(raw_text, link):
         "url": link
     }
 
+# ============================================================
+# MAIN SCRAPER EXECUTION
+# ============================================================
+
 def scrape_bihar_events():
     print("=" * 80)
-    print(f"🚀 SCRAPING & CLEANING BIHAR TOURISM EVENTS")
-    print(f"🔗 Source: {TARGET_URL}")
+    print(f"🚀 SCRAPING BIHAR TOURISM GENUINE EVENTS (2026-2027)")
+    print(f"🔗 Target: {TARGET_URL}")
     print("=" * 80)
 
     try:
@@ -138,20 +163,20 @@ def scrape_bihar_events():
 
     soup = BeautifulSoup(resp.text, "html.parser")
 
-    # Header, footer, scripts hata dein
+    # Header, footer, scripts ko DOM se hata dein taaki menu text process hi na ho
     for unwanted in soup(['header', 'footer', 'nav', 'script', 'style']):
         unwanted.decompose()
 
     parsed_events = []
     seen_keys = set()
 
-    # Har text node aur card check karein
+    # Potential event container elements check karein
     elements = soup.find_all(['div', 'p', 'li', 'article', 'tr'])
 
     for el in elements:
         text = el.get_text(separator=" ", strip=True)
         
-        # Sirf wahi lines uthao jisme month aur hyphen ho
+        # Fast filter: Sirf wahi lines scan karo jisme month aur hyphen ho
         if not re.search(r'\b(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s*-\s*\d{1,2}', text, re.I):
             continue
 
@@ -164,9 +189,9 @@ def scrape_bihar_events():
             if dedup_key not in seen_keys:
                 seen_keys.add(dedup_key)
                 parsed_events.append(event)
-                print(f"   ✅ Cleaned: {event['title']} | {event['date_range']} | {event['district']}")
+                print(f"   ✅ [Real Event Found]: {event['title']} | {event['date_range']} ({event['district']})")
 
-    # Chronological sort
+    # Start date ke mutabiq chronological sorting
     parsed_events.sort(key=lambda x: x['start_iso'])
 
     output_payload = {
@@ -180,7 +205,7 @@ def scrape_bihar_events():
         json.dump(output_payload, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"💾 Total {len(parsed_events)} Clean Events Saved to '{OUTPUT_FILE}'")
+    print(f"💾 Clean Events Output Saved to: '{OUTPUT_FILE}' (Total: {len(parsed_events)})")
     print("=" * 80)
 
 if __name__ == "__main__":
