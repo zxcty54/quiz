@@ -31,13 +31,12 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
   void initState() {
     super.initState();
 
-    // 🔴 Subtle Pulse Animation for LIVE cards
     _pulseController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 1400),
+      duration: const Duration(milliseconds: 1500),
     )..repeat(reverse: true);
 
-    _pulseAnimation = Tween<double>(begin: 0.25, end: 0.85).animate(
+    _pulseAnimation = Tween<double>(begin: 0.35, end: 0.9).animate(
       CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
     );
 
@@ -83,7 +82,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
     }
   }
 
-  // 🎯 STRICT FILTER: Only LIVE & Current Month's Upcoming
+  // 🎯 Filter: Only LIVE & Current Month Upcoming
   List<Map<String, dynamic>> _filterCurrentMonthOnly(List<dynamic> rawList) {
     final now = DateTime.now();
     final todayStr = now.toIso8601String().substring(0, 10);
@@ -106,10 +105,8 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
 
       if (startDate == null || endDate == null) continue;
 
-      // 1. Past events drop
-      if (todayStr.compareTo(endStr) > 0) {
-        continue;
-      }
+      // Past events drop
+      if (todayStr.compareTo(endStr) > 0) continue;
 
       final isLive = todayStr.compareTo(startStr) >= 0 && todayStr.compareTo(endStr) <= 0;
 
@@ -118,7 +115,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
         map['is_live'] = true;
         result.add(map);
       } else {
-        // 2. Upcoming strictly in current month & year
         final isUpcomingThisMonth = startDate.year == currentYear &&
             startDate.month == currentMonth &&
             todayStr.compareTo(startStr) < 0;
@@ -131,7 +127,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
       }
     }
 
-    // Live pehle, fir date-wise sorted
     result.sort((a, b) {
       if (a['is_live'] == true && b['is_live'] == false) return -1;
       if (a['is_live'] == false && b['is_live'] == true) return 1;
@@ -141,25 +136,45 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
     return result;
   }
 
-  String _getStartDayMonth(String? dateRange, String? startIso) {
-    if (dateRange != null && dateRange.contains('-')) {
-      return dateRange.split('-').first.trim();
-    }
-    if (startIso != null && startIso.length >= 10) {
+  // Month & Day extractor for ticket notch
+  Map<String, String> _extractTicketDate(Map<String, dynamic> ev) {
+    final dateRange = ev['date_range']?.toString() ?? '';
+    final startIso = ev['start_iso']?.toString() ?? '';
+
+    String month = "EVENT";
+    String day = "DATE";
+
+    if (dateRange.isNotEmpty) {
+      final parts = dateRange.split(' ');
+      if (parts.length >= 2) {
+        day = parts[0];
+        month = parts[1].replaceAll(',', '');
+      }
+      if (dateRange.contains('-')) {
+        final dashParts = dateRange.split('-');
+        final firstPart = dashParts[0].trim().split(' ');
+        if (firstPart.length >= 2) {
+          day = firstPart[0];
+          month = firstPart[1];
+        }
+      }
+    } else if (startIso.length >= 10) {
       final dt = DateTime.tryParse(startIso);
       if (dt != null) {
-        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-        return "${dt.day} ${months[dt.month - 1]}";
+        const mNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+        month = mNames[dt.month - 1];
+        day = "${dt.day}";
       }
     }
-    return dateRange ?? '';
+
+    return {"month": month.toUpperCase(), "day": day};
   }
 
   void _handleCardTap(BuildContext context, Map<String, dynamic> event) {
     final bool isLive = event['is_live'] == true;
 
     if (!isLive) {
-      final availableDate = _getStartDayMonth(event['date_range'], event['start_iso']);
+      final tDate = _extractTicketDate(event);
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
@@ -170,11 +185,11 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
           content: Row(
             children: [
               const Icon(Icons.lock_clock_rounded,
-                  color: Colors.amberAccent, size: 18),
+                  color: Color(0xFFFBBF24), size: 18),
               const SizedBox(width: 10),
               Expanded(
                 child: Text(
-                  'Yeh notes $availableDate ko event LIVE hone par open honge!',
+                  'Yeh notes ${tDate["day"]} ${tDate["month"]} ko event LIVE hone par open honge!',
                   style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600),
                 ),
               ),
@@ -199,12 +214,12 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+      backgroundColor: isDark ? const Color(0xFF1C1917) : Colors.white,
       shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(22)),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
       ),
       builder: (ctx) => DraggableScrollableSheet(
-        initialChildSize: 0.75,
+        initialChildSize: 0.78,
         maxChildSize: 0.95,
         minChildSize: 0.5,
         expand: false,
@@ -227,37 +242,27 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFDC2626).withValues(alpha: 0.12),
+                    color: const Color(0xFFB45309).withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: const Text(
-                    '● LIVE EVENT EXAM NOTES',
+                    '● LIVE HERITAGE CAPSULE',
                     style: TextStyle(
-                      color: Color(0xFFDC2626),
+                      color: Color(0xFFB45309),
                       fontSize: 10,
                       fontWeight: FontWeight.w900,
+                      letterSpacing: 0.4,
                     ),
                   ),
                 ),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                  decoration: BoxDecoration(
-                    color: isDark ? const Color(0xFF334155) : const Color(0xFFEFF6FF),
-                    borderRadius: BorderRadius.circular(6),
-                    border: Border.all(
-                      color: isDark ? Colors.white12 : const Color(0xFFBFDBFE),
-                    ),
-                  ),
-                  child: Text(
-                    event['date_range'] ?? '',
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: isDark ? Colors.white : const Color(0xFF1E40AF),
-                      fontWeight: FontWeight.w800,
-                    ),
+                Text(
+                  event['date_range'] ?? '',
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: isDark ? Colors.white60 : Colors.black54,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
               ],
@@ -273,7 +278,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
             ),
             const SizedBox(height: 4),
             Text(
-              _getLocationSubtitle(event),
+              '${event['district'] ?? ''} • ${event['administrative_division'] ?? 'Bihar'} Division',
               style: TextStyle(
                 fontSize: 13,
                 color: isDark ? Colors.white70 : const Color(0xFF64748B),
@@ -286,21 +291,20 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
               spacing: 6,
               children: ((edu['target_exams'] as List?) ?? []).map((exam) {
                 return Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF2563EB).withValues(alpha: 0.1),
+                    color: isDark ? const Color(0xFF292524) : const Color(0xFFFEF3C7),
                     borderRadius: BorderRadius.circular(6),
                     border: Border.all(
-                      color: const Color(0xFF2563EB).withValues(alpha: 0.25),
+                      color: isDark ? Colors.white12 : const Color(0xFFFDE68A),
                     ),
                   ),
                   child: Text(
                     exam.toString(),
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 10.5,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF2563EB),
+                      fontWeight: FontWeight.w800,
+                      color: isDark ? Colors.amber.shade300 : const Color(0xFF92400E),
                     ),
                   ),
                 );
@@ -320,7 +324,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
             ]),
             const SizedBox(height: 16),
 
-            _buildSectionHeader(Icons.map_rounded, 'Geography & Circuits'),
+            _buildSectionHeader(Icons.map_rounded, 'Geography & Circuit'),
             const SizedBox(height: 8),
             _buildInfoCard([
               'River / Basin: ${geo['region'] ?? 'N/A'}',
@@ -329,7 +333,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
             ]),
             const SizedBox(height: 16),
 
-            _buildSectionHeader(Icons.festival_rounded, 'Culture, Folklore & Offerings'),
+            _buildSectionHeader(Icons.festival_rounded, 'Culture, Folklore & Prasad'),
             const SizedBox(height: 8),
             _buildInfoCard([
               'Local Folklore: ${culture['local_folklore'] ?? 'N/A'}',
@@ -345,7 +349,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
   Widget _buildSectionHeader(IconData icon, String title) {
     return Row(
       children: [
-        Icon(icon, size: 18, color: const Color(0xFFEA580C)),
+        Icon(icon, size: 18, color: const Color(0xFFB45309)),
         const SizedBox(width: 8),
         Text(
           title,
@@ -364,10 +368,10 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+        color: isDark ? const Color(0xFF292524) : const Color(0xFFFDF8F6),
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
-          color: isDark ? Colors.white10 : const Color(0xFFE2E8F0),
+          color: isDark ? Colors.white10 : const Color(0xFFF3E8E2),
         ),
       ),
       child: Column(
@@ -379,25 +383,12 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
             style: TextStyle(
               fontSize: 12.5,
               height: 1.45,
-              color: isDark ? Colors.white70 : const Color(0xFF334155),
+              color: isDark ? Colors.white70 : const Color(0xFF44403C),
             ),
           ),
         )).toList(),
       ),
     );
-  }
-
-  String _getLocationSubtitle(Map<String, dynamic> ev) {
-    if (ev['district'] != null && ev['district'].toString().trim().isNotEmpty) {
-      final div = ev['administrative_division'] != null
-          ? ' • ${ev['administrative_division']}'
-          : '';
-      return '${ev['district']}$div';
-    }
-    if (ev['country'] != null && ev['country'].toString().trim().isNotEmpty) {
-      return '${ev['country']} • Global Event';
-    }
-    return 'State & Cultural Affairs';
   }
 
   @override
@@ -411,6 +402,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
+        // Section Header
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 2),
           child: Row(
@@ -418,7 +410,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
             children: [
               Row(
                 children: [
-                  const Text('🌐 ', style: TextStyle(fontSize: 16)),
+                  const Text('🚩 ', style: TextStyle(fontSize: 16)),
                   Text(
                     'Events & Cultural Affairs',
                     style: TextStyle(
@@ -432,7 +424,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFEA580C).withValues(alpha: 0.12),
+                  color: const Color(0xFFB45309).withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Text(
@@ -440,7 +432,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                   style: TextStyle(
                     fontSize: 9,
                     fontWeight: FontWeight.w900,
-                    color: Color(0xFFEA580C),
+                    color: Color(0xFFB45309),
                   ),
                 ),
               ),
@@ -449,177 +441,267 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
         ),
         const SizedBox(height: 12),
 
+        // Horizontal Heritage Cards
         SizedBox(
-          height: 162,
+          height: 172,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             physics: const BouncingScrollPhysics(),
             itemCount: _filteredEvents.length,
-            separatorBuilder: (_, __) => const SizedBox(width: 12),
+            separatorBuilder: (_, __) => const SizedBox(width: 14),
             itemBuilder: (context, index) {
               final ev = _filteredEvents[index];
               final bool isLive = ev['is_live'] == true;
-              final availableDate = _getStartDayMonth(ev['date_range'], ev['start_iso']);
+              final ticketDate = _extractTicketDate(ev);
 
-              Widget cardContent(double pulseAlpha) {
+              final edu = ev['educational_content'] as Map<String, dynamic>? ?? {};
+              final history = edu['history'] as Map<String, dynamic>? ?? {};
+              final geo = edu['geography_and_circuit'] as Map<String, dynamic>? ?? {};
+
+              // Exam hooks
+              final dynastyList = (history['dynasties'] as List?) ?? [];
+              final firstDynasty = dynastyList.isNotEmpty ? dynastyList.first.toString().split('(').first.trim() : null;
+              final region = geo['region']?.toString();
+
+              Widget cardBody(double pulseAlpha) {
                 return Container(
-                  width: 268,
-                  padding: const EdgeInsets.all(14),
+                  width: 295,
                   decoration: BoxDecoration(
-                    color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                    color: isDark ? const Color(0xFF1E1B18) : Colors.white,
                     borderRadius: BorderRadius.circular(18),
                     border: Border.all(
                       color: isLive
-                          ? const Color(0xFFDC2626).withValues(alpha: pulseAlpha)
-                          : (isDark ? Colors.white12 : const Color(0xFFE2E8F0)),
-                      width: isLive ? 1.8 : 1,
+                          ? const Color(0xFFB45309).withValues(alpha: pulseAlpha)
+                          : (isDark ? Colors.white10 : const Color(0xFFE7E5E4)),
+                      width: isLive ? 1.6 : 1,
                     ),
                     boxShadow: [
                       BoxShadow(
                         color: isLive
-                            ? const Color(0xFFDC2626).withValues(alpha: pulseAlpha * 0.25)
-                            : Colors.black.withValues(alpha: isDark ? 0.25 : 0.04),
-                        blurRadius: isLive ? 12 : 8,
+                            ? const Color(0xFFB45309).withValues(alpha: pulseAlpha * 0.25)
+                            : Colors.black.withValues(alpha: isDark ? 0.3 : 0.05),
+                        blurRadius: isLive ? 14 : 10,
                         offset: const Offset(0, 4),
                       ),
                     ],
                   ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                  child: Stack(
                     children: [
-                      // Top Row: Status Tag & Prominent Date Pill
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Container(
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 8, vertical: 4),
-                            decoration: BoxDecoration(
-                              color: isLive
-                                  ? const Color(0xFFDC2626)
-                                  : const Color(0xFF2563EB),
-                              borderRadius: BorderRadius.circular(6),
-                            ),
-                            child: Text(
-                              isLive ? '● LIVE NOW' : 'UPCOMING',
-                              style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 9.5,
-                                fontWeight: FontWeight.w900,
-                                letterSpacing: 0.4,
-                              ),
-                            ),
-                          ),
-
-                          // 📅 Prominent Date Badge
-                          Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
-                            decoration: BoxDecoration(
-                              color: isDark
-                                  ? const Color(0xFF0F172A)
-                                  : const Color(0xFFF1F5F9),
-                              borderRadius: BorderRadius.circular(6),
-                              border: Border.all(
-                                color: isDark
-                                    ? Colors.white12
-                                    : const Color(0xFFCBD5E1),
-                              ),
-                            ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Icon(
-                                  Icons.calendar_today_rounded,
-                                  size: 11,
-                                  color: isDark ? Colors.white70 : const Color(0xFF475569),
-                                ),
-                                const SizedBox(width: 4.5),
-                                Text(
-                                  ev['date_range'] ?? '',
-                                  style: TextStyle(
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.w800,
-                                    color: isDark ? Colors.white : const Color(0xFF1E293B),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      const Spacer(),
-
-                      // Title
-                      Text(
-                        ev['title'] ?? '',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w800,
-                          color: isDark ? Colors.white : const Color(0xFF0F172A),
+                      // Subtle Cultural Temple Arch Motif
+                      Positioned(
+                        right: -15,
+                        top: -15,
+                        child: Icon(
+                          Icons.account_balance_rounded,
+                          size: 110,
+                          color: isDark
+                              ? Colors.white.withValues(alpha: 0.02)
+                              : const Color(0xFFB45309).withValues(alpha: 0.03),
                         ),
                       ),
-                      const SizedBox(height: 3),
 
-                      // Location / Region
-                      Text(
-                        _getLocationSubtitle(ev),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: 11.5,
-                          color: isDark ? Colors.white70 : const Color(0xFF64748B),
+                      Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            // 🎟️ 1. Left Heritage Ticket Notch
+                            Container(
+                              width: 58,
+                              height: double.infinity,
+                              decoration: BoxDecoration(
+                                color: isLive
+                                    ? const Color(0xFFB45309)
+                                    : (isDark ? const Color(0xFF292524) : const Color(0xFFF5F5F4)),
+                                borderRadius: BorderRadius.circular(12),
+                                border: Border.all(
+                                  color: isLive
+                                      ? const Color(0xFFB45309)
+                                      : (isDark ? Colors.white12 : const Color(0xFFE7E5E4)),
+                                ),
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    ticketDate['month']!,
+                                    style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w900,
+                                      color: isLive ? Colors.white70 : (isDark ? Colors.white60 : const Color(0xFF78716C)),
+                                      letterSpacing: 0.5,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 2),
+                                  Text(
+                                    ticketDate['day']!,
+                                    style: TextStyle(
+                                      fontSize: 16,
+                                      fontWeight: FontWeight.w900,
+                                      color: isLive ? Colors.white : (isDark ? Colors.white : const Color(0xFF1C1917)),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 6),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                                    decoration: BoxDecoration(
+                                      color: isLive ? Colors.white.withValues(alpha: 0.25) : Colors.black.withValues(alpha: 0.05),
+                                      borderRadius: BorderRadius.circular(4),
+                                    ),
+                                    child: Text(
+                                      isLive ? 'LIVE' : 'UPCOMING',
+                                      style: TextStyle(
+                                        fontSize: 7.5,
+                                        fontWeight: FontWeight.w900,
+                                        color: isLive ? Colors.white : (isDark ? Colors.white70 : const Color(0xFF57534E)),
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+
+                            // 📜 2. Right Info & Exam Hook Area
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  // Location & District
+                                  Row(
+                                    children: [
+                                      Icon(
+                                        Icons.place_rounded,
+                                        size: 13,
+                                        color: isDark ? Colors.amber.shade400 : const Color(0xFFB45309),
+                                      ),
+                                      const SizedBox(width: 3),
+                                      Expanded(
+                                        child: Text(
+                                          '${ev['district'] ?? 'Bihar'} • ${ev['administrative_division'] ?? ''}',
+                                          maxLines: 1,
+                                          overflow: TextOverflow.ellipsis,
+                                          style: TextStyle(
+                                            fontSize: 11,
+                                            fontWeight: FontWeight.w700,
+                                            color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
+                                          ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 4),
+
+                                  // Event Title
+                                  Text(
+                                    ev['title'] ?? '',
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 15.5,
+                                      fontWeight: FontWeight.w900,
+                                      color: isDark ? Colors.white : const Color(0xFF1C1917),
+                                      letterSpacing: -0.2,
+                                    ),
+                                  ),
+                                  const Spacer(),
+
+                                  // 🏛️ Exam Micro-Tags
+                                  Wrap(
+                                    spacing: 4,
+                                    runSpacing: 4,
+                                    children: [
+                                      if (firstDynasty != null)
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
+                                          decoration: BoxDecoration(
+                                            color: isDark ? const Color(0xFF292524) : const Color(0xFFFEF3C7),
+                                            borderRadius: BorderRadius.circular(5),
+                                          ),
+                                          child: Text(
+                                            '🏛️ $firstDynasty',
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(
+                                              fontSize: 9.5,
+                                              fontWeight: FontWeight.w800,
+                                              color: isDark ? Colors.amber.shade200 : const Color(0xFF92400E),
+                                            ),
+                                          ),
+                                        ),
+                                      if (region != null)
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
+                                          decoration: BoxDecoration(
+                                            color: isDark ? const Color(0xFF1C2826) : const Color(0xFFECFDF5),
+                                            borderRadius: BorderRadius.circular(5),
+                                          ),
+                                          child: Text(
+                                            '🌊 ${region.split('(').first.trim()}',
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: TextStyle(
+                                              fontSize: 9.5,
+                                              fontWeight: FontWeight.w800,
+                                              color: isDark ? const Color(0xFF6EE7B7) : const Color(0xFF065F46),
+                                            ),
+                                          ),
+                                        ),
+                                    ],
+                                  ),
+                                  const Spacer(),
+
+                                  // Action Footer Strip
+                                  Row(
+                                    children: isLive
+                                        ? [
+                                            const Text(
+                                              'Unlock Exam Notes',
+                                              style: TextStyle(
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.w900,
+                                                color: Color(0xFF16A34A),
+                                              ),
+                                            ),
+                                            const SizedBox(width: 3),
+                                            const Icon(Icons.arrow_forward_rounded,
+                                                size: 13, color: Color(0xFF16A34A)),
+                                          ]
+                                        : [
+                                            Icon(Icons.lock_rounded,
+                                                size: 12,
+                                                color: isDark ? Colors.white38 : const Color(0xFFA8A29E)),
+                                            const SizedBox(width: 4),
+                                            Text(
+                                              'Available ${ticketDate["day"]} ${ticketDate["month"]}',
+                                              style: TextStyle(
+                                                fontSize: 11,
+                                                fontWeight: FontWeight.w700,
+                                                color: isDark ? Colors.white54 : const Color(0xFF78716C),
+                                              ),
+                                            ),
+                                          ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                      const Spacer(),
-
-                      // Action row: Live vs Unlock on Date
-                      Row(
-                        children: isLive
-                            ? const [
-                                Text(
-                                  'Unlock Exam Notes',
-                                  style: TextStyle(
-                                    fontSize: 11.5,
-                                    fontWeight: FontWeight.w800,
-                                    color: Color(0xFF16A34A),
-                                  ),
-                                ),
-                                SizedBox(width: 4),
-                                Icon(Icons.arrow_forward_rounded,
-                                    size: 13, color: Color(0xFF16A34A)),
-                              ]
-                            : [
-                                Icon(Icons.lock_clock_rounded,
-                                    size: 13,
-                                    color: isDark ? Colors.amber.shade400 : const Color(0xFFD97706)),
-                                const SizedBox(width: 4.5),
-                                Text(
-                                  'Available on $availableDate',
-                                  style: TextStyle(
-                                    fontSize: 11.5,
-                                    fontWeight: FontWeight.w700,
-                                    color: isDark ? Colors.white70 : const Color(0xFF475569),
-                                  ),
-                                ),
-                              ],
                       ),
                     ],
                   ),
                 );
               }
 
-              // Apply pulse animation to LIVE card
               return InkWell(
                 onTap: () => _handleCardTap(context, ev),
                 borderRadius: BorderRadius.circular(18),
                 child: isLive
                     ? AnimatedBuilder(
                         animation: _pulseAnimation,
-                        builder: (context, _) => cardContent(_pulseAnimation.value),
+                        builder: (context, _) => cardBody(_pulseAnimation.value),
                       )
-                    : cardContent(1.0),
+                    : cardBody(1.0),
               );
             },
           ),
