@@ -197,9 +197,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         final currentQ = widget.questions[_currentIndex];
 
         // ⏱️ Timeout attempt logged with full question details
-        final String qTextClean = currentQ.qe.isNotEmpty
-            ? currentQ.qe
-            : (currentQ.qh.isNotEmpty ? currentQ.qh : currentQ.getText(_isHindi));
+       final String qTextClean = (currentQ.qe != null && currentQ.qe!.isNotEmpty)
+    ? currentQ.qe!
+    : ((currentQ.qh != null && currentQ.qh!.isNotEmpty) ? currentQ.qh! : currentQ.getText(_isHindi));
 
         UserStatsService.recordQuestionAttempt(
           isCorrect: false,
@@ -227,9 +227,9 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
       _isAnswered = true;
     });
 
-    final String qTextClean = currentQ.qe.isNotEmpty
-        ? currentQ.qe
-        : (currentQ.qh.isNotEmpty ? currentQ.qh : currentQ.getText(_isHindi));
+    final String qTextClean = (currentQ.qe != null && currentQ.qe!.isNotEmpty)
+    ? currentQ.qe!
+    : ((currentQ.qh != null && currentQ.qh!.isNotEmpty) ? currentQ.qh! : currentQ.getText(_isHindi));
 
     final currentOptions = currentQ.getOptions(_isHindi);
     final String selectedOpt = (index >= 0 && index < currentOptions.length) ? currentOptions[index] : '';
