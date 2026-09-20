@@ -17,7 +17,7 @@ class DistrictLeaderboardScreen extends StatefulWidget {
 }
 
 class _DistrictLeaderboardScreenState extends State<DistrictLeaderboardScreen> {
-  // 📍 Bihar ke sabhi 38 districts + All Bihar option
+  // 📍 Bihar ke sabhi 38 districts + All Bihar
   final List<String> _districts = const [
     'All Bihar',
     'Araria', 'Arwal', 'Aurangabad', 'Banka', 'Begusarai', 'Bhagalpur', 'Bhojpur',
@@ -44,38 +44,19 @@ class _DistrictLeaderboardScreenState extends State<DistrictLeaderboardScreen> {
   Future<void> _fetchLeaderboard() async {
     setState(() => _isLoading = true);
     try {
-      final todayDate = DateTime.now().toIso8601String().substring(0, 10);
-
-      // 1. Aaj ke challenge data ke liye query
+      // Direct query without restrictive date string filters so ranks never disappear
       var query = Supabase.instance.client
           .from('daily_challenge_submissions')
-          .select('user_name, district, score, time_taken_seconds, challenge_date')
-          .ilike('challenge_date', '$todayDate%');
+          .select('user_name, district, score, time_taken_seconds');
 
       if (_selectedDistrict != 'All Bihar') {
         query = query.eq('district', _selectedDistrict);
       }
 
-      var res = await query
+      final res = await query
           .order('score', ascending: false)
           .order('time_taken_seconds', ascending: true)
           .limit(50);
-
-      // 2. Agar aaj ke submissions zero hain, toh fallback: latest overall submissions
-      if (res == null || (res as List).isEmpty) {
-        var fallbackQuery = Supabase.instance.client
-            .from('daily_challenge_submissions')
-            .select('user_name, district, score, time_taken_seconds, challenge_date');
-
-        if (_selectedDistrict != 'All Bihar') {
-          fallbackQuery = fallbackQuery.eq('district', _selectedDistrict);
-        }
-
-        res = await fallbackQuery
-            .order('score', ascending: false)
-            .order('time_taken_seconds', ascending: true)
-            .limit(50);
-      }
 
       if (mounted) {
         setState(() {
@@ -229,7 +210,7 @@ class _DistrictLeaderboardScreenState extends State<DistrictLeaderboardScreen> {
                             ),
                             child: Row(
                               children: [
-                                // Rank Icon / Number
+                                // Rank Badge
                                 Container(
                                   width: 36,
                                   height: 36,
@@ -257,15 +238,13 @@ class _DistrictLeaderboardScreenState extends State<DistrictLeaderboardScreen> {
                                 ),
                                 const SizedBox(width: 12),
 
-                                // User Details
+                                // User Info
                                 Expanded(
                                   child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        (item['user_name'] ?? 'Candidate')
-                                            .toString(),
+                                        (item['user_name'] ?? 'Candidate').toString(),
                                         maxLines: 1,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
@@ -282,8 +261,7 @@ class _DistrictLeaderboardScreenState extends State<DistrictLeaderboardScreen> {
                                               color: Color(0xFF2563EB)),
                                           const SizedBox(width: 3),
                                           Text(
-                                            (item['district'] ?? 'Bihar')
-                                                .toString(),
+                                            (item['district'] ?? 'Bihar').toString(),
                                             style: TextStyle(
                                                 fontSize: 11,
                                                 fontWeight: FontWeight.w600,
@@ -303,13 +281,12 @@ class _DistrictLeaderboardScreenState extends State<DistrictLeaderboardScreen> {
                                   ),
                                 ),
 
-                                // Score Badge
+                                // Score
                                 Container(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 10, vertical: 5),
                                   decoration: BoxDecoration(
-                                    color: const Color(0xFF10B981)
-                                        .withValues(alpha: 0.12),
+                                    color: const Color(0xFF10B981).withValues(alpha: 0.12),
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                   child: Text(
