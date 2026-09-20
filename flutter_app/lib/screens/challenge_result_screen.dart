@@ -37,14 +37,14 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
     _submitScoreToSupabase();
   }
 
-  // 🏆 Leaderboard Submission Logic (Strict Onboarding Identity Sync)
+  // 🏆 Leaderboard Submission Logic
   Future<void> _submitScoreToSupabase() async {
     setState(() => _isSubmitting = true);
     try {
       final prefs = await SharedPreferences.getInstance();
       final user = Supabase.instance.client.auth.currentUser;
 
-      // 1. Mandatory Name from Registration / SharedPreferences
+      // 1. Mandatory Identity Sync from Onboarding / Profile
       String userName = prefs.getString('user_name')?.trim() ??
           prefs.getString('custom_aspirant_name')?.trim() ??
           '';
@@ -55,14 +55,13 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
             'Aspirant';
       }
 
-      // 2. Mandatory District from Registration / SharedPreferences
       String district = prefs.getString('user_district')?.trim() ??
           user?.userMetadata?['district']?.toString().trim() ??
           'Patna';
 
       final todayDate = DateTime.now().toIso8601String().substring(0, 10);
 
-      // 3. Check existing submission for today
+      // 2. Resilient Check for Existing Record
       var query = Supabase.instance.client
           .from('daily_challenge_submissions')
           .select();
@@ -73,13 +72,16 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
         query = query.eq('user_name', userName);
       }
 
-      final existing = await query.eq('challenge_date', todayDate).maybeSingle();
+      // ilike format match to avoid timestamp boundary conflicts
+      final existing = await query
+          .ilike('challenge_date', '$todayDate%')
+          .maybeSingle();
 
       if (existing != null) {
         final int oldScore = existing['score'] ?? 0;
         final int oldTime = existing['time_taken_seconds'] ?? 9999;
 
-        // Better score ya faster time hone par hi record update karein
+        // Better score ya faster time hone par update karein
         bool shouldUpdate = widget.myScore > oldScore ||
             (widget.myScore == oldScore && widget.totalTimeTaken < oldTime);
 
@@ -115,7 +117,7 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
         debugPrint("✅ Naya score submit hua!");
       }
 
-      // 4. Update local cache taaki card bina delay ke turant show kare
+      // 3. Update local cache taaki Home leaderboard preview turant refresh ho
       await prefs.setString('last_sub_user', userName);
       await prefs.setString('last_sub_district', district);
       await prefs.setInt('last_sub_score', widget.myScore);
@@ -134,7 +136,7 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
     }
   }
 
-  // 📲 WhatsApp Challenge Link Generation
+  // 📲 WhatsApp Challenge Share
   Future<void> _shareOnWhatsApp() async {
     final prefs = await SharedPreferences.getInstance();
     final user = Supabase.instance.client.auth.currentUser;
@@ -155,7 +157,7 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
     final String message = '''
 ⚔️ *MOCKTESTER 1v1 RAPID GK CHALLENGE* ⚔️
 
-Maine 10 sawaalo ka challenge compete kiya hai:
+Maine 10 sawaalo ka challenge complete kiya hai:
 🎯 *Score:* ${widget.myScore}/10
 ⏱ *Total Time:* ${widget.totalTimeTaken}s
 
@@ -180,11 +182,15 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
     final bool won = widget.myScore > widget.challengerScore;
     final bool tie = widget.myScore == widget.challengerScore;
 
-    final scaffoldBg = isDark ? const Color(0xFF111827) : const Color(0xFFF9FAFB);
+    final scaffoldBg =
+        isDark ? const Color(0xFF111827) : const Color(0xFFF9FAFB);
     final cardBg = isDark ? const Color(0xFF1F2937) : Colors.white;
-    final textColor = isDark ? const Color(0xFFF3F4F6) : const Color(0xFF111827);
-    final subTextColor = isDark ? const Color(0xFF9CA3AF) : const Color(0xFF4B5563);
-    final borderColor = isDark ? const Color(0xFF374151) : const Color(0xFFE5E7EB);
+    final textColor =
+        isDark ? const Color(0xFFF3F4F6) : const Color(0xFF111827);
+    final subTextColor =
+        isDark ? const Color(0xFF9CA3AF) : const Color(0xFF4B5563);
+    final borderColor =
+        isDark ? const Color(0xFF374151) : const Color(0xFFE5E7EB);
 
     return PopScope(
       canPop: false,
@@ -201,7 +207,8 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
           automaticallyImplyLeading: false,
           title: Text(
             'Challenge Summary',
-            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700, color: textColor),
+            style: TextStyle(
+                fontSize: 16, fontWeight: FontWeight.w700, color: textColor),
           ),
           actions: [
             IconButton(
@@ -217,7 +224,7 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
               children: [
                 const Spacer(),
 
-                // Main Metric Card
+                // Metric Card
                 Container(
                   width: double.infinity,
                   padding: const EdgeInsets.all(24),
@@ -237,12 +244,16 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                     children: [
                       Text(
                         isDuel
-                            ? (won ? '🎉 Match Jeet Gaye!' : (tie ? '🤝 Match Tie!' : '💔 Match Haar Gaye!'))
+                            ? (won
+                                ? '🎉 Match Jeet Gaye!'
+                                : (tie ? '🤝 Match Tie!' : '💔 Match Haar Gaye!'))
                             : 'Test Completed!',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w800,
-                          color: isDuel && won ? const Color(0xFF16A34A) : textColor,
+                          color: isDuel && won
+                              ? const Color(0xFF16A34A)
+                              : textColor,
                         ),
                       ),
                       const SizedBox(height: 20),
@@ -251,7 +262,8 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            _avatarColumn(widget.challengerName, widget.challengerScore, false, isDark),
+                            _avatarColumn(widget.challengerName,
+                                widget.challengerScore, false, isDark),
                             Text(
                               'VS',
                               style: TextStyle(
@@ -294,16 +306,25 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                           Icon(
                             _isSubmitted
                                 ? Icons.check_circle_rounded
-                                : (_isSubmitting ? Icons.sync_rounded : Icons.cloud_off_rounded),
+                                : (_isSubmitting
+                                    ? Icons.sync_rounded
+                                    : Icons.cloud_off_rounded),
                             size: 16,
-                            color: _isSubmitted ? const Color(0xFF16A34A) : subTextColor,
+                            color: _isSubmitted
+                                ? const Color(0xFF16A34A)
+                                : subTextColor,
                           ),
                           const SizedBox(width: 6),
                           Text(
                             _isSubmitted
                                 ? 'District Leaderboard par save ho gaya!'
-                                : (_isSubmitting ? 'Syncing rank...' : 'Offline mode'),
-                            style: TextStyle(fontSize: 12, fontWeight: FontWeight.w500, color: subTextColor),
+                                : (_isSubmitting
+                                    ? 'Syncing rank...'
+                                    : 'Offline mode'),
+                            style: TextStyle(
+                                fontSize: 12,
+                                fontWeight: FontWeight.w500,
+                                color: subTextColor),
                           ),
                         ],
                       ),
@@ -319,16 +340,19 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                   height: 48,
                   child: ElevatedButton.icon(
                     onPressed: _shareOnWhatsApp,
-                    icon: const Icon(Icons.share_rounded, size: 18, color: Colors.white),
+                    icon: const Icon(Icons.share_rounded,
+                        size: 18, color: Colors.white),
                     label: const Text(
                       'Dost ko WhatsApp par Challenge karein',
-                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+                      style:
+                          TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF25D366),
                       foregroundColor: Colors.white,
                       elevation: 0,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
                     ),
                   ),
                 ),
@@ -341,7 +365,8 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                     onPressed: _exitScreen,
                     style: OutlinedButton.styleFrom(
                       side: BorderSide(color: borderColor),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(10)),
                     ),
                     child: Text(
                       'Home Screen par Wapas Jayein',
@@ -366,10 +391,12 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
       children: [
         CircleAvatar(
           radius: 26,
-          backgroundColor: isMe ? const Color(0xFF4F46E5) : const Color(0xFFD97706),
+          backgroundColor:
+              isMe ? const Color(0xFF4F46E5) : const Color(0xFFD97706),
           child: Text(
             name.isNotEmpty ? name[0].toUpperCase() : 'P',
-            style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 18),
+            style: const TextStyle(
+                color: Colors.white, fontWeight: FontWeight.w800, fontSize: 18),
           ),
         ),
         const SizedBox(height: 8),
