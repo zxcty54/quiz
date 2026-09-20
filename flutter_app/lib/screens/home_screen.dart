@@ -223,7 +223,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       ).timeout(const Duration(seconds: 4));
 
       if (apiRes.statusCode == 200) {
-        String rawBody = utf8.decode(Res.bodyBytes).trim();
+        String rawBody = utf8.decode(apiRes.bodyBytes).trim();
         if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
         rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
         if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
@@ -253,7 +253,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         ).timeout(const Duration(seconds: 4));
 
         if (res.statusCode == 200) {
-          String rawBody = utf8.decode(apiRes.bodyBytes).trim();
+          String rawBody = utf8.decode(res.bodyBytes).trim();
           if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
           rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
           if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
