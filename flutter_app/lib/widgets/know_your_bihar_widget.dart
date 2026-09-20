@@ -43,22 +43,22 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
     showModalBottomSheet(
       context: context,
       isScrollControlled: true,
-      backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+      backgroundColor: isDark ? const Color(0xFF0F172A) : Colors.white,
       shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(26)),
       ),
       builder: (ctx) => DraggableScrollableSheet(
-        initialChildSize: 0.78,
-        maxChildSize: 0.95,
+        initialChildSize: 0.85,
+        maxChildSize: 0.96,
         minChildSize: 0.5,
         expand: false,
         builder: (_, scrollController) => ListView(
           controller: scrollController,
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
           children: [
             Center(
               child: Container(
-                width: 44,
+                width: 42,
                 height: 4.5,
                 decoration: BoxDecoration(
                   color: isDark ? Colors.white24 : Colors.grey.shade300,
@@ -67,65 +67,99 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
               ),
             ),
             const SizedBox(height: 18),
+
+            // Top Status Bar
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4.5),
                   decoration: BoxDecoration(
                     color: themeColor.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: themeColor.withValues(alpha: 0.25)),
                   ),
-                  child: Text(
-                    '${payload.config.cycleDay} • ${payload.config.domain}',
-                    style: TextStyle(
-                      color: themeColor,
-                      fontSize: 10,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: 0.4,
-                    ),
+                  child: Row(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(payload.config.emoji, style: const TextStyle(fontSize: 12)),
+                      const SizedBox(width: 5),
+                      Text(
+                        '${payload.config.cycleDay} • ${payload.config.domain}',
+                        style: TextStyle(
+                          color: themeColor,
+                          fontSize: 10.5,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 0.4,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
                 Text(
-                  card.district != null ? '📍 ${card.district}' : 'BPSC & BIHAR SI',
+                  card.district != null ? '📍 ${card.district}' : 'BIHAR SPECIAL',
                   style: TextStyle(
                     fontSize: 11,
                     color: isDark ? Colors.white70 : const Color(0xFF64748B),
-                    fontWeight: FontWeight.w700,
+                    fontWeight: FontWeight.w800,
                   ),
                 ),
               ],
             ),
-            const SizedBox(height: 12),
+            const SizedBox(height: 14),
+
+            // Main Entity Title
             Text(
               card.title,
               style: TextStyle(
-                fontSize: 21,
+                fontSize: 22,
                 fontWeight: FontWeight.w900,
                 color: isDark ? Colors.white : const Color(0xFF0F172A),
+                letterSpacing: -0.3,
               ),
             ),
-            const SizedBox(height: 6),
+            const SizedBox(height: 5),
             Text(
-              card.summary,
+              card.category,
               style: TextStyle(
                 fontSize: 13,
-                height: 1.45,
-                color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF475569),
+                fontWeight: FontWeight.w700,
+                color: themeColor,
               ),
             ),
-            const Divider(height: 26),
+            const SizedBox(height: 12),
 
-            // Subject Insights
+            // Summary Callout Box
+            Container(
+              padding: const EdgeInsets.all(14),
+              decoration: BoxDecoration(
+                color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
+                borderRadius: BorderRadius.circular(14),
+                border: Border.all(
+                  color: isDark ? Colors.white10 : const Color(0xFFE2E8F0),
+                ),
+              ),
+              child: Text(
+                card.summary,
+                style: TextStyle(
+                  fontSize: 13,
+                  height: 1.45,
+                  color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF334155),
+                ),
+              ),
+            ),
+            const SizedBox(height: 18),
+
+            // Complete Fact Points
             if (card.bulletPoints.isNotEmpty) ...[
               Row(
                 children: [
-                  Icon(Icons.auto_stories_rounded, size: 17, color: themeColor),
+                  Icon(Icons.menu_book_rounded, size: 17, color: themeColor),
                   const SizedBox(width: 6),
                   Text(
-                    'Subject Profile & Insights',
+                    'Subject Insights & High-Yield Data',
                     style: TextStyle(
-                      fontSize: 13.5,
+                      fontSize: 14,
                       fontWeight: FontWeight.w800,
                       color: isDark ? Colors.white : const Color(0xFF1E293B),
                     ),
@@ -136,7 +170,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
               Container(
                 padding: const EdgeInsets.all(14),
                 decoration: BoxDecoration(
-                  color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                  color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
                   borderRadius: BorderRadius.circular(14),
                   border: Border.all(color: isDark ? Colors.white10 : const Color(0xFFE2E8F0)),
                 ),
@@ -144,12 +178,20 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                   children: card.bulletPoints.map((pt) {
                     final split = pt.split(': ');
                     return Padding(
-                      padding: const EdgeInsets.only(bottom: 7),
+                      padding: const EdgeInsets.only(bottom: 9),
                       child: Row(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('• ',
-                              style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: themeColor)),
+                          Container(
+                            margin: const EdgeInsets.only(top: 5),
+                            width: 6,
+                            height: 6,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: themeColor,
+                            ),
+                          ),
+                          const SizedBox(width: 9),
                           Expanded(
                             child: RichText(
                               text: TextSpan(
@@ -168,7 +210,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                       style: TextStyle(
                                         fontSize: 12.5,
                                         height: 1.4,
-                                        color: isDark ? Colors.white70 : const Color(0xFF334155),
+                                        color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF475569),
                                       ),
                                     ),
                                   ] else ...[
@@ -177,7 +219,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                       style: TextStyle(
                                         fontSize: 12.5,
                                         height: 1.4,
-                                        color: isDark ? Colors.white70 : const Color(0xFF334155),
+                                        color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF475569),
                                       ),
                                     ),
                                   ],
@@ -191,19 +233,19 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                   }).toList(),
                 ),
               ),
-              const SizedBox(height: 16),
+              const SizedBox(height: 18),
             ],
 
-            // BPSC Direct PYQs
+            // BPSC Direct PYQ Box
             if (card.pyqFacts.isNotEmpty) ...[
               Row(
                 children: [
                   const Icon(Icons.bolt_rounded, size: 18, color: Color(0xFFF59E0B)),
                   const SizedBox(width: 4),
                   Text(
-                    'BPSC Direct PYQ Triggers',
+                    'Direct BPSC PYQ Triggers',
                     style: TextStyle(
-                      fontSize: 13.5,
+                      fontSize: 14,
                       fontWeight: FontWeight.w800,
                       color: isDark ? Colors.white : const Color(0xFF1E293B),
                     ),
@@ -227,7 +269,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                         Text(
                           pyq['topic']!,
                           style: TextStyle(
-                            fontSize: 12,
+                            fontSize: 12.5,
                             fontWeight: FontWeight.w800,
                             color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
                           ),
@@ -264,42 +306,44 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
     final card = payload.card;
     final themeColor = Color(payload.config.colorSeed);
 
+    final List<String> frontHighlights = card.bulletPoints.take(2).toList();
+    final Map<String, String>? frontPyq = card.pyqFacts.isNotEmpty ? card.pyqFacts.first : null;
+
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF1E293B) : Colors.white,
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(22),
         border: Border.all(
           color: isDark ? Colors.white.withValues(alpha: 0.08) : const Color(0xFFE2E8F0),
           width: 1.2,
         ),
         boxShadow: [
           BoxShadow(
-            color: isDark ? Colors.black38 : const Color(0xFF1E293B).withValues(alpha: 0.05),
-            blurRadius: 14,
-            offset: const Offset(0, 5),
+            color: isDark ? Colors.black45 : const Color(0xFF0F172A).withValues(alpha: 0.04),
+            blurRadius: 18,
+            offset: const Offset(0, 6),
           ),
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(22),
         child: Stack(
           children: [
+            // 🏺 Authentic Heritage Arch Silhouette Motif
             Positioned(
-              right: -10,
-              bottom: -15,
-              child: Text(
-                payload.config.defaultWatermark,
-                style: TextStyle(
-                  fontSize: 54,
-                  fontWeight: FontWeight.w900,
-                  color: isDark
-                      ? Colors.white.withValues(alpha: 0.02)
-                      : themeColor.withValues(alpha: 0.04),
-                  letterSpacing: 2,
+              right: -25,
+              bottom: -25,
+              child: Opacity(
+                opacity: isDark ? 0.03 : 0.04,
+                child: Icon(
+                  Icons.temple_buddhist_rounded,
+                  size: 140,
+                  color: themeColor,
                 ),
               ),
             ),
+
             Material(
               color: Colors.transparent,
               child: InkWell(
@@ -309,23 +353,25 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      // 1. TOP HEADER: Master Track Identifier
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+                            padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4.5),
                             decoration: BoxDecoration(
                               color: themeColor.withValues(alpha: 0.12),
-                              borderRadius: BorderRadius.circular(6),
+                              borderRadius: BorderRadius.circular(8),
                             ),
                             child: Row(
+                              mainAxisSize: MainAxisSize.min,
                               children: [
-                                Text(payload.config.emoji, style: const TextStyle(fontSize: 11)),
-                                const SizedBox(width: 4),
+                                Text(payload.config.emoji, style: const TextStyle(fontSize: 12)),
+                                const SizedBox(width: 5),
                                 Text(
                                   '${payload.config.cycleDay} • ${payload.config.domain}',
                                   style: TextStyle(
-                                    fontSize: 9.5,
+                                    fontSize: 10,
                                     fontWeight: FontWeight.w900,
                                     color: themeColor,
                                     letterSpacing: 0.3,
@@ -334,46 +380,200 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                               ],
                             ),
                           ),
-                          Row(
-                            children: [
-                              Text(
-                                'Know Your Bihar',
-                                style: TextStyle(
-                                  fontSize: 11,
-                                  color: isDark ? Colors.white60 : Colors.grey.shade600,
-                                  fontWeight: FontWeight.w700,
-                                ),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                            decoration: BoxDecoration(
+                              color: isDark ? Colors.white.withValues(alpha: 0.06) : const Color(0xFFF1F5F9),
+                              borderRadius: BorderRadius.circular(6),
+                            ),
+                            child: const Text(
+                              'DAILY DOSSIER',
+                              style: TextStyle(
+                                fontSize: 9,
+                                fontWeight: FontWeight.w800,
+                                color: Color(0xFF64748B),
+                                letterSpacing: 0.5,
                               ),
-                              const SizedBox(width: 3),
-                              Icon(Icons.arrow_forward_ios_rounded,
-                                  size: 11,
-                                  color: isDark ? Colors.white38 : Colors.grey.shade400),
-                            ],
+                            ),
                           ),
                         ],
                       ),
                       const SizedBox(height: 12),
-                      Text(
-                        card.title,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: 16.5,
-                          fontWeight: FontWeight.w900,
-                          color: isDark ? Colors.white : const Color(0xFF0F172A),
-                          letterSpacing: -0.2,
-                        ),
+
+                      // 2. HERO TITLE & LOCATION PILL
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  card.title,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w900,
+                                    color: isDark ? Colors.white : const Color(0xFF0F172A),
+                                    letterSpacing: -0.3,
+                                  ),
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  card.category,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w700,
+                                    color: themeColor,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          if (card.district != null)
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                              decoration: BoxDecoration(
+                                color: isDark ? const Color(0xFF0F172A) : const Color(0xFFFEF3C7),
+                                borderRadius: BorderRadius.circular(8),
+                                border: Border.all(
+                                  color: isDark ? Colors.white12 : const Color(0xFFFDE68A),
+                                ),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  const Icon(Icons.place_rounded, size: 12, color: Color(0xFFD97706)),
+                                  const SizedBox(width: 3),
+                                  Text(
+                                    card.district!,
+                                    style: TextStyle(
+                                      fontSize: 10.5,
+                                      fontWeight: FontWeight.w800,
+                                      color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                        ],
                       ),
-                      const SizedBox(height: 5),
-                      Text(
-                        card.summary,
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: 12.5,
-                          height: 1.4,
-                          color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                      const SizedBox(height: 12),
+
+                      // 3. CORE HIGHLIGHT STRIP (Structured key facts)
+                      if (frontHighlights.isNotEmpty)
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+                          decoration: BoxDecoration(
+                            color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(
+                              color: isDark ? Colors.white.withValues(alpha: 0.05) : const Color(0xFFE2E8F0),
+                            ),
+                          ),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: frontHighlights.map((pt) {
+                              return Padding(
+                                padding: const EdgeInsets.only(bottom: 6),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Icon(Icons.check_circle_outline_rounded, size: 13.5, color: themeColor),
+                                    const SizedBox(width: 7),
+                                    Expanded(
+                                      child: Text(
+                                        pt,
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: TextStyle(
+                                          fontSize: 12,
+                                          height: 1.35,
+                                          fontWeight: FontWeight.w600,
+                                          color: isDark ? Colors.white70 : const Color(0xFF334155),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              );
+                            }).toList(),
+                          ),
                         ),
+
+                      // 4. BPSC PYQ DIRECT TRIGGER BOX
+                      if (frontPyq != null) ...[
+                        const SizedBox(height: 10),
+                        Container(
+                          width: double.infinity,
+                          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8.5),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFF59E0B).withValues(alpha: isDark ? 0.12 : 0.08),
+                            borderRadius: BorderRadius.circular(10),
+                            border: Border.all(
+                              color: const Color(0xFFF59E0B).withValues(alpha: 0.22),
+                            ),
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              const Text('🎯 ', style: TextStyle(fontSize: 12)),
+                              Expanded(
+                                child: RichText(
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  text: TextSpan(
+                                    children: [
+                                      TextSpan(
+                                        text: 'PYQ: ',
+                                        style: TextStyle(
+                                          fontSize: 11.5,
+                                          fontWeight: FontWeight.w900,
+                                          color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
+                                        ),
+                                      ),
+                                      TextSpan(
+                                        text: frontPyq['detail'] ?? frontPyq['topic'] ?? '',
+                                        style: TextStyle(
+                                          fontSize: 11.5,
+                                          height: 1.35,
+                                          fontWeight: FontWeight.w500,
+                                          color: isDark ? Colors.white70 : const Color(0xFF475569),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+
+                      const SizedBox(height: 12),
+
+                      // 5. ACTION STRIP
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: [
+                              Icon(Icons.touch_app_rounded, size: 14, color: themeColor),
+                              const SizedBox(width: 4),
+                              Text(
+                                'Tap to read full dossier',
+                                style: TextStyle(
+                                  fontSize: 11.5,
+                                  fontWeight: FontWeight.w800,
+                                  color: themeColor,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Icon(Icons.arrow_forward_rounded, size: 14, color: themeColor),
+                        ],
                       ),
                     ],
                   ),
