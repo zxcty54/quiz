@@ -195,10 +195,19 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
         timer.cancel();
         setState(() => _isAnswered = true);
         final currentQ = widget.questions[_currentIndex];
+
+        // ⏱️ Timeout attempt logged with full question details
+        final String qTextClean = currentQ.qe.isNotEmpty
+            ? currentQ.qe
+            : (currentQ.qh.isNotEmpty ? currentQ.qh : currentQ.getText(_isHindi));
+
         UserStatsService.recordQuestionAttempt(
           isCorrect: false,
           chapterName: widget.testTitle,
-          chapterPath: '',
+          chapterPath: widget.storageKey ?? '',
+          questionText: qTextClean,
+          timeTakenSeconds: _questionTime,
+          testType: 'revision',
           wrongQuestionJson: currentQ.toJson(),
         );
       }
@@ -211,17 +220,30 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
 
     final currentQ = widget.questions[_currentIndex];
     final isCorrect = index == currentQ.answerIndex;
+    final int timeSpent = (_questionTime - _timeLeft).clamp(1, _questionTime);
 
     setState(() {
       _selectedOptionIndex = index;
       _isAnswered = true;
     });
 
+    final String qTextClean = currentQ.qe.isNotEmpty
+        ? currentQ.qe
+        : (currentQ.qh.isNotEmpty ? currentQ.qh : currentQ.getText(_isHindi));
+
+    final currentOptions = currentQ.getOptions(_isHindi);
+    final String selectedOpt = (index >= 0 && index < currentOptions.length) ? currentOptions[index] : '';
+
+    // 🚀 HOOK CONNECTED: Correct & Wrong both logged to Supabase and Local Vault
     UserStatsService.recordQuestionAttempt(
       isCorrect: isCorrect,
       chapterName: widget.testTitle,
-      chapterPath: '',
+      chapterPath: widget.storageKey ?? '',
+      questionText: qTextClean,
+      timeTakenSeconds: timeSpent,
+      testType: 'revision',
       wrongQuestionJson: isCorrect ? null : currentQ.toJson(),
+      userSelectedOption: selectedOpt,
     );
   }
 
@@ -275,6 +297,7 @@ class _RevisionPracticeScreenState extends State<RevisionPracticeScreen> {
                 backgroundColor: const Color(0xFF2563EB),
                 foregroundColor: Colors.white,
                 elevation: 0,
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 11),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
               ),
               onPressed: () {
