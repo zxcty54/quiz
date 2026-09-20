@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import '../services/user_stats_service.dart';
 import 'challenge_result_screen.dart';
 
 class ChallengeQuizScreen extends StatefulWidget {
@@ -69,6 +70,21 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
     HapticFeedback.heavyImpact();
 
     _totalTimeTaken += 15;
+
+    final currentQ = widget.questions[_currentIndex];
+    final String qText = _getQuestionText(currentQ);
+
+    // 🚀 HOOK CONNECTED: Timeout attempt logged to Supabase & Local Stats
+    UserStatsService.recordQuestionAttempt(
+      isCorrect: false,
+      chapterName: 'Daily Duel GK',
+      chapterPath: 'challenge_quiz',
+      questionText: qText,
+      timeTakenSeconds: 15,
+      testType: 'daily_duel',
+      wrongQuestionJson: currentQ,
+      userSelectedOption: 'Time Expired',
+    );
 
     setState(() {
       _answered = true;
@@ -158,6 +174,24 @@ class _ChallengeQuizScreenState extends State<ChallengeQuizScreen> {
     final currentQ = widget.questions[_currentIndex];
     final correctAnswer = _getCorrectAnswer(currentQ['a'] ?? currentQ['answer_index']);
     final correct = correctAnswer != null && selectedIdx == correctAnswer;
+
+    final options = _getOptions(currentQ);
+    final selectedOptText = (selectedIdx >= 0 && selectedIdx < options.length)
+        ? options[selectedIdx].toString()
+        : '';
+    final String qText = _getQuestionText(currentQ);
+
+    // 🚀 HOOK CONNECTED: Attempt logged to Supabase & Local Stats
+    UserStatsService.recordQuestionAttempt(
+      isCorrect: correct,
+      chapterName: 'Daily Duel GK',
+      chapterPath: 'challenge_quiz',
+      questionText: qText,
+      timeTakenSeconds: timeSpentOnThisQuestion,
+      testType: 'daily_duel',
+      wrongQuestionJson: correct ? null : currentQ,
+      userSelectedOption: selectedOptText,
+    );
 
     if (correct) {
       _score++;
