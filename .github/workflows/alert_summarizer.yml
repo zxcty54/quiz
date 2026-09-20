@@ -5,7 +5,7 @@ on:
     # Runs every 4.5 hours (Intervals: 00:00, 04:30, 09:00, 13:30, 18:00, 22:30 UTC)
     - cron: '0 0,9,18 * * *'
     - cron: '30 4,13,22 * * *'
-  workflow_dispatch: # Manual trigger for testing
+  workflow_dispatch: # GitHub Actions tab se manual run karne ke liye
 
 concurrency:
   group: alerts-summarizer
@@ -20,24 +20,34 @@ jobs:
 
     steps:
       # =====================================================
-      # 1. CHECKOUT CODE
+      # 1. CHECKOUT SCRIPT CODE (Private Repo)
       # =====================================================
-      - name: Checkout Code
+      - name: Checkout Code from Private Repo
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
           ref: main
 
       # =====================================================
-      # 2. SETUP PYTHON
+      # 2. CHECKOUT TARGET PUBLIC REPO (content_base)
+      # =====================================================
+      - name: Checkout Public Content Base
+        uses: actions/checkout@v4
+        with:
+          repository: 'zxcty54/content_base'
+          token: ${{ secrets.GH_PAT_TOKEN }}
+          path: 'content_base_repo'
+
+      # =====================================================
+      # 3. SETUP PYTHON
       # =====================================================
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
+          python-version: '3.10'
 
       # =====================================================
-      # 3. INSTALL DEPENDENCIES
+      # 4. INSTALL DEPENDENCIES
       # =====================================================
       - name: Install Dependencies
         run: |
@@ -45,19 +55,45 @@ jobs:
           pip install groq requests
 
       # =====================================================
-      # 4. RUN ALERTS SUMMARIZER SCRIPT
+      # 5. SYNC INPUTS & RUN ALERTS SUMMARIZER SCRIPT
       # =====================================================
       - name: Run Alerts Summarizer
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
+          echo "📥 Loading required JSON files from content_base..."
+
+          # alerts_news.json (Input raw news)
+          if [ -f content_base_repo/alerts_news.json ]; then
+            cp content_base_repo/alerts_news.json ./alerts_news.json
+            echo "✅ Loaded alerts_news.json from content_base."
+          else
+            echo "⚠️ alerts_news.json not found in content_base!"
+          fi
+
+          # final_alerts_news.json (Master file taaki purane records ke saath merge ho sake)
+          if [ -f content_base_repo/final_alerts_news.json ]; then
+            cp content_base_repo/final_alerts_news.json ./final_alerts_news.json
+            echo "✅ Loaded existing final_alerts_news.json from content_base."
+          fi
+
+          # Run the AI Summarizer Script
           python alerts_summarizer.py
 
+          echo "📋 Copying generated files back to content_base folder..."
+          if [ -f final_alerts_news.json ]; then
+            cp final_alerts_news.json content_base_repo/final_alerts_news.json
+          fi
+          if [ -f app_alerts_news.json ]; then
+            cp app_alerts_news.json content_base_repo/app_alerts_news.json
+          fi
+
       # =====================================================
-      # 5. COMMIT & PUSH BOTH JSON FILES (Website + App)
+      # 6. COMMIT & PUSH TO content_base REPO
       # =====================================================
-      - name: Commit and Push Summary JSONs
+      - name: Commit and Push Summary JSONs to content_base
         run: |
+          cd content_base_repo
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
 
@@ -73,4 +109,4 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
 
-          echo "✅ JSON files pushed successfully."
+          echo "🚀 [SUCCESS] final_alerts_news.json & app_alerts_news.json pushed to zxcty54/content_base successfully!"
