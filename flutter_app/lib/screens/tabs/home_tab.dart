@@ -10,11 +10,11 @@ import '../../widgets/coaching_hub_card.dart';
 import '../../widgets/coaching_onboarding_cta_widget.dart';
 import '../../widgets/hall_of_fame_carousel_widget.dart';
 import '../../widgets/bihar_events_carousel_widget.dart'; 
-import '../../widgets/know_your_bihar_widget.dart'; // 👈 🗺️ Know Your Bihar Widget
+import '../../widgets/know_your_bihar_widget.dart';
+import '../../widgets/district_top_leaderboard_widget.dart'; // 👈 🏆 Live District Leaderboard Preview
 
 // ⚔️ Challenge screens & service
 import '../challenge_quiz_screen.dart';
-import '../district_leaderboard_screen.dart';
 import '../../services/challenge_service.dart';
 
 class HomeTab extends StatefulWidget {
@@ -143,13 +143,13 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // 🌐 8. EVENTS & CULTURAL AFFAIRS (LIVE & UPCOMING SNAP CAROUSEL)
+            // 🌐 8. EVENTS & CULTURAL AFFAIRS
             BiharEventsCarouselWidget(
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 🗺️ 9. KNOW YOUR BIHAR (7-DAY DAILY REVOLVING ENGINE) 👈 (Yahan Add Hua)
+            // 🗺️ 9. KNOW YOUR BIHAR
             KnowYourBiharWidget(
               isDarkMode: widget.isDarkMode,
             ),
@@ -163,39 +163,43 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // ⚔️ 11. 1v1 DUEL & DISTRICT LEADERBOARD CARD
+            // 🏆 11. DISTRICT LEADERBOARD (Card ke theek upar move hua, empty hone par hide rahega)
+            DistrictTopLeaderboardWidget(isDarkMode: widget.isDarkMode),
+            const SizedBox(height: 8),
+
+            // ⚔️ 12. 1v1 DUEL CHALLENGE CARD (Sirf Start Duel button ke sath)
             _buildSpeedRunChallengeCard(context),
             const SizedBox(height: 18),
 
-            // 🌐 12. DYNAMIC WEB HUB
+            // 🌐 13. DYNAMIC WEB HUB
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 18),
 
-            // 13. ELIGIBILITY CHECKER
+            // 14. ELIGIBILITY CHECKER
             EligibilityCheckerWidget(
               isDarkMode: widget.isDarkMode,
               onTapUrl: widget.onTapUrl,
             ),
             const SizedBox(height: 18),
 
-            // 📅 14. LAUNCH ROADMAP
+            // 📅 15. LAUNCH ROADMAP
             LaunchRoadmapCardWidget(
               appConfig: widget.appConfig,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 🏫 15. COACHING ONBOARDING CTA
+            // 🏫 16. COACHING ONBOARDING CTA
             CoachingOnboardingCtaWidget(
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 16. TELEGRAM COMMUNITY
+            // 17. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
             const SizedBox(height: 20),
 
-            // 🏆 17. HALL OF FAME
+            // 🏆 18. HALL OF FAME
             HallOfFameCarouselWidget(
               key: _hallOfFameKey,
               isDarkMode: widget.isDarkMode,
@@ -337,20 +341,17 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
+  // ⚔️ Challenge Card: Leaderboard button removed, Single Full-Width Start Duel Button
   Widget _buildSpeedRunChallengeCard(BuildContext context) {
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(18),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFF4F46E5), Color(0xFF7C3AED)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(22),
+        color: const Color(0xFF4F28EB),
+        borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF4F46E5).withOpacity(0.35),
+            color: const Color(0xFF4F28EB).withOpacity(0.35),
             blurRadius: 16,
             offset: const Offset(0, 6),
           ),
@@ -359,127 +360,127 @@ class _HomeTabState extends State<HomeTab> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // Top Badges Row
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.2),
+                  color: Colors.white.withOpacity(0.16),
                   borderRadius: BorderRadius.circular(20),
-                  border: Border.all(color: Colors.white.withOpacity(0.3)),
+                  border: Border.all(color: Colors.white.withOpacity(0.25)),
                 ),
                 child: const Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    Text('⚔️ ', style: TextStyle(fontSize: 11)),
+                    Text('⚔️', style: TextStyle(fontSize: 12)),
+                    SizedBox(width: 5),
                     Text(
                       '1v1 DUEL & DISTRICT RANK',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 0.5,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 0.3,
                       ),
                     ),
                   ],
                 ),
               ),
+              const SizedBox(width: 8),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                 decoration: BoxDecoration(
                   color: Colors.black.withOpacity(0.2),
-                  borderRadius: BorderRadius.circular(8),
+                  borderRadius: BorderRadius.circular(20),
                 ),
                 child: const Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Icons.timer_outlined, size: 12, color: Colors.amberAccent),
+                    Icon(Icons.timer_outlined, size: 13, color: Colors.white70),
                     SizedBox(width: 4),
                     Text(
                       '10 Qs • 15s Timer',
-                      style: TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w700,
+                      ),
                     ),
                   ],
                 ),
               ),
             ],
           ),
-          const SizedBox(height: 14),
-          const Text(
-            'Challenge Your Friend 🎯',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 19,
-              fontWeight: FontWeight.w800,
-              letterSpacing: -0.3,
-            ),
+          const SizedBox(height: 16),
+
+          // Title
+          const Row(
+            children: [
+              Text(
+                'Challenge Your Friend ',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: -0.3,
+                ),
+              ),
+              Text('🎯', style: TextStyle(fontSize: 18)),
+            ],
           ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 8),
+
+          // Subtitle
           Text(
             '10 rapid sawal bina calculation ke solve karo, WhatsApp par dost ko challenge karo aur District Topper bano!',
             style: TextStyle(
               color: Colors.white.withOpacity(0.85),
-              fontSize: 12,
-              height: 1.35,
+              fontSize: 13,
+              height: 1.45,
+              fontWeight: FontWeight.w500,
             ),
           ),
-          const SizedBox(height: 16),
-          Row(
-            children: [
-              Expanded(
-                child: OutlinedButton.icon(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => DistrictLeaderboardScreen(
-                          isDarkMode: widget.isDarkMode,
-                        ),
+          const SizedBox(height: 18),
+
+          // Full-Width Start Duel Button
+          SizedBox(
+            width: double.infinity,
+            height: 50,
+            child: ElevatedButton(
+              onPressed: _isChallengeLoading ? null : _startChallengeSprint,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: const Color(0xFF4F28EB),
+                elevation: 0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(16),
+                ),
+              ),
+              child: _isChallengeLoading
+                  ? const SizedBox(
+                      width: 22,
+                      height: 22,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2.2,
+                        valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF4F28EB)),
                       ),
-                    );
-                  },
-                  icon: const Icon(Icons.leaderboard_rounded, size: 16, color: Colors.white),
-                  label: const Text(
-                    'Leaderboard',
-                    style: TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Colors.white),
-                  ),
-                  style: OutlinedButton.styleFrom(
-                    side: const BorderSide(color: Colors.white38),
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 10),
-              Expanded(
-                child: ElevatedButton(
-                  onPressed: _isChallengeLoading ? null : _startChallengeSprint,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.white,
-                    foregroundColor: const Color(0xFF4F46E5),
-                    elevation: 0,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                  ),
-                  child: _isChallengeLoading
-                      ? const SizedBox(
-                          width: 16,
-                          height: 16,
-                          child: CircularProgressIndicator(strokeWidth: 2),
-                        )
-                      : const Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Icon(Icons.bolt_rounded, size: 18, color: Color(0xFF4F46E5)),
-                            SizedBox(width: 4),
-                            Text(
-                              'Start Duel 🚀',
-                              style: TextStyle(fontWeight: FontWeight.w900, fontSize: 13),
-                            ),
-                          ],
+                    )
+                  : const Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Icon(Icons.bolt_rounded, size: 20, color: Color(0xFF4F28EB)),
+                        SizedBox(width: 6),
+                        Text(
+                          'Start Duel 🚀',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w900,
+                          ),
                         ),
-                ),
-              ),
-            ],
+                      ],
+                    ),
+            ),
           ),
         ],
       ),
