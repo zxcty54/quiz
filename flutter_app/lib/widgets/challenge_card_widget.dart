@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import '../screens/challenge_quiz_screen.dart';
 import '../screens/district_leaderboard_screen.dart';
 import '../services/challenge_service.dart';
@@ -16,7 +17,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
   bool _isLoading = false;
   bool _isLoadingLeaderboard = true;
 
-  // 🏆 Dynamic Toppers List
+  // 🏆 Live District Toppers Data
   List<Map<String, String>> _topDistricts = [];
 
   @override
@@ -25,21 +26,29 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
     _fetchLiveLeaderboardPreview();
   }
 
-  // 🔄 Real Leaderboard Data Fetcher
+  // 🔄 Supabase se Aaj ke Top 3 Rankers Fetch Karne Ka Logic
   Future<void> _fetchLiveLeaderboardPreview() async {
     try {
-      // ChallengeService se top rankers ka data load karein
-      final data = await ChallengeService.getTopDistrictLeaderboard();
-      
-      if (mounted && data.isNotEmpty) {
+      final todayDate = DateTime.now().toIso8601String().substring(0, 10);
+
+      final response = await Supabase.instance.client
+          .from('daily_challenge_submissions')
+          .select('user_name, district, score, time_taken_seconds')
+          .eq('challenge_date', todayDate)
+          .order('score', ascending: false)
+          .order('time_taken_seconds', ascending: true)
+          .limit(3);
+
+      if (mounted && response.isNotEmpty) {
         setState(() {
-          _topDistricts = data.take(3).map<Map<String, String>>((item) {
-            String rank = (data.indexOf(item) + 1).toString();
-            String badge = rank == "1" ? "🥇" : (rank == "2" ? "🥈" : "🥉");
+          _topDistricts = (response as List).map<Map<String, String>>((item) {
+            int index = response.indexOf(item);
+            String badge = index == 0 ? "🥇" : (index == 1 ? "🥈" : "🥉");
             return {
-              "rank": rank,
-              "name": (item['district'] ?? item['name'] ?? '').toString(),
-              "score": "${item['score'] ?? item['percentage'] ?? '0'}%",
+              "rank": "${index + 1}",
+              "name": item['user_name']?.toString() ?? '',
+              "district": item['district']?.toString() ?? '',
+              "score": "${item['score']}/10",
               "badge": badge,
             };
           }).toList();
@@ -52,9 +61,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
     }
 
     if (mounted) {
-      setState(() {
-        _isLoadingLeaderboard = false;
-      });
+      setState(() => _isLoadingLeaderboard = false);
     }
   }
 
@@ -91,7 +98,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
         ),
       );
 
-      // Quiz dekar wapas aane par turant naya rank update karein
+      // Quiz dekar bahar aate hi card ke toppers refresh karein
       _fetchLiveLeaderboardPreview();
     } catch (e) {
       if (mounted) {
@@ -125,7 +132,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
 
   @override
   Widget build(BuildContext context) {
-    // 🛡️ Filter valid items (Jisme name genuinely ho)
+    // 🛡️ Filter valid items: Jis item me name genuinely ho sirf wahi render ho
     final validDistricts = _topDistricts
         .where((d) => (d['name'] ?? '').trim().isNotEmpty)
         .toList();
@@ -151,7 +158,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 1. Header Row
+          // 1. Header Section
           Row(
             children: [
               Container(
@@ -193,7 +200,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
             ],
           ),
 
-          // 🏆 2. LIVE LEADERBOARD PREVIEW STRIP (Agar ek bhi naam hoga toh bahar dikhega)
+          // 🏆 2. LIVE LEADERBOARD PREVIEW STRIP (Sirf tabhi aayega jab data hoga)
           if (!_isLoadingLeaderboard && validDistricts.isNotEmpty) ...[
             const SizedBox(height: 14),
             InkWell(
@@ -245,7 +252,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
                     ),
                     const SizedBox(height: 8),
 
-                    // Podiums Row (Chahe 1 naam ho, 2 ho ya 3, clean layout me adapt hoga)
+                    // Podiums: 1 naam ho, 2 hon ya 3 hon, perfectly adjust hoga
                     Row(
                       children: validDistricts.map((item) {
                         return Expanded(
@@ -301,7 +308,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
 
           const SizedBox(height: 14),
 
-          // ⚡ 3. Start Button
+          // ⚡ 3. Start Quiz Action Button
           SizedBox(
             width: double.infinity,
             child: ElevatedButton(
