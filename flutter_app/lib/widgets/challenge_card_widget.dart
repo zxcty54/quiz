@@ -14,13 +14,49 @@ class ChallengeCardWidget extends StatefulWidget {
 
 class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
   bool _isLoading = false;
+  bool _isLoadingLeaderboard = true;
 
-  // 🏆 Leaderboard Data (Agar yeh empty hoga ya data nahi hoga toh dabba nahi dikhega)
-  List<Map<String, String>> _topDistricts = [
-    {"rank": "1", "name": "Patna", "score": "98.4%", "badge": "🥇"},
-    {"rank": "2", "name": "Gaya", "score": "96.1%", "badge": "🥈"},
-    {"rank": "3", "name": "Muzaffarpur", "score": "94.8%", "badge": "🥉"},
-  ];
+  // 🏆 Dynamic Toppers List
+  List<Map<String, String>> _topDistricts = [];
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchLiveLeaderboardPreview();
+  }
+
+  // 🔄 Real Leaderboard Data Fetcher
+  Future<void> _fetchLiveLeaderboardPreview() async {
+    try {
+      // ChallengeService se top rankers ka data load karein
+      final data = await ChallengeService.getTopDistrictLeaderboard();
+      
+      if (mounted && data.isNotEmpty) {
+        setState(() {
+          _topDistricts = data.take(3).map<Map<String, String>>((item) {
+            String rank = (data.indexOf(item) + 1).toString();
+            String badge = rank == "1" ? "🥇" : (rank == "2" ? "🥈" : "🥉");
+            return {
+              "rank": rank,
+              "name": (item['district'] ?? item['name'] ?? '').toString(),
+              "score": "${item['score'] ?? item['percentage'] ?? '0'}%",
+              "badge": badge,
+            };
+          }).toList();
+          _isLoadingLeaderboard = false;
+        });
+        return;
+      }
+    } catch (e) {
+      debugPrint("Leaderboard preview fetch error: $e");
+    }
+
+    if (mounted) {
+      setState(() {
+        _isLoadingLeaderboard = false;
+      });
+    }
+  }
 
   Future<void> _startNewChallenge() async {
     if (_isLoading) return;
@@ -44,7 +80,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
         return;
       }
 
-      Navigator.push(
+      await Navigator.push(
         context,
         MaterialPageRoute(
           builder: (context) => ChallengeQuizScreen(
@@ -54,6 +90,9 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
           ),
         ),
       );
+
+      // Quiz dekar wapas aane par turant naya rank update karein
+      _fetchLiveLeaderboardPreview();
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -71,8 +110,8 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
     }
   }
 
-  void _navigateToLeaderboard() {
-    Navigator.push(
+  void _navigateToLeaderboard() async {
+    await Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => DistrictLeaderboardScreen(
@@ -80,13 +119,15 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
         ),
       ),
     );
+    // Leaderboard screen se wapas aane par refresh karein
+    _fetchLiveLeaderboardPreview();
   }
 
   @override
   Widget build(BuildContext context) {
-    // 🛡️ Filter valid items (Jisme name aur score dono maujood hon)
+    // 🛡️ Filter valid items (Jisme name genuinely ho)
     final validDistricts = _topDistricts
-        .where((d) => (d['name'] ?? '').trim().isNotEmpty && (d['score'] ?? '').trim().isNotEmpty)
+        .where((d) => (d['name'] ?? '').trim().isNotEmpty)
         .toList();
 
     return Container(
@@ -152,8 +193,8 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
             ],
           ),
 
-          // 🏆 2. LEADERBOARD STRIP (Sirf tabhi render hoga jab valid data hoga)
-          if (validDistricts.isNotEmpty) ...[
+          // 🏆 2. LIVE LEADERBOARD PREVIEW STRIP (Agar ek bhi naam hoga toh bahar dikhega)
+          if (!_isLoadingLeaderboard && validDistricts.isNotEmpty) ...[
             const SizedBox(height: 14),
             InkWell(
               onTap: _navigateToLeaderboard,
@@ -204,7 +245,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
                     ),
                     const SizedBox(height: 8),
 
-                    // Podiums Row
+                    // Podiums Row (Chahe 1 naam ho, 2 ho ya 3, clean layout me adapt hoga)
                     Row(
                       children: validDistricts.map((item) {
                         return Expanded(
@@ -221,10 +262,8 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
-                                    if ((item["badge"] ?? '').isNotEmpty) ...[
-                                      Text(item["badge"]!, style: const TextStyle(fontSize: 11)),
-                                      const SizedBox(width: 4),
-                                    ],
+                                    Text(item["badge"] ?? '🎖️', style: const TextStyle(fontSize: 11)),
+                                    const SizedBox(width: 4),
                                     Flexible(
                                       child: Text(
                                         item["name"]!,
