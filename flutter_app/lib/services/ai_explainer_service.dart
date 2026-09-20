@@ -286,7 +286,7 @@ RULES:
     return result;
   }
 
-  // 6️⃣ 🧠 24-HOUR BATCH MASTERY & DIAGNOSTICS ENGINE
+  // 6️⃣ 🧠 15-MINUTE BATCH MASTERY & DIAGNOSTICS ENGINE (Testing Mode)
   static Future<Map<String, dynamic>?> syncBatchMasteryEvolution({bool forceSync = false}) async {
     final prefs = await SharedPreferences.getInstance();
     final String? userId = prefs.getString('user_id');
@@ -294,13 +294,13 @@ RULES:
 
     if (userId == null || userId.isEmpty) return null;
 
-    // 24 Hour check (Skip if forceSync == true)
+    // ⏱️ 15 Minute check (Skip agar forceSync == true ho)
     final int lastSync = prefs.getInt('last_ai_mastery_sync_timestamp') ?? 0;
     final int now = DateTime.now().millisecondsSinceEpoch;
-    final int hoursPassed = ((now - lastSync) / (1000 * 60 * 60)).floor();
+    final int minutesPassed = ((now - lastSync) / (1000 * 60)).floor();
 
-    if (!forceSync && hoursPassed < 24) {
-      debugPrint('⏳ 24h not completed yet ($hoursPassed hours passed)');
+    if (!forceSync && minutesPassed < 15) {
+      debugPrint('⏳ 15 mins not completed yet ($minutesPassed mins passed)');
       return null;
     }
 
@@ -390,7 +390,7 @@ ${jsonEncode(compactData)}
 
         // 4. Update local sync timestamp
         await prefs.setInt('last_ai_mastery_sync_timestamp', now);
-        debugPrint('✅ Mastery Evolution report synced for: $userId');
+        debugPrint('✅ Mastery Evolution report synced (15m cycle) for: $userId');
 
         return decoded;
       }
