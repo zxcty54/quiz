@@ -2,7 +2,9 @@ import 'dart:convert';
 import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
-import 'ai_rate_limiter_service.dart'; // Aapki alag file ka import
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+import 'ai_rate_limiter_service.dart';
 
 class AiExplainerService {
   // 🌐 Dynamic Fallback Models
@@ -70,7 +72,7 @@ class AiExplainerService {
           "maxTokens": maxTokens,
           "temperature": temperature,
         }),
-      ).timeout(const Duration(seconds: 20));
+      ).timeout(const Duration(seconds: 25));
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> data = jsonDecode(utf8.decode(response.bodyBytes));
@@ -235,11 +237,10 @@ $userChoiceContext$tagContext
     );
   }
 
-  // 5️⃣ 🚀 BULK QUESTIONS PARSER (Called by creator_mock_builder_screen.dart)
+  // 5️⃣ BULK QUESTIONS PARSER
   static Future<List<Map<String, dynamic>>> parseBulkQuestionsWithAi(String rawText) async {
     if (rawText.trim().isEmpty) return [];
 
-    // Rate Limiter Check (Eligibility)
     final eligibility = await AiRateLimiterService.checkEligibility();
     if (eligibility['allowed'] == false) {
       debugPrint("Rate limit hit: ${eligibility['message']}");
@@ -283,6 +284,120 @@ RULES:
       await AiRateLimiterService.recordSuccess();
     }
     return result;
+  }
+
+  // 6️⃣ 🧠 24-HOUR BATCH MASTERY & DIAGNOSTICS ENGINE
+  static Future<Map<String, dynamic>?> syncBatchMasteryEvolution({bool forceSync = false}) async {
+    final prefs = await SharedPreferences.getInstance();
+    final String? userId = prefs.getString('user_id');
+    final String studentName = prefs.getString('custom_aspirant_name') ?? prefs.getString('user_name') ?? 'Aspirant';
+
+    if (userId == null || userId.isEmpty) return null;
+
+    // 24 Hour check (Skip if forceSync == true)
+    final int lastSync = prefs.getInt('last_ai_mastery_sync_timestamp') ?? 0;
+    final int now = DateTime.now().millisecondsSinceEpoch;
+    final int hoursPassed = ((now - lastSync) / (1000 * 60 * 60)).floor();
+
+    if (!forceSync && hoursPassed < 24) {
+      debugPrint('⏳ 24h not completed yet ($hoursPassed hours passed)');
+      return null;
+    }
+
+    try {
+      final client = Supabase.instance.client;
+
+      // 1. Fetch unanalyzed question attempts from table
+      final List<dynamic> unanalyzedAttempts = await client
+          .from('user_question_attempts')
+          .select('id, question_text, topic, is_correct, time_taken_seconds')
+          .eq('user_id', userId)
+          .eq('is_analyzed', false)
+          .limit(80);
+
+      if (unanalyzedAttempts.isEmpty) {
+        debugPrint('ℹ️ No unanalyzed attempts found for user: $userId');
+        return null;
+      }
+
+      // Compact format for LLM Prompt to save tokens
+      final List<Map<String, dynamic>> compactData = unanalyzedAttempts.map((item) => {
+        'topic': item['topic'],
+        'question': item['question_text'],
+        'correct': item['is_correct'],
+        'sec': item['time_taken_seconds'],
+      }).toList();
+
+      const String systemPrompt = r'''
+You are an expert AI exam diagnostician for BPSC, BSSC, SI exams.
+Analyze student's solved questions data and diagnose strong vs weak areas.
+Respond ONLY with a valid JSON Object matching this exact structure:
+{
+  "summary": "2-line performance snapshot in Roman Hinglish",
+  "strengths": ["Strong area 1", "Strong area 2"],
+  "weaknesses": ["Weak trap 1", "Weak trap 2"],
+  "action_prescription": [
+    "Step 1: 15 min focus on X",
+    "Step 2: Revise formula Y"
+  ],
+  "estimated_mastery_level": "Developing / Scholar / Master"
+}
+''';
+
+      final String userPrompt = """
+Candidate: $studentName
+Attempts Data:
+${jsonEncode(compactData)}
+""";
+
+      final String responseText = await _generateWithHybridRouting(
+        systemPrompt,
+        userPrompt,
+        maxTokens: 1200,
+        temperature: 0.2,
+      );
+
+      // JSON clean & parse
+      String cleanJson = responseText
+          .replaceAll('```json', '')
+          .replaceAll('```', '')
+          .trim();
+
+      final int startIdx = cleanJson.indexOf('{');
+      final int endIdx = cleanJson.lastIndexOf('}');
+      if (startIdx != -1 && endIdx != -1 && endIdx > startIdx) {
+        cleanJson = cleanJson.substring(startIdx, endIdx + 1);
+      }
+
+      final dynamic decoded = jsonDecode(cleanJson);
+      if (decoded is Map<String, dynamic>) {
+        // 2. Save result in user_ai_insights table
+        await client.from('user_ai_insights').upsert({
+          'user_id': userId,
+          'summary_report': decoded,
+          'analyzed_at': DateTime.now().toIso8601String(),
+        }, onConflict: 'user_id');
+
+        // 3. Mark attempts as analyzed
+        final List<String> processedIds = unanalyzedAttempts
+            .map((item) => item['id'].toString())
+            .toList();
+
+        await client
+            .from('user_question_attempts')
+            .update({'is_analyzed': true})
+            .filter('id', 'in', processedIds);
+
+        // 4. Update local sync timestamp
+        await prefs.setInt('last_ai_mastery_sync_timestamp', now);
+        debugPrint('✅ Mastery Evolution report synced for: $userId');
+
+        return decoded;
+      }
+    } catch (e) {
+      debugPrint('Mastery batch process error: $e');
+    }
+    return null;
   }
 
   // 🧹 Helper: Clean & Parse JSON Array
