@@ -77,43 +77,36 @@ class _DistrictTopLeaderboardWidgetState
     }
 
     final isDark = widget.isDarkMode;
-    final bgGradient = isDark
-        ? const LinearGradient(
-            colors: [Color(0xFF0F172A), Color(0xFF1E1B4B)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          )
-        : const LinearGradient(
-            colors: [Color(0xFFFFFFFF), Color(0xFFF5F3FF)],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          );
-
-    final borderColor = isDark ? const Color(0xFF312E81) : const Color(0xFFDDD6FE);
-    final textPrimary = isDark ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A);
-    final textMuted = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
 
     return Container(
       width: double.infinity,
-      // Edge-to-edge: margin 0 horizontal
-      margin: const EdgeInsets.symmetric(horizontal: 0, vertical: 6),
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 18),
+      margin: const EdgeInsets.only(bottom: 6),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
-        gradient: bgGradient,
-        borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: borderColor, width: 1.2),
+        gradient: LinearGradient(
+          colors: isDark
+              ? [const Color(0xFF111827), const Color(0xFF1E1B4B)]
+              : [const Color(0xFFF8FAFC), const Color(0xFFEEF2FF)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(
+          color: isDark ? const Color(0xFF3730A3) : const Color(0xFFC7D2FE),
+          width: 1.2,
+        ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF4F46E5).withValues(alpha: isDark ? 0.25 : 0.08),
-            blurRadius: 18,
-            offset: const Offset(0, 6),
+            color: const Color(0xFF4F46E5).withValues(alpha: isDark ? 0.2 : 0.08),
+            blurRadius: 16,
+            offset: const Offset(0, 4),
           ),
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 🔴 1. Arena Header Row
+          // 🏆 1. Top Header Row (Title & District Selector neatly aligned)
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -122,9 +115,8 @@ class _DistrictTopLeaderboardWidgetState
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFDC2626).withValues(alpha: 0.15),
+                      color: const Color(0xFFDC2626).withValues(alpha: 0.12),
                       borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: const Color(0xFFDC2626).withValues(alpha: 0.3)),
                     ),
                     child: const Row(
                       mainAxisSize: MainAxisSize.min,
@@ -132,12 +124,11 @@ class _DistrictTopLeaderboardWidgetState
                         CircleAvatar(radius: 3, backgroundColor: Color(0xFFDC2626)),
                         SizedBox(width: 5),
                         Text(
-                          'LIVE BATTLE',
+                          'LIVE',
                           style: TextStyle(
                             fontSize: 10,
                             fontWeight: FontWeight.w900,
                             color: Color(0xFFDC2626),
-                            letterSpacing: 0.5,
                           ),
                         ),
                       ],
@@ -147,38 +138,36 @@ class _DistrictTopLeaderboardWidgetState
                   Text(
                     'District Leaderboard',
                     style: TextStyle(
-                      fontSize: 16,
+                      fontSize: 15,
                       fontWeight: FontWeight.w900,
-                      color: textPrimary,
-                      letterSpacing: -0.2,
+                      color: isDark ? Colors.white : const Color(0xFF1E1B4B),
+                      letterSpacing: -0.3,
                     ),
                   ),
                 ],
               ),
 
-              // District Dropdown Selector
+              // District Dropdown (Compact & never overflows)
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
+                height: 32,
+                padding: const EdgeInsets.symmetric(horizontal: 10),
                 decoration: BoxDecoration(
-                  color: isDark ? const Color(0xFF1E293B) : Colors.white,
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: borderColor),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.04),
-                      blurRadius: 6,
-                    ),
-                  ],
+                  color: isDark ? const Color(0xFF1F2937) : Colors.white,
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: isDark ? const Color(0xFF4B5563) : const Color(0xFFCBD5E1),
+                  ),
                 ),
                 child: DropdownButtonHideUnderline(
                   child: DropdownButton<String>(
                     value: _selectedDistrict,
                     isDense: true,
-                    dropdownColor: isDark ? const Color(0xFF1E293B) : Colors.white,
-                    style: TextStyle(
+                    dropdownColor: isDark ? const Color(0xFF1F2937) : Colors.white,
+                    icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 18, color: Color(0xFF4F46E5)),
+                    style: const TextStyle(
                       fontSize: 12.5,
-                      fontWeight: FontWeight.w900,
-                      color: const Color(0xFF4F46E5),
+                      fontWeight: FontWeight.w800,
+                      color: Color(0xFF4F46E5),
                     ),
                     items: _biharDistricts.map((String d) {
                       return DropdownMenuItem(value: d, child: Text(d));
@@ -196,96 +185,78 @@ class _DistrictTopLeaderboardWidgetState
           ),
           const SizedBox(height: 14),
 
-          // ⚡ 2. Competitive Top 5 Ranks
+          // ⚡ 2. Leaderboard Ranks Cards
           ...List.generate(_topRankers.length, (idx) {
             final item = _topRankers[idx];
             final rank = idx + 1;
             final isRank1 = rank == 1;
             final isRank2 = rank == 2;
-            final isRank3 = rank == 3;
 
-            final name = (item['user_name'] ?? 'Aspirant').toString();
+            final name = (item['user_name'] ?? 'Candidate').toString();
             final initial = name.isNotEmpty ? name[0].toUpperCase() : 'A';
 
-            Color rankColor;
-            String badgeEmoji;
-            if (isRank1) {
-              rankColor = const Color(0xFFF59E0B);
-              badgeEmoji = '👑';
-            } else if (isRank2) {
-              rankColor = const Color(0xFF94A3B8);
-              badgeEmoji = '🥈';
-            } else if (isRank3) {
-              rankColor = const Color(0xFFD97706);
-              badgeEmoji = '🥉';
-            } else {
-              rankColor = textMuted;
-              badgeEmoji = '#$rank';
-            }
-
             return Container(
-              margin: const EdgeInsets.only(bottom: 9),
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+              margin: const EdgeInsets.only(bottom: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
               decoration: BoxDecoration(
+                gradient: isRank1
+                    ? const LinearGradient(
+                        colors: [Color(0xFFFEF3C7), Color(0xFFFFFBEB)],
+                        begin: Alignment.centerLeft,
+                        end: Alignment.centerRight,
+                      )
+                    : null,
                 color: isRank1
-                    ? (isDark
-                        ? const Color(0xFF78350F).withValues(alpha: 0.25)
-                        : const Color(0xFFFEF3C7).withValues(alpha: 0.5))
-                    : (isDark ? const Color(0xFF1E293B) : Colors.white),
+                    ? null
+                    : (isDark ? const Color(0xFF1F2937) : Colors.white),
                 borderRadius: BorderRadius.circular(14),
                 border: Border.all(
                   color: isRank1
-                      ? const Color(0xFFF59E0B).withValues(alpha: 0.6)
-                      : (isDark ? Colors.white.withValues(alpha: 0.06) : const Color(0xFFE2E8F0)),
-                  width: isRank1 ? 1.4 : 1.0,
+                      ? const Color(0xFFF59E0B)
+                      : (isDark ? Colors.white10 : const Color(0xFFE2E8F0)),
+                  width: isRank1 ? 1.5 : 1,
                 ),
                 boxShadow: [
                   BoxShadow(
                     color: isRank1
-                        ? const Color(0xFFF59E0B).withValues(alpha: 0.1)
+                        ? const Color(0xFFF59E0B).withValues(alpha: 0.15)
                         : Colors.black.withValues(alpha: 0.02),
-                    blurRadius: isRank1 ? 8 : 4,
+                    blurRadius: 6,
                     offset: const Offset(0, 2),
                   ),
                 ],
               ),
               child: Row(
                 children: [
-                  // Rank Badge / Emoji
-                  SizedBox(
-                    width: 26,
-                    child: Text(
-                      badgeEmoji,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: isRank1 || isRank2 || isRank3 ? 15 : 12,
-                        fontWeight: FontWeight.w900,
-                        color: rankColor,
-                      ),
+                  // Rank Crown / Emoji
+                  Text(
+                    isRank1 ? '👑' : (isRank2 ? '🥈' : (rank == 3 ? '🥉' : '#$rank')),
+                    style: TextStyle(
+                      fontSize: rank <= 3 ? 15 : 12,
+                      fontWeight: FontWeight.w900,
+                      color: isRank1 ? const Color(0xFFD97706) : Colors.grey,
                     ),
                   ),
                   const SizedBox(width: 8),
 
-                  // Avatar with First Letter
+                  // Initial Circle
                   CircleAvatar(
                     radius: 14,
                     backgroundColor: isRank1
                         ? const Color(0xFFF59E0B)
-                        : (isDark ? const Color(0xFF334155) : const Color(0xFFE0E7FF)),
+                        : (isDark ? const Color(0xFF374151) : const Color(0xFFE0E7FF)),
                     child: Text(
                       initial,
                       style: TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.w900,
-                        color: isRank1
-                            ? Colors.black87
-                            : (isDark ? Colors.white : const Color(0xFF4F46E5)),
+                        color: isRank1 ? Colors.white : const Color(0xFF4F46E5),
                       ),
                     ),
                   ),
                   const SizedBox(width: 10),
 
-                  // User Name & District
+                  // Name & District
                   Expanded(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -294,25 +265,29 @@ class _DistrictTopLeaderboardWidgetState
                           name,
                           maxLines: 1,
                           overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontSize: 13.5,
-                            fontWeight: isRank1 ? FontWeight.w900 : FontWeight.w700,
-                            color: textPrimary,
+                            fontWeight: FontWeight.w800,
+                            color: Color(0xFF0F172A),
                           ),
                         ),
                         Text(
                           '${item['district'] ?? _selectedDistrict} District',
-                          style: TextStyle(fontSize: 10.5, color: textMuted),
+                          style: const TextStyle(
+                            fontSize: 10.5,
+                            color: Color(0xFF64748B),
+                            fontWeight: FontWeight.w500,
+                          ),
                         ),
                       ],
                     ),
                   ),
 
-                  // Score Pill
+                  // Score Tag
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF10B981).withValues(alpha: 0.12),
+                      color: const Color(0xFF10B981).withValues(alpha: 0.15),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
@@ -320,25 +295,25 @@ class _DistrictTopLeaderboardWidgetState
                       style: const TextStyle(
                         fontSize: 12.5,
                         fontWeight: FontWeight.w900,
-                        color: Color(0xFF059669),
+                        color: Color(0xFF047857),
                       ),
                     ),
                   ),
-                  const SizedBox(width: 8),
+                  const SizedBox(width: 6),
 
-                  // Time Pill
+                  // Time Tag
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
                     decoration: BoxDecoration(
-                      color: isDark ? const Color(0xFF334155) : const Color(0xFFF1F5F9),
+                      color: isDark ? const Color(0xFF374151) : const Color(0xFFF1F5F9),
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: Text(
                       '${item['time_taken_seconds'] ?? 0}s',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 11,
                         fontWeight: FontWeight.w700,
-                        color: textMuted,
+                        color: Color(0xFF64748B),
                       ),
                     ),
                   ),
@@ -347,37 +322,32 @@ class _DistrictTopLeaderboardWidgetState
             );
           }),
 
-          // 🚀 3. Footer Action Strip
-          const SizedBox(height: 6),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => DistrictLeaderboardScreen(
-                    isDarkMode: widget.isDarkMode,
-                    userDistrict: _selectedDistrict,
-                  ),
-                ),
-              );
-            },
-            borderRadius: BorderRadius.circular(10),
-            child: Padding(
-              padding: const EdgeInsets.symmetric(vertical: 4),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    'Full Bihar State Ranklist',
-                    style: TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w800,
-                      color: const Color(0xFF4F46E5),
+          // 🚀 3. Footer Link
+          const SizedBox(height: 4),
+          Align(
+            alignment: Alignment.centerRight,
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => DistrictLeaderboardScreen(
+                      isDarkMode: widget.isDarkMode,
+                      userDistrict: _selectedDistrict,
                     ),
                   ),
-                  const SizedBox(width: 4),
-                  const Icon(Icons.arrow_forward_rounded, size: 14, color: Color(0xFF4F46E5)),
-                ],
+                );
+              },
+              child: const Padding(
+                padding: EdgeInsets.symmetric(vertical: 4),
+                child: Text(
+                  'Full Bihar State Ranklist →',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w800,
+                    color: Color(0xFF4F46E5),
+                  ),
+                ),
               ),
             ),
           ),
