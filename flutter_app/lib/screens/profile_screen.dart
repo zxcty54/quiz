@@ -11,6 +11,7 @@ import 'wrong_questions_screen.dart';
 import 'saved_current_affairs_screen.dart';
 import '../widgets/donation_widget.dart';
 import '../widgets/app_global_feedback_dialog.dart';
+import '../widgets/mastery_evolution_card.dart'; // 👈 AI Mastery Card Import
 
 class ProfileScreen extends StatefulWidget {
   final bool isHindi;
@@ -366,9 +367,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 _buildProfileStatTile('Study Time', 'Daily Active', '⏱️', const Color(0xFF7C3AED), isDark),
               ],
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 14),
 
-            // 📈 3. RECENT PROGRESS (7 DAYS)
+            // 🧠 3. AI MASTERY EVOLUTION LIVE CARD
+            MasteryEvolutionCard(isDarkMode: isDark),
+            const SizedBox(height: 14),
+
+            // 📈 4. RECENT PROGRESS (7 DAYS)
             Text('📈 Recent Progress (Last 7 Days)', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             Card(
@@ -398,7 +403,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 📂 4. QUICK ACCESS
+            // 📂 5. QUICK ACCESS
             Text('📂 Quick Access', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             Card(
@@ -449,7 +454,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 🏆 5. ACHIEVEMENTS
+            // 🏆 6. ACHIEVEMENTS
             Text('🏆 Achievements', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             SizedBox(
@@ -490,7 +495,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // ⚙️ 6. APP PREFERENCES
+            // ⚙️ 7. APP PREFERENCES
             Text('⚙️ Preferences', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 8),
             Card(
@@ -523,7 +528,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             DonationWidget(isDarkMode: isDark),
             const SizedBox(height: 14),
 
-            // 🌟 7. ATTENTION-GRABBING FEEDBACK BANNER
+            // 🌟 8. ATTENTION-GRABBING FEEDBACK BANNER
             Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
