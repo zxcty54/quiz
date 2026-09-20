@@ -33,7 +33,6 @@ class BpscDailyCardModel {
 
   factory BpscDailyCardModel.fromUniversalJson(
       Map<String, dynamic> json, String fallbackWatermark) {
-    // 1. Primary Title Extraction
     String title = json['name'] ??
         json['zone_name'] ??
         json['site_name'] ??
@@ -51,7 +50,6 @@ class BpscDailyCardModel {
         json['title'] ??
         'Bihar Special Focus';
 
-    // 2. Subtitle / Category
     String category = json['popular_title'] ??
         json['popular_tag'] ??
         json['category'] ??
@@ -64,7 +62,6 @@ class BpscDailyCardModel {
         json['total_districts'] ??
         'Static GK Profile';
 
-    // 3. District / Location Finder
     String? district;
     if (json['location'] is Map) {
       district = json['location']['district']?.toString();
@@ -81,7 +78,6 @@ class BpscDailyCardModel {
       district = (json['top_producing_districts'] as List).first.toString();
     }
 
-    // 4. Quick Summary
     String summary = 'Exam-oriented high yield facts for BPSC & Bihar state examinations.';
     for (var entry in json.entries) {
       if (entry.value is Map &&
@@ -93,11 +89,8 @@ class BpscDailyCardModel {
     }
     if (summary.startsWith('Exam-oriented') && json['qualifying_benchmark'] != null) {
       summary = json['qualifying_benchmark'].toString();
-    } else if (summary.startsWith('Exam-oriented') && json['national_comparison'] != null) {
-      summary = json['national_comparison'].toString();
     }
 
-    // 5. 🎯 HAR EK KEY AUR SECTION KO EXTRACT KARNA (Zero Data Drop)
     List<ContentBlock> dynamicSections = [];
     List<String> frontCardFacts = [];
 
@@ -154,16 +147,14 @@ class BpscDailyCardModel {
       }
     });
 
-    // Front card ke liye top 2 clean facts choose karein
     for (var sec in dynamicSections) {
       for (var it in sec.bulletItems) {
-        if (!it.toLowerCase().contains('summary') && frontCardFacts.length < 2) {
+        if (!it.toLowerCase().contains('summary') && frontCardFacts.length < 3) {
           frontCardFacts.add(it);
         }
       }
     }
 
-    // 6. Direct PYQ Triggers
     List<Map<String, String>> pyqs = [];
     if (json['exam_facts_and_pyqs'] is List) {
       for (var item in json['exam_facts_and_pyqs']) {
