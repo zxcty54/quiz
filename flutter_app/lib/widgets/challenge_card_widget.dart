@@ -86,7 +86,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 1. Header Section
+          // Header Info
           Row(
             children: [
               Container(
@@ -129,7 +129,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
           ),
           const SizedBox(height: 16),
 
-          // 2. Direct Start Button
+          // Direct Start Button (No Leaderboard Strip Inside Card)
           SizedBox(
             width: double.infinity,
             height: 48,
