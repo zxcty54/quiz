@@ -10,6 +10,7 @@ class ChallengeResultScreen extends StatefulWidget {
   final int totalTimeTaken;
   final String challengeCode;
   final bool isDarkMode;
+  final VoidCallback? onFinished;
 
   const ChallengeResultScreen({
     super.key,
@@ -19,6 +20,7 @@ class ChallengeResultScreen extends StatefulWidget {
     required this.totalTimeTaken,
     required this.challengeCode,
     required this.isDarkMode,
+    this.onFinished,
   });
 
   @override
@@ -35,41 +37,49 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
     _submitScoreToSupabase();
   }
 
-  // 🏆 Leaderboard par Best Score update/insert karne ka logic
+  // 🏆 Leaderboard Submission Logic (Strict Onboarding Identity Sync)
   Future<void> _submitScoreToSupabase() async {
     setState(() => _isSubmitting = true);
     try {
       final prefs = await SharedPreferences.getInstance();
       final user = Supabase.instance.client.auth.currentUser;
 
-      // 1. SharedPreferences se data lein (Drawer / Login state)
-      String userName = prefs.getString('user_name') ?? '';
+      // 1. Mandatory Name from Registration / SharedPreferences
+      String userName = prefs.getString('user_name')?.trim() ??
+          prefs.getString('custom_aspirant_name')?.trim() ??
+          '';
+
       if (userName.isEmpty) {
-        userName = user?.userMetadata?['full_name'] ??
-            user?.userMetadata?['name'] ??
+        userName = user?.userMetadata?['full_name']?.toString().trim() ??
+            user?.userMetadata?['name']?.toString().trim() ??
             'Aspirant';
       }
 
-      String district = prefs.getString('user_district') ?? '';
-      if (district.isEmpty) {
-        district = user?.userMetadata?['district'] ?? 'Patna';
-      }
+      // 2. Mandatory District from Registration / SharedPreferences
+      String district = prefs.getString('user_district')?.trim() ??
+          user?.userMetadata?['district']?.toString().trim() ??
+          'Patna';
 
       final todayDate = DateTime.now().toIso8601String().substring(0, 10);
 
-      // 2. Check karein ki user ka aaj ka attempt pehle se record me hai ya nahi
-      final existing = await Supabase.instance.client
+      // 3. Check existing submission for today
+      var query = Supabase.instance.client
           .from('daily_challenge_submissions')
-          .select()
-          .eq('user_name', userName)
-          .eq('challenge_date', todayDate)
-          .maybeSingle();
+          .select();
+
+      if (user?.id != null) {
+        query = query.eq('user_id', user!.id);
+      } else {
+        query = query.eq('user_name', userName);
+      }
+
+      final existing = await query.eq('challenge_date', todayDate).maybeSingle();
 
       if (existing != null) {
         final int oldScore = existing['score'] ?? 0;
         final int oldTime = existing['time_taken_seconds'] ?? 9999;
 
-        // Sirf behtar performance par hi update karein
+        // Better score ya faster time hone par hi record update karein
         bool shouldUpdate = widget.myScore > oldScore ||
             (widget.myScore == oldScore && widget.totalTimeTaken < oldTime);
 
@@ -84,10 +94,10 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
               .eq('id', existing['id']);
           debugPrint("✅ Purana rank behtar score ke sath update ho gaya!");
         } else {
-          debugPrint("ℹ️ Purana score behtar tha, koi change nahi.");
+          debugPrint("ℹ️ Purana score better tha, koi change nahi.");
         }
       } else {
-        // Pehla attempt: Nayi entry banayein
+        // Naya entry insert karein
         final Map<String, dynamic> insertData = {
           'user_name': userName,
           'district': district,
@@ -104,6 +114,11 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
             .insert(insertData);
         debugPrint("✅ Naya score submit hua!");
       }
+
+      // 4. Update local cache taaki card bina delay ke turant show kare
+      await prefs.setString('last_sub_user', userName);
+      await prefs.setString('last_sub_district', district);
+      await prefs.setInt('last_sub_score', widget.myScore);
 
       if (mounted) {
         setState(() {
@@ -124,7 +139,10 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
     final prefs = await SharedPreferences.getInstance();
     final user = Supabase.instance.client.auth.currentUser;
 
-    String myName = prefs.getString('user_name') ?? '';
+    String myName = prefs.getString('user_name') ??
+        prefs.getString('custom_aspirant_name') ??
+        '';
+
     if (myName.isEmpty) {
       myName = user?.userMetadata?['full_name'] ??
           user?.userMetadata?['name'] ??
@@ -150,6 +168,11 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
     await Share.share(message);
   }
 
+  void _exitScreen() {
+    widget.onFinished?.call();
+    Navigator.of(context).popUntil((route) => route.isFirst);
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
@@ -165,9 +188,9 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
 
     return PopScope(
       canPop: false,
-      onPopInvoked: (didPop) {
+      onPopInvokedWithResult: (didPop, result) {
         if (!didPop) {
-          Navigator.of(context).popUntil((route) => route.isFirst);
+          _exitScreen();
         }
       },
       child: Scaffold(
@@ -183,7 +206,7 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
           actions: [
             IconButton(
               icon: Icon(Icons.close_rounded, color: subTextColor),
-              onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
+              onPressed: _exitScreen,
             )
           ],
         ),
@@ -200,12 +223,12 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                   padding: const EdgeInsets.all(24),
                   decoration: BoxDecoration(
                     color: cardBg,
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(16),
                     border: Border.all(color: borderColor),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withOpacity(0.04),
-                        blurRadius: 10,
+                        color: Colors.black.withOpacity(isDark ? 0.3 : 0.04),
+                        blurRadius: 12,
                         offset: const Offset(0, 4),
                       ),
                     ],
@@ -244,9 +267,9 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                         Text(
                           '${widget.myScore} / 10',
                           style: const TextStyle(
-                            fontSize: 42,
+                            fontSize: 44,
                             fontWeight: FontWeight.w900,
-                            color: Color(0xFF2563EB),
+                            color: Color(0xFF4F46E5),
                           ),
                         ),
                         const SizedBox(height: 6),
@@ -254,7 +277,7 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                           'Time Taken: ${widget.totalTimeTaken}s',
                           style: TextStyle(
                             fontSize: 14,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w600,
                             color: subTextColor,
                           ),
                         ),
@@ -305,7 +328,7 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                       backgroundColor: const Color(0xFF25D366),
                       foregroundColor: Colors.white,
                       elevation: 0,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                     ),
                   ),
                 ),
@@ -315,10 +338,10 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                   width: double.infinity,
                   height: 46,
                   child: OutlinedButton(
-                    onPressed: () => Navigator.of(context).popUntil((route) => route.isFirst),
+                    onPressed: _exitScreen,
                     style: OutlinedButton.styleFrom(
                       side: BorderSide(color: borderColor),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                     ),
                     child: Text(
                       'Home Screen par Wapas Jayein',
@@ -343,7 +366,7 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
       children: [
         CircleAvatar(
           radius: 26,
-          backgroundColor: isMe ? const Color(0xFF2563EB) : const Color(0xFFD97706),
+          backgroundColor: isMe ? const Color(0xFF4F46E5) : const Color(0xFFD97706),
           child: Text(
             name.isNotEmpty ? name[0].toUpperCase() : 'P',
             style: const TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 18),
@@ -363,7 +386,7 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
           style: TextStyle(
             fontSize: 15,
             fontWeight: FontWeight.w800,
-            color: isMe ? const Color(0xFF2563EB) : const Color(0xFFD97706),
+            color: isMe ? const Color(0xFF4F46E5) : const Color(0xFFD97706),
           ),
         ),
       ],
