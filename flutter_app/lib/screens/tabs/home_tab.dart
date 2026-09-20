@@ -9,7 +9,8 @@ import '../../widgets/pro_pdf_vault_card.dart';
 import '../../widgets/coaching_hub_card.dart';
 import '../../widgets/coaching_onboarding_cta_widget.dart';
 import '../../widgets/hall_of_fame_carousel_widget.dart';
-import '../../widgets/bihar_events_carousel_widget.dart'; // 🌐 Events & Cultural Affairs Widget
+import '../../widgets/bihar_events_carousel_widget.dart'; 
+import '../../widgets/know_your_bihar_widget.dart'; // 👈 🗺️ Know Your Bihar Widget
 
 // ⚔️ Challenge screens & service
 import '../challenge_quiz_screen.dart';
@@ -148,7 +149,13 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // 📑 9. PDF VAULT CARD
+            // 🗺️ 9. KNOW YOUR BIHAR (7-DAY DAILY REVOLVING ENGINE) 👈 (Yahan Add Hua)
+            KnowYourBiharWidget(
+              isDarkMode: widget.isDarkMode,
+            ),
+            const SizedBox(height: 18),
+
+            // 📑 10. PDF VAULT CARD
             ProPdfVaultCard(
               isDarkMode: widget.isDarkMode,
               customWebsiteUrl: widget.appConfig['pdf_vault_main_url'],
@@ -156,39 +163,39 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // ⚔️ 10. 1v1 DUEL & DISTRICT LEADERBOARD CARD
+            // ⚔️ 11. 1v1 DUEL & DISTRICT LEADERBOARD CARD
             _buildSpeedRunChallengeCard(context),
             const SizedBox(height: 18),
 
-            // 🌐 11. DYNAMIC WEB HUB
+            // 🌐 12. DYNAMIC WEB HUB
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 18),
 
-            // 12. ELIGIBILITY CHECKER
+            // 13. ELIGIBILITY CHECKER
             EligibilityCheckerWidget(
               isDarkMode: widget.isDarkMode,
               onTapUrl: widget.onTapUrl,
             ),
             const SizedBox(height: 18),
 
-            // 📅 13. LAUNCH ROADMAP
+            // 📅 14. LAUNCH ROADMAP
             LaunchRoadmapCardWidget(
               appConfig: widget.appConfig,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 🏫 14. COACHING ONBOARDING CTA
+            // 🏫 15. COACHING ONBOARDING CTA
             CoachingOnboardingCtaWidget(
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 15. TELEGRAM COMMUNITY
+            // 16. TELEGRAM COMMUNITY
             const TelegramCreatorWidget(),
             const SizedBox(height: 20),
 
-            // 🏆 16. HALL OF FAME
+            // 🏆 17. HALL OF FAME
             HallOfFameCarouselWidget(
               key: _hallOfFameKey,
               isDarkMode: widget.isDarkMode,
