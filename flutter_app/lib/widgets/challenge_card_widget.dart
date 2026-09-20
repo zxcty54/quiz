@@ -30,7 +30,6 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
             content: Text('⚠️ Sawaal load nahi ho paye. Kripya internet check karein!'),
             backgroundColor: Color(0xFFDC2626),
             behavior: SnackBarBehavior.floating,
-            duration: Duration(seconds: 2),
           ),
         );
         return;
@@ -57,9 +56,7 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
         );
       }
     } finally {
-      if (mounted) {
-        setState(() => _isLoading = false);
-      }
+      if (mounted) setState(() => _isLoading = false);
     }
   }
 
@@ -67,17 +64,13 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-      padding: const EdgeInsets.all(18),
+      padding: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFF312E81), Color(0xFF4F46E5), Color(0xFF7C3AED)],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-        borderRadius: BorderRadius.circular(20),
+        color: const Color(0xFF4F28EB),
+        borderRadius: BorderRadius.circular(24),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF4F46E5).withValues(alpha: 0.35),
+            color: const Color(0xFF4F28EB).withValues(alpha: 0.35),
             blurRadius: 16,
             offset: const Offset(0, 6),
           ),
@@ -86,40 +79,51 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header Info
+          // Top Badges Row
           Row(
             children: [
               Container(
-                width: 44,
-                height: 44,
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.18),
-                  borderRadius: BorderRadius.circular(12),
+                  color: Colors.white.withValues(alpha: 0.16),
+                  borderRadius: BorderRadius.circular(20),
+                  border: Border.all(color: Colors.white.withValues(alpha: 0.25)),
                 ),
-                alignment: Alignment.center,
-                child: const Text('⚔️', style: TextStyle(fontSize: 22)),
-              ),
-              const SizedBox(width: 12),
-              const Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
                   children: [
+                    Text('⚔️', style: TextStyle(fontSize: 12)),
+                    SizedBox(width: 5),
                     Text(
-                      '1v1 Daily Duel Challenge',
+                      '1v1 DUEL & DISTRICT RANK',
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 16,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: -0.2,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 0.3,
                       ),
                     ),
-                    SizedBox(height: 2),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                decoration: BoxDecoration(
+                  color: Colors.black.withValues(alpha: 0.2),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.timer_outlined, size: 13, color: Colors.white70),
+                    SizedBox(width: 4),
                     Text(
-                      '10 Rapid Questions • 15s per question',
+                      '10 Qs • 15s Timer',
                       style: TextStyle(
-                        color: Colors.white70,
-                        fontSize: 11.5,
-                        fontWeight: FontWeight.w500,
+                        color: Colors.white,
+                        fontSize: 11,
+                        fontWeight: FontWeight.w700,
                       ),
                     ),
                   ],
@@ -129,37 +133,69 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
           ),
           const SizedBox(height: 16),
 
-          // Direct Start Button (No Leaderboard Strip Inside Card)
+          // Title
+          const Row(
+            children: [
+              Text(
+                'Challenge Your Friend ',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900,
+                  letterSpacing: -0.3,
+                ),
+              ),
+              Text('🎯', style: TextStyle(fontSize: 18)),
+            ],
+          ),
+          const SizedBox(height: 8),
+
+          // Subtitle
+          Text(
+            '10 rapid sawal bina calculation ke solve karo, WhatsApp par dost ko challenge karo aur District Topper bano!',
+            style: TextStyle(
+              color: Colors.white.withValues(alpha: 0.85),
+              fontSize: 13,
+              height: 1.45,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          const SizedBox(height: 18),
+
+          // Full-Width Start Duel Button (Leaderboard button removed)
           SizedBox(
             width: double.infinity,
-            height: 48,
+            height: 50,
             child: ElevatedButton(
               onPressed: _isLoading ? null : _startNewChallenge,
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.white,
-                foregroundColor: const Color(0xFF4F46E5),
+                foregroundColor: const Color(0xFF4F28EB),
                 elevation: 0,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
+                  borderRadius: BorderRadius.circular(16),
                 ),
               ),
               child: _isLoading
                   ? const SizedBox(
-                      width: 20,
-                      height: 20,
+                      width: 22,
+                      height: 22,
                       child: CircularProgressIndicator(
                         strokeWidth: 2.2,
-                        valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF4F46E5)),
+                        valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF4F28EB)),
                       ),
                     )
                   : const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.bolt_rounded, size: 20, color: Color(0xFF4F46E5)),
+                        Icon(Icons.bolt_rounded, size: 20, color: Color(0xFF4F28EB)),
                         SizedBox(width: 6),
                         Text(
-                          'Start 1v1 Daily Duel 🚀',
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight.w900),
+                          'Start Duel 🚀',
+                          style: TextStyle(
+                            fontSize: 15,
+                            fontWeight: FontWeight.w900,
+                          ),
                         ),
                       ],
                     ),
