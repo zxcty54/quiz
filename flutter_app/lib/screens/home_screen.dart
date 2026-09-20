@@ -11,6 +11,7 @@ import 'package:app_links/app_links.dart';
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
 import '../services/challenge_service.dart';
+import '../services/ai_explainer_service.dart'; // 👈 AI Batch Processing Hook
 import 'challenge_quiz_screen.dart';
 import 'community_feed_screen.dart';
 import 'creator_auth_screen.dart';
@@ -46,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _hasLearningHistory = false;
   bool _isLoadingConfig = true;
 
-  // 🔗 Step 5: WhatsApp Deep Link Listener
+  // 🔗 WhatsApp Deep Link Listener
   late final AppLinks _appLinks;
   StreamSubscription<Uri>? _linkSubscription;
 
@@ -57,6 +58,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     TelegramTracker.initSession();
     _loadAllConfigs();
     _initChallengeDeepLinks();
+
+    // 🚀 Silent Background Sync (Har 15-min cycle check karega)
+    AiExplainerService.syncBatchMasteryEvolution();
   }
 
   @override
@@ -115,6 +119,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       _fetchLiveAppConfig();
       _fetchSectionalDataLive();
       _fetchSubjectMappingLive();
+
+      // 🔄 App resume hone par bhi silent cycle check
+      AiExplainerService.syncBatchMasteryEvolution();
     }
   }
 
@@ -124,6 +131,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     try {
       final String configStr = await rootBundle.loadString('assets/data/app_config.json');
       _appConfig = jsonDecode(configStr);
+
+      // Model config update
+      AiExplainerService.updateModelFromConfig(_appConfig);
     } catch (e) {
       debugPrint("Error loading app_config.json: $e");
     }
@@ -243,7 +253,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         ).timeout(const Duration(seconds: 4));
 
         if (res.statusCode == 200) {
-          String rawBody = utf8.decode(res.bodyBytes).trim();
+          String rawBody = utf8.decode(apiRes.bodyBytes).trim();
           if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
           rawBody = rawBody.replaceAll('```json', '').replaceAll('```', '').trim();
           if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
@@ -264,6 +274,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       setState(() {
         _appConfig = Map<String, dynamic>.from(data);
       });
+      AiExplainerService.updateModelFromConfig(_appConfig);
     }
   }
 
@@ -760,7 +771,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   ),
                   content: Text(
                     'Aapne pichli baar ${savedIndex + 1}/${qList.length} questions attempt kiye the. Kahan se continue karna hai?',
-                    style: const TextStyle(fontSize: 13, color: Color(0xFFCBD5E1), height: 1.4),
+                    style: const TextStyle(fontSize: 13, color: const Color(0xFFCBD5E1), height: 1.4),
                   ),
                   actions: [
                     TextButton(
