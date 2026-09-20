@@ -251,24 +251,37 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         'subtopic': detectedConcept,
       });
 
+      // 🚀 HOOK CONNECTED: Attempted questions recording with full details
       if (userAns != null) {
         topicAttempted[detectedConcept] = (topicAttempted[detectedConcept] ?? 0) + 1;
+
+        final int timeSpent = _questionTimers[i] ?? 0;
+        final String qTextClean = q.qe.isNotEmpty ? q.qe : (q.qh.isNotEmpty ? q.qh : q.getText(_isHindi));
+        final String currentTestType = widget.isBatchTest ? 'batch_cbt' : 'sectional_cbt';
 
         if (isCorrect) {
           correctCount++;
           topicCorrect[detectedConcept] = (topicCorrect[detectedConcept] ?? 0) + 1;
+
           await UserStatsService.recordQuestionAttempt(
             isCorrect: true,
             chapterName: widget.testTitle,
             chapterPath: widget.subFolder,
+            questionText: qTextClean,
+            timeTakenSeconds: timeSpent,
+            testType: currentTestType,
           );
         } else {
           wrongCount++;
           topicWrong[detectedConcept] = (topicWrong[detectedConcept] ?? 0) + 1;
+
           await UserStatsService.recordQuestionAttempt(
             isCorrect: false,
             chapterName: widget.testTitle,
             chapterPath: widget.subFolder,
+            questionText: qTextClean,
+            timeTakenSeconds: timeSpent,
+            testType: currentTestType,
             wrongQuestionJson: {
               'qe': q.qe,
               'qh': q.qh,
