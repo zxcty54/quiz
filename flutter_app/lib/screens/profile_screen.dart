@@ -1,7 +1,9 @@
 import 'dart:convert';
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import '../main.dart';
 import '../services/user_stats_service.dart';
 import 'saved_questions_screen.dart';
@@ -44,18 +46,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Future<void> _loadProfileData() async {
     final prefs = await SharedPreferences.getInstance();
 
-    // 👤 Load Name & Mobile from Welcome/Onboarding screen or local fallback
-    final String savedName = prefs.getString('custom_aspirant_name') ??
-        prefs.getString('user_name') ??
-        prefs.getString('user_display_name') ??
+    // 👤 Exact name from OnboardingWelcomeScreen
+    final String savedName = prefs.getString('custom_aspirant_name')?.trim() ??
+        prefs.getString('user_name')?.trim() ??
         'Aspirant';
 
-    final String? contactId = prefs.getString('student_contact_id');
-    final String savedMobile = (contactId != null && contactId != 'N/A')
-        ? contactId
-        : (prefs.getString('user_mobile') ?? '');
-
-    final String savedEmail = prefs.getString('user_email') ?? '';
+    final String savedMobile = prefs.getString('user_mobile')?.trim() ?? '';
+    final String savedEmail = prefs.getString('user_email')?.trim() ?? '';
 
     // 📌 Load Saved Current Affairs Count
     int caCount = 0;
@@ -161,12 +158,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 final String updatedEmail = emailCtrl.text.trim();
                 final String updatedMobile = mobileCtrl.text.trim();
 
-                // Dono keys me save hoga taaki welcome screen aur CBT dono update rahein
+                // 🔑 1. Maintain Same Clean User ID from Onboarding
+                String? currentUserId = prefs.getString('user_id');
+                if (currentUserId == null || currentUserId.isEmpty) {
+                  const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+                  final rnd = math.Random();
+                  final randomCode = List.generate(16, (i) => chars[rnd.nextInt(chars.length)]).join();
+                  currentUserId = 'usr_$randomCode';
+                  await prefs.setString('user_id', currentUserId);
+                }
+
+                // 2. Synchronize all local keys
                 await prefs.setString('custom_aspirant_name', updatedName);
                 await prefs.setString('user_name', updatedName);
                 await prefs.setString('user_email', updatedEmail);
                 await prefs.setString('user_mobile', updatedMobile);
                 await prefs.setString('student_contact_id', updatedMobile.isNotEmpty ? updatedMobile : 'N/A');
+
+                // 3. Update Supabase app_users table under the exact same user_id
+                try {
+                  final String userDistrict = prefs.getString('user_district') ?? 'Patna';
+                  await Supabase.instance.client.from('app_users').upsert({
+                    'user_id': currentUserId,
+                    'full_name': updatedName,
+                    'district': userDistrict,
+                    'mobile_number': updatedMobile.isNotEmpty ? updatedMobile : 'N/A',
+                    'email': updatedEmail.isNotEmpty ? updatedEmail : 'N/A',
+                    'updated_at': DateTime.now().toIso8601String(),
+                  }, onConflict: 'user_id');
+                } catch (e) {
+                  debugPrint('Supabase profile update sync error: $e');
+                }
 
                 if (mounted) {
                   Navigator.pop(ctx);
@@ -220,110 +242,106 @@ class _ProfileScreenState extends State<ProfileScreen> {
         return ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            // 👤 1. DYNAMIC USER HEADER CARD (WITH NAME, EMAIL, MOBILE & EDIT)
+            // 👤 1. DYNAMIC USER HEADER CARD
             Card(
               elevation: 2,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
               child: Padding(
                 padding: const EdgeInsets.all(16.0),
-                child: Column(
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const CircleAvatar(
-                          radius: 30,
-                          backgroundColor: Color(0xFF2563EB),
-                          child: Text('🎓', style: TextStyle(fontSize: 26)),
-                        ),
-                        const SizedBox(width: 14),
-                        Expanded(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
+                    const CircleAvatar(
+                      radius: 30,
+                      backgroundColor: Color(0xFF2563EB),
+                      child: Text('🎓', style: TextStyle(fontSize: 26)),
+                    ),
+                    const SizedBox(width: 14),
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            'Aspirant Profile 👋',
+                            style: TextStyle(fontSize: 12, color: subTextColor, fontWeight: FontWeight.w600),
+                          ),
+                          Text(
+                            _userName,
+                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: headerTextColor),
+                          ),
+                          if (_userEmail.isNotEmpty) ...[
+                            const SizedBox(height: 2),
+                            Row(
+                              children: [
+                                Icon(Icons.email_outlined, size: 12, color: subTextColor),
+                                const SizedBox(width: 4),
+                                Expanded(
+                                  child: Text(
+                                    _userEmail,
+                                    style: TextStyle(fontSize: 11.5, color: subTextColor),
+                                    overflow: TextOverflow.ellipsis,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
+                          if (_userMobile.isNotEmpty) ...[
+                            const SizedBox(height: 2),
+                            Row(
+                              children: [
+                                Icon(Icons.phone_android_outlined, size: 12, color: subTextColor),
+                                const SizedBox(width: 4),
+                                Text(
+                                  _userMobile,
+                                  style: TextStyle(fontSize: 11.5, color: subTextColor),
+                                ),
+                              ],
+                            ),
+                          ],
+                          const SizedBox(height: 6),
+                          Wrap(
+                            spacing: 6,
+                            runSpacing: 4,
                             children: [
-                              Text(
-                                'Aspirant Profile 👋',
-                                style: TextStyle(fontSize: 12, color: subTextColor, fontWeight: FontWeight.w600),
-                              ),
-                              Text(
-                                _userName,
-                                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: headerTextColor),
-                              ),
-                              if (_userEmail.isNotEmpty) ...[
-                                const SizedBox(height: 2),
-                                Row(
-                                  children: [
-                                    Icon(Icons.email_outlined, size: 12, color: subTextColor),
-                                    const SizedBox(width: 4),
-                                    Expanded(
-                                      child: Text(
-                                        _userEmail,
-                                        style: TextStyle(fontSize: 11.5, color: subTextColor),
-                                        overflow: TextOverflow.ellipsis,
-                                      ),
-                                    ),
-                                  ],
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: isDark ? const Color(0xFF451A03) : const Color(0xFFFEF3C7),
+                                  borderRadius: BorderRadius.circular(12),
                                 ),
-                              ],
-                              if (_userMobile.isNotEmpty) ...[
-                                const SizedBox(height: 2),
-                                Row(
-                                  children: [
-                                    Icon(Icons.phone_android_outlined, size: 12, color: subTextColor),
-                                    const SizedBox(width: 4),
-                                    Text(
-                                      _userMobile,
-                                      style: TextStyle(fontSize: 11.5, color: subTextColor),
-                                    ),
-                                  ],
+                                child: Text(
+                                  '🔥 $userStreak Day Streak',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                    color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
+                                  ),
                                 ),
-                              ],
-                              const SizedBox(height: 6),
-                              Wrap(
-                                spacing: 6,
-                                runSpacing: 4,
-                                children: [
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                    decoration: BoxDecoration(
-                                      color: isDark ? const Color(0xFF451A03) : const Color(0xFFFEF3C7),
-                                      borderRadius: BorderRadius.circular(12),
-                                    ),
-                                    child: Text(
-                                      '🔥 $userStreak Day Streak',
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold,
-                                        color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
-                                      ),
-                                    ),
+                              ),
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: isDark ? const Color(0xFF1E1B4B) : const Color(0xFFE0E7FF),
+                                  borderRadius: BorderRadius.circular(12),
+                                ),
+                                child: Text(
+                                  '🏅 Level ${_calculateLevel(solvedQs)}',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.bold,
+                                    color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
                                   ),
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                    decoration: BoxDecoration(
-                                      color: isDark ? const Color(0xFF1E1B4B) : const Color(0xFFE0E7FF),
-                                      borderRadius: BorderRadius.circular(12),
-                                    ),
-                                    child: Text(
-                                      '🏅 Level ${_calculateLevel(solvedQs)}',
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold,
-                                        color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
-                                      ),
-                                    ),
-                                  ),
-                                ],
+                                ),
                               ),
                             ],
                           ),
-                        ),
-                        IconButton(
-                          icon: const Icon(Icons.edit_note_rounded, color: Color(0xFF2563EB), size: 24),
-                          tooltip: 'Edit Profile',
-                          onPressed: () => _showEditProfileDialog(isDark),
-                        ),
-                      ],
+                        ],
+                      ),
+                    ),
+                    IconButton(
+                      icon: const Icon(Icons.edit_note_rounded, color: Color(0xFF2563EB), size: 24),
+                      tooltip: 'Edit Profile',
+                      onPressed: () => _showEditProfileDialog(isDark),
                     ),
                   ],
                 ),
