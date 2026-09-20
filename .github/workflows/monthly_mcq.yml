@@ -57,15 +57,20 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
           echo "📥 Syncing inputs from content_base..."
-          # Agar script ko previous raw ya final files ki need hoti hai:
-          if [ -f content_base_repo/finalnews.json ]; then
-            cp content_base_repo/finalnews.json ./finalnews.json
-          fi
+
+          # Source 1: all_current_affairs.json
           if [ -f content_base_repo/all_current_affairs.json ]; then
             cp content_base_repo/all_current_affairs.json ./all_current_affairs.json
           fi
 
-          # Agar current_affair folder pehle se content_base me exist karta hai to copy karein
+          # Source 2: final_alerts_news.json (Fixed missing sync)
+          if [ -f content_base_repo/final_alerts_news.json ]; then
+            cp content_base_repo/final_alerts_news.json ./final_alerts_news.json
+          elif [ -f content_base_repo/finalnews.json ]; then
+            cp content_base_repo/finalnews.json ./final_alerts_news.json
+          fi
+
+          # Copy existing current_affair folder for incremental updates
           if [ -d content_base_repo/current_affair ]; then
             mkdir -p current_affair
             cp -r content_base_repo/current_affair/* ./current_affair/ 2>/dev/null || true
@@ -99,4 +104,4 @@ jobs:
           git pull --rebase origin main
           git push origin HEAD:main
 
-          echo "🚀 [SUCCESS] Current Affairs MCQs successfully updated and pushed to zxcty54/content_base!"
+          echo "🚀 [SUCCESS] Current Affairs MCQs successfully pushed to zxcty54/content_base!"
