@@ -497,7 +497,7 @@ class _OnboardingWelcomeScreenState
 
                 const SizedBox(height: 18),
 
-                // 3. Mobile Number Field
+                // 3. Mobile Number Field (Optional for Play Store compliance)
                 _inputField(
                   label: 'MOBILE NUMBER',
                   controller: _phoneController,
@@ -584,7 +584,6 @@ class _OnboardingWelcomeScreenState
     );
   }
 
-  // 📍 District Dropdown Widget matching App Style
   Widget _districtDropdownField() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -719,6 +718,7 @@ class _OnboardingWelcomeScreenState
     );
   }
 
+  // 🔑 CLEAN USER ID + SUPABASE SYNC IMPLEMENTATION
   Future<void> _completeRegistration() async {
     FocusScope.of(context).unfocus();
 
@@ -734,34 +734,43 @@ class _OnboardingWelcomeScreenState
     try {
       final prefs = await SharedPreferences.getInstance();
 
+      // 1. Clean 16-Character Random User ID (No Date, No Time)
+      String? userId = prefs.getString('user_id');
+      if (userId == null || userId.isEmpty) {
+        const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        final rnd = math.Random();
+        final randomCode = List.generate(16, (i) => chars[rnd.nextInt(chars.length)]).join();
+        userId = 'usr_$randomCode';
+        await prefs.setString('user_id', userId);
+      }
+
+      // Local persistence
       await prefs.setBool('is_onboarded', true);
       await prefs.setString('custom_aspirant_name', name);
       await prefs.setString('user_name', name);
-
-      // 📍 District permanently SharedPreferences me save
       await prefs.setString('user_district', _selectedDistrict);
 
       if (phone.isNotEmpty) {
         await prefs.setString('user_mobile', phone);
       }
 
-      // Supabase user profile sync
+      // 2. Supabase app_users table sync
       try {
         final Map<String, dynamic> userPayload = {
+          'user_id': userId,
           'full_name': name,
           'district': _selectedDistrict,
+          'mobile_number': phone.isNotEmpty ? phone : 'N/A',
           'updated_at': DateTime.now().toIso8601String(),
         };
 
-        if (phone.isNotEmpty) {
-          userPayload['mobile_number'] = phone;
-        }
-
         await Supabase.instance.client
             .from('app_users')
-            .upsert(userPayload);
+            .upsert(userPayload, onConflict: 'user_id');
+
+        debugPrint('✅ Clean User ID and details registered: $userId | $name');
       } catch (e) {
-        debugPrint('Supabase sync issue: $e');
+        debugPrint('Supabase sync error (offline fallback intact): $e');
       }
 
       if (!mounted) return;
