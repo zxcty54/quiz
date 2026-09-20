@@ -1,5 +1,7 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
 class UserStatsService {
   static const String _keyQuestions = 'stats_questions_solved';
@@ -7,10 +9,10 @@ class UserStatsService {
   static const String _keyMocks = 'stats_mocks_attempted';
   static const String _keyStreak = 'stats_study_streak';
   static const String _keyLastDate = 'stats_last_active_date';
-  
+
   static const String _keyLastChapterName = 'stats_last_chapter_name';
   static const String _keyLastChapterPath = 'stats_last_chapter_path';
-  
+
   static const String _keyWrongQuestions = 'stats_wrong_questions_json';
   static const String _keySavedQuestions = 'stats_saved_questions_json';
 
@@ -71,7 +73,7 @@ class UserStatsService {
     };
   }
 
-  // 3️⃣ Subject-Wise Accuracy Tracker (For Suresh's Deep Analytics)
+  // 3️⃣ Subject-Wise Accuracy Tracker
   static Future<void> recordSubjectPerformance({
     required String subject,
     required int correct,
@@ -112,16 +114,20 @@ class UserStatsService {
     }
   }
 
-  // 4️⃣ Record Question Attempt & Wrong Vault Auto-Save
+  // 4️⃣ Record Question Attempt & Wrong Vault Auto-Save + Supabase Cloud Logger
   static Future<void> recordQuestionAttempt({
     required bool isCorrect,
     required String chapterName,
     required String chapterPath,
     Map<String, dynamic>? wrongQuestionJson,
     String? userSelectedOption,
+    String? questionText,
+    int timeTakenSeconds = 0,
+    String testType = 'revision',
   }) async {
     final prefs = await SharedPreferences.getInstance();
 
+    // --- A. Local Stats Counters ---
     int total = prefs.getInt(_keyQuestions) ?? 0;
     await prefs.setInt(_keyQuestions, total + 1);
 
@@ -130,19 +136,19 @@ class UserStatsService {
       await prefs.setInt(_keyCorrect, correct + 1);
     } else if (wrongQuestionJson != null) {
       List<String> wrongList = prefs.getStringList(_keyWrongQuestions) ?? [];
-      
+
       DateTime now = DateTime.now();
       wrongQuestionJson['dateAdded'] = "${now.day}/${now.month}/${now.year}";
       wrongQuestionJson['chapterName'] = chapterName;
       wrongQuestionJson['masteryStreak'] = wrongQuestionJson['masteryStreak'] ?? 0;
       wrongQuestionJson['errorTag'] = wrongQuestionJson['errorTag'] ?? '';
-      
+
       if (userSelectedOption != null && userSelectedOption.isNotEmpty) {
         wrongQuestionJson['userSelectedOption'] = userSelectedOption;
       }
 
       String encoded = jsonEncode(wrongQuestionJson);
-      
+
       String qText = wrongQuestionJson['qe'] ?? wrongQuestionJson['qh'] ?? '';
       bool alreadyExists = wrongList.any((item) {
         try {
@@ -168,6 +174,35 @@ class UserStatsService {
     String dateKey = "day_qs_${today.year}-${today.month}-${today.day}";
     int todayCount = prefs.getInt(dateKey) ?? 0;
     await prefs.setInt(dateKey, todayCount + 1);
+
+    // --- B. 🚀 Supabase Cloud Usage Logger (For 24h AI Diagnostics) ---
+    final String qClean = questionText ??
+        (wrongQuestionJson != null
+            ? (wrongQuestionJson['qe'] ?? wrongQuestionJson['qh'] ?? '')
+            : '');
+
+    if (qClean.trim().isNotEmpty) {
+      try {
+        final String? userId = prefs.getString('user_id');
+        final String userName = prefs.getString('user_name') ?? 'Aspirant';
+        final String district = prefs.getString('user_district') ?? 'Patna';
+
+        await Supabase.instance.client.from('user_question_attempts').insert({
+          'user_id': userId ?? 'usr_guest',
+          'user_name': userName,
+          'district': district,
+          'test_type': testType,
+          'question_text': qClean.trim(),
+          'topic': chapterName.isNotEmpty ? chapterName : 'General',
+          'is_correct': isCorrect,
+          'time_taken_seconds': timeTakenSeconds,
+          'is_analyzed': false,
+          'attempted_at': DateTime.now().toUtc().toIso8601String(),
+        });
+      } catch (e) {
+        debugPrint('Usage tracking silent log error: $e');
+      }
+    }
   }
 
   // 5️⃣ Update Error Tag Persistent
