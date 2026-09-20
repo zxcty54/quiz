@@ -255,9 +255,8 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       if (userAns != null) {
         topicAttempted[detectedConcept] = (topicAttempted[detectedConcept] ?? 0) + 1;
 
-        final String qTextClean = (currentQ.qe != null && currentQ.qe!.isNotEmpty)
-    ? currentQ.qe!
-    : ((currentQ.qh != null && currentQ.qh!.isNotEmpty) ? currentQ.qh! : currentQ.getText(_isHindi));
+        final int timeSpent = _questionTimers[i] ?? 0;
+        final String qTextClean = q.getText(_isHindi);
         final String currentTestType = widget.isBatchTest ? 'batch_cbt' : 'sectional_cbt';
 
         if (isCorrect) {
