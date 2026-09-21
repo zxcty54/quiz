@@ -122,18 +122,11 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
     final String pattern = _insightData!['behavioral_pattern'] ?? _insightData!['candidate_behavior'] ?? 'Exam Aspirant';
     final String verdict = _insightData!['summary_verdict'] ?? _insightData!['seriousness_verdict'] ?? '';
 
-    // Data-backed Traps, Subjects & Evolution Delta
+    // Data Collections
     final List<dynamic> subjects = _insightData!['subject_analysis'] ?? [];
     final List<dynamic> trapsDetailed = _insightData!['critical_traps_detailed'] ?? [];
-    final List<dynamic> oldTraps = _insightData!['critical_traps'] ?? [];
     final List<dynamic> progressDelta = _insightData!['progress_delta'] ?? [];
     final List<dynamic> prescriptions = _insightData!['tactical_prescription'] ?? [];
-
-    // Filter out delta with diff == 0 so UI stays crisp
-    final activeDeltas = progressDelta.where((p) {
-      final num diff = num.tryParse((p['diff'] ?? 0).toString()) ?? 0;
-      return diff != 0;
-    }).toList();
 
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 12),
@@ -153,7 +146,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 1. Header: Text wrap safe (Badge aur Confidence cut nahi hoga)
+          // 1. Header (Wrap-safe Badge & Evidence)
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -212,7 +205,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
           ),
           const SizedBox(height: 12),
 
-          // 2. Short Crisp Pattern Box (Soft wrap support)
+          // 2. Behavioral Pattern & Hinglish Verdict Box
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(10),
@@ -250,7 +243,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
             ),
           ),
 
-          // 🌟 Subject Analysis Chips (Sabhi subjects bina limit ke display honge)
+          // 3. Subject Chips (Sabhi tracked subjects bina take(4) limit ke render honge)
           if (subjects.isNotEmpty) ...[
             const SizedBox(height: 10),
             Wrap(
@@ -286,18 +279,18 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
           ],
           const SizedBox(height: 12),
 
-          // 3. Critical Traps with Telemetry Evidence & Deep-linked Titles
+          // 4. Critical Traps & Persistent Weak Areas Monitor
           Row(
             children: const [
               Icon(Icons.warning_amber_rounded, size: 15, color: Color(0xFFDC2626)),
               SizedBox(width: 4),
-              Text("Critical Traps", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFFDC2626))),
+              Text("Critical Traps (Focus Areas)", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFFDC2626))),
             ],
           ),
           const SizedBox(height: 6),
 
           if (trapsDetailed.isNotEmpty) ...[
-            ...trapsDetailed.take(2).map((t) {
+            ...trapsDetailed.map((t) {
               final String subject = t['subject'] != null && t['subject'].toString().isNotEmpty ? "[${t['subject']}] " : "";
               final String topic = t['topic'] ?? '';
               final String subtopic = t['subtopic'] != null && t['subtopic'].toString().isNotEmpty && t['subtopic'] != topic 
@@ -334,33 +327,18 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                 ),
               );
             }),
-          ] else if (oldTraps.isNotEmpty) ...[
-            ...oldTraps.take(2).map((t) {
-              final String name = t is Map ? (t['subtopic'] ?? t['topic'] ?? '') : t.toString();
-              return Container(
-                width: double.infinity,
-                margin: const EdgeInsets.only(bottom: 6),
-                padding: const EdgeInsets.all(8),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFDC2626).withOpacity(0.06),
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: const Color(0xFFDC2626).withOpacity(0.18)),
-                ),
-                child: Text(name, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: textColor)),
-              );
-            }),
           ] else ...[
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 2),
               child: Text(
-                "No critical traps detected in recent questions.",
+                "No critical recurring traps detected. Good consistency!",
                 style: TextStyle(fontSize: 11, color: subColor, fontStyle: FontStyle.italic),
               ),
             ),
           ],
 
-          // 4. Since Last Analysis (Progress Delta - Active Deltas Only)
-          if (activeDeltas.isNotEmpty) ...[
+          // 5. Long-term Progress Journey (Since Last Analysis / Evolution Tracker)
+          if (progressDelta.isNotEmpty) ...[
             const SizedBox(height: 6),
             Container(
               width: double.infinity,
@@ -374,19 +352,40 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    children: const [
-                      Icon(Icons.trending_up_rounded, size: 14, color: Color(0xFF16A34A)),
-                      SizedBox(width: 4),
-                      Text("Since Last Analysis", style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: const [
+                          Icon(Icons.trending_up_rounded, size: 14, color: Color(0xFF16A34A)),
+                          SizedBox(width: 4),
+                          Text("Progress Journey", style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),
+                        ],
+                      ),
+                      Text(
+                        "Baseline → Live",
+                        style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.bold, color: subColor),
+                      ),
                     ],
                   ),
                   const SizedBox(height: 6),
-                  ...activeDeltas.take(4).map((p) {
+                  ...progressDelta.map((p) {
                     final dynamic diffRaw = p['diff'] ?? 0;
                     final num diff = num.tryParse(diffRaw.toString()) ?? 0;
-                    final bool isUp = diff >= 0;
+                    final bool isUp = diff > 0;
+                    final bool isDown = diff < 0;
+
+                    String badgeText = "• 0%";
+                    Color badgeColor = subColor;
+                    if (isUp) {
+                      badgeText = "↑ +$diff%";
+                      badgeColor = const Color(0xFF16A34A);
+                    } else if (isDown) {
+                      badgeText = "↓ ${diff.abs()}%";
+                      badgeColor = const Color(0xFFDC2626);
+                    }
+
                     return Padding(
-                      padding: const EdgeInsets.only(bottom: 2),
+                      padding: const EdgeInsets.only(bottom: 3),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -397,13 +396,26 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
-                          Text(
-                            "${p['from_pct']}% → ${p['to_pct']}%  ${isUp ? '↑$diff%' : '↓${diff.abs()}%'}",
-                            style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.bold,
-                              color: isUp ? const Color(0xFF16A34A) : const Color(0xFFDC2626),
-                            ),
+                          Row(
+                            children: [
+                              Text(
+                                "${p['from_pct']}% → ${p['to_pct']}%",
+                                style: TextStyle(
+                                  fontSize: 10.5,
+                                  fontWeight: FontWeight.w500,
+                                  color: subColor,
+                                ),
+                              ),
+                              const SizedBox(width: 6),
+                              Text(
+                                badgeText,
+                                style: TextStyle(
+                                  fontSize: 11,
+                                  fontWeight: FontWeight.bold,
+                                  color: badgeColor,
+                                ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
@@ -414,7 +426,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
             ),
           ],
 
-          // 5. Tactical Prescription
+          // 6. Tactical Prescription
           if (prescriptions.isNotEmpty) ...[
             const Divider(height: 18),
             Row(
@@ -436,7 +448,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
 
           const Divider(height: 16),
 
-          // 6. User-Friendly Footer
+          // 7. Footer
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
