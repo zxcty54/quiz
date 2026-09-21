@@ -118,12 +118,12 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       );
     }
 
-    final String badge = _insightData!['mastery_badge'] ?? _insightData!['estimated_mastery_level'] ?? 'Developing';[cite: 2]
+    final String badge = _insightData!['mastery_badge'] ?? _insightData!['estimated_mastery_level'] ?? 'Developing';
     final String behavior = _insightData!['candidate_behavior'] ?? 'Exam Aspirant';
-    final String verdict = _insightData!['seriousness_verdict'] ?? _insightData!['summary'] ?? 'Consistent practice builds mastery.';[cite: 2]
-    final List<dynamic> strengths = _insightData!['strengths'] ?? [];[cite: 2]
-    final List<dynamic> traps = _insightData!['critical_traps'] ?? _insightData!['weaknesses'] ?? [];[cite: 2]
-    final List<dynamic> prescriptions = _insightData!['tactical_prescription'] ?? _insightData!['action_prescription'] ?? [];[cite: 2]
+    final String verdict = _insightData!['seriousness_verdict'] ?? _insightData!['summary'] ?? 'Consistent practice builds mastery.';
+    final List<dynamic> strengths = _insightData!['strengths'] ?? [];
+    final List<dynamic> traps = _insightData!['critical_traps'] ?? _insightData!['weaknesses'] ?? [];
+    final List<dynamic> prescriptions = _insightData!['tactical_prescription'] ?? _insightData!['action_prescription'] ?? [];
 
     final bool isRushedOrCasual = behavior.toLowerCase().contains('rush') ||
         behavior.toLowerCase().contains('casual') ||
@@ -157,7 +157,6 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header: Icon + Title + Status Badge
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -187,7 +186,6 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
           ),
           const SizedBox(height: 10),
 
-          // Behavioral Alert Box
           Container(
             padding: const EdgeInsets.all(11),
             decoration: BoxDecoration(
@@ -242,11 +240,9 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
           ),
           const SizedBox(height: 14),
 
-          // Strengths & Pinpoint Traps
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Strengths
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -255,7 +251,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                       children: [
                         Icon(Icons.check_circle_rounded, size: 14, color: Color(0xFF16A34A)),
                         SizedBox(width: 4),
-                        Text("Top Strengths", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),[cite: 2]
+                        Text("Top Strengths", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),
                       ],
                     ),
                     const SizedBox(height: 6),
@@ -271,7 +267,6 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
               ),
               const SizedBox(width: 10),
 
-              // Critical Traps
               Expanded(
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -280,7 +275,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                       children: [
                         Icon(Icons.warning_amber_rounded, size: 14, color: Color(0xFFDC2626)),
                         SizedBox(width: 4),
-                        Text("Critical Traps", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFFDC2626))),[cite: 2]
+                        Text("Critical Traps", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFFDC2626))),
                       ],
                     ),
                     const SizedBox(height: 6),
@@ -320,7 +315,6 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
             ],
           ),
 
-          // Tactical Prescription
           if (prescriptions.isNotEmpty) ...[
             const Divider(height: 20),
             Row(
@@ -345,7 +339,6 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
 
           const Divider(height: 18),
 
-          // Read-only Footer: Last synced + Silent Cron Status (No Buttons)
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
