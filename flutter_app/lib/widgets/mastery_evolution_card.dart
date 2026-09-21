@@ -129,6 +129,12 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
     final List<dynamic> progressDelta = _insightData!['progress_delta'] ?? [];
     final List<dynamic> prescriptions = _insightData!['tactical_prescription'] ?? [];
 
+    // Filter out delta with diff == 0 so UI stays crisp
+    final activeDeltas = progressDelta.where((p) {
+      final num diff = num.tryParse((p['diff'] ?? 0).toString()) ?? 0;
+      return diff != 0;
+    }).toList();
+
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 12),
       padding: const EdgeInsets.all(16),
@@ -244,13 +250,13 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
             ),
           ),
 
-          // 🌟 NAYA: Subject Analysis Chips (Strong vs Average Breakdown)
+          // 🌟 Subject Analysis Chips (Sabhi subjects bina limit ke display honge)
           if (subjects.isNotEmpty) ...[
             const SizedBox(height: 10),
             Wrap(
               spacing: 6,
               runSpacing: 6,
-              children: subjects.take(4).map((s) {
+              children: subjects.map((s) {
                 final String name = s['subject'] ?? '';
                 final int acc = s['accuracy_pct'] ?? 0;
                 final bool isStrong = acc >= 65;
@@ -292,7 +298,6 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
 
           if (trapsDetailed.isNotEmpty) ...[
             ...trapsDetailed.take(2).map((t) {
-              // Deep-linked title: [Subject] Topic · Subtopic
               final String subject = t['subject'] != null && t['subject'].toString().isNotEmpty ? "[${t['subject']}] " : "";
               final String topic = t['topic'] ?? '';
               final String subtopic = t['subtopic'] != null && t['subtopic'].toString().isNotEmpty && t['subtopic'] != topic 
@@ -354,8 +359,8 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
             ),
           ],
 
-          // 4. Since Last Analysis (Progress Delta Evolution)
-          if (progressDelta.isNotEmpty) ...[
+          // 4. Since Last Analysis (Progress Delta - Active Deltas Only)
+          if (activeDeltas.isNotEmpty) ...[
             const SizedBox(height: 6),
             Container(
               width: double.infinity,
@@ -376,7 +381,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                     ],
                   ),
                   const SizedBox(height: 6),
-                  ...progressDelta.take(3).map((p) {
+                  ...activeDeltas.take(4).map((p) {
                     final dynamic diffRaw = p['diff'] ?? 0;
                     final num diff = num.tryParse(diffRaw.toString()) ?? 0;
                     final bool isUp = diff >= 0;
