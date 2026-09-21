@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import '../services/ai_explainer_service.dart';
 
 class MasteryEvolutionCard extends StatefulWidget {
   final bool isDarkMode;
@@ -14,7 +13,6 @@ class MasteryEvolutionCard extends StatefulWidget {
 class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
   Map<String, dynamic>? _insightData;
   bool _isLoading = true;
-  bool _isSyncing = false;
   String? _lastUpdatedText;
 
   @override
@@ -47,7 +45,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
         if (res['analyzed_at'] != null) {
           final dt = DateTime.tryParse(res['analyzed_at'].toString())?.toLocal();
           if (dt != null) {
-            timeStr = "${dt.hour.toString().padLeft(2, '0')}:${dt.minute.toString().padLeft(2, '0')} (${dt.day}/${dt.month})";
+            timeStr = "${dt.hour.toString().padLeft(2, '0')}:${dt.minute.toString().padLeft(2, '0')}";
           }
         }
 
@@ -65,43 +63,6 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
     if (mounted) setState(() => _isLoading = false);
   }
 
-  Future<void> _triggerManualSync() async {
-    if (_isSyncing) return;
-    setState(() => _isSyncing = true);
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('⚡ Analyzing recent attempts with AI...'),
-        duration: Duration(seconds: 2),
-      ),
-    );
-
-    final res = await AiExplainerService.syncBatchMasteryEvolution(forceSync: true);
-
-    if (mounted) {
-      setState(() => _isSyncing = false);
-      if (res != null) {
-        setState(() {
-          _insightData = res;
-          final now = DateTime.now();
-          _lastUpdatedText = "${now.hour.toString().padLeft(2, '0')}:${now.minute.toString().padLeft(2, '0')} (Just now)";
-        });
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('🎉 AI Mastery Evolution Updated!'),
-            backgroundColor: Color(0xFF16A34A),
-          ),
-        );
-      } else {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
-            content: Text('ℹ️ No new un-analyzed questions or AI busy. Try after giving a mock!'),
-          ),
-        );
-      }
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
@@ -112,7 +73,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
 
     if (_isLoading) {
       return Container(
-        height: 140,
+        height: 120,
         margin: const EdgeInsets.symmetric(vertical: 12),
         decoration: BoxDecoration(
           color: cardBg,
@@ -123,7 +84,6 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       );
     }
 
-    // Agar abhi tak koi test attempt nahi hua ya report generate nahi hui
     if (_insightData == null || _insightData!.isEmpty) {
       return Container(
         margin: const EdgeInsets.symmetric(vertical: 12),
@@ -133,48 +93,47 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
           borderRadius: BorderRadius.circular(16),
           border: Border.all(color: borderColor),
         ),
-        child: Column(
+        child: Row(
           children: [
-            const Icon(Icons.psychology_outlined, size: 36, color: Color(0xFF2563EB)),
-            const SizedBox(height: 8),
-            Text(
-              "AI Mastery Evolution",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: textColor),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              "Mock tests aur questions solve karein taaki AI aapki weak aur strong conceptual profile build kar sake.",
-              textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 12, color: subColor),
-            ),
-            const SizedBox(height: 12),
-            ElevatedButton.icon(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF2563EB),
-                foregroundColor: Colors.white,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            const Text("🤖", style: TextStyle(fontSize: 26)),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "AI Diagnostic Engine Active",
+                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: textColor),
+                  ),
+                  const SizedBox(height: 2),
+                  Text(
+                    "Tests attempt karein. Har 15-minute inactivity ke baad backend AI automatically behavioral diagnosis generate kar dega.",
+                    style: TextStyle(fontSize: 11.5, color: subColor),
+                  ),
+                ],
               ),
-              onPressed: _isSyncing ? null : _triggerManualSync,
-              icon: _isSyncing
-                  ? const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
-                  : const Icon(Icons.refresh_rounded, size: 16),
-              label: Text(_isSyncing ? "Analyzing..." : "Generate Diagnosis 🚀"),
             ),
           ],
         ),
       );
     }
 
-    final String status = _insightData!['estimated_mastery_level'] ?? 'Developing';
-    final String summary = _insightData!['summary'] ?? 'Continuous practice will unlock deep diagnostic accuracy.';
-    final List<dynamic> strengths = _insightData!['strengths'] ?? [];
-    final List<dynamic> weaknesses = _insightData!['weaknesses'] ?? [];
-    final List<dynamic> prescriptions = _insightData!['action_prescription'] ?? [];
+    final String badge = _insightData!['mastery_badge'] ?? _insightData!['estimated_mastery_level'] ?? 'Developing';[cite: 2]
+    final String behavior = _insightData!['candidate_behavior'] ?? 'Exam Aspirant';
+    final String verdict = _insightData!['seriousness_verdict'] ?? _insightData!['summary'] ?? 'Consistent practice builds mastery.';[cite: 2]
+    final List<dynamic> strengths = _insightData!['strengths'] ?? [];[cite: 2]
+    final List<dynamic> traps = _insightData!['critical_traps'] ?? _insightData!['weaknesses'] ?? [];[cite: 2]
+    final List<dynamic> prescriptions = _insightData!['tactical_prescription'] ?? _insightData!['action_prescription'] ?? [];[cite: 2]
+
+    final bool isRushedOrCasual = behavior.toLowerCase().contains('rush') ||
+        behavior.toLowerCase().contains('casual') ||
+        behavior.toLowerCase().contains('flippant') ||
+        behavior.toLowerCase().contains('time-pass');
 
     Color badgeColor = const Color(0xFF2563EB);
-    if (status.toLowerCase().contains('master')) {
+    if (badge.toLowerCase().contains('master')) {
       badgeColor = const Color(0xFF16A34A);
-    } else if (status.toLowerCase().contains('scholar')) {
+    } else if (badge.toLowerCase().contains('scholar')) {
       badgeColor = const Color(0xFF7C3AED);
     }
 
@@ -184,7 +143,9 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       decoration: BoxDecoration(
         color: cardBg,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: borderColor),
+        border: Border.all(
+          color: isRushedOrCasual ? Colors.amber.shade700.withOpacity(0.5) : borderColor,
+        ),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(isDark ? 0.2 : 0.04),
@@ -196,7 +157,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header Row: Title + Mastery Badge + Refresh
+          // Header: Icon + Title + Status Badge
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -205,20 +166,20 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                   const Icon(Icons.psychology_rounded, color: Color(0xFF2563EB), size: 22),
                   const SizedBox(width: 8),
                   Text(
-                    "AI Mastery Evolution",
+                    "AI Behavioral Diagnosis",
                     style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: textColor),
                   ),
                 ],
               ),
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                 decoration: BoxDecoration(
                   color: badgeColor.withOpacity(0.12),
                   borderRadius: BorderRadius.circular(6),
                   border: Border.all(color: badgeColor.withOpacity(0.4)),
                 ),
                 child: Text(
-                  status.toUpperCase(),
+                  badge.toUpperCase(),
                   style: TextStyle(color: badgeColor, fontSize: 10.5, fontWeight: FontWeight.w900),
                 ),
               ),
@@ -226,31 +187,62 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
           ),
           const SizedBox(height: 10),
 
-          // 2-Line AI Summary
+          // Behavioral Alert Box
           Container(
-            padding: const EdgeInsets.all(10),
+            padding: const EdgeInsets.all(11),
             decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+              color: isRushedOrCasual
+                  ? (isDark ? const Color(0xFF451A03) : const Color(0xFFFFFBEB))
+                  : (isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC)),
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: borderColor),
+              border: Border.all(color: isRushedOrCasual ? const Color(0xFFF59E0B) : borderColor),
             ),
-            child: Row(
+            child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text("💡", style: TextStyle(fontSize: 14)),
-                const SizedBox(width: 8),
-                Expanded(
-                  child: Text(
-                    summary,
-                    style: TextStyle(fontSize: 12.5, color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF334155), height: 1.4),
+                Row(
+                  children: [
+                    Text(
+                      isRushedOrCasual ? "⚠️ Pattern:" : "🎯 Pattern:",
+                      style: TextStyle(
+                        fontSize: 11.5,
+                        fontWeight: FontWeight.bold,
+                        color: textColor,
+                      ),
+                    ),
+                    const SizedBox(width: 6),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
+                      decoration: BoxDecoration(
+                        color: (isRushedOrCasual ? Colors.red : const Color(0xFF2563EB)).withOpacity(0.14),
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Text(
+                        behavior,
+                        style: TextStyle(
+                          fontSize: 10.5,
+                          fontWeight: FontWeight.w800,
+                          color: isRushedOrCasual ? Colors.red.shade700 : const Color(0xFF2563EB),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 6),
+                Text(
+                  verdict,
+                  style: TextStyle(
+                    fontSize: 12.5,
+                    height: 1.4,
+                    color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155),
                   ),
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 12),
+          const SizedBox(height: 14),
 
-          // Strengths & Weaknesses
+          // Strengths & Pinpoint Traps
           Row(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -263,14 +255,17 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                       children: [
                         Icon(Icons.check_circle_rounded, size: 14, color: Color(0xFF16A34A)),
                         SizedBox(width: 4),
-                        Text("Top Strengths", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),
+                        Text("Top Strengths", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),[cite: 2]
                       ],
                     ),
                     const SizedBox(height: 6),
-                    ...strengths.take(2).map((s) => Padding(
-                          padding: const EdgeInsets.only(bottom: 4),
-                          child: Text("• $s", style: TextStyle(fontSize: 11.5, color: subColor)),
-                        )),
+                    if (strengths.isEmpty)
+                      Text("Need more data", style: TextStyle(fontSize: 11, color: subColor))
+                    else
+                      ...strengths.take(2).map((s) => Padding(
+                            padding: const EdgeInsets.only(bottom: 4),
+                            child: Text("• $s", style: TextStyle(fontSize: 11.5, color: subColor)),
+                          )),
                   ],
                 ),
               ),
@@ -285,65 +280,92 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                       children: [
                         Icon(Icons.warning_amber_rounded, size: 14, color: Color(0xFFDC2626)),
                         SizedBox(width: 4),
-                        Text("Critical Traps", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFFDC2626))),
+                        Text("Critical Traps", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFFDC2626))),[cite: 2]
                       ],
                     ),
                     const SizedBox(height: 6),
-                    ...weaknesses.take(2).map((w) => Padding(
+                    if (traps.isEmpty)
+                      Text("No major traps", style: TextStyle(fontSize: 11, color: subColor))
+                    else
+                      ...traps.take(2).map((t) {
+                        String title = "";
+                        String nature = "";
+                        if (t is Map) {
+                          title = t['subtopic'] ?? '';
+                          nature = t['nature'] ?? '';
+                        } else {
+                          title = t.toString();
+                        }
+                        return Padding(
                           padding: const EdgeInsets.only(bottom: 4),
-                          child: Text("• $w", style: TextStyle(fontSize: 11.5, color: subColor)),
-                        )),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text("• $title", style: TextStyle(fontSize: 11.5, color: subColor, fontWeight: FontWeight.w600)),
+                              if (nature.isNotEmpty)
+                                Text(
+                                  "  ↳ $nature",
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    color: isRushedOrCasual ? Colors.amber.shade800 : Colors.red.shade400,
+                                  ),
+                                ),
+                            ],
+                          ),
+                        );
+                      }),
                   ],
                 ),
               ),
             ],
           ),
 
+          // Tactical Prescription
           if (prescriptions.isNotEmpty) ...[
             const Divider(height: 20),
             Row(
               children: [
-                const Icon(Icons.medication_rounded, size: 14, color: Color(0xFF2563EB)),
+                const Icon(Icons.flash_on_rounded, size: 15, color: Color(0xFF2563EB)),
                 const SizedBox(width: 4),
-                Text("Today's Action Prescription (Rx)", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: textColor)),
+                Text(
+                  "Tactical Prescription",
+                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: textColor),
+                ),
               ],
             ),
             const SizedBox(height: 6),
             ...prescriptions.take(2).map((p) => Padding(
                   padding: const EdgeInsets.only(bottom: 3),
-                  child: Text("🎯 $p", style: TextStyle(fontSize: 11.5, color: isDark ? const Color(0xFF93C5FD) : const Color(0xFF1E40AF))),
+                  child: Text(
+                    "🎯 $p",
+                    style: TextStyle(fontSize: 11.5, color: isDark ? const Color(0xFF93C5FD) : const Color(0xFF1E40AF)),
+                  ),
                 )),
           ],
 
-          const Divider(height: 20),
+          const Divider(height: 18),
 
-          // Bottom Action: Last updated + Refresh button
+          // Read-only Footer: Last synced + Silent Cron Status (No Buttons)
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Updated: ${_lastUpdatedText ?? 'Recently'}",
+                "Auto-synced: ${_lastUpdatedText ?? 'Recently'}",
                 style: TextStyle(fontSize: 10.5, color: subColor),
               ),
-              InkWell(
-                onTap: _isSyncing ? null : _triggerManualSync,
-                borderRadius: BorderRadius.circular(6),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-                  child: Row(
-                    children: [
-                      if (_isSyncing)
-                        const SizedBox(width: 12, height: 12, child: CircularProgressIndicator(strokeWidth: 1.5))
-                      else
-                        const Icon(Icons.sync_rounded, size: 14, color: Color(0xFF2563EB)),
-                      const SizedBox(width: 4),
-                      Text(
-                        _isSyncing ? "Syncing..." : "Refresh Analysis",
-                        style: const TextStyle(color: Color(0xFF2563EB), fontSize: 11.5, fontWeight: FontWeight.bold),
-                      ),
-                    ],
+              Row(
+                children: [
+                  const Icon(Icons.auto_awesome, size: 12, color: Color(0xFF16A34A)),
+                  const SizedBox(width: 4),
+                  Text(
+                    "Cron Active",
+                    style: TextStyle(
+                      fontSize: 10.5,
+                      color: isDark ? const Color(0xFF4ADE80) : const Color(0xFF16A34A),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                ),
+                ],
               ),
             ],
           ),
