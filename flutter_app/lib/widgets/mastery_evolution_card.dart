@@ -115,7 +115,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
     // Meta & Evidence
     final meta = _insightData!['evidence_meta'] is Map ? Map<String, dynamic>.from(_insightData!['evidence_meta']) : {};
     final String badge = meta['badge'] ?? _insightData!['mastery_badge'] ?? 'Developing';
-    final String confidenceLevel = meta['confidence_level'] ?? 'Medium';
+    final String confidenceLevel = meta['confidence_level'] ?? meta['confidence'] ?? 'Medium';
     final String confidenceReason = meta['confidence_reason'] ?? 'Based on recent mock attempts';
 
     // Pattern & Summary
@@ -180,6 +180,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
 
           // 2. Short Crisp Pattern Box
           Container(
+            width: double.infinity,
             padding: const EdgeInsets.all(10),
             decoration: BoxDecoration(
               color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
@@ -192,12 +193,21 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                 Row(
                   children: [
                     const Text("⚡ Pattern: ", style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
-                    Text(pattern, style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, color: Color(0xFF2563EB))),
+                    Expanded(
+                      child: Text(
+                        pattern,
+                        style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, color: Color(0xFF2563EB)),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
                   ],
                 ),
                 if (verdict.isNotEmpty) ...[
                   const SizedBox(height: 4),
-                  Text(verdict, style: TextStyle(fontSize: 12, color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF475569), height: 1.3)),
+                  Text(
+                    verdict,
+                    style: TextStyle(fontSize: 12, color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF475569), height: 1.3),
+                  ),
                 ],
               ],
             ),
@@ -215,37 +225,64 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
           const SizedBox(height: 6),
 
           if (trapsDetailed.isNotEmpty) ...[
-            ...trapsDetailed.take(2).map((t) => Container(
-                  margin: const EdgeInsets.only(bottom: 6),
-                  padding: const EdgeInsets.all(8),
-                  decoration: BoxDecoration(
-                    color: const Color(0xFFDC2626).withOpacity(0.06),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: const Color(0xFFDC2626).withOpacity(0.15)),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(t['topic'] ?? '', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: textColor)),
-                      const SizedBox(height: 2),
-                      Text(
-                        "${t['accuracy_pct']}% accuracy · ${t['attempts']} questions attempted · ${t['repeated_errors']} repeated errors",
-                        style: TextStyle(fontSize: 10.5, color: isDark ? const Color(0xFFFCA5A5) : const Color(0xFF991B1B)),
-                      ),
-                    ],
-                  ),
-                )),
+            ...trapsDetailed.take(2).map((t) {
+              final String topicName = t['topic'] ?? t['subtopic'] ?? 'Topic Under Review';
+              final int acc = t['accuracy_pct'] ?? 0;
+              final int attempts = t['attempts'] ?? 0;
+              final int errors = t['repeated_errors'] ?? 0;
+
+              return Container(
+                width: double.infinity,
+                margin: const EdgeInsets.only(bottom: 6),
+                padding: const EdgeInsets.all(9),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFDC2626).withOpacity(0.06),
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: const Color(0xFFDC2626).withOpacity(0.18)),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(topicName, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: textColor)),
+                    const SizedBox(height: 2),
+                    Text(
+                      "$acc% accuracy · $attempts questions attempted · $errors repeated errors",
+                      style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.w600, color: isDark ? const Color(0xFFFCA5A5) : const Color(0xFF991B1B)),
+                    ),
+                  ],
+                ),
+              );
+            }),
           ] else if (oldTraps.isNotEmpty) ...[
-            ...oldTraps.take(2).map((t) => Padding(
-                  padding: const EdgeInsets.only(bottom: 3),
-                  child: Text("• ${t is Map ? t['subtopic'] : t}", style: TextStyle(fontSize: 11.5, color: subColor)),
-                )),
+            ...oldTraps.take(2).map((t) {
+              final String name = t is Map ? (t['subtopic'] ?? t['topic'] ?? '') : t.toString();
+              return Container(
+                width: double.infinity,
+                margin: const EdgeInsets.only(bottom: 6),
+                padding: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFDC2626).withOpacity(0.06),
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: const Color(0xFFDC2626).withOpacity(0.18)),
+                ),
+                child: Text(name, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: textColor)),
+              );
+            }),
+          ] else ...[
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 2),
+              child: Text(
+                "No critical traps detected in recent questions.",
+                style: TextStyle(fontSize: 11, color: subColor, fontStyle: FontStyle.italic),
+              ),
+            ),
           ],
 
           // 4. Since Last Analysis (Progress Delta Evolution)
           if (progressDelta.isNotEmpty) ...[
-            const SizedBox(height: 8),
+            const SizedBox(height: 6),
             Container(
+              width: double.infinity,
               padding: const EdgeInsets.all(10),
               decoration: BoxDecoration(
                 color: isDark ? const Color(0xFF132A1C) : const Color(0xFFF0FDF4),
@@ -271,7 +308,13 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(p['subject'] ?? '', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: textColor)),
+                          Expanded(
+                            child: Text(
+                              p['subject'] ?? '',
+                              style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: textColor),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
                           Text(
                             "${p['from_pct']}% → ${p['to_pct']}%  ${isUp ? '↑$diff%' : '↓${diff.abs()}%'}",
                             style: TextStyle(
