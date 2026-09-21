@@ -146,39 +146,66 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 1. Header: Icon + Badge + Evidence Tooltip
+          // 1. Header: Text wrap safe (Badge aur Confidence cut nahi hoga)
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  const Icon(Icons.psychology_rounded, color: Color(0xFF2563EB), size: 22),
-                  const SizedBox(width: 8),
-                  Text("AI Diagnostic Engine", style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: textColor)),
-                ],
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2563EB).withOpacity(0.12),
-                      borderRadius: BorderRadius.circular(6),
+              Expanded(
+                flex: 5,
+                child: Row(
+                  children: [
+                    const Icon(Icons.psychology_rounded, color: Color(0xFF2563EB), size: 22),
+                    const SizedBox(width: 8),
+                    Flexible(
+                      child: Text(
+                        "AI Diagnostic Engine",
+                        style: TextStyle(fontWeight: FontWeight.w800, fontSize: 14.5, color: textColor),
+                      ),
                     ),
-                    child: Text(badge.toUpperCase(), style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10.5, fontWeight: FontWeight.w900)),
-                  ),
-                  const SizedBox(height: 3),
-                  Text("Confidence: $confidenceLevel", style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: subColor)),
-                  Text(confidenceReason, style: TextStyle(fontSize: 9, color: subColor.withOpacity(0.85))),
-                ],
+                  ],
+                ),
+              ),
+              const SizedBox(width: 8),
+              Expanded(
+                flex: 5,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF2563EB).withOpacity(0.12),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: Text(
+                        badge.toUpperCase(),
+                        style: const TextStyle(color: Color(0xFF2563EB), fontSize: 10, fontWeight: FontWeight.w900),
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      "Confidence: $confidenceLevel",
+                      style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold, color: subColor),
+                      textAlign: TextAlign.end,
+                    ),
+                    Text(
+                      confidenceReason,
+                      style: TextStyle(fontSize: 8.5, color: subColor.withOpacity(0.85)),
+                      textAlign: TextAlign.end,
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
           const SizedBox(height: 12),
 
-          // 2. Short Crisp Pattern Box
+          // 2. Short Crisp Pattern Box (Soft wrap support bina cut huye)
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(10),
@@ -190,23 +217,26 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
-                  children: [
-                    const Text("⚡ Pattern: ", style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
-                    Expanded(
-                      child: Text(
-                        pattern,
-                        style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800, color: Color(0xFF2563EB)),
-                        overflow: TextOverflow.ellipsis,
+                RichText(
+                  text: TextSpan(
+                    style: TextStyle(fontSize: 12, color: textColor),
+                    children: [
+                      const TextSpan(
+                        text: "⚡ Pattern: ",
+                        style: TextStyle(fontWeight: FontWeight.bold),
                       ),
-                    ),
-                  ],
+                      TextSpan(
+                        text: pattern,
+                        style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF2563EB)),
+                      ),
+                    ],
+                  ),
                 ),
                 if (verdict.isNotEmpty) ...[
-                  const SizedBox(height: 4),
+                  const SizedBox(height: 6),
                   Text(
                     verdict,
-                    style: TextStyle(fontSize: 12, color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF475569), height: 1.3),
+                    style: TextStyle(fontSize: 11.5, color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF475569), height: 1.3),
                   ),
                 ],
               ],
@@ -301,7 +331,8 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                   ),
                   const SizedBox(height: 6),
                   ...progressDelta.take(3).map((p) {
-                    final int diff = p['diff'] ?? 0;
+                    final dynamic diffRaw = p['diff'] ?? 0;
+                    final num diff = num.tryParse(diffRaw.toString()) ?? 0;
                     final bool isUp = diff >= 0;
                     return Padding(
                       padding: const EdgeInsets.only(bottom: 2),
@@ -345,7 +376,10 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
             const SizedBox(height: 6),
             ...prescriptions.take(2).map((p) => Padding(
                   padding: const EdgeInsets.only(bottom: 3),
-                  child: Text("🎯 $p", style: TextStyle(fontSize: 11.5, color: isDark ? const Color(0xFF93C5FD) : const Color(0xFF1E40AF))),
+                  child: Text(
+                    "🎯 $p",
+                    style: TextStyle(fontSize: 11.5, color: isDark ? const Color(0xFF93C5FD) : const Color(0xFF1E40AF)),
+                  ),
                 )),
           ],
 
@@ -356,15 +390,21 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text("Updated: ${_lastUpdatedText ?? 'Recently'}", style: TextStyle(fontSize: 10, color: subColor)),
-              Row(
-                children: [
-                  const Icon(Icons.auto_awesome, size: 12, color: Color(0xFF16A34A)),
-                  const SizedBox(width: 4),
-                  Text(
-                    "AI monitoring active · Updates after next mock",
-                    style: TextStyle(fontSize: 10, color: isDark ? const Color(0xFF4ADE80) : const Color(0xFF16A34A), fontWeight: FontWeight.w600),
-                  ),
-                ],
+              Flexible(
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.auto_awesome, size: 12, color: Color(0xFF16A34A)),
+                    const SizedBox(width: 4),
+                    Flexible(
+                      child: Text(
+                        "AI monitoring active",
+                        style: TextStyle(fontSize: 10, color: isDark ? const Color(0xFF4ADE80) : const Color(0xFF16A34A), fontWeight: FontWeight.w600),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
