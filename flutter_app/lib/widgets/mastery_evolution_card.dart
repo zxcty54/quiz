@@ -112,21 +112,19 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       );
     }
 
-    // Meta & Evidence
+    // Safe Data Extraction (Kabhi crash nahi hoga)
     final meta = _insightData!['evidence_meta'] is Map ? Map<String, dynamic>.from(_insightData!['evidence_meta']) : {};
-    final String badge = meta['badge'] ?? _insightData!['mastery_badge'] ?? 'Developing';
-    final String confidenceLevel = meta['confidence_level'] ?? meta['confidence'] ?? 'Medium';
-    final String confidenceReason = meta['confidence_reason'] ?? 'Based on recent mock attempts';
+    final String badge = (meta['badge'] ?? _insightData!['mastery_badge'] ?? 'Developing').toString();
+    final String confidenceLevel = (meta['confidence_level'] ?? meta['confidence'] ?? 'Medium').toString();
+    final String confidenceReason = (meta['confidence_reason'] ?? 'Based on recent mock attempts').toString();
 
-    // Pattern & Summary
-    final String pattern = _insightData!['behavioral_pattern'] ?? _insightData!['candidate_behavior'] ?? 'Exam Aspirant';
-    final String verdict = _insightData!['summary_verdict'] ?? _insightData!['seriousness_verdict'] ?? '';
+    final String pattern = (_insightData!['behavioral_pattern'] ?? _insightData!['candidate_behavior'] ?? 'Exam Aspirant').toString();
+    final String verdict = (_insightData!['summary_verdict'] ?? _insightData!['seriousness_verdict'] ?? '').toString();
 
-    // Data Collections
-    final List<dynamic> subjects = _insightData!['subject_analysis'] ?? [];
-    final List<dynamic> trapsDetailed = _insightData!['critical_traps_detailed'] ?? [];
-    final List<dynamic> progressDelta = _insightData!['progress_delta'] ?? [];
-    final List<dynamic> prescriptions = _insightData!['tactical_prescription'] ?? [];
+    final List<dynamic> subjects = _insightData!['subject_analysis'] is List ? _insightData!['subject_analysis'] : [];
+    final List<dynamic> trapsDetailed = _insightData!['critical_traps_detailed'] is List ? _insightData!['critical_traps_detailed'] : [];
+    final List<dynamic> progressDelta = _insightData!['progress_delta'] is List ? _insightData!['progress_delta'] : [];
+    final List<dynamic> prescriptions = _insightData!['tactical_prescription'] is List ? _insightData!['tactical_prescription'] : [];
 
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 12),
@@ -146,7 +144,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // 1. Header (Wrap-safe Badge & Evidence)
+          // 1. Header
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -205,7 +203,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
           ),
           const SizedBox(height: 12),
 
-          // 2. Behavioral Pattern & Hinglish Verdict Box
+          // 2. Behavioral Pattern Box
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(10),
@@ -243,15 +241,16 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
             ),
           ),
 
-          // 3. Subject Chips (Sabhi tracked subjects bina take(4) limit ke render honge)
+          // 3. Subject Chips (Sabhi subjects bina limit ke)
           if (subjects.isNotEmpty) ...[
             const SizedBox(height: 10),
             Wrap(
               spacing: 6,
               runSpacing: 6,
               children: subjects.map((s) {
-                final String name = s['subject'] ?? '';
-                final int acc = s['accuracy_pct'] ?? 0;
+                if (s is! Map) return const SizedBox.shrink();
+                final String name = (s['subject'] ?? '').toString();
+                final int acc = int.tryParse(s['accuracy_pct']?.toString() ?? '0') ?? 0;
                 final bool isStrong = acc >= 65;
 
                 final chipBg = isStrong 
@@ -279,7 +278,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
           ],
           const SizedBox(height: 12),
 
-          // 4. Critical Traps & Persistent Weak Areas Monitor
+          // 4. Critical Traps Monitor
           Row(
             children: const [
               Icon(Icons.warning_amber_rounded, size: 15, color: Color(0xFFDC2626)),
@@ -291,16 +290,17 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
 
           if (trapsDetailed.isNotEmpty) ...[
             ...trapsDetailed.map((t) {
+              if (t is! Map) return const SizedBox.shrink();
               final String subject = t['subject'] != null && t['subject'].toString().isNotEmpty ? "[${t['subject']}] " : "";
-              final String topic = t['topic'] ?? '';
-              final String subtopic = t['subtopic'] != null && t['subtopic'].toString().isNotEmpty && t['subtopic'] != topic 
+              final String topic = (t['topic'] ?? '').toString();
+              final String subtopic = t['subtopic'] != null && t['subtopic'].toString().isNotEmpty && t['subtopic'].toString() != topic 
                   ? " · ${t['subtopic']}" 
                   : "";
               final String fullTitle = "$subject$topic$subtopic".trim();
 
-              final int acc = t['accuracy_pct'] ?? 0;
-              final int attempts = t['attempts'] ?? 0;
-              final int errors = t['repeated_errors'] ?? 0;
+              final int acc = int.tryParse(t['accuracy_pct']?.toString() ?? '0') ?? 0;
+              final int attempts = int.tryParse(t['attempts']?.toString() ?? '0') ?? 0;
+              final int errors = int.tryParse(t['repeated_errors']?.toString() ?? '0') ?? 0;
 
               return Container(
                 width: double.infinity,
@@ -337,7 +337,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
             ),
           ],
 
-          // 5. Long-term Progress Journey (Since Last Analysis / Evolution Tracker)
+          // 5. Safe Progress Journey
           if (progressDelta.isNotEmpty) ...[
             const SizedBox(height: 6),
             Container(
@@ -369,8 +369,11 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                   ),
                   const SizedBox(height: 6),
                   ...progressDelta.map((p) {
-                    final dynamic diffRaw = p['diff'] ?? 0;
-                    final num diff = num.tryParse(diffRaw.toString()) ?? 0;
+                    if (p is! Map) return const SizedBox.shrink();
+                    final num fromPct = num.tryParse(p['from_pct']?.toString() ?? '0') ?? 0;
+                    final num toPct = num.tryParse(p['to_pct']?.toString() ?? '0') ?? 0;
+                    final num diff = num.tryParse(p['diff']?.toString() ?? '') ?? (toPct - fromPct);
+
                     final bool isUp = diff > 0;
                     final bool isDown = diff < 0;
 
@@ -391,7 +394,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                         children: [
                           Expanded(
                             child: Text(
-                              p['subject'] ?? '',
+                              (p['subject'] ?? '').toString(),
                               style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: textColor),
                               overflow: TextOverflow.ellipsis,
                             ),
@@ -399,7 +402,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                           Row(
                             children: [
                               Text(
-                                "${p['from_pct']}% → ${p['to_pct']}%",
+                                "$fromPct% → $toPct%",
                                 style: TextStyle(
                                   fontSize: 10.5,
                                   fontWeight: FontWeight.w500,
@@ -430,17 +433,17 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
           if (prescriptions.isNotEmpty) ...[
             const Divider(height: 18),
             Row(
-              children: [
-                const Icon(Icons.gps_fixed_rounded, size: 14, color: Color(0xFF2563EB)),
-                const SizedBox(width: 4),
-                Text("Tactical Prescription", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: textColor)),
+              children: const [
+                Icon(Icons.gps_fixed_rounded, size: 14, color: Color(0xFF2563EB)),
+                SizedBox(width: 4),
+                Text("Tactical Prescription", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Colors.blue)),
               ],
             ),
             const SizedBox(height: 6),
             ...prescriptions.take(2).map((p) => Padding(
                   padding: const EdgeInsets.only(bottom: 3),
                   child: Text(
-                    "🎯 $p",
+                    "🎯 ${p.toString()}",
                     style: TextStyle(fontSize: 11.5, color: isDark ? const Color(0xFF93C5FD) : const Color(0xFF1E40AF)),
                   ),
                 )),
