@@ -101,15 +101,9 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "AI Diagnostic Engine Active",
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: textColor),
-                  ),
+                  Text("AI Diagnostic Engine Active", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: textColor)),
                   const SizedBox(height: 2),
-                  Text(
-                    "Tests attempt karein. Har 15-minute inactivity ke baad backend AI automatically behavioral diagnosis generate kar dega.",
-                    style: TextStyle(fontSize: 11.5, color: subColor),
-                  ),
+                  Text("Tests attempt karein. Har 15-min inactivity ke baad backend AI automatically diagnosis calculate kar dega.", style: TextStyle(fontSize: 11.5, color: subColor)),
                 ],
               ),
             ),
@@ -118,17 +112,29 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       );
     }
 
-    final String badge = _insightData!['mastery_badge'] ?? _insightData!['estimated_mastery_level'] ?? 'Developing';
-    final String behavior = _insightData!['candidate_behavior'] ?? 'Exam Aspirant';
-    final String verdict = _insightData!['seriousness_verdict'] ?? _insightData!['summary'] ?? 'Consistent practice builds mastery.';
-    final List<dynamic> strengths = _insightData!['strengths'] ?? [];
-    final List<dynamic> traps = _insightData!['critical_traps'] ?? _insightData!['weaknesses'] ?? [];
+    // Evidence & Metadata parsing
+    final meta = _insightData!['evidence_meta'] is Map ? Map<String, dynamic>.from(_insightData!['evidence_meta']) : {};
+    final String badge = meta['badge'] ?? _insightData!['mastery_badge'] ?? _insightData!['estimated_mastery_level'] ?? 'Developing';
+    final int totalAnalyzed = meta['total_attempts_analyzed'] ?? 0;
+    final String confidence = meta['confidence'] ?? 'Medium';
+
+    // Behavioral Pattern & Verdict
+    final String pattern = _insightData!['behavioral_pattern'] ?? _insightData!['candidate_behavior'] ?? 'Exam Aspirant';
+    final String verdict = _insightData!['summary_verdict'] ?? _insightData!['seriousness_verdict'] ?? _insightData!['summary'] ?? '';
+
+    // Data-backed Subtopics
+    final Map<String, dynamic>? weakArea = _insightData!['top_weak_area'] is Map ? Map<String, dynamic>.from(_insightData!['top_weak_area']) : null;
+    final Map<String, dynamic>? strongArea = _insightData!['top_strong_area'] is Map ? Map<String, dynamic>.from(_insightData!['top_strong_area']) : null;
+
+    // Fallback support for older schema
+    final List<dynamic> oldTraps = _insightData!['critical_traps'] ?? _insightData!['weaknesses'] ?? [];
+    final List<dynamic> oldStrengths = _insightData!['strengths'] ?? [];
     final List<dynamic> prescriptions = _insightData!['tactical_prescription'] ?? _insightData!['action_prescription'] ?? [];
 
-    final bool isRushedOrCasual = behavior.toLowerCase().contains('rush') ||
-        behavior.toLowerCase().contains('casual') ||
-        behavior.toLowerCase().contains('flippant') ||
-        behavior.toLowerCase().contains('time-pass');
+    final bool isRushed = pattern.toLowerCase().contains('rush') || 
+                          pattern.toLowerCase().contains('fast') || 
+                          pattern.toLowerCase().contains('casual') || 
+                          pattern.toLowerCase().contains('flippant');
 
     Color badgeColor = const Color(0xFF2563EB);
     if (badge.toLowerCase().contains('master')) {
@@ -143,9 +149,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       decoration: BoxDecoration(
         color: cardBg,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: isRushedOrCasual ? Colors.amber.shade700.withOpacity(0.5) : borderColor,
-        ),
+        border: Border.all(color: isRushed ? Colors.amber.shade700.withOpacity(0.5) : borderColor),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(isDark ? 0.2 : 0.04),
@@ -157,43 +161,50 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // 1. Header: Icon + Title + Status Badge & Tiny Evidence Line
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
                 children: [
                   const Icon(Icons.psychology_rounded, color: Color(0xFF2563EB), size: 22),
                   const SizedBox(width: 8),
+                  Text("AI Diagnostic Engine", style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: textColor)),
+                ],
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                    decoration: BoxDecoration(
+                      color: badgeColor.withOpacity(0.12),
+                      borderRadius: BorderRadius.circular(6),
+                      border: Border.all(color: badgeColor.withOpacity(0.4)),
+                    ),
+                    child: Text(badge.toUpperCase(), style: TextStyle(color: badgeColor, fontSize: 10.5, fontWeight: FontWeight.w900)),
+                  ),
+                  const SizedBox(height: 3),
                   Text(
-                    "AI Behavioral Diagnosis",
-                    style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15, color: textColor),
+                    totalAnalyzed > 0 ? "Based on $totalAnalyzed recent attempts · Conf: $confidence" : "Confidence: $confidence",
+                    style: TextStyle(fontSize: 9.5, color: subColor, fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
-                decoration: BoxDecoration(
-                  color: badgeColor.withOpacity(0.12),
-                  borderRadius: BorderRadius.circular(6),
-                  border: Border.all(color: badgeColor.withOpacity(0.4)),
-                ),
-                child: Text(
-                  badge.toUpperCase(),
-                  style: TextStyle(color: badgeColor, fontSize: 10.5, fontWeight: FontWeight.w900),
-                ),
-              ),
             ],
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 12),
 
+          // 2. Behavioral Pattern Alert Box
           Container(
             padding: const EdgeInsets.all(11),
             decoration: BoxDecoration(
-              color: isRushedOrCasual
+              color: isRushed
                   ? (isDark ? const Color(0xFF451A03) : const Color(0xFFFFFBEB))
                   : (isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC)),
               borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: isRushedOrCasual ? const Color(0xFFF59E0B) : borderColor),
+              border: Border.all(color: isRushed ? const Color(0xFFF59E0B) : borderColor),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -201,163 +212,165 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                 Row(
                   children: [
                     Text(
-                      isRushedOrCasual ? "⚠️ Pattern:" : "🎯 Pattern:",
-                      style: TextStyle(
-                        fontSize: 11.5,
-                        fontWeight: FontWeight.bold,
-                        color: textColor,
-                      ),
+                      isRushed ? "⚠️ Pattern:" : "🎯 Pattern:",
+                      style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: textColor),
                     ),
                     const SizedBox(width: 6),
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
                       decoration: BoxDecoration(
-                        color: (isRushedOrCasual ? Colors.red : const Color(0xFF2563EB)).withOpacity(0.14),
+                        color: (isRushed ? Colors.red : const Color(0xFF2563EB)).withOpacity(0.14),
                         borderRadius: BorderRadius.circular(4),
                       ),
                       child: Text(
-                        behavior,
+                        pattern,
                         style: TextStyle(
                           fontSize: 10.5,
                           fontWeight: FontWeight.w800,
-                          color: isRushedOrCasual ? Colors.red.shade700 : const Color(0xFF2563EB),
+                          color: isRushed ? Colors.red.shade700 : const Color(0xFF2563EB),
                         ),
                       ),
                     ),
                   ],
                 ),
-                const SizedBox(height: 6),
-                Text(
-                  verdict,
-                  style: TextStyle(
-                    fontSize: 12.5,
-                    height: 1.4,
-                    color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155),
+                if (verdict.isNotEmpty) ...[
+                  const SizedBox(height: 5),
+                  Text(
+                    verdict,
+                    style: TextStyle(
+                      fontSize: 12.5,
+                      height: 1.35,
+                      color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155),
+                    ),
                   ),
-                ),
+                ],
               ],
             ),
           ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 12),
 
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Row(
-                      children: [
-                        Icon(Icons.check_circle_rounded, size: 14, color: Color(0xFF16A34A)),
-                        SizedBox(width: 4),
-                        Text("Top Strengths", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),
-                      ],
+          // 3. Data-Backed Detailed Diagnostics (Weak Area)
+          if (weakArea != null && weakArea['subtopic'] != null) ...[
+            Container(
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                color: const Color(0xFFDC2626).withOpacity(0.06),
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(color: const Color(0xFFDC2626).withOpacity(0.2)),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      const Icon(Icons.warning_amber_rounded, size: 14, color: Color(0xFFDC2626)),
+                      const SizedBox(width: 4),
+                      Expanded(
+                        child: Text(
+                          "${weakArea['subtopic']}: Weak area",
+                          style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFFDC2626)),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 4),
+                  Text(
+                    "${weakArea['attempts'] ?? 0} attempts · ${weakArea['correct'] ?? 0} correct · ${weakArea['accuracy_pct'] ?? 0}% accuracy",
+                    style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600, color: textColor),
+                  ),
+                  if ((weakArea['median_sec'] ?? 0) > 0)
+                    Text("Median response time: ${weakArea['median_sec']} sec", style: TextStyle(fontSize: 11, color: subColor)),
+                  if (weakArea['pattern_note'] != null && weakArea['pattern_note'].toString().isNotEmpty)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 2),
+                      child: Text("↳ ${weakArea['pattern_note']}", style: const TextStyle(fontSize: 11, color: Color(0xFFDC2626), fontWeight: FontWeight.w500)),
                     ),
-                    const SizedBox(height: 6),
-                    if (strengths.isEmpty)
-                      Text("Need more data", style: TextStyle(fontSize: 11, color: subColor))
-                    else
-                      ...strengths.take(2).map((s) => Padding(
-                            padding: const EdgeInsets.only(bottom: 4),
-                            child: Text("• $s", style: TextStyle(fontSize: 11.5, color: subColor)),
-                          )),
+                ],
+              ),
+            ),
+            const SizedBox(height: 8),
+          ] else if (oldTraps.isNotEmpty) ...[
+            // Fallback for older traps
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Row(
+                  children: [
+                    Icon(Icons.warning_amber_rounded, size: 14, color: Color(0xFFDC2626)),
+                    SizedBox(width: 4),
+                    Text("Critical Traps", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFFDC2626))),
                   ],
                 ),
-              ),
-              const SizedBox(width: 10),
+                const SizedBox(height: 4),
+                ...oldTraps.take(2).map((t) => Padding(
+                      padding: const EdgeInsets.only(bottom: 2),
+                      child: Text("• ${t is Map ? t['subtopic'] ?? '' : t}", style: TextStyle(fontSize: 11.5, color: subColor)),
+                    )),
+                const SizedBox(height: 8),
+              ],
+            ),
+          ],
 
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Row(
-                      children: [
-                        Icon(Icons.warning_amber_rounded, size: 14, color: Color(0xFFDC2626)),
-                        SizedBox(width: 4),
-                        Text("Critical Traps", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: Color(0xFFDC2626))),
-                      ],
-                    ),
-                    const SizedBox(height: 6),
-                    if (traps.isEmpty)
-                      Text("No major traps", style: TextStyle(fontSize: 11, color: subColor))
-                    else
-                      ...traps.take(2).map((t) {
-                        String title = "";
-                        String nature = "";
-                        if (t is Map) {
-                          title = t['subtopic'] ?? '';
-                          nature = t['nature'] ?? '';
-                        } else {
-                          title = t.toString();
-                        }
-                        return Padding(
-                          padding: const EdgeInsets.only(bottom: 4),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text("• $title", style: TextStyle(fontSize: 11.5, color: subColor, fontWeight: FontWeight.w600)),
-                              if (nature.isNotEmpty)
-                                Text(
-                                  "  ↳ $nature",
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                    color: isRushedOrCasual ? Colors.amber.shade800 : Colors.red.shade400,
-                                  ),
-                                ),
-                            ],
-                          ),
-                        );
-                      }),
-                  ],
-                ),
+          // 4. Strong Hold Area
+          if (strongArea != null && strongArea['subtopic'] != null) ...[
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: Row(
+                children: [
+                  const Icon(Icons.check_circle_rounded, size: 13, color: Color(0xFF16A34A)),
+                  const SizedBox(width: 5),
+                  Text(
+                    "Strong Hold: ${strongArea['subtopic']} (${strongArea['accuracy_pct'] ?? 0}% acc)",
+                    style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600, color: Color(0xFF16A34A)),
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ] else if (oldStrengths.isNotEmpty) ...[
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 4),
+              child: Row(
+                children: [
+                  const Icon(Icons.check_circle_rounded, size: 13, color: Color(0xFF16A34A)),
+                  const SizedBox(width: 5),
+                  Text(
+                    "Strong Hold: ${oldStrengths.first}",
+                    style: const TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600, color: Color(0xFF16A34A)),
+                  ),
+                ],
+              ),
+            ),
+          ],
 
+          // 5. Tactical Prescription
           if (prescriptions.isNotEmpty) ...[
-            const Divider(height: 20),
+            const Divider(height: 18),
             Row(
               children: [
-                const Icon(Icons.flash_on_rounded, size: 15, color: Color(0xFF2563EB)),
+                const Icon(Icons.gps_fixed_rounded, size: 14, color: Color(0xFF2563EB)),
                 const SizedBox(width: 4),
-                Text(
-                  "Tactical Prescription",
-                  style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: textColor),
-                ),
+                Text("Tactical Prescription", style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: textColor)),
               ],
             ),
             const SizedBox(height: 6),
             ...prescriptions.take(2).map((p) => Padding(
                   padding: const EdgeInsets.only(bottom: 3),
-                  child: Text(
-                    "🎯 $p",
-                    style: TextStyle(fontSize: 11.5, color: isDark ? const Color(0xFF93C5FD) : const Color(0xFF1E40AF)),
-                  ),
+                  child: Text("🎯 $p", style: TextStyle(fontSize: 11.5, color: isDark ? const Color(0xFF93C5FD) : const Color(0xFF1E40AF))),
                 )),
           ],
 
-          const Divider(height: 18),
+          const Divider(height: 16),
 
+          // 6. Footer (Read-only status)
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                "Auto-synced: ${_lastUpdatedText ?? 'Recently'}",
-                style: TextStyle(fontSize: 10.5, color: subColor),
-              ),
+              Text("Auto-synced: ${_lastUpdatedText ?? 'Recently'}", style: TextStyle(fontSize: 10, color: subColor)),
               Row(
                 children: [
                   const Icon(Icons.auto_awesome, size: 12, color: Color(0xFF16A34A)),
                   const SizedBox(width: 4),
-                  Text(
-                    "Cron Active",
-                    style: TextStyle(
-                      fontSize: 10.5,
-                      color: isDark ? const Color(0xFF4ADE80) : const Color(0xFF16A34A),
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
+                  Text("Cron Active", style: TextStyle(fontSize: 10, color: isDark ? const Color(0xFF4ADE80) : const Color(0xFF16A34A), fontWeight: FontWeight.w600)),
                 ],
               ),
             ],
