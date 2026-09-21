@@ -1,13 +1,11 @@
 import 'dart:convert';
-import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:supabase_flutter/supabase_flutter.dart';
 import 'ai_rate_limiter_service.dart';
 
 class AiExplainerService {
-  // 🌐 Dynamic Fallback Models
+  // 🌐 Dynamic Fallback Models (Unchanged)
   static List<String> activeModelHierarchy = [
     "gemini-2.0-flash",
     "gemini-1.5-flash",
@@ -16,7 +14,7 @@ class AiExplainerService {
   ];
   static bool isAiActive = true;
 
-  // 🔄 Dynamic Config Sync from GitHub root app_config.json
+  // 🔄 Dynamic Config Sync from GitHub root app_config.json (Unchanged)
   static void updateModelFromConfig(Map<String, dynamic> config) {
     if (config.containsKey('ai_config')) {
       final dynamic aiCfg = config['ai_config'];
@@ -46,7 +44,7 @@ class AiExplainerService {
     }
   }
 
-  // 🔄 CLOUDFLARE PROXY ROUTING ENGINE
+  // 🔄 CLOUDFLARE PROXY ROUTING ENGINE (Unchanged)
   static Future<String> _generateWithHybridRouting(
     String systemPrompt,
     String userPrompt, {
@@ -90,7 +88,7 @@ class AiExplainerService {
     return "⚠️ AI Service busy hai. Kripya thodi der baad dobara try karein.";
   }
 
-  // 1️⃣ SMART CUSTOM DOUBT SOLVER
+  // 1️⃣ SMART CUSTOM DOUBT SOLVER (Unchanged)
   static Future<String> askCustomDoubt({
     required String question,
     required List<String> options,
@@ -121,7 +119,7 @@ STUDENT'S DOUBT: "$userDoubt"
     return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 1000, temperature: 0.5);
   }
 
-  // 2️⃣ DOCTOR DIAGNOSIS & PRESCRIPTION HEALTH AUDIT
+  // 2️⃣ DOCTOR DIAGNOSIS & PRESCRIPTION HEALTH AUDIT (Unchanged)
   static Future<String> analyzeWrongQuestions(List<Map<String, dynamic>> wrongQuestions) async {
     if (wrongQuestions.isEmpty) return "🎉 100% Healthy! Vault Zero achieved, koi wrong question nahi hai.";
 
@@ -171,7 +169,7 @@ ${qSummaries.join('\n')}
     return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 800, temperature: 0.3);
   }
 
-  // 3️⃣ SMART "WHY WRONG?" EXPLAINER
+  // 3️⃣ SMART "WHY WRONG?" EXPLAINER (Unchanged)
   static Future<String> explainWhyWrong({
     required String question,
     required List<String> options,
@@ -223,7 +221,7 @@ $userChoiceContext$tagContext
     return await _generateWithHybridRouting(systemPrompt, userPrompt, maxTokens: 1100, temperature: 0.4);
   }
 
-  // 4️⃣ COMPATIBILITY METHOD
+  // 4️⃣ COMPATIBILITY METHOD (Unchanged)
   static Future<String> getExplanation({
     required String question,
     required List<String> options,
@@ -237,7 +235,7 @@ $userChoiceContext$tagContext
     );
   }
 
-  // 5️⃣ BULK QUESTIONS PARSER
+  // 5️⃣ BULK QUESTIONS PARSER (Unchanged)
   static Future<List<Map<String, dynamic>>> parseBulkQuestionsWithAi(String rawText) async {
     if (rawText.trim().isEmpty) return [];
 
@@ -286,121 +284,32 @@ RULES:
     return result;
   }
 
-  // 6️⃣ 🧠 15-MINUTE BATCH MASTERY & DIAGNOSTICS ENGINE (Testing Mode)
-  static Future<Map<String, dynamic>?> syncBatchMasteryEvolution({bool forceSync = false}) async {
+  // 6️⃣ 🧠 CLEAN BACKEND DELEGATOR: NO CLIENT-SIDE PROMPT
+  // Saara analysis Cloudflare Worker backend par hota hai, Flutter sirf trigger bhejta hai.
+  static Future<void> syncBatchMasteryEvolution({bool forceSync = false}) async {
     final prefs = await SharedPreferences.getInstance();
-    final String? userId = prefs.getString('user_id');
-    final String studentName = prefs.getString('custom_aspirant_name') ?? prefs.getString('user_name') ?? 'Aspirant';
-
-    if (userId == null || userId.isEmpty) return null;
-
-    // ⏱️ 15 Minute check (Skip agar forceSync == true ho)
     final int lastSync = prefs.getInt('last_ai_mastery_sync_timestamp') ?? 0;
     final int now = DateTime.now().millisecondsSinceEpoch;
     final int minutesPassed = ((now - lastSync) / (1000 * 60)).floor();
 
     if (!forceSync && minutesPassed < 15) {
-      debugPrint('⏳ 15 mins not completed yet ($minutesPassed mins passed)');
-      return null;
+      return;
     }
 
     try {
-      final client = Supabase.instance.client;
+      const String syncUrl = "https://ai-proxy.nitesh-skyhigh.workers.dev/sync-mastery";
+      final response = await http.get(Uri.parse(syncUrl)).timeout(const Duration(seconds: 15));
 
-      // 1. Fetch unanalyzed question attempts from table
-      final List<dynamic> unanalyzedAttempts = await client
-          .from('user_question_attempts')
-          .select('id, question_text, topic, is_correct, time_taken_seconds')
-          .eq('user_id', userId)
-          .eq('is_analyzed', false)
-          .limit(80);
-
-      if (unanalyzedAttempts.isEmpty) {
-        debugPrint('ℹ️ No unanalyzed attempts found for user: $userId');
-        return null;
-      }
-
-      // Compact format for LLM Prompt to save tokens
-      final List<Map<String, dynamic>> compactData = unanalyzedAttempts.map((item) => {
-        'topic': item['topic'],
-        'question': item['question_text'],
-        'correct': item['is_correct'],
-        'sec': item['time_taken_seconds'],
-      }).toList();
-
-      const String systemPrompt = r'''
-You are an expert AI exam diagnostician for BPSC, BSSC, SI exams.
-Analyze student's solved questions data and diagnose strong vs weak areas.
-Respond ONLY with a valid JSON Object matching this exact structure:
-{
-  "summary": "2-line performance snapshot in Roman Hinglish",
-  "strengths": ["Strong area 1", "Strong area 2"],
-  "weaknesses": ["Weak trap 1", "Weak trap 2"],
-  "action_prescription": [
-    "Step 1: 15 min focus on X",
-    "Step 2: Revise formula Y"
-  ],
-  "estimated_mastery_level": "Developing / Scholar / Master"
-}
-''';
-
-      final String userPrompt = """
-Candidate: $studentName
-Attempts Data:
-${jsonEncode(compactData)}
-""";
-
-      final String responseText = await _generateWithHybridRouting(
-        systemPrompt,
-        userPrompt,
-        maxTokens: 1200,
-        temperature: 0.2,
-      );
-
-      // JSON clean & parse
-      String cleanJson = responseText
-          .replaceAll('```json', '')
-          .replaceAll('```', '')
-          .trim();
-
-      final int startIdx = cleanJson.indexOf('{');
-      final int endIdx = cleanJson.lastIndexOf('}');
-      if (startIdx != -1 && endIdx != -1 && endIdx > startIdx) {
-        cleanJson = cleanJson.substring(startIdx, endIdx + 1);
-      }
-
-      final dynamic decoded = jsonDecode(cleanJson);
-      if (decoded is Map<String, dynamic>) {
-        // 2. Save result in user_ai_insights table
-        await client.from('user_ai_insights').upsert({
-          'user_id': userId,
-          'summary_report': decoded,
-          'analyzed_at': DateTime.now().toIso8601String(),
-        }, onConflict: 'user_id');
-
-        // 3. Mark attempts as analyzed
-        final List<String> processedIds = unanalyzedAttempts
-            .map((item) => item['id'].toString())
-            .toList();
-
-        await client
-            .from('user_question_attempts')
-            .update({'is_analyzed': true})
-            .filter('id', 'in', processedIds);
-
-        // 4. Update local sync timestamp
+      if (response.statusCode == 200) {
         await prefs.setInt('last_ai_mastery_sync_timestamp', now);
-        debugPrint('✅ Mastery Evolution report synced (15m cycle) for: $userId');
-
-        return decoded;
+        debugPrint("✅ Cloudflare Worker Mastery Sync triggered successfully.");
       }
     } catch (e) {
-      debugPrint('Mastery batch process error: $e');
+      debugPrint("Mastery trigger error (Worker will sync via cron anyway): $e");
     }
-    return null;
   }
 
-  // 🧹 Helper: Clean & Parse JSON Array
+  // 🧹 Helper: Clean & Parse JSON Array (Unchanged)
   static List<Map<String, dynamic>> _sanitizeAndParseJson(String responseText) {
     try {
       String cleanJson = responseText
