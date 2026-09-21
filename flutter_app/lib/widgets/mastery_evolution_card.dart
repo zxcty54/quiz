@@ -122,7 +122,8 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
     final String pattern = _insightData!['behavioral_pattern'] ?? _insightData!['candidate_behavior'] ?? 'Exam Aspirant';
     final String verdict = _insightData!['summary_verdict'] ?? _insightData!['seriousness_verdict'] ?? '';
 
-    // Data-backed Traps & Evolution Delta
+    // Data-backed Traps, Subjects & Evolution Delta
+    final List<dynamic> subjects = _insightData!['subject_analysis'] ?? [];
     final List<dynamic> trapsDetailed = _insightData!['critical_traps_detailed'] ?? [];
     final List<dynamic> oldTraps = _insightData!['critical_traps'] ?? [];
     final List<dynamic> progressDelta = _insightData!['progress_delta'] ?? [];
@@ -205,7 +206,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
           ),
           const SizedBox(height: 12),
 
-          // 2. Short Crisp Pattern Box (Soft wrap support bina cut huye)
+          // 2. Short Crisp Pattern Box (Soft wrap support)
           Container(
             width: double.infinity,
             padding: const EdgeInsets.all(10),
@@ -242,9 +243,44 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
               ],
             ),
           ),
+
+          // 🌟 NAYA: Subject Analysis Chips (Strong vs Average Breakdown)
+          if (subjects.isNotEmpty) ...[
+            const SizedBox(height: 10),
+            Wrap(
+              spacing: 6,
+              runSpacing: 6,
+              children: subjects.take(4).map((s) {
+                final String name = s['subject'] ?? '';
+                final int acc = s['accuracy_pct'] ?? 0;
+                final bool isStrong = acc >= 65;
+
+                final chipBg = isStrong 
+                    ? (isDark ? const Color(0xFF14532D).withOpacity(0.4) : const Color(0xFFDCFCE7))
+                    : (isDark ? const Color(0xFF713F12).withOpacity(0.4) : const Color(0xFFFEF9C3));
+                
+                final chipText = isStrong 
+                    ? (isDark ? const Color(0xFF4ADE80) : const Color(0xFF15803D))
+                    : (isDark ? const Color(0xFFFDE047) : const Color(0xFFA16207));
+
+                return Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: chipBg,
+                    borderRadius: BorderRadius.circular(6),
+                    border: Border.all(color: chipText.withOpacity(0.3)),
+                  ),
+                  child: Text(
+                    "$name $acc%",
+                    style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold, color: chipText),
+                  ),
+                );
+              }).toList(),
+            ),
+          ],
           const SizedBox(height: 12),
 
-          // 3. Critical Traps with Telemetry Evidence
+          // 3. Critical Traps with Telemetry Evidence & Deep-linked Titles
           Row(
             children: const [
               Icon(Icons.warning_amber_rounded, size: 15, color: Color(0xFFDC2626)),
@@ -256,7 +292,14 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
 
           if (trapsDetailed.isNotEmpty) ...[
             ...trapsDetailed.take(2).map((t) {
-              final String topicName = t['topic'] ?? t['subtopic'] ?? 'Topic Under Review';
+              // Deep-linked title: [Subject] Topic · Subtopic
+              final String subject = t['subject'] != null && t['subject'].toString().isNotEmpty ? "[${t['subject']}] " : "";
+              final String topic = t['topic'] ?? '';
+              final String subtopic = t['subtopic'] != null && t['subtopic'].toString().isNotEmpty && t['subtopic'] != topic 
+                  ? " · ${t['subtopic']}" 
+                  : "";
+              final String fullTitle = "$subject$topic$subtopic".trim();
+
               final int acc = t['accuracy_pct'] ?? 0;
               final int attempts = t['attempts'] ?? 0;
               final int errors = t['repeated_errors'] ?? 0;
@@ -273,7 +316,10 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(topicName, style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: textColor)),
+                    Text(
+                      fullTitle.isEmpty ? 'Topic Under Review' : fullTitle, 
+                      style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: textColor),
+                    ),
                     const SizedBox(height: 2),
                     Text(
                       "$acc% accuracy · $attempts questions attempted · $errors repeated errors",
