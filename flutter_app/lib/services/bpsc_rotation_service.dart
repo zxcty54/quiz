@@ -103,21 +103,17 @@ class BpscRotationService {
 
     for (String url in mirrors) {
       try {
-        final res = await http
-            .get(Uri.parse(url))
-            .timeout(const Duration(seconds: 10));
-
+        debugPrint("Fetching: $url");
+        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 12));
         if (res.statusCode == 200) {
           String body = utf8.decode(res.bodyBytes).trim();
-          if (body.startsWith('\uFEFF')) {
-            body = body.substring(1).trim();
-          }
+          if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
           return json.decode(body);
         } else {
-          debugPrint("Failed mirror $url with code: ${res.statusCode}");
+          debugPrint("Mirror HTTP status ${res.statusCode} for: $url");
         }
-      } catch (err) {
-        debugPrint("Mirror error for $url: $err");
+      } catch (e) {
+        debugPrint("Mirror connection error: $e");
         continue;
       }
     }
@@ -126,46 +122,40 @@ class BpscRotationService {
 
   static Future<BpscDailyPayload> fetchTodayPayload() async {
     final now = DateTime.now();
-    final config =
-        dayConfigurations[now.weekday] ?? dayConfigurations[DateTime.monday]!;
+    final config = dayConfigurations[now.weekday] ?? dayConfigurations[DateTime.monday]!;
     final weekNum = _getWeekOfYear(now);
 
     final String targetFile = config.filePool[weekNum % config.filePool.length];
-    debugPrint("Loading Bihar Dossier File: $targetFile for Day ${now.weekday}");
+    debugPrint("Target file for today: $targetFile");
 
     final decoded = await _fetchWithMirrors(targetFile);
 
     if (decoded == null) {
-      throw Exception(
-          "Network Error: Unable to download '$targetFile'. Check internet connection.");
+      throw Exception("Network Timeout: $targetFile mirror URL se download nahi ho saka.");
     }
 
     List<dynamic> items = [];
     if (decoded is List) {
       items = decoded;
     } else if (decoded is Map<String, dynamic>) {
-      items = decoded['data'] ??
-          decoded['items'] ??
-          decoded['records'] ??
-          [decoded];
+      for (var key in ['data', 'items', 'records', 'personalities', 'sites', 'districts']) {
+        if (decoded[key] is List) {
+          items = decoded[key];
+          break;
+        }
+      }
+      if (items.isEmpty) items = [decoded];
     }
 
     if (items.isEmpty) {
-      throw Exception("Data format error: No items found in '$targetFile'");
+      throw Exception("Invalid File: $targetFile ke andar koi valid items list nahi mili.");
     }
 
     final int activeIndex = (weekNum ~/ config.filePool.length) % items.length;
     final selectedRaw = Map<String, dynamic>.from(items[activeIndex]);
 
-    // Model parsing
-    try {
-      final card = BpscDailyCardModel.fromUniversalJson(
-          selectedRaw, config.defaultWatermark);
-      return BpscDailyPayload(config: config, card: card);
-    } catch (parseError, stack) {
-      debugPrint("Model Parsing Failed: $parseError\n$stack");
-      throw Exception("Data parsing failed for $targetFile: $parseError");
-    }
+    final card = BpscDailyCardModel.fromUniversalJson(selectedRaw, config.defaultWatermark);
+    return BpscDailyPayload(config: config, card: card);
   }
 }
 
