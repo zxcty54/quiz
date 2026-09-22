@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'flutter_app/**.dart'
   workflow_dispatch:
 
 jobs:
