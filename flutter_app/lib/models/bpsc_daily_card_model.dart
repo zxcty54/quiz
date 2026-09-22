@@ -61,35 +61,39 @@ class BpscDailyCardModel {
         json['official_status'] ??
         json['nature'] ??
         json['regional_nickname'] ??
-        json['total_districts'] ??
+        json['total_districts']?.toString() ??
         'Static GK Profile';
 
     // 3. District Finder
     String? district;
-    if (json['location'] is Map) {
-      district = json['location']['district']?.toString();
-    } else if (json['birth_and_roots'] is Map &&
-        json['birth_and_roots']['birth_place'] != null) {
-      district = json['birth_and_roots']['birth_place']
-          .toString()
-          .split(',')
-          .last
-          .trim();
-    } else if (json['districts_covered'] is List &&
-        (json['districts_covered'] as List).isNotEmpty) {
-      district = (json['districts_covered'] as List).first.toString();
-    } else if (json['primary_districts'] is List &&
-        (json['primary_districts'] as List).isNotEmpty) {
-      district = (json['primary_districts'] as List).first.toString();
-    } else if (json['core_districts'] is List &&
-        (json['core_districts'] as List).isNotEmpty) {
-      district = (json['core_districts'] as List).first.toString();
-    } else if (json['top_producing_districts'] is List &&
-        (json['top_producing_districts'] as List).isNotEmpty) {
-      district = (json['top_producing_districts'] as List).first.toString();
+    try {
+      if (json['location'] is Map) {
+        district = json['location']['district']?.toString();
+      } else if (json['birth_and_roots'] is Map &&
+          json['birth_and_roots']['birth_place'] != null) {
+        district = json['birth_and_roots']['birth_place']
+            .toString()
+            .split(',')
+            .last
+            .trim();
+      } else if (json['districts_covered'] is List &&
+          (json['districts_covered'] as List).isNotEmpty) {
+        district = (json['districts_covered'] as List).first.toString();
+      } else if (json['primary_districts'] is List &&
+          (json['primary_districts'] as List).isNotEmpty) {
+        district = (json['primary_districts'] as List).first.toString();
+      } else if (json['core_districts'] is List &&
+          (json['core_districts'] as List).isNotEmpty) {
+        district = (json['core_districts'] as List).first.toString();
+      } else if (json['top_producing_districts'] is List &&
+          (json['top_producing_districts'] as List).isNotEmpty) {
+        district = (json['top_producing_districts'] as List).first.toString();
+      }
+    } catch (_) {
+      district = null;
     }
 
-    // 4. Quick Summary / Benchmark
+    // 4. Summary extraction
     String summary =
         'Exam-oriented high yield facts for BPSC & Bihar state examinations.';
     for (var entry in json.entries) {
@@ -108,7 +112,7 @@ class BpscDailyCardModel {
       summary = json['national_comparison'].toString();
     }
 
-    // 5. Complete Dynamic Extraction (No data drop)
+    // 5. Dynamic Sections (Null-safe & Deep-safe)
     List<ContentBlock> dynamicSections = [];
     List<String> frontCardFacts = [];
 
@@ -125,9 +129,8 @@ class BpscDailyCardModel {
       return raw
           .replaceAll('_', ' ')
           .split(' ')
-          .map((str) => str.isNotEmpty
-              ? '${str[0].toUpperCase()}${str.substring(1)}'
-              : '')
+          .where((s) => s.isNotEmpty)
+          .map((str) => '${str[0].toUpperCase()}${str.substring(1)}')
           .join(' ');
     }
 
@@ -151,15 +154,26 @@ class BpscDailyCardModel {
           ].contains(subKey)) {
             desc = subVal.toString().trim();
           } else if (subVal is List) {
-            items.add('$subTitle: ${subVal.join(", ")}');
+            final joined = subVal.map((e) => e.toString()).join(", ");
+            items.add('$subTitle: $joined');
           } else if (subVal is Map) {
-            subVal.forEach((k, v) => items.add('${formatHeading(k)}: $v'));
+            subVal.forEach((k, v) {
+              if (v != null) items.add('${formatHeading(k)}: $v');
+            });
           } else {
             items.add('$subTitle: $subVal');
           }
         });
       } else if (value is List) {
-        items.add(value.join(", "));
+        for (var element in value) {
+          if (element is Map) {
+            element.forEach((k, v) {
+              if (v != null) items.add('${formatHeading(k)}: $v');
+            });
+          } else if (element != null) {
+            items.add(element.toString());
+          }
+        }
       } else {
         items.add(value.toString());
       }
@@ -173,6 +187,7 @@ class BpscDailyCardModel {
       }
     });
 
+    // Front card facts fallback
     for (var sec in dynamicSections) {
       for (var it in sec.bulletItems) {
         if (!it.toLowerCase().contains('summary') &&
@@ -182,7 +197,7 @@ class BpscDailyCardModel {
       }
     }
 
-    // 6. PYQ Facts
+    // 6. Safe PYQ Parsing
     List<Map<String, String>> pyqs = [];
     if (json['exam_facts_and_pyqs'] is List) {
       for (var item in json['exam_facts_and_pyqs']) {
@@ -203,7 +218,7 @@ class BpscDailyCardModel {
       frontHighlights: frontCardFacts,
       allSections: dynamicSections,
       pyqFacts: pyqs,
-      watermark: json['popular_tag'] ?? fallbackWatermark,
+      watermark: json['popular_tag']?.toString() ?? fallbackWatermark,
     );
   }
 }
