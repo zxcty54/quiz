@@ -1,9 +1,10 @@
 import 'dart:convert';
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import '../models/bpsc_daily_card_model.dart';
 
 class DayConfig {
-  final List<String> filePool; // Multiple files rotate per day
+  final List<String> filePool;
   final String cycleDay;
   final String domain;
   final int colorSeed;
@@ -21,7 +22,6 @@ class DayConfig {
 }
 
 class BpscRotationService {
-  // 7-Day Cycle mapping covering all your uploaded JSON files
   static final Map<int, DayConfig> dayConfigurations = {
     DateTime.monday: const DayConfig(
       filePool: ["rivers.json", "waterfalls_and_springs.json"],
@@ -72,7 +72,13 @@ class BpscRotationService {
       emoji: "⛰️",
     ),
     DateTime.sunday: const DayConfig(
-      filePool: ["census_and_demographics.json", "moderngovernance.json", "gitag.json", "artist.json", "literature.json"],
+      filePool: [
+        "census_and_demographics.json",
+        "moderngovernance.json",
+        "gitag.json",
+        "artist.json",
+        "literature.json"
+      ],
       cycleDay: "DAY 07",
       domain: "GOVERNANCE, CENSUS & ART CULTURE",
       colorSeed: 0xFF7C3AED,
@@ -97,13 +103,21 @@ class BpscRotationService {
 
     for (String url in mirrors) {
       try {
-        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 4));
+        final res = await http
+            .get(Uri.parse(url))
+            .timeout(const Duration(seconds: 10));
+
         if (res.statusCode == 200) {
           String body = utf8.decode(res.bodyBytes).trim();
-          if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
+          if (body.startsWith('\uFEFF')) {
+            body = body.substring(1).trim();
+          }
           return json.decode(body);
+        } else {
+          debugPrint("Failed mirror $url with code: ${res.statusCode}");
         }
-      } catch (_) {
+      } catch (err) {
+        debugPrint("Mirror error for $url: $err");
         continue;
       }
     }
@@ -112,15 +126,18 @@ class BpscRotationService {
 
   static Future<BpscDailyPayload> fetchTodayPayload() async {
     final now = DateTime.now();
-    final config = dayConfigurations[now.weekday] ?? dayConfigurations[DateTime.monday]!;
+    final config =
+        dayConfigurations[now.weekday] ?? dayConfigurations[DateTime.monday]!;
     final weekNum = _getWeekOfYear(now);
 
-    // Pick target file based on week offset
     final String targetFile = config.filePool[weekNum % config.filePool.length];
+    debugPrint("Loading Bihar Dossier File: $targetFile for Day ${now.weekday}");
+
     final decoded = await _fetchWithMirrors(targetFile);
 
     if (decoded == null) {
-      throw Exception("Unable to load daily data from mirrors for $targetFile");
+      throw Exception(
+          "Network Error: Unable to download '$targetFile'. Check internet connection.");
     }
 
     List<dynamic> items = [];
@@ -134,16 +151,21 @@ class BpscRotationService {
     }
 
     if (items.isEmpty) {
-      throw Exception("Empty items found in $targetFile");
+      throw Exception("Data format error: No items found in '$targetFile'");
     }
 
-    // Weekly sequential index rotation
     final int activeIndex = (weekNum ~/ config.filePool.length) % items.length;
     final selectedRaw = Map<String, dynamic>.from(items[activeIndex]);
 
-    final card = BpscDailyCardModel.fromUniversalJson(selectedRaw, config.defaultWatermark);
-
-    return BpscDailyPayload(config: config, card: card);
+    // Model parsing
+    try {
+      final card = BpscDailyCardModel.fromUniversalJson(
+          selectedRaw, config.defaultWatermark);
+      return BpscDailyPayload(config: config, card: card);
+    } catch (parseError, stack) {
+      debugPrint("Model Parsing Failed: $parseError\n$stack");
+      throw Exception("Data parsing failed for $targetFile: $parseError");
+    }
   }
 }
 
