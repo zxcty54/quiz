@@ -14,6 +14,7 @@ class KnowYourBiharWidget extends StatefulWidget {
 class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
   BpscDailyPayload? _payload;
   bool _isLoading = true;
+  String? _error;
 
   @override
   void initState() {
@@ -22,6 +23,11 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
   }
 
   Future<void> _fetchDailyTopic() async {
+    setState(() {
+      _isLoading = true;
+      _error = null;
+    });
+
     try {
       final payload = await BpscRotationService.fetchTodayPayload();
       if (mounted) {
@@ -30,8 +36,14 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
           _isLoading = false;
         });
       }
-    } catch (_) {
-      if (mounted) setState(() => _isLoading = false);
+    } catch (e) {
+      debugPrint("KnowYourBihar error: $e");
+      if (mounted) {
+        setState(() {
+          _error = e.toString();
+          _isLoading = false;
+        });
+      }
     }
   }
 
@@ -67,17 +79,15 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
               ),
             ),
             const SizedBox(height: 18),
-
-            // Top Status Bar
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4.5),
                   decoration: BoxDecoration(
-                    color: themeColor.withValues(alpha: 0.12),
+                    color: themeColor.withOpacity(0.12),
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: themeColor.withValues(alpha: 0.25)),
+                    border: Border.all(color: themeColor.withOpacity(0.25)),
                   ),
                   child: Row(
                     mainAxisSize: MainAxisSize.min,
@@ -107,8 +117,6 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
               ],
             ),
             const SizedBox(height: 14),
-
-            // Entity Title & Category
             Text(
               card.title,
               style: TextStyle(
@@ -128,8 +136,6 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
               ),
             ),
             const SizedBox(height: 12),
-
-            // Benchmark / Summary Box
             Container(
               padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
@@ -148,8 +154,6 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
               ),
             ),
             const SizedBox(height: 18),
-
-            // 📖 Saare Dynamic Detailed Sections
             ...card.allSections.map((sec) {
               return Container(
                 width: double.infinity,
@@ -187,7 +191,6 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                       ],
                     ),
                     const SizedBox(height: 10),
-
                     if (sec.bulletItems.isNotEmpty)
                       ...sec.bulletItems.map((item) {
                         final split = item.split(': ');
@@ -211,9 +214,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                           style: TextStyle(
                                             fontSize: 12.5,
                                             fontWeight: FontWeight.w800,
-                                            color: isDark
-                                                ? Colors.white
-                                                : const Color(0xFF1E293B),
+                                            color: isDark ? Colors.white : const Color(0xFF1E293B),
                                           ),
                                         ),
                                         TextSpan(
@@ -221,9 +222,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                           style: TextStyle(
                                             fontSize: 12.5,
                                             height: 1.4,
-                                            color: isDark
-                                                ? const Color(0xFF94A3B8)
-                                                : const Color(0xFF475569),
+                                            color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF475569),
                                           ),
                                         ),
                                       ] else ...[
@@ -232,9 +231,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                           style: TextStyle(
                                             fontSize: 12.5,
                                             height: 1.4,
-                                            color: isDark
-                                                ? const Color(0xFF94A3B8)
-                                                : const Color(0xFF475569),
+                                            color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF475569),
                                           ),
                                         ),
                                       ],
@@ -246,7 +243,6 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                           ),
                         );
                       }),
-
                     if (sec.longDescription != null) ...[
                       if (sec.bulletItems.isNotEmpty)
                         Divider(
@@ -258,9 +254,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                         style: TextStyle(
                           fontSize: 12.5,
                           height: 1.5,
-                          color: isDark
-                              ? const Color(0xFFCBD5E1)
-                              : const Color(0xFF334155),
+                          color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF334155),
                         ),
                       ),
                     ],
@@ -268,8 +262,6 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                 ),
               );
             }),
-
-            // Direct BPSC PYQ Section
             if (card.pyqFacts.isNotEmpty) ...[
               Row(
                 children: [
@@ -292,33 +284,28 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                     margin: const EdgeInsets.only(bottom: 8),
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFF59E0B).withValues(alpha: 0.08),
+                      color: const Color(0xFFF59E0B).withOpacity(0.08),
                       borderRadius: BorderRadius.circular(12),
-                      border: Border.all(
-                          color: const Color(0xFFF59E0B).withValues(alpha: 0.2)),
+                      border: Border.all(color: const Color(0xFFF59E0B).withOpacity(0.2)),
                     ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          pyq['topic']!,
+                          pyq['topic'] ?? 'Topic',
                           style: TextStyle(
                             fontSize: 12.5,
                             fontWeight: FontWeight.w800,
-                            color: isDark
-                                ? Colors.amber.shade300
-                                : const Color(0xFFB45309),
+                            color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
                           ),
                         ),
                         const SizedBox(height: 3),
                         Text(
-                          pyq['detail']!,
+                          pyq['detail'] ?? '',
                           style: TextStyle(
                             fontSize: 12,
                             height: 1.35,
-                            color: isDark
-                                ? Colors.white70
-                                : const Color(0xFF475569),
+                            color: isDark ? Colors.white70 : const Color(0xFF475569),
                           ),
                         ),
                       ],
@@ -336,8 +323,46 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
 
   @override
   Widget build(BuildContext context) {
-    if (_isLoading || _payload == null) {
-      return const SizedBox.shrink();
+    if (_isLoading) {
+      return Container(
+        height: 140,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+          borderRadius: BorderRadius.circular(22),
+        ),
+        child: const CircularProgressIndicator.adaptive(),
+      );
+    }
+
+    if (_error != null || _payload == null) {
+      return Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+          borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: Colors.red.withOpacity(0.3)),
+        ),
+        child: Row(
+          children: [
+            const Icon(Icons.cloud_off_rounded, color: Colors.redAccent),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Text(
+                _error ?? "Unable to load data from server.",
+                style: TextStyle(
+                  fontSize: 12,
+                  color: widget.isDarkMode ? Colors.white70 : Colors.black87,
+                ),
+              ),
+            ),
+            IconButton(
+              icon: const Icon(Icons.refresh),
+              onPressed: _fetchDailyTopic,
+            )
+          ],
+        ),
+      );
     }
 
     final isDark = widget.isDarkMode;
@@ -352,7 +377,6 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // 🗺️ 1. EXTERNAL SECTION HEADING (Title Fix)
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 2),
           child: Row(
@@ -374,7 +398,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                 decoration: BoxDecoration(
-                  color: themeColor.withValues(alpha: 0.12),
+                  color: themeColor.withOpacity(0.12),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: Text(
@@ -391,24 +415,18 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
           ),
         ),
         const SizedBox(height: 12),
-
-        // 🎴 2. MAIN CARD
         Container(
           width: double.infinity,
           decoration: BoxDecoration(
             color: isDark ? const Color(0xFF1E293B) : Colors.white,
             borderRadius: BorderRadius.circular(22),
             border: Border.all(
-              color: isDark
-                  ? Colors.white.withValues(alpha: 0.08)
-                  : const Color(0xFFE2E8F0),
+              color: isDark ? Colors.white.withOpacity(0.08) : const Color(0xFFE2E8F0),
               width: 1.2,
             ),
             boxShadow: [
               BoxShadow(
-                color: isDark
-                    ? Colors.black45
-                    : const Color(0xFF0F172A).withValues(alpha: 0.04),
+                color: isDark ? Colors.black45 : const Color(0xFF0F172A).withOpacity(0.04),
                 blurRadius: 18,
                 offset: const Offset(0, 6),
               ),
@@ -440,23 +458,20 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // Top Tracker Row (Text cut fix)
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Flexible(
                                 child: Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 9, vertical: 4.5),
+                                  padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4.5),
                                   decoration: BoxDecoration(
-                                    color: themeColor.withValues(alpha: 0.12),
+                                    color: themeColor.withOpacity(0.12),
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
-                                      Text(payload.config.emoji,
-                                          style: const TextStyle(fontSize: 12)),
+                                      Text(payload.config.emoji, style: const TextStyle(fontSize: 12)),
                                       const SizedBox(width: 5),
                                       Flexible(
                                         child: Text(
@@ -476,12 +491,9 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                               ),
                               const SizedBox(width: 8),
                               Container(
-                                padding: const EdgeInsets.symmetric(
-                                    horizontal: 7, vertical: 3.5),
+                                padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3.5),
                                 decoration: BoxDecoration(
-                                  color: isDark
-                                      ? Colors.white.withValues(alpha: 0.06)
-                                      : const Color(0xFFF1F5F9),
+                                  color: isDark ? Colors.white.withOpacity(0.06) : const Color(0xFFF1F5F9),
                                   borderRadius: BorderRadius.circular(6),
                                 ),
                                 child: const Text(
@@ -496,8 +508,6 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                             ],
                           ),
                           const SizedBox(height: 12),
-
-                          // Title & District
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -510,9 +520,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                       style: TextStyle(
                                         fontSize: 18,
                                         fontWeight: FontWeight.w900,
-                                        color: isDark
-                                            ? Colors.white
-                                            : const Color(0xFF0F172A),
+                                        color: isDark ? Colors.white : const Color(0xFF0F172A),
                                       ),
                                     ),
                                     const SizedBox(height: 2),
@@ -529,33 +537,25 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                               ),
                               if (card.district != null)
                                 Container(
-                                  padding: const EdgeInsets.symmetric(
-                                      horizontal: 8, vertical: 4),
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                   decoration: BoxDecoration(
-                                    color: isDark
-                                        ? const Color(0xFF0F172A)
-                                        : const Color(0xFFFEF3C7),
+                                    color: isDark ? const Color(0xFF0F172A) : const Color(0xFFFEF3C7),
                                     borderRadius: BorderRadius.circular(8),
                                     border: Border.all(
-                                      color: isDark
-                                          ? Colors.white12
-                                          : const Color(0xFFFDE68A),
+                                      color: isDark ? Colors.white12 : const Color(0xFFFDE68A),
                                     ),
                                   ),
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
-                                      const Icon(Icons.place_rounded,
-                                          size: 12, color: Color(0xFFD97706)),
+                                      const Icon(Icons.place_rounded, size: 12, color: Color(0xFFD97706)),
                                       const SizedBox(width: 3),
                                       Text(
                                         card.district!,
                                         style: TextStyle(
                                           fontSize: 10.5,
                                           fontWeight: FontWeight.w800,
-                                          color: isDark
-                                              ? Colors.amber.shade300
-                                              : const Color(0xFFB45309),
+                                          color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
                                         ),
                                       ),
                                     ],
@@ -564,21 +564,15 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                             ],
                           ),
                           const SizedBox(height: 12),
-
-                          // Front Highlights (Bina ellipsis ke pura text)
                           if (frontHighlights.isNotEmpty)
                             Container(
                               width: double.infinity,
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
-                                color: isDark
-                                    ? const Color(0xFF0F172A)
-                                    : const Color(0xFFF8FAFC),
+                                color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
                                 borderRadius: BorderRadius.circular(12),
                                 border: Border.all(
-                                  color: isDark
-                                      ? Colors.white.withValues(alpha: 0.05)
-                                      : const Color(0xFFE2E8F0),
+                                  color: isDark ? Colors.white.withOpacity(0.05) : const Color(0xFFE2E8F0),
                                 ),
                               ),
                               child: Column(
@@ -589,8 +583,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                     child: Row(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Icon(Icons.check_circle_outline_rounded,
-                                            size: 14, color: themeColor),
+                                        Icon(Icons.check_circle_outline_rounded, size: 14, color: themeColor),
                                         const SizedBox(width: 8),
                                         Expanded(
                                           child: Text(
@@ -599,9 +592,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                               fontSize: 12,
                                               height: 1.4,
                                               fontWeight: FontWeight.w500,
-                                              color: isDark
-                                                  ? Colors.white70
-                                                  : const Color(0xFF334155),
+                                              color: isDark ? Colors.white70 : const Color(0xFF334155),
                                             ),
                                           ),
                                         ),
@@ -611,40 +602,32 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                 }).toList(),
                               ),
                             ),
-
-                          // PYQ Trigger Section
                           if (frontPyq != null) ...[
                             const SizedBox(height: 10),
                             Container(
                               width: double.infinity,
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
-                                color: const Color(0xFFF59E0B)
-                                    .withValues(alpha: isDark ? 0.12 : 0.08),
+                                color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.12 : 0.08),
                                 borderRadius: BorderRadius.circular(10),
                                 border: Border.all(
-                                  color: const Color(0xFFF59E0B)
-                                      .withValues(alpha: 0.22),
+                                  color: const Color(0xFFF59E0B).withOpacity(0.22),
                                 ),
                               ),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  const Text('🎯 ',
-                                      style: TextStyle(fontSize: 13)),
+                                  const Text('🎯 ', style: TextStyle(fontSize: 13)),
                                   Expanded(
                                     child: RichText(
                                       text: TextSpan(
                                         children: [
                                           TextSpan(
-                                            text:
-                                                '${frontPyq['topic'] ?? 'PYQ'}: ',
+                                            text: '${frontPyq['topic'] ?? 'PYQ'}: ',
                                             style: TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w900,
-                                              color: isDark
-                                                  ? Colors.amber.shade300
-                                                  : const Color(0xFFB45309),
+                                              color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
                                             ),
                                           ),
                                           TextSpan(
@@ -653,9 +636,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                               fontSize: 12,
                                               height: 1.4,
                                               fontWeight: FontWeight.w500,
-                                              color: isDark
-                                                  ? Colors.white70
-                                                  : const Color(0xFF475569),
+                                              color: isDark ? Colors.white70 : const Color(0xFF475569),
                                             ),
                                           ),
                                         ],
@@ -666,17 +647,13 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                               ),
                             ),
                           ],
-
                           const SizedBox(height: 14),
-
-                          // Footer Action
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               Row(
                                 children: [
-                                  Icon(Icons.touch_app_rounded,
-                                      size: 14, color: themeColor),
+                                  Icon(Icons.touch_app_rounded, size: 14, color: themeColor),
                                   const SizedBox(width: 4),
                                   Text(
                                     'Tap to read full dossier',
@@ -688,8 +665,7 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                                   ),
                                 ],
                               ),
-                              Icon(Icons.arrow_forward_rounded,
-                                  size: 14, color: themeColor),
+                              Icon(Icons.arrow_forward_rounded, size: 14, color: themeColor),
                             ],
                           ),
                         ],
