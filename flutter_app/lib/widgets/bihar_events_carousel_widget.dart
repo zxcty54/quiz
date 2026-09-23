@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 
 class BiharEventsCarouselWidget extends StatefulWidget {
   final bool isDarkMode;
@@ -24,8 +25,9 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
   late AnimationController _pulseController;
   late Animation<double> _pulseAnimation;
 
-  static const String _jsonUrl =
+  static const String _jsonBaseUrl =
       'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/biharevents.json';
+  static const String _cacheKey = 'cached_bihar_events_json';
 
   @override
   void initState() {
@@ -50,35 +52,84 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
   }
 
   Future<void> _loadEvents() async {
-    List<dynamic> rawList = [];
+    final prefs = await SharedPreferences.getInstance();
 
-    if (widget.initialEvents != null && widget.initialEvents!.isNotEmpty) {
-      rawList = widget.initialEvents!;
-    } else {
+    // 1️⃣ Pehle Local Cached Data Load karein (Instant Display, Zero Wait)
+    final cachedString = prefs.getString(_cacheKey);
+    if (cachedString != null && cachedString.isNotEmpty) {
       try {
-        final res = await http
-            .get(Uri.parse(_jsonUrl))
-            .timeout(const Duration(seconds: 4));
-        if (res.statusCode == 200) {
-          String body = utf8.decode(res.bodyBytes).trim();
-          if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
-          final decoded = jsonDecode(body);
-          if (decoded is Map && decoded['events'] is List) {
-            rawList = decoded['events'];
-          } else if (decoded is List) {
-            rawList = decoded;
-          }
+        final decoded = jsonDecode(cachedString);
+        List<dynamic> cachedList = [];
+        if (decoded is Map && decoded['events'] is List) {
+          cachedList = decoded['events'];
+        } else if (decoded is List) {
+          cachedList = decoded;
+        }
+
+        if (cachedList.isNotEmpty && mounted) {
+          setState(() {
+            _filteredEvents = _filterCurrentMonthOnly(cachedList);
+            _isLoading = false;
+          });
         }
       } catch (e) {
-        debugPrint("Error fetching events json: $e");
+        debugPrint("Cache parse error: $e");
       }
     }
 
-    if (mounted) {
-      setState(() {
-        _filteredEvents = _filterCurrentMonthOnly(rawList);
-        _isLoading = false;
-      });
+    // 2️⃣ Background Fresh Fetch with Cache-Buster (Instant Remote Sync)
+    try {
+      // 🚀 Cache buster '?t=timestamp' forces GitHub CDN to deliver fresh commit instantly
+      final freshUrl = '$_jsonBaseUrl?t=${DateTime.now().millisecondsSinceEpoch}';
+
+      final res = await http.get(
+        Uri.parse(freshUrl),
+        headers: {
+          'Cache-Control': 'no-cache, no-store, must-revalidate',
+          'Pragma': 'no-cache',
+          'Expires': '0',
+        },
+      ).timeout(const Duration(seconds: 6));
+
+      if (res.statusCode == 200) {
+        String body = utf8.decode(res.bodyBytes).trim();
+        if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
+
+        final decoded = jsonDecode(body);
+        List<dynamic> remoteList = [];
+        if (decoded is Map && decoded['events'] is List) {
+          remoteList = decoded['events'];
+        } else if (decoded is List) {
+          remoteList = decoded;
+        }
+
+        if (remoteList.isNotEmpty) {
+          // Cache the latest valid JSON locally
+          await prefs.setString(_cacheKey, body);
+
+          if (mounted) {
+            setState(() {
+              _filteredEvents = _filterCurrentMonthOnly(remoteList);
+              _isLoading = false;
+            });
+          }
+          return;
+        }
+      }
+    } catch (e) {
+      debugPrint("Remote fetch failed, relying on cache: $e");
+    }
+
+    // Fallback: Agar cache aur remote dono fail ho jayein tab initialEvents use karein
+    if (_filteredEvents.isEmpty && widget.initialEvents != null && widget.initialEvents!.isNotEmpty) {
+      if (mounted) {
+        setState(() {
+          _filteredEvents = _filterCurrentMonthOnly(widget.initialEvents!);
+          _isLoading = false;
+        });
+      }
+    } else if (mounted) {
+      setState(() => _isLoading = false);
     }
   }
 
@@ -393,7 +444,11 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
 
   @override
   Widget build(BuildContext context) {
-    if (_isLoading || _filteredEvents.isEmpty) {
+    if (_isLoading && _filteredEvents.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
+    if (_filteredEvents.isEmpty) {
       return const SizedBox.shrink();
     }
 
@@ -458,7 +513,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
               final history = edu['history'] as Map<String, dynamic>? ?? {};
               final geo = edu['geography_and_circuit'] as Map<String, dynamic>? ?? {};
 
-              // Exam hooks
               final dynastyList = (history['dynasties'] as List?) ?? [];
               final firstDynasty = dynastyList.isNotEmpty ? dynastyList.first.toString().split('(').first.trim() : null;
               final region = geo['region']?.toString();
@@ -487,7 +541,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                   ),
                   child: Stack(
                     children: [
-                      // Subtle Cultural Temple Arch Motif
                       Positioned(
                         right: -15,
                         top: -15,
@@ -499,13 +552,11 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                               : const Color(0xFFB45309).withValues(alpha: 0.03),
                         ),
                       ),
-
                       Padding(
                         padding: const EdgeInsets.all(12),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            // 🎟️ 1. Left Heritage Ticket Notch
                             Container(
                               width: 58,
                               height: double.infinity,
@@ -561,13 +612,10 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                               ),
                             ),
                             const SizedBox(width: 12),
-
-                            // 📜 2. Right Info & Exam Hook Area
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  // Location & District
                                   Row(
                                     children: [
                                       Icon(
@@ -591,8 +639,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                                     ],
                                   ),
                                   const SizedBox(height: 4),
-
-                                  // Event Title
                                   Text(
                                     ev['title'] ?? '',
                                     maxLines: 1,
@@ -605,8 +651,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                                     ),
                                   ),
                                   const Spacer(),
-
-                                  // 🏛️ Exam Micro-Tags
                                   Wrap(
                                     spacing: 4,
                                     runSpacing: 4,
@@ -650,8 +694,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                                     ],
                                   ),
                                   const Spacer(),
-
-                                  // Action Footer Strip
                                   Row(
                                     children: isLive
                                         ? [
