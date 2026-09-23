@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'flutter_app/**.dart'
+      - 'flutter_app/**'
   workflow_dispatch:
 
 jobs:
@@ -24,6 +24,9 @@ jobs:
           distribution: "temurin"
           java-version: "17"
 
+      - name: Setup Gradle Build Cache
+        uses: gradle/actions/setup-gradle@v3
+
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -36,6 +39,19 @@ jobs:
           rm -rf android/app/src/main/java
           rm -rf android/app/src/main/kotlin
           flutter create . --platforms=android --org com.mocktester --project-name mocktester
+
+      # 🛠️ FIX: Reliable Gradle Wrapper Injection taaki download timeout na ho
+      - name: Fix Gradle Wrapper Distribution URL
+        working-directory: flutter_app/android
+        run: |
+          mkdir -p gradle/wrapper
+          cat << 'EOF' > gradle/wrapper/gradle-wrapper.properties
+          distributionBase=GRADLE_USER_HOME
+          distributionPath=wrapper/dists
+          zipStoreBase=GRADLE_USER_HOME
+          zipStorePath=wrapper/dists
+          distributionUrl=https\://services.gradle.org/distributions/gradle-8.5-all.zip
+          EOF
 
       - name: Configure Global Gradle Properties
         working-directory: flutter_app/android
@@ -77,7 +93,7 @@ jobs:
                   android:label="MockTester"
                   android:name="${applicationName}"
                   android:icon="@mipmap/ic_launcher"
-                  android:usesCleartextTraffic="false"
+                  android:usesCleartextTraffic="true"
                   android:hardwareAccelerated="true">
 
                   <meta-data
@@ -107,7 +123,7 @@ jobs:
           </manifest>
           EOF
 
-      - name: Force CompileSdk 36 on All Plugins (Fix file_picker)
+      - name: Force CompileSdk 36 on All Plugins (Fix file_picker & webview)
         working-directory: flutter_app
         run: |
           SETTINGS_KTS="android/settings.gradle.kts"
@@ -133,7 +149,6 @@ jobs:
         run: |
           flutter pub get
 
-          # 🔑 Safe Base64 Decode via Python (Handles whitespace, newlines & edge cases cleanly)
           python3 -c "import base64, os; data = os.environ.get('KEYSTORE_BASE64', '').strip(); open('android/app/mocktester_key.jks', 'wb').write(base64.b64decode(data))"
 
           APP_KTS="android/app/build.gradle.kts"
