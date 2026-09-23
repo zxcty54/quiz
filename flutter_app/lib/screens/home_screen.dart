@@ -25,7 +25,7 @@ import 'tabs/revision_tab.dart';
 import 'tabs/sectional_tab.dart';
 
 // 🛠️ Aspirant Tools Import
-import 'widgets/exam_photo_resizer_screen.dart';
+import '..widgets/exam_photo_resizer_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
