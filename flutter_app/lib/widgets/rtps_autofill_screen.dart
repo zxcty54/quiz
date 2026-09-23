@@ -19,9 +19,34 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
   double _loadProgress = 0;
   bool _isAutoFilling = false;
   bool _showOtpBar = false;
+  bool _hasError = false;
+  String _errorMessage = '';
   Map<String, dynamic>? _savedProfile;
 
-  static const String _rtpsHomeUrl = 'https://serviceonline.bihar.gov.in/';
+  // 🔗 Direct Portal Endpoint (Bypasses ServicePlus Mobile App Ad Splash)
+  static const String _rtpsHomeUrl =
+      'https://serviceonline.bihar.gov.in/serviceonline/citizenRegistration.html#/citizenHome';
+
+  // 🌐 Genuine Windows Desktop Chrome Headers jo NIC Firewall aur Mobile Ad ko bypass karte hain
+  static const Map<String, String> _browserHeaders = {
+    'Accept':
+        'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.9,hi;q=0.8',
+    'Cache-Control': 'max-age=0',
+    'Connection': 'keep-alive',
+    'Sec-Ch-Ua':
+        '"Not-A.Brand";v="99", "Chromium";v="124", "Google Chrome";v="124"',
+    'Sec-Ch-Ua-Mobile': '?0',
+    'Sec-Ch-Ua-Platform': '"Windows"',
+    'Sec-Fetch-Dest': 'document',
+    'Sec-Fetch-Mode': 'navigate',
+    'Sec-Fetch-Site': 'none',
+    'Sec-Fetch-User': '?1',
+    'Upgrade-Insecure-Requests': '1',
+  };
+
+  static const String _desktopUserAgent =
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
 
   @override
   void initState() {
@@ -43,7 +68,20 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
     }
   }
 
-  // 🚀 Bulletproof Sequential Async AutoFill Engine with Fuzzy Normalizer
+  void _reloadPage() {
+    setState(() {
+      _hasError = false;
+      _errorMessage = '';
+    });
+    _webViewController?.loadUrl(
+      urlRequest: URLRequest(
+        url: WebUri(_rtpsHomeUrl),
+        headers: _browserHeaders,
+      ),
+    );
+  }
+
+  // 🚀 Fuzzy Cascading Autofill Engine
   Future<void> _triggerSmartAutofill() async {
     if (_webViewController == null) return;
 
@@ -62,24 +100,21 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
       const p = $profileJson;
       let filledCount = 0;
 
-      // 🎯 Helper: String Normalizer (Hindi, Brackets, Special Chars hata kar match karna)
       function normalize(str) {
         if (!str) return '';
         return str.toString()
                   .toLowerCase()
-                  .replace(/\\(.*?\\)/g, '')     // Brackets aur unke andar ka text hatao
-                  .replace(/[\\u0900-\\u097F]/g, '') // Devanagari / Hindi script hatao
-                  .replace(/[^a-z0-9]/g, '')     // Sirf pure alphanumeric rakho
+                  .replace(/\\(.*?\\)/g, '')
+                  .replace(/[\\u0900-\\u097F]/g, '')
+                  .replace(/[^a-z0-9]/g, '')
                   .trim();
       }
 
-      // 🎯 Helper: Fuzzy Dropdown Matcher
       function findBestMatchingOption(selectElement, targetText) {
         if (!selectElement || !targetText) return null;
         const targetClean = normalize(targetText);
         if (!targetClean) return null;
 
-        // 1. Exact Clean Match
         for (let opt of selectElement.options) {
           if (!opt.value || opt.value === '') continue;
           const optTextClean = normalize(opt.text);
@@ -89,7 +124,6 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
           }
         }
 
-        // 2. Substring / Partial Match
         for (let opt of selectElement.options) {
           if (!opt.value || opt.value === '') continue;
           const optTextClean = normalize(opt.text);
@@ -100,7 +134,6 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         return null;
       }
 
-      // 1. Value Setter with Trigger Events
       function setVal(selectors, val) {
         if (!val) return;
         for (let s of selectors) {
@@ -115,7 +148,6 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         }
       }
 
-      // 2. Radio Button Matcher
       function selectRadio(textPattern) {
         if (!textPattern) return;
         let patternClean = normalize(textPattern);
@@ -134,7 +166,6 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         }
       }
 
-      // 3. Async Dropdown Selector with Polling & Fuzzy Match
       async function selectDropdownAsync(selectors, targetText, maxWaitMs = 3500) {
         if (!targetText) return false;
         let startTime = Date.now();
@@ -157,7 +188,6 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         return false;
       }
 
-      // --- 1. Basic Names & Contact Info ---
       selectRadio(p.gender === 'FEMALE' ? 'स्त्री' : 'पुरुष');
 
       setVal(['input[id*="applicant_name"]', 'input[name*="applicant_name"]'], p.name_en);
@@ -175,35 +205,29 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
       setVal(['input[id*="mobile"]', 'input[name*="mobile"]', 'input[type="tel"]'], p.mobile);
       setVal(['input[id*="email"]', 'input[name*="email"]'], p.email);
 
-      // Address Fields
       setVal(['input[id*="ward_no"]', 'input[name*="ward_no"]', 'input[id*="ward_number"]'], p.ward_no);
       setVal(['input[id*="village"]', 'input[name*="village"]'], p.village);
       setVal(['input[id*="post_office"]', 'input[name*="post_office"]'], p.post_office);
       setVal(['input[id*="pin_code"]', 'input[name*="pin_code"]', 'input[id*="pin"]'], p.pin_code);
 
-      // Local Body & Residence Type
       selectRadio(p.local_body_type);
       selectRadio(p.residence_type);
 
-      // Check "Same as above" for present address
       let sameAsAbove = document.querySelector('input[type="checkbox"][id*="same"], input[type="checkbox"][name*="same"]');
       if (sameAsAbove && !sameAsAbove.checked) {
         sameAsAbove.checked = true;
         sameAsAbove.dispatchEvent(new Event('change', { bubbles: true }));
       }
 
-      // Purpose & Profession
       setVal(['input[id*="purpose"]', 'input[name*="purpose"]'], p.purpose);
       await selectDropdownAsync(['select[id*="profession"]', 'select[name*="profession"]'], p.profession, 1200);
 
-      // Income Fields (Income Form)
       setVal(['input[id*="income_govt"]', 'input[name*="income_govt"]', 'input[id*="txt_govt_income"]'], p.income_govt);
       setVal(['input[id*="income_agri"]', 'input[name*="income_agri"]', 'input[id*="txt_agri_income"]'], p.income_agri);
       setVal(['input[id*="income_biz"]', 'input[name*="income_biz"]', 'input[id*="txt_business_income"]'], p.income_biz);
       setVal(['input[id*="income_other"]', 'input[name*="income_other"]', 'input[id*="txt_other_income"]'], p.income_other);
       setVal(['input[id*="total_income"]', 'input[name*="total_income"]', 'input[id*="txt_total_income"]'], p.income_total);
 
-      // Caste Category & Caste Dropdown
       if (p.caste_category) {
         await selectDropdownAsync(['select[id*="category"]', 'select[name*="category"]'], p.caste_category, 1500);
         if (p.caste_name) {
@@ -211,14 +235,12 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         }
       }
 
-      // Self Declaration Checkbox (I Agree)
       let agreeChk = document.querySelector('input[type="checkbox"][id*="agree"], input[type="checkbox"][name*="agree"]');
       if (agreeChk && !agreeChk.checked) {
         agreeChk.checked = true;
         agreeChk.dispatchEvent(new Event('change', { bubbles: true }));
       }
 
-      // --- 2. Fuzzy Cascading Location Chain ---
       await selectDropdownAsync(['select[id*="state"]', 'select[name*="state"]'], 'BIHAR', 2000);
       let districtDone = await selectDropdownAsync(['select[id*="district"]', 'select[name*="district"]'], p.district, 3500);
 
@@ -230,10 +252,8 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         }
       }
 
-      // Police station fallback as text input if dropdown not found
       setVal(['input[id*="police_station"]', 'input[name*="police_station"]', 'input[id*="thana"]'], p.police_station);
 
-      // --- 3. Auto-Scroll & Visual Highlighter on Photo & Captcha ---
       let photoInput = document.querySelector('input[type="file"]');
       let captchaInput = document.querySelector('input[name*="captcha"], input[id*="captcha"], input[id*="txt_verification"], input[placeholder*="verification"]');
 
@@ -264,7 +284,6 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
     }
   }
 
-  // ⚡ Universal Clipboard OTP Injector
   Future<void> _injectClipboardOtp() async {
     final clipboardData = await Clipboard.getData(Clipboard.kTextPlain);
     final text = clipboardData?.text ?? '';
@@ -317,20 +336,27 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                       color: const Color(0xFF16A34A).withValues(alpha: 0.15),
                       shape: BoxShape.circle,
                     ),
-                    child: const Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 22),
+                    child: const Icon(Icons.check_circle_rounded,
+                        color: Color(0xFF16A34A), size: 22),
                   ),
                   const SizedBox(width: 10),
-                  const Text('Form Auto-Filled! ⚡', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
+                  const Text('Form Auto-Filled! ⚡',
+                      style:
+                          TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
                 ],
               ),
               const SizedBox(height: 12),
-              const Text('Aakhiri steps:', style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
+              const Text('Aakhiri steps:',
+                  style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
               const SizedBox(height: 8),
-              _buildStepRow('1', 'Photo Upload:', 'Green box par tap karke photo chunein (< 50 KB).'),
+              _buildStepRow('1', 'Photo Upload:',
+                  'Green box par tap karke photo chunein (< 50 KB).'),
               const SizedBox(height: 6),
-              _buildStepRow('2', 'Captcha & Submit:', 'Verification code daal kar Submit dabayein.'),
+              _buildStepRow('2', 'Captcha & Submit:',
+                  'Verification code daal kar Submit dabayein.'),
               const SizedBox(height: 6),
-              _buildStepRow('3', 'OTP Validation:', 'SMS aate hi niche "Paste OTP" dabayein.'),
+              _buildStepRow(
+                  '3', 'OTP Validation:', 'SMS aate hi niche "Paste OTP" dabayein.'),
               const SizedBox(height: 16),
               Row(
                 children: [
@@ -341,18 +367,23 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (_) => ExamPhotoResizerScreen(isDark: widget.isDark),
+                            builder: (_) =>
+                                ExamPhotoResizerScreen(isDark: widget.isDark),
                           ),
                         );
                       },
                       style: OutlinedButton.styleFrom(
                         foregroundColor: const Color(0xFFB45309),
                         side: const BorderSide(color: Color(0xFFB45309)),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
                         padding: const EdgeInsets.symmetric(vertical: 10),
                       ),
-                      icon: const Icon(Icons.photo_size_select_large_rounded, size: 16),
-                      label: const Text('Resize Photo', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                      icon: const Icon(Icons.photo_size_select_large_rounded,
+                          size: 16),
+                      label: const Text('Resize Photo',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 12)),
                     ),
                   ),
                   const SizedBox(width: 10),
@@ -362,10 +393,13 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF16A34A),
                         foregroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10)),
                         padding: const EdgeInsets.symmetric(vertical: 10),
                       ),
-                      child: const Text('Samajh Gaya 👍', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 12.5)),
+                      child: const Text('Samajh Gaya 👍',
+                          style: TextStyle(
+                              fontWeight: FontWeight.w800, fontSize: 12.5)),
                     ),
                   ),
                 ],
@@ -384,15 +418,23 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         CircleAvatar(
           radius: 9,
           backgroundColor: const Color(0xFFB45309),
-          child: Text(num, style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold)),
+          child: Text(num,
+              style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 10,
+                  fontWeight: FontWeight.bold)),
         ),
         const SizedBox(width: 8),
         Expanded(
           child: RichText(
             text: TextSpan(
-              style: TextStyle(fontSize: 11.5, color: widget.isDark ? Colors.white70 : Colors.black87),
+              style: TextStyle(
+                  fontSize: 11.5,
+                  color: widget.isDark ? Colors.white70 : Colors.black87),
               children: [
-                TextSpan(text: '$title ', style: const TextStyle(fontWeight: FontWeight.bold)),
+                TextSpan(
+                    text: '$title ',
+                    style: const TextStyle(fontWeight: FontWeight.bold)),
                 TextSpan(text: desc),
               ],
             ),
@@ -406,16 +448,19 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
     showModalBottomSheet(
       context: context,
       backgroundColor: widget.isDark ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+      shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (_) => SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Icon(Icons.account_circle_outlined, size: 44, color: Color(0xFFB45309)),
+              const Icon(Icons.account_circle_outlined,
+                  size: 44, color: Color(0xFFB45309)),
               const SizedBox(height: 10),
-              const Text('Master Profile Setup Nahi Hai', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+              const Text('Master Profile Setup Nahi Hai',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
               const SizedBox(height: 6),
               const Text(
                 'AutoFill ke liye pehle apni details 1-baar save karein.',
@@ -427,14 +472,17 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                   Navigator.pop(context);
                   final updated = await Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (_) => RtpsUniversalSetupScreen(isDark: widget.isDark)),
+                    MaterialPageRoute(
+                        builder: (_) =>
+                            RtpsUniversalSetupScreen(isDark: widget.isDark)),
                   );
                   if (updated == true) _loadProfileFromStorage();
                 },
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFFB45309),
                   foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10)),
                 ),
                 child: const Text('Setup Profile Now'),
               ),
@@ -449,7 +497,8 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
     ScaffoldMessenger.of(context).hideCurrentSnackBar();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(msg, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+        content: Text(msg,
+            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
         behavior: SnackBarBehavior.floating,
         backgroundColor: const Color(0xFF1E293B),
       ),
@@ -468,14 +517,18 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
           context: context,
           builder: (ctx) => AlertDialog(
             backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-            title: const Text('Exit RTPS Form?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+            title: const Text('Exit RTPS Form?',
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
             content: const Text(
               'Agar aap bahar jayenge to session invalidate ho sakta hai.',
               style: TextStyle(fontSize: 12.5),
             ),
             actions: [
-              TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Nahi')),
+              TextButton(
+                  onPressed: () => Navigator.pop(ctx, false),
+                  child: const Text('Nahi')),
               ElevatedButton(
                 onPressed: () => Navigator.pop(ctx, true),
                 style: ElevatedButton.styleFrom(
@@ -490,13 +543,16 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         if (shouldLeave == true && context.mounted) Navigator.pop(context);
       },
       child: Scaffold(
-        backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+        backgroundColor:
+            isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
         appBar: AppBar(
           title: const Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('RTPS FastFill Assistant', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15)),
-              Text('Jati • Aay • Niwas (Zero Timeout)', style: TextStyle(fontSize: 10, color: Colors.grey)),
+              Text('RTPS FastFill Assistant',
+                  style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15)),
+              Text('Jati • Aay • Niwas (Zero Timeout)',
+                  style: TextStyle(fontSize: 10, color: Colors.grey)),
             ],
           ),
           backgroundColor: isDark ? const Color(0xFF1E1B18) : Colors.white,
@@ -504,19 +560,22 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
           elevation: 0,
           actions: [
             IconButton(
-              icon: const Icon(Icons.edit_note_rounded, color: Color(0xFFB45309)),
+              icon: const Icon(Icons.edit_note_rounded,
+                  color: Color(0xFFB45309)),
               tooltip: 'Edit Profile',
               onPressed: () async {
                 final updated = await Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (_) => RtpsUniversalSetupScreen(isDark: isDark)),
+                  MaterialPageRoute(
+                      builder: (_) =>
+                          RtpsUniversalSetupScreen(isDark: isDark)),
                 );
                 if (updated == true) _loadProfileFromStorage();
               },
             ),
             IconButton(
               icon: const Icon(Icons.refresh_rounded),
-              onPressed: () => _webViewController?.reload(),
+              onPressed: _reloadPage,
             ),
           ],
         ),
@@ -524,72 +583,107 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
           children: [
             Column(
               children: [
-                if (_loadProgress < 1.0)
+                if (_loadProgress < 1.0 && !_hasError)
                   LinearProgressIndicator(
                     value: _loadProgress,
                     backgroundColor: Colors.transparent,
-                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFB45309)),
+                    valueColor:
+                        const AlwaysStoppedAnimation<Color>(Color(0xFFB45309)),
                     minHeight: 3,
                   ),
                 Expanded(
-                  child: InAppWebView(
-                    initialUrlRequest: URLRequest(
-                      url: WebUri(_rtpsHomeUrl),
-                      headers: {
-                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
-                        'Accept-Language': 'en-US,en;q=0.9,hi;q=0.8',
-                        'Connection': 'keep-alive',
-                        'Upgrade-Insecure-Requests': '1',
-                      },
-                    ),
-                    initialSettings: InAppWebViewSettings(
-                      userAgent: 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-                      useShouldOverrideUrlLoading: true,
-                      mediaPlaybackRequiresUserGesture: false,
-                      javaScriptEnabled: true,
-                      cacheEnabled: true,
-                      supportZoom: true,
-                      builtInZoomControls: true,
-                      displayZoomControls: false,
-                      useWideViewPort: true,
-                      loadWithOverviewMode: true,
-                      mixedContentMode: MixedContentMode.MIXED_CONTENT_ALWAYS_ALLOW,
-                      domStorageEnabled: true,
-                      databaseEnabled: true,
-                      thirdPartyCookiesEnabled: true,
-                    ),
-                    onWebViewCreated: (ctrl) => _webViewController = ctrl,
-                    onReceivedServerTrustAuthRequest: (controller, challenge) async {
-                      return ServerTrustAuthResponse(action: ServerTrustAuthResponseAction.PROCEED);
-                    },
-                    onLoadStop: (ctrl, url) async {
-                      await ctrl.evaluateJavascript(source: """
-                        var meta = document.querySelector('meta[name="viewport"]');
-                        if (!meta) {
-                          meta = document.createElement('meta');
-                          meta.name = 'viewport';
-                          document.getElementsByTagName('head')[0].appendChild(meta);
-                        }
-                        meta.content = 'width=1024, initial-scale=' + (window.innerWidth / 1024) + ', user-scalable=yes';
-                      """);
-                    },
-                    onProgressChanged: (ctrl, prog) {
-                      setState(() => _loadProgress = prog / 100);
-                    },
-                  ),
+                  child: _hasError
+                      ? _buildErrorView()
+                      : InAppWebView(
+                          initialUrlRequest: URLRequest(
+                            url: WebUri(_rtpsHomeUrl),
+                            headers: _browserHeaders,
+                          ),
+                          initialSettings: InAppWebViewSettings(
+                            userAgent: _desktopUserAgent,
+                            useShouldOverrideUrlLoading: true,
+                            mediaPlaybackRequiresUserGesture: false,
+                            javaScriptEnabled: true,
+                            cacheEnabled: true,
+                            supportZoom: true,
+                            builtInZoomControls: true,
+                            displayZoomControls: false,
+                            // 🖥️ Desktop Canvas & Mode to kill mobile app banner
+                            useWideViewPort: true,
+                            loadWithOverviewMode: true,
+                            preferredContentMode: UserPreferredContentMode.DESKTOP,
+                            mixedContentMode:
+                                MixedContentMode.MIXED_CONTENT_ALWAYS_ALLOW,
+                            domStorageEnabled: true,
+                            databaseEnabled: true,
+                            thirdPartyCookiesEnabled: true,
+                            allowFileAccess: true,
+                            allowContentAccess: true,
+                            transparentBackground: false,
+                          ),
+                          onWebViewCreated: (ctrl) =>
+                              _webViewController = ctrl,
+                          onReceivedServerTrustAuthRequest:
+                              (controller, challenge) async {
+                            return ServerTrustAuthResponse(
+                                action:
+                                    ServerTrustAuthResponseAction.PROCEED);
+                          },
+                          onLoadError: (ctrl, url, code, message) {
+                            debugPrint("WebView Load Error: $code | $message");
+                            if (mounted) {
+                              setState(() {
+                                _hasError = true;
+                                _errorMessage = message;
+                              });
+                            }
+                          },
+                          onLoadHttpError:
+                              (ctrl, url, statusCode, description) {
+                            debugPrint(
+                                "HTTP Error: $statusCode | $description");
+                          },
+                          onLoadStop: (ctrl, url) async {
+                            setState(() {
+                              _hasError = false;
+                            });
+
+                            // ⚡ Desktop Viewport setup + Interstitial App Banner Remover
+                            await ctrl.evaluateJavascript(source: """
+                              // 1. Remove mobile app banner if present
+                              var banners = document.querySelectorAll('.mobile-app-banner, #mobileAppModal, .app-download-section, [class*="download-app"]');
+                              banners.forEach(function(b) { b.remove(); });
+
+                              // 2. Desktop viewport scaling
+                              var meta = document.querySelector('meta[name="viewport"]');
+                              if (!meta) {
+                                meta = document.createElement('meta');
+                                meta.name = 'viewport';
+                                document.getElementsByTagName('head')[0].appendChild(meta);
+                              }
+                              meta.content = 'width=1280, initial-scale=' + (window.innerWidth / 1280) + ', maximum-scale=3.0, user-scalable=yes';
+                            """);
+                          },
+                          onProgressChanged: (ctrl, prog) {
+                            setState(() => _loadProgress = prog / 100);
+                          },
+                        ),
                 ),
                 if (_showOtpBar)
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 14, vertical: 8),
                     color: isDark ? const Color(0xFF1E293B) : Colors.white,
                     child: Row(
                       children: [
-                        const Icon(Icons.mark_email_read_rounded, color: Colors.amber, size: 20),
+                        const Icon(Icons.mark_email_read_rounded,
+                            color: Colors.amber, size: 20),
                         const SizedBox(width: 8),
                         const Expanded(
                           child: Text(
                             'SMS Copy karke OTP inject karein:',
-                            style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w600),
+                            style: TextStyle(
+                                fontSize: 11.5, fontWeight: FontWeight.w600),
                           ),
                         ),
                         ElevatedButton.icon(
@@ -597,11 +691,16 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: const Color(0xFF16A34A),
                             foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 12, vertical: 6),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8)),
                           ),
                           icon: const Icon(Icons.paste_rounded, size: 14),
-                          label: const Text('Paste OTP', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
+                          label: const Text('Paste OTP',
+                              style: TextStyle(
+                                  fontSize: 11.5,
+                                  fontWeight: FontWeight.bold)),
                         ),
                       ],
                     ),
@@ -620,7 +719,10 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                       Text(
                         'Fuzzy Matching Cascading Dropdowns...\nState ➔ District ➔ Sub-Div ➔ Block',
                         textAlign: TextAlign.center,
-                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12.5),
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 12.5),
                       ),
                     ],
                   ),
@@ -628,21 +730,75 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
               ),
           ],
         ),
-        floatingActionButton: FloatingActionButton.extended(
-          onPressed: _isAutoFilling ? null : _triggerSmartAutofill,
-          backgroundColor: const Color(0xFF16A34A),
-          elevation: 4,
-          icon: _isAutoFilling
-              ? const SizedBox(
-                  width: 16,
-                  height: 16,
-                  child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
-                )
-              : const Icon(Icons.flash_on_rounded, color: Colors.white),
-          label: Text(
-            _isAutoFilling ? 'Filling Cascades...' : '⚡ AutoFill Form',
-            style: const TextStyle(fontWeight: FontWeight.w900, color: Colors.white, letterSpacing: 0.3),
-          ),
+        floatingActionButton: _hasError
+            ? null
+            : FloatingActionButton.extended(
+                onPressed: _isAutoFilling ? null : _triggerSmartAutofill,
+                backgroundColor: const Color(0xFF16A34A),
+                elevation: 4,
+                icon: _isAutoFilling
+                    ? const SizedBox(
+                        width: 16,
+                        height: 16,
+                        child: CircularProgressIndicator(
+                            strokeWidth: 2, color: Colors.white),
+                      )
+                    : const Icon(Icons.flash_on_rounded, color: Colors.white),
+                label: Text(
+                  _isAutoFilling ? 'Filling Cascades...' : '⚡ AutoFill Form',
+                  style: const TextStyle(
+                      fontWeight: FontWeight.w900,
+                      color: Colors.white,
+                      letterSpacing: 0.3),
+                ),
+              ),
+      ),
+    );
+  }
+
+  Widget _buildErrorView() {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(24),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Container(
+              padding: const EdgeInsets.all(16),
+              decoration: BoxDecoration(
+                color: Colors.amber.withValues(alpha: 0.15),
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(Icons.cloud_off_rounded,
+                  size: 48, color: Color(0xFFB45309)),
+            ),
+            const SizedBox(height: 16),
+            const Text(
+              'RTPS Portal Server Busy',
+              style: TextStyle(fontWeight: FontWeight.w900, fontSize: 17),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Bihar NIC server par traffic ya firewall handshake ki wajah se connection drop hua hai. Re-try karein:',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 12, color: Colors.grey, height: 1.4),
+            ),
+            const SizedBox(height: 18),
+            ElevatedButton.icon(
+              onPressed: _reloadPage,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFB45309),
+                foregroundColor: Colors.white,
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10)),
+              ),
+              icon: const Icon(Icons.refresh_rounded, size: 18),
+              label: const Text('Dubara Koshish Karein (Retry)',
+                  style: TextStyle(fontWeight: FontWeight.bold)),
+            ),
+          ],
         ),
       ),
     );
