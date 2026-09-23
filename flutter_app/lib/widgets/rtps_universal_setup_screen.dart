@@ -33,16 +33,16 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
   final _village = TextEditingController();
   final _postOffice = TextEditingController();
   final _pinCode = TextEditingController();
-
-  // Location Dropdowns
-  String _selectedDistrict = 'PATNA';
-  final _subDivision = TextEditingController();
-  final _block = TextEditingController();
   final _policeStation = TextEditingController();
+
+  // Cascading Hierarchy (District -> Sub-Division -> Block)
+  String _selectedDistrict = 'PATNA';
+  String? _selectedSubDiv;
+  String? _selectedBlock;
 
   // Selections
   String _gender = 'MALE';
-  String _localBodyType = 'Gram Panchayat';
+  String _localBodyType = 'Gram Panchayat (ग्राम पंचायत)';
   String _residenceType = 'स्थायी (Permanent)';
   String _profession = 'छात्र (Student)';
   final _purpose = TextEditingController(text: 'उच्च शिक्षण / सरकारी नौकरी');
@@ -60,15 +60,186 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
 
   bool _isLoading = true;
 
-  final List<String> _biharDistricts = [
-    'ARARIA', 'ARWAL', 'AURANGABAD', 'BANKA', 'BEGUSARAI', 'BHAGALPUR',
-    'BHOJPUR', 'BUXAR', 'DARBHANGA', 'EAST CHAMPARAN (MOTIHARI)', 'GAYA',
-    'GOPALGANJ', 'JAMUI', 'JEHANABAD', 'KAIMUR (BHABHUA)', 'KATIHAR',
-    'KHAGARIA', 'KISHANGANJ', 'LAKHISARAI', 'MADHEPURA', 'MADHUBANI',
-    'MUNGER', 'MUZAFFARPUR', 'NALANDA', 'NAWADA', 'PATNA', 'PURNIA',
-    'ROHTAS', 'SAHARSA', 'SAMASTIPUR', 'SARAN', 'SHEIKHPURA', 'SHEOHAR',
-    'SITAMARHI', 'SIWAN', 'SUPAUL', 'VAISHALI', 'WEST CHAMPARAN'
-  ];
+  // 🏛️ Official Bihar RTPS Administrative Hierarchy (District -> Sub-Divisions -> Blocks)
+  static const Map<String, Map<String, List<String>>> _biharAdminData = {
+    'PATNA': {
+      'Patna Sadar': ['Patna Sadar', 'Phulwari Sharif', 'Sampatchak', 'Fatwah', 'Daniyawan', 'Khusrupur'],
+      'Danapur': ['Danapur', 'Maner', 'Bihta'],
+      'Barh': ['Barh', 'Bakhtiarpur', 'Mokama', 'Belchhi', 'Ghoswari', 'Pandarak'],
+      'Masaurhi': ['Masaurhi', 'Dhanarua', 'Punpun'],
+      'Paliganj': ['Paliganj', 'Dulhin Bazar', 'Bikram'],
+      'Patna City': ['Patna City'],
+    },
+    'GAYA': {
+      'Gaya Sadar': ['Gaya Town', 'Bodhgaya', 'Manpur', 'Barachatti', 'Fatehpur', 'Mohanpur', 'Paraiya', 'Tan Kuppa', 'Wazirganj'],
+      'Tekari': ['Tekari', 'Konch', 'Belaganj'],
+      'Sherghati': ['Sherghati', 'Amas', 'Bankey Bazar', 'Dobhi', 'Dumaria', 'Gurua', 'Imamganj'],
+      'Neemchak Bathani': ['Bathani', 'Atri', 'Khizirsarai', 'Mohra'],
+    },
+    'MUZAFFARPUR': {
+      'Muzaffarpur East': ['Mushahari', 'Bochahan', 'Gaighat', 'Aurai', 'Katra', 'Minapur', 'Muraul', 'Sakra', 'Bandra'],
+      'Muzaffarpur West': ['Kanti', 'Motipur', 'Baruraj', 'Paroo', 'Sahebganj', 'Saraiya', 'Marwan'],
+    },
+    'BHAGALPUR': {
+      'Bhagalpur Sadar': ['Jagdishpur', 'Nathnagar', 'Sultanganj', 'Sabour', 'Goradih', 'Shahkund'],
+      'Kahalgaon': ['Kahalgaon', 'Pirpainti', 'Sanokhar'],
+      'Naugachhia': ['Naugachhia', 'Gopalpur', 'Ismailpur', 'Bihpur', 'Kharik', 'Narayanpur', 'Rangra Chowk'],
+    },
+    'NALANDA': {
+      'Bihar Sharif': ['Bihar Sharif', 'Rahui', 'Noorsarai', 'Harnaut', 'Chandi', 'Giriak', 'Asthawan', 'Sarmera', 'Bind'],
+      'Rajgir': ['Rajgir', 'Silao', 'Islampur', 'Ben', 'Katrisarai'],
+      'Hilsa': ['Hilsa', 'Ekangarsarai', 'Karai Parsurai', 'Nagar Nausa', 'Parwalpur', 'Tharthari'],
+    },
+    'BHOJPUR': {
+      'Arrah Sadar': ['Arrah', 'Barhara', 'Koilwar', 'Udwantnagar', 'Sandesh', 'Shahpur'],
+      'Jagdishpur': ['Jagdishpur', 'Bihiya', 'Piro'],
+      'Piro': ['Tarari', 'Charpokhari', 'Garhani', 'Agiaon'],
+    },
+    'DARBHANGA': {
+      'Darbhanga Sadar': ['Darbhanga', 'Bahadurpur', 'Hayaghat', 'Hanumannagar', 'Keoti', 'Jale', 'Singhwara', 'Manigachhi'],
+      'Benipur': ['Benipur', 'Alinagar', 'Baheri'],
+      'Biraul': ['Biraul', 'Ghanshyampur', 'Kusheshwar Asthan', 'Kusheshwar Asthan East', 'Kiratpur', 'Gora Bauram'],
+    },
+    'PURNEA': {
+      'Purnia Sadar': ['Purnia East', 'Kasba', 'Jalalgarh', 'Krinayanand Nagar'],
+      'Dhamdaha': ['Dhamdaha', 'Banmankhi', 'Bhawanipur', 'Rupauli'],
+      'Baisi': ['Baisi', 'Amour', 'Baisa', 'Dagarua'],
+      'Banmankhi': ['Banmankhi'],
+    },
+    'ROHTAS': {
+      'Sasaram': ['Sasaram', 'Sheosagar', 'Chenari', 'Kargahar', 'Nokha', 'Tilouthu', 'Akorhigola', 'Rohtas'],
+      'Bikramganj': ['Bikramganj', 'Karakot', 'Dinara', 'Dawath', 'Surajpura', 'Sanjhauli'],
+      'Dehri': ['Dehri', 'Nasriganj', 'Nauhatta', 'Rajpur'],
+    },
+    'SARAN': {
+      'Chhapra': ['Chhapra', 'Revelganj', 'Garkha', 'Jalalpur', 'Manjhi', 'Nagra', 'Rivilganj', 'Ekma', 'Baniapur'],
+      'Marhaura': ['Marhaura', 'Amnour', 'Taraiya', 'Mashrakh', 'Panapur', 'Isuapur'],
+      'Sonepur': ['Sonepur', 'Dighwara', 'Dariyapur', 'Parsa', 'Maker'],
+    },
+    'VAISHALI': {
+      'Hajipur': ['Hajipur', 'Bidupur', 'Lalganj', 'Bhagwanpur', 'Vaishali'],
+      'Mahnar': ['Mahnar', 'Sahdai Buzurg', 'Desri'],
+      'Mahua': ['Mahua', 'Jandaha', 'Patepur', 'Chehrakalan', 'Patedhi Belsar', 'Raghopur', 'Raja Pakar'],
+    },
+    'SAMASTIPUR': {
+      'Samastipur Sadar': ['Samastipur', 'Kalyanpur', 'Warisnagar', 'Khanpur', 'Pusa', 'Tajpur', 'Morbawa'],
+      'Dalsinghsarai': ['Dalsinghsarai', 'Ujiarpur', 'Bibhutipur'],
+      'Rosera': ['Rosera', 'Hasanpur', 'Singhia', 'Shivaji Nagar'],
+      'Patori': ['Patori', 'Mohiuddin Nagar', 'Mohanpur'],
+    },
+    'BEGUSARAI': {
+      'Begusarai Sadar': ['Begusarai', 'Barauni', 'Matihani', 'Shamho Akha Kurha'],
+      'Bakhri': ['Bakhri', 'Garhpura', 'Naokothi'],
+      'Ballia': ['Ballia', 'Sahebpur Kamal', 'Dandari'],
+      'Manjhaul': ['Cheria Bariarpur', 'Chhorahi'],
+      'Teghra': ['Teghra', 'Bachhwara', 'Bhagwanpur', 'Mansurchak'],
+    },
+    'EAST CHAMPARAN (MOTIHARI)': {
+      'Motihari Sadar': ['Motihari', 'Turkaulia', 'Piprakothi', 'Kotwa', 'Sugauli', 'Banjaria', 'Harsidhi'],
+      'Areraj': ['Areraj', 'Paharpur', 'Sangrampur'],
+      'Raxaul': ['Raxaul', 'Adapur', 'Ramgarhwa'],
+      'Sikrahna': ['Dhaka', 'Chiraiya', 'Ghorasahan', 'Bankaura'],
+      'Pakridayal': ['Pakridayal', 'Madhuban', 'Phenhara', 'Tetaria', 'Patahi'],
+      'Chakia (Mehsi)': ['Chakia', 'Mehsi', 'Kalyanpur', 'Kesaria'],
+    },
+    'WEST CHAMPARAN': {
+      'Bettiah Sadar': ['Bettiah', 'Bairia', 'Majhaulia', 'Chanpatia', 'Nautan'],
+      'Bagaha': ['Bagaha 1', 'Bagaha 2', 'Ramnagar', 'Thakaraha', 'Bhitaha', 'Piprasi', 'Madhubani'],
+      'Narkatiaganj': ['Narkatiaganj', 'Laariya', 'Gaunaha', 'Mainatand', 'Sikta'],
+    },
+    'SIWAN': {
+      'Siwan Sadar': ['Siwan', 'Mairwa', 'Darauli', 'Guthani', 'Hussainganj', 'Andar', 'Ziradei', 'Pachrukhi', 'Barharia', 'Goriyakothi', 'Lakri Nabiganj'],
+      'Maharajganj': ['Maharajganj', 'Daraundha', 'Bhagwanpur Hat', 'Basantpur'],
+    },
+    'GOPALGANJ': {
+      'Gopalganj Sadar': ['Gopalganj', 'Manjha', 'Thawe', 'Kuchaikote', 'Barauli', 'Sidhwalia', 'Baikunthpur'],
+      'Hathua': ['Hathua', 'Uchkagaon', 'Mirganj', 'Bhorey', 'Kateya', 'Bijaipur', 'Pachdeuri'],
+    },
+    'MADHUBANI': {
+      'Madhubani Sadar': ['Rajnagar', 'Pandaul', 'Kaluahi', 'Bisfi'],
+      'Jainagar': ['Jainagar', 'Ladania', 'Basopatti'],
+      'Benipatti': ['Benipatti', 'Madhwapur', 'Harlakhi'],
+      'Jhanjharpur': ['Jhanjharpur', 'Lakhnaur', 'Madhepur', 'Andhratharhi'],
+      'Phulparas': ['Phulparas', 'Ghoghardiha', 'Khutauna', 'Laukaha', 'Babubarhi'],
+    },
+    'SAHARSA': {
+      'Saharsa Sadar': ['Kahara', 'Sattar Katiya', 'Saur Bazar', 'Patarghat', 'Mahishi', 'Nauhatta', 'Sonbarsa'],
+      'Simri Bakhtiyarpur': ['Simri Bakhtiyarpur', 'Salkhua', 'Banma Itahari'],
+    },
+    'MADHEPURA': {
+      'Madhepura Sadar': ['Madhepura', 'Singheshwar', 'Gamharia', 'Ghelarh', 'Shankarpur', 'Murliganj'],
+      'Udakishunganj': ['Udakishunganj', 'Alamnagar', 'Chausa', 'Puraini', 'Biharganj', 'Kumarkhand'],
+    },
+    'SUPAUL': {
+      'Supaul Sadar': ['Supaul', 'Kishanpur', 'Saraigarh Bhaptiyahi', 'Pipra', 'Marauna'],
+      'Birpur': ['Basantpur', 'Raghopur', 'Chhatapur'],
+      'Nirmali': ['Nirmali'],
+      'Triveniganj': ['Triveniganj', 'Jadupati'],
+    },
+    'KATIHAR': {
+      'Katihar Sadar': ['Katihar', 'Korha', 'Falka', 'Hasanganj', 'Dandkhora', 'Mansahi'],
+      'Barsoi': ['Barsoi', 'Kadwa', 'Azamnagar', 'Balrampur'],
+      'Manihari': ['Manihari', 'Amdabad', 'Sameli', 'Pranpur'],
+    },
+    'KISHANGANJ': {
+      'Kishanganj': ['Kishanganj', 'Kochadhaman', 'Bahadurganj', 'Thakurganj', 'Pothia', 'Terhagachh', 'Dighalbank'],
+    },
+    'ARARIA': {
+      'Araria Sadar': ['Araria', 'Jokihat', 'Kursakatta', 'Raniganj', 'Palasi', 'Sikti'],
+      'Forbesganj': ['Forbesganj', 'Bhargama', 'Narpatganj'],
+    },
+    'AURANGABAD': {
+      'Aurangabad Sadar': ['Aurangabad', 'Barun', 'Navinagar', 'Kutumba', 'Madanpur', 'Deo'],
+      'Daudnagar': ['Daudnagar', 'Obra', 'Goh', 'Haspura', 'Rafiganj'],
+    },
+    'NAWADA': {
+      'Nawada Sadar': ['Nawada', 'Warisliganj', 'Kashichak', 'Pakribarawan', 'Kawakol', 'Roh', 'Hisua', 'Nardiganj'],
+      'Rajauli': ['Rajauli', 'Akbarpur', 'Govindpur', 'Sirdala', 'Meskaur'],
+    },
+    'JEHANABAD': {
+      'Jehanabad': ['Jehanabad', 'Kako', 'Modanganj', 'Ghoshi', 'Makhdumpur', 'Hulasganj', 'Ratni Faridpur'],
+    },
+    'ARWAL': {
+      'Arwal': ['Arwal', 'Kaler', 'Karpi', 'Kurtha', 'Sonbhadra Banshi Suryapur'],
+    },
+    'JAMUI': {
+      'Jamui': ['Jamui', 'Khaira', 'Barhat', 'Gidhaur', 'Jhajha', 'Sono', 'Chakai', 'Sikandra', 'Aliganj'],
+    },
+    'BANKA': {
+      'Banka': ['Banka', 'Barahat', 'Rajaun', 'Amarpur', 'Dhuraiya', 'Belhar', 'Chandan', 'Katoria', 'Bounsi', 'Phulidumar', 'Shambhuganj'],
+    },
+    'MUNGER': {
+      'Munger Sadar': ['Munger', 'Jamalpur', 'Bariarpur', 'Dharhara'],
+      'Haveli Kharagpur': ['Haveli Kharagpur', 'Tetiyabambar'],
+      'Tarapur': ['Tarapur', 'Asarganj', 'Sangrampur'],
+    },
+    'KHAGARIA': {
+      'Khagaria Sadar': ['Khagaria', 'Alauli', 'Mansi', 'Chautham'],
+      'Gogri': ['Gogri', 'Beldaur', 'Parbatta'],
+    },
+    'LAKHISARAI': {
+      'Lakhisarai': ['Lakhisarai', 'Barahiya', 'Halsi', 'Pipariya', 'Ramgarh Chowk', 'Channani'],
+    },
+    'SHEIKHPURA': {
+      'Sheikhpura': ['Sheikhpura', 'Barbigha', 'Shekhopur Sarai', 'Ariari', 'Chewara', 'Ghatkusumbha'],
+    },
+    'BUXAR': {
+      'Buxar Sadar': ['Buxar', 'Itarhi', 'Chausa', 'Rajpur'],
+      'Dumraon': ['Dumraon', 'Nawanagar', 'Brahampur', 'Kesath', 'Chakki', 'Chougain', 'Simri'],
+    },
+    'KAIMUR (BHABHUA)': {
+      'Bhabhua': ['Bhabhua', 'Bhagwanpur', 'Chainpur', 'Chand', 'Adhaura', 'Rampur'],
+      'Mohania': ['Mohania', 'Kudra', 'Durgawati', 'Ramgarh'],
+    },
+    'SHEOHAR': {
+      'Sheohar': ['Sheohar', 'Tariani Chowk', 'Piprahi', 'Dumri Katsari', 'Purnahiya'],
+    },
+    'SITAMARHI': {
+      'Sitamarhi Sadar': ['Dumra', 'Riga', 'Bairgania', 'Suppi', 'Parsauni', 'Majorganj', 'Sonbarsa', 'Bathanaha'],
+      'Belsand': ['Belsand', 'Runnisaidpur'],
+      'Pupri': ['Pupri', 'Nanpur', 'Bajpatti', 'Sursand', 'Parihar', 'Choraut', 'Bokhara'],
+    },
+  };
 
   @override
   void initState() {
@@ -96,16 +267,28 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
         _village.text = d['village'] ?? '';
         _postOffice.text = d['post_office'] ?? '';
         _pinCode.text = d['pin_code'] ?? '';
-        _subDivision.text = d['sub_division'] ?? '';
-        _block.text = d['block'] ?? '';
         _policeStation.text = d['police_station'] ?? '';
         _purpose.text = d['purpose'] ?? 'उच्च शिक्षण / सरकारी नौकरी';
 
         _gender = d['gender'] ?? 'MALE';
-        _selectedDistrict = d['district'] ?? 'PATNA';
-        _localBodyType = d['local_body_type'] ?? 'Gram Panchayat';
+        _localBodyType = d['local_body_type'] ?? 'Gram Panchayat (ग्राम पंचायत)';
         _residenceType = d['residence_type'] ?? 'स्थायी (Permanent)';
         _profession = d['profession'] ?? 'छात्र (Student)';
+
+        final dist = d['district'] ?? 'PATNA';
+        if (_biharAdminData.containsKey(dist)) {
+          _selectedDistrict = dist;
+          final subDivs = _biharAdminData[dist]!.keys.toList();
+          final savedSub = d['sub_division'];
+          if (subDivs.contains(savedSub)) {
+            _selectedSubDiv = savedSub;
+            final blocks = _biharAdminData[dist]![savedSub]!;
+            final savedBlock = d['block'];
+            if (blocks.contains(savedBlock)) {
+              _selectedBlock = savedBlock;
+            }
+          }
+        }
 
         _incomeGovt.text = d['income_govt'] ?? '0';
         _incomeAgri.text = d['income_agri'] ?? '0';
@@ -118,6 +301,9 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
       } catch (e) {
         debugPrint("Error loading profile: $e");
       }
+    } else {
+      _selectedSubDiv = _biharAdminData['PATNA']!.keys.first;
+      _selectedBlock = _biharAdminData['PATNA']![_selectedSubDiv]!.first;
     }
     setState(() => _isLoading = false);
   }
@@ -133,7 +319,7 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
   Future<void> _saveProfile() async {
     if (!_formKey.currentState!.validate()) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Kripya zaroori fields sahi se bharein!')),
+        const SnackBar(content: Text('⚠️ Kripya laal (*) wale sabhi aniwarya fields bharein!')),
       );
       return;
     }
@@ -152,8 +338,8 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
       'mobile': _mobile.text.trim(),
       'email': _email.text.trim(),
       'district': _selectedDistrict.trim(),
-      'sub_division': _subDivision.text.trim(),
-      'block': _block.text.trim(),
+      'sub_division': _selectedSubDiv?.trim() ?? '',
+      'block': _selectedBlock?.trim() ?? '',
       'police_station': _policeStation.text.trim(),
       'ward_no': _wardNo.text.trim(),
       'village': _village.text.trim(),
@@ -204,7 +390,13 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
     return Scaffold(
       backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
-        title: const Text('RTPS Master Profile', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
+        title: const Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text('RTPS Master Profile', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16)),
+            Text('Ek baar bharein • Har form me auto-fill karein', style: TextStyle(fontSize: 10.5, color: Colors.grey)),
+          ],
+        ),
         backgroundColor: isDark ? const Color(0xFF1E1B18) : Colors.white,
         foregroundColor: isDark ? Colors.white : const Color(0xFF0F172A),
         elevation: 0,
@@ -214,75 +406,153 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
         child: ListView(
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
           children: [
-            _buildInfoBanner(),
+            _buildLegendBar(),
             const SizedBox(height: 14),
+
+            // 1. Personal Details
             _buildSectionHeader('1. Vyaktigat Vivaran (Personal Info)', Icons.person_rounded),
             _buildCard([
               _buildGenderSelector(),
               const SizedBox(height: 12),
-              _buildTextField('Aavedak Ka Naam (English)', _nameEn, isRequired: true),
-              const SizedBox(height: 10),
-              _buildTextField('आवेदक का नाम (Hindi)', _nameHi, isRequired: true),
-              const SizedBox(height: 10),
-              _buildTextField("Pita Ka Naam (Father's Name)", _fatherEn, isRequired: true),
-              const SizedBox(height: 10),
-              _buildTextField("पिता का नाम (Hindi)", _fatherHi, isRequired: true),
-              const SizedBox(height: 10),
-              _buildTextField("Mata Ka Naam (Mother's Name)", _motherEn, isRequired: true),
-              const SizedBox(height: 10),
-              _buildTextField("माता का नाम (Hindi)", _motherHi, isRequired: true),
-              const SizedBox(height: 10),
-              _buildTextField("Pati Ka Naam (Yadi vivahit hain)", _husbandEn),
-              const SizedBox(height: 10),
-              _buildTextField("पति का नाम (Hindi)", _husbandHi),
+              _buildFieldWithLabel('Aavedak Ka Naam (English)', _nameEn, isRequired: true, hint: 'e.g. AMIT KUMAR'),
+              _buildFieldWithLabel('आवेदक का नाम (Hindi)', _nameHi, isRequired: true, hint: 'e.g. अमित कुमार'),
+              _buildFieldWithLabel("Pita Ka Naam (Father's Name in English)", _fatherEn, isRequired: true, hint: 'e.g. RAMESH PRASAD'),
+              _buildFieldWithLabel("पिता का नाम (Hindi)", _fatherHi, isRequired: true, hint: 'e.g. रमेश प्रसाद'),
+              _buildFieldWithLabel("Mata Ka Naam (Mother's Name in English)", _motherEn, isRequired: true, hint: 'e.g. SHANTI DEVI'),
+              _buildFieldWithLabel("माता का नाम (Hindi)", _motherHi, isRequired: true, hint: 'e.g. शान्ति देवी'),
+              _buildFieldWithLabel("Pati Ka Naam (Husband Name in English)", _husbandEn, isRequired: false, hint: 'Vivahit mahilao ke liye'),
+              _buildFieldWithLabel("पति का नाम (Hindi)", _husbandHi, isRequired: false, hint: 'यदि लागू हो'),
             ], cardBg),
             const SizedBox(height: 16),
+
+            // 2. Contact & Location Details
             _buildSectionHeader('2. Sampark & Sthan (Contact & Location)', Icons.location_on_rounded),
             _buildCard([
-              _buildTextField('Mobile No (OTP aayega)', _mobile, isRequired: true, keyboard: TextInputType.phone),
+              _buildFieldWithLabel('Mobile Number (OTP isi par aayega)', _mobile, isRequired: true, keyboard: TextInputType.phone, hint: '10-digit mobile number'),
+              _buildFieldWithLabel('Email Address (Certificate mail par aayega)', _email, isRequired: false, keyboard: TextInputType.emailAddress, hint: 'name@example.com'),
               const SizedBox(height: 10),
-              _buildTextField('Email Address', _email, keyboard: TextInputType.emailAddress),
+
+              // 🏛️ CASCADING DROPDOWNS: District -> SubDivision -> Block
+              _buildDropdownHeader('Zila (District)', isRequired: true),
+              DropdownButtonFormField<String>(
+                value: _selectedDistrict,
+                decoration: _inputDecoration('Select District'),
+                items: _biharAdminData.keys.map((d) => DropdownMenuItem(value: d, child: Text(d, style: const TextStyle(fontSize: 13)))).toList(),
+                onChanged: (val) {
+                  if (val != null) {
+                    setState(() {
+                      _selectedDistrict = val;
+                      final subDivs = _biharAdminData[val]!.keys.toList();
+                      _selectedSubDiv = subDivs.isNotEmpty ? subDivs.first : null;
+                      final blocks = _selectedSubDiv != null ? _biharAdminData[val]![_selectedSubDiv]! : <String>[];
+                      _selectedBlock = blocks.isNotEmpty ? blocks.first : null;
+                    });
+                  }
+                },
+              ),
               const SizedBox(height: 12),
-              _buildDistrictDropdown(),
-              const SizedBox(height: 10),
-              _buildTextField('Anumandal (Sub-Division) jaise: Patna Sadar', _subDivision, isRequired: true),
-              const SizedBox(height: 10),
-              _buildTextField('Prakhand (Block) jaise: Sampatchak', _block, isRequired: true),
-              const SizedBox(height: 10),
-              _buildTextField('Thana (Police Station)', _policeStation, isRequired: true),
-              const SizedBox(height: 10),
-              _buildTextField('Ward No', _wardNo, keyboard: TextInputType.number),
-              const SizedBox(height: 10),
-              _buildTextField('Gaon / Mohalla (Village / Town)', _village, isRequired: true),
-              const SizedBox(height: 10),
-              _buildTextField('Dakghar (Post Office)', _postOffice, isRequired: true),
-              const SizedBox(height: 10),
-              _buildTextField('Pin Code', _pinCode, isRequired: true, keyboard: TextInputType.number),
+
+              _buildDropdownHeader('Anumandal (Sub-Division)', isRequired: true),
+              DropdownButtonFormField<String>(
+                value: _selectedSubDiv,
+                decoration: _inputDecoration('Select Sub-Division'),
+                items: (_biharAdminData[_selectedDistrict]?.keys.toList() ?? []).map((sd) => DropdownMenuItem(value: sd, child: Text(sd, style: const TextStyle(fontSize: 13)))).toList(),
+                onChanged: (val) {
+                  if (val != null) {
+                    setState(() {
+                      _selectedSubDiv = val;
+                      final blocks = _biharAdminData[_selectedDistrict]![val] ?? [];
+                      _selectedBlock = blocks.isNotEmpty ? blocks.first : null;
+                    });
+                  }
+                },
+                validator: (v) => (v == null || v.isEmpty) ? 'Anumandal chunna aniwarya hai' : null,
+              ),
+              const SizedBox(height: 12),
+
+              _buildDropdownHeader('Prakhand (Block)', isRequired: true),
+              DropdownButtonFormField<String>(
+                value: _selectedBlock,
+                decoration: _inputDecoration('Select Block'),
+                items: (_biharAdminData[_selectedDistrict]?[_selectedSubDiv] ?? []).map((b) => DropdownMenuItem(value: b, child: Text(b, style: const TextStyle(fontSize: 13)))).toList(),
+                onChanged: (val) => setState(() => _selectedBlock = val),
+                validator: (v) => (v == null || v.isEmpty) ? 'Block chunna aniwarya hai' : null,
+              ),
+              const SizedBox(height: 12),
+
+              _buildFieldWithLabel('Thana (Police Station)', _policeStation, isRequired: true, hint: 'e.g. Danapur / Kankarbagh'),
+              _buildFieldWithLabel('Ward No', _wardNo, isRequired: false, keyboard: TextInputType.number, hint: 'Ward number yadi ho'),
+              _buildFieldWithLabel('Gaon / Mohalla (Village / Town)', _village, isRequired: true, hint: 'e.g. Saguna More / Rampur'),
+              _buildFieldWithLabel('Dakghar (Post Office)', _postOffice, isRequired: true, hint: 'Post Office ka naam'),
+              _buildFieldWithLabel('Pin Code', _pinCode, isRequired: true, keyboard: TextInputType.number, hint: '6-digit pincode'),
+
+              const SizedBox(height: 6),
+              _buildDropdownHeader('Sthaniya Nikay Ka Prakar (Local Body)', isRequired: false),
+              DropdownButtonFormField<String>(
+                value: _localBodyType,
+                decoration: _inputDecoration('Local Body'),
+                items: [
+                  'Gram Panchayat (ग्राम पंचायत)',
+                  'Nagar Nigam (नगर निगम)',
+                  'Nagar Parishad (नगर परिषद्)',
+                  'Nagar Panchayat (नगर पंचायत)',
+                ].map((b) => DropdownMenuItem(value: b, child: Text(b, style: const TextStyle(fontSize: 12.5)))).toList(),
+                onChanged: (v) => setState(() => _localBodyType = v ?? _localBodyType),
+              ),
             ], cardBg),
             const SizedBox(height: 16),
+
+            // 3. Caste & Profession Details
             _buildSectionHeader('3. Jati & Pesha (Caste & Profession)', Icons.badge_rounded),
             _buildCard([
-              _buildProfessionDropdown(),
-              const SizedBox(height: 10),
-              _buildTextField('Aavedan Ka Uddeshya (Purpose)', _purpose),
-              const SizedBox(height: 10),
-              _buildCasteCategoryDropdown(),
-              const SizedBox(height: 10),
-              _buildTextField('Jati Ka Naam (Caste) jaise: Kushwaha / Yadav', _casteName, isRequired: true),
+              _buildDropdownHeader('Pesha (Profession)', isRequired: true),
+              DropdownButtonFormField<String>(
+                value: _profession,
+                decoration: _inputDecoration('Select Profession'),
+                items: [
+                  'छात्र (Student)',
+                  'सरकारी सेवा (Govt Service)',
+                  'निजी सेवा (Private Service)',
+                  'व्यापार (Business)',
+                  'किसान (Farmer)',
+                  'गृहणी (Housewife)',
+                  'अन्य (Other)'
+                ].map((d) => DropdownMenuItem(value: d, child: Text(d, style: const TextStyle(fontSize: 13)))).toList(),
+                onChanged: (v) => setState(() => _profession = v ?? _profession),
+              ),
+              const SizedBox(height: 12),
+
+              _buildFieldWithLabel('Aavedan Ka Uddeshya (Purpose)', _purpose, isRequired: true, hint: 'उच्च शिक्षण / सरकारी नौकरी'),
+
+              _buildDropdownHeader('Caste Category (वर्ग)', isRequired: true),
+              DropdownButtonFormField<String>(
+                value: _casteCategory,
+                decoration: _inputDecoration('Select Category'),
+                items: [
+                  'अत्यंत पिछड़ा वर्ग (अनुसूची-1) / EBC',
+                  'पिछड़ा वर्ग (अनुसूची-2) / BC',
+                  'अनुसूचित जाति / SC',
+                  'अनुसूचित जनजाति / ST',
+                  'गैर-आरक्षित (General / EWS)'
+                ].map((d) => DropdownMenuItem(value: d, child: Text(d, style: const TextStyle(fontSize: 12.5)))).toList(),
+                onChanged: (v) => setState(() => _casteCategory = v ?? _casteCategory),
+              ),
+              const SizedBox(height: 12),
+
+              _buildFieldWithLabel('Jati Ka Naam (Caste)', _casteName, isRequired: true, hint: 'e.g. Kushwaha / Yadav / Kurmi / Teli / Paswan'),
             ], cardBg),
             const SizedBox(height: 16),
-            _buildSectionHeader('4. Aay Ka Vivaran (Income Details)', Icons.currency_rupee_rounded),
+
+            // 4. Income Details
+            _buildSectionHeader('4. Aay Ka Vivaran (Annual Income in Rs)', Icons.currency_rupee_rounded),
             _buildCard([
-              _buildTextField('Sarkari Seva Se Aay', _incomeGovt, keyboard: TextInputType.number, onChanged: (_) => _calculateTotalIncome()),
-              const SizedBox(height: 8),
-              _buildTextField('Krishi (Agriculture) Se Aay', _incomeAgri, keyboard: TextInputType.number, onChanged: (_) => _calculateTotalIncome()),
-              const SizedBox(height: 8),
-              _buildTextField('Vyavsayik (Business) Aay', _incomeBiz, keyboard: TextInputType.number, onChanged: (_) => _calculateTotalIncome()),
-              const SizedBox(height: 8),
-              _buildTextField('Anya Shroton Se Aay', _incomeOther, keyboard: TextInputType.number, onChanged: (_) => _calculateTotalIncome()),
-              const SizedBox(height: 10),
-              _buildTextField('Kul Varshik Aay (Total Income)', _incomeTotal, isRequired: true, keyboard: TextInputType.number),
+              _buildFieldWithLabel('Sarkari Seva Se Aay (Govt Income)', _incomeGovt, isRequired: false, keyboard: TextInputType.number, onChanged: (_) => _calculateTotalIncome()),
+              _buildFieldWithLabel('Krishi Se Aay (Agriculture Income)', _incomeAgri, isRequired: false, keyboard: TextInputType.number, onChanged: (_) => _calculateTotalIncome()),
+              _buildFieldWithLabel('Vyavsayik Aay (Business Income)', _incomeBiz, isRequired: false, keyboard: TextInputType.number, onChanged: (_) => _calculateTotalIncome()),
+              _buildFieldWithLabel('Anya Shroton Se Aay (Other Sources)', _incomeOther, isRequired: false, keyboard: TextInputType.number, onChanged: (_) => _calculateTotalIncome()),
+              _buildFieldWithLabel('Kul Varshik Aay (Total Income)', _incomeTotal, isRequired: true, keyboard: TextInputType.number, hint: 'Auto-calculated'),
             ], cardBg),
+
             const SizedBox(height: 24),
             ElevatedButton.icon(
               onPressed: _saveProfile,
@@ -291,6 +561,7 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(vertical: 14),
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                elevation: 3,
               ),
               icon: const Icon(Icons.check_circle_rounded, size: 20),
               label: const Text('Master Profile Save Karein ⚡', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 14)),
@@ -302,24 +573,51 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
     );
   }
 
-  Widget _buildInfoBanner() {
+  Widget _buildLegendBar() {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: const Color(0xFFB45309).withValues(alpha: 0.1),
+        color: const Color(0xFFB45309).withValues(alpha: 0.08),
         borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: const Color(0xFFB45309).withValues(alpha: 0.3)),
+        border: Border.all(color: const Color(0xFFB45309).withValues(alpha: 0.25)),
       ),
-      child: const Row(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Icon(Icons.info_outline_rounded, color: Color(0xFFB45309), size: 18),
-          SizedBox(width: 8),
-          Expanded(
-            child: Text(
-              'Yahan apni details 1-baar bharein. RTPS Jati, Aay, Niwas form kholte hi 1-click me saara form bina session timeout ke fill ho jayega.',
-              style: TextStyle(fontSize: 11.5, height: 1.35, fontWeight: FontWeight.w600),
-            ),
+          const Row(
+            children: [
+              Icon(Icons.info_outline_rounded, color: Color(0xFFB45309), size: 18),
+              SizedBox(width: 8),
+              Text('Field Indicators (संकेत):', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+            ],
+          ),
+          const SizedBox(height: 6),
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                decoration: BoxDecoration(color: Colors.red.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(4)),
+                child: const Text('* लाल (Red)', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: 11)),
+              ),
+              const SizedBox(width: 8),
+              const Expanded(
+                child: Text('Aniwarya hai (Mandatory — portal par required hai).', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w500)),
+              ),
+            ],
+          ),
+          const SizedBox(height: 4),
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                decoration: BoxDecoration(color: Colors.grey.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(4)),
+                child: const Text('Grey', style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold, fontSize: 11)),
+              ),
+              const SizedBox(width: 8),
+              const Expanded(
+                child: Text('Vaekalpik hai (Optional — khali chhod sakte hain).', style: TextStyle(fontSize: 11.5, color: Colors.grey)),
+              ),
+            ],
           ),
         ],
       ),
@@ -333,7 +631,7 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
         children: [
           Icon(icon, size: 16, color: const Color(0xFFB45309)),
           const SizedBox(width: 6),
-          Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+          Text(title, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5)),
         ],
       ),
     );
@@ -354,10 +652,83 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
     );
   }
 
+  Widget _buildFieldWithLabel(
+    String label,
+    TextEditingController ctrl, {
+    required bool isRequired,
+    String? hint,
+    TextInputType keyboard = TextInputType.text,
+    void Function(String)? onChanged,
+  }) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 12),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Text(label, style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
+              if (isRequired) ...[
+                const SizedBox(width: 4),
+                const Text('*', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: 14)),
+                const SizedBox(width: 4),
+                const Text('(Mandatory)', style: TextStyle(color: Colors.red, fontSize: 10, fontWeight: FontWeight.w600)),
+              ] else ...[
+                const SizedBox(width: 4),
+                const Text('(Optional)', style: TextStyle(color: Colors.grey, fontSize: 10)),
+              ],
+            ],
+          ),
+          const SizedBox(height: 5),
+          TextFormField(
+            controller: ctrl,
+            keyboardType: keyboard,
+            onChanged: onChanged,
+            validator: (v) {
+              if (isRequired && (v == null || v.trim().isEmpty)) {
+                return '$label aniwarya hai';
+              }
+              return null;
+            },
+            style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
+            decoration: _inputDecoration(hint ?? label),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildDropdownHeader(String label, {required bool isRequired}) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 5),
+      child: Row(
+        children: [
+          Text(label, style: const TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
+          if (isRequired) ...[
+            const SizedBox(width: 4),
+            const Text('*', style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold, fontSize: 14)),
+            const SizedBox(width: 4),
+            const Text('(Mandatory)', style: TextStyle(color: Colors.red, fontSize: 10, fontWeight: FontWeight.w600)),
+          ],
+        ],
+      ),
+    );
+  }
+
+  InputDecoration _inputDecoration(String hint) {
+    return InputDecoration(
+      hintText: hint,
+      hintStyle: const TextStyle(fontSize: 12, color: Colors.grey),
+      contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+      border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
+      isDense: true,
+    );
+  }
+
   Widget _buildGenderSelector() {
     return Row(
       children: [
-        const Text('Gender: ', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
+        const Text('Gender *', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5)),
         const SizedBox(width: 10),
         ChoiceChip(
           label: const Text('पुरुष (Male)'),
@@ -371,78 +742,6 @@ class _RtpsUniversalSetupScreenState extends State<RtpsUniversalSetupScreen> {
           onSelected: (v) => setState(() => _gender = 'FEMALE'),
         ),
       ],
-    );
-  }
-
-  Widget _buildTextField(String label, TextEditingController ctrl, {bool isRequired = false, TextInputType keyboard = TextInputType.text, void Function(String)? onChanged}) {
-    return TextFormField(
-      controller: ctrl,
-      keyboardType: keyboard,
-      onChanged: onChanged,
-      validator: (v) {
-        if (isRequired && (v == null || v.trim().isEmpty)) {
-          return '$label zaroori hai';
-        }
-        return null;
-      },
-      style: const TextStyle(fontSize: 13, fontWeight: FontWeight.w600),
-      decoration: InputDecoration(
-        labelText: label,
-        labelStyle: const TextStyle(fontSize: 12),
-        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-        isDense: true,
-      ),
-    );
-  }
-
-  Widget _buildDistrictDropdown() {
-    return DropdownButtonFormField<String>(
-      value: _selectedDistrict,
-      decoration: InputDecoration(
-        labelText: 'Zila (District)',
-        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-        isDense: true,
-      ),
-      items: _biharDistricts.map((d) => DropdownMenuItem(value: d, child: Text(d, style: const TextStyle(fontSize: 12.5)))).toList(),
-      onChanged: (v) => setState(() => _selectedDistrict = v ?? 'PATNA'),
-    );
-  }
-
-  Widget _buildProfessionDropdown() {
-    final list = ['छात्र (Student)', 'सरकारी सेवा (Govt Service)', 'निजी सेवा (Private Service)', 'व्यापार (Business)', 'किसान (Farmer)', 'गृहणी (Housewife)', 'अन्य (Other)'];
-    return DropdownButtonFormField<String>(
-      value: list.contains(_profession) ? _profession : list.first,
-      decoration: InputDecoration(
-        labelText: 'Pesha (Profession)',
-        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-        isDense: true,
-      ),
-      items: list.map((d) => DropdownMenuItem(value: d, child: Text(d, style: const TextStyle(fontSize: 12.5)))).toList(),
-      onChanged: (v) => setState(() => _profession = v ?? list.first),
-    );
-  }
-
-  Widget _buildCasteCategoryDropdown() {
-    final list = [
-      'अत्यंत पिछड़ा वर्ग (अनुसूची-1) / EBC',
-      'पिछड़ा वर्ग (अनुसूची-2) / BC',
-      'अनुसूचित जाति / SC',
-      'अनुसूचित जनजाति / ST',
-      'गैर-आरक्षित (General / EWS)'
-    ];
-    return DropdownButtonFormField<String>(
-      value: list.contains(_casteCategory) ? _casteCategory : list.first,
-      decoration: InputDecoration(
-        labelText: 'Varg (Category)',
-        contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-        border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
-        isDense: true,
-      ),
-      items: list.map((d) => DropdownMenuItem(value: d, child: Text(d, style: const TextStyle(fontSize: 12.5)))).toList(),
-      onChanged: (v) => setState(() => _casteCategory = v ?? list.first),
     );
   }
 }
