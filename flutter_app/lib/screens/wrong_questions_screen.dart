@@ -16,21 +16,16 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   List<Map<String, dynamic>> _wrongListMemory = [];
   bool _isHindi = true;
 
-  bool _isAnalyzing = false;
-  String? _aiAnalysisReport;
-
   // Filter selection: 'ALL', 'REVISION', 'MOCK'
   String _selectedFilter = 'ALL';
 
   final Map<int, bool> _isExplanationExpanded = {}; 
-  final Map<int, List<Map<String, String>>> _vaultAiChatHistory = {};
-  final Map<int, bool> _vaultAskedStatus = {};
 
   // Store "Why Wrong" fast AI responses (Index -> Text)
   final Map<int, String> _whyWrongAiResponses = {};
   final Map<int, bool> _whyWrongLoading = {};
 
-  // ⏳ Global Anti-Spam Cooldown across all Vault AI Actions (15 Seconds)
+  // ⏳ Global Anti-Spam Cooldown for Analyze Trap (15 Seconds)
   static DateTime? _lastVaultAiCallTime;
   static const int _vaultCooldownSeconds = 15;
 
@@ -55,32 +50,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
         _wrongListMemory = List.from(list);
         return list;
       });
-      _aiAnalysisReport = null;
     });
-  }
-
-  void _runAiAnalysis(List<Map<String, dynamic>> list) async {
-    final int cooldown = _getVaultCooldownRemaining();
-    if (cooldown > 0) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(
-          content: Text('⏳ Please wait ${cooldown}s before analyzing report again!'),
-          duration: const Duration(seconds: 2),
-          backgroundColor: const Color(0xFFDC2626),
-        ),
-      );
-      return;
-    }
-
-    _lastVaultAiCallTime = DateTime.now();
-    setState(() => _isAnalyzing = true);
-    String report = await AiExplainerService.analyzeWrongQuestions(list);
-    if (mounted) {
-      setState(() {
-        _aiAnalysisReport = report;
-        _isAnalyzing = false;
-      });
-    }
   }
 
   // 🎯 SMART DETECTION FOR SECTIONAL MOCK ("Set 1", "Set 2", "Set-01", etc.)
@@ -138,7 +108,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               ),
               content: SingleChildScrollView(
                 child: Column(
-                  mainAxisSize: MainAxisSize.min, // 🟢 FIXED HERE
+                  mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     MathFormattedText(
@@ -253,203 +223,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                     child: Text(qIndex < wrongList.length - 1 ? "Next Question ➔" : "Finish Re-Quiz 🏁"),
                   )
               ],
-            );
-          },
-        );
-      },
-    );
-  }
-
-  // 💬 BOTTOM SHEET FOR VAULT QUESTION CUSTOM DOUBT (15s COOLDOWN + RETRY PROTECTION)
-  void _openVaultAiDoubtDialog(Question currentQ, int qIndex) {
-    bool hasAsked = _vaultAskedStatus[qIndex] ?? false;
-    TextEditingController doubtController = TextEditingController();
-    bool isAsking = false;
-
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (ctx) {
-        return StatefulBuilder(
-          builder: (context, setModalState) {
-            final history = _vaultAiChatHistory[qIndex] ?? [];
-            final int cooldownLeft = _getVaultCooldownRemaining();
-
-            return Padding(
-              padding: EdgeInsets.only(
-                bottom: MediaQuery.of(context).viewInsets.bottom,
-                left: 16,
-                right: 16,
-                top: 16,
-              ),
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisSize: MainAxisSize.min,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        const Row(
-                          children: [
-                            Text('🤖', style: TextStyle(fontSize: 20)),
-                            SizedBox(width: 6),
-                            Text('Ask AI Custom Doubt', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
-                          ],
-                        ),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                          decoration: BoxDecoration(
-                            color: !hasAsked ? const Color(0xFFDCFCE7) : const Color(0xFFFEE2E2),
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Text(
-                            !hasAsked ? '1 Ask Allowed' : '🔒 Limit Reached',
-                            style: TextStyle(
-                              fontSize: 10,
-                              fontWeight: FontWeight.bold,
-                              color: !hasAsked ? Colors.green.shade800 : Colors.red.shade800,
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(height: 12),
-
-                    ...history.map((chat) => Container(
-                          margin: const EdgeInsets.only(bottom: 10),
-                          padding: const EdgeInsets.all(12),
-                          decoration: BoxDecoration(
-                            color: Colors.grey.shade100,
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(color: Colors.grey.shade300),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "❓ Your Doubt: ${chat['doubt']}",
-                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5, color: Color(0xFF2563EB)),
-                              ),
-                              const Divider(height: 12),
-                              MathFormattedText(
-                                text: chat['response']!,
-                                textStyle: const TextStyle(fontSize: 12.5, height: 1.4, color: Colors.black87),
-                              ),
-                            ],
-                          ),
-                        )),
-
-                    if (!hasAsked) ...[
-                      TextField(
-                        controller: doubtController,
-                        maxLength: 100,
-                        maxLines: 2,
-                        minLines: 1,
-                        style: const TextStyle(color: Colors.black87),
-                        decoration: const InputDecoration(
-                          hintText: 'Type your exact doubt (Max 100 chars)...',
-                          hintStyle: TextStyle(fontSize: 12, color: Colors.grey),
-                          border: OutlineInputBorder(),
-                          contentPadding: EdgeInsets.all(10),
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      SizedBox(
-                        width: double.infinity,
-                        child: ElevatedButton.icon(
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: const Color(0xFF2563EB),
-                            foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(vertical: 10),
-                          ),
-                          onPressed: isAsking
-                              ? null
-                              : () async {
-                                  if (doubtController.text.trim().isEmpty) return;
-
-                                  final int cooldown = _getVaultCooldownRemaining();
-                                  if (cooldown > 0) {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        content: Text('⏳ Please wait ${cooldown}s before trying again!'),
-                                        duration: const Duration(seconds: 2),
-                                        backgroundColor: const Color(0xFFDC2626),
-                                      ),
-                                    );
-                                    return;
-                                  }
-
-                                  setModalState(() => isAsking = true);
-                                  _lastVaultAiCallTime = DateTime.now();
-
-                                  String userQuery = doubtController.text.trim();
-
-                                  String aiResp = await AiExplainerService.askCustomDoubt(
-                                    question: currentQ.getText(_isHindi),
-                                    options: currentQ.options,
-                                    correctAnswer: currentQ.options[currentQ.answerIndex],
-                                    userDoubt: userQuery,
-                                  );
-
-                                  bool isSuccess = aiResp.isNotEmpty && 
-                                                   !aiResp.contains("⚠️ AI Service busy hai") &&
-                                                   !aiResp.contains("Doubt resolve nahi ho paya");
-
-                                  if (isSuccess) {
-                                    setState(() {
-                                      _vaultAskedStatus[qIndex] = true;
-                                      _vaultAiChatHistory[qIndex] = [
-                                        ...history,
-                                        {'doubt': userQuery, 'response': aiResp}
-                                      ];
-                                    });
-
-                                    setModalState(() {
-                                      hasAsked = true;
-                                      isAsking = false;
-                                      doubtController.clear();
-                                    });
-                                  } else {
-                                    setModalState(() {
-                                      isAsking = false;
-                                    });
-                                    if (context.mounted) {
-                                      ScaffoldMessenger.of(context).showSnackBar(
-                                        SnackBar(
-                                          content: Text(aiResp),
-                                          backgroundColor: Colors.red.shade800,
-                                          duration: const Duration(seconds: 3),
-                                        ),
-                                      );
-                                    }
-                                  }
-                                },
-                          icon: isAsking
-                              ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                              : const Icon(Icons.send_rounded, size: 16),
-                          label: Text(
-                            isAsking
-                                ? 'Analyzing Deep Logic...'
-                                : (cooldownLeft > 0 ? 'Wait ${cooldownLeft}s (Cooldown) ⏳' : 'Get AI Explanation 🚀'),
-                          ),
-                        ),
-                      )
-                    ] else ...[
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        alignment: Alignment.center,
-                        child: const Text(
-                          '🔒 Question-wise 1 doubt limit complete ho chuki hai.',
-                          style: TextStyle(fontSize: 11.5, color: Colors.grey, fontWeight: FontWeight.w600),
-                        ),
-                      )
-                    ],
-                    const SizedBox(height: 16),
-                  ],
-                ),
-              ),
             );
           },
         );
@@ -580,57 +353,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
           return ListView(
             padding: const EdgeInsets.all(16),
             children: [
-              // 🩺 1. AI CONCEPT HEALTH REPORT CARD
-              Card(
-                color: const Color(0xFFEFF6FF),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(14),
-                  side: const BorderSide(color: Color(0xFF3B82F6), width: 1.2),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(14.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          const Row(
-                            children: [
-                              Text('🩺', style: TextStyle(fontSize: 22)),
-                              SizedBox(width: 8),
-                              Text('AI Concept Health Report', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Color(0xFF1E40AF))),
-                            ],
-                          ),
-                          if (_isAnalyzing)
-                            const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2))
-                          else
-                            ElevatedButton(
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: const Color(0xFF2563EB),
-                                foregroundColor: Colors.white,
-                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                              ),
-                              onPressed: () => _runAiAnalysis(rawList),
-                              child: const Text('Get Prescription 💊', style: TextStyle(fontSize: 11)),
-                            ),
-                        ],
-                      ),
-                      
-                      if (_aiAnalysisReport != null) ...[
-                        const Divider(height: 20),
-                        MathFormattedText(
-                          text: _aiAnalysisReport!,
-                          textStyle: const TextStyle(fontSize: 12.5, color: Color(0xFF1E3A8A), height: 1.4),
-                        ),
-                      ],
-                    ],
-                  ),
-                ),
-              ),
-              const SizedBox(height: 12),
-
-              // 🛠️ 2. RESUME FIX CARD
+              // 🛠️ 1. RESUME FIX CARD
               Card(
                 color: const Color(0xFFECFDF5),
                 shape: RoundedRectangleBorder(
@@ -665,7 +388,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               ),
               const SizedBox(height: 12),
 
-              // 🏷️ 3. FILTER TABS
+              // 🏷️ 2. FILTER TABS
               Row(
                 children: [
                   _filterChip('ALL', 'All (${rawList.length})'),
@@ -677,7 +400,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               ),
               const SizedBox(height: 14),
 
-              // 📋 4. COMPACT WRONG QUESTION CARDS
+              // 📋 3. COMPACT WRONG QUESTION CARDS
               ...List.generate(filteredList.length, (index) {
                 final qJson = filteredList[index];
                 final q = Question.fromJson(qJson);
@@ -691,7 +414,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                 String userSelectedOpt = (qJson['userSelectedOption'] ?? '').toString();
 
                 bool isExpanded = _isExplanationExpanded[index] ?? false;
-                bool hasAsked = _vaultAskedStatus[index] ?? false;
                 bool isWhyWrongLoading = _whyWrongLoading[index] ?? false;
                 String? whyWrongAiText = _whyWrongAiResponses[index];
 
@@ -708,7 +430,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        // Card Header: Pure Metadata (No direct Ask AI)
+                        // Card Header
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -868,40 +590,6 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   text: whyWrongAiText,
                                   textStyle: const TextStyle(fontSize: 11.5, color: Color(0xFF881337), height: 1.35),
                                 ),
-
-                                // 🚀 PROGRESSIVE REVEAL: Sirf Analysis aane ke baad hi Ask AI Button Show hoga
-                                const SizedBox(height: 8),
-                                const Divider(height: 1, color: Color(0xFFFECDD3)),
-                                const SizedBox(height: 8),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    const Text(
-                                      "Still confused?",
-                                      style: TextStyle(fontSize: 11, fontStyle: FontStyle.italic, color: Colors.black54),
-                                    ),
-                                    InkWell(
-                                      onTap: () => _openVaultAiDoubtDialog(q, index),
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                                        decoration: BoxDecoration(
-                                          color: const Color(0xFF2563EB),
-                                          borderRadius: BorderRadius.circular(6),
-                                        ),
-                                        child: Row(
-                                          children: [
-                                            const Text('🤖', style: TextStyle(fontSize: 10)),
-                                            const SizedBox(width: 4),
-                                            Text(
-                                              hasAsked ? 'View Doubt Ans ✓' : 'Ask 1 Custom Doubt ➔',
-                                              style: const TextStyle(color: Colors.white, fontSize: 10, fontWeight: FontWeight.bold),
-                                            ),
-                                          ],
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
                               ] else ...[
                                 const SizedBox(height: 6),
                                 Text(
@@ -1037,7 +725,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
           label,
           style: TextStyle(
             fontSize: 10.5,
-            fontWeight: isSelected ? FontWeight.bold : FontWeight.w500,
+            fontWeight: FontWeight.bold,
             color: isSelected ? color : Colors.grey.shade700,
           ),
         ),
