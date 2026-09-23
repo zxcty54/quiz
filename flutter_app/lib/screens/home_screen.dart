@@ -11,7 +11,7 @@ import 'package:app_links/app_links.dart';
 import '../models/question_model.dart';
 import '../services/telegram_tracker.dart';
 import '../services/challenge_service.dart';
-import '../services/ai_explainer_service.dart'; // 👈 AI Batch Processing Hook
+import '../services/ai_explainer_service.dart';
 import 'challenge_quiz_screen.dart';
 import 'community_feed_screen.dart';
 import 'creator_auth_screen.dart';
@@ -23,6 +23,9 @@ import 'sectional_cbt_screen.dart';
 import 'tabs/home_tab.dart';
 import 'tabs/revision_tab.dart';
 import 'tabs/sectional_tab.dart';
+
+// 🛠️ Aspirant Tools Import
+import 'widgets/exam_photo_resizer_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -59,7 +62,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     _loadAllConfigs();
     _initChallengeDeepLinks();
 
-    // 🚀 Silent Background Sync (Har 15-min cycle check karega)
+    // 🚀 Silent Background Sync
     AiExplainerService.syncBatchMasteryEvolution();
   }
 
@@ -73,13 +76,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   void _initChallengeDeepLinks() {
     _appLinks = AppLinks();
 
-    // Link incoming stream (app running/background)
     _linkSubscription = _appLinks.uriLinkStream.listen(
       (uri) => _handleIncomingChallengeUri(uri),
       onError: (err) => debugPrint("DeepLink stream error: $err"),
     );
 
-    // Initial link (cold start/app launched via link)
     _appLinks.getInitialLink().then((uri) {
       if (uri != null) _handleIncomingChallengeUri(uri);
     }).catchError((err) => debugPrint("DeepLink initial error: $err"));
@@ -119,8 +120,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       _fetchLiveAppConfig();
       _fetchSectionalDataLive();
       _fetchSubjectMappingLive();
-
-      // 🔄 App resume hone par bhi silent cycle check
       AiExplainerService.syncBatchMasteryEvolution();
     }
   }
@@ -131,8 +130,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     try {
       final String configStr = await rootBundle.loadString('assets/data/app_config.json');
       _appConfig = jsonDecode(configStr);
-
-      // Model config update
       AiExplainerService.updateModelFromConfig(_appConfig);
     } catch (e) {
       debugPrint("Error loading app_config.json: $e");
@@ -456,6 +453,73 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                         },
                       ),
                       const Divider(),
+
+                      // 🔥 NAYA SECTION: Aspirant Utility Tools Expandable Drawer Section
+                      Theme(
+                        data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                        child: ExpansionTile(
+                          initiallyExpanded: true,
+                          leading: const Icon(Icons.handyman_rounded, color: Color(0xFFB45309)),
+                          title: const Text(
+                            'Aspirant Utility Tools',
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
+                          ),
+                          children: [
+                            // Tool 1: Photo & Signature Resizer
+                            ListTile(
+                              contentPadding: const EdgeInsets.only(left: 32, right: 16),
+                              leading: Container(
+                                padding: const EdgeInsets.all(6),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFB45309).withValues(alpha: 0.12),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: const Icon(
+                                  Icons.photo_size_select_large_rounded,
+                                  size: 18,
+                                  color: Color(0xFFB45309),
+                                ),
+                              ),
+                              title: const Text(
+                                'Photo & Sign Resizer',
+                                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
+                              ),
+                              subtitle: const Text(
+                                'BPSC, BSSC, Police (<20KB / 50KB)',
+                                style: TextStyle(fontSize: 11),
+                              ),
+                              trailing: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF16A34A).withValues(alpha: 0.15),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: const Text(
+                                  'NEW',
+                                  style: TextStyle(
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w900,
+                                    color: Color(0xFF16A34A),
+                                  ),
+                                ),
+                              ),
+                              onTap: () {
+                                Navigator.pop(context);
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => ExamPhotoResizerScreen(isDark: _isDarkMode),
+                                  ),
+                                );
+                              },
+                            ),
+
+                            // 💡 Future Tools: Yahan aage Kattha-Dhur ya RTPS Tracker plug kar sakte hain
+                          ],
+                        ),
+                      ),
+                      const Divider(),
+
                       ListTile(
                         leading: const Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
                         title: const Text('Community Feed'),
@@ -771,7 +835,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   ),
                   content: Text(
                     'Aapne pichli baar ${savedIndex + 1}/${qList.length} questions attempt kiye the. Kahan se continue karna hai?',
-                    style: const TextStyle(fontSize: 13, color: const Color(0xFFCBD5E1), height: 1.4),
+                    style: const TextStyle(fontSize: 13, color: Color(0xFFCBD5E1), height: 1.4),
                   ),
                   actions: [
                     TextButton(
