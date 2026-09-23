@@ -43,7 +43,7 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
     }
   }
 
-  // 🚀 Sequential Chained Dropdowns & FastFill Engine
+  // 🚀 Bulletproof Sequential Async AutoFill Engine with Fuzzy Normalizer
   Future<void> _triggerSmartAutofill() async {
     if (_webViewController == null) return;
 
@@ -62,6 +62,45 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
       const p = $profileJson;
       let filledCount = 0;
 
+      // 🎯 Helper: String Normalizer (Hindi, Brackets, Special Chars hata kar match karna)
+      function normalize(str) {
+        if (!str) return '';
+        return str.toString()
+                  .toLowerCase()
+                  .replace(/\\(.*?\\)/g, '')     // Brackets aur unke andar ka text hatao
+                  .replace(/[\\u0900-\\u097F]/g, '') // Devanagari / Hindi script hatao
+                  .replace(/[^a-z0-9]/g, '')     // Sirf pure alphanumeric rakho
+                  .trim();
+      }
+
+      // 🎯 Helper: Fuzzy Dropdown Matcher
+      function findBestMatchingOption(selectElement, targetText) {
+        if (!selectElement || !targetText) return null;
+        const targetClean = normalize(targetText);
+        if (!targetClean) return null;
+
+        // 1. Exact Clean Match
+        for (let opt of selectElement.options) {
+          if (!opt.value || opt.value === '') continue;
+          const optTextClean = normalize(opt.text);
+          const optValClean = normalize(opt.value);
+          if (optTextClean === targetClean || optValClean === targetClean) {
+            return opt.value;
+          }
+        }
+
+        // 2. Substring / Partial Match
+        for (let opt of selectElement.options) {
+          if (!opt.value || opt.value === '') continue;
+          const optTextClean = normalize(opt.text);
+          if (optTextClean && (optTextClean.includes(targetClean) || targetClean.includes(optTextClean))) {
+            return opt.value;
+          }
+        }
+        return null;
+      }
+
+      // 1. Value Setter with Trigger Events
       function setVal(selectors, val) {
         if (!val) return;
         for (let s of selectors) {
@@ -76,37 +115,40 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         }
       }
 
+      // 2. Radio Button Matcher
       function selectRadio(textPattern) {
         if (!textPattern) return;
+        let patternClean = normalize(textPattern);
         let radios = document.querySelectorAll('input[type="radio"]');
         for (let r of radios) {
           let parent = r.closest('label') || r.parentElement;
-          if (parent && parent.innerText.toLowerCase().includes(textPattern.toLowerCase())) {
-            r.checked = true;
-            r.dispatchEvent(new Event('change', { bubbles: true }));
-            filledCount++;
-            break;
+          if (parent) {
+            let labelText = parent.innerText || '';
+            if (labelText.toLowerCase().includes(textPattern.toLowerCase()) || normalize(labelText).includes(patternClean)) {
+              r.checked = true;
+              r.dispatchEvent(new Event('change', { bubbles: true }));
+              filledCount++;
+              break;
+            }
           }
         }
       }
 
+      // 3. Async Dropdown Selector with Polling & Fuzzy Match
       async function selectDropdownAsync(selectors, targetText, maxWaitMs = 3500) {
         if (!targetText) return false;
-        let cleanTarget = targetText.toLowerCase().trim();
         let startTime = Date.now();
 
         while (Date.now() - startTime < maxWaitMs) {
           for (let s of selectors) {
             let sel = document.querySelector(s);
             if (sel && sel.options && sel.options.length > 1) {
-              for (let opt of sel.options) {
-                let optText = opt.text.toLowerCase().trim();
-                if (optText.includes(cleanTarget) || cleanTarget.includes(optText)) {
-                  sel.value = opt.value;
-                  sel.dispatchEvent(new Event('change', { bubbles: true }));
-                  filledCount++;
-                  return true;
-                }
+              let matchedValue = findBestMatchingOption(sel, targetText);
+              if (matchedValue !== null) {
+                sel.value = matchedValue;
+                sel.dispatchEvent(new Event('change', { bubbles: true }));
+                filledCount++;
+                return true;
               }
             }
           }
@@ -115,7 +157,7 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         return false;
       }
 
-      // --- 1. Basic Details ---
+      // --- 1. Basic Names & Contact Info ---
       selectRadio(p.gender === 'FEMALE' ? 'स्त्री' : 'पुरुष');
 
       setVal(['input[id*="applicant_name"]', 'input[name*="applicant_name"]'], p.name_en);
@@ -133,16 +175,17 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
       setVal(['input[id*="mobile"]', 'input[name*="mobile"]', 'input[type="tel"]'], p.mobile);
       setVal(['input[id*="email"]', 'input[name*="email"]'], p.email);
 
-      // --- 2. Address & Body ---
+      // Address Fields
       setVal(['input[id*="ward_no"]', 'input[name*="ward_no"]', 'input[id*="ward_number"]'], p.ward_no);
       setVal(['input[id*="village"]', 'input[name*="village"]'], p.village);
       setVal(['input[id*="post_office"]', 'input[name*="post_office"]'], p.post_office);
       setVal(['input[id*="pin_code"]', 'input[name*="pin_code"]', 'input[id*="pin"]'], p.pin_code);
 
+      // Local Body & Residence Type
       selectRadio(p.local_body_type);
       selectRadio(p.residence_type);
 
-      // Present Address Same as Above Checkbox
+      // Check "Same as above" for present address
       let sameAsAbove = document.querySelector('input[type="checkbox"][id*="same"], input[type="checkbox"][name*="same"]');
       if (sameAsAbove && !sameAsAbove.checked) {
         sameAsAbove.checked = true;
@@ -153,14 +196,14 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
       setVal(['input[id*="purpose"]', 'input[name*="purpose"]'], p.purpose);
       await selectDropdownAsync(['select[id*="profession"]', 'select[name*="profession"]'], p.profession, 1200);
 
-      // Income Specific
+      // Income Fields (Income Form)
       setVal(['input[id*="income_govt"]', 'input[name*="income_govt"]', 'input[id*="txt_govt_income"]'], p.income_govt);
       setVal(['input[id*="income_agri"]', 'input[name*="income_agri"]', 'input[id*="txt_agri_income"]'], p.income_agri);
       setVal(['input[id*="income_biz"]', 'input[name*="income_biz"]', 'input[id*="txt_business_income"]'], p.income_biz);
       setVal(['input[id*="income_other"]', 'input[name*="income_other"]', 'input[id*="txt_other_income"]'], p.income_other);
       setVal(['input[id*="total_income"]', 'input[name*="total_income"]', 'input[id*="txt_total_income"]'], p.income_total);
 
-      // Caste Specific
+      // Caste Category & Caste Dropdown
       if (p.caste_category) {
         await selectDropdownAsync(['select[id*="category"]', 'select[name*="category"]'], p.caste_category, 1500);
         if (p.caste_name) {
@@ -168,14 +211,14 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         }
       }
 
-      // Self Declaration
+      // Self Declaration Checkbox (I Agree)
       let agreeChk = document.querySelector('input[type="checkbox"][id*="agree"], input[type="checkbox"][name*="agree"]');
       if (agreeChk && !agreeChk.checked) {
         agreeChk.checked = true;
         agreeChk.dispatchEvent(new Event('change', { bubbles: true }));
       }
 
-      // --- 3. Cascading Dropdown Chain ---
+      // --- 2. Fuzzy Cascading Location Chain ---
       await selectDropdownAsync(['select[id*="state"]', 'select[name*="state"]'], 'BIHAR', 2000);
       let districtDone = await selectDropdownAsync(['select[id*="district"]', 'select[name*="district"]'], p.district, 3500);
 
@@ -187,7 +230,10 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
         }
       }
 
-      // --- 4. Auto-Scroll & Highlighting ---
+      // Police station fallback as text input if dropdown not found
+      setVal(['input[id*="police_station"]', 'input[name*="police_station"]', 'input[id*="thana"]'], p.police_station);
+
+      // --- 3. Auto-Scroll & Visual Highlighter on Photo & Captcha ---
       let photoInput = document.querySelector('input[type="file"]');
       let captchaInput = document.querySelector('input[name*="captcha"], input[id*="captcha"], input[id*="txt_verification"], input[placeholder*="verification"]');
 
@@ -218,12 +264,11 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
     }
   }
 
-  // ⚡ Universal Clipboard OTP Injector (Gboard aur Non-Gboard dono ke liye)
+  // ⚡ Universal Clipboard OTP Injector
   Future<void> _injectClipboardOtp() async {
     final clipboardData = await Clipboard.getData(Clipboard.kTextPlain);
     final text = clipboardData?.text ?? '';
 
-    // Extract 6-digit OTP
     final match = RegExp(r'\b\d{6}\b').firstMatch(text);
     if (match != null && _webViewController != null) {
       final otp = match.group(0);
@@ -488,8 +533,17 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                   ),
                 Expanded(
                   child: InAppWebView(
-                    initialUrlRequest: URLRequest(url: WebUri(_rtpsHomeUrl)),
+                    initialUrlRequest: URLRequest(
+                      url: WebUri(_rtpsHomeUrl),
+                      headers: {
+                        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+                        'Accept-Language': 'en-US,en;q=0.9,hi;q=0.8',
+                        'Connection': 'keep-alive',
+                        'Upgrade-Insecure-Requests': '1',
+                      },
+                    ),
                     initialSettings: InAppWebViewSettings(
+                      userAgent: 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
                       useShouldOverrideUrlLoading: true,
                       mediaPlaybackRequiresUserGesture: false,
                       javaScriptEnabled: true,
@@ -499,12 +553,16 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                       displayZoomControls: false,
                       useWideViewPort: true,
                       loadWithOverviewMode: true,
-                      initialScale: 100,
-                      textZoom: 100,
+                      mixedContentMode: MixedContentMode.MIXED_CONTENT_ALWAYS_ALLOW,
+                      domStorageEnabled: true,
+                      databaseEnabled: true,
+                      thirdPartyCookiesEnabled: true,
                     ),
                     onWebViewCreated: (ctrl) => _webViewController = ctrl,
+                    onReceivedServerTrustAuthRequest: (controller, challenge) async {
+                      return ServerTrustAuthResponse(action: ServerTrustAuthResponseAction.PROCEED);
+                    },
                     onLoadStop: (ctrl, url) async {
-                      // 📐 Auto Desktop Viewport Injection
                       await ctrl.evaluateJavascript(source: """
                         var meta = document.querySelector('meta[name="viewport"]');
                         if (!meta) {
@@ -520,7 +578,6 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                     },
                   ),
                 ),
-                // ⚡ Floating Bottom Quick OTP Bar
                 if (_showOtpBar)
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
@@ -561,7 +618,7 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                       CircularProgressIndicator(color: Color(0xFF16A34A)),
                       SizedBox(height: 12),
                       Text(
-                        'Chained Dropdowns Filling...\nState ➔ District ➔ Sub-Div ➔ Block',
+                        'Fuzzy Matching Cascading Dropdowns...\nState ➔ District ➔ Sub-Div ➔ Block',
                         textAlign: TextAlign.center,
                         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12.5),
                       ),
