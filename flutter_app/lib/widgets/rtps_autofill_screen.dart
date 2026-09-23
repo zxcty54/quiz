@@ -25,7 +25,7 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
 
   // 🔗 Direct Portal Endpoint (Bypasses ServicePlus Mobile App Ad Splash)
   static const String _rtpsHomeUrl =
-      'https://serviceonline.bihar.gov.in/serviceonline/citizenRegistration.html#/citizenHome';
+      'https://serviceonline.bihar.gov.in';
 
   // 🌐 Genuine Windows Desktop Chrome Headers jo NIC Firewall aur Mobile Ad ko bypass karte hain
   static const Map<String, String> _browserHeaders = {
