@@ -2,6 +2,9 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
+
+final supabase = Supabase.instance.client;
 
 class BiharEventsCarouselWidget extends StatefulWidget {
   final bool isDarkMode;
@@ -54,7 +57,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
   Future<void> _loadEvents() async {
     final prefs = await SharedPreferences.getInstance();
 
-    // 1️⃣ Pehle Local Cached Data Load karein (Instant Display, Zero Wait)
+    // 1️⃣ Pehle Local Cached Data Load karein
     final cachedString = prefs.getString(_cacheKey);
     if (cachedString != null && cachedString.isNotEmpty) {
       try {
@@ -71,16 +74,17 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
             _filteredEvents = _filterCurrentMonthOnly(cachedList);
             _isLoading = false;
           });
+          _fetchLiveCountsFromSupabase();
         }
       } catch (e) {
         debugPrint("Cache parse error: $e");
       }
     }
 
-    // 2️⃣ Background Fresh Fetch with Cache-Buster (Instant Remote Sync)
+    // 2️⃣ Background Fresh Fetch with Cache-Buster
     try {
-      // 🚀 Cache buster '?t=timestamp' forces GitHub CDN to deliver fresh commit instantly
-      final freshUrl = '$_jsonBaseUrl?t=${DateTime.now().millisecondsSinceEpoch}';
+      final freshUrl =
+          '$_jsonBaseUrl?t=${DateTime.now().millisecondsSinceEpoch}';
 
       final res = await http.get(
         Uri.parse(freshUrl),
@@ -104,7 +108,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
         }
 
         if (remoteList.isNotEmpty) {
-          // Cache the latest valid JSON locally
           await prefs.setString(_cacheKey, body);
 
           if (mounted) {
@@ -112,6 +115,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
               _filteredEvents = _filterCurrentMonthOnly(remoteList);
               _isLoading = false;
             });
+            _fetchLiveCountsFromSupabase();
           }
           return;
         }
@@ -120,20 +124,44 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
       debugPrint("Remote fetch failed, relying on cache: $e");
     }
 
-    // Fallback: Agar cache aur remote dono fail ho jayein tab initialEvents use karein
-    if (_filteredEvents.isEmpty && widget.initialEvents != null && widget.initialEvents!.isNotEmpty) {
+    if (_filteredEvents.isEmpty &&
+        widget.initialEvents != null &&
+        widget.initialEvents!.isNotEmpty) {
       if (mounted) {
         setState(() {
           _filteredEvents = _filterCurrentMonthOnly(widget.initialEvents!);
           _isLoading = false;
         });
+        _fetchLiveCountsFromSupabase();
       }
     } else if (mounted) {
       setState(() => _isLoading = false);
     }
   }
 
-  // 🎯 Filter: Only LIVE & Current Month Upcoming
+  // 🎯 Fetch Supabase Live Counts for All Active Cards
+  Future<void> _fetchLiveCountsFromSupabase() async {
+    for (var ev in _filteredEvents) {
+      final eventId = ev['event_id'] ?? ev['title'] ?? '';
+      if (eventId.isEmpty) continue;
+
+      try {
+        final res = await supabase
+            .from('event_attendees')
+            .select('id')
+            .eq('event_id', eventId);
+
+        if (mounted && res is List) {
+          setState(() {
+            ev['going_count'] = res.length;
+          });
+        }
+      } catch (e) {
+        debugPrint("Supabase count fetch error: $e");
+      }
+    }
+  }
+
   List<Map<String, dynamic>> _filterCurrentMonthOnly(List<dynamic> rawList) {
     final now = DateTime.now();
     final todayStr = now.toIso8601String().substring(0, 10);
@@ -156,10 +184,10 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
 
       if (startDate == null || endDate == null) continue;
 
-      // Past events drop
       if (todayStr.compareTo(endStr) > 0) continue;
 
-      final isLive = todayStr.compareTo(startStr) >= 0 && todayStr.compareTo(endStr) <= 0;
+      final isLive =
+          todayStr.compareTo(startStr) >= 0 && todayStr.compareTo(endStr) <= 0;
 
       if (isLive) {
         map['ui_status'] = 'LIVE NOW';
@@ -187,7 +215,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
     return result;
   }
 
-  // Month & Day extractor for ticket notch
   Map<String, String> _extractTicketDate(Map<String, dynamic> ev) {
     final dateRange = ev['date_range']?.toString() ?? '';
     final startIso = ev['start_iso']?.toString() ?? '';
@@ -212,7 +239,10 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
     } else if (startIso.length >= 10) {
       final dt = DateTime.tryParse(startIso);
       if (dt != null) {
-        const mNames = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"];
+        const mNames = [
+          "JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+          "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"
+        ];
         month = mNames[dt.month - 1];
         day = "${dt.day}";
       }
@@ -261,6 +291,9 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
     final history = edu['history'] as Map<String, dynamic>? ?? {};
     final geo = edu['geography_and_circuit'] as Map<String, dynamic>? ?? {};
     final culture = edu['culture_and_tradition'] as Map<String, dynamic>? ?? {};
+    final eventId = event['event_id'] ?? event['title'] ?? 'event_default';
+    final eventEndDate = event['end_iso'] ??
+        DateTime.now().add(const Duration(days: 10)).toIso8601String().substring(0, 10);
 
     showModalBottomSheet(
       context: context,
@@ -361,6 +394,21 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                 );
               }).toList(),
             ),
+
+            const SizedBox(height: 14),
+
+            // 🔥 Real Supabase Integration: I'm Going
+            EventGoingButton(
+              eventId: eventId,
+              eventEndDate: eventEndDate,
+              isDark: isDark,
+              onCountChanged: (newCount) {
+                setState(() {
+                  event['going_count'] = newCount;
+                });
+              },
+            ),
+
             Divider(
               height: 28,
               color: isDark ? Colors.white12 : const Color(0xFFE2E8F0),
@@ -391,6 +439,17 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
               'Rituals: ${culture['rituals'] ?? 'N/A'}',
               'Traditional Prasad: ${culture['special_offering'] ?? 'N/A'}',
             ]),
+
+            const SizedBox(height: 20),
+            Divider(color: isDark ? Colors.white12 : const Color(0xFFE2E8F0)),
+            const SizedBox(height: 12),
+
+            // 🔥 Real Supabase Integration: Community Tips
+            EventCommunityUpdatesWidget(
+              eventId: eventId,
+              eventEndDate: eventEndDate,
+              isDark: isDark,
+            ),
           ],
         ),
       ),
@@ -457,7 +516,6 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // Section Header
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 2),
           child: Row(
@@ -508,6 +566,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
               final ev = _filteredEvents[index];
               final bool isLive = ev['is_live'] == true;
               final ticketDate = _extractTicketDate(ev);
+              final goingCount = ev['going_count'] ?? 0;
 
               final edu = ev['educational_content'] as Map<String, dynamic>? ?? {};
               final history = edu['history'] as Map<String, dynamic>? ?? {};
@@ -519,7 +578,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
 
               Widget cardBody(double pulseAlpha) {
                 return Container(
-                  width: 295,
+                  width: 300,
                   decoration: BoxDecoration(
                     color: isDark ? const Color(0xFF1E1B18) : Colors.white,
                     borderRadius: BorderRadius.circular(18),
@@ -552,11 +611,13 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                               : const Color(0xFFB45309).withValues(alpha: 0.03),
                         ),
                       ),
+
                       Padding(
                         padding: const EdgeInsets.all(12),
                         child: Row(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            // 🎟️ 1. Left Heritage Ticket Notch
                             Container(
                               width: 58,
                               height: double.infinity,
@@ -612,33 +673,64 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                               ),
                             ),
                             const SizedBox(width: 12),
+
+                            // 📜 2. Right Info & Exam Area with Attendance Chip
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Icon(
-                                        Icons.place_rounded,
-                                        size: 13,
-                                        color: isDark ? Colors.amber.shade400 : const Color(0xFFB45309),
-                                      ),
-                                      const SizedBox(width: 3),
-                                      Expanded(
-                                        child: Text(
-                                          '${ev['district'] ?? 'Bihar'} • ${ev['administrative_division'] ?? ''}',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                          style: TextStyle(
-                                            fontSize: 11,
-                                            fontWeight: FontWeight.w700,
-                                            color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
+                                      Row(
+                                        children: [
+                                          Icon(
+                                            Icons.place_rounded,
+                                            size: 13,
+                                            color: isDark ? Colors.amber.shade400 : const Color(0xFFB45309),
                                           ),
+                                          const SizedBox(width: 3),
+                                          Text(
+                                            '${ev['district'] ?? 'Bihar'}',
+                                            style: TextStyle(
+                                              fontSize: 11,
+                                              fontWeight: FontWeight.w700,
+                                              color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+
+                                      // 👥 Live People Going Chip on Capsule Face
+                                      Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xFFB45309).withValues(alpha: 0.12),
+                                          borderRadius: BorderRadius.circular(5),
+                                        ),
+                                        child: Row(
+                                          children: [
+                                            const Icon(
+                                              Icons.people_alt_rounded,
+                                              size: 10,
+                                              color: Color(0xFFB45309),
+                                            ),
+                                            const SizedBox(width: 3),
+                                            Text(
+                                              '$goingCount going',
+                                              style: const TextStyle(
+                                                fontSize: 9.5,
+                                                fontWeight: FontWeight.w800,
+                                                color: Color(0xFFB45309),
+                                              ),
+                                            ),
+                                          ],
                                         ),
                                       ),
                                     ],
                                   ),
                                   const SizedBox(height: 4),
+
                                   Text(
                                     ev['title'] ?? '',
                                     maxLines: 1,
@@ -651,6 +743,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                                     ),
                                   ),
                                   const Spacer(),
+
                                   Wrap(
                                     spacing: 4,
                                     runSpacing: 4,
@@ -694,6 +787,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
                                     ],
                                   ),
                                   const Spacer(),
+
                                   Row(
                                     children: isLive
                                         ? [
@@ -748,6 +842,402 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
             },
           ),
         ),
+      ],
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Real Supabase Engagement: "I'm Going" Button
+// ---------------------------------------------------------------------------
+class EventGoingButton extends StatefulWidget {
+  final String eventId;
+  final String eventEndDate;
+  final bool isDark;
+  final ValueChanged<int>? onCountChanged;
+
+  const EventGoingButton({
+    super.key,
+    required this.eventId,
+    required this.eventEndDate,
+    required this.isDark,
+    this.onCountChanged,
+  });
+
+  @override
+  State<EventGoingButton> createState() => _EventGoingButtonState();
+}
+
+class _EventGoingButtonState extends State<EventGoingButton> {
+  bool _isGoing = false;
+  int _count = 0;
+  bool _loading = true;
+  String _deviceId = '';
+
+  @override
+  void initState() {
+    super.initState();
+    _initDeviceAndFetch();
+  }
+
+  Future<void> _initDeviceAndFetch() async {
+    final prefs = await SharedPreferences.getInstance();
+    _deviceId = prefs.getString('anonymous_device_uuid') ?? '';
+    if (_deviceId.isEmpty) {
+      _deviceId = 'user_${DateTime.now().millisecondsSinceEpoch}';
+      await prefs.setString('anonymous_device_uuid', _deviceId);
+    }
+
+    try {
+      final attendeesRes = await supabase
+          .from('event_attendees')
+          .select('user_id')
+          .eq('event_id', widget.eventId);
+
+      if (attendeesRes is List && mounted) {
+        setState(() {
+          _count = attendeesRes.length;
+          _isGoing = attendeesRes.any((item) => item['user_id'] == _deviceId);
+          _loading = false;
+        });
+        widget.onCountChanged?.call(_count);
+      }
+    } catch (e) {
+      debugPrint("Attendees fetch error: $e");
+      if (mounted) setState(() => _loading = false);
+    }
+  }
+
+  Future<void> _toggleGoing() async {
+    final previousGoing = _isGoing;
+    final previousCount = _count;
+
+    setState(() {
+      _isGoing = !_isGoing;
+      _isGoing ? _count++ : _count = (_count > 0 ? _count - 1 : 0);
+    });
+    widget.onCountChanged?.call(_count);
+
+    try {
+      if (_isGoing) {
+        await supabase.from('event_attendees').insert({
+          'event_id': widget.eventId,
+          'user_id': _deviceId,
+          'event_end_date': widget.eventEndDate,
+        });
+      } else {
+        await supabase
+            .from('event_attendees')
+            .delete()
+            .eq('event_id', widget.eventId)
+            .eq('user_id', _deviceId);
+      }
+    } catch (e) {
+      debugPrint("Toggle error: $e");
+      // Revert state if failed
+      if (mounted) {
+        setState(() {
+          _isGoing = previousGoing;
+          _count = previousCount;
+        });
+        widget.onCountChanged?.call(_count);
+      }
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark = widget.isDark;
+
+    return Container(
+      padding: const EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        color: isDark ? const Color(0xFF292524) : const Color(0xFFFDF8F6),
+        borderRadius: BorderRadius.circular(12),
+        border: Border.all(
+          color: isDark ? Colors.white10 : const Color(0xFFF3E8E2),
+        ),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
+            children: [
+              const Icon(Icons.people_alt_rounded, size: 18, color: Color(0xFFB45309)),
+              const SizedBox(width: 8),
+              _loading
+                  ? SizedBox(
+                      width: 14,
+                      height: 14,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                        color: isDark ? Colors.white70 : const Color(0xFFB45309),
+                      ),
+                    )
+                  : Text(
+                      '$_count log ja rahe hain',
+                      style: TextStyle(
+                        fontSize: 13,
+                        fontWeight: FontWeight.w700,
+                        color: isDark ? Colors.white70 : const Color(0xFF1C1917),
+                      ),
+                    ),
+            ],
+          ),
+          InkWell(
+            onTap: _loading ? null : _toggleGoing,
+            borderRadius: BorderRadius.circular(8),
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
+              decoration: BoxDecoration(
+                color: _isGoing ? const Color(0xFF16A34A) : const Color(0xFFB45309),
+                borderRadius: BorderRadius.circular(8),
+              ),
+              child: Row(
+                children: [
+                  Icon(
+                    _isGoing ? Icons.check_circle_rounded : Icons.add_circle_outline_rounded,
+                    size: 14,
+                    color: Colors.white,
+                  ),
+                  const SizedBox(width: 5),
+                  Text(
+                    _isGoing ? 'Marked Going' : "I'm Going",
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Real Supabase Engagement: "Ground Tips & Updates"
+// ---------------------------------------------------------------------------
+class EventCommunityUpdatesWidget extends StatefulWidget {
+  final String eventId;
+  final String eventEndDate;
+  final bool isDark;
+
+  const EventCommunityUpdatesWidget({
+    super.key,
+    required this.eventId,
+    required this.eventEndDate,
+    required this.isDark,
+  });
+
+  @override
+  State<EventCommunityUpdatesWidget> createState() =>
+      _EventCommunityUpdatesWidgetState();
+}
+
+class _EventCommunityUpdatesWidgetState
+    extends State<EventCommunityUpdatesWidget> {
+  final TextEditingController _controller = TextEditingController();
+  List<Map<String, dynamic>> _messages = [];
+  bool _isPosting = false;
+
+  @override
+  void initState() {
+    super.initState();
+    _fetchUpdates();
+  }
+
+  Future<void> _fetchUpdates() async {
+    try {
+      final res = await supabase
+          .from('event_updates')
+          .select()
+          .eq('event_id', widget.eventId)
+          .order('created_at', ascending: false)
+          .limit(10);
+
+      if (mounted && res is List) {
+        setState(() {
+          _messages = List<Map<String, dynamic>>.from(res);
+        });
+      }
+    } catch (e) {
+      debugPrint("Updates fetch error: $e");
+    }
+  }
+
+  Future<void> _postMessage() async {
+    final text = _controller.text.trim();
+    if (text.isEmpty) return;
+
+    setState(() => _isPosting = true);
+
+    try {
+      await supabase.from('event_updates').insert({
+        'event_id': widget.eventId,
+        'user_name': 'Patna Aspirant',
+        'message': text,
+        'tag': '💡 Tip',
+        'event_end_date': widget.eventEndDate,
+      });
+
+      _controller.clear();
+      FocusScope.of(context).unfocus();
+      await _fetchUpdates();
+    } catch (e) {
+      debugPrint("Post tip error: $e");
+    } finally {
+      if (mounted) setState(() => _isPosting = false);
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark = widget.isDark;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                const Icon(Icons.forum_rounded, size: 18, color: Color(0xFFB45309)),
+                const SizedBox(width: 8),
+                Text(
+                  'Live Ground Updates & Tips',
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w800,
+                    color: isDark ? Colors.white : const Color(0xFF1E293B),
+                  ),
+                ),
+              ],
+            ),
+            IconButton(
+              icon: const Icon(Icons.refresh_rounded, size: 18),
+              onPressed: _fetchUpdates,
+              color: isDark ? Colors.white60 : Colors.black54,
+              padding: EdgeInsets.zero,
+              constraints: const BoxConstraints(),
+            )
+          ],
+        ),
+        const SizedBox(height: 10),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+          decoration: BoxDecoration(
+            color: isDark ? const Color(0xFF292524) : const Color(0xFFF8FAFC),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(
+              color: isDark ? Colors.white12 : const Color(0xFFCBD5E1),
+            ),
+          ),
+          child: Row(
+            children: [
+              Expanded(
+                child: TextField(
+                  controller: _controller,
+                  maxLength: 120,
+                  style: TextStyle(
+                    fontSize: 13,
+                    color: isDark ? Colors.white : Colors.black87,
+                  ),
+                  decoration: const InputDecoration(
+                    hintText: 'Ground reality / parking tip share karein...',
+                    hintStyle: TextStyle(fontSize: 12, color: Colors.grey),
+                    border: InputBorder.none,
+                    counterText: '',
+                  ),
+                ),
+              ),
+              IconButton(
+                icon: _isPosting
+                    ? const SizedBox(
+                        width: 16,
+                        height: 16,
+                        child: CircularProgressIndicator(strokeWidth: 2),
+                      )
+                    : const Icon(Icons.send_rounded, size: 18, color: Color(0xFFB45309)),
+                onPressed: _isPosting ? null : _postMessage,
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 12),
+        if (_messages.isEmpty)
+          Padding(
+            padding: const EdgeInsets.symmetric(vertical: 10),
+            child: Center(
+              child: Text(
+                'Abhi tak koi update nahi aaya. Be the first to share!',
+                style: TextStyle(
+                  fontSize: 12,
+                  color: isDark ? Colors.white38 : Colors.grey,
+                ),
+              ),
+            ),
+          )
+        else
+          ..._messages.map((item) => Container(
+                margin: const EdgeInsets.only(bottom: 8),
+                padding: const EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  color: isDark ? const Color(0xFF221F1D) : const Color(0xFFFDF8F6),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: isDark ? Colors.white10 : const Color(0xFFF3E8E2),
+                  ),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFB45309).withValues(alpha: 0.15),
+                            borderRadius: BorderRadius.circular(4),
+                          ),
+                          child: Text(
+                            item['tag'] ?? 'Update',
+                            style: const TextStyle(
+                              fontSize: 9.5,
+                              fontWeight: FontWeight.w800,
+                              color: Color(0xFFB45309),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(width: 8),
+                        Text(
+                          item['user_name'] ?? 'Patna Aspirant',
+                          style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w700,
+                            color: isDark ? Colors.white70 : const Color(0xFF475569),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 5),
+                    Text(
+                      item['message'] ?? '',
+                      style: TextStyle(
+                        fontSize: 12.5,
+                        height: 1.35,
+                        color: isDark
+                            ? Colors.white.withValues(alpha: 0.9)
+                            : const Color(0xFF1E293B),
+                      ),
+                    ),
+                  ],
+                ),
+              )),
       ],
     );
   }
