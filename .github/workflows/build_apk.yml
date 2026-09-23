@@ -243,6 +243,8 @@ jobs:
         run: |
           flutter clean
           flutter pub get
+          # 🛠️ AGP 9.0+ Proguard auto-patch: replaces deprecated proguard-android.txt with proguard-android-optimize.txt
+          find /home/runner/.pub-cache -name "build.gradle" -path "*/flutter_inappwebview_android*/*" -exec sed -i "s/proguard-android.txt/proguard-android-optimize.txt/g" {} +
           flutter build apk --release --target-platform=android-arm64 --no-tree-shake-icons --build-number=${{ github.run_number }}
 
       - name: Locate & Package APK
