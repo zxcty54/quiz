@@ -23,30 +23,13 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
   String _errorMessage = '';
   Map<String, dynamic>? _savedProfile;
 
-  // 🔗 Direct Portal Endpoint (Bypasses ServicePlus Mobile App Ad Splash)
+  // 🔗 Stable Direct Gateway URL jo promotional redirect trigger nahi karta
   static const String _rtpsHomeUrl =
-      'https://serviceonline.bihar.gov.in';
+      'https://serviceonline.bihar.gov.in/resources/homePage/10/loginEnglish.htm';
 
-  // 🌐 Genuine Windows Desktop Chrome Headers jo NIC Firewall aur Mobile Ad ko bypass karte hain
-  static const Map<String, String> _browserHeaders = {
-    'Accept':
-        'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
-    'Accept-Language': 'en-US,en;q=0.9,hi;q=0.8',
-    'Cache-Control': 'max-age=0',
-    'Connection': 'keep-alive',
-    'Sec-Ch-Ua':
-        '"Not-A.Brand";v="99", "Chromium";v="124", "Google Chrome";v="124"',
-    'Sec-Ch-Ua-Mobile': '?0',
-    'Sec-Ch-Ua-Platform': '"Windows"',
-    'Sec-Fetch-Dest': 'document',
-    'Sec-Fetch-Mode': 'navigate',
-    'Sec-Fetch-Site': 'none',
-    'Sec-Fetch-User': '?1',
-    'Upgrade-Insecure-Requests': '1',
-  };
-
-  static const String _desktopUserAgent =
-      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36';
+  // 🌐 Genuine Android Chrome Mobile Client UA
+  static const String _androidChromeUserAgent =
+      'Mozilla/5.0 (Linux; Android 14; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.6367.179 Mobile Safari/537.36';
 
   @override
   void initState() {
@@ -74,10 +57,7 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
       _errorMessage = '';
     });
     _webViewController?.loadUrl(
-      urlRequest: URLRequest(
-        url: WebUri(_rtpsHomeUrl),
-        headers: _browserHeaders,
-      ),
+      urlRequest: URLRequest(url: WebUri(_rtpsHomeUrl)),
     );
   }
 
@@ -597,21 +577,19 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                       : InAppWebView(
                           initialUrlRequest: URLRequest(
                             url: WebUri(_rtpsHomeUrl),
-                            headers: _browserHeaders,
                           ),
                           initialSettings: InAppWebViewSettings(
-                            userAgent: _desktopUserAgent,
+                            userAgent: _androidChromeUserAgent,
                             useShouldOverrideUrlLoading: true,
                             mediaPlaybackRequiresUserGesture: false,
                             javaScriptEnabled: true,
-                            cacheEnabled: true,
+                            cacheEnabled: false,
+                            clearCache: true,
                             supportZoom: true,
                             builtInZoomControls: true,
                             displayZoomControls: false,
-                            // 🖥️ Desktop Canvas & Mode to kill mobile app banner
                             useWideViewPort: true,
                             loadWithOverviewMode: true,
-                            preferredContentMode: UserPreferredContentMode.DESKTOP,
                             mixedContentMode:
                                 MixedContentMode.MIXED_CONTENT_ALWAYS_ALLOW,
                             domStorageEnabled: true,
@@ -621,8 +599,32 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                             allowContentAccess: true,
                             transparentBackground: false,
                           ),
-                          onWebViewCreated: (ctrl) =>
-                              _webViewController = ctrl,
+                          onWebViewCreated: (ctrl) async {
+                            _webViewController = ctrl;
+                            // Purane cached banner cookies purge karein
+                            try {
+                              await CookieManager.instance().deleteAllCookies();
+                            } catch (_) {}
+                          },
+                          // 🛑 ServicePlus ke banner & Play Store redirect ko block karein
+                          shouldOverrideUrlLoading:
+                              (ctrl, navigationAction) async {
+                            final uri = navigationAction.request.url;
+                            if (uri != null) {
+                              final urlStr = uri.toString().toLowerCase();
+                              if (urlStr.contains('mobileapp') ||
+                                  urlStr.contains('play.google.com') ||
+                                  urlStr.contains('market://')) {
+                                ctrl.loadUrl(
+                                  urlRequest: URLRequest(
+                                    url: WebUri(_rtpsHomeUrl),
+                                  ),
+                                );
+                                return NavigationActionPolicy.CANCEL;
+                              }
+                            }
+                            return NavigationActionPolicy.ALLOW;
+                          },
                           onReceivedServerTrustAuthRequest:
                               (controller, challenge) async {
                             return ServerTrustAuthResponse(
@@ -648,20 +650,12 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                               _hasError = false;
                             });
 
-                            // ⚡ Desktop Viewport setup + Interstitial App Banner Remover
+                            // 🛡️ Play Store Overlay Elements Guard
                             await ctrl.evaluateJavascript(source: """
-                              // 1. Remove mobile app banner if present
-                              var banners = document.querySelectorAll('.mobile-app-banner, #mobileAppModal, .app-download-section, [class*="download-app"]');
-                              banners.forEach(function(b) { b.remove(); });
-
-                              // 2. Desktop viewport scaling
-                              var meta = document.querySelector('meta[name="viewport"]');
-                              if (!meta) {
-                                meta = document.createElement('meta');
-                                meta.name = 'viewport';
-                                document.getElementsByTagName('head')[0].appendChild(meta);
-                              }
-                              meta.content = 'width=1280, initial-scale=' + (window.innerWidth / 1280) + ', maximum-scale=3.0, user-scalable=yes';
+                              (function() {
+                                var bad = document.querySelectorAll('.mobileAppModal, #mobileAppModal, .mobileAppPopup, .app-download-section, [class*="download-app"]');
+                                bad.forEach(function(el) { el.remove(); });
+                              })();
                             """);
                           },
                           onProgressChanged: (ctrl, prog) {
