@@ -24,8 +24,9 @@ import 'tabs/home_tab.dart';
 import 'tabs/revision_tab.dart';
 import 'tabs/sectional_tab.dart';
 
-// 🛠️ Aspirant Tools Import
+// 🛠️ Aspirant Tools Imports
 import '../widgets/exam_photo_resizer_screen.dart';
+import '../widgets/rtps_autofill_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -454,7 +455,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                       ),
                       const Divider(),
 
-                      // 🔥 NAYA SECTION: Aspirant Utility Tools Expandable Drawer Section
+                      // 🛠️ Aspirant Utility Tools Expandable Drawer Section
                       Theme(
                         data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
                         child: ExpansionTile(
@@ -495,7 +496,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                                   borderRadius: BorderRadius.circular(4),
                                 ),
                                 child: const Text(
-                                  'NEW',
+                                  'READY',
                                   style: TextStyle(
                                     fontSize: 9,
                                     fontWeight: FontWeight.w900,
@@ -514,7 +515,54 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                               },
                             ),
 
-                            // 💡 Future Tools: Yahan aage Kattha-Dhur ya RTPS Tracker plug kar sakte hain
+                            // Tool 2: RTPS FastFill Assistant
+                            ListTile(
+                              contentPadding: const EdgeInsets.only(left: 32, right: 16),
+                              leading: Container(
+                                padding: const EdgeInsets.all(6),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF16A34A).withValues(alpha: 0.12),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: const Icon(
+                                  Icons.flash_on_rounded,
+                                  size: 18,
+                                  color: Color(0xFF16A34A),
+                                ),
+                              ),
+                              title: const Text(
+                                'RTPS FastFill Assistant',
+                                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
+                              ),
+                              subtitle: const Text(
+                                'Jati, Aay, Niwas (Zero Timeout)',
+                                style: TextStyle(fontSize: 11),
+                              ),
+                              trailing: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFB45309).withValues(alpha: 0.15),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: const Text(
+                                  'NEW',
+                                  style: TextStyle(
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w900,
+                                    color: Color(0xFFB45309),
+                                  ),
+                                ),
+                              ),
+                              onTap: () {
+                                Navigator.pop(context);
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => RtpsAutofillScreen(isDark: _isDarkMode),
+                                  ),
+                                );
+                              },
+                            ),
                           ],
                         ),
                       ),
