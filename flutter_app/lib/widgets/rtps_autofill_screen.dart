@@ -23,9 +23,8 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
   String _errorMessage = '';
   Map<String, dynamic>? _savedProfile;
 
-  // 🔗 Stable Direct Gateway URL jo promotional redirect trigger nahi karta
-  static const String _rtpsHomeUrl =
-      'https://serviceonline.bihar.gov.in/resources/homePage/10/loginEnglish.htm';
+  // 🔗 Stable Direct Gateway URL
+  static const String _rtpsHomeUrl = 'https://serviceonline.bihar.gov.in/';
 
   // 🌐 Genuine Android Chrome Mobile Client UA
   static const String _androidChromeUserAgent =
@@ -601,7 +600,6 @@ class _RtpsAutofillScreenState extends State<RtpsAutofillScreen> {
                           ),
                           onWebViewCreated: (ctrl) async {
                             _webViewController = ctrl;
-                            // Purane cached banner cookies purge karein
                             try {
                               await CookieManager.instance().deleteAllCookies();
                             } catch (_) {}
