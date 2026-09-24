@@ -39,19 +39,50 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
   static const int _maxAllowedBytes = 5 * 1024 * 1024; // 5 MB
 
   @override
+  void initState() {
+    super.initState();
+    // Check if the Android Activity was previously killed while taking a photo
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _retrieveLostData();
+    });
+  }
+
+  @override
   void dispose() {
     _targetInputController.dispose();
     super.dispose();
   }
 
-  // 1. Image Pick (NO compression here - Instant Load)
+  /// Crash recovery: Restores the file if Android killed the activity during camera capture
+  Future<void> _retrieveLostData() async {
+    try {
+      final LostDataResponse response = await _picker.retrieveLostData();
+      if (response.isEmpty || response.file == null) return;
+
+      final file = File(response.file!.path);
+      if (!await file.exists()) return;
+
+      final bytes = await file.length();
+      if (bytes <= _maxAllowedBytes && mounted) {
+        setState(() {
+          _originalFile = file;
+          _originalSizeKB = (bytes / 1024).round();
+        });
+      }
+    } catch (e) {
+      debugPrint('Error retrieving lost camera data: $e');
+    }
+  }
+
+  /// Crash-proof Pick Image: Uses native downsampling to eliminate high-megapixel OOM crashes
   Future<void> _pickImage(ImageSource source) async {
     try {
       final XFile? picked = await _picker.pickImage(
         source: source,
+        // Native constraints: resizes bitmap in native code before Dart receives it
         maxWidth: 1600,
         maxHeight: 1600,
-        imageQuality: 92,
+        imageQuality: 85,
       );
 
       if (picked == null || !mounted) return;
@@ -59,7 +90,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
       final file = File(picked.path);
       final bytes = await file.length();
 
-      // 5MB Limit Check
+      // Validate 5MB limit
       if (bytes > _maxAllowedBytes) {
         final sizeMB = (bytes / (1024 * 1024)).toStringAsFixed(1);
         _showOverSizeDialog(sizeMB);
@@ -72,7 +103,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
       });
       HapticFeedback.lightImpact();
     } catch (e) {
-      if (mounted) _showToast('Image pick nahi ho payi.');
+      if (mounted) _showToast('Error selecting image: $e');
     }
   }
 
@@ -90,7 +121,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
           ],
         ),
         content: Text(
-          'Aapki chuni gayi image $currentSizeMB MB ki hai.\n\nKripya 5 MB se chhoti image chunein.',
+          'Selected image is $currentSizeMB MB.\nPlease select an image smaller than 5 MB.',
           style: TextStyle(
             fontSize: 13,
             color: widget.isDark ? Colors.white70 : const Color(0xFF475569),
@@ -104,20 +135,20 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
               foregroundColor: Colors.white,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
             ),
-            child: const Text('Theek Hai', style: TextStyle(fontWeight: FontWeight.bold)),
+            child: const Text('OK', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
         ],
       ),
     );
   }
 
-  // 2. Compression Logic (Only runs when Save or Share is tapped)
+  /// Compression engine using binary search over JPEG quality and iterative dimension reduction
   Future<File?> _compressToTargetFile() async {
     if (_originalFile == null) return null;
 
     final targetKB = int.tryParse(_targetInputController.text) ?? _selectedTargetKB;
     if (targetKB < 10) {
-      _showToast('Target size kam se kam 10 KB rakhein');
+      _showToast('Target size must be at least 10 KB');
       return null;
     }
 
@@ -127,10 +158,9 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
 
     int minQ = 15;
     int maxQ = 95;
-    int currentDim = 1600;
+    int currentDim = 1200;
     Uint8List? bestBytes;
 
-    // Binary search on JPEG Quality
     for (int i = 0; i < 5; i++) {
       final midQ = ((minQ + maxQ) ~/ 2);
 
@@ -148,15 +178,15 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
 
       if (currentKB <= targetKB) {
         bestBytes = result;
-        minQ = midQ + 1;
+        minQ = midQ + 1; // Try pushing quality higher while staying under limit
       } else {
-        maxQ = midQ - 1;
+        maxQ = midQ - 1; // Exceeded limit; decrease quality
       }
 
       if (minQ > maxQ) break;
     }
 
-    // Step-down dimensions if file is still oversized
+    // Fallback: If quality reduction alone wasn't enough, scale down resolution dimensions
     if (bestBytes == null || (bestBytes.lengthInBytes / 1024) > targetKB) {
       while (currentDim > 300) {
         currentDim = (currentDim * 0.8).round();
@@ -165,7 +195,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
           _originalFile!.path,
           minWidth: currentDim,
           minHeight: currentDim,
-          quality: 72,
+          quality: 70,
           format: CompressFormat.jpeg,
           keepExif: false,
         );
@@ -185,7 +215,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     return null;
   }
 
-  // 3. Save to File Manager (With Progress Indicator)
   Future<void> _handleSave() async {
     if (_originalFile == null || _isProcessing) return;
 
@@ -195,7 +224,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     try {
       final compressed = await _compressToTargetFile();
       if (compressed == null) {
-        _showToast('Target size bohot chhota hai. Thoda badhayein.');
+        _showToast('Target size is too small for this image.');
         return;
       }
 
@@ -204,7 +233,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
       final defaultName = 'Exam_Photo_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
 
       String? selectedPath = await FilePicker.platform.saveFile(
-        dialogTitle: 'Download folder chunein:',
+        dialogTitle: 'Select destination folder:',
         fileName: defaultName,
         bytes: bytes,
         type: FileType.image,
@@ -217,21 +246,20 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
           await savedFile.writeAsBytes(bytes, flush: true);
         }
         HapticFeedback.mediumImpact();
-        _showToast('✅ Saved successfully (${compressedKB} KB)!');
+        _showToast('Saved successfully (${compressedKB} KB)!');
       } else {
         final dir = await getApplicationDocumentsDirectory();
         final savedFile = File('${dir.path}/$defaultName');
         await savedFile.writeAsBytes(bytes, flush: true);
-        _showToast('File app folder me save ho gayi (${compressedKB} KB).');
+        _showToast('Saved to app storage (${compressedKB} KB).');
       }
     } catch (e) {
-      _showToast('Save karne me dikkat aayi: $e');
+      _showToast('Failed to save file: $e');
     } finally {
       if (mounted) setState(() => _isProcessing = false);
     }
   }
 
-  // 4. Share Resized Image
   Future<void> _handleShare() async {
     if (_originalFile == null || _isProcessing) return;
 
@@ -239,7 +267,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     try {
       final compressed = await _compressToTargetFile();
       if (compressed == null) {
-        _showToast('Target size match nahi ho saka.');
+        _showToast('Could not reach target size.');
         return;
       }
 
@@ -458,8 +486,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
               ],
             ),
           ),
-
-          // Compression Loading Overlay
           if (_isProcessing)
             Container(
               color: Colors.black54,
@@ -479,7 +505,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                       CircularProgressIndicator(strokeWidth: 3, color: Color(0xFF16A34A)),
                       SizedBox(height: 16),
                       Text(
-                        'Quality optimize & compress ho rahi hai...',
+                        'Optimizing & Compressing...',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
                       ),
@@ -520,7 +546,19 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                           constraints: const BoxConstraints(maxHeight: 200),
                           width: double.infinity,
                           color: isDark ? Colors.black26 : const Color(0xFFF1F5F9),
-                          child: Image.file(_originalFile!, fit: BoxFit.contain),
+                          child: Image.file(
+                            _originalFile!,
+                            cacheWidth: 800, // Caps memory allocation in Flutter image cache
+                            fit: BoxFit.contain,
+                            errorBuilder: (context, error, stackTrace) {
+                              return const Center(
+                                child: Padding(
+                                  padding: EdgeInsets.all(16.0),
+                                  child: Text('Unable to preview image'),
+                                ),
+                              );
+                            },
+                          ),
                         ),
                       ),
                       const SizedBox(height: 12),
@@ -528,7 +566,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            'Selected: $_originalSizeKB KB (Under 5MB limit)',
+                            'Original: $_originalSizeKB KB',
                             style: const TextStyle(
                               fontWeight: FontWeight.w800,
                               fontSize: 12,
@@ -614,7 +652,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
           ),
           const SizedBox(height: 6),
           const Text(
-            'Save karte waqt image ko automatically is limit ke andar high-quality par compress kiya jayega.',
+            'The image will be automatically compressed to match this target during save or share.',
             style: TextStyle(fontSize: 11, color: Colors.grey),
           ),
           const SizedBox(height: 16),
