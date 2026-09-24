@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
@@ -21,7 +22,10 @@ class ExamPhotoResizerScreen extends StatefulWidget {
 
 class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
   final ImagePicker _picker = ImagePicker();
-  File? _originalFile;
+  
+  // Store pure bytes for stable, crash-free preview rendering
+  Uint8List? _imageBytes;
+  String? _cachedFilePath;
   int _originalSizeKB = 0;
   bool _isProcessing = false;
   int _selectedTargetKB = 50;
@@ -29,7 +33,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
   final TextEditingController _targetInputController =
       TextEditingController(text: '50');
 
-  // Exam standard presets
   final List<Map<String, dynamic>> _examPresets = [
     {'label': 'BPSC / BSSC Sign', 'kb': 20, 'icon': Icons.draw_rounded},
     {'label': 'Bihar Govt Photo', 'kb': 50, 'icon': Icons.badge_rounded},
@@ -37,12 +40,11 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     {'label': 'Identity Proof', 'kb': 200, 'icon': Icons.fingerprint_rounded},
   ];
 
-  static const int _maxAllowedBytes = 5 * 1024 * 1024; // 5 MB ceiling limit
+  static const int _maxAllowedBytes = 5 * 1024 * 1024; // 5 MB maximum
 
   @override
   void initState() {
     super.initState();
-    // Safely check for lost image data after the first frame renders
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _retrieveLostData();
     });
@@ -54,99 +56,63 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     super.dispose();
   }
 
-  /// Downsamples large camera captures natively to prevent Out-Of-Memory (OOM) crashes
-  Future<File?> _createSafePreviewFile(String sourcePath) async {
-    try {
-      final tempDir = await getTemporaryDirectory();
-      final previewPath =
-          '${tempDir.path}/preview_${DateTime.now().millisecondsSinceEpoch}.jpg';
-
-      final XFile? compressedXFile = await FlutterImageCompress.compressAndGetFile(
-        sourcePath,
-        previewPath,
-        minWidth: 1024,
-        minHeight: 1024,
-        quality: 80,
-        keepExif: false,
-        format: CompressFormat.jpeg,
-      );
-
-      if (compressedXFile != null) {
-        return File(compressedXFile.path);
-      }
-    } catch (e) {
-      debugPrint('Error creating safe preview: $e');
-    }
-    return null;
-  }
-
-  /// Crash recovery: Invoked if Android OS terminates MainActivity while Camera was active
+  // Crash recovery if Android OS killed the app while camera was running
   Future<void> _retrieveLostData() async {
     try {
       final LostDataResponse response = await _picker.retrieveLostData();
       if (response.isEmpty || response.file == null) return;
-
-      if (!mounted) return;
-      setState(() => _isProcessing = true);
-
-      final File? safeFile = await _createSafePreviewFile(response.file!.path);
-      final File fileToUse = safeFile ?? File(response.file!.path);
-
-      if (!await fileToUse.exists()) {
-        if (mounted) setState(() => _isProcessing = false);
-        return;
-      }
-
-      final bytes = await fileToUse.length();
-      if (bytes <= _maxAllowedBytes && mounted) {
-        setState(() {
-          _originalFile = fileToUse;
-          _originalSizeKB = (bytes / 1024).round();
-          _isProcessing = false;
-        });
-      } else {
-        if (mounted) setState(() => _isProcessing = false);
-      }
+      await _processImageSafe(response.file!.path);
     } catch (e) {
-      if (mounted) setState(() => _isProcessing = false);
       debugPrint('Lost data recovery error: $e');
     }
   }
 
-  /// Crash-proof image picker with resolution constraints
-  Future<void> _pickImage(ImageSource source) async {
+  // Core processing engine: shrinks the photo safely into memory bytes
+  Future<void> _processImageSafe(String rawPath) async {
+    setState(() => _isProcessing = true);
+
     try {
-      final XFile? picked = await _picker.pickImage(
-        source: source,
-        maxWidth: 1600,
-        maxHeight: 1600,
-        imageQuality: 85,
+      // 300ms pause: lets Android camera finish releasing its hardware buffer
+      await Future.delayed(const Duration(milliseconds: 300));
+
+      final File initialFile = File(rawPath);
+      if (!await initialFile.exists()) {
+        if (mounted) setState(() => _isProcessing = false);
+        return;
+      }
+
+      // Convert directly to compressed memory bytes (bypassing heavy disk UI reads)
+      final Uint8List? safeBytes = await FlutterImageCompress.compressWithFile(
+        rawPath,
+        minWidth: 800,
+        minHeight: 800,
+        quality: 75,
+        format: CompressFormat.jpeg,
+        keepExif: false,
       );
 
-      if (picked == null || !mounted) return;
+      if (safeBytes == null || !mounted) {
+        setState(() => _isProcessing = false);
+        return;
+      }
 
-      // Lock UI to prevent race conditions during native processing
-      setState(() => _isProcessing = true);
+      // Save a lightweight temporary working file
+      final tempDir = await getTemporaryDirectory();
+      final safeFile = File('${tempDir.path}/safe_${DateTime.now().millisecondsSinceEpoch}.jpg');
+      await safeFile.writeAsBytes(safeBytes, flush: true);
 
-      // Downscale native bitmap before Flutter loads it into texture memory
-      final File? safeFile = await _createSafePreviewFile(picked.path);
-      final File fileToUse = safeFile ?? File(picked.path);
-
-      final bytes = await fileToUse.length();
-
-      // Check against maximum size limit
-      if (bytes > _maxAllowedBytes) {
-        if (mounted) setState(() => _isProcessing = false);
-        final sizeMB = (bytes / (1024 * 1024)).toStringAsFixed(1);
+      final totalBytes = safeBytes.lengthInBytes;
+      if (totalBytes > _maxAllowedBytes) {
+        setState(() => _isProcessing = false);
+        final sizeMB = (totalBytes / (1024 * 1024)).toStringAsFixed(1);
         _showOverSizeDialog(sizeMB);
         return;
       }
 
-      if (!mounted) return;
-
       setState(() {
-        _originalFile = fileToUse;
-        _originalSizeKB = (bytes / 1024).round();
+        _imageBytes = safeBytes;
+        _cachedFilePath = safeFile.path;
+        _originalSizeKB = (totalBytes / 1024).round();
         _isProcessing = false;
       });
 
@@ -154,8 +120,25 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     } catch (e) {
       if (mounted) {
         setState(() => _isProcessing = false);
-        _showToast('Error selecting image: $e');
+        _showToast('Processing error: $e');
       }
+    }
+  }
+
+  // Pick image via Camera or Gallery
+  Future<void> _pickImage(ImageSource source) async {
+    try {
+      final XFile? picked = await _picker.pickImage(
+        source: source,
+        maxWidth: 1200,
+        maxHeight: 1200,
+        imageQuality: 80,
+      );
+
+      if (picked == null || !mounted) return;
+      await _processImageSafe(picked.path);
+    } catch (e) {
+      if (mounted) _showToast('Camera error: $e');
     }
   }
 
@@ -194,9 +177,9 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     );
   }
 
-  /// Target compression algorithm: Uses binary search for JPEG quality and step scaling for dimensions
+  // Compresses the working image to match the exact target size in KB
   Future<File?> _compressToTargetFile() async {
-    if (_originalFile == null) return null;
+    if (_cachedFilePath == null) return null;
 
     final targetKB = int.tryParse(_targetInputController.text) ?? _selectedTargetKB;
     if (targetKB < 10) {
@@ -205,20 +188,18 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     }
 
     final tempDir = await getTemporaryDirectory();
-    final targetPath =
-        '${tempDir.path}/exam_resize_${DateTime.now().millisecondsSinceEpoch}.jpg';
+    final targetPath = '${tempDir.path}/exam_resize_${DateTime.now().millisecondsSinceEpoch}.jpg';
 
     int minQ = 15;
     int maxQ = 95;
-    int currentDim = 1200;
+    int currentDim = 1000;
     Uint8List? bestBytes;
 
-    // Step 1: Binary search over quality levels
     for (int i = 0; i < 5; i++) {
       final midQ = ((minQ + maxQ) ~/ 2);
 
       final result = await FlutterImageCompress.compressWithFile(
-        _originalFile!.path,
+        _cachedFilePath!,
         minWidth: currentDim,
         minHeight: currentDim,
         quality: midQ,
@@ -239,16 +220,15 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
       if (minQ > maxQ) break;
     }
 
-    // Step 2: If file is still too big, scale down the pixel dimensions
     if (bestBytes == null || (bestBytes.lengthInBytes / 1024) > targetKB) {
-      while (currentDim > 300) {
+      while (currentDim > 250) {
         currentDim = (currentDim * 0.8).round();
 
         final result = await FlutterImageCompress.compressWithFile(
-          _originalFile!.path,
+          _cachedFilePath!,
           minWidth: currentDim,
           minHeight: currentDim,
-          quality: 70,
+          quality: 65,
           format: CompressFormat.jpeg,
           keepExif: false,
         );
@@ -269,7 +249,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
   }
 
   Future<void> _handleSave() async {
-    if (_originalFile == null || _isProcessing) return;
+    if (_cachedFilePath == null || _isProcessing) return;
 
     setState(() => _isProcessing = true);
     HapticFeedback.lightImpact();
@@ -283,8 +263,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
 
       final compressedKB = (compressed.lengthSync() / 1024).round();
       final bytes = await compressed.readAsBytes();
-      final defaultName =
-          'Exam_Photo_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
+      final defaultName = 'Exam_Photo_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
 
       String? selectedPath = await FilePicker.platform.saveFile(
         dialogTitle: 'Select destination folder:',
@@ -315,7 +294,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
   }
 
   Future<void> _handleShare() async {
-    if (_originalFile == null || _isProcessing) return;
+    if (_cachedFilePath == null || _isProcessing) return;
 
     setState(() => _isProcessing = true);
     try {
@@ -536,7 +515,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                   ),
                 ),
                 const SizedBox(height: 24),
-                if (_originalFile != null) _buildActionCard(isDark),
+                if (_imageBytes != null) _buildActionCard(isDark),
               ],
             ),
           ),
@@ -591,7 +570,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
           borderRadius: BorderRadius.circular(18),
           child: Padding(
             padding: const EdgeInsets.all(16),
-            child: _originalFile != null
+            child: _imageBytes != null
                 ? Column(
                     children: [
                       ClipRRect(
@@ -600,19 +579,11 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                           constraints: const BoxConstraints(maxHeight: 200),
                           width: double.infinity,
                           color: isDark ? Colors.black26 : const Color(0xFFF1F5F9),
-                          // ⚡ cacheWidth limits the memory decoded in Flutter engine
-                          child: Image.file(
-                            _originalFile!,
-                            cacheWidth: 600,
+                          // ⚡ Image.memory bypasses Android FileProvider/disk locks completely
+                          child: Image.memory(
+                            _imageBytes!,
+                            cacheWidth: 500,
                             fit: BoxFit.contain,
-                            errorBuilder: (context, error, stackTrace) {
-                              return const Center(
-                                child: Padding(
-                                  padding: EdgeInsets.all(16.0),
-                                  child: Text('Unable to preview image'),
-                                ),
-                              );
-                            },
                           ),
                         ),
                       ),
