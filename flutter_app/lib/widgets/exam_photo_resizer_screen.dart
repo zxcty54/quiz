@@ -258,7 +258,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
 }
 
 // ============================================================================
-// TOOL 2: EXAM DOC & ID MERGER (INSTANT CANVAS PREVIEW + MEDIASTORE DOWNLOAD)
+// TOOL 2: EXAM DOC & ID MERGER (LIVE CANVAS & DIRECT DOWNLOAD STORAGE)
 // ============================================================================
 class ExamDocMergerScreen extends StatefulWidget {
   final bool isDark;
@@ -293,7 +293,10 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
   String _exportFormat = 'PDF';
   _PageOrientation _orientation = _PageOrientation.topBottom;
 
-  static const int _maxByteLimit = 5 * 1024 * 1024; // 5 MB Limit
+  Uint8List? _liveMergedCanvasBytes;
+  bool _isUpdatingPreview = false;
+
+  static const int _maxByteLimit = 5 * 1024 * 1024;
   static const int _maxImages = 4;
 
   Future<void> _pickDocuments() async {
@@ -309,17 +312,12 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
       final pickedList = await _picker.pickMultiImage();
       if (pickedList.isEmpty) return;
 
-      int rejectedCount = 0;
       int addedCount = 0;
-
       for (final xfile in pickedList) {
         if (addedCount >= remaining) break;
 
         final length = await xfile.length();
-        if (length > _maxByteLimit) {
-          rejectedCount++;
-          continue;
-        }
+        if (length > _maxByteLimit) continue;
 
         final bytes = await xfile.readAsBytes();
         final decoded = img.decodeImage(bytes);
@@ -329,35 +327,55 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             rawBytes: bytes,
             original: decoded,
           );
-          item.croppedPreviewBytes = _generatePreviewBytes(item);
+          item.croppedPreviewBytes = _generateItemPreview(item);
           _docs.add(item);
           addedCount++;
         }
       }
 
-      if (rejectedCount > 0 && mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('⚠️ $rejectedCount image(s) 5MB se badi hone ke kaaran skip kar di gayi.'),
-            backgroundColor: Colors.red.shade800,
-          ),
-        );
+      if (mounted) {
+        setState(() {});
+        _rebuildFullLivePreview();
       }
-
-      if (mounted) setState(() {});
     } catch (e) {
       debugPrint("Pick error: $e");
     }
   }
 
-  Uint8List _generatePreviewBytes(_DocItem doc) {
+  Uint8List _generateItemPreview(_DocItem doc) {
     final cropped = _cropImage(doc, applySharpen: _enableSharpenClean);
     final scaled = img.copyResize(
       cropped,
-      width: math.min(600, cropped.width),
+      width: math.min(450, cropped.width),
       interpolation: img.Interpolation.linear,
     );
-    return Uint8List.fromList(img.encodeJpg(scaled, quality: 85));
+    return Uint8List.fromList(img.encodeJpg(scaled, quality: 80));
+  }
+
+  Future<void> _rebuildFullLivePreview() async {
+    if (_docs.isEmpty) {
+      setState(() => _liveMergedCanvasBytes = null);
+      return;
+    }
+    setState(() => _isUpdatingPreview = true);
+
+    try {
+      final merged = await Future<img.Image>(_buildMergedImage);
+      final thumb = img.copyResize(
+        merged,
+        width: math.min(750, merged.width),
+        interpolation: img.Interpolation.linear,
+      );
+      final bytes = Uint8List.fromList(img.encodeJpg(thumb, quality: 85));
+      if (mounted) {
+        setState(() {
+          _liveMergedCanvasBytes = bytes;
+          _isUpdatingPreview = false;
+        });
+      }
+    } catch (e) {
+      if (mounted) setState(() => _isUpdatingPreview = false);
+    }
   }
 
   img.Image _enhanceDocumentText(img.Image src) {
@@ -475,6 +493,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
       _docs.insert(toIndex, temp);
     });
     HapticFeedback.lightImpact();
+    _rebuildFullLivePreview();
   }
 
   Future<void> _openCropDialog(int index) async {
@@ -523,7 +542,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
             ),
             icon: const Icon(Icons.check_rounded, size: 18),
-            label: const Text('Done (Apply Crop)', style: TextStyle(fontWeight: FontWeight.bold)),
+            label: const Text('Apply Crop', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
         ],
       ),
@@ -532,36 +551,45 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
     if (confirmed == true && mounted) {
       setState(() {
         doc.cropRect = tempRect;
-        doc.croppedPreviewBytes = _generatePreviewBytes(doc);
+        doc.croppedPreviewBytes = _generateItemPreview(doc);
       });
+      _rebuildFullLivePreview();
       HapticFeedback.mediumImpact();
     }
   }
 
-  // 📁 Direct Phone Downloads Directory Resolver
-  Future<Directory> _getPublicDownloadDirectory() async {
+  // 🚀 Guaranteed File Manager Accessible Path on Android
+  Future<File> _saveDirectlyToDownloads(Uint8List bytes, String fileName) async {
+    List<Directory> targetDirs = [];
+
     if (Platform.isAndroid) {
-      final downloadDir = Directory('/storage/emulated/0/Download');
-      if (await downloadDir.exists()) {
-        return downloadDir;
+      // 1. Primary Public Download folder
+      final publicDownload = Directory('/storage/emulated/0/Download');
+      if (publicDownload.existsSync()) targetDirs.add(publicDownload);
+
+      // 2. External Storage Directory (App public root)
+      final extDir = await getExternalStorageDirectory();
+      if (extDir != null) targetDirs.add(extDir);
+    }
+
+    final docsDir = await getApplicationDocumentsDirectory();
+    targetDirs.add(docsDir);
+
+    for (final dir in targetDirs) {
+      try {
+        if (!dir.existsSync()) dir.createSync(recursive: true);
+        final f = File(path.join(dir.path, fileName));
+        await f.writeAsBytes(bytes, flush: true);
+        if (await f.exists() && await f.length() > 0) {
+          return f;
+        }
+      } catch (e) {
+        continue;
       }
     }
-    return await getApplicationDocumentsDirectory();
-  }
-
-  // 🔔 Trigger Android OS Media Scan taaki File Manager me turant index ho jaye
-  Future<void> _scanFileInSystem(String filePath) async {
-    try {
-      if (Platform.isAndroid) {
-        await Process.run('am', [
-          'broadcast',
-          '-a',
-          'android.intent.action.MEDIA_SCANNER_SCAN_FILE',
-          '-d',
-          'file://$filePath',
-        ]);
-      }
-    } catch (_) {}
+    final fallback = File(path.join(docsDir.path, fileName));
+    await fallback.writeAsBytes(bytes, flush: true);
+    return fallback;
   }
 
   Future<void> _exportDocument() async {
@@ -571,7 +599,6 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
 
     try {
       final mergedImg = await Future<img.Image>(_buildMergedImage);
-      final downloadDir = await _getPublicDownloadDirectory();
       final stamp = DateTime.now().millisecondsSinceEpoch;
 
       int targetMaxBytes = 100 * 1024;
@@ -594,8 +621,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
 
       File exportedFile;
       if (_exportFormat == 'JPG') {
-        exportedFile = File(path.join(downloadDir.path, 'MockTester_$stamp.jpg'));
-        await exportedFile.writeAsBytes(compressedJpg, flush: true);
+        exportedFile = await _saveDirectlyToDownloads(compressedJpg, 'MockTester_Doc_$stamp.jpg');
       } else {
         final pdf = pw.Document();
         final imgProvider = pw.MemoryImage(compressedJpg);
@@ -611,11 +637,9 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             },
           ),
         );
-        exportedFile = File(path.join(downloadDir.path, 'MockTester_$stamp.pdf'));
-        await exportedFile.writeAsBytes(await pdf.save(), flush: true);
+        final pdfBytes = await pdf.save();
+        exportedFile = await _saveDirectlyToDownloads(pdfBytes, 'MockTester_Doc_$stamp.pdf');
       }
-
-      await _scanFileInSystem(exportedFile.path);
 
       if (!mounted) return;
       _showSuccessSheet(exportedFile, compressedJpg.lengthInBytes);
@@ -649,18 +673,18 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                 child: const Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 36),
               ),
               const SizedBox(height: 12),
-              const Text('File Saved to Downloads! 📁', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
+              const Text('Document Ready & Saved! ⚡', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
               const SizedBox(height: 6),
               Text(
                 path.basename(file.path),
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 12.5, color: Colors.blueAccent, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 12, color: Colors.blueAccent, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
               Text(
-                'Size: $sizeKb KB • Location: Internal Storage > Download',
+                'Size: $sizeKb KB • File Location:\n${file.path}',
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 11, color: Colors.grey),
+                style: const TextStyle(fontSize: 10.5, color: Colors.grey),
               ),
               const SizedBox(height: 18),
               Row(
@@ -669,7 +693,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                     child: OutlinedButton.icon(
                       onPressed: () {
                         Navigator.pop(ctx);
-                        Share.shareXFiles([XFile(file.path)]);
+                        Share.shareXFiles([XFile(file.path)], text: 'MockTester Saved Document');
                       },
                       style: OutlinedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 12),
@@ -682,15 +706,20 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                   ),
                   const SizedBox(width: 10),
                   Expanded(
-                    child: ElevatedButton(
-                      onPressed: () => Navigator.pop(ctx),
+                    child: ElevatedButton.icon(
+                      onPressed: () {
+                        Navigator.pop(ctx);
+                        // Save copy dialog / open action
+                        Share.shareXFiles([XFile(file.path)], subject: 'MockTester Document');
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xFF16A34A),
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(vertical: 12),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                       ),
-                      child: const Text('OK Done', style: TextStyle(fontWeight: FontWeight.bold)),
+                      icon: const Icon(Icons.download_done_rounded, size: 18),
+                      label: const Text('Export/Save Copy', style: TextStyle(fontWeight: FontWeight.bold)),
                     ),
                   ),
                 ],
@@ -714,7 +743,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Doc & ID Merger (1-4 Images)', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15.5)),
-            Text('Live Document Preview • Public Downloads Folder', style: TextStyle(fontSize: 10, color: Colors.grey)),
+            Text('Live Canvas Preview • Direct Document Export', style: TextStyle(fontSize: 10, color: Colors.grey)),
           ],
         ),
         backgroundColor: isDark ? const Color(0xFF1E1B18) : Colors.white,
@@ -725,7 +754,12 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             IconButton(
               icon: const Icon(Icons.delete_sweep_rounded, color: Colors.redAccent),
               tooltip: 'Clear All',
-              onPressed: () => setState(() => _docs.clear()),
+              onPressed: () {
+                setState(() {
+                  _docs.clear();
+                  _liveMergedCanvasBytes = null;
+                });
+              },
             ),
         ],
       ),
@@ -753,7 +787,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             const Text('Documents / ID Cards Chunein', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
             const SizedBox(height: 6),
             const Text(
-              '1 se 4 images select karein (ID Front/Back, Certificate, Marksheet). Direct Downloads folder me save hoga.',
+              '1 se 4 images select karein (ID Front/Back, Certificate, Marksheet). Screen par Live preview dekhein aur direct PDF download karein.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, color: Colors.grey, height: 1.4),
             ),
@@ -785,7 +819,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           child: Row(
             children: [
               Text(
-                '${_docs.length}/4 Selected',
+                '${_docs.length}/4 Images',
                 style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
               ),
               const Spacer(),
@@ -805,7 +839,10 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                     ),
                   ],
                   selected: {_orientation},
-                  onSelectionChanged: (val) => setState(() => _orientation = val.first),
+                  onSelectionChanged: (val) {
+                    setState(() => _orientation = val.first);
+                    _rebuildFullLivePreview();
+                  },
                   style: const ButtonStyle(visualDensity: VisualDensity.compact),
                 ),
                 const SizedBox(width: 8),
@@ -820,46 +857,71 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           ),
         ),
 
-        // 👁️ Live Full Document Canvas Preview (Zoomable)
+        // 👁️ LIVE COMBINED CANVAS PREVIEW (Zoomable & Stitched)
         Container(
-          height: 180,
+          height: 190,
           margin: const EdgeInsets.all(10),
           decoration: BoxDecoration(
-            color: Colors.black87,
+            color: const Color(0xFF0F172A),
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: Colors.blueAccent.withValues(alpha: 0.3)),
           ),
           child: Stack(
+            fit: StackFit.expand,
             children: [
-              InteractiveViewer(
-                minScale: 0.5,
-                maxScale: 3.0,
-                child: Center(
-                  child: Container(
-                    margin: const EdgeInsets.all(12),
-                    padding: const EdgeInsets.all(8),
-                    color: Colors.white,
-                    child: _buildLiveCombinedPreview(),
+              if (_isUpdatingPreview)
+                const Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      CircularProgressIndicator(strokeWidth: 2, color: Colors.blueAccent),
+                      SizedBox(height: 8),
+                      Text('Generating Live Preview...', style: TextStyle(color: Colors.white70, fontSize: 11)),
+                    ],
                   ),
+                )
+              else if (_liveMergedCanvasBytes != null)
+                InteractiveViewer(
+                  minScale: 0.5,
+                  maxScale: 3.5,
+                  child: Center(
+                    child: Container(
+                      margin: const EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(6),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        boxShadow: [
+                          BoxShadow(color: Colors.black.withValues(alpha: 0.4), blurRadius: 8),
+                        ],
+                      ),
+                      child: Image.memory(
+                        _liveMergedCanvasBytes!,
+                        fit: BoxFit.contain,
+                      ),
+                    ),
+                  ),
+                )
+              else
+                const Center(
+                  child: Text('Live preview ready nahi hai', style: TextStyle(color: Colors.white54, fontSize: 12)),
                 ),
-              ),
               Positioned(
                 bottom: 6,
                 right: 8,
                 child: Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                   decoration: BoxDecoration(
-                    color: Colors.black.withValues(alpha: 0.7),
+                    color: Colors.black.withValues(alpha: 0.75),
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  child: const Text('Live Document Preview (Pinch to Zoom)', style: TextStyle(color: Colors.white70, fontSize: 9.5)),
+                  child: const Text('Live Output Page Preview (Zoomable)', style: TextStyle(color: Colors.white70, fontSize: 9)),
                 ),
               ),
             ],
           ),
         ),
 
-        // 🖼️ Reorder & Crop Management List
+        // 🖼️ Reorder & Individual Crop Deck
         Expanded(
           child: ListView.builder(
             padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -892,9 +954,10 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                       setState(() {
                         _enableSharpenClean = v;
                         for (var d in _docs) {
-                          d.croppedPreviewBytes = _generatePreviewBytes(d);
+                          d.croppedPreviewBytes = _generateItemPreview(d);
                         }
                       });
+                      _rebuildFullLivePreview();
                     },
                   ),
                 ],
@@ -942,38 +1005,6 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
     );
   }
 
-  Widget _buildLiveCombinedPreview() {
-    if (_orientation == _PageOrientation.topBottom) {
-      return Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          for (int i = 0; i < _docs.length; i++) ...[
-            Image.memory(
-              _docs[i].croppedPreviewBytes ?? _docs[i].rawBytes,
-              height: 55,
-              fit: BoxFit.contain,
-            ),
-            if (i != _docs.length - 1) const SizedBox(height: 4),
-          ],
-        ],
-      );
-    } else {
-      return Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          for (int i = 0; i < _docs.length; i++) ...[
-            Image.memory(
-              _docs[i].croppedPreviewBytes ?? _docs[i].rawBytes,
-              width: 70,
-              fit: BoxFit.contain,
-            ),
-            if (i != _docs.length - 1) const SizedBox(width: 4),
-          ],
-        ],
-      );
-    }
-  }
-
   Widget _buildImageItemCard(int index, Color cardBg) {
     final doc = _docs[index];
     final previewBytes = doc.croppedPreviewBytes ?? doc.rawBytes;
@@ -991,13 +1022,12 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           ClipRRect(
             borderRadius: BorderRadius.circular(6),
             child: Container(
-              width: 60,
-              height: 60,
+              width: 58,
+              height: 58,
               color: Colors.black12,
               child: Image.memory(
                 previewBytes,
                 fit: BoxFit.contain,
-                filterQuality: FilterQuality.low,
               ),
             ),
           ),
@@ -1035,7 +1065,10 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                     const SizedBox(width: 4),
                     IconButton(
                       icon: const Icon(Icons.delete_outline_rounded, size: 17, color: Colors.redAccent),
-                      onPressed: () => setState(() => _docs.removeAt(index)),
+                      onPressed: () {
+                        setState(() => _docs.removeAt(index));
+                        _rebuildFullLivePreview();
+                      },
                       tooltip: 'Remove',
                     ),
                   ],
@@ -1080,7 +1113,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
               ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
               : const Icon(Icons.download_for_offline_rounded, size: 20),
           label: Text(
-            _isProcessing ? 'Saving to Downloads...' : 'Save $_exportFormat to Downloads Folder (${_docs.length} Images)',
+            _isProcessing ? 'Saving to Downloads...' : 'Save $_exportFormat (${_docs.length} Image${_docs.length > 1 ? "s" : ""})',
             style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13.5),
           ),
         ),
