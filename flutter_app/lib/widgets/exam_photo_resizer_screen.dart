@@ -30,11 +30,13 @@ class ExamPhotoResizerScreen extends StatefulWidget {
 
 class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
     with SingleTickerProviderStateMixin {
+  final ImagePicker _picker = ImagePicker();
   File? _originalFile;
   File? _compressedFile;
   int _originalSizeKB = 0;
   int _compressedSizeKB = 0;
   bool _isProcessing = false;
+  bool _isLoadingFromPicker = false;
   int _selectedTargetKB = 50;
 
   final TextEditingController _targetInputController =
@@ -48,36 +50,66 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
   ];
 
   @override
+  void initState() {
+    super.initState();
+    _recoverLostCameraData();
+  }
+
+  @override
   void dispose() {
     _targetInputController.dispose();
     super.dispose();
   }
 
-  Future<void> _pickImage(ImageSource source) async {
+  Future<void> _recoverLostCameraData() async {
     try {
-      final picker = ImagePicker();
-      final picked = await picker.pickImage(
+      final LostDataResponse response = await _picker.retrieveLostData();
+      if (response.isEmpty || response.file == null) return;
+
+      final file = File(response.file!.path);
+      final bytes = await file.length();
+      setState(() {
+        _originalFile = file;
+        _originalSizeKB = (bytes / 1024).round();
+        _compressedFile = null;
+        _compressedSizeKB = 0;
+      });
+      _compressImage();
+    } catch (_) {}
+  }
+
+  Future<void> _pickImage(ImageSource source) async {
+    setState(() => _isLoadingFromPicker = true);
+    try {
+      final picked = await _picker.pickImage(
         source: source,
-        maxWidth: 1800,
-        maxHeight: 1800,
-        imageQuality: 92,
+        maxWidth: 1600,
+        maxHeight: 1600,
+        imageQuality: 90,
       );
 
-      if (picked == null) return;
+      if (picked == null) {
+        if (mounted) setState(() => _isLoadingFromPicker = false);
+        return;
+      }
 
       final file = File(picked.path);
       final bytes = await file.length();
       final sizeKB = (bytes / 1024).round();
 
-      setState(() {
-        _originalFile = file;
-        _originalSizeKB = sizeKB;
-        _compressedFile = null;
-        _compressedSizeKB = 0;
-      });
+      if (mounted) {
+        setState(() {
+          _originalFile = file;
+          _originalSizeKB = sizeKB;
+          _compressedFile = null;
+          _compressedSizeKB = 0;
+          _isLoadingFromPicker = false;
+        });
+      }
 
       _compressImage();
     } catch (e) {
+      if (mounted) setState(() => _isLoadingFromPicker = false);
       _showToast('Image pick nahi ho payi. Dobara koshish karein.');
     }
   }
@@ -101,7 +133,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
 
       int minQ = 10;
       int maxQ = 98;
-      int scaleDim = 1800;
+      int scaleDim = 1600;
       Uint8List? bestBytes;
 
       for (int i = 0; i < 6; i++) {
@@ -197,7 +229,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
         final dir = await getApplicationDocumentsDirectory();
         final savedFile = File(path.join(dir.path, defaultName));
         await savedFile.writeAsBytes(bytes, flush: true);
-        _showToast('File app directory me save ho gayi.');
+        _showToast('File app folder me save ho gayi.');
       }
     } catch (e) {
       debugPrint("Save error: $e");
@@ -288,152 +320,179 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
         elevation: 0,
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        physics: const BouncingScrollPhysics(),
-        padding: const EdgeInsets.all(16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            _buildUploadCard(isDark),
-            const SizedBox(height: 18),
-            Text(
-              'Select Target Exam Standard',
-              style: TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w800,
-                color: isDark ? Colors.white70 : const Color(0xFF475569),
-              ),
-            ),
-            const SizedBox(height: 10),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              physics: const BouncingScrollPhysics(),
-              child: Row(
-                children: _examPresets.map((preset) {
-                  final isSelected = _selectedTargetKB == preset['kb'];
-                  return Padding(
-                    padding: const EdgeInsets.only(right: 8),
-                    child: InkWell(
-                      onTap: () {
-                        setState(() {
-                          _selectedTargetKB = preset['kb'];
-                          _targetInputController.text = preset['kb'].toString();
-                        });
-                        if (_originalFile != null) _compressImage();
-                      },
-                      borderRadius: BorderRadius.circular(10),
-                      child: AnimatedContainer(
-                        duration: const Duration(milliseconds: 200),
-                        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                        decoration: BoxDecoration(
-                          color: isSelected
-                              ? const Color(0xFFB45309)
-                              : (isDark ? const Color(0xFF1E1B18) : Colors.white),
+      body: Stack(
+        children: [
+          SingleChildScrollView(
+            physics: const BouncingScrollPhysics(),
+            padding: const EdgeInsets.all(16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                _buildUploadCard(isDark),
+                const SizedBox(height: 18),
+                Text(
+                  'Select Target Exam Standard',
+                  style: TextStyle(
+                    fontSize: 13,
+                    fontWeight: FontWeight.w800,
+                    color: isDark ? Colors.white70 : const Color(0xFF475569),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: const BouncingScrollPhysics(),
+                  child: Row(
+                    children: _examPresets.map((preset) {
+                      final isSelected = _selectedTargetKB == preset['kb'];
+                      return Padding(
+                        padding: const EdgeInsets.only(right: 8),
+                        child: InkWell(
+                          onTap: () {
+                            setState(() {
+                              _selectedTargetKB = preset['kb'];
+                              _targetInputController.text = preset['kb'].toString();
+                            });
+                            if (_originalFile != null) _compressImage();
+                          },
                           borderRadius: BorderRadius.circular(10),
-                          border: Border.all(
-                            color: isSelected
-                                ? const Color(0xFFB45309)
-                                : (isDark ? Colors.white10 : const Color(0xFFE2E8F0)),
-                          ),
-                        ),
-                        child: Row(
-                          children: [
-                            Icon(
-                              preset['icon'],
-                              size: 15,
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 200),
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                            decoration: BoxDecoration(
                               color: isSelected
-                                  ? Colors.white
-                                  : (isDark ? Colors.amber.shade300 : const Color(0xFFB45309)),
-                            ),
-                            const SizedBox(width: 6),
-                            Text(
-                              '${preset['label']} (<${preset['kb']}KB)',
-                              style: TextStyle(
-                                fontSize: 11.5,
-                                fontWeight: FontWeight.w700,
+                                  ? const Color(0xFFB45309)
+                                  : (isDark ? const Color(0xFF1E1B18) : Colors.white),
+                              borderRadius: BorderRadius.circular(10),
+                              border: Border.all(
                                 color: isSelected
-                                    ? Colors.white
-                                    : (isDark ? Colors.white70 : const Color(0xFF1E293B)),
+                                    ? const Color(0xFFB45309)
+                                    : (isDark ? Colors.white10 : const Color(0xFFE2E8F0)),
                               ),
                             ),
-                          ],
+                            child: Row(
+                              children: [
+                                Icon(
+                                  preset['icon'],
+                                  size: 15,
+                                  color: isSelected
+                                      ? Colors.white
+                                      : (isDark ? Colors.amber.shade300 : const Color(0xFFB45309)),
+                                ),
+                                const SizedBox(width: 6),
+                                Text(
+                                  '${preset['label']} (<${preset['kb']}KB)',
+                                  style: TextStyle(
+                                    fontSize: 11.5,
+                                    fontWeight: FontWeight.w700,
+                                    color: isSelected
+                                        ? Colors.white
+                                        : (isDark ? Colors.white70 : const Color(0xFF1E293B)),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
+                const SizedBox(height: 18),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF1E1B18) : Colors.white,
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                      color: isDark ? Colors.white10 : const Color(0xFFE2E8F0),
+                    ),
+                  ),
+                  child: Row(
+                    children: [
+                      const Icon(Icons.tune_rounded, size: 18, color: Color(0xFFB45309)),
+                      const SizedBox(width: 10),
+                      Text(
+                        'Exact Limit:',
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: isDark ? Colors.white70 : const Color(0xFF475569),
                         ),
                       ),
-                    ),
-                  );
-                }).toList(),
-              ),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: TextField(
+                          controller: _targetInputController,
+                          keyboardType: TextInputType.number,
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.w900,
+                            color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
+                          ),
+                          decoration: const InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'e.g. 50',
+                            suffixText: 'KB',
+                            suffixStyle: TextStyle(
+                              fontWeight: FontWeight.w800,
+                              fontSize: 12,
+                            ),
+                          ),
+                          onSubmitted: (_) {
+                            if (_originalFile != null) _compressImage();
+                          },
+                        ),
+                      ),
+                      ElevatedButton(
+                        onPressed: _originalFile == null || _isProcessing ? null : _compressImage,
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFFB45309),
+                          foregroundColor: Colors.white,
+                          elevation: 0,
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                        ),
+                        child: _isProcessing
+                            ? const SizedBox(
+                                width: 14,
+                                height: 14,
+                                child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                              )
+                            : const Text('Resize', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 20),
+                if (_compressedFile != null) _buildResultCard(isDark),
+              ],
             ),
-            const SizedBox(height: 18),
+          ),
+          if (_isLoadingFromPicker)
             Container(
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-              decoration: BoxDecoration(
-                color: isDark ? const Color(0xFF1E1B18) : Colors.white,
-                borderRadius: BorderRadius.circular(14),
-                border: Border.all(
-                  color: isDark ? Colors.white10 : const Color(0xFFE2E8F0),
+              color: Colors.black45,
+              width: double.infinity,
+              height: double.infinity,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                    borderRadius: BorderRadius.circular(14),
+                  ),
+                  child: const Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      CircularProgressIndicator(strokeWidth: 3, color: Color(0xFFB45309)),
+                      SizedBox(height: 14),
+                      Text('Image load ho rahi hai...', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                    ],
+                  ),
                 ),
               ),
-              child: Row(
-                children: [
-                  const Icon(Icons.tune_rounded, size: 18, color: Color(0xFFB45309)),
-                  const SizedBox(width: 10),
-                  Text(
-                    'Exact Limit:',
-                    style: TextStyle(
-                      fontSize: 13,
-                      fontWeight: FontWeight.bold,
-                      color: isDark ? Colors.white70 : const Color(0xFF475569),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: TextField(
-                      controller: _targetInputController,
-                      keyboardType: TextInputType.number,
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w900,
-                        color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
-                      ),
-                      decoration: const InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'e.g. 50',
-                        suffixText: 'KB',
-                        suffixStyle: TextStyle(
-                          fontWeight: FontWeight.w800,
-                          fontSize: 12,
-                        ),
-                      ),
-                      onSubmitted: (_) {
-                        if (_originalFile != null) _compressImage();
-                      },
-                    ),
-                  ),
-                  ElevatedButton(
-                    onPressed: _originalFile == null || _isProcessing ? null : _compressImage,
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFB45309),
-                      foregroundColor: Colors.white,
-                      elevation: 0,
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                    ),
-                    child: _isProcessing
-                        ? const SizedBox(
-                            width: 14,
-                            height: 14,
-                            child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
-                          )
-                        : const Text('Resize', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
-                  ),
-                ],
-              ),
             ),
-            const SizedBox(height: 20),
-            if (_compressedFile != null) _buildResultCard(isDark),
-          ],
-        ),
+        ],
       ),
     );
   }
@@ -681,7 +740,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
 }
 
 // ============================================================================
-// TOOL 2: EXAM DOC & ID MERGER (INSTANT CANVAS PREVIEW + FULL-SCREEN LOADER)
+// TOOL 2: EXAM DOC & ID MERGER (SAF DOWNLOAD + PROGRESS OVERLAY)
 // ============================================================================
 class ExamDocMergerScreen extends StatefulWidget {
   final bool isDark;
@@ -740,8 +799,8 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
 
     try {
       final pickedList = await _picker.pickMultiImage(
-        maxWidth: 1800,
-        maxHeight: 1800,
+        maxWidth: 1600,
+        maxHeight: 1600,
         imageQuality: 88,
       );
 
@@ -761,7 +820,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
         if (length > _maxByteLimit) continue;
 
         setState(() {
-          _loadingStatusText = 'Image ${i + 1}/${pickedList.length} decode ho rahi hai...';
+          _loadingStatusText = 'Image ${i + 1}/${pickedList.length} load ho rahi hai...';
         });
 
         final bytes = await xfile.readAsBytes();
@@ -1316,8 +1375,6 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             ],
           ),
         ),
-
-        // 👁️ LIVE COMBINED CANVAS PREVIEW
         Container(
           height: 185,
           margin: const EdgeInsets.all(10),
@@ -1360,7 +1417,6 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             ],
           ),
         ),
-
         Expanded(
           child: ListView.builder(
             padding: const EdgeInsets.symmetric(horizontal: 12),
@@ -1368,7 +1424,6 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             itemBuilder: (ctx, idx) => _buildImageItemCard(idx, cardBg),
           ),
         ),
-
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
           color: cardBg,
