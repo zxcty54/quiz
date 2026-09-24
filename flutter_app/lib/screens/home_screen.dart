@@ -24,8 +24,8 @@ import 'tabs/home_tab.dart';
 import 'tabs/revision_tab.dart';
 import 'tabs/sectional_tab.dart';
 
-// 🛠️ Aspirant Tools Imports
-
+// 🛠️ Aspirant Utility Tools Imports
+import '../widgets/exam_photo_resizer_screen.dart';
 import '../widgets/exam_doc_merger_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -51,7 +51,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   bool _hasLearningHistory = false;
   bool _isLoadingConfig = true;
 
-  // 🔗 WhatsApp Deep Link Listener
   late final AppLinks _appLinks;
   StreamSubscription<Uri>? _linkSubscription;
 
@@ -62,8 +61,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     TelegramTracker.initSession();
     _loadAllConfigs();
     _initChallengeDeepLinks();
-
-    // 🚀 Silent Background Sync
     AiExplainerService.syncBatchMasteryEvolution();
   }
 
@@ -455,7 +452,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                       ),
                       const Divider(),
 
-                      // 🛠️ Aspirant Utility Tools Expandable Drawer Section
+                      // 🛠️ Aspirant Utility Tools Section
                       Theme(
                         data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
                         child: ExpansionTile(
@@ -466,7 +463,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
                           ),
                           children: [
-                            // Tool 1: Photo & Sign Resizer
                             ListTile(
                               contentPadding: const EdgeInsets.only(left: 32, right: 16),
                               leading: Container(
@@ -514,8 +510,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                                 );
                               },
                             ),
-
-                            // Tool 2: Doc & ID Card Merger
                             ListTile(
                               contentPadding: const EdgeInsets.only(left: 32, right: 16),
                               leading: Container(
@@ -535,7 +529,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                                 style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
                               ),
                               subtitle: const Text(
-                                'Aadhaar Front/Back • 1-Doc PDF (<100KB)',
+                                'ID Card Front/Back • 1-Doc PDF (<100KB)',
                                 style: TextStyle(fontSize: 11),
                               ),
                               trailing: Container(
@@ -677,7 +671,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
         ],
       ),
-      floatingActionButton: null,
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentBottomIndex,
         onDestinationSelected: (idx) {
