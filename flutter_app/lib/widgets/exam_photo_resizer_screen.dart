@@ -22,8 +22,8 @@ class ExamPhotoResizerScreen extends StatefulWidget {
 
 class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
   final ImagePicker _picker = ImagePicker();
-
-  // In-memory compressed bytes prevent Android memory overflow (OOM crashes)
+  
+  // Store pure bytes for stable, crash-free preview rendering
   Uint8List? _imageBytes;
   String? _cachedFilePath;
   int _originalSizeKB = 0;
@@ -33,7 +33,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
   final TextEditingController _targetInputController =
       TextEditingController(text: '50');
 
-  // Standard exam presets
   final List<Map<String, dynamic>> _examPresets = [
     {'label': 'BPSC / BSSC Sign', 'kb': 20, 'icon': Icons.draw_rounded},
     {'label': 'Bihar Govt Photo', 'kb': 50, 'icon': Icons.badge_rounded},
@@ -41,12 +40,11 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     {'label': 'Identity Proof', 'kb': 200, 'icon': Icons.fingerprint_rounded},
   ];
 
-  static const int _maxAllowedBytes = 5 * 1024 * 1024; // 5 MB maximum threshold
+  static const int _maxAllowedBytes = 5 * 1024 * 1024; // 5 MB maximum
 
   @override
   void initState() {
     super.initState();
-    // Safely check for lost image data after the widget is attached
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _retrieveLostData();
     });
@@ -58,7 +56,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     super.dispose();
   }
 
-  /// Crash recovery: Invoked if Android OS destroyed the Activity while camera was open
+  // Crash recovery if Android OS killed the app while camera was running
   Future<void> _retrieveLostData() async {
     try {
       final LostDataResponse response = await _picker.retrieveLostData();
@@ -69,12 +67,12 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     }
   }
 
-  /// Safely handles the raw camera/gallery path and prepares lightweight bytes
+  // Core processing engine: shrinks the photo safely into memory bytes
   Future<void> _processImageSafe(String rawPath) async {
     setState(() => _isProcessing = true);
 
     try {
-      // Small pause to allow camera hardware buffer release
+      // 300ms pause: lets Android camera finish releasing its hardware buffer
       await Future.delayed(const Duration(milliseconds: 300));
 
       final File initialFile = File(rawPath);
@@ -83,12 +81,12 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
         return;
       }
 
-      // Convert image directly to lightweight compressed bytes via native C++
+      // Convert directly to compressed memory bytes (bypassing heavy disk UI reads)
       final Uint8List? safeBytes = await FlutterImageCompress.compressWithFile(
         rawPath,
-        minWidth: 900,
-        minHeight: 900,
-        quality: 80,
+        minWidth: 800,
+        minHeight: 800,
+        quality: 75,
         format: CompressFormat.jpeg,
         keepExif: false,
       );
@@ -98,10 +96,9 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
         return;
       }
 
-      // Save a clean temporary working file for future compression cycles
+      // Save a lightweight temporary working file
       final tempDir = await getTemporaryDirectory();
-      final safeFile = File(
-          '${tempDir.path}/safe_${DateTime.now().millisecondsSinceEpoch}.jpg');
+      final safeFile = File('${tempDir.path}/safe_${DateTime.now().millisecondsSinceEpoch}.jpg');
       await safeFile.writeAsBytes(safeBytes, flush: true);
 
       final totalBytes = safeBytes.lengthInBytes;
@@ -123,12 +120,12 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     } catch (e) {
       if (mounted) {
         setState(() => _isProcessing = false);
-        _showToast('Image processing error: $e');
+        _showToast('Processing error: $e');
       }
     }
   }
 
-  /// Triggers Image Picker with native downsampling constraints
+  // Pick image via Camera or Gallery
   Future<void> _pickImage(ImageSource source) async {
     try {
       final XFile? picked = await _picker.pickImage(
@@ -155,8 +152,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
           children: [
             Icon(Icons.warning_amber_rounded, color: Colors.orange, size: 26),
             SizedBox(width: 8),
-            Text('File Size Too Large',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+            Text('File Size Too Large', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ],
         ),
         content: Text(
@@ -181,20 +177,18 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     );
   }
 
-  /// Compresses the active file down to the target size using binary search
+  // Compresses the working image to match the exact target size in KB
   Future<File?> _compressToTargetFile() async {
     if (_cachedFilePath == null) return null;
 
-    final targetKB =
-        int.tryParse(_targetInputController.text) ?? _selectedTargetKB;
+    final targetKB = int.tryParse(_targetInputController.text) ?? _selectedTargetKB;
     if (targetKB < 10) {
       _showToast('Target size must be at least 10 KB');
       return null;
     }
 
     final tempDir = await getTemporaryDirectory();
-    final targetPath =
-        '${tempDir.path}/exam_resize_${DateTime.now().millisecondsSinceEpoch}.jpg';
+    final targetPath = '${tempDir.path}/exam_resize_${DateTime.now().millisecondsSinceEpoch}.jpg';
 
     int minQ = 15;
     int maxQ = 95;
@@ -254,99 +248,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     return null;
   }
 
-  /// Opens dialog to customize file name before saving
-  Future<String?> _showFileNameDialog(String defaultName) async {
-    final controller = TextEditingController(text: defaultName);
-
-    return showDialog<String>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        backgroundColor: widget.isDark ? const Color(0xFF1E293B) : Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: Row(
-          children: [
-            const Icon(Icons.drive_file_rename_outline_rounded,
-                color: Color(0xFF16A34A), size: 24),
-            const SizedBox(width: 8),
-            Text(
-              'Save As',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 16,
-                color: widget.isDark ? Colors.white : const Color(0xFF0F172A),
-              ),
-            ),
-          ],
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Enter a file name:',
-              style: TextStyle(
-                fontSize: 12,
-                color: widget.isDark ? Colors.white70 : const Color(0xFF475569),
-              ),
-            ),
-            const SizedBox(height: 12),
-            TextField(
-              controller: controller,
-              autofocus: true,
-              style: TextStyle(
-                fontSize: 13,
-                fontWeight: FontWeight.w600,
-                color: widget.isDark ? Colors.white : Colors.black,
-              ),
-              decoration: InputDecoration(
-                suffixText: '.jpg',
-                contentPadding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide: const BorderSide(color: Color(0xFF16A34A)),
-                ),
-                focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
-                  borderSide:
-                      const BorderSide(color: Color(0xFF16A34A), width: 2),
-                ),
-              ),
-            ),
-          ],
-        ),
-        actions: [
-          TextButton(
-            onPressed: () => Navigator.pop(ctx, null),
-            child: const Text('Cancel',
-                style: TextStyle(color: Colors.grey, fontWeight: FontWeight.bold)),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              final text = controller.text.trim();
-              if (text.isNotEmpty) {
-                final cleanName =
-                    text.endsWith('.jpg') || text.endsWith('.jpeg')
-                        ? text
-                        : '$text.jpg';
-                Navigator.pop(ctx, cleanName);
-              }
-            },
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF16A34A),
-              foregroundColor: Colors.white,
-              shape:
-                  RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-            ),
-            child: const Text('Continue',
-                style: TextStyle(fontWeight: FontWeight.bold)),
-          ),
-        ],
-      ),
-    );
-  }
-
-  /// Executes target compression, prompts file name, and lets user select folder location
   Future<void> _handleSave() async {
     if (_cachedFilePath == null || _isProcessing) return;
 
@@ -362,55 +263,28 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
 
       final compressedKB = (compressed.lengthSync() / 1024).round();
       final bytes = await compressed.readAsBytes();
+      final defaultName = 'Exam_Photo_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
 
-      // Suggested default name
-      final suggestedName =
-          'Exam_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
-
-      if (!mounted) return;
-      setState(() => _isProcessing = false);
-
-      // Prompt custom file name
-      final String? finalFileName = await _showFileNameDialog(suggestedName);
-      if (finalFileName == null) return; // User cancelled
-
-      setState(() => _isProcessing = true);
-
-      // Invoke system file picker for destination directory
       String? selectedPath = await FilePicker.platform.saveFile(
-        dialogTitle: 'Select download folder:',
-        fileName: finalFileName,
+        dialogTitle: 'Select destination folder:',
+        fileName: defaultName,
         bytes: bytes,
-        type: FileType.custom,
+        type: FileType.image,
         allowedExtensions: ['jpg', 'jpeg'],
       );
 
       if (selectedPath != null && selectedPath.isNotEmpty) {
         final savedFile = File(selectedPath);
-        await savedFile.writeAsBytes(bytes, flush: true);
-
+        if (!await savedFile.exists() || await savedFile.length() == 0) {
+          await savedFile.writeAsBytes(bytes, flush: true);
+        }
         HapticFeedback.mediumImpact();
-        _showToast('✅ Saved to chosen folder (${compressedKB} KB)!');
+        _showToast('Saved successfully (${compressedKB} KB)!');
       } else {
-        // Direct fallback to standard device Downloads folder
-        Directory? downloadDir;
-        if (Platform.isAndroid) {
-          downloadDir = Directory('/storage/emulated/0/Download');
-        }
-        downloadDir ??= await getDownloadsDirectory();
-
-        if (downloadDir != null && await downloadDir.exists()) {
-          final fallbackFile = File('${downloadDir.path}/$finalFileName');
-          await fallbackFile.writeAsBytes(bytes, flush: true);
-
-          HapticFeedback.mediumImpact();
-          _showToast('✅ Saved to Downloads folder (${compressedKB} KB)!');
-        } else {
-          final dir = await getApplicationDocumentsDirectory();
-          final fallbackFile = File('${dir.path}/$finalFileName');
-          await fallbackFile.writeAsBytes(bytes, flush: true);
-          _showToast('Saved to App folder: $finalFileName');
-        }
+        final dir = await getApplicationDocumentsDirectory();
+        final savedFile = File('${dir.path}/$defaultName');
+        await savedFile.writeAsBytes(bytes, flush: true);
+        _showToast('Saved to app storage (${compressedKB} KB).');
       }
     } catch (e) {
       _showToast('Failed to save file: $e');
@@ -447,8 +321,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     ScaffoldMessenger.of(context).hideCurrentSnackBar();
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(msg,
-            style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13)),
+        content: Text(msg, style: const TextStyle(fontWeight: FontWeight.w600, fontSize: 13)),
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         backgroundColor: const Color(0xFF1E293B),
@@ -480,20 +353,16 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
               ),
               const SizedBox(height: 16),
               ListTile(
-                leading: const Icon(Icons.photo_library_rounded,
-                    color: Color(0xFFB45309)),
-                title: const Text('Choose from Gallery',
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+                leading: const Icon(Icons.photo_library_rounded, color: Color(0xFFB45309)),
+                title: const Text('Choose from Gallery', style: TextStyle(fontWeight: FontWeight.bold)),
                 onTap: () {
                   Navigator.pop(context);
                   _pickImage(ImageSource.gallery);
                 },
               ),
               ListTile(
-                leading: const Icon(Icons.camera_alt_rounded,
-                    color: Color(0xFFB45309)),
-                title: const Text('Take Photo / Scan Sign',
-                    style: TextStyle(fontWeight: FontWeight.bold)),
+                leading: const Icon(Icons.camera_alt_rounded, color: Color(0xFFB45309)),
+                title: const Text('Take Photo / Scan Sign', style: TextStyle(fontWeight: FontWeight.bold)),
                 onTap: () {
                   Navigator.pop(context);
                   _pickImage(ImageSource.camera);
@@ -511,8 +380,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     final isDark = widget.isDark;
 
     return Scaffold(
-      backgroundColor:
-          isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+      backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
         title: const Text(
           'Photo & Sign Resizer',
@@ -554,28 +422,22 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                           onTap: () {
                             setState(() {
                               _selectedTargetKB = preset['kb'];
-                              _targetInputController.text =
-                                  preset['kb'].toString();
+                              _targetInputController.text = preset['kb'].toString();
                             });
                           },
                           borderRadius: BorderRadius.circular(10),
                           child: AnimatedContainer(
                             duration: const Duration(milliseconds: 200),
-                            padding: const EdgeInsets.symmetric(
-                                horizontal: 12, vertical: 8),
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                             decoration: BoxDecoration(
                               color: isSelected
                                   ? const Color(0xFFB45309)
-                                  : (isDark
-                                      ? const Color(0xFF1E1B18)
-                                      : Colors.white),
+                                  : (isDark ? const Color(0xFF1E1B18) : Colors.white),
                               borderRadius: BorderRadius.circular(10),
                               border: Border.all(
                                 color: isSelected
                                     ? const Color(0xFFB45309)
-                                    : (isDark
-                                        ? Colors.white10
-                                        : const Color(0xFFE2E8F0)),
+                                    : (isDark ? Colors.white10 : const Color(0xFFE2E8F0)),
                               ),
                             ),
                             child: Row(
@@ -585,9 +447,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                                   size: 15,
                                   color: isSelected
                                       ? Colors.white
-                                      : (isDark
-                                          ? Colors.amber.shade300
-                                          : const Color(0xFFB45309)),
+                                      : (isDark ? Colors.amber.shade300 : const Color(0xFFB45309)),
                                 ),
                                 const SizedBox(width: 6),
                                 Text(
@@ -597,9 +457,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                                     fontWeight: FontWeight.w700,
                                     color: isSelected
                                         ? Colors.white
-                                        : (isDark
-                                            ? Colors.white70
-                                            : const Color(0xFF1E293B)),
+                                        : (isDark ? Colors.white70 : const Color(0xFF1E293B)),
                                   ),
                                 ),
                               ],
@@ -612,8 +470,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                 ),
                 const SizedBox(height: 18),
                 Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                   decoration: BoxDecoration(
                     color: isDark ? const Color(0xFF1E1B18) : Colors.white,
                     borderRadius: BorderRadius.circular(14),
@@ -623,16 +480,14 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                   ),
                   child: Row(
                     children: [
-                      const Icon(Icons.tune_rounded,
-                          size: 18, color: Color(0xFFB45309)),
+                      const Icon(Icons.tune_rounded, size: 18, color: Color(0xFFB45309)),
                       const SizedBox(width: 10),
                       Text(
                         'Target Size:',
                         style: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.bold,
-                          color:
-                              isDark ? Colors.white70 : const Color(0xFF475569),
+                          color: isDark ? Colors.white70 : const Color(0xFF475569),
                         ),
                       ),
                       const SizedBox(width: 10),
@@ -643,9 +498,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                           style: TextStyle(
                             fontSize: 14,
                             fontWeight: FontWeight.w900,
-                            color: isDark
-                                ? Colors.amber.shade300
-                                : const Color(0xFFB45309),
+                            color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
                           ),
                           decoration: const InputDecoration(
                             border: InputBorder.none,
@@ -673,8 +526,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
               height: double.infinity,
               child: Center(
                 child: Container(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
                   margin: const EdgeInsets.symmetric(horizontal: 40),
                   decoration: BoxDecoration(
                     color: isDark ? const Color(0xFF1E293B) : Colors.white,
@@ -683,14 +535,12 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                   child: const Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      CircularProgressIndicator(
-                          strokeWidth: 3, color: Color(0xFF16A34A)),
+                      CircularProgressIndicator(strokeWidth: 3, color: Color(0xFF16A34A)),
                       SizedBox(height: 16),
                       Text(
                         'Optimizing & Processing...',
                         textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 13),
+                        style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
                       ),
                     ],
                   ),
@@ -728,9 +578,8 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                         child: Container(
                           constraints: const BoxConstraints(maxHeight: 200),
                           width: double.infinity,
-                          color:
-                              isDark ? Colors.black26 : const Color(0xFFF1F5F9),
-                          // Decodes bytes safely within capped texture boundaries
+                          color: isDark ? Colors.black26 : const Color(0xFFF1F5F9),
+                          // ⚡ Image.memory bypasses Android FileProvider/disk locks completely
                           child: Image.memory(
                             _imageBytes!,
                             cacheWidth: 500,
@@ -792,9 +641,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                         'Max file size: 5 MB',
                         style: TextStyle(
                           fontSize: 12,
-                          color: isDark
-                              ? Colors.white54
-                              : const Color(0xFF64748B),
+                          color: isDark ? Colors.white54 : const Color(0xFF64748B),
                         ),
                       ),
                       const SizedBox(height: 22),
@@ -821,19 +668,17 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
         children: [
           Row(
             children: [
-              const Icon(Icons.check_circle_outline_rounded,
-                  color: Color(0xFF16A34A), size: 18),
+              const Icon(Icons.check_circle_outline_rounded, color: Color(0xFF16A34A), size: 18),
               const SizedBox(width: 8),
               Text(
                 'Target Limit: Under $targetKB KB',
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
               ),
             ],
           ),
           const SizedBox(height: 6),
           const Text(
-            'Compresses automatically to match target on save/share.',
+            'The image will be automatically compressed to match this target during save or share.',
             style: TextStyle(fontSize: 11, color: Colors.grey),
           ),
           const SizedBox(height: 16),
@@ -847,12 +692,10 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                     backgroundColor: const Color(0xFF16A34A),
                     foregroundColor: Colors.white,
                     padding: const EdgeInsets.symmetric(vertical: 12),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                   ),
                   icon: const Icon(Icons.download_rounded, size: 18),
-                  label: const Text('Save to File Manager',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  label: const Text('Save to File Manager', style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
               ),
               const SizedBox(width: 8),
@@ -864,12 +707,10 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                     side: const BorderSide(color: Color(0xFF16A34A)),
                     foregroundColor: const Color(0xFF16A34A),
                     padding: const EdgeInsets.symmetric(vertical: 12),
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10)),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                   ),
                   icon: const Icon(Icons.share_rounded, size: 16),
-                  label: const Text('Share',
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                  label: const Text('Share', style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
               ),
             ],
