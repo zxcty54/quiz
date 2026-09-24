@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:file_picker/file_picker.dart';
+import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -39,7 +40,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     {'label': 'Identity Proof', 'kb': 200, 'icon': Icons.fingerprint_rounded},
   ];
 
-  static const int _maxAllowedBytes = 5 * 1024 * 1024; // 5 MB
+  static const int _maxAllowedBytes = 5 * 1024 * 1024; // 5 MB limit
 
   @override
   void initState() {
@@ -240,12 +241,12 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     return null;
   }
 
-  // 📁 Direct File Manager / Downloads Save
-  Future<void> _handleSave() async {
+  // 📥 EXACT COMBINER LOGIC: DIRECT FILEPICKER DOWNLOAD
+  Future<void> _handleDownload() async {
     if (_cachedFilePath == null || _isProcessing) return;
 
     setState(() => _isProcessing = true);
-    HapticFeedback.lightImpact();
+    HapticFeedback.mediumImpact();
 
     try {
       final compressed = await _compressToTargetFile();
@@ -256,164 +257,37 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
 
       final compressedKB = (compressed.lengthSync() / 1024).round();
       final bytes = await compressed.readAsBytes();
-      final defaultName = 'Exam_Photo_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
+      final defaultFileName = 'Exam_Photo_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
 
-      // 1. Android File Manager / System Picker trigger
+      // Combiner tool jaisa Android System File Picker
       String? selectedPath = await FilePicker.platform.saveFile(
-        dialogTitle: 'Select location in File Manager / Downloads:',
-        fileName: defaultName,
+        dialogTitle: 'Download folder chunein:',
+        fileName: defaultFileName,
         bytes: bytes,
         type: FileType.image,
         allowedExtensions: ['jpg', 'jpeg'],
       );
 
-      File? savedFile;
-      String locationTitle = 'File Manager';
-
+      File finalFile;
       if (selectedPath != null && selectedPath.isNotEmpty) {
-        savedFile = File(selectedPath);
-        if (!await savedFile.exists() || await savedFile.length() == 0) {
-          await savedFile.writeAsBytes(bytes, flush: true);
+        finalFile = File(selectedPath);
+        if (!await finalFile.exists() || await finalFile.length() == 0) {
+          await finalFile.writeAsBytes(bytes, flush: true);
         }
-        locationTitle = selectedPath;
+        if (mounted) {
+          _showToast('✅ Download folder me successfully save ho gaya!');
+        }
       } else {
-        // Fallback: Public Download directory
-        try {
-          final publicDownload = Directory('/storage/emulated/0/Download');
-          if (await publicDownload.exists()) {
-            savedFile = File('${publicDownload.path}/$defaultName');
-            await savedFile.writeAsBytes(bytes, flush: true);
-            locationTitle = 'Downloads Folder';
-          }
-        } catch (_) {}
-
-        // Fallback 2: App Documents folder
-        if (savedFile == null || !await savedFile.exists()) {
-          final dir = await getApplicationDocumentsDirectory();
-          savedFile = File('${dir.path}/$defaultName');
-          await savedFile.writeAsBytes(bytes, flush: true);
-          locationTitle = 'Device Storage';
+        final dir = await getApplicationDocumentsDirectory();
+        finalFile = File(path.join(dir.path, defaultFileName));
+        await finalFile.writeAsBytes(bytes, flush: true);
+        if (mounted) {
+          _showToast('File app folder me save ho gayi.');
         }
       }
-
-      if (mounted) {
-        HapticFeedback.mediumImpact();
-        _showSavedSuccessSheet(savedFile, compressedKB, locationTitle);
-      }
     } catch (e) {
-      _showToast('Save failed: $e');
-    } finally {
-      if (mounted) setState(() => _isProcessing = false);
-    }
-  }
-
-  void _showSavedSuccessSheet(File file, int sizeKB, String location) {
-    showModalBottomSheet(
-      context: context,
-      backgroundColor: widget.isDark ? const Color(0xFF1E293B) : Colors.white,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (ctx) => SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(20),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                width: 40,
-                height: 4,
-                decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.3),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-              const SizedBox(height: 16),
-              const Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 40),
-              const SizedBox(height: 10),
-              const Text(
-                'Photo Successfully Saved!',
-                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16),
-              ),
-              const SizedBox(height: 4),
-              Text(
-                'Size: $sizeKB KB • Ready for Exam Portals',
-                style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF16A34A), fontSize: 12.5),
-              ),
-              const SizedBox(height: 8),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                decoration: BoxDecoration(
-                  color: widget.isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
-                  borderRadius: BorderRadius.circular(8),
-                ),
-                child: Text(
-                  'Saved: ${file.path}',
-                  style: const TextStyle(fontSize: 11, color: Colors.grey),
-                  maxLines: 2,
-                  overflow: TextOverflow.ellipsis,
-                ),
-              ),
-              const SizedBox(height: 18),
-              Row(
-                children: [
-                  Expanded(
-                    child: OutlinedButton.icon(
-                      onPressed: () {
-                        Navigator.pop(ctx);
-                        Share.shareXFiles([XFile(file.path)], text: 'Resized Photo ($sizeKB KB)');
-                      },
-                      style: OutlinedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(vertical: 12),
-                        side: const BorderSide(color: Color(0xFF16A34A)),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                      ),
-                      icon: const Icon(Icons.share_rounded, size: 16, color: Color(0xFF16A34A)),
-                      label: const Text('Share File', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: ElevatedButton(
-                      onPressed: () => Navigator.pop(ctx),
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xFF16A34A),
-                        foregroundColor: Colors.white,
-                        padding: const EdgeInsets.symmetric(vertical: 12),
-                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                      ),
-                      child: const Text('Done', style: TextStyle(fontWeight: FontWeight.bold)),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Future<void> _handleShare() async {
-    if (_cachedFilePath == null || _isProcessing) return;
-
-    setState(() => _isProcessing = true);
-    try {
-      final compressed = await _compressToTargetFile();
-      if (compressed == null) {
-        _showToast('Could not reach target size.');
-        return;
-      }
-
-      final compressedKB = (compressed.lengthSync() / 1024).round();
-      HapticFeedback.selectionClick();
-      await Share.shareXFiles(
-        [XFile(compressed.path)],
-        text: 'Resized via Exam Photo Tool ($compressedKB KB)',
-      );
-    } catch (e) {
-      _showToast('Share error: $e');
+      debugPrint("Download error: $e");
+      _showToast('Download error: $e');
     } finally {
       if (mounted) setState(() => _isProcessing = false);
     }
@@ -617,7 +491,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                   ),
                 ),
                 const SizedBox(height: 24),
-                if (_imageBytes != null) _buildActionCard(isDark),
+                if (_imageBytes != null) _buildDownloadActionCard(isDark),
               ],
             ),
           ),
@@ -640,7 +514,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                       CircularProgressIndicator(strokeWidth: 3, color: Color(0xFF16A34A)),
                       SizedBox(height: 16),
                       Text(
-                        'Saving to File Manager...',
+                        'Optimizing & Downloading...',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
                       ),
@@ -754,7 +628,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     );
   }
 
-  Widget _buildActionCard(bool isDark) {
+  Widget _buildDownloadActionCard(bool isDark) {
     final targetKB = _targetInputController.text;
 
     return Container(
@@ -779,42 +653,32 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
           ),
           const SizedBox(height: 6),
           const Text(
-            'The image will be compressed and saved directly to your phone File Manager / Downloads.',
+            'Image optimize hokar seedhe aapke chune huye folder ya Downloads me save hogi.',
             style: TextStyle(fontSize: 11, color: Colors.grey),
           ),
           const SizedBox(height: 16),
-          Row(
-            children: [
-              Expanded(
-                flex: 3,
-                child: ElevatedButton.icon(
-                  onPressed: _isProcessing ? null : _handleSave,
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFF16A34A),
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                  ),
-                  icon: const Icon(Icons.folder_open_rounded, size: 18),
-                  label: const Text('Save to File Manager', style: TextStyle(fontWeight: FontWeight.bold)),
-                ),
+          SizedBox(
+            width: double.infinity,
+            child: ElevatedButton.icon(
+              onPressed: _isProcessing ? null : _handleDownload,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF16A34A),
+                foregroundColor: Colors.white,
+                padding: const EdgeInsets.symmetric(vertical: 14),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
               ),
-              const SizedBox(width: 8),
-              Expanded(
-                flex: 2,
-                child: OutlinedButton.icon(
-                  onPressed: _isProcessing ? null : _handleShare,
-                  style: OutlinedButton.styleFrom(
-                    side: const BorderSide(color: Color(0xFF16A34A)),
-                    foregroundColor: const Color(0xFF16A34A),
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                  ),
-                  icon: const Icon(Icons.share_rounded, size: 16),
-                  label: const Text('Share', style: TextStyle(fontWeight: FontWeight.bold)),
-                ),
+              icon: _isProcessing
+                  ? const SizedBox(
+                      width: 18,
+                      height: 18,
+                      child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white),
+                    )
+                  : const Icon(Icons.download_for_offline_rounded, size: 20),
+              label: Text(
+                _isProcessing ? 'Downloading...' : 'Download JPG to File Manager',
+                style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13.5),
               ),
-            ],
+            ),
           ),
         ],
       ),
