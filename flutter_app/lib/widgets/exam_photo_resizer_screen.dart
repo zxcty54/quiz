@@ -258,7 +258,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
 }
 
 // ============================================================================
-// TOOL 2: EXAM DOC & ID MERGER (LIVE CANVAS PREVIEW + PUBLIC DOWNLOAD FOLDER)
+// TOOL 2: EXAM DOC & ID MERGER (INSTANT CANVAS PREVIEW + MEDIASTORE DOWNLOAD)
 // ============================================================================
 class ExamDocMergerScreen extends StatefulWidget {
   final bool isDark;
@@ -300,7 +300,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
     final remaining = _maxImages - _docs.length;
     if (remaining <= 0) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Aap maximum 4 images hi add kar sakte hain.')),
+        const SnackBar(content: Text('Aap maximum 4 images hi jod sakte hain.')),
       );
       return;
     }
@@ -538,7 +538,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
     }
   }
 
-  // 📁 Get Phone's Public "Download" Directory
+  // 📁 Direct Phone Downloads Directory Resolver
   Future<Directory> _getPublicDownloadDirectory() async {
     if (Platform.isAndroid) {
       final downloadDir = Directory('/storage/emulated/0/Download');
@@ -547,6 +547,21 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
       }
     }
     return await getApplicationDocumentsDirectory();
+  }
+
+  // 🔔 Trigger Android OS Media Scan taaki File Manager me turant index ho jaye
+  Future<void> _scanFileInSystem(String filePath) async {
+    try {
+      if (Platform.isAndroid) {
+        await Process.run('am', [
+          'broadcast',
+          '-a',
+          'android.intent.action.MEDIA_SCANNER_SCAN_FILE',
+          '-d',
+          'file://$filePath',
+        ]);
+      }
+    } catch (_) {}
   }
 
   Future<void> _exportDocument() async {
@@ -579,7 +594,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
 
       File exportedFile;
       if (_exportFormat == 'JPG') {
-        exportedFile = File(path.join(downloadDir.path, 'MockTester_Doc_$stamp.jpg'));
+        exportedFile = File(path.join(downloadDir.path, 'MockTester_$stamp.jpg'));
         await exportedFile.writeAsBytes(compressedJpg, flush: true);
       } else {
         final pdf = pw.Document();
@@ -596,9 +611,11 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             },
           ),
         );
-        exportedFile = File(path.join(downloadDir.path, 'MockTester_Doc_$stamp.pdf'));
+        exportedFile = File(path.join(downloadDir.path, 'MockTester_$stamp.pdf'));
         await exportedFile.writeAsBytes(await pdf.save(), flush: true);
       }
+
+      await _scanFileInSystem(exportedFile.path);
 
       if (!mounted) return;
       _showSuccessSheet(exportedFile, compressedJpg.lengthInBytes);
@@ -632,17 +649,18 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                 child: const Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 36),
               ),
               const SizedBox(height: 12),
-              const Text('Saved to Downloads Folder! 📁', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
+              const Text('File Saved to Downloads! 📁', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
               const SizedBox(height: 6),
               Text(
-                'File Manager > Downloads > ${path.basename(file.path)}',
+                path.basename(file.path),
                 textAlign: TextAlign.center,
-                style: const TextStyle(fontSize: 11.5, color: Colors.blueAccent, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 12.5, color: Colors.blueAccent, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
               Text(
-                'Size: $sizeKb KB • Format: $_exportFormat',
-                style: const TextStyle(fontSize: 11.5, color: Colors.grey),
+                'Size: $sizeKb KB • Location: Internal Storage > Download',
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 11, color: Colors.grey),
               ),
               const SizedBox(height: 18),
               Row(
@@ -696,7 +714,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Doc & ID Merger (1-4 Images)', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15.5)),
-            Text('Live Preview • Direct to Downloads Folder', style: TextStyle(fontSize: 10, color: Colors.grey)),
+            Text('Live Document Preview • Public Downloads Folder', style: TextStyle(fontSize: 10, color: Colors.grey)),
           ],
         ),
         backgroundColor: isDark ? const Color(0xFF1E1B18) : Colors.white,
@@ -735,7 +753,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             const Text('Documents / ID Cards Chunein', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
             const SizedBox(height: 6),
             const Text(
-              '1 se 4 images select karein (ID Front/Back, Certificate, Marksheet). Direct File Manager me download hoga.',
+              '1 se 4 images select karein (ID Front/Back, Certificate, Marksheet). Direct Downloads folder me save hoga.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, color: Colors.grey, height: 1.4),
             ),
@@ -767,7 +785,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           child: Row(
             children: [
               Text(
-                '${_docs.length}/4 Images',
+                '${_docs.length}/4 Selected',
                 style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
               ),
               const Spacer(),
@@ -834,7 +852,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                     color: Colors.black.withValues(alpha: 0.7),
                     borderRadius: BorderRadius.circular(4),
                   ),
-                  child: const Text('Live Output Preview (Pinch to Zoom)', style: TextStyle(color: Colors.white70, fontSize: 9.5)),
+                  child: const Text('Live Document Preview (Pinch to Zoom)', style: TextStyle(color: Colors.white70, fontSize: 9.5)),
                 ),
               ),
             ],
@@ -896,7 +914,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                     style: const ButtonStyle(visualDensity: VisualDensity.compact),
                   ),
                   const Spacer(),
-                  const Text('Size:', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
+                  const Text('Target:', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold)),
                   const SizedBox(width: 6),
                   DropdownButton<String>(
                     value: _targetPreset,
@@ -909,7 +927,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                     items: const [
                       DropdownMenuItem(value: '100KB', child: Text('< 100 KB')),
                       DropdownMenuItem(value: '200KB', child: Text('< 200 KB')),
-                      DropdownMenuItem(value: 'Original', child: Text('Max Quality')),
+                      DropdownMenuItem(value: 'Original', child: Text('Original Max')),
                     ],
                     onChanged: (v) {
                       if (v != null) setState(() => _targetPreset = v);
@@ -1062,7 +1080,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
               ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
               : const Icon(Icons.download_for_offline_rounded, size: 20),
           label: Text(
-            _isProcessing ? 'Saving to Downloads...' : 'Save $_exportFormat to File Manager (${_docs.length} Image${_docs.length > 1 ? "s" : ""})',
+            _isProcessing ? 'Saving to Downloads...' : 'Save $_exportFormat to Downloads Folder (${_docs.length} Images)',
             style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13.5),
           ),
         ),
