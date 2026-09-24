@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'dart:math' as math;
-import 'dart:typed_data';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
@@ -40,7 +40,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
   final TextEditingController _targetInputController =
       TextEditingController(text: '50');
 
-  // Bihar & National Exam Presets
   final List<Map<String, dynamic>> _examPresets = [
     {'label': 'BPSC / BSSC Sign', 'kb': 20, 'icon': Icons.draw_rounded},
     {'label': 'Bihar Govt Photo', 'kb': 50, 'icon': Icons.badge_rounded},
@@ -54,13 +53,14 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
     super.dispose();
   }
 
-  // Pick Image from Gallery or Camera
   Future<void> _pickImage(ImageSource source) async {
     try {
       final picker = ImagePicker();
       final picked = await picker.pickImage(
         source: source,
-        imageQuality: 100,
+        maxWidth: 1800,
+        maxHeight: 1800,
+        imageQuality: 92,
       );
 
       if (picked == null) return;
@@ -76,14 +76,12 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
         _compressedSizeKB = 0;
       });
 
-      // Auto trigger compression after picking
       _compressImage();
     } catch (e) {
-      _showToast('Image pick nahi ho payi. Try again.');
+      _showToast('Image pick nahi ho payi. Dobara koshish karein.');
     }
   }
 
-  // 🚀 Core Engine: Binary Search Compression
   Future<void> _compressImage() async {
     if (_originalFile == null) return;
 
@@ -103,10 +101,9 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
 
       int minQ = 10;
       int maxQ = 98;
-      int scaleDim = 1800; // Optimal bound for mobile documents/photos
+      int scaleDim = 1800;
       Uint8List? bestBytes;
 
-      // Stage 1: Binary Search across JPEG Qualities
       for (int i = 0; i < 6; i++) {
         final midQ = ((minQ + maxQ) / 2).round();
 
@@ -123,15 +120,14 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
 
         if (currentKB <= targetKB) {
           bestBytes = result;
-          minQ = midQ + 1; // Room available, preserve higher quality
+          minQ = midQ + 1;
         } else {
-          maxQ = midQ - 1; // Overshot, decrease quality
+          maxQ = midQ - 1;
         }
 
         if (minQ > maxQ) break;
       }
 
-      // Stage 2: Dimension scaling if file is huge and quality reduction wasn't enough
       if (bestBytes == null || (bestBytes.lengthInBytes / 1024) > targetKB) {
         while (scaleDim > 350) {
           scaleDim = (scaleDim * 0.85).round();
@@ -140,7 +136,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
             _originalFile!.absolute.path,
             minWidth: scaleDim,
             minHeight: scaleDim,
-            quality: 70, // Clean baseline
+            quality: 70,
             format: CompressFormat.jpeg,
           );
 
@@ -164,17 +160,16 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
           HapticFeedback.mediumImpact();
         }
       } else {
-        _showToast('Target size bohot chhota hai. Dimension adjust karein.');
+        _showToast('Target size bohot chhota hai. Limit badhayein.');
       }
     } catch (e) {
       debugPrint("Compression Error: $e");
-      _showToast('Compression fail hua. Kripya dobara koshish karein.');
+      _showToast('Compression me samasya aayi.');
     } finally {
       if (mounted) setState(() => _isProcessing = false);
     }
   }
 
-  // 💾 Native Android Storage Access Framework (Downloads Folder Direct Save)
   Future<void> _saveToFileManager() async {
     if (_compressedFile == null) return;
     HapticFeedback.mediumImpact();
@@ -192,17 +187,15 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
         allowedExtensions: ['jpg', 'jpeg'],
       );
 
-      File savedFile;
       if (selectedPath != null && selectedPath.isNotEmpty) {
-        savedFile = File(selectedPath);
+        final savedFile = File(selectedPath);
         if (!await savedFile.exists() || await savedFile.length() == 0) {
           await savedFile.writeAsBytes(bytes, flush: true);
         }
         _showToast('✅ File Manager me successfully save ho gayi!');
       } else {
-        // Fallback internal cache
         final dir = await getApplicationDocumentsDirectory();
-        savedFile = File(path.join(dir.path, defaultName));
+        final savedFile = File(path.join(dir.path, defaultName));
         await savedFile.writeAsBytes(bytes, flush: true);
         _showToast('File app directory me save ho gayi.');
       }
@@ -251,7 +244,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
                 width: 40,
                 height: 4,
                 decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.3),
+                  color: Colors.grey.withValues(alpha: 0.3),
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
@@ -301,11 +294,8 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 1. Upload & Preview Zone
             _buildUploadCard(isDark),
             const SizedBox(height: 18),
-
-            // 2. Exam Preset Quick Selector
             Text(
               'Select Target Exam Standard',
               style: TextStyle(
@@ -375,8 +365,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
               ),
             ),
             const SizedBox(height: 18),
-
-            // 3. Custom Limit Input Bar
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
               decoration: BoxDecoration(
@@ -443,8 +431,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
               ),
             ),
             const SizedBox(height: 20),
-
-            // 4. Result & Download Strip
             if (_compressedFile != null) _buildResultCard(isDark),
           ],
         ),
@@ -452,7 +438,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
     );
   }
 
-  // Upload Box Widget
   Widget _buildUploadCard(bool isDark) {
     return Container(
       width: double.infinity,
@@ -460,12 +445,12 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
         color: isDark ? const Color(0xFF1E1B18) : Colors.white,
         borderRadius: BorderRadius.circular(18),
         border: Border.all(
-          color: const Color(0xFFB45309).withOpacity(0.25),
+          color: const Color(0xFFB45309).withValues(alpha: 0.25),
           width: 1.4,
         ),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.25 : 0.04),
+            color: Colors.black.withValues(alpha: isDark ? 0.25 : 0.04),
             blurRadius: 10,
             offset: const Offset(0, 4),
           )
@@ -527,7 +512,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
                       Container(
                         padding: const EdgeInsets.all(16),
                         decoration: BoxDecoration(
-                          color: const Color(0xFFB45309).withOpacity(0.12),
+                          color: const Color(0xFFB45309).withValues(alpha: 0.12),
                           shape: BoxShape.circle,
                         ),
                         child: const Icon(
@@ -562,7 +547,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
     );
   }
 
-  // Result Card Widget
   Widget _buildResultCard(bool isDark) {
     return Container(
       padding: const EdgeInsets.all(16),
@@ -570,7 +554,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
         color: isDark ? const Color(0xFF1E1B18) : Colors.white,
         borderRadius: BorderRadius.circular(18),
         border: Border.all(
-          color: const Color(0xFF16A34A).withOpacity(0.4),
+          color: const Color(0xFF16A34A).withValues(alpha: 0.4),
           width: 1.2,
         ),
       ),
@@ -597,7 +581,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF16A34A).withOpacity(0.15),
+                  color: const Color(0xFF16A34A).withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(6),
                 ),
                 child: Text(
@@ -612,8 +596,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
             ],
           ),
           const SizedBox(height: 14),
-
-          // File Info Summary Strip
           Container(
             padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
@@ -653,8 +635,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
             ),
           ),
           const SizedBox(height: 14),
-
-          // Action Buttons: Save to File Manager & Share
           Row(
             children: [
               Expanded(
@@ -701,7 +681,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen>
 }
 
 // ============================================================================
-// TOOL 2: EXAM DOC & ID MERGER (SAF FILE MANAGER DOWNLOAD + INSTANT PREVIEW)
+// TOOL 2: EXAM DOC & ID MERGER (INSTANT CANVAS PREVIEW + FULL-SCREEN LOADER)
 // ============================================================================
 class ExamDocMergerScreen extends StatefulWidget {
   final bool isDark;
@@ -736,11 +716,18 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
   String _exportFormat = 'PDF';
   _PageOrientation _orientation = _PageOrientation.topBottom;
 
+  bool _isLoadingImages = false;
+  String _loadingStatusText = 'Images load ho rahi hain...';
+
   Uint8List? _cachedLivePreviewBytes;
   bool _isGeneratingPreview = false;
 
   static const int _maxByteLimit = 5 * 1024 * 1024;
   static const int _maxImages = 4;
+
+  static img.Image? _decodeImageIsolate(Uint8List bytes) {
+    return img.decodeImage(bytes);
+  }
 
   Future<void> _pickDocuments() async {
     final remaining = _maxImages - _docs.length;
@@ -752,18 +739,34 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
     }
 
     try {
-      final pickedList = await _picker.pickMultiImage();
+      final pickedList = await _picker.pickMultiImage(
+        maxWidth: 1800,
+        maxHeight: 1800,
+        imageQuality: 88,
+      );
+
       if (pickedList.isEmpty) return;
 
+      setState(() {
+        _isLoadingImages = true;
+        _loadingStatusText = 'Images process ho rahi hain (0/${pickedList.length})...';
+      });
+
       int addedCount = 0;
-      for (final xfile in pickedList) {
+      for (int i = 0; i < pickedList.length; i++) {
         if (addedCount >= remaining) break;
 
+        final xfile = pickedList[i];
         final length = await xfile.length();
         if (length > _maxByteLimit) continue;
 
+        setState(() {
+          _loadingStatusText = 'Image ${i + 1}/${pickedList.length} decode ho rahi hai...';
+        });
+
         final bytes = await xfile.readAsBytes();
-        final decoded = img.decodeImage(bytes);
+        final decoded = await compute(_decodeImageIsolate, bytes);
+
         if (decoded != null) {
           final item = _DocItem(
             id: '${DateTime.now().microsecondsSinceEpoch}_$addedCount',
@@ -777,11 +780,12 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
       }
 
       if (mounted) {
-        setState(() {});
+        setState(() => _isLoadingImages = false);
         _refreshFullCanvasPreview();
       }
     } catch (e) {
       debugPrint("Pick error: $e");
+      if (mounted) setState(() => _isLoadingImages = false);
     }
   }
 
@@ -996,7 +1000,6 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
     }
   }
 
-  // 💾 Native Storage Access Framework (SAF) - Direct Downloads Selector
   Future<void> _exportDocument() async {
     if (_docs.isEmpty) return;
     setState(() => _isProcessing = true);
@@ -1044,9 +1047,8 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
         defaultFileName = 'MockTester_Doc_$stamp.pdf';
       }
 
-      // 📁 System File Picker se direct user ko destination (Download folder) chunein
       String? selectedPath = await FilePicker.platform.saveFile(
-        dialogTitle: 'File Manager mein Save Karein (Downloads Folder):',
+        dialogTitle: 'Download folder chunein:',
         fileName: defaultFileName,
         bytes: exportBytes,
         type: _exportFormat == 'JPG' ? FileType.image : FileType.custom,
@@ -1060,7 +1062,6 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           await finalFile.writeAsBytes(exportBytes, flush: true);
         }
       } else {
-        // Fallback internal cache
         final dir = await getApplicationDocumentsDirectory();
         finalFile = File(path.join(dir.path, defaultFileName));
         await finalFile.writeAsBytes(exportBytes, flush: true);
@@ -1106,7 +1107,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                 style: const TextStyle(fontSize: 12, color: Colors.blueAccent, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 4),
-              Text('Size: $sizeKb KB • File Manager me download ho gaya hai.', style: const TextStyle(fontSize: 11, color: Colors.grey)),
+              Text('Size: $sizeKb KB • File Manager me save ho gaya hai.', style: const TextStyle(fontSize: 11, color: Colors.grey)),
               const SizedBox(height: 18),
               Row(
                 children: [
@@ -1179,7 +1180,54 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             ),
         ],
       ),
-      body: _docs.isEmpty ? _buildEmptySelector() : _buildWorkspace(cardBg),
+      body: Stack(
+        children: [
+          _docs.isEmpty ? _buildEmptySelector() : _buildWorkspace(cardBg),
+          if (_isLoadingImages)
+            Container(
+              color: Colors.black54,
+              width: double.infinity,
+              height: double.infinity,
+              child: Center(
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 20),
+                  margin: const EdgeInsets.symmetric(horizontal: 40),
+                  decoration: BoxDecoration(
+                    color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                    borderRadius: BorderRadius.circular(16),
+                    boxShadow: const [
+                      BoxShadow(color: Colors.black26, blurRadius: 12, offset: Offset(0, 4)),
+                    ],
+                  ),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      const CircularProgressIndicator(
+                        strokeWidth: 3,
+                        color: Color(0xFF2563EB),
+                      ),
+                      const SizedBox(height: 16),
+                      Text(
+                        _loadingStatusText,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 13,
+                          fontWeight: FontWeight.bold,
+                          color: isDark ? Colors.white : const Color(0xFF0F172A),
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      const Text(
+                        'Kripya thoda intezar karein...',
+                        style: TextStyle(fontSize: 11, color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+        ],
+      ),
       bottomNavigationBar: _docs.isEmpty ? null : _buildExportBottomBar(),
     );
   }
@@ -1415,10 +1463,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
               width: 58,
               height: 58,
               color: Colors.black12,
-              child: Image.memory(
-                previewBytes,
-                fit: BoxFit.contain,
-              ),
+              child: Image.memory(previewBytes, fit: BoxFit.contain),
             ),
           ),
           const SizedBox(width: 10),
