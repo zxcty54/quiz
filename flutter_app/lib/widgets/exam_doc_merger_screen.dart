@@ -13,253 +13,7 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:share_plus/share_plus.dart';
 
 // ============================================================================
-// TOOL 1: EXAM PHOTO & SIGNATURE RESIZER (<20KB / <50KB)
-// ============================================================================
-class ExamPhotoResizerScreen extends StatefulWidget {
-  final bool isDark;
-  const ExamPhotoResizerScreen({super.key, required this.isDark});
-
-  @override
-  State<ExamPhotoResizerScreen> createState() => _ExamPhotoResizerScreenState();
-}
-
-class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
-  final ImagePicker _picker = ImagePicker();
-  File? _pickedFile;
-  Uint8List? _processedBytes;
-  bool _isProcessing = false;
-  int _targetMaxKb = 50;
-  String _selectedPreset = 'Photo (< 50 KB)';
-
-  final Map<String, int> _presets = {
-    'Signature (< 20 KB)': 20,
-    'Photo (< 50 KB)': 50,
-    'Document (< 100 KB)': 100,
-    'High Res (< 200 KB)': 200,
-  };
-
-  Future<void> _pickImage(ImageSource source) async {
-    try {
-      final xfile = await _picker.pickImage(source: source);
-      if (xfile == null) return;
-
-      setState(() {
-        _pickedFile = File(xfile.path);
-        _processedBytes = null;
-      });
-
-      _processImage();
-    } catch (e) {
-      debugPrint("Picker Error: $e");
-    }
-  }
-
-  Future<void> _processImage() async {
-    if (_pickedFile == null) return;
-    setState(() => _isProcessing = true);
-    HapticFeedback.lightImpact();
-
-    try {
-      final rawBytes = await _pickedFile!.readAsBytes();
-      final decoded = img.decodeImage(rawBytes);
-      if (decoded == null) return;
-
-      final targetBytes = _targetMaxKb * 1024;
-      int quality = 95;
-      img.Image current = decoded;
-
-      if (current.width > 1200 || current.height > 1200) {
-        current = img.copyResize(current, width: 1000, interpolation: img.Interpolation.linear);
-      }
-
-      Uint8List compressed = Uint8List.fromList(img.encodeJpg(current, quality: quality));
-
-      while (compressed.lengthInBytes > targetBytes && quality > 15) {
-        quality -= 8;
-        compressed = Uint8List.fromList(img.encodeJpg(current, quality: quality));
-      }
-
-      while (compressed.lengthInBytes > targetBytes && current.width > 300) {
-        current = img.copyResize(current, width: (current.width * 0.85).round(), interpolation: img.Interpolation.cubic);
-        compressed = Uint8List.fromList(img.encodeJpg(current, quality: 75));
-      }
-
-      if (mounted) {
-        setState(() {
-          _processedBytes = compressed;
-        });
-      }
-    } catch (e) {
-      debugPrint("Processing error: $e");
-    } finally {
-      if (mounted) setState(() => _isProcessing = false);
-    }
-  }
-
-  Future<void> _saveAndShare() async {
-    if (_processedBytes == null) return;
-    try {
-      final dir = await getApplicationDocumentsDirectory();
-      final stamp = DateTime.now().millisecondsSinceEpoch;
-      final outPath = path.join(dir.path, 'resized_$stamp.jpg');
-      final outFile = File(outPath);
-      await outFile.writeAsBytes(_processedBytes!, flush: true);
-
-      await Share.shareXFiles([XFile(outFile.path)], text: 'MockTester Resized Image');
-    } catch (e) {
-      debugPrint("Share error: $e");
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = widget.isDark;
-    final cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
-
-    return Scaffold(
-      backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-      appBar: AppBar(
-        title: const Text('Photo & Sign Resizer', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-        backgroundColor: isDark ? const Color(0xFF1E1B18) : Colors.white,
-        foregroundColor: isDark ? Colors.white : const Color(0xFF0F172A),
-        elevation: 0,
-      ),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-            decoration: BoxDecoration(
-              color: cardBg,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: Colors.grey.withValues(alpha: 0.15)),
-            ),
-            child: Row(
-              children: [
-                const Icon(Icons.tune_rounded, color: Color(0xFFB45309), size: 20),
-                const SizedBox(width: 10),
-                const Text('Target Preset:', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
-                const Spacer(),
-                DropdownButton<String>(
-                  value: _selectedPreset,
-                  underline: const SizedBox(),
-                  style: TextStyle(
-                    color: isDark ? Colors.white : Colors.black87,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12.5,
-                  ),
-                  items: _presets.keys.map((k) => DropdownMenuItem(value: k, child: Text(k))).toList(),
-                  onChanged: (v) {
-                    if (v != null) {
-                      setState(() {
-                        _selectedPreset = v;
-                        _targetMaxKb = _presets[v]!;
-                      });
-                      if (_pickedFile != null) _processImage();
-                    }
-                  },
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 16),
-          Container(
-            height: 300,
-            decoration: BoxDecoration(
-              color: cardBg,
-              borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: Colors.grey.withValues(alpha: 0.15)),
-            ),
-            child: _pickedFile == null
-                ? Center(
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Icon(Icons.add_photo_alternate_outlined, size: 54, color: Colors.grey.shade400),
-                        const SizedBox(height: 10),
-                        const Text('Gallery ya Camera se Photo select karein', style: TextStyle(color: Colors.grey, fontSize: 13)),
-                      ],
-                    ),
-                  )
-                : _isProcessing
-                    ? const Center(child: CircularProgressIndicator(color: Color(0xFFB45309)))
-                    : Center(
-                        child: Image.memory(
-                          _processedBytes ?? _pickedFile!.readAsBytesSync(),
-                          fit: BoxFit.contain,
-                        ),
-                      ),
-          ),
-          const SizedBox(height: 12),
-          if (_processedBytes != null)
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-              decoration: BoxDecoration(
-                color: const Color(0xFF16A34A).withValues(alpha: 0.12),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Row(
-                children: [
-                  const Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 18),
-                  const SizedBox(width: 8),
-                  Text(
-                    'Output Size: ${(_processedBytes!.lengthInBytes / 1024).toStringAsFixed(1)} KB (Target: < $_targetMaxKb KB)',
-                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5, color: Color(0xFF16A34A)),
-                  ),
-                ],
-              ),
-            ),
-          const SizedBox(height: 20),
-          Row(
-            children: [
-              Expanded(
-                child: OutlinedButton.icon(
-                  onPressed: () => _pickImage(ImageSource.camera),
-                  style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                  ),
-                  icon: const Icon(Icons.camera_alt_outlined, size: 18),
-                  label: const Text('Camera', style: TextStyle(fontWeight: FontWeight.bold)),
-                ),
-              ),
-              const SizedBox(width: 12),
-              Expanded(
-                child: ElevatedButton.icon(
-                  onPressed: () => _pickImage(ImageSource.gallery),
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: const Color(0xFFB45309),
-                    foregroundColor: Colors.white,
-                    padding: const EdgeInsets.symmetric(vertical: 12),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                  ),
-                  icon: const Icon(Icons.photo_library_outlined, size: 18),
-                  label: const Text('Gallery', style: TextStyle(fontWeight: FontWeight.bold)),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 12),
-          if (_processedBytes != null)
-            ElevatedButton.icon(
-              onPressed: _saveAndShare,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF16A34A),
-                foregroundColor: Colors.white,
-                padding: const EdgeInsets.symmetric(vertical: 13),
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-              ),
-              icon: const Icon(Icons.share_rounded, size: 20),
-              label: const Text('Save & Share Resized Image', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 13.5)),
-            ),
-        ],
-      ),
-    );
-  }
-}
-
-// ============================================================================
-// TOOL 2: EXAM DOC & ID MERGER (SAF FILE MANAGER DOWNLOAD + INSTANT PREVIEW)
+// EXAM DOC & ID MERGER (SAF FILE MANAGER DOWNLOAD + INSTANT PREVIEW)
 // ============================================================================
 class ExamDocMergerScreen extends StatefulWidget {
   final bool isDark;
@@ -554,7 +308,6 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
     }
   }
 
-  // 💾 Native Storage Access Framework (SAF) - Direct Downloads Selector
   Future<void> _exportDocument() async {
     if (_docs.isEmpty) return;
     setState(() => _isProcessing = true);
@@ -602,7 +355,6 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
         defaultFileName = 'MockTester_Doc_$stamp.pdf';
       }
 
-      // 📁 System File Picker se direct user ko destination (Download folder) chunein
       String? selectedPath = await FilePicker.platform.saveFile(
         dialogTitle: 'File Manager mein Save Karein (Downloads Folder):',
         fileName: defaultFileName,
@@ -618,7 +370,6 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           await finalFile.writeAsBytes(exportBytes, flush: true);
         }
       } else {
-        // Fallback internal cache
         final dir = await getApplicationDocumentsDirectory();
         finalFile = File(path.join(dir.path, defaultFileName));
         await finalFile.writeAsBytes(exportBytes, flush: true);
@@ -827,7 +578,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           ),
         ),
 
-        // 👁️ LIVE COMBINED CANVAS PREVIEW
+        // Live Combined Canvas Preview
         Container(
           height: 185,
           margin: const EdgeInsets.all(10),
