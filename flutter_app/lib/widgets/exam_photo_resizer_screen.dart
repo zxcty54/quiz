@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:file_picker/file_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -23,7 +22,6 @@ class ExamPhotoResizerScreen extends StatefulWidget {
 class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
   final ImagePicker _picker = ImagePicker();
   
-  // Store pure bytes for stable, crash-free preview rendering
   Uint8List? _imageBytes;
   String? _cachedFilePath;
   int _originalSizeKB = 0;
@@ -56,7 +54,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     super.dispose();
   }
 
-  // Crash recovery if Android OS killed the app while camera was running
   Future<void> _retrieveLostData() async {
     try {
       final LostDataResponse response = await _picker.retrieveLostData();
@@ -67,12 +64,10 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     }
   }
 
-  // Core processing engine: shrinks the photo safely into memory bytes
   Future<void> _processImageSafe(String rawPath) async {
     setState(() => _isProcessing = true);
 
     try {
-      // 300ms pause: lets Android camera finish releasing its hardware buffer
       await Future.delayed(const Duration(milliseconds: 300));
 
       final File initialFile = File(rawPath);
@@ -81,7 +76,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
         return;
       }
 
-      // Convert directly to compressed memory bytes (bypassing heavy disk UI reads)
       final Uint8List? safeBytes = await FlutterImageCompress.compressWithFile(
         rawPath,
         minWidth: 800,
@@ -96,7 +90,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
         return;
       }
 
-      // Save a lightweight temporary working file
       final tempDir = await getTemporaryDirectory();
       final safeFile = File('${tempDir.path}/safe_${DateTime.now().millisecondsSinceEpoch}.jpg');
       await safeFile.writeAsBytes(safeBytes, flush: true);
@@ -125,7 +118,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     }
   }
 
-  // Pick image via Camera or Gallery
   Future<void> _pickImage(ImageSource source) async {
     try {
       final XFile? picked = await _picker.pickImage(
@@ -177,7 +169,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     );
   }
 
-  // Compresses the working image to match the exact target size in KB
   Future<File?> _compressToTargetFile() async {
     if (_cachedFilePath == null) return null;
 
@@ -248,6 +239,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     return null;
   }
 
+  // Direct Downloads Folder Save Engine
   Future<void> _handleSave() async {
     if (_cachedFilePath == null || _isProcessing) return;
 
@@ -263,34 +255,106 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
 
       final compressedKB = (compressed.lengthSync() / 1024).round();
       final bytes = await compressed.readAsBytes();
-      final defaultName = 'Exam_Photo_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
+      final fileName = 'Exam_Photo_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
 
-      String? selectedPath = await FilePicker.platform.saveFile(
-        dialogTitle: 'Select destination folder:',
-        fileName: defaultName,
-        bytes: bytes,
-        type: FileType.image,
-        allowedExtensions: ['jpg', 'jpeg'],
-      );
+      File? savedFile;
+      String locationName = '';
 
-      if (selectedPath != null && selectedPath.isNotEmpty) {
-        final savedFile = File(selectedPath);
-        if (!await savedFile.exists() || await savedFile.length() == 0) {
+      // Method 1: Public Download folder direct save (Android standard path)
+      if (Platform.isAndroid) {
+        final publicDownloadDir = Directory('/storage/emulated/0/Download');
+        if (await publicDownloadDir.exists()) {
+          savedFile = File('${publicDownloadDir.path}/$fileName');
           await savedFile.writeAsBytes(bytes, flush: true);
+          locationName = 'Downloads Folder';
         }
-        HapticFeedback.mediumImpact();
-        _showToast('Saved successfully (${compressedKB} KB)!');
-      } else {
-        final dir = await getApplicationDocumentsDirectory();
-        final savedFile = File('${dir.path}/$defaultName');
+      }
+
+      // Method 2: Standard Downloads Directory fallback
+      if (savedFile == null || !await savedFile.exists()) {
+        final Directory? extDir = await getDownloadsDirectory();
+        if (extDir != null) {
+          savedFile = File('${extDir.path}/$fileName');
+          await savedFile.writeAsBytes(bytes, flush: true);
+          locationName = 'Downloads Folder';
+        }
+      }
+
+      // Method 3: App Document Storage fallback
+      if (savedFile == null || !await savedFile.exists()) {
+        final appDir = await getApplicationDocumentsDirectory();
+        savedFile = File('${appDir.path}/$fileName');
         await savedFile.writeAsBytes(bytes, flush: true);
-        _showToast('Saved to app storage (${compressedKB} KB).');
+        locationName = 'App Documents';
+      }
+
+      if (mounted) {
+        HapticFeedback.mediumImpact();
+        _showSaveSuccessDialog(savedFile, compressedKB, locationName);
       }
     } catch (e) {
-      _showToast('Failed to save file: $e');
+      _showToast('Failed to save photo: $e');
     } finally {
       if (mounted) setState(() => _isProcessing = false);
     }
+  }
+
+  void _showSaveSuccessDialog(File savedFile, int sizeKB, String location) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: widget.isDark ? const Color(0xFF1E293B) : Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: const Row(
+          children: [
+            Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 24),
+            SizedBox(width: 8),
+            Text('Photo Saved!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+          ],
+        ),
+        content: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Size: $sizeKB KB (Portal Accepted)',
+              style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF16A34A), fontSize: 13),
+            ),
+            const SizedBox(height: 6),
+            Text(
+              'Saved to: $location\nPath: ${savedFile.path}',
+              style: TextStyle(
+                fontSize: 11.5,
+                color: widget.isDark ? Colors.white70 : const Color(0xFF64748B),
+              ),
+            ),
+          ],
+        ),
+        actions: [
+          OutlinedButton.icon(
+            onPressed: () {
+              Navigator.pop(ctx);
+              Share.shareXFiles([XFile(savedFile.path)], text: 'Resized Photo ($sizeKB KB)');
+            },
+            icon: const Icon(Icons.share_rounded, size: 16),
+            label: const Text('Share'),
+            style: OutlinedButton.styleFrom(
+              foregroundColor: const Color(0xFF16A34A),
+              side: const BorderSide(color: Color(0xFF16A34A)),
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () => Navigator.pop(ctx),
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF16A34A),
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            ),
+            child: const Text('Done', style: TextStyle(fontWeight: FontWeight.bold)),
+          ),
+        ],
+      ),
+    );
   }
 
   Future<void> _handleShare() async {
@@ -579,7 +643,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                           constraints: const BoxConstraints(maxHeight: 200),
                           width: double.infinity,
                           color: isDark ? Colors.black26 : const Color(0xFFF1F5F9),
-                          // ⚡ Image.memory bypasses Android FileProvider/disk locks completely
                           child: Image.memory(
                             _imageBytes!,
                             cacheWidth: 500,
@@ -695,7 +758,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                   ),
                   icon: const Icon(Icons.download_rounded, size: 18),
-                  label: const Text('Save to File Manager', style: TextStyle(fontWeight: FontWeight.bold)),
+                  label: const Text('Save to Downloads', style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
               ),
               const SizedBox(width: 8),
