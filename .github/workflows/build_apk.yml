@@ -79,21 +79,51 @@ jobs:
           }
           EOF
 
+      # 🛠️ FIX: Complete Manifest with Camera, Storage, and LargeHeap
       - name: Inject Valid AndroidManifest.xml
         run: |
           cat << 'EOF' > flutter_app/android/app/src/main/AndroidManifest.xml
           <manifest xmlns:android="http://schemas.android.com/apk/res/android"
               package="com.mocktester.app">
 
+              <!-- Network & Core Permissions -->
               <uses-permission android:name="android.permission.INTERNET"/>
               <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
               <uses-permission android:name="android.permission.VIBRATE"/>
+
+              <!-- 📸 Camera Hardware & Permission -->
+              <uses-permission android:name="android.permission.CAMERA"/>
+              <uses-feature android:name="android.hardware.camera" android:required="false" />
+              <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />
+
+              <!-- 📁 Storage Permissions for Downloads & Resized Images -->
+              <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+              <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" android:maxSdkVersion="29" />
+              <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
+              <!-- Queries for External Links / Browser -->
+              <queries>
+                  <intent>
+                      <action android:name="android.intent.action.VIEW" />
+                      <data android:scheme="https" />
+                  </intent>
+                  <intent>
+                      <action android:name="android.intent.action.VIEW" />
+                      <data android:scheme="http" />
+                  </intent>
+                  <intent>
+                      <action android:name="android.intent.action.DIAL" />
+                      <data android:scheme="tel" />
+                  </intent>
+              </queries>
 
               <application
                   android:label="MockTester"
                   android:name="${applicationName}"
                   android:icon="@mipmap/ic_launcher"
                   android:usesCleartextTraffic="true"
+                  android:requestLegacyExternalStorage="true"
+                  android:largeHeap="true"
                   android:hardwareAccelerated="true">
 
                   <meta-data
@@ -244,14 +274,13 @@ jobs:
           flutter clean
           flutter pub get
 
-          # 🛠️ AGP 9.0+ Proguard auto-patch: replaces deprecated proguard-android.txt with proguard-android-optimize.txt
+          # 🛠️ AGP 9.0+ Proguard auto-patch
           TARGET_FILES=$(find /home/runner/.pub-cache -name "build.gradle" -path "*/flutter_inappwebview_android*/*")
           for f in $TARGET_FILES; do
             echo "Patching: $f"
             sed -i "s/proguard-android.txt/proguard-android-optimize.txt/g" "$f"
           done
 
-          # 🛠️ --no-pub flag ensures Flutter doesn't revert the patch during build
           flutter build apk --release --no-pub --target-platform=android-arm64 --no-tree-shake-icons --build-number=${{ github.run_number }}
 
       - name: Locate & Package APK
