@@ -26,6 +26,7 @@ import 'tabs/sectional_tab.dart';
 
 // 🛠️ Aspirant Tools Imports
 import '../widgets/exam_photo_resizer_screen.dart';
+import '../widgets/exam_doc_merger_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -465,6 +466,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                             style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
                           ),
                           children: [
+                            // Tool 1: Photo & Sign Resizer
                             ListTile(
                               contentPadding: const EdgeInsets.only(left: 32, right: 16),
                               leading: Container(
@@ -508,6 +510,55 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                                   context,
                                   MaterialPageRoute(
                                     builder: (_) => ExamPhotoResizerScreen(isDark: _isDarkMode),
+                                  ),
+                                );
+                              },
+                            ),
+
+                            // Tool 2: Doc & ID Card Merger
+                            ListTile(
+                              contentPadding: const EdgeInsets.only(left: 32, right: 16),
+                              leading: Container(
+                                padding: const EdgeInsets.all(6),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF2563EB).withValues(alpha: 0.12),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: const Icon(
+                                  Icons.picture_as_pdf_rounded,
+                                  size: 18,
+                                  color: Color(0xFF2563EB),
+                                ),
+                              ),
+                              title: const Text(
+                                'Doc & ID Card Merger',
+                                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
+                              ),
+                              subtitle: const Text(
+                                'Aadhaar Front/Back • 1-Doc PDF (<100KB)',
+                                style: TextStyle(fontSize: 11),
+                              ),
+                              trailing: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF2563EB).withValues(alpha: 0.15),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: const Text(
+                                  'NEW',
+                                  style: TextStyle(
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w900,
+                                    color: Color(0xFF2563EB),
+                                  ),
+                                ),
+                              ),
+                              onTap: () {
+                                Navigator.pop(context);
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => ExamDocMergerScreen(isDark: _isDarkMode),
                                   ),
                                 );
                               },
