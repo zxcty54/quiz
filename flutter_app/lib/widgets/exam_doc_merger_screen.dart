@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image/image.dart' as img;
 import 'package:image_picker/image_picker.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/pdf.dart';
@@ -258,7 +259,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
 }
 
 // ============================================================================
-// TOOL 2: EXAM DOC & ID MERGER (1-4 IMAGES, CORNER CROP, PDF/JPG)
+// TOOL 2: EXAM DOC & ID MERGER (SAF FILE MANAGER DOWNLOAD + INSTANT PREVIEW)
 // ============================================================================
 class ExamDocMergerScreen extends StatefulWidget {
   final bool isDark;
@@ -293,14 +294,17 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
   String _exportFormat = 'PDF';
   _PageOrientation _orientation = _PageOrientation.topBottom;
 
-  static const int _maxByteLimit = 5 * 1024 * 1024; // 5 MB Limit
+  Uint8List? _cachedLivePreviewBytes;
+  bool _isGeneratingPreview = false;
+
+  static const int _maxByteLimit = 5 * 1024 * 1024;
   static const int _maxImages = 4;
 
   Future<void> _pickDocuments() async {
     final remaining = _maxImages - _docs.length;
     if (remaining <= 0) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Aap adhiktam 4 images hi jod sakte hain.')),
+        const SnackBar(content: Text('Aap maximum 4 images hi jod sakte hain.')),
       );
       return;
     }
@@ -309,17 +313,12 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
       final pickedList = await _picker.pickMultiImage();
       if (pickedList.isEmpty) return;
 
-      int rejectedCount = 0;
       int addedCount = 0;
-
       for (final xfile in pickedList) {
         if (addedCount >= remaining) break;
 
         final length = await xfile.length();
-        if (length > _maxByteLimit) {
-          rejectedCount++;
-          continue;
-        }
+        if (length > _maxByteLimit) continue;
 
         final bytes = await xfile.readAsBytes();
         final decoded = img.decodeImage(bytes);
@@ -329,35 +328,55 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             rawBytes: bytes,
             original: decoded,
           );
-          item.croppedPreviewBytes = _generatePreviewBytes(item);
+          item.croppedPreviewBytes = _generateItemPreview(item);
           _docs.add(item);
           addedCount++;
         }
       }
 
-      if (rejectedCount > 0 && mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text('⚠️ $rejectedCount image(s) 5MB se badi hone ke kaaran skip kar di gayi.'),
-            backgroundColor: Colors.red.shade800,
-          ),
-        );
+      if (mounted) {
+        setState(() {});
+        _refreshFullCanvasPreview();
       }
-
-      if (mounted) setState(() {});
     } catch (e) {
       debugPrint("Pick error: $e");
     }
   }
 
-  Uint8List _generatePreviewBytes(_DocItem doc) {
-    final cropped = _cropImage(doc, applySharpen: false);
+  Uint8List _generateItemPreview(_DocItem doc) {
+    final cropped = _cropImage(doc, applySharpen: _enableSharpenClean);
     final scaled = img.copyResize(
       cropped,
-      width: math.min(600, cropped.width),
+      width: math.min(400, cropped.width),
       interpolation: img.Interpolation.linear,
     );
-    return Uint8List.fromList(img.encodeJpg(scaled, quality: 85));
+    return Uint8List.fromList(img.encodeJpg(scaled, quality: 80));
+  }
+
+  Future<void> _refreshFullCanvasPreview() async {
+    if (_docs.isEmpty) {
+      setState(() => _cachedLivePreviewBytes = null);
+      return;
+    }
+    setState(() => _isGeneratingPreview = true);
+
+    try {
+      final composite = await Future<img.Image>(_buildMergedImage);
+      final previewScaled = img.copyResize(
+        composite,
+        width: math.min(650, composite.width),
+        interpolation: img.Interpolation.linear,
+      );
+      final bytes = Uint8List.fromList(img.encodeJpg(previewScaled, quality: 85));
+      if (mounted) {
+        setState(() {
+          _cachedLivePreviewBytes = bytes;
+          _isGeneratingPreview = false;
+        });
+      }
+    } catch (e) {
+      if (mounted) setState(() => _isGeneratingPreview = false);
+    }
   }
 
   img.Image _enhanceDocumentText(img.Image src) {
@@ -475,6 +494,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
       _docs.insert(toIndex, temp);
     });
     HapticFeedback.lightImpact();
+    _refreshFullCanvasPreview();
   }
 
   Future<void> _openCropDialog(int index) async {
@@ -493,10 +513,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           children: [
             const Icon(Icons.crop_rounded, color: Color(0xFF2563EB), size: 20),
             const SizedBox(width: 8),
-            Text(
-              'Crop Image ${index + 1}',
-              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-            ),
+            Text('Crop Image ${index + 1}', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           ],
         ),
         content: SizedBox(
@@ -505,9 +522,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           child: _InteractiveCornerCropper(
             imageBytes: doc.rawBytes,
             initialCrop: doc.cropRect,
-            onCropChanged: (newRect) {
-              tempRect = newRect;
-            },
+            onCropChanged: (newRect) => tempRect = newRect,
           ),
         ),
         actions: [
@@ -523,7 +538,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
             ),
             icon: const Icon(Icons.check_rounded, size: 18),
-            label: const Text('Done (OK)', style: TextStyle(fontWeight: FontWeight.bold)),
+            label: const Text('Apply Crop', style: TextStyle(fontWeight: FontWeight.bold)),
           ),
         ],
       ),
@@ -532,12 +547,14 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
     if (confirmed == true && mounted) {
       setState(() {
         doc.cropRect = tempRect;
-        doc.croppedPreviewBytes = _generatePreviewBytes(doc);
+        doc.croppedPreviewBytes = _generateItemPreview(doc);
       });
+      _refreshFullCanvasPreview();
       HapticFeedback.mediumImpact();
     }
   }
 
+  // 💾 Native Storage Access Framework (SAF) - Direct Downloads Selector
   Future<void> _exportDocument() async {
     if (_docs.isEmpty) return;
     setState(() => _isProcessing = true);
@@ -545,7 +562,6 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
 
     try {
       final mergedImg = await Future<img.Image>(_buildMergedImage);
-      final directory = await getApplicationDocumentsDirectory();
       final stamp = DateTime.now().millisecondsSinceEpoch;
 
       int targetMaxBytes = 100 * 1024;
@@ -566,31 +582,50 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
         compressedJpg = Uint8List.fromList(img.encodeJpg(scaleDown, quality: 75));
       }
 
-      File exportedFile;
+      Uint8List exportBytes;
+      String defaultFileName;
+
       if (_exportFormat == 'JPG') {
-        exportedFile = File(path.join(directory.path, 'doc_$stamp.jpg'));
-        await exportedFile.writeAsBytes(compressedJpg, flush: true);
+        exportBytes = compressedJpg;
+        defaultFileName = 'MockTester_Doc_$stamp.jpg';
       } else {
         final pdf = pw.Document();
         final imgProvider = pw.MemoryImage(compressedJpg);
-
         pdf.addPage(
           pw.Page(
             pageFormat: PdfPageFormat.a4,
             margin: const pw.EdgeInsets.all(24),
-            build: (pw.Context ctx) {
-              return pw.Center(
-                child: pw.Image(imgProvider, fit: pw.BoxFit.contain),
-              );
-            },
+            build: (pw.Context ctx) => pw.Center(child: pw.Image(imgProvider, fit: pw.BoxFit.contain)),
           ),
         );
-        exportedFile = File(path.join(directory.path, 'doc_$stamp.pdf'));
-        await exportedFile.writeAsBytes(await pdf.save(), flush: true);
+        exportBytes = await pdf.save();
+        defaultFileName = 'MockTester_Doc_$stamp.pdf';
+      }
+
+      // 📁 System File Picker se direct user ko destination (Download folder) chunein
+      String? selectedPath = await FilePicker.platform.saveFile(
+        dialogTitle: 'File Manager mein Save Karein (Downloads Folder):',
+        fileName: defaultFileName,
+        bytes: exportBytes,
+        type: _exportFormat == 'JPG' ? FileType.image : FileType.custom,
+        allowedExtensions: _exportFormat == 'JPG' ? ['jpg', 'jpeg'] : ['pdf'],
+      );
+
+      File finalFile;
+      if (selectedPath != null && selectedPath.isNotEmpty) {
+        finalFile = File(selectedPath);
+        if (!await finalFile.exists() || await finalFile.length() == 0) {
+          await finalFile.writeAsBytes(exportBytes, flush: true);
+        }
+      } else {
+        // Fallback internal cache
+        final dir = await getApplicationDocumentsDirectory();
+        finalFile = File(path.join(dir.path, defaultFileName));
+        await finalFile.writeAsBytes(exportBytes, flush: true);
       }
 
       if (!mounted) return;
-      _showSuccessSheet(exportedFile, compressedJpg.lengthInBytes);
+      _showSuccessSheet(finalFile, exportBytes.lengthInBytes);
     } catch (e) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text('Export error: $e')));
@@ -621,12 +656,15 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                 child: const Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 36),
               ),
               const SizedBox(height: 12),
-              const Text('Document Ready! ⚡', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900)),
-              const SizedBox(height: 4),
+              const Text('Saved Successfully! 📁', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
+              const SizedBox(height: 6),
               Text(
-                'Size: $sizeKb KB • Format: $_exportFormat (${_docs.length} Images)',
-                style: const TextStyle(fontSize: 12.5, color: Colors.grey, fontWeight: FontWeight.bold),
+                path.basename(file.path),
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 12, color: Colors.blueAccent, fontWeight: FontWeight.bold),
               ),
+              const SizedBox(height: 4),
+              Text('Size: $sizeKb KB • File Manager me download ho gaya hai.', style: const TextStyle(fontSize: 11, color: Colors.grey)),
               const SizedBox(height: 18),
               Row(
                 children: [
@@ -634,7 +672,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                     child: OutlinedButton.icon(
                       onPressed: () {
                         Navigator.pop(ctx);
-                        Share.shareXFiles([XFile(file.path)]);
+                        Share.shareXFiles([XFile(file.path)], text: 'MockTester Saved Document');
                       },
                       style: OutlinedButton.styleFrom(
                         padding: const EdgeInsets.symmetric(vertical: 12),
@@ -679,7 +717,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text('Doc & ID Merger (1-4 Images)', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15.5)),
-            Text('Crop • Front/Back Swap • Combined PDF', style: TextStyle(fontSize: 10, color: Colors.grey)),
+            Text('Real-time Canvas Preview • Direct Downloads Save', style: TextStyle(fontSize: 10, color: Colors.grey)),
           ],
         ),
         backgroundColor: isDark ? const Color(0xFF1E1B18) : Colors.white,
@@ -690,7 +728,12 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             IconButton(
               icon: const Icon(Icons.delete_sweep_rounded, color: Colors.redAccent),
               tooltip: 'Clear All',
-              onPressed: () => setState(() => _docs.clear()),
+              onPressed: () {
+                setState(() {
+                  _docs.clear();
+                  _cachedLivePreviewBytes = null;
+                });
+              },
             ),
         ],
       ),
@@ -715,10 +758,10 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
               child: const Icon(Icons.picture_as_pdf_rounded, size: 54, color: Color(0xFF2563EB)),
             ),
             const SizedBox(height: 18),
-            const Text('Documents / ID Cards Select Karein', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
+            const Text('Documents / ID Cards Chunein', style: TextStyle(fontSize: 17, fontWeight: FontWeight.w900)),
             const SizedBox(height: 6),
             const Text(
-              'Aap 1 se lekar 4 images tak add kar sakte hain (Aadhaar Front/Back, Marksheet, Certificate). Max 5MB per image.',
+              '1 se 4 images select karein. Live Canvas Preview ke sath direct Downloads folder me save karein.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 12, color: Colors.grey, height: 1.4),
             ),
@@ -748,10 +791,7 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           color: cardBg,
           child: Row(
             children: [
-              Text(
-                '${_docs.length}/4 Selected',
-                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
-              ),
+              Text('${_docs.length}/4 Images', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
               const Spacer(),
               if (_docs.length > 1) ...[
                 const Text('Layout: ', style: TextStyle(fontSize: 11, color: Colors.grey, fontWeight: FontWeight.bold)),
@@ -759,17 +799,20 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                   segments: const [
                     ButtonSegment(
                       value: _PageOrientation.topBottom,
-                      icon: Icon(Icons.view_agenda_outlined, size: 16),
-                      label: Text('Top-Down', style: TextStyle(fontSize: 10.5)),
+                      icon: Icon(Icons.view_agenda_outlined, size: 15),
+                      label: Text('Top-Down', style: TextStyle(fontSize: 10)),
                     ),
                     ButtonSegment(
                       value: _PageOrientation.sideBySide,
-                      icon: Icon(Icons.view_column_outlined, size: 16),
-                      label: Text('Side-Side', style: TextStyle(fontSize: 10.5)),
+                      icon: Icon(Icons.view_column_outlined, size: 15),
+                      label: Text('Side-Side', style: TextStyle(fontSize: 10)),
                     ),
                   ],
                   selected: {_orientation},
-                  onSelectionChanged: (val) => setState(() => _orientation = val.first),
+                  onSelectionChanged: (val) {
+                    setState(() => _orientation = val.first);
+                    _refreshFullCanvasPreview();
+                  },
                   style: const ButtonStyle(visualDensity: VisualDensity.compact),
                 ),
                 const SizedBox(width: 8),
@@ -778,18 +821,64 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                 IconButton(
                   onPressed: _pickDocuments,
                   icon: const Icon(Icons.add_circle_outline_rounded, color: Color(0xFF2563EB)),
-                  tooltip: 'Add More',
+                  tooltip: 'Add Image',
                 ),
             ],
           ),
         ),
+
+        // 👁️ LIVE COMBINED CANVAS PREVIEW
+        Container(
+          height: 185,
+          margin: const EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: const Color(0xFF0F172A),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: Colors.blueAccent.withValues(alpha: 0.3)),
+          ),
+          child: Stack(
+            fit: StackFit.expand,
+            children: [
+              if (_isGeneratingPreview)
+                const Center(
+                  child: CircularProgressIndicator(strokeWidth: 2, color: Colors.blueAccent),
+                )
+              else if (_cachedLivePreviewBytes != null)
+                InteractiveViewer(
+                  minScale: 0.5,
+                  maxScale: 3.5,
+                  child: Center(
+                    child: Container(
+                      margin: const EdgeInsets.all(10),
+                      padding: const EdgeInsets.all(4),
+                      color: Colors.white,
+                      child: Image.memory(_cachedLivePreviewBytes!, fit: BoxFit.contain),
+                    ),
+                  ),
+                )
+              else
+                const Center(child: Text('Preview taiyar ho raha hai...', style: TextStyle(color: Colors.white54, fontSize: 12))),
+              Positioned(
+                bottom: 6,
+                right: 8,
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                  decoration: BoxDecoration(color: Colors.black87, borderRadius: BorderRadius.circular(4)),
+                  child: const Text('Live Document Preview (Zoomable)', style: TextStyle(color: Colors.white70, fontSize: 9)),
+                ),
+              ),
+            ],
+          ),
+        ),
+
         Expanded(
           child: ListView.builder(
-            padding: const EdgeInsets.all(12),
+            padding: const EdgeInsets.symmetric(horizontal: 12),
             itemCount: _docs.length,
             itemBuilder: (ctx, idx) => _buildImageItemCard(idx, cardBg),
           ),
         ),
+
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
           color: cardBg,
@@ -809,7 +898,15 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                   Switch(
                     value: _enableSharpenClean,
                     activeThumbColor: const Color(0xFF16A34A),
-                    onChanged: (v) => setState(() => _enableSharpenClean = v),
+                    onChanged: (v) {
+                      setState(() {
+                        _enableSharpenClean = v;
+                        for (var d in _docs) {
+                          d.croppedPreviewBytes = _generateItemPreview(d);
+                        }
+                      });
+                      _refreshFullCanvasPreview();
+                    },
                   ),
                 ],
               ),
@@ -861,29 +958,25 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
     final previewBytes = doc.croppedPreviewBytes ?? doc.rawBytes;
 
     return Container(
-      margin: const EdgeInsets.only(bottom: 10),
-      padding: const EdgeInsets.all(10),
+      margin: const EdgeInsets.only(bottom: 8),
+      padding: const EdgeInsets.all(8),
       decoration: BoxDecoration(
         color: cardBg,
-        borderRadius: BorderRadius.circular(12),
+        borderRadius: BorderRadius.circular(10),
         border: Border.all(color: Colors.grey.withValues(alpha: 0.15)),
       ),
       child: Row(
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(8),
+            borderRadius: BorderRadius.circular(6),
             child: Container(
-              width: 80,
-              height: 80,
+              width: 58,
+              height: 58,
               color: Colors.black12,
-              child: Image.memory(
-                previewBytes,
-                fit: BoxFit.contain,
-                filterQuality: FilterQuality.low,
-              ),
+              child: Image.memory(previewBytes, fit: BoxFit.contain),
             ),
           ),
-          const SizedBox(width: 12),
+          const SizedBox(width: 10),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -891,33 +984,36 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
                 Row(
                   children: [
                     CircleAvatar(
-                      radius: 10,
+                      radius: 9,
                       backgroundColor: const Color(0xFF2563EB),
-                      child: Text('${index + 1}', style: const TextStyle(fontSize: 10, color: Colors.white, fontWeight: FontWeight.bold)),
+                      child: Text('${index + 1}', style: const TextStyle(fontSize: 9.5, color: Colors.white, fontWeight: FontWeight.bold)),
                     ),
                     const SizedBox(width: 6),
                     Text(
                       index == 0 ? 'Front Side / Page 1' : (index == 1 ? 'Back Side / Page 2' : 'Page ${index + 1}'),
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
+                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
                     ),
                   ],
                 ),
-                const SizedBox(height: 6),
+                const SizedBox(height: 4),
                 Row(
                   children: [
                     OutlinedButton.icon(
                       onPressed: () => _openCropDialog(index),
                       style: OutlinedButton.styleFrom(
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                       ),
-                      icon: const Icon(Icons.crop_rounded, size: 14),
-                      label: const Text('Crop Box', style: TextStyle(fontSize: 11, fontWeight: FontWeight.bold)),
+                      icon: const Icon(Icons.crop_rounded, size: 13),
+                      label: const Text('Crop', style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.bold)),
                     ),
-                    const SizedBox(width: 6),
+                    const SizedBox(width: 4),
                     IconButton(
-                      icon: const Icon(Icons.delete_outline_rounded, size: 18, color: Colors.redAccent),
-                      onPressed: () => setState(() => _docs.removeAt(index)),
+                      icon: const Icon(Icons.delete_outline_rounded, size: 17, color: Colors.redAccent),
+                      onPressed: () {
+                        setState(() => _docs.removeAt(index));
+                        _refreshFullCanvasPreview();
+                      },
                       tooltip: 'Remove',
                     ),
                   ],
@@ -926,17 +1022,17 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
             ),
           ),
           if (_docs.length > 1)
-            Column(
+            Row(
               children: [
                 IconButton(
-                  icon: const Icon(Icons.keyboard_arrow_up_rounded, size: 22),
+                  icon: const Icon(Icons.arrow_upward_rounded, size: 20),
                   onPressed: index > 0 ? () => _swapDocs(index, index - 1) : null,
-                  tooltip: 'Move Up (Front)',
+                  tooltip: 'Move Up',
                 ),
                 IconButton(
-                  icon: const Icon(Icons.keyboard_arrow_down_rounded, size: 22),
+                  icon: const Icon(Icons.arrow_downward_rounded, size: 20),
                   onPressed: index < _docs.length - 1 ? () => _swapDocs(index, index + 1) : null,
-                  tooltip: 'Move Down (Back)',
+                  tooltip: 'Move Down',
                 ),
               ],
             ),
@@ -960,10 +1056,10 @@ class _ExamDocMergerScreenState extends State<ExamDocMergerScreen> {
           ),
           icon: _isProcessing
               ? const SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2, color: Colors.white))
-              : const Icon(Icons.download_done_rounded, size: 20),
+              : const Icon(Icons.download_for_offline_rounded, size: 20),
           label: Text(
-            _isProcessing ? 'Merging & Optimizing...' : 'Download $_exportFormat (${_docs.length} Image${_docs.length > 1 ? "s" : ""})',
-            style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 14),
+            _isProcessing ? 'Saving to Device...' : 'Download $_exportFormat to File Manager (${_docs.length} Image${_docs.length > 1 ? "s" : ""})',
+            style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13.5),
           ),
         ),
       ),
