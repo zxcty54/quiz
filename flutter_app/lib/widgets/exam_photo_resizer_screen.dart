@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_image_compress/flutter_image_compress.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:file_picker/file_picker.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -21,7 +22,7 @@ class ExamPhotoResizerScreen extends StatefulWidget {
 
 class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
   final ImagePicker _picker = ImagePicker();
-  
+
   Uint8List? _imageBytes;
   String? _cachedFilePath;
   int _originalSizeKB = 0;
@@ -38,7 +39,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     {'label': 'Identity Proof', 'kb': 200, 'icon': Icons.fingerprint_rounded},
   ];
 
-  static const int _maxAllowedBytes = 5 * 1024 * 1024; // 5 MB maximum
+  static const int _maxAllowedBytes = 5 * 1024 * 1024; // 5 MB
 
   @override
   void initState() {
@@ -239,7 +240,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     return null;
   }
 
-  // Direct Downloads Folder Save Engine
+  // 📁 Direct File Manager / Downloads Save
   Future<void> _handleSave() async {
     if (_cachedFilePath == null || _isProcessing) return;
 
@@ -255,104 +256,141 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
 
       final compressedKB = (compressed.lengthSync() / 1024).round();
       final bytes = await compressed.readAsBytes();
-      final fileName = 'Exam_Photo_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
+      final defaultName = 'Exam_Photo_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
+
+      // 1. Android File Manager / System Picker trigger
+      String? selectedPath = await FilePicker.platform.saveFile(
+        dialogTitle: 'Select location in File Manager / Downloads:',
+        fileName: defaultName,
+        bytes: bytes,
+        type: FileType.image,
+        allowedExtensions: ['jpg', 'jpeg'],
+      );
 
       File? savedFile;
-      String locationName = '';
+      String locationTitle = 'File Manager';
 
-      // Method 1: Public Download folder direct save (Android standard path)
-      if (Platform.isAndroid) {
-        final publicDownloadDir = Directory('/storage/emulated/0/Download');
-        if (await publicDownloadDir.exists()) {
-          savedFile = File('${publicDownloadDir.path}/$fileName');
+      if (selectedPath != null && selectedPath.isNotEmpty) {
+        savedFile = File(selectedPath);
+        if (!await savedFile.exists() || await savedFile.length() == 0) {
           await savedFile.writeAsBytes(bytes, flush: true);
-          locationName = 'Downloads Folder';
         }
-      }
+        locationTitle = selectedPath;
+      } else {
+        // Fallback: Public Download directory
+        try {
+          final publicDownload = Directory('/storage/emulated/0/Download');
+          if (await publicDownload.exists()) {
+            savedFile = File('${publicDownload.path}/$defaultName');
+            await savedFile.writeAsBytes(bytes, flush: true);
+            locationTitle = 'Downloads Folder';
+          }
+        } catch (_) {}
 
-      // Method 2: Standard Downloads Directory fallback
-      if (savedFile == null || !await savedFile.exists()) {
-        final Directory? extDir = await getDownloadsDirectory();
-        if (extDir != null) {
-          savedFile = File('${extDir.path}/$fileName');
+        // Fallback 2: App Documents folder
+        if (savedFile == null || !await savedFile.exists()) {
+          final dir = await getApplicationDocumentsDirectory();
+          savedFile = File('${dir.path}/$defaultName');
           await savedFile.writeAsBytes(bytes, flush: true);
-          locationName = 'Downloads Folder';
+          locationTitle = 'Device Storage';
         }
-      }
-
-      // Method 3: App Document Storage fallback
-      if (savedFile == null || !await savedFile.exists()) {
-        final appDir = await getApplicationDocumentsDirectory();
-        savedFile = File('${appDir.path}/$fileName');
-        await savedFile.writeAsBytes(bytes, flush: true);
-        locationName = 'App Documents';
       }
 
       if (mounted) {
         HapticFeedback.mediumImpact();
-        _showSaveSuccessDialog(savedFile, compressedKB, locationName);
+        _showSavedSuccessSheet(savedFile, compressedKB, locationTitle);
       }
     } catch (e) {
-      _showToast('Failed to save photo: $e');
+      _showToast('Save failed: $e');
     } finally {
       if (mounted) setState(() => _isProcessing = false);
     }
   }
 
-  void _showSaveSuccessDialog(File savedFile, int sizeKB, String location) {
-    showDialog(
+  void _showSavedSuccessSheet(File file, int sizeKB, String location) {
+    showModalBottomSheet(
       context: context,
-      builder: (ctx) => AlertDialog(
-        backgroundColor: widget.isDark ? const Color(0xFF1E293B) : Colors.white,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-        title: const Row(
-          children: [
-            Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 24),
-            SizedBox(width: 8),
-            Text('Photo Saved!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
-          ],
-        ),
-        content: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Size: $sizeKB KB (Portal Accepted)',
-              style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF16A34A), fontSize: 13),
-            ),
-            const SizedBox(height: 6),
-            Text(
-              'Saved to: $location\nPath: ${savedFile.path}',
-              style: TextStyle(
-                fontSize: 11.5,
-                color: widget.isDark ? Colors.white70 : const Color(0xFF64748B),
+      backgroundColor: widget.isDark ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (ctx) => SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 40,
+                height: 4,
+                decoration: BoxDecoration(
+                  color: Colors.grey.withOpacity(0.3),
+                  borderRadius: BorderRadius.circular(10),
+                ),
               ),
-            ),
-          ],
+              const SizedBox(height: 16),
+              const Icon(Icons.check_circle_rounded, color: Color(0xFF16A34A), size: 40),
+              const SizedBox(height: 10),
+              const Text(
+                'Photo Successfully Saved!',
+                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16),
+              ),
+              const SizedBox(height: 4),
+              Text(
+                'Size: $sizeKB KB • Ready for Exam Portals',
+                style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF16A34A), fontSize: 12.5),
+              ),
+              const SizedBox(height: 8),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                decoration: BoxDecoration(
+                  color: widget.isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Text(
+                  'Saved: ${file.path}',
+                  style: const TextStyle(fontSize: 11, color: Colors.grey),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ),
+              const SizedBox(height: 18),
+              Row(
+                children: [
+                  Expanded(
+                    child: OutlinedButton.icon(
+                      onPressed: () {
+                        Navigator.pop(ctx);
+                        Share.shareXFiles([XFile(file.path)], text: 'Resized Photo ($sizeKB KB)');
+                      },
+                      style: OutlinedButton.styleFrom(
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        side: const BorderSide(color: Color(0xFF16A34A)),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      ),
+                      icon: const Icon(Icons.share_rounded, size: 16, color: Color(0xFF16A34A)),
+                      label: const Text('Share File', style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF16A34A))),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Expanded(
+                    child: ElevatedButton(
+                      onPressed: () => Navigator.pop(ctx),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF16A34A),
+                        foregroundColor: Colors.white,
+                        padding: const EdgeInsets.symmetric(vertical: 12),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                      ),
+                      child: const Text('Done', style: TextStyle(fontWeight: FontWeight.bold)),
+                    ),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
-        actions: [
-          OutlinedButton.icon(
-            onPressed: () {
-              Navigator.pop(ctx);
-              Share.shareXFiles([XFile(savedFile.path)], text: 'Resized Photo ($sizeKB KB)');
-            },
-            icon: const Icon(Icons.share_rounded, size: 16),
-            label: const Text('Share'),
-            style: OutlinedButton.styleFrom(
-              foregroundColor: const Color(0xFF16A34A),
-              side: const BorderSide(color: Color(0xFF16A34A)),
-            ),
-          ),
-          ElevatedButton(
-            onPressed: () => Navigator.pop(ctx),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF16A34A),
-              foregroundColor: Colors.white,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-            ),
-            child: const Text('Done', style: TextStyle(fontWeight: FontWeight.bold)),
-          ),
-        ],
       ),
     );
   }
@@ -602,7 +640,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                       CircularProgressIndicator(strokeWidth: 3, color: Color(0xFF16A34A)),
                       SizedBox(height: 16),
                       Text(
-                        'Optimizing & Processing...',
+                        'Saving to File Manager...',
                         textAlign: TextAlign.center,
                         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
                       ),
@@ -741,7 +779,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
           ),
           const SizedBox(height: 6),
           const Text(
-            'The image will be automatically compressed to match this target during save or share.',
+            'The image will be compressed and saved directly to your phone File Manager / Downloads.',
             style: TextStyle(fontSize: 11, color: Colors.grey),
           ),
           const SizedBox(height: 16),
@@ -757,8 +795,8 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                   ),
-                  icon: const Icon(Icons.download_rounded, size: 18),
-                  label: const Text('Save to Downloads', style: TextStyle(fontWeight: FontWeight.bold)),
+                  icon: const Icon(Icons.folder_open_rounded, size: 18),
+                  label: const Text('Save to File Manager', style: TextStyle(fontWeight: FontWeight.bold)),
                 ),
               ),
               const SizedBox(width: 8),
