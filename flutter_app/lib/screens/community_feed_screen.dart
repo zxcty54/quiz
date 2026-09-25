@@ -136,14 +136,16 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           .select('*')
           .order('id', ascending: false);
 
+      debugPrint(">>> COMMUNITY POSTS FETCH SUCCESS. Total: ${res.length}");
+
       if (mounted) {
         setState(() {
-          _posts = res ?? [];
+          _posts = res;
           _isLoading = false;
         });
       }
     } catch (e) {
-      debugPrint("Feed Fetch Error: $e");
+      debugPrint(">>> Feed Fetch Error: $e");
       if (mounted) setState(() => _isLoading = false);
     }
   }
@@ -274,14 +276,13 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
 
-                              // Direct Insert with is_approved = true
                               await Supabase.instance.client.from('community_posts').insert({
                                 'creator_id': _currentLoggedInHandle.isNotEmpty ? _currentLoggedInHandle : 'user',
                                 'author_name': _customUserName,
                                 'content': text,
                                 'tag': selectedTag,
                                 'image_url': uploadedImageUrl,
-                                'is_approved': true, // Direct live without review
+                                'is_approved': true,
                                 'views_count': 1,
                                 'upvotes': 0,
                                 'downvotes': 0,
@@ -291,7 +292,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
                               if (context.mounted) {
                                 Navigator.pop(ctx);
-                                _fetchFeedPosts(); // Turant feed reload
+                                _fetchFeedPosts();
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
                                     content: Text('Post published successfully!'),
@@ -335,11 +336,13 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
     final filteredList = _posts.where((p) {
       if (_activeFilter == 'Saved 📌') return _savedPostIds.contains(p['id']);
+
       if (_activeFilter != 'All') {
-        final tag = (p['tag'] ?? '').toString().toLowerCase();
-        final target = _activeFilter.split(' ').first.toLowerCase();
-        if (!tag.contains(target)) return false;
+        final postTag = (p['tag'] ?? '').toString().trim().toLowerCase();
+        final filterWord = _activeFilter.split(' ').first.toLowerCase();
+        if (!postTag.contains(filterWord)) return false;
       }
+
       if (_searchQuery.isEmpty) return true;
       final q = _searchQuery.toLowerCase();
       return (p['content'] ?? '').toString().toLowerCase().contains(q) ||
@@ -352,9 +355,19 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         backgroundColor: cardSurface,
         elevation: 0,
         scrolledUnderElevation: 0,
-        title: Text('Community Feed', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: isDark ? Colors.white : const Color(0xFF0F172A))),
+        title: Text(
+          'Community Feed',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            fontSize: 18,
+            color: isDark ? Colors.white : const Color(0xFF0F172A),
+          ),
+        ),
         actions: [
-          IconButton(icon: Icon(Icons.refresh_rounded, color: isDark ? Colors.white70 : const Color(0xFF334155)), onPressed: _fetchFeedPosts),
+          IconButton(
+            icon: Icon(Icons.refresh_rounded, color: isDark ? Colors.white70 : const Color(0xFF334155)),
+            onPressed: _fetchFeedPosts,
+          ),
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
@@ -370,7 +383,11 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
             padding: const EdgeInsets.fromLTRB(14, 4, 14, 8),
             child: Container(
               height: 44,
-              decoration: BoxDecoration(color: cardSurface, borderRadius: BorderRadius.circular(12), border: Border.all(color: dividerColor)),
+              decoration: BoxDecoration(
+                color: cardSurface,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: dividerColor),
+              ),
               child: TextField(
                 controller: _searchCtrl,
                 style: TextStyle(fontSize: 13.5, color: isDark ? Colors.white : const Color(0xFF0F172A)),
@@ -393,12 +410,23 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 return Padding(
                   padding: const EdgeInsets.only(right: 6),
                   child: ChoiceChip(
-                    label: Text(f, style: TextStyle(fontSize: 12, fontWeight: isSelected ? FontWeight.bold : FontWeight.normal)),
+                    label: Text(
+                      f,
+                      style: TextStyle(
+                        fontSize: 12,
+                        fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
+                      ),
+                    ),
                     selected: isSelected,
                     selectedColor: _primaryBlue,
                     backgroundColor: cardSurface,
-                    labelStyle: TextStyle(color: isSelected ? Colors.white : (isDark ? Colors.white70 : const Color(0xFF475569))),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(17), side: BorderSide(color: isSelected ? _primaryBlue : dividerColor)),
+                    labelStyle: TextStyle(
+                      color: isSelected ? Colors.white : (isDark ? Colors.white70 : const Color(0xFF475569)),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(17),
+                      side: BorderSide(color: isSelected ? _primaryBlue : dividerColor),
+                    ),
                     onSelected: (_) => setState(() => _activeFilter = f),
                   ),
                 );
@@ -413,7 +441,16 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 : RefreshIndicator(
                     onRefresh: _fetchFeedPosts,
                     child: filteredList.isEmpty
-                        ? Center(child: Text('No posts found.', style: TextStyle(color: Colors.grey[500])))
+                        ? Center(
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(Icons.inbox_outlined, size: 40, color: Colors.grey[400]),
+                                const SizedBox(height: 8),
+                                Text('No posts found.', style: TextStyle(color: Colors.grey[500])),
+                              ],
+                            ),
+                          )
                         : ListView.separated(
                             padding: const EdgeInsets.only(bottom: 90),
                             itemCount: filteredList.length,
