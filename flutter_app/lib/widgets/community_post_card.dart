@@ -675,16 +675,32 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
     final creator = widget.post['creator_profiles'] ?? {};
     final attachedMock = widget.post['creator_mocks'];
     final bool isVerifiedCreator = creator['name'] != null && (widget.post['creator_id'] != 'user');
-    final String authorHandle = (creator['handle_id'] ?? widget.post['creator_id'] ?? 'user').toString();
+    final String postCreatorId = (widget.post['creator_id'] ?? '').toString();
     final String authorDisplayName = isVerifiedCreator
         ? (creator['name'] ?? 'Verified Mentor')
         : (widget.post['author_name'] ?? 'Aspirant');
+
+    // Unique & Clean Handle Logic
+    String authorHandle;
+    if (isVerifiedCreator) {
+      authorHandle = (creator['handle_id'] ?? postCreatorId).toString();
+    } else if (postCreatorId.startsWith('usr_')) {
+      final cleanName = authorDisplayName.trim().split(' ').first.toLowerCase().replaceAll(RegExp(r'[^a-z0-9]'), '');
+      final shortSuffix = postCreatorId.length >= 4 
+          ? postCreatorId.substring(postCreatorId.length - 4) 
+          : postCreatorId;
+      authorHandle = '${cleanName.isNotEmpty ? cleanName : 'user'}_$shortSuffix';
+    } else if (postCreatorId != 'user' && postCreatorId.isNotEmpty) {
+      authorHandle = postCreatorId;
+    } else {
+      authorHandle = authorDisplayName.trim().split(' ').first.toLowerCase();
+    }
+
     final String? imgUrl = widget.post['image_url'];
     final Map<String, dynamic>? pollData = widget.post['poll_data'];
     final int commentsCount = widget.post['comments_count'] ?? 0;
     final cardSurface = widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white;
 
-    final String postCreatorId = (widget.post['creator_id'] ?? '').toString();
     final bool isMyPost = postCreatorId.isNotEmpty && postCreatorId == widget.currentLoggedInHandle;
 
     return Container(
