@@ -46,16 +46,17 @@ class _OnboardingWelcomeScreenState
   int _currentPage = 0;
   bool _isLoading = false;
 
-  static const Color bg = Color(0xFFF8FAFC);
-  static const Color ink = Color(0xFF101828);
-  static const Color muted = Color(0xFF667085);
-  static const Color faint = Color(0xFF98A2B3);
+  // 🎨 Midnight Sapphire & Indigo Dark Palette
+  static const Color bg = Color(0xFF070B14);          // Obsidian Midnight Navy
+  static const Color ink = Color(0xFFF1F5F9);         // Primary High-Contrast Text
+  static const Color muted = Color(0xFF94A3B8);       // Secondary Text
+  static const Color faint = Color(0xFF64748B);       // Subtle Muted Label
 
-  static const Color blue = Color(0xFF155EEF);
-  static const Color blueDeep = Color(0xFF0039B7);
-  static const Color blueLight = Color(0xFFEAF2FF);
+  static const Color blue = Color(0xFF38BDF8);        // Electric Horizon Cyan
+  static const Color blueDeep = Color(0xFF2563EB);    // Deep Indigo Accent
+  static const Color blueLight = Color(0xFF0E1C38);   // Atmospheric Glow / Card Surface
 
-  static const Color border = Color(0xFFE4E7EC);
+  static const Color border = Color(0x1FFFFFFF);      // Subtle Border
 
   @override
   void initState() {
@@ -66,8 +67,8 @@ class _OnboardingWelcomeScreenState
       const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         systemNavigationBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarIconBrightness: Brightness.dark,
+        statusBarIconBrightness: Brightness.light,
+        systemNavigationBarIconBrightness: Brightness.light,
       ),
     );
 
@@ -128,8 +129,8 @@ class _OnboardingWelcomeScreenState
       value: const SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
         systemNavigationBarColor: Colors.transparent,
-        statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarIconBrightness: Brightness.dark,
+        statusBarIconBrightness: Brightness.light,
+        systemNavigationBarIconBrightness: Brightness.light,
       ),
       child: Scaffold(
         extendBody: true,
@@ -176,70 +177,40 @@ class _OnboardingWelcomeScreenState
     );
   }
 
+  // Top Minimal Header with Glowing Dot (Screen 1 Image ke anusar)
   Widget _header() {
     return Row(
       children: [
         Container(
-          width: 36,
-          height: 36,
+          width: 7,
+          height: 7,
           decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Color(0xFF2585FF), Color(0xFF0047D9)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-            borderRadius: BorderRadius.circular(11),
+            color: blue,
+            shape: BoxShape.circle,
             boxShadow: [
               BoxShadow(
-                color: blue.withOpacity(.18),
-                blurRadius: 14,
-                offset: const Offset(0, 6),
+                color: blue.withOpacity(0.8),
+                blurRadius: 10,
+                spreadRadius: 2,
               ),
             ],
           ),
-          child: const Center(
-            child: Text(
-              'M',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 19,
-                fontWeight: FontWeight.w900,
-              ),
-            ),
-          ),
         ),
-        const SizedBox(width: 10),
+        const SizedBox(width: 8),
         const Text(
-          'MockTester',
+          'MOCKTESTER',
           style: TextStyle(
-            color: Color(0xFF101828),
-            fontSize: 19,
+            color: ink,
+            fontSize: 12,
             fontWeight: FontWeight.w900,
-            letterSpacing: -.6,
-          ),
-        ),
-        const SizedBox(width: 7),
-        Container(
-          padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 4),
-          decoration: BoxDecoration(
-            color: const Color(0xFFFFF4E5),
-            borderRadius: BorderRadius.circular(6),
-          ),
-          child: const Text(
-            'CBT',
-            style: TextStyle(
-              color: Color(0xFFB54708),
-              fontSize: 8,
-              fontWeight: FontWeight.w900,
-              letterSpacing: .4,
-            ),
+            letterSpacing: 2.5,
           ),
         ),
         const Spacer(),
         Text(
           '0${_currentPage + 1} / 02',
           style: const TextStyle(
-            color: Color(0xFF98A2B3),
+            color: faint,
             fontSize: 9,
             fontWeight: FontWeight.w900,
           ),
@@ -248,83 +219,118 @@ class _OnboardingWelcomeScreenState
     );
   }
 
+  // SCREEN 1: Exact Layout & Texts from Image
   Widget _welcomeScreen() {
     return LayoutBuilder(
       builder: (context, constraints) {
         return SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           padding: EdgeInsets.only(
-            left: 24,
-            right: 24,
-            top: MediaQuery.of(context).padding.top + 100,
-            bottom: MediaQuery.of(context).padding.bottom + 75,
+            left: 28,
+            right: 28,
+            top: MediaQuery.of(context).padding.top + 70,
+            bottom: MediaQuery.of(context).padding.bottom + 85,
           ),
           child: ConstrainedBox(
             constraints: BoxConstraints(
               minHeight: constraints.maxHeight -
                   MediaQuery.of(context).padding.top -
                   MediaQuery.of(context).padding.bottom -
-                  50,
+                  70,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // 1. Chart / Analytics Icon Box
                 FadeSlide(
                   animation: _introController,
                   delay: .05,
-                  child: const Text(
-                    'YOUR PREPARATION STARTS HERE',
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Color(0xFF155EEF),
-                      fontSize: 9.5,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: 1.45,
+                  child: Container(
+                    width: 52,
+                    height: 52,
+                    decoration: BoxDecoration(
+                      color: blue.withOpacity(.12),
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: blue.withOpacity(.25)),
+                    ),
+                    child: const Center(
+                      child: Icon(
+                        Icons.bar_chart_rounded,
+                        color: blue,
+                        size: 28,
+                      ),
                     ),
                   ),
                 ),
-                const SizedBox(height: 25),
-                _AnimatedTitle(
-                  text: 'Welcome to MockTester',
-                  animation: _introController,
-                ),
-                const SizedBox(height: 17),
+                const SizedBox(height: 32),
+
+                // 2. Main Title: "Welcome to MockTester"
                 FadeSlide(
                   animation: _introController,
-                  delay: .40,
+                  delay: .15,
                   child: const Text(
-                    'Padhai Pe Sabka Haq Hai',
-                    textAlign: TextAlign.center,
+                    'Welcome to\nMockTester',
                     style: TextStyle(
-                      color: Color(0xFF101828),
-                      fontSize: 20,
+                      color: ink,
+                      fontSize: 34,
+                      height: 1.15,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: -1.0,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 14),
+
+                // 3. Tagline: "Bihar's Own Exam Prep Hub"
+                FadeSlide(
+                  animation: _introController,
+                  delay: .30,
+                  child: const Text(
+                    "Bihar's Own Exam Prep Hub",
+                    style: TextStyle(
+                      color: blue,
+                      fontSize: 16.5,
                       fontWeight: FontWeight.w700,
-                      letterSpacing: -.3,
+                      letterSpacing: 0.2,
                     ),
                   ),
                 ),
-                const SizedBox(height: 11),
+                const SizedBox(height: 14),
+
+                // 4. Description Text
                 FadeSlide(
                   animation: _introController,
-                  delay: .52,
+                  delay: .45,
                   child: const Text(
-                    'Bihar ke sabhi exams ki latest mock test series, ab ek hi app par.',
-                    textAlign: TextAlign.center,
+                    'Standardized mock tests with state-level accuracy, timed simulation, and realistic percentile evaluation.',
                     style: TextStyle(
-                      color: Color(0xFF667085),
-                      fontSize: 12,
+                      color: muted,
+                      fontSize: 13.5,
                       height: 1.55,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
                 const SizedBox(height: 28),
+
+                // 5. Exam Pills (BPSC 70th CCE, Bihar SI, BSSC CGL 4)
                 FadeSlide(
                   animation: _introController,
-                  delay: .22,
-                  child: _studyVisual(),
+                  delay: .60,
+                  child: Wrap(
+                    spacing: 10,
+                    runSpacing: 10,
+                    children: [
+                      _buildExamPill(Icons.track_changes_rounded, 'BPSC 70th CCE'),
+                      _buildExamPill(Icons.shield_outlined, 'Bihar SI (Daroga)'),
+                      _buildExamPill(Icons.menu_book_rounded, 'BSSC CGL 4'),
+                    ],
+                  ),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 36),
+
+                // 6. Continue Button
                 FadeSlide(
                   animation: _introController,
                   delay: .72,
@@ -342,83 +348,33 @@ class _OnboardingWelcomeScreenState
     );
   }
 
-  Widget _studyVisual() {
-    return SizedBox(
-      height: 150,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          Container(
-            width: 145,
-            height: 145,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: blue.withOpacity(.045),
-            ),
-          ),
-          Container(
-            width: 96,
-            height: 96,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: const LinearGradient(
-                colors: [Color(0xFFEAF2FF), Color(0xFFDCEAFF)],
-              ),
-              border: Border.all(color: const Color(0xFFB9D3FF)),
-              boxShadow: [
-                BoxShadow(
-                  color: blue.withOpacity(.09),
-                  blurRadius: 25,
-                  offset: const Offset(0, 10),
-                ),
-              ],
-            ),
-            child: const Icon(
-              Icons.school_rounded,
-              color: Color(0xFF155EEF),
-              size: 43,
-            ),
-          ),
-          Positioned(
-            left: 35,
-            top: 17,
-            child: _floatingIcon(Icons.check_rounded, const Color(0xFF12B76A)),
-          ),
-          Positioned(
-            right: 32,
-            bottom: 14,
-            child: _floatingIcon(Icons.trending_up_rounded, const Color(0xFF6941C6)),
-          ),
-          Positioned(
-            right: 44,
-            top: 12,
-            child: _floatingIcon(Icons.timer_outlined, const Color(0xFF155EEF)),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _floatingIcon(IconData icon, Color color) {
+  Widget _buildExamPill(IconData icon, String label) {
     return Container(
-      width: 37,
-      height: 37,
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
       decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(11),
+        color: const Color(0x0DF1F5F9),
+        borderRadius: BorderRadius.circular(20),
         border: Border.all(color: border),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(.06),
-            blurRadius: 14,
-            offset: const Offset(0, 6),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(icon, size: 14, color: blue),
+          const SizedBox(width: 7),
+          Text(
+            label,
+            style: const TextStyle(
+              color: ink,
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         ],
       ),
-      child: Icon(icon, color: color, size: 17),
     );
   }
 
+  // SCREEN 2: Name, District & Mobile Input Form
   Widget _nameScreen() {
     return FadeTransition(
       opacity: _formController,
@@ -440,7 +396,7 @@ class _OnboardingWelcomeScreenState
               physics: const BouncingScrollPhysics(),
               padding: EdgeInsets.fromLTRB(
                 22,
-                MediaQuery.of(context).padding.top + 95,
+                MediaQuery.of(context).padding.top + 80,
                 22,
                 MediaQuery.of(context).padding.bottom + 80,
               ),
@@ -448,7 +404,7 @@ class _OnboardingWelcomeScreenState
                 const Text(
                   '02',
                   style: TextStyle(
-                    color: Color(0xFF155EEF),
+                    color: blue,
                     fontSize: 11,
                     fontWeight: FontWeight.w900,
                     letterSpacing: 1,
@@ -458,7 +414,7 @@ class _OnboardingWelcomeScreenState
                 const Text(
                   'First,\nwhat should we call you?',
                   style: TextStyle(
-                    color: Color(0xFF101828),
+                    color: ink,
                     fontSize: 34,
                     height: 1.04,
                     fontWeight: FontWeight.w800,
@@ -469,7 +425,7 @@ class _OnboardingWelcomeScreenState
                 const Text(
                   'Your name & district will appear on your scorecard and district leaderboard.',
                   style: TextStyle(
-                    color: Color(0xFF667085),
+                    color: muted,
                     fontSize: 11.5,
                     height: 1.5,
                   ),
@@ -497,7 +453,7 @@ class _OnboardingWelcomeScreenState
 
                 const SizedBox(height: 18),
 
-                // 3. Mobile Number Field (Optional for Play Store compliance)
+                // 3. Mobile Number Field
                 _inputField(
                   label: 'MOBILE NUMBER',
                   controller: _phoneController,
@@ -523,14 +479,14 @@ class _OnboardingWelcomeScreenState
                   children: [
                     Icon(
                       Icons.info_outline_rounded,
-                      color: Color(0xFF98A2B3),
+                      color: faint,
                       size: 14,
                     ),
                     SizedBox(width: 6),
                     Text(
                       'Mobile number is optional.',
                       style: TextStyle(
-                        color: Color(0xFF98A2B3),
+                        color: faint,
                         fontSize: 8.5,
                       ),
                     ),
@@ -541,17 +497,17 @@ class _OnboardingWelcomeScreenState
                 Container(
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
-                    color: const Color(0xFFEAF2FF),
+                    color: const Color(0x1A38BDF8),
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(
-                      color: blue.withOpacity(.08),
+                      color: const Color(0x3338BDF8),
                     ),
                   ),
                   child: const Row(
                     children: [
                       Icon(
                         Icons.rocket_launch_rounded,
-                        color: Color(0xFF155EEF),
+                        color: blue,
                         size: 19,
                       ),
                       SizedBox(width: 10),
@@ -559,7 +515,7 @@ class _OnboardingWelcomeScreenState
                         child: Text(
                           'Ready? Your preparation starts here.',
                           style: TextStyle(
-                            color: Color(0xFF0039B7),
+                            color: Color(0xFF7DD3FC),
                             fontSize: 10,
                             fontWeight: FontWeight.w800,
                           ),
@@ -591,7 +547,7 @@ class _OnboardingWelcomeScreenState
         const Text(
           'SELECT YOUR DISTRICT',
           style: TextStyle(
-            color: Color(0xFF667085),
+            color: faint,
             fontSize: 8,
             fontWeight: FontWeight.w900,
             letterSpacing: 1.1,
@@ -601,7 +557,7 @@ class _OnboardingWelcomeScreenState
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: const Color(0x0DF1F5F9),
             borderRadius: BorderRadius.circular(16),
             border: Border.all(color: border),
           ),
@@ -609,9 +565,10 @@ class _OnboardingWelcomeScreenState
             child: DropdownButton<String>(
               isExpanded: true,
               value: _selectedDistrict,
+              dropdownColor: const Color(0xFF0E1A2D),
               icon: const Icon(Icons.keyboard_arrow_down_rounded, color: blue),
               style: const TextStyle(
-                color: Color(0xFF101828),
+                color: ink,
                 fontSize: 16,
                 fontWeight: FontWeight.w700,
               ),
@@ -659,7 +616,7 @@ class _OnboardingWelcomeScreenState
         Text(
           label,
           style: const TextStyle(
-            color: Color(0xFF667085),
+            color: faint,
             fontSize: 8,
             fontWeight: FontWeight.w900,
             letterSpacing: 1.1,
@@ -674,20 +631,20 @@ class _OnboardingWelcomeScreenState
           validator: validator,
           cursorColor: blue,
           style: const TextStyle(
-            color: Color(0xFF101828),
+            color: ink,
             fontSize: 17,
             fontWeight: FontWeight.w700,
           ),
           decoration: InputDecoration(
             hintText: hint,
             hintStyle: const TextStyle(
-              color: Color(0xFFB0B7C3),
+              color: Color(0x4DF1F5F9),
               fontSize: 17,
               fontWeight: FontWeight.w500,
             ),
             prefixIcon: Icon(icon, color: blue, size: 21),
             filled: true,
-            fillColor: Colors.white,
+            fillColor: const Color(0x0DF1F5F9),
             contentPadding: const EdgeInsets.symmetric(
               horizontal: 15,
               vertical: 17,
@@ -706,11 +663,11 @@ class _OnboardingWelcomeScreenState
             ),
             errorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
-              borderSide: const BorderSide(color: Color(0xFFD92D20)),
+              borderSide: const BorderSide(color: Color(0xFFF87171)),
             ),
             focusedErrorBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(16),
-              borderSide: const BorderSide(color: Color(0xFFD92D20), width: 1.5),
+              borderSide: const BorderSide(color: Color(0xFFF87171), width: 1.5),
             ),
           ),
         ),
@@ -734,7 +691,6 @@ class _OnboardingWelcomeScreenState
     try {
       final prefs = await SharedPreferences.getInstance();
 
-      // 1. Clean 16-Character Random User ID (No Date, No Time)
       String? userId = prefs.getString('user_id');
       if (userId == null || userId.isEmpty) {
         const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -744,7 +700,6 @@ class _OnboardingWelcomeScreenState
         await prefs.setString('user_id', userId);
       }
 
-      // Local persistence
       await prefs.setBool('is_onboarded', true);
       await prefs.setString('custom_aspirant_name', name);
       await prefs.setString('user_name', name);
@@ -754,7 +709,6 @@ class _OnboardingWelcomeScreenState
         await prefs.setString('user_mobile', phone);
       }
 
-      // 2. Supabase app_users table sync
       try {
         final Map<String, dynamic> userPayload = {
           'user_id': userId,
@@ -816,14 +770,14 @@ class _OnboardingWelcomeScreenState
           height: 56,
           decoration: BoxDecoration(
             gradient: const LinearGradient(
-              colors: [Color(0xFF2585FF), Color(0xFF0047D9)],
+              colors: [Color(0xFF0284C7), Color(0xFF2563EB)],
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
             ),
             borderRadius: BorderRadius.circular(17),
             boxShadow: [
               BoxShadow(
-                color: blue.withOpacity(.22),
+                color: const Color(0xFF0284C7).withOpacity(.3),
                 blurRadius: 20,
                 offset: const Offset(0, 9),
               ),
@@ -878,7 +832,7 @@ class _OnboardingWelcomeScreenState
           width: _currentPage == 1 ? 34 : 12,
           height: 4,
           decoration: BoxDecoration(
-            color: _currentPage == 1 ? blue : const Color(0xFFE4E7EC),
+            color: _currentPage == 1 ? blue : const Color(0x33F1F5F9),
             borderRadius: BorderRadius.circular(10),
           ),
         ),
@@ -886,52 +840,12 @@ class _OnboardingWelcomeScreenState
         Text(
           _currentPage == 0 ? '01 / 02' : '02 / 02',
           style: const TextStyle(
-            color: Color(0xFF98A2B3),
+            color: faint,
             fontSize: 9,
             fontWeight: FontWeight.w900,
           ),
         ),
       ],
-    );
-  }
-}
-
-class _AnimatedTitle extends StatelessWidget {
-  final String text;
-  final AnimationController animation;
-
-  const _AnimatedTitle({
-    required this.text,
-    required this.animation,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedBuilder(
-      animation: animation,
-      builder: (_, __) {
-        final value = Curves.easeOutCubic.transform(animation.value);
-        return Opacity(
-          opacity: value,
-          child: Transform.translate(
-            offset: Offset(0, 18 * (1 - value)),
-            child: Transform.scale(
-              scale: .965 + (.035 * value),
-              child: const Text(
-                'Welcome to MockTester',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Color(0xFF101828),
-                  fontSize: 34,
-                  height: 1.08,
-                  fontWeight: FontWeight.w800,
-                  letterSpacing: -1.3,
-                ),
-              ),
-            ),
-          ),
-        );
-      },
     );
   }
 }
@@ -975,21 +889,21 @@ class _BackgroundPainter extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    final bluePaint = Paint()..color = const Color(0xFF155EEF).withOpacity(.035);
-    final violetPaint = Paint()..color = const Color(0xFF6941C6).withOpacity(.025);
+    final bluePaint = Paint()..color = const Color(0xFF0E1C38).withOpacity(.85);
+    final violetPaint = Paint()..color = const Color(0xFF1E1B4B).withOpacity(.6);
 
     final move1 = math.sin(animation * math.pi * 2) * 18;
     final move2 = math.cos(animation * math.pi * 2) * 15;
 
     canvas.drawCircle(
       Offset(size.width + 30, 100 + move1),
-      120,
+      150,
       bluePaint,
     );
 
     canvas.drawCircle(
       Offset(-35, size.height - 90 + move2),
-      140,
+      160,
       violetPaint,
     );
   }
