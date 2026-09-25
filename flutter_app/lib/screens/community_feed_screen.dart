@@ -4,7 +4,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-import '../services/admin_telegram_alert.dart';
 import '../widgets/community_comments_sheet.dart';
 import '../widgets/community_post_card.dart';
 
@@ -132,14 +131,10 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   Future<void> _fetchFeedPosts() async {
     setState(() => _isLoading = true);
     try {
-      final sixtyDaysAgo = DateTime.now().subtract(const Duration(days: 60)).toIso8601String();
-
       final res = await Supabase.instance.client
           .from('community_posts')
-          .select('*, creator_profiles(name, handle_id, subject_specialty, followers_count, is_blocked), creator_mocks(*)')
-          .eq('is_approved', true)
-          .gte('created_at', sixtyDaysAgo)
-          .order('created_at', ascending: false);
+          .select('*')
+          .order('id', ascending: false);
 
       if (mounted) {
         setState(() {
@@ -211,7 +206,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      '✍️ Ask Doubt / Post',
+                      'Ask Doubt / Post',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 17,
@@ -279,43 +274,47 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
 
-                              final insertedPost = await Supabase.instance.client.from('community_posts').insert({
-                                'creator_id': _currentLoggedInHandle,
+                              // Direct Insert with is_approved = true
+                              await Supabase.instance.client.from('community_posts').insert({
+                                'creator_id': _currentLoggedInHandle.isNotEmpty ? _currentLoggedInHandle : 'user',
                                 'author_name': _customUserName,
                                 'content': text,
                                 'tag': selectedTag,
                                 'image_url': uploadedImageUrl,
-                                'is_approved': false,
+                                'is_approved': true, // Direct live without review
                                 'views_count': 1,
                                 'upvotes': 0,
                                 'downvotes': 0,
                                 'shares_count': 0,
                                 'bookmarks_count': 0,
-                              }).select().single();
-
-                              AdminTelegramAlert.sendForInteractiveApproval(
-                                postId: insertedPost['id'] ?? 0,
-                                authorName: _customUserName,
-                                authorHandle: _currentLoggedInHandle,
-                                tag: selectedTag,
-                                content: text,
-                                imageUrl: uploadedImageUrl,
-                              ).catchError((_) => false);
+                              });
 
                               if (context.mounted) {
                                 Navigator.pop(ctx);
-                                _fetchFeedPosts();
+                                _fetchFeedPosts(); // Turant feed reload
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(content: Text('⏳ Post submitted for review! It will appear once approved.'), backgroundColor: _primaryBlue),
+                                  const SnackBar(
+                                    content: Text('Post published successfully!'),
+                                    backgroundColor: Color(0xFF16A34A),
+                                  ),
                                 );
                               }
-                            } catch (_) {
+                            } catch (err) {
+                              debugPrint("Post creation failed: $err");
                               setModalState(() => isUploading = false);
+                              if (context.mounted) {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text('Error: $err'),
+                                    backgroundColor: Colors.redAccent,
+                                  ),
+                                );
+                              }
                             }
                           },
                     child: isUploading
                         ? const SizedBox(width: 20, height: 20, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                        : const Text('Publish Post 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
+                        : const Text('Publish Post', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -377,7 +376,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 style: TextStyle(fontSize: 13.5, color: isDark ? Colors.white : const Color(0xFF0F172A)),
                 onChanged: (val) => setState(() => _searchQuery = val.trim()),
                 decoration: InputDecoration(
-                  hintText: '🔍 Search mocks, doubts, topics, mentor...',
+                  hintText: 'Search mocks, doubts, topics, mentor...',
                   hintStyle: TextStyle(fontSize: 13, color: Colors.grey[500]),
                   contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                   border: InputBorder.none,
