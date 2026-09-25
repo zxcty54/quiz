@@ -292,6 +292,43 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
     );
   }
 
+  void _reportPost() async {
+    final postId = widget.post['id'];
+    try {
+      await Supabase.instance.client.from('post_reports').insert({
+        'post_id': postId,
+        'reported_by': widget.currentLoggedInHandle,
+        'reason': 'Inappropriate / Spam content',
+      });
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Row(
+              children: [
+                Icon(Icons.flag_rounded, color: Colors.white, size: 18),
+                SizedBox(width: 8),
+                Expanded(
+                  child: Text('Post reported. If 10 unique reports are received, it will be automatically removed.'),
+                ),
+              ],
+            ),
+            backgroundColor: Color(0xFFD97706),
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Text('You have already reported this post.'),
+            backgroundColor: Colors.grey,
+          ),
+        );
+      }
+    }
+  }
+
   void _launchAttachedMock(Map<String, dynamic> mock) {
     final List rawList = mock['questions_json'] ?? [];
     if (rawList.isEmpty) return;
@@ -647,7 +684,6 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
     final int commentsCount = widget.post['comments_count'] ?? 0;
     final cardSurface = widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white;
 
-    // Sirf creator ko delete button dikhane ke liye check
     final String postCreatorId = (widget.post['creator_id'] ?? '').toString();
     final bool isMyPost = postCreatorId.isNotEmpty && postCreatorId == widget.currentLoggedInHandle;
 
@@ -746,20 +782,22 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                   style: const TextStyle(color: _primaryBlue, fontSize: 10.5, fontWeight: FontWeight.bold),
                 ),
               ),
-              if (isMyPost) ...[
-                const SizedBox(width: 4),
-                PopupMenuButton<String>(
-                  icon: Icon(Icons.more_vert, size: 18, color: Colors.grey[500]),
-                  padding: EdgeInsets.zero,
-                  constraints: const BoxConstraints(),
-                  color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                  onSelected: (val) {
-                    if (val == 'delete') {
-                      _confirmAndDeletePost();
-                    }
-                  },
-                  itemBuilder: (ctx) => [
+              const SizedBox(width: 4),
+              PopupMenuButton<String>(
+                icon: Icon(Icons.more_vert, size: 18, color: Colors.grey[500]),
+                padding: EdgeInsets.zero,
+                constraints: const BoxConstraints(),
+                color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                onSelected: (val) {
+                  if (val == 'delete') {
+                    _confirmAndDeletePost();
+                  } else if (val == 'report') {
+                    _reportPost();
+                  }
+                },
+                itemBuilder: (ctx) => [
+                  if (isMyPost)
                     const PopupMenuItem(
                       value: 'delete',
                       height: 36,
@@ -770,10 +808,21 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                           Text('Delete', style: TextStyle(color: Colors.redAccent, fontSize: 13, fontWeight: FontWeight.w600)),
                         ],
                       ),
+                    )
+                  else
+                    const PopupMenuItem(
+                      value: 'report',
+                      height: 36,
+                      child: Row(
+                        children: [
+                          Icon(Icons.flag_outlined, color: Colors.orange, size: 18),
+                          SizedBox(width: 8),
+                          Text('Report Post', style: TextStyle(color: Colors.orange, fontSize: 13, fontWeight: FontWeight.w600)),
+                        ],
+                      ),
                     ),
-                  ],
-                ),
-              ],
+                ],
+              ),
             ],
           ),
           const SizedBox(height: 10),
