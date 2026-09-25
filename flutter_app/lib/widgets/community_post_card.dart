@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -430,8 +431,8 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
       spans.add(TextSpan(text: text.substring(lastMatchEnd)));
     }
 
-    return RichText(
-      text: TextSpan(
+    return Text.rich(
+      TextSpan(
         style: TextStyle(
           fontSize: 14.5,
           height: 1.45,
@@ -680,7 +681,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
         ? (creator['name'] ?? 'Verified Mentor')
         : (widget.post['author_name'] ?? 'Aspirant');
 
-    // Unique & Clean Handle Logic
+    // Clean & Unique Handle Generation
     String authorHandle;
     if (isVerifiedCreator) {
       authorHandle = (creator['handle_id'] ?? postCreatorId).toString();
@@ -847,15 +848,23 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
 
           if (pollData != null) _buildInteractivePollCard(pollData),
 
+          // Cached Disk Storage Image
           if (imgUrl != null && imgUrl.isNotEmpty) ...[
             const SizedBox(height: 12),
             ClipRRect(
               borderRadius: BorderRadius.circular(10),
-              child: Image.network(
-                imgUrl,
+              child: CachedNetworkImage(
+                imageUrl: imgUrl,
                 fit: BoxFit.cover,
                 width: double.infinity,
-                errorBuilder: (_, __, ___) => const SizedBox.shrink(),
+                placeholder: (context, url) => Container(
+                  height: 180,
+                  color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                  child: const Center(
+                    child: CircularProgressIndicator(strokeWidth: 2),
+                  ),
+                ),
+                errorWidget: (_, __, ___) => const SizedBox.shrink(),
               ),
             ),
           ],
