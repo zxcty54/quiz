@@ -228,6 +228,74 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
     } catch (_) {}
   }
 
+  // Butter-Smooth Bottom Sheet Menu (Zero Lag Replacement for PopupMenu)
+  void _openPostOptionsSheet(bool isMyPost) {
+    HapticFeedback.lightImpact();
+
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      builder: (ctx) {
+        final sheetBg = widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white;
+        final textColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
+
+        return Container(
+          margin: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: sheetBg,
+            borderRadius: BorderRadius.circular(16),
+          ),
+          child: SafeArea(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  width: 36,
+                  height: 4,
+                  margin: const EdgeInsets.symmetric(vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+                if (isMyPost) ...[
+                  ListTile(
+                    leading: const Icon(Icons.delete_outline_rounded, color: Colors.redAccent),
+                    title: const Text(
+                      'Delete Post',
+                      style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w600, fontSize: 14),
+                    ),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      _confirmAndDeletePost();
+                    },
+                  ),
+                ] else ...[
+                  ListTile(
+                    leading: const Icon(Icons.flag_outlined, color: Colors.orange),
+                    title: Text(
+                      'Report Post',
+                      style: TextStyle(color: textColor, fontWeight: FontWeight.w600, fontSize: 14),
+                    ),
+                    subtitle: const Text(
+                      'Flag spam or abusive content',
+                      style: TextStyle(fontSize: 11, color: Colors.grey),
+                    ),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      _reportPost();
+                    },
+                  ),
+                ],
+                const SizedBox(height: 6),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
   void _confirmAndDeletePost() {
     showDialog(
       context: context,
@@ -800,45 +868,13 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                 ),
               ),
               const SizedBox(width: 4),
-              PopupMenuButton<String>(
+              // Lag-Free Native Action Sheet Trigger
+              IconButton(
                 icon: Icon(Icons.more_vert, size: 18, color: Colors.grey[500]),
                 padding: EdgeInsets.zero,
-                constraints: const BoxConstraints(),
-                color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                onSelected: (val) {
-                  if (val == 'delete') {
-                    _confirmAndDeletePost();
-                  } else if (val == 'report') {
-                    _reportPost();
-                  }
-                },
-                itemBuilder: (ctx) => [
-                  if (isMyPost)
-                    const PopupMenuItem(
-                      value: 'delete',
-                      height: 36,
-                      child: Row(
-                        children: [
-                          Icon(Icons.delete_outline_rounded, color: Colors.redAccent, size: 18),
-                          SizedBox(width: 8),
-                          Text('Delete', style: TextStyle(color: Colors.redAccent, fontSize: 13, fontWeight: FontWeight.w600)),
-                        ],
-                      ),
-                    )
-                  else
-                    const PopupMenuItem(
-                      value: 'report',
-                      height: 36,
-                      child: Row(
-                        children: [
-                          Icon(Icons.flag_outlined, color: Colors.orange, size: 18),
-                          SizedBox(width: 8),
-                          Text('Report Post', style: TextStyle(color: Colors.orange, fontSize: 13, fontWeight: FontWeight.w600)),
-                        ],
-                      ),
-                    ),
-                ],
+                constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+                splashRadius: 18,
+                onPressed: () => _openPostOptionsSheet(isMyPost),
               ),
             ],
           ),
