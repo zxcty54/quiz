@@ -29,15 +29,16 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   final Map<int, int> _userPollSelections = {};
   final Set<int> _savedPostIds = {};
 
+  // Clean filters without emojis
   final List<String> _filters = [
     'All',
-    'Mock Tests ⚡',
-    'Study Material 📚',
-    'Daily Quiz ⚡',
-    'Doubts ❓',
-    'General 💬',
-    'Announcement 📢',
-    'Saved 📌'
+    'Mock Tests',
+    'Study Material',
+    'Daily Quiz',
+    'Doubts',
+    'General',
+    'Announcement',
+    'Saved'
   ];
 
   static const Color _primaryBlue = Color(0xFF2563EB);
@@ -63,13 +64,22 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   Future<void> _loadUserPreferences() async {
     final prefs = await SharedPreferences.getInstance();
-    final name = prefs.getString('custom_aspirant_name') ?? 'Aspirant';
-    final handle = prefs.getString('logged_in_creator_handle') ?? 'user';
+    final name = prefs.getString('custom_aspirant_name') ??
+        prefs.getString('full_name') ??
+        prefs.getString('user_name') ??
+        'Aspirant';
+
+    final creatorHandle = prefs.getString('logged_in_creator_handle');
+    final userId = prefs.getString('user_id') ?? 'user';
+
+    final activeHandle = (creatorHandle != null && creatorHandle.trim().isNotEmpty)
+        ? creatorHandle.trim()
+        : userId.trim();
 
     if (mounted) {
       setState(() {
         _customUserName = name;
-        _currentLoggedInHandle = handle;
+        _currentLoggedInHandle = activeHandle;
       });
     }
 
@@ -131,11 +141,11 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   Future<void> _fetchFeedPosts() async {
     setState(() => _isLoading = true);
     try {
-      // creator_mocks(*) join se mock test card ka pura data fetch hoga
       final res = await Supabase.instance.client
           .from('community_posts')
           .select('*, creator_mocks(*)')
-          .order('id', ascending: false);
+          .order('id', ascending: false)
+          .limit(60);
 
       debugPrint(">>> COMMUNITY POSTS FETCH SUCCESS. Total: ${res.length}");
 
@@ -171,24 +181,26 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   void _openCreatePostModal() {
     final contentCtrl = TextEditingController();
-    final bool isCreator = _currentLoggedInHandle != 'user';
+    final bool isCreator = _currentLoggedInHandle.isNotEmpty &&
+        !_currentLoggedInHandle.startsWith('usr_') &&
+        _currentLoggedInHandle != 'user';
 
     final List<String> availableTags = isCreator
         ? [
-            'Mock Tests ⚡',
-            'Study Material 📚',
-            'Daily Quiz ⚡',
-            'Announcement 📢',
-            'Doubts ❓',
-            'General 💬',
+            'Mock Tests',
+            'Study Material',
+            'Daily Quiz',
+            'Announcement',
+            'Doubts',
+            'General',
           ]
         : [
-            'Doubts ❓',
-            'Study Material 📚',
-            'General 💬',
+            'Doubts',
+            'Study Material',
+            'General',
           ];
 
-    String selectedTag = 'Doubts ❓';
+    String selectedTag = 'Doubts';
     File? selectedImage;
     bool isUploading = false;
     final picker = ImagePicker();
@@ -277,7 +289,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
 
-                              // Direct Insert - turant feed me dikhega
                               await Supabase.instance.client.from('community_posts').insert({
                                 'creator_id': _currentLoggedInHandle.isNotEmpty ? _currentLoggedInHandle : 'user',
                                 'author_name': _customUserName,
@@ -337,12 +348,14 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     final cardSurface = isDark ? _darkCard : _lightCard;
 
     final filteredList = _posts.where((p) {
-      if (_activeFilter == 'Saved 📌') return _savedPostIds.contains(p['id']);
+      if (_activeFilter == 'Saved') return _savedPostIds.contains(p['id']);
 
       if (_activeFilter != 'All') {
-        final postTag = (p['tag'] ?? '').toString().trim().toLowerCase();
-        final filterWord = _activeFilter.split(' ').first.toLowerCase();
-        if (!postTag.contains(filterWord)) return false;
+        final postTag = (p['tag'] ?? '').toString().toLowerCase();
+        // Regex comparison: Database me emojis wale purane posts bhi accurately match honge
+        final cleanPostTag = postTag.replaceAll(RegExp(r'[^\w\s]'), '').trim();
+        final cleanFilter = _activeFilter.toLowerCase().replaceAll(RegExp(r'[^\w\s]'), '').trim();
+        if (!cleanPostTag.contains(cleanFilter) && !cleanFilter.contains(cleanPostTag)) return false;
       }
 
       if (_searchQuery.isEmpty) return true;
@@ -469,9 +482,25 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 selectedPollIndex: _userPollSelections[postId],
                                 isDarkMode: isDark,
                                 onOpenComments: () => _openCommentsSheet(postId, item),
-                                onLikeToggle: (liked) => setState(() => liked ? _likedPostIds.add(postId) : _likedPostIds.remove(postId)),
-                                onBookmarkToggle: (saved) => setState(() => saved ? _savedPostIds.add(postId) : _savedPostIds.remove(postId)),
-                                onPollVote: (optIdx) => setState(() => _userPollSelections[postId] = optIdx),
+                                onLikeToggle: (liked) {
+                                  if (liked) {
+                                    _likedPostIds.add(postId);
+                                  } else {
+                                    _likedPostIds.remove(postId);
+                                  }
+                                },
+                                onBookmarkToggle: (saved) {
+                                  if (saved) {
+                                    _savedPostIds.add(postId);
+                                  } else {
+                                    _savedPostIds.remove(postId);
+                                  }
+                                  if (_activeFilter == 'Saved' && mounted) {
+                                    setState(() {});
+                                  }
+                                },
+                                onPollVote: (optIdx) => _userPollSelections[postId] = optIdx,
+                                onPostDeleted: _fetchFeedPosts,
                               );
                             },
                           ),
