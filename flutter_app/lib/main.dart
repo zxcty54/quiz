@@ -1,6 +1,5 @@
 import 'dart:async';
 import 'dart:convert';
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
@@ -14,7 +13,7 @@ import 'screens/onboarding_welcome_screen.dart';
 // 🌓 Global Theme Controller
 final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.light);
 
-// 🔄 GitHub Remote Config Fetcher (Aapka Exact Raw URL)
+// 🔄 GitHub Remote Config Fetcher
 Future<void> _syncAppConfig() async {
   try {
     final Uri url = Uri.parse(
@@ -25,8 +24,6 @@ Future<void> _syncAppConfig() async {
 
     if (response.statusCode == 200) {
       final Map<String, dynamic> config = jsonDecode(utf8.decode(response.bodyBytes));
-      
-      // 🎯 App config se seedha AI models update honge
       AiExplainerService.updateModelFromConfig(config);
       debugPrint("✅ App config successfully synced with AiExplainerService");
     } else {
@@ -37,85 +34,37 @@ Future<void> _syncAppConfig() async {
   }
 }
 
-// 📝 Public Download Folder Crash Logger
-Future<void> _saveCrashToPublicDownloads(String error, String stackTrace) async {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // 🔥 1. Firebase Initialization
   try {
-    final downloadDir = Directory('/storage/emulated/0/Download');
-    if (await downloadDir.exists()) {
-      final logFile = File('${downloadDir.path}/MockTester_Crash_Logs.txt');
-      final timestamp = DateTime.now().toIso8601String();
-      
-      final logData = '''
-=====================================================
-CRASH TIMESTAMP: $timestamp
-ERROR:
-$error
-
-STACKTRACE:
-$stackTrace
-=====================================================
-
-''';
-
-      await logFile.writeAsString(logData, mode: FileMode.append);
-      debugPrint('Crash report written to: ${logFile.path}');
-    }
+    await Firebase.initializeApp();
+    await NotificationService.initialize();
   } catch (e) {
-    debugPrint('Crash logger error: $e');
+    debugPrint("Firebase init error: $e");
   }
-}
 
-void main() {
-  runZonedGuarded(() async {
-    WidgetsFlutterBinding.ensureInitialized();
+  // ⚡ 2. Supabase Initialization (Safe Injection via --dart-define)
+  const String supabaseUrl = String.fromEnvironment('SUPABASE_URL');
+  const String supabaseAnonKey = String.fromEnvironment('SUPABASE_ANON_KEY');
 
-    // 1. Flutter Framework / Rendering Error Handler
-    FlutterError.onError = (FlutterErrorDetails details) {
-      FlutterError.presentError(details);
-      _saveCrashToPublicDownloads(
-        details.exceptionAsString(),
-        details.stack.toString(),
-      );
-    };
+  await Supabase.initialize(
+    url: supabaseUrl,
+    anonKey: supabaseAnonKey,
+  );
 
-    // 🔥 2. Firebase Initialization (For Push Notifications)
-    try {
-      await Firebase.initializeApp();
-      await NotificationService.initialize();
-    } catch (e) {
-      debugPrint("Firebase init error: $e");
-    }
+  // 📱 3. SharedPreferences: Theme & Onboarding Check
+  final prefs = await SharedPreferences.getInstance();
+  final bool isDark = prefs.getBool('is_dark_mode') ?? false;
+  final bool isOnboarded = prefs.getBool('is_onboarded') ?? false;
 
-    // ⚡ 3. Supabase Initialization
-    const String supabaseUrl = String.fromEnvironment(
-      'SUPABASE_URL',
-      defaultValue: 'https://tglidhzsjxfppyrmlwxf.supabase.co',
-    );
-    const String supabaseAnonKey = String.fromEnvironment(
-      'SUPABASE_ANON_KEY',
-      defaultValue: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRnbGlkaHpzanhmcHB5cm1sd3hmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODczNzA3ODEsImV4cCI6MjEwMjk0Njc4MX0.5re2plUdwg9pCIqi7jAYR3KIHTeZ-zG4ifltLScNsbk',
-    );
+  globalThemeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
 
-    await Supabase.initialize(
-      url: supabaseUrl,
-      anonKey: supabaseAnonKey,
-    );
+  // 🌐 4. Background Remote Config Sync
+  unawaited(_syncAppConfig());
 
-    // 📱 4. SharedPreferences: Theme & Onboarding Check
-    final prefs = await SharedPreferences.getInstance();
-    final bool isDark = prefs.getBool('is_dark_mode') ?? false;
-    final bool isOnboarded = prefs.getBool('is_onboarded') ?? false;
-    
-    globalThemeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
-
-    // 🌐 5. Launch Background Remote Config Sync
-    unawaited(_syncAppConfig());
-
-    runApp(MyApp(isOnboarded: isOnboarded));
-  }, (error, stackTrace) {
-    debugPrint("Caught Global Async Crash: $error");
-    _saveCrashToPublicDownloads(error.toString(), stackTrace.toString());
-  });
+  runApp(MyApp(isOnboarded: isOnboarded));
 }
 
 class MyApp extends StatelessWidget {
@@ -133,7 +82,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           themeMode: currentMode,
 
-          // 🎨 Light Theme (Material 3)
+          // 🎨 Light Theme
           theme: ThemeData(
             useMaterial3: true,
             brightness: Brightness.light,
@@ -157,7 +106,7 @@ class MyApp extends StatelessWidget {
             ),
           ),
 
-          // 🌙 Dark Theme (Material 3 Deep Slate)
+          // 🌙 Dark Theme
           darkTheme: ThemeData(
             useMaterial3: true,
             brightness: Brightness.dark,
