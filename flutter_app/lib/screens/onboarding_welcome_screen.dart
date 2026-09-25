@@ -314,20 +314,21 @@ class _OnboardingWelcomeScreenState
                 ),
                 const SizedBox(height: 28),
 
-                // 5. Exam Pills (BPSC 70th CCE, Bihar SI, BSSC CGL 4)
-                FadeSlide(
-                  animation: _introController,
-                  delay: .60,
-                  child: Wrap(
-                    spacing: 10,
-                    runSpacing: 10,
-                    children: [
-                      _buildExamPill(Icons.track_changes_rounded, 'BPSC 70th CCE'),
-                      _buildExamPill(Icons.shield_outlined, 'Bihar SI (Daroga)'),
-                      _buildExamPill(Icons.menu_book_rounded, 'BSSC CGL 4'),
-                    ],
-                  ),
-                ),
+                // 5. Exam Pills (BPSC CCE, Bihar SI, BSSC CGL , All Bihar Exams)
+               FadeSlide(
+  animation: _introController,
+  delay: .60,
+  child: Wrap(
+    spacing: 8,
+    runSpacing: 10,
+    children: [
+      _buildExamPill(Icons.track_changes_rounded, 'BPSC CCE'),
+      _buildExamPill(Icons.shield_outlined, 'Bihar SI'),
+      _buildExamPill(Icons.menu_book_rounded, 'BSSC CGL'),
+      _buildExamPill(Icons.auto_awesome_rounded, 'All Bihar Exams'),
+    ],
+  ),
+),
                 const SizedBox(height: 36),
 
                 // 6. Continue Button
