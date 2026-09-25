@@ -136,7 +136,17 @@ class _CommunityPostCardState extends State<CommunityPostCard> {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(newSaved ? '📌 Saved to Notebook!' : 'Removed from Saved!'),
+            content: Row(
+              children: [
+                Icon(
+                  newSaved ? Icons.bookmark_added_rounded : Icons.bookmark_remove_rounded,
+                  color: Colors.white,
+                  size: 18,
+                ),
+                const SizedBox(width: 8),
+                Text(newSaved ? 'Saved to Notebook!' : 'Removed from Saved!'),
+              ],
+            ),
             duration: const Duration(seconds: 1),
             backgroundColor: _primaryBlue,
           ),
@@ -181,19 +191,25 @@ class _CommunityPostCardState extends State<CommunityPostCard> {
     final author = widget.post['author_name'] ?? 'Aspirant';
 
     final shareText = '''
-📝 *MockTester Study Drill*
-👤 *Shared by:* $author
+MockTester Study Drill
+Shared by: $author
 
 $content
 
-⚡ Solve this & practice 10,000+ CBT Mock Questions:
-📲 Download Free: https://play.google.com/store/apps/details?id=com.mocktester.online
+Solve this & practice CBT Mock Questions on MockTester:
+Download Free: https://play.google.com/store/apps/details?id=com.mocktester.online
 ''';
 
     Clipboard.setData(ClipboardData(text: shareText));
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
-        content: Text('📋 Post copied! Share on WhatsApp / Telegram.'),
+        content: Row(
+          children: [
+            Icon(Icons.content_copy_rounded, color: Colors.white, size: 18),
+            SizedBox(width: 8),
+            Text('Post copied! Share with friends.'),
+          ],
+        ),
         backgroundColor: _primaryBlue,
       ),
     );
@@ -469,9 +485,22 @@ $content
                   style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15),
                 ),
                 const SizedBox(height: 4),
-                Text(
-                  '$totalQs Concept Questions • ⏱ $duration Mins • Detailed Analytics',
-                  style: TextStyle(fontSize: 11.5, color: widget.isDarkMode ? Colors.grey[300] : const Color(0xFF475569)),
+                Row(
+                  children: [
+                    Text(
+                      '$totalQs Concept Questions',
+                      style: TextStyle(fontSize: 11.5, color: widget.isDarkMode ? Colors.grey[300] : const Color(0xFF475569)),
+                    ),
+                    const SizedBox(width: 5),
+                    const Text('•'),
+                    const SizedBox(width: 5),
+                    Icon(Icons.timer_outlined, size: 13, color: widget.isDarkMode ? Colors.grey[300] : const Color(0xFF475569)),
+                    const SizedBox(width: 3),
+                    Text(
+                      '$duration Mins • Detailed Analytics',
+                      style: TextStyle(fontSize: 11.5, color: widget.isDarkMode ? Colors.grey[300] : const Color(0xFF475569)),
+                    ),
+                  ],
                 ),
                 const SizedBox(height: 12),
                 SizedBox(
@@ -490,7 +519,9 @@ $content
                       children: [
                         Icon(Icons.play_circle_fill_rounded, size: 17),
                         SizedBox(width: 6),
-                        Text('Attempt Free Mock Now 🚀', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                        Text('Attempt Free Mock Now', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13)),
+                        SizedBox(width: 4),
+                        Icon(Icons.arrow_forward_rounded, size: 14),
                       ],
                     ),
                   ),
@@ -590,15 +621,26 @@ $content
                           Text('@$authorHandle', style: TextStyle(color: Colors.grey[500], fontSize: 12)),
                         ],
                       ),
-                      Text(
-                        isVerifiedCreator
-                            ? '🎓 ${creator['subject_specialty'] ?? 'Exam Mentor'} • ${creator['followers_count'] ?? 0} Followers'
-                            : 'Aspirant • Active Member',
-                        style: TextStyle(
-                          color: isVerifiedCreator ? _primaryBlue : Colors.grey[600],
-                          fontSize: 10.5,
-                          fontWeight: isVerifiedCreator ? FontWeight.bold : FontWeight.normal,
-                        ),
+                      Row(
+                        children: [
+                          if (isVerifiedCreator) ...[
+                            const Icon(Icons.school_rounded, size: 12, color: _primaryBlue),
+                            const SizedBox(width: 3),
+                          ],
+                          Expanded(
+                            child: Text(
+                              isVerifiedCreator
+                                  ? '${creator['subject_specialty'] ?? 'Exam Mentor'} • ${creator['followers_count'] ?? 0} Followers'
+                                  : 'Aspirant • Active Member',
+                              style: TextStyle(
+                                color: isVerifiedCreator ? _primaryBlue : Colors.grey[600],
+                                fontSize: 10.5,
+                                fontWeight: isVerifiedCreator ? FontWeight.bold : FontWeight.normal,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ],
                       ),
                     ],
                   ),
