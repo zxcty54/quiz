@@ -17,19 +17,121 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
   List<dynamic> _creators = [];
   List<dynamic> _posts = [];
   bool _isLoading = true;
+  bool _isAuthorized = false;
 
   @override
   void initState() {
     super.initState();
     _tabController = TabController(length: 3, vsync: this);
-    _loadAllAdminData();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      _promptAdminPin();
+    });
+  }
+
+  @override
+  void dispose() {
+    _tabController.dispose();
+    super.dispose();
+  }
+
+  // 🔒 Master PIN Verification Gate
+  Future<void> _promptAdminPin() async {
+    final pinCtrl = TextEditingController();
+    bool isVerifying = false;
+
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setDialogState) => AlertDialog(
+          backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          title: const Row(
+            children: [
+              Icon(Icons.security_rounded, color: Color(0xFFDC2626)),
+              SizedBox(width: 8),
+              Text('Admin Authorization', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+            ],
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text('Enter Master Admin PIN to unlock the control suite:', style: TextStyle(fontSize: 13)),
+              const SizedBox(height: 14),
+              TextField(
+                controller: pinCtrl,
+                obscureText: true,
+                keyboardType: TextInputType.number,
+                autofocus: true,
+                decoration: const InputDecoration(
+                  labelText: 'Master PIN',
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.lock_outline),
+                ),
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () {
+                Navigator.pop(ctx);
+                Navigator.pop(context); // Screen se bahar chale jao
+              },
+              child: const Text('Exit', style: TextStyle(color: Colors.grey)),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFDC2626),
+                foregroundColor: Colors.white,
+              ),
+              onPressed: isVerifying
+                  ? null
+                  : () async {
+                      final enteredPin = pinCtrl.text.trim();
+                      if (enteredPin.isEmpty) return;
+
+                      setDialogState(() => isVerifying = true);
+                      try {
+                        final res = await client
+                            .from('admin_config')
+                            .select('master_pin')
+                            .eq('master_pin', enteredPin)
+                            .maybeSingle();
+
+                        if (res != null) {
+                          if (mounted) {
+                            Navigator.pop(ctx);
+                            setState(() => _isAuthorized = true);
+                            _loadAllAdminData();
+                          }
+                        } else {
+                          setDialogState(() => isVerifying = false);
+                          if (mounted) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('Invalid Master PIN! Access Denied.'), backgroundColor: Colors.redAccent),
+                            );
+                          }
+                        }
+                      } catch (e) {
+                        setDialogState(() => isVerifying = false);
+                        debugPrint("Admin PIN verify failed: $e");
+                      }
+                    },
+              child: isVerifying
+                  ? const SizedBox(width: 16, height: 16, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
+                  : const Text('Unlock'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   Future<void> _loadAllAdminData() async {
     setState(() => _isLoading = true);
     try {
       final creatorsRes = await client.from('creator_profiles').select().order('created_at', ascending: false);
-      final postsRes = await client.from('community_posts').select().order('created_at', ascending: false).limit(50);
+      final postsRes = await client.from('community_posts').select().order('created_at', ascending: false).limit(60);
 
       if (mounted) {
         setState(() {
@@ -44,7 +146,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
     }
   }
 
-  // 🔴 1. Delete Any Post Instantly (Dynamic Post ID)
+  // 🔴 1. Delete Any Post Instantly (Bypass normal checks)
   Future<void> _deletePost(dynamic postId) async {
     HapticFeedback.heavyImpact();
     try {
@@ -52,7 +154,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
       _loadAllAdminData();
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('🗑️ Post purged permanently from feed!'), backgroundColor: Colors.red),
+          const SnackBar(content: Text('Post purged permanently from feed!'), backgroundColor: Colors.red),
         );
       }
     } catch (e) {
@@ -73,7 +175,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            content: Text(!currentStatus ? '🚫 Creator @$handle Blocked!' : '✅ Creator @$handle Unblocked!'),
+            content: Text(!currentStatus ? 'Creator @$handle Blocked!' : 'Creator @$handle Unblocked!'),
             backgroundColor: !currentStatus ? Colors.red : Colors.green,
           ),
         );
@@ -103,7 +205,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('📢 Push Global Admin Notice', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+            const Text('Push Global Admin Notice', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
             const SizedBox(height: 10),
             TextField(
               controller: titleCtrl,
@@ -129,15 +231,16 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
                   try {
                     await client.from('community_posts').insert({
                       'creator_id': 'admin',
-                      'author_name': 'Official Admin 🛡️',
-                      'content': '🚨 **${titleCtrl.text.trim()}**\n\n$text',
-                      'tag': 'Exam Gossip 🔥',
+                      'author_name': 'Official Admin',
+                      'content': '${titleCtrl.text.trim()}\n\n$text',
+                      'tag': 'Announcement',
                       'views_count': 500,
+                      'is_approved': true,
                     });
 
                     if (mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('🚀 Official Admin Alert live on feed!'), backgroundColor: Color(0xFF16A34A)),
+                        const SnackBar(content: Text('Official Admin Alert live on feed!'), backgroundColor: Color(0xFF16A34A)),
                       );
                       _loadAllAdminData();
                     }
@@ -149,7 +252,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
                     }
                   }
                 },
-                child: const Text('Broadcast Pinned Notice 🚀', style: TextStyle(fontWeight: FontWeight.bold)),
+                child: const Text('Broadcast Pinned Notice', style: TextStyle(fontWeight: FontWeight.bold)),
               ),
             ),
             const SizedBox(height: 16),
@@ -161,6 +264,13 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
 
   @override
   Widget build(BuildContext context) {
+    if (!_isAuthorized) {
+      return Scaffold(
+        backgroundColor: widget.isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+        body: const Center(child: CircularProgressIndicator()),
+      );
+    }
+
     final isDark = widget.isDarkMode;
     final bgSurface = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
     final cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
@@ -168,7 +278,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
     return Scaffold(
       backgroundColor: bgSurface,
       appBar: AppBar(
-        title: const Text('Master Admin Control Suite 🛡️', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
+        title: const Text('Master Admin Control Suite', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 17)),
         backgroundColor: const Color(0xFFDC2626),
         foregroundColor: Colors.white,
         actions: [
@@ -191,7 +301,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
           : TabBarView(
               controller: _tabController,
               children: [
-                // 👥 TAB 1: Creators Management
+                // TAB 1: Creators Management
                 ListView.builder(
                   padding: const EdgeInsets.all(12),
                   itemCount: _creators.length,
@@ -228,7 +338,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
                   },
                 ),
 
-                // 🗑️ TAB 2: Feed Moderation / Post Purge
+                // TAB 2: Feed Moderation / Post Purge
                 ListView.builder(
                   padding: const EdgeInsets.all(12),
                   itemCount: _posts.length,
@@ -249,7 +359,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
                   },
                 ),
 
-                // 📢 TAB 3: Global System Announcements
+                // TAB 3: Global System Announcements
                 Padding(
                   padding: const EdgeInsets.all(20),
                   child: Column(
