@@ -11,7 +11,7 @@ import 'wrong_questions_screen.dart';
 import 'saved_current_affairs_screen.dart';
 import '../widgets/donation_widget.dart';
 import '../widgets/app_global_feedback_dialog.dart';
-import '../widgets/mastery_evolution_card.dart'; // 👈 AI Mastery Card Import
+import '../widgets/mastery_evolution_card.dart';
 
 class ProfileScreen extends StatefulWidget {
   final bool isHindi;
@@ -47,7 +47,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Future<void> _loadProfileData() async {
     final prefs = await SharedPreferences.getInstance();
 
-    // 👤 Exact name from OnboardingWelcomeScreen
     final String savedName = prefs.getString('custom_aspirant_name')?.trim() ??
         prefs.getString('user_name')?.trim() ??
         'Aspirant';
@@ -55,7 +54,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final String savedMobile = prefs.getString('user_mobile')?.trim() ?? '';
     final String savedEmail = prefs.getString('user_email')?.trim() ?? '';
 
-    // 📌 Load Saved Current Affairs Count
     int caCount = 0;
     final String? savedJson = prefs.getString('saved_daily_bulletins');
     if (savedJson != null) {
@@ -159,7 +157,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 final String updatedEmail = emailCtrl.text.trim();
                 final String updatedMobile = mobileCtrl.text.trim();
 
-                // 🔑 1. Maintain Same Clean User ID from Onboarding
                 String? currentUserId = prefs.getString('user_id');
                 if (currentUserId == null || currentUserId.isEmpty) {
                   const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
@@ -169,14 +166,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   await prefs.setString('user_id', currentUserId);
                 }
 
-                // 2. Synchronize all local keys
                 await prefs.setString('custom_aspirant_name', updatedName);
                 await prefs.setString('user_name', updatedName);
                 await prefs.setString('user_email', updatedEmail);
                 await prefs.setString('user_mobile', updatedMobile);
                 await prefs.setString('student_contact_id', updatedMobile.isNotEmpty ? updatedMobile : 'N/A');
 
-                // 3. Update Supabase app_users table under the exact same user_id
                 try {
                   final String userDistrict = prefs.getString('user_district') ?? 'Patna';
                   await Supabase.instance.client.from('app_users').upsert({
@@ -196,7 +191,13 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   _loadProfileData();
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(
-                      content: Text('✅ Profile details updated!'),
+                      content: Row(
+                        children: [
+                          Icon(Icons.check_circle, color: Colors.white, size: 18),
+                          SizedBox(width: 8),
+                          Text('Profile details updated!'),
+                        ],
+                      ),
                       backgroundColor: Color(0xFF16A34A),
                       duration: Duration(seconds: 1),
                     ),
@@ -243,7 +244,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         return ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            // 👤 1. DYNAMIC USER HEADER CARD
+            // 1. DYNAMIC USER HEADER CARD
             Card(
               elevation: 2,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
@@ -255,7 +256,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     const CircleAvatar(
                       radius: 30,
                       backgroundColor: Color(0xFF2563EB),
-                      child: Text('🎓', style: TextStyle(fontSize: 26)),
+                      child: Icon(Icons.school_rounded, color: Colors.white, size: 28),
                     ),
                     const SizedBox(width: 14),
                     Expanded(
@@ -263,7 +264,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            'Aspirant Profile 👋',
+                            'Aspirant Profile',
                             style: TextStyle(fontSize: 12, color: subTextColor, fontWeight: FontWeight.w600),
                           ),
                           Text(
@@ -310,13 +311,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   color: isDark ? const Color(0xFF451A03) : const Color(0xFFFEF3C7),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
-                                child: Text(
-                                  '🔥 $userStreak Day Streak',
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.bold,
-                                    color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
-                                  ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(
+                                      Icons.local_fire_department_rounded,
+                                      size: 13,
+                                      color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
+                                    ),
+                                    const SizedBox(width: 3),
+                                    Text(
+                                      '$userStreak Day Streak',
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                        color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                               Container(
@@ -325,13 +337,24 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   color: isDark ? const Color(0xFF1E1B4B) : const Color(0xFFE0E7FF),
                                   borderRadius: BorderRadius.circular(12),
                                 ),
-                                child: Text(
-                                  '🏅 Level ${_calculateLevel(solvedQs)}',
-                                  style: TextStyle(
-                                    fontSize: 10,
-                                    fontWeight: FontWeight.bold,
-                                    color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
-                                  ),
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Icon(
+                                      Icons.military_tech_rounded,
+                                      size: 13,
+                                      color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
+                                    ),
+                                    const SizedBox(width: 3),
+                                    Text(
+                                      'Level ${_calculateLevel(solvedQs)}',
+                                      style: TextStyle(
+                                        fontSize: 10,
+                                        fontWeight: FontWeight.bold,
+                                        color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
                             ],
@@ -350,8 +373,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 18),
 
-            // 📊 2. LEARNING DASHBOARD
-            Text('📊 Learning Dashboard', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
+            // 2. LEARNING DASHBOARD
+            Text('Learning Dashboard', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             GridView.count(
               shrinkWrap: true,
@@ -361,20 +384,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
               crossAxisSpacing: 10,
               mainAxisSpacing: 10,
               children: [
-                _buildProfileStatTile('Questions Solved', '$solvedQs', '📝', const Color(0xFF2563EB), isDark),
-                _buildProfileStatTile('Mocks Attempted', '$attemptedMocks', '🎯', const Color(0xFFD97706), isDark),
-                _buildProfileStatTile('Overall Accuracy', '${stats['accuracy']}%', '⚡', const Color(0xFF16A34A), isDark),
-                _buildProfileStatTile('Study Time', 'Daily Active', '⏱️', const Color(0xFF7C3AED), isDark),
+                _buildProfileStatTile('Questions Solved', '$solvedQs', Icons.assignment_outlined, const Color(0xFF2563EB), isDark),
+                _buildProfileStatTile('Mocks Attempted', '$attemptedMocks', Icons.track_changes_rounded, const Color(0xFFD97706), isDark),
+                _buildProfileStatTile('Overall Accuracy', '${stats['accuracy']}%', Icons.bolt_rounded, const Color(0xFF16A34A), isDark),
+                _buildProfileStatTile('Study Time', 'Daily Active', Icons.timer_outlined, const Color(0xFF7C3AED), isDark),
               ],
             ),
             const SizedBox(height: 14),
 
-            // 🧠 3. AI MASTERY EVOLUTION LIVE CARD
+            // 3. AI MASTERY EVOLUTION LIVE CARD
             MasteryEvolutionCard(isDarkMode: isDark),
             const SizedBox(height: 14),
 
-            // 📈 4. RECENT PROGRESS (7 DAYS)
-            Text('📈 Recent Progress (Last 7 Days)', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
+            // 4. RECENT PROGRESS (7 DAYS)
+            Text('Recent Progress (Last 7 Days)', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             Card(
               elevation: 1,
@@ -403,15 +426,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 📂 5. QUICK ACCESS
-            Text('📂 Quick Access', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
+            // 5. QUICK ACCESS
+            Text('Quick Access', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
               child: Column(
                 children: [
                   ListTile(
-                    leading: const Text('⭐', style: TextStyle(fontSize: 20)),
+                    leading: const Icon(Icons.bookmark_border_rounded, size: 22, color: Color(0xFFD97706)),
                     title: Text('Saved / Bookmarked Questions', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: headerTextColor)),
                     subtitle: Text('$savedBookmarksCount Saved Items', style: TextStyle(fontSize: 11, color: subTextColor)),
                     trailing: Icon(Icons.arrow_forward_ios_rounded, size: 14, color: subTextColor),
@@ -424,7 +447,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Divider(height: 1, color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
                   ListTile(
-                    leading: const Text('❌', style: TextStyle(fontSize: 20)),
+                    leading: const Icon(Icons.cancel_outlined, size: 22, color: Colors.redAccent),
                     title: Text('Wrong Questions Vault', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: headerTextColor)),
                     subtitle: Text('Revise Mistakes', style: TextStyle(fontSize: 11, color: subTextColor)),
                     trailing: Icon(Icons.arrow_forward_ios_rounded, size: 14, color: subTextColor),
@@ -437,7 +460,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   Divider(height: 1, color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
                   ListTile(
-                    leading: const Text('📌', style: TextStyle(fontSize: 20)),
+                    leading: const Icon(Icons.newspaper_rounded, size: 22, color: Color(0xFF2563EB)),
                     title: Text('Saved Current Affairs Vault', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: headerTextColor)),
                     subtitle: Text('$_savedCaCount Saved Bulletins', style: TextStyle(fontSize: 11, color: subTextColor)),
                     trailing: Icon(Icons.arrow_forward_ios_rounded, size: 14, color: subTextColor),
@@ -454,8 +477,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // 🏆 6. ACHIEVEMENTS
-            Text('🏆 Achievements', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
+            // 6. ACHIEVEMENTS
+            Text('Achievements', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
             SizedBox(
               height: 90,
@@ -463,28 +486,28 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 scrollDirection: Axis.horizontal,
                 children: [
                   _buildDynamicBadge(
-                    emoji: '🔥',
+                    icon: Icons.local_fire_department_rounded,
                     title: '$userStreak Day Streak',
                     isUnlocked: userStreak >= 3,
                     activeColor: Colors.amber,
                     isDark: isDark,
                   ),
                   _buildDynamicBadge(
-                    emoji: '🏅',
+                    icon: Icons.military_tech_rounded,
                     title: '100 Qs Club',
                     isUnlocked: solvedQs >= 100,
                     activeColor: Colors.blue,
                     isDark: isDark,
                   ),
                   _buildDynamicBadge(
-                    emoji: '⚡',
+                    icon: Icons.offline_bolt_rounded,
                     title: 'First Mock',
                     isUnlocked: attemptedMocks >= 1,
                     activeColor: Colors.purple,
                     isDark: isDark,
                   ),
                   _buildDynamicBadge(
-                    emoji: '📚',
+                    icon: Icons.menu_book_rounded,
                     title: 'Master Scholar',
                     isUnlocked: solvedQs >= 500,
                     activeColor: Colors.green,
@@ -495,8 +518,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
 
-            // ⚙️ 7. APP PREFERENCES
-            Text('⚙️ Preferences', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
+            // 7. APP PREFERENCES
+            Text('Preferences', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 8),
             Card(
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
@@ -524,11 +547,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 16),
 
-            // 🤝 COMMUNITY DONATION WIDGET
+            // COMMUNITY DONATION WIDGET
             DonationWidget(isDarkMode: isDark),
             const SizedBox(height: 14),
 
-            // 🌟 8. ATTENTION-GRABBING FEEDBACK BANNER
+            // 8. ATTENTION-GRABBING FEEDBACK BANNER
             Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -584,7 +607,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                             ],
                           ),
-                          child: const Text('💬', style: TextStyle(fontSize: 22)),
+                          child: const Icon(Icons.rate_review_rounded, color: Colors.white, size: 22),
                         ),
                         const SizedBox(width: 12),
                         Expanded(
@@ -682,7 +705,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return '5 (Master)';
   }
 
-  Widget _buildProfileStatTile(String label, String value, String emoji, Color color, bool isDark) {
+  Widget _buildProfileStatTile(String label, String value, IconData icon, Color color, bool isDark) {
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
@@ -692,7 +715,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
       ),
       child: Row(
         children: [
-          Text(emoji, style: const TextStyle(fontSize: 22)),
+          Icon(icon, size: 24, color: color),
           const SizedBox(width: 10),
           Expanded(
             child: Column(
@@ -737,7 +760,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   }
 
   Widget _buildDynamicBadge({
-    required String emoji,
+    required IconData icon,
     required String title,
     required bool isUnlocked,
     required Color activeColor,
@@ -768,18 +791,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
           Stack(
             alignment: Alignment.center,
             children: [
-              Text(
-                emoji,
-                style: TextStyle(
-                  fontSize: 22,
-                  color: isUnlocked ? null : Colors.grey.shade400,
-                ),
+              Icon(
+                icon,
+                size: 24,
+                color: isUnlocked ? activeColor : (isDark ? const Color(0xFF64748B) : Colors.grey.shade400),
               ),
               if (!isUnlocked)
                 const Positioned(
-                  right: 0,
-                  bottom: 0,
-                  child: Text('🔒', style: TextStyle(fontSize: 10)),
+                  right: -2,
+                  bottom: -2,
+                  child: Icon(Icons.lock_rounded, size: 12, color: Colors.grey),
                 ),
             ],
           ),
