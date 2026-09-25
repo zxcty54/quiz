@@ -43,34 +43,16 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
   static const int _maxAllowedBytes = 5 * 1024 * 1024; // 5 MB limit
 
   @override
-  void initState() {
-    super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _retrieveLostData();
-    });
-  }
-
-  @override
   void dispose() {
     _targetInputController.dispose();
     super.dispose();
-  }
-
-  Future<void> _retrieveLostData() async {
-    try {
-      final LostDataResponse response = await _picker.retrieveLostData();
-      if (response.isEmpty || response.file == null) return;
-      await _processImageSafe(response.file!.path);
-    } catch (e) {
-      debugPrint('Lost data recovery error: $e');
-    }
   }
 
   Future<void> _processImageSafe(String rawPath) async {
     setState(() => _isProcessing = true);
 
     try {
-      await Future.delayed(const Duration(milliseconds: 300));
+      await Future.delayed(const Duration(milliseconds: 200));
 
       final File initialFile = File(rawPath);
       if (!await initialFile.exists()) {
@@ -120,10 +102,11 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     }
   }
 
-  Future<void> _pickImage(ImageSource source) async {
+  // 🖼️ DIRECT GALLERY PICK ONLY
+  Future<void> _pickImageFromGallery() async {
     try {
       final XFile? picked = await _picker.pickImage(
-        source: source,
+        source: ImageSource.gallery,
         maxWidth: 1200,
         maxHeight: 1200,
         imageQuality: 80,
@@ -132,7 +115,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
       if (picked == null || !mounted) return;
       await _processImageSafe(picked.path);
     } catch (e) {
-      if (mounted) _showToast('Camera error: $e');
+      if (mounted) _showToast('Gallery error: $e');
     }
   }
 
@@ -241,7 +224,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
     return null;
   }
 
-  // 📥 EXACT COMBINER LOGIC: DIRECT FILEPICKER DOWNLOAD
   Future<void> _handleDownload() async {
     if (_cachedFilePath == null || _isProcessing) return;
 
@@ -259,7 +241,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
       final bytes = await compressed.readAsBytes();
       final defaultFileName = 'Exam_Photo_${compressedKB}KB_${DateTime.now().millisecondsSinceEpoch}.jpg';
 
-      // Combiner tool jaisa Android System File Picker
       String? selectedPath = await FilePicker.platform.saveFile(
         dialogTitle: 'Download folder chunein:',
         fileName: defaultFileName,
@@ -302,51 +283,6 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
         backgroundColor: const Color(0xFF1E293B),
         duration: const Duration(seconds: 2),
-      ),
-    );
-  }
-
-  void _showImageSourceSheet() {
-    showModalBottomSheet(
-      context: context,
-      backgroundColor: widget.isDark ? const Color(0xFF1E1B18) : Colors.white,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (_) => SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Container(
-                width: 40,
-                height: 4,
-                decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.3),
-                  borderRadius: BorderRadius.circular(10),
-                ),
-              ),
-              const SizedBox(height: 16),
-              ListTile(
-                leading: const Icon(Icons.photo_library_rounded, color: Color(0xFFB45309)),
-                title: const Text('Choose from Gallery', style: TextStyle(fontWeight: FontWeight.bold)),
-                onTap: () {
-                  Navigator.pop(context);
-                  _pickImage(ImageSource.gallery);
-                },
-              ),
-              ListTile(
-                leading: const Icon(Icons.camera_alt_rounded, color: Color(0xFFB45309)),
-                title: const Text('Take Photo / Scan Sign', style: TextStyle(fontWeight: FontWeight.bold)),
-                onTap: () {
-                  Navigator.pop(context);
-                  _pickImage(ImageSource.camera);
-                },
-              ),
-            ],
-          ),
-        ),
       ),
     );
   }
@@ -542,7 +478,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
       child: Material(
         color: Colors.transparent,
         child: InkWell(
-          onTap: _showImageSourceSheet,
+          onTap: _pickImageFromGallery,
           borderRadius: BorderRadius.circular(18),
           child: Padding(
             padding: const EdgeInsets.all(16),
@@ -575,7 +511,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                             ),
                           ),
                           const Text(
-                            'Change Photo ↺',
+                            'Choose Another Photo ↺',
                             style: TextStyle(
                               fontSize: 11.5,
                               fontWeight: FontWeight.w700,
@@ -597,14 +533,14 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                           shape: BoxShape.circle,
                         ),
                         child: const Icon(
-                          Icons.add_photo_alternate_rounded,
+                          Icons.photo_library_rounded,
                           size: 34,
                           color: Color(0xFFB45309),
                         ),
                       ),
                       const SizedBox(height: 12),
                       Text(
-                        'Upload Passport Photo or Signature',
+                        'Select Photo from Gallery',
                         style: TextStyle(
                           fontSize: 14,
                           fontWeight: FontWeight.w800,
@@ -613,7 +549,7 @@ class _ExamPhotoResizerScreenState extends State<ExamPhotoResizerScreen> {
                       ),
                       const SizedBox(height: 4),
                       Text(
-                        'Max file size: 5 MB',
+                        'Tap here to choose passport photo or signature',
                         style: TextStyle(
                           fontSize: 12,
                           color: isDark ? Colors.white54 : const Color(0xFF64748B),
