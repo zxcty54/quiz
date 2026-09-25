@@ -19,6 +19,7 @@ class CommunityPostCard extends StatefulWidget {
   final Function(bool isLiked) onLikeToggle;
   final Function(bool isSaved) onBookmarkToggle;
   final Function(int optionIndex) onPollVote;
+  final VoidCallback? onPostDeleted;
 
   const CommunityPostCard({
     super.key,
@@ -32,6 +33,7 @@ class CommunityPostCard extends StatefulWidget {
     required this.onLikeToggle,
     required this.onBookmarkToggle,
     required this.onPollVote,
+    this.onPostDeleted,
   });
 
   @override
@@ -225,6 +227,71 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
     } catch (_) {}
   }
 
+  void _confirmAndDeletePost() {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Text(
+          'Delete Post?',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+          ),
+        ),
+        content: Text(
+          'Are you sure you want to permanently delete this post?',
+          style: TextStyle(
+            color: widget.isDarkMode ? Colors.grey[300] : Colors.grey[700],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.redAccent,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            ),
+            onPressed: () async {
+              Navigator.pop(ctx);
+              try {
+                await Supabase.instance.client
+                    .from('community_posts')
+                    .delete()
+                    .eq('id', widget.post['id'])
+                    .eq('creator_id', widget.currentLoggedInHandle);
+
+                if (context.mounted) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(
+                      content: Row(
+                        children: [
+                          Icon(Icons.delete_outline_rounded, color: Colors.white, size: 18),
+                          SizedBox(width: 8),
+                          Text('Post deleted successfully!'),
+                        ],
+                      ),
+                      backgroundColor: Colors.redAccent,
+                    ),
+                  );
+                }
+                widget.onPostDeleted?.call();
+              } catch (e) {
+                debugPrint("Delete failed: $e");
+              }
+            },
+            child: const Text('Delete'),
+          ),
+        ],
+      ),
+    );
+  }
+
   void _launchAttachedMock(Map<String, dynamic> mock) {
     final List rawList = mock['questions_json'] ?? [];
     if (rawList.isEmpty) return;
@@ -362,8 +429,8 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
-            children: const [
+          const Row(
+            children: [
               Icon(Icons.bolt_rounded, color: Colors.amber, size: 18),
               SizedBox(width: 4),
               Text('Live Daily Quiz • Tap to Solve', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: _primaryBlue)),
@@ -580,26 +647,30 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
     final int commentsCount = widget.post['comments_count'] ?? 0;
     final cardSurface = widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white;
 
+    // Sirf creator ko delete button dikhane ke liye check
+    final String postCreatorId = (widget.post['creator_id'] ?? '').toString();
+    final bool isMyPost = postCreatorId.isNotEmpty && postCreatorId == widget.currentLoggedInHandle;
+
     return Container(
       color: cardSurface,
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          GestureDetector(
-            onTap: () {
-              if (isVerifiedCreator) {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (_) => CreatorProfileScreen(creatorHandle: authorHandle, isDarkMode: widget.isDarkMode),
-                  ),
-                );
-              }
-            },
-            child: Row(
-              children: [
-                CircleAvatar(
+          Row(
+            children: [
+              GestureDetector(
+                onTap: () {
+                  if (isVerifiedCreator) {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => CreatorProfileScreen(creatorHandle: authorHandle, isDarkMode: widget.isDarkMode),
+                      ),
+                    );
+                  }
+                },
+                child: CircleAvatar(
                   radius: 19,
                   backgroundColor: isVerifiedCreator ? _primaryBlue : (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFF64748B)),
                   child: Text(
@@ -607,14 +678,32 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                     style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
                   ),
                 ),
-                const SizedBox(width: 10),
-                Expanded(
+              ),
+              const SizedBox(width: 10),
+              Expanded(
+                child: GestureDetector(
+                  onTap: () {
+                    if (isVerifiedCreator) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (_) => CreatorProfileScreen(creatorHandle: authorHandle, isDarkMode: widget.isDarkMode),
+                        ),
+                      );
+                    }
+                  },
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
-                          Text(authorDisplayName, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
+                          Flexible(
+                            child: Text(
+                              authorDisplayName,
+                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
                           const SizedBox(width: 4),
                           if (isVerifiedCreator) const Icon(Icons.verified, size: 14, color: _primaryBlue),
                           const SizedBox(width: 6),
@@ -645,16 +734,47 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                     ],
                   ),
                 ),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                  decoration: BoxDecoration(
-                    color: _primaryBlue.withOpacity(0.08),
-                    borderRadius: BorderRadius.circular(5),
-                  ),
-                  child: Text(widget.post['tag'] ?? 'General', style: const TextStyle(color: _primaryBlue, fontSize: 10.5, fontWeight: FontWeight.bold)),
+              ),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                decoration: BoxDecoration(
+                  color: _primaryBlue.withOpacity(0.08),
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: Text(
+                  widget.post['tag'] ?? 'General',
+                  style: const TextStyle(color: _primaryBlue, fontSize: 10.5, fontWeight: FontWeight.bold),
+                ),
+              ),
+              if (isMyPost) ...[
+                const SizedBox(width: 4),
+                PopupMenuButton<String>(
+                  icon: Icon(Icons.more_vert, size: 18, color: Colors.grey[500]),
+                  padding: EdgeInsets.zero,
+                  constraints: const BoxConstraints(),
+                  color: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  onSelected: (val) {
+                    if (val == 'delete') {
+                      _confirmAndDeletePost();
+                    }
+                  },
+                  itemBuilder: (ctx) => [
+                    const PopupMenuItem(
+                      value: 'delete',
+                      height: 36,
+                      child: Row(
+                        children: [
+                          Icon(Icons.delete_outline_rounded, color: Colors.redAccent, size: 18),
+                          SizedBox(width: 8),
+                          Text('Delete', style: TextStyle(color: Colors.redAccent, fontSize: 13, fontWeight: FontWeight.w600)),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ],
-            ),
+            ],
           ),
           const SizedBox(height: 10),
 
