@@ -71,6 +71,38 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
     }
   }
 
+  Future<void> _deleteComment(int commentId) async {
+    try {
+      await Supabase.instance.client
+          .from('post_comments')
+          .delete()
+          .eq('id', commentId)
+          .eq('user_handle', widget.currentLoggedInHandle);
+
+      setState(() {
+        _comments.removeWhere((item) => item['id'] == commentId);
+      });
+
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+            content: Row(
+              children: [
+                Icon(Icons.delete_outline_rounded, color: Colors.white, size: 18),
+                SizedBox(width: 8),
+                Text('Reply deleted'),
+              ],
+            ),
+            backgroundColor: Colors.redAccent,
+            duration: Duration(seconds: 1),
+          ),
+        );
+      }
+    } catch (e) {
+      debugPrint("Failed to delete comment: $e");
+    }
+  }
+
   Future<void> _submitComment() async {
     final text = _commentCtrl.text.trim();
     if (text.isEmpty) return;
@@ -136,7 +168,6 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
-    final cardSurface = isDark ? _darkCard : _lightCard;
     final dividerColor = isDark ? _darkDivider : _lightDivider;
 
     return Padding(
@@ -149,13 +180,19 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
-                  '💬 Discussion & Replies',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: isDark ? Colors.white : const Color(0xFF0F172A),
-                  ),
+                Row(
+                  children: [
+                    const Icon(Icons.forum_outlined, size: 20, color: _primaryBlue),
+                    const SizedBox(width: 8),
+                    Text(
+                      'Discussion & Replies',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                        color: isDark ? Colors.white : const Color(0xFF0F172A),
+                      ),
+                    ),
+                  ],
                 ),
                 IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(context)),
               ],
@@ -171,6 +208,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                           itemBuilder: (context, cIdx) {
                             final c = _comments[cIdx];
                             final bool isReply = c['parent_comment_id'] != null;
+                            final bool isMyComment = (c['user_handle'] ?? '').toString() == widget.currentLoggedInHandle;
 
                             return Container(
                               margin: EdgeInsets.only(left: isReply ? 24.0 : 0.0, bottom: 8),
@@ -187,7 +225,10 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                                 children: [
                                   Row(
                                     children: [
-                                      Text(c['user_name'] ?? 'Aspirant', style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
+                                      Text(
+                                        c['user_name'] ?? 'Aspirant',
+                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                                      ),
                                       const SizedBox(width: 6),
                                       if (c['is_creator'] == true)
                                         const Icon(Icons.verified, color: _primaryBlue, size: 14),
@@ -199,12 +240,29 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                                             _replyingToName = c['user_name'] ?? 'Aspirant';
                                           });
                                         },
-                                        child: const Text('Reply', style: TextStyle(color: _primaryBlue, fontSize: 11, fontWeight: FontWeight.bold)),
+                                        child: const Text(
+                                          'Reply',
+                                          style: TextStyle(color: _primaryBlue, fontSize: 11, fontWeight: FontWeight.bold),
+                                        ),
                                       ),
+                                      if (isMyComment) ...[
+                                        const SizedBox(width: 10),
+                                        GestureDetector(
+                                          onTap: () => _deleteComment(c['id']),
+                                          child: Icon(
+                                            Icons.delete_outline_rounded,
+                                            size: 15,
+                                            color: Colors.redAccent.withOpacity(0.8),
+                                          ),
+                                        ),
+                                      ],
                                     ],
                                   ),
                                   const SizedBox(height: 4),
-                                  widget.buildRichTextContent(c['comment_text'] ?? c['content'] ?? '', fontSize: 13),
+                                  widget.buildRichTextContent(
+                                    c['comment_text'] ?? c['content'] ?? '',
+                                    fontSize: 13,
+                                  ),
                                 ],
                               ),
                             );
@@ -217,7 +275,10 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                 color: _primaryBlue.withOpacity(0.1),
                 child: Row(
                   children: [
-                    Text('Replying to @$_replyingToName', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _primaryBlue)),
+                    Text(
+                      'Replying to @$_replyingToName',
+                      style: const TextStyle(fontSize: 11, fontWeight: FontWeight.bold, color: _primaryBlue),
+                    ),
                     const Spacer(),
                     IconButton(
                       icon: const Icon(Icons.close, size: 14),
