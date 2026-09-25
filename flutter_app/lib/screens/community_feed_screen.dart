@@ -16,8 +16,14 @@ class CommunityFeedScreen extends StatefulWidget {
 }
 
 class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
+  final ScrollController _scrollController = ScrollController();
+  static const int _pageSize = 20;
+
   List<dynamic> _posts = [];
   bool _isLoading = true;
+  bool _isLoadingMore = false;
+  bool _hasMore = true;
+
   String _activeFilter = 'All';
   String _customUserName = 'Aspirant';
   String _currentLoggedInHandle = 'user';
@@ -51,14 +57,25 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   @override
   void initState() {
     super.initState();
+    _scrollController.addListener(_onScroll);
     _loadUserPreferences();
     _fetchFeedPosts();
   }
 
   @override
   void dispose() {
+    _scrollController.removeListener(_onScroll);
+    _scrollController.dispose();
     _searchCtrl.dispose();
     super.dispose();
+  }
+
+  void _onScroll() {
+    if (_scrollController.position.pixels >= _scrollController.position.maxScrollExtent - 300) {
+      if (!_isLoadingMore && _hasMore && !_isLoading) {
+        _fetchMorePosts();
+      }
+    }
   }
 
   Future<void> _loadUserPreferences() async {
@@ -82,7 +99,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       });
     }
 
-    // Parallel execution: Teeno queries simultaneous hit karengi
     try {
       final results = await Future.wait([
         Supabase.instance.client
@@ -132,26 +148,61 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     }
   }
 
+  // Initial Load (First 20 posts)
   Future<void> _fetchFeedPosts() async {
-    setState(() => _isLoading = true);
+    setState(() {
+      _isLoading = true;
+      _hasMore = true;
+    });
+
     try {
       final res = await Supabase.instance.client
           .from('community_posts')
           .select('*, creator_mocks(*)')
           .order('id', ascending: false)
-          .limit(60);
-
-      debugPrint(">>> COMMUNITY POSTS FETCH SUCCESS. Total: ${res.length}");
+          .range(0, _pageSize - 1);
 
       if (mounted) {
         setState(() {
           _posts = res;
           _isLoading = false;
+          if (res.length < _pageSize) {
+            _hasMore = false;
+          }
         });
       }
     } catch (e) {
       debugPrint(">>> Feed Fetch Error: $e");
       if (mounted) setState(() => _isLoading = false);
+    }
+  }
+
+  // Lazy Load Next Page (Agla batch)
+  Future<void> _fetchMorePosts() async {
+    setState(() => _isLoadingMore = true);
+
+    final start = _posts.length;
+    final end = start + _pageSize - 1;
+
+    try {
+      final res = await Supabase.instance.client
+          .from('community_posts')
+          .select('*, creator_mocks(*)')
+          .order('id', ascending: false)
+          .range(start, end);
+
+      if (mounted) {
+        setState(() {
+          _posts.addAll(res);
+          _isLoadingMore = false;
+          if (res.length < _pageSize) {
+            _hasMore = false;
+          }
+        });
+      }
+    } catch (e) {
+      debugPrint(">>> Fetch More Error: $e");
+      if (mounted) setState(() => _isLoadingMore = false);
     }
   }
 
@@ -460,10 +511,21 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                             ),
                           )
                         : ListView.separated(
+                            controller: _scrollController,
                             padding: const EdgeInsets.only(bottom: 90),
-                            itemCount: filteredList.length,
+                            // +1 extra slot for bottom loading spinner
+                            itemCount: filteredList.length + (_isLoadingMore ? 1 : 0),
                             separatorBuilder: (_, __) => Divider(height: 1, thickness: 1, color: dividerColor),
                             itemBuilder: (context, idx) {
+                              if (idx == filteredList.length) {
+                                return const Padding(
+                                  padding: EdgeInsets.symmetric(vertical: 16),
+                                  child: Center(
+                                    child: CircularProgressIndicator(strokeWidth: 2),
+                                  ),
+                                );
+                              }
+
                               final item = filteredList[idx];
                               final postId = item['id'];
 
