@@ -131,9 +131,10 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   Future<void> _fetchFeedPosts() async {
     setState(() => _isLoading = true);
     try {
+      // creator_mocks(*) join se mock test card ka pura data fetch hoga
       final res = await Supabase.instance.client
           .from('community_posts')
-          .select('*')
+          .select('*, creator_mocks(*)')
           .order('id', ascending: false);
 
       debugPrint(">>> COMMUNITY POSTS FETCH SUCCESS. Total: ${res.length}");
@@ -276,6 +277,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 uploadedImageUrl = Supabase.instance.client.storage.from('post_images').getPublicUrl(fileName);
                               }
 
+                              // Direct Insert - turant feed me dikhega
                               await Supabase.instance.client.from('community_posts').insert({
                                 'creator_id': _currentLoggedInHandle.isNotEmpty ? _currentLoggedInHandle : 'user',
                                 'author_name': _customUserName,
