@@ -29,7 +29,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   final Map<int, int> _userPollSelections = {};
   final Set<int> _savedPostIds = {};
 
-  // Clean filters without emojis
   final List<String> _filters = [
     'All',
     'Mock Tests',
@@ -83,48 +82,41 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       });
     }
 
+    // Parallel execution: Teeno queries simultaneous hit karengi
     try {
-      final savedRes = await Supabase.instance.client
-          .from('user_saved_posts')
-          .select('post_id')
-          .eq('user_handle', _currentLoggedInHandle);
+      final results = await Future.wait([
+        Supabase.instance.client
+            .from('user_saved_posts')
+            .select('post_id')
+            .eq('user_handle', _currentLoggedInHandle),
+        Supabase.instance.client
+            .from('post_likes')
+            .select('post_id')
+            .eq('user_handle', _currentLoggedInHandle),
+        Supabase.instance.client
+            .from('poll_votes')
+            .select('post_id, option_index')
+            .eq('user_handle', _currentLoggedInHandle),
+      ]);
 
-      if (mounted && savedRes != null) {
+      final savedRes = results[0] as List<dynamic>? ?? [];
+      final likesRes = results[1] as List<dynamic>? ?? [];
+      final votesRes = results[2] as List<dynamic>? ?? [];
+
+      if (mounted) {
         setState(() {
           _savedPostIds.clear();
           for (var row in savedRes) {
             final pid = int.tryParse(row['post_id'].toString());
             if (pid != null) _savedPostIds.add(pid);
           }
-        });
-      }
-    } catch (_) {}
 
-    try {
-      final likesRes = await Supabase.instance.client
-          .from('post_likes')
-          .select('post_id')
-          .eq('user_handle', _currentLoggedInHandle);
-
-      if (mounted && likesRes != null) {
-        setState(() {
           _likedPostIds.clear();
           for (var row in likesRes) {
             final pid = int.tryParse(row['post_id'].toString());
             if (pid != null) _likedPostIds.add(pid);
           }
-        });
-      }
-    } catch (_) {}
 
-    try {
-      final votesRes = await Supabase.instance.client
-          .from('poll_votes')
-          .select('post_id, option_index')
-          .eq('user_handle', _currentLoggedInHandle);
-
-      if (mounted && votesRes != null) {
-        setState(() {
           _userPollSelections.clear();
           for (var row in votesRes) {
             final pid = int.tryParse(row['post_id'].toString());
@@ -135,7 +127,9 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           }
         });
       }
-    } catch (_) {}
+    } catch (e) {
+      debugPrint("Parallel fetch error: $e");
+    }
   }
 
   Future<void> _fetchFeedPosts() async {
@@ -352,7 +346,6 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
       if (_activeFilter != 'All') {
         final postTag = (p['tag'] ?? '').toString().toLowerCase();
-        // Regex comparison: Database me emojis wale purane posts bhi accurately match honge
         final cleanPostTag = postTag.replaceAll(RegExp(r'[^\w\s]'), '').trim();
         final cleanFilter = _activeFilter.toLowerCase().replaceAll(RegExp(r'[^\w\s]'), '').trim();
         if (!cleanPostTag.contains(cleanFilter) && !cleanFilter.contains(cleanPostTag)) return false;
