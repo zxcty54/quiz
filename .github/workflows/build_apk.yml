@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'flutter_app/**'
+      - 'flutter_app/**.dart'
   workflow_dispatch:
 
 jobs:
@@ -281,7 +281,12 @@ jobs:
             sed -i "s/proguard-android.txt/proguard-android-optimize.txt/g" "$f"
           done
 
-          flutter build apk --release --no-pub --target-platform=android-arm64 --no-tree-shake-icons --build-number=${{ github.run_number }}
+          flutter build apk --release --no-pub \
+            --target-platform=android-arm64 \
+            --no-tree-shake-icons \
+            --build-number=${{ github.run_number }} \
+            --dart-define=SUPABASE_URL=${{ secrets.SUPABASE_URL }} \
+            --dart-define=SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }}
 
       - name: Locate & Package APK
         working-directory: flutter_app
