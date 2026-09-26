@@ -38,17 +38,6 @@ class CreatorProfileHeader extends StatelessWidget {
     } catch (_) {}
   }
 
-  void _openDialer(String phone) async {
-    try {
-      // Space aur unwanted symbols remove karke clean number dial karna
-      final cleanPhone = phone.replaceAll(RegExp(r'[^0-9+]'), '');
-      final uri = Uri(scheme: 'tel', path: cleanPhone);
-      if (await canLaunchUrl(uri)) {
-        await launchUrl(uri);
-      }
-    } catch (_) {}
-  }
-
   void _openWhatsApp(String phone) async {
     try {
       String cleanNumber = phone.replaceAll(RegExp(r'[^0-9]'), '');
@@ -66,25 +55,31 @@ class CreatorProfileHeader extends StatelessWidget {
   Widget build(BuildContext context) {
     final cardSurface = isDarkMode ? const Color(0xFF1E293B) : Colors.white;
     final dividerColor = isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+    final textDark = isDarkMode ? Colors.white : const Color(0xFF0F172A);
+    final textMuted = isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
 
-    final name = coaching?['name'] ?? profile?['name'] ?? 'Educator';
-    final specialty = profile?['subject_specialty'] ?? coaching?['tagline'] ?? 'Exam Guidance Hub';
-    final district = coaching?['district'] ?? coaching?['city'] ?? 'Bihar';
-    final landmark = coaching?['landmark_address'] ?? coaching?['landmark'];
-    final logoUrl = coaching?['logo_url'] ?? profile?['profile_image'];
+    final name = (coaching?['name'] ?? profile?['name'] ?? '').toString().trim();
+    final specialty = (coaching?['tagline'] ?? profile?['subject_specialty'] ?? '').toString().trim();
+    final district = (coaching?['district'] ?? coaching?['city'] ?? '').toString().trim();
+    final landmark = (coaching?['landmark_address'] ?? coaching?['landmark'] ?? '').toString().trim();
+    final logoUrl = coaching?['banner_url'] ?? profile?['banner_url'] ?? coaching?['logo_url'] ?? profile?['profile_image'];
 
-    // Deep Read for Contact & Social Fields
+    // Social Links Check
     final contactPhone = (coaching?['phone'] ?? coaching?['contact_number'] ?? profile?['phone'] ?? '').toString().trim();
     final telegram = (coaching?['telegram_link'] ?? profile?['telegram_handle'] ?? '').toString().trim();
     final youtube = (coaching?['youtube_url'] ?? profile?['youtube_handle'] ?? '').toString().trim();
     final facebook = (coaching?['facebook_url'] ?? profile?['facebook_handle'] ?? '').toString().trim();
     final website = (coaching?['website_url'] ?? profile?['website_url'] ?? '').toString().trim();
 
-    final hasAnySocial = contactPhone.isNotEmpty ||
-        telegram.isNotEmpty ||
-        youtube.isNotEmpty ||
-        facebook.isNotEmpty ||
-        website.isNotEmpty;
+    final hasAnySocial = contactPhone.isNotEmpty || telegram.isNotEmpty || youtube.isNotEmpty || facebook.isNotEmpty || website.isNotEmpty;
+
+    // Build location string from actual database fields
+    String locationText = '';
+    if (landmark.isNotEmpty && district.isNotEmpty) {
+      locationText = '$landmark, $district';
+    } else if (district.isNotEmpty) {
+      locationText = district;
+    }
 
     return Container(
       color: cardSurface,
@@ -92,51 +87,82 @@ class CreatorProfileHeader extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // 1. TOP ROW: SQUARE AVATAR WITH TROPHY + SOLID FOLLOW BUTTON
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Container(
-                margin: const EdgeInsets.only(top: 12),
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: cardSurface, width: 3.5),
-                  boxShadow: [
-                    BoxShadow(
-                      color: Colors.black.withOpacity(0.08),
-                      blurRadius: 8,
-                      offset: const Offset(0, 2),
+              // Square Avatar with Rounded Corners & Trophy Icon
+              Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(top: 8),
+                    width: 78,
+                    height: 78,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF1E293B),
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: cardSurface, width: 3.5),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.12),
+                          blurRadius: 8,
+                          offset: const Offset(0, 3),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
-                child: CircleAvatar(
-                  radius: 34,
-                  backgroundColor: _primaryBlue,
-                  backgroundImage: (logoUrl != null && logoUrl.toString().isNotEmpty)
-                      ? NetworkImage(logoUrl)
-                      : null,
-                  child: (logoUrl == null || logoUrl.toString().isEmpty)
-                      ? Text(
-                          name.isNotEmpty ? name[0].toUpperCase() : 'E',
-                          style: const TextStyle(color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
-                        )
-                      : null,
-                ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(13),
+                      child: (logoUrl != null && logoUrl.toString().trim().isNotEmpty)
+                          ? Image.network(
+                              logoUrl.toString().trim(),
+                              fit: BoxFit.cover,
+                              errorBuilder: (_, __, ___) => Center(
+                                child: Text(
+                                  name.isNotEmpty ? name[0].toUpperCase() : 'C',
+                                  style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
+                                ),
+                              ),
+                            )
+                          : Center(
+                              child: Text(
+                                name.isNotEmpty ? name[0].toUpperCase() : 'C',
+                                style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.bold),
+                              ),
+                            ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: -3,
+                    right: -3,
+                    child: Container(
+                      padding: const EdgeInsets.all(4),
+                      decoration: const BoxDecoration(
+                        color: Color(0xFFF59E0B),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Icon(Icons.emoji_events_rounded, color: Colors.white, size: 14),
+                    ),
+                  ),
+                ],
               ),
               const Spacer(),
+
+              // Right Button: Solid Orange / Green Follow Button
               Padding(
                 padding: const EdgeInsets.only(bottom: 6),
-                child: OutlinedButton.icon(
-                  style: OutlinedButton.styleFrom(
-                    backgroundColor: isFollowing ? _primaryBlue : Colors.transparent,
-                    foregroundColor: isFollowing ? Colors.white : _primaryBlue,
-                    side: const BorderSide(color: _primaryBlue, width: 1.2),
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                child: ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: isFollowing ? const Color(0xFF16A34A) : const Color(0xFFEA580C),
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                    elevation: 0,
                   ),
-                  icon: Icon(isFollowing ? Icons.check_rounded : Icons.add_rounded, size: 16),
+                  icon: Icon(isFollowing ? Icons.check_rounded : Icons.school_outlined, size: 16),
                   label: Text(
-                    isFollowing ? 'Following' : 'Follow',
-                    style: const TextStyle(fontWeight: FontWeight.w700, fontSize: 13),
+                    isFollowing ? 'Following' : 'Follow Institute',
+                    style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
                   ),
                   onPressed: onToggleFollow,
                 ),
@@ -144,38 +170,62 @@ class CreatorProfileHeader extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
+
+          // 2. COACHING TITLE & GOLD MEDAL ICON
           Row(
             children: [
               Flexible(
                 child: Text(
-                  name,
-                  style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 20, letterSpacing: -0.2),
+                  name.isNotEmpty ? name : 'Coaching Hub',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                    fontSize: 20,
+                    color: textDark,
+                    letterSpacing: -0.3,
+                  ),
                   overflow: TextOverflow.ellipsis,
                 ),
               ),
-              const SizedBox(width: 5),
-              const Icon(Icons.verified, size: 17, color: _primaryBlue),
+              const SizedBox(width: 6),
+              const Icon(Icons.military_tech_rounded, size: 20, color: Color(0xFFF59E0B)),
             ],
           ),
-          const SizedBox(height: 2),
-          Text('@$handle', style: TextStyle(color: Colors.grey[500], fontSize: 12.5)),
-          const SizedBox(height: 8),
-          Row(
-            children: [
-              const Icon(Icons.location_on_outlined, size: 14, color: Colors.grey),
-              const SizedBox(width: 4),
-              Expanded(
-                child: Text(
-                  landmark != null && landmark.toString().isNotEmpty ? '$landmark, $district' : '$district, Bihar',
-                  style: TextStyle(fontSize: 12, color: isDarkMode ? Colors.grey[300] : const Color(0xFF475569)),
-                  overflow: TextOverflow.ellipsis,
-                ),
+
+          // 3. TAGLINE IN GOLD/AMBER TONE (Only if exists)
+          if (specialty.isNotEmpty) ...[
+            const SizedBox(height: 4),
+            Text(
+              specialty,
+              style: const TextStyle(
+                fontSize: 12.5,
+                fontWeight: FontWeight.w600,
+                color: Color(0xFFD97706),
+                height: 1.35,
               ),
-            ],
-          ),
-          const SizedBox(height: 3),
-          Text(specialty, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: _primaryBlue)),
+            ),
+          ],
+
+          // 4. LOCATION (Only if real location exists)
+          if (locationText.isNotEmpty) ...[
+            const SizedBox(height: 8),
+            Row(
+              children: [
+                const Icon(Icons.location_on_outlined, size: 14, color: Colors.grey),
+                const SizedBox(width: 4),
+                Expanded(
+                  child: Text(
+                    locationText,
+                    style: TextStyle(fontSize: 12, color: textMuted),
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              ],
+            ),
+          ],
+
           const SizedBox(height: 16),
+
+          // 5. REAL STATS ROW
           Row(
             children: [
               _buildStat('$followersCount', 'Followers'),
@@ -188,21 +238,14 @@ class CreatorProfileHeader extends StatelessWidget {
             ],
           ),
 
-          // 🌐 Social Links Strip (Only appears when at least 1 link exists)
+          // 6. SOCIAL LINKS STRIP (Appears only if genuine links exist)
           if (hasAnySocial) ...[
             const SizedBox(height: 14),
             Wrap(
               spacing: 8,
               runSpacing: 8,
               children: [
-                if (contactPhone.isNotEmpty) ...[
-                  _buildSocialPill(
-                    icon: Icons.phone_outlined,
-                    label: 'Call',
-                    iconColor: const Color(0xFF16A34A),
-                    dividerColor: dividerColor,
-                    onTap: () => _openDialer(contactPhone),
-                  ),
+                if (contactPhone.isNotEmpty)
                   _buildSocialPill(
                     icon: Icons.chat_bubble_outline_rounded,
                     label: 'WhatsApp',
@@ -210,16 +253,13 @@ class CreatorProfileHeader extends StatelessWidget {
                     dividerColor: dividerColor,
                     onTap: () => _openWhatsApp(contactPhone),
                   ),
-                ],
                 if (telegram.isNotEmpty)
                   _buildSocialPill(
                     icon: Icons.near_me_rounded,
                     label: 'Telegram',
                     iconColor: const Color(0xFF0284C7),
                     dividerColor: dividerColor,
-                    onTap: () {
-                      _openUrl(telegram.startsWith('http') ? telegram : 'https://t.me/${telegram.replaceAll('@', '')}');
-                    },
+                    onTap: () => _openUrl(telegram.startsWith('http') ? telegram : 'https://t.me/${telegram.replaceAll('@', '')}'),
                   ),
                 if (youtube.isNotEmpty)
                   _buildSocialPill(
@@ -227,9 +267,7 @@ class CreatorProfileHeader extends StatelessWidget {
                     label: 'YouTube',
                     iconColor: const Color(0xFFEF4444),
                     dividerColor: dividerColor,
-                    onTap: () {
-                      _openUrl(youtube.startsWith('http') ? youtube : 'https://youtube.com/${youtube.startsWith('@') ? youtube : "@$youtube"}');
-                    },
+                    onTap: () => _openUrl(youtube.startsWith('http') ? youtube : 'https://youtube.com/${youtube.startsWith('@') ? youtube : "@$youtube"}'),
                   ),
                 if (facebook.isNotEmpty)
                   _buildSocialPill(
@@ -237,9 +275,7 @@ class CreatorProfileHeader extends StatelessWidget {
                     label: 'Facebook',
                     iconColor: const Color(0xFF1877F2),
                     dividerColor: dividerColor,
-                    onTap: () {
-                      _openUrl(facebook.startsWith('http') ? facebook : 'https://facebook.com/$facebook');
-                    },
+                    onTap: () => _openUrl(facebook.startsWith('http') ? facebook : 'https://facebook.com/$facebook'),
                   ),
                 if (website.isNotEmpty)
                   _buildSocialPill(
@@ -247,9 +283,7 @@ class CreatorProfileHeader extends StatelessWidget {
                     label: 'Website',
                     iconColor: _primaryBlue,
                     dividerColor: dividerColor,
-                    onTap: () {
-                      _openUrl(website.startsWith('http') ? website : 'https://$website');
-                    },
+                    onTap: () => _openUrl(website.startsWith('http') ? website : 'https://$website'),
                   ),
               ],
             ),
