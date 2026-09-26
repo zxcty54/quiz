@@ -62,66 +62,61 @@ class _DistrictTopLeaderboardWidgetState
     await _fetchDistrictLeaderboard(district);
   }
 
-  // 100% REAL & PERSISTENT DATA FETCH (KABHI GAYAB NAHI HOGA)
+  // CRASH-PROOF SUPABASE QUERY (NO UNKNOWN COLUMN, NO EXTRA QUERIES)
   Future<void> _fetchDistrictLeaderboard(String district) async {
     if (mounted) setState(() => _isLoading = true);
 
     try {
       final client = Supabase.instance.client;
 
-      // 1. Top 5 Candidates
+      // 1. Top 5 Candidates Fetch (Exact Table Columns)
       final res = await client
           .from('daily_challenge_submissions')
-          .select('user_id, user_name, district, score, time_taken_seconds')
+          .select('user_name, district, score, time_taken_seconds')
           .eq('district', district)
           .order('score', ascending: false)
           .order('time_taken_seconds', ascending: true)
           .limit(5);
 
-      // 2. User ki Last Submission (Hamesha Barkaraar Rahegi)
+      final List<Map<String, dynamic>> rankers =
+          List<Map<String, dynamic>>.from(res);
+
+      // 2. Safe User Status Fetch (Only using confirmed columns)
       final currentUserId = client.auth.currentUser?.id;
       Map<String, dynamic>? mySub;
       int? calculatedRank;
 
       if (currentUserId != null) {
-        final myResList = await client
+        final myRes = await client
             .from('daily_challenge_submissions')
-            .select()
+            .select('user_name, district, score, time_taken_seconds')
             .eq('user_id', currentUserId)
             .eq('district', district)
-            .order('created_at', ascending: false)
             .limit(1);
 
-        if (myResList.isNotEmpty) {
-          mySub = myResList.first;
+        if (myRes.isNotEmpty) {
+          mySub = myRes.first;
 
-          // Real District Rank Calculation
-          final higherRankers = await client
-              .from('daily_challenge_submissions')
-              .count(CountOption.exact)
-              .eq('district', district)
-              .gt('score', mySub['score']);
+          // Check if user is in Top 5 list
+          final indexInTop5 = rankers.indexWhere(
+            (item) =>
+                item['user_name'] == mySub!['user_name'] &&
+                item['score'] == mySub['score'],
+          );
 
-          final sameScoreFaster = await client
-              .from('daily_challenge_submissions')
-              .count(CountOption.exact)
-              .eq('district', district)
-              .eq('score', mySub['score'])
-              .lt('time_taken_seconds', mySub['time_taken_seconds']);
-
-          calculatedRank = higherRankers + sameScoreFaster + 1;
+          calculatedRank = (indexInTop5 != -1) ? (indexInTop5 + 1) : null;
         }
       }
 
       if (!mounted) return;
       setState(() {
-        _topRankers = List<Map<String, dynamic>>.from(res);
+        _topRankers = rankers;
         _currentUserSubmission = mySub;
         _currentUserRank = calculatedRank;
         _isLoading = false;
       });
     } catch (e) {
-      debugPrint('District Leaderboard fetch error: $e');
+      debugPrint('District Leaderboard error: $e');
       if (!mounted) return;
       setState(() {
         _topRankers = [];
@@ -222,12 +217,12 @@ class _DistrictTopLeaderboardWidgetState
 
                 const SizedBox(height: 10),
 
-                // User Sticky Bar (Persistent Rank)
+                // Persistent User Status Bar
                 _buildRealUserStickyBar(isDark),
 
                 const SizedBox(height: 10),
 
-                // View All Bihar CTA
+                // Full Bihar CTA
                 _buildFullRanklistButton(isDark),
               ],
             ),
@@ -460,13 +455,6 @@ class _DistrictTopLeaderboardWidgetState
             decoration: BoxDecoration(
               color: badgeBgColor,
               shape: BoxShape.circle,
-              boxShadow: [
-                BoxShadow(
-                  color: badgeBgColor.withOpacity(0.35),
-                  blurRadius: 6,
-                  offset: const Offset(0, 2),
-                ),
-              ],
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -638,14 +626,13 @@ class _DistrictTopLeaderboardWidgetState
   }
 
   // ============================================================
-  // 100% PERSISTENT USER STATUS BAR
+  // USER STATUS BAR (STABLE & PERSISTENT)
   // ============================================================
   Widget _buildRealUserStickyBar(bool isDark) {
-    // CASE 1: Agar user ne kabhi bhi test diya hai (Rank kabhi gayab nahi hoga)
     if (_currentUserSubmission != null) {
       final myScore = _currentUserSubmission!['score'] ?? 0;
       final myTime = _currentUserSubmission!['time_taken_seconds'] ?? 0;
-      final displayRank = _currentUserRank ?? 1;
+      final rankText = (_currentUserRank != null) ? '#$_currentUserRank' : '#Me';
 
       return Container(
         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
@@ -670,7 +657,7 @@ class _DistrictTopLeaderboardWidgetState
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Text(
-                '#$displayRank',
+                rankText,
                 style: const TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w900,
@@ -734,7 +721,6 @@ class _DistrictTopLeaderboardWidgetState
       );
     }
 
-    // CASE 2: Sirf naye users ke liye
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       decoration: BoxDecoration(
