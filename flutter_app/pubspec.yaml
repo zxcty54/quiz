@@ -52,6 +52,9 @@ flutter_launcher_icons:
   ios: false
   image_path: "assets/data/icon/appicon.png.jpeg"
   min_sdk_android: 21
+  # 👇 Naye Android phones ke liye adaptive icon configuration
+  adaptive_icon_background: "#FFFFFF"
+  adaptive_icon_foreground: "assets/data/icon/appicon.png.jpeg"
 
 flutter:
   uses-material-design: true
