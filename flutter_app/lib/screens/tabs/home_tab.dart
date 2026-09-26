@@ -11,7 +11,7 @@ import '../../widgets/coaching_onboarding_cta_widget.dart';
 import '../../widgets/hall_of_fame_carousel_widget.dart';
 import '../../widgets/bihar_events_carousel_widget.dart'; 
 import '../../widgets/know_your_bihar_widget.dart';
-import '../../widgets/district_top_leaderboard_widget.dart'; // 👈 🏆 Live District Leaderboard Preview
+import '../../widgets/district_top_leaderboard_widget.dart';
 
 // ⚔️ Challenge screens & service
 import '../challenge_quiz_screen.dart';
@@ -53,10 +53,10 @@ class _HomeTabState extends State<HomeTab> {
   final GlobalKey<FirstInIndiaWidgetState> _firstInIndiaWidgetKey = GlobalKey<FirstInIndiaWidgetState>();
   final GlobalKey<CoachingHubCardState> _coachingHubKey = GlobalKey<CoachingHubCardState>();
   final GlobalKey<HallOfFameCarouselWidgetState> _hallOfFameKey = GlobalKey<HallOfFameCarouselWidgetState>();
+  final GlobalKey<ProPdfVaultCardState> _pdfVaultKey = GlobalKey<ProPdfVaultCardState>(); // 👈 Added for Books DB sync
 
   bool _isChallengeLoading = false;
 
-  // 🎲 10-Question Challenge Start Handler
   Future<void> _startChallengeSprint() async {
     setState(() => _isChallengeLoading = true);
     try {
@@ -86,10 +86,11 @@ class _HomeTabState extends State<HomeTab> {
       onRefresh: () async {
         await Future.wait<dynamic>([
           _bulletinWidgetKey.currentState?.fetchDailyBulletins(forceRefresh: true) ?? Future.value(),
-          _jobsWidgetKey.currentState?.fetchLatestJobs() ?? Future.value(),
+          _jobsWidgetKey.currentState?.fetchLatestJobs(refresh: true) ?? Future.value(),
           _firstInIndiaWidgetKey.currentState?.fetchFirstInIndia(forceRefresh: true) ?? Future.value(),
           _coachingHubKey.currentState?.loadEnrolledBatchData() ?? Future.value(),
           _hallOfFameKey.currentState?.fetchHallOfFame() ?? Future.value(),
+          _pdfVaultKey.currentState?.fetchLiveBooks() ?? Future.value(), // 👈 Pull down pe books sync hogi
         ]);
       },
       child: SingleChildScrollView(
@@ -155,19 +156,19 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // 📑 10. PDF VAULT CARD
+            // 📑 10. PDF VAULT CARD (books_database.json auto-sync)
             ProPdfVaultCard(
+              key: _pdfVaultKey,
               isDarkMode: widget.isDarkMode,
               customWebsiteUrl: widget.appConfig['pdf_vault_main_url'],
-              dynamicPdfItems: widget.appConfig['pdf_vault_items'],
             ),
             const SizedBox(height: 18),
 
-            // 🏆 11. DISTRICT LEADERBOARD (Card ke theek upar move hua, empty hone par hide rahega)
+            // 🏆 11. DISTRICT LEADERBOARD
             DistrictTopLeaderboardWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 8),
 
-            // ⚔️ 12. 1v1 DUEL CHALLENGE CARD (Sirf Start Duel button ke sath)
+            // ⚔️ 12. 1v1 DUEL CHALLENGE CARD
             _buildSpeedRunChallengeCard(context),
             const SizedBox(height: 18),
 
@@ -341,7 +342,6 @@ class _HomeTabState extends State<HomeTab> {
     );
   }
 
-  // ⚔️ Challenge Card: Leaderboard button removed, Single Full-Width Start Duel Button
   Widget _buildSpeedRunChallengeCard(BuildContext context) {
     return Container(
       width: double.infinity,
@@ -360,7 +360,6 @@ class _HomeTabState extends State<HomeTab> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Top Badges Row
           Row(
             children: [
               Container(
@@ -413,8 +412,6 @@ class _HomeTabState extends State<HomeTab> {
             ],
           ),
           const SizedBox(height: 16),
-
-          // Title
           const Row(
             children: [
               Text(
@@ -430,8 +427,6 @@ class _HomeTabState extends State<HomeTab> {
             ],
           ),
           const SizedBox(height: 8),
-
-          // Subtitle
           Text(
             '10 rapid sawal bina calculation ke solve karo, WhatsApp par dost ko challenge karo aur District Topper bano!',
             style: TextStyle(
@@ -442,8 +437,6 @@ class _HomeTabState extends State<HomeTab> {
             ),
           ),
           const SizedBox(height: 18),
-
-          // Full-Width Start Duel Button
           SizedBox(
             width: double.infinity,
             height: 50,
