@@ -35,6 +35,11 @@ class _DistrictTopLeaderboardWidgetState
 
   String _selectedDistrict = 'Patna';
   bool _isLoading = true;
+  
+  // State Overall Topper (All Bihar #1)
+  Map<String, dynamic>? _stateTopper;
+  
+  // District Level Rankers
   List<Map<String, dynamic>> _topRankers = [];
 
   // Dynamic User Rank Performance Data
@@ -57,7 +62,6 @@ class _DistrictTopLeaderboardWidgetState
     super.dispose();
   }
 
-  // Auto-reload when user completes quiz & returns to Home Screen
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
     if (state == AppLifecycleState.resumed) {
@@ -71,10 +75,8 @@ class _DistrictTopLeaderboardWidgetState
 
     final savedDistrict = prefs.getString('user_district')?.trim() ?? 'Patna';
     final district = _biharDistricts.contains(savedDistrict) ? savedDistrict : 'Patna';
-
     final localUserId = prefs.getString('user_id')?.trim();
 
-    // 1. Single Name Standardisation (Local -> app_users -> Fallback)
     String standardName = prefs.getString('user_name')?.trim() ??
         prefs.getString('custom_aspirant_name')?.trim() ??
         '';
@@ -102,7 +104,6 @@ class _DistrictTopLeaderboardWidgetState
 
     if (standardName.isEmpty) standardName = 'Aspirant';
 
-    // Instant local cache rendering
     final cachedScore = prefs.getInt('last_sub_score');
     final cachedTime = prefs.getInt('last_sub_time') ?? 0;
 
@@ -118,11 +119,10 @@ class _DistrictTopLeaderboardWidgetState
       });
     }
 
-    await _fetchDistrictLeaderboard(district, localUserId, standardName);
+    await _fetchLeaderboardData(district, localUserId, standardName);
   }
 
-  // 🎯 FETCH LEADERBOARD & ACCURATELY CALCULATE USER RANK
-  Future<void> _fetchDistrictLeaderboard(
+  Future<void> _fetchLeaderboardData(
     String district,
     String? localUserId,
     String standardName,
@@ -132,7 +132,20 @@ class _DistrictTopLeaderboardWidgetState
     try {
       final client = Supabase.instance.client;
 
-      // 1. Fetch District Top 50 (Ordered by Score Desc, Time Asc)
+      // 🌟 1. FETCH OVERALL BIHAR TOPPER (No district filter)
+      final stateRes = await client
+          .from('daily_challenge_submissions')
+          .select('user_name, district, score, time_taken_seconds')
+          .order('score', ascending: false)
+          .order('time_taken_seconds', ascending: true)
+          .limit(1);
+
+      Map<String, dynamic>? overallTopper;
+      if (stateRes != null && stateRes.isNotEmpty) {
+        overallTopper = Map<String, dynamic>.from(stateRes.first);
+      }
+
+      // 📍 2. FETCH DISTRICT TOP 50
       final res = await client
           .from('daily_challenge_submissions')
           .select('user_id, user_name, district, score, time_taken_seconds')
@@ -151,7 +164,7 @@ class _DistrictTopLeaderboardWidgetState
 
       final normalizedTargetName = standardName.trim().toLowerCase();
 
-      // 2. Search user in the leaderboard rows
+      // Search user in district list
       for (int i = 0; i < allRankers.length; i++) {
         final row = allRankers[i];
         final rowUid = row['user_id']?.toString().trim();
@@ -174,7 +187,7 @@ class _DistrictTopLeaderboardWidgetState
         }
       }
 
-      // 3. If outside Top 50, fetch single record safely
+      // Fallback: If outside top 50
       if (!userFound) {
         var query = client
             .from('daily_challenge_submissions')
@@ -213,7 +226,7 @@ class _DistrictTopLeaderboardWidgetState
         }
       }
 
-      // 4. Fallback: Agar fresh submission cache me ho
+      // Local Cache Fallback
       final prefs = await SharedPreferences.getInstance();
       final cachedScore = prefs.getInt('last_sub_score');
       final cachedTime = prefs.getInt('last_sub_time') ?? 0;
@@ -225,7 +238,6 @@ class _DistrictTopLeaderboardWidgetState
         foundRank = allRankers.length > 5 ? allRankers.length : 1;
       }
 
-      // 5. Ensure Top Rankers list is never empty if user has attempted
       List<Map<String, dynamic>> finalRankers = allRankers.take(5).toList();
       if (finalRankers.isEmpty && userFound) {
         finalRankers = [
@@ -240,6 +252,7 @@ class _DistrictTopLeaderboardWidgetState
 
       if (!mounted) return;
       setState(() {
+        _stateTopper = overallTopper;
         _topRankers = finalRankers;
         if (userFound) {
           _userRank = foundRank;
@@ -252,23 +265,21 @@ class _DistrictTopLeaderboardWidgetState
     } catch (e) {
       debugPrint('Leaderboard sync error: $e');
       if (!mounted) return;
-      setState(() {
-        _isLoading = false;
-      });
+      setState(() => _isLoading = false);
     }
   }
 
   void _shareLeaderboard() {
-    if (_topRankers.isEmpty) return;
-    final top1 = _topRankers.first;
-    final text = "🏆 *$_selectedDistrict Leaderboard Topper!*\n"
-        "🥇 *${top1['user_name']}* scored ${top1['score']}/10 in ${top1['time_taken_seconds']}s! ⚡\n"
-        "Can you beat their record? Check rank on MockTester.Online!";
+    if (_stateTopper == null && _topRankers.isEmpty) return;
+    final top = _stateTopper ?? _topRankers.first;
+    final text = "🏆 *Bihar GK Challenge Topper!*\n"
+        "🥇 *${top['user_name']}* (${top['district']}) scored ${top['score']}/10 in ${top['time_taken_seconds']}s! ⚡\n"
+        "Check your district rank on MockTester.Online!";
     Clipboard.setData(ClipboardData(text: text));
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text("Copied $_selectedDistrict Leaderboard to clipboard! 📋"),
-        duration: const Duration(seconds: 2),
+      const SnackBar(
+        content: Text("Copied Leaderboard to clipboard! 📋"),
+        duration: Duration(seconds: 2),
       ),
     );
   }
@@ -277,7 +288,7 @@ class _DistrictTopLeaderboardWidgetState
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
 
-    if (_isLoading && _topRankers.isEmpty) {
+    if (_isLoading && _topRankers.isEmpty && _stateTopper == null) {
       return _buildLoadingCard(isDark);
     }
 
@@ -306,6 +317,10 @@ class _DistrictTopLeaderboardWidgetState
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _buildHeader(isDark),
+
+          // 👑 1. OVERALL BIHAR CHAMPION CARD (Sabhi ko dikhega)
+          if (_stateTopper != null) _buildStateChampionCard(isDark),
+
           _buildTabBar(isDark),
 
           Padding(
@@ -325,7 +340,7 @@ class _DistrictTopLeaderboardWidgetState
                     ),
                   ),
 
-                // Top 3 Podium Cards (Rank 1 Topper Gold Card)
+                // Top 3 Podium Cards in User District
                 ...List.generate(top3.length, (index) {
                   return _buildPodiumRankCard(
                     item: top3[index],
@@ -345,7 +360,7 @@ class _DistrictTopLeaderboardWidgetState
 
                 const SizedBox(height: 10),
 
-                // 🌟 Real-Time User Rank Bar
+                // 🌟 User's Local District Rank Bar
                 _buildUniformUserStatusBar(isDark),
 
                 const SizedBox(height: 10),
@@ -402,7 +417,7 @@ class _DistrictTopLeaderboardWidgetState
                   spacing: 6,
                   children: [
                     Text(
-                      'District Leaderboard',
+                      'Daily Challenge',
                       style: TextStyle(
                         fontSize: 15,
                         fontWeight: FontWeight.w900,
@@ -423,7 +438,7 @@ class _DistrictTopLeaderboardWidgetState
                     ),
                     const SizedBox(width: 3),
                     Text(
-                      '$_selectedDistrict District',
+                      '$_selectedDistrict District Leaderboard',
                       style: TextStyle(
                         fontSize: 11.5,
                         fontWeight: FontWeight.w700,
@@ -476,6 +491,124 @@ class _DistrictTopLeaderboardWidgetState
     );
   }
 
+  // ============================================================
+  // 👑 STATE OVERALL CHAMPION CARD (Har user ko dikhega)
+  // ============================================================
+  Widget _buildStateChampionCard(bool isDark) {
+    final name = (_stateTopper!['user_name'] ?? 'Candidate').toString().trim();
+    final district = (_stateTopper!['district'] ?? 'Bihar').toString().trim();
+    final score = _stateTopper!['score'] ?? 0;
+    final int rawTime = (_stateTopper!['time_taken_seconds'] ?? 0) as int;
+    final time = rawTime > 0 ? rawTime : 12;
+
+    return Container(
+      margin: const EdgeInsets.fromLTRB(14, 0, 14, 12),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 11),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: isDark
+              ? [const Color(0xFF3B2506), const Color(0xFF201604)]
+              : [const Color(0xFFFEF3C7), const Color(0xFFFDE68A)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFF59E0B), width: 1.4),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.25 : 0.18),
+            blurRadius: 10,
+            offset: const Offset(0, 3),
+          ),
+        ],
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 38,
+            height: 38,
+            decoration: const BoxDecoration(
+              color: Color(0xFFF59E0B),
+              shape: BoxShape.circle,
+            ),
+            child: const Center(
+              child: Icon(Icons.workspace_premium_rounded, color: Colors.white, size: 22),
+            ),
+          ),
+          const SizedBox(width: 10),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1.5),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFD97706),
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: const Text(
+                        'BIHAR #1 TOPPER',
+                        style: TextStyle(
+                          fontSize: 8.5,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                          letterSpacing: 0.4,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 5),
+                    Text(
+                      '• $district',
+                      style: TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w800,
+                        color: isDark ? const Color(0xFFFDE68A) : const Color(0xFFB45309),
+                      ),
+                    ),
+                  ],
+                ),
+                const SizedBox(height: 3),
+                Text(
+                  name,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.w900,
+                    color: isDark ? Colors.white : const Color(0xFF78350F),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              Text(
+                '$score/10',
+                style: const TextStyle(
+                  fontSize: 14,
+                  fontWeight: FontWeight.w900,
+                  color: Color(0xFF16A34A),
+                ),
+              ),
+              Text(
+                '${time}s',
+                style: TextStyle(
+                  fontSize: 10.5,
+                  fontWeight: FontWeight.w700,
+                  color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF92400E),
+                ),
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _buildLiveBadge(bool isDark) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
@@ -508,16 +641,16 @@ class _DistrictTopLeaderboardWidgetState
 
   Widget _buildTabBar(bool isDark) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 8),
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
         decoration: BoxDecoration(
           color: const Color(0xFF6366F1),
-          borderRadius: BorderRadius.circular(9),
+          borderRadius: BorderRadius.circular(8),
         ),
-        child: const Text(
-          'Top 5 Hall of Fame',
-          style: TextStyle(
+        child: Text(
+          '$_selectedDistrict Top 5',
+          style: const TextStyle(
             fontSize: 11,
             fontWeight: FontWeight.w900,
             color: Colors.white,
@@ -528,7 +661,7 @@ class _DistrictTopLeaderboardWidgetState
   }
 
   // ============================================================
-  // PODIUM CARDS (Top 1, 2, 3)
+  // PODIUM CARDS (Top 1, 2, 3 in District)
   // ============================================================
   Widget _buildPodiumRankCard({
     required Map<String, dynamic> item,
