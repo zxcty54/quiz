@@ -38,6 +38,7 @@ class _DistrictTopLeaderboardWidgetState
   List<Map<String, dynamic>> _topRankers = [];
 
   // Dynamic User Rank Performance Data
+  String _currentUserName = 'Aspirant';
   int _userScore = 0;
   int _userTime = 0;
   int _userRank = 0;
@@ -108,9 +109,10 @@ class _DistrictTopLeaderboardWidgetState
     if (mounted) {
       setState(() {
         _selectedDistrict = district;
+        _currentUserName = standardName;
         if (cachedScore != null) {
           _userScore = cachedScore;
-          _userTime = cachedTime;
+          _userTime = cachedTime > 0 ? cachedTime : 15;
           _hasAttempted = true;
         }
       });
@@ -130,7 +132,7 @@ class _DistrictTopLeaderboardWidgetState
     try {
       final client = Supabase.instance.client;
 
-      // 1. Fetch District Top 50 (Identical to Explore Screen)
+      // 1. Fetch District Top 50 (Ordered by Score Desc, Time Asc)
       final res = await client
           .from('daily_challenge_submissions')
           .select('user_id, user_name, district, score, time_taken_seconds')
@@ -141,8 +143,6 @@ class _DistrictTopLeaderboardWidgetState
 
       final List<Map<String, dynamic>> allRankers =
           List<Map<String, dynamic>>.from(res ?? []);
-
-      final top5 = allRankers.take(5).toList();
 
       int foundRank = 0;
       int myScore = 0;
@@ -167,13 +167,14 @@ class _DistrictTopLeaderboardWidgetState
         if (isMe) {
           foundRank = i + 1;
           myScore = (row['score'] ?? 0) as int;
-          myTime = (row['time_taken_seconds'] ?? 0) as int;
+          final int rawTime = (row['time_taken_seconds'] ?? 0) as int;
+          myTime = rawTime > 0 ? rawTime : 15;
           userFound = true;
           break;
         }
       }
 
-      // 3. If outside Top 50, fetch direct single record safely
+      // 3. If outside Top 50, fetch single record safely
       if (!userFound) {
         var query = client
             .from('daily_challenge_submissions')
@@ -191,7 +192,8 @@ class _DistrictTopLeaderboardWidgetState
         if (myRes.isNotEmpty) {
           final sub = myRes.first;
           myScore = (sub['score'] ?? 0) as int;
-          myTime = (sub['time_taken_seconds'] ?? 0) as int;
+          final int rawTime = (sub['time_taken_seconds'] ?? 0) as int;
+          myTime = rawTime > 0 ? rawTime : 15;
 
           final higherCount = await client
               .from('daily_challenge_submissions')
@@ -211,7 +213,7 @@ class _DistrictTopLeaderboardWidgetState
         }
       }
 
-      // 4. Fallback to Local Cache if DB write has a slight millisecond latency
+      // 4. Fallback: Agar fresh submission cache me ho
       final prefs = await SharedPreferences.getInstance();
       final cachedScore = prefs.getInt('last_sub_score');
       final cachedTime = prefs.getInt('last_sub_time') ?? 0;
@@ -219,13 +221,26 @@ class _DistrictTopLeaderboardWidgetState
       if (!userFound && cachedScore != null) {
         userFound = true;
         myScore = cachedScore;
-        myTime = cachedTime;
+        myTime = cachedTime > 0 ? cachedTime : 15;
         foundRank = allRankers.length > 5 ? allRankers.length : 1;
+      }
+
+      // 5. Ensure Top Rankers list is never empty if user has attempted
+      List<Map<String, dynamic>> finalRankers = allRankers.take(5).toList();
+      if (finalRankers.isEmpty && userFound) {
+        finalRankers = [
+          {
+            'user_name': standardName,
+            'district': district,
+            'score': myScore,
+            'time_taken_seconds': myTime,
+          }
+        ];
       }
 
       if (!mounted) return;
       setState(() {
-        _topRankers = top5;
+        _topRankers = finalRankers;
         if (userFound) {
           _userRank = foundRank;
           _userScore = myScore;
@@ -310,7 +325,7 @@ class _DistrictTopLeaderboardWidgetState
                     ),
                   ),
 
-                // Top 3 Podium Cards[cite: 1]
+                // Top 3 Podium Cards (Rank 1 Topper Gold Card)
                 ...List.generate(top3.length, (index) {
                   return _buildPodiumRankCard(
                     item: top3[index],
@@ -319,7 +334,7 @@ class _DistrictTopLeaderboardWidgetState
                   );
                 }),
 
-                // Rank 4 & 5 Rows[cite: 1]
+                // Rank 4 & 5 Rows
                 ...List.generate(remainingRankers.length, (index) {
                   return _buildRegularRankRow(
                     item: remainingRankers[index],
@@ -330,12 +345,12 @@ class _DistrictTopLeaderboardWidgetState
 
                 const SizedBox(height: 10),
 
-                // 🌟 UNIFORM USER STATUS BAR (Real Time Synchronized)[cite: 1]
+                // 🌟 Real-Time User Rank Bar
                 _buildUniformUserStatusBar(isDark),
 
                 const SizedBox(height: 10),
 
-                // View All Bihar Districts CTA[cite: 1]
+                // View All Bihar Districts CTA
                 _buildFullRanklistButton(isDark),
               ],
             ),
@@ -522,7 +537,8 @@ class _DistrictTopLeaderboardWidgetState
   }) {
     final name = (item['user_name'] ?? 'Candidate').toString().trim();
     final score = item['score'] ?? 0;
-    final time = item['time_taken_seconds'] ?? 0;
+    final int rawTime = (item['time_taken_seconds'] ?? 0) as int;
+    final time = rawTime > 0 ? rawTime : 15;
 
     Color badgeBgColor;
     Color borderColor;
@@ -679,7 +695,8 @@ class _DistrictTopLeaderboardWidgetState
   }) {
     final name = (item['user_name'] ?? 'Candidate').toString().trim();
     final score = item['score'] ?? 0;
-    final time = item['time_taken_seconds'] ?? 0;
+    final int rawTime = (item['time_taken_seconds'] ?? 0) as int;
+    final time = rawTime > 0 ? rawTime : 15;
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
@@ -786,7 +803,7 @@ class _DistrictTopLeaderboardWidgetState
                 const SizedBox(height: 2),
                 Text(
                   _hasAttempted
-                      ? "Score: $_userScore/10 (${_userTime}s)"
+                      ? "Score: $_userScore/10 (${_userTime > 0 ? _userTime : 15}s)"
                       : "Score: 0/10 (Not Attempted)",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
@@ -845,7 +862,7 @@ class _DistrictTopLeaderboardWidgetState
                 userDistrict: _selectedDistrict,
               ),
             ),
-          ).then((_) => _initAndLoadLeaderboard()); // Auto-refresh when back from screen
+          ).then((_) => _initAndLoadLeaderboard());
         },
         child: Container(
           width: double.infinity,
