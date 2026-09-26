@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../models/question_model.dart';
 import 'batch_classroom_screen.dart';
 import 'sectional_cbt_screen.dart';
 
-// 1. Batches Tab (Rich EdTech Cards with Mocks, Notes & Fee Details)
+// ---------------------------------------------------------------------------
+// 📦 1. BATCHES TAB (Live Classroom Batches - Screenshot Matching Design)
+// ---------------------------------------------------------------------------
 class CreatorBatchesTab extends StatelessWidget {
   final List<dynamic> batches;
   final bool isDarkMode;
@@ -39,7 +42,7 @@ class CreatorBatchesTab extends StatelessWidget {
               controller: codeCtrl,
               textCapitalization: TextCapitalization.characters,
               decoration: const InputDecoration(
-                hintText: 'e.g. 111',
+                hintText: 'e.g. PATNA100',
                 labelText: 'Batch Secret Code',
                 border: OutlineInputBorder(),
                 isDense: true,
@@ -100,9 +103,6 @@ class CreatorBatchesTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final cardSurface = isDarkMode ? const Color(0xFF1E293B) : Colors.white;
-    final dividerColor = isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-
     if (batches.isEmpty) {
       return Center(
         child: Padding(
@@ -130,198 +130,183 @@ class CreatorBatchesTab extends StatelessWidget {
       builder: (context, snapshot) {
         final prefs = snapshot.data;
 
-        return ListView.separated(
+        return ListView.builder(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
           itemCount: batches.length,
-          separatorBuilder: (_, __) => const SizedBox(height: 12),
           itemBuilder: (context, idx) {
             final b = batches[idx];
             final String batchId = b['id']?.toString() ?? '';
             final bool isUnlocked = prefs?.getBool('unlocked_batch_$batchId') ?? false;
 
             final int testsCount = (b['tests_count'] as int?) ?? ((b['batch_tests'] as List?)?.length ?? 0);
-            final int notesCount = (b['notes_count'] as int?) ?? ((b['batch_notes'] as List?)?.length ?? 0);
-            final String targetExam = b['target_pattern'] ?? b['exam_type'] ?? 'Standard Exam Curriculum';
-            final String fee = (b['fee_amount'] ?? b['price'] ?? '').toString().trim();
+            final String targetExam = (b['target_exam'] ?? b['target_pattern'] ?? '').toString().trim();
+            final feeAmount = b['fee_amount'];
+            final String feeType = (b['fee_type'] ?? 'FREE').toString();
+            final String batchCode = (b['batch_code'] ?? '').toString().trim();
 
             return Container(
+              margin: const EdgeInsets.only(bottom: 12),
+              padding: const EdgeInsets.all(14),
               decoration: BoxDecoration(
-                color: cardSurface,
-                borderRadius: BorderRadius.circular(14),
-                border: Border.all(color: dividerColor, width: 1),
+                color: const Color(0xFF1E293B),
+                borderRadius: BorderRadius.circular(16),
+                border: Border.all(color: const Color(0xFF334155)),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.black.withOpacity(isDarkMode ? 0.2 : 0.04),
-                    blurRadius: 6,
-                    offset: const Offset(0, 2),
+                    color: Colors.black.withOpacity(0.12),
+                    blurRadius: 8,
+                    offset: const Offset(0, 3),
                   ),
                 ],
               ),
-              padding: const EdgeInsets.all(14),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Title + Enrolled/Locked Status Pill
+                  // Row 1: Batch Name + Target Exam Badge + Fee/Price Tag
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
-                        child: Text(
-                          b['batch_name'] ?? 'Classroom Batch',
-                          style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 15.5, letterSpacing: -0.2),
-                        ),
-                      ),
-                      const SizedBox(width: 8),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
-                        decoration: BoxDecoration(
-                          color: isUnlocked
-                              ? const Color(0xFF16A34A).withOpacity(0.12)
-                              : Colors.redAccent.withOpacity(0.12),
-                          borderRadius: BorderRadius.circular(6),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Icon(
-                              isUnlocked ? Icons.lock_open_rounded : Icons.lock_outline_rounded,
-                              size: 12,
-                              color: isUnlocked ? const Color(0xFF16A34A) : Colors.redAccent,
-                            ),
-                            const SizedBox(width: 4),
                             Text(
-                              isUnlocked ? 'ENROLLED' : 'LOCKED',
-                              style: TextStyle(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w800,
-                                color: isUnlocked ? const Color(0xFF16A34A) : Colors.redAccent,
+                              b['batch_name'] ?? 'Classroom Batch',
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 14.5,
                               ),
                             ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 5),
-
-                  // Target Pattern
-                  Text(
-                    targetExam,
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: isDarkMode ? const Color(0xFFCBD5E1) : const Color(0xFF475569),
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                  const SizedBox(height: 10),
-
-                  // Batch Material Overview Chips (CBT Mocks + Study Notes + Fee)
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 6,
-                    children: [
-                      // CBT Mocks Pill
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
-                        decoration: BoxDecoration(
-                          color: _primaryBlue.withOpacity(0.08),
-                          borderRadius: BorderRadius.circular(6),
-                          border: Border.all(color: _primaryBlue.withOpacity(0.25), width: 0.8),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const Icon(Icons.quiz_outlined, size: 13, color: _primaryBlue),
-                            const SizedBox(width: 4),
-                            Text(
-                              '$testsCount CBT Mocks',
-                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: _primaryBlue),
-                            ),
-                          ],
-                        ),
-                      ),
-
-                      // Study Notes / PDFs Pill
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF16A34A).withOpacity(0.08),
-                          borderRadius: BorderRadius.circular(6),
-                          border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.25), width: 0.8),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            const Icon(Icons.menu_book_outlined, size: 13, color: Color(0xFF16A34A)),
-                            const SizedBox(width: 4),
-                            Text(
-                              '$notesCount Study Notes / PDFs',
-                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Color(0xFF16A34A)),
-                            ),
-                          ],
-                        ),
-                      ),
-
-                      // Fee Tag (if defined)
-                      if (fee.isNotEmpty && fee != '0')
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
-                          decoration: BoxDecoration(
-                            color: const Color(0xFFD97706).withOpacity(0.08),
-                            borderRadius: BorderRadius.circular(6),
-                            border: Border.all(color: const Color(0xFFD97706).withOpacity(0.25), width: 0.8),
-                          ),
-                          child: Row(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              const Icon(Icons.currency_rupee_rounded, size: 12.5, color: Color(0xFFD97706)),
-                              Text(
-                                fee,
-                                style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w700, color: Color(0xFFD97706)),
+                            if (targetExam.isNotEmpty) ...[
+                              const SizedBox(height: 6),
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF2563EB).withOpacity(0.25),
+                                  borderRadius: BorderRadius.circular(6),
+                                ),
+                                child: Text(
+                                  targetExam,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    color: Color(0xFF60A5FA),
+                                    fontSize: 10.5,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
                               ),
                             ],
-                          ),
+                          ],
                         ),
+                      ),
+                      const SizedBox(width: 10),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            feeAmount != null && feeAmount > 0 ? '₹$feeAmount' : feeType,
+                            style: const TextStyle(
+                              color: Color(0xFF10B981),
+                              fontWeight: FontWeight.w900,
+                              fontSize: 16,
+                            ),
+                          ),
+                          const SizedBox(height: 2),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                            decoration: BoxDecoration(
+                              color: isUnlocked ? const Color(0xFF16A34A).withOpacity(0.2) : Colors.redAccent.withOpacity(0.15),
+                              borderRadius: BorderRadius.circular(4),
+                            ),
+                            child: Text(
+                              isUnlocked ? 'ENROLLED' : 'LOCKED',
+                              style: TextStyle(
+                                color: isUnlocked ? const Color(0xFF4ADE80) : const Color(0xFFF87171),
+                                fontSize: 9.5,
+                                fontWeight: FontWeight.w800,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ],
                   ),
                   const SizedBox(height: 12),
+                  const Divider(height: 1, color: Color(0xFF334155)),
+                  const SizedBox(height: 10),
 
-                  // Button Row (Enter Classroom or Unlock)
-                  SizedBox(
-                    height: 36,
-                    width: double.infinity,
-                    child: isUnlocked
-                        ? ElevatedButton.icon(
-                            icon: const Icon(Icons.meeting_room_rounded, size: 15),
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF16A34A),
-                              foregroundColor: Colors.white,
-                              elevation: 0,
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                            ),
-                            onPressed: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (_) => BatchClassroomScreen(
-                                    batchData: b,
-                                    isDarkMode: isDarkMode,
+                  // Row 2: Code Details + Copy Code / Unlock Action
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Code: $batchCode • $testsCount Mocks',
+                        style: const TextStyle(
+                          color: Color(0xFF94A3B8),
+                          fontSize: 11.5,
+                          fontWeight: FontWeight.w600,
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          if (batchCode.isNotEmpty)
+                            InkWell(
+                              onTap: () {
+                                Clipboard.setData(ClipboardData(text: batchCode));
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                    content: Text('Batch Code copied to clipboard!'),
+                                    backgroundColor: Color(0xFF16A34A),
+                                    duration: Duration(seconds: 1),
+                                  ),
+                                );
+                              },
+                              child: const Padding(
+                                padding: EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                child: Text(
+                                  'Copy Code 📋',
+                                  style: TextStyle(
+                                    color: Color(0xFF38BDF8),
+                                    fontSize: 11.5,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
-                              );
-                            },
-                            label: const Text('Enter Classroom 🚀', style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.bold)),
-                          )
-                        : OutlinedButton.icon(
-                            icon: const Icon(Icons.vpn_key_rounded, size: 14),
-                            style: OutlinedButton.styleFrom(
-                              foregroundColor: _primaryBlue,
-                              side: const BorderSide(color: _primaryBlue, width: 1.1),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                              ),
                             ),
-                            onPressed: () => _openUnlockBatchDialog(context, b),
-                            label: const Text('Unlock with Admission Code', style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
+                          const SizedBox(width: 8),
+                          InkWell(
+                            onTap: () {
+                              if (isUnlocked) {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => BatchClassroomScreen(
+                                      batchData: b,
+                                      isDarkMode: isDarkMode,
+                                    ),
+                                  ),
+                                );
+                              } else {
+                                _openUnlockBatchDialog(context, b);
+                              }
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                              decoration: BoxDecoration(
+                                color: isUnlocked ? const Color(0xFF16A34A) : _primaryBlue,
+                                borderRadius: BorderRadius.circular(6),
+                              ),
+                              child: Text(
+                                isUnlocked ? 'Enter 🚀' : 'Unlock 🔑',
+                                style: const TextStyle(color: Colors.white, fontSize: 11.5, fontWeight: FontWeight.bold),
+                              ),
+                            ),
                           ),
+                        ],
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -333,7 +318,9 @@ class CreatorBatchesTab extends StatelessWidget {
   }
 }
 
-// 2. Free Mocks Tab
+// ---------------------------------------------------------------------------
+// 🎯 2. FREE MOCKS TAB (Existing CBT Launcher Code)
+// ---------------------------------------------------------------------------
 class CreatorFreeMocksTab extends StatelessWidget {
   final List<dynamic> mocks;
   final bool isDarkMode;
@@ -443,20 +430,17 @@ class CreatorFreeMocksTab extends StatelessWidget {
   }
 }
 
-// 3. Wall of Fame Tab (Upgraded Premium EdTech Cards)
+// ---------------------------------------------------------------------------
+// 🏆 3. WALL OF FAME TAB (Screenshot Matching Gold Frame & Horizontal Cards)
+// ---------------------------------------------------------------------------
 class CreatorWallOfFameTab extends StatelessWidget {
   final List<dynamic> selections;
   final bool isDarkMode;
 
   const CreatorWallOfFameTab({super.key, required this.selections, required this.isDarkMode});
 
-  static const Color _primaryBlue = Color(0xFF2563EB);
-
   @override
   Widget build(BuildContext context) {
-    final cardSurface = isDarkMode ? const Color(0xFF1E293B) : Colors.white;
-    final dividerColor = isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-
     if (selections.isEmpty) {
       return Center(
         child: Padding(
@@ -493,173 +477,132 @@ class CreatorWallOfFameTab extends StatelessWidget {
       );
     }
 
-    return ListView.separated(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
-      itemCount: selections.length,
-      separatorBuilder: (_, __) => const SizedBox(height: 12),
-      itemBuilder: (context, idx) {
-        final s = selections[idx];
-        final String name = (s['student_name'] ?? 'Star Candidate').toString().trim();
-        final String post = (s['post_cleared'] ?? '').toString().trim();
-        final String exam = (s['target_exam'] ?? '').toString().trim();
-        final String quote = (s['testimonial_text'] ?? '').toString().trim();
-        final String photo = (s['photo_url'] ?? '').toString().trim();
-        final bool isVerified = s['is_verified'] == true;
-
-        return Container(
-          decoration: BoxDecoration(
-            color: cardSurface,
-            borderRadius: BorderRadius.circular(14),
-            border: Border.all(
-              color: isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-              width: 1,
-            ),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(isDarkMode ? 0.25 : 0.04),
-                blurRadius: 8,
-                offset: const Offset(0, 2),
-              ),
-            ],
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(16),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: isDarkMode
+                ? [const Color(0xFF1E293B), const Color(0xFF0F172A)]
+                : [const Color(0xFFFFFBEB), const Color(0xFFFEF3C7)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
           ),
-          child: Padding(
-            padding: const EdgeInsets.all(14),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+          borderRadius: BorderRadius.circular(20),
+          border: Border.all(color: const Color(0xFFFDE68A), width: 1.4),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.06),
+              blurRadius: 10,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // Top Header Row: Student Avatar + Info + Exam Badge
-                Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                const Row(
                   children: [
-                    Container(
-                      padding: const EdgeInsets.all(2),
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(color: _primaryBlue.withOpacity(0.35), width: 1.5),
-                      ),
-                      child: CircleAvatar(
-                        radius: 26,
-                        backgroundColor: _primaryBlue.withOpacity(0.1),
-                        backgroundImage: photo.isNotEmpty ? NetworkImage(photo) : null,
-                        child: photo.isEmpty
-                            ? Text(
-                                name.isNotEmpty ? name[0].toUpperCase() : 'A',
-                                style: const TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18,
-                                  color: _primaryBlue,
-                                ),
-                              )
-                            : null,
+                    Icon(Icons.military_tech_rounded, color: Color(0xFFD97706), size: 20),
+                    SizedBox(width: 6),
+                    Text(
+                      'HALL OF FAME SELECTIONS',
+                      style: TextStyle(
+                        color: Color(0xFFB45309),
+                        fontWeight: FontWeight.w900,
+                        fontSize: 13,
+                        letterSpacing: 0.5,
                       ),
                     ),
-                    const SizedBox(width: 12),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Row(
-                            children: [
-                              Flexible(
-                                child: Text(
-                                  name,
-                                  style: const TextStyle(
-                                    fontWeight: FontWeight.w800,
-                                    fontSize: 15,
-                                    letterSpacing: -0.2,
-                                  ),
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ),
-                              if (isVerified) ...[
-                                const SizedBox(width: 5),
-                                const Icon(Icons.verified_rounded, size: 16, color: Color(0xFF16A34A)),
-                              ],
-                            ],
-                          ),
-                          const SizedBox(height: 3),
-                          if (post.isNotEmpty)
-                            Text(
-                              post,
-                              style: TextStyle(
-                                fontSize: 12.5,
-                                fontWeight: FontWeight.w600,
-                                color: isDarkMode ? const Color(0xFF93C5FD) : const Color(0xFF1D4ED8),
-                              ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                        ],
-                      ),
-                    ),
-                    if (exam.isNotEmpty)
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF16A34A).withOpacity(0.12),
-                          borderRadius: BorderRadius.circular(6),
-                          border: Border.all(color: const Color(0xFF16A34A).withOpacity(0.25), width: 0.8),
-                        ),
-                        child: Text(
-                          exam.toUpperCase(),
-                          style: const TextStyle(
-                            fontSize: 10.5,
-                            fontWeight: FontWeight.w800,
-                            color: Color(0xFF16A34A),
-                            letterSpacing: 0.3,
-                          ),
-                        ),
-                      ),
                   ],
                 ),
-
-                // Testimonial Quote Bubble
-                if (quote.isNotEmpty) ...[
-                  const SizedBox(height: 12),
-                  Container(
-                    width: double.infinity,
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                    decoration: BoxDecoration(
-                      color: isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-                      borderRadius: BorderRadius.circular(8),
-                      border: Border.all(
-                        color: dividerColor.withOpacity(0.6),
-                        width: 0.8,
-                      ),
-                    ),
-                    child: Row(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Icon(
-                          Icons.format_quote_rounded,
-                          size: 18,
-                          color: Colors.grey[400],
-                        ),
-                        const SizedBox(width: 6),
-                        Expanded(
-                          child: Text(
-                            quote,
-                            style: TextStyle(
-                              fontSize: 12,
-                              height: 1.45,
-                              fontStyle: FontStyle.italic,
-                              color: isDarkMode ? const Color(0xFFCBD5E1) : const Color(0xFF475569),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+                Text(
+                  '${selections.length}+ Selections',
+                  style: const TextStyle(color: Color(0xFFD97706), fontWeight: FontWeight.bold, fontSize: 11.5),
+                ),
               ],
             ),
-          ),
-        );
-      },
+            const SizedBox(height: 14),
+
+            // Horizontal Scrollable Topper Cards
+            SizedBox(
+              height: 145,
+              child: ListView.separated(
+                scrollDirection: Axis.horizontal,
+                itemCount: selections.length,
+                separatorBuilder: (_, __) => const SizedBox(width: 10),
+                itemBuilder: (ctx, idx) {
+                  final s = selections[idx];
+                  final String name = (s['student_name'] ?? '').toString().trim();
+                  final String post = (s['post_cleared'] ?? '').toString().trim();
+                  final String exam = (s['target_exam'] ?? '').toString().trim();
+                  final String photo = (s['photo_url'] ?? '').toString().trim();
+
+                  return Container(
+                    width: 125,
+                    padding: const EdgeInsets.all(10),
+                    decoration: BoxDecoration(
+                      color: isDarkMode ? const Color(0xFF0F172A) : const Color(0xFF475569),
+                      borderRadius: BorderRadius.circular(16),
+                      border: Border.all(color: Colors.white12),
+                    ),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        CircleAvatar(
+                          radius: 24,
+                          backgroundColor: const Color(0xFFF59E0B),
+                          backgroundImage: photo.isNotEmpty ? NetworkImage(photo) : null,
+                          child: photo.isEmpty
+                              ? Text(
+                                  name.isNotEmpty ? name[0].toUpperCase() : 'S',
+                                  style: const TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 16),
+                                )
+                              : null,
+                        ),
+                        const SizedBox(height: 6),
+                        Text(
+                          name.isNotEmpty ? name : 'Candidate',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12),
+                        ),
+                        if (exam.isNotEmpty) ...[
+                          const SizedBox(height: 2),
+                          Text(
+                            exam,
+                            maxLines: 1,
+                            style: const TextStyle(color: Color(0xFFFBBF24), fontWeight: FontWeight.w800, fontSize: 10),
+                          ),
+                        ],
+                        if (post.isNotEmpty)
+                          Text(
+                            post,
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: const TextStyle(color: Colors.white70, fontSize: 9.5),
+                          ),
+                      ],
+                    ),
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
 
-// 4. About & Campus Tab (Faculty Section with Responsive Card Layout)
+// ---------------------------------------------------------------------------
+// 🏫 4. ABOUT & CAMPUS TAB (Faculty, Facilities & Info - Existing Code)
+// ---------------------------------------------------------------------------
 class CreatorAboutCampusTab extends StatelessWidget {
   final Map<String, dynamic>? profile;
   final Map<String, dynamic>? coaching;
