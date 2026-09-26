@@ -318,7 +318,7 @@ class _DistrictTopLeaderboardWidgetState
         children: [
           _buildHeader(isDark),
 
-          // 👑 1. OVERALL BIHAR CHAMPION CARD (Sabhi ko dikhega)
+          // 👑 1. OVERALL BIHAR CHAMPION CARD
           if (_stateTopper != null) _buildStateChampionCard(isDark),
 
           _buildTabBar(isDark),
@@ -360,7 +360,7 @@ class _DistrictTopLeaderboardWidgetState
 
                 const SizedBox(height: 10),
 
-                // 🌟 User's Local District Rank Bar
+                // 🌟 User's Local District Rank Bar (Clean - No Review Button)
                 _buildUniformUserStatusBar(isDark),
 
                 const SizedBox(height: 10),
@@ -492,7 +492,7 @@ class _DistrictTopLeaderboardWidgetState
   }
 
   // ============================================================
-  // 👑 STATE OVERALL CHAMPION CARD (Har user ko dikhega)
+  // 👑 STATE OVERALL CHAMPION CARD
   // ============================================================
   Widget _buildStateChampionCard(bool isDark) {
     final name = (_stateTopper!['user_name'] ?? 'Candidate').toString().trim();
@@ -882,13 +882,13 @@ class _DistrictTopLeaderboardWidgetState
   }
 
   // ============================================================
-  // UNIFORM USER STATUS BAR
+  // UNIFORM USER STATUS BAR (Clean - Button Removed)
   // ============================================================
   Widget _buildUniformUserStatusBar(bool isDark) {
     final String rankLabel = _hasAttempted ? '#${_userRank > 0 ? _userRank : 1}' : '#0';
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF063A34) : const Color(0xFF042F2C),
         borderRadius: BorderRadius.circular(16),
@@ -903,8 +903,9 @@ class _DistrictTopLeaderboardWidgetState
       ),
       child: Row(
         children: [
+          // Rank Badge
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
             decoration: BoxDecoration(
               color: _hasAttempted ? const Color(0xFF0F766E) : const Color(0xFF334155),
               borderRadius: BorderRadius.circular(8),
@@ -912,13 +913,15 @@ class _DistrictTopLeaderboardWidgetState
             child: Text(
               rankLabel,
               style: const TextStyle(
-                fontSize: 12,
+                fontSize: 13,
                 fontWeight: FontWeight.w900,
                 color: Colors.white,
               ),
             ),
           ),
-          const SizedBox(width: 9),
+          const SizedBox(width: 12),
+
+          // User Performance Text (Full Width Clean Look)
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -928,12 +931,12 @@ class _DistrictTopLeaderboardWidgetState
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                    fontSize: 12,
+                    fontSize: 13,
                     fontWeight: FontWeight.w800,
                     color: Colors.white,
                   ),
                 ),
-                const SizedBox(height: 2),
+                const SizedBox(height: 3),
                 Text(
                   _hasAttempted
                       ? "Score: $_userScore/10 (${_userTime > 0 ? _userTime : 15}s)"
@@ -941,36 +944,12 @@ class _DistrictTopLeaderboardWidgetState
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontSize: 10,
+                    fontSize: 11,
                     fontWeight: FontWeight.w700,
                     color: _hasAttempted ? const Color(0xFF5EEAD4) : const Color(0xFF94A3B8),
                   ),
                 ),
               ],
-            ),
-          ),
-          const SizedBox(width: 6),
-          ElevatedButton(
-            onPressed: _hasAttempted
-                ? (widget.onReviewMistakes ?? widget.onTakeQuiz)
-                : widget.onTakeQuiz,
-            style: ElevatedButton.styleFrom(
-              backgroundColor: _hasAttempted ? const Color(0xFF10B981) : const Color(0xFF6366F1),
-              foregroundColor: Colors.white,
-              elevation: 0,
-              padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 0),
-              minimumSize: const Size(64, 32),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(9),
-              ),
-            ),
-            child: Text(
-              _hasAttempted ? 'Review' : 'Play Quiz',
-              style: const TextStyle(
-                fontSize: 10.5,
-                fontWeight: FontWeight.w900,
-                color: Colors.white,
-              ),
             ),
           ),
         ],
