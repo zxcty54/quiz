@@ -60,7 +60,7 @@ class _DistrictTopLeaderboardWidgetState
     await _fetchDistrictLeaderboard(district);
   }
 
-  // AAPKI PURANI BULLETPROOF SUPABASE QUERY (NO CHANGES)
+  // BULLETPROOF SUPABASE QUERY (UNCHANGED)
   Future<void> _fetchDistrictLeaderboard(String district) async {
     if (mounted) {
       setState(() {
@@ -132,12 +132,13 @@ class _DistrictTopLeaderboardWidgetState
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
           color: isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0),
+          width: 1.2,
         ),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(isDark ? 0.35 : 0.05),
-            blurRadius: 20,
-            offset: const Offset(0, 6),
+            blurRadius: 18,
+            offset: const Offset(0, 8),
           ),
         ],
       ),
@@ -159,7 +160,7 @@ class _DistrictTopLeaderboardWidgetState
                       child: LinearProgressIndicator(
                         minHeight: 2,
                         color: Color(0xFF6366F1),
-                        backgroundColor: Color(0xFF1E293B),
+                        backgroundColor: Color(0xFFE2E8F0),
                       ),
                     ),
                   ),
@@ -173,7 +174,7 @@ class _DistrictTopLeaderboardWidgetState
                   );
                 }),
 
-                // Rank 4 & 5 Simple Rows
+                // Rank 4 & 5 Rows
                 ...List.generate(remainingRankers.length, (index) {
                   return _buildRegularRankRow(
                     item: remainingRankers[index],
@@ -182,14 +183,14 @@ class _DistrictTopLeaderboardWidgetState
                   );
                 }),
 
-                const SizedBox(height: 12),
+                const SizedBox(height: 10),
 
-                // Sticky User Today's Rank Bar
+                // Sticky Current User Rank Bar (Crystal Clear Contrast)
                 _buildUserStickyBar(isDark),
 
                 const SizedBox(height: 10),
 
-                // Full Bihar Ranklist Button
+                // View All Bihar Districts CTA
                 _buildFullRanklistButton(isDark),
               ],
             ),
@@ -204,71 +205,71 @@ class _DistrictTopLeaderboardWidgetState
   // ============================================================
   Widget _buildHeader(bool isDark) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 10),
+      padding: const EdgeInsets.fromLTRB(16, 16, 16, 12),
       child: Row(
         children: [
+          // Trophy icon
           Container(
-            width: 42,
-            height: 42,
+            width: 44,
+            height: 44,
             decoration: BoxDecoration(
-              color: const Color(0xFF1E1B4B),
-              borderRadius: BorderRadius.circular(14),
-              border: Border.all(
-                color: const Color(0xFF6366F1).withOpacity(0.4),
+              gradient: const LinearGradient(
+                colors: [Color(0xFF6366F1), Color(0xFF4F46E5)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
               ),
+              borderRadius: BorderRadius.circular(14),
               boxShadow: [
                 BoxShadow(
-                  color: const Color(0xFF6366F1).withOpacity(0.2),
+                  color: const Color(0xFF6366F1).withOpacity(0.28),
                   blurRadius: 10,
-                  offset: const Offset(0, 2),
+                  offset: const Offset(0, 4),
                 ),
               ],
             ),
-            child: const Center(
-              child: Icon(
-                Icons.emoji_events_rounded,
-                color: Color(0xFFFBBF24),
-                size: 22,
-              ),
+            child: const Icon(
+              Icons.emoji_events_rounded,
+              color: Color(0xFFFDE047),
+              size: 24,
             ),
           ),
           const SizedBox(width: 10),
+
+          // Title + District
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(
+                Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  spacing: 6,
                   children: [
-                    Flexible(
-                      child: Text(
-                        'District Leaderboard',
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w900,
-                          color: isDark ? Colors.white : const Color(0xFF0F172A),
-                        ),
+                    Text(
+                      'District Leaderboard',
+                      style: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w900,
+                        color: isDark ? Colors.white : const Color(0xFF0F172A),
+                        letterSpacing: -0.2,
                       ),
                     ),
-                    const SizedBox(width: 6),
-                    _buildLiveBadge(),
+                    _buildLiveBadge(isDark),
                   ],
                 ),
                 const SizedBox(height: 3),
                 Row(
                   children: [
                     Icon(
-                      Icons.location_on_outlined,
+                      Icons.location_on_rounded,
                       size: 13,
-                      color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                      color: isDark ? const Color(0xFF818CF8) : const Color(0xFF6366F1),
                     ),
                     const SizedBox(width: 3),
                     Text(
                       '$_selectedDistrict District',
                       style: TextStyle(
                         fontSize: 11.5,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w700,
                         color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
                       ),
                     ),
@@ -277,35 +278,41 @@ class _DistrictTopLeaderboardWidgetState
               ],
             ),
           ),
-          InkWell(
-            onTap: _shareLeaderboard,
-            borderRadius: BorderRadius.circular(10),
-            child: Container(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
-              decoration: BoxDecoration(
-                color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(
-                  color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
+
+          // Share Button
+          Material(
+            color: Colors.transparent,
+            child: InkWell(
+              onTap: _shareLeaderboard,
+              borderRadius: BorderRadius.circular(10),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 6.5),
+                decoration: BoxDecoration(
+                  color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
+                  ),
                 ),
-              ),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.share_outlined,
-                    size: 14,
-                    color: isDark ? Colors.white70 : const Color(0xFF334155),
-                  ),
-                  const SizedBox(width: 4),
-                  Text(
-                    'Share',
-                    style: TextStyle(
-                      fontSize: 11,
-                      fontWeight: FontWeight.w700,
-                      color: isDark ? Colors.white : const Color(0xFF0F172A),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(
+                      Icons.share_rounded,
+                      size: 14,
+                      color: isDark ? const Color(0xFF38BDF8) : const Color(0xFF0284C7),
                     ),
-                  ),
-                ],
+                    const SizedBox(width: 4),
+                    Text(
+                      'Share',
+                      style: TextStyle(
+                        fontSize: 11,
+                        fontWeight: FontWeight.w800,
+                        color: isDark ? Colors.white : const Color(0xFF0F172A),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
@@ -314,25 +321,35 @@ class _DistrictTopLeaderboardWidgetState
     );
   }
 
-  Widget _buildLiveBadge() {
+  Widget _buildLiveBadge(bool isDark) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       decoration: BoxDecoration(
-        color: const Color(0xFF064E3B).withOpacity(0.5),
-        borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: const Color(0xFF059669).withOpacity(0.4)),
+        color: isDark ? const Color(0xFF064E3B) : const Color(0xFFDCFCE7),
+        borderRadius: BorderRadius.circular(6),
+        border: Border.all(
+          color: isDark ? const Color(0xFF059669) : const Color(0xFF86EFAC),
+          width: 0.8,
+        ),
       ),
-      child: const Row(
+      child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.circle, size: 5, color: Color(0xFF10B981)),
-          SizedBox(width: 3),
-          Text(
-            'LIVE RANK',
+          Container(
+            width: 5,
+            height: 5,
+            decoration: const BoxDecoration(
+              color: Color(0xFF16A34A),
+              shape: BoxShape.circle,
+            ),
+          ),
+          const SizedBox(width: 3),
+          const Text(
+            'LIVE',
             style: TextStyle(
-              fontSize: 8,
+              fontSize: 8.5,
               fontWeight: FontWeight.w900,
-              color: Color(0xFF34D399),
+              color: Color(0xFF15803D),
               letterSpacing: 0.3,
             ),
           ),
@@ -342,35 +359,38 @@ class _DistrictTopLeaderboardWidgetState
   }
 
   // ============================================================
-  // TAB BAR (Top 5 Hall of Fame)
+  // TAB BADGE
   // ============================================================
   Widget _buildTabBar(bool isDark) {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 2, 16, 12),
-      child: Row(
-        children: [
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
-            decoration: BoxDecoration(
-              color: const Color(0xFF4F46E5),
-              borderRadius: BorderRadius.circular(10),
+      padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+        decoration: BoxDecoration(
+          color: const Color(0xFF6366F1),
+          borderRadius: BorderRadius.circular(9),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF6366F1).withOpacity(0.25),
+              blurRadius: 6,
+              offset: const Offset(0, 2),
             ),
-            child: const Text(
-              'Top 5 Hall of Fame',
-              style: TextStyle(
-                fontSize: 11,
-                fontWeight: FontWeight.w800,
-                color: Colors.white,
-              ),
-            ),
+          ],
+        ),
+        child: const Text(
+          'Top 5 Hall of Fame',
+          style: TextStyle(
+            fontSize: 11,
+            fontWeight: FontWeight.w900,
+            color: Colors.white,
           ),
-        ],
+        ),
       ),
     );
   }
 
   // ============================================================
-  // PODIUM RANK CARD (1, 2, 3)
+  // PODIUM CARDS (Top 1, 2, 3)
   // ============================================================
   Widget _buildPodiumRankCard({
     required Map<String, dynamic> item,
@@ -383,46 +403,58 @@ class _DistrictTopLeaderboardWidgetState
 
     Color badgeBgColor;
     Color borderColor;
+    Color cardBgColor;
 
     if (rank == 1) {
       badgeBgColor = const Color(0xFFF59E0B);
-      borderColor = const Color(0xFFD97706);
+      borderColor = const Color(0xFFF59E0B);
+      cardBgColor = isDark ? const Color(0xFF1E1A11) : const Color(0xFFFFFBEB);
     } else if (rank == 2) {
-      badgeBgColor = const Color(0xFF94A3B8);
-      borderColor = const Color(0xFF64748B);
+      badgeBgColor = const Color(0xFF64748B);
+      borderColor = const Color(0xFF94A3B8);
+      cardBgColor = isDark ? const Color(0xFF171D27) : const Color(0xFFF8FAFC);
     } else {
       badgeBgColor = const Color(0xFFD97706);
-      borderColor = const Color(0xFFB45309);
+      borderColor = const Color(0xFFD97706);
+      cardBgColor = isDark ? const Color(0xFF1E1611) : const Color(0xFFFFF7ED);
     }
 
     return Container(
       margin: const EdgeInsets.only(bottom: 8),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
       decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF141C2E) : const Color(0xFFF8FAFC),
+        color: cardBgColor,
         borderRadius: BorderRadius.circular(16),
         border: Border.all(
-          color: borderColor.withOpacity(isDark ? 0.45 : 0.35),
-          width: rank == 1 ? 1.4 : 1,
+          color: borderColor.withOpacity(isDark ? 0.45 : 0.4),
+          width: rank == 1 ? 1.4 : 1.1,
         ),
       ),
       child: Row(
         children: [
+          // Rank Medal Circle
           Container(
-            width: 38,
-            height: 38,
+            width: 36,
+            height: 36,
             decoration: BoxDecoration(
               color: badgeBgColor,
               shape: BoxShape.circle,
+              boxShadow: [
+                BoxShadow(
+                  color: badgeBgColor.withOpacity(0.35),
+                  blurRadius: 6,
+                  offset: const Offset(0, 2),
+                ),
+              ],
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.military_tech_rounded, size: 16, color: Colors.white),
+                const Icon(Icons.military_tech_rounded, size: 15, color: Colors.white),
                 Text(
                   '$rank',
                   style: const TextStyle(
-                    fontSize: 13,
+                    fontSize: 12.5,
                     fontWeight: FontWeight.w900,
                     color: Colors.white,
                   ),
@@ -431,6 +463,8 @@ class _DistrictTopLeaderboardWidgetState
             ),
           ),
           const SizedBox(width: 10),
+
+          // Name & District
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -451,37 +485,47 @@ class _DistrictTopLeaderboardWidgetState
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    fontSize: 10.5,
+                    fontSize: 11,
                     fontWeight: FontWeight.w500,
-                    color: isDark ? const Color(0xFF64748B) : const Color(0xFF94A3B8),
+                    color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
                   ),
                 ),
               ],
             ),
           ),
+
+          // Score Badge & Time
           Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF064E3B).withOpacity(0.4),
-                  borderRadius: BorderRadius.circular(6),
+                  color: isDark
+                      ? const Color(0xFF064E3B).withOpacity(0.6)
+                      : const Color(0xFFDCFCE7),
+                  borderRadius: BorderRadius.circular(7),
                   border: Border.all(
-                    color: const Color(0xFF059669).withOpacity(0.5),
+                    color: isDark
+                        ? const Color(0xFF059669).withOpacity(0.6)
+                        : const Color(0xFF86EFAC),
                   ),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Icon(Icons.check_circle_outline, size: 11, color: Color(0xFF34D399)),
+                    Icon(
+                      Icons.check_circle_outline,
+                      size: 12,
+                      color: isDark ? const Color(0xFF34D399) : const Color(0xFF15803D),
+                    ),
                     const SizedBox(width: 3),
                     Text(
                       '$score/10',
-                      style: const TextStyle(
-                        fontSize: 11,
+                      style: TextStyle(
+                        fontSize: 11.5,
                         fontWeight: FontWeight.w900,
-                        color: Color(0xFF34D399),
+                        color: isDark ? const Color(0xFF34D399) : const Color(0xFF15803D),
                       ),
                     ),
                   ],
@@ -491,14 +535,18 @@ class _DistrictTopLeaderboardWidgetState
               Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  const Icon(Icons.timer_outlined, size: 10, color: Color(0xFF64748B)),
+                  Icon(
+                    Icons.timer_outlined,
+                    size: 11,
+                    color: isDark ? const Color(0xFF64748B) : const Color(0xFF94A3B8),
+                  ),
                   const SizedBox(width: 2),
                   Text(
                     '${time}s',
-                    style: const TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w600,
-                      color: Color(0xFF64748B),
+                    style: TextStyle(
+                      fontSize: 10.5,
+                      fontWeight: FontWeight.w700,
+                      color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
                     ),
                   ),
                 ],
@@ -511,7 +559,7 @@ class _DistrictTopLeaderboardWidgetState
   }
 
   // ============================================================
-  // REGULAR RANK ROW (4 & 5)
+  // ROWS (Rank 4 & 5)
   // ============================================================
   Widget _buildRegularRankRow({
     required Map<String, dynamic> item,
@@ -527,34 +575,34 @@ class _DistrictTopLeaderboardWidgetState
       child: Row(
         children: [
           SizedBox(
-            width: 24,
+            width: 26,
             child: Text(
               '#$rank',
               style: TextStyle(
-                fontSize: 11.5,
+                fontSize: 12,
                 fontWeight: FontWeight.w800,
                 color: isDark ? const Color(0xFF64748B) : const Color(0xFF94A3B8),
               ),
             ),
           ),
-          const SizedBox(width: 8),
+          const SizedBox(width: 6),
           Expanded(
             child: Text(
               name.isEmpty ? 'Candidate' : name,
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                fontSize: 12.5,
+                fontSize: 13,
                 fontWeight: FontWeight.w700,
-                color: isDark ? Colors.white70 : const Color(0xFF334155),
+                color: isDark ? Colors.white70 : const Color(0xFF1E293B),
               ),
             ),
           ),
           Text(
             '$score/10',
             style: const TextStyle(
-              fontSize: 11.5,
-              fontWeight: FontWeight.w800,
+              fontSize: 12,
+              fontWeight: FontWeight.w900,
               color: Color(0xFF10B981),
             ),
           ),
@@ -563,7 +611,7 @@ class _DistrictTopLeaderboardWidgetState
             '${time}s',
             style: TextStyle(
               fontSize: 10.5,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.w700,
               color: isDark ? const Color(0xFF64748B) : const Color(0xFF94A3B8),
             ),
           ),
@@ -573,20 +621,31 @@ class _DistrictTopLeaderboardWidgetState
   }
 
   // ============================================================
-  // STICKY USER STATUS BAR (Exact Match with Image)
+  // USER STICKY BAR (Ultra Crisp in Light & Dark Mode)
   // ============================================================
   Widget _buildUserStickyBar(bool isDark) {
     return Container(
-      padding: const EdgeInsets.all(10),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       decoration: BoxDecoration(
-        color: const Color(0xFF042F2C),
+        color: isDark ? const Color(0xFF063A34) : const Color(0xFF042F2C),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: const Color(0xFF0D9488).withOpacity(0.5)),
+        border: Border.all(
+          color: const Color(0xFF14B8A6),
+          width: 1.2,
+        ),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF042F2C).withOpacity(0.25),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Row(
         children: [
+          // #Me Badge
           Container(
-            padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 5),
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
             decoration: BoxDecoration(
               color: const Color(0xFF0F766E),
               borderRadius: BorderRadius.circular(8),
@@ -600,7 +659,9 @@ class _DistrictTopLeaderboardWidgetState
               ),
             ),
           ),
-          const SizedBox(width: 8),
+          const SizedBox(width: 9),
+
+          // Label
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -610,14 +671,14 @@ class _DistrictTopLeaderboardWidgetState
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
-                    fontSize: 11.5,
+                    fontSize: 12,
                     fontWeight: FontWeight.w800,
                     color: Colors.white,
                   ),
                 ),
                 const SizedBox(height: 2),
                 const Text(
-                  "View detailed performance & analysis",
+                  "Check accuracy & analyze mistakes",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
@@ -629,21 +690,28 @@ class _DistrictTopLeaderboardWidgetState
               ],
             ),
           ),
+          const SizedBox(width: 6),
+
+          // High-Visibility Button
           ElevatedButton(
             onPressed: widget.onReviewMistakes ?? widget.onTakeQuiz,
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF059669),
+              backgroundColor: const Color(0xFF10B981),
               foregroundColor: Colors.white,
               elevation: 0,
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 0),
-              minimumSize: const Size(60, 32),
+              padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 0),
+              minimumSize: const Size(64, 32),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(9),
               ),
             ),
             child: const Text(
               'Review Mistakes',
-              style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.w800),
+              style: TextStyle(
+                fontSize: 10.5,
+                fontWeight: FontWeight.w900,
+                color: Colors.white,
+              ),
             ),
           ),
         ],
@@ -652,48 +720,51 @@ class _DistrictTopLeaderboardWidgetState
   }
 
   // ============================================================
-  // FULL BIHAR BUTTON
+  // FULL BIHAR CTA
   // ============================================================
   Widget _buildFullRanklistButton(bool isDark) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(12),
-      onTap: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => DistrictLeaderboardScreen(
-              isDarkMode: widget.isDarkMode,
-              userDistrict: _selectedDistrict,
-            ),
-          ),
-        );
-      },
-      child: Container(
-        width: double.infinity,
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 9),
-        decoration: BoxDecoration(
-          color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-          ),
-        ),
-        child: Row(
-          children: [
-            const Icon(Icons.leaderboard_rounded, size: 15, color: Color(0xFF6366F1)),
-            const SizedBox(width: 8),
-            Expanded(
-              child: Text(
-                'View All 38 Bihar Districts',
-                style: TextStyle(
-                  fontSize: 11.5,
-                  fontWeight: FontWeight.w800,
-                  color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
-                ),
+    return Material(
+      color: Colors.transparent,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => DistrictLeaderboardScreen(
+                isDarkMode: widget.isDarkMode,
+                userDistrict: _selectedDistrict,
               ),
             ),
-            const Icon(Icons.arrow_forward_rounded, size: 15, color: Color(0xFF6366F1)),
-          ],
+          );
+        },
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+          decoration: BoxDecoration(
+            color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(
+              color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+            ),
+          ),
+          child: Row(
+            children: [
+              const Icon(Icons.bar_chart_rounded, size: 17, color: Color(0xFF6366F1)),
+              const SizedBox(width: 8),
+              Expanded(
+                child: Text(
+                  'View All 38 Bihar Districts',
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w800,
+                    color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
+                  ),
+                ),
+              ),
+              const Icon(Icons.arrow_forward_rounded, size: 16, color: Color(0xFF6366F1)),
+            ],
+          ),
         ),
       ),
     );
@@ -745,7 +816,7 @@ class _DistrictTopLeaderboardWidgetState
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.only(bottom: 8),
-      padding: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(22),
       decoration: BoxDecoration(
         color: isDark ? const Color(0xFF0F1523) : Colors.white,
         borderRadius: BorderRadius.circular(24),
@@ -756,8 +827,8 @@ class _DistrictTopLeaderboardWidgetState
       child: Column(
         children: [
           Container(
-            width: 44,
-            height: 44,
+            width: 46,
+            height: 46,
             decoration: BoxDecoration(
               color: const Color(0xFF6366F1).withOpacity(0.12),
               shape: BoxShape.circle,
@@ -772,7 +843,7 @@ class _DistrictTopLeaderboardWidgetState
           Text(
             'No rankings yet in $_selectedDistrict',
             style: TextStyle(
-              fontSize: 13.5,
+              fontSize: 14,
               fontWeight: FontWeight.w800,
               color: isDark ? Colors.white : const Color(0xFF0F172A),
             ),
