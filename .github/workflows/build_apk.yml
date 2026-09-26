@@ -288,7 +288,7 @@ jobs:
             --dart-define=SUPABASE_URL=${{ secrets.SUPABASE_URL }} \
             --dart-define=SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }}
 
-      - name: Locate & Package APK
+      - name: Locate & Package Clean ZIP
         working-directory: flutter_app
         run: |
           mkdir -p build/app/outputs/flutter-apk
@@ -297,13 +297,31 @@ jobs:
             APK_FILE=$(find build/app/outputs -type f -name "*.apk" | head -n 1)
           fi
           echo "Found APK at: $APK_FILE"
+          
+          # Rename cleanly
           cp "$APK_FILE" build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
-          zip -9 -j build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
+          
+          # Reliable fast zip without buffer drops
+          cd build/app/outputs/flutter-apk
+          zip -1 -j MockTester_Build_${{ github.run_number }}.zip MockTester_Build_${{ github.run_number }}.apk
+          
+          # Verify file size
+          ls -lh MockTester_Build_${{ github.run_number }}.zip
 
-      - name: Send Zip File Direct To Telegram
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_TO }}
-          token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: "🚀 MockTester Build #${{ github.run_number }} APK Ready!"
-          document: flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.zip
+      - name: Send Reliable Zip Direct To Telegram via Curl
+        env:
+          BOT_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_TO }}
+          BUILD_NUM: ${{ github.run_number }}
+        run: |
+          ZIP_PATH="flutter_app/build/app/outputs/flutter-apk/MockTester_Build_${BUILD_NUM}.zip"
+          
+          echo "Uploading $ZIP_PATH to Telegram..."
+          
+          curl -v -F chat_id="${CHAT_ID}" \
+               -F caption="🚀 MockTester Build #${BUILD_NUM} Ready (ZIP)!" \
+               -F document=@"${ZIP_PATH}" \
+               --connect-timeout 60 \
+               --retry 5 \
+               --retry-delay 5 \
+               "https://api.telegram.org/bot${BOT_TOKEN}/sendDocument"
