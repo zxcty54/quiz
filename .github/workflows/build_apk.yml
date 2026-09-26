@@ -40,6 +40,13 @@ jobs:
           rm -rf android/app/src/main/kotlin
           flutter create . --platforms=android --org com.mocktester --project-name mocktester
 
+      # 🎨 NAYA STEP: Force Generate App Icon right after scaffold reset
+      - name: Generate Custom App Launcher Icons
+        working-directory: flutter_app
+        run: |
+          flutter pub get
+          dart run flutter_launcher_icons
+
       # 🛠️ FIX: Reliable Gradle Wrapper Injection with Gradle 9.3.1
       - name: Fix Gradle Wrapper Distribution URL
         working-directory: flutter_app/android
