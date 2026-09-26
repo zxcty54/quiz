@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
@@ -19,19 +18,17 @@ class LatestJobsWidget extends StatefulWidget {
 class LatestJobsWidgetState extends State<LatestJobsWidget>
     with SingleTickerProviderStateMixin {
   // ---------------------------------------------------------------------------
-  // COLORS & THEME
+  // THEME COLORS
   // ---------------------------------------------------------------------------
-
   static const Color primaryBlue = Color(0xFF2563EB);
   static const Color navy = Color(0xFF0F172A);
   static const Color green = Color(0xFF10B981);
-  static const Color orange = Color(0xFFF97316);
+  static const Color orange = Color(0xFFF59E0B);
   static const Color red = Color(0xFFEF4444);
 
   // ---------------------------------------------------------------------------
-  // STATE & ANIMATION
+  // STATE
   // ---------------------------------------------------------------------------
-
   List<Map<String, dynamic>> _allJobs = [];
   bool _isLoading = true;
   bool _isRefreshing = false;
@@ -62,9 +59,8 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   }
 
   // ---------------------------------------------------------------------------
-  // LIVE JSON FETCH
+  // LIVE JSON FETCH (Multi-endpoint fallback)
   // ---------------------------------------------------------------------------
-
   Future<void> fetchLatestJobs({bool refresh = false}) async {
     if (refresh) {
       if (mounted) setState(() => _isRefreshing = true);
@@ -89,8 +85,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
               headers: const {
                 'Accept': 'application/json',
                 'Cache-Control': 'no-cache, no-store, must-revalidate',
-                'Pragma': 'no-cache',
-                'Expires': '0',
               },
             )
             .timeout(const Duration(seconds: 5));
@@ -98,10 +92,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
         if (response.statusCode != 200) continue;
 
         String body = utf8.decode(response.bodyBytes).trim();
-
-        if (body.startsWith('\uFEFF')) {
-          body = body.substring(1).trim();
-        }
+        if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
 
         body = body
             .replaceFirst(RegExp(r'^```json\s*', caseSensitive: false), '')
@@ -150,13 +141,20 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   }
 
   // ---------------------------------------------------------------------------
-  // FILTERING & DETECTION
+  // FILTERING LOGIC
   // ---------------------------------------------------------------------------
+  List<Map<String, dynamic>> get _activeJobs {
+    return _allJobs.where((job) {
+      final lastDate = _value(job, 'last_date');
+      return !_isExpired(lastDate);
+    }).toList();
+  }
 
   List<Map<String, dynamic>> get _filteredJobs {
-    if (_selectedCategory == 'all') return _allJobs;
+    final activeList = _activeJobs;
+    if (_selectedCategory == 'all') return activeList;
 
-    return _allJobs.where((job) {
+    return activeList.where((job) {
       final bool isBihar = _isBiharJob(job);
       if (_selectedCategory == 'bihar') return isBihar;
       if (_selectedCategory == 'central') return !isBihar;
@@ -188,9 +186,8 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   }
 
   // ---------------------------------------------------------------------------
-  // DATE PARSER & PROMINENT DEADLINE
+  // DATE PARSER & DEADLINE CALCULATION
   // ---------------------------------------------------------------------------
-
   DateTime? _parseDate(String value) {
     final text = value.trim();
     if (text.isEmpty) return null;
@@ -279,9 +276,8 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   }
 
   // ---------------------------------------------------------------------------
-  // URL LAUNCH
+  // URL OPEN HANDLER
   // ---------------------------------------------------------------------------
-
   Future<void> _openLink(String link) async {
     final value = link.trim();
     if (value.isEmpty) return;
@@ -306,7 +302,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
       SnackBar(
         behavior: SnackBarBehavior.floating,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        content: const Text('⚠️ Notification link open nahi ho saka.'),
+        content: const Text('⚠️ Link open nahi ho saka.'),
         duration: const Duration(seconds: 2),
       ),
     );
@@ -315,52 +311,51 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   // ---------------------------------------------------------------------------
   // MAIN BUILD
   // ---------------------------------------------------------------------------
-
   @override
   Widget build(BuildContext context) {
-    final Color pageBg = widget.isDarkMode ? const Color(0xFF0B1120) : const Color(0xFFF4F7FB);
-    final Color textColor = widget.isDarkMode ? Colors.white : navy;
-    final Color subText = widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B);
+    final bool isDark = widget.isDarkMode;
+    final Color textColor = isDark ? Colors.white : navy;
+    final Color subText = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color borderColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
 
-    if (_isLoading) return _loadingView(pageBg);
+    if (_isLoading) return _loadingView(isDark ? const Color(0xFF1E293B) : Colors.white);
     if (_allJobs.isEmpty) return const SizedBox.shrink();
 
-    final displayedJobs = _filteredJobs.where((job) {
-      final lastDate = _value(job, 'last_date');
-      return !_isExpired(lastDate);
-    }).take(2).toList();
+    final displayedJobs = _filteredJobs;
 
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
-        color: widget.isDarkMode ? const Color(0xFF111C2F) : Colors.white,
-        borderRadius: BorderRadius.circular(22),
-        border: Border.all(
-          color: widget.isDarkMode ? const Color(0xFF26354D) : const Color(0xFFDBEAFE),
-          width: 1.3,
-        ),
+        color: cardBg,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: borderColor, width: 1.2),
         boxShadow: [
           BoxShadow(
-            color: widget.isDarkMode
-                ? Colors.black.withOpacity(0.3)
-                : const Color(0xFF2563EB).withOpacity(0.06),
-            blurRadius: 20,
-            offset: const Offset(0, 8),
+            color: Colors.black.withOpacity(isDark ? 0.25 : 0.04),
+            blurRadius: 16,
+            offset: const Offset(0, 6),
           ),
         ],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          // Header Row (Accurate active vacancies count)
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 12),
-            child: _buildHeader(textColor, subText),
+            child: _buildHeader(textColor, subText, _activeJobs.length),
           ),
+
+          // Filters Row
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: _buildFilters(),
           ),
+
           const SizedBox(height: 12),
+
+          // Active Jobs List
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: Column(
@@ -369,10 +364,16 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                   _emptyCategoryView(textColor, subText)
                 else
                   ...displayedJobs.map(
-                    (job) => _buildJobCard(job, textColor, subText, isCompact: true),
+                    (job) => _buildJobCard(
+                      job,
+                      textColor,
+                      subText,
+                      isDark: isDark,
+                      isCompact: true,
+                    ),
                   ),
-                const SizedBox(height: 2),
-                _buildViewAllButton(),
+                const SizedBox(height: 4),
+                _buildViewAllButton(isDark),
                 const SizedBox(height: 14),
               ],
             ),
@@ -384,9 +385,13 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
 
   Widget _loadingView(Color bg) {
     return Container(
-      height: 125,
+      height: 120,
       margin: const EdgeInsets.only(bottom: 16),
-      decoration: BoxDecoration(color: bg, borderRadius: BorderRadius.circular(20)),
+      decoration: BoxDecoration(
+        color: bg,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.grey.withOpacity(0.15)),
+      ),
       child: const Center(
         child: SizedBox(
           width: 22,
@@ -397,35 +402,17 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     );
   }
 
-  Widget _buildHeader(Color textColor, Color subText) {
+  Widget _buildHeader(Color textColor, Color subText, int activeCount) {
     return Row(
       children: [
-        Stack(
-          alignment: Alignment.center,
-          children: [
-            AnimatedBuilder(
-              animation: _pulseAnimation,
-              builder: (context, child) {
-                return Container(
-                  width: 42 * _pulseAnimation.value,
-                  height: 42 * _pulseAnimation.value,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: primaryBlue.withOpacity(0.18 * (1 - _pulseAnimation.value + 0.3)),
-                  ),
-                );
-              },
-            ),
-            Container(
-              width: 36,
-              height: 36,
-              decoration: BoxDecoration(
-                color: const Color(0xFFEFF6FF),
-                borderRadius: BorderRadius.circular(11),
-              ),
-              child: const Icon(Icons.campaign_rounded, color: primaryBlue, size: 20),
-            ),
-          ],
+        Container(
+          width: 36,
+          height: 36,
+          decoration: BoxDecoration(
+            color: primaryBlue.withOpacity(0.12),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: const Icon(Icons.campaign_rounded, color: primaryBlue, size: 20),
         ),
         const SizedBox(width: 10),
         Expanded(
@@ -438,17 +425,17 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                     'Latest Job Alerts',
                     style: TextStyle(
                       fontSize: 16,
-                      fontWeight: FontWeight.w900,
+                      fontWeight: FontWeight.w800,
                       color: textColor,
                       letterSpacing: -.3,
                     ),
                   ),
-                  const SizedBox(width: 5),
+                  const SizedBox(width: 6),
                   Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
                     decoration: BoxDecoration(
                       color: red,
-                      borderRadius: BorderRadius.circular(5),
+                      borderRadius: BorderRadius.circular(4),
                     ),
                     child: const Text(
                       'NEW',
@@ -456,15 +443,15 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                         color: Colors.white,
                         fontSize: 8,
                         fontWeight: FontWeight.w900,
-                        letterSpacing: .4,
+                        letterSpacing: .3,
                       ),
                     ),
                   ),
                 ],
               ),
-              const SizedBox(height: 1.5),
+              const SizedBox(height: 2),
               Text(
-                '${_allJobs.length} active vacancies updated today',
+                '$activeCount active vacancies available',
                 style: TextStyle(fontSize: 11, color: subText, fontWeight: FontWeight.w500),
               ),
             ],
@@ -473,7 +460,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
         GestureDetector(
           onTap: _isRefreshing ? null : () => fetchLatestJobs(refresh: true),
           child: Container(
-            padding: const EdgeInsets.symmetric(horizontal: 8.5, vertical: 4.5),
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             decoration: BoxDecoration(
               color: green.withOpacity(.12),
               borderRadius: BorderRadius.circular(20),
@@ -484,38 +471,35 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
               children: [
                 if (_isRefreshing)
                   const SizedBox(
-                    width: 9,
-                    height: 9,
+                    width: 8,
+                    height: 8,
                     child: CircularProgressIndicator(strokeWidth: 1.5, color: green),
                   )
                 else
                   AnimatedBuilder(
                     animation: _pulseAnimation,
                     builder: (context, child) {
-                      return Transform.scale(
-                        scale: _pulseAnimation.value,
-                        child: Container(
-                          width: 6.5,
-                          height: 6.5,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: green,
-                            boxShadow: [
-                              BoxShadow(color: green, blurRadius: 4, spreadRadius: 1.5),
-                            ],
-                          ),
+                      return Container(
+                        width: 6,
+                        height: 6,
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: green.withOpacity(_pulseAnimation.value),
+                          boxShadow: const [
+                            BoxShadow(color: green, blurRadius: 4, spreadRadius: 0.5),
+                          ],
                         ),
                       );
                     },
                   ),
-                const SizedBox(width: 5.5),
+                const SizedBox(width: 5),
                 const Text(
                   'LIVE',
                   style: TextStyle(
                     color: green,
                     fontSize: 9.5,
                     fontWeight: FontWeight.w900,
-                    letterSpacing: .5,
+                    letterSpacing: .4,
                   ),
                 ),
               ],
@@ -526,23 +510,20 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     );
   }
 
-  // ---------------------------------------------------------------------------
-  // FILTERS
-  // ---------------------------------------------------------------------------
-
   Widget _buildFilters() {
-    final biharCount = _allJobs.where(_isBiharJob).length;
-    final centralCount = _allJobs.length - biharCount;
+    final activeList = _activeJobs;
+    final biharCount = activeList.where(_isBiharJob).length;
+    final centralCount = activeList.length - biharCount;
 
     return SingleChildScrollView(
       scrollDirection: Axis.horizontal,
       physics: const BouncingScrollPhysics(),
       child: Row(
         children: [
-          _filterChip(keyName: 'all', label: '🔥 All Alerts', count: _allJobs.length),
-          const SizedBox(width: 8),
+          _filterChip(keyName: 'all', label: '🔥 All Alerts', count: activeList.length),
+          const SizedBox(width: 6),
           _filterChip(keyName: 'bihar', label: '🏛️ Bihar Govt', count: biharCount),
-          const SizedBox(width: 8),
+          const SizedBox(width: 6),
           _filterChip(keyName: 'central', label: '🇮🇳 Central Govt', count: centralCount),
         ],
       ),
@@ -556,22 +537,28 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   }) {
     final bool active = _selectedCategory == keyName;
 
-    return GestureDetector(
+    return InkWell(
       onTap: () {
         if (_selectedCategory == keyName) return;
         setState(() => _selectedCategory = keyName);
       },
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 180),
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6.5),
+      borderRadius: BorderRadius.circular(20),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5.5),
         decoration: BoxDecoration(
           color: active
               ? primaryBlue
               : widget.isDarkMode
-                  ? const Color(0xFF1E293B)
+                  ? const Color(0xFF0F172A)
                   : const Color(0xFFF1F5F9),
           borderRadius: BorderRadius.circular(20),
-          border: Border.all(color: active ? primaryBlue : Colors.transparent),
+          border: Border.all(
+            color: active
+                ? primaryBlue
+                : widget.isDarkMode
+                    ? const Color(0xFF334155)
+                    : const Color(0xFFE2E8F0),
+          ),
         ),
         child: Text(
           '$label ($count)',
@@ -590,13 +577,13 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   }
 
   // ---------------------------------------------------------------------------
-  // JOB CARD (Direct Link Open + "View Notification" Only)
+  // POLISHED JOB CARD
   // ---------------------------------------------------------------------------
-
   Widget _buildJobCard(
     Map<String, dynamic> job,
     Color textColor,
     Color subText, {
+    required bool isDark,
     bool isCompact = false,
   }) {
     final String title = _value(job, 'title').isEmpty ? 'Job Notification' : _value(job, 'title');
@@ -618,220 +605,171 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     final bool isNew = explicitStatus?.toLowerCase() == 'new' || explicitStatus?.toLowerCase() == 'new job';
     final String deadline = _deadlineLabel(lastDate);
 
+    final itemBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
+    final itemBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+
     return Container(
       margin: const EdgeInsets.only(bottom: 10),
-      padding: const EdgeInsets.all(12),
-      decoration: BoxDecoration(
-        color: widget.isDarkMode ? const Color(0xFF172338) : const Color(0xFFF8FAFC),
-        borderRadius: BorderRadius.circular(15),
-        border: Border.all(
-          color: urgent
-              ? red.withOpacity(0.4)
-              : widget.isDarkMode
-                  ? const Color(0xFF2B3B54)
-                  : const Color(0xFFE2E8F0),
-          width: urgent ? 1.3 : 1,
+      child: Material(
+        color: itemBg,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14),
+          side: BorderSide(
+            color: urgent ? red.withOpacity(0.4) : itemBorder,
+            width: urgent ? 1.2 : 1,
+          ),
         ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          // Row 1: Badges
-          Row(
-            children: [
-              _badge(bihar ? 'BIHAR GOVT' : 'CENTRAL GOVT', bihar ? orange : primaryBlue),
-              const Spacer(),
-              if (urgent)
-                _badge('🚨 $deadline', red, isSolid: true)
-              else if (isNew)
-                _badge('✨ NEW OPENING', green, isSolid: true),
-            ],
-          ),
-
-          const SizedBox(height: 7),
-
-          // Title
-          Text(
-            title,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(
-              color: textColor,
-              fontSize: 13.8,
-              fontWeight: FontWeight.w800,
-              height: 1.25,
-            ),
-          ),
-
-          if (organization.isNotEmpty) ...[
-            const SizedBox(height: 3),
-            Text(
-              organization,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: TextStyle(color: subText, fontSize: 10.8, fontWeight: FontWeight.w600),
-            ),
-          ],
-
-          const SizedBox(height: 8),
-
-          // Stats
-          Row(
-            children: [
-              if (vacancies.isNotEmpty)
-                Expanded(
-                  child: _statBox(
-                    icon: Icons.groups_rounded,
-                    label: 'Total Posts',
-                    value: vacancies,
-                    color: green,
-                  ),
-                ),
-              if (vacancies.isNotEmpty && qualification.isNotEmpty) const SizedBox(width: 6),
-              if (qualification.isNotEmpty)
-                Expanded(
-                  child: _statBox(
-                    icon: Icons.school_rounded,
-                    label: 'Eligibility',
-                    value: qualification,
-                    color: primaryBlue,
-                  ),
-                ),
-            ],
-          ),
-
-          if (!isCompact && fee.isNotEmpty) ...[
-            const SizedBox(height: 7),
-            Row(
+        clipBehavior: Clip.antiAlias,
+        child: InkWell(
+          onTap: applyUrl.isEmpty ? null : () => _openLink(applyUrl),
+          child: Padding(
+            padding: const EdgeInsets.all(12),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Icon(Icons.receipt_long_rounded, size: 14, color: subText),
-                const SizedBox(width: 5),
-                Flexible(
-                  child: Text(
-                    'Fee: $fee',
+                // Top Tag Row
+                Row(
+                  children: [
+                    _badge(bihar ? '🏛️ BIHAR' : '🇮🇳 CENTRAL', bihar ? orange : primaryBlue),
+                    const Spacer(),
+                    if (urgent)
+                      _badge('⏰ $deadline', red, isSolid: true)
+                    else if (isNew)
+                      _badge('✨ NEW', green, isSolid: true),
+                  ],
+                ),
+
+                const SizedBox(height: 8),
+
+                // Job Title
+                Text(
+                  title,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: textColor,
+                    fontSize: 13.5,
+                    fontWeight: FontWeight.w700,
+                    height: 1.25,
+                  ),
+                ),
+
+                if (organization.isNotEmpty) ...[
+                  const SizedBox(height: 2),
+                  Text(
+                    organization,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: TextStyle(fontSize: 10.5, color: subText, fontWeight: FontWeight.w600),
+                    style: TextStyle(color: subText, fontSize: 11, fontWeight: FontWeight.w500),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
 
-          const SizedBox(height: 9),
+                const SizedBox(height: 9),
 
-          // Prominent Last Date + Direct "View Notification" Link
-          Row(
-            children: [
-              Expanded(
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 7),
-                  decoration: BoxDecoration(
-                    color: urgent
-                        ? (widget.isDarkMode ? const Color(0xFF450A0A) : const Color(0xFFFEF2F2))
-                        : (widget.isDarkMode ? Colors.white.withOpacity(.04) : Colors.white),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: urgent
-                          ? red.withOpacity(0.5)
-                          : (widget.isDarkMode ? const Color(0xFF2B3B54) : const Color(0xFFE2E8F0)),
-                      width: urgent ? 1.2 : 1,
-                    ),
-                  ),
-                  child: Row(
-                    children: [
-                      Icon(
-                        Icons.timer_outlined,
-                        size: 14,
-                        color: urgent ? red : subText,
-                      ),
-                      const SizedBox(width: 5),
-                      Flexible(
-                        child: Text(
-                          lastDate.isEmpty ? 'Date N/A' : 'Last Date: $lastDate',
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            fontSize: 10.2,
-                            color: urgent ? red : textColor,
-                            fontWeight: FontWeight.w800,
-                          ),
+                // Vacancy & Qualification Row
+                Row(
+                  children: [
+                    if (vacancies.isNotEmpty)
+                      Expanded(
+                        child: _statBox(
+                          icon: Icons.people_outline_rounded,
+                          label: 'Vacancies',
+                          value: vacancies,
+                          color: const Color(0xFF059669),
+                          isDark: isDark,
                         ),
+                      ),
+                    if (vacancies.isNotEmpty && qualification.isNotEmpty) const SizedBox(width: 8),
+                    if (qualification.isNotEmpty)
+                      Expanded(
+                        child: _statBox(
+                          icon: Icons.school_outlined,
+                          label: 'Eligibility',
+                          value: qualification,
+                          color: primaryBlue,
+                          isDark: isDark,
+                        ),
+                      ),
+                  ],
+                ),
+
+                if (!isCompact && fee.isNotEmpty) ...[
+                  const SizedBox(height: 7),
+                  Row(
+                    children: [
+                      Icon(Icons.receipt_outlined, size: 14, color: subText),
+                      const SizedBox(width: 4),
+                      Text(
+                        'Application Fee: $fee',
+                        style: TextStyle(fontSize: 11, color: subText, fontWeight: FontWeight.w500),
                       ),
                     ],
                   ),
-                ),
-              ),
+                ],
 
-              // Home Card View Notification Button (Direct Link Open)
-              if (isCompact) ...[
-                const SizedBox(width: 8),
-                InkWell(
-                  onTap: applyUrl.isEmpty ? null : () => _openLink(applyUrl),
-                  borderRadius: BorderRadius.circular(8),
-                  child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-                    decoration: BoxDecoration(
-                      color: primaryBlue.withOpacity(0.10),
-                      borderRadius: BorderRadius.circular(8),
-                      border: Border.all(color: primaryBlue.withOpacity(0.3)),
-                    ),
-                    child: const Row(
-                      mainAxisSize: MainAxisSize.min,
+                const SizedBox(height: 10),
+
+                // Bottom Date + Action Button
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
                       children: [
+                        Icon(
+                          Icons.calendar_today_rounded,
+                          size: 13,
+                          color: urgent ? red : subText,
+                        ),
+                        const SizedBox(width: 5),
                         Text(
-                          'View Notification',
+                          lastDate.isEmpty ? 'Date N/A' : 'Last: $lastDate',
                           style: TextStyle(
-                            color: primaryBlue,
-                            fontSize: 10.5,
-                            fontWeight: FontWeight.w800,
+                            fontSize: 11,
+                            color: urgent ? red : subText,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
-                        SizedBox(width: 4),
-                        Icon(Icons.open_in_new_rounded, size: 12, color: primaryBlue),
                       ],
                     ),
-                  ),
-                ),
-              ],
-            ],
-          ),
 
-          // Detailed Bottom Sheet View Button
-          if (!isCompact) ...[
-            const SizedBox(height: 10),
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton(
-                onPressed: applyUrl.isEmpty ? null : () => _openLink(applyUrl),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: primaryBlue,
-                  foregroundColor: Colors.white,
-                  elevation: 0,
-                  padding: const EdgeInsets.symmetric(vertical: 10),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-                ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('View Notification', style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800)),
-                    SizedBox(width: 5),
-                    Icon(Icons.open_in_new_rounded, size: 14),
+                    // Clean View Pill
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                      decoration: BoxDecoration(
+                        color: primaryBlue.withOpacity(0.08),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: const Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Text(
+                            'View Details',
+                            style: TextStyle(
+                              color: primaryBlue,
+                              fontSize: 10.5,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          SizedBox(width: 3),
+                          Icon(Icons.arrow_forward_rounded, size: 11, color: primaryBlue),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
-              ),
+              ],
             ),
-          ],
-        ],
+          ),
+        ),
       ),
     );
   }
 
   Widget _badge(String text, Color color, {bool isSolid = false}) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+      padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2.5),
       decoration: BoxDecoration(
-        color: isSolid ? color : color.withOpacity(.12),
+        color: isSolid ? color : color.withOpacity(.10),
         borderRadius: BorderRadius.circular(5),
       ),
       child: Text(
@@ -839,7 +777,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
         style: TextStyle(
           color: isSolid ? Colors.white : color,
           fontSize: 8.5,
-          fontWeight: FontWeight.w900,
+          fontWeight: FontWeight.w800,
           letterSpacing: .3,
         ),
       ),
@@ -851,17 +789,20 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     required String label,
     required String value,
     required Color color,
+    required bool isDark,
   }) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6.5),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
       decoration: BoxDecoration(
-        color: color.withOpacity(.08),
+        color: isDark ? const Color(0xFF1E293B) : Colors.white,
         borderRadius: BorderRadius.circular(8),
-        border: Border.all(color: color.withOpacity(0.18)),
+        border: Border.all(
+          color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+        ),
       ),
       child: Row(
         children: [
-          Icon(icon, size: 15, color: color),
+          Icon(icon, size: 16, color: color),
           const SizedBox(width: 6),
           Expanded(
             child: Column(
@@ -872,7 +813,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
-                    color: widget.isDarkMode ? Colors.white54 : const Color(0xFF64748B),
+                    color: isDark ? Colors.white54 : const Color(0xFF64748B),
                     fontSize: 8.5,
                     fontWeight: FontWeight.w600,
                   ),
@@ -881,7 +822,11 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                   value,
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
-                  style: TextStyle(color: color, fontSize: 10, fontWeight: FontWeight.w900),
+                  style: TextStyle(
+                    color: isDark ? Colors.white : navy,
+                    fontSize: 10.5,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ],
             ),
@@ -893,15 +838,15 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
 
   Widget _emptyCategoryView(Color textColor, Color subText) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 20),
+      padding: const EdgeInsets.symmetric(vertical: 24),
       child: Center(
         child: Column(
           children: [
             Icon(Icons.search_off_rounded, size: 28, color: subText.withOpacity(.5)),
             const SizedBox(height: 6),
             Text(
-              'No jobs found in this category',
-              style: TextStyle(color: textColor, fontSize: 11.5, fontWeight: FontWeight.w600),
+              'No active jobs in this category',
+              style: TextStyle(color: textColor, fontSize: 12, fontWeight: FontWeight.w600),
             ),
           ],
         ),
@@ -909,7 +854,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     );
   }
 
-  Widget _buildViewAllButton() {
+  Widget _buildViewAllButton(bool isDark) {
     return SizedBox(
       width: double.infinity,
       child: OutlinedButton(
@@ -924,7 +869,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
         child: const Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Explore All Opportunities', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 12)),
+            Text('Explore All Opportunities', style: TextStyle(fontWeight: FontWeight.w700, fontSize: 12)),
             SizedBox(width: 5),
             Icon(Icons.arrow_forward_rounded, size: 14),
           ],
@@ -934,11 +879,10 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   }
 
   // ---------------------------------------------------------------------------
-  // ALL JOBS BOTTOM SHEET
+  // ALL JOBS MODAL SHEET (Interactive Category Switch)
   // ---------------------------------------------------------------------------
-
   void _showAllJobs() {
-    final Color sheetBg = widget.isDarkMode ? const Color(0xFF0B1120) : Colors.white;
+    final Color sheetBg = widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white;
     final Color textColor = widget.isDarkMode ? Colors.white : navy;
     final Color subText = widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B);
 
@@ -947,84 +891,90 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
       isScrollControlled: true,
       backgroundColor: sheetBg,
       shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
       builder: (context) {
-        return DraggableScrollableSheet(
-          initialChildSize: .90,
-          maxChildSize: .96,
-          minChildSize: .55,
-          expand: false,
-          builder: (context, scrollController) {
-            final jobs = _filteredJobs.where((job) {
-              final lastDate = _value(job, 'last_date');
-              return !_isExpired(lastDate);
-            }).toList();
+        return StatefulBuilder(
+          builder: (context, setSheetState) {
+            final activeJobsList = _activeJobs;
+            final modalFilteredJobs = _selectedCategory == 'all'
+                ? activeJobsList
+                : activeJobsList.where((job) {
+                    final bool isBihar = _isBiharJob(job);
+                    if (_selectedCategory == 'bihar') return isBihar;
+                    if (_selectedCategory == 'central') return !isBihar;
+                    return true;
+                  }).toList();
 
-            return Column(
-              children: [
-                const SizedBox(height: 10),
-                Container(
-                  width: 38,
-                  height: 4,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade400,
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(18, 14, 10, 12),
-                  child: Row(
-                    children: [
-                      const Icon(Icons.campaign_rounded, color: primaryBlue, size: 24),
-                      const SizedBox(width: 8),
-                      Expanded(
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'All Job Opportunities',
-                              style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900, color: textColor),
-                            ),
-                            const SizedBox(height: 2),
-                            Text('${jobs.length} active notifications', style: TextStyle(fontSize: 10.5, color: subText)),
-                          ],
-                        ),
+            return DraggableScrollableSheet(
+              initialChildSize: .90,
+              maxChildSize: .96,
+              minChildSize: .55,
+              expand: false,
+              builder: (context, scrollController) {
+                return Column(
+                  children: [
+                    const SizedBox(height: 10),
+                    Container(
+                      width: 36,
+                      height: 4,
+                      decoration: BoxDecoration(
+                        color: Colors.grey.withOpacity(0.4),
+                        borderRadius: BorderRadius.circular(10),
                       ),
-                      IconButton(
-                        onPressed: () => Navigator.pop(context),
-                        icon: const Icon(Icons.close_rounded),
-                      ),
-                    ],
-                  ),
-                ),
-                Divider(height: 1, color: widget.isDarkMode ? Colors.white10 : Colors.black12),
-                Expanded(
-                  child: jobs.isEmpty
-                      ? Center(
-                          child: Text('No active jobs available.', style: TextStyle(color: subText, fontSize: 12)),
-                        )
-                      : ListView.builder(
-                          controller: scrollController,
-                          padding: const EdgeInsets.all(16),
-                          itemCount: jobs.length,
-                          itemBuilder: (context, index) {
-                            return _buildJobCard(jobs[index], textColor, subText, isCompact: false);
-                          },
-                        ),
-                ),
-                SafeArea(
-                  top: false,
-                  child: Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 4, 16, 10),
-                    child: Text(
-                      'Official notifications collected from public domain portals.',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 9.5, color: textColor.withOpacity(.4)),
                     ),
-                  ),
-                ),
-              ],
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 12, 10, 10),
+                      child: Row(
+                        children: [
+                          const Icon(Icons.campaign_rounded, color: primaryBlue, size: 22),
+                          const SizedBox(width: 8),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'All Job Opportunities',
+                                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.w800, color: textColor),
+                                ),
+                                Text(
+                                  '${modalFilteredJobs.length} active notifications',
+                                  style: TextStyle(fontSize: 11, color: subText),
+                                ),
+                              ],
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () => Navigator.pop(context),
+                            icon: const Icon(Icons.close_rounded, size: 20),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Divider(height: 1, color: widget.isDarkMode ? Colors.white10 : Colors.black12),
+                    Expanded(
+                      child: modalFilteredJobs.isEmpty
+                          ? Center(
+                              child: Text('No active jobs available.', style: TextStyle(color: subText, fontSize: 12)),
+                            )
+                          : ListView.builder(
+                              controller: scrollController,
+                              padding: const EdgeInsets.all(16),
+                              itemCount: modalFilteredJobs.length,
+                              itemBuilder: (context, index) {
+                                return _buildJobCard(
+                                  modalFilteredJobs[index],
+                                  textColor,
+                                  subText,
+                                  isDark: widget.isDarkMode,
+                                  isCompact: false,
+                                );
+                              },
+                            ),
+                    ),
+                  ],
+                );
+              },
             );
           },
         );
