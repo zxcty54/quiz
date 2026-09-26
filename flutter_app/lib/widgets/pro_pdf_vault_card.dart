@@ -22,8 +22,9 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
 
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
+  bool _isLoading = true;
 
-  // 🛡️ Fallback Data (Offline backup)
+  // 🛡️ Fallback Data (Sirf tab dikhega jab internet connection offline ho)
   final List<Map<String, dynamic>> _fallbackDocs = [
     {
       'title': 'NCERT Saar Sangrah',
@@ -113,7 +114,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
     };
   }
 
-  // 🔄 Multi-CDN Live Auto-Sync
+  // 🔄 Dedicated Fetch with Multi-CDN Fallback & Safe Parsing
   Future<void> fetchLiveBooks() async {
     final int ts = DateTime.now().millisecondsSinceEpoch;
 
@@ -139,27 +140,27 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
           String body = utf8.decode(res.bodyBytes).trim();
           if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
 
-          final decoded = jsonDecode(body);
+          final dynamic decoded = jsonDecode(body);
           List<dynamic> rawList = [];
 
           if (decoded is List) {
             rawList = decoded;
           } else if (decoded is Map) {
-            if (decoded['books'] is List) {
-              rawList = decoded['books'];
-            } else if (decoded['data'] is List) {
-              rawList = decoded['data'];
-            } else if (decoded['database'] is List) {
-              rawList = decoded['database'];
+            for (final val in decoded.values) {
+              if (val is List) {
+                rawList = val;
+                break;
+              }
             }
           }
 
           if (rawList.isNotEmpty && mounted) {
             setState(() {
-              // .reversed lagane se database ka aakhri naya item index 0 (top) par aayega
+              // .reversed lagane se database ka aakhri naya item (jaise NCERT Saar Sangrah) sabse top par aayega
               _allLiveDocs = rawList.reversed.map<Map<String, dynamic>>((item) {
                 return _formatItem(item);
               }).toList();
+              _isLoading = false;
             });
             return;
           }
@@ -168,12 +169,16 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
         continue;
       }
     }
+
+    if (mounted) {
+      setState(() => _isLoading = false);
+    }
   }
 
   List<Map<String, dynamic>> _getVisibleDocs() {
     final sourceList = _allLiveDocs.isNotEmpty ? _allLiveDocs : _fallbackDocs;
 
-    // Search empty hone par seedhe latest 4 items show honge
+    // Search query empty hone par latest 4 items show honge
     if (_searchQuery.isEmpty) {
       return sourceList.take(4).toList();
     }
@@ -334,7 +339,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
             const SizedBox(height: 12),
 
             // 📋 Document List
-            if (visibleDocs.isEmpty)
+            if (visibleDocs.isEmpty && !_isLoading)
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Center(
