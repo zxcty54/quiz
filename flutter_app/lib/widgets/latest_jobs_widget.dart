@@ -341,7 +341,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Header Row (Accurate active vacancies count)
+          // Header Row
           Padding(
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 12),
             child: _buildHeader(textColor, subText, _activeJobs.length),
@@ -577,7 +577,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   }
 
   // ---------------------------------------------------------------------------
-  // POLISHED JOB CARD
+  // POLISHED JOB CARD (Fee Overflow Fixed)
   // ---------------------------------------------------------------------------
   Widget _buildJobCard(
     Map<String, dynamic> job,
@@ -693,17 +693,57 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                   ],
                 ),
 
+                // ✅ APPLICATION FEE SECTION (Wrapped in Expanded container so it never cuts)
                 if (!isCompact && fee.isNotEmpty) ...[
-                  const SizedBox(height: 7),
-                  Row(
-                    children: [
-                      Icon(Icons.receipt_outlined, size: 14, color: subText),
-                      const SizedBox(width: 4),
-                      Text(
-                        'Application Fee: $fee',
-                        style: TextStyle(fontSize: 11, color: subText, fontWeight: FontWeight.w500),
+                  const SizedBox(height: 8),
+                  Container(
+                    width: double.infinity,
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
+                    decoration: BoxDecoration(
+                      color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(
+                        color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                        width: 0.8,
                       ),
-                    ],
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        const Padding(
+                          padding: EdgeInsets.only(top: 1.5),
+                          child: Icon(Icons.receipt_long_rounded, size: 14, color: primaryBlue),
+                        ),
+                        const SizedBox(width: 6),
+                        Expanded(
+                          child: RichText(
+                            text: TextSpan(
+                              style: TextStyle(
+                                fontSize: 11,
+                                color: textColor,
+                                height: 1.35,
+                              ),
+                              children: [
+                                TextSpan(
+                                  text: 'Application Fee: ',
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    color: isDark ? Colors.white70 : const Color(0xFF475569),
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: fee,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w600,
+                                    color: textColor,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
 
@@ -879,7 +919,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   }
 
   // ---------------------------------------------------------------------------
-  // ALL JOBS MODAL SHEET (Interactive Category Switch)
+  // ALL JOBS MODAL SHEET
   // ---------------------------------------------------------------------------
   void _showAllJobs() {
     final Color sheetBg = widget.isDarkMode ? const Color(0xFF0F172A) : Colors.white;
