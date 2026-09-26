@@ -6,13 +6,11 @@ import 'package:url_launcher/url_launcher.dart';
 class ProPdfVaultCard extends StatefulWidget {
   final bool isDarkMode;
   final String? customWebsiteUrl;
-  final List<dynamic>? dynamicPdfItems;
 
   const ProPdfVaultCard({
     super.key,
     required this.isDarkMode,
     this.customWebsiteUrl,
-    this.dynamicPdfItems,
   });
 
   @override
@@ -25,22 +23,22 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
 
-  // 🛡️ Fallback Data
+  // 🛡️ Fallback Data (Instant Rendering jab tak internet connect na ho)
   final List<Map<String, dynamic>> _fallbackDocs = [
+    {
+      'title': 'NCERT Saar Sangrah',
+      'tag': '🌿 NCERT CRUX',
+      'badge': 'NEW',
+      'meta': 'Civil Services • Hindi/En Edition',
+      'color': 0xFF059669,
+      'url': 'https://www.mocktester.online/2026/09/ncert-saar-sangrah-one-liner-cosmos-pdf.html',
+    },
     {
       'title': 'M. Laxmikanth: Indian Polity (6th Edition)',
       'tag': '🏛️ STANDARD',
       'badge': 'UPDATED',
       'meta': 'Civil Services • Hindi/En Edition',
       'color': 0xFF7C3AED,
-      'url': 'https://www.mocktester.online',
-    },
-    {
-      'title': 'NCERT Science & GK 1-Liner Crux',
-      'tag': '🌿 NCERT CRUX',
-      'badge': 'POPULAR',
-      'meta': 'Class 8-12 • Complete Handnotes',
-      'color': 0xFF059669,
       'url': 'https://www.mocktester.online',
     },
     {
@@ -51,14 +49,6 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
       'color': 0xFFD97706,
       'url': 'https://www.mocktester.online',
     },
-    {
-      'title': 'General Science Physics & Chemistry Formula Sheet',
-      'tag': '⚡ HIGH YIELD',
-      'badge': 'NEW',
-      'meta': 'Competitive Exams • All SI Units & Laws',
-      'color': 0xFF2563EB,
-      'url': 'https://www.mocktester.online',
-    },
   ];
 
   List<Map<String, dynamic>> _allLiveDocs = [];
@@ -66,13 +56,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
   @override
   void initState() {
     super.initState();
-    if (widget.dynamicPdfItems != null && widget.dynamicPdfItems!.isNotEmpty) {
-      _allLiveDocs = widget.dynamicPdfItems!.reversed.map<Map<String, dynamic>>((item) {
-        return _formatItem(item);
-      }).toList();
-    } else {
-      fetchLiveBooks();
-    }
+    fetchLiveBooks();
   }
 
   @override
@@ -121,7 +105,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
     };
   }
 
-  // 🔄 Public Live Fetch with Anti-Cache & CDN Fallbacks
+  // 🔄 Dedicated Multi-CDN Live Auto-Sync Method
   Future<void> fetchLiveBooks() async {
     final int ts = DateTime.now().millisecondsSinceEpoch;
 
@@ -158,6 +142,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
 
           if (rawList.isNotEmpty && mounted) {
             setState(() {
+              // .reversed se aapka aakhri add kiya hua item (jaise NCERT Saar Sangrah) sabse upar show hoga
               _allLiveDocs = rawList.reversed.map<Map<String, dynamic>>((item) {
                 return _formatItem(item);
               }).toList();
