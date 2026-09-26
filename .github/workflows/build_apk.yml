@@ -40,13 +40,6 @@ jobs:
           rm -rf android/app/src/main/kotlin
           flutter create . --platforms=android --org com.mocktester --project-name mocktester
 
-      # 🎨 NAYA STEP: Force Generate App Icon right after scaffold reset
-      - name: Generate Custom App Launcher Icons
-        working-directory: flutter_app
-        run: |
-          flutter pub get
-          dart run flutter_launcher_icons
-
       # 🛠️ FIX: Reliable Gradle Wrapper Injection with Gradle 9.3.1
       - name: Fix Gradle Wrapper Distribution URL
         working-directory: flutter_app/android
@@ -159,6 +152,13 @@ jobs:
               </application>
           </manifest>
           EOF
+
+      # 🎨 NAYA STEP: Manifest inject hone ke BAAD custom launcher icon generate karein
+      - name: Generate Custom App Launcher Icons
+        working-directory: flutter_app
+        run: |
+          flutter pub get
+          dart run flutter_launcher_icons
 
       - name: Force CompileSdk 36 on All Plugins (Fix file_picker & webview)
         working-directory: flutter_app
@@ -305,14 +305,11 @@ jobs:
           fi
           echo "Found APK at: $APK_FILE"
           
-          # Rename cleanly
           cp "$APK_FILE" build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
           
-          # Reliable fast zip without buffer drops
           cd build/app/outputs/flutter-apk
           zip -1 -j MockTester_Build_${{ github.run_number }}.zip MockTester_Build_${{ github.run_number }}.apk
           
-          # Verify file size
           ls -lh MockTester_Build_${{ github.run_number }}.zip
 
       - name: Send Reliable Zip Direct To Telegram via Curl
