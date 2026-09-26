@@ -23,7 +23,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
 
-  // 🛡️ Fallback Data (Instant Rendering jab tak internet connect na ho)
+  // 🛡️ Fallback Data (Offline backup)
   final List<Map<String, dynamic>> _fallbackDocs = [
     {
       'title': 'NCERT Saar Sangrah',
@@ -39,6 +39,14 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
       'badge': 'UPDATED',
       'meta': 'Civil Services • Hindi/En Edition',
       'color': 0xFF7C3AED,
+      'url': 'https://www.mocktester.online',
+    },
+    {
+      'title': 'NCERT Science & GK 1-Liner Crux',
+      'tag': '🌿 NCERT CRUX',
+      'badge': 'POPULAR',
+      'meta': 'Class 8-12 • Complete Handnotes',
+      'color': 0xFF059669,
       'url': 'https://www.mocktester.online',
     },
     {
@@ -105,7 +113,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
     };
   }
 
-  // 🔄 Dedicated Multi-CDN Live Auto-Sync Method
+  // 🔄 Multi-CDN Live Auto-Sync
   Future<void> fetchLiveBooks() async {
     final int ts = DateTime.now().millisecondsSinceEpoch;
 
@@ -125,7 +133,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
             'Pragma': 'no-cache',
             'Expires': '0',
           },
-        ).timeout(const Duration(seconds: 7));
+        ).timeout(const Duration(seconds: 8));
 
         if (res.statusCode == 200) {
           String body = utf8.decode(res.bodyBytes).trim();
@@ -136,13 +144,19 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
 
           if (decoded is List) {
             rawList = decoded;
-          } else if (decoded is Map && decoded['books'] is List) {
-            rawList = decoded['books'];
+          } else if (decoded is Map) {
+            if (decoded['books'] is List) {
+              rawList = decoded['books'];
+            } else if (decoded['data'] is List) {
+              rawList = decoded['data'];
+            } else if (decoded['database'] is List) {
+              rawList = decoded['database'];
+            }
           }
 
           if (rawList.isNotEmpty && mounted) {
             setState(() {
-              // .reversed se aapka aakhri add kiya hua item (jaise NCERT Saar Sangrah) sabse upar show hoga
+              // .reversed lagane se database ka aakhri naya item index 0 (top) par aayega
               _allLiveDocs = rawList.reversed.map<Map<String, dynamic>>((item) {
                 return _formatItem(item);
               }).toList();
@@ -159,6 +173,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
   List<Map<String, dynamic>> _getVisibleDocs() {
     final sourceList = _allLiveDocs.isNotEmpty ? _allLiveDocs : _fallbackDocs;
 
+    // Search empty hone par seedhe latest 4 items show honge
     if (_searchQuery.isEmpty) {
       return sourceList.take(4).toList();
     }
@@ -166,8 +181,9 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
     return sourceList.where((doc) {
       final title = (doc['title'] ?? '').toString().toLowerCase();
       final meta = (doc['meta'] ?? '').toString().toLowerCase();
+      final tag = (doc['tag'] ?? '').toString().toLowerCase();
       final q = _searchQuery.toLowerCase();
-      return title.contains(q) || meta.contains(q);
+      return title.contains(q) || meta.contains(q) || tag.contains(q);
     }).take(6).toList();
   }
 
