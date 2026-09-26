@@ -37,7 +37,7 @@ class _DistrictTopLeaderboardWidgetState
   bool _isLoading = true;
   List<Map<String, dynamic>> _topRankers = [];
   Map<String, dynamic>? _currentUserSubmission;
-  int? _currentUserRank;
+  int _currentUserRank = 0; // 0 matlab not attempted
 
   @override
   void initState() {
@@ -62,17 +62,18 @@ class _DistrictTopLeaderboardWidgetState
     await _fetchDistrictLeaderboard(district);
   }
 
-  // CRASH-PROOF SUPABASE QUERY (NO UNKNOWN COLUMN, NO EXTRA QUERIES)
+  // 🎯 FETCH TOP 5 + CALCULATE EXACT USER RANK (EVEN IF OUTSIDE TOP 5)
   Future<void> _fetchDistrictLeaderboard(String district) async {
     if (mounted) setState(() => _isLoading = true);
 
     try {
       final client = Supabase.instance.client;
+      final prefs = await SharedPreferences.getInstance();
 
-      // 1. Top 5 Candidates Fetch (Exact Table Columns)
+      // 1. Top 5 Candidates Fetch
       final res = await client
           .from('daily_challenge_submissions')
-          .select('user_name, district, score, time_taken_seconds')
+          .select('user_id, user_name, district, score, time_taken_seconds')
           .eq('district', district)
           .order('score', ascending: false)
           .order('time_taken_seconds', ascending: true)
@@ -81,30 +82,59 @@ class _DistrictTopLeaderboardWidgetState
       final List<Map<String, dynamic>> rankers =
           List<Map<String, dynamic>>.from(res);
 
-      // 2. Safe User Status Fetch (Only using confirmed columns)
+      // 2. Identify Current User (By Auth ID ya SharedPreferences Name)
       final currentUserId = client.auth.currentUser?.id;
+      final localName = prefs.getString('user_name')?.trim() ??
+          prefs.getString('custom_aspirant_name')?.trim() ??
+          '';
+
       Map<String, dynamic>? mySub;
-      int? calculatedRank;
+      int calculatedRank = 0;
+
+      // Query for user submission
+      var userQuery = client
+          .from('daily_challenge_submissions')
+          .select('id, user_name, district, score, time_taken_seconds')
+          .eq('district', district);
 
       if (currentUserId != null) {
-        final myRes = await client
-            .from('daily_challenge_submissions')
-            .select('user_name, district, score, time_taken_seconds')
-            .eq('user_id', currentUserId)
-            .eq('district', district)
-            .limit(1);
+        userQuery = userQuery.eq('user_id', currentUserId);
+      } else if (localName.isNotEmpty) {
+        userQuery = userQuery.eq('user_name', localName);
+      }
 
-        if (myRes.isNotEmpty) {
-          mySub = myRes.first;
+      final myRes = await userQuery.limit(1);
 
-          // Check if user is in Top 5 list
-          final indexInTop5 = rankers.indexWhere(
-            (item) =>
-                item['user_name'] == mySub!['user_name'] &&
-                item['score'] == mySub['score'],
-          );
+      if (myRes.isNotEmpty) {
+        mySub = myRes.first;
+        final myScore = (mySub['score'] ?? 0) as int;
+        final myTime = (mySub['time_taken_seconds'] ?? 0) as int;
 
-          calculatedRank = (indexInTop5 != -1) ? (indexInTop5 + 1) : null;
+        // Check if already in top 5 list
+        final indexInTop5 = rankers.indexWhere((item) =>
+            (currentUserId != null && item['user_id'] == currentUserId) ||
+            (localName.isNotEmpty && item['user_name'] == localName));
+
+        if (indexInTop5 != -1) {
+          calculatedRank = indexInTop5 + 1;
+        } else {
+          // Exact District Rank count karna:
+          // Jo log higher score pe hain
+          final higherCount = await client
+              .from('daily_challenge_submissions')
+              .count(CountOption.exact)
+              .eq('district', district)
+              .gt('score', myScore);
+
+          // Jo same score par hain par kam time liya hai
+          final sameScoreFasterCount = await client
+              .from('daily_challenge_submissions')
+              .count(CountOption.exact)
+              .eq('district', district)
+              .eq('score', myScore)
+              .lt('time_taken_seconds', myTime);
+
+          calculatedRank = higherCount + sameScoreFasterCount + 1;
         }
       }
 
@@ -121,6 +151,7 @@ class _DistrictTopLeaderboardWidgetState
       setState(() {
         _topRankers = [];
         _currentUserSubmission = null;
+        _currentUserRank = 0;
         _isLoading = false;
       });
     }
@@ -147,10 +178,6 @@ class _DistrictTopLeaderboardWidgetState
 
     if (_isLoading && _topRankers.isEmpty) {
       return _buildLoadingCard(isDark);
-    }
-
-    if (!_isLoading && _topRankers.isEmpty) {
-      return _buildEmptyCard(isDark);
     }
 
     final top3 = _topRankers.take(3).toList();
@@ -217,12 +244,12 @@ class _DistrictTopLeaderboardWidgetState
 
                 const SizedBox(height: 10),
 
-                // Persistent User Status Bar
-                _buildRealUserStickyBar(isDark),
+                // 🌟 ALWAYS VISIBLE USER RANK BAR
+                _buildUniformUserStatusBar(isDark),
 
                 const SizedBox(height: 10),
 
-                // Full Bihar CTA
+                // View All Bihar CTA
                 _buildFullRanklistButton(isDark),
               ],
             ),
@@ -386,13 +413,6 @@ class _DistrictTopLeaderboardWidgetState
         decoration: BoxDecoration(
           color: const Color(0xFF6366F1),
           borderRadius: BorderRadius.circular(9),
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0xFF6366F1).withOpacity(0.25),
-              blurRadius: 6,
-              offset: const Offset(0, 2),
-            ),
-          ],
         ),
         child: const Text(
           'Top 5 Hall of Fame',
@@ -626,139 +646,103 @@ class _DistrictTopLeaderboardWidgetState
   }
 
   // ============================================================
-  // USER STATUS BAR (STABLE & PERSISTENT)
+  // 🌟 UNIFORM USER STATUS BAR (Always displays rank & score)
   // ============================================================
-  Widget _buildRealUserStickyBar(bool isDark) {
-    if (_currentUserSubmission != null) {
-      final myScore = _currentUserSubmission!['score'] ?? 0;
-      final myTime = _currentUserSubmission!['time_taken_seconds'] ?? 0;
-      final rankText = (_currentUserRank != null) ? '#$_currentUserRank' : '#Me';
-
-      return Container(
-        padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-        decoration: BoxDecoration(
-          color: isDark ? const Color(0xFF063A34) : const Color(0xFF042F2C),
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: const Color(0xFF14B8A6), width: 1.2),
-          boxShadow: [
-            BoxShadow(
-              color: const Color(0xFF042F2C).withOpacity(0.25),
-              blurRadius: 10,
-              offset: const Offset(0, 4),
-            ),
-          ],
-        ),
-        child: Row(
-          children: [
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
-              decoration: BoxDecoration(
-                color: const Color(0xFF0F766E),
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: Text(
-                rankText,
-                style: const TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-            const SizedBox(width: 9),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    "Your Rank in $_selectedDistrict",
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      fontSize: 12,
-                      fontWeight: FontWeight.w800,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const SizedBox(height: 2),
-                  Text(
-                    "Score: $myScore/10 (${myTime}s)",
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(
-                      fontSize: 10,
-                      fontWeight: FontWeight.w700,
-                      color: Color(0xFF5EEAD4),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(width: 6),
-            ElevatedButton(
-              onPressed: widget.onReviewMistakes ?? widget.onTakeQuiz,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF10B981),
-                foregroundColor: Colors.white,
-                elevation: 0,
-                padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 0),
-                minimumSize: const Size(64, 32),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(9),
-                ),
-              ),
-              child: const Text(
-                'Review',
-                style: TextStyle(
-                  fontSize: 10.5,
-                  fontWeight: FontWeight.w900,
-                  color: Colors.white,
-                ),
-              ),
-            ),
-          ],
-        ),
-      );
-    }
+  Widget _buildUniformUserStatusBar(bool isDark) {
+    final bool hasAttempted = _currentUserSubmission != null;
+    final int score = hasAttempted ? (_currentUserSubmission!['score'] ?? 0) : 0;
+    final int time = hasAttempted ? (_currentUserSubmission!['time_taken_seconds'] ?? 0) : 0;
+    
+    // Rank label: #14 agar attempt kiya hai, #0 agar kabhi nahi diya
+    final String rankLabel = hasAttempted ? '#$_currentUserRank' : '#0';
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
       decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF1E1B4B) : const Color(0xFFEEF2FF),
+        color: isDark ? const Color(0xFF063A34) : const Color(0xFF042F2C),
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: const Color(0xFF6366F1).withOpacity(0.4),
-          width: 1.2,
-        ),
+        border: Border.all(color: const Color(0xFF14B8A6), width: 1.2),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF042F2C).withOpacity(0.25),
+            blurRadius: 10,
+            offset: const Offset(0, 4),
+          ),
+        ],
       ),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Expanded(
+          // Rank Badge
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
+            decoration: BoxDecoration(
+              color: hasAttempted ? const Color(0xFF0F766E) : const Color(0xFF334155),
+              borderRadius: BorderRadius.circular(8),
+            ),
             child: Text(
-              "Appear on the leaderboard today!",
-              style: TextStyle(
-                fontSize: 11.5,
-                fontWeight: FontWeight.w800,
-                color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4338CA),
+              rankLabel,
+              style: const TextStyle(
+                fontSize: 12,
+                fontWeight: FontWeight.w900,
+                color: Colors.white,
               ),
             ),
           ),
+          const SizedBox(width: 9),
+
+          // User Performance Text
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "Your Rank in $_selectedDistrict",
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  hasAttempted
+                      ? "Score: $score/10 (${time}s)"
+                      : "Score: 0/10 (Not Attempted)",
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w700,
+                    color: hasAttempted ? const Color(0xFF5EEAD4) : const Color(0xFF94A3B8),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(width: 6),
+
+          // Action Button (Review if attempted, Play if 0)
           ElevatedButton(
-            onPressed: widget.onTakeQuiz,
+            onPressed: hasAttempted ? widget.onReviewMistakes : widget.onTakeQuiz,
             style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF6366F1),
+              backgroundColor: hasAttempted ? const Color(0xFF10B981) : const Color(0xFF6366F1),
               foregroundColor: Colors.white,
               elevation: 0,
-              padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 0),
-              minimumSize: const Size(60, 32),
+              padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 0),
+              minimumSize: const Size(64, 32),
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(8),
+                borderRadius: BorderRadius.circular(9),
               ),
             ),
-            child: const Text(
-              'Start 🚀',
-              style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800),
+            child: Text(
+              hasAttempted ? 'Review' : 'Play Quiz',
+              style: const TextStyle(
+                fontSize: 10.5,
+                fontWeight: FontWeight.w900,
+                color: Colors.white,
+              ),
             ),
           ),
         ],
@@ -849,77 +833,6 @@ class _DistrictTopLeaderboardWidgetState
               fontSize: 11,
               fontWeight: FontWeight.w600,
               color: Color(0xFF64748B),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  // ============================================================
-  // EMPTY STATE WITH CTA
-  // ============================================================
-  Widget _buildEmptyCard(bool isDark) {
-    return Container(
-      width: double.infinity,
-      margin: const EdgeInsets.only(bottom: 8),
-      padding: const EdgeInsets.all(22),
-      decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF0F1523) : Colors.white,
-        borderRadius: BorderRadius.circular(24),
-        border: Border.all(
-          color: isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0),
-        ),
-      ),
-      child: Column(
-        children: [
-          Container(
-            width: 46,
-            height: 46,
-            decoration: BoxDecoration(
-              color: const Color(0xFF6366F1).withOpacity(0.12),
-              shape: BoxShape.circle,
-            ),
-            child: const Icon(
-              Icons.emoji_events_outlined,
-              color: Color(0xFF6366F1),
-              size: 24,
-            ),
-          ),
-          const SizedBox(height: 10),
-          Text(
-            'No rankings yet in $_selectedDistrict',
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w800,
-              color: isDark ? Colors.white : const Color(0xFF0F172A),
-            ),
-          ),
-          const SizedBox(height: 4),
-          Text(
-            'Be the first to appear on the leaderboard!',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              fontSize: 11,
-              color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
-            ),
-          ),
-          const SizedBox(height: 14),
-          ElevatedButton.icon(
-            onPressed: widget.onTakeQuiz,
-            icon: const Icon(Icons.play_arrow_rounded, size: 16),
-            label: const Text(
-              'Play Challenge',
-              style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w800),
-            ),
-            style: ElevatedButton.styleFrom(
-              backgroundColor: const Color(0xFF6366F1),
-              foregroundColor: Colors.white,
-              elevation: 0,
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10),
-              ),
             ),
           ),
         ],
