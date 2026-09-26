@@ -16,18 +16,16 @@ class ProPdfVaultCard extends StatefulWidget {
   });
 
   @override
-  State<ProPdfVaultCard> createState() => _ProPdfVaultCardState();
+  State<ProPdfVaultCard> createState() => ProPdfVaultCardState();
 }
 
-class _ProPdfVaultCardState extends State<ProPdfVaultCard> {
+class ProPdfVaultCardState extends State<ProPdfVaultCard> {
   static const String _defaultWebsiteUrl = "https://www.mocktester.online";
-  static const String _booksJsonUrl =
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/books_database.json";
 
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
 
-  // 🛡️ Fallback Data (Instant Rendering jab tak live JSON load na ho)
+  // 🛡️ Fallback Data
   final List<Map<String, dynamic>> _fallbackDocs = [
     {
       'title': 'M. Laxmikanth: Indian Polity (6th Edition)',
@@ -68,13 +66,12 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard> {
   @override
   void initState() {
     super.initState();
-    // Agar direct dynamic items pass hue hain toh use reverse karo taaki newest top pe rahe
     if (widget.dynamicPdfItems != null && widget.dynamicPdfItems!.isNotEmpty) {
       _allLiveDocs = widget.dynamicPdfItems!.reversed.map<Map<String, dynamic>>((item) {
         return _formatItem(item);
       }).toList();
     } else {
-      _fetchLiveBooks();
+      fetchLiveBooks();
     }
   }
 
@@ -124,26 +121,54 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard> {
     };
   }
 
-  Future<void> _fetchLiveBooks() async {
+  // 🔄 Public Live Fetch with Anti-Cache & CDN Fallbacks
+  Future<void> fetchLiveBooks() async {
     final int ts = DateTime.now().millisecondsSinceEpoch;
-    try {
-      final res = await http
-          .get(Uri.parse('$_booksJsonUrl?t=$ts'))
-          .timeout(const Duration(seconds: 4));
 
-      if (res.statusCode == 200) {
-        String body = utf8.decode(res.bodyBytes).trim();
-        if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
+    final List<String> endpoints = [
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/books_database.json?t=$ts",
+      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/books_database.json?t=$ts",
+      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/books_database.json?t=$ts",
+    ];
 
-        final decoded = jsonDecode(body);
-        if (decoded is List && decoded.isNotEmpty && mounted) {
-          setState(() {
-            // .reversed lagaya hai jisse JSON ka last added item hamesha index 0 (top) par aaye
-            _allLiveDocs = decoded.reversed.map<Map<String, dynamic>>((item) => _formatItem(item)).toList();
-          });
+    for (final url in endpoints) {
+      try {
+        final res = await http.get(
+          Uri.parse(url),
+          headers: const {
+            'Accept': 'application/json',
+            'Cache-Control': 'no-cache, no-store, must-revalidate',
+            'Pragma': 'no-cache',
+            'Expires': '0',
+          },
+        ).timeout(const Duration(seconds: 7));
+
+        if (res.statusCode == 200) {
+          String body = utf8.decode(res.bodyBytes).trim();
+          if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
+
+          final decoded = jsonDecode(body);
+          List<dynamic> rawList = [];
+
+          if (decoded is List) {
+            rawList = decoded;
+          } else if (decoded is Map && decoded['books'] is List) {
+            rawList = decoded['books'];
+          }
+
+          if (rawList.isNotEmpty && mounted) {
+            setState(() {
+              _allLiveDocs = rawList.reversed.map<Map<String, dynamic>>((item) {
+                return _formatItem(item);
+              }).toList();
+            });
+            return;
+          }
         }
+      } catch (_) {
+        continue;
       }
-    } catch (_) {}
+    }
   }
 
   List<Map<String, dynamic>> _getVisibleDocs() {
@@ -339,7 +364,6 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard> {
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
                         child: Row(
                           children: [
-                            // PDF Icon Container
                             Container(
                               width: 38,
                               height: 44,
@@ -360,14 +384,12 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard> {
                               ),
                             ),
                             const SizedBox(width: 12),
-                            // Details
                             Expanded(
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Row(
                                     children: [
-                                      // Clean High-Contrast Red Badge
                                       Container(
                                         padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                         decoration: BoxDecoration(
