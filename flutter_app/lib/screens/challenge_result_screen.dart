@@ -30,6 +30,7 @@ class ChallengeResultScreen extends StatefulWidget {
 class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
   bool _isSubmitting = false;
   bool _isSubmitted = false;
+  String _debugLog = "Connecting to database...";
 
   @override
   void initState() {
@@ -37,28 +38,42 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
     _submitScoreToSupabase();
   }
 
-  // 🏆 Leaderboard Submission Logic (Strict 1 User = 1 Row with Upsert)
+  void _addLog(String msg) {
+    debugPrint(msg);
+    if (mounted) {
+      setState(() {
+        _debugLog = "$_debugLog\n$msg";
+      });
+    }
+  }
+
+  // 🏆 Leaderboard Submission Logic (Diagnostic Screen Debugging Included)
   Future<void> _submitScoreToSupabase() async {
-    setState(() => _isSubmitting = true);
+    setState(() {
+      _isSubmitting = true;
+      _debugLog = "▶ Init Submission...";
+    });
+
     try {
       final prefs = await SharedPreferences.getInstance();
       final client = Supabase.instance.client;
 
-      // 1. Permanent Device-backed User ID
+      // 1. User ID check
       final String? localUserId = prefs.getString('user_id')?.trim();
+      _addLog("User ID: ${localUserId ?? 'NULL'}");
+
       if (localUserId == null || localUserId.isEmpty) {
-        debugPrint("❌ User ID SharedPreferences me nahi mila!");
+        _addLog("❌ FATAL: user_id is missing in SharedPreferences!");
         if (mounted) setState(() => _isSubmitting = false);
         return;
       }
 
-      // 2. Standardized User Name
+      // 2. Name & District check
       String userName = prefs.getString('user_name')?.trim() ??
           prefs.getString('custom_aspirant_name')?.trim() ??
           '';
 
-      // Fallback: Agar local name missing ho toh app_users table se 'full_name' uthayein
-      if ((userName.isEmpty || userName == 'Aspirant')) {
+      if (userName.isEmpty || userName == 'Aspirant') {
         try {
           final userRow = await client
               .from('app_users')
@@ -67,59 +82,96 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
               .maybeSingle();
 
           if (userRow != null && userRow['full_name'] != null) {
-            final String dbName = userRow['full_name'].toString().trim();
-            if (dbName.isNotEmpty) {
-              userName = dbName;
-              await prefs.setString('user_name', userName);
-              await prefs.setString('custom_aspirant_name', userName);
-            }
+            userName = userRow['full_name'].toString().trim();
+            await prefs.setString('user_name', userName);
           }
         } catch (e) {
-          debugPrint("app_users se naam fetch karne me error: $e");
+          _addLog("app_users name fetch failed: $e");
         }
       }
 
       if (userName.isEmpty) userName = 'Aspirant';
-
       final String district = prefs.getString('user_district')?.trim() ?? 'Patna';
 
-      // 3. Purana score check karein taaki kam score hone par overwrite na ho
-      final existing = await client
+      _addLog("Name: $userName | District: $district");
+      _addLog("Submitted Score: ${widget.myScore}/10 (${widget.totalTimeTaken}s)");
+
+      // 3. Check Existing Record in daily_challenge_submissions
+      _addLog("Checking existing row in DB...");
+      final existingRes = await client
           .from('daily_challenge_submissions')
           .select('id, score, time_taken_seconds')
           .eq('user_id', localUserId)
           .eq('district', district)
-          .maybeSingle();
+          .limit(1);
 
-      bool shouldSave = true;
+      if (existingRes.isNotEmpty) {
+        final row = existingRes.first;
+        final int oldScore = (row['score'] ?? 0) as int;
+        final int oldTime = (row['time_taken_seconds'] ?? 9999) as int;
+        final rowId = row['id'];
 
-      if (existing != null) {
-        final int oldScore = (existing['score'] ?? 0) as int;
-        final int oldTime = (existing['time_taken_seconds'] ?? 9999) as int;
+        _addLog("Row Found (ID: $rowId). Old: $oldScore/10 (${oldTime}s)");
 
-        // Sirf behtar score ya same score par kam time hone par update hoga
-        shouldSave = widget.myScore > oldScore ||
+        bool isBetter = widget.myScore > oldScore ||
             (widget.myScore == oldScore && widget.totalTimeTaken < oldTime);
-      }
 
-      // 4. Upsert Operation (Single Row Guarantee)
-      if (shouldSave) {
-        await client.from('daily_challenge_submissions').upsert(
-          {
+        if (isBetter) {
+          _addLog("Updating row via ID: $rowId...");
+          final updateRes = await client
+              .from('daily_challenge_submissions')
+              .update({
+                'score': widget.myScore,
+                'time_taken_seconds': widget.totalTimeTaken,
+                'user_name': userName,
+              })
+              .eq('id', rowId)
+              .select();
+
+          _addLog("✅ UPDATE SUCCESS: $updateRes");
+        } else {
+          _addLog("ℹ️ Old score was equal or better. Skipping DB overwrite.");
+        }
+      } else {
+        // Fallback search by username if ID match not found
+        final nameRes = await client
+            .from('daily_challenge_submissions')
+            .select('id, score, time_taken_seconds')
+            .ilike('user_name', userName)
+            .eq('district', district)
+            .limit(1);
+
+        if (nameRes.isNotEmpty) {
+          final row = nameRes.first;
+          final rowId = row['id'];
+          _addLog("Found row by Name match (ID: $rowId). Updating with user_id...");
+
+          await client.from('daily_challenge_submissions').update({
             'user_id': localUserId,
-            'user_name': userName,
-            'district': district,
             'score': widget.myScore,
             'time_taken_seconds': widget.totalTimeTaken,
-          },
-          onConflict: 'user_id,district',
-        );
-        debugPrint("✅ 1 User = 1 Row Upsert Success: $localUserId | Score: ${widget.myScore}");
-      } else {
-        debugPrint("ℹ️ Purana record behtar tha, database overwrite nahi kiya.");
+            'user_name': userName,
+          }).eq('id', rowId);
+
+          _addLog("✅ SYNC & UPDATE SUCCESS by name!");
+        } else {
+          _addLog("No row found. Inserting fresh record...");
+          final insertRes = await client
+              .from('daily_challenge_submissions')
+              .insert({
+                'user_id': localUserId,
+                'user_name': userName,
+                'district': district,
+                'score': widget.myScore,
+                'time_taken_seconds': widget.totalTimeTaken,
+              })
+              .select();
+
+          _addLog("✅ INSERT SUCCESS: $insertRes");
+        }
       }
 
-      // 5. Local Cache Update
+      // 4. Update local cache
       await prefs.setString('last_sub_user', userName);
       await prefs.setString('last_sub_district', district);
       await prefs.setInt('last_sub_score', widget.myScore);
@@ -131,18 +183,15 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
           _isSubmitting = false;
         });
       }
-    } catch (e) {
-      debugPrint("❌ Supabase Submit Error: $e");
-      if (mounted) {
-        setState(() => _isSubmitting = false);
-      }
+    } catch (e, st) {
+      _addLog("❌ ERROR: $e");
+      debugPrint("Stack: $st");
+      if (mounted) setState(() => _isSubmitting = false);
     }
   }
 
-  // 📲 WhatsApp Challenge Share
   Future<void> _shareOnWhatsApp() async {
     final prefs = await SharedPreferences.getInstance();
-
     final String myName = prefs.getString('user_name')?.trim() ??
         prefs.getString('custom_aspirant_name')?.trim() ??
         'Dost';
@@ -159,8 +208,6 @@ Maine 10 sawaalo ka challenge complete kiya hai:
 
 Dum hai toh mujhe hara ke dikhao! Same questions par live test do:
 👉 $appLink
-
-App open karo aur seedhe rank ke liye compete karo! 🏆
 ''';
 
     await Share.share(message);
@@ -174,10 +221,6 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
-    final bool isDuel = widget.challengerScore > 0;
-    final bool won = widget.myScore > widget.challengerScore;
-    final bool tie = widget.myScore == widget.challengerScore;
-
     final scaffoldBg =
         isDark ? const Color(0xFF111827) : const Color(0xFFF9FAFB);
     final cardBg = isDark ? const Color(0xFF1F2937) : Colors.white;
@@ -191,9 +234,7 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
     return PopScope(
       canPop: false,
       onPopInvokedWithResult: (didPop, result) {
-        if (!didPop) {
-          _exitScreen();
-        }
+        if (!didPop) _exitScreen();
       },
       child: Scaffold(
         backgroundColor: scaffoldBg,
@@ -214,12 +255,10 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
           ],
         ),
         body: SafeArea(
-          child: Padding(
+          child: SingleChildScrollView(
             padding: const EdgeInsets.all(20),
             child: Column(
               children: [
-                const Spacer(),
-
                 // Metric Card
                 Container(
                   width: double.infinity,
@@ -228,74 +267,38 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                     color: cardBg,
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(color: borderColor),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.black.withOpacity(isDark ? 0.3 : 0.04),
-                        blurRadius: 12,
-                        offset: const Offset(0, 4),
-                      ),
-                    ],
                   ),
                   child: Column(
                     children: [
                       Text(
-                        isDuel
-                            ? (won
-                                ? '🎉 Match Jeet Gaye!'
-                                : (tie ? '🤝 Match Tie!' : '💔 Match Haar Gaye!'))
-                            : 'Test Completed!',
+                        'Test Completed!',
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.w800,
-                          color: isDuel && won
-                              ? const Color(0xFF16A34A)
-                              : textColor,
+                          color: textColor,
                         ),
                       ),
-                      const SizedBox(height: 20),
-
-                      if (isDuel) ...[
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            _avatarColumn(widget.challengerName,
-                                widget.challengerScore, false, isDark),
-                            Text(
-                              'VS',
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w900,
-                                color: subTextColor,
-                              ),
-                            ),
-                            _avatarColumn('You', widget.myScore, true, isDark),
-                          ],
+                      const SizedBox(height: 14),
+                      Text(
+                        '${widget.myScore} / 10',
+                        style: const TextStyle(
+                          fontSize: 44,
+                          fontWeight: FontWeight.w900,
+                          color: Color(0xFF4F46E5),
                         ),
-                      ] else ...[
-                        Text(
-                          '${widget.myScore} / 10',
-                          style: const TextStyle(
-                            fontSize: 44,
-                            fontWeight: FontWeight.w900,
-                            color: Color(0xFF4F46E5),
-                          ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        'Time Taken: ${widget.totalTimeTaken}s',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w600,
+                          color: subTextColor,
                         ),
-                        const SizedBox(height: 6),
-                        Text(
-                          'Time Taken: ${widget.totalTimeTaken}s',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: subTextColor,
-                          ),
-                        ),
-                      ],
-
-                      const SizedBox(height: 20),
+                      ),
+                      const SizedBox(height: 14),
                       Divider(color: borderColor),
-                      const SizedBox(height: 10),
-
-                      // Live Supabase Sync Status Strip
+                      const SizedBox(height: 8),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -313,14 +316,15 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                           const SizedBox(width: 6),
                           Text(
                             _isSubmitted
-                                ? 'District Leaderboard par save ho gaya!'
+                                ? 'Database Updated!'
                                 : (_isSubmitting
-                                    ? 'Syncing rank...'
-                                    : 'Offline mode'),
+                                    ? 'Syncing to Supabase...'
+                                    : 'Offline / Failed'),
                             style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                                color: subTextColor),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w600,
+                              color: subTextColor,
+                            ),
                           ),
                         ],
                       ),
@@ -328,7 +332,57 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                   ),
                 ),
 
-                const Spacer(),
+                const SizedBox(height: 16),
+
+                // 🛠️ SCREEN LIVE DEBUG LOG BOX
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Colors.black87,
+                    borderRadius: BorderRadius.circular(12),
+                    border: Border.all(
+                      color: _isSubmitted ? Colors.greenAccent : Colors.amberAccent,
+                      width: 1,
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Icon(
+                            Icons.terminal_rounded,
+                            size: 16,
+                            color: _isSubmitted ? Colors.greenAccent : Colors.amberAccent,
+                          ),
+                          const SizedBox(width: 6),
+                          const Text(
+                            "LIVE SUPABASE DEBUG LOG",
+                            style: TextStyle(
+                              fontSize: 11,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white70,
+                              letterSpacing: 1,
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 6),
+                      Text(
+                        _debugLog,
+                        style: const TextStyle(
+                          fontSize: 11,
+                          fontFamily: 'monospace',
+                          color: Colors.greenAccent,
+                          height: 1.35,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+
+                const SizedBox(height: 20),
 
                 // WhatsApp Share Button
                 SizedBox(
@@ -336,12 +390,10 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                   height: 48,
                   child: ElevatedButton.icon(
                     onPressed: _shareOnWhatsApp,
-                    icon: const Icon(Icons.share_rounded,
-                        size: 18, color: Colors.white),
+                    icon: const Icon(Icons.share_rounded, size: 18, color: Colors.white),
                     label: const Text(
                       'Dost ko WhatsApp par Challenge karein',
-                      style:
-                          TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
+                      style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700),
                     ),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: const Color(0xFF25D366),
@@ -380,40 +432,6 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
           ),
         ),
       ),
-    );
-  }
-
-  Widget _avatarColumn(String name, int score, bool isMe, bool isDark) {
-    return Column(
-      children: [
-        CircleAvatar(
-          radius: 26,
-          backgroundColor:
-              isMe ? const Color(0xFF4F46E5) : const Color(0xFFD97706),
-          child: Text(
-            name.isNotEmpty ? name[0].toUpperCase() : 'P',
-            style: const TextStyle(
-                color: Colors.white, fontWeight: FontWeight.w800, fontSize: 18),
-          ),
-        ),
-        const SizedBox(height: 8),
-        Text(
-          name,
-          style: TextStyle(
-            fontWeight: FontWeight.w700,
-            fontSize: 13,
-            color: isDark ? Colors.white : const Color(0xFF111827),
-          ),
-        ),
-        Text(
-          '$score / 10',
-          style: TextStyle(
-            fontSize: 15,
-            fontWeight: FontWeight.w800,
-            color: isMe ? const Color(0xFF4F46E5) : const Color(0xFFD97706),
-          ),
-        ),
-      ],
     );
   }
 }
