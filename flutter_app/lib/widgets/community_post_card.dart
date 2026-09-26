@@ -21,6 +21,7 @@ class CommunityPostCard extends StatefulWidget {
   final Function(bool isSaved) onBookmarkToggle;
   final Function(int optionIndex) onPollVote;
   final VoidCallback? onPostDeleted;
+  final Function(String newContent)? onPostUpdated;
 
   const CommunityPostCard({
     super.key,
@@ -35,6 +36,7 @@ class CommunityPostCard extends StatefulWidget {
     required this.onBookmarkToggle,
     required this.onPollVote,
     this.onPostDeleted,
+    this.onPostUpdated,
   });
 
   @override
@@ -228,7 +230,130 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
     } catch (_) {}
   }
 
-  // Butter-Smooth Bottom Sheet Menu (Zero Lag Replacement for PopupMenu)
+  // Modal to edit the post content
+  void _openEditPostModal() {
+    final editCtrl = TextEditingController(text: widget.post['content'] ?? '');
+    bool isSaving = false;
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setModalState) => Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(ctx).viewInsets.bottom + 16,
+            left: 16,
+            right: 16,
+            top: 16,
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Edit Post',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                    ),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.close),
+                    onPressed: () => Navigator.pop(ctx),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+              TextField(
+                controller: editCtrl,
+                maxLines: 4,
+                style: TextStyle(
+                  color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                ),
+                decoration: InputDecoration(
+                  hintText: 'Update your question or text...',
+                  border: const OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: _primaryBlue, width: 1.5),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 14),
+              SizedBox(
+                width: double.infinity,
+                height: 44,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: _primaryBlue,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  ),
+                  onPressed: isSaving
+                      ? null
+                      : () async {
+                          final updatedText = editCtrl.text.trim();
+                          if (updatedText.isEmpty) return;
+
+                          setModalState(() => isSaving = true);
+                          try {
+                            await Supabase.instance.client
+                                .from('community_posts')
+                                .update({'content': updatedText})
+                                .eq('id', widget.post['id'])
+                                .eq('creator_id', widget.currentLoggedInHandle);
+
+                            setState(() {
+                              widget.post['content'] = updatedText;
+                            });
+
+                            widget.onPostUpdated?.call(updatedText);
+
+                            if (context.mounted) {
+                              Navigator.pop(ctx);
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Row(
+                                    children: [
+                                      Icon(Icons.check_circle_rounded, color: Colors.white, size: 18),
+                                      SizedBox(width: 8),
+                                      Text('Post updated successfully!'),
+                                    ],
+                                  ),
+                                  backgroundColor: Color(0xFF16A34A),
+                                ),
+                              );
+                            }
+                          } catch (e) {
+                            setModalState(() => isSaving = false);
+                            debugPrint("Edit error: $e");
+                          }
+                        },
+                  child: isSaving
+                      ? const SizedBox(
+                          width: 20,
+                          height: 20,
+                          child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2),
+                        )
+                      : const Text('Save Changes', style: TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  // Bottom Sheet Options Menu with Edit & Delete options
   void _openPostOptionsSheet(bool isMyPost) {
     HapticFeedback.lightImpact();
 
@@ -259,6 +384,28 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                   ),
                 ),
                 if (isMyPost) ...[
+                  ListTile(
+                    leading: const Icon(Icons.edit_outlined, color: _primaryBlue),
+                    title: Text(
+                      'Edit Post',
+                      style: TextStyle(
+                        color: textColor,
+                        fontWeight: FontWeight.w600,
+                        fontSize: 14,
+                      ),
+                    ),
+                    onTap: () {
+                      Navigator.pop(ctx);
+                      _openEditPostModal();
+                    },
+                  ),
+                  Divider(
+                    height: 1,
+                    thickness: 0.5,
+                    color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                    indent: 16,
+                    endIndent: 16,
+                  ),
                   ListTile(
                     leading: const Icon(Icons.delete_outline_rounded, color: Colors.redAccent),
                     title: const Text(
