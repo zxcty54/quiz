@@ -22,7 +22,7 @@ class DistrictTopLeaderboardWidget extends StatefulWidget {
 }
 
 class _DistrictTopLeaderboardWidgetState
-    extends State<DistrictTopLeaderboardWidget> {
+    extends State<DistrictTopLeaderboardWidget> with WidgetsBindingObserver {
   final List<String> _biharDistricts = const [
     'Araria', 'Arwal', 'Aurangabad', 'Banka', 'Begusarai', 'Bhagalpur',
     'Bhojpur', 'Buxar', 'Darbhanga', 'East Champaran', 'Gaya', 'Gopalganj',
@@ -36,122 +36,208 @@ class _DistrictTopLeaderboardWidgetState
   String _selectedDistrict = 'Patna';
   bool _isLoading = true;
   List<Map<String, dynamic>> _topRankers = [];
-  Map<String, dynamic>? _currentUserSubmission;
-  int _currentUserRank = 0; // 0 matlab not attempted
+
+  // Dynamic User Rank Performance Data
+  int _userScore = 0;
+  int _userTime = 0;
+  int _userRank = 0;
+  bool _hasAttempted = false;
 
   @override
   void initState() {
     super.initState();
-    _initUserDistrict();
+    WidgetsBinding.instance.addObserver(this);
+    _initAndLoadLeaderboard();
   }
 
-  Future<void> _initUserDistrict() async {
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    super.dispose();
+  }
+
+  // Auto-reload when user completes quiz & returns to Home Screen
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      _initAndLoadLeaderboard();
+    }
+  }
+
+  Future<void> _initAndLoadLeaderboard() async {
     final prefs = await SharedPreferences.getInstance();
-    final savedDistrict =
-        prefs.getString('user_district')?.trim() ?? 'Patna';
+    final client = Supabase.instance.client;
 
-    final district = _biharDistricts.contains(savedDistrict)
-        ? savedDistrict
-        : 'Patna';
+    final savedDistrict = prefs.getString('user_district')?.trim() ?? 'Patna';
+    final district = _biharDistricts.contains(savedDistrict) ? savedDistrict : 'Patna';
 
-    if (!mounted) return;
-    setState(() {
-      _selectedDistrict = district;
-    });
+    final localUserId = prefs.getString('user_id')?.trim();
 
-    await _fetchDistrictLeaderboard(district);
+    // 1. Single Name Standardisation (Local -> app_users -> Fallback)
+    String standardName = prefs.getString('user_name')?.trim() ??
+        prefs.getString('custom_aspirant_name')?.trim() ??
+        '';
+
+    if ((standardName.isEmpty || standardName == 'Aspirant') && localUserId != null) {
+      try {
+        final userRow = await client
+            .from('app_users')
+            .select('full_name')
+            .eq('user_id', localUserId)
+            .maybeSingle();
+
+        if (userRow != null && userRow['full_name'] != null) {
+          final dbName = userRow['full_name'].toString().trim();
+          if (dbName.isNotEmpty) {
+            standardName = dbName;
+            await prefs.setString('user_name', dbName);
+            await prefs.setString('custom_aspirant_name', dbName);
+          }
+        }
+      } catch (e) {
+        debugPrint('app_users sync fallback error: $e');
+      }
+    }
+
+    if (standardName.isEmpty) standardName = 'Aspirant';
+
+    // Instant local cache rendering
+    final cachedScore = prefs.getInt('last_sub_score');
+    final cachedTime = prefs.getInt('last_sub_time') ?? 0;
+
+    if (mounted) {
+      setState(() {
+        _selectedDistrict = district;
+        if (cachedScore != null) {
+          _userScore = cachedScore;
+          _userTime = cachedTime;
+          _hasAttempted = true;
+        }
+      });
+    }
+
+    await _fetchDistrictLeaderboard(district, localUserId, standardName);
   }
 
-  // 🎯 FETCH TOP 5 + CALCULATE EXACT USER RANK (EVEN IF OUTSIDE TOP 5)
-  Future<void> _fetchDistrictLeaderboard(String district) async {
+  // 🎯 FETCH LEADERBOARD & ACCURATELY CALCULATE USER RANK
+  Future<void> _fetchDistrictLeaderboard(
+    String district,
+    String? localUserId,
+    String standardName,
+  ) async {
     if (mounted) setState(() => _isLoading = true);
 
     try {
       final client = Supabase.instance.client;
-      final prefs = await SharedPreferences.getInstance();
 
-      // 1. Top 5 Candidates Fetch
+      // 1. Fetch District Top 50 (Identical to Explore Screen)
       final res = await client
           .from('daily_challenge_submissions')
           .select('user_id, user_name, district, score, time_taken_seconds')
           .eq('district', district)
           .order('score', ascending: false)
           .order('time_taken_seconds', ascending: true)
-          .limit(5);
+          .limit(50);
 
-      final List<Map<String, dynamic>> rankers =
-          List<Map<String, dynamic>>.from(res);
+      final List<Map<String, dynamic>> allRankers =
+          List<Map<String, dynamic>>.from(res ?? []);
 
-      // 2. Identify Current User (By Auth ID ya SharedPreferences Name)
-      final currentUserId = client.auth.currentUser?.id;
-      final localName = prefs.getString('user_name')?.trim() ??
-          prefs.getString('custom_aspirant_name')?.trim() ??
-          '';
+      final top5 = allRankers.take(5).toList();
 
-      Map<String, dynamic>? mySub;
-      int calculatedRank = 0;
+      int foundRank = 0;
+      int myScore = 0;
+      int myTime = 0;
+      bool userFound = false;
 
-      // Query for user submission
-      var userQuery = client
-          .from('daily_challenge_submissions')
-          .select('id, user_name, district, score, time_taken_seconds')
-          .eq('district', district);
+      final normalizedTargetName = standardName.trim().toLowerCase();
 
-      if (currentUserId != null) {
-        userQuery = userQuery.eq('user_id', currentUserId);
-      } else if (localName.isNotEmpty) {
-        userQuery = userQuery.eq('user_name', localName);
+      // 2. Search user in the leaderboard rows
+      for (int i = 0; i < allRankers.length; i++) {
+        final row = allRankers[i];
+        final rowUid = row['user_id']?.toString().trim();
+        final rowName = (row['user_name'] ?? '').toString().trim().toLowerCase();
+
+        bool isMe = false;
+        if (localUserId != null && localUserId.isNotEmpty && rowUid == localUserId) {
+          isMe = true;
+        } else if (normalizedTargetName.isNotEmpty && rowName == normalizedTargetName) {
+          isMe = true;
+        }
+
+        if (isMe) {
+          foundRank = i + 1;
+          myScore = (row['score'] ?? 0) as int;
+          myTime = (row['time_taken_seconds'] ?? 0) as int;
+          userFound = true;
+          break;
+        }
       }
 
-      final myRes = await userQuery.limit(1);
+      // 3. If outside Top 50, fetch direct single record safely
+      if (!userFound) {
+        var query = client
+            .from('daily_challenge_submissions')
+            .select('user_id, user_name, score, time_taken_seconds')
+            .eq('district', district);
 
-      if (myRes.isNotEmpty) {
-        mySub = myRes.first;
-        final myScore = (mySub['score'] ?? 0) as int;
-        final myTime = (mySub['time_taken_seconds'] ?? 0) as int;
+        if (localUserId != null && localUserId.isNotEmpty) {
+          query = query.eq('user_id', localUserId);
+        } else if (normalizedTargetName.isNotEmpty) {
+          query = query.ilike('user_name', standardName.trim());
+        }
 
-        // Check if already in top 5 list
-        final indexInTop5 = rankers.indexWhere((item) =>
-            (currentUserId != null && item['user_id'] == currentUserId) ||
-            (localName.isNotEmpty && item['user_name'] == localName));
+        final myRes = await query.limit(1);
 
-        if (indexInTop5 != -1) {
-          calculatedRank = indexInTop5 + 1;
-        } else {
-          // Exact District Rank count karna:
-          // Jo log higher score pe hain
+        if (myRes.isNotEmpty) {
+          final sub = myRes.first;
+          myScore = (sub['score'] ?? 0) as int;
+          myTime = (sub['time_taken_seconds'] ?? 0) as int;
+
           final higherCount = await client
               .from('daily_challenge_submissions')
               .count(CountOption.exact)
               .eq('district', district)
               .gt('score', myScore);
 
-          // Jo same score par hain par kam time liya hai
-          final sameScoreFasterCount = await client
+          final sameScoreFaster = await client
               .from('daily_challenge_submissions')
               .count(CountOption.exact)
               .eq('district', district)
               .eq('score', myScore)
               .lt('time_taken_seconds', myTime);
 
-          calculatedRank = higherCount + sameScoreFasterCount + 1;
+          foundRank = higherCount + sameScoreFaster + 1;
+          userFound = true;
         }
+      }
+
+      // 4. Fallback to Local Cache if DB write has a slight millisecond latency
+      final prefs = await SharedPreferences.getInstance();
+      final cachedScore = prefs.getInt('last_sub_score');
+      final cachedTime = prefs.getInt('last_sub_time') ?? 0;
+
+      if (!userFound && cachedScore != null) {
+        userFound = true;
+        myScore = cachedScore;
+        myTime = cachedTime;
+        foundRank = allRankers.length > 5 ? allRankers.length : 1;
       }
 
       if (!mounted) return;
       setState(() {
-        _topRankers = rankers;
-        _currentUserSubmission = mySub;
-        _currentUserRank = calculatedRank;
+        _topRankers = top5;
+        if (userFound) {
+          _userRank = foundRank;
+          _userScore = myScore;
+          _userTime = myTime;
+          _hasAttempted = true;
+        }
         _isLoading = false;
       });
     } catch (e) {
-      debugPrint('District Leaderboard error: $e');
+      debugPrint('Leaderboard sync error: $e');
       if (!mounted) return;
       setState(() {
-        _topRankers = [];
-        _currentUserSubmission = null;
-        _currentUserRank = 0;
         _isLoading = false;
       });
     }
@@ -224,7 +310,7 @@ class _DistrictTopLeaderboardWidgetState
                     ),
                   ),
 
-                // Top 3 Podium Cards
+                // Top 3 Podium Cards[cite: 1]
                 ...List.generate(top3.length, (index) {
                   return _buildPodiumRankCard(
                     item: top3[index],
@@ -233,7 +319,7 @@ class _DistrictTopLeaderboardWidgetState
                   );
                 }),
 
-                // Rank 4 & 5 Rows
+                // Rank 4 & 5 Rows[cite: 1]
                 ...List.generate(remainingRankers.length, (index) {
                   return _buildRegularRankRow(
                     item: remainingRankers[index],
@@ -244,12 +330,12 @@ class _DistrictTopLeaderboardWidgetState
 
                 const SizedBox(height: 10),
 
-                // 🌟 ALWAYS VISIBLE USER RANK BAR
+                // 🌟 UNIFORM USER STATUS BAR (Real Time Synchronized)[cite: 1]
                 _buildUniformUserStatusBar(isDark),
 
                 const SizedBox(height: 10),
 
-                // View All Bihar CTA
+                // View All Bihar Districts CTA[cite: 1]
                 _buildFullRanklistButton(isDark),
               ],
             ),
@@ -646,15 +732,10 @@ class _DistrictTopLeaderboardWidgetState
   }
 
   // ============================================================
-  // 🌟 UNIFORM USER STATUS BAR (Always displays rank & score)
+  // UNIFORM USER STATUS BAR
   // ============================================================
   Widget _buildUniformUserStatusBar(bool isDark) {
-    final bool hasAttempted = _currentUserSubmission != null;
-    final int score = hasAttempted ? (_currentUserSubmission!['score'] ?? 0) : 0;
-    final int time = hasAttempted ? (_currentUserSubmission!['time_taken_seconds'] ?? 0) : 0;
-    
-    // Rank label: #14 agar attempt kiya hai, #0 agar kabhi nahi diya
-    final String rankLabel = hasAttempted ? '#$_currentUserRank' : '#0';
+    final String rankLabel = _hasAttempted ? '#${_userRank > 0 ? _userRank : 1}' : '#0';
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
@@ -672,11 +753,10 @@ class _DistrictTopLeaderboardWidgetState
       ),
       child: Row(
         children: [
-          // Rank Badge
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
             decoration: BoxDecoration(
-              color: hasAttempted ? const Color(0xFF0F766E) : const Color(0xFF334155),
+              color: _hasAttempted ? const Color(0xFF0F766E) : const Color(0xFF334155),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Text(
@@ -689,8 +769,6 @@ class _DistrictTopLeaderboardWidgetState
             ),
           ),
           const SizedBox(width: 9),
-
-          // User Performance Text
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -707,27 +785,27 @@ class _DistrictTopLeaderboardWidgetState
                 ),
                 const SizedBox(height: 2),
                 Text(
-                  hasAttempted
-                      ? "Score: $score/10 (${time}s)"
+                  _hasAttempted
+                      ? "Score: $_userScore/10 (${_userTime}s)"
                       : "Score: 0/10 (Not Attempted)",
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
                   style: TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w700,
-                    color: hasAttempted ? const Color(0xFF5EEAD4) : const Color(0xFF94A3B8),
+                    color: _hasAttempted ? const Color(0xFF5EEAD4) : const Color(0xFF94A3B8),
                   ),
                 ),
               ],
             ),
           ),
           const SizedBox(width: 6),
-
-          // Action Button (Review if attempted, Play if 0)
           ElevatedButton(
-            onPressed: hasAttempted ? widget.onReviewMistakes : widget.onTakeQuiz,
+            onPressed: _hasAttempted
+                ? (widget.onReviewMistakes ?? widget.onTakeQuiz)
+                : widget.onTakeQuiz,
             style: ElevatedButton.styleFrom(
-              backgroundColor: hasAttempted ? const Color(0xFF10B981) : const Color(0xFF6366F1),
+              backgroundColor: _hasAttempted ? const Color(0xFF10B981) : const Color(0xFF6366F1),
               foregroundColor: Colors.white,
               elevation: 0,
               padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 0),
@@ -737,7 +815,7 @@ class _DistrictTopLeaderboardWidgetState
               ),
             ),
             child: Text(
-              hasAttempted ? 'Review' : 'Play Quiz',
+              _hasAttempted ? 'Review' : 'Play Quiz',
               style: const TextStyle(
                 fontSize: 10.5,
                 fontWeight: FontWeight.w900,
@@ -767,7 +845,7 @@ class _DistrictTopLeaderboardWidgetState
                 userDistrict: _selectedDistrict,
               ),
             ),
-          );
+          ).then((_) => _initAndLoadLeaderboard()); // Auto-refresh when back from screen
         },
         child: Container(
           width: double.infinity,
