@@ -10,10 +10,11 @@ class FirstInIndiaWidget extends StatefulWidget {
   const FirstInIndiaWidget({super.key, required this.isDarkMode});
 
   @override
-  State<FirstInIndiaWidget> createState() => _FirstInIndiaWidgetState();
+  State<FirstInIndiaWidget> createState() => FirstInIndiaWidgetState(); // 👈 Public State return
 }
 
-class _FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
+// 👈 Class se '_' hata diya gaya hai taaki home_tab.dart ki GlobalKey compile ho sake
+class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
   List<dynamic> _alertNewsList = [];
   bool _isLoading = true;
   int _activeIndex = 0;
@@ -104,6 +105,7 @@ class _FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
     } catch (_) {}
   }
 
+  // 🔄 Public method for Pull-to-Refresh from home_tab.dart
   Future<void> fetchFirstInIndia({bool forceRefresh = false}) async {
     final prefs = await SharedPreferences.getInstance();
     final String todayStr = DateTime.now().toIso8601String().split('T')[0];
