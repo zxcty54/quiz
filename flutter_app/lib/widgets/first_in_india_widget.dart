@@ -88,7 +88,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(isSaved ? "Removed from Saved Vault" : "Saved to Vault 📌"),
+          content: Text(isSaved ? "Removed from Vault" : "Saved to Vault 📌"),
           duration: const Duration(seconds: 1),
           behavior: SnackBarBehavior.floating,
         ),
@@ -173,18 +173,12 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
   Widget build(BuildContext context) {
     final bool isDark = widget.isDarkMode;
 
-    final Color cardBg = isDark ? const Color(0xFF0C1322) : Colors.white;
-    final Color borderColor = isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0);
-    final Color actionBtnBg = isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9);
-    final Color actionBtnBorder = isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1);
-    final Color sectionHeaderColor = isDark ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A);
-
     if (_isLoading) {
       return Container(
         height: 200,
         decoration: BoxDecoration(
-          color: cardBg,
-          borderRadius: BorderRadius.circular(20),
+          color: isDark ? const Color(0xFF0F172A) : Colors.white,
+          borderRadius: BorderRadius.circular(22),
         ),
         child: const Center(
           child: CircularProgressIndicator(color: Color(0xFFD97706), strokeWidth: 2.5),
@@ -194,60 +188,118 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
     if (_alertNewsList.isEmpty) return const SizedBox.shrink();
 
+    // 🎨 Ultra-clean Eye-Catching Shadows & Gradients
+    final BoxDecoration cardDecoration = BoxDecoration(
+      gradient: isDark
+          ? const LinearGradient(
+              colors: [Color(0xFF0F172A), Color(0xFF1E293B)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            )
+          : const LinearGradient(
+              colors: [Color(0xFFFFFFFF), Color(0xFFFFFDF7)],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
+            ),
+      borderRadius: BorderRadius.circular(24),
+      border: Border.all(
+        color: isDark ? const Color(0xFF334155) : const Color(0xFFFDE68A),
+        width: 1.5,
+      ),
+      boxShadow: [
+        BoxShadow(
+          color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.08 : 0.12),
+          blurRadius: 24,
+          offset: const Offset(0, 8),
+          spreadRadius: 2,
+        ),
+        BoxShadow(
+          color: Colors.black.withOpacity(isDark ? 0.35 : 0.03),
+          blurRadius: 10,
+          offset: const Offset(0, 3),
+        ),
+      ],
+    );
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // 🏆 1. TITLE HEADER & HIGH YIELD TAG (Container ke upar)
+        // 🏆 Top Header with High Yield Badge
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 8.0),
+          padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 6.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
                   Container(
-                    padding: const EdgeInsets.all(6),
+                    padding: const EdgeInsets.all(7),
                     decoration: BoxDecoration(
-                      color: const Color(0xFFD97706).withOpacity(0.12),
-                      borderRadius: BorderRadius.circular(8),
+                      gradient: const LinearGradient(
+                        colors: [Color(0xFFF59E0B), Color(0xFFD97706)],
+                      ),
+                      borderRadius: BorderRadius.circular(10),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0xFFD97706).withOpacity(0.35),
+                          blurRadius: 8,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
                     ),
-                    child: const Icon(Icons.emoji_events_rounded, size: 18, color: Color(0xFFD97706)),
+                    child: const Text('🏆', style: TextStyle(fontSize: 14)),
                   ),
-                  const SizedBox(width: 8),
-                  Text(
-                    'First in India',
-                    style: TextStyle(
-                      fontSize: 16.5,
-                      fontWeight: FontWeight.w800,
-                      color: sectionHeaderColor,
-                      letterSpacing: -0.3,
-                    ),
+                  const SizedBox(width: 10),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'First in India Express',
+                        style: TextStyle(
+                          fontSize: 16.5,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: -0.3,
+                          color: isDark ? Colors.white : const Color(0xFF0F172A),
+                        ),
+                      ),
+                      Text(
+                        'Direct Scoring 1-Liners for Exams',
+                        style: TextStyle(
+                          fontSize: 10.5,
+                          fontWeight: FontWeight.w500,
+                          color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
-              // ⚡ HIGH YIELD TAG
+              // High Yield Pill
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+                padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFD97706).withOpacity(isDark ? 0.2 : 0.12),
-                  borderRadius: BorderRadius.circular(6),
-                  border: Border.all(
-                    color: const Color(0xFFF59E0B).withOpacity(0.6),
-                    width: 0.8,
-                  ),
+                  color: const Color(0xFFDC2626),
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0xFFDC2626).withOpacity(0.3),
+                      blurRadius: 6,
+                      offset: const Offset(0, 2),
+                    ),
+                  ],
                 ),
                 child: const Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Icons.bolt_rounded, size: 12, color: Color(0xFFD97706)),
-                    SizedBox(width: 3),
+                    Icon(Icons.bolt_rounded, size: 12, color: Colors.white),
+                    SizedBox(width: 2),
                     Text(
                       'HIGH YIELD',
                       style: TextStyle(
-                        color: Color(0xFFD97706),
+                        color: Colors.white,
                         fontSize: 9.5,
-                        fontWeight: FontWeight.w800,
-                        letterSpacing: 0.4,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0.6,
                       ),
                     ),
                   ],
@@ -259,35 +311,24 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
         const SizedBox(height: 6),
 
-        // 📇 2. MAIN CARD CONTAINER
+        // 📇 Main Focus Card
         Container(
           width: double.infinity,
-          decoration: BoxDecoration(
-            color: cardBg,
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(color: borderColor, width: 1.4),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black.withOpacity(isDark ? 0.4 : 0.05),
-                blurRadius: 16,
-                offset: const Offset(0, 6),
-              ),
-            ],
-          ),
+          decoration: cardDecoration,
           child: ClipRRect(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(24),
             child: Stack(
               children: [
-                // Top Accent Line[cite: 1, 2]
+                // Top Glowing Amber Bar
                 Positioned(
                   top: 0,
                   left: 0,
                   right: 0,
-                  height: 4,
+                  height: 4.5,
                   child: Container(
                     decoration: const BoxDecoration(
                       gradient: LinearGradient(
-                        colors: [Color(0xFFF59E0B), Color(0xFFEA580C)],
+                        colors: [Color(0xFFF59E0B), Color(0xFFEA580C), Color(0xFFDC2626)],
                       ),
                     ),
                   ),
@@ -296,23 +337,23 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                 Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Cards PageView
+                    // Dynamic Content PageView
                     _ExpandablePageView(
                       controller: _pageController,
                       itemCount: _alertNewsList.length,
                       onPageChanged: (i) => setState(() => _activeIndex = i),
                       itemBuilder: (context, index) {
-                        final item = _alertNewsList[index];
-                        return _buildCardContent(item, isDark, actionBtnBg, actionBtnBorder);
+                        return _buildCardContent(_alertNewsList[index], isDark);
                       },
                     ),
 
-                    // Navigation Row: Previous • Alert X of Y • Next Alert[cite: 2]
+                    // Bottom Navigation Bar
                     Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                      padding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
+                          // Previous Button
                           InkWell(
                             onTap: _activeIndex > 0
                                 ? () {
@@ -322,115 +363,146 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                                     );
                                   }
                                 : null,
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.circular(10),
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                               child: Row(
                                 children: [
                                   Icon(
-                                    Icons.chevron_left_rounded,
-                                    size: 18,
+                                    Icons.arrow_back_ios_new_rounded,
+                                    size: 13,
                                     color: _activeIndex > 0
-                                        ? (isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B))
-                                        : Colors.grey.withOpacity(0.3),
+                                        ? const Color(0xFFD97706)
+                                        : Colors.grey.withOpacity(0.35),
                                   ),
+                                  const SizedBox(width: 4),
                                   Text(
-                                    'Previous',
+                                    'Prev',
                                     style: TextStyle(
                                       fontSize: 12,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w700,
                                       color: _activeIndex > 0
-                                          ? (isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B))
-                                          : Colors.grey.withOpacity(0.3),
+                                          ? const Color(0xFFD97706)
+                                          : Colors.grey.withOpacity(0.35),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
                           ),
-                          Text(
-                            'Alert ${_activeIndex + 1} of ${_alertNewsList.length}',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w600,
-                              color: isDark ? const Color(0xFF64748B) : const Color(0xFF94A3B8),
+
+                          // Dots + Counter Center
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                            decoration: BoxDecoration(
+                              color: isDark ? Colors.white.withOpacity(0.06) : const Color(0xFFF8FAFC),
+                              borderRadius: BorderRadius.circular(20),
+                              border: Border.all(
+                                color: isDark ? Colors.white12 : const Color(0xFFE2E8F0),
+                              ),
+                            ),
+                            child: Text(
+                              '${_activeIndex + 1} of ${_alertNewsList.length}',
+                              style: TextStyle(
+                                fontSize: 11,
+                                fontWeight: FontWeight.w800,
+                                color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF475569),
+                              ),
                             ),
                           ),
-                          ElevatedButton(
-                            onPressed: _activeIndex < _alertNewsList.length - 1
-                                ? () {
-                                    _pageController.nextPage(
-                                      duration: const Duration(milliseconds: 250),
-                                      curve: Curves.easeInOut,
-                                    );
-                                  }
-                                : () {
-                                    _pageController.animateToPage(
-                                      0,
-                                      duration: const Duration(milliseconds: 300),
-                                      curve: Curves.easeInOut,
-                                    );
-                                  },
-                            style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFFF59E0B),
-                              foregroundColor: Colors.black,
-                              elevation: 0,
-                              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                            ),
-                            child: Row(
-                              mainAxisSize: MainAxisSize.min,
-                              children: [
-                                Text(
-                                  _activeIndex < _alertNewsList.length - 1 ? 'Next\nAlert' : 'First\nAlert',
-                                  textAlign: TextAlign.center,
-                                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w900, height: 1.1),
+
+                          // Next Alert Button (Vibrant Pill)
+                          Material(
+                            color: Colors.transparent,
+                            child: InkWell(
+                              onTap: () {
+                                if (_activeIndex < _alertNewsList.length - 1) {
+                                  _pageController.nextPage(
+                                    duration: const Duration(milliseconds: 250),
+                                    curve: Curves.easeInOut,
+                                  );
+                                } else {
+                                  _pageController.animateToPage(
+                                    0,
+                                    duration: const Duration(milliseconds: 300),
+                                    curve: Curves.easeInOut,
+                                  );
+                                }
+                              },
+                              borderRadius: BorderRadius.circular(12),
+                              child: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
+                                decoration: BoxDecoration(
+                                  gradient: const LinearGradient(
+                                    colors: [Color(0xFFF59E0B), Color(0xFFD97706)],
+                                  ),
+                                  borderRadius: BorderRadius.circular(12),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: const Color(0xFFD97706).withOpacity(0.35),
+                                      blurRadius: 8,
+                                      offset: const Offset(0, 3),
+                                    ),
+                                  ],
                                 ),
-                                const SizedBox(width: 4),
-                                const Icon(Icons.chevron_right_rounded, size: 18, color: Colors.black),
-                              ],
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Text(
+                                      _activeIndex < _alertNewsList.length - 1 ? 'Next Alert' : 'First Alert',
+                                      style: const TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w900,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    const SizedBox(width: 4),
+                                    const Icon(Icons.arrow_forward_ios_rounded, size: 12, color: Colors.white),
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
                         ],
                       ),
                     ),
 
-                    // 🌐 PERSISTENT WEBSITE ARCHIVE FOOTER
+                    // Persistent Bottom Website Archive Link
                     Container(
                       margin: const EdgeInsets.fromLTRB(16, 0, 16, 14),
                       decoration: BoxDecoration(
-                        color: isDark
-                            ? const Color(0xFF1E293B).withOpacity(0.55)
-                            : const Color(0xFFFFFBEB),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(color: const Color(0xFFF59E0B).withOpacity(0.3), width: 1),
+                        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFFFFBEB),
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(
+                          color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.3 : 0.4),
+                          width: 1,
+                        ),
                       ),
                       child: Material(
                         color: Colors.transparent,
                         child: InkWell(
                           onTap: () => _openUrl(_websiteFullDataUrl),
-                          borderRadius: BorderRadius.circular(10),
+                          borderRadius: BorderRadius.circular(12),
                           child: const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+                            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Row(
                                   children: [
-                                    Text('🌐', style: TextStyle(fontSize: 13)),
+                                    Text('🌐', style: TextStyle(fontSize: 14)),
                                     SizedBox(width: 8),
                                     Text(
-                                      'Read Full 2026 Monthly Archives on Website',
+                                      'Explore All 2026 Archives on Website',
                                       style: TextStyle(
                                         fontSize: 11.5,
-                                        fontWeight: FontWeight.w700,
+                                        fontWeight: FontWeight.w800,
                                         color: Color(0xFFD97706),
                                       ),
                                     ),
                                   ],
                                 ),
-                                Icon(Icons.open_in_new_rounded, size: 13, color: Color(0xFFD97706)),
+                                Icon(Icons.open_in_new_rounded, size: 14, color: Color(0xFFD97706)),
                               ],
                             ),
                           ),
@@ -447,23 +519,13 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
     );
   }
 
-  Widget _buildCardContent(
-    Map<String, dynamic> item,
-    bool isDark,
-    Color actionBtnBg,
-    Color actionBtnBorder,
-  ) {
+  Widget _buildCardContent(Map<String, dynamic> item, bool isDark) {
     final List bullets = (item['bullets'] as List?) ?? [];
     final String itemId = (item['id'] ?? item['title'] ?? '').toString();
     final bool isSaved = _bookmarkedIds.contains(itemId);
 
-    final bool hasLocation = item.containsKey('location') && (item['location'] ?? '').toString().isNotEmpty;
-    final String secondaryTag = hasLocation
-        ? item['location'].toString()
-        : (item['category'] ?? 'General GK').toString();
-
     final Color titleColor = isDark ? Colors.white : const Color(0xFF0F172A);
-    final Color bulletTextColor = isDark ? const Color(0xFFCBD5E1) : const Color(0xFF334155);
+    final Color bulletTextColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B);
 
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 18, 16, 14),
@@ -471,151 +533,142 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Pills + Actions[cite: 2]
+          // Row: Exam Tag Pill + Spacer + Bookmark/Share
           Row(
             children: [
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4.5),
                 decoration: BoxDecoration(
-                  color: isDark ? const Color(0xFFF59E0B).withOpacity(0.12) : const Color(0xFFFEF3C7),
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(
-                    color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.5 : 0.6),
-                    width: 0.8,
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFFFEF3C7), Color(0xFFFDE68A)],
                   ),
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(color: const Color(0xFFF59E0B), width: 1),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Text('✨ 🏆', style: TextStyle(fontSize: 10)),
+                    const Text('⚡ 🏆', style: TextStyle(fontSize: 10)),
                     const SizedBox(width: 4),
                     Text(
-                      item['exam_tag'] ?? 'Static GK',
-                      style: TextStyle(
-                        color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFB45309),
+                      item['exam_tag'] ?? 'First in India / Static GK',
+                      style: const TextStyle(
+                        color: Color(0xFF92400E),
                         fontSize: 11,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              const SizedBox(width: 8),
-
-              // Secondary Tag (Pin sirf tab jab actual location ho)
-              Expanded(
-                child: Row(
-                  children: [
-                    Icon(
-                      hasLocation ? Icons.location_on_outlined : Icons.category_outlined,
-                      size: 14,
-                      color: hasLocation ? const Color(0xFFE11D48) : const Color(0xFF64748B),
-                    ),
-                    const SizedBox(width: 3),
-                    Flexible(
-                      child: Text(
-                        secondaryTag,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
-                          fontSize: 11.5,
-                          fontWeight: FontWeight.w600,
-                        ),
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 0.2,
                       ),
                     ),
                   ],
                 ),
               ),
 
-              // Bookmark[cite: 2]
+              const Spacer(),
+
+              // Bookmark
               InkWell(
                 onTap: () => _toggleBookmark(item),
                 borderRadius: BorderRadius.circular(8),
                 child: Container(
                   padding: const EdgeInsets.all(7),
                   decoration: BoxDecoration(
-                    color: isSaved ? const Color(0xFFF59E0B).withOpacity(0.15) : actionBtnBg,
+                    color: isSaved
+                        ? const Color(0xFFF59E0B).withOpacity(0.2)
+                        : (isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9)),
                     borderRadius: BorderRadius.circular(8),
                     border: Border.all(
-                      color: isSaved ? const Color(0xFFF59E0B) : actionBtnBorder,
+                      color: isSaved ? const Color(0xFFF59E0B) : (isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1)),
                       width: 1,
                     ),
                   ),
                   child: Icon(
                     isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
-                    size: 16,
-                    color: isSaved
-                        ? const Color(0xFFD97706)
-                        : (isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B)),
+                    size: 17,
+                    color: isSaved ? const Color(0xFFD97706) : const Color(0xFF64748B),
                   ),
                 ),
               ),
               const SizedBox(width: 6),
 
-              // Share[cite: 2]
+              // Share
               InkWell(
                 onTap: () => _shareContent(item),
                 borderRadius: BorderRadius.circular(8),
                 child: Container(
                   padding: const EdgeInsets.all(7),
                   decoration: BoxDecoration(
-                    color: actionBtnBg,
+                    color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: actionBtnBorder, width: 1),
+                    border: Border.all(
+                      color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
+                      width: 1,
+                    ),
                   ),
-                  child: Icon(
+                  child: const Icon(
                     Icons.share_outlined,
-                    size: 16,
-                    color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                    size: 17,
+                    color: Color(0xFF64748B),
                   ),
                 ),
               ),
             ],
           ),
+
           const SizedBox(height: 14),
 
-          // Title[cite: 2]
+          // News Heading
           Text(
             item['title'] ?? '',
             style: TextStyle(
-              fontSize: 16,
-              fontWeight: FontWeight.w800,
+              fontSize: 16.5,
+              fontWeight: FontWeight.w900,
               color: titleColor,
-              height: 1.3,
+              height: 1.32,
               letterSpacing: -0.3,
             ),
           ),
+
           const SizedBox(height: 12),
 
-          // Bullets[cite: 2]
+          // High Contrast Bullets
           ...bullets.map((bullet) {
             return Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  const Padding(
-                    padding: EdgeInsets.only(top: 2),
-                    child: Icon(
-                      Icons.check_circle_outline_rounded,
-                      size: 16,
-                      color: Color(0xFF0284C7),
-                    ),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                decoration: BoxDecoration(
+                  color: isDark ? Colors.white.withOpacity(0.04) : const Color(0xFFF8FAFC),
+                  borderRadius: BorderRadius.circular(10),
+                  border: Border.all(
+                    color: isDark ? Colors.white.withOpacity(0.08) : const Color(0xFFE2E8F0),
+                    width: 0.8,
                   ),
-                  const SizedBox(width: 8),
-                  Expanded(
-                    child: Text(
-                      bullet.toString(),
-                      style: TextStyle(
-                        fontSize: 12.5,
-                        fontWeight: FontWeight.w400,
-                        color: bulletTextColor,
-                        height: 1.35,
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(top: 2),
+                      child: Icon(
+                        Icons.check_circle_rounded,
+                        size: 15,
+                        color: Color(0xFF059669),
                       ),
                     ),
-                  ),
-                ],
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        bullet.toString(),
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: bulletTextColor,
+                          height: 1.35,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             );
           }),
