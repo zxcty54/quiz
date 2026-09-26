@@ -1,10 +1,10 @@
-// 🌈 AuroraGlassHeroBanner (Clean Motivation & Trust Edition)
+// 🌈 TrustHeroBannerWidget (Aurora Glass with Bento Stats & Motivation)
 import 'package:flutter/material.dart';
 
-class AuroraGlassHeroBanner extends StatelessWidget {
+class TrustHeroBannerWidget extends StatelessWidget {
   final bool isDarkMode;
 
-  const AuroraGlassHeroBanner({
+  const TrustHeroBannerWidget({
     super.key,
     required this.isDarkMode,
   });
@@ -114,7 +114,7 @@ class AuroraGlassHeroBanner extends StatelessWidget {
                   ),
                   const SizedBox(height: 14),
 
-                  // Frosted Bento Stats (Concrete Facts Only)
+                  // Frosted Bento Stats
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 12),
                     decoration: BoxDecoration(
