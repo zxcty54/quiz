@@ -19,24 +19,20 @@ class ProPdfVaultCard extends StatefulWidget {
   State<ProPdfVaultCard> createState() => _ProPdfVaultCardState();
 }
 
-class _ProPdfVaultCardState extends State<ProPdfVaultCard>
-    with SingleTickerProviderStateMixin {
-  late final AnimationController _blinkController;
+class _ProPdfVaultCardState extends State<ProPdfVaultCard> {
   static const String _defaultWebsiteUrl = "https://www.mocktester.online";
-
-  // 🚀 Updated: Pointing to public content_base repo
   static const String _booksJsonUrl =
       "https://raw.githubusercontent.com/zxcty54/content_base/main/books_database.json";
 
   final TextEditingController _searchController = TextEditingController();
   String _searchQuery = '';
 
-  // 🛡️ Fallback Data (Instant Rendering)
+  // 🛡️ Fallback Data (Instant Rendering jab tak live JSON load na ho)
   final List<Map<String, dynamic>> _fallbackDocs = [
     {
       'title': 'M. Laxmikanth: Indian Polity (6th Edition)',
       'tag': '🏛️ STANDARD',
-      'badge': 'ADDED TODAY',
+      'badge': 'UPDATED',
       'meta': 'Civil Services • Hindi/En Edition',
       'color': 0xFF7C3AED,
       'url': 'https://www.mocktester.online',
@@ -44,7 +40,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
     {
       'title': 'NCERT Science & GK 1-Liner Crux',
       'tag': '🌿 NCERT CRUX',
-      'badge': 'NEW ADDED',
+      'badge': 'POPULAR',
       'meta': 'Class 8-12 • Complete Handnotes',
       'color': 0xFF059669,
       'url': 'https://www.mocktester.online',
@@ -52,7 +48,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
     {
       'title': 'BPSC & BSSC 3000+ TCS PYQ Formula Sheet',
       'tag': '🔥 PYQ SHEET',
-      'badge': 'ADDED TODAY',
+      'badge': 'HOT',
       'meta': 'State PCS • Quick Revision Chart',
       'color': 0xFFD97706,
       'url': 'https://www.mocktester.online',
@@ -60,7 +56,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
     {
       'title': 'General Science Physics & Chemistry Formula Sheet',
       'tag': '⚡ HIGH YIELD',
-      'badge': 'NEW ADDED',
+      'badge': 'NEW',
       'meta': 'Competitive Exams • All SI Units & Laws',
       'color': 0xFF2563EB,
       'url': 'https://www.mocktester.online',
@@ -72,13 +68,9 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
   @override
   void initState() {
     super.initState();
-    _blinkController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 800),
-    )..repeat(reverse: true);
-
+    // Agar direct dynamic items pass hue hain toh use reverse karo taaki newest top pe rahe
     if (widget.dynamicPdfItems != null && widget.dynamicPdfItems!.isNotEmpty) {
-      _allLiveDocs = widget.dynamicPdfItems!.map<Map<String, dynamic>>((item) {
+      _allLiveDocs = widget.dynamicPdfItems!.reversed.map<Map<String, dynamic>>((item) {
         return _formatItem(item);
       }).toList();
     } else {
@@ -88,7 +80,6 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
 
   @override
   void dispose() {
-    _blinkController.dispose();
     _searchController.dispose();
     super.dispose();
   }
@@ -117,7 +108,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
       return {
         'title': chapter,
         'tag': item['tag'] ?? tag,
-        'badge': item['badge'] ?? 'ADDED TODAY',
+        'badge': item['badge'] ?? 'NEW',
         'meta': item['meta'] ?? '$cls • $lang Edition',
         'color': item['color'] != null ? (int.tryParse(item['color'].toString()) ?? colorVal) : colorVal,
         'url': item['articleUrl'] ?? item['url'] ?? widget.customWebsiteUrl ?? _defaultWebsiteUrl,
@@ -147,6 +138,7 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
         final decoded = jsonDecode(body);
         if (decoded is List && decoded.isNotEmpty && mounted) {
           setState(() {
+            // .reversed lagaya hai jisse JSON ka last added item hamesha index 0 (top) par aaye
             _allLiveDocs = decoded.reversed.map<Map<String, dynamic>>((item) => _formatItem(item)).toList();
           });
         }
@@ -172,11 +164,16 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
   Future<void> _launchUrl(String targetUrl) async {
     final Uri uri = Uri.parse(targetUrl);
     try {
-      await launchUrl(uri, mode: LaunchMode.externalApplication);
+      if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
+        throw 'Could not launch $uri';
+      }
     } catch (_) {
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('⚠️ Link open nahi ho paya!')),
+          const SnackBar(
+            behavior: SnackBarBehavior.floating,
+            content: Text('⚠️ Link open nahi ho saka.'),
+          ),
         );
       }
     }
@@ -187,7 +184,8 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
     final bool isDark = widget.isDarkMode;
     final visibleDocs = _getVisibleDocs();
 
-    final inputBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9);
+    final cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final itemBg = isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC);
     final borderColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
     final textColor = isDark ? Colors.white : const Color(0xFF0F172A);
     final subTextColor = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
@@ -195,35 +193,35 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        color: isDark ? const Color(0xFF1E293B) : Colors.white,
-        borderRadius: BorderRadius.circular(18),
-        border: Border.all(color: borderColor, width: 1.2),
+        color: cardBg,
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: borderColor, width: 1),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.35 : 0.06),
-            blurRadius: 14,
+            color: Colors.black.withOpacity(isDark ? 0.3 : 0.05),
+            blurRadius: 12,
             offset: const Offset(0, 4),
           ),
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.all(14.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 📚 HEADER
+            // 📚 Header
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
                   children: [
                     Container(
-                      padding: const EdgeInsets.all(7),
+                      padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: const Color(0xFF2563EB).withOpacity(0.12),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      child: const Text('📚', style: TextStyle(fontSize: 18)),
+                      child: const Icon(Icons.menu_book_rounded, size: 20, color: Color(0xFF2563EB)),
                     ),
                     const SizedBox(width: 10),
                     Column(
@@ -232,50 +230,51 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                         Text(
                           'Study Material & PDF Vault',
                           style: TextStyle(
-                            fontSize: 14.5,
-                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                            fontWeight: FontWeight.w700,
                             color: textColor,
                           ),
                         ),
                         Text(
-                          'Search standard books & notes',
-                          style: TextStyle(fontSize: 11, color: subTextColor),
+                          'Standard notes & formula sheets',
+                          style: TextStyle(fontSize: 12, color: subTextColor),
                         ),
                       ],
                     ),
                   ],
                 ),
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF16A34A).withOpacity(0.15),
+                    color: const Color(0xFF16A34A),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: const Text(
                     '100% FREE',
                     style: TextStyle(
-                      fontSize: 9.5,
-                      fontWeight: FontWeight.bold,
-                      color: Color(0xFF16A34A),
+                      fontSize: 10,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: 0.5,
+                      color: Colors.white,
                     ),
                   ),
                 ),
               ],
             ),
 
-            const SizedBox(height: 12),
+            const SizedBox(height: 14),
 
-            // 🔍 SEARCH INPUT BOX
+            // 🔍 Search Bar
             TextField(
               controller: _searchController,
-              style: TextStyle(fontSize: 13, color: textColor),
+              style: TextStyle(fontSize: 13.5, color: textColor),
               decoration: InputDecoration(
-                hintText: 'Search book (e.g. Laxmikanth, NCERT, History)...',
-                hintStyle: TextStyle(fontSize: 12, color: subTextColor),
-                prefixIcon: const Icon(Icons.search_rounded, size: 18, color: Color(0xFF2563EB)),
+                hintText: 'Search books, notes, subjects...',
+                hintStyle: TextStyle(fontSize: 13, color: subTextColor),
+                prefixIcon: const Icon(Icons.search_rounded, size: 20, color: Color(0xFF2563EB)),
                 suffixIcon: _searchQuery.isNotEmpty
                     ? IconButton(
-                        icon: const Icon(Icons.clear_rounded, size: 16),
+                        icon: const Icon(Icons.clear_rounded, size: 18),
                         onPressed: () {
                           setState(() {
                             _searchController.clear();
@@ -286,8 +285,8 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
                     : null,
                 isDense: true,
                 filled: true,
-                fillColor: inputBg,
-                contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                fillColor: itemBg,
+                contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(10),
                   borderSide: BorderSide(color: borderColor),
@@ -306,169 +305,153 @@ class _ProPdfVaultCardState extends State<ProPdfVaultCard>
               },
             ),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 12),
 
-            // 📋 SEARCH RESULTS / LATEST BOOKS LIST
+            // 📋 Document List
             if (visibleDocs.isEmpty)
               Padding(
-                padding: const EdgeInsets.symmetric(vertical: 14),
+                padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Center(
                   child: Text(
-                    'Koi book nahi mili. Dusra naam search karein!',
-                    style: TextStyle(fontSize: 11.5, color: subTextColor),
+                    'Koi document nahi mila.',
+                    style: TextStyle(fontSize: 13, color: subTextColor),
                   ),
                 ),
               )
             else
               ...visibleDocs.map((doc) {
                 final Color accent = Color(doc['color'] as int);
-                final String badgeText = doc['badge'] ?? 'NEW ADDED';
+                final String badgeText = (doc['badge'] ?? 'NEW').toString().toUpperCase();
                 final String docUrl = doc['url'] ?? _defaultWebsiteUrl;
 
                 return Padding(
                   padding: const EdgeInsets.only(bottom: 8.0),
-                  child: InkWell(
-                    onTap: () => _launchUrl(docUrl),
-                    borderRadius: BorderRadius.circular(12),
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                      decoration: BoxDecoration(
-                        color: inputBg,
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(color: borderColor),
-                      ),
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 36,
-                            height: 44,
-                            decoration: BoxDecoration(
-                              color: accent.withOpacity(0.12),
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: accent.withOpacity(0.3)),
+                  child: Material(
+                    color: itemBg,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      side: BorderSide(color: borderColor),
+                    ),
+                    clipBehavior: Clip.antiAlias,
+                    child: InkWell(
+                      onTap: () => _launchUrl(docUrl),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                        child: Row(
+                          children: [
+                            // PDF Icon Container
+                            Container(
+                              width: 38,
+                              height: 44,
+                              decoration: BoxDecoration(
+                                color: accent.withOpacity(0.12),
+                                borderRadius: BorderRadius.circular(8),
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  const Icon(Icons.picture_as_pdf_rounded, size: 18, color: Color(0xFFDC2626)),
+                                  const SizedBox(height: 1),
+                                  Text(
+                                    'PDF',
+                                    style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.bold, color: accent),
+                                  ),
+                                ],
+                              ),
                             ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                const Icon(Icons.picture_as_pdf_rounded, size: 16, color: Color(0xFFDC2626)),
-                                const SizedBox(height: 1),
-                                Text(
-                                  'PDF',
-                                  style: TextStyle(fontSize: 7.5, fontWeight: FontWeight.bold, color: accent),
-                                ),
-                              ],
-                            ),
-                          ),
-                          const SizedBox(width: 10),
-
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Row(
-                                  children: [
-                                    FadeTransition(
-                                      opacity: Tween<double>(begin: 0.4, end: 1.0).animate(_blinkController),
-                                      child: Container(
-                                        padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
+                            const SizedBox(width: 12),
+                            // Details
+                            Expanded(
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Row(
+                                    children: [
+                                      // Clean High-Contrast Red Badge
+                                      Container(
+                                        padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                                         decoration: BoxDecoration(
-                                          gradient: const LinearGradient(
-                                            colors: [Color(0xFFEA580C), Color(0xFFDC2626)],
-                                          ),
+                                          color: const Color(0xFFDC2626),
                                           borderRadius: BorderRadius.circular(4),
                                         ),
                                         child: Text(
                                           badgeText,
                                           style: const TextStyle(
-                                            fontSize: 7.5,
-                                            fontWeight: FontWeight.w900,
+                                            fontSize: 9,
+                                            fontWeight: FontWeight.w800,
+                                            letterSpacing: 0.4,
                                             color: Colors.white,
                                           ),
                                         ),
                                       ),
-                                    ),
-                                    const SizedBox(width: 5),
-                                    Text(
-                                      doc['tag'],
-                                      style: TextStyle(
-                                        fontSize: 9.5,
-                                        color: accent,
-                                        fontWeight: FontWeight.bold,
+                                      const SizedBox(width: 6),
+                                      Text(
+                                        doc['tag'],
+                                        style: TextStyle(
+                                          fontSize: 10.5,
+                                          color: accent,
+                                          fontWeight: FontWeight.w700,
+                                        ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 2),
-                                Text(
-                                  doc['title'],
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    fontSize: 12,
-                                    fontWeight: FontWeight.bold,
-                                    color: textColor,
+                                    ],
                                   ),
-                                ),
-                                Text(
-                                  doc['meta'],
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(fontSize: 9.5, color: subTextColor),
-                                ),
-                              ],
+                                  const SizedBox(height: 4),
+                                  Text(
+                                    doc['title'],
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      fontWeight: FontWeight.w600,
+                                      color: textColor,
+                                    ),
+                                  ),
+                                  const SizedBox(height: 1),
+                                  Text(
+                                    doc['meta'],
+                                    maxLines: 1,
+                                    overflow: TextOverflow.ellipsis,
+                                    style: TextStyle(fontSize: 11, color: subTextColor),
+                                  ),
+                                ],
+                              ),
                             ),
-                          ),
-
-                          const SizedBox(width: 6),
-                          const Icon(Icons.open_in_new_rounded, size: 15, color: Color(0xFF2563EB)),
-                        ],
+                            const SizedBox(width: 8),
+                            Icon(Icons.arrow_forward_ios_rounded, size: 13, color: subTextColor),
+                          ],
+                        ),
                       ),
                     ),
                   ),
                 );
               }),
 
-            const SizedBox(height: 4),
+            const SizedBox(height: 6),
 
-            // 🌐 DIRECT FULL LIBRARY LINK
-            InkWell(
-              onTap: () => _launchUrl(widget.customWebsiteUrl ?? _defaultWebsiteUrl),
+            // 🌐 Bottom CTA Button
+            Material(
+              color: const Color(0xFF2563EB),
               borderRadius: BorderRadius.circular(10),
-              child: Container(
-                width: double.infinity,
-                padding: const EdgeInsets.symmetric(vertical: 10),
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  borderRadius: BorderRadius.circular(10),
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color(0xFF2563EB).withOpacity(0.3),
-                      blurRadius: 6,
-                      offset: const Offset(0, 2),
-                    ),
-                  ],
-                ),
-                child: const Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(Icons.library_books_rounded, color: Colors.white, size: 15),
-                    SizedBox(width: 6),
-                    Text(
-                      'Browse Full E-Library & Vault',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
+              child: InkWell(
+                onTap: () => _launchUrl(widget.customWebsiteUrl ?? _defaultWebsiteUrl),
+                borderRadius: BorderRadius.circular(10),
+                child: const Padding(
+                  padding: EdgeInsets.symmetric(vertical: 11),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(Icons.folder_open_rounded, color: Colors.white, size: 16),
+                      SizedBox(width: 6),
+                      Text(
+                        'Browse Full E-Library & Vault',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600,
+                        ),
                       ),
-                    ),
-                    SizedBox(width: 4),
-                    Icon(Icons.arrow_forward_rounded, color: Colors.white, size: 13),
-                  ],
+                    ],
+                  ),
                 ),
               ),
             ),
