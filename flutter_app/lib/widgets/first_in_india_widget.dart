@@ -4,16 +4,15 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-/// 🏆 FirstInIndiaWidget V2 (Enhanced Flashcards UI/UX + Live Vault Bookmark Sync)
+/// 🏆 FirstInIndiaWidget V2 (Enhanced Exam Flashcards with Quick Topic Chips & Real Vault Sync)
 class FirstInIndiaWidget extends StatefulWidget {
   final bool isDarkMode;
   const FirstInIndiaWidget({super.key, required this.isDarkMode});
 
   @override
-  State<FirstInIndiaWidget> createState() => FirstInIndiaWidgetState(); // 👈 Public State return
+  State<FirstInIndiaWidget> createState() => FirstInIndiaWidgetState();
 }
 
-// 👈 Class se '_' hata diya gaya hai taaki home_tab.dart ki GlobalKey compile ho sake
 class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
   List<dynamic> _alertNewsList = [];
   bool _isLoading = true;
@@ -38,7 +37,6 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
     super.dispose();
   }
 
-  // 💾 Saved vault se status load karna
   Future<void> _loadBookmarks() async {
     final prefs = await SharedPreferences.getInstance();
     final String? savedJson = prefs.getString(_savedVaultKey);
@@ -48,7 +46,9 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
         if (mounted) {
           setState(() {
             _bookmarkedIds.addAll(
-              decoded.map((e) => (e['title'] ?? '').toString()).where((t) => t.isNotEmpty),
+              decoded
+                  .map((e) => (e['id'] ?? e['title'] ?? '').toString())
+                  .where((t) => t.isNotEmpty),
             );
           });
         }
@@ -56,9 +56,8 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
     }
   }
 
-  // 🔖 Vault me save / remove karna
   Future<void> _toggleBookmark(Map<String, dynamic> item) async {
-    final String itemId = (item['title'] ?? '').toString();
+    final String itemId = (item['id'] ?? item['title'] ?? '').toString();
     if (itemId.isEmpty) return;
 
     final prefs = await SharedPreferences.getInstance();
@@ -76,7 +75,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
     setState(() {
       if (isSaved) {
         _bookmarkedIds.remove(itemId);
-        currentList.removeWhere((e) => (e['title'] ?? '') == itemId);
+        currentList.removeWhere((e) => (e['id'] ?? e['title'] ?? '') == itemId);
       } else {
         _bookmarkedIds.add(itemId);
         currentList.add(item);
@@ -105,7 +104,6 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
     } catch (_) {}
   }
 
-  // 🔄 Public method for Pull-to-Refresh from home_tab.dart
   Future<void> fetchFirstInIndia({bool forceRefresh = false}) async {
     final prefs = await SharedPreferences.getInstance();
     final String todayStr = DateTime.now().toIso8601String().split('T')[0];
@@ -192,6 +190,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
       children: [
         // 🏆 HEADER
         Row(
@@ -291,22 +290,19 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
         ),
         const SizedBox(height: 10),
 
-        // 📄 SWIPEABLE FLASHCARD PAGEVIEW
-        SizedBox(
-          height: 260,
-          child: PageView.builder(
-            controller: _pageController,
-            itemCount: _alertNewsList.length,
-            onPageChanged: (i) => setState(() => _activeIndex = i),
-            itemBuilder: (context, index) {
-              final item = _alertNewsList[index];
-              return _buildCardItem(item, isDark, cardBg, borderColor, textColor);
-            },
-          ),
+        // 📄 AUTO-EXPANDING FLASHCARDS (Content ke anusaar height adjust karega, internal scroll nahi hoga)
+        _DynamicHeightPageView(
+          controller: _pageController,
+          itemCount: _alertNewsList.length,
+          onPageChanged: (i) => setState(() => _activeIndex = i),
+          itemBuilder: (context, index) {
+            final item = _alertNewsList[index];
+            return _buildCardItem(item, isDark, cardBg, borderColor, textColor);
+          },
         ),
         const SizedBox(height: 10),
 
-        // 🌐 PERSISTENT FOOTER: Opens full archives
+        // 🌐 PERSISTENT FOOTER: Opens full 120+ Monthly Archives
         InkWell(
           onTap: () => _openUrl(_websiteFullDataUrl),
           borderRadius: BorderRadius.circular(12),
@@ -348,7 +344,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
   ) {
     final List bullets = (item['bullets'] as List?) ?? [];
     final String itemUrl = item['url'] ?? _websiteFullDataUrl;
-    final String itemId = (item['title'] ?? '').toString();
+    final String itemId = (item['id'] ?? item['title'] ?? '').toString();
     final bool isSaved = _bookmarkedIds.contains(itemId);
 
     return Container(
@@ -367,6 +363,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
         children: [
           // Tag, Date & Bookmark Action
           Row(
@@ -392,14 +389,10 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                   const SizedBox(width: 8),
                   InkWell(
                     onTap: () => _toggleBookmark(item),
-                    borderRadius: BorderRadius.circular(20),
-                    child: Padding(
-                      padding: const EdgeInsets.all(4.0),
-                      child: Icon(
-                        isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
-                        size: 20,
-                        color: isSaved ? const Color(0xFFD97706) : Colors.grey,
-                      ),
+                    child: Icon(
+                      isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
+                      size: 20,
+                      color: isSaved ? const Color(0xFFD97706) : Colors.grey,
                     ),
                   ),
                 ],
@@ -413,48 +406,149 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
             onTap: () => _openUrl(itemUrl),
             child: Text(
               item['title'] ?? '',
-              maxLines: 2,
-              overflow: TextOverflow.ellipsis,
               style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w800, color: textColor, height: 1.25),
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
 
-          // Bullets
-          Expanded(
-            child: ListView.builder(
-              padding: EdgeInsets.zero,
-              physics: const BouncingScrollPhysics(),
-              itemCount: bullets.length,
-              itemBuilder: (ctx, idx) {
-                return Padding(
-                  padding: const EdgeInsets.only(bottom: 5),
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      const Padding(
-                        padding: EdgeInsets.only(top: 2),
-                        child: Icon(Icons.check_circle_rounded, size: 14, color: Color(0xFF16A34A)),
-                      ),
-                      const SizedBox(width: 6),
-                      Expanded(
-                        child: Text(
-                          bullets[idx].toString(),
-                          style: TextStyle(
-                            fontSize: 11.5,
-                            color: isDark ? Colors.white70 : const Color(0xFF334155),
-                            height: 1.25,
-                          ),
+          // Bullets (Without ListView/Scroll - Natural Column Layout)
+          ...bullets.map((b) => Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Padding(
+                      padding: EdgeInsets.only(top: 2),
+                      child: Icon(Icons.check_circle_rounded, size: 14, color: Color(0xFF16A34A)),
+                    ),
+                    const SizedBox(width: 6),
+                    Expanded(
+                      child: Text(
+                        b.toString(),
+                        style: TextStyle(
+                          fontSize: 11.5,
+                          color: isDark ? Colors.white70 : const Color(0xFF334155),
+                          height: 1.3,
                         ),
                       ),
-                    ],
-                  ),
-                );
-              },
-            ),
-          ),
+                    ),
+                  ],
+                ),
+              )),
         ],
       ),
     );
+  }
+}
+
+/// 📐 Dynamic Height PageView (Card ke actual text content ke mutabiq adapt hota hai)
+class _DynamicHeightPageView extends StatefulWidget {
+  final PageController controller;
+  final int itemCount;
+  final IndexedWidgetBuilder itemBuilder;
+  final ValueChanged<int>? onPageChanged;
+
+  const _DynamicHeightPageView({
+    required this.controller,
+    required this.itemCount,
+    required this.itemBuilder,
+    this.onPageChanged,
+  });
+
+  @override
+  State<_DynamicHeightPageView> createState() => _DynamicHeightPageViewState();
+}
+
+class _DynamicHeightPageViewState extends State<_DynamicHeightPageView> {
+  late List<double> _heights;
+  int _currentPage = 0;
+
+  double get _currentHeight =>
+      (_heights.isEmpty || _currentPage >= _heights.length || _heights[_currentPage] == 0)
+          ? 200
+          : _heights[_currentPage];
+
+  @override
+  void initState() {
+    super.initState();
+    _heights = List.filled(widget.itemCount, 0.0);
+    widget.controller.addListener(_onPageScroll);
+  }
+
+  void _onPageScroll() {
+    final page = widget.controller.page?.round() ?? 0;
+    if (_currentPage != page && page < _heights.length) {
+      setState(() {
+        _currentPage = page;
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    widget.controller.removeListener(_onPageScroll);
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 200),
+      curve: Curves.easeOutCubic,
+      height: _currentHeight,
+      child: PageView.builder(
+        controller: widget.controller,
+        itemCount: widget.itemCount,
+        onPageChanged: widget.onPageChanged,
+        itemBuilder: (context, index) {
+          return OverflowBox(
+            minHeight: 0,
+            maxHeight: double.infinity,
+            alignment: Alignment.topCenter,
+            child: _ItemHeightDetector(
+              onHeightChange: (h) {
+                if (index < _heights.length && _heights[index] != h) {
+                  setState(() {
+                    _heights[index] = h;
+                  });
+                }
+              },
+              child: widget.itemBuilder(context, index),
+            ),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class _ItemHeightDetector extends StatefulWidget {
+  final Widget child;
+  final ValueChanged<double> onHeightChange;
+
+  const _ItemHeightDetector({required this.child, required this.onHeightChange});
+
+  @override
+  State<_ItemHeightDetector> createState() => _ItemHeightDetectorState();
+}
+
+class _ItemHeightDetectorState extends State<_ItemHeightDetector> {
+  double _lastHeight = 0.0;
+
+  @override
+  Widget build(BuildContext context) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) {
+        final renderBox = context.findRenderObject() as RenderBox?;
+        if (renderBox != null && renderBox.hasSize) {
+          final h = renderBox.size.height;
+          if (_lastHeight != h) {
+            _lastHeight = h;
+            widget.onHeightChange(h);
+          }
+        }
+      }
+    });
+    return widget.child;
   }
 }
