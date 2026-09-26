@@ -37,14 +37,14 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
     _submitScoreToSupabase();
   }
 
-  // 🏆 Leaderboard Submission Logic
+  // 🏆 Leaderboard Submission Logic (Table Schema Matched & Crash-Proof)
   Future<void> _submitScoreToSupabase() async {
     setState(() => _isSubmitting = true);
     try {
       final prefs = await SharedPreferences.getInstance();
       final user = Supabase.instance.client.auth.currentUser;
 
-      // 1. Mandatory Identity Sync from Onboarding / Profile
+      // 1. User Name & District
       String userName = prefs.getString('user_name')?.trim() ??
           prefs.getString('custom_aspirant_name')?.trim() ??
           '';
@@ -59,12 +59,11 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
           user?.userMetadata?['district']?.toString().trim() ??
           'Patna';
 
-      final todayDate = DateTime.now().toIso8601String().substring(0, 10);
-
-      // 2. Resilient Check for Existing Record
+      // 2. Existing Submission Check (Confirmed Columns Only)
       var query = Supabase.instance.client
           .from('daily_challenge_submissions')
-          .select();
+          .select('id, score, time_taken_seconds')
+          .eq('district', district);
 
       if (user?.id != null) {
         query = query.eq('user_id', user!.id);
@@ -72,16 +71,13 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
         query = query.eq('user_name', userName);
       }
 
-      // ilike format match to avoid timestamp boundary conflicts
-      final existing = await query
-          .ilike('challenge_date', '$todayDate%')
-          .maybeSingle();
+      final existing = await query.maybeSingle();
 
       if (existing != null) {
         final int oldScore = existing['score'] ?? 0;
         final int oldTime = existing['time_taken_seconds'] ?? 9999;
 
-        // Better score ya faster time hone par update karein
+        // Score behtar hone par ya same score par time kam hone par update
         bool shouldUpdate = widget.myScore > oldScore ||
             (widget.myScore == oldScore && widget.totalTimeTaken < oldTime);
 
@@ -91,7 +87,6 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
               .update({
                 'score': widget.myScore,
                 'time_taken_seconds': widget.totalTimeTaken,
-                'district': district,
               })
               .eq('id', existing['id']);
           debugPrint("✅ Purana rank behtar score ke sath update ho gaya!");
@@ -99,14 +94,14 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
           debugPrint("ℹ️ Purana score better tha, koi change nahi.");
         }
       } else {
-        // Naya entry insert karein
+        // Nayi row insert karein
         final Map<String, dynamic> insertData = {
           'user_name': userName,
           'district': district,
           'score': widget.myScore,
           'time_taken_seconds': widget.totalTimeTaken,
-          'challenge_date': todayDate,
         };
+
         if (user?.id != null) {
           insertData['user_id'] = user!.id;
         }
@@ -114,10 +109,10 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
         await Supabase.instance.client
             .from('daily_challenge_submissions')
             .insert(insertData);
-        debugPrint("✅ Naya score submit hua!");
+        debugPrint("✅ Naya score table me insert ho gaya!");
       }
 
-      // 3. Update local cache taaki Home leaderboard preview turant refresh ho
+      // 3. Local Cache Update
       await prefs.setString('last_sub_user', userName);
       await prefs.setString('last_sub_district', district);
       await prefs.setInt('last_sub_score', widget.myScore);
@@ -299,7 +294,7 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                       Divider(color: borderColor),
                       const SizedBox(height: 10),
 
-                      // Live Supabase Sync Status
+                      // Live Supabase Sync Status Strip
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -334,7 +329,7 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
 
                 const Spacer(),
 
-                // Action Buttons
+                // WhatsApp Share Button
                 SizedBox(
                   width: double.infinity,
                   height: 48,
@@ -358,6 +353,7 @@ App open karo aur seedhe rank ke liye compete karo! 🏆
                 ),
                 const SizedBox(height: 12),
 
+                // Back to Home Button
                 SizedBox(
                   width: double.infinity,
                   height: 46,
