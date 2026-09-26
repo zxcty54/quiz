@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import '../utils/security_content_guard.dart';
 
@@ -35,9 +36,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
   bool _isLoadingComments = true;
 
   static const Color _primaryBlue = Color(0xFF2563EB);
-  static const Color _lightCard = Colors.white;
   static const Color _lightDivider = Color(0xFFE2E8F0);
-  static const Color _darkCard = Color(0xFF1E293B);
   static const Color _darkDivider = Color(0xFF334155);
 
   @override
@@ -71,6 +70,182 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
     }
   }
 
+  void _openEditCommentModal(Map<String, dynamic> comment) {
+    final currentText = (comment['comment_text'] ?? comment['content'] ?? '').toString();
+    final editCtrl = TextEditingController(text: currentText);
+    bool isSaving = false;
+
+    showModalBottomSheet(
+      context: context,
+      isScrollControlled: true,
+      backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setModalState) => Padding(
+          padding: EdgeInsets.only(
+            bottom: MediaQuery.of(ctx).viewInsets.bottom + 16,
+            left: 16,
+            right: 16,
+            top: 16,
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Edit Reply',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                    ),
+                  ),
+                  IconButton(
+                    icon: const Icon(Icons.close),
+                    onPressed: () => Navigator.pop(ctx),
+                  ),
+                ],
+              ),
+              const SizedBox(height: 10),
+              TextField(
+                controller: editCtrl,
+                maxLines: 3,
+                style: TextStyle(
+                  color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                ),
+                decoration: InputDecoration(
+                  hintText: 'Edit your reply...',
+                  border: const OutlineInputBorder(),
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: const BorderSide(color: _primaryBlue, width: 1.5),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                ),
+              ),
+              const SizedBox(height: 14),
+              SizedBox(
+                width: double.infinity,
+                height: 42,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: _primaryBlue,
+                    foregroundColor: Colors.white,
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  ),
+                  onPressed: isSaving
+                      ? null
+                      : () async {
+                          final updatedText = editCtrl.text.trim();
+                          if (updatedText.isEmpty) return;
+
+                          final validationError = SecurityContentGuard.validateContent(updatedText);
+                          if (validationError != null) {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(content: Text(validationError), backgroundColor: Colors.red.shade800),
+                            );
+                            return;
+                          }
+
+                          setModalState(() => isSaving = true);
+                          try {
+                            try {
+                              await Supabase.instance.client
+                                  .from('post_comments')
+                                  .update({'comment_text': updatedText})
+                                  .eq('id', comment['id'])
+                                  .eq('user_handle', widget.currentLoggedInHandle);
+                            } catch (_) {
+                              await Supabase.instance.client
+                                  .from('post_comments')
+                                  .update({'content': updatedText})
+                                  .eq('id', comment['id'])
+                                  .eq('user_handle', widget.currentLoggedInHandle);
+                            }
+
+                            if (mounted) {
+                              setState(() {
+                                comment['comment_text'] = updatedText;
+                                comment['content'] = updatedText;
+                              });
+                            }
+
+                            if (context.mounted) {
+                              Navigator.pop(ctx);
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                  content: Text('Reply updated!'),
+                                  backgroundColor: Color(0xFF16A34A),
+                                  duration: Duration(seconds: 1),
+                                ),
+                              );
+                            }
+                          } catch (e) {
+                            setModalState(() => isSaving = false);
+                            debugPrint("Comment edit failed: $e");
+                          }
+                        },
+                  child: isSaving
+                      ? const SizedBox(
+                          width: 18,
+                          height: 18,
+                          child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2),
+                        )
+                      : const Text('Save Changes', style: TextStyle(fontWeight: FontWeight.bold)),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  void _confirmDeleteComment(int commentId) {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+        title: Text(
+          'Delete Reply?',
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+            color: widget.isDarkMode ? Colors.white : const Color(0xFF0F172A),
+          ),
+        ),
+        content: Text(
+          'Are you sure you want to delete this reply?',
+          style: TextStyle(
+            color: widget.isDarkMode ? Colors.grey[300] : Colors.grey[700],
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: Colors.redAccent,
+              foregroundColor: Colors.white,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+            ),
+            onPressed: () async {
+              Navigator.pop(ctx);
+              await _deleteComment(commentId);
+            },
+            child: const Text('Delete'),
+          ),
+        ],
+      ),
+    );
+  }
+
   Future<void> _deleteComment(int commentId) async {
     try {
       await Supabase.instance.client
@@ -101,6 +276,73 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
     } catch (e) {
       debugPrint("Failed to delete comment: $e");
     }
+  }
+
+  void _openCommentOptionsSheet(Map<String, dynamic> comment) {
+    HapticFeedback.lightImpact();
+
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      builder: (ctx) {
+        final sheetBg = widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white;
+        final textColor = widget.isDarkMode ? Colors.white : const Color(0xFF0F172A);
+
+        return Container(
+          margin: const EdgeInsets.all(12),
+          decoration: BoxDecoration(
+            color: sheetBg,
+            borderRadius: BorderRadius.circular(16),
+          ),
+          child: SafeArea(
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Container(
+                  width: 36,
+                  height: 4,
+                  margin: const EdgeInsets.symmetric(vertical: 8),
+                  decoration: BoxDecoration(
+                    color: Colors.grey.withOpacity(0.3),
+                    borderRadius: BorderRadius.circular(2),
+                  ),
+                ),
+                ListTile(
+                  leading: const Icon(Icons.edit_outlined, color: _primaryBlue),
+                  title: Text(
+                    'Edit Reply',
+                    style: TextStyle(color: textColor, fontWeight: FontWeight.w600, fontSize: 14),
+                  ),
+                  onTap: () {
+                    Navigator.pop(ctx);
+                    _openEditCommentModal(comment);
+                  },
+                ),
+                Divider(
+                  height: 1,
+                  thickness: 0.5,
+                  color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                  indent: 16,
+                  endIndent: 16,
+                ),
+                ListTile(
+                  leading: const Icon(Icons.delete_outline_rounded, color: Colors.redAccent),
+                  title: const Text(
+                    'Delete Reply',
+                    style: TextStyle(color: Colors.redAccent, fontWeight: FontWeight.w600, fontSize: 14),
+                  ),
+                  onTap: () {
+                    Navigator.pop(ctx);
+                    _confirmDeleteComment(comment['id']);
+                  },
+                ),
+                const SizedBox(height: 6),
+              ],
+            ),
+          ),
+        );
+      },
+    );
   }
 
   Future<void> _submitComment() async {
@@ -246,13 +488,13 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                                         ),
                                       ),
                                       if (isMyComment) ...[
-                                        const SizedBox(width: 10),
+                                        const SizedBox(width: 8),
                                         GestureDetector(
-                                          onTap: () => _deleteComment(c['id']),
+                                          onTap: () => _openCommentOptionsSheet(c),
                                           child: Icon(
-                                            Icons.delete_outline_rounded,
-                                            size: 15,
-                                            color: Colors.redAccent.withOpacity(0.8),
+                                            Icons.more_horiz_rounded,
+                                            size: 18,
+                                            color: isDark ? Colors.grey[400] : Colors.grey[600],
                                           ),
                                         ),
                                       ],
