@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -315,20 +316,20 @@ class _OnboardingWelcomeScreenState
                 const SizedBox(height: 28),
 
                 // 5. Exam Pills (BPSC CCE, Bihar SI, BSSC CGL , All Bihar Exams)
-               FadeSlide(
-  animation: _introController,
-  delay: .60,
-  child: Wrap(
-    spacing: 8,
-    runSpacing: 10,
-    children: [
-      _buildExamPill(Icons.track_changes_rounded, 'BPSC CCE'),
-      _buildExamPill(Icons.shield_outlined, 'Bihar SI'),
-      _buildExamPill(Icons.menu_book_rounded, 'BSSC CGL'),
-      _buildExamPill(Icons.auto_awesome_rounded, 'All Bihar Exams'),
-    ],
-  ),
-),
+                FadeSlide(
+                  animation: _introController,
+                  delay: .60,
+                  child: Wrap(
+                    spacing: 8,
+                    runSpacing: 10,
+                    children: [
+                      _buildExamPill(Icons.track_changes_rounded, 'BPSC CCE'),
+                      _buildExamPill(Icons.shield_outlined, 'Bihar SI'),
+                      _buildExamPill(Icons.menu_book_rounded, 'BSSC CGL'),
+                      _buildExamPill(Icons.auto_awesome_rounded, 'All Bihar Exams'),
+                    ],
+                  ),
+                ),
                 const SizedBox(height: 36),
 
                 // 6. Continue Button
@@ -676,7 +677,23 @@ class _OnboardingWelcomeScreenState
     );
   }
 
-  // 🔑 CLEAN USER ID + SUPABASE SYNC IMPLEMENTATION
+  // 📱 Device ID Helper function
+  Future<String> _getPermanentDeviceId() async {
+    final deviceInfo = DeviceInfoPlugin();
+    try {
+      if (Theme.of(context).platform == TargetPlatform.android) {
+        final androidInfo = await deviceInfo.androidInfo;
+        return androidInfo.id; // Permanent Android ID
+      } else {
+        final iosInfo = await deviceInfo.iosInfo;
+        return iosInfo.identifierForVendor ?? 'ios_unknown';
+      }
+    } catch (_) {
+      return 'unknown_device';
+    }
+  }
+
+  // 🔑 CLEAN USER ID + SUPABASE SYNC IMPLEMENTATION (Device ID Integrated)
   Future<void> _completeRegistration() async {
     FocusScope.of(context).unfocus();
 
@@ -693,14 +710,47 @@ class _OnboardingWelcomeScreenState
       final prefs = await SharedPreferences.getInstance();
 
       String? userId = prefs.getString('user_id');
+      final deviceId = await _getPermanentDeviceId();
+
+      // 🔍 1. Agar phone number dala hai, toh pehle check karein
+      if (phone.isNotEmpty && (userId == null || userId.isEmpty)) {
+        try {
+          final existingPhoneUser = await Supabase.instance.client
+              .from('app_users')
+              .select('user_id')
+              .eq('mobile_number', phone)
+              .maybeSingle();
+
+          if (existingPhoneUser != null && existingPhoneUser['user_id'] != null) {
+            userId = existingPhoneUser['user_id'].toString();
+          }
+        } catch (_) {}
+      }
+
+      // 🔍 2. Agar phone number NAHI dala, toh Device ID se check karein
+      if (userId == null || userId.isEmpty) {
+        try {
+          final existingDeviceUser = await Supabase.instance.client
+              .from('app_users')
+              .select('user_id')
+              .eq('device_id', deviceId)
+              .maybeSingle();
+
+          if (existingDeviceUser != null && existingDeviceUser['user_id'] != null) {
+            userId = existingDeviceUser['user_id'].toString();
+          }
+        } catch (_) {}
+      }
+
+      // 🆕 3. Agar bilkul naya device hai, tabhi fresh user ID generate karein
       if (userId == null || userId.isEmpty) {
         const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
         final rnd = math.Random();
         final randomCode = List.generate(16, (i) => chars[rnd.nextInt(chars.length)]).join();
         userId = 'usr_$randomCode';
-        await prefs.setString('user_id', userId);
       }
 
+      await prefs.setString('user_id', userId);
       await prefs.setBool('is_onboarded', true);
       await prefs.setString('custom_aspirant_name', name);
       await prefs.setString('user_name', name);
@@ -713,6 +763,7 @@ class _OnboardingWelcomeScreenState
       try {
         final Map<String, dynamic> userPayload = {
           'user_id': userId,
+          'device_id': deviceId,
           'full_name': name,
           'district': _selectedDistrict,
           'mobile_number': phone.isNotEmpty ? phone : 'N/A',
