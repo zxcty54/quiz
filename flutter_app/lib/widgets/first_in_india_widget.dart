@@ -173,11 +173,11 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
   Widget build(BuildContext context) {
     final bool isDark = widget.isDarkMode;
 
-    // 🎨 Dynamic Theme Colors
     final Color cardBg = isDark ? const Color(0xFF0C1322) : Colors.white;
     final Color borderColor = isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0);
     final Color actionBtnBg = isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9);
     final Color actionBtnBorder = isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1);
+    final Color sectionHeaderColor = isDark ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A);
 
     if (_isLoading) {
       return Container(
@@ -194,188 +194,256 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
     if (_alertNewsList.isEmpty) return const SizedBox.shrink();
 
-    return Container(
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: cardBg,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: borderColor, width: 1.4),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(isDark ? 0.4 : 0.05),
-            blurRadius: 16,
-            offset: const Offset(0, 6),
-          ),
-        ],
-      ),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: Stack(
-          children: [
-            // Top Accent Line[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)
-            Positioned(
-              top: 0,
-              left: 0,
-              right: 0,
-              height: 4,
-              child: Container(
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [Color(0xFFF59E0B), Color(0xFFEA580C)],
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // 🏆 1. TITLE HEADER & HIGH YIELD TAG (Container ke upar)
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 8.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(6),
+                    decoration: BoxDecoration(
+                      color: const Color(0xFFD97706).withOpacity(0.12),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: const Icon(Icons.emoji_events_rounded, size: 18, color: Color(0xFFD97706)),
                   ),
+                  const SizedBox(width: 8),
+                  Text(
+                    'First in India',
+                    style: TextStyle(
+                      fontSize: 16.5,
+                      fontWeight: FontWeight.w800,
+                      color: sectionHeaderColor,
+                      letterSpacing: -0.3,
+                    ),
+                  ),
+                ],
+              ),
+              // ⚡ HIGH YIELD TAG
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFD97706).withOpacity(isDark ? 0.2 : 0.12),
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border.all(
+                    color: const Color(0xFFF59E0B).withOpacity(0.6),
+                    width: 0.8,
+                  ),
+                ),
+                child: const Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.bolt_rounded, size: 12, color: Color(0xFFD97706)),
+                    SizedBox(width: 3),
+                    Text(
+                      'HIGH YIELD',
+                      style: TextStyle(
+                        color: Color(0xFFD97706),
+                        fontSize: 9.5,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 0.4,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ),
+            ],
+          ),
+        ),
 
-            Column(
-              mainAxisSize: MainAxisSize.min,
+        const SizedBox(height: 6),
+
+        // 📇 2. MAIN CARD CONTAINER
+        Container(
+          width: double.infinity,
+          decoration: BoxDecoration(
+            color: cardBg,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: borderColor, width: 1.4),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(isDark ? 0.4 : 0.05),
+                blurRadius: 16,
+                offset: const Offset(0, 6),
+              ),
+            ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(20),
+            child: Stack(
               children: [
-                // Cards PageView
-                _ExpandablePageView(
-                  controller: _pageController,
-                  itemCount: _alertNewsList.length,
-                  onPageChanged: (i) => setState(() => _activeIndex = i),
-                  itemBuilder: (context, index) {
-                    final item = _alertNewsList[index];
-                    return _buildCardContent(item, isDark, actionBtnBg, actionBtnBorder);
-                  },
-                ),
-
-                // Navigation Row: Previous • Alert X of Y • Next Alert[span_9](start_span)[span_9](end_span)
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      InkWell(
-                        onTap: _activeIndex > 0
-                            ? () {
-                                _pageController.previousPage(
-                                  duration: const Duration(milliseconds: 250),
-                                  curve: Curves.easeInOut,
-                                );
-                              }
-                            : null,
-                        borderRadius: BorderRadius.circular(8),
-                        child: Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
-                          child: Row(
-                            children: [
-                              Icon(
-                                Icons.chevron_left_rounded,
-                                size: 18,
-                                color: _activeIndex > 0
-                                    ? (isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B))
-                                    : Colors.grey.withOpacity(0.3),
-                              ),
-                              Text(
-                                'Previous',
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w600,
-                                  color: _activeIndex > 0
-                                      ? (isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B))
-                                      : Colors.grey.withOpacity(0.3),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      Text(
-                        'Alert ${_activeIndex + 1} of ${_alertNewsList.length}',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: 11,
-                          fontWeight: FontWeight.w600,
-                          color: isDark ? const Color(0xFF64748B) : const Color(0xFF94A3B8),
-                        ),
-                      ),
-                      ElevatedButton(
-                        onPressed: _activeIndex < _alertNewsList.length - 1
-                            ? () {
-                                _pageController.nextPage(
-                                  duration: const Duration(milliseconds: 250),
-                                  curve: Curves.easeInOut,
-                                );
-                              }
-                            : () {
-                                _pageController.animateToPage(
-                                  0,
-                                  duration: const Duration(milliseconds: 300),
-                                  curve: Curves.easeInOut,
-                                );
-                              },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: const Color(0xFFF59E0B),
-                          foregroundColor: Colors.black,
-                          elevation: 0,
-                          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
-                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                        ),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text(
-                              _activeIndex < _alertNewsList.length - 1 ? 'Next\nAlert' : 'First\nAlert',
-                              textAlign: TextAlign.center,
-                              style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w900, height: 1.1),
-                            ),
-                            const SizedBox(width: 4),
-                            const Icon(Icons.chevron_right_rounded, size: 18, color: Colors.black),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                // 🌐 PERSISTENT WEBSITE ARCHIVE FOOTER
-                Container(
-                  margin: const EdgeInsets.fromLTRB(16, 0, 16, 14),
-                  decoration: BoxDecoration(
-                    color: isDark
-                        ? const Color(0xFF1E293B).withOpacity(0.55)
-                        : const Color(0xFFFFFBEB),
-                    borderRadius: BorderRadius.circular(10),
-                    border: Border.all(color: const Color(0xFFF59E0B).withOpacity(0.3), width: 1),
-                  ),
-                  child: Material(
-                    color: Colors.transparent,
-                    child: InkWell(
-                      onTap: () => _openUrl(_websiteFullDataUrl),
-                      borderRadius: BorderRadius.circular(10),
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 12, vertical: 9),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Row(
-                              children: [
-                                Text('🌐', style: TextStyle(fontSize: 13)),
-                                SizedBox(width: 8),
-                                Text(
-                                  'Read Full 2026 Monthly Archives on Website',
-                                  style: TextStyle(
-                                    fontSize: 11.5,
-                                    fontWeight: FontWeight.w700,
-                                    color: Color(0xFFD97706),
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Icon(Icons.open_in_new_rounded, size: 13, color: Color(0xFFD97706)),
-                          ],
-                        ),
+                // Top Accent Line[cite: 1, 2]
+                Positioned(
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: 4,
+                  child: Container(
+                    decoration: const BoxDecoration(
+                      gradient: LinearGradient(
+                        colors: [Color(0xFFF59E0B), Color(0xFFEA580C)],
                       ),
                     ),
                   ),
                 ),
+
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    // Cards PageView
+                    _ExpandablePageView(
+                      controller: _pageController,
+                      itemCount: _alertNewsList.length,
+                      onPageChanged: (i) => setState(() => _activeIndex = i),
+                      itemBuilder: (context, index) {
+                        final item = _alertNewsList[index];
+                        return _buildCardContent(item, isDark, actionBtnBg, actionBtnBorder);
+                      },
+                    ),
+
+                    // Navigation Row: Previous • Alert X of Y • Next Alert[cite: 2]
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          InkWell(
+                            onTap: _activeIndex > 0
+                                ? () {
+                                    _pageController.previousPage(
+                                      duration: const Duration(milliseconds: 250),
+                                      curve: Curves.easeInOut,
+                                    );
+                                  }
+                                : null,
+                            borderRadius: BorderRadius.circular(8),
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 8),
+                              child: Row(
+                                children: [
+                                  Icon(
+                                    Icons.chevron_left_rounded,
+                                    size: 18,
+                                    color: _activeIndex > 0
+                                        ? (isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B))
+                                        : Colors.grey.withOpacity(0.3),
+                                  ),
+                                  Text(
+                                    'Previous',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w600,
+                                      color: _activeIndex > 0
+                                          ? (isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B))
+                                          : Colors.grey.withOpacity(0.3),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Text(
+                            'Alert ${_activeIndex + 1} of ${_alertNewsList.length}',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontSize: 11,
+                              fontWeight: FontWeight.w600,
+                              color: isDark ? const Color(0xFF64748B) : const Color(0xFF94A3B8),
+                            ),
+                          ),
+                          ElevatedButton(
+                            onPressed: _activeIndex < _alertNewsList.length - 1
+                                ? () {
+                                    _pageController.nextPage(
+                                      duration: const Duration(milliseconds: 250),
+                                      curve: Curves.easeInOut,
+                                    );
+                                  }
+                                : () {
+                                    _pageController.animateToPage(
+                                      0,
+                                      duration: const Duration(milliseconds: 300),
+                                      curve: Curves.easeInOut,
+                                    );
+                                  },
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: const Color(0xFFF59E0B),
+                              foregroundColor: Colors.black,
+                              elevation: 0,
+                              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 10),
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Text(
+                                  _activeIndex < _alertNewsList.length - 1 ? 'Next\nAlert' : 'First\nAlert',
+                                  textAlign: TextAlign.center,
+                                  style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w900, height: 1.1),
+                                ),
+                                const SizedBox(width: 4),
+                                const Icon(Icons.chevron_right_rounded, size: 18, color: Colors.black),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+
+                    // 🌐 PERSISTENT WEBSITE ARCHIVE FOOTER
+                    Container(
+                      margin: const EdgeInsets.fromLTRB(16, 0, 16, 14),
+                      decoration: BoxDecoration(
+                        color: isDark
+                            ? const Color(0xFF1E293B).withOpacity(0.55)
+                            : const Color(0xFFFFFBEB),
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: const Color(0xFFF59E0B).withOpacity(0.3), width: 1),
+                      ),
+                      child: Material(
+                        color: Colors.transparent,
+                        child: InkWell(
+                          onTap: () => _openUrl(_websiteFullDataUrl),
+                          borderRadius: BorderRadius.circular(10),
+                          child: const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 9),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Row(
+                                  children: [
+                                    Text('🌐', style: TextStyle(fontSize: 13)),
+                                    SizedBox(width: 8),
+                                    Text(
+                                      'Read Full 2026 Monthly Archives on Website',
+                                      style: TextStyle(
+                                        fontSize: 11.5,
+                                        fontWeight: FontWeight.w700,
+                                        color: Color(0xFFD97706),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                Icon(Icons.open_in_new_rounded, size: 13, color: Color(0xFFD97706)),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
-          ],
+          ),
         ),
-      ),
+      ],
     );
   }
 
@@ -403,7 +471,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Pills + Actions[span_10](start_span)[span_10](end_span)
+          // Pills + Actions[cite: 2]
           Row(
             children: [
               Container(
@@ -422,7 +490,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                     const Text('✨ 🏆', style: TextStyle(fontSize: 10)),
                     const SizedBox(width: 4),
                     Text(
-                      item['exam_tag'] ?? 'First in India',
+                      item['exam_tag'] ?? 'Static GK',
                       style: TextStyle(
                         color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFB45309),
                         fontSize: 11,
@@ -434,12 +502,12 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
               ),
               const SizedBox(width: 8),
 
-              // Secondary Tag (Pin sirf location hone par)
+              // Secondary Tag (Pin sirf tab jab actual location ho)
               Expanded(
                 child: Row(
                   children: [
                     Icon(
-                      hasLocation ? Icons.location_on_outlined : Icons.tag_rounded,
+                      hasLocation ? Icons.location_on_outlined : Icons.category_outlined,
                       size: 14,
                       color: hasLocation ? const Color(0xFFE11D48) : const Color(0xFF64748B),
                     ),
@@ -460,7 +528,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                 ),
               ),
 
-              // Bookmark[span_11](start_span)[span_11](end_span)
+              // Bookmark[cite: 2]
               InkWell(
                 onTap: () => _toggleBookmark(item),
                 borderRadius: BorderRadius.circular(8),
@@ -485,7 +553,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
               ),
               const SizedBox(width: 6),
 
-              // Share[span_12](start_span)[span_12](end_span)
+              // Share[cite: 2]
               InkWell(
                 onTap: () => _shareContent(item),
                 borderRadius: BorderRadius.circular(8),
@@ -507,11 +575,11 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
           ),
           const SizedBox(height: 14),
 
-          // Non-Clickable Title[span_13](start_span)[span_13](end_span)
+          // Title[cite: 2]
           Text(
             item['title'] ?? '',
             style: TextStyle(
-              fontSize: 16.5,
+              fontSize: 16,
               fontWeight: FontWeight.w800,
               color: titleColor,
               height: 1.3,
@@ -520,7 +588,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
           ),
           const SizedBox(height: 12),
 
-          // Bullets[span_14](start_span)[span_14](end_span)
+          // Bullets[cite: 2]
           ...bullets.map((bullet) {
             return Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
@@ -532,7 +600,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                     child: Icon(
                       Icons.check_circle_outline_rounded,
                       size: 16,
-                      color: Color(0xFF0284C7), // Teal/Blue in light, cyan in dark
+                      color: Color(0xFF0284C7),
                     ),
                   ),
                   const SizedBox(width: 8),
