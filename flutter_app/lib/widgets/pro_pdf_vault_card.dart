@@ -24,42 +24,6 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
   String _searchQuery = '';
   bool _isLoading = true;
 
-  // 🛡️ Fallback Data (Sirf tab dikhega jab internet connection offline ho)
-  final List<Map<String, dynamic>> _fallbackDocs = [
-    {
-      'title': 'NCERT Saar Sangrah',
-      'tag': '🌿 NCERT CRUX',
-      'badge': 'NEW',
-      'meta': 'Civil Services • Hindi/En Edition',
-      'color': 0xFF059669,
-      'url': 'https://www.mocktester.online/2026/09/ncert-saar-sangrah-one-liner-cosmos-pdf.html',
-    },
-    {
-      'title': 'M. Laxmikanth: Indian Polity (6th Edition)',
-      'tag': '🏛️ STANDARD',
-      'badge': 'UPDATED',
-      'meta': 'Civil Services • Hindi/En Edition',
-      'color': 0xFF7C3AED,
-      'url': 'https://www.mocktester.online',
-    },
-    {
-      'title': 'NCERT Science & GK 1-Liner Crux',
-      'tag': '🌿 NCERT CRUX',
-      'badge': 'POPULAR',
-      'meta': 'Class 8-12 • Complete Handnotes',
-      'color': 0xFF059669,
-      'url': 'https://www.mocktester.online',
-    },
-    {
-      'title': 'BPSC & BSSC 3000+ TCS PYQ Formula Sheet',
-      'tag': '🔥 PYQ SHEET',
-      'badge': 'HOT',
-      'meta': 'State PCS • Quick Revision Chart',
-      'color': 0xFFD97706,
-      'url': 'https://www.mocktester.online',
-    },
-  ];
-
   List<Map<String, dynamic>> _allLiveDocs = [];
 
   @override
@@ -96,6 +60,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
       }
 
       return {
+        'id': item['id'] ?? 0, // 👈 Timestamp ID preserve ki gayi hai
         'title': chapter,
         'tag': item['tag'] ?? tag,
         'badge': item['badge'] ?? 'NEW',
@@ -105,6 +70,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
       };
     }
     return {
+      'id': 0,
       'title': item.toString(),
       'tag': 'FREE PDF',
       'badge': 'NEW',
@@ -114,7 +80,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
     };
   }
 
-  // 🔄 Dedicated Fetch with Multi-CDN Fallback & Safe Parsing
+  // 🔄 Dedicated Multi-CDN Live Fetch + Timestamp ID Sorting
   Future<void> fetchLiveBooks() async {
     final int ts = DateTime.now().millisecondsSinceEpoch;
 
@@ -155,11 +121,20 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
           }
 
           if (rawList.isNotEmpty && mounted) {
+            // 1. Format karo
+            List<Map<String, dynamic>> parsedDocs = rawList.map<Map<String, dynamic>>((item) {
+              return _formatItem(item);
+            }).toList();
+
+            // 2. 🚀 SMART SORTING BY ID (Highest Timestamp ID First = 100% Latest on Top)
+            parsedDocs.sort((a, b) {
+              final num idA = num.tryParse(a['id']?.toString() ?? '0') ?? 0;
+              final num idB = num.tryParse(b['id']?.toString() ?? '0') ?? 0;
+              return idB.compareTo(idA); // Descending order
+            });
+
             setState(() {
-              // .reversed lagane se database ka aakhri naya item (jaise NCERT Saar Sangrah) sabse top par aayega
-              _allLiveDocs = rawList.reversed.map<Map<String, dynamic>>((item) {
-                return _formatItem(item);
-              }).toList();
+              _allLiveDocs = parsedDocs;
               _isLoading = false;
             });
             return;
@@ -176,14 +151,11 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
   }
 
   List<Map<String, dynamic>> _getVisibleDocs() {
-    final sourceList = _allLiveDocs.isNotEmpty ? _allLiveDocs : _fallbackDocs;
-
-    // Search query empty hone par latest 4 items show honge
     if (_searchQuery.isEmpty) {
-      return sourceList.take(4).toList();
+      return _allLiveDocs.take(4).toList();
     }
 
-    return sourceList.where((doc) {
+    return _allLiveDocs.where((doc) {
       final title = (doc['title'] ?? '').toString().toLowerCase();
       final meta = (doc['meta'] ?? '').toString().toLowerCase();
       final tag = (doc['tag'] ?? '').toString().toLowerCase();
@@ -339,7 +311,18 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
             const SizedBox(height: 12),
 
             // 📋 Document List
-            if (visibleDocs.isEmpty && !_isLoading)
+            if (_isLoading)
+              const Padding(
+                padding: EdgeInsets.symmetric(vertical: 24),
+                child: Center(
+                  child: SizedBox(
+                    width: 24,
+                    height: 24,
+                    child: CircularProgressIndicator(strokeWidth: 2, color: Color(0xFF2563EB)),
+                  ),
+                ),
+              )
+            else if (visibleDocs.isEmpty)
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20),
                 child: Center(
