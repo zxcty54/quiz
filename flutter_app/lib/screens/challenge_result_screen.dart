@@ -37,23 +37,28 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
     _submitScoreToSupabase();
   }
 
-  // 🏆 Leaderboard Submission Logic (Single Name Source & Schema Matched)
+  // 🏆 Leaderboard Submission Logic (Strict 1 User = 1 Row with Upsert)
   Future<void> _submitScoreToSupabase() async {
     setState(() => _isSubmitting = true);
     try {
       final prefs = await SharedPreferences.getInstance();
       final client = Supabase.instance.client;
 
-      // 1. Permanent Device/User ID
-      String? localUserId = prefs.getString('user_id');
+      // 1. Permanent Device-backed User ID
+      final String? localUserId = prefs.getString('user_id')?.trim();
+      if (localUserId == null || localUserId.isEmpty) {
+        debugPrint("❌ User ID SharedPreferences me nahi mila!");
+        if (mounted) setState(() => _isSubmitting = false);
+        return;
+      }
 
-      // 2. Uniform Single Name Retrieval
+      // 2. Standardized User Name
       String userName = prefs.getString('user_name')?.trim() ??
           prefs.getString('custom_aspirant_name')?.trim() ??
           '';
 
-      // Agar local me naam missing hai, toh app_users table se 'full_name' uthao
-      if ((userName.isEmpty || userName == 'Aspirant') && localUserId != null) {
+      // Fallback: Agar local name missing ho toh app_users table se 'full_name' uthayein
+      if ((userName.isEmpty || userName == 'Aspirant')) {
         try {
           final userRow = await client
               .from('app_users')
@@ -70,69 +75,51 @@ class _ChallengeResultScreenState extends State<ChallengeResultScreen> {
             }
           }
         } catch (e) {
-          debugPrint("Failed to fetch full_name from app_users: $e");
+          debugPrint("app_users se naam fetch karne me error: $e");
         }
       }
 
       if (userName.isEmpty) userName = 'Aspirant';
 
-      String district = prefs.getString('user_district')?.trim() ?? 'Patna';
+      final String district = prefs.getString('user_district')?.trim() ?? 'Patna';
 
-      // 3. Existing Submission Check (Confirmed Columns Only)
-      var query = client
+      // 3. Purana score check karein taaki kam score hone par overwrite na ho
+      final existing = await client
           .from('daily_challenge_submissions')
           .select('id, score, time_taken_seconds')
-          .eq('district', district);
+          .eq('user_id', localUserId)
+          .eq('district', district)
+          .maybeSingle();
 
-      if (localUserId != null && localUserId.isNotEmpty) {
-        query = query.eq('user_id', localUserId);
-      } else {
-        query = query.eq('user_name', userName);
-      }
-
-      final existing = await query.maybeSingle();
+      bool shouldSave = true;
 
       if (existing != null) {
-        final int oldScore = existing['score'] ?? 0;
-        final int oldTime = existing['time_taken_seconds'] ?? 9999;
+        final int oldScore = (existing['score'] ?? 0) as int;
+        final int oldTime = (existing['time_taken_seconds'] ?? 9999) as int;
 
-        // Score behtar hone par ya same score par time kam hone par update
-        bool shouldUpdate = widget.myScore > oldScore ||
+        // Sirf behtar score ya same score par kam time hone par update hoga
+        shouldSave = widget.myScore > oldScore ||
             (widget.myScore == oldScore && widget.totalTimeTaken < oldTime);
-
-        if (shouldUpdate) {
-          await client
-              .from('daily_challenge_submissions')
-              .update({
-                'score': widget.myScore,
-                'time_taken_seconds': widget.totalTimeTaken,
-                'user_name': userName,
-              })
-              .eq('id', existing['id']);
-          debugPrint("✅ Purana rank behtar score ke sath update ho gaya!");
-        } else {
-          debugPrint("ℹ️ Purana score better tha, koi change nahi.");
-        }
-      } else {
-        // Nayi row insert karein
-        final Map<String, dynamic> insertData = {
-          'user_name': userName,
-          'district': district,
-          'score': widget.myScore,
-          'time_taken_seconds': widget.totalTimeTaken,
-        };
-
-        if (localUserId != null && localUserId.isNotEmpty) {
-          insertData['user_id'] = localUserId;
-        }
-
-        await client
-            .from('daily_challenge_submissions')
-            .insert(insertData);
-        debugPrint("✅ Naya score table me insert ho gaya: $userName");
       }
 
-      // 4. Local Cache Update
+      // 4. Upsert Operation (Single Row Guarantee)
+      if (shouldSave) {
+        await client.from('daily_challenge_submissions').upsert(
+          {
+            'user_id': localUserId,
+            'user_name': userName,
+            'district': district,
+            'score': widget.myScore,
+            'time_taken_seconds': widget.totalTimeTaken,
+          },
+          onConflict: 'user_id,district',
+        );
+        debugPrint("✅ 1 User = 1 Row Upsert Success: $localUserId | Score: ${widget.myScore}");
+      } else {
+        debugPrint("ℹ️ Purana record behtar tha, database overwrite nahi kiya.");
+      }
+
+      // 5. Local Cache Update
       await prefs.setString('last_sub_user', userName);
       await prefs.setString('last_sub_district', district);
       await prefs.setInt('last_sub_score', widget.myScore);
