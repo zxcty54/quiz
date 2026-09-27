@@ -20,11 +20,12 @@ except ImportError:
 BASE_URL = "https://www.nseindia.com"
 MASTER_FILE = "nse_corporate_master.json"
 
+# Fixed live filing endpoints (Not symbol masters)
 ENDPOINTS = {
     "announcements": "https://www.nseindia.com/api/corporate-announcements?index=equities",
     "board_meetings": "https://www.nseindia.com/api/event-calendar?index=equities",
     "financial_results": "https://www.nseindia.com/api/corporates-financial-results?index=equities",
-    "shareholding_patterns": "https://www.nseindia.com/api/corporate-share-holdings-master?index=equities"
+    "shareholding_patterns": "https://www.nseindia.com/api/corporate-share-holdings-equities"
 }
 
 MAX_PDF_DOWNLOADS = 8
@@ -166,7 +167,7 @@ def safe_api_get(session, url, name):
 
 def run_nse_daily_master():
     print("=" * 80)
-    print("🚀 STARTING NSE DAILY MASTER SCRAPER (PRODUCTION)")
+    print("🚀 STARTING NSE DAILY MASTER SCRAPER (CLEAN PRODUCTION)")
     print("=" * 80)
 
     # 1. Load Existing State
@@ -181,7 +182,9 @@ def run_nse_daily_master():
     if os.path.exists(MASTER_FILE):
         try:
             with open(MASTER_FILE, "r", encoding="utf-8") as f:
-                master_data = json.load(f)
+                loaded = json.load(f)
+                if isinstance(loaded, dict) and "corporate_announcements" in loaded:
+                    master_data = loaded
         except Exception:
             pass
 
@@ -221,6 +224,9 @@ def run_nse_daily_master():
         summary = str(item.get("attchmntText", "")).strip()
         broadcast_dt = str(item.get("an_dt") or item.get("broadcastDate", "")).strip()
         attachment_file = str(item.get("attchmntFile", "")).strip()
+
+        if not symbol or not subject:
+            continue
 
         # Deterministic Category Filter
         category = classify_event(f"{subject} {summary}")
@@ -267,6 +273,9 @@ def run_nse_daily_master():
         details = str(m.get("details", "")).strip()
         meeting_date = str(m.get("meetingDate", "")).strip()
 
+        if not symbol or not purpose:
+            continue
+
         category = classify_event(f"{purpose} {details}")
         if not category:
             continue
@@ -286,7 +295,7 @@ def run_nse_daily_master():
         seen_meeting_hashes.add(m_hash)
 
     # ------------------------------------------------------------
-    # 5. Process Financial Results (Deduplicated)
+    # 5. Process Financial Results (Deduplicated with Blank Guard)
     # ------------------------------------------------------------
     raw_results = safe_api_get(session, ENDPOINTS["financial_results"], "Financial Results")
     time.sleep(1.5)
@@ -296,6 +305,12 @@ def run_nse_daily_master():
         symbol = str(r.get("symbol", "")).strip()
         period = str(r.get("period", "")).strip()
         res_date = str(r.get("resultDate", "")).strip()
+        income = str(r.get("revenue") or r.get("income", "")).strip()
+        net_profit = str(r.get("netProfit", "")).strip()
+
+        # Blank Guard: drop if neither date nor profit figures are present
+        if not symbol or (not res_date and not income and not net_profit):
+            continue
 
         r_hash = generate_hash(f"{symbol}_{period}_{res_date}")
         if r_hash in seen_result_hashes:
@@ -306,22 +321,33 @@ def run_nse_daily_master():
             "symbol": symbol,
             "company_name": str(r.get("companyName", "")).strip(),
             "period": period,
-            "income": r.get("re venue") or r.get("income", ""),
-            "net_profit": r.get("netProfit", ""),
-            "eps": r.get("eps", ""),
+            "income": income,
+            "net_profit": net_profit,
+            "eps": str(r.get("eps", "")).strip(),
             "result_date": res_date
         })
         seen_result_hashes.add(r_hash)
 
     # ------------------------------------------------------------
-    # 6. Process Shareholding Patterns (Deduplicated)
+    # 6. Process Shareholding Patterns (Strict Live Filing Guard)
     # ------------------------------------------------------------
     raw_shp = safe_api_get(session, ENDPOINTS["shareholding_patterns"], "Shareholding Patterns")
 
     new_shp = []
     for s in raw_shp:
         symbol = str(s.get("symbol", "")).strip()
-        as_on_date = str(s.get("asOnDate", "")).strip()
+        comp_name = str(s.get("sm_name") or s.get("companyName") or s.get("sm_name_desc", "")).strip()
+        as_on_date = str(s.get("sh_dt") or s.get("asOnDate") or s.get("date", "")).strip()
+        
+        promoter = str(s.get("promoterAndPromoterGroup") or s.get("promoter") or s.get("promoter_holding", "")).strip()
+        public_hold = str(s.get("public") or s.get("public_holding", "")).strip()
+        fii = str(s.get("fii") or s.get("foreignPortfolioInvestors", "")).strip()
+        dii = str(s.get("dii") or s.get("domesticInstitutions", "")).strip()
+
+        # Strict Blank Guard:
+        # Drop if symbol is missing OR both date and holding numbers are empty
+        if not symbol or (not as_on_date and not promoter and not public_hold):
+            continue
 
         s_hash = generate_hash(f"{symbol}_{as_on_date}")
         if s_hash in seen_shp_hashes:
@@ -330,12 +356,12 @@ def run_nse_daily_master():
         new_shp.append({
             "hash": s_hash,
             "symbol": symbol,
-            "company_name": str(s.get("companyName", "")).strip(),
+            "company_name": comp_name,
             "as_on_date": as_on_date,
-            "promoter_holding": s.get("promoter", ""),
-            "public_holding": s.get("public", ""),
-            "fii_holding": s.get("fii", ""),
-            "dii_holding": s.get("dii", "")
+            "promoter_holding": promoter,
+            "public_holding": public_hold,
+            "fii_holding": fii,
+            "dii_holding": dii
         })
         seen_shp_hashes.add(s_hash)
 
@@ -348,7 +374,7 @@ def run_nse_daily_master():
     master_data["financial_results"] = new_results + master_data["financial_results"]
     master_data["shareholding_patterns"] = new_shp + master_data["shareholding_patterns"]
 
-    # Retain safe ceiling to prevent unbounded file explosion (last 3,000 items)
+    # Rolling window ceiling to keep JSON clean and lightweight
     master_data["corporate_announcements"] = master_data["corporate_announcements"][:3000]
     master_data["board_meetings"] = master_data["board_meetings"][:1500]
     master_data["financial_results"] = master_data["financial_results"][:2000]
@@ -358,12 +384,12 @@ def run_nse_daily_master():
         json.dump(master_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print("📊 DAILY RUN SUMMARY:")
-    print(f"   • High-Yield Announcements Added : {len(new_announcements)} (PDFs parsed: {pdf_downloads})")
-    print(f"   • Filtered Board Meetings Added  : {len(new_meetings)}")
-    print(f"   • Fresh Financial Results Added  : {len(new_results)}")
-    print(f"   • Fresh Shareholding Added       : {len(new_shp)}")
-    print(f"💾 Master Archive Updated           : '{MASTER_FILE}'")
+    print("📊 DAILY RUN COMPLETED SUCCESSFULLY:")
+    print(f"   • Announcements Added : {len(new_announcements)} (PDFs parsed: {pdf_downloads})")
+    print(f"   • Board Meetings Added: {len(new_meetings)}")
+    print(f"   • Results Added       : {len(new_results)}")
+    print(f"   • Shareholding Added  : {len(new_shp)}")
+    print(f"💾 File Written       : '{MASTER_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
