@@ -14,7 +14,7 @@ except ImportError:
     pdfplumber = None
 
 # ============================================================
-# CONFIGURATION & DATE PARAMETERS
+# CONFIGURATION & PARAMETERS
 # ============================================================
 
 BASE_URL = "https://www.nseindia.com"
@@ -24,17 +24,17 @@ IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
 TO_DATE = NOW.strftime("%d-%m-%Y")
-FROM_DATE = (NOW - timedelta(days=30)).strftime("%d-%m-%Y")
+FROM_DATE = (NOW - timedelta(days=20)).strftime("%d-%m-%Y")
 
-# Verified Internal Endpoints
+# Working NSE Endpoints with date filters for rich data
 ENDPOINTS = {
-    "announcements": "https://www.nseindia.com/api/corporate-announcements?index=equities",
-    "board_meetings": "https://www.nseindia.com/api/event-calendar?index=equities",
-    "financial_results": "https://www.nseindia.com/api/financial-results?index=equities",
+    "announcements": f"https://www.nseindia.com/api/corporate-announcements?index=equities&from_date={FROM_DATE}&to_date={TO_DATE}",
+    "financial_results": f"https://www.nseindia.com/api/corporates-financial-results?index=equities&period=Quarterly",
     "shareholding_patterns": f"https://www.nseindia.com/api/corporate-share-holdings-master?index=equities&from_date={FROM_DATE}&to_date={TO_DATE}"
 }
 
-MAX_PDF_DOWNLOADS = 8
+# Rich PDF Downloads limit (Outcome documents)
+MAX_PDF_DOWNLOADS = 25
 
 HEADERS = {
     "User-Agent": (
@@ -51,7 +51,7 @@ HEADERS = {
 }
 
 # ============================================================
-# DETERMINISTIC REGEX ENGINE (10 TARGET CATEGORIES)
+# TARGET CATEGORIES (High Impact Corporate Actions)
 # ============================================================
 
 CATEGORY_PATTERNS = {
@@ -128,25 +128,28 @@ def extract_pdf_content(session, pdf_url):
     pdf_headers["Referer"] = "https://www.nseindia.com/"
 
     try:
-        resp = session.get(pdf_url, headers=pdf_headers, timeout=20)
+        resp = session.get(pdf_url, headers=pdf_headers, timeout=22)
         if resp.status_code != 200 or not resp.content.startswith(b'%PDF'):
             return ""
 
         pdf_bytes = io.BytesIO(resp.content)
+        
+        # Priority 1: pdfplumber for clean tabular & numeric summary
         if pdfplumber:
             try:
                 with pdfplumber.open(pdf_bytes) as pdf:
                     pages = [p.extract_text() for p in pdf.pages[:3] if p.extract_text()]
                     text = " ".join(" ".join(pages).split())
-                    if text:
-                        return text[:2500]
+                    if text and len(text) > 40:
+                        return text[:3000]
             except Exception:
                 pass
 
+        # Priority 2: pypdf fallback
         reader = PdfReader(pdf_bytes)
         pages = [p.extract_text() for p in reader.pages[:3] if p.extract_text()]
         text = " ".join(" ".join(pages).split())
-        return text[:2500] if text else "[SCANNED_IMAGE_PDF]"
+        return text[:3000] if (text and len(text) > 40) else "[SCANNED_IMAGE_PDF: Requires OCR]"
     except Exception:
         return ""
 
@@ -168,19 +171,20 @@ def safe_api_get(session, url, name, custom_referer=None):
         return []
 
 # ============================================================
-# MAIN ORCHESTRATOR
+# MASTER ORCHESTRATOR
 # ============================================================
 
 def run_nse_daily_master():
     print("=" * 80)
-    print("🚀 STARTING NSE DAILY MASTER SCRAPER (FIXED KEYS)")
-    print(f"📅 Date Window: {FROM_DATE} to {TO_DATE}")
+    print("🚀 NSE COMPLETE CORPORATE ACTION INTELLIGENCE (NO HALF DATA)")
+    print(f"📅 Scan Window: {FROM_DATE} to {TO_DATE}")
     print("=" * 80)
 
+    # 1. Load Existing State
     master_data = {
         "last_updated": "",
         "corporate_announcements": [],
-        "board_meetings": [],
+        "upcoming_board_meetings": [],
         "financial_results": [],
         "shareholding_patterns": []
     }
@@ -189,21 +193,16 @@ def run_nse_daily_master():
         try:
             with open(MASTER_FILE, "r", encoding="utf-8") as f:
                 loaded = json.load(f)
-                if isinstance(loaded, dict) and "corporate_announcements" in loaded:
+                if isinstance(loaded, dict):
                     master_data = loaded
-                    # Remove any empty board meetings from previous runs
-                    master_data["board_meetings"] = [
-                        m for m in master_data.get("board_meetings", [])
-                        if m.get("meeting_date") and m.get("company_name")
-                    ]
         except Exception:
             pass
 
-    seen_announcement_hashes = {a.get("hash") for a in master_data["corporate_announcements"] if a.get("hash")}
-    seen_meeting_hashes = {m.get("hash") for m in master_data["board_meetings"] if m.get("hash")}
-    seen_result_hashes = {r.get("hash") for r in master_data["financial_results"] if r.get("hash")}
-    seen_shp_hashes = {s.get("hash") for s in master_data["shareholding_patterns"] if s.get("hash")}
+    seen_announcement_hashes = {a.get("hash") for a in master_data.get("corporate_announcements", []) if a.get("hash")}
+    seen_result_hashes = {r.get("hash") for r in master_data.get("financial_results", []) if r.get("hash")}
+    seen_shp_hashes = {s.get("hash") for s in master_data.get("shareholding_patterns", []) if s.get("hash")}
 
+    # 2. Handshake
     session = requests.Session(impersonate="chrome124")
     print("🌐 Performing handshake with NSE Homepage...")
     try:
@@ -219,12 +218,12 @@ def run_nse_daily_master():
     time.sleep(2)
 
     # ------------------------------------------------------------
-    # 1. Corporate Announcements
+    # 3. Actionable Corporate Announcements (Must Have Details/PDF)
     # ------------------------------------------------------------
     raw_announcements = safe_api_get(
         session, 
         ENDPOINTS["announcements"], 
-        "Announcements", 
+        "Announcements & Filings", 
         "https://www.nseindia.com/companies-listing/corporate-filings-announcements"
     )
     time.sleep(1.5)
@@ -242,6 +241,7 @@ def run_nse_daily_master():
         if not symbol or not subject:
             continue
 
+        # Category Filter
         category = classify_event(f"{subject} {summary}")
         if not category:
             continue
@@ -255,9 +255,15 @@ def run_nse_daily_master():
         if attachment_file:
             pdf_url = attachment_file if attachment_file.startswith("http") else f"https://nsearchives.nseindia.com/corporate/{attachment_file}"
             if pdf_downloads < MAX_PDF_DOWNLOADS:
+                print(f"   📄 [{pdf_downloads+1}/{MAX_PDF_DOWNLOADS}] Extracting PDF for: {symbol} ({category})...")
                 pdf_text = extract_pdf_content(session, pdf_url)
                 pdf_downloads += 1
                 time.sleep(1)
+
+        # 🛑 ZERO-HALF-DATA GUARD:
+        # Agar summary bhi nahi hai aur PDF text bhi nahi hai, toh card kisi kaam ka nahi hai
+        if not summary and not pdf_text:
+            continue
 
         record = {
             "hash": item_hash,
@@ -266,7 +272,7 @@ def run_nse_daily_master():
             "company_name": str(item.get("sm_name") or item.get("companyName", "")).strip(),
             "subject": subject,
             "broadcast_date": broadcast_dt,
-            "summary": summary[:350],
+            "summary": summary[:400],
             "pdf_link": pdf_url,
             "pdf_extracted_text": pdf_text
         }
@@ -274,55 +280,12 @@ def run_nse_daily_master():
         seen_announcement_hashes.add(item_hash)
 
     # ------------------------------------------------------------
-    # 2. Board Meetings (Fixed Key Names & Date Guards)
-    # ------------------------------------------------------------
-    raw_meetings = safe_api_get(
-        session, 
-        ENDPOINTS["board_meetings"], 
-        "Board Meetings", 
-        "https://www.nseindia.com/companies-listing/corporate-filings-event-calendar"
-    )
-    time.sleep(1.5)
-
-    new_meetings = []
-    for m in raw_meetings:
-        symbol = str(m.get("symbol", "")).strip()
-        # NSE keys: 'company', 'sm_name', or 'companyName'
-        company_name = str(m.get("company") or m.get("sm_name") or m.get("companyName", "")).strip()
-        purpose = str(m.get("purpose", "")).strip()
-        details = str(m.get("details", "")).strip()
-        # NSE keys: 'date', 'bm_desc', or 'meetingDate'
-        meeting_date = str(m.get("date") or m.get("bm_desc") or m.get("meetingDate", "")).strip()
-
-        # Strict Filter: Date aur company dono honi zaroori hain
-        if not symbol or not purpose or not meeting_date or meeting_date in ["-", "None"]:
-            continue
-
-        category = classify_event(f"{purpose} {details}")
-        if not category:
-            continue
-
-        m_hash = generate_hash(f"{symbol}_{meeting_date}_{purpose}")
-        if m_hash in seen_meeting_hashes:
-            continue
-
-        new_meetings.append({
-            "hash": m_hash,
-            "category": category,
-            "symbol": symbol,
-            "company_name": company_name,
-            "meeting_date": meeting_date,
-            "purpose": purpose
-        })
-        seen_meeting_hashes.add(m_hash)
-
-    # ------------------------------------------------------------
-    # 3. Financial Results (Fixed Keys & Guard)
+    # 4. Financial Results (Structured Table with Figures)
     # ------------------------------------------------------------
     raw_results = safe_api_get(
         session, 
         ENDPOINTS["financial_results"], 
-        "Financial Results", 
+        "Financial Results (Quarterly Data)", 
         "https://www.nseindia.com/companies-listing/corporate-filings-financial-results"
     )
     time.sleep(1.5)
@@ -330,13 +293,16 @@ def run_nse_daily_master():
     new_results = []
     for r in raw_results:
         symbol = str(r.get("symbol", "")).strip()
-        comp_name = str(r.get("sm_name") or r.get("companyName", "")).strip()
+        comp_name = str(r.get("companyName") or r.get("sm_name", "")).strip()
         period = str(r.get("period") or r.get("audited", "")).strip()
         res_date = str(r.get("res_dt") or r.get("resultDate") or r.get("broadcastDate", "")).strip()
-        income = str(r.get("income") or r.get("revenue") or r.get("re_venue", "")).strip()
-        net_profit = str(r.get("netProfit") or r.get("pro_aft_tax", "")).strip()
+        
+        income = str(r.get("income") or r.get("revenue") or r.get("tot_inc", "")).strip()
+        net_profit = str(r.get("netProfit") or r.get("pro_aft_tax") or r.get("net_profit", "")).strip()
+        eps = str(r.get("eps") or r.get("re_eps", "")).strip()
 
-        if not symbol or (not res_date and not income and not net_profit):
+        # Strict Filter: Figures hona zaroori hai
+        if not symbol or (not income and not net_profit):
             continue
 
         r_hash = generate_hash(f"{symbol}_{period}_{res_date}")
@@ -348,15 +314,15 @@ def run_nse_daily_master():
             "symbol": symbol,
             "company_name": comp_name,
             "period": period,
-            "income": income,
+            "revenue_income": income,
             "net_profit": net_profit,
-            "eps": str(r.get("eps", "")).strip(),
+            "eps": eps,
             "result_date": res_date
         })
         seen_result_hashes.add(r_hash)
 
     # ------------------------------------------------------------
-    # 4. Shareholding Patterns (Strict Guard)
+    # 5. Shareholding Patterns (Strict Valid Filings Only)
     # ------------------------------------------------------------
     raw_shp = safe_api_get(
         session, 
@@ -368,15 +334,15 @@ def run_nse_daily_master():
     new_shp = []
     for s in raw_shp:
         symbol = str(s.get("symbol", "")).strip()
-        comp_name = str(s.get("sm_name") or s.get("companyName") or s.get("sm_name_desc", "")).strip()
+        comp_name = str(s.get("sm_name") or s.get("companyName", "")).strip()
         as_on_date = str(s.get("sh_dt") or s.get("asOnDate") or s.get("date", "")).strip()
         
-        promoter = str(s.get("promoterAndPromoterGroup") or s.get("promoter") or s.get("promoter_holding") or "").strip()
-        public_hold = str(s.get("public") or s.get("public_holding") or "").strip()
-        fii = str(s.get("fii") or s.get("foreignPortfolioInvestors") or "").strip()
-        dii = str(s.get("dii") or s.get("domesticInstitutions") or "").strip()
+        promoter = str(s.get("promoterAndPromoterGroup") or s.get("promoter") or "").strip()
+        public_hold = str(s.get("public") or "").strip()
+        fii = str(s.get("fii") or "").strip()
+        dii = str(s.get("dii") or "").strip()
 
-        # Strict rejection of dummy / empty entries
+        # Discard if holding numbers are empty
         if not symbol or as_on_date in ["", "-", "None", "null"]:
             continue
         if promoter in ["", "-", "None", "null"] and public_hold in ["", "-", "None", "null"]:
@@ -399,29 +365,27 @@ def run_nse_daily_master():
         seen_shp_hashes.add(s_hash)
 
     # ------------------------------------------------------------
-    # 5. Merge & Save
+    # 6. Merge & Write Clean Data
     # ------------------------------------------------------------
     master_data["last_updated"] = NOW.strftime("%Y-%m-%d %H:%M:%S IST")
-    master_data["corporate_announcements"] = new_announcements + master_data["corporate_announcements"]
-    master_data["board_meetings"] = new_meetings + master_data["board_meetings"]
-    master_data["financial_results"] = new_results + master_data["financial_results"]
-    master_data["shareholding_patterns"] = new_shp + master_data["shareholding_patterns"]
+    master_data["corporate_announcements"] = new_announcements + master_data.get("corporate_announcements", [])
+    master_data["financial_results"] = new_results + master_data.get("financial_results", [])
+    master_data["shareholding_patterns"] = new_shp + master_data.get("shareholding_patterns", [])
 
+    # Memory ceilings
     master_data["corporate_announcements"] = master_data["corporate_announcements"][:3000]
-    master_data["board_meetings"] = master_data["board_meetings"][:1500]
-    master_data["financial_results"] = master_data["financial_results"][:2000]
-    master_data["shareholding_patterns"] = master_data["shareholding_patterns"][:2000]
+    master_data["financial_results"] = master_data["financial_results"][:1500]
+    master_data["shareholding_patterns"] = master_data["shareholding_patterns"][:1500]
 
     with open(MASTER_FILE, "w", encoding="utf-8") as f:
         json.dump(master_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print("📊 DAILY RUN SUMMARY:")
-    print(f"   • Announcements Added : {len(new_announcements)} (PDFs parsed: {pdf_downloads})")
-    print(f"   • Board Meetings Added: {len(new_meetings)}")
-    print(f"   • Results Added       : {len(new_results)}")
-    print(f"   • Shareholding Added  : {len(new_shp)}")
-    print(f"💾 Clean JSON Written : '{MASTER_FILE}'")
+    print("📊 RICH ACTIONABLE DATA HARVESTED:")
+    print(f"   • Actionable Filings with Details/PDF : {len(new_announcements)} (PDFs parsed: {pdf_downloads})")
+    print(f"   • Verified Financial Results (with ₹) : {len(new_results)}")
+    print(f"   • Verified Shareholding Patterns      : {len(new_shp)}")
+    print(f"💾 Saved to: '{MASTER_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
