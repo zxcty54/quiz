@@ -486,19 +486,23 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                 ),
                 const SizedBox(height: 12),
                 const Text(
-                  'Premier Offline Institutes, Now Integrated 🏛️',
+                  'Access Bihar’s Top Offline Institutes on Your Device',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16.0,
                     fontWeight: FontWeight.w800,
-                    letterSpacing: 0.2,
+                    letterSpacing: 0.1,
                     height: 1.35,
                   ),
                 ),
-                const SizedBox(height: 5),
+                const SizedBox(height: 6),
                 Text(
-                  'Access verified institutional CBT assessments, benchmark rankings, and study resources across 38 districts on a single unified platform.',
-                  style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 11.5, height: 1.45),
+                  'Connecting 38 districts: Experience institute-grade CBT assessments and classroom materials wherever you are.',
+                  style: TextStyle(
+                    color: Colors.white.withOpacity(0.88),
+                    fontSize: 11.5,
+                    height: 1.45,
+                  ),
                 ),
               ],
             ),
@@ -508,7 +512,6 @@ class CoachingHubCardState extends State<CoachingHubCard> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // Feature Metrics Strip (Handled with Expanded to prevent text overflow)
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                   decoration: BoxDecoration(
