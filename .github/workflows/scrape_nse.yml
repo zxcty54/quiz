@@ -1,14 +1,9 @@
-name: Scrape NSE Announcements
+name: NSE Daily Master Scraper
 
 on:
   schedule:
-    # Monday to Friday market hours (UTC):
-    # 03:30 UTC = 09:00 AM IST
-    # 05:30 UTC = 11:00 AM IST
-    # 07:30 UTC = 01:00 PM IST
-    # 09:30 UTC = 03:00 PM IST
-    # 11:30 UTC = 05:00 PM IST
-    - cron: '30 3,5,7,9,11 * * 1-5'
+    # Monday to Friday raat 8:00 PM IST (14:30 UTC)
+    - cron: '30 14 * * 1-5'
   workflow_dispatch:
 
 jobs:
@@ -18,7 +13,7 @@ jobs:
       contents: write
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -33,22 +28,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install curl_cffi pypdf pdfplumber
 
-      - name: Run NSE Scraper Script
+      - name: Execute Daily Scraper
         run: |
-          python nse_announcements_scraper.py
+          python nse_daily_master_scraper.py
 
-      - name: Commit and Push Announcements Data
+      - name: Commit and Push Master Data
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add nse_corporate_announcements.json
+          git add nse_corporate_master.json
 
           if git diff --staged --quiet; then
-            echo "ℹ️ Koi naya update nahi mila. Commit skipped."
+            echo "ℹ️ No fresh corporate filings to commit today."
           else
-            CURRENT_TIME=$(TZ='Asia/Kolkata' date +'%d-%b-%Y %I:%M %p IST')
-            git commit -m "📊 Auto-update NSE Announcements: ${CURRENT_TIME}"
+            git commit -m "📊 Auto-update NSE Corporate Master: $(date +'%d-%b-%Y')"
             git pull --rebase origin main
             git push origin main
           fi
