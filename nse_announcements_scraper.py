@@ -1,6 +1,7 @@
 import json
 import time
 import io
+import re
 from datetime import datetime, timezone, timedelta
 from curl_cffi import requests
 
@@ -18,9 +19,9 @@ from pypdf import PdfReader
 
 BASE_URL = "https://www.nseindia.com"
 ANNOUNCEMENTS_API = "https://www.nseindia.com/api/corporate-announcements?index=equities"
-OUTPUT_FILE = "nse_corporate_announcements.json"
+OUTPUT_FILE = "nse_impact_announcements.json"
 
-MAX_PDF_DOWNLOADS = 10  # Test ke liye first 10 files
+MAX_PDF_DOWNLOADS = 10  # Maximum PDFs to parse per run
 IST = timezone(timedelta(hours=5, minutes=30))
 
 HEADERS = {
@@ -37,12 +38,86 @@ HEADERS = {
     "Referer": "https://www.nseindia.com/"
 }
 
+# ============================================================
+# FILTER CRITERIA
+# ============================================================
+
+# Ye keywords milne par direct ignore hoga
+EXCLUDED_KEYWORDS = [
+    "financial results", "quarterly results", "financial result",
+    "investor presentation", "press release", "earnings call",
+    "qip", "preferential allotment", "warrants", "fund raising",
+    "fccb", "debt issue", "ncd", "dividend", "rights issue",
+    "loss of share", "duplicate share", "kyc update", "newspaper publication",
+    "postal ballot", "agm notice", "egm notice", "scrutinizer",
+    "trading window closure", "credit rating"
+]
+
+# Sirf in categories wali announcements filter hongi
+TARGET_CATEGORIES = {
+    "NEW_ORDER_WIN": [
+        "bagged order", "receipt of order", "order win", "awarded order",
+        "letter of award", "work order", "purchase order", "contract win",
+        "secured order", "commercial agreement", "supply contract"
+    ],
+    "BUYBACK_BONUS_SPLIT": [
+        "buyback", "buy-back", "bonus issue", "bonus shares",
+        "stock split", "sub-division of shares", "sub division of equity"
+    ],
+    "MA_AND_PARTNERSHIP": [
+        "acquisition", "merger", "amalgamation", "joint venture",
+        "mou signed", "strategic alliance", "stake acquisition"
+    ],
+    "CAPEX_AND_EXPANSION": [
+        "commercial production", "capacity expansion", "new facility",
+        "new plant", "plant expansion", "commissioning of"
+    ],
+    "APPROVALS_AND_PATENTS": [
+        "usfda", "patent granted", "eir received", "license granted",
+        "regulatory approval", "environmental clearance"
+    ],
+    "RED_FLAG_ALERTS": [
+        "resignation of statutory auditor", "resignation of auditor",
+        "resignation of cfo", "search and seizure", "it raid",
+        "show cause notice", "forensic audit"
+    ]
+}
+
+
+def filter_impact_announcement(subject: str, details: str):
+    """
+    Checks subject and attachment text.
+    Returns matched category list if valid impact news, else None.
+    """
+    combined_text = f"{subject} {details}".lower()
+
+    # 1. Negative Filter
+    for bad_word in EXCLUDED_KEYWORDS:
+        if bad_word in combined_text:
+            return None
+
+    # 2. Positive Filter
+    matched_tags = []
+    for category, keywords in TARGET_CATEGORIES.items():
+        for kw in keywords:
+            pattern = rf"\b{re.escape(kw)}\b"
+            if re.search(pattern, combined_text):
+                matched_tags.append(category)
+                break
+
+    return matched_tags if matched_tags else None
+
+
+# ============================================================
+# PDF STREAM EXTRACTION
+# ============================================================
+
 def extract_text_from_pdf_stream(pdf_bytes, pdf_url):
-    """pdfplumber aur pypdf dono use karke maximum text extract karta hai"""
+    """pdfplumber aur pypdf se in-memory text extract karta hai"""
     extracted_text = ""
     num_pages = 0
 
-    # 1. Try pdfplumber (Superior text extraction)
+    # 1. Try pdfplumber
     if pdfplumber:
         try:
             with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
@@ -77,7 +152,6 @@ def extract_text_from_pdf_stream(pdf_bytes, pdf_url):
     except Exception as e:
         print(f"      ⚠️ pypdf parsing error: {e}")
 
-    # Agar pages the lekin text 0 nikla -> Image / Scanned Document
     if num_pages > 0 and not extracted_text:
         print(f"      📷 PDF has {num_pages} pages but no text characters found (Scanned Image/Photo PDF).")
         return f"[SCANNED_IMAGE_PDF: Document contains {num_pages} scanned image pages]"
@@ -100,7 +174,6 @@ def download_and_parse_pdf(session, pdf_url):
     try:
         resp = session.get(pdf_url, headers=pdf_headers, timeout=25)
         print(f"      HTTP Status : {resp.status_code}")
-        print(f"      Content-Type: {resp.headers.get('content-type', 'unknown')}")
         print(f"      Data Size   : {len(resp.content)} bytes")
 
         if resp.status_code == 403:
@@ -111,25 +184,25 @@ def download_and_parse_pdf(session, pdf_url):
             print(f"      ❌ Download failed with HTTP {resp.status_code}")
             return f"[DOWNLOAD_FAILED: HTTP {resp.status_code}]"
 
-        # Content validation
         if not resp.content.startswith(b'%PDF'):
-            # Kabhi-kabhi error HTML page bhej deta hai
             preview = resp.text[:150].strip()
             print(f"      ⚠️ Response is not a valid PDF! Preview: {preview}")
             return "[INVALID_PDF_FORMAT: Returned HTML/Text instead of PDF binary]"
 
-        # Extraction
-        text = extract_text_from_pdf_stream(resp.content, pdf_url)
-        return text
+        return extract_text_from_pdf_stream(resp.content, pdf_url)
 
     except Exception as e:
         print(f"      ❌ Network/Download Exception: {e}")
         return f"[ERROR: {str(e)}]"
 
 
+# ============================================================
+# MAIN FETCH LOGIC
+# ============================================================
+
 def fetch_nse_announcements():
     print("=" * 80)
-    print("🚀 NSE CORPORATE ANNOUNCEMENTS & DEEP PDF DEBUGGER")
+    print("🚀 NSE CORPORATE ANNOUNCEMENTS - FILTERED HIGH-IMPACT SCRAPER")
     print("=" * 80)
 
     session = requests.Session(impersonate="chrome124")
@@ -164,17 +237,24 @@ def fetch_nse_announcements():
         return
 
     items = raw_json if isinstance(raw_json, list) else raw_json.get("data", [])
-    print(f"📦 Total announcements received: {len(items)}")
+    print(f"📦 Total raw announcements received: {len(items)}")
 
-    cleaned_records = []
+    filtered_records = []
     pdf_success_count = 0
     attempted_pdf_count = 0
 
+    # Step 3: Filter & Parse Targeted Announcements
     for item in items:
-        symbol = str(item.get("symbol", "")).strip()
-        comp_name = str(item.get("sm_name") or item.get("companyName", "")).strip()
         subject = str(item.get("desc") or item.get("subject", "")).strip()
         details = str(item.get("attchmntText") or item.get("details", "")).strip()
+
+        # Filter check
+        categories = filter_impact_announcement(subject, details)
+        if not categories:
+            continue
+
+        symbol = str(item.get("symbol", "")).strip()
+        comp_name = str(item.get("sm_name") or item.get("companyName", "")).strip()
         broadcast_dt = str(item.get("an_dt") or item.get("broadcastDate", "")).strip()
         attachment_file = str(item.get("attchmntFile", "")).strip()
 
@@ -182,26 +262,29 @@ def fetch_nse_announcements():
         pdf_extracted = ""
 
         if attachment_file:
-            # Full link construction
             if attachment_file.startswith("http"):
                 pdf_link = attachment_file
             else:
-                pdf_link = f"https://nsearchives.nseindia.com/corporate/{attachment_file}"
+                clean_path = attachment_file.lstrip("/")
+                pdf_link = f"https://nsearchives.nseindia.com/corporate/{clean_path}"
 
-        # Scrape PDF text
+        print(f"\n⚡ Match Found [{', '.join(categories)}]: {symbol} - {subject[:50]}")
+
+        # Stream & Parse PDF only for matching items up to limit
         if pdf_link and attempted_pdf_count < MAX_PDF_DOWNLOADS:
             attempted_pdf_count += 1
-            print(f"\n[{attempted_pdf_count}/{MAX_PDF_DOWNLOADS}] Target: {symbol} - {subject[:45]}")
+            print(f"[{attempted_pdf_count}/{MAX_PDF_DOWNLOADS}] Extracting PDF text...")
             pdf_extracted = download_and_parse_pdf(session, pdf_link)
             
             if pdf_extracted and not pdf_extracted.startswith("["):
                 pdf_success_count += 1
             
-            time.sleep(1.5)  # Safe delay between PDF fetches
+            time.sleep(1.5)
 
-        cleaned_records.append({
+        filtered_records.append({
             "symbol": symbol,
             "company_name": comp_name,
+            "categories": categories,
             "subject": subject,
             "broadcast_date": broadcast_dt,
             "summary_details": details[:400],
@@ -210,24 +293,25 @@ def fetch_nse_announcements():
         })
 
     output_payload = {
-        "source": "NSE India Corporate Announcements",
+        "source": "NSE India Corporate Announcements (Impact Filtered)",
         "scraped_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S"),
-        "total_records": len(cleaned_records),
+        "total_impact_records": len(filtered_records),
         "pdfs_attempted": attempted_pdf_count,
         "pdfs_successfully_parsed": pdf_success_count,
-        "announcements": cleaned_records
+        "announcements": filtered_records
     }
 
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output_payload, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print("📊 SCRAPING RUN SUMMARY:")
-    print(f"   • Total Announcements    : {len(cleaned_records)}")
-    print(f"   • PDFs Download Attempted: {attempted_pdf_count}")
-    print(f"   • PDFs Text Extracted    : {pdf_success_count}")
-    print(f"   • Saved To File          : '{OUTPUT_FILE}'")
+    print("📊 FILTERED RUN SUMMARY:")
+    print(f"   • Total Filtered Items Saved : {len(filtered_records)}")
+    print(f"   • Impact PDFs Attempted      : {attempted_pdf_count}")
+    print(f"   • Impact PDFs Text Extracted : {pdf_success_count}")
+    print(f"   • Saved To File              : '{OUTPUT_FILE}'")
     print("=" * 80)
+
 
 if __name__ == "__main__":
     fetch_nse_announcements()
