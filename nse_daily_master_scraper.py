@@ -14,7 +14,7 @@ except ImportError:
     pdfplumber = None
 
 # ============================================================
-# CONFIGURATION & PARAMETERS
+# CONFIGURATION
 # ============================================================
 
 BASE_URL = "https://www.nseindia.com"
@@ -24,17 +24,16 @@ IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
 TO_DATE = NOW.strftime("%d-%m-%Y")
-FROM_DATE = (NOW - timedelta(days=20)).strftime("%d-%m-%Y")
+FROM_DATE = (NOW - timedelta(days=15)).strftime("%d-%m-%Y")
 
-# Working NSE Endpoints with date filters for rich data
 ENDPOINTS = {
     "announcements": f"https://www.nseindia.com/api/corporate-announcements?index=equities&from_date={FROM_DATE}&to_date={TO_DATE}",
-    "financial_results": f"https://www.nseindia.com/api/corporates-financial-results?index=equities&period=Quarterly",
+    "financial_results": "https://www.nseindia.com/api/corporates-financial-results?index=equities&period=Quarterly",
     "shareholding_patterns": f"https://www.nseindia.com/api/corporate-share-holdings-master?index=equities&from_date={FROM_DATE}&to_date={TO_DATE}"
 }
 
-# Rich PDF Downloads limit (Outcome documents)
-MAX_PDF_DOWNLOADS = 25
+# Allow enough PDF extractions for genuine filtered filings
+MAX_PDF_DOWNLOADS = 35
 
 HEADERS = {
     "User-Agent": (
@@ -51,14 +50,10 @@ HEADERS = {
 }
 
 # ============================================================
-# TARGET CATEGORIES (High Impact Corporate Actions)
+# HIGH-VALUE CATEGORIES REGEX
 # ============================================================
 
 CATEGORY_PATTERNS = {
-    "RESULT": re.compile(
-        r'\b(financial result|financial results|audited results|unaudited results|quarterly results|outcome of board meeting.*financial)\b', 
-        re.IGNORECASE
-    ),
     "ORDER": re.compile(
         r'\b(order win|order received|awarded|contract|bagged|letter of intent|loi|work order|purchase order|new order|commercial agreement)\b', 
         re.IGNORECASE
@@ -71,16 +66,8 @@ CATEGORY_PATTERNS = {
         r'\b(fund raising|fund raise|qip|rights issue|preferential issue|preferential allotment|warrants|fpo|qualified institutions placement)\b', 
         re.IGNORECASE
     ),
-    "DEBT": re.compile(
-        r'\b(debt reduction|ncd|debentures|repayment of debt|prepayment|loan closure|commercial paper|bonds issuance)\b', 
-        re.IGNORECASE
-    ),
-    "CAPACITY_EXPANSION": re.compile(
-        r'\b(capacity expansion|new plant|capex|manufacturing facility|greenfield|brownfield|commercial production|expansion project|new unit)\b', 
-        re.IGNORECASE
-    ),
-    "CREDIT_RATING": re.compile(
-        r'\b(credit rating|crisil|care|icra|infomerics|brickwork|rating assigned|rating upgrade|rating revised|rating reaffirmed)\b', 
+    "RESULT": re.compile(
+        r'\b(financial result|financial results|audited results|unaudited results|quarterly results|outcome of board meeting.*financial)\b', 
         re.IGNORECASE
     ),
     "BONUS": re.compile(
@@ -94,17 +81,30 @@ CATEGORY_PATTERNS = {
     "BUYBACK": re.compile(
         r'\b(buyback|buy-back|tender offer|open market buyback|share repurchase)\b', 
         re.IGNORECASE
+    ),
+    "CAPACITY_EXPANSION": re.compile(
+        r'\b(capacity expansion|new plant|capex|manufacturing facility|greenfield|brownfield|commercial production|expansion project|new unit)\b', 
+        re.IGNORECASE
+    ),
+    "CREDIT_RATING": re.compile(
+        r'\b(rating upgrade|rating assigned|rating revised)\b', # Reaffirmations excluded
+        re.IGNORECASE
     )
 }
 
+# Routine compliance junk to aggressively drop
 EXCLUDE_JUNK = re.compile(
-    r'\b(loss of share|duplicate share|newspaper|clipping|analyst meet|investor meet audio|transcript|trading window closure|closure of trading|general meeting notice|postal ballot notice)\b',
+    r'\b(loss of share|duplicate share|newspaper|clipping|analyst meet|investor meet audio|transcript|'
+    r'trading window closure|closure of trading|general meeting notice|postal ballot notice|'
+    r'regulation 57|payment of interest|payment of principal|scheduled principal|reaffirm|'
+    r'regulation 29\(2\)|listing of commercial paper)\b',
     re.IGNORECASE
 )
 
 def classify_event(text_to_check):
     if not text_to_check:
         return None
+    # Drop routine noise
     if EXCLUDE_JUNK.search(text_to_check):
         return None
     for cat, pattern in CATEGORY_PATTERNS.items():
@@ -117,41 +117,50 @@ def generate_hash(identifier):
     return hashlib.md5(clean.encode('utf-8')).hexdigest()[:12]
 
 # ============================================================
-# PDF EXTRACTION ENGINE
+# PDF EXTRACTION ENGINE (WITH RETRY & VERIFICATION)
 # ============================================================
 
 def extract_pdf_content(session, pdf_url):
     if not pdf_url:
         return ""
+    
     pdf_headers = dict(HEADERS)
     pdf_headers["Host"] = "nsearchives.nseindia.com"
     pdf_headers["Referer"] = "https://www.nseindia.com/"
 
-    try:
-        resp = session.get(pdf_url, headers=pdf_headers, timeout=22)
-        if resp.status_code != 200 or not resp.content.startswith(b'%PDF'):
-            return ""
+    for attempt in range(2):
+        try:
+            resp = session.get(pdf_url, headers=pdf_headers, timeout=25)
+            if resp.status_code != 200 or not resp.content.startswith(b'%PDF'):
+                time.sleep(1.5)
+                continue
 
-        pdf_bytes = io.BytesIO(resp.content)
-        
-        # Priority 1: pdfplumber for clean tabular & numeric summary
-        if pdfplumber:
-            try:
-                with pdfplumber.open(pdf_bytes) as pdf:
-                    pages = [p.extract_text() for p in pdf.pages[:3] if p.extract_text()]
-                    text = " ".join(" ".join(pages).split())
-                    if text and len(text) > 40:
-                        return text[:3000]
-            except Exception:
-                pass
+            pdf_bytes = io.BytesIO(resp.content)
+            
+            # Primary: pdfplumber for clean text extraction
+            if pdfplumber:
+                try:
+                    with pdfplumber.open(pdf_bytes) as pdf:
+                        pages = [p.extract_text() for p in pdf.pages[:3] if p.extract_text()]
+                        text = " ".join(" ".join(pages).split())
+                        if text and len(text) > 40:
+                            return text[:3000]
+                except Exception:
+                    pass
 
-        # Priority 2: pypdf fallback
-        reader = PdfReader(pdf_bytes)
-        pages = [p.extract_text() for p in reader.pages[:3] if p.extract_text()]
-        text = " ".join(" ".join(pages).split())
-        return text[:3000] if (text and len(text) > 40) else "[SCANNED_IMAGE_PDF: Requires OCR]"
-    except Exception:
-        return ""
+            # Fallback: pypdf
+            reader = PdfReader(pdf_bytes)
+            pages = [p.extract_text() for p in reader.pages[:3] if p.extract_text()]
+            text = " ".join(" ".join(pages).split())
+            if text and len(text) > 40:
+                return text[:3000]
+            else:
+                return "[SCANNED_IMAGE_PDF: Requires OCR]"
+
+        except Exception:
+            time.sleep(1.5)
+
+    return ""
 
 def safe_api_get(session, url, name, custom_referer=None):
     print(f"📡 Fetching {name}...")
@@ -176,7 +185,7 @@ def safe_api_get(session, url, name, custom_referer=None):
 
 def run_nse_daily_master():
     print("=" * 80)
-    print("🚀 NSE COMPLETE CORPORATE ACTION INTELLIGENCE (NO HALF DATA)")
+    print("🚀 NSE ACTIONABLE INTELLIGENCE PIPELINE (ZERO HALF-DATA)")
     print(f"📅 Scan Window: {FROM_DATE} to {TO_DATE}")
     print("=" * 80)
 
@@ -184,7 +193,6 @@ def run_nse_daily_master():
     master_data = {
         "last_updated": "",
         "corporate_announcements": [],
-        "upcoming_board_meetings": [],
         "financial_results": [],
         "shareholding_patterns": []
     }
@@ -218,12 +226,12 @@ def run_nse_daily_master():
     time.sleep(2)
 
     # ------------------------------------------------------------
-    # 3. Actionable Corporate Announcements (Must Have Details/PDF)
+    # 3. Actionable Corporate Announcements (Mandatory PDF Text)
     # ------------------------------------------------------------
     raw_announcements = safe_api_get(
         session, 
         ENDPOINTS["announcements"], 
-        "Announcements & Filings", 
+        "Corporate Announcements", 
         "https://www.nseindia.com/companies-listing/corporate-filings-announcements"
     )
     time.sleep(1.5)
@@ -241,7 +249,7 @@ def run_nse_daily_master():
         if not symbol or not subject:
             continue
 
-        # Category Filter
+        # Filter against Category Engine & Exclusion Noise
         category = classify_event(f"{subject} {summary}")
         if not category:
             continue
@@ -254,15 +262,18 @@ def run_nse_daily_master():
         pdf_text = ""
         if attachment_file:
             pdf_url = attachment_file if attachment_file.startswith("http") else f"https://nsearchives.nseindia.com/corporate/{attachment_file}"
+            
+            # Scrape PDF text for filtered item
             if pdf_downloads < MAX_PDF_DOWNLOADS:
-                print(f"   📄 [{pdf_downloads+1}/{MAX_PDF_DOWNLOADS}] Extracting PDF for: {symbol} ({category})...")
+                print(f"   📄 [{pdf_downloads + 1}/{MAX_PDF_DOWNLOADS}] Extracting PDF: {symbol} | {category}...")
                 pdf_text = extract_pdf_content(session, pdf_url)
-                pdf_downloads += 1
-                time.sleep(1)
+                if pdf_text:
+                    pdf_downloads += 1
+                time.sleep(1.8) # Anti-rate-limit spacing
 
-        # 🛑 ZERO-HALF-DATA GUARD:
-        # Agar summary bhi nahi hai aur PDF text bhi nahi hai, toh card kisi kaam ka nahi hai
-        if not summary and not pdf_text:
+        # 🛑 ACTIONABILITY GUARD:
+        # Agar summary choti hai aur PDF text khali hai, toh half-data save mat karo
+        if len(summary) < 50 and not pdf_text:
             continue
 
         record = {
@@ -280,12 +291,12 @@ def run_nse_daily_master():
         seen_announcement_hashes.add(item_hash)
 
     # ------------------------------------------------------------
-    # 4. Financial Results (Structured Table with Figures)
+    # 4. Financial Results (Quarterly Data)
     # ------------------------------------------------------------
     raw_results = safe_api_get(
         session, 
         ENDPOINTS["financial_results"], 
-        "Financial Results (Quarterly Data)", 
+        "Financial Results", 
         "https://www.nseindia.com/companies-listing/corporate-filings-financial-results"
     )
     time.sleep(1.5)
@@ -298,10 +309,9 @@ def run_nse_daily_master():
         res_date = str(r.get("res_dt") or r.get("resultDate") or r.get("broadcastDate", "")).strip()
         
         income = str(r.get("income") or r.get("revenue") or r.get("tot_inc", "")).strip()
-        net_profit = str(r.get("netProfit") or r.get("pro_aft_tax") or r.get("net_profit", "")).strip()
+        net_profit = str(r.get("netProfit") or r.get("pro_aft_tax", "")).strip()
         eps = str(r.get("eps") or r.get("re_eps", "")).strip()
 
-        # Strict Filter: Figures hona zaroori hai
         if not symbol or (not income and not net_profit):
             continue
 
@@ -322,7 +332,7 @@ def run_nse_daily_master():
         seen_result_hashes.add(r_hash)
 
     # ------------------------------------------------------------
-    # 5. Shareholding Patterns (Strict Valid Filings Only)
+    # 5. Shareholding Patterns (Strict Valid Filings)
     # ------------------------------------------------------------
     raw_shp = safe_api_get(
         session, 
@@ -342,7 +352,6 @@ def run_nse_daily_master():
         fii = str(s.get("fii") or "").strip()
         dii = str(s.get("dii") or "").strip()
 
-        # Discard if holding numbers are empty
         if not symbol or as_on_date in ["", "-", "None", "null"]:
             continue
         if promoter in ["", "-", "None", "null"] and public_hold in ["", "-", "None", "null"]:
@@ -372,7 +381,6 @@ def run_nse_daily_master():
     master_data["financial_results"] = new_results + master_data.get("financial_results", [])
     master_data["shareholding_patterns"] = new_shp + master_data.get("shareholding_patterns", [])
 
-    # Memory ceilings
     master_data["corporate_announcements"] = master_data["corporate_announcements"][:3000]
     master_data["financial_results"] = master_data["financial_results"][:1500]
     master_data["shareholding_patterns"] = master_data["shareholding_patterns"][:1500]
@@ -381,11 +389,11 @@ def run_nse_daily_master():
         json.dump(master_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print("📊 RICH ACTIONABLE DATA HARVESTED:")
-    print(f"   • Actionable Filings with Details/PDF : {len(new_announcements)} (PDFs parsed: {pdf_downloads})")
-    print(f"   • Verified Financial Results (with ₹) : {len(new_results)}")
-    print(f"   • Verified Shareholding Patterns      : {len(new_shp)}")
-    print(f"💾 Saved to: '{MASTER_FILE}'")
+    print("📊 COMPLETE EXTRACTION SUMMARY:")
+    print(f"   • Actionable Filings Added : {len(new_announcements)} (PDFs Parsed: {pdf_downloads})")
+    print(f"   • Verified Financial Results: {len(new_results)}")
+    print(f"   • Verified Shareholding     : {len(new_shp)}")
+    print(f"💾 File Written               : '{MASTER_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
