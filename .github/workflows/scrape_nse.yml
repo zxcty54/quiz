@@ -2,7 +2,12 @@ name: Scrape NSE Announcements
 
 on:
   schedule:
-    # Monday to Friday market hours (IST)
+    # Runs Monday to Friday (UTC):
+    # 03:30 UTC = 09:00 AM IST
+    # 05:30 UTC = 11:00 AM IST
+    # 07:30 UTC = 01:00 PM IST
+    # 09:30 UTC = 03:00 PM IST
+    # 11:30 UTC = 05:00 PM IST
     - cron: '30 3,5,7,9,11 * * 1-5'
   workflow_dispatch:
 
@@ -22,6 +27,7 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+          cache: 'pip' # Dependencies caching for faster runs
 
       - name: Install Dependencies
         run: |
@@ -37,12 +43,15 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add nse_corporate_announcements.json
+          # Dono potential filenames ko stage karega (jo bhi bane)
+          git add nse_impact_announcements.json nse_corporate_announcements.json 2>/dev/null || true
 
           if git diff --staged --quiet; then
             echo "ℹ️ Koi naya update nahi mila. Commit skipped."
           else
-            git commit -m "📊 Auto-update NSE Announcements with PDF: $(date +'%d-%b-%Y %H:%M IST')"
+            # IST timezone me date format generate karega
+            CURRENT_TIME=$(TZ='Asia/Kolkata' date +'%d-%b-%Y %I:%M %p IST')
+            git commit -m "📊 Auto-update NSE Announcements: ${CURRENT_TIME}"
             git pull --rebase origin main
             git push origin main
           fi
