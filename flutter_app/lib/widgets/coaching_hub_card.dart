@@ -213,7 +213,6 @@ class CoachingHubCardState extends State<CoachingHubCard> {
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
 
-    // Adaptive Theme Colors
     final cardBg = isDark ? const Color(0xFF0F172A) : Colors.white;
     final cardBorder = isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0);
     final textDark = isDark ? Colors.white : const Color(0xFF0F172A);
@@ -488,9 +487,15 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                 const SizedBox(height: 12),
                 const Text(
                   'Premier Offline Institutes, Now Integrated 🏛️',
-                  style: TextStyle(color: Colors.white, fontSize: 16.5, fontWeight: FontWeight.w900, letterSpacing: -0.3),
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 0.2,
+                    height: 1.35,
+                  ),
                 ),
-                const SizedBox(height: 4),
+                const SizedBox(height: 5),
                 Text(
                   'Access verified institutional CBT assessments, benchmark rankings, and study resources across 38 districts on a single unified platform.',
                   style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 11.5, height: 1.45),
@@ -503,21 +508,39 @@ class CoachingHubCardState extends State<CoachingHubCard> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // Feature Metrics Strip (Handled with Expanded to prevent text overflow)
                 Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
                   decoration: BoxDecoration(
                     color: metricBoxBg,
                     borderRadius: BorderRadius.circular(12),
                     border: Border.all(color: metricBoxBorder),
                   ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _InstitutionalMetric(icon: Icons.quiz_outlined, label: 'Curriculum Mocks', isDark: isDark),
+                      Expanded(
+                        child: _InstitutionalMetric(
+                          icon: Icons.quiz_outlined,
+                          label: 'CBT Mocks',
+                          isDark: isDark,
+                        ),
+                      ),
                       _MetricDivider(color: metricBoxBorder),
-                      _InstitutionalMetric(icon: Icons.insights_rounded, label: 'All-Bihar Percentile', isDark: isDark),
+                      Expanded(
+                        child: _InstitutionalMetric(
+                          icon: Icons.insights_rounded,
+                          label: 'State Rank',
+                          isDark: isDark,
+                        ),
+                      ),
                       _MetricDivider(color: metricBoxBorder),
-                      _InstitutionalMetric(icon: Icons.description_outlined, label: 'Faculty Handouts', isDark: isDark),
+                      Expanded(
+                        child: _InstitutionalMetric(
+                          icon: Icons.description_outlined,
+                          label: 'Handouts',
+                          isDark: isDark,
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -577,21 +600,29 @@ class _InstitutionalMetric extends StatelessWidget {
   final String label;
   final bool isDark;
 
-  const _InstitutionalMetric({required this.icon, required this.label, required this.isDark});
+  const _InstitutionalMetric({
+    required this.icon,
+    required this.label,
+    required this.isDark,
+  });
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(icon, size: 13, color: const Color(0xFF2563EB)),
         const SizedBox(width: 4),
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 10.5,
-            fontWeight: FontWeight.w700,
-            color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF475569),
+        Flexible(
+          child: Text(
+            label,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              fontSize: 11,
+              fontWeight: FontWeight.w700,
+              color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF475569),
+            ),
           ),
         ),
       ],
@@ -605,6 +636,11 @@ class _MetricDivider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(width: 1, height: 12, color: color);
+    return Container(
+      width: 1,
+      height: 14,
+      margin: const EdgeInsets.symmetric(horizontal: 4),
+      color: color,
+    );
   }
 }
