@@ -57,14 +57,16 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
 
-    // Adaptive Theme Colors
-    final bgSurface = isDark ? const Color(0xFF030712) : const Color(0xFFF8FAFC);
+    // 100% Strict Theme Mapping (Light vs Dark)
+    final bgSurface = isDark ? const Color(0xFF030712) : Colors.white;
     final cardBg = isDark ? const Color(0xFF0F172A) : Colors.white;
     final cardBorder = isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0);
     final textHeading = isDark ? Colors.white : const Color(0xFF0F172A);
     final textMuted = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
-    final inputBg = isDark ? const Color(0xFF1E293B) : Colors.white;
-    final chipBg = isDark ? const Color(0xFF1E293B) : const Color(0xFFEDF2F7);
+    final inputBg = isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9);
+    final chipBg = isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9);
+    final avatarBg = isDark ? const Color(0xFF1E293B) : const Color(0xFFEFF6FF);
+    final avatarBorder = isDark ? const Color(0xFF334155) : const Color(0xFFDBEAFE);
 
     final filtered = _coachings.where((c) {
       final name = (c['name'] ?? '').toString().toLowerCase();
@@ -80,7 +82,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
     return Scaffold(
       backgroundColor: bgSurface,
       appBar: AppBar(
-        backgroundColor: cardBg,
+        backgroundColor: bgSurface,
         elevation: 0,
         scrolledUnderElevation: 0,
         leading: IconButton(
@@ -102,6 +104,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // Search Field
                         TextField(
                           style: TextStyle(color: textHeading, fontSize: 13.5),
                           decoration: InputDecoration(
@@ -115,20 +118,18 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                                   )
                                 : null,
                             isDense: true,
-                            contentPadding: const EdgeInsets.symmetric(vertical: 11),
+                            contentPadding: const EdgeInsets.symmetric(vertical: 12),
                             filled: true,
                             fillColor: inputBg,
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(12),
-                              borderSide: BorderSide(color: cardBorder, width: isDark ? 0 : 1),
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(12),
-                              borderSide: BorderSide(color: cardBorder, width: isDark ? 0 : 1),
+                              borderSide: BorderSide.none,
                             ),
                           ),
                           onChanged: (v) => setState(() => _searchQuery = v),
                         ),
+
+                        // Cities Filter Chips
                         if (_liveCities.length > 1) ...[
                           const SizedBox(height: 12),
                           Wrap(
@@ -138,13 +139,15 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                               return FilterChip(
                                 label: Text(city),
                                 selected: isSel,
-                                selectedColor: const Color(0xFF10B981).withOpacity(0.2),
+                                selectedColor: const Color(0xFF10B981).withOpacity(0.18),
                                 checkmarkColor: const Color(0xFF10B981),
                                 backgroundColor: chipBg,
                                 labelStyle: TextStyle(
                                   fontSize: 11,
                                   fontWeight: isSel ? FontWeight.bold : FontWeight.normal,
-                                  color: isSel ? const Color(0xFF059669) : textMuted,
+                                  color: isSel
+                                      ? (isDark ? const Color(0xFF34D399) : const Color(0xFF059669))
+                                      : textMuted,
                                 ),
                                 visualDensity: VisualDensity.compact,
                                 padding: const EdgeInsets.symmetric(horizontal: 4),
@@ -158,10 +161,11 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                   ),
                 ),
 
+                // Count Strip
                 if (_coachings.isNotEmpty)
                   SliverToBoxAdapter(
                     child: Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 0, 16, 10),
+                      padding: const EdgeInsets.fromLTRB(16, 0, 16, 12),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -177,7 +181,11 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                               }),
                               child: const Text(
                                 'Reset Filter ✕',
-                                style: TextStyle(fontSize: 11.5, color: Color(0xFF2563EB), fontWeight: FontWeight.bold),
+                                style: TextStyle(
+                                  fontSize: 11.5,
+                                  color: Color(0xFF2563EB),
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
                             ),
                         ],
@@ -185,6 +193,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                     ),
                   ),
 
+                // Empty State or List Cards
                 if (filtered.isEmpty)
                   SliverToBoxAdapter(
                     child: Padding(
@@ -250,10 +259,10 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                             decoration: BoxDecoration(
                               color: cardBg,
                               borderRadius: BorderRadius.circular(16),
-                              border: Border.all(color: cardBorder),
+                              border: Border.all(color: cardBorder, width: 1),
                               boxShadow: [
                                 BoxShadow(
-                                  color: Colors.black.withOpacity(isDark ? 0.2 : 0.04),
+                                  color: Colors.black.withOpacity(isDark ? 0.25 : 0.04),
                                   blurRadius: 8,
                                   offset: const Offset(0, 2),
                                 ),
@@ -286,9 +295,9 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                                           width: 44,
                                           height: 44,
                                           decoration: BoxDecoration(
-                                            color: isDark ? const Color(0xFF1E293B) : const Color(0xFFEFF6FF),
+                                            color: avatarBg,
                                             borderRadius: BorderRadius.circular(10),
-                                            border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFDBEAFE)),
+                                            border: Border.all(color: avatarBorder),
                                           ),
                                           child: ClipRRect(
                                             borderRadius: BorderRadius.circular(9),
@@ -299,14 +308,22 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                                                     errorBuilder: (_, __, ___) => Center(
                                                       child: Text(
                                                         name.isNotEmpty ? name[0] : 'C',
-                                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Color(0xFF2563EB)),
+                                                        style: const TextStyle(
+                                                          fontWeight: FontWeight.bold,
+                                                          fontSize: 18,
+                                                          color: Color(0xFF2563EB),
+                                                        ),
                                                       ),
                                                     ),
                                                   )
                                                 : Center(
                                                     child: Text(
                                                       name.isNotEmpty ? name[0] : 'C',
-                                                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18, color: Color(0xFF2563EB)),
+                                                      style: const TextStyle(
+                                                        fontWeight: FontWeight.bold,
+                                                        fontSize: 18,
+                                                        color: Color(0xFF2563EB),
+                                                      ),
                                                     ),
                                                   ),
                                           ),
@@ -321,7 +338,11 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                                                   Flexible(
                                                     child: Text(
                                                       name,
-                                                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5, color: textHeading),
+                                                      style: TextStyle(
+                                                        fontWeight: FontWeight.bold,
+                                                        fontSize: 14.5,
+                                                        color: textHeading,
+                                                      ),
                                                       overflow: TextOverflow.ellipsis,
                                                     ),
                                                   ),
@@ -351,7 +372,7 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                                           return Container(
                                             padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
                                             decoration: BoxDecoration(
-                                              color: const Color(0xFF2563EB).withOpacity(0.08),
+                                              color: const Color(0xFF2563EB).withOpacity(isDark ? 0.14 : 0.08),
                                               borderRadius: BorderRadius.circular(6),
                                             ),
                                             child: Text(
@@ -376,13 +397,21 @@ class _CoachingDirectoryScreenState extends State<CoachingDirectoryScreen> {
                                       children: [
                                         Text(
                                           '${visibleBatches.length} Batches • $testsTotal CBT Tests',
-                                          style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: textMuted),
+                                          style: TextStyle(
+                                            fontSize: 11,
+                                            fontWeight: FontWeight.w600,
+                                            color: textMuted,
+                                          ),
                                         ),
                                         const Row(
                                           children: [
                                             Text(
                                               'View Hub',
-                                              style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.bold, color: Color(0xFF2563EB)),
+                                              style: TextStyle(
+                                                fontSize: 11.5,
+                                                fontWeight: FontWeight.bold,
+                                                color: Color(0xFF2563EB),
+                                              ),
                                             ),
                                             SizedBox(width: 2),
                                             Icon(Icons.arrow_forward_ios_rounded, size: 10, color: Color(0xFF2563EB)),
