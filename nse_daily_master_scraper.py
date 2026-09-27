@@ -49,7 +49,7 @@ HEADERS = {
 }
 
 # ============================================================
-# TARGET CATEGORIES (CREDIT_RATING & FUND_RAISE EXCLUDED)
+# TARGET CATEGORIES (ONLY REAL COMMERCIAL MOVES)
 # ============================================================
 
 CATEGORY_PATTERNS = {
@@ -57,8 +57,9 @@ CATEGORY_PATTERNS = {
         r'\b(order win|order received|awarded|contract|bagged|letter of intent|loi|work order|purchase order|new order|commercial agreement)\b', 
         re.IGNORECASE
     ),
+    # Strict third-party business acquisitions only
     "ACQUISITION": re.compile(
-        r'\b(acquisition of.*business|amalgamation|takeover|acquires.*stake|acquiring.*stake|slump sale|joint venture|subsidiary acquisition)\b', 
+        r'\b(acquisition of.*business|takeover|acquires.*stake|acquiring.*stake|slump sale|purchase of business)\b', 
         re.IGNORECASE
     ),
     "RESULT": re.compile(
@@ -83,23 +84,28 @@ CATEGORY_PATTERNS = {
     )
 }
 
-# Master Exclusion Regex (Credit Rating, Fund Raise, Court/Tax orders & Compliance noise)
+# Exhaustive Filter: Internal restructuring, Family Gift, Court tax orders, Routine compliance
 EXCLUDE_JUNK = re.compile(
     r'\b('
-    # Blocked Categories
+    # 1. Family Gift & Insider Transfers
+    r'gift|inter-se|family trust|huf|transmission of shares|promoter group transfer|'
+    r'regulation 29|regulation 31|sast|pledge|release of pledge|'
+    # 2. Subsidiary Mergers & Internal Restructuring (No new commercial value)
+    r'amalgamation|scheme of amalgamation|scheme of arrangement|wholly owned subsidiary|'
+    r'wholly-owned subsidiary|wos|merger of subsidiary|internal restructuring|nerofix|'
+    # 3. Blocked Categories (Credit Rating & Capital Raise)
     r'credit rating|rating assigned|rating upgrade|rating revised|care|crisil|icra|infomerics|brickwork|'
     r'fund raising|fund raise|qip|rights issue|preferential issue|preferential allotment|warrants|fpo|'
-    # Court / Tax / Assessment Orders (Not business contracts)
+    # 4. Court / Tax / Assessment Orders
     r'tax order|assessment order|demand order|penalty|nclt order|court order|show cause notice|adjudication order|'
-    # Result Noise (Pre-meeting / transcripts)
+    # 5. Result Noise (Pre-meeting / transcripts)
     r'trading window|closure of trading|prior intimation|schedule of board meeting|intimation of board meeting|'
     r'investor presentation|transcript|audio recording|earnings call|analyst meet|investor meet|clarification|reply to clarification|'
-    # Shareholder / Administrative / HR
+    # 6. Shareholder / Administrative / HR
     r'loss of share|duplicate share|newspaper|clipping|scrutinizer|postal ballot|general meeting|annual general meeting|'
     r'e-voting|change in address|change of registered office|appointment of|resignation of|esop|stock option|'
-    # Banking / Debt / Promoter filings
-    r'regulation 57|payment of interest|payment of principal|scheduled principal|commercial paper|cp maturity|'
-    r'regulation 29|regulation 31|sast|pledge|release of pledge'
+    # 7. Banking & Debt Routine
+    r'regulation 57|payment of interest|payment of principal|scheduled principal|commercial paper|cp maturity'
     r')\b',
     re.IGNORECASE
 )
@@ -107,6 +113,7 @@ EXCLUDE_JUNK = re.compile(
 def classify_event(text_to_check):
     if not text_to_check:
         return None
+    # Filter out all noise and internal transfers
     if EXCLUDE_JUNK.search(text_to_check):
         return None
     for cat, pattern in CATEGORY_PATTERNS.items():
@@ -187,7 +194,7 @@ def safe_api_get(session, url, name, custom_referer=None):
 
 def run_nse_daily_master():
     print("=" * 80)
-    print("🚀 RUNNING CLEAN NSE MASTER PIPELINE (CORE BUSINESS MOVES ONLY)")
+    print("🚀 RUNNING CLEAN COMMERCIAL ACTION PIPELINE")
     print(f"📅 Scan Window: {FROM_DATE} to {TO_DATE}")
     print("=" * 80)
 
@@ -198,7 +205,7 @@ def run_nse_daily_master():
         "shareholding_patterns": []
     }
 
-    # Load existing records & purge previously saved unwanted categories
+    # Load and purge any previously captured unwanted records
     if os.path.exists(MASTER_FILE):
         try:
             with open(MASTER_FILE, "r", encoding="utf-8") as f:
@@ -207,7 +214,7 @@ def run_nse_daily_master():
                     master_data = loaded
                     master_data["corporate_announcements"] = [
                         a for a in master_data.get("corporate_announcements", [])
-                        if a.get("pdf_extracted_text") and a.get("category") not in ["CREDIT_RATING", "FUND_RAISE"]
+                        if a.get("pdf_extracted_text") and not EXCLUDE_JUNK.search(f"{a.get('subject', '')} {a.get('summary', '')}")
                     ]
         except Exception:
             pass
@@ -231,7 +238,7 @@ def run_nse_daily_master():
     time.sleep(2)
 
     # ------------------------------------------------------------
-    # 1. Corporate Announcements
+    # 1. Commercial Announcements Only
     # ------------------------------------------------------------
     raw_announcements = safe_api_get(
         session, 
@@ -268,14 +275,18 @@ def run_nse_daily_master():
             pdf_url = attachment_file if attachment_file.startswith("http") else f"https://nsearchives.nseindia.com/corporate/{attachment_file}"
             
             if pdf_downloads < MAX_PDF_DOWNLOADS:
-                print(f"   📄 [{pdf_downloads + 1}/{MAX_PDF_DOWNLOADS}] Extracting PDF: {symbol} | {category}...")
+                print(f"   📄 [{pdf_downloads + 1}/{MAX_PDF_DOWNLOADS}] Parsing PDF: {symbol} ({category})...")
                 pdf_text = extract_pdf_content(session, pdf_url)
                 if pdf_text:
                     pdf_downloads += 1
                 time.sleep(1.8)
 
-        # Drop if no PDF content was extracted
+        # Drop if PDF reading failed
         if not pdf_text:
+            continue
+
+        # Secondary check on PDF text to catch hidden gift transfers or sub mergers
+        if EXCLUDE_JUNK.search(pdf_text[:400]):
             continue
 
         record = {
@@ -391,11 +402,11 @@ def run_nse_daily_master():
         json.dump(master_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print("📊 EXTRACTION COMPLETED (ZERO NOISE):")
-    print(f"   • High-Impact Announcements (with PDF) : {len(new_announcements)}")
-    print(f"   • Financial Results                     : {len(new_results)}")
-    print(f"   • Shareholding Records                  : {len(new_shp)}")
-    print(f"💾 File Written                         : '{MASTER_FILE}'")
+    print("📊 EXTRACTION COMPLETED:")
+    print(f"   • Commercial Business Filings (with PDF) : {len(new_announcements)}")
+    print(f"   • Verified Financial Results             : {len(new_results)}")
+    print(f"   • Verified Shareholding Records          : {len(new_shp)}")
+    print(f"💾 Clean File Saved                      : '{MASTER_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
