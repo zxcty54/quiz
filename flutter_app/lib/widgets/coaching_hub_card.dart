@@ -82,6 +82,12 @@ class CoachingHubCardState extends State<CoachingHubCard> {
   }
 
   void _openAccessCodeDialog() {
+    final isDark = widget.isDarkMode;
+    final dialogBg = isDark ? const Color(0xFF0F172A) : Colors.white;
+    final inputBg = isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9);
+    final textColor = isDark ? Colors.white : const Color(0xFF0F172A);
+    final textMuted = isDark ? Colors.white70 : const Color(0xFF64748B);
+
     final codeCtrl = TextEditingController();
     bool isVerifying = false;
 
@@ -89,15 +95,15 @@ class CoachingHubCardState extends State<CoachingHubCard> {
       context: context,
       builder: (ctx) => StatefulBuilder(
         builder: (ctx, setDialogState) => AlertDialog(
-          backgroundColor: const Color(0xFF0F172A),
+          backgroundColor: dialogBg,
           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
-          title: const Row(
+          title: Row(
             children: [
-              Icon(Icons.token_rounded, color: Color(0xFFF59E0B), size: 22),
-              SizedBox(width: 8),
+              const Icon(Icons.token_rounded, color: Color(0xFFF59E0B), size: 22),
+              const SizedBox(width: 8),
               Text(
                 'Institutional Access Pass',
-                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+                style: TextStyle(color: textColor, fontWeight: FontWeight.bold, fontSize: 16),
               ),
             ],
           ),
@@ -105,24 +111,24 @@ class CoachingHubCardState extends State<CoachingHubCard> {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
+              Text(
                 'Enter the Batch Access Code provided on your admission receipt or enrollment card:',
-                style: TextStyle(fontSize: 12, color: Colors.white70, height: 1.35),
+                style: TextStyle(fontSize: 12, color: textMuted, height: 1.35),
               ),
               const SizedBox(height: 14),
               TextField(
                 controller: codeCtrl,
                 textCapitalization: TextCapitalization.characters,
-                style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                style: TextStyle(color: textColor, fontWeight: FontWeight.bold),
                 decoration: InputDecoration(
                   hintText: 'e.g. PATNA100',
-                  hintStyle: const TextStyle(color: Colors.white38, fontSize: 12),
+                  hintStyle: TextStyle(color: textMuted.withOpacity(0.6), fontSize: 12),
                   filled: true,
-                  fillColor: const Color(0xFF1E293B),
+                  fillColor: inputBg,
                   border: OutlineInputBorder(borderRadius: BorderRadius.circular(10), borderSide: BorderSide.none),
                   isDense: true,
                   suffixIcon: IconButton(
-                    icon: const Icon(Icons.paste_rounded, size: 18, color: Color(0xFF38BDF8)),
+                    icon: const Icon(Icons.paste_rounded, size: 18, color: Color(0xFF2563EB)),
                     onPressed: () async {
                       final data = await Clipboard.getData('text/plain');
                       if (data?.text != null) {
@@ -137,7 +143,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
           actions: [
             TextButton(
               onPressed: () => Navigator.pop(ctx),
-              child: const Text('Cancel', style: TextStyle(color: Colors.white60)),
+              child: Text('Cancel', style: TextStyle(color: textMuted)),
             ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
@@ -205,20 +211,37 @@ class CoachingHubCardState extends State<CoachingHubCard> {
 
   @override
   Widget build(BuildContext context) {
-    const cardBg = Color(0xFF0F172A);
+    final isDark = widget.isDarkMode;
+
+    // Adaptive Theme Colors
+    final cardBg = isDark ? const Color(0xFF0F172A) : Colors.white;
+    final cardBorder = isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0);
+    final textDark = isDark ? Colors.white : const Color(0xFF0F172A);
+    final textMuted = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+    final metricBoxBg = isDark ? const Color(0xFF0B132B) : const Color(0xFFF8FAFC);
+    final metricBoxBorder = isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0);
 
     if (_isLoading) return const SizedBox.shrink();
 
-    // STATE A: ENROLLED CLASSROOM PASS
+    // =========================================================================
+    // 🎓 STATE A: ENROLLED CLASSROOM PASS
+    // =========================================================================
     if (_enrolledBatchCode != null) {
       return Container(
         width: double.infinity,
         decoration: BoxDecoration(
           color: cardBg,
           borderRadius: BorderRadius.circular(22),
-          border: Border.all(color: const Color(0xFF10B981).withOpacity(0.4), width: 1.2),
+          border: Border.all(
+            color: const Color(0xFF10B981).withOpacity(isDark ? 0.4 : 0.6),
+            width: 1.2,
+          ),
           boxShadow: [
-            BoxShadow(color: Colors.black.withOpacity(0.4), blurRadius: 18, offset: const Offset(0, 6)),
+            BoxShadow(
+              color: Colors.black.withOpacity(isDark ? 0.4 : 0.05),
+              blurRadius: 16,
+              offset: const Offset(0, 4),
+            ),
           ],
         ),
         child: ClipRRect(
@@ -228,9 +251,11 @@ class CoachingHubCardState extends State<CoachingHubCard> {
             children: [
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-                decoration: const BoxDecoration(
+                decoration: BoxDecoration(
                   gradient: LinearGradient(
-                    colors: [Color(0xFF022C22), Color(0xFF064E3B)],
+                    colors: isDark
+                        ? [const Color(0xFF022C22), const Color(0xFF064E3B)]
+                        : [const Color(0xFF064E3B), const Color(0xFF047857)],
                   ),
                 ),
                 child: Row(
@@ -238,19 +263,18 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF34D399).withOpacity(0.18),
+                        color: Colors.white.withOpacity(0.18),
                         borderRadius: BorderRadius.circular(6),
-                        border: Border.all(color: const Color(0xFF34D399).withOpacity(0.4)),
                       ),
                       child: const Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(Icons.verified, size: 13, color: Color(0xFF34D399)),
+                          Icon(Icons.verified, size: 13, color: Colors.white),
                           SizedBox(width: 4),
                           Text(
                             'AUTHORIZED CLASSROOM PASS',
                             style: TextStyle(
-                              color: Color(0xFF34D399),
+                              color: Colors.white,
                               fontSize: 9.5,
                               fontWeight: FontWeight.w900,
                               letterSpacing: 0.5,
@@ -296,12 +320,12 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                             children: [
                               Text(
                                 _coachingName ?? 'Classroom Hub',
-                                style: const TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: Colors.white),
+                                style: TextStyle(fontSize: 17, fontWeight: FontWeight.w800, color: textDark),
                               ),
                               const SizedBox(height: 2),
                               Text(
                                 '$_enrolledBatchName • 📍 $_coachingCity',
-                                style: const TextStyle(fontSize: 12, color: Color(0xFF94A3B8)),
+                                style: TextStyle(fontSize: 12, color: textMuted),
                               ),
                             ],
                           ),
@@ -309,14 +333,14 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF2563EB).withOpacity(0.18),
+                            color: const Color(0xFF2563EB).withOpacity(0.1),
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.4)),
+                            border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.25)),
                           ),
-                          child: Column(
+                          child: const Column(
                             children: [
-                              Text('$_availableMocksCount', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: Color(0xFF60A5FA))),
-                              const Text('CBT Mocks', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFF60A5FA))),
+                              Text('4', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: Color(0xFF2563EB))),
+                              Text('CBT Mocks', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
                             ],
                           ),
                         ),
@@ -353,7 +377,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                     ),
 
                     const SizedBox(height: 12),
-                    const Divider(height: 1, color: Color(0xFF1E293B)),
+                    Divider(height: 1, color: cardBorder),
                     const SizedBox(height: 10),
 
                     InkWell(
@@ -365,14 +389,18 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                           ),
                         );
                       },
-                      child: const Row(
+                      child: Row(
                         children: [
-                          Icon(Icons.travel_explore_rounded, size: 16, color: Color(0xFF60A5FA)),
-                          SizedBox(width: 6),
+                          const Icon(Icons.travel_explore_rounded, size: 16, color: Color(0xFF2563EB)),
+                          const SizedBox(width: 6),
                           Expanded(
                             child: Text(
                               'Explore Participating Institutes & Statewide Mocks →',
-                              style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w700, color: Color(0xFF93C5FD)),
+                              style: TextStyle(
+                                fontSize: 11.5,
+                                fontWeight: FontWeight.w700,
+                                color: isDark ? const Color(0xFF93C5FD) : const Color(0xFF1D4ED8),
+                              ),
                             ),
                           ),
                         ],
@@ -387,15 +415,21 @@ class CoachingHubCardState extends State<CoachingHubCard> {
       );
     }
 
-    // STATE B: DISCOVERY-FIRST PORTAL
+    // =========================================================================
+    // 🔍 STATE B: DISCOVERY-FIRST PORTAL
+    // =========================================================================
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
         color: cardBg,
-        borderRadius: BorderRadius.circular(24),
-        border: Border.all(color: const Color(0xFF1E293B), width: 1.2),
+        borderRadius: BorderRadius.circular(22),
+        border: Border.all(color: cardBorder, width: 1.2),
         boxShadow: [
-          BoxShadow(color: Colors.black.withOpacity(0.4), blurRadius: 18, offset: const Offset(0, 6)),
+          BoxShadow(
+            color: Colors.black.withOpacity(isDark ? 0.35 : 0.05),
+            blurRadius: 16,
+            offset: const Offset(0, 4),
+          ),
         ],
       ),
       child: Column(
@@ -403,10 +437,12 @@ class CoachingHubCardState extends State<CoachingHubCard> {
         children: [
           Container(
             padding: const EdgeInsets.fromLTRB(16, 16, 16, 14),
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(23)),
+            decoration: BoxDecoration(
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(21)),
               gradient: LinearGradient(
-                colors: [Color(0xFF1E1B4B), Color(0xFF0F172A)],
+                colors: isDark
+                    ? [const Color(0xFF1E1B4B), const Color(0xFF0F172A)]
+                    : [const Color(0xFF1E3A8A), const Color(0xFF2563EB)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
@@ -419,18 +455,18 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF2563EB).withOpacity(0.2),
+                        color: Colors.white.withOpacity(0.18),
                         borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: const Color(0xFF38BDF8).withOpacity(0.4)),
+                        border: Border.all(color: Colors.white24),
                       ),
                       child: const Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
-                          Icon(Icons.hub_rounded, size: 12, color: Color(0xFF38BDF8)),
+                          Icon(Icons.hub_rounded, size: 12, color: Colors.white),
                           SizedBox(width: 4),
                           Text(
                             'STATEWIDE INSTITUTIONAL NETWORK',
-                            style: TextStyle(color: Color(0xFF38BDF8), fontSize: 9.5, fontWeight: FontWeight.w900, letterSpacing: 0.5),
+                            style: TextStyle(color: Colors.white, fontSize: 9.5, fontWeight: FontWeight.w900, letterSpacing: 0.5),
                           ),
                         ],
                       ),
@@ -439,7 +475,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF10B981).withOpacity(0.18),
+                        color: const Color(0xFF10B981).withOpacity(0.2),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: const Text(
@@ -455,9 +491,9 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                   style: TextStyle(color: Colors.white, fontSize: 16.5, fontWeight: FontWeight.w900, letterSpacing: -0.3),
                 ),
                 const SizedBox(height: 4),
-                const Text(
+                Text(
                   'Access verified institutional CBT assessments, benchmark rankings, and study resources across 38 districts on a single unified platform.',
-                  style: TextStyle(color: Color(0xFF94A3B8), fontSize: 11.5, height: 1.45),
+                  style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 11.5, height: 1.45),
                 ),
               ],
             ),
@@ -470,18 +506,18 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF0B132B),
+                    color: metricBoxBg,
                     borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: const Color(0xFF1E293B)),
+                    border: Border.all(color: metricBoxBorder),
                   ),
-                  child: const Row(
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      _InstitutionalMetric(icon: Icons.quiz_outlined, label: 'Curriculum Mocks'),
-                      _MetricDivider(),
-                      _InstitutionalMetric(icon: Icons.insights_rounded, label: 'All-Bihar Percentile'),
-                      _MetricDivider(),
-                      _InstitutionalMetric(icon: Icons.description_outlined, label: 'Faculty Handouts'),
+                      _InstitutionalMetric(icon: Icons.quiz_outlined, label: 'Curriculum Mocks', isDark: isDark),
+                      _MetricDivider(color: metricBoxBorder),
+                      _InstitutionalMetric(icon: Icons.insights_rounded, label: 'All-Bihar Percentile', isDark: isDark),
+                      _MetricDivider(color: metricBoxBorder),
+                      _InstitutionalMetric(icon: Icons.description_outlined, label: 'Faculty Handouts', isDark: isDark),
                     ],
                   ),
                 ),
@@ -510,7 +546,7 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                         icon: const Icon(Icons.explore_outlined, size: 16),
                         label: const Text('Explore Institutes', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12)),
                         style: OutlinedButton.styleFrom(
-                          foregroundColor: const Color(0xFF60A5FA),
+                          foregroundColor: const Color(0xFF2563EB),
                           side: const BorderSide(color: Color(0xFF2563EB), width: 1.2),
                           shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
                           padding: const EdgeInsets.symmetric(vertical: 12),
@@ -539,19 +575,24 @@ class CoachingHubCardState extends State<CoachingHubCard> {
 class _InstitutionalMetric extends StatelessWidget {
   final IconData icon;
   final String label;
+  final bool isDark;
 
-  const _InstitutionalMetric({required this.icon, required this.label});
+  const _InstitutionalMetric({required this.icon, required this.label, required this.isDark});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Icon(icon, size: 13, color: const Color(0xFF60A5FA)),
+        Icon(icon, size: 13, color: const Color(0xFF2563EB)),
         const SizedBox(width: 4),
         Text(
           label,
-          style: const TextStyle(fontSize: 10.5, fontWeight: FontWeight.w700, color: Color(0xFFCBD5E1)),
+          style: TextStyle(
+            fontSize: 10.5,
+            fontWeight: FontWeight.w700,
+            color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF475569),
+          ),
         ),
       ],
     );
@@ -559,14 +600,11 @@ class _InstitutionalMetric extends StatelessWidget {
 }
 
 class _MetricDivider extends StatelessWidget {
-  const _MetricDivider();
+  final Color color;
+  const _MetricDivider({required this.color});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 1,
-      height: 12,
-      color: const Color(0xFF1E293B),
-    );
+    return Container(width: 1, height: 12, color: color);
   }
 }
