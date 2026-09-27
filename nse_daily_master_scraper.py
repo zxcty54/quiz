@@ -32,8 +32,7 @@ ENDPOINTS = {
     "shareholding_patterns": f"https://www.nseindia.com/api/corporate-share-holdings-master?index=equities&from_date={FROM_DATE}&to_date={TO_DATE}"
 }
 
-# Allow enough PDF extractions for genuine filtered filings
-MAX_PDF_DOWNLOADS = 35
+MAX_PDF_DOWNLOADS = 40
 
 HEADERS = {
     "User-Agent": (
@@ -50,7 +49,7 @@ HEADERS = {
 }
 
 # ============================================================
-# HIGH-VALUE CATEGORIES REGEX
+# TARGET CATEGORIES (CREDIT_RATING & FUND_RAISE EXCLUDED)
 # ============================================================
 
 CATEGORY_PATTERNS = {
@@ -59,11 +58,7 @@ CATEGORY_PATTERNS = {
         re.IGNORECASE
     ),
     "ACQUISITION": re.compile(
-        r'\b(acquisition|amalgamation|merger|takeover|acquires|acquiring|slump sale|joint venture|stake sale|subsidiary acquisition)\b', 
-        re.IGNORECASE
-    ),
-    "FUND_RAISE": re.compile(
-        r'\b(fund raising|fund raise|qip|rights issue|preferential issue|preferential allotment|warrants|fpo|qualified institutions placement)\b', 
+        r'\b(acquisition of.*business|amalgamation|takeover|acquires.*stake|acquiring.*stake|slump sale|joint venture|subsidiary acquisition)\b', 
         re.IGNORECASE
     ),
     "RESULT": re.compile(
@@ -85,26 +80,33 @@ CATEGORY_PATTERNS = {
     "CAPACITY_EXPANSION": re.compile(
         r'\b(capacity expansion|new plant|capex|manufacturing facility|greenfield|brownfield|commercial production|expansion project|new unit)\b', 
         re.IGNORECASE
-    ),
-    "CREDIT_RATING": re.compile(
-        r'\b(rating upgrade|rating assigned|rating revised)\b', # Reaffirmations excluded
-        re.IGNORECASE
     )
 }
 
-# Routine compliance junk to aggressively drop
+# Master Exclusion Regex (Credit Rating, Fund Raise, Court/Tax orders & Compliance noise)
 EXCLUDE_JUNK = re.compile(
-    r'\b(loss of share|duplicate share|newspaper|clipping|analyst meet|investor meet audio|transcript|'
-    r'trading window closure|closure of trading|general meeting notice|postal ballot notice|'
-    r'regulation 57|payment of interest|payment of principal|scheduled principal|reaffirm|'
-    r'regulation 29\(2\)|listing of commercial paper)\b',
+    r'\b('
+    # Blocked Categories
+    r'credit rating|rating assigned|rating upgrade|rating revised|care|crisil|icra|infomerics|brickwork|'
+    r'fund raising|fund raise|qip|rights issue|preferential issue|preferential allotment|warrants|fpo|'
+    # Court / Tax / Assessment Orders (Not business contracts)
+    r'tax order|assessment order|demand order|penalty|nclt order|court order|show cause notice|adjudication order|'
+    # Result Noise (Pre-meeting / transcripts)
+    r'trading window|closure of trading|prior intimation|schedule of board meeting|intimation of board meeting|'
+    r'investor presentation|transcript|audio recording|earnings call|analyst meet|investor meet|clarification|reply to clarification|'
+    # Shareholder / Administrative / HR
+    r'loss of share|duplicate share|newspaper|clipping|scrutinizer|postal ballot|general meeting|annual general meeting|'
+    r'e-voting|change in address|change of registered office|appointment of|resignation of|esop|stock option|'
+    # Banking / Debt / Promoter filings
+    r'regulation 57|payment of interest|payment of principal|scheduled principal|commercial paper|cp maturity|'
+    r'regulation 29|regulation 31|sast|pledge|release of pledge'
+    r')\b',
     re.IGNORECASE
 )
 
 def classify_event(text_to_check):
     if not text_to_check:
         return None
-    # Drop routine noise
     if EXCLUDE_JUNK.search(text_to_check):
         return None
     for cat, pattern in CATEGORY_PATTERNS.items():
@@ -117,16 +119,20 @@ def generate_hash(identifier):
     return hashlib.md5(clean.encode('utf-8')).hexdigest()[:12]
 
 # ============================================================
-# PDF EXTRACTION ENGINE (WITH RETRY & VERIFICATION)
+# PDF EXTRACTION ENGINE
 # ============================================================
 
 def extract_pdf_content(session, pdf_url):
     if not pdf_url:
         return ""
     
-    pdf_headers = dict(HEADERS)
-    pdf_headers["Host"] = "nsearchives.nseindia.com"
-    pdf_headers["Referer"] = "https://www.nseindia.com/"
+    pdf_headers = {
+        "User-Agent": HEADERS["User-Agent"],
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Host": "nsearchives.nseindia.com",
+        "Referer": "https://www.nseindia.com/companies-listing/corporate-filings-announcements"
+    }
 
     for attempt in range(2):
         try:
@@ -137,25 +143,21 @@ def extract_pdf_content(session, pdf_url):
 
             pdf_bytes = io.BytesIO(resp.content)
             
-            # Primary: pdfplumber for clean text extraction
             if pdfplumber:
                 try:
                     with pdfplumber.open(pdf_bytes) as pdf:
                         pages = [p.extract_text() for p in pdf.pages[:3] if p.extract_text()]
                         text = " ".join(" ".join(pages).split())
-                        if text and len(text) > 40:
+                        if text and len(text) > 50:
                             return text[:3000]
                 except Exception:
                     pass
 
-            # Fallback: pypdf
             reader = PdfReader(pdf_bytes)
             pages = [p.extract_text() for p in reader.pages[:3] if p.extract_text()]
             text = " ".join(" ".join(pages).split())
-            if text and len(text) > 40:
+            if text and len(text) > 50:
                 return text[:3000]
-            else:
-                return "[SCANNED_IMAGE_PDF: Requires OCR]"
 
         except Exception:
             time.sleep(1.5)
@@ -185,11 +187,10 @@ def safe_api_get(session, url, name, custom_referer=None):
 
 def run_nse_daily_master():
     print("=" * 80)
-    print("🚀 NSE ACTIONABLE INTELLIGENCE PIPELINE (ZERO HALF-DATA)")
+    print("🚀 RUNNING CLEAN NSE MASTER PIPELINE (CORE BUSINESS MOVES ONLY)")
     print(f"📅 Scan Window: {FROM_DATE} to {TO_DATE}")
     print("=" * 80)
 
-    # 1. Load Existing State
     master_data = {
         "last_updated": "",
         "corporate_announcements": [],
@@ -197,12 +198,17 @@ def run_nse_daily_master():
         "shareholding_patterns": []
     }
 
+    # Load existing records & purge previously saved unwanted categories
     if os.path.exists(MASTER_FILE):
         try:
             with open(MASTER_FILE, "r", encoding="utf-8") as f:
                 loaded = json.load(f)
                 if isinstance(loaded, dict):
                     master_data = loaded
+                    master_data["corporate_announcements"] = [
+                        a for a in master_data.get("corporate_announcements", [])
+                        if a.get("pdf_extracted_text") and a.get("category") not in ["CREDIT_RATING", "FUND_RAISE"]
+                    ]
         except Exception:
             pass
 
@@ -210,7 +216,6 @@ def run_nse_daily_master():
     seen_result_hashes = {r.get("hash") for r in master_data.get("financial_results", []) if r.get("hash")}
     seen_shp_hashes = {s.get("hash") for s in master_data.get("shareholding_patterns", []) if s.get("hash")}
 
-    # 2. Handshake
     session = requests.Session(impersonate="chrome124")
     print("🌐 Performing handshake with NSE Homepage...")
     try:
@@ -226,7 +231,7 @@ def run_nse_daily_master():
     time.sleep(2)
 
     # ------------------------------------------------------------
-    # 3. Actionable Corporate Announcements (Mandatory PDF Text)
+    # 1. Corporate Announcements
     # ------------------------------------------------------------
     raw_announcements = safe_api_get(
         session, 
@@ -249,7 +254,6 @@ def run_nse_daily_master():
         if not symbol or not subject:
             continue
 
-        # Filter against Category Engine & Exclusion Noise
         category = classify_event(f"{subject} {summary}")
         if not category:
             continue
@@ -263,17 +267,15 @@ def run_nse_daily_master():
         if attachment_file:
             pdf_url = attachment_file if attachment_file.startswith("http") else f"https://nsearchives.nseindia.com/corporate/{attachment_file}"
             
-            # Scrape PDF text for filtered item
             if pdf_downloads < MAX_PDF_DOWNLOADS:
                 print(f"   📄 [{pdf_downloads + 1}/{MAX_PDF_DOWNLOADS}] Extracting PDF: {symbol} | {category}...")
                 pdf_text = extract_pdf_content(session, pdf_url)
                 if pdf_text:
                     pdf_downloads += 1
-                time.sleep(1.8) # Anti-rate-limit spacing
+                time.sleep(1.8)
 
-        # 🛑 ACTIONABILITY GUARD:
-        # Agar summary choti hai aur PDF text khali hai, toh half-data save mat karo
-        if len(summary) < 50 and not pdf_text:
+        # Drop if no PDF content was extracted
+        if not pdf_text:
             continue
 
         record = {
@@ -291,7 +293,7 @@ def run_nse_daily_master():
         seen_announcement_hashes.add(item_hash)
 
     # ------------------------------------------------------------
-    # 4. Financial Results (Quarterly Data)
+    # 2. Financial Results
     # ------------------------------------------------------------
     raw_results = safe_api_get(
         session, 
@@ -332,7 +334,7 @@ def run_nse_daily_master():
         seen_result_hashes.add(r_hash)
 
     # ------------------------------------------------------------
-    # 5. Shareholding Patterns (Strict Valid Filings)
+    # 3. Shareholding Patterns
     # ------------------------------------------------------------
     raw_shp = safe_api_get(
         session, 
@@ -374,7 +376,7 @@ def run_nse_daily_master():
         seen_shp_hashes.add(s_hash)
 
     # ------------------------------------------------------------
-    # 6. Merge & Write Clean Data
+    # 4. Save Master File
     # ------------------------------------------------------------
     master_data["last_updated"] = NOW.strftime("%Y-%m-%d %H:%M:%S IST")
     master_data["corporate_announcements"] = new_announcements + master_data.get("corporate_announcements", [])
@@ -389,11 +391,11 @@ def run_nse_daily_master():
         json.dump(master_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print("📊 COMPLETE EXTRACTION SUMMARY:")
-    print(f"   • Actionable Filings Added : {len(new_announcements)} (PDFs Parsed: {pdf_downloads})")
-    print(f"   • Verified Financial Results: {len(new_results)}")
-    print(f"   • Verified Shareholding     : {len(new_shp)}")
-    print(f"💾 File Written               : '{MASTER_FILE}'")
+    print("📊 EXTRACTION COMPLETED (ZERO NOISE):")
+    print(f"   • High-Impact Announcements (with PDF) : {len(new_announcements)}")
+    print(f"   • Financial Results                     : {len(new_results)}")
+    print(f"   • Shareholding Records                  : {len(new_shp)}")
+    print(f"💾 File Written                         : '{MASTER_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
