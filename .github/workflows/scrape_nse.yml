@@ -2,16 +2,15 @@ name: Scrape NSE Announcements
 
 on:
   schedule:
-    # Monday to Friday market hours me chalega
-    # 09:00 AM, 11:00 AM, 01:00 PM, 03:00 PM, 05:00 PM IST
+    # Monday to Friday market hours (IST)
     - cron: '30 3,5,7,9,11 * * 1-5'
-  workflow_dispatch: # GitHub UI se manual run button
+  workflow_dispatch:
 
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # JSON repo me commit/push karne ke liye zaroori
+      contents: write
 
     steps:
       - name: Checkout Repository
@@ -27,7 +26,7 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install curl_cffi
+          pip install curl_cffi pypdf
 
       - name: Run NSE Scraper Script
         run: |
@@ -41,9 +40,9 @@ jobs:
           git add nse_corporate_announcements.json
 
           if git diff --staged --quiet; then
-            echo "ℹ️ Koi naya announcement update nahi mila. Commit skipped."
+            echo "ℹ️ Koi naya update nahi mila. Commit skipped."
           else
-            git commit -m "📊 Auto-update NSE Announcements: $(date +'%d-%b-%Y %H:%M IST')"
+            git commit -m "📊 Auto-update NSE Announcements with PDF: $(date +'%d-%b-%Y %H:%M IST')"
             git pull --rebase origin main
             git push origin main
           fi
