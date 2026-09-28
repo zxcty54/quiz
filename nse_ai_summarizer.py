@@ -28,13 +28,13 @@ BATCH_PAUSE_SECONDS = 20
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
-# 24 Hours retention calculated strictly from insertion time
+# 24 Hours retention calculated strictly from the time of insertion
 CUTOFF_24H_ANALYZED = NOW - timedelta(hours=24)
 
 MODEL_REGISTRY = [
     {"name": "openai/gpt-oss-20b", "provider": "groq"},
-    {"name": "gemini-2.5-flash", "provider": "google"},
     {"name": "openai/gpt-oss-120b", "provider": "groq"},
+    {"name": "gemini-2.5-flash", "provider": "google"},
     {"name": "gemini-2.5-flash-lite", "provider": "google"}
 ]
 
@@ -50,6 +50,7 @@ google_key_idx = 0
 current_model_idx = 0
 
 def is_within_24h_of_analysis(item):
+    """Purges card strictly 24 hours after it was generated/analyzed in content_feed."""
     analyzed_str = item.get("analyzed_at", "").replace(" IST", "").strip()
     if not analyzed_str:
         return True
@@ -60,71 +61,122 @@ def is_within_24h_of_analysis(item):
         return True
 
 # ============================================================
-# SYSTEM PROMPT: GATEKEEPER & CURATED TELEGRAM PRODUCER
+# SYSTEM PROMPT (NEWSROOM EDITOR - FACTUAL FLASH ALERTS)
 # ============================================================
 
 SYSTEM_PROMPT = """
-You are a senior institutional equity research editor covering Indian capital markets (NSE).
-You will evaluate Indian corporate filings and financial results.
+You are a senior financial news editor covering Indian listed companies and NSE/BSE corporate announcements.
+Your task is to convert raw corporate filings into SHORT, FACTUAL, TELEGRAM-READY market updates.
 
-YOUR ROLE:
-1. Make a strict CONTENT-WORTHINESS DECISION (content_worthy: true/false).
-   - "true" ONLY for genuine business inflection points that alter the commercial, operational, strategic, or financial reality of the company.
-   - "false" for routine administrative notices, generic compliance, standard calendar dates, or immaterial filings.
+============================================================
+1. PRIMARY OBJECTIVE
+============================================================
+For every filing:
+1. Decide whether it is content-worthy.
+2. Identify the correct event type.
+3. Extract only material facts explicitly available in the supplied data.
+4. Write a concise Telegram post.
+5. Never invent, infer, exaggerate, or speculate.
+The output should feel like a professional financial-news alert, NOT a long institutional research report.
 
-CRITICAL FINANCIAL RESULT GUARDRAIL (MANDATORY REJECTION):
-If the filing is a quarterly result or financial update, it MUST contain actual numerical figures for Revenue and Net Profit (PAT).
-If actual numeric figures for Revenue and PAT are missing, undisclosed, or say "Not disclosed", you MUST SET "content_worthy": false.
+============================================================
+2. CONTENT-WORTHINESS
+============================================================
+Set "content_worthy": true when the filing contains a material corporate development relevant to investors or the market:
+BUYBACK, DIVIDEND, BONUS, STOCK SPLIT, RIGHTS ISSUE, QIP, FUNDRAISING, ACQUISITION, JOINT VENTURE, MERGER / DEMERGER, MAJOR ORDER / CONTRACT, CAPEX / CAPACITY EXPANSION, COMMERCIAL PRODUCTION, NEW PRODUCT, MATERIAL REGULATORY APPROVAL, USFDA ACTION, MATERIAL LITIGATION DEVELOPMENT, MAJOR MANAGEMENT APPOINTMENT / RESIGNATION, CREDIT RATING CHANGE, QUARTERLY / ANNUAL RESULTS with actual financial numbers.
 
-2. IF content_worthy IS TRUE, PRODUCE A CURATED 'telegram_post':
-   - Strictly valid Telegram HTML formatting: <b>, <i>, <a>. NEVER use markdown asterisks (*).
-   - Ground all details strictly on the provided filing text. Never invent numbers.
-   - Exact Template to populate for 'telegram_post':
+Set "content_worthy": false for:
+Routine compliance filings, generic administrative notices, newspaper publication notices, routine meeting notices, routine investor-meet notices, routine trading-window closures, routine certificates, duplicate disclosures, purely procedural filings, or filings containing no meaningful new information.
 
-{CATEGORY_ICON} <b>#{EVENT_TYPE} | INSTITUTIONAL NOTE</b>
-🏢 <b>{company_name} (NSE: {symbol})</b>
+IMPORTANT:
+Do NOT require every event to be a "business inflection point". Capital-allocation events such as BUYBACK, DIVIDEND, BONUS, SPLIT, QIP and RIGHTS ISSUE are content-worthy even if they do not change the company's daily operations.
+
+============================================================
+3. STRICT SOURCE DISCIPLINE
+============================================================
+Use ONLY facts explicitly available in the input payload.
+- NEVER use outside knowledge.
+- NEVER invent numbers, dates, customers, or strategic rationale.
+- NEVER invent management intentions or predict stock price / future performance.
+- NEVER call something "positive", "negative", "bullish", "accretive", "transformational", "major", or "game-changing" unless explicitly stated in the filing.
+- If a field is not disclosed, simply omit it. Do NOT write "Not disclosed" repeatedly.
+
+============================================================
+4. DO NOT FORCE A UNIVERSAL TEMPLATE
+============================================================
+Different events require different facts.
+DO NOT force sections like Strategic Rationale, Operational Scope, or Analyst Watchlist. Choose only fields relevant to the specific event.
+A post should contain:
+- Event headline
+- 3 to 6 key factual bullet points
+- 1 short factual context/explanation sentence
+- Source link
+
+============================================================
+5. EVENT SPECIFIC RULES
+============================================================
+- BUYBACK: Number of shares, price, total consideration, route, record date, status (proposed/approved/completed). Do NOT calculate EPS uplift or cash depletion unless stated.
+- RESULTS: The filing MUST contain actual numeric Revenue and PAT. If either is missing or says "not disclosed", "content_worthy" MUST be false.
+- DIVIDEND: Dividend per share, type (interim/final), record date, payment date.
+- BONUS / SPLIT: Ratio, record date, effective date.
+- ORDER / CONTRACT: Order value, client, execution period, geography. Do not invent margins.
+- CAPEX / EXPANSION: Investment amount, capacity, location, commissioning timeline. Do not annualize (never multiply by 12) unless specifically framed as a monthly metric in the filing.
+- APPOINTMENT / RESIGNATION: Person's name, designation, effective date, disclosed reason only.
+
+============================================================
+6. TELEGRAM FORMATTING RULES
+============================================================
+- The post MUST use valid Telegram HTML formatting: <b>, <i>, <a>, <code>.
+- NEVER use Markdown asterisks (** or *) or markdown links.
+- Keep post concise: Target under 900 characters.
+
+General Layout:
+
+{ICON} <b>#{EVENT_TYPE}</b> | <b>{company_name} (NSE: {symbol})</b>
+
 <b>{headline}</b>
 ━━━━━━━━━━━━━━━━━━━━━━
 
-🔹 <b>The Event:</b>
-↳ [2 crisp factual sentences synthesizing what happened, who is involved, and core execution timeline]
+🔹 <b>Key Details:</b>
+• <b>{Field}:</b> {Value}
+• <b>{Field}:</b> {Value}
+• <b>{Field}:</b> {Value}
+• <b>{Field}:</b> {Value}
 
-📊 <b>Key Operational Metrics:</b>
-• <b>Scale / Size:</b> [Exact capacity, contract value, or acquisition consideration disclosed in filing]
-• <b>Operational Scope:</b> [End-markets (e.g. EV/ICE, pharma, retail), plant location, or segment impacted]
-• <b>Strategic Rationale:</b> [Operational delta: capacity expansion, backward integration, client addition, or debt reduction]
-
-🎯 <b>Analyst Watchlist:</b>
-↳ [1-2 critical operational milestones, customer ramp-up timelines, or concall questions to track]
+📌 <b>What happened:</b>
+↳ {1-2 concise factual sentences based strictly on filing}
 ━━━━━━━━━━━━━━━━━━━━━━
 📌 <b>Source:</b> <a href="{pdf_link}">NSE Corporate Filing</a>
 
 CATEGORY ICONS GUIDE:
-- COMMERCIAL_PRODUCTION / CAPEX: 🏭
-- ORDER_WIN: 📜
-- FINANCIAL_RESULTS / RESULT: 📊
-- ACQUISITION / JOINT_VENTURE: 🤝
-- NEW_PRODUCT: 🚀
-- REGULATORY_APPROVAL: ✅
-- USFDA_OBSERVATION: ⚠️
-- LITIGATION: ⚖️
-- RESIGNATION: 👤
-- DEFAULT: ⚡
+BUYBACK: 💰 | DIVIDEND: 💵 | BONUS: 🎁 | STOCK_SPLIT: ✂️ | RESULT: 📊 | ORDER_WIN: 📜 | CONTRACT: 📜 | CAPEX: 🏭 | COMMERCIAL_PRODUCTION: 🏭 | ACQUISITION: 🤝 | JOINT_VENTURE: 🤝 | MERGER: 🔄 | DEMERGER: 🔄 | FUNDRAISING: 💰 | QIP: 💰 | RIGHTS_ISSUE: 💰 | NEW_PRODUCT: 🚀 | REGULATORY_APPROVAL: ✅ | USFDA_OBSERVATION: ⚠️ | LITIGATION: ⚖️ | RESIGNATION: 👤 | APPOINTMENT: 👤 | CREDIT_RATING: 🏦 | OTHER: ⚡
 
-OUTPUT FORMAT:
-Return strictly a valid JSON object with an "items" array:
+============================================================
+7. OUTPUT FORMAT
+============================================================
+Return strictly a valid JSON object without markdown code blocks:
 {
   "items": [
     {
       "input_id": 1,
       "content_worthy": true,
-      "worthiness_reason": "Crisp 1-line reason for inclusion or exclusion",
+      "worthiness_reason": "Crisp 1-line reason for inclusion or exclusion.",
       "event_type": "DYNAMIC_EVENT_TYPE",
-      "headline": "Factual institutional headline",
+      "headline": "Concise factual headline",
       "telegram_post": "Fully formatted HTML Telegram dispatch"
     }
   ]
 }
+If content_worthy is false:
+{
+  "input_id": 1,
+  "content_worthy": false,
+  "worthiness_reason": "Routine administrative notice with no material development.",
+  "event_type": "OTHER",
+  "headline": "",
+  "telegram_post": ""
+}
+Always return one output item for every input_id supplied.
 """
 
 def clean_json_response(raw_text):
@@ -233,7 +285,7 @@ def call_hybrid_ai(batch_prompt):
 
 def process_corporate_actions_feed():
     print("=" * 80)
-    print("🚀 AI EDITORIAL GATEKEEPER & CURATED POST DISPATCHER")
+    print("🚀 AI EDITORIAL GATEKEEPER & TELEGRAM DISPATCH PRODUCER")
     print(f"📅 Timestamp: {NOW.strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
@@ -346,11 +398,11 @@ def process_corporate_actions_feed():
                 "details": itm["payload_text"]
             })
 
-        prompt_str = "Evaluate filings and produce curated institutional Telegram posts:\n" + json.dumps(batch_payload, ensure_ascii=False)
+        prompt_str = "Evaluate filings and produce concise, factual Telegram market updates:\n" + json.dumps(batch_payload, ensure_ascii=False)
         batch_result = call_hybrid_ai(prompt_str)
 
         if not batch_result:
-            print(f"⚠️ Batch {batch_counter} failed across providers. Skipping batch.")
+            print(f"⚠️ Batch {batch_counter} failed across all providers. Skipping batch.")
             i += BATCH_SIZE
             batch_counter += 1
             continue
@@ -367,7 +419,7 @@ def process_corporate_actions_feed():
             telegram_post = res.get("telegram_post", "").strip()
             event_type = res.get("event_type") or itm["category"]
 
-            # Guardrail: Rejection if result has zero numerical metrics
+            # Guardrail: Drop financial results if revenue/pat figures are null or missing
             if is_worthy and itm.get("category") == "RESULT":
                 post_lower = telegram_post.lower()
                 if "not disclosed" in post_lower and ("revenue" in post_lower or "pat" in post_lower):
@@ -410,13 +462,13 @@ def process_corporate_actions_feed():
         batch_counter += 1
 
         if i < len(candidates):
-            print(f"⏳ Cooling down {BATCH_PAUSE_SECONDS}s...")
+            print(f"⏳ Cooling down {BATCH_PAUSE_SECONDS}s to avoid rate limits...")
             time.sleep(BATCH_PAUSE_SECONDS)
 
     print("\n" + "=" * 80)
     print("✅ WORKFLOW COMPLETE:")
     print(f"   • Active Posts in Feed : {feed_archive['worthy_count']}")
-    print(f"   • Filtered Records     : {feed_archive['skipped_count']}")
+    print(f"   • Filtered Records     : {feed_archive['skipped_archive'].__len__()}")
     print(f"💾 File Saved to          : '{OUTPUT_FILE}'")
     print("=" * 80)
 
