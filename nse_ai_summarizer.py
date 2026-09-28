@@ -83,13 +83,13 @@ Do NOT approve generic board approval notices or audit review letters without pr
    - Generate a single dense, factual 'summary' paragraph synthesizing all facts, figures, timeline, operational changes, and critical undisclosed metrics.
    - DYNAMICALLY FORMULATE 'research_requirements':
      Evaluate the filing and determine: "What specific company scale baseline, historical segment data, or background context must be verified via web search to measure the true materiality of this development?"
-     DO NOT use hardcoded or generic capex questions. Adapt strictly to the filing's nature:
-     * Drug/Plant approval -> Facility revenue share, addressable therapy market size.
-     * Litigation/Tax -> Demand amount as % of net worth or cash profit, dispute history.
-     * Leadership changes -> Executive's past role, strategic tenure, succession clarity.
-     * Capex/Plant commissioning -> Existing manufacturing capacity, current utilization, segment scale.
-     * Order win -> Annual run-rate revenue, active order book, customer dependency.
-     "For capacity addition/plant commissioning events, always include existing total capacity as one of the research requirements."
+
+     MANDATORY BASELINE RULES:
+     * For Capacity / Commercial Production / Capex: Always include the company's EXISTING total manufacturing capacity for that product/segment, so percentage expansion can be calculated.
+     * For Order Wins / Contracts: Always include the company's TTM / latest annual revenue and existing order backlog, so the order size can be calculated as % of annual revenue.
+     * For Acquisitions / Slump Sales: Always include the target company's revenue/EV and buyer's net debt to evaluate financial leverage.
+     * For Regulatory / USFDA: Always include the revenue contribution of that specific facility or drug's addressable market size.
+     * For Litigation / Tax Demand: Always include the demand as % of company's net worth or annual cash profit.
 
 OUTPUT FORMAT REQUIREMENTS:
 Return strictly a valid JSON object with an "items" array:
@@ -109,9 +109,9 @@ Return strictly a valid JSON object with an "items" array:
         "what_is_not_disclosed": "Critical numbers missing from the filing"
       },
       "research_requirements": [
-        "Dynamic search metric 1 strictly relevant to contextualizing this filing",
-        "Dynamic search metric 2 for company baseline scale comparison",
-        "Dynamic search metric 3 for segment or peer benchmark"
+        "Specific metric 1: Existing base capacity or annual revenue run-rate for percentage comparison",
+        "Specific metric 2: Segment financials or order book context",
+        "Specific metric 3: Sectoral backdrop, addressable market, or management commentary target"
       ]
     }
   ]
