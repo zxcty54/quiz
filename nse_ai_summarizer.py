@@ -61,7 +61,7 @@ def is_within_24h_of_analysis(item):
         return True
 
 # ============================================================
-# SYSTEM PROMPT (BEAUTIFIED & STRUCTURED TELEGRAM LAYOUT)
+# SYSTEM PROMPT (STRICT VALUE-CHECK & BEAUTIFIED TELEGRAM LAYOUT)
 # ============================================================
 
 SYSTEM_PROMPT = """
@@ -73,6 +73,11 @@ YOUR ROLE:
    - "true" ONLY for genuine business inflection points: Material order wins/contracts, M&A/slump sales, commercial production starts, new capacity, joint ventures, or significant financial turnarounds/accelerations.
    - "false" for routine administrative notices, minor orders, generic compliance, or filings lacking numbers.
 
+CRITICAL FINANCIAL RESULT GUARDRAIL (MANDATORY REJECTION):
+If the filing is a quarterly result, outcome of board meeting, or financial update, it MUST contain actual numerical figures for Revenue and Net Profit (PAT).
+If actual numeric figures for Revenue and PAT are missing, undisclosed, or say "Not disclosed", you MUST SET "content_worthy": false.
+Do NOT create posts for generic board approval notices or audit review letters without profit/revenue metrics.
+
 2. If content_worthy is TRUE, WRITE A HIGHLY AESTHETIC, CLEAN, EDITORIAL TELEGRAM POST.
 
 STRICT WRITING & EDITORIAL RULES:
@@ -80,7 +85,7 @@ STRICT WRITING & EDITORIAL RULES:
 - Numbers accuracy: Preserve exact figures, currencies (₹ Cr, USD), capacities, dates, and percentages.
 - Tone: Strictly objective and neutral. NEVER use evaluative hype words like "positive", "negative", "strong", "huge", "aggressive", "boosts earnings" unless quoting management directly.
 - No investment advice: No buy/sell recommendations, no target prices, no future stock-price speculations.
-- What changes: Focus strictly on concrete commercial/operational changes, NOT market-cap or stock-price impact.
+- What changes: Focus strictly on concrete commercial/operational changes, NOT market-cap, stock-price impact, or mere "regulatory compliance".
 - Category Icon & Tag Rules:
   Convert CATEGORY to clean UPPERCASE SNAKE_CASE hashtag (e.g. #COMMERCIAL_PRODUCTION, #NEW_PRODUCT, #ORDER_WIN, #FINANCIAL_RESULTS).
   Use relevant icon: 🏭 for production/plant, 🚀 for product launch, 📜 for order wins, 📊 for quarterly results, 🤝 for M&A/JV, ⚡ for general.
@@ -368,9 +373,27 @@ def process_corporate_actions_feed():
 
             is_worthy = res.get("content_worthy", False)
             headline = res.get("headline") or itm["subject"]
-            
-            # Safe assignment: Null/None ko hamesha string empty bana dega
             telegram_post = res.get("telegram_post") or ""
+
+            # ------------------------------------------------------------
+            # HARD GUARDRAIL: ZERO-NUMBER FINANCIAL RESULT CHECK
+            # ------------------------------------------------------------
+            if is_worthy and itm.get("category") == "RESULT":
+                t_lower = telegram_post.lower()
+                facts = res.get("facts", {})
+                how_much = str(facts.get("how_much", "")).lower()
+
+                # Agar numbers missing/not disclosed hain
+                has_no_value = (
+                    "value / size: not disclosed" in t_lower
+                    or "not disclosed: revenue" in t_lower
+                    or "not disclosed" in how_much
+                    or how_much in ["", "none", "nil", "n/a"]
+                )
+
+                if has_no_value:
+                    is_worthy = False
+                    res["worthiness_reason"] = "Dropped: Zero financial metrics/numbers in results filing."
 
             # Ensure clean visual divider and PDF hyperlink exist if AI missed
             if telegram_post and itm.get("pdf_link") and "Source:" not in telegram_post:
@@ -386,7 +409,7 @@ def process_corporate_actions_feed():
                 "headline": headline,
                 "content_worthy": is_worthy,
                 "worthiness_reason": res.get("worthiness_reason", ""),
-                "telegram_post": telegram_post,
+                "telegram_post": telegram_post if is_worthy else "",
                 "facts": res.get("facts", {}),
                 "analyzed_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
             }
@@ -395,7 +418,7 @@ def process_corporate_actions_feed():
                 print(f"  ⭐ [APPROVED & WRITTEN] {itm['symbol']}: {headline[:50]}")
                 feed_archive["content_feed"].insert(0, record)
             else:
-                print(f"  ⏭️ [SKIPPED]            {itm['symbol']}: {res.get('worthiness_reason', '')[:50]}")
+                print(f"  ⏭️ [SKIPPED / REJECTED]  {itm['symbol']}: {res.get('worthiness_reason', '')[:50]}")
                 feed_archive["skipped_archive"].insert(0, record)
 
         feed_archive["content_feed"] = [item for item in feed_archive["content_feed"] if is_within_24h_of_analysis(item)]
