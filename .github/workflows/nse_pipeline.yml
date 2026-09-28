@@ -5,13 +5,13 @@ on:
     # Monday to Friday market hours (09:00 AM to 05:00 PM IST)
     # Cron in UTC: 03:30, 04:30, 05:30, 06:30, 07:30, 08:30, 09:30, 10:30, 11:30
     - cron: '30 3-11 * * 1-5'
-  workflow_dispatch: # GitHub UI se manually run karne ke liye button
+  workflow_dispatch:
 
 jobs:
   scrape-and-summarize:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Output JSON files commit/push karne ke liye zaroori permission
+      contents: write
 
     steps:
       - name: Checkout Code Repository
@@ -27,17 +27,18 @@ jobs:
       - name: Install Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install curl_cffi pypdf pdfplumber google-genai
+          pip install curl_cffi pypdf pdfplumber google-genai groq
 
       - name: Step 1 - Execute NSE Scraper Engine
         run: |
           python nse_daily_master_scraper.py
 
-      - name: Step 2 - Execute AI Fact Extraction & Summarizer
+      - name: Step 2 - Execute Hybrid AI Summarizer
         env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY2: ${{ secrets.GROQ_API_KEY2 }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           GOOGLE_API_KEY2: ${{ secrets.GOOGLE_API_KEY2 }}
-          GEMINI_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: |
           python nse_ai_summarizer.py
 
@@ -46,11 +47,11 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Stage master database and AI content feed
-          git add nse_corporate_master.json nse_content_feed.json
+          [ -f nse_corporate_master.json ] && git add nse_corporate_master.json
+          [ -f nse_content_feed.json ] && git add nse_content_feed.json
 
           if git diff --staged --quiet; then
-            echo "ℹ️ Koi naya update nahi mila. Commit skip kar diya gaya."
+            echo "ℹ️ Koi naya update nahi mila. Skipping commit."
           else
             git commit -m "⚡ Auto-Update: Master & AI Content Feed [$(date +'%d-%b-%Y %H:%M IST')]"
             git pull --rebase origin main
