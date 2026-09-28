@@ -1,0 +1,61 @@
+name: Telegram Channel Post Dispatcher
+
+on:
+  # Trigger 1: Main scraper & AI summarizer complete hone ke turant baad auto-trigger hoga
+  workflow_run:
+    workflows: ["Hourly NSE Scraper & AI Summarizer Pipeline"]
+    types:
+      - completed
+
+  # Trigger 2: Market hours schedule (Monday-Friday, every 30 mins from 09:00 AM to 05:00 PM IST)
+  schedule:
+    # 03:30 to 11:30 UTC
+    - cron: '*/30 3-11 * * 1-5'
+
+  # Trigger 3: Manual trigger button GitHub Actions UI se
+  workflow_dispatch:
+
+jobs:
+  post-to-telegram:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Broadcast Curated Feed to Telegram
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          TELEGRAM_TO: ${{ secrets.TELEGRAM_TO }}
+        run: |
+          python nse_telegram_bot.py
+
+      - name: Commit and Push Delivery Log
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          [ -f telegram_posted_log.json ] && git add telegram_posted_log.json
+
+          if git diff --staged --quiet; then
+            echo "ℹ️ No new posts dispatched. Skipping commit."
+          else
+            git commit -m "⚡ Telegram Delivery Log Sync [$(date +'%d-%b-%Y %H:%M IST')]"
+            git pull --rebase origin main
+            git push origin main
+          fi
