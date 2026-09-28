@@ -21,11 +21,14 @@ except ImportError:
     genai = None
 
 # ============================================================
-# CONFIGURATION & MULTI-MODEL REGISTRY
+# CONFIGURATION, BATCHING & MULTI-MODEL REGISTRY
 # ============================================================
 
 INPUT_FILE = "nse_content_feed.json"
 OUTPUT_FILE = "nse_final_content_feed.json"
+
+BATCH_SIZE = 3            # Har batch me kitne cards process honge
+BATCH_PAUSE_SECONDS = 30  # Har batch ke baad 30 sec cooldown pause
 
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
@@ -147,17 +150,17 @@ def call_hybrid_analyst(card, system_instruction, prompt_content):
         print(f"   ⚠️ Fail on {m_name} ({provider}). Switching to fallback model...")
         current_model_idx += 1
 
-    time.sleep(20)
+    time.sleep(15)
     current_model_idx = 0
     return None
 
 # ============================================================
-# MAIN ORCHESTRATOR
+# MAIN ORCHESTRATOR WITH 30s BATCH COOLDOWN
 # ============================================================
 
 def process_deep_feed():
     print("=" * 80)
-    print("🧠 STAGE 2: MULTI-MODEL DEEP CONTEXT ANALYST (GOOGLE SEARCH)")
+    print("🧠 STAGE 2: BATCHED DEEP CONTEXT ANALYST (GOOGLE SEARCH)")
     print(f"📅 Timestamp: {NOW.strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
@@ -193,6 +196,10 @@ def process_deep_feed():
     pending_cards = [card for card in reversed(cards) if card.get("hash") not in existing_hashes]
     print(f"🎯 Total pending filings for deep analysis: {len(pending_cards)}")
 
+    if not pending_cards:
+        print("✅ Everything up to date. Exiting cleanly.")
+        return
+
     system_instruction = """
 You are a senior institutional equity research editor.
 Your job is to analyze corporate announcements by contextualizing them against the company's existing business scale.
@@ -215,23 +222,31 @@ Output strictly Telegram-compatible HTML tags: <b>, <i>, <a>, <code>. Do not use
         "RESIGNATION": "👤"
     }
 
+    total_batches = (len(pending_cards) + BATCH_SIZE - 1) // BATCH_SIZE
+    i = 0
+    batch_counter = 1
     dispatched = 0
-    for card in pending_cards:
-        c_hash = card.get("hash")
-        symbol = card.get("symbol", "")
-        company = card.get("company_name", symbol)
-        event_type = card.get("event_type", "CORPORATE_UPDATE")
-        headline = card.get("headline", "")
-        summary_text = card.get("summary", "")
-        reqs = card.get("research_requirements", [])
-        pdf_link = card.get("pdf_link", "")
-        date_str = card.get("broadcast_date") or card.get("analyzed_at", "")
 
-        clean_cat_tag = event_type.upper().replace(" ", "_")
-        cat_icon = category_icons.get(clean_cat_tag, "⚡")
-        reqs_list = "\n".join([f"- {r}" for r in reqs]) if reqs else "- Latest annual revenue, segment scale, and debt profile"
+    while i < len(pending_cards):
+        batch = pending_cards[i : i + BATCH_SIZE]
+        print(f"\n⚡ Processing Batch {batch_counter}/{total_batches} ({len(batch)} cards)...")
 
-        prompt_content = f"""
+        for card in batch:
+            c_hash = card.get("hash")
+            symbol = card.get("symbol", "")
+            company = card.get("company_name", symbol)
+            event_type = card.get("event_type", "CORPORATE_UPDATE")
+            headline = card.get("headline", "")
+            summary_text = card.get("summary", "")
+            reqs = card.get("research_requirements", [])
+            pdf_link = card.get("pdf_link", "")
+            date_str = card.get("broadcast_date") or card.get("analyzed_at", "")
+
+            clean_cat_tag = event_type.upper().replace(" ", "_")
+            cat_icon = category_icons.get(clean_cat_tag, "⚡")
+            reqs_list = "\n".join([f"- {r}" for r in reqs]) if reqs else "- Latest annual revenue, segment scale, and debt profile"
+
+            prompt_content = f"""
 COMPANY: {company} (NSE: {symbol})
 EVENT TYPE: {event_type}
 HEADLINE: {headline}
@@ -267,40 +282,47 @@ TASK:
 📌 <b>Source:</b> <a href="{pdf_link}">NSE Corporate Filing</a>
 """
 
-        print(f"\n🔍 Synthesizing deep analysis for: {symbol} ({event_type})...")
-        final_post = call_hybrid_analyst(card, system_instruction, prompt_content)
+            print(f"  🔍 Researching: {symbol} ({event_type})...")
+            final_post = call_hybrid_analyst(card, system_instruction, prompt_content)
 
-        if not final_post:
-            final_post = (
-                f"{cat_icon} <b>#{clean_cat_tag}</b>\n"
-                f"🏢 <b>{company}</b>\n<b>{headline}</b>\n"
-                f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-                f"🔹 <b>Summary:</b>\n↳ {summary_text}\n\n"
-                f"━━━━━━━━━━━━━━━━━━━━━━\n"
-                f'📌 <b>Source:</b> <a href="{pdf_link}">NSE Corporate Filing</a>'
-            )
+            if not final_post:
+                final_post = (
+                    f"{cat_icon} <b>#{clean_cat_tag}</b>\n"
+                    f"🏢 <b>{company}</b>\n<b>{headline}</b>\n"
+                    f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+                    f"🔹 <b>Summary:</b>\n↳ {summary_text}\n\n"
+                    f"━━━━━━━━━━━━━━━━━━━━━━\n"
+                    f'📌 <b>Source:</b> <a href="{pdf_link}">NSE Corporate Filing</a>'
+                )
 
-        # SLIM FINAL RECORD STRUCTURE (Exact keys requested)
-        compact_card = {
-            "hash": c_hash,
-            "symbol": symbol,
-            "company_name": company,
-            "date": date_str,
-            "research_requirements": reqs,
-            "telegram_post": final_post
-        }
+            compact_card = {
+                "hash": c_hash,
+                "symbol": symbol,
+                "company_name": company,
+                "date": date_str,
+                "research_requirements": reqs,
+                "telegram_post": final_post
+            }
 
-        final_feed["content_feed"].insert(0, compact_card)
-        existing_hashes.add(c_hash)
-        dispatched += 1
+            final_feed["content_feed"].insert(0, compact_card)
+            existing_hashes.add(c_hash)
+            dispatched += 1
 
-        time.sleep(4)
+            time.sleep(3)  # Small breather between items within batch
 
-    final_feed["total_posts"] = len(final_feed["content_feed"])
-    final_feed["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
+        # Continuous save after every batch
+        final_feed["total_posts"] = len(final_feed["content_feed"])
+        final_feed["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(final_feed, f, ensure_ascii=False, indent=2)
 
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(final_feed, f, ensure_ascii=False, indent=2)
+        i += BATCH_SIZE
+        batch_counter += 1
+
+        # Pause strictly between batches
+        if i < len(pending_cards):
+            print(f"⏳ Cooldown pause of {BATCH_PAUSE_SECONDS}s before next batch to protect rate limits...")
+            time.sleep(BATCH_PAUSE_SECONDS)
 
     print("\n" + "=" * 80)
     print(f"✅ STAGE 2 COMPLETE: {dispatched} slim posts saved to '{OUTPUT_FILE}'")
