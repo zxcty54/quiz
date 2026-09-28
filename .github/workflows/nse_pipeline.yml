@@ -1,0 +1,57 @@
+name: Hourly NSE Scraper & AI Summarizer Pipeline
+
+on:
+  schedule:
+    # Monday to Friday market hours (09:00 AM to 05:00 PM IST)
+    # Cron in UTC: 03:30, 04:30, 05:30, 06:30, 07:30, 08:30, 09:30, 10:30, 11:30
+    - cron: '30 3-11 * * 1-5'
+  workflow_dispatch: # GitHub UI se manual trigger button
+
+jobs:
+  scrape-and-summarize:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # JSON files commit/push karne ke liye zaroori permission
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install curl_cffi pypdf pdfplumber google-genai
+
+      - name: Step 1 - Run NSE Hourly Scraper
+        run: |
+          python nse_daily_master_scraper.py
+
+      - name: Step 2 - Run AI Fact Extraction & Summarizer
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python nse_ai_summarizer.py
+
+      - name: Step 3 - Commit and Push Master & AI Content Feed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Add both master database and AI content feed
+          git add nse_corporate_master.json nse_content_feed.json
+
+          if git diff --staged --quiet; then
+            echo "ℹ️ Koi naya update nahi mila. Commit skip kar diya gaya."
+          else
+            git commit -m "⚡ Hourly Auto-Update: Master & AI Content Feed [$(date +'%d-%b-%Y %H:%M IST')]"
+            git pull --rebase origin main
+            git push origin main
+          fi
