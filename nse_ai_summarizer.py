@@ -48,17 +48,10 @@ groq_key_idx = 0
 google_key_idx = 0
 current_model_idx = 0
 
-# ============================================================
-# 24-HOUR RETENTION UTILITY
-# ============================================================
-
 def is_within_24_hours(item):
-    """Returns True if the item broadcast/analyzed timestamp is within last 24 hours."""
-    # 1. Try broadcast_date first ('28-Sep-2026 10:15:00' or '28-Sep-2026')
     dt_str = item.get("broadcast_date") or item.get("analyzed_at", "")
     if not dt_str:
         return False
-
     clean_str = dt_str.replace(" IST", "").strip()
     for fmt in ("%d-%b-%Y %H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d-%b-%Y", "%Y-%m-%d"):
         try:
@@ -67,68 +60,70 @@ def is_within_24_hours(item):
             return dt >= CUTOFF_24H
         except Exception:
             pass
-
-    # 2. Fallback to analyzed_at
-    analyzed_str = item.get("analyzed_at", "").replace(" IST", "").strip()
-    if analyzed_str:
-        try:
-            dt = datetime.strptime(analyzed_str, "%Y-%m-%d %H:%M:%S").replace(tzinfo=IST)
-            return dt >= CUTOFF_24H
-        except Exception:
-            pass
-
     return False
 
 # ============================================================
-# SYSTEM PROMPT
+# SYSTEM PROMPT: AI WRITES COMPLETE TELEGRAM POST
 # ============================================================
 
 SYSTEM_PROMPT = """
-You are a senior institutional equity research analyst and forensic accountant.
-You will receive pre-filtered high-signal Indian corporate events (Orders, Acquisitions, JV, Capex) AND high-growth financial earnings results.
+You are a senior institutional equity research editor and financial journalist.
+You will receive pre-filtered Indian corporate announcements and quarterly earnings results from the National Stock Exchange (NSE).
 
-YOUR TASK:
-Extract concrete facts, explain the underlying driver, evaluate disclosure transparency, and make a strict CONTENT-WORTHINESS DECISION.
+YOUR ROLE:
+1. Make a strict CONTENT-WORTHINESS DECISION (content_worthy: true/false).
+   - "true" ONLY for genuine business inflection points: Material contracts/orders, M&A/slump sales, commercial production starts, high capex, or major quarterly turnarounds/accelerations.
+   - "false" for routine administrative filings, minor non-material notices, or incomplete filings missing figures.
 
-Step 1: FACT EXTRACTION
-- what_happened: 1-sentence crisp summary of the event (Turnaround, Order Win, Capex, Acquisition, JV).
-- who: Specific entities involved (Buyer, seller, client, partner, promoters).
-- what_business: Specific business segment, technology, or industry affected.
-- how_much: Exact financial numbers (PAT, Revenue, YoY %, deal size, capacity).
-- when: Timelines, execution period, commissioning date.
-- where: Geography, plant location, state/country.
-- what_changes: Concrete change in ownership %, capacity metric, or operational run-rate.
-- what_is_disclosed: Key commercial/operational drivers explicitly stated.
-- what_is_not_disclosed: Critical metrics kept opaque (e.g. margin breakdown missing, client name hidden, exceptional gain details undisclosed).
+2. If content_worthy is TRUE, WRITE A COMPLETE, CURATED, EDITORIAL TELEGRAM POST.
 
-Step 2: FOR FINANCIAL RESULTS — FORENSIC "WHY" CHECK
-- Check if the profit jump is organic (operating leverage, volume expansion, lower input costs) or an accounting distortion (one-off land sale, other income, tax reversal).
-- If one-off driven, explicitly state this in headline and facts.
+STRICT WRITING & EDITORIAL RULES FOR THE TELEGRAM POST:
+- Facts only: Use strictly the information disclosed in the filing. Never invent numbers or details.
+- Numbers accuracy: Preserve exact figures, currencies (₹ Cr, USD), capacities, dates, and percentages.
+- Tone: Strictly objective and neutral. NEVER use evaluative hype words like "positive", "negative", "strong", "huge", "aggressive", "boosts earnings" unless explicitly attributed as a direct quote from management.
+- No investment advice: No buy/sell recommendations, no target prices, no future stock-price speculations.
+- What changes: Focus strictly on concrete commercial/operational changes (e.g., product portfolio addition, manufacturing capacity expansion, new client base), NOT market-cap or stock-price impact.
+- Not disclosed section: Include ONLY if genuinely critical information is missing (e.g., undisclosed deal value, hidden acquisition multiples, confidential client name, missing profit margins). If nothing vital is absent, OMIT the "Not disclosed" section completely.
+- Source Link: Use standard HTML hyperlink format: <a href="PDF_LINK">NSE Corporate Filing</a>
 
-Step 3: CONTENT-WORTHINESS DECISION (content_worthy: true/false)
-- Set "content_worthy": true ONLY IF the event or earnings result represents a material business inflection point.
-- Set "content_worthy": false if the numbers lack substance or lack core operating growth.
+EXACT TELEGRAM POST LAYOUT STRUCTURE:
+🏷️ {CATEGORY}
+<b>{COMPANY NAME} — {HEADLINE}</b>
 
-OUTPUT FORMAT REQUIREMENTS:
+<b>What happened?</b>
+{1–2 sentence crisp factual summary of the event.}
+
+<b>Key details</b>
+• <b>What:</b> {Specific event or asset}
+• <b>Who:</b> {Company and counterparty/client/partner}
+• <b>Business:</b> {Affected business line/segment/product}
+• <b>Value / Size:</b> {Financial value, capacity, or volume — only if stated}
+• <b>When:</b> {Execution dates, milestones, commissioning timeline}
+• <b>Where:</b> {Geography/location, if stated}
+
+<b>What changes</b>
+{1–2 sentences explaining the real-world operational/commercial change for the company.}
+
+<b>Not disclosed</b>
+{Material undisclosed metrics. OMIT this block if no material gaps exist.}
+
+📌 <b>Source:</b> <a href="{PDF_LINK}">NSE Corporate Filing</a>
+
+OUTPUT FORMAT:
 Return strictly a valid JSON array of objects:
 [
   {
     "input_id": 1,
     "content_worthy": true,
-    "worthiness_reason": "Crisp 1-line rationale for decision",
-    "headline": "High-impact financial news headline",
+    "worthiness_reason": "Crisp 1-line reason for inclusion or exclusion",
+    "headline": "Factual and attention-worthy headline",
+    "telegram_post": "The complete formatted Telegram post matching the structure above with HTML tags (<b>, <a>)",
     "facts": {
       "what_happened": "...",
-      "who": "...",
-      "what_business": "...",
       "how_much": "...",
-      "when": "...",
-      "where": "...",
       "what_changes": "...",
-      "what_is_disclosed": "...",
       "what_is_not_disclosed": "..."
-    },
-    "social_post_hook": "Engaging 1-2 sentence market post hook with key numbers"
+    }
   }
 ]
 """
@@ -237,40 +232,31 @@ def call_hybrid_ai(batch_prompt):
     return None
 
 # ============================================================
-# BATCH PROCESSOR WITH 24-HOUR ROLLING PURGE
+# MAIN ORCHESTRATOR
 # ============================================================
 
 def process_corporate_actions_feed():
     print("=" * 80)
-    print("🚀 RUNNING AI FORENSIC SUMMARIZER (24-HOUR ROLLING WINDOW)")
-    print(f"📅 Active Window: After {CUTOFF_24H.strftime('%d-%b-%Y %H:%M:%S IST')}")
+    print("🚀 AI WRITING & CURATION ENGINE (GENERATING TELEGRAM POSTS)")
+    print(f"📅 Window: Last 24 Hours (Since {CUTOFF_24H.strftime('%d-%b %H:%M IST')})")
     print("=" * 80)
 
     feed_archive = {
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST"),
-        "window": "Rolling 24 Hours",
         "worthy_count": 0,
         "skipped_count": 0,
         "content_feed": [],
         "skipped_archive": []
     }
 
-    # 1. Load existing archive and purge anything > 24 hours immediately
     if os.path.exists(OUTPUT_FILE):
         try:
             with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
                 loaded = json.load(f)
                 if isinstance(loaded, dict):
                     feed_archive = loaded
-                    # Strict 24-hour purge
-                    feed_archive["content_feed"] = [
-                        item for item in feed_archive.get("content_feed", [])
-                        if is_within_24_hours(item)
-                    ]
-                    feed_archive["skipped_archive"] = [
-                        item for item in feed_archive.get("skipped_archive", [])
-                        if is_within_24_hours(item)
-                    ]
+                    feed_archive["content_feed"] = [item for item in feed_archive.get("content_feed", []) if is_within_24_hours(item)]
+                    feed_archive["skipped_archive"] = [item for item in feed_archive.get("skipped_archive", []) if is_within_24_hours(item)]
         except Exception:
             pass
     else:
@@ -278,7 +264,7 @@ def process_corporate_actions_feed():
             json.dump(feed_archive, f, ensure_ascii=False, indent=2)
 
     if not os.path.exists(INPUT_FILE):
-        print(f"❌ Input master file '{INPUT_FILE}' not found! Scraper run karein pehle.")
+        print(f"❌ Input master file '{INPUT_FILE}' not found! Run scraper first.")
         return
 
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
@@ -289,7 +275,7 @@ def process_corporate_actions_feed():
 
     candidates = []
 
-    # 1. Commercial Announcements (Within 24 Hours only)
+    # Announcements
     for a in master_data.get("corporate_announcements", []):
         if a.get("hash") not in processed_hashes and a.get("pdf_extracted_text"):
             if is_within_24_hours(a):
@@ -306,7 +292,7 @@ def process_corporate_actions_feed():
                     "pdf_link": a.get("pdf_link")
                 })
 
-    # 2. Financial Results (Within 24 Hours only)
+    # Financial Results
     for r in master_data.get("financial_results", []):
         if r.get("hash") not in processed_hashes:
             if is_within_24_hours(r):
@@ -332,14 +318,10 @@ def process_corporate_actions_feed():
                     "pdf_link": r.get("pdf_link")
                 })
 
-    print(f"🎯 High-conviction events in current 24h window: {len(candidates)}")
+    print(f"🎯 Total pending filings for AI writing: {len(candidates)}")
 
     if not candidates:
-        print("✅ No pending items in the last 24 hours. Purging complete & up to date.")
-        # Ensure pruned state is saved
-        feed_archive["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
-        feed_archive["worthy_count"] = len(feed_archive["content_feed"])
-        feed_archive["skipped_count"] = len(feed_archive["skipped_archive"])
+        print("✅ No unwritten announcements. All caught up!")
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(feed_archive, f, ensure_ascii=False, indent=2)
         return
@@ -362,14 +344,15 @@ def process_corporate_actions_feed():
                 "category": itm["category"],
                 "subject": itm["subject"],
                 "summary": itm["summary"],
+                "pdf_link": itm["pdf_link"],
                 "details": itm["payload_text"]
             })
 
-        prompt_str = "Perform forensic fact extraction on these corporate events:\n" + json.dumps(batch_payload, ensure_ascii=False)
+        prompt_str = "Write publication-ready Telegram posts for these corporate events:\n" + json.dumps(batch_payload, ensure_ascii=False)
         batch_result = call_hybrid_ai(prompt_str)
 
         if not batch_result:
-            print(f"⚠️ Batch {batch_counter} skipped due to API exhaustion.")
+            print(f"⚠️ Batch {batch_counter} skipped.")
             i += BATCH_SIZE
             batch_counter += 1
             continue
@@ -383,10 +366,14 @@ def process_corporate_actions_feed():
 
             is_worthy = res.get("content_worthy", False)
             headline = res.get("headline") or itm["subject"]
+            telegram_post = res.get("telegram_post", "")
+
+            # Fallback if AI forgot to append source link
+            if itm["pdf_link"] and "Source:" not in telegram_post:
+                telegram_post += f'\n\n📌 <b>Source:</b> <a href="{itm["pdf_link"]}">NSE Corporate Filing</a>'
 
             record = {
                 "hash": itm["hash"],
-                "type": itm["type"],
                 "symbol": itm["symbol"],
                 "company_name": itm["company_name"],
                 "category": itm["category"],
@@ -395,19 +382,18 @@ def process_corporate_actions_feed():
                 "headline": headline,
                 "content_worthy": is_worthy,
                 "worthiness_reason": res.get("worthiness_reason", ""),
+                "telegram_post": telegram_post,
                 "facts": res.get("facts", {}),
-                "social_post_hook": res.get("social_post_hook", ""),
                 "analyzed_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
             }
 
-            if is_worthy:
-                print(f"  ⭐ [WORTHY] {itm['symbol']}: {headline[:50]}")
+            if is_worthy and telegram_post:
+                print(f"  ⭐ [WRITTEN & APPROVED] {itm['symbol']}: {headline[:50]}")
                 feed_archive["content_feed"].insert(0, record)
             else:
-                print(f"  ⏭️ [SKIPPED] {itm['symbol']}: {res.get('worthiness_reason', '')[:50]}")
+                print(f"  ⏭️ [REJECTED/SKIPPED]   {itm['symbol']}: {res.get('worthiness_reason', '')[:50]}")
                 feed_archive["skipped_archive"].insert(0, record)
 
-        # Final 24-hour enforcement before writing
         feed_archive["content_feed"] = [item for item in feed_archive["content_feed"] if is_within_24_hours(item)]
         feed_archive["skipped_archive"] = [item for item in feed_archive["skipped_archive"] if is_within_24_hours(item)]
 
@@ -426,10 +412,10 @@ def process_corporate_actions_feed():
             time.sleep(BATCH_PAUSE_SECONDS)
 
     print("\n" + "=" * 80)
-    print("✅ 24-HOUR CONTENT FEED SYNC COMPLETE:")
-    print(f"   • Active Content-Worthy Cards (Last 24h): {feed_archive['worthy_count']}")
-    print(f"   • Filtered/Skipped Cards (Last 24h)     : {feed_archive['skipped_count']}")
-    print(f"💾 File Saved to                           : '{OUTPUT_FILE}'")
+    print("✅ AI EDITORIAL WORKFLOW COMPLETE:")
+    print(f"   • Curated Posts Ready for Channel : {feed_archive['worthy_count']}")
+    print(f"   • Non-Material Records Skipped    : {feed_archive['skipped_count']}")
+    print(f"💾 Saved to                          : '{OUTPUT_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
