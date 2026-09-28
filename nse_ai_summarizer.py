@@ -16,7 +16,7 @@ except ImportError:
     genai = None
 
 # ============================================================
-# CONFIGURATION & HYBRID MODEL REGISTRY
+# CONFIGURATION & 24-HOUR RETENTION PARAMETERS
 # ============================================================
 
 INPUT_FILE = "nse_corporate_master.json"
@@ -26,7 +26,9 @@ BATCH_SIZE = 4
 BATCH_PAUSE_SECONDS = 20
 
 IST = timezone(timedelta(hours=5, minutes=30))
-TODAY_DATE = datetime.now(IST).strftime("%d %b %Y")
+NOW = datetime.now(IST)
+RETENTION_HOURS = 24
+CUTOFF_24H = NOW - timedelta(hours=RETENTION_HOURS)
 
 MODEL_REGISTRY = [
     {"name": "openai/gpt-oss-20b", "provider": "groq"},
@@ -47,7 +49,38 @@ google_key_idx = 0
 current_model_idx = 0
 
 # ============================================================
-# LEVEL 4 SYSTEM PROMPT: FORENSIC FACT EXTRACTION
+# 24-HOUR RETENTION UTILITY
+# ============================================================
+
+def is_within_24_hours(item):
+    """Returns True if the item broadcast/analyzed timestamp is within last 24 hours."""
+    # 1. Try broadcast_date first ('28-Sep-2026 10:15:00' or '28-Sep-2026')
+    dt_str = item.get("broadcast_date") or item.get("analyzed_at", "")
+    if not dt_str:
+        return False
+
+    clean_str = dt_str.replace(" IST", "").strip()
+    for fmt in ("%d-%b-%Y %H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d-%b-%Y", "%Y-%m-%d"):
+        try:
+            target = clean_str if (" " in fmt and " " in clean_str) else clean_str.split()[0]
+            dt = datetime.strptime(target, fmt).replace(tzinfo=IST)
+            return dt >= CUTOFF_24H
+        except Exception:
+            pass
+
+    # 2. Fallback to analyzed_at
+    analyzed_str = item.get("analyzed_at", "").replace(" IST", "").strip()
+    if analyzed_str:
+        try:
+            dt = datetime.strptime(analyzed_str, "%Y-%m-%d %H:%M:%S").replace(tzinfo=IST)
+            return dt >= CUTOFF_24H
+        except Exception:
+            pass
+
+    return False
+
+# ============================================================
+# SYSTEM PROMPT
 # ============================================================
 
 SYSTEM_PROMPT = """
@@ -204,34 +237,45 @@ def call_hybrid_ai(batch_prompt):
     return None
 
 # ============================================================
-# BATCH PROCESSOR
+# BATCH PROCESSOR WITH 24-HOUR ROLLING PURGE
 # ============================================================
 
 def process_corporate_actions_feed():
     print("=" * 80)
-    print("🚀 RUNNING AI FORENSIC SUMMARIZER (LEVEL 4 CONTEXT SYNTHESIS)")
-    print(f"📅 Timestamp: {datetime.now(IST).strftime('%d-%b-%Y %H:%M:%S IST')}")
+    print("🚀 RUNNING AI FORENSIC SUMMARIZER (24-HOUR ROLLING WINDOW)")
+    print(f"📅 Active Window: After {CUTOFF_24H.strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
     feed_archive = {
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST"),
+        "window": "Rolling 24 Hours",
         "worthy_count": 0,
         "skipped_count": 0,
         "content_feed": [],
         "skipped_archive": []
     }
 
-    if not os.path.exists(OUTPUT_FILE):
-        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            json.dump(feed_archive, f, ensure_ascii=False, indent=2)
-    else:
+    # 1. Load existing archive and purge anything > 24 hours immediately
+    if os.path.exists(OUTPUT_FILE):
         try:
             with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
                 loaded = json.load(f)
                 if isinstance(loaded, dict):
                     feed_archive = loaded
+                    # Strict 24-hour purge
+                    feed_archive["content_feed"] = [
+                        item for item in feed_archive.get("content_feed", [])
+                        if is_within_24_hours(item)
+                    ]
+                    feed_archive["skipped_archive"] = [
+                        item for item in feed_archive.get("skipped_archive", [])
+                        if is_within_24_hours(item)
+                    ]
         except Exception:
             pass
+    else:
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(feed_archive, f, ensure_ascii=False, indent=2)
 
     if not os.path.exists(INPUT_FILE):
         print(f"❌ Input master file '{INPUT_FILE}' not found! Scraper run karein pehle.")
@@ -243,54 +287,61 @@ def process_corporate_actions_feed():
     processed_hashes = {item["hash"] for item in feed_archive.get("content_feed", []) if "hash" in item}
     processed_hashes.update({item["hash"] for item in feed_archive.get("skipped_archive", []) if "hash" in item})
 
-    # Gather announcements and financial results
     candidates = []
-    
-    # 1. Commercial Announcements
+
+    # 1. Commercial Announcements (Within 24 Hours only)
     for a in master_data.get("corporate_announcements", []):
         if a.get("hash") not in processed_hashes and a.get("pdf_extracted_text"):
-            candidates.append({
-                "type": "ANNOUNCEMENT",
-                "hash": a.get("hash"),
-                "symbol": a.get("symbol"),
-                "company_name": a.get("company_name"),
-                "category": a.get("category"),
-                "subject": a.get("subject"),
-                "summary": a.get("summary"),
-                "payload_text": a.get("pdf_extracted_text")[:3500],
-                "broadcast_date": a.get("broadcast_date"),
-                "pdf_link": a.get("pdf_link")
-            })
+            if is_within_24_hours(a):
+                candidates.append({
+                    "type": "ANNOUNCEMENT",
+                    "hash": a.get("hash"),
+                    "symbol": a.get("symbol"),
+                    "company_name": a.get("company_name"),
+                    "category": a.get("category"),
+                    "subject": a.get("subject"),
+                    "summary": a.get("summary"),
+                    "payload_text": a.get("pdf_extracted_text")[:3500],
+                    "broadcast_date": a.get("broadcast_date"),
+                    "pdf_link": a.get("pdf_link")
+                })
 
-    # 2. Pre-Filtered Financial Outliers
+    # 2. Financial Results (Within 24 Hours only)
     for r in master_data.get("financial_results", []):
         if r.get("hash") not in processed_hashes:
-            summary_str = (
-                f"Revenue: ₹{r.get('revenue')} Cr (YoY: {r.get('yoy_revenue_growth')}%), "
-                f"PAT: ₹{r.get('pat')} Cr (YoY: {r.get('yoy_pat_growth')}%), "
-                f"Signal: {r.get('signal_tag')}, Exceptional Items: ₹{r.get('exceptional_items')} Cr"
-            )
-            candidates.append({
-                "type": "FINANCIAL_RESULT",
-                "hash": r.get("hash"),
-                "symbol": r.get("symbol"),
-                "company_name": r.get("company_name"),
-                "category": "RESULT",
-                "subject": f"Quarterly Outlier Result - {r.get('signal_tag')}",
-                "summary": summary_str,
-                "payload_text": json.dumps({
-                    "financial_metrics": r,
-                    "segments": r.get("segment_revenue", {}),
-                    "one_off": r.get("is_one_off_driven")
-                }, indent=2),
-                "broadcast_date": r.get("result_date"),
-                "pdf_link": r.get("pdf_link")
-            })
+            if is_within_24_hours(r):
+                summary_str = (
+                    f"Revenue: ₹{r.get('revenue')} Cr (YoY: {r.get('yoy_revenue_growth')}%), "
+                    f"PAT: ₹{r.get('pat')} Cr (YoY: {r.get('yoy_pat_growth')}%), "
+                    f"Signal: {r.get('signal_tag')}, Exceptional Items: ₹{r.get('exceptional_items')} Cr"
+                )
+                candidates.append({
+                    "type": "FINANCIAL_RESULT",
+                    "hash": r.get("hash"),
+                    "symbol": r.get("symbol"),
+                    "company_name": r.get("company_name"),
+                    "category": "RESULT",
+                    "subject": f"Quarterly Outlier Result - {r.get('signal_tag')}",
+                    "summary": summary_str,
+                    "payload_text": json.dumps({
+                        "financial_metrics": r,
+                        "segments": r.get("segment_revenue", {}),
+                        "one_off": r.get("is_one_off_driven")
+                    }, indent=2),
+                    "broadcast_date": r.get("result_date"),
+                    "pdf_link": r.get("pdf_link")
+                })
 
-    print(f"🎯 Total high-conviction events awaiting AI analysis: {len(candidates)}")
+    print(f"🎯 High-conviction events in current 24h window: {len(candidates)}")
 
     if not candidates:
-        print("✅ No pending items. Master archive is fully synchronized!")
+        print("✅ No pending items in the last 24 hours. Purging complete & up to date.")
+        # Ensure pruned state is saved
+        feed_archive["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
+        feed_archive["worthy_count"] = len(feed_archive["content_feed"])
+        feed_archive["skipped_count"] = len(feed_archive["skipped_archive"])
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(feed_archive, f, ensure_ascii=False, indent=2)
         return
 
     total_batches = (len(candidates) + BATCH_SIZE - 1) // BATCH_SIZE
@@ -356,12 +407,13 @@ def process_corporate_actions_feed():
                 print(f"  ⏭️ [SKIPPED] {itm['symbol']}: {res.get('worthiness_reason', '')[:50]}")
                 feed_archive["skipped_archive"].insert(0, record)
 
+        # Final 24-hour enforcement before writing
+        feed_archive["content_feed"] = [item for item in feed_archive["content_feed"] if is_within_24_hours(item)]
+        feed_archive["skipped_archive"] = [item for item in feed_archive["skipped_archive"] if is_within_24_hours(item)]
+
         feed_archive["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
         feed_archive["worthy_count"] = len(feed_archive["content_feed"])
         feed_archive["skipped_count"] = len(feed_archive["skipped_archive"])
-
-        feed_archive["content_feed"] = feed_archive["content_feed"][:500]
-        feed_archive["skipped_archive"] = feed_archive["skipped_archive"][:500]
 
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(feed_archive, f, ensure_ascii=False, indent=2)
@@ -374,10 +426,10 @@ def process_corporate_actions_feed():
             time.sleep(BATCH_PAUSE_SECONDS)
 
     print("\n" + "=" * 80)
-    print("✅ FORENSIC AI PIPELINE RUN COMPLETE:")
-    print(f"   • Content-Worthy Cards : {feed_archive['worthy_count']}")
-    print(f"   • Skipped Events Stored: {feed_archive['skipped_count']}")
-    print(f"💾 Feed Written to        : '{OUTPUT_FILE}'")
+    print("✅ 24-HOUR CONTENT FEED SYNC COMPLETE:")
+    print(f"   • Active Content-Worthy Cards (Last 24h): {feed_archive['worthy_count']}")
+    print(f"   • Filtered/Skipped Cards (Last 24h)     : {feed_archive['skipped_count']}")
+    print(f"💾 File Saved to                           : '{OUTPUT_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
