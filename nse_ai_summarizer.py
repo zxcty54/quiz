@@ -3,11 +3,21 @@ import json
 import time
 import re
 from datetime import datetime, timezone, timedelta
-from google import genai
-from google.genai import types
+
+# Provider SDKs
+try:
+    from groq import Groq
+except ImportError:
+    Groq = None
+
+try:
+    from google import genai
+    from google.genai import types
+except ImportError:
+    genai = None
 
 # ============================================================
-# CONFIGURATION & MULTI-KEY AUTO-ROTATION
+# CONFIGURATION & HYBRID MODEL REGISTRY
 # ============================================================
 
 INPUT_FILE = "nse_corporate_master.json"
@@ -19,36 +29,41 @@ BATCH_PAUSE_SECONDS = 20
 IST = timezone(timedelta(hours=5, minutes=30))
 TODAY_DATE = datetime.now(IST).strftime("%d %b %Y")
 
-# Collect all available API keys from environment
-API_KEYS = []
-for env_name in ["GOOGLE_API_KEY", "GOOGLE_API_KEY2", "GEMINI_API_KEY"]:
-    val = os.environ.get(env_name)
-    if val and val.strip() and val.strip() not in API_KEYS:
-        API_KEYS.append(val.strip())
+# Exact requested hybrid model chain
+MODEL_REGISTRY = [
+    {"name": "openai/gpt-oss-20b", "provider": "groq"},       # Primary
+    {"name": "gemini-3.5-flash-lite", "provider": "google"},   # Fallback 1
+    {"name": "openai/gpt-oss-120b", "provider": "groq"},      # Fallback 2
+    {"name": "gemini-3.1-flash-lite", "provider": "google"}    # Fallback 3
+]
 
-# Hard exit guard: Prevents infinite retry loops if keys are missing
-if not API_KEYS:
+# Collect Groq Keys
+GROQ_KEYS = []
+for k in ["GROQ_API_KEY", "GROQ_API_KEY2"]:
+    v = os.environ.get(k)
+    if v and v.strip() and v.strip() not in GROQ_KEYS:
+        GROQ_KEYS.append(v.strip())
+
+# Collect Google Keys
+GOOGLE_KEYS = []
+for k in ["GOOGLE_API_KEY", "GOOGLE_API_KEY2", "GEMINI_API_KEY"]:
+    v = os.environ.get(k)
+    if v and v.strip() and v.strip() not in GOOGLE_KEYS:
+        GOOGLE_KEYS.append(v.strip())
+
+if not GROQ_KEYS and not GOOGLE_KEYS:
     print("\n" + "=" * 80)
-    print("❌ FATAL ERROR: No valid API Key found in environment variables!")
-    print("   Please ensure 'GOOGLE_API_KEY' or 'GOOGLE_API_KEY2' is defined in GitHub Secrets.")
+    print("❌ FATAL ERROR: Neither GROQ nor GOOGLE API Keys found in environment!")
+    print("   Please check GitHub Secrets for GROQ_API_KEY / GOOGLE_API_KEY.")
     print("=" * 80 + "\n")
     exit(1)
 
-current_key_idx = 0
-client = genai.Client(api_key=API_KEYS[current_key_idx])
-print(f"🔑 Initialized with API Key [{current_key_idx + 1}/{len(API_KEYS)}]")
-
-# Multi-Model Fallback Chain
-MODEL_REGISTRY = [
-    "gemini-2.5-flash",
-    "gemini-2.0-flash",
-    "gemini-1.5-flash",
-    "gemini-2.5-pro"
-]
+groq_key_idx = 0
+google_key_idx = 0
 current_model_idx = 0
 
 # ============================================================
-# AI SYSTEM INSTRUCTION (FACT EXTRACTION & CONTENT WORTHINESS)
+# AI PROMPT
 # ============================================================
 
 SYSTEM_PROMPT = """
@@ -104,7 +119,7 @@ Return strictly a valid JSON array of objects:
 """
 
 # ============================================================
-# ROBUST JSON PARSER & CLEANER
+# PARSER HELPER
 # ============================================================
 
 def clean_json_response(raw_text):
@@ -132,96 +147,112 @@ def clean_json_response(raw_text):
                 return [data] if isinstance(data, dict) else data
             except Exception:
                 pass
-
     return None
 
 # ============================================================
-# DUAL FAILOVER ENGINE (KEY ROTATION + MODEL ROTATION)
+# HYBRID CALLER DISPATCHER (GROQ & GOOGLE GENAI)
 # ============================================================
 
-def rotate_key_or_model():
-    """Switches to backup API key first; if all keys exhausted, switches to backup model"""
-    global current_key_idx, current_model_idx, client
+def call_groq(model_name, payload):
+    global groq_key_idx
+    if not Groq or not GROQ_KEYS:
+        return None, "Groq SDK or keys missing"
 
-    # 1. Try rotating to next available API Key
-    if current_key_idx + 1 < len(API_KEYS):
-        current_key_idx += 1
-        client = genai.Client(api_key=API_KEYS[current_key_idx])
-        print(f"🔄 Switched to Backup API Key [{current_key_idx + 1}/{len(API_KEYS)}]")
-        return True
+    for _ in range(len(GROQ_KEYS)):
+        try:
+            client = Groq(api_key=GROQ_KEYS[groq_key_idx])
+            completion = client.chat.completions.create(
+                model=model_name,
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": payload}
+                ],
+                temperature=0.1,
+                response_format={"type": "json_object"}
+            )
+            parsed = clean_json_response(completion.choices[0].message.content)
+            if parsed:
+                return parsed, None
+        except Exception as e:
+            err = str(e)
+            if "429" in err or "rate_limit" in err.lower():
+                groq_key_idx = (groq_key_idx + 1) % len(GROQ_KEYS)
+                print(f"⚠️ Groq rate limit hit. Rotated to Key {groq_key_idx + 1}")
+                time.sleep(2)
+                continue
+            return None, err
+    return None, "All Groq keys exhausted"
 
-    # 2. If all keys exhausted, switch to next fallback model and reset keys to index 0
-    current_key_idx = 0
-    client = genai.Client(api_key=API_KEYS[current_key_idx])
-    current_model_idx += 1
 
-    if current_model_idx < len(MODEL_REGISTRY):
-        print(f"🔄 Switched to Backup Model: {MODEL_REGISTRY[current_model_idx]}")
-        return True
+def call_google(model_name, payload):
+    global google_key_idx
+    if not genai or not GOOGLE_KEYS:
+        return None, "Google GenAI SDK or keys missing"
 
-    return False
+    for _ in range(len(GOOGLE_KEYS)):
+        try:
+            client = genai.Client(api_key=GOOGLE_KEYS[google_key_idx])
+            response = client.models.generate_content(
+                model=model_name,
+                contents=payload,
+                config=types.GenerateContentConfig(
+                    system_instruction=SYSTEM_PROMPT,
+                    temperature=0.1,
+                    response_mime_type="application/json"
+                )
+            )
+            parsed = clean_json_response(response.text)
+            if parsed:
+                return parsed, None
+        except Exception as e:
+            err = str(e)
+            if "429" in err or "RESOURCE_EXHAUSTED" in err:
+                google_key_idx = (google_key_idx + 1) % len(GOOGLE_KEYS)
+                print(f"⚠️ Google rate limit hit. Rotated to Key {google_key_idx + 1}")
+                time.sleep(2)
+                continue
+            return None, err
+    return None, "All Google keys exhausted"
 
 
-def call_gemini_with_fallback(batch_prompt):
+def call_hybrid_ai(batch_prompt):
     global current_model_idx
 
     total_models = len(MODEL_REGISTRY)
 
     while current_model_idx < total_models:
-        model_name = MODEL_REGISTRY[current_model_idx]
+        target = MODEL_REGISTRY[current_model_idx]
+        m_name = target["name"]
+        provider = target["provider"]
 
-        for attempt in range(2):
-            try:
-                response = client.models.generate_content(
-                    model=model_name,
-                    contents=batch_prompt,
-                    config=types.GenerateContentConfig(
-                        system_instruction=SYSTEM_PROMPT,
-                        temperature=0.1,
-                        response_mime_type="application/json"
-                    )
-                )
+        print(f"   🤖 Trying [{provider.upper()}]: {m_name}...")
 
-                parsed = clean_json_response(response.text)
-                if parsed is not None:
-                    return parsed if isinstance(parsed, list) else [parsed]
-
-                print(f"⚠️ [{model_name}] JSON parse retry (Attempt {attempt + 1})...")
-                time.sleep(3)
-
-            except Exception as e:
-                err_str = str(e)
-                if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
-                    print(f"⚠️ [{model_name}] Rate limit / Quota hit (429). Triggering failover...")
-                    if rotate_key_or_model():
-                        break
-                    else:
-                        print("⚠️ All keys and models exhausted. Pausing 60s for quota bucket reset...")
-                        time.sleep(60)
-                        current_model_idx = 0
-                        break
-
-                print(f"⚠️ [{model_name}] Error on attempt {attempt + 1}: {e}")
-                time.sleep(4)
-
-        if current_model_idx < total_models and MODEL_REGISTRY[current_model_idx] != model_name:
-            continue
+        if provider == "groq":
+            res, err = call_groq(m_name, batch_prompt)
         else:
-            current_model_idx += 1
+            res, err = call_google(m_name, batch_prompt)
 
+        if res:
+            return res if isinstance(res, list) else [res]
+
+        print(f"   ⚠️ Failed on {m_name} ({err}). Switching to next fallback model...")
+        current_model_idx += 1
+
+    print("⚠️ All hybrid models in chain exhausted. Pausing 45s for reset...")
+    time.sleep(45)
+    current_model_idx = 0
     return None
 
 # ============================================================
-# BATCH PROCESSOR
+# BATCH ORCHESTRATOR
 # ============================================================
 
 def process_corporate_actions_feed():
     print("=" * 80)
-    print("🚀 STARTING AI FACT EXTRACTION & CONTENT WORTHINESS ENGINE")
-    print(f"📅 Run Timestamp: {datetime.now(IST).strftime('%d-%b-%Y %H:%M:%S IST')}")
+    print("🚀 RUNNING HYBRID AI FACT EXTRACTION & WORTHINESS PIPELINE")
+    print(f"📅 Timestamp: {datetime.now(IST).strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
-    # Base structure initialization
     feed_archive = {
         "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST"),
         "worthy_count": 0,
@@ -230,11 +261,11 @@ def process_corporate_actions_feed():
         "skipped_archive": []
     }
 
-    # 🛑 CRUCIAL GUARD: Guarantee file existence on disk immediately
+    # Guard: Create empty output file if not present
     if not os.path.exists(OUTPUT_FILE):
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(feed_archive, f, ensure_ascii=False, indent=2)
-        print(f"📁 Initialized blank destination file: '{OUTPUT_FILE}'")
+        print(f"📁 Initialized target file: '{OUTPUT_FILE}'")
     else:
         try:
             with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
@@ -245,28 +276,27 @@ def process_corporate_actions_feed():
             pass
 
     if not os.path.exists(INPUT_FILE):
-        print(f"❌ Input master file '{INPUT_FILE}' not found! Scraper pehle chalayein.")
+        print(f"❌ '{INPUT_FILE}' not found! Run the scraper first.")
         return
 
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
         master_data = json.load(f)
 
     announcements = master_data.get("corporate_announcements", [])
-    print(f"📦 Loaded {len(announcements)} corporate announcements from '{INPUT_FILE}'")
+    print(f"📦 Total raw announcements: {len(announcements)}")
 
     processed_hashes = {item["hash"] for item in feed_archive.get("content_feed", []) if "hash" in item}
     processed_hashes.update({item["hash"] for item in feed_archive.get("skipped_archive", []) if "hash" in item})
 
-    # Unprocessed items that have extracted PDF content
     pending_items = [
         a for a in announcements 
         if a.get("hash") not in processed_hashes and a.get("pdf_extracted_text")
     ]
 
-    print(f"🎯 Fresh announcements requiring AI Fact Extraction: {len(pending_items)}")
+    print(f"🎯 Announcements awaiting processing: {len(pending_items)}")
 
     if not pending_items:
-        print("✅ Sabhi announcements pehle se processed hain. Nothing to do!")
+        print("✅ No pending items. Everything is up to date!")
         return
 
     total_batches = (len(pending_items) + BATCH_SIZE - 1) // BATCH_SIZE
@@ -290,10 +320,10 @@ def process_corporate_actions_feed():
             })
 
         prompt_str = "Analyze and extract facts for these NSE filings:\n" + json.dumps(batch_payload, ensure_ascii=False)
-        batch_result = call_gemini_with_fallback(prompt_str)
+        batch_result = call_hybrid_ai(prompt_str)
 
         if not batch_result:
-            print(f"⚠️ Batch {batch_counter} skipped due to API exhaustion. Will retry on next run.")
+            print(f"⚠️ Batch {batch_counter} skipped due to API exhaustion. Next hourly run will retry.")
             i += BATCH_SIZE
             batch_counter += 1
             continue
@@ -330,7 +360,6 @@ def process_corporate_actions_feed():
                 print(f"  ⏭️ [NO  -> SKIP]    {itm.get('symbol')}: {res.get('worthiness_reason', '')[:50]}")
                 feed_archive["skipped_archive"].insert(0, record)
 
-        # Write checkpoint to disk after every batch
         feed_archive["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
         feed_archive["worthy_count"] = len(feed_archive["content_feed"])
         feed_archive["skipped_count"] = len(feed_archive["skipped_archive"])
@@ -345,13 +374,13 @@ def process_corporate_actions_feed():
         batch_counter += 1
 
         if i < len(pending_items):
-            print(f"⏳ Cooling down {BATCH_PAUSE_SECONDS}s to prevent rate-limits...")
+            print(f"⏳ Cooling down {BATCH_PAUSE_SECONDS}s between batches...")
             time.sleep(BATCH_PAUSE_SECONDS)
 
     print("\n" + "=" * 80)
-    print("✅ AI PROCESSING COMPLETE:")
+    print("✅ HYBRID RUN COMPLETED:")
     print(f"   • Content-Worthy Events : {feed_archive['worthy_count']}")
-    print(f"   • Skipped Events Stored : {feed_archive['skipped_count']}")
+    print(f"   • Skipped Records Stored: {feed_archive['skipped_count']}")
     print(f"💾 File Saved to           : '{OUTPUT_FILE}'")
     print("=" * 80)
 
