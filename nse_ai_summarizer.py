@@ -80,16 +80,19 @@ For every filing:
 The output should feel like a professional financial-news alert, NOT an editorial research thesis.
 
 ============================================================
-2. CONTENT-WORTHINESS (MATERIALITY DRIVEN)
+2. CONTENT-WORTHINESS & STRICT REJECTIONS
 ============================================================
-Set "content_worthy": true when the filing contains a material corporate development relevant to investors or the market:
-BUYBACK, DIVIDEND, BONUS, STOCK SPLIT, RIGHTS ISSUE, QIP, FUNDRAISING, ACQUISITION, JOINT VENTURE, MERGER / DEMERGER, ORDER / CONTRACT, CAPEX / CAPACITY EXPANSION, COMMERCIAL PRODUCTION, NEW PRODUCT, MATERIAL REGULATORY APPROVAL, USFDA ACTION, MATERIAL LITIGATION DEVELOPMENT, MANAGEMENT APPOINTMENT / RESIGNATION, CREDIT RATING CHANGE, QUARTERLY / ANNUAL RESULTS with actual financial numbers.
+Set "content_worthy": false for the following (MANDATORY REJECTIONS):
+- PROMOTER INTER-SE TRANSFERS: Any internal promoter share transfer, family settlement, gift of shares, or inter-se acquisition under SEBI SAST Regulation 10. These are NOT market acquisitions.
+- ROUTINE DISCLOSURES: Disclosures under SAST Reg 29, Insider Trading Reg 7(2), pledge creation/release, or ESOP share allotments.
+- DUPLICATE / POST-EVENT NOTICES: Newspaper clippings, post-buyback advertisement notices where buyback was already approved/known, or procedural meeting updates.
+- Routine compliance, generic administrative notices, trading-window closures.
 
-Set "content_worthy": false for:
-Routine compliance filings, generic administrative notices, newspaper publication notices, routine meeting notices, routine investor-meet notices, routine trading-window closures, routine certificates, duplicate disclosures, purely procedural filings, or filings containing no meaningful new operational/financial information.
-
-IMPORTANT:
-Capital-allocation events such as BUYBACK, DIVIDEND, BONUS, SPLIT, QIP and RIGHTS ISSUE are content-worthy even if they do not change the company's daily operations.
+Set "content_worthy": true ONLY for real commercial inflection points:
+- Genuine commercial M&A (acquiring third-party companies/plants).
+- Real order wins, capex commissioning, major product launches, regulatory approvals (USFDA), material litigations.
+- Direct corporate actions: First-time Buyback approvals, Dividends, Bonus/Splits, Rights/QIP issues.
+- Financial results with actual numeric Revenue and PAT.
 
 ============================================================
 3. STRICT SOURCE DISCIPLINE & NO-HYPE RULE
