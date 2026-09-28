@@ -28,7 +28,7 @@ BATCH_PAUSE_SECONDS = 20
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
-# 24 Hours retention calculated strictly from the time of insertion into content_feed
+# 24 Hours retention calculated strictly from insertion time
 CUTOFF_24H_ANALYZED = NOW - timedelta(hours=24)
 
 MODEL_REGISTRY = [
@@ -50,7 +50,6 @@ google_key_idx = 0
 current_model_idx = 0
 
 def is_within_24h_of_analysis(item):
-    """Purges card strictly 24 hours after it was generated/analyzed in content_feed."""
     analyzed_str = item.get("analyzed_at", "").replace(" IST", "").strip()
     if not analyzed_str:
         return True
@@ -61,37 +60,58 @@ def is_within_24h_of_analysis(item):
         return True
 
 # ============================================================
-# SYSTEM PROMPT (STAGE 1: GATEKEEPER, DENSE SUMMARY & DYNAMIC RESEARCH PLANNER)
+# SYSTEM PROMPT: GATEKEEPER & CURATED TELEGRAM PRODUCER
 # ============================================================
 
 SYSTEM_PROMPT = """
-You are a senior institutional equity research editor.
-You will evaluate Indian corporate filings and financial results from the National Stock Exchange (NSE).
+You are a senior institutional equity research editor covering Indian capital markets (NSE).
+You will evaluate Indian corporate filings and financial results.
 
 YOUR ROLE:
 1. Make a strict CONTENT-WORTHINESS DECISION (content_worthy: true/false).
-   - "true" ONLY for genuine business inflection points that alter the commercial, legal, managerial, operational, or financial reality of the company.
-   - "false" for routine administrative notices, generic compliance, standard calendar dates, or minor immaterial filings.
+   - "true" ONLY for genuine business inflection points that alter the commercial, operational, strategic, or financial reality of the company.
+   - "false" for routine administrative notices, generic compliance, standard calendar dates, or immaterial filings.
 
 CRITICAL FINANCIAL RESULT GUARDRAIL (MANDATORY REJECTION):
-If the filing is a quarterly result, outcome of board meeting, or financial update, it MUST contain actual numerical figures for Revenue and Net Profit (PAT).
+If the filing is a quarterly result or financial update, it MUST contain actual numerical figures for Revenue and Net Profit (PAT).
 If actual numeric figures for Revenue and PAT are missing, undisclosed, or say "Not disclosed", you MUST SET "content_worthy": false.
-Do NOT approve generic board approval notices or audit review letters without profit/revenue metrics.
 
-2. If content_worthy is TRUE:
-   - Identify the precise 'event_type' dynamically in uppercase snake-case (e.g. COMMERCIAL_PRODUCTION, ORDER_WIN, FINANCIAL_RESULTS, ACQUISITION, USFDA_OBSERVATION, LITIGATION, RESIGNATION, CAPEX, JOINT_VENTURE).
-   - Generate a single dense, factual 'summary' paragraph synthesizing all facts, figures, timeline, operational changes, and critical undisclosed metrics.
-   - DYNAMICALLY FORMULATE 'research_requirements':
-     Evaluate the filing and determine: "What specific company scale baseline, historical segment data, or background context must be verified via web search to measure the true materiality of this development?"
+2. IF content_worthy IS TRUE, PRODUCE A CURATED 'telegram_post':
+   - Strictly valid Telegram HTML formatting: <b>, <i>, <a>. NEVER use markdown asterisks (*).
+   - Ground all details strictly on the provided filing text. Never invent numbers.
+   - Exact Template to populate for 'telegram_post':
 
-     MANDATORY BASELINE RULES:
-     * For Capacity / Commercial Production / Capex: Always include the company's EXISTING total manufacturing capacity for that product/segment, so percentage expansion can be calculated.
-     * For Order Wins / Contracts: Always include the company's TTM / latest annual revenue and existing order backlog, so the order size can be calculated as % of annual revenue.
-     * For Acquisitions / Slump Sales: Always include the target company's revenue/EV and buyer's net debt to evaluate financial leverage.
-     * For Regulatory / USFDA: Always include the revenue contribution of that specific facility or drug's addressable market size.
-     * For Litigation / Tax Demand: Always include the demand as % of company's net worth or annual cash profit.
+{CATEGORY_ICON} <b>#{EVENT_TYPE} | INSTITUTIONAL NOTE</b>
+🏢 <b>{company_name} (NSE: {symbol})</b>
+<b>{headline}</b>
+━━━━━━━━━━━━━━━━━━━━━━
 
-OUTPUT FORMAT REQUIREMENTS:
+🔹 <b>The Event:</b>
+↳ [2 crisp factual sentences synthesizing what happened, who is involved, and core execution timeline]
+
+📊 <b>Key Operational Metrics:</b>
+• <b>Scale / Size:</b> [Exact capacity, contract value, or acquisition consideration disclosed in filing]
+• <b>Operational Scope:</b> [End-markets (e.g. EV/ICE, pharma, retail), plant location, or segment impacted]
+• <b>Strategic Rationale:</b> [Operational delta: capacity expansion, backward integration, client addition, or debt reduction]
+
+🎯 <b>Analyst Watchlist:</b>
+↳ [1-2 critical operational milestones, customer ramp-up timelines, or concall questions to track]
+━━━━━━━━━━━━━━━━━━━━━━
+📌 <b>Source:</b> <a href="{pdf_link}">NSE Corporate Filing</a>
+
+CATEGORY ICONS GUIDE:
+- COMMERCIAL_PRODUCTION / CAPEX: 🏭
+- ORDER_WIN: 📜
+- FINANCIAL_RESULTS / RESULT: 📊
+- ACQUISITION / JOINT_VENTURE: 🤝
+- NEW_PRODUCT: 🚀
+- REGULATORY_APPROVAL: ✅
+- USFDA_OBSERVATION: ⚠️
+- LITIGATION: ⚖️
+- RESIGNATION: 👤
+- DEFAULT: ⚡
+
+OUTPUT FORMAT:
 Return strictly a valid JSON object with an "items" array:
 {
   "items": [
@@ -100,19 +120,8 @@ Return strictly a valid JSON object with an "items" array:
       "content_worthy": true,
       "worthiness_reason": "Crisp 1-line reason for inclusion or exclusion",
       "event_type": "DYNAMIC_EVENT_TYPE",
-      "headline": "Factual and attention-worthy headline",
-      "summary": "Dense single paragraph consolidating: what happened, exact numbers/capacity/deal values, counterparties, operational delta, and critical gaps not disclosed by management.",
-      "facts": {
-        "what_happened": "Exact factual statement",
-        "how_much": "Financial value, capacity, or volume",
-        "what_changes": "Operational/commercial change disclosed in filing",
-        "what_is_not_disclosed": "Critical numbers missing from the filing"
-      },
-      "research_requirements": [
-        "Specific metric 1: Existing base capacity or annual revenue run-rate for percentage comparison",
-        "Specific metric 2: Segment financials or order book context",
-        "Specific metric 3: Sectoral backdrop, addressable market, or management commentary target"
-      ]
+      "headline": "Factual institutional headline",
+      "telegram_post": "Fully formatted HTML Telegram dispatch"
     }
   ]
 }
@@ -224,7 +233,7 @@ def call_hybrid_ai(batch_prompt):
 
 def process_corporate_actions_feed():
     print("=" * 80)
-    print("🚀 AI EDITORIAL GATEKEEPER & RESEARCH PLANNER")
+    print("🚀 AI EDITORIAL GATEKEEPER & CURATED POST DISPATCHER")
     print(f"📅 Timestamp: {NOW.strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
@@ -268,7 +277,7 @@ def process_corporate_actions_feed():
 
     candidates = []
 
-    # 1. Actionable Announcements from 3-day Master Archive
+    # 1. Actionable Announcements from Master Archive
     for a in master_data.get("corporate_announcements", []):
         if a.get("hash") not in processed_hashes and a.get("pdf_extracted_text"):
             candidates.append({
@@ -305,7 +314,7 @@ def process_corporate_actions_feed():
                 "pdf_link": r.get("pdf_link")
             })
 
-    print(f"🎯 Total pending filings for AI processing: {len(candidates)}")
+    print(f"🎯 Total pending filings for processing: {len(candidates)}")
 
     if not candidates:
         print("✅ No pending items. Content feed is fully synchronized!")
@@ -337,11 +346,11 @@ def process_corporate_actions_feed():
                 "details": itm["payload_text"]
             })
 
-        prompt_str = "Evaluate corporate filings, produce dense summary and dynamic research requirements:\n" + json.dumps(batch_payload, ensure_ascii=False)
+        prompt_str = "Evaluate filings and produce curated institutional Telegram posts:\n" + json.dumps(batch_payload, ensure_ascii=False)
         batch_result = call_hybrid_ai(prompt_str)
 
         if not batch_result:
-            print(f"⚠️ Batch {batch_counter} skipped.")
+            print(f"⚠️ Batch {batch_counter} failed across providers. Skipping batch.")
             i += BATCH_SIZE
             batch_counter += 1
             continue
@@ -355,26 +364,15 @@ def process_corporate_actions_feed():
 
             is_worthy = res.get("content_worthy", False)
             headline = res.get("headline") or itm["subject"]
-            summary_content = res.get("summary") or ""
-            facts = res.get("facts", {})
+            telegram_post = res.get("telegram_post", "").strip()
             event_type = res.get("event_type") or itm["category"]
 
-            # ------------------------------------------------------------
-            # HARD GUARDRAIL: ZERO-NUMBER FINANCIAL RESULT CHECK
-            # ------------------------------------------------------------
+            # Guardrail: Rejection if result has zero numerical metrics
             if is_worthy and itm.get("category") == "RESULT":
-                how_much = str(facts.get("how_much", "")).lower()
-                summary_lower = summary_content.lower()
-
-                has_no_value = (
-                    "not disclosed" in how_much
-                    or how_much in ["", "none", "nil", "n/a"]
-                    or "revenue: not disclosed" in summary_lower
-                )
-
-                if has_no_value:
+                post_lower = telegram_post.lower()
+                if "not disclosed" in post_lower and ("revenue" in post_lower or "pat" in post_lower):
                     is_worthy = False
-                    res["worthiness_reason"] = "Dropped: Zero financial metrics/numbers in results filing."
+                    res["worthiness_reason"] = "Dropped: Zero profit/revenue metrics in results filing."
 
             record = {
                 "hash": itm["hash"],
@@ -387,18 +385,15 @@ def process_corporate_actions_feed():
                 "headline": headline,
                 "content_worthy": is_worthy,
                 "worthiness_reason": res.get("worthiness_reason", ""),
-                "summary": summary_content if is_worthy else "",
-                "facts": facts,
-                "research_requirements": res.get("research_requirements", []) if is_worthy else [],
+                "telegram_post": telegram_post if is_worthy else "",
                 "analyzed_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
             }
 
-            if is_worthy and summary_content:
-                req_count = len(record["research_requirements"])
-                print(f"  ⭐ [APPROVED] {itm['symbol']} | {event_type} | {req_count} search targets mapped")
+            if is_worthy and telegram_post:
+                print(f"  ⭐ [APPROVED] {itm['symbol']} | {event_type}")
                 feed_archive["content_feed"].insert(0, record)
             else:
-                print(f"  ⏭️ [SKIPPED / REJECTED]  {itm['symbol']}: {res.get('worthiness_reason', '')[:50]}")
+                print(f"  ⏭️ [SKIPPED]  {itm['symbol']}: {res.get('worthiness_reason', '')[:50]}")
                 feed_archive["skipped_archive"].insert(0, record)
 
         feed_archive["content_feed"] = [item for item in feed_archive["content_feed"] if is_within_24h_of_analysis(item)]
@@ -415,14 +410,14 @@ def process_corporate_actions_feed():
         batch_counter += 1
 
         if i < len(candidates):
-            print(f"⏳ Cooling down {BATCH_PAUSE_SECONDS}s to avoid rate limits...")
+            print(f"⏳ Cooling down {BATCH_PAUSE_SECONDS}s...")
             time.sleep(BATCH_PAUSE_SECONDS)
 
     print("\n" + "=" * 80)
-    print("✅ AI EDITORIAL WORKFLOW COMPLETE:")
-    print(f"   • Active Posts in Feed (Last 24h) : {feed_archive['worthy_count']}")
-    print(f"   • Filtered Records Archive        : {feed_archive['skipped_count']}")
-    print(f"💾 File Saved to                     : '{OUTPUT_FILE}'")
+    print("✅ WORKFLOW COMPLETE:")
+    print(f"   • Active Posts in Feed : {feed_archive['worthy_count']}")
+    print(f"   • Filtered Records     : {feed_archive['skipped_count']}")
+    print(f"💾 File Saved to          : '{OUTPUT_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
