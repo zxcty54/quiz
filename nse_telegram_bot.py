@@ -12,15 +12,26 @@ import requests
 INPUT_FILE = "nse_content_feed.json"
 POSTED_LOG_FILE = "telegram_posted_log.json"
 
-# Matches your exact GitHub Repository Secrets
 BOT_TOKEN = os.environ.get("TELEGRAM_TOKEN") or os.environ.get("TELEGRAM_BOT_TOKEN")
 CHAT_ID = os.environ.get("TELEGRAM_TO") or os.environ.get("TELEGRAM_CHAT_ID")
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
 # ============================================================
-# TEMPLATE BUILDER (EXACT USER SPECIFICATION)
+# MODERN POST BUILDER
 # ============================================================
+
+CATEGORY_ICONS = {
+    "COMMERCIAL_PRODUCTION": "🏭",
+    "NEW_PRODUCT": "🚀",
+    "ORDER_WIN": "📜",
+    "FINANCIAL_RESULTS": "📊",
+    "RESULT": "📊",
+    "CAPEX": "🏗️",
+    "ACQUISITION": "🤝",
+    "JOINT_VENTURE": "🤝",
+    "GENERAL": "⚡"
+}
 
 def clean_html(text):
     """Escapes HTML entities to prevent Telegram parse errors."""
@@ -29,75 +40,71 @@ def clean_html(text):
     return html.escape(str(text).strip())
 
 def build_telegram_post(card):
+    # Agar summarizer ka direct post available hai, prefer that
+    ai_post = card.get("telegram_post")
+    if ai_post and "━━━━━━━━━━━━━━━━━━━━━━" in ai_post:
+        return ai_post
+
+    # Fallback to python-generated structured formatting
     facts = card.get("facts", {})
-    category = clean_html(card.get("category", "CORPORATE ACTION").upper())
+    raw_cat = card.get("category", "CORPORATE_ACTION").upper().replace(" ", "_")
+    cat_icon = CATEGORY_ICONS.get(raw_cat, "⚡")
+    
     company = clean_html(card.get("company_name") or card.get("symbol", ""))
     headline = clean_html(card.get("headline", ""))
     pdf_link = card.get("pdf_link", "")
 
-    # Header
-    post = f"🏷️ <b>{category}</b>\n"
-    post += f"<b>{company} — {headline}</b>\n\n"
+    # Top Header
+    post = (
+        f"{cat_icon} <b>#{raw_cat}</b>\n"
+        f"🏢 <b>{company}</b>\n"
+        f"<b>{headline}</b>\n"
+        f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
+    )
 
     # 1. What happened?
     what_happened = facts.get("what_happened")
     if what_happened and str(what_happened).lower() not in ["none", "nil", "n/a", "not disclosed"]:
-        post += f"<b>What happened?</b>\n{clean_html(what_happened)}\n\n"
+        post += f"🔹 <b>What happened?</b>\n↳ {clean_html(what_happened)}\n\n"
 
     # 2. Key details
     details = []
+    keys_order = [
+        ("what", "What"),
+        ("who", "Who"),
+        ("what_business", "Business"),
+        ("how_much", "Value / Size"),
+        ("when", "Timeline"),
+        ("where", "Location")
+    ]
     
-    # What
-    what_detail = facts.get("what") or facts.get("what_business")
-    if what_detail and str(what_detail).lower() not in ["none", "nil", "n/a", "not disclosed"]:
-        details.append(f"• <b>What:</b> {clean_html(what_detail)}")
-        
-    # Who
-    who_detail = facts.get("who")
-    if who_detail and str(who_detail).lower() not in ["none", "nil", "n/a", "not disclosed"]:
-        details.append(f"• <b>Who:</b> {clean_html(who_detail)}")
-        
-    # Business
-    biz_detail = facts.get("what_business")
-    if biz_detail and biz_detail != what_detail and str(biz_detail).lower() not in ["none", "nil", "n/a", "not disclosed"]:
-        details.append(f"• <b>Business:</b> {clean_html(biz_detail)}")
-        
-    # Value / Size
-    value_detail = facts.get("how_much")
-    if value_detail and str(value_detail).lower() not in ["none", "nil", "n/a", "not disclosed"]:
-        details.append(f"• <b>Value / Size:</b> {clean_html(value_detail)}")
-        
-    # When
-    when_detail = facts.get("when")
-    if when_detail and str(when_detail).lower() not in ["none", "nil", "n/a", "not disclosed"]:
-        details.append(f"• <b>When:</b> {clean_html(when_detail)}")
-        
-    # Where
-    where_detail = facts.get("where")
-    if where_detail and str(where_detail).lower() not in ["none", "nil", "n/a", "not disclosed"]:
-        details.append(f"• <b>Where:</b> {clean_html(where_detail)}")
+    for key, label in keys_order:
+        val = facts.get(key)
+        if val and str(val).lower() not in ["none", "nil", "n/a", "not disclosed", "none disclosed"]:
+            details.append(f"• <b>{label}:</b> {clean_html(val)}")
 
     if details:
-        post += "<b>Key details</b>\n" + "\n".join(details) + "\n\n"
+        post += "🔹 <b>Key Details:</b>\n" + "\n".join(details) + "\n\n"
 
     # 3. What changes
     what_changes = facts.get("what_changes")
     if what_changes and str(what_changes).lower() not in ["none", "nil", "n/a", "not disclosed", "none disclosed"]:
-        post += f"<b>What changes</b>\n{clean_html(what_changes)}\n\n"
+        post += f"🔹 <b>Impact & What Changes?</b>\n↳ {clean_html(what_changes)}\n\n"
 
-    # 4. Not disclosed (Materially absent information only)
+    # 4. Not disclosed (agar material gaps hain)
     not_disclosed = facts.get("what_is_not_disclosed")
     if not_disclosed and str(not_disclosed).lower() not in ["none", "nil", "n/a", "", "none disclosed"]:
-        post += f"<b>Not disclosed</b>\n{clean_html(not_disclosed)}\n\n"
+        post += f"⚠️ <b>Not Disclosed:</b>\n↳ {clean_html(not_disclosed)}\n\n"
 
-    # 5. Source (Clean clickable link)
+    post += "━━━━━━━━━━━━━━━━━━━━━━\n"
+
+    # 5. Clean clickable source link
     if pdf_link and pdf_link.startswith("http"):
         post += f'📌 <b>Source:</b> <a href="{pdf_link}">NSE Corporate Filing</a>'
     else:
         post += "📌 <b>Source:</b> NSE Corporate Filing"
 
     return post
-
 
 def send_to_telegram(text_payload):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
@@ -137,7 +144,6 @@ def dispatch_feed():
     content_cards = feed_data.get("content_feed", [])
     print(f"📦 Total cards in active content feed: {len(content_cards)}")
 
-    # Load previously posted record hashes
     posted_hashes = set()
     if os.path.exists(POSTED_LOG_FILE):
         try:
@@ -148,7 +154,6 @@ def dispatch_feed():
         except Exception:
             pass
 
-    # Reverse list so chronological order is maintained (older first, newest latest)
     pending = [card for card in reversed(content_cards) if card.get("hash") not in posted_hashes]
     print(f"🎯 Fresh unposted corporate actions: {len(pending)}")
 
@@ -162,25 +167,24 @@ def dispatch_feed():
         sym = card.get("symbol", "")
         post_text = build_telegram_post(card)
 
-        print(f"📤 Broadcasting: {sym} — {card.get('headline')[:45]}...")
+        print(f"📤 Broadcasting: {sym} — {card.get('headline', '')[:45]}...")
         success, response_msg = send_to_telegram(post_text)
 
         if success:
             posted_hashes.add(c_hash)
             dispatched += 1
-            time.sleep(3)  # Respect Telegram rate limit thresholds
+            time.sleep(3)  # Rate limit threshold safety
         else:
             print(f"   ⚠️ Telegram delivery failed for {sym}: {response_msg}")
 
-    # Retain max 1,000 posted hashes to keep file small
-    pruned_hashes = list(posted_hashes)[-1000:]
+    # Retain up to 2,000 hashes
+    pruned_hashes = list(posted_hashes)[-2000:]
     with open(POSTED_LOG_FILE, "w", encoding="utf-8") as f:
         json.dump(pruned_hashes, f, indent=2)
 
     print("\n" + "=" * 80)
     print(f"✅ DISPATCH COMPLETE: {dispatched} new posts broadcast to Telegram.")
     print("=" * 80)
-
 
 if __name__ == "__main__":
     dispatch_feed()
