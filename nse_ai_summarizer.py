@@ -33,9 +33,9 @@ CUTOFF_24H_ANALYZED = NOW - timedelta(hours=24)
 
 MODEL_REGISTRY = [
     {"name": "openai/gpt-oss-20b", "provider": "groq"},
-    {"name": "gemini-3.5-flash-lite", "provider": "google"},
+    {"name": "gemini-2.5-flash", "provider": "google"},
     {"name": "openai/gpt-oss-120b", "provider": "groq"},
-    {"name": "gemini-3.1-flash-lite", "provider": "google"}
+    {"name": "gemini-2.5-flash-lite", "provider": "google"}
 ]
 
 GROQ_KEYS = [os.environ.get(k).strip() for k in ["GROQ_API_KEY", "GROQ_API_KEY2"] if os.environ.get(k)]
@@ -61,7 +61,7 @@ def is_within_24h_of_analysis(item):
         return True
 
 # ============================================================
-# SYSTEM PROMPT (ROOT JSON OBJECT FOR GROQ & GEMINI ENGINE)
+# SYSTEM PROMPT (BEAUTIFIED & STRUCTURED TELEGRAM LAYOUT)
 # ============================================================
 
 SYSTEM_PROMPT = """
@@ -73,38 +73,41 @@ YOUR ROLE:
    - "true" ONLY for genuine business inflection points: Material order wins/contracts, M&A/slump sales, commercial production starts, new capacity, joint ventures, or significant financial turnarounds/accelerations.
    - "false" for routine administrative notices, minor orders, generic compliance, or filings lacking numbers.
 
-2. If content_worthy is TRUE, WRITE A COMPLETE, CURATED, EDITORIAL TELEGRAM POST.
+2. If content_worthy is TRUE, WRITE A HIGHLY AESTHETIC, CLEAN, EDITORIAL TELEGRAM POST.
 
 STRICT WRITING & EDITORIAL RULES:
 - Facts only: Use strictly the information disclosed in the filing. Never invent numbers or details.
 - Numbers accuracy: Preserve exact figures, currencies (₹ Cr, USD), capacities, dates, and percentages.
 - Tone: Strictly objective and neutral. NEVER use evaluative hype words like "positive", "negative", "strong", "huge", "aggressive", "boosts earnings" unless quoting management directly.
 - No investment advice: No buy/sell recommendations, no target prices, no future stock-price speculations.
-- What changes: Focus strictly on concrete commercial/operational changes (e.g., product portfolio addition, manufacturing capacity expansion, new client base), NOT market-cap or stock-price impact.
-- Not disclosed section: Include ONLY if genuinely critical information is missing (e.g., undisclosed deal value, hidden acquisition multiples, confidential client name, missing profit margins). If nothing vital is absent, OMIT the "Not disclosed" section completely.
-- Source Link: Use standard HTML hyperlink format: <a href="PDF_LINK">NSE Corporate Filing</a>
+- What changes: Focus strictly on concrete commercial/operational changes, NOT market-cap or stock-price impact.
+- Category Icon & Tag Rules:
+  Convert CATEGORY to clean UPPERCASE SNAKE_CASE hashtag (e.g. #COMMERCIAL_PRODUCTION, #NEW_PRODUCT, #ORDER_WIN, #FINANCIAL_RESULTS).
+  Use relevant icon: 🏭 for production/plant, 🚀 for product launch, 📜 for order wins, 📊 for quarterly results, 🤝 for M&A/JV, ⚡ for general.
 
 EXACT TELEGRAM POST LAYOUT STRUCTURE:
-🏷️ {CATEGORY}
-<b>{COMPANY NAME} — {HEADLINE}</b>
+{ICON} <b>#{CLEAN_CATEGORY_TAG}</b>
+🏢 <b>{COMPANY NAME}</b>
+<b>{HEADLINE}</b>
+━━━━━━━━━━━━━━━━━━━━━━
 
-<b>What happened?</b>
-{1–2 sentence crisp factual summary of the event.}
+🔹 <b>What happened?</b>
+↳ {1–2 sentence crisp factual summary of the event.}
 
-<b>Key details</b>
+🔹 <b>Key Details:</b>
 • <b>What:</b> {Specific event or asset}
-• <b>Who:</b> {Company and counterparty/client/partner}
+• <b>Who:</b> {Company and counterparty/client/partner, if disclosed}
 • <b>Business:</b> {Affected business line/segment/product}
 • <b>Value / Size:</b> {Financial value, capacity, or volume — only if stated}
-• <b>When:</b> {Execution dates, milestones, commissioning timeline}
-• <b>Where:</b> {Geography/location, if stated}
+• <b>Timeline:</b> {Execution dates, commissioning timeline}
+• <b>Location:</b> {Geography/location, if stated}
 
-<b>What changes</b>
-{1–2 sentences explaining the real-world operational/commercial change for the company.}
+🔹 <b>Impact & What Changes?</b>
+↳ {1–2 sentences explaining the operational/commercial change for the company.}
 
-<b>Not disclosed</b>
-{Material undisclosed metrics. OMIT this block if no material gaps exist.}
-
+<b>Not disclosed:</b>
+↳ {Material undisclosed metrics. OMIT this block if no material gaps exist.}
+━━━━━━━━━━━━━━━━━━━━━━
 📌 <b>Source:</b> <a href="{PDF_LINK}">NSE Corporate Filing</a>
 
 OUTPUT FORMAT REQUIREMENTS:
@@ -116,7 +119,7 @@ Return strictly a valid JSON object with an "items" array:
       "content_worthy": true,
       "worthiness_reason": "Crisp 1-line reason for inclusion or exclusion",
       "headline": "Factual and attention-worthy headline",
-      "telegram_post": "Complete Telegram post matching the structure with HTML tags",
+      "telegram_post": "Complete Telegram post matching the above exact aesthetic layout with HTML tags",
       "facts": {
         "what_happened": "...",
         "how_much": "...",
@@ -252,7 +255,6 @@ def process_corporate_actions_feed():
                 loaded = json.load(f)
                 if isinstance(loaded, dict):
                     feed_archive = loaded
-                    # Purge posts older than 24 hours based on analyzed_at
                     feed_archive["content_feed"] = [
                         item for item in feed_archive.get("content_feed", [])
                         if is_within_24h_of_analysis(item)
@@ -368,9 +370,9 @@ def process_corporate_actions_feed():
             headline = res.get("headline") or itm["subject"]
             telegram_post = res.get("telegram_post", "")
 
-            # Ensure PDF source hyperlink exists
+            # Ensure clean visual divider and PDF hyperlink exist if AI missed
             if itm["pdf_link"] and "Source:" not in telegram_post:
-                telegram_post += f'\n\n📌 <b>Source:</b> <a href="{itm["pdf_link"]}">NSE Corporate Filing</a>'
+                telegram_post += f'\n━━━━━━━━━━━━━━━━━━━━━━\n📌 <b>Source:</b> <a href="{itm["pdf_link"]}">NSE Corporate Filing</a>'
 
             record = {
                 "hash": itm["hash"],
@@ -384,7 +386,7 @@ def process_corporate_actions_feed():
                 "worthiness_reason": res.get("worthiness_reason", ""),
                 "telegram_post": telegram_post,
                 "facts": res.get("facts", {}),
-                "analyzed_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")  # 24-hr clock begins now
+                "analyzed_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
             }
 
             if is_worthy and telegram_post:
@@ -394,7 +396,6 @@ def process_corporate_actions_feed():
                 print(f"  ⏭️ [SKIPPED]            {itm['symbol']}: {res.get('worthiness_reason', '')[:50]}")
                 feed_archive["skipped_archive"].insert(0, record)
 
-        # Enforce rolling 24-hr window based on analyzed_at
         feed_archive["content_feed"] = [item for item in feed_archive["content_feed"] if is_within_24h_of_analysis(item)]
         feed_archive["skipped_archive"] = [item for item in feed_archive["skipped_archive"] if is_within_24h_of_analysis(item)]
 
