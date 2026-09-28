@@ -28,29 +28,29 @@ INPUT_FILE = "nse_content_feed.json"
 OUTPUT_FILE = "nse_final_content_feed.json"
 
 BATCH_SIZE = 3            # Har batch me kitne cards process honge
-BATCH_PAUSE_SECONDS = 30  # Har batch ke baad 30 sec cooldown pause
+BATCH_PAUSE_SECONDS = 30  # Har batch ke baad cooldown pause
 
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
-# Verified Active Models (Google Search Native + Groq Ultra-Fast Fallback)
+# Active, verified models (Google Gemini v3.x series + Working Groq models)
 MODEL_REGISTRY = [
-    {"name": "gemini-2.5-flash", "provider": "google"},
-    {"name": "gemini-2.5-flash-lite", "provider": "google"},
-    {"name": "gemini-2.5-pro", "provider": "google"},
-    {"name": "llama-3.3-70b-versatile", "provider": "groq"}
+    {"name": "gemini-3.8-flash", "provider": "google"},
+    {"name": "gemini-3.5-flash-lite", "provider": "google"},
+    {"name": "gemini-3.1-pro-preview", "provider": "google"},
+    {"name": "openai/gpt-oss-120b", "provider": "groq"},
+    {"name": "openai/gpt-oss-20b", "provider": "groq"}
 ]
 
 GROQ_KEYS = [os.environ.get(k, "").strip() for k in ["GROQ_API_KEY", "GROQ_API_KEY2"] if os.environ.get(k, "").strip()]
 GOOGLE_KEYS = [os.environ.get(k, "").strip() for k in ["GOOGLE_API_KEY", "GOOGLE_API_KEY2", "GEMINI_API_KEY"] if os.environ.get(k, "").strip()]
 
 if not GROQ_KEYS and not GOOGLE_KEYS:
-    print("❌ FATAL: No API keys found in environment! Check GitHub Secrets.")
+    print("❌ FATAL: No API keys found! Exiting.")
     exit(1)
 
 groq_key_idx = 0
 google_key_idx = 0
-current_model_idx = 0
 
 def get_web_search_context(query, max_results=3):
     """Fallback search function for Groq using DuckDuckGo"""
@@ -64,7 +64,7 @@ def get_web_search_context(query, max_results=3):
         return ""
 
 # ============================================================
-# CALL ENGINES WITH VERIFIED SEARCH GROUNDING
+# CALL ENGINES WITH SEARCH GROUNDING & FALLBACK
 # ============================================================
 
 def call_google_analyst(model_name, card, system_instruction, prompt_content):
@@ -72,12 +72,11 @@ def call_google_analyst(model_name, card, system_instruction, prompt_content):
     if not genai or not GOOGLE_KEYS:
         return None, "Google GenAI SDK or Keys missing"
 
-    for attempt in range(len(GOOGLE_KEYS)):
+    for _ in range(len(GOOGLE_KEYS)):
         current_key = GOOGLE_KEYS[google_key_idx]
         try:
             client = genai.Client(api_key=current_key)
             
-            # Universal Google Search Grounding Config
             search_config = types.GenerateContentConfig(
                 system_instruction=system_instruction,
                 temperature=0.1,
@@ -118,7 +117,7 @@ def call_groq_analyst(model_name, card, system_instruction, prompt_content):
 
     enhanced_prompt = f"{prompt_content}\n\nVERIFIED WEB SEARCH RESULTS (GROUND TRUTH):\n{web_snippets}"
 
-    for attempt in range(len(GROQ_KEYS)):
+    for _ in range(len(GROQ_KEYS)):
         current_key = GROQ_KEYS[groq_key_idx]
         try:
             client = Groq(api_key=current_key)
@@ -145,7 +144,6 @@ def call_groq_analyst(model_name, card, system_instruction, prompt_content):
     return None, "All Groq keys exhausted"
 
 def call_hybrid_analyst(card, system_instruction, prompt_content):
-    global current_model_idx
     total = len(MODEL_REGISTRY)
     idx = 0
 
@@ -168,12 +166,12 @@ def call_hybrid_analyst(card, system_instruction, prompt_content):
     return None
 
 # ============================================================
-# MAIN ORCHESTRATOR WITH BATCHING
+# MAIN ORCHESTRATOR
 # ============================================================
 
 def process_deep_feed():
     print("=" * 80)
-    print("🧠 STAGE 2: BATCHED DEEP CONTEXT ANALYST (GOOGLE SEARCH GROUNDED)")
+    print("🧠 STAGE 2: BATCHED DEEP CONTEXT ANALYST (SEARCH GROUNDED)")
     print(f"📅 Timestamp: {NOW.strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
@@ -321,7 +319,6 @@ TASK:
 
             time.sleep(3)
 
-        # Batch complete hone par auto-save
         final_feed["total_posts"] = len(final_feed["content_feed"])
         final_feed["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
