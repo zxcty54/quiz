@@ -7,22 +7,11 @@ from google import genai
 from google.genai import types
 
 # ============================================================
-# CONFIGURATION & MULTI-MODEL FALLBACK REGISTRY
+# CONFIGURATION & MULTI-KEY AUTO-ROTATION
 # ============================================================
 
 INPUT_FILE = "nse_corporate_master.json"
 OUTPUT_FILE = "nse_content_feed.json"
-
-API_KEY = os.environ.get("GOOGLE_API_KEY") or os.environ.get("GEMINI_API_KEY")
-client = genai.Client(api_key=API_KEY) if API_KEY else None
-
-# Production Multi-Model Fallback Chain
-MODEL_REGISTRY = [
-    "gemini-2.5-flash",        # Primary High-Speed
-    "gemini-2.0-flash",        # Fallback 1
-    "gemini-1.5-flash",        # Fallback 2
-    "gemini-2.5-pro",          # Fallback 3 (Deep reasoning fallback)
-]
 
 BATCH_SIZE = 4
 BATCH_PAUSE_SECONDS = 20
@@ -30,10 +19,36 @@ BATCH_PAUSE_SECONDS = 20
 IST = timezone(timedelta(hours=5, minutes=30))
 TODAY_DATE = datetime.now(IST).strftime("%d %b %Y")
 
+# Collect all available API keys from environment
+API_KEYS = []
+for env_name in ["GOOGLE_API_KEY", "GOOGLE_API_KEY2", "GEMINI_API_KEY"]:
+    val = os.environ.get(env_name)
+    if val and val.strip() and val.strip() not in API_KEYS:
+        API_KEYS.append(val.strip())
+
+# Hard exit guard: Prevents infinite retry loops if keys are missing
+if not API_KEYS:
+    print("\n" + "=" * 80)
+    print("❌ FATAL ERROR: No valid API Key found in environment variables!")
+    print("   Please ensure 'GOOGLE_API_KEY' or 'GOOGLE_API_KEY2' is defined in GitHub Secrets.")
+    print("=" * 80 + "\n")
+    exit(1)
+
+current_key_idx = 0
+client = genai.Client(api_key=API_KEYS[current_key_idx])
+print(f"🔑 Initialized with API Key [{current_key_idx + 1}/{len(API_KEYS)}]")
+
+# Multi-Model Fallback Chain
+MODEL_REGISTRY = [
+    "gemini-2.5-flash",
+    "gemini-2.0-flash",
+    "gemini-1.5-flash",
+    "gemini-2.5-pro"
+]
 current_model_idx = 0
 
 # ============================================================
-# AI FACT EXTRACTION & WORTHINESS SYSTEM PROMPT
+# AI SYSTEM INSTRUCTION (FACT EXTRACTION & CONTENT WORTHINESS)
 # ============================================================
 
 SYSTEM_PROMPT = """
@@ -121,15 +136,34 @@ def clean_json_response(raw_text):
     return None
 
 # ============================================================
-# ADAPTIVE MULTI-MODEL CALLER (WITH 429 AUTO-FAILOVER)
+# DUAL FAILOVER ENGINE (KEY ROTATION + MODEL ROTATION)
 # ============================================================
+
+def rotate_key_or_model():
+    """Switches to backup API key first; if all keys exhausted, switches to backup model"""
+    global current_key_idx, current_model_idx, client
+
+    # 1. Try rotating to next available API Key
+    if current_key_idx + 1 < len(API_KEYS):
+        current_key_idx += 1
+        client = genai.Client(api_key=API_KEYS[current_key_idx])
+        print(f"🔄 Switched to Backup API Key [{current_key_idx + 1}/{len(API_KEYS)}]")
+        return True
+
+    # 2. If all keys exhausted, switch to next fallback model and reset keys to index 0
+    current_key_idx = 0
+    client = genai.Client(api_key=API_KEYS[current_key_idx])
+    current_model_idx += 1
+
+    if current_model_idx < len(MODEL_REGISTRY):
+        print(f"🔄 Switched to Backup Model: {MODEL_REGISTRY[current_model_idx]}")
+        return True
+
+    return False
+
 
 def call_gemini_with_fallback(batch_prompt):
     global current_model_idx
-
-    if not client:
-        print("❌ Gemini Client is not initialized! Please export GEMINI_API_KEY.")
-        return None
 
     total_models = len(MODEL_REGISTRY)
 
@@ -158,9 +192,14 @@ def call_gemini_with_fallback(batch_prompt):
             except Exception as e:
                 err_str = str(e)
                 if "429" in err_str or "RESOURCE_EXHAUSTED" in err_str:
-                    print(f"⚠️ [{model_name}] Rate limit / Quota hit (429). Switching to fallback model...")
-                    current_model_idx += 1
-                    break
+                    print(f"⚠️ [{model_name}] Rate limit / Quota hit (429). Triggering failover...")
+                    if rotate_key_or_model():
+                        break
+                    else:
+                        print("⚠️ All keys and models exhausted. Pausing 60s for quota bucket reset...")
+                        time.sleep(60)
+                        current_model_idx = 0
+                        break
 
                 print(f"⚠️ [{model_name}] Error on attempt {attempt + 1}: {e}")
                 time.sleep(4)
@@ -170,27 +209,28 @@ def call_gemini_with_fallback(batch_prompt):
         else:
             current_model_idx += 1
 
-    print("⚠️ All models in registry exhausted. Pausing 60s for quota bucket reset...")
-    time.sleep(60)
-    current_model_idx = 0
     return None
 
 # ============================================================
-# BATCH ORCHESTRATOR
+# BATCH PROCESSOR
 # ============================================================
 
 def process_corporate_actions_feed():
+    print("=" * 80)
+    print("🚀 STARTING AI FACT EXTRACTION & CONTENT WORTHINESS ENGINE")
+    print(f"📅 Run Timestamp: {datetime.now(IST).strftime('%d-%b-%Y %H:%M:%S IST')}")
+    print("=" * 80)
+
     if not os.path.exists(INPUT_FILE):
-        print(f"❌ Input master file '{INPUT_FILE}' not found! Scraper run karein pehle.")
+        print(f"❌ Input master file '{INPUT_FILE}' not found! Scraper pehle chalayein.")
         return
 
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
         master_data = json.load(f)
 
     announcements = master_data.get("corporate_announcements", [])
-    print(f"🚀 Loaded {len(announcements)} corporate announcements from '{INPUT_FILE}'")
+    print(f"📦 Loaded {len(announcements)} corporate announcements from '{INPUT_FILE}'")
 
-    # Load existing content feed to prevent duplicate AI calls
     feed_archive = {
         "generated_at": "",
         "worthy_count": 0,
@@ -211,7 +251,7 @@ def process_corporate_actions_feed():
     processed_hashes = {item["hash"] for item in feed_archive.get("content_feed", []) if "hash" in item}
     processed_hashes.update({item["hash"] for item in feed_archive.get("skipped_archive", []) if "hash" in item})
 
-    # Only process announcements that have PDF extracted text and are not already analyzed
+    # Unprocessed items that have extracted PDF content
     pending_items = [
         a for a in announcements 
         if a.get("hash") not in processed_hashes and a.get("pdf_extracted_text")
@@ -220,7 +260,7 @@ def process_corporate_actions_feed():
     print(f"🎯 Fresh announcements requiring AI Fact Extraction: {len(pending_items)}")
 
     if not pending_items:
-        print("✅ All items already processed. Everything is up to date!")
+        print("✅ Sabhi announcements pehle se processed hain. Nothing to do!")
         return
 
     total_batches = (len(pending_items) + BATCH_SIZE - 1) // BATCH_SIZE
@@ -247,8 +287,9 @@ def process_corporate_actions_feed():
         batch_result = call_gemini_with_fallback(prompt_str)
 
         if not batch_result:
-            print(f"🔄 Retrying Batch {batch_counter} to guarantee coverage...")
-            time.sleep(10)
+            print(f"⚠️ Batch {batch_counter} skipped due to API exhaustion. Will retry on next hourly run.")
+            i += BATCH_SIZE
+            batch_counter += 1
             continue
 
         result_map = {res.get("input_id"): res for res in batch_result if isinstance(res, dict)}
@@ -283,12 +324,11 @@ def process_corporate_actions_feed():
                 print(f"  ⏭️ [NO  -> SKIP]    {itm.get('symbol')}: {res.get('worthiness_reason', '')[:50]}")
                 feed_archive["skipped_archive"].insert(0, record)
 
-        # Checkpoint save after every batch
+        # Write checkpoint to disk after every batch
         feed_archive["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
         feed_archive["worthy_count"] = len(feed_archive["content_feed"])
         feed_archive["skipped_count"] = len(feed_archive["skipped_archive"])
 
-        # Cap storage
         feed_archive["content_feed"] = feed_archive["content_feed"][:500]
         feed_archive["skipped_archive"] = feed_archive["skipped_archive"][:500]
 
@@ -299,14 +339,14 @@ def process_corporate_actions_feed():
         batch_counter += 1
 
         if i < len(pending_items):
-            print(f"⏳ Cooling down {BATCH_PAUSE_SECONDS}s to avoid token rate-limits...")
+            print(f"⏳ Cooling down {BATCH_PAUSE_SECONDS}s to prevent rate-limits...")
             time.sleep(BATCH_PAUSE_SECONDS)
 
     print("\n" + "=" * 80)
-    print("✅ AI FACT EXTRACTION & FILTERING COMPLETED!")
-    print(f"📊 Content-Worthy Cards : {feed_archive['worthy_count']}")
-    print(f"📊 Filtered/Skipped Cards: {feed_archive['skipped_count']}")
-    print(f"💾 Feed Written to      : '{OUTPUT_FILE}'")
+    print("✅ AI PROCESSING COMPLETE:")
+    print(f"   • Content-Worthy Events : {feed_archive['worthy_count']}")
+    print(f"   • Skipped Events Stored : {feed_archive['skipped_count']}")
+    print(f"💾 File Saved to           : '{OUTPUT_FILE}'")
     print("=" * 80)
 
 
