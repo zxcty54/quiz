@@ -22,7 +22,7 @@ except ImportError:
 INPUT_FILE = "nse_corporate_master.json"
 OUTPUT_FILE = "nse_content_feed.json"
 
-BATCH_SIZE = 4
+BATCH_SIZE = 2
 BATCH_PAUSE_SECONDS = 20
 
 IST = timezone(timedelta(hours=5, minutes=30))
