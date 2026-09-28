@@ -97,7 +97,6 @@ def call_groq_analyst(model_name, card, system_instruction, prompt_content):
     if not Groq or not GROQ_KEYS:
         return None, "Groq missing"
 
-    # Fetch real web context for Groq
     symbol = card.get("symbol", "")
     reqs = card.get("research_requirements", [])
     search_queries = f"{symbol} share {reqs[0]}" if reqs else f"{symbol} latest revenue and capacity"
@@ -220,7 +219,7 @@ Output strictly Telegram-compatible HTML tags: <b>, <i>, <a>, <code>. Do not use
     for card in pending_cards:
         c_hash = card.get("hash")
         symbol = card.get("symbol", "")
-        company = card.get("company_name", sym)
+        company = card.get("company_name", symbol)
         event_type = card.get("event_type", "CORPORATE_UPDATE")
         headline = card.get("headline", "")
         summary_text = card.get("summary", "")
@@ -247,7 +246,7 @@ TASK:
 2. Produce an institutional research post adhering to this exact format:
 
 {cat_icon} <b>#{clean_cat_tag} | INSTITUTIONAL NOTE</b>
-🏢 <b>{company} (NSE: {sym})</b>
+🏢 <b>{company} (NSE: {symbol})</b>
 <b>{headline}</b>
 ━━━━━━━━━━━━━━━━━━━━━━
 
@@ -265,7 +264,7 @@ TASK:
 📌 <b>Source:</b> <a href="{pdf_link}">NSE Corporate Filing</a>
 """
 
-        print(f"\n🔍 Synthesizing deep analysis for: {sym} ({event_type})...")
+        print(f"\n🔍 Synthesizing deep analysis for: {symbol} ({event_type})...")
         final_post = call_hybrid_analyst(card, system_instruction, prompt_content)
 
         if not final_post:
