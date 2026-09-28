@@ -3,7 +3,7 @@ import json
 import time
 from datetime import datetime, timezone, timedelta
 
-# Fallback web search for non-Google models
+# Live web context fetcher for open models
 try:
     from duckduckgo_search import DDGS
 except ImportError:
@@ -21,25 +21,24 @@ except ImportError:
     genai = None
 
 # ============================================================
-# CONFIGURATION, BATCHING & MULTI-MODEL REGISTRY
+# CONFIGURATION & MULTI-MODEL REGISTRY
 # ============================================================
 
 INPUT_FILE = "nse_content_feed.json"
 OUTPUT_FILE = "nse_final_content_feed.json"
 
-BATCH_SIZE = 3            # Har batch me kitne cards process honge
-BATCH_PAUSE_SECONDS = 30  # Har batch ke baad cooldown pause
+BATCH_SIZE = 3            # Har batch me 3 cards
+BATCH_PAUSE_SECONDS = 15  # Har batch ke baad pause
 
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
-# Active, verified models (Google Gemini v3.x series + Working Groq models)
+# Groq models placed first because Google quota is temporarily exhausted
 MODEL_REGISTRY = [
-    {"name": "gemini-3.8-flash", "provider": "google"},
-    {"name": "gemini-3.5-flash-lite", "provider": "google"},
-    {"name": "gemini-3.1-pro-preview", "provider": "google"},
     {"name": "openai/gpt-oss-120b", "provider": "groq"},
-    {"name": "openai/gpt-oss-20b", "provider": "groq"}
+    {"name": "openai/gpt-oss-20b", "provider": "groq"},
+    {"name": "gemini-3.5-flash-lite", "provider": "google"},
+    {"name": "gemini-3.1-flash-lite", "provider": "google"}
 ]
 
 GROQ_KEYS = [os.environ.get(k, "").strip() for k in ["GROQ_API_KEY", "GROQ_API_KEY2"] if os.environ.get(k, "").strip()]
@@ -52,70 +51,32 @@ if not GROQ_KEYS and not GOOGLE_KEYS:
 groq_key_idx = 0
 google_key_idx = 0
 
-def get_web_search_context(query, max_results=3):
-    """Fallback search function for Groq using DuckDuckGo"""
+def fetch_live_web_context(company, symbol, reqs):
+    """Reliable live web search across all engines"""
     if not DDGS:
         return ""
+    
+    query = f"{company} {symbol} screener revenue capacity order book"
+    if reqs and len(reqs) > 0:
+        query = f"{company} {symbol} {reqs[0]}"
+
     try:
-        results = DDGS().text(query, max_results=max_results)
+        results = DDGS().text(query, max_results=3)
+        if not results:
+            return ""
         snippets = [f"• {r.get('title')}: {r.get('body')}" for r in results]
         return "\n".join(snippets)
     except Exception:
         return ""
 
 # ============================================================
-# CALL ENGINES WITH SEARCH GROUNDING & FALLBACK
+# CALL ENGINES
 # ============================================================
-
-def call_google_analyst(model_name, card, system_instruction, prompt_content):
-    global google_key_idx
-    if not genai or not GOOGLE_KEYS:
-        return None, "Google GenAI SDK or Keys missing"
-
-    for _ in range(len(GOOGLE_KEYS)):
-        current_key = GOOGLE_KEYS[google_key_idx]
-        try:
-            client = genai.Client(api_key=current_key)
-            
-            search_config = types.GenerateContentConfig(
-                system_instruction=system_instruction,
-                temperature=0.1,
-                tools=[{"google_search": {}}]
-            )
-            
-            response = client.models.generate_content(
-                model=model_name,
-                contents=prompt_content,
-                config=search_config
-            )
-            
-            if response.text and response.text.strip():
-                return response.text.strip(), None
-            else:
-                return None, "Empty response from Gemini"
-                
-        except Exception as e:
-            err = str(e)
-            print(f"      [Google API Error on {model_name} | Key {google_key_idx}]: {err[:120]}")
-            if "429" in err or "RESOURCE_EXHAUSTED" in err or "quota" in err.lower():
-                google_key_idx = (google_key_idx + 1) % len(GOOGLE_KEYS)
-                time.sleep(2)
-                continue
-            return None, err
-            
-    return None, "All Google keys exhausted"
 
 def call_groq_analyst(model_name, card, system_instruction, prompt_content):
     global groq_key_idx
     if not Groq or not GROQ_KEYS:
         return None, "Groq SDK or Keys missing"
-
-    symbol = card.get("symbol", "")
-    reqs = card.get("research_requirements", [])
-    search_queries = f"{symbol} share {reqs[0]}" if reqs else f"{symbol} revenue capacity"
-    web_snippets = get_web_search_context(search_queries)
-
-    enhanced_prompt = f"{prompt_content}\n\nVERIFIED WEB SEARCH RESULTS (GROUND TRUTH):\n{web_snippets}"
 
     for _ in range(len(GROQ_KEYS)):
         current_key = GROQ_KEYS[groq_key_idx]
@@ -125,7 +86,7 @@ def call_groq_analyst(model_name, card, system_instruction, prompt_content):
                 model=model_name,
                 messages=[
                     {"role": "system", "content": system_instruction},
-                    {"role": "user", "content": enhanced_prompt}
+                    {"role": "user", "content": prompt_content}
                 ],
                 temperature=0.1
             )
@@ -143,6 +104,39 @@ def call_groq_analyst(model_name, card, system_instruction, prompt_content):
             
     return None, "All Groq keys exhausted"
 
+def call_google_analyst(model_name, card, system_instruction, prompt_content):
+    global google_key_idx
+    if not genai or not GOOGLE_KEYS:
+        return None, "Google GenAI SDK or Keys missing"
+
+    for _ in range(len(GOOGLE_KEYS)):
+        current_key = GOOGLE_KEYS[google_key_idx]
+        try:
+            client = genai.Client(api_key=current_key)
+            config = types.GenerateContentConfig(
+                system_instruction=system_instruction,
+                temperature=0.1
+            )
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt_content,
+                config=config
+            )
+            if response.text and response.text.strip():
+                return response.text.strip(), None
+            else:
+                return None, "Empty response from Gemini"
+        except Exception as e:
+            err = str(e)
+            print(f"      [Google API Error on {model_name} | Key {google_key_idx}]: {err[:120]}")
+            if "429" in err or "RESOURCE_EXHAUSTED" in err or "quota" in err.lower():
+                google_key_idx = (google_key_idx + 1) % len(GOOGLE_KEYS)
+                time.sleep(2)
+                continue
+            return None, err
+            
+    return None, "All Google keys exhausted"
+
 def call_hybrid_analyst(card, system_instruction, prompt_content):
     total = len(MODEL_REGISTRY)
     idx = 0
@@ -152,15 +146,15 @@ def call_hybrid_analyst(card, system_instruction, prompt_content):
         m_name = target["name"]
         provider = target["provider"]
 
-        if provider == "google":
-            res, err = call_google_analyst(m_name, card, system_instruction, prompt_content)
-        else:
+        if provider == "groq":
             res, err = call_groq_analyst(m_name, card, system_instruction, prompt_content)
+        else:
+            res, err = call_google_analyst(m_name, card, system_instruction, prompt_content)
 
         if res:
             return res
 
-        print(f"   ⚠️ Fail on {m_name} ({provider}). Reason: {err}")
+        print(f"   ⚠️ Fail on {m_name} ({provider}). Switching to fallback...")
         idx += 1
 
     return None
@@ -171,7 +165,7 @@ def call_hybrid_analyst(card, system_instruction, prompt_content):
 
 def process_deep_feed():
     print("=" * 80)
-    print("🧠 STAGE 2: BATCHED DEEP CONTEXT ANALYST (SEARCH GROUNDED)")
+    print("🧠 STAGE 2: HIGH-AVAILABILITY DEEP CONTEXT ANALYST")
     print(f"📅 Timestamp: {NOW.strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
@@ -213,8 +207,8 @@ def process_deep_feed():
 
     system_instruction = (
         "You are an institutional equity research analyst covering Indian equities (NSE).\n"
-        "Ground your analysis with web search results for the target requirements.\n"
-        "Never invent baseline revenue or capacity. If unverified, state: 'Baseline numbers not disclosed or verified.'\n"
+        "Use the provided VERIFIED WEB SEARCH DATA to mathematically contextualize the announcement.\n"
+        "Never invent numbers. If baseline figures cannot be confirmed, state clearly: 'Baseline numbers not disclosed or verified.'\n"
         "Output strictly valid Telegram HTML format (<b>, <i>, <a>). Do NOT use markdown asterisks (*)."
     )
 
@@ -255,7 +249,9 @@ def process_deep_feed():
 
             clean_cat_tag = event_type.upper().replace(" ", "_")
             cat_icon = category_icons.get(clean_cat_tag, "⚡")
-            reqs_list = "\n".join([f"- {r}" for r in reqs]) if reqs else "- Latest annual revenue, segment scale, and debt profile"
+
+            # Live DuckDuckGo web search
+            web_context = fetch_live_web_context(company, symbol, reqs)
 
             prompt_content = f"""
 COMPANY: {company} (NSE: {symbol})
@@ -265,12 +261,11 @@ HEADLINE: {headline}
 VERIFIED FILING SUMMARY:
 {summary_text}
 
-TARGET SEARCH REQUIREMENTS (SEARCH WEB TO VERIFY):
-{reqs_list}
+VERIFIED WEB SEARCH RESULTS (BASELINE SCALE & FINANCIALS):
+{web_context if web_context else "No external web baseline found."}
 
 TASK:
-1. Search the web for {company} (NSE: {symbol}) latest annual revenue and business capacity scale.
-2. Produce an institutional research post strictly matching this exact layout:
+Produce an institutional research note strictly matching this exact layout:
 
 {cat_icon} <b>#{clean_cat_tag} | INSTITUTIONAL NOTE</b>
 🏢 <b>{company} (NSE: {symbol})</b>
@@ -317,7 +312,7 @@ TASK:
             existing_hashes.add(c_hash)
             dispatched += 1
 
-            time.sleep(3)
+            time.sleep(2)
 
         final_feed["total_posts"] = len(final_feed["content_feed"])
         final_feed["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
