@@ -33,7 +33,7 @@ BATCH_PAUSE_SECONDS = 15  # Har batch ke baad pause
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
-# Groq models placed first because Google quota is temporarily exhausted
+# Active Groq models first to bypass Google free-tier 429 quota limits
 MODEL_REGISTRY = [
     {"name": "openai/gpt-oss-120b", "provider": "groq"},
     {"name": "openai/gpt-oss-20b", "provider": "groq"},
@@ -52,22 +52,36 @@ groq_key_idx = 0
 google_key_idx = 0
 
 def fetch_live_web_context(company, symbol, reqs):
-    """Reliable live web search across all engines"""
+    """
+    Crisp targeted web search to extract exact financial scale:
+    Revenue, PAT, Market Cap, Segment Capacity, and Order Backlog.
+    """
     if not DDGS:
         return ""
     
-    query = f"{company} {symbol} screener revenue capacity order book"
-    if reqs and len(reqs) > 0:
-        query = f"{company} {symbol} {reqs[0]}"
-
+    # 2 concise and targeted queries instead of long sentences
+    queries = [
+        f"{symbol} annual revenue net profit screener",
+        f"{symbol} {company} business capacity financials"
+    ]
+    
+    snippets = []
     try:
-        results = DDGS().text(query, max_results=3)
-        if not results:
-            return ""
-        snippets = [f"• {r.get('title')}: {r.get('body')}" for r in results]
-        return "\n".join(snippets)
+        with DDGS() as ddgs:
+            for q in queries:
+                try:
+                    results = list(ddgs.text(q, max_results=2))
+                    for r in results:
+                        title = r.get("title", "")
+                        body = r.get("body", "")
+                        if body:
+                            snippets.append(f"• {title}: {body}")
+                except Exception:
+                    continue
     except Exception:
-        return ""
+        pass
+
+    return "\n".join(snippets[:4])
 
 # ============================================================
 # CALL ENGINES
@@ -250,7 +264,7 @@ def process_deep_feed():
             clean_cat_tag = event_type.upper().replace(" ", "_")
             cat_icon = category_icons.get(clean_cat_tag, "⚡")
 
-            # Live DuckDuckGo web search
+            # Targeted web context lookup
             web_context = fetch_live_web_context(company, symbol, reqs)
 
             prompt_content = f"""
@@ -314,6 +328,7 @@ Produce an institutional research note strictly matching this exact layout:
 
             time.sleep(2)
 
+        # Auto-save after each batch
         final_feed["total_posts"] = len(final_feed["content_feed"])
         final_feed["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
