@@ -219,7 +219,7 @@ Output strictly Telegram-compatible HTML tags: <b>, <i>, <a>, <code>. Do not use
     dispatched = 0
     for card in pending_cards:
         c_hash = card.get("hash")
-        sym = card.get("symbol", "")
+        symbol = card.get("symbol", "")
         company = card.get("company_name", sym)
         event_type = card.get("event_type", "CORPORATE_UPDATE")
         headline = card.get("headline", "")
