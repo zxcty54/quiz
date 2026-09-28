@@ -368,10 +368,12 @@ def process_corporate_actions_feed():
 
             is_worthy = res.get("content_worthy", False)
             headline = res.get("headline") or itm["subject"]
-            telegram_post = res.get("telegram_post", "")
+            
+            # Safe assignment: Null/None ko hamesha string empty bana dega
+            telegram_post = res.get("telegram_post") or ""
 
             # Ensure clean visual divider and PDF hyperlink exist if AI missed
-            if itm["pdf_link"] and "Source:" not in telegram_post:
+            if telegram_post and itm.get("pdf_link") and "Source:" not in telegram_post:
                 telegram_post += f'\n━━━━━━━━━━━━━━━━━━━━━━\n📌 <b>Source:</b> <a href="{itm["pdf_link"]}">NSE Corporate Filing</a>'
 
             record = {
