@@ -61,59 +61,34 @@ def is_within_24h_of_analysis(item):
         return True
 
 # ============================================================
-# SYSTEM PROMPT (STRICT VALUE-CHECK & BEAUTIFIED TELEGRAM LAYOUT)
+# SYSTEM PROMPT (STAGE 1: GATEKEEPER, DENSE SUMMARY & DYNAMIC RESEARCH PLANNER)
 # ============================================================
 
 SYSTEM_PROMPT = """
-You are a senior institutional equity research editor and financial journalist.
-You will receive Indian corporate announcements and quarterly financial results from the National Stock Exchange (NSE).
+You are a senior institutional equity research editor.
+You will evaluate Indian corporate filings and financial results from the National Stock Exchange (NSE).
 
 YOUR ROLE:
 1. Make a strict CONTENT-WORTHINESS DECISION (content_worthy: true/false).
-   - "true" ONLY for genuine business inflection points: Material order wins/contracts, M&A/slump sales, commercial production starts, new capacity, joint ventures, or significant financial turnarounds/accelerations.
-   - "false" for routine administrative notices, minor orders, generic compliance, or filings lacking numbers.
+   - "true" ONLY for genuine business inflection points that alter the commercial, legal, managerial, operational, or financial reality of the company.
+   - "false" for routine administrative notices, generic compliance, standard calendar dates, or minor immaterial filings.
 
 CRITICAL FINANCIAL RESULT GUARDRAIL (MANDATORY REJECTION):
 If the filing is a quarterly result, outcome of board meeting, or financial update, it MUST contain actual numerical figures for Revenue and Net Profit (PAT).
 If actual numeric figures for Revenue and PAT are missing, undisclosed, or say "Not disclosed", you MUST SET "content_worthy": false.
-Do NOT create posts for generic board approval notices or audit review letters without profit/revenue metrics.
+Do NOT approve generic board approval notices or audit review letters without profit/revenue metrics.
 
-2. If content_worthy is TRUE, WRITE A HIGHLY AESTHETIC, CLEAN, EDITORIAL TELEGRAM POST.
-
-STRICT WRITING & EDITORIAL RULES:
-- Facts only: Use strictly the information disclosed in the filing. Never invent numbers or details.
-- Numbers accuracy: Preserve exact figures, currencies (₹ Cr, USD), capacities, dates, and percentages.
-- Tone: Strictly objective and neutral. NEVER use evaluative hype words like "positive", "negative", "strong", "huge", "aggressive", "boosts earnings" unless quoting management directly.
-- No investment advice: No buy/sell recommendations, no target prices, no future stock-price speculations.
-- What changes: Focus strictly on concrete commercial/operational changes, NOT market-cap, stock-price impact, or mere "regulatory compliance".
-- Category Icon & Tag Rules:
-  Convert CATEGORY to clean UPPERCASE SNAKE_CASE hashtag (e.g. #COMMERCIAL_PRODUCTION, #NEW_PRODUCT, #ORDER_WIN, #FINANCIAL_RESULTS).
-  Use relevant icon: 🏭 for production/plant, 🚀 for product launch, 📜 for order wins, 📊 for quarterly results, 🤝 for M&A/JV, ⚡ for general.
-
-EXACT TELEGRAM POST LAYOUT STRUCTURE:
-{ICON} <b>#{CLEAN_CATEGORY_TAG}</b>
-🏢 <b>{COMPANY NAME}</b>
-<b>{HEADLINE}</b>
-━━━━━━━━━━━━━━━━━━━━━━
-
-🔹 <b>What happened?</b>
-↳ {1–2 sentence crisp factual summary of the event.}
-
-🔹 <b>Key Details:</b>
-• <b>What:</b> {Specific event or asset}
-• <b>Who:</b> {Company and counterparty/client/partner, if disclosed}
-• <b>Business:</b> {Affected business line/segment/product}
-• <b>Value / Size:</b> {Financial value, capacity, or volume — only if stated}
-• <b>Timeline:</b> {Execution dates, commissioning timeline}
-• <b>Location:</b> {Geography/location, if stated}
-
-🔹 <b>Impact & What Changes?</b>
-↳ {1–2 sentences explaining the operational/commercial change for the company.}
-
-<b>Not disclosed:</b>
-↳ {Material undisclosed metrics. OMIT this block if no material gaps exist.}
-━━━━━━━━━━━━━━━━━━━━━━
-📌 <b>Source:</b> <a href="{PDF_LINK}">NSE Corporate Filing</a>
+2. If content_worthy is TRUE:
+   - Identify the precise 'event_type' dynamically in uppercase snake-case (e.g. COMMERCIAL_PRODUCTION, ORDER_WIN, FINANCIAL_RESULTS, ACQUISITION, USFDA_OBSERVATION, LITIGATION, RESIGNATION, CAPEX, JOINT_VENTURE).
+   - Generate a single dense, factual 'summary' paragraph synthesizing all facts, figures, timeline, operational changes, and critical undisclosed metrics.
+   - DYNAMICALLY FORMULATE 'research_requirements':
+     Evaluate the filing and determine: "What specific company scale baseline, historical segment data, or background context must be verified via web search to measure the true materiality of this development?"
+     DO NOT use hardcoded or generic capex questions. Adapt strictly to the filing's nature:
+     * Drug/Plant approval -> Facility revenue share, addressable therapy market size.
+     * Litigation/Tax -> Demand amount as % of net worth or cash profit, dispute history.
+     * Leadership changes -> Executive's past role, strategic tenure, succession clarity.
+     * Capex/Plant commissioning -> Existing manufacturing capacity, current utilization, segment scale.
+     * Order win -> Annual run-rate revenue, active order book, customer dependency.
 
 OUTPUT FORMAT REQUIREMENTS:
 Return strictly a valid JSON object with an "items" array:
@@ -123,14 +98,20 @@ Return strictly a valid JSON object with an "items" array:
       "input_id": 1,
       "content_worthy": true,
       "worthiness_reason": "Crisp 1-line reason for inclusion or exclusion",
+      "event_type": "DYNAMIC_EVENT_TYPE",
       "headline": "Factual and attention-worthy headline",
-      "telegram_post": "Complete Telegram post matching the above exact aesthetic layout with HTML tags",
+      "summary": "Dense single paragraph consolidating: what happened, exact numbers/capacity/deal values, counterparties, operational delta, and critical gaps not disclosed by management.",
       "facts": {
-        "what_happened": "...",
-        "how_much": "...",
-        "what_changes": "...",
-        "what_is_not_disclosed": "..."
-      }
+        "what_happened": "Exact factual statement",
+        "how_much": "Financial value, capacity, or volume",
+        "what_changes": "Operational/commercial change disclosed in filing",
+        "what_is_not_disclosed": "Critical numbers missing from the filing"
+      },
+      "research_requirements": [
+        "Dynamic search metric 1 strictly relevant to contextualizing this filing",
+        "Dynamic search metric 2 for company baseline scale comparison",
+        "Dynamic search metric 3 for segment or peer benchmark"
+      ]
     }
   ]
 }
@@ -242,7 +223,7 @@ def call_hybrid_ai(batch_prompt):
 
 def process_corporate_actions_feed():
     print("=" * 80)
-    print("🚀 AI EDITORIAL SUMMARIZER (24-HOUR FEED RETENTION)")
+    print("🚀 AI EDITORIAL GATEKEEPER & RESEARCH PLANNER")
     print(f"📅 Timestamp: {NOW.strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
@@ -355,7 +336,7 @@ def process_corporate_actions_feed():
                 "details": itm["payload_text"]
             })
 
-        prompt_str = "Write publication-ready Telegram posts for these corporate events:\n" + json.dumps(batch_payload, ensure_ascii=False)
+        prompt_str = "Evaluate corporate filings, produce dense summary and dynamic research requirements:\n" + json.dumps(batch_payload, ensure_ascii=False)
         batch_result = call_hybrid_ai(prompt_str)
 
         if not batch_result:
@@ -373,49 +354,47 @@ def process_corporate_actions_feed():
 
             is_worthy = res.get("content_worthy", False)
             headline = res.get("headline") or itm["subject"]
-            telegram_post = res.get("telegram_post") or ""
+            summary_content = res.get("summary") or ""
+            facts = res.get("facts", {})
+            event_type = res.get("event_type") or itm["category"]
 
             # ------------------------------------------------------------
             # HARD GUARDRAIL: ZERO-NUMBER FINANCIAL RESULT CHECK
             # ------------------------------------------------------------
             if is_worthy and itm.get("category") == "RESULT":
-                t_lower = telegram_post.lower()
-                facts = res.get("facts", {})
                 how_much = str(facts.get("how_much", "")).lower()
+                summary_lower = summary_content.lower()
 
-                # Agar numbers missing/not disclosed hain
                 has_no_value = (
-                    "value / size: not disclosed" in t_lower
-                    or "not disclosed: revenue" in t_lower
-                    or "not disclosed" in how_much
+                    "not disclosed" in how_much
                     or how_much in ["", "none", "nil", "n/a"]
+                    or "revenue: not disclosed" in summary_lower
                 )
 
                 if has_no_value:
                     is_worthy = False
                     res["worthiness_reason"] = "Dropped: Zero financial metrics/numbers in results filing."
 
-            # Ensure clean visual divider and PDF hyperlink exist if AI missed
-            if telegram_post and itm.get("pdf_link") and "Source:" not in telegram_post:
-                telegram_post += f'\n━━━━━━━━━━━━━━━━━━━━━━\n📌 <b>Source:</b> <a href="{itm["pdf_link"]}">NSE Corporate Filing</a>'
-
             record = {
                 "hash": itm["hash"],
                 "symbol": itm["symbol"],
                 "company_name": itm["company_name"],
                 "category": itm["category"],
+                "event_type": event_type,
                 "broadcast_date": itm["broadcast_date"],
                 "pdf_link": itm["pdf_link"],
                 "headline": headline,
                 "content_worthy": is_worthy,
                 "worthiness_reason": res.get("worthiness_reason", ""),
-                "telegram_post": telegram_post if is_worthy else "",
-                "facts": res.get("facts", {}),
+                "summary": summary_content if is_worthy else "",
+                "facts": facts,
+                "research_requirements": res.get("research_requirements", []) if is_worthy else [],
                 "analyzed_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
             }
 
-            if is_worthy and telegram_post:
-                print(f"  ⭐ [APPROVED & WRITTEN] {itm['symbol']}: {headline[:50]}")
+            if is_worthy and summary_content:
+                req_count = len(record["research_requirements"])
+                print(f"  ⭐ [APPROVED] {itm['symbol']} | {event_type} | {req_count} search targets mapped")
                 feed_archive["content_feed"].insert(0, record)
             else:
                 print(f"  ⏭️ [SKIPPED / REJECTED]  {itm['symbol']}: {res.get('worthiness_reason', '')[:50]}")
