@@ -77,7 +77,7 @@ def call_google_analyst(model_name, card, system_instruction, prompt_content):
                 model=model_name,
                 contents=f"{system_instruction}\n\n{prompt_content}",
                 config=types.GenerateContentConfig(
-                    tools=[{"google_search": {}}],
+                    tools=[types.Tool(google_search=types.GoogleSearch())],
                     temperature=0.1
                 )
             )
@@ -196,7 +196,7 @@ def process_deep_feed():
     system_instruction = """
 You are a senior institutional equity research editor.
 Your job is to analyze corporate announcements by contextualizing them against the company's existing business scale.
-Do not invent figures. If baseline capacity or financials cannot be confirmed via search, state clearly: 'Baseline numbers not disclosed or verified.'
+CRITICAL: You MUST use the Google Search tool to look up the company's real annual revenue, past capex, existing capacity, or segment metrics. Do not rely solely on the prompt text.
 Output strictly Telegram-compatible HTML tags: <b>, <i>, <a>, <code>. Do not use Markdown asterisks (*).
 """
 
@@ -225,6 +225,7 @@ Output strictly Telegram-compatible HTML tags: <b>, <i>, <a>, <code>. Do not use
         summary_text = card.get("summary", "")
         reqs = card.get("research_requirements", [])
         pdf_link = card.get("pdf_link", "")
+        date_str = card.get("broadcast_date") or card.get("analyzed_at", "")
 
         clean_cat_tag = event_type.upper().replace(" ", "_")
         cat_icon = category_icons.get(clean_cat_tag, "⚡")
@@ -238,12 +239,14 @@ HEADLINE: {headline}
 VERIFIED FILING SUMMARY:
 {summary_text}
 
-TARGET SEARCH REQUIREMENTS:
+TARGET SEARCH REQUIREMENTS (SEARCH THE WEB FOR THESE):
 {reqs_list}
 
 TASK:
-1. Search/ground the target requirements to verify {company}'s baseline scale.
-2. Produce an institutional research post adhering to this exact format:
+1. Search Google explicitly for:
+   - "{company} annual revenue"
+   - "{company} capacity / order book"
+2. Synthesize an institutional research post adhering to this exact layout:
 
 {cat_icon} <b>#{clean_cat_tag} | INSTITUTIONAL NOTE</b>
 🏢 <b>{company} (NSE: {symbol})</b>
@@ -277,11 +280,17 @@ TASK:
                 f'📌 <b>Source:</b> <a href="{pdf_link}">NSE Corporate Filing</a>'
             )
 
-        final_card = dict(card)
-        final_card["telegram_post"] = final_post
-        final_card["deep_analyzed_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
+        # SLIM FINAL RECORD STRUCTURE (Exact keys requested)
+        compact_card = {
+            "hash": c_hash,
+            "symbol": symbol,
+            "company_name": company,
+            "date": date_str,
+            "research_requirements": reqs,
+            "telegram_post": final_post
+        }
 
-        final_feed["content_feed"].insert(0, final_card)
+        final_feed["content_feed"].insert(0, compact_card)
         existing_hashes.add(c_hash)
         dispatched += 1
 
@@ -294,7 +303,7 @@ TASK:
         json.dump(final_feed, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"✅ STAGE 2 COMPLETE: {dispatched} posts analyzed and saved to '{OUTPUT_FILE}'")
+    print(f"✅ STAGE 2 COMPLETE: {dispatched} slim posts saved to '{OUTPUT_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
