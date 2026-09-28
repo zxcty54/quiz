@@ -3,25 +3,16 @@ import json
 import time
 from datetime import datetime, timezone, timedelta
 
-# Live web context fetcher for open models (Clean import to prevent warnings)
-try:
-    from ddgs import DDGS
-except ImportError:
-    try:
-        from duckduckgo_search import DDGS
-    except ImportError:
-        DDGS = None
-
-try:
-    from groq import Groq
-except ImportError:
-    Groq = None
-
 try:
     from google import genai
     from google.genai import types
 except ImportError:
     genai = None
+
+try:
+    from groq import Groq
+except ImportError:
+    Groq = None
 
 # ============================================================
 # CONFIGURATION & MULTI-MODEL REGISTRY
@@ -30,65 +21,71 @@ except ImportError:
 INPUT_FILE = "nse_content_feed.json"
 OUTPUT_FILE = "nse_final_content_feed.json"
 
-BATCH_SIZE = 3            # Har batch me 3 cards
-BATCH_PAUSE_SECONDS = 15  # Har batch ke baad pause
+BATCH_SIZE = 3            # 3 cards per batch
+BATCH_PAUSE_SECONDS = 15  # Cooldown between batches
 
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
-# Active Groq models first to bypass Google free-tier 429 quota limits
+# Active Google Gemini Models with Native Google Search Grounding
 MODEL_REGISTRY = [
-    {"name": "openai/gpt-oss-120b", "provider": "groq"},
-    {"name": "openai/gpt-oss-20b", "provider": "groq"},
     {"name": "gemini-3.5-flash-lite", "provider": "google"},
-    {"name": "gemini-3.1-flash-lite", "provider": "google"}
+    {"name": "gemini-3.1-flash-lite", "provider": "google"},
+    {"name": "openai/gpt-oss-120b", "provider": "groq"}
 ]
 
-GROQ_KEYS = [os.environ.get(k, "").strip() for k in ["GROQ_API_KEY", "GROQ_API_KEY2"] if os.environ.get(k, "").strip()]
 GOOGLE_KEYS = [os.environ.get(k, "").strip() for k in ["GOOGLE_API_KEY", "GOOGLE_API_KEY2", "GEMINI_API_KEY"] if os.environ.get(k, "").strip()]
+GROQ_KEYS = [os.environ.get(k, "").strip() for k in ["GROQ_API_KEY", "GROQ_API_KEY2"] if os.environ.get(k, "").strip()]
 
-if not GROQ_KEYS and not GOOGLE_KEYS:
+if not GOOGLE_KEYS and not GROQ_KEYS:
     print("❌ FATAL: No API keys found! Exiting.")
     exit(1)
 
-groq_key_idx = 0
 google_key_idx = 0
-
-def fetch_live_web_context(company, symbol, reqs):
-    """
-    Crisp targeted web search to extract exact financial scale:
-    Revenue, PAT, Market Cap, Segment Capacity, and Order Backlog.
-    """
-    if not DDGS:
-        return ""
-    
-    clean_company = company.replace("Limited", "").replace("Ltd", "").strip()
-    queries = [
-        f"{symbol} share annual revenue net profit screener",
-        f"{clean_company} annual turnover capacity"
-    ]
-    
-    snippets = []
-    try:
-        with DDGS() as ddgs:
-            for q in queries:
-                try:
-                    results = list(ddgs.text(q, max_results=2))
-                    for r in results:
-                        title = r.get("title", "")
-                        body = r.get("body", "")
-                        if body:
-                            snippets.append(f"• {title}: {body}")
-                except Exception:
-                    continue
-    except Exception:
-        pass
-
-    return "\n".join(snippets[:4])
+groq_key_idx = 0
 
 # ============================================================
 # CALL ENGINES
 # ============================================================
+
+def call_google_analyst(model_name, card, system_instruction, prompt_content):
+    global google_key_idx
+    if not genai or not GOOGLE_KEYS:
+        return None, "Google GenAI SDK or Keys missing"
+
+    for _ in range(len(GOOGLE_KEYS)):
+        current_key = GOOGLE_KEYS[google_key_idx]
+        try:
+            client = genai.Client(api_key=current_key)
+            
+            # Native Google Search Tool Grounding
+            config = types.GenerateContentConfig(
+                system_instruction=system_instruction,
+                temperature=0.1,
+                tools=[{"google_search": {}}]
+            )
+            
+            response = client.models.generate_content(
+                model=model_name,
+                contents=prompt_content,
+                config=config
+            )
+            
+            if response.text and response.text.strip():
+                return response.text.strip(), None
+            else:
+                return None, "Empty response from Gemini"
+                
+        except Exception as e:
+            err = str(e)
+            print(f"      [Google API Error on {model_name} | Key {google_key_idx}]: {err[:120]}")
+            if "429" in err or "RESOURCE_EXHAUSTED" in err or "quota" in err.lower():
+                google_key_idx = (google_key_idx + 1) % len(GOOGLE_KEYS)
+                time.sleep(2)
+                continue
+            return None, err
+            
+    return None, "All Google keys exhausted"
 
 def call_groq_analyst(model_name, card, system_instruction, prompt_content):
     global groq_key_idx
@@ -121,39 +118,6 @@ def call_groq_analyst(model_name, card, system_instruction, prompt_content):
             
     return None, "All Groq keys exhausted"
 
-def call_google_analyst(model_name, card, system_instruction, prompt_content):
-    global google_key_idx
-    if not genai or not GOOGLE_KEYS:
-        return None, "Google GenAI SDK or Keys missing"
-
-    for _ in range(len(GOOGLE_KEYS)):
-        current_key = GOOGLE_KEYS[google_key_idx]
-        try:
-            client = genai.Client(api_key=current_key)
-            config = types.GenerateContentConfig(
-                system_instruction=system_instruction,
-                temperature=0.1
-            )
-            response = client.models.generate_content(
-                model=model_name,
-                contents=prompt_content,
-                config=config
-            )
-            if response.text and response.text.strip():
-                return response.text.strip(), None
-            else:
-                return None, "Empty response from Gemini"
-        except Exception as e:
-            err = str(e)
-            print(f"      [Google API Error on {model_name} | Key {google_key_idx}]: {err[:120]}")
-            if "429" in err or "RESOURCE_EXHAUSTED" in err or "quota" in err.lower():
-                google_key_idx = (google_key_idx + 1) % len(GOOGLE_KEYS)
-                time.sleep(2)
-                continue
-            return None, err
-            
-    return None, "All Google keys exhausted"
-
 def call_hybrid_analyst(card, system_instruction, prompt_content):
     total = len(MODEL_REGISTRY)
     idx = 0
@@ -163,10 +127,10 @@ def call_hybrid_analyst(card, system_instruction, prompt_content):
         m_name = target["name"]
         provider = target["provider"]
 
-        if provider == "groq":
-            res, err = call_groq_analyst(m_name, card, system_instruction, prompt_content)
-        else:
+        if provider == "google":
             res, err = call_google_analyst(m_name, card, system_instruction, prompt_content)
+        else:
+            res, err = call_groq_analyst(m_name, card, system_instruction, prompt_content)
 
         if res:
             return res
@@ -182,7 +146,7 @@ def call_hybrid_analyst(card, system_instruction, prompt_content):
 
 def process_deep_feed():
     print("=" * 80)
-    print("🧠 STAGE 2: HIGH-AVAILABILITY DEEP CONTEXT ANALYST")
+    print("🧠 STAGE 2: GOOGLE SEARCH GROUNDED INSTITUTIONAL ANALYST")
     print(f"📅 Timestamp: {NOW.strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
@@ -222,13 +186,15 @@ def process_deep_feed():
         print("✅ Everything up to date. Exiting cleanly.")
         return
 
-    system_instruction = (
-        "You are a senior institutional equity research editor covering Indian equities (NSE).\n"
-        "Ground the event mathematically using the provided web baseline context.\n"
-        "Calculate annual run-rate from monthly numbers, contrast order sizes with revenue base, and assess balance sheet implications.\n"
-        "Do not default to stating 'baseline not disclosed'. Use verified search snippets, company turnover range, or known segment metrics.\n"
-        "Output strictly valid Telegram HTML format (<b>, <i>, <a>). Do NOT use markdown asterisks (*)."
-    )
+    system_instruction = """
+You are a senior institutional equity research editor covering Indian capital markets (NSE).
+MANDATE: Deliver rigorous, decisive mathematical context for every corporate development.
+
+CRITICAL INSTRUCTIONS:
+1. USE GOOGLE SEARCH: You MUST use the google_search tool to actively search for the company's real annual revenue, latest market cap, existing segment capacity, or order backlog.
+2. STRICTLY FORBIDDEN: NEVER write 'Baseline numbers not disclosed', 'cannot be quantified', or 'information unavailable'. If an exact plant capacity base is not disclosed, calculate the annualized run-rate (e.g. monthly × 12) and frame it directly against the company's annual turnover base (e.g. ₹10,000+ Cr base) or industry asset turnover benchmarks.
+3. FORMAT: Output strictly Telegram-compatible HTML tags (<b>, <i>, <a>). Never use markdown asterisks (*).
+"""
 
     category_icons = {
         "COMMERCIAL_PRODUCTION": "🏭",
@@ -268,8 +234,7 @@ def process_deep_feed():
             clean_cat_tag = event_type.upper().replace(" ", "_")
             cat_icon = category_icons.get(clean_cat_tag, "⚡")
 
-            # Targeted web context lookup
-            web_context = fetch_live_web_context(company, symbol, reqs)
+            reqs_formatted = "\n".join([f"- {r}" for r in reqs]) if reqs else f"- {symbol} annual revenue, segment capacity, and market position"
 
             prompt_content = f"""
 COMPANY: {company} (NSE: {symbol})
@@ -279,13 +244,13 @@ HEADLINE: {headline}
 VERIFIED FILING SUMMARY:
 {summary_text}
 
-VERIFIED WEB FINANCIAL BASELINE & RECENT METRICS:
-{web_context if web_context else f"Use recognized market data for {symbol} (annual revenue base, segment stature)."}
+TARGET SEARCH REQUIREMENTS (USE GOOGLE SEARCH TOOL TO VERIFY):
+{reqs_formatted}
 
 EDITORIAL DIRECTIVE:
-1. Synthesize the filing event with {symbol}'s existing business scale.
-2. In 'Scale vs Existing Base', calculate annualized operational volume (e.g. monthly MT × 12) and contextualize it relative to the company's financial stature.
-3. Adhere strictly to this layout:
+1. Search Google explicitly for "{company} annual revenue screener" and "{symbol} capacity order book".
+2. Combine the filing announcement with the company's real financial base.
+3. Produce an institutional research post adhering strictly to this layout:
 
 {cat_icon} <b>#{clean_cat_tag} | INSTITUTIONAL NOTE</b>
 🏢 <b>{company} (NSE: {symbol})</b>
@@ -296,9 +261,9 @@ EDITORIAL DIRECTIVE:
 ↳ [1-2 crisp factual sentences based on the filing summary]
 
 📊 <b>Materiality & Financial Context:</b>
-• <b>Scale vs Existing Base:</b> [Direct mathematical scale: annual capacity volume added, % expansion or order value relative to latest annual turnover base]
-• <b>Financial Relevance:</b> [Estimated contribution to segment revenue, EBITDA margins, or balance sheet impact]
-• <b>Strategic Positioning:</b> [Why this matters operationally: customer ramp-up, market share expansion, backward integration, or execution timeline]
+• <b>Scale vs Existing Base:</b> [Compute annualized capacity or order scale mathematically. Contrast this with {company}'s retrieved revenue or operational base.]
+• <b>Financial Relevance:</b> [Provide estimated revenue potential at optimal utilization or impact on segment margins. State whether this is thesis-altering (>10% revenue impact) or steady-state bolt-on capex.]
+• <b>Strategic Positioning:</b> [Why this matters operationally: customer ramp-up, EV vs ICE exposure, supply-chain proximity, or import substitution.]
 
 🎯 <b>Analyst Watchlist:</b>
 ↳ [1-2 critical operational checkpoints or concall questions to track]
@@ -306,7 +271,7 @@ EDITORIAL DIRECTIVE:
 📌 <b>Source:</b> <a href="{pdf_link}">NSE Corporate Filing</a>
 """
 
-            print(f"  🔍 Researching: {symbol} ({event_type})...")
+            print(f"  🔍 Researching via Google: {symbol} ({event_type})...")
             final_post = call_hybrid_analyst(card, system_instruction, prompt_content)
 
             if not final_post:
@@ -334,7 +299,7 @@ EDITORIAL DIRECTIVE:
 
             time.sleep(2)
 
-        # Auto-save after each batch
+        # Batch save
         final_feed["total_posts"] = len(final_feed["content_feed"])
         final_feed["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
