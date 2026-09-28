@@ -14,7 +14,7 @@ except ImportError:
     pdfplumber = None
 
 # ============================================================
-# CONFIGURATION & 3-DAY RETENTION PARAMETERS
+# CONFIGURATION & 3-DAY RETENTION
 # ============================================================
 
 BASE_URL = "https://www.nseindia.com"
@@ -23,12 +23,15 @@ MASTER_FILE = "nse_corporate_master.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
-# Strict 3-day dynamic scan window
 RETENTION_DAYS = 3
 CUTOFF_TIME = NOW - timedelta(days=RETENTION_DAYS)
 
 TO_DATE = NOW.strftime("%d-%m-%Y")
 FROM_DATE = CUTOFF_TIME.strftime("%d-%m-%Y")
+
+# Minimum Materiality Floors (Crores)
+MIN_REVENUE_FLOOR_CR = 25.0
+MIN_PAT_FLOOR_CR = 5.0
 
 ENDPOINTS = {
     "announcements": f"https://www.nseindia.com/api/corporate-announcements?index=equities&from_date={FROM_DATE}&to_date={TO_DATE}",
@@ -37,7 +40,7 @@ ENDPOINTS = {
     "pledged_data": "https://www.nseindia.com/api/corporate-pledged-data?index=equities"
 }
 
-MAX_PDF_DOWNLOADS = 30
+MAX_PDF_DOWNLOADS = 25
 
 HEADERS = {
     "User-Agent": (
@@ -54,7 +57,7 @@ HEADERS = {
 }
 
 # ============================================================
-# TARGET CATEGORIES (CORE BUSINESS MOVES ONLY)
+# TARGET CATEGORIES (EXCLUDING FUND_RAISE, RATING, COURT/GIFT)
 # ============================================================
 
 CATEGORY_PATTERNS = {
@@ -130,6 +133,10 @@ EXCLUDE_JUNK = re.compile(
     re.IGNORECASE
 )
 
+# ============================================================
+# HELPER FUNCTIONS
+# ============================================================
+
 def classify_event(text_to_check):
     if not text_to_check:
         return None
@@ -154,7 +161,6 @@ def clean_num(val):
         return None
 
 def is_within_retention_window(date_str):
-    """Checks if a record date is within the last 3 days"""
     if not date_str:
         return False
     date_clean = date_str.strip()
@@ -168,63 +174,68 @@ def is_within_retention_window(date_str):
     return True
 
 # ============================================================
-# PDF EXTRACTION ENGINE
+# FORENSIC PDF TABLE EXTRACTOR (LEVEL 3)
 # ============================================================
 
-def parse_deep_financial_metrics(pdf_bytes):
-    metrics = {
-        "revenue": None,
+def parse_forensic_results_pdf(pdf_bytes):
+    """Scans Statement of P&L tables for Exceptional Items, Other Income, and Operating Metrics"""
+    forensics = {
+        "exceptional_items": 0.0,
+        "other_income": 0.0,
         "ebitda": None,
         "ebit": None,
         "finance_cost": None,
         "depreciation": None,
         "pbt": None,
-        "pat": None,
-        "eps": None,
-        "cash_flow": None,
-        "debt": None,
         "segment_revenue": {},
-        "segment_profit": {}
+        "segment_profit": {},
+        "is_one_off_driven": False,
+        "notes": ""
     }
     if not pdfplumber:
-        return metrics
+        return forensics
 
     try:
         with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
-            full_text = " ".join([page.extract_text() or "" for page in pdf.pages[:5]])
-            
+            full_text = " ".join([page.extract_text() or "" for page in pdf.pages[:4]])
+            forensics["notes"] = full_text[:2000]
+
+            # 1. Exceptional / Extraordinary Items Scan
+            exc_match = re.search(r'Exceptional (?:Items|Gain|Loss)[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
+            if exc_match:
+                forensics["exceptional_items"] = clean_num(exc_match.group(1)) or 0.0
+
+            # 2. Other Income Scan
+            oth_match = re.search(r'Other Income[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
+            if oth_match:
+                forensics["other_income"] = clean_num(oth_match.group(1)) or 0.0
+
+            # 3. PBT, Finance Cost, Depreciation
             pbt_match = re.search(r'Profit Before Tax[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
             if pbt_match:
-                metrics["pbt"] = pbt_match.group(1)
+                forensics["pbt"] = clean_num(pbt_match.group(1))
 
-            fin_cost = re.search(r'Finance Costs?[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
-            if fin_cost:
-                metrics["finance_cost"] = fin_cost.group(1)
+            fin_match = re.search(r'Finance Costs?[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
+            if fin_match:
+                forensics["finance_cost"] = clean_num(fin_match.group(1))
 
             dep_match = re.search(r'(?:Depreciation|Amortisation)[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
             if dep_match:
-                metrics["depreciation"] = dep_match.group(1)
+                forensics["depreciation"] = clean_num(dep_match.group(1))
 
+            # 4. Segment Reporting Scan
             if "segment" in full_text.lower():
-                seg_match = re.findall(r'([A-Za-z\s]{4,25})\s+([\d,\.]+)\s+([\d,\.]+)', full_text)
-                for sm in seg_match[:4]:
+                seg_matches = re.findall(r'([A-Za-z\s]{4,25})\s+([\d,\.]+)\s+([\d,\.]+)', full_text)
+                for sm in seg_matches[:4]:
                     sec_name = sm[0].strip()
-                    if sec_name.lower() not in ["total", "segment", "quarter", "particulars"]:
-                        metrics["segment_revenue"][sec_name] = sm[1]
-                        metrics["segment_profit"][sec_name] = sm[2]
+                    if sec_name.lower() not in ["total", "segment", "quarter", "particulars", "unallocated"]:
+                        forensics["segment_revenue"][sec_name] = sm[1]
+                        forensics["segment_profit"][sec_name] = sm[2]
 
-            cf_match = re.search(r'Net Cash (?:from|generated from) Operating Activities[^\d]+([\d,\.\-]+)', full_text, re.IGNORECASE)
-            if cf_match:
-                metrics["cash_flow"] = cf_match.group(1)
-
-            debt_match = re.search(r'Total (?:Borrowings|Debt)[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
-            if debt_match:
-                metrics["debt"] = debt_match.group(1)
     except Exception:
         pass
 
-    return metrics
-
+    return forensics
 
 def extract_pdf_data(session, pdf_url, is_result=False):
     if not pdf_url:
@@ -258,14 +269,13 @@ def extract_pdf_data(session, pdf_url, is_result=False):
             pages = [p.extract_text() for p in reader.pages[:3] if p.extract_text()]
             extracted_text = " ".join(" ".join(pages).split())[:3000]
 
-        deep_metrics = {}
+        forensics = {}
         if is_result and pdf_bytes:
-            deep_metrics = parse_deep_financial_metrics(pdf_bytes)
+            forensics = parse_forensic_results_pdf(pdf_bytes)
 
-        return extracted_text, deep_metrics
+        return extracted_text, forensics
     except Exception:
         return "", {}
-
 
 def safe_api_get(session, url, name, custom_referer=None):
     print(f"📡 Fetching {name}...")
@@ -290,8 +300,8 @@ def safe_api_get(session, url, name, custom_referer=None):
 
 def run_nse_hourly_master():
     print("=" * 80)
-    print("🚀 HOURLY NSE CORPORATE PIPELINE (3-DAY ROLLING WINDOW)")
-    print(f"📅 Current Window: {FROM_DATE} to {TO_DATE}")
+    print("🚀 ADVANCED FINANCIAL FILTER & CORPORATE MASTER ENGINE")
+    print(f"📅 Scan Window: {FROM_DATE} to {TO_DATE}")
     print("=" * 80)
 
     master_data = {
@@ -301,14 +311,12 @@ def run_nse_hourly_master():
         "shareholding_patterns": []
     }
 
-    # 1. Load Existing Records & Auto-Prune > 3 Days Old Items
     if os.path.exists(MASTER_FILE):
         try:
             with open(MASTER_FILE, "r", encoding="utf-8") as f:
                 loaded = json.load(f)
                 if isinstance(loaded, dict):
                     master_data = loaded
-                    # Remove records older than 3 days immediately upon load
                     master_data["corporate_announcements"] = [
                         a for a in master_data.get("corporate_announcements", [])
                         if is_within_retention_window(a.get("broadcast_date"))
@@ -339,9 +347,8 @@ def run_nse_hourly_master():
                 "pledge": clean_num(entry.get("promoter_pledged"))
             }
 
-    # 2. Handshake
     session = requests.Session(impersonate="chrome124")
-    print("🌐 Handshake with NSE Homepage...")
+    print("🌐 Performing handshake with NSE Homepage...")
     try:
         home_resp = session.get(BASE_URL, headers=HEADERS, timeout=20)
         if home_resp.status_code != 200:
@@ -355,7 +362,7 @@ def run_nse_hourly_master():
     time.sleep(2)
 
     # ------------------------------------------------------------
-    # 3. Announcements (Fresh 3-Day Window)
+    # 1. Actionable Announcements (Pre-Filtered via Regex)
     # ------------------------------------------------------------
     raw_announcements = safe_api_get(
         session, 
@@ -392,13 +399,12 @@ def run_nse_hourly_master():
             pdf_url = attachment_file if attachment_file.startswith("http") else f"https://nsearchives.nseindia.com/corporate/{attachment_file}"
             
             if pdf_downloads < MAX_PDF_DOWNLOADS:
-                print(f"   📄 [{pdf_downloads + 1}/{MAX_PDF_DOWNLOADS}] Parsing PDF: {symbol} | {category}...")
+                print(f"   📄 [{pdf_downloads + 1}/{MAX_PDF_DOWNLOADS}] Extracting Actionable PDF: {symbol} | {category}...")
                 pdf_text, _ = extract_pdf_data(session, pdf_url, is_result=(category == "RESULT"))
                 if pdf_text:
                     pdf_downloads += 1
                 time.sleep(1.8)
 
-        # Drop if no PDF content was extracted
         if not pdf_text:
             continue
 
@@ -416,12 +422,12 @@ def run_nse_hourly_master():
         seen_announcement_hashes.add(item_hash)
 
     # ------------------------------------------------------------
-    # 4. Financial Results
+    # 2. Financial Results (4-Level Filter & Pre-Check)
     # ------------------------------------------------------------
     raw_results = safe_api_get(
         session, 
         ENDPOINTS["financial_results"], 
-        "Financial Results", 
+        "Financial Results Table", 
         "https://www.nseindia.com/companies-listing/corporate-filings-financial-results"
     )
     time.sleep(1.5)
@@ -433,45 +439,101 @@ def run_nse_hourly_master():
         period = str(r.get("period") or r.get("audited", "")).strip()
         res_date = str(r.get("res_dt") or r.get("resultDate") or r.get("broadcastDate", "")).strip()
         
-        income = str(r.get("income") or r.get("revenue") or r.get("tot_inc", "")).strip()
-        net_profit = str(r.get("netProfit") or r.get("pro_aft_tax", "")).strip()
+        income = clean_num(r.get("income") or r.get("revenue") or r.get("tot_inc"))
+        net_profit = clean_num(r.get("netProfit") or r.get("pro_aft_tax"))
         eps = str(r.get("eps") or r.get("re_eps", "")).strip()
         att_file = str(r.get("attchmntFile", "")).strip()
 
-        if not symbol or (not income and not net_profit) or not is_within_retention_window(res_date):
+        # Prior Year / Prior Period Numbers (if available in raw API feed)
+        prev_income = clean_num(r.get("re_venue_prev") or r.get("income_prev"))
+        prev_net_profit = clean_num(r.get("net_profit_prev") or r.get("pro_aft_tax_prev"))
+
+        if not symbol or not is_within_retention_window(res_date):
+            continue
+        if income is None or net_profit is None:
+            continue
+
+        # ------------------------------------------------------------
+        # LEVEL 1: Materiality Floor Check (Exclude Penny / Micro-caps)
+        # ------------------------------------------------------------
+        if income < MIN_REVENUE_FLOOR_CR or net_profit < MIN_PAT_FLOOR_CR:
+            continue
+
+        # ------------------------------------------------------------
+        # LEVEL 2: Mathematical Outlier Triggers
+        # ------------------------------------------------------------
+        is_turnaround = False
+        yoy_pat_growth = None
+        yoy_revenue_growth = None
+
+        if prev_net_profit is not None:
+            if prev_net_profit <= 0 and net_profit >= MIN_PAT_FLOOR_CR:
+                is_turnaround = True
+            elif prev_net_profit > 0:
+                yoy_pat_growth = round(((net_profit - prev_net_profit) / prev_net_profit) * 100, 2)
+
+        if prev_income is not None and prev_income > 0:
+            yoy_revenue_growth = round(((income - prev_income) / prev_income) * 100, 2)
+
+        # Trigger Condition: Turnaround OR (PAT Growth >= 100% AND Revenue Growth >= 20%)
+        is_high_growth = (yoy_pat_growth is not None and yoy_pat_growth >= 100.0)
+        has_healthy_revenue = (yoy_revenue_growth is None or yoy_revenue_growth >= 20.0)
+
+        # Skip normal results
+        if not is_turnaround and not (is_high_growth and has_healthy_revenue):
             continue
 
         r_hash = generate_hash(f"{symbol}_{period}_{res_date}")
         if r_hash in seen_result_hashes:
             continue
 
-        deep_data = {}
+        # ------------------------------------------------------------
+        # LEVEL 3: Targeted PDF Download & Forensic P&L Extraction
+        # ------------------------------------------------------------
+        forensics = {}
+        pdf_url = ""
         if att_file and pdf_downloads < MAX_PDF_DOWNLOADS:
             pdf_url = att_file if att_file.startswith("http") else f"https://nsearchives.nseindia.com/corporate/{att_file}"
-            _, deep_data = extract_pdf_data(session, pdf_url, is_result=True)
-            time.sleep(1.5)
+            print(f"   🔍 Forensic Scan on Outlier Result: {symbol} (PAT: ₹{net_profit} Cr)...")
+            _, forensics = extract_pdf_data(session, pdf_url, is_result=True)
+            pdf_downloads += 1
+            time.sleep(1.8)
+
+        # Accounting distortion check
+        exceptional = forensics.get("exceptional_items", 0.0)
+        is_one_off = (exceptional >= (0.40 * net_profit)) if net_profit > 0 else False
+
+        signal_tag = "LOSS_TO_PROFIT" if is_turnaround else "EXCEPTIONAL_GROWTH"
+        if is_one_off:
+            signal_tag += "_ONE_OFF_DRIVEN"
 
         new_results.append({
             "hash": r_hash,
             "symbol": symbol,
             "company_name": comp_name,
             "period": period,
+            "signal_tag": signal_tag,
             "revenue": income,
             "pat": net_profit,
             "eps": eps,
-            "pbt": deep_data.get("pbt"),
-            "finance_cost": deep_data.get("finance_cost"),
-            "depreciation": deep_data.get("depreciation"),
-            "cash_flow": deep_data.get("cash_flow"),
-            "debt": deep_data.get("debt"),
-            "segment_revenue": deep_data.get("segment_revenue", {}),
-            "segment_profit": deep_data.get("segment_profit", {}),
-            "result_date": res_date
+            "yoy_pat_growth": yoy_pat_growth,
+            "yoy_revenue_growth": yoy_revenue_growth,
+            "exceptional_items": exceptional,
+            "other_income": forensics.get("other_income", 0.0),
+            "pbt": forensics.get("pbt"),
+            "finance_cost": forensics.get("finance_cost"),
+            "depreciation": forensics.get("depreciation"),
+            "segment_revenue": forensics.get("segment_revenue", {}),
+            "segment_profit": forensics.get("segment_profit", {}),
+            "is_one_off_driven": is_one_off,
+            "result_date": res_date,
+            "pdf_link": pdf_url
         })
         seen_result_hashes.add(r_hash)
+        print(f"   ⭐ [QUALIFIED RESULT]: {symbol} | Tag: {signal_tag} | Revenue: ₹{income} Cr | PAT: ₹{net_profit} Cr")
 
     # ------------------------------------------------------------
-    # 5. Shareholding Patterns
+    # 3. Shareholding Patterns & Delta Calculation
     # ------------------------------------------------------------
     raw_shp = safe_api_get(
         session, 
@@ -481,7 +543,7 @@ def run_nse_hourly_master():
     )
     time.sleep(1.5)
 
-    raw_pledge = safe_api_get(session, ENDPOINTS["pledged_data"], "Pledged Feed")
+    raw_pledge = safe_api_get(session, ENDPOINTS["pledged_data"], "Pledged Shareholding Feed")
     pledge_map = {}
     for p in raw_pledge:
         sym = str(p.get("symbol", "")).strip()
@@ -534,14 +596,13 @@ def run_nse_hourly_master():
         seen_shp_hashes.add(s_hash)
 
     # ------------------------------------------------------------
-    # 6. Merge, Purge & Save Clean 3-Day Archive
+    # 4. Save Clean Master File
     # ------------------------------------------------------------
     master_data["last_updated"] = NOW.strftime("%Y-%m-%d %H:%M:%S IST")
     master_data["corporate_announcements"] = new_announcements + master_data["corporate_announcements"]
     master_data["financial_results"] = new_results + master_data["financial_results"]
     master_data["shareholding_patterns"] = new_shp + master_data["shareholding_patterns"]
 
-    # Final enforcement of 3-day retention
     master_data["corporate_announcements"] = [
         a for a in master_data["corporate_announcements"] if is_within_retention_window(a.get("broadcast_date"))
     ]
@@ -556,12 +617,11 @@ def run_nse_hourly_master():
         json.dump(master_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print("📊 3-DAY SLIDING WINDOW UPDATE COMPLETE:")
-    print(f"   • Fresh Filings Added       : {len(new_announcements)}")
-    print(f"   • Active 3-Day Announcements: {len(master_data['corporate_announcements'])}")
-    print(f"   • Active 3-Day Results      : {len(master_data['financial_results'])}")
-    print(f"   • Active 3-Day Shareholdings: {len(master_data['shareholding_patterns'])}")
-    print(f"💾 Lightweight Master Saved to : '{MASTER_FILE}'")
+    print("📊 EXTRACTION COMPLETED:")
+    print(f"   • Actionable Business Filings : {len(new_announcements)}")
+    print(f"   • High-Signal Financial Gems  : {len(new_results)} (Filtered from ~2000 filings)")
+    print(f"   • Shareholding Records Added  : {len(new_shp)}")
+    print(f"💾 Saved to                      : '{MASTER_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
