@@ -91,7 +91,6 @@ def fetch_and_update_history():
             low_px = float(clean_row.get("LOW_PRICE", 0.0))
             close_px = float(clean_row.get("CLOSE_PRICE", 0.0))
             traded_qty = int(clean_row.get("TTL_TRD_QNTY", 0))
-            deliv_qty = int(clean_row.get("DELIV_QTY", 0))
             deliv_pct = float(clean_row.get("DELIV_PER", 0.0))
         except (ValueError, TypeError):
             continue
@@ -109,7 +108,6 @@ def fetch_and_update_history():
             "low": round(low_px, 2),
             "close": round(close_px, 2),
             "total_traded_qty": traded_qty,
-            "delivery_qty": deliv_qty,
             "delivery_pct": round(deliv_pct, 2)
         }
 
