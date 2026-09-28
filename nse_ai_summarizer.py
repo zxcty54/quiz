@@ -16,7 +16,7 @@ except ImportError:
     genai = None
 
 # ============================================================
-# CONFIGURATION & 24-HOUR RETENTION PARAMETERS
+# CONFIGURATION & RETENTION
 # ============================================================
 
 INPUT_FILE = "nse_corporate_master.json"
@@ -27,8 +27,9 @@ BATCH_PAUSE_SECONDS = 20
 
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
-RETENTION_HOURS = 24
-CUTOFF_24H = NOW - timedelta(hours=RETENTION_HOURS)
+
+# 24 Hours retention calculated strictly from the time of insertion into content_feed
+CUTOFF_24H_ANALYZED = NOW - timedelta(hours=24)
 
 MODEL_REGISTRY = [
     {"name": "openai/gpt-oss-20b", "provider": "groq"},
@@ -48,39 +49,36 @@ groq_key_idx = 0
 google_key_idx = 0
 current_model_idx = 0
 
-def is_within_24_hours(item):
-    dt_str = item.get("broadcast_date") or item.get("analyzed_at", "")
-    if not dt_str:
-        return False
-    clean_str = dt_str.replace(" IST", "").strip()
-    for fmt in ("%d-%b-%Y %H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d-%b-%Y", "%Y-%m-%d"):
-        try:
-            target = clean_str if (" " in fmt and " " in clean_str) else clean_str.split()[0]
-            dt = datetime.strptime(target, fmt).replace(tzinfo=IST)
-            return dt >= CUTOFF_24H
-        except Exception:
-            pass
-    return False
+def is_within_24h_of_analysis(item):
+    """Purges card strictly 24 hours after it was generated/analyzed in content_feed."""
+    analyzed_str = item.get("analyzed_at", "").replace(" IST", "").strip()
+    if not analyzed_str:
+        return True
+    try:
+        dt = datetime.strptime(analyzed_str, "%Y-%m-%d %H:%M:%S").replace(tzinfo=IST)
+        return dt >= CUTOFF_24H_ANALYZED
+    except Exception:
+        return True
 
 # ============================================================
-# SYSTEM PROMPT: AI WRITES COMPLETE TELEGRAM POST
+# SYSTEM PROMPT (ROOT JSON OBJECT FOR GROQ & GEMINI ENGINE)
 # ============================================================
 
 SYSTEM_PROMPT = """
 You are a senior institutional equity research editor and financial journalist.
-You will receive pre-filtered Indian corporate announcements and quarterly earnings results from the National Stock Exchange (NSE).
+You will receive Indian corporate announcements and quarterly financial results from the National Stock Exchange (NSE).
 
 YOUR ROLE:
 1. Make a strict CONTENT-WORTHINESS DECISION (content_worthy: true/false).
-   - "true" ONLY for genuine business inflection points: Material contracts/orders, M&A/slump sales, commercial production starts, high capex, or major quarterly turnarounds/accelerations.
-   - "false" for routine administrative filings, minor non-material notices, or incomplete filings missing figures.
+   - "true" ONLY for genuine business inflection points: Material order wins/contracts, M&A/slump sales, commercial production starts, new capacity, joint ventures, or significant financial turnarounds/accelerations.
+   - "false" for routine administrative notices, minor orders, generic compliance, or filings lacking numbers.
 
 2. If content_worthy is TRUE, WRITE A COMPLETE, CURATED, EDITORIAL TELEGRAM POST.
 
-STRICT WRITING & EDITORIAL RULES FOR THE TELEGRAM POST:
+STRICT WRITING & EDITORIAL RULES:
 - Facts only: Use strictly the information disclosed in the filing. Never invent numbers or details.
 - Numbers accuracy: Preserve exact figures, currencies (₹ Cr, USD), capacities, dates, and percentages.
-- Tone: Strictly objective and neutral. NEVER use evaluative hype words like "positive", "negative", "strong", "huge", "aggressive", "boosts earnings" unless explicitly attributed as a direct quote from management.
+- Tone: Strictly objective and neutral. NEVER use evaluative hype words like "positive", "negative", "strong", "huge", "aggressive", "boosts earnings" unless quoting management directly.
 - No investment advice: No buy/sell recommendations, no target prices, no future stock-price speculations.
 - What changes: Focus strictly on concrete commercial/operational changes (e.g., product portfolio addition, manufacturing capacity expansion, new client base), NOT market-cap or stock-price impact.
 - Not disclosed section: Include ONLY if genuinely critical information is missing (e.g., undisclosed deal value, hidden acquisition multiples, confidential client name, missing profit margins). If nothing vital is absent, OMIT the "Not disclosed" section completely.
@@ -109,23 +107,25 @@ EXACT TELEGRAM POST LAYOUT STRUCTURE:
 
 📌 <b>Source:</b> <a href="{PDF_LINK}">NSE Corporate Filing</a>
 
-OUTPUT FORMAT:
-Return strictly a valid JSON array of objects:
-[
-  {
-    "input_id": 1,
-    "content_worthy": true,
-    "worthiness_reason": "Crisp 1-line reason for inclusion or exclusion",
-    "headline": "Factual and attention-worthy headline",
-    "telegram_post": "The complete formatted Telegram post matching the structure above with HTML tags (<b>, <a>)",
-    "facts": {
-      "what_happened": "...",
-      "how_much": "...",
-      "what_changes": "...",
-      "what_is_not_disclosed": "..."
+OUTPUT FORMAT REQUIREMENTS:
+Return strictly a valid JSON object with an "items" array:
+{
+  "items": [
+    {
+      "input_id": 1,
+      "content_worthy": true,
+      "worthiness_reason": "Crisp 1-line reason for inclusion or exclusion",
+      "headline": "Factual and attention-worthy headline",
+      "telegram_post": "Complete Telegram post matching the structure with HTML tags",
+      "facts": {
+        "what_happened": "...",
+        "how_much": "...",
+        "what_changes": "...",
+        "what_is_not_disclosed": "..."
+      }
     }
-  }
-]
+  ]
+}
 """
 
 def clean_json_response(raw_text):
@@ -136,19 +136,16 @@ def clean_json_response(raw_text):
         text = re.sub(r"^```(?:json)?\s*", "", text)
         text = re.sub(r"\s*```$", "", text)
     try:
-        return json.loads(text)
-    except json.JSONDecodeError:
-        array_match = re.search(r"\[[\s\S]*\]", text)
-        if array_match:
+        data = json.loads(text)
+        if isinstance(data, dict):
+            return data.get("items", [])
+        elif isinstance(data, list):
+            return data
+    except Exception:
+        arr_match = re.search(r"\[[\s\S]*\]", text)
+        if arr_match:
             try:
-                return json.loads(array_match.group(0))
-            except Exception:
-                pass
-        obj_match = re.search(r"\{[\s\S]*\}", text)
-        if obj_match:
-            try:
-                data = json.loads(obj_match.group(0))
-                return [data] if isinstance(data, dict) else data
+                return json.loads(arr_match.group(0))
             except Exception:
                 pass
     return None
@@ -209,9 +206,9 @@ def call_google(model_name, payload):
 
 def call_hybrid_ai(batch_prompt):
     global current_model_idx
-    total_models = len(MODEL_REGISTRY)
+    total = len(MODEL_REGISTRY)
 
-    while current_model_idx < total_models:
+    while current_model_idx < total:
         target = MODEL_REGISTRY[current_model_idx]
         m_name = target["name"]
         provider = target["provider"]
@@ -222,9 +219,9 @@ def call_hybrid_ai(batch_prompt):
             res, err = call_google(m_name, batch_prompt)
 
         if res:
-            return res if isinstance(res, list) else [res]
+            return res
 
-        print(f"   ⚠️ Model fail on {m_name}. Switching to next in registry...")
+        print(f"   ⚠️ Fail on {m_name}. Switching to next fallback...")
         current_model_idx += 1
 
     time.sleep(45)
@@ -237,12 +234,12 @@ def call_hybrid_ai(batch_prompt):
 
 def process_corporate_actions_feed():
     print("=" * 80)
-    print("🚀 AI WRITING & CURATION ENGINE (GENERATING TELEGRAM POSTS)")
-    print(f"📅 Window: Last 24 Hours (Since {CUTOFF_24H.strftime('%d-%b %H:%M IST')})")
+    print("🚀 AI EDITORIAL SUMMARIZER (24-HOUR FEED RETENTION)")
+    print(f"📅 Timestamp: {NOW.strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
     feed_archive = {
-        "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST"),
+        "generated_at": NOW.strftime("%Y-%m-%d %H:%M:%S IST"),
         "worthy_count": 0,
         "skipped_count": 0,
         "content_feed": [],
@@ -255,8 +252,15 @@ def process_corporate_actions_feed():
                 loaded = json.load(f)
                 if isinstance(loaded, dict):
                     feed_archive = loaded
-                    feed_archive["content_feed"] = [item for item in feed_archive.get("content_feed", []) if is_within_24_hours(item)]
-                    feed_archive["skipped_archive"] = [item for item in feed_archive.get("skipped_archive", []) if is_within_24_hours(item)]
+                    # Purge posts older than 24 hours based on analyzed_at
+                    feed_archive["content_feed"] = [
+                        item for item in feed_archive.get("content_feed", [])
+                        if is_within_24h_of_analysis(item)
+                    ]
+                    feed_archive["skipped_archive"] = [
+                        item for item in feed_archive.get("skipped_archive", [])
+                        if is_within_24h_of_analysis(item)
+                    ]
         except Exception:
             pass
     else:
@@ -264,7 +268,7 @@ def process_corporate_actions_feed():
             json.dump(feed_archive, f, ensure_ascii=False, indent=2)
 
     if not os.path.exists(INPUT_FILE):
-        print(f"❌ Input master file '{INPUT_FILE}' not found! Run scraper first.")
+        print(f"❌ '{INPUT_FILE}' not found! Run scraper first.")
         return
 
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
@@ -275,53 +279,49 @@ def process_corporate_actions_feed():
 
     candidates = []
 
-    # Announcements
+    # 1. Actionable Announcements from 3-day Master Archive
     for a in master_data.get("corporate_announcements", []):
         if a.get("hash") not in processed_hashes and a.get("pdf_extracted_text"):
-            if is_within_24_hours(a):
-                candidates.append({
-                    "type": "ANNOUNCEMENT",
-                    "hash": a.get("hash"),
-                    "symbol": a.get("symbol"),
-                    "company_name": a.get("company_name"),
-                    "category": a.get("category"),
-                    "subject": a.get("subject"),
-                    "summary": a.get("summary"),
-                    "payload_text": a.get("pdf_extracted_text")[:3500],
-                    "broadcast_date": a.get("broadcast_date"),
-                    "pdf_link": a.get("pdf_link")
-                })
+            candidates.append({
+                "type": "ANNOUNCEMENT",
+                "hash": a.get("hash"),
+                "symbol": a.get("symbol"),
+                "company_name": a.get("company_name"),
+                "category": a.get("category"),
+                "subject": a.get("subject"),
+                "summary": a.get("summary"),
+                "payload_text": a.get("pdf_extracted_text")[:3500],
+                "broadcast_date": a.get("broadcast_date"),
+                "pdf_link": a.get("pdf_link")
+            })
 
-    # Financial Results
+    # 2. Financial Results from Master Archive
     for r in master_data.get("financial_results", []):
         if r.get("hash") not in processed_hashes:
-            if is_within_24_hours(r):
-                summary_str = (
-                    f"Revenue: ₹{r.get('revenue')} Cr (YoY: {r.get('yoy_revenue_growth')}%), "
-                    f"PAT: ₹{r.get('pat')} Cr (YoY: {r.get('yoy_pat_growth')}%), "
-                    f"Signal: {r.get('signal_tag')}, Exceptional Items: ₹{r.get('exceptional_items')} Cr"
-                )
-                candidates.append({
-                    "type": "FINANCIAL_RESULT",
-                    "hash": r.get("hash"),
-                    "symbol": r.get("symbol"),
-                    "company_name": r.get("company_name"),
-                    "category": "RESULT",
-                    "subject": f"Quarterly Outlier Result - {r.get('signal_tag')}",
-                    "summary": summary_str,
-                    "payload_text": json.dumps({
-                        "financial_metrics": r,
-                        "segments": r.get("segment_revenue", {}),
-                        "one_off": r.get("is_one_off_driven")
-                    }, indent=2),
-                    "broadcast_date": r.get("result_date"),
-                    "pdf_link": r.get("pdf_link")
-                })
+            summary_str = (
+                f"Revenue: ₹{r.get('revenue')} Cr (YoY: {r.get('yoy_revenue_growth')}%), "
+                f"PAT: ₹{r.get('pat')} Cr (YoY: {r.get('yoy_pat_growth')}%), "
+                f"Signal: {r.get('signal_tag')}, Exceptional: ₹{r.get('exceptional_items')} Cr"
+            )
+            candidates.append({
+                "type": "FINANCIAL_RESULT",
+                "hash": r.get("hash"),
+                "symbol": r.get("symbol"),
+                "company_name": r.get("company_name"),
+                "category": "RESULT",
+                "subject": f"Quarterly Result - Revenue ₹{r.get('revenue')} Cr | PAT ₹{r.get('pat')} Cr",
+                "summary": summary_str,
+                "payload_text": json.dumps(r, indent=2),
+                "broadcast_date": r.get("result_date"),
+                "pdf_link": r.get("pdf_link")
+            })
 
-    print(f"🎯 Total pending filings for AI writing: {len(candidates)}")
+    print(f"🎯 Total pending filings for AI processing: {len(candidates)}")
 
     if not candidates:
-        print("✅ No unwritten announcements. All caught up!")
+        print("✅ No pending items. Content feed is fully synchronized!")
+        feed_archive["worthy_count"] = len(feed_archive["content_feed"])
+        feed_archive["skipped_count"] = len(feed_archive["skipped_archive"])
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(feed_archive, f, ensure_ascii=False, indent=2)
         return
@@ -368,7 +368,7 @@ def process_corporate_actions_feed():
             headline = res.get("headline") or itm["subject"]
             telegram_post = res.get("telegram_post", "")
 
-            # Fallback if AI forgot to append source link
+            # Ensure PDF source hyperlink exists
             if itm["pdf_link"] and "Source:" not in telegram_post:
                 telegram_post += f'\n\n📌 <b>Source:</b> <a href="{itm["pdf_link"]}">NSE Corporate Filing</a>'
 
@@ -384,18 +384,19 @@ def process_corporate_actions_feed():
                 "worthiness_reason": res.get("worthiness_reason", ""),
                 "telegram_post": telegram_post,
                 "facts": res.get("facts", {}),
-                "analyzed_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
+                "analyzed_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")  # 24-hr clock begins now
             }
 
             if is_worthy and telegram_post:
-                print(f"  ⭐ [WRITTEN & APPROVED] {itm['symbol']}: {headline[:50]}")
+                print(f"  ⭐ [APPROVED & WRITTEN] {itm['symbol']}: {headline[:50]}")
                 feed_archive["content_feed"].insert(0, record)
             else:
-                print(f"  ⏭️ [REJECTED/SKIPPED]   {itm['symbol']}: {res.get('worthiness_reason', '')[:50]}")
+                print(f"  ⏭️ [SKIPPED]            {itm['symbol']}: {res.get('worthiness_reason', '')[:50]}")
                 feed_archive["skipped_archive"].insert(0, record)
 
-        feed_archive["content_feed"] = [item for item in feed_archive["content_feed"] if is_within_24_hours(item)]
-        feed_archive["skipped_archive"] = [item for item in feed_archive["skipped_archive"] if is_within_24_hours(item)]
+        # Enforce rolling 24-hr window based on analyzed_at
+        feed_archive["content_feed"] = [item for item in feed_archive["content_feed"] if is_within_24h_of_analysis(item)]
+        feed_archive["skipped_archive"] = [item for item in feed_archive["skipped_archive"] if is_within_24h_of_analysis(item)]
 
         feed_archive["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
         feed_archive["worthy_count"] = len(feed_archive["content_feed"])
@@ -413,9 +414,9 @@ def process_corporate_actions_feed():
 
     print("\n" + "=" * 80)
     print("✅ AI EDITORIAL WORKFLOW COMPLETE:")
-    print(f"   • Curated Posts Ready for Channel : {feed_archive['worthy_count']}")
-    print(f"   • Non-Material Records Skipped    : {feed_archive['skipped_count']}")
-    print(f"💾 Saved to                          : '{OUTPUT_FILE}'")
+    print(f"   • Active Posts in Feed (Last 24h) : {feed_archive['worthy_count']}")
+    print(f"   • Filtered Records Archive        : {feed_archive['skipped_count']}")
+    print(f"💾 File Saved to                     : '{OUTPUT_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
