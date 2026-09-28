@@ -89,6 +89,7 @@ Do NOT approve generic board approval notices or audit review letters without pr
      * Leadership changes -> Executive's past role, strategic tenure, succession clarity.
      * Capex/Plant commissioning -> Existing manufacturing capacity, current utilization, segment scale.
      * Order win -> Annual run-rate revenue, active order book, customer dependency.
+     "For capacity addition/plant commissioning events, always include existing total capacity as one of the research requirements."
 
 OUTPUT FORMAT REQUIREMENTS:
 Return strictly a valid JSON object with an "items" array:
