@@ -14,7 +14,7 @@ except ImportError:
     pdfplumber = None
 
 # ============================================================
-# CONFIGURATION & 3-DAY RETENTION
+# CONFIGURATION & RETENTION LOGIC
 # ============================================================
 
 BASE_URL = "https://www.nseindia.com"
@@ -23,20 +23,21 @@ MASTER_FILE = "nse_corporate_master.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
-RETENTION_DAYS = 3
-CUTOFF_TIME = NOW - timedelta(days=RETENTION_DAYS)
+# 1. SCRAPE WINDOW: Only CURRENT DATE (Today)
+TODAY_STR = NOW.strftime("%d-%m-%Y")
 
-TO_DATE = NOW.strftime("%d-%m-%Y")
-FROM_DATE = CUTOFF_TIME.strftime("%d-%m-%Y")
+# 2. MASTER RETENTION WINDOW: 3 Days back from now
+CUTOFF_3D = NOW - timedelta(days=3)
 
 # Minimum Materiality Floors (Crores)
 MIN_REVENUE_FLOOR_CR = 25.0
 MIN_PAT_FLOOR_CR = 5.0
 
 ENDPOINTS = {
-    "announcements": f"https://www.nseindia.com/api/corporate-announcements?index=equities&from_date={FROM_DATE}&to_date={TO_DATE}",
+    # Strictly fetches current day's filings
+    "announcements": f"https://www.nseindia.com/api/corporate-announcements?index=equities&from_date={TODAY_STR}&to_date={TODAY_STR}",
     "financial_results": "https://www.nseindia.com/api/corporates-financial-results?index=equities&period=Quarterly",
-    "shareholding_patterns": f"https://www.nseindia.com/api/corporate-share-holdings-master?index=equities&from_date={FROM_DATE}&to_date={TO_DATE}",
+    "shareholding_patterns": f"https://www.nseindia.com/api/corporate-share-holdings-master?index=equities&from_date={TODAY_STR}&to_date={TODAY_STR}",
     "pledged_data": "https://www.nseindia.com/api/corporate-pledged-data?index=equities"
 }
 
@@ -57,7 +58,7 @@ HEADERS = {
 }
 
 # ============================================================
-# TARGET CATEGORIES (EXCLUDING FUND_RAISE, RATING, COURT/GIFT)
+# TARGET CATEGORIES (EXCLUDING ROUTINE JUNK / NON-MATERIAL)
 # ============================================================
 
 CATEGORY_PATTERNS = {
@@ -138,9 +139,7 @@ EXCLUDE_JUNK = re.compile(
 # ============================================================
 
 def classify_event(text_to_check):
-    if not text_to_check:
-        return None
-    if EXCLUDE_JUNK.search(text_to_check):
+    if not text_to_check or EXCLUDE_JUNK.search(text_to_check):
         return None
     for cat, pattern in CATEGORY_PATTERNS.items():
         if pattern.search(text_to_check):
@@ -160,15 +159,16 @@ def clean_num(val):
     except ValueError:
         return None
 
-def is_within_retention_window(date_str):
+def is_within_3_days(date_str):
+    """Checks whether the record falls within the 3-day retention window in master file."""
     if not date_str:
         return False
-    date_clean = date_str.strip()
-    for fmt in ("%d-%b-%Y %H:%M:%S", "%d-%b-%Y", "%Y-%m-%d"):
+    clean_str = date_str.replace(" IST", "").strip()
+    for fmt in ("%d-%b-%Y %H:%M:%S", "%Y-%m-%d %H:%M:%S", "%d-%b-%Y", "%Y-%m-%d"):
         try:
-            target = date_clean if fmt == "%d-%b-%Y %H:%M:%S" else date_clean.split()[0]
+            target = clean_str if (" " in fmt and " " in clean_str) else clean_str.split()[0]
             dt = datetime.strptime(target, fmt).replace(tzinfo=IST)
-            return dt >= CUTOFF_TIME
+            return dt >= CUTOFF_3D
         except Exception:
             pass
     return True
@@ -192,7 +192,7 @@ def parse_forensic_results_pdf(pdf_bytes):
         "is_one_off_driven": False,
         "notes": ""
     }
-    if not pdfplumber:
+    if not pdfplumber or not pdf_bytes:
         return forensics
 
     try:
@@ -200,17 +200,14 @@ def parse_forensic_results_pdf(pdf_bytes):
             full_text = " ".join([page.extract_text() or "" for page in pdf.pages[:4]])
             forensics["notes"] = full_text[:2000]
 
-            # 1. Exceptional / Extraordinary Items Scan
             exc_match = re.search(r'Exceptional (?:Items|Gain|Loss)[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
             if exc_match:
                 forensics["exceptional_items"] = clean_num(exc_match.group(1)) or 0.0
 
-            # 2. Other Income Scan
             oth_match = re.search(r'Other Income[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
             if oth_match:
                 forensics["other_income"] = clean_num(oth_match.group(1)) or 0.0
 
-            # 3. PBT, Finance Cost, Depreciation
             pbt_match = re.search(r'Profit Before Tax[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
             if pbt_match:
                 forensics["pbt"] = clean_num(pbt_match.group(1))
@@ -223,7 +220,6 @@ def parse_forensic_results_pdf(pdf_bytes):
             if dep_match:
                 forensics["depreciation"] = clean_num(dep_match.group(1))
 
-            # 4. Segment Reporting Scan
             if "segment" in full_text.lower():
                 seg_matches = re.findall(r'([A-Za-z\s]{4,25})\s+([\d,\.]+)\s+([\d,\.]+)', full_text)
                 for sm in seg_matches[:4]:
@@ -231,7 +227,6 @@ def parse_forensic_results_pdf(pdf_bytes):
                     if sec_name.lower() not in ["total", "segment", "quarter", "particulars", "unallocated"]:
                         forensics["segment_revenue"][sec_name] = sm[1]
                         forensics["segment_profit"][sec_name] = sm[2]
-
     except Exception:
         pass
 
@@ -243,9 +238,9 @@ def extract_pdf_data(session, pdf_url, is_result=False):
     
     pdf_headers = {
         "User-Agent": HEADERS["User-Agent"],
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+        "Accept": "*/*",
         "Host": "nsearchives.nseindia.com",
-        "Referer": "https://www.nseindia.com/companies-listing/corporate-filings-announcements"
+        "Referer": "https://www.nseindia.com/"
     }
 
     try:
@@ -260,14 +255,14 @@ def extract_pdf_data(session, pdf_url, is_result=False):
             try:
                 with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
                     pages = [p.extract_text() for p in pdf.pages[:3] if p.extract_text()]
-                    extracted_text = " ".join(" ".join(pages).split())[:3000]
+                    extracted_text = " ".join(" ".join(pages).split())[:3500]
             except Exception:
                 pass
 
         if not extracted_text:
             reader = PdfReader(io.BytesIO(pdf_bytes))
             pages = [p.extract_text() for p in reader.pages[:3] if p.extract_text()]
-            extracted_text = " ".join(" ".join(pages).split())[:3000]
+            extracted_text = " ".join(" ".join(pages).split())[:3500]
 
         forensics = {}
         if is_result and pdf_bytes:
@@ -286,7 +281,7 @@ def safe_api_get(session, url, name, custom_referer=None):
         if resp.status_code == 200:
             data = resp.json()
             items = data if isinstance(data, list) else data.get("data", [])
-            print(f"   ✅ Raw {name} count: {len(items)}")
+            print(f"   ✅ Raw {name} fetched: {len(items)}")
             return items
         print(f"   ⚠️ Status {resp.status_code} for {name}")
         return []
@@ -300,8 +295,9 @@ def safe_api_get(session, url, name, custom_referer=None):
 
 def run_nse_hourly_master():
     print("=" * 80)
-    print("🚀 ADVANCED FINANCIAL FILTER & CORPORATE MASTER ENGINE")
-    print(f"📅 Scan Window: {FROM_DATE} to {TO_DATE}")
+    print("🚀 NSE SCRAPER ENGINE (SCRAPES TODAY | STORES 3 DAYS IN MASTER)")
+    print(f"📅 Scrape Target Date : {TODAY_STR} (Current Date Only)")
+    print(f"📦 Master Retention   : Keeping entries from {CUTOFF_3D.strftime('%d-%b-%Y %H:%M IST')}")
     print("=" * 80)
 
     master_data = {
@@ -311,6 +307,7 @@ def run_nse_hourly_master():
         "shareholding_patterns": []
     }
 
+    # Load existing master and retain only records from the last 3 days
     if os.path.exists(MASTER_FILE):
         try:
             with open(MASTER_FILE, "r", encoding="utf-8") as f:
@@ -319,15 +316,15 @@ def run_nse_hourly_master():
                     master_data = loaded
                     master_data["corporate_announcements"] = [
                         a for a in master_data.get("corporate_announcements", [])
-                        if is_within_retention_window(a.get("broadcast_date"))
+                        if is_within_3_days(a.get("broadcast_date"))
                     ]
                     master_data["financial_results"] = [
                         r for r in master_data.get("financial_results", [])
-                        if is_within_retention_window(r.get("result_date"))
+                        if is_within_3_days(r.get("result_date"))
                     ]
                     master_data["shareholding_patterns"] = [
                         s for s in master_data.get("shareholding_patterns", [])
-                        if is_within_retention_window(s.get("as_on_date"))
+                        if is_within_3_days(s.get("as_on_date"))
                     ]
         except Exception:
             pass
@@ -362,12 +359,12 @@ def run_nse_hourly_master():
     time.sleep(2)
 
     # ------------------------------------------------------------
-    # 1. Actionable Announcements (Pre-Filtered via Regex)
+    # 1. Actionable Announcements (Current Day Only)
     # ------------------------------------------------------------
     raw_announcements = safe_api_get(
         session, 
         ENDPOINTS["announcements"], 
-        "Corporate Announcements", 
+        f"Today's Announcements ({TODAY_STR})", 
         "https://www.nseindia.com/companies-listing/corporate-filings-announcements"
     )
     time.sleep(1.5)
@@ -382,7 +379,7 @@ def run_nse_hourly_master():
         broadcast_dt = str(item.get("an_dt") or item.get("broadcastDate", "")).strip()
         attachment_file = str(item.get("attchmntFile", "")).strip()
 
-        if not symbol or not subject or not is_within_retention_window(broadcast_dt):
+        if not symbol or not subject:
             continue
 
         category = classify_event(f"{subject} {summary}")
@@ -399,7 +396,7 @@ def run_nse_hourly_master():
             pdf_url = attachment_file if attachment_file.startswith("http") else f"https://nsearchives.nseindia.com/corporate/{attachment_file}"
             
             if pdf_downloads < MAX_PDF_DOWNLOADS:
-                print(f"   📄 [{pdf_downloads + 1}/{MAX_PDF_DOWNLOADS}] Extracting Actionable PDF: {symbol} | {category}...")
+                print(f"   📄 [{pdf_downloads + 1}/{MAX_PDF_DOWNLOADS}] Extracting PDF: {symbol} | {category}...")
                 pdf_text, _ = extract_pdf_data(session, pdf_url, is_result=(category == "RESULT"))
                 if pdf_text:
                     pdf_downloads += 1
@@ -422,7 +419,7 @@ def run_nse_hourly_master():
         seen_announcement_hashes.add(item_hash)
 
     # ------------------------------------------------------------
-    # 2. Financial Results (4-Level Filter & Pre-Check)
+    # 2. Financial Results (Screening + Targeted PDF)
     # ------------------------------------------------------------
     raw_results = safe_api_get(
         session, 
@@ -444,24 +441,17 @@ def run_nse_hourly_master():
         eps = str(r.get("eps") or r.get("re_eps", "")).strip()
         att_file = str(r.get("attchmntFile", "")).strip()
 
-        # Prior Year / Prior Period Numbers (if available in raw API feed)
         prev_income = clean_num(r.get("re_venue_prev") or r.get("income_prev"))
         prev_net_profit = clean_num(r.get("net_profit_prev") or r.get("pro_aft_tax_prev"))
 
-        if not symbol or not is_within_retention_window(res_date):
-            continue
-        if income is None or net_profit is None:
+        if not symbol or income is None or net_profit is None:
             continue
 
-        # ------------------------------------------------------------
-        # LEVEL 1: Materiality Floor Check (Exclude Penny / Micro-caps)
-        # ------------------------------------------------------------
+        # LEVEL 1: Materiality Floor Check
         if income < MIN_REVENUE_FLOOR_CR or net_profit < MIN_PAT_FLOOR_CR:
             continue
 
-        # ------------------------------------------------------------
         # LEVEL 2: Mathematical Outlier Triggers
-        # ------------------------------------------------------------
         is_turnaround = False
         yoy_pat_growth = None
         yoy_revenue_growth = None
@@ -475,11 +465,9 @@ def run_nse_hourly_master():
         if prev_income is not None and prev_income > 0:
             yoy_revenue_growth = round(((income - prev_income) / prev_income) * 100, 2)
 
-        # Trigger Condition: Turnaround OR (PAT Growth >= 100% AND Revenue Growth >= 20%)
         is_high_growth = (yoy_pat_growth is not None and yoy_pat_growth >= 100.0)
         has_healthy_revenue = (yoy_revenue_growth is None or yoy_revenue_growth >= 20.0)
 
-        # Skip normal results
         if not is_turnaround and not (is_high_growth and has_healthy_revenue):
             continue
 
@@ -487,9 +475,7 @@ def run_nse_hourly_master():
         if r_hash in seen_result_hashes:
             continue
 
-        # ------------------------------------------------------------
-        # LEVEL 3: Targeted PDF Download & Forensic P&L Extraction
-        # ------------------------------------------------------------
+        # LEVEL 3: Targeted PDF Forensic Check
         forensics = {}
         pdf_url = ""
         if att_file and pdf_downloads < MAX_PDF_DOWNLOADS:
@@ -499,7 +485,6 @@ def run_nse_hourly_master():
             pdf_downloads += 1
             time.sleep(1.8)
 
-        # Accounting distortion check
         exceptional = forensics.get("exceptional_items", 0.0)
         is_one_off = (exceptional >= (0.40 * net_profit)) if net_profit > 0 else False
 
@@ -533,12 +518,12 @@ def run_nse_hourly_master():
         print(f"   ⭐ [QUALIFIED RESULT]: {symbol} | Tag: {signal_tag} | Revenue: ₹{income} Cr | PAT: ₹{net_profit} Cr")
 
     # ------------------------------------------------------------
-    # 3. Shareholding Patterns & Delta Calculation
+    # 3. Shareholding Patterns & Delta Calculation (Current Day)
     # ------------------------------------------------------------
     raw_shp = safe_api_get(
         session, 
         ENDPOINTS["shareholding_patterns"], 
-        "Shareholding Patterns", 
+        f"Today's Shareholding Patterns ({TODAY_STR})", 
         "https://www.nseindia.com/companies-listing/corporate-filings-shareholding-pattern"
     )
     time.sleep(1.5)
@@ -563,9 +548,7 @@ def run_nse_hourly_master():
         dii_val = clean_num(s.get("dii") or s.get("domesticInstitutions"))
         current_pledge = pledge_map.get(symbol, 0.0)
 
-        if not symbol or not is_within_retention_window(as_on_date):
-            continue
-        if promoter_val is None and public_val is None:
+        if not symbol or (promoter_val is None and public_val is None):
             continue
 
         s_hash = generate_hash(f"{symbol}_{as_on_date}")
@@ -596,21 +579,22 @@ def run_nse_hourly_master():
         seen_shp_hashes.add(s_hash)
 
     # ------------------------------------------------------------
-    # 4. Save Clean Master File
+    # 4. Save to Master File (3-Day Rolling Storage)
     # ------------------------------------------------------------
     master_data["last_updated"] = NOW.strftime("%Y-%m-%d %H:%M:%S IST")
     master_data["corporate_announcements"] = new_announcements + master_data["corporate_announcements"]
     master_data["financial_results"] = new_results + master_data["financial_results"]
     master_data["shareholding_patterns"] = new_shp + master_data["shareholding_patterns"]
 
+    # Filter older than 3 days
     master_data["corporate_announcements"] = [
-        a for a in master_data["corporate_announcements"] if is_within_retention_window(a.get("broadcast_date"))
+        a for a in master_data["corporate_announcements"] if is_within_3_days(a.get("broadcast_date"))
     ]
     master_data["financial_results"] = [
-        r for r in master_data["financial_results"] if is_within_retention_window(r.get("result_date"))
+        r for r in master_data["financial_results"] if is_within_3_days(r.get("result_date"))
     ]
     master_data["shareholding_patterns"] = [
-        s for s in master_data["shareholding_patterns"] if is_within_retention_window(s.get("as_on_date"))
+        s for s in master_data["shareholding_patterns"] if is_within_3_days(s.get("as_on_date"))
     ]
 
     with open(MASTER_FILE, "w", encoding="utf-8") as f:
@@ -618,10 +602,11 @@ def run_nse_hourly_master():
 
     print("\n" + "=" * 80)
     print("📊 EXTRACTION COMPLETED:")
-    print(f"   • Actionable Business Filings : {len(new_announcements)}")
-    print(f"   • High-Signal Financial Gems  : {len(new_results)} (Filtered from ~2000 filings)")
-    print(f"   • Shareholding Records Added  : {len(new_shp)}")
-    print(f"💾 Saved to                      : '{MASTER_FILE}'")
+    print(f"   • Fresh Announcements Today ({TODAY_STR}) : {len(new_announcements)}")
+    print(f"   • High-Signal Financial Outliers Today       : {len(new_results)}")
+    print(f"   • Shareholding Records Added                 : {len(new_shp)}")
+    print(f"   • Active 3-Day Archive Count in Master       : {len(master_data['corporate_announcements'])}")
+    print(f"💾 Saved to                                     : '{MASTER_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
