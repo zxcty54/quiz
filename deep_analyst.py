@@ -1,355 +1,114 @@
 import os
 import json
-import time
-import re
-import html
+import csv
+import io
 import requests
-from urllib.parse import quote_plus
 from datetime import datetime, timezone, timedelta
 
-# Fallback models client
-try:
-    from groq import Groq
-except ImportError:
-    Groq = None
-
-try:
-    from google import genai
-    from google.genai import types
-except ImportError:
-    genai = None
-
-# ============================================================
-# CONFIGURATION & MULTI-MODEL REGISTRY
-# ============================================================
-
-INPUT_FILE = "nse_content_feed.json"
-OUTPUT_FILE = "nse_final_content_feed.json"
-
-BATCH_SIZE = 3            # Har batch me 3 cards
-BATCH_PAUSE_SECONDS = 15  # Har batch ke baad pause
-
+OUTPUT_HISTORY_FILE = "stock_history_20d.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
-# Active models registry: Working Groq models first, Gemini fallback
-MODEL_REGISTRY = [
-    {"name": "openai/gpt-oss-20b", "provider": "groq"},
-    {"name": "openai/gpt-oss-120b", "provider": "groq"},
-    {"name": "gemini-3.5-flash-lite", "provider": "google"},
-    {"name": "gemini-3.1-flash-lite", "provider": "google"}
-]
+def fetch_and_update_history():
+    print("=" * 75)
+    print("📊 NSE ROLLING 20-DAY HISTORY (EQ, Price >= ₹100 & Traded Qty)")
+    print(f"📅 Timestamp: {NOW.strftime('%d-%b-%Y %H:%M:%S IST')}")
+    print("=" * 75)
 
-GROQ_KEYS = [os.environ.get(k, "").strip() for k in ["GROQ_API_KEY", "GROQ_API_KEY2"] if os.environ.get(k, "").strip()]
-GOOGLE_KEYS = [os.environ.get(k, "").strip() for k in ["GOOGLE_API_KEY", "GOOGLE_API_KEY2", "GEMINI_API_KEY"] if os.environ.get(k, "").strip()]
+    # 1. Load existing historical JSON
+    history_data = {}
+    if os.path.exists(OUTPUT_HISTORY_FILE):
+        try:
+            with open(OUTPUT_HISTORY_FILE, "r", encoding="utf-8") as f:
+                history_data = json.load(f)
+                if not isinstance(history_data, dict):
+                    history_data = {}
+        except Exception as e:
+            print(f"⚠️ Starting fresh history file: {e}")
+            history_data = {}
 
-if not GROQ_KEYS and not GOOGLE_KEYS:
-    print("❌ FATAL: No API keys configured. Exiting.")
-    exit(1)
+    trade_date_str = NOW.strftime("%d%m%Y")
+    iso_date_str = NOW.strftime("%Y-%m-%d")
 
-groq_key_idx = 0
-google_key_idx = 0
-
-# ============================================================
-# RELIABLE WEB FACT EXTRACTOR (ZERO EXTERNAL DEPENDENCY)
-# ============================================================
-
-def get_financial_facts(company, symbol, reqs):
-    """
-    Directly extracts baseline figures (Turnover, PAT, Capacity) 
-    using lightweight HTTP scraping without requiring external libraries.
-    """
-    clean_company = re.sub(r'\b(Limited|Ltd|Pvt|India)\b', '', company, flags=re.IGNORECASE).strip()
-    
-    # 2 targeted financial queries
-    queries = [
-        f"{symbol} share annual revenue net profit screener",
-        f"{clean_company} annual turnover capacity"
-    ]
-    
-    snippets = []
+    url = f"https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_{trade_date_str}.csv"
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+        "Accept": "*/*"
     }
 
-    for q in queries:
-        try:
-            url = f"https://html.duckduckgo.com/html/?q={quote_plus(q)}"
-            resp = requests.get(url, headers=headers, timeout=6)
-            if resp.status_code == 200:
-                raw_snippets = re.findall(r'<a[^>]+class="result__snippet"[^>]*>(.*?)</a>', resp.text, re.DOTALL)
-                for raw in raw_snippets[:2]:
-                    clean_text = re.sub(r'<[^>]+>', '', raw)
-                    clean_text = html.unescape(clean_text).strip()
-                    if clean_text:
-                        snippets.append(f"• {clean_text}")
-        except Exception:
+    print(f"📥 Downloading latest NSE Bhavcopy for date: {trade_date_str}...")
+    try:
+        resp = requests.get(url, headers=headers, timeout=20)
+        if resp.status_code != 200:
+            print(f"⚠️ Bhavcopy not available (HTTP {resp.status_code}). Market holiday ya file publish nahi hui.")
+            return
+    except Exception as e:
+        print(f"❌ Failed to connect to NSE: {e}")
+        return
+
+    reader = csv.DictReader(io.StringIO(resp.text))
+    qualifying_count = 0
+
+    for row in reader:
+        clean_row = {k.strip(): v.strip() for k, v in row.items() if k}
+        
+        symbol = clean_row.get("SYMBOL", "")
+        series = clean_row.get("SERIES", "")
+
+        # 1. Strict EQ Filter (No Debt, SGB, Warrants)
+        if series != "EQ":
             continue
-            
-    if not snippets:
-        return f"{company} (NSE: {symbol}) is a listed Indian commercial corporate. Contextualize using established industry benchmark scale."
 
-    return "\n".join(snippets[:4])
+        # 2. Block ETFs
+        if symbol.endswith("BEES") or symbol.endswith("ETF"):
+            continue
 
-# ============================================================
-# CALL ENGINES
-# ============================================================
-
-def call_groq_analyst(model_name, system_instruction, prompt_content):
-    global groq_key_idx
-    if not Groq or not GROQ_KEYS:
-        return None
-
-    for _ in range(len(GROQ_KEYS)):
-        current_key = GROQ_KEYS[groq_key_idx]
         try:
-            client = Groq(api_key=current_key)
-            completion = client.chat.completions.create(
-                model=model_name,
-                messages=[
-                    {"role": "system", "content": system_instruction},
-                    {"role": "user", "content": prompt_content}
-                ],
-                temperature=0.1
-            )
-            content = completion.choices[0].message.content
-            if content and content.strip():
-                return content.strip()
-        except Exception as e:
-            err = str(e)
-            print(f"      [Groq Fail on {model_name} | Key {groq_key_idx}]: {err[:100]}")
-            if "429" in err or "rate_limit" in err.lower():
-                groq_key_idx = (groq_key_idx + 1) % len(GROQ_KEYS)
-                time.sleep(2)
-                continue
-            return None
-            
-    return None
+            close_price = float(clean_row.get("CLOSE_PRICE", 0.0))
+            traded_qty = int(clean_row.get("TTL_TRD_QNTY", 0))
+            deliv_qty = int(clean_row.get("DELIV_QTY", 0))
+            deliv_pct = float(clean_row.get("DELIV_PER", 0.0))
+            total_turnover = float(clean_row.get("TURNOVER_LACS", 0.0))  # Turnover in Lacs
+        except (ValueError, TypeError):
+            continue
 
-def call_google_analyst(model_name, system_instruction, prompt_content):
-    global google_key_idx
-    if not genai or not GOOGLE_KEYS:
-        return None
+        # 3. Filter stocks below ₹100
+        if close_price < 100.0:
+            continue
 
-    for _ in range(len(GOOGLE_KEYS)):
-        current_key = GOOGLE_KEYS[google_key_idx]
-        try:
-            client = genai.Client(api_key=current_key)
-            config = types.GenerateContentConfig(
-                system_instruction=system_instruction,
-                temperature=0.1
-            )
-            response = client.models.generate_content(
-                model=model_name,
-                contents=prompt_content,
-                config=config
-            )
-            if response.text and response.text.strip():
-                return response.text.strip()
-        except Exception as e:
-            err = str(e)
-            print(f"      [Google Fail on {model_name} | Key {google_key_idx}]: {err[:100]}")
-            if "429" in err or "RESOURCE_EXHAUSTED" in err or "quota" in err.lower():
-                google_key_idx = (google_key_idx + 1) % len(GOOGLE_KEYS)
-                time.sleep(2)
-                continue
-            return None
-            
-    return None
+        qualifying_count += 1
 
-def call_hybrid_analyst(system_instruction, prompt_content):
-    for target in MODEL_REGISTRY:
-        m_name = target["name"]
-        provider = target["provider"]
+        day_record = {
+            "date": iso_date_str,
+            "close": round(close_price, 2),
+            "total_traded_qty": traded_qty,
+            "delivery_qty": deliv_qty,
+            "delivery_pct": round(deliv_pct, 2),
+            "turnover_cr": round(total_turnover / 100, 2)  # Lacs to Crore
+        }
 
-        if provider == "groq":
-            res = call_groq_analyst(m_name, system_instruction, prompt_content)
-        else:
-            res = call_google_analyst(m_name, system_instruction, prompt_content)
+        if symbol not in history_data:
+            history_data[symbol] = []
 
-        if res:
-            return res
-            
-        print(f"   ⚠️ Model {m_name} failed. Attempting next candidate...")
+        # Prevent duplicate insertion on same-day re-runs
+        history_data[symbol] = [e for e in history_data[symbol] if e.get("date") != iso_date_str]
+        history_data[symbol].append(day_record)
 
-    return None
+        # 4. Keep strictly last 20 trading sessions
+        if len(history_data[symbol]) > 20:
+            history_data[symbol] = history_data[symbol][-20:]
 
-# ============================================================
-# MAIN ORCHESTRATOR
-# ============================================================
+    with open(OUTPUT_HISTORY_FILE, "w", encoding="utf-8") as f:
+        json.dump(history_data, f, ensure_ascii=False, indent=2)
 
-def process_deep_feed():
-    print("=" * 80)
-    print("🧠 STAGE 2: STRICT VERIFIED INSTITUTIONAL ANALYST")
-    print(f"📅 Timestamp: {NOW.strftime('%d-%b-%Y %H:%M:%S IST')}")
-    print("=" * 80)
-
-    if not os.path.exists(INPUT_FILE):
-        print(f"ℹ️ Input feed file '{INPUT_FILE}' not found.")
-        return
-
-    with open(INPUT_FILE, "r", encoding="utf-8") as f:
-        feed_data = json.load(f)
-
-    cards = feed_data.get("content_feed", [])
-    if not cards:
-        print("✅ Content feed empty. No cards pending.")
-        return
-
-    final_feed = {
-        "generated_at": NOW.strftime("%Y-%m-%d %H:%M:%S IST"),
-        "total_posts": 0,
-        "content_feed": []
-    }
-
-    existing_hashes = set()
-    if os.path.exists(OUTPUT_FILE):
-        try:
-            with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-                loaded = json.load(f)
-                if isinstance(loaded, dict):
-                    final_feed = loaded
-                    existing_hashes = {c["hash"] for c in final_feed.get("content_feed", []) if "hash" in c}
-        except Exception:
-            pass
-
-    pending_cards = [card for card in reversed(cards) if card.get("hash") not in existing_hashes]
-    print(f"🎯 Total pending filings for deep analysis: {len(pending_cards)}")
-
-    if not pending_cards:
-        print("✅ Everything up to date. Exiting cleanly.")
-        return
-
-    system_instruction = (
-        "You are an institutional equity research analyst covering Indian equities (NSE).\n"
-        "Your objective: Deliver decisive financial and operational context.\n"
-        "NEVER use defensive disclaimers like 'Baseline numbers not disclosed', 'cannot be quantified', or 'data not available'.\n"
-        "Calculate annual run-rate (e.g. monthly x 12) and frame it against annual turnover scale or industry unit realization.\n"
-        "Output strictly valid Telegram HTML format (<b>, <i>, <a>). Do NOT use markdown asterisks (*)."
-    )
-
-    category_icons = {
-        "COMMERCIAL_PRODUCTION": "🏭",
-        "ORDER_WIN": "📜",
-        "NEW_PRODUCT": "🚀",
-        "FINANCIAL_RESULTS": "📊",
-        "RESULT": "📊",
-        "CAPEX": "🏗️",
-        "ACQUISITION": "🤝",
-        "JOINT_VENTURE": "🤝",
-        "REGULATORY_APPROVAL": "✅",
-        "USFDA_OBSERVATION": "⚠️",
-        "LITIGATION": "⚖️",
-        "RESIGNATION": "👤"
-    }
-
-    dispatched = 0
-    failed_count = 0
-    total_batches = (len(pending_cards) + BATCH_SIZE - 1) // BATCH_SIZE
-    i = 0
-    batch_counter = 1
-
-    while i < len(pending_cards):
-        batch = pending_cards[i : i + BATCH_SIZE]
-        print(f"\n⚡ Processing Batch {batch_counter}/{total_batches} ({len(batch)} cards)...")
-
-        for card in batch:
-            c_hash = card.get("hash")
-            symbol = card.get("symbol", "")
-            company = card.get("company_name", symbol)
-            event_type = card.get("event_type", "CORPORATE_UPDATE")
-            headline = card.get("headline", "")
-            summary_text = card.get("summary", "")
-            reqs = card.get("research_requirements", [])
-            pdf_link = card.get("pdf_link", "")
-            date_str = card.get("broadcast_date") or card.get("analyzed_at", "")
-
-            clean_cat_tag = event_type.upper().replace(" ", "_")
-            cat_icon = category_icons.get(clean_cat_tag, "⚡")
-
-            # 1. Fetch live financial baseline
-            financial_context = get_financial_facts(company, symbol, reqs)
-
-            prompt_content = f"""
-COMPANY: {company} (NSE: {symbol})
-EVENT TYPE: {event_type}
-HEADLINE: {headline}
-
-VERIFIED FILING SUMMARY:
-{summary_text}
-
-FINANCIAL BASELINE CONTEXT RETRIEVED FROM WEB:
-{financial_context}
-
-TASK:
-Produce an institutional research note strictly matching this layout:
-
-{cat_icon} <b>#{clean_cat_tag} | INSTITUTIONAL NOTE</b>
-🏢 <b>{company} (NSE: {symbol})</b>
-<b>{headline}</b>
-━━━━━━━━━━━━━━━━━━━━━━
-
-🔹 <b>The Event:</b>
-↳ [1-2 crisp factual sentences based on the filing summary]
-
-📊 <b>Materiality & Financial Context:</b>
-• <b>Scale vs Existing Base:</b> [Compute annualized operational scale mathematically. Contrast this with {company}'s retrieved revenue/operational stature. Never state 'not disclosed'.]
-• <b>Financial Relevance:</b> [Estimated revenue contribution at peak capacity or margin impact. State if this is bolt-on or material.]
-• <b>Strategic Positioning:</b> [Operational relevance: customer ramp-up, market share expansion, backward integration, or execution timeline]
-
-🎯 <b>Analyst Watchlist:</b>
-↳ [1-2 critical operational checkpoints or concall questions to track]
-━━━━━━━━━━━━━━━━━━━━━━
-📌 <b>Source:</b> <a href="{pdf_link}">NSE Corporate Filing</a>
-"""
-
-            print(f"  🔍 Processing: {symbol} ({event_type})...")
-            final_post = call_hybrid_analyst(system_instruction, prompt_content)
-
-            # HARD GATE: Discard post if model fails or writes evasive disclaimers
-            if not final_post or "Baseline numbers not disclosed" in final_post or "not disclosed or verified" in final_post:
-                print(f"  ❌ DISCARDED {symbol}: Model produced evasive disclaimers or failed.")
-                failed_count += 1
-                continue
-
-            compact_card = {
-                "hash": c_hash,
-                "symbol": symbol,
-                "company_name": company,
-                "date": date_str,
-                "research_requirements": reqs,
-                "telegram_post": final_post
-            }
-
-            final_feed["content_feed"].insert(0, compact_card)
-            existing_hashes.add(c_hash)
-            dispatched += 1
-
-            time.sleep(2)
-
-        # Save progress if at least one verified post was processed
-        if dispatched > 0:
-            final_feed["total_posts"] = len(final_feed["content_feed"])
-            final_feed["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
-            with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-                json.dump(final_feed, f, ensure_ascii=False, indent=2)
-
-        i += BATCH_SIZE
-        batch_counter += 1
-
-        if i < len(pending_cards):
-            print(f"⏳ Cooldown pause of {BATCH_PAUSE_SECONDS}s...")
-            time.sleep(BATCH_PAUSE_SECONDS)
-
-    print("\n" + "=" * 80)
-    print(f"📊 SUMMARY: {dispatched} valid posts saved | {failed_count} discarded")
-    print("=" * 80)
-
-    # Fail workflow explicitly if all cards failed to prevent fake green ticks
-    if dispatched == 0 and failed_count > 0:
-        print("❌ CRITICAL: All pending cards failed deep research. Exiting with failure.")
-        exit(1)
+    file_size_mb = os.path.getsize(OUTPUT_HISTORY_FILE) / (1024 * 1024)
+    print("\n" + "=" * 75)
+    print(f"✅ SUCCESS:")
+    print(f"   • Qualified Stocks Processed : {qualifying_count}")
+    print(f"   • Total Active Tickers       : {len(history_data)}")
+    print(f"   • Output JSON File Size      : {file_size_mb:.2f} MB")
+    print(f"   • Saved to                   : '{OUTPUT_HISTORY_FILE}'")
+    print("=" * 75)
 
 if __name__ == "__main__":
-    process_deep_feed()
+    fetch_and_update_history()
