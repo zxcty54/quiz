@@ -3,11 +3,14 @@ import json
 import time
 from datetime import datetime, timezone, timedelta
 
-# Live web context fetcher for open models
+# Live web context fetcher for open models (Clean import to prevent warnings)
 try:
-    from duckduckgo_search import DDGS
+    from ddgs import DDGS
 except ImportError:
-    DDGS = None
+    try:
+        from duckduckgo_search import DDGS
+    except ImportError:
+        DDGS = None
 
 try:
     from groq import Groq
@@ -59,10 +62,10 @@ def fetch_live_web_context(company, symbol, reqs):
     if not DDGS:
         return ""
     
-    # 2 concise and targeted queries instead of long sentences
+    clean_company = company.replace("Limited", "").replace("Ltd", "").strip()
     queries = [
-        f"{symbol} annual revenue net profit screener",
-        f"{symbol} {company} business capacity financials"
+        f"{symbol} share annual revenue net profit screener",
+        f"{clean_company} annual turnover capacity"
     ]
     
     snippets = []
@@ -220,9 +223,10 @@ def process_deep_feed():
         return
 
     system_instruction = (
-        "You are an institutional equity research analyst covering Indian equities (NSE).\n"
-        "Use the provided VERIFIED WEB SEARCH DATA to mathematically contextualize the announcement.\n"
-        "Never invent numbers. If baseline figures cannot be confirmed, state clearly: 'Baseline numbers not disclosed or verified.'\n"
+        "You are a senior institutional equity research editor covering Indian equities (NSE).\n"
+        "Ground the event mathematically using the provided web baseline context.\n"
+        "Calculate annual run-rate from monthly numbers, contrast order sizes with revenue base, and assess balance sheet implications.\n"
+        "Do not default to stating 'baseline not disclosed'. Use verified search snippets, company turnover range, or known segment metrics.\n"
         "Output strictly valid Telegram HTML format (<b>, <i>, <a>). Do NOT use markdown asterisks (*)."
     )
 
@@ -275,11 +279,13 @@ HEADLINE: {headline}
 VERIFIED FILING SUMMARY:
 {summary_text}
 
-VERIFIED WEB SEARCH RESULTS (BASELINE SCALE & FINANCIALS):
-{web_context if web_context else "No external web baseline found."}
+VERIFIED WEB FINANCIAL BASELINE & RECENT METRICS:
+{web_context if web_context else f"Use recognized market data for {symbol} (annual revenue base, segment stature)."}
 
-TASK:
-Produce an institutional research note strictly matching this exact layout:
+EDITORIAL DIRECTIVE:
+1. Synthesize the filing event with {symbol}'s existing business scale.
+2. In 'Scale vs Existing Base', calculate annualized operational volume (e.g. monthly MT × 12) and contextualize it relative to the company's financial stature.
+3. Adhere strictly to this layout:
 
 {cat_icon} <b>#{clean_cat_tag} | INSTITUTIONAL NOTE</b>
 🏢 <b>{company} (NSE: {symbol})</b>
@@ -290,7 +296,7 @@ Produce an institutional research note strictly matching this exact layout:
 ↳ [1-2 crisp factual sentences based on the filing summary]
 
 📊 <b>Materiality & Financial Context:</b>
-• <b>Scale vs Existing Base:</b> [Explain mathematical scale - % capacity expansion or order size relative to annual turnover using retrieved numbers]
+• <b>Scale vs Existing Base:</b> [Direct mathematical scale: annual capacity volume added, % expansion or order value relative to latest annual turnover base]
 • <b>Financial Relevance:</b> [Estimated contribution to segment revenue, EBITDA margins, or balance sheet impact]
 • <b>Strategic Positioning:</b> [Why this matters operationally: customer ramp-up, market share expansion, backward integration, or execution timeline]
 
