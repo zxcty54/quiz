@@ -14,7 +14,7 @@ except ImportError:
     pdfplumber = None
 
 # ============================================================
-# CONFIGURATION
+# CONFIGURATION & 3-DAY RETENTION PARAMETERS
 # ============================================================
 
 BASE_URL = "https://www.nseindia.com"
@@ -23,8 +23,12 @@ MASTER_FILE = "nse_corporate_master.json"
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
+# Strict 3-day dynamic scan window
+RETENTION_DAYS = 3
+CUTOFF_TIME = NOW - timedelta(days=RETENTION_DAYS)
+
 TO_DATE = NOW.strftime("%d-%m-%Y")
-FROM_DATE = (NOW - timedelta(days=15)).strftime("%d-%m-%Y")
+FROM_DATE = CUTOFF_TIME.strftime("%d-%m-%Y")
 
 ENDPOINTS = {
     "announcements": f"https://www.nseindia.com/api/corporate-announcements?index=equities&from_date={FROM_DATE}&to_date={TO_DATE}",
@@ -33,7 +37,7 @@ ENDPOINTS = {
     "pledged_data": "https://www.nseindia.com/api/corporate-pledged-data?index=equities"
 }
 
-MAX_PDF_DOWNLOADS = 40
+MAX_PDF_DOWNLOADS = 30
 
 HEADERS = {
     "User-Agent": (
@@ -50,7 +54,7 @@ HEADERS = {
 }
 
 # ============================================================
-# TARGET CATEGORIES (EXPANDED TO ALL STRATEGIC ACTIONS)
+# TARGET CATEGORIES (CORE BUSINESS MOVES ONLY)
 # ============================================================
 
 CATEGORY_PATTERNS = {
@@ -110,20 +114,15 @@ CATEGORY_PATTERNS = {
 
 EXCLUDE_JUNK = re.compile(
     r'\b('
-    # Family gift & Internal reorganizations
     r'gift|inter-se|family trust|huf|transmission of shares|promoter group transfer|'
     r'regulation 29|regulation 31|sast|'
     r'amalgamation|scheme of amalgamation|scheme of arrangement|wholly owned subsidiary|'
     r'wholly-owned subsidiary|wos|merger of subsidiary|internal restructuring|'
-    # Blocked Categories
     r'credit rating|rating assigned|rating upgrade|rating revised|care|crisil|icra|infomerics|brickwork|'
     r'fund raising|fund raise|qip|rights issue|preferential issue|preferential allotment|warrants|fpo|'
-    # Court / Tax
     r'tax order|assessment order|demand order|penalty|nclt order|court order|show cause notice|adjudication order|'
-    # Result Noise
     r'trading window|closure of trading|prior intimation|schedule of board meeting|intimation of board meeting|'
     r'investor presentation|transcript|audio recording|earnings call|analyst meet|investor meet|clarification|reply to clarification|'
-    # Routine HR / Admin / Compliance
     r'loss of share|duplicate share|newspaper|clipping|scrutinizer|postal ballot|general meeting|annual general meeting|'
     r'e-voting|change in address|change of registered office|appointment of|resignation of|esop|stock option|'
     r'regulation 57|payment of interest|payment of principal|scheduled principal|commercial paper|cp maturity'
@@ -146,7 +145,6 @@ def generate_hash(identifier):
     return hashlib.md5(clean.encode('utf-8')).hexdigest()[:12]
 
 def clean_num(val):
-    """Safely converts string holding percentages/numbers to float"""
     if val is None:
         return None
     s = str(val).replace(",", "").replace("%", "").strip()
@@ -155,15 +153,25 @@ def clean_num(val):
     except ValueError:
         return None
 
+def is_within_retention_window(date_str):
+    """Checks if a record date is within the last 3 days"""
+    if not date_str:
+        return False
+    date_clean = date_str.strip()
+    for fmt in ("%d-%b-%Y %H:%M:%S", "%d-%b-%Y", "%Y-%m-%d"):
+        try:
+            target = date_clean if fmt == "%d-%b-%Y %H:%M:%S" else date_clean.split()[0]
+            dt = datetime.strptime(target, fmt).replace(tzinfo=IST)
+            return dt >= CUTOFF_TIME
+        except Exception:
+            pass
+    return True
+
 # ============================================================
-# DEEP METRICS PDF PARSER (SEBI STATEMENT PARSING)
+# PDF EXTRACTION ENGINE
 # ============================================================
 
 def parse_deep_financial_metrics(pdf_bytes):
-    """
-    Extracts deep SEBI line-items (EBITDA, PBT, Finance Cost, Segments) 
-    from Financial Result PDF
-    """
     metrics = {
         "revenue": None,
         "ebitda": None,
@@ -178,7 +186,6 @@ def parse_deep_financial_metrics(pdf_bytes):
         "segment_revenue": {},
         "segment_profit": {}
     }
-    
     if not pdfplumber:
         return metrics
 
@@ -186,7 +193,6 @@ def parse_deep_financial_metrics(pdf_bytes):
         with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
             full_text = " ".join([page.extract_text() or "" for page in pdf.pages[:5]])
             
-            # 1. Regex checks for standard line items
             pbt_match = re.search(r'Profit Before Tax[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
             if pbt_match:
                 metrics["pbt"] = pbt_match.group(1)
@@ -199,7 +205,6 @@ def parse_deep_financial_metrics(pdf_bytes):
             if dep_match:
                 metrics["depreciation"] = dep_match.group(1)
 
-            # 2. Check for Segment Reporting section
             if "segment" in full_text.lower():
                 seg_match = re.findall(r'([A-Za-z\s]{4,25})\s+([\d,\.]+)\s+([\d,\.]+)', full_text)
                 for sm in seg_match[:4]:
@@ -208,7 +213,6 @@ def parse_deep_financial_metrics(pdf_bytes):
                         metrics["segment_revenue"][sec_name] = sm[1]
                         metrics["segment_profit"][sec_name] = sm[2]
 
-            # 3. Cash flow & Debt keyword detection
             cf_match = re.search(r'Net Cash (?:from|generated from) Operating Activities[^\d]+([\d,\.\-]+)', full_text, re.IGNORECASE)
             if cf_match:
                 metrics["cash_flow"] = cf_match.group(1)
@@ -216,7 +220,6 @@ def parse_deep_financial_metrics(pdf_bytes):
             debt_match = re.search(r'Total (?:Borrowings|Debt)[^\d]+([\d,\.]+)', full_text, re.IGNORECASE)
             if debt_match:
                 metrics["debt"] = debt_match.group(1)
-
     except Exception:
         pass
 
@@ -242,7 +245,6 @@ def extract_pdf_data(session, pdf_url, is_result=False):
         pdf_bytes = resp.content
         extracted_text = ""
 
-        # Extract text representation
         if pdfplumber:
             try:
                 with pdfplumber.open(io.BytesIO(pdf_bytes)) as pdf:
@@ -256,15 +258,14 @@ def extract_pdf_data(session, pdf_url, is_result=False):
             pages = [p.extract_text() for p in reader.pages[:3] if p.extract_text()]
             extracted_text = " ".join(" ".join(pages).split())[:3000]
 
-        # Deep metrics extraction if it's a financial result filing
         deep_metrics = {}
         if is_result and pdf_bytes:
             deep_metrics = parse_deep_financial_metrics(pdf_bytes)
 
         return extracted_text, deep_metrics
-
     except Exception:
         return "", {}
+
 
 def safe_api_get(session, url, name, custom_referer=None):
     print(f"📡 Fetching {name}...")
@@ -284,13 +285,13 @@ def safe_api_get(session, url, name, custom_referer=None):
         return []
 
 # ============================================================
-# MASTER ORCHESTRATOR WITH DELTA CALCULATIONS
+# MASTER ORCHESTRATOR
 # ============================================================
 
-def run_nse_daily_master():
+def run_nse_hourly_master():
     print("=" * 80)
-    print("🚀 ADVANCED NSE CORPORATE ACTIONS & FINANCIAL MASTER")
-    print(f"📅 Scan Window: {FROM_DATE} to {TO_DATE}")
+    print("🚀 HOURLY NSE CORPORATE PIPELINE (3-DAY ROLLING WINDOW)")
+    print(f"📅 Current Window: {FROM_DATE} to {TO_DATE}")
     print("=" * 80)
 
     master_data = {
@@ -300,24 +301,35 @@ def run_nse_daily_master():
         "shareholding_patterns": []
     }
 
-    # Load existing state
+    # 1. Load Existing Records & Auto-Prune > 3 Days Old Items
     if os.path.exists(MASTER_FILE):
         try:
             with open(MASTER_FILE, "r", encoding="utf-8") as f:
                 loaded = json.load(f)
                 if isinstance(loaded, dict):
                     master_data = loaded
+                    # Remove records older than 3 days immediately upon load
+                    master_data["corporate_announcements"] = [
+                        a for a in master_data.get("corporate_announcements", [])
+                        if is_within_retention_window(a.get("broadcast_date"))
+                    ]
+                    master_data["financial_results"] = [
+                        r for r in master_data.get("financial_results", [])
+                        if is_within_retention_window(r.get("result_date"))
+                    ]
+                    master_data["shareholding_patterns"] = [
+                        s for s in master_data.get("shareholding_patterns", [])
+                        if is_within_retention_window(s.get("as_on_date"))
+                    ]
         except Exception:
             pass
 
-    seen_announcement_hashes = {a.get("hash") for a in master_data.get("corporate_announcements", []) if a.get("hash")}
-    seen_result_hashes = {r.get("hash") for r in master_data.get("financial_results", []) if r.get("hash")}
-    seen_shp_hashes = {s.get("hash") for s in master_data.get("shareholding_patterns", []) if s.get("hash")}
+    seen_announcement_hashes = {a.get("hash") for a in master_data["corporate_announcements"] if a.get("hash")}
+    seen_result_hashes = {r.get("hash") for r in master_data["financial_results"] if r.get("hash")}
+    seen_shp_hashes = {s.get("hash") for s in master_data["shareholding_patterns"] if s.get("hash")}
 
-    # Build historical lookup map for Shareholding Changes calculation
-    # Format: {symbol: {promoter, fii, dii, pledge}}
     previous_shp_lookup = {}
-    for entry in master_data.get("shareholding_patterns", []):
+    for entry in master_data["shareholding_patterns"]:
         sym = entry.get("symbol")
         if sym and sym not in previous_shp_lookup:
             previous_shp_lookup[sym] = {
@@ -327,8 +339,9 @@ def run_nse_daily_master():
                 "pledge": clean_num(entry.get("promoter_pledged"))
             }
 
+    # 2. Handshake
     session = requests.Session(impersonate="chrome124")
-    print("🌐 Performing handshake with NSE Homepage...")
+    print("🌐 Handshake with NSE Homepage...")
     try:
         home_resp = session.get(BASE_URL, headers=HEADERS, timeout=20)
         if home_resp.status_code != 200:
@@ -342,7 +355,7 @@ def run_nse_daily_master():
     time.sleep(2)
 
     # ------------------------------------------------------------
-    # 1. Actionable Announcements (All Strategic Actions + PDF)
+    # 3. Announcements (Fresh 3-Day Window)
     # ------------------------------------------------------------
     raw_announcements = safe_api_get(
         session, 
@@ -362,7 +375,7 @@ def run_nse_daily_master():
         broadcast_dt = str(item.get("an_dt") or item.get("broadcastDate", "")).strip()
         attachment_file = str(item.get("attchmntFile", "")).strip()
 
-        if not symbol or not subject:
+        if not symbol or not subject or not is_within_retention_window(broadcast_dt):
             continue
 
         category = classify_event(f"{subject} {summary}")
@@ -379,13 +392,13 @@ def run_nse_daily_master():
             pdf_url = attachment_file if attachment_file.startswith("http") else f"https://nsearchives.nseindia.com/corporate/{attachment_file}"
             
             if pdf_downloads < MAX_PDF_DOWNLOADS:
-                print(f"   📄 [{pdf_downloads + 1}/{MAX_PDF_DOWNLOADS}] Extracting PDF: {symbol} | {category}...")
+                print(f"   📄 [{pdf_downloads + 1}/{MAX_PDF_DOWNLOADS}] Parsing PDF: {symbol} | {category}...")
                 pdf_text, _ = extract_pdf_data(session, pdf_url, is_result=(category == "RESULT"))
                 if pdf_text:
                     pdf_downloads += 1
                 time.sleep(1.8)
 
-        # Zero-Blank PDF Guard
+        # Drop if no PDF content was extracted
         if not pdf_text:
             continue
 
@@ -403,7 +416,7 @@ def run_nse_daily_master():
         seen_announcement_hashes.add(item_hash)
 
     # ------------------------------------------------------------
-    # 2. Deep Financial Results (Standard + PDF Breakdown)
+    # 4. Financial Results
     # ------------------------------------------------------------
     raw_results = safe_api_get(
         session, 
@@ -425,14 +438,13 @@ def run_nse_daily_master():
         eps = str(r.get("eps") or r.get("re_eps", "")).strip()
         att_file = str(r.get("attchmntFile", "")).strip()
 
-        if not symbol or (not income and not net_profit):
+        if not symbol or (not income and not net_profit) or not is_within_retention_window(res_date):
             continue
 
         r_hash = generate_hash(f"{symbol}_{period}_{res_date}")
         if r_hash in seen_result_hashes:
             continue
 
-        # Extract deep metrics from statement if PDF is available
         deep_data = {}
         if att_file and pdf_downloads < MAX_PDF_DOWNLOADS:
             pdf_url = att_file if att_file.startswith("http") else f"https://nsearchives.nseindia.com/corporate/{att_file}"
@@ -459,7 +471,7 @@ def run_nse_daily_master():
         seen_result_hashes.add(r_hash)
 
     # ------------------------------------------------------------
-    # 3. Shareholding Patterns & Automatic Change Calculation
+    # 5. Shareholding Patterns
     # ------------------------------------------------------------
     raw_shp = safe_api_get(
         session, 
@@ -469,12 +481,7 @@ def run_nse_daily_master():
     )
     time.sleep(1.5)
 
-    # Fetch Pledged / Encumbrance data
-    raw_pledge = safe_api_get(
-        session, 
-        ENDPOINTS["pledged_data"], 
-        "Pledged Shareholding Feed"
-    )
+    raw_pledge = safe_api_get(session, ENDPOINTS["pledged_data"], "Pledged Feed")
     pledge_map = {}
     for p in raw_pledge:
         sym = str(p.get("symbol", "")).strip()
@@ -494,7 +501,7 @@ def run_nse_daily_master():
         dii_val = clean_num(s.get("dii") or s.get("domesticInstitutions"))
         current_pledge = pledge_map.get(symbol, 0.0)
 
-        if not symbol or as_on_date in ["", "-", "None", "null"]:
+        if not symbol or not is_within_retention_window(as_on_date):
             continue
         if promoter_val is None and public_val is None:
             continue
@@ -503,7 +510,6 @@ def run_nse_daily_master():
         if s_hash in seen_shp_hashes:
             continue
 
-        # Calculate QoQ Changes (Deltas)
         prev = previous_shp_lookup.get(symbol, {})
         promoter_change = round(promoter_val - prev["promoter"], 2) if (promoter_val is not None and prev.get("promoter") is not None) else None
         fii_change = round(fii_val - prev["fii"], 2) if (fii_val is not None and prev.get("fii") is not None) else None
@@ -528,27 +534,35 @@ def run_nse_daily_master():
         seen_shp_hashes.add(s_hash)
 
     # ------------------------------------------------------------
-    # 4. Save Master File
+    # 6. Merge, Purge & Save Clean 3-Day Archive
     # ------------------------------------------------------------
     master_data["last_updated"] = NOW.strftime("%Y-%m-%d %H:%M:%S IST")
-    master_data["corporate_announcements"] = new_announcements + master_data.get("corporate_announcements", [])
-    master_data["financial_results"] = new_results + master_data.get("financial_results", [])
-    master_data["shareholding_patterns"] = new_shp + master_data.get("shareholding_patterns", [])
+    master_data["corporate_announcements"] = new_announcements + master_data["corporate_announcements"]
+    master_data["financial_results"] = new_results + master_data["financial_results"]
+    master_data["shareholding_patterns"] = new_shp + master_data["shareholding_patterns"]
 
-    master_data["corporate_announcements"] = master_data["corporate_announcements"][:3000]
-    master_data["financial_results"] = master_data["financial_results"][:1500]
-    master_data["shareholding_patterns"] = master_data["shareholding_patterns"][:1500]
+    # Final enforcement of 3-day retention
+    master_data["corporate_announcements"] = [
+        a for a in master_data["corporate_announcements"] if is_within_retention_window(a.get("broadcast_date"))
+    ]
+    master_data["financial_results"] = [
+        r for r in master_data["financial_results"] if is_within_retention_window(r.get("result_date"))
+    ]
+    master_data["shareholding_patterns"] = [
+        s for s in master_data["shareholding_patterns"] if is_within_retention_window(s.get("as_on_date"))
+    ]
 
     with open(MASTER_FILE, "w", encoding="utf-8") as f:
         json.dump(master_data, f, ensure_ascii=False, indent=2)
 
     print("\n" + "=" * 80)
-    print("📊 EXTRACTION COMPLETED:")
-    print(f"   • Strategic Filings (with PDF)       : {len(new_announcements)}")
-    print(f"   • Deep Results (EBITDA/PBT/Segments) : {len(new_results)}")
-    print(f"   • Shareholding Records (with Deltas) : {len(new_shp)}")
-    print(f"💾 Clean Master Saved to                : '{MASTER_FILE}'")
+    print("📊 3-DAY SLIDING WINDOW UPDATE COMPLETE:")
+    print(f"   • Fresh Filings Added       : {len(new_announcements)}")
+    print(f"   • Active 3-Day Announcements: {len(master_data['corporate_announcements'])}")
+    print(f"   • Active 3-Day Results      : {len(master_data['financial_results'])}")
+    print(f"   • Active 3-Day Shareholdings: {len(master_data['shareholding_patterns'])}")
+    print(f"💾 Lightweight Master Saved to : '{MASTER_FILE}'")
     print("=" * 80)
 
 if __name__ == "__main__":
-    run_nse_daily_master()
+    run_nse_hourly_master()
