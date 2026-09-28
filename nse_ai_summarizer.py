@@ -221,6 +221,29 @@ def process_corporate_actions_feed():
     print(f"📅 Run Timestamp: {datetime.now(IST).strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
+    # Base structure initialization
+    feed_archive = {
+        "generated_at": datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST"),
+        "worthy_count": 0,
+        "skipped_count": 0,
+        "content_feed": [],
+        "skipped_archive": []
+    }
+
+    # 🛑 CRUCIAL GUARD: Guarantee file existence on disk immediately
+    if not os.path.exists(OUTPUT_FILE):
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(feed_archive, f, ensure_ascii=False, indent=2)
+        print(f"📁 Initialized blank destination file: '{OUTPUT_FILE}'")
+    else:
+        try:
+            with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+                loaded = json.load(f)
+                if isinstance(loaded, dict):
+                    feed_archive = loaded
+        except Exception:
+            pass
+
     if not os.path.exists(INPUT_FILE):
         print(f"❌ Input master file '{INPUT_FILE}' not found! Scraper pehle chalayein.")
         return
@@ -230,23 +253,6 @@ def process_corporate_actions_feed():
 
     announcements = master_data.get("corporate_announcements", [])
     print(f"📦 Loaded {len(announcements)} corporate announcements from '{INPUT_FILE}'")
-
-    feed_archive = {
-        "generated_at": "",
-        "worthy_count": 0,
-        "skipped_count": 0,
-        "content_feed": [],
-        "skipped_archive": []
-    }
-
-    if os.path.exists(OUTPUT_FILE):
-        try:
-            with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-                loaded = json.load(f)
-                if isinstance(loaded, dict):
-                    feed_archive = loaded
-        except Exception:
-            pass
 
     processed_hashes = {item["hash"] for item in feed_archive.get("content_feed", []) if "hash" in item}
     processed_hashes.update({item["hash"] for item in feed_archive.get("skipped_archive", []) if "hash" in item})
@@ -287,7 +293,7 @@ def process_corporate_actions_feed():
         batch_result = call_gemini_with_fallback(prompt_str)
 
         if not batch_result:
-            print(f"⚠️ Batch {batch_counter} skipped due to API exhaustion. Will retry on next hourly run.")
+            print(f"⚠️ Batch {batch_counter} skipped due to API exhaustion. Will retry on next run.")
             i += BATCH_SIZE
             batch_counter += 1
             continue
