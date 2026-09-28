@@ -9,7 +9,7 @@ import requests
 # ============================================================
 
 # Stage 2 Deep Analyst ka final output
-INPUT_FILE = "nse_final_content_feed.json"
+INPUT_FILE = "nse_content_feed.json"
 POSTED_LOG_FILE = "telegram_posted_log.json"
 
 BOT_TOKEN = os.environ.get("TELEGRAM_TOKEN") or os.environ.get("TELEGRAM_BOT_TOKEN")
