@@ -1,7 +1,6 @@
 import os
 import json
 import time
-import html
 from datetime import datetime, timezone, timedelta
 import requests
 
@@ -9,104 +8,20 @@ import requests
 # CONFIGURATION & REPO SECRETS MAPPING
 # ============================================================
 
-INPUT_FILE = "nse_content_feed.json"
+# Stage 2 Deep Analyst ka final output
+INPUT_FILE = "nse_final_content_feed.json"
 POSTED_LOG_FILE = "telegram_posted_log.json"
 
 BOT_TOKEN = os.environ.get("TELEGRAM_TOKEN") or os.environ.get("TELEGRAM_BOT_TOKEN")
 
-# Channel username directly hardcoded so other repo workflows remain untouched
+# Channel username
 CHAT_ID = "@bhaga_657"
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
 # ============================================================
-# MODERN POST BUILDER
+# DISPATCH HELPER
 # ============================================================
-
-CATEGORY_ICONS = {
-    "COMMERCIAL_PRODUCTION": "🏭",
-    "NEW_PRODUCT": "🚀",
-    "ORDER_WIN": "📜",
-    "FINANCIAL_RESULTS": "📊",
-    "RESULT": "📊",
-    "CAPEX": "🏗️",
-    "ACQUISITION": "🤝",
-    "JOINT_VENTURE": "🤝",
-    "GENERAL": "⚡"
-}
-
-def clean_html(text):
-    """Escapes HTML entities to prevent Telegram parse errors."""
-    if not text:
-        return ""
-    return html.escape(str(text).strip())
-
-def build_telegram_post(card):
-    # Agar summarizer ka direct post available hai, prefer that
-    ai_post = card.get("telegram_post")
-    if ai_post and "━━━━━━━━━━━━━━━━━━━━━━" in ai_post:
-        return ai_post
-
-    # Fallback to python-generated structured formatting
-    facts = card.get("facts", {})
-    raw_cat = card.get("category", "CORPORATE_ACTION").upper().replace(" ", "_")
-    cat_icon = CATEGORY_ICONS.get(raw_cat, "⚡")
-    
-    company = clean_html(card.get("company_name") or card.get("symbol", ""))
-    headline = clean_html(card.get("headline", ""))
-    pdf_link = card.get("pdf_link", "")
-
-    # Top Header
-    post = (
-        f"{cat_icon} <b>#{raw_cat}</b>\n"
-        f"🏢 <b>{company}</b>\n"
-        f"<b>{headline}</b>\n"
-        f"━━━━━━━━━━━━━━━━━━━━━━\n\n"
-    )
-
-    # 1. What happened?
-    what_happened = facts.get("what_happened")
-    if what_happened and str(what_happened).lower() not in ["none", "nil", "n/a", "not disclosed"]:
-        post += f"🔹 <b>What happened?</b>\n↳ {clean_html(what_happened)}\n\n"
-
-    # 2. Key details
-    details = []
-    keys_order = [
-        ("what", "What"),
-        ("who", "Who"),
-        ("what_business", "Business"),
-        ("how_much", "Value / Size"),
-        ("when", "Timeline"),
-        ("where", "Location")
-    ]
-    
-    for key, label in keys_order:
-        val = facts.get(key)
-        if val and str(val).lower() not in ["none", "nil", "n/a", "not disclosed", "none disclosed"]:
-            details.append(f"• <b>{label}:</b> {clean_html(val)}")
-
-    if details:
-        post += "🔹 <b>Key Details:</b>\n" + "\n".join(details) + "\n\n"
-
-    # 3. What changes
-    what_changes = facts.get("what_changes")
-    if what_changes and str(what_changes).lower() not in ["none", "nil", "n/a", "not disclosed", "none disclosed"]:
-        post += f"🔹 <b>Impact & What Changes?</b>\n↳ {clean_html(what_changes)}\n\n"
-
-    # 4. Not disclosed (agar material gaps hain)
-    not_disclosed = facts.get("what_is_not_disclosed")
-    if not_disclosed and str(not_disclosed).lower() not in ["none", "nil", "n/a", "", "none disclosed"]:
-        post += f"⚠️ <b>Not Disclosed:</b>\n↳ {clean_html(not_disclosed)}\n\n"
-
-    post += "━━━━━━━━━━━━━━━━━━━━━━\n"
-
-    # 5. Clean clickable source link
-    if pdf_link and pdf_link.startswith("http"):
-        post += f'📌 <b>Source:</b> <a href="{pdf_link}">NSE Corporate Filing</a>'
-    else:
-        post += "📌 <b>Source:</b> NSE Corporate Filing"
-
-    return post
 
 def send_to_telegram(text_payload):
     url = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
@@ -128,9 +43,10 @@ def send_to_telegram(text_payload):
 
 def dispatch_feed():
     print("=" * 80)
-    print("🚀 TELEGRAM CURATED FEED DISPATCHER")
+    print("🚀 TELEGRAM INSTITUTIONAL FEED DISPATCHER")
     print(f"📅 Timestamp: {datetime.now(IST).strftime('%d-%b-%Y %H:%M:%S IST')}")
     print(f"🎯 Target Channel: {CHAT_ID}")
+    print(f"📂 Reading Feed: {INPUT_FILE}")
     print("=" * 80)
 
     if not BOT_TOKEN:
@@ -142,10 +58,14 @@ def dispatch_feed():
         return
 
     with open(INPUT_FILE, "r", encoding="utf-8") as f:
-        feed_data = json.load(f)
+        try:
+            feed_data = json.load(f)
+        except Exception as e:
+            print(f"❌ Error reading JSON: {e}")
+            return
 
     content_cards = feed_data.get("content_feed", [])
-    print(f"📦 Total cards in active content feed: {len(content_cards)}")
+    print(f"📦 Total cards in final content feed: {len(content_cards)}")
 
     posted_hashes = set()
     if os.path.exists(POSTED_LOG_FILE):
@@ -157,6 +77,7 @@ def dispatch_feed():
         except Exception:
             pass
 
+    # Reverse order so older filings in the batch post first, keeping chronological order in Telegram
     pending = [card for card in reversed(content_cards) if card.get("hash") not in posted_hashes]
     print(f"🎯 Fresh unposted corporate actions: {len(pending)}")
 
@@ -168,25 +89,29 @@ def dispatch_feed():
     for card in pending:
         c_hash = card.get("hash")
         sym = card.get("symbol", "")
-        post_text = build_telegram_post(card)
+        post_text = card.get("telegram_post", "")
 
-        print(f"📤 Broadcasting: {sym} — {card.get('headline', '')[:45]}...")
+        if not post_text.strip():
+            print(f"⚠️ Skipping {sym}: Empty telegram_post.")
+            continue
+
+        print(f"📤 Broadcasting: {sym}...")
         success, response_msg = send_to_telegram(post_text)
 
         if success:
             posted_hashes.add(c_hash)
             dispatched += 1
-            time.sleep(3)  # Rate limit threshold safety
+            time.sleep(3)  # Rate limit threshold safety for Telegram API
         else:
             print(f"   ⚠️ Telegram delivery failed for {sym}: {response_msg}")
 
-    # Retain up to 2,000 hashes
+    # Retain up to 2,000 hashes for state deduplication
     pruned_hashes = list(posted_hashes)[-2000:]
     with open(POSTED_LOG_FILE, "w", encoding="utf-8") as f:
         json.dump(pruned_hashes, f, indent=2)
 
     print("\n" + "=" * 80)
-    print(f"✅ DISPATCH COMPLETE: {dispatched} new posts broadcast to Telegram.")
+    print(f"✅ DISPATCH COMPLETE: {dispatched} new institutional notes broadcast to Telegram.")
     print("=" * 80)
 
 if __name__ == "__main__":
