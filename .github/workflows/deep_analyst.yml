@@ -1,0 +1,64 @@
+name: Deep Context Analyst & Grounding Engine
+
+on:
+  # 1. Main pipeline (ya summarizer) complete hote hi auto-trigger
+  workflow_run:
+    workflows: ["Hourly NSE Scraper & AI Summarizer Pipeline"]
+    types:
+      - completed
+
+  # 2. Market hours schedule (Monday to Friday, every 30 minutes)
+  schedule:
+    - cron: '*/30 3-11 * * 1-5'
+
+  # 3. Manual trigger button GitHub UI se
+  workflow_dispatch:
+
+jobs:
+  run-deep-analyst:
+    if: ${{ github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests google-genai groq ddgs duckduckgo-search
+
+      - name: Execute Deep Context Analyst
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GROQ_API_KEY2: ${{ secrets.GROQ_API_KEY2 }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          GOOGLE_API_KEY2: ${{ secrets.GOOGLE_API_KEY2 }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python deep_analyst.py
+
+      - name: Commit and Push Deep Content Feed
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          [ -f nse_final_content_feed.json ] && git add nse_final_content_feed.json
+
+          if git diff --staged --quiet; then
+            echo "ℹ️ Koi naya deep analysis generate nahi hua. Skipping commit."
+          else
+            git commit -m "⚡ Update Final Deep Content Feed [$(date +'%d-%b-%Y %H:%M IST')]"
+            git pull --rebase origin main
+            git push origin main
+          fi
