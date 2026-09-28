@@ -13,7 +13,9 @@ INPUT_FILE = "nse_content_feed.json"
 POSTED_LOG_FILE = "telegram_posted_log.json"
 
 BOT_TOKEN = os.environ.get("TELEGRAM_TOKEN") or os.environ.get("TELEGRAM_BOT_TOKEN")
-CHAT_ID = os.environ.get("TELEGRAM_TO") or os.environ.get("TELEGRAM_CHAT_ID")
+
+# Channel username directly hardcoded so other repo workflows remain untouched
+CHAT_ID = "@bhaga_657"
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -128,10 +130,11 @@ def dispatch_feed():
     print("=" * 80)
     print("🚀 TELEGRAM CURATED FEED DISPATCHER")
     print(f"📅 Timestamp: {datetime.now(IST).strftime('%d-%b-%Y %H:%M:%S IST')}")
+    print(f"🎯 Target Channel: {CHAT_ID}")
     print("=" * 80)
 
-    if not BOT_TOKEN or not CHAT_ID:
-        print("❌ FATAL: 'TELEGRAM_TOKEN' or 'TELEGRAM_TO' missing in GitHub environment.")
+    if not BOT_TOKEN:
+        print("❌ FATAL: 'TELEGRAM_TOKEN' or 'TELEGRAM_BOT_TOKEN' missing in GitHub environment.")
         exit(1)
 
     if not os.path.exists(INPUT_FILE):
