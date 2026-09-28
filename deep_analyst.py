@@ -33,20 +33,19 @@ BATCH_PAUSE_SECONDS = 30  # Har batch ke baad 30 sec cooldown pause
 IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
-# Active Google Models with Search Grounding + Groq Fallback
+# Verified Active Models (Google Search Native + Groq Ultra-Fast Fallback)
 MODEL_REGISTRY = [
     {"name": "gemini-2.5-flash", "provider": "google"},
     {"name": "gemini-2.5-flash-lite", "provider": "google"},
     {"name": "gemini-2.5-pro", "provider": "google"},
-    {"name": "gemini-3.1-flash-lite", "provider": "google"},
-    {"name": "openai/gpt-oss-120b", "provider": "groq"}
+    {"name": "llama-3.3-70b-versatile", "provider": "groq"}
 ]
 
-GROQ_KEYS = [os.environ.get(k).strip() for k in ["GROQ_API_KEY", "GROQ_API_KEY2"] if os.environ.get(k)]
-GOOGLE_KEYS = [os.environ.get(k).strip() for k in ["GOOGLE_API_KEY", "GOOGLE_API_KEY2", "GEMINI_API_KEY"] if os.environ.get(k)]
+GROQ_KEYS = [os.environ.get(k, "").strip() for k in ["GROQ_API_KEY", "GROQ_API_KEY2"] if os.environ.get(k, "").strip()]
+GOOGLE_KEYS = [os.environ.get(k, "").strip() for k in ["GOOGLE_API_KEY", "GOOGLE_API_KEY2", "GEMINI_API_KEY"] if os.environ.get(k, "").strip()]
 
 if not GROQ_KEYS and not GOOGLE_KEYS:
-    print("❌ FATAL: No API keys found! Exiting.")
+    print("❌ FATAL: No API keys found in environment! Check GitHub Secrets.")
     exit(1)
 
 groq_key_idx = 0
@@ -65,51 +64,64 @@ def get_web_search_context(query, max_results=3):
         return ""
 
 # ============================================================
-# CALL ENGINES WITH SEARCH GROUNDING & FALLBACK
+# CALL ENGINES WITH VERIFIED SEARCH GROUNDING
 # ============================================================
 
 def call_google_analyst(model_name, card, system_instruction, prompt_content):
     global google_key_idx
     if not genai or not GOOGLE_KEYS:
-        return None, "Google GenAI missing"
+        return None, "Google GenAI SDK or Keys missing"
 
-    for _ in range(len(GOOGLE_KEYS)):
+    for attempt in range(len(GOOGLE_KEYS)):
+        current_key = GOOGLE_KEYS[google_key_idx]
         try:
-            client = genai.Client(api_key=GOOGLE_KEYS[google_key_idx])
+            client = genai.Client(api_key=current_key)
+            
+            # Universal Google Search Grounding Config
+            search_config = types.GenerateContentConfig(
+                system_instruction=system_instruction,
+                temperature=0.1,
+                tools=[{"google_search": {}}]
+            )
+            
             response = client.models.generate_content(
                 model=model_name,
-                contents=f"{system_instruction}\n\n{prompt_content}",
-                config=types.GenerateContentConfig(
-                    tools=[types.Tool(google_search=types.GoogleSearch())],
-                    temperature=0.1
-                )
+                contents=prompt_content,
+                config=search_config
             )
+            
             if response.text and response.text.strip():
                 return response.text.strip(), None
+            else:
+                return None, "Empty response from Gemini"
+                
         except Exception as e:
             err = str(e)
-            if "429" in err or "RESOURCE_EXHAUSTED" in err:
+            print(f"      [Google API Error on {model_name} | Key {google_key_idx}]: {err[:120]}")
+            if "429" in err or "RESOURCE_EXHAUSTED" in err or "quota" in err.lower():
                 google_key_idx = (google_key_idx + 1) % len(GOOGLE_KEYS)
                 time.sleep(2)
                 continue
             return None, err
-    return None, "Google keys exhausted"
+            
+    return None, "All Google keys exhausted"
 
 def call_groq_analyst(model_name, card, system_instruction, prompt_content):
     global groq_key_idx
     if not Groq or not GROQ_KEYS:
-        return None, "Groq missing"
+        return None, "Groq SDK or Keys missing"
 
     symbol = card.get("symbol", "")
     reqs = card.get("research_requirements", [])
-    search_queries = f"{symbol} share {reqs[0]}" if reqs else f"{symbol} latest revenue and capacity"
+    search_queries = f"{symbol} share {reqs[0]}" if reqs else f"{symbol} revenue capacity"
     web_snippets = get_web_search_context(search_queries)
 
     enhanced_prompt = f"{prompt_content}\n\nVERIFIED WEB SEARCH RESULTS (GROUND TRUTH):\n{web_snippets}"
 
-    for _ in range(len(GROQ_KEYS)):
+    for attempt in range(len(GROQ_KEYS)):
+        current_key = GROQ_KEYS[groq_key_idx]
         try:
-            client = Groq(api_key=GROQ_KEYS[groq_key_idx])
+            client = Groq(api_key=current_key)
             completion = client.chat.completions.create(
                 model=model_name,
                 messages=[
@@ -123,19 +135,22 @@ def call_groq_analyst(model_name, card, system_instruction, prompt_content):
                 return content.strip(), None
         except Exception as e:
             err = str(e)
+            print(f"      [Groq API Error on {model_name} | Key {groq_key_idx}]: {err[:120]}")
             if "429" in err or "rate_limit" in err.lower():
                 groq_key_idx = (groq_key_idx + 1) % len(GROQ_KEYS)
                 time.sleep(2)
                 continue
             return None, err
-    return None, "Groq keys exhausted"
+            
+    return None, "All Groq keys exhausted"
 
 def call_hybrid_analyst(card, system_instruction, prompt_content):
     global current_model_idx
     total = len(MODEL_REGISTRY)
+    idx = 0
 
-    while current_model_idx < total:
-        target = MODEL_REGISTRY[current_model_idx]
+    while idx < total:
+        target = MODEL_REGISTRY[idx]
         m_name = target["name"]
         provider = target["provider"]
 
@@ -147,20 +162,18 @@ def call_hybrid_analyst(card, system_instruction, prompt_content):
         if res:
             return res
 
-        print(f"   ⚠️ Fail on {m_name} ({provider}). Switching to fallback model...")
-        current_model_idx += 1
+        print(f"   ⚠️ Fail on {m_name} ({provider}). Reason: {err}")
+        idx += 1
 
-    time.sleep(15)
-    current_model_idx = 0
     return None
 
 # ============================================================
-# MAIN ORCHESTRATOR WITH 30s BATCH COOLDOWN
+# MAIN ORCHESTRATOR WITH BATCHING
 # ============================================================
 
 def process_deep_feed():
     print("=" * 80)
-    print("🧠 STAGE 2: BATCHED DEEP CONTEXT ANALYST (GOOGLE SEARCH)")
+    print("🧠 STAGE 2: BATCHED DEEP CONTEXT ANALYST (GOOGLE SEARCH GROUNDED)")
     print(f"📅 Timestamp: {NOW.strftime('%d-%b-%Y %H:%M:%S IST')}")
     print("=" * 80)
 
@@ -200,12 +213,12 @@ def process_deep_feed():
         print("✅ Everything up to date. Exiting cleanly.")
         return
 
-    system_instruction = """
-You are a senior institutional equity research editor.
-Your job is to analyze corporate announcements by contextualizing them against the company's existing business scale.
-CRITICAL: You MUST use the Google Search tool to look up the company's real annual revenue, past capex, existing capacity, or segment metrics. Do not rely solely on the prompt text.
-Output strictly Telegram-compatible HTML tags: <b>, <i>, <a>, <code>. Do not use Markdown asterisks (*).
-"""
+    system_instruction = (
+        "You are an institutional equity research analyst covering Indian equities (NSE).\n"
+        "Ground your analysis with web search results for the target requirements.\n"
+        "Never invent baseline revenue or capacity. If unverified, state: 'Baseline numbers not disclosed or verified.'\n"
+        "Output strictly valid Telegram HTML format (<b>, <i>, <a>). Do NOT use markdown asterisks (*)."
+    )
 
     category_icons = {
         "COMMERCIAL_PRODUCTION": "🏭",
@@ -254,14 +267,12 @@ HEADLINE: {headline}
 VERIFIED FILING SUMMARY:
 {summary_text}
 
-TARGET SEARCH REQUIREMENTS (SEARCH THE WEB FOR THESE):
+TARGET SEARCH REQUIREMENTS (SEARCH WEB TO VERIFY):
 {reqs_list}
 
 TASK:
-1. Search Google explicitly for:
-   - "{company} annual revenue"
-   - "{company} capacity / order book"
-2. Synthesize an institutional research post adhering to this exact layout:
+1. Search the web for {company} (NSE: {symbol}) latest annual revenue and business capacity scale.
+2. Produce an institutional research post strictly matching this exact layout:
 
 {cat_icon} <b>#{clean_cat_tag} | INSTITUTIONAL NOTE</b>
 🏢 <b>{company} (NSE: {symbol})</b>
@@ -308,9 +319,9 @@ TASK:
             existing_hashes.add(c_hash)
             dispatched += 1
 
-            time.sleep(3)  # Small breather between items within batch
+            time.sleep(3)
 
-        # Continuous save after every batch
+        # Batch complete hone par auto-save
         final_feed["total_posts"] = len(final_feed["content_feed"])
         final_feed["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
@@ -319,9 +330,8 @@ TASK:
         i += BATCH_SIZE
         batch_counter += 1
 
-        # Pause strictly between batches
         if i < len(pending_cards):
-            print(f"⏳ Cooldown pause of {BATCH_PAUSE_SECONDS}s before next batch to protect rate limits...")
+            print(f"⏳ Cooldown pause of {BATCH_PAUSE_SECONDS}s before next batch...")
             time.sleep(BATCH_PAUSE_SECONDS)
 
     print("\n" + "=" * 80)
