@@ -10,9 +10,6 @@ IST = timezone(timedelta(hours=5, minutes=30))
 NOW = datetime.now(IST)
 
 def download_bhavcopy_for_date(target_date):
-    """
-    Downloads NSE Bhavcopy for a specific date if available.
-    """
     trade_date_str = target_date.strftime("%d%m%Y")
     iso_date_str = target_date.strftime("%Y-%m-%d")
     url = f"https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_{trade_date_str}.csv"
@@ -31,9 +28,6 @@ def download_bhavcopy_for_date(target_date):
     return None, None
 
 def save_compact_one_liner_json(data, filepath):
-    """
-    Saves clean one-liner JSON structure.
-    """
     lines = ["{"]
     symbols = sorted(data.keys())
     for s_idx, sym in enumerate(symbols):
@@ -48,34 +42,29 @@ def save_compact_one_liner_json(data, filepath):
 
 def backfill_last_10_trading_days():
     print("=" * 75)
-    print("⏳ FETCHING LAST 10 ACTIVE TRADING SESSIONS FROM NSE BHAVCOPY...")
+    print("⏳ FETCHING LAST 10 SESSIONS (STRICT EQ & HIGH-LIQUIDITY ONLY)...")
     print("=" * 75)
 
     valid_sessions = []
-    # Pichle 25 dinon mein check karenge taaki 10 working days mil sakein
     for days_back in range(0, 25):
         target_date = NOW - timedelta(days=days_back)
-        if target_date.weekday() in (5, 6):  # Skip Saturday & Sunday
+        if target_date.weekday() in (5, 6):
             continue
 
         csv_text, iso_date = download_bhavcopy_for_date(target_date)
         if csv_text:
-            print(f"  ✅ Found Session {len(valid_sessions) + 1}/10: {iso_date}")
+            print(f"  ✅ Session {len(valid_sessions) + 1}/10: {iso_date}")
             valid_sessions.append((iso_date, csv_text))
             if len(valid_sessions) == 10:
                 break
-        else:
-            print(f"  ⏭️ No data for: {target_date.strftime('%Y-%m-%d')} (Holiday/Pending)")
 
     if len(valid_sessions) < 10:
-        print(f"\n⚠️ Sirf {len(valid_sessions)} sessions mile. Jitna mila hai utna process kar rahe hain...")
+        print(f"\n⚠️ Total {len(valid_sessions)} sessions available. Processing...")
 
-    # Data ko chronological order mein sort karein (Purana din pehle, Aaj ka din aakhir mein)
     valid_sessions.reverse()
-
     history_data = {}
 
-    print("\n⚙️ Processing & Applying Liquidity Filters...")
+    print("\n⚙️ Filtering SME, Penny (<₹100) & Illiquid Counters...")
 
     for iso_date_str, csv_text in valid_sessions:
         reader = csv.DictReader(io.StringIO(csv_text))
@@ -85,8 +74,13 @@ def backfill_last_10_trading_days():
             symbol = clean_row.get("SYMBOL", "")
             series = clean_row.get("SERIES", "")
 
-            # 1. Filter: Series EQ Only
-            if series != "EQ" or symbol.endswith("BEES") or symbol.endswith("ETF"):
+            # 1. STRICT SERIES FILTER: Sirf standard EQ allowed
+            # Block SME ('SM', 'ST'), Trade-to-trade ('BE', 'BZ'), Index/Mutual funds ('GB', 'GS')
+            if series != "EQ":
+                continue
+
+            # Block ETFs, Gold Bees, Liquid Bees
+            if any(symbol.endswith(suffix) for suffix in ["BEES", "ETF", "NIFTY", "LIQUID"]):
                 continue
 
             try:
@@ -100,11 +94,11 @@ def backfill_last_10_trading_days():
             except (ValueError, TypeError):
                 continue
 
-            # 2. Strict Filter: Close >= ₹100, Volume >= 10k, Turnover >= ₹25 Lakh
-            if close_px < 100.0 or traded_qty < 10000 or turnover_lacs < 25.0:
+            # 2. LIQUIDITY & PRICE THRESHOLDS:
+            # Price >= 100, Volume >= 50,000 shares, Turnover >= ₹50 Lakhs
+            if close_px < 100.0 or traded_qty < 50000 or turnover_lacs < 50.0:
                 continue
 
-            # Record: [date, open, high, low, close, volume, deliv_pct]
             record = [
                 iso_date_str,
                 round(open_px, 2),
@@ -118,21 +112,20 @@ def backfill_last_10_trading_days():
             if symbol not in history_data:
                 history_data[symbol] = []
 
-            # Avoid duplicates
             history_data[symbol] = [e for e in history_data[symbol] if e[0] != iso_date_str]
             history_data[symbol].append(record)
 
-    # Sirf wahi stocks retain karein jinke paas full active 10 sessions ka data ho
+    # Retain stocks that maintain liquidity across all 10 sessions
     final_history = {k: v[-10:] for k, v in history_data.items() if len(v) >= 10}
 
     save_compact_one_liner_json(final_history, OUTPUT_HISTORY_FILE)
 
     file_size_kb = os.path.getsize(OUTPUT_HISTORY_FILE) / 1024
     print("=" * 75)
-    print(f"🎉 10-DAY DATA POPULATED SUCCESSFULLY!")
-    print(f"   • Total Active Liquid Stocks (With 10 Sessions) : {len(final_history)}")
-    print(f"   • Saved to File                                  : '{OUTPUT_HISTORY_FILE}'")
-    print(f"   • File Size                                      : {file_size_kb:.1f} KB")
+    print(f"🎉 10-DAY CLEAN LIQUID DATA BUILT!")
+    print(f"   • Qualified High-Liquid Stocks : {len(final_history)}")
+    print(f"   • Output Destination           : '{OUTPUT_HISTORY_FILE}'")
+    print(f"   • Database Size                : {file_size_kb:.1f} KB")
     print("=" * 75)
 
 if __name__ == "__main__":
