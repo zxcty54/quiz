@@ -440,7 +440,6 @@ def process_corporate_actions_feed():
         feed_archive["skipped_count"] = len(feed_archive["skipped_archive"])
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(feed_archive, f, ensure_ascii=False, indent=2)
-        # Pending na hone par bhi target repo par updated retention/sync push karein
         push_to_target_repo()
         return
 
@@ -521,4 +520,27 @@ def process_corporate_actions_feed():
 
         feed_archive["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
         feed_archive["worthy_count"] = len(feed_archive["content_feed"])
-        feed_archive["skipped_count"] = len(feed_archive
+        feed_archive["skipped_count"] = len(feed_archive["skipped_archive"])
+
+        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+            json.dump(feed_archive, f, ensure_ascii=False, indent=2)
+
+        i += BATCH_SIZE
+        batch_counter += 1
+
+        if i < len(candidates):
+            print(f"⏳ Cooling down {BATCH_PAUSE_SECONDS}s to avoid rate limits...")
+            time.sleep(BATCH_PAUSE_SECONDS)
+
+    print("\n" + "=" * 80)
+    print("✅ WORKFLOW COMPLETE:")
+    print(f"   • Active Posts in Feed : {feed_archive['worthy_count']}")
+    print(f"   • Filtered Records     : {len(feed_archive['skipped_archive'])}")
+    print(f"💾 File Saved to          : '{OUTPUT_FILE}'")
+    print("=" * 80)
+
+    # Automatically sync final output to target app repo
+    push_to_target_repo()
+
+if __name__ == "__main__":
+    process_corporate_actions_feed()
