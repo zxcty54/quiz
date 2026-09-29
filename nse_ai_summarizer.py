@@ -310,7 +310,7 @@ def push_to_target_repo():
         file_bytes = f.read()
 
     b64_content = base64.b64encode(file_bytes).decode("utf-8")
-    api_url = f"[https://api.github.com/repos/](https://api.github.com/repos/){TARGET_REPO}/contents/{TARGET_FILE_PATH}"
+    api_url = f"https://api.github.com/repos/{TARGET_REPO}/contents/{TARGET_FILE_PATH}"
 
     headers = {
         "Authorization": f"Bearer {token}",
@@ -339,7 +339,7 @@ def push_to_target_repo():
     try:
         put_res = requests.put(api_url, headers=headers, json=payload, timeout=20)
         if put_res.status_code in [200, 201]:
-            print(f"✅ Target repo updated successfully: [https://github.com/](https://github.com/){TARGET_REPO}/blob/{TARGET_BRANCH}/{TARGET_FILE_PATH}")
+            print(f"✅ Target repo updated successfully: https://github.com/{TARGET_REPO}/blob/{TARGET_BRANCH}/{TARGET_FILE_PATH}")
         else:
             print(f"❌ Target repo push failed with status {put_res.status_code}: {put_res.text}")
     except Exception as e:
