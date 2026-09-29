@@ -2,7 +2,9 @@ import os
 import json
 import time
 import re
+import base64
 from datetime import datetime, timezone, timedelta
+import requests
 
 try:
     from groq import Groq
@@ -21,6 +23,10 @@ except ImportError:
 
 INPUT_FILE = "nse_corporate_master.json"
 OUTPUT_FILE = "nse_content_feed.json"
+
+TARGET_REPO = "zxcty54/stock-crypto-tracker"
+TARGET_FILE_PATH = "nse_content_feed.json"
+TARGET_BRANCH = "main"
 
 BATCH_SIZE = 2
 BATCH_PAUSE_SECONDS = 20
@@ -142,10 +148,10 @@ General Layout:
 ━━━━━━━━━━━━━━━━━━━━━━
 
 🔹 <b>Key Details:</b>
-• <b>{Field}:</b> {Value}
-• <b>{Field}:</b> {Value}
-• <b>{Field}:</b> {Value}
-• <b>{Field}:</b> {Value}
+- <b>{Field}:</b> {Value}
+- <b>{Field}:</b> {Value}
+- <b>{Field}:</b> {Value}
+- <b>{Field}:</b> {Value}
 
 📌 <b>What happened:</b>
 ↳ {1-2 concise factual sentences based strictly on filing}
@@ -284,6 +290,62 @@ def call_hybrid_ai(batch_prompt):
     return None
 
 # ============================================================
+# TARGET REPO DISPATCHER (PUSH VIA GITHUB REST API)
+# ============================================================
+
+def push_to_target_repo():
+    """Pushes OUTPUT_FILE to target repository using GH_PAT_TOKEN via GitHub REST API."""
+    token = os.environ.get("GH_PAT_TOKEN", "").strip()
+    if not token:
+        print("⚠️ GH_PAT_TOKEN not found in environment. Skipping cross-repo push.")
+        return
+
+    if not os.path.exists(OUTPUT_FILE):
+        print(f"⚠️ {OUTPUT_FILE} not found. Nothing to push.")
+        return
+
+    print(f"\n🚀 Direct-Pushing '{OUTPUT_FILE}' to target repo ({TARGET_REPO})...")
+
+    with open(OUTPUT_FILE, "rb") as f:
+        file_bytes = f.read()
+
+    b64_content = base64.b64encode(file_bytes).decode("utf-8")
+    api_url = f"[https://api.github.com/repos/](https://api.github.com/repos/){TARGET_REPO}/contents/{TARGET_FILE_PATH}"
+
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Accept": "application/vnd.github+json",
+        "User-Agent": "NSE-AI-Sync-Engine"
+    }
+
+    # 1. Fetch current blob SHA if the file already exists in target repo
+    sha = None
+    try:
+        check_res = requests.get(api_url, headers=headers, params={"ref": TARGET_BRANCH}, timeout=15)
+        if check_res.status_code == 200:
+            sha = check_res.json().get("sha")
+    except Exception as e:
+        print(f"⚠️ Warning while fetching existing SHA: {e}")
+
+    # 2. Commit and Overwrite the file on target repo
+    payload = {
+        "message": f"⚡ Auto-Feed Sync: Corporate Updates [{(datetime.now(IST)).strftime('%d-%b-%Y %H:%M IST')}]",
+        "content": b64_content,
+        "branch": TARGET_BRANCH
+    }
+    if sha:
+        payload["sha"] = sha
+
+    try:
+        put_res = requests.put(api_url, headers=headers, json=payload, timeout=20)
+        if put_res.status_code in [200, 201]:
+            print(f"✅ Target repo updated successfully: [https://github.com/](https://github.com/){TARGET_REPO}/blob/{TARGET_BRANCH}/{TARGET_FILE_PATH}")
+        else:
+            print(f"❌ Target repo push failed with status {put_res.status_code}: {put_res.text}")
+    except Exception as e:
+        print(f"❌ Error during target repo push: {e}")
+
+# ============================================================
 # MAIN ORCHESTRATOR
 # ============================================================
 
@@ -378,6 +440,8 @@ def process_corporate_actions_feed():
         feed_archive["skipped_count"] = len(feed_archive["skipped_archive"])
         with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
             json.dump(feed_archive, f, ensure_ascii=False, indent=2)
+        # Pending na hone par bhi target repo par updated retention/sync push karein
+        push_to_target_repo()
         return
 
     total_batches = (len(candidates) + BATCH_SIZE - 1) // BATCH_SIZE
@@ -457,24 +521,4 @@ def process_corporate_actions_feed():
 
         feed_archive["generated_at"] = datetime.now(IST).strftime("%Y-%m-%d %H:%M:%S IST")
         feed_archive["worthy_count"] = len(feed_archive["content_feed"])
-        feed_archive["skipped_count"] = len(feed_archive["skipped_archive"])
-
-        with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-            json.dump(feed_archive, f, ensure_ascii=False, indent=2)
-
-        i += BATCH_SIZE
-        batch_counter += 1
-
-        if i < len(candidates):
-            print(f"⏳ Cooling down {BATCH_PAUSE_SECONDS}s to avoid rate limits...")
-            time.sleep(BATCH_PAUSE_SECONDS)
-
-    print("\n" + "=" * 80)
-    print("✅ WORKFLOW COMPLETE:")
-    print(f"   • Active Posts in Feed : {feed_archive['worthy_count']}")
-    print(f"   • Filtered Records     : {feed_archive['skipped_archive'].__len__()}")
-    print(f"💾 File Saved to          : '{OUTPUT_FILE}'")
-    print("=" * 80)
-
-if __name__ == "__main__":
-    process_corporate_actions_feed()
+        feed_archive["skipped_count"] = len(feed_archive
