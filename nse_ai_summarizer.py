@@ -40,8 +40,8 @@ CUTOFF_24H_ANALYZED = NOW - timedelta(hours=24)
 MODEL_REGISTRY = [
     {"name": "openai/gpt-oss-20b", "provider": "groq"},
     {"name": "openai/gpt-oss-120b", "provider": "groq"},
-    {"name": "gemini-2.5-flash", "provider": "google"},
-    {"name": "gemini-2.5-flash-lite", "provider": "google"}
+    {"name": "gemini-3.5-flash-lite", "provider": "google"},
+    {"name": "gemini-3.1-flash-lite", "provider": "google"}
 ]
 
 GROQ_KEYS = [os.environ.get(k).strip() for k in ["GROQ_API_KEY", "GROQ_API_KEY2"] if os.environ.get(k)]
