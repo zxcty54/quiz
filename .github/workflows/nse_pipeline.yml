@@ -2,9 +2,8 @@ name: Hourly NSE Scraper & AI Summarizer Pipeline
 
 on:
   schedule:
-    # Monday to Friday market hours (09:00 AM to 05:00 PM IST)
-    # Cron in UTC: 03:30, 04:30, 05:30, 06:30, 07:30, 08:30, 09:30, 10:30, 11:30
-    - cron: '30 3-11 * * 1-5'
+    # 24 ghante har 30 minute par chalega (All day, every day)
+    - cron: '*/30 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -39,7 +38,7 @@ jobs:
           GROQ_API_KEY2: ${{ secrets.GROQ_API_KEY2 }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           GOOGLE_API_KEY2: ${{ secrets.GOOGLE_API_KEY2 }}
-          GH_PAT_TOKEN: ${{ secrets.GH_PAT_TOKEN }} # 👈 Target repo me push karne ke liye add kiya gaya
+          GH_PAT_TOKEN: ${{ secrets.GH_PAT_TOKEN }}
         run: |
           python nse_ai_summarizer.py
 
