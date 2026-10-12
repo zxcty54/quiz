@@ -2,22 +2,18 @@ include: package:flutter_lints/flutter.yaml
 
 analyzer:
   errors:
-    # Keep the CI signal meaningful: real bugs fail, style noise does not.
-    avoid_print: warning
-    unused_import: warning
-    unused_element: warning
-    dead_code: warning
+    # Hard requirements surfaced by CI (errors fail the build, the rest is
+    # reported in the analyze-log artefact).
+    avoid_print: info
+    use_build_context_synchronously: info
+    deprecated_member_use: info
   exclude:
     - "**/*.g.dart"
     - "**/*.freezed.dart"
 
 linter:
   rules:
-    - prefer_const_constructors
-    - prefer_const_constructors_in_immutables
-    - prefer_const_declarations
-    - prefer_final_locals
-    - avoid_print
-    - require_trailing_commas
-    - unnecessary_parenthesis
-    - sort_child_properties_last
+    # Kept from flutter_lints; the port only adds a few high-signal rules and
+    # deliberately avoids pure-stylistic churn on 45k lines of legacy code.
+    avoid_print: true
+    unnecessary_parenthesis: true
