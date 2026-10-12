@@ -468,12 +468,16 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
                     children: [
                       Icon(Icons.folder_open_rounded, color: Colors.white, size: 16),
                       SizedBox(width: 6),
-                      Text(
-                        'Browse Full E-Library & Vault',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 13,
-                          fontWeight: FontWeight.w600,
+                      Flexible(
+                        child: Text(
+                          'Browse Full E-Library & Vault',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 13,
+                            fontWeight: FontWeight.w600,
+                          ),
                         ),
                       ),
                     ],

@@ -278,14 +278,19 @@ class _DonationWidgetState extends State<DonationWidget>
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
-                      'Monthly Server Fund Goal',
-                      style: TextStyle(
-                        fontSize: 11.5,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
+                    Expanded(
+                      child: Text(
+                        'Monthly Server Fund Goal',
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 11.5,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
+                    SizedBox(width: 8),
                     Text(
                       '₹0 / ₹6,500',
                       style: TextStyle(
@@ -313,10 +318,20 @@ class _DonationWidgetState extends State<DonationWidget>
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('0% Funded This Month',
-                        style: TextStyle(fontSize: 10, color: Color(0xFFA7F3D0), fontWeight: FontWeight.bold)),
-                    Text('⚡ ₹6,500 Remaining',
-                        style: TextStyle(fontSize: 10, color: Color(0xFFFCA5A5), fontWeight: FontWeight.bold)),
+                    Flexible(
+                      child: Text('0% Funded This Month',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(fontSize: 10, color: Color(0xFFA7F3D0), fontWeight: FontWeight.bold)),
+                    ),
+                    SizedBox(width: 6),
+                    Flexible(
+                      child: Text('⚡ ₹6,500 Remaining',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.end,
+                          style: TextStyle(fontSize: 10, color: Color(0xFFFCA5A5), fontWeight: FontWeight.bold)),
+                    ),
                   ],
                 ),
               ],

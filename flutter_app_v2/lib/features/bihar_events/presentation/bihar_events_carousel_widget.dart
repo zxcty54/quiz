@@ -1107,19 +1107,25 @@ class _EventCommunityUpdatesWidgetState
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
-              children: [
-                const Icon(Icons.forum_rounded, size: 18, color: Color(0xFFB45309)),
-                const SizedBox(width: 8),
-                Text(
-                  'Live Ground Updates & Tips',
-                  style: TextStyle(
-                    fontSize: 14,
-                    fontWeight: FontWeight.w800,
-                    color: isDark ? Colors.white : const Color(0xFF1E293B),
+            Expanded(
+              child: Row(
+                children: [
+                  const Icon(Icons.forum_rounded, size: 18, color: Color(0xFFB45309)),
+                  const SizedBox(width: 8),
+                  Flexible(
+                    child: Text(
+                      'Live Ground Updates & Tips',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w800,
+                        color: isDark ? Colors.white : const Color(0xFF1E293B),
+                      ),
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
             IconButton(
               icon: const Icon(Icons.refresh_rounded, size: 18),

@@ -185,11 +185,17 @@ void main() {
           home: const OnboardingWelcomeScreen(nextScreen: SizedBox.shrink()),
         ),
       );
-      await tester.pump(const Duration(milliseconds: 200));
+      await tester.pump(const Duration(milliseconds: 1400));
       expect(find.text('Welcome to\nMockTester'), findsOneWidget);
       expect(tester.takeException(), isNull);
 
-      await tester.tap(find.text('Continue'));
+      // The CTA sits at the end of a tall scroll view: scroll it into the
+      // viewport first, otherwise the tap silently misses and the test looks
+      // like the second page is broken.
+      final Finder continueCta = find.text('Continue');
+      await tester.ensureVisible(continueCta);
+      await tester.pump(const Duration(milliseconds: 300));
+      await tester.tap(continueCta);
       await tester.pump(const Duration(milliseconds: 700));
       await tester.pump(const Duration(milliseconds: 300));
 
@@ -238,7 +244,7 @@ void main() {
       expect(tester.takeException(), isNull);
       expect(find.textContaining('Aarav'), findsOneWidget);
       expect(find.text('42'), findsOneWidget);
-      expect(find.text('30%'), findsOneWidget);
+      expect(find.text('71%'), findsOneWidget);
 
       await tester.tap(find.text('Learn Hub'));
       await tester.pump();

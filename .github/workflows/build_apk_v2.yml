@@ -141,8 +141,30 @@ jobs:
           log = pathlib.Path('test.log')
           text = log.read_text(errors='replace') if log.exists() else '(no test.log)'
           lines = text.splitlines()
-          keep = [l for l in lines if '[E]' in l or l.startswith('  ') or 'Expected:' in l]
-          body = '\n'.join((keep or lines)[-400:])
+
+          # 1. the compact defect summary, when the widget test printed one
+          summary = []
+          s = next((i for i, l in enumerate(lines) if l.startswith('==== UI DEFECTS')), None)
+          if s is not None:
+              e = next((i for i, l in enumerate(lines)
+                        if l.startswith('==== END UI DEFECTS')), len(lines))
+              summary = lines[s:e]
+
+          # 2. id and body of every RenderFlex/overflow error, from the whole log
+          #    (the old tail-only dump was hiding every failure but the last few)
+          rows = []
+          for i, l in enumerate(lines):
+              if 'Row:file:' in l or 'Column:file:' in l or 'creator:' in l:
+                  rows.append(l.rstrip())
+              elif 'overflowed by' in l and l.strip().startswith(('A RenderFlex', 'RenderFlex')):
+                  rows.append('>> ' + l.strip())
+
+          # 3. every failing test id plus its reason line
+          fails = [l.rstrip() for l in lines if l.rstrip().endswith('[E]')]
+          body = '\n'.join(summary + ['', '--- offending render objects ---'] + rows
+                           + ['', '--- failing tests ---'] + fails)
+          if not body.strip():
+              body = '\n'.join(lines[-200:])
           json.dump({
               'name': 'flutter-test-log',
               'head_sha': os.environ['GITHUB_SHA'],
@@ -151,7 +173,7 @@ jobs:
               'output': {
                   'title': 'flutter test log',
                   'summary': 'Failing widget/unit tests with their reasons.',
-                  'text': '```text\n' + body[-60000:] + '\n```',
+                  'text': '```text\n' + body[:65000] + '\n```',
               },
           }, open('/dev/stdout', 'w'))
           PYEOF

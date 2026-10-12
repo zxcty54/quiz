@@ -81,8 +81,10 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          // Top Badges Row
-          Row(
+          // Top Badges Row - wraps instead of overflowing on narrow screens
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
             children: [
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -108,7 +110,6 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
                   ],
                 ),
               ),
-              const SizedBox(width: 8),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                 decoration: BoxDecoration(
@@ -138,13 +139,17 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
           // Title
           const Row(
             children: [
-              Text(
-                'Challenge Your Friend ',
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: -0.3,
+              Flexible(
+                child: Text(
+                  'Challenge Your Friend ',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w900,
+                    letterSpacing: -0.3,
+                  ),
                 ),
               ),
               Text('🎯', style: TextStyle(fontSize: 18)),

@@ -78,7 +78,10 @@ class AppGlobalFeedbackCard extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
+                      Wrap(
+                        spacing: 6,
+                        runSpacing: 4,
+                        crossAxisAlignment: WrapCrossAlignment.center,
                         children: [
                           Text(
                             'Share Idea / Feedback',
@@ -88,7 +91,6 @@ class AppGlobalFeedbackCard extends StatelessWidget {
                               color: isDark ? const Color(0xFFFDE68A) : const Color(0xFF92400E),
                             ),
                           ),
-                          const SizedBox(width: 6),
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 1.5),
                             decoration: BoxDecoration(

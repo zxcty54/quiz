@@ -206,9 +206,13 @@ class _RevisionCurrentAffairsCardState extends State<RevisionCurrentAffairsCard>
           children: [
             Row(
               children: [
-                const Text('Current Affairs Vault',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold, fontSize: 15, color: brandPurple)),
+                const Flexible(
+                  child: Text('Current Affairs Vault',
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, fontSize: 15, color: brandPurple)),
+                ),
                 const SizedBox(width: 8),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
@@ -239,14 +243,19 @@ class _RevisionCurrentAffairsCardState extends State<RevisionCurrentAffairsCard>
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Select Month:',
-                style: TextStyle(
-                  fontSize: 12,
-                  fontWeight: FontWeight.w700,
-                  color: isDark ? Colors.white70 : const Color(0xFF334155),
+              Expanded(
+                child: Text(
+                  'Select Month:',
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.w700,
+                    color: isDark ? Colors.white70 : const Color(0xFF334155),
+                  ),
                 ),
               ),
+              const SizedBox(width: 8),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
                 decoration: BoxDecoration(

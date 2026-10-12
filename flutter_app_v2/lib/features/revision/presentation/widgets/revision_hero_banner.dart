@@ -128,8 +128,13 @@ class RevisionHeroBanner extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              // Wraps to a second line on narrow/short widths instead of
+              // running the exam tags off the card.
+              Wrap(
+                alignment: WrapAlignment.spaceBetween,
+                crossAxisAlignment: WrapCrossAlignment.center,
+                spacing: 8,
+                runSpacing: 8,
                 children: [
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 3.5),
