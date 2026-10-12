@@ -196,7 +196,7 @@ class _DemoLauncherScreenState extends State<DemoLauncherScreen> {
             icon: Icons.palette_outlined,
             gradient: AppGradients.brand,
                         title: '🎨 Widget Gallery',
-            subtitle: 'All 45+ widgets rendered with fixture data',
+            subtitle: 'Every app widget rendered with fixture data',
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute<void>(
