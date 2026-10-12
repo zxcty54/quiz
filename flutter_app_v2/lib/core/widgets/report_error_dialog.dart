@@ -1,6 +1,8 @@
 // v1 source: flutter_app/lib/widgets/report_error_dialog.dart
 import 'package:flutter/material.dart';
 
+import 'package:mocktester_v2/core/services/telemetry/telegram_service.dart';
+
 class ReportErrorDialog extends StatefulWidget {
   final String fileName;
   final int questionIndex;

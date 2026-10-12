@@ -116,7 +116,7 @@ class DemoScreenDirectoryScreen extends StatelessWidget {
           ), '10-question sprint from CDN JSON'),
       _ScreenEntry('ChapterSelectScreen', Icons.list_alt, () => ChapterSelectScreen(
             categoryTitle: 'Demo Category',
-            chapterMapping: DemoFixtures.subjectMapping,
+            chapterMapping: DemoFixtures.chapterMapping,
           ), 'Legacy chapter picker'),
       _ScreenEntry('SubjectDirectoryScreen', Icons.folder_open, () => SubjectDirectoryScreen(
             title: 'Demo Directory',

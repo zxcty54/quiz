@@ -108,10 +108,20 @@ class DemoFixtures {
   };
 
   // ------------------------------------------------------------ learn data --
-  static final List<LearnCharacter> characters = <LearnCharacter>[
-    LearnCharacter(name: 'Aarav', role: 'teacher', avatar: '👨‍🏫'),
-    LearnCharacter(name: 'Meera', role: 'student', avatar: '👩‍🎓'),
-  ];
+  /// Keyed by speaker name: the learn widgets look characters up with
+  /// `characters[message.speaker]`.
+  static final Map<String, LearnCharacter> characters = <String, LearnCharacter>{
+    'Aarav': LearnCharacter(name: 'Aarav', role: 'teacher', avatar: '👨‍🏫'),
+    'Meera': LearnCharacter(name: 'Meera', role: 'student', avatar: '👩‍🎓'),
+  };
+
+  /// `ChapterSelectScreen` wants chapter title → JSON path, which is a
+  /// different shape from [subjectMapping] (subject → mapping file).
+  static const Map<String, String> chapterMapping = <String, String>{
+    'Modern History — Set 1': 'History/modern_set1.json',
+    'Indian Polity — Set 1': 'Polity/polity_set1.json',
+    'Bihar Special — Set 1': 'Bihar/bihar_set1.json',
+  };
 
   static final LearnCardModel chatCard = LearnCardModel(
     cardId: 'demo-chat-1',

@@ -358,9 +358,7 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
         ),
         _GalleryEntry(
           'LatexText',
-          (_) => const LatexText(
-            text: r'The area of a circle is $A = \pi r^2$.',
-          ),
+          (_) => const LatexText(r'The area of a circle is $A = \pi r^2$.'),
         ),
         _GalleryEntry(
           'MathFormattedText',

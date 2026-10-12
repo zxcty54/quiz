@@ -54,24 +54,33 @@ jobs:
         working-directory: flutter_app_v2
         run: |
           set +e
-          flutter analyze --no-fatal-warnings --no-fatal-infos --write=analyze.log
-          echo "analyze exit: $?"
+          flutter analyze --no-fatal-warnings --no-fatal-infos --write=analyze.log \
+            > analyze.stdout.log 2>&1
+          status=$?
+          echo "analyze exit: $status"
+          cat analyze.log analyze.stdout.log 2>/dev/null > analyze.txt
           echo "---- errors ----"
-          grep "error •" analyze.log | head -60 || echo "no errors"
+          grep -h " error " analyze.txt | head -60 || echo "no error lines found"
           echo "---- warnings (top 40) ----"
-          grep "warning •" analyze.log | head -40 || true
-          # Light up the PR/run annotations with the real error lines.
-          (grep "error •" analyze.log || true) | head -10 | while IFS= read -r line; do
-            echo "::error title=Analyzer::$line"
-          done
-          exit 0
+          grep -h " warning " analyze.txt | head -40 || true
+          # One annotation with every error line: per-line annotations are
+          # capped and used to hide the interesting ones.
+          python3 -c "import pathlib;\
+          lines=pathlib.Path('analyze.txt').read_text(errors='replace').splitlines();\
+          errs=[l for l in lines if ' error '+chr(8226)+' ' in l] or [l for l in lines if l.strip().startswith('error')];\
+          print('::error title=Analyzer::'+'%0A'.join(e.replace('%','%25') for e in errs[:80])) if errs else print('analyzer reported no errors')"
+          # Errors fail the job here, before the expensive APK build starts.
+          [ "$status" -eq 0 ] || echo "::error title=Analyze failed::flutter analyze exited with status $status"
+          exit "$status"
 
       - name: Upload analyzer output
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: analyze-log
-          path: flutter_app_v2/analyze.log
+          path: |
+            flutter_app_v2/analyze.log
+            flutter_app_v2/analyze.stdout.log
           retention-days: 7
           if-no-files-found: warn
 

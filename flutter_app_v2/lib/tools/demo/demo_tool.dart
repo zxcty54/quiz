@@ -32,10 +32,11 @@ class DemoApp extends StatelessWidget {
   final BootstrapResult bootstrap;
 
   /// The demo build reuses [MockTesterApp] so theming, routing and the theme
-  /// controller stay identical to production.
+  /// controller stay identical to production. Bootstrap results are already
+  /// folded into preferences by [AppBootstrap.run], hence the single flag.
   @override
   Widget build(BuildContext context) =>
-      MockTesterApp(isOnboarded: bootstrap.isOnboarded, bootstrap: bootstrap);
+      MockTesterApp(isOnboarded: bootstrap.isOnboarded);
 }
 
 /// Landing screen of the demo build.

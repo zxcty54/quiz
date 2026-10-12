@@ -132,3 +132,26 @@ ${questionSnippet.length > 400 ? "${questionSnippet.substring(0, 400)}…" : que
     }
   }
 }
+
+/// Compatibility name for v1's report dialog.
+///
+/// v1's `report_error_dialog.dart` calls `TelegramService.reportError(...)`
+/// while `telegram_service.dart` only ever declared [TelegramTracker] - the v1
+/// call site could not compile. The class is kept here (instead of rewriting
+/// the dialog) so the ported widget stays byte-for-byte v1 behaviour.
+class TelegramService {
+  TelegramService._();
+
+  static Future<bool> reportError({
+    required String fileName,
+    required int questionIndex,
+    required String issueType,
+    required String questionSnippet,
+  }) =>
+      TelegramTracker.reportError(
+        fileName: fileName,
+        questionIndex: questionIndex,
+        issueType: issueType,
+        questionSnippet: questionSnippet,
+      );
+}

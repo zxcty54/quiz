@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:typed_data';
 
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
@@ -79,11 +80,16 @@ class DemoApiTests {
       if (!AppSecrets.hasSupabase) {
         return 'secrets missing → cloud features disabled (offline demo OK)';
       }
-      if (!supabaseReadyNow) throw 'secrets present but client init failed';
-      final List<dynamic> rows = await Supabase.instance.client
-          .from('coachings')
-          .select('id')
-          .limit(3);
+      // `Supabase.instance` throws when initialisation never ran, which is
+      // exactly the failure this probe reports.
+      final SupabaseClient client;
+      try {
+        client = Supabase.instance.client;
+      } catch (_) {
+        throw 'secrets present but the client was never initialised';
+      }
+      final List<dynamic> rows =
+          await (client.from('coachings').select('id').limit(3));
       return 'coachings answered with ${rows.length} row(s)';
     });
 
