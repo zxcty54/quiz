@@ -336,8 +336,16 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     if (_isLoadingConfig) {
+      // First paint after the splash. Pehle yahan plain white AppBar with sirf
+      // "MockTester" tha, jo splash ke baad achanak white flash jaisa lagta
+      // tha; ab loading screen bhi wahi branded bar use karti hai.
       return Scaffold(
-        appBar: AppBar(title: const Text('MockTester')),
+        backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+        appBar: AppBar(
+          backgroundColor: _isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+          elevation: 0,
+          title: _brandAppBarTitle(),
+        ),
         body: _buildSkeletonLoading(),
       );
     }
@@ -347,13 +355,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return Scaffold(
       backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
-        title: Text(
-          'MockTester',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
-          ),
-        ),
+        title: _brandAppBarTitle(),
         backgroundColor: cardColor,
         elevation: 0,
         actions: [
@@ -690,22 +692,56 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
-  Widget _buildSkeletonLoading() {
-    return ListView.builder(
-      padding: const EdgeInsets.all(16),
-      itemCount: 4,
-      itemBuilder: (context, index) => Shimmer.fromColors(
-        baseColor: Colors.grey[300]!,
-        highlightColor: Colors.grey[100]!,
-        child: Container(
-          height: 100,
-          margin: const EdgeInsets.only(bottom: 16),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-          ),
+  /// Loading aur loaded — dono AppBars ka same branded title.
+  Widget _brandAppBarTitle() {
+    return Row(
+      children: [
+        const _BrandMark(size: 32),
+        const SizedBox(width: 10),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'MockTester',
+              style: TextStyle(
+                fontSize: 16.5,
+                fontWeight: FontWeight.w800,
+                letterSpacing: -0.3,
+                color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
+              ),
+            ),
+            Text(
+              'BPSC • BSSC • Bihar Police',
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 0.2,
+                color: _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+              ),
+            ),
+          ],
         ),
-      ),
+      ],
+    );
+  }
+
+  Widget _buildSkeletonLoading() {
+    // Skeleton ab theme follow karta hai (pehle hamesha white boxes the,
+    // dark mode me wo screen jal rahi thi).
+    final Color base = _isDarkMode ? const Color(0xFF1B2438) : const Color(0xFFE8EDF6);
+    final Color highlight = _isDarkMode ? const Color(0xFF243050) : const Color(0xFFF6F8FC);
+
+    return ListView(
+      padding: const EdgeInsets.all(16),
+      children: [
+        _SkeletonBox(height: 132, base: base, highlight: highlight),
+        const SizedBox(height: 16),
+        for (int i = 0; i < 3; i++) ...[
+          _SkeletonBox(height: 96, base: base, highlight: highlight),
+          const SizedBox(height: 16),
+        ],
+      ],
     );
   }
 
@@ -953,5 +989,85 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         const SnackBar(content: Text('Test questions load nahi ho paye. Internet check karein.')),
       );
     }
+  }
+}
+
+/// AppBar ka branded logo tile (gradient + chart glyph).
+class _BrandMark extends StatelessWidget {
+  const _BrandMark({this.size = 32});
+
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    final double r = size * 0.30;
+    return Container(
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFF2563EB), Color(0xFF4F46E5)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(r),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF2563EB).withOpacity(0.34),
+            blurRadius: 12,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Positioned.fill(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Colors.white.withOpacity(0.22),
+                    Colors.white.withOpacity(0.04),
+                  ],
+                ),
+                borderRadius: BorderRadius.circular(r),
+              ),
+            ),
+          ),
+          Icon(Icons.insights_rounded, color: Colors.white, size: size * 0.48),
+        ],
+      ),
+    );
+  }
+}
+
+/// Loading state ka ek shimmering placeholder block.
+class _SkeletonBox extends StatelessWidget {
+  const _SkeletonBox({
+    required this.height,
+    required this.base,
+    required this.highlight,
+  });
+
+  final double height;
+  final Color base;
+  final Color highlight;
+
+  @override
+  Widget build(BuildContext context) {
+    return Shimmer.fromColors(
+      baseColor: base,
+      highlightColor: highlight,
+      child: Container(
+        height: height,
+        decoration: BoxDecoration(
+          color: base,
+          borderRadius: BorderRadius.circular(18),
+        ),
+      ),
+    );
   }
 }

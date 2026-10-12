@@ -9,6 +9,7 @@ import 'services/notification_service.dart';
 import 'services/ai_explainer_service.dart';
 import 'screens/home_screen.dart';
 import 'screens/onboarding_welcome_screen.dart';
+import 'screens/splash_screen.dart';
 
 // 🌓 Global Theme Controller
 final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.light);
@@ -134,9 +135,11 @@ class MyApp extends StatelessWidget {
             ),
           ),
 
+          // The splash is the first screen in both cases; a first-time user
+          // goes on to the onboarding, a returning user straight home.
           home: isOnboarded
-              ? const HomeScreen()
-              : OnboardingWelcomeScreen(nextScreen: const HomeScreen()),
+              ? const SplashScreen()
+              : const SplashScreen(nextScreen: OnboardingWelcomeScreen()),
         );
       },
     );
