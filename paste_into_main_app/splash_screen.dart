@@ -91,12 +91,12 @@ class _SplashScreenState extends State<SplashScreen>
         children: <Widget>[
           // Solid brand colour first (identical to the Android launch screen),
           // then the aurora fades in underneath the content.
-          AnimatedOpacity(
-            opacity: _showAurora ? 1 : 0,
-            duration: const Duration(milliseconds: 420),
-            curve: _M.emphasised,
-            child: const Positioned.fill(
-              child: _Aurora(intensity: 1.25),
+          Positioned.fill(
+            child: AnimatedOpacity(
+              opacity: _showAurora ? 1 : 0,
+              duration: const Duration(milliseconds: 420),
+              curve: _M.emphasised,
+              child: const _Aurora(intensity: 1.25),
             ),
           ),
           Positioned.fill(
