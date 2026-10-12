@@ -7,12 +7,12 @@ on:
     branches:
       - main
       - "arena/**"
+    # GitHub rejects a trigger that uses `paths` and `paths-ignore` together,
+    # so markdown-only pushes are excluded with a negated pattern instead.
     paths:
       - "flutter_app_v2/**"
       - ".github/workflows/build_apk_v2.yml"
-    # Documentation-only pushes should not rebuild and re-send APKs.
-    paths-ignore:
-      - "**.md"
+      - "!**/*.md"
   workflow_dispatch:
     inputs:
       send_to_telegram:
