@@ -318,18 +318,10 @@ class AppTheme {
       ),
       scrollbarTheme: ScrollbarThemeData(
         thickness: WidgetStateProperty.all(6),
-        radius: AppRadii.pillAll,
+        radius: Radius.circular(AppRadii.pill),
         thumbColor: WidgetStateProperty.all(
           isDark ? const Color(0xFF3B4A6B) : const Color(0xFFC7CFDE),
         ),
-      ),
-      // Screens use `RefreshIndicator(color: …)` individually today; this is
-      // the default for the ones that do not.
-      pageTransitionsTheme: const PageTransitionsTheme(
-        builders: <TargetPlatform, PageTransitionsBuilder>{
-          TargetPlatform.android: ZoomPageTransitionsBuilder(),
-          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-        },
       ),
     );
   }
