@@ -1,26 +1,28 @@
-# Android launch screen (the "MT logo" screen you see for ~1 second on launch)
+# Android launch screen (the "MT logo" screen you see for a second on launch)
 
 This is NOT Dart code. It lives in the Android resource folder:
 
     android/app/src/main/res/
 
-Copy the folders below into `android/app/src/main/res/` of the app:
+Files to put there (all new in this project - it has no res/ folder yet):
 
-    drawable/launch_background.xml
-    drawable-v21/launch_background.xml
-    values/styles.xml
-    values-night/styles.xml
-    values/colors.xml
-    <launch_logo.png>            -> see "Where does the PNG go?" below
+| File | What it does |
+| --- | --- |
+| drawable/launch_background.xml | dark brand surface + centred logo |
+| drawable-v21/launch_background.xml | same file, API 21+ (identical on purpose) |
+| values/colors.xml | `launch_background` = #FF070B14 (brand midnight) |
+| values/styles.xml | LaunchTheme / NormalTheme, dark |
+| values-night/styles.xml | identical to values/styles.xml (screen is dark in both) |
+| drawable-xxhdpi/launch_logo.png | the MT logo, drawn at ~170dp so it is fully visible |
 
-Where does the PNG go?
-* `drawable/`        -> logo drawn at ~512dp, i.e. big / slightly wider than the
-                        screen (this is what the v2 build does today)
-* `drawable-xxhdpi/` -> logo drawn at ~170dp, i.e. fully visible with margin
-                        (recommended if you do not want the edges cropped)
+Do NOT also put launch_logo.png in drawable/ - there it would render at ~512dp
+and get cropped at the edges.
 
-Optional: for a dark launch screen that flows into the dark splash screen,
-change `launch_background` in values/colors.xml from #FFFFFF to #070B14.
+Optional: want the light look instead (white screen, like the earlier build)?
+Set `launch_background` in values/colors.xml to #FFFFFF and put the logo in
+`drawable/`.
 
-After copying, run `flutter clean` and rebuild - resource changes do not show
-up on hot reload/hot restart.
+After copying the files, run `flutter clean` and rebuild - resource changes do
+not show up on hot reload/hot restart. The PNG is at
+paste_into_main_app/android_res/launch_logo.png (also inside
+drawable-xxhdpi/).

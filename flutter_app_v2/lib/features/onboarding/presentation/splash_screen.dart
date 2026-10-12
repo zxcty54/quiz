@@ -28,10 +28,21 @@ class _SplashScreenState extends State<SplashScreen>
   )..forward();
 
   Timer? _timer;
+  Timer? _auroraTimer;
+
+  /// The aurora fades in only after the native launch screen is gone, so the
+  /// hand-over (launch logo on brand midnight -> Flutter splash) reads as one
+  /// continuous screen instead of a flash.
+  bool _showAurora = false;
 
   @override
   void initState() {
     super.initState();
+
+    _auroraTimer = Timer(const Duration(milliseconds: 550), () {
+      if (mounted) setState(() => _showAurora = true);
+    });
+
     _timer = Timer(const Duration(milliseconds: 2500), () {
       if (!mounted) return;
       Navigator.of(context).pushReplacement(
@@ -43,6 +54,7 @@ class _SplashScreenState extends State<SplashScreen>
   @override
   void dispose() {
     _timer?.cancel();
+    _auroraTimer?.cancel();
     _controller.dispose();
     super.dispose();
   }
@@ -54,11 +66,22 @@ class _SplashScreenState extends State<SplashScreen>
 
     return Scaffold(
       backgroundColor: const Color(0xFF070B14),
-      body: AuroraBackground(
-        intensity: 1.25,
-        child: SafeArea(
-          child: Column(
-            children: <Widget>[
+      body: Stack(
+        children: <Widget>[
+          // Solid brand colour first (identical to the Android launch screen),
+          // then the aurora fades in underneath the content.
+          AnimatedOpacity(
+            opacity: _showAurora ? 1 : 0,
+            duration: AppMotion.slow,
+            curve: AppMotion.entrance,
+            child: const Positioned.fill(
+              child: AuroraBackground(intensity: 1.25),
+            ),
+          ),
+          Positioned.fill(
+            child: SafeArea(
+              child: Column(
+                children: <Widget>[
               const Spacer(flex: 3),
               FadeTransition(
                 opacity: entrance,
@@ -126,9 +149,11 @@ class _SplashScreenState extends State<SplashScreen>
                 ),
               ),
               const SizedBox(height: AppSpacing.xxl),
-            ],
+                ],
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }
