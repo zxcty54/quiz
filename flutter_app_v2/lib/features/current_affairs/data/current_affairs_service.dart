@@ -55,14 +55,27 @@ class CurrentAffairsService {
 
         // 🔄 Question Model conversion
         final List<Question> questions = rawQuestions.map((item) {
+          // v1 left `options` and `explanation` out of this constructor call,
+          // so the file never compiled. Both are derived here from the same
+          // fields Question.fromJson reads, and the answer index is guarded
+          // because these JSON files sometimes use "A"/"B" strings.
+          final List<String> optsEn =
+              item['oe'] != null ? List<String>.from(item['oe']) : <String>[];
+          final List<String> optsHi =
+              item['oh'] != null ? List<String>.from(item['oh']) : <String>[];
+          final String expl = '${item['e'] ?? ''}';
+          final dynamic rawAns = item['a'];
+
           return Question(
             qe: item['qe'] ?? '',
             qh: item['qh'] ?? '',
-            oe: List<String>.from(item['oe'] ?? []),
-            oh: List<String>.from(item['oh'] ?? []),
-            answerIndex: item['a'] ?? 0,
-            ee: item['e'] ?? '',
-            eh: item['e'] ?? '',
+            oe: optsEn,
+            oh: optsHi,
+            options: optsEn.isNotEmpty ? optsEn : (optsHi.isNotEmpty ? optsHi : <String>[]),
+            answerIndex: rawAns is int ? rawAns : 0,
+            explanation: expl,
+            ee: expl,
+            eh: expl,
           );
         }).toList();
 
