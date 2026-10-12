@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Branded dark launch screen: brand surface with the MockTester mark. -->
+<!-- Launch screen: white surface with the MockTester (MT) mark, matching
+     lib/screens/splash_screen.dart so the hand-over is seamless. -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@color/launch_background" />
 
