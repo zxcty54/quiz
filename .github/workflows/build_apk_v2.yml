@@ -29,6 +29,11 @@ jobs:
     name: Analyze & Test
     runs-on: ubuntu-latest
     timeout-minutes: 15
+    # lets a failing test run publish its log as a check run (artefacts are not
+    # always reachable)
+    permissions:
+      contents: read
+      checks: write
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -93,14 +98,51 @@ jobs:
           set +e
           flutter test --reporter expanded > test.log 2>&1
           status=$?
-          tail -120 test.log
-          if [ $status -ne 0 ]; then
-            grep -E "^[0-9:]+ \+[0-9]+ -[0-9]+|Expected:|Actual:|Which:|test failed" test.log \
-              | head -40 | while IFS= read -r line; do
-                echo "::error title=Test failure::$line"
-              done
-          fi
+          echo "flutter test exit: $status"
+          echo "---- failing tests ----"
+          grep -E "\[E\]$" test.log | sed -E 's/^[0-9:]+ \+[0-9]+ -[0-9]+: //' | sort -u || true
+          echo "---- why ----"
+          grep -E "Expected:|Actual:|Which:|RenderFlex|overflow" test.log | head -40 || true
+          # One annotation listing every failing test, then one with the reasons:
+          # GitHub caps how many annotations a step may publish, and the old
+          # per-line form silently lost the later failures.
+          python3 -c "import pathlib;\
+          lines=pathlib.Path('test.log').read_text(errors='replace').splitlines();\
+          fails=sorted({l.split(': ',1)[-1] for l in lines if l.rstrip().endswith('[E]')});\
+          print('::error title=Failing tests::'+'%0A'.join(f.replace('%','%25') for f in fails)) if fails else None"
+          python3 -c "import pathlib;\
+          lines=pathlib.Path('test.log').read_text(errors='replace').splitlines();\
+          why=[l.strip() for l in lines if ('RenderFlex' in l or l.strip().startswith('Expected:') or l.strip().startswith('Actual:'))][:40];\
+          print('::error title=Test failures (reasons)::'+'%0A'.join(w.replace('%','%25') for w in why)) if why else None"
           exit $status
+
+      - name: Publish the test log as a check run
+        if: failure()
+        working-directory: flutter_app_v2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python3 - <<'PYEOF' > publish.json
+          import json, os, pathlib
+          log = pathlib.Path('test.log')
+          text = log.read_text(errors='replace') if log.exists() else '(no test.log)'
+          lines = text.splitlines()
+          keep = [l for l in lines if '[E]' in l or l.startswith('  ') or 'Expected:' in l]
+          body = '\n'.join((keep or lines)[-400:])
+          json.dump({
+              'name': 'flutter-test-log',
+              'head_sha': os.environ['GITHUB_SHA'],
+              'status': 'completed',
+              'conclusion': 'failure',
+              'output': {
+                  'title': 'flutter test log',
+                  'summary': 'Failing widget/unit tests with their reasons.',
+                  'text': '```text\n' + body[-60000:] + '\n```',
+              },
+          }, open('/dev/stdout', 'w'))
+          PYEOF
+          gh api --method POST "repos/$GITHUB_REPOSITORY/check-runs" --input publish.json > /dev/null
+          echo "published test log check run"
 
   build:
     name: Build APKs

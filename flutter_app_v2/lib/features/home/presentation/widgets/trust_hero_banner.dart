@@ -123,29 +123,31 @@ class TrustHeroBannerWidget extends StatelessWidget {
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(color: Colors.white.withOpacity(0.1)),
                     ),
+                    // Each stat is Expanded: without it the three columns keep
+                    // their intrinsic width and the Row overflows on narrow
+                    // phones (and in any scaled font).
                     child: const Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Column(
-                          children: [
-                            Text('₹0', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
-                            SizedBox(height: 2),
-                            Text('Always Free', style: TextStyle(color: Color(0xFF94A3B8), fontSize: 10)),
-                          ],
+                        Expanded(
+                          child: _HeroStat(
+                            value: '₹0',
+                            label: 'Always Free',
+                            valueColor: Colors.white,
+                          ),
                         ),
-                        Column(
-                          children: [
-                            Text('3,000+', style: TextStyle(color: Color(0xFFFBBF24), fontWeight: FontWeight.bold, fontSize: 16)),
-                            SizedBox(height: 2),
-                            Text('TCS PYQs', style: TextStyle(color: Color(0xFF94A3B8), fontSize: 10)),
-                          ],
+                        Expanded(
+                          child: _HeroStat(
+                            value: '3,000+',
+                            label: 'TCS PYQs',
+                            valueColor: Color(0xFFFBBF24),
+                          ),
                         ),
-                        Column(
-                          children: [
-                            Text('100%', style: TextStyle(color: Color(0xFF34D399), fontWeight: FontWeight.bold, fontSize: 16)),
-                            SizedBox(height: 2),
-                            Text('CBT Pattern', style: TextStyle(color: Color(0xFF94A3B8), fontSize: 10)),
-                          ],
+                        Expanded(
+                          child: _HeroStat(
+                            value: '100%',
+                            label: 'CBT Pattern',
+                            valueColor: Color(0xFF34D399),
+                          ),
                         ),
                       ],
                     ),
@@ -187,6 +189,50 @@ class TrustHeroBannerWidget extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+/// One column of the frosted bento strip: a big number and a small label,
+/// both allowed to shrink so the row can never overflow.
+class _HeroStat extends StatelessWidget {
+  const _HeroStat({
+    required this.value,
+    required this.label,
+    required this.valueColor,
+  });
+
+  final String value;
+  final String label;
+  final Color valueColor;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            value,
+            style: TextStyle(
+              color: valueColor,
+              fontWeight: FontWeight.bold,
+              fontSize: 16,
+            ),
+          ),
+        ),
+        const SizedBox(height: 2),
+        FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(
+            label,
+            style: const TextStyle(
+              color: Color(0xFF94A3B8),
+              fontSize: 10,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

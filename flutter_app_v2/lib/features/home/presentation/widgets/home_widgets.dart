@@ -365,27 +365,35 @@ class EligibilityCheckerWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Row(
-                children: [
-                  Container(
-                    padding: const EdgeInsets.all(7),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF2563EB).withOpacity(0.15),
-                      shape: BoxShape.circle,
+              // Expanded + ellipsis: the title + the badge next to it used to
+              // overflow the card by ~100px on narrow screens.
+              Expanded(
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(7),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFF2563EB).withOpacity(0.15),
+                        shape: BoxShape.circle,
+                      ),
+                      child: const Text('🎯', style: TextStyle(fontSize: 18)),
                     ),
-                    child: const Text('🎯', style: TextStyle(fontSize: 18)),
-                  ),
-                  const SizedBox(width: 8),
-                  Text(
-                    'Sarkari Eligibility Radar',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w900,
-                      letterSpacing: -0.2,
-                      color: isDarkMode ? Colors.white : const Color(0xFF1E3A8A),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        'Sarkari Eligibility Radar',
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: -0.2,
+                          color: isDarkMode ? Colors.white : const Color(0xFF1E3A8A),
+                        ),
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),

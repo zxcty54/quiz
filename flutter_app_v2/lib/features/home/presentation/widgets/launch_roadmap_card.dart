@@ -44,12 +44,18 @@ class LaunchRoadmapCardWidget extends StatelessWidget {
                 child: const Icon(Icons.rocket_launch_rounded, size: 16, color: Color(0xFF2563EB)),
               ),
               const SizedBox(width: 8),
-              Text(
-                'Launch Roadmap & Live Updates',
-                style: TextStyle(
-                  fontWeight: FontWeight.w800,
-                  fontSize: 14.5,
-                  color: isDarkMode ? Colors.white : const Color(0xFF0F172A),
+              // Flexible + ellipsis: the title used to force the Row wider than
+              // the card on narrow screens.
+              Flexible(
+                child: Text(
+                  'Launch Roadmap & Live Updates',
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 14.5,
+                    color: isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                  ),
                 ),
               ),
             ],
