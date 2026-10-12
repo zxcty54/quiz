@@ -6,6 +6,9 @@ import 'package:mocktester_v2/core/bootstrap/app_bootstrap.dart';
 import 'package:mocktester_v2/core/config/app_endpoints.dart';
 import 'package:mocktester_v2/core/config/app_secrets.dart';
 import 'package:mocktester_v2/core/theme/theme_controller.dart';
+import 'package:mocktester_v2/core/theme/app_gradients.dart';
+import 'package:mocktester_v2/core/theme/app_tokens.dart';
+import 'package:mocktester_v2/core/widgets/brand_mark.dart';
 import 'package:mocktester_v2/features/shell/presentation/home_shell_screen.dart';
 
 import 'package:mocktester_v2/tools/demo/demo_api_tests.dart';
@@ -87,7 +90,36 @@ class _DemoLauncherScreenState extends State<DemoLauncherScreen> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('MockTester v2 — Demo Build'),
+        titleSpacing: 16,
+        title: Row(
+          children: <Widget>[
+            const BrandMark(size: 30, showGlow: false),
+            const SizedBox(width: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                const Text(
+                  'MockTester v2',
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: -0.3,
+                  ),
+                ),
+                Text(
+                  'DEMO / TESTER BUILD',
+                  style: TextStyle(
+                    fontSize: 9.5,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: 1,
+                    color: theme.colorScheme.primary,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
         actions: <Widget>[
           IconButton(
             tooltip: 'Toggle theme',
@@ -100,51 +132,70 @@ class _DemoLauncherScreenState extends State<DemoLauncherScreen> {
         padding: const EdgeInsets.all(16),
         children: <Widget>[
           Container(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.all(AppSpacing.lg),
             decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: <Color>[Color(0xFF2563EB), Color(0xFF1E40AF)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-              borderRadius: BorderRadius.circular(16),
+              gradient: AppGradients.brandDeep,
+              borderRadius: AppRadii.lgAll,
+              boxShadow: AppElevation.glow(const Color(0xFF2563EB), opacity: 0.24),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                const Text(
-                  '🧪 DEMO BUILD — TEST BEFORE RELEASE',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 12,
-                    letterSpacing: 0.6,
-                  ),
+                Row(
+                  children: <Widget>[
+                    const BrandMark(
+                      size: 40,
+                      showGlow: false,
+                      gradient: AppGradients.study,
+                    ),
+                    const SizedBox(width: AppSpacing.sm),
+                    const Expanded(
+                      child: Text(
+                        'DEMO BUILD\nTEST BEFORE RELEASE',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w900,
+                          fontSize: 12,
+                          height: 1.35,
+                          letterSpacing: 0.6,
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 6),
+                const SizedBox(height: AppSpacing.md),
                 const Text(
                   'Everything from v1 is here,\nre-laid out per feature.',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 19,
+                    fontWeight: FontWeight.w800,
                     height: 1.25,
+                    letterSpacing: -0.3,
                   ),
                 ),
-                const SizedBox(height: 10),
-                Text(
-                  '${_statusLine('Firebase', widget.bootstrap.firebaseReady)} • '
-                  '${_statusLine('Supabase', widget.bootstrap.supabaseReady)}',
-                  style: const TextStyle(color: Colors.white70, fontSize: 11.5),
+                const SizedBox(height: AppSpacing.sm),
+                Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  children: <Widget>[
+                    _StatusChip(
+                      label: _statusLine('Firebase', widget.bootstrap.firebaseReady),
+                    ),
+                    _StatusChip(
+                      label: _statusLine('Supabase', widget.bootstrap.supabaseReady),
+                    ),
+                  ],
                 ),
               ],
             ),
           ),
-          const SizedBox(height: 18),
+          const SizedBox(height: AppSpacing.lg),
 
           _primaryAction(
             icon: Icons.palette_outlined,
-            title: '🎨 Widget Gallery',
+            gradient: AppGradients.brand,
+                        title: '🎨 Widget Gallery',
             subtitle: 'All 45+ widgets rendered with fixture data',
             onTap: () => Navigator.push(
               context,
@@ -155,7 +206,8 @@ class _DemoLauncherScreenState extends State<DemoLauncherScreen> {
           ),
           _primaryAction(
             icon: Icons.phone_android_outlined,
-            title: '📱 Screen Directory',
+            gradient: AppGradients.study,
+                        title: '📱 Screen Directory',
             subtitle: 'Open every screen (34 routes) with fixtures',
             onTap: () => Navigator.push(
               context,
@@ -166,7 +218,8 @@ class _DemoLauncherScreenState extends State<DemoLauncherScreen> {
           ),
           _primaryAction(
             icon: Icons.health_and_safety_outlined,
-            title: '🩺 API & Data Smoke Test',
+            gradient: AppGradients.success,
+                        title: '🩺 API & Data Smoke Test',
             subtitle: 'Live check: assets, CDN mirrors, Supabase, AI, Telegram',
             onTap: () => Navigator.push(
               context,
@@ -177,7 +230,8 @@ class _DemoLauncherScreenState extends State<DemoLauncherScreen> {
           ),
           _primaryAction(
             icon: Icons.rocket_launch_outlined,
-            title: '🚀 Launch the real app',
+            gradient: AppGradients.warm,
+                        title: '🚀 Launch the real app',
             subtitle: 'Starts HomeShellScreen exactly like production',
             onTap: () => Navigator.push(
               context,
@@ -237,21 +291,61 @@ class _DemoLauncherScreenState extends State<DemoLauncherScreen> {
     required String title,
     required String subtitle,
     required VoidCallback onTap,
+    Gradient gradient = AppGradients.brand,
   }) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 10),
-      child: ListTile(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
-        leading: CircleAvatar(
-          backgroundColor:
-              Theme.of(context).colorScheme.primary.withValues(alpha: 0.12),
-          child: Icon(icon, size: 20),
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Material(
+        color: Theme.of(context).cardColor,
+        borderRadius: AppRadii.cardAll,
+        child: InkWell(
+          borderRadius: AppRadii.cardAll,
+          onTap: onTap,
+          child: Container(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 14,
+              vertical: 13,
+            ),
+            decoration: BoxDecoration(
+              borderRadius: AppRadii.cardAll,
+              border: Border.all(color: Theme.of(context).dividerColor),
+            ),
+            child: Row(
+              children: <Widget>[
+                Container(
+                  width: 42,
+                  height: 42,
+                  decoration: BoxDecoration(
+                    gradient: gradient,
+                    borderRadius: AppRadii.smAll,
+                  ),
+                  child: Icon(icon, size: 21, color: Colors.white),
+                ),
+                const SizedBox(width: AppSpacing.sm),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        title,
+                        style: const TextStyle(
+                          fontWeight: FontWeight.w800,
+                          fontSize: 14.5,
+                        ),
+                      ),
+                      const SizedBox(height: 2),
+                      Text(
+                        subtitle,
+                        style: const TextStyle(fontSize: 11.5, height: 1.35),
+                      ),
+                    ],
+                  ),
+                ),
+                const Icon(Icons.arrow_forward_ios_rounded, size: 14),
+              ],
+            ),
+          ),
         ),
-        title: Text(title,
-            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5)),
-        subtitle: Text(subtitle, style: const TextStyle(fontSize: 11.5)),
-        trailing: const Icon(Icons.arrow_forward_ios, size: 14),
-        onTap: onTap,
       ),
     );
   }
@@ -289,13 +383,13 @@ class _SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10, bottom: 6),
+      padding: const EdgeInsets.only(top: 14, bottom: 8),
       child: Text(
         text,
         style: TextStyle(
-          fontSize: 11,
-          fontWeight: FontWeight.bold,
-          letterSpacing: 0.8,
+          fontSize: 10.5,
+          fontWeight: FontWeight.w900,
+          letterSpacing: 1.4,
           color: Theme.of(context).textTheme.bodySmall?.color,
         ),
       ),
@@ -455,4 +549,31 @@ class DemoEmbeddedAppScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => const HomeScreen();
+}
+
+/// Glass pill used in the demo hero for boot status.
+class _StatusChip extends StatelessWidget {
+  const _StatusChip({required this.label});
+
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.16),
+        borderRadius: AppRadii.pillAll,
+        border: Border.all(color: Colors.white.withOpacity(0.24)),
+      ),
+      child: Text(
+        label,
+        style: const TextStyle(
+          color: Colors.white,
+          fontSize: 11,
+          fontWeight: FontWeight.w700,
+        ),
+      ),
+    );
+  }
 }

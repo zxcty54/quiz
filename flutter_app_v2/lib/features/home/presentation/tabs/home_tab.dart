@@ -5,6 +5,7 @@ import 'package:mocktester_v2/features/jobs/presentation/latest_jobs_widget.dart
 import 'package:mocktester_v2/features/bulletin/presentation/daily_bulletin_widget.dart';
 import 'package:mocktester_v2/features/first_in_india/presentation/first_in_india_widget.dart';
 import 'package:mocktester_v2/features/home/presentation/widgets/trust_hero_banner.dart';
+import 'package:mocktester_v2/features/home/presentation/widgets/home_greeting_header.dart';
 import 'package:mocktester_v2/features/home/presentation/widgets/launch_roadmap_card.dart';
 import 'package:mocktester_v2/features/pdf_vault/presentation/pro_pdf_vault_card.dart';
 import 'package:mocktester_v2/features/coaching/presentation/widgets/coaching_hub_card.dart';
@@ -58,6 +59,9 @@ class _HomeTabState extends State<HomeTab> {
 
   bool _isChallengeLoading = false;
 
+  /// Bumped on pull-to-refresh so the greeting header re-reads the stats.
+  int _headerReload = 0;
+
   Future<void> _startChallengeSprint() async {
     setState(() => _isChallengeLoading = true);
     try {
@@ -85,6 +89,7 @@ class _HomeTabState extends State<HomeTab> {
       color: const Color(0xFF4F46E5),
       backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
       onRefresh: () async {
+        if (mounted) setState(() => _headerReload++);
         await Future.wait<dynamic>([
           _bulletinWidgetKey.currentState?.fetchDailyBulletins(forceRefresh: true) ?? Future.value(),
           _jobsWidgetKey.currentState?.fetchLatestJobs(refresh: true) ?? Future.value(),
@@ -100,6 +105,16 @@ class _HomeTabState extends State<HomeTab> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // 0. v2 GREETING + LIVE STATS (name, streak, questions, accuracy)
+            HomeGreetingHeader(
+              isDarkMode: widget.isDarkMode,
+              onTapLearn: widget.onNavigateToLearn,
+              onStartChallenge: _startChallengeSprint,
+              challengeLoading: _isChallengeLoading,
+              reloadToken: _headerReload,
+            ),
+            const SizedBox(height: 16),
+
             // 1. TODAY TICKER
             if (widget.appConfig['today_update']?['show'] == true) ...[
               TodayUpdateTickerWidget(

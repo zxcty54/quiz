@@ -1,4 +1,12 @@
 // v1 source: flutter_app/lib/screens/onboarding_welcome_screen.dart
+//
+// Same two-step flow, same prefs/Supabase logic, new visual language:
+//  * animated aurora background (core/widgets/aurora_background.dart) instead
+//    of two hand-painted circles,
+//  * brand mark + gradient wordmark from core/widgets/brand_mark.dart,
+//  * feature tiles so a first-time user sees what the app actually does,
+//  * the form step now lives on a translucent sheet with the shared input
+//    treatment, and the CTA uses the brand gradient with a glow.
 import 'dart:math' as math;
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:flutter/material.dart';
@@ -6,6 +14,10 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
+import 'package:mocktester_v2/core/theme/app_gradients.dart';
+import 'package:mocktester_v2/core/theme/app_tokens.dart';
+import 'package:mocktester_v2/core/widgets/aurora_background.dart';
+import 'package:mocktester_v2/core/widgets/brand_mark.dart';
 import 'package:mocktester_v2/features/shell/presentation/home_shell_screen.dart';
 
 class OnboardingWelcomeScreen extends StatefulWidget {
@@ -21,8 +33,7 @@ class OnboardingWelcomeScreen extends StatefulWidget {
       _OnboardingWelcomeScreenState();
 }
 
-class _OnboardingWelcomeScreenState
-    extends State<OnboardingWelcomeScreen>
+class _OnboardingWelcomeScreenState extends State<OnboardingWelcomeScreen>
     with TickerProviderStateMixin {
   final PageController _pageController = PageController();
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
@@ -42,13 +53,12 @@ class _OnboardingWelcomeScreenState
   String _selectedDistrict = 'Patna';
 
   late AnimationController _introController;
-  late AnimationController _floatController;
   late AnimationController _formController;
 
   int _currentPage = 0;
   bool _isLoading = false;
 
-  // 🎨 Midnight Sapphire & Indigo Dark Palette
+  // 🎨 Midnight Sapphire & Indigo Dark Palette (v1 values)
   static const Color bg = Color(0xFF070B14);          // Obsidian Midnight Navy
   static const Color ink = Color(0xFFF1F5F9);         // Primary High-Contrast Text
   static const Color muted = Color(0xFF94A3B8);       // Secondary Text
@@ -59,6 +69,10 @@ class _OnboardingWelcomeScreenState
   static const Color blueLight = Color(0xFF0E1C38);   // Atmospheric Glow / Card Surface
 
   static const Color border = Color(0x1FFFFFFF);      // Subtle Border
+
+  /// Glass surface used by every card on this screen.
+  static Color get glass => Colors.white.withOpacity(0.045);
+  static Color get glassStrong => Colors.white.withOpacity(0.075);
 
   @override
   void initState() {
@@ -79,11 +93,6 @@ class _OnboardingWelcomeScreenState
       duration: const Duration(milliseconds: 1100),
     );
 
-    _floatController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 7),
-    )..repeat();
-
     _formController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 650),
@@ -101,7 +110,6 @@ class _OnboardingWelcomeScreenState
     _phoneController.dispose();
 
     _introController.dispose();
-    _floatController.dispose();
     _formController.dispose();
 
     super.dispose();
@@ -135,139 +143,98 @@ class _OnboardingWelcomeScreenState
         systemNavigationBarIconBrightness: Brightness.light,
       ),
       child: Scaffold(
-        extendBody: true,
-        extendBodyBehindAppBar: true,
         backgroundColor: bg,
-        body: Stack(
-          children: [
-            Positioned.fill(
-              child: AnimatedBuilder(
-                animation: _floatController,
-                builder: (_, __) {
-                  return CustomPaint(
-                    painter: _BackgroundPainter(_floatController.value),
-                  );
-                },
+        body: AuroraBackground(
+          intensity: 1.0,
+          child: Stack(
+            children: [
+              Positioned.fill(
+                child: PageView(
+                  controller: _pageController,
+                  physics: const BouncingScrollPhysics(),
+                  onPageChanged: _pageChanged,
+                  children: [
+                    _welcomeScreen(),
+                    _nameScreen(),
+                  ],
+                ),
               ),
-            ),
-            Positioned.fill(
-              child: PageView(
-                controller: _pageController,
-                physics: const BouncingScrollPhysics(),
-                onPageChanged: _pageChanged,
-                children: [
-                  _welcomeScreen(),
-                  _nameScreen(),
-                ],
+              Positioned(
+                top: MediaQuery.of(context).padding.top + 14,
+                left: 22,
+                right: 22,
+                child: _header(),
               ),
-            ),
-            Positioned(
-              top: MediaQuery.of(context).padding.top + 10,
-              left: 22,
-              right: 22,
-              child: _header(),
-            ),
-            Positioned(
-              left: 22,
-              right: 22,
-              bottom: MediaQuery.of(context).padding.bottom + 12,
-              child: _bottomProgress(),
-            ),
-          ],
+              Positioned(
+                left: 22,
+                right: 22,
+                bottom: MediaQuery.of(context).padding.bottom + 14,
+                child: _bottomProgress(),
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 
-  // Top Minimal Header with Glowing Dot (Screen 1 Image ke anusar)
+  // ---------------------------------------------------------------- header --
   Widget _header() {
     return Row(
       children: [
-        Container(
-          width: 7,
-          height: 7,
-          decoration: BoxDecoration(
-            color: blue,
-            shape: BoxShape.circle,
-            boxShadow: [
-              BoxShadow(
-                color: blue.withOpacity(0.8),
-                blurRadius: 10,
-                spreadRadius: 2,
-              ),
-            ],
-          ),
-        ),
-        const SizedBox(width: 8),
-        const Text(
-          'MOCKTESTER',
-          style: TextStyle(
-            color: ink,
-            fontSize: 12,
-            fontWeight: FontWeight.w900,
-            letterSpacing: 2.5,
-          ),
-        ),
+        const BrandWordmark(fontSize: 11.5, color: ink),
         const Spacer(),
-        Text(
-          '0${_currentPage + 1} / 02',
-          style: const TextStyle(
-            color: faint,
-            fontSize: 9,
-            fontWeight: FontWeight.w900,
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+          decoration: BoxDecoration(
+            color: glass,
+            borderRadius: AppRadii.pillAll,
+            border: Border.all(color: border),
+          ),
+          child: Text(
+            'SETUP ${_currentPage + 1}/02',
+            style: const TextStyle(
+              color: blue,
+              fontSize: 9,
+              fontWeight: FontWeight.w900,
+              letterSpacing: 1.2,
+            ),
           ),
         ),
       ],
     );
   }
 
-  // SCREEN 1: Exact Layout & Texts from Image
+  // ------------------------------------------------- SCREEN 1: the welcome --
   Widget _welcomeScreen() {
     return LayoutBuilder(
-      builder: (context, constraints) {
+      builder: (BuildContext context, BoxConstraints constraints) {
         return SingleChildScrollView(
           physics: const BouncingScrollPhysics(),
           padding: EdgeInsets.only(
-            left: 28,
-            right: 28,
-            top: MediaQuery.of(context).padding.top + 70,
-            bottom: MediaQuery.of(context).padding.bottom + 85,
+            left: 24,
+            right: 24,
+            top: MediaQuery.of(context).padding.top + 76,
+            bottom: MediaQuery.of(context).padding.bottom + 92,
           ),
           child: ConstrainedBox(
             constraints: BoxConstraints(
               minHeight: constraints.maxHeight -
                   MediaQuery.of(context).padding.top -
                   MediaQuery.of(context).padding.bottom -
-                  70,
+                  76,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // 1. Chart / Analytics Icon Box
+                // 1. Brand mark + headline
                 FadeSlide(
                   animation: _introController,
                   delay: .05,
-                  child: Container(
-                    width: 52,
-                    height: 52,
-                    decoration: BoxDecoration(
-                      color: blue.withOpacity(.12),
-                      borderRadius: BorderRadius.circular(16),
-                      border: Border.all(color: blue.withOpacity(.25)),
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.bar_chart_rounded,
-                        color: blue,
-                        size: 28,
-                      ),
-                    ),
-                  ),
+                  child: const BrandMark(size: 62),
                 ),
-                const SizedBox(height: 32),
-
-                // 2. Main Title: "Welcome to MockTester"
+                const SizedBox(height: AppSpacing.xl),
                 FadeSlide(
                   animation: _introController,
                   delay: .15,
@@ -276,50 +243,83 @@ class _OnboardingWelcomeScreenState
                     style: TextStyle(
                       color: ink,
                       fontSize: 34,
-                      height: 1.15,
+                      height: 1.12,
                       fontWeight: FontWeight.w800,
                       letterSpacing: -1.0,
                     ),
                   ),
                 ),
-                const SizedBox(height: 14),
-
-                // 3. Tagline: "Bihar's Own Exam Prep Hub"
+                const SizedBox(height: AppSpacing.sm),
                 FadeSlide(
                   animation: _introController,
                   delay: .30,
-                  child: const Text(
-                    "Bihar's Own Exam Prep Hub",
-                    style: TextStyle(
-                      color: blue,
-                      fontSize: 16.5,
-                      fontWeight: FontWeight.w700,
-                      letterSpacing: 0.2,
+                  child: ShaderMask(
+                    shaderCallback: (Rect bounds) =>
+                        AppGradients.brand.createShader(bounds),
+                    blendMode: BlendMode.srcIn,
+                    child: const Text(
+                      "Bihar's Own Exam Prep Hub",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: 0.2,
+                      ),
                     ),
                   ),
                 ),
-                const SizedBox(height: 14),
-
-                // 4. Description Text
+                const SizedBox(height: 10),
                 FadeSlide(
                   animation: _introController,
-                  delay: .45,
+                  delay: .42,
                   child: const Text(
-                    'Standardized mock tests with state-level accuracy, timed simulation, and realistic percentile evaluation.',
+                    'Standardized mock tests with state-level accuracy, timed '
+                    'simulation, and realistic percentile evaluation.',
                     style: TextStyle(
                       color: muted,
-                      fontSize: 13.5,
+                      fontSize: 13,
                       height: 1.55,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
                 ),
-                const SizedBox(height: 28),
+                const SizedBox(height: AppSpacing.xl),
 
-                // 5. Exam Pills (BPSC CCE, Bihar SI, BSSC CGL , All Bihar Exams)
+                // 2. What the app gives you (new: v1 jumped straight to pills)
                 FadeSlide(
                   animation: _introController,
-                  delay: .60,
+                  delay: .55,
+                  child: Column(
+                    children: const <Widget>[
+                      _FeatureRow(
+                        icon: Icons.timer_outlined,
+                        title: 'Live CBT mocks',
+                        subtitle: 'Real exam timer, palette & instant percentile',
+                        gradient: AppGradients.brand,
+                      ),
+                      SizedBox(height: 10),
+                      _FeatureRow(
+                        icon: Icons.newspaper_rounded,
+                        title: 'Daily current affairs',
+                        subtitle: 'Bihar + national, jobs aur alerts — roz subah',
+                        gradient: AppGradients.study,
+                      ),
+                      SizedBox(height: 10),
+                      _FeatureRow(
+                        icon: Icons.auto_awesome_rounded,
+                        title: 'AI doubt solver',
+                        subtitle: 'Photo bhejo, step-by-step explanation pao',
+                        gradient: AppGradients.success,
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: AppSpacing.xl),
+
+                // 3. Exam pills (unchanged copy)
+                FadeSlide(
+                  animation: _introController,
+                  delay: .68,
                   child: Wrap(
                     spacing: 8,
                     runSpacing: 10,
@@ -331,12 +331,12 @@ class _OnboardingWelcomeScreenState
                     ],
                   ),
                 ),
-                const SizedBox(height: 36),
+                const SizedBox(height: AppSpacing.xxl),
 
-                // 6. Continue Button
+                // 4. Continue
                 FadeSlide(
                   animation: _introController,
-                  delay: .72,
+                  delay: .78,
                   child: _primaryButton(
                     text: 'Continue',
                     icon: Icons.arrow_forward_rounded,
@@ -353,10 +353,10 @@ class _OnboardingWelcomeScreenState
 
   Widget _buildExamPill(IconData icon, String label) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 8),
       decoration: BoxDecoration(
-        color: const Color(0x0DF1F5F9),
-        borderRadius: BorderRadius.circular(20),
+        color: glass,
+        borderRadius: AppRadii.pillAll,
         border: Border.all(color: border),
       ),
       child: Row(
@@ -377,7 +377,7 @@ class _OnboardingWelcomeScreenState
     );
   }
 
-  // SCREEN 2: Name, District & Mobile Input Form
+  // --------------------------------------------- SCREEN 2: the profile form --
   Widget _nameScreen() {
     return FadeTransition(
       opacity: _formController,
@@ -399,127 +399,141 @@ class _OnboardingWelcomeScreenState
               physics: const BouncingScrollPhysics(),
               padding: EdgeInsets.fromLTRB(
                 22,
-                MediaQuery.of(context).padding.top + 80,
+                MediaQuery.of(context).padding.top + 82,
                 22,
-                MediaQuery.of(context).padding.bottom + 80,
+                MediaQuery.of(context).padding.bottom + 92,
               ),
               children: [
-                const Text(
-                  '02',
-                  style: TextStyle(
-                    color: blue,
-                    fontSize: 11,
-                    fontWeight: FontWeight.w900,
-                    letterSpacing: 1,
-                  ),
+                Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 9,
+                        vertical: 4,
+                      ),
+                      decoration: BoxDecoration(
+                        gradient: AppGradients.brand,
+                        borderRadius: AppRadii.xsAll,
+                      ),
+                      child: const Text(
+                        '02',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 10,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 1,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: 10),
+                    const Text(
+                      'YOUR PROFILE',
+                      style: TextStyle(
+                        color: faint,
+                        fontSize: 9,
+                        fontWeight: FontWeight.w900,
+                        letterSpacing: 1.4,
+                      ),
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 17),
+                const SizedBox(height: 18),
                 const Text(
                   'First,\nwhat should we call you?',
                   style: TextStyle(
                     color: ink,
-                    fontSize: 34,
-                    height: 1.04,
+                    fontSize: 32,
+                    height: 1.08,
                     fontWeight: FontWeight.w800,
-                    letterSpacing: -1.25,
+                    letterSpacing: -1.1,
                   ),
                 ),
                 const SizedBox(height: 12),
                 const Text(
-                  'Your name & district will appear on your scorecard and district leaderboard.',
+                  'Your name & district will appear on your scorecard and '
+                  'district leaderboard.',
                   style: TextStyle(
                     color: muted,
-                    fontSize: 11.5,
+                    fontSize: 12,
                     height: 1.5,
                   ),
                 ),
-                const SizedBox(height: 28),
-
-                // 1. Name Field
-                _inputField(
-                  label: 'MY NAME IS',
-                  controller: _nameController,
-                  hint: 'Your full name',
-                  icon: Icons.person_outline_rounded,
-                  capitalization: TextCapitalization.words,
-                  validator: (value) {
-                    if (value == null || value.trim().length < 2) {
-                      return 'Please enter your name';
-                    }
-                    return null;
-                  },
-                ),
-                const SizedBox(height: 18),
-
-                // 2. District Dropdown Field
-                _districtDropdownField(),
-
-                const SizedBox(height: 18),
-
-                // 3. Mobile Number Field
-                _inputField(
-                  label: 'MOBILE NUMBER',
-                  controller: _phoneController,
-                  hint: '10-digit number',
-                  icon: Icons.phone_android_rounded,
-                  keyboardType: TextInputType.phone,
-                  formatters: [
-                    FilteringTextInputFormatter.digitsOnly,
-                    LengthLimitingTextInputFormatter(10),
-                  ],
-                  validator: (value) {
-                    if (value == null || value.trim().isEmpty) {
-                      return null;
-                    }
-                    if (!RegExp(r'^[6-9]\d{9}$').hasMatch(value.trim())) {
-                      return 'Enter a valid 10-digit number';
-                    }
-                    return null;
-                  },
-                ),
-                const SizedBox(height: 8),
-                const Row(
-                  children: [
-                    Icon(
-                      Icons.info_outline_rounded,
-                      color: faint,
-                      size: 14,
-                    ),
-                    SizedBox(width: 6),
-                    Text(
-                      'Mobile number is optional.',
-                      style: TextStyle(
-                        color: faint,
-                        fontSize: 8.5,
-                      ),
-                    ),
-                  ],
-                ),
                 const SizedBox(height: 24),
+
+                // The form sits on a translucent sheet so it reads as one unit.
+                Container(
+                  padding: const EdgeInsets.all(AppSpacing.md),
+                  decoration: BoxDecoration(
+                    color: glass,
+                    borderRadius: AppRadii.lgAll,
+                    border: Border.all(color: border),
+                  ),
+                  child: Column(
+                    children: [
+                      // 1. Name
+                      _inputField(
+                        label: 'MY NAME IS',
+                        controller: _nameController,
+                        hint: 'Your full name',
+                        icon: Icons.person_outline_rounded,
+                        capitalization: TextCapitalization.words,
+                        validator: (value) {
+                          if (value == null || value.trim().length < 2) {
+                            return 'Please enter your name';
+                          }
+                          return null;
+                        },
+                      ),
+                      const SizedBox(height: 16),
+
+                      // 2. District
+                      _districtDropdownField(),
+                      const SizedBox(height: 16),
+
+                      // 3. Mobile (optional)
+                      _inputField(
+                        label: 'MOBILE NUMBER',
+                        controller: _phoneController,
+                        hint: '10-digit number',
+                        icon: Icons.phone_android_rounded,
+                        keyboardType: TextInputType.phone,
+                        formatters: [
+                          FilteringTextInputFormatter.digitsOnly,
+                          LengthLimitingTextInputFormatter(10),
+                        ],
+                        helper: 'Optional — sirf leaderboard verification ke liye',
+                        validator: (value) {
+                          if (value == null || value.trim().isEmpty) {
+                            return null;
+                          }
+                          if (!RegExp(r'^[6-9]\d{9}$').hasMatch(value.trim())) {
+                            return 'Enter a valid 10-digit number';
+                          }
+                          return null;
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(height: 18),
 
                 Container(
                   padding: const EdgeInsets.all(14),
                   decoration: BoxDecoration(
-                    color: const Color(0x1A38BDF8),
-                    borderRadius: BorderRadius.circular(16),
-                    border: Border.all(
-                      color: const Color(0x3338BDF8),
-                    ),
+                    color: blue.withOpacity(0.10),
+                    borderRadius: AppRadii.mdAll,
+                    border: Border.all(color: blue.withOpacity(0.28)),
                   ),
                   child: const Row(
                     children: [
-                      Icon(
-                        Icons.rocket_launch_rounded,
-                        color: blue,
-                        size: 19,
-                      ),
+                      Icon(Icons.rocket_launch_rounded, color: blue, size: 20),
                       SizedBox(width: 10),
                       Expanded(
                         child: Text(
                           'Ready? Your preparation starts here.',
                           style: TextStyle(
-                            color: Color(0xFF7DD3FC),
-                            fontSize: 10,
+                            color: Color(0xFFBAE6FD),
+                            fontSize: 11.5,
                             fontWeight: FontWeight.w800,
                           ),
                         ),
@@ -527,7 +541,7 @@ class _OnboardingWelcomeScreenState
                     ],
                   ),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 22),
 
                 _primaryButton(
                   text: _isLoading ? 'Setting up...' : 'Start My Preparation',
@@ -551,17 +565,17 @@ class _OnboardingWelcomeScreenState
           'SELECT YOUR DISTRICT',
           style: TextStyle(
             color: faint,
-            fontSize: 8,
+            fontSize: 9,
             fontWeight: FontWeight.w900,
-            letterSpacing: 1.1,
+            letterSpacing: 1.2,
           ),
         ),
         const SizedBox(height: 8),
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 4),
+          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 2),
           decoration: BoxDecoration(
-            color: const Color(0x0DF1F5F9),
-            borderRadius: BorderRadius.circular(16),
+            color: glassStrong,
+            borderRadius: AppRadii.mdAll,
             border: Border.all(color: border),
           ),
           child: DropdownButtonHideUnderline(
@@ -569,10 +583,11 @@ class _OnboardingWelcomeScreenState
               isExpanded: true,
               value: _selectedDistrict,
               dropdownColor: const Color(0xFF0E1A2D),
+              borderRadius: AppRadii.mdAll,
               icon: const Icon(Icons.keyboard_arrow_down_rounded, color: blue),
               style: const TextStyle(
                 color: ink,
-                fontSize: 16,
+                fontSize: 15.5,
                 fontWeight: FontWeight.w700,
               ),
               items: _biharDistricts.map((String district) {
@@ -583,7 +598,7 @@ class _OnboardingWelcomeScreenState
                       const Icon(
                         Icons.location_on_outlined,
                         color: blue,
-                        size: 20,
+                        size: 19,
                       ),
                       const SizedBox(width: 10),
                       Text(district),
@@ -603,6 +618,8 @@ class _OnboardingWelcomeScreenState
     );
   }
 
+  /// Dark-on-aurora field: the app theme may be in light mode while this
+  /// screen is always dark, so the colours are set explicitly (v1 did the same).
   Widget _inputField({
     required String label,
     required TextEditingController controller,
@@ -611,6 +628,7 @@ class _OnboardingWelcomeScreenState
     TextInputType? keyboardType,
     TextCapitalization capitalization = TextCapitalization.none,
     List<TextInputFormatter>? formatters,
+    String? helper,
     String? Function(String?)? validator,
   }) {
     return Column(
@@ -620,9 +638,9 @@ class _OnboardingWelcomeScreenState
           label,
           style: const TextStyle(
             color: faint,
-            fontSize: 8,
+            fontSize: 9,
             fontWeight: FontWeight.w900,
-            letterSpacing: 1.1,
+            letterSpacing: 1.2,
           ),
         ),
         const SizedBox(height: 8),
@@ -635,45 +653,60 @@ class _OnboardingWelcomeScreenState
           cursorColor: blue,
           style: const TextStyle(
             color: ink,
-            fontSize: 17,
+            fontSize: 16,
             fontWeight: FontWeight.w700,
           ),
           decoration: InputDecoration(
             hintText: hint,
             hintStyle: const TextStyle(
               color: Color(0x4DF1F5F9),
-              fontSize: 17,
+              fontSize: 15.5,
               fontWeight: FontWeight.w500,
             ),
-            prefixIcon: Icon(icon, color: blue, size: 21),
+            prefixIcon: Icon(icon, color: blue, size: 20),
             filled: true,
-            fillColor: const Color(0x0DF1F5F9),
+            fillColor: glassStrong,
             contentPadding: const EdgeInsets.symmetric(
-              horizontal: 15,
-              vertical: 17,
+              horizontal: 14,
+              vertical: 16,
             ),
             border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: AppRadii.mdAll,
               borderSide: const BorderSide(color: border),
             ),
             enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: AppRadii.mdAll,
               borderSide: const BorderSide(color: border),
             ),
             focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: AppRadii.mdAll,
               borderSide: const BorderSide(color: blue, width: 1.5),
             ),
             errorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: AppRadii.mdAll,
               borderSide: const BorderSide(color: Color(0xFFF87171)),
             ),
             focusedErrorBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(16),
+              borderRadius: AppRadii.mdAll,
               borderSide: const BorderSide(color: Color(0xFFF87171), width: 1.5),
             ),
           ),
         ),
+        if (helper != null) ...<Widget>[
+          const SizedBox(height: 7),
+          Row(
+            children: [
+              const Icon(Icons.info_outline_rounded, color: faint, size: 13),
+              const SizedBox(width: 6),
+              Expanded(
+                child: Text(
+                  helper,
+                  style: const TextStyle(color: faint, fontSize: 10),
+                ),
+              ),
+            ],
+          ),
+        ],
       ],
     );
   }
@@ -816,25 +849,15 @@ class _OnboardingWelcomeScreenState
     return GestureDetector(
       onTap: onTap,
       child: AnimatedOpacity(
-        duration: const Duration(milliseconds: 200),
+        duration: AppMotion.fast,
         opacity: onTap == null ? .55 : 1,
         child: Container(
           width: double.infinity,
           height: 56,
           decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Color(0xFF0284C7), Color(0xFF2563EB)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            ),
-            borderRadius: BorderRadius.circular(17),
-            boxShadow: [
-              BoxShadow(
-                color: const Color(0xFF0284C7).withOpacity(.3),
-                blurRadius: 20,
-                offset: const Offset(0, 9),
-              ),
-            ],
+            gradient: AppGradients.brand,
+            borderRadius: AppRadii.mdAll,
+            boxShadow: AppElevation.glow(blueDeep, opacity: 0.32),
           ),
           child: Center(
             child: loading
@@ -853,8 +876,9 @@ class _OnboardingWelcomeScreenState
                         text,
                         style: const TextStyle(
                           color: Colors.white,
-                          fontSize: 13,
+                          fontSize: 14,
                           fontWeight: FontWeight.w900,
+                          letterSpacing: 0.2,
                         ),
                       ),
                       const SizedBox(width: 9),
@@ -870,35 +894,95 @@ class _OnboardingWelcomeScreenState
   Widget _bottomProgress() {
     return Row(
       children: [
-        AnimatedContainer(
-          duration: const Duration(milliseconds: 350),
-          width: _currentPage == 0 ? 34 : 12,
-          height: 4,
-          decoration: BoxDecoration(
-            color: blue,
-            borderRadius: BorderRadius.circular(10),
+        for (int i = 0; i < 2; i++) ...<Widget>[
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 350),
+            width: _currentPage == i ? 34 : 12,
+            height: 4,
+            decoration: BoxDecoration(
+              gradient: _currentPage == i ? AppGradients.brand : null,
+              color: _currentPage == i ? null : Colors.white.withOpacity(0.18),
+              borderRadius: BorderRadius.circular(10),
+            ),
           ),
-        ),
-        const SizedBox(width: 5),
-        AnimatedContainer(
-          duration: const Duration(milliseconds: 350),
-          width: _currentPage == 1 ? 34 : 12,
-          height: 4,
-          decoration: BoxDecoration(
-            color: _currentPage == 1 ? blue : const Color(0x33F1F5F9),
-            borderRadius: BorderRadius.circular(10),
-          ),
-        ),
+          if (i == 0) const SizedBox(width: 5),
+        ],
         const Spacer(),
         Text(
           _currentPage == 0 ? '01 / 02' : '02 / 02',
           style: const TextStyle(
             color: faint,
-            fontSize: 9,
+            fontSize: 9.5,
             fontWeight: FontWeight.w900,
+            letterSpacing: 0.6,
           ),
         ),
       ],
+    );
+  }
+}
+
+/// One row of the "what you get" list on the welcome step.
+class _FeatureRow extends StatelessWidget {
+  const _FeatureRow({
+    required this.icon,
+    required this.title,
+    required this.subtitle,
+    required this.gradient,
+  });
+
+  final IconData icon;
+  final String title;
+  final String subtitle;
+  final Gradient gradient;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 11),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.045),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.white.withOpacity(0.12)),
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 36,
+            height: 36,
+            decoration: BoxDecoration(
+              gradient: gradient,
+              borderRadius: BorderRadius.circular(11),
+            ),
+            child: Icon(icon, color: Colors.white, size: 18),
+          ),
+          const SizedBox(width: 12),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  title,
+                  style: const TextStyle(
+                    color: Color(0xFFF1F5F9),
+                    fontSize: 13.5,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                const SizedBox(height: 2),
+                Text(
+                  subtitle,
+                  style: const TextStyle(
+                    color: Color(0xFF94A3B8),
+                    fontSize: 11.5,
+                    height: 1.35,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
@@ -932,37 +1016,5 @@ class FadeSlide extends StatelessWidget {
       },
       child: child,
     );
-  }
-}
-
-class _BackgroundPainter extends CustomPainter {
-  final double animation;
-
-  _BackgroundPainter(this.animation);
-
-  @override
-  void paint(Canvas canvas, Size size) {
-    final bluePaint = Paint()..color = const Color(0xFF0E1C38).withOpacity(.85);
-    final violetPaint = Paint()..color = const Color(0xFF1E1B4B).withOpacity(.6);
-
-    final move1 = math.sin(animation * math.pi * 2) * 18;
-    final move2 = math.cos(animation * math.pi * 2) * 15;
-
-    canvas.drawCircle(
-      Offset(size.width + 30, 100 + move1),
-      150,
-      bluePaint,
-    );
-
-    canvas.drawCircle(
-      Offset(-35, size.height - 90 + move2),
-      160,
-      violetPaint,
-    );
-  }
-
-  @override
-  bool shouldRepaint(covariant _BackgroundPainter oldDelegate) {
-    return oldDelegate.animation != animation;
   }
 }

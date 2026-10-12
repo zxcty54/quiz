@@ -222,6 +222,10 @@ jobs:
 
       - name: Build demo APK (tester tool)
         working-directory: flutter_app_v2
+        # The production APK is already built at this point, so the manifest can
+        # carry the tester label without affecting it. This is what makes the
+        # demo install distinguishable from v1 on the home screen.
+        # (Label patch runs inside the step below.)
         env:
           KEYSTORE_PATH: ${{ github.workspace }}/flutter_app_v2/android/app/mocktester_key.jks
           KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
@@ -229,6 +233,9 @@ jobs:
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
           set +e
+          sed -i 's/android:label="MockTester"/android:label="MockTester v2 Demo"/' \
+            android/app/src/main/AndroidManifest.xml
+          grep -n 'android:label' android/app/src/main/AndroidManifest.xml
           flutter build apk --release \
             --target=lib/tools/demo/demo_tool.dart \
             --target-platform=android-arm64 \

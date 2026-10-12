@@ -1,8 +1,16 @@
 // v1 source: flutter_app/lib/screens/splash_screen.dart
+//
+// Same behaviour (2.5s, then HomeShellScreen) with the v2 brand treatment:
+// aurora field, a mark that scales in, an animated progress bar instead of a
+// bare spinner, and a footer line so the wait feels intentional.
 import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+import 'package:mocktester_v2/core/theme/app_gradients.dart';
+import 'package:mocktester_v2/core/theme/app_tokens.dart';
+import 'package:mocktester_v2/core/widgets/aurora_background.dart';
+import 'package:mocktester_v2/core/widgets/brand_mark.dart';
 import 'package:mocktester_v2/features/shell/presentation/home_shell_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -12,11 +20,20 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _controller = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 1400),
+  )..forward();
+
+  Timer? _timer;
+
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(milliseconds: 2500), () {
+    _timer = Timer(const Duration(milliseconds: 2500), () {
+      if (!mounted) return;
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => const HomeScreen()),
       );
@@ -24,47 +41,93 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   @override
+  void dispose() {
+    _timer?.cancel();
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final Animation<double> entrance =
+        CurvedAnimation(parent: _controller, curve: AppMotion.emphasised);
 
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primaryContainer,
-                shape: BoxShape.circle,
+      backgroundColor: const Color(0xFF070B14),
+      body: AuroraBackground(
+        intensity: 1.25,
+        child: SafeArea(
+          child: Column(
+            children: <Widget>[
+              const Spacer(flex: 3),
+              FadeTransition(
+                opacity: entrance,
+                child: ScaleTransition(
+                  scale: Tween<double>(begin: 0.86, end: 1).animate(entrance),
+                  child: const BrandMark(size: 92, icon: Icons.insights_rounded),
+                ),
               ),
-              child: Icon(
-                Icons.assignment_turned_in_rounded,
-                size: 64,
-                color: Theme.of(context).colorScheme.primary,
+              const SizedBox(height: AppSpacing.xl),
+              FadeTransition(
+                opacity: entrance,
+                child: const Text(
+                  'MockTester',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 34,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: -0.8,
+                  ),
+                ),
               ),
-            ),
-            const SizedBox(height: 24),
-            Text(
-              'MockTester',
-              style: TextStyle(
-                fontSize: 32,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 1.2,
-                color: isDark ? Colors.white : Colors.black87,
+              const SizedBox(height: 6),
+              ShaderMask(
+                shaderCallback: (Rect bounds) =>
+                    AppGradients.study.createShader(bounds),
+                blendMode: BlendMode.srcIn,
+                child: const Text(
+                  'Practice. Analyze. Succeed.',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 13.5,
+                    fontWeight: FontWeight.w700,
+                    letterSpacing: 0.4,
+                  ),
+                ),
               ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Practice. Analyze. Succeed.',
-              style: TextStyle(
-                fontSize: 14,
-                color: Theme.of(context).colorScheme.outline,
+              const Spacer(flex: 2),
+              SizedBox(
+                width: 168,
+                child: ClipRRect(
+                  borderRadius: AppRadii.pillAll,
+                  child: AnimatedBuilder(
+                    animation: _controller,
+                    builder: (BuildContext context, Widget? _) {
+                      return LinearProgressIndicator(
+                        value: _controller.value,
+                        minHeight: 4,
+                        backgroundColor: Colors.white.withOpacity(0.12),
+                        valueColor: const AlwaysStoppedAnimation<Color>(
+                          Color(0xFF38BDF8),
+                        ),
+                      );
+                    },
+                  ),
+                ),
               ),
-            ),
-            const SizedBox(height: 48),
-            const CircularProgressIndicator(strokeWidth: 3),
-          ],
+              const SizedBox(height: AppSpacing.md),
+              Text(
+                'BPSC • BSSC • Bihar Police • All Bihar Exams',
+                style: TextStyle(
+                  color: Colors.white.withOpacity(0.55),
+                  fontSize: 10.5,
+                  fontWeight: FontWeight.w700,
+                  letterSpacing: 0.6,
+                ),
+              ),
+              const SizedBox(height: AppSpacing.xxl),
+            ],
+          ),
         ),
       ),
     );

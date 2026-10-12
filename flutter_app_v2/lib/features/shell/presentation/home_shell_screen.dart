@@ -9,6 +9,9 @@ import 'package:app_links/app_links.dart';
 
 import 'package:mocktester_v2/core/models/question_model.dart';
 import 'package:mocktester_v2/core/services/telemetry/telegram_tracker.dart';
+import 'package:mocktester_v2/core/theme/app_gradients.dart';
+import 'package:mocktester_v2/core/theme/app_tokens.dart';
+import 'package:mocktester_v2/core/widgets/brand_mark.dart';
 import 'package:mocktester_v2/features/challenge/data/challenge_service.dart';
 import 'package:mocktester_v2/features/ai/data/ai_explainer_service.dart';
 import 'package:mocktester_v2/features/challenge/presentation/challenge_quiz_screen.dart';
@@ -224,15 +227,42 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return Scaffold(
       backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
-        title: Text(
-          'MockTester',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
-          ),
-        ),
         backgroundColor: cardColor,
         elevation: 0,
+        toolbarHeight: 64,
+        titleSpacing: 16,
+        title: Row(
+          children: <Widget>[
+            const BrandMark(size: 32, showGlow: false),
+            const SizedBox(width: 10),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Text(
+                  'MockTester',
+                  style: TextStyle(
+                    fontSize: 16.5,
+                    fontWeight: FontWeight.w800,
+                    letterSpacing: -0.3,
+                    color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                  ),
+                ),
+                Text(
+                  'BPSC • BSSC • Bihar Police',
+                  style: TextStyle(
+                    fontSize: 10,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 0.2,
+                    color: _isDarkMode
+                        ? const Color(0xFF94A3B8)
+                        : const Color(0xFF64748B),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
         actions: [
           IconButton(
             icon: const Icon(Icons.bolt_rounded, color: Colors.amber, size: 22),
@@ -290,28 +320,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   child: ListView(
                     padding: EdgeInsets.zero,
                     children: [
-                      UserAccountsDrawerHeader(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
-                          ),
-                        ),
-                        accountName: Text(
-                          userName,
-                          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                        ),
-                        accountEmail: Text(
-                          subtitleText,
-                          style: const TextStyle(color: Colors.white70, fontSize: 12),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        currentAccountPicture: const CircleAvatar(
-                          backgroundColor: Colors.white,
-                          child: Icon(Icons.person, color: Color(0xFF2563EB), size: 36),
-                        ),
+                      _DrawerHeader(
+                        userName: userName,
+                        subtitle: subtitleText,
+                        district: prefs?.getString('user_district') ?? '',
                       ),
                       ListTile(
                         leading: const Icon(Icons.dashboard_customize_rounded, color: Color(0xFF2563EB)),
@@ -564,21 +576,26 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   }
 
   Widget _buildSkeletonLoading() {
-    return ListView.builder(
-      padding: const EdgeInsets.all(16),
-      itemCount: 4,
-      itemBuilder: (context, index) => Shimmer.fromColors(
-        baseColor: Colors.grey[300]!,
-        highlightColor: Colors.grey[100]!,
-        child: Container(
-          height: 100,
-          margin: const EdgeInsets.only(bottom: 16),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-          ),
-        ),
-      ),
+    // v1 shimmered four identical 100px white blocks, which in dark mode lit up
+    // the screen with white rectangles. The skeleton now follows the theme.
+    final Color base = _isDarkMode
+        ? const Color(0xFF1B2438)
+        : const Color(0xFFE8EDF6);
+    final Color highlight = _isDarkMode
+        ? const Color(0xFF243050)
+        : const Color(0xFFF6F8FC);
+
+    return ListView(
+      padding: const EdgeInsets.all(AppSpacing.md),
+      children: <Widget>[
+        // header placeholder
+        _SkeletonBox(height: 132, base: base, highlight: highlight),
+        const SizedBox(height: AppSpacing.md),
+        for (int i = 0; i < 3; i++) ...<Widget>[
+          _SkeletonBox(height: 96, base: base, highlight: highlight),
+          const SizedBox(height: AppSpacing.md),
+        ],
+      ],
     );
   }
 
@@ -826,5 +843,161 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         const SnackBar(content: Text('Test questions load nahi ho paye. Internet check karein.')),
       );
     }
+  }
+}
+
+/// Gradient drawer header (replaces Material's [UserAccountsDrawerHeader]).
+///
+/// The stock header centres a 96px avatar and has no room for anything useful;
+/// this one shows the brand mark, the aspirant's name, their district and a
+/// compact "keep going" line, all on the brand gradient.
+class _DrawerHeader extends StatelessWidget {
+  const _DrawerHeader({
+    required this.userName,
+    required this.subtitle,
+    required this.district,
+  });
+
+  final String userName;
+  final String subtitle;
+  final String district;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: EdgeInsets.only(
+        top: MediaQuery.of(context).padding.top + 20,
+        left: AppSpacing.lg,
+        right: AppSpacing.lg,
+        bottom: AppSpacing.lg,
+      ),
+      decoration: const BoxDecoration(
+        gradient: AppGradients.brand,
+        borderRadius: BorderRadius.vertical(bottom: Radius.circular(24)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Row(
+            children: <Widget>[
+              const BrandMark(
+                size: 46,
+                showGlow: false,
+                gradient: AppGradients.study,
+              ),
+              const SizedBox(width: AppSpacing.sm),
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      userName,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 17,
+                        fontWeight: FontWeight.w800,
+                        letterSpacing: -0.2,
+                      ),
+                    ),
+                    const SizedBox(height: 3),
+                    Text(
+                      subtitle,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: TextStyle(
+                        color: Colors.white.withOpacity(0.78),
+                        fontSize: 11.5,
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(height: AppSpacing.md),
+          Wrap(
+            spacing: 8,
+            runSpacing: 8,
+            children: <Widget>[
+              if (district.trim().isNotEmpty)
+                _HeaderChip(
+                  icon: Icons.location_on_outlined,
+                  label: district.trim(),
+                ),
+              const _HeaderChip(
+                icon: Icons.workspace_premium_outlined,
+                label: 'Aspirant',
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _HeaderChip extends StatelessWidget {
+  const _HeaderChip({required this.icon, required this.label});
+
+  final IconData icon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+      decoration: BoxDecoration(
+        color: Colors.white.withOpacity(0.16),
+        borderRadius: AppRadii.pillAll,
+        border: Border.all(color: Colors.white.withOpacity(0.24)),
+      ),
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          Icon(icon, size: 13, color: Colors.white),
+          const SizedBox(width: 5),
+          Text(
+            label,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 10.5,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// One shimmering placeholder block for the loading state.
+class _SkeletonBox extends StatelessWidget {
+  const _SkeletonBox({
+    required this.height,
+    required this.base,
+    required this.highlight,
+  });
+
+  final double height;
+  final Color base;
+  final Color highlight;
+
+  @override
+  Widget build(BuildContext context) {
+    return Shimmer.fromColors(
+      baseColor: base,
+      highlightColor: highlight,
+      child: Container(
+        height: height,
+        decoration: BoxDecoration(
+          color: base,
+          borderRadius: AppRadii.cardAll,
+        ),
+      ),
+    );
   }
 }

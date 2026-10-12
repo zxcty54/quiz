@@ -49,4 +49,16 @@ class AppColors {
     Color(0xFF2563EB),
     Color(0xFF1E40AF),
   ];
+
+  // ------------------------------------------------- v2 design-system adds --
+  /// Slightly brighter cyan than [brandCyan]; reads better on dark surfaces.
+  static const Color accentCyan = Color(0xFF22D3EE);
+
+  /// Extra surface step so raised cards can separate from the page in dark.
+  static const Color darkElevated = Color(0xFF18213A);
+  static const Color darkHairline = Color(0xFF243050);
+
+  /// Light-mode hairlines are lighter than [lightBorder] (borders in v1 looked
+  /// heavy on plain white cards).
+  static const Color lightHairline = Color(0xFFEDF1F7);
 }
