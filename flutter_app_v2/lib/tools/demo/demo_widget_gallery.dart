@@ -51,8 +51,8 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final List<_GalleryEntry> entries = _entries(_dark)
-        .where((_GalleryEntry e) =>
+    final List<DemoGalleryEntry> entries = demoGalleryEntries(dark: _dark)
+        .where((DemoGalleryEntry e) =>
             _query.isEmpty ||
             e.name.toLowerCase().contains(_query.toLowerCase()))
         .toList();
@@ -124,9 +124,26 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
       ),
     );
   }
+}
 
-  List<_GalleryEntry> _entries(bool dark) => <_GalleryEntry>[
-        _GalleryEntry(
+/// One row of the gallery: a widget name plus the builder that renders it with
+/// fixture data.
+///
+/// Public (and the list lives in a top-level function) so
+/// `test/widget_smoke_test.dart` can render every widget head-less and catch
+/// layout overflows without a device.
+class DemoGalleryEntry {
+  const DemoGalleryEntry(this.name, this.builder);
+
+  final String name;
+  final Widget Function(BuildContext context) builder;
+}
+
+/// Every widget the gallery can show, in display order.
+List<DemoGalleryEntry> demoGalleryEntries({required bool dark}) =>
+    <DemoGalleryEntry>[
+
+      DemoGalleryEntry(
           'TodayUpdateTickerWidget',
           (_) => TodayUpdateTickerWidget(
             updateData: DemoFixtures.appConfig['today_update']
@@ -134,85 +151,85 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             onTapUrl: (String a, String b) {},
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'TrustHeroBannerWidget',
           (_) => TrustHeroBannerWidget(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'LaunchRoadmapCardWidget',
           (_) => LaunchRoadmapCardWidget(
             appConfig: DemoFixtures.appConfig,
             isDarkMode: dark,
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'EligibilityCheckerWidget',
           (_) => EligibilityCheckerWidget(
             isDarkMode: dark,
             onTapUrl: (String a, String b) {},
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'TelegramCreatorWidget',
           (_) => const TelegramCreatorWidget(),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'CoachingHubCard',
           (_) => CoachingHubCard(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'CoachingOnboardingCtaWidget',
           (_) => CoachingOnboardingCtaWidget(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'DistrictTopLeaderboardWidget',
           (_) => DistrictTopLeaderboardWidget(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'ProPdfVaultCard',
           (_) => ProPdfVaultCard(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'HallOfFameCarouselWidget',
           (_) => HallOfFameCarouselWidget(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'FirstInIndiaWidget',
           (_) => FirstInIndiaWidget(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'DailyBulletinWidget',
           (_) => DailyBulletinWidget(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'LatestJobsWidget',
           (_) => LatestJobsWidget(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'KnowYourBiharWidget',
           (_) => KnowYourBiharWidget(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'BiharEventsCarouselWidget',
           (_) => BiharEventsCarouselWidget(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'ChallengeCardWidget',
           (_) => ChallengeCardWidget(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'MasteryEvolutionCard',
           (_) => MasteryEvolutionCard(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'DonationWidget',
           (_) => DonationWidget(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'RevisionHeroBanner',
           (_) => RevisionHeroBanner(isDark: dark, isLoading: false),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'RevisionSegmentedCard',
           (_) => RevisionSegmentedCard(
             title: 'General Science',
@@ -231,7 +248,7 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             onLaunchPractice: (BuildContext c, String t, String p) {},
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'RevisionDirectCard',
           (_) => RevisionDirectCard(
             title: 'Quantitative Aptitude',
@@ -247,11 +264,11 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             onLaunchPractice: (BuildContext c, String t, String p) {},
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'RevisionCurrentAffairsCard',
           (_) => RevisionCurrentAffairsCard(isDark: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'RevisionTrickSubmitBox',
           (_) => const RevisionTrickSubmitBox(
             testTitle: 'Demo Test',
@@ -259,22 +276,22 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             questionSnippet: 'Demo question snippet',
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'DuolingoCard',
           (_) => DuolingoCard(
             payload: DemoFixtures.duolingoPayload,
             isDarkMode: dark,
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'IntroCardWidget',
           (_) => IntroCardWidget(card: DemoFixtures.introCard),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'QuizCard',
           (_) => QuizCard(card: DemoFixtures.quizCard),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'ModernChatCard',
           (_) => ModernChatCard(
             card: DemoFixtures.chatCard,
@@ -284,7 +301,7 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             scrollController: ScrollController(),
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'LearnCardRenderer',
           (_) => LearnCardRenderer(
             card: DemoFixtures.chatCard,
@@ -294,7 +311,7 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             scrollController: ScrollController(),
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'InteractiveWordText',
           (_) => InteractiveWordText(
             rawText: 'Tap any difficult word — it explains itself. '
@@ -303,11 +320,11 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
           ),
         ),
         _GalleryEntry('BouncingTypingDots', (_) => const BouncingTypingDots()),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'CbtPieChartCard',
           (_) => const CbtPieChartCard(correct: 12, wrong: 4, skipped: 2),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'AiExplanationButton',
           (_) => const AiExplanationButton(
             question: 'Which Article gives the Right to Constitutional Remedies?',
@@ -315,7 +332,7 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             correctAnswer: 'Article 32',
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'WikiContributionBox',
           (_) => const WikiContributionBox(
             subFolder: 'demo/set1.json',
@@ -323,7 +340,7 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             questionSnippet: 'Demo snippet for wiki contribution',
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'CommunityPostCard',
           (_) => CommunityPostCard(
             post: DemoFixtures.communityPost,
@@ -338,7 +355,7 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             onPollVote: (int i) {},
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'StarSelectionCard',
           (_) => StarSelectionCard(
             data: const <String, dynamic>{
@@ -352,21 +369,21 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             isDarkMode: dark,
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'AppGlobalFeedbackCard',
           (_) => AppGlobalFeedbackCard(isDarkMode: dark),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'LatexText',
           (_) => const LatexText(r'The area of a circle is $A = \pi r^2$.'),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'MathFormattedText',
           (_) => const MathFormattedText(
             text: r'$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$',
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'EventGoingButton',
           (_) => const EventGoingButton(
             eventId: 'demo-event-1',
@@ -374,7 +391,7 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             isDark: false,
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'EventCommunityUpdatesWidget',
           (_) => const EventCommunityUpdatesWidget(
             eventId: 'demo-event-1',
@@ -382,7 +399,7 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             isDark: false,
           ),
         ),
-        _GalleryEntry(
+      DemoGalleryEntry(
           'Buttons: dialogs & sheets',
           (BuildContext context) => Wrap(
             spacing: 8,
@@ -453,12 +470,4 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
             ],
           ),
         ),
-      ];
-}
-
-class _GalleryEntry {
-  const _GalleryEntry(this.name, this.builder);
-
-  final String name;
-  final Widget Function(BuildContext context) builder;
-}
+    ];
