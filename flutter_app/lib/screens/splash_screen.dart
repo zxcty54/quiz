@@ -1,7 +1,7 @@
 // Splash screen — the "MT" screen the app opens with.
 //
 // Ye wahi screen hai jo Android ke launch screen
-// (android/app/src/main/res → brand midnight + MT logo) ke baad aati hai:
+// (android/app/src/main/res → white background + MT logo) ke baad aati hai:
 // same background, same logo, isliye native launch screen se hand-over
 // seamless lagta hai. Logo ~1 second dikhta hai aur phir app khul jata hai.
 //
@@ -33,7 +33,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen>
     with SingleTickerProviderStateMixin {
   /// Android launch screen ka colour (values/colors.xml -> launch_background).
-  static const Color _bg = Color(0xFF070B14);
+  static const Color _bg = Color(0xFFFFFFFF);
 
   /// MT screen kitni der dikhe.
   static const Duration _hold = Duration(milliseconds: 900);
@@ -78,22 +78,6 @@ class _SplashScreenState extends State<SplashScreen>
       backgroundColor: _bg,
       body: Stack(
         children: <Widget>[
-          // Halka brand glow pichhe, taaki screen flat na lage — warna sab kuch
-          // wahi rehta hai jo launch screen par tha.
-          Positioned.fill(
-            child: FadeTransition(
-              opacity: entrance,
-              child: const DecoratedBox(
-                decoration: BoxDecoration(
-                  gradient: RadialGradient(
-                    center: Alignment(0, -0.04),
-                    radius: 0.8,
-                    colors: <Color>[Color(0x332563EB), Color(0x00070B14)],
-                  ),
-                ),
-              ),
-            ),
-          ),
           Center(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
