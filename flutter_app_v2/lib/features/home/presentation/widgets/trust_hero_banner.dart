@@ -50,8 +50,11 @@ class TrustHeroBannerWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Top Pills Row
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // Two pills side by side used to overflow by ~240px on a
+                  // 390dp screen; they wrap now, and each pill shrinks its text.
+                  Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
                     children: [
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -61,6 +64,7 @@ class TrustHeroBannerWidget extends StatelessWidget {
                           border: Border.all(color: const Color(0xFF38BDF8).withOpacity(0.4)),
                         ),
                         child: const Row(
+                          mainAxisSize: MainAxisSize.min,
                           children: [
                             Icon(Icons.shield_rounded, size: 14, color: Color(0xFF38BDF8)),
                             SizedBox(width: 5),

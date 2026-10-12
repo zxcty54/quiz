@@ -101,8 +101,10 @@ jobs:
           echo "flutter test exit: $status"
           echo "---- failing tests ----"
           grep -E "\[E\]$" test.log | sed -E 's/^[0-9:]+ \+[0-9]+ -[0-9]+: //' | sort -u || true
+          echo "---- UI defect summary ----"
+          sed -n '/==== UI DEFECTS/,/==== END UI DEFECTS/p' test.log || true
           echo "---- why ----"
-          grep -E "Expected:|Actual:|Which:|RenderFlex|overflow" test.log | head -40 || true
+          grep -E "Expected:|Actual:|Which:|RenderFlex|overflow" test.log | head -30 || true
           # One annotation listing every failing test, then one with the reasons:
           # GitHub caps how many annotations a step may publish, and the old
           # per-line form silently lost the later failures.
@@ -110,10 +112,22 @@ jobs:
           lines=pathlib.Path('test.log').read_text(errors='replace').splitlines();\
           fails=sorted({l.split(': ',1)[-1] for l in lines if l.rstrip().endswith('[E]')});\
           print('::error title=Failing tests::'+'%0A'.join(f.replace('%','%25') for f in fails)) if fails else None"
-          python3 -c "import pathlib;\
-          lines=pathlib.Path('test.log').read_text(errors='replace').splitlines();\
-          why=[l.strip() for l in lines if ('RenderFlex' in l or l.strip().startswith('Expected:') or l.strip().startswith('Actual:'))][:40];\
-          print('::error title=Test failures (reasons)::'+'%0A'.join(w.replace('%','%25') for w in why)) if why else None"
+          # The widget test prints one compact line per defect; that block is
+          # the best thing to put in a single annotation.
+          python3 - <<'PYEOF'
+          import pathlib
+          lines = pathlib.Path('test.log').read_text(errors='replace').splitlines()
+          start = next((i for i, l in enumerate(lines) if l.startswith('==== UI DEFECTS')), None)
+          if start is not None:
+              end = next((i for i, l in enumerate(lines)
+                          if l.startswith('==== END UI DEFECTS')), len(lines))
+              block = lines[start:end][:60]
+          else:
+              block = [l.strip() for l in lines if 'RenderFlex' in l][:30]
+          if block:
+              print('::error title=UI defects::'
+                    + '%0A'.join(l.replace('%', '%25') for l in block))
+          PYEOF
           exit $status
 
       - name: Publish the test log as a check run

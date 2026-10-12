@@ -443,11 +443,16 @@ class EligibilityCheckerWidget extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                _buildStepBadge('1', '📅 DOB', isDarkMode),
+                // Each badge is Flexible: three badges + two chevrons exceed
+                // 390dp when the labels are followed by padding.
+                Flexible(child: _buildStepBadge('1', '📅 DOB', isDarkMode)),
                 const Icon(Icons.arrow_forward_ios_rounded, size: 10, color: Colors.grey),
-                _buildStepBadge('2', '🎓 Stream', isDarkMode),
+                Flexible(child: _buildStepBadge('2', '🎓 Stream', isDarkMode)),
                 const Icon(Icons.arrow_forward_ios_rounded, size: 10, color: Colors.grey),
-                _buildStepBadge('3', '📋 All Posts', isDarkMode, isHighlight: true),
+                Flexible(
+                  child: _buildStepBadge('3', '📋 All Posts', isDarkMode,
+                      isHighlight: true),
+                ),
               ],
             ),
           ),
@@ -495,6 +500,7 @@ class EligibilityCheckerWidget extends StatelessWidget {
 
   Widget _buildStepBadge(String num, String label, bool isDark, {bool isHighlight = false}) {
     return Row(
+      mainAxisSize: MainAxisSize.min,
       children: [
         Container(
           width: 17,
@@ -510,14 +516,18 @@ class EligibilityCheckerWidget extends StatelessWidget {
           ),
         ),
         const SizedBox(width: 4),
-        Text(
-          label,
-          style: TextStyle(
-            fontSize: 11,
-            fontWeight: FontWeight.bold,
-            color: isHighlight
-                ? const Color(0xFF10B981)
-                : (isDark ? Colors.white : const Color(0xFF1E293B)),
+        Flexible(
+          child: Text(
+            label,
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              fontSize: 11,
+              fontWeight: FontWeight.bold,
+              color: isHighlight
+                  ? const Color(0xFF10B981)
+                  : (isDark ? Colors.white : const Color(0xFF1E293B)),
+            ),
           ),
         ),
       ],

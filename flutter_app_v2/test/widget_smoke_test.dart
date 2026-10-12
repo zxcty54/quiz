@@ -21,6 +21,19 @@ import 'package:mocktester_v2/tools/demo/demo_widget_gallery.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
+  /// Every layout defect found, collected so one CI run reports the whole list
+  /// instead of the first few annotations.
+  final List<String> uiDefects = <String>[];
+
+  tearDownAll(() {
+    if (uiDefects.isEmpty) return;
+    print('==== UI DEFECTS (${uiDefects.length}) ====');
+    for (final String defect in uiDefects) {
+      print(defect);
+    }
+    print('==== END UI DEFECTS ====');
+  });
+
   /// Messages that mean "this widget needs a device / backend"; they are
   /// reported but not treated as UI defects.
   const List<String> environmentMarkers = <String>[
@@ -113,6 +126,12 @@ void main() {
         final List<String> defects = errors
             .where((String e) => !isEnvironmentIssue(e))
             .toList();
+        for (final String defect in defects) {
+          // One line per defect, starting with RenderFlex/overflow when that is
+          // what it is, so a grep on the CI log finds them all.
+          uiDefects.add('${entry.name} [$mode] -> '
+              '${defect.split('\n').first.trim()}');
+        }
         final List<String> environment =
             errors.where(isEnvironmentIssue).toList();
 

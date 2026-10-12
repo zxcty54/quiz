@@ -98,27 +98,31 @@ class CoachingOnboardingCtaWidget extends StatelessWidget {
                 children: [
                   // Top Pill Badge & Emoji Icon
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                        decoration: BoxDecoration(
-                          color: const Color(0xFF2563EB).withValues(alpha: 0.12),
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all(
-                            color: const Color(0xFF2563EB).withValues(alpha: 0.25),
+                      Flexible(
+                        child: Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFF2563EB).withValues(alpha: 0.12),
+                            borderRadius: BorderRadius.circular(30),
+                            border: Border.all(
+                              color: const Color(0xFF2563EB).withValues(alpha: 0.25),
+                            ),
                           ),
-                        ),
-                        child: const Text(
-                          'INSTITUTE & TEACHERS',
-                          style: TextStyle(
-                            color: Color(0xFF2563EB),
-                            fontSize: 10,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 0.6,
+                          child: const Text(
+                            'INSTITUTE & TEACHERS',
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              color: Color(0xFF2563EB),
+                              fontSize: 10,
+                              fontWeight: FontWeight.w900,
+                              letterSpacing: 0.6,
+                            ),
                           ),
                         ),
                       ),
+                      const SizedBox(width: 10),
                       Container(
                         width: 36,
                         height: 36,
@@ -204,12 +208,16 @@ class CoachingOnboardingCtaWidget extends StatelessWidget {
                         children: [
                           Icon(Icons.add_business_rounded, color: Colors.white, size: 18),
                           SizedBox(width: 8),
-                          Text(
-                            'Launch Digital Classroom',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 14,
-                              fontWeight: FontWeight.w800,
+                          Flexible(
+                            child: Text(
+                              'Launch Digital Classroom',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w800,
+                              ),
                             ),
                           ),
                           SizedBox(width: 6),

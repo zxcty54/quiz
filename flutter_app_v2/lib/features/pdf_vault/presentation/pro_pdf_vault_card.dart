@@ -218,38 +218,49 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
           children: [
             // 📚 Header
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.all(8),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFF2563EB).withOpacity(0.12),
-                        borderRadius: BorderRadius.circular(10),
+                // Expanded + ellipsis: the FREE badge on the right used to be
+                // pushed out of the card (197px overflow) by this title column.
+                Expanded(
+                  child: Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: const Color(0xFF2563EB).withOpacity(0.12),
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                        child: const Icon(Icons.menu_book_rounded,
+                            size: 20, color: Color(0xFF2563EB)),
                       ),
-                      child: const Icon(Icons.menu_book_rounded, size: 20, color: Color(0xFF2563EB)),
-                    ),
-                    const SizedBox(width: 10),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Study Material & PDF Vault',
-                          style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w700,
-                            color: textColor,
-                          ),
+                      const SizedBox(width: 10),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Study Material & PDF Vault',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.w700,
+                                color: textColor,
+                              ),
+                            ),
+                            Text(
+                              'Standard notes & formula sheets',
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: TextStyle(fontSize: 12, color: subTextColor),
+                            ),
+                          ],
                         ),
-                        Text(
-                          'Standard notes & formula sheets',
-                          style: TextStyle(fontSize: 12, color: subTextColor),
-                        ),
-                      ],
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
+                const SizedBox(width: 8),
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
