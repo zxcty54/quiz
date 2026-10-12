@@ -256,13 +256,24 @@ jobs:
              build/app/outputs/flutter-apk/MockTester_v2_DEMO_Build_${{ github.run_number }}.apk
 
       # -------------------------------------------------------------- package
-      - name: Package ZIP
+      - name: Package ZIPs
         working-directory: flutter_app_v2/build/app/outputs/flutter-apk
         run: |
+          # Telegram's bot API rejects documents over 50 MB and one APK is
+          # already ~45 MB, so each APK travels in its own zip (v1 shipped a
+          # single APK the same way).
           zip -1 -j MockTester_v2_Build_${{ github.run_number }}.zip \
-            MockTester_v2_Build_${{ github.run_number }}.apk \
+            MockTester_v2_Build_${{ github.run_number }}.apk
+          zip -1 -j MockTester_v2_DEMO_Build_${{ github.run_number }}.zip \
             MockTester_v2_DEMO_Build_${{ github.run_number }}.apk
           ls -lh ./*.apk ./*.zip
+          for zipfile in ./*.zip; do
+            size=$(stat -c%s "$zipfile")
+            echo "$zipfile = $((size / 1048576)) MB"
+            [ "$size" -gt 50000000 ] && echo \
+              "::warning title=Telegram limit::$zipfile is $((size / 1048576)) MB, the bot API cap is 50 MB"
+          done
+          exit 0
 
       - name: Upload workflow artefact
         uses: actions/upload-artifact@v4
@@ -273,21 +284,43 @@ jobs:
             flutter_app_v2/build/app/outputs/flutter-apk/*.zip
           retention-days: 30
 
-      - name: Send ZIP to Telegram
+      - name: Send ZIPs to Telegram
         if: ${{ github.event_name == 'push' || inputs.send_to_telegram }}
         env:
           BOT_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           CHAT_ID: ${{ secrets.TELEGRAM_TO }}
           BUILD_NUM: ${{ github.run_number }}
         run: |
-          ZIP="flutter_app_v2/build/app/outputs/flutter-apk/MockTester_v2_Build_${BUILD_NUM}.zip"
-          curl -sS --fail-with-body \
-            -F chat_id="${CHAT_ID}" \
-            -F caption="🚀 MockTester v2 Build #${BUILD_NUM} — production + demo APK (ZIP)" \
-            -F document=@"${ZIP}" \
-            --connect-timeout 60 --retry 5 --retry-delay 5 \
-            "https://api.telegram.org/bot${BOT_TOKEN}/sendDocument" > /dev/null
-          echo "uploaded ${ZIP}"
+          set +e
+          status=0
+          send_zip() {
+            local file="$1" caption="$2"
+            local path="flutter_app_v2/build/app/outputs/flutter-apk/${file}"
+            if [ ! -f "${path}" ]; then
+              echo "missing ${path}" | tee -a telegram_result.log
+              status=1
+              return
+            fi
+            echo "sending ${file} ($(( $(stat -c%s "${path}") / 1048576 )) MB)" \
+              | tee -a telegram_result.log
+            local body code
+            body=$(curl -sS -w '\n%{http_code}' \
+              -F chat_id="${CHAT_ID}" \
+              -F caption="${caption}" \
+              -F document=@"${path}" \
+              --connect-timeout 60 --retry 5 --retry-delay 5 \
+              "https://api.telegram.org/bot${BOT_TOKEN}/sendDocument" 2>&1)
+            code=$(printf '%s\n' "${body}" | tail -n 1)
+            printf '%s\n' "${body}" | sed '$d' >> telegram_result.log
+            echo "${file} -> HTTP ${code}" | tee -a telegram_result.log
+            [ "${code}" = "200" ] || status=1
+          }
+          # Demo first: that is the build the tester is asked to install.
+          send_zip "MockTester_v2_DEMO_Build_${BUILD_NUM}.zip" \
+            "🧪 MockTester v2 DEMO build #${BUILD_NUM} — tester tool (widget gallery, screen directory, live smoke test)"
+          send_zip "MockTester_v2_Build_${BUILD_NUM}.zip" \
+            "🚀 MockTester v2 production build #${BUILD_NUM}"
+          exit ${status}
 
       - name: Upload build logs
         if: always()
@@ -297,6 +330,7 @@ jobs:
           path: |
             flutter_app_v2/build_prod.log
             flutter_app_v2/build_demo.log
+            telegram_result.log
           if-no-files-found: ignore
           retention-days: 14
 
@@ -314,6 +348,7 @@ jobs:
               return '\n'.join(f.read_text(errors='replace').splitlines()[-n:])
           text = '### prod build log (tail)\n```text\n' + tail('flutter_app_v2/build_prod.log', 500) + '\n```'
           text += '\n\n### demo build log (tail)\n```text\n' + tail('flutter_app_v2/build_demo.log', 200) + '\n```'
+          text += '\n\n### telegram upload\n```text\n' + tail('telegram_result.log', 60) + '\n```'
           json.dump({
               'name': 'flutter-build-log',
               'head_sha': os.environ['GITHUB_SHA'],
