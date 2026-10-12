@@ -51,10 +51,11 @@ android {
 
     signingConfigs {
         create("release") {
-            val keystorePath = System.getenv("KEYSTORE_PATH") ?: "mocktester_key.jks"
-            val storeFile = file(keystorePath)
-            if (storeFile.exists()) {
-                storeFile(storeFile)
+            // NB: the local must not be called `storeFile` - that name is the
+            // SigningConfig setter, and shadowing it breaks the Kotlin DSL.
+            val keystore = file(System.getenv("KEYSTORE_PATH") ?: "mocktester_key.jks")
+            if (keystore.exists()) {
+                storeFile = keystore
                 storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "mocktester123"
                 keyAlias = System.getenv("KEY_ALIAS") ?: "mocktester"
                 keyPassword = System.getenv("KEY_PASSWORD") ?: "mocktester123"
