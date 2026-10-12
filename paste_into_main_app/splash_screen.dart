@@ -20,6 +20,7 @@
 // Everything it needs is inside this file (tokens, background, logo mark); no
 // new package is required.
 import 'dart:async';
+import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
