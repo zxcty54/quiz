@@ -89,7 +89,7 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
         padding: const EdgeInsets.all(12),
         itemCount: entries.length,
         itemBuilder: (BuildContext context, int index) {
-          final _GalleryEntry entry = entries[index];
+          final DemoGalleryEntry entry = entries[index];
           return Padding(
             padding: const EdgeInsets.only(bottom: 18),
             child: Column(
@@ -319,7 +319,7 @@ List<DemoGalleryEntry> demoGalleryEntries({required bool dark}) =>
             baseStyle: const TextStyle(fontSize: 15),
           ),
         ),
-        _GalleryEntry('BouncingTypingDots', (_) => const BouncingTypingDots()),
+        DemoGalleryEntry('BouncingTypingDots', (_) => const BouncingTypingDots()),,
       DemoGalleryEntry(
           'CbtPieChartCard',
           (_) => const CbtPieChartCard(correct: 12, wrong: 4, skipped: 2),
