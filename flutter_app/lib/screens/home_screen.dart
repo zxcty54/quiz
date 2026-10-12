@@ -123,6 +123,16 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   }
 
   Future<void> _loadAllConfigs() async {
+    // 🛡️ Safety net: agar koi async step atak jaye ya exception de, to bhi
+    // loading screen par app kabhi stuck na rahe. 6 second baad home khul hi
+    // jayega — jo data mil gaya hai uske saath, aur baaki sections live JSON se
+    // baad me bhar jate hain.
+    Timer(const Duration(seconds: 6), () {
+      if (mounted && _isLoadingConfig) {
+        setState(() => _isLoadingConfig = false);
+      }
+    });
+
     await _loadRealtimeProgress();
 
     try {
