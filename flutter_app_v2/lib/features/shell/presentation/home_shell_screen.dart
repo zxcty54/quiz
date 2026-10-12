@@ -216,8 +216,21 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     if (_isLoadingConfig) {
+      // First paint after launch. v1 showed a plain white AppBar with just the
+      // word "MockTester" here, which read like a different app; the loading
+      // screen now wears the same branded bar as the loaded one, so there is
+      // no jump when the config arrives.
       return Scaffold(
-        appBar: AppBar(title: const Text('MockTester')),
+        backgroundColor:
+            _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+        appBar: AppBar(
+          backgroundColor:
+              _isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+          elevation: 0,
+          toolbarHeight: 64,
+          titleSpacing: 16,
+          title: _brandAppBarTitle(),
+        ),
         body: _buildSkeletonLoading(),
       );
     }
@@ -231,38 +244,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         elevation: 0,
         toolbarHeight: 64,
         titleSpacing: 16,
-        title: Row(
-          children: <Widget>[
-            const BrandMark(size: 32, showGlow: false),
-            const SizedBox(width: 10),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                Text(
-                  'MockTester',
-                  style: TextStyle(
-                    fontSize: 16.5,
-                    fontWeight: FontWeight.w800,
-                    letterSpacing: -0.3,
-                    color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
-                  ),
-                ),
-                Text(
-                  'BPSC • BSSC • Bihar Police',
-                  style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w600,
-                    letterSpacing: 0.2,
-                    color: _isDarkMode
-                        ? const Color(0xFF94A3B8)
-                        : const Color(0xFF64748B),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
+        title: _brandAppBarTitle(),
         actions: [
           IconButton(
             icon: const Icon(Icons.bolt_rounded, color: Colors.amber, size: 22),
@@ -572,6 +554,43 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           NavigationDestination(icon: Icon(Icons.person_outline_rounded), selectedIcon: Icon(Icons.person_rounded), label: 'Profile'),
         ],
       ),
+    );
+  }
+
+  /// The branded title used by the loading *and* the loaded app bar, so the
+  /// very first frame already looks like MockTester.
+  Widget _brandAppBarTitle() {
+    return Row(
+      children: <Widget>[
+        const BrandMark(size: 32, showGlow: false),
+        const SizedBox(width: 10),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Text(
+              'MockTester',
+              style: TextStyle(
+                fontSize: 16.5,
+                fontWeight: FontWeight.w800,
+                letterSpacing: -0.3,
+                color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
+              ),
+            ),
+            Text(
+              'BPSC • BSSC • Bihar Police',
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 0.2,
+                color: _isDarkMode
+                    ? const Color(0xFF94A3B8)
+                    : const Color(0xFF64748B),
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 
