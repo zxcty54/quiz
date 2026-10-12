@@ -47,8 +47,13 @@ void main() {
     expect(offenders, isEmpty, reason: offenders.join('\n'));
   });
 
-  test('remote URLs live only in core/config', () {
-    final RegExp urlPattern = RegExp(r'https?://(raw|cdn|fastly|api)\.');
+  test('content mirrors are only referenced from core/config', () {
+    // Only the *content delivery* hosts are forbidden elsewhere; talking to
+    // third-party APIs (api.telegram.org, WhatsApp share, …) is fine.
+    final RegExp urlPattern = RegExp(
+      r'(raw\.githubusercontent\.com|cdn\.jsdelivr\.net|fastly\.jsdelivr\.net'
+      r'|cdn\.statically\.io|raw\.githack\.com|api\.github\.com)',
+    );
     final List<String> offenders = <String>[];
     for (final File file in dartFiles()) {
       final String path = file.path.replaceAll(r'\', '/');
@@ -61,7 +66,7 @@ void main() {
           continue;
         }
         if (urlPattern.hasMatch(line)) {
-          offenders.add('$path:${i + 1}');
+          offenders.add('$path:${i + 1} → ${line.trim()}');
         }
       }
     }
