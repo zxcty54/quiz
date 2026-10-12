@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:mocktester_v2/core/config/content_sources.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -138,7 +139,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
     final String newsUrl =
-        "https://raw.githubusercontent.com/zxcty54/content_base/main/app_alerts_news.json?t=$timestamp";
+        ContentSources.rawContent('app_alerts_news.json', ts: timestamp);
 
     try {
       final res = await http.get(Uri.parse(newsUrl)).timeout(const Duration(seconds: 5));

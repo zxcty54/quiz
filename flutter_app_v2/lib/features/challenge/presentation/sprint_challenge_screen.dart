@@ -5,7 +5,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
-import 'package:mocktester_v2/core/config/app_endpoints.dart';
+import 'package:mocktester_v2/core/config/content_sources.dart';
 
 // 🎲 Deterministic PRNG Generator (Exact seed logic for identical questions for friend)
 class SeededRandom {
@@ -45,8 +45,7 @@ class SprintChallengeScreen extends StatefulWidget {
 }
 
 class _SprintChallengeScreenState extends State<SprintChallengeScreen> {
-  static String get cdnBase =>
-      'https://cdn.jsdelivr.net/gh/${AppEndpoints.quizRepo}@${AppEndpoints.branch}/';
+  static String get cdnBase => ContentSources.quizCdnBase;
 
   bool _isLoading = false;
   int _currentScreen = 0; // 0: Intro, 1: Quiz, 2: Result

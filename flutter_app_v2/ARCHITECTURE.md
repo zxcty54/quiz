@@ -67,6 +67,11 @@ and every cloud call degrades gracefully.
 
 * **One loader**: all network JSON goes through `JsonFetcher`
   (`fetchRobust`, `fetchRacing`, `fetchList`, `fetchRawText`).
+* **One mirror registry**: `core/config/app_endpoints.dart` (`mirrorUrls`,
+  `githubContentsApi`) plus `core/config/content_sources.dart` (the URL builders
+  the few widgets that need a concrete URL keep using). No feature file may
+  hardcode a CDN host — enforced by `test/architecture_test.dart` and
+  `tool/audit.py`.
 * **One cache**: `LocalCache` keeps the *same* SharedPreferences keys as v1, so
   users keep their cached config across the upgrade.
 * **One theme source**: `ThemeController.mode` (a `ValueNotifier`); screens

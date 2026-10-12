@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import 'package:mocktester_v2/core/config/content_sources.dart';
 import 'package:mocktester_v2/core/models/question_model.dart';
 import 'package:mocktester_v2/features/revision/presentation/revision_practice_screen.dart';
 
@@ -54,8 +55,10 @@ class _RevisionCurrentAffairsCardState extends State<RevisionCurrentAffairsCard>
     });
 
     try {
-      final String url =
-          'https://raw.githubusercontent.com/zxcty54/content_base/main/current_affair/${month.fileName}?t=${DateTime.now().millisecondsSinceEpoch}';
+      final String url = ContentSources.rawContent(
+        'current_affair/${month.fileName}',
+        ts: DateTime.now().millisecondsSinceEpoch,
+      );
 
       final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 8));
 
@@ -118,7 +121,10 @@ class _RevisionCurrentAffairsCardState extends State<RevisionCurrentAffairsCard>
     try {
       final String fetchUrl = jsonPath.startsWith('http')
           ? '$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}'
-          : 'https://raw.githubusercontent.com/zxcty54/content_base/main/$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}';
+          : ContentSources.rawContent(
+              jsonPath,
+              ts: DateTime.now().millisecondsSinceEpoch,
+            );
 
       final res = await http.get(Uri.parse(fetchUrl)).timeout(const Duration(seconds: 10));
 

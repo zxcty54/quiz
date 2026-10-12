@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:mocktester_v2/core/config/content_sources.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class DailyBulletinWidget extends StatefulWidget {
@@ -107,7 +108,8 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
 
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
     // 🚀 Updated: Point to public content_base repository
-    final String newsUrl = "https://raw.githubusercontent.com/zxcty54/content_base/main/finalnews.json?t=$timestamp";
+    final String newsUrl =
+        ContentSources.rawContent('finalnews.json', ts: timestamp);
 
     try {
       final res = await http.get(Uri.parse(newsUrl)).timeout(const Duration(seconds: 5));

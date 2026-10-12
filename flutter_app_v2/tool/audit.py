@@ -143,6 +143,25 @@ def balance_issue(src: str):
     return None
 
 
+MIRROR_HOSTS = re.compile(
+    r"(raw\.githubusercontent\.com|cdn\.jsdelivr\.net|fastly\.jsdelivr\.net"
+    r"|cdn\.statically\.io|raw\.githack\.com|api\.github\.com)")
+
+
+def mirror_hits(rel: str, raw: str):
+    """Hardcoded content-delivery hosts outside core/config (see ContentSources)."""
+    if "core/config/" in rel.replace("\\", "/"):
+        return []
+    hits = []
+    for i, line in enumerate(raw.split("\n"), 1):
+        stripped = line.lstrip()
+        if stripped.startswith("//"):  # doc comments may quote example URLs
+            continue
+        if MIRROR_HOSTS.search(line):
+            hits.append(f"{rel}:{i} → {line.strip()[:90]}")
+    return hits
+
+
 def main() -> int:
     files = {}
     for dp, _, fns in os.walk(ROOT):
@@ -199,6 +218,9 @@ def main() -> int:
                     re.search(r"\b" + re.escape(s) + r"\b", body) for s in exported):
                 problems["unused_app"].append(f"{rel}: {target}")
 
+        for hit in mirror_hits(rel, raw):
+            problems["mirrors"].append(hit)
+
         issue = balance_issue(raw)
         if issue:
             problems["syntax"].append(f"{rel}: {issue}")
@@ -208,10 +230,11 @@ def main() -> int:
         "dangling": "dangling imports",
         "missing": "missing imports",
         "syntax": "unbalanced delimiters",
+        "mirrors": "hardcoded CDN/repo hosts outside core/config",
         "unused_app": "unused app imports (warning only)",
     }
     hard = 0
-    for key in ("relative", "dangling", "missing", "syntax", "unused_app"):
+    for key in ("relative", "dangling", "missing", "syntax", "mirrors", "unused_app"):
         items = sorted(problems.get(key, []))
         marker = "OK " if not items else "!! "
         print(f"{marker}{labels[key]}: {len(items)}")

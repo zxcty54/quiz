@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:mocktester_v2/core/config/content_sources.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ProPdfVaultCard extends StatefulWidget {
@@ -87,9 +88,10 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
     final int ts = DateTime.now().millisecondsSinceEpoch;
 
     final List<String> endpoints = [
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/books_database.json?t=$ts",
-      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/books_database.json?t=$ts",
-      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/books_database.json?t=$ts",
+      // v1 failover order kept exactly: raw → jsDelivr → fastly.
+      ContentSources.rawContent('books_database.json', ts: ts),
+      ContentSources.contentCdn('books_database.json', ts: ts),
+      ContentSources.contentCdn('books_database.json', ts: ts, fastly: true),
     ];
 
     for (final url in endpoints) {

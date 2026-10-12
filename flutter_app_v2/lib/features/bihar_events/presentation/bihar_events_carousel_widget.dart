@@ -3,6 +3,7 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:mocktester_v2/core/config/content_sources.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
@@ -30,8 +31,8 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
   late AnimationController _pulseController;
   late Animation<double> _pulseAnimation;
 
-  static const String _jsonBaseUrl =
-      'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/biharevents.json';
+  static String get _jsonBaseUrl =>
+      ContentSources.rawContentRefs('biharevents.json');
   static const String _cacheKey = 'cached_bihar_events_json';
 
   @override

@@ -2,6 +2,7 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:mocktester_v2/core/config/content_sources.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:http/http.dart' as http;
 
@@ -73,10 +74,11 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     final timestamp = DateTime.now().millisecondsSinceEpoch;
 
     final List<String> endpoints = [
-      'https://raw.githubusercontent.com/zxcty54/content_base/main/sarkarijob.json?t=$timestamp',
-      'https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/sarkarijob.json?t=$timestamp',
-      'https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/sarkarijob.json?t=$timestamp',
-      'https://raw.githack.com/zxcty54/content_base/main/sarkarijob.json?t=$timestamp',
+      // v1 failover order kept exactly: raw → fastly → jsDelivr → githack.
+      ContentSources.rawContent('sarkarijob.json', ts: timestamp),
+      ContentSources.contentCdn('sarkarijob.json', ts: timestamp, fastly: true),
+      ContentSources.contentCdn('sarkarijob.json', ts: timestamp),
+      ContentSources.contentGithack('sarkarijob.json', ts: timestamp),
     ];
 
     for (final endpoint in endpoints) {

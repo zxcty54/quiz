@@ -4,12 +4,13 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import 'package:mocktester_v2/core/config/content_sources.dart';
 import 'package:mocktester_v2/core/models/question_model.dart';
 import 'package:mocktester_v2/features/revision/presentation/revision_practice_screen.dart';
 
 class CurrentAffairsService {
-  static const String jsonUrl =
-      "https://raw.githubusercontent.com/zxcty54/quiz/main/current_affair/august_2026.json";
+  static String get jsonUrl =>
+      ContentSources.rawQuiz('current_affair/august_2026.json');
 
   static Future<void> openCurrentAffairs({
     required BuildContext context,

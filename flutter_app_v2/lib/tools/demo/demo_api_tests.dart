@@ -4,7 +4,6 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'package:http/http.dart' as http;
 import 'package:supabase_flutter/supabase_flutter.dart';
 
-import 'package:mocktester_v2/core/bootstrap/app_bootstrap.dart';
 import 'package:mocktester_v2/core/config/app_endpoints.dart';
 import 'package:mocktester_v2/core/config/app_secrets.dart';
 import 'package:mocktester_v2/core/config/remote_config_service.dart';
