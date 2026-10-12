@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
-    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    // MainActivity.kt is Kotlin; the Flutter Gradle Plugin must be applied after
+    // the Android and Kotlin Gradle plugins (same order as the stock template).
+    id("kotlin-android")
     id("dev.flutter.flutter-gradle-plugin")
 }
 
