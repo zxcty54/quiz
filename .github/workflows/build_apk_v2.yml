@@ -143,26 +143,6 @@ jobs:
           echo "Overlay applied:" && find flutter_app_v2/android/app -maxdepth 2 \
             -name "*.kts" -o -maxdepth 2 -name "*.json" | sort
 
-      - name: Align Android subprojects with the app SDK
-        working-directory: flutter_app_v2/android
-        run: |
-          # Flutter plugins carry their own compileSdk. When one of them pulls a
-          # dependency that needs a newer SDK (flutter_plugin_android_lifecycle
-          # needs 36), :<plugin>:checkReleaseAarMetadata fails the build.
-          # `withGroovyBuilder` keeps this script free of AGP types, so it also
-          # works if the scaffold ships a different AGP.
-          cat >> build.gradle.kts <<'KOTLIN'
-
-          // --- appended by the v2 build workflow -----------------------------
-          subprojects {
-              afterEvaluate {
-                  val androidExt = extensions.findByName("android") ?: return@afterEvaluate
-                  androidExt.withGroovyBuilder { "compileSdkVersion"(36) }
-              }
-          }
-          KOTLIN
-          tail -12 build.gradle.kts
-
       - name: Declare the google-services plugin
         working-directory: flutter_app_v2/android
         run: |

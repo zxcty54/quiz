@@ -109,3 +109,19 @@ flutter {
 dependencies {
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
 }
+
+// ------------------------------------------------------- plugin compileSdk ---
+// Flutter plugins ship their own compileSdk; a plugin built against an older
+// SDK fails `checkReleaseAarMetadata` as soon as one of its dependencies (for
+// example flutter_plugin_android_lifecycle) requires a newer one. The root
+// script forces `:app` to be evaluated before every plugin, so registering the
+// hook here runs before AGP finalises each plugin module - too late otherwise.
+// `withGroovyBuilder` keeps this script independent of AGP's Kotlin API.
+rootProject.subprojects {
+    if (path == ":app") return@subprojects
+    afterEvaluate {
+        extensions.findByName("android")?.withGroovyBuilder {
+            "compileSdkVersion"(36)
+        }
+    }
+}
