@@ -93,3 +93,12 @@ flutter build apk --release
 CI (`.github/workflows/build_apk_v2.yml`) audit → analyze (gate) → tests →
 prod APK → demo APK → dono ZIP Telegram pe. Green run ka example:
 `MockTester_v2_Build_18` (sha `cc4b5bb`).
+
+## Widget-level QA
+
+Every widget in the gallery is rendered in light and dark at 390x844 by
+`test/widget_smoke_test.dart`, and CI fails on any framework error that is not
+environment noise. That test found 16 real defects (RenderFlex overflows in
+seven widgets, plus one widget whose inner `ListView` was rendered unbounded
+and produced an error screen). All of them are fixed at the widget level — see
+`WIDGET_QA.md` for the list and the fixes.
