@@ -1,0 +1,36 @@
+# Dart / Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+pubspec.lock
+
+# Android
+android/.gradle/
+android/local.properties
+android/key.properties
+android/app/mocktester_key.jks
+*.jks
+*.keystore
+android/app/debug/
+android/app/profile/
+android/app/release/
+android/.idea/
+*.iml
+
+# iOS / macOS tooling (not built in CI, kept clean)
+ios/Pods/
+ios/.symlinks/
+macos/Pods/
+**/GeneratedPluginRegistrant.*
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# Local test artefacts
+test/.test_coverage.dart
+coverage/

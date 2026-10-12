@@ -1,0 +1,37 @@
+{
+  "config_version": 1,
+  "maintenance": {
+    "enabled": false,
+    "message": "App update chal raha hai. Kripya 10 minute baad kholein."
+  },
+  "app": {
+    "latest_version": 1,
+    "force_update": false,
+    "update_url": ""
+  },
+  "featured_mock": {
+    "title": "BPSC Mega Mock 01",
+    "subtitle": "Real CBT Interface • 150 Qs",
+    "json": "bpsc/science/Modern History/set1.json"
+  },
+  "today_update": {
+    "show": true,
+    "title": "🔥 Bihar Current Affairs Special Bulletin",
+    "text": "🔥 Bihar Current Affairs Special Bulletin",
+    "url": "https://www.mocktester.online/p/gkgscurrent-affair-mock-test.html"
+  },
+  "launch_roadmap": [
+    {
+      "text": "🔥 Coming Tomorrow: BSSC Inter Level Top 100 Qs",
+      "color": "0xFFFF4757"
+    },
+    {
+      "text": "✅ Just Added: Current Affairs Bulletin 2026",
+      "color": "0xFF059669"
+    },
+    {
+      "text": "📌 Next Week: BPSC Mains Answer Writing Practice",
+      "color": "0xFF2563EB"
+    }
+  ]
+}

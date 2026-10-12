@@ -1,0 +1,220 @@
+name: Build MockTester v2 (APK + Demo APK → Telegram)
+
+# Everything for this app lives under flutter_app_v2/, so this workflow only
+# touches that folder and never the legacy flutter_app/.
+on:
+  push:
+    branches:
+      - main
+      - "arena/**"
+    paths:
+      - "flutter_app_v2/**"
+      - ".github/workflows/build_apk_v2.yml"
+  workflow_dispatch:
+    inputs:
+      send_to_telegram:
+        description: "Upload the ZIPs to Telegram after the build"
+        type: boolean
+        default: true
+
+concurrency:
+  group: apk-v2-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  analyze-and-test:
+    name: Analyze & Test
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: "stable"
+          cache: true
+
+      - name: Pub get
+        working-directory: flutter_app_v2
+        run: flutter pub get
+
+      - name: Architecture audit (no dangling/relative imports, no stray URLs)
+        run: python3 flutter_app_v2/tool/audit.py
+
+      - name: Format check (informational)
+        working-directory: flutter_app_v2
+        continue-on-error: true
+        run: dart format --output=none --set-exit-if-changed lib test
+
+      - name: Analyze
+        working-directory: flutter_app_v2
+        run: flutter analyze --no-fatal-infos
+
+      - name: Unit tests
+        working-directory: flutter_app_v2
+        run: flutter test --reporter expanded
+
+  build:
+    name: Build APKs
+    runs-on: ubuntu-latest
+    needs: analyze-and-test
+    timeout-minutes: 40
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: "17"
+
+      - name: Setup Gradle Build Cache
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: "stable"
+          cache: true
+
+      # ---------------------------------------------------------------- scaffold
+      # `flutter create` owns the ephemeral Gradle wrapper + settings; our own
+      # android_overlay/ then replaces build.gradle.kts, the manifest, the
+      # resources, MainActivity and google-services.json. v1 did this with
+      # heredocs and sed inside the workflow — the overlay keeps it reviewable.
+      - name: Generate Flutter Android scaffold
+        working-directory: flutter_app_v2
+        run: flutter create . --platforms=android --org com.mocktester --project-name mocktester
+
+      - name: Apply MockTester android overlay
+        run: |
+          cp -r flutter_app_v2/android_overlay/app/. flutter_app_v2/android/app/
+          echo "Overlay applied:" && find flutter_app_v2/android/app -maxdepth 2 \
+            -name "*.kts" -o -maxdepth 2 -name "*.json" | sort
+
+      - name: Pin Flutter Gradle plugin versions
+        working-directory: flutter_app_v2/android
+        run: |
+          # Deterministic toolchain + the google-services plugin. Its version
+          # must be declared once, inside the existing settings plugins block.
+          python3 - <<'PY'
+          import re, pathlib
+          p = pathlib.Path("settings.gradle.kts")
+          s = p.read_text()
+          s = re.sub(r'id\("com\.android\.application"\)\s+version\s+"[^"]+"',
+                     'id("com.android.application") version "8.7.3"', s)
+          s = re.sub(r'id\("org\.jetbrains\.kotlin\.android"\)\s+version\s+"[^"]+"',
+                     'id("org.jetbrains.kotlin.android") version "2.1.0"', s)
+          if 'com.google.gms.google-services' not in s:
+              s = re.sub(r'(id\("org\.jetbrains\.kotlin\.android"\) version "[^"]+" apply false)',
+                         r'\1\n    id("com.google.gms.google-services") version "4.4.2" apply false',
+                         s)
+          p.write_text(s)
+          print(s)
+          PY
+
+      - name: Sanity check the final gradle config
+        working-directory: flutter_app_v2/android
+        run: |
+          grep -q 'com.google.gms.google-services' settings.gradle.kts
+          grep -q 'minSdk = 26' app/build.gradle.kts
+          grep -q 'mocktester_channel' app/src/main/AndroidManifest.xml
+          echo "gradle configuration looks right"
+
+      # ----------------------------------------------------------------- build
+      - name: Decode keystore
+        working-directory: flutter_app_v2/android/app
+        env:
+          KEYSTORE_BASE64: ${{ secrets.KEYSTORE_BASE64 }}
+        run: |
+          if [ -n "$KEYSTORE_BASE64" ]; then
+            python3 -c "import base64,os;open('mocktester_key.jks','wb').write(base64.b64decode(os.environ['KEYSTORE_BASE64'].strip()))"
+            echo "keystore restored ($(stat -c%s mocktester_key.jks) bytes)"
+          else
+            echo "::warning::KEYSTORE_BASE64 secret missing — the APK will be debug-signed"
+          fi
+
+      - name: Build release APK (production)
+        working-directory: flutter_app_v2
+        env:
+          KEYSTORE_PATH: ${{ github.workspace }}/flutter_app_v2/android/app/mocktester_key.jks
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          flutter build apk --release \
+            --target-platform=android-arm64 \
+            --no-tree-shake-icons \
+            --build-number=${{ github.run_number }} \
+            --dart-define=SUPABASE_URL=${{ secrets.SUPABASE_URL }} \
+            --dart-define=SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }} \
+            --dart-define=GROQ_API_KEY=${{ secrets.GROQ_API_KEY }} \
+            --dart-define=TELEGRAM_ADMIN_BOT_TOKEN=${{ secrets.TELEGRAM_TOKEN }} \
+            --dart-define=TELEGRAM_ADMIN_CHAT_ID=${{ secrets.TELEGRAM_TO }} \
+            --dart-define=TELEGRAM_TRACKER_BOT_TOKEN=${{ secrets.TELEGRAM_TRACKER_TOKEN }} \
+            --dart-define=TELEGRAM_TRACKER_CHAT_ID=${{ secrets.TELEGRAM_TRACKER_TO }}
+
+          cp build/app/outputs/flutter-apk/app-release.apk \
+             build/app/outputs/flutter-apk/MockTester_v2_Build_${{ github.run_number }}.apk
+
+      - name: Build demo APK (tester tool)
+        working-directory: flutter_app_v2
+        env:
+          KEYSTORE_PATH: ${{ github.workspace }}/flutter_app_v2/android/app/mocktester_key.jks
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          flutter build apk --release \
+            --target=lib/tools/demo/demo_tool.dart \
+            --target-platform=android-arm64 \
+            --no-tree-shake-icons \
+            --dart-define=DEMO_TOOL=true \
+            --build-number=${{ github.run_number }} \
+            --dart-define=SUPABASE_URL=${{ secrets.SUPABASE_URL }} \
+            --dart-define=SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }} \
+            --dart-define=GROQ_API_KEY=${{ secrets.GROQ_API_KEY }} \
+            --dart-define=TELEGRAM_ADMIN_BOT_TOKEN=${{ secrets.TELEGRAM_TOKEN }} \
+            --dart-define=TELEGRAM_ADMIN_CHAT_ID=${{ secrets.TELEGRAM_TO }} \
+            --dart-define=TELEGRAM_TRACKER_BOT_TOKEN=${{ secrets.TELEGRAM_TRACKER_TOKEN }} \
+            --dart-define=TELEGRAM_TRACKER_CHAT_ID=${{ secrets.TELEGRAM_TRACKER_TO }}
+
+          cp build/app/outputs/flutter-apk/app-release.apk \
+             build/app/outputs/flutter-apk/MockTester_v2_DEMO_Build_${{ github.run_number }}.apk
+
+      # -------------------------------------------------------------- package
+      - name: Package ZIP
+        working-directory: flutter_app_v2/build/app/outputs/flutter-apk
+        run: |
+          zip -1 -j MockTester_v2_Build_${{ github.run_number }}.zip \
+            MockTester_v2_Build_${{ github.run_number }}.apk \
+            MockTester_v2_DEMO_Build_${{ github.run_number }}.apk
+          ls -lh ./*.apk ./*.zip
+
+      - name: Upload workflow artefact
+        uses: actions/upload-artifact@v4
+        with:
+          name: MockTester_v2_Build_${{ github.run_number }}
+          path: |
+            flutter_app_v2/build/app/outputs/flutter-apk/*.apk
+            flutter_app_v2/build/app/outputs/flutter-apk/*.zip
+          retention-days: 30
+
+      - name: Send ZIP to Telegram
+        if: ${{ github.event_name == 'push' || inputs.send_to_telegram }}
+        env:
+          BOT_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          CHAT_ID: ${{ secrets.TELEGRAM_TO }}
+          BUILD_NUM: ${{ github.run_number }}
+        run: |
+          ZIP="flutter_app_v2/build/app/outputs/flutter-apk/MockTester_v2_Build_${BUILD_NUM}.zip"
+          curl -sS --fail-with-body \
+            -F chat_id="${CHAT_ID}" \
+            -F caption="🚀 MockTester v2 Build #${BUILD_NUM} — production + demo APK (ZIP)" \
+            -F document=@"${ZIP}" \
+            --connect-timeout 60 --retry 5 --retry-delay 5 \
+            "https://api.telegram.org/bot${BOT_TOKEN}/sendDocument" > /dev/null
+          echo "uploaded ${ZIP}"

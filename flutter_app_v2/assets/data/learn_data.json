@@ -1,0 +1,240 @@
+[
+  {
+    "title": "Biology",
+    "icon": "🧬",
+    "color": "0xFF059669",
+    "chapters": [
+      {
+        "id": "bio_cell",
+        "title": "Cell (Koshika)",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/cell.json"
+      },
+      {
+        "id": "bio_digestive",
+        "title": "Digestive System",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/digestive.json"
+      },
+      {
+        "id": "bio_circulatory",
+        "title": "Circulatory System",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/circulatory.json"
+      },
+      {
+        "id": "bio_respiratory",
+        "title": "Respiratory System",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/respiratory.json"
+      },
+      {
+        "id": "bio_nervous",
+        "title": "Nervous System",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/nervous.json"
+      },
+      {
+        "id": "bio_excreatory",
+        "title": "Excretory System",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/excreatory.json"
+      },
+      {
+        "id": "bio_disease",
+        "title": "Human Diseases & Health",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/disease.json"
+      },
+      {
+        "id": "bio_classification",
+        "title": "Classification of Organisms",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/classification.json"
+      },
+      {
+        "id": "bio_inheritance",
+        "title": "Genetics & Inheritance",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/inheritance.json"
+      },
+      {
+        "id": "bio_ecosystem",
+        "title": "Ecosystem & Environment",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/ecosystem.json"
+      },
+      {
+        "id": "bio_biotech",
+        "title": "Biotechnology",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/biology/biotech.json"
+      }
+    ]
+  },
+  {
+    "title": "Physics",
+    "icon": "⚡",
+    "color": "0xFF2563EB",
+    "chapters": [
+      {
+        "id": "phy_motion",
+        "title": "Motion & Kinematics",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/motion.json"
+      },
+      {
+        "id": "phy_force",
+        "title": "Force & Laws of Motion",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/force.json"
+      },
+      {
+        "id": "phy_gravity",
+        "title": "Gravitation",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/gravity.json"
+      },
+      {
+        "id": "phy_work",
+        "title": "Work, Energy & Power",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/work.json"
+      },
+      {
+        "id": "phy_electricity",
+        "title": "Electricity & Current",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/electricity.json"
+      },
+      {
+        "id": "phy_magnetism",
+        "title": "Magnetism",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/magnetism.json"
+      },
+      {
+        "id": "phy_lights",
+        "title": "Light & Optics",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/physics/lights.json"
+      }
+    ]
+  },
+  {
+    "title": "Chemistry",
+    "icon": "🧪",
+    "color": "0xFF7C3AED",
+    "chapters": [
+      {
+        "id": "chem_matter",
+        "title": "Matter & Its States",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/matter.json"
+      },
+      {
+        "id": "chem_atomic",
+        "title": "Atomic Structure",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/atomicstructure.json"
+      },
+      {
+        "id": "chem_acidbase",
+        "title": "Acids, Bases & Salts",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/acidbasesalt.json"
+      },
+      {
+        "id": "chem_metals",
+        "title": "Metals & Metallurgy",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/metals.json"
+      },
+      {
+        "id": "chem_nonmetals",
+        "title": "Non-Metals & Compounds",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/nonmetal.json"
+      },
+      {
+        "id": "chem_carbon",
+        "title": "Carbon & Its Compounds",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/carbon.json"
+      },
+      {
+        "id": "chem_polymer",
+        "title": "Polymers",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/polymer.json"
+      },
+      {
+        "id": "chem_biomolecules",
+        "title": "Biomolecules",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/biomolecules.json"
+      },
+      {
+        "id": "chem_electro",
+        "title": "Electrochemistry",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/electrochemistry.json"
+      },
+      {
+        "id": "chem_surface",
+        "title": "Surface Chemistry",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/surfacechem.json"
+      },
+      {
+        "id": "chem_life",
+        "title": "Chemistry in Everyday Life",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/chemistry/chemminlife.json"
+      }
+    ]
+  },
+  {
+    "title": "Polity",
+    "icon": "📜",
+    "color": "0xFFD97706",
+    "chapters": [
+      {
+        "id": "pol_preamble",
+        "title": "Preamble & Constitution",
+        "subtitle": "Learn with Aman Sir & Raju",
+        "isAvailable": true,
+        "jsonUrl": "https://cdn.jsdelivr.net/gh/zxcty54/quiz@main/learn/polity/preamble.json"
+      }
+    ]
+  }
+]

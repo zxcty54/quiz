@@ -1,0 +1,93 @@
+plugins {
+    id("com.android.application")
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id("dev.flutter.flutter-gradle-plugin")
+    // Firebase / FCM resource generation from app/google-services.json.
+    // The plugin version is declared in android/settings.gradle.kts (see the
+    // build workflow), applied here without a version.
+    id("com.google.gms.google-services")
+}
+
+android {
+    namespace = "com.mocktester.app"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+        // Required by flutter_local_notifications (java.time on API < 26).
+        isCoreLibraryDesugaringEnabled = true
+    }
+
+    defaultConfig {
+        applicationId = "com.mocktester.app"
+
+        // v1 shipped minSdk 26 via a CI sed patch; it is a real requirement here
+        // because the app uses java.time based scheduling APIs.
+        minSdk = 26
+        targetSdk = flutter.targetSdkVersion
+
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    signingConfigs {
+        create("release") {
+            val keystorePath = System.getenv("KEYSTORE_PATH") ?: "mocktester_key.jks"
+            val storeFile = file(keystorePath)
+            if (storeFile.exists()) {
+                storeFile(storeFile)
+                storePassword = System.getenv("KEYSTORE_PASSWORD") ?: "mocktester123"
+                keyAlias = System.getenv("KEY_ALIAS") ?: "mocktester"
+                keyPassword = System.getenv("KEY_PASSWORD") ?: "mocktester123"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            // Falls back to debug signing for local builds without the keystore,
+            // so `flutter build apk --release` always works.
+            val releaseSigning = signingConfigs.findByName("release")
+            val hasKeystore = file(System.getenv("KEYSTORE_PATH") ?: "mocktester_key.jks").exists()
+            signingConfig = if (hasKeystore && releaseSigning != null) {
+                releaseSigning
+            } else {
+                signingConfigs.getByName("debug")
+            }
+
+            isMinifyEnabled = false
+            isShrinkResources = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
+        }
+    }
+
+    packaging {
+        resources {
+            excludes += setOf(
+                "META-INF/DEPENDENCIES",
+                "META-INF/LICENSE",
+                "META-INF/LICENSE.txt",
+                "META-INF/NOTICE",
+            )
+        }
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+}
