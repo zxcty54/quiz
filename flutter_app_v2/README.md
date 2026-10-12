@@ -35,8 +35,11 @@ flutter build apk --release -t lib/tools/demo/demo_tool.dart \
   --dart-define=DEMO_TOOL=true
 ```
 
-CI (`.github/workflows/build_apk_v2.yml`) does all of the above, then zips the
-**production APK + demo APK** and sends the ZIP to Telegram.
+CI (`.github/workflows/build_apk_v2.yml`) does all of the above, then zips each
+APK on its own (Telegram refuses documents over 50 MB) and sends both zips to
+the chat in `TELEGRAM_TO` — the **demo zip first**, since that is the build a
+tester installs. The same files stay downloadable from the run's
+`MockTester_v2_Build_<n>` artefact.
 
 ## Architecture rules (enforced by `test/architecture_test.dart`)
 
