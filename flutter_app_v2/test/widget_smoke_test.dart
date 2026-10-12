@@ -41,6 +41,9 @@ void main() {
     'statuscode: 400',
     'status code 400',
     'bad state: stream has already been listened to',
+    // HTTP 400 responses from the test binding, in various wrappings.
+    'exception: 400',
+    'invalid statuscode',
   ];
 
   bool isEnvironmentIssue(String message) {
@@ -99,9 +102,11 @@ void main() {
     for (final DemoGalleryEntry entry in demoGalleryEntries(dark: dark)) {
       testWidgets('gallery: ${entry.name} [$mode]',
           (WidgetTester tester) async {
+        // entry.build applies the gallery's own sizing (some widgets scroll
+        // internally and need a bounded box).
         final List<String> errors = await renderAndCollect(
           tester,
-          entry.builder,
+          entry.build,
           dark: dark,
         );
 

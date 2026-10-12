@@ -115,7 +115,7 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
                   ],
                 ),
                 const SizedBox(height: 8),
-                entry.builder(context),
+                entry.build(context),
                 const Divider(height: 26),
               ],
             ),
@@ -133,10 +133,19 @@ class _DemoWidgetGalleryScreenState extends State<DemoWidgetGalleryScreen> {
 /// `test/widget_smoke_test.dart` can render every widget head-less and catch
 /// layout overflows without a device.
 class DemoGalleryEntry {
-  const DemoGalleryEntry(this.name, this.builder);
+  const DemoGalleryEntry(this.name, this.builder, {this.height});
 
   final String name;
   final Widget Function(BuildContext context) builder;
+
+  /// Widgets that scroll internally (chat cards, carousels, job feeds) need a
+  /// bounded box; without one Flutter throws "Vertical viewport was given
+  /// unbounded height". Entries that have a natural height leave this null.
+  final double? height;
+
+  Widget build(BuildContext context) => height == null
+      ? builder(context)
+      : SizedBox(height: height, child: builder(context));
 }
 
 /// Every widget the gallery can show, in display order.
@@ -192,26 +201,32 @@ List<DemoGalleryEntry> demoGalleryEntries({required bool dark}) =>
       DemoGalleryEntry(
           'HallOfFameCarouselWidget',
           (_) => HallOfFameCarouselWidget(isDarkMode: dark),
+          height: 260,
         ),
       DemoGalleryEntry(
           'FirstInIndiaWidget',
           (_) => FirstInIndiaWidget(isDarkMode: dark),
+          height: 420,
         ),
       DemoGalleryEntry(
           'DailyBulletinWidget',
           (_) => DailyBulletinWidget(isDarkMode: dark),
+          height: 380,
         ),
       DemoGalleryEntry(
           'LatestJobsWidget',
           (_) => LatestJobsWidget(isDarkMode: dark),
+          height: 420,
         ),
       DemoGalleryEntry(
           'KnowYourBiharWidget',
           (_) => KnowYourBiharWidget(isDarkMode: dark),
+          height: 380,
         ),
       DemoGalleryEntry(
           'BiharEventsCarouselWidget',
           (_) => BiharEventsCarouselWidget(isDarkMode: dark),
+          height: 260,
         ),
       DemoGalleryEntry(
           'ChallengeCardWidget',
@@ -267,6 +282,7 @@ List<DemoGalleryEntry> demoGalleryEntries({required bool dark}) =>
       DemoGalleryEntry(
           'RevisionCurrentAffairsCard',
           (_) => RevisionCurrentAffairsCard(isDark: dark),
+          height: 420,
         ),
       DemoGalleryEntry(
           'RevisionTrickSubmitBox',
@@ -300,6 +316,7 @@ List<DemoGalleryEntry> demoGalleryEntries({required bool dark}) =>
             isTyping: false,
             scrollController: ScrollController(),
           ),
+          height: 380,
         ),
       DemoGalleryEntry(
           'LearnCardRenderer',
@@ -310,6 +327,7 @@ List<DemoGalleryEntry> demoGalleryEntries({required bool dark}) =>
             isTyping: false,
             scrollController: ScrollController(),
           ),
+          height: 380,
         ),
       DemoGalleryEntry(
           'InteractiveWordText',
