@@ -10,6 +10,9 @@ on:
     paths:
       - "flutter_app_v2/**"
       - ".github/workflows/build_apk_v2.yml"
+    # Documentation-only pushes should not rebuild and re-send APKs.
+    paths-ignore:
+      - "**.md"
   workflow_dispatch:
     inputs:
       send_to_telegram:

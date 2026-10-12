@@ -63,6 +63,32 @@ kicks off the remote-config refresh without blocking the first frame. Both
 environments (Firebase, Supabase) are optional: a build without secrets starts
 and every cloud call degrades gracefully.
 
+## Design system
+
+Visual language of v2 lives in `core/theme` and `core/widgets` — screens are not
+allowed to invent colours, radii or shadows:
+
+| File | What it owns |
+|---|---|
+| `core/theme/app_tokens.dart` | `AppRadii`, `AppSpacing`, `AppMotion`, `AppElevation` (radius/shadow/gap scale) |
+| `core/theme/app_gradients.dart` | `AppGradients` — brand, brandDeep, study, success, warm, midnight, aurora, glass |
+| `core/theme/app_theme.dart` | light + dark `ThemeData` with **every** Material component themed once (app bar, navigation bar, cards, inputs, chips, dialogs, sheets, snack bars, switches, tabs, scrollbars) |
+| `core/widgets/brand_mark.dart` | `BrandMark` / `BrandWordmark` (one logo, three former variants) |
+| `core/widgets/aurora_background.dart` | animated aurora field used by splash + onboarding |
+
+The palette keeps v1's brand blue (`#2563EB`) so screens that have not been
+migrated yet still sit in the same colour family; new surfaces get their depth
+from gradients and hairlines instead of hardcoded `0xFF1E293B`/white pairs.
+
+Redesign status:
+
+* **done** — app theme, onboarding, splash, shell frame (app bar, navigation
+  bar, drawer, loading skeleton), home header card, demo tool launcher.
+* **next** — the five tab screens (Home sections, Revision, Sectional CBT,
+  Community, Profile) and then the feature screens (Learn, Challenge, Jobs,
+  PDF Vault, AI chat …). Each one keeps its behaviour and loses its inline
+  colour literals in favour of the tokens above.
+
 ## Conventions
 
 * **One loader**: all network JSON goes through `JsonFetcher`
