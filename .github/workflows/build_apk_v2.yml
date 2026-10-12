@@ -179,6 +179,7 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
+          set +e
           flutter build apk --release \
             --target-platform=android-arm64 \
             --no-tree-shake-icons \
@@ -189,7 +190,15 @@ jobs:
             --dart-define=TELEGRAM_ADMIN_BOT_TOKEN=${{ secrets.TELEGRAM_TOKEN }} \
             --dart-define=TELEGRAM_ADMIN_CHAT_ID=${{ secrets.TELEGRAM_TO }} \
             --dart-define=TELEGRAM_TRACKER_BOT_TOKEN=${{ secrets.TELEGRAM_TRACKER_TOKEN }} \
-            --dart-define=TELEGRAM_TRACKER_CHAT_ID=${{ secrets.TELEGRAM_TRACKER_TO }}
+            --dart-define=TELEGRAM_TRACKER_CHAT_ID=${{ secrets.TELEGRAM_TRACKER_TO }} 2>&1 | tee build_prod.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            echo "::error title=Production APK build failed::flutter build apk exited with status $status"
+            tail -n 60 build_prod.log | sed 's/%/%25/g; s/\r//g' | while IFS= read -r line; do
+              echo "::error title=Build log (prod)::$line"
+            done
+            exit "$status"
+          fi
 
           cp build/app/outputs/flutter-apk/app-release.apk \
              build/app/outputs/flutter-apk/MockTester_v2_Build_${{ github.run_number }}.apk
@@ -202,6 +211,7 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
+          set +e
           flutter build apk --release \
             --target=lib/tools/demo/demo_tool.dart \
             --target-platform=android-arm64 \
@@ -214,7 +224,15 @@ jobs:
             --dart-define=TELEGRAM_ADMIN_BOT_TOKEN=${{ secrets.TELEGRAM_TOKEN }} \
             --dart-define=TELEGRAM_ADMIN_CHAT_ID=${{ secrets.TELEGRAM_TO }} \
             --dart-define=TELEGRAM_TRACKER_BOT_TOKEN=${{ secrets.TELEGRAM_TRACKER_TOKEN }} \
-            --dart-define=TELEGRAM_TRACKER_CHAT_ID=${{ secrets.TELEGRAM_TRACKER_TO }}
+            --dart-define=TELEGRAM_TRACKER_CHAT_ID=${{ secrets.TELEGRAM_TRACKER_TO }} 2>&1 | tee build_demo.log
+          status=${PIPESTATUS[0]}
+          if [ "$status" -ne 0 ]; then
+            echo "::error title=Demo APK build failed::flutter build apk exited with status $status"
+            tail -n 60 build_demo.log | sed 's/%/%25/g; s/\r//g' | while IFS= read -r line; do
+              echo "::error title=Build log (demo)::$line"
+            done
+            exit "$status"
+          fi
 
           cp build/app/outputs/flutter-apk/app-release.apk \
              build/app/outputs/flutter-apk/MockTester_v2_DEMO_Build_${{ github.run_number }}.apk
@@ -252,3 +270,14 @@ jobs:
             --connect-timeout 60 --retry 5 --retry-delay 5 \
             "https://api.telegram.org/bot${BOT_TOKEN}/sendDocument" > /dev/null
           echo "uploaded ${ZIP}"
+
+      - name: Upload build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: flutter-build-logs
+          path: |
+            flutter_app_v2/build_prod.log
+            flutter_app_v2/build_demo.log
+          if-no-files-found: ignore
+          retention-days: 14

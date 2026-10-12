@@ -2,10 +2,25 @@ plugins {
     id("com.android.application")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
-    // Firebase / FCM resource generation from app/google-services.json.
-    // The plugin version is declared in android/settings.gradle.kts (see the
-    // build workflow), applied here without a version.
-    id("com.google.gms.google-services")
+}
+
+// Firebase / FCM resource generation from app/google-services.json.
+//
+// The file shipped in this repo is v1's project descriptor and still registers
+// the old package `com.testing`, while this app is `com.mocktester.app`. The
+// Google Services plugin treats that mismatch as a hard build error, so the
+// plugin is applied only when the descriptor actually names *this* app: replace
+// google-services.json with one generated for `com.mocktester.app` and Firebase
+// resources appear automatically. Until then the build stays green and
+// `AppBootstrap` reports `firebaseReady == false` instead of crashing.
+//
+// The plugin version is declared (apply false) in android/settings.gradle.kts.
+val googleServicesDescriptor = file("google-services.json")
+val googleServicesMatchesApp =
+    googleServicesDescriptor.exists() &&
+        googleServicesDescriptor.readText().contains("com.mocktester.app")
+if (googleServicesMatchesApp) {
+    apply(plugin = "com.google.gms.google-services")
 }
 
 android {
