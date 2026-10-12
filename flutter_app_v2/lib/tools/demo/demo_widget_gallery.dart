@@ -319,7 +319,7 @@ List<DemoGalleryEntry> demoGalleryEntries({required bool dark}) =>
             baseStyle: const TextStyle(fontSize: 15),
           ),
         ),
-        DemoGalleryEntry('BouncingTypingDots', (_) => const BouncingTypingDots()),,
+        DemoGalleryEntry('BouncingTypingDots', (_) => const BouncingTypingDots()),
       DemoGalleryEntry(
           'CbtPieChartCard',
           (_) => const CbtPieChartCard(correct: 12, wrong: 4, skipped: 2),
