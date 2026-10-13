@@ -508,61 +508,66 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                             ],
                           ),
                           const SizedBox(height: 12),
-                          Row(
+
+                          // 🎯 FIX: Category + Location Row (Upar) aur Title ko Full Width (Neeche)
+                          Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Expanded(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      card.title,
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w900,
-                                        color: isDark ? Colors.white : const Color(0xFF0F172A),
-                                      ),
-                                    ),
-                                    const SizedBox(height: 2),
-                                    Text(
-                                      card.category,
-                                      style: TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w700,
-                                        color: themeColor,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              if (card.district != null)
-                                Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-                                  decoration: BoxDecoration(
-                                    color: isDark ? const Color(0xFF0F172A) : const Color(0xFFFEF3C7),
-                                    borderRadius: BorderRadius.circular(8),
-                                    border: Border.all(
-                                      color: isDark ? Colors.white12 : const Color(0xFFFDE68A),
+                              Wrap(
+                                spacing: 8,
+                                runSpacing: 6,
+                                crossAxisAlignment: WrapCrossAlignment.center,
+                                children: [
+                                  Text(
+                                    card.category,
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w700,
+                                      color: themeColor,
                                     ),
                                   ),
-                                  child: Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      const Icon(Icons.place_rounded, size: 12, color: Color(0xFFD97706)),
-                                      const SizedBox(width: 3),
-                                      Text(
-                                        card.district!,
-                                        style: TextStyle(
-                                          fontSize: 10.5,
-                                          fontWeight: FontWeight.w800,
-                                          color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
+                                  if (card.district != null)
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+                                      decoration: BoxDecoration(
+                                        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFFEF3C7),
+                                        borderRadius: BorderRadius.circular(6),
+                                        border: Border.all(
+                                          color: isDark ? Colors.white12 : const Color(0xFFFDE68A),
                                         ),
                                       ),
-                                    ],
-                                  ),
+                                      child: Row(
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          const Icon(Icons.place_rounded, size: 11, color: Color(0xFFD97706)),
+                                          const SizedBox(width: 3),
+                                          Text(
+                                            card.district!,
+                                            style: TextStyle(
+                                              fontSize: 10,
+                                              fontWeight: FontWeight.w800,
+                                              color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                ],
+                              ),
+                              const SizedBox(height: 6),
+                              Text(
+                                card.title,
+                                style: TextStyle(
+                                  fontSize: 19,
+                                  fontWeight: FontWeight.w900,
+                                  height: 1.25,
+                                  letterSpacing: -0.3,
+                                  color: isDark ? Colors.white : const Color(0xFF0F172A),
                                 ),
+                              ),
                             ],
                           ),
+
                           const SizedBox(height: 12),
                           if (frontHighlights.isNotEmpty)
                             Container(
