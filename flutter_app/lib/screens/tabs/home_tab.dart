@@ -102,11 +102,11 @@ class _HomeTabState extends State<HomeTab> {
       },
       child: SingleChildScrollView(
         physics: const AlwaysScrollableScrollPhysics(),
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 🌟 0. NAYA GREETING CARD + LIVE STATS + ACTION BUTTONS
+            // 🌟 0. GREETING CARD + LIVE STATS + ACTION BUTTONS (Perfect Aligned)
             HomeGreetingHeader(
               isDarkMode: widget.isDarkMode,
               reloadToken: _statsReloadToken,
@@ -114,7 +114,6 @@ class _HomeTabState extends State<HomeTab> {
               onTapLearn: widget.onNavigateToLearn,
               onStartChallenge: _startChallengeSprint,
             ),
-            const SizedBox(height: 14),
 
             // 1. TODAY TICKER
             if (widget.appConfig['today_update']?['show'] == true) ...[
