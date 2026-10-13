@@ -13,6 +13,9 @@ import '../../widgets/bihar_events_carousel_widget.dart';
 import '../../widgets/know_your_bihar_widget.dart';
 import '../../widgets/district_top_leaderboard_widget.dart';
 
+// 🌟 Naya Greeting Header Widget
+import '../../widgets/home_greeting_header.dart';
+
 // ⚔️ Challenge screens & service
 import '../challenge_quiz_screen.dart';
 import '../../services/challenge_service.dart';
@@ -53,9 +56,10 @@ class _HomeTabState extends State<HomeTab> {
   final GlobalKey<FirstInIndiaWidgetState> _firstInIndiaWidgetKey = GlobalKey<FirstInIndiaWidgetState>();
   final GlobalKey<CoachingHubCardState> _coachingHubKey = GlobalKey<CoachingHubCardState>();
   final GlobalKey<HallOfFameCarouselWidgetState> _hallOfFameKey = GlobalKey<HallOfFameCarouselWidgetState>();
-  final GlobalKey<ProPdfVaultCardState> _pdfVaultKey = GlobalKey<ProPdfVaultCardState>(); // 👈 Added for Books DB sync
+  final GlobalKey<ProPdfVaultCardState> _pdfVaultKey = GlobalKey<ProPdfVaultCardState>();
 
   bool _isChallengeLoading = false;
+  int _statsReloadToken = 0; // 🔄 Stats live reload token
 
   Future<void> _startChallengeSprint() async {
     setState(() => _isChallengeLoading = true);
@@ -72,7 +76,9 @@ class _HomeTabState extends State<HomeTab> {
             isDarkMode: widget.isDarkMode,
           ),
         ),
-      );
+      ).then((_) {
+        if (mounted) setState(() => _statsReloadToken++);
+      });
     } finally {
       if (mounted) setState(() => _isChallengeLoading = false);
     }
@@ -84,21 +90,32 @@ class _HomeTabState extends State<HomeTab> {
       color: const Color(0xFF4F46E5),
       backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
       onRefresh: () async {
+        setState(() => _statsReloadToken++); // Greeting card numbers refresh honge
         await Future.wait<dynamic>([
           _bulletinWidgetKey.currentState?.fetchDailyBulletins(forceRefresh: true) ?? Future.value(),
           _jobsWidgetKey.currentState?.fetchLatestJobs(refresh: true) ?? Future.value(),
           _firstInIndiaWidgetKey.currentState?.fetchFirstInIndia(forceRefresh: true) ?? Future.value(),
           _coachingHubKey.currentState?.loadEnrolledBatchData() ?? Future.value(),
           _hallOfFameKey.currentState?.fetchHallOfFame() ?? Future.value(),
-          _pdfVaultKey.currentState?.fetchLiveBooks() ?? Future.value(), // 👈 Pull down pe books sync hogi
+          _pdfVaultKey.currentState?.fetchLiveBooks() ?? Future.value(),
         ]);
       },
       child: SingleChildScrollView(
         physics: const AlwaysScrollableScrollPhysics(),
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // 🌟 0. NAYA GREETING CARD + LIVE STATS + ACTION BUTTONS
+            HomeGreetingHeader(
+              isDarkMode: widget.isDarkMode,
+              reloadToken: _statsReloadToken,
+              challengeLoading: _isChallengeLoading,
+              onTapLearn: widget.onNavigateToLearn,
+              onStartChallenge: _startChallengeSprint,
+            ),
+            const SizedBox(height: 14),
+
             // 1. TODAY TICKER
             if (widget.appConfig['today_update']?['show'] == true) ...[
               TodayUpdateTickerWidget(
@@ -156,7 +173,7 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // 📑 10. PDF VAULT CARD (books_database.json auto-sync)
+            // 📑 10. PDF VAULT CARD
             ProPdfVaultCard(
               key: _pdfVaultKey,
               isDarkMode: widget.isDarkMode,
