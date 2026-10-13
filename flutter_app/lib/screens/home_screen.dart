@@ -383,7 +383,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             },
           ),
           IconButton(
-            icon: const Icon(Icons.school_rounded, color: Color(0xFF075E54)),
+            icon: const Icon(Icons.school_rounded, color: Color(0xFF2563EB)),
             onPressed: () {
               Navigator.push(
                 context,
@@ -393,7 +393,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
         ],
       ),
+      // 🌟 ROYAL BLUE THEMED DRAWER
       drawer: Drawer(
+        backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : Colors.white,
         child: FutureBuilder<SharedPreferences>(
           future: SharedPreferences.getInstance(),
           builder: (context, snapshot) {
@@ -402,7 +404,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             final String userEmail = prefs?.getString('user_email') ?? '';
             final String userMobile = prefs?.getString('user_mobile') ?? '';
 
-            String subtitleText = 'MockTester Aspirant';
+            String subtitleText = 'BPSC / BSSC Aspirant';
             if (userEmail.isNotEmpty && userMobile.isNotEmpty) {
               subtitleText = '$userEmail • $userMobile';
             } else if (userEmail.isNotEmpty) {
@@ -413,166 +415,204 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
             return Column(
               children: [
-                Expanded(
-                  child: ListView(
-                    padding: EdgeInsets.zero,
+                // 💙 1. Royal Blue Header
+                Container(
+                  width: double.infinity,
+                  padding: const EdgeInsets.fromLTRB(20, 52, 20, 20),
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Color(0xFF1D4ED8), Color(0xFF2563EB)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      UserAccountsDrawerHeader(
-                        decoration: const BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
-                            begin: Alignment.topLeft,
-                            end: Alignment.bottomRight,
+                      Row(
+                        children: [
+                          Container(
+                            width: 52,
+                            height: 52,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(16),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black.withOpacity(0.12),
+                                  blurRadius: 10,
+                                  offset: const Offset(0, 4),
+                                ),
+                              ],
+                            ),
+                            child: const Center(
+                              child: Icon(Icons.person_rounded, color: Color(0xFF2563EB), size: 30),
+                            ),
                           ),
+                          const SizedBox(width: 14),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  userName,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w800,
+                                    letterSpacing: -0.3,
+                                  ),
+                                ),
+                                const SizedBox(height: 2),
+                                Text(
+                                  subtitleText,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    color: Colors.white.withOpacity(0.85),
+                                    fontSize: 11.5,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(height: 16),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4.5),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.18),
+                          borderRadius: BorderRadius.circular(999),
+                          border: Border.all(color: Colors.white.withOpacity(0.28)),
                         ),
-                        accountName: Text(
-                          userName,
-                          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                        ),
-                        accountEmail: Text(
-                          subtitleText,
-                          style: const TextStyle(color: Colors.white70, fontSize: 12),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        currentAccountPicture: const CircleAvatar(
-                          backgroundColor: Colors.white,
-                          child: Icon(Icons.person, color: Color(0xFF2563EB), size: 36),
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text('⚡', style: TextStyle(fontSize: 11)),
+                            SizedBox(width: 5),
+                            Text(
+                              'ASPIRANT ACCESS',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 9.5,
+                                fontWeight: FontWeight.w800,
+                                letterSpacing: 0.4,
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      ListTile(
-                        leading: const Icon(Icons.dashboard_customize_rounded, color: Color(0xFF2563EB)),
-                        title: const Text('Creator Studio & Analytics', style: TextStyle(fontWeight: FontWeight.bold)),
-                        subtitle: const Text('Dashboard, Quizzes, Notes & Mock Builder'),
-                        trailing: const Icon(Icons.arrow_forward_ios, size: 14),
+                    ],
+                  ),
+                ),
+
+                // 📜 2. Navigation Actions List
+                Expanded(
+                  child: ListView(
+                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                    children: [
+                      _buildDrawerTile(
+                        icon: Icons.dashboard_customize_rounded,
+                        iconColor: const Color(0xFF2563EB),
+                        title: 'Creator Studio & Analytics',
+                        subtitle: 'Dashboard, Quizzes, Notes & Mock Builder',
                         onTap: () {
                           Navigator.pop(context);
                           _openCreatorStudio();
                         },
                       ),
-                      const Divider(),
+
+                      const SizedBox(height: 8),
 
                       // 🛠️ Aspirant Utility Tools Section
-                      Theme(
-                        data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-                        child: ExpansionTile(
-                          initiallyExpanded: true,
-                          leading: const Icon(Icons.handyman_rounded, color: Color(0xFFB45309)),
-                          title: const Text(
-                            'Aspirant Utility Tools',
-                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
+                      Container(
+                        decoration: BoxDecoration(
+                          color: _isDarkMode
+                              ? Colors.white.withOpacity(0.03)
+                              : const Color(0xFFF8FAFC),
+                          borderRadius: BorderRadius.circular(16),
+                          border: Border.all(
+                            color: _isDarkMode
+                                ? Colors.white.withOpacity(0.06)
+                                : const Color(0xFFE2E8F0),
                           ),
-                          children: [
-                            ListTile(
-                              contentPadding: const EdgeInsets.only(left: 32, right: 16),
-                              leading: Container(
-                                padding: const EdgeInsets.all(6),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFFB45309).withValues(alpha: 0.12),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: const Icon(
-                                  Icons.photo_size_select_large_rounded,
-                                  size: 18,
-                                  color: Color(0xFFB45309),
-                                ),
+                        ),
+                        child: Theme(
+                          data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                          child: ExpansionTile(
+                            initiallyExpanded: true,
+                            leading: Container(
+                              padding: const EdgeInsets.all(7),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFB45309).withOpacity(0.12),
+                                borderRadius: BorderRadius.circular(10),
                               ),
-                              title: const Text(
-                                'Photo & Sign Resizer',
-                                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
-                              ),
-                              subtitle: const Text(
-                                'BPSC, BSSC, Police (<20KB / 50KB)',
-                                style: TextStyle(fontSize: 11),
-                              ),
-                              trailing: Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF16A34A).withValues(alpha: 0.15),
-                                  borderRadius: BorderRadius.circular(4),
-                                ),
-                                child: const Text(
-                                  'READY',
-                                  style: TextStyle(
-                                    fontSize: 9,
-                                    fontWeight: FontWeight.w900,
-                                    color: Color(0xFF16A34A),
-                                  ),
-                                ),
-                              ),
-                              onTap: () {
-                                Navigator.pop(context);
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (_) => ExamPhotoResizerScreen(isDark: _isDarkMode),
-                                  ),
-                                );
-                              },
+                              child: const Icon(Icons.handyman_rounded, color: Color(0xFFB45309), size: 18),
                             ),
-                            ListTile(
-                              contentPadding: const EdgeInsets.only(left: 32, right: 16),
-                              leading: Container(
-                                padding: const EdgeInsets.all(6),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF2563EB).withValues(alpha: 0.12),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: const Icon(
-                                  Icons.picture_as_pdf_rounded,
-                                  size: 18,
-                                  color: Color(0xFF2563EB),
-                                ),
-                              ),
-                              title: const Text(
-                                'Doc & ID Card Merger',
-                                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
-                              ),
-                              subtitle: const Text(
-                                'ID Card Front/Back • 1-Doc PDF (<100KB)',
-                                style: TextStyle(fontSize: 11),
-                              ),
-                              trailing: Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF2563EB).withValues(alpha: 0.15),
-                                  borderRadius: BorderRadius.circular(4),
-                                ),
-                                child: const Text(
-                                  'NEW',
-                                  style: TextStyle(
-                                    fontSize: 9,
-                                    fontWeight: FontWeight.w900,
-                                    color: Color(0xFF2563EB),
-                                  ),
-                                ),
-                              ),
-                              onTap: () {
-                                Navigator.pop(context);
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (_) => ExamDocMergerScreen(isDark: _isDarkMode),
-                                  ),
-                                );
-                              },
+                            title: const Text(
+                              'Aspirant Utility Tools',
+                              style: TextStyle(fontWeight: FontWeight.w800, fontSize: 13.5),
                             ),
-                          ],
+                            children: [
+                              _buildSubDrawerTile(
+                                icon: Icons.photo_size_select_large_rounded,
+                                iconColor: const Color(0xFFB45309),
+                                title: 'Photo & Sign Resizer',
+                                subtitle: 'BPSC, BSSC, Police (<20KB / 50KB)',
+                                badge: 'READY',
+                                badgeColor: const Color(0xFF16A34A),
+                                onTap: () {
+                                  Navigator.pop(context);
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) => ExamPhotoResizerScreen(isDark: _isDarkMode),
+                                    ),
+                                  );
+                                },
+                              ),
+                              _buildSubDrawerTile(
+                                icon: Icons.picture_as_pdf_rounded,
+                                iconColor: const Color(0xFF2563EB),
+                                title: 'Doc & ID Card Merger',
+                                subtitle: 'ID Card Front/Back • 1-Doc PDF',
+                                badge: 'NEW',
+                                badgeColor: const Color(0xFF2563EB),
+                                onTap: () {
+                                  Navigator.pop(context);
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) => ExamDocMergerScreen(isDark: _isDarkMode),
+                                    ),
+                                  );
+                                },
+                              ),
+                              const SizedBox(height: 6),
+                            ],
+                          ),
                         ),
                       ),
-                      const Divider(),
 
-                      ListTile(
-                        leading: const Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
-                        title: const Text('Community Feed'),
+                      const SizedBox(height: 8),
+
+                      _buildDrawerTile(
+                        icon: Icons.dynamic_feed_rounded,
+                        iconColor: const Color(0xFF2563EB),
+                        title: 'Community Feed',
                         onTap: () {
                           Navigator.pop(context);
                           setState(() => _currentBottomIndex = 3);
                         },
                       ),
-                      ListTile(
-                        leading: const Icon(Icons.school_outlined),
-                        title: const Text('Learn Hub'),
+                      _buildDrawerTile(
+                        icon: Icons.school_rounded,
+                        iconColor: const Color(0xFF059669),
+                        title: 'Learn Hub',
                         onTap: () {
                           Navigator.pop(context);
                           Navigator.push(
@@ -581,17 +621,19 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                           ).then((_) => _loadRealtimeProgress());
                         },
                       ),
-                      ListTile(
-                        leading: const Icon(Icons.person_outline),
-                        title: const Text('My Profile'),
+                      _buildDrawerTile(
+                        icon: Icons.person_rounded,
+                        iconColor: const Color(0xFF4F46E5),
+                        title: 'My Profile',
                         onTap: () {
                           Navigator.pop(context);
                           setState(() => _currentBottomIndex = 4);
                         },
                       ),
-                      ListTile(
-                        leading: const Icon(Icons.privacy_tip_outlined, color: Colors.grey),
-                        title: const Text('Privacy Policy', style: TextStyle(fontSize: 13.5)),
+                      _buildDrawerTile(
+                        icon: Icons.privacy_tip_outlined,
+                        iconColor: Colors.grey,
+                        title: 'Privacy Policy',
                         onTap: () {
                           Navigator.pop(context);
                           _openWebsiteUrl('Privacy Policy', 'https://www.mocktester.online/p/privacy.html');
@@ -600,13 +642,17 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     ],
                   ),
                 ),
+
+                // ⚠️ 3. Disclaimer Footer
                 Container(
-                  margin: const EdgeInsets.all(12),
-                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.fromLTRB(14, 0, 14, 14),
+                  padding: const EdgeInsets.all(12),
                   decoration: BoxDecoration(
                     color: _isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                    borderRadius: BorderRadius.circular(14),
+                    border: Border.all(
+                      color: _isDarkMode ? Colors.white.withOpacity(0.06) : const Color(0xFFE2E8F0),
+                    ),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -615,11 +661,12 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                       const SizedBox(width: 8),
                       Expanded(
                         child: Text(
-                          'Disclaimer: MockTester is an independent educational prep platform and is NOT affiliated with, endorsed by, or representing any government entity (BPSC, SSC, etc.).',
+                          'MockTester is an independent prep platform and is NOT affiliated with any government entity.',
                           style: TextStyle(
                             fontSize: 10,
-                            color: _isDarkMode ? Colors.white60 : Colors.black87,
-                            height: 1.3,
+                            fontWeight: FontWeight.w500,
+                            color: _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                            height: 1.35,
                           ),
                         ),
                       ),
@@ -671,22 +718,157 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
         ],
       ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _currentBottomIndex,
-        onDestinationSelected: (idx) {
-          setState(() => _currentBottomIndex = idx);
-          if (idx == 0) _loadRealtimeProgress();
-          if (idx == 1) _fetchSubjectMappingLive();
-          if (idx == 2) _fetchSectionalDataLive();
-        },
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_rounded), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.menu_book_outlined), selectedIcon: Icon(Icons.menu_book_rounded), label: 'Revision'),
-          NavigationDestination(icon: Icon(Icons.assignment_outlined), selectedIcon: Icon(Icons.assignment_rounded), label: 'Sectional'),
-          NavigationDestination(icon: Icon(Icons.dynamic_feed_outlined), selectedIcon: Icon(Icons.dynamic_feed_rounded), label: 'Community'),
-          NavigationDestination(icon: Icon(Icons.person_outline_rounded), selectedIcon: Icon(Icons.person_rounded), label: 'Profile'),
-        ],
+      // 🌟 ROYAL BLUE HIGHLIGHTED BOTTOM NAVIGATION BAR
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: _isDarkMode ? const Color(0xFF0F172A) : Colors.white,
+          border: Border(
+            top: BorderSide(
+              color: _isDarkMode ? Colors.white.withOpacity(0.08) : const Color(0xFFE2E8F0),
+              width: 1,
+            ),
+          ),
+        ),
+        child: NavigationBar(
+          height: 66,
+          elevation: 0,
+          backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : Colors.white,
+          surfaceTintColor: Colors.transparent,
+          indicatorColor: const Color(0xFF2563EB).withOpacity(0.14),
+          indicatorShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+          selectedIndex: _currentBottomIndex,
+          onDestinationSelected: (idx) {
+            setState(() => _currentBottomIndex = idx);
+            if (idx == 0) _loadRealtimeProgress();
+            if (idx == 1) _fetchSubjectMappingLive();
+            if (idx == 2) _fetchSectionalDataLive();
+          },
+          destinations: const [
+            NavigationDestination(
+              icon: Icon(Icons.home_outlined),
+              selectedIcon: Icon(Icons.home_rounded, color: Color(0xFF2563EB)),
+              label: 'Home',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.menu_book_outlined),
+              selectedIcon: Icon(Icons.menu_book_rounded, color: Color(0xFF2563EB)),
+              label: 'Revision',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.assignment_outlined),
+              selectedIcon: Icon(Icons.assignment_rounded, color: Color(0xFF2563EB)),
+              label: 'Sectional',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.dynamic_feed_outlined),
+              selectedIcon: Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
+              label: 'Community',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.person_outline_rounded),
+              selectedIcon: Icon(Icons.person_rounded, color: Color(0xFF2563EB)),
+              label: 'Profile',
+            ),
+          ],
+        ),
       ),
+    );
+  }
+
+  // 🛠️ Drawer Item Helpers
+  Widget _buildDrawerTile({
+    required IconData icon,
+    required Color iconColor,
+    required String title,
+    String? subtitle,
+    required VoidCallback onTap,
+  }) {
+    return ListTile(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+      leading: Container(
+        padding: const EdgeInsets.all(8),
+        decoration: BoxDecoration(
+          color: iconColor.withOpacity(0.12),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Icon(icon, color: iconColor, size: 20),
+      ),
+      title: Text(
+        title,
+        style: TextStyle(
+          fontWeight: FontWeight.w700,
+          fontSize: 13.5,
+          color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
+        ),
+      ),
+      subtitle: subtitle != null
+          ? Text(
+              subtitle,
+              style: TextStyle(
+                fontSize: 11,
+                color: _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+              ),
+            )
+          : null,
+      trailing: Icon(
+        Icons.arrow_forward_ios_rounded,
+        size: 13,
+        color: _isDarkMode ? Colors.white38 : Colors.black26,
+      ),
+      onTap: onTap,
+    );
+  }
+
+  Widget _buildSubDrawerTile({
+    required IconData icon,
+    required Color iconColor,
+    required String title,
+    required String subtitle,
+    required String badge,
+    required Color badgeColor,
+    required VoidCallback onTap,
+  }) {
+    return ListTile(
+      contentPadding: const EdgeInsets.only(left: 20, right: 14),
+      leading: Container(
+        padding: const EdgeInsets.all(6),
+        decoration: BoxDecoration(
+          color: iconColor.withOpacity(0.12),
+          borderRadius: BorderRadius.circular(8),
+        ),
+        child: Icon(icon, color: iconColor, size: 16),
+      ),
+      title: Text(
+        title,
+        style: TextStyle(
+          fontWeight: FontWeight.w700,
+          fontSize: 12.5,
+          color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
+        ),
+      ),
+      subtitle: Text(
+        subtitle,
+        style: TextStyle(
+          fontSize: 10.5,
+          color: _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+        ),
+      ),
+      trailing: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
+        decoration: BoxDecoration(
+          color: badgeColor.withOpacity(0.15),
+          borderRadius: BorderRadius.circular(6),
+        ),
+        child: Text(
+          badge,
+          style: TextStyle(
+            fontSize: 8.5,
+            fontWeight: FontWeight.w900,
+            color: badgeColor,
+          ),
+        ),
+      ),
+      onTap: onTap,
     );
   }
 
