@@ -1,7 +1,10 @@
 import 'dart:async';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
 import 'home_screen.dart';
+import 'onboarding_welcome_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -30,11 +33,21 @@ class _SplashScreenState extends State<SplashScreen>
       if (mounted) setState(() => _showAurora = true);
     });
 
-    // 2.5 second ke baad seedhe HomeScreen par navigate karega
-    _timer = Timer(const Duration(milliseconds: 2500), () {
+    // 2.5 seconds ke baad check karega user onboarded hai ya naya
+    _timer = Timer(const Duration(milliseconds: 2500), () async {
       if (!mounted) return;
+
+      final prefs = await SharedPreferences.getInstance();
+      final bool isOnboarded = prefs.getBool('is_onboarded') ?? false;
+
+      if (!mounted) return;
+
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const HomeScreen()),
+        MaterialPageRoute(
+          builder: (context) => isOnboarded
+              ? const HomeScreen()
+              : OnboardingWelcomeScreen(nextScreen: const HomeScreen()),
+        ),
       );
     });
   }
@@ -167,7 +180,7 @@ class _SplashScreenState extends State<SplashScreen>
 
                   const Spacer(flex: 2),
 
-                  // Sleek Linear Progress Bar (Circular Indicator ki jagah)
+                  // Sleek Linear Progress Bar (Circular Spinner ki jagah)
                   SizedBox(
                     width: 160,
                     child: ClipRRect(
