@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-// Aapke service ka sahi relative path (agar lib/services me hai):
+// Aapke service ka sahi relative path:
 import '../services/user_stats_service.dart';
 
 class HomeGreetingHeader extends StatefulWidget {
@@ -35,7 +35,6 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
   @override
   void didUpdateWidget(HomeGreetingHeader oldWidget) {
     super.didUpdateWidget(oldWidget);
-    // Jab user pull-to-refresh kare, tabhi stats dubara fetch honge
     if (oldWidget.reloadToken != widget.reloadToken) {
       setState(() {
         _statsFuture = UserStatsService.getStats();
@@ -64,11 +63,20 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
     return 'Good evening';
   }
 
+  // ⏰ Option 2: Time ke hisaab se dynamic greeting icon
+  IconData get _greetingIcon {
+    final int hour = DateTime.now().hour;
+    if (hour < 12) return Icons.wb_sunny_rounded;       // ☀️ Subah
+    if (hour < 17) return Icons.light_mode_rounded;     // 🌤️ Dopahar
+    return Icons.nights_stay_rounded;                   // 🌙 Shaam / Raat
+  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: double.infinity,
-      margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      // 📐 Edge alignment ke liye horizontal margin hataya gaya hai
+      margin: const EdgeInsets.only(bottom: 14),
       padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         gradient: const LinearGradient(
@@ -88,7 +96,6 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
       ),
       child: Stack(
         children: <Widget>[
-          // Decorative Ambient Background Glows
           Positioned(
             right: -25,
             top: -25,
@@ -130,7 +137,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
               return Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  // 1. Identity Row (Brand Logo Tile + Greeting + Streak Pill)
+                  // 1️⃣ Identity Row (Dynamic Day/Night Icon + Greeting + Streak Pill)
                   Row(
                     children: <Widget>[
                       Container(
@@ -151,8 +158,8 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                             ),
                           ],
                         ),
-                        child: const Icon(
-                          Icons.insights_rounded,
+                        child: Icon(
+                          _greetingIcon, // 👈 Dynamic Time-Based Icon
                           color: Colors.white,
                           size: 22,
                         ),
@@ -190,7 +197,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                   ),
                   const SizedBox(height: 16),
 
-                  // 2. Live Numbers (Questions, Accuracy, Mocks)
+                  // 2️⃣ Live Performance Numbers
                   Row(
                     children: <Widget>[
                       Expanded(
@@ -223,7 +230,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                   ),
                   const SizedBox(height: 16),
 
-                  // 3. Action Buttons (Learn Hub + Daily Challenge)
+                  // 3️⃣ Action Buttons
                   Row(
                     children: <Widget>[
                       Expanded(
