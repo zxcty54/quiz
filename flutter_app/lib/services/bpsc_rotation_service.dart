@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
+import 'package:shared_preferences/shared_preferences.dart';
 import '../models/bpsc_daily_card_model.dart';
 
 class DayConfig {
@@ -94,29 +95,63 @@ class BpscRotationService {
     return ((dayOfYear + firstDayOffset) / 7).ceil();
   }
 
+  // 🚀 Fast Multi-CDN Fetcher (Cloudflare Edge Primary + Failovers)
   static Future<dynamic> _fetchWithMirrors(String fileName) async {
+    final int ts = DateTime.now().millisecondsSinceEpoch;
+    final String cleanFile = fileName.trim();
+
     final List<String> mirrors = [
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/knowyourbihar/$fileName",
-      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/knowyourbihar/$fileName",
-      "https://raw.githack.com/zxcty54/content_base/main/knowyourbihar/$fileName",
+      // ⚡ Primary: Cloudflare Edge (Statically CDN)
+      "https://cdn.statically.io/gh/zxcty54/content_base/main/knowyourbihar/$cleanFile?t=$ts",
+      // 🔄 Fallback 1: Fastly CDN
+      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/knowyourbihar/$cleanFile?t=$ts",
+      // 🔄 Fallback 2: jsDelivr Global
+      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/knowyourbihar/$cleanFile?t=$ts",
+      // 🔄 Fallback 3: GitHack Cloudflare proxy
+      "https://raw.githack.com/zxcty54/content_base/main/knowyourbihar/$cleanFile",
+      // 🛡️ Fallback 4: Raw GitHub (Emergency backup)
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/knowyourbihar/$cleanFile?t=$ts",
     ];
 
     for (String url in mirrors) {
       try {
-        debugPrint("Fetching: $url");
-        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 12));
+        final res = await http.get(
+          Uri.parse(url),
+          headers: const {
+            'Accept': 'application/json, text/plain, */*',
+            'Cache-Control': 'no-cache',
+            'User-Agent': 'MockTesterApp-Flutter',
+          },
+        ).timeout(const Duration(seconds: 4));
+
         if (res.statusCode == 200) {
           String body = utf8.decode(res.bodyBytes).trim();
           if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
-          return json.decode(body);
-        } else {
-          debugPrint("Mirror HTTP status ${res.statusCode} for: $url");
+
+          if (!body.startsWith('<') && !body.startsWith('<!DOCTYPE')) {
+            final decoded = json.decode(body);
+            if (decoded != null) {
+              // Cache save karein
+              final prefs = await SharedPreferences.getInstance();
+              await prefs.setString('cached_kyb_$cleanFile', body);
+              return decoded;
+            }
+          }
         }
-      } catch (e) {
-        debugPrint("Mirror connection error: $e");
+      } catch (_) {
         continue;
       }
     }
+
+    // 💾 Saare mirrors fail hone par local cache se fallback
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final cached = prefs.getString('cached_kyb_$cleanFile');
+      if (cached != null && cached.isNotEmpty) {
+        return json.decode(cached);
+      }
+    } catch (_) {}
+
     return null;
   }
 
@@ -126,12 +161,10 @@ class BpscRotationService {
     final weekNum = _getWeekOfYear(now);
 
     final String targetFile = config.filePool[weekNum % config.filePool.length];
-    debugPrint("Target file for today: $targetFile");
-
     final decoded = await _fetchWithMirrors(targetFile);
 
     if (decoded == null) {
-      throw Exception("Network Timeout: $targetFile mirror URL se download nahi ho saka.");
+      throw Exception("Network unavailable. Please check your internet connection.");
     }
 
     List<dynamic> items = [];
@@ -148,7 +181,7 @@ class BpscRotationService {
     }
 
     if (items.isEmpty) {
-      throw Exception("Invalid File: $targetFile ke andar koi valid items list nahi mili.");
+      throw Exception("Invalid File: Data format not recognized.");
     }
 
     final int activeIndex = (weekNum ~/ config.filePool.length) % items.length;
