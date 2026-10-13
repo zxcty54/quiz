@@ -110,14 +110,15 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
     } catch (_) {}
   }
 
+  // 🚀 Fast Multi-CDN Fetcher (Cloudflare Primary + Fastly / GitHub Failover)
   Future<void> fetchFirstInIndia({bool forceRefresh = false}) async {
     final prefs = await SharedPreferences.getInstance();
     final String todayStr = DateTime.now().toIso8601String().split('T')[0];
     const String cacheDataKey = 'cached_app_alerts_news_json';
     const String cacheDateKey = 'cached_app_alerts_news_date';
 
+    // 1. Same-Day Fast Local Cache Check
     final String savedDate = prefs.getString(cacheDateKey) ?? '';
-
     if (!forceRefresh && savedDate == todayStr) {
       String? cachedJson = prefs.getString(cacheDataKey);
       if (cachedJson != null) {
@@ -134,29 +135,83 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
       }
     }
 
-    final int timestamp = DateTime.now().millisecondsSinceEpoch;
-    final String newsUrl =
-        "https://raw.githubusercontent.com/zxcty54/content_base/main/app_alerts_news.json?t=$timestamp";
+    final int ts = DateTime.now().millisecondsSinceEpoch;
+    const String relativeFilePath = "app_alerts_news.json";
 
-    try {
-      final res = await http.get(Uri.parse(newsUrl)).timeout(const Duration(seconds: 5));
-      if (res.statusCode == 200) {
-        String decoded = utf8.decode(res.bodyBytes);
-        final data = jsonDecode(decoded);
+    // ⚡ CDN Priority Hierarchy
+    final List<String> cdnEndpoints = [
+      // 🥇 Primary: Cloudflare Edge Network (Statically CDN)
+      "https://cdn.statically.io/gh/zxcty54/content_base/main/$relativeFilePath?t=$ts",
+      
+      // 🥈 Fallback 1: Fastly CDN via jsDelivr
+      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$relativeFilePath?t=$ts",
+      
+      // 🥉 Fallback 2: Global jsDelivr CDN
+      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/$relativeFilePath?t=$ts",
+      
+      // 🔄 Fallback 3: GitHack Cloudflare proxy
+      "https://raw.githack.com/zxcty54/content_base/main/$relativeFilePath",
+      
+      // 🛡️ Fallback 4: Raw GitHub (Last emergency resort)
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/$relativeFilePath?t=$ts",
+    ];
 
-        if (mounted) {
-          setState(() {
-            _alertNewsList = _extractList(data);
-            _isLoading = false;
-          });
+    dynamic parsedData;
+    String? rawJsonSuccess;
+
+    for (final url in cdnEndpoints) {
+      try {
+        final res = await http.get(
+          Uri.parse(url),
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Cache-Control': 'no-cache',
+            'User-Agent': 'MockTesterApp-Flutter',
+          },
+        ).timeout(const Duration(seconds: 4));
+
+        if (res.statusCode == 200) {
+          String rawBody = utf8.decode(res.bodyBytes).trim();
+          if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
+
+          if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
+            final decoded = jsonDecode(rawBody);
+            if (decoded != null) {
+              parsedData = decoded;
+              rawJsonSuccess = rawBody;
+              break; // ✅ Pehla responsive CDN hit aate hi loop break hoga
+            }
+          }
         }
-        await prefs.setString(cacheDataKey, decoded);
-        await prefs.setString(cacheDateKey, todayStr);
-      } else {
-        if (mounted) setState(() => _isLoading = false);
+      } catch (_) {
+        continue;
       }
-    } catch (_) {
-      if (mounted) setState(() => _isLoading = false);
+    }
+
+    if (mounted) {
+      if (parsedData != null) {
+        setState(() {
+          _alertNewsList = _extractList(parsedData);
+          _isLoading = false;
+        });
+
+        if (rawJsonSuccess != null) {
+          await prefs.setString(cacheDataKey, rawJsonSuccess);
+          await prefs.setString(cacheDateKey, todayStr);
+        }
+      } else {
+        // Saare CDN fail hone par purana saved cache display karein
+        String? oldCache = prefs.getString(cacheDataKey);
+        if (oldCache != null) {
+          try {
+            final fallbackDecoded = jsonDecode(oldCache);
+            setState(() {
+              _alertNewsList = _extractList(fallbackDecoded);
+            });
+          } catch (_) {}
+        }
+        setState(() => _isLoading = false);
+      }
     }
   }
 
@@ -188,7 +243,6 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
     if (_alertNewsList.isEmpty) return const SizedBox.shrink();
 
-    // 🎨 Ultra-clean Eye-Catching Shadows & Gradients
     final BoxDecoration cardDecoration = BoxDecoration(
       gradient: isDark
           ? const LinearGradient(
@@ -382,8 +436,8 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                                       fontSize: 12,
                                       fontWeight: FontWeight.w700,
                                       color: _activeIndex > 0
-                                          ? const Color(0xFFD97706)
-                                          : Colors.grey.withOpacity(0.35),
+                                        ? const Color(0xFFD97706)
+                                        : Colors.grey.withOpacity(0.35),
                                     ),
                                   ),
                                 ],
@@ -391,7 +445,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                             ),
                           ),
 
-                          // Dots + Counter Center
+                          // Indicator Center
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                             decoration: BoxDecoration(
@@ -411,7 +465,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                             ),
                           ),
 
-                          // Next Alert Button (Vibrant Pill)
+                          // Next Alert Button
                           Material(
                             color: Colors.transparent,
                             child: InkWell(
@@ -467,7 +521,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                       ),
                     ),
 
-                    // Persistent Bottom Website Archive Link
+                    // Website Archive Link
                     Container(
                       margin: const EdgeInsets.fromLTRB(16, 0, 16, 14),
                       decoration: BoxDecoration(
@@ -533,7 +587,6 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.min,
         children: [
-          // Row: Exam Tag Pill + Spacer + Bookmark/Share
           Row(
             children: [
               Container(
@@ -616,7 +669,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
           const SizedBox(height: 14),
 
-          // News Heading
+          // Heading
           Text(
             item['title'] ?? '',
             style: TextStyle(
@@ -630,7 +683,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
           const SizedBox(height: 12),
 
-          // High Contrast Bullets
+          // Bullets
           ...bullets.map((bullet) {
             return Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
