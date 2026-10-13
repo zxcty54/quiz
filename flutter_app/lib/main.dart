@@ -9,6 +9,7 @@ import 'services/notification_service.dart';
 import 'services/ai_explainer_service.dart';
 import 'screens/home_screen.dart';
 import 'screens/onboarding_welcome_screen.dart';
+import 'screens/splash_screen.dart'; // 👈 🌟 Naya Splash Screen Import
 
 // 🌓 Global Theme Controller
 final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.light);
@@ -54,23 +55,20 @@ void main() async {
     anonKey: supabaseAnonKey,
   );
 
-  // 📱 3. SharedPreferences: Theme & Onboarding Check
+  // 📱 3. SharedPreferences: Theme Check
   final prefs = await SharedPreferences.getInstance();
   final bool isDark = prefs.getBool('is_dark_mode') ?? false;
-  final bool isOnboarded = prefs.getBool('is_onboarded') ?? false;
 
   globalThemeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
 
   // 🌐 4. Background Remote Config Sync
   unawaited(_syncAppConfig());
 
-  runApp(MyApp(isOnboarded: isOnboarded));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  final bool isOnboarded;
-
-  const MyApp({super.key, required this.isOnboarded});
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -82,7 +80,7 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           themeMode: currentMode,
 
-          // 🎨 Light Theme
+          // 🎨 Light Theme (Polished with v2 values)
           theme: ThemeData(
             useMaterial3: true,
             brightness: Brightness.light,
@@ -101,16 +99,19 @@ class MyApp extends StatelessWidget {
             ),
             cardTheme: CardThemeData(
               color: Colors.white,
-              elevation: 1.5,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+                side: const BorderSide(color: Color(0xFFE2E8F0)),
+              ),
             ),
           ),
 
-          // 🌙 Dark Theme
+          // 🌙 Dark Theme (Deep Slate Palette)
           darkTheme: ThemeData(
             useMaterial3: true,
             brightness: Brightness.dark,
-            scaffoldBackgroundColor: const Color(0xFF0B0F19),
+            scaffoldBackgroundColor: const Color(0xFF0F172A), // Deep Slate
             cardColor: const Color(0xFF1E293B),
             colorScheme: ColorScheme.fromSeed(
               seedColor: const Color(0xFF2563EB),
@@ -119,24 +120,27 @@ class MyApp extends StatelessWidget {
             ),
             appBarTheme: const AppBarTheme(
               centerTitle: true,
-              backgroundColor: const Color(0xFF1E293B),
+              backgroundColor: Color(0xFF1E293B),
               foregroundColor: Colors.white,
               elevation: 0,
             ),
             cardTheme: CardThemeData(
               color: const Color(0xFF1E293B),
-              elevation: 2,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              elevation: 0,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(16),
+                side: BorderSide(color: Colors.white.withOpacity(0.08)),
+              ),
             ),
-            dialogTheme: const DialogThemeData(
-              backgroundColor: Color(0xFF1E293B),
-              titleTextStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+            dialogTheme: DialogThemeData(
+              backgroundColor: const Color(0xFF1E293B),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18)),
+              titleTextStyle: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
             ),
           ),
 
-          home: isOnboarded
-              ? const HomeScreen()
-              : OnboardingWelcomeScreen(nextScreen: const HomeScreen()),
+          // 🚀 Start directly from SplashScreen (Splash check karega onboarding hui hai ya nahi)
+          home: const SplashScreen(),
         );
       },
     );
