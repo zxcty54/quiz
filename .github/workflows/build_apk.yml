@@ -40,6 +40,31 @@ jobs:
           rm -rf android/app/src/main/kotlin
           flutter create . --platforms=android --org com.mocktester --project-name mocktester
 
+      # 🎨 NAYA STEP: Native Smoke Splash Screen (Replaces 1-sec white screen)
+      - name: Inject Native Smoke Splash Screen
+        working-directory: flutter_app
+        run: |
+          mkdir -p android/app/src/main/res/drawable
+          mkdir -p android/app/src/main/res/drawable-v21
+          
+          # Copy your splash logo into drawable
+          cp assets/data/launch_logo.png android/app/src/main/res/drawable/splash_bg.png
+          
+          # Setup launch_background.xml for Android splash
+          cat << 'EOF' > android/app/src/main/res/drawable/launch_background.xml
+          <?xml version="1.0" encoding="utf-8"?>
+          <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+              <item android:drawable="@android:color/white" />
+              <item>
+                  <bitmap
+                      android:gravity="center"
+                      android:src="@drawable/splash_bg" />
+              </item>
+          </layer-list>
+          EOF
+          
+          cp android/app/src/main/res/drawable/launch_background.xml android/app/src/main/res/drawable-v21/launch_background.xml
+
       # 🛠️ FIX: Reliable Gradle Wrapper Injection with Gradle 9.3.1
       - name: Fix Gradle Wrapper Distribution URL
         working-directory: flutter_app/android
@@ -153,7 +178,7 @@ jobs:
           </manifest>
           EOF
 
-      # 🎨 NAYA STEP: Manifest inject hone ke BAAD custom launcher icon generate karein
+      # 🎨 Custom App Launcher Icon (Manifest inject hone ke baad)
       - name: Generate Custom App Launcher Icons
         working-directory: flutter_app
         run: |
@@ -305,11 +330,14 @@ jobs:
           fi
           echo "Found APK at: $APK_FILE"
           
+          # Rename cleanly
           cp "$APK_FILE" build/app/outputs/flutter-apk/MockTester_Build_${{ github.run_number }}.apk
           
+          # Reliable fast zip without buffer drops
           cd build/app/outputs/flutter-apk
           zip -1 -j MockTester_Build_${{ github.run_number }}.zip MockTester_Build_${{ github.run_number }}.apk
           
+          # Verify file size
           ls -lh MockTester_Build_${{ github.run_number }}.zip
 
       - name: Send Reliable Zip Direct To Telegram via Curl
