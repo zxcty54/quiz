@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:app_links/app_links.dart';
@@ -18,6 +19,7 @@ import 'creator_auth_screen.dart';
 import 'creator_dashboard_screen.dart';
 import 'learn_hub_screen.dart';
 import 'profile_screen.dart';
+import 'notifications_screen.dart';
 import 'revision_practice_screen.dart';
 import 'sectional_cbt_screen.dart';
 import 'tabs/home_tab.dart';
@@ -37,6 +39,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   int _currentBottomIndex = 0;
+  int _unreadNotifications = 0;
   bool _isDarkMode = false;
   bool _isHindi = true;
 
@@ -119,10 +122,52 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       _fetchSectionalDataLive();
       _fetchSubjectMappingLive();
       AiExplainerService.syncBatchMasteryEvolution();
+      _loadUnreadNotifications();
     }
   }
 
+  Future<void> _loadUnreadNotifications() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final creatorHandle = prefs.getString('logged_in_creator_handle');
+      final userId = prefs.getString('user_id') ?? 'user';
+      final handle = (creatorHandle != null && creatorHandle.trim().isNotEmpty)
+          ? creatorHandle.trim()
+          : userId.trim();
+
+      final rows = await Supabase.instance.client
+          .from('user_notifications')
+          .select('id')
+          .eq('user_handle', handle)
+          .eq('is_read', false)
+          .limit(100);
+
+      if (mounted) setState(() => _unreadNotifications = rows.length);
+    } catch (_) {
+      // user_notifications table/SQL na ho to ghanti bina badge ke rahegi.
+    }
+  }
+
+  void _openNotifications() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => NotificationsScreen(isDarkMode: _isDarkMode),
+      ),
+    ).then((_) => _loadUnreadNotifications());
+  }
+
   Future<void> _loadAllConfigs() async {
+    // 🛡️ Safety net: agar koi async step atak jaye ya exception de, to bhi
+    // loading screen par app kabhi stuck na rahe. 6 second baad home khul hi
+    // jayega — jo data mil gaya hai uske saath, aur baaki sections live JSON se
+    // baad me bhar jate hain.
+    Timer(const Duration(seconds: 6), () {
+      if (mounted && _isLoadingConfig) {
+        setState(() => _isLoadingConfig = false);
+      }
+    });
+
     await _loadRealtimeProgress();
 
     try {
@@ -336,8 +381,16 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     if (_isLoadingConfig) {
+      // First paint after the splash. Pehle yahan plain white AppBar with sirf
+      // "MockTester" tha, jo splash ke baad achanak white flash jaisa lagta
+      // tha; ab loading screen bhi wahi branded bar use karti hai.
       return Scaffold(
-        appBar: AppBar(title: const Text('MockTester')),
+        backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+        appBar: AppBar(
+          backgroundColor: _isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+          elevation: 0,
+          title: _brandAppBarTitle(),
+        ),
         body: _buildSkeletonLoading(),
       );
     }
@@ -347,55 +400,42 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     return Scaffold(
       backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
-        title: Text(
-          'MockTester',
-          style: TextStyle(
-            fontWeight: FontWeight.bold,
-            color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
-          ),
-        ),
+        title: _brandAppBarTitle(),
         backgroundColor: cardColor,
         elevation: 0,
         actions: [
           IconButton(
-            icon: const Icon(Icons.bolt_rounded, color: Colors.amber, size: 22),
-            tooltip: "Instant Force Update",
-            onPressed: () async {
-              final prefs = await SharedPreferences.getInstance();
-              await prefs.remove('cached_subject_mapping_json');
-              await prefs.remove('cached_sectional_data_json');
-              await prefs.remove('persistent_subject_mapping_json');
-              await prefs.remove('persistent_sectional_data_json');
-
-              await _fetchLiveAppConfig();
-              await _fetchSectionalDataLive();
-              await _fetchSubjectMappingLive();
-
-              if (context.mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('⚡ All Cache Purged! 100% Live JSON Fetched.'),
-                    backgroundColor: Color(0xFF16A34A),
-                    duration: Duration(seconds: 1),
+            tooltip: 'Notifications',
+            onPressed: _openNotifications,
+            icon: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Icon(
+                  Icons.notifications_outlined,
+                  color: _isDarkMode ? Colors.white : const Color(0xFF334155),
+                ),
+                if (_unreadNotifications > 0)
+                  Positioned(
+                    right: -6,
+                    top: -5,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 4.5, vertical: 1.5),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFDC2626),
+                        borderRadius: BorderRadius.circular(9),
+                      ),
+                      child: Text(
+                        _unreadNotifications > 99 ? '99+' : '$_unreadNotifications',
+                        style: const TextStyle(color: Colors.white, fontSize: 9, fontWeight: FontWeight.w800),
+                      ),
+                    ),
                   ),
-                );
-              }
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.school_rounded, color: Color(0xFF2563EB)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const LearnHubScreen()),
-              ).then((_) => _loadRealtimeProgress());
-            },
+              ],
+            ),
           ),
         ],
       ),
-      // 🌟 ROYAL BLUE THEMED DRAWER
       drawer: Drawer(
-        backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : Colors.white,
         child: FutureBuilder<SharedPreferences>(
           future: SharedPreferences.getInstance(),
           builder: (context, snapshot) {
@@ -404,7 +444,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             final String userEmail = prefs?.getString('user_email') ?? '';
             final String userMobile = prefs?.getString('user_mobile') ?? '';
 
-            String subtitleText = 'BPSC / BSSC Aspirant';
+            String subtitleText = 'MockTester Aspirant';
             if (userEmail.isNotEmpty && userMobile.isNotEmpty) {
               subtitleText = '$userEmail • $userMobile';
             } else if (userEmail.isNotEmpty) {
@@ -415,204 +455,166 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
             return Column(
               children: [
-                // 💙 1. Royal Blue Header
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.fromLTRB(20, 52, 20, 20),
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [Color(0xFF1D4ED8), Color(0xFF2563EB)],
-                      begin: Alignment.topLeft,
-                      end: Alignment.bottomRight,
-                    ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Row(
-                        children: [
-                          Container(
-                            width: 52,
-                            height: 52,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(16),
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withOpacity(0.12),
-                                  blurRadius: 10,
-                                  offset: const Offset(0, 4),
-                                ),
-                              ],
-                            ),
-                            child: const Center(
-                              child: Icon(Icons.person_rounded, color: Color(0xFF2563EB), size: 30),
-                            ),
-                          ),
-                          const SizedBox(width: 14),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  userName,
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.w800,
-                                    letterSpacing: -0.3,
-                                  ),
-                                ),
-                                const SizedBox(height: 2),
-                                Text(
-                                  subtitleText,
-                                  maxLines: 1,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: Colors.white.withOpacity(0.85),
-                                    fontSize: 11.5,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(height: 16),
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4.5),
-                        decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.18),
-                          borderRadius: BorderRadius.circular(999),
-                          border: Border.all(color: Colors.white.withOpacity(0.28)),
-                        ),
-                        child: const Row(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Text('⚡', style: TextStyle(fontSize: 11)),
-                            SizedBox(width: 5),
-                            Text(
-                              'ASPIRANT ACCESS',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 9.5,
-                                fontWeight: FontWeight.w800,
-                                letterSpacing: 0.4,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-
-                // 📜 2. Navigation Actions List
                 Expanded(
                   child: ListView(
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 12),
+                    padding: EdgeInsets.zero,
                     children: [
-                      _buildDrawerTile(
-                        icon: Icons.dashboard_customize_rounded,
-                        iconColor: const Color(0xFF2563EB),
-                        title: 'Creator Studio & Analytics',
-                        subtitle: 'Dashboard, Quizzes, Notes & Mock Builder',
+                      UserAccountsDrawerHeader(
+                        decoration: const BoxDecoration(
+                          gradient: LinearGradient(
+                            colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight,
+                          ),
+                        ),
+                        accountName: Text(
+                          userName,
+                          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                        ),
+                        accountEmail: Text(
+                          subtitleText,
+                          style: const TextStyle(color: Colors.white70, fontSize: 12),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                        currentAccountPicture: const CircleAvatar(
+                          backgroundColor: Colors.white,
+                          child: Icon(Icons.person, color: Color(0xFF2563EB), size: 36),
+                        ),
+                      ),
+                      ListTile(
+                        leading: const Icon(Icons.dashboard_customize_rounded, color: Color(0xFF2563EB)),
+                        title: const Text('Creator Studio & Analytics', style: TextStyle(fontWeight: FontWeight.bold)),
+                        subtitle: const Text('Dashboard, Quizzes, Notes & Mock Builder'),
+                        trailing: const Icon(Icons.arrow_forward_ios, size: 14),
                         onTap: () {
                           Navigator.pop(context);
                           _openCreatorStudio();
                         },
                       ),
-
-                      const SizedBox(height: 8),
+                      const Divider(),
 
                       // 🛠️ Aspirant Utility Tools Section
-                      Container(
-                        decoration: BoxDecoration(
-                          color: _isDarkMode
-                              ? Colors.white.withOpacity(0.03)
-                              : const Color(0xFFF8FAFC),
-                          borderRadius: BorderRadius.circular(16),
-                          border: Border.all(
-                            color: _isDarkMode
-                                ? Colors.white.withOpacity(0.06)
-                                : const Color(0xFFE2E8F0),
+                      Theme(
+                        data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                        child: ExpansionTile(
+                          initiallyExpanded: true,
+                          leading: const Icon(Icons.handyman_rounded, color: Color(0xFFB45309)),
+                          title: const Text(
+                            'Aspirant Utility Tools',
+                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
                           ),
-                        ),
-                        child: Theme(
-                          data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-                          child: ExpansionTile(
-                            initiallyExpanded: true,
-                            leading: Container(
-                              padding: const EdgeInsets.all(7),
-                              decoration: BoxDecoration(
-                                color: const Color(0xFFB45309).withOpacity(0.12),
-                                borderRadius: BorderRadius.circular(10),
+                          children: [
+                            ListTile(
+                              contentPadding: const EdgeInsets.only(left: 32, right: 16),
+                              leading: Container(
+                                padding: const EdgeInsets.all(6),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFB45309).withValues(alpha: 0.12),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: const Icon(
+                                  Icons.photo_size_select_large_rounded,
+                                  size: 18,
+                                  color: Color(0xFFB45309),
+                                ),
                               ),
-                              child: const Icon(Icons.handyman_rounded, color: Color(0xFFB45309), size: 18),
+                              title: const Text(
+                                'Photo & Sign Resizer',
+                                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
+                              ),
+                              subtitle: const Text(
+                                'BPSC, BSSC, Police (<20KB / 50KB)',
+                                style: TextStyle(fontSize: 11),
+                              ),
+                              trailing: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF16A34A).withValues(alpha: 0.15),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: const Text(
+                                  'READY',
+                                  style: TextStyle(
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w900,
+                                    color: Color(0xFF16A34A),
+                                  ),
+                                ),
+                              ),
+                              onTap: () {
+                                Navigator.pop(context);
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => ExamPhotoResizerScreen(isDark: _isDarkMode),
+                                  ),
+                                );
+                              },
                             ),
-                            title: const Text(
-                              'Aspirant Utility Tools',
-                              style: TextStyle(fontWeight: FontWeight.w800, fontSize: 13.5),
+                            ListTile(
+                              contentPadding: const EdgeInsets.only(left: 32, right: 16),
+                              leading: Container(
+                                padding: const EdgeInsets.all(6),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF2563EB).withValues(alpha: 0.12),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: const Icon(
+                                  Icons.picture_as_pdf_rounded,
+                                  size: 18,
+                                  color: Color(0xFF2563EB),
+                                ),
+                              ),
+                              title: const Text(
+                                'Doc & ID Card Merger',
+                                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
+                              ),
+                              subtitle: const Text(
+                                'ID Card Front/Back • 1-Doc PDF (<100KB)',
+                                style: TextStyle(fontSize: 11),
+                              ),
+                              trailing: Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFF2563EB).withValues(alpha: 0.15),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: const Text(
+                                  'NEW',
+                                  style: TextStyle(
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w900,
+                                    color: Color(0xFF2563EB),
+                                  ),
+                                ),
+                              ),
+                              onTap: () {
+                                Navigator.pop(context);
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (_) => ExamDocMergerScreen(isDark: _isDarkMode),
+                                  ),
+                                );
+                              },
                             ),
-                            children: [
-                              _buildSubDrawerTile(
-                                icon: Icons.photo_size_select_large_rounded,
-                                iconColor: const Color(0xFFB45309),
-                                title: 'Photo & Sign Resizer',
-                                subtitle: 'BPSC, BSSC, Police (<20KB / 50KB)',
-                                badge: 'READY',
-                                badgeColor: const Color(0xFF16A34A),
-                                onTap: () {
-                                  Navigator.pop(context);
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (_) => ExamPhotoResizerScreen(isDark: _isDarkMode),
-                                    ),
-                                  );
-                                },
-                              ),
-                              _buildSubDrawerTile(
-                                icon: Icons.picture_as_pdf_rounded,
-                                iconColor: const Color(0xFF2563EB),
-                                title: 'Doc & ID Card Merger',
-                                subtitle: 'ID Card Front/Back • 1-Doc PDF',
-                                badge: 'NEW',
-                                badgeColor: const Color(0xFF2563EB),
-                                onTap: () {
-                                  Navigator.pop(context);
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (_) => ExamDocMergerScreen(isDark: _isDarkMode),
-                                    ),
-                                  );
-                                },
-                              ),
-                              const SizedBox(height: 6),
-                            ],
-                          ),
+                          ],
                         ),
                       ),
+                      const Divider(),
 
-                      const SizedBox(height: 8),
-
-                      _buildDrawerTile(
-                        icon: Icons.dynamic_feed_rounded,
-                        iconColor: const Color(0xFF2563EB),
-                        title: 'Community Feed',
+                      ListTile(
+                        leading: const Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
+                        title: const Text('Community Feed'),
                         onTap: () {
                           Navigator.pop(context);
                           setState(() => _currentBottomIndex = 3);
                         },
                       ),
-                      _buildDrawerTile(
-                        icon: Icons.school_rounded,
-                        iconColor: const Color(0xFF059669),
-                        title: 'Learn Hub',
+                      ListTile(
+                        leading: const Icon(Icons.school_outlined),
+                        title: const Text('Learn Hub'),
                         onTap: () {
                           Navigator.pop(context);
                           Navigator.push(
@@ -621,19 +623,17 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                           ).then((_) => _loadRealtimeProgress());
                         },
                       ),
-                      _buildDrawerTile(
-                        icon: Icons.person_rounded,
-                        iconColor: const Color(0xFF4F46E5),
-                        title: 'My Profile',
+                      ListTile(
+                        leading: const Icon(Icons.person_outline),
+                        title: const Text('My Profile'),
                         onTap: () {
                           Navigator.pop(context);
                           setState(() => _currentBottomIndex = 4);
                         },
                       ),
-                      _buildDrawerTile(
-                        icon: Icons.privacy_tip_outlined,
-                        iconColor: Colors.grey,
-                        title: 'Privacy Policy',
+                      ListTile(
+                        leading: const Icon(Icons.privacy_tip_outlined, color: Colors.grey),
+                        title: const Text('Privacy Policy', style: TextStyle(fontSize: 13.5)),
                         onTap: () {
                           Navigator.pop(context);
                           _openWebsiteUrl('Privacy Policy', 'https://www.mocktester.online/p/privacy.html');
@@ -642,17 +642,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     ],
                   ),
                 ),
-
-                // ⚠️ 3. Disclaimer Footer
                 Container(
-                  margin: const EdgeInsets.fromLTRB(14, 0, 14, 14),
-                  padding: const EdgeInsets.all(12),
+                  margin: const EdgeInsets.all(12),
+                  padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
                     color: _isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                    borderRadius: BorderRadius.circular(14),
-                    border: Border.all(
-                      color: _isDarkMode ? Colors.white.withOpacity(0.06) : const Color(0xFFE2E8F0),
-                    ),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(color: Colors.grey.withOpacity(0.2)),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -661,12 +657,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                       const SizedBox(width: 8),
                       Expanded(
                         child: Text(
-                          'MockTester is an independent prep platform and is NOT affiliated with any government entity.',
+                          'Disclaimer: MockTester is an independent educational prep platform and is NOT affiliated with, endorsed by, or representing any government entity (BPSC, SSC, etc.).',
                           style: TextStyle(
                             fontSize: 10,
-                            fontWeight: FontWeight.w500,
-                            color: _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
-                            height: 1.35,
+                            color: _isDarkMode ? Colors.white60 : Colors.black87,
+                            height: 1.3,
                           ),
                         ),
                       ),
@@ -718,176 +713,75 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
         ],
       ),
-      // 🌟 ROYAL BLUE HIGHLIGHTED BOTTOM NAVIGATION BAR
-      bottomNavigationBar: Container(
-        decoration: BoxDecoration(
-          color: _isDarkMode ? const Color(0xFF0F172A) : Colors.white,
-          border: Border(
-            top: BorderSide(
-              color: _isDarkMode ? Colors.white.withOpacity(0.08) : const Color(0xFFE2E8F0),
-              width: 1,
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: _currentBottomIndex,
+        onDestinationSelected: (idx) {
+          setState(() => _currentBottomIndex = idx);
+          if (idx == 0) _loadRealtimeProgress();
+          if (idx == 1) _fetchSubjectMappingLive();
+          if (idx == 2) _fetchSectionalDataLive();
+        },
+        destinations: const [
+          NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_rounded), label: 'Home'),
+          NavigationDestination(icon: Icon(Icons.menu_book_outlined), selectedIcon: Icon(Icons.menu_book_rounded), label: 'Revision'),
+          NavigationDestination(icon: Icon(Icons.assignment_outlined), selectedIcon: Icon(Icons.assignment_rounded), label: 'Sectional'),
+          NavigationDestination(icon: Icon(Icons.dynamic_feed_outlined), selectedIcon: Icon(Icons.dynamic_feed_rounded), label: 'Community'),
+          NavigationDestination(icon: Icon(Icons.person_outline_rounded), selectedIcon: Icon(Icons.person_rounded), label: 'Profile'),
+        ],
+      ),
+    );
+  }
+
+  /// Loading aur loaded — dono AppBars ka same branded title.
+  Widget _brandAppBarTitle() {
+    return Row(
+      children: [
+        const _BrandMark(size: 32),
+        const SizedBox(width: 10),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              'MockTester',
+              style: TextStyle(
+                fontSize: 16.5,
+                fontWeight: FontWeight.w800,
+                letterSpacing: -0.3,
+                color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
+              ),
             ),
-          ),
-        ),
-        child: NavigationBar(
-          height: 66,
-          elevation: 0,
-          backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : Colors.white,
-          surfaceTintColor: Colors.transparent,
-          indicatorColor: const Color(0xFF2563EB).withOpacity(0.14),
-          indicatorShape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-          selectedIndex: _currentBottomIndex,
-          onDestinationSelected: (idx) {
-            setState(() => _currentBottomIndex = idx);
-            if (idx == 0) _loadRealtimeProgress();
-            if (idx == 1) _fetchSubjectMappingLive();
-            if (idx == 2) _fetchSectionalDataLive();
-          },
-          destinations: const [
-            NavigationDestination(
-              icon: Icon(Icons.home_outlined),
-              selectedIcon: Icon(Icons.home_rounded, color: Color(0xFF2563EB)),
-              label: 'Home',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.menu_book_outlined),
-              selectedIcon: Icon(Icons.menu_book_rounded, color: Color(0xFF2563EB)),
-              label: 'Revision',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.assignment_outlined),
-              selectedIcon: Icon(Icons.assignment_rounded, color: Color(0xFF2563EB)),
-              label: 'Sectional',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.dynamic_feed_outlined),
-              selectedIcon: Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
-              label: 'Community',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.person_outline_rounded),
-              selectedIcon: Icon(Icons.person_rounded, color: Color(0xFF2563EB)),
-              label: 'Profile',
+            Text(
+              'BPSC • BSSC • Bihar Police',
+              style: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w600,
+                letterSpacing: 0.2,
+                color: _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+              ),
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  // 🛠️ Drawer Item Helpers
-  Widget _buildDrawerTile({
-    required IconData icon,
-    required Color iconColor,
-    required String title,
-    String? subtitle,
-    required VoidCallback onTap,
-  }) {
-    return ListTile(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-      leading: Container(
-        padding: const EdgeInsets.all(8),
-        decoration: BoxDecoration(
-          color: iconColor.withOpacity(0.12),
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Icon(icon, color: iconColor, size: 20),
-      ),
-      title: Text(
-        title,
-        style: TextStyle(
-          fontWeight: FontWeight.w700,
-          fontSize: 13.5,
-          color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
-        ),
-      ),
-      subtitle: subtitle != null
-          ? Text(
-              subtitle,
-              style: TextStyle(
-                fontSize: 11,
-                color: _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
-              ),
-            )
-          : null,
-      trailing: Icon(
-        Icons.arrow_forward_ios_rounded,
-        size: 13,
-        color: _isDarkMode ? Colors.white38 : Colors.black26,
-      ),
-      onTap: onTap,
-    );
-  }
-
-  Widget _buildSubDrawerTile({
-    required IconData icon,
-    required Color iconColor,
-    required String title,
-    required String subtitle,
-    required String badge,
-    required Color badgeColor,
-    required VoidCallback onTap,
-  }) {
-    return ListTile(
-      contentPadding: const EdgeInsets.only(left: 20, right: 14),
-      leading: Container(
-        padding: const EdgeInsets.all(6),
-        decoration: BoxDecoration(
-          color: iconColor.withOpacity(0.12),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Icon(icon, color: iconColor, size: 16),
-      ),
-      title: Text(
-        title,
-        style: TextStyle(
-          fontWeight: FontWeight.w700,
-          fontSize: 12.5,
-          color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
-        ),
-      ),
-      subtitle: Text(
-        subtitle,
-        style: TextStyle(
-          fontSize: 10.5,
-          color: _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
-        ),
-      ),
-      trailing: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
-        decoration: BoxDecoration(
-          color: badgeColor.withOpacity(0.15),
-          borderRadius: BorderRadius.circular(6),
-        ),
-        child: Text(
-          badge,
-          style: TextStyle(
-            fontSize: 8.5,
-            fontWeight: FontWeight.w900,
-            color: badgeColor,
-          ),
-        ),
-      ),
-      onTap: onTap,
+      ],
     );
   }
 
   Widget _buildSkeletonLoading() {
-    return ListView.builder(
+    // Skeleton ab theme follow karta hai (pehle hamesha white boxes the,
+    // dark mode me wo screen jal rahi thi).
+    final Color base = _isDarkMode ? const Color(0xFF1B2438) : const Color(0xFFE8EDF6);
+    final Color highlight = _isDarkMode ? const Color(0xFF243050) : const Color(0xFFF6F8FC);
+
+    return ListView(
       padding: const EdgeInsets.all(16),
-      itemCount: 4,
-      itemBuilder: (context, index) => Shimmer.fromColors(
-        baseColor: Colors.grey[300]!,
-        highlightColor: Colors.grey[100]!,
-        child: Container(
-          height: 100,
-          margin: const EdgeInsets.only(bottom: 16),
-          decoration: BoxDecoration(
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(12),
-          ),
-        ),
-      ),
+      children: [
+        _SkeletonBox(height: 132, base: base, highlight: highlight),
+        const SizedBox(height: 16),
+        for (int i = 0; i < 3; i++) ...[
+          _SkeletonBox(height: 96, base: base, highlight: highlight),
+          const SizedBox(height: 16),
+        ],
+      ],
     );
   }
 
@@ -1135,5 +1029,85 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         const SnackBar(content: Text('Test questions load nahi ho paye. Internet check karein.')),
       );
     }
+  }
+}
+
+/// AppBar ka branded logo tile (gradient + chart glyph).
+class _BrandMark extends StatelessWidget {
+  const _BrandMark({this.size = 32});
+
+  final double size;
+
+  @override
+  Widget build(BuildContext context) {
+    final double r = size * 0.30;
+    return Container(
+      width: size,
+      height: size,
+      decoration: BoxDecoration(
+        gradient: const LinearGradient(
+          colors: [Color(0xFF2563EB), Color(0xFF4F46E5)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(r),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFF2563EB).withOpacity(0.34),
+            blurRadius: 12,
+            offset: const Offset(0, 5),
+          ),
+        ],
+      ),
+      child: Stack(
+        alignment: Alignment.center,
+        children: [
+          Positioned.fill(
+            child: DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [
+                    Colors.white.withOpacity(0.22),
+                    Colors.white.withOpacity(0.04),
+                  ],
+                ),
+                borderRadius: BorderRadius.circular(r),
+              ),
+            ),
+          ),
+          Icon(Icons.insights_rounded, color: Colors.white, size: size * 0.48),
+        ],
+      ),
+    );
+  }
+}
+
+/// Loading state ka ek shimmering placeholder block.
+class _SkeletonBox extends StatelessWidget {
+  const _SkeletonBox({
+    required this.height,
+    required this.base,
+    required this.highlight,
+  });
+
+  final double height;
+  final Color base;
+  final Color highlight;
+
+  @override
+  Widget build(BuildContext context) {
+    return Shimmer.fromColors(
+      baseColor: base,
+      highlightColor: highlight,
+      child: Container(
+        height: height,
+        decoration: BoxDecoration(
+          color: base,
+          borderRadius: BorderRadius.circular(18),
+        ),
+      ),
+    );
   }
 }
