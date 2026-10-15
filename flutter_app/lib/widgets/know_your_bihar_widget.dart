@@ -384,14 +384,37 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
             children: [
               Row(
                 children: [
-                  const Text('🗺️ ', style: TextStyle(fontSize: 16)),
-                  Text(
-                    'Know Your Bihar',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w800,
-                      color: isDark ? Colors.white : const Color(0xFF0F172A),
+                  Container(
+                    width: 34,
+                    height: 34,
+                    decoration: BoxDecoration(
+                      color: themeColor.withOpacity(isDark ? 0.22 : 0.12),
+                      borderRadius: BorderRadius.circular(11),
                     ),
+                    child: Icon(Icons.map_rounded, size: 18, color: themeColor),
+                  ),
+                  const SizedBox(width: 9),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Know Your Bihar',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: -0.2,
+                          color: isDark ? Colors.white : const Color(0xFF0F172A),
+                        ),
+                      ),
+                      Text(
+                        'Roz ek naya Bihar dossier',
+                        style: TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600,
+                          color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -436,6 +459,13 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
             borderRadius: BorderRadius.circular(22),
             child: Stack(
               children: [
+                Positioned(
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: 4,
+                  child: Container(color: themeColor),
+                ),
                 Positioned(
                   right: -25,
                   bottom: -25,
@@ -508,66 +538,94 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                             ],
                           ),
                           const SizedBox(height: 12),
-
-                          // 🎯 FIX: Category + Location Row (Upar) aur Title ko Full Width (Neeche)
-                          Column(
+                          Builder(builder: (_) {
+                            final dayNum = int.tryParse(
+                                  payload.config.cycleDay.replaceAll(RegExp(r'[^0-9]'), ''),
+                                ) ??
+                                1;
+                            return Row(
+                              children: [
+                                ...List.generate(7, (i) {
+                                  final active = i < dayNum;
+                                  return Expanded(
+                                    child: Container(
+                                      height: 4,
+                                      margin: EdgeInsets.only(right: i == 6 ? 0 : 4),
+                                      decoration: BoxDecoration(
+                                        color: active ? themeColor : (isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                                        borderRadius: BorderRadius.circular(99),
+                                      ),
+                                    ),
+                                  );
+                                }),
+                                const SizedBox(width: 9),
+                                Text(
+                                  'Day $dayNum/7',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w900,
+                                    color: themeColor,
+                                  ),
+                                ),
+                              ],
+                            );
+                          }),
+                          const SizedBox(height: 13),
+                          Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Wrap(
-                                spacing: 8,
-                                runSpacing: 6,
-                                crossAxisAlignment: WrapCrossAlignment.center,
-                                children: [
-                                  Text(
-                                    card.category,
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w700,
-                                      color: themeColor,
-                                    ),
-                                  ),
-                                  if (card.district != null)
-                                    Container(
-                                      padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
-                                      decoration: BoxDecoration(
-                                        color: isDark ? const Color(0xFF0F172A) : const Color(0xFFFEF3C7),
-                                        borderRadius: BorderRadius.circular(6),
-                                        border: Border.all(
-                                          color: isDark ? Colors.white12 : const Color(0xFFFDE68A),
-                                        ),
-                                      ),
-                                      child: Row(
-                                        mainAxisSize: MainAxisSize.min,
-                                        children: [
-                                          const Icon(Icons.place_rounded, size: 11, color: Color(0xFFD97706)),
-                                          const SizedBox(width: 3),
-                                          Text(
-                                            card.district!,
-                                            style: TextStyle(
-                                              fontSize: 10,
-                                              fontWeight: FontWeight.w800,
-                                              color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
-                                            ),
-                                          ),
-                                        ],
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      card.title,
+                                      style: TextStyle(
+                                        fontSize: 18,
+                                        fontWeight: FontWeight.w900,
+                                        color: isDark ? Colors.white : const Color(0xFF0F172A),
                                       ),
                                     ),
-                                ],
-                              ),
-                              const SizedBox(height: 6),
-                              Text(
-                                card.title,
-                                style: TextStyle(
-                                  fontSize: 19,
-                                  fontWeight: FontWeight.w900,
-                                  height: 1.25,
-                                  letterSpacing: -0.3,
-                                  color: isDark ? Colors.white : const Color(0xFF0F172A),
+                                    const SizedBox(height: 2),
+                                    Text(
+                                      card.category,
+                                      style: TextStyle(
+                                        fontSize: 12,
+                                        fontWeight: FontWeight.w700,
+                                        color: themeColor,
+                                      ),
+                                    ),
+                                  ],
                                 ),
                               ),
+                              if (card.district != null)
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  decoration: BoxDecoration(
+                                    color: isDark ? const Color(0xFF0F172A) : const Color(0xFFFEF3C7),
+                                    borderRadius: BorderRadius.circular(8),
+                                    border: Border.all(
+                                      color: isDark ? Colors.white12 : const Color(0xFFFDE68A),
+                                    ),
+                                  ),
+                                  child: Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      const Icon(Icons.place_rounded, size: 12, color: Color(0xFFD97706)),
+                                      const SizedBox(width: 3),
+                                      Text(
+                                        card.district!,
+                                        style: TextStyle(
+                                          fontSize: 10.5,
+                                          fontWeight: FontWeight.w800,
+                                          color: isDark ? Colors.amber.shade300 : const Color(0xFFB45309),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ),
                             ],
                           ),
-
                           const SizedBox(height: 12),
                           if (frontHighlights.isNotEmpty)
                             Container(
@@ -582,13 +640,30 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                               ),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: frontHighlights.map((pt) {
+                                children: frontHighlights.asMap().entries.map((entry) {
+                                  final pt = entry.value;
                                   return Padding(
                                     padding: const EdgeInsets.only(bottom: 7),
                                     child: Row(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Icon(Icons.check_circle_outline_rounded, size: 14, color: themeColor),
+                                        Container(
+                                          width: 18,
+                                          height: 18,
+                                          alignment: Alignment.center,
+                                          decoration: BoxDecoration(
+                                            color: themeColor.withOpacity(0.14),
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Text(
+                                            '${entry.key + 1}',
+                                            style: TextStyle(
+                                              fontSize: 9.5,
+                                              fontWeight: FontWeight.w900,
+                                              color: themeColor,
+                                            ),
+                                          ),
+                                        ),
                                         const SizedBox(width: 8),
                                         Expanded(
                                           child: Text(
