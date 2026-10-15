@@ -39,6 +39,8 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
   bool _isSubmitting = false;
   List<Map<String, dynamic>> _comments = [];
   bool _isLoadingComments = true;
+  final Set<int> _likedCommentIds = {};
+  final Set<int> _likingInProgress = {};
 
   static const Color _primaryBlue = Color(0xFF2563EB);
   static const Color _lightDivider = Color(0xFFE2E8F0);
@@ -106,9 +108,97 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
           _comments = List<Map<String, dynamic>>.from(data);
           _isLoadingComments = false;
         });
+        _fetchMyCommentLikes();
       }
     } catch (_) {
       if (mounted) setState(() => _isLoadingComments = false);
+    }
+  }
+
+  /// Maine kin comments ko like kiya hai — dil wala rang usi se bharata hai.
+  Future<void> _fetchMyCommentLikes() async {
+    try {
+      final ids = _comments
+          .map((c) => int.tryParse(c['id']?.toString() ?? ''))
+          .whereType<int>()
+          .toList();
+      if (ids.isEmpty) return;
+
+      final rows = await Supabase.instance.client
+          .from('comment_likes')
+          .select('comment_id')
+          .eq('user_handle', widget.currentLoggedInHandle)
+          .inFilter('comment_id', ids);
+
+      if (mounted) {
+        setState(() {
+          _likedCommentIds
+            ..clear()
+            ..addAll(rows.map((r) => int.tryParse(r['comment_id'].toString())).whereType<int>());
+        });
+      }
+    } catch (_) {
+      // comment_likes table abhi na ho (SQL na chala ho) to like bina
+      // rang ke chalega — app rukega nahi.
+    }
+  }
+
+  /// Like dabana: pehle screen par turant badlav (optimistic),
+  /// phir server se pakki ginti aa jati hai. Galti par purana haal wapas.
+  Future<void> _toggleCommentLike(Map<String, dynamic> comment) async {
+    final commentId = int.tryParse(comment['id']?.toString() ?? '');
+    if (commentId == null || _likingInProgress.contains(commentId)) return;
+
+    final wasLiked = _likedCommentIds.contains(commentId);
+    final oldCount = (comment['upvotes'] as num?)?.toInt() ?? 0;
+
+    setState(() {
+      _likingInProgress.add(commentId);
+      if (wasLiked) {
+        _likedCommentIds.remove(commentId);
+        comment['upvotes'] = oldCount > 0 ? oldCount - 1 : 0;
+      } else {
+        _likedCommentIds.add(commentId);
+        comment['upvotes'] = oldCount + 1;
+      }
+    });
+
+    try {
+      final res = await Supabase.instance.client.rpc(
+        'toggle_comment_like',
+        params: {
+          'p_comment_id': commentId,
+          'p_user_handle': widget.currentLoggedInHandle,
+        },
+      );
+
+      if (mounted && res is Map) {
+        setState(() {
+          final serverLiked = res['liked'] == true;
+          final serverLikes = (res['likes'] as num?)?.toInt();
+          if (serverLiked) {
+            _likedCommentIds.add(commentId);
+          } else {
+            _likedCommentIds.remove(commentId);
+          }
+          if (serverLikes != null) comment['upvotes'] = serverLikes;
+          _likingInProgress.remove(commentId);
+        });
+      } else if (mounted) {
+        setState(() => _likingInProgress.remove(commentId));
+      }
+    } catch (_) {
+      if (mounted) {
+        setState(() {
+          if (wasLiked) {
+            _likedCommentIds.add(commentId);
+          } else {
+            _likedCommentIds.remove(commentId);
+          }
+          comment['upvotes'] = oldCount;
+          _likingInProgress.remove(commentId);
+        });
+      }
     }
   }
 
@@ -584,18 +674,6 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                                               ),
                                             ],
                                             const Spacer(),
-                                            GestureDetector(
-                                              onTap: () {
-                                                setState(() {
-                                                  _replyingToCommentId = c['id'];
-                                                  _replyingToName = c['user_name'] ?? 'Aspirant';
-                                                });
-                                              },
-                                              child: const Text(
-                                                'Reply',
-                                                style: TextStyle(color: _primaryBlue, fontSize: 11, fontWeight: FontWeight.bold),
-                                              ),
-                                            ),
                                             if (isMyComment) ...[
                                               const SizedBox(width: 8),
                                               GestureDetector(
@@ -614,6 +692,57 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                                           c['comment_text'] ?? c['content'] ?? '',
                                           fontSize: 13,
                                         ),
+                                        const SizedBox(height: 6),
+                                        Builder(builder: (_) {
+                                          final cid = int.tryParse(c['id']?.toString() ?? '');
+                                          final liked = cid != null && _likedCommentIds.contains(cid);
+                                          final likeCount = (c['upvotes'] as num?)?.toInt() ?? 0;
+                                          return Row(
+                                            children: [
+                                              InkWell(
+                                                borderRadius: BorderRadius.circular(14),
+                                                onTap: cid == null ? null : () => _toggleCommentLike(c),
+                                                child: Padding(
+                                                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
+                                                  child: Row(
+                                                    mainAxisSize: MainAxisSize.min,
+                                                    children: [
+                                                      Icon(
+                                                        liked ? Icons.thumb_up_rounded : Icons.thumb_up_outlined,
+                                                        size: 14,
+                                                        color: liked ? _primaryBlue : Colors.grey[600],
+                                                      ),
+                                                      if (likeCount > 0) ...[
+                                                        const SizedBox(width: 4),
+                                                        Text(
+                                                          '$likeCount',
+                                                          style: TextStyle(
+                                                            fontSize: 11,
+                                                            fontWeight: FontWeight.w700,
+                                                            color: liked ? _primaryBlue : Colors.grey[600],
+                                                          ),
+                                                        ),
+                                                      ],
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                              const SizedBox(width: 8),
+                                              GestureDetector(
+                                                onTap: () {
+                                                  setState(() {
+                                                    _replyingToCommentId = c['id'];
+                                                    _replyingToName = c['user_name'] ?? 'Aspirant';
+                                                  });
+                                                },
+                                                child: Text(
+                                                  'Reply',
+                                                  style: TextStyle(color: Colors.grey[600], fontSize: 11, fontWeight: FontWeight.w700),
+                                                ),
+                                              ),
+                                            ],
+                                          );
+                                        }),
                                       ],
                                     ),
                                   ),
