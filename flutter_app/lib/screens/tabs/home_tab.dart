@@ -181,11 +181,11 @@ class _HomeTabState extends State<HomeTab> {
   Widget _buildLearnPreviewCard(BuildContext context) {
     final percentDisplay = (widget.lastLearnProgress * 100).toInt();
     final isDark = widget.isDarkMode;
-    final surface = isDark ? const Color(0xFF111C30) : const Color(0xFFF2FBF7);
-    final border = isDark ? const Color(0xFF263449) : const Color(0xFFCDEBDD);
+    final surface = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final border = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
     final titleColor = isDark ? Colors.white : const Color(0xFF0F172A);
     final muted = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
-    const accent = Color(0xFF0F766E);
+    const accent = Color(0xFF1E40AF);
 
     return Container(
       width: double.infinity,
@@ -253,7 +253,7 @@ class _HomeTabState extends State<HomeTab> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF2563EB).withValues(alpha: isDark ? 0.20 : 0.09),
+                  color: const Color(0xFF2563EB).withValues(alpha: isDark ? 0.22 : 0.10),
                   borderRadius: BorderRadius.circular(99),
                 ),
                 child: Text(
@@ -280,7 +280,7 @@ class _HomeTabState extends State<HomeTab> {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
             decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF0B1628) : const Color(0xFFF0FDF9),
+              color: isDark ? const Color(0xFF0F172A) : const Color(0xFFEFF6FF),
               borderRadius: BorderRadius.circular(12),
               border: Border.all(color: border),
             ),
@@ -320,7 +320,7 @@ class _HomeTabState extends State<HomeTab> {
               value: widget.lastLearnProgress,
               minHeight: 8,
               backgroundColor: isDark ? const Color(0xFF263449) : const Color(0xFFE2E8F0),
-              valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF14B8A6)),
+              valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF2563EB)),
             ),
           ),
           const SizedBox(height: 16),
@@ -330,7 +330,7 @@ class _HomeTabState extends State<HomeTab> {
             child: ElevatedButton(
               onPressed: widget.onNavigateToLearn,
               style: ElevatedButton.styleFrom(
-                backgroundColor: accent,
+                backgroundColor: const Color(0xFF1E40AF),
                 foregroundColor: Colors.white,
                 elevation: 0,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
