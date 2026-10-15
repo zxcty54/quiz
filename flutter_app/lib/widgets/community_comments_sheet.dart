@@ -34,6 +34,8 @@ class CommunityCommentsSheet extends StatefulWidget {
 
 class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
   final TextEditingController _commentCtrl = TextEditingController();
+  final FocusNode _commentFocusNode = FocusNode();
+  String _commentSort = 'New';
   int? _replyingToCommentId;
   String? _replyingToName;
   bool _isSubmitting = false;
@@ -92,6 +94,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
   @override
   void dispose() {
     _commentCtrl.dispose();
+    _commentFocusNode.dispose();
     super.dispose();
   }
 
@@ -127,6 +130,29 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
       if (!result.contains(c)) result.add(c);
     }
     return result;
+  }
+
+  /// New = thread jis kram me hai waisa; Top = jis comment ko
+  /// sabse zyada like mile, uska pura thread upar. Reply hamesha
+  /// apne parent ke saath hi rehta hai.
+  List<Map<String, dynamic>> _visibleComments() {
+    if (_commentSort != 'Top') return _comments;
+
+    final blocks = <List<Map<String, dynamic>>>[];
+    var i = 0;
+    while (i < _comments.length) {
+      final block = <Map<String, dynamic>>[_comments[i]];
+      i++;
+      while (i < _comments.length && _comments[i]['parent_comment_id'] != null) {
+        block.add(_comments[i]);
+        i++;
+      }
+      blocks.add(block);
+    }
+
+    int likes(Map<String, dynamic> c) => (c['upvotes'] as num?)?.toInt() ?? 0;
+    blocks.sort((a, b) => likes(b.first).compareTo(likes(a.first)));
+    return blocks.expand((e) => e).toList();
   }
 
   Future<void> _fetchComments() async {
@@ -234,6 +260,30 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
         });
       }
     }
+  }
+
+  Widget _sortChip(String label) {
+    final selected = _commentSort == label;
+    return InkWell(
+      borderRadius: BorderRadius.circular(14),
+      onTap: () => setState(() => _commentSort = label),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+        decoration: BoxDecoration(
+          color: selected ? _primaryBlue : Colors.transparent,
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: selected ? _primaryBlue : const Color(0xFFCBD5E1)),
+        ),
+        child: Text(
+          label,
+          style: TextStyle(
+            fontSize: 11,
+            fontWeight: FontWeight.w800,
+            color: selected ? Colors.white : Colors.grey[600],
+          ),
+        ),
+      ),
+    );
   }
 
   void _openEditCommentModal(Map<String, dynamic> comment) {
@@ -578,6 +628,8 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
     final isDark = widget.isDarkMode;
     final dividerColor = isDark ? _darkDivider : _lightDivider;
 
+    final displayComments = _visibleComments();
+
     final Widget commentsContent = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -626,6 +678,10 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                     ),
                   ),
                 ],
+                const Spacer(),
+                _sortChip('New'),
+                const SizedBox(width: 6),
+                _sortChip('Top'),
               ],
             ),
           ),
@@ -649,9 +705,9 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                           ),
                         )
                       : ListView.builder(
-                          itemCount: _comments.length,
+                          itemCount: displayComments.length,
                           itemBuilder: (context, cIdx) {
-                            final c = _comments[cIdx];
+                            final c = displayComments[cIdx];
                             final bool isReply = c['parent_comment_id'] != null;
                             final bool isMyComment = (c['user_handle'] ?? '').toString() == widget.currentLoggedInHandle;
 
@@ -787,6 +843,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                                                   _replyingToCommentId = c['id'];
                                                   _replyingToName = c['user_name'] ?? 'Aspirant';
                                                 });
+                                                _commentFocusNode.requestFocus();
                                               },
                                               child: Padding(
                                                 padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
@@ -857,6 +914,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                     ),
                     child: TextField(
                       controller: _commentCtrl,
+                      focusNode: _commentFocusNode,
                       textInputAction: TextInputAction.send,
                       decoration: InputDecoration(
                         hintText: _replyingToName != null ? 'Reply to @$_replyingToName...' : 'Add solution as ${widget.customUserName}...',
