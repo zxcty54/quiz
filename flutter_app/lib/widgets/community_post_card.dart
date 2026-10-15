@@ -79,6 +79,76 @@ class _CommunityPostCardState extends State<CommunityPostCard> {
     return _avatarPalette[hash % _avatarPalette.length];
   }
 
+  Widget _authorAvatar({
+    required String name,
+    required String seed,
+    required bool verified,
+  }) {
+    var hash = 0;
+    for (final unit in seed.codeUnits) {
+      hash = (hash * 31 + unit) & 0x7fffffff;
+    }
+    final first = _avatarPalette[hash % _avatarPalette.length];
+    final second = _avatarPalette[(hash + 3) % _avatarPalette.length];
+
+    return Stack(
+      clipBehavior: Clip.none,
+      children: [
+        Container(
+          width: 38,
+          height: 38,
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              colors: verified
+                  ? const [Color(0xFF2563EB), Color(0xFF06B6D4)]
+                  : [first, second],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+            border: Border.all(
+              color: verified ? const Color(0xFF2563EB) : Colors.white,
+              width: verified ? 1.6 : 1,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: first.withValues(alpha: 0.24),
+                blurRadius: 7,
+                offset: const Offset(0, 3),
+              ),
+            ],
+          ),
+          child: Text(
+            _initials(name),
+            style: const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w800,
+              fontSize: 12,
+              letterSpacing: 0.2,
+            ),
+          ),
+        ),
+        if (verified)
+          Positioned(
+            right: -1,
+            bottom: -1,
+            child: Container(
+              width: 14,
+              height: 14,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                color: _primaryBlue,
+                shape: BoxShape.circle,
+                border: Border.all(color: Colors.white, width: 1.4),
+              ),
+              child: const Icon(Icons.check_rounded, size: 8, color: Colors.white),
+            ),
+          ),
+      ],
+    );
+  }
+
   String _formatCount(dynamic value) {
     final v = value is num ? value.toDouble() : (double.tryParse(value?.toString() ?? '') ?? 0);
     if (v >= 1000000) {
@@ -1042,15 +1112,10 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                     );
                   }
                 },
-                child: CircleAvatar(
-                  radius: 19,
-                  backgroundColor: isVerifiedCreator
-                      ? _primaryBlue
-                      : _avatarColor('$postCreatorId$authorDisplayName'),
-                  child: Text(
-                    _initials(authorDisplayName),
-                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12),
-                  ),
+                child: _authorAvatar(
+                  name: authorDisplayName,
+                  seed: '$postCreatorId$authorDisplayName',
+                  verified: isVerifiedCreator,
                 ),
               ),
               const SizedBox(width: 10),
