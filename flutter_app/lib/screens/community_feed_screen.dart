@@ -37,6 +37,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   final TextEditingController _searchCtrl = TextEditingController();
 
   final Set<int> _likedPostIds = {};
+  final Set<int> _viewedPostIds = {};
   final Map<int, int> _userPollSelections = {};
   final Set<int> _savedPostIds = {};
 
@@ -186,28 +187,20 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     try {
       List<dynamic> fetchedPosts;
 
-      if (_activeFeedMode == 'Latest') {
-        // Purana chronological feed - bilkul jaisa pehle tha.
-        final res = await Supabase.instance.client
-            .from('community_posts')
-            .select('*, creator_mocks(*)')
-            .order('id', ascending: false)
-            .range(0, _pageSize - 1);
-        fetchedPosts = List<dynamic>.from(res as List);
-      } else {
-        // Ranking Supabase ke get_ranked_community_feed() function se aati hai.
-        // SQL file pehle Supabase SQL Editor me chalana zaroori hai.
-        final res = await Supabase.instance.client.rpc(
-          'get_ranked_community_feed',
-          params: {
-            'p_user_handle': _currentLoggedInHandle,
-            'p_followed_handles': _followedCreatorHandles,
-            'p_limit': _pageSize,
-            'p_offset': 0,
-          },
-        );
-        fetchedPosts = _parseRankedPosts(res);
-      }
+      // Dono mode ek hi SQL function se aate hain. For You = ranked,
+      // Latest = sirf latest pehle. Isse dono me creator info aur sahi
+      // comments/likes count milta hai.
+      final res = await Supabase.instance.client.rpc(
+        'get_ranked_community_feed',
+        params: {
+          'p_user_handle': _currentLoggedInHandle,
+          'p_followed_handles': _followedCreatorHandles,
+          'p_limit': _pageSize,
+          'p_offset': 0,
+          'p_mode': _activeFeedMode == 'Latest' ? 'latest' : 'for_you',
+        },
+      );
+      fetchedPosts = _parseRankedPosts(res);
 
       if (mounted) {
         setState(() {
@@ -229,30 +222,21 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     setState(() => _isLoadingMore = true);
 
     final start = _posts.length;
-    final end = start + _pageSize - 1;
 
     try {
       List<dynamic> fetchedPosts;
 
-      if (_activeFeedMode == 'Latest') {
-        final res = await Supabase.instance.client
-            .from('community_posts')
-            .select('*, creator_mocks(*)')
-            .order('id', ascending: false)
-            .range(start, end);
-        fetchedPosts = List<dynamic>.from(res as List);
-      } else {
-        final res = await Supabase.instance.client.rpc(
-          'get_ranked_community_feed',
-          params: {
-            'p_user_handle': _currentLoggedInHandle,
-            'p_followed_handles': _followedCreatorHandles,
-            'p_limit': _pageSize,
-            'p_offset': start,
-          },
-        );
-        fetchedPosts = _parseRankedPosts(res);
-      }
+      final res = await Supabase.instance.client.rpc(
+        'get_ranked_community_feed',
+        params: {
+          'p_user_handle': _currentLoggedInHandle,
+          'p_followed_handles': _followedCreatorHandles,
+          'p_limit': _pageSize,
+          'p_offset': start,
+          'p_mode': _activeFeedMode == 'Latest' ? 'latest' : 'for_you',
+        },
+      );
+      fetchedPosts = _parseRankedPosts(res);
 
       if (mounted) {
         setState(() {
@@ -266,6 +250,40 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     } catch (e) {
       debugPrint(">>> Fetch More Error: $e");
       if (mounted) setState(() => _isLoadingMore = false);
+    }
+  }
+
+  Future<void> _handlePostViewed(int postId) async {
+    // Ek app session me ek post ka view sirf ek baar count hoga.
+    if (_viewedPostIds.contains(postId)) return;
+    _viewedPostIds.add(postId);
+
+    Map<String, dynamic>? targetPost;
+    for (final item in _posts) {
+      if (item is Map && item['id']?.toString() == postId.toString()) {
+        // Cast view original map ko hi point karta hai, isliye count update
+        // feed ke usi post object me dikhega.
+        targetPost = item.cast<String, dynamic>();
+        break;
+      }
+    }
+    if (targetPost == null) return;
+
+    // Apni khud ki post dekhne par view count nahi badhega.
+    if ((targetPost['creator_id'] ?? '').toString() == _currentLoggedInHandle) return;
+
+    try {
+      final res = await Supabase.instance.client.rpc(
+        'increment_post_view',
+        params: {'p_post_id': postId},
+      );
+      final serverCount = int.tryParse(res?.toString() ?? '');
+      targetPost['views_count'] = serverCount ??
+          ((int.tryParse(targetPost['views_count']?.toString() ?? '') ?? 0) + 1);
+      if (mounted) setState(() {});
+    } catch (e) {
+      debugPrint('Post view count failed: $e');
+      _viewedPostIds.remove(postId);
     }
   }
 
@@ -627,6 +645,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 selectedPollIndex: _userPollSelections[postId],
                                 isDarkMode: isDark,
                                 onOpenComments: () => _openCommentsSheet(postId, item),
+                                onPostViewed: _handlePostViewed,
                                 onLikeToggle: (liked) {
                                   if (liked) {
                                     _likedPostIds.add(postId);
