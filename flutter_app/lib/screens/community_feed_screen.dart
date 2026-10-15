@@ -773,6 +773,41 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           ),
           const SizedBox(height: 4),
           Divider(height: 1, thickness: 1, color: dividerColor),
+          if (!_isLoading && _searchQuery.isEmpty && _activeFilter == 'All')
+            Builder(builder: (_) {
+              final pending = _posts.where((post) {
+                final tag = (post['tag'] ?? '').toString().toLowerCase();
+                final comments = (post['comments_count'] as num?)?.toInt() ?? 0;
+                return tag.contains('doubt') && comments == 0;
+              }).length;
+              if (pending == 0) return const SizedBox.shrink();
+              return Container(
+                width: double.infinity,
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
+                color: const Color(0xFFF59E0B).withValues(alpha: isDark ? 0.16 : 0.10),
+                child: Row(
+                  children: [
+                    const Icon(Icons.help_outline_rounded, size: 17, color: Color(0xFFD97706)),
+                    const SizedBox(width: 8),
+                    Expanded(
+                      child: Text(
+                        '$pending doubts waiting for answers',
+                        style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Color(0xFFB45309)),
+                      ),
+                    ),
+                    TextButton(
+                      onPressed: () => setState(() => _activeFilter = 'Doubts'),
+                      style: TextButton.styleFrom(
+                        foregroundColor: const Color(0xFFB45309),
+                        padding: const EdgeInsets.symmetric(horizontal: 8),
+                        minimumSize: const Size(0, 32),
+                      ),
+                      child: const Text('Comment', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 12)),
+                    ),
+                  ],
+                ),
+              );
+            }),
           Expanded(
             child: _isLoading
                 ? _buildSkeletonFeed(isDark)
