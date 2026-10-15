@@ -22,6 +22,7 @@ class CommunityPostCard extends StatefulWidget {
   final Function(int optionIndex) onPollVote;
   final VoidCallback? onPostDeleted;
   final Function(String newContent)? onPostUpdated;
+  final Function(int postId)? onPostViewed;
 
   const CommunityPostCard({
     super.key,
@@ -37,6 +38,7 @@ class CommunityPostCard extends StatefulWidget {
     required this.onPollVote,
     this.onPostDeleted,
     this.onPostUpdated,
+    this.onPostViewed,
   });
 
   @override
@@ -52,6 +54,14 @@ class _CommunityPostCardState extends State<CommunityPostCard> {
   late int _bookmarksCount;
   int? _pollSelection;
 
+  void _schedulePostView() {
+    final postId = int.tryParse(widget.post['id']?.toString() ?? '');
+    if (postId == null || widget.onPostViewed == null) return;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) widget.onPostViewed?.call(postId);
+    });
+  }
+
   @override
   void initState() {
     super.initState();
@@ -60,11 +70,20 @@ class _CommunityPostCardState extends State<CommunityPostCard> {
     _likesCount = widget.post['upvotes'] ?? 0;
     _bookmarksCount = widget.post['bookmarks_count'] ?? 0;
     _pollSelection = widget.selectedPollIndex;
+    _schedulePostView();
   }
 
   @override
   void didUpdateWidget(covariant CommunityPostCard oldWidget) {
     super.didUpdateWidget(oldWidget);
+    final bool postChanged =
+        oldWidget.post['id']?.toString() != widget.post['id']?.toString();
+    if (postChanged) {
+      // ListView state reuse hone par dusri post ke purane counts na dikhen.
+      _likesCount = widget.post['upvotes'] ?? 0;
+      _bookmarksCount = widget.post['bookmarks_count'] ?? 0;
+      _schedulePostView();
+    }
     if (oldWidget.isLiked != widget.isLiked) _liked = widget.isLiked;
     if (oldWidget.isSaved != widget.isSaved) _saved = widget.isSaved;
     if (oldWidget.selectedPollIndex != widget.selectedPollIndex) {
@@ -99,10 +118,8 @@ class _CommunityPostCardState extends State<CommunityPostCard> {
             .eq('user_handle', widget.currentLoggedInHandle);
       }
 
-      await Supabase.instance.client
-          .from('community_posts')
-          .update({'upvotes': _likesCount})
-          .eq('id', widget.post['id']);
+      // community_posts.upvotes ab database trigger se badhta hai.
+      // Yahan local total overwrite karne se race condition hoti thi.
     } catch (_) {}
   }
 
@@ -133,10 +150,7 @@ class _CommunityPostCardState extends State<CommunityPostCard> {
             .eq('post_id', widget.post['id']);
       }
 
-      await Supabase.instance.client
-          .from('community_posts')
-          .update({'bookmarks_count': _bookmarksCount})
-          .eq('id', widget.post['id']);
+      // bookmarks_count database trigger se maintain hota hai.
 
       if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
@@ -182,10 +196,7 @@ class _CommunityPostCardState extends State<CommunityPostCard> {
         'option_index': optionIdx,
       });
 
-      await Supabase.instance.client
-          .from('community_posts')
-          .update({'poll_data': pollData})
-          .eq('id', widget.post['id']);
+      // poll_data ke votes database trigger poll_votes se recalculate karta hai.
     } catch (_) {}
   }
 
@@ -219,14 +230,21 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
       ),
     );
 
-    try {
-      final currentShares = (widget.post['shares_count'] ?? 0) + 1;
-      setState(() => widget.post['shares_count'] = currentShares);
+    final optimisticShares =
+        (int.tryParse(widget.post['shares_count']?.toString() ?? '') ?? 0) + 1;
+    if (mounted) {
+      setState(() => widget.post['shares_count'] = optimisticShares);
+    }
 
-      await Supabase.instance.client
-          .from('community_posts')
-          .update({'shares_count': currentShares})
-          .eq('id', postId);
+    try {
+      final res = await Supabase.instance.client.rpc(
+        'increment_post_share',
+        params: {'p_post_id': postId},
+      );
+      final serverCount = int.tryParse(res?.toString() ?? '');
+      if (serverCount != null && mounted) {
+        setState(() => widget.post['shares_count'] = serverCount);
+      }
     } catch (_) {}
   }
 
@@ -1095,7 +1113,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                 children: [
                   const Icon(Icons.remove_red_eye_outlined, size: 15, color: Colors.grey),
                   const SizedBox(width: 4),
-                  Text('${widget.post['views_count'] ?? 100}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
+                  Text('${widget.post['views_count'] ?? 0}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
                 ],
               ),
               const SizedBox(width: 16),
