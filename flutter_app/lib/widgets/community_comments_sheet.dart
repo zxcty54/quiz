@@ -12,6 +12,10 @@ class CommunityCommentsSheet extends StatefulWidget {
   final Widget Function(String text, {double fontSize}) buildRichTextContent;
   final VoidCallback onCommentAdded;
 
+  /// true = bottom sheet ke bajaye Post Detail page ke andar embedded.
+  /// Comments ki saari logic wahi rehti hai; sirf wrapper/header badalta hai.
+  final bool embedded;
+
   const CommunityCommentsSheet({
     super.key,
     required this.postId,
@@ -21,6 +25,7 @@ class CommunityCommentsSheet extends StatefulWidget {
     required this.isDarkMode,
     required this.buildRichTextContent,
     required this.onCommentAdded,
+    this.embedded = false,
   });
 
   @override
@@ -449,17 +454,14 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
     final isDark = widget.isDarkMode;
     final dividerColor = isDark ? _darkDivider : _lightDivider;
 
-    return Padding(
-      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom, left: 16, right: 16, top: 16),
-      child: SizedBox(
-        height: MediaQuery.of(context).size.height * 0.72,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Row(
+    final Widget commentsContent = Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        if (!widget.embedded) ...[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Row(
                   children: [
                     const Icon(Icons.forum_outlined, size: 20, color: _primaryBlue),
                     const SizedBox(width: 8),
@@ -476,7 +478,35 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                 IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(context)),
               ],
             ),
-            Divider(color: dividerColor),
+        ] else ...[
+          Padding(
+            padding: const EdgeInsets.only(top: 2, bottom: 6),
+            child: Row(
+              children: [
+                Text(
+                  'Replies',
+                  style: TextStyle(
+                    fontWeight: FontWeight.w800,
+                    fontSize: 15,
+                    color: isDark ? Colors.white : const Color(0xFF0F172A),
+                  ),
+                ),
+                if (!_isLoadingComments) ...[
+                  const SizedBox(width: 6),
+                  Text(
+                    '(${_comments.length})',
+                    style: TextStyle(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 13,
+                      color: Colors.grey[500],
+                    ),
+                  ),
+                ],
+              ],
+            ),
+          ),
+        ],
+        Divider(color: dividerColor),
             Expanded(
               child: _isLoadingComments
                   ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
@@ -627,12 +657,20 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                 ),
                 const SizedBox(width: 8),
                 Expanded(
-                  child: TextField(
-                    controller: _commentCtrl,
-                    textInputAction: TextInputAction.send,
-                    decoration: InputDecoration(
-                      hintText: _replyingToName != null ? 'Reply to @$_replyingToName...' : 'Add solution as ${widget.customUserName}...',
-                      border: InputBorder.none,
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 14),
+                    decoration: BoxDecoration(
+                      color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF1F5F9),
+                      borderRadius: BorderRadius.circular(22),
+                      border: Border.all(color: dividerColor),
+                    ),
+                    child: TextField(
+                      controller: _commentCtrl,
+                      textInputAction: TextInputAction.send,
+                      decoration: InputDecoration(
+                        hintText: _replyingToName != null ? 'Reply to @$_replyingToName...' : 'Add solution as ${widget.customUserName}...',
+                        border: InputBorder.none,
+                      ),
                     ),
                   ),
                 ),
@@ -645,8 +683,16 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
               ],
             ),
             const SizedBox(height: 10),
-          ],
-        ),
+      ],
+    );
+
+    if (widget.embedded) return commentsContent;
+
+    return Padding(
+      padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom, left: 16, right: 16, top: 16),
+      child: SizedBox(
+        height: MediaQuery.of(context).size.height * 0.72,
+        child: commentsContent,
       ),
     );
   }
