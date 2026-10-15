@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../services/telegram_tracker.dart';
 import 'quiz_screen.dart';
 
 class ChapterSelectScreen extends StatelessWidget {
@@ -14,8 +13,6 @@ class ChapterSelectScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    TelegramTracker.logActivity("Opened Category Chapters: $categoryTitle");
-
     return Scaffold(
       appBar: AppBar(
         title: Text(categoryTitle),
@@ -35,7 +32,6 @@ class ChapterSelectScreen extends StatelessWidget {
                     title: Text(chapterName, style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14)),
                     trailing: const Icon(Icons.arrow_forward_ios_rounded, size: 16),
                     onTap: () {
-                      TelegramTracker.logActivity("Started Chapter Test: $chapterName");
                       Navigator.push(
                         context,
                         MaterialPageRoute(
