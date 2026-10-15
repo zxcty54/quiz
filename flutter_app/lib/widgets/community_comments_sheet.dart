@@ -16,6 +16,10 @@ class CommunityCommentsSheet extends StatefulWidget {
   /// Comments ki saari logic wahi rehti hai; sirf wrapper/header badalta hai.
   final bool embedded;
 
+  /// Current user asal me creator account se login hai ya nahi.
+  /// Verified badge sirf inhi ke comment par lagega.
+  final bool isCurrentUserCreator;
+
   const CommunityCommentsSheet({
     super.key,
     required this.postId,
@@ -26,6 +30,7 @@ class CommunityCommentsSheet extends StatefulWidget {
     required this.buildRichTextContent,
     required this.onCommentAdded,
     this.embedded = false,
+    this.isCurrentUserCreator = false,
   });
 
   @override
@@ -580,7 +585,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
         'user_handle': widget.currentLoggedInHandle,
         'user_name': widget.customUserName,
         'comment_text': text,
-        'is_creator': widget.currentLoggedInHandle != 'user',
+        'is_creator': widget.isCurrentUserCreator,
       };
 
       if (_replyingToCommentId != null) {
@@ -764,25 +769,30 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                                         Row(
                                           crossAxisAlignment: CrossAxisAlignment.center,
                                           children: [
-                                            Flexible(
-                                              child: Text(
-                                                c['user_name'] ?? 'Aspirant',
-                                                style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12.5),
-                                                overflow: TextOverflow.ellipsis,
+                                            Expanded(
+                                              child: Row(
+                                                children: [
+                                                  Flexible(
+                                                    child: Text(
+                                                      c['user_name'] ?? 'Aspirant',
+                                                      style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12.5),
+                                                      overflow: TextOverflow.ellipsis,
+                                                    ),
+                                                  ),
+                                                  if (c['is_creator'] == true) ...[
+                                                    const SizedBox(width: 4),
+                                                    const Icon(Icons.verified, color: _primaryBlue, size: 13),
+                                                  ],
+                                                  if (_relativeTime(c['created_at']).isNotEmpty) ...[
+                                                    const SizedBox(width: 6),
+                                                    Text(
+                                                      '· ${_relativeTime(c['created_at'])}',
+                                                      style: TextStyle(color: Colors.grey[500], fontSize: 11),
+                                                    ),
+                                                  ],
+                                                ],
                                               ),
                                             ),
-                                            if (c['is_creator'] == true) ...[
-                                              const SizedBox(width: 4),
-                                              const Icon(Icons.verified, color: _primaryBlue, size: 13),
-                                            ],
-                                            if (_relativeTime(c['created_at']).isNotEmpty) ...[
-                                              const SizedBox(width: 6),
-                                              Text(
-                                                '· ${_relativeTime(c['created_at'])}',
-                                                style: TextStyle(color: Colors.grey[500], fontSize: 11),
-                                              ),
-                                            ],
-                                            const Spacer(),
                                             if (isMyComment)
                                               InkWell(
                                                 borderRadius: BorderRadius.circular(14),

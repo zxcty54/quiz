@@ -34,6 +34,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   static const List<String> _feedModes = ['For You', 'Latest'];
   String _customUserName = 'Aspirant';
   String _currentLoggedInHandle = 'user';
+  bool _isCurrentUserCreator = false;
 
   String _searchQuery = '';
   final TextEditingController _searchCtrl = TextEditingController();
@@ -128,6 +129,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       setState(() {
         _customUserName = name;
         _currentLoggedInHandle = activeHandle;
+        _isCurrentUserCreator = creatorHandle != null && creatorHandle.trim().isNotEmpty;
         _followedCreatorHandles = followedCreators;
       });
     }
@@ -324,6 +326,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           currentLoggedInHandle: _currentLoggedInHandle,
           customUserName: _customUserName,
           isDarkMode: widget.isDarkMode,
+          isCurrentUserCreator: _isCurrentUserCreator,
           initialLiked: _likedPostIds.contains(postId),
           initialSaved: _savedPostIds.contains(postId),
           initialPollIndex: _userPollSelections[postId],
