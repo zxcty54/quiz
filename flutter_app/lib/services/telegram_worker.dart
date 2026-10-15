@@ -11,7 +11,7 @@ import 'package:http/http.dart' as http;
 /// nahi mil sakta.
 class TelegramWorker {
   /// Cloudflare Worker ka pata — user se milne par yahan bharna hai.
-  static const String _workerUrl = '';
+  static const String _workerUrl = 'https://mocktester-telegram.nitesh-skyhigh.workers.dev';
 
   /// App ki pehchan key (ye bot token NAHI hai; Worker isse sirf
   /// app ko pehchanta hai. Bot hamesha Worker ke Secret me surakshit hai.)
