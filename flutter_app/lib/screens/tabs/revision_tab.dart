@@ -156,6 +156,22 @@ class _RevisionTabState extends State<RevisionTab> {
           ),
           const SizedBox(height: 12),
 
+          // 3.5 Bihar Special (content repo: bihar_special_mapping)
+          RevisionDirectCard(
+            title: 'Bihar Special',
+            badgeText: '🏛️ BPSC Special — Bihar GK, Itihas & Sanskriti',
+            headerLabel: 'Bihar Special Chapters',
+            icon: '🗺️',
+            mappingKey: 'bihar_special_mapping',
+            fallbackKey: 'bihar_mapping',
+            brandColor: const Color(0xFFD97706), // Kesariya — Bihar ki pehchan
+            isDark: isDark,
+            isLoading: _isLoading,
+            liveMapping: _liveSubjectMapping,
+            onLaunchPractice: widget.onLaunchPractice,
+          ),
+          const SizedBox(height: 12),
+
           // 4. Quantitative Aptitude (Direct Flat Chips, Indigo Theme)
           RevisionDirectCard(
             title: 'Quantitative Aptitude (Maths)',
