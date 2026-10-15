@@ -1,7 +1,10 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../sectional_exam_screen.dart';
 
 class SectionalTab extends StatefulWidget {
   final Map<String, dynamic> sectionalData;
@@ -21,13 +24,32 @@ class SectionalTab extends StatefulWidget {
 
 class _SectionalTabState extends State<SectionalTab> {
   Map<String, dynamic> _liveData = {};
-  String? _selectedExamPanel;
   bool _isLoading = false;
+
+  // CbtProgressService ka saved data: launchTitle -> {status, score, correct, total...}
+  Map<String, Map<String, dynamic>> _progress = {};
+  Timer? _refreshTimer;
+  bool _refreshPending = false;
 
   @override
   void initState() {
     super.initState();
     _loadFromDiskAndFetch();
+    _refreshProgress();
+    // Test khatm karke wapas aane par grid/hero auto-refresh ho jaye
+    _refreshTimer = Timer.periodic(const Duration(seconds: 2), (_) {
+      if (!mounted) return;
+      if (_refreshPending && (ModalRoute.of(context)?.isCurrent ?? false)) {
+        _refreshPending = false;
+        _refreshProgress();
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _refreshTimer?.cancel();
+    super.dispose();
   }
 
   @override
@@ -36,7 +58,6 @@ class _SectionalTabState extends State<SectionalTab> {
     if (widget.sectionalData.isNotEmpty && _liveData.isEmpty) {
       setState(() {
         _liveData = Map<String, dynamic>.from(widget.sectionalData);
-        _selectFirstKey();
       });
     }
   }
@@ -52,7 +73,6 @@ class _SectionalTabState extends State<SectionalTab> {
         if (decoded is Map && mounted) {
           setState(() {
             _liveData = Map<String, dynamic>.from(decoded);
-            _selectFirstKey();
           });
         }
       } catch (_) {}
@@ -61,19 +81,10 @@ class _SectionalTabState extends State<SectionalTab> {
     if (_liveData.isEmpty && widget.sectionalData.isNotEmpty) {
       setState(() {
         _liveData = Map<String, dynamic>.from(widget.sectionalData);
-        _selectFirstKey();
       });
     }
 
     _fetchLiveGitHubData();
-  }
-
-  void _selectFirstKey() {
-    if (_liveData.isNotEmpty) {
-      if (_selectedExamPanel == null || !_liveData.containsKey(_selectedExamPanel)) {
-        _selectedExamPanel = _liveData.keys.first;
-      }
-    }
   }
 
   // 🚀 DIRECT GITHUB FETCHER (content_base) + PERMANENT DISK SAVE
@@ -96,7 +107,6 @@ class _SectionalTabState extends State<SectionalTab> {
           if (parsed is Map && mounted) {
             setState(() {
               _liveData = Map<String, dynamic>.from(parsed);
-              _selectFirstKey();
               _isLoading = false;
             });
 
@@ -135,6 +145,25 @@ class _SectionalTabState extends State<SectionalTab> {
           Color(0xFFEA580C),
         ];
         return palette[index % palette.length];
+    }
+  }
+
+  String _examIcon(String key) {
+    switch (key) {
+      case 'bpsc':
+        return '🏛️';
+      case 'ssc':
+        return '🚂';
+      case 'bssc_cgl':
+        return '🎓';
+      case 'bssc_inter':
+        return '📗';
+      case 'bihar_si':
+        return '🚔';
+      case 'bihar_amin':
+        return '🗺️';
+      default:
+        return '🎯';
     }
   }
 
@@ -202,293 +231,47 @@ class _SectionalTabState extends State<SectionalTab> {
     );
   }
 
-  @override
-  Widget build(BuildContext context) {
-    if (_liveData.isEmpty && _isLoading) {
-      return const Center(child: CircularProgressIndicator());
+  // ---------- Progress (CbtProgressService ke saved records) ----------
+
+  Future<Map<String, Map<String, dynamic>>> _loadProgressMap() async {
+    final prefs = await SharedPreferences.getInstance();
+    final Map<String, Map<String, dynamic>> out = {};
+    for (final k in prefs.getKeys()) {
+      if (!k.startsWith('cbt_progress_')) continue;
+      try {
+        final raw = prefs.getString(k);
+        if (raw == null) continue;
+        final decoded = jsonDecode(raw);
+        if (decoded is Map) {
+          out[k.substring('cbt_progress_'.length)] = Map<String, dynamic>.from(decoded);
+        }
+      } catch (_) {}
     }
-
-    final examKeys = _liveData.keys.toList();
-    _selectFirstKey();
-
-    return RefreshIndicator(
-      color: const Color(0xFF2563EB),
-      onRefresh: _fetchLiveGitHubData,
-      child: SingleChildScrollView(
-        physics: const AlwaysScrollableScrollPhysics(),
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                const Text('🎯 Target Exam Sectional Mocks',
-                    style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
-                if (_isLoading)
-                  const SizedBox(
-                    width: 16,
-                    height: 16,
-                    child: CircularProgressIndicator(strokeWidth: 2),
-                  ),
-              ],
-            ),
-            const SizedBox(height: 2),
-            const Text('अपनी परीक्षा चुनें और रियल TCS CBT पैटर्न पर प्रैक्टिस शुरू करें',
-                style: TextStyle(color: Colors.grey, fontSize: 12)),
-            const SizedBox(height: 12),
-
-            // Banner
-            Container(
-              width: double.infinity,
-              margin: const EdgeInsets.only(bottom: 14),
-              padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 11),
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: widget.isDarkMode 
-                      ? [const Color(0xFF0F2942), const Color(0xFF132F4C)] 
-                      : [const Color(0xFFEFF6FF), const Color(0xFFE0F2FE)],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
-                ),
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(
-                  color: widget.isDarkMode ? const Color(0xFF0284C7) : const Color(0xFF38BDF8),
-                  width: 1.3,
-                ),
-                boxShadow: [
-                  BoxShadow(
-                    color: const Color(0xFF0284C7).withOpacity(widget.isDarkMode ? 0.3 : 0.12),
-                    blurRadius: 8,
-                    offset: const Offset(0, 3),
-                  ),
-                ],
-              ),
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(top: 2),
-                    padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF059669).withOpacity(0.2),
-                      borderRadius: BorderRadius.circular(20),
-                      border: Border.all(color: const Color(0xFF10B981), width: 1.2),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Container(
-                          width: 6.5,
-                          height: 6.5,
-                          decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            color: Color(0xFF10B981),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Color(0xFF10B981),
-                                blurRadius: 5,
-                                spreadRadius: 1.2,
-                              )
-                            ],
-                          ),
-                        ),
-                        const SizedBox(width: 4),
-                        const Text(
-                          'LIVE',
-                          style: TextStyle(
-                            color: Color(0xFF10B981),
-                            fontSize: 9,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 0.5,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  const SizedBox(width: 10),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Real-Time Updated Mocks (2026 Edition)',
-                          style: TextStyle(
-                            fontSize: 12.5,
-                            fontWeight: FontWeight.w800,
-                            color: widget.isDarkMode ? const Color(0xFF38BDF8) : const Color(0xFF0284C7),
-                            letterSpacing: -0.1,
-                          ),
-                        ),
-                        const SizedBox(height: 2),
-                        Text(
-                          'Commission ke latest notification, revised syllabus aur modern PYQ trends ke aadhar par sabhi mock sets real-time dynamically update hote hain.',
-                          style: TextStyle(
-                            fontSize: 10.5,
-                            height: 1.35,
-                            fontWeight: FontWeight.w500,
-                            color: widget.isDarkMode ? const Color(0xFFCBD5E1) : const Color(0xFF334155),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
-
-            // Exam Selector Pills
-            Wrap(
-              spacing: 8.0,
-              runSpacing: 8.0,
-              children: List.generate(examKeys.length, (index) {
-                final examKey = examKeys[index];
-                final panelData = _liveData[examKey];
-                final String title = _formatExamTitle(examKey, panelData);
-                final String badge = _formatExamBadge(examKey, panelData);
-                final Color examColor = _resolveColor(examKey, index);
-                final bool isSelected = _selectedExamPanel == examKey;
-
-                return InkWell(
-                  borderRadius: BorderRadius.circular(10),
-                  onTap: () => setState(() => _selectedExamPanel = examKey),
-                  child: AnimatedContainer(
-                    duration: const Duration(milliseconds: 180),
-                    padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-                    decoration: BoxDecoration(
-                      color: isSelected
-                          ? examColor
-                          : (widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white),
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(
-                        color: isSelected
-                            ? examColor
-                            : (widget.isDarkMode ? Colors.grey.shade800 : Colors.grey.shade300),
-                        width: isSelected ? 1.5 : 1,
-                      ),
-                      boxShadow: isSelected
-                          ? [
-                              BoxShadow(
-                                color: examColor.withOpacity(0.32),
-                                blurRadius: 6,
-                                offset: const Offset(0, 2),
-                              )
-                            ]
-                          : [
-                              BoxShadow(
-                                color: Colors.black.withOpacity(0.03),
-                                blurRadius: 3,
-                                offset: const Offset(0, 1),
-                              )
-                            ],
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
-                          decoration: BoxDecoration(
-                            color: isSelected
-                                ? Colors.white.withOpacity(0.22)
-                                : examColor.withOpacity(0.12),
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                          child: Text(
-                            badge,
-                            style: TextStyle(
-                              fontSize: 9,
-                              fontWeight: FontWeight.bold,
-                              color: isSelected ? Colors.white : examColor,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(width: 8),
-                        Text(
-                          title,
-                          style: TextStyle(
-                            fontSize: 13.5,
-                            fontWeight: FontWeight.bold,
-                            color: isSelected
-                                ? Colors.white
-                                : (widget.isDarkMode ? Colors.white : const Color(0xFF1E293B)),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                );
-              }),
-            ),
-            const SizedBox(height: 16),
-            const Divider(height: 1, thickness: 0.8),
-            const SizedBox(height: 14),
-
-            // Sets Panel
-            if (_selectedExamPanel != null)
-              _buildDynamicSectionalSetsPanel(context, _selectedExamPanel!),
-          ],
-        ),
-      ),
-    );
+    return out;
   }
 
-  Widget _buildDynamicSectionalSetsPanel(BuildContext context, String examKey) {
+  Future<void> _refreshProgress() async {
+    final data = await _loadProgressMap();
+    if (mounted) setState(() => _progress = data);
+  }
+
+  // ---------- JSON -> Groups (purani wali exact logic, dono formats) ----------
+
+  List<SectionalExamGroup> _groupsFor(String examKey) {
     final dynamic panelData = _liveData[examKey];
-    if (panelData == null) return const SizedBox.shrink();
+    if (panelData == null) return [];
 
-    // Map Format
+    // Map Format (total_sets)
     if (panelData is Map && panelData.containsKey('total_sets')) {
-      int count = panelData['total_sets'] ?? 10;
-      int upcomingCount = panelData['upcoming_sets'] ?? 0;
-      String upcomingText = panelData['upcoming_text'] ?? "Coming Soon";
-      String prefix = panelData['path_prefix'] ?? '$examKey/set';
-      String title = panelData['title'] ?? '🏛️ Exam Special Zone';
-      Color themeColor = _resolveColor(examKey, 0);
-
-      return Card(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-        child: Padding(
-          padding: const EdgeInsets.all(14),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title,
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: themeColor)),
-              const SizedBox(height: 10),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                children: [
-                  ...List.generate(count, (i) {
-                    final setNum = i + 1;
-                    return ActionChip(
-                      backgroundColor: themeColor.withOpacity(0.08),
-                      side: BorderSide(color: themeColor),
-                      label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, color: themeColor)),
-                      onPressed: () => widget.onLaunchCbtMock(
-                          context, '$title Set $setNum', '$prefix$setNum.json'),
-                    );
-                  }),
-                  ...List.generate(upcomingCount, (i) {
-                    final setNum = count + i + 1;
-                    return ActionChip(
-                      avatar: const Icon(Icons.lock_rounded, size: 14, color: Colors.grey),
-                      backgroundColor: Colors.grey.withOpacity(0.12),
-                      side: BorderSide(color: Colors.grey.shade400),
-                      label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
-                          style: const TextStyle(
-                              fontWeight: FontWeight.w600, color: Colors.grey)),
-                      onPressed: () => _showUpcomingNotice('Set $setNum', upcomingText),
-                    );
-                  }),
-                ],
-              )
-            ],
-          ),
+      return [
+        SectionalExamGroup(
+          title: panelData['title'] ?? '🏛️ Exam Special Zone',
+          sets: panelData['total_sets'] ?? 10,
+          upcomingSets: panelData['upcoming_sets'] ?? 0,
+          upcomingText: panelData['upcoming_text'] ?? "Coming Soon",
+          pathPrefix: panelData['path_prefix'] ?? '$examKey/set',
         ),
-      );
+      ];
     }
 
     // List / Items Format
@@ -499,91 +282,383 @@ class _SectionalTabState extends State<SectionalTab> {
       items = panelData['items'];
     }
 
-    if (items.isNotEmpty) {
-      return Column(
-        children: items.map<Widget>((item) {
-          String itemTitle = item['title'] ?? 'Sectional Mock';
-          int totalSets = item['sets'] ?? 1;
-          int upcomingSets = item['upcoming_sets'] ?? 0;
-          String upcomingText = item['upcoming_text'] ?? "Live Tomorrow";
-          String folder = item['folder'] ?? examKey;
-
-          return Card(
-            margin: const EdgeInsets.only(bottom: 12),
-            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            child: Padding(
-              padding: const EdgeInsets.all(14),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Expanded(
-                        child: Text(itemTitle,
-                            style: const TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 13.5)),
-                      ),
-                      if (upcomingSets > 0)
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                          decoration: BoxDecoration(
-                            color: Colors.amber.withOpacity(0.15),
-                            borderRadius: BorderRadius.circular(6),
-                            border: Border.all(color: Colors.amber.shade700, width: 0.8),
-                          ),
-                          child: Text(
-                            '🔥 +$upcomingSets Upcoming',
-                            style: TextStyle(
-                                fontSize: 9.5,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.amber.shade800),
-                          ),
-                        ),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  Wrap(
-                    spacing: 8,
-                    runSpacing: 8,
-                    children: [
-                      ...List.generate(totalSets, (i) {
-                        final setNum = i + 1;
-                        return ActionChip(
-                          backgroundColor: const Color(0xFF2563EB).withOpacity(0.08),
-                          side: const BorderSide(color: Color(0xFF2563EB)),
-                          label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Color(0xFF2563EB))),
-                          onPressed: () => widget.onLaunchCbtMock(
-                              context,
-                              "$itemTitle Set $setNum",
-                              "$folder/set$setNum.json"),
-                        );
-                      }),
-                      ...List.generate(upcomingSets, (i) {
-                        final setNum = totalSets + i + 1;
-                        return ActionChip(
-                          avatar: const Icon(Icons.lock_rounded, size: 14, color: Colors.grey),
-                          backgroundColor: Colors.grey.withOpacity(0.12),
-                          side: BorderSide(color: Colors.grey.shade400),
-                          label: Text('Set ${setNum < 10 ? '0$setNum' : setNum}',
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.w600, color: Colors.grey)),
-                          onPressed: () => _showUpcomingNotice('Set $setNum', upcomingText),
-                        );
-                      }),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          );
-        }).toList(),
+    return items.map<SectionalExamGroup>((item) {
+      final String folder = item['folder'] ?? examKey;
+      return SectionalExamGroup(
+        title: item['title'] ?? 'Sectional Mock',
+        sets: item['sets'] ?? 1,
+        upcomingSets: item['upcoming_sets'] ?? 0,
+        upcomingText: item['upcoming_text'] ?? "Live Tomorrow",
+        pathPrefix: '$folder/set',
       );
+    }).toList();
+  }
+
+  ({int done, int total}) _examCounts(String examKey) {
+    int done = 0;
+    int total = 0;
+    for (final g in _groupsFor(examKey)) {
+      total += g.sets;
+      for (int n = 1; n <= g.sets; n++) {
+        if (_progress[g.launchTitle(n)]?['status'] == 'COMPLETED') done++;
+      }
+    }
+    return (done: done, total: total);
+  }
+
+  /// Next suggested set: pehle koi In-Progress, warna pehla bacha hua set.
+  Map<String, dynamic>? _nextCandidate(List<String> examKeys) {
+    Map<String, dynamic>? firstLeft;
+    for (final key in examKeys) {
+      final counts = _examCounts(key);
+      for (final g in _groupsFor(key)) {
+        for (int n = 1; n <= g.sets; n++) {
+          final title = g.launchTitle(n);
+          final status = _progress[title]?['status']?.toString();
+          if (status == 'IN_PROGRESS') {
+            return {
+              'title': title,
+              'path': g.launchPath(n),
+              'examKey': key,
+              'inProgress': true,
+              'done': counts.done,
+              'total': counts.total,
+            };
+          }
+          if (status != 'COMPLETED' && firstLeft == null) {
+            firstLeft = {
+              'title': title,
+              'path': g.launchPath(n),
+              'examKey': key,
+              'inProgress': false,
+              'done': counts.done,
+              'total': counts.total,
+            };
+          }
+        }
+      }
+    }
+    return firstLeft;
+  }
+
+  void _launch(BuildContext context, String title, String path) {
+    _refreshPending = true;
+    widget.onLaunchCbtMock(context, title, path);
+  }
+
+  void _openExam(BuildContext context, String examKey, int index) {
+    final data = _liveData[examKey];
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => SectionalExamScreen(
+          examTitle: _formatExamTitle(examKey, data),
+          badge: _formatExamBadge(examKey, data),
+          icon: _examIcon(examKey),
+          color: _resolveColor(examKey, index),
+          isDarkMode: widget.isDarkMode,
+          groups: _groupsFor(examKey),
+          progressLoader: _loadProgressMap,
+          onLaunchCbtMock: widget.onLaunchCbtMock,
+          onShowUpcoming: _showUpcomingNotice,
+        ),
+      ),
+    ).then((_) => _refreshProgress());
+  }
+
+  // ---------- UI ----------
+
+  @override
+  Widget build(BuildContext context) {
+    if (_liveData.isEmpty && _isLoading) {
+      return const Center(child: CircularProgressIndicator());
     }
 
-    return const SizedBox.shrink();
+    final bool isDark = widget.isDarkMode;
+    final Color textColor = isDark ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A);
+    final Color subTextColor = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color borderColor = isDark ? const Color(0xFF334155) : const Color(0xFFE8EDF7);
+
+    final examKeys = _liveData.keys.toList();
+    final candidate = examKeys.isEmpty ? null : _nextCandidate(examKeys);
+    final bool anyProgress = _progress.values.any((p) => p['status'] == 'COMPLETED' || p['status'] == 'IN_PROGRESS');
+
+    return RefreshIndicator(
+      color: const Color(0xFF2563EB),
+      onRefresh: () async {
+        await _fetchLiveGitHubData();
+        await _refreshProgress();
+      },
+      child: ListView(
+        physics: const AlwaysScrollableScrollPhysics(),
+        padding: const EdgeInsets.fromLTRB(16, 16, 16, 24),
+        children: [
+          // Header
+          Row(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('🎯 Sectional Mocks', style: TextStyle(fontSize: 19, fontWeight: FontWeight.w900, color: textColor, letterSpacing: -0.3)),
+                    const SizedBox(height: 3),
+                    Text(
+                      'Apna target exam chuno aur real CBT pattern par set lagao',
+                      style: TextStyle(color: subTextColor, fontSize: 11.5, fontWeight: FontWeight.w600),
+                    ),
+                  ],
+                ),
+              ),
+              if (_isLoading)
+                const SizedBox(
+                  width: 16,
+                  height: 16,
+                  child: CircularProgressIndicator(strokeWidth: 2.2, color: Color(0xFF2563EB)),
+                ),
+            ],
+          ),
+
+          if (examKeys.isEmpty)
+            Padding(
+              padding: const EdgeInsets.only(top: 40),
+              child: Text(
+                'Abhi koi exam data available nahi hai.\nInternet on karke pull-down refresh karo.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: subTextColor, height: 1.6),
+              ),
+            )
+          else ...[
+            // Next Set hero
+            if (candidate != null) ...[
+              const SizedBox(height: 20),
+              _sectionHead(
+                candidate['inProgress'] == true ? '⏯️ Aadha Ruka Set' : '⏭️ Tumhara Next Set',
+                candidate['inProgress'] == true ? 'RESUME' : 'AUTO SUGGEST',
+                textColor,
+              ),
+              const SizedBox(height: 10),
+              _nextHero(context, candidate),
+            ] else if (anyProgress) ...[
+              const SizedBox(height: 20),
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFF14532D), Color(0xFF16A34A)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('🎉 Badhai Ho!', style: TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w900)),
+                    const SizedBox(height: 4),
+                    Text(
+                      'Saare available sets complete ho gaye hain. Kisi bhi set ko Re-attempt karke apna score aur improve karo!',
+                      style: TextStyle(color: Colors.white70, fontSize: 11.5, fontWeight: FontWeight.w600, height: 1.45),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+
+            // Exams grid
+            const SizedBox(height: 20),
+            _sectionHead('🏛️ Target Exams', '${examKeys.length} EXAMS', textColor),
+            const SizedBox(height: 10),
+            GridView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                childAspectRatio: 0.98,
+              ),
+              itemCount: examKeys.length,
+              itemBuilder: (ctx, i) {
+                final key = examKeys[i];
+                final data = _liveData[key];
+                final Color color = _resolveColor(key, i);
+                final counts = _examCounts(key);
+                final double pct = counts.total == 0 ? 0 : counts.done / counts.total;
+                return Material(
+                  color: cardBg,
+                  borderRadius: BorderRadius.circular(19),
+                  child: InkWell(
+                    onTap: () => _openExam(ctx, key, i),
+                    borderRadius: BorderRadius.circular(19),
+                    child: Container(
+                      padding: const EdgeInsets.all(13),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(19),
+                        border: Border.all(color: borderColor),
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 42,
+                            height: 42,
+                            decoration: BoxDecoration(color: color.withOpacity(isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(13)),
+                            child: Center(child: Text(_examIcon(key), style: const TextStyle(fontSize: 20))),
+                          ),
+                          const SizedBox(height: 10),
+                          Text(
+                            _formatExamTitle(key, data),
+                            maxLines: 1,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(fontSize: 13.5, fontWeight: FontWeight.w900, color: textColor, letterSpacing: -0.2),
+                          ),
+                          const SizedBox(height: 5),
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                            decoration: BoxDecoration(color: color.withOpacity(isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(99)),
+                            child: Text(
+                              _formatExamBadge(key, data),
+                              style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.w900, color: color, letterSpacing: 0.6),
+                            ),
+                          ),
+                          const SizedBox(height: 11),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(99),
+                            child: LinearProgressIndicator(
+                              value: pct,
+                              minHeight: 6,
+                              backgroundColor: isDark ? const Color(0xFF334155) : const Color(0xFFEEF2F7),
+                              valueColor: AlwaysStoppedAnimation<Color>(color),
+                            ),
+                          ),
+                          const SizedBox(height: 6),
+                          Row(
+                            children: [
+                              Text(
+                                '${counts.done} / ${counts.total} sets done',
+                                style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.w800, color: subTextColor),
+                              ),
+                              const Spacer(),
+                              Text(
+                                '${counts.total} SETS ›',
+                                style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.w900, color: color),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                );
+              },
+            ),
+
+            const SizedBox(height: 16),
+            Text(
+              'Exams aur sets live content se auto-update hote hain — naya set add hote hi resumable yahi dikhega, bina app update ke.',
+              textAlign: TextAlign.center,
+              style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.w600, color: subTextColor, height: 1.5),
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+
+  Widget _sectionHead(String title, String tag, Color textColor) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(title, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: textColor, letterSpacing: -0.2)),
+        Text(tag, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w900, color: Color(0xFF2563EB), letterSpacing: 0.6)),
+      ],
+    );
+  }
+
+  Widget _nextHero(BuildContext context, Map<String, dynamic> candidate) {
+    final String examKey = candidate['examKey'] as String;
+    final int done = candidate['done'] as int;
+    final int total = candidate['total'] as int;
+    final bool inProgress = candidate['inProgress'] == true;
+    final examTitle = _formatExamTitle(examKey, _liveData[examKey]);
+
+    return InkWell(
+      onTap: () => _launch(context, candidate['title'] as String, candidate['path'] as String),
+      borderRadius: BorderRadius.circular(22),
+      child: Container(
+        width: double.infinity,
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          gradient: const LinearGradient(
+            colors: [Color(0xFF172554), Color(0xFF1E40AF), Color(0xFF2563EB)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+          borderRadius: BorderRadius.circular(22),
+          boxShadow: [
+            BoxShadow(
+              color: const Color(0xFF1E40AF).withOpacity(0.32),
+              blurRadius: 14,
+              offset: const Offset(0, 6),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
+              decoration: BoxDecoration(color: const Color(0xFFF59E0B), borderRadius: BorderRadius.circular(99)),
+              child: Text(
+                inProgress ? '✦ SET BEECH ME RUKA HAI' : '✦ NEXT SET READY HAI',
+                style: const TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: Color(0xFF451A03), letterSpacing: 0.8),
+              ),
+            ),
+            const SizedBox(height: 10),
+            Text(
+              candidate['title'] as String,
+              style: const TextStyle(color: Colors.white, fontSize: 17.5, fontWeight: FontWeight.w900, height: 1.25),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              inProgress
+                  ? 'Ye set aadha attempt hua hai — wahi se resume karo!'
+                  : 'Yahi se apni practice aage badhao — $examTitle ka agla set.',
+              style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 11.5, fontWeight: FontWeight.w600, height: 1.4),
+            ),
+            const SizedBox(height: 13),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(99),
+              child: LinearProgressIndicator(
+                value: total == 0 ? 0 : done / total,
+                minHeight: 6,
+                backgroundColor: Colors.white.withOpacity(0.22),
+                valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFFBBF24)),
+              ),
+            ),
+            const SizedBox(height: 7),
+            Row(
+              children: [
+                Text(
+                  '$examTitle • $done / $total sets complete',
+                  style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 10, fontWeight: FontWeight.w800),
+                ),
+                const Spacer(),
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                  decoration: BoxDecoration(color: const Color(0xFFF59E0B), borderRadius: BorderRadius.circular(99)),
+                  child: Text(
+                    inProgress ? 'Resume Karo →' : 'Set Start Karo →',
+                    style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w900, color: Color(0xFF451A03)),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
