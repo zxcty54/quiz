@@ -43,9 +43,11 @@
       "subtitle": "Real CBT interface - 150 questions, bilkul asal jaisa mahol",
       "button_text": "Start Mock",
       "mock_json": "bpsc/science/Modern History/set1.json",
-      "color1": "#1D4ED8",
-      "color2": "#7C3AED",
-      "priority": 10
+      "color1": "#2563EB",
+      "color2": "#EC4899",
+      "priority": 10,
+      "visual_text": "BPSC",
+      "highlight": "150 Questions • CBT Mode"
     },
     {
       "show": true,
@@ -55,9 +57,11 @@
       "subtitle": "BPSC, BSSC aur Bihar Police ki taza jaankari yahin milegi",
       "button_text": "See Updates",
       "url": "https://www.mocktester.online",
-      "color1": "#065F46",
-      "color2": "#0D9488",
-      "priority": 5
+      "color1": "#047857",
+      "color2": "#65A30D",
+      "priority": 5,
+      "visual_text": "EXAM",
+      "highlight": "Latest updates"
     }
   ]
 }
