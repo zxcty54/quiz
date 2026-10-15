@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
@@ -25,6 +26,10 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   bool _hasMore = true;
 
   String _activeFilter = 'All';
+  String _activeFeedMode = 'For You';
+  List<String> _followedCreatorHandles = [];
+
+  static const List<String> _feedModes = ['For You', 'Latest'];
   String _customUserName = 'Aspirant';
   String _currentLoggedInHandle = 'user';
 
@@ -58,8 +63,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   void initState() {
     super.initState();
     _scrollController.addListener(_onScroll);
-    _loadUserPreferences();
-    _fetchFeedPosts();
+    _initializeFeed();
   }
 
   @override
@@ -68,6 +72,28 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     _scrollController.dispose();
     _searchCtrl.dispose();
     super.dispose();
+  }
+
+  Future<void> _initializeFeed() async {
+    await _loadUserPreferences();
+    if (mounted) await _fetchFeedPosts();
+  }
+
+  List<dynamic> _parseRankedPosts(dynamic res) {
+    if (res is List) return List<dynamic>.from(res);
+    if (res is String) {
+      try {
+        final decoded = jsonDecode(res);
+        if (decoded is List) return List<dynamic>.from(decoded);
+      } catch (_) {}
+    }
+    return <dynamic>[];
+  }
+
+  void _changeFeedMode(String mode) {
+    if (_activeFeedMode == mode) return;
+    setState(() => _activeFeedMode = mode);
+    _fetchFeedPosts();
   }
 
   void _onScroll() {
@@ -87,6 +113,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
     final creatorHandle = prefs.getString('logged_in_creator_handle');
     final userId = prefs.getString('user_id') ?? 'user';
+    final followedCreators = prefs.getStringList('followed_creators') ?? [];
 
     final activeHandle = (creatorHandle != null && creatorHandle.trim().isNotEmpty)
         ? creatorHandle.trim()
@@ -96,6 +123,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       setState(() {
         _customUserName = name;
         _currentLoggedInHandle = activeHandle;
+        _followedCreatorHandles = followedCreators;
       });
     }
 
@@ -156,17 +184,36 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     });
 
     try {
-      final res = await Supabase.instance.client
-          .from('community_posts')
-          .select('*, creator_mocks(*)')
-          .order('id', ascending: false)
-          .range(0, _pageSize - 1);
+      List<dynamic> fetchedPosts;
+
+      if (_activeFeedMode == 'Latest') {
+        // Purana chronological feed - bilkul jaisa pehle tha.
+        final res = await Supabase.instance.client
+            .from('community_posts')
+            .select('*, creator_mocks(*)')
+            .order('id', ascending: false)
+            .range(0, _pageSize - 1);
+        fetchedPosts = List<dynamic>.from(res as List);
+      } else {
+        // Ranking Supabase ke get_ranked_community_feed() function se aati hai.
+        // SQL file pehle Supabase SQL Editor me chalana zaroori hai.
+        final res = await Supabase.instance.client.rpc(
+          'get_ranked_community_feed',
+          params: {
+            'p_user_handle': _currentLoggedInHandle,
+            'p_followed_handles': _followedCreatorHandles,
+            'p_limit': _pageSize,
+            'p_offset': 0,
+          },
+        );
+        fetchedPosts = _parseRankedPosts(res);
+      }
 
       if (mounted) {
         setState(() {
-          _posts = res;
+          _posts = fetchedPosts;
           _isLoading = false;
-          if (res.length < _pageSize) {
+          if (fetchedPosts.length < _pageSize) {
             _hasMore = false;
           }
         });
@@ -185,17 +232,33 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     final end = start + _pageSize - 1;
 
     try {
-      final res = await Supabase.instance.client
-          .from('community_posts')
-          .select('*, creator_mocks(*)')
-          .order('id', ascending: false)
-          .range(start, end);
+      List<dynamic> fetchedPosts;
+
+      if (_activeFeedMode == 'Latest') {
+        final res = await Supabase.instance.client
+            .from('community_posts')
+            .select('*, creator_mocks(*)')
+            .order('id', ascending: false)
+            .range(start, end);
+        fetchedPosts = List<dynamic>.from(res as List);
+      } else {
+        final res = await Supabase.instance.client.rpc(
+          'get_ranked_community_feed',
+          params: {
+            'p_user_handle': _currentLoggedInHandle,
+            'p_followed_handles': _followedCreatorHandles,
+            'p_limit': _pageSize,
+            'p_offset': start,
+          },
+        );
+        fetchedPosts = _parseRankedPosts(res);
+      }
 
       if (mounted) {
         setState(() {
-          _posts.addAll(res);
+          _posts.addAll(fetchedPosts);
           _isLoadingMore = false;
-          if (res.length < _pageSize) {
+          if (fetchedPosts.length < _pageSize) {
             _hasMore = false;
           }
         });
@@ -438,6 +501,33 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       ),
       body: Column(
         children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(14, 8, 14, 2),
+            child: Row(
+              children: _feedModes.map((mode) {
+                final isSelected = _activeFeedMode == mode;
+                return Padding(
+                  padding: const EdgeInsets.only(right: 8),
+                  child: ChoiceChip(
+                    label: Text(mode),
+                    selected: isSelected,
+                    selectedColor: _primaryBlue,
+                    backgroundColor: cardSurface,
+                    labelStyle: TextStyle(
+                      fontSize: 12.5,
+                      fontWeight: isSelected ? FontWeight.bold : FontWeight.w600,
+                      color: isSelected ? Colors.white : (isDark ? Colors.white70 : const Color(0xFF475569)),
+                    ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(18),
+                      side: BorderSide(color: isSelected ? _primaryBlue : dividerColor),
+                    ),
+                    onSelected: (_) => _changeFeedMode(mode),
+                  ),
+                );
+              }).toList(),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.fromLTRB(14, 4, 14, 8),
             child: Container(
