@@ -88,7 +88,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
       ScaffoldMessenger.of(context).hideCurrentSnackBar();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(isSaved ? "Removed from Vault" : "Saved to Vault 📌"),
+          content: Text(isSaved ? "Vault se hata diya gaya" : "Vault me save ho gaya 📌"),
           duration: const Duration(seconds: 1),
           behavior: SnackBarBehavior.floating,
         ),
@@ -110,14 +110,12 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
     } catch (_) {}
   }
 
-  // 🚀 Fast Multi-CDN Fetcher (Cloudflare Primary + Fastly / GitHub Failover)
   Future<void> fetchFirstInIndia({bool forceRefresh = false}) async {
     final prefs = await SharedPreferences.getInstance();
     final String todayStr = DateTime.now().toIso8601String().split('T')[0];
     const String cacheDataKey = 'cached_app_alerts_news_json';
     const String cacheDateKey = 'cached_app_alerts_news_date';
 
-    // 1. Same-Day Fast Local Cache Check
     final String savedDate = prefs.getString(cacheDateKey) ?? '';
     if (!forceRefresh && savedDate == todayStr) {
       String? cachedJson = prefs.getString(cacheDataKey);
@@ -138,21 +136,11 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     const String relativeFilePath = "app_alerts_news.json";
 
-    // ⚡ CDN Priority Hierarchy
     final List<String> cdnEndpoints = [
-      // 🥇 Primary: Cloudflare Edge Network (Statically CDN)
       "https://cdn.statically.io/gh/zxcty54/content_base/main/$relativeFilePath?t=$ts",
-      
-      // 🥈 Fallback 1: Fastly CDN via jsDelivr
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$relativeFilePath?t=$ts",
-      
-      // 🥉 Fallback 2: Global jsDelivr CDN
       "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/$relativeFilePath?t=$ts",
-      
-      // 🔄 Fallback 3: GitHack Cloudflare proxy
       "https://raw.githack.com/zxcty54/content_base/main/$relativeFilePath",
-      
-      // 🛡️ Fallback 4: Raw GitHub (Last emergency resort)
       "https://raw.githubusercontent.com/zxcty54/content_base/main/$relativeFilePath?t=$ts",
     ];
 
@@ -179,7 +167,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
             if (decoded != null) {
               parsedData = decoded;
               rawJsonSuccess = rawBody;
-              break; // ✅ Pehla responsive CDN hit aate hi loop break hoga
+              break;
             }
           }
         }
@@ -200,7 +188,6 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
           await prefs.setString(cacheDateKey, todayStr);
         }
       } else {
-        // Saare CDN fail hone par purana saved cache display karein
         String? oldCache = prefs.getString(cacheDataKey);
         if (oldCache != null) {
           try {
@@ -230,130 +217,77 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
     if (_isLoading) {
       return Container(
-        height: 200,
+        height: 180,
+        alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: isDark ? const Color(0xFF0F172A) : Colors.white,
+          color: isDark ? const Color(0xFF1E293B) : Colors.white,
           borderRadius: BorderRadius.circular(22),
+          border: Border.all(
+            color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+          ),
         ),
-        child: const Center(
-          child: CircularProgressIndicator(color: Color(0xFFD97706), strokeWidth: 2.5),
-        ),
+        child: const CircularProgressIndicator.adaptive(),
       );
     }
 
     if (_alertNewsList.isEmpty) return const SizedBox.shrink();
 
-    final BoxDecoration cardDecoration = BoxDecoration(
-      gradient: isDark
-          ? const LinearGradient(
-              colors: [Color(0xFF0F172A), Color(0xFF1E293B)],
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-            )
-          : const LinearGradient(
-              colors: [Color(0xFFFFFFFF), Color(0xFFFFFDF7)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-      borderRadius: BorderRadius.circular(24),
-      border: Border.all(
-        color: isDark ? const Color(0xFF334155) : const Color(0xFFFDE68A),
-        width: 1.5,
-      ),
-      boxShadow: [
-        BoxShadow(
-          color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.08 : 0.12),
-          blurRadius: 24,
-          offset: const Offset(0, 8),
-          spreadRadius: 2,
-        ),
-        BoxShadow(
-          color: Colors.black.withOpacity(isDark ? 0.35 : 0.03),
-          blurRadius: 10,
-          offset: const Offset(0, 3),
-        ),
-      ],
-    );
+    final item = _alertNewsList[_activeIndex];
+    final String itemId = (item['id'] ?? item['title'] ?? '').toString();
+    final bool isSaved = _bookmarkedIds.contains(itemId);
+    final List bullets = (item['bullets'] as List?) ?? [];
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // 🏆 Top Header with High Yield Badge
+        // 🏆 Section Header
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 4.0, vertical: 6.0),
+          padding: const EdgeInsets.symmetric(horizontal: 2.0, vertical: 4.0),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Row(
                 children: [
                   Container(
-                    padding: const EdgeInsets.all(7),
+                    padding: const EdgeInsets.all(6),
                     decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        colors: [Color(0xFFF59E0B), Color(0xFFD97706)],
-                      ),
-                      borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
-                        BoxShadow(
-                          color: const Color(0xFFD97706).withOpacity(0.35),
-                          blurRadius: 8,
-                          offset: const Offset(0, 2),
-                        ),
-                      ],
+                      color: const Color(0xFFF59E0B).withOpacity(0.14),
+                      borderRadius: BorderRadius.circular(8),
                     ),
-                    child: const Text('🏆', style: TextStyle(fontSize: 14)),
+                    child: const Text('🏆', style: TextStyle(fontSize: 13)),
                   ),
-                  const SizedBox(width: 10),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        'First in India Express',
-                        style: TextStyle(
-                          fontSize: 16.5,
-                          fontWeight: FontWeight.w900,
-                          letterSpacing: -0.3,
-                          color: isDark ? Colors.white : const Color(0xFF0F172A),
-                        ),
-                      ),
-                      Text(
-                        'Direct Scoring 1-Liners for Exams',
-                        style: TextStyle(
-                          fontSize: 10.5,
-                          fontWeight: FontWeight.w500,
-                          color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
-                        ),
-                      ),
-                    ],
+                  const SizedBox(width: 8),
+                  Text(
+                    'First in India Express',
+                    style: TextStyle(
+                      fontSize: 15.5,
+                      fontWeight: FontWeight.w800,
+                      letterSpacing: -0.3,
+                      color: isDark ? Colors.white : const Color(0xFF0F172A),
+                    ),
                   ),
                 ],
               ),
-              // High Yield Pill
               Container(
-                padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFDC2626),
-                  borderRadius: BorderRadius.circular(20),
-                  boxShadow: [
-                    BoxShadow(
-                      color: const Color(0xFFDC2626).withOpacity(0.3),
-                      blurRadius: 6,
-                      offset: const Offset(0, 2),
-                    ),
-                  ],
+                  color: isDark ? const Color(0xFF1E293B) : const Color(0xFFEFF6FF),
+                  borderRadius: BorderRadius.circular(8),
+                  border: Border.all(
+                    color: isDark ? const Color(0xFF334155) : const Color(0xFFDBEAFE),
+                  ),
                 ),
-                child: const Row(
+                child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(Icons.bolt_rounded, size: 12, color: Colors.white),
-                    SizedBox(width: 2),
+                    const Icon(Icons.bolt_rounded, size: 12, color: Color(0xFF2563EB)),
+                    const SizedBox(width: 2),
                     Text(
-                      'HIGH YIELD',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 9.5,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 0.6,
+                      '${_activeIndex + 1}/${_alertNewsList.length}',
+                      style: const TextStyle(
+                        fontSize: 10.5,
+                        fontWeight: FontWeight.w800,
+                        color: Color(0xFF2563EB),
                       ),
                     ),
                   ],
@@ -363,477 +297,198 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
           ),
         ),
 
-        const SizedBox(height: 6),
+        const SizedBox(height: 8),
 
-        // 📇 Main Focus Card
+        // 📇 Modernized Main Card
         Container(
           width: double.infinity,
-          decoration: cardDecoration,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(24),
-            child: Stack(
-              children: [
-                // Top Glowing Amber Bar
-                Positioned(
-                  top: 0,
-                  left: 0,
-                  right: 0,
-                  height: 4.5,
-                  child: Container(
-                    decoration: const BoxDecoration(
-                      gradient: LinearGradient(
-                        colors: [Color(0xFFF59E0B), Color(0xFFEA580C), Color(0xFFDC2626)],
-                      ),
-                    ),
-                  ),
-                ),
-
-                Column(
-                  mainAxisSize: MainAxisSize.min,
+          decoration: BoxDecoration(
+            color: isDark ? const Color(0xFF1E293B) : Colors.white,
+            borderRadius: BorderRadius.circular(22),
+            border: Border.all(
+              color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+              width: 1.2,
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: isDark
+                    ? Colors.black.withOpacity(0.3)
+                    : const Color(0xFF0F172A).withOpacity(0.04),
+                blurRadius: 16,
+                offset: const Offset(0, 6),
+              ),
+            ],
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Top Action Bar inside Card
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 14, 16, 0),
+                child: Row(
                   children: [
-                    // Dynamic Content PageView
-                    _ExpandablePageView(
-                      controller: _pageController,
-                      itemCount: _alertNewsList.length,
-                      onPageChanged: (i) => setState(() => _activeIndex = i),
-                      itemBuilder: (context, index) {
-                        return _buildCardContent(_alertNewsList[index], isDark);
-                      },
-                    ),
-
-                    // Bottom Navigation Bar
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          // Previous Button
-                          InkWell(
-                            onTap: _activeIndex > 0
-                                ? () {
-                                    _pageController.previousPage(
-                                      duration: const Duration(milliseconds: 250),
-                                      curve: Curves.easeInOut,
-                                    );
-                                  }
-                                : null,
-                            borderRadius: BorderRadius.circular(10),
-                            child: Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-                              child: Row(
-                                children: [
-                                  Icon(
-                                    Icons.arrow_back_ios_new_rounded,
-                                    size: 13,
-                                    color: _activeIndex > 0
-                                        ? const Color(0xFFD97706)
-                                        : Colors.grey.withOpacity(0.35),
-                                  ),
-                                  const SizedBox(width: 4),
-                                  Text(
-                                    'Prev',
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                      fontWeight: FontWeight.w700,
-                                      color: _activeIndex > 0
-                                        ? const Color(0xFFD97706)
-                                        : Colors.grey.withOpacity(0.35),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ),
-
-                          // Indicator Center
-                          Container(
-                            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                            decoration: BoxDecoration(
-                              color: isDark ? Colors.white.withOpacity(0.06) : const Color(0xFFF8FAFC),
-                              borderRadius: BorderRadius.circular(20),
-                              border: Border.all(
-                                color: isDark ? Colors.white12 : const Color(0xFFE2E8F0),
-                              ),
-                            ),
-                            child: Text(
-                              '${_activeIndex + 1} of ${_alertNewsList.length}',
-                              style: TextStyle(
-                                fontSize: 11,
-                                fontWeight: FontWeight.w800,
-                                color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF475569),
-                              ),
-                            ),
-                          ),
-
-                          // Next Alert Button
-                          Material(
-                            color: Colors.transparent,
-                            child: InkWell(
-                              onTap: () {
-                                if (_activeIndex < _alertNewsList.length - 1) {
-                                  _pageController.nextPage(
-                                    duration: const Duration(milliseconds: 250),
-                                    curve: Curves.easeInOut,
-                                  );
-                                } else {
-                                  _pageController.animateToPage(
-                                    0,
-                                    duration: const Duration(milliseconds: 300),
-                                    curve: Curves.easeInOut,
-                                  );
-                                }
-                              },
-                              borderRadius: BorderRadius.circular(12),
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
-                                decoration: BoxDecoration(
-                                  gradient: const LinearGradient(
-                                    colors: [Color(0xFFF59E0B), Color(0xFFD97706)],
-                                  ),
-                                  borderRadius: BorderRadius.circular(12),
-                                  boxShadow: [
-                                    BoxShadow(
-                                      color: const Color(0xFFD97706).withOpacity(0.35),
-                                      blurRadius: 8,
-                                      offset: const Offset(0, 3),
-                                    ),
-                                  ],
-                                ),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Text(
-                                      _activeIndex < _alertNewsList.length - 1 ? 'Next Alert' : 'First Alert',
-                                      style: const TextStyle(
-                                        fontSize: 12,
-                                        fontWeight: FontWeight.w900,
-                                        color: Colors.white,
-                                      ),
-                                    ),
-                                    const SizedBox(width: 4),
-                                    const Icon(Icons.arrow_forward_ios_rounded, size: 12, color: Colors.white),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    // Website Archive Link
                     Container(
-                      margin: const EdgeInsets.fromLTRB(16, 0, 16, 14),
+                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                       decoration: BoxDecoration(
-                        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFFFFBEB),
-                        borderRadius: BorderRadius.circular(12),
-                        border: Border.all(
-                          color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.3 : 0.4),
-                          width: 1,
+                        color: const Color(0xFFF59E0B).withOpacity(0.12),
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: Text(
+                        (item['exam_tag'] ?? 'STATIC GK / PYQ').toString().toUpperCase(),
+                        style: const TextStyle(
+                          color: Color(0xFFD97706),
+                          fontSize: 10,
+                          fontWeight: FontWeight.w800,
+                          letterSpacing: 0.3,
                         ),
                       ),
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () => _openUrl(_websiteFullDataUrl),
-                          borderRadius: BorderRadius.circular(12),
-                          child: const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 12, vertical: 10),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text('🌐', style: TextStyle(fontSize: 14)),
-                                    SizedBox(width: 8),
-                                    Text(
-                                      'Explore All 2026 Archives on Website',
-                                      style: TextStyle(
-                                        fontSize: 11.5,
-                                        fontWeight: FontWeight.w800,
-                                        color: Color(0xFFD97706),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Icon(Icons.open_in_new_rounded, size: 14, color: Color(0xFFD97706)),
-                              ],
-                            ),
-                          ),
-                        ),
+                    ),
+                    const Spacer(),
+                    IconButton(
+                      visualDensity: VisualDensity.compact,
+                      padding: EdgeInsets.zero,
+                      constraints: const BoxConstraints(),
+                      icon: Icon(
+                        isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
+                        size: 19,
+                        color: isSaved ? const Color(0xFFF59E0B) : const Color(0xFF94A3B8),
                       ),
+                      onPressed: () => _toggleBookmark(item),
+                    ),
+                    const SizedBox(width: 12),
+                    IconButton(
+                      visualDensity: VisualDensity.compact,
+                      padding: EdgeInsets.zero,
+                      constraints: const BoxConstraints(),
+                      icon: const Icon(
+                        Icons.share_outlined,
+                        size: 18,
+                        color: Color(0xFF94A3B8),
+                      ),
+                      onPressed: () => _shareContent(item),
                     ),
                   ],
                 ),
-              ],
-            ),
+              ),
+
+              // News Title
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 10, 16, 8),
+                child: Text(
+                  item['title'] ?? '',
+                  style: TextStyle(
+                    fontSize: 15.5,
+                    fontWeight: FontWeight.w800,
+                    height: 1.35,
+                    color: isDark ? Colors.white : const Color(0xFF0F172A),
+                  ),
+                ),
+              ),
+
+              // Bullets Section
+              if (bullets.isNotEmpty)
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  child: Column(
+                    children: bullets.map((bullet) {
+                      return Padding(
+                        padding: const EdgeInsets.only(bottom: 6.0),
+                        child: Row(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Padding(
+                              padding: EdgeInsets.only(top: 4.5),
+                              child: Icon(
+                                Icons.circle,
+                                size: 6,
+                                color: Color(0xFF2563EB),
+                              ),
+                            ),
+                            const SizedBox(width: 8),
+                            Expanded(
+                              child: Text(
+                                bullet.toString(),
+                                style: TextStyle(
+                                  fontSize: 12.5,
+                                  height: 1.45,
+                                  fontWeight: FontWeight.w500,
+                                  color: isDark
+                                      ? const Color(0xFFCBD5E1)
+                                      : const Color(0xFF334155),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                ),
+
+              const SizedBox(height: 10),
+              Divider(
+                height: 1,
+                color: isDark ? const Color(0xFF334155) : const Color(0xFFF1F5F9),
+              ),
+
+              // Bottom Navigation & Archive Footer
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    InkWell(
+                      borderRadius: BorderRadius.circular(8),
+                      onTap: () => _openUrl(_websiteFullDataUrl),
+                      child: const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 4, vertical: 6),
+                        child: Row(
+                          children: [
+                            Icon(Icons.public_rounded, size: 14, color: Color(0xFF2563EB)),
+                            SizedBox(width: 4),
+                            Text(
+                              'Full 2026 Archive',
+                              style: TextStyle(
+                                fontSize: 11.5,
+                                fontWeight: FontWeight.w700,
+                                color: Color(0xFF2563EB),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Row(
+                      children: [
+                        IconButton(
+                          visualDensity: VisualDensity.compact,
+                          icon: const Icon(Icons.arrow_back_ios_rounded, size: 14),
+                          color: _activeIndex > 0
+                              ? (isDark ? Colors.white70 : const Color(0xFF334155))
+                              : Colors.grey.withOpacity(0.3),
+                          onPressed: _activeIndex > 0
+                              ? () => setState(() => _activeIndex--)
+                              : null,
+                        ),
+                        IconButton(
+                          visualDensity: VisualDensity.compact,
+                          icon: const Icon(Icons.arrow_forward_ios_rounded, size: 14),
+                          color: _activeIndex < _alertNewsList.length - 1
+                              ? const Color(0xFF2563EB)
+                              : Colors.grey.withOpacity(0.3),
+                          onPressed: _activeIndex < _alertNewsList.length - 1
+                              ? () => setState(() => _activeIndex++)
+                              : () => setState(() => _activeIndex = 0),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ],
     );
-  }
-
-  Widget _buildCardContent(Map<String, dynamic> item, bool isDark) {
-    final List bullets = (item['bullets'] as List?) ?? [];
-    final String itemId = (item['id'] ?? item['title'] ?? '').toString();
-    final bool isSaved = _bookmarkedIds.contains(itemId);
-
-    final Color titleColor = isDark ? Colors.white : const Color(0xFF0F172A);
-    final Color bulletTextColor = isDark ? const Color(0xFFE2E8F0) : const Color(0xFF1E293B);
-
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 18, 16, 14),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Row(
-            children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4.5),
-                decoration: BoxDecoration(
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFFFEF3C7), Color(0xFFFDE68A)],
-                  ),
-                  borderRadius: BorderRadius.circular(8),
-                  border: Border.all(color: const Color(0xFFF59E0B), width: 1),
-                ),
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    const Text('⚡ 🏆', style: TextStyle(fontSize: 10)),
-                    const SizedBox(width: 4),
-                    Text(
-                      item['exam_tag'] ?? 'First in India / Static GK',
-                      style: const TextStyle(
-                        color: Color(0xFF92400E),
-                        fontSize: 11,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 0.2,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-
-              const Spacer(),
-
-              // Bookmark
-              InkWell(
-                onTap: () => _toggleBookmark(item),
-                borderRadius: BorderRadius.circular(8),
-                child: Container(
-                  padding: const EdgeInsets.all(7),
-                  decoration: BoxDecoration(
-                    color: isSaved
-                        ? const Color(0xFFF59E0B).withOpacity(0.2)
-                        : (isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9)),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: isSaved ? const Color(0xFFF59E0B) : (isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1)),
-                      width: 1,
-                    ),
-                  ),
-                  child: Icon(
-                    isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
-                    size: 17,
-                    color: isSaved ? const Color(0xFFD97706) : const Color(0xFF64748B),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 6),
-
-              // Share
-              InkWell(
-                onTap: () => _shareContent(item),
-                borderRadius: BorderRadius.circular(8),
-                child: Container(
-                  padding: const EdgeInsets.all(7),
-                  decoration: BoxDecoration(
-                    color: isDark ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(
-                      color: isDark ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
-                      width: 1,
-                    ),
-                  ),
-                  child: const Icon(
-                    Icons.share_outlined,
-                    size: 17,
-                    color: Color(0xFF64748B),
-                  ),
-                ),
-              ),
-            ],
-          ),
-
-          const SizedBox(height: 14),
-
-          // Heading
-          Text(
-            item['title'] ?? '',
-            style: TextStyle(
-              fontSize: 16.5,
-              fontWeight: FontWeight.w900,
-              color: titleColor,
-              height: 1.32,
-              letterSpacing: -0.3,
-            ),
-          ),
-
-          const SizedBox(height: 12),
-
-          // Bullets
-          ...bullets.map((bullet) {
-            return Padding(
-              padding: const EdgeInsets.only(bottom: 8.0),
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                decoration: BoxDecoration(
-                  color: isDark ? Colors.white.withOpacity(0.04) : const Color(0xFFF8FAFC),
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(
-                    color: isDark ? Colors.white.withOpacity(0.08) : const Color(0xFFE2E8F0),
-                    width: 0.8,
-                  ),
-                ),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(top: 2),
-                      child: Icon(
-                        Icons.check_circle_rounded,
-                        size: 15,
-                        color: Color(0xFF059669),
-                      ),
-                    ),
-                    const SizedBox(width: 8),
-                    Expanded(
-                      child: Text(
-                        bullet.toString(),
-                        style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w500,
-                          color: bulletTextColor,
-                          height: 1.35,
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            );
-          }),
-        ],
-      ),
-    );
-  }
-}
-
-class _ExpandablePageView extends StatefulWidget {
-  final PageController controller;
-  final int itemCount;
-  final IndexedWidgetBuilder itemBuilder;
-  final ValueChanged<int>? onPageChanged;
-
-  const _ExpandablePageView({
-    required this.controller,
-    required this.itemCount,
-    required this.itemBuilder,
-    this.onPageChanged,
-  });
-
-  @override
-  State<_ExpandablePageView> createState() => _ExpandablePageViewState();
-}
-
-class _ExpandablePageViewState extends State<_ExpandablePageView> {
-  late List<double> _heights;
-  int _currentPage = 0;
-
-  double get _currentHeight =>
-      (_heights.isEmpty || _currentPage >= _heights.length || _heights[_currentPage] == 0)
-          ? 220
-          : _heights[_currentPage];
-
-  @override
-  void initState() {
-    super.initState();
-    _heights = List.filled(widget.itemCount, 0.0);
-    widget.controller.addListener(_onScroll);
-  }
-
-  void _onScroll() {
-    final page = widget.controller.page?.round() ?? 0;
-    if (_currentPage != page && page < _heights.length) {
-      setState(() => _currentPage = page);
-    }
-  }
-
-  @override
-  void dispose() {
-    widget.controller.removeListener(_onScroll);
-    super.dispose();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 180),
-      curve: Curves.easeOutCubic,
-      height: _currentHeight,
-      child: PageView.builder(
-        controller: widget.controller,
-        itemCount: widget.itemCount,
-        onPageChanged: widget.onPageChanged,
-        itemBuilder: (context, index) {
-          return OverflowBox(
-            minHeight: 0,
-            maxHeight: double.infinity,
-            alignment: Alignment.topCenter,
-            child: _ItemHeightNotifier(
-              onHeightChange: (h) {
-                if (index < _heights.length && _heights[index] != h) {
-                  setState(() => _heights[index] = h);
-                }
-              },
-              child: widget.itemBuilder(context, index),
-            ),
-          );
-        },
-      ),
-    );
-  }
-}
-
-class _ItemHeightNotifier extends StatefulWidget {
-  final Widget child;
-  final ValueChanged<double> onHeightChange;
-
-  const _ItemHeightNotifier({required this.child, required this.onHeightChange});
-
-  @override
-  State<_ItemHeightNotifier> createState() => _ItemHeightNotifierState();
-}
-
-class _ItemHeightNotifierState extends State<_ItemHeightNotifier> {
-  double _lastH = 0.0;
-
-  @override
-  Widget build(BuildContext context) {
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      if (mounted) {
-        final box = context.findRenderObject() as RenderBox?;
-        if (box != null && box.hasSize) {
-          final h = box.size.height;
-          if (_lastH != h) {
-            _lastH = h;
-            widget.onHeightChange(h);
-          }
-        }
-      }
-    });
-    return widget.child;
   }
 }
