@@ -347,6 +347,20 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                       },
                     ),
 
+                    // Kitni khabrein dekhi — progress line
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 2, 16, 10),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(99),
+                        child: LinearProgressIndicator(
+                          value: _alertNewsList.isEmpty ? 0 : (_activeIndex + 1) / _alertNewsList.length,
+                          minHeight: 4.5,
+                          backgroundColor: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                          valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF2563EB)),
+                        ),
+                      ),
+                    ),
+
                     // Bottom Navigation Bar
                     Padding(
                       padding: const EdgeInsets.fromLTRB(16, 0, 16, 14),
@@ -612,7 +626,60 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
             ],
           ),
 
-          const SizedBox(height: 14),
+          const SizedBox(height: 10),
+
+          // Category + Date patti
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF2563EB).withOpacity(isDark ? 0.20 : 0.09),
+                  borderRadius: BorderRadius.circular(99),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    const Icon(Icons.category_rounded, size: 11, color: Color(0xFF2563EB)),
+                    const SizedBox(width: 4),
+                    Text(
+                      (item['category'] ?? 'General').toString(),
+                      style: const TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w800,
+                        color: Color(0xFF1E40AF),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(width: 7),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                decoration: BoxDecoration(
+                  color: isDark ? Colors.white.withOpacity(0.07) : const Color(0xFFF1F5F9),
+                  borderRadius: BorderRadius.circular(99),
+                ),
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Icon(Icons.calendar_month_rounded, size: 11, color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B)),
+                    const SizedBox(width: 4),
+                    Text(
+                      (item['date'] ?? '').toString(),
+                      style: TextStyle(
+                        fontSize: 10,
+                        fontWeight: FontWeight.w700,
+                        color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF475569),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 12),
 
           // News Heading
           Text(
@@ -629,24 +696,33 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
           const SizedBox(height: 12),
 
           // High Contrast Bullets
-          ...bullets.map((bullet) {
+          ...bullets.asMap().entries.map((entry) {
             return Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
               child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.only(top: 2),
-                      child: Icon(
-                        Icons.check_circle_rounded,
-                        size: 15,
+                    Container(
+                      width: 19,
+                      height: 19,
+                      alignment: Alignment.center,
+                      decoration: const BoxDecoration(
                         color: Color(0xFF059669),
+                        shape: BoxShape.circle,
+                      ),
+                      child: Text(
+                        '${entry.key + 1}',
+                        style: const TextStyle(
+                          fontSize: 9.5,
+                          fontWeight: FontWeight.w900,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        bullet.toString(),
+                        entry.value.toString(),
                         style: TextStyle(
                           fontSize: 12.5,
                           fontWeight: FontWeight.w500,

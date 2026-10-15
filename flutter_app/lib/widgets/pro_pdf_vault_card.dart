@@ -164,6 +164,119 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
     }).take(6).toList();
   }
 
+  // Sabse nayi kitab ka bada featured card
+  Widget _featuredDoc(Map<String, dynamic> doc, bool isDark, Color textColor, Color subTextColor) {
+    final String docUrl = doc['url'] ?? _defaultWebsiteUrl;
+    final Color accent = Color(doc['color'] as int);
+
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 10),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () => _launchUrl(docUrl),
+          borderRadius: BorderRadius.circular(18),
+          child: Container(
+            padding: const EdgeInsets.all(14),
+            decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                colors: [Color(0xFF172554), Color(0xFF1E40AF), Color(0xFF2563EB)],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+              borderRadius: BorderRadius.circular(18),
+              boxShadow: [
+                BoxShadow(
+                  color: const Color(0xFF1E40AF).withOpacity(isDark ? 0.25 : 0.22),
+                  blurRadius: 14,
+                  offset: const Offset(0, 6),
+                ),
+              ],
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 52,
+                  height: 66,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(Icons.picture_as_pdf_rounded, size: 22, color: Color(0xFFDC2626)),
+                      const SizedBox(height: 2),
+                      Text(
+                        'PDF',
+                        style: TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: accent),
+                      ),
+                    ],
+                  ),
+                ),
+                const SizedBox(width: 13),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      const Text(
+                        '★ FEATURED • SABSE NAYI',
+                        style: TextStyle(
+                          color: Color(0xFFFBBF24),
+                          fontSize: 9,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: 0.8,
+                        ),
+                      ),
+                      const SizedBox(height: 5),
+                      Text(
+                        doc['title'],
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 14.5,
+                          fontWeight: FontWeight.w800,
+                          height: 1.25,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Text(
+                        doc['meta'],
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: const TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600),
+                      ),
+                      const SizedBox(height: 9),
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 6),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(99),
+                        ),
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              'Open PDF',
+                              style: TextStyle(color: Color(0xFF1E40AF), fontSize: 11, fontWeight: FontWeight.w900),
+                            ),
+                            SizedBox(width: 4),
+                            Icon(Icons.arrow_forward_rounded, size: 12, color: Color(0xFF1E40AF)),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
   Future<void> _launchUrl(String targetUrl) async {
     final Uri uri = Uri.parse(targetUrl);
     try {
@@ -240,7 +353,9 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
                           ),
                         ),
                         Text(
-                          'Standard notes & formula sheets',
+                          _allLiveDocs.isEmpty
+                              ? 'Standard notes & formula sheets'
+                              : '${_allLiveDocs.length} resources • Notes & books',
                           style: TextStyle(fontSize: 12, color: subTextColor),
                         ),
                       ],
@@ -333,8 +448,10 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
                   ),
                 ),
               )
-            else
-              ...visibleDocs.map((doc) {
+            else ...[
+              if (_searchQuery.isEmpty && visibleDocs.isNotEmpty)
+                _featuredDoc(visibleDocs.first, isDark, textColor, subTextColor),
+              ...(_searchQuery.isEmpty ? visibleDocs.skip(1) : visibleDocs).map((doc) {
                 final Color accent = Color(doc['color'] as int);
                 final String badgeText = (doc['badge'] ?? 'NEW').toString().toUpperCase();
                 final String docUrl = doc['url'] ?? _defaultWebsiteUrl;
@@ -437,6 +554,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
                   ),
                 );
               }),
+            ],
 
             const SizedBox(height: 6),
 

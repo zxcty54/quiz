@@ -538,6 +538,39 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                             ],
                           ),
                           const SizedBox(height: 12),
+                          Builder(builder: (_) {
+                            final dayNum = int.tryParse(
+                                  payload.config.cycleDay.replaceAll(RegExp(r'[^0-9]'), ''),
+                                ) ??
+                                1;
+                            return Row(
+                              children: [
+                                ...List.generate(7, (i) {
+                                  final active = i < dayNum;
+                                  return Expanded(
+                                    child: Container(
+                                      height: 4,
+                                      margin: EdgeInsets.only(right: i == 6 ? 0 : 4),
+                                      decoration: BoxDecoration(
+                                        color: active ? themeColor : (isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                                        borderRadius: BorderRadius.circular(99),
+                                      ),
+                                    ),
+                                  );
+                                }),
+                                const SizedBox(width: 9),
+                                Text(
+                                  'Day $dayNum/7',
+                                  style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w900,
+                                    color: themeColor,
+                                  ),
+                                ),
+                              ],
+                            );
+                          }),
+                          const SizedBox(height: 13),
                           Row(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -607,13 +640,30 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
                               ),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
-                                children: frontHighlights.map((pt) {
+                                children: frontHighlights.asMap().entries.map((entry) {
+                                  final pt = entry.value;
                                   return Padding(
                                     padding: const EdgeInsets.only(bottom: 7),
                                     child: Row(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Icon(Icons.check_circle_outline_rounded, size: 14, color: themeColor),
+                                        Container(
+                                          width: 18,
+                                          height: 18,
+                                          alignment: Alignment.center,
+                                          decoration: BoxDecoration(
+                                            color: themeColor.withOpacity(0.14),
+                                            shape: BoxShape.circle,
+                                          ),
+                                          child: Text(
+                                            '${entry.key + 1}',
+                                            style: TextStyle(
+                                              fontSize: 9.5,
+                                              fontWeight: FontWeight.w900,
+                                              color: themeColor,
+                                            ),
+                                          ),
+                                        ),
                                         const SizedBox(width: 8),
                                         Expanded(
                                           child: Text(
