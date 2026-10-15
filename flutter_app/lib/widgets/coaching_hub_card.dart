@@ -336,10 +336,10 @@ class CoachingHubCardState extends State<CoachingHubCard> {
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(color: const Color(0xFF2563EB).withOpacity(0.25)),
                           ),
-                          child: const Column(
+                          child: Column(
                             children: [
-                              Text('4', style: TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: Color(0xFF2563EB))),
-                              Text('CBT Mocks', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
+                              Text('$_availableMocksCount', style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 16, color: Color(0xFF2563EB))),
+                              const Text('CBT Mocks', style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFF2563EB))),
                             ],
                           ),
                         ),
