@@ -48,6 +48,86 @@ class CommunityPostCard extends StatefulWidget {
 class _CommunityPostCardState extends State<CommunityPostCard> {
   static const Color _primaryBlue = Color(0xFF2563EB);
 
+  static const List<Color> _avatarPalette = [
+    Color(0xFF2563EB),
+    Color(0xFF7C3AED),
+    Color(0xFF059669),
+    Color(0xFFD97706),
+    Color(0xFFDB2777),
+    Color(0xFF0891B2),
+    Color(0xFF4F46E5),
+    Color(0xFF9333EA),
+  ];
+
+  String _initials(String name) {
+    final parts = name.trim().split(RegExp(r'\s+')).where((e) => e.isNotEmpty).toList();
+    if (parts.isEmpty) return 'A';
+    if (parts.length == 1) return parts.first[0].toUpperCase();
+    return (parts[0][0] + parts[1][0]).toUpperCase();
+  }
+
+  Color _avatarColor(String seed) {
+    var hash = 0;
+    for (final unit in seed.codeUnits) {
+      hash = (hash * 31 + unit) & 0x7fffffff;
+    }
+    return _avatarPalette[hash % _avatarPalette.length];
+  }
+
+  String _formatCount(dynamic value) {
+    final v = value is num ? value.toDouble() : (double.tryParse(value?.toString() ?? '') ?? 0);
+    if (v >= 1000000) {
+      final s = (v / 1000000).toStringAsFixed(1).replaceAll(RegExp(r'\.0$'), '');
+      return '${s}M';
+    }
+    if (v >= 1000) {
+      final s = (v / 1000).toStringAsFixed(1).replaceAll(RegExp(r'\.0$'), '');
+      return '${s}K';
+    }
+    return v.toInt().toString();
+  }
+
+  String _relativeTime(dynamic value) {
+    if (value == null) return '';
+    final dt = DateTime.tryParse(value.toString());
+    if (dt == null) return '';
+    final diff = DateTime.now().difference(dt.toLocal());
+    if (diff.isNegative || diff.inMinutes < 1) return 'now';
+    if (diff.inMinutes < 60) return '${diff.inMinutes}m';
+    if (diff.inHours < 24) return '${diff.inHours}h';
+    if (diff.inDays < 7) return '${diff.inDays}d';
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return '${dt.day} ${months[dt.month - 1]}';
+  }
+
+  Widget _actionItem({
+    required IconData icon,
+    required String count,
+    required Color color,
+    VoidCallback? onTap,
+  }) {
+    return Expanded(
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(20),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 8),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, size: 19, color: color),
+              const SizedBox(width: 5),
+              Text(
+                count,
+                style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w600, color: color),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   late bool _liked;
   late bool _saved;
   late int _likesCount;
@@ -812,7 +892,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                       ),
                     ),
                     Text(
-                      '$attempts Aspirants Attempted',
+                      '${_formatCount(attempts)} Aspirants Attempted',
                       style: TextStyle(fontSize: 11, color: widget.isDarkMode ? Colors.grey[400] : const Color(0xFF64748B)),
                     ),
                   ],
@@ -930,6 +1010,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
       authorHandle = authorDisplayName.trim().split(' ').first.toLowerCase();
     }
 
+    final String postTime = _relativeTime(widget.post['created_at']);
     final String? imgUrl = widget.post['image_url'];
     final Map<String, dynamic>? pollData = widget.post['poll_data'];
     final int commentsCount = widget.post['comments_count'] ?? 0;
@@ -958,10 +1039,12 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                 },
                 child: CircleAvatar(
                   radius: 19,
-                  backgroundColor: isVerifiedCreator ? _primaryBlue : (widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFF64748B)),
+                  backgroundColor: isVerifiedCreator
+                      ? _primaryBlue
+                      : _avatarColor('$postCreatorId$authorDisplayName'),
                   child: Text(
-                    isVerifiedCreator ? ((creator['name'] ?? 'M')[0]).toUpperCase() : 'A',
-                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 13),
+                    _initials(authorDisplayName),
+                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 12),
                   ),
                 ),
               ),
@@ -984,16 +1067,26 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                       Row(
                         children: [
                           Flexible(
+                            flex: 2,
                             child: Text(
                               authorDisplayName,
-                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
+                              style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
                               overflow: TextOverflow.ellipsis,
                             ),
                           ),
-                          const SizedBox(width: 4),
-                          if (isVerifiedCreator) const Icon(Icons.verified, size: 14, color: _primaryBlue),
+                          if (isVerifiedCreator) ...[
+                            const SizedBox(width: 4),
+                            const Icon(Icons.verified, size: 14, color: _primaryBlue),
+                          ],
                           const SizedBox(width: 6),
-                          Text('@$authorHandle', style: TextStyle(color: Colors.grey[500], fontSize: 12)),
+                          Flexible(
+                            flex: 3,
+                            child: Text(
+                              '@$authorHandle${postTime.isNotEmpty ? ' · $postTime' : ''}',
+                              style: TextStyle(color: Colors.grey[500], fontSize: 12),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
                         ],
                       ),
                       Row(
@@ -1005,7 +1098,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                           Expanded(
                             child: Text(
                               isVerifiedCreator
-                                  ? '${creator['subject_specialty'] ?? 'Exam Mentor'} • ${creator['followers_count'] ?? 0} Followers'
+                                  ? '${creator['subject_specialty'] ?? 'Exam Mentor'} • ${_formatCount(creator['followers_count'] ?? 0)} Followers'
                                   : 'Aspirant • Active Member',
                               style: TextStyle(
                                 color: isVerifiedCreator ? _primaryBlue : Colors.grey[600],
@@ -1074,79 +1167,41 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
 
           const SizedBox(height: 14),
 
-          // Actions Row
+          // Actions Row — Twitter ki tarah poori width me barabar faila hua.
           Row(
             children: [
-              InkWell(
+              _actionItem(
+                icon: _liked ? Icons.thumb_up_rounded : Icons.thumb_up_alt_outlined,
+                count: _formatCount(_likesCount),
+                color: _liked
+                    ? _primaryBlue
+                    : (widget.isDarkMode ? Colors.white70 : const Color(0xFF536471)),
                 onTap: _handleLike,
-                borderRadius: BorderRadius.circular(18),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-                  child: Row(
-                    children: [
-                      Icon(_liked ? Icons.thumb_up_rounded : Icons.thumb_up_alt_outlined, size: 16, color: _liked ? _primaryBlue : Colors.grey[600]),
-                      const SizedBox(width: 5),
-                      Text('$_likesCount', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12.5, color: _liked ? _primaryBlue : (widget.isDarkMode ? Colors.white : const Color(0xFF1E293B)))),
-                    ],
-                  ),
-                ),
               ),
-              const SizedBox(width: 16),
-
-              InkWell(
+              _actionItem(
+                icon: Icons.chat_bubble_outline_rounded,
+                count: _formatCount(commentsCount),
+                color: widget.isDarkMode ? Colors.white70 : const Color(0xFF536471),
                 onTap: widget.onOpenComments,
-                borderRadius: BorderRadius.circular(18),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-                  child: Row(
-                    children: [
-                      const Icon(Icons.chat_bubble_outline_rounded, size: 15, color: Colors.grey),
-                      const SizedBox(width: 5),
-                      Text('$commentsCount', style: TextStyle(fontSize: 12.5, color: widget.isDarkMode ? Colors.white : _primaryBlue, fontWeight: FontWeight.bold)),
-                    ],
-                  ),
-                ),
               ),
-              const SizedBox(width: 16),
-
-              Row(
-                children: [
-                  const Icon(Icons.remove_red_eye_outlined, size: 15, color: Colors.grey),
-                  const SizedBox(width: 4),
-                  Text('${widget.post['views_count'] ?? 0}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
-                ],
+              _actionItem(
+                icon: Icons.remove_red_eye_outlined,
+                count: _formatCount(widget.post['views_count'] ?? 0),
+                color: widget.isDarkMode ? Colors.white54 : const Color(0xFF8899A6),
               ),
-              const SizedBox(width: 16),
-
-              InkWell(
+              _actionItem(
+                icon: _saved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
+                count: _formatCount(_bookmarksCount),
+                color: _saved
+                    ? _primaryBlue
+                    : (widget.isDarkMode ? Colors.white70 : const Color(0xFF536471)),
                 onTap: _handleBookmark,
-                borderRadius: BorderRadius.circular(18),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-                  child: Row(
-                    children: [
-                      Icon(_saved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded, size: 17, color: _saved ? _primaryBlue : Colors.grey),
-                      const SizedBox(width: 3),
-                      Text('$_bookmarksCount', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
-                    ],
-                  ),
-                ),
               ),
-              const Spacer(),
-
-              InkWell(
+              _actionItem(
+                icon: Icons.share_outlined,
+                count: _formatCount(widget.post['shares_count'] ?? 0),
+                color: widget.isDarkMode ? Colors.white70 : const Color(0xFF536471),
                 onTap: _sharePost,
-                borderRadius: BorderRadius.circular(18),
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 4),
-                  child: Row(
-                    children: [
-                      const Icon(Icons.share_outlined, size: 16, color: Colors.grey),
-                      const SizedBox(width: 4),
-                      Text('${widget.post['shares_count'] ?? 0}', style: const TextStyle(fontSize: 11.5, color: Colors.grey)),
-                    ],
-                  ),
-                ),
               ),
             ],
           ),
