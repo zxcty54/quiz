@@ -95,6 +95,40 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
     super.dispose();
   }
 
+  /// Comments ko thread ke hisab se lagao: reply hamesha apne
+  /// parent comment ke turant neeche aayega, beech me dusre
+  /// comments ghus kar use door nahi karenge (Reddit jaisa).
+  List<Map<String, dynamic>> _threadOrdered(List<Map<String, dynamic>> input) {
+    final byParent = <String, List<Map<String, dynamic>>>{};
+    final ids = input.map((e) => e['id']?.toString()).whereType<String>().toSet();
+
+    for (final c in input) {
+      final parent = c['parent_comment_id']?.toString();
+      final key = (parent == null || !ids.contains(parent)) ? '' : parent;
+      byParent.putIfAbsent(key, () => []).add(c);
+    }
+
+    final result = <Map<String, dynamic>>[];
+    final seen = <String>{};
+
+    void visit(String parentKey) {
+      for (final c in byParent[parentKey] ?? const <Map<String, dynamic>>[]) {
+        final id = c['id']?.toString() ?? '';
+        if (id.isNotEmpty && !seen.add(id)) continue;
+        result.add(c);
+        if (id.isNotEmpty) visit(id);
+      }
+    }
+
+    visit('');
+    // Koi comment kisi wajah se reh jaye (jaise parent delete ho gaya ho)
+    // to use kho mat do — aakhir me laga do.
+    for (final c in input) {
+      if (!result.contains(c)) result.add(c);
+    }
+    return result;
+  }
+
   Future<void> _fetchComments() async {
     try {
       final data = await Supabase.instance.client
@@ -105,7 +139,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
 
       if (mounted) {
         setState(() {
-          _comments = List<Map<String, dynamic>>.from(data);
+          _comments = _threadOrdered(List<Map<String, dynamic>>.from(data));
           _isLoadingComments = false;
         });
         _fetchMyCommentLikes();
@@ -522,7 +556,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
 
       _commentCtrl.clear();
       setState(() {
-        _comments.add(inserted);
+        _comments = _threadOrdered([..._comments, inserted]);
         _replyingToCommentId = null;
         _replyingToName = null;
         _isSubmitting = false;
@@ -621,44 +655,63 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                             final bool isReply = c['parent_comment_id'] != null;
                             final bool isMyComment = (c['user_handle'] ?? '').toString() == widget.currentLoggedInHandle;
 
+                            final cid = int.tryParse(c['id']?.toString() ?? '');
+                            final liked = cid != null && _likedCommentIds.contains(cid);
+                            final likeCount = (c['upvotes'] as num?)?.toInt() ?? 0;
+
                             return Container(
-                              margin: EdgeInsets.only(left: isReply ? 24.0 : 0.0, bottom: 8),
-                              padding: const EdgeInsets.all(10),
+                              margin: EdgeInsets.only(left: isReply ? 34.0 : 0.0),
+                              padding: const EdgeInsets.symmetric(vertical: 10),
                               decoration: BoxDecoration(
-                                color: isReply
-                                    ? (isDark ? const Color(0xFF334155).withOpacity(0.5) : const Color(0xFFF1F5F9))
-                                    : Colors.transparent,
-                                borderRadius: BorderRadius.circular(8),
-                                border: isReply ? const Border(left: BorderSide(color: _primaryBlue, width: 3)) : null,
+                                border: Border(
+                                  bottom: BorderSide(
+                                    color: dividerColor.withValues(alpha: 0.65),
+                                    width: 0.7,
+                                  ),
+                                ),
                               ),
                               child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  CircleAvatar(
-                                    radius: 15,
-                                    backgroundColor: _avatarColor(
-                                      '${c['user_handle'] ?? ''}${c['user_name'] ?? ''}',
-                                    ),
-                                    child: Text(
-                                      _initials((c['user_name'] ?? 'Aspirant').toString()),
-                                      style: const TextStyle(
-                                        color: Colors.white,
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 10,
+                                  // Avatar + reply thread line
+                                  Column(
+                                    children: [
+                                      CircleAvatar(
+                                        radius: 16,
+                                        backgroundColor: _avatarColor(
+                                          '${c['user_handle'] ?? ''}${c['user_name'] ?? ''}',
+                                        ),
+                                        child: Text(
+                                          _initials((c['user_name'] ?? 'Aspirant').toString()),
+                                          style: const TextStyle(
+                                            color: Colors.white,
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 10,
+                                          ),
+                                        ),
                                       ),
-                                    ),
+                                      if (isReply) ...[
+                                        const SizedBox(height: 4),
+                                        Container(
+                                          width: 1.6,
+                                          height: 14,
+                                          color: dividerColor,
+                                        ),
+                                      ],
+                                    ],
                                   ),
-                                  const SizedBox(width: 8),
+                                  const SizedBox(width: 10),
                                   Expanded(
                                     child: Column(
                                       crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
                                         Row(
+                                          crossAxisAlignment: CrossAxisAlignment.center,
                                           children: [
                                             Flexible(
                                               child: Text(
                                                 c['user_name'] ?? 'Aspirant',
-                                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                                                style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12.5),
                                                 overflow: TextOverflow.ellipsis,
                                               ),
                                             ),
@@ -674,75 +727,84 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                                               ),
                                             ],
                                             const Spacer(),
-                                            if (isMyComment) ...[
-                                              const SizedBox(width: 8),
-                                              GestureDetector(
-                                                onTap: () => _openCommentOptionsSheet(c),
-                                                child: Icon(
-                                                  Icons.more_horiz_rounded,
-                                                  size: 18,
-                                                  color: isDark ? Colors.grey[400] : Colors.grey[600],
-                                                ),
-                                              ),
-                                            ],
-                                          ],
-                                        ),
-                                        const SizedBox(height: 4),
-                                        widget.buildRichTextContent(
-                                          c['comment_text'] ?? c['content'] ?? '',
-                                          fontSize: 13,
-                                        ),
-                                        const SizedBox(height: 6),
-                                        Builder(builder: (_) {
-                                          final cid = int.tryParse(c['id']?.toString() ?? '');
-                                          final liked = cid != null && _likedCommentIds.contains(cid);
-                                          final likeCount = (c['upvotes'] as num?)?.toInt() ?? 0;
-                                          return Row(
-                                            children: [
+                                            if (isMyComment)
                                               InkWell(
                                                 borderRadius: BorderRadius.circular(14),
-                                                onTap: cid == null ? null : () => _toggleCommentLike(c),
+                                                onTap: () => _openCommentOptionsSheet(c),
                                                 child: Padding(
-                                                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 3),
-                                                  child: Row(
-                                                    mainAxisSize: MainAxisSize.min,
-                                                    children: [
-                                                      Icon(
-                                                        liked ? Icons.thumb_up_rounded : Icons.thumb_up_outlined,
-                                                        size: 14,
-                                                        color: liked ? _primaryBlue : Colors.grey[600],
-                                                      ),
-                                                      if (likeCount > 0) ...[
-                                                        const SizedBox(width: 4),
-                                                        Text(
-                                                          '$likeCount',
-                                                          style: TextStyle(
-                                                            fontSize: 11,
-                                                            fontWeight: FontWeight.w700,
-                                                            color: liked ? _primaryBlue : Colors.grey[600],
-                                                          ),
-                                                        ),
-                                                      ],
-                                                    ],
+                                                  padding: const EdgeInsets.all(4),
+                                                  child: Icon(
+                                                    Icons.more_horiz_rounded,
+                                                    size: 18,
+                                                    color: isDark ? Colors.grey[400] : Colors.grey[600],
                                                   ),
                                                 ),
                                               ),
-                                              const SizedBox(width: 8),
-                                              GestureDetector(
-                                                onTap: () {
-                                                  setState(() {
-                                                    _replyingToCommentId = c['id'];
-                                                    _replyingToName = c['user_name'] ?? 'Aspirant';
-                                                  });
-                                                },
-                                                child: Text(
-                                                  'Reply',
-                                                  style: TextStyle(color: Colors.grey[600], fontSize: 11, fontWeight: FontWeight.w700),
+                                          ],
+                                        ),
+                                        const SizedBox(height: 3),
+                                        widget.buildRichTextContent(
+                                          c['comment_text'] ?? c['content'] ?? '',
+                                          fontSize: 13.5,
+                                        ),
+                                        const SizedBox(height: 7),
+                                        // Action row: text ke seedhe neeche, left se.
+                                        Row(
+                                          children: [
+                                            InkWell(
+                                              borderRadius: BorderRadius.circular(14),
+                                              onTap: cid == null ? null : () => _toggleCommentLike(c),
+                                              child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+                                                child: Row(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  children: [
+                                                    Icon(
+                                                      liked ? Icons.thumb_up_rounded : Icons.thumb_up_outlined,
+                                                      size: 15,
+                                                      color: liked ? _primaryBlue : Colors.grey[600],
+                                                    ),
+                                                    if (likeCount > 0) ...[
+                                                      const SizedBox(width: 4),
+                                                      Text(
+                                                        '$likeCount',
+                                                        style: TextStyle(
+                                                          fontSize: 11,
+                                                          fontWeight: FontWeight.w700,
+                                                          color: liked ? _primaryBlue : Colors.grey[600],
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ],
                                                 ),
                                               ),
-                                            ],
-                                          );
-                                        }),
+                                            ),
+                                            const SizedBox(width: 22),
+                                            InkWell(
+                                              borderRadius: BorderRadius.circular(14),
+                                              onTap: () {
+                                                setState(() {
+                                                  _replyingToCommentId = c['id'];
+                                                  _replyingToName = c['user_name'] ?? 'Aspirant';
+                                                });
+                                              },
+                                              child: Padding(
+                                                padding: const EdgeInsets.symmetric(horizontal: 2, vertical: 4),
+                                                child: Row(
+                                                  mainAxisSize: MainAxisSize.min,
+                                                  children: [
+                                                    Icon(Icons.chat_bubble_outline_rounded, size: 14, color: Colors.grey[600]),
+                                                    const SizedBox(width: 5),
+                                                    Text(
+                                                      'Reply',
+                                                      style: TextStyle(color: Colors.grey[600], fontSize: 11, fontWeight: FontWeight.w700),
+                                                    ),
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ),
