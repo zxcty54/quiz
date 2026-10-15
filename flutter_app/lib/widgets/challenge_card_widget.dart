@@ -63,8 +63,8 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
-    final surface = isDark ? const Color(0xFF111C30) : Colors.white;
-    final border = isDark ? const Color(0xFF263449) : const Color(0xFFF0DFC2);
+    final surface = isDark ? const Color(0xFF111C30) : const Color(0xFFFFFBEB);
+    final border = isDark ? const Color(0xFF263449) : const Color(0xFFF3DFAE);
     final titleColor = isDark ? Colors.white : const Color(0xFF0F172A);
     final muted = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
     const accent = Color(0xFFD97706);

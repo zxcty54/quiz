@@ -181,8 +181,8 @@ class _HomeTabState extends State<HomeTab> {
   Widget _buildLearnPreviewCard(BuildContext context) {
     final percentDisplay = (widget.lastLearnProgress * 100).toInt();
     final isDark = widget.isDarkMode;
-    final surface = isDark ? const Color(0xFF111C30) : Colors.white;
-    final border = isDark ? const Color(0xFF263449) : const Color(0xFFDDE8E3);
+    final surface = isDark ? const Color(0xFF111C30) : const Color(0xFFF2FBF7);
+    final border = isDark ? const Color(0xFF263449) : const Color(0xFFCDEBDD);
     final titleColor = isDark ? Colors.white : const Color(0xFF0F172A);
     final muted = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
     const accent = Color(0xFF0F766E);
