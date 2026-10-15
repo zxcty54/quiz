@@ -114,7 +114,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
       width: double.infinity,
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFF2563EB), Color(0xFF0EA5E9), Color(0xFF14B8A6)],
+          colors: [Color(0xFF6366F1), Color(0xFF8B5CF6), Color(0xFFA78BFA)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -122,7 +122,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
         border: Border.all(color: Colors.white.withValues(alpha: isDark ? 0.16 : 0.35)),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF0EA5E9).withValues(alpha: isDark ? 0.25 : 0.22),
+            color: const Color(0xFF8B5CF6).withValues(alpha: isDark ? 0.25 : 0.22),
             blurRadius: 22,
             offset: const Offset(0, 10),
           ),
