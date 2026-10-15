@@ -83,57 +83,10 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           themeMode: currentMode,
 
-          // 🎨 Light Theme
-          theme: ThemeData(
-            useMaterial3: true,
-            brightness: Brightness.light,
-            scaffoldBackgroundColor: const Color(0xFFF8FAFC),
-            cardColor: Colors.white,
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color(0xFF2563EB),
-              brightness: Brightness.light,
-              surface: Colors.white,
-            ),
-            appBarTheme: const AppBarTheme(
-              centerTitle: true,
-              backgroundColor: Colors.white,
-              foregroundColor: Color(0xFF0F172A),
-              elevation: 0,
-            ),
-            cardTheme: CardThemeData(
-              color: Colors.white,
-              elevation: 1.5,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            ),
-          ),
-
-          // 🌙 Dark Theme
-          darkTheme: ThemeData(
-            useMaterial3: true,
-            brightness: Brightness.dark,
-            scaffoldBackgroundColor: const Color(0xFF0B0F19),
-            cardColor: const Color(0xFF1E293B),
-            colorScheme: ColorScheme.fromSeed(
-              seedColor: const Color(0xFF2563EB),
-              brightness: Brightness.dark,
-              surface: const Color(0xFF1E293B),
-            ),
-            appBarTheme: const AppBarTheme(
-              centerTitle: true,
-              backgroundColor: const Color(0xFF1E293B),
-              foregroundColor: Colors.white,
-              elevation: 0,
-            ),
-            cardTheme: CardThemeData(
-              color: const Color(0xFF1E293B),
-              elevation: 2,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
-            ),
-            dialogTheme: const DialogThemeData(
-              backgroundColor: Color(0xFF1E293B),
-              titleTextStyle: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
-            ),
-          ),
+          // 🎨 Ek hi design bhasha: rounded surfaces, blue–violet
+          // identity aur amber highlights — light/dark dono me.
+          theme: _buildTheme(Brightness.light),
+          darkTheme: _buildTheme(Brightness.dark),
 
           // The splash is the first screen in both cases; a first-time user
           // goes on to the onboarding, a returning user straight home.
@@ -142,6 +95,155 @@ class MyApp extends StatelessWidget {
               : const SplashScreen(nextScreen: OnboardingWelcomeScreen()),
         );
       },
+    );
+  }
+
+  static ThemeData _buildTheme(Brightness brightness) {
+    final isDark = brightness == Brightness.dark;
+    final scheme = ColorScheme.fromSeed(
+      seedColor: const Color(0xFF2563EB),
+      brightness: brightness,
+      primary: isDark ? const Color(0xFF60A5FA) : const Color(0xFF2563EB),
+      secondary: isDark ? const Color(0xFFA78BFA) : const Color(0xFF7C3AED),
+      tertiary: const Color(0xFFF59E0B),
+      surface: isDark ? const Color(0xFF111C30) : Colors.white,
+    );
+
+    final surface = scheme.surface;
+    final border = isDark ? const Color(0xFF263449) : const Color(0xFFE3E9F5);
+
+    return ThemeData(
+      useMaterial3: true,
+      brightness: brightness,
+      colorScheme: scheme,
+      scaffoldBackgroundColor: isDark ? const Color(0xFF070B14) : const Color(0xFFF5F7FF),
+      cardColor: surface,
+      dividerColor: border,
+      appBarTheme: AppBarTheme(
+        centerTitle: true,
+        backgroundColor: isDark ? const Color(0xFF0B1220) : Colors.white,
+        foregroundColor: isDark ? Colors.white : const Color(0xFF0F172A),
+        elevation: 0,
+        scrolledUnderElevation: 0.5,
+        surfaceTintColor: Colors.transparent,
+        titleTextStyle: TextStyle(
+          color: isDark ? Colors.white : const Color(0xFF0F172A),
+          fontSize: 17,
+          fontWeight: FontWeight.w800,
+          letterSpacing: -0.2,
+        ),
+        iconTheme: IconThemeData(
+          color: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF334155),
+          size: 22,
+        ),
+      ),
+      cardTheme: CardThemeData(
+        color: surface,
+        elevation: 0,
+        surfaceTintColor: Colors.transparent,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20),
+          side: BorderSide(color: border),
+        ),
+      ),
+      dialogTheme: DialogThemeData(
+        backgroundColor: surface,
+        surfaceTintColor: Colors.transparent,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
+        titleTextStyle: TextStyle(
+          color: isDark ? Colors.white : const Color(0xFF0F172A),
+          fontWeight: FontWeight.w800,
+          fontSize: 17,
+        ),
+      ),
+      bottomSheetTheme: BottomSheetThemeData(
+        backgroundColor: surface,
+        surfaceTintColor: Colors.transparent,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.vertical(top: Radius.circular(26)),
+        ),
+      ),
+      navigationBarTheme: NavigationBarThemeData(
+        height: 68,
+        backgroundColor: isDark ? const Color(0xFF0B1220) : Colors.white,
+        surfaceTintColor: Colors.transparent,
+        indicatorColor: scheme.primary.withValues(alpha: isDark ? 0.22 : 0.12),
+        labelTextStyle: WidgetStateProperty.resolveWith((states) {
+          final selected = states.contains(WidgetState.selected);
+          return TextStyle(
+            color: selected ? scheme.primary : (isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B)),
+            fontSize: 11,
+            fontWeight: selected ? FontWeight.w800 : FontWeight.w600,
+          );
+        }),
+        iconTheme: WidgetStateProperty.resolveWith((states) {
+          final selected = states.contains(WidgetState.selected);
+          return IconThemeData(
+            color: selected ? scheme.primary : (isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B)),
+            size: 23,
+          );
+        }),
+      ),
+      chipTheme: ChipThemeData(
+        backgroundColor: isDark ? const Color(0xFF1A2740) : const Color(0xFFEFF4FF),
+        selectedColor: scheme.primary.withValues(alpha: isDark ? 0.28 : 0.14),
+        side: BorderSide(color: border),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(99)),
+        labelStyle: TextStyle(
+          color: isDark ? Colors.white : const Color(0xFF1E3A8A),
+          fontWeight: FontWeight.w700,
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: isDark ? const Color(0xFF0D1628) : const Color(0xFFF8FAFF),
+        contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 13),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(color: border),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(color: border),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(16),
+          borderSide: BorderSide(color: scheme.primary, width: 1.4),
+        ),
+      ),
+      elevatedButtonTheme: ElevatedButtonThemeData(
+        style: ElevatedButton.styleFrom(
+          backgroundColor: scheme.primary,
+          foregroundColor: Colors.white,
+          elevation: 0,
+          padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 13),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          textStyle: const TextStyle(fontWeight: FontWeight.w800),
+        ),
+      ),
+      filledButtonTheme: FilledButtonThemeData(
+        style: FilledButton.styleFrom(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          textStyle: const TextStyle(fontWeight: FontWeight.w800),
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          foregroundColor: scheme.primary,
+          textStyle: const TextStyle(fontWeight: FontWeight.w800),
+        ),
+      ),
+      snackBarTheme: SnackBarThemeData(
+        backgroundColor: isDark ? const Color(0xFFE2E8F0) : const Color(0xFF0F172A),
+        contentTextStyle: TextStyle(color: isDark ? const Color(0xFF0F172A) : Colors.white),
+        behavior: SnackBarBehavior.floating,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+      ),
+      progressIndicatorTheme: ProgressIndicatorThemeData(
+        color: scheme.primary,
+        linearTrackColor: isDark ? const Color(0xFF263449) : const Color(0xFFE2E8F0),
+        circularTrackColor: isDark ? const Color(0xFF263449) : const Color(0xFFE2E8F0),
+      ),
     );
   }
 }

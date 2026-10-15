@@ -436,6 +436,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         ],
       ),
       drawer: Drawer(
+        width: 320,
+        backgroundColor: _isDarkMode ? const Color(0xFF0B1220) : Colors.white,
+        shape: const RoundedRectangleBorder(
+          borderRadius: BorderRadius.horizontal(right: Radius.circular(30)),
+        ),
         child: FutureBuilder<SharedPreferences>(
           future: SharedPreferences.getInstance(),
           builder: (context, snapshot) {
@@ -459,162 +464,175 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   child: ListView(
                     padding: EdgeInsets.zero,
                     children: [
-                      UserAccountsDrawerHeader(
+                      Container(
+                        width: double.infinity,
+                        padding: EdgeInsets.fromLTRB(
+                          20,
+                          MediaQuery.of(context).padding.top + 20,
+                          16,
+                          20,
+                        ),
                         decoration: const BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
+                            colors: [Color(0xFF172554), Color(0xFF4C1D95), Color(0xFF2563EB)],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),
                         ),
-                        accountName: Text(
-                          userName,
-                          style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                        ),
-                        accountEmail: Text(
-                          subtitleText,
-                          style: const TextStyle(color: Colors.white70, fontSize: 12),
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                        ),
-                        currentAccountPicture: const CircleAvatar(
-                          backgroundColor: Colors.white,
-                          child: Icon(Icons.person, color: Color(0xFF2563EB), size: 36),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                const _BrandMark(size: 36),
+                                const SizedBox(width: 10),
+                                const Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'MockTester',
+                                        style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w900, letterSpacing: -0.2),
+                                      ),
+                                      Text(
+                                        'BPSC • BSSC • Bihar Police',
+                                        style: TextStyle(color: Colors.white70, fontSize: 9.5, fontWeight: FontWeight.w700),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                IconButton(
+                                  tooltip: 'Band karo',
+                                  onPressed: () => Navigator.pop(context),
+                                  icon: const Icon(Icons.close_rounded, color: Colors.white70, size: 20),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 20),
+                            Row(
+                              children: [
+                                Stack(
+                                  clipBehavior: Clip.none,
+                                  children: [
+                                    Container(
+                                      width: 49,
+                                      height: 49,
+                                      alignment: Alignment.center,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        gradient: const LinearGradient(
+                                          colors: [Color(0xFFF59E0B), Color(0xFFEC4899)],
+                                          begin: Alignment.topLeft,
+                                          end: Alignment.bottomRight,
+                                        ),
+                                        border: Border.all(color: Colors.white.withValues(alpha: 0.85), width: 1.5),
+                                      ),
+                                      child: Text(
+                                        _drawerInitials(userName),
+                                        style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w900),
+                                      ),
+                                    ),
+                                    Positioned(
+                                      right: 0,
+                                      bottom: 1,
+                                      child: Container(
+                                        width: 11,
+                                        height: 11,
+                                        decoration: BoxDecoration(
+                                          color: const Color(0xFF22C55E),
+                                          shape: BoxShape.circle,
+                                          border: Border.all(color: Colors.white, width: 1.5),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(width: 12),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        userName,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: const TextStyle(color: Colors.white, fontSize: 16.5, fontWeight: FontWeight.w900),
+                                      ),
+                                      const SizedBox(height: 3),
+                                      Text(
+                                        subtitleText,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                        style: const TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(height: 14),
+                            Row(
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFFF59E0B),
+                                    borderRadius: BorderRadius.circular(99),
+                                  ),
+                                  child: const Text(
+                                    'ASPIRANT',
+                                    style: TextStyle(color: Color(0xFF451A03), fontSize: 8.5, fontWeight: FontWeight.w900, letterSpacing: 0.8),
+                                  ),
+                                ),
+                                const SizedBox(width: 7),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withValues(alpha: 0.14),
+                                    borderRadius: BorderRadius.circular(99),
+                                    border: Border.all(color: Colors.white.withValues(alpha: 0.20)),
+                                  ),
+                                  child: const Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Icon(Icons.bolt_rounded, size: 10, color: Color(0xFFFDE68A)),
+                                      SizedBox(width: 3),
+                                      Text('PADHAI MODE ON', style: TextStyle(color: Colors.white, fontSize: 8, fontWeight: FontWeight.w900, letterSpacing: 0.6)),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                       ),
-                      ListTile(
-                        leading: const Icon(Icons.dashboard_customize_rounded, color: Color(0xFF2563EB)),
-                        title: const Text('Creator Studio & Analytics', style: TextStyle(fontWeight: FontWeight.bold)),
-                        subtitle: const Text('Dashboard, Quizzes, Notes & Mock Builder'),
-                        trailing: const Icon(Icons.arrow_forward_ios, size: 14),
+
+                      _drawerSection('EXPLORE'),
+                      _drawerTile(
+                        icon: Icons.dashboard_customize_rounded,
+                        color: const Color(0xFF7C3AED),
+                        title: 'Creator Studio',
+                        subtitle: 'Dashboard, quizzes, notes & builder',
                         onTap: () {
                           Navigator.pop(context);
                           _openCreatorStudio();
                         },
                       ),
-                      const Divider(),
-
-                      // 🛠️ Aspirant Utility Tools Section
-                      Theme(
-                        data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
-                        child: ExpansionTile(
-                          initiallyExpanded: true,
-                          leading: const Icon(Icons.handyman_rounded, color: Color(0xFFB45309)),
-                          title: const Text(
-                            'Aspirant Utility Tools',
-                            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14.5),
-                          ),
-                          children: [
-                            ListTile(
-                              contentPadding: const EdgeInsets.only(left: 32, right: 16),
-                              leading: Container(
-                                padding: const EdgeInsets.all(6),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFFB45309).withValues(alpha: 0.12),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: const Icon(
-                                  Icons.photo_size_select_large_rounded,
-                                  size: 18,
-                                  color: Color(0xFFB45309),
-                                ),
-                              ),
-                              title: const Text(
-                                'Photo & Sign Resizer',
-                                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
-                              ),
-                              subtitle: const Text(
-                                'BPSC, BSSC, Police (<20KB / 50KB)',
-                                style: TextStyle(fontSize: 11),
-                              ),
-                              trailing: Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF16A34A).withValues(alpha: 0.15),
-                                  borderRadius: BorderRadius.circular(4),
-                                ),
-                                child: const Text(
-                                  'READY',
-                                  style: TextStyle(
-                                    fontSize: 9,
-                                    fontWeight: FontWeight.w900,
-                                    color: Color(0xFF16A34A),
-                                  ),
-                                ),
-                              ),
-                              onTap: () {
-                                Navigator.pop(context);
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (_) => ExamPhotoResizerScreen(isDark: _isDarkMode),
-                                  ),
-                                );
-                              },
-                            ),
-                            ListTile(
-                              contentPadding: const EdgeInsets.only(left: 32, right: 16),
-                              leading: Container(
-                                padding: const EdgeInsets.all(6),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF2563EB).withValues(alpha: 0.12),
-                                  borderRadius: BorderRadius.circular(8),
-                                ),
-                                child: const Icon(
-                                  Icons.picture_as_pdf_rounded,
-                                  size: 18,
-                                  color: Color(0xFF2563EB),
-                                ),
-                              ),
-                              title: const Text(
-                                'Doc & ID Card Merger',
-                                style: TextStyle(fontWeight: FontWeight.w700, fontSize: 13.5),
-                              ),
-                              subtitle: const Text(
-                                'ID Card Front/Back • 1-Doc PDF (<100KB)',
-                                style: TextStyle(fontSize: 11),
-                              ),
-                              trailing: Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: const Color(0xFF2563EB).withValues(alpha: 0.15),
-                                  borderRadius: BorderRadius.circular(4),
-                                ),
-                                child: const Text(
-                                  'NEW',
-                                  style: TextStyle(
-                                    fontSize: 9,
-                                    fontWeight: FontWeight.w900,
-                                    color: Color(0xFF2563EB),
-                                  ),
-                                ),
-                              ),
-                              onTap: () {
-                                Navigator.pop(context);
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (_) => ExamDocMergerScreen(isDark: _isDarkMode),
-                                  ),
-                                );
-                              },
-                            ),
-                          ],
-                        ),
-                      ),
-                      const Divider(),
-
-                      ListTile(
-                        leading: const Icon(Icons.dynamic_feed_rounded, color: Color(0xFF2563EB)),
-                        title: const Text('Community Feed'),
+                      _drawerTile(
+                        icon: Icons.dynamic_feed_rounded,
+                        color: const Color(0xFF2563EB),
+                        title: 'Community Feed',
+                        subtitle: 'Doubts, posts aur doston ki help',
                         onTap: () {
                           Navigator.pop(context);
                           setState(() => _currentBottomIndex = 3);
                         },
                       ),
-                      ListTile(
-                        leading: const Icon(Icons.school_outlined),
-                        title: const Text('Learn Hub'),
+                      _drawerTile(
+                        icon: Icons.school_rounded,
+                        color: const Color(0xFF059669),
+                        title: 'Learn Hub',
+                        subtitle: 'Subjects aur chapters padho',
                         onTap: () {
                           Navigator.pop(context);
                           Navigator.push(
@@ -623,45 +641,137 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                           ).then((_) => _loadRealtimeProgress());
                         },
                       ),
-                      ListTile(
-                        leading: const Icon(Icons.person_outline),
-                        title: const Text('My Profile'),
+                      _drawerTile(
+                        icon: Icons.person_rounded,
+                        color: const Color(0xFFDB2777),
+                        title: 'My Profile',
+                        subtitle: 'Progress, settings aur account',
                         onTap: () {
                           Navigator.pop(context);
                           setState(() => _currentBottomIndex = 4);
                         },
                       ),
-                      ListTile(
-                        leading: const Icon(Icons.privacy_tip_outlined, color: Colors.grey),
-                        title: const Text('Privacy Policy', style: TextStyle(fontSize: 13.5)),
+
+                      _drawerSection('ASPIRANT TOOLS'),
+                      Container(
+                        margin: const EdgeInsets.symmetric(horizontal: 12),
+                        decoration: BoxDecoration(
+                          color: _isDarkMode ? const Color(0xFF111C30) : const Color(0xFFF8FAFF),
+                          borderRadius: BorderRadius.circular(20),
+                          border: Border.all(color: _isDarkMode ? const Color(0xFF263449) : const Color(0xFFE3E9F5)),
+                        ),
+                        child: Theme(
+                          data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
+                          child: ExpansionTile(
+                            initiallyExpanded: true,
+                            tilePadding: const EdgeInsets.symmetric(horizontal: 14),
+                            childrenPadding: const EdgeInsets.only(bottom: 8),
+                            leading: Container(
+                              width: 38,
+                              height: 38,
+                              decoration: BoxDecoration(
+                                gradient: const LinearGradient(
+                                  colors: [Color(0xFFF59E0B), Color(0xFFF97316)],
+                                  begin: Alignment.topLeft,
+                                  end: Alignment.bottomRight,
+                                ),
+                                borderRadius: BorderRadius.circular(13),
+                              ),
+                              child: const Icon(Icons.handyman_rounded, size: 19, color: Colors.white),
+                            ),
+                            title: Text(
+                              'Utility Tools',
+                              style: TextStyle(
+                                color: _isDarkMode ? Colors.white : const Color(0xFF0F172A),
+                                fontWeight: FontWeight.w900,
+                                fontSize: 13.5,
+                              ),
+                            ),
+                            subtitle: Text(
+                              'Form bharne wale kaam ke tools',
+                              style: TextStyle(
+                                color: _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                                fontSize: 10.5,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
+                            children: [
+                              _drawerTile(
+                                indent: true,
+                                icon: Icons.photo_size_select_large_rounded,
+                                color: const Color(0xFFD97706),
+                                title: 'Photo & Sign Resizer',
+                                subtitle: 'BPSC • BSSC • Police size ready',
+                                badge: 'READY',
+                                badgeColor: const Color(0xFF16A34A),
+                                onTap: () {
+                                  Navigator.pop(context);
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) => ExamPhotoResizerScreen(isDark: _isDarkMode),
+                                    ),
+                                  );
+                                },
+                              ),
+                              _drawerTile(
+                                indent: true,
+                                icon: Icons.picture_as_pdf_rounded,
+                                color: const Color(0xFF2563EB),
+                                title: 'Doc & ID Card Merger',
+                                subtitle: 'Front/back mila kar ek PDF',
+                                badge: 'NEW',
+                                onTap: () {
+                                  Navigator.pop(context);
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                      builder: (_) => ExamDocMergerScreen(isDark: _isDarkMode),
+                                    ),
+                                  );
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+
+                      _drawerSection('SUPPORT'),
+                      _drawerTile(
+                        icon: Icons.privacy_tip_rounded,
+                        color: const Color(0xFF64748B),
+                        title: 'Privacy Policy',
+                        subtitle: 'App ke niyam aur jaankari',
                         onTap: () {
                           Navigator.pop(context);
                           _openWebsiteUrl('Privacy Policy', 'https://www.mocktester.online/p/privacy.html');
                         },
                       ),
+                      const SizedBox(height: 10),
                     ],
                   ),
                 ),
                 Container(
-                  margin: const EdgeInsets.all(12),
-                  padding: const EdgeInsets.all(10),
+                  margin: const EdgeInsets.fromLTRB(14, 8, 14, 14),
+                  padding: const EdgeInsets.all(11),
                   decoration: BoxDecoration(
-                    color: _isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
-                    borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: Colors.grey.withOpacity(0.2)),
+                    color: _isDarkMode ? const Color(0xFF111C30) : const Color(0xFFFFFBEB),
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: _isDarkMode ? const Color(0xFF263449) : const Color(0xFFFDE68A)),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      const Icon(Icons.info_outline_rounded, size: 16, color: Colors.amber),
+                      const Icon(Icons.info_outline_rounded, size: 16, color: Color(0xFFD97706)),
                       const SizedBox(width: 8),
                       Expanded(
                         child: Text(
                           'Disclaimer: MockTester is an independent educational prep platform and is NOT affiliated with, endorsed by, or representing any government entity (BPSC, SSC, etc.).',
                           style: TextStyle(
-                            fontSize: 10,
-                            color: _isDarkMode ? Colors.white60 : Colors.black87,
-                            height: 1.3,
+                            fontSize: 9.5,
+                            color: _isDarkMode ? Colors.white60 : const Color(0xFF92400E),
+                            height: 1.35,
+                            fontWeight: FontWeight.w600,
                           ),
                         ),
                       ),
@@ -713,22 +823,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
         ],
       ),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _currentBottomIndex,
-        onDestinationSelected: (idx) {
-          setState(() => _currentBottomIndex = idx);
-          if (idx == 0) _loadRealtimeProgress();
-          if (idx == 1) _fetchSubjectMappingLive();
-          if (idx == 2) _fetchSectionalDataLive();
-        },
-        destinations: const [
-          NavigationDestination(icon: Icon(Icons.home_outlined), selectedIcon: Icon(Icons.home_rounded), label: 'Home'),
-          NavigationDestination(icon: Icon(Icons.menu_book_outlined), selectedIcon: Icon(Icons.menu_book_rounded), label: 'Revision'),
-          NavigationDestination(icon: Icon(Icons.assignment_outlined), selectedIcon: Icon(Icons.assignment_rounded), label: 'Sectional'),
-          NavigationDestination(icon: Icon(Icons.dynamic_feed_outlined), selectedIcon: Icon(Icons.dynamic_feed_rounded), label: 'Community'),
-          NavigationDestination(icon: Icon(Icons.person_outline_rounded), selectedIcon: Icon(Icons.person_rounded), label: 'Profile'),
-        ],
-      ),
+      bottomNavigationBar: _buildBottomNavigation(),
     );
   }
 
