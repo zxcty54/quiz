@@ -10,7 +10,16 @@ import '../services/user_stats_service.dart';
 class HomeGreetingHeader extends StatefulWidget {
   final bool isDarkMode;
 
-  const HomeGreetingHeader({super.key, required this.isDarkMode});
+  /// Parent jab is number ko badhaye (jaise pull-to-refresh par),
+  /// greeting apne aankde dobara load karti hai — app restart ki
+  /// zaroorat nahi padti.
+  final int reloadToken;
+
+  const HomeGreetingHeader({
+    super.key,
+    required this.isDarkMode,
+    this.reloadToken = 0,
+  });
 
   @override
   State<HomeGreetingHeader> createState() => _HomeGreetingHeaderState();
@@ -25,6 +34,14 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
   void initState() {
     super.initState();
     _dataFuture = _load();
+  }
+
+  @override
+  void didUpdateWidget(HomeGreetingHeader oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.reloadToken != widget.reloadToken) {
+      setState(() => _dataFuture = _load());
+    }
   }
 
   Future<_HeaderData> _load() async {
