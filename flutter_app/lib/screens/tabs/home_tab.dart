@@ -3,16 +3,14 @@ import '../../widgets/home_widgets.dart';
 import '../../widgets/latest_jobs_widget.dart';
 import '../../widgets/daily_bulletin_widget.dart';
 import '../../widgets/first_in_india_widget.dart';
-import '../../widgets/trust_hero_banner.dart';
-import '../../widgets/launch_roadmap_card.dart';
 import '../../widgets/pro_pdf_vault_card.dart';
 import '../../widgets/coaching_hub_card.dart';
-import '../../widgets/coaching_onboarding_cta_widget.dart';
 import '../../widgets/hall_of_fame_carousel_widget.dart';
 import '../../widgets/bihar_events_carousel_widget.dart'; 
 import '../../widgets/know_your_bihar_widget.dart';
 import '../../widgets/district_top_leaderboard_widget.dart';
 import '../../widgets/challenge_card_widget.dart';
+import '../../widgets/home_greeting_header.dart';
 
 class HomeTab extends StatefulWidget {
   final Map<String, dynamic> appConfig;
@@ -73,6 +71,10 @@ class _HomeTabState extends State<HomeTab> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // 0. PERSONAL HEADER (naam, aaj ka goal, streak, kamzor topic)
+            HomeGreetingHeader(isDarkMode: widget.isDarkMode),
+            const SizedBox(height: 16),
+
             // 1. TODAY TICKER
             if (widget.appConfig['today_update']?['show'] == true) ...[
               TodayUpdateTickerWidget(
@@ -82,55 +84,52 @@ class _HomeTabState extends State<HomeTab> {
               const SizedBox(height: 16),
             ],
 
-            // 🛡️ 2. HERO TRUST BANNER
-            TrustHeroBannerWidget(isDarkMode: widget.isDarkMode),
-            const SizedBox(height: 16),
+            // 2. CONTINUE LEARNING
+            _buildLearnPreviewCard(context),
+            const SizedBox(height: 18),
 
-            // 🏫 3. BIHAR COACHING HUB
+            // 3. MY COACHING / DISCOVER COACHING
+            // (code dalne par widget apne aap joined coaching ka card ban jata hai)
             CoachingHubCard(
               key: _coachingHubKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 👨‍🏫 4. LEARN PREVIEW CARD
-            _buildLearnPreviewCard(context),
+            // 4. DAILY CHALLENGE
+            ChallengeCardWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 18),
 
-            // 📰 5. DAILY BULLETIN
+            // 5. DISTRICT LEADERBOARD
+            DistrictTopLeaderboardWidget(isDarkMode: widget.isDarkMode),
+            const SizedBox(height: 18),
+
+            // 6. AAJ KI PADHAI
             DailyBulletinWidget(
               key: _bulletinWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📢 6. LATEST JOBS
-            LatestJobsWidget(
-              key: _jobsWidgetKey,
-              isDarkMode: widget.isDarkMode,
-            ),
-            const SizedBox(height: 18),
-
-            // 🏆 7. FIRST IN INDIA EXPRESS
             FirstInIndiaWidget(
               key: _firstInIndiaWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 🌐 8. EVENTS & CULTURAL AFFAIRS
-            BiharEventsCarouselWidget(
-              isDarkMode: widget.isDarkMode,
-            ),
-            const SizedBox(height: 18),
-
-            // 🗺️ 9. KNOW YOUR BIHAR
             KnowYourBiharWidget(
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 📑 10. PDF VAULT CARD (books_database.json auto-sync)
+            // 7. LATEST JOBS
+            LatestJobsWidget(
+              key: _jobsWidgetKey,
+              isDarkMode: widget.isDarkMode,
+            ),
+            const SizedBox(height: 18),
+
+            // 8. PDF VAULT
             ProPdfVaultCard(
               key: _pdfVaultKey,
               isDarkMode: widget.isDarkMode,
@@ -138,43 +137,23 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // 🏆 11. DISTRICT LEADERBOARD
-            DistrictTopLeaderboardWidget(isDarkMode: widget.isDarkMode),
-            const SizedBox(height: 8),
-
-            // ⚔️ 12. 1v1 DUEL CHALLENGE CARD
-            ChallengeCardWidget(isDarkMode: widget.isDarkMode),
+            // 9. EVENTS
+            BiharEventsCarouselWidget(
+              isDarkMode: widget.isDarkMode,
+            ),
             const SizedBox(height: 18),
 
-            // 🌐 13. DYNAMIC WEB HUB
-            _buildDynamicWebHubSection(context),
-            const SizedBox(height: 18),
-
-            // 14. ELIGIBILITY CHECKER
+            // 10. UTILITIES
             EligibilityCheckerWidget(
               isDarkMode: widget.isDarkMode,
               onTapUrl: widget.onTapUrl,
             ),
             const SizedBox(height: 18),
 
-            // 📅 15. LAUNCH ROADMAP
-            LaunchRoadmapCardWidget(
-              appConfig: widget.appConfig,
-              isDarkMode: widget.isDarkMode,
-            ),
+            _buildDynamicWebHubSection(context),
             const SizedBox(height: 18),
 
-            // 🏫 16. COACHING ONBOARDING CTA
-            CoachingOnboardingCtaWidget(
-              isDarkMode: widget.isDarkMode,
-            ),
-            const SizedBox(height: 18),
-
-            // 17. TELEGRAM COMMUNITY
-            const TelegramCreatorWidget(),
-            const SizedBox(height: 20),
-
-            // 🏆 18. HALL OF FAME
+            // 11. SOCIAL PROOF
             HallOfFameCarouselWidget(
               key: _hallOfFameKey,
               isDarkMode: widget.isDarkMode,
@@ -230,13 +209,20 @@ class _HomeTabState extends State<HomeTab> {
                   ),
                 ),
               ),
-              Text(
-                '👨‍🏫 Aman Sir + 👦 Raju',
-                style: TextStyle(
-                  color: Colors.white.withOpacity(0.9),
-                  fontSize: 11,
-                  fontWeight: FontWeight.w700,
-                ),
+              Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.school_rounded, size: 13, color: Colors.white.withOpacity(0.9)),
+                  const SizedBox(width: 4),
+                  Text(
+                    'Aman Sir + Raju',
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(0.9),
+                      fontSize: 11,
+                      fontWeight: FontWeight.w700,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
