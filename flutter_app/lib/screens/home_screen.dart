@@ -10,7 +10,6 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:app_links/app_links.dart';
 
 import '../models/question_model.dart';
-import '../services/telegram_tracker.dart';
 import '../services/challenge_service.dart';
 import '../services/ai_explainer_service.dart';
 import 'challenge_quiz_screen.dart';
@@ -61,7 +60,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    TelegramTracker.initSession();
     _loadAllConfigs();
     _initChallengeDeepLinks();
     AiExplainerService.syncBatchMasteryEvolution();
@@ -144,7 +142,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
       if (mounted) setState(() => _unreadNotifications = rows.length);
     } catch (_) {
-      // user_notifications table/SQL na hone par silent fail
+      // user_notifications table/SQL na ho to ghanti bina badge ke rahegi.
     }
   }
 
@@ -158,21 +156,15 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   }
 
   Future<void> _loadAllConfigs() async {
+    // 🛡️ Safety net: agar koi async step atak jaye ya exception de, to bhi
+    // loading screen par app kabhi stuck na rahe. 6 second baad home khul hi
+    // jayega — jo data mil gaya hai uske saath, aur baaki sections live JSON se
+    // baad me bhar jate hain.
     Timer(const Duration(seconds: 6), () {
       if (mounted && _isLoadingConfig) {
         setState(() => _isLoadingConfig = false);
       }
     });
-
-    final prefs = await SharedPreferences.getInstance();
-
-    // 🌓 Sync persistent theme state from SharedPreferences
-    if (mounted) {
-      setState(() {
-        _isDarkMode = prefs.getBool('is_dark_mode') ?? false;
-        _isHindi = prefs.getBool('is_hindi') ?? true;
-      });
-    }
 
     await _loadRealtimeProgress();
 
@@ -190,6 +182,8 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     } catch (e) {
       debugPrint("Error loading home_data.json: $e");
     }
+
+    final prefs = await SharedPreferences.getInstance();
 
     String? cachedMapping = prefs.getString('cached_subject_mapping_json');
     if (cachedMapping != null && cachedMapping.isNotEmpty) {
@@ -278,10 +272,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     } catch (_) {}
 
     List<String> mirrorUrls = [
-      "https://cdn.statically.io/gh/zxcty54/content_base/main/$encodedPath",
-      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
-      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
       "https://raw.githack.com/zxcty54/content_base/main/$encodedPath",
+      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
+      "https://cdn.statically.io/gh/zxcty54/content_base/main/$encodedPath",
+      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
       "https://raw.githubusercontent.com/zxcty54/content_base/main/$encodedPath?t=$ts",
     ];
 
@@ -385,6 +379,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     if (_isLoadingConfig) {
+      // First paint after the splash. Pehle yahan plain white AppBar with sirf
+      // "MockTester" tha, jo splash ke baad achanak white flash jaisa lagta
+      // tha; ab loading screen bhi wahi branded bar use karti hai.
       return Scaffold(
         backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
         appBar: AppBar(
@@ -436,13 +433,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           ),
         ],
       ),
-
-      // 🚪 MODERN ROYAL BLUE DRAWER
       drawer: Drawer(
         width: 320,
-        backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : Colors.white,
+        backgroundColor: _isDarkMode ? const Color(0xFF0B1220) : Colors.white,
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.horizontal(right: Radius.circular(28)),
+          borderRadius: BorderRadius.horizontal(right: Radius.circular(30)),
         ),
         child: FutureBuilder<SharedPreferences>(
           future: SharedPreferences.getInstance(),
@@ -467,7 +462,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   child: ListView(
                     padding: EdgeInsets.zero,
                     children: [
-                      // 💙 DRAWER HERO HEADER (Deep Slate to Royal Blue)
                       Container(
                         width: double.infinity,
                         padding: EdgeInsets.fromLTRB(
@@ -478,7 +472,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                         ),
                         decoration: const BoxDecoration(
                           gradient: LinearGradient(
-                            colors: [Color(0xFF0F172A), Color(0xFF1E40AF), Color(0xFF2563EB)],
+                            colors: [Color(0xFF172554), Color(0xFF4C1D95), Color(0xFF2563EB)],
                             begin: Alignment.topLeft,
                             end: Alignment.bottomRight,
                           ),
@@ -496,26 +490,17 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                                     children: [
                                       Text(
                                         'MockTester',
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w900,
-                                          letterSpacing: -0.2,
-                                        ),
+                                        style: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w900, letterSpacing: -0.2),
                                       ),
                                       Text(
                                         'BPSC • BSSC • Bihar Police',
-                                        style: TextStyle(
-                                          color: Colors.white70,
-                                          fontSize: 9.5,
-                                          fontWeight: FontWeight.w700,
-                                        ),
+                                        style: TextStyle(color: Colors.white70, fontSize: 9.5, fontWeight: FontWeight.w700),
                                       ),
                                     ],
                                   ),
                                 ),
                                 IconButton(
-                                  tooltip: 'Close',
+                                  tooltip: 'Band karo',
                                   onPressed: () => Navigator.pop(context),
                                   icon: const Icon(Icons.close_rounded, color: Colors.white70, size: 20),
                                 ),
@@ -534,11 +519,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         gradient: const LinearGradient(
-                                          colors: [Color(0xFFF59E0B), Color(0xFFD97706)],
+                                          colors: [Color(0xFFF59E0B), Color(0xFFEC4899)],
                                           begin: Alignment.topLeft,
                                           end: Alignment.bottomRight,
                                         ),
-                                        border: Border.all(color: Colors.white.withOpacity(0.85), width: 1.5),
+                                        border: Border.all(color: Colors.white.withValues(alpha: 0.85), width: 1.5),
                                       ),
                                       child: Text(
                                         _drawerInitials(userName),
@@ -601,9 +586,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                                   decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(0.14),
+                                    color: Colors.white.withValues(alpha: 0.14),
                                     borderRadius: BorderRadius.circular(99),
-                                    border: Border.all(color: Colors.white.withOpacity(0.20)),
+                                    border: Border.all(color: Colors.white.withValues(alpha: 0.20)),
                                   ),
                                   child: const Row(
                                     mainAxisSize: MainAxisSize.min,
@@ -623,7 +608,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                       _drawerSection('EXPLORE'),
                       _drawerTile(
                         icon: Icons.dashboard_customize_rounded,
-                        color: const Color(0xFF1D4ED8),
+                        color: const Color(0xFF7C3AED),
                         title: 'Creator Studio',
                         subtitle: 'Dashboard, quizzes, notes & builder',
                         onTap: () {
@@ -656,7 +641,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                       ),
                       _drawerTile(
                         icon: Icons.person_rounded,
-                        color: const Color(0xFF0284C7),
+                        color: const Color(0xFFDB2777),
                         title: 'My Profile',
                         subtitle: 'Progress, settings aur account',
                         onTap: () {
@@ -669,9 +654,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                       Container(
                         margin: const EdgeInsets.symmetric(horizontal: 12),
                         decoration: BoxDecoration(
-                          color: _isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF8FAFC),
+                          color: _isDarkMode ? const Color(0xFF111C30) : const Color(0xFFF8FAFF),
                           borderRadius: BorderRadius.circular(20),
-                          border: Border.all(color: _isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+                          border: Border.all(color: _isDarkMode ? const Color(0xFF263449) : const Color(0xFFE3E9F5)),
                         ),
                         child: Theme(
                           data: Theme.of(context).copyWith(dividerColor: Colors.transparent),
@@ -684,7 +669,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                               height: 38,
                               decoration: BoxDecoration(
                                 gradient: const LinearGradient(
-                                  colors: [Color(0xFFF59E0B), Color(0xFFD97706)],
+                                  colors: [Color(0xFFF59E0B), Color(0xFFF97316)],
                                   begin: Alignment.topLeft,
                                   end: Alignment.bottomRight,
                                 ),
@@ -768,9 +753,9 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   margin: const EdgeInsets.fromLTRB(14, 8, 14, 14),
                   padding: const EdgeInsets.all(11),
                   decoration: BoxDecoration(
-                    color: _isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFFFFBEB),
+                    color: _isDarkMode ? const Color(0xFF111C30) : const Color(0xFFFFFBEB),
                     borderRadius: BorderRadius.circular(16),
-                    border: Border.all(color: _isDarkMode ? const Color(0xFF334155) : const Color(0xFFFDE68A)),
+                    border: Border.all(color: _isDarkMode ? const Color(0xFF263449) : const Color(0xFFFDE68A)),
                   ),
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -796,7 +781,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
           },
         ),
       ),
-
       body: IndexedStack(
         index: _currentBottomIndex,
         children: [
@@ -854,7 +838,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       child: Text(
         label,
         style: TextStyle(
-          color: _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+          color: _isDarkMode ? const Color(0xFF7C8DA6) : const Color(0xFF94A3B8),
           fontSize: 10,
           fontWeight: FontWeight.w900,
           letterSpacing: 1.25,
@@ -887,7 +871,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 9),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(17),
-              color: _isDarkMode ? Colors.white.withOpacity(0.025) : Colors.transparent,
+              color: _isDarkMode ? Colors.white.withValues(alpha: 0.025) : Colors.transparent,
             ),
             child: Row(
               children: [
@@ -896,13 +880,13 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   height: 38,
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
-                      colors: [color, color.withOpacity(0.72)],
+                      colors: [color, color.withValues(alpha: 0.68)],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
                     borderRadius: BorderRadius.circular(13),
                     boxShadow: [
-                      BoxShadow(color: color.withOpacity(0.22), blurRadius: 8, offset: const Offset(0, 3)),
+                      BoxShadow(color: color.withValues(alpha: 0.22), blurRadius: 8, offset: const Offset(0, 3)),
                     ],
                   ),
                   child: Icon(icon, size: 19, color: Colors.white),
@@ -934,7 +918,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
                     decoration: BoxDecoration(
-                      color: (badgeColor ?? color).withOpacity(0.14),
+                      color: (badgeColor ?? color).withValues(alpha: 0.14),
                       borderRadius: BorderRadius.circular(99),
                     ),
                     child: Text(
@@ -943,7 +927,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                     ),
                   )
                 else
-                  Icon(Icons.chevron_right_rounded, size: 18, color: subColor.withOpacity(0.65)),
+                  Icon(Icons.chevron_right_rounded, size: 18, color: subColor.withValues(alpha: 0.65)),
               ],
             ),
           ),
@@ -953,8 +937,11 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   }
 
   Widget _buildBottomNavigation() {
-    final surface = _isDarkMode ? const Color(0xFF1E293B) : Colors.white;
-    final border = _isDarkMode ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+    // Education platform ke liye shaant, bharosemand bar:
+    // koi floating capsule ya gradient nahi — seedha full-width bar,
+    // upar patli line, chuna hua tab sirf neele rang me.
+    final surface = _isDarkMode ? const Color(0xFF0B1220) : Colors.white;
+    final border = _isDarkMode ? const Color(0xFF22314C) : const Color(0xFFE5EAF2);
 
     return Container(
       decoration: BoxDecoration(
@@ -982,7 +969,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   Widget _bottomNavItem(int index, IconData icon, IconData selectedIcon, String label) {
     final selected = _currentBottomIndex == index;
     const primary = Color(0xFF2563EB);
-    final muted = _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+    final muted = _isDarkMode ? const Color(0xFF8EA0B8) : const Color(0xFF8492A6);
 
     return Expanded(
       child: Material(
@@ -1030,6 +1017,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
+  /// Loading aur loaded — dono AppBars ka same branded title.
   Widget _brandAppBarTitle() {
     return Row(
       children: [
@@ -1064,8 +1052,10 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   }
 
   Widget _buildSkeletonLoading() {
-    final Color base = _isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0);
-    final Color highlight = _isDarkMode ? const Color(0xFF334155) : const Color(0xFFF1F5F9);
+    // Skeleton ab theme follow karta hai (pehle hamesha white boxes the,
+    // dark mode me wo screen jal rahi thi).
+    final Color base = _isDarkMode ? const Color(0xFF1B2438) : const Color(0xFFE8EDF6);
+    final Color highlight = _isDarkMode ? const Color(0xFF243050) : const Color(0xFFF6F8FC);
 
     return ListView(
       padding: const EdgeInsets.all(16),
@@ -1327,6 +1317,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   }
 }
 
+/// AppBar ka branded logo tile (gradient + chart glyph).
 class _BrandMark extends StatelessWidget {
   const _BrandMark({this.size = 32});
 
@@ -1340,7 +1331,7 @@ class _BrandMark extends StatelessWidget {
       height: size,
       decoration: BoxDecoration(
         gradient: const LinearGradient(
-          colors: [Color(0xFF2563EB), Color(0xFF1D4ED8)],
+          colors: [Color(0xFF2563EB), Color(0xFF4F46E5)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
@@ -1378,6 +1369,7 @@ class _BrandMark extends StatelessWidget {
   }
 }
 
+/// Loading state ka ek shimmering placeholder block.
 class _SkeletonBox extends StatelessWidget {
   const _SkeletonBox({
     required this.height,
