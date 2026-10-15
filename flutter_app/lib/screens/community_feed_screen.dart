@@ -791,7 +791,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                     const SizedBox(width: 8),
                     Expanded(
                       child: Text(
-                        '$pending doubt jawab ke intezaar me hai',
+                        '$pending doubts waiting for answers',
                         style: const TextStyle(fontSize: 12, fontWeight: FontWeight.w700, color: Color(0xFFB45309)),
                       ),
                     ),
@@ -802,7 +802,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                         padding: const EdgeInsets.symmetric(horizontal: 8),
                         minimumSize: const Size(0, 32),
                       ),
-                      child: const Text('Jawab do', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 12)),
+                      child: const Text('Comment', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 12)),
                     ),
                   ],
                 ),

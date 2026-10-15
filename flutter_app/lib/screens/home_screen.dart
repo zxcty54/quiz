@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:shimmer/shimmer.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:app_links/app_links.dart';
@@ -18,6 +19,7 @@ import 'creator_auth_screen.dart';
 import 'creator_dashboard_screen.dart';
 import 'learn_hub_screen.dart';
 import 'profile_screen.dart';
+import 'notifications_screen.dart';
 import 'revision_practice_screen.dart';
 import 'sectional_cbt_screen.dart';
 import 'tabs/home_tab.dart';
@@ -37,6 +39,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   int _currentBottomIndex = 0;
+  int _unreadNotifications = 0;
   bool _isDarkMode = false;
   bool _isHindi = true;
 
@@ -119,7 +122,39 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       _fetchSectionalDataLive();
       _fetchSubjectMappingLive();
       AiExplainerService.syncBatchMasteryEvolution();
+      _loadUnreadNotifications();
     }
+  }
+
+  Future<void> _loadUnreadNotifications() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final creatorHandle = prefs.getString('logged_in_creator_handle');
+      final userId = prefs.getString('user_id') ?? 'user';
+      final handle = (creatorHandle != null && creatorHandle.trim().isNotEmpty)
+          ? creatorHandle.trim()
+          : userId.trim();
+
+      final rows = await Supabase.instance.client
+          .from('user_notifications')
+          .select('id')
+          .eq('user_handle', handle)
+          .eq('is_read', false)
+          .limit(100);
+
+      if (mounted) setState(() => _unreadNotifications = rows.length);
+    } catch (_) {
+      // user_notifications table/SQL na ho to ghanti bina badge ke rahegi.
+    }
+  }
+
+  void _openNotifications() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => NotificationsScreen(isDarkMode: _isDarkMode),
+      ),
+    ).then((_) => _loadUnreadNotifications());
   }
 
   Future<void> _loadAllConfigs() async {
@@ -368,6 +403,37 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         title: _brandAppBarTitle(),
         backgroundColor: cardColor,
         elevation: 0,
+        actions: [
+          IconButton(
+            tooltip: 'Notifications',
+            onPressed: _openNotifications,
+            icon: Stack(
+              clipBehavior: Clip.none,
+              children: [
+                Icon(
+                  Icons.notifications_outlined,
+                  color: _isDarkMode ? Colors.white : const Color(0xFF334155),
+                ),
+                if (_unreadNotifications > 0)
+                  Positioned(
+                    right: -6,
+                    top: -5,
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 4.5, vertical: 1.5),
+                      decoration: BoxDecoration(
+                        color: const Color(0xFFDC2626),
+                        borderRadius: BorderRadius.circular(9),
+                      ),
+                      child: Text(
+                        _unreadNotifications > 99 ? '99+' : '$_unreadNotifications',
+                        style: const TextStyle(color: Colors.white, fontSize: 9, fontWeight: FontWeight.w800),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ],
       ),
       drawer: Drawer(
         child: FutureBuilder<SharedPreferences>(
