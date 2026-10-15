@@ -50,12 +50,15 @@ class _HomeTabState extends State<HomeTab> {
   final GlobalKey<HallOfFameCarouselWidgetState> _hallOfFameKey = GlobalKey<HallOfFameCarouselWidgetState>();
   final GlobalKey<ProPdfVaultCardState> _pdfVaultKey = GlobalKey<ProPdfVaultCardState>(); // 👈 Added for Books DB sync
 
+  int _greetingReloadToken = 0;
+
   @override
   Widget build(BuildContext context) {
     return RefreshIndicator(
       color: const Color(0xFF4F46E5),
       backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
       onRefresh: () async {
+        setState(() => _greetingReloadToken++);
         await Future.wait<dynamic>([
           _bulletinWidgetKey.currentState?.fetchDailyBulletins(forceRefresh: true) ?? Future.value(),
           _jobsWidgetKey.currentState?.fetchLatestJobs(refresh: true) ?? Future.value(),
@@ -72,7 +75,7 @@ class _HomeTabState extends State<HomeTab> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // 0. PERSONAL HEADER (naam, aaj ka goal, streak, kamzor topic)
-            HomeGreetingHeader(isDarkMode: widget.isDarkMode),
+            HomeGreetingHeader(isDarkMode: widget.isDarkMode, reloadToken: _greetingReloadToken),
             const SizedBox(height: 16),
 
             // 1. TODAY TICKER
