@@ -244,12 +244,69 @@ class _HomeTabState extends State<HomeTab> {
                             letterSpacing: 1.0,
                           ),
                         ),
-                        const SizedBox(height: 3),
-                        const Text(
-                          'Aman Sir + Raju ke saath padhai',
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600),
+                        const SizedBox(height: 4),
+                        Row(
+                          children: [
+                            // Do chhote avatar ghare — dono ki pehchan
+                            Stack(
+                              clipBehavior: Clip.none,
+                              children: [
+                                Container(
+                                  width: 19,
+                                  height: 19,
+                                  alignment: Alignment.center,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFFF59E0B),
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.white, width: 1.3),
+                                  ),
+                                  child: const Text('A', style: TextStyle(color: Colors.white, fontSize: 9, fontWeight: FontWeight.w900)),
+                                ),
+                                Positioned(
+                                  left: 13,
+                                  child: Container(
+                                    width: 19,
+                                    height: 19,
+                                    alignment: Alignment.center,
+                                    decoration: BoxDecoration(
+                                      color: const Color(0xFF38BDF8),
+                                      shape: BoxShape.circle,
+                                      border: Border.all(color: Colors.white, width: 1.3),
+                                    ),
+                                    child: const Text('R', style: TextStyle(color: Colors.white, fontSize: 9, fontWeight: FontWeight.w900)),
+                                  ),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(width: 21),
+                            const Expanded(
+                              child: Text.rich(
+                                TextSpan(
+                                  children: [
+                                    TextSpan(
+                                      text: 'Aman Sir',
+                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900),
+                                    ),
+                                    TextSpan(
+                                      text: ' + ',
+                                      style: TextStyle(color: Colors.white70, fontWeight: FontWeight.w600),
+                                    ),
+                                    TextSpan(
+                                      text: 'Raju Sir',
+                                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w900),
+                                    ),
+                                    TextSpan(
+                                      text: ' ke saath',
+                                      style: TextStyle(color: Colors.white70, fontWeight: FontWeight.w600),
+                                    ),
+                                  ],
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(fontSize: 11.5),
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),

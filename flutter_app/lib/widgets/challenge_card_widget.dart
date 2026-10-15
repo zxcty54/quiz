@@ -163,10 +163,77 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
               fontWeight: FontWeight.w600,
             ),
           ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 16),
+
+          // Tum vs Dost — mukable ki tasveer
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Column(
+                children: [
+                  Container(
+                    width: 46,
+                    height: 46,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF2563EB).withValues(alpha: isDark ? 0.25 : 0.12),
+                      shape: BoxShape.circle,
+                      border: Border.all(color: const Color(0xFF2563EB).withValues(alpha: 0.45), width: 1.4),
+                    ),
+                    child: const Icon(Icons.person_rounded, size: 24, color: Color(0xFF2563EB)),
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    'TUM',
+                    style: TextStyle(color: titleColor, fontSize: 9.5, fontWeight: FontWeight.w900, letterSpacing: 0.8),
+                  ),
+                ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 14, right: 14, bottom: 18),
+                child: Container(
+                  width: 34,
+                  height: 34,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFF59E0B),
+                    shape: BoxShape.circle,
+                    boxShadow: [
+                      BoxShadow(
+                        color: const Color(0xFFF59E0B).withValues(alpha: 0.4),
+                        blurRadius: 9,
+                        offset: const Offset(0, 3),
+                      ),
+                    ],
+                  ),
+                  child: const Icon(Icons.bolt_rounded, size: 18, color: Color(0xFF451A03)),
+                ),
+              ),
+              Column(
+                children: [
+                  Container(
+                    width: 46,
+                    height: 46,
+                    decoration: BoxDecoration(
+                      color: const Color(0xFF64748B).withValues(alpha: isDark ? 0.25 : 0.12),
+                      shape: BoxShape.circle,
+                      border: Border.all(color: const Color(0xFF64748B).withValues(alpha: 0.4), width: 1.4),
+                    ),
+                    child: Icon(Icons.person_rounded, size: 24, color: isDark ? const Color(0xFFCBD5E1) : const Color(0xFF64748B)),
+                  ),
+                  const SizedBox(height: 5),
+                  Text(
+                    'DOST',
+                    style: TextStyle(color: muted, fontSize: 9.5, fontWeight: FontWeight.w900, letterSpacing: 0.8),
+                  ),
+                ],
+              ),
+            ],
+          ),
+
+          const SizedBox(height: 15),
           Wrap(
             spacing: 8,
             runSpacing: 8,
+            alignment: WrapAlignment.center,
             children: [
               _infoChip(Icons.people_alt_rounded, '1v1 Duel', const Color(0xFF2563EB), isDark),
               _infoChip(Icons.timer_outlined, '10 Qs • 15 sec each', const Color(0xFF64748B), isDark),
