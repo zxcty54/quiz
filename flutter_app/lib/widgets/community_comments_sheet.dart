@@ -39,6 +39,43 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
   static const Color _lightDivider = Color(0xFFE2E8F0);
   static const Color _darkDivider = Color(0xFF334155);
 
+  static const List<Color> _avatarPalette = [
+    Color(0xFF2563EB),
+    Color(0xFF7C3AED),
+    Color(0xFF059669),
+    Color(0xFFD97706),
+    Color(0xFFDB2777),
+    Color(0xFF0891B2),
+  ];
+
+  String _initials(String name) {
+    final parts = name.trim().split(RegExp(r'\s+')).where((e) => e.isNotEmpty).toList();
+    if (parts.isEmpty) return 'A';
+    if (parts.length == 1) return parts.first[0].toUpperCase();
+    return (parts[0][0] + parts[1][0]).toUpperCase();
+  }
+
+  Color _avatarColor(String seed) {
+    var hash = 0;
+    for (final unit in seed.codeUnits) {
+      hash = (hash * 31 + unit) & 0x7fffffff;
+    }
+    return _avatarPalette[hash % _avatarPalette.length];
+  }
+
+  String _relativeTime(dynamic value) {
+    if (value == null) return '';
+    final dt = DateTime.tryParse(value.toString());
+    if (dt == null) return '';
+    final diff = DateTime.now().difference(dt.toLocal());
+    if (diff.isNegative || diff.inMinutes < 1) return 'now';
+    if (diff.inMinutes < 60) return '${diff.inMinutes}m';
+    if (diff.inHours < 24) return '${diff.inHours}h';
+    if (diff.inDays < 7) return '${diff.inDays}d';
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    return '${dt.day} ${months[dt.month - 1]}';
+  }
+
   @override
   void initState() {
     super.initState();
@@ -444,7 +481,19 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
               child: _isLoadingComments
                   ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
                   : _comments.isEmpty
-                      ? const Center(child: Text('No replies yet. Be the first to solve!'))
+                      ? Center(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(Icons.forum_outlined, size: 38, color: Colors.grey[400]),
+                              const SizedBox(height: 8),
+                              Text(
+                                'No replies yet. Be the first to solve!',
+                                style: TextStyle(color: Colors.grey[500], fontSize: 13),
+                              ),
+                            ],
+                          ),
+                        )
                       : ListView.builder(
                           itemCount: _comments.length,
                           itemBuilder: (context, cIdx) {
@@ -462,48 +511,81 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                                 borderRadius: BorderRadius.circular(8),
                                 border: isReply ? const Border(left: BorderSide(color: _primaryBlue, width: 3)) : null,
                               ),
-                              child: Column(
+                              child: Row(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Row(
-                                    children: [
-                                      Text(
-                                        c['user_name'] ?? 'Aspirant',
-                                        style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                                  CircleAvatar(
+                                    radius: 15,
+                                    backgroundColor: _avatarColor(
+                                      '${c['user_handle'] ?? ''}${c['user_name'] ?? ''}',
+                                    ),
+                                    child: Text(
+                                      _initials((c['user_name'] ?? 'Aspirant').toString()),
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 10,
                                       ),
-                                      const SizedBox(width: 6),
-                                      if (c['is_creator'] == true)
-                                        const Icon(Icons.verified, color: _primaryBlue, size: 14),
-                                      const Spacer(),
-                                      GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            _replyingToCommentId = c['id'];
-                                            _replyingToName = c['user_name'] ?? 'Aspirant';
-                                          });
-                                        },
-                                        child: const Text(
-                                          'Reply',
-                                          style: TextStyle(color: _primaryBlue, fontSize: 11, fontWeight: FontWeight.bold),
+                                    ),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  Expanded(
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Row(
+                                          children: [
+                                            Flexible(
+                                              child: Text(
+                                                c['user_name'] ?? 'Aspirant',
+                                                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
+                                                overflow: TextOverflow.ellipsis,
+                                              ),
+                                            ),
+                                            if (c['is_creator'] == true) ...[
+                                              const SizedBox(width: 4),
+                                              const Icon(Icons.verified, color: _primaryBlue, size: 13),
+                                            ],
+                                            if (_relativeTime(c['created_at']).isNotEmpty) ...[
+                                              const SizedBox(width: 6),
+                                              Text(
+                                                '· ${_relativeTime(c['created_at'])}',
+                                                style: TextStyle(color: Colors.grey[500], fontSize: 11),
+                                              ),
+                                            ],
+                                            const Spacer(),
+                                            GestureDetector(
+                                              onTap: () {
+                                                setState(() {
+                                                  _replyingToCommentId = c['id'];
+                                                  _replyingToName = c['user_name'] ?? 'Aspirant';
+                                                });
+                                              },
+                                              child: const Text(
+                                                'Reply',
+                                                style: TextStyle(color: _primaryBlue, fontSize: 11, fontWeight: FontWeight.bold),
+                                              ),
+                                            ),
+                                            if (isMyComment) ...[
+                                              const SizedBox(width: 8),
+                                              GestureDetector(
+                                                onTap: () => _openCommentOptionsSheet(c),
+                                                child: Icon(
+                                                  Icons.more_horiz_rounded,
+                                                  size: 18,
+                                                  color: isDark ? Colors.grey[400] : Colors.grey[600],
+                                                ),
+                                              ),
+                                            ],
+                                          ],
                                         ),
-                                      ),
-                                      if (isMyComment) ...[
-                                        const SizedBox(width: 8),
-                                        GestureDetector(
-                                          onTap: () => _openCommentOptionsSheet(c),
-                                          child: Icon(
-                                            Icons.more_horiz_rounded,
-                                            size: 18,
-                                            color: isDark ? Colors.grey[400] : Colors.grey[600],
-                                          ),
+                                        const SizedBox(height: 4),
+                                        widget.buildRichTextContent(
+                                          c['comment_text'] ?? c['content'] ?? '',
+                                          fontSize: 13,
                                         ),
                                       ],
-                                    ],
-                                  ),
-                                  const SizedBox(height: 4),
-                                  widget.buildRichTextContent(
-                                    c['comment_text'] ?? c['content'] ?? '',
-                                    fontSize: 13,
+                                    ),
                                   ),
                                 ],
                               ),
@@ -535,6 +617,15 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
             Divider(color: dividerColor),
             Row(
               children: [
+                CircleAvatar(
+                  radius: 16,
+                  backgroundColor: _avatarColor(widget.customUserName),
+                  child: Text(
+                    _initials(widget.customUserName),
+                    style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 10),
+                  ),
+                ),
+                const SizedBox(width: 8),
                 Expanded(
                   child: TextField(
                     controller: _commentCtrl,

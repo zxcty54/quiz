@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../widgets/community_comments_sheet.dart';
 import '../widgets/community_post_card.dart';
@@ -358,11 +359,43 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                   ],
                 ),
                 const SizedBox(height: 8),
-                DropdownButtonFormField<String>(
-                  value: selectedTag,
-                  decoration: const InputDecoration(labelText: 'Category', isDense: true, border: OutlineInputBorder()),
-                  items: availableTags.map((t) => DropdownMenuItem(value: t, child: Text(t))).toList(),
-                  onChanged: (val) => setModalState(() => selectedTag = val ?? selectedTag),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Text(
+                    'Category',
+                    style: TextStyle(
+                      fontSize: 12,
+                      fontWeight: FontWeight.w700,
+                      color: widget.isDarkMode ? Colors.white70 : const Color(0xFF64748B),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 8),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: Wrap(
+                    spacing: 8,
+                    runSpacing: 8,
+                    children: availableTags.map((tag) {
+                      final isSelected = selectedTag == tag;
+                      return ChoiceChip(
+                        label: Text(tag),
+                        selected: isSelected,
+                        selectedColor: _primaryBlue,
+                        backgroundColor: widget.isDarkMode ? _darkCard : Colors.white,
+                        labelStyle: TextStyle(
+                          fontSize: 12,
+                          fontWeight: isSelected ? FontWeight.bold : FontWeight.w600,
+                          color: isSelected
+                              ? Colors.white
+                              : (widget.isDarkMode ? Colors.white70 : const Color(0xFF475569)),
+                        ),
+                        onSelected: (selected) {
+                          if (selected) setModalState(() => selectedTag = tag);
+                        },
+                      );
+                    }).toList(),
+                  ),
                 ),
                 const SizedBox(height: 10),
                 TextField(
@@ -466,6 +499,112 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     );
   }
 
+  Widget _buildFeedModeTabs(Color cardSurface, Color dividerColor, bool isDark) {
+    return Container(
+      color: cardSurface,
+      decoration: BoxDecoration(
+        border: Border(bottom: BorderSide(color: dividerColor)),
+      ),
+      child: Row(
+        children: _feedModes.map((mode) {
+          final isSelected = _activeFeedMode == mode;
+          return Expanded(
+            child: InkWell(
+              onTap: () => _changeFeedMode(mode),
+              child: Padding(
+                padding: const EdgeInsets.only(top: 10),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Text(
+                      mode,
+                      style: TextStyle(
+                        fontSize: 14.5,
+                        fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
+                        color: isSelected
+                            ? (isDark ? Colors.white : const Color(0xFF0F172A))
+                            : (isDark ? Colors.white60 : const Color(0xFF64748B)),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                    AnimatedContainer(
+                      duration: const Duration(milliseconds: 180),
+                      height: 3,
+                      width: 46,
+                      decoration: BoxDecoration(
+                        color: isSelected ? _primaryBlue : Colors.transparent,
+                        borderRadius: BorderRadius.circular(99),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          );
+        }).toList(),
+      ),
+    );
+  }
+
+  Widget _buildSkeletonFeed(bool isDark) {
+    final base = isDark ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0);
+    final highlight = isDark ? const Color(0xFF334155) : const Color(0xFFF8FAFC);
+    final block = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+
+    Widget bar(double width, double height) => Container(
+          width: width,
+          height: height,
+          decoration: BoxDecoration(
+            color: block,
+            borderRadius: BorderRadius.circular(99),
+          ),
+        );
+
+    return ListView.separated(
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: 4,
+      separatorBuilder: (_, __) => Divider(
+        height: 1,
+        color: isDark ? _darkDivider : _lightDivider,
+      ),
+      itemBuilder: (_, __) => Shimmer.fromColors(
+        baseColor: base,
+        highlightColor: highlight,
+        child: Padding(
+          padding: const EdgeInsets.all(16),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Container(
+                    width: 38,
+                    height: 38,
+                    decoration: BoxDecoration(color: block, shape: BoxShape.circle),
+                  ),
+                  const SizedBox(width: 10),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [bar(120, 11), const SizedBox(height: 7), bar(82, 9)],
+                  ),
+                ],
+              ),
+              const SizedBox(height: 16),
+              bar(double.infinity, 12),
+              const SizedBox(height: 8),
+              bar(230, 12),
+              const SizedBox(height: 18),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [bar(34, 12), bar(34, 12), bar(34, 12), bar(34, 12)],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
@@ -519,33 +658,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       ),
       body: Column(
         children: [
-          Padding(
-            padding: const EdgeInsets.fromLTRB(14, 8, 14, 2),
-            child: Row(
-              children: _feedModes.map((mode) {
-                final isSelected = _activeFeedMode == mode;
-                return Padding(
-                  padding: const EdgeInsets.only(right: 8),
-                  child: ChoiceChip(
-                    label: Text(mode),
-                    selected: isSelected,
-                    selectedColor: _primaryBlue,
-                    backgroundColor: cardSurface,
-                    labelStyle: TextStyle(
-                      fontSize: 12.5,
-                      fontWeight: isSelected ? FontWeight.bold : FontWeight.w600,
-                      color: isSelected ? Colors.white : (isDark ? Colors.white70 : const Color(0xFF475569)),
-                    ),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18),
-                      side: BorderSide(color: isSelected ? _primaryBlue : dividerColor),
-                    ),
-                    onSelected: (_) => _changeFeedMode(mode),
-                  ),
-                );
-              }).toList(),
-            ),
-          ),
+          _buildFeedModeTabs(cardSurface, dividerColor, isDark),
           Padding(
             padding: const EdgeInsets.fromLTRB(14, 4, 14, 8),
             child: Container(
@@ -562,6 +675,16 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                 decoration: InputDecoration(
                   hintText: 'Search mocks, doubts, topics, mentor...',
                   hintStyle: TextStyle(fontSize: 13, color: Colors.grey[500]),
+                  prefixIcon: Icon(Icons.search_rounded, size: 20, color: Colors.grey[500]),
+                  suffixIcon: _searchQuery.isEmpty
+                      ? null
+                      : IconButton(
+                          icon: const Icon(Icons.close_rounded, size: 18),
+                          onPressed: () {
+                            _searchCtrl.clear();
+                            setState(() => _searchQuery = '');
+                          },
+                        ),
                   contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                   border: InputBorder.none,
                 ),
@@ -604,18 +727,50 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           Divider(height: 1, thickness: 1, color: dividerColor),
           Expanded(
             child: _isLoading
-                ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
+                ? _buildSkeletonFeed(isDark)
                 : RefreshIndicator(
                     onRefresh: _fetchFeedPosts,
                     child: filteredList.isEmpty
                         ? Center(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(Icons.inbox_outlined, size: 40, color: Colors.grey[400]),
-                                const SizedBox(height: 8),
-                                Text('No posts found.', style: TextStyle(color: Colors.grey[500])),
-                              ],
+                            child: Padding(
+                              padding: const EdgeInsets.all(24),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Icon(Icons.inbox_outlined, size: 44, color: Colors.grey[400]),
+                                  const SizedBox(height: 10),
+                                  Text(
+                                    (_searchQuery.isNotEmpty || _activeFilter != 'All')
+                                        ? 'No posts match your search/filter.'
+                                        : 'No posts yet. Start the first discussion!',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(color: Colors.grey[500], fontSize: 13.5),
+                                  ),
+                                  const SizedBox(height: 16),
+                                  if (_searchQuery.isNotEmpty || _activeFilter != 'All')
+                                    OutlinedButton.icon(
+                                      onPressed: () {
+                                        _searchCtrl.clear();
+                                        setState(() {
+                                          _searchQuery = '';
+                                          _activeFilter = 'All';
+                                        });
+                                      },
+                                      icon: const Icon(Icons.filter_alt_off_rounded, size: 17),
+                                      label: const Text('Clear search & filters'),
+                                    ),
+                                  const SizedBox(height: 10),
+                                  ElevatedButton.icon(
+                                    style: ElevatedButton.styleFrom(
+                                      backgroundColor: _primaryBlue,
+                                      foregroundColor: Colors.white,
+                                    ),
+                                    onPressed: _openCreatePostModal,
+                                    icon: const Icon(Icons.edit_rounded, size: 17),
+                                    label: const Text('Post / Doubt'),
+                                  ),
+                                ],
+                              ),
                             ),
                           )
                         : ListView.separated(
