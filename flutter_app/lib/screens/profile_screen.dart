@@ -12,6 +12,7 @@ import 'saved_current_affairs_screen.dart';
 import '../widgets/donation_widget.dart';
 import '../widgets/app_global_feedback_dialog.dart';
 import '../widgets/mastery_evolution_card.dart';
+import '../widgets/coaching_onboarding_cta_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
   final bool isHindi;
@@ -526,6 +527,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ],
               ),
             ),
+            const SizedBox(height: 20),
+            Text('Coaching Owners Ke Liye', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
+            const SizedBox(height: 10),
+            CoachingOnboardingCtaWidget(isDarkMode: isDark),
             const SizedBox(height: 16),
             DonationWidget(isDarkMode: isDark),
             const SizedBox(height: 14),
