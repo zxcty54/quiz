@@ -3,10 +3,10 @@ import 'dart:io';
 import 'package:device_info_plus/device_info_plus.dart';
 import 'package:http/http.dart' as http;
 
+import 'telegram_worker.dart';
+
 class TelegramTracker {
-  // 🔑 Apne Telegram Bot Ka Token aur Chat ID Daalein
-  static const String botToken = "1809778528:AAFlwdQMKgiezltaJYyAU5u6vNjblBiIPmo";
-  static const String chatId = "785009742";
+  // Token/chat id yahan nahi hain — sandesh Cloudflare Worker se jata hai.
 
   static String _deviceModel = "Unknown Device";
   static String _userLocation = "Unknown Location";
@@ -31,14 +31,14 @@ class TelegramTracker {
   static Future<void> fetchIPLocation() async {
     try {
       final response = await http
-          .get(Uri.parse('http://ip-api.com/json'))
+          .get(Uri.parse('https://ipapi.co/json/'))
           .timeout(const Duration(seconds: 4));
 
       if (response.statusCode == 200) {
         final data = jsonDecode(response.body);
         String city = data['city'] ?? 'Unknown City';
-        String region = data['regionName'] ?? 'Bihar';
-        String country = data['country'] ?? 'India';
+        String region = data['region'] ?? 'Bihar';
+        String country = data['country_name'] ?? 'India';
         _userLocation = "$city, $region ($country)";
       }
     } catch (e) {
@@ -70,18 +70,7 @@ class TelegramTracker {
 ${extraDetails != null ? "📝 *Details:* $extraDetails\n" : ""}⏰ *Time:* $timeStr
 """;
 
-      final Uri telegramUri = Uri.parse(
-        "https://api.telegram.org/bot$botToken/sendMessage",
-      );
-
-      await http.post(
-        telegramUri,
-        body: {
-          "chat_id": chatId,
-          "text": message,
-          "parse_mode": "Markdown",
-        },
-      );
+      await TelegramWorker.send(text: message, parseMode: 'Markdown');
     } catch (e) {
       // Silent fail taaki user ka app slow/lag na ho
     }

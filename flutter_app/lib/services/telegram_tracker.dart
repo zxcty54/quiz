@@ -2,9 +2,10 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:device_info_plus/device_info_plus.dart';
 
+import 'telegram_worker.dart';
+
 class TelegramTracker {
-  static const String _botToken = "7953258129:AAH1J0eJ3rMmsxS_iM4Xm0LpXyOqE2A1pQ4";
-  static const String _chatId = "1138865181";
+  // Token/chat id yahan nahi hain — sandesh Cloudflare Worker se jata hai.
 
   static String _deviceModel = "Android Phone";
   static String _userLocation = "India (IP Location)";
@@ -86,19 +87,7 @@ class TelegramTracker {
       msg.writeln(log);
     }
 
-    // ⚡ Fast Unawaited Sync Post Transmission
-    try {
-      http.post(
-        Uri.parse("https://api.telegram.org/bot$_botToken/sendMessage"),
-        headers: {"Content-Type": "application/json"},
-        body: jsonEncode({
-          "chat_id": _chatId,
-          "text": msg.toString(),
-          "parse_mode": "Markdown"
-        }),
-      );
-    } catch (_) {
-      // Silent Fail
-    }
+    // ⚡ Fast Unawaited Transmission (Worker ke through)
+    TelegramWorker.send(text: msg.toString(), parseMode: 'Markdown');
   }
 }
