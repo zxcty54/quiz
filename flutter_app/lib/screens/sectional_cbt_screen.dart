@@ -9,7 +9,6 @@ import 'package:url_launcher/url_launcher.dart';
 import '../models/question_model.dart';
 import '../widgets/latex_text.dart';
 import '../widgets/cbt_widgets.dart';
-import '../services/telegram_tracker.dart';
 import '../services/user_stats_service.dart';
 import '../services/cbt_progress_service.dart';
 import '../utils/subtopic_engine.dart';
@@ -704,12 +703,6 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       }
     }
 
-    TelegramTracker.recordTestCompletion(
-      widget.testTitle,
-      "Sahi: $correctCount, "
-          "Galat: $wrongCount / "
-          "Total: ${widget.questions.length}",
-    );
   }
 
   // ============================================================
