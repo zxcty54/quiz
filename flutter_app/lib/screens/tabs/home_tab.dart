@@ -11,6 +11,7 @@ import '../../widgets/know_your_bihar_widget.dart';
 import '../../widgets/district_top_leaderboard_widget.dart';
 import '../../widgets/challenge_card_widget.dart';
 import '../../widgets/home_greeting_header.dart';
+import '../../widgets/promo_banner_carousel.dart';
 
 class HomeTab extends StatefulWidget {
   final Map<String, dynamic> appConfig;
@@ -77,6 +78,15 @@ class _HomeTabState extends State<HomeTab> {
             // 0. PERSONAL HEADER (naam, aaj ka goal, streak, kamzor topic)
             HomeGreetingHeader(isDarkMode: widget.isDarkMode, reloadToken: _greetingReloadToken),
             const SizedBox(height: 16),
+
+            // 0.5 LIVE PROMO BANNERS (naya exam / naya mock) —
+            // ye live app_config.json ke promo_banners se bante hain.
+            // Naya banner = wahan entry jodo, app rebuild nahi hoga.
+            PromoBannerCarousel(
+              banners: (widget.appConfig['promo_banners'] as List?) ?? const [],
+              isDarkMode: widget.isDarkMode,
+              onTapUrl: widget.onTapUrl,
+            ),
 
             // 1. TODAY TICKER
             if (widget.appConfig['today_update']?['show'] == true) ...[
