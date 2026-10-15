@@ -185,11 +185,11 @@ class _HomeTabState extends State<HomeTab> {
     final border = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
     final titleColor = isDark ? Colors.white : const Color(0xFF0F172A);
     final muted = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
-    const accent = Color(0xFF1E40AF);
+    const royal = Color(0xFF1E40AF);
+    final goalProgress = widget.lastLearnProgress.clamp(0.0, 1.0).toDouble();
 
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
         color: surface,
         borderRadius: BorderRadius.circular(22),
@@ -202,155 +202,227 @@ class _HomeTabState extends State<HomeTab> {
           ),
         ],
       ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Container(
-                width: 42,
-                height: 42,
-                decoration: BoxDecoration(
-                  color: accent.withValues(alpha: isDark ? 0.22 : 0.11),
-                  borderRadius: BorderRadius.circular(14),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(22),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            // Upar wali royal-blue patti — course header jaisi
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 13),
+              decoration: const BoxDecoration(
+                gradient: LinearGradient(
+                  colors: [Color(0xFF172554), Color(0xFF1E40AF), Color(0xFF2563EB)],
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
                 ),
-                child: const Icon(Icons.menu_book_rounded, size: 22, color: accent),
               ),
-              const SizedBox(width: 11),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      widget.hasLearningHistory ? 'CONTINUE LEARNING' : 'INTERACTIVE LEARNING',
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: const TextStyle(
-                        color: accent,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w900,
-                        letterSpacing: 0.9,
-                      ),
+              child: Row(
+                children: [
+                  Container(
+                    width: 38,
+                    height: 38,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(12),
                     ),
-                    const SizedBox(height: 3),
-                    Row(
+                    child: const Icon(Icons.menu_book_rounded, size: 20, color: royal),
+                  ),
+                  const SizedBox(width: 11),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Icon(Icons.school_rounded, size: 12, color: muted),
-                        const SizedBox(width: 4),
-                        Expanded(
-                          child: Text(
-                            'Aman Sir + Raju ke saath padhai',
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                            style: TextStyle(color: muted, fontSize: 11, fontWeight: FontWeight.w600),
+                        Text(
+                          widget.hasLearningHistory ? 'CONTINUE LEARNING' : 'INTERACTIVE LEARNING',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: const TextStyle(
+                            color: Color(0xFFFBBF24),
+                            fontSize: 9.5,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: 1.0,
                           ),
+                        ),
+                        const SizedBox(height: 3),
+                        const Text(
+                          'Aman Sir + Raju ke saath padhai',
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(color: Colors.white70, fontSize: 11, fontWeight: FontWeight.w600),
                         ),
                       ],
                     ),
-                  ],
-                ),
-              ),
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
-                decoration: BoxDecoration(
-                  color: const Color(0xFF2563EB).withValues(alpha: isDark ? 0.22 : 0.10),
-                  borderRadius: BorderRadius.circular(99),
-                ),
-                child: Text(
-                  '$percentDisplay%',
-                  style: const TextStyle(color: Color(0xFF2563EB), fontSize: 11, fontWeight: FontWeight.w900),
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16),
-          Text(
-            widget.lastLearnTitle,
-            maxLines: 2,
-            overflow: TextOverflow.ellipsis,
-            style: TextStyle(
-              color: titleColor,
-              fontSize: 18.5,
-              fontWeight: FontWeight.w900,
-              letterSpacing: -0.25,
-              height: 1.2,
-            ),
-          ),
-          const SizedBox(height: 8),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
-            decoration: BoxDecoration(
-              color: isDark ? const Color(0xFF0F172A) : const Color(0xFFEFF6FF),
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: border),
-            ),
-            child: Row(
-              children: [
-                const Icon(Icons.play_circle_fill_rounded, size: 16, color: accent),
-                const SizedBox(width: 7),
-                Expanded(
-                  child: Text(
-                    widget.lastNextTopic,
-                    maxLines: 1,
-                    overflow: TextOverflow.ellipsis,
-                    style: TextStyle(color: muted, fontSize: 11.5, fontWeight: FontWeight.w700),
                   ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 15),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'Chapter Progress',
-                style: TextStyle(color: muted, fontSize: 11, fontWeight: FontWeight.w700),
-              ),
-              Text(
-                '$percentDisplay% Completed',
-                style: const TextStyle(color: accent, fontSize: 11, fontWeight: FontWeight.w900),
-              ),
-            ],
-          ),
-          const SizedBox(height: 7),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(99),
-            child: LinearProgressIndicator(
-              value: widget.lastLearnProgress,
-              minHeight: 8,
-              backgroundColor: isDark ? const Color(0xFF263449) : const Color(0xFFE2E8F0),
-              valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF2563EB)),
-            ),
-          ),
-          const SizedBox(height: 16),
-          SizedBox(
-            width: double.infinity,
-            height: 47,
-            child: ElevatedButton(
-              onPressed: widget.onNavigateToLearn,
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF1E40AF),
-                foregroundColor: Colors.white,
-                elevation: 0,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Icon(Icons.play_circle_fill_rounded, size: 20, color: Colors.white),
-                  const SizedBox(width: 8),
-                  Text(
-                    widget.hasLearningHistory ? 'Resume Learning' : 'Start Learning',
-                    style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13.5),
+                  SizedBox(
+                    width: 44,
+                    height: 44,
+                    child: Stack(
+                      alignment: Alignment.center,
+                      children: [
+                        SizedBox(
+                          width: 44,
+                          height: 44,
+                          child: CircularProgressIndicator(
+                            value: goalProgress,
+                            strokeWidth: 4,
+                            backgroundColor: Colors.white.withValues(alpha: 0.25),
+                            valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFFBBF24)),
+                          ),
+                        ),
+                        Text(
+                          '$percentDisplay%',
+                          style: const TextStyle(color: Colors.white, fontSize: 10.5, fontWeight: FontWeight.w900),
+                        ),
+                      ],
+                    ),
                   ),
-                  const SizedBox(width: 6),
-                  const Icon(Icons.arrow_forward_rounded, size: 17, color: Colors.white),
                 ],
               ),
             ),
-          ),
-        ],
+
+            // Neeche ka hissa — chapter, next topic, progress, button
+            Padding(
+              padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    widget.lastLearnTitle,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                      color: titleColor,
+                      fontSize: 18.5,
+                      fontWeight: FontWeight.w900,
+                      letterSpacing: -0.25,
+                      height: 1.2,
+                    ),
+                  ),
+                  const SizedBox(height: 11),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 9),
+                    decoration: BoxDecoration(
+                      color: isDark ? const Color(0xFF0F172A) : const Color(0xFFEFF6FF),
+                      borderRadius: BorderRadius.circular(13),
+                      border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFDBEAFE)),
+                    ),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 30,
+                          height: 30,
+                          decoration: const BoxDecoration(color: royal, shape: BoxShape.circle),
+                          child: const Icon(Icons.play_arrow_rounded, size: 18, color: Colors.white),
+                        ),
+                        const SizedBox(width: 10),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                'NEXT TOPIC',
+                                style: TextStyle(
+                                  color: muted,
+                                  fontSize: 8.5,
+                                  fontWeight: FontWeight.w900,
+                                  letterSpacing: 0.9,
+                                ),
+                              ),
+                              const SizedBox(height: 2),
+                              Text(
+                                widget.lastNextTopic,
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: TextStyle(color: titleColor, fontSize: 12, fontWeight: FontWeight.w700),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Icon(Icons.playlist_play_rounded, size: 19, color: muted),
+                      ],
+                    ),
+                  ),
+                  const SizedBox(height: 14),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Chapter Progress',
+                        style: TextStyle(color: muted, fontSize: 11, fontWeight: FontWeight.w700),
+                      ),
+                      Text(
+                        '$percentDisplay% Completed',
+                        style: const TextStyle(color: royal, fontSize: 11, fontWeight: FontWeight.w900),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 7),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(99),
+                    child: LinearProgressIndicator(
+                      value: goalProgress,
+                      minHeight: 8,
+                      backgroundColor: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+                      valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFF2563EB)),
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: SizedBox(
+                          height: 47,
+                          child: ElevatedButton(
+                            onPressed: widget.onNavigateToLearn,
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: royal,
+                              foregroundColor: Colors.white,
+                              elevation: 0,
+                              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                            ),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                const Icon(Icons.play_circle_fill_rounded, size: 19, color: Colors.white),
+                                const SizedBox(width: 7),
+                                Text(
+                                  widget.hasLearningHistory ? 'Resume Learning' : 'Start Learning',
+                                  style: const TextStyle(fontWeight: FontWeight.w900, fontSize: 13),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(width: 9),
+                      SizedBox(
+                        height: 47,
+                        child: OutlinedButton(
+                          onPressed: widget.onNavigateToLearn,
+                          style: OutlinedButton.styleFrom(
+                            foregroundColor: royal,
+                            side: BorderSide(color: isDark ? const Color(0xFF475569) : const Color(0xFFBFDBFE), width: 1.2),
+                            shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
+                            padding: const EdgeInsets.symmetric(horizontal: 14),
+                          ),
+                          child: const Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              Icon(Icons.library_books_rounded, size: 17),
+                              SizedBox(width: 6),
+                              Text('Chapters', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 12.5)),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
