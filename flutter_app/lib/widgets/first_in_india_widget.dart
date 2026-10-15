@@ -17,7 +17,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
   List<dynamic> _alertNewsList = [];
   bool _isLoading = true;
   int _activeIndex = 0;
-  final PageController _pageController = PageController();
+  late final PageController _pageController;
   final Set<String> _bookmarkedIds = {};
 
   static const String _websiteFullDataUrl =
@@ -27,6 +27,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
   @override
   void initState() {
     super.initState();
+    _pageController = PageController();
     _loadBookmarks();
     fetchFirstInIndia();
   }
@@ -232,15 +233,10 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
     if (_alertNewsList.isEmpty) return const SizedBox.shrink();
 
-    final item = _alertNewsList[_activeIndex];
-    final String itemId = (item['id'] ?? item['title'] ?? '').toString();
-    final bool isSaved = _bookmarkedIds.contains(itemId);
-    final List bullets = (item['bullets'] as List?) ?? [];
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // 🏆 Section Header
+        // 🏆 Top Header Section
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 2.0, vertical: 4.0),
           child: Row(
@@ -280,8 +276,8 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    const Icon(Icons.bolt_rounded, size: 12, color: Color(0xFF2563EB)),
-                    const SizedBox(width: 2),
+                    const Icon(Icons.swipe_rounded, size: 12, color: Color(0xFF2563EB)),
+                    const SizedBox(width: 4),
                     Text(
                       '${_activeIndex + 1}/${_alertNewsList.length}',
                       style: const TextStyle(
@@ -299,7 +295,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
         const SizedBox(height: 8),
 
-        // 📇 Modernized Main Card
+        // 📇 Main Card Container with Swipeable PageView
         Container(
           width: double.infinity,
           decoration: BoxDecoration(
@@ -320,120 +316,144 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
             ],
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // Top Action Bar inside Card
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 14, 16, 0),
-                child: Row(
-                  children: [
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF59E0B).withOpacity(0.12),
-                        borderRadius: BorderRadius.circular(6),
-                      ),
-                      child: Text(
-                        (item['exam_tag'] ?? 'STATIC GK / PYQ').toString().toUpperCase(),
-                        style: const TextStyle(
-                          color: Color(0xFFD97706),
-                          fontSize: 10,
-                          fontWeight: FontWeight.w800,
-                          letterSpacing: 0.3,
-                        ),
-                      ),
-                    ),
-                    const Spacer(),
-                    IconButton(
-                      visualDensity: VisualDensity.compact,
-                      padding: EdgeInsets.zero,
-                      constraints: const BoxConstraints(),
-                      icon: Icon(
-                        isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
-                        size: 19,
-                        color: isSaved ? const Color(0xFFF59E0B) : const Color(0xFF94A3B8),
-                      ),
-                      onPressed: () => _toggleBookmark(item),
-                    ),
-                    const SizedBox(width: 12),
-                    IconButton(
-                      visualDensity: VisualDensity.compact,
-                      padding: EdgeInsets.zero,
-                      constraints: const BoxConstraints(),
-                      icon: const Icon(
-                        Icons.share_outlined,
-                        size: 18,
-                        color: Color(0xFF94A3B8),
-                      ),
-                      onPressed: () => _shareContent(item),
-                    ),
-                  ],
-                ),
-              ),
+              // 👈👉 SWIPEABLE CONTENT AREA
+              SizedBox(
+                height: 235,
+                child: PageView.builder(
+                  controller: _pageController,
+                  physics: const BouncingScrollPhysics(),
+                  itemCount: _alertNewsList.length,
+                  onPageChanged: (i) => setState(() => _activeIndex = i),
+                  itemBuilder: (context, index) {
+                    final item = _alertNewsList[index];
+                    final String itemId = (item['id'] ?? item['title'] ?? '').toString();
+                    final bool isSaved = _bookmarkedIds.contains(itemId);
+                    final List bullets = (item['bullets'] as List?) ?? [];
 
-              // News Title
-              Padding(
-                padding: const EdgeInsets.fromLTRB(16, 10, 16, 8),
-                child: Text(
-                  item['title'] ?? '',
-                  style: TextStyle(
-                    fontSize: 15.5,
-                    fontWeight: FontWeight.w800,
-                    height: 1.35,
-                    color: isDark ? Colors.white : const Color(0xFF0F172A),
-                  ),
-                ),
-              ),
-
-              // Bullets Section
-              if (bullets.isNotEmpty)
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Column(
-                    children: bullets.map((bullet) {
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 6.0),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            const Padding(
-                              padding: EdgeInsets.only(top: 4.5),
-                              child: Icon(
-                                Icons.circle,
-                                size: 6,
-                                color: Color(0xFF2563EB),
-                              ),
-                            ),
-                            const SizedBox(width: 8),
-                            Expanded(
-                              child: Text(
-                                bullet.toString(),
-                                style: TextStyle(
-                                  fontSize: 12.5,
-                                  height: 1.45,
-                                  fontWeight: FontWeight.w500,
-                                  color: isDark
-                                      ? const Color(0xFFCBD5E1)
-                                      : const Color(0xFF334155),
+                    return Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 14, 16, 10),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          // Header: Tag + Bookmark + Share
+                          Row(
+                            children: [
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFF59E0B).withOpacity(0.12),
+                                  borderRadius: BorderRadius.circular(6),
+                                ),
+                                child: Text(
+                                  (item['exam_tag'] ?? 'STATIC GK / PYQ').toString().toUpperCase(),
+                                  style: const TextStyle(
+                                    color: Color(0xFFD97706),
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w800,
+                                    letterSpacing: 0.3,
+                                  ),
                                 ),
                               ),
-                            ),
-                          ],
-                        ),
-                      );
-                    }).toList(),
-                  ),
-                ),
+                              const Spacer(),
+                              IconButton(
+                                visualDensity: VisualDensity.compact,
+                                padding: EdgeInsets.zero,
+                                constraints: const BoxConstraints(),
+                                icon: Icon(
+                                  isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
+                                  size: 20,
+                                  color: isSaved ? const Color(0xFFF59E0B) : const Color(0xFF94A3B8),
+                                ),
+                                onPressed: () => _toggleBookmark(item),
+                              ),
+                              const SizedBox(width: 12),
+                              IconButton(
+                                visualDensity: VisualDensity.compact,
+                                padding: EdgeInsets.zero,
+                                constraints: const BoxConstraints(),
+                                icon: const Icon(
+                                  Icons.share_outlined,
+                                  size: 19,
+                                  color: Color(0xFF94A3B8),
+                                ),
+                                onPressed: () => _shareContent(item),
+                              ),
+                            ],
+                          ),
 
-              const SizedBox(height: 10),
+                          const SizedBox(height: 10),
+
+                          // Title
+                          Text(
+                            item['title'] ?? '',
+                            maxLines: 2,
+                            overflow: TextOverflow.ellipsis,
+                            style: TextStyle(
+                              fontSize: 15.5,
+                              fontWeight: FontWeight.w800,
+                              height: 1.3,
+                              color: isDark ? Colors.white : const Color(0xFF0F172A),
+                            ),
+                          ),
+
+                          const SizedBox(height: 8),
+
+                          // Bullets
+                          Expanded(
+                            child: SingleChildScrollView(
+                              physics: const BouncingScrollPhysics(),
+                              child: Column(
+                                children: bullets.map((bullet) {
+                                  return Padding(
+                                    padding: const EdgeInsets.only(bottom: 6.0),
+                                    child: Row(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        const Padding(
+                                          padding: EdgeInsets.only(top: 4.5),
+                                          child: Icon(
+                                            Icons.circle,
+                                            size: 6,
+                                            color: Color(0xFF2563EB),
+                                          ),
+                                        ),
+                                        const SizedBox(width: 8),
+                                        Expanded(
+                                          child: Text(
+                                            bullet.toString(),
+                                            style: TextStyle(
+                                              fontSize: 12.5,
+                                              height: 1.4,
+                                              fontWeight: FontWeight.w500,
+                                              color: isDark
+                                                  ? const Color(0xFFCBD5E1)
+                                                  : const Color(0xFF334155),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
+                ),
+              ),
+
               Divider(
                 height: 1,
                 color: isDark ? const Color(0xFF334155) : const Color(0xFFF1F5F9),
               ),
 
-              // Bottom Navigation & Archive Footer
+              // Bottom Bar: Website Archive link + Smooth Navigation Arrows
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 6),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -467,7 +487,10 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                               ? (isDark ? Colors.white70 : const Color(0xFF334155))
                               : Colors.grey.withOpacity(0.3),
                           onPressed: _activeIndex > 0
-                              ? () => setState(() => _activeIndex--)
+                              ? () => _pageController.previousPage(
+                                    duration: const Duration(milliseconds: 250),
+                                    curve: Curves.easeInOut,
+                                  )
                               : null,
                         ),
                         IconButton(
@@ -477,8 +500,15 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                               ? const Color(0xFF2563EB)
                               : Colors.grey.withOpacity(0.3),
                           onPressed: _activeIndex < _alertNewsList.length - 1
-                              ? () => setState(() => _activeIndex++)
-                              : () => setState(() => _activeIndex = 0),
+                              ? () => _pageController.nextPage(
+                                    duration: const Duration(milliseconds: 250),
+                                    curve: Curves.easeInOut,
+                                  )
+                              : () => _pageController.animateToPage(
+                                    0,
+                                    duration: const Duration(milliseconds: 300),
+                                    curve: Curves.easeInOut,
+                                  ),
                         ),
                       ],
                     ),
