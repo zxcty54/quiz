@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
@@ -36,6 +37,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
 
   String _searchQuery = '';
   final TextEditingController _searchCtrl = TextEditingController();
+  Timer? _searchDebounce;
 
   final Set<int> _likedPostIds = {};
   final Set<int> _viewedPostIds = {};
@@ -72,6 +74,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
   void dispose() {
     _scrollController.removeListener(_onScroll);
     _scrollController.dispose();
+    _searchDebounce?.cancel();
     _searchCtrl.dispose();
     super.dispose();
   }
@@ -199,6 +202,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           'p_limit': _pageSize,
           'p_offset': 0,
           'p_mode': _activeFeedMode == 'Latest' ? 'latest' : 'for_you',
+          'p_search': _searchQuery.isEmpty ? null : _searchQuery,
         },
       );
       fetchedPosts = _parseRankedPosts(res);
@@ -235,6 +239,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
           'p_limit': _pageSize,
           'p_offset': start,
           'p_mode': _activeFeedMode == 'Latest' ? 'latest' : 'for_you',
+          'p_search': _searchQuery.isEmpty ? null : _searchQuery,
         },
       );
       fetchedPosts = _parseRankedPosts(res);
@@ -252,6 +257,25 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
       debugPrint(">>> Fetch More Error: $e");
       if (mounted) setState(() => _isLoadingMore = false);
     }
+  }
+
+  /// Search ab server par hota hai. Har akshar par load na mare,
+  /// isliye aadhe second ruk kar hi fresh results laate hain.
+  void _scheduleSearch(String val) {
+    final q = val.trim();
+    setState(() => _searchQuery = q);
+    _searchDebounce?.cancel();
+    _searchDebounce = Timer(const Duration(milliseconds: 450), () {
+      if (mounted) _fetchFeedPosts();
+    });
+  }
+
+  void _clearSearch() {
+    _searchDebounce?.cancel();
+    _searchCtrl.clear();
+    if (_searchQuery.isEmpty) return;
+    setState(() => _searchQuery = '');
+    _fetchFeedPosts();
   }
 
   Future<void> _handlePostViewed(int postId) async {
@@ -652,10 +676,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
         if (!cleanPostTag.contains(cleanFilter) && !cleanFilter.contains(cleanPostTag)) return false;
       }
 
-      if (_searchQuery.isEmpty) return true;
-      final q = _searchQuery.toLowerCase();
-      return (p['content'] ?? '').toString().toLowerCase().contains(q) ||
-          (p['author_name'] ?? '').toString().toLowerCase().contains(q);
+      return true; // Search server-side hai; yahan sirf category/Saved filter hai.
     }).toList();
 
     return Scaffold(
@@ -701,7 +722,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
               child: TextField(
                 controller: _searchCtrl,
                 style: TextStyle(fontSize: 13.5, color: isDark ? Colors.white : const Color(0xFF0F172A)),
-                onChanged: (val) => setState(() => _searchQuery = val.trim()),
+                onChanged: _scheduleSearch,
                 decoration: InputDecoration(
                   hintText: 'Search mocks, doubts, topics, mentor...',
                   hintStyle: TextStyle(fontSize: 13, color: Colors.grey[500]),
@@ -710,10 +731,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                       ? null
                       : IconButton(
                           icon: const Icon(Icons.close_rounded, size: 18),
-                          onPressed: () {
-                            _searchCtrl.clear();
-                            setState(() => _searchQuery = '');
-                          },
+                          onPressed: _clearSearch,
                         ),
                   contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
                   border: InputBorder.none,
@@ -780,11 +798,8 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                   if (_searchQuery.isNotEmpty || _activeFilter != 'All')
                                     OutlinedButton.icon(
                                       onPressed: () {
-                                        _searchCtrl.clear();
-                                        setState(() {
-                                          _searchQuery = '';
-                                          _activeFilter = 'All';
-                                        });
+                                        setState(() => _activeFilter = 'All');
+                                        _clearSearch();
                                       },
                                       icon: const Icon(Icons.filter_alt_off_rounded, size: 17),
                                       label: const Text('Clear search & filters'),
