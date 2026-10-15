@@ -2,7 +2,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:file_picker/file_picker.dart'; // 👈 Added for attaching File/Image
-import '../services/telegram_tracker.dart';
 
 // 1️⃣ TODAY UPDATE TICKER WIDGET
 class TodayUpdateTickerWidget extends StatelessWidget {
@@ -644,8 +643,6 @@ class _TelegramCreatorWidgetState extends State<TelegramCreatorWidget> {
                       ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('⚠️ Naam bharna zaroori hai!')));
                       return;
                     }
-                    TelegramTracker.logActivity("Creator Form Submitted - Name: ${_nameController.text}");
-
                     String fileNameText = _attachedFile != null ? "\n📎 Attached: ${_attachedFile!.path.split('/').last}" : "";
                     final msg = "Bhai, main apna question submit kar raha hu.\n👤 Name: ${_nameController.text}\n📚 Subject: ${_subjectController.text}$fileNameText";
                     final uri = Uri.parse("https://t.me/MT_Masterhub_bot?text=${Uri.encodeComponent(msg)}");
