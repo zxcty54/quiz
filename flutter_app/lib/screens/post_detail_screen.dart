@@ -15,6 +15,7 @@ class PostDetailScreen extends StatefulWidget {
   final String customUserName;
   final bool isDarkMode;
 
+  final bool isCurrentUserCreator;
   final bool initialLiked;
   final bool initialSaved;
   final int? initialPollIndex;
@@ -35,6 +36,7 @@ class PostDetailScreen extends StatefulWidget {
     required this.currentLoggedInHandle,
     required this.customUserName,
     required this.isDarkMode,
+    this.isCurrentUserCreator = false,
     required this.initialLiked,
     required this.initialSaved,
     required this.initialPollIndex,
@@ -92,8 +94,14 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
         child: Column(
           children: [
             // Post — lambe text/photo par ye hissa apne andar scroll ho jata
-            // hai, taaki replies ki jagah hamesha bachi rahe.
-            Flexible(
+            // hai, lekin screen ka hissa tay seema tak hi lega. Pehle ye
+            // comments ke saath aadha-aadha baant leta tha, isliye comment
+            // box beech me ruk jata tha aur neeche khali safed jagah
+            // bach jati thi.
+            ConstrainedBox(
+              constraints: BoxConstraints(
+                maxHeight: MediaQuery.of(context).size.height * 0.42,
+              ),
               child: SingleChildScrollView(
                 child: CommunityPostCard(
                   post: widget.post,
@@ -140,6 +148,7 @@ class _PostDetailScreenState extends State<PostDetailScreen> {
                   customUserName: widget.customUserName,
                   isDarkMode: isDark,
                   embedded: true,
+                  isCurrentUserCreator: widget.isCurrentUserCreator,
                   buildRichTextContent: (text, {fontSize = 14.5}) =>
                       Text(text, style: TextStyle(fontSize: fontSize)),
                   onCommentAdded: () {
