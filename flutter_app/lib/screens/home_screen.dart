@@ -827,6 +827,198 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
     );
   }
 
+  String _drawerInitials(String name) {
+    final parts = name.trim().split(RegExp(r'\s+')).where((e) => e.isNotEmpty).toList();
+    if (parts.isEmpty) return 'A';
+    if (parts.length == 1) return parts.first[0].toUpperCase();
+    return (parts[0][0] + parts[1][0]).toUpperCase();
+  }
+
+  Widget _drawerSection(String label) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(24, 18, 24, 7),
+      child: Text(
+        label,
+        style: TextStyle(
+          color: _isDarkMode ? const Color(0xFF7C8DA6) : const Color(0xFF94A3B8),
+          fontSize: 10,
+          fontWeight: FontWeight.w900,
+          letterSpacing: 1.25,
+        ),
+      ),
+    );
+  }
+
+  Widget _drawerTile({
+    required IconData icon,
+    required Color color,
+    required String title,
+    String? subtitle,
+    String? badge,
+    Color? badgeColor,
+    bool indent = false,
+    required VoidCallback onTap,
+  }) {
+    final titleColor = _isDarkMode ? Colors.white : const Color(0xFF0F172A);
+    final subColor = _isDarkMode ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+
+    return Padding(
+      padding: EdgeInsets.only(left: indent ? 28 : 12, right: 12, top: 3, bottom: 3),
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(17),
+          onTap: onTap,
+          child: Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 9),
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(17),
+              color: _isDarkMode ? Colors.white.withValues(alpha: 0.025) : Colors.transparent,
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 38,
+                  height: 38,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [color, color.withValues(alpha: 0.68)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                    borderRadius: BorderRadius.circular(13),
+                    boxShadow: [
+                      BoxShadow(color: color.withValues(alpha: 0.22), blurRadius: 8, offset: const Offset(0, 3)),
+                    ],
+                  ),
+                  child: Icon(icon, size: 19, color: Colors.white),
+                ),
+                const SizedBox(width: 11),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        title,
+                        maxLines: 1,
+                        overflow: TextOverflow.ellipsis,
+                        style: TextStyle(color: titleColor, fontSize: 13.5, fontWeight: FontWeight.w800),
+                      ),
+                      if (subtitle != null) ...[
+                        const SizedBox(height: 2),
+                        Text(
+                          subtitle,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: TextStyle(color: subColor, fontSize: 10.5, fontWeight: FontWeight.w600),
+                        ),
+                      ],
+                    ],
+                  ),
+                ),
+                if (badge != null)
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
+                    decoration: BoxDecoration(
+                      color: (badgeColor ?? color).withValues(alpha: 0.14),
+                      borderRadius: BorderRadius.circular(99),
+                    ),
+                    child: Text(
+                      badge,
+                      style: TextStyle(color: badgeColor ?? color, fontSize: 8.5, fontWeight: FontWeight.w900, letterSpacing: 0.5),
+                    ),
+                  )
+                else
+                  Icon(Icons.chevron_right_rounded, size: 18, color: subColor.withValues(alpha: 0.65)),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildBottomNavigation() {
+    // Education platform ke liye shaant, bharosemand bar:
+    // koi floating capsule ya gradient nahi — seedha full-width bar,
+    // upar patli line, chuna hua tab sirf neele rang me.
+    final surface = _isDarkMode ? const Color(0xFF0B1220) : Colors.white;
+    final border = _isDarkMode ? const Color(0xFF22314C) : const Color(0xFFE5EAF2);
+
+    return Container(
+      decoration: BoxDecoration(
+        color: surface,
+        border: Border(top: BorderSide(color: border)),
+      ),
+      child: SafeArea(
+        top: false,
+        child: SizedBox(
+          height: 62,
+          child: Row(
+            children: [
+              _bottomNavItem(0, Icons.home_outlined, Icons.home_rounded, 'Home'),
+              _bottomNavItem(1, Icons.menu_book_outlined, Icons.menu_book_rounded, 'Revision'),
+              _bottomNavItem(2, Icons.assignment_outlined, Icons.assignment_rounded, 'Sectional'),
+              _bottomNavItem(3, Icons.dynamic_feed_outlined, Icons.dynamic_feed_rounded, 'Community'),
+              _bottomNavItem(4, Icons.person_outline_rounded, Icons.person_rounded, 'Profile'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _bottomNavItem(int index, IconData icon, IconData selectedIcon, String label) {
+    final selected = _currentBottomIndex == index;
+    const primary = Color(0xFF2563EB);
+    final muted = _isDarkMode ? const Color(0xFF8EA0B8) : const Color(0xFF8492A6);
+
+    return Expanded(
+      child: Material(
+        color: Colors.transparent,
+        child: InkWell(
+          onTap: () {
+            setState(() => _currentBottomIndex = index);
+            if (index == 0) _loadRealtimeProgress();
+            if (index == 1) _fetchSubjectMappingLive();
+            if (index == 2) _fetchSectionalDataLive();
+          },
+          child: Column(
+            children: [
+              AnimatedContainer(
+                duration: const Duration(milliseconds: 200),
+                width: selected ? 26 : 0,
+                height: 3,
+                decoration: BoxDecoration(
+                  color: selected ? primary : Colors.transparent,
+                  borderRadius: const BorderRadius.vertical(bottom: Radius.circular(3)),
+                ),
+              ),
+              const Spacer(),
+              Icon(
+                selected ? selectedIcon : icon,
+                size: 23,
+                color: selected ? primary : muted,
+              ),
+              const SizedBox(height: 3),
+              Text(
+                label,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(
+                  color: selected ? primary : muted,
+                  fontSize: 10.5,
+                  fontWeight: selected ? FontWeight.w800 : FontWeight.w600,
+                ),
+              ),
+              const Spacer(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   /// Loading aur loaded — dono AppBars ka same branded title.
   Widget _brandAppBarTitle() {
     return Row(
