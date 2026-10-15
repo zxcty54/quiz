@@ -109,240 +109,423 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
   @override
   Widget build(BuildContext context) {
     final isDark = widget.isDarkMode;
-    final surface = isDark ? const Color(0xFF1E293B) : Colors.white;
-    final border = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
-    final title = isDark ? Colors.white : const Color(0xFF0F172A);
-    final muted = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
 
     return Container(
       width: double.infinity,
-      padding: const EdgeInsets.all(18),
       decoration: BoxDecoration(
-        color: surface,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: border),
+        gradient: const LinearGradient(
+          colors: [Color(0xFF172554), Color(0xFF4C1D95), Color(0xFF2563EB)],
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+        ),
+        borderRadius: BorderRadius.circular(26),
+        border: Border.all(color: Colors.white.withValues(alpha: isDark ? 0.16 : 0.35)),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withValues(alpha: isDark ? 0.22 : 0.05),
-            blurRadius: 14,
-            offset: const Offset(0, 5),
+            color: const Color(0xFF4C1D95).withValues(alpha: isDark ? 0.28 : 0.24),
+            blurRadius: 22,
+            offset: const Offset(0, 10),
           ),
         ],
       ),
-      child: FutureBuilder<_HeaderData>(
-        future: _dataFuture,
-        builder: (context, snapshot) {
-          final d = snapshot.data ??
-              const _HeaderData(
-                name: 'Aspirant',
-                streak: 0,
-                totalQuestions: 0,
-                accuracy: 0,
-                mocks: 0,
-                todayQuestions: 0,
-              );
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(26),
+        child: Stack(
+          children: [
+            // Decorative shapes — welcome card ko dashboard wali feel.
+            Positioned(
+              right: -34,
+              top: -42,
+              child: Container(
+                width: 132,
+                height: 132,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Colors.white.withValues(alpha: 0.09),
+                ),
+              ),
+            ),
+            Positioned(
+              right: 42,
+              top: 22,
+              child: Container(
+                width: 54,
+                height: 54,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  border: Border.all(color: Colors.white.withValues(alpha: 0.14), width: 10),
+                ),
+              ),
+            ),
+            Positioned(
+              left: -24,
+              bottom: -38,
+              child: Container(
+                width: 104,
+                height: 104,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: const Color(0xFFF59E0B).withValues(alpha: 0.10),
+                ),
+              ),
+            ),
+            Positioned(
+              right: 14,
+              bottom: 12,
+              child: Icon(
+                Icons.school_rounded,
+                size: 86,
+                color: Colors.white.withValues(alpha: 0.055),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(18),
+              child: FutureBuilder<_HeaderData>(
+                future: _dataFuture,
+                builder: (context, snapshot) {
+                  final d = snapshot.data ??
+                      const _HeaderData(
+                        name: 'Aspirant',
+                        streak: 0,
+                        totalQuestions: 0,
+                        accuracy: 0,
+                        mocks: 0,
+                        todayQuestions: 0,
+                      );
 
-          final initials = d.name.trim().isEmpty
-              ? 'A'
-              : d.name.trim().split(RegExp(r'\s+')).take(2).map((w) => w[0]).join().toUpperCase();
-          final goalProgress =
-              (d.todayQuestions / _dailyGoal).clamp(0.0, 1.0).toDouble();
-          final isNewUser = d.totalQuestions == 0;
+                  final initials = d.name.trim().isEmpty
+                      ? 'A'
+                      : d.name
+                          .trim()
+                          .split(RegExp(r'\s+'))
+                          .take(2)
+                          .map((w) => w[0])
+                          .join()
+                          .toUpperCase();
+                  final goalProgress =
+                      (d.todayQuestions / _dailyGoal).clamp(0.0, 1.0).toDouble();
+                  final isNewUser = d.totalQuestions == 0;
+                  final goalDone = d.todayQuestions >= _dailyGoal;
+                  final motivation = isNewUser
+                      ? 'Aaj pehla kadam lo — ek chhota mock, phir dekho progress.'
+                      : goalDone
+                          ? 'Aaj ka goal pura! Ek extra revision aur selection pakka.'
+                          : d.weakSubject != null
+                              ? 'Aaj ${d.weakSubject} par focus — kamzor topic hi rank banayega.'
+                              : 'Thoda sa roz, bada result pakka. Aaj ki practice shuru karo.';
 
-          return Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  CircleAvatar(
-                    radius: 21,
-                    backgroundColor: const Color(0xFF2563EB),
-                    child: Text(
-                      initials,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w800,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: 11),
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          '$_greeting, ${d.name}',
-                          maxLines: 1,
-                          overflow: TextOverflow.ellipsis,
-                          style: TextStyle(
-                            color: title,
-                            fontSize: 16.5,
-                            fontWeight: FontWeight.w800,
-                            letterSpacing: -0.2,
+                  return Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(
+                        children: [
+                          Stack(
+                            clipBehavior: Clip.none,
+                            children: [
+                              Container(
+                                width: 47,
+                                height: 47,
+                                alignment: Alignment.center,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  gradient: const LinearGradient(
+                                    colors: [Color(0xFFF59E0B), Color(0xFFEC4899)],
+                                    begin: Alignment.topLeft,
+                                    end: Alignment.bottomRight,
+                                  ),
+                                  border: Border.all(color: Colors.white.withValues(alpha: 0.85), width: 1.6),
+                                  boxShadow: [
+                                    BoxShadow(
+                                      color: Colors.black.withValues(alpha: 0.22),
+                                      blurRadius: 10,
+                                      offset: const Offset(0, 4),
+                                    ),
+                                  ],
+                                ),
+                                child: Text(
+                                  initials,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w900,
+                                    fontSize: 15,
+                                  ),
+                                ),
+                              ),
+                              Positioned(
+                                right: 0,
+                                bottom: 1,
+                                child: Container(
+                                  width: 11,
+                                  height: 11,
+                                  decoration: BoxDecoration(
+                                    color: const Color(0xFF22C55E),
+                                    shape: BoxShape.circle,
+                                    border: Border.all(color: Colors.white, width: 1.6),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
-                        ),
-                        const SizedBox(height: 2),
-                        Row(
-                          children: [
-                            Icon(_greetingIcon, size: 13, color: muted),
-                            const SizedBox(width: 4),
-                            Text(
-                              _todayLabel,
-                              style: TextStyle(
-                                color: muted,
-                                fontSize: 11.5,
-                                fontWeight: FontWeight.w600,
+                          const SizedBox(width: 12),
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Row(
+                                  children: [
+                                    Icon(_greetingIcon, size: 13, color: const Color(0xFFFDE68A)),
+                                    const SizedBox(width: 5),
+                                    Text(
+                                      '$_greeting  •  $_todayLabel',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        color: Colors.white.withValues(alpha: 0.82),
+                                        fontSize: 11,
+                                        fontWeight: FontWeight.w700,
+                                        letterSpacing: 0.25,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                const SizedBox(height: 3),
+                                Text(
+                                  'Namaste, ${d.name}',
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 21,
+                                    fontWeight: FontWeight.w900,
+                                    letterSpacing: -0.4,
+                                    shadows: [
+                                      Shadow(color: Color(0x55000000), blurRadius: 7, offset: Offset(0, 2)),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          if (d.streak > 0)
+                            Container(
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                              decoration: BoxDecoration(
+                                color: const Color(0xFFF59E0B),
+                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black.withValues(alpha: 0.20),
+                                    blurRadius: 8,
+                                    offset: const Offset(0, 3),
+                                  ),
+                                ],
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  const Icon(Icons.local_fire_department_rounded, size: 15, color: Colors.white),
+                                  const SizedBox(width: 4),
+                                  Text(
+                                    '${d.streak} din',
+                                    style: const TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w900,
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                  if (d.streak > 0)
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF59E0B).withValues(alpha: 0.14),
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(
-                          color: const Color(0xFFF59E0B).withValues(alpha: 0.35),
-                        ),
+                        ],
                       ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
+                      const SizedBox(height: 16),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          const Icon(Icons.local_fire_department_rounded,
-                              size: 14, color: Color(0xFFF59E0B)),
-                          const SizedBox(width: 4),
-                          Text(
-                            '${d.streak} din',
-                            style: const TextStyle(
-                              color: Color(0xFFB45309),
-                              fontSize: 11,
-                              fontWeight: FontWeight.w800,
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  decoration: BoxDecoration(
+                                    color: Colors.white.withValues(alpha: 0.14),
+                                    borderRadius: BorderRadius.circular(99),
+                                    border: Border.all(color: Colors.white.withValues(alpha: 0.18)),
+                                  ),
+                                  child: Text(
+                                    isNewUser ? 'START TODAY' : goalDone ? 'GOAL COMPLETE' : "TODAY'S MISSION",
+                                    style: const TextStyle(
+                                      color: Color(0xFFFDE68A),
+                                      fontSize: 8.5,
+                                      fontWeight: FontWeight.w900,
+                                      letterSpacing: 1.0,
+                                    ),
+                                  ),
+                                ),
+                                const SizedBox(height: 8),
+                                Text(
+                                  motivation,
+                                  maxLines: 3,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(
+                                    color: Colors.white.withValues(alpha: 0.94),
+                                    fontSize: 13.5,
+                                    fontWeight: FontWeight.w700,
+                                    height: 1.35,
+                                  ),
+                                ),
+                                const SizedBox(height: 7),
+                                Text(
+                                  '${d.todayQuestions}/$_dailyGoal sawal aaj',
+                                  style: TextStyle(
+                                    color: Colors.white.withValues(alpha: 0.76),
+                                    fontSize: 11,
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 14),
+                          SizedBox(
+                            width: 66,
+                            height: 66,
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                SizedBox(
+                                  width: 66,
+                                  height: 66,
+                                  child: CircularProgressIndicator(
+                                    value: goalProgress,
+                                    strokeWidth: 6,
+                                    backgroundColor: Colors.white.withValues(alpha: 0.20),
+                                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFFBBF24)),
+                                  ),
+                                ),
+                                Column(
+                                  mainAxisSize: MainAxisSize.min,
+                                  children: [
+                                    Text(
+                                      '${(goalProgress * 100).round()}%',
+                                      style: const TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 14,
+                                        fontWeight: FontWeight.w900,
+                                      ),
+                                    ),
+                                    Text(
+                                      'GOAL',
+                                      style: TextStyle(
+                                        color: Colors.white.withValues(alpha: 0.72),
+                                        fontSize: 7.5,
+                                        fontWeight: FontWeight.w900,
+                                        letterSpacing: 0.9,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
                         ],
                       ),
-                    ),
-                ],
-              ),
-              const SizedBox(height: 16),
-
-              // Aaj ka goal
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Text(
-                    isNewUser ? 'Aaj ka pehla kadam' : 'Aaj ka goal',
-                    style: TextStyle(
-                      color: muted,
-                      fontSize: 11.5,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                  Text(
-                    '${d.todayQuestions}/$_dailyGoal sawal',
-                    style: const TextStyle(
-                      color: Color(0xFF2563EB),
-                      fontSize: 11.5,
-                      fontWeight: FontWeight.w800,
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 6),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8),
-                child: LinearProgressIndicator(
-                  value: goalProgress,
-                  minHeight: 7,
-                  backgroundColor:
-                      isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-                  valueColor:
-                      const AlwaysStoppedAnimation<Color>(Color(0xFF2563EB)),
-                ),
-              ),
-              const SizedBox(height: 14),
-
-              // Chhote aankde
-              Row(
-                children: [
-                  _stat(context, Icons.help_outline_rounded, '${d.totalQuestions}', 'Questions', isDark),
-                  const SizedBox(width: 8),
-                  _stat(
-                    context,
-                    Icons.track_changes_rounded,
-                    isNewUser ? '—' : '${d.accuracy}%',
-                    'Accuracy',
-                    isDark,
-                  ),
-                  const SizedBox(width: 8),
-                  _stat(context, Icons.quiz_outlined, '${d.mocks}', 'Mocks', isDark),
-                ],
-              ),
-
-              if (d.weakSubject != null) ...[
-                const SizedBox(height: 12),
-                Row(
-                  children: [
-                    const Icon(Icons.my_location_rounded,
-                        size: 15, color: Color(0xFFDC2626)),
-                    const SizedBox(width: 6),
-                    Expanded(
-                      child: Text(
-                        'Kamzor topic: ${d.weakSubject} (${d.weakAccuracy}% accuracy) — aaj isi par practice karo',
-                        maxLines: 2,
-                        overflow: TextOverflow.ellipsis,
-                        style: TextStyle(
-                          color: muted,
-                          fontSize: 12,
-                          fontWeight: FontWeight.w600,
-                          height: 1.35,
-                        ),
+                      const SizedBox(height: 16),
+                      Row(
+                        children: [
+                          _stat(Icons.help_outline_rounded, '${d.totalQuestions}', 'Questions', const Color(0xFF38BDF8)),
+                          const SizedBox(width: 8),
+                          _stat(
+                            Icons.track_changes_rounded,
+                            isNewUser ? '—' : '${d.accuracy}%',
+                            'Accuracy',
+                            const Color(0xFF34D399),
+                          ),
+                          const SizedBox(width: 8),
+                          _stat(Icons.quiz_outlined, '${d.mocks}', 'Mocks', const Color(0xFFF472B6)),
+                        ],
                       ),
-                    ),
-                  ],
-                ),
-              ],
-            ],
-          );
-        },
+                      if (d.weakSubject != null) ...[
+                        const SizedBox(height: 12),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 9),
+                          decoration: BoxDecoration(
+                            color: const Color(0xFFEF4444).withValues(alpha: 0.20),
+                            borderRadius: BorderRadius.circular(14),
+                            border: Border.all(color: const Color(0xFFFCA5A5).withValues(alpha: 0.35)),
+                          ),
+                          child: Row(
+                            children: [
+                              const Icon(Icons.my_location_rounded, size: 15, color: Color(0xFFFCA5A5)),
+                              const SizedBox(width: 7),
+                              Expanded(
+                                child: Text(
+                                  'Focus: ${d.weakSubject} (${d.weakAccuracy}% accuracy) — aaj ispar practice karo',
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 11.5,
+                                    fontWeight: FontWeight.w700,
+                                    height: 1.35,
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ],
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
 
-  Widget _stat(BuildContext context, IconData icon, String value, String label, bool isDark) {
+  Widget _stat(IconData icon, String value, String label, Color accent) {
     return Expanded(
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
         decoration: BoxDecoration(
-          color: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-          borderRadius: BorderRadius.circular(14),
-          border: Border.all(
-            color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-          ),
+          color: Colors.white.withValues(alpha: 0.13),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: Colors.white.withValues(alpha: 0.20)),
         ),
         child: Column(
           children: [
-            Icon(icon, size: 16, color: const Color(0xFF2563EB)),
-            const SizedBox(height: 4),
+            Container(
+              width: 27,
+              height: 27,
+              decoration: BoxDecoration(
+                color: accent.withValues(alpha: 0.22),
+                shape: BoxShape.circle,
+              ),
+              child: Icon(icon, size: 15, color: accent),
+            ),
+            const SizedBox(height: 5),
             Text(
               value,
-              style: TextStyle(
-                color: isDark ? Colors.white : const Color(0xFF0F172A),
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: const TextStyle(
+                color: Colors.white,
                 fontSize: 14,
-                fontWeight: FontWeight.w800,
+                fontWeight: FontWeight.w900,
               ),
             ),
             Text(
               label,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
-                fontSize: 10,
-                fontWeight: FontWeight.w600,
+                color: Colors.white.withValues(alpha: 0.72),
+                fontSize: 9.5,
+                fontWeight: FontWeight.w700,
               ),
             ),
           ],
