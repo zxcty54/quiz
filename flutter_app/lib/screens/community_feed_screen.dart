@@ -6,8 +6,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../widgets/community_comments_sheet.dart';
 import '../widgets/community_post_card.dart';
+import 'post_detail_screen.dart';
 
 class CommunityFeedScreen extends StatefulWidget {
   final bool isDarkMode;
@@ -288,20 +288,50 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
     }
   }
 
-  void _openCommentsSheet(int postId, Map<String, dynamic> post) {
-    showModalBottomSheet(
-      context: context,
-      isScrollControlled: true,
-      backgroundColor: widget.isDarkMode ? _darkCard : _lightCard,
-      shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
-      builder: (ctx) => CommunityCommentsSheet(
-        postId: postId,
-        post: post,
-        currentLoggedInHandle: _currentLoggedInHandle,
-        customUserName: _customUserName,
-        isDarkMode: widget.isDarkMode,
-        buildRichTextContent: (text, {fontSize = 14.5}) => Text(text, style: TextStyle(fontSize: fontSize)),
-        onCommentAdded: () => setState(() => post['comments_count'] = (post['comments_count'] ?? 0) + 1),
+  void _openPostDetail(Map<String, dynamic> post) {
+    final postId = int.tryParse(post['id']?.toString() ?? '');
+    if (postId == null) return;
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => PostDetailScreen(
+          post: post,
+          currentLoggedInHandle: _currentLoggedInHandle,
+          customUserName: _customUserName,
+          isDarkMode: widget.isDarkMode,
+          initialLiked: _likedPostIds.contains(postId),
+          initialSaved: _savedPostIds.contains(postId),
+          initialPollIndex: _userPollSelections[postId],
+          onPostViewed: _handlePostViewed,
+          onLikeToggle: (liked) {
+            if (!mounted) return;
+            setState(() {
+              if (liked) {
+                _likedPostIds.add(postId);
+              } else {
+                _likedPostIds.remove(postId);
+              }
+            });
+          },
+          onBookmarkToggle: (saved) {
+            if (!mounted) return;
+            setState(() {
+              if (saved) {
+                _savedPostIds.add(postId);
+              } else {
+                _savedPostIds.remove(postId);
+              }
+            });
+          },
+          onPollVote: (optIdx) {
+            _userPollSelections[postId] = optIdx;
+          },
+          onPostDeleted: _fetchFeedPosts,
+          onPostChanged: () {
+            if (mounted) setState(() {});
+          },
+        ),
       ),
     );
   }
@@ -799,7 +829,7 @@ class _CommunityFeedScreenState extends State<CommunityFeedScreen> {
                                 isSaved: _savedPostIds.contains(postId),
                                 selectedPollIndex: _userPollSelections[postId],
                                 isDarkMode: isDark,
-                                onOpenComments: () => _openCommentsSheet(postId, item),
+                                onOpenComments: () => _openPostDetail(item),
                                 onPostViewed: _handlePostViewed,
                                 onLikeToggle: (liked) {
                                   if (liked) {

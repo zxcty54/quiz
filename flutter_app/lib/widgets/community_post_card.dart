@@ -24,6 +24,10 @@ class CommunityPostCard extends StatefulWidget {
   final Function(String newContent)? onPostUpdated;
   final Function(int postId)? onPostViewed;
 
+  /// Post Detail page par comment button bekaar hai (replies pehle se
+  /// dikhai de rahe hote hain), isliye wahan ise chhupa sakte hain.
+  final bool showCommentAction;
+
   const CommunityPostCard({
     super.key,
     required this.post,
@@ -39,6 +43,7 @@ class CommunityPostCard extends StatefulWidget {
     this.onPostDeleted,
     this.onPostUpdated,
     this.onPostViewed,
+    this.showCommentAction = true,
   });
 
   @override
@@ -1130,7 +1135,7 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
               IconButton(
                 icon: Icon(Icons.more_vert, size: 18, color: Colors.grey[500]),
                 padding: EdgeInsets.zero,
-                constraints: const BoxConstraints(minWidth: 32, minHeight: 32),
+                constraints: const BoxConstraints(minWidth: 40, minHeight: 40),
                 splashRadius: 18,
                 onPressed: () => _openPostOptionsSheet(isMyPost),
               ),
@@ -1178,12 +1183,13 @@ Download Free: https://play.google.com/store/apps/details?id=com.mocktester.onli
                     : (widget.isDarkMode ? Colors.white70 : const Color(0xFF536471)),
                 onTap: _handleLike,
               ),
-              _actionItem(
-                icon: Icons.chat_bubble_outline_rounded,
-                count: _formatCount(commentsCount),
-                color: widget.isDarkMode ? Colors.white70 : const Color(0xFF536471),
-                onTap: widget.onOpenComments,
-              ),
+              if (widget.showCommentAction)
+                _actionItem(
+                  icon: Icons.chat_bubble_outline_rounded,
+                  count: _formatCount(commentsCount),
+                  color: widget.isDarkMode ? Colors.white70 : const Color(0xFF536471),
+                  onTap: widget.onOpenComments,
+                ),
               _actionItem(
                 icon: Icons.remove_red_eye_outlined,
                 count: _formatCount(widget.post['views_count'] ?? 0),
