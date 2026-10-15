@@ -368,42 +368,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
         title: _brandAppBarTitle(),
         backgroundColor: cardColor,
         elevation: 0,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.bolt_rounded, color: Colors.amber, size: 22),
-            tooltip: "Instant Force Update",
-            onPressed: () async {
-              final prefs = await SharedPreferences.getInstance();
-              await prefs.remove('cached_subject_mapping_json');
-              await prefs.remove('cached_sectional_data_json');
-              await prefs.remove('persistent_subject_mapping_json');
-              await prefs.remove('persistent_sectional_data_json');
-
-              await _fetchLiveAppConfig();
-              await _fetchSectionalDataLive();
-              await _fetchSubjectMappingLive();
-
-              if (context.mounted) {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(
-                    content: Text('⚡ All Cache Purged! 100% Live JSON Fetched.'),
-                    backgroundColor: Color(0xFF16A34A),
-                    duration: Duration(seconds: 1),
-                  ),
-                );
-              }
-            },
-          ),
-          IconButton(
-            icon: const Icon(Icons.school_rounded, color: Color(0xFF075E54)),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const LearnHubScreen()),
-              ).then((_) => _loadRealtimeProgress());
-            },
-          ),
-        ],
       ),
       drawer: Drawer(
         child: FutureBuilder<SharedPreferences>(
