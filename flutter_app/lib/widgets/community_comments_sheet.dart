@@ -16,6 +16,10 @@ class CommunityCommentsSheet extends StatefulWidget {
   /// Comments ki saari logic wahi rehti hai; sirf wrapper/header badalta hai.
   final bool embedded;
 
+  /// Current user asal me creator account se login hai ya nahi.
+  /// Verified badge sirf inhi ke comment par lagega.
+  final bool isCurrentUserCreator;
+
   const CommunityCommentsSheet({
     super.key,
     required this.postId,
@@ -26,6 +30,7 @@ class CommunityCommentsSheet extends StatefulWidget {
     required this.buildRichTextContent,
     required this.onCommentAdded,
     this.embedded = false,
+    this.isCurrentUserCreator = false,
   });
 
   @override
@@ -580,7 +585,7 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
         'user_handle': widget.currentLoggedInHandle,
         'user_name': widget.customUserName,
         'comment_text': text,
-        'is_creator': widget.currentLoggedInHandle != 'user',
+        'is_creator': widget.isCurrentUserCreator,
       };
 
       if (_replyingToCommentId != null) {
@@ -691,19 +696,89 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
               child: _isLoadingComments
                   ? const Center(child: CircularProgressIndicator(strokeWidth: 2))
                   : _comments.isEmpty
-                      ? Center(
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(Icons.forum_outlined, size: 38, color: Colors.grey[400]),
-                              const SizedBox(height: 8),
-                              Text(
-                                'No replies yet. Be the first to solve!',
-                                style: TextStyle(color: Colors.grey[500], fontSize: 13),
+                      ? Builder(builder: (_) {
+                          final isDoubt = (widget.post['tag'] ?? '').toString().toLowerCase().contains('doubt');
+                          return Center(
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 32),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Stack(
+                                    clipBehavior: Clip.none,
+                                    children: [
+                                      Container(
+                                        width: 88,
+                                        height: 88,
+                                        decoration: BoxDecoration(
+                                          color: _primaryBlue.withValues(alpha: isDark ? 0.18 : 0.10),
+                                          shape: BoxShape.circle,
+                                        ),
+                                        child: Icon(
+                                          Icons.forum_rounded,
+                                          size: 42,
+                                          color: _primaryBlue.withValues(alpha: 0.85),
+                                        ),
+                                      ),
+                                      Positioned(
+                                        right: -2,
+                                        bottom: -2,
+                                        child: Container(
+                                          width: 30,
+                                          height: 30,
+                                          decoration: BoxDecoration(
+                                            color: const Color(0xFF059669),
+                                            shape: BoxShape.circle,
+                                            border: Border.all(
+                                              color: isDark ? const Color(0xFF1E293B) : Colors.white,
+                                              width: 2.5,
+                                            ),
+                                          ),
+                                          child: const Icon(Icons.add_comment_rounded, size: 15, color: Colors.white),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                  const SizedBox(height: 18),
+                                  Text(
+                                    isDoubt ? 'Be the first to answer' : 'Be the first to comment',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 17,
+                                      fontWeight: FontWeight.w800,
+                                      letterSpacing: -0.2,
+                                      color: isDark ? Colors.white : const Color(0xFF0F172A),
+                                    ),
+                                  ),
+                                  const SizedBox(height: 7),
+                                  Text(
+                                    isDoubt
+                                        ? 'Nobody has answered this doubt yet. Add your solution and help a fellow aspirant.'
+                                        : 'Nobody has responded to this post yet. Add your thoughts and start the discussion.',
+                                    textAlign: TextAlign.center,
+                                    style: TextStyle(
+                                      fontSize: 13,
+                                      height: 1.5,
+                                      color: Colors.grey[500],
+                                    ),
+                                  ),
+                                  const SizedBox(height: 18),
+                                  OutlinedButton.icon(
+                                    onPressed: () => _commentFocusNode.requestFocus(),
+                                    icon: const Icon(Icons.edit_rounded, size: 16),
+                                    label: Text(isDoubt ? 'Write an answer' : 'Write a comment'),
+                                    style: OutlinedButton.styleFrom(
+                                      foregroundColor: _primaryBlue,
+                                      side: const BorderSide(color: _primaryBlue),
+                                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                                      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
+                                    ),
+                                  ),
+                                ],
                               ),
-                            ],
-                          ),
-                        )
+                            ),
+                          );
+                        })
                       : ListView.builder(
                           itemCount: displayComments.length,
                           itemBuilder: (context, cIdx) {
@@ -764,25 +839,30 @@ class _CommunityCommentsSheetState extends State<CommunityCommentsSheet> {
                                         Row(
                                           crossAxisAlignment: CrossAxisAlignment.center,
                                           children: [
-                                            Flexible(
-                                              child: Text(
-                                                c['user_name'] ?? 'Aspirant',
-                                                style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12.5),
-                                                overflow: TextOverflow.ellipsis,
+                                            Expanded(
+                                              child: Row(
+                                                children: [
+                                                  Flexible(
+                                                    child: Text(
+                                                      c['user_name'] ?? 'Aspirant',
+                                                      style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 12.5),
+                                                      overflow: TextOverflow.ellipsis,
+                                                    ),
+                                                  ),
+                                                  if (c['is_creator'] == true) ...[
+                                                    const SizedBox(width: 4),
+                                                    const Icon(Icons.verified, color: _primaryBlue, size: 13),
+                                                  ],
+                                                  if (_relativeTime(c['created_at']).isNotEmpty) ...[
+                                                    const SizedBox(width: 6),
+                                                    Text(
+                                                      '· ${_relativeTime(c['created_at'])}',
+                                                      style: TextStyle(color: Colors.grey[500], fontSize: 11),
+                                                    ),
+                                                  ],
+                                                ],
                                               ),
                                             ),
-                                            if (c['is_creator'] == true) ...[
-                                              const SizedBox(width: 4),
-                                              const Icon(Icons.verified, color: _primaryBlue, size: 13),
-                                            ],
-                                            if (_relativeTime(c['created_at']).isNotEmpty) ...[
-                                              const SizedBox(width: 6),
-                                              Text(
-                                                '· ${_relativeTime(c['created_at'])}',
-                                                style: TextStyle(color: Colors.grey[500], fontSize: 11),
-                                              ),
-                                            ],
-                                            const Spacer(),
                                             if (isMyComment)
                                               InkWell(
                                                 borderRadius: BorderRadius.circular(14),
