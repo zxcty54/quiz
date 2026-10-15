@@ -55,7 +55,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
         colorVal = 0xFFD97706;
         tag = '🔥 PYQ SHEET';
       } else if (board.contains('REFERENCE')) {
-        colorVal = 0xFF7C3AED;
+        colorVal = 0xFF1E40AF;
         tag = '🏛️ STANDARD';
       }
 
@@ -197,7 +197,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
       width: double.infinity,
       decoration: BoxDecoration(
         color: cardBg,
-        borderRadius: BorderRadius.circular(16),
+        borderRadius: BorderRadius.circular(22),
         border: Border.all(color: borderColor, width: 1),
         boxShadow: [
           BoxShadow(
@@ -233,8 +233,9 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
                         Text(
                           'Study Material & PDF Vault',
                           style: TextStyle(
-                            fontSize: 15,
-                            fontWeight: FontWeight.w700,
+                            fontSize: 15.5,
+                            fontWeight: FontWeight.w900,
+                            letterSpacing: -0.2,
                             color: textColor,
                           ),
                         ),
@@ -291,15 +292,15 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
                 fillColor: itemBg,
                 contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(14),
                   borderSide: BorderSide(color: borderColor),
                 ),
                 enabledBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(14),
                   borderSide: BorderSide(color: borderColor),
                 ),
                 focusedBorder: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(14),
                   borderSide: const BorderSide(color: Color(0xFF2563EB), width: 1.5),
                 ),
               ),
@@ -343,7 +344,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
                   child: Material(
                     color: itemBg,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(16),
                       side: BorderSide(color: borderColor),
                     ),
                     clipBehavior: Clip.antiAlias,
@@ -413,7 +414,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
                                     overflow: TextOverflow.ellipsis,
                                     style: TextStyle(
                                       fontSize: 13,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w700,
                                       color: textColor,
                                     ),
                                   ),
@@ -441,11 +442,11 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
 
             // 🌐 Bottom CTA Button
             Material(
-              color: const Color(0xFF2563EB),
-              borderRadius: BorderRadius.circular(10),
+              color: const Color(0xFF1E40AF),
+              borderRadius: BorderRadius.circular(14),
               child: InkWell(
                 onTap: () => _launchUrl(widget.customWebsiteUrl ?? _defaultWebsiteUrl),
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(14),
                 child: const Padding(
                   padding: EdgeInsets.symmetric(vertical: 11),
                   child: Row(
@@ -458,7 +459,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 13,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w800,
                         ),
                       ),
                     ],

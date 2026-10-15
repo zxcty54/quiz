@@ -203,15 +203,15 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
             ),
       borderRadius: BorderRadius.circular(24),
       border: Border.all(
-        color: isDark ? const Color(0xFF334155) : const Color(0xFFFDE68A),
-        width: 1.5,
+        color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+        width: 1.2,
       ),
       boxShadow: [
         BoxShadow(
-          color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.08 : 0.12),
-          blurRadius: 24,
+          color: const Color(0xFF1E40AF).withOpacity(isDark ? 0.10 : 0.08),
+          blurRadius: 22,
           offset: const Offset(0, 8),
-          spreadRadius: 2,
+          spreadRadius: 1,
         ),
         BoxShadow(
           color: Colors.black.withOpacity(isDark ? 0.35 : 0.03),
@@ -278,11 +278,11 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 4),
                 decoration: BoxDecoration(
-                  color: const Color(0xFFDC2626),
+                  color: const Color(0xFF1E40AF),
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                      color: const Color(0xFFDC2626).withOpacity(0.3),
+                      color: const Color(0xFF1E40AF).withOpacity(0.3),
                       blurRadius: 6,
                       offset: const Offset(0, 2),
                     ),
@@ -328,7 +328,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                   child: Container(
                     decoration: const BoxDecoration(
                       gradient: LinearGradient(
-                        colors: [Color(0xFFF59E0B), Color(0xFFEA580C), Color(0xFFDC2626)],
+                        colors: [Color(0xFF1E40AF), Color(0xFF2563EB), Color(0xFF38BDF8)],
                       ),
                     ),
                   ),
@@ -372,7 +372,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                                     Icons.arrow_back_ios_new_rounded,
                                     size: 13,
                                     color: _activeIndex > 0
-                                        ? const Color(0xFFD97706)
+                                        ? const Color(0xFF2563EB)
                                         : Colors.grey.withOpacity(0.35),
                                   ),
                                   const SizedBox(width: 4),
@@ -382,7 +382,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                                       fontSize: 12,
                                       fontWeight: FontWeight.w700,
                                       color: _activeIndex > 0
-                                          ? const Color(0xFFD97706)
+                                          ? const Color(0xFF2563EB)
                                           : Colors.grey.withOpacity(0.35),
                                     ),
                                   ),
@@ -433,13 +433,11 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                               child: Container(
                                 padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
                                 decoration: BoxDecoration(
-                                  gradient: const LinearGradient(
-                                    colors: [Color(0xFFF59E0B), Color(0xFFD97706)],
-                                  ),
+                                  color: const Color(0xFF1E40AF),
                                   borderRadius: BorderRadius.circular(12),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: const Color(0xFFD97706).withOpacity(0.35),
+                                      color: const Color(0xFF1E40AF).withOpacity(0.35),
                                       blurRadius: 8,
                                       offset: const Offset(0, 3),
                                     ),
@@ -471,10 +469,10 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                     Container(
                       margin: const EdgeInsets.fromLTRB(16, 0, 16, 14),
                       decoration: BoxDecoration(
-                        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFFFFBEB),
+                        color: isDark ? const Color(0xFF1E293B) : const Color(0xFFEFF6FF),
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(
-                          color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.3 : 0.4),
+                          color: const Color(0xFF2563EB).withOpacity(isDark ? 0.3 : 0.25),
                           width: 1,
                         ),
                       ),
@@ -497,12 +495,12 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                                       style: TextStyle(
                                         fontSize: 11.5,
                                         fontWeight: FontWeight.w800,
-                                        color: Color(0xFFD97706),
+                                        color: Color(0xFF1E40AF),
                                       ),
                                     ),
                                   ],
                                 ),
-                                Icon(Icons.open_in_new_rounded, size: 14, color: Color(0xFFD97706)),
+                                Icon(Icons.open_in_new_rounded, size: 14, color: Color(0xFF1E40AF)),
                               ],
                             ),
                           ),
@@ -634,17 +632,7 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
           ...bullets.map((bullet) {
             return Padding(
               padding: const EdgeInsets.only(bottom: 8.0),
-              child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
-                decoration: BoxDecoration(
-                  color: isDark ? Colors.white.withOpacity(0.04) : const Color(0xFFF8FAFC),
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(
-                    color: isDark ? Colors.white.withOpacity(0.08) : const Color(0xFFE2E8F0),
-                    width: 0.8,
-                  ),
-                ),
-                child: Row(
+              child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     const Padding(
@@ -660,16 +648,15 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
                       child: Text(
                         bullet.toString(),
                         style: TextStyle(
-                          fontSize: 12,
+                          fontSize: 12.5,
                           fontWeight: FontWeight.w500,
                           color: bulletTextColor,
-                          height: 1.35,
+                          height: 1.4,
                         ),
                       ),
                     ),
                   ],
                 ),
-              ),
             );
           }),
         ],

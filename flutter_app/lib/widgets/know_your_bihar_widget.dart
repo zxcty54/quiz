@@ -384,14 +384,37 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
             children: [
               Row(
                 children: [
-                  const Text('🗺️ ', style: TextStyle(fontSize: 16)),
-                  Text(
-                    'Know Your Bihar',
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w800,
-                      color: isDark ? Colors.white : const Color(0xFF0F172A),
+                  Container(
+                    width: 34,
+                    height: 34,
+                    decoration: BoxDecoration(
+                      color: themeColor.withOpacity(isDark ? 0.22 : 0.12),
+                      borderRadius: BorderRadius.circular(11),
                     ),
+                    child: Icon(Icons.map_rounded, size: 18, color: themeColor),
+                  ),
+                  const SizedBox(width: 9),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Know Your Bihar',
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w900,
+                          letterSpacing: -0.2,
+                          color: isDark ? Colors.white : const Color(0xFF0F172A),
+                        ),
+                      ),
+                      Text(
+                        'Roz ek naya Bihar dossier',
+                        style: TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600,
+                          color: isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -436,6 +459,13 @@ class _KnowYourBiharWidgetState extends State<KnowYourBiharWidget> {
             borderRadius: BorderRadius.circular(22),
             child: Stack(
               children: [
+                Positioned(
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  height: 4,
+                  child: Container(color: themeColor),
+                ),
                 Positioned(
                   right: -25,
                   bottom: -25,
