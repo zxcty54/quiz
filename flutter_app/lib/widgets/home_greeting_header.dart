@@ -4,7 +4,7 @@ import '../services/user_stats_service.dart';
 
 /// Home ke sabse upar ka personalized header.
 ///
-/// MockTester ke signature Royal Blue theme ke saath match kiya gaya.
+/// MockTester signature Deep Royal Blue theme ke saath locked.
 class HomeGreetingHeader extends StatefulWidget {
   final bool isDarkMode;
   final int reloadToken;
@@ -107,23 +107,23 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        // 💙 SIGNATURE ROYAL BLUE GRADIENT
+        // 💙 TRUE DEEP ROYAL NAVY BLUE GRADIENT (No Light/Sky blue wash)
         gradient: LinearGradient(
           colors: isDark
-              ? const [Color(0xFF1E3A8A), Color(0xFF1D4ED8), Color(0xFF2563EB)]
-              : const [Color(0xFF1D4ED8), Color(0xFF2563EB), Color(0xFF3B82F6)],
+              ? const [Color(0xFF0A1120), Color(0xFF172554), Color(0xFF1E40AF)]
+              : const [Color(0xFF172554), Color(0xFF1E40AF), Color(0xFF2563EB)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
         borderRadius: BorderRadius.circular(24),
         border: Border.all(
-          color: Colors.white.withOpacity(isDark ? 0.12 : 0.28),
+          color: Colors.white.withOpacity(isDark ? 0.08 : 0.16),
           width: 1.2,
         ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF1D4ED8).withOpacity(isDark ? 0.35 : 0.25),
-            blurRadius: 20,
+            color: const Color(0xFF1E40AF).withOpacity(isDark ? 0.35 : 0.28),
+            blurRadius: 18,
             offset: const Offset(0, 8),
           ),
         ],
@@ -132,28 +132,16 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
         borderRadius: BorderRadius.circular(24),
         child: Stack(
           children: [
-            // Decorative background elements
+            // Subtle ambient circular glow (No washed-out white)
             Positioned(
               right: -30,
               top: -35,
               child: Container(
-                width: 125,
-                height: 125,
+                width: 120,
+                height: 120,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.08),
-                ),
-              ),
-            ),
-            Positioned(
-              right: 48,
-              top: 18,
-              child: Container(
-                width: 48,
-                height: 48,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white.withOpacity(0.12), width: 8),
+                  color: Colors.white.withOpacity(0.04),
                 ),
               ),
             ),
@@ -161,11 +149,11 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
               left: -20,
               bottom: -30,
               child: Container(
-                width: 95,
-                height: 95,
+                width: 90,
+                height: 90,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: const Color(0xFFF59E0B).withOpacity(0.12),
+                  color: const Color(0xFFF59E0B).withOpacity(0.08),
                 ),
               ),
             ),
@@ -175,7 +163,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
               child: Icon(
                 Icons.school_rounded,
                 size: 82,
-                color: Colors.white.withOpacity(0.06),
+                color: Colors.white.withOpacity(0.04),
               ),
             ),
             Padding(
@@ -233,7 +221,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                   borderRadius: BorderRadius.circular(15),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withOpacity(0.15),
+                                      color: Colors.black.withOpacity(0.25),
                                       blurRadius: 10,
                                       offset: const Offset(0, 4),
                                     ),
@@ -242,7 +230,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                 child: Text(
                                   initials,
                                   style: const TextStyle(
-                                    color: Color(0xFF1D4ED8),
+                                    color: Color(0xFF1E40AF),
                                     fontWeight: FontWeight.w900,
                                     fontSize: 16,
                                   ),
@@ -296,7 +284,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                     fontWeight: FontWeight.w900,
                                     letterSpacing: -0.4,
                                     shadows: [
-                                      Shadow(color: Color(0x35000000), blurRadius: 6, offset: Offset(0, 2)),
+                                      Shadow(color: Color(0x45000000), blurRadius: 6, offset: Offset(0, 2)),
                                     ],
                                   ),
                                 ),
@@ -311,7 +299,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                 borderRadius: BorderRadius.circular(20),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: Colors.black.withOpacity(0.18),
+                                    color: Colors.black.withOpacity(0.20),
                                     blurRadius: 8,
                                     offset: const Offset(0, 3),
                                   ),
@@ -349,9 +337,9 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                 Container(
                                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                                   decoration: BoxDecoration(
-                                    color: Colors.white.withOpacity(0.18),
+                                    color: Colors.black.withOpacity(0.18),
                                     borderRadius: BorderRadius.circular(99),
-                                    border: Border.all(color: Colors.white.withOpacity(0.28)),
+                                    border: Border.all(color: Colors.white.withOpacity(0.15)),
                                   ),
                                   child: Text(
                                     isNewUser ? 'START TODAY' : goalDone ? 'GOAL COMPLETE' : "TODAY'S MISSION",
@@ -400,8 +388,8 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                   child: CircularProgressIndicator(
                                     value: goalProgress,
                                     strokeWidth: 5.5,
-                                    backgroundColor: Colors.white.withOpacity(0.20),
-                                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFFBBF24)),
+                                    backgroundColor: Colors.black.withOpacity(0.25),
+                                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFF59E0B)),
                                   ),
                                 ),
                                 Column(
@@ -434,10 +422,10 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
 
                       const SizedBox(height: 16),
 
-                      // Bottom: Stats Metric Badges
+                      // Bottom: Stats Metric Badges (Dark frosted glass, no milky wash)
                       Row(
                         children: [
-                          _stat(Icons.help_outline_rounded, '${d.totalQuestions}', 'Questions', const Color(0xFF60A5FA)),
+                          _stat(Icons.help_outline_rounded, '${d.totalQuestions}', 'Questions', const Color(0xFF38BDF8)),
                           const SizedBox(width: 8),
                           _stat(
                             Icons.track_changes_rounded,
@@ -456,9 +444,9 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 8.5),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFEF4444).withOpacity(0.22),
+                            color: const Color(0xFFEF4444).withOpacity(0.20),
                             borderRadius: BorderRadius.circular(12),
-                            border: Border.all(color: const Color(0xFFFCA5A5).withOpacity(0.35)),
+                            border: Border.all(color: const Color(0xFFFCA5A5).withOpacity(0.28)),
                           ),
                           child: Row(
                             children: [
@@ -496,9 +484,9 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 9),
         decoration: BoxDecoration(
-          color: Colors.white.withOpacity(0.14),
+          color: Colors.black.withOpacity(0.20),
           borderRadius: BorderRadius.circular(14),
-          border: Border.all(color: Colors.white.withOpacity(0.22)),
+          border: Border.all(color: Colors.white.withOpacity(0.12)),
         ),
         child: Column(
           children: [
@@ -506,7 +494,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
               width: 26,
               height: 26,
               decoration: BoxDecoration(
-                color: accent.withOpacity(0.25),
+                color: accent.withOpacity(0.20),
                 shape: BoxShape.circle,
               ),
               child: Icon(icon, size: 14, color: accent),
