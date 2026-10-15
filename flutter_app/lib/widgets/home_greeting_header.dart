@@ -4,15 +4,9 @@ import '../services/user_stats_service.dart';
 
 /// Home ke sabse upar ka personalized header.
 ///
-/// Naam ke saath greeting, aaj ka goal, streak aur kamzor subject dikhata hai.
-/// आंकड़े UserStatsService (local stats) se aate hain. Naye user ke liye
-/// jhooti "100% accuracy" nahi dikhti — wahan pehla kadam dikhta hai.
+/// MockTester signature Deep Royal Blue theme ke saath locked.
 class HomeGreetingHeader extends StatefulWidget {
   final bool isDarkMode;
-
-  /// Parent jab is number ko badhaye (jaise pull-to-refresh par),
-  /// greeting apne aankde dobara load karti hai — app restart ki
-  /// zaroorat nahi padti.
   final int reloadToken;
 
   const HomeGreetingHeader({
@@ -113,69 +107,63 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
     return Container(
       width: double.infinity,
       decoration: BoxDecoration(
-        gradient: const LinearGradient(
-          colors: [Color(0xFF6366F1), Color(0xFF8B5CF6), Color(0xFFA78BFA)],
+        // 💙 TRUE DEEP ROYAL NAVY BLUE GRADIENT (No Light/Sky blue wash)
+        gradient: LinearGradient(
+          colors: isDark
+              ? const [Color(0xFF0A1120), Color(0xFF172554), Color(0xFF1E40AF)]
+              : const [Color(0xFF172554), Color(0xFF1E40AF), Color(0xFF2563EB)],
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
         ),
-        borderRadius: BorderRadius.circular(26),
-        border: Border.all(color: Colors.white.withValues(alpha: isDark ? 0.16 : 0.35)),
+        borderRadius: BorderRadius.circular(24),
+        border: Border.all(
+          color: Colors.white.withOpacity(isDark ? 0.08 : 0.16),
+          width: 1.2,
+        ),
         boxShadow: [
           BoxShadow(
-            color: const Color(0xFF8B5CF6).withValues(alpha: isDark ? 0.25 : 0.22),
-            blurRadius: 22,
-            offset: const Offset(0, 10),
+            color: const Color(0xFF1E40AF).withOpacity(isDark ? 0.35 : 0.28),
+            blurRadius: 18,
+            offset: const Offset(0, 8),
           ),
         ],
       ),
       child: ClipRRect(
-        borderRadius: BorderRadius.circular(26),
+        borderRadius: BorderRadius.circular(24),
         child: Stack(
           children: [
-            // Decorative shapes — welcome card ko dashboard wali feel.
+            // Subtle ambient circular glow (No washed-out white)
             Positioned(
-              right: -34,
-              top: -42,
+              right: -30,
+              top: -35,
               child: Container(
-                width: 132,
-                height: 132,
+                width: 120,
+                height: 120,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: Colors.white.withValues(alpha: 0.09),
+                  color: Colors.white.withOpacity(0.04),
                 ),
               ),
             ),
             Positioned(
-              right: 42,
-              top: 22,
+              left: -20,
+              bottom: -30,
               child: Container(
-                width: 54,
-                height: 54,
+                width: 90,
+                height: 90,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  border: Border.all(color: Colors.white.withValues(alpha: 0.14), width: 10),
-                ),
-              ),
-            ),
-            Positioned(
-              left: -24,
-              bottom: -38,
-              child: Container(
-                width: 104,
-                height: 104,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: const Color(0xFFF59E0B).withValues(alpha: 0.10),
+                  color: const Color(0xFFF59E0B).withOpacity(0.08),
                 ),
               ),
             ),
             Positioned(
               right: 14,
-              bottom: 12,
+              bottom: 10,
               child: Icon(
                 Icons.school_rounded,
-                size: 86,
-                color: Colors.white.withValues(alpha: 0.055),
+                size: 82,
+                color: Colors.white.withOpacity(0.04),
               ),
             ),
             Padding(
@@ -202,6 +190,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                           .map((w) => w[0])
                           .join()
                           .toUpperCase();
+
                   final goalProgress =
                       (d.todayQuestions / _dailyGoal).clamp(0.0, 1.0).toDouble();
                   final isNewUser = d.totalQuestions == 0;
@@ -217,26 +206,22 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      // Top Row: User Avatar, Greeting & Streak
                       Row(
                         children: [
                           Stack(
                             clipBehavior: Clip.none,
                             children: [
                               Container(
-                                width: 47,
-                                height: 47,
+                                width: 48,
+                                height: 48,
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
-                                  shape: BoxShape.circle,
-                                  gradient: const LinearGradient(
-                                    colors: [Color(0xFFF59E0B), Color(0xFFEC4899)],
-                                    begin: Alignment.topLeft,
-                                    end: Alignment.bottomRight,
-                                  ),
-                                  border: Border.all(color: Colors.white.withValues(alpha: 0.85), width: 1.6),
+                                  color: Colors.white,
+                                  borderRadius: BorderRadius.circular(15),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: Colors.black.withValues(alpha: 0.22),
+                                      color: Colors.black.withOpacity(0.25),
                                       blurRadius: 10,
                                       offset: const Offset(0, 4),
                                     ),
@@ -245,22 +230,22 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                 child: Text(
                                   initials,
                                   style: const TextStyle(
-                                    color: Colors.white,
+                                    color: Color(0xFF1E40AF),
                                     fontWeight: FontWeight.w900,
-                                    fontSize: 15,
+                                    fontSize: 16,
                                   ),
                                 ),
                               ),
                               Positioned(
-                                right: 0,
-                                bottom: 1,
+                                right: -2,
+                                bottom: -2,
                                 child: Container(
-                                  width: 11,
-                                  height: 11,
+                                  width: 13,
+                                  height: 13,
                                   decoration: BoxDecoration(
                                     color: const Color(0xFF22C55E),
                                     shape: BoxShape.circle,
-                                    border: Border.all(color: Colors.white, width: 1.6),
+                                    border: Border.all(color: Colors.white, width: 2),
                                   ),
                                 ),
                               ),
@@ -280,7 +265,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                       maxLines: 1,
                                       overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
-                                        color: Colors.white.withValues(alpha: 0.82),
+                                        color: Colors.white.withOpacity(0.85),
                                         fontSize: 11,
                                         fontWeight: FontWeight.w700,
                                         letterSpacing: 0.25,
@@ -288,18 +273,18 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                     ),
                                   ],
                                 ),
-                                const SizedBox(height: 3),
+                                const SizedBox(height: 2),
                                 Text(
                                   'Namaste, ${d.name}',
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: const TextStyle(
                                     color: Colors.white,
-                                    fontSize: 21,
+                                    fontSize: 20,
                                     fontWeight: FontWeight.w900,
                                     letterSpacing: -0.4,
                                     shadows: [
-                                      Shadow(color: Color(0x55000000), blurRadius: 7, offset: Offset(0, 2)),
+                                      Shadow(color: Color(0x45000000), blurRadius: 6, offset: Offset(0, 2)),
                                     ],
                                   ),
                                 ),
@@ -308,13 +293,13 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                           ),
                           if (d.streak > 0)
                             Container(
-                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5.5),
                               decoration: BoxDecoration(
                                 color: const Color(0xFFF59E0B),
                                 borderRadius: BorderRadius.circular(20),
                                 boxShadow: [
                                   BoxShadow(
-                                    color: Colors.black.withValues(alpha: 0.20),
+                                    color: Colors.black.withOpacity(0.20),
                                     blurRadius: 8,
                                     offset: const Offset(0, 3),
                                   ),
@@ -338,7 +323,10 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                             ),
                         ],
                       ),
+
                       const SizedBox(height: 16),
+
+                      // Middle: Mission & Progress Circular Indicator
                       Row(
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -347,11 +335,11 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                                   decoration: BoxDecoration(
-                                    color: Colors.white.withValues(alpha: 0.14),
+                                    color: Colors.black.withOpacity(0.18),
                                     borderRadius: BorderRadius.circular(99),
-                                    border: Border.all(color: Colors.white.withValues(alpha: 0.18)),
+                                    border: Border.all(color: Colors.white.withOpacity(0.15)),
                                   ),
                                   child: Text(
                                     isNewUser ? 'START TODAY' : goalDone ? 'GOAL COMPLETE' : "TODAY'S MISSION",
@@ -359,27 +347,27 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                       color: Color(0xFFFDE68A),
                                       fontSize: 8.5,
                                       fontWeight: FontWeight.w900,
-                                      letterSpacing: 1.0,
+                                      letterSpacing: 0.9,
                                     ),
-                                  ),
-                                ),
-                                const SizedBox(height: 8),
-                                Text(
-                                  motivation,
-                                  maxLines: 3,
-                                  overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(
-                                    color: Colors.white.withValues(alpha: 0.94),
-                                    fontSize: 13.5,
-                                    fontWeight: FontWeight.w700,
-                                    height: 1.35,
                                   ),
                                 ),
                                 const SizedBox(height: 7),
                                 Text(
+                                  motivation,
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: const TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 13,
+                                    fontWeight: FontWeight.w700,
+                                    height: 1.35,
+                                  ),
+                                ),
+                                const SizedBox(height: 6),
+                                Text(
                                   '${d.todayQuestions}/$_dailyGoal sawal aaj',
                                   style: TextStyle(
-                                    color: Colors.white.withValues(alpha: 0.76),
+                                    color: Colors.white.withOpacity(0.80),
                                     fontSize: 11,
                                     fontWeight: FontWeight.w700,
                                   ),
@@ -389,19 +377,19 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                           ),
                           const SizedBox(width: 14),
                           SizedBox(
-                            width: 66,
-                            height: 66,
+                            width: 64,
+                            height: 64,
                             child: Stack(
                               alignment: Alignment.center,
                               children: [
                                 SizedBox(
-                                  width: 66,
-                                  height: 66,
+                                  width: 64,
+                                  height: 64,
                                   child: CircularProgressIndicator(
                                     value: goalProgress,
-                                    strokeWidth: 6,
-                                    backgroundColor: Colors.white.withValues(alpha: 0.20),
-                                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFFBBF24)),
+                                    strokeWidth: 5.5,
+                                    backgroundColor: Colors.black.withOpacity(0.25),
+                                    valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFF59E0B)),
                                   ),
                                 ),
                                 Column(
@@ -411,17 +399,17 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                       '${(goalProgress * 100).round()}%',
                                       style: const TextStyle(
                                         color: Colors.white,
-                                        fontSize: 14,
+                                        fontSize: 13.5,
                                         fontWeight: FontWeight.w900,
                                       ),
                                     ),
                                     Text(
                                       'GOAL',
                                       style: TextStyle(
-                                        color: Colors.white.withValues(alpha: 0.72),
+                                        color: Colors.white.withOpacity(0.75),
                                         fontSize: 7.5,
                                         fontWeight: FontWeight.w900,
-                                        letterSpacing: 0.9,
+                                        letterSpacing: 0.8,
                                       ),
                                     ),
                                   ],
@@ -431,7 +419,10 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                           ),
                         ],
                       ),
+
                       const SizedBox(height: 16),
+
+                      // Bottom: Stats Metric Badges (Dark frosted glass, no milky wash)
                       Row(
                         children: [
                           _stat(Icons.help_outline_rounded, '${d.totalQuestions}', 'Questions', const Color(0xFF38BDF8)),
@@ -443,32 +434,33 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                             const Color(0xFF34D399),
                           ),
                           const SizedBox(width: 8),
-                          _stat(Icons.quiz_outlined, '${d.mocks}', 'Mocks', const Color(0xFFF472B6)),
+                          _stat(Icons.quiz_outlined, '${d.mocks}', 'Mocks', const Color(0xFFFBBF24)),
                         ],
                       ),
+
+                      // Weak Subject Focus
                       if (d.weakSubject != null) ...[
                         const SizedBox(height: 12),
                         Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 9),
+                          padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 8.5),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFEF4444).withValues(alpha: 0.20),
-                            borderRadius: BorderRadius.circular(14),
-                            border: Border.all(color: const Color(0xFFFCA5A5).withValues(alpha: 0.35)),
+                            color: const Color(0xFFEF4444).withOpacity(0.20),
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: const Color(0xFFFCA5A5).withOpacity(0.28)),
                           ),
                           child: Row(
                             children: [
-                              const Icon(Icons.my_location_rounded, size: 15, color: Color(0xFFFCA5A5)),
-                              const SizedBox(width: 7),
+                              const Icon(Icons.my_location_rounded, size: 14, color: Color(0xFFFCA5A5)),
+                              const SizedBox(width: 6),
                               Expanded(
                                 child: Text(
                                   'Focus: ${d.weakSubject} (${d.weakAccuracy}% accuracy) — aaj ispar practice karo',
-                                  maxLines: 2,
+                                  maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: const TextStyle(
                                     color: Colors.white,
                                     fontSize: 11.5,
                                     fontWeight: FontWeight.w700,
-                                    height: 1.35,
                                   ),
                                 ),
                               ),
@@ -490,22 +482,22 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
   Widget _stat(IconData icon, String value, String label, Color accent) {
     return Expanded(
       child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
+        padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 9),
         decoration: BoxDecoration(
-          color: Colors.white.withValues(alpha: 0.13),
-          borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: Colors.white.withValues(alpha: 0.20)),
+          color: Colors.black.withOpacity(0.20),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: Colors.white.withOpacity(0.12)),
         ),
         child: Column(
           children: [
             Container(
-              width: 27,
-              height: 27,
+              width: 26,
+              height: 26,
               decoration: BoxDecoration(
-                color: accent.withValues(alpha: 0.22),
+                color: accent.withOpacity(0.20),
                 shape: BoxShape.circle,
               ),
-              child: Icon(icon, size: 15, color: accent),
+              child: Icon(icon, size: 14, color: accent),
             ),
             const SizedBox(height: 5),
             Text(
@@ -523,7 +515,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
               maxLines: 1,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(
-                color: Colors.white.withValues(alpha: 0.72),
+                color: Colors.white.withOpacity(0.75),
                 fontSize: 9.5,
                 fontWeight: FontWeight.w700,
               ),
