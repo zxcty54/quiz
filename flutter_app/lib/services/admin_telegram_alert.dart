@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'telegram_worker.dart';
 
@@ -64,55 +63,4 @@ class AdminTelegramAlert {
     }
   }
 
-  /// Interactive Post Approval Card
-  static Future<bool> sendForInteractiveApproval({
-    required int postId,
-    required String authorName,
-    required String authorHandle,
-    required String tag,
-    required String content,
-    String? imageUrl,
-    bool hasPoll = false,
-  }) async {
-    try {
-      final safeContent = _escapeHtml(content.length > 350 ? '${content.substring(0, 350)}...' : content);
-      final safeAuthor = _escapeHtml(authorName);
-      final safeHandle = _escapeHtml(authorHandle);
-      final safeTag = _escapeHtml(tag);
-
-      final String pollNotice = hasPoll ? '\n📊 <b>Attachment:</b> Interactive Daily Quiz Included' : '';
-      final String imgNotice = (imageUrl != null && imageUrl.isNotEmpty) ? '\n🖼️ <b>Attachment:</b> Screenshot Image Attached' : '';
-
-      final String message = '''
-🛡️ <b>NEW POST SUBMITTED FOR MODERATION</b>
-
-🆔 <b>Post ID:</b> <code>#$postId</code>
-👤 <b>Author:</b> $safeAuthor (@$safeHandle)
-🏷️ <b>Category:</b> $safeTag$pollNotice$imgNotice
-
-📝 <b>Content Preview:</b>
-<i>$safeContent</i>
-
-⏳ <i>Status: Awaiting Moderator decision...</i>
-''';
-
-      final inlineKeyboard = {
-        'inline_keyboard': [
-          [
-            {'text': '✅ Approve & Go Live', 'callback_data': 'approve_$postId'},
-            {'text': '🗑️ Reject & Delete', 'callback_data': 'reject_$postId'},
-          ]
-        ]
-      };
-
-      return TelegramWorker.send(
-        text: message,
-        parseMode: 'HTML',
-        replyMarkup: inlineKeyboard,
-      );
-    } catch (e) {
-      debugPrint("❌ Telegram Alert Error: $e");
-      return false;
-    }
-  }
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
-import '../services/admin_telegram_alert.dart'; // 👈 Yahan adjust ho gaya
 
 class ContentPublisherModal {
   static void openPublishSheet({
@@ -190,7 +189,7 @@ class ContentPublisherModal {
                             try {
                               final authorName = coachingName ?? profileName ?? creatorHandle;
 
-                              final inserted = await Supabase.instance.client
+                              await Supabase.instance.client
                                   .from('community_posts')
                                   .insert({
                                 'creator_id': creatorHandle,
@@ -205,15 +204,6 @@ class ContentPublisherModal {
                                 'shares_count': 0,
                                 'bookmarks_count': 0,
                               }).select().single();
-
-                              AdminTelegramAlert.sendForInteractiveApproval(
-                                postId: inserted['id'] ?? 0,
-                                authorName: authorName,
-                                authorHandle: creatorHandle,
-                                tag: tag,
-                                content: finalContent,
-                                hasPoll: type == 'quiz',
-                              ).catchError((_) => false);
 
                               if (ctx.mounted) Navigator.pop(ctx);
                               onPublished();
