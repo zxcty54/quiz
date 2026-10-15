@@ -3,11 +3,8 @@ import '../../widgets/home_widgets.dart';
 import '../../widgets/latest_jobs_widget.dart';
 import '../../widgets/daily_bulletin_widget.dart';
 import '../../widgets/first_in_india_widget.dart';
-import '../../widgets/trust_hero_banner.dart';
-import '../../widgets/launch_roadmap_card.dart';
 import '../../widgets/pro_pdf_vault_card.dart';
 import '../../widgets/coaching_hub_card.dart';
-import '../../widgets/coaching_onboarding_cta_widget.dart';
 import '../../widgets/hall_of_fame_carousel_widget.dart';
 import '../../widgets/bihar_events_carousel_widget.dart'; 
 import '../../widgets/know_your_bihar_widget.dart';
@@ -91,15 +88,23 @@ class _HomeTabState extends State<HomeTab> {
             _buildLearnPreviewCard(context),
             const SizedBox(height: 18),
 
-            // 3. DAILY CHALLENGE
+            // 3. MY COACHING / DISCOVER COACHING
+            // (code dalne par widget apne aap joined coaching ka card ban jata hai)
+            CoachingHubCard(
+              key: _coachingHubKey,
+              isDarkMode: widget.isDarkMode,
+            ),
+            const SizedBox(height: 18),
+
+            // 4. DAILY CHALLENGE
             ChallengeCardWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 18),
 
-            // 4. DISTRICT LEADERBOARD
+            // 5. DISTRICT LEADERBOARD
             DistrictTopLeaderboardWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 18),
 
-            // 5. AAJ KI PADHAI
+            // 6. AAJ KI PADHAI
             DailyBulletinWidget(
               key: _bulletinWidgetKey,
               isDarkMode: widget.isDarkMode,
@@ -117,25 +122,18 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // 6. LATEST JOBS
+            // 7. LATEST JOBS
             LatestJobsWidget(
               key: _jobsWidgetKey,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 7. PDF VAULT
+            // 8. PDF VAULT
             ProPdfVaultCard(
               key: _pdfVaultKey,
               isDarkMode: widget.isDarkMode,
               customWebsiteUrl: widget.appConfig['pdf_vault_main_url'],
-            ),
-            const SizedBox(height: 18),
-
-            // 8. COACHING HUB
-            CoachingHubCard(
-              key: _coachingHubKey,
-              isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
@@ -158,24 +156,6 @@ class _HomeTabState extends State<HomeTab> {
             // 11. SOCIAL PROOF
             HallOfFameCarouselWidget(
               key: _hallOfFameKey,
-              isDarkMode: widget.isDarkMode,
-            ),
-            const SizedBox(height: 18),
-
-            TrustHeroBannerWidget(isDarkMode: widget.isDarkMode),
-            const SizedBox(height: 18),
-
-            // 12. FOOTER (B2B / community / roadmap sabse neeche)
-            CoachingOnboardingCtaWidget(
-              isDarkMode: widget.isDarkMode,
-            ),
-            const SizedBox(height: 18),
-
-            const TelegramCreatorWidget(),
-            const SizedBox(height: 20),
-
-            LaunchRoadmapCardWidget(
-              appConfig: widget.appConfig,
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 12),
