@@ -500,7 +500,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
 
               // ===== Achievements =====
-              _sectionHead('🏆 Achievements', '$unlockedCount / 4 UNLOCKED', headerTextColor),
+              _sectionHead('🏆 Achievements', '$unlockedCount / 12 UNLOCKED', headerTextColor),
               SizedBox(
                 height: 90,
                 child: ListView(
