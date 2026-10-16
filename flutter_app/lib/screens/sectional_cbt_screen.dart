@@ -1092,10 +1092,14 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
               const Color(0xFF1E293B),
           foregroundColor:
               Colors.white,
+          iconTheme: const IconThemeData(
+            color: Colors.white,
+          ),
           title: Text(
             widget.testTitle,
             style: const TextStyle(
               fontSize: 14,
+              color: Colors.white,
               fontWeight:
                   FontWeight.bold,
             ),
