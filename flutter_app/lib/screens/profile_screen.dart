@@ -460,7 +460,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (ctx) => const SavedQuestionsScreen()),
+                          MaterialPageRoute(builder: (ctx) => SavedQuestionsScreen(isDarkMode: widget.isDarkMode)),
                         );
                       },
                     ),
