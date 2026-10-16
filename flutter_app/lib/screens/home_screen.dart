@@ -28,6 +28,7 @@ import 'tabs/sectional_tab.dart';
 // 🛠️ Aspirant Utility Tools Imports
 import '../widgets/exam_photo_resizer_screen.dart';
 import '../widgets/exam_doc_merger_screen.dart';
+import '../widgets/cartoon_avatar.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -512,23 +513,17 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
                                 Stack(
                                   clipBehavior: Clip.none,
                                   children: [
+                                    // Akshar ki jagah cartoon avatar (Profile wala hi,
+                                    // naam se fixed banta hai) — green dot waisa hi rakha
                                     Container(
                                       width: 49,
                                       height: 49,
-                                      alignment: Alignment.center,
-                                      decoration: BoxDecoration(
+                                      padding: const EdgeInsets.all(2),
+                                      decoration: const BoxDecoration(
+                                        color: Colors.white,
                                         shape: BoxShape.circle,
-                                        gradient: const LinearGradient(
-                                          colors: [Color(0xFFF59E0B), Color(0xFFEC4899)],
-                                          begin: Alignment.topLeft,
-                                          end: Alignment.bottomRight,
-                                        ),
-                                        border: Border.all(color: Colors.white.withValues(alpha: 0.85), width: 1.5),
                                       ),
-                                      child: Text(
-                                        _drawerInitials(userName),
-                                        style: const TextStyle(color: Colors.white, fontSize: 15, fontWeight: FontWeight.w900),
-                                      ),
+                                      child: CartoonAvatar(seed: userName, size: 45),
                                     ),
                                     Positioned(
                                       right: 0,
