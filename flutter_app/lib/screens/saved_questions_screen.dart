@@ -14,6 +14,7 @@ class SavedQuestionsScreen extends StatefulWidget {
 
 class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
   late Future<List<Map<String, dynamic>>> _savedQuestionsFuture;
+  List<Map<String, dynamic>> _savedListMemory = [];
   bool _isHindi = true;
   
   // Track open/collapsed explanation state per question index
@@ -27,7 +28,10 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
 
   void _loadData() {
     setState(() {
-      _savedQuestionsFuture = UserStatsService.getSavedQuestions();
+      _savedQuestionsFuture = UserStatsService.getSavedQuestions().then((list) {
+        _savedListMemory = list;
+        return list;
+      });
     });
   }
 
@@ -81,11 +85,11 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
       body: FutureBuilder<List<Map<String, dynamic>>>(
         future: _savedQuestionsFuture,
         builder: (context, snapshot) {
-          if (snapshot.connectionState == ConnectionState.waiting) {
+          if (snapshot.connectionState == ConnectionState.waiting && _savedListMemory.isEmpty) {
             return const Center(child: CircularProgressIndicator());
           }
 
-          final list = snapshot.data ?? [];
+          final list = snapshot.data ?? _savedListMemory;
           if (list.isEmpty) {
             return Center(
               child: Column(
@@ -116,8 +120,11 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
               final bool isExpanded = _expandedSolutionIndices.contains(index);
 
               int targetCorrectIdx = q.answerIndex;
-              if (q.explanation.toLowerCase().contains('option 3 is correct') ||
-                  (q.explanation.toLowerCase().contains('frequency') && targetCorrectIdx == 0)) {
+              // Data ke kuch purane sawalon me save jawab galat tha, isliye
+              // explanation me saaf-saaf likha ho tabhi C ko sahi mana hai.
+              // (Purana "frequency shabd" wala andaz hata diya — usse jin
+              // sawalon ka asal jawab A tha, unka bhi C galat dikh jata tha.)
+              if (q.explanation.toLowerCase().contains('option 3 is correct')) {
                 targetCorrectIdx = 2;
               }
 
@@ -159,6 +166,22 @@ class _SavedQuestionsScreenState extends State<SavedQuestionsScreen> {
                           onPressed: () async {
                             await UserStatsService.toggleBookmark(qJson);
                             _loadData();
+                            // Galti se star dab jaye to wapas lane ka mauka
+                            if (mounted) {
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  content: const Text('Bookmark hataya gaya'),
+                                  duration: const Duration(seconds: 3),
+                                  action: SnackBarAction(
+                                    label: 'Undo',
+                                    onPressed: () async {
+                                      await UserStatsService.toggleBookmark(qJson);
+                                      _loadData();
+                                    },
+                                  ),
+                                ),
+                              );
+                            }
                           },
                         )
                       ],
