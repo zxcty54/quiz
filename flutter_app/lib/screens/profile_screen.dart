@@ -34,6 +34,7 @@ class ProfileScreen extends StatefulWidget {
 
 class _ProfileScreenState extends State<ProfileScreen> {
   final List<String> _weekDays = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  int _masteryReloadToken = 0;
   int _savedCaCount = 0;
   String _userName = 'Aspirant';
   String _userEmail = '';
@@ -236,7 +237,14 @@ class _ProfileScreenState extends State<ProfileScreen> {
         final int userStreak = stats['streak'] as int? ?? 1;
         final int savedBookmarksCount = stats['bookmarks'] as int? ?? 0;
 
-        return ListView(
+        return         return RefreshIndicator(
+          color: const Color(0xFF2563EB),
+          onRefresh: () async {
+            await _loadProfileData();
+            if (mounted) setState(() => _masteryReloadToken++);
+            await Future<void>.delayed(const Duration(milliseconds: 500));
+          },
+          child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
             Card(
@@ -383,7 +391,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ],
             ),
             const SizedBox(height: 14),
-            MasteryEvolutionCard(isDarkMode: isDark),
+            MasteryEvolutionCard(isDarkMode: isDark, reloadToken: _masteryReloadToken),
             const SizedBox(height: 14),
             Text('Recent Progress (Last 7 Days)', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
             const SizedBox(height: 10),
@@ -674,7 +682,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             ),
             const SizedBox(height: 20),
           ],
-        );
+        ));
       },
     );
   }

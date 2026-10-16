@@ -419,6 +419,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             questionText: qTextClean,
             timeTakenSeconds: timeSpent,
             testType: currentTestType,
+            deferCloudSync: true,
           );
         } else {
           wrongCount++;
@@ -433,6 +434,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             questionText: qTextClean,
             timeTakenSeconds: timeSpent,
             testType: currentTestType,
+            deferCloudSync: true,
             wrongQuestionJson: {
               'qe': q.qe,
               'qh': q.qh,
@@ -489,6 +491,9 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         }
       },
     );
+
+    // 🚀 Poore test ke attempts ek hi batch me Supabase bhejo (100 sawal = 1-2 request)
+    await UserStatsService.flushPendingCloudAttempts();
 
     await UserStatsService.recordMockTest(
       questionsAttempted:
