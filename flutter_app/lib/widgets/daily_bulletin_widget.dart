@@ -17,13 +17,9 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
   List<dynamic> _savedNewsList = [];
   bool _isLoadingNews = true;
 
-  int _selectedNewsTab = 0; // 0 = Bihar, 1 = National
+  int _selectedNewsTab = 0; // 0 = National, 1 = Bihar
   int _activeNewsIndex = 0;
   final PageController _newsPageController = PageController();
-
-  static const String _cacheNewsDataKey = 'cached_final_news_single_json';
-  static const String _cacheDateKey = 'cached_bulletin_date';
-  static const String _savedVaultKey = 'saved_daily_bulletins';
 
   @override
   void initState() {
@@ -41,7 +37,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
   // 💾 LOAD SAVED BULLETINS FROM LOCAL STORAGE
   Future<void> _loadSavedNews() async {
     final prefs = await SharedPreferences.getInstance();
-    final String? savedJson = prefs.getString(_savedVaultKey);
+    final String? savedJson = prefs.getString('saved_daily_bulletins');
     if (savedJson != null) {
       try {
         if (mounted) {
@@ -60,8 +56,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
     final prefs = await SharedPreferences.getInstance();
 
     setState(() {
-      bool isAlreadySaved =
-          _savedNewsList.any((item) => item['title'] == news['title']);
+      bool isAlreadySaved = _savedNewsList.any((item) => item['title'] == news['title']);
 
       if (isAlreadySaved) {
         _savedNewsList.removeWhere((item) => item['title'] == news['title']);
@@ -69,7 +64,6 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
           const SnackBar(
             content: Text("Removed from Saved Current Affairs"),
             duration: Duration(seconds: 1),
-            behavior: SnackBarBehavior.floating,
           ),
         );
       } else {
@@ -78,25 +72,26 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
           const SnackBar(
             content: Text("Saved to Current Affairs! 📌"),
             duration: Duration(seconds: 1),
-            behavior: SnackBarBehavior.floating,
           ),
         );
       }
     });
 
-    await prefs.setString(_savedVaultKey, jsonEncode(_savedNewsList));
+    await prefs.setString('saved_daily_bulletins', jsonEncode(_savedNewsList));
   }
 
-  // 🚀 HIGH-SPEED MULTI-CDN FETCH (Cloudflare Primary + Fastly / GitHub Failover)
+  // 📰 PUBLIC FETCH METHOD (Pull-to-Refresh ke liye)
   Future<void> fetchDailyBulletins({bool forceRefresh = false}) async {
     final prefs = await SharedPreferences.getInstance();
     final String todayStr = DateTime.now().toIso8601String().split('T')[0];
 
-    final String savedDate = prefs.getString(_cacheDateKey) ?? '';
+    const String cacheNewsData = 'cached_final_news_single_json';
+    const String cacheDate = 'cached_bulletin_date';
 
-    // 1. Same-Day Fast Local Cache Check
+    final String savedDate = prefs.getString(cacheDate) ?? '';
+
     if (!forceRefresh && savedDate == todayStr) {
-      String? cachedJson = prefs.getString(_cacheNewsDataKey);
+      String? cachedJson = prefs.getString(cacheNewsData);
       if (cachedJson != null) {
         try {
           final data = jsonDecode(cachedJson);
@@ -108,76 +103,33 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
       }
     }
 
-    final int ts = DateTime.now().millisecondsSinceEpoch;
-    const String relativePath = "finalnews.json";
+    final int timestamp = DateTime.now().millisecondsSinceEpoch;
+    // 🚀 Updated: Point to public content_base repository
+    final String newsUrl = "https://raw.githubusercontent.com/zxcty54/content_base/main/finalnews.json?t=$timestamp";
 
-    // ⚡ Multi-CDN Hierarchy: Cloudflare (Statically) -> Fastly -> jsDelivr -> Raw GitHub
-    final List<String> endpoints = [
-      "https://cdn.statically.io/gh/zxcty54/content_base/main/$relativePath?t=$ts",
-      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$relativePath?t=$ts",
-      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/$relativePath?t=$ts",
-      "https://raw.githack.com/zxcty54/content_base/main/$relativePath",
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/$relativePath?t=$ts",
-    ];
+    try {
+      final res = await http.get(Uri.parse(newsUrl)).timeout(const Duration(seconds: 5));
 
-    dynamic parsedData;
-    String? rawJsonSuccess;
+      if (res.statusCode == 200) {
+        String decoded = utf8.decode(res.bodyBytes);
+        final data = jsonDecode(decoded);
 
-    for (final url in endpoints) {
-      try {
-        final res = await http.get(
-          Uri.parse(url),
-          headers: const {
-            'Accept': 'application/json, text/plain, */*',
-            'Cache-Control': 'no-cache',
-            'User-Agent': 'MockTesterApp-Flutter',
-          },
-        ).timeout(const Duration(seconds: 4));
-
-        if (res.statusCode == 200) {
-          String rawBody = utf8.decode(res.bodyBytes).trim();
-          if (rawBody.startsWith('\uFEFF')) {
-            rawBody = rawBody.substring(1).trim();
-          }
-
-          if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
-            final decoded = jsonDecode(rawBody);
-            if (decoded != null) {
-              parsedData = decoded;
-              rawJsonSuccess = rawBody;
-              break; // ✅ Pehle responsive Cloudflare CDN hit par loop exit
-            }
-          }
+        if (mounted) {
+          _parseAndSetNews(data);
         }
-      } catch (_) {
-        continue;
-      }
-    }
 
-    if (mounted) {
-      if (parsedData != null) {
-        _parseAndSetNews(parsedData);
-
-        if (rawJsonSuccess != null) {
-          await prefs.setString(_cacheNewsDataKey, rawJsonSuccess);
-          await prefs.setString(_cacheDateKey, todayStr);
-        }
+        await prefs.setString(cacheNewsData, decoded);
+        await prefs.setString(cacheDate, todayStr);
       } else {
-        // Fallback: Agar saare network endpoints fail ho gaye toh local purana cache chalayein
-        String? oldCache = prefs.getString(_cacheNewsDataKey);
-        if (oldCache != null) {
-          try {
-            final fallbackDecoded = jsonDecode(oldCache);
-            _parseAndSetNews(fallbackDecoded);
-            return;
-          } catch (_) {}
-        }
-        setState(() => _isLoadingNews = false);
+        if (mounted) setState(() => _isLoadingNews = false);
       }
+    } catch (e) {
+      debugPrint("Error fetching Bulletins: $e");
+      if (mounted) setState(() => _isLoadingNews = false);
     }
   }
 
-  // 🎯 STRUCTURAL SEPARATION (BIHAR vs NATIONAL)
+  // 🎯 PURE STRUCTURAL SEPARATION (BIHAR vs NATIONAL)
   void _parseAndSetNews(dynamic data) {
     List<dynamic> bihar = [];
     List<dynamic> national = [];
@@ -206,9 +158,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
       return Container(
         padding: const EdgeInsets.symmetric(vertical: 24),
         decoration: BoxDecoration(
-          color: widget.isDarkMode
-              ? const Color(0xFF1E293B)
-              : const Color(0xFFF1F5F9),
+          color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
           borderRadius: BorderRadius.circular(20),
         ),
         child: const Center(
@@ -218,16 +168,12 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
               SizedBox(
                 width: 22,
                 height: 22,
-                child: CircularProgressIndicator(
-                    color: Color(0xFF2563EB), strokeWidth: 2.5),
+                child: CircularProgressIndicator(color: Color(0xFF4F46E5), strokeWidth: 2.5),
               ),
               SizedBox(height: 8),
               Text(
                 "Loading Live Bulletin...",
-                style: TextStyle(
-                    fontSize: 12,
-                    color: Color(0xFF64748B),
-                    fontWeight: FontWeight.w500),
+                style: TextStyle(fontSize: 12, color: Color(0xFF64748B), fontWeight: FontWeight.w500),
               ),
             ],
           ),
@@ -235,8 +181,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
       );
     }
 
-    final activeList =
-        _selectedNewsTab == 0 ? _biharNewsList : _nationalNewsList;
+    final activeList = _selectedNewsTab == 0 ? _nationalNewsList : _biharNewsList;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -251,11 +196,10 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                 Container(
                   padding: const EdgeInsets.all(6),
                   decoration: BoxDecoration(
-                    color: const Color(0xFF2563EB).withOpacity(0.12),
+                    color: const Color(0xFF4F46E5).withOpacity(0.12),
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  child: const Icon(Icons.newspaper_rounded,
-                      size: 20, color: Color(0xFF2563EB)),
+                  child: const Icon(Icons.newspaper_rounded, size: 20, color: Color(0xFF4F46E5)),
                 ),
                 const SizedBox(width: 8),
                 Text(
@@ -264,9 +208,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                     fontSize: 17,
                     fontWeight: FontWeight.w800,
                     letterSpacing: -0.3,
-                    color: widget.isDarkMode
-                        ? const Color(0xFFF8FAFC)
-                        : const Color(0xFF0F172A),
+                    color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
                   ),
                 ),
               ],
@@ -274,21 +216,16 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
             Container(
               padding: const EdgeInsets.all(3),
               decoration: BoxDecoration(
-                color: widget.isDarkMode
-                    ? const Color(0xFF1E293B)
-                    : const Color(0xFFE2E8F0),
+                color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFE2E8F0),
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(
-                  color: widget.isDarkMode
-                      ? const Color(0xFF334155)
-                      : const Color(0xFFCBD5E1),
+                  color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
                 ),
               ),
               child: Row(
                 children: [
-                  _buildNewsToggleChip('📍 Bihar (${_biharNewsList.length})', 0),
-                  _buildNewsToggleChip(
-                      '🇮🇳 National (${_nationalNewsList.length})', 1),
+                  _buildNewsToggleChip('🇮🇳 National (${_nationalNewsList.length})', 0),
+                  _buildNewsToggleChip('📍 Bihar (${_biharNewsList.length})', 1),
                 ],
               ),
             ),
@@ -301,17 +238,11 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
             padding: const EdgeInsets.all(20),
             width: double.infinity,
             decoration: BoxDecoration(
-              color: widget.isDarkMode
-                  ? const Color(0xFF1E293B)
-                  : const Color(0xFFF1F5F9),
+              color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
               borderRadius: BorderRadius.circular(20),
             ),
             child: const Center(
-              child: Text("No High-Yield Updates Today",
-                  style: TextStyle(
-                      color: Colors.grey,
-                      fontSize: 13,
-                      fontWeight: FontWeight.bold)),
+              child: Text("No High-Yield Updates Today", style: TextStyle(color: Colors.grey, fontSize: 13, fontWeight: FontWeight.bold)),
             ),
           )
         else ...[
@@ -341,10 +272,8 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                 width: isActive ? 22 : 6,
                 decoration: BoxDecoration(
                   color: isActive
-                      ? const Color(0xFF2563EB)
-                      : (widget.isDarkMode
-                          ? Colors.white24
-                          : const Color(0xFFCBD5E1)),
+                      ? const Color(0xFF4F46E5)
+                      : (widget.isDarkMode ? Colors.white24 : const Color(0xFFCBD5E1)),
                   borderRadius: BorderRadius.circular(10),
                 ),
               );
@@ -373,7 +302,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
         duration: const Duration(milliseconds: 200),
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFF2563EB) : Colors.transparent,
+          color: isSelected ? const Color(0xFF4F46E5) : Colors.transparent,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Text(
@@ -381,9 +310,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
           style: TextStyle(
             color: isSelected
                 ? Colors.white
-                : (widget.isDarkMode
-                    ? Colors.white60
-                    : const Color(0xFF64748B)),
+                : (widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B)),
             fontSize: 11,
             fontWeight: isSelected ? FontWeight.w800 : FontWeight.w600,
           ),
@@ -401,14 +328,10 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
       margin: const EdgeInsets.only(right: 6),
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: widget.isDarkMode
-            ? const Color(0xFF1E293B)
-            : const Color(0xFFF1F5F9),
+        color: widget.isDarkMode ? const Color(0xFF1E293B) : const Color(0xFFF1F5F9),
         borderRadius: BorderRadius.circular(18),
         border: Border.all(
-          color: widget.isDarkMode
-              ? const Color(0xFF334155)
-              : const Color(0xFFCBD5E1),
+          color: widget.isDarkMode ? const Color(0xFF334155) : const Color(0xFFCBD5E1),
           width: 1.2,
         ),
         boxShadow: [
@@ -427,26 +350,19 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
+                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3.5),
                 decoration: BoxDecoration(
-                  color: widget.isDarkMode
-                      ? const Color(0xFF1E3A8A).withOpacity(0.4)
-                      : const Color(0xFFEFF6FF),
+                  color: widget.isDarkMode ? const Color(0xFF312E81) : const Color(0xFFEEF2FF),
                   borderRadius: BorderRadius.circular(6),
                   border: Border.all(
-                    color: widget.isDarkMode
-                        ? const Color(0xFF2563EB)
-                        : const Color(0xFFBFDBFE),
+                    color: widget.isDarkMode ? const Color(0xFF4338CA) : const Color(0xFFC7D2FE),
                     width: 0.8,
                   ),
                 ),
                 child: Text(
                   news['exam_tag'] ?? '🎯 Exam Special',
                   style: TextStyle(
-                    color: widget.isDarkMode
-                        ? const Color(0xFF93C5FD)
-                        : const Color(0xFF1D4ED8),
+                    color: widget.isDarkMode ? const Color(0xFFC7D2FE) : const Color(0xFF3730A3),
                     fontSize: 11,
                     fontWeight: FontWeight.bold,
                   ),
@@ -457,17 +373,13 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                   Icon(
                     Icons.access_time_rounded,
                     size: 12,
-                    color: widget.isDarkMode
-                        ? Colors.white60
-                        : const Color(0xFF64748B),
+                    color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
                   ),
                   const SizedBox(width: 4),
                   Text(
                     news['date'] ?? '',
                     style: TextStyle(
-                      color: widget.isDarkMode
-                          ? Colors.white60
-                          : const Color(0xFF64748B),
+                      color: widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B),
                       fontSize: 11,
                       fontWeight: FontWeight.w600,
                     ),
@@ -479,15 +391,11 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                     child: Padding(
                       padding: const EdgeInsets.all(4.0),
                       child: Icon(
-                        isSaved
-                            ? Icons.bookmark_rounded
-                            : Icons.bookmark_border_rounded,
+                        isSaved ? Icons.bookmark_rounded : Icons.bookmark_border_rounded,
                         size: 20,
                         color: isSaved
                             ? const Color(0xFFF59E0B)
-                            : (widget.isDarkMode
-                                ? Colors.white60
-                                : const Color(0xFF64748B)),
+                            : (widget.isDarkMode ? Colors.white60 : const Color(0xFF64748B)),
                       ),
                     ),
                   ),
@@ -502,9 +410,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
             style: TextStyle(
               fontSize: 15,
               fontWeight: FontWeight.w800,
-              color: widget.isDarkMode
-                  ? const Color(0xFFF8FAFC)
-                  : const Color(0xFF0F172A),
+              color: widget.isDarkMode ? const Color(0xFFF8FAFC) : const Color(0xFF0F172A),
               letterSpacing: -0.2,
               height: 1.28,
             ),
@@ -523,7 +429,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                       child: Icon(
                         Icons.arrow_right_rounded,
                         size: 16,
-                        color: Color(0xFF2563EB),
+                        color: Color(0xFF4F46E5),
                       ),
                     ),
                     const SizedBox(width: 2),
@@ -533,9 +439,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
                         style: TextStyle(
                           fontSize: 12.5,
                           fontWeight: FontWeight.w500,
-                          color: widget.isDarkMode
-                              ? Colors.white70
-                              : const Color(0xFF334155),
+                          color: widget.isDarkMode ? Colors.white70 : const Color(0xFF334155),
                           height: 1.3,
                         ),
                       ),
@@ -575,9 +479,7 @@ class _ExpandablePageViewState extends State<ExpandablePageView> {
   int _currentPage = 0;
 
   double get _currentHeight =>
-      (_heights.isEmpty ||
-              _currentPage >= _heights.length ||
-              _heights[_currentPage] == 0)
+      (_heights.isEmpty || _currentPage >= _heights.length || _heights[_currentPage] == 0)
           ? 220
           : _heights[_currentPage];
 
