@@ -476,7 +476,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       onTap: () async {
                         await Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (ctx) => const SavedCurrentAffairsScreen()),
+                          MaterialPageRoute(builder: (ctx) => SavedCurrentAffairsScreen(isDarkMode: widget.isDarkMode)),
                         );
                         _loadProfileData();
                       },
