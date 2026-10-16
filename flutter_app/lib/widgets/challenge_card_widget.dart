@@ -230,14 +230,15 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
           ),
 
           const SizedBox(height: 15),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            alignment: WrapAlignment.center,
+          // Teeno chips hamesha ek hi line me barabar width par (pehle Wrap
+          // hone se teesra chip agli line me gir jata tha — upar-neeche lagta tha)
+          Row(
             children: [
-              _infoChip(Icons.people_alt_rounded, '1v1 Duel', const Color(0xFF2563EB), isDark),
-              _infoChip(Icons.timer_outlined, '10 Qs • 15 sec each', const Color(0xFF64748B), isDark),
-              _infoChip(Icons.leaderboard_rounded, 'District Rank', const Color(0xFFD97706), isDark),
+              Expanded(child: _infoChip(Icons.people_alt_rounded, '1v1 Duel', const Color(0xFF2563EB), isDark)),
+              const SizedBox(width: 6),
+              Expanded(child: _infoChip(Icons.timer_outlined, '10 Qs • 15 sec each', const Color(0xFF64748B), isDark)),
+              const SizedBox(width: 6),
+              Expanded(child: _infoChip(Icons.leaderboard_rounded, 'District Rank', const Color(0xFFD97706), isDark)),
             ],
           ),
           const SizedBox(height: 17),
@@ -283,26 +284,29 @@ class _ChallengeCardWidgetState extends State<ChallengeCardWidget> {
 
   Widget _infoChip(IconData icon, String label, Color color, bool isDark) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
       decoration: BoxDecoration(
         color: color.withValues(alpha: isDark ? 0.16 : 0.08),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(color: color.withValues(alpha: isDark ? 0.25 : 0.14)),
       ),
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Icon(icon, size: 13, color: color),
-          const SizedBox(width: 5),
-          Text(
-            label,
-            style: TextStyle(
-              color: isDark ? Colors.white : const Color(0xFF334155),
-              fontSize: 11,
-              fontWeight: FontWeight.w700,
+      child: FittedBox(
+        fit: BoxFit.scaleDown,
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(icon, size: 13, color: color),
+            const SizedBox(width: 5),
+            Text(
+              label,
+              style: TextStyle(
+                color: isDark ? Colors.white : const Color(0xFF334155),
+                fontSize: 11,
+                fontWeight: FontWeight.w700,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

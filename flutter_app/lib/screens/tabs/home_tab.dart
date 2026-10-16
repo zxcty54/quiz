@@ -3,7 +3,6 @@ import '../../widgets/home_widgets.dart';
 import '../../widgets/latest_jobs_widget.dart';
 import '../../widgets/daily_bulletin_widget.dart';
 import '../../widgets/first_in_india_widget.dart';
-import '../../widgets/pro_pdf_vault_card.dart';
 import '../../widgets/coaching_hub_card.dart';
 import '../../widgets/hall_of_fame_carousel_widget.dart';
 import '../../widgets/bihar_events_carousel_widget.dart'; 
@@ -49,7 +48,6 @@ class _HomeTabState extends State<HomeTab> {
   final GlobalKey<FirstInIndiaWidgetState> _firstInIndiaWidgetKey = GlobalKey<FirstInIndiaWidgetState>();
   final GlobalKey<CoachingHubCardState> _coachingHubKey = GlobalKey<CoachingHubCardState>();
   final GlobalKey<HallOfFameCarouselWidgetState> _hallOfFameKey = GlobalKey<HallOfFameCarouselWidgetState>();
-  final GlobalKey<ProPdfVaultCardState> _pdfVaultKey = GlobalKey<ProPdfVaultCardState>(); // 👈 Added for Books DB sync
 
   int _greetingReloadToken = 0;
 
@@ -66,7 +64,6 @@ class _HomeTabState extends State<HomeTab> {
           _firstInIndiaWidgetKey.currentState?.fetchFirstInIndia(forceRefresh: true) ?? Future.value(),
           _coachingHubKey.currentState?.loadEnrolledBatchData() ?? Future.value(),
           _hallOfFameKey.currentState?.fetchHallOfFame() ?? Future.value(),
-          _pdfVaultKey.currentState?.fetchLiveBooks() ?? Future.value(), // 👈 Pull down pe books sync hogi
         ]);
       },
       child: SingleChildScrollView(
@@ -142,21 +139,13 @@ class _HomeTabState extends State<HomeTab> {
             ),
             const SizedBox(height: 18),
 
-            // 8. PDF VAULT
-            ProPdfVaultCard(
-              key: _pdfVaultKey,
-              isDarkMode: widget.isDarkMode,
-              customWebsiteUrl: widget.appConfig['pdf_vault_main_url'],
-            ),
-            const SizedBox(height: 18),
-
-            // 9. EVENTS
+            // 8. EVENTS
             BiharEventsCarouselWidget(
               isDarkMode: widget.isDarkMode,
             ),
             const SizedBox(height: 18),
 
-            // 10. UTILITIES
+            // 9. UTILITIES
             EligibilityCheckerWidget(
               isDarkMode: widget.isDarkMode,
               onTapUrl: widget.onTapUrl,
@@ -166,7 +155,7 @@ class _HomeTabState extends State<HomeTab> {
             _buildDynamicWebHubSection(context),
             const SizedBox(height: 18),
 
-            // 11. SOCIAL PROOF
+            // 10. SOCIAL PROOF
             HallOfFameCarouselWidget(
               key: _hallOfFameKey,
               isDarkMode: widget.isDarkMode,
