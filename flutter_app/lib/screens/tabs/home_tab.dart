@@ -9,6 +9,7 @@ import '../../widgets/bihar_events_carousel_widget.dart';
 import '../../widgets/know_your_bihar_widget.dart';
 import '../../widgets/district_top_leaderboard_widget.dart';
 import '../../widgets/challenge_card_widget.dart';
+import '../../widgets/due_revision_card.dart';
 import '../../widgets/home_greeting_header.dart';
 import '../../widgets/promo_banner_carousel.dart';
 
@@ -48,6 +49,7 @@ class _HomeTabState extends State<HomeTab> {
   final GlobalKey<FirstInIndiaWidgetState> _firstInIndiaWidgetKey = GlobalKey<FirstInIndiaWidgetState>();
   final GlobalKey<CoachingHubCardState> _coachingHubKey = GlobalKey<CoachingHubCardState>();
   final GlobalKey<HallOfFameCarouselWidgetState> _hallOfFameKey = GlobalKey<HallOfFameCarouselWidgetState>();
+  final GlobalKey<DueRevisionCardState> _dueCardKey = GlobalKey<DueRevisionCardState>();
 
   int _greetingReloadToken = 0;
 
@@ -64,6 +66,7 @@ class _HomeTabState extends State<HomeTab> {
           _firstInIndiaWidgetKey.currentState?.fetchFirstInIndia(forceRefresh: true) ?? Future.value(),
           _coachingHubKey.currentState?.loadEnrolledBatchData() ?? Future.value(),
           _hallOfFameKey.currentState?.fetchHallOfFame() ?? Future.value(),
+          _dueCardKey.currentState?.loadCounts() ?? Future.value(),
         ]);
       },
       child: SingleChildScrollView(
@@ -75,6 +78,13 @@ class _HomeTabState extends State<HomeTab> {
             // 0. PERSONAL HEADER (naam, aaj ka goal, streak, kamzor topic)
             HomeGreetingHeader(isDarkMode: widget.isDarkMode, reloadToken: _greetingReloadToken),
             const SizedBox(height: 16),
+
+            // 0.4 AAJ KE DUE SAWAL (Wrong Vault) — greeting ke theek neeche
+            // bada card; due ho tabhi dikhta hai, na ho to jagah bhi nahi leta
+            DueRevisionCard(
+              key: _dueCardKey,
+              isDarkMode: widget.isDarkMode,
+            ),
 
             // 0.5 LIVE PROMO BANNERS (naya exam / naya mock) —
             // ye live app_config.json ke promo_banners se bante hain.
@@ -109,6 +119,7 @@ class _HomeTabState extends State<HomeTab> {
             // 4. DAILY CHALLENGE
             ChallengeCardWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 18),
+
 
             // 5. DISTRICT LEADERBOARD
             DistrictTopLeaderboardWidget(isDarkMode: widget.isDarkMode),
