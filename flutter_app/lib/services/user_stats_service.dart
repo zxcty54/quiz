@@ -124,6 +124,7 @@ class UserStatsService {
     String? questionText,
     int timeTakenSeconds = 0,
     String testType = 'revision',
+    bool deferCloudSync = false,
   }) async {
     final prefs = await SharedPreferences.getInstance();
 
@@ -182,26 +183,54 @@ class UserStatsService {
             : '');
 
     if (qClean.trim().isNotEmpty) {
-      try {
-        final String? userId = prefs.getString('user_id');
-        final String userName = prefs.getString('user_name') ?? 'Aspirant';
-        final String district = prefs.getString('user_district') ?? 'Patna';
+      final String? userId = prefs.getString('user_id');
+      final String userName = prefs.getString('user_name') ?? 'Aspirant';
+      final String district = prefs.getString('user_district') ?? 'Patna';
 
-        await Supabase.instance.client.from('user_question_attempts').insert({
-          'user_id': userId ?? 'usr_guest',
-          'user_name': userName,
-          'district': district,
-          'test_type': testType,
-          'question_text': qClean.trim(),
-          'topic': chapterName.isNotEmpty ? chapterName : 'General',
-          'is_correct': isCorrect,
-          'time_taken_seconds': timeTakenSeconds,
-          'is_analyzed': false,
-          'attempted_at': DateTime.now().toUtc().toIso8601String(),
-        });
-      } catch (e) {
-        debugPrint('Usage tracking silent log error: $e');
+      final Map<String, dynamic> cloudRow = {
+        'user_id': userId ?? 'usr_guest',
+        'user_name': userName,
+        'district': district,
+        'test_type': testType,
+        'question_text': qClean.trim(),
+        'topic': chapterName.isNotEmpty ? chapterName : 'General',
+        'is_correct': isCorrect,
+        'time_taken_seconds': timeTakenSeconds,
+        'is_analyzed': false,
+        'attempted_at': DateTime.now().toUtc().toIso8601String(),
+      };
+
+      if (deferCloudSync) {
+        // CBT submit loop ke liye: row abhi sirf queue me, end me ek saath jayegi
+        _pendingCloudRows.add(cloudRow);
+      } else {
+        try {
+          await Supabase.instance.client.from('user_question_attempts').insert(cloudRow);
+        } catch (e) {
+          debugPrint('Usage tracking silent log error: $e');
+        }
       }
+    }
+  }
+
+  // 🚀 Batch Cloud Sync: CBT submit par 100 sawal = 100 request ki jagah
+  // 100-100 ke chunks me ek-ek request. Submit screen tez khulti hai.
+  static final List<Map<String, dynamic>> _pendingCloudRows = [];
+
+  static Future<void> flushPendingCloudAttempts() async {
+    if (_pendingCloudRows.isEmpty) return;
+    final List<Map<String, dynamic>> rows = List.from(_pendingCloudRows);
+    _pendingCloudRows.clear();
+    try {
+      for (int i = 0; i < rows.length; i += 100) {
+        final int end = (i + 100 > rows.length) ? rows.length : i + 100;
+        await Supabase.instance.client
+            .from('user_question_attempts')
+            .insert(rows.sublist(i, end));
+      }
+      debugPrint('Batch cloud sync: ${rows.length} attempts ek saath bheje');
+    } catch (e) {
+      debugPrint('Batch cloud sync error: $e');
     }
   }
 
