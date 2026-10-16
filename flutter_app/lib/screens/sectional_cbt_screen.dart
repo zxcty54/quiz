@@ -54,6 +54,11 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   int _currentQTime = 0;
 
   bool _isExamSubmitted = false;
+  bool _isSubmitting = false;
+
+  // Ghadi ke liye alag notifier — har second sirf ghadi badlegi,
+  // poori screen dobara nahi banegi (test ke beech ka jank khatm)
+  final ValueNotifier<int> _timeLeft = ValueNotifier<int>(25 * 60);
   bool _isBookmarked = false;
 
   Map<String, dynamic>? _coachingInfo;
@@ -100,6 +105,15 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         _totalTimeSeconds =
             progressData['remainingSeconds'] ??
                 _totalTimeSeconds;
+        _timeLeft.value = _totalTimeSeconds;
+
+        // Review par rakhe sawal bhi wapas lao (pehle resume par gayab ho jate the)
+        final rawMarked = progressData['parsedMarkedForReview'];
+        if (rawMarked is Set<int>) {
+          _markedForReview
+            ..clear()
+            ..addAll(rawMarked);
+        }
 
         final rawAnswers =
             progressData['parsedUserAnswers'] ??
@@ -124,6 +138,9 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       });
     }
 
+    // Resume hue sawal par bookmark ka nishan taja kar lo
+    _checkBookmarkStatus();
+
     _startTimers();
   }
 
@@ -140,6 +157,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       userAnswers: _userAnswers,
       remainingSeconds: _totalTimeSeconds,
       totalQuestions: widget.questions.length,
+      markedForReview: _markedForReview,
     );
   }
 
@@ -188,9 +206,9 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         if (!mounted) return;
 
         if (_totalTimeSeconds > 0) {
-          setState(() {
-            _totalTimeSeconds--;
-          });
+          _totalTimeSeconds--;
+          _timeLeft.value =
+              _totalTimeSeconds; // sirf ghadi badlegi, poori screen nahi
         } else {
           _submitExam();
         }
@@ -214,6 +232,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   void dispose() {
     _examTimer?.cancel();
     _qTimer?.cancel();
+    _timeLeft.dispose();
     super.dispose();
   }
 
@@ -241,6 +260,8 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         _markedForReview.add(_currentIndex);
       }
     });
+
+    _saveCurrentProgressImmediate();
   }
 
   // ============================================================
@@ -321,8 +342,43 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   // SUBMIT EXAM
   // ============================================================
 
+  // Submit se pehle chaukasi — SUBMIT aur FINISH (aakhri sawal) dono ke liye ek hi
+  void _showSubmitConfirmDialog() {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(14),
+        ),
+        title: const Text("Submit Mock Test?"),
+        content: Text(
+          "Attempted: ${_userAnswers.length} / ${widget.questions.length}\n"
+          "Bache hue: ${widget.questions.length - _userAnswers.length}\n"
+          "Review par rakhe: ${_markedForReview.length}",
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(ctx),
+            child: const Text("Cancel"),
+          ),
+          ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color(0xFF16A34A),
+              foregroundColor: Colors.white,
+            ),
+            onPressed: () {
+              Navigator.pop(ctx);
+              _submitExam();
+            },
+            child: const Text("Submit 🚀"),
+          ),
+        ],
+      ),
+    );
+  }
+
   void _submitExam() async {
-    if (_isExamSubmitted) return;
+    if (_isExamSubmitted || _isSubmitting) return;
 
     _examTimer?.cancel();
     _qTimer?.cancel();
@@ -331,9 +387,13 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
 
     if (mounted) {
       setState(() {
-        _isExamSubmitted = true;
+        // Pehle "result taiyaar ho raha hai" screen — result tab dikhega
+        // jab har sawal record ho jayega
+        _isSubmitting = true;
       });
     }
+
+    try {
 
     int correctCount = 0;
     int wrongCount = 0;
@@ -707,7 +767,15 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         }
       }
     }
-
+    } finally {
+      // Record pura ho ya beech me kuch atke — result par hi le jao, atko mat
+      if (mounted) {
+        setState(() {
+          _isSubmitting = false;
+          _isExamSubmitted = true;
+        });
+      }
+    }
   }
 
   // ============================================================
@@ -989,6 +1057,10 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
       return _buildResultReportScreen();
     }
 
+    if (_isSubmitting) {
+      return _buildSubmittingScreen();
+    }
+
     final currentQ =
         widget.questions[_currentIndex];
 
@@ -1046,16 +1118,18 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                 borderRadius:
                     BorderRadius.circular(6),
               ),
-              child: Text(
-                _formatTime(
-                    _totalTimeSeconds),
-                style:
-                    const TextStyle(
-                  color: Colors.red,
-                  fontWeight:
-                      FontWeight.bold,
-                  fontSize: 13,
-                ),
+              child: ValueListenableBuilder<int>(
+                valueListenable: _timeLeft,
+                builder: (context, seconds, _) {
+                  return Text(
+                    _formatTime(seconds),
+                    style: const TextStyle(
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                    ),
+                  );
+                },
               ),
             ),
 
@@ -1720,67 +1794,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                                 ),
                               ),
                             ),
-                            onPressed: () =>
-                                showDialog(
-                              context:
-                                  context,
-                              builder:
-                                  (ctx) =>
-                                      AlertDialog(
-                                shape:
-                                    RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.circular(
-                                    14,
-                                  ),
-                                ),
-                                title:
-                                    const Text(
-                                  "Submit Mock Test?",
-                                ),
-                                content:
-                                    Text(
-                                  "Attempted: ${_userAnswers.length} / ${widget.questions.length}",
-                                ),
-                                actions: [
-                                  TextButton(
-                                    onPressed:
-                                        () =>
-                                            Navigator.pop(
-                                      ctx,
-                                    ),
-                                    child:
-                                        const Text(
-                                      "Cancel",
-                                    ),
-                                  ),
-                                  ElevatedButton(
-                                    style:
-                                        ElevatedButton
-                                            .styleFrom(
-                                      backgroundColor:
-                                          const Color(
-                                              0xFF16A34A),
-                                      foregroundColor:
-                                          Colors
-                                              .white,
-                                    ),
-                                    onPressed:
-                                        () {
-                                      Navigator.pop(
-                                        ctx,
-                                      );
-
-                                      _submitExam();
-                                    },
-                                    child:
-                                        const Text(
-                                      "Submit 🚀",
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
+                            onPressed: _showSubmitConfirmDialog,
                             child:
                                 const Text(
                               "SUBMIT",
@@ -1840,7 +1854,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
                                 _checkBookmarkStatus();
                                 _saveCurrentProgressImmediate();
                               } else {
-                                _submitExam();
+                                _showSubmitConfirmDialog();
                               }
                             },
                             child: Text(
@@ -1876,6 +1890,49 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
   // ============================================================
   // RESULT REPORT
   // ============================================================
+
+  // Submit ke baad, record hone tak ki intezaar screen — peeche jaana band,
+  // taaki aadha record karke student nikal na jaye
+  Widget _buildSubmittingScreen() {
+    return PopScope(
+      canPop: false,
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(32),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: const [
+                CircularProgressIndicator(
+                  color: Color(0xFF2563EB),
+                ),
+                SizedBox(height: 18),
+                Text(
+                  'Result taiyaar ho raha hai...',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black87,
+                  ),
+                ),
+                SizedBox(height: 6),
+                Text(
+                  'Har sawal record ho raha hai (stats, Wrong Vault, AI analysis). Ek pal ruko.',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    fontSize: 12,
+                    color: Colors.grey,
+                    height: 1.4,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 
   Widget _buildResultReportScreen() {
     final int total =
