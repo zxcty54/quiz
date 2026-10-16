@@ -148,20 +148,37 @@ class UserStatsService {
         wrongQuestionJson['userSelectedOption'] = userSelectedOption;
       }
 
-      String encoded = jsonEncode(wrongQuestionJson);
-
       String qText = wrongQuestionJson['qe'] ?? wrongQuestionJson['qh'] ?? '';
-      bool alreadyExists = wrongList.any((item) {
+      int existingIndex = -1;
+      for (int i = 0; i < wrongList.length; i++) {
         try {
-          var m = jsonDecode(item);
-          return (m['qe'] ?? m['qh'] ?? '') == qText;
-        } catch (_) {
-          return false;
-        }
-      });
+          var m = jsonDecode(wrongList[i]);
+          if ((m['qe'] ?? m['qh'] ?? '') == qText) {
+            existingIndex = i;
+            break;
+          }
+        } catch (_) {}
+      }
 
-      if (!alreadyExists) {
-        wrongList.add(encoded);
+      if (existingIndex >= 0) {
+        // Wahi sawal phir galat — ginti badhao, streak zero, aaj hi due
+        try {
+          Map<String, dynamic> existing = jsonDecode(wrongList[existingIndex]);
+          existing['timesWrong'] = ((existing['timesWrong'] ?? 1) as num).toInt() + 1;
+          existing['masteryStreak'] = 0;
+          existing['nextDueDate'] = _dateKey(now);
+          existing['dateAdded'] = wrongQuestionJson['dateAdded'];
+          if (userSelectedOption != null && userSelectedOption.isNotEmpty) {
+            existing['userSelectedOption'] = userSelectedOption;
+          }
+          wrongList[existingIndex] = jsonEncode(existing);
+          await prefs.setStringList(_keyWrongQuestions, wrongList);
+        } catch (_) {}
+      } else {
+        // Naya galat sawal — pehli baar, aaj hi due
+        wrongQuestionJson['timesWrong'] = 1;
+        wrongQuestionJson['nextDueDate'] = _dateKey(now);
+        wrongList.add(jsonEncode(wrongQuestionJson));
         await prefs.setStringList(_keyWrongQuestions, wrongList);
       }
     }
@@ -315,6 +332,8 @@ class UserStatsService {
             return true;
           } else {
             qMap['masteryStreak'] = currentStreak;
+            // Sahi kiya — agli baar 3 din baad due
+            qMap['nextDueDate'] = _dateKey(DateTime.now().add(const Duration(days: 3)));
             rawList[i] = jsonEncode(qMap);
             await prefs.setStringList(_keyWrongQuestions, rawList);
             return false;
@@ -323,6 +342,27 @@ class UserStatsService {
       } catch (_) {}
     }
     return false;
+  }
+
+  // 6️⃣c Re-quiz me phir galat — streak zero, kal due
+  static Future<void> markReQuizWrongByText(String questionText) async {
+    if (questionText.isEmpty) return;
+    final prefs = await SharedPreferences.getInstance();
+    List<String> rawList = prefs.getStringList(_keyWrongQuestions) ?? [];
+
+    for (int i = 0; i < rawList.length; i++) {
+      try {
+        Map<String, dynamic> qMap = jsonDecode(rawList[i]);
+        final key = (qMap['qe'] ?? qMap['qh'] ?? '').toString();
+        if (key == questionText) {
+          qMap['masteryStreak'] = 0;
+          qMap['nextDueDate'] = _dateKey(DateTime.now().add(const Duration(days: 1)));
+          rawList[i] = jsonEncode(qMap);
+          await prefs.setStringList(_keyWrongQuestions, rawList);
+          return;
+        }
+      } catch (_) {}
+    }
   }
 
   // 7️⃣ Toggle Save/Bookmark Question
@@ -355,6 +395,30 @@ class UserStatsService {
     final prefs = await SharedPreferences.getInstance();
     List<String> rawList = prefs.getStringList(_keyWrongQuestions) ?? [];
     return rawList.map((item) => jsonDecode(item) as Map<String, dynamic>).toList();
+  }
+
+  // 📅 Due System (Level 2) — har galat sawal ki "phir kab dikhana hai" wali date
+  static String _dateKey(DateTime d) =>
+      '${d.year}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';
+
+  static DateTime? wrongDueDate(Map<String, dynamic> q) {
+    final raw = q['nextDueDate']?.toString() ?? '';
+    if (raw.isEmpty) return null;
+    return DateTime.tryParse(raw);
+  }
+
+  // Bina date wala purana sawal bhi due mana jata hai (purana backlog)
+  static bool isWrongDue(Map<String, dynamic> q) {
+    final due = wrongDueDate(q);
+    if (due == null) return true;
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    return !DateTime(due.year, due.month, due.day).isAfter(today);
+  }
+
+  static Future<int> getDueWrongCount() async {
+    final list = await getWrongQuestions();
+    return list.where((q) => isWrongDue(q)).length;
   }
 
   // 🔟 Clear Wrong Vault Questions
