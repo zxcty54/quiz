@@ -60,6 +60,18 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   String _questionId(Map<String, dynamic> qJson) =>
       (qJson['qe'] ?? qJson['qh'] ?? '').toString();
 
+  // Due badge ka label — "Aaj Due" / "Kal Due" / "X din baad"
+  String _dueLabel(Map<String, dynamic> qJson) {
+    final due = UserStatsService.wrongDueDate(qJson);
+    if (due == null) return '🔴 Aaj Due';
+    final now = DateTime.now();
+    final today = DateTime(now.year, now.month, now.day);
+    final diff = DateTime(due.year, due.month, due.day).difference(today).inDays;
+    if (diff <= 0) return '🔴 Aaj Due';
+    if (diff == 1) return '🟠 Kal Due';
+    return '📅 $diff din baad';
+  }
+
   // 🎯 SMART DETECTION FOR SECTIONAL MOCK ("Set 1", "Set 2", "Set-01", etc.)
   bool _isMockQuestion(Map<String, dynamic> qJson) {
     String chapter = (qJson['chapterName'] ?? qJson['chapter'] ?? '').toString().toLowerCase().trim();
@@ -159,6 +171,9 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                       const SnackBar(content: Text("🎉 Question Cleared from Vault!"), duration: Duration(seconds: 1)),
                                     );
                                   }
+                                } else {
+                                  // Phir galat — streak zero, kal phir due
+                                  await UserStatsService.markReQuizWrongByText(_questionId(currentJson));
                                 }
                               },
                         child: Container(
@@ -379,10 +394,21 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               return isMock;
             }
             return true;
-          }).toList();
+          }).toList()
+            // Due sawal pehle (jo sabse pehle due tha wo upar), phir zyada baar galat wale
+            ..sort((a, b) {
+              final da = UserStatsService.wrongDueDate(a) ?? DateTime(2000);
+              final db = UserStatsService.wrongDueDate(b) ?? DateTime(2000);
+              final byDue = da.compareTo(db);
+              if (byDue != 0) return byDue;
+              final ta = ((a['timesWrong'] ?? 1) as num).toInt();
+              final tb = ((b['timesWrong'] ?? 1) as num).toInt();
+              return tb.compareTo(ta);
+            });
 
           final mockCount = rawList.where((item) => _isMockQuestion(item)).length;
           final streakCount = rawList.where((item) => (item['masteryStreak'] ?? 0) > 0).length;
+          final dueCount = rawList.where((item) => UserStatsService.isWrongDue(item)).length;
 
           return ListView(
             padding: const EdgeInsets.all(16),
@@ -391,6 +417,8 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               Row(
                 children: [
                   _summaryBox('⏳', '${rawList.length}', 'Pending', isDark),
+                  const SizedBox(width: 8),
+                  _summaryBox('🔴', '$dueCount', 'Aaj Due', isDark),
                   const SizedBox(width: 8),
                   _summaryBox('🎯', '$mockCount', 'Mock', isDark),
                   const SizedBox(width: 8),
@@ -459,6 +487,8 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                 bool isMock = _isMockQuestion(qJson);
                 String dateStr = qJson['dateAdded'] ?? 'Recently';
                 int masteryStreak = qJson['masteryStreak'] ?? 0;
+                int timesWrong = ((qJson['timesWrong'] ?? 1) as num).toInt();
+                bool isDue = UserStatsService.isWrongDue(qJson);
                 String savedTag = qJson['errorTag'] ?? '';
                 String userSelectedOpt = (qJson['userSelectedOption'] ?? '').toString();
 
@@ -519,6 +549,34 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                       style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: masteryStreak > 0 ? Colors.green.shade800 : (isDark ? const Color(0xFF94A3B8) : Colors.grey)),
                                     ),
                                   ),
+                                  const SizedBox(width: 4),
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+                                    decoration: BoxDecoration(
+                                      color: isDue ? const Color(0xFFE11D48).withOpacity(isDark ? 0.22 : 0.10) : (isDark ? const Color(0xFF0F172A) : Colors.grey.shade100),
+                                      borderRadius: BorderRadius.circular(6),
+                                      border: Border.all(color: isDue ? const Color(0xFFE11D48).withOpacity(0.45) : (isDark ? const Color(0xFF475569) : Colors.grey.shade300)),
+                                    ),
+                                    child: Text(
+                                      _dueLabel(qJson),
+                                      style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: isDue ? const Color(0xFFE11D48) : (isDark ? const Color(0xFF94A3B8) : Colors.grey)),
+                                    ),
+                                  ),
+                                  if (timesWrong >= 2) ...[
+                                    const SizedBox(width: 4),
+                                    Container(
+                                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
+                                      decoration: BoxDecoration(
+                                        color: const Color(0xFFE11D48).withOpacity(isDark ? 0.25 : 0.12),
+                                        borderRadius: BorderRadius.circular(6),
+                                        border: Border.all(color: const Color(0xFFE11D48).withOpacity(0.5)),
+                                      ),
+                                      child: Text(
+                                        '🔁 $timesWrong baar galat',
+                                        style: const TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: Color(0xFFE11D48)),
+                                      ),
+                                    ),
+                                  ],
                                 ],
                               ),
                             ),
