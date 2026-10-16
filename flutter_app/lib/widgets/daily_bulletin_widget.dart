@@ -17,7 +17,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
   List<dynamic> _savedNewsList = [];
   bool _isLoadingNews = true;
 
-  int _selectedNewsTab = 0; // 0 = Bihar, 1 = National
+  int _selectedNewsTab = 0; // 0 = National, 1 = Bihar
   int _activeNewsIndex = 0;
   final PageController _newsPageController = PageController();
 
@@ -181,7 +181,7 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
       );
     }
 
-    final activeList = _selectedNewsTab == 0 ? _biharNewsList : _nationalNewsList;
+    final activeList = _selectedNewsTab == 0 ? _nationalNewsList : _biharNewsList;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -224,8 +224,8 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
               ),
               child: Row(
                 children: [
-                  _buildNewsToggleChip('📍 Bihar (${_biharNewsList.length})', 0),
-                  _buildNewsToggleChip('🇮🇳 National (${_nationalNewsList.length})', 1),
+                  _buildNewsToggleChip('🇮🇳 National (${_nationalNewsList.length})', 0),
+                  _buildNewsToggleChip('📍 Bihar (${_biharNewsList.length})', 1),
                 ],
               ),
             ),
