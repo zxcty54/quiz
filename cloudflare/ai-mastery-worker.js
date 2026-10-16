@@ -5,20 +5,6 @@ export default {
 
     // 🧪 Direct Manual Mastery Trigger (Testing ke liye active)
     if (url.pathname === "/sync-mastery" || url.pathname === "/debug-sync") {
-      // 🔐 Optional protection: agar SYNC_KEY secret set hai to sahi key lazmi hai.
-      // Secret set nahi hai to pehle ki tarah hi khulega (kuch break nahi hoga).
-      if (env.SYNC_KEY && url.searchParams.get("key") !== env.SYNC_KEY) {
-        return new Response(JSON.stringify({
-          success: false,
-          error: "Unauthorized: URL me sahi key dalo (?key=...)"
-        }), {
-          status: 401,
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*"
-          }
-        });
-      }
       try {
         console.log("🚀 Manual Mastery Sync triggered via URL:", url.pathname);
         const clientModels = url.searchParams.get("models")
@@ -37,10 +23,11 @@ export default {
           }
         });
       } catch (err) {
-        console.error("❌ Sync Error:", err.message, err.stack);
+        console.error("❌ Sync Error:", err.message);
         return new Response(JSON.stringify({
           success: false,
-          error: err.message
+          error: err.message,
+          stack: err.stack
         }), {
           status: 500,
           headers: {
@@ -323,7 +310,6 @@ LIFETIME LEARNING & COGNITIVE RULES:
    - If a question mentions Bihar, Patna, or any Bihar district, place or person, prefer "Bihar Special" over the generic subject.
    - Keep topic names SHORT and CONSISTENT (2-4 words, e.g. "Bihar Art Culture", "Magadha Empire", "Ray Optics"), so the same topic is recognised again in future batches. For Bihar questions in critical_traps_detailed, always use subject "Bihar Special" with such short topic names.
    - Add a subject to subject_analysis only if it has at least 2 attempts in this batch OR it already exists in the lifetime report.
-   - In every subject_analysis entry, always include "attempts": the number of questions of that subject in THIS batch.
 2. TIME TELEMETRY & BEHAVIOR:
    Analyze "sec" for attempts:
    - Wrong attempt < 20s: "Impulsive Guesswork / Rushed Trap"
@@ -341,9 +327,9 @@ OUTPUT STRICT VALID JSON ONLY:
 {
   "ai_headline": "Physics accuracy improving but Optics numericals remain trap-prone",
   "subject_analysis": [
-    { "subject": "Physics", "accuracy_pct": 68, "attempts": 12 },
-    { "subject": "Chemistry", "accuracy_pct": 75, "attempts": 8 },
-    { "subject": "Bihar Special", "accuracy_pct": 45, "attempts": 9 }
+    { "subject": "Physics", "accuracy_pct": 68 },
+    { "subject": "Chemistry", "accuracy_pct": 75 },
+    { "subject": "Bihar Special", "accuracy_pct": 45 }
   ],
   "behavioral_pattern": "Impulsive Guesswork",
   "summary_verdict": "Candidate basic facts me confident hai lekin Optics me rushed decisions se trap me phasta hai.",
@@ -526,7 +512,7 @@ ${JSON.stringify(compactBatchData)}
               // Subject naye batch me bhi hai: Weighted accuracy merge formula
               const newSub = newSubjectMap.get(normKey);
               const oldAttempts = oldSub.total_attempts || 10;
-              const newAttempts = newSub.attempts || newSub.total_attempts || compactBatchData.length;
+              const newAttempts = compactBatchData.length;
               const oldAcc = oldSub.accuracy_pct ?? 0;
               const newAcc = newSub.accuracy_pct ?? oldAcc;
 

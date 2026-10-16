@@ -60,19 +60,6 @@ Aur `critical_traps_detailed` wale example me ek Bihar wala trap jod do
     }
 ```
 
-## Edit 3 (optional, accuracy ke liye) — merge ka weight fix
-
-Upar Edit 2 me har subject ke `attempts` isiliye jode hain. Merge code me ye badlo:
-
-**Find:**
-```js
-              const newAttempts = compactBatchData.length;
-```
-**Replace with:**
-```js
-              const newAttempts = newSub.attempts || newSub.total_attempts || compactBatchData.length;
-```
-
 ---
 
 ## Deploy ke baad test
@@ -94,9 +81,3 @@ delete from user_ai_insights where user_id = 'APNA_USER_ID';
 pehchanega. Jo sawal Bihar se juda hai par usme Bihar/Patna ka naam nahi hai
 (jaise koi generic art ya history ka sawal), woh kabhi-kabhi generic subject
 me ja sakta hai — ye is design ki natural limit hai.
-
-## ⚠️ Security note (alag se)
-
-`/sync-mastery` aur `/debug-sync` bina kisi key ke koi bhi khol sakta hai —
-poora AI sync trigger ho jayega aur error me stack trace bhi dikhta hai.
-Ek `SYNC_KEY` secret bana ke in dono paths par check lagana behtar rahega.
