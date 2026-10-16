@@ -100,6 +100,7 @@ class NotificationService {
   // Student ki apni activity dekh kar bante hain:
   // adhoora mock, aaj ka goal, streak, due revision, last chapter.
   // Din me zyada se zyada 3 — shaam (aaj), subah (kal), shaam (kal).
+  // Lines hook wali hain aur har din rotate hoti hain.
   // App khulne/par wapas aane par fresh activity se dobara bante hain.
   // ============================================================
   static Future<void> scheduleSmartReminders({bool force = false}) async {
@@ -163,82 +164,151 @@ class NotificationService {
       final DateTime tomorrowEvening =
           DateTime(tomorrow.year, tomorrow.month, tomorrow.day, 19, 30);
 
+      // Har roz alag line — taaki ghisi-piti notification dekh kar bore na ho
+      List<String> pick(List<List<String>> options, int salt) {
+        return options[(now.day + salt) % options.length];
+      }
+
       // --- Slot 1: Aaj shaam 7:30 (agar waqt bacha hai) ---
       if (todayEvening.isAfter(now)) {
-        String? title;
-        String? body;
+        List<List<String>>? variants;
         String? payload;
         if (inProgress > 0) {
-          title = '⏸️ Adhoora Mock Bacha Hai!';
-          body =
-              'Ek mock aadha chhod rakha hai — resume karke pura karo, mehnat bekar mat jane do 💪';
+          variants = [
+            [
+              '⏸️ Mock beech me hi chhod diya?',
+              'Aadha mock wahi atka pada hai jahan chhoda tha 😅 Resume karo, warna sawalon ko lagega darr kar bhaag gaye!',
+            ],
+            [
+              '🎬 Picture abhi baki hai dost!',
+              'Ek mock aadha pada intezaar kar raha hai — resume dabao aur kahani khatam karo 💪',
+            ],
+          ];
           payload = 'smart_resume';
         } else if (todayQs == 0) {
-          title = '🔥 Streak Khatre Me Hai!';
-          body =
-              'Aaj abhi tak ek bhi sawal nahi hua. $streak din ki streak bachane ke liye bas kuch sawal kar lo!';
+          variants = [
+            [
+              '🔥 Streak ICU me hai 🚑',
+              '$streak din ki streak saanse gin rahi hai... Bas kuch sawal, aur doctor sahab (tum) use bacha sakte ho!',
+            ],
+            [
+              '😴 Aaj sawalon ko chhutti de di?',
+              'Kitabein almari se jhaank rahi hain 👀 $streak din ki streak bhi wait kar rahi hai — 5 sawal hi kar lo!',
+            ],
+          ];
           payload = 'smart_streak';
         } else if (todayQs < goal) {
-          title = '🎯 Bas ${goal - todayQs} Sawal Aur!';
-          body =
-              'Aaj ka goal pura hone me thoda hi bacha hai — goal pura karo aur streak bhi bacha lo 🔥';
+          variants = [
+            [
+              '🎯 Bas ${goal - todayQs} sawal aur!',
+              'Itne paas aakar kaun rukta hai bhai 😄 Goal pura karo — streak bhi khush, tum bhi khush!',
+            ],
+            [
+              '🏃 Goal se bas ${goal - todayQs} kadam door!',
+              'Scroll karne me 10 minute nikal hi jayenge... unhi 10 minute me goal pura kar lo 😏',
+            ],
+          ];
           payload = 'smart_goal';
         } else if (due > 0) {
-          title = '🔁 $due Sawal Due Hain!';
-          body =
-              'Goal pura, badhai ho 👏 Ab due revision karke galat hue sawal pakke kar lo.';
+          variants = [
+            [
+              '😤 Badla lene ka time hai!',
+              'Jo $due sawal tumhe ek din Dhaka de chuke hain, aaj unka hisaab chukta karo — due revision kholo!',
+            ],
+            [
+              '👏 Goal pura! Ab extra kamaai',
+              '$due due sawal bhi nipta diye to kal ka din aur halka lagega. Ek chhota sa revision round ho jaye?',
+            ],
+          ];
           payload = 'smart_due';
         }
-        if (title != null && body != null) {
-          await _scheduleSmart(
-              _smartIds[0], title, body, todayEvening, payload ?? 'smart');
+        if (variants != null) {
+          final List<String> line = pick(variants, 0);
+          await _scheduleSmart(_smartIds[0], line[0], line[1], todayEvening,
+              payload ?? 'smart');
         }
       }
 
       // --- Slot 2: Kal subah 8:30 (roz ka mission) ---
       {
-        String title;
-        String body;
+        List<List<String>> variants;
         String payload;
         if (due > 0) {
-          title = '☀️ Aaj Ke $due Due Sawal Wait Kar Rahe Hain';
-          body = repeat > 0
-              ? 'Unme $repeat sawal baar-baar galat ho rahe hain — subah ka revision sabse pakka yaad rehta hai 🧠'
-              : 'Subah ka revision sabse pakka yaad rehta hai — din ki shuruaat due sawalon se karo 🧠';
+          variants = [
+            [
+              '☀️ Uth gaye, Topper Sahab?',
+              'Chai baad me, pehle $due due sawal ☕ Subah wala revision seedha dimaag me chhap jata hai!',
+            ],
+            if (repeat > 0)
+              [
+                '😤 Wahi sawal phir satane aaye hain',
+                '$repeat sawal baar-baar galat ho rahe hain — aaj inka ilaaj pakka karo, phir ye dobara pareshan nahi karenge 💪',
+              ]
+            else
+              [
+                '📚 Kitabein Good Morning bol rahi hain',
+                '$due due sawal subah-subah niptaye to din bhar selection wala feel aayega 😄 Chalo shuru karte hain!',
+              ],
+          ];
           payload = 'smart_due';
         } else if (inProgress > 0) {
-          title = '☀️ Adhoora Mock Pura Karo!';
-          body =
-              'Kal ka aadha mock aaj pura karo — aadhi mehnat ka pura fayda tabhi milega jab test khatam hoga 💪';
+          variants = [
+            [
+              '☀️ Subah ho gayi, mock bula raha hai',
+              'Aadha mock wahi pada wait kar raha hai 😅 Ek baithak me nipta do, fir din tumhara!',
+          ],
+          ];
           payload = 'smart_resume';
         } else {
-          title = '☀️ Aaj Ka Mission: $goal Sawal';
-          body =
-              'Last time tum $lastChapter padh rahe the — aaj wahi se aage badho, speed barkarar rakho 📚';
+          variants = [
+            [
+              '☀️ Naya din, $goal sawal, ek mission',
+              'Sapna bada hai, target chhota hai 🚀 Kal $lastChapter padh rahe the, aaj wahi se aage badho!',
+            ],
+            [
+              '👀 Aankhein khul gayi?',
+              'To $goal sawal bhi khol lo 😄 Chai ke saath pehla sawal — din ban jayega!',
+            ],
+          ];
           payload = 'smart_mission';
         }
+        final List<String> line = pick(variants, 1);
         await _scheduleSmart(
-            _smartIds[1], title, body, tomorrowMorning, payload);
+            _smartIds[1], line[0], line[1], tomorrowMorning, payload);
       }
 
       // --- Slot 3: Kal shaam 7:30 (streak bachao / pehla mock) ---
       {
-        String title;
-        String body;
+        List<List<String>> variants;
         String payload;
         if (mocks == 0) {
-          title = '🎯 Pehla Mock Abhi Baki Hai!';
-          body =
-              'Sawal karna achha hai, par asli exam ka mahaul mock se hi aayega — aaj pehla mock dekar dekho!';
+          variants = [
+            [
+              '🎯 Kitabi sher, asli mahaul kab?',
+              'Sawal to bahut kar liye — ek baar asli exam wala mahaul bhi try karo. Pehla mock galtiyon ke liye hi hota hai 😄',
+            ],
+            [
+              '😅 Mock se darr lagta hai?',
+              'Sabko lagta hai pehli baar. Ek dekar dekho, darr bhi bhagega aur level bhi pata chalega!',
+            ],
+          ];
           payload = 'smart_first_mock';
         } else {
-          title = '🔥 $streak Din Ki Streak Bachani Hai!';
-          body =
-              'Din khatam hone se pehle aaj ka goal check kar lo — ek din ki chook, streak phir zero se shuru.';
+          variants = [
+            [
+              '🥺 Streak bol raha hai... bacha lo!',
+              '"$streak din se saath hoon, aaj akela chhod doge?" Din khatam hone se pehle goal check kar lo 🔥',
+            ],
+            [
+              '🔥 $streak din ki aag bujhne mat do',
+              'Ek din ki chook aur streak phir zero se shuru 😬 Bas 5-10 sawal is aag ko zinda rakhenge!',
+            ],
+          ];
           payload = 'smart_streak';
         }
+        final List<String> line = pick(variants, 2);
         await _scheduleSmart(
-            _smartIds[2], title, body, tomorrowEvening, payload);
+            _smartIds[2], line[0], line[1], tomorrowEvening, payload);
       }
     } catch (_) {
       // Reminder kabhi app ko rokna nahi chahiye
