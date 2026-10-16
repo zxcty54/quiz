@@ -6,7 +6,8 @@ import 'package:pdf/widgets.dart' as pw;
 import 'package:printing/printing.dart';
 
 class SavedCurrentAffairsScreen extends StatefulWidget {
-  const SavedCurrentAffairsScreen({super.key});
+  final bool isDarkMode;
+  const SavedCurrentAffairsScreen({super.key, this.isDarkMode = false});
 
   @override
   State<SavedCurrentAffairsScreen> createState() => _SavedCurrentAffairsScreenState();
@@ -64,10 +65,12 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
   }
 
   // 🗑️ DELETE SINGLE CA ITEM
-  Future<void> _removeSavedNews(int index) async {
+  // Number (index) se nahi, item ki pehchan se hatate hain — filter (Bihar/
+  // National) lagi list me index badal jata hai, item nahi.
+  Future<void> _removeSavedNews(dynamic item) async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
-      _savedNewsList.removeAt(index);
+      _savedNewsList.remove(item);
     });
     await prefs.setString('saved_daily_bulletins', jsonEncode(_savedNewsList));
 
@@ -256,28 +259,40 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    // Profile se mode mile to wo, warna app ke theme se pehchano
+    final bool isDark = widget.isDarkMode || Theme.of(context).brightness == Brightness.dark;
+
     if (_isLoading) {
       return Scaffold(
-        appBar: AppBar(title: const Text('Saved Current Affairs Vault')),
+        backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+        appBar: AppBar(
+          backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+          elevation: 0,
+          iconTheme: IconThemeData(color: isDark ? Colors.white : Colors.black87),
+          title: Text('Saved Current Affairs Vault', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isDark ? Colors.white : Colors.black87)),
+        ),
         body: const Center(child: CircularProgressIndicator(color: Color(0xFF2563EB))),
       );
     }
 
     if (_savedNewsList.isEmpty) {
       return Scaffold(
-        backgroundColor: const Color(0xFFF8FAFC),
+        backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
         appBar: AppBar(
-          title: const Text('📌 Saved Current Affairs Vault', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+          backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+          elevation: 0,
+          iconTheme: IconThemeData(color: isDark ? Colors.white : Colors.black87),
+          title: Text('📌 Saved Current Affairs Vault', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isDark ? Colors.white : Colors.black87)),
         ),
         body: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text('📌', style: TextStyle(fontSize: 50)),
-              SizedBox(height: 10),
-              Text('Vault Empty!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black87)),
-              SizedBox(height: 4),
-              Text('Home Tab se daily bulletins ko bookmark karke yahan revise karein.', style: TextStyle(color: Colors.grey, fontSize: 12)),
+            children: [
+              const Text('📌', style: TextStyle(fontSize: 50)),
+              const SizedBox(height: 10),
+              Text('Vault Empty!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: isDark ? Colors.white : Colors.black87)),
+              const SizedBox(height: 4),
+              Text('Home Tab se daily bulletins ko bookmark karke yahan revise karein.', textAlign: TextAlign.center, style: TextStyle(color: isDark ? const Color(0xFF94A3B8) : Colors.grey, fontSize: 12)),
             ],
           ),
         ),
@@ -292,9 +307,12 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
     }).toList();
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF8FAFC),
+      backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
-        title: Text('📌 Saved CA (${_savedNewsList.length})', style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+        backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+        elevation: 0,
+        iconTheme: IconThemeData(color: isDark ? Colors.white : Colors.black87),
+        title: Text('📌 Saved CA (${_savedNewsList.length})', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isDark ? Colors.white : Colors.black87)),
         actions: [
           // 📄 DOWNLOAD BRANDED PDF BUTTON
           IconButton(
@@ -331,11 +349,11 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
           // 🏷️ 1. FILTER CHIPS
           Row(
             children: [
-              _filterChip('ALL', 'All (${_savedNewsList.length})'),
+              _filterChip('ALL', 'All (${_savedNewsList.length})', isDark),
               const SizedBox(width: 8),
-              _filterChip('BIHAR', '📍 Bihar CA'),
+              _filterChip('BIHAR', '📍 Bihar CA', isDark),
               const SizedBox(width: 8),
-              _filterChip('NATIONAL', '🇮🇳 National CA'),
+              _filterChip('NATIONAL', '🇮🇳 National CA', isDark),
             ],
           ),
           const SizedBox(height: 14),
@@ -347,6 +365,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
             bool isBihar = _isBiharNews(news);
 
             return Card(
+              color: isDark ? const Color(0xFF1E293B) : Colors.white,
               margin: const EdgeInsets.only(bottom: 12),
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
               elevation: 1,
@@ -361,7 +380,9 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                           decoration: BoxDecoration(
-                            color: isBihar ? const Color(0xFFFEF3C7) : const Color(0xFFE0E7FF),
+                            color: isBihar
+                                ? (isDark ? const Color(0xFFF59E0B).withOpacity(0.18) : const Color(0xFFFEF3C7))
+                                : (isDark ? const Color(0xFF2563EB).withOpacity(0.22) : const Color(0xFFE0E7FF)),
                             borderRadius: BorderRadius.circular(6),
                           ),
                           child: Text(
@@ -369,7 +390,9 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                             style: TextStyle(
                               fontSize: 10,
                               fontWeight: FontWeight.bold,
-                              color: isBihar ? const Color(0xFF92400E) : const Color(0xFF3730A3),
+                              color: isBihar
+                                  ? (isDark ? const Color(0xFFFCD34D) : const Color(0xFF92400E))
+                                  : (isDark ? const Color(0xFFA5B4FC) : const Color(0xFF3730A3)),
                             ),
                           ),
                         ),
@@ -377,7 +400,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                           constraints: const BoxConstraints(),
                           padding: EdgeInsets.zero,
                           icon: const Icon(Icons.delete_outline_rounded, size: 20, color: Colors.redAccent),
-                          onPressed: () => _removeSavedNews(index),
+                          onPressed: () => _removeSavedNews(news),
                         ),
                       ],
                     ),
@@ -385,7 +408,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
 
                     Text(
                       news['title'] ?? '',
-                      style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: Colors.black87, height: 1.3),
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14, color: isDark ? Colors.white : Colors.black87, height: 1.3),
                     ),
                     const SizedBox(height: 8),
 
@@ -399,7 +422,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                               Expanded(
                                 child: Text(
                                   bullet.toString(),
-                                  style: TextStyle(fontSize: 12, color: Colors.grey.shade800, height: 1.3),
+                                  style: TextStyle(fontSize: 12, color: isDark ? const Color(0xFFCBD5E1) : Colors.grey.shade800, height: 1.3),
                                 ),
                               ),
                             ],
@@ -415,23 +438,23 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
     );
   }
 
-  Widget _filterChip(String filterKey, String label) {
+  Widget _filterChip(String filterKey, String label, bool isDark) {
     bool isSelected = _selectedFilter == filterKey;
     return InkWell(
       onTap: () => setState(() => _selectedFilter = filterKey),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFF2563EB) : Colors.white,
+          color: isSelected ? const Color(0xFF2563EB) : (isDark ? const Color(0xFF1E293B) : Colors.white),
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: isSelected ? const Color(0xFF2563EB) : Colors.grey.shade300),
+          border: Border.all(color: isSelected ? const Color(0xFF2563EB) : (isDark ? const Color(0xFF475569) : Colors.grey.shade300)),
         ),
         child: Text(
           label,
           style: TextStyle(
             fontSize: 11,
             fontWeight: FontWeight.bold,
-            color: isSelected ? Colors.white : Colors.black87,
+            color: isSelected ? Colors.white : (isDark ? Colors.white : Colors.black87),
           ),
         ),
       ),
