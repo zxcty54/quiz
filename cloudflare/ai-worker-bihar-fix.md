@@ -1,70 +1,42 @@
-# AI Mastery Worker — Bihar Special Fix (3 Edits)
+# AI Mastery Worker — Bihar Special Fix (Prompt-Only)
 
-**Problem:** `user_question_attempts` me Bihar Special (Revision Practice) ke attempts
-ja rahe hain, lekin AI report me Bihar Special kabhi dikhta hi nahi.
+**Design decision:** Koi topic / exam tag / subject tag NAHI bhejna hai.
+AI khud sirf question text padh ke subject pehchanega.
 
-**Root cause (Worker code me):**
-1. Supabase se attempts uthate waqt `topic` aur `test_type` column select hi nahi hote —
-   AI ko sirf raw question text milta hai, chapter/subject ka pata hi nahi chalta.
-2. System prompt ki subject list me "Bihar Special" (aur Geography/Reasoning/English) hai hi nahi —
-   Bihar ke sawal "History" me merge ho jate hain ya gayab.
-3. 15-15 ke mixed batch me bina topic tag ke Bihar ke sawal ghul jate hain.
+**Problem:** AI report me Bihar Special kabhi dikhta hi nahi.
 
-Cloudflare Worker me ye **3 jagah** badlo (find → replace):
+**Root cause:** Worker sirf question text bhejta hai (sahi hai), lekin system prompt ki
+subject-soch me **"Bihar Special" naam ka subject hai hi nahi**. AI ke paas History,
+Polity, Physics type ke purane dabbe hain — Bihar wala sawal ya to "History" me
+zabardasti ghus jata hai, ya gayab ho jata hai. Isliye fix sirf prompt me hai:
+AI ko sikhana hai ki Bihar ka sawal dikhe to use "Bihar Special" dabbe me dale.
+
+App me kuch change NAHI hoga. Worker me sirf prompt ke 2 hisse badalne hain.
 
 ---
 
-## Edit 1 — Attempts uthate waqt topic bhi lao
+## Edit 1 — Rule 1 ke turant baad ye naya rule jodo
 
-**Find:**
-```
-`${supabaseUrl}/rest/v1/user_question_attempts?is_analyzed=eq.false&select=id,user_id,user_name,question_text,is_correct,time_taken_seconds,attempted_at&order=attempted_at.asc&limit=150`,
-```
-
-**Replace with:**
-```
-`${supabaseUrl}/rest/v1/user_question_attempts?is_analyzed=eq.false&select=id,user_id,user_name,topic,test_type,question_text,is_correct,time_taken_seconds,attempted_at&order=attempted_at.asc&limit=150`,
-```
-
-## Edit 2 — AI ko bhejte waqt topic tag jodo
-
-**Find:**
-```js
-      const compactBatchData = batch.map(a => ({
-        q: a.question_text ? (a.question_text.length > 400 ? a.question_text.substring(0, 400).trim() : a.question_text.trim()) : '',
-        correct: a.is_correct,
-        sec: a.time_taken_seconds || 0
-      }));
-```
-
-**Replace with:**
-```js
-      const compactBatchData = batch.map(a => ({
-        topic: a.topic || '',
-        type: a.test_type || '',
-        q: a.question_text ? (a.question_text.length > 400 ? a.question_text.substring(0, 400).trim() : a.question_text.trim()) : '',
-        correct: a.is_correct,
-        sec: a.time_taken_seconds || 0
-      }));
-```
-
-## Edit 3 — Prompt ko Bihar Special sikhayo
-
-System prompt me Rule 1 wali line ke **turant baad** ye naya rule jodo
-(jo line hai: `1. STRICT SUBJECT INDEPENDENCE: ... strictly separate.` uske baad):
+System prompt me jo line hai:
 
 ```
-1B. SUBJECT IDENTIFICATION — the "topic" field of every attempt is GROUND TRUTH. Use it FIRST, question text second:
-   - If topic contains "Bihar", OR the chapter is about Bihar (Magadha, Pataliputra, Patna, Bihar history/culture/geography/polity, Sufis, 1857 in Bihar, Bihar districts/tribes/art) => subject MUST be "Bihar Special". NEVER merge Bihar Special into History, Geography or Polity.
-   - If topic is a mock/set title (e.g. "BSSC CGL Reasoning Sets Set 2"), extract subject from the title: Reasoning => "Reasoning", Aptitude/Maths => "Quantitative Aptitude", English => "English", GK/GS sets => decide subject from the question itself.
-   - For revision chapters, topic IS the chapter name (e.g. "Percentage", "Optics", "Art, Culture, Crafts & Heritage of Bihar") — classify from it.
-   - Valid subjects ONLY: "Physics", "Chemistry", "Biology", "Polity", "History", "Geography", "Economics", "Quantitative Aptitude", "Reasoning", "English", "Bihar Special", "Static GK", "Current Affairs".
-   - Add a subject to subject_analysis only if it has at least 2 attempts in this batch OR already exists in the lifetime report.
-   - In critical_traps_detailed, for Bihar chapters set subject "Bihar Special" and write the short theme in "topic" (e.g. topic "Art & Culture", subtopic "Heritage & Crafts"; topic "Magadha Empire", subtopic "Pataliputra").
+1. STRICT SUBJECT INDEPENDENCE: Never merge subjects into combined strings (e.g., do NOT output "History & Polity"). Keep "History", "Polity", "Physics", "Chemistry", "Biology", "Economics", "Quantitative Aptitude" strictly separate.
 ```
 
-Aur prompt ke JSON example me `subject_analysis` wala hissa isse badal do
-(taaki AI har subject ke attempts bhi bataye — merge ki accuracy sahi hogi):
+Uske **turant baad** ye jod do:
+
+```
+1B. SUBJECT CLASSIFICATION FROM QUESTION TEXT (no topic/subject tags are provided — YOU must infer the subject from the question itself):
+   - The subject you infer MUST be one of ONLY these: "Physics", "Chemistry", "Biology", "Polity", "History", "Geography", "Economics", "Quantitative Aptitude", "Reasoning", "English", "Bihar Special", "Static GK", "Current Affairs".
+   - BIHAR SPECIAL RULE (VERY IMPORTANT): Any question about the state of Bihar — its history (Magadha, Maurya & Pataliputra, Pala dynasty, Sher Shah, 1857 and the freedom movement in Bihar), geography (rivers, districts, soil, climate of Bihar), polity and governance of Bihar, Bihar economy, art and culture (Madhubani painting, folk songs, festivals of Bihar), society (castes, tribes, languages of Bihar), or famous personalities of Bihar — MUST be classified as subject "Bihar Special". NEVER put a Bihar question into History, Geography or Polity, even if it looks like general history or geography.
+   - If a question mentions Bihar, Patna, or any Bihar district, place or person, prefer "Bihar Special" over the generic subject.
+   - Keep topic names SHORT and CONSISTENT (2-4 words, e.g. "Bihar Art Culture", "Magadha Empire", "Ray Optics"), so the same topic is recognised again in future batches. For Bihar questions in critical_traps_detailed, always use subject "Bihar Special" with such short topic names.
+   - Add a subject to subject_analysis only if it has at least 2 attempts in this batch OR it already exists in the lifetime report.
+```
+
+## Edit 2 — Prompt ke JSON example me Bihar Special jodo
+
+Prompt me `subject_analysis` wala example isse badal do:
 
 ```json
   "subject_analysis": [
@@ -74,9 +46,23 @@ Aur prompt ke JSON example me `subject_analysis` wala hissa isse badal do
   ],
 ```
 
-## Edit 4 (optional, accuracy sahi karne ke liye) — merge ka weight fix
+Aur `critical_traps_detailed` wale example me ek Bihar wala trap jod do
+(taaki AI ko format samajh aaye):
 
-Abhi naye batch ke saare 15 sawal har subject ke weight me gin liye jate hain. Ise badlo:
+```json
+    {
+      "subject": "Bihar Special",
+      "topic": "Bihar Art Culture",
+      "subtopic": "Madhubani Painting",
+      "accuracy_pct": 25,
+      "attempts": 4,
+      "repeated_errors": 3
+    }
+```
+
+## Edit 3 (optional, accuracy ke liye) — merge ka weight fix
+
+Upar Edit 2 me har subject ke `attempts` isiliye jode hain. Merge code me ye badlo:
 
 **Find:**
 ```js
@@ -91,25 +77,25 @@ Abhi naye batch ke saare 15 sawal har subject ke weight me gin liye jate hain. I
 
 ## Deploy ke baad test
 
-1. Worker Save/Deploy karo. (Kuch aur badalne ki zarurat nahi — Secrets wahi rahenge.)
+1. Worker Save/Deploy karo. (Secrets wahi rahenge, app me koi change nahi.)
 2. Manual trigger: `https://<worker-url>/sync-mastery` kholo (ya cron ka wait karo).
-3. App me Profile kholo — Subject chips me **"Bihar Special 45%"** jaisi entry aur traps me
-   Bihar wale topics dikhne chahiye.
+3. App me Profile kholo — Subject chips me **"Bihar Special 45%"** jaisi entry
+   aur Critical Traps me Bihar wale topics dikhne chahiye.
 
-## Note — purana report
-
-Purani cumulative report me Bihar ke sawal pehle hi "History" me ghule hue hain, woh
-apne aap alag nahi honge. Naye batches se Bihar Special alag banna shuru ho jayega.
-Bilkul fresh baseline chahiye to Supabase SQL Editor me (apna user_id dalke):
+**Note:** Purani report me Bihar ke sawal pehle hi "History" me ghule hue hain,
+woh apne aap alag nahi honge. Naye batches se Bihar Special alag banna shuru hoga.
+Bilkul fresh baseline chahiye to (apna user_id dalke):
 
 ```sql
--- Optional: sirf apne test user ke liye purani report saaf karo
 delete from user_ai_insights where user_id = 'APNA_USER_ID';
--- Optional: purane attempts dobara analyze karwana hai to (AI tokens kharch honge)
-update user_question_attempts set is_analyzed = false where user_id = 'APNA_USER_ID';
 ```
 
-## ⚠️ Ek security note (alag se)
+**Ek imandari wali baat:** Bina tag ke AI question text se 80-90% sawal sahi
+pehchanega. Jo sawal Bihar se juda hai par usme Bihar/Patna ka naam nahi hai
+(jaise koi generic art ya history ka sawal), woh kabhi-kabhi generic subject
+me ja sakta hai — ye is design ki natural limit hai.
+
+## ⚠️ Security note (alag se)
 
 `/sync-mastery` aur `/debug-sync` bina kisi key ke koi bhi khol sakta hai —
 poora AI sync trigger ho jayega aur error me stack trace bhi dikhta hai.
