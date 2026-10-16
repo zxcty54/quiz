@@ -1,26 +1,30 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class MasteryEvolutionCard extends StatefulWidget {
   final bool isDarkMode;
-  const MasteryEvolutionCard({super.key, required this.isDarkMode});
+  final int reloadToken;
+  const MasteryEvolutionCard({super.key, required this.isDarkMode, this.reloadToken = 0});
 
   @override
   State<MasteryEvolutionCard> createState() => _MasteryEvolutionCardState();
 }
 
 class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
-    with SingleTickerProviderStateMixin {
+    with SingleTickerProviderStateMixin, WidgetsBindingObserver {
   Map<String, dynamic>? _insightData;
   bool _isLoading = true;
-  String? _lastUpdatedText;
+  DateTime? _analyzedAt;
   bool _isTrapsExpanded = false;
   late AnimationController _pulseController;
+  StreamSubscription<List<Map<String, dynamic>>>? _insightSub;
 
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
     _pulseController = AnimationController(
       vsync: this,
       duration: const Duration(milliseconds: 1500),
@@ -30,8 +34,25 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
 
   @override
   void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    _insightSub?.cancel();
     _pulseController.dispose();
     super.dispose();
+  }
+
+  @override
+  void didUpdateWidget(covariant MasteryEvolutionCard oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    // Pull-to-refresh ka signal aane par dobara fetch
+    if (oldWidget.reloadToken != widget.reloadToken) {
+      _fetchSavedInsight();
+    }
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    // App foreground me wapas aane par taja analysis
+    if (state == AppLifecycleState.resumed) _fetchSavedInsight();
   }
 
   Future<void> _fetchSavedInsight() async {
@@ -43,6 +64,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
         if (mounted) setState(() => _isLoading = false);
         return;
       }
+      _subscribeRealtime(userId);
 
       final res = await Supabase.instance.client
           .from('user_ai_insights')
@@ -50,25 +72,8 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
           .eq('user_id', userId)
           .maybeSingle();
 
-      if (mounted && res != null && res['summary_report'] != null) {
-        final dynamic raw = res['summary_report'];
-        final Map<String, dynamic> report =
-            raw is Map ? Map<String, dynamic>.from(raw) : {};
-
-        String timeStr = 'Recently';
-        if (res['analyzed_at'] != null) {
-          final dt = DateTime.tryParse(res['analyzed_at'].toString())?.toLocal();
-          if (dt != null) {
-            timeStr =
-                "${dt.hour.toString().padLeft(2, '0')}:${dt.minute.toString().padLeft(2, '0')}";
-          }
-        }
-
-        setState(() {
-          _insightData = report;
-          _lastUpdatedText = timeStr;
-          _isLoading = false;
-        });
+      if (mounted && res != null) {
+        _applyInsight(res);
         return;
       }
     } catch (e) {
@@ -76,6 +81,59 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
     }
 
     if (mounted) setState(() => _isLoading = false);
+  }
+
+  // ⚡ Supabase Realtime: Worker jaise hi nayi report save kare, card khud update ho jaye
+  void _subscribeRealtime(String userId) {
+    if (_insightSub != null) return;
+    try {
+      _insightSub = Supabase.instance.client
+          .from('user_ai_insights')
+          .stream(primaryKey: ['user_id'])
+          .eq('user_id', userId)
+          .listen((rows) {
+            if (!mounted || rows.isEmpty) return;
+            _applyInsight(rows.first);
+          }, onError: (e) => debugPrint("Insight realtime error: $e"));
+    } catch (e) {
+      debugPrint("Insight realtime subscribe error: $e");
+    }
+  }
+
+  void _applyInsight(Map<String, dynamic> res) {
+    if (res['summary_report'] == null) {
+      if (mounted) setState(() => _isLoading = false);
+      return;
+    }
+    final dynamic raw = res['summary_report'];
+    final Map<String, dynamic> report =
+        raw is Map ? Map<String, dynamic>.from(raw) : {};
+    final DateTime? dt = res['analyzed_at'] != null
+        ? DateTime.tryParse(res['analyzed_at'].toString())?.toLocal()
+        : null;
+    if (!mounted) return;
+    setState(() {
+      _insightData = report;
+      _analyzedAt = dt;
+      _isLoading = false;
+    });
+  }
+
+  // "Aaj, 09:41" / "Kal, 09:41" / "3 din pehle, 09:41" / "12 Oct, 09:41"
+  String get _updatedLabel {
+    final dt = _analyzedAt;
+    if (dt == null) return 'Recently';
+    final now = DateTime.now();
+    final String hhmm =
+        '${dt.hour.toString().padLeft(2, '0')}:${dt.minute.toString().padLeft(2, '0')}';
+    final int diffDays = DateTime(now.year, now.month, now.day)
+        .difference(DateTime(dt.year, dt.month, dt.day))
+        .inDays;
+    if (diffDays <= 0) return 'Aaj, $hhmm';
+    if (diffDays == 1) return 'Kal, $hhmm';
+    if (diffDays < 7) return '$diffDays din pehle, $hhmm';
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return '${dt.day} ${months[dt.month - 1]}, $hhmm';
   }
 
   @override
@@ -720,7 +778,7 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Updated: ${_lastUpdatedText ?? 'Recently'}",
+                "Updated: $_updatedLabel",
                 style: TextStyle(fontSize: 10, color: subColor),
               ),
               Flexible(
