@@ -444,7 +444,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (ctx) => const WrongQuestionsScreen()),
+                          MaterialPageRoute(builder: (ctx) => WrongQuestionsScreen(isDarkMode: widget.isDarkMode)),
                         );
                       },
                     ),
@@ -460,7 +460,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       onTap: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (ctx) => const SavedQuestionsScreen()),
+                          MaterialPageRoute(builder: (ctx) => SavedQuestionsScreen(isDarkMode: widget.isDarkMode)),
                         );
                       },
                     ),
@@ -476,7 +476,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       onTap: () async {
                         await Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (ctx) => const SavedCurrentAffairsScreen()),
+                          MaterialPageRoute(builder: (ctx) => SavedCurrentAffairsScreen(isDarkMode: widget.isDarkMode)),
                         );
                         _loadProfileData();
                       },
