@@ -237,7 +237,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         final int userStreak = stats['streak'] as int? ?? 1;
         final int savedBookmarksCount = stats['bookmarks'] as int? ?? 0;
 
-        return         return RefreshIndicator(
+        return RefreshIndicator(
           color: const Color(0xFF2563EB),
           onRefresh: () async {
             await _loadProfileData();
