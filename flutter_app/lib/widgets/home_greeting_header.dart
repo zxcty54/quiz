@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../services/user_stats_service.dart';
+import 'cartoon_avatar.dart';
 
 /// Home ke sabse upar ka personalized header.
 ///
@@ -181,16 +182,6 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                         todayQuestions: 0,
                       );
 
-                  final initials = d.name.trim().isEmpty
-                      ? 'A'
-                      : d.name
-                          .trim()
-                          .split(RegExp(r'\s+'))
-                          .take(2)
-                          .map((w) => w[0])
-                          .join()
-                          .toUpperCase();
-
                   final goalProgress =
                       (d.todayQuestions / _dailyGoal).clamp(0.0, 1.0).toDouble();
                   final isNewUser = d.totalQuestions == 0;
@@ -212,13 +203,15 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                           Stack(
                             clipBehavior: Clip.none,
                             children: [
+                              // Akshar ki jagah cartoon avatar (Profile/Drawer wala hi,
+                              // naam se fixed banta hai) — green dot waisa hi rakha
                               Container(
                                 width: 48,
                                 height: 48,
-                                alignment: Alignment.center,
+                                padding: const EdgeInsets.all(2.5),
                                 decoration: BoxDecoration(
                                   color: Colors.white,
-                                  borderRadius: BorderRadius.circular(15),
+                                  shape: BoxShape.circle,
                                   boxShadow: [
                                     BoxShadow(
                                       color: Colors.black.withOpacity(0.25),
@@ -227,14 +220,7 @@ class _HomeGreetingHeaderState extends State<HomeGreetingHeader> {
                                     ),
                                   ],
                                 ),
-                                child: Text(
-                                  initials,
-                                  style: const TextStyle(
-                                    color: Color(0xFF1E40AF),
-                                    fontWeight: FontWeight.w900,
-                                    fontSize: 16,
-                                  ),
-                                ),
+                                child: CartoonAvatar(seed: d.name, size: 43),
                               ),
                               Positioned(
                                 right: -2,
