@@ -242,8 +242,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
         final int attemptedMocks = stats['mocks'] as int? ?? 0;
         final int userStreak = stats['streak'] as int? ?? 1;
         final int savedBookmarksCount = stats['bookmarks'] as int? ?? 0;
+        final int userAccuracy = stats['accuracy'] as int? ?? 0;
         final int weekTotal = weeklyCounts.fold<int>(0, (a, b) => a + b);
-        final int unlockedCount = [userStreak >= 3, solvedQs >= 100, attemptedMocks >= 1, solvedQs >= 500].where((e) => e).length;
+        final int unlockedCount = [
+          userStreak >= 3,
+          userStreak >= 7,
+          userStreak >= 30,
+          solvedQs >= 100,
+          solvedQs >= 500,
+          solvedQs >= 1000,
+          attemptedMocks >= 1,
+          attemptedMocks >= 10,
+          attemptedMocks >= 25,
+          userAccuracy >= 70 && solvedQs >= 100,
+          savedBookmarksCount >= 20,
+          weekTotal >= 150,
+        ].where((e) => e).length;
 
         return RefreshIndicator(
           color: const Color(0xFF2563EB),
@@ -486,7 +500,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
 
               // ===== Achievements =====
-              _sectionHead('🏆 Achievements', '$unlockedCount / 4 UNLOCKED', headerTextColor),
+              _sectionHead('🏆 Achievements', '$unlockedCount / 12 UNLOCKED', headerTextColor),
               SizedBox(
                 height: 90,
                 child: ListView(
@@ -500,10 +514,38 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       isDark: isDark,
                     ),
                     _buildDynamicBadge(
+                      icon: Icons.local_fire_department_rounded,
+                      title: '7 Day Streak',
+                      isUnlocked: userStreak >= 7,
+                      activeColor: Colors.deepOrange,
+                      isDark: isDark,
+                    ),
+                    _buildDynamicBadge(
+                      icon: Icons.whatshot_rounded,
+                      title: '30 Day Streak',
+                      isUnlocked: userStreak >= 30,
+                      activeColor: Colors.red,
+                      isDark: isDark,
+                    ),
+                    _buildDynamicBadge(
                       icon: Icons.military_tech_rounded,
                       title: '100 Qs Club',
                       isUnlocked: solvedQs >= 100,
                       activeColor: Colors.blue,
+                      isDark: isDark,
+                    ),
+                    _buildDynamicBadge(
+                      icon: Icons.menu_book_rounded,
+                      title: 'Master Scholar',
+                      isUnlocked: solvedQs >= 500,
+                      activeColor: Colors.green,
+                      isDark: isDark,
+                    ),
+                    _buildDynamicBadge(
+                      icon: Icons.workspace_premium_rounded,
+                      title: '1000 Qs Legend',
+                      isUnlocked: solvedQs >= 1000,
+                      activeColor: Colors.indigo,
                       isDark: isDark,
                     ),
                     _buildDynamicBadge(
@@ -514,10 +556,38 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       isDark: isDark,
                     ),
                     _buildDynamicBadge(
-                      icon: Icons.menu_book_rounded,
-                      title: 'Master Scholar',
-                      isUnlocked: solvedQs >= 500,
-                      activeColor: Colors.green,
+                      icon: Icons.fact_check_rounded,
+                      title: '10 Mocks Pro',
+                      isUnlocked: attemptedMocks >= 10,
+                      activeColor: Colors.deepPurple,
+                      isDark: isDark,
+                    ),
+                    _buildDynamicBadge(
+                      icon: Icons.emoji_events_rounded,
+                      title: 'Mock Veteran',
+                      isUnlocked: attemptedMocks >= 25,
+                      activeColor: Colors.orange,
+                      isDark: isDark,
+                    ),
+                    _buildDynamicBadge(
+                      icon: Icons.gps_fixed_rounded,
+                      title: 'Sharpshooter 70%',
+                      isUnlocked: userAccuracy >= 70 && solvedQs >= 100,
+                      activeColor: Colors.pink,
+                      isDark: isDark,
+                    ),
+                    _buildDynamicBadge(
+                      icon: Icons.bookmark_rounded,
+                      title: '20 Bookmarks',
+                      isUnlocked: savedBookmarksCount >= 20,
+                      activeColor: Colors.teal,
+                      isDark: isDark,
+                    ),
+                    _buildDynamicBadge(
+                      icon: Icons.calendar_month_rounded,
+                      title: 'Week Warrior',
+                      isUnlocked: weekTotal >= 150,
+                      activeColor: Colors.cyan,
                       isDark: isDark,
                     ),
                   ],
