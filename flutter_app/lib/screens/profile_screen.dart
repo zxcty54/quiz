@@ -39,6 +39,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   String _userName = 'Aspirant';
   String _userEmail = '';
   String _userMobile = '';
+  String _userDistrict = '';
 
   @override
   void initState() {
@@ -55,6 +56,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
     final String savedMobile = prefs.getString('user_mobile')?.trim() ?? '';
     final String savedEmail = prefs.getString('user_email')?.trim() ?? '';
+    final String savedDistrict = prefs.getString('user_district')?.trim() ?? '';
 
     int caCount = 0;
     final String? savedJson = prefs.getString('saved_daily_bulletins');
@@ -72,6 +74,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
         _userName = savedName;
         _userEmail = savedEmail;
         _userMobile = savedMobile;
+        _userDistrict = savedDistrict;
         _savedCaCount = caCount;
       });
     }
@@ -213,6 +216,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
     final bool isDark = widget.isDarkMode || Theme.of(context).brightness == Brightness.dark;
     final Color headerTextColor = isDark ? Colors.white : const Color(0xFF0F172A);
     final Color subTextColor = isDark ? const Color(0xFF94A3B8) : Colors.grey.shade600;
+    final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
+    final Color cardBorder = isDark ? const Color(0xFF334155) : const Color(0xFFE8EDF7);
 
     return FutureBuilder<Map<String, dynamic>>(
       future: UserStatsService.getStats(),
@@ -236,6 +241,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
         final int attemptedMocks = stats['mocks'] as int? ?? 0;
         final int userStreak = stats['streak'] as int? ?? 1;
         final int savedBookmarksCount = stats['bookmarks'] as int? ?? 0;
+        final int weekTotal = weeklyCounts.fold<int>(0, (a, b) => a + b);
+        final int unlockedCount = [userStreak >= 3, solvedQs >= 100, attemptedMocks >= 1, solvedQs >= 500].where((e) => e).length;
 
         return RefreshIndicator(
           color: const Color(0xFF2563EB),
@@ -245,303 +252,300 @@ class _ProfileScreenState extends State<ProfileScreen> {
             await Future<void>.delayed(const Duration(milliseconds: 500));
           },
           child: ListView(
-          padding: const EdgeInsets.all(16),
-          children: [
-            Card(
-              elevation: 2,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
+            padding: const EdgeInsets.all(16),
+            children: [
+              // ===== Profile Hero (Home welcome wali royal-blue theme) =====
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(18),
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    colors: isDark
+                        ? [const Color(0xFF0A1120), const Color(0xFF172554), const Color(0xFF1E40AF)]
+                        : [const Color(0xFF172554), const Color(0xFF1E40AF), const Color(0xFF2563EB)],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+                  borderRadius: BorderRadius.circular(24),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color(0xFF1E40AF).withOpacity(0.30),
+                      blurRadius: 16,
+                      offset: const Offset(0, 8),
+                    ),
+                  ],
+                ),
+                child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const CircleAvatar(
-                      radius: 30,
-                      backgroundColor: Color(0xFF2563EB),
-                      child: Icon(Icons.school_rounded, color: Colors.white, size: 28),
-                    ),
-                    const SizedBox(width: 14),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Aspirant Profile',
-                            style: TextStyle(fontSize: 12, color: subTextColor, fontWeight: FontWeight.w600),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Container(
+                          width: 58,
+                          height: 58,
+                          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(18)),
+                          child: Center(
+                            child: Text(
+                              _avatarInitials(_userName),
+                              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Color(0xFF1E40AF)),
+                            ),
                           ),
-                          Text(
-                            _userName,
-                            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: headerTextColor),
-                          ),
-                          if (_userEmail.isNotEmpty) ...[
-                            const SizedBox(height: 2),
-                            Row(
-                              children: [
-                                Icon(Icons.email_outlined, size: 12, color: subTextColor),
-                                const SizedBox(width: 4),
-                                Expanded(
-                                  child: Text(
-                                    _userEmail,
-                                    style: TextStyle(fontSize: 11.5, color: subTextColor),
-                                    overflow: TextOverflow.ellipsis,
-                                  ),
+                        ),
+                        const SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                _userName,
+                                style: const TextStyle(fontSize: 18.5, fontWeight: FontWeight.w900, color: Colors.white, height: 1.15),
+                              ),
+                              const SizedBox(height: 3),
+                              Text(
+                                _userDistrict.isNotEmpty ? '🎯 Exam Aspirant • 📍 $_userDistrict' : '🎯 Exam Aspirant',
+                                style: TextStyle(fontSize: 11, fontWeight: FontWeight.w600, color: Colors.white.withOpacity(0.85)),
+                              ),
+                              if (_userEmail.isNotEmpty) ...[
+                                const SizedBox(height: 2),
+                                Text(
+                                  _userEmail,
+                                  style: TextStyle(fontSize: 11, color: Colors.white.withOpacity(0.75), fontWeight: FontWeight.w500),
+                                  overflow: TextOverflow.ellipsis,
                                 ),
                               ],
-                            ),
-                          ],
-                          if (_userMobile.isNotEmpty) ...[
-                            const SizedBox(height: 2),
-                            Row(
-                              children: [
-                                Icon(Icons.phone_android_outlined, size: 12, color: subTextColor),
-                                const SizedBox(width: 4),
+                              if (_userMobile.isNotEmpty) ...[
+                                const SizedBox(height: 2),
                                 Text(
                                   _userMobile,
-                                  style: TextStyle(fontSize: 11.5, color: subTextColor),
+                                  style: TextStyle(fontSize: 11, color: Colors.white.withOpacity(0.75), fontWeight: FontWeight.w500),
                                 ),
                               ],
-                            ),
-                          ],
-                          const SizedBox(height: 6),
-                          Wrap(
-                            spacing: 6,
-                            runSpacing: 4,
-                            children: [
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: isDark ? const Color(0xFF451A03) : const Color(0xFFFEF3C7),
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Icon(
-                                      Icons.local_fire_department_rounded,
-                                      size: 13,
-                                      color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
-                                    ),
-                                    const SizedBox(width: 3),
-                                    Text(
-                                      '$userStreak Day Streak',
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold,
-                                        color: isDark ? const Color(0xFFFBBF24) : const Color(0xFFD97706),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
-                                decoration: BoxDecoration(
-                                  color: isDark ? const Color(0xFF1E1B4B) : const Color(0xFFE0E7FF),
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                child: Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Icon(
-                                      Icons.military_tech_rounded,
-                                      size: 13,
-                                      color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
-                                    ),
-                                    const SizedBox(width: 3),
-                                    Text(
-                                      'Level ${_calculateLevel(solvedQs)}',
-                                      style: TextStyle(
-                                        fontSize: 10,
-                                        fontWeight: FontWeight.bold,
-                                        color: isDark ? const Color(0xFFA5B4FC) : const Color(0xFF4F46E5),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
                             ],
                           ),
+                        ),
+                        InkWell(
+                          onTap: () => _showEditProfileDialog(isDark),
+                          borderRadius: BorderRadius.circular(99),
+                          child: Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
+                            decoration: BoxDecoration(
+                              color: Colors.white.withOpacity(0.16),
+                              borderRadius: BorderRadius.circular(99),
+                              border: Border.all(color: Colors.white.withOpacity(0.35)),
+                            ),
+                            child: const Text('✏️ Edit', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w800, color: Colors.white)),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 14),
+                    Wrap(
+                      spacing: 6,
+                      runSpacing: 6,
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                          decoration: BoxDecoration(color: const Color(0xFFF59E0B), borderRadius: BorderRadius.circular(99)),
+                          child: Text(
+                            '🔥 $userStreak Day Streak',
+                            style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w900, color: Color(0xFF451A03)),
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                          decoration: BoxDecoration(
+                            color: Colors.black.withOpacity(0.22),
+                            borderRadius: BorderRadius.circular(99),
+                            border: Border.all(color: Colors.white.withOpacity(0.20)),
+                          ),
+                          child: Text(
+                            '🏅 Level ${_calculateLevel(solvedQs)}',
+                            style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w800, color: Colors.white),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 13),
+                    Container(
+                      padding: const EdgeInsets.symmetric(vertical: 11, horizontal: 6),
+                      decoration: BoxDecoration(
+                        color: Colors.black.withOpacity(0.22),
+                        borderRadius: BorderRadius.circular(16),
+                        border: Border.all(color: Colors.white.withOpacity(0.13)),
+                      ),
+                      child: Row(
+                        children: [
+                          _heroStat('$solvedQs', 'QUESTIONS'),
+                          _heroStat('$attemptedMocks', 'MOCKS'),
+                          _heroStat('${(stats['accuracy'] as num?)?.toInt() ?? 0}%', 'ACCURACY'),
+                          _heroStat('$savedBookmarksCount', 'SAVED'),
                         ],
                       ),
-                    ),
-                    IconButton(
-                      icon: const Icon(Icons.edit_note_rounded, color: Color(0xFF2563EB), size: 24),
-                      tooltip: 'Edit Profile',
-                      onPressed: () => _showEditProfileDialog(isDark),
                     ),
                   ],
                 ),
               ),
-            ),
-            const SizedBox(height: 18),
-            Text('Learning Dashboard', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
-            const SizedBox(height: 10),
-            GridView.count(
-              shrinkWrap: true,
-              physics: const NeverScrollableScrollPhysics(),
-              crossAxisCount: 2,
-              childAspectRatio: 2.1,
-              crossAxisSpacing: 10,
-              mainAxisSpacing: 10,
-              children: [
-                _buildProfileStatTile('Questions Solved', '$solvedQs', Icons.assignment_outlined, const Color(0xFF2563EB), isDark),
-                _buildProfileStatTile('Mocks Attempted', '$attemptedMocks', Icons.track_changes_rounded, const Color(0xFFD97706), isDark),
-                _buildProfileStatTile('Overall Accuracy', '${stats['accuracy']}%', Icons.bolt_rounded, const Color(0xFF16A34A), isDark),
-                _buildProfileStatTile('Study Time', 'Daily Active', Icons.timer_outlined, const Color(0xFF7C3AED), isDark),
-              ],
-            ),
-            const SizedBox(height: 14),
-            MasteryEvolutionCard(isDarkMode: isDark, reloadToken: _masteryReloadToken),
-            const SizedBox(height: 14),
-            Text('Recent Progress (Last 7 Days)', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
-            const SizedBox(height: 10),
-            Card(
-              elevation: 1,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  crossAxisAlignment: CrossAxisAlignment.end,
-                  children: List.generate(7, (index) {
-                    double heightFactor = weeklyCounts[index] / maxCount;
-                    if (heightFactor < 0.1 && weeklyCounts[index] > 0) heightFactor = 0.15;
 
-                    DateTime dayDate = DateTime.now().subtract(Duration(days: 6 - index));
-                    String dayLabel = _weekDays[dayDate.weekday - 1];
+              // ===== AI Analysis =====
+              _sectionHead('🧠 AI Analysis', '● LIVE', headerTextColor, tagColor: const Color(0xFF059669)),
+              MasteryEvolutionCard(isDarkMode: isDark, reloadToken: _masteryReloadToken),
 
-                    return _buildBar(
-                      dayLabel,
-                      heightFactor,
-                      weeklyCounts[index] > 0 ? const Color(0xFF2563EB) : (isDark ? const Color(0xFF334155) : Colors.grey.shade300),
-                      subTextColor,
-                    );
-                  }),
+              // ===== Last 7 Days =====
+              _sectionHead('📊 Last 7 Days', 'IS HAFTE: $weekTotal QUESTIONS', headerTextColor),
+              Container(
+                padding: const EdgeInsets.fromLTRB(14, 14, 14, 12),
+                decoration: BoxDecoration(
+                  color: cardBg,
+                  borderRadius: BorderRadius.circular(19),
+                  border: Border.all(color: cardBorder),
+                ),
+                child: SizedBox(
+                  height: 96,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: List.generate(7, (index) {
+                      final int count = weeklyCounts[index];
+                      double heightFactor = count / maxCount;
+                      if (heightFactor < 0.1 && count > 0) heightFactor = 0.15;
+
+                      final DateTime dayDate = DateTime.now().subtract(Duration(days: 6 - index));
+                      final bool isToday = index == 6;
+
+                      return _buildBar(
+                        isToday ? 'Aaj' : _weekDays[dayDate.weekday - 1],
+                        count,
+                        heightFactor,
+                        count == 0
+                            ? (isDark ? const Color(0xFF334155) : Colors.grey.shade300)
+                            : (isToday ? const Color(0xFF2563EB) : const Color(0xFF93C5FD)),
+                        subTextColor,
+                        isToday: isToday,
+                      );
+                    }),
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(height: 20),
-            Text('Quick Access', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
-            const SizedBox(height: 10),
-            Card(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-              child: Column(
-                children: [
-                  ListTile(
-                    leading: const Icon(Icons.bookmark_border_rounded, size: 22, color: Color(0xFFD97706)),
-                    title: Text('Saved / Bookmarked Questions', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: headerTextColor)),
-                    subtitle: Text('$savedBookmarksCount Saved Items', style: TextStyle(fontSize: 11, color: subTextColor)),
-                    trailing: Icon(Icons.arrow_forward_ios_rounded, size: 14, color: subTextColor),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (ctx) => const SavedQuestionsScreen()),
-                      );
-                    },
-                  ),
-                  Divider(height: 1, color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
-                  ListTile(
-                    leading: const Icon(Icons.cancel_outlined, size: 22, color: Colors.redAccent),
-                    title: Text('Wrong Questions Vault', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: headerTextColor)),
-                    subtitle: Text('Revise Mistakes', style: TextStyle(fontSize: 11, color: subTextColor)),
-                    trailing: Icon(Icons.arrow_forward_ios_rounded, size: 14, color: subTextColor),
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (ctx) => const WrongQuestionsScreen()),
-                      );
-                    },
-                  ),
-                  Divider(height: 1, color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
-                  ListTile(
-                    leading: const Icon(Icons.newspaper_rounded, size: 22, color: Color(0xFF2563EB)),
-                    title: Text('Saved Current Affairs Vault', style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold, color: headerTextColor)),
-                    subtitle: Text('$_savedCaCount Saved Bulletins', style: TextStyle(fontSize: 11, color: subTextColor)),
-                    trailing: Icon(Icons.arrow_forward_ios_rounded, size: 14, color: subTextColor),
-                    onTap: () async {
-                      await Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (ctx) => const SavedCurrentAffairsScreen()),
-                      );
-                      _loadProfileData();
-                    },
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 20),
-            Text('Achievements', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
-            const SizedBox(height: 10),
-            SizedBox(
-              height: 90,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  _buildDynamicBadge(
-                    icon: Icons.local_fire_department_rounded,
-                    title: '$userStreak Day Streak',
-                    isUnlocked: userStreak >= 3,
-                    activeColor: Colors.amber,
-                    isDark: isDark,
-                  ),
-                  _buildDynamicBadge(
-                    icon: Icons.military_tech_rounded,
-                    title: '100 Qs Club',
-                    isUnlocked: solvedQs >= 100,
-                    activeColor: Colors.blue,
-                    isDark: isDark,
-                  ),
-                  _buildDynamicBadge(
-                    icon: Icons.offline_bolt_rounded,
-                    title: 'First Mock',
-                    isUnlocked: attemptedMocks >= 1,
-                    activeColor: Colors.purple,
-                    isDark: isDark,
-                  ),
-                  _buildDynamicBadge(
-                    icon: Icons.menu_book_rounded,
-                    title: 'Master Scholar',
-                    isUnlocked: solvedQs >= 500,
-                    activeColor: Colors.green,
-                    isDark: isDark,
-                  ),
-                ],
-              ),
-            ),
-            const SizedBox(height: 20),
-            Text('Preferences', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
-            const SizedBox(height: 8),
-            Card(
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
-              child: Column(
-                children: [
-                  SwitchListTile(
-                    title: Text('Bilingual Mode (Hindi / Eng)', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: headerTextColor)),
-                    value: widget.isHindi,
-                    onChanged: widget.onHindiChanged,
-                  ),
-                  Divider(height: 1, color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
-                  SwitchListTile(
-                    title: Text('Dark Mode (Night Theme)', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: headerTextColor)),
-                    value: widget.isDarkMode,
-                    onChanged: (val) async {
-                      widget.onDarkModeChanged(val);
-                      final prefs = await SharedPreferences.getInstance();
-                      await prefs.setBool('is_dark_mode', val);
 
-                      globalThemeNotifier.value = val ? ThemeMode.dark : ThemeMode.light;
-                    },
+              // ===== Quick Access =====
+              _sectionHead('⚡ Quick Access', '', headerTextColor),
+              Row(
+                children: [
+                  Expanded(
+                    child: _quickTile(
+                      icon: '📕',
+                      title: 'Wrong Vault',
+                      sub: 'Galtiyan revise karo',
+                      bg: const Color(0xFFFFF1F2),
+                      isDark: isDark,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (ctx) => const WrongQuestionsScreen()),
+                        );
+                      },
+                    ),
+                  ),
+                  const SizedBox(width: 9),
+                  Expanded(
+                    child: _quickTile(
+                      icon: '🔖',
+                      title: 'Saved Qs',
+                      sub: '$savedBookmarksCount saved items',
+                      bg: const Color(0xFFFEF3C7),
+                      isDark: isDark,
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (ctx) => const SavedQuestionsScreen()),
+                        );
+                      },
+                    ),
+                  ),
+                  const SizedBox(width: 9),
+                  Expanded(
+                    child: _quickTile(
+                      icon: '📰',
+                      title: 'CA Vault',
+                      sub: '$_savedCaCount saved bulletins',
+                      bg: const Color(0xFFEFF6FF),
+                      isDark: isDark,
+                      onTap: () async {
+                        await Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (ctx) => const SavedCurrentAffairsScreen()),
+                        );
+                        _loadProfileData();
+                      },
+                    ),
                   ),
                 ],
               ),
-            ),
-            const SizedBox(height: 20),
-            Text('Coaching Owners Ke Liye', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: headerTextColor)),
-            const SizedBox(height: 10),
-            CoachingOnboardingCtaWidget(isDarkMode: isDark),
-            const SizedBox(height: 16),
-            DonationWidget(isDarkMode: isDark),
-            const SizedBox(height: 14),
+
+              // ===== Achievements =====
+              _sectionHead('🏆 Achievements', '$unlockedCount / 4 UNLOCKED', headerTextColor),
+              SizedBox(
+                height: 90,
+                child: ListView(
+                  scrollDirection: Axis.horizontal,
+                  children: [
+                    _buildDynamicBadge(
+                      icon: Icons.local_fire_department_rounded,
+                      title: '$userStreak Day Streak',
+                      isUnlocked: userStreak >= 3,
+                      activeColor: Colors.amber,
+                      isDark: isDark,
+                    ),
+                    _buildDynamicBadge(
+                      icon: Icons.military_tech_rounded,
+                      title: '100 Qs Club',
+                      isUnlocked: solvedQs >= 100,
+                      activeColor: Colors.blue,
+                      isDark: isDark,
+                    ),
+                    _buildDynamicBadge(
+                      icon: Icons.offline_bolt_rounded,
+                      title: 'First Mock',
+                      isUnlocked: attemptedMocks >= 1,
+                      activeColor: Colors.purple,
+                      isDark: isDark,
+                    ),
+                    _buildDynamicBadge(
+                      icon: Icons.menu_book_rounded,
+                      title: 'Master Scholar',
+                      isUnlocked: solvedQs >= 500,
+                      activeColor: Colors.green,
+                      isDark: isDark,
+                    ),
+                  ],
+                ),
+              ),
+
+              // ===== Settings (Bilingual switch hata diya — woh dead tha) =====
+              _sectionHead('⚙️ Settings', '', headerTextColor),
+              Card(
+                color: cardBg,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(19), side: BorderSide(color: cardBorder)),
+                child: SwitchListTile(
+                  title: Text('Dark Mode (Night Theme)', style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: headerTextColor)),
+                  value: widget.isDarkMode,
+                  onChanged: (val) async {
+                    widget.onDarkModeChanged(val);
+                    final prefs = await SharedPreferences.getInstance();
+                    await prefs.setBool('is_dark_mode', val);
+
+                    globalThemeNotifier.value = val ? ThemeMode.dark : ThemeMode.light;
+                  },
+                ),
+              ),
+
+              // ===== Coaching Owners =====
+              _sectionHead('🏫 Coaching Owners Ke Liye', '', headerTextColor),
+              CoachingOnboardingCtaWidget(isDarkMode: isDark),
+              const SizedBox(height: 16),
+              DonationWidget(isDarkMode: isDark),
+              const SizedBox(height: 14),
             Container(
               decoration: BoxDecoration(
                 gradient: LinearGradient(
@@ -680,10 +684,101 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 ),
               ),
             ),
-            const SizedBox(height: 20),
-          ],
-        ));
+              const SizedBox(height: 20),
+              Center(
+                child: Text(
+                  'MockTester • Practice karo, select ho 🎯',
+                  style: TextStyle(fontSize: 10.5, fontWeight: FontWeight.w600, color: subTextColor),
+                ),
+              ),
+              const SizedBox(height: 6),
+            ],
+          ),
+        );
       },
+    );
+  }
+
+  String _avatarInitials(String name) {
+    final parts = name.trim().split(RegExp(r'\s+')).where((e) => e.isNotEmpty).toList();
+    if (parts.isEmpty) return 'A';
+    if (parts.length == 1) return parts.first[0].toUpperCase();
+    return (parts[0][0] + parts[1][0]).toUpperCase();
+  }
+
+  Widget _sectionHead(String title, String tag, Color textColor, {Color tagColor = const Color(0xFF2563EB)}) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 20, bottom: 10),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(title, style: TextStyle(fontSize: 15, fontWeight: FontWeight.w900, color: textColor, letterSpacing: -0.2)),
+          if (tag.isNotEmpty)
+            Text(tag, style: TextStyle(fontSize: 10, fontWeight: FontWeight.w900, color: tagColor, letterSpacing: 0.6)),
+        ],
+      ),
+    );
+  }
+
+  Widget _heroStat(String value, String label) {
+    return Expanded(
+      child: Column(
+        children: [
+          Text(value, style: const TextStyle(fontSize: 15.5, fontWeight: FontWeight.w900, color: Colors.white)),
+          const SizedBox(height: 2),
+          Text(
+            label,
+            style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.w800, letterSpacing: 0.5, color: Colors.white.withOpacity(0.75)),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget _quickTile({
+    required String icon,
+    required String title,
+    required String sub,
+    required Color bg,
+    required bool isDark,
+    required VoidCallback onTap,
+  }) {
+    final Color textColor = isDark ? Colors.white : const Color(0xFF0F172A);
+    final Color subColor = isDark ? const Color(0xFF94A3B8) : const Color(0xFF64748B);
+    return Material(
+      color: isDark ? const Color(0xFF1E293B) : Colors.white,
+      borderRadius: BorderRadius.circular(17),
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(17),
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 13, horizontal: 6),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(17),
+            border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE8EDF7)),
+          ),
+          child: Column(
+            children: [
+              Container(
+                width: 38,
+                height: 38,
+                decoration: BoxDecoration(color: isDark ? bg.withOpacity(0.22) : bg, borderRadius: BorderRadius.circular(12)),
+                child: Center(child: Text(icon, style: const TextStyle(fontSize: 18))),
+              ),
+              const SizedBox(height: 8),
+              Text(title, textAlign: TextAlign.center, style: TextStyle(fontSize: 11.5, fontWeight: FontWeight.w900, color: textColor)),
+              const SizedBox(height: 2),
+              Text(
+                sub,
+                textAlign: TextAlign.center,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 9, fontWeight: FontWeight.w600, color: subColor),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 
@@ -731,20 +826,32 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 
-  Widget _buildBar(String day, double heightFactor, Color color, Color textColor) {
+  Widget _buildBar(String day, int count, double heightFactor, Color color, Color textColor, {bool isToday = false}) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
+        Text(
+          '$count',
+          style: TextStyle(fontSize: 9, fontWeight: FontWeight.w900, color: isToday ? const Color(0xFF2563EB) : textColor),
+        ),
+        const SizedBox(height: 4),
         Container(
-          height: 60 * (heightFactor == 0 ? 0.05 : heightFactor),
-          width: 14,
+          width: 22,
+          height: 6 + (heightFactor.clamp(0.0, 1.0) * 46),
           decoration: BoxDecoration(
             color: color,
             borderRadius: BorderRadius.circular(6),
           ),
         ),
-        const SizedBox(height: 6),
-        Text(day, style: TextStyle(fontSize: 11, color: textColor, fontWeight: FontWeight.bold)),
+        const SizedBox(height: 5),
+        Text(
+          day,
+          style: TextStyle(
+            fontSize: 9.5,
+            color: isToday ? const Color(0xFF2563EB) : textColor,
+            fontWeight: isToday ? FontWeight.w900 : FontWeight.w700,
+          ),
+        ),
       ],
     );
   }
