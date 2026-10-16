@@ -79,6 +79,13 @@ class _HomeTabState extends State<HomeTab> {
             HomeGreetingHeader(isDarkMode: widget.isDarkMode, reloadToken: _greetingReloadToken),
             const SizedBox(height: 16),
 
+            // 0.4 AAJ KE DUE SAWAL (Wrong Vault) — greeting ke theek neeche
+            // bada card; due ho tabhi dikhta hai, na ho to jagah bhi nahi leta
+            DueRevisionCard(
+              key: _dueCardKey,
+              isDarkMode: widget.isDarkMode,
+            ),
+
             // 0.5 LIVE PROMO BANNERS (naya exam / naya mock) —
             // ye live app_config.json ke promo_banners se bante hain.
             // Naya banner = wahan entry jodo, app rebuild nahi hoga.
@@ -113,12 +120,6 @@ class _HomeTabState extends State<HomeTab> {
             ChallengeCardWidget(isDarkMode: widget.isDarkMode),
             const SizedBox(height: 18),
 
-            // 4.5 AAJ KE DUE SAWAL (Wrong Vault) — due ho tabhi dikhta hai,
-            // na ho to card apne aap gayab (neeche ki jagah bhi nahi leta)
-            DueRevisionCard(
-              key: _dueCardKey,
-              isDarkMode: widget.isDarkMode,
-            ),
 
             // 5. DISTRICT LEADERBOARD
             DistrictTopLeaderboardWidget(isDarkMode: widget.isDarkMode),

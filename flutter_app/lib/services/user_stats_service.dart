@@ -421,6 +421,37 @@ class UserStatsService {
     return list.where((q) => isWrongDue(q)).length;
   }
 
+  // Mock pehchan — Wrong Vault screen wali hi tarkeeb (chapter/source dekh kar)
+  static bool _isMockEntry(Map<String, dynamic> qJson) {
+    String chapter = (qJson['chapterName'] ?? qJson['chapter'] ?? '').toString().toLowerCase().trim();
+    String source = (qJson['sourceType'] ?? qJson['source'] ?? '').toString().toLowerCase().trim();
+    bool isMockFlag = qJson['isMock'] == true || qJson['isSectional'] == true;
+    bool isSetPattern = RegExp(r'\bset[\s\-_]*\d+').hasMatch(chapter);
+
+    return isMockFlag ||
+        isSetPattern ||
+        chapter.contains('set') ||
+        chapter.contains('mock') ||
+        chapter.contains('sectional') ||
+        chapter.contains('cbt') ||
+        source.contains('mock') ||
+        source.contains('sectional') ||
+        chapter.isEmpty;
+  }
+
+  // 📊 Home ke Due card ke liye hisaab — kul due, mock due, revision due, repeat due
+  static Future<Map<String, int>> getDueWrongStats() async {
+    final list = await getWrongQuestions();
+    int due = 0, mock = 0, repeat = 0;
+    for (final q in list) {
+      if (!isWrongDue(q)) continue;
+      due++;
+      if (_isMockEntry(q)) mock++;
+      if (((q['timesWrong'] ?? 1) as num).toInt() >= 2) repeat++;
+    }
+    return {'due': due, 'mock': mock, 'revision': due - mock, 'repeat': repeat};
+  }
+
   // 🔟 Clear Wrong Vault Questions
   static Future<void> clearWrongQuestions() async {
     final prefs = await SharedPreferences.getInstance();
