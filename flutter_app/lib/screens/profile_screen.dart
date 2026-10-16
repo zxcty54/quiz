@@ -13,6 +13,7 @@ import '../widgets/donation_widget.dart';
 import '../widgets/app_global_feedback_dialog.dart';
 import '../widgets/mastery_evolution_card.dart';
 import '../widgets/coaching_onboarding_cta_widget.dart';
+import '../widgets/cartoon_avatar.dart';
 
 class ProfileScreen extends StatefulWidget {
   final bool isHindi;
@@ -281,16 +282,17 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        // Naam ke akshar ki jagah cartoon avatar — har student ka
+                        // apna (naam se banta hai, isliye hamesha ek hi dikhega)
                         Container(
                           width: 58,
                           height: 58,
-                          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.circular(18)),
-                          child: Center(
-                            child: Text(
-                              _avatarInitials(_userName),
-                              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900, color: Color(0xFF1E40AF)),
-                            ),
+                          padding: const EdgeInsets.all(2.5),
+                          decoration: const BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
                           ),
+                          child: CartoonAvatar(seed: _userName, size: 53),
                         ),
                         const SizedBox(width: 12),
                         Expanded(
