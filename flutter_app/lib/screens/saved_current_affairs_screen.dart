@@ -65,10 +65,12 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
   }
 
   // 🗑️ DELETE SINGLE CA ITEM
-  Future<void> _removeSavedNews(int index) async {
+  // Number (index) se nahi, item ki pehchan se hatate hain — filter (Bihar/
+  // National) lagi list me index badal jata hai, item nahi.
+  Future<void> _removeSavedNews(dynamic item) async {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
-      _savedNewsList.removeAt(index);
+      _savedNewsList.remove(item);
     });
     await prefs.setString('saved_daily_bulletins', jsonEncode(_savedNewsList));
 
@@ -398,7 +400,7 @@ class _SavedCurrentAffairsScreenState extends State<SavedCurrentAffairsScreen> {
                           constraints: const BoxConstraints(),
                           padding: EdgeInsets.zero,
                           icon: const Icon(Icons.delete_outline_rounded, size: 20, color: Colors.redAccent),
-                          onPressed: () => _removeSavedNews(index),
+                          onPressed: () => _removeSavedNews(news),
                         ),
                       ],
                     ),
