@@ -13,6 +13,7 @@ class CbtProgressService {
     required Map<int, int> userAnswers,
     required int remainingSeconds,
     required int totalQuestions,
+    Set<int>? markedForReview,
   }) async {
     try {
       final prefs = await SharedPreferences.getInstance();
@@ -26,6 +27,7 @@ class CbtProgressService {
         'userAnswers': answersMap,
         'remainingSeconds': remainingSeconds,
         'totalQuestions': totalQuestions,
+        'markedForReview': markedForReview?.toList() ?? [],
         'lastUpdated': DateTime.now().toIso8601String(),
       };
 
@@ -76,6 +78,14 @@ class CbtProgressService {
           }
         });
         decoded['parsedUserAnswers'] = parsedAnswers;
+      }
+
+      // Review par rakhe sawal bhi resume ke liye number me badlo
+      if (decoded.containsKey('markedForReview') && decoded['markedForReview'] is List) {
+        decoded['parsedMarkedForReview'] = (decoded['markedForReview'] as List)
+            .map((e) => int.tryParse(e.toString()))
+            .whereType<int>()
+            .toSet();
       }
 
       return decoded;
