@@ -248,6 +248,28 @@ class UserStatsService {
     } catch (_) {}
   }
 
+  // 5️⃣b Update Error Tag — sawal ki pehchan (uske text) se, number (index) se nahi.
+  // Filter lagi hui list me index badal jata hai, sawal ka text nahi badalta —
+  // isliye tag hamesha sahi sawal par lagta hai.
+  static Future<void> updateWrongQuestionTagByText(String questionText, String tag) async {
+    if (questionText.isEmpty) return;
+    final prefs = await SharedPreferences.getInstance();
+    List<String> rawList = prefs.getStringList(_keyWrongQuestions) ?? [];
+
+    for (int i = 0; i < rawList.length; i++) {
+      try {
+        Map<String, dynamic> qMap = jsonDecode(rawList[i]);
+        final key = (qMap['qe'] ?? qMap['qh'] ?? '').toString();
+        if (key == questionText) {
+          qMap['errorTag'] = tag;
+          rawList[i] = jsonEncode(qMap);
+          await prefs.setStringList(_keyWrongQuestions, rawList);
+          return;
+        }
+      } catch (_) {}
+    }
+  }
+
   // 6️⃣ Smart Revision Ladder: Auto-Graduate on 2/2
   static Future<bool> incrementQuestionMastery(int index) async {
     final prefs = await SharedPreferences.getInstance();
@@ -271,6 +293,36 @@ class UserStatsService {
     } catch (_) {
       return false;
     }
+  }
+
+  // 6️⃣b Mastery badhao — pehchan (text) se, index se nahi (upar wali wajah).
+  // Beech me koi sawal vault se hat bhi jaye to bhi sahi sawal hi update hoga.
+  static Future<bool> incrementQuestionMasteryByText(String questionText) async {
+    if (questionText.isEmpty) return false;
+    final prefs = await SharedPreferences.getInstance();
+    List<String> rawList = prefs.getStringList(_keyWrongQuestions) ?? [];
+
+    for (int i = 0; i < rawList.length; i++) {
+      try {
+        Map<String, dynamic> qMap = jsonDecode(rawList[i]);
+        final key = (qMap['qe'] ?? qMap['qh'] ?? '').toString();
+        if (key == questionText) {
+          int currentStreak = (qMap['masteryStreak'] ?? 0) + 1;
+
+          if (currentStreak >= 2) {
+            rawList.removeAt(i);
+            await prefs.setStringList(_keyWrongQuestions, rawList);
+            return true;
+          } else {
+            qMap['masteryStreak'] = currentStreak;
+            rawList[i] = jsonEncode(qMap);
+            await prefs.setStringList(_keyWrongQuestions, rawList);
+            return false;
+          }
+        }
+      } catch (_) {}
+    }
+    return false;
   }
 
   // 7️⃣ Toggle Save/Bookmark Question

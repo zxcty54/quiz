@@ -5,7 +5,8 @@ import '../services/user_stats_service.dart';
 import '../widgets/math_text.dart';
 
 class WrongQuestionsScreen extends StatefulWidget {
-  const WrongQuestionsScreen({super.key});
+  final bool isDarkMode;
+  const WrongQuestionsScreen({super.key, this.isDarkMode = false});
 
   @override
   State<WrongQuestionsScreen> createState() => _WrongQuestionsScreenState();
@@ -19,11 +20,11 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   // Filter selection: 'ALL', 'REVISION', 'MOCK'
   String _selectedFilter = 'ALL';
 
-  final Map<int, bool> _isExplanationExpanded = {}; 
+  final Map<String, bool> _isExplanationExpanded = {};
 
-  // Store "Why Wrong" fast AI responses (Index -> Text)
-  final Map<int, String> _whyWrongAiResponses = {};
-  final Map<int, bool> _whyWrongLoading = {};
+  // Store "Why Wrong" fast AI responses (QuestionId -> Text)
+  final Map<String, String> _whyWrongAiResponses = {};
+  final Map<String, bool> _whyWrongLoading = {};
 
   // ⏳ Global Anti-Spam Cooldown for Analyze Trap (15 Seconds)
   static DateTime? _lastVaultAiCallTime;
@@ -53,6 +54,12 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     });
   }
 
+  // Sawal ki pehchan (identity) — number (index) se nahi, sawal ke text se.
+  // Filter lagne ya beech me sawal hatne par index badal jata hai, text nahi —
+  // isliye tag, mastery aur AI jawab hamesha sahi sawal par lagta hai.
+  String _questionId(Map<String, dynamic> qJson) =>
+      (qJson['qe'] ?? qJson['qh'] ?? '').toString();
+
   // 🎯 SMART DETECTION FOR SECTIONAL MOCK ("Set 1", "Set 2", "Set-01", etc.)
   bool _isMockQuestion(Map<String, dynamic> qJson) {
     String chapter = (qJson['chapterName'] ?? qJson['chapter'] ?? '').toString().toLowerCase().trim();
@@ -75,6 +82,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   // ⚡ ONE-CLICK RE-QUIZ ENGINE DIALOG (Resume Fix Mode)
   void _startReQuiz(List<Map<String, dynamic>> wrongList) {
     if (wrongList.isEmpty) return;
+    final bool quizDark = widget.isDarkMode;
 
     int qIndex = 0;
     int? selectedOption;
@@ -91,14 +99,14 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
             final q = Question.fromJson(currentJson);
 
             return AlertDialog(
-              backgroundColor: Colors.white,
+              backgroundColor: quizDark ? const Color(0xFF1E293B) : Colors.white,
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
               title: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("🛠️ Fix Error (${qIndex + 1}/${wrongList.length})", style: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black87)),
+                  Text("🛠️ Fix Error (${qIndex + 1}/${wrongList.length})", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: quizDark ? Colors.white : Colors.black87)),
                   IconButton(
-                    icon: const Icon(Icons.close, size: 20, color: Colors.black87),
+                    icon: Icon(Icons.close, size: 20, color: quizDark ? Colors.white : Colors.black87),
                     onPressed: () {
                       Navigator.pop(ctx);
                       _loadData();
@@ -113,7 +121,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                   children: [
                     MathFormattedText(
                       text: q.getText(_isHindi),
-                      textStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Colors.black87, height: 1.3),
+                      textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: quizDark ? Colors.white : Colors.black87, height: 1.3),
                     ),
                     const SizedBox(height: 12),
 
@@ -121,8 +129,8 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                       bool isCorrect = optIdx == q.answerIndex;
                       bool isSelected = selectedOption == optIdx;
 
-                      Color bg = Colors.grey.shade100;
-                      Color border = Colors.grey.shade300;
+                      Color bg = quizDark ? const Color(0xFF0F172A) : Colors.grey.shade100;
+                      Color border = quizDark ? const Color(0xFF334155) : Colors.grey.shade300;
 
                       if (isAnswered) {
                         if (isCorrect) {
@@ -145,7 +153,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                                 if (isCorrect) {
                                   score++;
-                                  bool graduated = await UserStatsService.incrementQuestionMastery(qIndex);
+                                  bool graduated = await UserStatsService.incrementQuestionMasteryByText(_questionId(currentJson));
                                   if (graduated && mounted) {
                                     ScaffoldMessenger.of(context).showSnackBar(
                                       const SnackBar(content: Text("🎉 Question Cleared from Vault!"), duration: Duration(seconds: 1)),
@@ -169,7 +177,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 12,
-                                  color: isAnswered && isCorrect ? Colors.green.shade900 : (isAnswered && isSelected ? Colors.red.shade900 : Colors.black87),
+                                  color: isAnswered && isCorrect ? Colors.green.shade900 : (isAnswered && isSelected ? Colors.red.shade900 : (quizDark ? const Color(0xFFCBD5E1) : Colors.black87)),
                                 ),
                               ),
                               Expanded(
@@ -177,7 +185,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   text: q.options[optIdx],
                                   textStyle: TextStyle(
                                     fontSize: 12,
-                                    color: isAnswered && isCorrect ? Colors.green.shade900 : (isAnswered && isSelected ? Colors.red.shade900 : Colors.black87),
+                                    color: isAnswered && isCorrect ? Colors.green.shade900 : (isAnswered && isSelected ? Colors.red.shade900 : (quizDark ? const Color(0xFFCBD5E1) : Colors.black87)),
                                   ),
                                 ),
                               ),
@@ -191,10 +199,10 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                       const SizedBox(height: 10),
                       Container(
                         padding: const EdgeInsets.all(8),
-                        decoration: BoxDecoration(color: const Color(0xFFEFF6FF), borderRadius: BorderRadius.circular(6)),
+                        decoration: BoxDecoration(color: quizDark ? const Color(0xFF172554) : const Color(0xFFEFF6FF), borderRadius: BorderRadius.circular(6)),
                         child: MathFormattedText(
                           text: "💡 Solution: ${q.explanation}",
-                          textStyle: const TextStyle(fontSize: 11.5, color: Color(0xFF1E3A8A), height: 1.3),
+                          textStyle: TextStyle(fontSize: 11.5, color: quizDark ? const Color(0xFFBFDBFE) : const Color(0xFF1E3A8A), height: 1.3),
                         ),
                       )
                     ]
@@ -231,8 +239,8 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   }
 
   // 🎯 PURE LIVE AI TRIGGER FOR "WHY WRONG" (WITH 15s COOLDOWN PROTECTION)
-  void _fetchWhyWrongAi(Question q, String userChoice, String userTag, int index) async {
-    if (_whyWrongLoading[index] == true || _whyWrongAiResponses[index] != null) return;
+  void _fetchWhyWrongAi(Question q, String userChoice, String userTag, String qid) async {
+    if (_whyWrongLoading[qid] == true || _whyWrongAiResponses[qid] != null) return;
 
     final int cooldown = _getVaultCooldownRemaining();
     if (cooldown > 0) {
@@ -247,7 +255,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     }
 
     _lastVaultAiCallTime = DateTime.now();
-    setState(() => _whyWrongLoading[index] = true);
+    setState(() => _whyWrongLoading[qid] = true);
 
     String selectedOpt = (userChoice.trim().isNotEmpty && 
                           userChoice != "Attempted Option" && 
@@ -268,9 +276,9 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
       setState(() {
         if (isSuccess) {
-          _whyWrongAiResponses[index] = result;
+          _whyWrongAiResponses[qid] = result;
         }
-        _whyWrongLoading[index] = false;
+        _whyWrongLoading[qid] = false;
       });
 
       if (!isSuccess) {
@@ -288,17 +296,40 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
   @override
   Widget build(BuildContext context) {
     final int globalCooldown = _getVaultCooldownRemaining();
+    final bool isDark = widget.isDarkMode;
 
     return Scaffold(
-      backgroundColor: const Color(0xFFF8FAFC),
+      backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
       appBar: AppBar(
-        title: const Text('❌ Wrong Questions Vault', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+        backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+        elevation: 0,
+        iconTheme: IconThemeData(color: isDark ? Colors.white : Colors.black87),
+        title: Text('❌ Wrong Questions Vault', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold, color: isDark ? Colors.white : Colors.black87)),
         actions: [
           IconButton(
             icon: const Icon(Icons.delete_outline_rounded, color: Colors.red),
             onPressed: () async {
-              await UserStatsService.clearWrongQuestions();
-              _loadData();
+              // Galti se tap ho jaye to poora vault na ude — pehle pakka karo
+              final confirm = await showDialog<bool>(
+                context: context,
+                builder: (ctx) => AlertDialog(
+                  backgroundColor: widget.isDarkMode ? const Color(0xFF1E293B) : Colors.white,
+                  title: Text('Poora Vault saaf karein?', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold, color: widget.isDarkMode ? Colors.white : Colors.black87)),
+                  content: Text('Saare wrong questions hamesha ke liye delete ho jayenge. Ye wapas nahi aayega.', style: TextStyle(fontSize: 12.5, height: 1.4, color: widget.isDarkMode ? const Color(0xFFCBD5E1) : Colors.black87)),
+                  actions: [
+                    TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Cancel')),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(backgroundColor: Colors.red, foregroundColor: Colors.white),
+                      onPressed: () => Navigator.pop(ctx, true),
+                      child: const Text('Delete'),
+                    ),
+                  ],
+                ),
+              );
+              if (confirm == true) {
+                await UserStatsService.clearWrongQuestions();
+                _loadData();
+              }
             },
           ),
           IconButton(
@@ -329,12 +360,12 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
             return Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: const [
-                  Text('🎉', style: TextStyle(fontSize: 50)),
-                  SizedBox(height: 10),
-                  Text('Vault Zero Cleared!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: Colors.black87)),
-                  SizedBox(height: 4),
-                  Text('Aapka koi bhi wrong question pending nahi hai.', style: TextStyle(color: Colors.grey, fontSize: 12)),
+                children: [
+                  const Text('🎉', style: TextStyle(fontSize: 50)),
+                  const SizedBox(height: 10),
+                  Text('Vault Zero Cleared!', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16, color: isDark ? Colors.white : Colors.black87)),
+                  const SizedBox(height: 4),
+                  Text('Aapka koi bhi wrong question pending nahi hai.', style: TextStyle(color: isDark ? const Color(0xFF94A3B8) : Colors.grey, fontSize: 12)),
                 ],
               ),
             );
@@ -350,12 +381,29 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
             return true;
           }).toList();
 
+          final mockCount = rawList.where((item) => _isMockQuestion(item)).length;
+          final streakCount = rawList.where((item) => (item['masteryStreak'] ?? 0) > 0).length;
+
           return ListView(
             padding: const EdgeInsets.all(16),
             children: [
+              // 📊 0. SUMMARY STRIP — ek nazar me poora vault
+              Row(
+                children: [
+                  _summaryBox('⏳', '${rawList.length}', 'Pending', isDark),
+                  const SizedBox(width: 8),
+                  _summaryBox('🎯', '$mockCount', 'Mock', isDark),
+                  const SizedBox(width: 8),
+                  _summaryBox('⚡', '${rawList.length - mockCount}', 'Revision', isDark),
+                  const SizedBox(width: 8),
+                  _summaryBox('🔥', '$streakCount', 'Streak par', isDark),
+                ],
+              ),
+              const SizedBox(height: 12),
+
               // 🛠️ 1. RESUME FIX CARD
               Card(
-                color: const Color(0xFFECFDF5),
+                color: isDark ? const Color(0xFF052E16) : const Color(0xFFECFDF5),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(14),
                   side: const BorderSide(color: Color(0xFF10B981), width: 1.2),
@@ -368,7 +416,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("⏳ ${filteredList.length} Questions Waiting", style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Color(0xFF065F46))),
+                          Text("⏳ ${filteredList.length} Questions Waiting", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: isDark ? const Color(0xFF6EE7B7) : const Color(0xFF065F46))),
                           ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(
                               backgroundColor: const Color(0xFF059669),
@@ -403,6 +451,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
               // 📋 3. COMPACT WRONG QUESTION CARDS
               ...List.generate(filteredList.length, (index) {
                 final qJson = filteredList[index];
+                final String qid = _questionId(qJson);
                 final q = Question.fromJson(qJson);
                 final List<String>? statements = _isHindi ? q.sh : q.se;
 
@@ -413,15 +462,16 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                 String savedTag = qJson['errorTag'] ?? '';
                 String userSelectedOpt = (qJson['userSelectedOption'] ?? '').toString();
 
-                bool isExpanded = _isExplanationExpanded[index] ?? false;
-                bool isWhyWrongLoading = _whyWrongLoading[index] ?? false;
-                String? whyWrongAiText = _whyWrongAiResponses[index];
+                bool isExpanded = _isExplanationExpanded[qid] ?? false;
+                bool isWhyWrongLoading = _whyWrongLoading[qid] ?? false;
+                String? whyWrongAiText = _whyWrongAiResponses[qid];
 
                 bool hasSpecificChoice = userSelectedOpt.trim().isNotEmpty && 
                                          userSelectedOpt != "Attempted Option" && 
                                          userSelectedOpt != "No Option Selected";
 
                 return Card(
+                  color: isDark ? const Color(0xFF1E293B) : Colors.white,
                   margin: const EdgeInsets.only(bottom: 12),
                   shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                   elevation: 1,
@@ -460,13 +510,13 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   Container(
                                     padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 3),
                                     decoration: BoxDecoration(
-                                      color: masteryStreak > 0 ? const Color(0xFFDCFCE7) : Colors.grey.shade100,
+                                      color: masteryStreak > 0 ? (isDark ? const Color(0xFF052E16) : const Color(0xFFDCFCE7)) : (isDark ? const Color(0xFF0F172A) : Colors.grey.shade100),
                                       borderRadius: BorderRadius.circular(6),
-                                      border: Border.all(color: masteryStreak > 0 ? Colors.green : Colors.grey.shade300),
+                                      border: Border.all(color: masteryStreak > 0 ? Colors.green : (isDark ? const Color(0xFF475569) : Colors.grey.shade300)),
                                     ),
                                     child: Text(
                                       "🎯 Streak: $masteryStreak/2",
-                                      style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: masteryStreak > 0 ? Colors.green.shade800 : Colors.grey),
+                                      style: TextStyle(fontSize: 9, fontWeight: FontWeight.bold, color: masteryStreak > 0 ? Colors.green.shade800 : (isDark ? const Color(0xFF94A3B8) : Colors.grey)),
                                     ),
                                   ),
                                 ],
@@ -480,7 +530,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                         MathFormattedText(
                           text: q.getText(_isHindi),
-                          textStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: Colors.black87, height: 1.3),
+                          textStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 13.5, color: isDark ? Colors.white : Colors.black87, height: 1.3),
                         ),
 
                         if (statements != null && statements.isNotEmpty) ...[
@@ -489,7 +539,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                 padding: const EdgeInsets.only(bottom: 2),
                                 child: MathFormattedText(
                                   text: "• $stmt",
-                                  textStyle: TextStyle(fontSize: 12, color: Colors.grey.shade800, height: 1.25),
+                                  textStyle: TextStyle(fontSize: 12, color: isDark ? const Color(0xFFCBD5E1) : Colors.grey.shade800, height: 1.25),
                                 ),
                               )),
                         ],
@@ -498,25 +548,32 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                         ...List.generate(q.options.length, (optIdx) {
                           bool isCorrect = optIdx == q.answerIndex;
+                          // Student ka apna galat jawab bhi laal dikhao — sirf sahi wala hara nahi
+                          bool isUserWrong = hasSpecificChoice && !isCorrect && q.options[optIdx].trim() == userSelectedOpt.trim();
                           return Container(
                             margin: const EdgeInsets.only(bottom: 4),
                             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 6),
                             decoration: BoxDecoration(
-                              color: isCorrect ? const Color(0xFFF0FDF4) : Colors.grey.shade50,
+                              color: isCorrect
+                                  ? (isDark ? const Color(0xFF052E16) : const Color(0xFFF0FDF4))
+                                  : isUserWrong
+                                      ? (isDark ? const Color(0xFF450A0A) : const Color(0xFFFEF2F2))
+                                      : (isDark ? const Color(0xFF0F172A) : Colors.grey.shade50),
                               borderRadius: BorderRadius.circular(6),
-                              border: Border.all(color: isCorrect ? const Color(0xFF86EFAC) : Colors.grey.shade300),
+                              border: Border.all(color: isCorrect ? const Color(0xFF86EFAC) : isUserWrong ? const Color(0xFFF87171) : (isDark ? const Color(0xFF334155) : Colors.grey.shade300)),
                             ),
                             child: Row(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text("${String.fromCharCode(65 + optIdx)}. ", style: TextStyle(fontWeight: FontWeight.bold, color: isCorrect ? Colors.green.shade800 : Colors.black87, fontSize: 12)),
+                                Text("${String.fromCharCode(65 + optIdx)}. ", style: TextStyle(fontWeight: FontWeight.bold, color: isCorrect ? (isDark ? Colors.green.shade300 : Colors.green.shade800) : isUserWrong ? Colors.red.shade400 : (isDark ? const Color(0xFFCBD5E1) : Colors.black87), fontSize: 12)),
                                 Expanded(
                                   child: MathFormattedText(
                                     text: q.options[optIdx],
-                                    textStyle: TextStyle(fontSize: 12, color: isCorrect ? Colors.green.shade900 : Colors.black87),
+                                    textStyle: TextStyle(fontSize: 12, color: isCorrect ? (isDark ? Colors.green.shade200 : Colors.green.shade900) : isUserWrong ? (isDark ? const Color(0xFFFCA5A5) : Colors.red.shade900) : (isDark ? const Color(0xFFCBD5E1) : Colors.black87)),
                                   ),
                                 ),
                                 if (isCorrect) const Icon(Icons.check_circle_rounded, size: 15, color: Colors.green),
+                                if (isUserWrong) const Icon(Icons.close_rounded, size: 15, color: Colors.red),
                               ],
                             ),
                           );
@@ -528,9 +585,9 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                           width: double.infinity,
                           padding: const EdgeInsets.all(10),
                           decoration: BoxDecoration(
-                            color: const Color(0xFFFFF1F2),
+                            color: isDark ? const Color(0xFF331420) : const Color(0xFFFFF1F2),
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: const Color(0xFFFECDD3)),
+                            border: Border.all(color: isDark ? const Color(0xFF9F1239) : const Color(0xFFFECDD3)),
                           ),
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
@@ -541,7 +598,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   Expanded(
                                     child: Row(
                                       children: [
-                                        const Text('❌ Why Wrong?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: Color(0xFFBE123C))),
+                                        Text('❌ Why Wrong?', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 11.5, color: isDark ? const Color(0xFFFDA4AF) : const Color(0xFFBE123C))),
                                         if (hasSpecificChoice) ...[
                                           const SizedBox(width: 4),
                                           Expanded(
@@ -549,7 +606,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                               '(Selected: "$userSelectedOpt")',
                                               maxLines: 1,
                                               overflow: TextOverflow.ellipsis,
-                                              style: const TextStyle(fontSize: 10, fontStyle: FontStyle.italic, color: Colors.black54),
+                                              style: TextStyle(fontSize: 10, fontStyle: FontStyle.italic, color: isDark ? Colors.white54 : Colors.black54),
                                             ),
                                           ),
                                         ]
@@ -560,7 +617,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                   InkWell(
                                     onTap: (isWhyWrongLoading || whyWrongAiText != null) 
                                         ? null 
-                                        : () => _fetchWhyWrongAi(q, userSelectedOpt, savedTag, index),
+                                        : () => _fetchWhyWrongAi(q, userSelectedOpt, savedTag, qid),
                                     child: Container(
                                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
                                       decoration: BoxDecoration(
@@ -584,11 +641,11 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                               if (whyWrongAiText != null) ...[
                                 const SizedBox(height: 8),
-                                const Divider(height: 1, color: Color(0xFFFECDD3)),
+                                Divider(height: 1, color: isDark ? const Color(0xFF9F1239) : const Color(0xFFFECDD3)),
                                 const SizedBox(height: 6),
                                 MathFormattedText(
                                   text: whyWrongAiText,
-                                  textStyle: const TextStyle(fontSize: 11.5, color: Color(0xFF881337), height: 1.35),
+                                  textStyle: TextStyle(fontSize: 11.5, color: isDark ? const Color(0xFFFECDD3) : const Color(0xFF881337), height: 1.35),
                                 ),
                               ] else ...[
                                 const SizedBox(height: 6),
@@ -598,7 +655,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                       : savedTag == 'concept'
                                           ? '🔴 Tag selected: "Didn\'t Know". Tap "Analyze Trap ⚡" for a zero-level concept explanation.'
                                           : '👆 Pehle niche se tag select karein (🟡 50-50 Trap ya 🔴 Didn\'t Know), phir "Analyze Trap ⚡" dabaayein!',
-                                  style: const TextStyle(fontSize: 10.5, color: Color(0xFF9F1239), fontStyle: FontStyle.italic),
+                                  style: TextStyle(fontSize: 10.5, color: isDark ? const Color(0xFFFDA4AF) : const Color(0xFF9F1239), fontStyle: FontStyle.italic),
                                 ),
                               ]
                             ],
@@ -622,7 +679,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                     setState(() {
                                       qJson['errorTag'] = newTag;
                                     });
-                                    await UserStatsService.updateWrongQuestionTag(index, newTag);
+                                    await UserStatsService.updateWrongQuestionTagByText(qid, newTag);
                                   },
                                 ),
                                 const SizedBox(width: 6),
@@ -635,7 +692,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                                     setState(() {
                                       qJson['errorTag'] = newTag;
                                     });
-                                    await UserStatsService.updateWrongQuestionTag(index, newTag);
+                                    await UserStatsService.updateWrongQuestionTagByText(qid, newTag);
                                   },
                                 ),
                               ],
@@ -643,7 +700,7 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
 
                             if (q.explanation.isNotEmpty)
                               InkWell(
-                                onTap: () => setState(() => _isExplanationExpanded[index] = !isExpanded),
+                                onTap: () => setState(() => _isExplanationExpanded[qid] = !isExpanded),
                                 child: Padding(
                                   padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
                                   child: Text(
@@ -661,13 +718,13 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
                             width: double.infinity,
                             padding: const EdgeInsets.all(10),
                             decoration: BoxDecoration(
-                              color: const Color(0xFFEFF6FF),
+                              color: isDark ? const Color(0xFF172554) : const Color(0xFFEFF6FF),
                               borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: const Color(0xFFBFDBFE)),
+                              border: Border.all(color: isDark ? const Color(0xFF1E40AF) : const Color(0xFFBFDBFE)),
                             ),
                             child: MathFormattedText(
                               text: q.explanation,
-                              textStyle: const TextStyle(fontSize: 12, color: Color(0xFF1E3A8A), height: 1.35),
+                              textStyle: TextStyle(fontSize: 12, color: isDark ? const Color(0xFFBFDBFE) : const Color(0xFF1E3A8A), height: 1.35),
                             ),
                           ),
                         ]
@@ -683,23 +740,44 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
     );
   }
 
+  Widget _summaryBox(String emoji, String value, String label, bool isDark) {
+    return Expanded(
+      child: Container(
+        padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+        decoration: BoxDecoration(
+          color: isDark ? const Color(0xFF1E293B) : Colors.white,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
+        ),
+        child: Column(
+          children: [
+            Text('$emoji $value', style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.w900, color: isDark ? Colors.white : const Color(0xFF0F172A))),
+            const SizedBox(height: 2),
+            Text(label, maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.w700, color: isDark ? const Color(0xFF94A3B8) : Colors.grey)),
+          ],
+        ),
+      ),
+    );
+  }
+
   Widget _filterChip(String filterKey, String label) {
+    final bool isDark = widget.isDarkMode;
     bool isSelected = _selectedFilter == filterKey;
     return InkWell(
       onTap: () => setState(() => _selectedFilter = filterKey),
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
         decoration: BoxDecoration(
-          color: isSelected ? const Color(0xFF2563EB) : Colors.white,
+          color: isSelected ? const Color(0xFF2563EB) : (isDark ? const Color(0xFF1E293B) : Colors.white),
           borderRadius: BorderRadius.circular(16),
-          border: Border.all(color: isSelected ? const Color(0xFF2563EB) : Colors.grey.shade300),
+          border: Border.all(color: isSelected ? const Color(0xFF2563EB) : (isDark ? const Color(0xFF475569) : Colors.grey.shade300)),
         ),
         child: Text(
           label,
           style: TextStyle(
             fontSize: 11,
             fontWeight: FontWeight.bold,
-            color: isSelected ? Colors.white : Colors.black87,
+            color: isSelected ? Colors.white : (isDark ? Colors.white : Colors.black87),
           ),
         ),
       ),
@@ -717,16 +795,16 @@ class _WrongQuestionsScreenState extends State<WrongQuestionsScreen> {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         decoration: BoxDecoration(
-          color: isSelected ? color.withOpacity(0.15) : Colors.grey.shade100,
+          color: isSelected ? color.withOpacity(0.15) : (widget.isDarkMode ? const Color(0xFF0F172A) : Colors.grey.shade100),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: isSelected ? color : Colors.grey.shade300, width: isSelected ? 1.5 : 1),
+          border: Border.all(color: isSelected ? color : (widget.isDarkMode ? const Color(0xFF475569) : Colors.grey.shade300), width: isSelected ? 1.5 : 1),
         ),
         child: Text(
           label,
           style: TextStyle(
             fontSize: 10.5,
             fontWeight: FontWeight.bold,
-            color: isSelected ? color : Colors.grey.shade700,
+            color: isSelected ? color : (widget.isDarkMode ? const Color(0xFF94A3B8) : Colors.grey.shade700),
           ),
         ),
       ),
