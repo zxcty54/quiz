@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
@@ -13,8 +14,12 @@ class MasteryEvolutionCard extends StatefulWidget {
 }
 
 class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
-    with SingleTickerProviderStateMixin, WidgetsBindingObserver {
+    with
+        SingleTickerProviderStateMixin,
+        WidgetsBindingObserver,
+        AutomaticKeepAliveClientMixin {
   Map<String, dynamic>? _insightData;
+  String? _lastReportFingerprint;
   bool _isLoading = true;
   DateTime? _analyzedAt;
   bool _isTrapsExpanded = false;
@@ -112,6 +117,13 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
         ? DateTime.tryParse(res['analyzed_at'].toString())?.toLocal()
         : null;
     if (!mounted) return;
+
+    // Realtime kabhi-kabhi wahi purani report dobara bhej deta hai — data
+    // bilkul waisa hi ho to rebuild mat karo (be-wajah flicker rukta hai).
+    final String fingerprint = '${jsonEncode(report)}|${dt?.toIso8601String()}';
+    if (fingerprint == _lastReportFingerprint && _insightData != null) return;
+    _lastReportFingerprint = fingerprint;
+
     setState(() {
       _insightData = report;
       _analyzedAt = dt;
@@ -136,8 +148,15 @@ class _MasteryEvolutionCardState extends State<MasteryEvolutionCard>
     return '${dt.day} ${months[dt.month - 1]}, $hhmm';
   }
 
+  // Profile ki lambi list me scroll karke card screen se bahar jaye to bhi
+  // iska state zinda rahe — warna wapas aane par dobara loading + fetch hota
+  // tha aur card flicker/jhatka deta tha.
+  @override
+  bool get wantKeepAlive => true;
+
   @override
   Widget build(BuildContext context) {
+    super.build(context); // AutomaticKeepAliveClientMixin ke liye zaroori
     final isDark = widget.isDarkMode;
     final cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final borderColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
