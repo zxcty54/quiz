@@ -7,6 +7,12 @@ import '../models/learn_models.dart';
 import '../utils/learn_effects.dart';
 import '../widgets/learn_chat_widgets.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class LearnChatScreen extends StatefulWidget {
   final String? jsonUrl;
   final String? chapterTitle;
@@ -124,14 +130,18 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
 
     // 🚀 Robust Multi-CDN Fallback Order targeting content_base
     List<String> mirrorUrls = [
-      // 1. Direct Raw GitHub with Cache Buster (100% Guaranteed Source)
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/$encodedPath?t=$ts",
-      // 2. GitHack Cloudflare Dev Gateway
+      // 0. Cloudflare Worker (private content_base ka darwaza)
+      "$_contentProxyBase/$encodedPath",
+      // 1. GitHack Gateway
       "https://raw.githack.com/zxcty54/content_base/main/$encodedPath",
-      // 3. Statically CDN
+      // 2. Statically CDN
       "https://cdn.statically.io/gh/zxcty54/content_base/main/$encodedPath",
-      // 4. Fastly CDN
+      // 3. Fastly CDN
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
+      // 4. jsDelivr CDN
+      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
+      // 5. Direct Raw GitHub (aakhri — kuch ISP par block hota hai)
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/$encodedPath?t=$ts",
     ];
 
     for (String url in mirrorUrls) {
@@ -139,6 +149,7 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
         final response = await http.get(
           Uri.parse(url),
           headers: {
+            'X-App-Key': _contentAppKey,
             'Accept': 'application/json, text/plain, */*',
             'Cache-Control': 'no-cache, no-store, must-revalidate',
             'Pragma': 'no-cache',
