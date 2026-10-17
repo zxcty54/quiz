@@ -381,17 +381,41 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
   @override
   Widget build(BuildContext context) {
     if (_isLoadingConfig) {
-      // First paint after the splash. Pehle yahan plain white AppBar with sirf
-      // "MockTester" tha, jo splash ke baad achanak white flash jaisa lagta
-      // tha; ab loading screen bhi wahi branded bar use karti hai.
+      // Branded loading screen — splash ke MT logo ke baad safed khali screen
+      // nahi aayegi. Rang wahi Deep Royal Blue hai jo Welcome par tay hua tha.
       return Scaffold(
-        backgroundColor: _isDarkMode ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
-        appBar: AppBar(
-          backgroundColor: _isDarkMode ? const Color(0xFF1E293B) : Colors.white,
-          elevation: 0,
-          title: _brandAppBarTitle(),
+        body: Container(
+          width: double.infinity,
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [Color(0xFF172554), Color(0xFF1E40AF), Color(0xFF2563EB)],
+            ),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/data/icon/launch_logo.png',
+                width: 190,
+                fit: BoxFit.scaleDown,
+              ),
+              const SizedBox(height: 30),
+              const CircularProgressIndicator(color: Colors.white),
+              const SizedBox(height: 18),
+              const Text(
+                'Loading...',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  letterSpacing: 0.4,
+                ),
+              ),
+            ],
+          ),
         ),
-        body: _buildSkeletonLoading(),
       );
     }
 
