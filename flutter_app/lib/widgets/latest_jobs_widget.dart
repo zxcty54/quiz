@@ -1,8 +1,13 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
 
 class LatestJobsWidget extends StatefulWidget {
   final bool isDarkMode;
@@ -38,8 +43,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
   late AnimationController _pulseController;
   late Animation<double> _pulseAnimation;
 
-  static const String _cacheKey = 'cached_latest_sarkari_jobs_json';
-
   @override
   void initState() {
     super.initState();
@@ -52,7 +55,6 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
       CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
     );
 
-    _loadLocalCacheFirst();
     fetchLatestJobs();
   }
 
@@ -62,44 +64,24 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     super.dispose();
   }
 
-  // ⚡ 1. FAST OFFLINE LOCAL CACHE LOADER
-  Future<void> _loadLocalCacheFirst() async {
-    final prefs = await SharedPreferences.getInstance();
-    final cached = prefs.getString(_cacheKey);
-    if (cached != null && cached.isNotEmpty) {
-      try {
-        final decoded = jsonDecode(cached);
-        final list = _parseJobsList(decoded);
-        if (mounted && list.isNotEmpty) {
-          setState(() {
-            _allJobs = list;
-            _isLoading = false;
-          });
-        }
-      } catch (_) {}
-    }
-  }
-
   // ---------------------------------------------------------------------------
-  // 🚀 LIVE CLOUDFLARE MULTI-CDN FETCH
+  // LIVE JSON FETCH (Multi-endpoint fallback)
   // ---------------------------------------------------------------------------
   Future<void> fetchLatestJobs({bool refresh = false}) async {
     if (refresh) {
       if (mounted) setState(() => _isRefreshing = true);
-    } else if (_allJobs.isEmpty) {
+    } else {
       if (mounted) setState(() => _isLoading = true);
     }
 
-    final int ts = DateTime.now().millisecondsSinceEpoch;
-    const String relativePath = "sarkarijob.json";
+    final timestamp = DateTime.now().millisecondsSinceEpoch;
 
-    // ⚡ Cloudflare Statically Primary -> Fastly -> jsDelivr -> Raw GitHub
     final List<String> endpoints = [
-      "https://cdn.statically.io/gh/zxcty54/content_base/main/$relativePath?t=$ts",
-      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$relativePath?t=$ts",
-      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/$relativePath?t=$ts",
-      "https://raw.githack.com/zxcty54/content_base/main/$relativePath",
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/$relativePath?t=$ts",
+      '$_contentProxyBase/sarkarijob.json',
+      'https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/sarkarijob.json?t=$timestamp',
+      'https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/sarkarijob.json?t=$timestamp',
+      'https://raw.githack.com/zxcty54/content_base/main/sarkarijob.json?t=$timestamp',
+      'https://raw.githubusercontent.com/zxcty54/content_base/main/sarkarijob.json?t=$timestamp',
     ];
 
     for (final endpoint in endpoints) {
@@ -108,12 +90,12 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
             .get(
               Uri.parse(endpoint),
               headers: const {
+                'X-App-Key': _contentAppKey,
                 'Accept': 'application/json',
                 'Cache-Control': 'no-cache, no-store, must-revalidate',
-                'User-Agent': 'MockTesterApp-Flutter',
               },
             )
-            .timeout(const Duration(seconds: 4));
+            .timeout(const Duration(seconds: 5));
 
         if (response.statusCode != 200) continue;
 
@@ -129,46 +111,41 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
         if (body.startsWith('<')) continue;
 
         final decoded = jsonDecode(body);
-        final parsedJobs = _parseJobsList(decoded);
+        List<dynamic> rawJobs;
 
-        if (parsedJobs.isNotEmpty) {
-          final prefs = await SharedPreferences.getInstance();
-          await prefs.setString(_cacheKey, body);
-
-          if (!mounted) return;
-          setState(() {
-            _allJobs = parsedJobs;
-            _isLoading = false;
-            _isRefreshing = false;
-          });
-          return; // ✅ Cloudflare se hit milte hi turant return
+        if (decoded is Map && decoded['latest_jobs'] is List) {
+          rawJobs = decoded['latest_jobs'] as List;
+        } else if (decoded is List) {
+          rawJobs = decoded;
+        } else {
+          rawJobs = [];
         }
+
+        final parsedJobs = rawJobs
+            .whereType<Map>()
+            .map((job) => Map<String, dynamic>.from(job))
+            .toList();
+
+        if (!mounted) return;
+
+        setState(() {
+          _allJobs = parsedJobs;
+          _isLoading = false;
+          _isRefreshing = false;
+        });
+
+        return;
       } catch (_) {
         continue;
       }
     }
 
     if (!mounted) return;
+
     setState(() {
       _isLoading = false;
       _isRefreshing = false;
     });
-  }
-
-  List<Map<String, dynamic>> _parseJobsList(dynamic decoded) {
-    List<dynamic> rawJobs;
-    if (decoded is Map && decoded['latest_jobs'] is List) {
-      rawJobs = decoded['latest_jobs'] as List;
-    } else if (decoded is List) {
-      rawJobs = decoded;
-    } else {
-      rawJobs = [];
-    }
-
-    return rawJobs
-        .whereType<Map>()
-        .map((job) => Map<String, dynamic>.from(job))
-        .toList();
   }
 
   // ---------------------------------------------------------------------------
@@ -252,7 +229,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
         'feb': 2, 'february': 2,
         'mar': 3, 'march': 3,
         'apr': 4, 'april': 4,
-        'may': 5, 
+        'may': 5,
         'jun': 6, 'june': 6,
         'jul': 7, 'july': 7,
         'aug': 8, 'august': 8,
@@ -306,6 +283,9 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     return days != null && days < 0;
   }
 
+  // ---------------------------------------------------------------------------
+  // URL OPEN HANDLER
+  // ---------------------------------------------------------------------------
   Future<void> _openLink(String link) async {
     final value = link.trim();
     if (value.isEmpty) return;
@@ -347,11 +327,10 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     final Color cardBg = isDark ? const Color(0xFF1E293B) : Colors.white;
     final Color borderColor = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
 
-    if (_isLoading) return _loadingView(cardBg);
+    if (_isLoading) return _loadingView(isDark ? const Color(0xFF1E293B) : Colors.white);
     if (_allJobs.isEmpty) return const SizedBox.shrink();
 
-    // 🎯 HOME VIEW MEIN MAX 3 CARDS DIKHAYEIN (Taaki layout clean rahe)
-    final displayedJobs = _filteredJobs.take(3).toList();
+    final displayedJobs = _filteredJobs;
 
     return Container(
       margin: const EdgeInsets.only(bottom: 16),
@@ -384,7 +363,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
 
           const SizedBox(height: 12),
 
-          // Active Jobs List (Clean Compact 3 Items)
+          // Active Jobs List
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 14),
             child: Column(
@@ -401,7 +380,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                       isCompact: true,
                     ),
                   ),
-                const SizedBox(height: 6),
+                const SizedBox(height: 4),
                 _buildViewAllButton(isDark),
                 const SizedBox(height: 14),
               ],
@@ -605,6 +584,9 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     );
   }
 
+  // ---------------------------------------------------------------------------
+  // POLISHED JOB CARD (Fee Overflow Fixed)
+  // ---------------------------------------------------------------------------
   Widget _buildJobCard(
     Map<String, dynamic> job,
     Color textColor,
@@ -653,6 +635,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                // Top Tag Row
                 Row(
                   children: [
                     _badge(bihar ? '🏛️ BIHAR' : '🇮🇳 CENTRAL', bihar ? orange : primaryBlue),
@@ -663,7 +646,10 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                       _badge('✨ NEW', green, isSolid: true),
                   ],
                 ),
+
                 const SizedBox(height: 8),
+
+                // Job Title
                 Text(
                   title,
                   maxLines: 2,
@@ -675,6 +661,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                     height: 1.25,
                   ),
                 ),
+
                 if (organization.isNotEmpty) ...[
                   const SizedBox(height: 2),
                   Text(
@@ -684,7 +671,10 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                     style: TextStyle(color: subText, fontSize: 11, fontWeight: FontWeight.w500),
                   ),
                 ],
+
                 const SizedBox(height: 9),
+
+                // Vacancy & Qualification Row
                 Row(
                   children: [
                     if (vacancies.isNotEmpty)
@@ -710,6 +700,8 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                       ),
                   ],
                 ),
+
+                // ✅ APPLICATION FEE SECTION (Wrapped in Expanded container so it never cuts)
                 if (!isCompact && fee.isNotEmpty) ...[
                   const SizedBox(height: 8),
                   Container(
@@ -762,7 +754,10 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                     ),
                   ),
                 ],
+
                 const SizedBox(height: 10),
+
+                // Bottom Date + Action Button
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -784,6 +779,8 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
                         ),
                       ],
                     ),
+
+                    // Clean View Pill
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                       decoration: BoxDecoration(
