@@ -1,0 +1,534 @@
+[
+  {
+    "p_id": "mwc_1",
+    "qe": "20 men can complete a piece of work in 40 days, and 40 women can do the same work in 60 days. If 10 men and 20 women work together, then in how many days will the work be completed?",
+    "qh": "20 पुरुष एक कार्य को 40 दिनों में पूरा कर सकते हैं, और 40 महिलाएं उसी कार्य को 60 दिनों में कर सकती हैं। यदि 10 पुरुष और 20 महिलाएं एक साथ कार्य करते हैं, तो कार्य कितने दिनों में पूरा होगा?",
+    "oe": [
+      "40",
+      "50",
+      "60",
+      "48"
+    ],
+    "oh": [
+      "40",
+      "50",
+      "60",
+      "48"
+    ],
+    "a": 3,
+    "e": "Method 1 (Total Work Equating Method):\nStep 1: कुल कार्य को बराबर करने पर:\n$$20M $\\times$ 40 = 40W $\\times$ 60$$\n$$800M = 2400W \\implies 1M = 3W$$\n(अर्थात 1 पुरुष की कार्यक्षमता = 3 महिलाओं की कार्यक्षमता)\nStep 2: कुल कार्य (महिलाओं के पदों में) = $40 \\times 60 = 2400$ महिला-दिन।\nStep 3: (10 पुरुष + 20 महिलाएं) को महिलाओं में बदलें:\n$$10M + 20W = 10(3W) + 20W = 30W + 20W = 50W$$\nStep 4: कार्य समाप्त करने में लगा समय = $\\frac{2400}{50} = 48$ दिन।\nअतः सही विकल्प  48 है।\n\nMethod 2 (Efficiency Units Method):\nStep 1: $M : W = 3 : 1$। माना पुरुष की दक्षता = 3 इकाइयाँ/दिन और महिला की दक्षता = 1 इकाई/दिन।\nStep 2: कुल कार्य = $20 \\times 3 \\times 40 = 2400$ इकाइयाँ।\nStep 3: समूह की दैनिक दक्षता = $10(3) + 20(1) = 30 + 20 = 50$ इकाइयाँ/दिन।\nStep 4: समय = $2400 / 50 = 48$ दिन।\nअतः सही उत्तर '48' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_2",
+    "qe": "A group of 5 men or 12 women can complete a task in 70 days. Find the time taken by 5 men and 12 women to complete the task.",
+    "qh": "5 पुरुषों या 12 महिलाओं का एक समूह किसी कार्य को 70 दिनों में पूरा कर सकता है। उसी कार्य को पूरा करने में 5 पुरुषों और 12 महिलाओं द्वारा लिया गया समय ज्ञात कीजिए।",
+    "oe": [
+      "40 days",
+      "35 days",
+      "30 days",
+      "48 days"
+    ],
+    "oh": [
+      "40 days",
+      "35 days",
+      "30 days",
+      "48 days"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Substitution Method):\nStep 1: दिया गया है कि 5 पुरुष = 12 महिलाएं।\nStep 2: अतः (5 पुरुष + 12 महिलाएं) = 5 पुरुष + 5 पुरुष = 10 पुरुष।\nStep 3: 5 पुरुष कार्य को 70 दिनों में करते हैं, तो 10 पुरुषों द्वारा लिया गया समय:\n$$D_2 = $\\frac{5\\times70}{10}$ = 35 \\text{ दिन}$$\nअतः सही विकल्प  35 days है।\n\nMethod 2 (Direct 'And/Or' Formula Method):\nStep 1: समय = $\\frac{\\text{दिन}}{\\frac{M_2}{M_1} + \\frac{W_2}{W_1}} = \\frac{70}{\\frac{5}{5} + \\frac{12}{12}} = \\frac{70}{1 + 1} = \\frac{70}{2} = 35$ दिन।\nअतः सही उत्तर '35 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_3",
+    "qe": "6 women and 4 men can complete a work in 10 days, while 4 women and 5 men complete it in 10 days. In how many days will 8 women complete it?",
+    "qh": "6 महिलाएं और 4 पुरुष एक कार्य को 10 दिनों में पूरा कर सकते हैं, जबकि 4 महिलाएं और 5 पुरुष इसे 10 दिनों में पूरा करते हैं। 8 महिलाएं इसे कितने दिनों में पूरा करेंगी?",
+    "oe": [
+      "12 days",
+      "14 days",
+      "17.5 days",
+      "15 days"
+    ],
+    "oh": [
+      "12 days",
+      "14 days",
+      "17.5 days",
+      "15 days"
+    ],
+    "a": 2,
+    "e": "Method 1 (Equating Work Method):\nStep 1: दोनों समूहों द्वारा लिया गया समय समान (10 दिन) है:\n$$(6W + 4M) $\\times$ 10 = (4W + 5M) $\\times$ 10$$\n$$6W + 4M = 4W + 5M$$\n$$6W - 4W = 5M - 4M \\implies 2W = 1M$$\n(1 पुरुष की कार्यक्षमता = 2 महिलाओं की कार्यक्षमता)\nStep 2: कुल कार्य (महिलाओं के पदों में) निकालें:\nकुल कार्य = $[6W + 4(2W)] \\times 10 = (6W + 8W) \\times 10 = 14W \\times 10 = 140$ महिला-दिन।\nStep 3: 8 महिलाओं द्वारा लिया गया समय = $\\frac{140}{8} = \\frac{35}{2} = 17.5$ दिन।\nअतः सही विकल्प  17.5 days है।\n\nMethod 2 (Unit Efficiency Method):\nStep 1: $M = 2$, $W = 1$। कुल कार्य = $(6 \\times 1 + 4 \\times 2) \\times 10 = 14 \\times 10 = 140$ इकाइयाँ।\nStep 2: 8 महिलाओं की दैनिक दक्षता = $8 \\times 1 = 8$ इकाइयाँ/दिन।\nStep 3: समय = $140 / 8 = 17.5$ दिन।\nअतः सही उत्तर '17.5 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_4",
+    "qe": "Given, 6 men and 8 boys can complete the task in 10 days, and 26 men and 48 boys can finish it in just 2 days, how long will it take for 15 men and 20 boys to do the same work?",
+    "qh": "दिया गया है कि 6 पुरुष और 8 लड़के एक कार्य को 10 दिनों में पूरा कर सकते हैं, और 26 पुरुष और 48 लड़के इसे केवल 2 दिनों में समाप्त कर सकते हैं, तो 15 पुरुषों और 20 लड़कों को उसी कार्य को करने में कितना समय लगेगा?",
+    "oe": [
+      "4 days",
+      "5 days",
+      "18 days",
+      "7 days"
+    ],
+    "oh": [
+      "4 days",
+      "5 days",
+      "18 days",
+      "7 days"
+    ],
+    "a": 0,
+    "e": "Method 1 (Equating Work Equation Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$(6M + 8B) $\\times$ 10 = (26M + 48B) $\\times$ 2$$\n$$60M + 80B = 52M + 96B$$\n$$60M - 52M = 96B - 80B$$\n$$8M = 16B \\implies 1M = 2B$$\nStep 2: कुल कार्य (लड़कों के पदों में):\nकुल कार्य = $[6(2B) + 8B] \\times 10 = (12B + 8B) \\times 10 = 20B \\times 10 = 200$ लड़का-दिन।\nStep 3: (15 पुरुष + 20 लड़के) को लड़कों में बदलें:\n$$15M + 20B = 15(2B) + 20B = 30B + 20B = 50B$$\nStep 4: आवश्यक समय = $\\frac{200}{50} = 4$ दिन।\nअतः सही विकल्प  4 days है।\n\nMethod 2 (Proportional Multiplier Method):\nStep 1: ध्यान दें कि $(15M + 20B) = 2.5 \\times (6M + 8B)$।\nStep 2: श्रमिकों की क्षमता 2.5 गुना होने पर समय $2.5$ गुना कम लगेगा:\nसमय = $\\frac{10}{2.5} = 4$ दिन।\nअतः सही उत्तर '4 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_5",
+    "qe": "10 women can do a work in 6 days and 6 men can do the same work in 5 days. If all these men and women work together, then how many days will they take to finish this work?",
+    "qh": "10 महिलाएं एक कार्य को 6 दिनों में कर सकती हैं और 6 पुरुष उसी कार्य को 5 दिनों में कर सकते हैं। यदि ये सभी पुरुष और महिलाएं एक साथ कार्य करते हैं, तो वे इस कार्य को समाप्त करने में कितने दिन लेंगे?",
+    "oe": [
+      "$2\\frac{8}{11}$",
+      "$4\\frac{6}{11}$",
+      "$1\\frac{2}{11}$",
+      "$3\\frac{4}{11}$"
+    ],
+    "oh": [
+      "$2\\frac{8}{11}$",
+      "$4\\frac{6}{11}$",
+      "$1\\frac{2}{11}$",
+      "$3\\frac{4}{11}$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Total Work Equating Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$10W $\\times$ 6 = 6M $\\times$ 5$$\n$$60W = 30M \\implies 1M = 2W$$\nStep 2: कुल कार्य = $60$ महिला-दिन।\nStep 3: सभी 10 महिलाओं और 6 पुरुषों की संयुक्त क्षमता:\n$$10W + 6M = 10W + 6(2W) = 10W + 12W = 22W$$\nStep 4: लिया गया समय = $\\frac{60}{22} = \\frac{30}{11} = 2\\frac{8}{11}$ दिन।\nअतः सही विकल्प  $2\\frac{8}{11}$ है।\n\nMethod 2 (Daily Work Fraction Method):\nStep 1: 10 महिलाओं की 1 दिन की दर = $\\frac{1}{6}$, 6 पुरुषों की 1 दिन की दर = $\\frac{1}{5}$।\nStep 2: दोनों की संयुक्त दैनिक दर = $\\frac{1}{6} + \\frac{1}{5} = \\frac{11}{30}$ कार्य/दिन।\nStep 3: कार्य पूरा करने में लगा समय = $\\frac{30}{11} = 2\\frac{8}{11}$ दिन।\nअतः सही उत्तर '$2\\frac{8}{11}$' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_6",
+    "qe": "If 4 women and 6 girls can do a piece of work in 12 days, while 24 women and 46 girls can do the same in 2 days, in how much time will 15 women and 20 girls do the same type of work?",
+    "qh": "यदि 4 महिलाएं और 6 लड़कियां एक कार्य को 12 दिनों में कर सकती हैं, जबकि 24 महिलाएं और 46 लड़कियां उसी कार्य को 2 दिनों में कर सकती हैं, तो 15 महिलाएं और 20 लड़कियां उसी प्रकार के कार्य को कितने समय में करेंगी?",
+    "oe": [
+      "5 days",
+      "3 days 12 hours",
+      "4 days 2 hours",
+      "3 days 4 hr 48 min"
+    ],
+    "oh": [
+      "5 days",
+      "3 days 12 hours",
+      "4 days 2 hours",
+      "3 days 4 hr 48 min"
+    ],
+    "a": 3,
+    "e": "Method 1 (Efficiency Equating Method):\nStep 1: दोनों स्थितियों में कुल कार्य बराबर करने पर:\n$$(4W + 6G) $\\times$ 12 = (24W + 46G) $\\times$ 2$$\n$$48W + 72G = 48W + 92G$$\nStep 2: दोनों पक्षों से $48W$ घटाने पर:\n$$72G = 92G \\implies 20G = 0 \\implies G = 0$$\n(इसका अर्थ है कि इस प्रश्न के दिए गए गणितीय आंकड़ों में लड़कियों का प्रभावी योगदान शून्य है)।\nStep 3: $G = 0$ रखने पर कुल कार्य = $4W \\times 12 = 48W$ महिला-दिन।\nStep 4: 15 महिलाओं और 20 लड़कियों की संयुक्त दर = $15W + 20(0) = 15W$ प्रति दिन।\nStep 5: अभीष्ट समय = $\\frac{48W}{15W} = \\frac{48}{15} = 3.2$ दिन = $3\\frac{1}{5}$ दिन।\nStep 6: दशमलव/भिन्न को घंटों और मिनटों में बदलने पर:\n- $0.2 \\text{ दिन} = 0.2 \\times 24 = 4.8 \\text{ घंटे}$\n- $0.8 \\text{ घंटा} = 0.8 \\times 60 = 48 \\text{ मिनट}$\nअतः कुल समय = 3 दिन 4 घंटे 48 मिनट।\nअतः सही विकल्प  3 days 4 hr 48 min है।\n\nMethod 2 (Direct Woman-Day Observation):\nStep 1: स्थिति 1 में महिला-दिन = $4 \\times 12 = 48$ महिला-दिन।\nस्थिति 2 में महिला-दिन = $24 \\times 2 = 48$ महिला-दिन।\nStep 2: चूँकि केवल महिलाओं के दिन ही कुल कार्य को पूरी तरह संतुष्ट कर रहे हैं, अतः 15 महिलाओं द्वारा समय = $48 / 15 = 3.2$ दिन = 3 दिन 4 घंटे 48 मिनट।\nअतः सही उत्तर '3 days 4 hr 48 min' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_7",
+    "qe": "12 men can do a work is 8 days while 4 boys can do it in 40 days. In how many days 9 boys and 3 men together will complete the same work ?",
+    "qh": "12 पुरुष एक कार्य को 8 दिनों में कर सकते हैं जबकि 4 लड़के इसे 40 दिनों में कर सकते हैं। 9 लड़के और 3 पुरुष मिलकर उसी कार्य को कितने दिनों में पूरा करेंगे?",
+    "oe": [
+      "10 days",
+      "$\\frac{280}{13}$ days",
+      "$\\frac{80}{7}$ days",
+      "$\\frac{260}{17}$ days"
+    ],
+    "oh": [
+      "10 days",
+      "$\\frac{280}{13}$ days",
+      "$\\frac{80}{7}$ days",
+      "$\\frac{260}{17}$ days"
+    ],
+    "a": 2,
+    "e": "Method 1 (Equating Work Method):\nStep 1: $12M \\times 8 = 4B \\times 40$\n$$96M = 160B \\implies 3M = 5B \\implies 1M = $\\frac{5}{3}$B$$\nStep 2: कुल कार्य (लड़कों के पदों में) = $4B \\times 40 = 160$ लड़का-दिन।\nStep 3: (9 लड़के + 3 पुरुष) को लड़कों में बदलें:\n$$9B + 3M = 9B + 5B = 14B$$\nStep 4: कार्य समाप्त करने में लगा समय = $\\frac{160}{14} = \\frac{80}{7}$ दिन।\nअतः सही विकल्प  80/7 days है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल कार्य = $\\text{LCM}(96, 160) = 480$ इकाइयाँ।\n- 1 पुरुष की दक्षता = $480 / 96 = 5$ इकाइयाँ/दिन\n- 1 लड़के की दक्षता = $480 / 160 = 3$ इकाइयाँ/दिन\nStep 2: $(3M + 9B)$ की कुल दैनिक दक्षता = $3(5) + 9(3) = 15 + 27 = 42$ इकाइयाँ/दिन।\nStep 3: समय = $\\frac{480}{42} = \\frac{80}{7}$ दिन।\nअतः सही उत्तर '$\\frac{80}{7}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_8",
+    "qe": "4 men and 7 women can do a work in 8 days. 7 men and 4 women can do the same work in 5 days. Find the number of days in which 8 women can finish the work ?",
+    "qh": "4 पुरुष और 7 महिलाएं एक कार्य को 8 दिनों में कर सकते हैं। 7 पुरुष और 4 महिलाएं उसी कार्य को 5 दिनों में कर सकते हैं। 8 महिलाएं उस कार्य को कितने दिनों में समाप्त कर सकती हैं?",
+    "oe": [
+      "60 days",
+      "55 days",
+      "40 days",
+      "45 days"
+    ],
+    "oh": [
+      "60 days",
+      "55 days",
+      "40 days",
+      "45 days"
+    ],
+    "a": 1,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$(4M + 7W) $\\times$ 8 = (7M + 4W) $\\times$ 5$$\n$$32M + 56W = 35M + 20W$$\n$$35M - 32M = 56W - 20W$$\n$$3M = 36W \\implies 1M = 12W$$\nStep 2: कुल कार्य (महिलाओं के पदों में) निकालें:\nकुल कार्य = $[4(12W) + 7W] \\times 8 = (48W + 7W) \\times 8 = 55W \\times 8 = 440$ महिला-दिन।\nStep 3: 8 महिलाओं द्वारा लिया गया समय = $\\frac{440}{8} = 55$ दिन।\nअतः सही विकल्प  55 days है।\n\nMethod 2 (Efficiency Units Method):\nStep 1: $M = 12$, $W = 1$। कुल कार्य = $(4 \\times 12 + 7 \\times 1) \\times 8 = 55 \\times 8 = 440$ इकाइयाँ।\nStep 2: 8 महिलाओं की दैनिक दक्षता = $8 \\times 1 = 8$ इकाइयाँ/दिन।\nStep 3: समय = $440 / 8 = 55$ दिन।\nअतः सही उत्तर '55 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_9",
+    "qe": "If 6 women can complete a work in 3 days, and 9 girls can complete the same work in 2 days, then find the time taken to complete the same work by 8 women and 6 girls?",
+    "qh": "यदि 6 महिलाएं एक कार्य को 3 दिनों में पूरा कर सकती हैं, और 9 लड़कियां उसी कार्य को 2 दिनों में पूरा कर सकती हैं, तो 8 महिलाओं और 6 लड़कियों द्वारा उसी कार्य को पूरा करने में लिया गया समय ज्ञात कीजिए?",
+    "oe": [
+      "3 days",
+      "4 days",
+      "6 days",
+      "$\\frac{9}{7}$ days"
+    ],
+    "oh": [
+      "3 days",
+      "4 days",
+      "6 days",
+      "$\\frac{9}{7}$ days"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equating Total Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$6W $\\times$ 3 = 9G $\\times$ 2$$\n$$18W = 18G \\implies 1W = 1G$$\n(अर्थात 1 महिला और 1 लड़की की कार्यक्षमता बिल्कुल समान है)\nStep 2: कुल कार्य = $18$ महिला-दिन।\nStep 3: (8 महिलाएं + 6 लड़कियां) = $8W + 6W = 14W$।\nStep 4: लिया गया समय = $\\frac{18}{14} = \\frac{9}{7}$ दिन।\nअतः सही विकल्प  9/7 days है।\n\nMethod 2 (Fractional Work Rate Method):\nStep 1: 1 महिला की दर = $\\frac{1}{18}$, 1 लड़की की दर = $\\frac{1}{18}$।\nStep 2: $(8W + 6G)$ की संयुक्त दैनिक दर = $8 \\times \\frac{1}{18} + 6 \\times \\frac{1}{18} = \\frac{14}{18} = \\frac{7}{9}$ कार्य/दिन।\nStep 3: अभीष्ट समय = $\\frac{9}{7}$ दिन।\nअतः सही उत्तर '$\\frac{9}{7}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_10",
+    "qe": "8 men and 12 women finish a job in 4 days. While 6 men and 14 women in 5 days. In how many days will 20 women finish the job?",
+    "qh": "8 पुरुष और 12 महिलाएं एक कार्य को 4 दिनों में समाप्त करते हैं। जबकि 6 पुरुष और 14 महिलाएं इसे 5 दिनों में समाप्त करते हैं। 20 महिलाएं उस कार्य को कितने दिनों में समाप्त करेंगी?",
+    "oe": [
+      "10",
+      "20",
+      "30",
+      "15"
+    ],
+    "oh": [
+      "10",
+      "20",
+      "30",
+      "15"
+    ],
+    "a": 1,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$(8M + 12W) $\\times$ 4 = (6M + 14W) $\\times$ 5$$\n$$32M + 48W = 30M + 70W$$\n$$32M - 30M = 70W - 48W$$\n$$2M = 22W \\implies 1M = 11W$$\nStep 2: कुल कार्य (महिलाओं के पदों में) निकालें:\nकुल कार्य = $[8(11W) + 12W] \\times 4 = (88W + 12W) \\times 4 = 100W \\times 4 = 400$ महिला-दिन।\nStep 3: 20 महिलाओं द्वारा लिया गया समय = $\\frac{400}{20} = 20$ दिन।\nअतः सही विकल्प  20 है।\n\nMethod 2 (Units Method):\nStep 1: $M = 11$, $W = 1$। कुल कार्य = $(8 \\times 11 + 12 \\times 1) \\times 4 = 100 \\times 4 = 400$ इकाइयाँ।\nStep 2: 20 महिलाओं की दैनिक दक्षता = $20 \\times 1 = 20$ इकाइयाँ/दिन।\nStep 3: समय = $400 / 20 = 20$ दिन।\nअतः सही उत्तर '20' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_11",
+    "qe": "Sixteen men can complete a work in 8 days. Eight men and nine women working together can complete the same work in 10 days. In how many days will 20 women complete this work?",
+    "qh": "सोलह पुरुष एक कार्य को 8 दिनों में पूरा कर सकते हैं। आठ पुरुष और नौ महिलाएं मिलकर उसी कार्य को 10 दिनों में पूरा कर सकते हैं। 20 महिलाएं इस कार्य को कितने दिनों में पूरा करेंगी?",
+    "oe": [
+      "13",
+      "12",
+      "9",
+      "11"
+    ],
+    "oh": [
+      "13",
+      "12",
+      "9",
+      "11"
+    ],
+    "a": 1,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$16M $\\times$ 8 = (8M + 9W) $\\times$ 10$$\n$$128M = 80M + 90W$$\n$$128M - 80M = 90W \\implies 48M = 90W \\implies 8M = 15W$$\nStep 2: कुल कार्य को महिलाओं के पदों में बदलें:\nकुल कार्य = $16M \\times 8 = 2 \\times (8M) \\times 8 = 2 \\times 15W \\times 8 = 240$ महिला-दिन।\nStep 3: 20 महिलाओं द्वारा कार्य पूरा करने में लगा समय = $\\frac{240}{20} = 12$ दिन।\nअतः सही विकल्प  12 है।\n\nMethod 2 (Efficiency Ratio Method):\nStep 1: $M / W = 15 / 8$। कुल कार्य = $16 \\times 15 \\times 8 = 1920$ इकाइयाँ।\nStep 2: 20 महिलाओं की कुल दक्षता = $20 \\times 8 = 160$ इकाइयाँ/दिन।\nStep 3: समय = $\\frac{1920}{160} = 12$ दिन।\nअतः सही उत्तर '12' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_12",
+    "qe": "3 men can finish a work in 10 days, 4 women can finish it in 12 days and 10 qualified workers can finish it in 6 days. In how many days is the work finished by 4 men, 4 women and 4 qualified workers, working together every day?",
+    "qh": "3 पुरुष एक कार्य को 10 दिनों में समाप्त कर सकते हैं, 4 महिलाएं इसे 12 दिनों में समाप्त कर सकती हैं और 10 योग्य श्रमिक इसे 6 दिनों में समाप्त कर सकते हैं। प्रतिदिन एक साथ कार्य करते हुए 4 पुरुषों, 4 महिलाओं और 4 योग्य श्रमिकों द्वारा कार्य कितने दिनों में समाप्त होगा?",
+    "oe": [
+      "$\\frac{30}{19}$",
+      "$\\frac{45}{17}$",
+      "$\\frac{60}{19}$",
+      "$\\frac{60}{17}$"
+    ],
+    "oh": [
+      "$\\frac{30}{19}$",
+      "$\\frac{45}{17}$",
+      "$\\frac{60}{19}$",
+      "$\\frac{60}{17}$"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल प्रयास की गणना:\n- 3 पुरुष $\\times$ 10 दिन = 30 पुरुष-दिन\n- 4 महिलाएं $\\times$ 12 दिन = 48 महिला-दिन\n- 10 योग्य श्रमिक $\\times$ 6 दिन = 60 श्रमिक-दिन\nStep 2: कुल कार्य = $\\text{LCM}(30, 48, 60) = 240$ इकाइयाँ।\nStep 3: 1 व्यक्ति की प्रतिदिन की कार्यक्षमता:\n- 1 पुरुष की दक्षता = $240 / 30 = 8$ इकाइयाँ/दिन\n- 1 महिला की दक्षता = $240 / 48 = 5$ इकाइयाँ/दिन\n- 1 योग्य श्रमिक की दक्षता = $240 / 60 = 4$ इकाइयाँ/दिन\nStep 4: (4 पुरुष + 4 महिलाएं + 4 योग्य श्रमिक) की कुल संयुक्त दक्षता:\nसंयुक्त दक्षता = $4(8 + 5 + 4) = 4 \\times 17 = 68$ इकाइयाँ/दिन।\nStep 5: लिया गया समय = $\\frac{240}{68} = \\frac{60}{17}$ दिन।\nअतः सही विकल्प  60/17 है।\n\nMethod 2 (Fraction Rate Method):\nStep 1: 1 पुरुष = 1/30, 1 महिला = 1/48, 1 श्रमिक = 1/60।\nStep 2: $4M + 4W + 4Q = 4(1/30 + 1/48 + 1/60) = 4(8 + 5 + 4)/240 = 4(17)/240 = 17 / 60$ कार्य/दिन।\nStep 3: समय = $\\frac{60}{17}$ दिन।\nअतः सही उत्तर '$\\frac{60}{17}$' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_13",
+    "qe": "4 men and 8 women complete a job in 10 days and 5 men and 24 women complete the same work in 4 days. In how many days will 1 man and 1 woman complete the same work?",
+    "qh": "4 पुरुष और 8 महिलाएं एक कार्य को 10 दिनों में पूरा करते हैं और 5 पुरुष और 24 महिलाएं उसी कार्य को 4 दिनों में पूरा करते हैं। 1 पुरुष और 1 महिला उसी कार्य को कितने दिनों में पूरा करेंगे?",
+    "oe": [
+      "$63\\frac{1}{3}$",
+      "$69\\frac{7}{9}$",
+      "$67\\frac{1}{3}$",
+      "$62\\frac{2}{9}$"
+    ],
+    "oh": [
+      "$63\\frac{1}{3}$",
+      "$69\\frac{7}{9}$",
+      "$67\\frac{1}{3}$",
+      "$62\\frac{2}{9}$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$(4M + 8W) $\\times$ 10 = (5M + 24W) $\\times$ 4$$\n$$40M + 80W = 20M + 96W$$\n$$40M - 20M = 96W - 80W$$\n$$20M = 16W \\implies 5M = 4W \\implies 1M = 0.8W$$\nStep 2: कुल कार्य (महिलाओं के पदों में) निकालें:\nकुल कार्य = $[4(0.8W) + 8W] \\times 10 = (3.2W + 8W) \\times 10 = 11.2W \\times 10 = 112$ महिला-दिन।\nStep 3: (1 पुरुष + 1 महिला) की कुल कार्यक्षमता:\n$$1M + 1W = 0.8W + 1W = 1.8W = $\\frac{9}{5}$W$$\nStep 4: लिया गया समय = $\\frac{112}{9/5} = \\frac{112 \\times 5}{9} = \\frac{560}{9} = 62\\frac{2}{9}$ दिन।\nअतः सही विकल्प  62 2/9 है।\n\nMethod 2 (Units Method):\nStep 1: $M = 4$, $W = 5$। कुल कार्य = $(4 \\times 4 + 8 \\times 5) \\times 10 = 56 \\times 10 = 560$ इकाइयाँ।\nStep 2: $(1M + 1W)$ की दैनिक दक्षता = $4 + 5 = 9$ इकाइयाँ/दिन।\nStep 3: समय = $\\frac{560}{9} = 62\\frac{2}{9}$ दिन।\nअतः सही उत्तर '$62\\frac{2}{9}$' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_14",
+    "qe": "15 men and 21 women, working together, can do a job in 56 days, while 12 men and 24 women, working together, can do the same job in 64 days. In how many days can the same job be done by 18 men and 24 women, working together?",
+    "qh": "15 पुरुष और 21 महिलाएं, एक साथ कार्य करते हुए, एक कार्य को 56 दिनों में कर सकते हैं, जबकि 12 पुरुष और 24 महिलाएं, एक साथ कार्य करते हुए, उसी कार्य को 64 दिनों में कर सकते हैं। 18 पुरुषों और 24 महिलाओं द्वारा एक साथ कार्य करते हुए उसी कार्य को कितने दिनों में पूरा किया जा सकता है?",
+    "oe": [
+      "$47\\frac{6}{19}$",
+      "$47\\frac{5}{19}$",
+      "$47\\frac{9}{19}$",
+      "$47\\frac{3}{19}$"
+    ],
+    "oh": [
+      "$47\\frac{6}{19}$",
+      "$47\\frac{5}{19}$",
+      "$47\\frac{9}{19}$",
+      "$47\\frac{3}{19}$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$(15M + 21W) $\\times$ 56 = (12M + 24W) $\\times$ 64$$\nदोनों पक्षों को 8 से विभाजित करने पर:\n$$(15M + 21W) $\\times$ 7 = (12M + 24W) $\\times$ 8$$\n$$105M + 147W = 96M + 192W$$\n$$105M - 96M = 192W - 147W$$\n$$9M = 45W \\implies 1M = 5W$$\nStep 2: कुल कार्य (महिलाओं के पदों में) निकालें:\nकुल कार्य = $[15(5W) + 21W] \\times 56 = (75W + 21W) \\times 56 = 96W \\times 56 = 5376W$।\nStep 3: (18 पुरुष + 24 महिलाएं) की कुल दक्षता:\n$$18M + 24W = 18(5W) + 24W = 90W + 24W = 114W$$\nStep 4: कार्य समाप्त करने में लगा समय:\n$$\\text{समय} = $\\frac{5376W}{114W}$ = $\\frac{5376}{114}$ = $\\frac{896}{19}$ \\text{ दिन}$$\nStep 5: मिश्रित भिन्न में बदलने पर:\n$$$\\frac{896}{19}$ = 47$\\frac{3}{19}$ \\text{ दिन}$$\nअतः सही विकल्प  47 3/19 है।\n\nMethod 2 (Units Method):\nStep 1: $M = 5$, $W = 1$।\nकुल कार्य = $(15 \\times 5 + 21 \\times 1) \\times 56 = 96 \\times 56 = 5376$ इकाइयाँ।\nStep 2: लक्ष्य समूह की दक्षता = $18(5) + 24(1) = 90 + 24 = 114$ इकाइयाँ/दिन।\nStep 3: समय = $\\frac{5376}{114} = \\frac{896}{19} = 47\\frac{3}{19}$ दिन।\nअतः सही उत्तर '$47\\frac{3}{19}$' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_15",
+    "qe": "A man and a woman can finish a work together in half the time taken by a woman and a boy together. A boy can finish the work alone in 20 days and 2 women together can finish it in 30 days. In how many days will the work be finished by 4 men?",
+    "qh": "एक पुरुष और एक महिला मिलकर एक कार्य को, एक महिला और एक लड़के द्वारा मिलकर लिए गए समय के आधे समय में पूरा कर सकते हैं। एक लड़का अकेले कार्य को 20 दिनों में पूरा कर सकता है और 2 महिलाएं मिलकर इसे 30 दिनों में पूरा कर सकती हैं। 4 पुरुषों द्वारा यह कार्य कितने दिनों में पूरा किया जाएगा?",
+    "oe": [
+      "2",
+      "2.14",
+      "2.5",
+      "3"
+    ],
+    "oh": [
+      "2",
+      "2.14",
+      "2.5",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Rate of Work Method):\nStep 1: लड़के और महिला की दैनिक कार्य दर निकालें:\n- 1 लड़के की दर ($B$) = $\\frac{1}{20}$ कार्य/दिन।\n- 2 महिलाएं 30 दिन में करती हैं, अतः 1 महिला ($W$) का समय = $30 \\times 2 = 60$ दिन $\\implies W = \\frac{1}{60}$ कार्य/दिन।\nStep 2: दिया गया है कि $(M + W)$ को $(W + B)$ से आधा समय लगता है, अर्थात् $(M + W)$ की कार्यक्षमता $(W + B)$ से दोगुनी है:\n$$M + W = 2(W + B) \\implies M = W + 2B$$\nStep 3: मान रखने पर 1 पुरुष ($M$) की दर निकालें:\n$$M = $\\frac{1}{60}$ + 2$\\le$ft($\\frac{1}{20}$\\right) = $\\frac{1}{60}$ + $\\frac{1}{10}$ = $\\frac{1+6}{60}$ = $\\frac{7}{60}$ \\text{ कार्य/दिन}$$\nStep 4: 4 पुरुषों की संयुक्त दैनिक दर = $4 \\times \\frac{7}{60} = \\frac{7}{15}$ कार्य/दिन।\nStep 5: 4 पुरुषों द्वारा कार्य पूरा करने में लगा समय = $\\frac{15}{7} \\approx 2.14$ दिन।\nअतः सही विकल्प  2.14 है।\n\nMethod 2 (Units Method):\nStep 1: कुल कार्य = 60 इकाइयाँ।\n- लड़का = $60 / 20 = 3$ इकाइयाँ/दिन\n- 1 महिला = $60 / 60 = 1$ इकाई/दिन\nStep 2: $M + 1 = 2(1 + 3) = 8 \\implies M = 7$ इकाइयाँ/दिन।\nStep 3: 4 पुरुषों की दक्षता = $4 \\times 7 = 28$ इकाइयाँ/दिन।\nStep 4: समय = $\\frac{60}{28} = \\frac{15}{7} \\approx 2.14$ दिन।\nअतः सही उत्तर '2.14' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_16",
+    "qe": "4 men's work is equal to 6 women's work, and 4 women's work is equal to 6 boys' work. A boy can finish the work in 60 days. In how many days can the work be finished by a man and a woman together?",
+    "qh": "4 पुरुषों का कार्य 6 महिलाओं के कार्य के बराबर है, और 4 महिलाओं का कार्य 6 लड़कों के कार्य के बराबर है। एक लड़का 60 दिनों में कार्य पूरा कर सकता है। एक पुरुष और एक महिला मिलकर उस कार्य को कितने दिनों में पूरा कर सकते हैं?",
+    "oe": [
+      "16",
+      "24",
+      "20",
+      "12"
+    ],
+    "oh": [
+      "16",
+      "24",
+      "20",
+      "12"
+    ],
+    "a": 0,
+    "e": "Method 1 (Efficiency Ratio Method):\nStep 1: कार्यक्षमता का अनुपात निकालें:\n- $4M = 6W \\implies \\frac{M}{W} = \\frac{3}{2} = \\frac{9}{6}$\n- $4W = 6B \\implies \\frac{W}{B} = \\frac{3}{2} = \\frac{6}{4}$\nअतः दक्षता अनुपात $M : W : B = 9 : 6 : 4$ इकाइयाँ/दिन।\nStep 2: 1 लड़का 60 दिनों में कार्य पूरा करता है:\nकुल कार्य = लड़के की दक्षता $\\times$ दिन = $4 \\times 60 = 240$ इकाइयाँ।\nStep 3: 1 पुरुष और 1 महिला की संयुक्त दक्षता = $9 + 6 = 15$ इकाइयाँ/दिन।\nStep 4: दोनों द्वारा मिलकर कार्य समाप्त करने में लगा समय = $\\frac{240}{15} = 16$ दिन।\nअतः सही विकल्प  16 है।\n\nMethod 2 (Fraction Method):\nStep 1: $1B = \\frac{1}{60}$ कार्य/दिन।\n$1W = \\frac{6}{4} B = \\frac{3}{2} \\times \\frac{1}{60} = \\frac{1}{40}$ कार्य/दिन।\n$1M = \\frac{6}{4} W = \\frac{3}{2} \\times \\frac{1}{40} = \\frac{3}{80}$ कार्य/दिन।\nStep 2: संयुक्त दर = $\\frac{3}{80} + \\frac{1}{40} = \\frac{5}{80} = \\frac{1}{16}$ कार्य/दिन $\\implies 16$ दिन।\nअतः सही उत्तर '16' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_17",
+    "qe": "10 women take 16 days to complete a work which can be completed by 6 men in 8 days. 12 men started working and after 2 days 6 men left, and 5 women joined them. In how many days will the work be completed?",
+    "qh": "10 महिलाएं एक कार्य को पूरा करने में 16 दिन लेती हैं जिसे 6 पुरुष 8 दिनों में पूरा कर सकते हैं। 12 पुरुषों ने कार्य करना शुरू किया और 2 दिनों के बाद 6 पुरुषों ने कार्य छोड़ दिया, और 5 महिलाएं उनके साथ जुड़ गईं। कार्य कितने दिनों में पूरा होगा?",
+    "oe": [
+      "$\\frac{3}{2}$",
+      "$\\frac{16}{5}$",
+      "$\\frac{5}{2}$",
+      "$\\frac{26}{5}$"
+    ],
+    "oh": [
+      "$\\frac{3}{2}$",
+      "$\\frac{16}{5}$",
+      "$\\frac{5}{2}$",
+      "$\\frac{26}{5}$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equating Total Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$10W $\\times$ 16 = 6M $\\times$ 8$$\n$$160W = 48M \\implies 10W = 3M \\implies 1M = $\\frac{10}{3}$W$$\nStep 2: कुल कार्य (महिलाओं के पदों में) = $160W$ महिला-दिन।\nStep 3: पहले 2 दिनों में 12 पुरुषों द्वारा किया गया कार्य:\n12 पुरुष = $12 \\times \\frac{10}{3}W = 40W$।\n2 दिनों का कार्य = $40W \\times 2 = 80W$ महिला-दिन।\nशेष कार्य = $160W - 80W = 80W$ महिला-दिन।\nStep 4: अब नया समूह = $(12 - 6)\\text{ पुरुष} + 5\\text{ महिलाएं} = 6M + 5W$:\n$$6M + 5W = 6$\\le$ft($\\frac{10}{3}$W\\right) + 5W = 20W + 5W = 25W$$\nStep 5: शेष कार्य में लगा समय = $\\frac{80W}{25W} = \\frac{16}{5}$ दिन।\nStep 6: कुल कार्य पूरा होने में लगा कुल समय = $2 + \\frac{16}{5} = \\frac{26}{5}$ दिन।\n(नोट: यदि केवल शेष कार्य पूछा जाए तो $\\frac{16}{5}$ दिन, कुल समय $\\frac{26}{5}$ दिन है)।\nअतः सही विकल्प  26/5 है।\n\nMethod 2 (Units Method):\nStep 1: $M = 10$, $W = 3$। कुल कार्य = $10 \\times 3 \\times 16 = 480$ इकाइयाँ।\nStep 2: 2 दिन में 12 पुरुष = $12 \\times 10 \\times 2 = 240$ इकाइयाँ। शेष = 240 इकाइयाँ।\nStep 3: नए समूह की दक्षता = $6(10) + 5(3) = 75$ इकाइयाँ/दिन।\nशेष समय = $240 / 75 = 16/5$ दिन $\\implies$ कुल समय = $2 + 16/5 = 26/5$ दिन।\nअतः सही उत्तर '$\\frac{26}{5}$' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_18",
+    "qe": "1 man and 4 women can complete a work in 65/4 days, while 3 men and 4 women can complete it in 13/2 days. In how many days will 13 women complete the same?",
+    "qh": "1 पुरुष और 4 महिलाएं एक कार्य को 65/4 दिनों में पूरा कर सकते हैं, जबकि 3 पुरुष और 4 महिलाएं इसे 13/2 दिनों में पूरा कर सकते हैं। 13 महिलाएं उसी कार्य को कितने दिनों में पूरा करेंगी?",
+    "oe": [
+      "20",
+      "16",
+      "14",
+      "18"
+    ],
+    "oh": [
+      "20",
+      "16",
+      "14",
+      "18"
+    ],
+    "a": 0,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$(1M + 4W) $\\times$ $\\frac{65}{4}$ = (3M + 4W) $\\times$ $\\frac{13}{2}$$$\nदोनों पक्षों को 13 से विभाजित करने और 4 से गुणा करने पर:\n$$5(M + 4W) = 2 $\\times$ 2(3M + 4W)$$\n$$5M + 20W = 6M + 8W$$\n$$6M - 5M = 20W - 8W \\implies 1M = 12W$$\nStep 2: कुल कार्य (महिलाओं के पदों में) निकालें:\nकुल कार्य = $[(12W) + 4W] \\times \\frac{65}{4} = 16W \\times \\frac{65}{4} = 4W \\times 65 = 260W$ महिला-दिन।\nStep 3: 13 महिलाओं द्वारा लिया गया समय = $\\frac{260W}{13W} = 20$ दिन।\nअतः सही विकल्प  20 है।\n\nMethod 2 (Units Method):\nStep 1: $M = 12$, $W = 1$। कुल कार्य = $(12 + 4) \\times \\frac{65}{4} = 16 \\times \\frac{65}{4} = 260$ इकाइयाँ।\nStep 2: 13 महिलाओं की दैनिक दक्षता = $13 \\times 1 = 13$ इकाइयाँ/दिन।\nStep 3: समय = $260 / 13 = 20$ दिन।\nअतः सही उत्तर '20' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_19",
+    "qe": "25 men and 45 women can complete a piece of work in 15 days, while 15 men and 60 women can complete it in 20 days. In how many days can 69 men and 67 women complete the work?",
+    "qh": "25 पुरुष और 45 महिलाएं एक कार्य को 15 दिनों में पूरा कर सकते हैं, जबकि 15 पुरुष और 60 महिलाएं इसे 20 दिनों में पूरा कर सकते हैं। 69 पुरुष और 67 महिलाएं उस कार्य को कितने दिनों में पूरा कर सकते हैं?",
+    "oe": [
+      "10",
+      "5",
+      "8",
+      "6"
+    ],
+    "oh": [
+      "10",
+      "5",
+      "8",
+      "6"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$(25M + 45W) $\\times$ 15 = (15M + 60W) $\\times$ 20$$\nदोनों पक्षों को 5 से विभाजित करने पर:\n$$3(25M + 45W) = 4(15M + 60W)$$\n$$75M + 135W = 60M + 240W$$\n$$75M - 60M = 240W - 135W$$\n$$15M = 105W \\implies 1M = 7W$$\nStep 2: कुल कार्य (महिलाओं के पदों में) निकालें:\nकुल कार्य = $[25(7W) + 45W] \\times 15 = (175W + 45W) \\times 15 = 220W \\times 15 = 3300W$।\nStep 3: (69 पुरुष + 67 महिलाएं) को महिलाओं में बदलें:\n$$69M + 67W = 69(7W) + 67W = 483W + 67W = 550W$$\nStep 4: लिया गया समय = $\\frac{3300W}{550W} = 6$ दिन।\nअतः सही विकल्प  6 है।\n\nMethod 2 (Units Method):\nStep 1: $M = 7$, $W = 1$। कुल कार्य = $(25 \\times 7 + 45) \\times 15 = 220 \\times 15 = 3300$ इकाइयाँ।\nStep 2: लक्ष्य समूह की दक्षता = $69(7) + 67(1) = 483 + 67 = 550$ इकाइयाँ/दिन।\nStep 3: समय = $3300 / 550 = 6$ दिन।\nअतः सही उत्तर '6' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_20",
+    "qe": "A project can be completed by 2 men and 5 women in 8 days while 4 men and 6 women can complete the same project in 5 days. How many men will be required to complete this project in 4 days?",
+    "qh": "एक प्रोजेक्ट 2 पुरुषों और 5 महिलाओं द्वारा 8 दिनों में पूरा किया जा सकता है जबकि 4 पुरुष और 6 महिलाएं उसी प्रोजेक्ट को 5 दिनों में पूरा कर सकते हैं। इस प्रोजेक्ट को 4 दिनों में पूरा करने के लिए कितने पुरुषों की आवश्यकता होगी?",
+    "oe": [
+      "8",
+      "10",
+      "9",
+      "12"
+    ],
+    "oh": [
+      "8",
+      "10",
+      "9",
+      "12"
+    ],
+    "a": 0,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$(2M + 5W) $\\times$ 8 = (4M + 6W) $\\times$ 5$$\n$$16M + 40W = 20M + 30W$$\n$$20M - 16M = 40W - 30W$$\n$$4M = 10W \\implies 2M = 5W \\implies 5W = 2M$$\nStep 2: कुल कार्य (पुरुषों के पदों में) निकालें:\nकुल कार्य = $[2M + (5W)] \\times 8 = (2M + 2M) \\times 8 = 4M \\times 8 = 32$ पुरुष-दिन।\nStep 3: 4 दिनों में कार्य पूरा करने के लिए आवश्यक पुरुष:\nपुरुष = $\\frac{32}{4} = 8$ पुरुष।\nअतः सही विकल्प  8 है।\n\nMethod 2 (Units Method):\nStep 1: $M = 5$, $W = 2$। कुल कार्य = $(2 \\times 5 + 5 \\times 2) \\times 8 = 20 \\times 8 = 160$ इकाइयाँ।\nStep 2: 4 दिनों में प्रतिदिन आवश्यक कार्य = $160 / 4 = 40$ इकाइयाँ/दिन।\nStep 3: आवश्यक पुरुष = $40 / 5 = 8$ पुरुष।\nअतः सही उत्तर '8' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_21",
+    "qe": "5 men and 2 boys can do in 30 days as much work as 7 men and 10 boys can do in 15 days. How many boys should join 40 men to do the same work in 4 days?",
+    "qh": "5 पुरुष और 2 लड़के 30 दिनों में उतना ही कार्य कर सकते हैं जितना 7 पुरुष और 10 लड़के 15 दिनों में कर सकते हैं। उसी कार्य को 4 दिनों में करने के लिए 40 पुरुषों के साथ कितने लड़कों को शामिल होना चाहिए?",
+    "oe": [
+      "10",
+      "15",
+      "12",
+      "14"
+    ],
+    "oh": [
+      "10",
+      "15",
+      "12",
+      "14"
+    ],
+    "a": 0,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$(5M + 2B) $\\times$ 30 = (7M + 10B) $\\times$ 15$$\nदोनों पक्षों को 15 से विभाजित करने पर:\n$$2(5M + 2B) = 7M + 10B$$\n$$10M + 4B = 7M + 10B$$\n$$10M - 7M = 10B - 4B$$\n$$3M = 6B \\implies 1M = 2B$$\nStep 2: कुल कार्य (लड़कों के पदों में) निकालें:\nकुल कार्य = $[5(2B) + 2B] \\times 30 = (10B + 2B) \\times 30 = 12B \\times 30 = 360$ लड़का-दिन।\nStep 3: 4 दिनों में कार्य पूरा करने के लिए आवश्यक दैनिक क्षमता = $\\frac{360}{4} = 90B$ प्रति दिन।\nStep 4: 40 पुरुष उपलब्ध हैं:\n40 पुरुष = $40 \\times 2B = 80B$।\nStep 5: आवश्यक अतिरिक्त लड़के = $90B - 80B = 10$ लड़के।\nअतः सही विकल्प  10 है।\n\nMethod 2 (Units Method):\nStep 1: $M = 2$, $B = 1$। कुल कार्य = $(5 \\times 2 + 2 \\times 1) \\times 30 = 12 \\times 30 = 360$ इकाइयाँ।\nStep 2: 4 दिनों में प्रतिदिन आवश्यक दर = $360 / 4 = 90$ इकाइयाँ/दिन।\nStep 3: 40 पुरुषों की दक्षता = $40 \\times 2 = 80$ इकाइयाँ/दिन।\nलड़कों की संख्या = $(90 - 80) / 1 = 10$ लड़के।\nअतः सही उत्तर '10' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_22",
+    "qe": "4 men and 5 women can complete a work in 15 days, whereas 9 men and 6 women can complete it in 10 days. To complete the same work in 7 days, how many women should assist 4 men?",
+    "qh": "4 पुरुष और 5 महिलाएं एक कार्य को 15 दिनों में पूरा कर सकते हैं, जबकि 9 पुरुष और 6 महिलाएं इसे 10 दिनों में पूरा कर सकते हैं। उसी कार्य को 7 दिनों में पूरा करने के लिए 4 पुरुषों की सहायता कितनी महिलाओं को करनी चाहिए?",
+    "oe": [
+      "14",
+      "15",
+      "11",
+      "13"
+    ],
+    "oh": [
+      "14",
+      "15",
+      "11",
+      "13"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$(4M + 5W) $\\times$ 15 = (9M + 6W) $\\times$ 10$$\nदोनों पक्षों को 5 से विभाजित करने पर:\n$$3(4M + 5W) = 2(9M + 6W)$$\n$$12M + 15W = 18M + 12W$$\n$$18M - 12M = 15W - 12W$$\n$$6M = 3W \\implies 2M = 1W \\implies 1W = 2M$$\n(अर्थात 1 महिला, 2 पुरुषों के बराबर कार्य करती है)\nStep 2: कुल कार्य (पुरुषों के पदों में) निकालें:\nकुल कार्य = $[4M + 5(2M)] \\times 15 = (4M + 10M) \\times 15 = 14M \\times 15 = 210$ पुरुष-दिन।\nStep 3: कार्य को 7 दिनों में पूरा करने के लिए आवश्यक दैनिक क्षमता:\nआवश्यक क्षमता = $\\frac{210}{7} = 30M$ प्रति दिन।\nStep 4: 4 पुरुष पहले से कार्यरत हैं (क्षमता = $4M$):\nमहिलाओं द्वारा आवश्यक क्षमता = $30M - 4M = 26M$।\nStep 5: चूँकि $1W = 2M$, अतः महिलाओं की संख्या = $\\frac{26}{2} = 13$ महिलाएं।\nअतः सही विकल्प  13 है।\n\nMethod 2 (Units Method):\nStep 1: $W = 2$, $M = 1$। कुल कार्य = $(4 \\times 1 + 5 \\times 2) \\times 15 = 14 \\times 15 = 210$ इकाइयाँ।\nStep 2: 7 दिनों में दैनिक दर = $210 / 7 = 30$ इकाइयाँ/दिन।\nStep 3: 4 पुरुषों की दक्षता = $4 \\times 1 = 4$ इकाइयाँ।\nमहिलाओं की दक्षता = $30 - 4 = 26$ इकाइयाँ $\\implies$ महिलाएं = $26 / 2 = 13$।\nअतः सही उत्तर '13' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_23",
+    "qe": "Five men can complete a work in 20 days. Ten women can complete the same work in 15 days. Two men and six women started working together. After 5 days, three women left the work and a new man joined the work. The group continued working together till the end of the work. In how many days will they be able to do the remaining work?",
+    "qh": "पाँच पुरुष एक कार्य को 20 दिनों में पूरा कर सकते हैं। दस महिलाएं उसी कार्य को 15 दिनों में पूरा कर सकती हैं। दो पुरुष और छह महिलाओं ने एक साथ कार्य करना शुरू किया। 5 दिनों के बाद, तीन महिलाओं ने कार्य छोड़ दिया और एक नया पुरुष कार्य में शामिल हो गया। समूह ने कार्य के अंत तक एक साथ कार्य करना जारी रखा। वे शेष कार्य को कितने दिनों में पूरा कर पाएंगे?",
+    "oe": [
+      "14",
+      "19",
+      "$18\\frac{1}{3}$",
+      "$16\\frac{1}{3}$"
+    ],
+    "oh": [
+      "14",
+      "19",
+      "$18\\frac{1}{3}$",
+      "$16\\frac{1}{3}$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$5M $\\times$ 20 = 10W $\\times$ 15$$\n$$100M = 150W \\implies 2M = 3W \\implies 1M = 1.5W$$\nStep 2: कुल कार्य (महिलाओं के पदों में) = $10W \\times 15 = 150$ महिला-दिन।\nStep 3: 2 पुरुष और 6 महिलाओं ने 5 दिन कार्य किया:\n$$2M + 6W = 2(1.5W) + 6W = 3W + 6W = 9W$$\n5 दिनों में किया गया कार्य = $9W \\times 5 = 45$ महिला-दिन।\nशेष कार्य = $150 - 45 = 105$ महिला-दिन।\nStep 4: 5 दिनों के बाद नया समूह: 3 महिलाएं छोड़ गईं ($6 - 3 = 3W$) और 1 नया पुरुष जुड़ा ($2 + 1 = 3M$):\n$$3M + 3W = 3(1.5W) + 3W = 4.5W + 3W = 7.5W = $\\frac{15}{2}$W$$\nStep 5: शेष कार्य पूरा करने में लगा समय = $\\frac{105}{7.5} = \\frac{105 \\times 2}{15} = 7 \\times 2 = 14$ दिन।\nअतः सही विकल्प  14 है।\n\nMethod 2 (Units Method):\nStep 1: $M = 3$, $W = 2$। कुल कार्य = $5 \\times 3 \\times 20 = 300$ इकाइयाँ।\nStep 2: पहले 5 दिन में कार्य = $[2(3) + 6(2)] \\times 5 = 18 \\times 5 = 90$ इकाइयाँ।\nशेष कार्य = $300 - 90 = 210$ इकाइयाँ।\nStep 3: नए समूह की दक्षता = $3(3) + 3(2) = 9 + 6 = 15$ इकाइयाँ/दिन।\nशेष समय = $210 / 15 = 14$ दिन।\nअतः सही उत्तर '14' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_24",
+    "qe": "4 men and 6 women can complete a work in 5 days, while 3 men and 4 women can complete it in 7 days. How many men will have to help 25 women to complete 2 1/2 times the work in 5 days?",
+    "qh": "4 पुरुष और 6 महिलाएं एक कार्य को 5 दिनों में पूरा कर सकते हैं, जबकि 3 पुरुष और 4 महिलाएं इसे 7 दिनों में पूरा कर सकते हैं। 25 महिलाओं को 5 दिनों में कार्य का 2 1/2 गुना कार्य पूरा करने के लिए कितने पुरुषों की सहायता करनी होगी?",
+    "oe": [
+      "8",
+      "10",
+      "4",
+      "5"
+    ],
+    "oh": [
+      "8",
+      "10",
+      "4",
+      "5"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equating Work Method):\nStep 1: कुल कार्य बराबर करने पर:\n$$(4M + 6W) $\\times$ 5 = (3M + 4W) $\\times$ 7$$\n$$20M + 30W = 21M + 28W$$\n$$21M - 20M = 30W - 28W \\implies 1M = 2W$$\nStep 2: 1 गुना मूल कार्य (महिलाओं के पदों में):\nमूल कार्य = $[4(2W) + 6W] \\times 5 = (8W + 6W) \\times 5 = 14W \\times 5 = 70$ महिला-दिन।\nStep 3: कार्य का $2\\frac{1}{2}$ (= 2.5) गुना कार्य = $70 \\times 2.5 = 175$ महिला-दिन।\nStep 4: इस कार्य को 5 दिनों में पूरा करने के लिए आवश्यक दैनिक क्षमता:\nदैनिक क्षमता = $\\frac{175}{5} = 35W$ प्रति दिन।\nStep 5: 25 महिलाएं पहले से उपलब्ध हैं (क्षमता = $25W$):\nपुरुषों द्वारा आवश्यक क्षमता = $35W - 25W = 10W$।\nStep 6: चूँकि $1M = 2W$, अतः पुरुषों की संख्या = $\\frac{10}{2} = 5$ पुरुष।\nअतः सही विकल्प  5 है।\n\nMethod 2 (Units Method):\nStep 1: $M = 2$, $W = 1$। मूल कार्य = $(4 \\times 2 + 6 \\times 1) \\times 5 = 14 \\times 5 = 70$ इकाइयाँ।\nStep 2: नया कार्य = $70 \\times 2.5 = 175$ इकाइयाँ।\nStep 3: 5 दिनों में आवश्यक दैनिक दक्षता = $175 / 5 = 35$ इकाइयाँ/दिन।\nStep 4: 25 महिलाओं की दक्षता = 25 इकाइयाँ। पुरुषों की दक्षता = $35 - 25 = 10$ इकाइयाँ $\\implies$ पुरुष = $10 / 2 = 5$ पुरुष।\nअतः सही उत्तर '5' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_25",
+    "qe": "If 3 goats or 5 sheep can graze a field in 54 days, then in how many days can 6 goats and 8 sheep graze the same field?",
+    "qh": "यदि 3 बकरियां या 5 भेड़ें एक खेत को 54 दिनों में चर सकती हैं, तो 6 बकरियां और 8 भेड़ें उसी खेत को कितने दिनों में चर सकती हैं?",
+    "oe": [
+      "12 days",
+      "10 days",
+      "8 days",
+      "15 days"
+    ],
+    "oh": [
+      "12 days",
+      "10 days",
+      "8 days",
+      "15 days"
+    ],
+    "a": 3,
+    "e": "Method 1 (Conversion to Sheep Units Method):\nStep 1: दिया गया है: 3 बकरियां = 5 भेड़ें $\\implies 1 \\text{ बकरी} = \\frac{5}{3} \\text{ भेड़}$।\nStep 2: कुल कार्य = $5 \\text{ भेड़ें} \\times 54 \\text{ दिन} = 270$ भेड़-दिन।\nStep 3: (6 बकरियां + 8 भेड़ें) को भेड़ों में बदलें:\n$$6 \\text{ बकरियां} + 8 \\text{ भेड़ें} = 6$\\le$ft($\\frac{5}{3}$ \\text{ भेड़}\\right) + 8 \\text{ भेड़ें} = 10 \\text{ भेड़ें} + 8 \\text{ भेड़ें} = 18 \\text{ भेड़ें}$$\nStep 4: लिया गया समय = $\\frac{270}{18} = 15$ दिन।\nअतः सही विकल्प  15 days है।\n\nMethod 2 (Direct 'And/Or' Formula Method):\nStep 1: सूत्र का प्रयोग करने पर:\n$$\\text{समय} = \\frac{\\text{दिन}}{$\\frac{G_2}{G_1}$ + $\\frac{S_2}{S_1}$} = \\frac{54}{$\\frac{6}{3}$ + $\\frac{8}{5}$} = $\\frac{54}{2+1.6}$ = $\\frac{54}{3.6}$ = 15 \\text{ दिन}$$\nअतः सही उत्तर '15 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_26",
+    "qe": "If one man or two women or four boys or five girls can finish a work in 39 days, then how many days will one man, one woman, one boy and one girl together take to finish the same work?",
+    "qh": "यदि एक पुरुष या दो महिलाएं या चार लड़के या पांच लड़कियां किसी कार्य को 39 दिनों में पूरा कर सकते हैं, तो एक पुरुष, एक महिला, एक लड़का और एक लड़की मिलकर उसी कार्य को पूरा करने में कितने दिन लेंगे?",
+    "oe": [
+      "40",
+      "10",
+      "30",
+      "20"
+    ],
+    "oh": [
+      "40",
+      "10",
+      "30",
+      "20"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM Units Method):\nStep 1: दिया गया है: $1M = 2W = 4B = 5G$।\n1, 2, 4, 5 का LCM = 20 इकाइयाँ/दिन (1 पुरुष की दक्षता मान लें):\n- $1M = 20$ इकाइयाँ/दिन\n- $1W = 20 / 2 = 10$ इकाइयाँ/दिन\n- $1B = 20 / 4 = 5$ इकाइयाँ/दिन\n- $1G = 20 / 5 = 4$ इकाइयाँ/दिन\nStep 2: कुल कार्य = 1 पुरुष की दक्षता $\\times$ दिन = $20 \\times 39 = 780$ इकाइयाँ।\nStep 3: $(1M + 1W + 1B + 1G)$ की कुल संयुक्त दक्षता:\nसंयुक्त दक्षता = $20 + 10 + 5 + 4 = 39$ इकाइयाँ/दिन।\nStep 4: कार्य पूरा करने में लगा समय = $\\frac{780}{39} = 20$ दिन।\nअतः सही विकल्प  20 है।\n\nMethod 2 (Fraction Formula Method):\nStep 1: समय = $\\frac{39}{\\frac{1}{1} + \\frac{1}{2} + \\frac{1}{4} + \\frac{1}{5}} = \\frac{39}{\\frac{20 + 10 + 5 + 4}{20}} = \\frac{39}{\\frac{39}{20}} = 20$ दिन।\nअतः सही उत्तर '20' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_27",
+    "qe": "If 8 men or 16 women or 32 boys can do a piece of work in 8 months, then in how many months can 4 men, 4 women and 4 boys together complete the work?",
+    "qh": "यदि 8 पुरुष या 16 महिलाएं या 32 लड़के एक कार्य को 8 महीने में कर सकते हैं, तो 4 पुरुष, 4 महिलाएं और 4 लड़के मिलकर उस कार्य को कितने महीने में पूरा कर सकते हैं?",
+    "oe": [
+      "$9\\frac{1}{7}$",
+      "$6\\frac{3}{7}$",
+      "$8\\frac{2}{7}$",
+      "$10\\frac{5}{7}$"
+    ],
+    "oh": [
+      "$9\\frac{1}{7}$",
+      "$6\\frac{3}{7}$",
+      "$8\\frac{2}{7}$",
+      "$10\\frac{5}{7}$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Conversion to Boy Units Method):\nStep 1: दिया गया है: $8M = 16W = 32B \\implies 1M = 4B$ तथा $1W = 2B$।\nStep 2: कुल कार्य = $32B \\times 8 \\text{ महीने} = 256$ लड़का-महीने।\nStep 3: (4 पुरुष + 4 महिलाएं + 4 लड़के) को लड़कों में बदलें:\n$$4M + 4W + 4B = 4(4B) + 4(2B) + 4B = 16B + 8B + 4B = 28B$$\nStep 4: लिया गया समय = $\\frac{256}{28} = \\frac{64}{7} = 9\\frac{1}{7}$ महीने।\nअतः सही विकल्प  $9\\frac{1}{7}$ है।\n\nMethod 2 (Direct Formula Method):\nStep 1: समय = $\\frac{8}{\\frac{4}{8} + \\frac{4}{16} + \\frac{4}{32}} = \\frac{8}{\\frac{1}{2} + \\frac{1}{4} + \\frac{1}{8}} = \\frac{8}{\\frac{4 + 2 + 1}{8}} = \\frac{8}{\\frac{7}{8}} = \\frac{64}{7} = 9\\frac{1}{7}$ महीने।\nअतः सही उत्तर '$9\\frac{1}{7}$' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mwc_28",
+    "qe": "The one-day work of 2 men is equal to the one-day work of 4 women or the one-day work of 8 qualified workers. 10 qualified workers can finish a work in 8 days. If a man, a woman and a qualified worker work in the same order on three different days, the work is finished in _____ days.",
+    "qh": "2 पुरुषों का एक दिन का कार्य 4 महिलाओं के एक दिन के कार्य या 8 योग्य श्रमिकों के एक दिन के कार्य के बराबर है। 10 योग्य श्रमिक 8 दिनों में एक कार्य पूरा कर सकते हैं। यदि एक पुरुष, एक महिला और एक योग्य श्रमिक तीन अलग-अलग दिनों में उसी क्रम में कार्य करते हैं, तो कार्य _____ दिनों में समाप्त होता है?",
+    "oe": [
+      "$\\frac{203}{6}$",
+      "$\\frac{135}{4}$",
+      "$\\frac{131}{4}$",
+      "$\\frac{166}{5}$"
+    ],
+    "oh": [
+      "$\\frac{203}{6}$",
+      "$\\frac{135}{4}$",
+      "$\\frac{131}{4}$",
+      "$\\frac{166}{5}$"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Alternate Day Cycle Method):\nStep 1: कार्यक्षमता संबंध निकालें:\n$$2M = 4W = 8Q \\implies 1M = 2W = 4Q$$\nमाना 1 योग्य श्रमिक ($Q$) की दक्षता = 1 इकाई/दिन।\n- $1W = 2$ इकाइयाँ/दिन\n- $1M = 4$ इकाइयाँ/दिन\nStep 2: 10 योग्य श्रमिक 8 दिनों में कार्य समाप्त करते हैं:\nकुल कार्य = $10 \\times 1 \\times 8 = 80$ इकाइयाँ।\nStep 3: 3-दिन का चक्र (क्रम: दिन 1: पुरुष, दिन 2: महिला, दिन 3: योग्य श्रमिक):\n1 चक्र (3 दिन) में कार्य = $4 + 2 + 1 = 7$ इकाइयाँ।\nStep 4: 11 पूर्ण चक्र (33 दिन) में कार्य = $11 \\times 7 = 77$ इकाइयाँ।\nशेष कार्य = $80 - 77 = 3$ इकाइयाँ।\nStep 5: 34वें दिन पुरुष की बारी है (दक्षता = 4 इकाइयाँ/दिन):\nपुरुष द्वारा 3 इकाइयाँ करने में लिया गया समय = $\\frac{3}{4}$ दिन।\nStep 6: कुल समय = $33 + \\frac{3}{4} = \\frac{135}{4}$ दिन।\nअतः सही विकल्प  135/4 है।\n\nMethod 2 (Fraction Cycle Method):\nStep 1: 3 दिनों में कार्य = $7 / 80$ भाग।\nStep 2: 33 दिनों में = $77 / 80$ भाग। शेष = $3 / 80$ भाग।\nStep 3: 34वें दिन पुरुष की दर = $4 / 80$ कार्य/दिन।\nसमय = $\\frac{3/80}{4/80} = \\frac{3}{4}$ दिन $\\implies$ कुल समय = $33\\frac{3}{4} = \\frac{135}{4}$ दिन।\nअतः सही उत्तर '$\\frac{135}{4}$' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
