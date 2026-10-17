@@ -1,0 +1,97 @@
+[
+  {
+    "p_id": "oppositeletter_1",
+    "qe": "If in a certain code language, FLOWER is written as UOLDVI, then how TERMINAL will be written in the same language?",
+    "qh": "यदि किसी निश्चित कूट भाषा में FLOWER को UOLDVI लिखा जाता है, तो उसी कूट भाषा में TERMINAL को कैसे लिखा जाएगा?",
+    "oe": [
+      "FLKPMROZ",
+      "GVINRMZO",
+      "RVNIGLKA",
+      "MNIVGYEO"
+    ],
+    "oh": [
+      "FLKPMROZ",
+      "GVINRMZO",
+      "RVNIGLKA",
+      "MNIVGYEO"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Opposite Letter Pairs Shortcut):\nStep 1: 'FLOWER' ke opposite pairs check karein (Sum of positions = 27):\n- F ↔ U (Four)\n- L ↔ O (Love)\n- O ↔ L (Love)\n- W ↔ D (Dew)\n- E ↔ V (Evening)\n- R ↔ I (Indian Railway)\nLogic: Sabhi letters ke sammukh (opposite) aksharon ko seedhe kram (forward order) me likha gaya hai.\nStep 2: 'TERMINAL' ke opposite letters nikalein:\n- T ↔ G (GT Road)\n- E ↔ V (EVening)\n- R ↔ I (Indian Railway)\n- M ↔ N (MAN)\n- I ↔ R (Indian Railway)\n- N ↔ M (MAN)\n- A ↔ Z (A to Z)\n- L ↔ O (LOve)\nCode: GVINRMZO.\nCorrect option  GVINRMZO hai.\n\nMethod 2 (First Letter Elimination Method):\nT ka opposite letter 'G' hota hai ($27 - 20 = 7$). Chaaron vikalpon me se keval 'GVINRMZO' 'G' se shuru ho raha hai, baaki teeno vikalp turant eliminate ho jate hain.\nSahi uttar 'GVINRMZO' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "oppositeletter_2",
+    "qe": "If in a certain code language, KING is written as TMRP, then how RAIL will be written in the same language?",
+    "qh": "यदि किसी निश्चित कूट भाषा में KING को TMRP लिखा जाता है, तो उसी कूट भाषा में RAIL को कैसे लिखा जाएगा?",
+    "oe": [
+      "ILAR",
+      "ROZI",
+      "LIAR",
+      "ORZI"
+    ],
+    "oh": [
+      "ILAR",
+      "ROZI",
+      "LIAR",
+      "ORZI"
+    ],
+    "a": 3,
+    "e": "Method 1 (Reverse Opposite Letter Shortcut):\nStep 1: 'KING' ka reverse opposite pattern dekhein:\n- G(aakhiri letter) ka opposite T (1st code)\n- N ka opposite M (2nd code)\n- I ka opposite R (3rd code)\n- K(pehla letter) ka opposite P (Last code)\nLogic: Word ke letters ko ulte kram (reverse order) me lekar unke opposite letters likhe gaye hain.\nStep 2: 'RAIL' par same reverse opposite pattern lagayein:\n- L(last letter) ka opposite O (1st code)\n- I ka opposite R (2nd code)\n- A ka opposite Z (3rd code)\n- R(first letter) ka opposite I (4th code)\nCode: ORZI.\nCorrect option  ORZI hai.\n\nMethod 2 (Option Elimination by First & Last Letter):\n- Aakhiri letter 'L' ka opposite 'O' sabse aage aayega, isliye options 'ILAR' and 'LIAR' eliminate ho gaye.\n- Pehle letter 'R' ka opposite 'I' aakhiri me aayega, 'ROZI' me aakhiri me 'I' hai lekin 1st letter 'R' galat hai. Keval 'ORZI' bachta hai.\nSahi uttar 'ORZI' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "oppositeletter_3",
+    "qe": "If in a certain code language, HAND is written as ZSWM, then how SILK will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में HAND को ZSWM लिखा जाता है, तो उसी कूट भाषा में SILK को कैसे लिखा जाएगा?",
+    "oe": [
+      "RHPO",
+      "RHOP",
+      "HRPO",
+      "HROP"
+    ],
+    "oh": [
+      "RHPO",
+      "RHOP",
+      "HRPO",
+      "HROP"
+    ],
+    "a": 0,
+    "e": "Method 1 (2-Letter Cross Opposite Pattern Method):\nStep 1: 'HAND' ko 2-2 letters ke pairs me cross karein:\n- Pair 1 (H A): A ka opposite Z, H ka opposite S → 'ZS'\n- Pair 2 (N D): D ka opposite W, N ka opposite M → 'WM'\nCombined: ZS + WM = ZSWM.\nLogic: 2-letter pairs me aapas me cross karke opposite letters likhe gaye hain.\nStep 2: 'SILK' par apply karein:\n- Pair 1 (S I) cross opposite:\n  - I ka opposite R\n  - S ka opposite H\n  → 'RH'\n- Pair 2 (L K) cross opposite:\n  - K ka opposite P\n  - L ka opposite O\n  → 'PO'\nCombined Code: RH + PO = RHPO.\nCorrect option  RHPO hai.\n\nMethod 2 (Fast Option Elimination):\n- Pehle pair me 'I' ka opposite 'R' pehle sthan par aayega, isliye 'H' se shuru hone wale options 'HRPO' and 'HROP' eliminate ho gaye.\n- Aakhiri letter 'L' ka opposite 'O' aayega, isliye 'RHOP' eliminate ho gaya (jisme 'P' last me hai). Keval 'RHPO' sahi hai.\nSahi uttar 'RHPO' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "oppositeletter_4",
+    "qe": "Find the odd one out : (A) IR, (B) MN, (C) GT, (D) KC",
+    "qh": "विषम को चुनिए : (A) IR, (B) MN, (C) GT, (D) KC",
+    "oe": [
+      "IR",
+      "MN",
+      "GT",
+      "KC"
+    ],
+    "oh": [
+      "IR",
+      "MN",
+      "GT",
+      "KC"
+    ],
+    "a": 3,
+    "e": "Method 1 (Opposite Pair Identification Shortcut):\nStep 1: Pratyek vikalp ke aksharon ka sambandh check karein:\n- (A) I ↔ R : Indian Railway (Opposite letter pair, $9 + 18 = 27$)\n- (B) M ↔ N : MAN (Opposite letter pair, $13 + 14 = 27$)\n- (C) G ↔ T : GT Road (Opposite letter pair, $7 + 20 = 27$)\n- (D) K ↔ C : K ka opposite P hota hai ($11 + 3 = 14 \\ne 27$)\nStep 2: Pehle teeno vikalp opposite letter pairs hain, jabki chautha vikalp (KC) opposite pair nahi hai.\nCorrect option  KC hai.\n\nMethod 2 (Positional Sum Method):\n- Sum A: $9 + 18 = 27$\n- Sum B: $13 + 14 = 27$\n- Sum C: $7 + 20 = 27$\n- Sum D: $11 + 3 = 14 \\ne 27$ (Odd one out).\nSahi uttar 'KC' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "oppositeletter_5",
+    "qe": "If in a certain code language, DIAMOND is written as VQYMKLV, then how FEMALE will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में DIAMOND को VQYMKLV लिखा जाता है, तो उसी कूट भाषा में FEMALE को कैसे लिखा जाएगा?",
+    "oe": [
+      "TUMYNU",
+      "UVNZOV",
+      "UVNYNV",
+      "TVNYNV"
+    ],
+    "oh": [
+      "TUMYNU",
+      "UVNZOV",
+      "UVNYNV",
+      "TVNYNV"
+    ],
+    "a": 0,
+    "e": "Method 1 (Opposite Letter - 1 Shortcut Method):\nStep 1: 'DIAMOND' ka pattern decode karein:\n- D ↔ W(23) → 23 - 1 = 22 (V)\n- I ↔ R(18) → 18 - 1 = 17 (Q)\n- A ↔ Z(26) → 26 - 1 = 25 (Y)\n- M ↔ N(14) → 14 - 1 = 13 (M)\n- O ↔ L(12) → 12 - 1 = 11 (K)\n- N ↔ M(13) → 13 - 1 = 12 (L)\n- D ↔ W(23) → 23 - 1 = 22 (V)\nLogic: Har letter ka Opposite letter nikal kar usme se 1 ghataya (-1) gaya hai.\nStep 2: 'FEMALE' par same logic lagayein:\n- F ↔ U(21) → 21 - 1 = 20 (T)\n- E ↔ V(22) → 22 - 1 = 21 (U)\n- M ↔ N(14) → 14 - 1 = 13 (M)\n- A ↔ Z(26) → 26 - 1 = 25 (Y)\n- L ↔ O(15) → 15 - 1 = 14 (N)\n- E ↔ V(22) → 22 - 1 = 21 (U)\nCode: TUMYNU.\nCorrect option  TUMYNU hai.\n\nMethod 2 (Positional Difference Method):\nRule: Code = $(27 - \\text{Position}) - 1 = 26 - \\text{Position}$.\n- F(6) → 26 - 6 = 20 (T)\n- E(5) → 26 - 5 = 21 (U)\n- M(13) → 26 - 13 = 13 (M)\n- A(1) → 26 - 1 = 25 (Y)\n- L(12) → 26 - 12 = 14 (N)\n- E(5) → 26 - 5 = 21 (U)\nPehle letter 'T' se sirf 'TUMYNU' shuru ho raha hai (Options B, C, D bahar).\nSahi uttar 'TUMYNU' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

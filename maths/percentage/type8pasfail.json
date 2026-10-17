@@ -1,0 +1,116 @@
+[
+  {
+    "p_id": "type8pasfail_1",
+    "qe": "Pass percentage of an examination is 35%. If a student who got 210 marks, failed by 14 marks, then what are the maximum marks of the examination?",
+    "qh": "एक परीक्षा का उत्तीर्ण प्रतिशत 35% है। यदि एक छात्र, जिसे 210 अंक प्राप्त हुए, वह 14 अंकों से अनुत्तीर्ण हो गया, तो परीक्षा के अधिकतम अंक क्या हैं?",
+    "oe": [
+      "660",
+      "600",
+      "640",
+      "620"
+    ],
+    "oh": [
+      "660",
+      "600",
+      "640",
+      "620"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Method):\nPassing marks required = $210 + 14 = 224$.\nGiven passing percentage = $35\\%$.\n$35\\% = 224$\n$1\\% = \\frac{224}{35} = 6.4$\nMaximum marks ($100\\%$) = $6.4 \\times 100 = 640$.\nAtah sahi vikalp  640 hai.\n\nMethod 2 (Ratio Method):\n$35\\% = \\frac{7}{20}$.\nPassing Marks : Total Marks = $7 : 20$.\nGiven: $7\\text{ units} = 210 + 14 = 224$.\n$1\\text{ unit} = \\frac{224}{7} = 32$.\nMaximum marks = $20\\text{ units} = 20 \\times 32 = 640$.\nAtah sahi uttar '640' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type8pasfail_2",
+    "qe": "John got 20% marks in an examination and failed by 10 marks. In the same examination, Jack got 35% marks which were 20 more than the minimum passing marks. Find the percentage of minimum marks required to pass.",
+    "qh": "जॉन ने एक परीक्षा में 20% अंक प्राप्त किए और वह 10 अंकों से अनुत्तीर्ण हो गया। उसी परीक्षा में, जैक ने 35% अंक प्राप्त किए जो न्यूनतम उत्तीर्ण अंकों से 20 अंक अधिक थे। उत्तीर्ण होने के लिए आवश्यक न्यूनतम अंकों का प्रतिशत ज्ञात कीजिए।",
+    "oe": [
+      "30%",
+      "35%",
+      "25%",
+      "20%"
+    ],
+    "oh": [
+      "30%",
+      "35%",
+      "25%",
+      "20%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Percentage Difference Method):\nMarks difference = $35\\% - 20\\% = 15\\%$.\nNumerical difference = $20 - (-10) = 20 + 10 = 30\\text{ marks}$.\n$15\\% = 30\\text{ marks} \\implies 1\\% = 2\\text{ marks}$.\nJohn 10 marks se fail hua tha, percentage me fail margin = $\\frac{10}{2} = 5\\%$.\nPassing percentage = $20\\% + 5\\% = 25\\%$.\nAtah sahi vikalp  25% hai.\n\nMethod 2 (Total Marks to Pass Percentage):\n$1\\% = 2\\text{ marks} \\implies$ Total marks ($100\\%$) = $200$.\nPassing marks = $20\\% \\text{ of } 200 + 10 = 40 + 10 = 50$.\nPassing percentage = $\\frac{50}{200} \\times 100\\% = 25\\%$.\nAtah sahi uttar '25%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type8pasfail_3",
+    "qe": "In an examination a student who got 20% marks, failed by 30 marks. But another student who got 32% marks got 42 marks more than the required marks to pass. Find the maximum number of marks.",
+    "qh": "एक परीक्षा में एक छात्र जिसने 20% अंक प्राप्त किए, वह 30 अंकों से अनुत्तीर्ण हो गया। लेकिन एक अन्य छात्र जिसने 32% अंक प्राप्त किए, उसने उत्तीर्ण होने के लिए आवश्यक अंकों से 42 अंक अधिक प्राप्त किए। अधिकतम अंक ज्ञात कीजिए।",
+    "oe": [
+      "600",
+      "700",
+      "500",
+      "400"
+    ],
+    "oh": [
+      "600",
+      "700",
+      "500",
+      "400"
+    ],
+    "a": 0,
+    "e": "Method 1 (Percentage Difference Method):\nDifference between percentages = $32\\% - 20\\% = 12\\%$.\nDifference between scored marks = $42 - (-30) = 42 + 30 = 72\\text{ marks}$.\n$12\\% = 72\\text{ marks}$\n$1\\% = \\frac{72}{12} = 6\\text{ marks}$.\nMaximum marks ($100\\%$) = $6 \\times 100 = 600$.\nAtah sahi vikalp  600 hai.\n\nMethod 2 (Algebraic Equation Method):\nMaana maximum marks = $M$.\n$0.20M + 30 = 0.32M - 42$\n$0.12M = 72$\n$M = \\frac{72}{0.12} = 600$.\nAtah sahi uttar '600' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type8pasfail_4",
+    "qe": "Ravi scores 40% marks and fails by 30 marks. Sohan scores 50% marks and gets 20 marks more than the pass marks. Find the maximum marks of the exam.",
+    "qh": "रवि 40% अंक प्राप्त करता है और 30 अंकों से अनुत्तीर्ण हो जाता है। सोहन 50% अंक प्राप्त करता है और उत्तीर्ण अंकों से 20 अंक अधिक प्राप्त करता है। परीक्षा के अधिकतम अंक ज्ञात कीजिए।",
+    "oe": [
+      "400",
+      "450",
+      "500",
+      "600"
+    ],
+    "oh": [
+      "400",
+      "450",
+      "500",
+      "600"
+    ],
+    "a": 2,
+    "e": "Method 1 (Percentage Difference Method):\nPercentage difference = $50\\% - 40\\% = 10\\%$.\nMarks difference = $20 - (-30) = 20 + 30 = 50\\text{ marks}$.\n$10\\% = 50\\text{ marks}$.\nMaximum marks ($100\\%$) = $50 \\times 10 = 500$.\nAtah sahi vikalp  500 hai.\n\nMethod 2 (Ratio / Passing Marks Balance Method):\n$0.40M + 30 = 0.50M - 20$\n$0.10M = 50$\n$M = \\frac{50}{0.10} = 500$.\nAtah sahi uttar '500' hai.\n\ndiye gaye tathyon ka sahi milan se hi is prashn ka jawab nikalta hai. Vikalp 400, 450, 600 is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type8pasfail_5",
+    "qe": "R targets to score 85% marks in exams. He scores 450 marks and misses the target by 35%. How much increment in percentage should be there in his scored marks to meet the target?",
+    "qh": "R परीक्षा में 85% अंक प्राप्त करने का लक्ष्य रखता है। वह 450 अंक प्राप्त करता है और लक्ष्य से 35% चूक जाता है। लक्ष्य को पूरा करने के लिए उसके प्राप्त अंकों में कितने प्रतिशत की वृद्धि होनी चाहिए?",
+    "oe": [
+      "70%",
+      "35%",
+      "53.85%",
+      "45%"
+    ],
+    "oh": [
+      "70%",
+      "35%",
+      "53.85%",
+      "45%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio / Target-Base Method):\nTarget marks ko $100\\%$ maan lo.\nTarget se $35\\%$ chook gaya $\\implies$ Scored marks $= 100 - 35 = 65\\%$ of Target.\nTarget : Scored $= 100 : 65 = 20 : 13$.\nTarget par pahunchne ke liye scored marks me badhotari $= 20 - 13 = 7$ units (13 ke base par).\nPercentage increment needed in scored marks:\n$= \\frac{7}{13} \\times 100\\% = \\frac{700}{13}\\% \\approx 53.85\\%$.\nAtah sahi vikalp  53.85% hai.\n\nMethod 2 (Marks-Base Calculation):\nScored Marks $= 450 = 65\\%$ of Target.\nTarget Marks $= \\frac{450}{0.65} = \\frac{9000}{13}$.\nMarks required to add $= \\text{Target} - \\text{Scored} = \\frac{9000}{13} - 450 = \\frac{3150}{13}$.\nPercentage increment over scored marks (450):\n$= \\frac{\\frac{3150}{13}}{450} \\times 100\\% = \\frac{7}{13} \\times 100\\% \\approx 53.85\\%$.\nAtah sahi uttar '53.85%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type8pasfail_6",
+    "qe": "A student needs at least 60% to pass. He got 40% on the first exam, 70% on the second and x% on the third (equal weightage). What is the minimum x% to pass?",
+    "qh": "एक छात्र को उत्तीर्ण होने के लिए कम से कम 60% अंकों की आवश्यकता है। उसने पहली परीक्षा में 40%, दूसरी में 70% और तीसरी में x% अंक प्राप्त किए (समान वेटेज)। उत्तीर्ण होने के लिए न्यूनतम x% क्या है?",
+    "oe": [
+      "70%",
+      "80%",
+      "75%",
+      "85%"
+    ],
+    "oh": [
+      "70%",
+      "80%",
+      "75%",
+      "85%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Average / Equation Method):\nTeeno exams ka weightage barabar hai, isliye average pass mark kam se kam $60\\%$ hona chahiye:\n$\\frac{40 + 70 + x}{3} = 60$\n$110 + x = 180$\n$x = 180 - 110 = 70\\%$.\nAtah sahi vikalp  70% hai.\n\nMethod 2 (Deviation Method):\nTarget average $= 60\\%$.\nExam 1 me deviation $= 40 - 60 = -20\\%$.\nExam 2 me deviation $= 70 - 60 = +10\\%$.\nNet deviation ab tak $= -20 + 10 = -10\\%$.\nAverage $60\\%$ maintain karne ke liye Exam 3 me $+10\\%$ ka compensation chahiye:\n$x = 60 + 10 = 70\\%$.\nAtah sahi uttar '70%' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

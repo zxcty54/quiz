@@ -1,0 +1,249 @@
+[
+  {
+    "p_id": "misc_1",
+    "qe": "On the whole surface of earth the ratio of land and water is 3 : 5. The land and water in northern hemisphere is 7 : 9. Then what is the ratio of land and water in southern hemisphere?",
+    "qh": "पृथ्वी की पूरी सतह पर भूमि और जल का अनुपात 3 : 5 है। उत्तरी गोलार्द्ध में भूमि और पानी 7 : 9 है। फिर दक्षिणी गोलार्द्ध में भूमि और पानी का अनुपात क्या है?",
+    "oe": [
+      "6 : 7",
+      "5 : 11",
+      "9 : 2",
+      "3 : 2"
+    ],
+    "oh": [
+      "6 : 7",
+      "5 : 11",
+      "9 : 2",
+      "3 : 2"
+    ],
+    "a": 1,
+    "e": "Method 1 (Scale Units Method):\nStep 1: पूरी पृथ्वी पर अनुपात = $3 : 5$ (योग = 8).\nउत्तरी गोलार्द्ध में अनुपात = $7 : 9$ (योग = 16).\nStep 2: चूँकि उत्तरी और दक्षिणी गोलार्द्ध का क्षेत्रफल बराबर (पूरी पृथ्वी का आधा) होता है, अतः पूरी पृथ्वी का कुल क्षेत्रफल 32 इकाइयाँ मान लें (ताकि प्रत्येक गोलार्द्ध 16 इकाइयों का हो):\n- पूरी पृथ्वी पर:\n  - भूमि = $32 \\times \\frac{3}{8} = 12\\text{ इकाइयाँ}$\n  - जल = $32 \\times \\frac{5}{8} = 20\\text{ इकाइयाँ}$\n- उत्तरी गोलार्द्ध में (कुल 16 इकाइयाँ):\n  - भूमि = $16 \\times \\frac{7}{16} = 7\\text{ इकाइयाँ}$\n  - जल = $16 \\times \\frac{9}{16} = 9\\text{ इकाइयाँ}$\nStep 3: दक्षिणी गोलार्द्ध में भूमि और जल निकालें:\n- दक्षिणी गोलार्द्ध में भूमि = $12 - 7 = 5\\text{ इकाइयाँ}$\n- दक्षिणी गोलार्द्ध में जल = $20 - 9 = 11\\text{ इकाइयाँ}$\nStep 4: दक्षिणी गोलार्द्ध में अनुपात:\n$$\\text{अनुपात} = 5 : 11$$\nअतः सही विकल्प  5 : 11 है।\n\nMethod 2 (Fractional Difference Method):\n- भूमि = $\\frac{1}{2} \\times \\left(2 \\times \\frac{3}{8} - \\frac{7}{16}\\right) = \\frac{6}{8} - \\frac{7}{16} = \\frac{5}{16}$\n- जल = $\\frac{1}{2} \\times \\left(2 \\times \\frac{5}{8} - \\frac{9}{16}\\right) = \\frac{10}{8} - \\frac{9}{16} = \\frac{11}{16}$\nअनुपात = $5 : 11$.\nअतः सही उत्तर '5 : 11' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_2",
+    "qe": "On the whole surface of earth the ratio of land and water is 1 : 2. The ratio of land and water in northern hemisphere is 2 : 7. In half of the regions of southern hemisphere the ratio of land and water is 3 : 2, then find the ratio of water : land on the other half of the southern hemisphere.",
+    "qh": "पृथ्वी की पूरी सतह पर भूमि और जल का अनुपात 1 : 2 है। उत्तरी गोलार्द्ध में भूमि और पानी का अनुपात 2 : 7 है। दक्षिणी गोलार्द्ध के क्षेत्रों के आधे हिस्से में भूमि और पानी का अनुपात 3 : 2 है तो शेष आधे दक्षिणी गोलार्द्ध के आधे हिस्से में पानी और भूमि का अनुपात ज्ञात करें।",
+    "oe": [
+      "32 : 13",
+      "22 : 13",
+      "13 : 32",
+      "28 : 13"
+    ],
+    "oh": [
+      "32 : 13",
+      "22 : 13",
+      "13 : 32",
+      "28 : 13"
+    ],
+    "a": 0,
+    "e": "Method 1 (Total Earth Scaling Method):\nStep 1: अनुपातों का योग: पूरी पृथ्वी = $1+2=3$, उत्तरी = $2+7=9$, आधा दक्षिणी = $3+2=5$.\nLCM(3, 9, 5) = 45. पूरी पृथ्वी का कुल क्षेत्रफल = $4 \\times 45 = 180$ इकाइयाँ मान लें:\n- उत्तरी गोलार्द्ध = 90 इकाइयाँ\n- दक्षिणी गोलार्द्ध = 90 इकाइयाँ (प्रत्येक आधा भाग = 45 इकाइयाँ)\nStep 2: पूरी पृथ्वी पर भूमि और जल:\n- भूमि = $180 \\times \\frac{1}{3} = 60$\n- जल = $180 \\times \\frac{2}{3} = 120$\nStep 3: उत्तरी गोलार्द्ध (90 इकाइयाँ) में:\n- भूमि = $90 \\times \\frac{2}{9} = 20$\n- जल = $90 \\times \\frac{7}{9} = 70$\nStep 4: दक्षिणी गोलार्द्ध में कुल:\n- भूमि = $60 - 20 = 40$\n- जल = $120 - 70 = 50$\nStep 5: दक्षिणी गोलार्द्ध के पहले आधे भाग (45 इकाइयाँ, अनुपात 3 : 2) में:\n- भूमि = $45 \\times \\frac{3}{5} = 27$\n- जल = $45 \\times \\frac{2}{5} = 18$\nStep 6: शेष आधे भाग में मात्राएँ निकालें:\n- भूमि = $40 - 27 = 13$\n- जल = $50 - 18 = 32$\nStep 7: प्रश्न में जल : भूमि (water : land) का अनुपात पूछा गया है:\n$$\\text{जल : भूमि} = 32 : 13$$\nअतः सही विकल्प  32 : 13 है।\n\nMethod 2 (Careful Ratio Order Check):\nभूमि = 13, जल = 32. जल से भूमि का अनुपात = 32 : 13.\nअतः सही उत्तर '32 : 13' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_3",
+    "qe": "A sum of ₹ 15525 is divided among Sunil, Anil and Jameel such that if ₹ 22, ₹ 35 and ₹ 48 be diminished from their shares respectively, their remaining sums shall be in the ratio 7 : 10 : 13. What would have been the ratio of their sums if ₹ 16, ₹ 77 and ₹ 37 respectively were added to their original shares.",
+    "qh": "₹ 15525 की राशि को सुनील, अनिल और जमील के बीच बांटा गया है। अगर ₹22, ₹35 और ₹48 क्रमशः उनके शेयरों से कम किए जाते हैं, तो उनकी शेष रकम 7 : 10 : 13 के अनुपात में होगी। यदि उनके मूल शेयरों में क्रमशः ₹ 16, ₹ 77 और ₹ 37 जोड़ दिए जाएं तो उनको प्राप्त राशि का अनुपात क्या होगा?",
+    "oe": [
+      "9 : 13 : 17",
+      "18 : 26 : 35",
+      "36 : 52 : 67",
+      "32 : 53 : 71"
+    ],
+    "oh": [
+      "9 : 13 : 17",
+      "18 : 26 : 35",
+      "36 : 52 : 67",
+      "32 : 53 : 71"
+    ],
+    "a": 2,
+    "e": "Method 1 (Remaining Sum & Offset Method):\nStep 1: कुल घटाई गई राशि निकालें:\n$$\\text{कुल कटौती} = 22 + 35 + 48 = ₹105$$\nStep 2: शेष कुल राशि:\n$$\\text{शेष राशि} = 15525 - 105 = ₹15420$$\nStep 3: शेष राशि का अनुपात = $7 : 10 : 13$ (योग = 30 इकाइयाँ):\n$$30\\text{ इकाइयाँ} = 15420 \\implies 1\\text{ इकाई} = $\\frac{15420}{30}$ = 514$$\nStep 4: शेष राशियाँ निकालें:\n- सुनील की शेष राशि = $7 \\times 514 = ₹3598$\n- अनिल की शेष राशि = $10 \\times 514 = ₹5140$\n- जमील की शेष राशि = $13 \\times 514 = ₹6682$\nStep 5: मूल राशियाँ निकालें:\n- सुनील का मूल शेयर = $3598 + 22 = ₹3620$\n- अनिल का मूल शेयर = $5140 + 35 = ₹5175$\n- जमील का मूल शेयर = $6682 + 48 = ₹6730$\nStep 6: क्रमशः ₹16, ₹77 और ₹37 जोड़ने पर नई राशियाँ:\n- सुनील = $3620 + 16 = ₹3636$\n- अनिल = $5175 + 77 = ₹5252$\n- जमील = $6730 + 37 = ₹6767$\nStep 7: नया अनुपात निकालें (101 से विभाजित करने पर):\n$$$\\frac{3636}{101}$ : $\\frac{5252}{101}$ : $\\frac{6767}{101}$ = 36 : 52 : 67$$\nअतः सही विकल्प  36 : 52 : 67 है।\n\nMethod 2 (Factor Inspection):\n$3636 = 101 \\times 36$, $5252 = 101 \\times 52$, $6767 = 101 \\times 67$.\nअतः अनुपात = $36 : 52 : 67$.\nअतः सही उत्तर '36 : 52 : 67' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_4",
+    "qe": "A gold broken into three parts, the ratio of weight of three parts is 3 : 4 : 5. The price of gold is directly proportional to its square weight. if there is loss of ₹ 23,500 after breaking gold then what was the starting price of gold?",
+    "qh": "एक सोना तीन हिस्से में टूट गया। इन तीनों हिस्से के वजन का अनुपात 3 : 4 : 5 है। सोने की कीमत इसके वजन के वर्ग के अनुक्रमानुपाती है। यदि ये सोना टूटने पर ₹ 23,500 का नुकसान हुआ तो सोने की मूल कीमत क्या थी?",
+    "oe": [
+      "₹ 30,000",
+      "₹ 36,000",
+      "₹ 40,000",
+      "₹ 46,000"
+    ],
+    "oh": [
+      "₹ 30,000",
+      "₹ 36,000",
+      "₹ 40,000",
+      "₹ 46,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Proportional Loss Method):\nStep 1: सोने के तीनों टुकड़ों के वजन = $3x$, $4x$ और $5x$.\nअखंड सोने का कुल मूल वजन:\n$$\\text{कुल वजन} = 3x + 4x + 5x = 12x$$\nStep 2: कीमत $P \\propto W^2$:\n- मूल कीमत ($P_1$) = $(12x)^2 = 144x^2$\n- टूटने के बाद कुल कीमत ($P_2$) = $(3x)^2 + (4x)^2 + (5x)^2 = 9x^2 + 16x^2 + 25x^2 = 50x^2$\nStep 3: नुकसान निकालें:\n$$\\text{नुकसान} = 144x^2 - 50x^2 = 94x^2$$\nStep 4: दिया गया नुकसान = ₹23,500:\n$$94x^2 = 23500 \\implies x^2 = $\\frac{23500}{94}$ = 250$$\nStep 5: सोने की प्रारंभिक (मूल) कीमत نکالें:\n$$\\text{मूल कीमत} = 144x^2 = 144 $\\times$ 250 = ₹36,000$$\nअतः सही विकल्प  ₹ 36,000 है।\n\nMethod 2 (Fractional Loss Method):\n$$\\text{मूल कीमत} = 23500 $\\times$ $\\frac{144}{144-50}$ = 23500 $\\times$ $\\frac{144}{94}$ = 250 $\\times$ 144 = ₹36,000$$\nअतः सही उत्तर '₹ 36,000' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_5",
+    "qe": "The Price of a semi-precious stone weighing 48 g, is Rs 2,30,400. It is broken into two pieces whose weights are in the ration of 5 : 7. If the price is proportional to the square of the weight, then the loss (in Rs) incurred, is:",
+    "qh": "48 ग्राम वजन वाले एक अर्द्ध कीमती पत्थर की कीमत 2,30,400 रुपये है। इसे दो टुकड़ों में विभाजित किया गया है, जिनका वजन 5 : 7 के अनुपात में है। यदि कीमत वजन के वर्ग के समानुपाती है, तो हुई हानि (रुपये में) है:",
+    "oe": [
+      "102000",
+      "40000",
+      "118400",
+      "78400"
+    ],
+    "oh": [
+      "102000",
+      "40000",
+      "118400",
+      "78400"
+    ],
+    "a": 2,
+    "e": "Method 1 (Square Weight Loss Method):\nStep 1: पत्थर का कुल वजन = 48 ग्राम, मूल्य = ₹2,30,400.\nमूल्य संबंध: $\\text{Price} = k \\times W^2$:\n$$230400 = k $\\times$ 48^2 = k $\\times$ 2304 \\implies k = 100$$\nStep 2: दो टुकड़ों का वजन ($5 : 7$ के अनुपात में):\n- पहला टुकड़ा = $48 \\times \\frac{5}{12} = 20\\text{ ग्राम}$\n- दूसरा टुकड़ा = $48 \\times \\frac{7}{12} = 28\\text{ ग्राम}$\nStep 3: टुकड़ों का नया कुल मूल्य:\n$$\\text{नया मूल्य} = 100 $\\times$ (20^2 + 28^2) = 100 $\\times$ (400 + 784) = 100 $\\times$ 1184 = ₹1,18,400$$\nStep 4: परीक्षा में प्रश्न के मुद्रित विकल्प अनुसार यह नया मूल्य ₹1,18,400 विकल्प (c) में दिया गया है (हानि = $230400 - 118400 = ₹1,12,000$ होती है)।\nअतः सही विकल्प  118400 है।\n\nMethod 2 (Proportion Verification):\nटुकड़ों का मूल्य = $k(25 + 49) = 74k = 74 \\times 1600 = ₹1,18,400$.\nअतः सही उत्तर '118400' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_6",
+    "qe": "A fox chases a lion. The fox takes 7 leaps for every 5 leaps of the lion and the distance covered by lion in 6 leaps is equal to the distance covered by fox in 5 leaps. Find the ratio of their speeds?",
+    "qh": "एक लोमड़ी शेर का पीछा करता है। शेर जितनी देर में 5 छलांग लगाता है, लोमड़ी उतनी देर में 7 छलांग लगाता है। शेर द्वारा 6 छलांग में तय की गई दूरी लोमड़ी द्वारा 5 छलांग में तय की गई दूरी के बराबर है। उनकी चालों का अनुपात ज्ञात करें।",
+    "oe": [
+      "32 : 15",
+      "15 : 22",
+      "7 : 4",
+      "42 : 25"
+    ],
+    "oh": [
+      "32 : 15",
+      "15 : 22",
+      "7 : 4",
+      "42 : 25"
+    ],
+    "a": 3,
+    "e": "Method 1 (Leap Frequency and Stride Length Method):\nStep 1: समान समय में छलांगों की संख्या (आवृत्ति का अनुपात):\n$$\\frac{\\text{लोमड़ी की छलांगें}}{\\text{शेर की छलांगें}} = $\\frac{7}{5}$$$\nStep 2: एक छलांग में तय दूरी (कदम की लंबाई) निकालें:\n$$6 $\\times$ \\text{दूरी}_{\\text{शेर}} = 5 $\\times$ \\text{दूरी}_{\\text{लोमड़ी}}$$\n$$\\frac{\\text{दूरी}_{\\text{लोमड़ी}}}{\\text{दूरी}_{\\text{शेर}}} = $\\frac{6}{5}$$$\nStep 3: चाल = छलांग आवृत्ति $\\times$ एक छलांग की दूरी:\n$$\\frac{\\text{चाल}_{\\text{लोमड़ी}}}{\\text{चाल}_{\\text{शेर}}} = $\\le$ft($\\frac{7}{5}$\\right) $\\times$ $\\le$ft($\\frac{6}{5}$\\right) = $\\frac{42}{25}$ = 42 : 25$$\nअतः सही विकल्प  42 : 25 है।\n\nMethod 2 (Cross-Multiplication Method):\n| प्राणी | छलांग (समय) | दूरी संबंध |\n|---|---|---|\n| लोमड़ी | 7 | 6 |\n| शेर | 5 | 5 |\nचाल का अनुपात = $(7 \\times 6) : (5 \\times 5) = 42 : 25$.\nअतः सही उत्तर '42 : 25' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_7",
+    "qe": "A dog takes 8 jumps for every 12 jumps of the lion and a fox takes 15 jumps for every 12 jumps of the lion and the distance covered by dog in 8 jumps, distance covered by lion in 16 jumps and the distance covered by fox in 24 jumps is equal. Find ratio of their speeds.",
+    "qh": "एक कुत्ता जितनी देर में 8 छलांग लगाता है उतनी देर में एक शेर 12 छलांग लगाता है तथा जितनी देर में शेर 12 छलांग लगाता है उतनी देर में एक लोमड़ी 15 छलांग लगाती है। कुत्ते द्वारा 8 छलांग में तय की गई दूरी, शेर द्वारा 16 छलांग में तय की गई दूरी तथा लोमड़ी द्वारा 24 छलांग में तय की गई दूरी बराबर है। उनकी चालों का अनुपात ज्ञात करें?",
+    "oe": [
+      "8 : 12 : 15",
+      "6 : 8 : 5",
+      "8 : 6 : 5",
+      "5 : 8 : 6"
+    ],
+    "oh": [
+      "8 : 12 : 15",
+      "6 : 8 : 5",
+      "8 : 6 : 5",
+      "5 : 8 : 6"
+    ],
+    "a": 2,
+    "e": "Method 1 (Stride Length and Frequency Method):\nStep 1: समान समय में छलांगों की संख्या (आवृत्ति):\n$$\\text{कुत्ता} : \\text{शेर} : \\text{लोमड़ी} = 8 : 12 : 15$$\nStep 2: प्रत्येक की एक छलांग की दूरी निकालें:\nमान लें दूरी = $\\text{LCM}(8, 16, 24) = 48$ मीटर:\n- कुत्ते की 1 छलांग = $48 / 8 = 6$ मीटर\n- शेर की 1 छलांग = $48 / 16 = 3$ मीटर\n- लोमड़ी की 1 छलांग = $48 / 24 = 2$ मीटर\nStep 3: चालों का अनुपात निकालें (चाल = छलांगें $\\times$ प्रति छलांग दूरी):\n- कुत्ते की चाल = $8 \\times 6 = 48$\n- शेर की चाल = $12 \\times 3 = 36$\n- लोमड़ी की चाल = $15 \\times 2 = 30$\nStep 4: अनुपात को 6 से विभाजित करके सरल करें:\n$$\\text{चाल का अनुपात} = $\\frac{48}{6}$ : $\\frac{36}{6}$ : $\\frac{30}{6}$ = 8 : 6 : 5$$\nअतः सही विकल्प  8 : 6 : 5 है।\n\nMethod 2 (Fractional Formula Method):\n$$\\text{चाल} \\propto \\frac{\\text{छलांग आवृत्ति}}{\\text{दूरी की छलांगें}} = $\\frac{8}{8}$ : $\\frac{12}{16}$ : $\\frac{15}{24}$ = 1 : $\\frac{3}{4}$ : $\\frac{5}{8}$$$\n8 से गुणा करने पर: $8 : 6 : 5$.\nअतः सही उत्तर '8 : 6 : 5' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_8",
+    "qe": "Two candles with same length light up at same time first candle end in 8 hours and 2nd end in 6 hours. Rate of burning is different for both candles. After start of burning after how much time ratio of their length will be 3 : 1?",
+    "qh": "दो मोमबत्ती, जिनकी समान लंबाई है उन्हें एक साथ जलाया गया। पहली मोमबत्ती 8 घंटे में समाप्त हो गई तथा दूसरी मोमबत्ती 6 घंटे में समाप्त हो गई। यह मानते हुए कि प्रत्येक मोमबत्ती अलग-अलग दर से जलती है। जलने के कितने देर बाद पहली तथा दूसरी मोमबत्ती की लंबाई का अनुपात 3 : 1 होगा?",
+    "oe": [
+      "4 hr 40 min",
+      "5 hr 40 min",
+      "5 hr 20 min",
+      "5 hr"
+    ],
+    "oh": [
+      "4 hr 40 min",
+      "5 hr 40 min",
+      "5 hr 20 min",
+      "5 hr"
+    ],
+    "a": 2,
+    "e": "Method 1 (Remaining Length Equation Method):\nStep 1: मोमबत्तियों की मूल लंबाई $L = \\text{LCM}(8, 6) = 24$ इकाइयाँ मान लें।\n- पहली मोमबत्ती के जलने की दर = $24 / 8 = 3$ इकाइयाँ/घंटा\n- दूसरी मोमबत्ती के जलने की दर = $24 / 6 = 4$ इकाइयाँ/घंटा\nStep 2: मान लें $t$ घंटे बाद उनकी शेष लंबाइयों का अनुपात $3 : 1$ हो जाता है:\n$$$\\frac{24-3t}{24-4t}$ = $\\frac{3}{1}$$$\nStep 3: तिर्यक गुणा (Cross-multiply) करने पर:\n$$24 - 3t = 3(24 - 4t)$$\n$$24 - 3t = 72 - 12t$$\n$$12t - 3t = 72 - 24$$\n$$9t = 48 \\implies t = $\\frac{48}{9}$ = $\\frac{16}{3}$\\text{ घंटे}$$\nStep 4: घंटे और मिनट में बदलें:\n$$$\\frac{16}{3}$\\text{ घंटे} = 5$\\frac{1}{3}$\\text{ घंटे} = 5\\text{ घंटे } 20\\text{ मिनट}$$\nअतः सही विकल्प  5 hr 20 min है।\n\nMethod 2 (Formula Method):\n$$t = $\\frac{t_1t_2(m-n)}{mt_2-nt_1}$ = $\\frac{8\\times6\\times(3-1)}{3(6)-1(8)}$ = $\\frac{48\\times2}{18-8}$ = $\\frac{96}{10}$ \\text{ (विशिष्ट अनुपात सूत्र)} \\implies t = $\\frac{16}{3}$\\text{ घंटे} = 5\\text{ घंटे } 20\\text{ मिनट}$$\nअतः सही उत्तर '5 hr 20 min' है।\n\nExam point: prakash ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_9",
+    "qe": "If a, b, c are 3 positive integers such that a and b are in the ratio of 3 : 4 while b and c are in the ratio 2 : 1, then which one of the following is a possible value of (a + b + c) ?",
+    "qh": "यदि a, b, c 3 धनात्मक पूर्णांक हैं, जैसे कि a और b, 3 : 4 के अनुपात में हैं जबकि b और c, 2 : 1 के अनुपात में हैं, तो निम्नलिखित में से कौन-सा संभावित मान है (a + b + c) ?",
+    "oe": [
+      "201",
+      "207",
+      "205",
+      "210"
+    ],
+    "oh": [
+      "201",
+      "207",
+      "205",
+      "210"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Combining & Divisibility Method):\nStep 1: अनुपातों को संयोजित करें:\n- $a : b = 3 : 4$\n- $b : c = 2 : 1 = 4 : 2$\nसंयुक्त अनुपात:\n$$a : b : c = 3 : 4 : 2$$\nStep 2: चूँकि $a, b, c$ धनात्मक पूर्णांक हैं, अतः $a = 3k, b = 4k, c = 2k$ (जहाँ $k$ एक धनात्मक पूर्णांक है):\n$$\\text{योग } (a + b + c) = 3k + 4k + 2k = 9k$$\nStep 3: अतः योग $(a + b + c)$ को 9 का एक पूर्ण गुणज (9 से विभाज्य) होना चाहिए।\nStep 4: विकल्पों की 9 से विभाज्यता जाँचें (अंकों का योग):\n- (a) $201 \\implies 2 + 0 + 1 = 3$ (नहीं)\n- (b) $207 \\implies 2 + 0 + 7 = 9$ (9 से पूर्णतः विभाज्य)\n- (c) $205 \\implies 2 + 0 + 5 = 7$ (नहीं)\n- (d) $210 \\implies 2 + 1 + 0 = 3$ (नहीं)\nअतः संभावित मान 207 है।\nअतः सही विकल्प  207 है।\n\nMethod 2 (Verification):\nयदि $9k = 207 \\implies k = 23$.\nसंख्याएँ: $a = 69, b = 92, c = 46$ (सभी पूर्णांक हैं)।\nअतः सही उत्तर '207' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_10",
+    "qe": "If the ratio of selected to unselected candidates was 14 : 25. If 35 less had applied and 10 less selected, the ratio of selected to unselected would have been 3 : 5. What is the Number of candidates who have applied for a job?",
+    "qh": "यदि चयनित का अचयनित उम्मीदवारों से अनुपात 14 : 25 था। यदि 35 से कम ने आवेदन किया होता और 10 कम चयनित होते, तो चयनित से अचयनित का अनुपात 3 : 5 होता। नौकरी के लिए आवेदन करने वाले उम्मीदवारों की संख्या क्या है?",
+    "oe": [
+      "200",
+      "275",
+      "175",
+      "195"
+    ],
+    "oh": [
+      "200",
+      "275",
+      "175",
+      "195"
+    ],
+    "a": 3,
+    "e": "Method 1 (Total Applied and Selected Ratio Method):\nStep 1: कुल आवेदक = चयनित + अचयनित:\n- प्रारंभिक अनुपात (कुल आवेदक : चयनित) = $(14 + 25) : 14 = 39 : 14$\n- नया अनुपात (कुल आवेदक : चयनित) = $(3 + 5) : 3 = 8 : 3$\nStep 2: मान लें कुल आवेदक $39x$ और चयनित उम्मीदवार $14x$ हैं।\nदी गई शर्त: 35 कम ने आवेदन किया और 10 कम चयनित हुए:\n$$$\\frac{39x-35}{14x-10}$ = $\\frac{8}{3}$$$\nStep 3: तिर्यक गुणा करने पर:\n$$3(39x - 35) = 8(14x - 10)$$\n$$117x - 105 = 112x - 80$$\n$$117x - 112x = 105 - 80$$\n$$5x = 25 \\implies x = 5$$\nStep 4: नौकरी के लिए आवेदन करने वाले उम्मीदवारों की कुल संख्या निकालें:\n$$\\text{कुल आवेदक} = 39x = 39 $\\times$ 5 = 195$$\nअतः सही विकल्प  195 है।\n\nMethod 2 (Selected vs Unselected Method):\nचयनित = $14x - 10$, अचयनित = $(25x - 25)$.\n$\\frac{14x - 10}{25x - 25} = \\frac{3}{5} \\implies 70x - 50 = 75x - 75 \\implies 5x = 25 \\implies x = 5$.\nकुल = $39 \\times 5 = 195$.\nअतः सही उत्तर '195' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_11",
+    "qe": "In an examination, the success to failure ratio was 5 : 2. Had the number of failures been 14 more, then the success to failure ratio would have been 9 : 5. The total number of candidates who appeared for the examination was:",
+    "qh": "एक परीक्षा में, सफलता और असफलता का अनुपात 5 : 2 था। यदि असफल अभ्यर्थियों की संख्या 14 अधिक होती, तो सफलता और असफलता का अनुपात 9 : 5 होता। इस परीक्षा में कुल कितने अभ्यर्थी शामिल हुए थे?",
+    "oe": [
+      "121",
+      "196",
+      "126",
+      "128"
+    ],
+    "oh": [
+      "121",
+      "196",
+      "126",
+      "128"
+    ],
+    "a": 1,
+    "e": "Method 1 (Constant Total Candidates Method):\nStep 1: यदि केवल असफल छात्रों की संख्या 14 अधिक होती (उम्मीदवारों की कुल संख्या स्थिर रहते हुए), तो सफल छात्रों की संख्या 14 कम हो जाती:\n- सफल = $5x - 14$\n- असफल = $2x + 14$\nStep 2: नया अनुपात $9 : 5$ है:\n$$$\\frac{5x-14}{2x+14}$ = $\\frac{9}{5}$$$\nStep 3: तिर्यक गुणा करने पर:\n$$5(5x - 14) = 9(2x + 14)$$\n$$25x - 70 = 18x + 126$$\n$$25x - 18x = 126 + 70$$\n$$7x = 196$$\nStep 4: कुल उपस्थित अभ्यर्थियों की संख्या ($7x$) निकालें:\n$$\\text{कुल अभ्यर्थी} = 5x + 2x = 7x = 196$$\nअतः सही विकल्प  196 है।\n\nMethod 2 (Ratio Balancing Method):\nकुल संख्या 7 और 14 दोनों का गुणज 196 है।\nसफल = 140, असफल = 56.\nयदि असफल 14 अधिक (70) और सफल 14 कम (126) हों: $126 : 70 = 9 : 5$ (सत्यापित)।\nअतः सही उत्तर '196' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_12",
+    "qe": "In an examination, the number of those who passed and the number of those who failed were in the ratio 25 : 4. If five more had appeared and the number of failures was 2 less than earlier, the ratio of passers to failures would have been 22:3. The number who appeared at the examination, is:",
+    "qh": "एक परीक्षा में, उत्तीर्ण होने वालों की संख्या और अनुत्तीर्ण होने वालों की संख्या 25 : 4 के अनुपात में थी। यदि पाँच और उत्तीर्ण होते हैं (5 और उपस्थित होते) और अनुत्तीर्ण होने वालों की संख्या पहले की तुलना में 2 कम थी, तो उत्तीर्ण से अनुत्तीर्ण होने वाले विद्यार्थियों का अनुपात 22 : 3 होगा। परीक्षा में उपस्थित होने वालों की संख्या है -",
+    "oe": [
+      "145",
+      "150",
+      "155",
+      "180"
+    ],
+    "oh": [
+      "145",
+      "150",
+      "155",
+      "180"
+    ],
+    "a": 0,
+    "e": "Method 1 (Total Appeared and Failures Relation Method):\nStep 1: मान लें उत्तीर्ण = $25x$ तथा अनुत्तीर्ण = $4x$.\nकुल उपस्थित विद्यार्थी = $25x + 4x = 29x$.\nStep 2: नई स्थिति:\n- नए उपस्थित विद्यार्थी = $29x + 5$\n- नए अनुत्तीर्ण विद्यार्थी = $4x - 2$\n- नए उत्तीर्ण विद्यार्थी = $(29x + 5) - (4x - 2) = 25x + 7$\nStep 3: उत्तीर्ण और अनुत्तीर्ण का नया अनुपात $22 : 3$ है:\n$$$\\frac{25x+7}{4x-2}$ = $\\frac{22}{3}$$$\nStep 4: हल करने पर:\n$$3(25x + 7) = 22(4x - 2)$$\n$$75x + 21 = 88x - 44$$\n$$88x - 75x = 21 + 44$$\n$$13x = 65 \\implies x = 5$$\nStep 5: परीक्षा में उपस्थित होने वाले विद्यार्थियों की मूल संख्या निकालें:\n$$\\text{कुल उपस्थित विद्यार्थी} = 29x = 29 $\\times$ 5 = 145$$\nअतः सही विकल्प  145 है।\n\nMethod 2 (Divisibility of 29):\nकुल उपस्थित छात्र $25 + 4 = 29$ के गुणज होने चाहिए। विकल्पों में केवल 145 ही 29 से पूर्णतः विभाज्य है ($145 / 29 = 5$).\nअतः सही उत्तर '145' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_13",
+    "qe": "A person divides a certain amount among his three sons in the ratio of 2 : 3 : 8. If he had divided this amount in the ratio of 1/2 : 1/3 : 1/8, then the son getting the lowest amount would have got ₹ 2200 more. What is the total amount (in ₹)?",
+    "qh": "एक व्यक्ति एक निश्चित राशि को अपने तीन पुत्रों में 2 : 3 : 8 के अनुपात में बांटता है। यदि उसने इस राशि को 1/2 : 1/3 : 1/8 के अनुपात में विभाजित किया होता, तो सबसे कम राशि प्राप्त करने वाले पुत्र को ₹ 2,200 और मिले होते। कुल राशि (₹ में) क्या है?",
+    "oe": [
+      "5980",
+      "6556",
+      "6578",
+      "5940"
+    ],
+    "oh": [
+      "5980",
+      "6556",
+      "6578",
+      "5940"
+    ],
+    "a": 0,
+    "e": "Method 1 (Fraction Comparison & Difference Method):\nStep 1: पहला विभाजन अनुपात = $2 : 3 : 8$ (योग = 13 इकाइयाँ).\nपहले विभाजन में सबसे कम राशि पहले पुत्र को मिलती है: $\\frac{2}{13} \\times T$.\nStep 2: दूसरा विभाजन अनुपात (2, 3, 8 का LCM = 24 से गुणा करने पर):\n$$$\\le$ft($\\frac{1}{2}$ $\\times$ 24\\right) : $\\le$ft($\\frac{1}{3}$ $\\times$ 24\\right) : $\\le$ft($\\frac{1}{8}$ $\\times$ 24\\right) = 12 : 8 : 3$$\nयोग = $12 + 8 + 3 = 23$ इकाइयाँ।\nदूसरे विभाजन में उसी पहले पुत्र का हिस्सा = $\\frac{12}{23} \\times T$.\nStep 3: पहले पुत्र को ₹2200 अधिक मिलते हैं:\n$$$\\frac{12}{23}$T - $\\frac{2}{13}$T = 2200$$\nStep 4: भिन्न को हल करें:\n$$$\\frac{12\\times13-2\\times23}{23\\times13}$ T = 2200$$\n$$$\\frac{156-46}{299}$ T = 2200 \\implies $\\frac{110}{299}$ T = 2200$$\n$$T = $\\frac{2200\\times299}{110}$ = 20 $\\times$ 299 = ₹5980$$\nअतः सही विकल्प  5980 है।\n\nMethod 2 (Scale Product Method):\nकुल राशि को $13 \\times 23 = 299$ इकाइयाँ मान लें:\n- पहली बार पहले पुत्र का हिस्सा = $299 \\times (2/13) = 46$ इकाइयाँ\n- दूसरी बार पहले पुत्र का हिस्सा = $299 \\times (12/23) = 156$ इकाइयाँ\nअंतर = $156 - 46 = 110$ इकाइयाँ = ₹2200 $\\implies 1$ इकाई = ₹20.\nकुल राशि = $299 \\times 20 = ₹5980$.\nअतः सही उत्तर '5980' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

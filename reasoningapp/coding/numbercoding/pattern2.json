@@ -1,0 +1,192 @@
+[
+  {
+    "p_id": "pattern2_1",
+    "qe": "If in a certain code language DEAL is written as 4-5-1-12, then how LADY will be written in the same code language?",
+    "qh": "यदि किसी कूट भाषा में DEAL को 4-5-1-12 लिखा जाता है, तो उसी कूट भाषा में LADY को कैसे लिखा जाएगा?",
+    "oe": [
+      "12-4-1-25",
+      "12-1-4-25",
+      "10-1-4-23",
+      "12-1-4-22"
+    ],
+    "oh": [
+      "12-4-1-25",
+      "12-1-4-25",
+      "10-1-4-23",
+      "12-1-4-22"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Positional Value Shortcut):\nStep 1: 'DEAL' me har letter ki standard alphabetical position direct likhi gayi hai:\n- D = 4, E = 5, A = 1, L = 12 → 4-5-1-12.\nStep 2: 'LADY' ke har letter ki standard position likhein:\n- L = 12\n- A = 1\n- D = 4\n- Y = 25\nCode banega: 12-1-4-25.\nCorrect '12-4-1-25'2-1-4-25 hai.\n\nMethod 2 (Option Elimination Method):\n- L = 12 hone se '10-1-4-23' eliminate ho gaya.\n- Second letter A = 1 hona chahiye, '12-4-1-25' me '4' diya hai jo galat hai.\n- Last letter Y = 25 hota hai, '12-1-4-22' me '22' diya hai. Keval '12-1-4-25' sahi hai.\nSahi uttar '12-1-4-25' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern2_2",
+    "qe": "In a certain code language, ACNE is written as 3-7-29-11, then how BOIL will be written in the same code language?",
+    "qh": "किसी कूट भाषा में ACNE को 3-7-29-11 लिखा जाता है, तो उसी कूट भाषा में BOIL को कैसे लिखा जाएगा?",
+    "oe": [
+      "5-31-19-25",
+      "25-31-19-5",
+      "25-5-31-19",
+      "31-19-5-25"
+    ],
+    "oh": [
+      "5-31-19-25",
+      "25-31-19-5",
+      "25-5-31-19",
+      "31-19-5-25"
+    ],
+    "a": 0,
+    "e": "Method 1 ((2 × Position + 1) Shortcut Method):\nStep 1: 'ACNE' me transformation rule dekhein: $\\text{Code} = (2 \\times \\text{Position}) + 1$.\n- A(1) → $(1 \\times 2) + 1 = 3$\n- C(3) → $(3 \\times 2) + 1 = 7$\n- N(14) → $(14 \\times 2) + 1 = 29$\n- E(5) → $(5 \\times 2) + 1 = 11$\nStep 2: 'BOIL' par same formula apply karein:\n- B(2) → $(2 \\times 2) + 1 = 5$\n- O(15) → $(15 \\times 2) + 1 = 31$\n- I(9) → $(9 \\times 2) + 1 = 19$\n- L(12) → $(12 \\times 2) + 1 = 25$\nCode banega: 5-31-19-25.\nCorrect option  5-31-19-25 hai.\n\nMethod 2 (First Letter Elimination Method):\nB(2) ke liye code $(2 \\times 2) + 1 = 5$ hoga. Chaaron options me se sirf '5-31-19-25' '5' se shuru ho raha hai, baaki sab bina check kiye eliminate ho jate hain.\nSahi uttar '5-31-19-25' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern2_3",
+    "qe": "If in a certain code language, MACHINE is written as 19-7-9-14-15-20-11, then how DANGER will be written in the same code language?",
+    "qh": "यदि किसी कूट भाषा में MACHINE को 19-7-9-14-15-20-11 लिखा जाता है, तो उसी कूट भाषा में DANGER को कैसे लिखा जाएगा?",
+    "oe": [
+      "11-7-20-16-11-24",
+      "13-7-20-9-11-25",
+      "10-7-20-13-11-24",
+      "13-7-20-10-11-25"
+    ],
+    "oh": [
+      "11-7-20-16-11-24",
+      "13-7-20-9-11-25",
+      "10-7-20-13-11-24",
+      "13-7-20-10-11-25"
+    ],
+    "a": 2,
+    "e": "Method 1 (Position + 6 Shortcut Method):\nStep 1: 'MACHINE' me har letter me +6 joda gaya hai: $\\text{Code} = \\text{Position} + 6$.\n- M(13) + 6 = 19\n- A(1) + 6 = 7\n- C(3) + 6 = 9\n- H(8) + 6 = 14\n- I(9) + 6 = 15\n- N(14) + 6 = 20\n- E(5) + 6 = 11\nStep 2: 'DANGER' par +6 apply karein:\n- D(4) + 6 = 10\n- A(1) + 6 = 7\n- N(14) + 6 = 20\n- G(7) + 6 = 13\n- E(5) + 6 = 11\n- R(18) + 6 = 24\nCode banega: 10-7-20-13-11-24.\nCorrect '11-7-20-16-11-24'0-7-20-13-11-24 hai.\n\nMethod 2 (First Letter Elimination Trick):\nD(4) + 6 = 10. options '11-7-20-16-11-24' and '13-7-20-9-11-25', aur (D) me pehla number 11 ya 13 diya hai jo galat hai. Keval '10-7-20-13-11-24' 10 se shuru hota hai.\nSahi uttar '10-7-20-13-11-24' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern2_4",
+    "qe": "If in a certain code language, WORK is written as 4-12-9-16, then how DONE will be written in the same code language?",
+    "qh": "यदि किसी कूट भाषा में WORK को 4-12-9-16 लिखा जाता है, तो उसी कूट भाषा में DONE को कैसे लिखा जाएगा?",
+    "oe": [
+      "23-13-12-22",
+      "12-13-22-23",
+      "13-12-22-23",
+      "23-12-13-22"
+    ],
+    "oh": [
+      "23-13-12-22",
+      "12-13-22-23",
+      "13-12-22-23",
+      "23-12-13-22"
+    ],
+    "a": 3,
+    "e": "Method 1 (Opposite Positional Value Shortcut):\nStep 1: 'WORK' me har letter ke opposite letter ki position likhi gayi hai ($27 - \\text{Position}$):\n- W ↔ D = 4 ($27 - 23$)\n- O ↔ L = 12 ($27 - 15$)\n- R ↔ I = 9 ($27 - 18$)\n- K ↔ P = 16 ($27 - 11$)\nStep 2: 'DONE' ke opposite letters ki values likhein:\n- D ↔ W = 23\n- O ↔ L = 12\n- N ↔ M = 13\n- E ↔ V = 22\nCode banega: 23-12-13-22.\nCorrect '12-13-22-23'3-12-13-22 hai.\n\nMethod 2 (Option Elimination by 2nd & 3rd Letter):\n- D ka opposite W = 23 (Options B aur C eliminate).\n- O ka opposite L = 12 hona chahiye, '23-13-12-22' me second number 13 diya hai jo galat hai. Keval '23-12-13-22' bachta hai.\nSahi uttar '23-12-13-22' hai.\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern2_5",
+    "qe": "If in a certain code language, WORK is written as 5-6-9-2, then how LOVE will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में WORK को 5-6-9-2 लिखा जाता है, तो उसी भाषा में LOVE को कैसे लिखा जाएगा?",
+    "oe": [
+      "3-6-4-5",
+      "2-4-5-6",
+      "3-5-7-8",
+      "1-2-3-4"
+    ],
+    "oh": [
+      "3-6-4-5",
+      "2-4-5-6",
+      "3-5-7-8",
+      "1-2-3-4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Digit Sum of Position Shortcut):\nStep 1: 'WORK' ke letters ki positions ke ankon ko joda gaya hai (Digital Root / Sum of Digits):\n- W(23) → $2 + 3 = 5$\n- O(15) → $1 + 5 = 6$\n- R(18) → $1 + 8 = 9$\n- K(11) → $1 + 1 = 2$\nStep 2: 'LOVE' par same digit sum rule lagayein:\n- L(12) → $1 + 2 = 3$\n- O(15) → $1 + 5 = 6$\n- V(22) → $2 + 2 = 4$\n- E(5) → 5\nCode banega: 3-6-4-5.\nCorrect '3-5-7-8'-6-4-5 hai.\n\nMethod 2 (First Letter Elimination Method):\nL(12) ke ankon ka yog $1 + 2 = 3$ hoga. Isliye '2' aur '1' se shuru hone wale options '2-4-5-6' and '1-2-3-4' eliminate ho gaye. O(15) ka yog $1 + 5 = 6$ hoga, '3-5-7-8' me 5 diya hai jo galat hai. Keval '3-6-4-5' sahi hai.\nSahi uttar '3-6-4-5' hai.\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern2_6",
+    "qe": "If in a certain code language, KDJQ is written as 8-1-4-2, then how PRMT will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में KDJQ को 8-1-4-2 लिखा जाता है, तो उसी भाषा में PRMT को कैसे लिखा जाएगा?",
+    "oe": [
+      "3-4-9-7",
+      "2-4-9-7",
+      "4-3-9-7",
+      "4-2-9-7"
+    ],
+    "oh": [
+      "3-4-9-7",
+      "2-4-9-7",
+      "4-3-9-7",
+      "4-2-9-7"
+    ],
+    "a": 1,
+    "e": "Method 1 (Reverse Digit Sum Shortcut):\nStep 1: 'KDJQ' me positions ka digit sum nikal kar reverse order me likha gaya hai:\n- Q(17) → $1 + 7 = 8$ [Last se 1st]\n- J(10) → $1 + 0 = 1$ [3rd se 2nd]\n- D(4) → 4 [2nd se 3rd]\n- K(11) → $1 + 1 = 2$ [1st se Last]\nCode bana: 8-1-4-2.\nStep 2: 'PRMT' par reverse order me digit sum lagayein:\n- T(20) → $2 + 0 = 2$ [1st number]\n- M(13) → $1 + 3 = 4$ [2nd number]\n- R(18) → $1 + 8 = 9$ [3rd number]\n- P(16) → $1 + 6 = 7$ [4th number]\nCode banega: 2-4-9-7.\nCorrect '2-4-9-7'-4-9-7 hai.\n\nMethod 2 (First Number Elimination Trick):\nAakhiri letter T(20) ka digit sum $2 + 0 = 2$ sabse aage aayega. options '3-4-9-7' and '4-3-9-7', aur (D) me pehla number 3 ya 4 hai, jo seedhe eliminate ho jate hain. Keval '2-4-9-7' '2' se shuru ho raha hai.\nSahi uttar '2-4-9-7' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern2_7",
+    "qe": "If in a certain code language, REQUEST is written as S2R52TU, then how ACID will be written in the same code language?",
+    "qh": "यदि किसी कूट भाषा में REQUEST को S2R52TU लिखा जाता है, तो उसी कूट भाषा में ACID को कैसे लिखा जाएगा?",
+    "oe": [
+      "1394",
+      "IC94",
+      "B3J4",
+      "1D3E"
+    ],
+    "oh": [
+      "1394",
+      "IC94",
+      "B3J4",
+      "1D3E"
+    ],
+    "a": 3,
+    "e": "Method 1 (Vowel Numbering & Consonant +1 Shortcut):\nStep 1: Rule samjhein:\n- Vowels ko unke serial number ke roop me likha gaya hai: A = 1, E = 2, I = 3, O = 4, U = 5.\n- Consonants me +1 jod kar agla letter likha gaya hai.\nStep 2: 'REQUEST' me dekhein:\n- R(+1) = S, E = 2, Q(+1) = R, U = 5, E = 2, S(+1) = T, T(+1) = U → S2R52TU.\nStep 3: 'ACID' par apply karein:\n- A (Vowel 1) → 1\n- C (Consonant) → C + 1 = D\n- I (Vowel 3) → 3\n- D (Consonant) → D + 1 = E\nCode: 1D3E.\nCorrect '1394'D3E hai.\n\nMethod 2 (First & Last Character Elimination):\n- Pehla letter 'A' ek vowel hai jiska code '1' hoga, isliye options 'IC94' and 'B3J4' eliminate ho gaye.\n- Aakhiri letter 'D' consonant hai jo D + 1 = 'E' banega, jabki '1394' me pure numbers (1394) hain. Keval '1D3E' bachta hai.\nSahi uttar '1D3E' hai.\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern2_8",
+    "qe": "If MANAGER = 34, DIRECTOR = 35 and ASSISTANT = 36, then how STAFF will be written in the code language?",
+    "qh": "यदि MANAGER = 34, DIRECTOR = 35 और ASSISTANT = 36 है, तो कूट भाषा में STAFF को कैसे लिखा जाएगा?",
+    "oe": [
+      "14",
+      "41",
+      "33",
+      "23"
+    ],
+    "oh": [
+      "14",
+      "41",
+      "33",
+      "23"
+    ],
+    "a": 0,
+    "e": "Method 1 (Vowel Count & Consonant Count Shortcut):\nStep 1: Code ka do-digit structure dekhein:\n- Pehla digit = Word me Vowels ki sankhya\n- Doosra digit = Word me Consonants ki sankhya\nStep 2: Verification karein:\n- 'MANAGER': 3 Vowels (A, A, E), 4 Consonants (M, N, G, R) → 34.\n- 'DIRECTOR': 3 Vowels (I, E, O), 5 Consonants (D, R, C, T, R) → 35.\n- 'ASSISTANT': 3 Vowels (A, I, A), 6 Consonants (S, S, S, T, N, T) → 36.\nStep 3: 'STAFF' me count karein:\n- Vowels = 1 ('A')\n- Consonants = 4 ('S', 'T', 'F', 'F')\nCode: 14.\nCorrect '14'4 hai.\n\nMethod 2 (Direct Inspection Method):\nWord 'STAFF' me kewal 1 vowel hai, isliye code anivarya roop se '1' se shuru hona chahiye. Vikalpon me kewal '14' '1' se shuru hota hai.\nSahi uttar '14' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern2_9",
+    "qe": "If AT = 20 and BAT = 40, then how CAT will be written in the code language?",
+    "qh": "यदि AT = 20 और BAT = 40 है, तो कूट भाषा में CAT को कैसे लिखा जाएगा?",
+    "oe": [
+      "30",
+      "50",
+      "60",
+      "45"
+    ],
+    "oh": [
+      "30",
+      "50",
+      "60",
+      "45"
+    ],
+    "a": 2,
+    "e": "Method 1 (Positional Value Product Shortcut):\nStep 1: Letters ki alphabetical positions ka guna (multiplication) kiya gaya hai:\n- 'AT': A(1) × T(20) = 20\n- 'BAT': B(2) × A(1) × T(20) = 40\nStep 2: 'CAT' par apply karein:\n- C = 3, A = 1, T = 20\n$$\\text{Product} = 3 $\\times$ 1 $\\times$ 20 = 60$$\nCorrect option  60 hai.\n\nMethod 2 (Proportional Multiplier Method):\n'AT' ka man 20 hai. 'BAT' me extra 'B' (man = 2) aane par $20 \\times 2 = 40$ bana. 'CAT' me extra 'C' (man = 3) hai, isliye $20 \\times 3 = 60$ hoga.\nSahi uttar '60' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern2_10",
+    "qe": "If DEER = 12215 and HIGH = 5645, then how HEEL will be written in the code language?",
+    "qh": "यदि DEER = 12215 और HIGH = 5645 है, तो कूट भाषा में HEEL को कैसे लिखा जाएगा?",
+    "oe": [
+      "2328",
+      "3429",
+      "4337",
+      "5229"
+    ],
+    "oh": [
+      "2328",
+      "3429",
+      "4337",
+      "5229"
+    ],
+    "a": 3,
+    "e": "Method 1 (Position - 3 Value Concatenation Shortcut):\nStep 1: Har letter ki alphabetical position me se 3 minus karke likha gaya hai (Position - 3):\n- 'DEER':\n  - D(4) - 3 = 1\n  - E(5) - 3 = 2\n  - E(5) - 3 = 2\n  - R(18) - 3 = 15\n  Combined = 12215.\n- 'HIGH':\n  - H(8) - 3 = 5\n  - I(9) - 3 = 6\n  - G(7) - 3 = 4\n  - H(8) - 3 = 5\n  Combined = 5645.\nStep 2: 'HEEL' par apply karein:\n- H(8) - 3 = 5\n- E(5) - 3 = 2\n- E(5) - 3 = 2\n- L(12) - 3 = 9\nCombined Code: 5229.\nCorrect option  5229 hai.\n\nMethod 2 (First Letter Elimination Method):\nH(8) - 3 = 5. Chaaron vikalpon me se kewal '5229' '5' se shuru ho raha hai, baaki sabhi vikalp turant eliminate ho jate hain.\nSahi uttar '5229' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

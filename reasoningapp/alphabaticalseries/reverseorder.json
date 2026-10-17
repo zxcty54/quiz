@@ -1,0 +1,78 @@
+[
+  {
+    "p_id": "reverseorder_1",
+    "qe": "If English alphabetical series is written in the reverse order then which letter will be 5th to the left of 4th from the right end?",
+    "qh": "यदि अंग्रेजी वर्णमाला श्रृंखला को उल्टे क्रम (reverse order) में लिखा जाए, तो दाएँ छोर से चौथे अक्षर के बाएँ 5वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "H",
+      "I",
+      "J",
+      "R"
+    ],
+    "oh": [
+      "H",
+      "I",
+      "J",
+      "R"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direction Reversal Shortcut Trick):\nStep 1: Reverse series rule: Jab series reverse (Z to A) ho, toh prashn me diye gaye 'Left' ko 'Right' aur 'Right' ko 'Left' me badal dete hain:\n- Given: 5th to the left of 4th from the right end.\n- Converted: 5th to the right of 4th from the left end.\nStep 2: Ab normal series ki tarah solve karein (Opposite directions = Addition):\n$$\\text{Position from Left} = 4 + 5 = 9$$\nStep 3: Standard English alphabet me baayein (Left) se 9th letter 'I' hota hai.\nCorrect option  I hai.\n\nMethod 2 (Direct Visual Sequence Method):\n- Reverse series: Z, Y, X, W, ..., C, B, A.\n- Daayein (Right) end par 'A' hai. Daayein se 4th letter 'D' hoga.\n- 'D' ke baayein (Left) 5 sthan aage badhne par: $4 + 5 = 9$th letter from Right end prapt hoga.\n- Z to A series me right end se counting A se shuru hoti hai, isliye 9th letter 'I' hai.\nSahi uttar 'I' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "reverseorder_2",
+    "qe": "If English alphabetical series is written in the reverse order then which letter will be 7th to the right of 17th from the right end?",
+    "qh": "यदि अंग्रेजी वर्णमाला श्रृंखला को उल्टे क्रम में लिखा जाए, तो दाएँ छोर से 17वें अक्षर के दाएँ 7वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "J",
+      "K",
+      "Q",
+      "P"
+    ],
+    "oh": [
+      "J",
+      "K",
+      "Q",
+      "P"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direction Reversal Shortcut Trick):\nStep 1: Reverse series (Z to A) ke liye sabhi directions swap karein:\n- Given: 7th to the right of 17th from the right end.\n- Converted: 7th to the left of 17th from the left end.\nStep 2: Same directions hone par ghataate (subtract) hain:\n$$\\text{Position from Left} = 17 - 7 = 10$$\nStep 3: Standard series me baayein se 10वाँ letter 'J' hota hai.\nCorrect option  J hai.\n\nMethod 2 (Right-End Base Method):\n- Series reverse hai (Z se A), arthath daayein (Right) end par A(1) sthit hai.\n- Right se 17th ke Right me 7th: Same end hone ke karan $17 - 7 = 10$th from Right end.\n- Daayein chhor se 10वाँ letter seedhe 'J' prapt hota hai.\nSahi uttar 'J' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "reverseorder_3",
+    "qe": "If English alphabetical series is written in the reverse order then which letter is 6th to the right of 4th from the left end?",
+    "qh": "यदि अंग्रेजी वर्णमाला श्रृंखला को उल्टे क्रम में लिखा जाए, तो बाएँ छोर से चौथे अक्षर के दाएँ छठा अक्षर कौन-सा होगा?",
+    "oe": [
+      "P",
+      "Q",
+      "R",
+      "K"
+    ],
+    "oh": [
+      "P",
+      "Q",
+      "R",
+      "K"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direction Swap + (27 - N) Shortcut Trick):\nStep 1: Reverse series me directions swap karein:\n- Given: 6th to the right of 4th from the left end.\n- Converted: 6th to the left of 4th from the right end.\nStep 2: Sthiti add karein (Left + Right):\n$$\\text{Position from Right} = 4 + 6 = 10$$\nStep 3: Is sthiti ko baayein (Left) se nikalne ke liye 27 me se ghataayein:\n$$\\text{Position from Left} = 27 - 10 = 17$$\nStep 4: Baayein se 17वाँ letter 'Q' hota hai.\nCorrect option  Q hai.\n\nMethod 2 (Direct Left-to-Right Countdown Method):\n- Reverse series (Z, Y, X, ...) me baayein chhor par 'Z' hai.\n- Baayein se 4th ke daayein 6th: $4 + 6 = 10$th letter from Left end (Z ki taraf se 10th letter).\n- Z ki taraf se 10th letter = $27 - 10 = 17$th letter of alphabet, jo 'Q' hai.\nSahi uttar 'Q' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "reverseorder_4",
+    "qe": "If English alphabetical series is written in the reverse order then which letter will be 2nd to the left of 5th to the right of 3rd from the left end?",
+    "qh": "यदि अंग्रेजी वर्णमाला श्रृंखला को उल्टे क्रम में लिखा जाए, तो बाएँ छोर से तीसरे अक्षर के दाएँ 5वें अक्षर के बाएँ दूसरा अक्षर कौन-सा होगा?",
+    "oe": [
+      "U",
+      "V",
+      "F",
+      "T"
+    ],
+    "oh": [
+      "U",
+      "V",
+      "F",
+      "T"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direction Swap & Combined Calculation Trick):\nStep 1: Reverse series ke liye sabhi directions convert karein:\n- 3rd from left → 3rd from right\n- 5th to the right → 5th to the left\n- 2nd to the left → 2nd to the right\nStep 2: Reference point 'Right end' se positions calculate karein:\n$$\\text{Position from Right} = 3 + 5 - 2 = 6$$\nStep 3: Standard alphabetical position (Left end se) nikalein:\n$$\\text{Position from Left} = 27 - 6 = 21$$\nStep 4: 21वाँ letter 'U' hota hai.\nCorrect option  U hai.\n\nMethod 2 (Relative Offset Method):\n- Original reference: Left end (Z).\n- Operations from Left end: $+3$ (start) $+5$ (right) $-2$ (left) $= 6$th letter from Left end (Z se shuru).\n- Reverse series me shuruat se 6th letter = $27 - 6 = 21$st letter, jo 'U' hai.\nSahi uttar 'U' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

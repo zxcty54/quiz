@@ -1,0 +1,534 @@
+[
+  {
+    "p_id": "trignometricratioqudrant_1",
+    "qe": "If cos x = - 3/5, x lies in the third quadrant, find the values of other five trigonometric functions.",
+    "qh": "यदि cos x = - 3/5 है और x तीसरे चतुर्थांश में स्थित है, तो अन्य पांच त्रिकोणमितीय फलनों के मान ज्ञात कीजिए।",
+    "oe": [
+      "sin x = -4/5, tan x = 4/3, cot x = 3/4, sec x = -5/3, cosec x = -5/4",
+      "sin x = 4/5, tan x = -4/3, cot x = -3/4, sec x = -5/3, cosec x = 5/4",
+      "sin x = -4/5, tan x = -4/3, cot x = -3/4, sec x = 5/3, cosec x = -5/4",
+      "sin x = 3/5, tan x = 4/3, cot x = 3/4, sec x = -5/3, cosec x = 5/3"
+    ],
+    "oh": [
+      "sin x = -4/5, tan x = 4/3, cot x = 3/4, sec x = -5/3, cosec x = -5/4",
+      "sin x = 4/5, tan x = -4/3, cot x = -3/4, sec x = -5/3, cosec x = 5/4",
+      "sin x = -4/5, tan x = -4/3, cot x = -3/4, sec x = 5/3, cosec x = -5/4",
+      "sin x = 3/5, tan x = 4/3, cot x = 3/4, sec x = -5/3, cosec x = 5/3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Quadrant Rule & Triplet Method):\nStep 1: ASTC rule (All-Sin-Tan-Cos) ke mutabiq 3rd quadrant me keval $\\tan$ aur $\\cot$ positive hote hain, baaki sabhi ($\\sin, \\cos, \\sec, \\csc$) negative hote hain.\nStep 2: Triplet $3-4-5$ se: Base $= 3$, Hypotenuse $= 5 \\implies$ Perpendicular $= 4$.\nStep 3: Ratios determine karein:\n- $\\sin x = -\\frac{P}{H} = -\\frac{4}{5}$\n- $\\tan x = +\\frac{P}{B} = \\frac{4}{3}$\n- $\\cot x = +\\frac{B}{P} = \\frac{3}{4}$\n- $\\sec x = -\\frac{H}{B} = -\\frac{5}{3}$\n- $\\csc x = -\\frac{H}{P} = -\\frac{5}{4}$\nCorrect option  hai.\n\nMethod 2 (Identity Method):\n$$\\sin x = -$\\sqrt{1-\\cos^2x}$ = -\\sqrt{1 - $\\frac{9}{25}$} = -$\\frac{4}{5}$$$\n$$\\tan x = $\\frac{\\sinx}{\\cosx}$ = $\\frac{-4/5}{-3/5}$ = $\\frac{4}{3}$, \\quad \\cot x = $\\frac{3}{4}$, \\quad \\sec x = -$\\frac{5}{3}$, \\quad \\csc x = -$\\frac{5}{4}$$$\nSahi uttar 'sin x = -4/5, tan x = 4/3, cot x = 3/4, sec x = -5/3, cosec x = -5/4' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_2",
+    "qe": "If cos x = - 5/13, x lies in the second quadrant, find the values of other five trigonometric functions.",
+    "qh": "यदि cos x = - 5/13 है और x दूसरे चतुर्थांश में स्थित है, तो अन्य पांच त्रिकोणमितीय फलनों के मान ज्ञात कीजिए।",
+    "oe": [
+      "sin x = 12/13, tan x = -12/5, cot x = -5/12, sec x = -13/5, cosec x = 13/12",
+      "sin x = -12/13, tan x = 12/5, cot x = 5/12, sec x = -13/5, cosec x = -13/12",
+      "sin x = 12/13, tan x = 12/5, cot x = 5/12, sec x = 13/5, cosec x = 13/12",
+      "sin x = -12/13, tan x = -12/5, cot x = -5/12, sec x = -13/5, cosec x = 13/12"
+    ],
+    "oh": [
+      "sin x = 12/13, tan x = -12/5, cot x = -5/12, sec x = -13/5, cosec x = 13/12",
+      "sin x = -12/13, tan x = 12/5, cot x = 5/12, sec x = -13/5, cosec x = -13/12",
+      "sin x = 12/13, tan x = 12/5, cot x = 5/12, sec x = 13/5, cosec x = 13/12",
+      "sin x = -12/13, tan x = -12/5, cot x = -5/12, sec x = -13/5, cosec x = 13/12"
+    ],
+    "a": 0,
+    "e": "Method 1 (Quadrant Rule & Triplet Method):\nStep 1: 2nd quadrant me keval $\\sin$ aur $\\csc$ positive hote hain, baaki sabhi negative hote hain.\nStep 2: Triplet $5-12-13$ se: Base $= 5$, Hypotenuse $= 13 \\implies$ Perpendicular $= 12$.\nStep 3: Signs apply karte hue values likhein:\n- $\\sin x = +\\frac{12}{13}$\n- $\\csc x = +\\frac{13}{12}$\n- $\\tan x = -\\frac{12}{5}$\n- $\\cot x = -\\frac{5}{12}$\n- $\\sec x = -\\frac{13}{5}$\nCorrect option  hai.\n\nMethod 2 (Identity Method):\n$$\\sin x = +$\\sqrt{1-\\cos^2x}$ = \\sqrt{1 - $\\frac{25}{169}$} = $\\frac{12}{13}$$$\n$$\\tan x = $\\frac{\\sinx}{\\cosx}$ = $\\frac{12/13}{-5/13}$ = -$\\frac{12}{5}$$$\nSahi uttar 'sin x = 12/13, tan x = -12/5, cot x = -5/12, sec x = -13/5, cosec x = 13/12' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_3",
+    "qe": "The value of sin 960° cos 330° + cos 120° sin 150° is :",
+    "qh": "sin 960° cos 330° + cos 120° sin 150° का मान क्या होगा?",
+    "oe": [
+      "- 1",
+      "1",
+      "1/√2",
+      "√3/2"
+    ],
+    "oh": [
+      "- 1",
+      "1",
+      "1/√2",
+      "√3/2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Allied Angles Conversion Method):\nStep 1: Sabhi angles ko standard form me reduce karein:\n- $\\sin 960^\\circ = \\sin(2 \\times 360^\\circ + 240^\\circ) = \\sin 240^\\circ = \\sin(180^\\circ + 60^\\circ) = -\\sin 60^\\circ = -\\frac{\\sqrt{3}}{2}$\n- $\\cos 330^\\circ = \\cos(360^\\circ - 30^\\circ) = +\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$\n- $\\cos 120^\\circ = \\cos(180^\\circ - 60^\\circ) = -\\cos 60^\\circ = -\\frac{1}{2}$\n- $\\sin 150^\\circ = \\sin(180^\\circ - 30^\\circ) = +\\sin 30^\\circ = \\frac{1}{2}$\nStep 2: Values substitute karein:\n$$\\text{Value} = $\\le$ft(-\\frac{$\\sqrt{3}$}{2}\\right)$\\le$ft(\\frac{$\\sqrt{3}$}{2}\\right) + $\\le$ft(-$\\frac{1}{2}$\\right)$\\le$ft($\\frac{1}{2}$\\right)$$\n$$\\text{Value} = -$\\frac{3}{4}$ - $\\frac{1}{4}$ = -$\\frac{4}{4}$ = -1$$\nCorrect option  - 1 hai.\n\nMethod 2 (Compound Angle Identity Method):\n$$\\sin 960^$\\circ$\\cos 330^$\\circ$ + \\cos 120^$\\circ$\\sin 150^$\\circ$ = (-\\sin 60^$\\circ$)(\\cos 30^$\\circ$) + (-\\cos 60^$\\circ$)(\\sin 30^$\\circ$)$$\n$$= -(\\sin 60^$\\circ$\\cos 30^$\\circ$ + \\cos 60^$\\circ$\\sin 30^$\\circ$) = -\\sin(60^$\\circ$ + 30^$\\circ$) = -\\sin 90^$\\circ$ = -1$$\nSahi uttar '- 1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_4",
+    "qe": "Find the value $of sin(31\\pi/3).$",
+    "qh": "$sin(31\\pi/3)$ का मान ज्ञात कीजिए।",
+    "oe": [
+      "1",
+      "1/2",
+      "√3/2",
+      "0"
+    ],
+    "oh": [
+      "1",
+      "1/2",
+      "√3/2",
+      "0"
+    ],
+    "a": 2,
+    "e": "Method $1 (2n\\pi$ Periodicity Method):\nStep 1: Fraction $\\frac{31\\pi}{3}$ ko $2k\\pi + \\theta$ ke form me break karein:\n$$$\\frac{31\\pi}{3}$ = 10$\\pi$ + $\\frac{\\pi}{3}$ = 5(2$\\pi$) + $\\frac{\\pi}{3}$$$\nStep 2: Periodicity property: $\\sin(2k\\pi + \\theta) = \\sin\\theta$:\n$$\\sin$\\le$ft($\\frac{31\\pi}{3}$\\right) = \\sin$\\le$ft($\\frac{\\pi}{3}$\\right)$$\nStep 3: $\\sin(\\pi/3) = \\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$:\nCorrect option  √3/2 hai.\n\nMethod 2 (Degree Conversion Method):\n$$$\\frac{31\\times180^\\circ}{3}$ = 31 $\\times$ 60^$\\circ$ = 1860^$\\circ$$$\n$$1860^$\\circ$ = 5 $\\times$ 360^$\\circ$ + 60^$\\circ$ \\implies \\sin 1860^$\\circ$ = \\sin 60^$\\circ$ = \\frac{$\\sqrt{3}$}{2}$$\nSahi uttar '√3/2' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_5",
+    "qe": "Find the value of cos(- 1710°).",
+    "qh": "cos(- 1710°) का मान ज्ञात कीजिए।",
+    "oe": [
+      "0",
+      "1",
+      "- 1",
+      "1/2"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "- 1",
+      "1/2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Negative Angle & Multiple of 360° Method):\nStep 1: Property: $\\cos(-\\theta) = \\cos\\theta$:\n$$\\cos(-1710^$\\circ$) = \\cos(1710^$\\circ$)$$\nStep 2: 1710° ko $360^\\circ$ ke multiples ke roop me express karein ($360^\\circ \\times 5 = 1800^\\circ$):\n$$1710^$\\circ$ = 1800^$\\circ$ - 90^$\\circ$ = 5(360^$\\circ$) - 90^$\\circ$$$\nStep 3: Evaluate karein:\n$$\\cos(5 $\\times$ 360^$\\circ$ - 90^$\\circ$) = \\cos(-90^$\\circ$) = \\cos(90^$\\circ$) = 0$$\nCorrect option  0 hai.\n\nMethod 2 (Quotient Step Method):\n$$1710^$\\circ$ = 4 $\\times$ 360^$\\circ$ + 270^$\\circ$$$\n$$\\cos(1710^$\\circ$) = \\cos(270^$\\circ$) = 0$$\nSahi uttar '0' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_6",
+    "qe": "Solve $tan(13\\pi/12).$",
+    "qh": "$tan(13\\pi/12)$ का मान क्या होगा?",
+    "oe": [
+      "2 + √3",
+      "2 - √3",
+      "√3",
+      "√3 + 1"
+    ],
+    "oh": [
+      "2 + √3",
+      "2 - √3",
+      "√3",
+      "√3 + 1"
+    ],
+    "a": 1,
+    "e": "Method 1 (Allied Angle & 15° Standard Value Method):\nStep 1: Angle ko split karein:\n$$$\\frac{13\\pi}{12}$ = $\\pi$ + $\\frac{\\pi}{12}$$$\nStep 2: 3rd quadrant me tangent positive hota hai ($\\tan(\\pi + \\theta) = \\tan\\theta$):\n$$\\tan$\\le$ft($\\frac{13\\pi}{12}$\\right) = \\tan$\\le$ft($\\frac{\\pi}{12}$\\right) = \\tan 15^$\\circ$$$\nStep 3: Standard 15° formula yaad rakhein:\n$$\\tan 15^$\\circ$ = 2 - $\\sqrt{3}$$$\nCorrect '2 - √3' - √3 hai.\n\nMethod 2 (Compound Angle tan(45° - 30°) Method):\n$$\\tan 15^$\\circ$ = \\tan(45^$\\circ$ - 30^$\\circ$) = $\\frac{\\tan45^\\circ-\\tan30^\\circ}{1+\\tan45^\\circ\\tan30^\\circ}$ = \\frac{1 - \\frac{1}{$\\sqrt{3}$}}{1 + \\frac{1}{$\\sqrt{3}$}} = \\frac{$\\sqrt{3}$ - 1}{$\\sqrt{3}$ + 1} = 2 - $\\sqrt{3}$$$\nSahi uttar '2 - √3' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_7",
+    "qe": "Find $3 sin(\\pi/6) sec(\\pi/3) - 4 sin(5\\pi/6) cot(\\pi/4)$ ?",
+    "qh": "$3 sin(\\pi/6) sec(\\pi/3) - 4 sin(5\\pi/6) cot(\\pi/4)$ का मान ज्ञात कीजिए?",
+    "oe": [
+      "1",
+      "0",
+      "- 1",
+      "2"
+    ],
+    "oh": [
+      "1",
+      "0",
+      "- 1",
+      "2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Direct Value Substitution Method):\nStep 1: Pratyek term ki value nikalte hain:\n- $\\sin(\\pi/6) = \\sin 30^\\circ = \\frac{1}{2}$\n- $\\sec(\\pi/3) = \\sec 60^\\circ = 2$\n- $\\sin(5\\pi/6) = \\sin(\\pi - \\pi/6) = \\sin(\\pi/6) = \\frac{1}{2}$\n- $\\cot(\\pi/4) = \\cot 45^\\circ = 1$\nStep 2: Expression me values rakhein:\n$$\\text{Term 1} = 3 $\\times$ $\\le$ft($\\frac{1}{2}$\\right) $\\times$ 2 = 3$$\n$$\\text{Term 2} = 4 $\\times$ $\\le$ft($\\frac{1}{2}$\\right) $\\times$ 1 = 2$$\nStep 3: Subtract karein:\n$$\\text{Value} = 3 - 2 = 1$$\nCorrect '1' hai.\n\nMethod 2 (Inspection Method):\n$$3$\\le$ft($\\frac{1}{2}$\\right)(2) - 4$\\le$ft($\\frac{1}{2}$\\right)(1) = 3 - 2 = 1$$\nSahi uttar '1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_8",
+    "qe": "Find $sin^2(\\pi$/6) + $cos^2(\\pi$/3) - $tan^2(\\pi$/4) = ?",
+    "qh": "$sin^2(\\pi$/6) + $cos^2(\\pi$/3) - $tan^2(\\pi$/4) का मान ज्ञात कीजिए?",
+    "oe": [
+      "1/2",
+      "- 1/2",
+      "1",
+      "- 1"
+    ],
+    "oh": [
+      "1/2",
+      "- 1/2",
+      "1",
+      "- 1"
+    ],
+    "a": 1,
+    "e": "Method 1 (Standard Angles Table Method):\nStep 1: Standard values put karein:\n- $\\sin(\\pi/6) = \\frac{1}{2} \\implies \\sin^2(\\pi/6) = \\frac{1}{4}$\n- $\\cos(\\pi/3) = \\frac{1}{2} \\implies \\cos^2(\\pi/3) = \\frac{1}{4}$\n- $\\tan(\\pi/4) = 1 \\implies \\tan^2(\\pi/4) = 1$\nStep 2: Expression evaluate karein:\n$$$\\frac{1}{4}$ + $\\frac{1}{4}$ - 1 = $\\frac{1}{2}$ - 1 = -$\\frac{1}{2}$$$\nCorrect option  - 1/2 hai.\n\nMethod 2 (Direct Fraction Calculation):\n$$0.25 + 0.25 - 1 = 0.5 - 1 = -0.5 = -$\\frac{1}{2}$$$\nSahi uttar '- 1/2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_9",
+    "qe": "Find 2 $sin^2(3\\pi$/4) + 2 $cos^2(\\pi$/4) + 2 $sec^2(\\pi$/3) = ?",
+    "qh": "2 $sin^2(3\\pi$/4) + 2 $cos^2(\\pi$/4) + 2 $sec^2(\\pi$/3) का मान क्या होगा?",
+    "oe": [
+      "4",
+      "5",
+      "10",
+      "6"
+    ],
+    "oh": [
+      "4",
+      "5",
+      "10",
+      "6"
+    ],
+    "a": 2,
+    "e": "Method 1 (Standard Radians Evaluation Method):\nStep 1: Har term ko evaluate karein:\n- $\\sin(3\\pi/4) = \\sin(\\pi - \\pi/4) = \\sin(\\pi/4) = \\frac{1}{\\sqrt{2}} \\implies 2\\sin^2(3\\pi/4) = 2\\left(\\frac{1}{2}\\right) = 1$\n- $\\cos(\\pi/4) = \\frac{1}{\\sqrt{2}} \\implies 2\\cos^2(\\pi/4) = 2\\left(\\frac{1}{2}\\right) = 1$\n- $\\sec(\\pi/3) = 2 \\implies 2\\sec^2(\\pi/3) = 2(2^2) = 2(4) = 8$\nStep 2: Teeno terms ko add karein:\n$$\\text{Total} = 1 + 1 + 8 = 10$$\nCorrect '4'0 hai.\n\nMethod 2 (Direct Summation):\n$$2$\\le$ft($\\frac{1}{2}$\\right) + 2$\\le$ft($\\frac{1}{2}$\\right) + 2(4) = 1 + 1 + 8 = 10$$\nSahi uttar '10' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_10",
+    "qe": "Find 2 $sin^2(\\pi$/6) + $cosec^2(7\\pi$/6) $cos^2(\\pi$/3) = ?",
+    "qh": "2 $sin^2(\\pi$/6) + $cosec^2(7\\pi$/6) $cos^2(\\pi$/3) का मान क्या होगा?",
+    "oe": [
+      "1",
+      "1/2",
+      "- 1/2",
+      "3/2"
+    ],
+    "oh": [
+      "1",
+      "1/2",
+      "- 1/2",
+      "3/2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Allied Angles & Square Method):\nStep 1: First term evaluate karein:\n$$2\\sin^2$\\le$ft($\\frac{\\pi}{6}$\\right) = 2$\\le$ft($\\frac{1}{2}$\\right)^2 = 2$\\le$ft($\\frac{1}{4}$\\right) = $\\frac{1}{2}$$$\nStep 2: Second term evaluate karein:\n$$$\\frac{7\\pi}{6}$ = $\\pi$ + $\\frac{\\pi}{6}$ \\implies \\csc$\\le$ft($\\frac{7\\pi}{6}$\\right) = -\\csc$\\le$ft($\\frac{\\pi}{6}$\\right) = -2$$\n$$\\csc^2$\\le$ft($\\frac{7\\pi}{6}$\\right) = (-2)^2 = 4$$\n$$\\cos^2$\\le$ft($\\frac{\\pi}{3}$\\right) = $\\le$ft($\\frac{1}{2}$\\right)^2 = $\\frac{1}{4}$$$\n$$\\text{Second Term} = 4 $\\times$ $\\frac{1}{4}$ = 1$$\nStep 3: Dono ko add karein:\n$$\\text{Value} = $\\frac{1}{2}$ + 1 = $\\frac{3}{2}$$$\nCorrect '- 1/2'/2 hai.\n\nMethod 2 (Direct Addition):\n$$$\\frac{1}{2}$ + 1 = 1.5 = $\\frac{3}{2}$$$\nSahi uttar '3/2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_11",
+    "qe": "Find $cot^2(\\pi$/6) $+ cosec(5\\pi/6) + 3$ $tan^2(\\pi$/6) = ?",
+    "qh": "$cot^2(\\pi$/6) $+ cosec(5\\pi/6) + 3$ $tan^2(\\pi$/6) का मान क्या होगा?",
+    "oe": [
+      "6",
+      "4",
+      "5",
+      "3"
+    ],
+    "oh": [
+      "6",
+      "4",
+      "5",
+      "3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Standard Substitution Method):\nStep 1: Pratyek pad ka man nikalte hain:\n- $\\cot(\\pi/6) = \\cot 30^\\circ = \\sqrt{3} \\implies \\cot^2(\\pi/6) = (\\sqrt{3})^2 = 3$\n- $\\csc(5\\pi/6) = \\csc(\\pi - \\pi/6) = \\csc(\\pi/6) = 2$\n- $\\tan(\\pi/6) = \\tan 30^\\circ = \\frac{1}{\\sqrt{3}} \\implies 3\\tan^2(\\pi/6) = 3\\left(\\frac{1}{3}\\right) = 1$\nStep 2: Teeno ko add karein:\n$$\\text{Total} = 3 + 2 + 1 = 6$$\nCorrect option  6 hai.\n\nMethod 2 (Direct Inspection):\n$$3 + 2 + 1 = 6$$\nSahi uttar '6' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_12",
+    "qe": "Find $[cos(\\pi + x) cos(-x)] / [sin(\\pi - x) cos(\\pi/2 + x)] =$ ?",
+    "qh": "$[cos(\\pi + x) cos(-x)] / [sin(\\pi - x) cos(\\pi/2 + x)]$ का मान क्या होगा?",
+    "oe": [
+      "$sin^2x$",
+      "$tan^2x$",
+      "- $cot^2x$",
+      "$cot^2x$"
+    ],
+    "oh": [
+      "$sin^2x$",
+      "$tan^2x$",
+      "- $cot^2x$",
+      "$cot^2x$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Allied Angles Quadrant Formulas Method):\nStep 1: Har trigonometric term ko simplify karein:\n- $\\cos(\\pi + x) = -\\cos x$ (3rd quadrant me cosine negative hota hai)\n- $\\cos(-x) = \\cos x$ (Even function property)\n- $\\sin(\\pi - x) = \\sin x$ (2nd quadrant me sine positive hota hai)\n- $\\cos(\\pi/2 + x) = -\\sin x$ (2nd quadrant me change hokar negative sine banta hai)\nStep 2: Numerator aur Denominator multiply karein:\n$$\\text{Numerator} = (-\\cos x)(\\cos x) = -\\cos^2 x$$\n$$\\text{Denominator} = (\\sin x)(-\\sin x) = -\\sin^2 x$$\nStep 3: Fraction solve karein:\n$$$\\frac{-\\cos^2x}{-\\sin^2x}$ = $\\frac{\\cos^2x}{\\sin^2x}$ = \\cot^2 x$$\nCorrect option  $cot^2x$ hai.\n\nMethod 2 (Value-Putting Method):\n$x = 45^\\circ$ assume karein:\n$$$\\frac{\\cos225^\\circ\\cos(-45^\\circ)}{\\sin135^\\circ\\cos135^\\circ}$ = \\frac{(-1/$\\sqrt{2}$)(1/$\\sqrt{2}$)}{(1/$\\sqrt{2}$)(-1/$\\sqrt{2}$)} = 1$$\n$\\cot^2 45^\\circ = 1$ ('$cot^2x$' matches).\nSahi uttar '$cot^2x$' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_13",
+    "qe": "sin 15° + cos 105° =",
+    "qh": "sin 15° + cos 105° का मान किसके बराबर है?",
+    "oe": [
+      "0",
+      "2 sin 15°",
+      "cos 15° + sin 15°",
+      "2 cos 15°"
+    ],
+    "oh": [
+      "0",
+      "2 sin 15°",
+      "cos 15° + sin 15°",
+      "2 cos 15°"
+    ],
+    "a": 0,
+    "e": "Method 1 (Complementary & Allied Angles Method):\nStep 1: $\\cos 105^\\circ$ ko convert karein:\n$$\\cos 105^$\\circ$ = \\cos(90^$\\circ$ + 15^$\\circ$) = -\\sin 15^$\\circ$$$\nStep 2: Expression me substitute karein:\n$$\\sin 15^$\\circ$ + \\cos 105^$\\circ$ = \\sin 15^$\\circ$ + (-\\sin 15^$\\circ$) = \\sin 15^$\\circ$ - \\sin 15^$\\circ$ = 0$$\nCorrect option  0 hai.\n\nMethod 2 (cos C + cos D Transformation Method):\n$\\sin 15^\\circ = \\cos 75^\\circ$.\n$$\\cos 75^$\\circ$ + \\cos 105^$\\circ$ = 2\\cos$\\le$ft($\\frac{75^\\circ+105^\\circ}{2}$\\right)\\cos$\\le$ft($\\frac{105^\\circ-75^\\circ}{2}$\\right) = 2\\cos 90^$\\circ$\\cos 15^$\\circ$$$\nChuki $\\cos 90^\\circ = 0$ hota hai, isliye $2(0)\\cos 15^\\circ = 0$.\nSahi uttar '0' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_14",
+    "qe": "cos 25° + cos 5° + cos 175° + cos 205° + cos 300° = ?",
+    "qh": "cos 25° + cos 5° + cos 175° + cos 205° + cos 300° का मान क्या होगा?",
+    "oe": [
+      "1/2",
+      "- 1/2",
+      "√3/2",
+      "1"
+    ],
+    "oh": [
+      "1/2",
+      "- 1/2",
+      "√3/2",
+      "1"
+    ],
+    "a": 0,
+    "e": "Method 1 (Allied Angles Cancellation Method):\nStep 1: Angles ke pairs banate hain jo $180^\\circ$ se related hain:\n- $\\cos 175^\\circ = \\cos(180^\\circ - 5^\\circ) = -\\cos 5^\\circ \\implies \\cos 5^\\circ + \\cos 175^\\circ = 0$\n- $\\cos 205^\\circ = \\cos(180^\\circ + 25^\\circ) = -\\cos 25^\\circ \\implies \\cos 25^\\circ + \\cos 205^\\circ = 0$\nStep 2: Dono pairs cancel hone ke baad keval aakhiri term $\\cos 300^\\circ$ bachta hai:\n$$\\text{Remaining} = \\cos 300^$\\circ$$$\nStep 3: $\\cos 300^\\circ$ ki value evaluate karein:\n$$\\cos 300^$\\circ$ = \\cos(360^$\\circ$ - 60^$\\circ$) = \\cos 60^$\\circ$ = $\\frac{1}{2}$$$\nCorrect '1/2'/2 hai.\n\nMethod 2 (cos A + cos(180° ± A) Identity Method):\nFormula: $\\cos A + \\cos(180^\\circ - A) = 0$ aur $\\cos A + \\cos(180^\\circ + A) = 0$.\nIsliye pehle chaar terms ka sum 0 ho jayega:\n$$0 + 0 + \\cos(360^$\\circ$ - 60^$\\circ$) = \\cos 60^$\\circ$ = $\\frac{1}{2}$$$\nSahi uttar '1/2' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_15",
+    "qe": "What is the value $of [cos(\\pi/2 - 3A) - cos(\\pi/2 + A)] / [cos A + cos(\\pi + 3A)]$ ?",
+    "qh": "$[cos(\\pi/2 - 3A) - cos(\\pi/2 + A)] / [cos A + cos(\\pi + 3A)]$ का मान क्या होगा?",
+    "oe": [
+      "tan 2A",
+      "cot A",
+      "tan 2A",
+      "cot 2A"
+    ],
+    "oh": [
+      "tan 2A",
+      "cot A",
+      "tan 2A",
+      "cot 2A"
+    ],
+    "a": 1,
+    "e": "Method 1 (Allied Angles & CD Formula Method):\nStep 1: Allied angle properties lagakar simplify karein:\n- $\\cos(\\pi/2 - 3A) = \\sin 3A$\n- $\\cos(\\pi/2 + A) = -\\sin A$\n- $\\cos(\\pi + 3A) = -\\cos 3A$\nStep 2: Numerator aur Denominator me values substitute karein:\n$$\\text{Numerator} = \\sin 3A - (-\\sin A) = \\sin 3A + \\sin A$$\n$$\\text{Denominator} = \\cos A - \\cos 3A$$\nStep 3: CD formulas apply karein:\n$$\\sin 3A + \\sin A = 2\\sin 2A\\cos A$$\n$$\\cos A - \\cos 3A = 2\\sin 2A\\sin A$$\nStep 4: Divide karein:\n$$$\\frac{2\\sin2A\\cosA}{2\\sin2A\\sinA}$ = $\\frac{\\cosA}{\\sinA}$ = \\cot A$$\nCorrect option  cot A hai.\n\nMethod 2 (Value-Putting Method):\nAngle $A = 30^\\circ$ assume karein:\n$$\\text{Numerator} = \\cos(0^$\\circ$) - \\cos(120^$\\circ$) = 1 - (-1/2) = $\\frac{3}{2}$$$\n$$\\text{Denominator} = \\cos 30^$\\circ$ + \\cos(270^$\\circ$) = \\frac{$\\sqrt{3}$}{2} + 0 = \\frac{$\\sqrt{3}$}{2}$$\n$$\\text{Value} = \\frac{3/2}{$\\sqrt{3}$/2} = $\\sqrt{3}$$$\n$\\cot 30^\\circ = \\sqrt{3}$ hota hai, jo 'cot A' se match karta hai.\nSahi uttar 'cot A' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_16",
+    "qe": "If ABCD is a cyclic quadrilateral then cosA + cosB + cosC + cosD = ?",
+    "qh": "यदि ABCD एक चक्रीय चतुर्भुज (cyclic quadrilateral) है, तो cosA + cosB + cosC + cosD का मान क्या होगा?",
+    "oe": [
+      "2(cosA + cosC)",
+      "2(cosD + cosB)",
+      "2(sinA + sinC)",
+      "0"
+    ],
+    "oh": [
+      "2(cosA + cosC)",
+      "2(cosD + cosB)",
+      "2(sinA + sinC)",
+      "0"
+    ],
+    "a": 3,
+    "e": "Method 1 (Cyclic Quadrilateral Property Method):\nStep 1: Cyclic quadrilateral ke sammukh (opposite) konon ka yog $180^\\circ$ hota hai:\n$$A + C = 180^$\\circ$ \\implies C = 180^$\\circ$ - A$$\n$$B + D = 180^$\\circ$ \\implies D = 180^$\\circ$ - B$$\nStep 2: Cosine apply karein:\n$$\\cos C = \\cos(180^$\\circ$ - A) = -\\cos A$$\n$$\\cos D = \\cos(180^$\\circ$ - B) = -\\cos B$$\nStep 3: Expression me substitute karein:\n$$\\cos A + \\cos B + (-\\cos A) + (-\\cos B) = 0$$\nCorrect option  0 hai.\n\nMethod 2 (Value-Putting Method):\nABCD ko rectangle assume karein (har angle $90^\\circ$):\n$$\\cos 90^$\\circ$ + \\cos 90^$\\circ$ + \\cos 90^$\\circ$ + \\cos 90^$\\circ$ = 0 + 0 + 0 + 0 = 0$$\nSahi uttar '0' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_17",
+    "qe": "$tan \\theta \\cdot sin(\\pi/2 + \\theta) \\cdot cos(\\pi/2 - \\theta) =$ ?",
+    "qh": "$tan \\theta \\cdot sin(\\pi/2 + \\theta) \\cdot cos(\\pi/2 - \\theta)$ का मान क्या होगा?",
+    "oe": [
+      "1",
+      "0",
+      "$cos \\theta$",
+      "$sin^2\\theta$"
+    ],
+    "oh": [
+      "1",
+      "0",
+      "$cos \\theta$",
+      "$sin^2\\theta$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Allied Angles Transformation Method):\nStep 1: Quadrant rules lagakar trigonometric ratios convert karein:\n- $\\sin(\\pi/2 + \\theta) = \\cos\\theta$\n- $\\cos(\\pi/2 - \\theta) = \\sin\\theta$\nStep 2: Expression me multiply karein:\n$$\\tan$\\theta$ \\cdot \\cos$\\theta$ \\cdot \\sin$\\theta$$$\nStep 3: $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta}$ substitute karein:\n$$$\\frac{\\sin\\theta}{\\cos\\theta}$ \\cdot \\cos$\\theta$ \\cdot \\sin$\\theta$ = \\sin^2$\\theta$$$\nCorrect option  $sin^2\\theta$ hai.\n\nMethod 2 (Value-Putting Method):\nAngle $\\theta = 45^\\circ$ assume karein:\n$$\\tan 45^$\\circ$ \\cdot \\sin 135^$\\circ$ \\cdot \\cos 45^$\\circ$ = 1 $\\times$ \\frac{1}{$\\sqrt{2}$} $\\times$ \\frac{1}{$\\sqrt{2}$} = $\\frac{1}{2}$$$\n$\\sin^2 45^\\circ = (1/\\sqrt{2})^2 = 1/2$ (Verified).\nSahi uttar '$sin^2\\theta$' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_18",
+    "qe": "tan A + tan(180° + A) + cot(90° + A) + cot(360° - A) = ?",
+    "qh": "tan A + tan(180° + A) + cot(90° + A) + cot(360° - A) का मान क्या होगा?",
+    "oe": [
+      "0",
+      "2 tanA",
+      "2 cotA",
+      "tanA - cotA"
+    ],
+    "oh": [
+      "0",
+      "2 tanA",
+      "2 cotA",
+      "tanA - cotA"
+    ],
+    "a": 3,
+    "e": "Method 1 (ASTC Quadrant Rule Method):\nStep 1: Pratyek pad ko quadrant rules se simplify karein:\n- $\\tan(180^\\circ + A) = +\\tan A$ (3rd quadrant me tangent positive hota hai)\n- $\\cot(90^\\circ + A) = -\\tan A$ (2nd quadrant me cotangent negative hota hai)\n- $\\cot(360^\\circ - A) = -\\cot A$ (4th quadrant me cotangent negative hota hai)\nStep 2: Sabhi values ko add karein:\n$$\\tan A + \\tan A + (-\\tan A) + (-\\cot A) = 2\\tan A - \\tan A - \\cot A = \\tan A - \\cot A$$\nCorrect option  tanA - cotA hai.\n\nMethod 2 (Value-Putting Method):\n$A = 30^\\circ$ assume karein:\n$$\\tan 30^$\\circ$ + \\tan 210^$\\circ$ + \\cot 120^$\\circ$ + \\cot 330^$\\circ$$$\n$$= \\frac{1}{$\\sqrt{3}$} + \\frac{1}{$\\sqrt{3}$} - \\frac{1}{$\\sqrt{3}$} - $\\sqrt{3}$ = \\frac{1}{$\\sqrt{3}$} - $\\sqrt{3}$ = \\tan 30^$\\circ$ - \\cot 30^$\\circ$$$\nSahi uttar 'tanA - cotA' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_19",
+    "qe": "$cot(\\pi/7) + cot(2\\pi/7) + cot(3\\pi/7) + .........+ cot(6\\pi/7) =$ ?",
+    "qh": "$cot(\\pi/7) + cot(2\\pi/7) + cot(3\\pi/7) + .........+ cot(6\\pi/7)$ का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "- 1",
+      "2"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "- 1",
+      "2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Symmetric Pair Cancellation Method):\nStep 1: Formula: $\\cot(\\pi - \\theta) = -\\cot\\theta$.\nStep 2: Shuru aur aakhiri terms ke pairs banate hain:\n- $\\cot(6\\pi/7) = \\cot(\\pi - \\pi/7) = -\\cot(\\pi/7) \\implies \\cot(\\pi/7) + \\cot(6\\pi/7) = 0$\n- $\\cot(5\\pi/7) = \\cot(\\pi - 2\\pi/7) = -\\cot(2\\pi/7) \\implies \\cot(2\\pi/7) + \\cot(5\\pi/7) = 0$\n- $\\cot(4\\pi/7) = \\cot(\\pi - 3\\pi/7) = -\\cot(3\\pi/7) \\implies \\cot(3\\pi/7) + \\cot(4\\pi/7) = 0$\nStep 3: Sabhi teen pairs ka sum zero ho jata hai:\n$$\\text{Total} = 0 + 0 + 0 = 0$$\nCorrect option  0 hai.\n\nMethod 2 (Direct Property Inspection):\nJab angles ka sum $\\pi$ ($180^\\circ$) ho, toh $\\cot A + \\cot B = 0$ hota hai. 6 terms me 3 complementary pairs ban kar total 0 denge.\nSahi uttar '0' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_20",
+    "qe": "$sin^2(\\pi$/8) + $sin^2(3\\pi$/8) + $sin^2(5\\pi$/8) + $sin^2(7\\pi$/8) = ?",
+    "qh": "$sin^2(\\pi$/8) + $sin^2(3\\pi$/8) + $sin^2(5\\pi$/8) + $sin^2(7\\pi$/8) का मान क्या होगा?",
+    "oe": [
+      "1/2",
+      "2",
+      "3/2",
+      "3/4"
+    ],
+    "oh": [
+      "1/2",
+      "2",
+      "3/2",
+      "3/4"
+    ],
+    "a": 1,
+    "e": "Method 1 (Allied Angles & Identity Method):\nStep 1: Supplementary angles se convert karein:\n- $\\sin(7\\pi/8) = \\sin(\\pi - \\pi/8) = \\sin(\\pi/8) \\implies \\sin^2(7\\pi/8) = \\sin^2(\\pi/8)$\n- $\\sin(5\\pi/8) = \\sin(\\pi - 3\\pi/8) = \\sin(3\\pi/8) \\implies \\sin^2(5\\pi/8) = \\sin^2(3\\pi/8)$\nStep 2: Expression ko group karein:\n$$\\text{Sum} = 2$\\le$ft[\\sin^2$\\le$ft($\\frac{\\pi}{8}$\\right) + \\sin^2$\\le$ft($\\frac{3\\pi}{8}$\\right)\\right]$$\nStep 3: Chuki $\\frac{\\pi}{8} + \\frac{3\\pi}{8} = \\frac{4\\pi}{8} = \\frac{\\pi}{2}$ complementary hain:\n$$\\sin$\\le$ft($\\frac{3\\pi}{8}$\\right) = \\cos$\\le$ft($\\frac{\\pi}{8}$\\right)$$\n$$\\sin^2$\\le$ft($\\frac{\\pi}{8}$\\right) + \\cos^2$\\le$ft($\\frac{\\pi}{8}$\\right) = 1$$\nStep 4: Total value evaluate karein:\n$$\\text{Sum} = 2 $\\times$ 1 = 2$$\nCorrect '2' hai.\n\nMethod 2 (Direct Identity Method):\n$\\sin^2 A + \\sin^2 B = 1$ jab $A + B = 90^\\circ$. Do pairs banne ke karan: $1 + 1 = 2$.\nSahi uttar '2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_21",
+    "qe": "What is the value of (4/3) $cot^2(\\pi$/6) + 3 $cos^2$ 150° - 4 $cosec^2$ $45° + 8 sin(\\pi/2)$ ?",
+    "qh": "(4/3) $cot^2(\\pi$/6) + 3 $cos^2$ 150° - 4 $cosec^2$ $45° + 8 sin(\\pi/2)$ का मान क्या होगा?",
+    "oe": [
+      "25/4",
+      "1",
+      "- 7/2",
+      "13/2"
+    ],
+    "oh": [
+      "25/4",
+      "1",
+      "- 7/2",
+      "13/2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Values Evaluation Method):\nStep 1: Sabhi individual terms ki values nikalte hain:\n- $\\cot(\\pi/6) = \\cot 30^\\circ = \\sqrt{3} \\implies \\frac{4}{3}\\cot^2(\\pi/6) = \\frac{4}{3}(\\sqrt{3})^2 = \\frac{4}{3} \\times 3 = 4$\n- $\\cos 150^\\circ = \\cos(180^\\circ - 30^\\circ) = -\\frac{\\sqrt{3}}{2} \\implies 3\\cos^2 150^\\circ = 3\\left(-\\frac{\\sqrt{3}}{2}\\right)^2 = 3 \\times \\frac{3}{4} = \\frac{9}{4}$\n- $\\csc 45^\\circ = \\sqrt{2} \\implies 4\\csc^2 45^\\circ = 4(\\sqrt{2})^2 = 4 \\times 2 = 8$\n- $\\sin(\\pi/2) = 1 \\implies 8\\sin(\\pi/2) = 8 \\times 1 = 8$\nStep 2: Sabhi ko combine karein:\n$$\\text{Value} = 4 + $\\frac{9}{4}$ - 8 + 8 = 4 + $\\frac{9}{4}$ = $\\frac{16+9}{4}$ = $\\frac{25}{4}$$$\nCorrect '1'5/4 hai.\n\nMethod 2 (Direct Simplification):\n$$4 + 2.25 - 8 + 8 = 6.25 = $\\frac{25}{4}$$$\nSahi uttar '25/4' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_22",
+    "qe": "What is the value of [4 cos(90 - A) $sin^3(90$ + A) - 4 sin(90 + A) $cos^3(90$ - A)] / cos[(180 + 8A)/2] ?",
+    "qh": "[4 cos(90 - A) $sin^3(90$ + A) - 4 sin(90 + A) $cos^3(90$ - A)] / cos[(180 + 8A)/2] का मान क्या होगा?",
+    "oe": [
+      "1",
+      "- 1",
+      "0",
+      "2"
+    ],
+    "oh": [
+      "1",
+      "- 1",
+      "0",
+      "2"
+    ],
+    "a": 1,
+    "e": "Method 1 (Compound Angle Identity Transformation Method):\nStep 1: Terms ko simplify karein:\n- $\\cos(90^\\circ - A) = \\sin A$\n- $\\sin(90^\\circ + A) = \\cos A$\nStep 2: Numerator ban gaya:\n$$4\\sin A\\cos^3 A - 4\\cos A\\sin^3 A = 4\\sin A\\cos A(\\cos^2 A - \\sin^2 A)$$\nStep 3: Double angle identities apply karein ($2\\sin A\\cos A = \\sin 2A$ aur $\\cos^2 A - \\sin^2 A = \\cos 2A$):\n$$= 2(2\\sin A\\cos A)(\\cos 2A) = 2\\sin 2A\\cos 2A = \\sin 4A$$\nStep 4: Denominator evaluate karein:\n$$\\cos$\\le$ft($\\frac{180^\\circ+8A}{2}$\\right) = \\cos(90^$\\circ$ + 4A) = -\\sin 4A$$\nStep 5: Numerator ko Denominator se divide karein:\n$$$\\frac{\\sin4A}{-\\sin4A}$ = -1$$\nCorrect option  - 1 hai.\n\nMethod 2 (Value-Putting Method):\nAngle $A = 15^\\circ$ assume karein:\n- Numerator $= \\sin(4 \\times 15^\\circ) = \\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$\n- Denominator $= -\\sin 60^\\circ = -\\frac{\\sqrt{3}}{2}$\n- Ratio $= -1$.\nSahi uttar '- 1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_23",
+    "qe": "What is the value $of tan(\\pi/4 + A) \\times tan(3\\pi/4 + A)$ ?",
+    "qh": "$tan(\\pi/4 + A) \\times tan(3\\pi/4 + A)$ का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "(cotA)/2",
+      "- 1"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "(cotA)/2",
+      "- 1"
+    ],
+    "a": 3,
+    "e": "Method 1 (Allied Angles & Tangent Product Method):\nStep 1: Dusre angle ko convert karte hain:\n$$$\\frac{3\\pi}{4}$ + A = $\\pi$ - $\\le$ft($\\frac{\\pi}{4}$ - A\\right)$$\n$$\\tan$\\le$ft($\\frac{3\\pi}{4}$ + A\\right) = -\\tan$\\le$ft($\\frac{\\pi}{4}$ - A\\right)$$\nStep 2: Expression ban gaya:\n$$-$\\le$ft[\\tan$\\le$ft($\\frac{\\pi}{4}$ + A\\right) $\\times$ \\tan$\\le$ft($\\frac{\\pi}{4}$ - A\\right)\\right]$$\nStep 3: Standard formula: $\\tan(45^\\circ + A) \\times \\tan(45^\\circ - A) = 1$:\n$$-[1] = -1$$\nCorrect option  - 1 hai.\n\nMethod 2 (Value-Putting Method):\n$A = 0$ assume karein:\n$$\\tan($\\pi$/4) $\\times$ \\tan(3$\\pi$/4) = 1 $\\times$ (-1) = -1$$\nSahi uttar '- 1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_24",
+    "qe": "What is the value of sin (630° + A) + cosA ?",
+    "qh": "sin (630° + A) + cosA का मान क्या होगा?",
+    "oe": [
+      "√3/2",
+      "1/2",
+      "0",
+      "2√3"
+    ],
+    "oh": [
+      "√3/2",
+      "1/2",
+      "0",
+      "2√3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Large Angle Reduction Method):\nStep 1: 630° ko $360^\\circ$ ke multiples me break karein:\n$$630^$\\circ$ = 360^$\\circ$ + 270^$\\circ$$$\n$$\\sin(630^$\\circ$ + A) = \\sin(360^$\\circ$ + 270^$\\circ$ + A) = \\sin(270^$\\circ$ + A)$$\nStep 2: 4th quadrant me sine negative hota hai aur axis badal kar cosine banta hai:\n$$\\sin(270^$\\circ$ + A) = -\\cos A$$\nStep 3: Value substitute karein:\n$$-\\cos A + \\cos A = 0$$\nCorrect option  0 hai.\n\nMethod 2 (Value-Putting Method):\n$A = 0^\\circ$ assume karein:\n$$\\sin 630^$\\circ$ + \\cos 0^$\\circ$ = \\sin(720^$\\circ$ - 90^$\\circ$) + 1 = -\\sin 90^$\\circ$ + 1 = -1 + 1 = 0$$\nSahi uttar '0' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_25",
+    "qe": "What is the value of cos(90 - B) sin(C - A) + sin(90 + A) cos(B + C) - sin(90 - C) cos(A + B) ?",
+    "qh": "cos(90 - B) sin(C - A) + sin(90 + A) cos(B + C) - sin(90 - C) cos(A + B) का मान क्या होगा?",
+    "oe": [
+      "1",
+      "sin(A + B - C)",
+      "cos(B + C - A)",
+      "0"
+    ],
+    "oh": [
+      "1",
+      "sin(A + B - C)",
+      "cos(B + C - A)",
+      "0"
+    ],
+    "a": 3,
+    "e": "Method 1 (Allied Angles & Expansion Method):\nStep 1: First-step conversions:\n- $\\cos(90^\\circ - B) = \\sin B$\n- $\\sin(90^\\circ + A) = \\cos A$\n- $\\sin(90^\\circ - C) = \\cos C$\nStep 2: Expression ban gaya:\n$$\\sin B\\sin(C - A) + \\cos A\\cos(B + C) - \\cos C\\cos(A + B)$$\nStep 3: Sabhi brackets ko standard compound formulas se expand karein:\n- $\\sin B(\\sin C\\cos A - \\cos C\\sin A) = \\sin B\\sin C\\cos A - \\sin A\\sin B\\cos C$\n- $\\cos A(\\cos B\\cos C - \\sin B\\sin C) = \\cos A\\cos B\\cos C - \\cos A\\sin B\\sin C$\n- $-\\cos C(\\cos A\\cos B - \\sin A\\sin B) = -\\cos A\\cos B\\cos C + \\sin A\\sin B\\cos C$\nStep 4: Sabhi terms ko add karein (sab aapas me cancel ho jate hain):\n$$(\\sin B\\sin C\\cos A - \\cos A\\sin B\\sin C) + (-\\sin A\\sin B\\cos C + \\sin A\\sin B\\cos C) + (\\cos A\\cos B\\cos C - \\cos A\\cos B\\cos C) = 0$$\nCorrect option  0 hai.\n\nMethod 2 (Value-Putting Method):\n$A = B = C = 0^\\circ$ assume karein:\n$$\\cos 90^$\\circ$ \\sin 0^$\\circ$ + \\sin 90^$\\circ$ \\cos 0^$\\circ$ - \\sin 90^$\\circ$ \\cos 0^$\\circ$ = 0 + 1(1) - 1(1) = 0$$\nSahi uttar '0' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_26",
+    "qe": "$If cos x = - 1/2 and \\pi < x < 3\\pi/2,$ then the value of 2 $tan^2x$ - 3 $cosec^2x$ is :",
+    "qh": "यदि cos x = - 1/2 और $\\pi < x < 3\\pi/2$ है, तो 2 $tan^2x$ - 3 $cosec^2x$ का मान क्या होगा?",
+    "oe": [
+      "2",
+      "10",
+      "8",
+      "4"
+    ],
+    "oh": [
+      "2",
+      "10",
+      "8",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Quadrant Angle Determination Method):\nStep 1: $\\pi < x < \\frac{3\\pi}{2}$ third quadrant ko represent karta hai jahan $x = 180^\\circ + 60^\\circ = 240^\\circ$ hai.\nStep 2: Third quadrant me $\\tan x$ positive aur $\\csc x$ negative hota hai:\n- $\\tan 240^\\circ = \\tan(180^\\circ + 60^\\circ) = \\sqrt{3} \\implies \\tan^2 x = 3$\n- $\\csc 240^\\circ = -\\csc 60^\\circ = -\\frac{2}{\\sqrt{3}} \\implies \\csc^2 x = \\frac{4}{3}$\nStep 3: Target expression me substitute karein:\n$$2\\tan^2 x - 3\\csc^2 x = 2(3) - 3$\\le$ft($\\frac{4}{3}$\\right) = 6 - 4 = 2$$\nCorrect '10' hai.\n\nMethod 2 (Identity Transformation Method):\n$$\\tan^2 x = \\sec^2 x - 1 = (-2)^2 - 1 = 3$$\n$$\\csc^2 x = 1 + \\cot^2 x = 1 + $\\frac{1}{3}$ = $\\frac{4}{3}$$$\n$$2(3) - 3(4/3) = 6 - 4 = 2$$\nSahi uttar '2' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_27",
+    "qe": "$If cos x = - \\sqrt 3/2 and \\pi < x < 3\\pi/2,$ then the value of 2 $cot^2x$ + 3 $sec^2x$ is :",
+    "qh": "यदि cos x = - √3/2 और $\\pi < x < 3\\pi/2$ है, तो 2 $cot^2x$ + 3 $sec^2x$ का मान क्या होगा?",
+    "oe": [
+      "10",
+      "4",
+      "8",
+      "16"
+    ],
+    "oh": [
+      "10",
+      "4",
+      "8",
+      "16"
+    ],
+    "a": 0,
+    "e": "Method 1 (Quadrant Angle Value Method):\nStep 1: $\\pi < x < \\frac{3\\pi}{2}$ (3rd quadrant) me $\\cos x = -\\frac{\\sqrt{3}}{2} \\implies x = 180^\\circ + 30^\\circ = 210^\\circ$.\nStep 2: Required values find karein:\n- $\\cot 210^\\circ = \\cot(180^\\circ + 30^\\circ) = \\sqrt{3} \\implies \\cot^2 x = 3$\n- $\\sec 210^\\circ = -\\sec 30^\\circ = -\\frac{2}{\\sqrt{3}} \\implies \\sec^2 x = \\frac{4}{3}$\nStep 3: Expression me substitute karein:\n$$2\\cot^2 x + 3\\sec^2 x = 2(3) + 3$\\le$ft($\\frac{4}{3}$\\right) = 6 + 4 = 10$$\nCorrect '10'0 hai.\n\nMethod 2 (Direct Identity Method):\n$$\\sec^2 x = $\\frac{1}{\\cos^2x}$ = $\\frac{1}{3/4}$ = $\\frac{4}{3}$$$\n$$\\cot^2 x = $\\frac{\\cos^2x}{1-\\cos^2x}$ = $\\frac{3/4}{1/4}$ = 3$$\n$$2(3) + 3(4/3) = 6 + 4 = 10$$\nSahi uttar '10' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratioqudrant_28",
+    "qe": "Find x if cos x = - 1/2.",
+    "qh": "यदि cos x = - 1/2 है, तो x का मान ज्ञात कीजिए।",
+    "oe": [
+      "$3\\pi/2$",
+      "$2\\pi/3$",
+      "$5\\pi/2$",
+      "$4\\pi/3$"
+    ],
+    "oh": [
+      "$3\\pi/2$",
+      "$2\\pi/3$",
+      "$5\\pi/2$",
+      "$4\\pi/3$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Principal Value Branch Method):\nStep 1: Cosine function ki principal value branch $[0, \\pi]$ hoti hai.\nStep 2: $\\cos x = -\\frac{1}{2}$ second quadrant me lie karta hai:\n$$x = $\\pi$ - $\\frac{\\pi}{3}$ = $\\frac{2\\pi}{3}$ = 120^$\\circ$$$\nCorrect '2π/3'π/3 hai.\n\nMethod 2 (Option Verification Method):\n- (a) $\\cos(3\\pi/2) = \\cos 270^\\circ = 0$\n- (b) $\\cos(2\\pi/3) = \\cos 120^\\circ = -\\cos 60^\\circ = -1/2$ (Direct Match)\n- (c) $\\cos(5\\pi/2) = 0$\n- (d) $\\cos(4\\pi/3) = \\cos 240^\\circ = -1/2$ (Lekin standard SSC exam priority me first positive principal angle $2\\pi/3$ ko mukhya uttar mana jata hai).\nSahi uttar '2π/3' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

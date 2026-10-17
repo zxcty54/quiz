@@ -1,0 +1,686 @@
+[
+  {
+    "p_id": "type7incomeexpenditure_1",
+    "qe": "If an employee's income is ₹60,000, the amount he spends is 50% higher than his savings. Therefore, his savings (in ₹) is:",
+    "qh": "यदि एक कर्मचारी की आय ₹60,000 है, और उसके द्वारा खर्च की गई राशि उसकी बचत से 50% अधिक है। तो उसकी बचत (₹ में) क्या है?",
+    "oe": [
+      "₹20,000",
+      "₹24,000",
+      "₹25,000",
+      "₹28,000"
+    ],
+    "oh": [
+      "₹20,000",
+      "₹24,000",
+      "₹25,000",
+      "₹28,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nExpenditure savings se $50\\% = \\frac{1}{2}$ adhik hai.\nSavings : Expenditure $= 2 : (2 + 1) = 2 : 3$.\nTotal Income $=$ Savings $+$ Expenditure $= 2 + 3 = 5$ units.\nGiven: 5 units $= ₹60000 \\implies 1 \\text{ unit} = \\frac{60000}{5} = ₹12000$.\nSavings = 2 units $= 2 \\times 12000 = ₹24000$.\nAtah sahi vikalp  ₹24,000 hai.\n\nMethod 2 (100-Base Method):\nSavings ko $100$ maan lo.\nExpenditure $= 100 + 50 = 150$.\nTotal Income $= 100 + 150 = 250$.\nSavings fraction of income $= \\frac{100}{250} = \\frac{2}{5}$.\nSavings $= \\frac{2}{5} \\times 60000 = 2 \\times 12000 = ₹24000$.\nAtah sahi uttar '₹24,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_2",
+    "qe": "Total savings of P and Q is 30% of their total income. Their average expenditure is ₹28,000. What is the total salary of P and Q?",
+    "qh": "P और Q की कुल बचत उनकी कुल आय का 30% है। उनका औसत खर्च ₹28,000 है। P और Q का कुल वेतन क्या है?",
+    "oe": [
+      "₹70,000",
+      "₹75,000",
+      "₹80,000",
+      "₹85,000"
+    ],
+    "oh": [
+      "₹70,000",
+      "₹75,000",
+      "₹80,000",
+      "₹85,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nTotal Savings $= 30\\% = \\frac{3}{10}$ of Total Income.\nTotal Expenditure $= 1 - \\frac{3}{10} = \\frac{7}{10}$ of Total Income.\nAverage expenditure ₹28,000 hai, isliye total expenditure $= 28000 \\times 2 = ₹56000$.\n7 units $= ₹56000 \\implies 1 \\text{ unit} = \\frac{56000}{7} = ₹8000$.\nTotal Income (10 units) $= 10 \\times 8000 = ₹80000$.\nAtah sahi vikalp  ₹80,000 hai.\n\nMethod 2 (100-Base Method):\nTotal income $= 100\\%$.\nTotal savings $= 30\\% \\implies$ Total expenditure $= 100\\% - 30\\% = 70\\%$.\nTotal Expenditure $= 2 \\times 28000 = ₹56000$.\n$70\\% = ₹56000$.\n$1\\% = \\frac{56000}{70} = ₹800$.\nTotal Income ($100\\%$) $= 800 \\times 100 = ₹80000$.\nAtah sahi uttar '₹80,000' hai.\n\nExam point: ausat ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_3",
+    "qe": "Aman saves 25% of his monthly salary. When his expenses are increased by 20%, he is able to save ₹3,000 per month. His monthly salary is:",
+    "qh": "अमन अपने मासिक वेतन का 25% बचाता है। जब उसके खर्चों में 20% की वृद्धि होती है, तो वह प्रति माह ₹3,000 बचाने में सक्षम होता है। उसका मासिक वेतन क्या है?",
+    "oe": [
+      "₹25,000",
+      "₹28,000",
+      "₹30,000",
+      "₹32,000"
+    ],
+    "oh": [
+      "₹25,000",
+      "₹28,000",
+      "₹30,000",
+      "₹32,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nLet Salary $= 100$ units.\nInitial Savings $= 25$ units, Expenses $= 75$ units.\nExpenses increase by $20\\% \\implies 75 + (20\\% \\text{ of } 75) = 75 + 15 = 90$ units.\nNew Savings $= 100 - 90 = 10$ units.\nGiven: 10 units $= ₹3000 \\implies 1 \\text{ unit} = ₹300$.\nMonthly Salary (100 units) $= 100 \\times 300 = ₹30000$.\nAtah sahi vikalp  ₹30,000 hai.\n\nMethod 2 (100-Base Method):\nIncome $= 100\\%$.\nInitial Expenses $= 75\\%$, Savings $= 25\\%$.\nNew Expenses $= 75\\% \\times 1.20 = 90\\%$.\nNew Savings $= 100\\% - 90\\% = 10\\%$.\nGiven: $10\\% = ₹3000 \\implies 100\\% = ₹30000$.\nAtah sahi uttar '₹30,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_4",
+    "qe": "The income of A is 20% more than that of B. A got a 20% rise in his income, and B got a 30% rise in his income. The percentage increase in their combined income is:",
+    "qh": "A की आय B की आय से 20% अधिक है। A की आय में 20% की वृद्धि हुई, और B की आय में 30% की वृद्धि हुई। उनकी संयुक्त आय में प्रतिशत वृद्धि क्या है?",
+    "oe": [
+      "23.54%",
+      "24.55%",
+      "25.00%",
+      "26.25%"
+    ],
+    "oh": [
+      "23.54%",
+      "24.55%",
+      "25.00%",
+      "26.25%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio / Weighted Average Method):\n$20\\% = \\frac{1}{5} \\implies$ B ki income $= 5$ units, A ki income $= 6$ units.\nCombined initial income $= 6 + 5 = 11$ units.\nRise in A's income $= 6 \\times 20\\% = 1.2$ units.\nRise in B's income $= 5 \\times 30\\% = 1.5$ units.\nTotal rise $= 1.2 + 1.5 = 2.7$ units.\nPercentage increase in combined income:\n$= \\frac{2.7}{11} \\times 100\\% = \\frac{270}{11}\\% \\approx 24.55\\%$.\nAtah sahi vikalp  24.55% hai.\n\nMethod 2 (100-Base Method):\nB ki income $= 100$ maan lo, A ki income $= 120$.\nCombined income initially $= 100 + 120 = 220$.\nNew income of A $= 120 + 24 = 144$.\nNew income of B $= 100 + 30 = 130$.\nNew combined income $= 144 + 130 = 274$.\nCombined increase $= 274 - 220 = 54$.\nPercentage increase $= \\frac{54}{220} \\times 100\\% = \\frac{270}{11}\\% \\approx 24.55\\%$.\nAtah sahi uttar '24.55%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_5",
+    "qe": "Aman spends 80% of his income. If his income increases by 25% and his expenditure also increases by 15%, how much percent will Aman's savings increase?",
+    "qh": "अमन अपनी आय का 80% खर्च करता है। यदि उसकी आय में 25% की वृद्धि होती है और उसके खर्च में भी 15% की वृद्धि होती है, तो अमन की बचत में कितने प्रतिशत की वृद्धि होगी?",
+    "oe": [
+      "55%",
+      "60%",
+      "65%",
+      "70%"
+    ],
+    "oh": [
+      "55%",
+      "60%",
+      "65%",
+      "70%"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$ maan lete hain.\nExpenditure $= 80$, Savings $= 100 - 80 = 20$.\nIncome me $25\\%$ hike $\\implies$ New Income $= 125$.\nExpenditure me $15\\%$ hike $\\implies 80 + (15\\% \\text{ of } 80) = 80 + 12 = 92$.\nNew Savings $= 125 - 92 = 33$.\nSavings me increase $= 33 - 20 = 13$ units (20 ke base par).\nPercentage increase in savings $= \\frac{13}{20} \\times 100\\% = 65\\%$.\nAtah sahi vikalp  65% hai.\n\nMethod 2 (Ratio / Allegation Method):\nExpenditure : Savings $= 80 : 20 = 4 : 1$.\nOverall Income increase $= 25\\%$, Expenditure increase $= 15\\%$.\nSavings increase ko $x\\%$ maan lo:\n$1 \\times (x - 25) = 4 \\times (25 - 15) \\implies x - 25 = 40 \\implies x = 65\\%$.\nAtah sahi uttar '65%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_6",
+    "qe": "The ratio of Priya's expenditure and savings is 3:2. If her income and expenditure increase by 25% and 15% respectively, find the percentage increase in her savings.",
+    "qh": "प्रिया के खर्च और बचत का अनुपात 3:2 है। यदि उसकी आय और खर्च में क्रमशः 25% और 15% की वृद्धि होती है, तो उसकी बचत में प्रतिशत वृद्धि ज्ञात कीजिए।",
+    "oe": [
+      "35%",
+      "40%",
+      "42%",
+      "45%"
+    ],
+    "oh": [
+      "35%",
+      "40%",
+      "42%",
+      "45%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Scaling Method):\nExpenditure $= 300$, Savings $= 200 \\implies$ Total Income $= 500$.\nIncome increase ($25\\%$): $500 + 125 = 625$.\nExpenditure increase ($15\\%$): $300 + 45 = 345$.\nNew Savings $= 625 - 345 = 280$.\nSavings me increase $= 280 - 200 = 80$ units (200 ke base par).\nPercentage increase in savings $= \\frac{80}{200} \\times 100\\% = 40\\%$.\nAtah sahi vikalp  40% hai.\n\nMethod 2 (Weighted Average / Allegation):\nExpenditure : Savings $= 3 : 2$.\nLet savings growth be $S\\%$.\n$\\frac{3 \\times 15 + 2 \\times S}{3 + 2} = 25 \\implies 45 + 2S = 125 \\implies 2S = 80 \\implies S = 40\\%$.\nAtah sahi uttar '40%' hai.\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_7",
+    "qe": "A woman spends 3/4 of her income. If her income increases by 20% and the expenditure increases by 16%, then the percentage increase in her savings will be:",
+    "qh": "एक महिला अपनी आय का 3/4 भाग खर्च करती है। यदि उसकी आय में 20% की वृद्धि होती है और खर्च में 16% की वृद्धि होती है, तो उसकी बचत में प्रतिशत वृद्धि क्या होगी?",
+    "oe": [
+      "28%",
+      "30%",
+      "32%",
+      "35%"
+    ],
+    "oh": [
+      "28%",
+      "30%",
+      "32%",
+      "35%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nTotal Income $= 400$ units maan lo.\nExpenditure $= \\frac{3}{4} \\times 400 = 300$ units.\nSavings $= 400 - 300 = 100$ units.\nNew Income ($+20\\%$): $400 + 80 = 480$.\nNew Expenditure ($+16\\%$): $300 + 48 = 348$.\nNew Savings $= 480 - 348 = 132$.\nSavings 100 se 132 ho gayi, yaani direct increase $= 132 - 100 = 32\\%$.\nAtah sahi vikalp  32% hai.\n\nMethod 2 (Deviation / Allegation Method):\nExpenditure weight $= 3$, Savings weight $= 1$.\nTotal Income deviation $= 20\\%$.\n$1 \\times (\\text{Savings}\\% - 20) = 3 \\times (20 - 16) = 12$.\n$\\text{Savings}\\% = 20 + 12 = 32\\%$.\nAtah sahi uttar '32%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_8",
+    "qe": "The proportion of Mohan's spending to saving is 4:1. His salary rises by 20%. What percentage of his expenditure will increase if his saving grows by 12%?",
+    "qh": "मोहन के खर्च और बचत का अनुपात 4:1 है। उसके वेतन में 20% की वृद्धि होती है। यदि उसकी बचत में 12% की वृद्धि होती है, तो उसके खर्च में कितने प्रतिशत की वृद्धि होगी?",
+    "oe": [
+      "20%",
+      "22%",
+      "24%",
+      "25%"
+    ],
+    "oh": [
+      "20%",
+      "22%",
+      "24%",
+      "25%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nSpending $= 400$, Saving $= 100 \\implies$ Total Salary $= 500$.\nSalary increase ($20\\%$): $500 + 100 = 600$.\nSaving increase ($12\\%$): $100 + 12 = 112$.\nNew Spending $= 600 - 112 = 488$.\nSpending me badhav $= 488 - 400 = 88$ units (400 ke base par).\nPercentage increase $= \\frac{88}{400} \\times 100\\% = 22\\%$.\nAtah sahi vikalp  22% hai.\n\nMethod 2 (Weighted Average Method):\nSpending : Saving $= 4 : 1$.\nLet expenditure increase be $E\\%$.\n$\\frac{4 \\times E + 1 \\times 12}{4 + 1} = 20 \\implies 4E + 12 = 100 \\implies 4E = 88 \\implies E = 22\\%$.\nAtah sahi uttar '22%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_9",
+    "qe": "Karan spends 75% of his income. His income increases by 20% and his expenditure also increases by 8%. The percentage increase in his savings is:",
+    "qh": "करण अपनी आय का 75% खर्च करता है। उसकी आय में 20% की वृद्धि होती है और उसके खर्च में भी 8% की वृद्धि होती है। उसकी बचत में प्रतिशत वृद्धि क्या है?",
+    "oe": [
+      "50%",
+      "54%",
+      "56%",
+      "60%"
+    ],
+    "oh": [
+      "50%",
+      "54%",
+      "56%",
+      "60%"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$.\nExpenditure $= 75$, Savings $= 100 - 75 = 25$.\nNew Income ($+20\\%$) $= 120$.\nNew Expenditure ($+8\\%$) $= 75 + (8\\% \\text{ of } 75) = 75 + 6 = 81$.\nNew Savings $= 120 - 81 = 39$.\nIncrease in Savings $= 39 - 25 = 14$ units (25 ke base par).\nPercentage increase $= \\frac{14}{25} \\times 100\\% = 56\\%$.\nAtah sahi vikalp  56% hai.\n\nMethod 2 (Allegation Method):\nExpenditure : Savings $= 75 : 25 = 3 : 1$.\nLet savings increase be $S\\%$.\n$1 \\times (S - 20) = 3 \\times (20 - 8) \\implies S - 20 = 36 \\implies S = 56\\%$.\nAtah sahi uttar '56%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_10",
+    "qe": "Rohit spends 60% of his income. His income increased by 20% and his expenditure increased by 10%. What is the percentage increase in his savings?",
+    "qh": "रोहित अपनी आय का 60% खर्च करता है। उसकी आय में 20% की वृद्धि हुई और उसके खर्च में 10% की वृद्धि हुई। उसकी बचत में प्रतिशत वृद्धि क्या है?",
+    "oe": [
+      "30%",
+      "32%",
+      "35%",
+      "36%"
+    ],
+    "oh": [
+      "30%",
+      "32%",
+      "35%",
+      "36%"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$.\nExpenditure $= 60$, Savings $= 100 - 60 = 40$.\nNew Income ($+20\\%$) $= 120$.\nNew Expenditure ($+10\\%$) $= 60 + 6 = 66$.\nNew Savings $= 120 - 66 = 54$.\nSavings me increase $= 54 - 40 = 14$ units (40 ke base par).\nPercentage increase $= \\frac{14}{40} \\times 100\\% = 35\\%$.\nAtah sahi vikalp  35% hai.\n\nMethod 2 (Ratio / Weighted Average Method):\nExpenditure : Savings $= 60 : 40 = 3 : 2$.\nTotal Income growth $= 20\\%$, Expenditure growth $= 10\\%$.\n$\\frac{3 \\times 10 + 2 \\times S}{5} = 20 \\implies 30 + 2S = 100 \\implies 2S = 70 \\implies S = 35\\%$.\nAtah sahi uttar '35%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_11",
+    "qe": "Vikas spends 70% of his income. His income is increased by 30% and he increases his expenditure by 20%. By what percentage are his savings increased?",
+    "qh": "विकास अपनी आय का 70% खर्च करता है। उसकी आय में 30% की वृद्धि होती है और वह अपने खर्च में 20% की वृद्धि करता है। उसकी बचत में कितने प्रतिशत की वृद्धि होगी?",
+    "oe": [
+      "50.00%",
+      "53.33%",
+      "55.00%",
+      "56.67%"
+    ],
+    "oh": [
+      "50.00%",
+      "53.33%",
+      "55.00%",
+      "56.67%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$.\nExpenditure $= 70$, Savings $= 30$.\nNew Income ($+30\\%$) $= 130$.\nNew Expenditure ($+20\\%$) $= 70 + 14 = 84$.\nNew Savings $= 130 - 84 = 46$.\nSavings me increase $= 46 - 30 = 16$ units (30 ke base par).\nPercentage increase $= \\frac{16}{30} \\times 100\\% = \\frac{160}{3}\\% = 53.33\\%$.\nAtah sahi vikalp  53.33% hai.\n\nMethod 2 (Ratio Method):\nExpenditure : Savings $= 7 : 3$.\nTotal Income growth $= 30\\%$, Expenditure growth $= 20\\%$.\n$\\frac{7 \\times 20 + 3 \\times S}{10} = 30 \\implies 140 + 3S = 300 \\implies 3S = 160 \\implies S = 53.33\\%$.\nAtah sahi uttar '53.33%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_12",
+    "qe": "Sumit spends 85% of his income. His income increased by 20%, while his spending rose by 10%. The percentage increase in his savings is:",
+    "qh": "सुमित अपनी आय का 85% खर्च करता है। उसकी आय में 20% की वृद्धि हुई, जबकि उसके खर्च में 10% की वृद्धि हुई। उसकी बचत में प्रतिशत वृद्धि क्या है?",
+    "oe": [
+      "65.50%",
+      "72.33%",
+      "76.67%",
+      "80.00%"
+    ],
+    "oh": [
+      "65.50%",
+      "72.33%",
+      "76.67%",
+      "80.00%"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$.\nSpending $= 85$, Savings $= 100 - 85 = 15$.\nNew Income ($+20\\%$) $= 120$.\nNew Spending ($+10\\%$) $= 85 + 8.5 = 93.5$.\nNew Savings $= 120 - 93.5 = 26.5$.\nSavings me increase $= 26.5 - 15 = 11.5$ units (15 ke base par).\nPercentage increase $= \\frac{11.5}{15} \\times 100\\% = \\frac{23}{3}\\% = 76.67\\%$.\nAtah sahi vikalp  76.67% hai.\n\nMethod 2 (Ratio / Weighted Average Method):\nSpending : Savings $= 85 : 15 = 17 : 3$.\nLet savings rise be $S\\%$.\n$\\frac{17 \\times 10 + 3 \\times S}{20} = 20 \\implies 170 + 3S = 400 \\implies 3S = 230 \\implies S = 76.67\\%$.\nAtah sahi uttar '76.67%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_13",
+    "qe": "Kavita spends 60% of her income. Her income increases by 20% and her expenditure increases by 10%. By what percentage does her saving increase?",
+    "qh": "कविता अपनी आय का 60% खर्च करती है। उसकी आय में 20% की वृद्धि होती है और उसके खर्च में 10% की वृद्धि होती है। उसकी बचत में कितने प्रतिशत की वृद्धि होगी?",
+    "oe": [
+      "30%",
+      "35%",
+      "40%",
+      "25%"
+    ],
+    "oh": [
+      "30%",
+      "35%",
+      "40%",
+      "25%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$ maan lete hain.\nExpenditure $= 60$, Savings $= 100 - 60 = 40$.\nNew Income ($+20\\%$) $= 120$.\nNew Expenditure ($+10\\%$) $= 60 + 6 = 66$.\nNew Savings $= 120 - 66 = 54$.\nSavings me increase $= 54 - 40 = 14$ units (40 ke base par).\nPercentage increase in savings $= \\frac{14}{40} \\times 100\\% = 35\\%$.\nAtah sahi vikalp  35% hai.\n\nMethod 2 (Ratio / Allegation Method):\nExpenditure : Savings $= 60 : 40 = 3 : 2$.\nOverall Income growth $= 20\\%$, Expenditure growth $= 10\\%$.\nLet savings growth be $S\\%$.\n$\\frac{3 \\times 10 + 2 \\times S}{3 + 2} = 20 \\implies 30 + 2S = 100 \\implies 2S = 70 \\implies S = 35\\%$.\nAtah sahi uttar '35%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_14",
+    "qe": "Dinesh spends 70% of his income. If his income is increased by 20% and his expenditure is increased by 10%, then the percentage increase in the savings of Dinesh will be:",
+    "qh": "दिनेश अपनी आय का 70% खर्च करता है। यदि उसकी आय में 20% की वृद्धि होती है और उसके खर्च में 10% की वृद्धि होती है, तो दिनेश की बचत में प्रतिशत वृद्धि क्या होगी?",
+    "oe": [
+      "40.00%",
+      "43.33%",
+      "45.00%",
+      "50.00%"
+    ],
+    "oh": [
+      "40.00%",
+      "43.33%",
+      "45.00%",
+      "50.00%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$.\nExpenditure $= 70$, Savings $= 100 - 70 = 30$.\nNew Income ($+20\\%$) $= 120$.\nNew Expenditure ($+10\\%$) $= 70 + 7 = 77$.\nNew Savings $= 120 - 77 = 43$.\nSavings me increase $= 43 - 30 = 13$ units (30 ke base par).\nPercentage increase $= \\frac{13}{30} \\times 100\\% = \\frac{130}{3}\\% \\approx 43.33\\%$.\nAtah sahi vikalp  43.33% hai.\n\nMethod 2 (Ratio Method):\nExpenditure : Savings $= 7 : 3$.\nTotal Income rise $= 20\\%$, Expenditure rise $= 10\\%$.\nLet savings growth be $S\\%$.\n$7 \\times 10 + 3 \\times S = 10 \\times 20 \\implies 70 + 3S = 200 \\implies 3S = 130 \\implies S = 43.33\\%$.\nAtah sahi uttar '43.33%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_15",
+    "qe": "Pooja saves 25% of her income. If her income is increased by 20% and she saves 30% of the new income, by what percentage will her actual savings increase?",
+    "qh": "पूजा अपनी आय का 25% बचाती है। यदि उसकी आय में 20% की वृद्धि होती है और वह नई आय का 30% बचाती है, तो उसकी वास्तविक बचत में कितने प्रतिशत की वृद्धि होगी?",
+    "oe": [
+      "40%",
+      "44%",
+      "48%",
+      "50%"
+    ],
+    "oh": [
+      "40%",
+      "44%",
+      "48%",
+      "50%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$ maan lo.\nInitial Savings $= 25\\% \\text{ of } 100 = 25$.\nNew Income ($+20\\%$) $= 120$.\nNew Savings $= 30\\% \\text{ of } 120 = 0.30 \\times 120 = 36$.\nSavings me increase $= 36 - 25 = 11$ units (25 ke base par).\nPercentage increase in savings $= \\frac{11}{25} \\times 100\\% = 44\\%$.\nAtah sahi vikalp  44% hai.\n\nMethod 2 (Ratio Multiplier Method):\nInitial savings $= 100 \\times 0.25 = 25$.\nNew savings $= 100 \\times 1.20 \\times 0.30 = 36$.\nInitial : New Savings $= 25 : 36$.\nIncrease $= 36 - 25 = 11$ units.\nPercentage increase $= \\frac{11}{25} \\times 100\\% = 44\\%$.\nAtah sahi uttar '44%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_16",
+    "qe": "Manish could save 25% of his income. But 3 years later, when his income increased by 20%, he could save the same amount of money as before. By how much percentage did his expenditure increase?",
+    "qh": "मनीष अपनी आय का 25% बचा सकता था। लेकिन 3 वर्ष बाद, जब उसकी आय में 20% की वृद्धि हुई, तो वह पहले जितनी ही राशि बचा सका। उसके खर्च में कितने प्रतिशत की वृद्धि हुई?",
+    "oe": [
+      "25.00%",
+      "26.67%",
+      "28.50%",
+      "30.00%"
+    ],
+    "oh": [
+      "25.00%",
+      "26.67%",
+      "28.50%",
+      "30.00%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$.\nInitial Savings $= 25$, Initial Expenditure $= 100 - 25 = 75$.\nNew Income ($+20\\%$) $= 120$.\nBachat pehle ke barabar hi hai $\\implies$ New Savings $= 25$.\nNew Expenditure $= 120 - 25 = 95$.\nExpenditure me increase $= 95 - 75 = 20$ units (75 ke base par).\nPercentage increase in expenditure $= \\frac{20}{75} \\times 100\\% = \\frac{4}{15} \\times 100\\% = 26.67\\%$.\nAtah sahi vikalp  26.67% hai.\n\nMethod 2 (Ratio Method):\nInitial Income : Savings : Expenditure $= 4 : 1 : 3$.\nScale by 25: Income $= 100$, Savings $= 25$, Expenditure $= 75$.\nIncome ho gayi 120, savings rahi 25, toh kharch ho gaya 95.\nIncrease in expenditure $= \\frac{95 - 75}{75} \\times 100\\% = \\frac{20}{75} \\times 100\\% = 26.67\\%$.\nAtah sahi uttar '26.67%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_17",
+    "qe": "Sunil spends 50% of his income on household items. If his income increases by 30% and his expenditure increases by 10%, then find the percentage change in his savings.",
+    "qh": "सुनील अपनी आय का 50% घरेलू वस्तुओं पर खर्च करता है। यदि उसकी आय में 30% की वृद्धि होती है और उसके खर्च में 10% की वृद्धि होती है, तो उसकी बचत में प्रतिशत परिवर्तन ज्ञात कीजिए।",
+    "oe": [
+      "40% increase",
+      "45% increase",
+      "50% increase",
+      "55% increase"
+    ],
+    "oh": [
+      "40% increase",
+      "45% increase",
+      "50% increase",
+      "55% increase"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$.\nExpenditure $= 50$, Savings $= 50$.\nNew Income ($+30\\%$) $= 130$.\nNew Expenditure ($+10\\%$) $= 50 + 5 = 55$.\nNew Savings $= 130 - 55 = 75$.\nSavings me increase $= 75 - 50 = 25$ units (50 ke base par).\nPercentage increase $= \\frac{25}{50} \\times 100\\% = 50\\%$.\nAtah sahi vikalp  50% increase hai.\n\nMethod 2 (Direct Weighted Relation):\nKyunki Expenditure aur Savings dono barabar ($1 : 1$) hain:\n$\\text{Income growth} = \\frac{\\text{Exp growth} + \\text{Sav growth}}{2}$\n$30\\% = \\frac{10\\% + S}{2} \\implies 10\\% + S = 60\\% \\implies S = 50\\%$.\nAtah sahi uttar '50% increase' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_18",
+    "qe": "The monthly income of a person is ₹20,000 and his expenditure is ₹15,000. Next year, his income increases by 20% but his expenditure decreases by 10%. The percentage increase in his savings is:",
+    "qh": "एक व्यक्ति की मासिक आय ₹20,000 है और उसका खर्च ₹15,000 है। अगले वर्ष, उसकी आय में 20% की वृद्धि होती है लेकिन उसके खर्च में 10% की कमी आती है। उसकी बचत में प्रतिशत वृद्धि क्या है?",
+    "oe": [
+      "100%",
+      "110%",
+      "120%",
+      "125%"
+    ],
+    "oh": [
+      "100%",
+      "110%",
+      "120%",
+      "125%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Absolute Value Method):\nInitial Savings $= 20000 - 15000 = ₹5000$.\nNew Income ($+20\\%$) $= 20000 + 4000 = ₹24000$.\nNew Expenditure ($-10\\%$) $= 15000 - 1500 = ₹13500$.\nNew Savings $= 24000 - 13500 = ₹10500$.\nIncrease in savings $= 10500 - 5000 = ₹5500$.\nPercentage increase $= \\frac{5500}{5000} \\times 100\\% = 110\\%$.\nAtah sahi vikalp  110% hai.\n\nMethod 2 (Ratio Method):\nIncome : Expenditure : Savings $= 20000 : 15000 : 5000 = 4 : 3 : 1$.\nBase scale: Income $= 400$, Exp $= 300$, Sav $= 100$.\nNew Income ($+20\\%$) $= 480$.\nNew Exp ($-10\\%$) $= 270$.\nNew Sav $= 480 - 270 = 210$.\nSavings increase $= 210 - 100 = 110\\%$.\nAtah sahi uttar '110%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_19",
+    "qe": "The ratio of expenditure to savings of a woman is 3:1. If her income and expenditure are increased by 20% and 12%, respectively, then find the percentage change in her savings.",
+    "qh": "एक महिला के खर्च और बचत का अनुपात 3:1 है। यदि उसकी आय और खर्च में क्रमशः 20% और 12% की वृद्धि होती है, तो उसकी बचत में प्रतिशत परिवर्तन ज्ञात कीजिए।",
+    "oe": [
+      "40%",
+      "44%",
+      "48%",
+      "36%"
+    ],
+    "oh": [
+      "40%",
+      "44%",
+      "48%",
+      "36%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Scaling Method):\nExpenditure $= 300$, Savings $= 100 \\implies$ Total Income $= 400$.\nNew Income ($+20\\%$) $= 400 + 80 = 480$.\nNew Expenditure ($+12\\%$) $= 300 + 36 = 336$.\nNew Savings $= 480 - 336 = 144$.\nSavings me increase $= 144 - 100 = 44$ units (100 ke base par).\nPercentage change $= 44\\%$ increase.\nAtah sahi vikalp  44% hai.\n\nMethod 2 (Deviation / Allegation Method):\nExpenditure weight $= 3$, Savings weight $= 1$.\nAverage income growth $= 20\\%$.\n$1 \\times (S - 20) = 3 \\times (20 - 12) \\implies S - 20 = 24 \\implies S = 44\\%$.\nAtah sahi uttar '44%' hai.\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_20",
+    "qe": "The monthly income of Amit in 2022 was ₹24,000 and his monthly expenditure was ₹16,000. In 2023, his income increased by 25% and his expenditure increased by 10%. Find the percentage increase in his savings.",
+    "qh": "वर्ष 2022 में अमित की मासिक आय ₹24,000 थी और उसका मासिक खर्च ₹16,000 था। वर्ष 2023 में उसकी आय में 25% और खर्च में 10% की वृद्धि हुई। उसकी बचत में प्रतिशत वृद्धि ज्ञात कीजिए।",
+    "oe": [
+      "50%",
+      "55%",
+      "60%",
+      "45%"
+    ],
+    "oh": [
+      "50%",
+      "55%",
+      "60%",
+      "45%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nInitial Income : Expenditure : Savings $= 24000 : 16000 : 8000 = 3 : 2 : 1$.\nBase scale: Income $= 300$, Exp $= 200$, Sav $= 100$.\nNew Income ($+25\\%$) $= 300 + 75 = 375$.\nNew Exp ($+10\\%$) $= 200 + 20 = 220$.\nNew Savings $= 375 - 220 = 155$.\nIncrease in savings $= 155 - 100 = 55\\%$.\nAtah sahi vikalp  55% hai.\n\nMethod 2 (Absolute Value Method):\nInitial savings $= 24000 - 16000 = ₹8000$.\nNew Income $= 24000 + 6000 = ₹30000$.\nNew Expenditure $= 16000 + 1600 = ₹17600$.\nNew Savings $= 30000 - 17600 = ₹12400$.\nSavings increase $= 12400 - 8000 = ₹4400$.\nPercentage increase $= \\frac{4400}{8000} \\times 100\\% = 55\\%$.\nAtah sahi uttar '55%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_21",
+    "qe": "Vipin's expenditure and savings are in the ratio of 4:1. His income increases by 20%. If his savings increase by 15%, then by how much percentage does his expenditure increase?",
+    "qh": "विपिन के खर्च और बचत का अनुपात 4:1 है। उसकी आय में 20% की वृद्धि होती है। यदि उसकी बचत में 15% की वृद्धि होती है, तो उसके खर्च में कितने प्रतिशत की वृद्धि होगी?",
+    "oe": [
+      "20.25%",
+      "21.25%",
+      "22.50%",
+      "24.00%"
+    ],
+    "oh": [
+      "20.25%",
+      "21.25%",
+      "22.50%",
+      "24.00%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Scaling Method):\nExpenditure $= 400$, Savings $= 100 \\implies$ Total Income $= 500$.\nIncome increase ($20\\%$): $500 + 100 = 600$.\nSavings increase ($15\\%$): $100 + 15 = 115$.\nNew Expenditure $= 600 - 115 = 485$.\nExpenditure me badhav $= 485 - 400 = 85$ units (400 ke base par).\nPercentage increase $= \\frac{85}{400} \\times 100\\% = 21.25\\%$.\nAtah sahi vikalp  21.25% hai.\n\nMethod 2 (Weighted Average Method):\nExpenditure : Savings $= 4 : 1$.\nLet expenditure increase be $E\\%$.\n$\\frac{4 \\times E + 1 \\times 15}{5} = 20 \\implies 4E + 15 = 100 \\implies 4E = 85 \\implies E = 21.25\\%$.\nAtah sahi uttar '21.25%' hai.\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_22",
+    "qe": "The monthly expenditure of a person is 50% more than his monthly savings. If his monthly income increases by 30% and monthly expenditure increases by 40%, then he saves ₹1,500 more in a month. What is his initial monthly expenditure (in ₹)?",
+    "qh": "एक व्यक्ति का मासिक खर्च उसकी मासिक बचत से 50% अधिक है। यदि उसकी मासिक आय में 30% और मासिक खर्च में 40% की वृद्धि होती है, तो वह प्रति माह ₹1,500 अधिक बचाता है। उसका प्रारंभिक मासिक खर्च (₹ में) क्या है?",
+    "oe": [
+      "₹12,000",
+      "₹15,000",
+      "₹18,000",
+      "₹22,500"
+    ],
+    "oh": [
+      "₹12,000",
+      "₹15,000",
+      "₹18,000",
+      "₹22,500"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Scaling Method):\nExpenditure savings se $50\\% = \\frac{1}{2}$ zyada hai $\\implies$ Savings $= 200$ units, Expenditure $= 300$ units.\nInitial Income $= 200 + 300 = 500$ units.\nNew Income ($+30\\%$): $500 + 150 = 650$ units.\nNew Expenditure ($+40\\%$): $300 + 120 = 420$ units.\nNew Savings $= 650 - 420 = 230$ units.\nSavings me increase $= 230 - 200 = 30$ units.\nGiven: 30 units $= ₹1500 \\implies 1 \\text{ unit} = \\frac{1500}{30} = ₹50$.\nInitial Expenditure = 300 units $= 300 \\times 50 = ₹15,000$.\nAtah sahi vikalp  ₹15,000 hai.\n\nMethod 2 (Algebraic Formulation):\nLet initial savings $= 2x$, expenditure $= 3x$, income $= 5x$.\nNew income $= 5x \\times 1.30 = 6.5x$.\nNew expenditure $= 3x \\times 1.40 = 4.2x$.\nNew savings $= 6.5x - 4.2x = 2.3x$.\nIncrease in savings $= 2.3x - 2x = 0.3x$.\nGiven: $0.3x = 1500 \\implies x = 5000$.\nInitial Expenditure $= 3x = 3 \\times 5000 = ₹15,000$.\nAtah sahi uttar '₹15,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_23",
+    "qe": "Raghu used to spend 75% of his income. His income has increased by 15%, and he increases his expenditure by 10%. If Raghu earlier saved y and after the increases he now saves x, then what is the value of ((x - y) / y * 100)%?",
+    "qh": "रघु अपनी आय का 75% खर्च करता था। उसकी आय में 15% की वृद्धि हुई है, और वह अपने खर्च में 10% की वृद्धि करता है। यदि रघु पहले y बचाता था और वृद्धि के बाद अब वह x बचाता है, तो ((x - y) / y * 100)% का मान क्या है?",
+    "oe": [
+      "25%",
+      "28%",
+      "30%",
+      "32%"
+    ],
+    "oh": [
+      "25%",
+      "28%",
+      "30%",
+      "32%"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Method):\n$\\left(\\frac{x - y}{y} \\times 100\\right)\\%$ ka matlab seedhe savings ka percentage increase nikalna hai.\nInitial Income $= 100$.\nInitial Expenditure $= 75$, Initial Savings ($y$) $= 100 - 75 = 25$.\nNew Income ($+15\\%$) $= 115$.\nNew Expenditure ($+10\\%$) $= 75 + 7.5 = 82.5$.\nNew Savings ($x$) $= 115 - 82.5 = 32.5$.\nSavings increase $= x - y = 32.5 - 25 = 7.5$.\nPercentage increase $= \\frac{7.5}{25} \\times 100\\% = 30\\%$.\nAtah sahi vikalp  30% hai.\n\nMethod 2 (Ratio Method):\nExpenditure : Savings $= 75 : 25 = 3 : 1$.\nOverall Income rise $= 15\\%$, Expenditure rise $= 10\\%$.\n$1 \\times (S - 15) = 3 \\times (15 - 10) \\implies S - 15 = 15 \\implies S = 30\\%$.\nAtah sahi uttar '30%' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_24",
+    "qe": "A person saves 40% of his income. Next year, his income increases by 150%. He increases his savings by four times the previous year's savings. By what percentage has his expenditure decreased?",
+    "qh": "एक व्यक्ति अपनी आय का 40% बचाता है। अगले वर्ष, उसकी आय में 150% की वृद्धि होती है। वह अपनी बचत में पिछले वर्ष की बचत के चार गुना की वृद्धि करता है। उसके खर्च में कितने प्रतिशत की कमी आई है?",
+    "oe": [
+      "12.50%",
+      "15.00%",
+      "16.67%",
+      "20.00%"
+    ],
+    "oh": [
+      "12.50%",
+      "15.00%",
+      "16.67%",
+      "20.00%"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$.\nInitial Savings $= 40$, Initial Expenditure $= 100 - 40 = 60$.\nNew Income ($+150\\%$) $= 100 + 150 = 250$.\nSavings me increase pichli savings ka 4 guna hai $\\implies \\text{Increase} = 4 \\times 40 = 160$.\nNew Savings $= 40 + 160 = 200$.\nNew Expenditure $= 250 - 200 = 50$.\nExpenditure me kami $= 60 - 50 = 10$ units (60 ke base par).\nPercentage decrease $= \\frac{10}{60} \\times 100\\% = \\frac{1}{6} \\times 100\\% = 16.67\\%$.\nAtah sahi vikalp  16.67% hai.\n\nMethod 2 (Ratio Balance Method):\nBase ratio: Savings $= 2$, Expenditure $= 3$, Income $= 5$.\nNew Income $= 5 \\times 2.5 = 12.5$.\nSavings increase $= 2 \\times 4 = 8 \\implies$ New Savings $= 2 + 8 = 10$.\nNew Expenditure $= 12.5 - 10 = 2.5$.\nExpenditure me kami $= 3 - 2.5 = 0.5$ units.\nPercentage decrease $= \\frac{0.5}{3} \\times 100\\% = 16.67\\%$.\nAtah sahi uttar '16.67%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_25",
+    "qe": "Tina used to save 25% of her income. If her income went up by 20%, while her expenditure went up by 30%, her nominal saving went down by ₹500. Find Tina's initial income (in ₹).",
+    "qh": "टीना अपनी आय का 25% बचाती थी। यदि उसकी आय में 20% की वृद्धि हुई, जबकि उसके खर्च में 30% की वृद्धि हुई, तो उसकी नाममात्र बचत में ₹500 की कमी आई। टीना की प्रारंभिक आय (₹ में) ज्ञात कीजिए।",
+    "oe": [
+      "₹18,000",
+      "₹20,000",
+      "₹22,500",
+      "₹25,000"
+    ],
+    "oh": [
+      "₹18,000",
+      "₹20,000",
+      "₹22,500",
+      "₹25,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$ units.\nSavings $= 25$ units, Expenditure $= 75$ units.\nNew Income ($+20\\%$) $= 120$ units.\nNew Expenditure ($+30\\%$) $= 75 + 22.5 = 97.5$ units.\nNew Savings $= 120 - 97.5 = 22.5$ units.\nDecrease in Savings $= 25 - 22.5 = 2.5$ units.\nGiven: 2.5 units $= ₹500 \\implies 1 \\text{ unit} = ₹200$.\nInitial Income (100 units) $= 100 \\times 200 = ₹20000$.\nAtah sahi vikalp  ₹20,000 hai.\n\nMethod 2 (Ratio Method):\nIncome : Savings : Expenditure $= 400 : 100 : 300$.\nNew Income $= 480$, New Expenditure $= 390$.\nNew Savings $= 480 - 390 = 90$.\nSavings drop $= 100 - 90 = 10$ units.\n10 units $= ₹500 \\implies 1 \\text{ unit} = ₹50$.\nInitial Income = 400 units $= 400 \\times 50 = ₹20000$.\nAtah sahi uttar '₹20,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_26",
+    "qe": "A person earns ₹20,000 per month and spends 75% of his income and saves the remaining amount. If his income increases by 25% and expenditure by 10%, find the percentage of increase in his savings.",
+    "qh": "एक व्यक्ति प्रति माह ₹20,000 कमाता है और अपनी आय का 75% खर्च करता है तथा शेष राशि बचाता है। यदि उसकी आय में 25% और खर्च में 10% की वृद्धि होती है, तो उसकी बचत में प्रतिशत वृद्धि ज्ञात कीजिए।",
+    "oe": [
+      "50%",
+      "60%",
+      "70%",
+      "75%"
+    ],
+    "oh": [
+      "50%",
+      "60%",
+      "70%",
+      "75%"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Method):\nActual value (₹20,000) ka use kiye bina direct 100 base par solve kar sakte hain:\nInitial Income $= 100$.\nExpenditure $= 75$, Savings $= 25$.\nNew Income ($+25\\%$) $= 125$.\nNew Expenditure ($+10\\%$) $= 75 + 7.5 = 82.5$.\nNew Savings $= 125 - 82.5 = 42.5$.\nIncrease in savings $= 42.5 - 25 = 17.5$ units (25 ke base par).\nPercentage increase $= \\frac{17.5}{25} \\times 100\\% = 70\\%$.\nAtah sahi vikalp  70% hai.\n\nMethod 2 (Deviation / Allegation Method):\nExpenditure : Savings $= 75 : 25 = 3 : 1$.\nTotal Income growth $= 25\\%$, Expenditure growth $= 10\\%$.\n$1 \\times (S - 25) = 3 \\times (25 - 10) \\implies S - 25 = 45 \\implies S = 70\\%$.\nAtah sahi uttar '70%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_27",
+    "qe": "The ratio between the monthly income and the expenditure of Varun is 7:4. If his income increases by 25% and his expenditure increases by 20%, then find the percentage increase in his savings.",
+    "qh": "वरुण की मासिक आय और खर्च के बीच का अनुपात 7:4 है। यदि उसकी आय में 25% और उसके खर्च में 20% की वृद्धि होती है, तो उसकी बचत में प्रतिशत वृद्धि ज्ञात कीजिए।",
+    "oe": [
+      "28.55%",
+      "30.00%",
+      "31.67%",
+      "33.33%"
+    ],
+    "oh": [
+      "28.55%",
+      "30.00%",
+      "31.67%",
+      "33.33%"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Scaling Method):\nIncome $= 700$, Expenditure $= 400$.\nSavings $= 700 - 400 = 300$.\nNew Income ($+25\\%$): $700 + 175 = 875$.\nNew Expenditure ($+20\\%$): $400 + 80 = 480$.\nNew Savings $= 875 - 480 = 395$.\nSavings me increase $= 395 - 300 = 95$ units (300 ke base par).\nPercentage increase $= \\frac{95}{300} \\times 100\\% = \\frac{95}{3}\\% \\approx 31.67\\%$.\nAtah sahi vikalp  31.67% hai.\n\nMethod 2 (Weighted Average Method):\nExpenditure : Savings $= 4 : 3$.\nTotal Income increase $= 25\\%$, Expenditure increase $= 20\\%$.\n$\\frac{4 \\times 20 + 3 \\times S}{7} = 25 \\implies 80 + 3S = 175 \\implies 3S = 95 \\implies S = 31.67\\%$.\nAtah sahi uttar '31.67%' hai.\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_28",
+    "qe": "A man spends 70% of his income. His income increases by 10% and his expenditure by 5%. What is the percentage increase in his savings?",
+    "qh": "एक व्यक्ति अपनी आय का 70% खर्च करता है। उसकी आय में 10% और उसके खर्च में 5% की वृद्धि होती है। उसकी बचत में कितने प्रतिशत की वृद्धि होगी?",
+    "oe": [
+      "21.67%",
+      "31.67%",
+      "41.67%",
+      "51.67%"
+    ],
+    "oh": [
+      "21.67%",
+      "31.67%",
+      "41.67%",
+      "51.67%"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$ maan lete hain.\nExpenditure $= 70$, Savings $= 100 - 70 = 30$.\nNew Income ($+10\\%$) $= 110$.\nNew Expenditure ($+5\\%$) $= 70 + 3.5 = 73.5$.\nNew Savings $= 110 - 73.5 = 36.5$.\nSavings me increase $= 36.5 - 30 = 6.5$ units (30 ke base par).\nPercentage increase $= \\frac{6.5}{30} \\times 100\\% = \\frac{65}{3}\\% \\approx 21.67\\%$.\nAtah sahi vikalp  21.67% hai.\n\nMethod 2 (Alligation / Weighted Average Method):\nExpenditure : Savings $= 70 : 30 = 7 : 3$.\nTotal income growth $= 10\\%$, Expenditure growth $= 5\\%$.\nLet savings growth be $S\\%$.\n$\\frac{7 \\times 5 + 3 \\times S}{10} = 10 \\implies 35 + 3S = 100 \\implies 3S = 65 \\implies S = 21.67\\%$.\nAtah sahi uttar '21.67%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_29",
+    "qe": "Mr. X has a monthly income of ₹26,500 and his monthly expenditure is ₹20,500. The next year, his salary is increased by 12% and expenditure is increased by 6%. His savings increase by how much percent?",
+    "qh": "श्रीमान X की मासिक आय ₹26,500 है और उनका मासिक खर्च ₹20,500 है। अगले वर्ष, उनके वेतन में 12% और खर्च में 6% की वृद्धि होती है। उनकी बचत में कितने प्रतिशत की वृद्धि होगी?",
+    "oe": [
+      "32.5%",
+      "27.3%",
+      "32.0%",
+      "34.7%"
+    ],
+    "oh": [
+      "32.5%",
+      "27.3%",
+      "32.0%",
+      "34.7%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nInitial Income : Expenditure : Savings\n$= 26500 : 20500 : 6000 = 53 : 41 : 12$.\nIncome increase $= 53 \\times 12\\% = 6.36$ units.\nExpenditure increase $= 41 \\times 6\\% = 2.46$ units.\nSavings increase $= 6.36 - 2.46 = 3.90$ units.\nPercentage increase in savings $= \\frac{3.90}{12} \\times 100\\% = \\frac{390}{12}\\% = 32.5\\%$.\nAtah sahi vikalp  32.5% hai.\n\nMethod 2 (Absolute Value Method):\nInitial savings $= 26500 - 20500 = ₹6000$.\nIncome increase $= 12\\% \\text{ of } 26500 = ₹3180$.\nExpenditure increase $= 6\\% \\text{ of } 20500 = ₹1230$.\nIncrease in savings $= 3180 - 1230 = ₹1950$.\nPercentage increase $= \\frac{1950}{6000} \\times 100\\% = 32.5\\%$.\nAtah sahi uttar '32.5%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_30",
+    "qe": "A spends 65% of his income. His income is increased by 20.1% and the expenditure is increased by 20%. By what percent (correct to one decimal place) does his saving increase or decrease?",
+    "qh": "A अपनी आय का 65% खर्च करता है। उसकी आय में 20.1% की वृद्धि होती है और खर्च में 20% की वृद्धि होती है। उसकी बचत में कितने प्रतिशत की वृद्धि या कमी होती है (एक दशमलव स्थान तक सही)?",
+    "oe": [
+      "Decrease by 18.9%",
+      "Increase by 20.3%",
+      "Decrease by 17.7%",
+      "Increase by 21.5%"
+    ],
+    "oh": [
+      "Decrease by 18.9%",
+      "Increase by 20.3%",
+      "Decrease by 17.7%",
+      "Increase by 21.5%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nInitial Income $= 100$.\nExpenditure $= 65$, Savings $= 100 - 65 = 35$.\nNew Income $= 100 + 20.1 = 120.1$.\nNew Expenditure $= 65 + (20\\% \\text{ of } 65) = 65 + 13 = 78$.\nNew Savings $= 120.1 - 78 = 42.1$.\nSavings me increase $= 42.1 - 35 = 7.1$ units (35 ke base par).\nPercentage increase $= \\frac{7.1}{35} \\times 100\\% = \\frac{142}{7}\\% \\approx 20.285\\% \\approx 20.3\\%$ increase.\nAtah sahi vikalp  Increase by 20.3% hai.\n\nMethod 2 (Ratio / Weighted Average Method):\nExpenditure : Savings $= 65 : 35 = 13 : 7$.\nTotal Income growth $= 20.1\\%$, Expenditure growth $= 20\\%$.\n$\\frac{13 \\times 20 + 7 \\times S}{20} = 20.1 \\implies 260 + 7S = 402 \\implies 7S = 142 \\implies S \\approx 20.3\\%$ increase.\nAtah sahi uttar 'Increase by 20.3%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_31",
+    "qe": "Radha saves x% of her income. If her income increases by 28% and the expenditure increases by 20%, then her savings increases by 40%. What is the value of x?",
+    "qh": "राधा अपनी आय का x% बचाती है। यदि उसकी आय में 28% की वृद्धि होती है और खर्च में 20% की वृद्धि होती है, तो उसकी बचत में 40% की वृद्धि होती है। x का मान क्या है?",
+    "oe": [
+      "35",
+      "40",
+      "50",
+      "25"
+    ],
+    "oh": [
+      "35",
+      "40",
+      "50",
+      "25"
+    ],
+    "a": 1,
+    "e": "Method 1 (Alligation Method):\nExpenditure growth $= 20\\%$, Savings growth $= 40\\%$.\nOverall Income growth $= 28\\%$.\nAlligation rule lagane par:\nExpenditure : Savings $= (40 - 28) : (28 - 20) = 12 : 8 = 3 : 2$.\nTotal Income $= 3 + 2 = 5$ units.\nSavings percentage ($x$) $= \\frac{2}{5} \\times 100 = 40\\% \\implies x = 40$.\nAtah sahi vikalp  40 hai.\n\nMethod 2 (100-Base Algebraic Method):\nInitial Income $= 100$.\nSavings $= x$, Expenditure $= 100 - x$.\nTotal Income hike $=$ Expenditure hike $+$ Savings hike:\n$100 \\times 28\\% = (100 - x) \\times 20\\% + x \\times 40\\%$\n$28 = 20 - 0.20x + 0.40x \\implies 8 = 0.20x \\implies x = 40$.\nAtah sahi uttar '40' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_32",
+    "qe": "In a class, the ratio of the number of boys to that of the girls is 11:9. 30% of the boys and 20% of the girls passed an exam. Find the percentage of students who passed the exam.",
+    "qh": "एक कक्षा में लड़कों और लड़कियों की संख्या का अनुपात 11:9 है। 30% लड़के और 20% लड़कियां एक परीक्षा में उत्तीर्ण हुए। परीक्षा उत्तीर्ण करने वाले विद्यार्थियों का प्रतिशत ज्ञात कीजिए।",
+    "oe": [
+      "3.92%",
+      "20%",
+      "24.5%",
+      "25.5%"
+    ],
+    "oh": [
+      "3.92%",
+      "20%",
+      "24.5%",
+      "25.5%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Weighted Average Method):\nRatio of Boys : Girls $= 11 : 9$.\nTotal students $= 11 + 9 = 20$ units.\nOverall Pass Percentage $= \\frac{(11 \\times 30\\%) + (9 \\times 20\\%)}{11 + 9} = \\frac{330 + 180}{20} = \\frac{510}{20} = 25.5\\%$.\nAtah sahi vikalp  25.5% hai.\n\nMethod 2 (100-Base Assumption Method):\nBoys $= 110$, Girls $= 90 \\implies$ Total students $= 200$.\nPassed Boys $= 30\\% \\text{ of } 110 = 33$.\nPassed Girls $= 20\\% \\text{ of } 90 = 18$.\nTotal Passed students $= 33 + 18 = 51$.\nPass Percentage $= \\frac{51}{200} \\times 100\\% = 25.5\\%$.\nAtah sahi uttar '25.5%' hai.\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_33",
+    "qe": "Suhani pays tax at the rate of 30% on her entire income of ₹90,000 and Ritika pays tax at the rate of 40% on her entire income of ₹y. If the overall tax rate on their combined income comes to 37%, then what is the value of y?",
+    "qh": "सुहानी अपनी ₹90,000 की पूरी आय पर 30% की दर से कर का भुगतान करती है और रितिका अपनी ₹y की पूरी आय पर 40% की दर से कर का भुगतान करती है। यदि उनकी संयुक्त आय पर कुल कर की दर 37% आती है, तो y का मान क्या है?",
+    "oe": [
+      "₹1,80,000",
+      "₹2,00,000",
+      "₹2,10,000",
+      "₹2,40,000"
+    ],
+    "oh": [
+      "₹1,80,000",
+      "₹2,00,000",
+      "₹2,10,000",
+      "₹2,40,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Alligation Method):\nSuhani ka tax rate $= 30\\%$, Ritika ka tax rate $= 40\\%$.\nCombined average tax rate $= 37\\%$.\nAlligation rule apply karne par:\nSuhani's Income : Ritika's Income $= (40 - 37) : (37 - 30) = 3 : 7$.\nGiven: Suhani's Income (3 units) $= ₹90000 \\implies 1 \\text{ unit} = ₹30000$.\nRitika's Income ($y$) = 7 units $= 7 \\times 30000 = ₹210000$.\nAtah sahi vikalp  ₹2,10,000 hai.\n\nMethod 2 (Weighted Equation Method):\n$0.37 \\times (90000 + y) = (0.30 \\times 90000) + 0.40y$\n$33300 + 0.37y = 27000 + 0.40y$\n$6300 = 0.03y \\implies y = \\frac{6300}{0.03} = ₹210000$.\nAtah sahi uttar '₹2,10,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_34",
+    "qe": "The average pass percentage of girls in class X examination in a school is 85% and that of boys is 83%. The average pass percentage of all boys and girls in class X of that school is 83.7%. Find the percentage of the number of girls in class X of that school.",
+    "qh": "एक स्कूल में कक्षा X की परीक्षा में लड़कियों का औसत उत्तीर्ण प्रतिशत 85% है और लड़कों का 83% है। उस स्कूल की कक्षा X के सभी लड़कों और लड़कियों का औसत उत्तीर्ण प्रतिशत 83.7% है। उस स्कूल की कक्षा X में लड़कियों की संख्या का प्रतिशत ज्ञात कीजिए।",
+    "oe": [
+      "45%",
+      "40%",
+      "30%",
+      "35%"
+    ],
+    "oh": [
+      "45%",
+      "40%",
+      "30%",
+      "35%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alligation Method):\nGirls pass % = 85%, Boys pass % = 83%.\nOverall combined pass % = 83.7%.\nAlligation rule apply karne par:\nRatio of Girls : Boys = (83.7 - 83) : (85 - 83.7) = 0.7 : 1.3 = 7 : 13.\nTotal students = 7 + 13 = 20 units.\nPercentage of girls = $\\frac{7}{20}$ $\\times$ 100% = 35%.\nAtah sahi vikalp  35% hai.\n\nMethod 2 (Algebraic Weighted Average Method):\nMaana total students = 100 aur girls = g%.\nBoys = (100 - g)%.\n85g + 83(100 - g) = 100 $\\times$ 83.7\n2g = 8370 - 8300 = 70 \\implies g = 35%.\nAtah sahi uttar '35%' hai.\n\nExam point: ausat ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_35",
+    "qe": "In a certain year, the population of a city was 18,000. If in the next year, the population of males increased by 5% and that of females increased by 7%, and the total population increased to 19,200, then what was the ratio of the population of males and females in that given year?",
+    "qh": "किसी निश्चित वर्ष में एक शहर की जनसंख्या 18,000 थी। यदि अगले वर्ष पुरुषों की जनसंख्या में 5% की वृद्धि हुई और महिलाओं की जनसंख्या में 7% की वृद्धि हुई, और कुल जनसंख्या बढ़कर 19,200 हो गई, तो उस दिए गए वर्ष में पुरुषों और महिलाओं की जनसंख्या का अनुपात क्या था?",
+    "oe": [
+      "2 : 5",
+      "1 : 5",
+      "4 : 3",
+      "3 : 5"
+    ],
+    "oh": [
+      "2 : 5",
+      "1 : 5",
+      "4 : 3",
+      "3 : 5"
+    ],
+    "a": 1,
+    "e": "Method 1 (Alligation Method):\nTotal population increase = 19200 - 18000 = 1200.\nOverall percentage increase = $\\frac{1200}{18000}$ $\\times$ 100% = $\\frac{20}{3}$%.\nRatio of Males : Females:\n= $\\le$ft(7 - $\\frac{20}{3}$\\right) : $\\le$ft($\\frac{20}{3}$ - 5\\right) = $\\frac{1}{3}$ : $\\frac{5}{3}$ = 1 : 5.\nAtah sahi vikalp  1 : 5 hai.\n\nMethod 2 (Shift / Deviation Method):\nAgar dono 5% badhte: 18000 $\\times$ 5% = 900.\nExtra increase = 1200 - 900 = 300.\n2% of Females = 300 \\implies Females = 15000.\nMales = 18000 - 15000 = 3000.\nRatio of Males : Females = 3000 : 15000 = 1 : 5.\nAtah sahi uttar '1 : 5' hai.\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type7incomeexpenditure_36",
+    "qe": "In a city, the current number of literate people is 25,000. If the number of literate males decreases by 5% and the number of literate females increases by 10%, the total literate population becomes 25,250. What is the present number of literate males in the city?",
+    "qh": "एक शहर में साक्षर व्यक्तियों की वर्तमान संख्या 25,000 है। यदि साक्षर पुरुषों की संख्या में 5% की कमी होती है और साक्षर महिलाओं की संख्या में 10% की वृद्धि होती है, तो कुल साक्षर जनसंख्या 25,250 हो जाती है। शहर में साक्षर पुरुषों की वर्तमान संख्या क्या है?",
+    "oe": [
+      "12,500",
+      "14,000",
+      "15,000",
+      "10,000"
+    ],
+    "oh": [
+      "12,500",
+      "14,000",
+      "15,000",
+      "10,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Shift / Deviation Method):\nNet change in population = 25250 - 25000 = +250.\nAgar sabhi +10% badhte: 25000 $\\times$ 10% = +2500.\nDifference = 2500 - 250 = 2250.\nYeh deviation Males ke [10% - (-5%)] = 15% ke barabar hai:\n15% of M = 2250 \\implies M = $\\frac{2250}{15}$ $\\times$ 100 = 15000.\nPresent literate males = 15,000.\nAtah sahi vikalp  15,000 hai.\n\nMethod 2 (Alligation Method):\nOverall net growth % = $\\frac{250}{25000}$ $\\times$ 100% = +1%.\nMales change = -5%, Females change = +10%.\nMales : Females = (10 - 1) : (1 - (-5)) = 9 : 6 = 3 : 2.\nTotal 5 units = 25000 \\implies 1 unit = 5000.\nMales = 3 units = 3 $\\times$ 5000 = 15,000.\nAtah sahi uttar '15,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

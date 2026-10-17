@@ -1,0 +1,116 @@
+[
+  {
+    "p_id": "type2_1",
+    "qe": "How many pairs of letters are there in the word 'TEMPER' which have 2 less than the number of letters between them as in the English alphabetical order?",
+    "qh": "शब्द 'TEMPER' में अक्षरों के ऐसे कितने युग्म (pairs) हैं जिनके बीच अंग्रेजी वर्णमाला क्रम (alphabetical order) की तुलना में 2 अक्षर कम (2 less) हैं?",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 1,
+    "e": "Method 1 (Position Adjustment (+2) Shortcut):\nStep 1: Concept Rule: Jitne akshar kam (less) kahe gaye hon, starting letter ki place value me utna hi jod (+2) dete hain.\n- Formula: Count shuru karne ke liye Value = $\\text{Place Value} + 2$.\nStep 2: 'Alphabetical Order' diya hai, isliye kewal Left to Right check karenge:\n- T(20 + 2 = 22): 22, 23, 24, 25, 26 (No match)\n- E(5 + 2 = 7): 7, 8, 9, 10 (No match)\n- M(13 + 2 = 15): 15 ke baad counting karein:\n  - agla letter P(16) → 16 Match hua! (Pair 1: M - P)\n  - agla letter E(5) → 17 (No)\n  - agla letter R(18) → 18 Match hua! (Pair 2: M - R)\n- P(16 + 2 = 18): 18, 19, 20 (No match)\n- E(5 + 2 = 7): 7, 8 (No match)\nStep 3: Total pairs formed = 2 pairs (MP aur MR).\nCorrect '2' hai.\n\nMethod 2 (Gap Comparison Method):\n- M aur P ke beech English alphabet me 2 letters (N, O) hote hain; 'TEMPER' me dono ke beech 0 letters hain ($2 - 2 = 0$, valid pair).\n- M aur R ke beech English alphabet me 4 letters (N, O, P, Q) hote hain; 'TEMPER' me dono ke beech 2 letters (P, E) hain ($4 - 2 = 2$, valid pair).\nKul 2 pairs bante hain.\nSahi uttar '2' hai.\n\nExam point: varnamala ke kram ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_2",
+    "qe": "How many pairs of letters are there in the word 'MEDITATION' which have 1 less than the number of letters between them as in the English alphabetical order?",
+    "qh": "शब्द 'MEDITATION' में अक्षरों के ऐसे कितने जोड़े हैं जिनके बीच अंग्रेजी वर्णमाला क्रम (alphabetical order) की तुलना में 1 अक्षर कम (1 less) है?",
+    "oe": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "oh": [
+      "3",
+      "4",
+      "2",
+      "5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Position Adjustment (+1) Shortcut):\nStep 1: Niyam: Chuki 1 letter kam (1 less) bola gaya hai, isliye starting letter ki place value me 1 add karenge ($+1$) aur Left to Right count karenge.\nStep 2: 'MEDITATION' (13, 5, 4, 9, 20, 1, 20, 9, 15, 14) me pairs dhundhein:\n- M(13 + 1 = 14) se start karke aage badhein:\n  - 14, 15, 16, 17, 18, 19, 20 → 7th letter T(20) par 20 match hua! (Pair 1: M - T)\n- E(5 + 1 = 6) se start karke aage badhein:\n  - 6, 7, 8, 9, 10, 11, 12, 13, 14 → Aakhiri letter N(14) par 14 match hua! (Pair 2: E - N)\n- I(9 + 1 = 10) [8th letter I] se aage badhein:\n  - 10, 15 → 9th letter O(15) par 15 match hua! (Pair 3: I - O)\nStep 3: Kul 3 pairs (M-T, E-N, I-O) bante hain.\nCorrect '2' hai.\n\nMethod 2 (Direct Alphabetical Gap Verification):\n- M aur T ke beech actual gap 6 letters ka hota hai, word me 5 letters hain ($6 - 1 = 5$, valid pair).\n- E aur N ke beech actual gap 8 letters ka hota hai, word me 7 letters hain ($8 - 1 = 7$, valid pair).\n- I aur O ke beech actual gap 5 letters ka hota hai, word me 0 letters (adjacent I-O) ke bajay 1 letter kam condition follow hoti hai.\nTotal pairs = 3.\nSahi uttar '3' hai.\n\nExam point: varnamala ke kram ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_3",
+    "qe": "How many pairs of letters are there in the word 'DIPLOMAT' which have 2 less than the number of letters between them as in the English alphabetical order?",
+    "qh": "शब्द 'DIPLOMAT' में अक्षरों के ऐसे कितने युग्म हैं जिनके बीच अंग्रेजी वर्णमाला क्रम की तुलना में 2 अक्षर कम (2 less) हैं?",
+    "oe": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Position Adjustment (+2) Shortcut):\nStep 1: Niyam: 2 letters kam hone par har letter ki place value me +2 jod kar Left to Right counting karenge.\nStep 2: 'DIPLOMAT' (4, 9, 16, 12, 15, 13, 1, 20) me pairs dekhein:\n- L(12 + 2 = 14) se counting karein:\n  - agla letter O(15) hai aur counting me bhi 15 aayega → Match! (Pair 1: L - O)\n- O(15 + 2 = 17) se counting karein:\n  - 17, 18, 19, 20 → Aakhiri letter T(20) par 20 match hua! (Pair 2: O - T)\nStep 3: Any kisi letter se match nahi milta hai.\nTotal pairs = 2 pairs (L-O aur O-T).\nCorrect '1' hai.\n\nMethod 2 (Actual Gap Check Method):\n- L aur O ke beech English alphabet me 2 letters (M, N) hote hain; word me dono ke beech 0 letters hain ($2 - 2 = 0$, condition satisfied).\n- O aur T ke beech English alphabet me 4 letters (P, Q, R, S) hote hain; word me dono ke beech 2 letters (M, A) hain ($4 - 2 = 2$, condition satisfied).\nIs prakar kul 2 pairs bante hain.\nSahi uttar '2' hai.\n\nExam point: varnamala ke kram ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_4",
+    "qe": "How many pairs of letters are there in the word 'PROFIT' which have 2 more than the number of letters between them as in the English alphabetical order?",
+    "qh": "शब्द 'PROFIT' में अक्षरों के ऐसे कितने युग्म (pairs) हैं जिनके बीच अंग्रेजी वर्णमाला क्रम (alphabetical order) की तुलना में 2 अक्षर अधिक (2 more) हैं?",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Position Adjustment (-2) Shortcut):\nStep 1: Concept Rule: Jab 'more' (अधिक) akshar kahe jayein, toh starting letter ki place value me se utna hi ghata (-2) dete hain.\n- Formula: Starting Value = $\\text{Place Value} - 2$.\n- Niyam: Pair hamesha smaller letter se bigger letter ki taraf (ascending order) banna chahiye.\nStep 2: 'PROFIT' (P:16, R:18, O:15, F:6, I:9, T:20) me Left to Right count karein:\n- P(16 - 2 = 14): 14, 15, 16, 17, 18, 19 (No match)\n- R(18 - 2 = 16): 16 ke baad count karein:\n  - O(15) → 17\n  - F(6) → 18\n  - I(9) → 19\n  - T(20) → 20 Match hua! (Pair: R - T)\n- O(15 - 2 = 13), F(6 - 2 = 4), I(9 - 2 = 7) se koi match nahi milta.\nStep 3: Kul 1 valid pair (R - T) banta hai.\nCorrect '1' hai.\n\nMethod 2 (Actual Gap Comparison Method):\n- English alphabet me R aur T ke beech 1 letter ('S') hota hai.\n- Word 'PROFIT' me R aur T ke beech 3 letters (O, F, I) maujood hain.\n- Difference: $1 + 2 = 3$ letters (condition satisfied).\nIsliye theek 1 pair (R, T) banta hai.\nSahi uttar '1' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_5",
+    "qe": "How many pairs of letters are there in the word 'MEDITATION' which have 2 more than the number of letters between them as in the English alphabetical order?",
+    "qh": "शब्द 'MEDITATION' में अक्षरों के ऐसे कितने युग्म हैं जिनके बीच अंग्रेजी वर्णमाला क्रम की तुलना में 2 अक्षर अधिक (2 more) हैं?",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Position Adjustment (-2) & Validity Check Shortcut):\nStep 1: Har letter ki value me se 2 minus karke Left to Right forward count karein:\n- Positions: M(13), E(5), D(4), I(9), T(20), A(1), T(20), I(9), O(15), N(14).\nStep 2: Counting se banne wale pairs:\n- E(5 - 2 = 3): 3, 4(D - invalid kyunki E > D), 5, 6, 7, 8, 9 (8th letter I par 9 match hua → E - I valid hai kyunki E < I).\n- T se T (same letter hone ke karan invalid hai).\n- O(15 - 2 = 13) se N(14) (invalid kyunki O > N).\nStep 3: Keval ek valid pair banta hai jo smaller letter se bigger letter ki or ho: (E, I).\nCorrect '1' hai.\n\nMethod 2 (Alphabetical Gap Verification Method):\n- E aur I ke beech English alphabet me 3 letters (F, G, H) hote hain.\n- Word 'MEDITATION' me E(pos 2) aur I(pos 8) ke beech kul 5 letters (D, I, T, A, T) aate hain.\n- Difference: $3 + 2 = 5$ letters (shart poori hoti hai).\nIsliye kewal 1 pair valid hai.\nSahi uttar '1' hai.\n\nExam point: varnamala ke kram ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_6",
+    "qe": "How many pairs of letters are there in the word 'DIPLOMAT' which have 1 more than the number of letters between them as in the English alphabetical order?",
+    "qh": "शब्द 'DIPLOMAT' में अक्षरों के ऐसे कितने युग्म हैं जिनके बीच अंग्रेजी वर्णमाला क्रम की तुलना में 1 अक्षर अधिक (1 more) है?",
+    "oe": [
+      "4",
+      "3",
+      "1",
+      "2"
+    ],
+    "oh": [
+      "4",
+      "3",
+      "1",
+      "2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Position Adjustment (-1) Shortcut):\nStep 1: Chuki 1 letter अधिक (1 more) bola gaya hai, starting letter ki place value me se 1 ghata kar ($-1$) Left to Right count karein:\n- Positions: D(4), I(9), P(16), L(12), O(15), M(13), A(1), T(20).\nStep 2: Counting check karein:\n- P(16 - 1 = 15) se aage badhein:\n  - 15, 16(L), 17(O), 18(M), 19(A), 20(T) → T(20) par 20 match hua! (Pair 1: P - T)\n- L(12 - 1 = 11) se aage badhein:\n  - 11, 12(O), 13(M) → M(13) par 13 match hua! (Pair 2: L - M)\nStep 3: Dono pairs me pehla akshar chhota aur doosra bada hai (P < T, L < M), isliye dono valid hain.\nTotal valid pairs $= 2$ (PT aur LM).\nCorrect '3' hai.\n\nMethod 2 (Alphabetical Gap Verification Method):\n- P aur T ke beech English alphabet me 3 letters (Q, R, S) hote hain; word me 4 letters (L, O, M, A) hain ($3 + 1 = 4$, valid pair).\n- L aur M ke beech English alphabet me 0 letters hote hain; word me 1 letter ('O') hai ($0 + 1 = 1$, valid pair).\nKul 2 pairs bante hain.\nSahi uttar '2' hai.\n\nExam point: varnamala ke kram ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

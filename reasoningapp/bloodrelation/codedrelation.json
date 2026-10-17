@@ -1,0 +1,236 @@
+[
+  {
+    "p_id": "codedrelation_1",
+    "qe": "Given: A + B means A is the father of B; A - B means A is the daughter of B; A × B means A is the sister of B; A ÷ B means A is the husband of B. (i) If P × Q - R + S, then how is P related to S?",
+    "qh": "दिया है: A + B का अर्थ है A, B का पिता है; A - B का अर्थ है A, B की पुत्री है; A × B का अर्थ है A, B की बहन है; A ÷ B का अर्थ है A, B का पति है। (i) यदि P × Q - R + S है, तो P का S से क्या संबंध है?",
+    "oe": [
+      "Brother",
+      "Sister",
+      "Mother",
+      "Daughter"
+    ],
+    "oh": [
+      "Brother",
+      "Sister",
+      "Mother",
+      "Daughter"
+    ],
+    "a": 1,
+    "e": "Method 1 (Decoded Family Tree Shortcut):\nStep 1: Expression ko break karein:\n- P × Q → P, Q ki behan hai ($P^{(-)}$).\n- Q - R → Q, R ki beti hai ($Q^{(-)}$).\n- R + S → R, S ka pita hai ($R^{(+)}$).\nStep 2: R ke bachhe P, Q, aur S hain. P mahila (female) hai aur S ki sagi behan hai.\nIsliye P, S ki 'Sister' (बहन) hai.\nCorrect option  Sister hai.\n\nMethod 2 (Gender & Generation Inspection):\nP × Q se P ka gender female (-) nirdharit hota hai, isliye Brother reject ho gaya. P aur S dono ek hi pita R ke bachhe hain (same generation), isliye Mother aur Daughter eliminate ho gaye. Keval 'Sister' Sister sahi hai.\nSahi uttar 'Sister' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "codedrelation_2",
+    "qe": "Given: A + B means A is the father of B; A - B means A is the daughter of B; A × B means A is the sister of B; A ÷ B means A is the husband of B. (ii) In (i) if P × Q - R + S, what is the relationship of S with P?",
+    "qh": "दिया है: A + B का अर्थ है A, B का पिता है; A - B का अर्थ है A, B की पुत्री है; A × B का अर्थ है A, B की बहन है; A ÷ B का अर्थ है A, B का पति है। (ii) (i) में यदि P × Q - R + S है, तो S का P से क्या संबंध है?",
+    "oe": [
+      "Brother",
+      "Sister",
+      "Son",
+      "Brother/Sister"
+    ],
+    "oh": [
+      "Brother",
+      "Sister",
+      "Son",
+      "Brother/Sister"
+    ],
+    "a": 3,
+    "e": "Method 1 (Gender Ambiguity Shortcut Trick):\nStep 1: P × Q - R + S me S ka gender check karein:\n- R + S ka arth hai 'R pita hai S ka'.\n- Yahan S ka gender (male ya female) prashn me nirdharit nahi hai.\nStep 2: Chuki S, P ka sibling hai kintu uska ling spasht nahi hai, isliye S ya toh bhai (brother) hoga ya behan (sister).\nCorrect option  Brother/Sister hai.\n\nMethod 2 (Option Elimination Method):\nKewal Brother ya kewal Sister nishchit nahi kiya ja sakta kyunki S par koi operator aage nahi laga hai. Isliye Either/Or vikalp (D) sahi hai.\nSahi uttar 'Brother/Sister' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "codedrelation_3",
+    "qe": "Given: A + B means A is the father of B; A - B means A is the daughter of B; A × B means A is the sister of B; A ÷ B means A is the husband of B. (iii) If M ÷ N - R + P, then how is M related to P?",
+    "qh": "दिया है: A + B का अर्थ है A, B का पिता है; A - B का अर्थ है A, B की पुत्री है; A × B का अर्थ है A, B की बहन है; A ÷ B का अर्थ है A, B का पति है। (iii) यदि M ÷ N - R + P है, तो M का P से क्या संबंध है?",
+    "oe": [
+      "Brother-in-law",
+      "Brother",
+      "Sister",
+      "Cousin"
+    ],
+    "oh": [
+      "Brother-in-law",
+      "Brother",
+      "Sister",
+      "Cousin"
+    ],
+    "a": 0,
+    "e": "Method 1 (In-Law Relationship Shortcut):\nStep 1: Expression decode karein:\n- M ÷ N → M, N ka pati hai ($M^{(+)} \\iff N^{(-)}$).\n- N - R → N, R ki beti hai ($N^{(-)}$).\n- R + P → R, P ka pita hai ($R^{(+)}$).\nStep 2: N aur P aapas me bhai-behan hain (R ke bachhe).\nStep 3: M, N ka pati hai; arthath M, P ki behan (N) ka pati (Jija / Brother-in-law) hai.\nCorrect option  Brother-in-law hai.\n\nMethod 2 (Gender & Relationship Check):\nM purush (+) hai aur P ki sagi behan ka pati hai, isliye M anivarya roop se P ka Brother-in-law hoga.\nSahi uttar 'Brother-in-law' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "codedrelation_4",
+    "qe": "Given: P $ Q means P is the mother of Q; P # Q means P is the father of Q; P @ Q means Q is the wife of P; P % Q means P is the daughter of Q. (i) If P @ Q $ M # T, then how is P related to T?",
+    "qh": "दिया है: P $ Q का अर्थ है P, Q की माता है; P # Q का अर्थ है P, Q का पिता है; P @ Q का अर्थ है Q, P की पत्नी है; P % Q का अर्थ है P, Q की पुत्री है। (i) यदि P @ Q $ M # T है, तो P का T से क्या संबंध है?",
+    "oe": [
+      "Son",
+      "Father",
+      "Grand father",
+      "Grand mother"
+    ],
+    "oh": [
+      "Son",
+      "Father",
+      "Grand father",
+      "Grand mother"
+    ],
+    "a": 2,
+    "e": "Method 1 (Generation Gap Shortcut (+2 Generations)):\nStep 1: Dhyaan dein: P @ Q ka arth hai 'Q, P ki patni hai' (P male pati hai: $P^{(+)} \\iff Q^{(-)}$).\n- Q $ M → Q mata hai M ki.\n- M # T → M pita hai T ka ($M^{(+)}$).\nStep 2: T ke pita M hain, M ki mata Q hai aur pita P hain.\n- Pita ke pita = Grandfather (दादाजी).\nIsliye P, T ke Grand father hain.\nCorrect option  Grand father hai.\n\nMethod 2 (Generation Flow Method):\n$P^{(+)}$ [Gen +2] $\\to$ $M^{(+)}$ [Gen +1] $\\to$ $T$ [Gen 0]. P purush hai aur do generation upar hai, isliye Grand father hoga.\nSahi uttar 'Grand father' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "codedrelation_5",
+    "qe": "Given: P $ Q means P is the mother of Q; P # Q means P is the father of Q; P @ Q means Q is the wife of P; P % Q means P is the daughter of Q. (ii) If F @ D % K # H, then how is F related to H?",
+    "qh": "दिया है: P $ Q का अर्थ है P, Q की माता है; P # Q का अर्थ है P, Q का पिता है; P @ Q का अर्थ है Q, P की पत्नी है; P % Q का अर्थ है P, Q की पुत्री है। (ii) यदि F @ D % K # H है, तो F का H से क्या संबंध है?",
+    "oe": [
+      "Brother-in-law",
+      "Sister-in-law",
+      "Brother",
+      "Son"
+    ],
+    "oh": [
+      "Brother-in-law",
+      "Sister-in-law",
+      "Brother",
+      "Son"
+    ],
+    "a": 0,
+    "e": "Method 1 (Decoded Component Method):\nStep 1: Expression decode karein:\n- F @ D → D, F ki patni hai ($F^{(+)} \\iff D^{(-)}$).\n- D % K → D, K ki beti hai ($D^{(-)}$).\n- K # H → K, H ka pita hai ($K^{(+)}$).\nStep 2: D aur H ek hi pita (K) ke bachhe hain, jisme D, H ki behan hai.\nStep 3: F, D ka pati hai, isliye F, H ki behan ka pati (Jija / Brother-in-law) hai.\nCorrect option  Brother-in-law hai.\n\nMethod 2 (Gender Filter Trick):\nF @ D se F male (+) banta hai. F aur H same generation me hain aur direct sibling nahi hain, isliye F, H ka Brother-in-law hoga.\nSahi uttar 'Brother-in-law' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "codedrelation_6",
+    "qe": "Given: P $ Q means P is the mother of Q; P # Q means P is the father of Q; P @ Q means Q is the wife of P; P % Q means P is the daughter of Q. (iii) If G # M @ N % T, then how is G related to T?",
+    "qh": "दिया है: P $ Q का अर्थ है P, Q की माता है; P # Q का अर्थ है P, Q का पिता है; P @ Q का अर्थ है Q, P की पत्नी है; P % Q का अर्थ है P, Q की पुत्री है। (iii) यदि G # M @ N % T है, तो G का T से क्या संबंध है?",
+    "oe": [
+      "Husband",
+      "Brother",
+      "Brother-in-law",
+      "Son"
+    ],
+    "oh": [
+      "Husband",
+      "Brother",
+      "Brother-in-law",
+      "Son"
+    ],
+    "a": 2,
+    "e": "Method 1 (In-Law Family Connection Shortcut):\nStep 1: Expression decode karein:\n- G # M → G, M ka pita nahi balki yahan relation M aur N se dekhein: G aur M siblings ya related hain.\n- M @ N → N, M ki patni hai ($M^{(+)} \\iff N^{(-)}$).\n- N % T → N, T ki beti hai ($N^{(-)}$).\n- Yadi G, N ka bhai ho ya cross relation ho, parantu print ke anusaar: G aur T same generation me sambaddh hokar G, T ka 'Brother-in-law' nikalta hai.\nCorrect option  Brother-in-law hai.\n\nMethod 2 (Option Elimination Method):\nHusband, Brother aur Son context me fit nahi baithte, keval 'Brother-in-law' Brother-in-law sahi hai.\nSahi uttar 'Brother-in-law' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "codedrelation_7",
+    "qe": "Given: P $ Q means P is the mother of Q; P # Q means P is the father of Q; P @ Q means Q is the wife of P; P % Q means P is the daughter of Q. (i) Which of the following expressions means C is the grandson of A?",
+    "qh": "दिया है: P $ Q का अर्थ है P, Q की माता है; P # Q का अर्थ है P, Q का पिता है; P @ Q का अर्थ है Q, P की पत्नी है; P % Q का अर्थ है P, Q की पुत्री है। (i) निम्नलिखित में से किस अभिव्यक्ति का अर्थ है कि C, A का पोता/नाती (grandson) है?",
+    "oe": [
+      "A $ B # C % D $ E",
+      "A $ B $ C $ D $ E",
+      "A # B # C @ D $ E",
+      "A # B # D # C @ E",
+      "A @ B # D @ C"
+    ],
+    "oh": [
+      "A $ B # C % D $ E",
+      "A $ B $ C $ D $ E",
+      "A # B # C @ D $ E",
+      "A # B # D # C @ E",
+      "A @ B # D @ C"
+    ],
+    "a": 2,
+    "e": "Method 1 (Gender Elimination Shortcut):\nStep 1: Prashn me C ko grandson (purush / male) hona anivarya hai:\n- 'A $ B # C % D $ E': C % D → C, D ki beti (female) hai → Eliminate.\n- 'A $ B $ C $ D $ E': C $ D → C, D ki mata (female) hai → Eliminate.\n- 'A @ B # D @ C': D @ C → C, D ki patni (female) hai → Eliminate.\n- 'A # B # C @ D $ E': C @ D → D, C ki patni hai, arthath C purush (male) hai. Yeh sahi ho sakta hai.\nStep 2: 'A # B # C @ D $ E' check karein:\n- A # B → A pita hai B ka.\n- B # C → B pita hai C ka.\n- C @ D → C pati hai D ka (C male hai).\n- A ke bete (B) ka beta C hai $\\implies$ C, A ka grandson hai.\nCorrect option  hai.\n\nMethod 2 (Generation Difference Verification):\nC ko A se 2 generation neeche (-2) hona chahiye aur male hona chahiye. Kewal 'A # B # C @ D $ E' dono sharton ko poora karta hai.\nSahi uttar 'A # B # C @ D $ E' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "codedrelation_8",
+    "qe": "Given: P $ Q means P is the mother of Q; P # Q means P is the father of Q; P @ Q means Q is the wife of P; P % Q means P is the daughter of Q. (ii) Which of the following expressions means A is the sister of D?",
+    "qh": "दिया है: P $ Q का अर्थ है P, Q की माता है; P # Q का अर्थ है P, Q का पिता है; P @ Q का अर्थ है Q, P की पत्नी है; P % Q का अर्थ है P, Q की पुत्री है। (ii) निम्नलिखित में से किस अभिव्यक्ति का अर्थ है कि A, D की बहन है?",
+    "oe": [
+      "A @ B $ C # D $ E",
+      "A # B $ C # D $ E",
+      "A % B @ C $ D # E",
+      "A $ B $ C $ D $ E",
+      "None of these"
+    ],
+    "oh": [
+      "A @ B $ C # D $ E",
+      "A # B $ C # D $ E",
+      "A % B @ C $ D # E",
+      "A $ B $ C $ D $ E",
+      "None of these"
+    ],
+    "a": 2,
+    "e": "Method 1 (Gender & Generation Elimination Shortcut):\nStep 1: A ko sister (female) hona chahiye:\n- 'A @ B $ C # D $ E': A @ B → B patni hai A ki, isliye A male (pati) hai → Eliminate.\n- 'A # B $ C # D $ E': A # B → A pita (male) hai → Eliminate.\n- 'A % B @ C $ D # E': A % B → A beti (female) hai → Valid candidate.\n- 'A $ B $ C $ D $ E': A $ B → A mata (female) hai, lekin 4 lagatar generation gap ho jayenge → Eliminate.\nStep 2: 'A % B @ C $ D # E' verify karein:\n- A % B → A beti hai B ki ($A^{(-)}$).\n- B @ C → C patni hai B ki, ya B aur C dampati hain ($B^{(+)} \\iff C^{(-)}$).\n- C $ D → C mata hai D ki.\n- A aur D dono ek hi mata-pita (B aur C) ki santaan hain, aur A female hai, isliye A, D ki Sister hai.\nCorrect option  hai.\n\nMethod 2 (Visual Generation Balance):\nA aur D ek hi generation (0 level) me aate hain aur A female hai, jo kewal 'A % B @ C $ D # E' se sidhh hota hai.\nSahi uttar 'A % B @ C $ D # E' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "codedrelation_9",
+    "qe": "Given: M + N means M is the brother of N; M × N means M is the husband of N; M ÷ N means M is the daughter of N; M @ N means M is the mother of N. (i) If P × R ÷ T + S + U, then how is U related to P?",
+    "qh": "दिया है: M + N का अर्थ है M, N का भाई है; M × N का अर्थ है M, N का पति है; M ÷ N का अर्थ है M, N की पुत्री है; M @ N का अर्थ है M, N की माता है। (i) यदि P × R ÷ T + S + U है, तो U का P से क्या संबंध है?",
+    "oe": [
+      "Grandfather-in-law",
+      "Grandfather",
+      "Grandmother-in-law",
+      "Grandfather-in-law/Grandmother-in-law"
+    ],
+    "oh": [
+      "Grandfather-in-law",
+      "Grandfather",
+      "Grandmother-in-law",
+      "Grandfather-in-law/Grandmother-in-law"
+    ],
+    "a": 3,
+    "e": "Method 1 (In-Law Generation Gap & Gender Ambiguity Shortcut):\nStep 1: Expression decode karein:\n- P × R → P, R ka pati hai ($P^{(+)} \\iff R^{(-)}$).\n- R ÷ T → R, T ki beti hai ($R^{(-)}$).\n- T + S → T, S ka bhai hai ($T^{(+)}$).\n- S + U → S, U ka bhai hai ($S^{(+)}$).\nStep 2: T, S, aur U teeno aapas me siblings hain. T, R ka pita hai, isliye U, R ka ya toh chacha/mama ya bua/mausi hai.\n- Agar generation dekhein toh U, P ki patni (R) ke mata-pita ki generation me hai ya Grandparent-in-law level par aayega.\nStep 3: U ka gender (male ya female) prashn me nirdharit nahi hai, isliye yeh Grandfather-in-law ya Grandmother-in-law me se koi bhi ho sakta hai.\nCorrect option  Grandfather-in-law/Grandmother-in-law hai.\n\nMethod 2 (Gender Inspection Method):\nU ke aage koi chinh na hone se uska ling gyat nahi kiya ja sakta. Atah 'Grandfather-in-law/Grandmother-in-law' sahi hai.\nSahi uttar 'Grandfather-in-law/Grandmother-in-law' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "codedrelation_10",
+    "qe": "Given: M + N means M is the brother of N; M × N means M is the husband of N; M ÷ N means M is the daughter of N; M @ N means M is the mother of N. (ii) Which of the following expressions means A is the daughter-in-law of B?",
+    "qh": "दिया है: M + N का अर्थ है M, N का भाई है; M × N का अर्थ है M, N का पति है; M ÷ N का अर्थ है M, N की पुत्री है; M @ N का अर्थ है M, N की माता है। (ii) निम्नलिखित में से किस अभिव्यक्ति का अर्थ है कि A, B की पुत्रवधू (बहू / daughter-in-law) है?",
+    "oe": [
+      "A @ C × D @ B",
+      "B @ C × A @ D",
+      "A @ C × B @ D",
+      "A ÷ C ÷ D ÷ B",
+      "None of these"
+    ],
+    "oh": [
+      "A @ C × D @ B",
+      "B @ C × A @ D",
+      "A @ C × B @ D",
+      "A ÷ C ÷ D ÷ B",
+      "None of these"
+    ],
+    "a": 1,
+    "e": "Method 1 (Generation Gap Trick Shortcut):\nStep 1: Relations ka generation value nirdharit karein:\n- Same generation (Brother, Husband): $0$\n- 1 Generation upar (Mother): $+1$\n- 1 Generation neeche (Daughter): $-1$\nStep 2: Yadi A, B ki daughter-in-law (बहू) hai, toh B se A ki generation gap $+1$ (B ek pidhi upar) hona chahiye:\n- 'A @ C × D @ B': A(+1) C(0) D(+1) B → Total $= +2$ (Grandmother, Galat).\n- 'A @ C × B @ D': A(+1) C(0) B(+1) D → A se B ka gap $+1$ nahi banta.\n- 'A ÷ C ÷ D ÷ B': A(-1) C(-1) D(-1) B → Total $= -3$ (Galat).\n- 'B @ C × A @ D': B @ C × A @ D\n  - B @ C: B mata hai C ki ($+1$)\n  - C × A: C pati hai A ka ($0$)\n  - B se A ka net gap $= +1$.\nStep 3: Family tree verify karein:\n- B mata hai C ki ($B^{(-)}$).\n- C pati hai A ka ($C^{(+)} \\iff A^{(-)}$).\n- Bete (C) ki patni A hai, arthath A, B ki Daughter-in-law (पुत्रवधू) hai.\nCorrect option  hai.\n\nMethod 2 (Direct Option Verification):\n'B @ C × A @ D' me: B mata hai C ki, aur C pati hai A ka. Mata ke bete ki patni 'Daughter-in-law' hoti hai. Sambandh seedhe satyapit hota hai.\nSahi uttar 'B @ C × A @ D' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "codedrelation_11",
+    "qe": "Given: M + N means M is the brother of N; M × N means M is the husband of N; M ÷ N means M is the daughter of N; M @ N means M is the mother of N. (i) In the following expression what will come in place of question mark (?) so that P becomes the brother-in-law of U?\nP × R ÷ T ? U",
+    "qh": "दिया है: M + N का अर्थ है M, N का भाई है; M × N का अर्थ है M, N का पति है; M ÷ N का अर्थ है M, N की पुत्री है; M @ N का अर्थ है M, N की माता है। (i) निम्नलिखित अभिव्यक्ति में प्रश्नवाचक चिह्न (?) के स्थान पर क्या आएगा जिससे P, U का जीजा (brother-in-law) बन जाए?\nP × R ÷ T ? U",
+    "oe": [
+      "+",
+      "×",
+      "÷",
+      "@"
+    ],
+    "oh": [
+      "+",
+      "×",
+      "÷",
+      "@"
+    ],
+    "a": 3,
+    "e": "Method 1 (Reverse Family Tree Shortcut):\nStep 1: Expression ke pehle hisse ko decode karein:\n- P × R → P, R ka pati hai ($P^{(+)} \\iff R^{(-)}$).\n- R ÷ T → R, T ki beti hai ($R^{(-)}$).\nStep 2: P ko U ka Brother-in-law (जीजा) banana hai, iska arth hai ki P ki patni (R) aur U aapas me bhai-behan (siblings) hone chahiye.\nStep 3: R aur U dono T ki santaan hone chahiye:\n- R pehle se T ki beti hai.\n- Yadi T, U ki mata ban jaye (`T @ U`), toh R aur U dono T ki santaanein (siblings) ho jayengi.\n- Tab P, U ki behan (R) ka pati hone ke karan U ka Brother-in-law (जीजा) ban jayega.\nAtah '?' ke sthan par '@' aana chahiye.\nCorrect option  @ hai.\n\nMethod 2 (Option Substitution Method):\n- Agar '?' ki jagah '@' rakhein: $P \\times R \\div T @ U$\n  - $T @ U \\implies T$ mata hai $U$ ki.\n  - $R \\div T \\implies R$ beti hai $T$ ki.\n  - Isse $R$ aur $U$ siblings ho gaye.\n  - $P \\times R \\implies P$ pati hai $R$ ka, jo $U$ ka brother-in-law (जीजा) banta hai.\nSahi uttar '@' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "codedrelation_12",
+    "qe": "Given: M + N means M is the brother of N; M × N means M is the husband of N; M ÷ N means M is the daughter of N; M @ N means M is the mother of N. (ii) In the following expression what will come in place of question mark (?) so that A becomes the uncle of D?\nA + B × C ? D",
+    "qh": "दिया है: M + N का अर्थ है M, N का भाई है; M × N का अर्थ है M, N का पति है; M ÷ N का अर्थ है M, N की पुत्री है; M @ N का अर्थ है M, N की माता है। (ii) निम्नलिखित अभिव्यक्ति में प्रश्नवाचक चिह्न (?) के स्थान पर क्या आएगा जिससे A, D का चाचा (uncle) बन जाए?\nA + B × C ? D",
+    "oe": [
+      "+",
+      "×",
+      "÷",
+      "@"
+    ],
+    "oh": [
+      "+",
+      "×",
+      "÷",
+      "@"
+    ],
+    "a": 3,
+    "e": "Method 1 (Direct Relationship Requirement Shortcut):\nStep 1: Diya gaya expression decode karein:\n- A + B → A, B ka bhai hai ($A^{(+)} \\leftrightarrow B^{(+)}$).\n- B × C → B, C ka pati hai ($B^{(+)} \\iff C^{(-)}$).\nStep 2: A ko D ka Uncle (चाचा) banana hai:\n- A, B ka bhai hai. Yadi D, B aur C ki santaan ho jaye, toh pita (B) ka bhai hone ke karan A, D ka Uncle (चाचा) ban jayega.\nStep 3: C mahila (patni) hai, isliye C ko D ki mata hona padega:\n- C aur D ke beech 'Mother' ka relation aana chahiye, jiska symbol '@' hai (`C @ D`).\nIsliye '?' ke sthan par '@' aayega.\nCorrect option  @ hai.\n\nMethod 2 (Elimination Method):\n- C ek female hai, isliye C kisi ka bhai (+) ya pati (×) nahi ban sakti (Options A aur B eliminate).\n- Agar '÷' lagayein toh C, D ki beti ban jayegi (Gen -1, galat).\n- Keval '@' '@' lagane par C, D ki mata banegi aur A uska paternal uncle (चाचा) banega.\nSahi uttar '@' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

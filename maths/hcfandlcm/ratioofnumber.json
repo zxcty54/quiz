@@ -1,0 +1,135 @@
+[
+  {
+    "p_id": "ratioofnumber_1",
+    "qe": "The LCM of two numbers is 120 and the numbers are in the ratio 3 : 8. The sum of the numbers will be:",
+    "qh": "दो संख्याओं का LCM 120 है और संख्याएँ 3 : 8 के अनुपात में हैं। संख्याओं का योग क्या होगा:",
+    "oe": [
+      "48",
+      "55",
+      "45",
+      "60"
+    ],
+    "oh": [
+      "48",
+      "55",
+      "45",
+      "60"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Multiplier Method):\nStep 1: मान लें संख्याएँ $3x$ और $8x$ हैं, जहाँ $x$ उनका HCF है।\nचूँकि 3 और 8 सह-अभाज्य (co-prime) हैं, अतः उनका LCM:\n$$\\text{LCM} = 3 $\\times$ 8 $\\times$ x = 24x$$\nStep 2: दिया गया है कि $\\text{LCM} = 120$:\n$$24x = 120 \\implies x = 5$$\nStep 3: संख्याओं का योग निकालें:\n$$\\text{योग} = 3x + 8x = 11x = 11 $\\times$ 5 = 55$$\nअतः सही विकल्प  55 है।\n\nMethod 2 (Individual Numbers Method):\nStep 1: पहली संख्या = $3 \\times 5 = 15$, दूसरी संख्या = $8 \\times 5 = 40$.\nStep 2: योग = $15 + 40 = 55$.\nअतः सही उत्तर '55' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "ratioofnumber_2",
+    "qe": "Three numbers are in the ratio 5 : 7 : 9, and their LCM is 1260. What is the difference between the largest and the smallest number?",
+    "qh": "तीन संख्याएँ 5 : 7 : 9 के अनुपात में हैं, और उनका LCM 1260 है। सबसे बड़ी और सबसे छोटी संख्या के बीच का अंतर क्या है?",
+    "oe": [
+      "20",
+      "24",
+      "16",
+      "32"
+    ],
+    "oh": [
+      "20",
+      "24",
+      "16",
+      "32"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio and Difference Method):\nStep 1: मान लें संख्याएँ $5x$, $7x$ और $9x$ हैं।\n5, 7 और 9 परस्पर सह-अभाज्य हैं, अतः उनका LCM:\n$$\\text{LCM} = 5 $\\times$ 7 $\\times$ 9 $\\times$ x = 315x$$\nStep 2: दिया गया है कि $\\text{LCM} = 1260$:\n$$315x = 1260 \\implies x = 4$$\nStep 3: सबसे बड़ी संख्या ($9x$) और सबसे छोटी संख्या ($5x$) का अंतर:\n$$\\text{अंतर} = 9x - 5x = 4x = 4 $\\times$ 4 = 16$$\nअतः सही विकल्प  16 है।\n\nMethod 2 (Value Verification Method):\nसंख्याएँ: $5 \\times 4 = 20$, $7 \\times 4 = 28$, $9 \\times 4 = 36$.\nअंतर = $36 - 20 = 16$.\nअतः सही उत्तर '16' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "ratioofnumber_3",
+    "qe": "Three numbers are in the ratio of 5 : 7 : 9 and their LCM is 34,650. Their HCF is:",
+    "qh": "तीन संख्याएँ 5 : 7 : 9 के अनुपात में हैं और उनका LCM 34,650 है। उनका HCF क्या है:",
+    "oe": [
+      "110",
+      "315",
+      "99",
+      "55"
+    ],
+    "oh": [
+      "110",
+      "315",
+      "99",
+      "55"
+    ],
+    "a": 0,
+    "e": "Method 1 (HCF Formula from LCM Method):\nStep 1: यदि संख्याओं का अनुपात $a : b : c$ हो (जहाँ पद परस्पर सह-अभाज्य हैं), तो:\n$$\\text{LCM} = a $\\times$ b $\\times$ c $\\times$ \\text{HCF}$$\nStep 2: मान रखने पर:\n$$34650 = 5 $\\times$ 7 $\\times$ 9 $\\times$ \\text{HCF}$$\n$$34650 = 315 $\\times$ \\text{HCF}$$\nStep 3: HCF का मान निकालें:\n$$\\text{HCF} = $\\frac{34650}{315}$ = 110$$\nअतः सही विकल्प  110 है।\n\nMethod 2 (Step-by-Step Cancellation):\n$\\text{HCF} = \\frac{34650}{5 \\times 7 \\times 9} = \\frac{6930}{63} = 110$.\nअतः सही उत्तर '110' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "ratioofnumber_4",
+    "qe": "The HCF of two numbers is 17 and the other two factors of their LCM are 11 and 19. The smaller of the two numbers is:",
+    "qh": "दो संख्याओं का HCF 17 है और उनके LCM के अन्य दो गुणनखंड 11 और 19 हैं। दोनों संख्याओं में से छोटी संख्या क्या है:",
+    "oe": [
+      "209",
+      "187",
+      "323",
+      "306"
+    ],
+    "oh": [
+      "209",
+      "187",
+      "323",
+      "306"
+    ],
+    "a": 1,
+    "e": "Method 1 (HCF and LCM Factors Method):\nStep 1: यदि HCF $= H$ हो और LCM के सह-अभाज्य गुणनखंड $a$ और $b$ हों, तो दोनों संख्याएँ $Ha$ और $Hb$ होती हैं।\nStep 2: दिया गया है: $H = 17$, $a = 11$, $b = 19$:\n- छोटी संख्या = $17 \\times 11 = 187$\n- बड़ी संख्या = $17 \\times 19 = 323$\nStep 3: छोटी संख्या का मान 187 है।\nअतः सही विकल्प  187 है।\n\nMethod 2 (Direct Multiplication):\nछोटी संख्या = $\\text{HCF} \\times \\text{छोटा गुणनखंड} = 17 \\times 11 = 187$.\nअतः सही उत्तर '187' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "ratioofnumber_5",
+    "qe": "Three numbers are in the ratio of 2 : 3 : 5 and their LCM is 90. Find their HCF.",
+    "qh": "तीन संख्याएँ 2 : 3 : 5 के अनुपात में हैं और उनका LCM 90 है। उनका HCF ज्ञात कीजिए।",
+    "oe": [
+      "9",
+      "1",
+      "6",
+      "3"
+    ],
+    "oh": [
+      "9",
+      "1",
+      "6",
+      "3"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Product Formula Method):\nStep 1: मान लें कि HCF $= h$ है।\nसंख्याएँ $2h$, $3h$ और $5h$ होंगी।\nचूँकि 2, 3 और 5 परस्पर सह-अभाज्य (co-prime) संख्याएँ हैं:\n$$\\text{LCM} = 2 $\\times$ 3 $\\times$ 5 $\\times$ h = 30h$$\nStep 2: दिया गया है $\\text{LCM} = 90$:\n$$30h = 90 \\implies h = 3$$\nअतः संख्याओं का HCF 3 है।\nअतः सही विकल्प  3 है।\n\nMethod 2 (Verification):\nसंख्याएँ: $2 \\times 3 = 6$, $3 \\times 3 = 9$, $5 \\times 3 = 15$.\n$\\text{LCM}(6, 9, 15) = 90$.\n$\\text{HCF}(6, 9, 15) = 3$.\nअतः सही उत्तर '3' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "ratioofnumber_6",
+    "qe": "Three numbers are in the ratio 1/2 : 2/3 : 3/4. If the difference between the greatest number and the smallest number is 33, then HCF of the three numbers is:",
+    "qh": "तीन संख्याएँ 1/2 : 2/3 : 3/4 के अनुपात में हैं। यदि सबसे बड़ी संख्या और सबसे छोटी संख्या के बीच का अंतर 33 है, तो तीनों संख्याओं का HCF क्या है:",
+    "oe": [
+      "9",
+      "5",
+      "13",
+      "11"
+    ],
+    "oh": [
+      "9",
+      "5",
+      "13",
+      "11"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Simplification Method):\nStep 1: भिन्न अनुपात को पूर्णांक अनुपात में बदलें (2, 3, 4 का LCM = 12):\n$$$\\frac{1}{2}$ $\\times$ 12 : $\\frac{2}{3}$ $\\times$ 12 : $\\frac{3}{4}$ $\\times$ 12 = 6 : 8 : 9$$\nStep 2: मान लें संख्याएँ $6x$, $8x$ और $9x$ हैं।\nसबसे बड़ी संख्या = $9x$, सबसे छोटी संख्या = $6x$.\nStep 3: अंतर समीकरण बनाएं:\n$$9x - 6x = 33 \\implies 3x = 33 \\implies x = 11$$\nStep 4: संख्याएँ ज्ञात करें:\n- पहली संख्या = $6 \\times 11 = 66$\n- दूसरी संख्या = $8 \\times 11 = 88$\n- तीसरी संख्या = $9 \\times 11 = 99$\nStep 5: 66, 88 और 99 का HCF निकालें:\n$$\\text{HCF}(66, 88, 99) = 11 $\\times$ \\text{HCF}(6, 8, 9) = 11 $\\times$ 1 = 11$$\nअतः सही विकल्प  11 है।\n\nMethod 2 (Direct Co-prime Multiplier Rule):\nसरलीकृत अनुपात 6 : 8 : 9 के पदों का HCF 1 है, अतः सार्व गुणनखंड $x = 11$ ही तीनों संख्याओं का HCF होगा।\nअतः सही उत्तर '11' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "ratioofnumber_7",
+    "qe": "Two numbers are in the ratio 7:11. If their HCF is 28, then the difference between the two numbers is:",
+    "qh": "दो संख्याएँ 7:11 के अनुपात में हैं। यदि उनका HCF 28 है, तो दोनों संख्याओं के बीच का अंतर क्या है:",
+    "oe": [
+      "28",
+      "196",
+      "112",
+      "308"
+    ],
+    "oh": [
+      "28",
+      "196",
+      "112",
+      "308"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Difference Method):\nStep 1: यदि दो संख्याओं का अनुपात $a : b$ और HCF $= H$ हो, तो संख्याएँ $Ha$ और $Hb$ होती हैं।\nStep 2: दोनों संख्याओं का अंतर:\n$$\\text{अंतर} = (b - a) $\\times$ H$$\nStep 3: मान रखने पर ($a = 7$, $b = 11$, $H = 28$):\n$$\\text{अंतर} = (11 - 7) $\\times$ 28 = 4 $\\times$ 28 = 112$$\nअतः सही विकल्प  112 है।\n\nMethod 2 (Direct Calculation of Numbers):\n- पहली संख्या = $7 \\times 28 = 196$\n- दूसरी संख्या = $11 \\times 28 = 308$\nअंतर = $308 - 196 = 112$.\nअतः सही उत्तर '112' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

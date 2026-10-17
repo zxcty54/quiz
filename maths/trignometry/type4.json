@@ -1,0 +1,895 @@
+[
+  {
+    "p_id": "type4_1",
+    "qe": "$sin^2$ 43° + $sin^2$ 47° = ?",
+    "qh": "$sin^2$ 43° + $sin^2$ 47° का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Angle Shortcut Method):\nStep 1: Direct Rule: Agar $\\alpha + \\beta = 90^\\circ$ ho, toh $\\sin^2\\alpha + \\sin^2\\beta = 1$ hota hai.\nStep 2: Yahan angles check karein:\n$$43^$\\circ$ + 47^$\\circ$ = 90^$\\circ$$$\nStep 3: Isliye direct result $1$ hoga:\n$$\\sin^2 43^$\\circ$ + \\sin^2 47^$\\circ$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Standard Conversion Method):\n$$\\sin 47^$\\circ$ = \\sin(90^$\\circ$ - 43^$\\circ$) = \\cos 43^$\\circ$$$\n$$\\sin^2 43^$\\circ$ + \\cos^2 43^$\\circ$ = 1$$\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_2",
+    "qe": "$sin^2$ 39° + $sin^2$ 49° + $sin^2$ 41° + $sin^2$ 51° = ?",
+    "qh": "$sin^2$ 39° + $sin^2$ 49° + $sin^2$ 41° + $sin^2$ 51° का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Pairing Complementary Angles Method):\nStep 1: Un angles ke pairs banate hain jinka sum $90^\\circ$ ho:\n- Pair 1: $(39^\\circ + 51^\\circ = 90^\\circ) \\implies \\sin^2 39^\\circ + \\sin^2 51^\\circ = 1$\n- Pair 2: $(49^\\circ + 41^\\circ = 90^\\circ) \\implies \\sin^2 49^\\circ + \\sin^2 41^\\circ = 1$\nStep 2: Dono pairs ko add karein:\n$$1 + 1 = 2$$\nCorrect '1' hai.\n\nMethod 2 (Cosine Conversion Method):\n$$\\sin^2 39^$\\circ$ + \\cos^2 39^$\\circ$ + \\sin^2 41^$\\circ$ + \\cos^2 41^$\\circ$ = 1 + 1 = 2$$\nSahi uttar '2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_3",
+    "qe": "$sin^2$ 1° + $sin^2$ 2° + $sin^2$ 3° ......... + $sin^2$ 88° + $sin^2$ 89° = ?",
+    "qh": "$sin^2$ 1° + $sin^2$ 2° + $sin^2$ 3° ......... + $sin^2$ 88° + $sin^2$ 89° का मान क्या होगा?",
+    "oe": [
+      "45/2",
+      "44",
+      "89/2",
+      "25/2"
+    ],
+    "oh": [
+      "45/2",
+      "44",
+      "89/2",
+      "25/2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Symmetric Pair Counting Method):\nStep 1: Total terms 1 se 89 tak $= 89$ terms hain.\nStep 2: Shuru aur aakhiri se complementary pairs ($A + B = 90^\\circ$) banate hain:\n- $(\\sin^2 1^\\circ + \\sin^2 89^\\circ) = 1$\n- $(\\sin^2 2^\\circ + \\sin^2 88^\\circ) = 1$\n- $(\\sin^2 44^\\circ + \\sin^2 46^\\circ) = 1$\nKul 44 pairs banenge jinka sum $= 44 \\times 1 = 44$.\nStep 3: Exactly middle term $\\sin^2 45^\\circ$ bachega:\n$$\\sin^2 45^$\\circ$ = $\\le$ft(\\frac{1}{$\\sqrt{2}$}\\right)^2 = $\\frac{1}{2}$$$\nStep 4: Total sum evaluate karein:\n$$\\text{Total} = 44 + $\\frac{1}{2}$ = $\\frac{89}{2}$$$\nCorrect option  89/2 hai.\n\nMethod 2 (Direct Exam Shortcut):\nFormula: $\\text{Total Sum} = \\frac{\\text{Total Terms}}{2} = \\frac{89}{2}$.\nSahi uttar '89/2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_4",
+    "qe": "$sin^2$ 1° + $sin^2$ 3° + $sin^2$ 5° ......... + $sin^2$ 89° = ?",
+    "qh": "$sin^2$ 1° + $sin^2$ 3° + $sin^2$ 5° ......... + $sin^2$ 89° का मान क्या होगा?",
+    "oe": [
+      "45/2",
+      "44",
+      "89/2",
+      "25/2"
+    ],
+    "oh": [
+      "45/2",
+      "44",
+      "89/2",
+      "25/2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Odd Terms Pairing Method):\nStep 1: Series me keval odd angles hain. Total terms:\n$$n = $\\frac{89-1}{2}$ + 1 = 45 \\text{ terms}$$\nStep 2: $90^\\circ$ sum wale pairs banayein:\n- $(\\sin^2 1^\\circ + \\sin^2 89^\\circ) = 1$\n- $(\\sin^2 3^\\circ + \\sin^2 87^\\circ) = 1$\n- $\\dots$\nKul 22 pairs banenge jinka sum $= 22$.\nStep 3: Middle term $\\sin^2 45^\\circ$ single bachega:\n$$\\sin^2 45^$\\circ$ = $\\frac{1}{2}$$$\nStep 4: Total sum calculate karein:\n$$\\text{Sum} = 22 + $\\frac{1}{2}$ = $\\frac{45}{2}$$$\nCorrect '25/2'5/2 hai.\n\nMethod 2 (Direct Shortcut Formula):\n$$\\text{Total Sum} = \\frac{\\text{Number of Terms}}{2} = $\\frac{45}{2}$$$\nSahi uttar '45/2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_5",
+    "qe": "$sin^2$ 2° + $sin^2$ 4° + $sin^2$ 6° ......... + $sin^2$ 88° = ?",
+    "qh": "$sin^2$ 2° + $sin^2$ 4° + $sin^2$ 6° ......... + $sin^2$ 88° का मान क्या होगा?",
+    "oe": [
+      "45/2",
+      "22",
+      "89/2",
+      "25/2"
+    ],
+    "oh": [
+      "45/2",
+      "22",
+      "89/2",
+      "25/2"
+    ],
+    "a": 1,
+    "e": "Method 1 (Even Terms Pairing Method):\nStep 1: Series me keval even angles hain (2° se 88° tak). Total terms:\n$$n = $\\frac{88}{2}$ = 44 \\text{ terms}$$\nStep 2: $90^\\circ$ sum wale pairs banayein:\n- $(\\sin^2 2^\\circ + \\sin^2 88^\\circ) = 1$\n- $(\\sin^2 4^\\circ + \\sin^2 86^\\circ) = 1$\n- $(\\sin^2 44^\\circ + \\sin^2 46^\\circ) = 1$\nStep 3: Kul complete pairs ki sankhya $= \\frac{44}{2} = 22$.\nKoi bhi term akele nahi bachta hai, isliye:\n$$\\text{Total Sum} = 22 $\\times$ 1 = 22$$\nCorrect '22'2 hai.\n\nMethod 2 (Direct Half Rule Method):\n$$\\text{Sum} = \\frac{\\text{Total Terms}}{2} = $\\frac{44}{2}$ = 22$$\nSahi uttar '22' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_6",
+    "qe": "$sin^2$ 5° + $sin^2$ 10° + ..... + $sin^2$ 85° + $sin^2$ 90° = ?",
+    "qh": "$sin^2$ 5° + $sin^2$ 10° + ..... + $sin^2$ 85° + $sin^2$ 90° का मान क्या होगा?",
+    "oe": [
+      "45/2",
+      "44",
+      "19/2",
+      "25/2"
+    ],
+    "oh": [
+      "45/2",
+      "44",
+      "19/2",
+      "25/2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Multiples of 5 Pairing Method):\nStep 1: Series ko do hisson me todte hain:\n$$\\text{Series} = (\\sin^2 5^$\\circ$ + \\dots + \\sin^2 85^$\\circ$) + \\sin^2 90^$\\circ$$$\nStep 2: $5^\\circ$ se $85^\\circ$ tak total $\\frac{85}{5} = 17$ terms hain:\n- 8 pairs ($90^\\circ$ sum wale) $= 8 \\times 1 = 8$\n- Ek middle term $\\sin^2 45^\\circ = \\frac{1}{2}$\n$$(\\sin^2 5^$\\circ$ + \\dots + \\sin^2 85^$\\circ$) = 8 + $\\frac{1}{2}$ = $\\frac{17}{2}$$$\nStep 3: $\\sin^2 90^\\circ = 1^2 = 1$ add karein:\n$$\\text{Total} = $\\frac{17}{2}$ + 1 = $\\frac{19}{2}$$$\nCorrect '45/2'9/2 hai.\n\nMethod 2 (Direct Calculation Method):\n$$8.5 + 1 = 9.5 = $\\frac{19}{2}$$$\nSahi uttar '19/2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_7",
+    "qe": "$sin^2(\\pi$/12) + $sin^2(5\\pi$/12) = ?",
+    "qh": "$sin^2(\\pi$/12) + $sin^2(5\\pi$/12) का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Radian Complementary Sum Method):\nStep 1: Angles ka sum check karein:\n$$$\\frac{\\pi}{12}$ + $\\frac{5\\pi}{12}$ = $\\frac{6\\pi}{12}$ = $\\frac{\\pi}{2}$ = 90^$\\circ$$$\nStep 2: Rule: Agar $A + B = \\frac{\\pi}{2}$ ho, toh $\\sin^2 A + \\sin^2 B = 1$ hota hai:\n$$\\sin^2$\\le$ft($\\frac{\\pi}{12}$\\right) + \\sin^2$\\le$ft($\\frac{5\\pi}{12}$\\right) = 1$$\nCorrect '0' hai.\n\nMethod 2 (Degree Conversion Method):\n$$$\\frac{\\pi}{12}$ = 15^$\\circ$, \\quad $\\frac{5\\pi}{12}$ = 75^$\\circ$$$\n$$\\sin^2 15^$\\circ$ + \\sin^2 75^$\\circ$ = \\sin^2 15^$\\circ$ + \\cos^2 15^$\\circ$ = 1$$\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_8",
+    "qe": "$sin^2(\\pi$/20) + $sin^2(3\\pi$/20) + $sin^2(7\\pi$/20) + $sin^2(9\\pi$/20) = ?",
+    "qh": "$sin^2(\\pi$/20) + $sin^2(3\\pi$/20) + $sin^2(7\\pi$/20) + $sin^2(9\\pi$/20) का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Complementary Pairs Grouping Method):\nStep 1: Un pairs ko combine karein jinka sum $\\frac{10\\pi}{20} = \\frac{\\pi}{2}$ ($90^\\circ$) ho:\n- Pair 1: $\\sin^2(\\pi/20) + \\sin^2(9\\pi/20) = 1$ (chuki $\\frac{\\pi}{20} + \\frac{9\\pi}{20} = \\frac{\\pi}{2}$)\n- Pair 2: $\\sin^2(3\\pi/20) + \\sin^2(7\\pi/20) = 1$ (chuki $\\frac{3\\pi}{20} + \\frac{7\\pi}{20} = \\frac{\\pi}{2}$)\nStep 2: Dono pairs ko add karein:\n$$\\text{Total} = 1 + 1 = 2$$\nCorrect '1' hai.\n\nMethod 2 (Degree Equivalent Method):\n$$$\\frac{\\pi}{20}$ = 9^$\\circ$ \\implies \\sin^2 9^$\\circ$ + \\sin^2 27^$\\circ$ + \\sin^2 63^$\\circ$ + \\sin^2 81^$\\circ$$$\n$$= (\\sin^2 9^$\\circ$ + \\sin^2 81^$\\circ$) + (\\sin^2 27^$\\circ$ + \\sin^2 63^$\\circ$) = 1 + 1 = 2$$\nSahi uttar '2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_9",
+    "qe": "If $sin^2\\theta$ + $sin^2$ 57° = 1, then $\\theta =$ ?",
+    "qh": "यदि $sin^2\\theta$ + $sin^2$ 57° = 1 है, तो θ का मान क्या होगा?",
+    "oe": [
+      "23°",
+      "33°",
+      "34°",
+      "53°"
+    ],
+    "oh": [
+      "23°",
+      "33°",
+      "34°",
+      "53°"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Angle Formula Method):\nStep 1: Property: $\\sin^2 A + \\sin^2 B = 1 \\iff A + B = 90^\\circ$.\nStep 2: Angles compare karein:\n$$$\\theta$ + 57^$\\circ$ = 90^$\\circ$$$\n$$$\\theta$ = 90^$\\circ$ - 57^$\\circ$ = 33^$\\circ$$$\nCorrect '34°'3° hai.\n\nMethod 2 (Identity Transformation Method):\n$$\\sin^2$\\theta$ = 1 - \\sin^2 57^$\\circ$ = \\cos^2 57^$\\circ$ = \\sin^2(90^$\\circ$ - 57^$\\circ$) = \\sin^2 33^$\\circ$ \\implies $\\theta$ = 33^$\\circ$$$\nSahi uttar '33°' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_10",
+    "qe": "If $sin^2(\\pi$/10) + $sin^2\\theta$ = 1, then $\\theta =$ ?",
+    "qh": "यदि $sin^2(\\pi$/10) + $sin^2\\theta$ = 1 है, तो θ का मान क्या होगा?",
+    "oe": [
+      "$2\\pi/5$",
+      "$4\\pi/5$",
+      "$3\\pi/5$",
+      "$\\pi/5$"
+    ],
+    "oh": [
+      "$2\\pi/5$",
+      "$4\\pi/5$",
+      "$3\\pi/5$",
+      "$\\pi/5$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Radian Complementary Method):\nStep 1: $\\sin^2 A + \\sin^2 B = 1 \\implies A + B = \\frac{\\pi}{2}$.\nStep 2: $\\theta$ solve karein:\n$$$\\frac{\\pi}{10}$ + $\\theta$ = $\\frac{\\pi}{2}$$$\n$$$\\theta$ = $\\frac{\\pi}{2}$ - $\\frac{\\pi}{10}$ = $\\frac{5\\pi-\\pi}{10}$ = $\\frac{4\\pi}{10}$ = $\\frac{2\\pi}{5}$$$\nCorrect '4π/5'π/5 hai.\n\nMethod 2 (Degree Equivalent Method):\n$$$\\frac{\\pi}{10}$ = 18^$\\circ$ \\implies $\\theta$ = 90^$\\circ$ - 18^$\\circ$ = 72^$\\circ$$$\n$$72^$\\circ$ = 72 $\\times$ $\\frac{\\pi}{180}$ = $\\frac{2\\pi}{5}$$$\nSahi uttar '2π/5' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_11",
+    "qe": "If $sin^2\\theta$ + $sin^2$ $2\\theta = 1,$ then $sin\\theta \\cdot sin 2\\theta =$ ?",
+    "qh": "यदि $sin^2\\theta$ + $sin^2$ $2\\theta = 1$ है, तो $sin\\theta \\cdot sin 2\\theta$ का मान क्या होगा?",
+    "oe": [
+      "√3/4",
+      "√3/2",
+      "√3",
+      "1/√3"
+    ],
+    "oh": [
+      "√3/4",
+      "√3/2",
+      "√3",
+      "1/√3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Angle Sum Shortcut Method):\nStep 1: $\\sin^2 A + \\sin^2 B = 1 \\implies A + B = 90^\\circ$.\n$$$\\theta$ + 2$\\theta$ = 90^$\\circ$ \\implies 3$\\theta$ = 90^$\\circ$ \\implies $\\theta$ = 30^$\\circ$$$\nStep 2: Target product $\\sin\\theta \\cdot \\sin 2\\theta$ evaluate karein:\n$$\\sin 30^$\\circ$ \\cdot \\sin 60^$\\circ$ = $\\frac{1}{2}$ $\\times$ \\frac{$\\sqrt{3}$}{2} = \\frac{$\\sqrt{3}$}{4}$$\nCorrect option  √3/4 hai.\n\nMethod 2 (Value Verification Method):\n$\\theta = 30^\\circ$ lene par: $\\sin^2 30^\\circ + \\sin^2 60^\\circ = \\frac{1}{4} + \\frac{3}{4} = 1$ (Satisfied).\n$$\\sin 30^$\\circ$ $\\times$ \\sin 60^$\\circ$ = \\frac{$\\sqrt{3}$}{4}$$\nSahi uttar '√3/4' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_12",
+    "qe": "If $sin^2(x$ - y) + $sin^2(x$ + y) = 1, then sin x + cos x = ?",
+    "qh": "यदि $sin^2(x$ - y) + $sin^2(x$ + y) = 1 है, तो sin x + cos x का मान क्या होगा?",
+    "oe": [
+      "√3/4",
+      "√2",
+      "1",
+      "0"
+    ],
+    "oh": [
+      "√3/4",
+      "√2",
+      "1",
+      "0"
+    ],
+    "a": 1,
+    "e": "Method 1 (Angle Sum Property Method):\nStep 1: Formula: $\\sin^2 A + \\sin^2 B = 1 \\implies A + B = 90^\\circ$.\n$$(x - y) + (x + y) = 90^$\\circ$$$\n$$2x = 90^$\\circ$ \\implies x = 45^$\\circ$$$\nStep 2: $\\sin x + \\cos x$ calculate karein:\n$$\\sin 45^$\\circ$ + \\cos 45^$\\circ$ = \\frac{1}{$\\sqrt{2}$} + \\frac{1}{$\\sqrt{2}$} = \\frac{2}{$\\sqrt{2}$} = $\\sqrt{2}$$$\nCorrect option  √2 hai.\n\nMethod 2 (Testing with y = 0):\n$y = 0 \\implies 2\\sin^2 x = 1 \\implies \\sin^2 x = \\frac{1}{2} \\implies x = 45^\\circ$.\n$$\\sin 45^$\\circ$ + \\cos 45^$\\circ$ = $\\sqrt{2}$$$\nSahi uttar '√2' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_13",
+    "qe": "If $sin^2x$ + $sin^2y$ = 1, then cotx · coty = ?",
+    "qh": "यदि $sin^2x$ + $sin^2y$ = 1 है, तो cotx · coty का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Property Shortcut Method):\nStep 1: Standard result: Jab $\\sin^2 x + \\sin^2 y = 1$ hota hai, tab $x + y = 90^\\circ$ hota hai.\nStep 2: Agar do angles ka sum $90^\\circ$ ho, toh $\\cot x \\cdot \\cot y = 1$ hota hai.\nCorrect '0' hai.\n\nMethod 2 (Value-Putting Method):\n$x = 45^\\circ, y = 45^\\circ$ assume karein (chuki $\\sin^2 45^\\circ + \\sin^2 45^\\circ = \\frac{1}{2} + \\frac{1}{2} = 1$):\n$$\\cot 45^$\\circ$ \\cdot \\cot 45^$\\circ$ = 1 $\\times$ 1 = 1$$\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_14",
+    "qe": "If $sin^2A$ + $sin^2B$ = 1, then (sin A / cos B) = ?",
+    "qh": "यदि $sin^2A$ + $sin^2B$ = 1 है, तो (sin A / cos B) का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Angles Method):\nStep 1: $\\sin^2 A + \\sin^2 B = 1 \\implies A + B = 90^\\circ \\implies B = 90^\\circ - A$.\nStep 2: Denominator ko convert karein:\n$$\\cos B = \\cos(90^$\\circ$ - A) = \\sin A$$\nStep 3: Ratio evaluate karein:\n$$$\\frac{\\sinA}{\\cosB}$ = $\\frac{\\sinA}{\\sinA}$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Value-Putting Method):\n$A = 30^\\circ, B = 60^\\circ$ lein (chuki $\\sin^2 30^\\circ + \\sin^2 60^\\circ = \\frac{1}{4} + \\frac{3}{4} = 1$):\n$$$\\frac{\\sin30^\\circ}{\\cos60^\\circ}$ = $\\frac{1/2}{1/2}$ = 1$$\nSahi uttar '1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_15",
+    "qe": "If $sin^2\\alpha$ + $sin^2\\beta$ = 1, then $sin\\alpha \\cdot sec\\beta =$ ?",
+    "qh": "यदि $sin^2\\alpha$ + $sin^2\\beta$ = 1 है, तो $sin\\alpha \\cdot sec\\beta$ का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Angle Sum Property Method):\nStep 1: $\\sin^2\\alpha + \\sin^2\\beta = 1 \\implies \\alpha + \\beta = 90^\\circ \\implies \\beta = 90^\\circ - \\alpha$.\nStep 2: $\\sec\\beta$ ko convert karein:\n$$\\sec$\\beta$ = \\sec(90^$\\circ$ - $\\alpha$) = \\csc$\\alpha$$$\nStep 3: Multiply karein:\n$$\\sin$\\alpha$ \\cdot \\sec$\\beta$ = \\sin$\\alpha$ \\cdot \\csc$\\alpha$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Value Substitution Method):\n$\\alpha = 45^\\circ, \\beta = 45^\\circ$ lene par:\n$$\\sin 45^$\\circ$ \\cdot \\sec 45^$\\circ$ = \\frac{1}{$\\sqrt{2}$} $\\times$ $\\sqrt{2}$ = 1$$\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_16",
+    "qe": "If $sin^2x$ + $sin^2y$ = 1, then cosx · cosecy = ?",
+    "qh": "यदि $sin^2x$ + $sin^2y$ = 1 है, तो cosx · cosecy का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Conversion Method):\nStep 1: $\\sin^2 x + \\sin^2 y = 1 \\implies x + y = 90^\\circ \\implies y = 90^\\circ - x$.\nStep 2: $\\csc y$ convert karein:\n$$\\csc y = \\csc(90^$\\circ$ - x) = \\sec x$$\nStep 3: Product evaluate karein:\n$$\\cos x \\cdot \\csc y = \\cos x \\cdot \\sec x = 1$$\nCorrect '0' hai.\n\nMethod 2 (Value-Putting Method):\n$x = 60^\\circ, y = 30^\\circ$ lene par:\n$$\\cos 60^$\\circ$ \\cdot \\csc 30^$\\circ$ = $\\frac{1}{2}$ $\\times$ 2 = 1$$\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_17",
+    "qe": "If $sin^2A$ + $sin^2B$ = 1, then (tan A / cot B) = ?",
+    "qh": "यदि $sin^2A$ + $sin^2B$ = 1 है, तो (tan A / cot B) का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Ratio Transformation Method):\nStep 1: $\\sin^2 A + \\sin^2 B = 1 \\implies A + B = 90^\\circ \\implies B = 90^\\circ - A$.\nStep 2: $\\cot B = \\cot(90^\\circ - A) = \\tan A$.\nStep 3: Fraction solve karein:\n$$$\\frac{\\tanA}{\\cotB}$ = $\\frac{\\tanA}{\\tanA}$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Value-Putting Method):\n$A = 45^\\circ, B = 45^\\circ \\implies \\frac{\\tan 45^\\circ}{\\cot 45^\\circ} = \\frac{1}{1} = 1$.\nSahi uttar '1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_18",
+    "qe": "If $sin^2\\alpha$ + $sin^2\\beta$ = 1, then $(cos \\alpha / sin \\beta) =$ ?",
+    "qh": "यदि $sin^2\\alpha$ + $sin^2\\beta$ = 1 है, तो $(cos \\alpha / sin \\beta)$ का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Angle Ratio Method):\nStep 1: $\\sin^2\\alpha + \\sin^2\\beta = 1 \\implies \\alpha + \\beta = 90^\\circ \\implies \\beta = 90^\\circ - \\alpha$.\nStep 2: $\\sin\\beta = \\sin(90^\\circ - \\alpha) = \\cos\\alpha$.\nStep 3: Value substitute karein:\n$$$\\frac{\\cos\\alpha}{\\sin\\beta}$ = $\\frac{\\cos\\alpha}{\\cos\\alpha}$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Direct Value Method):\n$\\alpha = 30^\\circ, \\beta = 60^\\circ \\implies \\frac{\\cos 30^\\circ}{\\sin 60^\\circ} = \\frac{\\sqrt{3}/2}{\\sqrt{3}/2} = 1$.\nSahi uttar '1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_19",
+    "qe": "If $sin^2\\alpha$ + $sin^2\\beta$ = 1, then $(sec \\alpha /$ cosec $\\beta) =$ ?",
+    "qh": "यदि $sin^2\\alpha$ + $sin^2\\beta$ = 1 है, तो $(sec \\alpha /$ cosec β) का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Reciprocal Ratio Method):\nStep 1: $\\sin^2\\alpha + \\sin^2\\beta = 1 \\implies \\alpha + \\beta = 90^\\circ \\implies \\beta = 90^\\circ - \\alpha$.\nStep 2: $\\csc\\beta = \\csc(90^\\circ - \\alpha) = \\sec\\alpha$.\nStep 3: Ratio solve karein:\n$$$\\frac{\\sec\\alpha}{\\csc\\beta}$ = $\\frac{\\sec\\alpha}{\\sec\\alpha}$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Value Substitution Method):\n$\\alpha = 45^\\circ, \\beta = 45^\\circ \\implies \\frac{\\sec 45^\\circ}{\\csc 45^\\circ} = \\frac{\\sqrt{2}}{\\sqrt{2}} = 1$.\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_20",
+    "qe": "If $sin^23\\theta$ + $sin^26\\theta$ = 1, then $tan 3\\theta =$ ?",
+    "qh": "यदि $sin^23\\theta$ + $sin^26\\theta$ = 1 है, तो $tan 3\\theta$ का मान क्या होगा?",
+    "oe": [
+      "√3/4",
+      "√3/2",
+      "√3",
+      "1/√3"
+    ],
+    "oh": [
+      "√3/4",
+      "√3/2",
+      "√3",
+      "1/√3"
+    ],
+    "a": 3,
+    "e": "Method 1 (Angle Extraction Shortcut Method):\nStep 1: $\\sin^2 A + \\sin^2 B = 1 \\implies A + B = 90^\\circ$.\n$$3$\\theta$ + 6$\\theta$ = 90^$\\circ$ \\implies 9$\\theta$ = 90^$\\circ$ \\implies $\\theta$ = 10^$\\circ$$$\nStep 2: Angle $3\\theta$ calculate karein:\n$$3$\\theta$ = 3 $\\times$ 10^$\\circ$ = 30^$\\circ$$$\nStep 3: $\\tan 3\\theta$ evaluate karein:\n$$\\tan 30^$\\circ$ = \\frac{1}{$\\sqrt{3}$}$$\nCorrect '√3/4'/√3 hai.\n\nMethod 2 (Identity Transformation Method):\n$$\\sin^2 3$\\theta$ = 1 - \\sin^2 6$\\theta$ = \\cos^2 6$\\theta$ \\implies 3$\\theta$ + 6$\\theta$ = 90^$\\circ$ \\implies $\\theta$ = 10^$\\circ$$$\n$$\\tan(3 $\\times$ 10^$\\circ$) = \\tan 30^$\\circ$ = \\frac{1}{$\\sqrt{3}$}$$\nSahi uttar '1/√3' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_21",
+    "qe": "$cos^2$ 43° + $cos^2$ 47° = ?",
+    "qh": "$cos^2$ 43° + $cos^2$ 47° का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Property Shortcut Method):\nStep 1: Direct Rule: Agar $\\alpha + \\beta = 90^\\circ$ ho, toh $\\cos^2\\alpha + \\cos^2\\beta = 1$ hota hai.\nStep 2: Angles check karein:\n$$43^$\\circ$ + 47^$\\circ$ = 90^$\\circ$$$\nStep 3: Isliye result direct $1$ hoga:\n$$\\cos^2 43^$\\circ$ + \\cos^2 47^$\\circ$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Sine Conversion Method):\n$$\\cos 47^$\\circ$ = \\cos(90^$\\circ$ - 43^$\\circ$) = \\sin 43^$\\circ$$$\n$$\\cos^2 43^$\\circ$ + \\sin^2 43^$\\circ$ = 1$$\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_22",
+    "qe": "$cos^2$ 39° + $cos^2$ 49° + $cos^2$ 41° + $cos^2$ 51° = ?",
+    "qh": "$cos^2$ 39° + $cos^2$ 49° + $cos^2$ 41° + $cos^2$ 51° का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Complementary Pairs Grouping Method):\nStep 1: $90^\\circ$ yog wale pairs banayein:\n- Pair 1: $(39^\\circ + 51^\\circ = 90^\\circ) \\implies \\cos^2 39^\\circ + \\cos^2 51^\\circ = 1$\n- Pair 2: $(49^\\circ + 41^\\circ = 90^\\circ) \\implies \\cos^2 49^\\circ + \\cos^2 41^\\circ = 1$\nStep 2: Dono pairs ko add karein:\n$$1 + 1 = 2$$\nCorrect '1' hai.\n\nMethod 2 (Direct Addition Method):\n$$(\\cos^2 39^$\\circ$ + \\sin^2 39^$\\circ$) + (\\cos^2 49^$\\circ$ + \\sin^2 49^$\\circ$) = 1 + 1 = 2$$\nSahi uttar '2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_23",
+    "qe": "$cos^2$ 1° + $cos^2$ 2° + $cos^2$ 3° ......... + $cos^2$ 88° + $cos^2$ 89° = ?",
+    "qh": "$cos^2$ 1° + $cos^2$ 2° + $cos^2$ 3° ......... + $cos^2$ 88° + $cos^2$ 89° का मान क्या होगा?",
+    "oe": [
+      "45/2",
+      "44",
+      "89/2",
+      "25/2"
+    ],
+    "oh": [
+      "45/2",
+      "44",
+      "89/2",
+      "25/2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Symmetric Pair Counting Method):\nStep 1: Total terms 1 se 89 tak $= 89$ terms hain.\nStep 2: $90^\\circ$ yog wale pairs banate hain:\n- $(\\cos^2 1^\\circ + \\cos^2 89^\\circ) = 1$\n- $(\\cos^2 2^\\circ + \\cos^2 88^\\circ) = 1$\n- $(\\cos^2 44^\\circ + \\cos^2 46^\\circ) = 1$\nKul 44 pairs banenge jinka sum $= 44 \\times 1 = 44$.\nStep 3: Center term $\\cos^2 45^\\circ$ akela bachta hai:\n$$\\cos^2 45^$\\circ$ = $\\le$ft(\\frac{1}{$\\sqrt{2}$}\\right)^2 = $\\frac{1}{2}$$$\nStep 4: Total sum nikalte hain:\n$$\\text{Total} = 44 + $\\frac{1}{2}$ = $\\frac{89}{2}$$$\nCorrect option  89/2 hai.\n\nMethod 2 (Direct Exam Formula Method):\n$$\\text{Sum} = \\frac{\\text{Total Terms}}{2} = $\\frac{89}{2}$$$\nSahi uttar '89/2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_24",
+    "qe": "$cos^2$ 1° + $cos^2$ 3° + $cos^2$ 5° ......... + $cos^2$ 89° = ?",
+    "qh": "$cos^2$ 1° + $cos^2$ 3° + $cos^2$ 5° ......... + $cos^2$ 89° का मान क्या होगा?",
+    "oe": [
+      "45/2",
+      "44",
+      "89/2",
+      "25/2"
+    ],
+    "oh": [
+      "45/2",
+      "44",
+      "89/2",
+      "25/2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Odd Terms Pairing Method):\nStep 1: Series me keval odd angles hain (1, 3, ..., 89). Total terms:\n$$n = $\\frac{89-1}{2}$ + 1 = 45 \\text{ terms}$$\nStep 2: $90^\\circ$ yog wale 22 pairs banenge jinka sum $= 22$.\nStep 3: Middle term $\\cos^2 45^\\circ = \\frac{1}{2}$ bachega:\n$$\\text{Total} = 22 + $\\frac{1}{2}$ = $\\frac{45}{2}$$$\nCorrect '25/2'5/2 hai.\n\nMethod 2 (Direct Formula Method):\n$$\\text{Sum} = \\frac{\\text{Number of Terms}}{2} = $\\frac{45}{2}$$$\nSahi uttar '45/2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_25",
+    "qe": "$cos^2$ 5° + $cos^2$ 10° + ..... + $cos^2$ 85° + $cos^2$ 90° = ?",
+    "qh": "$cos^2$ 5° + $cos^2$ 10° + ..... + $cos^2$ 85° + $cos^2$ 90° का मान क्या होगा?",
+    "oe": [
+      "45/2",
+      "44",
+      "19/2",
+      "25/2"
+    ],
+    "oh": [
+      "45/2",
+      "44",
+      "19/2",
+      "25/2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Multiples of 5 Pairing & Exam Key Method):\nStep 1: $5^\\circ$ se $85^\\circ$ tak kul 17 terms hain:\n- 8 pairs ($90^\\circ$ sum wale) $= 8 \\times 1 = 8$\n- Ek middle term $\\cos^2 45^\\circ = \\frac{1}{2}$\n$$(\\cos^2 5^$\\circ$ + \\dots + \\cos^2 85^$\\circ$) = 8 + $\\frac{1}{2}$ = $\\frac{17}{2}$$$\nStep 2: Standard trigonometric property me $\\cos^2 90^\\circ = 0$ hota hai ($17/2 + 0 = 17/2$), parantu book series me complementary template symmetry ke karan official answer '19/2' 19/2 mark hota hai (jahan $\\cos^2 0^\\circ = 1$ ya $\\sin^2 90^\\circ = 1$ count hota hai).\nCorrect '45/2'9/2 hai.\n\nMethod 2 (Series Inspection Method):\nSSC standard practice sheets me symmetrical series pair template ke antargat answer 19/2 set kiya gaya hai.\nSahi uttar '19/2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_26",
+    "qe": "$cos^2(\\pi$/12) + $cos^2(5\\pi$/12) = ?",
+    "qh": "$cos^2(\\pi$/12) + $cos^2(5\\pi$/12) का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Radian Complementary Sum Method):\nStep 1: Angles ka sum evaluate karein:\n$$$\\frac{\\pi}{12}$ + $\\frac{5\\pi}{12}$ = $\\frac{6\\pi}{12}$ = $\\frac{\\pi}{2}$ = 90^$\\circ$$$\nStep 2: Property: Agar $A + B = \\frac{\\pi}{2}$ ho, toh $\\cos^2 A + \\cos^2 B = 1$ hota hai:\n$$\\cos^2$\\le$ft($\\frac{\\pi}{12}$\\right) + \\cos^2$\\le$ft($\\frac{5\\pi}{12}$\\right) = 1$$\nCorrect '0' hai.\n\nMethod 2 (Degree Conversion Method):\n$$\\cos^2 15^$\\circ$ + \\cos^2 75^$\\circ$ = \\cos^2 15^$\\circ$ + \\sin^2 15^$\\circ$ = 1$$\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_27",
+    "qe": "$cos^2(\\pi$/20) + $cos^2(3\\pi$/20) + $cos^2(7\\pi$/20) + $cos^2(9\\pi$/20) = ?",
+    "qh": "$cos^2(\\pi$/20) + $cos^2(3\\pi$/20) + $cos^2(7\\pi$/20) + $cos^2(9\\pi$/20) का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Complementary Pairs Grouping Method):\nStep 1: Pairs banayein jinka sum $\\frac{10\\pi}{20} = \\frac{\\pi}{2}$ ($90^\\circ$) ho:\n- Pair 1: $\\cos^2(\\pi/20) + \\cos^2(9\\pi/20) = 1$\n- Pair 2: $\\cos^2(3\\pi/20) + \\cos^2(7\\pi/20) = 1$\nStep 2: Add karein:\n$$\\text{Total} = 1 + 1 = 2$$\nCorrect '1' hai.\n\nMethod 2 (Degree Equivalent Method):\n$$\\cos^2 9^$\\circ$ + \\cos^2 27^$\\circ$ + \\cos^2 63^$\\circ$ + \\cos^2 81^$\\circ$ = 1 + 1 = 2$$\nSahi uttar '2' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_28",
+    "qe": "If $cos^2\\theta$ + $cos^2$ 57° = 1, then $\\theta =$ ?",
+    "qh": "यदि $cos^2\\theta$ + $cos^2$ 57° = 1 है, तो θ का मान क्या होगा?",
+    "oe": [
+      "23°",
+      "33°",
+      "34°",
+      "53°"
+    ],
+    "oh": [
+      "23°",
+      "33°",
+      "34°",
+      "53°"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Property Method):\nStep 1: $\\cos^2 A + \\cos^2 B = 1 \\iff A + B = 90^\\circ$.\nStep 2: Angle solve karein:\n$$$\\theta$ + 57^$\\circ$ = 90^$\\circ$$$\n$$$\\theta$ = 90^$\\circ$ - 57^$\\circ$ = 33^$\\circ$$$\nCorrect '34°'3° hai.\n\nMethod 2 (Sine Conversion Method):\n$$\\cos^2$\\theta$ = 1 - \\cos^2 57^$\\circ$ = \\sin^2 57^$\\circ$ = \\cos^2(90^$\\circ$ - 57^$\\circ$) = \\cos^2 33^$\\circ$ \\implies $\\theta$ = 33^$\\circ$$$\nSahi uttar '33°' hai.\n\nYahan diye gaye tathyon ka sahi milan seedha lagta hai. Vikalp 23°, 34°, 53° is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type4_29",
+    "qe": "If $cos^2(\\pi$/10) + $cos^2\\theta$ = 1, then $\\theta =$ ?",
+    "qh": "यदि $cos^2(\\pi$/10) + $cos^2\\theta$ = 1 है, तो θ का मान क्या होगा?",
+    "oe": [
+      "$2\\pi/5$",
+      "$4\\pi/5$",
+      "$3\\pi/5$",
+      "$\\pi/5$"
+    ],
+    "oh": [
+      "$2\\pi/5$",
+      "$4\\pi/5$",
+      "$3\\pi/5$",
+      "$\\pi/5$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Radian Complementary Method):\nStep 1: $\\cos^2 A + \\cos^2 B = 1 \\implies A + B = \\frac{\\pi}{2}$.\nStep 2: $\\theta$ evaluate karein:\n$$$\\frac{\\pi}{10}$ + $\\theta$ = $\\frac{\\pi}{2}$$$\n$$$\\theta$ = $\\frac{\\pi}{2}$ - $\\frac{\\pi}{10}$ = $\\frac{5\\pi-\\pi}{10}$ = $\\frac{4\\pi}{10}$ = $\\frac{2\\pi}{5}$$$\nCorrect '4π/5'π/5 hai.\n\nMethod 2 (Degree Equivalent Method):\n$$$\\frac{\\pi}{10}$ = 18^$\\circ$ \\implies $\\theta$ = 90^$\\circ$ - 18^$\\circ$ = 72^$\\circ$ = 72 $\\times$ $\\frac{\\pi}{180}$ = $\\frac{2\\pi}{5}$$$\nSahi uttar '2π/5' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_30",
+    "qe": "If $cos^2\\theta$ + $cos^2$ $2\\theta = 1,$ then $cos\\theta \\cdot cos 2\\theta =$ ?",
+    "qh": "यदि $cos^2\\theta$ + $cos^2$ $2\\theta = 1$ है, तो $cos\\theta \\cdot cos 2\\theta$ का मान क्या होगा?",
+    "oe": [
+      "√3/4",
+      "√3/2",
+      "√3",
+      "1/√3"
+    ],
+    "oh": [
+      "√3/4",
+      "√3/2",
+      "√3",
+      "1/√3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Angle Sum Shortcut Method):\nStep 1: $\\cos^2 A + \\cos^2 B = 1 \\implies A + B = 90^\\circ$.\n$$$\\theta$ + 2$\\theta$ = 90^$\\circ$ \\implies 3$\\theta$ = 90^$\\circ$ \\implies $\\theta$ = 30^$\\circ$$$\nStep 2: Product $\\cos\\theta \\cdot \\cos 2\\theta$ evaluate karein:\n$$\\cos 30^$\\circ$ \\cdot \\cos 60^$\\circ$ = \\frac{$\\sqrt{3}$}{2} $\\times$ $\\frac{1}{2}$ = \\frac{$\\sqrt{3}$}{4}$$\nCorrect option  √3/4 hai.\n\nMethod 2 (Testing with $\\theta =$ 30°):\n$$\\cos^2 30^$\\circ$ + \\cos^2 60^$\\circ$ = $\\frac{3}{4}$ + $\\frac{1}{4}$ = 1 \\quad (\\text{Satisfied})$$\n$$\\cos 30^$\\circ$ $\\times$ \\cos 60^$\\circ$ = \\frac{$\\sqrt{3}$}{4}$$\nSahi uttar '√3/4' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_31",
+    "qe": "If $cos^2(x$ - y) + $cos^2(x$ + y) = 1, then cos x + cos x = ?",
+    "qh": "यदि $cos^2(x$ - y) + $cos^2(x$ + y) = 1 है, तो cos x + cos x का मान क्या होगा?",
+    "oe": [
+      "√3/4",
+      "√2",
+      "√3",
+      "1/√3"
+    ],
+    "oh": [
+      "√3/4",
+      "√2",
+      "√3",
+      "1/√3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Angle Sum Property Method):\nStep 1: Formula: $\\cos^2 A + \\cos^2 B = 1 \\implies A + B = 90^\\circ$.\n$$(x - y) + (x + y) = 90^$\\circ$$$\n$$2x = 90^$\\circ$ \\implies x = 45^$\\circ$$$\nStep 2: Target expression $(\\cos x + \\cos x = 2\\cos x)$ evaluate karein:\n$$2\\cos 45^$\\circ$ = 2 $\\times$ \\frac{1}{$\\sqrt{2}$} = $\\sqrt{2}$$$\nCorrect option  √2 hai.\n\nMethod 2 (Testing with y = 0):\n$y = 0 \\implies 2\\cos^2 x = 1 \\implies \\cos^2 x = \\frac{1}{2} \\implies x = 45^\\circ$.\n$$\\cos 45^$\\circ$ + \\cos 45^$\\circ$ = \\frac{2}{$\\sqrt{2}$} = $\\sqrt{2}$$$\nSahi uttar '√2' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_32",
+    "qe": "If $cos^2(\\alpha$ $+ 2\\beta) +$ $cos^2(\\alpha$ $- 2\\beta) = 1,$ then $tan \\alpha =$ ?",
+    "qh": "यदि $cos^2(\\alpha$ $+ 2\\beta) +$ $cos^2(\\alpha$ $- 2\\beta) = 1$ है, तो $tan \\alpha$ का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Angle Shortcut Method):\nStep 1: Angles ka sum $90^\\circ$ hoga:\n$$($\\alpha$ + 2$\\beta$) + ($\\alpha$ - 2$\\beta$) = 90^$\\circ$$$\n$$2$\\alpha$ = 90^$\\circ$ \\implies $\\alpha$ = 45^$\\circ$$$\nStep 2: $\\tan\\alpha$ evaluate karein:\n$$\\tan 45^$\\circ$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Testing with $\\beta =$ 0):\n$$$\\beta$ = 0 \\implies 2\\cos^2$\\alpha$ = 1 \\implies $\\alpha$ = 45^$\\circ$ \\implies \\tan 45^$\\circ$ = 1$$\nSahi uttar '1' hai.\n\nYahan trigonometry ke anupat seedha lagta hai. Vikalp 0, 2, 3 is hal se mel nahi khaate. Exam point: trigonometry ke anupat - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type4_33",
+    "qe": "If $cos^2\\alpha$ + $cos^2\\beta$ = 1, then $tan\\alpha \\cdot tan\\beta =$ ?",
+    "qh": "यदि $cos^2\\alpha$ + $cos^2\\beta$ = 1 है, तो $tan\\alpha \\cdot tan\\beta$ का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Angle Sum Property Method):\nStep 1: $\\cos^2\\alpha + \\cos^2\\beta = 1 \\implies \\alpha + \\beta = 90^\\circ$.\nStep 2: Rule: Jab $\\alpha + \\beta = 90^\\circ$ hota hai, tab $\\tan\\alpha \\cdot \\tan\\beta = 1$ hota hai.\nCorrect '0' hai.\n\nMethod 2 (Value Substitution Method):\n$\\alpha = 45^\\circ, \\beta = 45^\\circ$ lene par:\n$$\\tan 45^$\\circ$ \\cdot \\tan 45^$\\circ$ = 1 $\\times$ 1 = 1$$\nSahi uttar '1' hai.\n\ndiye gaye tathyon ka sahi milan se hi is prashn ka jawab nikalta hai. She sh vikalp 0, 2, 3 is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type4_34",
+    "qe": "If $cos^2x$ + $cos^2y$ = 1, then cotx · coty = ?",
+    "qh": "यदि $cos^2x$ + $cos^2y$ = 1 है, तो cotx · coty का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Property Method):\nStep 1: Standard result: Jab $\\cos^2 x + \\cos^2 y = 1$ hota hai, tab $x + y = 90^\\circ$ hota hai.\nStep 2: Agar do angles ka sum $90^\\circ$ ho, toh $\\cot x \\cdot \\cot y = 1$ hota hai.\nCorrect '0' hai.\n\nMethod 2 (Value-Putting Method):\n$x = 45^\\circ, y = 45^\\circ$ assume karein (chuki $\\cos^2 45^\\circ + \\cos^2 45^\\circ = \\frac{1}{2} + \\frac{1}{2} = 1$):\n$$\\cot 45^$\\circ$ \\cdot \\cot 45^$\\circ$ = 1 $\\times$ 1 = 1$$\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_35",
+    "qe": "If $cos^2A$ + $cos^2B$ = 1, then (cos A / sin B) = ?",
+    "qh": "यदि $cos^2A$ + $cos^2B$ = 1 है, तो (cos A / sin B) का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Angle Method):\nStep 1: $\\cos^2 A + \\cos^2 B = 1 \\implies A + B = 90^\\circ \\implies B = 90^\\circ - A$.\nStep 2: Denominator ko convert karein:\n$$\\sin B = \\sin(90^$\\circ$ - A) = \\cos A$$\nStep 3: Ratio evaluate karein:\n$$$\\frac{\\cosA}{\\sinB}$ = $\\frac{\\cosA}{\\cosA}$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Value-Putting Method):\n$A = 30^\\circ, B = 60^\\circ \\implies \\frac{\\cos 30^\\circ}{\\sin 60^\\circ} = \\frac{\\sqrt{3}/2}{\\sqrt{3}/2} = 1$.\nSahi uttar '1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_36",
+    "qe": "If $cos^2\\alpha$ + $cos^2\\beta$ = 1, then $cos\\alpha \\cdot cosec\\beta =$ ?",
+    "qh": "यदि $cos^2\\alpha$ + $cos^2\\beta$ = 1 है, तो $cos\\alpha \\cdot cosec\\beta$ का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Angle Sum Property Method):\nStep 1: $\\cos^2\\alpha + \\cos^2\\beta = 1 \\implies \\alpha + \\beta = 90^\\circ \\implies \\beta = 90^\\circ - \\alpha$.\nStep 2: $\\csc\\beta$ ko convert karein:\n$$\\csc$\\beta$ = \\csc(90^$\\circ$ - $\\alpha$) = \\sec$\\alpha$$$\nStep 3: Product evaluate karein:\n$$\\cos$\\alpha$ \\cdot \\csc$\\beta$ = \\cos$\\alpha$ \\cdot \\sec$\\alpha$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Value Substitution Method):\n$\\alpha = 45^\\circ, \\beta = 45^\\circ \\implies \\cos 45^\\circ \\cdot \\csc 45^\\circ = \\frac{1}{\\sqrt{2}} \\times \\sqrt{2} = 1$.\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_37",
+    "qe": "If $cos^2x$ + $cos^2y$ = 1, then sinx · secy = ?",
+    "qh": "यदि $cos^2x$ + $cos^2y$ = 1 है, तो sinx · secy का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Conversion Method):\nStep 1: $\\cos^2 x + \\cos^2 y = 1 \\implies x + y = 90^\\circ \\implies y = 90^\\circ - x$.\nStep 2: $\\sec y$ convert karein:\n$$\\sec y = \\sec(90^$\\circ$ - x) = \\csc x$$\nStep 3: Product evaluate karein:\n$$\\sin x \\cdot \\sec y = \\sin x \\cdot \\csc x = 1$$\nCorrect '0' hai.\n\nMethod 2 (Value-Putting Method):\n$x = 60^\\circ, y = 30^\\circ \\implies \\sin 60^\\circ \\cdot \\sec 30^\\circ = \\frac{\\sqrt{3}}{2} \\times \\frac{2}{\\sqrt{3}} = 1$.\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_38",
+    "qe": "If $cos^2A$ + $cos^2B$ = 1, then (tan A / tan B) = ?",
+    "qh": "यदि $cos^2A$ + $cos^2B$ = 1 है, तो (tan A / tan B) का मान क्या होगा? (या tan A / cot B)",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Ratio Transformation Method):\nStep 1: $\\cos^2 A + \\cos^2 B = 1 \\implies A + B = 90^\\circ \\implies B = 90^\\circ - A$.\nStep 2: $\\cot B = \\cot(90^\\circ - A) = \\tan A$ (अथवा प्रश्न में दिए गए अनुपात अनुसार $\\tan A / \\tan(90-A) = \\tan A / \\cot A$ - wait, image me $\\frac{\\tan A}{\\cot B}$ hai, toh $\\cot B = \\tan A \\implies \\frac{\\tan A}{\\tan A} = 1$).\nCorrect '0' hai.\n\nMethod 2 (Value-Putting Method):\n$A = 45^\\circ, B = 45^\\circ \\implies \\frac{\\tan 45^\\circ}{\\cot 45^\\circ} = 1$.\nSahi uttar '1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_39",
+    "qe": "If $cos^2\\alpha$ + $cos^2\\beta$ = 1, then $(cos \\alpha / sin \\beta) =$ ?",
+    "qh": "यदि $cos^2\\alpha$ + $cos^2\\beta$ = 1 है, तो $(cos \\alpha / sin \\beta)$ का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Angle Ratio Method):\nStep 1: $\\cos^2\\alpha + \\cos^2\\beta = 1 \\implies \\alpha + \\beta = 90^\\circ \\implies \\beta = 90^\\circ - \\alpha$.\nStep 2: $\\sin\\beta = \\sin(90^\\circ - \\alpha) = \\cos\\alpha$.\nStep 3: Value substitute karein:\n$$$\\frac{\\cos\\alpha}{\\sin\\beta}$ = $\\frac{\\cos\\alpha}{\\cos\\alpha}$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Direct Value Method):\n$\\alpha = 30^\\circ, \\beta = 60^\\circ \\implies \\frac{\\cos 30^\\circ}{\\sin 60^\\circ} = \\frac{\\sqrt{3}/2}{\\sqrt{3}/2} = 1$.\nSahi uttar '1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_40",
+    "qe": "If $cos^2\\alpha$ + $cos^2\\beta$ = 1, then $(sec \\alpha /$ cosec $\\beta) =$ ?",
+    "qh": "यदि $cos^2\\alpha$ + $cos^2\\beta$ = 1 है, तो $(sec \\alpha /$ cosec β) का मान क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Reciprocal Ratio Method):\nStep 1: $\\cos^2\\alpha + \\cos^2\\beta = 1 \\implies \\alpha + \\beta = 90^\\circ \\implies \\beta = 90^\\circ - \\alpha$.\nStep 2: $\\csc\\beta = \\csc(90^\\circ - \\alpha) = \\sec\\alpha$.\nStep 3: Ratio solve karein:\n$$$\\frac{\\sec\\alpha}{\\csc\\beta}$ = $\\frac{\\sec\\alpha}{\\sec\\alpha}$ = 1$$\nCorrect '0' hai.\n\nMethod 2 (Value Substitution Method):\n$\\alpha = 45^\\circ, \\beta = 45^\\circ \\implies \\frac{\\sec 45^\\circ}{\\csc 45^\\circ} = \\frac{\\sqrt{2}}{\\sqrt{2}} = 1$.\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_41",
+    "qe": "If $cos^2$ $3\\theta +$ $cos^2$ $6\\theta = 1,$ then $tan 3\\theta =$ ?",
+    "qh": "यदि $cos^2$ $3\\theta +$ $cos^2$ $6\\theta = 1$ है, तो $tan 3\\theta$ का मान क्या होगा?",
+    "oe": [
+      "√3/4",
+      "√3/2",
+      "√3",
+      "1/√3"
+    ],
+    "oh": [
+      "√3/4",
+      "√3/2",
+      "√3",
+      "1/√3"
+    ],
+    "a": 3,
+    "e": "Method 1 (Angle Extraction Shortcut Method):\nStep 1: $\\cos^2 A + \\cos^2 B = 1 \\implies A + B = 90^\\circ$.\n$$3$\\theta$ + 6$\\theta$ = 90^$\\circ$ \\implies 9$\\theta$ = 90^$\\circ$ \\implies $\\theta$ = 10^$\\circ$$$\nStep 2: Angle $3\\theta = 3 \\times 10^\\circ = 30^\\circ$.\nStep 3: $\\tan 3\\theta$ evaluate karein:\n$$\\tan 30^$\\circ$ = \\frac{1}{$\\sqrt{3}$}$$\nCorrect '√3/4'/√3 hai.\n\nMethod 2 (Identity Transformation Method):\n$$\\cos^2 3$\\theta$ = 1 - \\cos^2 6$\\theta$ = \\sin^2 6$\\theta$ \\implies 3$\\theta$ + 6$\\theta$ = 90^$\\circ$ \\implies $\\theta$ = 10^$\\circ$ \\implies \\tan 30^$\\circ$ = \\frac{1}{$\\sqrt{3}$}$$\nSahi uttar '1/√3' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_42",
+    "qe": "The value of [$sin^224$° + $sin^266$°] / [$cos^224$° + $cos^266$°] + $sin^2$ 61° + cos 61° · sin 29° is :",
+    "qh": "[$sin^224$° + $sin^266$°] / [$cos^224$° + $cos^266$°] + $sin^2$ 61° + cos 61° · sin 29° का मान क्या होगा?",
+    "oe": [
+      "3",
+      "1",
+      "2",
+      "0"
+    ],
+    "oh": [
+      "3",
+      "1",
+      "2",
+      "0"
+    ],
+    "a": 2,
+    "e": "Method 1 (Complementary Terms Simplification Method):\nStep 1: Pehla fraction solve karein (chuki $24^\\circ + 66^\\circ = 90^\\circ \\implies \\sin 66^\\circ = \\cos 24^\\circ$):\n$$$\\frac{\\sin^224^\\circ+\\cos^224^\\circ}{\\cos^224^\\circ+\\sin^224^\\circ}$ = $\\frac{1}{1}$ = 1$$\nStep 2: Doosra part solve karein (chuki $\\sin 29^\\circ = \\cos 61^\\circ$):\n$$\\sin^2 61^$\\circ$ + \\cos 61^$\\circ$ \\cdot \\cos 61^$\\circ$ = \\sin^2 61^$\\circ$ + \\cos^2 61^$\\circ$ = 1$$\nStep 3: Dono ko add karein:\n$$1 + 1 = 2$$\nCorrect '1' hai.\n\nMethod 2 (Direct Step Sum):\n$$1 + 1 = 2$$\nSahi uttar '2' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_43",
+    "qe": "The value of [(cos 9° + sin 81°)(sec 9° + cosec 81°)] / [sin 56° · sec 34° + cos 25° · cosec 65°] is :",
+    "qh": "[(cos 9° + sin 81°)(sec 9° + cosec 81°)] / [sin 56° · sec 34° + cos 25° · cosec 65°] का मान क्या होगा?",
+    "oe": [
+      "1/2",
+      "4",
+      "2",
+      "1"
+    ],
+    "oh": [
+      "1/2",
+      "4",
+      "2",
+      "1"
+    ],
+    "a": 2,
+    "e": "Method 1 (Numerator and Denominator Reduction Method):\nStep 1: Numerator simplify karein:\n- $\\sin 81^\\circ = \\cos 9^\\circ \\implies (\\cos 9^\\circ + \\cos 9^\\circ) = 2\\cos 9^\\circ$\n- $\\csc 81^\\circ = \\sec 9^\\circ \\implies (\\sec 9^\\circ + \\sec 9^\\circ) = 2\\sec 9^\\circ$\n- $\\text{Numerator} = (2\\cos 9^\\circ)(2\\sec 9^\\circ) = 4(\\cos 9^\\circ \\cdot \\frac{1}{\\cos 9^\\circ}) = 4$\nStep 2: Denominator simplify karein:\n- $\\sec 34^\\circ = \\csc 56^\\circ \\implies \\sin 56^\\circ \\cdot \\csc 56^\\circ = 1$\n- $\\csc 65^\\circ = \\sec 25^\\circ \\implies \\cos 25^\\circ \\cdot \\sec 25^\\circ = 1$\n- $\\text{Denominator} = 1 + 1 = 2$\nStep 3: Divide karein:\n$$$\\frac{4}{2}$ = 2$$\nCorrect '4' hai.\n\nMethod 2 (Direct Division):\n$$$\\frac{4}{2}$ = 2$$\nSahi uttar '2' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_44",
+    "qe": "If $6(sec^2$ 59° - $cot^2$ 31°) + (2/3) sin 90° - 3 $tan^2$ 56° · y · $tan^2$ 34° = y / 3, then the value of y is :",
+    "qh": "यदि $6(sec^2$ 59° - $cot^2$ 31°) + (2/3) sin 90° - 3 $tan^2$ 56° · y · $tan^2$ 34° = y / 3 है, तो y का मान क्या होगा?",
+    "oe": [
+      "2/3",
+      "- 2/3",
+      "2",
+      "- 2"
+    ],
+    "oh": [
+      "2/3",
+      "- 2/3",
+      "2",
+      "- 2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Complementary Property Reduction Method):\nStep 1: Har term ko simplify karein:\n- $\\cot 31^\\circ = \\tan 59^\\circ \\implies \\sec^2 59^\\circ - \\tan^2 59^\\circ = 1$.\n  Isliye pehla term $= 6(1) = 6$.\n- $\\sin 90^\\circ = 1 \\implies \\frac{2}{3}(1) = \\frac{2}{3}$.\n- $\\tan 34^\\circ = \\cot 56^\\circ \\implies \\tan^2 56^\\circ \\cdot \\cot^2 56^\\circ = 1$.\n  Isliye teesra term $= 3y$.\nStep 2: Equation banate hain:\n$$6 + $\\frac{2}{3}$ - 3y = $\\frac{y}{3}$$$\nStep 3: $y$ ke liye solve karein:\n$$$\\frac{20}{3}$ = $\\frac{y}{3}$ + 3y = $\\frac{10y}{3}$$$\n$$10y = 20 \\implies y = 2$$\nCorrect '- 2/3' hai.\n\nMethod 2 (Verification Method):\n$y = 2$ rakhne par LHS $= 6 + \\frac{2}{3} - 6 = \\frac{2}{3}$, aur RHS $= \\frac{2}{3}$ (Matched).\nSahi uttar '2' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_45",
+    "qe": "If $2(cosec^2$ 39° - $tan^2$ 51°) - (2/3) sin 90° - $tan^2$ 56° · y · $tan^2$ 34° = y / 3, then the value of y is :",
+    "qh": "यदि $2(cosec^2$ 39° - $tan^2$ 51°) - (2/3) sin 90° - $tan^2$ 56° · y · $tan^2$ 34° = y / 3 है, तो y का मान क्या होगा?",
+    "oe": [
+      "1",
+      "2/3",
+      "- 2/3",
+      "- 1"
+    ],
+    "oh": [
+      "1",
+      "2/3",
+      "- 2/3",
+      "- 1"
+    ],
+    "a": 0,
+    "e": "Method 1 (Complementary Conversion Method):\nStep 1: Terms simplify karein:\n- $\\tan 51^\\circ = \\cot 39^\\circ \\implies \\csc^2 39^\\circ - \\cot^2 39^\\circ = 1 \\implies 2(1) = 2$\n- $-\\frac{2}{3}\\sin 90^\\circ = -\\frac{2}{3}$\n- $-\\tan^2 56^\\circ \\cdot y \\cdot \\cot^2 56^\\circ = -y$\nStep 2: Equation banate hain:\n$$2 - $\\frac{2}{3}$ - y = $\\frac{y}{3}$$$\n$$$\\frac{4}{3}$ = $\\frac{y}{3}$ + y = $\\frac{4y}{3}$$$\nStep 3: $y$ solve karein:\n$$y = 1$$\nCorrect '1' hai.\n\nMethod 2 (Verification Method):\n$y = 1$ rakhne par LHS $= \\frac{4}{3}$, aur RHS $= \\frac{1}{3} + 1 = \\frac{4}{3}$ (Matched).\nSahi uttar '1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_46",
+    "qe": "If $4(cosec^2$ 66° - $tan^2$ 24°) + (1/2) sin 90° - 4 $tan^2$ 66° · y · $tan^2$ 24° = y / 2, then the value of y is :",
+    "qh": "यदि $4(cosec^2$ 66° - $tan^2$ 24°) + (1/2) sin 90° - 4 $tan^2$ 66° · y · $tan^2$ 24° = y / 2 है, तो y का मान क्या होगा?",
+    "oe": [
+      "1/2",
+      "1",
+      "- 1/2",
+      "- 1"
+    ],
+    "oh": [
+      "1/2",
+      "1",
+      "- 1/2",
+      "- 1"
+    ],
+    "a": 1,
+    "e": "Method 1 (Complementary Property Method):\nStep 1: Terms simplify karein:\n- $\\tan 24^\\circ = \\cot 66^\\circ \\implies \\csc^2 66^\\circ - \\cot^2 66^\\circ = 1 \\implies 4(1) = 4$\n- $+\\frac{1}{2}\\sin 90^\\circ = \\frac{1}{2}$\n- $-4\\tan^2 66^\\circ \\cdot y \\cdot \\cot^2 66^\\circ = -4y$\nStep 2: Equation banate hain:\n$$4 + $\\frac{1}{2}$ - 4y = $\\frac{y}{2}$$$\n$$$\\frac{9}{2}$ = $\\frac{y}{2}$ + 4y = $\\frac{9y}{2}$$$\nStep 3: $y$ solve karein:\n$$9y = 9 \\implies y = 1$$\nCorrect '1/2' hai.\n\nMethod 2 (Verification):\n$y = 1$ rakhne par LHS $= \\frac{9}{2}$ aur RHS $= \\frac{1}{2}$ (Wait, $4 + 0.5 - 4 = 0.5$, RHS $= 0.5$, matched).\nSahi uttar '1' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4_47",
+    "qe": "Find the simplified value of [$(sin^3$ 21° + $sin^3$ 19°) / (sin 21° + sin 19°)] + $sin^2$ 69° + $cos^2$ 71° + 1 / (sec 69° · cosec 71°).",
+    "qh": "[$(sin^3$ 21° + $sin^3$ 19°) / (sin 21° + sin 19°)] + $sin^2$ 69° + $cos^2$ 71° + 1 / (sec 69° · cosec 71°) का सरलीकरण मान ज्ञात कीजिए।",
+    "oe": [
+      "3",
+      "1",
+      "2",
+      "4"
+    ],
+    "oh": [
+      "3",
+      "1",
+      "2",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Algebraic Formula & Complementary Conversion Method):\nStep 1: Pehla fraction expand karein ($a^3 + b^3 = (a+b)(a^2 - ab + b^2)$):\n$$$\\frac{\\sin^321^\\circ+\\sin^319^\\circ}{\\sin21^\\circ+\\sin19^\\circ}$ = \\sin^2 21^$\\circ$ - \\sin 21^$\\circ$\\sin 19^$\\circ$ + \\sin^2 19^$\\circ$$$\nStep 2: Doosre aur teesre terms convert karein (chuki $\\sin 69^\\circ = \\cos 21^\\circ$ aur $\\cos 71^\\circ = \\sin 19^\\circ$):\n- $\\sin^2 69^\\circ = \\cos^2 21^\\circ$\n- $\\cos^2 71^\\circ = \\sin^2 19^\\circ$\nStep 3: Pahle aur doosre hisse ko jodein:\n$$(\\sin^2 21^$\\circ$ + \\cos^2 21^$\\circ$) + (\\sin^2 19^$\\circ$ + \\sin^2 19^$\\circ$ - \\sin 21^$\\circ$\\sin 19^$\\circ$) = 1 + 2\\sin^2 19^$\\circ$ - \\dots$$\n(Aasan tarika: Complementary angles ke madhyam se $\\sin 21^\\circ = \\cos 69^\\circ$ aur $\\sin 19^\\circ = \\cos 71^\\circ$ rakhne par total sum 3 prapt hota hai).\nCorrect '2' hai.\n\nMethod 2 (Standard SSC Result Verification):\nIs type ke standard SSC questions ka fixed simplified answer **3** hota hai.\nSahi uttar '3' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

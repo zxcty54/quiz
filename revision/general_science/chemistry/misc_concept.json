@@ -1,0 +1,230 @@
+[
+  {
+    "p_id": "gs_chem_mol_01",
+    "qe": "The Avogadro constant, which defines the number of particles in one mole of a substance, is approximately:",
+    "qh": "किसी पदार्थ के एक मोल में कणों की संख्या बताने वाला एवोगैड्रो स्थिरांक लगभग कितना है?",
+    "oe": [
+      "6.022 x 10^23 per mole",
+      "3.14 x 10^23 per mole",
+      "9.8 x 10^23 per mole",
+      "1.6 x 10^19 per mole"
+    ],
+    "oh": [
+      "6.022 x 10^23 प्रति मोल",
+      "3.14 x 10^23 प्रति मोल",
+      "9.8 x 10^23 प्रति मोल",
+      "1.6 x 10^19 प्रति मोल"
+    ],
+    "a": 0,
+    "e": "Mole rasayan me matra naapne ki SI ikai hai, bilkul waise hi jaise dravyaman ke liye kilogram ya lambai ke liye metre. Ek mole me 6.022 x 10^23 kan hote hain - chaahe woh atom hon, anu (molecule) hon ya aayan; isi sankhya ko Avogadro sthirank kehte hain, jo Italian vaigyanik Amedeo Avogadro ke naam par hai. Iski madad se rasayanik samikaran me atom-anu ki ginti tatha dravyaman ke beech pul ban jaata hai: udaharan ke liye ek mole carbon ka dravyaman 12 gram, ek mole paani ka 18 gram hota hai. 3.14 sthirank pi ka aakda hai (bhoomi-golakiy ganit me), 9.8 m/s^2 gurutv-kshetra ka tvaran hai, aur 1.6 x 10^-19 coulomb electron par aavesh hai - isliye yeh teeno aakde rasayan ke mole se juda nahi hain. Exam point: Avogadro sthirank = 6.022 x 10^23 kan prati mole; 1 mole gas STP par 22.4 litre gherta hai; mole = dravyaman / moliy dravyaman."
+  },
+  {
+    "p_id": "gs_chem_mol_02",
+    "qe": "How many moles of water are present in 36 grams of water (molar mass of water = 18 g per mole)?",
+    "qh": "36 ग्राम जल में कितने मोल जल होते हैं (जल का मोलर द्रव्यमान = 18 ग्राम प्रति मोल)?",
+    "oe": [
+      "0.5 mole",
+      "2 moles",
+      "18 moles",
+      "36 moles"
+    ],
+    "oh": [
+      "0.5 मोल",
+      "2 मोल",
+      "18 मोल",
+      "36 मोल"
+    ],
+    "a": 1,
+    "e": "Mole nikaalne ka sootra bahut saral hai: mole = diya gaya dravyaman, jise moliy dravyaman (molar mass) se bhaag dein. Yahaan diya gaya dravyaman 36 gram hai aur paani ka moliy dravyaman 18 gram prati mole hai, isliye 36 / 18 = 2 mole. Isi tarah agar 9 gram paani ho to 9/18 = 0.5 mole hota aur 180 gram ho to 10 mole hote. Dhyaan rahe ki moliy dravyaman har padarth ka alag hota hai - paani (H2O) ka 18, carbon dioxide (CO2) ka 44 tatha sodium chloride ka 58.5 gram prati mole hai. Isliye 0.5, 18 ya 36 mole wale vikalp ganit se mel nahi khaate; 18 to moliy dravyaman hi hai, ginti nahi. Rasayanik samikaran me is ganit ka upyog hota hai - jaise do mole paani se ek mole oxygen gas tatha do mole hydrogen gas milti hai. Exam point: mole = dravyaman / moliy dravyaman; 36 g paani = 2 mole; ek mole paani ke 6.022 x 10^23 anu."
+  },
+  {
+    "p_id": "gs_chem_mol_03",
+    "qe": "One mole of an ideal gas occupies what volume at standard temperature and pressure (STP)?",
+    "qh": "मानक ताप तथा दाब (STP) पर एक मोल आदर्श गैस कितना आयतन घेरती है?",
+    "oe": [
+      "11.2 litres",
+      "22.4 litres",
+      "24.4 litres at every condition",
+      "44.8 litres"
+    ],
+    "oh": [
+      "11.2 लीटर",
+      "22.4 लीटर",
+      "हर परिस्थिति में 24.4 लीटर",
+      "44.8 लीटर"
+    ],
+    "a": 1,
+    "e": "Standards tapaman tatha dabav (STP) par kisi bhi aadarsh gas ka ek mole 22.4 litre aayatan gherta hai - yah aakda gas ke prakar par nirbhar nahi karta, kyunki Avogadro ke niyam ke anusaar samaan tapaman tatha tapaman par barabar aayatan me barabar sankhya me anu hote hain. Isi karan rasayan me gas ke aayatan se seedha mole nikaal sakte hain: 11.2 litre gas mol ke 0.5 hisse ke barabar hoti hai aur 44.8 litre gas 2 mole. 11.2 litre aadha mole ka aayatan hai, isliye woh vikalp galat hai; 44.8 litre do mole ka hai. 24.4 litre aakda kuchh anya tapaman-dabav ki paristhiti me aata hai tatha hamesha ke liye sahi nahi hai; isliye woh vikalp bhi galat hai. Yaad rakhein ki mol ke teen aakde hain - 6.022 x 10^23 kan, gram me moliy dravyaman, aur STP par 22.4 litre aayatan (gas ke liye). Exam point: STP par 1 mole aadarsh gas = 22.4 litre; 0.5 mole = 11.2 L; 2 mole = 44.8 L; yahi Avogadro niyam ka vyavaharik roop hai."
+  },
+  {
+    "p_id": "gs_chem_mol_04",
+    "qe": "In the balanced chemical equation 2H2 + O2 gives 2H2O, how many moles of hydrogen are required to react completely with 1 mole of oxygen?",
+    "qh": "संतुलित रासायनिक समीकरण 2H2 + O2 से 2H2O में, 1 मोल ऑक्सीजन के साथ पूर्णतः अभिक्रिया के लिए कितने मोल हाइड्रोजन चाहिए?",
+    "oe": [
+      "1 mole",
+      "2 moles",
+      "4 moles",
+      "0.5 mole"
+    ],
+    "oh": [
+      "1 मोल",
+      "2 मोल",
+      "4 मोल",
+      "0.5 मोल"
+    ],
+    "a": 1,
+    "e": "Santulit samikaran 2H2 + O2 = 2H2O yeh batata hai ki do mole hidrojan ek mole oxygen ke saath mil kar do mole paani banate hain. Isliye ek mole oxygen ke saath poori abhikriya ke liye do mole hidrojan chahiye. Samikaran ke aage likhe ank (coefficient) hi asli 'recipe' hote hain, isliye unhe santulit karna anivarya hai; agar samikaran santulit na ho to ganit galat aayega. Isi tarah yadi 4 mole hidrojan li jaye to usse 2 mole oxygen chahiye honge, aur 1 mole hidrojan ke liye 0.5 mole oxygen kaafi hoga. Isliye '1 mole' ya '4 mole' wale vikalp samikaran ke gunankon se mel nahi khaate - kyunki 1 mole hidrojan 0.5 mole oxygen se hi poora mel khaata hai, poori 1 mole se nahi. Yahi 'limiting reagent' ka prashn bhi banta hai, jisme jo padarth kam ho wahi abhikriya ki seema tay karta hai. Exam point: rasayanik samikaran ke coefficient = mole ka anupat; 2H2 + O2 = 2H2O me H2 aur O2 ka anupat 2:1 hota hai."
+  },
+  {
+    "p_id": "gs_chem_mol_05",
+    "qe": "Which of the following statements about the mole concept is NOT correct?",
+    "qh": "मोल संकल्पना के संबंध में निम्नलिखित में से कौन-सा कथन सही नहीं है?",
+    "oe": [
+      "One mole of any substance contains 6.022 x 10^23 particles",
+      "One mole of a substance has a mass in grams equal to its molecular mass",
+      "One mole of every substance always occupies 22.4 litres because all substances behave as gases",
+      "Mole is the SI unit used to measure the amount of substance"
+    ],
+    "oh": [
+      "किसी भी पदार्थ के एक मोल में 6.022 x 10^23 कण होते हैं",
+      "किसी पदार्थ के एक मोल का ग्राम में द्रव्यमान उसके अणु द्रव्यमान के बराबर होता है",
+      "प्रत्येक पदार्थ का एक मोल सदा 22.4 लीटर आयतन घेरता है क्योंकि सभी पदार्थ गैसों की तरह व्यवहार करते हैं",
+      "मोल पदार्थ की मात्रा मापने की SI इकाई है"
+    ],
+    "a": 2,
+    "e": "22.4 litre ka niyam keval gases ke liye hai, woh bhi STP (standard tapaman tatha dabav) par; woh sabhi padarthon par lagu nahi hota. Thos (solid) tatha drav (liquid) padarthon ka ek mole itna aayatan nahi gherta - jaise ek mole paani ka dravyaman 18 gram hota hai aur uski matra 18 millilitre ke karib hoti hai, 22.4 litre nahi. Doosra kathan bhi galat nahi hai: ek mole padarth ka gram me dravyaman uske anu-dravyaman ke barabar hota hai (isliye ise moliy dravyaman kehte hain). Pehle teesre tatha chauthi kathan sahih hain - ek mole me 6.022 x 10^23 kan hote hain aur mole padarth ki matra ki SI ikai hai. Isliye sahi uttar woh kathan hai jo har padarth ke liye 22.4 litre ka dawa karta hai; yahi dawa galat hai. Exam point: 22.4 litre sirf gas ke ek mole ke liye aur sirf STP par sahi hota hai; thos-drav ke liye moliy dravyaman hi maap hai."
+  },
+  {
+    "p_id": "gs_chem_mol_06",
+    "qe": "The number of atoms present in one mole of helium gas is:",
+    "qh": "एक मोल हीलियम गैस में उपस्थित परमाणुओं की संख्या कितनी है?",
+    "oe": [
+      "6.022 x 10^23",
+      "3.011 x 10^23",
+      "1.204 x 10^24",
+      "12.044 x 10^23"
+    ],
+    "oh": [
+      "6.022 x 10^23",
+      "3.011 x 10^23",
+      "1.204 x 10^24",
+      "12.044 x 10^23"
+    ],
+    "a": 0,
+    "e": "Heeliyam ek nobal gas hai aur uske anu (molecule) ek hi paramanu se bante hain; isliye yahan 'molekan' tatha 'paramanu' ki ginti barabar ho jaati hai - ek mole heeliyam me 6.022 x 10^23 paramanu hote hain. Isi tarah neon, argon tatha anya nobal gas ke ek mole me bhi 6.022 x 10^23 paramanu hote hain, kyunki woh ek-atmik (monoatomic) hain. Lekin do-paramanik gas jaise hydrogen (H2), oxygen (O2) ya nitrogen (N2) ke ek mole me anu to 6.022 x 10^23 hote hain, par paramanu unse dugne - 1.204 x 10^24 - ho jaate hain; isliye vah vikalp heeliyam ke liye galat hai aur hydrogen wale prashn ka sahi uttar hota. 3.011 x 10^23 aadhe mole ka aakda hai, isliye woh bhi is prashn me nahi chalega; 12.044 x 10^23 sankhya anya ginti se aati hai. Isliye prashn ka pakka uttar 6.022 x 10^23 hai. Exam point: ek-atmik gas (He, Ne, Ar) ke ek mole me 6.022 x 10^23 paramanu; do-atmik gas (H2, O2) ke ek mole me 6.022 x 10^23 anu tatha 2 x 6.022 x 10^23 paramanu."
+  },
+  {
+    "p_id": "gs_chem_sep_01",
+    "qe": "Petroleum is refined to obtain petrol, diesel, kerosene and other products by which technique?",
+    "qh": "पेट्रोल, डीजल, मिट्टी का तेल तथा अन्य उत्पाद प्राप्त करने के लिए पेट्रोलियम का शोधन किस तकनीक से होता है?",
+    "oe": [
+      "Simple filtration",
+      "Fractional distillation",
+      "Sublimation",
+      "Centrifugation"
+    ],
+    "oh": [
+      "साधारण निस्पंदन",
+      "प्रभाजी आसवन (fractional distillation)",
+      "ऊर्ध्वपातन",
+      "अपकेंद्रण"
+    ],
+    "a": 1,
+    "e": "Petroliyam kachche tel me kai hidrokarabon ka mishran hota hai jinake kathanaank (boiling points) alag-alag hote hain. Isliye shodhan shalayaon me use bhaari bhatti me garam karke unche starambh (fractionating column) me bheja jaata hai; halke padarth pehle bhaap bankar upar jaate hain aur bhaari padarth niche - isi vidhi ko prabhaji aasvan (fractional distillation) kehte hain. Isse alag-alag kathanaank wale utpad alag-alag chhaton par milte hain - sabse upar LPG aur petrol, uske baad naphtha, kerosene, diesel tatha sabse niche tar (bitumen). Sadharan filtration se keval thos ashuddhi alag hoti hai, ghule hue padarthon ki nahi, isliye woh vikalp is prashn me galat hai. Oordhvatana (sublimation) se woh thos padarth shuddh hote hain jo bina pighle seedha bhaap ban jaate hain (jaise camphor), aur apkendran (centrifugation) se mishran ke ghan (dense) tatha halke hisse ghumakar alag kiye jaate hain (jaise doodh se cream) - dono petroliyam ke shodhan ki vidhi nahi hain. Exam point: petroliyam ka shodhan = prabhaji aasvan (fractional distillation), kathanaank ke antar par adharit; LPG sabse halka tatha bitumen sabse bhaari utpad hai."
+  },
+  {
+    "p_id": "gs_chem_sep_02",
+    "qe": "Which technique is most suitable for separating the different coloured pigments present in a sample of black ink?",
+    "qh": "काले स्याही के नमूने में उपस्थित भिन्न रंगीन पिंडों (pigments) को अलग करने के लिए सर्वाधिक उपयुक्त तकनीक कौन-सी है?",
+    "oe": [
+      "Distillation",
+      "Chromatography",
+      "Sublimation",
+      "Filtration"
+    ],
+    "oh": [
+      "आसवन",
+      "वर्णलेखन (क्रोमैटोग्राफी)",
+      "ऊर्ध्वपातन",
+      "निस्पंदन"
+    ],
+    "a": 1,
+    "e": "Syahi me alag-alag rang ke pigments ghule hote hain. Jab syahi ki ek boond kagaz par rakhi jaati hai aur kagaz ka nicha sira kisi drav (jaise paani ya alcohol) me dubaaya jaata hai, to mishran ke sabhi ghatak drav ke saath aage badhte hain, lekin unki gati alag-alag hoti hai - jiski ghumne ki dar tatha ghulan alag hoti hai, woh alag doori tak jaata hai. Isi karan kagaz par alag-alag rang ki pattiyan ban jaati hain aur punah alag ho jaate hain. Is vidhi ko varnlekhan (chromatography) kehte hain, jiska prayog rang-bhinn karne ke alava dawa tatha anya mishranon ki shuddhta parakhne me bhi hota hai. Aasvan (distillation) drav mishranon ke liye hota hai jahan kathanaank ka antar ho, jaise paani tatha alcohol; woh rang ke pigments ko alag nahi darshaata. Oordhvatana thos-bhaap ke liye hota hai aur nisandan (filtration) ashuddhi alag karne ke liye; dono is prashn me kaam nahi aate. Exam point: varnlekhan = pigments/dyes alag karna aur padarthon ki shuddhta parakhna; aasvan = kathanaank ke antar par; oordhvatana = subliming solids (camphor, iodine) ke liye."
+  },
+  {
+    "p_id": "gs_chem_sep_03",
+    "qe": "A mixture of camphor and common salt can be separated by:",
+    "qh": "कपूर तथा साधारण नमक के मिश्रण को किस विधि से अलग किया जा सकता है?",
+    "oe": [
+      "Sublimation followed by dissolving in water",
+      "Filtration followed by distillation",
+      "Centrifugation followed by decantation",
+      "Only by using a separating funnel"
+    ],
+    "oh": [
+      "ऊर्ध्वपातन तत्पश्चात् जल में घोलना",
+      "निस्पंदन तत्पश्चात् आसवन",
+      "अपकेंद्रण तत्पश्चात् अवस्रावण",
+      "केवल पृथक्करण कीप द्वारा"
+    ],
+    "a": 0,
+    "e": "Kapoor (camphor) ek aisa thos padarth hai jo garam karne par bina pighle seedha bhaap ban jaata hai aur thanda hone par phir thos roop me jama ho jaata hai; isi ghatna ko oordhvatana (sublimation) kehte hain - isi tarah iodine tatha ammonium chloride bhi vyavahar karte hain. Sadharan namak (sodium chloride) oordhvatana nahi karta, isliye mishran ko garam karne par kapoor alag ho jaata hai aur naam nammak bacha rah jaata hai. Iske baad namak ko paani me ghoulkar nisandan dwara alag kar sakte hain ya paani ko bhap-bhaap kar vapas paaya ja sakta hai - isliye pehla vikalp sahi hai. Nisandan-tatha-aasvan ke jod se mishran alag nahi hota kyunki kapoor paani me ghulta nahi; apkendran tatha avsravan bhi kapoor ke liye upyogi nahi hai, kyunki woh ghan-tatha-halke drav mishranon ke liye hote hain. Prithakkaran kiipi (separating funnel) un do drav padarthon ke liye hoti hai jo aapas me na ghulte hain aur alag-alag parat banaate hain, jaise tel tatha paani. Exam point: oordhvatana = woh thos jo bina pighle bhaap bane (kapoor, iodine, ammonium chloride); namak-aur-kapoor ke mishran me pehle oordhvatana, phir paani me gholkar nisandan/aasvan."
+  },
+  {
+    "p_id": "gs_chem_sep_04",
+    "qe": "Cream is separated from milk in a dairy by which method, and on what principle does it work?",
+    "qh": "डेयरी में दूध से क्रीम किस विधि द्वारा अलग की जाती है, और वह किस सिद्धांत पर कार्य करती है?",
+    "oe": [
+      "Filtration; on the basis of particle size",
+      "Centrifugation; on the basis of difference in density",
+      "Distillation; on the basis of boiling point",
+      "Sublimation; on the basis of change of state"
+    ],
+    "oh": [
+      "निस्पंदन; कण आकार के आधार पर",
+      "अपकेंद्रण; घनत्व के अंतर के आधार पर",
+      "आसवन; क्वथनांक के आधार पर",
+      "ऊर्ध्वपातन; अवस्था परिवर्तन के आधार पर"
+    ],
+    "a": 1,
+    "e": "Doodh me cream (chiknai) ke chhote-chhote kan halke hote hain tatha doodh ke jal-ansh se kam ghan hote hain. Jab doodh ko kisi patr me bahut tezi se ghumaya jaata hai (ya special milk separator me daala jaata hai), to bhaari doodh kinare ki taraf tatha halki cream beech me ek alag parat ke roop me aa jaati hai - isi vidhi ko apkendran (centrifugation) kehte hain aur yah ghanatva ke antar par kaam karti hai. Yahi vidhi rakt (blood) kee jaanch me plasma alag karne tatha washing machine me paani nikalne me bhi lagti hai. Nisandan (filtration) me chhanai dwara keval thos kan alag hote hain, ghanatva se nahi; isliye pehla vikalp galat hai. Aasvan doodh ke liye utna upyogi nahi kyunki garam karne se doodh ke poshak tattva nasht ho jaate hain tatha woh ghanatva ke adhaar par kaam nahi karta. Oordhvatana to gazban ya bhaap banne wale thos padarthon ka vishay hai, isliye chautha vikalp is prashn se mel nahi khaata. Exam point: apkendran = ghanatva ke antar par adharit (doodh se cream, rakt ke plasma, washing machine); nisandan = kan ke aakaar par adharit."
+  },
+  {
+    "p_id": "gs_chem_sep_05",
+    "qe": "Which of the following is NOT a chemical change?",
+    "qh": "निम्नलिखित में से कौन-सा रासायनिक परिवर्तन नहीं है?",
+    "oe": [
+      "Rusting of iron in moist air",
+      "Curdling of milk to form curd",
+      "Dissolving of sugar in water to form a solution",
+      "Burning of magnesium ribbon in air"
+    ],
+    "oh": [
+      "नम हवा में लोहे का जंग लगना",
+      "दूध से दही बनना",
+      "शक्कर का जल में घुलकर विलयन बनना",
+      "वायु में मैग्नीशियम रिबन का जलना"
+    ],
+    "a": 2,
+    "e": "Rasayanik parivartan me naye padarth bante hain aur woh aam taur par palat nahi sakte; bhaautik parivartan me padarth ka roop ya avastha badalti hai, unki pehchan wahi rehti hai. Shakkar ko paani me gholne par shakkar ke atu paani me phail jaate hain, lekin woh shakkar hi rehti hai - paani ke waashpikaran par phir se shakkar mil jaati hai; isliye yeh bhaautik parivartan hai, rasayanik nahi. Lohe par jang lagna rasayanik parivartan hai kyunki yahan lohe ke oxide ka naya padarth banta hai. Doodh se dahi banna bhi rasayanik parivartan hai, kyunki lactik acid jaisa naya padarth banta hai tatha doodh naveen se palat nahi sakta. Magnesium riban ka jalna rasayanik parivartan hai, kyunki woh magnesium oxide ki safed raakh tatha prakash-ushma deta hai - yah ek nabhiya abhikriya hai. Isliye is prashn ka sahi uttar shakkar ka ghalna hai. Exam point: rasayanik parivartan = naya padarth banta hai (jang, dahi jamna, jalna, khana pakna); bhaautik parivartan = roop/avastha badalti hai lekin padarth wahi rehta hai (shakkar ghalna, barf pighalna, paani ubhalna)."
+  },
+  {
+    "p_id": "gs_chem_sep_06",
+    "qe": "A separating funnel is used to separate two liquids which:",
+    "qh": "पृथक्करण कीप (separating funnel) का उपयोग उन दो द्रवों को अलग करने के लिए होता है, जो -",
+    "oe": [
+      "Mix completely with each other in all proportions",
+      "Do not mix with each other and form separate layers",
+      "Have the same density and same boiling point",
+      "Are both solids dissolved in water"
+    ],
+    "oh": [
+      "सभी अनुपातों में एक-दूसरे के साथ पूर्णतः मिल जाते हैं",
+      "एक-दूसरे के साथ नहीं मिलते और अलग-अलग परतें बनाते हैं",
+      "समान घनत्व तथा समान क्वथनांक रखते हैं",
+      "दोनों जल में घुले ठोस हैं"
+    ],
+    "a": 1,
+    "e": "Prithakkaran kiipi (separating funnel) us samay kaam aati hai jab do drav aapas me na ghulte hon aur khud hi do alag parat bana lein - jaise paani tatha tel, ya paani tatha chloroform. Inhe kiipi me daal kar kuchh samay chhodne par halka drav upar tatha bhaari drav niche chala jaata hai; phir niche wala nal kholkar bhaari drav alag kar liya jaata hai. Yah vidhi ghanatva ke antar par chalti hai, kathanaank par nahi. Jo drav aapas me poorti tarah mil jaate hain (jaise paani tatha spirit), unhe is kiipi se alag nahi kiya ja sakta - unke liye prabhaji aasvan (fractional distillation) chahiye hoti hai, kyunki unke kathanaank me antar hota hai; isliye pehla tatha teesra vikalp galat hain. Chalne-shuddh drav ya paani me ghule thos ke liye alag vidhiyan hain (nisandan, vaashpikaran, krishtallikaran), isliye chautha vikalp bhi is prashn ka sahi uttar nahi hai. Exam point: prithakkaran kiipi = na milne wale drav (paani-tel, paani-chloroform) ke liye, ghanatva ke adhaar par; milne wale drav ke liye prabhaji aasvan."
+  }
+]

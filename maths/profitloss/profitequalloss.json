@@ -1,0 +1,116 @@
+[
+  {
+    "p_id": "profitequalloss_1",
+    "qe": "The profit made on an item sold for 2200 is equal to the loss incurred when it is sold for 1800. What will be the profit or loss percentage if the item is sold for Rs.2050?",
+    "qh": "किसी वस्तु को 2200 में बेचने पर हुआ लाभ, इसे 1800 में बेचने पर हुई हानि के बराबर है। यदि वस्तु को ₹2050 में बेचा जाता है, तो लाभ या हानि प्रतिशत क्या होगा?",
+    "oe": [
+      "Profit of 2.25%",
+      "Loss of 3.5%",
+      "Profit of 2.5%",
+      "Loss of 4.25%"
+    ],
+    "oh": [
+      "Profit of 2.25%",
+      "Loss of 3.5%",
+      "Profit of 2.5%",
+      "Loss of 4.25%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit : Loss = 1 : 1.\nSP1 aur SP2 ka antar = 2200 - 1800 = ₹400.\nStep 2: Total gap = 1 + 1 = 2 units = ₹400 ==> 1 unit = ₹200.\nCP = SP1 - Profit = 2200 - 200 = ₹2,000 (ya SP2 + Loss = 1800 + 200 = ₹2,000).\nStep 3: New SP = ₹2050 par CP : New SP = 2000 : 2050 = 40 : 41.\nProfit = 41 - 40 = 1 unit.\nProfit% = (1 / 40) * 100% = 2.5% Profit.\nAtah sahi vikalp  Profit of 2.5% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Jab Profit = Loss ho, toh CP = (SP1 + SP2) / 2 = (2200 + 1800) / 2 = ₹2,000.\nStep 2: New SP = ₹2,050 ==> Profit = 2050 - 2000 = ₹50.\nStep 3: Profit% = (Profit / CP) * 100% = (50 / 2000) * 100% = 2.5% Profit.\nAtah sahi uttar 'Profit of 2.5%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "profitequalloss_2",
+    "qe": "The profit obtained by a vendor on selling goods at ₹3,200 is equal to 7/5 th of the profit obtained by selling the same goods at ₹3,000. What is the cost price (in ₹) of the goods?",
+    "qh": "एक विक्रेता द्वारा किसी वस्तु को ₹3,200 में बेचने पर प्राप्त लाभ, उसी वस्तु को ₹3,000 में बेचने पर प्राप्त लाभ के 7/5 के बराबर है। वस्तु का क्रय मूल्य (₹ में) क्या है?",
+    "oe": [
+      "2,500",
+      "2,700",
+      "2,900",
+      "2,400"
+    ],
+    "oh": [
+      "2,500",
+      "2,700",
+      "2,900",
+      "2,400"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit1 : Profit2 = 7 : 5.\nProfit ka antar = 7 - 5 = 2 units.\nStep 2: Dono SP ka antar = 3200 - 3000 = ₹200.\n2 units = ₹200 ==> 1 unit = ₹100.\nStep 3: Profit2 (jab SP = 3000) = 5 units = 5 * 100 = ₹500.\nStep 4: CP = SP2 - Profit2 = 3000 - 500 = ₹2,500.\nAtah sahi vikalp  2,500 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Prashnanusar: (3200 - CP) = (7/5) * (3000 - CP).\nStep 2: 5 * (3200 - CP) = 7 * (3000 - CP)\n16000 - 5CP = 21000 - 7CP\nStep 3: 7CP - 5CP = 21000 - 16000\n2CP = 5000 ==> CP = ₹2,500.\nAtah sahi uttar '2,500' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "profitequalloss_3",
+    "qe": "Ravi sells a laptop bag to Reeta for ₹1,920 and he sells another similar laptop bag to Vinay for ₹1,280. The percentage profit earned in selling the laptop bag to Reeta is equal to the percentage loss in selling the laptop bag to Vinay. At what price (in ₹) should Ravi sell the laptop bag to make a profit of 25%?",
+    "qh": "रवि रीता को ₹1,920 में एक लैपटॉप बैग बेचता है और वह विनय को उसी प्रकार का दूसरा लैपटॉप बैग ₹1,280 में बेचता है। रीता को लैपटॉप बैग बेचने पर अर्जित प्रतिशत लाभ, विनय को लैपटॉप बैग बेचने पर हुई प्रतिशत हानि के बराबर है। 25% का लाभ कमाने के लिए रवि को लैपटॉप बैग किस कीमत (₹ में) पर बेचना चाहिए?",
+    "oe": [
+      "2,000",
+      "1,600",
+      "1,800",
+      "1,650"
+    ],
+    "oh": [
+      "2,000",
+      "1,600",
+      "1,800",
+      "1,650"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit% = Loss% ==> Profit : Loss = 1 : 1.\nSP1 aur SP2 ka antar = 1920 - 1280 = ₹640.\nStep 2: Gap = 1 + 1 = 2 units = ₹640 ==> 1 unit = ₹320.\nCP = 1920 - 320 = ₹1,600.\nStep 3: 25% profit = 1/4 ==> CP : New SP = 4 : (4 + 1) = 4 : 5.\n4 units = 1600 ==> 1 unit = 400.\nNew SP = 5 units = 5 * 400 = ₹2,000.\nAtah sahi vikalp  2,000 hai.\n\nMethod 2 (100-Base Method):\nStep 1: CP = (SP1 + SP2) / 2 = (1920 + 1280) / 2 = 3200 / 2 = ₹1,600.\nStep 2: 25% labh par New SP = 125% of CP = 1.25 * 1600 = ₹2,000.\nAtah sahi uttar '2,000' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "profitequalloss_4",
+    "qe": "The profit obtained by selling an article for ₹86 is twice the loss obtained by selling the same article for ₹53. Find the cost price.",
+    "qh": "किसी वस्तु को ₹86 में बेचने पर प्राप्त लाभ, उसी वस्तु को ₹53 में बेचने पर हुई हानि का दोगुना है। क्रय मूल्य ज्ञात कीजिए।",
+    "oe": [
+      "₹33",
+      "₹22",
+      "₹64",
+      "₹75"
+    ],
+    "oh": [
+      "₹33",
+      "₹22",
+      "₹64",
+      "₹75"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Prashnanusar: Profit : Loss = 2 : 1.\nStep 2: Dono SP ka antar = 86 - 53 = ₹33.\nTotal gap = 2 + 1 = 3 units = ₹33 ==> 1 unit = ₹11.\nStep 3: Loss = 1 unit = ₹11.\nCP = SP2 + Loss = 53 + 11 = ₹64 (ya CP = 86 - 2(11) = ₹64).\nAtah sahi vikalp  ₹64 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Profit = 2 * Loss ==> (86 - CP) = 2 * (CP - 53).\nStep 2: 86 - CP = 2CP - 106\n3CP = 86 + 106 = 192\nStep 3: CP = 192 / 3 = ₹64.\nAtah sahi uttar '₹64' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "profitequalloss_5",
+    "qe": "The percentage profit earned by selling an article for ₹2,100 is equal to the percentage loss incurred by selling the same article for ₹1,460. At what price should the article be sold to make 20% profit?",
+    "qh": "किसी वस्तु को ₹2,100 में बेचने पर अर्जित प्रतिशत लाभ, उसी वस्तु को ₹1,460 में बेचने पर हुई प्रतिशत हानि के बराबर है। 20% लाभ कमाने के लिए वस्तु को किस मूल्य पर बेचा जाना चाहिए?",
+    "oe": [
+      "₹2156",
+      "₹2256",
+      "₹2136",
+      "₹2056"
+    ],
+    "oh": [
+      "₹2156",
+      "₹2256",
+      "₹2136",
+      "₹2056"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit% = Loss% ==> Profit : Loss = 1 : 1.\nSP1 aur SP2 ka antar = 2100 - 1460 = ₹640.\nStep 2: Total gap = 1 + 1 = 2 units = ₹640 ==> 1 unit = ₹320.\nCP = 2100 - 320 = ₹1,780.\nStep 3: 20% profit = 1/5 ==> CP : New SP = 5 : (5 + 1) = 5 : 6.\n5 units = 1780 ==> 1 unit = 1780 / 5 = ₹356.\nNew SP = 6 units = 6 * 356 = ₹2,136.\nAtah sahi vikalp  ₹2136 hai.\n\nMethod 2 (100-Base Method):\nStep 1: CP = (2100 + 1460) / 2 = 3560 / 2 = ₹1,780.\nStep 2: 20% labh par New SP = 120% of CP = 1.20 * 1780 = ₹2,136.\nAtah sahi uttar '₹2136' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "profitequalloss_6",
+    "qe": "By selling a watch for ₹1600, a person gets profit is equal to the loss of selling the same watch for ₹1400. If the person wants to get a profit of 20%, at what price should he sell the watch?",
+    "qh": "एक घड़ी को ₹1600 में बेचने पर एक व्यक्ति को प्राप्त लाभ, उसी घड़ी को ₹1400 में बेचने पर हुई हानि के बराबर है। यदि वह व्यक्ति 20% का लाभ प्राप्त करना चाहता है, तो उसे घड़ी को किस मूल्य पर बेचना चाहिए?",
+    "oe": [
+      "₹1800",
+      "₹1750",
+      "₹1850",
+      "₹1900"
+    ],
+    "oh": [
+      "₹1800",
+      "₹1750",
+      "₹1850",
+      "₹1900"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit : Loss = 1 : 1.\nSP1 aur SP2 ka antar = 1600 - 1400 = ₹200.\nStep 2: Gap = 1 + 1 = 2 units = ₹200 ==> 1 unit = ₹100.\nCP = 1600 - 100 = ₹1,500.\nStep 3: 20% profit = 1/5 ==> CP : New SP = 5 : (5 + 1) = 5 : 6.\n5 units = 1500 ==> 1 unit = 300.\nNew SP = 6 units = 6 * 300 = ₹1,800.\nAtah sahi vikalp  ₹1800 hai.\n\nMethod 2 (100-Base Method):\nStep 1: CP = (1600 + 1400) / 2 = 3000 / 2 = ₹1,500.\nStep 2: 20% labh par New SP = 120% of CP = 1.20 * 1500 = ₹1,800.\nAtah sahi uttar '₹1800' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

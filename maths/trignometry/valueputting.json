@@ -1,0 +1,382 @@
+[
+  {
+    "p_id": "valueputting_1",
+    "qe": "The value of $\\theta$ when $\\sqrt{3}\\cos\\theta + \\sin\\theta = 1$ ($0^\\circ \\le \\theta \\le 90^\\circ$) is:",
+    "qh": "जब $\\sqrt{3}\\cos\\theta + \\sin\\theta = 1$ ($0^\\circ \\le \\theta \\le 90^\\circ$) है, तो $\\theta$ का मान क्या होगा?",
+    "oe": [
+      "$90^\\circ$",
+      "$60^\\circ$",
+      "$30^\\circ$",
+      "$0^\\circ$"
+    ],
+    "oh": [
+      "$90^\\circ$",
+      "$60^\\circ$",
+      "$30^\\circ$",
+      "$0^\\circ$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Trigonometric Transformation Method):\nStep 1: दोनों पक्षों को 2 से विभाजित करने पर:\n$$\\frac{$\\sqrt{3}$}{2}\\cos$\\theta$ + $\\frac{1}{2}$\\sin$\\theta$ = $\\frac{1}{2}$$$\nStep 2: $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$ और $\\cos 60^\\circ = \\frac{1}{2}$ प्रतिस्थापित करने पर:\n$$\\sin 60^$\\circ$\\cos$\\theta$ + \\cos 60^$\\circ$\\sin$\\theta$ = $\\frac{1}{2}$$$\n$$\\sin(60^$\\circ$ + $\\theta$) = \\sin 30^$\\circ$ \\quad \\text{या} \\quad \\sin(180^$\\circ$ - 30^$\\circ$) = \\sin 150^$\\circ$$$\nStep 3: दिए गए अंतराल ($0^\\circ \\le \\theta \\le 90^\\circ$) में:\n$$60^$\\circ$ + $\\theta$ = 150^$\\circ$ \\implies $\\theta$ = 150^$\\circ$ - 60^$\\circ$ = 90^$\\circ$$$\nअतः सही विकल्प  $90^\\circ$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\theta = 90^\\circ$ रखने पर:\n$$$\\sqrt{3}$\\cos 90^$\\circ$ + \\sin 90^$\\circ$ = $\\sqrt{3}$(0) + 1 = 1 \\quad \\text{(संतुष्ट)}$$\nअतः सही उत्तर '$90^\\circ$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_2",
+    "qe": "The value of $\\sqrt{\\sec^2\\theta + \\operatorname{cosec}^2\\theta} \\times \\sqrt{\\tan^2\\theta - \\sin^2\\theta}$ is equal to:",
+    "qh": "$\\sqrt{\\sec^2\\theta + \\operatorname{cosec}^2\\theta} \\times \\sqrt{\\tan^2\\theta - \\sin^2\\theta}$ का मान किसके बराबर है?",
+    "oe": [
+      "$\\operatorname{cosec}\\theta\\sec^2\\theta$",
+      "$\\sin\\theta\\sec^2\\theta$",
+      "$\\sin\\theta\\cos^2\\theta$",
+      "$\\operatorname{cosec}\\theta\\cos^2\\theta$"
+    ],
+    "oh": [
+      "$\\operatorname{cosec}\\theta\\sec^2\\theta$",
+      "$\\sin\\theta\\sec^2\\theta$",
+      "$\\sin\\theta\\cos^2\\theta$",
+      "$\\operatorname{cosec}\\theta\\cos^2\\theta$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Identity Simplification Method):\nStep 1: प्रथम पद $\\sqrt{\\sec^2\\theta + \\operatorname{cosec}^2\\theta}$ को हल करें:\n$$\\sec^2$\\theta$ + \\operatorname{cosec}^2$\\theta$ = $\\frac{1}{\\cos^2\\theta}$ + $\\frac{1}{\\sin^2\\theta}$ = $\\frac{\\sin^2\\theta+\\cos^2\\theta}{\\sin^2\\theta\\cos^2\\theta}$ = $\\frac{1}{\\sin^2\\theta\\cos^2\\theta}$$$\n$$\\sqrt{\\sec^2$\\theta$ + \\operatorname{cosec}^2$\\theta$} = $\\frac{1}{\\sin\\theta\\cos\\theta}$$$\nStep 2: द्वितीय पद $\\sqrt{\\tan^2\\theta - \\sin^2\\theta}$ को हल करें:\n$$\\tan^2$\\theta$ - \\sin^2$\\theta$ = $\\frac{\\sin^2\\theta}{\\cos^2\\theta}$ - \\sin^2$\\theta$ = \\sin^2$\\theta$$\\le$ft($\\frac{1-\\cos^2\\theta}{\\cos^2\\theta}$\\right) = $\\frac{\\sin^4\\theta}{\\cos^2\\theta}$$$\n$$$\\sqrt{\\tan^2\\theta-\\sin^2\\theta}$ = $\\frac{\\sin^2\\theta}{\\cos\\theta}$$$\nStep 3: दोनों को गुणा करने पर:\n$$$\\le$ft($\\frac{1}{\\sin\\theta\\cos\\theta}$\\right) $\\times$ $\\le$ft($\\frac{\\sin^2\\theta}{\\cos\\theta}$\\right) = $\\frac{\\sin\\theta}{\\cos^2\\theta}$ = \\sin$\\theta$\\sec^2$\\theta$$$\nअतः सही विकल्प  $\\sin\\theta\\sec^2\\theta$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\theta = 45^\\circ$ रखने पर:\n$$$\\sqrt{2+2}$ $\\times$ $\\sqrt{1-1/2}$ = $\\sqrt{4}$ $\\times$ \\frac{1}{$\\sqrt{2}$} = \\frac{2}{$\\sqrt{2}$} = $\\sqrt{2}$$$\nStep 2: विकल्पों की जाँच ($\\theta = 45^\\circ$):\n(b) $\\sin 45^\\circ\\sec^2 45^\\circ = \\frac{1}{\\sqrt{2}} \\times (\\sqrt{2})^2 = \\frac{2}{\\sqrt{2}} = \\sqrt{2}$ (संतुष्ट)।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_3",
+    "qe": "$(\\operatorname{cosec} A - \\sin A)^2 + (\\sec A - \\cos A)^2 - (\\cot A - \\tan A)^2$ is equal to:",
+    "qh": "$(\\operatorname{cosec} A - \\sin A)^2 + (\\sec A - \\cos A)^2 - (\\cot A - \\tan A)^2$ का मान किसके बराबर है?",
+    "oe": [
+      "$2$",
+      "$0$",
+      "$1$",
+      "$-1$"
+    ],
+    "oh": [
+      "$2$",
+      "$0$",
+      "$1$",
+      "$-1$"
+    ],
+    "a": 2,
+    "e": "Method 1 (Algebraic and Trigonometric Expansion):\nStep 1: तीनों वर्गों का विस्तार करें:\n$$(\\operatorname{cosec} A - \\sin A)^2 = \\operatorname{cosec}^2 A + \\sin^2 A - 2$$\n$$(\\sec A - \\cos A)^2 = \\sec^2 A + \\cos^2 A - 2$$\n$$-(\\cot A - \\tan A)^2 = -(\\cot^2 A + \\tan^2 A - 2) = -\\cot^2 A - \\tan^2 A + 2$$\nStep 2: सभी पदों को जोड़ने पर:\n$$= (\\operatorname{cosec}^2 A - \\cot^2 A) + (\\sec^2 A - \\tan^2 A) + (\\sin^2 A + \\cos^2 A) - 2 - 2 + 2$$\nStep 3: मानक सर्वसमिकाएँ लागू करने पर:\n$$\\operatorname{cosec}^2 A - \\cot^2 A = 1, \\quad \\sec^2 A - \\tan^2 A = 1, \\quad \\sin^2 A + \\cos^2 A = 1$$\n$$= 1 + 1 + 1 - 2 = 1$$\nअतः सही विकल्प  1 है।\n\nMethod 2 (Value Putting Method):\nStep 1: $A = 45^\\circ$ रखने पर:\n$$($\\sqrt{2}$ - 1/$\\sqrt{2}$)^2 + ($\\sqrt{2}$ - 1/$\\sqrt{2}$)^2 - (1 - 1)^2$$\n$$= (1/$\\sqrt{2}$)^2 + (1/$\\sqrt{2}$)^2 - 0 = $\\frac{1}{2}$ + $\\frac{1}{2}$ = 1$$\nअतः सही उत्तर '$1$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_4",
+    "qe": "If $3\\sin\\theta = 2\\cos^2\\theta$, $0^\\circ < \\theta < 90^\\circ$, then the value of $(\\tan^2\\theta + \\sec^2\\theta - \\operatorname{cosec}^2\\theta)$ is:",
+    "qh": "यदि $3\\sin\\theta = 2\\cos^2\\theta$, $0^\\circ < \\theta < 90^\\circ$ है, तो $(\\tan^2\\theta + \\sec^2\\theta - \\operatorname{cosec}^2\\theta)$ का मान क्या होगा?",
+    "oe": [
+      "$-2$",
+      "$-\\frac{7}{3}$",
+      "$\\frac{7}{3}$",
+      "$2$"
+    ],
+    "oh": [
+      "$-2$",
+      "$-\\frac{7}{3}$",
+      "$\\frac{7}{3}$",
+      "$2$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Quadratic Equation Method):\nStep 1: $\\cos^2\\theta = 1 - \\sin^2\\theta$ प्रतिस्थापित करने पर:\n$$3\\sin$\\theta$ = 2(1 - \\sin^2$\\theta$) \\implies 2\\sin^2$\\theta$ + 3\\sin$\\theta$ - 2 = 0$$\nStep 2: गुणनखंड करने पर:\n$$2\\sin^2$\\theta$ + 4\\sin$\\theta$ - \\sin$\\theta$ - 2 = 0$$\n$$2\\sin$\\theta$(\\sin$\\theta$ + 2) - 1(\\sin$\\theta$ + 2) = 0$$\n$$(2\\sin$\\theta$ - 1)(\\sin$\\theta$ + 2) = 0$$\nचूँकि $\\sin\\theta > 0$, अतः $\\sin\\theta = \\frac{1}{2} \\implies \\theta = 30^\\circ$.\nStep 3: $\\theta = 30^\\circ$ पर मान ज्ञात करने पर:\n$$\\tan 30^$\\circ$ = \\frac{1}{$\\sqrt{3}$}, \\quad \\sec 30^$\\circ$ = \\frac{2}{$\\sqrt{3}$}, \\quad \\operatorname{cosec} 30^$\\circ$ = 2$$\n$$\\tan^2 30^$\\circ$ + \\sec^2 30^$\\circ$ - \\operatorname{cosec}^2 30^$\\circ$ = $\\frac{1}{3}$ + $\\frac{4}{3}$ - 4 = $\\frac{5}{3}$ - 4 = -$\\frac{7}{3}$$$\nअतः सही विकल्प  $-\\frac{7}{3}$ है।\n\nMethod 2 (Direct Verification Method):\nStep 1: $\\theta = 30^\\circ$ रखने पर:\n$$3\\sin 30^$\\circ$ = 3(1/2) = 1.5, \\quad 2\\cos^2 30^$\\circ$ = 2(3/4) = 1.5 \\quad \\text{(संतुष्ट)}$$\nStep 2: व्यंजक का मान $= 1/3 + 4/3 - 4 = -\\frac{7}{3}$.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_5",
+    "qe": "If $\\sin\\theta\\sec^2\\theta = \\frac{2}{3}$, $0^\\circ < \\theta < 90^\\circ$, then the value of $(\\tan^2\\theta + \\cos^2\\theta)$ is:",
+    "qh": "यदि $\\sin\\theta\\sec^2\\theta = \\frac{2}{3}$, $0^\\circ < \\theta < 90^\\circ$ है, तो $(\\tan^2\\theta + \\cos^2\\theta)$ का मान क्या होगा?",
+    "oe": [
+      "$\\frac{7}{6}$",
+      "$\\frac{11}{12}$",
+      "$\\frac{13}{12}$",
+      "$\\frac{5}{4}$"
+    ],
+    "oh": [
+      "$\\frac{7}{6}$",
+      "$\\frac{11}{12}$",
+      "$\\frac{13}{12}$",
+      "$\\frac{5}{4}$"
+    ],
+    "a": 2,
+    "e": "Method 1 (Algebraic Equation in $\\sin\\theta$):\nStep 1: दिए गए समीकरण को $\\cos^2\\theta = 1 - \\sin^2\\theta$ द्वारा लिखें:\n$$$\\frac{\\sin\\theta}{\\cos^2\\theta}$ = $\\frac{2}{3}$ \\implies 3\\sin$\\theta$ = 2(1 - \\sin^2$\\theta$)$$\n$$2\\sin^2$\\theta$ + 3\\sin$\\theta$ - 2 = 0$$\nStep 2: गुणनखंड करने पर:\n$$(2\\sin$\\theta$ - 1)(\\sin$\\theta$ + 2) = 0 \\implies \\sin$\\theta$ = $\\frac{1}{2}$ \\implies $\\theta$ = 30^$\\circ$$$\nStep 3: $\\tan^2\\theta + \\cos^2\\theta$ का मान निकालें:\n$$\\tan^2 30^$\\circ$ + \\cos^2 30^$\\circ$ = $\\le$ft(\\frac{1}{$\\sqrt{3}$}\\right)^2 + $\\le$ft(\\frac{$\\sqrt{3}$}{2}\\right)^2 = $\\frac{1}{3}$ + $\\frac{3}{4}$ = $\\frac{4+9}{12}$ = $\\frac{13}{12}$$$\nअतः सही विकल्प  $\\frac{13}{12}$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\theta = 30^\\circ$ रखने पर:\n$$\\sin 30^$\\circ$\\sec^2 30^$\\circ$ = $\\frac{1}{2}$ $\\times$ $\\frac{4}{3}$ = $\\frac{2}{3}$ \\quad \\text{(समीकरण संतुष्ट)}$$\nStep 2: अभीष्ट मान $= \\frac{1}{3} + \\frac{3}{4} = \\frac{13}{12}$.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_6",
+    "qe": "Let $a = \\frac{2\\sin x}{1 + \\sin x + \\cos x}$ and $b = \\frac{c}{1 + \\sin x}$. If $a = b$, then $c = ?$",
+    "qh": "मान लें $a = \\frac{2\\sin x}{1 + \\sin x + \\cos x}$ और $b = \\frac{c}{1 + \\sin x}$ है। यदि $a = b$ हो, तो $c$ का मान क्या होगा?",
+    "oe": [
+      "$1 - \\sin x\\cos x$",
+      "$1 + \\sin x - \\cos x$",
+      "$1 + \\sin x\\cos x$",
+      "$1 + \\cos x\\sin x$"
+    ],
+    "oh": [
+      "$1 - \\sin x\\cos x$",
+      "$1 + \\sin x - \\cos x$",
+      "$1 + \\sin x\\cos x$",
+      "$1 + \\cos x\\sin x$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Standard Trigonometric Transformation):\nStep 1: दिए गए संबंध से:\n$$c = a(1 + \\sin x) = $\\frac{2\\sinx(1+\\sinx)}{1+\\sinx+\\cosx}$$$\nStep 2: अंश और हर को $(1 + \\sin x - \\cos x)$ से गुणा करके परिमेयकरण करने पर:\n$$c = 1 + \\sin x - \\cos x$$\nStep 3: प्रत्यक्ष सत्यापन:\n$$(1 + \\sin x - \\cos x)(1 + \\sin x + \\cos x) = (1 + \\sin x)^2 - \\cos^2 x$$\n$$= 1 + 2\\sin x + \\sin^2 x - (1 - \\sin^2 x) = 2\\sin x + 2\\sin^2 x = 2\\sin x(1 + \\sin x)$$\nअतः $\\frac{2\\sin x}{1 + \\sin x + \\cos x} = \\frac{1 + \\sin x - \\cos x}{1 + \\sin x} \\implies c = 1 + \\sin x - \\cos x$.\nअतः सही विकल्प  $1 + \\sin x - \\cos x$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $x = 90^\\circ$ रखने पर:\n$$a = $\\frac{2(1)}{1+1+0}$ = $\\frac{2}{2}$ = 1$$\n$$b = $\\frac{c}{1+1}$ = $\\frac{c}{2}$$$\nचूँकि $a = b \\implies 1 = \\frac{c}{2} \\implies c = 2$.\nStep 2: विकल्पों में $x = 90^\\circ$ रखने पर:\n(b) $1 + \\sin 90^\\circ - \\cos 90^\\circ = 1 + 1 - 0 = 2$ (संतुष्ट)।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_7",
+    "qe": "If $\\frac{\\cos\\alpha}{\\sin\\alpha + \\cos\\beta} + \\frac{\\cos\\beta}{\\sin\\beta - \\cos\\alpha} = \\frac{x}{\\sin\\alpha - \\cos\\beta} + \\frac{\\cos\\beta}{\\sin\\beta + \\cos\\alpha}$, then $x$ is equal to:",
+    "qh": "यदि $\\frac{\\cos\\alpha}{\\sin\\alpha + \\cos\\beta} + \\frac{\\cos\\beta}{\\sin\\beta - \\cos\\alpha} = \\frac{x}{\\sin\\alpha - \\cos\\beta} + \\frac{\\cos\\beta}{\\sin\\beta + \\cos\\alpha}$ है, तो $x$ किसके बराबर है?",
+    "oe": [
+      "$\\cos\\beta$",
+      "$\\cos\\alpha$",
+      "$\\sin\\beta$",
+      "$\\sin\\alpha$"
+    ],
+    "oh": [
+      "$\\cos\\beta$",
+      "$\\cos\\alpha$",
+      "$\\sin\\beta$",
+      "$\\sin\\alpha$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Symmetry and Algebraic Regrouping):\nStep 1: समान प्रकार के पदों को एक तरफ करने पर:\n$$$\\frac{\\cos\\alpha}{\\sin\\alpha+\\cos\\beta}$ - $\\frac{x}{\\sin\\alpha-\\cos\\beta}$ = $\\frac{\\cos\\beta}{\\sin\\beta+\\cos\\alpha}$ - $\\frac{\\cos\\beta}{\\sin\\beta-\\cos\\alpha}$$$\nStep 2: सममितीय विश्लेषण (Symmetry analysis) के आधार पर जब $x = \\cos\\alpha$ रखा जाता है:\n$$$\\frac{\\cos\\alpha}{\\sin\\alpha+\\cos\\beta}$ - $\\frac{\\cos\\alpha}{\\sin\\alpha-\\cos\\beta}$ = \\cos$\\alpha$$\\le$ft[$\\frac{-2\\cos\\beta}{\\sin^2\\alpha-\\cos^2\\beta}$\\right]$$\nयह दायें पक्ष के मान $\\cos\\beta\\left[\\frac{-2\\cos\\alpha}{\\sin^2\\beta - \\cos^2\\alpha}\\right]$ के पूर्णतः समतुल्य होता है (चूँकि $\\sin^2\\alpha - \\cos^2\\beta = -( \\sin^2\\beta - \\cos^2\\alpha)$)।\nअतः $x = \\cos\\alpha$.\nअतः सही विकल्प  $\\cos\\alpha$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\alpha = 45^\\circ, \\beta = 45^\\circ$ रखने पर:\n$$\\cos$\\alpha$ = \\sin$\\alpha$ = \\cos$\\beta$ = \\sin$\\beta$ = \\frac{1}{$\\sqrt{2}$}$$\nसमीकरण के दोनों पक्षों में मानों की समरूपता की जाँच करने पर $x = \\cos\\alpha$ प्राप्त होता है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_8",
+    "qe": "The value of the expression $(\\cos^6\\theta + \\sin^6\\theta - 1)(\\tan^2\\theta + \\cot^2\\theta + 2)$ is:",
+    "qh": "व्यंजक $(\\cos^6\\theta + \\sin^6\\theta - 1)(\\tan^2\\theta + \\cot^2\\theta + 2)$ का मान क्या है?",
+    "oe": [
+      "$0$",
+      "$-1$",
+      "$-3$",
+      "$1$"
+    ],
+    "oh": [
+      "$0$",
+      "$-1$",
+      "$-3$",
+      "$1$"
+    ],
+    "a": 2,
+    "e": "Method 1 (Algebraic & Trigonometric Expansion):\nStep 1: पहले कोष्ठक को हल करें:\n$$\\cos^6$\\theta$ + \\sin^6$\\theta$ = 1 - 3\\sin^2$\\theta$\\cos^2$\\theta$$$\nअतः पहला कोष्ठक बन जाता है:\n$$(1 - 3\\sin^2$\\theta$\\cos^2$\\theta$) - 1 = -3\\sin^2$\\theta$\\cos^2$\\theta$$$\nStep 2: दूसरे कोष्ठक को हल करें:\n$$\\tan^2$\\theta$ + \\cot^2$\\theta$ + 2 = (\\tan$\\theta$ + \\cot$\\theta$)^2 = $\\le$ft($\\frac{1}{\\sin\\theta\\cos\\theta}$\\right)^2 = $\\frac{1}{\\sin^2\\theta\\cos^2\\theta}$$$\nStep 3: दोनों कोष्ठकों का गुणनफल निकालने पर:\n$$(-3\\sin^2$\\theta$\\cos^2$\\theta$) $\\times$ $\\le$ft($\\frac{1}{\\sin^2\\theta\\cos^2\\theta}$\\right) = -3$$\nअतः सही विकल्प  $-3$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\theta = 45^\\circ$ रखने पर:\n$$\\cos 45^$\\circ$ = \\sin 45^$\\circ$ = \\frac{1}{$\\sqrt{2}$}, \\quad \\tan 45^$\\circ$ = \\cot 45^$\\circ$ = 1$$\n$$\\text{पहला कोष्ठक} = $\\le$ft($\\frac{1}{8}$ + $\\frac{1}{8}$ - 1\\right) = $\\frac{1}{4}$ - 1 = -$\\frac{3}{4}$$$\n$$\\text{दूसरा कोष्ठक} = 1 + 1 + 2 = 4$$\n$$\\text{गुणनफल} = -$\\frac{3}{4}$ $\\times$ 4 = -3$$\nअतः सही उत्तर '$-3$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_9",
+    "qe": "$\\frac{(2\\sin A)(1 + \\sin A)}{1 + \\sin A + \\cos A}$ is equal to:",
+    "qh": "$\\frac{(2\\sin A)(1 + \\sin A)}{1 + \\sin A + \\cos A}$ किसके बराबर है?",
+    "oe": [
+      "$1 + \\sin A - \\cos A$",
+      "$1 - \\sin A\\cos A$",
+      "$1 + \\cos A - \\sin A$",
+      "$1 + \\sin A\\cos A$"
+    ],
+    "oh": [
+      "$1 + \\sin A - \\cos A$",
+      "$1 - \\sin A\\cos A$",
+      "$1 + \\cos A - \\sin A$",
+      "$1 + \\sin A\\cos A$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Algebraic Multiplication Identity):\nStep 1: हम जानते हैं कि:\n$$(1 + \\sin A - \\cos A)(1 + \\sin A + \\cos A) = (1 + \\sin A)^2 - \\cos^2 A$$\n$$= 1 + 2\\sin A + \\sin^2 A - (1 - \\sin^2 A) = 2\\sin A + 2\\sin^2 A = 2\\sin A(1 + \\sin A)$$\nStep 2: दोनों पक्षों को $(1 + \\sin A + \\cos A)$ से विभाजित करने पर:\n$$$\\frac{2\\sinA(1+\\sinA)}{1+\\sinA+\\cosA}$ = 1 + \\sin A - \\cos A$$\nअतः सही विकल्प  $1 + \\sin A - \\cos A$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $A = 30^\\circ$ रखने पर:\n$$\\sin 30^$\\circ$ = $\\frac{1}{2}$, \\quad \\cos 30^$\\circ$ = \\frac{$\\sqrt{3}$}{2}$$\n$$\\text{व्यंजक} = \\frac{2(1/2)(1 + 1/2)}{1 + 1/2 + $\\sqrt{3}$/2} = \\frac{3/2}{\\frac{3 + $\\sqrt{3}$}{2}} = \\frac{3}{3 + $\\sqrt{3}$} = \\frac{$\\sqrt{3}$}{$\\sqrt{3}$ + 1} = \\frac{3 - $\\sqrt{3}$}{2}$$\nStep 2: विकल्प (a) की जाँच:\n$$1 + \\sin 30^$\\circ$ - \\cos 30^$\\circ$ = 1 + $\\frac{1}{2}$ - \\frac{$\\sqrt{3}$}{2} = \\frac{3 - $\\sqrt{3}$}{2} \\quad \\text{(संतुष्ट)}$$\nअतः सही उत्तर '$1 + \\sin A - \\cos A$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_10",
+    "qe": "The value of $\\tan^2\\phi + \\cot^2\\phi - \\sec^2\\phi\\operatorname{cosec}^2\\phi$ is equal to:",
+    "qh": "$\\tan^2\\phi + \\cot^2\\phi - \\sec^2\\phi\\operatorname{cosec}^2\\phi$ का मान किसके बराबर है?",
+    "oe": [
+      "$-2$",
+      "$1$",
+      "$0$",
+      "$-1$"
+    ],
+    "oh": [
+      "$-2$",
+      "$1$",
+      "$0$",
+      "$-1$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Standard Identity Product):\nStep 1: $\\sec^2\\phi\\operatorname{cosec}^2\\phi$ को मानक योग रूप में बदलें:\n$$\\sec^2\\phi\\operatorname{cosec}^2\\phi = \\sec^2\\phi + \\operatorname{cosec}^2\\phi$$\nStep 2: $\\sec^2\\phi = 1 + \\tan^2\\phi$ और $\\operatorname{cosec}^2\\phi = 1 + \\cot^2\\phi$ रखने पर:\n$$\\sec^2\\phi\\operatorname{cosec}^2\\phi = (1 + \\tan^2\\phi) + (1 + \\cot^2\\phi) = \\tan^2\\phi + \\cot^2\\phi + 2$$\nStep 3: दिए गए व्यंजक में मान प्रतिस्थापित करने पर:\n$$\\tan^2\\phi + \\cot^2\\phi - (\\tan^2\\phi + \\cot^2\\phi + 2) = -2$$\nअतः सही विकल्प  $-2$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\phi = 45^\\circ$ रखने पर:\n$$\\tan 45^$\\circ$ = 1, \\quad \\cot 45^$\\circ$ = 1, \\quad \\sec 45^$\\circ$ = $\\sqrt{2}$, \\quad \\operatorname{cosec} 45^$\\circ$ = $\\sqrt{2}$$$\n$$1^2 + 1^2 - ($\\sqrt{2}$)^2($\\sqrt{2}$)^2 = 1 + 1 - (2 $\\times$ 2) = 2 - 4 = -2$$\nअतः सही उत्तर '$-2$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_11",
+    "qe": "The value of $\\frac{2(\\sin^6\\theta + \\cos^6\\theta) - 3(\\sin^4\\theta + \\cos^4\\theta)}{\\cos^4\\theta - \\sin^4\\theta - 2\\cos^2\\theta}$ is:",
+    "qh": "$\\frac{2(\\sin^6\\theta + \\cos^6\\theta) - 3(\\sin^4\\theta + \\cos^4\\theta)}{\\cos^4\\theta - \\sin^4\\theta - 2\\cos^2\\theta}$ का मान क्या होगा?",
+    "oe": [
+      "$-1$",
+      "$-2$",
+      "$2$",
+      "$1$"
+    ],
+    "oh": [
+      "$-1$",
+      "$-2$",
+      "$2$",
+      "$1$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Standard Identity Simplification):\nStep 1: अंश को हल करें:\n$$\\sin^6$\\theta$ + \\cos^6$\\theta$ = 1 - 3\\sin^2$\\theta$\\cos^2$\\theta$$$\n$$\\sin^4$\\theta$ + \\cos^4$\\theta$ = 1 - 2\\sin^2$\\theta$\\cos^2$\\theta$$$\n$$\\text{अंश} = 2(1 - 3\\sin^2$\\theta$\\cos^2$\\theta$) - 3(1 - 2\\sin^2$\\theta$\\cos^2$\\theta$)$$\n$$= 2 - 6\\sin^2$\\theta$\\cos^2$\\theta$ - 3 + 6\\sin^2$\\theta$\\cos^2$\\theta$ = -1$$\nStep 2: हर को हल करें:\n$$\\cos^4$\\theta$ - \\sin^4$\\theta$ = (\\cos^2$\\theta$ - \\sin^2$\\theta$)(\\cos^2$\\theta$ + \\sin^2$\\theta$) = \\cos^2$\\theta$ - \\sin^2$\\theta$$$\n$$\\text{हर} = (\\cos^2$\\theta$ - \\sin^2$\\theta$) - 2\\cos^2$\\theta$ = -\\cos^2$\\theta$ - \\sin^2$\\theta$ = -(\\cos^2$\\theta$ + \\sin^2$\\theta$) = -1$$\nStep 3: अंश और हर का अनुपात:\n$$\\frac{\\text{अंश}}{\\text{हर}} = $\\frac{-1}{-1}$ = 1$$\nअतः सही विकल्प  1 है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\theta = 0^\\circ$ रखने पर:\n$$\\sin 0^$\\circ$ = 0, \\quad \\cos 0^$\\circ$ = 1$$\n$$\\text{अंश} = 2(0 + 1) - 3(0 + 1) = 2 - 3 = -1$$\n$$\\text{हर} = 1 - 0 - 2(1) = 1 - 2 = -1$$\n$$$\\frac{-1}{-1}$ = 1$$\nअतः सही उत्तर '$1$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_12",
+    "qe": "The value of $\\frac{1 - \\sin^2\\theta\\cos^2\\theta}{\\sin^4\\theta + \\cos^4\\theta} - 1$ is:",
+    "qh": "$\\frac{1 - \\sin^2\\theta\\cos^2\\theta}{\\sin^4\\theta + \\cos^4\\theta} - 1$ का मान क्या है?",
+    "oe": [
+      "$-2\\sin^2\\theta\\cos^2\\theta$",
+      "$-1$",
+      "$0$",
+      "$1$"
+    ],
+    "oh": [
+      "$-2\\sin^2\\theta\\cos^2\\theta$",
+      "$-1$",
+      "$0$",
+      "$1$"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Identity Method):\nStep 1: हर को $\\sin^4\\theta + \\cos^4\\theta = 1 - 2\\sin^2\\theta\\cos^2\\theta$ के रूप में लिखें।\n(नोट: प्रश्न प्रारूप में मुद्रण भेद के अनुसार मानक प्रश्न $\\frac{1 - 2\\sin^2\\theta\\cos^2\\theta}{\\sin^4\\theta + \\cos^4\\theta} - 1$ होता है, जहाँ अंश और हर समान होते हैं):\n$$$\\frac{1-2\\sin^2\\theta\\cos^2\\theta}{1-2\\sin^2\\theta\\cos^2\\theta}$ - 1 = 1 - 1 = 0$$\nअतः सही विकल्प  0 है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\theta = 0^\\circ$ रखने पर:\n$$\\sin 0^$\\circ$ = 0, \\quad \\cos 0^$\\circ$ = 1$$\n$$$\\frac{1-0}{0+1}$ - 1 = $\\frac{1}{1}$ - 1 = 0$$\nअतः सही उत्तर '$0$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_13",
+    "qe": "What is the value of $\\frac{\\sin(y - z) + \\sin(y + z) + 2\\sin y}{\\sin(x - z) + \\sin(x + z) + 2\\sin x}$?",
+    "qh": "$\\frac{\\sin(y - z) + \\sin(y + z) + 2\\sin y}{\\sin(x - z) + \\sin(x + z) + 2\\sin x}$ का मान क्या है?",
+    "oe": [
+      "$\\cos x\\sin y$",
+      "$\\frac{\\sin y}{\\sin x}$",
+      "$\\sin z$",
+      "$\\sin x\\tan y$"
+    ],
+    "oh": [
+      "$\\cos x\\sin y$",
+      "$\\frac{\\sin y}{\\sin x}$",
+      "$\\sin z$",
+      "$\\sin x\\tan y$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Formula Transformation Method):\nStep 1: त्रिकोणमितीय योग सूत्र $\\sin(A + B) + \\sin(A - B) = 2\\sin A\\cos B$ का प्रयोग करने पर:\n$$\\sin(y + z) + \\sin(y - z) = 2\\sin y\\cos z$$\n$$\\sin(x + z) + \\sin(x - z) = 2\\sin x\\cos z$$\nStep 2: अंश और हर में मान प्रतिस्थापित करने पर:\n$$\\text{अंश} = 2\\sin y\\cos z + 2\\sin y = 2\\sin y(\\cos z + 1)$$\n$$\\text{हर} = 2\\sin x\\cos z + 2\\sin x = 2\\sin x(\\cos z + 1)$$\nStep 3: उभयनिष्ठ पद $2(\\cos z + 1)$ को निरस्त करने पर:\n$$= $\\frac{2\\siny(\\cosz+1)}{2\\sinx(\\cosz+1)}$ = $\\frac{\\siny}{\\sinx}$$$\nअतः सही विकल्प  $\\frac{\\sin y}{\\sin x}$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $z = 0^\\circ$ रखने पर:\n$$$\\frac{\\siny+\\siny+2\\siny}{\\sinx+\\sinx+2\\sinx}$ = $\\frac{4\\siny}{4\\sinx}$ = $\\frac{\\siny}{\\sinx}$$$\nअतः सही उत्तर '$\\frac{\\sin y}{\\sin x}$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_14",
+    "qe": "The value of $\\frac{\\sec^2\\theta}{\\operatorname{cosec}^2\\theta} + \\frac{\\operatorname{cosec}^2\\theta}{\\sec^2\\theta} - (\\sec^2\\theta + \\operatorname{cosec}^2\\theta)$ is:",
+    "qh": "$\\frac{\\sec^2\\theta}{\\operatorname{cosec}^2\\theta} + \\frac{\\operatorname{cosec}^2\\theta}{\\sec^2\\theta} - (\\sec^2\\theta + \\operatorname{cosec}^2\\theta)$ का मान क्या है?",
+    "oe": [
+      "$0$",
+      "$-2$",
+      "$2$",
+      "$1$"
+    ],
+    "oh": [
+      "$0$",
+      "$-2$",
+      "$2$",
+      "$1$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Algebraic Conversion to $\\tan$ and $\\cot$):\nStep 1: पहले दो पदों को हल करें:\n$$\\frac{\\sec^2$\\theta$}{\\operatorname{cosec}^2$\\theta$} = $\\frac{1/\\cos^2\\theta}{1/\\sin^2\\theta}$ = $\\frac{\\sin^2\\theta}{\\cos^2\\theta}$ = \\tan^2$\\theta$$$\n$$\\frac{\\operatorname{cosec}^2$\\theta$}{\\sec^2$\\theta$} = $\\frac{1/\\sin^2\\theta}{1/\\cos^2\\theta}$ = $\\frac{\\cos^2\\theta}{\\sin^2\\theta}$ = \\cot^2$\\theta$$$\nStep 2: तीसरे पद $(\\sec^2\\theta + \\operatorname{cosec}^2\\theta)$ को परिवर्तित करें:\n$$\\sec^2$\\theta$ + \\operatorname{cosec}^2$\\theta$ = (1 + \\tan^2$\\theta$) + (1 + \\cot^2$\\theta$) = \\tan^2$\\theta$ + \\cot^2$\\theta$ + 2$$\nStep 3: सभी पदों को व्यंजक में रखने पर:\n$$(\\tan^2$\\theta$ + \\cot^2$\\theta$) - (\\tan^2$\\theta$ + \\cot^2$\\theta$ + 2) = -2$$\nअतः सही विकल्प  $-2$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\theta = 45^\\circ$ रखने पर:\n$$\\sec 45^$\\circ$ = $\\sqrt{2}$, \\quad \\operatorname{cosec} 45^$\\circ$ = $\\sqrt{2}$$$\n$$$\\frac{2}{2}$ + $\\frac{2}{2}$ - (2 + 2) = 1 + 1 - 4 = -2$$\nअतः सही उत्तर '$-2$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_15",
+    "qe": "The expression $3\\sec^2\\theta\\tan^2\\theta + \\tan^6\\theta - \\sec^6\\theta$ is equal to:",
+    "qh": "व्यंजक $3\\sec^2\\theta\\tan^2\\theta + \\tan^6\\theta - \\sec^6\\theta$ किसके बराबर है?",
+    "oe": [
+      "$-2$",
+      "$1$",
+      "$2$",
+      "$-1$"
+    ],
+    "oh": [
+      "$-2$",
+      "$1$",
+      "$2$",
+      "$-1$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Algebraic Cube Formula Method):\nStep 1: हम जानते हैं कि $\\sec^2\\theta - \\tan^2\\theta = 1$ होता है।\nदोनों पक्षों का घन (cube) करने पर:\n$$(\\sec^2$\\theta$ - \\tan^2$\\theta$)^3 = 1^3$$\nStep 2: $(a - b)^3 = a^3 - b^3 - 3ab(a - b)$ सूत्र लागू करने पर:\n$$(\\sec^2$\\theta$)^3 - (\\tan^2$\\theta$)^3 - 3\\sec^2$\\theta$\\tan^2$\\theta$(\\sec^2$\\theta$ - \\tan^2$\\theta$) = 1$$\n$$\\sec^6$\\theta$ - \\tan^6$\\theta$ - 3\\sec^2$\\theta$\\tan^2$\\theta$(1) = 1$$\n$$\\sec^6$\\theta$ - \\tan^6$\\theta$ - 3\\sec^2$\\theta$\\tan^2$\\theta$ = 1$$\nStep 3: दोनों पक्षों को $-1$ से गुणा करने पर:\n$$3\\sec^2$\\theta$\\tan^2$\\theta$ + \\tan^6$\\theta$ - \\sec^6$\\theta$ = -1$$\nअतः सही विकल्प  $-1$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\theta = 0^\\circ$ रखने पर:\n$$\\tan 0^$\\circ$ = 0, \\quad \\sec 0^$\\circ$ = 1$$\n$$3(1)^2(0)^2 + (0)^6 - (1)^6 = 0 + 0 - 1 = -1$$\nअतः सही उत्तर '$-1$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_16",
+    "qe": "The value of $\\frac{\\sec^6\\theta - \\tan^6\\theta - 3\\sec^2\\theta\\tan^2\\theta + 1}{\\cos^4\\theta - \\sin^4\\theta + 2\\sin^2\\theta + 2}$ is:",
+    "qh": "$\\frac{\\sec^6\\theta - \\tan^6\\theta - 3\\sec^2\\theta\\tan^2\\theta + 1}{\\cos^4\\theta - \\sin^4\\theta + 2\\sin^2\\theta + 2}$ का मान क्या है?",
+    "oe": [
+      "$\\frac{2}{3}$",
+      "$1$",
+      "$\\frac{3}{4}$",
+      "$\\frac{1}{2}$"
+    ],
+    "oh": [
+      "$\\frac{2}{3}$",
+      "$1$",
+      "$\\frac{3}{4}$",
+      "$\\frac{1}{2}$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Standard Identity Simplification):\nStep 1: अंश को हल करें:\nसर्वसमिका $(\\sec^2\\theta - \\tan^2\\theta)^3 = 1$ के अनुसार:\n$$\\sec^6$\\theta$ - \\tan^6$\\theta$ - 3\\sec^2$\\theta$\\tan^2$\\theta$ = 1$$\nअतः अंश बन जाता है:\n$$\\text{अंश} = 1 + 1 = 2$$\nStep 2: हर को हल करें:\n$$\\cos^4$\\theta$ - \\sin^4$\\theta$ = (\\cos^2$\\theta$ - \\sin^2$\\theta$)(\\cos^2$\\theta$ + \\sin^2$\\theta$) = \\cos^2$\\theta$ - \\sin^2$\\theta$$$\n$$\\text{हर} = (\\cos^2$\\theta$ - \\sin^2$\\theta$) + 2\\sin^2$\\theta$ + 2 = \\cos^2$\\theta$ + \\sin^2$\\theta$ + 2 = 1 + 2 = 3$$\nStep 3: सम्पूर्ण व्यंजक का मान:\n$$\\frac{\\text{अंश}}{\\text{हर}} = $\\frac{2}{3}$$$\nअतः सही विकल्प  $\\frac{2}{3}$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\theta = 0^\\circ$ रखने पर:\n$$\\sec 0^$\\circ$ = 1, \\quad \\tan 0^$\\circ$ = 0, \\quad \\cos 0^$\\circ$ = 1, \\quad \\sin 0^$\\circ$ = 0$$\n$$\\text{अंश} = 1^6 - 0 - 0 + 1 = 2$$\n$$\\text{हर} = 1^4 - 0 + 0 + 2 = 3$$\n$$\\frac{\\text{अंश}}{\\text{हर}} = $\\frac{2}{3}$$$\nअतः सही उत्तर '$\\frac{2}{3}$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_17",
+    "qe": "The value of $4\\left[\\frac{(1 - \\sec A)^2 + (1 + \\sec A)^2}{1 + \\sec^2 A}\\right]$ is:",
+    "qh": "$4\\left[\\frac{(1 - \\sec A)^2 + (1 + \\sec A)^2}{1 + \\sec^2 A}\\right]$ का मान क्या होगा?",
+    "oe": [
+      "$2$",
+      "$4$",
+      "$8$",
+      "$1$"
+    ],
+    "oh": [
+      "$2$",
+      "$4$",
+      "$8$",
+      "$1$"
+    ],
+    "a": 2,
+    "e": "Method 1 (Algebraic Identity Method):\nStep 1: $(a - b)^2 + (a + b)^2 = 2(a^2 + b^2)$ सूत्र का प्रयोग करने पर:\nयहाँ $a = 1$ और $b = \\sec A$ मान लें:\n$$(1 - \\sec A)^2 + (1 + \\sec A)^2 = 2(1^2 + \\sec^2 A) = 2(1 + \\sec^2 A)$$\nStep 2: कोष्ठक के अंदर मान प्रतिस्थापित करने पर:\n$$$\\frac{2(1+\\sec^2A)}{1+\\sec^2A}$ = 2$$\nStep 3: 4 से गुणा करने पर:\n$$4 $\\times$ 2 = 8$$\nअतः सही विकल्प  8 है।\n\nMethod 2 (Value Putting Method):\nStep 1: $A = 0^\\circ$ रखने पर (जहाँ $\\sec 0^\\circ = 1$):\n$$4$\\le$ft[$\\frac{(1-1)^2+(1+1)^2}{1+1^2}$\\right] = 4$\\le$ft[$\\frac{0+4}{2}$\\right] = 4 $\\times$ 2 = 8$$\nअतः सही उत्तर '$8$' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_18",
+    "qe": "If $x = \\operatorname{cosec} A + \\cos A$ and $y = \\operatorname{cosec} A - \\cos A$, then find the value of $\\left(\\frac{2}{x + y}\\right)^2 + \\left(\\frac{x - y}{2}\\right)^2 - 1$.",
+    "qh": "यदि $x = \\operatorname{cosec} A + \\cos A$ और $y = \\operatorname{cosec} A - \\cos A$ है, तो $\\left(\\frac{2}{x + y}\\right)^2 + \\left(\\frac{x - y}{2}\\right)^2 - 1$ का मान ज्ञात कीजिए।",
+    "oe": [
+      "$3$",
+      "$0$",
+      "$2$",
+      "$1$"
+    ],
+    "oh": [
+      "$3$",
+      "$0$",
+      "$2$",
+      "$1$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Algebraic Sum & Difference Substitution):\nStep 1: $x + y$ और $x - y$ का मान निकालें:\n$$x + y = (\\operatorname{cosec} A + \\cos A) + (\\operatorname{cosec} A - \\cos A) = 2\\operatorname{cosec} A$$\n$$x - y = (\\operatorname{cosec} A + \\cos A) - (\\operatorname{cosec} A - \\cos A) = 2\\cos A$$\nStep 2: पदों को सरल करें:\n$$$\\frac{2}{x+y}$ = \\frac{2}{2\\operatorname{cosec} A} = \\frac{1}{\\operatorname{cosec} A} = \\sin A$$\n$$$\\frac{x-y}{2}$ = $\\frac{2\\cosA}{2}$ = \\cos A$$\nStep 3: दिए गए व्यंजक में मान रखने पर:\n$$(\\sin A)^2 + (\\cos A)^2 - 1 = \\sin^2 A + \\cos^2 A - 1$$\nचूँकि $\\sin^2 A + \\cos^2 A = 1$ होता है:\n$$= 1 - 1 = 0$$\nअतः सही विकल्प  0 है।\n\nMethod 2 (Value Putting Method):\nStep 1: $A = 90^\\circ$ रखने पर:\n$$\\operatorname{cosec} 90^$\\circ$ = 1, \\quad \\cos 90^$\\circ$ = 0$$\n$$x = 1 + 0 = 1, \\quad y = 1 - 0 = 1$$\n$$x + y = 2, \\quad x - y = 0$$\n$$$\\le$ft($\\frac{2}{2}$\\right)^2 + $\\le$ft($\\frac{0}{2}$\\right)^2 - 1 = 1^2 + 0 - 1 = 0$$\nअतः सही उत्तर '$0$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_19",
+    "qe": "The value of $(\\tan^2 A + \\cot^2 A - 2) - \\sec^2 A\\operatorname{cosec}^2 A$ is:",
+    "qh": "$(\\tan^2 A + \\cot^2 A - 2) - \\sec^2 A\\operatorname{cosec}^2 A$ का मान क्या है?",
+    "oe": [
+      "$-4$",
+      "$-1$",
+      "$1$",
+      "$4$"
+    ],
+    "oh": [
+      "$-4$",
+      "$-1$",
+      "$1$",
+      "$4$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Standard Identity Expansion):\nStep 1: $\\sec^2 A\\operatorname{cosec}^2 A$ को $\\sec^2 A + \\operatorname{cosec}^2 A$ के रूप में लिखें:\n$$\\sec^2 A\\operatorname{cosec}^2 A = \\sec^2 A + \\operatorname{cosec}^2 A$$\nStep 2: $\\sec^2 A = 1 + \\tan^2 A$ तथा $\\operatorname{cosec}^2 A = 1 + \\cot^2 A$ रखने पर:\n$$\\sec^2 A\\operatorname{cosec}^2 A = (1 + \\tan^2 A) + (1 + \\cot^2 A) = \\tan^2 A + \\cot^2 A + 2$$\nStep 3: व्यंजक में प्रतिस्थापित करने पर:\n$$(\\tan^2 A + \\cot^2 A - 2) - (\\tan^2 A + \\cot^2 A + 2)$$\n$$= \\tan^2 A + \\cot^2 A - 2 - \\tan^2 A - \\cot^2 A - 2 = -4$$\nअतः सही विकल्प  $-4$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: $A = 45^\\circ$ रखने पर:\n$$\\tan 45^$\\circ$ = 1, \\quad \\cot 45^$\\circ$ = 1, \\quad \\sec 45^$\\circ$ = $\\sqrt{2}$, \\quad \\operatorname{cosec} 45^$\\circ$ = $\\sqrt{2}$$$\n$$(1^2 + 1^2 - 2) - ($\\sqrt{2}$)^2($\\sqrt{2}$)^2 = (2 - 2) - (2 $\\times$ 2) = 0 - 4 = -4$$\nअतः सही उत्तर '$-4$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "valueputting_20",
+    "qe": "If $(\\sin\\theta + \\operatorname{cosec}\\theta)^2 + (\\cos\\theta + \\sec\\theta)^2 = k + \\tan^2\\theta + \\cot^2\\theta$, then the value of $k$ is equal to:",
+    "qh": "यदि $(\\sin\\theta + \\operatorname{cosec}\\theta)^2 + (\\cos\\theta + \\sec\\theta)^2 = k + \\tan^2\\theta + \\cot^2\\theta$ है, तो $k$ का मान क्या होगा?",
+    "oe": [
+      "$7$",
+      "$2$",
+      "$9$",
+      "$5$"
+    ],
+    "oh": [
+      "$7$",
+      "$2$",
+      "$9$",
+      "$5$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Algebraic Expansion Method):\nStep 1: बाएँ पक्ष के दोनों वर्गों का विस्तार करें:\n$$(\\sin$\\theta$ + \\operatorname{cosec}$\\theta$)^2 = \\sin^2$\\theta$ + \\operatorname{cosec}^2$\\theta$ + 2\\sin$\\theta$\\operatorname{cosec}$\\theta$ = \\sin^2$\\theta$ + \\operatorname{cosec}^2$\\theta$ + 2$$\n$$(\\cos$\\theta$ + \\sec$\\theta$)^2 = \\cos^2$\\theta$ + \\sec^2$\\theta$ + 2\\cos$\\theta$\\sec$\\theta$ = \\cos^2$\\theta$ + \\sec^2$\\theta$ + 2$$\nStep 2: दोनों का योग करने पर:\n$$= (\\sin^2$\\theta$ + \\cos^2$\\theta$) + \\operatorname{cosec}^2$\\theta$ + \\sec^2$\\theta$ + 4$$\nचूँकि $\\sin^2\\theta + \\cos^2\\theta = 1$:\n$$= 1 + 4 + \\operatorname{cosec}^2$\\theta$ + \\sec^2$\\theta$ = 5 + \\operatorname{cosec}^2$\\theta$ + \\sec^2$\\theta$$$\nStep 3: $\\operatorname{cosec}^2\\theta = 1 + \\cot^2\\theta$ और $\\sec^2\\theta = 1 + \\tan^2\\theta$ रखने पर:\n$$= 5 + (1 + \\cot^2$\\theta$) + (1 + \\tan^2$\\theta$) = 7 + \\tan^2$\\theta$ + \\cot^2$\\theta$$$\nStep 4: दिए गए समीकरण $k + \\tan^2\\theta + \\cot^2\\theta$ से तुलना करने पर:\n$$k = 7$$\nअतः सही विकल्प  7 है।\n\nMethod 2 (Value Putting Method):\nStep 1: $\\theta = 45^\\circ$ रखने पर:\n$$\\sin 45^$\\circ$ = \\cos 45^$\\circ$ = \\frac{1}{$\\sqrt{2}$}, \\quad \\operatorname{cosec} 45^$\\circ$ = \\sec 45^$\\circ$ = $\\sqrt{2}$$$\n$$$\\le$ft(\\frac{1}{$\\sqrt{2}$} + $\\sqrt{2}$\\right)^2 + $\\le$ft(\\frac{1}{$\\sqrt{2}$} + $\\sqrt{2}$\\right)^2 = 2 $\\times$ $\\le$ft(\\frac{3}{$\\sqrt{2}$}\\right)^2 = 2 $\\times$ $\\frac{9}{2}$ = 9$$\nStep 2: दाएँ पक्ष में $\\theta = 45^\\circ$ रखने पर:\n$$k + \\tan^2 45^$\\circ$ + \\cot^2 45^$\\circ$ = k + 1 + 1 = k + 2$$\n$$k + 2 = 9 \\implies k = 7$$\nअतः सही उत्तर '$7$' है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

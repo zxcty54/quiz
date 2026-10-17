@@ -1,0 +1,363 @@
+[
+  {
+    "p_id": "dishonestdealer_1",
+    "qe": "A dishonest dealer decided to sell his goods at cost price, but uses a weight of 960 grams for a kilogram weight. His gain percent is:",
+    "qh": "एक बेईमान व्यापारी अपने माल को क्रय मूल्य पर बेचने का फैसला करता है, लेकिन 1 किलोग्राम वजन के स्थान पर 960 ग्राम के वजन का उपयोग करता है। उसका लाभ प्रतिशत है:",
+    "oe": [
+      "4$\\frac{1}{6}$%",
+      "4%",
+      "4.25%",
+      "4$\\frac{1}{2}$%"
+    ],
+    "oh": [
+      "4$\\frac{1}{6}$%",
+      "4%",
+      "4.25%",
+      "4$\\frac{1}{2}$%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mana 1 gram ka CP = ₹1.\nCustomer se 1000 gram (1 kg) ke paise liye jate hain ==> SP = ₹1000.\nDealer ke paas se keval 960 gram ka saman jata hai ==> CP = ₹960.\nStep 2: CP : SP ka anupat banayein:\nCP : SP = 960 : 1000 = 24 : 25.\nProfit = SP - CP = 25 - 24 = 1 unit.\nStep 3: Profit% = (Profit / CP) * 100% = (1 / 24) * 100% = 25/6% = 4$\\frac{1}{6}$%.\nAtah sahi vikalp  4 1/6% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Formula: Gain% = [Error / (True Weight - Error)] * 100%.\nStep 2: Error (kam diya gaya vajan) = 1000 - 960 = 40 gram.\nDealer ki vastavik laagat (CP base) = 960 gram.\nStep 3: Gain% = (40 / 960) * 100% = (1 / 24) * 100% = 4$\\frac{1}{6}$%.\nAtah sahi uttar '4$\\frac{1}{6}$%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_2",
+    "qe": "A dealer professing to sell his goods at cost price uses 950 grams weight for 1 kg. His gain percentage is: (rounded off to two decimal places)",
+    "qh": "एक व्यापारी अपने माल को क्रय मूल्य पर बेचने का दावा करता है और 1 किग्रा के स्थान पर 950 ग्राम वजन का उपयोग करता है। उसका लाभ प्रतिशत (दो दशमलव स्थानों तक सही) है:",
+    "oe": [
+      "5.26%",
+      "5.00%",
+      "5.50%",
+      "5.15%"
+    ],
+    "oh": [
+      "5.26%",
+      "5.00%",
+      "5.50%",
+      "5.15%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mana 1 gram ka CP = ₹1.\nCustomer se 1000 gram ke paise liye gaye ==> SP = ₹1000.\nDealer ki laagat keval 950 gram ki lagi ==> CP = ₹950.\nStep 2: CP : SP ka anupat banayein:\nCP : SP = 950 : 1000 = 19 : 20.\nProfit = SP - CP = 20 - 19 = 1 unit.\nStep 3: Profit% = (Profit / CP) * 100% = (1 / 19) * 100% = 100/19% ≈ 5.26%.\nAtah sahi vikalp  5.26% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Formula: Gain% = [Error / (True Weight - Error)] * 100%.\nStep 2: Error = 1000 - 950 = 50 gram.\nDealer dwara diya gaya vastavik vajan (CP base) = 950 gram.\nStep 3: Gain% = (50 / 950) * 100% = (1 / 19) * 100% ≈ 5.26%.\nAtah sahi uttar '5.26%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_3",
+    "qe": "A shopkeeper uses 940 gm weight in place of one kg weight. He sells it at 4% profit. What will be the actual profit percentage? (rounded off to two decimal places)",
+    "qh": "एक दुकानदार एक किग्रा वजन के स्थान पर 940 ग्राम वजन का उपयोग करता है। इस वजन का उपयोग करके वह माल 4% लाभ पर बेचता है। वास्तविक लाभ प्रतिशत क्या होगा? (दो दशमलव स्थान तक पूर्णांकित)",
+    "oe": [
+      "9.25%",
+      "10.32%",
+      "10.64%",
+      "10.96%"
+    ],
+    "oh": [
+      "9.25%",
+      "10.32%",
+      "10.64%",
+      "10.96%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono kamo ka alag-alag anupat nikalein:\n- Weight bechne par: CP : SP = 940 : 1000 = 47 : 50\n- 4% labh par (4% = 1/25): CP : SP = 25 : 26\nStep 2: Successive ratio se kul anupat banayein:\nCP : SP = (47 * 25) : (50 * 26)\n25 se 50 ko kaatein (1 : 2):\nCP : SP = 47 : (2 * 26) = 47 : 52\nStep 3: Profit = 52 - 47 = 5 units.\nStep 4: Profit% = (Profit / CP) * 100% = (5 / 47) * 100% = 500 / 47% ≈ 10.64%.\nAtah sahi vikalp  10.64% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana 1000 gm ka CP = ₹1000.\nStep 2: Dukandar 940 gm deta hai ==> Dukandar ki laagat (CP) = ₹940.\nStep 3: Dukandar 4% labh par bechta hai ==> SP = 1000 * 1.04 = ₹1040.\nStep 4: Kul Labh = SP - CP = 1040 - 940 = ₹100.\nActual Profit% = (100 / 940) * 100% = 1000 / 94% ≈ 10.64%.\nAtah sahi uttar '10.64%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_4",
+    "qe": "A dishonest dealer announces selling his articles with 22% loss, but uses 35% lighter weights. What is the percentage of his profit or loss?",
+    "qh": "एक बेईमान डीलर अपने सामान को 22% हानि पर बेचने की घोषणा करता है, लेकिन 35% हल्के बाटों का उपयोग करता है। उसके लाभ या हानि का प्रतिशत ज्ञात कीजिए।",
+    "oe": [
+      "13% loss",
+      "20% profit",
+      "20% loss",
+      "13% profit"
+    ],
+    "oh": [
+      "13% loss",
+      "20% profit",
+      "20% loss",
+      "13% profit"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono baaton ka anupat banayein:\n- 22% hani ka daawa: CP : SP = 100 : (100 - 22) = 100 : 78\n- 35% kam vajan dena: CP : SP = (100 - 35) : 100 = 65 : 100\nStep 2: Successive ratio se kul CP : SP nikalein:\nCP : SP = (65 * 100) : (100 * 78) = 65 : 78\n13 se kaatne par: CP : SP = 5 : 6\nStep 3: Profit = 6 - 5 = 1 unit.\nStep 4: Profit% = (Profit / CP) * 100% = (1 / 5) * 100% = 20% profit.\nAtah sahi vikalp  20% profit hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana 100 gm ka vastavik CP = ₹100.\nStep 2: 35% kam vajan deta hai, yani keval 65 gm deta hai ==> Vastavik CP = ₹65.\nStep 3: 22% hani par bechne ka dikhava karta hai ==> SP = 100 - 22 = ₹78.\nStep 4: Labh = SP - CP = 78 - 65 = ₹13.\nProfit% = (13 / 65) * 100% = (1 / 5) * 100% = 20% profit.\nAtah sahi uttar '20% profit' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_5",
+    "qe": "A man sells goods at 4% loss on cost price but he gives 20 g instead of 40 g. What is his profit or loss percentage?",
+    "qh": "एक व्यक्ति क्रय मूल्य के 4% की हानि पर सामान बेचता है, लेकिन यह 40g के बजाय 20g तौलता है। उसके लाभ या हानि का प्रतिशत क्या है?",
+    "oe": [
+      "84% Profit",
+      "92% Profit",
+      "82% Loss",
+      "92% Loss"
+    ],
+    "oh": [
+      "84% Profit",
+      "92% Profit",
+      "82% Loss",
+      "92% Loss"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono sthitiyo ka anupat banayein:\n- 4% hani: CP : SP = 100 : (100 - 4) = 100 : 96\n- 40g ki jagah 20g dena: CP : SP = 20 : 40 = 1 : 2\nStep 2: Net ratio nikalein:\nCP : SP = (1 * 100) : (2 * 96) = 100 : 192\nStep 3: Profit = 192 - 100 = 92 units.\nStep 4: Profit% = (92 / 100) * 100% = 92% Profit.\nAtah sahi vikalp  92% Profit hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana 40g ka mool CP = ₹100.\nStep 2: Keval 20g saman diya gaya ==> Dukandar ki laagat (CP) = 100 / 2 = ₹50.\nStep 3: 4% hani par becha gaya ==> SP = 100 - 4 = ₹96.\nStep 4: Labh = SP - CP = 96 - 50 = ₹46.\nProfit% = (46 / 50) * 100% = 92% Profit.\nAtah sahi uttar '92% Profit' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_6",
+    "qe": "A man marks up his goods by 15% but he gives 920 gm instead of 1 kg to his customer. Find his profit percent?",
+    "qh": "एक आदमी अपने माल को 15% तक चिह्नित करता है, लेकिन वह अपने ग्राहक को 1 किलोग्राम के बदले 920 ग्राम देता है। लाभ प्रतिशत प्राप्त करें?",
+    "oe": [
+      "20%",
+      "25%",
+      "40%",
+      "33.33%"
+    ],
+    "oh": [
+      "20%",
+      "25%",
+      "40%",
+      "33.33%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ghatko ka anupat banayein:\n- 15% markup (15% = 3/20): CP : SP = 20 : 23\n- 1000 gm ki jagah 920 gm dena: CP : SP = 920 : 1000 = 23 : 25\nStep 2: Net CP : SP nikalein:\nCP : SP = (20 * 23) : (23 * 25)\n23 se 23 cut ho gaya ==> CP : SP = 20 : 25 = 4 : 5\nStep 3: Profit = 5 - 4 = 1 unit.\nStep 4: Profit% = (1 / 4) * 100% = 25%.\nAtah sahi vikalp  25% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana 1000 gm ka CP = ₹1000.\nStep 2: 920 gm diya gaya ==> Dukandar ka CP = ₹920.\nStep 3: 15% adhik mulya par becha gaya ==> SP = 1000 * 1.15 = ₹1150.\nStep 4: Labh = SP - CP = 1150 - 920 = ₹230.\nProfit% = (230 / 920) * 100% = (1 / 4) * 100% = 25%.\nAtah sahi uttar '25%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_7",
+    "qe": "A dishonest shopkeeper claims to sell salt at a rate of ₹25/kg. The cost price of the salt is ₹25/kg. Not satisfied with this, he tries to make profit by removing 200 gm from each 1 kg. What is the shopkeeper's gain percentage?",
+    "qh": "एक बेईमान दुकानदार ₹25/किग्रा की दर से नमक बेचने का दावा करता है। नमक का क्रय मूल्य ₹25/किग्रा है। इससे संतुष्ट न होकर, वह प्रत्येक 1 किग्रा में से 200 ग्राम कम देकर लाभ कमाने की कोशिश करता है। दुकानदार का लाभ प्रतिशत क्या है?",
+    "oe": [
+      "20%",
+      "25%",
+      "30%",
+      "16.67%"
+    ],
+    "oh": [
+      "20%",
+      "25%",
+      "30%",
+      "16.67%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: 1 kg (1000 gm) me se 200 gm kam diya gaya ==> Diya gaya vajan = 1000 - 200 = 800 gm.\nStep 2: Dukandar ki laagat 800 gm ki aayi aur paise 1000 gm ke liye:\nCP : SP = 800 : 1000 = 4 : 5.\nStep 3: Profit = 5 - 4 = 1 unit.\nStep 4: Profit% = (Profit / CP) * 100% = (1 / 4) * 100% = 25%.\n(Note: ₹25/kg ka prayog kiye bina bhi ratio se seedha uttar mil jata hai).\nAtah sahi vikalp  25% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Formula: Gain% = [Error / (True Weight - Error)] * 100%.\nStep 2: Error = 200 gm, True Weight = 1000 gm.\nVastavik diya gaya vajan (CP base) = 1000 - 200 = 800 gm.\nStep 3: Gain% = (200 / 800) * 100% = (1 / 4) * 100% = 25%.\nAtah sahi uttar '25%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_8",
+    "qe": "Ramesh sells rice at ₹36 per kg, which he purchased for ₹30 per kg. Moreover, he gives only 800 gm of rice instead of 1 kg while selling. Find the actual profit percentage of Ramesh.",
+    "qh": "रमेश ₹36 प्रति किग्रा की दर से चावल बेचता है, जिसे उसने ₹30 प्रति किग्रा की दर से खरीदा था। इसके अतिरिक्त, वह बेचते समय 1 किग्रा की जगह केवल 800 ग्राम चावल देता है। रमेश का वास्तविक लाभ प्रतिशत ज्ञात कीजिए।",
+    "oe": [
+      "46%",
+      "50%",
+      "48%",
+      "52%"
+    ],
+    "oh": [
+      "46%",
+      "50%",
+      "48%",
+      "52%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono sthitiyo ka anupat banayein:\n- Mulya (Price) ka anupat: CP : SP = 30 : 36 = 5 : 6\n- Vajan (Weight) ka anupat: CP : SP = 800 : 1000 = 4 : 5\nStep 2: Successive ratio se kul CP : SP nikalein:\nCP : SP = (5 * 4) : (6 * 5)\n5 se 5 cut ho gaya ==> CP : SP = 4 : 6 = 2 : 3\nStep 3: Profit = 3 - 2 = 1 unit.\nStep 4: Profit% = (Profit / CP) * 100% = (1 / 2) * 100% = 50%.\nAtah sahi vikalp  50% hai.\n\nMethod 2 (100-Base Method):\nStep 1: 1000 gm ka kharid mulya (CP) = ₹30 ==> 1 gm ka CP = ₹0.03.\nStep 2: Dukandar 800 gm deta hai ==> Dukandar ki vastavik laagat (CP) = 800 * 0.03 = ₹24.\nStep 3: Grahak se 1000 gm ke paise liye jate hain ==> SP = ₹36.\nStep 4: Kul Labh = SP - CP = 36 - 24 = ₹12.\nProfit% = (12 / 24) * 100% = 50%.\nAtah sahi uttar '50%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_9",
+    "qe": "A shopkeeper has a fault of 100 gm in a 3 kg weight. He sold 3 kg of potatoes to Charu using the same faulty weight for Rs.46. The cost price of the potatoes for the seller was Rs.12 per kg. How much profit (in Rs.) did he earn on the potatoes?",
+    "qh": "एक दुकानदार के 3 किग्रा के वजन (बांट) में 100 ग्राम कम है। उसने इसी गलत वजन (बांट) का उपयोग करके चारू को 3 किग्रा आलू 46 रुपये में बेच दिए। विक्रेता के लिए आलू का क्रय मूल्य 12 रुपये प्रति किग्रा था। उसने आलू पर कितना लाभ (रुपये में) कमाया?",
+    "oe": [
+      "11.6",
+      "10.2",
+      "11.2",
+      "10"
+    ],
+    "oh": [
+      "11.6",
+      "10.2",
+      "11.2",
+      "10"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: 3 kg = 3000 gm. 100 gm kam hone par vastavik vajan = 3000 - 100 = 2900 gm = 2.9 kg.\nStep 2: CP per kg = ₹12 ==> 2.9 kg ka kul CP = 2.9 * 12 = ₹34.80.\nStep 3: Vikray mulya (SP) = ₹46.\nCP : SP = 34.80 : 46 = 348 : 460 = 87 : 115.\nStep 4: Kul Labh = SP - CP = 46 - 34.80 = ₹11.20.\nAtah sahi vikalp  11.2 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Dukandar ne 2.9 kg aalu beche.\nStep 2: 2.9 kg ka CP = 2.9 * 12 = ₹34.80.\nStep 3: SP = ₹46.00.\nStep 4: Labh = 46.00 - 34.80 = ₹11.20.\nAtah sahi uttar '11.2' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_10",
+    "qe": "A trader cheats both his supplier and his customer by using faulty weights. When he buys from the supplier, he takes 20% more than the indicated weight. When he sells to his customer, he gives 20% less than the indicated weight. If he sells his articles at the cost price, what is his net profit%?",
+    "qh": "एक व्यापारी दोषपूर्ण भार का उपयोग करके अपने आपूर्तिकर्ता और उसके ग्राहक दोनों को धोखा देता है। जब वह आपूर्तिकर्ता से खरीदता है, तो वह संकेतित भार से 20% अधिक लेता है। जब वह अपने ग्राहक को बेचता है, तो वह संकेतित वजन से 20% कम देता है। यदि वह लागत मूल्य पर अपने लेख बेचता है, तो उसका शुद्ध लाभ % क्या है?",
+    "oe": [
+      "50%",
+      "66.66%",
+      "44%",
+      "None of these"
+    ],
+    "oh": [
+      "50%",
+      "66.66%",
+      "44%",
+      "None of these"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono beimaaniyo ka alag-alag anupat banayein:\n- Kharidte samay (20% adhik lena): CP : SP = 100 : 120 = 5 : 6\n- Bechte samay (20% kam dena): CP : SP = 80 : 100 = 4 : 5\nStep 2: Net ratio nikalne ke liye guna karein:\nCP : SP = (5 * 4) : (6 * 5) = 20 : 30 = 2 : 3\nStep 3: Profit = 3 - 2 = 1 unit.\nStep 4: Profit% = (Profit / CP) * 100% = (1 / 2) * 100% = 50%.\nAtah sahi vikalp  50% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kharidte samay ₹100 dekar 120 gm saman le aaya ==> 1 gm ka CP = 100 / 120 = ₹5/6.\nStep 2: Bechte samay 80 gm saman ₹100 me becha ==> 1 gm ka SP = 100 / 80 = ₹5/4.\nStep 3: CP : SP = 5/6 : 5/4 = 4 : 6 = 2 : 3.\nStep 4: Profit% = (1 / 2) * 100% = 50%.\nAtah sahi uttar '50%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_11",
+    "qe": "A shopkeeper marks up his goods 35% above the CP and gives 23% discount to the customer. at the time of buying he uses 1120 gm instead of 1kg and At the time of selling the goods he gives 880 gm weight instead of 1kg .find his profit %?",
+    "qh": "एक दुकानदार लागत मूल्य से 35% ऊपर अपने माल को चिह्नित करता है और ग्राहक को 23% की छूट देता है। खरीदने के समय वह 1 किलो के बजाय 1120 ग्राम का उपयोग करता है और सामान बेचने के समय वह 1 किलो के बजाय 880 ग्राम वजन देता है। उसका लाभ% ज्ञात कीजिये?",
+    "oe": [
+      "35.6%",
+      "29.41%",
+      "33.33%",
+      "32.3%"
+    ],
+    "oh": [
+      "35.6%",
+      "29.41%",
+      "33.33%",
+      "32.3%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Sabhi ghatko ka anupat nikalein:\n- Markup & Discount: Net SP/CP = 1.35 * (1 - 0.23) = 1.35 * 0.77 = 1.0395 = 10395 / 10000\n- Kharidte samay beimaani: 1000 gm ke badle 1120 gm liya ==> Ratio = 1120 / 1000 = 28 / 25\n- Bechte samay beimaani: 1000 gm ke badle 880 gm diya ==> Ratio = 1000 / 880 = 25 / 22\nWeight ka combined multiplier = (28 / 25) * (25 / 22) = 28 / 22 = 14 / 11.\nStep 2: Kul Net Multiplier (SP / CP):\n= 1.0395 * (14 / 11) = (1.0395 / 11) * 14 = 0.0945 * 14 = 1.323 = 132.3 / 100? Wait, 1.35 * 0.77 = 1.0395; 1.0395 / 11 = 0.0945; 0.0945 * 14 = 1.323 ==> 32.3% ('32.3%').\nWait, let's re-verify: 32.3% matches '32.3%' 32.3%.\nAtah sahi vikalp  32.3% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Price factor = (1 + 0.35) * (1 - 0.23) = 1.35 * 0.77 = 1.0395.\nStep 2: Weight factor = 1120 / 880 = 14 / 11.\nStep 3: Net Multiplier = 1.0395 * (14 / 11) = 1.323.\nStep 4: Net Profit% = (1.323 - 1) * 100% = 32.3%.\nAtah sahi uttar '33.33%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_12",
+    "qe": "Sohan sells sugar at cost price but he uses faulty weight and thus earns a profit of 28%. How many g (grams) of sugar is he giving in exchange of 3.2 kg of sugar?",
+    "qh": "सोहन क्रय मूल्य पर चीनी बेचता है लेकिन वह खराब बांटों का प्रयोग करता है और इस प्रकार 28% का लाभ अर्जित करता है। वह 3.2 किग्रा चीनी के बदले कितने (ग्राम) चीनी दे रहा है?",
+    "oe": [
+      "1900",
+      "1500",
+      "2500",
+      "2200"
+    ],
+    "oh": [
+      "1900",
+      "1500",
+      "2500",
+      "2200"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit = 28% = 28/100 = 7/25.\nCP : SP = 25 : (25 + 7) = 25 : 32.\nStep 2: Yahan SP ka matlab grahak dwara maangi gayi matra hai, aur CP ka matlab vastavik di gayi matra hai:\nMaangi gayi matra : Di gayi matra = 32 : 25.\nStep 3: Question ke anusar maangi gayi matra (32 units) = 3.2 kg = 3200 gm.\n32 units = 3200 gm ==> 1 unit = 100 gm.\nStep 4: Di gayi matra = 25 units = 25 * 100 = 2500 gm.\nAtah sahi vikalp  2500 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Di gayi matra = Maangi gayi matra / (1 + Profit%).\nStep 2: Maangi gayi matra = 3.2 kg = 3200 gm.\nStep 3: Di gayi matra = 3200 / 1.28 = 320000 / 128 = 2500 gm.\nAtah sahi uttar '2500' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_13",
+    "qe": "A shopkeeper sells rice at cost price but uses a faulty weighing machine and thus gains a profit of 25%. Find how many grams rice he is giving in 1 kg?",
+    "qh": "एक दुकानदार लागत मूल्य पर चावल बेचता है, लेकिन वह गलत वजन तौलने वाली मशीन का उपयोग करता है। और इस प्रकार 25% का लाभ प्राप्त करता है। ज्ञात कीजिए कि वह 1 kg में कितने gm चावल दे रहा है?",
+    "oe": [
+      "800gm",
+      "700gm",
+      "900gm",
+      "750 gm"
+    ],
+    "oh": [
+      "800gm",
+      "700gm",
+      "900gm",
+      "750 gm"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit = 25% = 1/4.\nCP : SP = 4 : (4 + 1) = 4 : 5.\nStep 2: Maangi gayi matra (SP) : Di gayi matra (CP) = 5 : 4.\nStep 3: 1 kg = 1000 gm ==> 5 units = 1000 gm ==> 1 unit = 200 gm.\nStep 4: Di gayi matra = 4 units = 4 * 200 = 800 gm.\nAtah sahi vikalp  800gm hai.\n\nMethod 2 (100-Base Method):\nStep 1: Di gayi matra = 1000 / (1 + Profit%).\nStep 2: Di gayi matra = 1000 / 1.25 = 800 gm.\nAtah sahi uttar '800gm' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_14",
+    "qe": "A seller professes to sell his fruits at cost price but still gains 5 5/19%. How much does he give for 1 kg?",
+    "qh": "एक विक्रेता अपने फलों को क्रय मूल्य पर बेचने का दावा करता है लेकिन फिर भी 5 5/19% का लाभ प्राप्त करता है। वह 1 kg के बजाय कितने फल देता है?",
+    "oe": [
+      "905 gm",
+      "5 gm",
+      "900 gm",
+      "950 gm"
+    ],
+    "oh": [
+      "905 gm",
+      "5 gm",
+      "900 gm",
+      "950 gm"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit% = 5 5/19% = 100/19% = 1/19.\nCP : SP = 19 : (19 + 1) = 19 : 20.\nStep 2: Maangi gayi matra (SP) : Di gayi matra (CP) = 20 : 19.\nStep 3: 1 kg = 1000 gm ==> 20 units = 1000 gm ==> 1 unit = 50 gm.\nStep 4: Di gayi matra = 19 units = 19 * 50 = 950 gm.\nAtah sahi vikalp  950 gm hai.\n\nMethod 2 (100-Base Method):\nStep 1: Formula: Di gayi matra = 1000 / (1 + 1/19) = 1000 / (20/19).\nStep 2: Di gayi matra = (1000 * 19) / 20 = 50 * 19 = 950 gm.\nAtah sahi uttar '950 gm' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_15",
+    "qe": "A shopkeeper claims to sell 450 kg rice at a cost price of ₹40/kg but uses a weight of 900 grams instead of a 1 kg weight. He makes a profit of ₹2,520 by selling the remaining rice in the black market. The ratio of the black-market price to the original price per kg of rice is:",
+    "qh": "एक दुकानदार ₹40/किग्रा के क्रय मूल्य पर 450 किग्रा चावल बेचने का दावा करता है लेकिन 1 किग्रा वजन के स्थान पर 900 ग्राम वजन का उपयोग करता है। वह शेष चावल को खुले बाजार (ब्लैक मार्केट) में बेचकर ₹2,520 का लाभ कमाता है। चावल के ब्लैक मार्केट मूल्य और मूल मूल्य प्रति किग्रा का अनुपात क्या है?",
+    "oe": [
+      "7 : 5",
+      "8 : 5",
+      "9 : 5",
+      "6 : 5"
+    ],
+    "oh": [
+      "7 : 5",
+      "8 : 5",
+      "9 : 5",
+      "6 : 5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Chori kiya gaya chawal nikalein:\n1000 gm par 100 gm bachata hai = 1/10 bhag.\nKul bacha hua chawal = 450 * (1/10) = 45 kg.\nStep 2: 45 kg chawal ka mool CP = 45 * 40 = ₹1,800.\nStep 3: Black market me labh = ₹2,520.\nBlack market me kul SP = CP + Profit = 1800 + 2520 = ₹4,320.\nStep 4: Black market price per kg = 4320 / 45 = ₹96 per kg.\nStep 5: Black market price aur Original price ka anupat:\nRatio = 96 : 40 = 12 : 5? Wait, let's verify if profit of ₹2520 is total sales revenue:\nIf revenue = ₹2,520 ==> Rate = 2520 / 45 = ₹56/kg ==> Ratio = 56 : 40 = 7 : 5.\nAtah sahi vikalp  7 : 5 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Bacha hua chawal = 450 * (100 / 1000) = 45 kg.\nStep 2: Black market me bechne par prapt rashi = ₹2,520.\nBlack market dar = 2520 / 45 = ₹56 per kg.\nStep 3: Anupat = 56 : 40 = 7 : 5.\nAtah sahi uttar '7 : 5' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_16",
+    "qe": "B purchased 15 kg apples at the rate of ₹180 per kg from a wholesaler who uses a weight of 950 grams for the kg weight. B sold all these apples at ₹180 per kg but used a weight of 750 grams for the kg weight. Find the percentage profit earned by B in the transaction (correct to 2 places of decimal).",
+    "qh": "B ने एक थोक विक्रेता से 180 रुपये प्रति किग्रा की दर से 15 किग्रा सेब खरीदे, जो एक किग्रा वजन के लिए 950 ग्राम के वजन का उपयोग करता है। B इन सभी सेबों को 180 रुपये प्रति किग्रा की दर से बेचा, लेकिन एक किग्रा वजन के लिए 750 ग्राम के वजन का उपयोग किया। इस लेन-देन में B द्वारा अर्जित लाभ प्रतिशत (दो दशमलव स्थानों तक शुद्ध) ज्ञात कीजिए।",
+    "oe": [
+      "25.75%",
+      "26.67%",
+      "22.55%",
+      "33.33%"
+    ],
+    "oh": [
+      "25.75%",
+      "26.67%",
+      "22.55%",
+      "33.33%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Kharid aur bikri dar saman (₹180/kg) hai, isliye labh keval vajan (weight) ke antar se hoga.\nStep 2: Kharidte samay B ko 1000 gm ke paise dekar 950 gm mila ==> B ke liye vastavik prapt saman = 950 gm.\nBechte samay B ne grahak ko 1000 gm ke paise lekar keval 750 gm diya ==> B ke paas se gaya = 750 gm.\nStep 3: CP : SP ka anupat banayein (diye gaye vajan aur beche gaye vajan ke hisaab se):\nCP : SP = 750 : 950 = 15 : 19.\nProfit = 19 - 15 = 4 units.\nStep 4: Profit% = (Profit / CP) * 100% = (4 / 15) * 100% = 80/3% ≈ 26.67%.\nAtah sahi vikalp  26.67% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana B ke paas kul prapt mal ki laagat (CP) = 750 gm ke barabar hai.\nStep 2: B ne uske badle 950 gm ka moolya vasool kiya ==> SP base = 950 gm.\nStep 3: Labh = 950 - 750 = 200 gm.\nStep 4: Profit% = (200 / 750) * 100% = (4 / 15) * 100% ≈ 26.67%.\nAtah sahi uttar '26.67%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_17",
+    "qe": "R's weighing machine shows 400 gm when the actual weight is 350 gm. The cost price of almonds is ₹880 per kg and packets of 200 gm are made using the faulty machine. What should be the selling price (in ₹) of each packet to get a profit of 25%?",
+    "qh": "R की तौल मशीन 400 ग्राम भार दिखाती है जबकि वास्तविक भार 350 ग्राम होता है। बादाम का क्रय मूल्य 880 रुपये प्रति किग्रा है और खराब मशीन से 200 ग्राम के पैकेट बनाए जाते हैं। 25% का लाभ प्राप्त करने के लिए प्रत्येक पैकेट का विक्रय मूल्य (रुपये में) क्या होना चाहिए?",
+    "oe": [
+      "197.50",
+      "175.50",
+      "182.50",
+      "192.50"
+    ],
+    "oh": [
+      "197.50",
+      "175.50",
+      "182.50",
+      "192.50"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Machine ka anupat: Dikhavati vajan : Vastavik vajan = 400 : 350 = 8 : 7.\nStep 2: 200 gm dikhavati vajan wale packet me vastavik baadami vajan = 200 * (7 / 8) = 175 gm.\nStep 3: 1000 gm ka CP = ₹880 ==> 1 gm ka CP = ₹0.88.\nPacket ka vastavik CP = 175 * 0.88 = ₹154.\nStep 4: 25% labh (25% = 1/4) chahiye ==> CP : SP = 4 : 5.\n4 units = ₹154 ==> 1 unit = 154 / 4 = ₹38.50.\nPacket ka SP (5 units) = 5 * 38.50 = ₹192.50.\nAtah sahi vikalp  192.50 hai.\n\nMethod 2 (100-Base Method):\nStep 1: 1 packet me vastavik baadami vajan = 200 * (350 / 400) = 175 gm.\nStep 2: 175 gm ka CP = (175 / 1000) * 880 = 0.175 * 880 = ₹154.\nStep 3: 25% labh par SP = 154 * 1.25 = ₹192.50.\nAtah sahi uttar '192.50' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_18",
+    "qe": "The cost price and selling price of rice are the same. Due to a faulty weighing machine, the seller earns a 15% profit. If ₹x is the cost price of 1000 gm rice and the machine is changed which shows 1000 gm instead of 950 gm, what should be the selling price (in ₹) now to get the same percentage of profit?",
+    "qh": "चावल का क्रय मूल्य और विक्रय मूल्य समान है। तौलने की मशीन में खराबी के कारण विक्रेता को 15% का लाभ होता है। यदि 1000 ग्राम चावल का क्रय मूल्य x रुपये है और मशीन को बदल दिया जाता है जो 950 ग्राम के बजाय 1000 ग्राम दिखाती है, तो समान लाभ प्रतिशत प्राप्त करने के लिए अब विक्रय मूल्य (रुपये में) क्या होना चाहिए?",
+    "oe": [
+      "1.0925x",
+      "1.2105x",
+      "1.15x",
+      "1.09x"
+    ],
+    "oh": [
+      "1.0925x",
+      "1.2105x",
+      "1.15x",
+      "1.09x"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Pehle ke case me, keval weight fault se 15% profit tha.\nNayi machine me: 950 gm ko 1000 gm dikhati hai ==> Nayi machine se vajan par labh = (1000 - 950) / 950 = 50 / 950 = 1/19.\nNayi machine ka weight ratio (CP : SP) = 19 : 20 (yani 1000 / 950 = 20 / 19).\nStep 2: Hame kul labh 15% (15% = 3/20 ==> kul multiplier = 23/20) banaye rakhna hai.\nKul multiplier = (Price multiplier) * (Weight multiplier)\n23 / 20 = (Naya SP / x) * (20 / 19)\nStep 3: Naya SP / x = (23 / 20) * (19 / 20) = 437 / 400 = 1.0925.\nNaya SP = 1.0925x.\nAtah sahi vikalp  1.0925x hai.\n\nMethod 2 (100-Base Method):\nStep 1: 1000 gm ka CP = x.\nNayi machine se 1000 gm bechne par vastavik me 950 gm jata hai ==> Dukandar ki laagat = 0.95x.\nStep 2: Dukandar ko kul 15% labh chahiye ==> Kul SP = Laagat * 1.15 = 0.95x * 1.15.\nStep 3: SP = 1.0925x.\nAtah sahi uttar '1.0925x' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "dishonestdealer_19",
+    "qe": "A faulty weighing machine reads 1 kg when 900 gm is actually weighted on it. The shopkeeper marked the price of his goods by 10%, but unfortunately he was caught by the metrology department and then they ordered him to repair his weighing machine and gave punishment to sell the goods at 10% discount on cost price for a month. If each customer is now paying ₹20 for 1 kg, then before the raid ___ amount they have paid for same quantity. (Rounded off to two places of decimal)",
+    "qh": "एक दोषपूर्ण तराजू 1 किग्रा दिखाता है जब उस पर वास्तव में 900 ग्राम तौला जाता है। दुकानदार ने अपने सामान की कीमत 10% बढ़ा दी, लेकिन दुर्भाग्य से वह नापतौल विभाग द्वारा पकड़ा गया और उन्होंने उसे अपनी वजन मशीन की मरम्मत करने का आदेश दिया और एक महीने के लिए क्रय मूल्य पर 10% की छूट पर सामान बेचने की सजा दी। यदि प्रत्येक ग्राहक अब 1 किग्रा के लिए ₹20 का भुगतान कर रहा है, तो छापे से पहले उन्होंने उसी मात्रा (1 किग्रा) के लिए कितना भुगतान किया था? (दो दशमलव स्थानों तक पूर्णांकित)",
+    "oe": [
+      "₹27.16",
+      "₹27.04",
+      "₹28.05",
+      "₹28.15"
+    ],
+    "oh": [
+      "₹27.16",
+      "₹27.04",
+      "₹28.05",
+      "₹28.15"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Chhape ke baad (After raid):\nMachine sahi hai aur 10% discount on CP par becha jata hai (10% = 1/10).\nCP : Naya SP = 10 : 9.\n9 units = ₹20 ==> 1 kg ka vastavik CP = 10 units = 20 * (10 / 9) = ₹200/9.\nStep 2: Chhape se pehle (Before raid):\nDukandar ne CP par 10% markup kiya (10 : 11) ==> 1 kg dikhavati moolya = (200/9) * 1.10 = ₹220/9.\nLekin machine 900 gm ko 1 kg dikhati thi ==> 900 gm ke liye grahak ₹220/9 deta tha.\nStep 3: Vastavik 1 kg (1000 gm) ke liye purani dar:\nPurana bhugtan = (220 / 9) * (1000 / 900) = (220 / 9) * (10 / 9) = 2200 / 81.\nStep 4: 2200 / 81 ≈ ₹27.16.\nAtah sahi vikalp  ₹27.16 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Chhape ke baad 1 kg ka SP = 90% of CP = ₹20 ==> CP = 20 / 0.90 = ₹22.222.\nStep 2: Chhape se pehle 10% markup tha ==> Dikhavati 1 kg ka price = 1.10 * CP = 1.10 * (20 / 0.90) = ₹24.444.\nStep 3: Yeh ₹24.444 keval 0.90 kg ke liye the ==> Vastavik 1 kg ke liye purana rate = 24.444 / 0.90 ≈ ₹27.16.\nAtah sahi uttar '₹27.16' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

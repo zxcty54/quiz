@@ -1,0 +1,686 @@
+[
+  {
+    "p_id": "basic_1",
+    "qe": "If ratio of boys and girls is 5 : 8 and the total strength of the class is 156. Find the number of girls in the class.",
+    "qh": "यदि लड़कों और लड़कियों का अनुपात 5 : 8 है तथा कक्षा की कुल क्षमता 156 है, तो कक्षा में लड़कियों की संख्या ज्ञात करें।",
+    "oe": [
+      "96",
+      "60",
+      "72",
+      "80"
+    ],
+    "oh": [
+      "96",
+      "60",
+      "72",
+      "80"
+    ],
+    "a": 0,
+    "e": "Method 1 (Unitary Method):\nStep 1: अनुपाती पदों का कुल योग निकालें:\n$$\\text{कुल इकाइयाँ} = 5 + 8 = 13\\text{ इकाइयाँ}$$\nStep 2: 13 इकाइयाँ कक्षा के कुल 156 विद्यार्थियों के बराबर हैं:\n$$13\\text{ इकाइयाँ} = 156 \\implies 1\\text{ इकाई} = $\\frac{156}{13}$ = 12$$\nStep 3: लड़कियों की संख्या (8 इकाइयाँ) निकालें:\n$$\\text{लड़कियों की संख्या} = 8 $\\times$ 12 = 96$$\nअतः सही विकल्प  96 है।\n\nMethod 2 (Fractional Method):\n$$\\text{लड़कियों की संख्या} = $\\frac{8}{5+8}$ $\\times$ 156 = $\\frac{8}{13}$ $\\times$ 156 = 8 $\\times$ 12 = 96$$\nअतः सही उत्तर '96' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_2",
+    "qe": "A sum of ₹2002 is divided among A, B and C in the ratio 3 : 4 : 6. Find the share of B in that?",
+    "qh": "₹2002 रुपये की राशि को 3 : 4 : 6 के अनुपात में A, B और C के बीच विभाजित किया जाता है। इसमें B का हिस्सा ज्ञात कीजिए।",
+    "oe": [
+      "₹616",
+      "₹610",
+      "₹462",
+      "₹1510"
+    ],
+    "oh": [
+      "₹616",
+      "₹610",
+      "₹462",
+      "₹1510"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Sum Method):\nStep 1: अनुपाती योग ज्ञात करें:\n$$\\text{कुल इकाइयाँ} = 3 + 4 + 6 = 13\\text{ इकाइयाँ}$$\nStep 2: 13 इकाइयों का मान ₹2002 के बराबर है:\n$$13\\text{ इकाइयाँ} = 2002 \\implies 1\\text{ इकाई} = $\\frac{2002}{13}$ = 154$$\nStep 3: B का हिस्सा (4 इकाइयाँ) निकालें:\n$$\\text{B का हिस्सा} = 4 $\\times$ 154 = 616$$\nअतः सही विकल्प  ₹616 है।\n\nMethod 2 (Direct Proportion Method):\n$$\\text{B का हिस्सा} = $\\frac{4}{13}$ $\\times$ 2002 = 4 $\\times$ 154 = 616$$\nअतः सही उत्तर '₹616' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_3",
+    "qe": "If a : b = 3 : 2, then find (5a + 2b) : (3a + 4b).",
+    "qh": "यदि a : b = 3 : 2 है, तो (5a + 2b) : (3a + 4b) बराबर है:",
+    "oe": [
+      "16 : 15",
+      "8 : 7",
+      "19 : 17",
+      "17 : 14"
+    ],
+    "oh": [
+      "16 : 15",
+      "8 : 7",
+      "19 : 17",
+      "17 : 14"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Value Substitution Method):\nStep 1: दिया गया है $\\frac{a}{b} = \\frac{3}{2}$। समघातीय (Homogeneous) व्यंजक होने के कारण $a = 3$ तथा $b = 2$ रखने पर:\nStep 2: प्रथम पद का मान:\n$$5a + 2b = 5(3) + 2(2) = 15 + 4 = 19$$\nStep 3: द्वितीय पद का मान:\n$$3a + 4b = 3(3) + 4(2) = 9 + 8 = 17$$\nStep 4: अभीष्ट अनुपात:\n$$\\text{अनुपात} = 19 : 17$$\nअतः सही विकल्प  19 : 17 है।\n\nMethod 2 (Division by b Method):\n$$$\\frac{5a+2b}{3a+4b}$ = $\\frac{5(a/b)+2}{3(a/b)+4}$ = $\\frac{5(1.5)+2}{3(1.5)+4}$ = $\\frac{7.5+2}{4.5+4}$ = $\\frac{9.5}{8.5}$ = $\\frac{19}{17}$$$\nअतः सही उत्तर '19 : 17' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_4",
+    "qe": "If a : b = 2 : 3, then find (5a + 3b) : (6a - 2b).",
+    "qh": "यदि a : b = 2 : 3 है, तो (5a + 3b) : (6a - 2b) का मान ज्ञात करें।",
+    "oe": [
+      "19 : 6",
+      "3 : 2",
+      "17 : 5",
+      "10 : 7"
+    ],
+    "oh": [
+      "19 : 6",
+      "3 : 2",
+      "17 : 5",
+      "10 : 7"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Substitution Method):\nStep 1: दिए गए व्यंजक में $a = 2$ तथा $b = 3$ प्रतिस्थापित करने पर:\nStep 2: अंश का मान:\n$$5a + 3b = 5(2) + 3(3) = 10 + 9 = 19$$\nStep 3: हर का मान:\n$$6a - 2b = 6(2) - 2(3) = 12 - 6 = 6$$\nStep 4: दोनों का अनुपात निकालें:\n$$\\text{अनुपात} = 19 : 6$$\nअतः सही विकल्प  19 : 6 है।\n\nMethod 2 (k-Method):\n$a = 2k, b = 3k$.\n$$$\\frac{5(2k)+3(3k)}{6(2k)-2(3k)}$ = $\\frac{10k+9k}{12k-6k}$ = $\\frac{19k}{6k}$ = $\\frac{19}{6}$$$\nअतः सही उत्तर '19 : 6' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_5",
+    "qe": "If (5x + 2y) : (10x + 3y) = 5 : 9, then (2x^2 + 3y^2) : (4x^2 + 9y^2) = ?",
+    "qh": "यदि (5x + 2y) : (10x + 3y) = 5 : 9 है, तो (2x^2 + 3y^2) : (4x^2 + 9y^2) = ?",
+    "oe": [
+      "31 : 87",
+      "10 : 27",
+      "16 : 47",
+      "1 : 3"
+    ],
+    "oh": [
+      "31 : 87",
+      "10 : 27",
+      "16 : 47",
+      "1 : 3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Cross-Multiplication & Value Substitution Method):\nStep 1: दिए गए अनुपात को भिन्न रूप में लिखकर तिर्यक गुणा (Cross-multiply) करें:\n$$$\\frac{5x+2y}{10x+3y}$ = $\\frac{5}{9}$$$\n$$9(5x + 2y) = 5(10x + 3y)$$\n$$45x + 18y = 50x + 15y$$\n$$18y - 15y = 50x - 45x \\implies 3y = 5x \\implies $\\frac{x}{y}$ = $\\frac{3}{5}$$$\nStep 2: $x = 3$ तथा $y = 5$ अभीष्ट व्यंजक में रखने पर:\n- पहला भाग: $2x^2 + 3y^2 = 2(3^2) + 3(5^2) = 2(9) + 3(25) = 18 + 75 = 93$\n- दूसरा भाग: $4x^2 + 9y^2 = 4(3^2) + 9(5^2) = 4(9) + 9(25) = 36 + 225 = 261$\nStep 3: अनुपात को सरल करें:\n$$\\text{अनुपात} = $\\frac{93}{261}$ = $\\frac{93/3}{261/3}$ = $\\frac{31}{87}$ = 31 : 87$$\nअतः सही विकल्प  31 : 87 है।\n\nMethod 2 (Verification):\n$\\frac{2(3/5)^2 + 3}{4(3/5)^2 + 9} = \\frac{2(9/25) + 3}{4(9/25) + 9} = \\frac{18/25 + 75/25}{36/25 + 225/25} = \\frac{93}{261} = \\frac{31}{87}$.\nअतः सही उत्तर '31 : 87' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_6",
+    "qe": "If a : b = 2 : 3 and b : c = 4 : 5, then find a : b : c.",
+    "qh": "यदि a : b = 2 : 3 और b : c = 4 : 5 है, तो a : b : c का मान ज्ञात करें।",
+    "oe": [
+      "8 : 11 : 15",
+      "8 : 12 : 15",
+      "16 : 24 : 25",
+      "5 : 6 : 8"
+    ],
+    "oh": [
+      "8 : 11 : 15",
+      "8 : 12 : 15",
+      "16 : 24 : 25",
+      "5 : 6 : 8"
+    ],
+    "a": 1,
+    "e": "Method 1 (Equalizing the Common Term Method):\nStep 1: दोनों अनुपातों में उभयनिष्ठ पद $b$ है:\n$$a : b = 2 : 3$$\n$$b : c = 4 : 5$$\nStep 2: $b$ के मानों (3 और 4) का LCM 12 है। अतः दोनों अनुपातों को संतुलित करें:\n$$a : b = (2 $\\times$ 4) : (3 $\\times$ 4) = 8 : 12$$\n$$b : c = (4 $\\times$ 3) : (5 $\\times$ 3) = 12 : 15$$\nStep 3: संयुक्त अनुपात:\n$$a : b : c = 8 : 12 : 15$$\nअतः सही विकल्प  8 : 12 : 15 है।\n\nMethod 2 (Cross-Product Method):\n$$a : b : c = (2 $\\times$ 4) : (3 $\\times$ 4) : (3 $\\times$ 5) = 8 : 12 : 15$$\nअतः सही उत्तर '8 : 12 : 15' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_7",
+    "qe": "If a : b = 5 : 8 and c : b = 4 : 3, then a : b : c is equal to:",
+    "qh": "यदि a : b = 5 : 8 और c : b = 4 : 3 है, तो a : b : c बराबर है:",
+    "oe": [
+      "15 : 24 : 28",
+      "5 : 6 : 8",
+      "15 : 24 : 32",
+      "5 : 8 : 6"
+    ],
+    "oh": [
+      "15 : 24 : 28",
+      "5 : 6 : 8",
+      "15 : 24 : 32",
+      "5 : 8 : 6"
+    ],
+    "a": 2,
+    "e": "Method 1 (Common Term Balancing Method):\nStep 1: दिए गए अनुपात को $b : c$ के रूप में व्यवस्थित करें:\n$$a : b = 5 : 8$$\n$$b : c = 3 : 4 \\quad (\\text{चूँकि } c : b = 4 : 3)$$\nStep 2: $b$ को समान बनाने के लिए पहले अनुपात को 3 से तथा दूसरे अनुपात को 8 से गुणा करें:\n$$a : b = (5 $\\times$ 3) : (8 $\\times$ 3) = 15 : 24$$\n$$b : c = (3 $\\times$ 8) : (4 $\\times$ 8) = 24 : 32$$\nStep 3: संयुक्त अनुपात:\n$$a : b : c = 15 : 24 : 32$$\nअतः सही विकल्प  15 : 24 : 32 है।\n\nMethod 2 (Continuous Multiplication):\n$$a = 5 $\\times$ 3 = 15$$\n$$b = 8 $\\times$ 3 = 24$$\n$$c = 8 $\\times$ 4 = 32$$\n$$a : b : c = 15 : 24 : 32$$\nअतः सही उत्तर '15 : 24 : 32' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_8",
+    "qe": "If P : Q = 3/5 : 5/7, Q : R = 3/4 : 2/5 then what is P : Q : R equal to?",
+    "qh": "यदि P : Q = 3/5 : 5/7, Q : R = 3/4 : 2/5 है, तो P : Q : R बराबर है:",
+    "oe": [
+      "$\\frac{9}{20}$ : $\\frac{15}{28}$ : $\\frac{2}{7}$",
+      "$\\frac{10}{5}$ : $\\frac{5}{17}$ : $\\frac{12}{5}$",
+      "$\\frac{3}{2}$ : $\\frac{1}{7}$ : $\\frac{2}{7}$",
+      "2 : 3 : 5"
+    ],
+    "oh": [
+      "$\\frac{9}{20}$ : $\\frac{15}{28}$ : $\\frac{2}{7}$",
+      "$\\frac{10}{5}$ : $\\frac{5}{17}$ : $\\frac{12}{5}$",
+      "$\\frac{3}{2}$ : $\\frac{1}{7}$ : $\\frac{2}{7}$",
+      "2 : 3 : 5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Fraction Proportion Matching Method):\nStep 1: अनुपातों को सरलतम पूर्णांक रूप में बदलें:\n- $P : Q = \\frac{3}{5} : \\frac{5}{7} = (3 \\times 7) : (5 \\times 5) = 21 : 25$\n- $Q : R = \\frac{3}{4} : \\frac{2}{5} = (3 \\times 5) : (4 \\times 2) = 15 : 8$\nStep 2: $Q$ के मानों (25 और 15) का LCM 75 है। अतः संतुलित करें:\n- $P : Q = (21 \\times 3) : (25 \\times 3) = 63 : 75$\n- $Q : R = (15 \\times 5) : (8 \\times 5) = 75 : 40$\nअतः पूर्णांक रूप में $P : Q : R = 63 : 75 : 40$.\nStep 3: विकल्प (a) को 140 (हरों 20, 28, 7 का LCM) से गुणा करके जाँचें:\n$$$\\le$ft($\\frac{9}{20}$ $\\times$ 140\\right) : $\\le$ft($\\frac{15}{28}$ $\\times$ 140\\right) : $\\le$ft($\\frac{2}{7}$ $\\times$ 140\\right) = 63 : 75 : 40$$\nयह हमारे प्राप्त अनुपात से पूर्णतः मेल खाता है।\nअतः सही विकल्प  9/20 : 15/28 : 2/7 है।\n\nMethod 2 (Direct Fraction Multiplication Method):\n$$P = $\\frac{3}{5}$ $\\times$ $\\frac{3}{4}$ = $\\frac{9}{20}$$$\n$$Q = $\\frac{5}{7}$ $\\times$ $\\frac{3}{4}$ = $\\frac{15}{28}$$$\n$$R = $\\frac{5}{7}$ $\\times$ $\\frac{2}{5}$ = $\\frac{2}{7}$$$\nअतः $P : Q : R = \\frac{9}{20} : \\frac{15}{28} : \\frac{2}{7}$.\nअतः सही उत्तर '$\\frac{9}{20}$ : $\\frac{15}{28}$ : $\\frac{2}{7}$' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_9",
+    "qe": "If 3x = 5y = 4z then x : y : z is equal to:",
+    "qh": "यदि 3x = 5y = 4z है, तो x : y : z बराबर है :",
+    "oe": [
+      "9 : 12 : 16",
+      "15 : 10 : 9",
+      "20 : 12 : 15",
+      "8 : 5 : 3"
+    ],
+    "oh": [
+      "9 : 12 : 16",
+      "15 : 10 : 9",
+      "20 : 12 : 15",
+      "8 : 5 : 3"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM of Coefficients Method):\nStep 1: गुणांकों 3, 5 और 4 का LCM निकालें:\n$$\\text{LCM}(3, 5, 4) = 60$$\nStep 2: प्रत्येक पद को 60 से भाग दें:\n$$$\\frac{3x}{60}$ = $\\frac{5y}{60}$ = $\\frac{4z}{60}$ \\implies $\\frac{x}{20}$ = $\\frac{y}{12}$ = $\\frac{z}{15}$$$\nStep 3: अतः अनुपात होगा:\n$$x : y : z = 20 : 12 : 15$$\nअतः सही विकल्प  20 : 12 : 15 है।\n\nMethod 2 (Cover-up / Hide Method):\n- $x$ के लिए: $5 \\times 4 = 20$\n- $y$ के लिए: $3 \\times 4 = 12$\n- $z$ के लिए: $3 \\times 5 = 15$\n$$x : y : z = 20 : 12 : 15$$\nअतः सही उत्तर '20 : 12 : 15' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_10",
+    "qe": "A sum of Rs x is divided among A, B and C such that the ratio of shares of A and B is 7:12 and that of B and C is 8 : 5. If the difference in the share of A and C is Rs 214, then the value of x is.",
+    "qh": "x रुपये की राशि को A, B और C में इस प्रकार विभाजित किया जाता है कि A और B के शेयरों का अनुपात 7:12 है और B और C के शेयरों का अनुपात 8 : 5 है। यदि A और C के हिस्सों का अंतर 214 रुपये है, तो x का मूल्य है :",
+    "oe": [
+      "₹11556",
+      "₹11128",
+      "₹11770",
+      "₹11342"
+    ],
+    "oh": [
+      "₹11556",
+      "₹11128",
+      "₹11770",
+      "₹11342"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Combining Method):\nStep 1: दिए गए अनुपात:\n$$A : B = 7 : 12$$\n$$B : C = 8 : 5$$\nStep 2: $B$ के मानों (12 और 8) का LCM = 24 है। अतः संतुलित करने पर:\n$$A : B = (7 $\\times$ 2) : (12 $\\times$ 2) = 14 : 24$$\n$$B : C = (8 $\\times$ 3) : (5 $\\times$ 3) = 24 : 15$$\n$$A : B : C = 14 : 24 : 15$$\nStep 3: A और C के हिस्सों का अंतर:\n$$|15 - 14| = 1\\text{ इकाई} = ₹214$$\nStep 4: कुल राशि ($x$):\n$$\\text{कुल इकाइयाँ} = 14 + 24 + 15 = 53\\text{ इकाइयाँ}$$\n$$x = 53 $\\times$ 214 = ₹11342$$\nअतः सही विकल्प  ₹11342 है।\n\nMethod 2 (Unit Digit Method):\n$53 \\times 214$ का इकाई अंक $3 \\times 4 = 2$ होगा।\nविकल्पों में केवल 11128 और 11342 के अंत में सम अंक हैं। $50 \\times 214 = 10700$ तथा $3 \\times 214 = 642$, योग = 11342.\nअतः सही उत्तर '₹11342' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_11",
+    "qe": "Three numbers are in the ratio of 1/2 : 2/3 : 3/4. The difference between the greatest and the smallest number is 27. The smallest numbers is :",
+    "qh": "तीन संख्याएं 1/2 : 2/3 : 3/4 के अनुपात में हैं तो सबसे बड़ी और सबसे छोटी संख्या के बीच का अंतर 27 है। सबसे छोटी संख्या है -",
+    "oe": [
+      "81",
+      "40",
+      "72",
+      "54"
+    ],
+    "oh": [
+      "81",
+      "40",
+      "72",
+      "54"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Simplification Method):\nStep 1: हरों (2, 3, 4) का LCM = 12 से गुणा करके सरल अनुपात निकालें:\n$$$\\le$ft($\\frac{1}{2}$ $\\times$ 12\\right) : $\\le$ft($\\frac{2}{3}$ $\\times$ 12\\right) : $\\le$ft($\\frac{3}{4}$ $\\times$ 12\\right) = 6 : 8 : 9$$\nStep 2: सबसे बड़ी संख्या ($9$ इकाइयाँ) और सबसे छोटी संख्या ($6$ इकाइयाँ) का अंतर:\n$$\\text{अंतर} = 9 - 6 = 3\\text{ इकाइयाँ}$$\nStep 3: 3 इकाइयाँ = 27:\n$$1\\text{ इकाई} = $\\frac{27}{3}$ = 9$$\nStep 4: सबसे छोटी संख्या (6 इकाइयाँ) निकालें:\n$$\\text{सबसे छोटी संख्या} = 6 $\\times$ 9 = 54$$\nअतः सही विकल्प  54 है।\n\nMethod 2 (Fraction Formulation):\n$$$\\le$ft($\\frac{3}{4}$ - $\\frac{1}{2}$\\right)k = 27 \\implies $\\frac{1}{4}$k = 27 \\implies k = 108$$\nसबसे छोटी संख्या = $\\frac{1}{2} \\times 108 = 54$.\nअतः सही उत्तर '54' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_12",
+    "qe": "If x : y = 3 : 1 then (x^3 - y^3) : (x^3 + y^3) = ?",
+    "qh": "यदि x : y = 3 : 1 है, तो (x^3 - y^3) : (x^3 + y^3) = ?",
+    "oe": [
+      "13 : 14",
+      "14 : 13",
+      "10 : 11",
+      "11 : 10"
+    ],
+    "oh": [
+      "13 : 14",
+      "14 : 13",
+      "10 : 11",
+      "11 : 10"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Substitution Method):\nStep 1: समघातीय व्यंजक होने के कारण $x = 3$ तथा $y = 1$ प्रतिस्थापित करने पर:\nStep 2: अंश का मान:\n$$x^3 - y^3 = 3^3 - 1^3 = 27 - 1 = 26$$\nStep 3: हर का मान:\n$$x^3 + y^3 = 3^3 + 1^3 = 27 + 1 = 28$$\nStep 4: अनुपात को सरल करें:\n$$$\\frac{x^3-y^3}{x^3+y^3}$ = $\\frac{26}{28}$ = $\\frac{13}{14}$ = 13 : 14$$\nअतः सही विकल्प  13 : 14 है।\n\nMethod 2 (Componendo and Dividendo Method):\n$\\frac{x^3}{y^3} = \\frac{27}{1}$. C&D लगाने पर: $\\frac{x^3 - y^3}{x^3 + y^3} = \\frac{27 - 1}{27 + 1} = \\frac{26}{28} = \\frac{13}{14}$.\nअतः सही उत्तर '13 : 14' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_13",
+    "qe": "If P/4 = Q/3 = R/2, then what is the value of (P + Q)^2 : (Q + R)^2 : (R + P)^2 ?",
+    "qh": "यदि P/4 = Q/3 = R/2 है, तो (P + Q)^2 : (Q + R)^2 : (R + P)^2 का मान क्या है?",
+    "oe": [
+      "49 : 25 : 36",
+      "14 : 12 : 5",
+      "12 : 9 : 6",
+      "49 : 36 : 25"
+    ],
+    "oh": [
+      "49 : 25 : 36",
+      "14 : 12 : 5",
+      "12 : 9 : 6",
+      "49 : 36 : 25"
+    ],
+    "a": 0,
+    "e": "Method 1 (Proportional Substitution Method):\nStep 1: दिए गए संबंध से:\n$$P : Q : R = 4 : 3 : 2$$\nअतः $P = 4$, $Q = 3$, तथा $R = 2$ रखने पर:\nStep 2: प्रत्येक पद का मान निकालें:\n- $(P + Q)^2 = (4 + 3)^2 = 7^2 = 49$\n- $(Q + R)^2 = (3 + 2)^2 = 5^2 = 25$\n- $(R + P)^2 = (2 + 4)^2 = 6^2 = 36$\nStep 3: अभीष्ट अनुपात:\n$$\\text{अनुपात} = 49 : 25 : 36$$\nअतः सही विकल्प  49 : 25 : 36 है।\n\nMethod 2 (k-Constant Method):\n$P = 4k, Q = 3k, R = 2k$.\n$(7k)^2 : (5k)^2 : (6k)^2 = 49k^2 : 25k^2 : 36k^2 = 49 : 25 : 36$.\nअतः सही उत्तर '49 : 25 : 36' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_14",
+    "qe": "If A : B = 4 : 5 and B : C = 6 : 7, then find (A + B) : (B + C) : (C + A).",
+    "qh": "यदि A : B = 4 : 5 और B : C = 6 : 7 है, तो (A + B) : (B + C) : (C + A) का मान क्या है?",
+    "oe": [
+      "9 : 13 : 11",
+      "54 : 65 : 59",
+      "54 : 59 : 65",
+      "11 : 9 : 13"
+    ],
+    "oh": [
+      "9 : 13 : 11",
+      "54 : 65 : 59",
+      "54 : 59 : 65",
+      "11 : 9 : 13"
+    ],
+    "a": 1,
+    "e": "Method 1 (Combining Ratios Method):\nStep 1: संयुक्त अनुपात $A : B : C$ ज्ञात करें:\n- $A = 4 \\times 6 = 24$\n- $B = 5 \\times 6 = 30$\n- $C = 5 \\times 7 = 35$\n$$A : B : C = 24 : 30 : 35$$\nStep 2: प्रत्येक युग्म का योग ज्ञात करें:\n- $A + B = 24 + 30 = 54$\n- $B + C = 30 + 35 = 65$\n- $C + A = 35 + 24 = 59$\nStep 3: अभीष्ट अनुपात:\n$$(A + B) : (B + C) : (C + A) = 54 : 65 : 59$$\nअतः सही विकल्प  54 : 65 : 59 है।\n\nMethod 2 (Step Verification):\n$A = 24k, B = 30k, C = 35k$.\n$(24+30) : (30+35) : (35+24) = 54 : 65 : 59$.\nअतः सही उत्तर '54 : 65 : 59' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_15",
+    "qe": "If (a + b) : (b + c) : (c + a) = 7 : 6 : 5 and a + b + c = 27, then what will be the value of 1/a : 1/b : 1/c ?",
+    "qh": "यदि (a + b) : (b + c) : (c + a) = 7 : 6 : 5 और a + b + c = 27 है, तो 1/a : 1/b : 1/c का मान क्या होगा?",
+    "oe": [
+      "3 : 6 : 4",
+      "3 : 2 : 4",
+      "4 : 3 : 6",
+      "3 : 4 : 2"
+    ],
+    "oh": [
+      "3 : 6 : 4",
+      "3 : 2 : 4",
+      "4 : 3 : 6",
+      "3 : 4 : 2"
+    ],
+    "a": 2,
+    "e": "Method 1 (System of Equations Method):\nStep 1: मान लें:\n$$a + b = 7k$$\n$$b + c = 6k$$\n$$c + a = 5k$$\nतीनों समीकरणों को जोड़ने पर:\n$$2(a + b + c) = 7k + 6k + 5k = 18k \\implies a + b + c = 9k$$\nStep 2: दिया गया है $a + b + c = 27$:\n$$9k = 27 \\implies k = 3$$\nStep 3: $a, b, c$ के व्यक्तिगत मान निकालें:\n- $c = (a + b + c) - (a + b) = 27 - (7 \\times 3) = 27 - 21 = 6$\n- $a = (a + b + c) - (b + c) = 27 - (6 \\times 3) = 27 - 18 = 9$\n- $b = (a + b + c) - (c + a) = 27 - (5 \\times 3) = 27 - 15 = 12$\nStep 4: व्युत्क्रमों का अनुपात نکالें:\n$$$\\frac{1}{a}$ : $\\frac{1}{b}$ : $\\frac{1}{c}$ = $\\frac{1}{9}$ : $\\frac{1}{12}$ : $\\frac{1}{6}$$$\nStep 5: हरों (9, 12, 6) के LCM = 36 से गुणा करने पर:\n$$$\\le$ft($\\frac{1}{9}$ $\\times$ 36\\right) : $\\le$ft($\\frac{1}{12}$ $\\times$ 36\\right) : $\\le$ft($\\frac{1}{6}$ $\\times$ 36\\right) = 4 : 3 : 6$$\nअतः सही विकल्प  4 : 3 : 6 है।\n\nMethod 2 (Scale Invariance Method):\n$k = 1$ मानकर भी $a+b+c = 9$ होता है: $c = 2, a = 3, b = 4$.\n$\\frac{1}{a} : \\frac{1}{b} : \\frac{1}{c} = \\frac{1}{3} : \\frac{1}{4} : \\frac{1}{2} = 4 : 3 : 6$.\nअतः सही उत्तर '4 : 3 : 6' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_16",
+    "qe": "If a : b : c = 1/4 : 1/3 : 1/2, then a/b : b/c : c/a = ?",
+    "qh": "यदि a : b : c = 1/4 : 1/3 : 1/2 है, तो a/b : b/c : c/a = ?",
+    "oe": [
+      "12 : 9 : 8",
+      "8 : 9 : 24",
+      "9 : 8 : 24",
+      "9 : 12 : 8"
+    ],
+    "oh": [
+      "12 : 9 : 8",
+      "8 : 9 : 24",
+      "9 : 8 : 24",
+      "9 : 12 : 8"
+    ],
+    "a": 2,
+    "e": "Method 1 (Step-by-Step Fractional Ratio Method):\nStep 1: $a : b : c$ को पूर्णांक रूप में बदलें (4, 3, 2 का LCM = 12):\n$$a : b : c = $\\le$ft($\\frac{1}{4}$ $\\times$ 12\\right) : $\\le$ft($\\frac{1}{3}$ $\\times$ 12\\right) : $\\le$ft($\\frac{1}{2}$ $\\times$ 12\\right) = 3 : 4 : 6$$\nStep 2: $a = 3, b = 4, c = 6$ रखने पर पदों का मान निकालें:\n- $\\frac{a}{b} = \\frac{3}{4}$\n- $\\frac{b}{c} = \\frac{4}{6} = \\frac{2}{3}$\n- $\\frac{c}{a} = \\frac{6}{3} = 2$\nStep 3: अनुपात स्थापित करें:\n$$$\\frac{a}{b}$ : $\\frac{b}{c}$ : $\\frac{c}{a}$ = $\\frac{3}{4}$ : $\\frac{2}{3}$ : 2$$\nStep 4: हरों (4 और 3) के LCM = 12 से गुणा करने पर:\n$$$\\le$ft($\\frac{3}{4}$ $\\times$ 12\\right) : $\\le$ft($\\frac{2}{3}$ $\\times$ 12\\right) : (2 $\\times$ 12) = 9 : 8 : 24$$\nअतः सही विकल्प  9 : 8 : 24 है।\n\nMethod 2 (Direct Value Insertion):\n$$$\\frac{3}{4}$ : $\\frac{4}{6}$ : $\\frac{6}{3}$ \\implies $\\frac{3}{4}$ $\\times$ 12 : $\\frac{4}{6}$ $\\times$ 12 : $\\frac{6}{3}$ $\\times$ 12 = 9 : 8 : 24$$\nअतः सही उत्तर '9 : 8 : 24' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_17",
+    "qe": "If 3/8 G = 2/9 H = 4/5 I = 1/6 J then what is the ratio of J, H, I and G respectively?",
+    "qh": "यदि 3/8 G = 2/9 H = 4/5 I = 1/6 J है, तो J, H, I और G का अनुपात क्रमशः क्या है?",
+    "oe": [
+      "72 : 54 : 15 : 38",
+      "72 : 32 : 15 : 54",
+      "72 : 54 : 15 : 32",
+      "72 : 15 : 54 : 32"
+    ],
+    "oh": [
+      "72 : 54 : 15 : 38",
+      "72 : 32 : 15 : 54",
+      "72 : 54 : 15 : 32",
+      "72 : 15 : 54 : 32"
+    ],
+    "a": 2,
+    "e": "Method 1 (Reciprocal Multiplication Method):\nStep 1: माना $\\frac{3}{8}G = \\frac{2}{9}H = \\frac{4}{5}I = \\frac{1}{6}J = 1$.\n- $G = \\frac{8}{3}$\n- $H = \\frac{9}{2}$\n- $I = \\frac{5}{4}$\n- $J = 6$\nStep 2: हमें $J : H : I : G$ का अनुपात क्रमशः ज्ञात करना है:\n$$J : H : I : G = 6 : $\\frac{9}{2}$ : $\\frac{5}{4}$ : $\\frac{8}{3}$$$\nStep 3: हरों (2, 4, 3) का LCM = 12 से प्रत्येक पद को गुणा करने पर:\n- $J = 6 \\times 12 = 72$\n- $H = \\frac{9}{2} \\times 12 = 54$\n- $I = \\frac{5}{4} \\times 12 = 15$\n- $G = \\frac{8}{3} \\times 12 = 32$\nStep 4: संयुक्त अनुपात:\n$$J : H : I : G = 72 : 54 : 15 : 32$$\nअतः सही विकल्प  72 : 54 : 15 : 32 है।\n\nMethod 2 (LCM of Numerators Method):\nअंशों (3, 2, 4, 1) का LCM = 12.\nसमीकरण को 12 के बराबर रखने पर:\n$G = \\frac{12 \\times 8}{3} = 32, H = \\frac{12 \\times 9}{2} = 54, I = \\frac{12 \\times 5}{4} = 15, J = 12 \\times 6 = 72$.\nक्रम $J, H, I, G = 72 : 54 : 15 : 32$.\nअतः सही उत्तर '72 : 54 : 15 : 32' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_18",
+    "qe": "If a : b = 5 : 7 and c : d = 8 : 11 Find b : c",
+    "qh": "यदि a : b = 5 : 7 और c : d = 8 : 11 है तो b : c का मान ज्ञात करें।",
+    "oe": [
+      "16 : 15",
+      "15 : 16",
+      "12 : 17",
+      "Can't be determined"
+    ],
+    "oh": [
+      "16 : 15",
+      "15 : 16",
+      "12 : 17",
+      "Can't be determined"
+    ],
+    "a": 3,
+    "e": "Method 1 (Independent Variables Analysis Method):\nStep 1: दिए गए संबंध:\n- $a : b = 5 : 7$ (यह केवल $a$ और $b$ के बीच संबंध बताता है)\n- $c : d = 8 : 11$ (यह केवल $c$ और $d$ के बीच संबंध बताता है)\nStep 2: ध्यान दें कि दोनों अनुपातों के बीच कोई भी उभयनिष्ठ पद (Common Variable) या कोई अतिरिक्त जोड़ने वाला समीकरण (Linking Equation) नहीं दिया गया है।\nStep 3: बिना किसी संबंध के $b$ और $c$ के सापेक्ष मानों की तुलना नहीं की जा सकती।\nअतः $b : c$ का मान ज्ञात नहीं किया जा सकता (Can't be determined)।\nअतः सही विकल्प  Can't be determined है।\n\nMethod 2 (Counterexample Method):\nयदि $a = 5, b = 7$ तथा $c = 8, d = 11$, तो $b : c = 7 : 8$.\nयदि $c = 16, d = 22$, तो $b : c = 7 : 16$.\nमान निश्चित नहीं है, अतः उत्तर निर्धारित नहीं किया जा सकता।\nअतः सही उत्तर 'Can't be determined' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_19",
+    "qe": "The ratio of the sum of the salaries of A and B to the difference of their salaries is 11:1. The ratio of the sum of the salaries of B and C to the difference of their salaries is also 11 : 1. If A's salary is the highest and C's is the lowest then what is B's salary (in ₹), given that the total of their salaries is ₹ 18200 ?",
+    "qh": "A और B के वेतन के योग का उनके वेतन के अंतर से अनुपात 11:1 है। B और C के वेतन के योग का उनके वेतन के अंतर से अनुपात भी 11 : 1 है। यदि A का वेतन सबसे अधिक है और C का सबसे कम है, तो B का वेतन (₹ में) कितना है, यह देखते हुए कि उनका कुल वेतन ₹ 18,200 है?",
+    "oe": [
+      "8,500",
+      "5,500",
+      "6,000",
+      "7,200"
+    ],
+    "oh": [
+      "8,500",
+      "5,500",
+      "6,000",
+      "7,200"
+    ],
+    "a": 2,
+    "e": "Method 1 (Componendo and Dividendo Method):\nStep 1: दिए गए अनुपात पर योगांतरानुपात (C&D) नियम लागू करें:\n$$$\\frac{A+B}{A-B}$ = $\\frac{11}{1}$ \\implies $\\frac{A}{B}$ = $\\frac{11+1}{11-1}$ = $\\frac{12}{10}$ = $\\frac{6}{5}$$$\nइसी प्रकार B और C के लिए:\n$$$\\frac{B+C}{B-C}$ = $\\frac{11}{1}$ \\implies $\\frac{B}{C}$ = $\\frac{11+1}{11-1}$ = $\\frac{6}{5}$$$\nStep 2: संयुक्त अनुपात $A : B : C$ निकालें:\n- $A : B = 6 : 5 = (6 \\times 6) : (5 \\times 6) = 36 : 30$\n- $B : C = 6 : 5 = (6 \\times 5) : (5 \\times 5) = 30 : 25$\n$$A : B : C = 36 : 30 : 25$$\nStep 3: कुल अनुपाती इकाइयाँ निकालें:\n$$\\text{कुल इकाइयाँ} = 36 + 30 + 25 = 91\\text{ इकाइयाँ}$$\nStep 4: 91 इकाइयाँ = ₹18200:\n$$1\\text{ इकाई} = $\\frac{18200}{91}$ = ₹200$$\nStep 5: B का वेतन (30 इकाइयाँ) निकालें:\n$$\\text{B का वेतन} = 30 $\\times$ 200 = ₹6000$$\nअतः सही विकल्प  6,000 है।\n\nMethod 2 (Cross-Multiplication Method):\n$A + B = 11(A - B) \\implies 10A = 12B \\implies A/B = 6/5$.\nसमान रूप से $B/C = 6/5 \\implies A : B : C = 36 : 30 : 25$.\n$B = \\frac{30}{91} \\times 18200 = 30 \\times 200 = ₹6000$.\nअतः सही उत्तर '6,000' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_20",
+    "qe": "The employees of three categories A, B and C get their wages in the ratio of 1 : 2 : 3. If they get increments of 5%, 10% and 15% respectively, then what will be the new ratio of their wages?",
+    "qh": "तीन श्रेणियों A, B और C के कर्मचारियों को उनका वेतन 1 : 2 : 3 के अनुपात में मिलता है। यदि उन्हें क्रमशः 5%, 10% और 15% की वृद्धि मिलती है, तो उनके वेतन का नया अनुपात क्या होगा?",
+    "oe": [
+      "21 : 44 : 69",
+      "7 : 22 : 23",
+      "21 : 22 : 23",
+      "7 : 21 : 23"
+    ],
+    "oh": [
+      "21 : 44 : 69",
+      "7 : 22 : 23",
+      "21 : 22 : 23",
+      "7 : 21 : 23"
+    ],
+    "a": 0,
+    "e": "Method 1 (Percentage Multiplier Method):\nStep 1: गणना को आसान बनाने के लिए प्रारंभिक वेतन को 100, 200, और 300 मान लें:\n- A का प्रारंभिक वेतन = 100\n- B का प्रारंभिक वेतन = 200\n- C का प्रारंभिक वेतन = 300\nStep 2: क्रमशः 5%, 10% और 15% की वृद्धि लागू करें:\n- A का नया वेतन = $100 \\times 1.05 = 105$\n- B का नया वेतन = $200 \\times 1.10 = 220$\n- C का नया वेतन = $300 \\times 1.15 = 345$\nStep 3: नए वेतनों का अनुपात निकालें:\n$$\\text{नया अनुपात} = 105 : 220 : 345$$\nStep 4: सभी पदों को 5 से विभाजित करके सरल करें:\n$$$\\frac{105}{5}$ : $\\frac{220}{5}$ : $\\frac{345}{5}$ = 21 : 44 : 69$$\nअतः सही विकल्प  21 : 44 : 69 है।\n\nMethod 2 (Direct Ratio Method):\n$$1 $\\times$ 105\\% : 2 $\\times$ 110\\% : 3 $\\times$ 115\\% = 105 : 220 : 345 = 21 : 44 : 69$$\nअतः सही उत्तर '21 : 44 : 69' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_21",
+    "qe": "If a : b = 2 : 3, b : c = 4 : 5 and c : d = 6 : 7. Find a : b : c : d.",
+    "qh": "यदि a : b = 2 : 3, b : c = 4 : 5 और c : d = 6 : 7 है, तो a : b : c : d का मान ज्ञात कीजिए।",
+    "oe": [
+      "16 : 24 : 30 : 31",
+      "16 : 24 : 30 : 35",
+      "72 : 54 : 15 : 32",
+      "8 : 32 : 50 : 71"
+    ],
+    "oh": [
+      "16 : 24 : 30 : 31",
+      "16 : 24 : 30 : 35",
+      "72 : 54 : 15 : 32",
+      "8 : 32 : 50 : 71"
+    ],
+    "a": 1,
+    "e": "Method 1 (Continuous Ratio Balancing Method):\nStep 1: अनुपातों को क्रम में लिखें:\n- $a : b = 2 : 3$\n- $b : c = 4 : 5$\n- $c : d = 6 : 7$\nStep 2: स्तंभ गुणन नियम (Column multiplication rule) लागू करने पर:\n- $a = 2 \\times 4 \\times 6 = 48$\n- $b = 3 \\times 4 \\times 6 = 72$\n- $c = 3 \\times 5 \\times 6 = 90$\n- $d = 3 \\times 5 \\times 7 = 105$\n$$a : b : c : d = 48 : 72 : 90 : 105$$\nStep 3: सभी पदों को 3 से भाग देकर सरल करें:\n$$$\\frac{48}{3}$ : $\\frac{72}{3}$ : $\\frac{90}{3}$ : $\\frac{105}{3}$ = 16 : 24 : 30 : 35$$\nअतः सही विकल्प  16 : 24 : 30 : 35 है।\n\nMethod 2 (Blank Filling Method):\n| a | b | c | d |\n|---|---|---|---|\n| 2 | 3 | 3 | 3 |\n| 4 | 4 | 5 | 5 |\n| 6 | 6 | 6 | 7 |\nस्तंभों का गुणा: $48 : 72 : 90 : 105 = 16 : 24 : 30 : 35$.\nअतः सही उत्तर '16 : 24 : 30 : 35' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_22",
+    "qe": "If a : b = 2/9 : 1/3, b : c = 2/7 : 5/14 and d : c = 7/10 : 3/5, then Find a : b : c : d.",
+    "qh": "यदि a : b = 2/9 : 1/3, b : c = 2/7 : 5/14 और d : c = 7/10 : 3/5 है, तो a : b : c : d का मान ज्ञात करें।",
+    "oe": [
+      "16 : 24 : 30 : 31",
+      "16 : 24 : 30 : 35",
+      "72 : 54 : 15 : 32",
+      "8 : 32 : 50 : 71"
+    ],
+    "oh": [
+      "16 : 24 : 30 : 31",
+      "16 : 24 : 30 : 35",
+      "72 : 54 : 15 : 32",
+      "8 : 32 : 50 : 71"
+    ],
+    "a": 1,
+    "e": "Method 1 (Fraction Simplification & Combining Method):\nStep 1: प्रत्येक भिन्न अनुपात को सरल पूर्णांक अनुपात में बदलें:\n- $a : b = \\frac{2}{9} : \\frac{1}{3} = \\frac{2}{9} : \\frac{3}{9} = 2 : 3$\n- $b : c = \\frac{2}{7} : \\frac{5}{14} = \\frac{4}{14} : \\frac{5}{14} = 4 : 5$\n- $d : c = \\frac{7}{10} : \\frac{3}{5} = \\frac{7}{10} : \\frac{6}{10} = 7 : 6 \\implies c : d = 6 : 7$\nStep 2: अब $a : b = 2 : 3$, $b : c = 4 : 5$, तथा $c : d = 6 : 7$ को संयोजित करें:\n- $a = 2 \\times 4 \\times 6 = 48$\n- $b = 3 \\times 4 \\times 6 = 72$\n- $c = 3 \\times 5 \\times 6 = 90$\n- $d = 3 \\times 5 \\times 7 = 105$\nStep 3: 3 से विभाजित करने पर:\n$$a : b : c : d = 16 : 24 : 30 : 35$$\nअतः सही विकल्प  16 : 24 : 30 : 35 है।\n\nMethod 2 (Option Verification):\n$a/b = 16/24 = 2/3$, $b/c = 24/30 = 4/5$, $c/d = 30/35 = 6/7 \\implies d/c = 7/6$.\nसभी शर्तें केवल विकल्प (b) द्वारा संतुष्ट होती हैं।\nअतः सही उत्तर '16 : 24 : 30 : 35' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_23",
+    "qe": "If a : b = 5 : 8, b : c = 12 : 13 and c : d = 16 : 15, then find the value of a : b : c : d.",
+    "qh": "यदि a : b = 5 : 8, b : c = 12 : 13 और c : d = 16 : 15 है, तो a : b : c : d का मान ज्ञात करें।",
+    "oe": [
+      "116 : 124 : 130 : 131",
+      "116 : 124 : 130 : 135",
+      "172 : 154 : 115 : 132",
+      "120 : 192 : 208 : 195"
+    ],
+    "oh": [
+      "116 : 124 : 130 : 131",
+      "116 : 124 : 130 : 135",
+      "172 : 154 : 115 : 132",
+      "120 : 192 : 208 : 195"
+    ],
+    "a": 3,
+    "e": "Method 1 (Direct Ratio Multiplier Method):\nStep 1: अनुपातों के स्तंभ लिखें:\n- $a = 5 \\times 12 \\times 16 = 960$\n- $b = 8 \\times 12 \\times 16 = 1536$\n- $c = 8 \\times 13 \\times 16 = 1664$\n- $d = 8 \\times 13 \\times 15 = 1560$\nStep 2: सभी पदों में 8 सार्व गुणनखंड है, अतः 8 से भाग देने पर:\n- $a = 960 / 8 = 120$\n- $b = 1536 / 8 = 192$\n- $c = 1664 / 8 = 208$\n- $d = 1560 / 8 = 195$\nStep 3: संयुक्त अनुपात:\n$$a : b : c : d = 120 : 192 : 208 : 195$$\nअतः सही विकल्प  120 : 192 : 208 : 195 है।\n\nMethod 2 (Pairwise Matching Method):\n$a : b = 120 : 192 = 5 : 8$ (24 से भाग देने पर),\n$b : c = 192 : 208 = 12 : 13$ (16 से भाग देने पर),\n$c : d = 208 : 195 = 16 : 15$ (13 से भाग देने पर)।\nअतः सही उत्तर '120 : 192 : 208 : 195' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_24",
+    "qe": "If x : y = 6 : 5, y : z = 9 : 4 and z : w = 2 : 3, then what is the value of x : z : w?",
+    "qh": "यदि x : y = 6 : 5, y : z = 9 : 4 और z : w = 2 : 3 है, तो x : z : w का मान क्या है?",
+    "oe": [
+      "6 : 2 : 3",
+      "27 : 10 : 15",
+      "7 : 6 : 9",
+      "9 : 4 : 6"
+    ],
+    "oh": [
+      "6 : 2 : 3",
+      "27 : 10 : 15",
+      "7 : 6 : 9",
+      "9 : 4 : 6"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Compound Ratio Method):\nStep 1: पहले $x : y : z$ निकालें:\n- $x : y = 6 : 5$\n- $y : z = 9 : 4$\n$$x : y : z = (6 $\\times$ 9) : (5 $\\times$ 9) : (5 $\\times$ 4) = 54 : 45 : 20$$\nअतः $x : z = 54 : 20$.\nStep 2: अब $z : w = 2 : 3$ को $z = 20$ के बराबर संतुलित करें:\n$$z : w = (2 $\\times$ 10) : (3 $\\times$ 10) = 20 : 30$$\nStep 3: $x : z : w$ का अनुपात लिखें:\n$$x : z : w = 54 : 20 : 30$$\nStep 4: 2 से विभाजित करके सरल करें:\n$$$\\frac{54}{2}$ : $\\frac{20}{2}$ : $\\frac{30}{2}$ = 27 : 10 : 15$$\nअतः सही विकल्प  27 : 10 : 15 है।\n\nMethod 2 (Direct Column Method):\n$x = 6 \\times 9 \\times 2 = 108$\n$z = 5 \\times 4 \\times 2 = 40$\n$w = 5 \\times 4 \\times 3 = 60$\n$x : z : w = 108 : 40 : 60 = 27 : 10 : 15$.\nअतः सही उत्तर '27 : 10 : 15' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_25",
+    "qe": "A sum of Rs. 31866 is divided between A, B and C such that the ratio of shares of A and B is 9 : 8 and that of A and C is 4 : 5. The share (in Rs.) of B is:",
+    "qh": "A, B और C के बीच 31,866 रुपये की राशि को इस प्रकार विभाजित किया गया है कि A और B के भागों का अनुपात 9 : 8 और A और C के भागों का अनुपात 4 : 5 है। B भाग (रू. में) ज्ञात करें।",
+    "oe": [
+      "9024",
+      "8460",
+      "10152",
+      "12690"
+    ],
+    "oh": [
+      "9024",
+      "8460",
+      "10152",
+      "12690"
+    ],
+    "a": 0,
+    "e": "Method 1 (Equalizing Common Variable Method):\nStep 1: दोनों अनुपातों में उभयनिष्ठ पद A है:\n- $A : B = 9 : 8$\n- $A : C = 4 : 5$\nStep 2: A के मानों (9 और 4) का LCM = 36 है। दोनों अनुपातों को संतुलित करें:\n- $A : B = (9 \\times 4) : (8 \\times 4) = 36 : 32$\n- $A : C = (4 \\times 9) : (5 \\times 9) = 36 : 45$\nसंयुक्त अनुपात:\n$$A : B : C = 36 : 32 : 45$$\nStep 3: कुल अनुपाती इकाइयाँ निकालें:\n$$\\text{कुल इकाइयाँ} = 36 + 32 + 45 = 113\\text{ इकाइयाँ}$$\nStep 4: 113 इकाइयाँ = ₹31866:\n$$1\\text{ इकाई} = $\\frac{31866}{113}$ = 282$$\nStep 5: B का भाग (32 इकाइयाँ) निकालें:\n$$\\text{B का भाग} = 32 $\\times$ 282 = ₹9024$$\nअतः सही विकल्प  9024 है।\n\nMethod 2 (Unit Digit Method):\n$32 \\times 282$ का इकाई अंक $2 \\times 2 = 4$ होगा। विकल्पों में केवल 9024 का इकाई अंक 4 है।\nअतः सही उत्तर '9024' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_26",
+    "qe": "A sum of Rs 6342 is divided amongst A, B, C and D in the ratio 3 : 4 : 8 : 6. What is the different between the shares of B and D?",
+    "qh": "A, B, C और D के बीच 6342 रुपये की राशि को 3 : 4 : 8 : 6 अनुपात में वितरित किया गया है। B और D के हिस्सों के बीच (रु में) अंतर ज्ञात करें।",
+    "oe": [
+      "Rs 302",
+      "Rs 906",
+      "Rs 604",
+      "Rs 1510"
+    ],
+    "oh": [
+      "Rs 302",
+      "Rs 906",
+      "Rs 604",
+      "Rs 1510"
+    ],
+    "a": 2,
+    "e": "Method 1 (Unitary Method):\nStep 1: सभी अनुपाती पदों का कुल योग निकालें:\n$$\\text{कुल इकाइयाँ} = 3 + 4 + 8 + 6 = 21\\text{ इकाइयाँ}$$\nStep 2: 21 इकाइयों का मान ₹6342 के बराबर है:\n$$1\\text{ इकाई} = $\\frac{6342}{21}$ = ₹302$$\nStep 3: B (4 इकाइयाँ) और D (6 इकाइयाँ) के हिस्सों का अंतर निकालें:\n$$\\text{अंतर} = 6 - 4 = 2\\text{ इकाइयाँ}$$\nStep 4: 2 इकाइयों का मान:\n$$\\text{अंतर} = 2 $\\times$ 302 = ₹604$$\nअतः सही विकल्प  Rs 604 है।\n\nMethod 2 (Direct Fractional Method):\n$$\\text{अंतर} = $\\frac{6-4}{3+4+8+6}$ $\\times$ 6342 = $\\frac{2}{21}$ $\\times$ 6342 = 2 $\\times$ 302 = ₹604$$\nअतः सही उत्तर 'Rs 604' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_27",
+    "qe": "A sum is divided among A, B, C and D such that the ratio of shares of A and B is 2 : 3, that of B and C is 1 : 2 and that of C and D is 3 : 4. If the difference in the share of A and D is ₹ 648, then the sum of their shares is :",
+    "qh": "एक राशि को A, B, C और D में इस प्रकार विभाजित किया जाता है कि A और B के शेयरों का अनुपात 2 : 3 है, B और C का अनुपात 1 : 2 है और C और D का अनुपात 3 : 4 है। यदि A और D के हिस्से का अंतर ₹ 648 है, तो उनके शेयरों का योग है :",
+    "oe": [
+      "₹ 2,052",
+      "₹ 2,160",
+      "₹ 2,484",
+      "₹ 1,944"
+    ],
+    "oh": [
+      "₹ 2,052",
+      "₹ 2,160",
+      "₹ 2,484",
+      "₹ 1,944"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Combining Method):\nStep 1: दिए गए अनुपातों को संयोजित करें:\n- $A : B = 2 : 3$\n- $B : C = 1 : 2 = 3 : 6$\n- $C : D = 3 : 4 = 6 : 8$\nसंयुक्त अनुपात:\n$$A : B : C : D = 2 : 3 : 6 : 8$$\nStep 2: A और D के हिस्सों का अंतर निकालें:\n$$\\text{अंतर} = 8 - 2 = 6\\text{ इकाइयाँ}$$\nStep 3: 6 इकाइयाँ = ₹648:\n$$1\\text{ इकाई} = $\\frac{648}{6}$ = ₹108$$\nStep 4: सभी के शेयरों का कुल योग निकालें:\n$$\\text{कुल इकाइयाँ} = 2 + 3 + 6 + 8 = 19\\text{ इकाइयाँ}$$\n$$\\text{कुल योग} = 19 $\\times$ 108 = ₹2052$$\nअतः सही विकल्प  ₹ 2,052 है।\n\nMethod 2 (Fractional Unit Method):\nStep 1: $D - A = 6x = 648 \\implies x = 108$.\nStep 2: कुल योग = $19x = 19 \\times 108 = ₹2052$.\nअतः सही उत्तर '₹ 2,052' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_28",
+    "qe": "A certain sum is divided among A, B, C and D such that the ratio of the shares is A : B : C : D = 4 : 12 : 30 : 45. If the difference between the shares of A and D is Rs 5,535, then the total sum (in Rs ) is:",
+    "qh": "A, B, C और D के बीच किसी निश्चित राशि को इस प्रकार विभाजित किया गया है कि भागों का अनुपात A : B : C : D = 4 : 12 : 30 : 45 हो। यदि A और D के भागों के बीच अंतर 5535 रुपये है, तो कुल राशि (रू में) ज्ञात करें।",
+    "oe": [
+      "12285",
+      "11000",
+      "12785",
+      "13550"
+    ],
+    "oh": [
+      "12285",
+      "11000",
+      "12785",
+      "13550"
+    ],
+    "a": 0,
+    "e": "Method 1 (Unitary Method):\nStep 1: A और D के अनुपाती भागों का अंतर निकालें:\n$$\\text{अंतर} = 45 - 4 = 41\\text{ इकाइयाँ}$$\nStep 2: 41 इकाइयों का मान ₹5535 के बराबर है:\n$$1\\text{ इकाई} = $\\frac{5535}{41}$ = 135$$\nStep 3: कुल अनुपाती योग निकालें:\n$$\\text{कुल इकाइयाँ} = 4 + 12 + 30 + 45 = 91\\text{ इकाइयाँ}$$\nStep 4: कुल राशि ज्ञात करें:\n$$\\text{कुल राशि} = 91 $\\times$ 135 = 12285$$\nअतः सही विकल्प  12285 है।\n\nMethod 2 (Unit Digit Method):\n$91 \\times 135$ का इकाई अंक $1 \\times 5 = 5$ होगा।\n$90 \\times 135 = 12150$ तथा $12150 + 135 = 12285$.\nअतः सही उत्तर '12285' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_29",
+    "qe": "If A : B = 1 : 2, B : C = 3 : 4, C : D = 2 : 3 and D : E = 3 : 4, then what is B : E equal to?",
+    "qh": "यदि A : B = 1 : 2, B : C = 3 : 4, C : D = 2 : 3 और D : E = 3 : 4 है, तो B : E किसके बराबर है?",
+    "oe": [
+      "3 : 2",
+      "1 : 8",
+      "3 : 8",
+      "4 : 1"
+    ],
+    "oh": [
+      "3 : 2",
+      "1 : 8",
+      "3 : 8",
+      "4 : 1"
+    ],
+    "a": 2,
+    "e": "Method 1 (Chain Multiplication Method):\nStep 1: $B$ से $E$ तक के अनुपातों का सतत गुणनफल करें:\n$$$\\frac{B}{E}$ = $\\frac{B}{C}$ $\\times$ $\\frac{C}{D}$ $\\times$ $\\frac{D}{E}$$$\nStep 2: मान प्रतिस्थापित करने पर:\n$$$\\frac{B}{E}$ = $\\frac{3}{4}$ $\\times$ $\\frac{2}{3}$ $\\times$ $\\frac{3}{4}$$$\nStep 3: पदों को सरल करें:\n$$$\\frac{B}{E}$ = $\\frac{3\\times2\\times3}{4\\times3\\times4}$ = $\\frac{18}{48}$ = $\\frac{3}{8}$$$\n$$B : E = 3 : 8$$\nअतः सही विकल्प  3 : 8 है।\n\nMethod 2 (Combining B, C, D, E Method):\n- $B : C = 3 : 4$\n- $C : D = 2 : 3 = 4 : 6$\n- $D : E = 3 : 4 = 6 : 8$\nसंयुक्त रूप: $B : C : D : E = 3 : 4 : 6 : 8$.\nअतः $B : E = 3 : 8$.\nअतः सही उत्तर '3 : 8' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_30",
+    "qe": "If a/b = c/d = e/f = 2/3, then find the value of (2a^2 - 3c^2 + 4e^2) / (2b^2 - 3d^2 + 4f^2).",
+    "qh": "यदि a/b = c/d = e/f = 2/3 हो, तो (2a^2 - 3c^2 + 4e^2) / (2b^2 - 3d^2 + 4f^2) का मान ज्ञात कीजिए।",
+    "oe": [
+      "3 : 8",
+      "4 : 9",
+      "2 : 5",
+      "1 : 6"
+    ],
+    "oh": [
+      "3 : 8",
+      "4 : 9",
+      "2 : 5",
+      "1 : 6"
+    ],
+    "a": 1,
+    "e": "Method 1 (Proportional Power Property Method):\nStep 1: मान लें $\\frac{a}{b} = \\frac{c}{d} = \\frac{e}{f} = k = \\frac{2}{3}$:\n$$a = bk, \\quad c = dk, \\quad e = fk$$\nStep 2: अंश में मान रखने पर:\n$$2a^2 - 3c^2 + 4e^2 = 2(bk)^2 - 3(dk)^2 + 4(fk)^2 = k^2(2b^2 - 3d^2 + 4f^2)$$\nStep 3: भिन्न का मान निकालें:\n$$$\\frac{2a^2-3c^2+4e^2}{2b^2-3d^2+4f^2}$ = $\\frac{k^2(2b^2-3d^2+4f^2)}{2b^2-3d^2+4f^2}$ = k^2$$\nStep 4: $k = \\frac{2}{3}$ रखने पर:\n$$k^2 = $\\le$ft($\\frac{2}{3}$\\right)^2 = $\\frac{4}{9}$ = 4 : 9$$\nअतः सही विकल्प  4 : 9 है।\n\nMethod 2 (Homogeneous Ratio Rule):\nसमान घात वाले समघातीय व्यंजक का अनुपात मूल अनुपात के वर्ग के बराबर होता है:\n$$\\text{मान} = $\\le$ft($\\frac{a}{b}$\\right)^2 = $\\le$ft($\\frac{2}{3}$\\right)^2 = $\\frac{4}{9}$$$\nअतः सही उत्तर '4 : 9' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_31",
+    "qe": "If p : q = r : s = t : u = 2 : 3 then (mp + nr + ot) : (mq + ns + ou) = ?",
+    "qh": "यदि p : q = r : s = t : u = 2 : 3 है, तो (mp + nr + ot) : (mq + ns + ou) = ?",
+    "oe": [
+      "3 : 2",
+      "2 : 3",
+      "1 : 3",
+      "1 : 2"
+    ],
+    "oh": [
+      "3 : 2",
+      "2 : 3",
+      "1 : 3",
+      "1 : 2"
+    ],
+    "a": 1,
+    "e": "Method 1 (Linear Combination Theorem Method):\nStep 1: अनुपात के मौलिक गुणधर्म के अनुसार:\nयदि $\\frac{p}{q} = \\frac{r}{s} = \\frac{t}{u} = k$, तो:\n$$$\\frac{mp+nr+ot}{mq+ns+ou}$ = k$$\n(जहाँ $m, n, o$ कोई भी शून्येतर वास्तविक संख्याएँ हैं)।\nStep 2: दिया गया अनुपात $k = \\frac{2}{3}$ है:\n$$$\\frac{mp+nr+ot}{mq+ns+ou}$ = $\\frac{2}{3}$ = 2 : 3$$\nअतः सही विकल्प  2 : 3 है।\n\nMethod 2 (Substitution Method):\n$p = r = t = 2$ तथा $q = s = u = 3$ रखने पर:\n$$$\\frac{m(2)+n(2)+o(2)}{m(3)+n(3)+o(3)}$ = $\\frac{2(m+n+o)}{3(m+n+o)}$ = $\\frac{2}{3}$$$\nअतः सही उत्तर '2 : 3' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_32",
+    "qe": "If a : b = c : d = e : f = 1 : 2, then (pa + qc + re) : (pb + qd + rf) is:",
+    "qh": "यदि a : b = c : d = e : f = 1 : 2 है, तो (pa + qc + re) : (pb + qd + rf) = ?",
+    "oe": [
+      "1 : 2",
+      "4 : 3",
+      "2 : 1",
+      "1 : 1"
+    ],
+    "oh": [
+      "1 : 2",
+      "4 : 3",
+      "2 : 1",
+      "1 : 1"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Invariance Method):\nStep 1: समान अनुपातों के रैखिक संयोजन का नियम लागू करने पर:\n$$$\\frac{a}{b}$ = $\\frac{c}{d}$ = $\\frac{e}{f}$ = $\\frac{1}{2}$$$\n$$$\\frac{pa+qc+re}{pb+qd+rf}$ = $\\frac{1}{2}$$$\nStep 2: अभीष्ट अनुपात = $1 : 2$.\nअतः सही विकल्प  1 : 2 है।\n\nMethod 2 (Value Substitution Method):\n$a = c = e = 1$ और $b = d = f = 2$ रखने पर:\n$$$\\frac{p(1)+q(1)+r(1)}{p(2)+q(2)+r(2)}$ = $\\frac{p+q+r}{2(p+q+r)}$ = $\\frac{1}{2}$ = 1 : 2$$\nअतः सही उत्तर '1 : 2' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_33",
+    "qe": "If a : (b + c) = 5 : 7, b : (c + a) = 7 : 9, then find c : (a + b).",
+    "qh": "यदि a : (b + c) = 5 : 7, b : (c + a) = 7 : 9 है, तो c : (a + b) का मान ज्ञात करें।",
+    "oe": [
+      "4 : 41",
+      "20 : 41",
+      "21 : 41",
+      "7 : 41"
+    ],
+    "oh": [
+      "4 : 41",
+      "20 : 41",
+      "21 : 41",
+      "7 : 41"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equalizing Total Sum Method):\nStep 1: दोनों अनुपातों में कुल योग $(a + b + c)$ समान होना चाहिए:\n- पहले अनुपात में योग = $5 + 7 = 12$\n- दूसरे अनुपात में योग = $7 + 9 = 16$\nStep 2: 12 और 16 का LCM = 48 है। दोनों अनुपातों को 48 के योग में संतुलित करें:\n- पहले अनुपात को 4 से गुणा करने पर: $a : (b + c) = (5 \\times 4) : (7 \\times 4) = 20 : 28$\n  अतः $a = 20$.\n- दूसरे अनुपात को 3 से गुणा करने पर: $b : (c + a) = (7 \\times 3) : (9 \\times 3) = 21 : 27$\n  अतः $b = 21$.\nStep 3: $c$ का मान निकालें (कुल योग = 48):\n$$c = 48 - (a + b) = 48 - (20 + 21) = 48 - 41 = 7$$\nStep 4: $c : (a + b)$ का मान ज्ञात करें:\n$$c : (a + b) = 7 : 41$$\nअतः सही विकल्प  7 : 41 है।\n\nMethod 2 (Verification):\n$a = 20, b = 21, c = 7$.\n$a : (b + c) = 20 : 28 = 5 : 7$.\n$b : (c + a) = 21 : 27 = 7 : 9$.\n$c : (a + b) = 7 : 41$.\nअतः सही उत्तर '7 : 41' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_34",
+    "qe": "If a : (b + c) = 1 : 3, c : (a + b) = 5 : 7, then find b : (a + c).",
+    "qh": "यदि a : (b + c) = 1 : 3, c : (a + b) = 5 : 7 है, तो b : (a + c) का मान ज्ञात करें।",
+    "oe": [
+      "1 : 2",
+      "2 : 5",
+      "1 : 3",
+      "3 : 4"
+    ],
+    "oh": [
+      "1 : 2",
+      "2 : 5",
+      "1 : 3",
+      "3 : 4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Equalizing Total Sum Method):\nStep 1: अनुपातों के पदों का योग निकालें:\n- पहले अनुपात का योग = $1 + 3 = 4$\n- दूसरे अनुपात का योग = $5 + 7 = 12$\nStep 2: 4 और 12 का LCM = 12 है। पहले अनुपात को 3 से गुणा करें:\n$$a : (b + c) = (1 $\\times$ 3) : (3 $\\times$ 3) = 3 : 9$$\nअतः $a = 3$.\nStep 3: दूसरे अनुपात से $c = 5$ (योग 12 होने पर):\n$$c = 5$$\nStep 4: $b$ का मान निकालें:\n$$b = 12 - (a + c) = 12 - (3 + 5) = 12 - 8 = 4$$\nStep 5: $b : (a + c)$ निकालें:\n$$b : (a + c) = 4 : 8 = 1 : 2$$\nअतः सही विकल्प  1 : 2 है।\n\nMethod 2 (Ratio Formulation):\n$a = 3, b = 4, c = 5$.\n$\\frac{b}{a + c} = \\frac{4}{3 + 5} = \\frac{4}{8} = \\frac{1}{2}$.\nअतः सही उत्तर '1 : 2' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_35",
+    "qe": "If (a + b + c) : d = 17 : 3, (a + c + d) : b = 3 : 1, (a + b + d) : c = 3 : 2, then find (b + c + d) : a.",
+    "qh": "यदि (a + b + c) : d = 17 : 3, (a + c + d) : b = 3 : 1, (a + b + d) : c = 3 : 2 है, तो (b + c + d) : a का मान ज्ञात करें।",
+    "oe": [
+      "1 : 2",
+      "2 : 5",
+      "3 : 1",
+      "4 : 1"
+    ],
+    "oh": [
+      "1 : 2",
+      "2 : 5",
+      "3 : 1",
+      "4 : 1"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equalizing Total Sum of Four Variables Method):\nStep 1: प्रत्येक अनुपात में कुल योग $(a + b + c + d)$ का मान:\n- 1st: $17 + 3 = 20$\n- 2nd: $3 + 1 = 4$\n- 3rd: $3 + 2 = 5$\nStep 2: 20, 4 और 5 का LCM = 20 है। सभी अनुपातों को कुल योग 20 के लिए संतुलित करें:\n- 1st अनुपात (योग 20): $d = 3$\n- 2nd अनुपात को 5 से गुणा करें: $(a + c + d) : b = 15 : 5 \\implies b = 5$\n- 3rd अनुपात को 4 से गुणा करें: $(a + b + d) : c = 12 : 8 \\implies c = 8$\nStep 3: $a$ का मान निकालें:\n$$a = 20 - (b + c + d) = 20 - (5 + 8 + 3) = 20 - 16 = 4$$\nStep 4: $(b + c + d) : a$ का मान ज्ञात करें:\n$$(b + c + d) : a = 16 : 4 = 4 : 1$$\nअतः सही विकल्प  4 : 1 है।\n\nMethod 2 (Component Verification):\n$a = 4, b = 5, c = 8, d = 3$.\n$b + c + d = 16$.\nअनुपात = $16 / 4 = 4 / 1 = 4 : 1$.\nअतः सही उत्तर '4 : 1' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_36",
+    "qe": "If xy : yz : zx = 3 : 4 : 5, then x^2 : y^2 : z^2 = ?",
+    "qh": "यदि xy : yz : zx = 3 : 4 : 5 है, तो x^2 : y^2 : z^2 का मान ज्ञात करें।",
+    "oe": [
+      "225 : 144 : 400",
+      "255 : 134 : 300",
+      "215 : 144 : 400",
+      "225 : 144 : 300"
+    ],
+    "oh": [
+      "225 : 144 : 400",
+      "255 : 134 : 300",
+      "215 : 144 : 400",
+      "225 : 144 : 300"
+    ],
+    "a": 0,
+    "e": "Method 1 (Reciprocal Division Method):\nStep 1: प्रत्येक पद को $xyz$ से विभाजित करें:\n$$$\\frac{xy}{xyz}$ : $\\frac{yz}{xyz}$ : $\\frac{zx}{xyz}$ = 3 : 4 : 5$$\n$$$\\frac{1}{z}$ : $\\frac{1}{x}$ : $\\frac{1}{y}$ = 3 : 4 : 5$$\nStep 2: इससे चरों के व्युत्क्रम प्राप्त होते हैं:\n$$$\\frac{1}{x}$ = 4, \\quad $\\frac{1}{y}$ = 5, \\quad $\\frac{1}{z}$ = 3$$\n$$x : y : z = $\\frac{1}{4}$ : $\\frac{1}{5}$ : $\\frac{1}{3}$$$\nStep 3: 4, 5, 3 का LCM = 60 से गुणा करके सरल करें:\n$$x : y : z = 15 : 12 : 20$$\nStep 4: वर्गों का अनुपात निकालें:\n$$x^2 : y^2 : z^2 = 15^2 : 12^2 : 20^2 = 225 : 144 : 400$$\nअतः सही विकल्प  225 : 144 : 400 है।\n\nMethod 2 (Direct Product Property Method):\n- $x^2 = \\frac{(xy)(zx)}{yz} = \\frac{3 \\times 5}{4} = \\frac{15}{4}$\n- $y^2 = \\frac{(xy)(yz)}{zx} = \\frac{3 \\times 4}{5} = \\frac{12}{5}$\n- $z^2 = \\frac{(yz)(zx)}{xy} = \\frac{4 \\times 5}{3} = \\frac{20}{3}$\nLCM(4, 5, 3) = 60 से गुणा करने पर:\n$x^2 : y^2 : z^2 = (15 \\times 15) : (12 \\times 12) : (20 \\times 20) = 225 : 144 : 400$.\nअतः सही उत्तर '225 : 144 : 400' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

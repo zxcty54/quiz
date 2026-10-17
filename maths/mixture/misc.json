@@ -1,0 +1,306 @@
+[
+  {
+    "p_id": "misc_1",
+    "qe": "How much water should be added to 60 liters of milk at 1 1/2 liters a rupee so as to have a mixture worth 1 7/8 liters a rupee?",
+    "qh": "1 1/2 लीटर प्रति रुपये वाले 60 लीटर दूध में कितना पानी मिलाया जाना चाहिए ताकि 1 7/8 लीटर प्रति रुपये मूल्य का मिश्रण प्राप्त हो सके?",
+    "oe": [
+      "15 liters",
+      "12 liters",
+      "27 liters",
+      "20 liters"
+    ],
+    "oh": [
+      "15 liters",
+      "12 liters",
+      "27 liters",
+      "20 liters"
+    ],
+    "a": 0,
+    "e": "Method 1 (Alligation Method):\nStep 1: प्रति लीटर मूल्य ज्ञात करें:\n- दूध का मूल्य = 1 / (3/2) = ₹2/3 प्रति लीटर।\n- पानी का मूल्य = ₹0 प्रति लीटर।\n- मिश्रण का औसत मूल्य = 1 / (15/8) = ₹8/15 प्रति लीटर।\nStep 2: पृथक्करण (Alligation) नियम लागू करने पर:\n(8/15 - 0) : (2/3 - 8/15)\n= 8/15 : (10/15 - 8/15) = 8/15 : 2/15 = 8 : 2 = 4 : 1.\nStep 3: दूध और पानी का अनुपात = 4 : 1.\nदूध की मात्रा (4 इकाइयाँ) = 60 लीटर ==> 1 इकाई = 15 लीटर।\nमिलाया जाने वाला पानी (1 इकाई) = 15 लीटर।\nअतः सही विकल्प  15 liters है।\n\nMethod 2 (Value Equating Method):\nStep 1: 60 लीटर दूध का कुल मूल्य = 60 / (3/2) = 60 * (2/3) = ₹40.\nStep 2: पानी मुफ़्त होने के कारण नए मिश्रण का कुल मूल्य भी ₹40 ही रहेगा।\nनया कुल मिश्रण = 40 * (15/8) = 5 * 15 = 75 लीटर।\nStep 3: मिलाया गया पानी = 75 - 60 = 15 लीटर।\nअतः सही उत्तर '15 liters' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_2",
+    "qe": "If one man adds 6 litres of water to 10 litres of milk and another man adds 4 litres of water to 8 litres of milk. Find the ratio of milk in the two mixtures.",
+    "qh": "यदि एक व्यक्ति 10 लीटर दूध में 6 लीटर पानी मिलाता है और दूसरा व्यक्ति 8 लीटर दूध में 4 लीटर पानी मिलाता है। दोनों मिश्रणों में दूध (की सांद्रता) का अनुपात ज्ञात कीजिए।",
+    "oe": [
+      "16 : 15",
+      "12 : 11",
+      "16 : 17",
+      "15 : 16"
+    ],
+    "oh": [
+      "16 : 15",
+      "12 : 11",
+      "16 : 17",
+      "15 : 16"
+    ],
+    "a": 3,
+    "e": "Method 1 (Concentration Ratio Method):\nStep 1: पहले मिश्रण में दूध का अंश निकालें:\nपहला मिश्रण = 10 लीटर दूध + 6 लीटर पानी = 16 लीटर।\nदूध का अंश = 10 / 16 = 5 / 8.\nStep 2: दूसरे मिश्रण में दूध का अंश निकालें:\nदूसरा मिश्रण = 8 लीटर दूध + 4 लीटर पानी = 12 लीटर।\nदूध का अंश = 8 / 12 = 2 / 3.\nStep 3: दोनों मिश्रणों में दूध की सांद्रता का अनुपात:\nअनुपात = (5 / 8) : (2 / 3)\nदोनों पदों में 24 से गुणा करने पर:\n= (5 * 3) : (2 * 8) = 15 : 16.\nअतः सही विकल्प  15 : 16 है।\n\nMethod 2 (Percentage Comparison Method):\nStep 1: पहले मिश्रण में दूध% = (10 / 16) * 100% = 62.5%.\nStep 2: दूसरे मिश्रण में दूध% = (8 / 12) * 100% = 66.67% = 200/3%.\nStep 3: अनुपात = (125 / 2) : (200 / 3) = (125 * 3) : (200 * 2) = 375 : 400 = 15 : 16.\nअतः सही उत्तर '15 : 16' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_3",
+    "qe": "The quantity of milk in a mixture of milk and water is 4/5 of the volume of the mixture. After adding 1 liter of milk to 5 liters of the mixture, the percentage of water in the mixture is:",
+    "qh": "दूध और पानी के मिश्रण में दूध की मात्रा मिश्रण के आयतन का 4/5 है। मिश्रण के 5 लीटर में 1 लीटर दूध मिलाने के बाद, मिश्रण में पानी का प्रतिशत क्या है:",
+    "oe": [
+      "17.5%",
+      "15%",
+      "$\\frac{200}{6}$\\%",
+      "$\\frac{100}{6}$\\%"
+    ],
+    "oh": [
+      "17.5%",
+      "15%",
+      "$\\frac{200}{6}$\\%",
+      "$\\frac{100}{6}$\\%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Component Fraction Method):\nStep 1: 5 लीटर मिश्रण में दूध और पानी की प्रारंभिक मात्रा:\n- दूध = (4 / 5) * 5 = 4 लीटर\n- पानी = 5 - 4 = 1 लीटर\nStep 2: 1 लीटर शुद्ध दूध मिलाने पर नया मिश्रण:\nनया कुल आयतन = 5 + 1 = 6 लीटर।\nपानी की मात्रा अपरिवर्तित = 1 लीटर।\nStep 3: नए मिश्रण में पानी का प्रतिशत:\nपानी% = (पानी की मात्रा / कुल आयतन) * 100%\n= (1 / 6) * 100% = $\\frac{100}{6}$%.\nअतः सही विकल्प  100/6 % है।\n\nMethod 2 (Direct Ratio Method):\nStep 1: नया दूध = 4 + 1 = 5 लीटर, पानी = 1 लीटर (कुल 6 इकाइयाँ)।\nStep 2: पानी का अंश = 1/6.\nप्रतिशत = 1/6 * 100% = $\\frac{100}{6}$% = 16$\\frac{2}{3}$%.\nअतः सही उत्तर '$\\frac{100}{6}$\\%' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_4",
+    "qe": "80 litres of a mixture of spirit and water in the ratio 7 : 9 is present in a container A. 20 litres of the mixture is transferred to another container B. Then the container A is filled with 20 litres of water. Then 32 litres of the mixture is again transferred to container B. The ratio of water to spirit of the mixture in container B is equal to:",
+    "qh": "कंटेनर A में 7 : 9 के अनुपात में स्प्रिट और पानी का 80 लीटर मिश्रण मौजूद है। इस मिश्रण का 20 लीटर दूसरे कंटेनर B में स्थानांतरित किया जाता है। फिर कंटेनर A को 20 लीटर पानी से भर दिया जाता है। फिर मिश्रण का 32 लीटर पुनः कंटेनर B में स्थानांतरित किया जाता है। कंटेनर B में मिश्रण के पानी और स्प्रिट का अनुपात किसके बराबर है:",
+    "oe": [
+      "87 : 41",
+      "131 : 77",
+      "77 : 131",
+      "41 : 87"
+    ],
+    "oh": [
+      "87 : 41",
+      "131 : 77",
+      "77 : 131",
+      "41 : 87"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Multi-Stage Transfer Method):\nStep 1: प्रारंभिक कंटेनर A (80 लीटर, स्प्रिट : पानी = 7 : 9, कुल 16 इकाइयाँ):\n1 इकाई = 80 / 16 = 5 लीटर ==> स्प्रिट = 35 लीटर, पानी = 45 लीटर।\nStep 2: पहला स्थानांतरण (20 L को A से B में भेजा):\n- B में गया स्प्रिट = 20 * (7 / 16) = 35 / 4 = 8.75 लीटर\n- B में गया पानी = 20 * (9 / 16) = 45 / 4 = 11.25 लीटर\n- A में शेष (60 L): स्प्रिट = 60 * (7 / 16) = 105 / 4 लीटर, पानी = 135 / 4 लीटर।\nStep 3: A में 20 लीटर पानी मिलाने पर (कुल 80 L):\n- स्प्रिट = 105 / 4 लीटर\n- पानी = 135 / 4 + 20 = 215 / 4 लीटर\nA में नया अनुपात (स्प्रिट : पानी) = 105 : 215 = 21 : 43 (कुल 64 इकाइयाँ)।\nStep 4: दूसरा स्थानांतरण (A से 32 L को B में भेजा):\n- B में गया स्प्रिट = 32 * (21 / 64) = 21 / 2 = 10.5 लीटर\n- B में गया पानी = 32 * (43 / 64) = 43 / 2 = 21.5 लीटर\nStep 5: कंटेनर B में कुल घटक:\n- कुल स्प्रिट = 8.75 + 10.5 = 19.25 लीटर = 77 / 4 लीटर\n- कुल पानी = 11.25 + 21.5 = 32.75 लीटर = 131 / 4 लीटर\nStep 6: कंटेनर B में पानी से स्प्रिट (Water to Spirit) का अनुपात:\nपानी : स्प्रिट = (131 / 4) : (77 / 4) = 131 : 77.\nअतः सही विकल्प  131 : 77 है।\n\nMethod 2 (Fractional Addition Method):\nStep 1: B में स्प्रिट = 20*(7/16) + 32*(21/64) = 35/4 + 21/2 = 77/4.\nStep 2: B में पानी = 20*(9/16) + 32*(43/64) = 45/4 + 43/2 = 131/4.\nStep 3: पानी : स्प्रिट = 131 : 77.\nअतः सही उत्तर '131 : 77' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_5",
+    "qe": "An alloy contains 40% of silver, 30% of copper and 30% of nickel. How much silver (in kg) should be added to 25 kg of the alloy so that the new alloy contains 50% of silver?",
+    "qh": "एक मिश्र धातु में 40% चांदी, 30% तांबा और 30% निकल है। 25 किग्रा मिश्र धातु में कितनी चांदी (किग्रा में) मिलाई जानी चाहिए ताकि नई मिश्र धातु में 50% चांदी हो?",
+    "oe": [
+      "5 kg",
+      "6 kg",
+      "4 kg",
+      "8 kg"
+    ],
+    "oh": [
+      "5 kg",
+      "6 kg",
+      "4 kg",
+      "8 kg"
+    ],
+    "a": 0,
+    "e": "Method 1 (Constant Non-Silver Component Method):\nStep 1: केवल चांदी मिलाई जा रही है, अतः तांबा और निकल की कुल मात्रा स्थिर रहेगी।\nगैर-चांदी घटकों का प्रतिशत = 30% + 30% = 60%.\nगैर-चांदी घटकों का भार = 60% of 25 kg = (60 / 100) * 25 = 15 kg.\nStep 2: नई मिश्र धातु में चांदी 50% होगी, अतः गैर-चांदी घटक भी 50% होंगे।\nStep 3: माना नई मिश्र धातु का कुल भार = W kg.\n50% of W = 15 kg ==> W = 15 * 2 = 30 kg.\nStep 4: मिलाई जाने वाली चांदी = नया कुल भार - प्रारंभिक भार:\nचांदी = 30 - 25 = 5 kg.\nअतः सही विकल्प  5 kg है।\n\nMethod 2 (Alligation Method):\nStep 1: प्रारंभिक चांदी = 40%, शुद्ध चांदी = 100%, औसत चांदी = 50%.\nStep 2: पृथक्करण नियम:\n(100 - 50) : (50 - 40) = 50 : 10 = 5 : 1.\nStep 3: प्रारंभिक मिश्र धातु (5 इकाइयाँ) = 25 kg ==> 1 इकाई = 5 kg.\nमिलाई गई चांदी (1 इकाई) = 5 kg.\nअतः सही उत्तर '5 kg' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_6",
+    "qe": "In a solution of water and milk, the quantity of milk is double the quantity of water. To pass the quality standards, the solution must contain 90% milk in it. If the volume of the solution is V, then how much pure milk is to be added to the solution to pass the quality standard?",
+    "qh": "पानी और दूध के घोल में, दूध की मात्रा पानी की मात्रा की दोगुनी है। गुणवत्ता मानकों को पूरा करने के लिए घोल में 90% दूध होना चाहिए। यदि घोल का आयतन V है, तो गुणवत्ता मानक को पूरा करने के लिए घोल में कितना शुद्ध दूध मिलाया जाना चाहिए?",
+    "oe": [
+      "$\\frac{4}{3}$V",
+      "$\\frac{3}{4}$V",
+      "$\\frac{7}{4}$V",
+      "$\\frac{7}{3}$V"
+    ],
+    "oh": [
+      "$\\frac{4}{3}$V",
+      "$\\frac{3}{4}$V",
+      "$\\frac{7}{4}$V",
+      "$\\frac{7}{3}$V"
+    ],
+    "a": 3,
+    "e": "Method 1 (Constant Component Method):\nStep 1: प्रारंभिक घोल में दूध और पानी का अनुपात = 2 : 1.\nपानी की प्रारंभिक मात्रा = V * (1 / 3) = $\\frac{V}{3}$.\nदूध की प्रारंभिक मात्रा = $\\frac{2V}{3}$.\nStep 2: चूँकि केवल शुद्ध दूध मिलाया जा रहा है, अतः पानी की मात्रा स्थिर रहेगी।\nनए घोल में 90% दूध होना चाहिए, अतः पानी का प्रतिशत = 100% - 90% = 10% = $\\frac{1}{10}$ भाग होगा।\nStep 3: माना नए घोल का कुल आयतन = V' है:\n$\\frac{1}{10}$ * V' = $\\frac{V}{3}$ ==> V' = $\\frac{10V}{3}$.\nStep 4: मिलाए जाने वाले शुद्ध दूध की मात्रा:\nदूध = V' - V = $\\frac{10V}{3}$ - V = $\\frac{7V}{3}$.\nअतः सही विकल्प  7/3 V है।\n\nMethod 2 (Alligation Method):\nStep 1: प्रारंभिक दूध = 200/3%, शुद्ध दूध = 100%, अभीष्ट दूध = 90%.\nStep 2: (100 - 90) : (90 - 200/3) = 10 : 70/3 = 30 : 70 = 3 : 7.\nStep 3: प्रारंभिक आयतन (3 इकाइयाँ) = V ==> 1 इकाई = V/3.\nमिलाया जाने वाला दूध (7 इकाइयाँ) = 7 * (V/3) = $\\frac{7V}{3}$.\nअतः सही उत्तर '$\\frac{7}{3}$V' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_7",
+    "qe": "Two different quantities of the same solution having ingredients A and B are stored in two different containers. In the first container, there are 252 litre of A and 441 litre of B. In the second container, the total quantity of the solution was 1188 litre. How much of the solution in the second container was made up of ingredient B?",
+    "qh": "घटक A और B वाले समान घोल की दो अलग-अलग मात्राओं को दो अलग-अलग कंटेनरों में संग्रहीत किया जाता है। पहले कंटेनर में, 252 लीटर A और 441 लीटर B है। दूसरे कंटेनर में, घोल की कुल मात्रा 1188 लीटर थी। दूसरे कंटेनर में घोल का कितना हिस्सा घटक B से बना था?",
+    "oe": [
+      "765 ltr.",
+      "756 ltr.",
+      "752 ltr.",
+      "760 ltr."
+    ],
+    "oh": [
+      "765 ltr.",
+      "756 ltr.",
+      "752 ltr.",
+      "760 ltr."
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: पहले कंटेनर में घटक A और B का अनुपात निकालें:\nA : B = 252 : 441.\nदोनों संख्याओं को 63 से विभाजित करने पर:\n252 / 63 = 4, 441 / 63 = 7.\nA : B = 4 : 7.\nStep 2: चूँकि दोनों कंटेनरों में समान घोल है, अतः दूसरे कंटेनर में भी अनुपात 4 : 7 (कुल 11 इकाइयाँ) ही रहेगा।\nStep 3: दूसरे कंटेनर में कुल आयतन = 1188 लीटर।\n11 इकाइयाँ = 1188 लीटर ==> 1 इकाई = 1188 / 11 = 108 लीटर।\nStep 4: घटक B की मात्रा (7 इकाइयाँ):\nB = 7 * 108 = 756 लीटर।\nअतः सही विकल्प  756 ltr. है।\n\nMethod 2 (Direct Proportion Method):\nStep 1: पहले कंटेनर में कुल आयतन = 252 + 441 = 693 लीटर।\nघटक B का अंश = 441 / 693 = 7 / 11.\nStep 2: दूसरे कंटेनर में B की मात्रा = (7 / 11) * 1188 = 7 * 108 = 756 लीटर।\nअतः सही उत्तर '756 ltr' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_8",
+    "qe": "Three bottles of the same capacity are 30%, 40% and 25% full of orange juice, respectively. They are filled up completely by adding apple juice. The contents of the three bottles are emptied into another vessel. What is the percentage of apple juice in the mixture?",
+    "qh": "समान क्षमता की तीन बोतलें क्रमशः 30%, 40% और 25% संतरे के रस से भरी हैं। सेब का रस डालकर उन्हें पूरी तरह भर दिया जाता है। तीनों बोतलों की सामग्री को एक अन्य बर्तन में खाली कर दिया जाता है। मिश्रण में सेब के रस का प्रतिशत क्या है?",
+    "oe": [
+      "65%",
+      "68$\\frac{1}{3}$\\%",
+      "51$\\frac{2}{3}$\\%",
+      "72%"
+    ],
+    "oh": [
+      "65%",
+      "68$\\frac{1}{3}$\\%",
+      "51$\\frac{2}{3}$\\%",
+      "72%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Percentage Average Method):\nStep 1: प्रत्येक बोतल में सेब के रस का प्रतिशत निकालें:\n- बोतल 1: 100% - 30% = 70% सेब का रस\n- बोतल 2: 100% - 40% = 60% सेब का रस\n- बोतल 3: 100% - 25% = 75% सेब का रस\nStep 2: चूँकि तीनों बोतलों की क्षमता समान है, अतः मिश्रण में सेब के रस का प्रतिशत तीनों के प्रतिशत का साधारण औसत होगा:\nऔसत% = (70% + 60% + 75%) / 3 = 205% / 3 = 68$\\frac{1}{3}$%.\nअतः सही विकल्प  68 1/3% है।\n\nMethod 2 (Value Assumption Method):\nStep 1: माना प्रत्येक बोतल की क्षमता = 100 मिलीलीटर (कुल = 300 मिलीलीटर)।\nStep 2: सेब का कुल रस = 70 + 60 + 75 = 205 मिलीलीटर।\nStep 3: प्रतिशत = (205 / 300) * 100% = 205 / 3% = 68$\\frac{1}{3}$%.\nअतः सही उत्तर '68$\\frac{1}{3}$\\%' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_9",
+    "qe": "An alloy contains the metals A, B and C in the ratio 2 : 3 : 1 and another contains the metals B, C and D in the ratio 5 : 4 : 3. If equal weights of both alloys are mixed together to form a third alloy, then how much part of the metal B is in new alloy?",
+    "qh": "एक मिश्र धातु में धातु A, B और C 2 : 3 : 1 के अनुपात में हैं और दूसरी में धातु B, C और D 5 : 4 : 3 के अनुपात में हैं। यदि दोनों मिश्र धातुओं के समान भार को मिलाकर एक तीसरी मिश्र धातु बनाई जाती है, तो नई मिश्र धातु में धातु B का कितना भाग है?",
+    "oe": [
+      "$\\frac{1}{8}$",
+      "$\\frac{1}{6}$",
+      "$\\frac{3}{24}$",
+      "$\\frac{11}{24}$"
+    ],
+    "oh": [
+      "$\\frac{1}{8}$",
+      "$\\frac{1}{6}$",
+      "$\\frac{3}{24}$",
+      "$\\frac{11}{24}$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equal Weight LCM Method):\nStep 1: पहली मिश्र धातु में कुल इकाइयाँ = 2 + 3 + 1 = 6 इकाइयाँ।\nदूसरी मिश्र धातु में कुल इकाइयाँ = 5 + 4 + 3 = 12 इकाइयाँ।\nStep 2: दोनों का समान भार लेने के लिए 6 और 12 का ल.स.प. (LCM) = 12 इकाइयाँ प्रत्येक लें:\n- पहली मिश्र धातु (12 इकाइयाँ, 2 से गुणा): A = 4, B = 6, C = 2 इकाइयाँ।\n- दूसरी मिश्र धातु (12 इकाइयाँ, 1 से गुणा): B = 5, C = 4, D = 3 इकाइयाँ।\nStep 3: नई मिश्र धातु का कुल भार = 12 + 12 = 24 इकाइयाँ।\nनई मिश्र धातु में धातु B का कुल भार = 6 + 5 = 11 इकाइयाँ।\nStep 4: नई मिश्र धातु में धातु B का भाग:\nभाग = 11 / 24.\nअतः सही विकल्प  11/24 है।\n\nMethod 2 (Fraction Addition Method):\nStep 1: पहली मिश्र धातु में B का अंश = 3 / 6 = 1 / 2.\nदूसरी मिश्र धातु में B का अंश = 5 / 12.\nStep 2: समान भार मिलाने पर औसत अंश = (1/2 + 5/12) / 2 = (11/12) / 2 = 11 / 24.\nअतः सही उत्तर '$\\frac{11}{24}$' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_10",
+    "qe": "A milk vendor has 2 vessels of milk and water. The first contains 80% milk and the rest is water. The second contains 50% milk. How much mixture (in L) should he mix from each of the vessels so as to get 9 litres of mixture such that the ratio of water to milk is 1 : 2? (Write your answer in the order of vessel 1 and vessel 2)",
+    "qh": "एक दूध विक्रेता के पास दूध और पानी के 2 बर्तन हैं। पहले में 80% दूध है और शेष पानी है। दूसरे में 50% दूध है। उसे प्रत्येक बर्तन से कितना मिश्रण (लीटर में) मिलाना चाहिए ताकि 9 लीटर मिश्रण प्राप्त हो सके जिसमें पानी और दूध का अनुपात 1 : 2 हो? (अपना उत्तर बर्तन 1 और बर्तन 2 के क्रम में लिखें)",
+    "oe": [
+      "6 : 3",
+      "4 : 5",
+      "5 : 4",
+      "3 : 6"
+    ],
+    "oh": [
+      "6 : 3",
+      "4 : 5",
+      "5 : 4",
+      "3 : 6"
+    ],
+    "a": 2,
+    "e": "Method 1 (Alligation on Milk Percentage Method):\nStep 1: बर्तन 1 में दूध = 80%, बर्तन 2 में दूध = 50%.\nStep 2: परिणामी मिश्रण में पानी : दूध = 1 : 2 ==> दूध का अंश = 2 / (1 + 2) = 2 / 3.\nप्रतिशत में दूध = (2 / 3) * 100% = 200 / 3% = 66$\\frac{2}{3}$%.\nStep 3: पृथक्करण (Alligation) नियम लागू करने पर:\n(200/3 - 50) : (80 - 200/3)\n= (50 / 3) : (40 / 3) = 50 : 40 = 5 : 4.\nStep 4: दोनों बर्तनों की मात्रा का अनुपात = 5 : 4 (कुल 9 इकाइयाँ)।\nचूँकि कुल मिश्रण 9 लीटर है, अतः:\nबर्तन 1 = 5 लीटर, बर्तन 2 = 4 लीटर (अनुपात 5 : 4).\nअतः सही विकल्प  5 : 4 है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना बर्तन 1 से x लीटर और बर्तन 2 से (9 - x) लीटर लिया जाता है।\n0.80x + 0.50(9 - x) = (2 / 3) * 9 = 6.\n0.80x + 4.5 - 0.50x = 6 ==> 0.30x = 1.5 ==> x = 5 लीटर।\nबर्तन 2 = 9 - 5 = 4 लीटर ==> 5 : 4.\nअतः सही उत्तर '5 : 4' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_11",
+    "qe": "There are 160 multiple choice questions in a test. 4 marks are allotted for correct answer and 1 mark is deducted for a wrong answer or un-attempted question from the total score of correct answers. If a candidate scored 400 marks in the test, how many question did he answer correctly?",
+    "qh": "एक परीक्षा में 160 बहुविकल्पीय प्रश्न हैं। सही उत्तर के लिए 4 अंक दिए जाते हैं और गलत उत्तर या अनुत्तरित प्रश्न के लिए सही उत्तरों के कुल अंकों में से 1 अंक काटा जाता है। यदि किसी उम्मीदवार ने परीक्षा में 400 अंक प्राप्त किए, तो उसने कितने प्रश्नों के सही उत्तर दिए?",
+    "oe": [
+      "110",
+      "115",
+      "112",
+      "120"
+    ],
+    "oh": [
+      "110",
+      "115",
+      "112",
+      "120"
+    ],
+    "a": 2,
+    "e": "Method 1 (Linear Equation Method):\nStep 1: माना सही उत्तर दिए गए प्रश्नों की संख्या = C.\nगलत या अनुत्तरित प्रश्नों की संख्या = 160 - C.\nStep 2: कुल अंक = 400:\n4 * C - 1 * (160 - C) = 400.\nStep 3: समीकरण को हल करने पर:\n4C - 160 + C = 400\n5C = 400 + 160 = 560\nC = 560 / 5 = 112 प्रश्न।\nअतः सही विकल्प  112 है।\n\nMethod 2 (Alligation / Deviation Method):\nStep 1: यदि सभी 160 प्रश्न सही होते, तो अधिकतम अंक = 160 * 4 = 640 अंक।\nStep 2: प्राप्त अंक = 400 अंक (अंकों में कुल कमी = 640 - 400 = 240 अंक)।\nStep 3: प्रत्येक गलत प्रश्न के कारण होने वाली हानि = 4 (जो नहीं मिले) + 1 (ऋणात्मक) = 5 अंक।\nStep 4: गलत/अनुत्तरित प्रश्नों की संख्या = 240 / 5 = 48 प्रश्न।\nसही उत्तर दिए गए प्रश्न = 160 - 48 = 112 प्रश्न।\nअतः सही उत्तर '112' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_12",
+    "qe": "The cost of 3 kg of rice is ₹180. The cost of 8 kg of rice is equal to that of 5 kg of pulse. The cost of 15 kg of pulses is equal to that of 2 kg of tea. The cost of 3 kg of tea is equal to that of 6 kg of walnuts. What is the cost (in ₹) of 10 kg of walnuts?",
+    "qh": "3 किग्रा चावल का मूल्य ₹180 है। 8 किग्रा चावल का मूल्य 5 किग्रा दाल के बराबर है। 15 किग्रा दाल का मूल्य 2 किग्रा चाय के बराबर है। 3 किग्रा चाय का मूल्य 6 किग्रा अखरोट के बराबर है। 10 किग्रा अखरोट का मूल्य (₹ में) क्या है?",
+    "oe": [
+      "2400",
+      "3200",
+      "2800",
+      "3600"
+    ],
+    "oh": [
+      "2400",
+      "3200",
+      "2800",
+      "3600"
+    ],
+    "a": 3,
+    "e": "Method 1 (Step-by-Step Substitution Method):\nStep 1: 1 किग्रा चावल का मूल्य = 180 / 3 = ₹60/किग्रा।\nStep 2: 5 किग्रा दाल = 8 किग्रा चावल = 8 * 60 = ₹480.\n1 किग्रा दाल = 480 / 5 = ₹96/किग्रा।\nStep 3: 2 किग्रा चाय = 15 किग्रा दाल = 15 * 96 = ₹1,440.\n1 किग्रा चाय = 1,440 / 2 = ₹720/किग्रा।\nStep 4: 6 किग्रा अखरोट = 3 किग्रा चाय = 3 * 720 = ₹2,160.\n1 किग्रा अखरोट = 2,160 / 6 = ₹360/किग्रा।\nStep 5: 10 किग्रा अखरोट का मूल्य:\nमूल्य = 10 * 360 = ₹3,600.\nअतः सही विकल्प  3600 है।\n\nMethod 2 (Chain Rule Method):\nStep 1: 10 kg अखरोट = 10 * (3 kg चाय / 6) = 5 kg चाय।\n5 kg चाय = 5 * (15 kg दाल / 2) = 37.5 kg दाल।\n37.5 kg दाल = 37.5 * (8 kg चावल / 5) = 60 kg चावल।\nStep 2: 60 kg चावल का मूल्य = 60 * (180 / 3) = 60 * 60 = ₹3,600.\nअतः सही उत्तर '3600' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_13",
+    "qe": "In an experiment, it was observed that metal A is 19 times heavier than water and metal B is 9 times heavier than water. In what ratio metal A and B mixed so that the mixture thus obtained be 15 times heavier than water?",
+    "qh": "एक प्रयोग में यह देखा गया कि धातु A पानी से 19 गुना भारी है और धातु B पानी से 9 गुना भारी है। धातु A और B को किस अनुपात में मिलाया जाए ताकि इस प्रकार प्राप्त मिश्रण पानी से 15 गुना भारी हो?",
+    "oe": [
+      "2 : 3",
+      "1 : 3",
+      "3 : 1",
+      "3 : 2"
+    ],
+    "oh": [
+      "2 : 3",
+      "1 : 3",
+      "3 : 1",
+      "3 : 2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alligation Method):\nStep 1: धातु A का आपेक्षिक घनत्व = 19, धातु B का आपेक्षिक घनत्व = 9, मिश्रण का आपेक्षिक घनत्व = 15.\nStep 2: पृथक्करण (Alligation) नियम लागू करने पर:\n(15 - 9) : (19 - 15) = 6 : 4.\nStep 3: अनुपात को सरल करने पर:\n6 : 4 = 3 : 2.\nअतः धातु A और B को 3 : 2 के अनुपात में मिलाया जाना चाहिए।\nअतः सही विकल्प  3 : 2 है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना A की मात्रा = a और B की मात्रा = b.\n19a + 9b = 15(a + b)\n19a + 9b = 15a + 15b ==> 4a = 6b ==> a / b = 6 / 4 = 3 / 2.\nअतः सही उत्तर '3 : 2' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_14",
+    "qe": "Two vessels A and B, each with the capacity of 8 litres, are full of solutions of acid and water. The ratio of acid and water in Vessel A is 3 : 1 and that in case of Vessel B is 5 : 3. Two litres of solution are taken out from B and added to A. After mixing thoroughly, 2 litres of solution are taken out from A and added to B. What is the ratio of acid and water in the final solution in B?",
+    "qh": "दो बर्तन A और B, प्रत्येक की क्षमता 8 लीटर है, अम्ल और पानी के घोल से भरे हैं। बर्तन A में अम्ल और पानी का अनुपात 3 : 1 है और बर्तन B में 5 : 3 है। B से दो लीटर घोल निकाला जाता है और A में मिलाया जाता है। अच्छी तरह मिलाने के बाद, A से 2 लीटर घोल निकाला जाता है और B में मिलाया जाता है। B में अंतिम घोल में अम्ल और पानी का अनुपात क्या है?",
+    "oe": [
+      "11 : 8",
+      "13 : 7",
+      "7 : 3",
+      "9 : 4"
+    ],
+    "oh": [
+      "11 : 8",
+      "13 : 7",
+      "7 : 3",
+      "9 : 4"
+    ],
+    "a": 1,
+    "e": "Method 1 (Component Tracking Step-by-Step Method):\nStep 1: प्रारंभिक मात्रा (8 लीटर प्रत्येक):\n- बर्तन A (3 : 1, कुल 4 इकाइयाँ): अम्ल = 6 लीटर, पानी = 2 लीटर।\n- बर्तन B (5 : 3, कुल 8 इकाइयाँ): अम्ल = 5 लीटर, पानी = 3 लीटर।\nStep 2: B से 2 लीटर घोल निकालकर A में मिलाया जाता है:\n- B से स्थानांतरित (2 L): अम्ल = 2 * (5/8) = 1.25 लीटर, पानी = 2 * (3/8) = 0.75 लीटर।\n- B में शेष (6 L): अम्ल = 5 - 1.25 = 3.75 लीटर, पानी = 3 - 0.75 = 2.25 लीटर।\n- बर्तन A में कुल घटक (8 + 2 = 10 L):\nअम्ल = 6 + 1.25 = 7.25 लीटर, पानी = 2 + 0.75 = 2.75 लीटर।\nStep 3: A से 2 लीटर घोल निकालकर B में मिलाया जाता है:\n- A में 2 लीटर में अम्ल = 2 * (7.25 / 10) = 1.45 लीटर।\n- A में 2 लीटर में पानी = 2 * (2.75 / 10) = 0.55 लीटर।\nStep 4: बर्तन B में अंतिम घटक (कुल 8 L):\n- अंतिम अम्ल = 3.75 + 1.45 = 5.20 लीटर।\n- अंतिम पानी = 2.25 + 0.55 = 2.80 लीटर।\nStep 5: B में अम्ल और पानी का अंतिम अनुपात:\nअम्ल : पानी = 5.20 : 2.80 = 52 : 28 = 13 : 7 (4 से विभाजित करने पर)।\nअतः सही विकल्प  13 : 7 है।\n\nMethod 2 (Fractional Simplification Method):\nStep 1: अंतिम B में अम्ल = 15/4 + 2*(29/40) = 15/4 + 29/20 = (75 + 29) / 20 = 104 / 20 = 5.2 लीटर।\nStep 2: पानी = 8 - 5.2 = 2.8 लीटर ==> अनुपात = 5.2 : 2.8 = 13 : 7.\nअतः सही उत्तर '13 : 7' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_15",
+    "qe": "An alloy is prepared by mixing three metals A, B and C in the proportion 3 : 4 : 7 by volume. Weights of the same volume of the metals A, B and C are in the ratio 5 : 2 : 6. In 130 kg of the alloy, the weight, in kg of the metal C is:",
+    "qh": "एक मिश्र धातु को आयतन के अनुसार 3 : 4 : 7 के अनुपात में तीन धातुओं A, B और C को मिलाकर तैयार किया जाता है। धातुओं A, B और C के समान आयतन के भार 5 : 2 : 6 के अनुपात में हैं। 130 किग्रा मिश्र धातु में, धातु C का भार (किग्रा में) क्या है:",
+    "oe": [
+      "96",
+      "84",
+      "70",
+      "48"
+    ],
+    "oh": [
+      "96",
+      "84",
+      "70",
+      "48"
+    ],
+    "a": 1,
+    "e": "Method 1 (Mass = Volume * Density Ratio Method):\nStep 1: धातुओं का कुल भार अनुपात = (आयतन का अनुपात * प्रति इकाई आयतन भार का अनुपात):\nभार अनुपात A : B : C = (3 * 5) : (4 * 2) : (7 * 6)\n= 15 : 8 : 42.\nStep 2: कुल अनुपाती इकाइयाँ = 15 + 8 + 42 = 65 इकाइयाँ।\nStep 3: दिया गया मिश्र धातु का कुल भार = 130 किग्रा:\n65 इकाइयाँ = 130 किग्रा ==> 1 इकाई = 130 / 65 = 2 किग्रा।\nStep 4: मिश्र धातु में धातु C का भार (42 इकाइयाँ):\nभार = 42 * 2 = 84 किग्रा।\nअतः सही विकल्प  84 है।\n\nMethod 2 (Fractional Method):\nStep 1: धातु C का अंश = 42 / (15 + 8 + 42) = 42 / 65.\nStep 2: धातु C का भार = (42 / 65) * 130 = 42 * 2 = 84 किग्रा।\nअतः सही उत्तर '84' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_16",
+    "qe": "A solution contains 75L petrol, 110L diesel and 100L kerosene. 30% of this solution is replaced by kerosene and then 2/7 of the obtained solution is replaced by diesel. Find the quantity of petrol in the mixture now.",
+    "qh": "एक घोल में 75L पेट्रोल, 110L डीजल और 100L केरोसिन है। इस घोल का 30% केरोसिन से बदल दिया जाता है और फिर प्राप्त घोल का 2/7 भाग डीजल से बदल दिया जाता है। अब मिश्रण में पेट्रोल की मात्रा ज्ञात कीजिए।",
+    "oe": [
+      "40.5 L",
+      "50 L",
+      "37.5 L",
+      "32.5 L"
+    ],
+    "oh": [
+      "40.5 L",
+      "50 L",
+      "37.5 L",
+      "32.5 L"
+    ],
+    "a": 2,
+    "e": "Method 1 (Tracking Petrol Fraction Method):\nStep 1: प्रारंभिक पेट्रोल की मात्रा = 75 लीटर।\nध्यान दें कि दोनों प्रतिस्थापनों में केवल केरोसिन और डीजल मिलाए गए हैं, पेट्रोल नहीं मिलाया गया है। अतः पेट्रोल की मात्रा प्रत्येक निष्कासन के अनुपात में सीधे कम होगी।\nStep 2: पहला चरण (30% घोल निकाला गया):\nशेष पेट्रोल का अंश = 100% - 30% = 70% = 0.70.\nपहले चरण के बाद शेष पेट्रोल = 75 * 0.70 = 52.5 लीटर।\nStep 3: दूसरा चरण (2/7 घोल निकाला गया):\nशेष पेट्रोल का अंश = 1 - 2/7 = 5/7.\nदूसरे चरण के बाद शेष पेट्रोल = 52.5 * (5 / 7) = 7.5 * 5 = 37.5 लीटर।\nअतः सही विकल्प  37.5 L है।\n\nMethod 2 (Combined Successive Multiplier Method):\nStep 1: अंतिम पेट्रोल = प्रारंभिक पेट्रोल * (1 - 30/100) * (1 - 2/7)\n= 75 * (7 / 10) * (5 / 7).\nStep 2: 7 से 7 निरस्त करने पर:\n= 75 * (5 / 10) = 75 * (1 / 2) = 37.5 लीटर।\nअतः सही उत्तर '37.5 L' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

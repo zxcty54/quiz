@@ -1,0 +1,173 @@
+[
+  {
+    "p_id": "pointing_1",
+    "qe": "Pointing to a woman, a man says, 'Her mother is the only daughter-in-law of the grandfather of my son'. How is the woman related to the man?",
+    "qh": "एक महिला की ओर इशारा करते हुए एक पुरुष कहता है, 'उसकी माँ मेरे पुत्र के दादा की एकमात्र बहू है'। वह महिला उस पुरुष से किस प्रकार संबंधित है?",
+    "oe": [
+      "Daughter",
+      "Wife",
+      "Mother",
+      "Sister"
+    ],
+    "oh": [
+      "Daughter",
+      "Wife",
+      "Mother",
+      "Sister"
+    ],
+    "a": 0,
+    "e": "Method 1 (Backtracking Chain Shortcut Trick):\nStep 1: Purush ke kathan ko piche se decode karein:\n- 'Grandfather of my son' (मेरे पुत्र के दादा) = Man ke pita (My father).\n- 'The only daughter-in-law of my father' (मेरे पिता की एकमात्र बहू) = Man ki patni (My wife).\nStep 2: Ab aage ka hissa jodein:\n- 'Her mother' = 'My wife' (Us mahila ki maa meri patni hai).\nStep 3: Yadi mahila ki maa us purush ki patni hai, toh vah mahila us purush ki beti (Daughter) hogi.\nCorrect option  Daughter hai.\n\nMethod 2 (Generation & Gender Analysis):\nMan [Gen +1] ki patni [Gen +1] us mahila [Gen 0] ki mata hai. Atah mahila Man ki putri (Daughter) hai.\nSahi uttar 'Daughter' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pointing_2",
+    "qe": "Pointing to a woman, a man says, 'Her father is the grandfather of my son'. How is the woman related to the man?",
+    "qh": "एक महिला की ओर इशारा करते हुए एक पुरुष कहता है, 'उसके पिता मेरे पुत्र के दादा हैं'। वह महिला उस पुरुष से किस प्रकार संबंधित है?",
+    "oe": [
+      "Sister",
+      "Mother",
+      "Daughter",
+      "Wife"
+    ],
+    "oh": [
+      "Sister",
+      "Mother",
+      "Daughter",
+      "Wife"
+    ],
+    "a": 0,
+    "e": "Method 1 (Self-Relationship Deduction Shortcut):\nStep 1: Purush ke perspective se rishta decode karein:\n- 'Grandfather of my son' (मेरे पुत्र के दादा) = Man ke pita (My father).\nStep 2: Ab statement ko dekhein:\n- 'Her father is my father' (Us mahila ke pita mere pita hain).\nStep 3: Dono ke pita samaan hain aur vah ek mahila hai, atah vah mahila us purush ki behan (Sister) hogi.\n(Note: Yadi patni hoti toh 'Nanaji' ka sandarbh banta, kintu grandfather of my son se pita ka seedha bodh behan ki or ishara karta hai, jo vikalp A me diya hai).\nCorrect option  Sister hai.\n\nMethod 2 (Family Tree Inspection):\nFather [Gen +2] -> Children: Man [Gen +1] and Woman [Gen +1]. Dono ek hi pita ki santaan hain, isliye mahila purush ki Sister hai.\nSahi uttar 'Sister' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pointing_3",
+    "qe": "Pointing to a man, a woman says, 'His mother is the mother of the father of my son'. How is the man related to the woman?",
+    "qh": "एक पुरुष की ओर इशारा करते हुए एक महिला कहती है, 'उसकी माँ मेरे पुत्र के पिता की माँ है'। वह पुरुष उस महिला से किस प्रकार संबंधित है?",
+    "oe": [
+      "Brother",
+      "Husband",
+      "Father",
+      "Husband or Brother-in-law"
+    ],
+    "oh": [
+      "Brother",
+      "Husband",
+      "Father",
+      "Husband or Brother-in-law"
+    ],
+    "a": 3,
+    "e": "Method 1 (Dual Possibility Identification Shortcut):\nStep 1: Mahila ke kathan ko todein:\n- 'Father of my son' (मेरे पुत्र के पिता) = Mahila ka pati (My husband).\n- 'Mother of the father of my son' = Mahila ki saas (Mother-in-law).\nStep 2: Ab purush ke sambandh ko dekhein:\n- 'His mother is my mother-in-law' (Us purush ki maa meri saas hai).\nStep 3: Yadi purush ki maa mahila ki saas hai, toh vah purush mahila ka pati (husband) bhi ho sakta hai ya pati ka bhai (devar/jeth - brother-in-law) bhi ho sakta hai.\nCorrect option  Husband or Brother-in-law hai.\n\nMethod 2 (Option Elimination Method):\nPrashn me 'only son' shabd nahi diya gaya hai, isliye pati ya devar dono sambhav hain. Atah nishchit roop se 'Husband or Brother-in-law' sahi hai.\nSahi uttar 'Husband or Brother-in-law' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pointing_4",
+    "qe": "Pointing to a man, a woman says, 'He is the only son of the father of the father of my son'. How is the man related to the woman?",
+    "qh": "एक पुरुष की ओर इशारा करते हुए एक महिला कहती है, 'वह मेरे पुत्र के पिता के पिता का एकमात्र पुत्र है'। वह पुरुष उस महिला से किस प्रकार संबंधित है?",
+    "oe": [
+      "Brother",
+      "Father",
+      "Husband",
+      "Son"
+    ],
+    "oh": [
+      "Brother",
+      "Father",
+      "Husband",
+      "Son"
+    ],
+    "a": 2,
+    "e": "Method 1 ('Only Son' Elimination Shortcut):\nStep 1: Mahila ke shabdon ko kramashah hal karein:\n- 'Father of my son' (मेरे पुत्र के पिता) = Mahila ka pati (Husband).\n- 'Father of my husband' = Mahila ke sasur (Father-in-law).\n- 'The only son of my father-in-law' (मेरे ससुर का एकमात्र पुत्र) = Mahila ka pati swayam (My husband).\nStep 2: Atah vah purush mahila ka pati (Husband) hai.\nCorrect option  Husband hai.\n\nMethod 2 (Direct Mapping):\nSon's Father -> Husband -> Husband's Father -> Father-in-law -> Only son -> Husband. Direct rishta Husband ka nikalta hai.\nSahi uttar 'Husband' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pointing_5",
+    "qe": "Pointing to a woman, a man says, 'Her brother is the brother of the grandmother of the son of my wife'. How is the woman related to the man?",
+    "qh": "एक महिला की ओर इशारा करते हुए एक पुरुष कहता है, 'उसका भाई मेरी पत्नी के पुत्र की दादी के भाई हैं'। वह महिला उस पुरुष से किस प्रकार संबंधित है?",
+    "oe": [
+      "Maternal aunt",
+      "Sister",
+      "Daughter",
+      "Mother or Maternal aunt"
+    ],
+    "oh": [
+      "Maternal aunt",
+      "Sister",
+      "Daughter",
+      "Mother or Maternal aunt"
+    ],
+    "a": 3,
+    "e": "Method 1 (Multi-Step Reduction Shortcut):\nStep 1: Kathan ko decode karein:\n- 'Son of my wife' (मेरी पत्नी का पुत्र) = Mera putra (My son).\n- 'Grandmother of my son' (मेरे पुत्र की दादी) = Meri maa (My mother).\n- 'Brother of my mother' (मेरी माँ का भाई) = Mera mama (My maternal uncle).\nStep 2: Ab mahila se link karein:\n- 'Her brother is my maternal uncle' (Us mahila ka bhai mera mama hai).\nStep 3: Yadi us mahila ka bhai man ka mama hai, toh vah mahila swayam man ki maa (Mother) bhi ho sakti hai ya uski mausi (Maternal aunt) bhi ho sakti hai.\nCorrect option  Mother or Maternal aunt hai.\n\nMethod 2 (Sibling Classification Method):\nMama ki behan ya toh swayam mata hoti hai ya mausi. Prashn me 'ekmatra' na hone se dono sambhavnaayein hain.\nSahi uttar 'Mother or Maternal aunt' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pointing_6",
+    "qe": "Pointing to a woman, a man says, 'Her mother-in-law is the only daughter-in-law of my son's grandfather'. How is the woman related to the man?",
+    "qh": "एक महिला की ओर इशारा करते हुए एक पुरुष कहता है, 'उसकी सास मेरे पुत्र के दादा की एकमात्र बहू है'। वह महिला उस पुरुष से किस प्रकार संबंधित है?",
+    "oe": [
+      "Daughter-in-law",
+      "Daughter",
+      "Wife",
+      "Mother"
+    ],
+    "oh": [
+      "Daughter-in-law",
+      "Daughter",
+      "Wife",
+      "Mother"
+    ],
+    "a": 0,
+    "e": "Method 1 (Successive In-Law Shortcut Trick):\nStep 1: Purush ke perspective se rishta nikalein:\n- 'Grandfather of my son' = Man ke pita (My father).\n- 'The only daughter-in-law of my father' = Man ki patni (My wife).\nStep 2: Ab mahila ke sambandh ko dekhein:\n- 'Her mother-in-law' = 'My wife' (Us mahila ki saas meri patni hai).\nStep 3: Yadi kisi mahila ki saas purush ki patni hai, toh vah purush us mahila ka sasur (father-in-law) hoga, aur vah mahila us purush ki bahu (Daughter-in-law) hogi.\nCorrect option  Daughter-in-law hai.\n\nMethod 2 (Generation Flow Check):\nMan & Wife [Gen +1] -> Son & Daughter-in-law [Gen 0]. Mahila ki saas Man ki patni hai, atah mahila Man ki bahu (Daughter-in-law) hai.\nSahi uttar 'Daughter-in-law' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pointing_7",
+    "qe": "A man's mother-in-law and a woman's mother-in-law are mother and daughter respectively. Then how is the man related to the woman?",
+    "qh": "एक पुरुष की सास और एक महिला की सास क्रमशः माँ और बेटी हैं। तो वह पुरुष उस महिला से किस प्रकार संबंधित है?",
+    "oe": [
+      "Father",
+      "Son",
+      "Father-in-law",
+      "Grand father"
+    ],
+    "oh": [
+      "Father",
+      "Son",
+      "Father-in-law",
+      "Grand father"
+    ],
+    "a": 2,
+    "e": "Method 1 (Two-Generation In-Law Mapping Shortcut):\nStep 1: Sambandh ko generation me baantein:\n- Man ki Mother-in-law (Mata) = Mahila ki Mother-in-law ki maa hai.\n- Iska arth hai ki Mahila ki Mother-in-law (Beti) = Man ki patni (Wife) hai.\nStep 2: Yadi mahila ki saas us man ki patni hai, toh man us mahila ke pati ka pita (Father) hoga.\nStep 3: Pati ka pita mahila ka sasur (Father-in-law) hota hai.\nCorrect option  Father-in-law hai.\n\nMethod 2 (Diagrammatic Verification):\nMan ki patni = Mahila ki saas. Patni jiske liye saas hai, uske liye pati sasur (Father-in-law) hoga.\nSahi uttar 'Father-in-law' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pointing_8",
+    "qe": "Pointing to a boy, a lady says, 'My maternal uncle and the maternal uncle of his maternal uncle are same'. Then, how is the lady related to the boy?",
+    "qh": "एक लड़के की ओर इशारा करते हुए एक महिला कहती है, 'मेरे मामा और उसके मामा के मामा एक ही हैं'। तो वह महिला उस लड़के से किस प्रकार संबंधित है?",
+    "oe": [
+      "Sister",
+      "Mother",
+      "Maternal aunt",
+      "Mother or maternal aunt"
+    ],
+    "oh": [
+      "Sister",
+      "Mother",
+      "Maternal aunt",
+      "Mother or maternal aunt"
+    ],
+    "a": 3,
+    "e": "Method 1 (Maternal Hierarchy Shortcut Trick):\nStep 1: 'The maternal uncle of boy's maternal uncle' = Ladke ke nana ka bhai (Ladke ki naani ka bhai).\nStep 2: Lady kehti hai ki uske mama aur ladke ki naani ke bhai ek hi hain:\n- Iska matlab lady ki maa aur ladke ki naani ya toh ek hi vyakti hain ya aapas me behanein hain.\nStep 3: Do sambhavnaayein banti hain:\n- Case I: Yadi lady ki maa hi ladke ki naani hai, toh lady us ladke ki maa (Mother) hogi.\n- Case II: Yadi lady ki maa ladke ki naani ki behan hai, toh lady ladke ki mausi (Maternal aunt) hogi.\nAtah lady us ladke ki Mother ya Maternal aunt hogi.\nCorrect option  Mother or maternal aunt hai.\n\nMethod 2 (Case Verification Method):\nBoy's maternal uncle's maternal uncle = Maternal grandmother's brother. Lady's maternal uncle = Lady's mother's brother. Atah Lady's mother = Boy's maternal grandmother (ya uski behan). 'Mother or maternal aunt' dono ko cover karta hai.\nSahi uttar 'Mother or maternal aunt' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pointing_9",
+    "qe": "Pointing to a man, a woman says, 'The sister of his son is my mother-in-law'. What is the relation of woman's husband to that man?",
+    "qh": "एक पुरुष की ओर इशारा करते हुए एक महिला कहती है, 'उसके पुत्र की बहन मेरी सास है'। उस महिला के पति का उस पुरुष से क्या संबंध है?",
+    "oe": [
+      "Grand son",
+      "Grand father",
+      "Father",
+      "Uncle"
+    ],
+    "oh": [
+      "Grand son",
+      "Grand father",
+      "Father",
+      "Uncle"
+    ],
+    "a": 0,
+    "e": "Method 1 (Reverse Family Generation Shortcut):\nStep 1: Man ke bachhon ko decode karein:\n- 'Sister of man's son' (पुरुष के पुत्र की बहन) = Us purush ki beti (Man's daughter).\nStep 2: Ab aage ka sambandh dekhein:\n- 'Man's daughter = Woman's mother-in-law' (Us purush ki beti mahila ki saas hai).\nStep 3: Yadi us purush ki beti mahila ki saas hai, toh mahila ka pati us beti ka beta hoga.\nStep 4: Beti ka beta nana ke liye 'Grandson' (नाती / दोहिता / Grand son) hota hai.\nCorrect option  Grand son hai.\n\nMethod 2 (Generation Level Method):\nMan [Gen +2] -> Daughter (Mother-in-law) [Gen +1] -> Husband of woman [Gen 0]. Man ke liye Gen 0 ka vyakti Grand son hai.\nSahi uttar 'Grand son' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

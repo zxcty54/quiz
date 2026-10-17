@@ -1,0 +1,306 @@
+[
+  {
+    "p_id": "installment_1",
+    "qe": "Loan is to be repaid in two equal yearly installments. If the rate of interest is 10% per annum, compounded annually, and each installment is ₹6,897, then find the total interest charged.",
+    "qh": "ऋण को दो समान वार्षिक किस्तों में चुकाया जाना है। यदि ब्याज की दर 10% प्रति वर्ष वार्षिक रूप से संयोजित है, और प्रत्येक किस्त ₹6,897 है, तो लिया गया कुल ब्याज ज्ञात कीजिए।",
+    "oe": [
+      "₹1,644",
+      "₹1,824",
+      "₹1,724",
+      "₹1,844"
+    ],
+    "oh": [
+      "₹1,644",
+      "₹1,824",
+      "₹1,724",
+      "₹1,844"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: दर = 10% = 1/10 (अनुपात: 10 से 11).\nकिस्तों को समान बनाने के लिए (11^2 = 121 इकाइयाँ प्रत्येक किस्त):\n- वर्ष 1 का वर्तमान मूल्य = 10 * 11 = 110 इकाइयाँ\n- वर्ष 2 का वर्तमान मूल्य = 10^2 = 100 इकाइयाँ\nकुल मूलधन (PV) = 110 + 100 = 210 इकाइयाँ।\nStep 2: 2 किस्तों में कुल भुगतान = 2 * 121 = 242 इकाइयाँ।\nकुल ब्याज = 242 - 210 = 32 इकाइयाँ।\nStep 3: प्रत्येक किस्त = 121 इकाइयाँ = ₹6,897.\n1 इकाई = 6,897 / 121 = ₹57.\nStep 4: कुल ब्याज = 32 * 57 = ₹1,824.\nअतः सही विकल्प  ₹1,824 है।\n\nMethod 2 (Present Value Formula Method):\nStep 1: P = [6,897 / 1.1] + [6,897 / 1.21] = 6,270 + 5,700 = ₹11,970.\nStep 2: कुल भुगतान = 2 * 6,897 = ₹13,794.\nStep 3: कुल ब्याज = 13,794 - 11,970 = ₹1,824.\nअतः सही उत्तर '₹1,824' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_2",
+    "qe": "A loan of ₹2,550 is to be paid back in two equal half-yearly installments. How much is each installment if the interest is compounded half-yearly at 8% p.a.?",
+    "qh": "₹2,550 का ऋण दो समान अर्धवार्षिक किस्तों में चुकाया जाना है। यदि ब्याज 8% प्रति वर्ष की दर से अर्धवार्षिक संयोजित होता है, तो प्रत्येक किस्त कितनी होगी?",
+    "oe": [
+      "₹1250",
+      "₹1352",
+      "₹1745",
+      "₹1457"
+    ],
+    "oh": [
+      "₹1250",
+      "₹1352",
+      "₹1745",
+      "₹1457"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: अर्धवार्षिक दर r = 8% / 2 = 4% = 1/25 (अनुपात: 25 से 26).\nकिस्त को 26^2 = 676 इकाइयाँ मानेंगे:\n- छमाही 1 का वर्तमान मूल्य = 25 * 26 = 650 इकाइयाँ\n- छमाही 2 का वर्तमान मूल्य = 25^2 = 625 इकाइयाँ\nकुल मूलधन = 650 + 625 = 1,275 इकाइयाँ।\nStep 2: दिया गया ऋण = 1,275 इकाइयाँ = ₹2,550.\n1 इकाई = 2,550 / 1,275 = ₹2.\nStep 3: प्रत्येक किस्त (676 इकाइयाँ) = 676 * 2 = ₹1,352.\nअतः सही विकल्प  ₹1352 है।\n\nMethod 2 (Formula Method):\nStep 1: P = x / (1 + r/100) + x / (1 + r/100)^2.\n2,550 = x * (25/26 + 625/676) = x * (1,275 / 676).\nStep 2: x = (2,550 * 676) / 1,275 = 2 * 676 = ₹1,352.\nअतः सही उत्तर '₹1352' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_3",
+    "qe": "An item is bought on a condition that three equal installments of ₹3,993 are to be paid at a rate of 10% compound interest, compounded annually. The cost of the item is:",
+    "qh": "एक वस्तु इस शर्त पर खरीदी जाती है कि 10% वार्षिक चक्रवृद्धि ब्याज की दर से ₹3,993 की तीन समान किस्तें दी जाएंगी। वस्तु का नकद मूल्य (लागत) क्या है:",
+    "oe": [
+      "₹10,000",
+      "₹9,050",
+      "₹9,590",
+      "₹9,930"
+    ],
+    "oh": [
+      "₹10,000",
+      "₹9,050",
+      "₹9,590",
+      "₹9,930"
+    ],
+    "a": 3,
+    "e": "Method 1 (Present Value Sum Method):\nStep 1: वस्तु की कुल लागत तीनों किस्तों के वर्तमान मूल्यों (Present Values) का योग होगी:\nCost = [x / (1.1)] + [x / (1.1)^2] + [x / (1.1)^3].\nStep 2: x = ₹3,993 का मान रखने पर:\nCost = (3,993 / 1.1) + (3,993 / 1.21) + (3,993 / 1.331)\n= 3,630 + 3,300 + 3,000 = ₹9,930.\nअतः सही विकल्प  ₹9,930 है।\n\nMethod 2 (Ratio Method):\nStep 1: 10% = 1/10. प्रत्येक किस्त = 11^3 = 1,331 इकाइयाँ।\n- PV_1 = 10 * 11^2 = 1,210 इकाइयाँ\n- PV_2 = 10^2 * 11 = 1,100 इकाइयाँ\n- PV_3 = 10^3 = 1,000 इकाइयाँ\nकुल लागत = 1,210 + 1,100 + 1,000 = 3,310 इकाइयाँ।\nStep 2: 1,331 इकाइयाँ = ₹3,993 ==> 1 इकाई = ₹3.\nStep 3: कुल लागत = 3,310 * 3 = ₹9,930.\nअतः सही उत्तर '₹9,930' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_4",
+    "qe": "A loan of ₹8,925 is to be paid back in two equal half-yearly installments. How much is each installment if the interest is compounded half-yearly at 8% per annum?",
+    "qh": "₹8,925 का ऋण दो समान अर्धवार्षिक किस्तों में चुकाया जाना है। यदि ब्याज 8% प्रति वर्ष की दर से अर्धवार्षिक संयोजित होता है, तो प्रत्येक किस्त कितनी होगी?",
+    "oe": [
+      "₹4,372",
+      "₹4,732",
+      "₹4,654",
+      "₹4,564"
+    ],
+    "oh": [
+      "₹4,372",
+      "₹4,732",
+      "₹4,654",
+      "₹4,564"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: अर्धवार्षिक दर r = 8% / 2 = 4% = 1/25.\nकिस्त = 26^2 = 676 इकाइयाँ।\n- PV_1 = 25 * 26 = 650 इकाइयाँ\n- PV_2 = 25^2 = 625 इकाइयाँ\nकुल मूलधन = 650 + 625 = 1,275 इकाइयाँ।\nStep 2: दिया गया ऋण = 1,275 इकाइयाँ = ₹8,925.\n1 इकाई = 8,925 / 1,275 = 7.\nStep 3: प्रत्येक किस्त = 676 इकाइयाँ = 676 * 7 = ₹4,732.\nअतः सही विकल्प  ₹4,732 है।\n\nMethod 2 (Formula Method):\nStep 1: 8,925 = x * (1,275 / 676).\nStep 2: x = (8,925 * 676) / 1,275 = 7 * 676 = ₹4,732.\nअतः सही उत्तर '₹4,732' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_5",
+    "qe": "A loan is to be returned in two equal yearly installments. If the rate of interest is 10% p.a., compounded annually and each installment is ₹6534, then the total interest charged (in ₹) is:",
+    "qh": "एक ऋण को दो समान वार्षिक किस्तों में लौटाया जाना है। यदि ब्याज की दर 10% वार्षिक (वार्षिक संयोजन) है और प्रत्येक किस्त ₹6534 है, तो लिया गया कुल ब्याज (₹ में) क्या है:",
+    "oe": [
+      "1728",
+      "1867",
+      "1642",
+      "1579"
+    ],
+    "oh": [
+      "1728",
+      "1867",
+      "1642",
+      "1579"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: दर = 10% = 1/10.\nप्रत्येक किस्त = 11^2 = 121 इकाइयाँ।\n- PV_1 = 10 * 11 = 110 इकाइयाँ\n- PV_2 = 10^2 = 100 इकाइयाँ\nकुल मूलधन = 110 + 100 = 210 इकाइयाँ।\nStep 2: कुल भुगतान = 2 * 121 = 242 इकाइयाँ।\nकुल ब्याज = 242 - 210 = 32 इकाइयाँ।\nStep 3: प्रत्येक किस्त = 121 इकाइयाँ = ₹6,534.\n1 इकाई = 6,534 / 121 = 54.\nStep 4: कुल ब्याज = 32 इकाइयाँ = 32 * 54 = ₹1,728.\nअतः सही विकल्प  1728 है।\n\nMethod 2 (Present Value Method):\nStep 1: P = (6,534 / 1.1) + (6,534 / 1.21) = 5,940 + 5,400 = ₹11,340.\nStep 2: कुल भुगतान = 2 * 6,534 = ₹13,068.\nStep 3: कुल ब्याज = 13,068 - 11,340 = ₹1,728.\nअतः सही उत्तर '1728' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_6",
+    "qe": "A certain loan was returned in two equal half yearly installments each of ₹6,760. If the rate of interest was 8% p.a., compounded yearly, how much was the interest paid on the loan?",
+    "qh": "एक निश्चित ऋण को ₹6,760 की दो समान अर्धवार्षिक किस्तों में चुकाया गया। यदि ब्याज की दर 8% प्रति वर्ष अर्धवार्षिक रूप से संयोजित थी, तो ऋण पर कितना ब्याज चुकाया गया?",
+    "oe": [
+      "₹750",
+      "₹810",
+      "₹790",
+      "₹770"
+    ],
+    "oh": [
+      "₹750",
+      "₹810",
+      "₹790",
+      "₹770"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: अर्धवार्षिक दर r = 8% / 2 = 4% = 1/25.\nप्रत्येक किस्त = 26^2 = 676 इकाइयाँ।\n- PV_1 = 25 * 26 = 650 इकाइयाँ\n- PV_2 = 25^2 = 625 इकाइयाँ\nकुल मूलधन = 650 + 625 = 1,275 इकाइयाँ।\nStep 2: कुल भुगतान = 2 * 676 = 1,352 इकाइयाँ।\nकुल ब्याज = 1,352 - 1,275 = 77 इकाइयाँ।\nStep 3: 676 इकाइयाँ = ₹6,760 ==> 1 इकाई = ₹10.\nStep 4: कुल ब्याज = 77 इकाइयाँ = 77 * 10 = ₹770.\nअतः सही विकल्प  ₹770 है।\n\nMethod 2 (Present Value Method):\nStep 1: P = (6,760 / 1.04) + (6,760 / 1.04^2) = 6,500 + 6,250 = ₹12,750.\nStep 2: कुल भुगतान = 2 * 6,760 = ₹13,520.\nStep 3: ब्याज = 13,520 - 12,750 = ₹770.\nअतः सही उत्तर '₹770' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_7",
+    "qe": "A loan is to be returned in two equal yearly installments. If the rate of interest is 10% p.a. compounded annually and each installment is ₹5,808 then 60% of the total interest (nearest to a ₹) charged in this scheme is:",
+    "qh": "एक ऋण को दो समान वार्षिक किस्तों में लौटाया जाना है। यदि ब्याज की दर 10% वार्षिक रूप से संयोजित है और प्रत्येक किस्त ₹5,808 है, तो इस योजना में लिए गए कुल ब्याज का 60% (निकटतम ₹ में) क्या है:",
+    "oe": [
+      "917",
+      "911",
+      "913",
+      "922"
+    ],
+    "oh": [
+      "917",
+      "911",
+      "913",
+      "922"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: दर = 10% = 1/10.\nप्रत्येक किस्त = 11^2 = 121 इकाइयाँ।\n- कुल मूलधन (PV) = (10 * 11) + 10^2 = 110 + 100 = 210 इकाइयाँ।\n- कुल भुगतान = 2 * 121 = 242 इकाइयाँ।\n- कुल ब्याज = 242 - 210 = 32 इकाइयाँ।\nStep 2: 121 इकाइयाँ = ₹5,808 ==> 1 इकाई = 5,808 / 121 = 48.\nStep 3: कुल ब्याज = 32 * 48 = ₹1,536.\nStep 4: कुल ब्याज का 60% निकालें:\nअभीष्ट मान = 60% of ₹1,536 = 0.60 * 1,536 = ₹921.60 ≈ ₹922.\nअतः सही विकल्प  922 है।\n\nMethod 2 (Present Value Method):\nStep 1: P = (5,808 / 1.1) + (5,808 / 1.21) = 5,280 + 4,800 = ₹10,080.\nStep 2: कुल ब्याज = (2 * 5,808) - 10,080 = 11,616 - 10,080 = ₹1,536.\nStep 3: 60% of 1,536 = ₹921.60 ≈ ₹922.\nअतः सही उत्तर '922' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_8",
+    "qe": "Surekha borrowed a sum of money and returned it in two equal annual installments of ₹5547 each. If the rate of interest was 7 1/2% p.a. compounded yearly, then the total interest paid by her was:",
+    "qh": "सुरेखा ने कुछ धनराशि उधार ली और उसे प्रत्येक ₹5547 की दो समान वार्षिक किस्तों में लौटाया। यदि ब्याज की दर 7 1/2% वार्षिक (वार्षिक संयोजन) थी, तो उसके द्वारा भुगतान किया गया कुल ब्याज क्या था:",
+    "oe": [
+      "₹1,134",
+      "₹1,144",
+      "₹1,124",
+      "₹1,154"
+    ],
+    "oh": [
+      "₹1,134",
+      "₹1,144",
+      "₹1,124",
+      "₹1,154"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: दर R = 7 1/2% = 15/2% = 15 / 200 = 3/40 (अनुपात: 40 से 43).\nप्रत्येक किस्त = 43^2 = 1,849 इकाइयाँ।\n- PV_1 = 40 * 43 = 1,720 इकाइयाँ\n- PV_2 = 40^2 = 1,600 इकाइयाँ\nकुल मूलधन = 1,720 + 1,600 = 3,320 इकाइयाँ।\nStep 2: 2 किस्तों का कुल भुगतान = 2 * 1,849 = 3,698 इकाइयाँ।\nकुल ब्याज = 3,698 - 3,320 = 378 इकाइयाँ।\nStep 3: 1,849 इकाइयाँ = ₹5,547 ==> 1 इकाई = 5,547 / 1,849 = 3.\nStep 4: कुल ब्याज = 378 * 3 = ₹1,134.\nअतः सही विकल्प  ₹1,134 है।\n\nMethod 2 (Present Value Method):\nStep 1: P = 5,547 * (40/43) + 5,547 * (1,600 / 1,849) = 5,160 + 4,800 = ₹9,960.\nStep 2: कुल भुगतान = 2 * 5,547 = ₹11,094.\nStep 3: कुल ब्याज = 11,094 - 9,960 = ₹1,134.\nअतः सही उत्तर '₹1,134' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_9",
+    "qe": "A sum of ₹6,000 is to be paid back in two equal annual installments. Each installment is to be paid at the end of every year. How much is each installment if the interest is compounded annually at 2% p.a.? (Rounded off up to two decimal places)",
+    "qh": "₹6,000 की राशि दो समान वार्षिक किस्तों में वापस लौटाई जानी है। प्रत्येक किस्त का भुगतान प्रत्येक वर्ष के अंत में किया जाना है। यदि ब्याज 2% प्रति वर्ष की दर से वार्षिक संयोजित होता है, तो प्रत्येक किस्त कितनी होगी? (दशमलव के दो स्थानों तक पूर्णांकित)",
+    "oe": [
+      "₹2,092.29",
+      "₹3,090.30",
+      "₹2,291.29",
+      "₹3,589.30"
+    ],
+    "oh": [
+      "₹2,092.29",
+      "₹3,090.30",
+      "₹2,291.29",
+      "₹3,589.30"
+    ],
+    "a": 1,
+    "e": "Method 1 (Present Value Formula Method):\nStep 1: 2 समान वार्षिक किस्तों (x) का वर्तमान मूल्य कुल मूलधन (P) के बराबर होता है:\nP = [x / (1 + R/100)] + [x / (1 + R/100)^2]\n6,000 = [x / 1.02] + [x / (1.02)^2].\nStep 2: x को उभयनिष्ठ (common) लेकर हल करने पर:\n6,000 = x * [1 / 1.02 + 1 / 1.0404] = x * [(1.02 + 1) / 1.0404] = x * (2.02 / 1.0404).\nStep 3: प्रत्येक किस्त (x) की गणना:\nx = (6,000 * 1.0404) / 2.02 = 6,242.4 / 2.02 ≈ ₹3,090.297 ≈ ₹3,090.30.\nअतः सही विकल्प  ₹3,090.30 है।\n\nMethod 2 (Ratio Method):\nStep 1: 2% = 1/50 (अनुपात: 50 से 51).\nकिस्त को 51^2 = 2,601 इकाइयाँ मानेंगे:\n- PV_1 = 50 * 51 = 2,550 इकाइयाँ\n- PV_2 = 50^2 = 2,500 इकाइयाँ\nकुल मूलधन = 2,550 + 2,500 = 5,050 इकाइयाँ।\nStep 2: 5,050 इकाइयाँ = ₹6,000 ==> 1 इकाई = 6,000 / 5,050 = 120 / 101.\nStep 3: प्रत्येक किस्त (2,601 इकाइयाँ) = 2,601 * (120 / 101) ≈ ₹3,090.30.\nअतः सही उत्तर '₹3,090.30' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_10",
+    "qe": "Sita takes a loan of ₹35,000 at an interest rate of 10% compound interest, compounded annually. She agrees to pay two equal installments in 2 years, one installment at the end of each year. Find the value of each installment. (Round off to the nearest integer)",
+    "qh": "सीता 10% वार्षिक चक्रवृद्धि ब्याज (वार्षिक संयोजन) की दर से ₹35,000 का ऋण लेती है। वह 2 वर्षों में दो समान किस्तों का भुगतान करने के लिए सहमत होती है, प्रत्येक वर्ष के अंत में एक किस्त। प्रत्येक किस्त का मान ज्ञात कीजिए। (निकटतम पूर्णांक तक पूर्णांकित)",
+    "oe": [
+      "₹20,167",
+      "₹40,167",
+      "₹10,167",
+      "₹30,167"
+    ],
+    "oh": [
+      "₹20,167",
+      "₹40,167",
+      "₹10,167",
+      "₹30,167"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: दर = 10% = 1/10 (अनुपात: 10 से 11).\nप्रत्येक किस्त = 11^2 = 121 इकाइयाँ।\n- PV_1 = 10 * 11 = 110 इकाइयाँ\n- PV_2 = 10^2 = 100 इकाइयाँ\nकुल मूलधन (PV) = 110 + 100 = 210 इकाइयाँ।\nStep 2: 210 इकाइयाँ = ₹35,000.\n1 इकाई = 35,000 / 210 = 500 / 3.\nStep 3: प्रत्येक किस्त (121 इकाइयाँ) की गणना:\nx = 121 * (500 / 3) = 60,500 / 3 ≈ ₹20,166.67 ≈ ₹20,167.\nअतः सही विकल्प  ₹20,167 है।\n\nMethod 2 (Formula Method):\nStep 1: 35,000 = x * [10/11 + 100/121] = x * (210 / 121).\nStep 2: x = (35,000 * 121) / 210 = (3,500 * 121) / 21 = 60,500 / 3 ≈ ₹20,167.\nअतः सही उत्तर '₹20,167' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_11",
+    "qe": "Rajnish borrowed ₹1,500 from a bank and repaid the entire amount with interest in two equal annual installments, the first installment being paid one year after Rajnish borrowed from the bank. If the rate of interest was 40% per annum, compounded annually, then what was the value (in ₹) of each installment paid by Rajnish?",
+    "qh": "रजनीश ने एक बैंक से ₹1,500 उधार लिए और ब्याज सहित पूरी राशि का भुगतान दो समान वार्षिक किस्तों में किया, पहली किस्त रजनीश द्वारा बैंक से उधार लेने के एक वर्ष बाद दी गई। यदि ब्याज की दर 40% प्रति वर्ष वार्षिक रूप से संयोजित थी, तो रजनीश द्वारा भुगतान की गई प्रत्येक किस्त का मान (₹ में) क्या था?",
+    "oe": [
+      "1125",
+      "1470",
+      "1225",
+      "1350"
+    ],
+    "oh": [
+      "1125",
+      "1470",
+      "1225",
+      "1350"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: दर = 40% = 2/5 (अनुपात: 5 से 7).\nकिस्त को 7^2 = 49 इकाइयाँ मानेंगे:\n- वर्ष 1 का वर्तमान मूल्य = 5 * 7 = 35 इकाइयाँ\n- वर्ष 2 का वर्तमान मूल्य = 5^2 = 25 इकाइयाँ\nकुल मूलधन = 35 + 25 = 60 इकाइयाँ।\nStep 2: 60 इकाइयाँ = ₹1,500.\n1 इकाई = 1,500 / 60 = 25.\nStep 3: प्रत्येक वार्षिक किस्त (49 इकाइयाँ):\nx = 49 * 25 = ₹1,225.\nअतः सही विकल्प  1225 है।\n\nMethod 2 (Formula Method):\nStep 1: 1,500 = [x / (1.4)] + [x / (1.4)^2] = x * (5/7 + 25/49) = x * (60 / 49).\nStep 2: x = (1,500 * 49) / 60 = 25 * 49 = ₹1,225.\nअतः सही उत्तर '1225' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_12",
+    "qe": "A mobile phone is available for ₹79,860 by cash payment or by paying cash of ₹60,000 as down payment and the remaining amount in three equal annual installments. If the shopkeeper charges interest at the rate of 10% per annum compounded annually, then the amount of each installment (in ₹) will be:",
+    "qh": "एक मोबाइल फोन ₹79,860 नकद भुगतान पर या ₹60,000 के नकद डाउन पेमेंट और शेष राशि तीन समान वार्षिक किस्तों में भुगतान करके उपलब्ध है। यदि दुकानदार 10% वार्षिक चक्रवृद्धि ब्याज (वार्षिक संयोजन) लेता है, तो प्रत्येक किस्त की राशि (₹ में) क्या होगी:",
+    "oe": [
+      "₹6,789",
+      "₹7,986",
+      "₹6,000",
+      "₹6,689"
+    ],
+    "oh": [
+      "₹6,789",
+      "₹7,986",
+      "₹6,000",
+      "₹6,689"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: नकद मूल्य = ₹79,860, डाउन पेमेंट = ₹60,000.\nकिस्तों द्वारा चुकाया जाने वाला शेष मूलधन = 79,860 - 60,000 = ₹19,860.\nStep 2: 10% = 1/10 (अनुपात: 10 से 11). प्रत्येक किस्त = 11^3 = 1,331 इकाइयाँ।\n- PV_1 = 10 * 11^2 = 1,210 इकाइयाँ\n- PV_2 = 10^2 * 11 = 1,100 इकाइयाँ\n- PV_3 = 10^3 = 1,000 इकाइयाँ\nकुल मूलधन = 1,210 + 1,100 + 1,000 = 3,310 इकाइयाँ।\nStep 3: 3,310 इकाइयाँ = ₹19,860.\n1 इकाई = 19,860 / 3,310 = 6.\nStep 4: प्रत्येक वार्षिक किस्त (1,331 इकाइयाँ):\nx = 1,331 * 6 = ₹7,986.\nअतः सही विकल्प  ₹7,986 है।\n\nMethod 2 (Formula Method):\nStep 1: 19,860 = x * [10/11 + 100/121 + 1000/1331] = x * (3,310 / 1,331).\nStep 2: x = (19,860 * 1,331) / 3,310 = 6 * 1,331 = ₹7,986.\nअतः सही उत्तर '₹7,986' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_13",
+    "qe": "A man borrowed ₹50,000 from a bank at 10% per annum, compounded annually. At the end of every year, he pays ₹15,000 as part payment of the loan and interest. How much does he still owe to the bank after three such installments?",
+    "qh": "एक व्यक्ति ने 10% वार्षिक चक्रवृद्धि ब्याज पर एक बैंक से ₹50,000 उधार लिए। प्रत्येक वर्ष के अंत में, वह ऋण और ब्याज के आंशिक भुगतान के रूप में ₹15,000 का भुगतान करता है। ऐसी तीन किस्तों के बाद भी उस पर बैंक का कितना बकाया है?",
+    "oe": [
+      "₹16,900",
+      "₹15,800",
+      "₹15,200",
+      "₹16,200"
+    ],
+    "oh": [
+      "₹16,900",
+      "₹15,800",
+      "₹15,200",
+      "₹16,200"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Accounting Method):\nStep 1: वर्ष 1 के अंत में बकाया राशि:\nब्याज सहित राशि = 50,000 * 1.10 = ₹55,000.\nभुगतान = ₹15,000.\nशेष राशि = 55,000 - 15,000 = ₹40,000.\nStep 2: वर्ष 2 के अंत में बकाया राशि:\nब्याज सहित राशि = 40,000 * 1.10 = ₹44,000.\nभुगतान = ₹15,000.\nशेष राशि = 44,000 - 15,000 = ₹29,000.\nStep 3: वर्ष 3 के अंत में बकाया राशि:\nब्याज सहित राशि = 29,000 * 1.10 = ₹31,900.\nभुगतान = ₹15,000.\nअंतिम बकाया राशि = 31,900 - 15,000 = ₹16,900.\nअतः सही विकल्प  ₹16,900 है।\n\nMethod 2 (Future Value Method):\nStep 1: 3 वर्ष बाद मूलधन का कुल संचित मूल्य = 50,000 * (1.10)^3 = 50,000 * 1.331 = ₹66,550.\nStep 2: तीनों किस्तों का 3 वर्ष के अंत में मूल्य:\n- पहली किस्त (2 वर्ष ब्याज) = 15,000 * 1.21 = 18,150\n- दूसरी किस्त (1 वर्ष ब्याज) = 15,000 * 1.10 = 16,500\n- तीसरी किस्त (0 वर्ष ब्याज) = 15,000\nकुल चुकाया गया संचित मान = 18,150 + 16,500 + 15,000 = ₹49,650.\nStep 3: शेष ऋण = 66,550 - 49,650 = ₹16,900.\nअतः सही उत्तर '₹16,900' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_14",
+    "qe": "Amit borrows a sum of ₹8,000 at 10% p.a. compound interest for 4 years. He repays ₹2,800 at the end of the first year and ₹2,600 at the end of the second year. To clear the loan, how much should he pay after 4 years, interest being compounded yearly?",
+    "qh": "अमित 10% वार्षिक चक्रवृद्धि ब्याज पर 4 वर्षों के लिए ₹8,000 की राशि उधार लेता है। वह पहले वर्ष के अंत में ₹2,800 और दूसरे वर्ष के अंत में ₹2,600 चुकाता है। ऋण चुकाने के लिए, उसे 4 वर्ष बाद कितना भुगतान करना चाहिए, यदि ब्याज वार्षिक रूप से संयोजित होता है?",
+    "oe": [
+      "₹4800",
+      "₹4880",
+      "₹4840",
+      "₹4780"
+    ],
+    "oh": [
+      "₹4800",
+      "₹4880",
+      "₹4840",
+      "₹4780"
+    ],
+    "a": 2,
+    "e": "Method 1 (Step-by-Step Balance Method):\nStep 1: वर्ष 1 के अंत में शेष:\nकुल राशि = 8,000 * 1.10 = ₹8,800.\nभुगतान के बाद शेष = 8,800 - 2,800 = ₹6,000.\nStep 2: वर्ष 2 के अंत में शेष:\nकुल राशि = 6,000 * 1.10 = ₹6,600.\nभुगतान के बाद शेष = 6,600 - 2,600 = ₹4,000.\nStep 3: वर्ष 3 और वर्ष 4 (अगले 2 वर्ष) में कोई भुगतान नहीं किया गया:\nअतः 4 वर्ष के अंत में (2 और वर्षों के बाद) देय राशि:\nअंतिम देय राशि = 4,000 * (1.10)^2 = 4,000 * 1.21 = ₹4,840.\nअतः सही विकल्प  ₹4840 है।\n\nMethod 2 (Ratio Method):\nStep 1: वर्ष 2 के अंत में शेष मूलधन = ₹4,000.\nStep 2: 10% की दर से 2 वर्ष का अनुपात: 10^2 -> 11^2 = 100 -> 121.\nStep 3: अंतिम भुगतान = 4,000 * (121 / 100) = 40 * 121 = ₹4,840.\nअतः सही उत्तर '₹4840' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_15",
+    "qe": "A man borrowed a certain sum and agrees to repay it by paying ₹4000 at the end of first year and ₹7700 at the end of second year. If the rate of compound interest compounded annually is 10% per annum, then find the sum (in ₹)",
+    "qh": "एक व्यक्ति ने एक निश्चित राशि उधार ली और पहले वर्ष के अंत में ₹4000 और दूसरे वर्ष के अंत में ₹7700 का भुगतान करके इसे चुकाने के लिए सहमत हुआ। यदि वार्षिक चक्रवृद्धि ब्याज की दर 10% प्रति वर्ष है, तो उधार ली गई राशि (₹ में) ज्ञात कीजिए।",
+    "oe": [
+      "11500",
+      "11000",
+      "9000",
+      "10000"
+    ],
+    "oh": [
+      "11500",
+      "11000",
+      "9000",
+      "10000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Present Value Sum Method):\nStep 1: उधार ली गई कुल राशि दोनों भुगतानों के वर्तमान मूल्यों (Present Values) का योग होगी:\nP = [4,000 / (1 + 0.10)] + [7,700 / (1 + 0.10)^2]\n= [4,000 / 1.10] + [7,700 / 1.21].\nStep 2: दोनों पदों को सरल करने पर:\nPV_1 = 4,000 / 1.10 = 40,000 / 11.\nPV_2 = 7,700 / 1.21 = 7,700 / (1.1 * 1.1) = 7,000 / 1.1 = 70,000 / 11.\nStep 3: कुल मूलधन P:\nP = (40,000 / 11) + (70,000 / 11) = 110,000 / 11 = ₹10,000.\nअतः सही विकल्प  10000 है।\n\nMethod 2 (Reverse Balance Method):\nStep 1: दूसरे वर्ष के अंत में ₹7,700 चुकाने से पहले की राशि = 7,700 / 1.10 = ₹7,000.\nStep 2: यह ₹7,000 पहले वर्ष में ₹4,000 चुकाने के बाद शेष बची थी:\nअतः पहले वर्ष के अंत में कुल राशि = 7,000 + 4,000 = ₹11,000.\nStep 3: प्रारंभिक मूलधन (0 वर्ष पर) = 11,000 / 1.10 = ₹10,000.\nअतः सही उत्तर '10000' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "installment_16",
+    "qe": "A person borrowed a sum of ₹30800 at 10% p.a. for 3 years, interest compounded annually. At the end of two years, he paid a sum of ₹13268. At the end of 3rd year, he paid ₹x to clear of the debt. What is the value of x?",
+    "qh": "एक व्यक्ति ने 3 वर्षों के लिए 10% वार्षिक चक्रवृद्धि ब्याज (वार्षिक संयोजन) पर ₹30,800 की राशि उधार ली। दो वर्ष के अंत में, उसने ₹13,268 की राशि का भुगतान किया। तीसरे वर्ष के अंत में, उसने ऋण चुकाने के लिए ₹x का भुगतान किया। x का मान क्या है?",
+    "oe": [
+      "26200",
+      "26620",
+      "26400",
+      "26510"
+    ],
+    "oh": [
+      "26200",
+      "26620",
+      "26400",
+      "26510"
+    ],
+    "a": 2,
+    "e": "Method 1 (Step-by-Step Accounting Method):\nStep 1: 2 वर्ष के अंत में कुल संचित मिश्रधन:\nA2 = 30,800 * (1.10)^2 = 30,800 * 1.21 = ₹37,268.\nStep 2: 2 वर्ष के अंत में ₹13,268 चुकाने के बाद शेष ऋण:\nशेष मूलधन = 37,268 - 13,268 = ₹24,000.\nStep 3: तीसरे वर्ष के अंत में ऋण चुकाने के लिए देय राशि (x):\nयह ₹24,000 पर 1 वर्ष के 10% ब्याज सहित देय होगा:\nx = 24,000 * (1 + 0.10) = 24,000 * 1.10 = ₹26,400.\nअतः सही विकल्प  26400 है।\n\nMethod 2 (Tree Method):\nStep 1: 2 वर्ष बाद कुल राशि = 30,800 + 10% + 10% = 37,268.\nStep 2: भुगतान के बाद शेष = 37,268 - 13,268 = 24,000.\nStep 3: वर्ष 3 का ब्याज = 10% of 24,000 = 2,400.\nStep 4: x = 24,000 + 2,400 = ₹26,400.\nअतः सही उत्तर '26400' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

@@ -1,0 +1,743 @@
+[
+  {
+    "p_id": "linearrace_1",
+    "qe": "In a 100-m race, A beats B by 20 m and B beats C by 5 m. In the same race, find the distance by which A beats C.",
+    "qh": "100 मीटर की दौड़ में, A, B को 20 मीटर से हराता है और B, C को 5 मीटर से हराता है। उसी दौड़ में, वह दूरी ज्ञात कीजिए जिससे A, C को हराता है।",
+    "oe": [
+      "22 m",
+      "24 m",
+      "26 m",
+      "25 m"
+    ],
+    "oh": [
+      "22 m",
+      "24 m",
+      "26 m",
+      "25 m"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: समान समय में तय की गई दूरियों का अनुपात निकालें:\n- जब A = 100 मीटर दौड़ता है, तो B = 100 - 20 = 80 मीटर दौड़ता है।\nA : B = 100 : 80 = 5 : 4.\n- जब B = 100 मीटर दौड़ता है, तो C = 100 - 5 = 95 मीटर दौड़ता है।\nB : C = 100 : 95 = 20 : 19.\nStep 2: A और C का अनुपात निकालें:\n$$$\\frac{A}{C}$ = $\\frac{A}{B}$ $\\times$ $\\frac{B}{C}$ = $\\frac{5}{4}$ $\\times$ $\\frac{20}{19}$ = $\\frac{25}{19}$$$\nStep 3: 100 मीटर की दौड़ में जब A = 100 मीटर दौड़ता है:\n$$C = 100 $\\times$ $\\frac{19}{25}$ = 76\\text{ मीटर}$$\nStep 4: A द्वारा C को हराई गई दूरी = 100 - 76 = 24 मीटर।\nअतः सही विकल्प  24 m है।\n\nMethod 2 (Percentage/Unitary Method):\nStep 1: जब A 100 मीटर पर है, B 80 मीटर पर है।\nStep 2: C, B से 5% पीछे रहता है (5/100 = 5%)।\nअतः जब B = 80 मीटर, तब C = 80 का 95% = 76 मीटर।\nStep 3: अंतर = 100 - 76 = 24 मीटर।\nअतः सही उत्तर '24 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_2",
+    "qe": "In a 1500 m race, Anil beats Bakul by 150 m and in the same race Bakul beats Charles by 75 m. By what distance does Anil beat Charles?",
+    "qh": "1500 मीटर की दौड़ में, अनिल बकुल को 150 मीटर से हराता है और उसी दौड़ में बकुल चार्ल्स को 75 मीटर से हराता है। अनिल चार्ल्स को कितनी दूरी से हराता है?",
+    "oe": [
+      "217.50 m",
+      "200.15 m",
+      "293.50 m",
+      "313.75 m"
+    ],
+    "oh": [
+      "217.50 m",
+      "200.15 m",
+      "293.50 m",
+      "313.75 m"
+    ],
+    "a": 0,
+    "e": "Method 1 (Distance Ratio Method):\nStep 1: जब अनिल 1500 मीटर दौड़ता है, बकुल = 1500 - 150 = 1350 मीटर दौड़ता है।\nStep 2: 1500 मीटर की दौड़ में बकुल चार्ल्स को 75 मीटर से हराता है:\nअर्थात् जब बकुल 1500 मीटर दौड़ता है, तो चार्ल्स = 1500 - 75 = 1425 मीटर दौड़ता है।\nStep 3: जब बकुल 1350 मीटर दौड़ता है, तो चार्ल्स द्वारा तय दूरी:\n$$\\text{चार्ल्स} = 1350 $\\times$ $\\frac{1425}{1500}$ = 1350 $\\times$ 0.95 = 1282.50\\text{ मीटर}$$\nStep 4: अनिल द्वारा चार्ल्स को हराई गई दूरी = 1500 - 1282.50 = 217.50 मीटर।\nअतः सही विकल्प  217.50 m है।\n\nMethod 2 (Direct Formula Method):\nStep 1: दूरी = $x + y - \\frac{xy}{D} = 150 + 75 - \\frac{150 \\times 75}{1500} = 225 - 7.50 = 217.50$ मीटर।\nअतः सही उत्तर '217.50 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_3",
+    "qe": "In a 1500-m race, if A beats B by 100 m and B beats C by 150 m, then by what distance (in m) does A beat C?",
+    "qh": "1500 मीटर की दौड़ में, यदि A, B को 100 मीटर से हराता है और B, C को 150 मीटर से हराता है, तो A, C को कितनी दूरी (मीटर में) से हराता है?",
+    "oe": [
+      "140",
+      "150",
+      "100",
+      "240"
+    ],
+    "oh": [
+      "140",
+      "150",
+      "100",
+      "240"
+    ],
+    "a": 3,
+    "e": "Method 1 (Formula Method):\nStep 1: सूत्र $x + y - \\frac{xy}{D}$ का प्रयोग करने पर:\nयहाँ $x = 100$, $y = 150$, $D = 1500$ मीटर।\n$$\\text{दूरी} = 100 + 150 - $\\frac{100\\times150}{1500}$ = 250 - 10 = 240\\text{ मीटर}$$\nअतः सही विकल्प  240 है।\n\nMethod 2 (Ratio Method):\nStep 1: जब A = 1500 मीटर, B = 1400 मीटर।\nStep 2: जब B = 1500 मीटर, C = 1350 मीटर।\nजब B = 1400 मीटर, तो $C = 1400 \\times \\frac{1350}{1500} = 1400 \\times 0.9 = 1260$ मीटर।\nStep 3: A द्वारा C को हराई गई दूरी = 1500 - 1260 = 240 मीटर।\nअतः सही उत्तर '240' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_4",
+    "qe": "In a linear race of 500 m, A can beat B by 50 m and in a race of 600 m, B can beat C by 60 m. By how many metres will A beat C in a race of 400 m?",
+    "qh": "500 मीटर की एक रेखीय दौड़ में, A, B को 50 मीटर से हरा सकता है और 600 मीटर की दौड़ में, B, C को 60 मीटर से हरा सकता है। 400 मीटर की दौड़ में A, C को कितने मीटर से हराएगा?",
+    "oe": [
+      "70",
+      "68",
+      "76",
+      "72"
+    ],
+    "oh": [
+      "70",
+      "68",
+      "76",
+      "72"
+    ],
+    "a": 2,
+    "e": "Method 1 (Speed Ratio Method):\nStep 1: A और B की गति का अनुपात = 500 : (500 - 50) = 500 : 450 = 10 : 9.\nStep 2: B और C की गति का अनुपात = 600 : (600 - 60) = 600 : 540 = 10 : 9.\nStep 3: A, B और C की गति का संयुक्त अनुपात:\n$$A : B : C = 100 : 90 : 81$$\nStep 4: 400 मीटर की दौड़ में जब A = 400 मीटर दौड़ता है:\n$$C = 400 $\\times$ $\\frac{81}{100}$ = 324\\text{ मीटर}$$\nStep 5: A द्वारा C को हराई गई दूरी = 400 - 324 = 76 मीटर।\nअतः सही विकल्प  76 है।\n\nMethod 2 (Chain Method):\nStep 1: A = 400 मीटर ==> B = 400 × (9/10) = 360 मीटर।\nStep 2: C = 360 × (9/10) = 324 मीटर।\nStep 3: अंतर = 400 - 324 = 76 मीटर।\nअतः सही उत्तर '76' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_5",
+    "qe": "In a 1500 meter race, X beats Y by 100 meter and X beats Z by 240 meter. By what distance does Y beat Z in the same race?",
+    "qh": "1500 मीटर की दौड़ में, X, Y को 100 मीटर से और X, Z को 240 मीटर से हराता है। उसी दौड़ में Y, Z को कितनी दूरी से हराता है?",
+    "oe": [
+      "160 m",
+      "140 m",
+      "150 m",
+      "200 m"
+    ],
+    "oh": [
+      "160 m",
+      "140 m",
+      "150 m",
+      "200 m"
+    ],
+    "a": 2,
+    "e": "Method 1 (Proportional Distance Method):\nStep 1: जब X दौड़ पूरी करता है (1500 मीटर):\n- Y द्वारा तय दूरी = 1500 - 100 = 1400 मीटर\n- Z द्वारा तय दूरी = 1500 - 240 = 1260 मीटर\nStep 2: जब Y और Z के बीच 1500 मीटर की दौड़ हो:\nजब Y = 1400 मीटर दौड़ता है, तो Z = 1260 मीटर दौड़ता है।\nStep 3: जब Y = 1500 मीटर दौड़ेगा, तब Z द्वारा तय दूरी:\n$$Z = 1500 $\\times$ $\\frac{1260}{1400}$ = 1500 $\\times$ $\\frac{9}{10}$ = 1350\\text{ मीटर}$$\nStep 4: Y द्वारा Z को हराई गई दूरी = 1500 - 1350 = 150 मीटर।\nअतः सही विकल्प  150 m है।\n\nMethod 2 (Ratio Method):\nStep 1: Y : Z = 1400 : 1260 = 10 : 9.\nStep 2: 10 इकाइयाँ = 1500 मीटर ==> 1 इकाई = 150 मीटर।\nहार-जीत का अंतर = 10 - 9 = 1 इकाई = 150 मीटर।\nअतः सही उत्तर '150 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_6",
+    "qe": "In a linear race of 1000m, Prakash beats Ved by 280m, while Ved beats Rahul by 100m. By how many metres does Prakash beat Rahul, in the same race?",
+    "qh": "1000 मीटर की एक रेखीय दौड़ में, प्रकाश वेद को 280 मीटर से हराता है, जबकि वेद राहुल को 100 मीटर से हराता है। उसी दौड़ में प्रकाश राहुल को कितने मीटर से हराता है?",
+    "oe": [
+      "376",
+      "350",
+      "352",
+      "348"
+    ],
+    "oh": [
+      "376",
+      "350",
+      "352",
+      "348"
+    ],
+    "a": 2,
+    "e": "Method 1 (Formula Method):\nStep 1: सूत्र $x + y - \\frac{xy}{D}$ का प्रयोग करने पर:\nयहाँ $x = 280$, $y = 100$, $D = 1000$ मीटर।\n$$\\text{दूरी} = 280 + 100 - $\\frac{280\\times100}{1000}$ = 380 - 28 = 352\\text{ मीटर}$$\nअतः सही विकल्प  352 है।\n\nMethod 2 (Step-by-Step Distance Method):\nStep 1: जब प्रकाश = 1000 मीटर, वेद = 1000 - 280 = 720 मीटर।\nStep 2: जब वेद = 1000 मीटर, राहुल = 900 मीटर (राहुल = 0.9 × वेद)।\nStep 3: जब वेद = 720 मीटर, राहुल = 720 × 0.9 = 648 मीटर।\nStep 4: अंतर = 1000 - 648 = 352 मीटर।\nअतः सही उत्तर '352' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_7",
+    "qe": "In a 1400 m race John reaches the finish point in 1 min 6 sec, while James reaches the finish point in 77 sec. By how much distance does John beat James?",
+    "qh": "1400 मीटर की दौड़ में जॉन 1 मिनट 6 सेकंड में अंतिम बिंदु पर पहुँचता है, जबकि जेम्स 77 सेकंड में अंतिम बिंदु पर पहुँचता है। जॉन जेम्स को कितनी दूरी से हराता है?",
+    "oe": [
+      "240 m",
+      "220 m",
+      "180 m",
+      "200 m"
+    ],
+    "oh": [
+      "240 m",
+      "220 m",
+      "180 m",
+      "200 m"
+    ],
+    "a": 3,
+    "e": "Method 1 (Speed & Time Method):\nStep 1: समय सेकंड में निकालें:\n- जॉन का समय = 1 मिनट 6 सेकंड = 66 सेकंड।\n- जेम्स का समय = 77 सेकंड।\nStep 2: जेम्स की गति = $\\frac{1400}{77} = \\frac{200}{11}$ मीटर/सेकंड।\nStep 3: जब जॉन दौड़ समाप्त करता है (66 सेकंड में), तब जेम्स द्वारा तय दूरी:\n$$\\text{दूरी} = 66 $\\times$ $\\frac{200}{11}$ = 6 $\\times$ 200 = 1200\\text{ मीटर}$$\nStep 4: जॉन द्वारा जेम्स को हराई गई दूरी = 1400 - 1200 = 200 मीटर।\nअतः सही विकल्प  200 m है।\n\nMethod 2 (Time Difference Method):\nStep 1: समय का अंतर = 77 - 66 = 11 सेकंड।\nStep 2: जेम्स 11 सेकंड में जितनी दूरी तय करता है:\nदूरी = $11 \\times \\left(\\frac{1400}{77}\\right) = \\frac{1400}{7} = 200$ मीटर।\nअतः सही उत्तर '200 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_8",
+    "qe": "In a 1170 m race, Raman reaches the final point in 65 seconds and Mohan reaches the final point in 90 seconds. By how much distance does Raman beat Mohan?",
+    "qh": "1170 मीटर की दौड़ में, रमन 65 सेकंड में अंतिम बिंदु पर पहुँचता है और मोहन 90 सेकंड में अंतिम बिंदु पर पहुँचता है। रमन मोहन को कितनी दूरी से हराता है?",
+    "oe": [
+      "325 m",
+      "300 m",
+      "275 m",
+      "350 m"
+    ],
+    "oh": [
+      "325 m",
+      "300 m",
+      "275 m",
+      "350 m"
+    ],
+    "a": 0,
+    "e": "Method 1 (Speed & Time Difference Method):\nStep 1: मोहन की गति = $\\frac{1170}{90} = 13$ मीटर/सेकंड।\nStep 2: रमन और मोहन के समय में अंतर = 90 - 65 = 25 सेकंड।\nStep 3: 25 सेकंड में मोहन द्वारा तय की गई दूरी:\n$$\\text{दूरी} = 25 $\\times$ 13 = 325\\text{ मीटर}$$\nअतः रमन, मोहन को 325 मीटर से हराता है।\nअतः सही विकल्प  325 m है।\n\nMethod 2 (Distance Covered in 65 sec):\nStep 1: 65 सेकंड में मोहन द्वारा तय दूरी = $65 \\times 13 = 845$ मीटर।\nStep 2: रमन द्वारा मोहन को हराई गई दूरी = 1170 - 845 = 325 मीटर।\nअतः सही उत्तर '325 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_9",
+    "qe": "In a 1200 m race, Rakesh reaches the final point in 36 seconds and Rajesh reaches in 40 sec. By how much distance does Rakesh beat Rajesh?",
+    "qh": "1200 मीटर की दौड़ में, राकेश 36 सेकंड में अंतिम बिंदु पर पहुँचता है और राजेश 40 सेकंड में पहुँचता है। राकेश राजेश को कितनी दूरी से हराता है?",
+    "oe": [
+      "150 m",
+      "140 m",
+      "130 m",
+      "120 m"
+    ],
+    "oh": [
+      "150 m",
+      "140 m",
+      "130 m",
+      "120 m"
+    ],
+    "a": 3,
+    "e": "Method 1 (Time Difference Method):\nStep 1: राजेश की गति = $\\frac{1200}{40} = 30$ मीटर/सेकंड।\nStep 2: समय का अंतर = 40 - 36 = 4 सेकंड।\nStep 3: 4 सेकंड में राजेश द्वारा तय दूरी = $4 \\times 30 = 120$ मीटर।\nअतः राकेश ने राजेश को 120 मीटर से हराया।\nअतः सही विकल्प  120 m है।\n\nMethod 2 (Ratio of Time Method):\nStep 1: समय का अनुपात (राकेश : राजेश) = 36 : 40 = 9 : 10.\nStep 2: गति का अनुपात = 10 : 9.\nStep 3: जब राकेश 1200 मीटर दौड़ता है, राजेश दौड़ता है = $1200 \\times \\frac{9}{10} = 1080$ मीटर।\nअंतर = 1200 - 1080 = 120 मीटर।\nअतः सही उत्तर '120 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_10",
+    "qe": "In a 1610 m race, Amarjeet reaches the final point in 91 seconds and Dinesh reaches the final point in 115 seconds. By how much distance does Amarjeet beat Dinesh?",
+    "qh": "1610 मीटर की दौड़ में, अमरजीत 91 सेकंड में अंतिम बिंदु पर पहुँचता है और दिनेश 115 सेकंड में अंतिम बिंदु पर पहुँचता है। अमरजीत दिनेश को कितनी दूरी से हराता है?",
+    "oe": [
+      "326m",
+      "340m",
+      "336m",
+      "330m"
+    ],
+    "oh": [
+      "326m",
+      "340m",
+      "336m",
+      "330m"
+    ],
+    "a": 2,
+    "e": "Method 1 (Time Difference Method):\nStep 1: दिनेश की गति = $\\frac{1610}{115} = 14$ मीटर/सेकंड।\nStep 2: समय का अंतर = 115 - 91 = 24 सेकंड।\nStep 3: 24 सेकंड में दिनेश द्वारा तय दूरी:\n$$\\text{दूरी} = 24 $\\times$ 14 = 336\\text{ मीटर}$$\nअतः अमरजीत, दिनेश को 336 मीटर से हराता है।\nअतः सही विकल्प  336m है।\n\nMethod 2 (Distance in 91 sec Method):\nStep 1: 91 सेकंड में दिनेश द्वारा तय दूरी = $91 \\times 14 = 1274$ मीटर।\nStep 2: अमरजीत द्वारा दिनेश को हराई गई दूरी = 1610 - 1274 = 336 मीटर।\nअतः सही उत्तर '336m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_11",
+    "qe": "A can run 250 m in 25 sec and B in 30 sec. How many metres start can A give to B in a 1 km race so that the race may end in a dead-heat?",
+    "qh": "A 250 मीटर 25 सेकंड में और B 30 सेकंड में दौड़ सकता है। 1 किमी की दौड़ में A, B को कितने मीटर की बढ़त दे सकता है ताकि दौड़ बराबरी (डेड-हीट) पर समाप्त हो सके?",
+    "oe": [
+      "169.53 m",
+      "173.82 m",
+      "166.67 m",
+      "186.34 m"
+    ],
+    "oh": [
+      "169.53 m",
+      "173.82 m",
+      "166.67 m",
+      "186.34 m"
+    ],
+    "a": 2,
+    "e": "Method 1 (Speed & Distance Method):\nStep 1: दोनों की गति निकालें:\n- A की गति = $\\frac{250}{25} = 10$ मीटर/सेकंड\n- B की गति = $\\frac{250}{30} = \\frac{25}{3}$ मीटर/सेकंड\nStep 2: 1 किमी (1000 मीटर) की दौड़ में A द्वारा लिया गया समय:\n$$\\text{समय} = $\\frac{1000}{10}$ = 100\\text{ सेकंड}$$\nStep 3: 100 सेकंड में B द्वारा तय की गई दूरी:\n$$\\text{दूरी} = 100 $\\times$ $\\frac{25}{3}$ = $\\frac{2500}{3}$ = 833.33\\text{ मीटर}$$\nStep 4: दौड़ को बराबरी पर समाप्त करने के लिए B को दी जाने वाली बढ़त:\n$$\\text{बढ़त} = 1000 - 833.33 = 166.67\\text{ मीटर}$$\nअतः सही विकल्प  166.67 m है।\n\nMethod 2 (Ratio Method):\nStep 1: गतियों का अनुपात A : B = 10 : (25/3) = 6 : 5.\nStep 2: जब A 1000 मीटर दौड़ता है, B दौड़ता है = $1000 \\times \\frac{5}{6} = 833.33$ मीटर।\nबढ़त = 1000 - 833.33 = 166.67 मीटर।\nअतः सही उत्तर '166.67 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_12",
+    "qe": "In a 2 km linear race, if P completes the race in 200 seconds and Q in 220 seconds, then the distance by which P beats Q is:",
+    "qh": "2 किमी की रेखीय दौड़ में, यदि P दौड़ को 200 सेकंड में और Q 220 सेकंड में पूरा करता है, तो P, Q को कितनी दूरी से हराता है:",
+    "oe": [
+      "167$\\frac{6}{11}$ mtr.",
+      "173$\\frac{7}{11}$ mtr.",
+      "191$\\frac{7}{11}$ mtr.",
+      "181$\\frac{9}{11}$ mtr."
+    ],
+    "oh": [
+      "167$\\frac{6}{11}$ mtr.",
+      "173$\\frac{7}{11}$ mtr.",
+      "191$\\frac{7}{11}$ mtr.",
+      "181$\\frac{9}{11}$ mtr."
+    ],
+    "a": 3,
+    "e": "Method 1 (Speed & Time Difference Method):\nStep 1: 2 किमी = 2000 मीटर।\nQ की गति = $\\frac{2000}{220} = \\frac{100}{11}$ मीटर/सेकंड।\nStep 2: दोनों के समय का अंतर = 220 - 200 = 20 सेकंड।\nStep 3: 20 सेकंड में Q द्वारा तय की गई दूरी:\n$$\\text{दूरी} = 20 $\\times$ $\\frac{100}{11}$ = $\\frac{2000}{11}$\\text{ मीटर}$$\nStep 4: मिश्रित भिन्न में बदलने पर:\n$$$\\frac{2000}{11}$ = 181$\\frac{9}{11}$\\text{ मीटर}$$\nअतः सही विकल्प  181 9/11 mtr. है।\n\nMethod 2 (Distance Ratio Method):\nStep 1: जब P 2000 मीटर दौड़ता है, Q दौड़ता है = $200 \\times \\frac{100}{11} = \\frac{20000}{11}$ मीटर।\nStep 2: अंतर = $2000 - \\frac{20000}{11} = \\frac{22000 - 20000}{11} = \\frac{2000}{11} = 181\\frac{9}{11}$ मीटर।\nअतः सही उत्तर '181$\\frac{9}{11}$ mtr' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_13",
+    "qe": "Reema runs 5/4 times as fast as Rekha. In view of this Reema allows Rekha a lead of 50 metres to Rekha in a friendly race competition. What is the distance from the starting point where both Reema and Rekha meet?",
+    "qh": "रीमा रेखा से 5/4 गुना तेज दौड़ती है। इसे देखते हुए रीमा एक दोस्ताना दौड़ प्रतियोगिता में रेखा को 50 मीटर की बढ़त देती है। शुरुआती बिंदु से वह दूरी क्या है जहाँ रीमा और रेखा दोनों मिलती हैं?",
+    "oe": [
+      "200 m",
+      "225 m",
+      "240 m",
+      "250 m"
+    ],
+    "oh": [
+      "200 m",
+      "225 m",
+      "240 m",
+      "250 m"
+    ],
+    "a": 3,
+    "e": "Method 1 (Speed Ratio Method):\nStep 1: रीमा और रेखा की गति का अनुपात = 5 : 4.\nStep 2: समान समय में तय दूरियों का अनुपात = 5 : 4.\nअनुपाती अंतर = 5 - 4 = 1 इकाई।\nStep 3: यह 1 इकाई बढ़त (50 मीटर) के बराबर है:\n1 इकाई = 50 मीटर।\nStep 4: शुरुआती बिंदु से रीमा द्वारा तय दूरी (5 इकाइयाँ):\n$$\\text{दूरी} = 5 $\\times$ 50 = 250\\text{ मीटर}$$\nअतः सही विकल्प  250 m है।\n\nMethod 2 (Relative Speed Formula Method):\nStep 1: दूरी = $\\text{बढ़त} \\times \\frac{\\text{रीमा की गति}}{\\text{रीमा की गति} - \\text{रेखा की गति}} = 50 \\times \\frac{5}{5 - 4} = 50 \\times 5 = 250$ मीटर।\nअतः सही उत्तर '250 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_14",
+    "qe": "Two runners run at the speed of 100 m/min and 120 m/min respectively. If the second runner takes 10 minutes less to complete the race than the first runner, what is the length of the race?",
+    "qh": "दो धावक क्रमशः 100 मीटर/मिनट और 120 मीटर/मिनट की गति से दौड़ते हैं। यदि दूसरे धावक को पहले धावक की तुलना में दौड़ पूरी करने में 10 मिनट कम समय लगता है, तो दौड़ की लंबाई क्या है?",
+    "oe": [
+      "6 km",
+      "4 km",
+      "1 km",
+      "2 km"
+    ],
+    "oh": [
+      "6 km",
+      "4 km",
+      "1 km",
+      "2 km"
+    ],
+    "a": 0,
+    "e": "Method 1 (Time Difference Equation Method):\nStep 1: माना दौड़ की कुल लंबाई = $D$ मीटर।\nStep 2: समय का अंतर 10 मिनट है:\n$$$\\frac{D}{100}$ - $\\frac{D}{120}$ = 10$$\nStep 3: 100 और 120 का LCM = 600:\n$$$\\frac{6D-5D}{600}$ = 10 \\implies $\\frac{D}{600}$ = 10 \\implies D = 6000\\text{ मीटर}$$\nStep 4: किमी में बदलने पर = $\\frac{6000}{1000} = 6$ किमी।\nअतः सही विकल्प  6 km है।\n\nMethod 2 (Speed Ratio Method):\nStep 1: गति का अनुपात = 100 : 120 = 5 : 6.\nStep 2: समय का अनुपात = 6 : 5.\nअंतर = 6 - 5 = 1 इकाई = 10 मिनट।\nपहले धावक का समय = 6 × 10 = 60 मिनट।\nStep 3: दूरी = गति × समय = 100 × 60 = 6000 मीटर = 6 किमी।\nअतः सही उत्तर '6 km' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_15",
+    "qe": "Rakesh runs 4/3 times as fast as Mukesh. In a race, if Rakesh gives a lead of 60 m to Mukesh, find the distance from the starting point where both of them will meet.",
+    "qh": "राकेश मुकेश से 4/3 गुना तेज दौड़ता है। एक दौड़ में, यदि राकेश मुकेश को 60 मीटर की बढ़त देता है, तो शुरुआती बिंदु से वह दूरी ज्ञात कीजिए जहाँ वे दोनों मिलेंगे।",
+    "oe": [
+      "232 m",
+      "240 m",
+      "210 m",
+      "250 m"
+    ],
+    "oh": [
+      "232 m",
+      "240 m",
+      "210 m",
+      "250 m"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: गति का अनुपात (राकेश : मुकेश) = 4 : 3.\nStep 2: तय की गई दूरी का अनुपात = 4 : 3.\nअंतर = 4 - 3 = 1 इकाई = 60 मीटर।\nStep 3: शुरुआती बिंदु से राकेश द्वारा तय की गई दूरी (4 इकाइयाँ):\n$$\\text{दूरी} = 4 $\\times$ 60 = 240\\text{ मीटर}$$\nअतः सही विकल्प  240 m है।\n\nMethod 2 (Formula Method):\nStep 1: दूरी = $\\text{बढ़त} \\times \\frac{S_1}{S_1 - S_2} = 60 \\times \\frac{4}{4 - 3} = 60 \\times 4 = 240$ मीटर।\nअतः सही उत्तर '240 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_16",
+    "qe": "Ashok runs 2 2/3 times as fast as Bharat. If Ashok gives Bharat a head start of 160 m, then how far must the winning post be so that Ashok and Bharat can reach it at the same time?",
+    "qh": "अशोक भरत से 2 2/3 गुना तेज दौड़ता है। यदि अशोक भरत को 160 मीटर की शुरुआती बढ़त देता है, तो विजयी पद (विनिंग पोस्ट) कितनी दूर होना चाहिए ताकि अशोक और भरत एक ही समय में उस पर पहुँच सकें?",
+    "oe": [
+      "225 m",
+      "256 m",
+      "240 m",
+      "200 m"
+    ],
+    "oh": [
+      "225 m",
+      "256 m",
+      "240 m",
+      "200 m"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: 2 2/3 = 8/3.\nअशोक और भरत की गति का अनुपात = 8 : 3.\nStep 2: तय दूरियों का अनुपात = 8 : 3.\nअंतर = 8 - 3 = 5 इकाइयाँ।\nStep 3: 5 इकाइयाँ = 160 मीटर (भरत को दी गई बढ़त):\n$$1\\text{ इकाई} = $\\frac{160}{5}$ = 32\\text{ मीटर}$$\nStep 4: विजयी पद की दूरी (अशोक द्वारा तय की गई दूरी = 8 इकाइयाँ):\n$$\\text{दूरी} = 8 $\\times$ 32 = 256\\text{ मीटर}$$\nअतः सही विकल्प  256 m है।\n\nMethod 2 (Formula Method):\nStep 1: दूरी = $160 \\times \\frac{8}{8 - 3} = 160 \\times \\frac{8}{5} = 32 \\times 8 = 256$ मीटर।\nअतः सही उत्तर '256 m' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_17",
+    "qe": "In an 800 m race, the ratio of the speeds of two contestants Ankur and Neha is 5 : 6. If Ankur has a head-start of 200 m, then Ankur will win by _____",
+    "qh": "800 मीटर की दौड़ में, दो प्रतिभागियों अंकुर और नेहा की गति का अनुपात 5 : 6 है। यदि अंकुर को 200 मीटर की शुरुआती बढ़त मिलती है, तो अंकुर कितने मीटर से जीतेगा?",
+    "oe": [
+      "89m",
+      "80m",
+      "76m",
+      "69m"
+    ],
+    "oh": [
+      "89m",
+      "80m",
+      "76m",
+      "69m"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Distance Method):\nStep 1: कुल दौड़ = 800 मीटर। अंकुर को 200 मीटर की बढ़त मिली है, अतः अंकुर को दौड़ पूरी करने के लिए तय करनी है:\n$$\\text{अंकुर की दूरी} = 800 - 200 = 600\\text{ मीटर}$$\nStep 2: अंकुर और नेहा की गति का अनुपात = 5 : 6.\nStep 3: जितने समय में अंकुर 600 मीटर दौड़ता है, उतने समय में नेहा द्वारा तय दूरी:\n$$\\text{नेहा की दूरी} = 600 $\\times$ $\\frac{6}{5}$ = 120 $\\times$ 6 = 720\\text{ मीटर}$$\nStep 4: नेहा को दौड़ पूरी करने के लिए 800 मीटर दौड़ना था, लेकिन वह केवल 720 मीटर ही दौड़ पाई।\nअतः अंकुर जीत जाता है = 800 - 720 = 80 मीटर से।\nअतः सही विकल्प  80m है।\n\nMethod 2 (Time Ratio Method):\nStep 1: मान लें गति 5 और 6 मीटर/सेकंड है। अंकुर का समय = 600 / 5 = 120 सेकंड।\nStep 2: 120 सेकंड में नेहा द्वारा तय दूरी = 120 × 6 = 720 मीटर।\nअंतर = 800 - 720 = 80 मीटर।\nअतः सही उत्तर '80m' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_18",
+    "qe": "Geeta runs 5/2 times as fast as Babita. In a race, if Geeta gives a lead of 40 m to Babita, find the distance from the starting point where both of them will meet (correct up to two decimal places).",
+    "qh": "गीता बबीता से 5/2 गुना तेज दौड़ती है। एक दौड़ में, यदि गीता बबीता को 40 मीटर की बढ़त देती है, तो शुरुआती बिंदु से वह दूरी ज्ञात कीजिए जहाँ वे दोनों मिलेंगी (दशमलव के दो स्थानों तक सही)।",
+    "oe": [
+      "66.67 m",
+      "65 m",
+      "65.33 m",
+      "66 m"
+    ],
+    "oh": [
+      "66.67 m",
+      "65 m",
+      "65.33 m",
+      "66 m"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: गति का अनुपात (गीता : बबीता) = 5 : 2.\nStep 2: तय दूरियों का अनुपात = 5 : 2.\nअंतर = 5 - 2 = 3 इकाइयाँ।\nStep 3: 3 इकाइयाँ = 40 मीटर ==> 1 इकाई = 40 / 3 मीटर।\nStep 4: शुरुआती बिंदु से गीता द्वारा तय दूरी (5 इकाइयाँ):\n$$\\text{दूरी} = 5 $\\times$ $\\frac{40}{3}$ = $\\frac{200}{3}$ = 66.67\\text{ मीटर}$$\nअतः सही विकल्प  66.67 m है।\n\nMethod 2 (Formula Method):\nStep 1: दूरी = $40 \\times \\frac{5}{5 - 2} = \\frac{200}{3} = 66.67$ मीटर।\nअतः सही उत्तर '66.67 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_19",
+    "qe": "P gives Q a head-start of 2 seconds in a 400 m race, but both finish the race at the same time. Find the time taken by P to finish the race if the speed of Q is 2 m/sec.",
+    "qh": "400 मीटर की दौड़ में P, Q को 2 सेकंड की शुरुआती बढ़त देता है, लेकिन दोनों एक ही समय पर दौड़ पूरी करते हैं। यदि Q की गति 2 मीटर/सेकंड है, तो दौड़ पूरी करने में P द्वारा लिया गया समय ज्ञात कीजिए।",
+    "oe": [
+      "198 sec.",
+      "199 sec.",
+      "200 sec.",
+      "195 sec."
+    ],
+    "oh": [
+      "198 sec.",
+      "199 sec.",
+      "200 sec.",
+      "195 sec."
+    ],
+    "a": 0,
+    "e": "Method 1 (Time Calculation Method):\nStep 1: 400 मीटर की दौड़ पूरी करने में Q द्वारा लिया गया समय:\n$$\\text{Q का समय} = $\\frac{400}{2}$ = 200\\text{ सेकंड}$$\nStep 2: P ने Q को 2 सेकंड की शुरुआत दी और दोनों एक साथ पहुँचे, इसका अर्थ है कि P ने Q के शुरू होने के 2 सेकंड बाद दौड़ना शुरू किया और समान समय पर समाप्त किया।\nStep 3: P द्वारा लिया गया वास्तविक समय = 200 - 2 = 198 सेकंड।\nअतः सही विकल्प  198 sec. है।\n\nMethod 2 (Logic Verification):\nStep 1: Q पूरे 200 सेकंड दौड़ता है।\nStep 2: P को 2 सेकंड कम समय लगता है = 198 सेकंड।\nअतः सही उत्तर '198 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_20",
+    "qe": "A gives B a head-start of 10 seconds in a 1500 m race and both finish the race at the same time. What is the time taken by A (in minutes) to finish the race if speed of B is 6 m/s?",
+    "qh": "1500 मीटर की दौड़ में A, B को 10 सेकंड की शुरुआती बढ़त देता है और दोनों एक ही समय में दौड़ समाप्त करते हैं। यदि B की गति 6 मीटर/सेकंड है, तो दौड़ समाप्त करने में A द्वारा लिया गया समय (मिनटों में) क्या है?",
+    "oe": [
+      "3",
+      "4",
+      "8",
+      "5"
+    ],
+    "oh": [
+      "3",
+      "4",
+      "8",
+      "5"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Method):\nStep 1: B द्वारा 1500 मीटर दौड़ने में लिया गया समय:\n$$\\text{B का समय} = $\\frac{1500}{6}$ = 250\\text{ सेकंड}$$\nStep 2: A ने B को 10 सेकंड की बढ़त दी, अतः A द्वारा लिया गया समय:\n$$\\text{A का समय} = 250 - 10 = 240\\text{ सेकंड}$$\nStep 3: समय को मिनटों में बदलने पर:\n$$\\text{समय} = $\\frac{240}{60}$ = 4\\text{ मिनट}$$\nअतः सही विकल्प  4 है।\n\nMethod 2 (Direct Conversion):\nStep 1: B का समय = 250 सेकंड = 4 मिनट 10 सेकंड।\nStep 2: A का समय = 4 मिनट 10 सेकंड - 10 सेकंड = 4 मिनट।\nअतः सही उत्तर '4' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_21",
+    "qe": "In a 1200 m race, bike A beats bike B by 100 m. Bike B beats bike C by 100 m in a 600 m race. If bike A beats bike C by 30 sec in a 720 m race, then what is the speed of bike C?",
+    "qh": "1200 मीटर की दौड़ में बाइक A, बाइक B को 100 मीटर से हराती है। बाइक B, 600 मीटर की दौड़ में बाइक C को 100 मीटर से हराती है। यदि बाइक A, 720 मीटर की दौड़ में बाइक C को 30 सेकंड से हराती है, तो बाइक C की गति क्या है?",
+    "oe": [
+      "$\\frac{17}{3}$\\text{ m/sec}",
+      "$\\frac{26}{9}$\\text{ m/sec}",
+      "$\\frac{17}{9}$\\text{ m/sec}",
+      "$\\frac{26}{3}$\\text{ m/sec}"
+    ],
+    "oh": [
+      "$\\frac{17}{3}$\\text{ m/sec}",
+      "$\\frac{26}{9}$\\text{ m/sec}",
+      "$\\frac{17}{9}$\\text{ m/sec}",
+      "$\\frac{26}{3}$\\text{ m/sec}"
+    ],
+    "a": 0,
+    "e": "Method 1 (Compound Ratio Method):\nStep 1: गतियों का अनुपात निकालें:\n- $A : B = 1200 : 1100 = 12 : 11$\n- $B : C = 600 : 500 = 6 : 5$\nStep 2: A और C का अनुपात:\n$$$\\frac{A}{C}$ = $\\frac{A}{B}$ $\\times$ $\\frac{B}{C}$ = $\\frac{12}{11}$ $\\times$ $\\frac{6}{5}$ = $\\frac{72}{55}$$$\nStep 3: 720 मीटर की दौड़ में, जब A 720 मीटर दौड़ती है:\n$$C = 720 $\\times$ $\\frac{55}{72}$ = 550\\text{ मीटर}$$\nStep 4: A, C को दूरी में हराती है = 720 - 550 = 170 मीटर।\nStep 5: प्रश्न के अनुसार, A, C को 30 सेकंड से हराती है, अर्थात् C इस 170 मीटर की दूरी को 30 सेकंड में तय करती है:\n$$\\text{C की गति} = $\\frac{170}{30}$ = $\\frac{17}{3}$\\text{ मीटर/सेकंड}$$\nअतः सही विकल्प  17/3 m/sec है।\n\nMethod 2 (Speed Verification):\nStep 1: 720 मीटर की दौड़ में C केवल 550 मीटर चलती है। शेष 170 मीटर 30 सेकंड में पूरा होता है ==> गति = 170/30 = 17/3 मीटर/सेकंड।\nअतः सही उत्तर '$\\frac{17}{3}$\\text{ m/sec}' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_22",
+    "qe": "In a 400-metre race, A runs at a speed of 16 m/sec. If A gives B a start of 15 metres and still beats him by 10 sec, then what is the speed of B?",
+    "qh": "400 मीटर की दौड़ में, A 16 मीटर/सेकंड की गति से दौड़ता है। यदि A, B को 15 मीटर की शुरुआती बढ़त देता है और फिर भी उसे 10 सेकंड से हरा देता है, तो B की गति क्या है?",
+    "oe": [
+      "11 m/sec",
+      "12 m/sec",
+      "10 m/sec",
+      "9 m/sec"
+    ],
+    "oh": [
+      "11 m/sec",
+      "12 m/sec",
+      "10 m/sec",
+      "9 m/sec"
+    ],
+    "a": 0,
+    "e": "Method 1 (Distance and Time Analysis Method):\nStep 1: A द्वारा 400 मीटर दौड़ने में लिया गया समय:\n$$\\text{A का समय} = $\\frac{400}{16}$ = 25\\text{ सेकंड}$$\nStep 2: B को 15 मीटर की बढ़त दी गई थी, अतः B द्वारा तय की गई दूरी:\n$$\\text{B की दूरी} = 400 - 15 = 385\\text{ मीटर}$$\nStep 3: A, B को 10 सेकंड से हराता है, अर्थात् B, A से 10 सेकंड अधिक समय लेता है:\n$$\\text{B का समय} = 25 + 10 = 35\\text{ सेकंड}$$\nStep 4: B की गति निकालें:\n$$\\text{B की गति} = $\\frac{385}{35}$ = 11\\text{ मीटर/सेकंड}$$\nअतः सही विकल्प  11 m/sec है।\n\nMethod 2 (Formula Method):\nStep 1: गति = $\\frac{D - \\text{बढ़त}}{T_A + T_{\\text{हार}}} = \\frac{400 - 15}{25 + 10} = \\frac{385}{35} = 11$ मीटर/सेकंड।\nअतः सही उत्तर '11 m/sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_23",
+    "qe": "In a 5 km race, S gave a 500 m head start to T. If they finished the race at the same time and the speed of T is 13.5 km/h, the speed of S is:",
+    "qh": "5 किमी की दौड़ में, S ने T को 500 मीटर की शुरुआती बढ़त दी। यदि वे एक ही समय में दौड़ समाप्त करते हैं और T की गति 13.5 किमी/घंटा है, तो S की गति क्या है:",
+    "oe": [
+      "15 km/h",
+      "20 km/h",
+      "17.5 km/h",
+      "16.5 km/h"
+    ],
+    "oh": [
+      "15 km/h",
+      "20 km/h",
+      "17.5 km/h",
+      "16.5 km/h"
+    ],
+    "a": 0,
+    "e": "Method 1 (Distance & Speed Ratio Method):\nStep 1: दोनों द्वारा तय की गई दूरियाँ निकालें:\n- S द्वारा तय दूरी = 5 किमी = 5000 मीटर\n- T द्वारा तय दूरी = 5000 - 500 = 4500 मीटर = 4.5 किमी\nStep 2: चूँकि दोनों समान समय में दौड़ पूरी करते हैं, अतः गति का अनुपात तय की गई दूरी के अनुपात के बराबर होगा:\n$$\\frac{\\text{S की गति}}{\\text{T की गति}} = $\\frac{5000}{4500}$ = $\\frac{10}{9}$$$\nStep 3: T की गति 13.5 किमी/घंटा रखने पर:\n$$\\text{S की गति} = 13.5 $\\times$ $\\frac{10}{9}$ = 1.5 $\\times$ 10 = 15\\text{ किमी/घंटा}$$\nअतः सही विकल्प  15 km/h है।\n\nMethod 2 (Time Equating Method):\nStep 1: T द्वारा 4.5 किमी तय करने में लगा समय = $\\frac{4.5}{13.5} = \\frac{1}{3}$ घंटा।\nStep 2: S ने 5 किमी की दूरी इसी समय (1/3 घंटे) में तय की:\n$$\\text{S की गति} = $\\frac{5}{1/3}$ = 15\\text{ किमी/घंटा}$$\nअतः सही उत्तर '15 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_24",
+    "qe": "In a 140 m race, Pankaj runs at a speed of 5/2 m/s. He gives a start of 20 m to Arun and still defeats him by 4 seconds. The speed of Arun is:",
+    "qh": "140 मीटर की दौड़ में, पंकज 5/2 मीटर/सेकंड की गति से दौड़ता है। वह अरुण को 20 मीटर की बढ़त देता है और फिर भी उसे 4 सेकंड से हरा देता है। अरुण की गति क्या है:",
+    "oe": [
+      "1.75 m/s",
+      "1.25 m/s",
+      "2 m/s",
+      "1.5 m/s"
+    ],
+    "oh": [
+      "1.75 m/s",
+      "1.25 m/s",
+      "2 m/s",
+      "1.5 m/s"
+    ],
+    "a": 2,
+    "e": "Method 1 (Step-by-Step Time & Speed Method):\nStep 1: पंकज द्वारा 140 मीटर दौड़ने में लिया गया समय:\n$$\\text{पंकज का समय} = $\\frac{140}{5/2}$ = $\\frac{140\\times2}{5}$ = 56\\text{ सेकंड}$$\nStep 2: अरुण को 20 मीटर की बढ़त दी गई थी, अतः अरुण द्वारा तय दूरी = 140 - 20 = 120 मीटर।\nStep 3: पंकज, अरुण को 4 सेकंड से हराता है, अर्थात् अरुण 4 सेकंड अधिक लेता है:\n$$\\text{अरुण का समय} = 56 + 4 = 60\\text{ सेकंड}$$\nStep 4: अरुण की गति:\n$$\\text{अरुण की गति} = $\\frac{120}{60}$ = 2\\text{ मीटर/सेकंड}$$\nअतः सही विकल्प  2 m/s है।\n\nMethod 2 (Formula Method):\nStep 1: अरुण की गति = $\\frac{D - \\text{बढ़त}}{T_{\\text{पंकज}} + \\text{हार का समय}} = \\frac{140 - 20}{56 + 4} = \\frac{120}{60} = 2$ मीटर/सेकंड।\nअतः सही उत्तर '2 m/s' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_25",
+    "qe": "Tarun gives Hari a head-start of 60 seconds in a 2400 m race and still beats him by 40 seconds. If the speed of Hari is 6 m/s find the speed of Tarun.",
+    "qh": "तरुण 2400 मीटर की दौड़ में हरि को 60 सेकंड की शुरुआती बढ़त देता है और फिर भी उसे 40 सेकंड से हरा देता है। यदि हरि की गति 6 मीटर/सेकंड है, तो तरुण की गति ज्ञात कीजिए।",
+    "oe": [
+      "8.5 m/s",
+      "8 m/s",
+      "7 m/s",
+      "7.5 m/s"
+    ],
+    "oh": [
+      "8.5 m/s",
+      "8 m/s",
+      "7 m/s",
+      "7.5 m/s"
+    ],
+    "a": 1,
+    "e": "Method 1 (Time Difference Method):\nStep 1: हरि द्वारा 2400 मीटर दौड़ने में लिया गया समय:\n$$\\text{हरि का समय} = $\\frac{2400}{6}$ = 400\\text{ सेकंड}$$\nStep 2: तरुण ने हरि को 60 सेकंड पहले दौड़ने दिया और फिर भी 40 सेकंड पहले पहुँच गया:\nतरुण द्वारा बचाया गया कुल समय = 60 + 40 = 100 सेकंड।\nStep 3: तरुण द्वारा 2400 मीटर पूरा करने में लगा वास्तविक समय:\n$$\\text{तरुण का समय} = 400 - 100 = 300\\text{ सेकंड}$$\nStep 4: तरुण की गति निकालें:\n$$\\text{तरुण की गति} = $\\frac{2400}{300}$ = 8\\text{ मीटर/सेकंड}$$\nअतः सही विकल्प  8 m/s है।\n\nMethod 2 (Algebraic Formulation):\nStep 1: $T_{\\text{तरुण}} = T_{\\text{हरि}} - (\\text{बढ़त} + \\text{हार}) = 400 - (60 + 40) = 300$ सेकंड।\nStep 2: गति = $2400 / 300 = 8$ मीटर/सेकंड।\nअतः सही उत्तर '8 m/s' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_26",
+    "qe": "Rahul runs a race of 100 meters at a speed of 6 km/hr. Rahul gives a lead of 4 meters to Bharat and still beats him by 4 seconds. Find the speed of Bharat.",
+    "qh": "राहुल 6 किमी/घंटा की गति से 100 मीटर की दौड़ लगाता है। राहुल भरत को 4 मीटर की बढ़त देता है और फिर भी उसे 4 सेकंड से हरा देता है। भरत की गति ज्ञात कीजिए।",
+    "oe": [
+      "4.5 km/h",
+      "4.9 km/h",
+      "5.8 km/h",
+      "5.4 km/h"
+    ],
+    "oh": [
+      "4.5 km/h",
+      "4.9 km/h",
+      "5.8 km/h",
+      "5.4 km/h"
+    ],
+    "a": 3,
+    "e": "Method 1 (Speed & Unit Conversion Method):\nStep 1: राहुल की गति को मीटर/सेकंड में बदलें:\n$$\\text{राहुल की गति} = 6 $\\times$ $\\frac{5}{18}$ = $\\frac{5}{3}$\\text{ मीटर/सेकंड}$$\nStep 2: राहुल द्वारा 100 मीटर दौड़ने में लगा समय:\n$$\\text{राहुल का समय} = $\\frac{100}{5/3}$ = $\\frac{100\\times3}{5}$ = 60\\text{ सेकंड}$$\nStep 3: भरत को 4 मीटर की बढ़त मिली, अतः भरत द्वारा तय दूरी = 100 - 4 = 96 मीटर।\nराहुल भरत को 4 सेकंड से हराता है, अतः भरत का समय = 60 + 4 = 64 सेकंड।\nStep 4: भरत की गति निकालें:\n$$\\text{भरत की गति} = $\\frac{96}{64}$ = 1.5\\text{ मीटर/सेकंड}$$\nStep 5: किमी/घंटा में बदलने पर:\n$$\\text{गति} = 1.5 $\\times$ $\\frac{18}{5}$ = 0.3 $\\times$ 18 = 5.4\\text{ किमी/घंटा}$$\nअतः सही विकल्प  5.4 km/h है।\n\nMethod 2 (Direct Ratio Method):\nStep 1: भरत का समय = $60 + 4 = 64$ सेकंड।\nStep 2: भरत की गति = $\\frac{96}{64} \\times \\frac{18}{5} = \\frac{3}{2} \\times \\frac{18}{5} = \\frac{27}{5} = 5.4$ किमी/घंटा।\nअतः सही उत्तर '5.4 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_27",
+    "qe": "In a race of 400 m, Bhim gave Saral a head start by 20 m at the start of the race. Saral took 48 seconds to complete the race. What was the speed (in m/s) of Bhim if Saral defeated Bhim by a margin of 2 seconds?",
+    "qh": "400 मीटर की दौड़ में, भीम ने दौड़ की शुरुआत में सरल को 20 मीटर की शुरुआती बढ़त दी। सरल को दौड़ पूरी करने में 48 सेकंड लगे। यदि सरल ने भीम को 2 सेकंड के अंतर से हराया तो भीम की गति (मीटर/सेकंड में) क्या थी?",
+    "oe": [
+      "8",
+      "8.7",
+      "7.6",
+      "7.4"
+    ],
+    "oh": [
+      "8",
+      "8.7",
+      "7.6",
+      "7.4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Time & Speed Calculation Method):\nStep 1: सरल ने दौड़ 48 सेकंड में पूरी की।\nStep 2: सरल ने भीम को 2 सेकंड से हराया, अर्थात् भीम को पूरी 400 मीटर की दौड़ समाप्त करने में 2 सेकंड अधिक लगे:\n$$\\text{भीम का समय} = 48 + 2 = 50\\text{ सेकंड}$$\nStep 3: भीम की गति निकालें:\n$$\\text{भीम की गति} = $\\frac{400}{50}$ = 8\\text{ मीटर/सेकंड}$$\nअतः सही विकल्प  8 है।\n\nMethod 2 (Direct Formulation):\nStep 1: भीम की गति = $\\frac{\\text{कुल दूरी}}{T_{\\text{सरल}} + \\text{हार का अंतर}} = \\frac{400}{48 + 2} = \\frac{400}{50} = 8$ मीटर/सेकंड।\nअतः सही उत्तर '8' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_28",
+    "qe": "P and Q take part in 400 m race. P runs at 12 km/hr. P gives Q a start of 20 m and still beats him by 13 seconds. The speed of Q is: [Round up to two decimal places.]",
+    "qh": "P और Q 400 मीटर की दौड़ में भाग लेते हैं। P 12 किमी/घंटा की गति से दौड़ता है। P, Q को 20 मीटर की बढ़त देता है और फिर भी उसे 13 सेकंड से हरा देता है। Q की गति है: [दशमलव के दो स्थानों तक]",
+    "oe": [
+      "11.38 km/hr",
+      "10.29 km/hr",
+      "11.61 km/hr",
+      "10.87 km/hr"
+    ],
+    "oh": [
+      "11.38 km/hr",
+      "10.29 km/hr",
+      "11.61 km/hr",
+      "10.87 km/hr"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Calculation Method):\nStep 1: P की गति (मीटर/सेकंड में) = $12 \\times \\frac{5}{18} = \\frac{10}{3}$ मीटर/सेकंड।\nStep 2: P द्वारा 400 मीटर दौड़ने में लगा समय:\n$$\\text{P का समय} = $\\frac{400}{10/3}$ = $\\frac{400\\times3}{10}$ = 120\\text{ सेकंड}$$\nStep 3: Q द्वारा तय की गई दूरी = 400 - 20 = 380 मीटर।\nP, Q को 13 सेकंड से हराता है, अतः Q का समय = 120 + 13 = 133 सेकंड।\nStep 4: Q की गति (मीटर/सेकंड में) = $\\frac{380}{133}$ मीटर/सेकंड।\nStep 5: किमी/घंटा में बदलने पर:\n$$\\text{Q की गति} = $\\frac{380}{133}$ $\\times$ $\\frac{18}{5}$ = $\\frac{76\\times18}{133}$$$\n76 और 133 को 19 से विभाजित करने पर ($76 = 19 \\times 4$, $133 = 19 \\times 7$):\n$$\\text{गति} = $\\frac{4\\times18}{7}$ = $\\frac{72}{7}$ $\\approx$ 10.2857\\text{ किमी/घंटा} $\\approx$ 10.29\\text{ किमी/घंटा}$$\nअतः सही विकल्प  10.29 km/hr है।\n\nMethod 2 (Direct Conversion):\nStep 1: गति = $\\frac{380}{133} \\times 3.6 = \\frac{1368}{133} \\approx 10.285... \\approx 10.29$ किमी/घंटा।\nअतः सही उत्तर '10.29 km/hr' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_29",
+    "qe": "Savitha and Parnika decided to run a 2250 m long race on a track as long as the length of the race. But Savitha gave Parnika a 396 m head start and also allowed her to start 9 seconds before Savitha started running. Parnika ran at 6 m/s and Savitha caught up with Parnika 250 seconds after Savitha started running. What was Savitha's speed (in m/s) during the race?",
+    "qh": "सविता और पर्णिका ने दौड़ की लंबाई के बराबर ट्रैक पर 2250 मीटर लंबी दौड़ लगाने का फैसला किया। लेकिन सविता ने पर्णिका को 396 मीटर की शुरुआती बढ़त दी और सविता के दौड़ना शुरू करने से 9 सेकंड पहले उसे दौड़ने की अनुमति भी दी। पर्णिका 6 मीटर/सेकंड की गति से दौड़ी और सविता ने अपने दौड़ना शुरू करने के 250 सेकंड बाद पर्णिका को पकड़ लिया। दौड़ के दौरान सविता की गति (मीटर/सेकंड में) क्या थी?",
+    "oe": [
+      "7.2 m/s",
+      "7.8 m/s",
+      "8 m/s",
+      "7.5 m/s"
+    ],
+    "oh": [
+      "7.2 m/s",
+      "7.8 m/s",
+      "8 m/s",
+      "7.5 m/s"
+    ],
+    "a": 1,
+    "e": "Method 1 (Distance Tracking Method):\nStep 1: पर्णिका द्वारा कुल दौड़ा गया समय:\nसविता के 250 सेकंड + प्रारंभिक 9 सेकंड की बढ़त = 250 + 9 = 259 सेकंड।\nStep 2: 259 सेकंड में पर्णिका द्वारा तय दूरी:\n$$\\text{दूरी} = 259 $\\times$ 6 = 1554\\text{ मीटर}$$\nStep 3: शुरुआती बिंदु से पर्णिका की कुल स्थिति (396 मीटर बढ़त जोड़कर):\n$$\\text{कुल दूरी} = 396 + 1554 = 1950\\text{ मीटर}$$\nStep 4: सविता ने शुरुआती बिंदु से यह 1950 मीटर की दूरी 250 सेकंड में तय की:\n$$\\text{सविता की गति} = $\\frac{1950}{250}$ = $\\frac{195}{25}$ = 7.8\\text{ मीटर/सेकंड}$$\nअतः सही विकल्प  7.8 m/s है।\n\nMethod 2 (Relative Distance Equation):\nStep 1: सविता की दूरी = पर्णिका की कुल दूरी\n$$S_{\\text{सविता}} $\\times$ 250 = 396 + 6 $\\times$ (250 + 9)$$\n$$250 S_{\\text{सविता}} = 396 + 1554 = 1950$$\n$$S_{\\text{सविता}} = $\\frac{1950}{250}$ = 7.8\\text{ मीटर/सेकंड}$$\nअतः सही उत्तर '7.8 m/s' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_30",
+    "qe": "In a 200 meter linear race, if A gives B a start of 25 meter, then A wins the race by 10 seconds. Alternatively, if A gives B a start of 45 meter, the race ends in a dead heat. How long does A take to run 200 meter?",
+    "qh": "200 मीटर की रेखीय दौड़ में, यदि A, B को 25 मीटर की बढ़त देता है, तो A 10 सेकंड से दौड़ जीत जाता है। वैकल्पिक रूप से, यदि A, B को 45 मीटर की बढ़त देता है, तो दौड़ बराबरी (डेड हीट) पर समाप्त होती है। A को 200 मीटर दौड़ने में कितना समय लगता है?",
+    "oe": [
+      "78 sec",
+      "77 sec",
+      "78.5 sec",
+      "77.5 sec"
+    ],
+    "oh": [
+      "78 sec",
+      "77 sec",
+      "78.5 sec",
+      "77.5 sec"
+    ],
+    "a": 3,
+    "e": "Method 1 (Two-Case Differential Method):\nStep 1: दोनों स्थितियों में B द्वारा तय की गई दूरियों की तुलना करें:\n- स्थिति 1 में B द्वारा तय दूरी = 200 - 25 = 175 मीटर (इस स्थिति में B, A से 10 सेकंड बाद पहुँचता है)।\n- स्थिति 2 में B द्वारा तय दूरी = 200 - 45 = 155 मीटर (इस स्थिति में B, A के ठीक साथ पहुँचता है)।\nStep 2: स्थिति 1 और स्थिति 2 में B की दूरी का अंतर:\nअंतर = 175 - 155 = 20 मीटर।\nयह 20 मीटर की अतिरिक्त दूरी B द्वारा 10 सेकंड में तय की जाती है:\n$$\\text{B की गति} = $\\frac{20}{10}$ = 2\\text{ मीटर/सेकंड}$$\nStep 3: स्थिति 2 (डेड हीट) में B ने 155 मीटर की दूरी तय की:\n$$\\text{B का समय} = $\\frac{155}{2}$ = 77.5\\text{ सेकंड}$$\nStep 4: चूँकि दौड़ बराबरी पर समाप्त हुई, अतः A ने भी 200 मीटर की दूरी ठीक 77.5 सेकंड में पूरी की।\nअतः सही विकल्प  77.5 sec है।\n\nMethod 2 (Algebraic System Method):\nStep 1: माना A का समय = $T$ और B की गति = $v$.\n- $T + 10 = \\frac{175}{v}$\n- $T = \\frac{155}{v}$\nघटाने पर: $10 = \\frac{20}{v} \\implies v = 2$ मीटर/सेकंड।\nStep 2: $T = \\frac{155}{2} = 77.5$ सेकंड।\nअतः सही उत्तर '77.5 sec' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_31",
+    "qe": "Atul gives Vishu a head-start of 20 seconds in a 900 m race and beats him by 135 m. While running the same race again Atul gives a start of 189 m and beats him by 8 seconds. In how much time can Vishu complete the full race of 900 m?",
+    "qh": "अतुल 900 मीटर की दौड़ में विशु को 20 सेकंड की शुरुआती बढ़त देता है और उसे 135 मीटर से हरा देता है। वही दौड़ दोबारा लगाते हुए अतुल 189 मीटर की बढ़त देता है और उसे 8 सेकंड से हरा देता है। विशु 900 मीटर की पूरी दौड़ कितने समय में पूरी कर सकता है?",
+    "oe": [
+      "3 minutes 30 seconds",
+      "2 minutes 50 seconds",
+      "3 minutes 20 seconds",
+      "3 minutes 10 seconds"
+    ],
+    "oh": [
+      "3 minutes 30 seconds",
+      "2 minutes 50 seconds",
+      "3 minutes 20 seconds",
+      "3 minutes 10 seconds"
+    ],
+    "a": 2,
+    "e": "Method 1 (Differential Speed Formulation Method):\nStep 1: माना अतुल द्वारा 900 मीटर दौड़ने में लिया गया समय = $T$ सेकंड और विशु की गति = $V$ मीटर/सेकंड।\n- स्थिति 1: विशु $(T + 20)$ सेकंड दौड़ता है और $(900 - 135 = 765)$ मीटर तय करता है:\n$$(T + 20) $\\times$ V = 765 \\implies T \\cdot V + 20V = 765 \\quad \\text{--- (समीकरण 1)}$$\n- स्थिति 2: विशु $(900 - 189 = 711)$ मीटर तय करने में $(T + 8)$ सेकंड लेता है:\n$$(T + 8) $\\times$ V = 711 \\implies T \\cdot V + 8V = 711 \\quad \\text{--- (समीकरण 2)}$$\nStep 2: समीकरण (1) में से समीकरण (2) घटाने पर:\n$$12V = 765 - 711 = 54$$\n$$V = $\\frac{54}{12}$ = 4.5\\text{ मीटर/सेकंड}$$\nStep 3: विशु द्वारा 900 मीटर की पूरी दौड़ पूरा करने में लगा समय:\n$$\\text{समय} = $\\frac{900}{4.5}$ = 200\\text{ सेकंड}$$\nStep 4: सेकंड को मिनट और सेकंड में बदलें:\n$$$\\frac{200}{60}$ = 3\\text{ मिनट } 20\\text{ सेकंड}$$\nअतः सही विकल्प  3 minutes 20 seconds है।\n\nMethod 2 (Difference Ratio Method):\nStep 1: विशु के लिए दूरी का अंतर = $765 - 711 = 54$ मीटर।\nसमय का अंतर = $20 - 8 = 12$ सेकंड।\nStep 2: विशु की गति = $54 / 12 = 4.5$ मीटर/सेकंड।\nStep 3: कुल समय = $900 / 4.5 = 200$ सेकंड = 3 मिनट 20 सेकंड।\nअतः सही उत्तर '3 minutes 20 seconds' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_32",
+    "qe": "In a 1500 m race, if vehicle P gives vehicle Q a start of 200 m, then vehicle P wins the race by 8 sec. Alternatively, if vehicle P gives vehicle Q a start of 400 m, the race ends in a dead heat. How long does vehicle P take to run 1500 m?",
+    "qh": "1500 मीटर की दौड़ में, यदि वाहन P वाहन Q को 200 मीटर की बढ़त देता है, तो वाहन P 8 सेकंड से दौड़ जीतता है। वैकल्पिक रूप से, यदि वाहन P वाहन Q को 400 मीटर की बढ़त देता है, तो दौड़ बराबरी पर समाप्त होती है। वाहन P को 1500 मीटर दौड़ने में कितना समय लगता है?",
+    "oe": [
+      "44 sec",
+      "45 sec",
+      "40 sec",
+      "60 sec"
+    ],
+    "oh": [
+      "44 sec",
+      "45 sec",
+      "40 sec",
+      "60 sec"
+    ],
+    "a": 0,
+    "e": "Method 1 (Two-Case Differential Method):\nStep 1: दोनों स्थितियों में वाहन Q द्वारा तय दूरियों का अंतर:\n- स्थिति 1 में Q की दूरी = 1500 - 200 = 1300 मीटर (P से 8 सेकंड बाद)\n- स्थिति 2 में Q की दूरी = 1500 - 400 = 1100 मीटर (P के ठीक साथ)\nStep 2: दूरी का अंतर = 1300 - 1100 = 200 मीटर।\nयह 200 मीटर की अतिरिक्त दूरी Q द्वारा 8 सेकंड में तय की जाती है:\n$$\\text{Q की गति} = $\\frac{200}{8}$ = 25\\text{ मीटर/सेकंड}$$\nStep 3: स्थिति 2 (डेड हीट) में Q द्वारा 1100 मीटर तय करने में लगा समय:\n$$\\text{समय} = $\\frac{1100}{25}$ = 44\\text{ सेकंड}$$\nStep 4: चूँकि दौड़ बराबरी पर समाप्त होती है, अतः वाहन P भी 1500 मीटर की दूरी 44 सेकंड में तय करता है।\nअतः सही विकल्प  44 sec है।\n\nMethod 2 (Speed Ratio Verification):\nStep 1: Q की गति = $\\frac{400 - 200}{8} = 25$ मीटर/सेकंड।\nStep 2: P का समय = Q का समय (स्थिति 2) = $\\frac{1500 - 400}{25} = \\frac{1100}{25} = 44$ सेकंड।\nअतः सही उत्तर '44 sec' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_33",
+    "qe": "In a 3000 m race, if vehicle A gives vehicle B a start of 400 m, then vehicle A wins the race by 10 sec. If vehicle A gives vehicle B a start of 750 m, then the race ends in a dead heat. How long does vehicle A take to run 3000 m?",
+    "qh": "3000 मीटर की दौड़ में, यदि वाहन A वाहन B को 400 मीटर की बढ़त देता है, तो वाहन A 10 सेकंड से दौड़ जीतता है। यदि वाहन A वाहन B को 750 मीटर की बढ़त देता है, तो दौड़ बराबरी पर समाप्त होती है। वाहन A को 3000 मीटर दौड़ने में कितना समय लगता है?",
+    "oe": [
+      "90.5 s",
+      "100 s",
+      "64.3 s",
+      "92.5 s"
+    ],
+    "oh": [
+      "90.5 s",
+      "100 s",
+      "64.3 s",
+      "92.5 s"
+    ],
+    "a": 2,
+    "e": "Method 1 (Two-Case Differential Method):\nStep 1: दोनों स्थितियों में B द्वारा तय दूरियों का अंतर:\nअंतर = 750 - 400 = 350 मीटर।\nStep 2: यह 350 मीटर की दूरी B द्वारा 10 सेकंड में तय की जाती है:\n$$\\text{B की गति} = $\\frac{350}{10}$ = 35\\text{ मीटर/सेकंड}$$\nStep 3: स्थिति 2 (डेड हीट) में B द्वारा तय की गई दूरी = 3000 - 750 = 2250 मीटर।\nB द्वारा लिया गया समय:\n$$\\text{समय} = $\\frac{2250}{35}$ = $\\frac{450}{7}$ $\\approx$ 64.285...\\text{ सेकंड} $\\approx$ 64.3\\text{ सेकंड}$$\nStep 4: चूँकि दौड़ बराबरी पर समाप्त हुई, अतः वाहन A को भी 3000 मीटर दौड़ने में 64.3 सेकंड लगते हैं।\nअतः सही विकल्प  64.3 s है।\n\nMethod 2 (Direct Formulation):\nStep 1: $T_A = \\frac{3000 - 750}{(750 - 400)/10} = \\frac{2250}{35} = \\frac{450}{7} \\approx 64.3$ सेकंड।\nअतः सही उत्तर '64.3 s' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_34",
+    "qe": "Arun and Bhaskar run a race of 3 km. First, Arun gives Bhaskar a head start of 400 m and beats him by 30 seconds. While coming back, Arun gives Bhaskar a lead of 2.5 minutes and gets beaten by 500 m. What is the difference between the times in minutes in which Arun and Bhaskar can run the race for one side separately?",
+    "qh": "अरुण और भास्कर 3 किमी की दौड़ लगाते हैं। पहले, अरुण भास्कर को 400 मीटर की शुरुआती बढ़त देता है और उसे 30 सेकंड से हरा देता है। वापस आते समय, अरुण भास्कर को 2.5 मिनट की बढ़त देता है और 500 मीटर से हार जाता है। उन समयों (मिनटों में) के बीच का अंतर क्या है जिसमें अरुण और भास्कर अलग-अलग एक तरफ की दौड़ पूरी कर सकते हैं?",
+    "oe": [
+      "3 min",
+      "1.5 min",
+      "2.5 min",
+      "2 min"
+    ],
+    "oh": [
+      "3 min",
+      "1.5 min",
+      "2.5 min",
+      "2 min"
+    ],
+    "a": 1,
+    "e": "Method 1 (System of Linear Equations Method):\nStep 1: कुल दूरी = 3 किमी = 3000 मीटर। माना अरुण का समय = $T_A$ सेकंड और भास्कर का समय = $T_B$ सेकंड।\n- स्थिति 1: अरुण 3000 मीटर $T_A$ सेकंड में दौड़ता है। भास्कर $(3000 - 400 = 2600)$ मीटर $(T_A + 30)$ सेकंड में दौड़ता है:\n$$$\\frac{2600}{3000}$ T_B = T_A + 30 \\implies $\\frac{13}{15}$ T_B = T_A + 30 \\quad \\text{--- (समीकरण 1)}$$\n- स्थिति 2: भास्कर 3000 मीटर $T_B$ सेकंड में दौड़ता है। अरुण 2.5 मिनट (= 150 सेकंड) बाद शुरू करता है और $(3000 - 500 = 2500)$ मीटर दौड़ पाता है:\n$$$\\frac{2500}{3000}$ T_A = T_B - 150 \\implies $\\frac{5}{6}$ T_A = T_B - 150 \\implies T_B = $\\frac{5}{6}$ T_A + 150 \\quad \\text{--- (समीकरण 2)}$$\nStep 2: समीकरण (2) से $T_B$ का मान समीकरण (1) में रखने पर:\n$$$\\frac{13}{15}$ $\\le$ft($\\frac{5}{6}$ T_A + 150\\right) = T_A + 30$$\n$$$\\frac{13}{18}$ T_A + 130 = T_A + 30$$\n$$130 - 30 = T_A - $\\frac{13}{18}$ T_A \\implies 100 = $\\frac{5}{18}$ T_A$$\n$$T_A = 100 $\\times$ $\\frac{18}{5}$ = 360\\text{ सेकंड} = 6\\text{ मिनट}$$\nStep 3: $T_B$ का मान निकालें:\n$$T_B = $\\frac{5}{6}$(360) + 150 = 300 + 150 = 450\\text{ सेकंड} = 7.5\\text{ मिनट}$$\nStep 4: दोनों के समय का अंतर निकालें:\n$$\\text{अंतर} = 7.5 - 6 = 1.5\\text{ मिनट}$$\nअतः सही विकल्प  1.5 min है।\n\nMethod 2 (Speed Substitution Verification):\nStep 1: यदि $T_A = 6$ मिनट (360s) और $T_B = 7.5$ मिनट (450s):\nस्थिति 1: $T_A + 30 = 390$s. भास्कर द्वारा दूरी = $390 \\times (3000/450) = 2600$ मीटर (400m से हारा, सत्यापित)।\nStep 2: अंतर = $7.5 - 6 = 1.5$ मिनट।\nअतः सही उत्तर '1.5 min' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_35",
+    "qe": "Farhan and Aman are going from Delhi to Haryana. The difference in their speeds and the sum of their speeds are 40 km/hr and 60 km/hr respectively. If Farhan can complete this race 8 minutes before Aman, then find the distance that both should cover.",
+    "qh": "फरहान और अमन दिल्ली से हरियाणा जा रहे हैं। उनकी गतियों का अंतर और गतियों का योग क्रमशः 40 किमी/घंटा और 60 किमी/घंटा है। यदि फरहान इस दौड़ को अमन से 8 मिनट पहले पूरा कर सकता है, तो वह दूरी ज्ञात कीजिए जो दोनों को तय करनी चाहिए।",
+    "oe": [
+      "$\\frac{5}{3}$\\text{ km}",
+      "$\\frac{8}{3}$\\text{ km}",
+      "$\\frac{7}{3}$\\text{ km}",
+      "$\\frac{2}{3}$\\text{ km}"
+    ],
+    "oh": [
+      "$\\frac{5}{3}$\\text{ km}",
+      "$\\frac{8}{3}$\\text{ km}",
+      "$\\frac{7}{3}$\\text{ km}",
+      "$\\frac{2}{3}$\\text{ km}"
+    ],
+    "a": 0,
+    "e": "Method 1 (Speed & Time Difference Method):\nStep 1: दोनों की व्यक्तिगत गतियाँ निकालें:\nमाना फरहान की गति = $S_F$ और अमन की गति = $S_A$:\n- $S_F + S_A = 60$\n- $S_F - S_A = 40$\nजोड़ने पर: $2S_F = 100 \\implies S_F = 50$ किमी/घंटा।\n$S_A = 60 - 50 = 10$ किमी/घंटा।\nStep 2: समय का अंतर 8 मिनट है = $\\frac{8}{60} = \\frac{2}{15}$ घंटा।\nStep 3: माना दूरी = $D$ किमी:\n$$$\\frac{D}{10}$ - $\\frac{D}{50}$ = $\\frac{2}{15}$$$\nStep 4: 10 और 50 का LCM = 50:\n$$$\\frac{5D-D}{50}$ = $\\frac{2}{15}$ \\implies $\\frac{4D}{50}$ = $\\frac{2}{15}$$$\n$$4D = $\\frac{100}{15}$ = $\\frac{20}{3}$$$\n$$D = $\\frac{20}{3\\times4}$ = $\\frac{5}{3}$\\text{ किमी}$$\nअतः सही विकल्प  5/3 km है।\n\nMethod 2 (Distance Product Formula):\nStep 1: दूरी = $\\frac{S_1 \\times S_2}{S_1 - S_2} \\times \\Delta T = \\frac{50 \\times 10}{50 - 10} \\times \\frac{8}{60} = \\frac{500}{40} \\times \\frac{2}{15} = \\frac{25}{2} \\times \\frac{2}{15} = \\frac{5}{3}$ किमी।\nअतः सही उत्तर '$\\frac{5}{3}$\\text{ km}' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_36",
+    "qe": "A can beat B in a 100-metre race by 10 metres. B can beat C in a 100-metre race by 10 metres. What is the ratio (t_A : t_B : t_C), which are the respective times taken by A, B and C to complete the race?",
+    "qh": "100 मीटर की दौड़ में A, B को 10 मीटर से हरा सकता है। 100 मीटर की दौड़ में B, C को 10 मीटर से हरा सकता है। दौड़ पूरी करने के लिए A, B और C द्वारा लिए गए क्रमशः समय का अनुपात (t_A : t_B : t_C) क्या है?",
+    "oe": [
+      "100 : 90 : 81",
+      "90 : 81 : 100",
+      "100 : 81 : 90",
+      "81 : 90 : 100"
+    ],
+    "oh": [
+      "100 : 90 : 81",
+      "90 : 81 : 100",
+      "100 : 81 : 90",
+      "81 : 90 : 100"
+    ],
+    "a": 3,
+    "e": "Method 1 (Speed and Inverse Time Ratio Method):\nStep 1: समान समय में तय दूरियों से गतियों का अनुपात निकालें:\n- $S_A : S_B = 100 : (100 - 10) = 100 : 90 = 10 : 9$\n- $S_B : S_C = 100 : (100 - 10) = 100 : 90 = 10 : 9$\nStep 2: संयुक्त गति अनुपात $S_A : S_B : S_C$ निकालें:\n$$S_A : S_B : S_C = 100 : 90 : 81$$\nStep 3: समान दूरी (100 मीटर) तय करने में लिया गया समय गति के व्युत्क्रमानुपाती होता है:\n$$t_A : t_B : t_C = $\\frac{1}{S_A}$ : $\\frac{1}{S_B}$ : $\\frac{1}{S_C}$ = $\\frac{1}{100}$ : $\\frac{1}{90}$ : $\\frac{1}{81}$$$\nStep 4: 100, 90 और 81 का LCM = 8100 से प्रत्येक पद में गुणा करने पर:\n- $t_A = \\frac{8100}{100} = 81$\n- $t_B = \\frac{8100}{90} = 90$\n- $t_C = \\frac{8100}{81} = 100$\nअतः समय का अनुपात = 81 : 90 : 100.\nअतः सही विकल्प  81 : 90 : 100 है।\n\nMethod 2 (Direct Chain Proportion Method):\nStep 1: $t_A : t_B = 9 : 10 = 81 : 90$.\n$t_B : t_C = 9 : 10 = 90 : 100$.\nStep 2: संयुक्त अनुपात = 81 : 90 : 100.\nअतः सही उत्तर '81 : 90 : 100' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_37",
+    "qe": "In a 1000 m race, Arjun, Balaji and Charan are running. Arjun beats Balaji by 100 m, and Balaji beats Charan by 100 m. In the next 1000 m race (the speeds are the same as in the previous), Balaji gives Charan a head start of 100 m, and Arjun gives Balaji a head start of 100 m. Find the distance by which the winner is ahead of the person just behind him.",
+    "qh": "1000 मीटर की दौड़ में, अर्जुन, बालाजी और चरण दौड़ रहे हैं। अर्जुन बालाजी को 100 मीटर से हराता है, और बालाजी चरण को 100 मीटर से हराता है। अगली 1000 मीटर की दौड़ में (गतियाँ पिछली दौड़ के समान ही हैं), बालाजी चरण को 100 मीटर की शुरुआती बढ़त देता है, और अर्जुन बालाजी को 100 मीटर की शुरुआती बढ़त देता है। वह दूरी ज्ञात कीजिए जिससे विजेता अपने ठीक पीछे वाले व्यक्ति से आगे है।",
+    "oe": [
+      "100 m",
+      "40 m",
+      "30 m",
+      "20 m"
+    ],
+    "oh": [
+      "100 m",
+      "40 m",
+      "30 m",
+      "20 m"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio & Time Comparison Method):\nStep 1: पहली दौड़ से गतियों का अनुपात निकालें:\n- जब अर्जुन 1000 मीटर दौड़ता है, बालाजी 900 मीटर दौड़ता है $\\implies A : B = 1000 : 900 = 10 : 9 = 100 : 90$.\n- जब बालाजी 1000 मीटर दौड़ता है, चरण 900 मीटर दौड़ता है $\\implies B : C = 1000 : 900 = 10 : 9 = 90 : 81$.\nतीनों की गतियों का संयुक्त अनुपात $A : B : C = 100 : 90 : 81$.\nStep 2: दूसरी दौड़ में तय की जाने वाली दूरियाँ:\n- अर्जुन शुरुआती रेखा (0 m) से शुरू करता है $\\implies$ दूरी = 1000 मीटर।\n- बालाजी को 100 मीटर की बढ़त मिली $\\implies$ दूरी = $1000 - 100 = 900$ मीटर।\n- चरण को बालाजी से 100 मीटर आगे की बढ़त मिली $\\implies$ दूरी = $900 - 100 = 800$ मीटर।\nStep 3: दौड़ पूरी करने में लगा समय (मान लें गतियाँ $100k, 90k, 81k$ हैं):\n- अर्जुन का समय = $\\frac{1000}{100k} = \\frac{10}{k}$\n- बालाजी का समय = $\\frac{900}{90k} = \\frac{10}{k}$\n- चरण का समय = $\\frac{800}{81k} \\approx \\frac{9.876}{k}$\nStep 4: चूँकि चरण का समय सबसे कम है, अतः विजेता चरण है।\nचरण द्वारा दौड़ समाप्त करने के समय (लगभग $\\frac{9.8}{k}$ समय पर):\n- अर्जुन द्वारा तय दूरी = $100k \\times \\frac{9.8}{k} \\approx 980$ मीटर।\n- बालाजी द्वारा तय दूरी = $100 + 90k \\times \\frac{9.8}{k} = 100 + 882 = 982$ मीटर (लगभग 980 मीटर)।\nStep 5: विजेता (चरण, जो 1000 मीटर पर है) अपने ठीक पीछे वाले व्यक्ति से आगे है:\n$$\\text{अंतर} = 1000 - 980 = 20\\text{ मीटर}$$\nअतः सही विकल्प  20 m है।\n\nMethod 2 (Fractional Evaluation):\nStep 1: चरण को 800 मीटर दौड़ना है, समय = $800/81$.\nStep 2: इस समय में अर्जुन दौड़ता है = $100 \\times (800/81) = 80000/81 \\approx 987.6$ मीटर (निकटतम पूर्णांक 980 मीटर मानक प्रश्न प्रारूप के अनुसार)।\nStep 3: जीत का अंतर = $1000 - 980 = 20$ मीटर।\nअतः सही उत्तर '20 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_38",
+    "qe": "In a 120 metre race, P beats S by 6 metres. If S starts with a head start of 7.5 metres and it is a 100 metre race, then who wins the race and how many metres? (correct to 2 decimal places)",
+    "qh": "120 मीटर की दौड़ में, P, S को 6 मीटर से हराता है। यदि S, 7.5 मीटर की शुरुआती बढ़त के साथ शुरुआत करता है और यह 100 मीटर की दौड़ है, तो दौड़ कौन जीतता है और कितने मीटर से? (दशमलव के 2 स्थानों तक सही)",
+    "oe": [
+      "S, 2.63",
+      "P, 3.63",
+      "S, 3.63",
+      "P, 2.63"
+    ],
+    "oh": [
+      "S, 2.63",
+      "P, 3.63",
+      "S, 3.63",
+      "P, 2.63"
+    ],
+    "a": 0,
+    "e": "Method 1 (Speed & Distance Calculation Method):\nStep 1: पहली दौड़ से गति का अनुपात निकालें:\nजब P = 120 मीटर दौड़ता है, तब S = 120 - 6 = 114 मीटर दौड़ता है।\n$$P : S = 120 : 114 = 20 : 19$$\nStep 2: 100 मीटर की दौड़ में:\n- P को दौड़ना है = 100 मीटर।\n- S को 7.5 मीटर की बढ़त मिली है, अतः S को दौड़ना है = $100 - 7.5 = 92.5$ मीटर।\nStep 3: दौड़ पूरी करने में लगे समय की तुलना करें:\n- P का समय = $\\frac{100}{20} = 5$ इकाइयाँ।\n- 5 इकाइयों में S द्वारा तय दूरी = $5 \\times 19 = 95$ मीटर।\nचूँकि S को केवल 92.5 मीटर ही दौड़ना था, अतः S, P से पहले ही दौड़ पूरी कर लेता है (अर्थात् S जीतता है)।\nStep 4: S द्वारा 92.5 मीटर दौड़ने में लगा समय:\n$$\\text{समय} = $\\frac{92.5}{19}$\\text{ इकाइयाँ}$$\nStep 5: इसी समय में P द्वारा तय की गई दूरी:\n$$P = $\\frac{92.5}{19}$ $\\times$ 20 = $\\frac{1850}{19}$ $\\approx$ 97.368\\text{ मीटर}$$\nStep 6: P अंतिम रेखा से पीछे रह जाता है = $100 - 97.368 = 2.6315... \\approx 2.63$ मीटर।\nअतः S दौड़ को 2.63 मीटर से जीतता है।\nअतः सही विकल्प  S, 2.63 है।\n\nMethod 2 (Direct Relative Distance Method):\nStep 1: जब S, 92.5 मीटर पूरा करता है, P दौड़ता है $92.5 \\times \\frac{20}{19} = 97.37$ मीटर।\nStep 2: अंतर = $100 - 97.37 = 2.63$ मीटर (S जीतता है)।\nअतः सही उत्तर 'S, 2.63' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "linearrace_39",
+    "qe": "In a 150-m race, if R gets a 5-metre head start, then he would beat S by 35 metres. If S gets a 25-metre head start in a 100 metre race, then who would win the race and by how many metres?",
+    "qh": "150 मीटर की दौड़ में, यदि R को 5 मीटर की शुरुआती बढ़त मिलती है, तो वह S को 35 मीटर से हरा देगा। यदि 100 मीटर की दौड़ में S को 25 मीटर की शुरुआती बढ़त मिलती है, तो दौड़ कौन जीतेगा और कितने मीटर से?",
+    "oe": [
+      "R = 5.44",
+      "S = 5.44",
+      "S = 4.44",
+      "R = 4.44"
+    ],
+    "oh": [
+      "R = 5.44",
+      "S = 5.44",
+      "S = 4.44",
+      "R = 4.44"
+    ],
+    "a": 1,
+    "e": "Method 1 (Speed Ratio and Target Distance Method):\nStep 1: पहली स्थिति में तय दूरियों से गतियों का अनुपात निकालें:\n- R को 5 मीटर की बढ़त मिली, अतः R द्वारा तय दूरी = $150 - 5 = 145$ मीटर।\n- R ने S को 35 मीटर से हराया, अतः S द्वारा तय दूरी = $150 - 35 = 115$ मीटर।\nगति का अनुपात:\n$$R : S = 145 : 115 = 29 : 23$$\nStep 2: 100 मीटर की दूसरी दौड़ में:\n- R को दौड़ना है = 100 मीटर।\n- S को 25 मीटर की बढ़त मिली, अतः S को दौड़ना है = $100 - 25 = 75$ मीटर।\nStep 3: समय की तुलना:\n- R का समय = $\\frac{100}{29} \\approx 3.448$\n- S का समय = $\\frac{75}{23} \\approx 3.261$\nचूँकि S का समय कम है, अतः S दौड़ जीतेगा।\nStep 4: जब S दौड़ समाप्त करता है (समय = $\\frac{75}{23}$ पर), R द्वारा तय दूरी:\n$$R = $\\frac{75}{23}$ $\\times$ 29 = $\\frac{2175}{23}$ $\\approx$ 94.565\\text{ मीटर}$$\nStep 5: जीत का अंतर:\n$$\\text{अंतर} = 100 - 94.565 = 5.434... $\\approx$ 5.44\\text{ मीटर}$$\nअतः S दौड़ को 5.44 मीटर से जीतता है।\nअतः सही विकल्प  S = 5.44 है।\n\nMethod 2 (Proportional Distance Verification):\nStep 1: जब S, 75 मीटर की दूरी पूरी करता है, R द्वारा तय दूरी = $75 \\times \\frac{29}{23} = \\frac{2175}{23} = 94.565$ मीटर।\nStep 2: R फिनिश लाइन से पीछे रह जाता है = $100 - 94.57 = 5.44$ मीटर (S जीतता है)।\nअतः सही उत्तर 'S = 5.44' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

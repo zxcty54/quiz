@@ -1,0 +1,363 @@
+[
+  {
+    "p_id": "lcmhcfnumber12_1",
+    "qe": "The HCF of two numbers is 21 and their LCM is 840. If one of the numbers is 49, then the other number is:",
+    "qh": "दो संख्याओं का महत्तम समापवर्तक (HCF) 21 है और उनका लघुत्तम समापवर्त्य (LCM) 840 है। यदि इनमें से एक संख्या 49 है, तो दूसरी संख्या क्या है:",
+    "oe": [
+      "650",
+      "540",
+      "810",
+      "360"
+    ],
+    "oh": [
+      "650",
+      "540",
+      "810",
+      "360"
+    ],
+    "a": 3,
+    "e": "Method 1 (Standard Product Formula Method):\nStep 1: सूत्र: $\\text{पहली संख्या} \\times \\text{दूसरी संख्या} = \\text{HCF} \\times \\text{LCM}$\nStep 2: मान रखने पर:\n$$49 $\\times$ \\text{दूसरी संख्या} = 21 $\\times$ 840$$\n$$\\text{दूसरी संख्या} = $\\frac{21\\times840}{49}$$$\nStep 3: 7 से अंश और हर को काटने पर:\n$$\\text{दूसरी संख्या} = $\\frac{3\\times840}{7}$ = 3 $\\times$ 120 = 360$$\nअतः सही विकल्प  360 है।\n\nMethod 2 (Factor Method):\n$\\text{दूसरी संख्या} = \\frac{21 \\times 840}{49} = \\frac{17640}{49} = 360$.\nअतः सही उत्तर '360' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_2",
+    "qe": "The LCM of the two numbers is 4104 and the HCF is 9. If one of the numbers is 171, find the other.",
+    "qh": "दो संख्याओं का LCM 4104 है और HCF 9 है। यदि इनमें से एक संख्या 171 है, तो दूसरी संख्या ज्ञात कीजिए।",
+    "oe": [
+      "218",
+      "215",
+      "220",
+      "216"
+    ],
+    "oh": [
+      "218",
+      "215",
+      "220",
+      "216"
+    ],
+    "a": 3,
+    "e": "Method 1 (Product Formula Method):\nStep 1: सूत्र: $n_1 \\times n_2 = \\text{HCF} \\times \\text{LCM}$\nStep 2: मान रखने पर:\n$$171 $\\times$ n_2 = 9 $\\times$ 4104$$\n$$n_2 = $\\frac{9\\times4104}{171}$$$\nStep 3: 9 से 171 को काटने पर ($171 / 9 = 19$):\n$$n_2 = $\\frac{4104}{19}$ = 216$$\nअतः सही विकल्प  216 है।\n\nMethod 2 (Unit Digit Method):\nStep 1: $171 \\times n_2$ का इकाई अंक $9 \\times 4 = 36$ (इकाई अंक 6) के बराबर होना चाहिए।\nStep 2: $1 \\times n_2$ का इकाई अंक 6 केवल तभी होगा जब $n_2$ का इकाई अंक 6 हो।\nविकल्पों में केवल 216 का इकाई अंक 6 है।\nअतः सही उत्तर '216' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_3",
+    "qe": "The product of two numbers is 726 and their HCF is 11, then their LCM is:",
+    "qh": "दो संख्याओं का गुणनफल 726 है और उनका HCF 11 है, तो उनका LCM क्या है:",
+    "oe": [
+      "68",
+      "76",
+      "66",
+      "58"
+    ],
+    "oh": [
+      "68",
+      "76",
+      "66",
+      "58"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Formula Method):\nStep 1: सूत्र: $\\text{LCM} = \\frac{\\text{संख्याओं का गुणनफल}}{\\text{HCF}}$\nStep 2: मान रखने पर:\n$$\\text{LCM} = $\\frac{726}{11}$ = 66$$\nअतः सही विकल्प  66 है।\n\nMethod 2 (Verification Method):\n$66 \\times 11 = 726$.\nअतः सही उत्तर '66' है।\n\nHCF-LCM ka niyam se hi is prashn ka jawab nikalta hai. She sh vikalp 68, 76, 58 is hisaab se nahi milte. Exam point: HCF-LCM ka niyam - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "lcmhcfnumber12_4",
+    "qe": "The LCM of x and y is 441 and their HCF is 7. If x = 49 then find y.",
+    "qh": "x और y का LCM 441 है और उनका HCF 7 है। यदि x = 49 है, तो y का मान ज्ञात कीजिए।",
+    "oe": [
+      "56",
+      "36",
+      "65",
+      "63"
+    ],
+    "oh": [
+      "56",
+      "36",
+      "65",
+      "63"
+    ],
+    "a": 3,
+    "e": "Method 1 (Formula Method):\nStep 1: सूत्र: $x \\times y = \\text{HCF} \\times \\text{LCM}$\nStep 2: मान रखने पर:\n$$49 $\\times$ y = 7 $\\times$ 441$$\n$$y = $\\frac{7\\times441}{49}$ = $\\frac{441}{7}$ = 63$$\nअतः सही विकल्प  63 है।\n\nMethod 2 (Co-prime Ratio Method):\nStep 1: संख्याएँ $7a$ और $7b$ हैं। $7a = 49 \\implies a = 7$.\nStep 2: $\\text{LCM} = 7 \\times a \\times b = 441 \\implies 7 \\times 7 \\times b = 441 \\implies 49b = 441 \\implies b = 9$.\nStep 3: $y = 7b = 7 \\times 9 = 63$.\nअतः सही उत्तर '63' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_5",
+    "qe": "If K_1 and K_2 are two distinct prime numbers, then what is the product of the highest common factor and the least common multiple of K_1 and K_2?",
+    "qh": "यदि K_1 और K_2 दो भिन्न अभाज्य संख्याएँ हैं, तो K_1 और K_2 के महत्तम समापवर्तक और लघुत्तम समापवर्त्य का गुणनफल क्या है?",
+    "oe": [
+      "1",
+      "$\\frac{K_1}{K_2}$",
+      "K_1 + K_2",
+      "K_1 $\\times$ K_2"
+    ],
+    "oh": [
+      "1",
+      "$\\frac{K_1}{K_2}$",
+      "K_1 + K_2",
+      "K_1 $\\times$ K_2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Fundamental Theorem Method):\nStep 1: किसी भी दो संख्याओं के लिए मूल संबंध:\n$$\\text{HCF}(A, B) $\\times$ \\text{LCM}(A, B) = A $\\times$ B$$\nStep 2: यहाँ $A = K_1$ और $B = K_2$ रखने पर:\n$$\\text{HCF} $\\times$ \\text{LCM} = K_1 $\\times$ K_2$$\nअतः सही विकल्प  K_1 * K_2 है।\n\nMethod 2 (Prime Number Properties Method):\nStep 1: चूँकि $K_1$ और $K_2$ भिन्न अभाज्य संख्याएँ हैं:\n- $\\text{HCF}(K_1, K_2) = 1$\n- $\\text{LCM}(K_1, K_2) = K_1 \\times K_2$\nStep 2: दोनों का गुणनफल = $1 \\times (K_1 \\times K_2) = K_1 \\times K_2$.\nअतः सही उत्तर 'K_1 $\\times$ K_2' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_6",
+    "qe": "Let the HCF of m and n be 'a' and let n = ab, LCM of m and n is given by:",
+    "qh": "माना m और n का HCF 'a' है और माना n = ab है, तो m और n का LCM किसके द्वारा दिया जाएगा:",
+    "oe": [
+      "ab",
+      "am",
+      "bm",
+      "mn"
+    ],
+    "oh": [
+      "ab",
+      "am",
+      "bm",
+      "mn"
+    ],
+    "a": 2,
+    "e": "Method 1 (Standard Formula Substitution Method):\nStep 1: मूल सूत्र:\n$$\\text{LCM}(m, n) = \\frac{m $\\times$ n}{\\text{HCF}(m, n)}$$\nStep 2: दिए गए मान $\\text{HCF} = a$ और $n = ab$ प्रतिस्थापित करने पर:\n$$\\text{LCM} = $\\frac{m\\timesab}{a}$$$\nStep 3: $a$ से $a$ निरस्त करने पर:\n$$\\text{LCM} = m $\\times$ b = bm$$\nअतः सही विकल्प  bm है।\n\nMethod 2 (Co-prime Factor Method):\n$n = a \\times b$, जहाँ $a = \\text{HCF}$ है। यदि $m = a \\times k$, तो $\\text{LCM} = a \\times k \\times b = (ak) \\times b = m \\times b = bm$.\nअतः सही उत्तर 'bm' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_7",
+    "qe": "The least common multiple (LCM) of p and q is r. The LCM of p^2q and pq^2 is:",
+    "qh": "p और q का लघुत्तम समापवर्त्य (LCM) r है। p^2q और pq^2 का LCM क्या होगा:",
+    "oe": [
+      "pqr",
+      "pq",
+      "pqr^2",
+      "pqr^3"
+    ],
+    "oh": [
+      "pqr",
+      "pq",
+      "pqr^2",
+      "pqr^3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Algebraic Factoring Method):\nStep 1: दोनों पदों में से सार्व गुणनखंड $pq$ बाहर लेने पर:\n$$\\text{LCM}(p^2q, pq^2) = \\text{LCM}(pq \\cdot p, pq \\cdot q)$$\nStep 2: सार्व गुणनखंड $pq$ को LCM से बाहर निकाला जा सकता है:\n$$\\text{LCM}(p^2q, pq^2) = pq $\\times$ \\text{LCM}(p, q)$$\nStep 3: दिया गया है कि $\\text{LCM}(p, q) = r$:\n$$\\text{LCM}(p^2q, pq^2) = pq $\\times$ r = pqr$$\nअतः सही विकल्प  pqr है।\n\nMethod 2 (Prime Power Example Method):\nमान लें $p = 2, q = 3$, तो $r = \\text{LCM}(2, 3) = 6$.\nपदों के मान: $p^2q = 4 \\times 3 = 12$ तथा $pq^2 = 2 \\times 9 = 18$.\n$\\text{LCM}(12, 18) = 36$.\nविकल्प (a) में मान रखने पर: $pqr = 2 \\times 3 \\times 6 = 36$ (सत्यापित)।\nअतः सही उत्तर 'pqr' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_8",
+    "qe": "The sum of and difference between the LCM and HCF of two numbers are 512 and 496, respectively. If one number is 72, then the other number is:",
+    "qh": "दो संख्याओं के LCM और HCF का योग और अंतर क्रमशः 512 और 496 है। यदि एक संख्या 72 है, तो दूसरी संख्या क्या है:",
+    "oe": [
+      "55",
+      "89",
+      "62",
+      "56"
+    ],
+    "oh": [
+      "55",
+      "89",
+      "62",
+      "56"
+    ],
+    "a": 3,
+    "e": "Method 1 (System of Equations & Product Rule Method):\nStep 1: LCM ($L$) और HCF ($H$) के लिए समीकरण बनाएं:\n$$L + H = 512$$\n$$L - H = 496$$\nStep 2: दोनों समीकरणों को जोड़ने पर:\n$$2L = 1008 \\implies L = 504$$\nStep 3: HCF का मान निकालें:\n$$H = 512 - 504 = 8$$\nStep 4: दूसरी संख्या ($n_2$) ज्ञात करने के लिए सूत्र लागू करें:\n$$n_1 $\\times$ n_2 = H $\\times$ L$$\n$$72 $\\times$ n_2 = 8 $\\times$ 504$$\n$$n_2 = $\\frac{8\\times504}{72}$ = $\\frac{504}{9}$ = 56$$\nअतः सही विकल्प  56 है।\n\nMethod 2 (Single Step Formulation):\n$$n_2 = \\frac{($\\frac{512+496}{2}$) $\\times$ ($\\frac{512-496}{2}$)}{72} = $\\frac{504\\times8}{72}$ = 56$$\nअतः सही उत्तर '56' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_9",
+    "qe": "The HCF of two numbers is 21 and their LCM is 221 times the HCF. If one of the numbers lies between 200 and 300, then the sum of the digits of the other number is:",
+    "qh": "दो संख्याओं का HCF 21 है और उनका LCM उनके HCF का 221 गुना है। यदि इनमें से एक संख्या 200 और 300 के बीच स्थित है, तो दूसरी संख्या के अंकों का योग क्या है:",
+    "oe": [
+      "14",
+      "17",
+      "18",
+      "15"
+    ],
+    "oh": [
+      "14",
+      "17",
+      "18",
+      "15"
+    ],
+    "a": 3,
+    "e": "Method 1 (Co-prime Factorisation Method):\nStep 1: दिया गया है $H = 21$ और $L = 221 \\times H$.\nमान लें संख्याएँ $21a$ और $21b$ हैं, जहाँ $\\gcd(a, b) = 1$.\n$$L = 21 $\\times$ a $\\times$ b = 221 $\\times$ 21 \\implies a $\\times$ b = 221$$\nStep 2: 221 के अभाज्य गुणनखंड ज्ञात करें:\n$$221 = 13 $\\times$ 17$$\nअतः $a = 13$ और $b = 17$ (चूँकि $\\gcd(13, 17) = 1$).\nStep 3: दोनों संख्याएँ निकालें:\n- पहली संख्या = $21 \\times 13 = 273$\n- दूसरी संख्या = $21 \\times 17 = 357$\nStep 4: पहली संख्या (273) 200 और 300 के बीच स्थित है।\nअतः दूसरी संख्या 357 है।\nStep 5: दूसरी संख्या के अंकों का योग:\n$$\\text{योग} = 3 + 5 + 7 = 15$$\nअतः सही विकल्प  15 है।\n\nMethod 2 (Step Verification):\n$21 \\times 17 = 357 \\implies 3 + 5 + 7 = 15$.\nअतः सही उत्तर '15' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_10",
+    "qe": "The greatest common multiple (HCF) of two numbers is (1/20) of their least common multiple (LCM). If a number is 96 and the difference between the least common multiple and the greatest common multiple is 456, then what will be the other number?",
+    "qh": "दो संख्याओं का HCF उनके LCM का (1/20) है। यदि एक संख्या 96 है और LCM तथा HCF के बीच का अंतर 456 है, तो दूसरी संख्या क्या होगी?",
+    "oe": [
+      "48",
+      "120",
+      "144",
+      "72"
+    ],
+    "oh": [
+      "48",
+      "120",
+      "144",
+      "72"
+    ],
+    "a": 1,
+    "e": "Method 1 (Algebraic Ratio Method):\nStep 1: दिया गया है $H = \\frac{1}{20} L \\implies L = 20H$.\nStep 2: अंतर समीकरण बनाएं:\n$$L - H = 456$$\n$$20H - H = 456 \\implies 19H = 456$$\n$$H = $\\frac{456}{19}$ = 24$$\nStep 3: LCM निकालें:\n$$L = 20 $\\times$ 24 = 480$$\nStep 4: दूसरी संख्या ($n_2$) निकालें ($n_1 = 96$):\n$$n_2 = $\\frac{H\\timesL}{n_1}$ = $\\frac{24\\times480}{96}$$$\nStep 5: 24 से 96 को काटने पर ($96 / 24 = 4$):\n$$n_2 = $\\frac{480}{4}$ = 120$$\nअतः सही विकल्प  120 है।\n\nMethod 2 (Proportional Multiplier Method):\n$L = 480, H = 24$.\n$n_2 = \\frac{24 \\times 480}{96} = 120$.\nअतः सही उत्तर '120' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_11",
+    "qe": "LCM of two numbers is 56 times their HCF. Sum of their HCF and LCM is 1710. If one of the two numbers is 240, then what is the other number?",
+    "qh": "दो संख्याओं का LCM उनके HCF का 56 गुना है। उनके HCF और LCM का योग 1710 है। यदि दोनों संख्याओं में से एक 240 है, तो दूसरी संख्या क्या है?",
+    "oe": [
+      "57",
+      "171",
+      "1680",
+      "210"
+    ],
+    "oh": [
+      "57",
+      "171",
+      "1680",
+      "210"
+    ],
+    "a": 3,
+    "e": "Method 1 (Simultaneous Substitution Method):\nStep 1: दिया गया है $L = 56H$.\nयोग समीकरण:\n$$L + H = 1710$$\n$$56H + H = 1710 \\implies 57H = 1710$$\n$$H = $\\frac{1710}{57}$ = 30$$\nStep 2: LCM निकालें:\n$$L = 56 $\\times$ 30 = 1680$$\nStep 3: दूसरी संख्या निकालें ($n_1 = 240$):\n$$n_2 = $\\frac{H\\timesL}{n_1}$ = $\\frac{30\\times1680}{240}$$$\nStep 4: हल करने पर:\n$$n_2 = $\\frac{1680}{8}$ = 210$$\nअतः सही विकल्प  210 है।\n\nMethod 2 (Co-prime Factor Verification):\n$56 = 7 \\times 8$. संख्याएँ $30 \\times 8 = 240$ और $30 \\times 7 = 210$ हैं।\nअतः दूसरी संख्या 210 है।\nअतः सही उत्तर '210' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_12",
+    "qe": "LCM of two numbers is 22 times their HCF. If one of the numbers is 132 and the sum of LCM and HCF is 276, then what is the other number?",
+    "qh": "दो संख्याओं का LCM उनके HCF का 22 गुना है। यदि संख्याओं में से एक 132 है और LCM तथा HCF का योग 276 है, तो दूसरी संख्या क्या है?",
+    "oe": [
+      "24",
+      "30",
+      "25",
+      "20"
+    ],
+    "oh": [
+      "24",
+      "30",
+      "25",
+      "20"
+    ],
+    "a": 0,
+    "e": "Method 1 (HCF & LCM Equation Method):\nStep 1: दिया गया है $L = 22H$.\nयोग समीकरण:\n$$L + H = 276$$\n$$22H + H = 276 \\implies 23H = 276$$\n$$H = $\\frac{276}{23}$ = 12$$\nStep 2: LCM निकालें:\n$$L = 22 $\\times$ 12 = 264$$\nStep 3: दूसरी संख्या निकालें ($n_1 = 132$):\n$$n_2 = $\\frac{H\\timesL}{n_1}$ = $\\frac{12\\times264}{132}$$$\nStep 4: 12 से 132 को काटने पर ($132 / 12 = 11$):\n$$n_2 = $\\frac{264}{11}$ = 24$$\nअतः सही विकल्प  24 है।\n\nMethod 2 (Co-prime Factors of 22):\n$22 = 2 \\times 11$. संख्याएँ $12 \\times 11 = 132$ और $12 \\times 2 = 24$ हैं।\nअतः दूसरी संख्या 24 है।\nअतः सही उत्तर '24' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_13",
+    "qe": "The LCM of two numbers x and y is 204 times their HCF. If their HCF is 12 and the difference between the number is 60, then x + y = ?",
+    "qh": "दो संख्याओं x और y का LCM उनके HCF का 204 गुना है। यदि उनका HCF 12 है और संख्याओं के बीच का अंतर 60 है, तो x + y = ?",
+    "oe": [
+      "660",
+      "426",
+      "852",
+      "348"
+    ],
+    "oh": [
+      "660",
+      "426",
+      "852",
+      "348"
+    ],
+    "a": 3,
+    "e": "Method 1 (Co-prime Quadratic Factor Method):\nStep 1: मान लें $x = 12a$ और $y = 12b$, जहाँ $\\gcd(a, b) = 1$ और $a > b$.\n$$\\text{LCM} = 12ab = 204 $\\times$ 12 \\implies ab = 204$$\nStep 2: संख्याओं के अंतर से सह-अभाज्य गुणनखंडों का अंतर निकालें:\n$$x - y = 12a - 12b = 12(a - b) = 60 \\implies a - b = 5$$\nStep 3: दो ऐसी संख्याएँ जिनका गुणनफल 204 और अंतर 5 हो:\n$$a(a - 5) = 204 \\implies a^2 - 5a - 204 = 0$$\n$$(a - 17)(a + 12) = 0 \\implies a = 17, b = 12$$\nजाँच: $\\gcd(17, 12) = 1$.\nStep 4: योग $x + y$ निकालें:\n$$x + y = 12(a + b) = 12(17 + 12) = 12 $\\times$ 29 = 348$$\nअतः सही विकल्प  348 है।\n\nMethod 2 (Algebraic Identity Method):\n$(a + b)^2 = (a - b)^2 + 4ab = 5^2 + 4(204) = 25 + 816 = 841$.\n$a + b = \\sqrt{841} = 29$.\n$x + y = 12 \\times 29 = 348$.\nअतः सही उत्तर '348' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_14",
+    "qe": "If the HCF of two numbers is 8, then which of the following can never be their LCM?",
+    "qh": "यदि दो संख्याओं का HCF 8 है, तो निम्नलिखित में से कौन सा उनका LCM कभी नहीं हो सकता?",
+    "oe": [
+      "56",
+      "48",
+      "42",
+      "40"
+    ],
+    "oh": [
+      "56",
+      "48",
+      "42",
+      "40"
+    ],
+    "a": 2,
+    "e": "Method 1 (Divisibility Property Method):\nStep 1: गणितीय नियम के अनुसार, किन्हीं भी दो संख्याओं का HCF सदैव उनके LCM का एक पूर्ण भाजक (गुणनखंड) होता है। अर्थात $\\text{LCM}$, HCF से पूर्णतः विभाज्य होना चाहिए।\nStep 2: विकल्पों की 8 से विभाज्यता जाँचें:\n- (a) $\\frac{56}{8} = 7$ (पूर्णतः विभाज्य)\n- (b) $\\frac{48}{8} = 6$ (पूर्णतः विभाज्य)\n- (c) $\\frac{42}{8} = 5.25$ (पूर्णतः विभाज्य नहीं है)\n- (d) $\\frac{40}{8} = 5$ (पूर्णतः विभाज्य)\nStep 3: चूँकि 42, 8 से विभाज्य नहीं है, अतः 42 कभी भी LCM नहीं हो सकता।\nअतः सही विकल्प  42 है।\n\nMethod 2 (Inspection Method):\n8 का गुणज नहीं होने के कारण 42 LCM नहीं हो सकता।\nअतः सही उत्तर '42' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_15",
+    "qe": "The HCF of two numbers is 12. Which one of the following can never be their LCM?",
+    "qh": "दो संख्याओं का HCF 12 है। निम्नलिखित में से कौन सा उनका LCM कभी नहीं हो सकता?",
+    "oe": [
+      "72",
+      "60",
+      "90",
+      "84"
+    ],
+    "oh": [
+      "72",
+      "60",
+      "90",
+      "84"
+    ],
+    "a": 2,
+    "e": "Method 1 (Divisibility Check Method):\nStep 1: नियम: संख्याओं का लघुत्तम समापवर्त्य (LCM) सदैव महत्तम समापवर्तक (HCF) का एक गुणज होता है।\nStep 2: विकल्पों को 12 से विभाजित करके जाँचें:\n- (a) $\\frac{72}{12} = 6$ (विभाज्य)\n- (b) $\\frac{60}{12} = 5$ (विभाज्य)\n- (c) $\\frac{90}{12} = 7.5$ (पूर्णतः विभाज्य नहीं है)\n- (d) $\\frac{84}{12} = 7$ (विभाज्य)\nStep 3: 90, 12 का गुणज नहीं है, अतः 90 कभी भी LCM नहीं हो सकता।\nअतः सही विकल्प  90 है।\n\nMethod 2 (Direct Inspection):\n12 के पहाड़े में 72, 60, और 84 आते हैं, परंतु 90 नहीं आता।\nअतः सही उत्तर '90' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_16",
+    "qe": "What is the ratio between the HCF and LCM of the numbers whose LCM is 48 and the product of the numbers is 384?",
+    "qh": "उन संख्याओं के HCF और LCM के बीच का अनुपात क्या है जिनका LCM 48 है और संख्याओं का गुणनफल 384 है?",
+    "oe": [
+      "1 : 4",
+      "1 : 6",
+      "1 : 3",
+      "2 : 5"
+    ],
+    "oh": [
+      "1 : 4",
+      "1 : 6",
+      "1 : 3",
+      "2 : 5"
+    ],
+    "a": 1,
+    "e": "Method 1 (HCF Calculation & Ratio Method):\nStep 1: सूत्र: $\\text{HCF} = \\frac{\\text{संख्याओं का गुणनफल}}{\\text{LCM}}$\nStep 2: मान रखने पर:\n$$\\text{HCF} = $\\frac{384}{48}$ = 8$$\nStep 3: HCF और LCM का अनुपात निकालें:\n$$\\text{अनुपात} = \\frac{\\text{HCF}}{\\text{LCM}} = $\\frac{8}{48}$ = $\\frac{1}{6}$ = 1 : 6$$\nअतः सही विकल्प  1 : 6 है।\n\nMethod 2 (Direct Ratio Formula Method):\n$$\\frac{\\text{HCF}}{\\text{LCM}} = \\frac{\\frac{\\text{गुणनफल}}{\\text{LCM}}}{\\text{LCM}} = $\\frac{384}{48^2}$ = $\\frac{384}{2304}$ = $\\frac{1}{6}$$$\nअतः सही उत्तर '1 : 6' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_17",
+    "qe": "The HCF of two 2-digit number is 19 and their sum is 152. What is their difference?",
+    "qh": "दो 2-अंकीय संख्याओं का HCF 19 है और उनका योग 152 है। उनका अंतर क्या है?",
+    "oe": [
+      "19",
+      "38",
+      "57",
+      "76"
+    ],
+    "oh": [
+      "19",
+      "38",
+      "57",
+      "76"
+    ],
+    "a": 1,
+    "e": "Method 1 (Co-prime Factor & Condition Method):\nStep 1: मान लें दोनों संख्याएँ $19a$ और $19b$ हैं, जहाँ $\\gcd(a, b) = 1$ और $a < b$.\nStep 2: संख्याओं का योग 152 है:\n$$19a + 19b = 152 \\implies 19(a + b) = 152 \\implies a + b = 8$$\nStep 3: सह-अभाज्य युग्म $(a, b)$ ज्ञात करें जिनका योग 8 हो:\n- युग्म 1: $(1, 7) \\implies$ संख्याएँ = $19 \\times 1 = 19$ तथा $19 \\times 7 = 133$ (अमान्य, क्योंकि 133 तीन अंकों की संख्या है और प्रश्न में दोनों संख्याएँ 2-अंकीय दी गई हैं)।\n- युग्म 2: $(3, 5) \\implies$ संख्याएँ = $19 \\times 3 = 57$ तथा $19 \\times 5 = 95$ (मान्य, क्योंकि दोनों 2-अंकीय संख्याएँ हैं)।\nStep 4: दोनों संख्याओं का अंतर निकालें:\n$$\\text{अंतर} = 95 - 57 = 38$$\nअतः सही विकल्प  38 है।\n\nMethod 2 (Difference Formulation):\n$\\text{अंतर} = 19(b - a) = 19(5 - 3) = 19 \\times 2 = 38$.\nअतः सही उत्तर '38' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_18",
+    "qe": "The sum of two positive numbers is 240 and their HCF is 15. Find the number of pairs of numbers satisfying the given condition.",
+    "qh": "दो धनात्मक संख्याओं का योग 240 है और उनका HCF 15 है। दी गई शर्त को संतुष्ट करने वाले संख्याओं के युग्मों (pairs) की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "4",
+      "8",
+      "2",
+      "5"
+    ],
+    "oh": [
+      "4",
+      "8",
+      "2",
+      "5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Co-prime Partition Method):\nStep 1: मान लें संख्याएँ $15a$ और $15b$ हैं, जहाँ $\\gcd(a, b) = 1$ तथा $a \\le b$.\nStep 2: योग का समीकरण बनाएं:\n$$15a + 15b = 240 \\implies 15(a + b) = 240 \\implies a + b = 16$$\nStep 3: ऐसे सभी सह-अभाज्य युग्म $(a, b)$ खोजें जिनका योग 16 हो:\n1. $(1, 15) \\implies \\gcd(1, 15) = 1$ (मान्य)\n2. $(3, 13) \\implies \\gcd(3, 13) = 1$ (मान्य)\n3. $(5, 11) \\implies \\gcd(5, 11) = 1$ (मान्य)\n4. $(7, 9) \\implies \\gcd(7, 9) = 1$ (मान्य)\n(नोट: सम युग्म जैसे (2, 14), (4, 12), (6, 10), (8, 8) सह-अभाज्य नहीं हैं क्योंकि उनका उभयनिष्ठ गुणनखंड > 1 है)।\nStep 4: कुल संभावित युग्मों की संख्या = 4.\nअतः सही विकल्प  4 है।\n\nMethod 2 (Euler Totient Half Method):\n16 के सह-अभाज्य पूर्णांकों की संख्या $\\phi(16) = 16 \\times (1 - 1/2) = 8$.\nयुग्मों की संख्या = $\\frac{\\phi(16)}{2} = \\frac{8}{2} = 4$.\nअतः सही उत्तर '4' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "lcmhcfnumber12_19",
+    "qe": "The product of two numbers is 1500 and their HCF is 10. The number of such possible pairs is/are.",
+    "qh": "दो संख्याओं का गुणनफल 1500 है और उनका HCF 10 है। ऐसे संभावित युग्मों की संख्या है/हैं:",
+    "oe": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "oh": [
+      "1",
+      "3",
+      "4",
+      "2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Co-prime Factor Pair Method):\nStep 1: मान लें संख्याएँ $10a$ और $10b$ हैं, जहाँ $\\gcd(a, b) = 1$ तथा $a \\le b$.\nStep 2: संख्याओं का गुणनफल 1500 है:\n$$(10a) $\\times$ (10b) = 1500 \\implies 100ab = 1500 \\implies ab = 15$$\nStep 3: 15 के ऐसे गुणनखंड युग्म $(a, b)$ निकालें जो परस्पर सह-अभाज्य (co-prime) हों:\n1. $(1, 15) \\implies \\gcd(1, 15) = 1$ (मान्य संख्याएँ: 10, 150)\n2. $(3, 5) \\implies \\gcd(3, 5) = 1$ (मान्य संख्याएँ: 30, 50)\nStep 4: अतः ऐसे कुल 2 संभावित युग्म संभव हैं।\nअतः सही विकल्प  2 है।\n\nMethod 2 (Verification):\n- युग्म 1: (10, 150) $\\implies \\text{HCF} = 10$, गुणनफल = 1500.\n- युग्म 2: (30, 50) $\\implies \\text{HCF} = 10$, गुणनफल = 1500.\nकुल युग्म = 2.\nअतः सही उत्तर '2' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

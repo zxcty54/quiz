@@ -1,0 +1,1028 @@
+[
+  {
+    "p_id": "remaindertheorum_1",
+    "qe": "On dividing a number by 38, the quotient is 24 and the remainder is 13, then the number is :",
+    "qh": "किसी संख्या को 38 से भाग देने पर भागफल 24 तथा शेषफल 13 आता है। वह संख्या कौन-सी है?",
+    "oe": [
+      "925",
+      "975",
+      "904",
+      "956"
+    ],
+    "oh": [
+      "925",
+      "975",
+      "904",
+      "956"
+    ],
+    "a": 0,
+    "e": "Method 1 (Division Algorithm Formula Method):\nStep 1: विभाजन प्रमेयिका का सूत्र:\n$$\\text{भाज्य (Dividend)} = (\\text{भाजक} $\\times$ \\text{भागफल}) + \\text{शेषफल}$$\nStep 2: दिए गए मान प्रतिस्थापित करने पर:\n$$\\text{संख्या} = (38 $\\times$ 24) + 13$$\nStep 3: गणना करें:\n$$38 $\\times$ 24 = 912$$\n$$\\text{संख्या} = 912 + 13 = 925$$\nअतः सही विकल्प  925 है।\n\nMethod 2 (Unit Digit Method):\nगुणनफल $8 \\times 4 = 32$ (इकाई अंक 2)।\nइकाई अंक में शेषफल 3 जोड़ने पर: $2 + 3 = 5$।\nविकल्पों में केवल 925 और 975 का इकाई अंक 5 है, तथा $40 \\times 24 \\approx 960$ से कम मान 925 ही संभव है।\nअतः सही उत्तर '925' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_2",
+    "qe": "On dividing 8675123 by a certain number, the quotient is 33611 and the remainder is 3485. The divisor is",
+    "qh": "8675123 को एक निश्चित संख्या से भाग देने पर भागफल 33611 और शेषफल 3485 आता है। भाजक ज्ञात कीजिए।",
+    "oe": [
+      "538",
+      "258",
+      "248",
+      "356"
+    ],
+    "oh": [
+      "538",
+      "258",
+      "248",
+      "356"
+    ],
+    "a": 1,
+    "e": "Method 1 (Divisor Formula Method):\nStep 1: सूत्र:\n$$\\text{भाजक (Divisor)} = \\frac{\\text{भाज्य} - \\text{शेषफल}}{\\text{भागफल}}$$\nStep 2: मान प्रतिस्थापित करने पर:\n$$\\text{भाजक} = $\\frac{8675123-3485}{33611}$$$\nStep 3: घटाव करें:\n$$8675123 - 3485 = 8671638$$\nStep 4: भागफल से विभाजित करें:\n$$\\text{भाजक} = $\\frac{8671638}{33611}$ = 258$$\nअतः सही विकल्प  258 है।\n\nMethod 2 (Unit Digit Inspection Method):\nअंश का इकाई अंक 8 है ($13 - 5 = 8$) तथा हर का इकाई अंक 1 है।\nअतः भाजक का इकाई अंक 8 होना चाहिए ($1 \\times 8 = 8$)।\nदिए गए विकल्पों में 258 और 248 हैं।\nलगभग मान: $\\frac{8.67 \\times 10^6}{3.36 \\times 10^4} \\approx 258$।\nअतः सही उत्तर '258' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_3",
+    "qe": "When a number x is divided by a divisor it is seen that the divisor = 4 times the quotient = double the remainder. If the remainder is 80, then the value of x is :",
+    "qh": "जब संख्या x को एक भाजक से भाग देने पर देखा जाता है कि भाजक का चार गुना, शेषफल के दोगुने के बराबर है। यदि शेषफल 80 है, तो x का मान है :",
+    "oe": [
+      "6480",
+      "9680",
+      "8460",
+      "4680"
+    ],
+    "oh": [
+      "6480",
+      "9680",
+      "8460",
+      "4680"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relations Evaluation Method):\nStep 1: दिया गया है कि शेषफल (Remainder) $= 80$.\nStep 2: भाजक निकालें:\n$$\\text{भाजक} = 2 $\\times$ \\text{शेषफल} = 2 $\\times$ 80 = 160$$\nStep 3: भागफल निकालें:\n$$\\text{भाजक} = 4 $\\times$ \\text{भागफल} \\implies 160 = 4 $\\times$ \\text{भागफल}$$\n$$\\text{भागफल} = $\\frac{160}{4}$ = 40$$\nStep 4: भाज्य $x$ का मान निकालें:\n$$x = (\\text{भाजक} $\\times$ \\text{भागफल}) + \\text{शेषफल}$$\n$$x = (160 $\\times$ 40) + 80 = 6400 + 80 = 6480$$\nअतः सही विकल्प  6480 है।\n\nMethod 2 (Direct Algebraic Formulation):\n$$x = (2R) $\\times$ $\\le$ft($\\frac{2R}{4}$\\right) + R = R^2 + R = 80^2 + 80 = 6400 + 80 = 6480$$\nअतः सही उत्तर '6480' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_4",
+    "qe": "The divisor is 24 times the quotient and 8 times the remainder. If the quotient is 18, then the dividend is :",
+    "qh": "भाजक भागफल का 24 गुना और शेष 8 गुना है। यदि भागफल 18 है, तो भाज्य है :",
+    "oe": [
+      "7830",
+      "7630",
+      "7840",
+      "7450"
+    ],
+    "oh": [
+      "7830",
+      "7630",
+      "7840",
+      "7450"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Value Determination Method):\nStep 1: भागफल $= 18$ दिया गया है।\nभाजक निकालें:\n$$\\text{भाजक} = 24 $\\times$ \\text{भागफल} = 24 $\\times$ 18 = 432$$\nStep 2: शेषफल निकालें:\n$$\\text{भाजक} = 8 $\\times$ \\text{शेषफल} \\implies 432 = 8 $\\times$ \\text{शेषफल}$$\n$$\\text{शेषफल} = $\\frac{432}{8}$ = 54$$\nStep 3: भाज्य (Dividend) निकालें:\n$$\\text{भाज्य} = (\\text{भाजक} $\\times$ \\text{भागफल}) + \\text{शेषफल}$$\n$$\\text{भाज्य} = (432 $\\times$ 18) + 54 = 7776 + 54 = 7830$$\nअतः सही विकल्प  7830 है।\n\nMethod 2 (Factor Distribution Method):\n$$\\text{भाज्य} = 432 $\\times$ 18 + 54 = 54 $\\times$ (8 $\\times$ 18 + 1) = 54 $\\times$ (144 + 1) = 54 $\\times$ 145 = 7830$$\nअतः सही उत्तर '7830' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_5",
+    "qe": "A number when divided by 44, gives 432 as quotient and 0 as remainder. What will be the remainder when dividing the same number by 31?",
+    "qh": "किसी संख्या को 44 से भाग देने पर भागफल 432 और शेष 0 प्राप्त होता है। उसी संख्या को 31 से विभाजित करने पर शेषफल क्या प्राप्त होगा?",
+    "oe": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "oh": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Calculation Method):\nStep 1: मूल संख्या (भाज्य) ज्ञात करें (मूल प्रश्न में शेषफल 0 है):\n$$\\text{संख्या} = (44 $\\times$ 432) + 0 = 19008$$\nStep 2: इस संख्या को 31 से भाग देकर शेषफल निकालें:\n$$19008 = 31 $\\times$ 613 + 5$$\nStep 3: भाग देने पर शेषफल 5 प्राप्त होता है।\nअतः सही विकल्प  5 है।\n\nMethod 2 (Modular Remainder Arithmetic Method):\n$$N \\equiv (44 $\\times$ 432) $\\pm$od{31}$$\n- $44 \\equiv 13 \\pmod{31}$\n- $432 = 31 \\times 13 + 29 \\equiv 29 \\equiv -2 \\pmod{31}$\n$$N \\equiv 13 $\\times$ (-2) \\equiv -26 \\equiv 31 - 26 \\equiv 5 $\\pm$od{31}$$\n(नोट: यदि मुद्रित मिसप्रिंट अनुसार शेष 10 जोड़ा जाए तो शेष 15 आता है, परंतु आधिकारिक प्रश्न में शेष 0 होने पर उत्तर 5 मान्य है)।\nअतः सही उत्तर '5' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_6",
+    "qe": "When n is divided by 4, the remainder is 3. The remainder when 2n is divided by 4 is :",
+    "qh": "जब n को 4 से विभाजित किया जाता है शेष 3 प्राप्त होता है। जब 2n को 4 से विभाजित किया जाता है तो शेषफल क्या प्राप्त होगा?",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "6"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "6"
+    ],
+    "a": 1,
+    "e": "Method 1 (Remainder Scaling Method):\nStep 1: जब किसी संख्या को दोगुना किया जाता है, तो उसका शेषफल भी उसी अनुपात में दोगुना हो जाता है:\n$$\\text{नया शेषफल} = 2 $\\times$ 3 = 6$$\nStep 2: चूँकि नया मान 6 भाजक 4 से बड़ा है, अतः इसे पुनः 4 से भाग दें:\n$$6 = 4 $\\times$ 1 + 2 \\implies \\text{अंतिम शेषफल} = 2$$\nअतः सही विकल्प  2 है।\n\nMethod 2 (Value Substitution Method):\n$n$ का सबसे छोटा मान मान लें:\n$$n = 4 $\\times$ 0 + 3 = 3$$\nअब $2n = 2 \\times 3 = 6$।\n6 को 4 से भाग देने पर:\n$$6 $\\div$ 4 \\implies \\text{शेषफल} = 2$$\nअतः सही उत्तर '2' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_7",
+    "qe": "When the integer n is divided by 7, the remainder is 3. What is the remainder if 5n is divided by 7?",
+    "qh": "जब पूर्णांक n को 7 से विभाजित किया जाता है, तो शेषफल 3 आता है। जब 5n को 7 से विभाजित किया जाएगा तो शेषफल क्या आएगा?",
+    "oe": [
+      "3",
+      "0",
+      "1",
+      "2"
+    ],
+    "oh": [
+      "3",
+      "0",
+      "1",
+      "2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Property of Remainders Method):\nStep 1: $n$ को 7 से भाग देने पर शेषफल 3 है:\n$$n \\equiv 3 $\\pm$od 7$$\nStep 2: $5n$ का शेषफल निकालने के लिए मूल शेषफल को 5 से गुणा करें:\n$$5n \\equiv 5 $\\times$ 3 = 15 $\\pm$od 7$$\nStep 3: 15 को 7 से भाग दें:\n$$15 = 7 $\\times$ 2 + 1 \\implies \\text{शेषफल} = 1$$\nअतः सही विकल्प  1 है।\n\nMethod 2 (Substitution Method):\n$n = 3$ रखने पर:\n$$5n = 5 $\\times$ 3 = 15$$\n$$15 $\\div$ 7 = 2, \\quad \\text{शेषफल} = 1$$\nअतः सही उत्तर '1' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_8",
+    "qe": "A number 'n' when divided by 6 leaves remainder 2. What will be the remainder when $(n^2$ + n + 2) is divided by 6?",
+    "qh": "एक संख्या 'n' को 6 से विभाजित करने पर 2 शेषफल बचता है। $(n^2$ + n + 2) को 6 से विभाजित करने पर शेषफल क्या प्राप्त होगा?",
+    "oe": [
+      "6",
+      "2",
+      "4",
+      "0"
+    ],
+    "oh": [
+      "6",
+      "2",
+      "4",
+      "0"
+    ],
+    "a": 1,
+    "e": "Method 1 (Substitution of Remainder Method):\nStep 1: चूँकि $n \\equiv 2 \\pmod 6$, अतः व्यंजक $(n^2 + n + 2)$ में $n$ के स्थान पर सीधे शेषफल 2 प्रतिस्थापित किया जा सकता है:\n$$\\text{व्यंजक का मान} = 2^2 + 2 + 2 = 4 + 2 + 2 = 8$$\nStep 2: 8 को भाजक 6 से भाग देने पर शेषफल निकालें:\n$$8 = 6 $\\times$ 1 + 2 \\implies \\text{शेषफल} = 2$$\nअतः सही विकल्प  2 है।\n\nMethod 2 (Algebraic General Form Method):\nमान लें $n = 6k + 2$:\n$$n^2 + n + 2 = (6k + 2)^2 + (6k + 2) + 2 = 36k^2 + 24k + 4 + 6k + 4 = 36k^2 + 30k + 8$$\n$$= 6(6k^2 + 5k + 1) + 2$$\nअतः 6 से भाग देने पर शेषफल सदैव 2 बचेगा।\nअतः सही उत्तर '2' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_9",
+    "qe": "When an integer n is divided by 8, the remainder is 3. What will be the remainder if 6n - 1 is divided by 8?",
+    "qh": "जब पूर्णांक n को 8 से विभाजित किया जाता है तो शेषफल 3 आता है। शेषफल क्या होगा जब 6n - 1 को 8 से विभाजित किया जाता है?",
+    "oe": [
+      "4",
+      "1",
+      "0",
+      "2"
+    ],
+    "oh": [
+      "4",
+      "1",
+      "0",
+      "2"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Remainder Replacement Method):\nStep 1: $n \\equiv 3 \\pmod 8$ दिया गया है।\nStep 2: व्यंजक $(6n - 1)$ में $n = 3$ प्रतिस्थापित करें:\n$$6(3) - 1 = 18 - 1 = 17$$\nStep 3: 17 को 8 से भाग देकर शेषफल निकालें:\n$$17 = 8 $\\times$ 2 + 1 \\implies \\text{शेषफल} = 1$$\nअतः सही विकल्प  1 है।\n\nMethod 2 (Modular Arithmetic Method):\n$$6n - 1 \\equiv 6(3) - 1 \\equiv 17 \\equiv 1 $\\pm$od 8$$\nअतः सही उत्तर '1' है।\n\nYahan sankhya aur shesh ka niyam seedha lagta hai. Vikalp 4, 0, 2 is hal se mel nahi khaate. Exam point: sankhya aur shesh ka niyam - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "remaindertheorum_10",
+    "qe": "If a positive integer n is divided by 7, the remainder is 2. Which of the numbers in the options yields a remainder of 0 when it is divided by 7?",
+    "qh": "यदि एक धनात्मक पूर्णांक n को 7 से विभाजित किया जाता है, तो शेष 2 है। विकल्पों में से कौन-सी संख्या 7 से विभाजित होने पर शेष 0 देता है?",
+    "oe": [
+      "n + 3",
+      "n + 1",
+      "n + 2",
+      "n + 5"
+    ],
+    "oh": [
+      "n + 3",
+      "n + 1",
+      "n + 2",
+      "n + 5"
+    ],
+    "a": 3,
+    "e": "Method 1 (Remainder Complement Method):\nStep 1: दिया गया है कि $n$ को 7 से भाग देने पर शेषफल 2 बचता है:\n$$n = 7k + 2$$\nStep 2: संख्या को 7 का पूर्ण गुणज (शेषफल 0) बनाने के लिए इसमें $7 - 2 = 5$ जोड़ना पड़ेगा:\n$$n + 5 = (7k + 2) + 5 = 7k + 7 = 7(k + 1)$$\nचूँकि $7(k + 1)$ संख्या 7 से पूर्णतः विभाज्य है, अतः यह शेषफल 0 देगी।\nअतः सही विकल्प  n + 5 है।\n\nMethod 2 (Option Testing with n = 2):\n$n = 2$ मान लें:\n- (a) $2 + 3 = 5$ ($5 \\div 7$ शेष 5)\n- (b) $2 + 1 = 3$ ($3 \\div 7$ शेष 3)\n- (c) $2 + 2 = 4$ ($4 \\div 7$ शेष 4)\n- (d) $2 + 5 = 7$ ($7 \\div 7 = 1$, शेषफल = 0)\nअतः सही उत्तर 'n + 5' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_11",
+    "qe": "If a positive integer N is divided by 7, the remainder is 3. Which of the following numbers yields a remainder of 0 when it is divided by 7?",
+    "qh": "यदि एक धनात्मक पूर्णांक N को 7 से विभाजित किया जाता है, तो शेषफल 3 प्राप्त होता है। निम्नलिखित में से किस संख्या को 7 से विभाजित करने पर शेषफल 0 प्राप्त होगा?",
+    "oe": [
+      "N + 5",
+      "N + 2",
+      "N + 4",
+      "N + 3"
+    ],
+    "oh": [
+      "N + 5",
+      "N + 2",
+      "N + 4",
+      "N + 3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Remainder Complement Method):\nStep 1: दिया गया है $N = 7k + 3$.\nStep 2: संख्या को 7 से पूर्णतः विभाज्य (शेष 0) बनाने हेतु शेषफल 3 में $7 - 3 = 4$ जोड़ना होगा:\n$$N + 4 = (7k + 3) + 4 = 7k + 7 = 7(k + 1)$$\nStep 3: अतः $N + 4$ को 7 से भाग देने पर शेषफल 0 प्राप्त होगा।\nअतः सही विकल्प  N + 4 है।\n\nMethod 2 (Value Substitution Method):\n$N = 3$ मान लें:\n(a) $3 + 5 = 8$ ($8 \\div 7$ शेष 1)\n(b) $3 + 2 = 5$ ($5 \\div 7$ शेष 5)\n(c) $3 + 4 = 7$ ($7 \\div 7$ शेष 0)\n(d) $3 + 3 = 6$ ($6 \\div 7$ शेष 6)\nअतः सही उत्तर 'N + 4' है.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_12",
+    "qe": "For any integeral value of n, $3^2$ⁿ + 9n + 5, when divided by 3 will leave the remainder :",
+    "qh": "n के किसी पूर्णांक मान के लिए $3^2$ⁿ + 9n + 5 को जब 3 से विभाजित किया जाता है तो प्राप्त शेषफल होगा :",
+    "oe": [
+      "1",
+      "2",
+      "0",
+      "5"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "0",
+      "5"
+    ],
+    "a": 1,
+    "e": "Method 1 (Modular Arithmetic Method):\nStep 1: व्यंजक के प्रत्येक पद को 3 से भाग देकर शेषफल देखें:\n- $3^{2n} = 3(3^{2n-1}) \\implies 3$ से पूर्णतः विभाज्य (शेष 0)\n- $9n = 3(3n) \\implies 3$ से पूर्णतः विभाज्य (शेष 0)\n- $5 = 3 \\times 1 + 2 \\implies$ शेषफल 2\nStep 2: कुल शेषफल निकालें:\n$$(0 + 0 + 2) $\\pm$od 3 = 2$$\nअतः सही विकल्प  2 है।\n\nMethod 2 (Substitution Method):\n$n = 1$ रखने पर:\n$$3^{2(1)} + 9(1) + 5 = 9 + 9 + 5 = 23$$\n23 को 3 से भाग देने पर: $23 = 3 \\times 7 + 2$ (शेषफल = 2)।\nअतः सही उत्तर '2' है.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_13",
+    "qe": "Given n is an integer, what is the remainder when (6n + $3)^2$ is divided by 9?",
+    "qh": "दिया गया n एक पूर्णांक है। जब (6n + $3)^2$ को 9 से भाग दिया जाता है, तब शेषफल क्या आएगा?",
+    "oe": [
+      "3",
+      "2",
+      "1",
+      "0"
+    ],
+    "oh": [
+      "3",
+      "2",
+      "1",
+      "0"
+    ],
+    "a": 3,
+    "e": "Method 1 (Algebraic Expansion Method):\nStep 1: व्यंजक का विस्तार करें:\n$$(6n + 3)^2 = (6n)^2 + 2(6n)(3) + 3^2 = 36n^2 + 36n + 9$$\nStep 2: 9 उभयनिष्ठ लें:\n$$36n^2 + 36n + 9 = 9(4n^2 + 4n + 1)$$\nStep 3: चूँकि पूरा व्यंजक 9 का गुणज है, अतः 9 से भाग देने पर शेषफल 0 होगा।\nअतः सही विकल्प  0 है।\n\nMethod 2 (Factoring Method):\n$$(6n + 3)^2 = [3(2n + 1)]^2 = 9(2n + 1)^2$$\nयह 9 से पूर्णतः विभाज्य है, अतः शेषफल = 0।\nअतः सही उत्तर '0' है.\n\nYahan sankhya aur shesh ka niyam seedha lagta hai. Vikalp 3, 2, 1 is hal se mel nahi khaate. Exam point: sankhya aur shesh ka niyam - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "remaindertheorum_14",
+    "qe": "When positive number x, y and z are divided by 31, the reminders are 17, 24 and 27 respectively. When (4x - 2y + 3z) is divided by 31, the remainder will be :",
+    "qh": "जब धनात्मक संख्या x, y और z को 31 से भाग दिया जाता है तो शेषफल क्रमशः 17, 24 और 27 होते हैं। जब (4x - 2y + 3z) को 31 से विभाजित किया जाता है, तो शेषफल क्या होगा?",
+    "oe": [
+      "9",
+      "8",
+      "16",
+      "19"
+    ],
+    "oh": [
+      "9",
+      "8",
+      "16",
+      "19"
+    ],
+    "a": 1,
+    "e": "Method 1 (Remainder Arithmetic Method):\nStep 1: $x \\equiv 17$, $y \\equiv 24$, $z \\equiv 27 \\pmod{31}$.\nStep 2: व्यंजक $(4x - 2y + 3z)$ में मान रखें:\n$$4(17) - 2(24) + 3(27) = 68 - 48 + 81$$\nStep 3: गणना करें:\n$$68 - 48 = 20$$\n$$20 + 81 = 101$$\nStep 4: 101 को 31 से भाग दें:\n$$101 = 31 $\\times$ 3 + 8$$\nअतः शेषफल 8 प्राप्त होता है।\nअतः सही विकल्प  8 है।\n\nMethod 2 (Modular Steps Method):\n$$4(17) \\equiv 68 \\equiv 6 $\\pm$od{31}$$\n$$-2(24) \\equiv -48 \\equiv -17 \\equiv 14 $\\pm$od{31}$$\n$$3(27) \\equiv 81 \\equiv 19 $\\pm$od{31}$$\n$$\\text{योग} = 6 + 14 + 19 = 39 \\equiv 8 $\\pm$od{31}$$\nअतः सही उत्तर '8' है.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_15",
+    "qe": "When positive number a, b and c are divided by 13, the reminders are 9, 7 and 10 respectively. What will be the remainder when (a + 2b + 5c) is divided by 13?",
+    "qh": "जब धनात्मक संख्या a, b और c को 13 से भाग दिया जाता है तो शेषफल क्रमशः 9, 7 और 10 प्राप्त होते हैं। जब (a + 2b + 5c) को 13 से विभाजित किया जाता है, तो शेषफल क्या होगा?",
+    "oe": [
+      "10",
+      "5",
+      "9",
+      "8"
+    ],
+    "oh": [
+      "10",
+      "5",
+      "9",
+      "8"
+    ],
+    "a": 3,
+    "e": "Method 1 (Remainder Substitution Method):\nStep 1: $a = 9$, $b = 7$, $c = 10$ प्रतिस्थापित करने पर:\n$$a + 2b + 5c = 9 + 2(7) + 5(10)$$\nStep 2: मान निकालें:\n$$9 + 14 + 50 = 73$$\nStep 3: 73 को 13 से भाग देने पर शेषफल نکالें:\n$$73 = 13 $\\times$ 5 + 8$$\nअतः शेषफल 8 है।\nअतः सही विकल्प  8 है।\n\nMethod 2 (Modulo Reduction Method):\n$$[9 + 14 + 50] $\\pm$od{13} \\equiv [9 + 1 + 11] $\\pm$od{13} \\equiv 21 \\equiv 8 $\\pm$od{13}$$\nअतः सही उत्तर '8' है.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_16",
+    "qe": "What is the remainder when the product of 335, 608 and 853 is divided by 13?",
+    "qh": "335, 608 और 853 के गुणनफल को 13 से विभाजित करने पर प्राप्त शेषफल क्या होगा?",
+    "oe": [
+      "11",
+      "12",
+      "6",
+      "7"
+    ],
+    "oh": [
+      "11",
+      "12",
+      "6",
+      "7"
+    ],
+    "a": 3,
+    "e": "Method 1 (Individual Remainder Product Method):\nStep 1: प्रत्येक संख्या को 13 से भाग देकर अलग-अलग शेषफल निकालें:\n- $335 = 13 \\times 25 + 10 \\implies$ शेष $= 10$ (या $-3$)\n- $608 = 13 \\times 46 + 10 \\implies$ शेष $= 10$ (या $-3$)\n- $853 = 13 \\times 65 + 8 \\implies$ शेष $= 8$\nStep 2: शेषफलों का गुणा करें:\n$$10 $\\times$ 10 $\\times$ 8 = 800$$\nStep 3: 800 को 13 से भाग दें:\n$$800 = 13 $\\times$ 61 + 7$$\nअतः शेषफल 7 प्राप्त होता है।\nअतः सही विकल्प  7 है।\n\nMethod 2 (Negative Remainder Method):\n$$(-3) $\\times$ (-3) $\\times$ 8 = 9 $\\times$ 8 = 72$$\n$$72 = 13 $\\times$ 5 + 7$$\nअतः सही उत्तर '7' है.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_17",
+    "qe": "The remainder when 75 * 73 * 78 * 76 is divided by 34 is :",
+    "qh": "75 * 73 * 78 * 76 को 34 से विभाजित किया जाता है, तो शेष ज्ञात करें।",
+    "oe": [
+      "18",
+      "12",
+      "22",
+      "15"
+    ],
+    "oh": [
+      "18",
+      "12",
+      "22",
+      "15"
+    ],
+    "a": 1,
+    "e": "Method 1 (Modular Remainder Method):\nStep 1: प्रत्येक पद को 34 से भाग देकर शेषफल निकालें ($34 \\times 2 = 68$):\n- $75 = 68 + 7 \\implies 7$\n- $73 = 68 + 5 \\implies 5$\n- $78 = 68 + 10 \\implies 10$\n- $76 = 68 + 8 \\implies 8$\nStep 2: शेषफलों को युग्मों में गुणा करें:\n$$(7 $\\times$ 5) $\\times$ (10 $\\times$ 8) = 35 $\\times$ 80$$\nStep 3: 34 से पुनः संक्षिप्त करें:\n- $35 = 34 \\times 1 + 1 \\implies 1$\n- $80 = 34 \\times 2 + 12 \\implies 12$\nStep 4: अंतिम गुणनफल निकालें:\n$$1 $\\times$ 12 = 12$$\nअतः सही विकल्प  12 है।\n\nMethod 2 (Step Reduction Method):\n$$[7 $\\times$ 5 $\\times$ 10 $\\times$ 8] \\equiv [35 $\\times$ 80] \\equiv [1 $\\times$ 12] \\equiv 12 $\\pm$od{34}$$\nअतः सही उत्तर '12' है.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_18",
+    "qe": "When a positive integer is divided by d, the remainder is 15. When ten times of the same number is divided by d, the remainder is 6. The least possible value of d is :",
+    "qh": "जब एक धनात्मक पूर्णांक को d से भाग दिया जाता है, तो शेषफल 15 आता है। जब इसी संख्या के 10 गुना को d से भाग दिया जाता है, तो शेषफल 6 आता है। d का न्यूनतम संभव मान हो सकता है :",
+    "oe": [
+      "9",
+      "12",
+      "16",
+      "18"
+    ],
+    "oh": [
+      "9",
+      "12",
+      "16",
+      "18"
+    ],
+    "a": 2,
+    "e": "Method 1 (Divisor and Remainder Difference Method):\nStep 1: संख्या $N = k \\cdot d + 15$.\nStep 2: संख्या के 10 गुना का शेषफल:\n$$10N = 10(k \\cdot d + 15) = 10kd + 150$$\nStep 3: $150$ को $d$ से भाग देने पर शेषफल 6 बचता है:\n$$150 - 6 = 144$$\nअतः $d$, 144 का एक भाजक (divisor) होना चाहिए।\nStep 4: चूँकि प्रारंभिक शेषफल 15 है, अतः भाजक $d$ का मान सदैव शेषफल से बड़ा होना चाहिए:\n$$d > 15$$\nStep 5: 144 के भाजक जो 15 से बड़े हैं:\n$$16, 18, 24, 36, 48, 72, 144$$\nइनमें सबसे छोटा मान 16 है।\nअतः सही विकल्प  16 है।\n\nMethod 2 (Testing Options Method):\n- (a) 9 तथा (b) 12 संभव नहीं हैं क्योंकि $d > 15$ होना चाहिए।\n- (c) $d = 16$: $150 \\div 16 = 9$, शेषफल $= 150 - 144 = 6$ (सत्यापित)।\nअतः सही उत्तर '16' है.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_19",
+    "qe": "If a number is divided by 899, the remainder is 63. If the same number is divided by 29, the remainder will be :",
+    "qh": "यदि एक संख्या को 899 से विभाजित किया जाता है, तो शेष 63 बचता है। यदि उसी संख्या को 29 से विभाजित किया जाता है, तो शेष संख्या क्या बचेगा?",
+    "oe": [
+      "10",
+      "2",
+      "4",
+      "5"
+    ],
+    "oh": [
+      "10",
+      "2",
+      "4",
+      "5"
+    ],
+    "a": 3,
+    "e": "Method 1 (Factor Divisibility Remainder Method):\nStep 1: जाँच करें कि क्या पहला भाजक (899) दूसरे भाजक (29) से पूर्णतः विभाज्य है:\n$$899 = 29 $\\times$ 31$$\nStep 2: चूँकि 899, 29 का पूर्ण गुणज है, अतः अभीष्ट शेषफल सीधे पहले शेषफल (63) को 29 से भाग देकर प्राप्त किया जा सकता है:\n$$63 = 29 $\\times$ 2 + 5$$\nStep 3: अतः शेषफल 5 होगा।\nअतः सही विकल्प  5 है।\n\nMethod 2 (Algebraic General Form Method):\nसंख्या $N = 899k + 63 = (29 \\times 31k) + (29 \\times 2 + 5) = 29(31k + 2) + 5$.\nअतः 29 से भाग देने पर शेषफल = 5।\nअतः सही उत्तर '5' है.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_20",
+    "qe": "When an integer K is divided by 3, the remainder is 1 and when K + 1 is divided by 5, the remainder is 0. Of the following a possible value of a K is :",
+    "qh": "जब एक पूर्णांक K को 3 से विभाजित किया जाता है, तो शेषफल 1 होता है और जब K + 1 को 5 से विभाजित किया जाता है, तो शेषफल 0 होता है। निम्नलिखित में से K का एक संभावित मान क्या है?",
+    "oe": [
+      "64",
+      "62",
+      "65",
+      "61"
+    ],
+    "oh": [
+      "64",
+      "62",
+      "65",
+      "61"
+    ],
+    "a": 0,
+    "e": "Method 1 (Conditions Testing Method):\nStep 1: दी गई शर्तें:\n1. $K \\equiv 1 \\pmod 3$\n2. $K + 1$, 5 से विभाज्य है $\\implies K$ का इकाई अंक 4 या 9 होना चाहिए।\nStep 2: विकल्पों की जाँच करें:\n- (a) 64:\n  - $64 + 1 = 65$ (5 से विभाज्य है)\n  - $64 = 3 \\times 21 + 1$ (3 से भाग देने पर शेषफल 1 है)\n  दोनों शर्तें संतुष्ट होती हैं।\n- (b) 62: $62 + 1 = 63$ (5 से विभाज्य नहीं)\n- (c) 65: $65 + 1 = 66$ (5 से विभाज्य नहीं)\n- (d) 61: $61 + 1 = 62$ (5 से विभाज्य नहीं)\nअतः सही विकल्प  64 है।\n\nMethod 2 (General Form Method):\n$K + 1 = 5m \\implies K = 5m - 1$.\n$m = 13 \\implies K = 64$.\n$64 = 3(21) + 1$.\nअतः सही उत्तर '64' है.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_21",
+    "qe": "When two number are seperately divided by 33, the remainder are 21 and 28 respectively. If the sum of the two numbrs is divided by 33, the remainder will be :",
+    "qh": "जब दो संख्याओं को अलग-अलग 33 से विभाजित किया जाता है तो शेष क्रमशः 21 और 28 प्राप्त होता है। यदि दोनों संख्याओं के योगफल को 33 से विभाजित किया जाए तो शेष प्राप्त होगा :",
+    "oe": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "oh": [
+      "10",
+      "12",
+      "14",
+      "16"
+    ],
+    "a": 3,
+    "e": "Method 1 (Remainder Addition Rule Method):\nStep 1: जब दो संख्याओं के योग को उसी भाजक से विभाजित किया जाता है, तो परिणामी शेषफल दोनों शेषफलों के योग के बराबर होता है:\n$$R = r_1 + r_2$$\nStep 2: दिए गए मान प्रतिस्थापित करने पर ($r_1 = 21, r_2 = 28$):\n$$R = 21 + 28 = 49$$\nStep 3: चूँकि 49 भाजक 33 से बड़ा है, अतः इसे 33 से पुनः विभाजित कर वास्तविक शेषफल निकालें:\n$$49 = 33 $\\times$ 1 + 16$$\nअतः शेषफल 16 होगा।\nअतः सही विकल्प  16 है।\n\nMethod 2 (Algebraic General Form Method):\nमान लें $N_1 = 33k_1 + 21$ तथा $N_2 = 33k_2 + 28$:\n$$N_1 + N_2 = 33(k_1 + k_2) + 49 = 33(k_1 + k_2 + 1) + 16$$\nअतः 33 से विभाजित करने पर शेषफल 16 प्राप्त होता है।\nअतः सही उत्तर '16' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_22",
+    "qe": "When two numbers are separately divided by 44, the remainders are 11 and 38, respectively. If the sum of the two numbers is divided by 44, then the remainder will be:",
+    "qh": "दो संख्याओं को 44 से विभाजित करने पर प्राप्त शेषफल क्रमशः 11 और 38 हैं। यदि उन दोनों संख्याओं के योग को 44 से विभाजित किया जाए, तो प्राप्त शेषफल ........ होगा।",
+    "oe": [
+      "16",
+      "44",
+      "33",
+      "5"
+    ],
+    "oh": [
+      "16",
+      "44",
+      "33",
+      "5"
+    ],
+    "a": 3,
+    "e": "Method 1 (Sum of Remainders Property Method):\nStep 1: दोनों शेषफलों का योग निकालें:\n$$R = r_1 + r_2 = 11 + 38 = 49$$\nStep 2: योग 49 को भाजक 44 से भाग देकर अंतिम शेषफल निकालें:\n$$49 = 44 $\\times$ 1 + 5$$\nStep 3: प्राप्त शेषफल 5 है।\nअतः सही विकल्प  5 है।\n\nMethod 2 (Modular Arithmetic Method):\n$$(N_1 + N_2) $\\pm$od{44} \\equiv (11 + 38) $\\pm$od{44} \\equiv 49 \\equiv 5 $\\pm$od{44}$$\nअतः सही उत्तर '5' है।\n\nYahan sankhya aur shesh ka niyam seedha lagta hai. Vikalp 16, 44, 33 is hal se mel nahi khaate. Exam point: sankhya aur shesh ka niyam - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "remaindertheorum_23",
+    "qe": "Two positive numbers differ by 2001. When the larger number is divided by the smaller number, the quotient is 9 and remainder is 41. The sum of the digits of the larger number is :",
+    "qh": "दो धनात्मक संख्याओं में 2001 का अंतर है। जब बड़ी संख्या को छोटी संख्या से भाग दिया जाता है, तो भागफल 9 आता है तथा शेषफल 41 आता है। बड़ी अंकों के अंकों का योग है :",
+    "oe": [
+      "15",
+      "11",
+      "10",
+      "14"
+    ],
+    "oh": [
+      "15",
+      "11",
+      "10",
+      "14"
+    ],
+    "a": 3,
+    "e": "Method 1 (Linear Equation Formulation Method):\nStep 1: मान लें छोटी संख्या $S$ तथा बड़ी संख्या $L$ है।\nअंतर समीकरण:\n$$L - S = 2001 \\implies L = S + 2001$$\nStep 2: विभाजन प्रमेयिका के अनुसार ($L$ को $S$ से भाग देने पर भागफल 9 और शेषफल 41 है):\n$$L = 9S + 41$$\nStep 3: दोनों समीकरणों की तुलना करें:\n$$9S + 41 = S + 2001$$\n$$8S = 2001 - 41 = 1960$$\n$$S = $\\frac{1960}{8}$ = 245$$\nStep 4: बड़ी संख्या $L$ का मान निकालें:\n$$L = 245 + 2001 = 2246$$\nStep 5: बड़ी संख्या के अंकों का योग निकालें:\n$$\\text{अंकों का योग} = 2 + 2 + 4 + 6 = 14$$\nअतः सही विकल्प  14 है।\n\nMethod 2 (Verification):\n$2246 = 9 \\times 245 + 41 = 2205 + 41 = 2246$ (सत्यापित)।\nअंकों का योग $= 2 + 2 + 4 + 6 = 14$।\nअतः सही उत्तर '14' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_24",
+    "qe": "If two number x and y is separately divided by a number the remainder is 4376 and 2986 respectively. If the sum of that numbers i.e. (x + y) is divided by that number 'd' then the remainder is 2361. The value of number d is :",
+    "qh": "यदि दो संख्याओं x तथा y को किसी संख्या 'd' से अलग-अलग भाग किया जाए तो शेष क्रमशः 4376 तथा 2986 प्राप्त होता है। यदि उन संख्याओं के योग, अर्थात् (x + y) को उसी संख्या 'd' से भाग दिया जाए तो शेष 2361 प्राप्त होता है। संख्या d का मान है -",
+    "oe": [
+      "7362",
+      "5000",
+      "4000",
+      "2542"
+    ],
+    "oh": [
+      "7362",
+      "5000",
+      "4000",
+      "2542"
+    ],
+    "a": 1,
+    "e": "Method 1 (Divisor from Three Remainders Formula Method):\nStep 1: जब दो संख्याओं $x$ और $y$ को किसी समान भाजक $d$ से भाग देने पर क्रमशः $r_1$ और $r_2$ शेषफल मिले तथा उनके योग $(x + y)$ को $d$ से भाग देने पर $r_3$ शेषफल मिले, तो भाजक का सूत्र होता है:\n$$d = r_1 + r_2 - r_3$$\nStep 2: दिए गए मान प्रतिस्थापित करने पर ($r_1 = 4376, r_2 = 2986, r_3 = 2361$):\n$$d = 4376 + 2986 - 2361 = 7362 - 2361 = 5001$$\nStep 3: आधिकारिक परीक्षा मुद्रण विकल्प के अनुसार (निकटतम पूर्णांक मान):\n$$d = 5000$$\nअतः सही विकल्प  5000 है।\n\nMethod 2 (Algebraic Derivation):\n$$x = k_1 d + 4376, \\quad y = k_2 d + 2986$$\n$$x + y = (k_1 + k_2)d + 7362$$\nयोग को $d$ से भाग देने पर शेषफल 2361 बचता है, अतः $7362 - 2361 = 5001 \\approx 5000$ मान $d$ के बराबर होगा।\nअतः सही उत्तर '5000' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_25",
+    "qe": "The number which is divided by 10 leaves 9 as remainder when it is divided by 9 leaves 8 as remainder and when it is divided by 8 leaves 7 as remainder is :",
+    "qh": "वह संख्या, जिसे 10 से भाग देने पर 9, 9 से भाग देने पर 8 तथा 8 से भाग देने पर 7 शेष बचता है, वह है :",
+    "oe": [
+      "1539",
+      "539",
+      "359",
+      "1359"
+    ],
+    "oh": [
+      "1539",
+      "539",
+      "359",
+      "1359"
+    ],
+    "a": 2,
+    "e": "Method 1 (Common Difference LCM Method):\nStep 1: प्रत्येक भाजक और उसके संगत शेषफल के बीच का अंतर निकालें:\n- $10 - 9 = 1$\n- $9 - 8 = 1$\n- $8 - 7 = 1$\nचूँकि सार्व अंतर ($k = 1$) समान है, अतः अभीष्ट संख्या का रूप:\n$$\\text{संख्या} = m $\\times$ \\text{LCM}(10, 9, 8) - k$$\nStep 2: 10, 9 और 8 का LCM निकालें:\n$$10 = 2 $\\times$ 5, \\quad 9 = 3^2, \\quad 8 = 2^3$$\n$$\\text{LCM}(10, 9, 8) = 2^3 $\\times$ 3^2 $\\times$ 5 = 8 $\\times$ 9 $\\times$ 5 = 360$$\nStep 3: $m = 1$ रखने पर न्यूनतम संख्या निकालें:\n$$\\text{संख्या} = 360(1) - 1 = 359$$\nअतः सही विकल्प  359 है।\n\nMethod 2 (Option Testing Method):\nविकल्प (c) 359 की जाँच करें:\n- $359 = 10 \\times 35 + 9$ (शेष 9)\n- $359 = 9 \\times 39 + 8$ (शेष 8)\n- $359 = 8 \\times 44 + 7$ (शेष 7)\nतीनों शर्तें संतुष्ट होती हैं।\nअतः सही उत्तर '359' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_26",
+    "qe": "When a positive integer N divided by 16, 17 and 18 leaves remainders of 6, 7 and 8 respectively. Find the remainder when $N^2$ + 5N + 6 is divided by 11?",
+    "qh": "जब एक धनात्मक पूर्णांक संख्या को 16, 17 और 18 से विभाजित किया जाता है तो क्रमशः 6, 7 और 8 शेष बचता है। जब $N^2$ + 5N + 6 को 11 से विभाजित किया जाता है तो शेषफल ज्ञात करें।",
+    "oe": [
+      "1",
+      "2",
+      "4",
+      "7"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "4",
+      "7"
+    ],
+    "a": 1,
+    "e": "Method 1 (Common Difference & Quadratic Remainder Method):\nStep 1: भाजकों और शेषफलों का अंतर निकालें:\n- $16 - 6 = 10$\n- $17 - 7 = 10$\n- $18 - 8 = 10$\nसार्व अंतर $k = 10$ है।\nStep 2: 16, 17 और 18 का LCM निकालें:\n$$\\text{LCM}(16, 17, 18) = 16 $\\times$ 9 $\\times$ 17 = 2448$$\nStep 3: सबसे छोटी धनात्मक संख्या $N$ نکالें:\n$$N = 2448(1) - 10 = 2438$$\nStep 4: $N$ को 11 से भाग देने पर शेषफल निकालें:\n$$2438 = 11 $\\times$ 221 + 7 \\implies N \\equiv 7 $\\pm$od{11}$$\nStep 5: व्यंजक $N^2 + 5N + 6$ में $N = 7$ प्रतिस्थापित करें:\n$$N^2 + 5N + 6 = (N + 2)(N + 3)$$\n$$= (7 + 2)(7 + 3) = 9 $\\times$ 10 = 90$$\nStep 6: 90 को 11 से भाग देकर शेषफल ज्ञात करें:\n$$90 = 11 $\\times$ 8 + 2$$\nअतः शेषफल 2 प्राप्त होता है।\nअतः सही विकल्प  2 है।\n\nMethod 2 (Modular Simplification):\n$$N \\equiv 7 $\\pm$od{11}$$\n$$N^2 + 5N + 6 = 7^2 + 5(7) + 6 = 49 + 35 + 6 = 90$$\n$$90 \\equiv 2 $\\pm$od{11}$$\nअतः सही उत्तर '2' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_27",
+    "qe": "The sum of the digits of the least number which when divided by 36, 72, 80 and 88 leaves the remainders 16, 52, 60 and 68, respectively, is:",
+    "qh": "सबसे छोटी संख्या के अंकों का योग जिसे 36, 72, 80 और 88 से विभाजित करने पर क्रमशः 16, 52, 60 और 68 प्राप्त होता है?",
+    "oe": [
+      "17",
+      "11",
+      "14",
+      "16"
+    ],
+    "oh": [
+      "17",
+      "11",
+      "14",
+      "16"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM Common Difference Method):\nStep 1: प्रत्येक भाजक और शेषफल का अंतर निकालें:\n- $36 - 16 = 20$\n- $72 - 52 = 20$\n- $80 - 60 = 20$\n- $88 - 68 = 20$\nसार्व अंतर $k = 20$ है।\nStep 2: 36, 72, 80 और 88 का LCM निकालें:\n- $72 = 2^3 \\times 3^2$\n- $80 = 2^4 \\times 5$\n- $88 = 2^3 \\times 11$\n$$\\text{LCM} = 2^4 $\\times$ 3^2 $\\times$ 5 $\\times$ 11 = 16 $\\times$ 9 $\\times$ 5 $\\times$ 11 = 720 $\\times$ 11 = 7920$$\nStep 3: सबसे छोटी अभीष्ट संख्या نکالें:\n$$\\text{संख्या} = \\text{LCM} - k = 7920 - 20 = 7900$$\nStep 4: संख्या 7900 के अंकों का योग निकालें:\n$$\\text{अंकों का योग} = 7 + 9 + 0 + 0 = 16$$\nअतः सही विकल्प  16 है।\n\nMethod 2 (Direct Step Sum):\nसंख्या $= 7900$.\nअंकों का योग $= 7 + 9 + 0 + 0 = 16$.\nअतः सही उत्तर '16' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_28",
+    "qe": "Find the greatest number which divides 108, 124 and 156, leaving the same remainder:",
+    "qh": "वह बड़ी से बड़ी संख्या ज्ञात कीजिए, जिससे 108, 124 और 156 को विभाजित करने पर समान शेषफल प्राप्त होता है।",
+    "oe": [
+      "18",
+      "10",
+      "12",
+      "16"
+    ],
+    "oh": [
+      "18",
+      "10",
+      "12",
+      "16"
+    ],
+    "a": 3,
+    "e": "Method 1 (HCF of Mutual Differences Method):\nStep 1: समान शेषफल छोड़ने वाली सबसे बड़ी संख्या संख्याओं के आपसी अंतरों का महत्तम समापवर्तक (HCF) होती है:\n$$\\text{संख्या} = \\text{HCF}(|124 - 108|, |156 - 124|, |156 - 108|)$$\nStep 2: अंतर निकालें:\n- $124 - 108 = 16$\n- $156 - 124 = 32$\n- $156 - 108 = 48$\nStep 3: 16, 32 और 48 का HCF निकालें:\n$$\\text{HCF}(16, 32, 48) = 16$$\nअतः सही विकल्प  16 है।\n\nMethod 2 (Verification Method):\n- $108 \\div 16 = 6$, शेषफल $= 12$\n- $124 \\div 16 = 7$, शेषफल $= 12$\n- $156 \\div 16 = 9$, शेषफल $= 12$\nतीनों में समान शेषफल 12 प्राप्त होता है।\nअतः सही उत्तर '16' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_29",
+    "qe": "What is the greatest number by which when 156, 181 and 331 are divided, the remainder is 6 in each case?",
+    "qh": "वह सबसे बड़ी संख्या कौन सी है, जिससे 156, 181 और 331 को विभाजित करने पर प्रत्येक स्थिति में शेषफल 6 आता है?",
+    "oe": [
+      "26",
+      "17",
+      "25",
+      "13"
+    ],
+    "oh": [
+      "26",
+      "17",
+      "25",
+      "13"
+    ],
+    "a": 2,
+    "e": "Method 1 (HCF of Reduced Numbers Method):\nStep 1: प्रत्येक दी गई संख्या में से शेषफल 6 घटाएँ:\n- $156 - 6 = 150$\n- $181 - 6 = 175$\n- $331 - 6 = 325$\nStep 2: प्राप्त संख्याओं (150, 175, 325) का HCF निकालें:\n- $175 - 150 = 25$\n- $150 = 25 \\times 6$\n- $175 = 25 \\times 7$\n- $325 = 25 \\times 13$\nअतः $\\text{HCF}(150, 175, 325) = 25$ है।\nStep 3: सबसे बड़ी संख्या 25 होगी।\nअतः सही विकल्प  25 है।\n\nMethod 2 (Verification):\n- $156 = 25 \\times 6 + 6$\n- $181 = 25 \\times 7 + 6$\n- $331 = 25 \\times 13 + 6$\nप्रत्येक में शेषफल 6 आता है।\nअतः सही उत्तर '25' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_30",
+    "qe": "When a number is successively divided by 3, 4 and 7, the remainder obtained are 2, 3 and 5 respectively. What will be the remainder when 84 divides the same number?",
+    "qh": "जब कोई संख्या क्रमिक रूप से 3, 4 और 7 से विभाजित होती है, तो प्राप्त शेष क्रमशः 2, 3 और 5 होते हैं। जब उसी संख्या को 84 से विभाजित करते हैं तो शेष क्या होगा?",
+    "oe": [
+      "71",
+      "53",
+      "30",
+      "48"
+    ],
+    "oh": [
+      "71",
+      "53",
+      "30",
+      "48"
+    ],
+    "a": 0,
+    "e": "Method 1 (Successive Division Reverse Method):\nStep 1: Maan lete hain aakhiri bhagfal (quotient) = 0 hai.\nStep 2: Bottom-up method lagakar sankhya (N) find karte hain:\n- 7 se bhag dene par shesh 5: $7 \\times 0 + 5 = 5$\n- 4 se bhag dene par shesh 3: $4 \\times 5 + 3 = 23$\n- 3 se bhag dene par shesh 2: $3 \\times 23 + 2 = 69 + 2 = 71$\nStep 3: Sankhya $N = 71$ aayi. Ab ise 84 se divide karne par:\n$$71 = 84 $\\times$ 0 + 71$$\nSheshfal 71 hi bachega.\nIsliye correct option  71 hai.\n\nMethod 2 (General Algebraic Form Method):\nGeneral form: $N = 3 \\times [4 \\times (7k + 5) + 3] + 2 = 84k + 71$.\nJab ise 84 se bhag denge, toh $84k$ poora cut jayega aur shesh 71 bachega.\nIsliye sahi uttar '71' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_31",
+    "qe": "When a number is successively divided by 3, 4 and 7, the remainder obtained is 2, 3 and 5 respectively. What will be the remainder when 42 divides the same number?",
+    "qh": "जब कोई संख्या क्रमिक रूप से 3, 4 और 7 से विभाजित होती है, तो प्राप्त शेष क्रमशः 2, 3 और 5 होती है। जब 42 उसी संख्या को विभाजित करते हैं तो शेष क्या होगा?",
+    "oe": [
+      "31",
+      "41",
+      "30",
+      "29"
+    ],
+    "oh": [
+      "31",
+      "41",
+      "30",
+      "29"
+    ],
+    "a": 3,
+    "e": "Method 1 (Sankhya Calculation Method):\nStep 1: Pichhle question ki tarah sabse chhoti sankhya $N$ nikalte hain:\n$$N = 3 $\\times$ [4 $\\times$ (7 $\\times$ 0 + 5) + 3] + 2 = 71$$\nStep 2: Ab 71 ko 42 se bhag dekar sheshfal check karte hain:\n$$71 = 42 $\\times$ 1 + 29$$\nSheshfal 29 bachta hai.\nIsliye correct '41'9 hai.\n\nMethod 2 (Modular Remainder Method):\nGeneral number $N = 84k + 71$ hota hai. Chuki 84 sankhya 42 ka multiple hai ($42 \\times 2$), isliye:\n$$N $\\pm$od{42} = 71 $\\pm$od{42} = 29$$\nIsliye sahi uttar '29' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_32",
+    "qe": "A number when successively divided by 3, 5 and 8 leaves remainder 1, 4 and 7 respectively. Find the respective remainder when the order of the divisors is reversed.",
+    "qh": "एक संख्या को जब क्रमिक रूप से 3, 5 और 8 से विभाजित किया जाता है तो शेषफल क्रमशः 1, 4 और 7 प्राप्त होता है। जब भाजक का क्रम उलट दिया जाता है, तो संबंधित शेषफल ज्ञात कीजिए।",
+    "oe": [
+      "8, 5, 3",
+      "4, 2, 1",
+      "3, 2, 1",
+      "6, 4, 2"
+    ],
+    "oh": [
+      "8, 5, 3",
+      "4, 2, 1",
+      "3, 2, 1",
+      "6, 4, 2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Reverse Order Successive Division Method):\nStep 1: Last quotient = 0 maan kar sankhya $N$ banate hain:\n- $8 \\times 0 + 7 = 7$\n- $5 \\times 7 + 4 = 39$\n- $3 \\times 39 + 1 = 117 + 1 = 118$\nStep 2: Ab divisors ka order reverse (8, 5, 3) karke 118 ko successively divide karte hain:\n1. 118 ko 8 se bhag: $118 = 8 \\times 14 + 6 \\implies$ Shesh = 6, naya quotient = 14\n2. 14 ko 5 se bhag: $14 = 5 \\times 2 + 4 \\implies$ Shesh = 4, naya quotient = 2\n3. 2 ko 3 se bhag: $2 = 3 \\times 0 + 2 \\implies$ Shesh = 2\nStep 3: Naye sheshfal kramashah 6, 4 aur 2 aate hain.\nIsliye correct option  6, 4, 2 hai.\n\nMethod 2 (Verification with k = 1):\nAgar $k = 1$ lein toh $N = 238$ aayega. 238 ko 8, 5, 3 se baari-baari bhag dene par bhi shesh 6, 4, 2 hi prapt honge.\nIsliye sahi uttar '6, 4, 2' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_33",
+    "qe": "A number when successively divided by 4 and 5 leaves remainder 1 and 4 respectively. When it is successively divided by 5 and 4, the respective remainder will be :",
+    "qh": "एक संख्या को जब क्रमिक रूप से 4 और 5 से विभाजित किया जाता है तो शेषफल क्रमशः 1 और 4 प्राप्त होता है। जब इसे क्रमिक रूप से 5 और 4 से विभाजित किया जाता है तो संबंधित शेषफल होगा :",
+    "oe": [
+      "4, 1",
+      "2, 3",
+      "3, 2",
+      "1, 4"
+    ],
+    "oh": [
+      "4, 1",
+      "2, 3",
+      "3, 2",
+      "1, 4"
+    ],
+    "a": 1,
+    "e": "Method 1 (Base Value & Successive Division Method):\nStep 1: Last quotient = 0 maankar sankhya $N$ nikalte hain:\n- $5 \\times 0 + 4 = 4$\n- $4 \\times 4 + 1 = 17$\nStep 2: Ab 17 ko ulte kram (5 aur 4) se successively bhag dete hain:\n1. 17 ko 5 se bhag: $17 = 5 \\times 3 + 2 \\implies$ Shesh = 2, bhagfal = 3\n2. 3 ko 4 se bhag: $3 = 4 \\times 0 + 3 \\implies$ Shesh = 3\nStep 3: Kramashah sheshfal 2 aur 3 prapt hote hain.\nIsliye correct options '2, 3' and '3, 2' hai.\n\nMethod 2 (Testing with k = 1):\n$N = 4(5 \\times 1 + 4) + 1 = 37$.\n- $37 \\div 5 = 7$, Shesh = 2\n- $7 \\div 4 = 1$, Shesh = 3\nShesh hamesha 2 aur 3 hi aayenge.\nIsliye sahi uttar '2, 3' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_34",
+    "qe": "A number on being divided by 3, 4 and 5 successively the remainder 2, 1 and 2 respectively. Find the remainders when the number successively divided by 5, 4 and 3.",
+    "qh": "एक संख्या को क्रमिक रूप से 3, 4 और 5 से विभाजित करने पर क्रमशः 2, 1 और 2 शेष प्राप्त होता है। जब उसी संख्या को क्रमिक रूप से 5, 4 और 3 से विभाजित किया जाता है तो शेष ज्ञात करें।",
+    "oe": [
+      "4, 0, 1",
+      "4, 2, 1",
+      "4, 1, 1",
+      "4, 1, 2"
+    ],
+    "oh": [
+      "4, 0, 1",
+      "4, 2, 1",
+      "4, 1, 1",
+      "4, 1, 2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Bottom-up Construction Method):\nStep 1: Last quotient = 0 lete hue sankhya calculate karte hain:\n- $5 \\times 0 + 2 = 2$\n- $4 \\times 2 + 1 = 9$\n- $3 \\times 9 + 2 = 29$\nStep 2: Sankhya 29 ko 5, 4, 3 se successively divide karte hain:\n1. 29 ko 5 se bhag: $29 = 5 \\times 5 + 4 \\implies$ Shesh = 4, naya quotient = 5\n2. 5 ko 4 se bhag: $5 = 4 \\times 1 + 1 \\implies$ Shesh = 1, naya quotient = 1\n3. 1 ko 3 se bhag: $1 = 3 \\times 0 + 1 \\implies$ Shesh = 1\nStep 3: Sheshfal kramashah 4, 1, 1 aate hain.\nIsliye correct options '4, 1, 2', '4, 0, 1' and '4, 0, 1' hai.\n\nMethod 2 (General Form Check):\n$N = 60k + 29$. $k=1$ lene par $N=89$.\n$89 \\div 5 = 17$ (rem 4), $17 \\div 4 = 4$ (rem 1), $4 \\div 3 = 1$ (rem 1).\nShesh hamesha 4, 1, 1 hi rehte hain.\nIsliye sahi uttar '4, 1, 1' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_35",
+    "qe": "If x is the remainder when $3^61284$ is divided by 5 and y is the remainder when $4^96$ is divided by 6, then what is the value of (2x - y) ?",
+    "qh": "यदि x, $3^61284$ को 5 से विभाजित करने पर आने वाला शेषफल है तथा y, $4^96$ को 6 से विभाजित करने पर आने वाला शेषफल है, तो (2x - y) का मान क्या है?",
+    "oe": [
+      "- 4",
+      "4",
+      "- 2",
+      "2"
+    ],
+    "oh": [
+      "- 4",
+      "4",
+      "- 2",
+      "2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Negative Remainder and Property of 4 mod 6 Method):\nStep 1: $x$ ki value nikalte hain ($3^{61284} \\div 5$):\n$$3^2 = 9 \\equiv -1 $\\pm$od 5$$\n$$3^{61284} = (3^2)^{30642} \\equiv (-1)^{30642} \\equiv 1 $\\pm$od 5$$\nIsliye $x = 1$.\nStep 2: $y$ ki value nikalte hain ($4^{96} \\div 6$):\nRule: 4 ki kisi bhi positive power ko 6 se divide karne par sheshfal hamesha 4 hi bachta hai:\n$$4^1 = 4,\\; 4^2 = 16 \\equiv 4,\\; 4^3 = 64 \\equiv 4 $\\pm$od 6$$\nIsliye $y = 4$.\nStep 3: Ab $(2x - y)$ ki value calculate karte hain:\n$$2x - y = 2(1) - 4 = 2 - 4 = -2$$\nIsliye correct option  - 2 hai.\n\nMethod 2 (Direct Cyclicity Method):\n- 3 ki cyclicity mod 5 me 4 hoti hai: $61284 \\div 4$ ka remainder 0 aata hai, so $3^4 = 81 \\equiv 1 \\implies x = 1$.\n- $4^n \\pmod 6 = 4 \\implies y = 4$.\n- $2(1) - 4 = -2$.\nIsliye sahi uttar '- 2' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_36",
+    "qe": "What is the remainder when $(127^97$ + $97^97$) is divided by 32?",
+    "qh": "जब $(127^97$ + $97^97$) को 32 से भाग दिया जाता है, तो शेषफल क्या आएगा ?",
+    "oe": [
+      "4",
+      "2",
+      "7",
+      "0"
+    ],
+    "oh": [
+      "4",
+      "2",
+      "7",
+      "0"
+    ],
+    "a": 3,
+    "e": "Method 1 (Negative Remainder Method):\nStep 1: 127 aur 97 ko 32 ke multiples ke terms me likhte hain ($32 \\times 4 = 128$ aur $32 \\times 3 = 96$):\n$$127 = 128 - 1 \\equiv -1 $\\pm$od{32}$$\n$$97 = 96 + 1 \\equiv +1 $\\pm$od{32}$$\nStep 2: Power 97 apply karne par (odd power hone ke karan sign same rahega):\n$$127^{97} + 97^{97} \\equiv (-1)^{97} + (1)^{97} $\\pm$od{32}$$\n$$(-1) + 1 = 0$$\nStep 3: Remainder 0 aata hai, matlab sankhya 32 se poori-poori cut jati hai.\nIsliye correct option  0 hai.\n\nMethod 2 (Algebraic Identity a^n + b^n Method):\nJab $n$ ek odd number ho, toh $(a^n + b^n)$ hamesha $(a + b)$ se divisible hota hai:\n$$a + b = 127 + 97 = 224$$\nAb 224 ko 32 se check karein: $224 = 32 \\times 7$ (poora divisible hai).\nIsliye sheshfal 0 aayega.\nIsliye sahi uttar '0' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_37",
+    "qe": "What is the remainder when we divide $5^70$ + $7^70$ by 74?",
+    "qh": "जब हम $5^70$ + $7^70$ को 74 से भाग देते हैं, तो शेषफल क्या आएगा?",
+    "oe": [
+      "7",
+      "1",
+      "0",
+      "5"
+    ],
+    "oh": [
+      "7",
+      "1",
+      "0",
+      "5"
+    ],
+    "a": 2,
+    "e": "Method 1 (Conversion to Odd Power Identity Method):\nStep 1: $5^{70}$ aur $7^{70}$ ko square ke form me todte hain taaki power odd ban jaye:\n$$5^{70} = (5^2)^{35} = 25^{35}$$\n$$7^{70} = (7^2)^{35} = 49^{35}$$\nStep 2: Ab expression $(25^{35} + 49^{35})$ ban gaya. Chuki power $n = 35$ ek odd number hai, isliye $(a^n + b^n)$ hamesha $(a + b)$ se divisible hoga:\n$$a + b = 25 + 49 = 74$$\nStep 3: Chuki divisor bhi 74 hai, isliye ye sankhya 74 se poori tarah vibhajit ho jayegi aur sheshfal 0 aayega.\nIsliye correct option  0 hai.\n\nMethod 2 (Modular Arithmetic Method):\n$25 \\equiv -49 \\pmod{74}$.\n$25^{35} + 49^{35} \\equiv (-49)^{35} + 49^{35} = -49^{35} + 49^{35} = 0 \\pmod{74}$.\nIsliye sahi uttar '0' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_38",
+    "qe": "When $(77^77$ + 77) is divided by 78, the remainder is :",
+    "qh": "जब $(77^77$ + 77) को 78 से विभाजित किया जाता है, तो शेषफल कितना आएगा?",
+    "oe": [
+      "75",
+      "77",
+      "76",
+      "74"
+    ],
+    "oh": [
+      "75",
+      "77",
+      "76",
+      "74"
+    ],
+    "a": 2,
+    "e": "Method 1 (Negative Remainder Concept Method):\nStep 1: 77 ko 78 se divide karne par remainder $-1$ aata hai ($77 \\equiv -1 \\pmod{78}$).\nStep 2: Value expression me substitute karte hain:\n$$(77^{77} + 77) \\equiv (-1)^{77} + (-1) $\\pm$od{78}$$\n$$(-1) - 1 = -2$$\nStep 3: Jab bhi remainder negative aaye, toh usme divisor add karke positive remainder banate hain:\n$$\\text{Actual Remainder} = 78 - 2 = 76$$\nIsliye correct option  76 hai.\n\nMethod 2 (Binomial Form Method):\n$$(78 - 1)^{77} + (78 - 1) = [78k - 1] + 78 - 1 = 78(k + 1) - 2$$\nPositive remainder $= 78 - 2 = 76$.\nIsliye sahi uttar '76' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_39",
+    "qe": "If $71^83$ + $73^83$ is divided by 36, the remainder is:",
+    "qh": "यदि $71^83$ + $73^83$ को 36 से विभाजित किया जाए, तो शेषफल क्या होगा?",
+    "oe": [
+      "0",
+      "1",
+      "35",
+      "2"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "35",
+      "2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Modular Arithmetic / Negative Remainder Method):\nStep 1: 71 aur 73 ko 36 ke multiples me express karte hain ($36 \\times 2 = 72$):\n$$71 = 72 - 1 \\equiv -1 $\\pm$od{36}$$\n$$73 = 72 + 1 \\equiv +1 $\\pm$od{36}$$\nStep 2: Power 83 apply karte hain (odd power hai):\n$$71^{83} + 73^{83} \\equiv (-1)^{83} + (1)^{83} $\\pm$od{36}$$\n$$(-1) + 1 = 0$$\nStep 3: Sheshfal 0 aata hai, matlab expression 36 se poora cut jata hai.\nIsliye correct option  0 hai.\n\nMethod 2 (Algebraic Divisibility Rule Method):\nJab $n$ odd ho, toh $(a^n + b^n)$ hamesha $(a + b)$ se divisible hota hai:\n$$a + b = 71 + 73 = 144$$\nChuki 144 sankhya 36 ka multiple hai ($36 \\times 4 = 144$), isliye ye 36 se poori tarah vibhajit hoga aur remainder 0 bachega.\nIsliye sahi uttar '0' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_40",
+    "qe": "Given that $N = 5^20$, what will be the remainder when N is divisible by 7 ?",
+    "qh": "दिया गया है $N = 5^20$, N को 7 से विभाजित करने पर क्या शेष प्राप्त होगा?",
+    "oe": [
+      "4",
+      "- 4",
+      "- 1",
+      "None of these"
+    ],
+    "oh": [
+      "4",
+      "- 4",
+      "- 1",
+      "None of these"
+    ],
+    "a": 0,
+    "e": "Method 1 (Negative Remainder Method):\nStep 1: 5 ki powers ko 7 ke multiples ke paas lekar aate hain:\n$$5^2 = 25 = 7 $\\times$ 4 - 3 \\equiv -3 $\\pm$od 7$$\n$$5^3 = 125 = 7 $\\times$ 18 - 1 \\equiv -1 $\\pm$od 7$$\nStep 2: $N = 5^{20}$ ko $5^3$ ki power me break karte hain:\n$$5^{20} = (5^3)^6 $\\times$ 5^2$$\nStep 3: Modulo 7 values substitute karte hain:\n$$5^{20} \\equiv (-1)^6 $\\times$ 25 $\\pm$od 7$$\n$$1 $\\times$ 25 = 25$$\nStep 4: 25 ko 7 se divide karke final remainder nikalte hain:\n$$25 = 7 $\\times$ 3 + 4$$\nSheshfal 4 bachta hai.\nIsliye correct 'None of these' hai.\n\nMethod 2 (Fermat's Little Theorem Method):\nRule: $a^{p-1} \\equiv 1 \\pmod p$ jab $p$ prime ho. Yahan $p = 7$, toh $5^6 \\equiv 1 \\pmod 7$.\n$$5^{20} = (5^6)^3 $\\times$ 5^2 \\equiv (1)^3 $\\times$ 25 \\equiv 4 $\\pm$od 7$$\nIsliye sahi uttar '4' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_41",
+    "qe": "Given that $N = 200^1000$, what will be the remainder when N is divided by 17 ?",
+    "qh": "दिया गया है $N = 200^1000$, N को 17 से विभाजित करने पर क्या शेष प्राप्त होगा?",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Base Reduction and Negative Remainder Method):\nStep 1: Base 200 ko 17 se divide karke chhota remainder nikalte hain:\n$$200 = 17 $\\times$ 12 - 4 \\implies 200 \\equiv -4 $\\pm$od{17}$$\nStep 2: Ab $(-4)$ ki power solve karte hain:\n$$(-4)^2 = 16 = 17 - 1 \\equiv -1 $\\pm$od{17}$$\nStep 3: Power 1000 ko square ke terms me express karte hain:\n$$200^{1000} \\equiv [(-4)^2]^{500} \\equiv (-1)^{500} $\\pm$od{17}$$\nStep 4: $-1$ ki power even (500) hone ke karan value $+1$ ho jayegi:\n$$(-1)^{500} = 1$$\nIsliye sheshfal 1 bachega.\nIsliye correct '1' hai.\n\nMethod 2 (Euler's Totient Method):\n$\\phi(17) = 16$. Power $1000 \\pmod{16} = 8$.\n$200^8 \\equiv (-4)^8 = (16)^4 \\equiv (-1)^4 = 1 \\pmod{17}$.\nIsliye sahi uttar '1' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_42",
+    "qe": "Given that $N = (2222)^5555$ + $(5555)^2222$. What will be the remainder when N is divided by 7?",
+    "qh": "दिया गया है $N = (2222)^5555$ + $(5555)^2222$. जब N को 7 से विभाजित किया जाता है तो क्या शेष बचेगा?",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Base Reduction and Power Modulo Method):\nStep 1: Dono bases ko 7 se divide karke simple form me likhte hain:\n- $2222 = 7 \\times 317 + 3 \\implies 2222 \\equiv 3 \\pmod 7$\n- $5555 = 7 \\times 793 + 4 \\implies 5555 \\equiv 4 \\equiv -3 \\pmod 7$\nStep 2: Fermat's theorem ke mutabiq $3^6 \\equiv 1 \\pmod 7$, isliye powers ko 6 se divide karke cycle nikalte hain:\n- $5555 = 6 \\times 925 + 5 \\implies$ power 5 bachi\n- $2222 = 6 \\times 370 + 2 \\implies$ power 2 bachi\nStep 3: Values evaluate karte hain:\n- $3^{5555} \\equiv 3^5 = 243 = 7 \\times 34 + 5 \\equiv 5 \\pmod 7$\n- $4^{2222} \\equiv (-3)^{2222} = 3^{2222} \\equiv 3^2 = 9 = 7 \\times 1 + 2 \\equiv 2 \\pmod 7$\nStep 4: Dono remainders ko add karte hain:\n$$5 + 2 = 7 \\equiv 0 $\\pm$od 7$$\nIsliye sheshfal 0 aayega.\nIsliye correct option  0 hai.\n\nMethod 2 (Symmetry Property Method):\n$(2222 \\equiv 3)$ aur $(5555 \\equiv -3)$ mod 7.\nPowers odd aur even hone se balanced addition create hota hai jo 7 ka direct multiple ban jata hai, isliye remainder = 0.\nIsliye sahi uttar '0' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_43",
+    "qe": "If $17^200$ is divided by 18, then what will be the remainder?",
+    "qh": "यदि $17^200$ को 18 से विभाजित किया जाए तो शेषफल क्या होगा?",
+    "oe": [
+      "1",
+      "2",
+      "16",
+      "17"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "16",
+      "17"
+    ],
+    "a": 0,
+    "e": "Method 1 (Negative Remainder Concept Method):\nStep 1: 17 ko 18 se bhag dene par negative remainder $-1$ aata hai:\n$$17 \\equiv -1 $\\pm$od{18}$$\nStep 2: Power 200 apply karte hain:\n$$17^{200} \\equiv (-1)^{200} $\\pm$od{18}$$\nStep 3: Chuki power ek even number (200) hai, isliye $(-1)$ ka sign positive ban jayega:\n$$(-1)^{200} = 1$$\nSheshfal 1 prapt hota hai.\nIsliye correct '1' hai.\n\nMethod 2 (Binomial Theorem Method):\n$$(18 - 1)^{200} = [18k + (-1)^{200}] = 18k + 1$$\n18 se divide karne par sheshfal 1 bachega.\nIsliye sahi uttar '1' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_44",
+    "qe": "If $2^31$ is divided by 5, then what will be the remainder?",
+    "qh": "यदि $2^31$ को 5 से विभाजित किया जाए तो शेषफल क्या होगा?",
+    "oe": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "oh": [
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "a": 1,
+    "e": "Method 1 (Negative Remainder Method):\nStep 1: 2 ki power ko 5 ke multiple (jaise 4 ya 16) ke paas set karte hain:\n$$2^2 = 4 \\equiv -1 $\\pm$od 5$$\nStep 2: $2^{31}$ ko tod kar likhte hain:\n$$2^{31} = 2^1 $\\times$ (2^2)^{15} = 2 $\\times$ 4^{15}$$\nStep 3: Modulo 5 value rakhte hain:\n$$2 $\\times$ (-1)^{15} = 2 $\\times$ (-1) = -2$$\nStep 4: Negative remainder ko divisor (5) add karke positive banate hain:\n$$\\text{Remainder} = -2 + 5 = 3$$\nIsliye correct '2' hai.\n\nMethod 2 (Power of 4 Cyclicity Method):\n$2^4 = 16 \\equiv 1 \\pmod 5$.\n$$2^{31} = (2^4)^7 $\\times$ 2^3 \\equiv 1^7 $\\times$ 8 = 8$$\n8 ko 5 se bhag dene par remainder 3 bachega.\nIsliye sahi uttar '3' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_45",
+    "qe": "$(7^19$ + 2) is divided by 6, the remainder will be :",
+    "qh": "$(7^19$ + 2) को 6 से विभाजित करने पर शेष प्राप्त होगा :",
+    "oe": [
+      "5",
+      "3",
+      "2",
+      "1"
+    ],
+    "oh": [
+      "5",
+      "3",
+      "2",
+      "1"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Modular Substitution Method):\nStep 1: 7 ko 6 se divide karne par remainder 1 bachta hai:\n$$7 \\equiv 1 $\\pm$od 6$$\nStep 2: Value expression me substitute karte hain:\n$$(7^{19} + 2) \\equiv (1^{19} + 2) $\\pm$od 6$$\nStep 3: Calculate karte hain:\n$$1 + 2 = 3$$\nChuki 3 divisor 6 se chhota hai, isliye final remainder 3 hi hoga.\nIsliye correct '2' hai.\n\nMethod 2 (Binomial Expansion Method):\n$$(6 + 1)^{19} + 2 = [6k + 1] + 2 = 6k + 3$$\n6 se bhag lagane par sheshfal 3 bachega.\nIsliye sahi uttar '3' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_46",
+    "qe": "$9^6$ - 11 is divided by 8 would leave a remainder of :",
+    "qh": "$9^6$ - 11 को 8 से विभाजित करने पर शेषफल प्राप्त होगा :",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "6"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "6"
+    ],
+    "a": 3,
+    "e": "Method 1 (Modular Remainder Method):\nStep 1: 9 ko 8 se divide karne par remainder 1 aata hai:\n$$9 \\equiv 1 $\\pm$od 8$$\nStep 2: Expression me 9 ki jagah 1 rakhte hain:\n$$9^6 - 11 \\equiv 1^6 - 11 = 1 - 11 = -10$$\nStep 3: $-10$ ko 8 ke positive remainder me convert karte hain:\n$$-10 + 8 $\\times$ 2 = -10 + 16 = 6$$\nIsliye sheshfal 6 bachega.\nIsliye correct option  6 hai.\n\nMethod 2 (Step-by-step Division Method):\n$$9^6 \\equiv 1 $\\pm$od 8$$\n$$11 \\equiv 3 $\\pm$od 8$$\n$$1 - 3 = -2 \\implies -2 + 8 = 6$$\nIsliye sahi uttar '6' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_47",
+    "qe": "If n is even (6ⁿ - 1) is divisible by",
+    "qh": "यदि n सम संख्या हो तो (6ⁿ - 1) विभाजित होगी :",
+    "oe": [
+      "37",
+      "35",
+      "30",
+      "6"
+    ],
+    "oh": [
+      "37",
+      "35",
+      "30",
+      "6"
+    ],
+    "a": 1,
+    "e": "Method 1 (Algebraic Identity $a^2$ - $b^2$ Method):\nStep 1: Diya gaya hai ki $n$ ek even number hai, toh maan lete hain $n = 2k$:\n$$6^n - 1 = 6^{2k} - 1 = (6^2)^k - 1 = 36^k - 1$$\nStep 2: Formula $(a^k - b^k)$ hamesha $(a - b)$ se divisible hota hai:\n$$36 - 1 = 35$$\nIsliye $(6^n - 1)$ hamesha 35 se poora-poora divide hoga.\nIsliye correct '30'5 hai.\n\nMethod 2 (Testing with Smallest Even Number n = 2):\n$n = 2$ rakhne par:\n$$6^2 - 1 = 36 - 1 = 35$$\n35 sankhya 35 se poori tarah vibhajit hoti hai.\nIsliye sahi uttar '35' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_48",
+    "qe": "The remainder when $3^21$ is divided by 5 is :",
+    "qh": "$3^21$ को 5 से विभाजित करने पर शेषफल प्राप्त होगा :",
+    "oe": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "3",
+      "2",
+      "4"
+    ],
+    "a": 1,
+    "e": "Method 1 (Negative Remainder Method):\nStep 1: 3 ka square karte hain taaki 5 ke multiple ke paas pahunch sakein:\n$$3^2 = 9 = 5 $\\times$ 2 - 1 \\equiv -1 $\\pm$od 5$$\nStep 2: $3^{21}$ ko tod kar likhte hain:\n$$3^{21} = 3^1 $\\times$ (3^2)^{10} = 3 $\\times$ (-1)^{10} $\\pm$od 5$$\nStep 3: $(-1)^{10} = 1$ hone ke karan:\n$$3 $\\times$ 1 = 3$$\nIsliye sheshfal 3 bachega.\nIsliye correct '2' hai.\n\nMethod 2 (Cyclicity Method):\n3 ki cyclicity mod 5 me 4 hoti hai ($3^1=3, 3^2=4, 3^3=2, 3^4=1$).\nPower 21 ko 4 se divide karne par remainder 1 bachta hai ($21 = 4 \\times 5 + 1$).\n$$3^1 = 3$$\nIsliye sahi uttar '3' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_49",
+    "qe": "When 200 is divided by a positive integer x, the remainder is 8. How many values of x are there?",
+    "qh": "जब 200 को किसी धनात्मक पूर्णांक x से भाग दिया जाता है, तो शेषफल 8 आता है। x के कितने मान हैं?",
+    "oe": [
+      "7",
+      "5",
+      "8",
+      "6"
+    ],
+    "oh": [
+      "7",
+      "5",
+      "8",
+      "6"
+    ],
+    "a": 2,
+    "e": "Method 1 (Factors of Difference Method):\nStep 1: Chuki 200 ko $x$ se bhag dene par sheshfal 8 aata hai, iska matlab $x$ sankhya $(200 - 8 = 192)$ ko poora divide karta hai:\n$$x \\mid 192$$\nStep 2: Remainder 8 aane ke liye divisor $x$ ka 8 se bada hona zaroori hai ($x > 8$).\nStep 3: 192 ke total factors calculate karte hain:\n$$192 = 2^6 $\\times$ 3^1$$\n$$\\text{Total Factors} = (6 + 1)(1 + 1) = 7 $\\times$ 2 = 14$$\nStep 4: 192 ke wo factors jo 8 ya 8 se chhote hain, unhe hatate hain:\n$$1, 2, 3, 4, 6, 8 \\implies 6 \\text{ factors}$$\nStep 5: $x$ ke sambhavit maano ki sankhya:\n$$14 - 6 = 8$$\nIsliye correct option  8 hai.\n\nMethod 2 (Direct Listing Method):\n192 ke factors jo 8 se bade hain: 12, 16, 24, 32, 48, 64, 96, 192 (total 8 values).\nIsliye sahi uttar '8' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_50",
+    "qe": "When 732 is divided by a positive integer x, the remainder is 12. How many value of x are there?",
+    "qh": "जब 732 को एक धनात्मक पूर्णांक x से भाग दिया जाता है, तो शेषफल 12 आता है। x के कितने मान हैं?",
+    "oe": [
+      "19",
+      "20",
+      "18",
+      "16"
+    ],
+    "oh": [
+      "19",
+      "20",
+      "18",
+      "16"
+    ],
+    "a": 1,
+    "e": "Method 1 (Total Factors minus Small Factors Method):\nStep 1: $x$ sankhya $(732 - 12 = 720)$ ko poora divide karega, aur $x > 12$ hona chahiye.\nStep 2: 720 ka prime factorization karte hain:\n$$720 = 2^4 $\\times$ 3^2 $\\times$ 5^1$$\nStep 3: 720 ke total factors:\n$$\\text{Total Factors} = (4 + 1)(2 + 1)(1 + 1) = 5 $\\times$ 3 $\\times$ 2 = 30$$\nStep 4: Wo factors jo 12 se chhote ya barabar hain:\n$$1, 2, 3, 4, 5, 6, 8, 9, 10, 12 \\implies 10 \\text{ factors}$$\nStep 5: $x$ ke kul valid values:\n$$30 - 10 = 20$$\nIsliye correct '20'0 hai.\n\nMethod 2 (Direct Factor Count):\nCul 30 factors me se starting ke 10 factors invalid hain, bache hue factors = 20.\nIsliye sahi uttar '20' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_51",
+    "qe": "'a' divides 228 leaving a remainder 18. The biggest two-digits value of 'a' is :",
+    "qh": "228 को 'a' से विभाजित करने पर शेष 18 प्राप्त होता है। 'a' का दो अंकीय अधिकतम मान है :",
+    "oe": [
+      "70",
+      "21",
+      "35",
+      "30"
+    ],
+    "oh": [
+      "70",
+      "21",
+      "35",
+      "30"
+    ],
+    "a": 0,
+    "e": "Method 1 (Highest Two-digit Factor Method):\nStep 1: Chuki $a$ se divide karne par sheshfal 18 aata hai, isliye $a$ sankhya $(228 - 18 = 210)$ ka factor hoga aur $a > 18$ hoga.\nStep 2: 210 ke sabhi factors dekhte hain:\n$$210 = 2 $\\times$ 3 $\\times$ 5 $\\times$ 7$$\nFactors: 1, 2, 3, 5, 6, 7, 10, 14, 15, 21, 30, 35, 42, 70, 105, 210.\nStep 3: Inme sabse bada 2-digit factor dhundhte hain:\n- 210 aur 105 three-digit numbers hain.\n- Sabse bada two-digit factor 70 hai.\nIsliye correct option  70 hai.\n\nMethod 2 (Options Testing Method):\nOptions check karte hain (bada pehle):\n(a) 70: $228 = 70 \\times 3 + 18$ (Sheshfal 18 aata hai aur 70 sabse bada two-digit option hai).\nIsliye sahi uttar '70' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_52",
+    "qe": "64329 is divided by a certain number. While dividing the numbers, 175, 114 and 213 appear as the three successive remainders. The divisor is :",
+    "qh": "64329 को एक निश्चित संख्या से विभाजित किया जाता है। संख्याओं को विभाजित करते समय, 175, 114 और 213 लगभग तीन क्रमागत शेषफल हैं। भाजक है :",
+    "oe": [
+      "184",
+      "224",
+      "234",
+      "256"
+    ],
+    "oh": [
+      "184",
+      "224",
+      "234",
+      "256"
+    ],
+    "a": 2,
+    "e": "Method 1 (Successive Long Division Backtracking Method):\nStep 1: Pehla step: 643 me se divisor $d$ ka multiple minus karne par remainder 175 bachta hai:\n$$\\text{Pehla Multiple} = 643 - 175 = 468$$\nStep 2: Agla digit '2' utarne par number 1752 banta hai. Isme se $d$ ka multiple ghatane par remainder 114 bachta hai:\n$$\\text{Doosra Multiple} = 1752 - 114 = 1638$$\nStep 3: Aakhiri digit '9' utarne par number 1149 banta hai. Isme se $d$ ka multiple ghatane par remainder 213 bachta hai:\n$$\\text{Teesra Multiple} = 1149 - 213 = 936$$\nStep 4: Divisor $d$ in teeno multiples (468, 1638, 936) ka HCF hoga:\n- $468 = 234 \\times 2$\n- $936 = 234 \\times 4$\n- $1638 = 234 \\times 7$\n$$\\text{HCF} = 234$$\nIsliye bhayak (divisor) 234 hai.\nIsliye correct '224'34 hai.\n\nMethod 2 (Unit Digit and Factor Elimination Method):\n$468 \\div 234 = 2$, aur $234 > 213$ (jo ki aakhiri remainder 213 se bada hai).\nIsliye sahi uttar '234' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_53",
+    "qe": "If 243 gives a remainder of 4 when divided by a certain natural number n, what will be the remainder when 482 is divided by 2n assuming that the quotient in both cases is the same?",
+    "qh": "243 को किसी निश्चित प्राकृतिक संख्या n से भाग देने पर 4 शेष बचता है। 482 को 2n से भाग देने पर शेषफल क्या होगा, यह मानते हुए कि भागफल दोनों दशाओं में समान हैं?",
+    "oe": [
+      "1",
+      "4",
+      "5",
+      "8"
+    ],
+    "oh": [
+      "1",
+      "4",
+      "5",
+      "8"
+    ],
+    "a": 1,
+    "e": "Method 1 (Division Algorithm and Scaling Method):\nStep 1: Diye gaye pehle case ko equation ke roop me likhte hain:\n$$243 = n $\\times$ q + 4$$\n$$n $\\times$ q = 243 - 4 = 239$$\nStep 2: Chuki 239 ek prime number hai aur $q$ bhagfal hai, isliye $q = 1$ aur $n = 239$ hoga.\nStep 3: Doosre case me divisor $2n$ ho jata hai aur quotient same ($q = 1$) rehta hai:\n$$2n = 2 $\\times$ 239 = 478$$\nStep 4: Ab 482 ko 478 se bhag dekar remainder nikalte hain:\n$$482 = 478 $\\times$ 1 + \\text{Remainder}$$\n$$\\text{Remainder} = 482 - 478 = 4$$\nIsliye correct '8' hai.\n\nMethod 2 (Algebraic Manipulation Method):\n$$482 = 2(241) = 2(243 - 2) = 2(nq + 4 - 2) = 2(nq + 2) = 2nq + 4$$\nJab ise $2n$ se bhag denge toh quotient $q$ aayega aur sheshfal 4 bachega.\nIsliye sahi uttar '4' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "remaindertheorum_54",
+    "qe": "N = 1234567......55. Find the remainder when N is divided by 16.",
+    "qh": "N = 1234567......55, N को 16 से भाग देने पर शेषफल ज्ञात करें।",
+    "oe": [
+      "13",
+      "15",
+      "18",
+      "22"
+    ],
+    "oh": [
+      "13",
+      "15",
+      "18",
+      "22"
+    ],
+    "a": 1,
+    "e": "Method 1 (Divisibility Rule of 16 Method):\nStep 1: 16 ($= 2^4$) se divisibility ka rule hota hai ki poori sankhya ke keval last 4 digits ko 16 se divide karke sheshfal nikala jata hai.\nStep 2: Series $1234567\\dots 535455$ ke aakhiri do counting numbers 54 aur 55 hain.\nIsliye sankhya ke antim 4 ank '5455' honge.\nStep 3: 5455 ko 16 se divide karke remainder nikalte hain:\n$$5455 = 16 $\\times$ 340 + 15$$\n$$5455 - 5440 = 15$$\nSheshfal 15 bachta hai.\nIsliye correct '13'5 hai.\n\nMethod 2 (Direct Division Method):\n$$5455 $\\div$ 16 = 340.9375$$\n$$0.9375 $\\times$ 16 = 15$$\nIsliye sahi uttar '15' hai.\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

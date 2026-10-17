@@ -1,0 +1,116 @@
+[
+  {
+    "p_id": "forwardpattern_1",
+    "qe": "If in a code language, PAWAN is written as QBXBO, then how JAMUN will be written in the same language? (PAWAN : QBXBO :: JAMUN : ?)",
+    "qh": "यदि किसी कूट भाषा में PAWAN को QBXBO लिखा जाता है, तो उसी कूट भाषा में JAMUN को क्या लिखा जाएगा? (PAWAN : QBXBO :: JAMUN : ?)",
+    "oe": [
+      "KBOWO",
+      "LBNWO",
+      "KBNVO",
+      "LBNVO"
+    ],
+    "oh": [
+      "KBOWO",
+      "LBNWO",
+      "KBNVO",
+      "LBNVO"
+    ],
+    "a": 2,
+    "e": "Method 1 (Forward Pattern (+1 Shift) Shortcut):\nStep 1: Letter-by-letter positional shift dekhein:\n- P(16) + 1 = 17 (Q)\n- A(1) + 1 = 2 (B)\n- W(23) + 1 = 24 (X)\n- A(1) + 1 = 2 (B)\n- N(14) + 1 = 15 (O)\nLogic: Sabhi letters me +1 ka forward shift ho raha hai.\nStep 2: 'JAMUN' par same +1 shift apply karein:\n- J(10) + 1 = 11 (K)\n- A(1) + 1 = 2 (B)\n- M(13) + 1 = 14 (N)\n- U(21) + 1 = 22 (V)\n- N(14) + 1 = 15 (O)\nCode banega: KBNVO.\nCorrect option  KBNVO hai.\n\nMethod 2 (Option Elimination Method):\n- Pehla letter J + 1 = K aayega, isliye 'L' se shuru hone wale options 'LBNWO' and 'LBNVO' seedhe eliminate ho gaye.\n- Chautha letter U + 1 = V hona chahiye, 'KBOWO' me 'W' diya hai jo galat hai. Keval 'KBNVO' bachta hai.\nSahi uttar 'KBNVO' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "forwardpattern_2",
+    "qe": "If in a code language, ROAD is written as URDG, then how SWAN will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में ROAD को URDG लिखा जाता है, तो उसी कूट भाषा में SWAN को क्या लिखा जाएगा?",
+    "oe": [
+      "VXDQ",
+      "VZCQ",
+      "UXDR",
+      "VZDQ"
+    ],
+    "oh": [
+      "VXDQ",
+      "VZCQ",
+      "UXDR",
+      "VZDQ"
+    ],
+    "a": 3,
+    "e": "Method 1 (Forward Pattern (+3 Shift) Method):\nStep 1: 'ROAD' ka positional relation dekhein:\n- R(18) + 3 = 21 (U)\n- O(15) + 3 = 18 (R)\n- A(1) + 3 = 4 (D)\n- D(4) + 3 = 7 (G)\nLogic: Sabhi letters me +3 add kiya gaya hai.\nStep 2: 'SWAN' par +3 apply karein:\n- S(19) + 3 = 22 (V)\n- W(23) + 3 = 26 (Z)\n- A(1) + 3 = 4 (D)\n- N(14) + 3 = 17 (Q)\nCode: VZDQ.\nCorrect option  VZDQ hai.\n\nMethod 2 (Elimination Method):\n- S + 3 = V ('UXDR' eliminate).\n- W + 3 = Z ('VXDQ' eliminate).\n- A + 3 = D ('VZCQ' me 'C' hai, eliminate).\nKeval 'VZDQ' bachta hai.\nSahi uttar 'VZDQ' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "forwardpattern_3",
+    "qe": "If in a code language, ARGUE is written as YPESC, then how DIAGRAM will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में ARGUE को YPESC लिखा जाता है, तो उसी भाषा में DIAGRAM को कैसे लिखा जाएगा?",
+    "oe": [
+      "BGYEPYK",
+      "GBYPYER",
+      "GLPEYRB",
+      "LKBGYRK"
+    ],
+    "oh": [
+      "BGYEPYK",
+      "GBYPYER",
+      "GLPEYRB",
+      "LKBGYRK"
+    ],
+    "a": 0,
+    "e": "Method 1 (Constant Backward Shift (-2) Method):\nStep 1: 'ARGUE' me letter shift dekhein:\n- A(1 ya 27) - 2 = 25 (Y)\n- R(18) - 2 = 16 (P)\n- G(7) - 2 = 5 (E)\n- U(21) - 2 = 19 (S)\n- E(5) - 2 = 3 (C)\nLogic: Har letter me se 2 minus ho raha hai (-2 shift).\nStep 2: 'DIAGRAM' par apply karein:\n- D(4) - 2 = 2 (B)\n- I(9) - 2 = 7 (G)\n- A(27) - 2 = 25 (Y)\n- G(7) - 2 = 5 (E)\n- R(18) - 2 = 16 (P)\n- A(27) - 2 = 25 (Y)\n- M(13) - 2 = 11 (K)\nCode: BGYEPYK.\nCorrect option  BGYEPYK hai.\n\nMethod 2 (First Letter Elimination Method):\nD(4) - 2 = 2 (B). Chaaron options me se sirf 'BGYEPYK' 'B' se shuru ho raha hai, baaki sab bina check kiye eliminate ho jate hain.\nSahi uttar 'BGYEPYK' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "forwardpattern_4",
+    "qe": "If in a code language, DISPLAY is written as BLQSJDW, then how PROJECT will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में DISPLAY को BLQSJDW लिखा जाता है, तो उसी भाषा में PROJECT को कैसे लिखा जाएगा?",
+    "oe": [
+      "NUMMCFR",
+      "NUNMCFR",
+      "NTNMCFR",
+      "NTMMCFR"
+    ],
+    "oh": [
+      "NUMMCFR",
+      "NUNMCFR",
+      "NTNMCFR",
+      "NTMMCFR"
+    ],
+    "a": 0,
+    "e": "Method 1 (Alternate (-2, +3) Pattern Method):\nStep 1: 'DISPLAY' ka sequence dekhein:\n- D(4) - 2 = 2 (B)\n- I(9) + 3 = 12 (L)\n- S(19) - 2 = 17 (Q)\n- P(16) + 3 = 19 (S)\n- L(12) - 2 = 10 (J)\n- A(1) + 3 = 4 (D)\n- Y(25) - 2 = 23 (W)\nLogic: Alternating pattern: -2, +3, -2, +3, -2, +3, -2.\nStep 2: 'PROJECT' par apply karein:\n- P(16) - 2 = 14 (N)\n- R(18) + 3 = 21 (U)\n- O(15) - 2 = 13 (M)\n- J(10) + 3 = 13 (M)\n- E(5) - 2 = 3 (C)\n- C(3) + 3 = 6 (F)\n- T(20) - 2 = 18 (R)\nCode: NUMMCFR.\nCorrect option  NUMMCFR hai.\n\nMethod 2 (Middle Letter Verification Method):\n- P - 2 = N, R + 3 = U → Shuruat 'NU' se hogi (Options C aur D eliminate).\n- 4th letter J(10) + 3 = 13 (M) hona chahiye, 'NUNMCFR' me 'N' diya hai, isliye (B) eliminate ho gaya.\nSahi uttar 'NUMMCFR' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "forwardpattern_5",
+    "qe": "If in a code language, PRAMOD is written as SODJRA, then how KESHAV will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में PRAMOD को SODJRA लिखा जाता है, तो उसी कूट भाषा में KESHAV को क्या लिखा जाएगा?",
+    "oe": [
+      "NBVFDS",
+      "MCVEDS",
+      "NBWFDS",
+      "NBVEDS"
+    ],
+    "oh": [
+      "NBVFDS",
+      "MCVEDS",
+      "NBWFDS",
+      "NBVEDS"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alternate (+3, -3) Pattern Method):\nStep 1: 'PRAMOD' ka positional shift dekhein:\n- P(16) + 3 = 19 (S)\n- R(18) - 3 = 15 (O)\n- A(1) + 3 = 4 (D)\n- M(13) - 3 = 10 (J)\n- O(15) + 3 = 18 (R)\n- D(4) - 3 = 1 (A)\nLogic: Alternate +3, -3, +3, -3, +3, -3 ka shift chal raha hai.\nStep 2: 'KESHAV' par apply karein:\n- K(11) + 3 = 14 (N)\n- E(5) - 3 = 2 (B)\n- S(19) + 3 = 22 (V)\n- H(8) - 3 = 5 (E)\n- A(1) + 3 = 4 (D)\n- V(22) - 3 = 19 (S)\nCode: NBVEDS.\nCorrect option  NBVEDS hai.\n\nMethod 2 (Option Elimination by Letters):\n- K + 3 = N ('MCVEDS' out).\n- S + 3 = V ('NBWFDS' me 'W' hai, out).\n- H - 3 = E ('NBVFDS' me 'F' diya hai, out). Keval 'NBVEDS' bachta hai.\nSahi uttar 'NBVEDS' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "forwardpattern_6",
+    "qe": "If in a code language, LEADER is written as PIEHIV, then how LIGHT will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में LEADER को PIEHIV लिखा जाता है, तो उसी भाषा में LIGHT को कैसे लिखा जाएगा?",
+    "oe": [
+      "PMKLX",
+      "PMKMX",
+      "OMKMX",
+      "OMLMX"
+    ],
+    "oh": [
+      "PMKLX",
+      "PMKMX",
+      "OMKMX",
+      "OMLMX"
+    ],
+    "a": 0,
+    "e": "Method 1 (Constant Forward Shift (+4) Method):\nStep 1: 'LEADER' me letter differences check karein:\n- L(12) + 4 = 16 (P)\n- E(5) + 4 = 9 (I)\n- A(1) + 4 = 5 (E)\n- D(4) + 4 = 8 (H)\n- E(5) + 4 = 9 (I)\n- R(18) + 4 = 22 (V)\nLogic: Sabhi letters me +4 add ho raha hai.\nStep 2: 'LIGHT' par +4 apply karein:\n- L(12) + 4 = 16 (P)\n- I(9) + 4 = 13 (M)\n- G(7) + 4 = 11 (K)\n- H(8) + 4 = 12 (L)\n- T(20) + 4 = 24 (X)\nCode: PMKLX.\nCorrect option  PMKLX hai.\n\nMethod 2 (Elimination Method):\n- L + 4 = P (Options C aur D eliminate).\n- 4th letter H(8) + 4 = 12 (L) hona chahiye, 'PMKMX' me 4th letter 'M' hai jo galat hai. Isliye 'PMKLX' sahi hai.\nSahi uttar 'PMKLX' hai.\n\nExam point: prakash ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

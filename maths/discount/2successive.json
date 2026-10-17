@@ -1,0 +1,534 @@
+[
+  {
+    "p_id": "2successive_1",
+    "qe": "Two successive discounts of 40% and 30% are equal to a single discount of:",
+    "qh": "40% और 30% की दो क्रमिक छूटें किस एकल छूट के बराबर हैं:",
+    "oe": [
+      "70%",
+      "35%",
+      "58%",
+      "60%"
+    ],
+    "oh": [
+      "70%",
+      "35%",
+      "58%",
+      "60%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Convert percentage discounts into fractions:\n- 40% discount = 2/5 ==> Initial : Final = 5 : 3\n- 30% discount = 3/10 ==> Initial : Final = 10 : 7\nStep 2: Combine ratios:\nMP : SP = (5 * 10) : (3 * 7) = 50 : 21 = 100 : 42.\nStep 3: Total discount = 100 - 42 = 58 units.\nEquivalent single discount = 58%.\nHence, correct option is (c) 58%.\n\nMethod 2 (100-Base Method):\nStep 1: Formula: Net Discount = d1 + d2 - (d1 * d2 / 100)%.\nStep 2: Net Discount = 40 + 30 - (40 * 30 / 100) = 70 - 12 = 58%.\nHence, correct answer is '58%'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_2",
+    "qe": "A shopkeeper offers two successive discounts of 25% and 10% on an item with a marked price of ₹1,200. What is the effective discount percentage offered to the customer?",
+    "qh": "एक दुकानदार ₹1,200 के अंकित मूल्य वाली वस्तु पर 25% और 10% की दो क्रमिक छूट प्रदान करता है। ग्राहक को दी जाने वाली प्रभावी छूट प्रतिशत क्या है?",
+    "oe": [
+      "30%",
+      "35%",
+      "32.5%",
+      "28.5%"
+    ],
+    "oh": [
+      "30%",
+      "35%",
+      "32.5%",
+      "28.5%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Convert percentage discounts into fractions:\n- 25% discount = 1/4 ==> MP : SP1 = 4 : 3\n- 10% discount = 1/10 ==> SP1 : SP2 = 10 : 9\nStep 2: Combine ratios:\nMP : SP = (4 * 10) : (3 * 9) = 40 : 27.\nStep 3: Discount = 40 - 27 = 13 units.\nStep 4: Effective Discount% = (13 / 40) * 100% = 130 / 4% = 32.5%.\nHence, correct option is (c) 32.5%.\n\nMethod 2 (100-Base Method):\nStep 1: Formula: Net Discount = d1 + d2 - (d1 * d2 / 100)%.\nStep 2: Net Discount = 25 + 10 - (25 * 10 / 100) = 35 - 2.5 = 32.5%.\n(Note: The marked price ₹1,200 is extra information not needed to find the percentage).\nHence, correct answer is '32.5%'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_3",
+    "qe": "A shopkeeper provides two consecutive discounts of 20% and 10% on an item. Calculate the single discount rate that is equivalent to these successive discounts.",
+    "qh": "एक दुकानदार एक वस्तु पर 20% और 10% की दो क्रमिक छूट प्रदान करता है। इन क्रमिक छूटों के समतुल्य एकल छूट दर की गणना कीजिए।",
+    "oe": [
+      "28%",
+      "30%",
+      "32%",
+      "25%"
+    ],
+    "oh": [
+      "28%",
+      "30%",
+      "32%",
+      "25%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Convert discounts into fractions:\n- 20% discount = 1/5 ==> 5 : 4\n- 10% discount = 1/10 ==> 10 : 9\nStep 2: Combine ratios:\nMP : SP = (5 * 10) : (4 * 9) = 50 : 36 = 100 : 72.\nStep 3: Equivalent single discount = 100 - 72 = 28%.\nHence, correct option is (a) 28%.\n\nMethod 2 (100-Base Method):\nStep 1: Net Discount = d1 + d2 - (d1 * d2 / 100)%.\nStep 2: Net Discount = 20 + 10 - (20 * 10 / 100) = 30 - 2 = 28%.\nHence, correct answer is '28%'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_4",
+    "qe": "A discount series of 10% and 16% on an invoice is the same as a single discount of:",
+    "qh": "एक चालान पर 10% और 16% की छूट श्रृंखला किस एकल छूट के समान है:",
+    "oe": [
+      "24.4%",
+      "22.4%",
+      "21.4%",
+      "23.4%"
+    ],
+    "oh": [
+      "24.4%",
+      "22.4%",
+      "21.4%",
+      "23.4%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Convert discounts into fractions:\n- 10% discount = 1/10 ==> 10 : 9\n- 16% discount = 4/25 ==> 25 : 21\nStep 2: Combine ratios:\nMP : SP = (10 * 25) : (9 * 21) = 250 : 189.\nStep 3: Discount = 250 - 189 = 61 units.\nStep 4: Single discount% = (61 / 250) * 100% = 610 / 25% = 24.4%.\nHence, correct option is (a) 24.4%.\n\nMethod 2 (100-Base Method):\nStep 1: Net Discount = 10 + 16 - (10 * 16 / 100)%.\nStep 2: Net Discount = 26 - 1.6 = 24.4%.\nHence, correct answer is '24.4%'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_5",
+    "qe": "A shopkeeper wants to give a single discount equivalent to two successive discounts of 15% and 10%. What is the single equivalent discount?",
+    "qh": "एक दुकानदार 15% और 10% की दो क्रमिक छूटों के बराबर एकल छूट देना चाहता है। एकल समतुल्य छूट क्या है?",
+    "oe": [
+      "22%",
+      "23.5%",
+      "24.5%",
+      "25%"
+    ],
+    "oh": [
+      "22%",
+      "23.5%",
+      "24.5%",
+      "25%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Convert into fractions:\n- 15% discount = 3/20 ==> 20 : 17\n- 10% discount = 1/10 ==> 10 : 9\nStep 2: Combine ratios:\nMP : SP = (20 * 10) : (17 * 9) = 200 : 153.\nStep 3: Discount = 200 - 153 = 47 units.\nStep 4: Equivalent discount% = (47 / 200) * 100% = 23.5%.\nHence, correct option is (b) 23.5%.\n\nMethod 2 (100-Base Method):\nStep 1: Net Discount = 15 + 10 - (15 * 10 / 100)%.\nStep 2: Net Discount = 25 - 1.5 = 23.5%.\nHence, correct answer is '23.5%'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_6",
+    "qe": "A person first increases the price of a commodity by 8% and then he announces a discount of 18%. The actual discount (in %) on the original price is?",
+    "qh": "एक व्यक्ति पहले एक वस्तु की कीमत में 8% की वृद्धि करता है और फिर वह 18% की छूट की घोषणा करता है। मूल मूल्य पर वास्तविक छूट (% में) क्या है?",
+    "oe": [
+      "11.44",
+      "14.44",
+      "9.44",
+      "8.44"
+    ],
+    "oh": [
+      "11.44",
+      "14.44",
+      "9.44",
+      "8.44"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Multipliers for +8% markup and -18% discount:\n- Markup: 8% = 2/25 ==> 25 : 27\n- Discount: 18% = 9/50 ==> 50 : 41\nStep 2: Composite ratio:\nOriginal Price : Final Price = (25 * 50) : (27 * 41) = 1250 : 1107.\nStep 3: Net decrease = 1250 - 1107 = 143 units.\nStep 4: Actual discount% on original price = (143 / 1250) * 100% = 1430 / 125% = 11.44%.\nHence, correct option is (a) 11.44.\n\nMethod 2 (100-Base Method):\nStep 1: Net change = a + b + (ab / 100).\nHere a = +8, b = -18.\nStep 2: Net change = 8 - 18 - (8 * 18 / 100) = -10 - 1.44 = -11.44%.\nThe negative sign denotes a reduction/discount of 11.44% on the original price.\nHence, correct answer is '11.44'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_7",
+    "qe": "A single discount of 25% on the marked price of an item is equivalent to two successive discounts of 20% and x%. Find the value of x% ?",
+    "qh": "किसी वस्तु के अंकित मूल्य पर 25% की एकल छूट 20% और x% की दो क्रमिक छूटों के बराबर है। x% का मान ज्ञात कीजिए?",
+    "oe": [
+      "5.25%",
+      "6.25%",
+      "7.50%",
+      "8.90%"
+    ],
+    "oh": [
+      "5.25%",
+      "6.25%",
+      "7.50%",
+      "8.90%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Let Marked Price = 100 units.\nAfter single discount of 25%, Final SP = 100 - 25 = 75 units.\nStep 2: Under successive discounts:\nAfter 20% discount on MP: Intermediate SP = 100 * (1 - 0.20) = 80 units.\nStep 3: The second discount x% must reduce the price from 80 to 75 units:\nDiscount amount = 80 - 75 = 5 units.\nStep 4: Ratio: x% = (5 / 80) * 100% = (1 / 16) * 100% = 6.25%.\nHence, correct option is (b) 6.25%.\n\nMethod 2 (100-Base Method):\nStep 1: Formula: Net Discount = d1 + d2 - (d1 * d2 / 100).\n25 = 20 + x - (20x / 100)\n25 - 20 = x - 0.2x\n5 = 0.8x ==> x = 5 / 0.8 = 6.25%.\nHence, correct answer is '6.25%'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_8",
+    "qe": "The marked price of an article is ₹50,000. From three shopkeepers, the first one allows two successive discounts of 25% and 15%. The second one allows two successive discounts 20% and 20%. The third shopkeeper allows two successive discounts of 30% and 10%. From which shopkeeper does the customer get more profit?",
+    "qh": "एक वस्तु का अंकित मूल्य ₹50,000 है। तीन दुकानदारों में से, पहला 25% और 15% की दो क्रमिक छूट की अनुमति देता है। दूसरा दो क्रमिक छूट 20% और 20% की अनुमति देता है। तीसरा दुकानदार 30% और 10% की दो क्रमिक छूट की अनुमति देता है। किस दुकानदार से ग्राहक को अधिक लाभ मिलता है?",
+    "oe": [
+      "First shopkeeper",
+      "Second shopkeeper",
+      "Third shopkeeper",
+      "All give equal profit"
+    ],
+    "oh": [
+      "First shopkeeper",
+      "Second shopkeeper",
+      "Third shopkeeper",
+      "All give equal profit"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Compare equivalent discounts of the three schemes (Note: customer profit is maximized when discount is highest):\n- Shopkeeper 1 (25% & 15%): Discount = 25 + 15 - (25 * 15 / 100) = 40 - 3.75 = 36.25%.\n- Shopkeeper 2 (20% & 20%): Discount = 20 + 20 - (20 * 20 / 100) = 40 - 4.00 = 36.00%.\n- Shopkeeper 3 (30% & 10%): Discount = 30 + 10 - (30 * 10 / 100) = 40 - 3.00 = 37.00%.\nStep 2: Since the sum of individual discounts is identical in all three cases (40%), the discount is maximum where the difference between the two discount percentages is largest (|30 - 10| = 20 is largest).\nStep 3: Shopkeeper 3 provides the maximum discount (37%), allowing the customer to pay the lowest price and thus get the most benefit/profit.\nHence, correct option is (c) Third shopkeeper.\n\nMethod 2 (100-Base Method):\nStep 1: SP1 = 50,000 * 0.75 * 0.85 = ₹31,875 (Discount = ₹18,125).\nStep 2: SP2 = 50,000 * 0.80 * 0.80 = ₹32,000 (Discount = ₹18,000).\nStep 3: SP3 = 50,000 * 0.70 * 0.90 = ₹31,500 (Discount = ₹18,500).\nStep 4: Highest savings/profit for the customer is ₹18,500 with the third shopkeeper.\nHence, correct answer is 'Third shopkeeper'.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_9",
+    "qe": "A shopkeeper offers the following discount schemes for buyers on an article:\nI. Two successive discounts of 15% each\nII. A discount of 25% followed by a discount of 5%\nIII. Two successive discounts of 20% and 10%\nIV. A discount of 30%\nUnder which scheme will the selling price be maximum?",
+    "qh": "एक दुकानदार एक वस्तु पर खरीदारों के लिए निम्नलिखित छूट योजनाओं की पेशकश करता है:\nI. प्रत्येक 15% की दो क्रमिक छूट\nII. 25% की छूट के बाद 5% की छूट\nIII. 20% और 10% की दो क्रमिक छूट\nIV. 30% की छूट\nकिस योजना के तहत विक्रय मूल्य अधिकतम होगा?",
+    "oe": [
+      "Scheme IV",
+      "Scheme III",
+      "Scheme II",
+      "Scheme I"
+    ],
+    "oh": [
+      "Scheme IV",
+      "Scheme III",
+      "Scheme II",
+      "Scheme I"
+    ],
+    "a": 3,
+    "e": "Method 1 (Concept / Ratio Method):\nStep 1: Selling price tab maximum hoga jab discount percentage minimum hoga.\nStep 2: Sabhi schemes ka effective discount nikalte hain:\n- Scheme I: 15 + 15 - (15 * 15 / 100) = 30 - 2.25 = 27.75%\n- Scheme II: 25 + 5 - (25 * 5 / 100) = 30 - 1.25 = 28.75%\n- Scheme III: 20 + 10 - (20 * 10 / 100) = 30 - 2 = 28.00%\n- Scheme IV: Single discount = 30.00%\nStep 3: Sabse kam discount Scheme I (27.75%) me milta hai, isliye grahak dwara bhugtan kiya gaya SP sabse adhik Scheme I me hoga.\nAtah sahi vikalp  Scheme I hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana MP = 100.\n- SP_I = 100 * 0.85 * 0.85 = 72.25\n- SP_II = 100 * 0.75 * 0.95 = 71.25\n- SP_III = 100 * 0.80 * 0.90 = 72.00\n- SP_IV = 100 * 0.70 = 70.00\nStep 2: SP_I = 72.25 sabse adhik hai.\nAtah sahi uttar 'Scheme I' Scheme I hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_10",
+    "qe": "A trader offers the following discount schemes on the purchase of a refrigerator.\n(i) A discount of 10% followed by a discount of 8%\n(ii) Successive discounts of 12% and 10%\n(iii) Two successive discounts of 12%\n(iv) A discount of 20%\nIn which scheme is the selling price the lowest?",
+    "qh": "एक व्यापारी एक रेफ्रिजरेटर की खरीद पर निम्नलिखित छूट योजनाओं की पेशकश करता है।\n(i) 10% की छूट के बाद 8% की छूट\n(ii) 12% और 10% की क्रमिक छूट\n(iii) 12% की दो क्रमिक छूट\n(iv) 20% की छूट\nकिस योजना में विक्रय मूल्य सबसे कम है?",
+    "oe": [
+      "(iv)",
+      "(i)",
+      "(ii)",
+      "(iii)"
+    ],
+    "oh": [
+      "(iv)",
+      "(i)",
+      "(ii)",
+      "(iii)"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Selling price sabse kam tab hoga jab discount sabse adhik (maximum) hoga.\nStep 2: Pratyek scheme ka net discount nikalein:\n- Scheme (i): 10 + 8 - (10 * 8 / 100) = 18 - 0.8 = 17.2%\n- Scheme (ii): 12 + 10 - (12 * 10 / 100) = 22 - 1.2 = 20.8%\n- Scheme (iii): 12 + 12 - (12 * 12 / 100) = 24 - 1.44 = 22.56%\n- Scheme (iv): Flat discount = 20%\nStep 3: Scheme (iii) me discount (22.56%) sabse adhik hai, isliye isme SP sabse kam hoga.\nAtah sahi vikalp  (iii) hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana MP = 100.\n- SP_(i) = 100 - 17.2 = 82.8\n- SP_(ii) = 100 - 20.8 = 79.2\n- SP_(iii) = 100 - 22.56 = 77.44\n- SP_(iv) = 100 - 20 = 80.0\nStep 2: SP_(iii) = 77.44 sabse kam hai.\nAtah sahi uttar '(iii)' (iii) hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_11",
+    "qe": "A shopkeeper offers the following discount schemes for buyers.\nI. Two successive discounts of 15% and 20%\nII. Successive discount of 25% and 10%\nIII. A discount of 33%\nThe selling price will be minimum under the scheme:",
+    "qh": "एक दुकानदार खरीदारों के लिए निम्नलिखित छूट योजनाओं की पेशकश करता है।\nI. 15% और 20% की दो क्रमिक छूट\nII. 25% और 10% की क्रमिक छूट\nIII. 33% की छूट\nकिस योजना के तहत विक्रय मूल्य न्यूनतम होगा:",
+    "oe": [
+      "I",
+      "I or II",
+      "III",
+      "II"
+    ],
+    "oh": [
+      "I",
+      "I or II",
+      "III",
+      "II"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Selling price minimum tab hoga jab discount maximum hoga.\nStep 2: Schemes ka effective discount nikalein:\n- Scheme I: 15 + 20 - (15 * 20 / 100) = 35 - 3 = 32%\n- Scheme II: 25 + 10 - (25 * 10 / 100) = 35 - 2.5 = 32.5%\n- Scheme III: Single discount = 33%\nStep 3: Scheme III me discount (33%) sabse adhik hai, isliye grahak ke liye selling price minimum hoga.\nAtah sahi vikalp  III hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana MP = 100.\n- SP_I = 100 * 0.85 * 0.80 = 68.0\n- SP_II = 100 * 0.75 * 0.90 = 67.5\n- SP_III = 100 * 0.67 = 67.0\nStep 2: SP_III = 67.0 sabse kam hai.\nAtah sahi uttar 'III' III hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_12",
+    "qe": "A shopkeeper offers 3 schemes of discounts to his customers. Which of the following schemes will fetch the minimum discount percentage?\n(A) Two successive discounts of 24% and 27%.\n(B) Buy 5 get three free.\n(C) Buy 6 and get 10 free.",
+    "qh": "एक दुकानदार अपने ग्राहकों को छूट की 3 योजनाओं की पेशकश करता है। निम्नलिखित में से कौन सी योजना न्यूनतम छूट प्रतिशत प्रदान करेगी?\n(A) 24% और 27% की दो क्रमिक छूट।\n(B) 5 खरीदें तीन मुफ्त पाएं।\n(C) 6 खरीदें और 10 मुफ्त पाएं।",
+    "oe": [
+      "A",
+      "C",
+      "Both A and C",
+      "B"
+    ],
+    "oh": [
+      "A",
+      "C",
+      "Both A and C",
+      "B"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Scheme (A) me discount:\nNet Discount = 24 + 27 - (24 * 27 / 100) = 51 - 6.48 = 44.52%.\nStep 2: Scheme (B) me discount:\nFree = 3, Total = 5 + 3 = 8.\nDiscount% = (3 / 8) * 100% = 37.5%.\nStep 3: Scheme (C) me discount:\nFree = 10, Total = 6 + 10 = 16 (ya get 10 total = 4/10 = 40%; agar get 10 free hai toh 10/16 = 62.5%).\nDonoh sthitiyo me 37.5% sabse kam hai.\nStep 4: Sabse kam (minimum) discount Scheme B (37.5%) me hai.\nAtah sahi vikalp  B hai.\n\nMethod 2 (100-Base Method):\nStep 1: Scheme A = 44.52% discount.\nStep 2: Scheme B = (3 / 8) * 100 = 37.5% discount.\nStep 3: Scheme C = (10 / 16) * 100 = 62.5% discount (ya 40%).\nStep 4: Minimum discount = 37.5% (Scheme B).\nAtah sahi uttar 'B' B hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_13",
+    "qe": "Which of the following schemes will yield maximum discount on purchase of ₹x?\n(1) 2 successive discounts of 25% and 15%\n(2) Single discount of 20%\n(3) 2 free on purchase of 3 items\n(4) 3 free on purchase of 7 items",
+    "qh": "₹x की खरीद पर निम्नलिखित में से कौन सी योजना अधिकतम छूट प्रदान करेगी?\n(1) 25% और 15% की 2 क्रमिक छूट\n(2) 20% की एकल छूट\n(3) 3 वस्तुओं की खरीद पर 2 मुफ्त\n(4) 7 वस्तुओं की खरीद पर 3 मुफ्त",
+    "oe": [
+      "Scheme 2",
+      "Scheme 3",
+      "Scheme 1",
+      "Scheme 4"
+    ],
+    "oh": [
+      "Scheme 2",
+      "Scheme 3",
+      "Scheme 1",
+      "Scheme 4"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Pratyek scheme ka discount percentage nikalein:\n- Scheme (1): 25 + 15 - (25 * 15 / 100) = 40 - 3.75 = 36.25%\n- Scheme (2): Single discount = 20%\n- Scheme (3): Free = 2, Total = 3 + 2 = 5 ==> Discount% = (2 / 5) * 100% = 40%\n- Scheme (4): Free = 3, Total = 7 + 3 = 10 ==> Discount% = (3 / 10) * 100% = 30%\nStep 2: Tulna karein: 40% > 36.25% > 30% > 20%.\nScheme (3) me adhiktam discount (40%) milta hai.\nAtah sahi vikalp  Scheme 3 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Scheme 1 = 36.25%.\nStep 2: Scheme 2 = 20%.\nStep 3: Scheme 3 = (2/5) * 100 = 40%.\nStep 4: Scheme 4 = (3/10) * 100 = 30%.\nStep 5: Maximum discount = 40% in Scheme 3.\nAtah sahi uttar 'Scheme 3' Scheme 3 hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_14",
+    "qe": "A shopkeeper offers the following discount schemes for the purchase of his goods. Find the schemes which has the maximum discount.\n(i) Two successive discount of 20% and 10%\n(ii) Discount of 10%\n(iii) Buy 8 and get 4 free\n(iv) Buy 9 and get 6 free",
+    "qh": "एक दुकानदार अपने माल की खरीद के लिए निम्नलिखित छूट योजनाओं की पेशकश करता है। वह योजना ज्ञात कीजिए जिसमें अधिकतम छूट है।\n(i) 20% और 10% की दो क्रमिक छूट\n(ii) 10% की छूट\n(iii) 8 खरीदें और 4 मुफ्त पाएं\n(iv) 9 खरीदें और 6 मुफ्त पाएं",
+    "oe": [
+      "(iii)",
+      "(ii)",
+      "(i)",
+      "(iv)"
+    ],
+    "oh": [
+      "(iii)",
+      "(ii)",
+      "(i)",
+      "(iv)"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Pratyek scheme ka discount nikalte hain:\n- Scheme (i): 20 + 10 - (20 * 10 / 100) = 28%\n- Scheme (ii): 10%\n- Scheme (iii): Free = 4, Total = 8 + 4 = 12 ==> Discount% = (4 / 12) * 100% = 33.33%\n- Scheme (iv): Free = 6, Total = 9 + 6 = 15 ==> Discount% = (6 / 15) * 100% = (2 / 5) * 100% = 40%\nStep 2: Tulna karne par: 40% > 33.33% > 28% > 10%.\nScheme (iv) me discount sabse adhik hai.\nAtah sahi vikalp  (iv) hai.\n\nMethod 2 (100-Base Method):\nStep 1: Scheme (i) = 28%.\nStep 2: Scheme (ii) = 10%.\nStep 3: Scheme (iii) = 33.33%.\nStep 4: Scheme (iv) = 40%.\nStep 5: Maximum = 40% (Scheme iv).\nAtah sahi uttar '(iv)' (iv) hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_15",
+    "qe": "A shopping mart offers four different discounts schemes on the sale of an object as follows:\n(1) A discount of 30%\n(2) Two successive discounts of 15%\n(3) Buy 2, get 1 free\n(4) Buy 5, get 3 free\nWhich discount scheme offers the maximum discount to a customer?",
+    "qh": "एक शॉपिंग मार्ट किसी वस्तु की बिक्री पर चार अलग-अलग छूट योजनाओं की पेशकश इस प्रकार करता है:\n(1) 30% की छूट\n(2) 15% की दो क्रमिक छूट\n(3) 2 खरीदें, 1 मुफ्त पाएं\n(4) 5 खरीदें, 3 मुफ्त पाएं\nकौन सी छूट योजना ग्राहक को अधिकतम छूट प्रदान करती है?",
+    "oe": [
+      "1",
+      "4",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "1",
+      "4",
+      "2",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Sabhi schemes ka discount percentage nikalein:\n- Scheme (1): 30%\n- Scheme (2): 15 + 15 - (15 * 15 / 100) = 30 - 2.25 = 27.75%\n- Scheme (3): Free = 1, Total = 2 + 1 = 3 ==> (1 / 3) * 100% = 33.33%\n- Scheme (4): Free = 3, Total = 5 + 3 = 8 ==> (3 / 8) * 100% = 37.5%\nStep 2: Tulna karne par: 37.5% > 33.33% > 30% > 27.75%.\nScheme (4) me adhiktam discount (37.5%) milta hai.\nAtah sahi vikalp  4 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Scheme 1 = 30%.\nStep 2: Scheme 2 = 27.75%.\nStep 3: Scheme 3 = 33.33%.\nStep 4: Scheme 4 = 37.5%.\nStep 5: Maximum discount = Scheme 4.\nAtah sahi uttar '4' 4 hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_16",
+    "qe": "Kamlesh offers the following two discount schemes to his customers on the sale of an article:\n(i) Two successive discounts of 25% and 5%\n(ii) Two successive discounts of 20% and 10%\nWhat is the difference between the selling price (Rs. in) of the article under these two discount schemes if its marked price is Rs. 1,000?",
+    "qh": "कमलेश किसी वस्तु की बिक्री पर अपने ग्राहकों को निम्नलिखित दो छूट योजनाओं की पेशकश करता है:\n(i) 25% और 5% की दो क्रमिक छूट\n(ii) 20% और 10% की दो क्रमिक छूट\nयदि वस्तु का अंकित मूल्य 1,000 रुपये है, तो इन दोनों छूट योजनाओं के तहत वस्तु के विक्रय मूल्य (रुपये में) के बीच क्या अंतर है?",
+    "oe": [
+      "6.5",
+      "8.0",
+      "7.5",
+      "7.0"
+    ],
+    "oh": [
+      "6.5",
+      "8.0",
+      "7.5",
+      "7.0"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Scheme (i) ka net discount:\nD1 = 25 + 5 - (25 * 5 / 100) = 30 - 1.25 = 28.75%.\nStep 2: Scheme (ii) ka net discount:\nD2 = 20 + 10 - (20 * 10 / 100) = 30 - 2.00 = 28.00%.\nStep 3: Dono schemes ke discount (ya selling price) ka antar:\nDifference% = 28.75% - 28.00% = 0.75% of MP.\nStep 4: MP = ₹1,000 par antar:\nAntar = 0.75% of 1000 = (0.75 / 100) * 1000 = ₹7.50.\nAtah sahi vikalp  7.5 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP_(i) = 1000 * 0.75 * 0.95 = 750 * 0.95 = ₹712.50.\nStep 2: SP_(ii) = 1000 * 0.80 * 0.90 = ₹720.00.\nStep 3: Difference = 720.00 - 712.50 = ₹7.50.\nAtah sahi uttar '7.5' 7.5 hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_17",
+    "qe": "Marked price of an article is ₹28000. It can be sold at one of the following ways:\nWay A : A single discount of 24 percent.\nWay B : Two successive discounts of 16 percent and 10 percent.\nWhich way will have lowest selling price and what will be the value of it?",
+    "qh": "एक वस्तु का अंकित मूल्य ₹28000 है। इसे निम्नलिखित तरीकों में से किसी एक पर बेचा जा सकता है:\nतरीका A : 24 प्रतिशत की एकल छूट।\nतरीका B : 16 प्रतिशत और 10 प्रतिशत की दो क्रमिक छूट।\nकिस तरीके में विक्रय मूल्य सबसे कम होगा और इसका मान क्या होगा?",
+    "oe": [
+      "Way B, ₹21168",
+      "Way B, ₹21280",
+      "Way A, ₹21168",
+      "Way A, ₹21280"
+    ],
+    "oh": [
+      "Way B, ₹21168",
+      "Way B, ₹21280",
+      "Way A, ₹21168",
+      "Way A, ₹21280"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono tareeqo ka net discount nikalein:\n- Way A: Single discount = 24%.\n- Way B: Net discount = 16 + 10 - (16 * 10 / 100) = 26 - 1.6 = 24.4%.\nStep 2: Way B me discount (24.4%) adhik hai, isliye Way B me selling price sabse kam (lowest) hoga.\nStep 3: Way B ka selling price nikalein (SP = 100% - 24.4% = 75.6% of MP):\nSP = 28000 * (75.6 / 100) = 280 * 75.6 = ₹21,168.\nAtah sahi tareeqa aur moolya Way B, ₹21168 hai.\nAtah sahi vikalp  Way B, ₹21168 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP_A = 28000 * (1 - 0.24) = 28000 * 0.76 = ₹21,280.\nStep 2: SP_B = 28000 * 0.84 * 0.90 = 23520 * 0.90 = ₹21,168.\nStep 3: Lowest SP = Way B me ₹21,168.\nAtah sahi uttar 'Way B, ₹21168' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_18",
+    "qe": "A shopkeeper offers the following two discount schemes on the sale a watch having marked price ₹3,600.\n(1) Two successive discounts of 15%.\n(2) A discount of 10% followed by a discount of 20%.\nWhat is the difference between the selling price of the watch in case (1) and case (2)?",
+    "qh": "एक दुकानदार ₹3,600 के अंकित मूल्य वाली घड़ी की बिक्री पर निम्नलिखित दो छूट योजनाओं की पेशकश करता है।\n(1) 15% की दो क्रमिक छूट।\n(2) 10% की छूट के बाद 20% की छूट।\nस्थिति (1) और स्थिति (2) में घड़ी के विक्रय मूल्य के बीच क्या अंतर है?",
+    "oe": [
+      "₹11",
+      "₹9",
+      "₹10",
+      "₹8"
+    ],
+    "oh": [
+      "₹11",
+      "₹9",
+      "₹10",
+      "₹8"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Case (1) me net discount:\nD1 = 15 + 15 - (15 * 15 / 100) = 30 - 2.25 = 27.75%.\nStep 2: Case (2) me net discount:\nD2 = 10 + 20 - (10 * 20 / 100) = 30 - 2.00 = 28.00%.\nStep 3: Discount me antar (Difference in SP):\nDiff% = 28.00% - 27.75% = 0.25% of MP.\nStep 4: MP = ₹3,600 par antar nikalein:\nDifference = 0.25% of 3600 = (1 / 400) * 3600 = ₹9.\nAtah sahi vikalp  ₹9 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP1 = 3600 * 0.85 * 0.85 = 3600 * 0.7225 = ₹2,601.\nStep 2: SP2 = 3600 * 0.90 * 0.80 = 3600 * 0.72 = ₹2,592.\nStep 3: SP ka antar = 2601 - 2592 = ₹9.\nAtah sahi uttar '₹9' ₹9 hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_19",
+    "qe": "A shopkeeper offers three schemes as given below to sell a particular type of product. Which of the following schemes offer(s) the maximum discount percentage?\nA. Buy 6, get 4 free\nB. Buy 5, get 5 free\nC. Two successive discounts of 18% and 24%",
+    "qh": "एक दुकानदार किसी विशेष प्रकार के उत्पाद को बेचने के लिए नीचे दी गई तीन योजनाओं की पेशकश करता है। निम्नलिखित में से कौन सी योजना अधिकतम छूट प्रतिशत प्रदान करती है?\nA. 6 खरीदें, 4 मुफ्त पाएं\nB. 5 खरीदें, 5 मुफ्त पाएं\nC. 18% और 24% की दो क्रमिक छूट",
+    "oe": [
+      "Only B",
+      "Only B and C",
+      "Only A and C",
+      "Only A"
+    ],
+    "oh": [
+      "Only B",
+      "Only B and C",
+      "Only A and C",
+      "Only A"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Scheme A me Discount% nikalein:\nMuft = 4, Kul = 6 + 4 = 10 units.\nDiscount% (A) = (4 / 10) * 100% = 40%.\nStep 2: Scheme B me Discount% nikalein:\nMuft = 5, Kul = 5 + 5 = 10 units.\nDiscount% (B) = (5 / 10) * 100% = 50%.\nStep 3: Scheme C me Discount% nikalein:\nDiscount% (C) = 18 + 24 - (18 * 24 / 100) = 42 - 4.32 = 37.68%.\nStep 4: Sabhi schemes ki tulna karein:\n50% (Scheme B) > 40% (Scheme A) > 37.68% (Scheme C).\nAtah adhiktam chhoot keval Scheme B me hai.\nAtah sahi vikalp  Only B hai.\n\nMethod 2 (100-Base Method):\nStep 1: Scheme A = (4 / 10) * 100 = 40%.\nStep 2: Scheme B = (5 / 10) * 100 = 50%.\nStep 3: Scheme C = 18 + 24 - 4.32 = 37.68%.\nStep 4: Maximum discount = 50% in Scheme B only.\nAtah sahi uttar 'Only B' hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_20",
+    "qe": "A retailer offers the following discount schemes for buyers on an item:\n(i) Two successive discount of 20%.\n(ii) A discount of 25% followed by a discount of 15%.\n(iii) A discount of 40%.\nUnder which scheme will the selling price be minimum?",
+    "qh": "एक खुदरा विक्रेता किसी वस्तु पर खरीदारों के लिए निम्नलिखित छूट योजनाओं की पेशकश करता है:\n(i) 20% की दो क्रमिक छूट।\n(ii) 25% की छूट के बाद 15% की छूट।\n(iii) 40% की छूट।\nकिस योजना के तहत विक्रय मूल्य न्यूनतम होगा?",
+    "oe": [
+      "(i) and (ii)",
+      "(iii)",
+      "(ii)",
+      "(i)"
+    ],
+    "oh": [
+      "(i) and (ii)",
+      "(iii)",
+      "(ii)",
+      "(i)"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Selling price tab न्यूनतम (minimum) hoga jab discount प्रतिशत अधिकतम (maximum) hoga.\nStep 2: Pratyek scheme ka effective discount nikalein:\n- Scheme (i): 20 + 20 - (20 * 20 / 100) = 40 - 4 = 36%.\n- Scheme (ii): 25 + 15 - (25 * 15 / 100) = 40 - 3.75 = 36.25%.\n- Scheme (iii): Flat discount = 40%.\nStep 3: Scheme (iii) me discount (40%) sabse adhik hai, isliye grahak ke liye vikray mulya (SP) sabse kam hoga.\nAtah sahi vikalp  (iii) hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana MP = 100.\n- SP_(i) = 100 * 0.80 * 0.80 = 64.\n- SP_(ii) = 100 * 0.75 * 0.85 = 63.75.\n- SP_(iii) = 100 * (1 - 0.40) = 60.\nStep 2: Minimum SP = 60 (Scheme iii).\nAtah sahi uttar '(iii)' hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_21",
+    "qe": "The company offers the following four types of successive discounts on a computer which is listed at ₹ 6000.\n(i) 25% and 15%\n(ii) 30% and 10%\n(iii) 35% and 5%\n(iv) 20% and 20%\nWhich of these offers is best for a customer?",
+    "qh": "कंपनी ₹ 6000 की सूची मूल्य वाले कंप्यूटर पर निम्नलिखित चार प्रकार की क्रमिक छूट प्रदान करती है।\n(i) 25% और 15%\n(ii) 30% और 10%\n(iii) 35% और 5%\n(iv) 20% और 20%\nइनमें से कौन सा ऑफर ग्राहक के लिए सबसे अच्छा है?",
+    "oe": [
+      "Fourth offer",
+      "First offer",
+      "Third offer",
+      "Second offer"
+    ],
+    "oh": [
+      "Fourth offer",
+      "First offer",
+      "Third offer",
+      "Second offer"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio & Difference Property Method):\nStep 1: Grahak ke liye sabse behtar offer wahi hoga jisme discount percentage adhiktam (maximum) ho.\nStep 2: Sabhi offers me dono chhooton ka yog (sum) saman hai:\n25 + 15 = 30 + 10 = 35 + 5 = 20 + 20 = 40%.\nStep 3: Jab sum saman ho, tab d1 * d2 jiska sabse chhota hoga, uska net discount [d1 + d2 - (d1 * d2)/100] sabse bada hoga (arthat jisme antar sabse adhik ho):\n- Offer (i): 25 * 15 = 375 ==> Net = 40 - 3.75 = 36.25%\n- Offer (ii): 30 * 10 = 300 ==> Net = 40 - 3.00 = 37.00%\n- Offer (iii): 35 * 5 = 175 ==> Net = 40 - 1.75 = 38.25%\n- Offer (iv): 20 * 20 = 400 ==> Net = 40 - 4.00 = 36.00%\nStep 4: Offer (iii) me discount (38.25%) sabse adhik hai, atah yah offer grahak ke liye best hai.\nAtah sahi vikalp  Third offer hai.\n\nMethod 2 (100-Base Method):\nStep 1: Compare net discounts: 36.25%, 37.00%, 38.25%, 36.00%.\nStep 2: Adhiktam discount 38.25% Third offer me hai.\nAtah sahi uttar 'Third offer' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_22",
+    "qe": "A trader offers to sell a commodity under any of the two schemes mentioned below:\nScheme 1: The trader offers two successive discounts of 20% and 12.5% on the sale of each unit.\nScheme 2: The trader offers the buyer an option to 'pay for y units, get z units free'.\nThe buyer realizes that if he needs to buy (y+z) units, it does not matter to him which of the two schemes he opts for.\nWhich of the following options gives a correct ordered pair of (y, z)?",
+    "qh": "एक व्यापारी नीचे दी गई दो योजनाओं में से किसी के तहत एक वस्तु बेचने की पेशकश करता है:\nयोजना 1: व्यापारी प्रत्येक इकाई की बिक्री पर 20% और 12.5% की दो क्रमिक छूट प्रदान करता है।\nयोजना 2: व्यापारी खरीदार को 'y इकाइयों के लिए भुगतान करें, z इकाइयाँ मुफ्त पाएं' का विकल्प प्रदान करता है।\nखरीदार को पता चलता है कि यदि उसे (y+z) इकाइयाँ खरीदनी हैं, तो इससे कोई फर्क नहीं पड़ता कि वह दोनों में से कौन सी योजना चुनता है।\nनिम्नलिखित में से कौन सा विकल्प (y, z) का सही क्रमित युग्म देता है?",
+    "oe": [
+      "(3, 7)",
+      "(7, 10)",
+      "(10, 7)",
+      "(7, 3)"
+    ],
+    "oh": [
+      "(3, 7)",
+      "(7, 10)",
+      "(10, 7)",
+      "(7, 3)"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Scheme 1 me net discount percentage nikalein:\n20% = 1/5 ==> Multiplier = 4/5.\n12.5% = 1/8 ==> Multiplier = 7/8.\nEffective Price Multiplier = (4 / 5) * (7 / 8) = 7 / 10.\nStep 2: Effective Discount = 1 - 7/10 = 3/10 (arthat 30% discount).\nStep 3: Scheme 2 me 'pay for y, get z free' ka discount fraction:\nDiscount fraction = z / (y + z).\nStep 4: Dono schemes saman discount deti hain:\nz / (y + z) = 3 / 10.\nIska matlab: z = 3 units aur y + z = 10 units ==> y = 10 - 3 = 7 units.\nStep 5: Kramit yugm (Ordered pair) (y, z) = (7, 3).\nAtah sahi vikalp  (7, 3) hai.\n\nMethod 2 (100-Base Method):\nStep 1: Net discount in Scheme 1 = 20 + 12.5 - (20 * 12.5 / 100) = 32.5 - 2.5 = 30%.\nStep 2: Scheme 2 me discount% = [z / (y + z)] * 100% = 30%.\nz / (y + z) = 3 / 10 ==> 10z = 3y + 3z ==> 7z = 3y ==> y / z = 7 / 3.\nStep 3: (y, z) = (7, 3).\nAtah sahi uttar '(7, 3)' hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_23",
+    "qe": "If, on a marked price, the difference between selling prices with a discount of 65% and with two successive discounts of 30% and 40% is ₹105, then the marked price (in ₹) is:",
+    "qh": "यदि एक अंकित मूल्य पर, 65% की छूट और 30% और 40% की दो क्रमिक छूटों के साथ विक्रय मूल्यों के बीच का अंतर ₹105 है, तो अंकित मूल्य (₹ में) है:",
+    "oe": [
+      "Rs.1,650",
+      "Rs.1,050",
+      "Rs.1,500",
+      "Rs.1,320"
+    ],
+    "oh": [
+      "Rs.1,650",
+      "Rs.1,050",
+      "Rs.1,500",
+      "Rs.1,320"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Pehli sthiti me discount D1 = 65%.\nStep 2: Dusri sthiti me do kramik chhooton (30% aur 40%) ka net discount:\nD2 = 30 + 40 - (30 * 40 / 100) = 70 - 12 = 58%.\nStep 3: Dono sthitiyo ke selling prices ka antar = Chhooton ka antar:\nDifference% = |D1 - D2| = |65% - 58%| = 7% of MP.\nStep 4: Prashnanusar 7% of MP = ₹105.\n1% of MP = 105 / 7 = 15.\nStep 5: Marked Price (100%) = 100 * 15 = ₹1,500.\nAtah sahi vikalp  Rs.1,500 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP1 = 100% - 65% = 35% of MP.\nStep 2: SP2 = (1 - 0.30)(1 - 0.40) of MP = 0.70 * 0.60 of MP = 42% of MP.\nStep 3: SP2 - SP1 = 42% - 35% = 7% of MP = ₹105.\nStep 4: MP = 105 / 0.07 = ₹1,500.\nAtah sahi uttar 'Rs.1,500' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_24",
+    "qe": "The difference between a discount of 25% and two successive discounts of 15% and 20% on a certain bill was Rs.28. Find the amount of the bill ?",
+    "qh": "एक निश्चित बिल पर 25% की छूट और 15% और 20% की दो क्रमिक छूटों के बीच का अंतर 28 रुपये था। बिल की राशि ज्ञात कीजिए?",
+    "oe": [
+      "Rs.500",
+      "Rs.400",
+      "Rs.600",
+      "Rs.350"
+    ],
+    "oh": [
+      "Rs.500",
+      "Rs.400",
+      "Rs.600",
+      "Rs.350"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Pehla discount D1 = 25%.\nStep 2: Dusra net discount (15% aur 20%):\nD2 = 15 + 20 - (15 * 20 / 100) = 35 - 3 = 32%.\nStep 3: Dono chhooton ka antar:\nDifference% = D2 - D1 = 32% - 25% = 7% of Bill.\nStep 4: Prashnanusar 7% of Bill = ₹28.\n1% of Bill = 28 / 7 = 4.\nStep 5: Bill ki kul rashi (100%) = 100 * 4 = ₹400.\nAtah sahi vikalp  Rs.400 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Single discount = 25%.\nStep 2: Successive discount = 15 + 20 - 3 = 32%.\nStep 3: Difference = 32% - 25% = 7%.\nStep 4: Bill amount = 28 / 0.07 = ₹400.\nAtah sahi uttar 'Rs.400' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_25",
+    "qe": "The difference (in Rs) between a discount of 37% on Rs 2,635 and two successive discounts of 23% and 7% on the same amount is (rounded off to 2 decimal places):",
+    "qh": "₹2,635 पर 37% की छूट और उसी राशि पर 23% और 7% की दो क्रमिक छूटों के बीच का अंतर (₹ में) क्या है (2 दशमलव स्थानों तक पूर्णांकित):",
+    "oe": [
+      "248.36",
+      "226.87",
+      "235.65",
+      "242.25"
+    ],
+    "oh": [
+      "248.36",
+      "226.87",
+      "235.65",
+      "242.25"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio & Successive Percentage Method):\nStep 1: Pehla discount D1 = 37%.\nStep 2: Dusra net discount (23% aur 7%):\nD2 = 23 + 7 - (23 * 7 / 100) = 30 - 1.61 = 28.39%.\nStep 3: Chhooton ka antar (Difference%):\nDiff% = D1 - D2 = 37% - 28.39% = 8.61%.\nStep 4: ₹2,635 par antar nikalein:\nAntar = 2,635 * (8.61 / 100) = 26.35 * 8.61 = ₹226.8735 ≈ ₹226.87.\nAtah sahi vikalp  226.87 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Single discount = 37%.\nStep 2: Two successive discounts of 23% and 7% = 28.39%.\nStep 3: Net difference in percentage = 37% - 28.39% = 8.61%.\nStep 4: Amount difference = 0.0861 * 2635 = ₹226.87.\nAtah sahi uttar '226.87' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_26",
+    "qe": "Applied to a bill for ₹1000, what is the difference between a discount of 40% and two successive discounts of 36% and 4%?",
+    "qh": "₹1000 के बिल पर लागू 40% की छूट और 36% तथा 4% की दो क्रमिक छूटों के बीच क्या अंतर है?",
+    "oe": [
+      "₹154",
+      "₹144",
+      "₹15.40",
+      "₹14.40"
+    ],
+    "oh": [
+      "₹154",
+      "₹144",
+      "₹15.40",
+      "₹14.40"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio & Direct Formula Method):\nStep 1: Jab single discount (40%) dono kramik chhooton ke yog (36% + 4% = 40%) ke barabar ho, toh antar sidhe (d1 * d2 / 100)% hota hai.\nStep 2: Antar% = (36 * 4) / 100% = 144 / 100% = 1.44%.\nStep 3: ₹1,000 par antar:\nAntar = 1.44% of 1000 = (1.44 / 100) * 1000 = ₹14.40.\nAtah sahi vikalp  ₹14.40 hai.\n\nMethod 2 (100-Base Method):\nStep 1: D1 = 40% of 1000 = ₹400.\nStep 2: D2 = [36 + 4 - (36 * 4 / 100)]% = [40 - 1.44]% = 38.56%.\nD2 rashi = 38.56% of 1000 = ₹385.60.\nStep 3: Antar = 400 - 385.60 = ₹14.40.\nAtah sahi uttar '₹14.40' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_27",
+    "qe": "A discount of 27% on a certain bill, and the difference between two successive discounts of 20% and 10% was ₹56. Find the amount of the bill.",
+    "qh": "एक निश्चित बिल पर 27% की छूट, और 20% तथा 10% की दो क्रमिक छूटों के बीच का अंतर ₹56 था। बिल की राशि ज्ञात कीजिए।",
+    "oe": [
+      "₹5,600",
+      "₹1,120",
+      "₹1,866",
+      "₹5,500"
+    ],
+    "oh": [
+      "₹5,600",
+      "₹1,120",
+      "₹1,866",
+      "₹5,500"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Pehla discount D1 = 27%.\nStep 2: Dusra net discount (20% aur 10%):\nD2 = 20 + 10 - (20 * 10 / 100) = 30 - 2 = 28%.\nStep 3: Dono chhooton ka antar:\nDiff% = |28% - 27%| = 1%.\nStep 4: Prashnanusar 1% of Bill = ₹56.\nStep 5: Bill ki kul rashi (100%) = 56 * 100 = ₹5,600.\nAtah sahi vikalp  ₹5,600 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana Bill = 100.\nDiscount 1 = 27.\nDiscount 2 = 20 + 10 - 2 = 28.\nStep 2: Antar = 28 - 27 = 1 unit.\nStep 3: 1 unit = ₹56 ==> 100 units = 100 * 56 = ₹5,600.\nAtah sahi uttar '₹5,600' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "2successive_28",
+    "qe": "For an electric bill for ₹ 50,000, what is the difference between a discount of 30% and two successive discounts of 26% and 5%?",
+    "qh": "₹ 50,000 के बिजली बिल के लिए, 30% की छूट और 26% तथा 5% की दो क्रमिक छूटों के बीच क्या अंतर है?",
+    "oe": [
+      "₹150",
+      "₹140",
+      "₹160",
+      "₹170"
+    ],
+    "oh": [
+      "₹150",
+      "₹140",
+      "₹160",
+      "₹170"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio & Successive Percentage Method):\nStep 1: Pehla discount D1 = 30%.\nStep 2: Dusra net discount (26% aur 5%):\nD2 = 26 + 5 - (26 * 5 / 100) = 31 - 1.30 = 29.70%.\nStep 3: Chhooton ka antar:\nDiff% = |30% - 29.70%| = 0.30%.\nStep 4: ₹50,000 par antar:\nAntar = 0.30% of 50,000 = (0.30 / 100) * 50,000 = 0.30 * 500 = ₹150.\nAtah sahi vikalp  ₹150 hai.\n\nMethod 2 (100-Base Method):\nStep 1: D1 amount = 30% of 50,000 = ₹15,000.\nStep 2: D2 percentage = 29.7% ==> D2 amount = 0.297 * 50,000 = ₹14,850.\nStep 3: Antar = 15,000 - 14,850 = ₹150.\nAtah sahi uttar '₹150' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

@@ -1,0 +1,217 @@
+[
+  {
+    "p_id": "possibilty_1",
+    "qe": "Statements: A ≥ B = C ; B < D > F ; D ≤ E\nConclusions: I. A = C, II. B = F, III. D = E, IV. B < E, V. F > E\n(i) How many conclusions are 100% true?\n(ii) How many conclusions are there that are likely to be true (possibility)?\n(iii) How many conclusions are 100% false?",
+    "qh": "कथन: A ≥ B = C ; B < D > F ; D ≤ E\nनिष्कर्ष: I. A = C, II. B = F, III. D = E, IV. B < E, V. F > E\n(i) कितने निष्कर्ष 100% सत्य हैं?\n(ii) कितने निष्कर्ष ऐसे हैं जिनके सत्य होने की संभावना है?\n(iii) कितने निष्कर्ष 100% असत्य हैं?",
+    "oe": [
+      "(i) Only IV; (ii) Only I, II and III; (iii) Only V",
+      "(i) Only II; (ii) Only I and IV; (iii) Only III",
+      "(i) Only IV; (ii) Only II and III; (iii) Only I",
+      "(i) Only I; (ii) Only IV and V; (iii) Only II"
+    ],
+    "oh": [
+      "(i) Only IV; (ii) Only I, II and III; (iii) Only V",
+      "(i) Only II; (ii) Only I and IV; (iii) Only III",
+      "(i) Only IV; (ii) Only II and III; (iii) Only I",
+      "(i) Only I; (ii) Only IV and V; (iii) Only II"
+    ],
+    "a": 0,
+    "e": "Method 1 (Definite, Possibility, and 100% False Breakdown Shortcut):\nStep 1: Check Conclusion IV (B to E):\n- B < D ≤ E.\n- Priority rule: '<' aur '≤' me high priority '<' ko milti hai, atah definite relation $B < E$ banta hai.\n- Yeh 100% true conclusion hai (Only IV is 100% true).\nStep 2: Check Likely to be True (Possibilities):\n- Conclusion I (A = C): $A \\ge B = C \\implies A \\ge C$. Chuki $A \\ge C$ definite hai, isliye $A = C$ ki sambhavna (possibility) satya hai.\n- Conclusion II (B = F): B se F tak $B < D > F$ me condition block banti hai (no definite relation). Block sthiti me $B = F$ ki possibility satya hoti hai.\n- Conclusion III (D = E): $D \\le E$ definite hai, isliye $D = E$ ki possibility satya hai.\n- Atah I, II, aur III likely to be true hain.\nStep 3: Check 100% False:\n- Conclusion V (F > E): F se E tak relation dekhein: $F < D \\le E \\implies F < E$ definite satya hai.\n- Jab $F < E$ 100% satya hai, toh $F > E$ purna roop se asambhav (100% false) hai.\nAtah '(i) Only IV; (ii) Only I, II and III; (iii) Only V' sahi hai.\n\nMethod 2 (Sign Verification):\nDefinite true = IV ($B < E$). Possibilities = I, II, III. 100% False = V ($F > E$, kyunki $F < E$ hai).\nSahi uttar '(i) Only IV; (ii) Only I, II and III; (iii) Only V' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "possibilty_2",
+    "qe": "Statement: P ≥ R = T ≤ S\nConclusions: I. P > T, II. P = T, III. S ≥ R",
+    "qh": "कथन: P ≥ R = T ≤ S\nनिष्कर्ष: I. P > T, II. P = T, III. S ≥ R",
+    "oe": [
+      "Only III follows",
+      "Either I or II follows",
+      "Only II follows",
+      "Only either I or II and III follow"
+    ],
+    "oh": [
+      "Only III follows",
+      "Either I or II follows",
+      "Only II follows",
+      "Only either I or II and III follow"
+    ],
+    "a": 3,
+    "e": "Method 1 (Either-Or & Definite Truth Shortcut):\nStep 1: P se T tak ka definite sambandh nikalein: $P \\ge R = T \\implies P \\ge T$.\n- Chuki $P \\ge T$ ka arth hai $P > T$ ya $P = T$, isliye Conclusion I ($P > T$) aur Conclusion II ($P = T$) me 'Either I or II' ka sambandh banega.\nStep 2: S se R tak dekhein: $R = T \\le S \\implies R \\le S$, jise ulatne par $S \\ge R$ banta hai.\n- Atah Conclusion III ($S \\ge R$) 100% nishchit satya hai (Follows).\nStep 3: Final nishkarsh: 'Only either I or II and III follow'.\nCorrect option  hai.\n\nMethod 2 (Sign Splitting Method):\n$P \\ge T$ do sambhavnaon '>' aur '=' me split hota hai (Either I or II). $S \\ge R$ statement se seedhe sidhh hota hai. Atah 'Only either I or II and III follow' sahi hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "possibilty_3",
+    "qe": "Statements: M ≥ R - S ≤ T ; P > W < Y\n(i) Conclusions: I. M > S, II. M = S\n(ii) Conclusions: I. R < T, II. R = T\n(iii) Conclusions: I. P > Y, II. P ≤ Y",
+    "qh": "कथन: M ≥ R = S ≤ T ; P > W < Y\n(i) निष्कर्ष: I. M > S, II. M = S\n(ii) निष्कर्ष: I. R < T, II. R = T\n(iii) निष्कर्ष: I. P > Y, II. P ≤ Y",
+    "oe": [
+      "(i) Either I or II, (ii) Either I or II, (iii) Either I or II",
+      "(i) Only I follows, (ii) Only II follows, (iii) None follows",
+      "(i) Either I or II, (ii) Only I follows, (iii) None follows",
+      "(i) Only II follows, (ii) Either I or II, (iii) Either I or II"
+    ],
+    "oh": [
+      "(i) Either I or II, (ii) Either I or II, (iii) Either I or II",
+      "(i) Only I follows, (ii) Only II follows, (iii) None follows",
+      "(i) Either I or II, (ii) Only I follows, (iii) None follows",
+      "(i) Only II follows, (ii) Either I or II, (iii) Either I or II"
+    ],
+    "a": 0,
+    "e": "Method 1 (Either-Or Triad Shortcut Rules):\nStep 1: Sub-question (i): M se S tak $M \\ge R = S \\implies M \\ge S$.\n- Definite relation '≥' hone ke karan '>' aur '=' ke beech 'Either I or II follows' banega.\nStep 2: Sub-question (ii): R se T tak $R = S \\le T \\implies R \\le T$.\n- Definite relation '≤' hone ke karan '<' aur '=' ke beech 'Either I or II follows' banega.\nStep 3: Sub-question (iii): P se Y tak $P > W < Y$.\n- Viprit chinh aane se condition block banta hai (no relation).\n- Jab no relation ho aur dono nishkarshon me teeno chinh ($>$, $<$, $=$) upasthit hon ($P > Y$ aur $P \\le Y$), toh 'Either I or II follows' banta hai.\nAtah teeno me 'Either I or II follows' lagu hota hai.\nCorrect option  hai.\n\nMethod 2 (Case Matching):\nHar sub-question do complementary situations ko cover karta hai jo exhaustive hain. Atah sabhi me Either-Or banta hai.\nSahi uttar '(i) Either I or II, (ii) Either I or II, (iii) Either I or II' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "possibilty_4",
+    "qe": "Statements: R ≥ U = P ; S ≥ T = M ; P > Y < W\nConclusions: I. U < W, II. R < P, III. R = P",
+    "qh": "कथन: R ≥ U = P ; S ≥ T = M ; P > Y < W\nनिष्कर्ष: I. U < W, II. R < P, III. R = P",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Either II or III follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Either II or III follows",
+      "None follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (Condition Block & Sign Mismatch Shortcut):\nStep 1: Conclusion I ($U < W$): U se W tak $U = P > Y < W$. Viprit chinh ('>' aur '<') aane ke karan condition block banta hai, atah koi sambandh nahi banta (False).\nStep 2: R aur P ke beech relation: $R \\ge U = P \\implies R \\ge P$.\n- Iska arth hai ki ya toh $R > P$ hoga ya $R = P$.\n- Conclusion II me $R < P$ diya gaya hai (jo asambhav hai) aur Conclusion III me $R = P$ diya hai.\n- Chuki Either-Or banne ke liye '>' aur '=' chahiye the, jabki yahan '<' diya hai, isliye Either-Or nahi banega.\nAtah koi bhi nishkarsh follow nahi karta.\nCorrect option  None follows hai.\n\nMethod 2 (Sign Verification):\n$R \\ge P$ me '<' ka astitva nahi ho sakta. U aur W me block hai. Atah None follows sahi hai.\nSahi uttar 'None follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "possibilty_5",
+    "qe": "Statements: R ≥ U = P ; S ≥ T = M ; P > Y < W\nConclusions: I. S > M, II. M = S",
+    "qh": "कथन: R ≥ U = P ; S ≥ T = M ; P > Y < W\nनिष्कर्ष: I. S > M, II. M = S",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "None follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct '≥' Either-Or Shortcut Trick):\nStep 1: S se M tak ka sambandh statement se dekhein: $S \\ge T = M \\implies S \\ge M$.\nStep 2: $S \\ge M$ ka arth hota hai ki ya toh $S > M$ hoga ya $S = M$.\n- Conclusion I: $S > M$\n- Conclusion II: $M = S \\equiv S = M$\nStep 3: Dono nishkarsh milkar poore '≥' relation ko cover karte hain.\nAtah 'Either I or II follows' banta hai.\nCorrect option  Either I or II follows hai.\n\nMethod 2 (Complementary Verification):\n$S \\ge M$ me kewal do hi sambhavnaayein hain: bada ya barabar. Dono nishkarsh me maujood hain, isliye Either-Or sahi hai.\nSahi uttar 'Either I or II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "possibilty_6",
+    "qe": "Statements: R ≥ U = P ; S ≥ T = M ; P > Y < W\nConclusions: I. M < S, II. M = S",
+    "qh": "कथन: R ≥ U = P ; S ≥ T = M ; P > Y < W\nनिष्कर्ष: I. M < S, II. M = S",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "None follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Reverse Direction '≤' Shortcut Trick):\nStep 1: Statement se M se S tak ka sambandh nikalein: $M = T \\le S \\implies M \\le S$.\nStep 2: $M \\le S$ ka spasht arth hai: ya toh $M < S$ hoga ya $M = S$.\n- Conclusion I: $M < S$\n- Conclusion II: $M = S$\nStep 3: Dono me se kisi ek ka satya hona anivarya hai.\nAtah 'Either I or II follows' nikalta hai.\nCorrect option  Either I or II follows hai.\n\nMethod 2 (Sign Decomposition):\n'≤' chinh '<' aur '=' se milkar bana hai. Dono prashn me diye gaye hain, atah Either I or II lagu hota hai.\nSahi uttar 'Either I or II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "possibilty_7",
+    "qe": "Statements: R ≥ U = P ; S ≥ T = M ; P > Y < W\nConclusions: I. P < R, II. R = P, III. R > Y",
+    "qh": "कथन: R ≥ U = P ; S ≥ T = M ; P > Y < W\nनिष्कर्ष: I. P < R, II. R = P, III. R > Y",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "Only III follows",
+      "Only Either I or II and III follow"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "Only III follows",
+      "Only Either I or II and III follow"
+    ],
+    "a": 4,
+    "e": "Method 1 (Combined Independent True & Either-Or Shortcut):\nStep 1: P aur R ke beech relation: $R \\ge U = P \\implies R \\ge P \\implies P \\le R$.\n- $P \\le R$ ka matlab hai ya toh $P < R$ ya $P = R$.\n- Atah Conclusion I ($P < R$) aur Conclusion II ($R = P$) ke beech 'Either I or II' banega.\nStep 2: R aur Y ke beech relation: $R \\ge U = P > Y \\implies R > Y$.\n- High priority sign '>' hone ke karan Conclusion III ($R > Y$) 100% nishchit satya hai (Follows).\nStep 3: Dono ko milane par: 'Only Either I or II and III follow'.\nCorrect option  hai.\n\nMethod 2 (Priority & Decomposition Check):\n$R > Y$ direct statement se satya hai. $P \\le R$ se Either I or II satya hai. Sahi vikalp  hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "possibilty_8",
+    "qe": "Statements: A ≥ B = C ; E ≤ F = G ; C > Z < D\nEvaluate the following conclusion pairs:\nEx25. Conclusions: I. C > D, II. C ≤ D\nEx26. Conclusions: I. C ≥ D, II. C < D\nEx27. Conclusions: I. C > D, II. D ≥ C",
+    "qh": "कथन: A ≥ B = C ; E ≤ F = G ; C > Z < D\nनिम्नलिखित निष्कर्ष युग्मों का मूल्यांकन कीजिए:\nEx25. निष्कर्ष: I. C > D, II. C ≤ D\nEx26. निष्कर्ष: I. C ≥ D, II. C < D\nEx27. निष्कर्ष: I. C > D, II. D ≥ C",
+    "oe": [
+      "Ex25: Either, Ex26: Neither, Ex27: Either",
+      "Ex25: Either, Ex26: Either, Ex27: Neither",
+      "All three (Ex25, Ex26, Ex27) are Either I or II follows",
+      "None follows in all"
+    ],
+    "oh": [
+      "Ex25: Either, Ex26: Neither, Ex27: Either",
+      "Ex25: Either, Ex26: Either, Ex27: Neither",
+      "All three (Ex25, Ex26, Ex27) are Either I or II follows",
+      "None follows in all"
+    ],
+    "a": 2,
+    "e": "Method 1 (3-Sign Condition Block Either-Or Shortcut):\nStep 1: C aur D ke beech relation dekhein: $C > Z < D$. Viprit chinh ('>' aur '<') aane ke karan Condition Block banta hai (no relation).\nStep 2: Rule: Condition Block hone par yadi dono nishkarshon me teeno chinh ($>$, $<$, $=$) shamil hon aur subject-object samaan hon, toh 'Either-Or' lagu hota hai:\n- Ex25: I. $C > D$ aur II. $C \\le D$ ($<$ aur $=$). Teeno chinh maujood hain $\\implies$ Either I or II follows.\n- Ex26: I. $C \\ge D$ ($>$ aur $=$) aur II. $C < D$. Teeno chinh maujood hain $\\implies$ Either I or II follows.\n- Ex27: I. $C > D$ aur II. $D \\ge C \\equiv C \\le D$ ($<$ aur $=$). Teeno chinh maujood hain $\\implies$ Either I or II follows.\nAtah teeno me 'Either I or II follows' lagu hota hai.\nCorrect option  hai.\n\nMethod 2 (Exhaustive Possibility Method):\nDo anjaan tatvon me keval 3 sambhavnaayein ($>$, $<$, $=$) ho sakti hain. Teeno questions me ye 3 sambhavnaayein poori tarah cover hoti hain, isliye sabhi me Either-Or banta hai.\nSahi uttar 'All three (Ex25, Ex26, Ex27) are Either I or II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "possibilty_9",
+    "qe": "Statements: A ≥ B = C ; E ≤ F = G ; C > Z < D\nEvaluate the following conclusion pairs:\nEx28. Conclusions: I. C > D, II. D ≤ C\nEx29. Conclusions: I. C = D, II. C ≠ D\nEx30. Conclusions: I. C > D, II. C < D",
+    "qh": "कथन: A ≥ B = C ; E ≤ F = G ; C > Z < D\nनिम्नलिखित निष्कर्ष युग्मों का मूल्यांकन कीजिए:\nEx28. निष्कर्ष: I. C > D, II. D ≤ C\nEx29. निष्कर्ष: I. C = D, II. C ≠ D\nEx30. निष्कर्ष: I. C > D, II. C < D",
+    "oe": [
+      "Ex28: None follows, Ex29: Either I or II follows, Ex30: None follows",
+      "Ex28: Either, Ex29: Either, Ex30: Either",
+      "Ex28: None follows, Ex29: None follows, Ex30: Either",
+      "Ex28: Either, Ex29: None follows, Ex30: None follows"
+    ],
+    "oh": [
+      "Ex28: None follows, Ex29: Either I or II follows, Ex30: None follows",
+      "Ex28: Either, Ex29: Either, Ex30: Either",
+      "Ex28: None follows, Ex29: None follows, Ex30: Either",
+      "Ex28: Either, Ex29: None follows, Ex30: None follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (3-Sign Check for Condition Block Shortcut):\nStep 1: C aur D ke beech condition block hai, atah teeno chinh ($>$, $<$, $=$) anivarya hain.\nStep 2: Evaluate Ex28:\n- I. $C > D$, II. $D \\le C \\equiv C \\ge D$ ($>$ aur $=$). Yahan '<' chinh gayab hai (kewal $>$ aur $=$ hain). Atah Either-Or nahi banega $\\implies$ None follows.\nStep 3: Evaluate Ex29:\n- I. $C = D$, II. $C \\ne D$ (arthath $C > D$ ya $C < D$). Yahan '=' aur '$>$ ya $<$' teeno chinh milkar poora set banate hain. Atah $\\implies$ Either I or II follows.\nStep 4: Evaluate Ex30:\n- I. $C > D$, II. $C < D$. Yahan '=' chinh anupasthit hai. Atah Either-Or nahi banega $\\implies$ None follows.\nCorrect option  hai.\n\nMethod 2 (Sign Completeness Rule):\nEx28 me '<' missing hai aur Ex30 me '=' missing hai, isliye dono me None follows. Ex29 me '=' aur '≠' (dono inequalities) milkar 100% domain cover karte hain, isliye Either-Or banta hai.\nSahi uttar 'Ex28: None follows, Ex29: Either I or II follows, Ex30: None follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "possibilty_10",
+    "qe": "Statement: P ≥ R = T ≥ S\nConclusions: I. P > T, II. P = R, III. R ≥ S",
+    "qh": "कथन: P ≥ R = T ≥ S\nनिष्कर्ष: I. P > T, II. P = R, III. R ≥ S",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "Only III follows",
+      "Either I or II and III follow"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "Only III follows",
+      "Either I or II and III follow"
+    ],
+    "a": 4,
+    "e": "Method 1 (Interchangeable Elements Either-Or Shortcut):\nStep 1: Statement me $R = T$ diya gaya hai.\n- Conclusion I me $P > T$ ko $P > R$ likha ja sakta hai.\n- Conclusion II $P = R$ hai.\nStep 2: P se R tak ka sambandh: $P \\ge R$.\n- $P \\ge R$ do bhagon me tootta hai: $P > R$ (Conclusion I) ya $P = R$ (Conclusion II).\n- Atah I aur II ke beech 'Either I or II follows' banega.\nStep 3: Conclusion III: $R = T \\ge S \\implies R \\ge S$ direct statement se 100% satya hai.\nStep 4: Atah 'Either I or II and III follow' sahi hai.\nCorrect option  hai.\n\nMethod 2 (Equivalent Substitution):\n$R = T$ hone se $P > T \\equiv P > R$. $P \\ge R$ hone ke karan I aur II me Either-Or banta hai, aur $R \\ge S$ nishchit satya hai. Sahi vikalp  hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "possibilty_11",
+    "qe": "Statements: M = N ≥ P ; P = R ≥ S ; R > U\nConclusions: I. M > R, II. N = P, III. P > U",
+    "qh": "कथन: M = N ≥ P ; P = R ≥ S ; R > U\nनिष्कर्ष: I. M > R, II. N = P, III. P > U",
+    "oe": [
+      "Only I follows",
+      "All follow",
+      "Only II follows",
+      "None follows",
+      "None of these (Either I or II and III follow)"
+    ],
+    "oh": [
+      "Only I follows",
+      "All follow",
+      "Only II follows",
+      "None follows",
+      "None of these (Either I or II and III follow)"
+    ],
+    "a": 4,
+    "e": "Method 1 (Substitution & Priority Evaluation Shortcut):\nStep 1: Statements me $M = N$ aur $P = R$ diya gaya hai.\n- Iska arth hai ki Conclusion I ($M > R$) ko $N > P$ likha ja sakta hai.\n- Conclusion II $N = P$ hai.\nStep 2: N aur P ka definite relation: $N \\ge P$.\n- $N \\ge P$ ka arth hai ya toh $N > P$ (Conclusion I) ya $N = P$ (Conclusion II).\n- Atah I aur II ke beech 'Either I or II' ka sambandh banta hai.\nStep 3: P aur U ka relation: $P = R > U \\implies P > U$ 100% nishchit satya hai (Conclusion III follows).\nStep 4: Atah sahi nishkarsh 'Either I or II and III follow' banta hai, jo diye gaye aam options A, B, C, D me nahi hai.\nCorrect option  None of these hai.\n\nMethod 2 (Box & Chain Method):\nIII satya hai aur I tatha II milkar $N \\ge P$ poora karte hain. Isliye Either I or II and III follow hoga.\nSahi uttar 'None of these (Either I or II and III follow)' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

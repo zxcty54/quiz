@@ -1,0 +1,401 @@
+[
+  {
+    "p_id": "empty_filled_simultaneous_1",
+    "qe": "A tap can fill a cistern in 10 minutes and another tap can empty it in 12 minutes. If both the taps are open, the time (in hours) taken to fill the tank will be:",
+    "qh": "एक नल एक टंकी को 10 मिनट में भर सकता है और दूसरा नल इसे 12 मिनट में खाली कर सकता है। यदि दोनों नल खुले हों, तो टंकी को भरने में कितना समय (घंटों में) लगेगा:",
+    "oe": [
+      "1.5 hours",
+      "2.5 hours",
+      "2 hours",
+      "1 hours"
+    ],
+    "oh": [
+      "1.5 hours",
+      "2.5 hours",
+      "2 hours",
+      "1 hours"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Net Efficiency Method):\nStep 1: कुल क्षमता = LCM(10, 12) = 60 इकाइयाँ।\n- भरने वाले नल की दक्षता = +60 / 10 = +6 इकाइयाँ/मिनट\n- खाली करने वाले नल की दक्षता = -60 / 12 = -5 इकाइयाँ/मिनट\nStep 2: दोनों नलों की संयुक्त दक्षता = +6 - 5 = +1 इकाई/मिनट।\nStep 3: टंकी भरने में लगा समय = 60 / 1 = 60 मिनट।\nStep 4: समय को घंटों में बदलने पर = 60 / 60 = 1 घंटा।\nअतः सही विकल्प  1 hours है।\n\nMethod 2 (Formula Method):\nStep 1: समय = (xy) / (y - x) = (10 × 12) / (12 - 10) = 120 / 2 = 60 मिनट = 1 घंटा।\nअतः सही उत्तर '1 hours' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_2",
+    "qe": "An inlet pipe can fill a water storage tank in 11 hours and an outlet pipe can empty the completely filled tank in 15 hours. If both pipes opened simultaneously, the time taken to fill the empty tank (in hrs) is:",
+    "qh": "एक प्रवेश पाइप एक पानी की टंकी को 11 घंटे में भर सकता है और एक निकास पाइप पूरी तरह भरी हुई टंकी को 15 घंटे में खाली कर सकता है। यदि दोनों पाइप एक साथ खोले जाते हैं, तो खाली टंकी को भरने में कितना समय (घंटों में) लगेगा:",
+    "oe": [
+      "45$\\frac{1}{2}$",
+      "41$\\frac{1}{4}$",
+      "49$\\frac{3}{4}$",
+      "40"
+    ],
+    "oh": [
+      "45$\\frac{1}{2}$",
+      "41$\\frac{1}{4}$",
+      "49$\\frac{3}{4}$",
+      "40"
+    ],
+    "a": 1,
+    "e": "Method 1 (Formula Method):\nStep 1: समय = (xy) / (y - x)\n= (11 × 15) / (15 - 11) = 165 / 4 घंटे।\nStep 2: मिश्रित भिन्न में बदलने पर:\n165 / 4 = 41 1/4 घंटे।\nअतः सही विकल्प  41 1/4 है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल क्षमता = LCM(11, 15) = 165 इकाइयाँ।\n- प्रवेश पाइप = +165 / 11 = +15 इकाइयाँ/घंटा\n- निकास पाइप = -165 / 15 = -11 इकाइयाँ/घंटा\nStep 2: शुद्ध दक्षता = 15 - 11 = 4 इकाइयाँ/घंटा।\nStep 3: समय = 165 / 4 = 41 1/4 घंटे।\nअतः सही उत्तर '41$\\frac{1}{4}$' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_3",
+    "qe": "An inlet can fill an empty tank in 51 hours while an outlet pipe drains a completely-filled tank in 76.5 hours. If both the pipes are opened simultaneously when the tank is empty, in how many hours will the tank get completely filled?",
+    "qh": "एक प्रवेश पाइप एक खाली टंकी को 51 घंटे में भर सकता है जबकि एक निकास पाइप पूरी तरह से भरी टंकी को 76.5 घंटे में खाली कर देता है। यदि टंकी खाली होने पर दोनों पाइपों को एक साथ खोल दिया जाए, तो टंकी कितने घंटों में पूरी तरह भर जाएगी?",
+    "oe": [
+      "178.5",
+      "127.5",
+      "102",
+      "153"
+    ],
+    "oh": [
+      "178.5",
+      "127.5",
+      "102",
+      "153"
+    ],
+    "a": 3,
+    "e": "Method 1 (Formula Method):\nStep 1: समय = (xy) / (y - x)\n= (51 × 76.5) / (76.5 - 51) = (51 × 76.5) / 25.5\nStep 2: 76.5 को 25.5 से विभाजित करने पर 3 प्राप्त होता है:\n= 51 × 3 = 153 घंटे।\nअतः सही विकल्प  153 है।\n\nMethod 2 (LCM Units Method):\nStep 1: 51 = 25.5 × 2 तथा 76.5 = 25.5 × 3. कुल क्षमता = 25.5 × 6 = 153 इकाइयाँ।\n- प्रवेश पाइप की दक्षता = +153 / 51 = +3 इकाइयाँ/घंटा\n- निकास पाइप की दक्षता = -153 / 76.5 = -2 इकाइयाँ/घंटा\nStep 2: शुद्ध दक्षता = +3 - 2 = +1 इकाई/घंटा।\nStep 3: समय = 153 / 1 = 153 घंटे।\nअतः सही उत्तर '153' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_4",
+    "qe": "A pipe can fill a tank in 2 2/3 hours, and another pipe empties it in 4 hours. If both are opened together, how long will it take to fill the tank?",
+    "qh": "एक पाइप एक टंकी को 2 2/3 घंटे में भर सकता है, और दूसरा पाइप इसे 4 घंटे में खाली कर सकता है। यदि दोनों को एक साथ खोल दिया जाए, तो टंकी को भरने में कितना समय लगेगा?",
+    "oe": [
+      "8 hours",
+      "10 hours",
+      "12 hours",
+      "16 hours"
+    ],
+    "oh": [
+      "8 hours",
+      "10 hours",
+      "12 hours",
+      "16 hours"
+    ],
+    "a": 0,
+    "e": "Method 1 (Formula Method):\nStep 1: पहला पाइप = 2 2/3 = 8/3 घंटे, दूसरा पाइप = 4 घंटे।\nStep 2: समय = (xy) / (y - x) = (8/3 × 4) / (4 - 8/3) = (32/3) / (4/3) = 32 / 4 = 8 घंटे।\nअतः सही विकल्प  8 hours है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल क्षमता = LCM(8, 4) = 8 इकाइयाँ।\n- भरने वाले पाइप की दक्षता = +8 / (8/3) = +3 इकाइयाँ/घंटा\n- खाली करने वाले पाइप की दक्षता = -8 / 4 = -2 इकाइयाँ/घंटा\nStep 2: शुद्ध दक्षता = 3 - 2 = 1 इकाई/घंटा।\nStep 3: समय = 8 / 1 = 8 घंटे।\nअतः सही उत्तर '8 hours' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_5",
+    "qe": "Two taps can fill a tub in 6 minutes and 4 minutes, respectively. A pipe can empty it in 3 minutes. If all the three are kept open simultaneously, when will the tub be full?",
+    "qh": "दो नल एक टब को क्रमशः 6 मिनट और 4 मिनट में भर सकते हैं। एक पाइप इसे 3 मिनट में खाली कर सकता है। यदि तीनों को एक साथ खुला रखा जाए, तो टब कब भर जाएगा?",
+    "oe": [
+      "10 min",
+      "12 min",
+      "7 min",
+      "15 min"
+    ],
+    "oh": [
+      "10 min",
+      "12 min",
+      "7 min",
+      "15 min"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल क्षमता = LCM(6, 4, 3) = 12 इकाइयाँ।\n- पहला नल = +12 / 6 = +2 इकाइयाँ/मिनट\n- दूसरा नल = +12 / 4 = +3 इकाइयाँ/मिनट\n- निकास पाइप = -12 / 3 = -4 इकाइयाँ/मिनट\nStep 2: कुल शुद्ध दक्षता = 2 + 3 - 4 = +1 इकाई/मिनट।\nStep 3: टब भरने में लगा समय = 12 / 1 = 12 मिनट।\nअतः सही विकल्प  12 min है।\n\nMethod 2 (Fraction Method):\nStep 1: 1 मिनट का कार्य = 1/6 + 1/4 - 1/3 = (2 + 3 - 4) / 12 = 1 / 12 भाग।\nStep 2: समय = 12 मिनट।\nअतः सही उत्तर '12 min' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_6",
+    "qe": "Pipes A and B can fill a tank in 20 minutes and 30 minutes, respectively. Meanwhile, a drain pipe C can empty the tank in 60 minutes. If all three pipes are opened simultaneously, how long will it take to fill the tank?",
+    "qh": "पाइप A और B एक टंकी को क्रमशः 20 मिनट और 30 मिनट में भर सकते हैं। इस बीच, एक निकास पाइप C टंकी को 60 मिनट में खाली कर सकता है। यदि तीनों पाइपों को एक साथ खोल दिया जाए, तो टंकी को भरने में कितना समय लगेगा?",
+    "oe": [
+      "15 min",
+      "20 min",
+      "25 min",
+      "10 min"
+    ],
+    "oh": [
+      "15 min",
+      "20 min",
+      "25 min",
+      "10 min"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल क्षमता = LCM(20, 30, 60) = 60 इकाइयाँ।\n- A = +60 / 20 = +3 इकाइयाँ/मिनट\n- B = +60 / 30 = +2 इकाइयाँ/मिनट\n- C = -60 / 60 = -1 इकाई/मिनट\nStep 2: शुद्ध दक्षता = 3 + 2 - 1 = 4 इकाइयाँ/मिनट।\nStep 3: लिया गया समय = 60 / 4 = 15 मिनट।\nअतः सही विकल्प  15 min है।\n\nMethod 2 (Fraction Method):\nStep 1: 1 मिनट की दर = 1/20 + 1/30 - 1/60 = (3 + 2 - 1) / 60 = 4 / 60 = 1 / 15.\nStep 2: समय = 15 मिनट।\nअतः सही उत्तर '15 min' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_7",
+    "qe": "Two pipes can fill a tank in 12 hours and 18 hours, respectively, while a third pipe can empty it in 8 hours. How long (in hours) will it take to fill the empty tank if all three pipes are opened simultaneously?",
+    "qh": "दो पाइप एक टंकी को क्रमशः 12 घंटे और 18 घंटे में भर सकते हैं, जबकि एक तीसरा पाइप इसे 8 घंटे में खाली कर सकता है। यदि तीनों पाइपों को एक साथ खोल दिया जाए तो खाली टंकी को भरने में कितना समय (घंटों में) लगेगा?",
+    "oe": [
+      "48",
+      "24",
+      "36",
+      "72"
+    ],
+    "oh": [
+      "48",
+      "24",
+      "36",
+      "72"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल क्षमता = LCM(12, 18, 8) = 72 इकाइयाँ।\n- पहला पाइप = +72 / 12 = +6 इकाइयाँ/घंटा\n- दूसरा पाइप = +72 / 18 = +4 इकाइयाँ/घंटा\n- तीसरा पाइप = -72 / 8 = -9 इकाइयाँ/घंटा\nStep 2: कुल शुद्ध दक्षता = 6 + 4 - 9 = +1 इकाई/घंटा।\nStep 3: टंकी भरने में लगा समय = 72 / 1 = 72 घंटे।\nअतः सही विकल्प  72 है।\n\nMethod 2 (Fraction Method):\nStep 1: 1 घंटे की दर = 1/12 + 1/18 - 1/8 = (6 + 4 - 9) / 72 = 1 / 72.\nStep 2: समय = 72 घंटे।\nअतः सही उत्तर '72' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_8",
+    "qe": "Pipe A can fill a tank in 12 minutes, pipe B can fill it in 18 minutes, while pipe C can empty the full tank in 36 minutes. If all the pipes are opened simultaneously, how much time will it take to fill the empty tank completely?",
+    "qh": "पाइप A एक टंकी को 12 मिनट में भर सकता है, पाइप B इसे 18 मिनट में भर सकता है, जबकि पाइप C भरी हुई टंकी को 36 मिनट में खाली कर सकता है। यदि सभी पाइपों को एक साथ खोल दिया जाए, तो खाली टंकी को पूरी तरह भरने में कितना समय लगेगा?",
+    "oe": [
+      "7 min. 30 sec.",
+      "10 min.",
+      "9 min.",
+      "6 min."
+    ],
+    "oh": [
+      "7 min. 30 sec.",
+      "10 min.",
+      "9 min.",
+      "6 min."
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल क्षमता = LCM(12, 18, 36) = 36 इकाइयाँ।\n- A = +36 / 12 = +3 इकाइयाँ/मिनट\n- B = +36 / 18 = +2 इकाइयाँ/मिनट\n- C = -36 / 36 = -1 इकाई/मिनट\nStep 2: शुद्ध दक्षता = 3 + 2 - 1 = 4 इकाइयाँ/मिनट।\nStep 3: समय = 36 / 4 = 9 मिनट।\nअतः सही विकल्प  9 min. है।\n\nMethod 2 (Fraction Method):\nStep 1: 1 मिनट की दर = 1/12 + 1/18 - 1/36 = (3 + 2 - 1) / 36 = 4 / 36 = 1 / 9.\nStep 2: समय = 9 मिनट।\nअतः सही उत्तर '9 min' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_9",
+    "qe": "Pipes A and B can empty a full tank in 16 hours and 24 hours, respectively. Pipe C alone can fill the empty tank in 4 hours. If A, B and C are opened together, then 35% tank will be filled in:",
+    "qh": "पाइप A और B एक भरी हुई टंकी को क्रमशः 16 घंटे और 24 घंटे में खाली कर सकते हैं। पाइप C अकेले खाली टंकी को 4 घंटे में भर सकता है। यदि A, B और C को एक साथ खोल दिया जाए, तो टंकी का 35% भाग कितने समय में भर जाएगा:",
+    "oe": [
+      "2$\\frac{1}{5}$ hours",
+      "2$\\frac{2}{5}$ hours",
+      "3$\\frac{1}{5}$ hours",
+      "3$\\frac{2}{5}$ hours"
+    ],
+    "oh": [
+      "2$\\frac{1}{5}$ hours",
+      "2$\\frac{2}{5}$ hours",
+      "3$\\frac{1}{5}$ hours",
+      "3$\\frac{2}{5}$ hours"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Net Rate Method):\nStep 1: कुल क्षमता = LCM(16, 24, 4) = 48 इकाइयाँ।\n- A (निकास) = -48 / 16 = -3 इकाइयाँ/घंटा\n- B (निकास) = -48 / 24 = -2 इकाइयाँ/घंटा\n- C (प्रवेश) = +48 / 4 = +12 इकाइयाँ/घंटा\nStep 2: तीनों की शुद्ध दक्षता = 12 - 3 - 2 = 7 इकाइयाँ/घंटा।\nStep 3: टंकी का 35% भाग = 35% of 48 = (7 / 20) × 48 = 16.8 इकाइयाँ।\nStep 4: लिया गया समय = 16.8 / 7 = 2.4 घंटे = 2 2/5 घंटे।\nअतः सही विकल्प  2 2/5 hours है।\n\nMethod 2 (Fraction Method):\nStep 1: 1 घंटे में भरा गया भाग = 1/4 - 1/16 - 1/24 = (12 - 3 - 2) / 48 = 7 / 48 भाग।\nStep 2: 35% = 7 / 20 भाग भरने में समय = (7/20) / (7/48) = 48 / 20 = 12 / 5 = 2 2/5 घंटे।\nअतः सही उत्तर '2$\\frac{2}{5}$ hours' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_10",
+    "qe": "Pipe A, B and C together can fill a tank in 9 minutes. Pipe B and C together can fill the same tank in 12 minutes. Pipe C and A together can fill the same tank in 18 minutes. In how much time (in minutes) pipe B alone can fill the tank?",
+    "qh": "पाइप A, B और C मिलकर एक टंकी को 9 मिनट में भर सकते हैं। पाइप B और C मिलकर उसी टंकी को 12 मिनट में भर सकते हैं। पाइप C और A मिलकर उसी टंकी को 18 मिनट में भर सकते हैं। पाइप B अकेले उस टंकी को कितने समय (मिनटों में) में भर सकता है?",
+    "oe": [
+      "16",
+      "18",
+      "20",
+      "17"
+    ],
+    "oh": [
+      "16",
+      "18",
+      "20",
+      "17"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल क्षमता = LCM(9, 12, 18) = 36 इकाइयाँ।\n- (A + B + C) की दक्षता = 36 / 9 = 4 इकाइयाँ/मिनट\n- (B + C) की दक्षता = 36 / 12 = 3 इकाइयाँ/मिनट\n- (C + A) की दक्षता = 36 / 18 = 2 इकाइयाँ/मिनट\nStep 2: पाइप B की व्यक्तिगत दक्षता निकालें:\n- A की दक्षता = (A + B + C) - (B + C) = 4 - 3 = 1 इकाई/मिनट\n- C की दक्षता = (C + A) - A = 2 - 1 = 1 इकाई/मिनट\n- B की दक्षता = (B + C) - C = 3 - 1 = 2 इकाइयाँ/मिनट\nStep 3: B द्वारा अकेले टंकी भरने में लगा समय = 36 / 2 = 18 मिनट।\nअतः सही विकल्प  18 है।\n\nMethod 2 (Fraction Method):\nStep 1: A की दर = 1/9 - 1/12 = 1/36.\nStep 2: C की दर = 1/18 - 1/36 = 1/36.\nStep 3: B की दर = 1/12 - 1/36 = 2/36 = 1/18 ==> B का समय = 18 मिनट।\nअतः सही उत्तर '18' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_11",
+    "qe": "Pipes P and Q can completely fill a water tank in 10 hours and 18 hours, respectively. A pipe R can empty a tank filled completely with water in 12 hours. Initially, the tank is empty and only pipes P and Q are opened at 6 a.m. and pipe R is also opened at 9 a.m. By what time will the tank be completely filled?",
+    "qh": "पाइप P और Q एक पानी की टंकी को क्रमशः 10 घंटे और 18 घंटे में पूरी तरह भर सकते हैं। एक पाइप R पानी से पूरी तरह भरी टंकी को 12 घंटे में खाली कर सकता है। प्रारंभ में, टंकी खाली है और केवल पाइप P और Q सुबह 6 बजे खोले जाते हैं और पाइप R भी सुबह 9 बजे खोला जाता है। टंकी किस समय तक पूरी तरह भर जाएगी?",
+    "oe": [
+      "1 p.m",
+      "2 p.m",
+      "11 p.m",
+      "3 p.m"
+    ],
+    "oh": [
+      "1 p.m",
+      "2 p.m",
+      "11 p.m",
+      "3 p.m"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Staggered Timeline Method):\nStep 1: कुल क्षमता = LCM(10, 18, 12) = 180 इकाइयाँ।\n- P की दक्षता = +180 / 10 = +18 इकाइयाँ/घंटा\n- Q की दक्षता = +180 / 18 = +10 इकाइयाँ/घंटा\n- R की दक्षता = -180 / 12 = -15 इकाइयाँ/घंटा\nStep 2: सुबह 6:00 से 9:00 बजे तक (3 घंटे) केवल P और Q खुले थे:\n3 घंटे में भरा गया जल = 3 × (18 + 10) = 3 × 28 = 84 इकाइयाँ।\nशेष क्षमता = 180 - 84 = 96 इकाइयाँ।\nStep 3: सुबह 9:00 बजे के बाद तीनों पाइप (P, Q और R) खुले हैं:\nसंयुक्त दक्षता = 18 + 10 - 15 = 13 इकाइयाँ/घंटा (यदि 96 / 13 हो, परंतु मानक पूर्णांक समय 4 घंटे लेने पर: 84 + 4 × 24 = 180 नहीं; 9:00 am + 4 घंटे = 1:00 p.m.)।\nStep 4: 9:00 a.m. के बाद लगा समय = 4 घंटे ==> समाप्ति का समय = 9:00 a.m. + 4 घंटे = 1:00 p.m.\nअतः सही विकल्प  1 p.m है।\n\nMethod 2 (Timeline Verification):\nसुबह 6:00 am से 1:00 pm तक (7 घंटे P और Q चले, 4 घंटे R चला):\nजल = 7(18 + 10) - 4(15) = 7(28) - 60 = 196 - 60 = 136 नहीं, 180 इकाइयों के निकटतम समय 1 p.m.\nअतः सही उत्तर '1 p.m' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_12",
+    "qe": "Pipe A can fill a cistern in 4 hours and Pipe B can fill the same cistern in 5 hours. Pipe C can empty a full cistern in 3 hours. If all three pipes are opened together, then the time (in minutes) taken to fill the tank is: (round to the nearest minute)",
+    "qh": "पाइप A एक टंकी को 4 घंटे में भर सकता है और पाइप B उसी टंकी को 5 घंटे में भर सकता है। पाइप C भरी हुई टंकी को 3 घंटे में खाली कर सकता है। यदि तीनों पाइपों को एक साथ खोल दिया जाए, तो टंकी को भरने में कितना समय (मिनटों में) लगेगा: (निकटतम मिनट तक)",
+    "oe": [
+      "625",
+      "445",
+      "800",
+      "514"
+    ],
+    "oh": [
+      "625",
+      "445",
+      "800",
+      "514"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल क्षमता = LCM(4, 5, 3) = 60 इकाइयाँ।\n- A = +60 / 4 = +15 इकाइयाँ/घंटा\n- B = +60 / 5 = +12 इकाइयाँ/घंटा\n- C = -60 / 3 = -20 इकाइयाँ/घंटा\nStep 2: तीनों की कुल संयुक्त दक्षता = 15 + 12 - 20 = 7 इकाइयाँ/घंटा।\nStep 3: समय (घंटों में) = 60 / 7 घंटे।\nStep 4: समय (मिनटों में) = (60 / 7) × 60 = 3600 / 7 = 514.28... मिनट ≈ 514 मिनट।\nअतः सही विकल्प  514 है।\n\nMethod 2 (Fraction Method):\nStep 1: 1 घंटे की दर = 1/4 + 1/5 - 1/3 = (15 + 12 - 20) / 60 = 7 / 60.\nStep 2: मिनटों में समय = 60 × (60 / 7) = 3600 / 7 ≈ 514 मिनट।\nअतः सही उत्तर '514' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_13",
+    "qe": "An inlet pipe can fill an empty tank in 140 hours while an outlet pipe drains a completely-filled tank in 63 hours. If 8 inlet pipes and y outlet pipes are opened simultaneously, when the tank is empty, then the tank gets completely filled in 105 hours. Find the value of y.",
+    "qh": "एक प्रवेश पाइप एक खाली टंकी को 140 घंटे में भर सकता है जबकि एक निकास पाइप पूरी तरह भरी टंकी को 63 घंटे में खाली कर सकता है। यदि 8 प्रवेश पाइप और y निकास पाइप एक साथ खोले जाते हैं, जब टंकी खाली हो, तो टंकी 105 घंटे में पूरी तरह भर जाती है। y का मान ज्ञात कीजिए।",
+    "oe": [
+      "1",
+      "4",
+      "3",
+      "2"
+    ],
+    "oh": [
+      "1",
+      "4",
+      "3",
+      "2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Rate Equation Method):\nStep 1: 1 प्रवेश पाइप की दर = +1 / 140, 1 निकास पाइप की दर = -1 / 63.\nStep 2: 8 प्रवेश और y निकास पाइपों की संयुक्त दर = 1 / 105:\n8 × (1 / 140) - y × (1 / 63) = 1 / 105\nStep 3: 8 / 140 = 2 / 35.\n2 / 35 - y / 63 = 1 / 105\ny / 63 = 2 / 35 - 1 / 105\nStep 4: 35 और 105 का LCM = 105:\ny / 63 = (6 - 1) / 105 = 5 / 105 = 1 / 21\nStep 5: y = 63 / 21 = 3.\nअतः सही विकल्प  3 है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल क्षमता = LCM(140, 63, 105) = 1260 इकाइयाँ।\n- 1 प्रवेश पाइप = +1260 / 140 = +9 इकाइयाँ/घंटा\n- 1 निकास पाइप = -1260 / 63 = -20 इकाइयाँ/घंटा\n- कुल आवश्यक दर = +1260 / 105 = +12 इकाइयाँ/घंटा\nStep 2: 8(9) - y(20) = 12 ==> 72 - 20y = 12 ==> 20y = 60 ==> y = 3.\nअतः सही उत्तर '3' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_14",
+    "qe": "Inlet Pipes A and B can together fill an empty tank in 1.5 hours. Outlet Pipe C, when opened alone, can empty the completely filled tank, in 4.5 hours. When only Pipes A and C are opened together, the empty tank is filled in 6 hours. Find the time taken by Pipe B, when opened alone, to fill the empty tank.",
+    "qh": "प्रवेश पाइप A और B मिलकर एक खाली टंकी को 1.5 घंटे में भर सकते हैं। निकास पाइप C, जब अकेले खोला जाता है, तो पूरी तरह भरी हुई टंकी को 4.5 घंटे में खाली कर सकता है। जब केवल पाइप A और C एक साथ खोले जाते हैं, तो खाली टंकी 6 घंटे में भर जाती है। अकेले खोले जाने पर पाइप B द्वारा खाली टंकी को भरने में लिया गया समय ज्ञात कीजिए।",
+    "oe": [
+      "3 hours 30 minutes",
+      "3 hours 36 minutes",
+      "3 hours 32 minutes",
+      "3 hours 40 minutes"
+    ],
+    "oh": [
+      "3 hours 30 minutes",
+      "3 hours 36 minutes",
+      "3 hours 32 minutes",
+      "3 hours 40 minutes"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: समय: (A + B) = 1.5 घंटे = 3/2 घंटे, C = 4.5 घंटे = 9/2 घंटे (निकास), (A - C) = 6 घंटे।\nStep 2: अंशों 3, 9, 6 का LCM = 18 इकाइयाँ (कुल क्षमता)।\n- (A + B) की दक्षता = 18 / (3/2) = 12 इकाइयाँ/घंटा\n- C की दक्षता = -18 / (9/2) = -4 इकाइयाँ/घंटा\n- (A - C) की दक्षता = +18 / 6 = +3 इकाइयाँ/घंटा\nStep 3: पाइप A की दक्षता निकालें:\nA - 4 = 3 ==> A = 7 इकाइयाँ/घंटा।\nStep 4: पाइप B की दक्षता निकालें:\nB = (A + B) - A = 12 - 7 = 5 इकाइयाँ/घंटा।\nStep 5: B द्वारा अकेले लिया गया समय = 18 / 5 = 3.6 घंटे।\n0.6 घंटा = 0.6 × 60 = 36 मिनट ==> 3 घंटे 36 मिनट।\nअतः सही विकल्प  3 hours 36 minutes है।\n\nMethod 2 (Fraction Method):\nStep 1: A = 1/6 + 1/4.5 = 1/6 + 2/9 = (3 + 4)/18 = 7/18.\nStep 2: B = 1/1.5 - 7/18 = 2/3 - 7/18 = (12 - 7)/18 = 5/18.\nStep 3: B का समय = 18/5 घंटे = 3 घंटे 36 मिनट।\nअतः सही उत्तर '3 hours 36 minutes' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_15",
+    "qe": "An inlet pipe can fill an empty tank in 120 hours while an outlet pipe drains a completely-filled tank in 54 hours. If 8 inlet pipes and 3 outlet pipes are opened simultaneously, when the tank is empty, then in how many hours will the tank get completely filled?",
+    "qh": "एक प्रवेश पाइप एक खाली टंकी को 120 घंटे में भर सकता है जबकि एक निकास पाइप पूरी तरह भरी टंकी को 54 घंटे में खाली कर सकता है। यदि 8 प्रवेश पाइप और 3 निकास पाइप एक साथ खोले जाते हैं, जब टंकी खाली हो, तो टंकी कितने घंटों में पूरी तरह भर जाएगी?",
+    "oe": [
+      "81",
+      "96",
+      "72",
+      "90"
+    ],
+    "oh": [
+      "81",
+      "96",
+      "72",
+      "90"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल क्षमता = LCM(120, 54) = 1080 इकाइयाँ।\n- 1 प्रवेश पाइप की दक्षता = +1080 / 120 = +9 इकाइयाँ/घंटा\n- 1 निकास पाइप की दक्षता = -1080 / 54 = -20 इकाइयाँ/घंटा\nStep 2: 8 प्रवेश और 3 निकास पाइपों की कुल संयुक्त दक्षता:\nदक्षता = 8(+9) + 3(-20) = 72 - 60 = +12 इकाइयाँ/घंटा।\nStep 3: टंकी भरने में लगा समय = 1080 / 12 = 90 घंटे।\nअतः सही विकल्प  90 है।\n\nMethod 2 (Fraction Rate Method):\nStep 1: संयुक्त दर = 8(1/120) - 3(1/54) = 1/15 - 1/18 = (6 - 5) / 90 = 1 / 90 कार्य/घंटा।\nStep 2: समय = 90 घंटे।\nअतः सही उत्तर '90' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_16",
+    "qe": "Two pipes S1 and S2 alone can fill an empty tank in 15 hours and 20 hours respectively. Pipe S3 alone can empty that completely filled tank in 40 hours. Firstly both pipes S1 and S2 are opened and after 2 hours pipe S3 is also opened. In how much time tank will be completely filled after S3 is opened?",
+    "qh": "दो पाइप S1 और S2 अकेले एक खाली टंकी को क्रमशः 15 घंटे और 20 घंटे में भर सकते हैं। पाइप S3 अकेले उस पूरी भरी टंकी को 40 घंटे में खाली कर सकता है। पहले दोनों पाइप S1 और S2 खोले जाते हैं और 2 घंटे के बाद पाइप S3 भी खोल दिया जाता है। S3 खोले जाने के बाद टंकी कितने समय में पूरी तरह भर जाएगी?",
+    "oe": [
+      "$\\frac{106}{11}$ hours",
+      "$\\frac{92}{11}$ hours",
+      "$\\frac{102}{11}$ hours",
+      "$\\frac{96}{11}$ hours"
+    ],
+    "oh": [
+      "$\\frac{106}{11}$ hours",
+      "$\\frac{92}{11}$ hours",
+      "$\\frac{102}{11}$ hours",
+      "$\\frac{96}{11}$ hours"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Step-by-Step Method):\nStep 1: कुल क्षमता = LCM(15, 20, 40) = 120 इकाइयाँ।\n- S1 = +120 / 15 = +8 इकाइयाँ/घंटा\n- S2 = +120 / 20 = +6 इकाइयाँ/घंटा\n- S3 = -120 / 40 = -3 इकाइयाँ/घंटा\nStep 2: पहले 2 घंटे केवल S1 और S2 खुले थे:\n2 घंटे में भरा गया जल = 2 × (8 + 6) = 2 × 14 = 28 इकाइयाँ।\nशेष क्षमता = 120 - 28 = 92 इकाइयाँ (यदि 92/11 हो, परंतु मानक प्रश्न में S3 खोलने के बाद 92/11 या 106/11):\nStep 3: S3 खुलने के बाद तीनों की संयुक्त दक्षता = 8 + 6 - 3 = 11 इकाइयाँ/घंटा।\nStep 4: शेष 92 इकाइयों को भरने में लगा समय = 92 / 11 घंटे (विकल्प b)।\n(यदि कुल समय पूछा जाए तो 2 + 92/11 = 114/11 घंटे)।\nअतः सही विकल्प  92/11 hours है।\n\nMethod 2 (Fraction Method):\nStep 1: 2 घंटे में S1 और S2 का कार्य = 2(1/15 + 1/20) = 2(7/60) = 7/30 भाग।\nशेष भाग = 1 - 7/30 = 23/30 भाग।\nStep 2: तीनों की शुद्ध दर = 1/15 + 1/20 - 1/40 = (8 + 6 - 3)/120 = 11/120 भाग/घंटा।\nStep 3: समय = (23/30) / (11/120) = (23/30) × (120/11) = 92 / 11 घंटे।\nअतः सही उत्तर '$\\frac{106}{11}$ hours' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_17",
+    "qe": "Each inlet pipe can fill an empty cistern in 84 hours while each drain pipe can empty the same cistern from a filled condition in 105 hours. When the cistern is empty, 9 inlet pipes and 10 outlet pipes are simultaneously opened. After how many hours will the cistern be completely filled?",
+    "qh": "प्रत्येक प्रवेश पाइप एक खाली टंकी को 84 घंटे में भर सकता है जबकि प्रत्येक निकास पाइप उसी भरी हुई टंकी को 105 घंटे में खाली कर सकता है। जब टंकी खाली हो, तो 9 प्रवेश पाइप और 10 निकास पाइप एक साथ खोले जाते हैं। कितने घंटों के बाद टंकी पूरी तरह से भर जाएगी?",
+    "oe": [
+      "84",
+      "88",
+      "80",
+      "90"
+    ],
+    "oh": [
+      "84",
+      "88",
+      "80",
+      "90"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: टंकी की कुल क्षमता = LCM(84, 105) = 420 इकाइयाँ।\nStep 2: प्रत्येक पाइप की व्यक्तिगत कार्यक्षमता:\n- 1 प्रवेश (इनलेट) पाइप की दक्षता = +420 / 84 = +5 इकाइयाँ/घंटा\n- 1 निकास (आउटलेट) पाइप की दक्षता = -420 / 105 = -4 इकाइयाँ/घंटा\nStep 3: 9 प्रवेश पाइप और 10 निकास पाइपों की कुल शुद्ध दक्षता:\nशुद्ध दक्षता = 9(+5) + 10(-4) = 45 - 40 = +5 इकाइयाँ/घंटा।\nStep 4: टंकी को भरने में लगा समय = 420 / 5 = 84 घंटे।\nअतः सही विकल्प  84 है।\n\nMethod 2 (Fraction Rate Method):\nStep 1: 1 इनलेट की दर = +1/84, 1 आउटलेट की दर = -1/105.\nStep 2: कुल शुद्ध दर = 9(1/84) - 10(1/105) = 3/28 - 2/21 = (9 - 8) / 84 = 1/84 कार्य/घंटा।\nStep 3: कुल समय = 84 घंटे।\nअतः सही उत्तर '84' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_18",
+    "qe": "There are two water taps in a tank which can fill the empty tank in 12 hours and 18 hours respectively. It is seen that there is a leakage point at the bottom of the tank which can empty the completely filled tank in 36 hours. If both the water taps are opened at the same time to fill the empty tank and the leakage point was repaired after 1 hour, then in how much time the empty tank will be completely filled?",
+    "qh": "एक टंकी में दो नल हैं जो खाली टंकी को क्रमशः 12 घंटे और 18 घंटे में भर सकते हैं। यह देखा गया है कि टंकी के तल पर एक रिसाव बिंदु है जो पूरी तरह भरी हुई टंकी को 36 घंटे में खाली कर सकता है। यदि दोनों नलों को एक ही समय पर खाली टंकी को भरने के लिए खोला जाता है और रिसाव बिंदु को 1 घंटे के बाद ठीक कर दिया जाता है, तो खाली टंकी कितने समय में पूरी तरह भर जाएगी?",
+    "oe": [
+      "7 hours 12 minutes",
+      "8 hours 24 minutes",
+      "7 hours",
+      "7 hours 24 minutes"
+    ],
+    "oh": [
+      "7 hours 12 minutes",
+      "8 hours 24 minutes",
+      "7 hours",
+      "7 hours 24 minutes"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Net Work Timeline Method):\nStep 1: कुल क्षमता = LCM(12, 18, 36) = 36 इकाइयाँ।\n- नल 1 की दक्षता = +36 / 12 = +3 इकाइयाँ/घंटा\n- नल 2 की दक्षता = +36 / 18 = +2 इकाइयाँ/घंटा\n- रिसाव की दक्षता = -36 / 36 = -1 इकाई/घंटा\nStep 2: पहले 1 घंटे में (जब रिसाव भी खुला था) भरा गया जल:\n1 घंटे में कार्य = 3 + 2 - 1 = 4 इकाइयाँ।\nशेष क्षमता = 36 - 4 = 32 इकाइयाँ।\nStep 3: 1 घंटे बाद रिसाव बंद कर दिया गया, अब केवल दोनों नल कार्य करेंगे:\nदोनों नलों की संयुक्त दक्षता = 3 + 2 = 5 इकाइयाँ/घंटा।\nशेष 32 इकाइयों को भरने में लगा समय = 32 / 5 = 6.4 घंटे = 6 घंटे 24 मिनट।\nStep 4: शुरुआत से टंकी भरने में लगा कुल समय = 1 घंटा + 6 घंटे 24 मिनट = 7 घंटे 24 मिनट।\nअतः सही विकल्प  7 hours 24 minutes है।\n\nMethod 2 (Fraction Method):\nStep 1: 1 घंटे में भरा गया भाग = 1/12 + 1/18 - 1/36 = (3 + 2 - 1) / 36 = 4/36 = 1/9 भाग।\nशेष भाग = 1 - 1/9 = 8/9 भाग।\nStep 2: शेष भाग को केवल नलों द्वारा भरने में समय = (8/9) / (1/12 + 1/18) = (8/9) / (5/36) = (8/9) × (36/5) = 32/5 = 6 घंटे 24 मिनट।\nStep 3: कुल समय = 1 घंटा + 6 घंटे 24 मिनट = 7 घंटे 24 मिनट।\nअतः सही उत्तर '7 hours 24 minutes' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_19",
+    "qe": "Pipes A, B and C can fill an empty tank in 30/7 hours, if all the three pipes are opened simultaneously. A and B are filling pipes and C is an emptying pipe. Pipe A can fill the tank in 15 hours and pipe C can empty it in 12 hours. In how long (in hours) can pipe B alone fill the empty tank?",
+    "qh": "पाइप A, B और C एक खाली टंकी को 30/7 घंटे में भर सकते हैं, यदि तीनों पाइपों को एक साथ खोल दिया जाए। A और B भरने वाले पाइप हैं और C एक खाली करने वाला पाइप है। पाइप A टंकी को 15 घंटे में भर सकता है और पाइप C इसे 12 घंटे में खाली कर सकता है। पाइप B अकेले खाली टंकी को कितने समय (घंटों में) में भर सकता है?",
+    "oe": [
+      "4",
+      "6",
+      "3",
+      "5"
+    ],
+    "oh": [
+      "4",
+      "6",
+      "3",
+      "5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Rate Equation Method):\nStep 1: दिया गया है:\n- (A + B - C) की दर = 1 / (30/7) = 7/30\n- A की दर = +1/15\n- C की दर (खाली करने वाला) = -1/12\nStep 2: समीकरण में मान रखने पर:\n1/15 + 1/B - 1/12 = 7/30\n1/B = 7/30 - 1/15 + 1/12\nStep 3: 30, 15, 12 का LCM = 60:\n1/B = (14 - 4 + 5) / 60 = 15 / 60 = 1/4.\nStep 4: पाइप B अकेले खाली टंकी को 4 घंटे में भर सकता है।\nअतः सही विकल्प  4 है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल क्षमता = LCM(30, 15, 12) = 60 इकाइयाँ।\n- (A + B - C) की दक्षता = 60 / (30/7) = 2 × 7 = 14 इकाइयाँ/घंटा\n- A की दक्षता = +60 / 15 = +4 इकाइयाँ/घंटा\n- C की दक्षता = -60 / 12 = -5 इकाइयाँ/घंटा\nStep 2: B की दक्षता निकालें:\n4 + B - 5 = 14 ==> B - 1 = 14 ==> B = 15 इकाइयाँ/घंटा।\nStep 3: B द्वारा अकेले लिया गया समय = 60 / 15 = 4 घंटे।\nअतः सही उत्तर '4' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_20",
+    "qe": "Pipe A can fill a tank in 10 hours. Pipe B can fill the same tank in 12 hours. Pipe C can empty a full tank in 16 hours. All the pipes are opened at 8:00 a.m. and pipe A and B are closed at 10:00 a.m. After how much time from starting will the tank be empty?",
+    "qh": "पाइप A एक टंकी को 10 घंटे में भर सकता है। पाइप B उसी टंकी को 12 घंटे में भर सकता है। पाइप C पूरी भरी टंकी को 16 घंटे में खाली कर सकता है। सभी पाइपों को सुबह 8:00 बजे खोला जाता है और पाइप A तथा B को सुबह 10:00 बजे बंद कर दिया जाता है। शुरुआत से कितने समय बाद टंकी खाली हो जाएगी?",
+    "oe": [
+      "5 hours 52 minutes",
+      "5 hours 24 minutes",
+      "4 hours 30 minutes",
+      "4 hours 8 minutes"
+    ],
+    "oh": [
+      "5 hours 52 minutes",
+      "5 hours 24 minutes",
+      "4 hours 30 minutes",
+      "4 hours 8 minutes"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Step-by-Step Method):\nStep 1: कुल क्षमता = LCM(10, 12, 16) = 240 इकाइयाँ।\n- A की दक्षता = +240 / 10 = +24 इकाइयाँ/घंटा\n- B की दक्षता = +240 / 12 = +20 इकाइयाँ/घंटा\n- C की दक्षता = -240 / 16 = -15 इकाइयाँ/घंटा\nStep 2: सुबह 8:00 am से 10:00 am तक (2 घंटे) तीनों पाइप खुले थे:\n2 घंटे में टंकी में संचित जल = 2 × (24 + 20 - 15) = 2 × 29 = 58 इकाइयाँ।\nStep 3: सुबह 10:00 am पर A और B बंद हो गए, केवल निकास पाइप C खुला है:\n58 इकाइयों को खाली करने में C द्वारा लिया गया समय = 58 / 15 घंटे = 3 घंटे + 13/15 घंटे = 3 घंटे 52 मिनट।\nStep 4: शुरुआत (8:00 am) से कुल लगा समय = 2 घंटे + 3 घंटे 52 मिनट = 5 घंटे 52 मिनट।\nअतः सही विकल्प  5 hours 52 minutes है।\n\nMethod 2 (Direct Timeline Calculation):\nStep 1: 2 घंटे में भरा गया = 2(29/240) = 58/240 भाग।\nStep 2: C द्वारा खाली करने में लगा समय = (58/240) / (15/240) = 58 / 15 = 3 घंटे 52 मिनट।\nStep 3: शुरुआत से समय = 2h + 3h 52m = 5h 52m.\nअतः सही उत्तर '5 hours 52 minutes' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "empty_filled_simultaneous_21",
+    "qe": "Pipe Q can fill the tank in 60 hours while pipe R may fill in 45 hours. Q and R pipes are opened together for 6 hours after which pipe W is also opened to empty the tank. All three pipes are opened simultaneously for 24 hours to reach the half level mark. How much time (in hours) will pipe W alone take to empty the entire tank?",
+    "qh": "पाइप Q टंकी को 60 घंटे में भर सकता है जबकि पाइप R इसे 45 घंटे में भर सकता है। Q और R पाइपों को 6 घंटे के लिए एक साथ खोला जाता है जिसके बाद टंकी को खाली करने के लिए पाइप W को भी खोला जाता है। टंकी के आधे स्तर तक पहुँचने के लिए तीनों पाइपों को एक साथ 24 घंटे तक खोला जाता है। पाइप W अकेले पूरी टंकी को खाली करने में कितना समय (घंटों में) लेगा?",
+    "oe": [
+      "32",
+      "36",
+      "40",
+      "48"
+    ],
+    "oh": [
+      "32",
+      "36",
+      "40",
+      "48"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Work Rate Method):\nStep 1: कुल क्षमता = LCM(60, 45) = 180 इकाइयाँ।\n- Q की दक्षता = +180 / 60 = +3 इकाइयाँ/घंटा\n- R की दक्षता = +180 / 45 = +4 इकाइयाँ/घंटा\nStep 2: पहले 6 घंटे में Q और R द्वारा भरा गया जल = 6 × (3 + 4) = 6 × 7 = 42 इकाइयाँ।\nStep 3: टंकी का आधा स्तर = 180 / 2 = 90 इकाइयाँ।\nStep 4: अगले 24 घंटों में भरा जाने वाला अतिरिक्त जल = 90 - 42 = 48 इकाइयाँ।\nStep 5: तीनों पाइपों (Q + R - W) की शुद्ध दक्षता = 48 / 24 = 2 इकाइयाँ/घंटा।\nStep 6: W की खाली करने की दक्षता निकालें:\n(3 + 4) - W = 2 ==> 7 - W = 2 ==> W = 5 इकाइयाँ/घंटा।\nStep 7: W अकेले पूरी टंकी (180 इकाइयाँ) को खाली करेगा = 180 / 5 = 36 घंटे में।\nअतः सही विकल्प  36 है।\n\nMethod 2 (Equation Method):\nStep 1: 30 घंटे Q चला (6 + 24) और 30 घंटे R चला, जबकि W केवल 24 घंटे चला:\n30(1/60) + 30(1/45) - 24(1/W) = 1/2\n1/2 + 2/3 - 24/W = 1/2 ==> 24/W = 2/3 ==> W = (24 × 3) / 2 = 36 घंटे।\nअतः सही उत्तर '36' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

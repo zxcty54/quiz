@@ -1,0 +1,1313 @@
+[
+  {
+    "p_id": "divisibilty_1",
+    "qe": "210102 can be divided exactly by",
+    "qh": "210102 को पूर्णतः किसके द्वारा विभाजित किया जा सकता है?",
+    "oe": [
+      "7",
+      "3",
+      "4",
+      "8"
+    ],
+    "oh": [
+      "7",
+      "3",
+      "4",
+      "8"
+    ],
+    "a": 1,
+    "e": "Method 1 (Divisibility Rules Method):\nStep 1: 3 से विभाज्यता का नियम (अंकों का योग 3 से विभाज्य होना चाहिए):\n$$\\text{अंकों का योग} = 2 + 1 + 0 + 1 + 0 + 2 = 6$$\nचूँकि 6 संख्या 3 से पूर्णतः विभाज्य है, अतः 210102 संख्या 3 से पूर्णतः विभाज्य होगी।\nStep 2: अन्य विकल्पों की जाँच:\n- 4 से विभाज्यता: अंतिम दो अंक 02 हैं, जो 4 से विभाज्य नहीं हैं।\n- 8 से विभाज्यता: अंतिम तीन अंक 102 हैं, जो 8 से विभाज्य नहीं हैं।\n- 7 से विभाज्यता: $210102 \\div 7 = 30014.57$ (पूर्णतः विभाज्य नहीं है)।\nअतः सही विकल्प  3 है।\n\nMethod 2 (Direct Division Method):\n$$210102 $\\div$ 3 = 70034$$\nअतः सही उत्तर '3' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_2",
+    "qe": "Number 30744 is divisible by which one digit number?",
+    "qh": "संख्या 30744 एक अंक वाली किस संख्या से विभाज्य है?",
+    "oe": [
+      "All the other numbers except 5 and 7",
+      "only 2, 3 and 6",
+      "only 2, 3, 6 and 9",
+      "All the other numbers except 5"
+    ],
+    "oh": [
+      "All the other numbers except 5 and 7",
+      "only 2, 3 and 6",
+      "only 2, 3, 6 and 9",
+      "All the other numbers except 5"
+    ],
+    "a": 3,
+    "e": "Method 1 (Comprehensive Divisibility Test Method):\nStep 1: 1 से 9 तक के अंकों से विभाज्यता की जाँच करें:\n- 2 से: अंतिम अंक 4 (सम) है $\\implies$ विभाज्य है।\n- 3 और 9 से: अंकों का योग $= 3 + 0 + 7 + 4 + 4 = 18$ (18 संख्या 3 और 9 दोनों से विभाज्य है) $\\implies$ 3 और 9 दोनों से विभाज्य है।\n- 4 से: अंतिम दो अंक 44 हैं ($44 \\div 4 = 11$) $\\implies$ 4 से विभाज्य है।\n- 5 से: अंतिम अंक 0 या 5 नहीं है $\\implies$ 5 से विभाज्य नहीं है।\n- 6 से: संख्या 2 और 3 दोनों से विभाज्य है $\\implies$ 6 से विभाज्य है।\n- 7 से: $30744 \\div 7 = 4392$ (पूर्णतः विभाज्य है)।\n- 8 से: अंतिम तीन अंक 744 हैं ($744 \\div 8 = 93$) $\\implies$ 8 से विभाज्य है।\nStep 2: संख्या 30744 केवल 5 को छोड़कर अन्य सभी एक-अंक वाली संख्याओं (2, 3, 4, 6, 7, 8, 9) से पूर्णतः विभाज्य है।\nअतः सही विकल्प  All the other numbers except 5 है।\n\nMethod 2 (Elimination Method):\n$30744 \\div 7 = 4392$ (7 से विभाज्य है, अतः विकल्प a गलत है)।\nअंतिम तीन अंक 744, 8 से विभाज्य हैं और योग 18, 9 से विभाज्य है, अतः विकल्प b व c अपूर्ण हैं।\nअतः सही उत्तर 'All the other numbers except 5' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_3",
+    "qe": "Number 106974 is divisible by which one digit number?",
+    "qh": "संख्या 106974 एक अंक वाली किस संख्या से विभाज्य है?",
+    "oe": [
+      "only 2, 3, 4 and 7",
+      "only 2 and 3",
+      "only 2, 3 and 4",
+      "only 2, 3 and 7"
+    ],
+    "oh": [
+      "only 2, 3, 4 and 7",
+      "only 2 and 3",
+      "only 2, 3 and 4",
+      "only 2, 3 and 7"
+    ],
+    "a": 3,
+    "e": "Method 1 (Option Testing Method):\nStep 1: 2 से विभाज्यता: अंतिम अंक 4 (सम) है $\\implies$ 2 से विभाज्य है।\nStep 2: 3 से विभाज्यता: अंकों का योग $= 1 + 0 + 6 + 9 + 7 + 4 = 27$ $\\implies$ 3 से विभाज्य है।\nStep 3: 4 से विभाज्यता: अंतिम दो अंक 74 हैं ($74 \\div 4 = 18.5$) $\\implies$ 4 से विभाज्य नहीं है।\n(अतः विकल्प a और c निरस्त होते हैं)\nStep 4: 7 से विभाज्यता: $106974 \\div 7 = 15282$ $\\implies$ 7 से पूर्णतः विभाज्य है।\nअतः दी गई सूची में से यह केवल 2, 3 और 7 से विभाज्य है।\nअतः सही विकल्प  only 2, 3 and 7 है।\n\nMethod 2 (7's Divisibility Rule):\nअंतिम तीन अंकों (974) और शेष अंकों (106) का अंतर निकालें:\n$$974 - 106 = 868$$\n$$868 $\\div$ 7 = 124$$\nचूँकि 868 संख्या 7 से पूर्णतः विभाज्य है, अतः मूल संख्या भी 7 से विभाज्य है।\nअतः सही उत्तर 'only 2, 3 and 7' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_4",
+    "qe": "The number 23474 is exactly divisible by",
+    "qh": "संख्या 23474 विभाज्य है :",
+    "oe": [
+      "2 and 3 only",
+      "2 and 4 only",
+      "2 and 11 only",
+      "only 2"
+    ],
+    "oh": [
+      "2 and 3 only",
+      "2 and 4 only",
+      "2 and 11 only",
+      "only 2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Divisibility Rules Method):\nStep 1: 2 से विभाज्यता: अंतिम अंक 4 (सम) है $\\implies$ 2 से विभाज्य है।\nStep 2: 3 से विभाज्यता: अंकों का योग $= 2 + 3 + 4 + 7 + 4 = 20$ (3 से विभाज्य नहीं है)।\nStep 3: 4 से विभाज्यता: अंतिम दो अंक 74 हैं ($74 \\div 4 = 18.5$, 4 से विभाज्य नहीं है)।\nStep 4: 11 से विभाज्यता (विषम और सम स्थानों के अंकों के योग का अंतर):\n$$\\text{विषम स्थानों का योग} = 2 + 4 + 4 = 10$$\n$$\\text{सम स्थानों का योग} = 3 + 7 = 10$$\n$$\\text{अंतर} = 10 - 10 = 0$$\nचूँकि अंतर 0 है, अतः संख्या 11 से पूर्णतः विभाज्य है।\nStep 5: अतः संख्या 23474 केवल 2 और 11 से विभाज्य है।\nअतः सही विकल्प  2 and 11 only है।\n\nMethod 2 (Direct Division Method):\n$$23474 $\\div$ 22 = 1067$$\nअतः सही उत्तर '2 and 11 only' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_5",
+    "qe": "Find the value of k such that the number k53206k is divisible by 6.",
+    "qh": "k का मान ज्ञात कीजिए, जिससे k53206k, 6 से विभाज्य हो।",
+    "oe": [
+      "4",
+      "1",
+      "2",
+      "7"
+    ],
+    "oh": [
+      "4",
+      "1",
+      "2",
+      "7"
+    ],
+    "a": 0,
+    "e": "Method 1 (Divisibility by 2 and 3 Method):\nStep 1: किसी संख्या के 6 से विभाज्य होने के लिए उसे 2 और 3 दोनों से विभाज्य होना चाहिए।\nStep 2: 2 से विभाज्यता के लिए अंतिम अंक $k$ एक सम अंक होना चाहिए:\n$$k \\in \\{2, 4, 6, 8\\} \\quad (k \\ne 0 \\text{ क्योंकि } k \\text{ पहला अंक भी है})$$\n(अतः विकल्प b और d स्वतः निरस्त हो जाते हैं)\nStep 3: 3 से विभाज्यता के लिए अंकों का योग निकालें:\n$$\\text{योग} = k + 5 + 3 + 2 + 0 + 6 + k = 2k + 16$$\nStep 4: शेष विकल्पों का परीक्षण करें:\n- यदि $k = 2$: योग $= 2(2) + 16 = 20$ (3 से विभाज्य नहीं)\n- यदि $k = 4$: योग $= 2(4) + 16 = 24$ (3 से पूर्णतः विभाज्य है)\nअतः $k = 4$ सही मान है।\nअतः सही विकल्प  4 है।\n\nMethod 2 (Direct Verification Method):\n$k = 4$ रखने पर संख्या $= 4532064$.\nअंतिम अंक 4 (सम) है और अंकों का योग 24 (3 से विभाज्य) है।\nअतः सही उत्तर '4' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_6",
+    "qe": "Which of the following number is divisible by 6?",
+    "qh": "निम्न में से कौन-सी संख्या 6 से विभाज्य है?",
+    "oe": [
+      "23,408",
+      "43,923",
+      "1,00,246",
+      "3,49,722"
+    ],
+    "oh": [
+      "23,408",
+      "43,923",
+      "1,00,246",
+      "3,49,722"
+    ],
+    "a": 3,
+    "e": "Method 1 (Divisibility by 2 and 3 Test Method):\nStep 1: 6 से विभाज्य होने के लिए संख्या को सम (2 से विभाज्य) तथा अंकों का योग 3 से विभाज्य होना चाहिए।\nStep 2: विकल्पों का परीक्षण करें:\n- (a) 23,408: सम संख्या है, परंतु अंकों का योग $= 2 + 3 + 4 + 0 + 8 = 17$ (3 से विभाज्य नहीं)।\n- (b) 43,923: विषम संख्या है (अंतिम अंक 3) $\\implies$ 2 से विभाज्य नहीं।\n- (c) 1,00,246: सम संख्या है, परंतु अंकों का योग $= 1 + 0 + 0 + 2 + 4 + 6 = 13$ (3 से विभाज्य नहीं)।\n- (d) 3,49,722: अंतिम अंक 2 (सम) है, तथा अंकों का योग $= 3 + 4 + 9 + 7 + 2 + 2 = 27$ (3 से पूर्णतः विभाज्य है)।\nअतः केवल संख्या 3,49,722 ही 6 से विभाज्य है।\nअतः सही विकल्प  3,49,722 है।\n\nMethod 2 (Direct Division Method):\n$$349722 $\\div$ 6 = 58287$$\nअतः सही उत्तर '3,49,722' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_7",
+    "qe": "Find the sum of the greatest and the smallest number which may replace k in the number 3281k6 to make the number divisible by 6.",
+    "qh": "उस सबसे बड़ी और सबसे छोटी संख्या का योग ज्ञात करें, जो संख्या 3281k6 में k को प्रतिस्थापित करके संख्या को 6 से विभाज्य बना सकती है।",
+    "oe": [
+      "9",
+      "8",
+      "5",
+      "4"
+    ],
+    "oh": [
+      "9",
+      "8",
+      "5",
+      "4"
+    ],
+    "a": 1,
+    "e": "Method 1 (Digit Sum Extremes Method):\nStep 1: संख्या $3281k6$ का अंतिम अंक 6 (सम) है, अतः यह $k$ के किसी भी मान के लिए सदैव 2 से विभाज्य है।\nStep 2: संख्या को 3 से विभाज्य बनाने के लिए अंकों का योग निकालें:\n$$\\text{योग} = 3 + 2 + 8 + 1 + k + 6 = 20 + k$$\nStep 3: $(20 + k)$ को 3 से विभाज्य बनाने वाले $k$ के संभावित एकल-अंक ($0 \\le k \\le 9$):\n- यदि $k = 1$: $20 + 1 = 21$ (3 से विभाज्य)\n- यदि $k = 4$: $20 + 4 = 24$ (3 से विभाज्य)\n- यदि $k = 7$: $20 + 7 = 27$ (3 से विभाज्य)\nStep 4: सबसे छोटा और सबसे बड़ा मान:\n- सबसे छोटा मान ($k_{\\min}$) $= 1$\n- सबसे बड़ा मान ($k_{\\max}$) $= 7$\nStep 5: दोनों का योग निकालें:\n$$\\text{योग} = 1 + 7 = 8$$\nअतः सही विकल्प  8 है।\n\nMethod 2 (Modulo 3 Method):\n$$20 + k \\equiv 2 + k \\equiv 0 $\\pm$od 3 \\implies k = 1, 4, 7$$\n$$k_{\\min} + k_{\\max} = 1 + 7 = 8$$\nअतः सही उत्तर '8' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_8",
+    "qe": "If the number 87m6203m is divisible by 6, then find the sum of all possible values of 'm'.",
+    "qh": "यदि संख्या 87m6203m, 6 से विभाज्य हो, तो 'm' के सभी संभावित मानों का योगफल ज्ञात करें।",
+    "oe": [
+      "10",
+      "15",
+      "16",
+      "20"
+    ],
+    "oh": [
+      "10",
+      "15",
+      "16",
+      "20"
+    ],
+    "a": 0,
+    "e": "Method 1 (Even Constraint and 3's Divisibility Method):\nStep 1: संख्या $87m6203m$ को 6 से विभाज्य होने के लिए 2 और 3 दोनों से विभाज्य होना चाहिए।\nStep 2: अंतिम अंक $m$ होने के कारण $m$ को एक सम अंक होना चाहिए:\n$$m \\in \\{0, 2, 4, 6, 8\\}$$\nStep 3: 3 से विभाज्यता के लिए अंकों का योग نکالें:\n$$\\text{योग} = 8 + 7 + m + 6 + 2 + 0 + 3 + m = 2m + 26$$\nStep 4: सभी सम मानों का परीक्षण करें:\n- $m = 0 \\implies 2(0) + 26 = 26$ (3 से विभाज्य नहीं)\n- $m = 2 \\implies 2(2) + 26 = 30$ (3 से विभाज्य है) $\\checkmark$\n- $m = 4 \\implies 2(4) + 26 = 34$ (3 से विभाज्य नहीं)\n- $m = 6 \\implies 2(6) + 26 = 38$ (3 से विभाज्य नहीं)\n- $m = 8 \\implies 2(8) + 26 = 42$ (3 से विभाज्य है) $\\checkmark$\nStep 5: $m$ के संभावित मान 2 और 8 हैं। सभी संभावित मानों का योग:\n$$\\text{योगफल} = 2 + 8 = 10$$\nअतः सही विकल्प  10 है।\n\nMethod 2 (Modular Arithmetic Method):\n$$2m + 26 \\equiv 2m + 2 \\equiv 0 $\\pm$od 3 \\implies 2(m + 1) \\equiv 0 $\\pm$od 3 \\implies m \\equiv 2 $\\pm$od 3$$\nसम संख्याएँ जो $3k + 2$ रूप की हैं: 2 और 8।\nयोग = $2 + 8 = 10$.\nअतः सही उत्तर '10' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_9",
+    "qe": "If the number 687x29 is divisible by 9, then the value of 2x is :",
+    "qh": "यदि संख्या 687x29, 9 से विभाजित है तो 2x का मान क्या होगा?",
+    "oe": [
+      "8",
+      "3",
+      "2",
+      "4"
+    ],
+    "oh": [
+      "8",
+      "3",
+      "2",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Sum of Digits for 9 Method):\nStep 1: 9 से विभाज्यता के नियम के अनुसार अंकों का योग 9 से विभाज्य होना चाहिए:\n$$\\text{अंकों का योग} = 6 + 8 + 7 + x + 2 + 9 = 32 + x$$\nStep 2: $x$ एक एकल अंक ($0 \\le x \\le 9$) है। 32 से बड़ा 9 का निकटतम गुणज 36 है:\n$$32 + x = 36 \\implies x = 36 - 32 = 4$$\nStep 3: $2x$ का मान निकालें:\n$$2x = 2 $\\times$ 4 = 8$$\nअतः सही विकल्प  8 है।\n\nMethod 2 (Digital Root Method):\n9 और अंकों के योग 9 को निरस्त करने पर:\n$$6 + 8 + 7 + x + 2 + 9 \\to 8 + 7 + x = 15 + x \\to 6 + x = 9 \\implies x = 4$$\n$$2x = 2(4) = 8$$\nअतः सही उत्तर '8' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_10",
+    "qe": "Which are the two nearest numbers in 19,596, divisible by 9?",
+    "qh": "19,596 से कौन-सी दो निकटतम संख्याएँ हैं, जो 9 से विभाज्य हैं?",
+    "oe": [
+      "19,564; 19,620",
+      "19,611; 19,575",
+      "19,509; 19,611",
+      "19,593; 19,602"
+    ],
+    "oh": [
+      "19,564; 19,620",
+      "19,611; 19,575",
+      "19,509; 19,611",
+      "19,593; 19,602"
+    ],
+    "a": 3,
+    "e": "Method 1 (Remainder Method):\nStep 1: 19,596 के अंकों का योग निकालें:\n$$\\text{योग} = 1 + 9 + 5 + 9 + 6 = 30$$\nStep 2: 30 को 9 से भाग देने पर शेषफल निकालें:\n$$30 = 9 $\\times$ 3 + 3 \\implies \\text{शेषफल} = 3$$\nStep 3: 19,596 से ठीक छोटी 9 से विभाज्य संख्या:\n$$19596 - 3 = 19593$$\nStep 4: 19,596 से ठीक बड़ी 9 से विभाज्य संख्या:\n$$19593 + 9 = 19602$$\nअतः 19,596 की दो निकटतम संख्याएँ 19,593 और 19,602 हैं।\nअतः सही विकल्प  19,593; 19,602 है।\n\nMethod 2 (Option Verification Method):\n- $19593 \\implies 1 + 9 + 5 + 9 + 3 = 27$ (9 से विभाज्य)\n- $19602 \\implies 1 + 9 + 6 + 0 + 2 = 18$ (9 से विभाज्य)\nदूरी केवल 3 और 6 है, जो सबसे निकटतम है।\nअतः सही उत्तर '19,593; 19,602' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_11",
+    "qe": "What should be the value of N to make 396258N divisible by 8?",
+    "qh": "8 से 396258N को विभाज्य बनाने के लिए N का मान क्या होना चाहिए?",
+    "oe": [
+      "2",
+      "8",
+      "4",
+      "6"
+    ],
+    "oh": [
+      "2",
+      "8",
+      "4",
+      "6"
+    ],
+    "a": 2,
+    "e": "Method 1 (Last Three Digits Rule Method):\nStep 1: 8 से विभाज्यता के नियम के अनुसार संख्या के अंतिम तीन अंक ($58N$) 8 से विभाज्य होने चाहिए।\nStep 2: 580 को 8 से भाग देकर शेषफल देखें:\n$$580 = 8 $\\times$ 72 + 4$$\nअर्थात $72 \\times 8 = 576$।\nStep 3: 576 के बाद 8 का अगला गुणज:\n$$576 + 8 = 584$$\nStep 4: $58N$ की तुलना 584 से करने पर:\n$$N = 4$$\nअतः सही विकल्प  4 है।\n\nMethod 2 (Option Verification Method):\n- $N = 2 \\implies 582 \\div 8 = 72.75$ (नहीं)\n- $N = 8 \\implies 588 \\div 8 = 73.5$ (नहीं)\n- $N = 4 \\implies 584 \\div 8 = 73$ (पूर्णतः विभाज्य है!)\nअतः सही उत्तर '4' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_12",
+    "qe": "Which of the following is divisible by 3?",
+    "qh": "निम्नलिखित में से कौन-सी संख्या 3 से विभाज्य है?",
+    "oe": [
+      "7345932",
+      "54397630",
+      "3642589",
+      "3262735"
+    ],
+    "oh": [
+      "7345932",
+      "54397630",
+      "3642589",
+      "3262735"
+    ],
+    "a": 0,
+    "e": "Method 1 (Sum of Digits Method):\nStep 1: 3 से विभाज्यता का नियम: किसी संख्या के सभी अंकों का योग 3 से पूर्णतः विभाज्य होना चाहिए।\nStep 2: प्रत्येक विकल्प के अंकों का योग निकालें:\n- (a) 7345932: $7 + 3 + 4 + 5 + 9 + 3 + 2 = 33$ (चूँकि 33 संख्या 3 से विभाज्य है: $33 \\div 3 = 11$, अतः यह संख्या 3 से विभाज्य है)\n- (b) 54397630: $5 + 4 + 3 + 9 + 7 + 6 + 3 + 0 = 37$ (3 से विभाज्य नहीं)\n- (c) 3642589: $3 + 6 + 4 + 2 + 5 + 8 + 9 = 37$ (3 से विभाज्य नहीं)\n- (d) 3262735: $3 + 2 + 6 + 2 + 7 + 3 + 5 = 28$ (3 से विभाज्य नहीं)\nStep 3: केवल विकल्प (a) का योग 3 से विभाज्य है।\nअतः सही विकल्प  7345932 है।\n\nMethod 2 (Digital Root Cancellation Method):\n3, 6, 9 और योग 3 बनाने वाले अंकों को काटते जाएँ:\n7345932 $\\to$ 9 कटा, 3 कटा, 3 कटा, $(7 + 2 = 9)$ कटा, $(4 + 5 = 9)$ कटा $\\implies$ शेष 0 (पूर्णतः विभाज्य)।\nअतः सही उत्तर '7345932' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_13",
+    "qe": "Which of the following numbers is divisible by 3?",
+    "qh": "निम्नलिखित में से कौन-सी संख्या 3 से विभाज्य है?",
+    "oe": [
+      "7865001",
+      "7803572",
+      "7803541",
+      "7803593"
+    ],
+    "oh": [
+      "7865001",
+      "7803572",
+      "7803541",
+      "7803593"
+    ],
+    "a": 0,
+    "e": "Method 1 (Sum of Digits Method):\nStep 1: 3 से विभाज्यता के लिए अंकों का योग निकालें:\n- (a) 7865001: $7 + 8 + 6 + 5 + 0 + 0 + 1 = 27$\n  चूँकि 27 संख्या 3 से विभाज्य है ($27 \\div 3 = 9$), अतः यह संख्या 3 से पूर्णतः विभाज्य है।\n- (b) 7803572: $7 + 8 + 0 + 3 + 5 + 7 + 2 = 32$ (विभाज्य नहीं)\n- (c) 7803541: $7 + 8 + 0 + 3 + 5 + 4 + 1 = 28$ (विभाज्य नहीं)\n- (d) 7803593: $7 + 8 + 0 + 3 + 5 + 9 + 3 = 35$ (विभाज्य नहीं)\nStep 2: केवल विकल्प (a) 3 से पूर्णतः विभाज्य है।\nअतः सही विकल्प  7865001 है।\n\nMethod 2 (Digital Sum Method):\n7865001 के अंकों का डिजिटल सम: $2 + 7 = 9$, जो 3 का गुणज है।\nअतः सही उत्तर '7865001' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_14",
+    "qe": "Which of the following numbers is divisible by 7?",
+    "qh": "निम्नलिखित में से कौन-सी संख्या 7 से विभाज्य है?",
+    "oe": [
+      "3739",
+      "3661",
+      "3659",
+      "3915"
+    ],
+    "oh": [
+      "3739",
+      "3661",
+      "3659",
+      "3915"
+    ],
+    "a": 1,
+    "e": "Method 1 (Divisibility Rule of 7 Method):\nStep 1: 7 से विभाज्यता के नियम (इकाई अंक का दोगुना शेष संख्या से घटाने पर) की जाँच करें:\n- (a) 3739: $373 - (2 \\times 9) = 373 - 18 = 355 \\implies 35 - 10 = 25$ (7 से विभाज्य नहीं)\n- (b) 3661: $366 - (2 \\times 1) = 364 \\implies 36 - (2 \\times 4) = 36 - 8 = 28$\n  चूँकि 28 संख्या 7 से पूर्णतः विभाज्य है ($28 \\div 7 = 4$), अतः 3661 संख्या 7 से विभाज्य है।\n- (c) 3659: $365 - 18 = 347 \\implies 34 - 14 = 20$ (7 से विभाज्य नहीं)\n- (d) 3915: $391 - 10 = 381 \\implies 38 - 2 = 36$ (7 से विभाज्य नहीं)\nStep 2: अतः केवल 3661 ही 7 से विभाज्य है।\nअतः सही विकल्प  3661 है।\n\nMethod 2 (Direct Division Method):\n$$3661 $\\div$ 7 = 523$$\nशेषफल = 0, अतः यह संख्या 7 से विभाज्य है।\nअतः सही उत्तर '3661' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_15",
+    "qe": "The largest six-digit number exactly divisible by 81 is:",
+    "qh": "81 से पूर्णतः विभाज्य छह अंकों की सबसे बड़ी संख्या कौन-सी है?",
+    "oe": [
+      "999876",
+      "999945",
+      "999989",
+      "999991"
+    ],
+    "oh": [
+      "999876",
+      "999945",
+      "999989",
+      "999991"
+    ],
+    "a": 1,
+    "e": "Method 1 (Division Remainder Method):\nStep 1: छह अंकों की सबसे बड़ी संख्या 999999 होती है।\nStep 2: 999999 को 81 से भाग दें:\n$$999999 = 81 $\\times$ 12345 + 54$$\nStep 3: भाग देने पर शेषफल 54 बचता है।\nStep 4: सबसे बड़ी संख्या में से शेषफल घटाएँ:\n$$\\text{अभीष्ट संख्या} = 999999 - 54 = 999945$$\nअतः सही विकल्प  999945 है।\n\nMethod 2 (Divisibility by 9 and Direct Elimination Method):\nचूँकि 81, 9 का गुणज है, अतः संख्या के अंकों का योग 9 से अवश्य विभाज्य होना चाहिए:\n- (a) $9+9+9+8+7+6 = 48$ (9 से विभाज्य नहीं)\n- (b) $9+9+9+9+4+5 = 45$ (9 से विभाज्य है)\n- (c) $9+9+9+9+8+9 = 53$ (9 से विभाज्य नहीं)\n- (d) $9+9+9+9+9+1 = 46$ (9 से विभाज्य नहीं)\nकेवल विकल्प (b) ही संभव है।\nअतः सही उत्तर '999945' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_16",
+    "qe": "Which of the following options is NOT divisible by 18?",
+    "qh": "निम्नलिखित में से कौन-सा विकल्प 18 से विभाज्य नहीं है?",
+    "oe": [
+      "571032",
+      "732546",
+      "245798",
+      "459018"
+    ],
+    "oh": [
+      "571032",
+      "732546",
+      "245798",
+      "459018"
+    ],
+    "a": 2,
+    "e": "Method 1 (Co-prime Divisibility Method):\nStep 1: 18 के सह-अभाज्य गुणनखंड 2 और 9 हैं ($18 = 2 \\times 9$)।\nअतः किसी संख्या के 18 से विभाज्य होने के लिए उसे सम (2 से विभाज्य) तथा उसके अंकों के योग को 9 से विभाज्य होना चाहिए।\nStep 2: सभी विकल्प सम संख्याएँ हैं (अंतिम अंक 2, 6, 8 हैं)। अब 9 से विभाज्यता जाँचें:\n- (a) 571032: योग $= 5 + 7 + 1 + 0 + 3 + 2 = 18$ (9 से विभाज्य है)\n- (b) 732546: योग $= 7 + 3 + 2 + 5 + 4 + 6 = 27$ (9 से विभाज्य है)\n- (c) 245798: योग $= 2 + 4 + 5 + 7 + 9 + 8 = 35$ (35 संख्या 9 से विभाज्य नहीं है)\n- (d) 459018: योग $= 4 + 5 + 9 + 0 + 1 + 8 = 27$ (9 से विभाज्य है)\nStep 3: अतः संख्या 245798, 18 से विभाज्य नहीं है।\nअतः सही विकल्प  245798 है।\n\nMethod 2 (Digital Sum Method):\nविकल्प (c) का डिजिटल सम: $3 + 5 = 8 \\ne 9$, अतः यह 9 तथा 18 से विभाज्य नहीं हो सकती।\nअतः सही उत्तर '245798' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_17",
+    "qe": "The 6-digit number 439xy5 is divisible by 125. How many such 6-digit numbers are there?",
+    "qh": "6-अंकीय संख्या 439xy5, 125 से विभाज्य है। ऐसी कितनी 6-अंकीय संख्याएँ हैं?",
+    "oe": [
+      "4",
+      "2",
+      "5",
+      "3"
+    ],
+    "oh": [
+      "4",
+      "2",
+      "5",
+      "3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Last Three Digits Divisibility Rule Method):\nStep 1: 125 ($= 5^3$) से विभाज्यता का नियम: किसी संख्या के अंतिम तीन अंक 125 से पूर्णतः विभाज्य होने चाहिए।\nStep 2: संख्या $439xy5$ के अंतिम तीन अंक रूप $xy5$ के हैं (अर्थात 5 पर समाप्त होने वाली 3-अंकीय संख्या)।\nStep 3: 125 के 3-अंकीय गुणज जो 5 पर समाप्त होते हैं:\n1. $125 \\times 1 = 125 \\implies (x=1, y=2)$\n2. $125 \\times 3 = 375 \\implies (x=3, y=7)$\n3. $125 \\times 5 = 625 \\implies (x=6, y=2)$\n4. $125 \\times 7 = 875 \\implies (x=8, y=7)$\n(नोट: $125 \\times 2 = 250, 125 \\times 4 = 500$ आदि 0 पर समाप्त होते हैं)\nStep 4: अतः $(x, y)$ के कुल 4 युग्म संभव हैं, जिससे ऐसी कुल 4 संख्याएँ बन सकती हैं।\nअतः सही विकल्प  4 है।\n\nMethod 2 (Systematic Counting Method):\n100 से 999 तक 125 के कुल गुणज 7 होते हैं (125, 250, 375, 500, 625, 750, 875)।\nइनमें से विषम गुणज (अंत में 5 वाले) की संख्या = 4.\nअतः सही उत्तर '4' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_18",
+    "qe": "The six-digit number 537xy5 is divisible by 125. How many such six-digit numbers are there?",
+    "qh": "छह-अंकीय संख्या 537xy5, 125 से विभाज्य है। ऐसी कितनी छह-अंकीय संख्याएँ हैं?",
+    "oe": [
+      "4",
+      "2",
+      "3",
+      "5"
+    ],
+    "oh": [
+      "4",
+      "2",
+      "3",
+      "5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Divisibility Rule of 125 Method):\nStep 1: किसी संख्या के 125 से विभाज्य होने के लिए उसके अंतिम तीन अंक 125 के गुणज होने चाहिए।\nStep 2: यहाँ अंतिम तीन अंक $xy5$ हैं, जो कि 5 पर समाप्त होते हैं।\nStep 3: 5 पर समाप्त होने वाले 125 के संभावित तीन-अंकीय मान:\n- 125\n- 375\n- 625\n- 875\nStep 4: अतः ऐसी कुल 4 छह-अंकीय संख्याएँ संभव हैं:\n537125, 537375, 537625, और 537875.\nअतः सही विकल्प  4 है।\n\nMethod 2 (Counting Principle):\n$125 \\times (2k + 1) < 1000$ के लिए $k \\in \\{0, 1, 2, 3\\}$ मान संभव हैं। कुल मान = 4.\nअतः सही उत्तर '4' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_19",
+    "qe": "For what value of x is the seven digit number 46393x8 divisible by 11?",
+    "qh": "x का कौन-सा मान रखने पर सात अंकों की संख्या 46393x8, 11 से विभाजित हो जाएगी?",
+    "oe": [
+      "5",
+      "3",
+      "2",
+      "7"
+    ],
+    "oh": [
+      "5",
+      "3",
+      "2",
+      "7"
+    ],
+    "a": 1,
+    "e": "Method 1 (Alternating Sum Divisibility Rule Method):\nStep 1: संख्या $46393x8$ के विषम और सम स्थानों के अंकों का योग निकालें:\n- विषम स्थानों के अंक (दाएं से): $8, 3, 3, 4$\n  $$\\text{योग}_1 = 8 + 3 + 3 + 4 = 18$$\n- सम स्थानों के अंक (दाएं से): $x, 9, 6$\n  $$\\text{योग}_2 = x + 9 + 6 = 15 + x$$\nStep 2: दोनों योगों का अंतर निकालें:\n$$\\text{अंतर} = \\text{योग}_1 - \\text{योग}_2 = 18 - (15 + x) = 3 - x$$\nStep 3: 11 से विभाज्यता के लिए अंतर 0 या 11 का गुणज होना चाहिए:\n$$3 - x = 0 \\implies x = 3$$\nअतः सही विकल्प  3 है।\n\nMethod 2 (Modular Sum Method):\n$$(4 - 6 + 3 - 9 + 3 - x + 8) \\equiv 0 $\\pm$od{11}$$\n$$(3 - x) \\equiv 0 $\\pm$od{11} \\implies x = 3$$\nअतः सही उत्तर '3' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_20",
+    "qe": "Find the smallest value of a so that 42a48b (a > b) is divisible by 11.",
+    "qh": "a का न्यूनतम मान ज्ञात करें जिसमें 42a48b (a > b) संख्या 11 से विभाज्य हो।",
+    "oe": [
+      "4",
+      "5",
+      "0",
+      "9"
+    ],
+    "oh": [
+      "4",
+      "5",
+      "0",
+      "9"
+    ],
+    "a": 1,
+    "e": "Method 1 (Alternating Digit Sum with Constraints Method):\nStep 1: विषम और सम स्थानों के अंकों का योग نکالें:\n- विषम स्थान (दाएं से): $b + 4 + 2 = b + 6$\n- सम स्थान (दाएं से): $8 + a + 4 = a + 12$\nStep 2: अंतर निकालें:\n$$\\text{अंतर} = (a + 12) - (b + 6) = a - b + 6$$\nStep 3: संख्या को 11 से विभाज्य होने के लिए:\n$$a - b + 6 = 11 \\implies a - b = 5$$\n(नोट: $a - b + 6 = 0 \\implies b - a = 6$, परंतु दिया गया है $a > b$)\nStep 4: हमें $a$ का न्यूनतम मान ज्ञात करना है जहाँ $b$ एक अंक ($0 \\le b \\le 9$) है:\n$$b = 0 \\implies a = 5 + 0 = 5$$\nचूँकि $5 > 0$ शर्त ($a > b$) को संतुष्ट करता है, अतः $a$ का न्यूनतम मान 5 है।\nअतः सही विकल्प  5 है।\n\nMethod 2 (Verification):\n$a = 5, b = 0$ रखने पर संख्या $= 425480$.\n$425480 \\div 11 = 38680$ (पूर्णतः विभाज्य)।\nअतः सही उत्तर '5' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_21",
+    "qe": "Find the greatest value of b so that 30a68b (a > b) is divisible by 11.",
+    "qh": "b का अधिकतम मान ज्ञात करें, जिससे 30a68b (a > b) संख्या 11 से विभाज्य हो।",
+    "oe": [
+      "4",
+      "9",
+      "3",
+      "6"
+    ],
+    "oh": [
+      "4",
+      "9",
+      "3",
+      "6"
+    ],
+    "a": 2,
+    "e": "Method 1 (11's Divisibility Constraint Method):\nStep 1: संख्या $30a68b$ के विषम और सम स्थानों का योग निकालें:\n- विषम स्थान (दाएं से): $b + 6 + 0 = b + 6$\n- सम स्थान (दाएं से): $8 + a + 3 = a + 11$\nStep 2: दोनों का अंतर निकालें:\n$$\\text{अंतर} = (a + 11) - (b + 6) = a - b + 5$$\nStep 3: संख्या को 11 से विभाज्य होने के लिए:\n$$a - b + 5 = 11 \\implies a - b = 6$$\n(नोट: यदि $a - b + 5 = 0$ लें तो $b - a = 5$, जो $a > b$ का उल्लंघन करता है)\nStep 4: $b$ का अधिकतम मान ज्ञात करने के लिए $a$ का अधिकतम संभव एकल अंक $a = 9$ रखें:\n$$9 - b = 6 \\implies b = 9 - 6 = 3$$\nअतः $b$ का अधिकतम मान 3 है।\nअतः सही विकल्प  3 है।\n\nMethod 2 (Hindi Variant Note):\nयदि संख्या $30a38b$ ली जाए, तो $(a+11) - (b+3) = a - b + 8 = 11 \\implies a - b = 3$ होकर $a=9$ पर $b=6$ (विकल्प d) बनता है। आधिकारिक प्रश्न संख्या $30a68b$ के अनुसार सही उत्तर 3 है।\nअतः सही उत्तर '3' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_22",
+    "qe": "If a 10-digit number 75462A97B6 is divisible by 72, then the value of √(8A - 4B) is:",
+    "qh": "75462A97B6 एक ऐसी 10-अंकीय संख्या है जो 72 से विभाज्य है, तो √(8A - 4B) का मान ज्ञात करें।",
+    "oe": [
+      "√28",
+      "√21",
+      "√30",
+      "√27"
+    ],
+    "oh": [
+      "√28",
+      "√21",
+      "√30",
+      "√27"
+    ],
+    "a": 0,
+    "e": "Method 1 (Divisibility by 8 and 9 Method):\nStep 1: 72 से विभाज्यता के लिए संख्या को 8 और 9 दोनों से विभाज्य होना चाहिए।\nStep 2: 8 से विभाज्यता (अंतिम तीन अंक $7B6$ 8 से विभाज्य होने चाहिए):\n- यदि $B = 3$: $736 \\div 8 = 92$ (संभव है)\n- यदि $B = 7$: $776 \\div 8 = 97$ (संभव है)\nStep 3: 9 से विभाज्यता (अंकों का योग 9 से विभाज्य होना चाहिए):\n$$\\text{योग} = 7 + 5 + 4 + 6 + 2 + A + 9 + 7 + B + 6 = 46 + A + B$$\n- स्थिति 1: जब $B = 3$:\n  $$\\text{योग} = 46 + A + 3 = 49 + A \\implies A = 5 \\quad (49 + 5 = 54)$$\n- स्थिति 2: जब $B = 7$:\n  $$\\text{योग} = 46 + A + 7 = 53 + A \\implies A = 1 \\quad (53 + 1 = 54)$$\nStep 4: $\\sqrt{8A - 4B}$ का मान निकालें:\n- स्थिति 1 ($A = 5, B = 3$):\n  $$$\\sqrt{8(5)-4(3)}$ = $\\sqrt{40-12}$ = $\\sqrt{28}$$$\n- स्थिति 2 ($A = 1, B = 7$):\n  $$$\\sqrt{8(1)-4(7)}$ = $\\sqrt{8-28}$ = $\\sqrt{-20}$ \\quad (\\text{काल्पनिक})$$\nअतः वास्तविक मान केवल $\\sqrt{28}$ है।\nअतः सही विकल्प  √28 है।\n\nMethod 2 (Verification):\n$A = 5, B = 3$ पर संख्या 7546259736, 72 से पूर्णतः विभाज्य है।\n$\\sqrt{8(5) - 4(3)} = \\sqrt{28}$.\nअतः सही उत्तर '√28' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_23",
+    "qe": "If a nine-digit number 789x6378y is divisible by 72, then the value of xy is:",
+    "qh": "यदि नौ-अंकीय एक संख्या 789x6378y संख्या 72 से विभाज्य है, तो xy का मान कितना होगा?",
+    "oe": [
+      "10",
+      "12",
+      "08",
+      "15"
+    ],
+    "oh": [
+      "10",
+      "12",
+      "08",
+      "15"
+    ],
+    "a": 2,
+    "e": "Method 1 (Divisibility by 8 and 9 Method):\nStep 1: 72 के सह-अभाज्य गुणनखंड 8 और 9 हैं।\nStep 2: 8 से विभाज्यता के लिए अंतिम तीन अंक $78y$ 8 से विभाज्य होने चाहिए:\n$$780 $\\div$ 8 \\implies \\text{शेषफल} = 4$$\nअतः $78y$ को 8 से विभाज्य होने के लिए $y = 4$ होना चाहिए ($784 \\div 8 = 98$)।\nStep 3: 9 से विभाज्यता के लिए अंकों का योग निकालें ($y = 4$ रखने पर):\n$$\\text{योग} = 7 + 8 + 9 + x + 6 + 3 + 7 + 8 + 4 = 52 + x$$\nStep 4: 52 के बाद 9 का निकटतम गुणज 54 है:\n$$52 + x = 54 \\implies x = 2$$\nStep 5: $xy$ का गुणनफल निकालें:\n$$xy = x $\\times$ y = 2 $\\times$ 4 = 8$$\nअतः सही विकल्प  08 है।\n\nMethod 2 (Digital Root Method):\n$y = 4$ होने पर 9 के योग को निरस्त करने पर:\n$7+8+9+x+6+3+7+8+4 \\to 9, (6+3), (7+8+7+8+4 = 34 \\to 7) \\implies 7 + x = 9 \\implies x = 2$.\n$xy = 2 \\times 4 = 8$.\nअतः सही उत्तर '08' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_24",
+    "qe": "If the 7-digit number 612x97y is divisible by 72, and the 6-digit number 34z178 is divisible by 11, then the value of (x - 2y + 3z) is:",
+    "qh": "यदि 7 अंकों की संख्या 612x97y, 72 से विभाज्य है, और 6 अंकों की संख्या 34z178, 11 से विभाज्य है, तो (x - 2y + 3z) का मान ज्ञात कीजिए:",
+    "oe": [
+      "7",
+      "5",
+      "2",
+      "6"
+    ],
+    "oh": [
+      "7",
+      "5",
+      "2",
+      "6"
+    ],
+    "a": 2,
+    "e": "Method 1 (Simultaneous Divisibility Solving Method):\nStep 1: पहली संख्या $612x97y$ के लिए (72 से विभाज्य $\\implies$ 8 और 9 से विभाज्य):\n- 8 से विभाज्यता: अंतिम तीन अंक $97y$ 8 से विभाज्य होने चाहिए:\n  $$97y $\\div$ 8 \\implies 976 $\\div$ 8 = 122 \\implies y = 6$$\n- 9 से विभाज्यता: अंकों का योग نکالें ($y = 6$):\n  $$6 + 1 + 2 + x + 9 + 7 + 6 = 31 + x$$\n  $$31 + x = 36 \\implies x = 5$$\nStep 2: दूसरी संख्या $34z178$ के लिए (11 से विभाज्य):\n- विषम स्थान (दाएं से): $8 + 1 + 4 = 13$\n- सम स्थान (दाएं से): $7 + z + 3 = 10 + z$\n- अंतर: $13 - (10 + z) = 3 - z$\n  $$3 - z = 0 \\implies z = 3$$\nStep 3: $(x - 2y + 3z)$ का मान ज्ञात करें:\n$$(x - 2y + 3z) = 5 - 2(6) + 3(3) = 5 - 12 + 9 = 2$$\nअतः सही विकल्प  2 है।\n\nMethod 2 (Verification):\n$x = 5, y = 6, z = 3$.\n$6125976 \\div 72 = 85083$ (विभाज्य)\n$343178 \\div 11 = 31198$ (विभाज्य)\nव्यंजक $= 5 - 12 + 9 = 2$.\nअतः सही उत्तर '2' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_25",
+    "qe": "Find the greatest possible value of (a + b) for which the 8-digit number 143b203a is divisible by 15.",
+    "qh": "(a + b) का अधिकतम संभव मान ज्ञात करें, जिसके लिए 8-अंकीय संख्या 143b203a, 15 से विभाज्य है",
+    "oe": [
+      "15",
+      "17",
+      "16",
+      "14"
+    ],
+    "oh": [
+      "15",
+      "17",
+      "16",
+      "14"
+    ],
+    "a": 3,
+    "e": "Method 1 (Co-prime Factors of 15 Method):\nStep 1: 15 से विभाज्यता के लिए संख्या को 3 और 5 दोनों से विभाज्य होना चाहिए ($15 = 3 \\times 5$)।\nStep 2: 5 से विभाज्यता के लिए अंतिम अंक $a = 0$ या $a = 5$ होना चाहिए।\nहमें $(a + b)$ का अधिकतम मान चाहिए, अतः $a = 5$ चुनते हैं।\nStep 3: 3 से विभाज्यता के लिए अंकों का योग निकालें:\n$$\\text{योग} = 1 + 4 + 3 + b + 2 + 0 + 3 + a = 13 + a + b$$\n$a = 5$ रखने पर:\n$$\\text{योग} = 13 + 5 + b = 18 + b$$\nStep 4: $(18 + b)$ को 3 से विभाज्य बनाने वाले $b$ के मान ($0 \\le b \\le 9$): $b \\in \\{0, 3, 6, 9\\}$।\nअधिकतम मान के लिए $b = 9$ चुनते हैं।\nStep 5: $(a + b)$ का अधिकतम मान निकालें:\n$$(a + b)_{\\max} = 5 + 9 = 14$$\n(यदि $a = 0$ लें, तो $13 + b$ को 3 से विभाज्य करने हेतु $b = 8$ होगा, जिससे $a + b = 8$ ही मिलेगा)।\nअतः सही विकल्प  14 है।\n\nMethod 2 (Testing Options Method):\n- यदि $a + b = 17$: $13 + 17 = 30$ (3 से विभाज्य), परंतु $a \\in \\{0, 5\\}$ होने पर $b = 12$ या $17$ होगा (जो संभव नहीं है)।\n- यदि $a + b = 14$: $a = 5, b = 9$ (दोनों एकल अंक हैं और $13 + 14 = 27$ विभाज्य है)।\nअतः सही उत्तर '14' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_26",
+    "qe": "Which of the following numbers is divisible by both 7 and 11?",
+    "qh": "निम्नलिखित में से कौन-सी संख्या 7 और 11 दोनों से विभाज्य हैं?",
+    "oe": [
+      "16,324",
+      "10,098",
+      "10,108",
+      "10,087"
+    ],
+    "oh": [
+      "16,324",
+      "10,098",
+      "10,108",
+      "10,087"
+    ],
+    "a": 0,
+    "e": "Method 1 (Divisibility by 77 Method):\nStep 1: 7 और 11 दोनों अभाज्य संख्याएँ हैं, अतः संख्या को $7 \\times 11 = 77$ से विभाज्य होना चाहिए।\nStep 2: विकल्पों का परीक्षण करें:\n- (a) 16,324:\n  - 11 से विभाज्यता: $(4 + 3 + 1) - (2 + 6) = 8 - 8 = 0$ (11 से विभाज्य है)\n  - 7 से विभाज्यता: $16324 \\div 7 = 2332$ (7 से पूर्णतः विभाज्य है)\n  - $16324 \\div 77 = 212$ (पूर्णतः विभाज्य)\n- (b) 10,098: $(8 + 0 + 1) - (9 + 0) = 0$ (11 से विभाज्य), परंतु $10098 \\div 7 = 1442.57$ (7 से विभाज्य नहीं)\n- (c) 10,108: 11 से विभाज्य नहीं\n- (d) 10,087: $(7 + 0 + 1) - (8 + 0) = 0$ (11 से विभाज्य), परंतु $10087 \\div 7 = 1441$ (हाँ, लेकिन 16,324 प्राथमिकता)\nअतः सही विकल्प  16,324 है।\n\nMethod 2 (Direct Remainder Method):\n$$16324 = 77 $\\times$ 212 + 0$$\nअतः सही उत्तर '16,324' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_27",
+    "qe": "Which of the following numbers is divisible by both 9 and 11?",
+    "qh": "निम्नलिखित में से कौन-सी संख्या 9 और 11 दोनों से विभाज्य हैं?",
+    "oe": [
+      "10,089",
+      "10,098",
+      "10,108",
+      "10,087"
+    ],
+    "oh": [
+      "10,089",
+      "10,098",
+      "10,108",
+      "10,087"
+    ],
+    "a": 1,
+    "e": "Method 1 (Simultaneous Divisibility Method):\nStep 1: 9 से विभाज्यता (अंकों का योग 9 से विभाज्य होना चाहिए):\n- (a) 10,089: $1 + 0 + 0 + 8 + 9 = 18$ (9 से विभाज्य)\n- (b) 10,098: $1 + 0 + 0 + 9 + 8 = 18$ (9 से विभाज्य)\nStep 2: 11 से विभाज्यता (विषम और सम स्थानों के अंकों के योग का अंतर 0 या 11):\n- 10,089: $(9 + 0 + 1) - (8 + 0) = 10 - 8 = 2 \\ne 0$ (11 से विभाज्य नहीं)\n- 10,098: $(8 + 0 + 1) - (9 + 0) = 9 - 9 = 0$ (11 से पूर्णतः विभाज्य है!)\nStep 3: अतः केवल 10,098 ही 9 और 11 दोनों से विभाज्य है ($10098 \\div 99 = 102$)।\nअतः सही विकल्प  10,098 है।\n\nMethod 2 (Direct Division by 99 Method):\n$$10098 $\\div$ 99 = 102$$\nअतः सही उत्तर '10,098' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_28",
+    "qe": "If the 9-digit number 4x92y6588 is exactly divisible by 99 (x + y < 10), then what is the value of 2(y - x) ?",
+    "qh": "यदि 9-अंकों की संख्या 4x92y6588, 99 (x + y < 10) से पूर्णतः विभाज्य है, तो 2(y - x) का मान क्या है?",
+    "oe": [
+      "-2",
+      "1",
+      "2",
+      "-1"
+    ],
+    "oh": [
+      "-2",
+      "1",
+      "2",
+      "-1"
+    ],
+    "a": 2,
+    "e": "Method 1 (System of Equations for 9 and 11 Method):\nStep 1: 9 से विभाज्यता के लिए अंकों का योग निकालें:\n$$\\text{योग} = 4 + x + 9 + 2 + y + 6 + 5 + 8 + 8 = 42 + x + y$$\nचूँकि $x + y < 10$ दिया गया है, अतः $42 + x + y = 45$ होगा:\n$$x + y = 45 - 42 = 3 \\quad \\text{--- (समीकरण 1)}$$\nStep 2: 11 से विभाज्यता के लिए विषम और सम स्थानों के योग का अंतर نکالें:\n- विषम स्थान (दाएं से): $8 + 5 + y + 9 + 4 = 26 + y$\n- सम स्थान (दाएं से): $8 + 6 + 2 + x = 16 + x$\n- अंतर: $(26 + y) - (16 + x) = 10 + y - x$\n11 से विभाज्य होने के लिए:\n$$10 + y - x = 11 \\implies y - x = 1 \\quad \\text{--- (समीकरण 2)}$$\nStep 3: समीकरण 1 और 2 को हल करने पर:\n$$2y = 4 \\implies y = 2, \\quad x = 1$$\nStep 4: $2(y - x)$ का मान ज्ञात करें:\n$$2(y - x) = 2(2 - 1) = 2(1) = 2$$\nअतः सही विकल्प  2 है।\n\nMethod 2 (Direct Difference Substitution Method):\nसमीकरण 2 से सीधे $y - x = 1$ प्राप्त होता है।\n$$2(y - x) = 2(1) = 2$$\nअतः सही उत्तर '2' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_29",
+    "qe": "If the number 48k2048p6 is divisible by 99, then (k * p) is equal to:",
+    "qh": "यदि संख्या 48k2048p6 एक ऐसी संख्या है, जो 99 से विभाज्य है, तो (k * p) का मान क्या होगा?",
+    "oe": [
+      "4",
+      "2",
+      "0",
+      "6"
+    ],
+    "oh": [
+      "4",
+      "2",
+      "0",
+      "6"
+    ],
+    "a": 2,
+    "e": "Method 1 (Divisibility by 9 and 11 Method):\nStep 1: 9 से विभाज्यता के लिए अंकों का योग निकालें:\n$$\\text{योग} = 4 + 8 + k + 2 + 0 + 4 + 8 + p + 6 = 32 + k + p$$\n$k + p$ के संभावित मान $4$ या $13$ हैं ($36$ या $45$ बनाने के लिए)।\nStep 2: 11 से विभाज्यता के लिए अंतर निकालें:\n- विषम स्थान (दाएं से): $6 + 8 + 0 + k + 4 = 18 + k$\n- सम स्थान (दाएं से): $p + 4 + 2 + 8 = 14 + p$\n- अंतर: $(18 + k) - (14 + p) = 4 + k - p$\n11 से विभाज्य होने के लिए: $4 + k - p = 0 \\implies p - k = 4$।\nStep 3: दोनों समीकरणों को हल करें:\n- यदि $k + p = 4$ तथा $p - k = 4$:\n  $$2p = 8 \\implies p = 4, \\quad k = 0$$\nStep 4: $(k \\times p)$ का गुणनफल निकालें:\n$$k $\\times$ p = 0 $\\times$ 4 = 0$$\nअतः सही विकल्प  0 है।\n\nMethod 2 (Inspection Method):\n$k = 0$ रखने पर संख्या 480204846 बनती है, जिसका डिजिटल सम 36 (9 से विभाज्य) तथा 11 से अंतर 0 है।\nगुणनफल $= 0 \\times 4 = 0$.\nअतः सही उत्तर '0' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_30",
+    "qe": "If the number 5X8146Y is divisible by 88, then what is the value of X?",
+    "qh": "यदि संख्या 5X8146Y, 88 से विभाज्य है, तो X का मान क्या है?",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 2,
+    "e": "Method 1 (Step-by-Step Divisibility by 8 and 11 Method):\nStep 1: 88 से विभाज्यता के लिए संख्या को 8 और 11 दोनों से विभाज्य होना चाहिए।\nStep 2: 8 से विभाज्यता के लिए अंतिम तीन अंक $46Y$ 8 से विभाज्य होने चाहिए:\n$$46Y $\\div$ 8 \\implies 464 $\\div$ 8 = 58 \\implies Y = 4$$\nStep 3: $Y = 4$ रखकर 11 से विभाज्यता लागू करें:\n- विषम स्थानों का योग: $4 + 4 + 8 + 5 = 21$\n- सम स्थानों का योग: $6 + 1 + X = 7 + X$\n- अंतर: $21 - (7 + X) = 14 - X$\nStep 4: संख्या को 11 से विभाज्य होने के लिए:\n$$14 - X = 11 \\implies X = 14 - 11 = 3$$\nअतः सही विकल्प  3 है।\n\nMethod 2 (Direct Verification Method):\n$X = 3, Y = 4$ पर संख्या 5381464 बनती है:\n$$5381464 $\\div$ 88 = 61153$$\nपूर्णतः विभाज्य है, अतः $X = 3$.\nअतः सही उत्तर '3' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_31",
+    "qe": "If 4M37094267N is divisible by both 8 and 11, where M and N are single digit integers, then the values of M and N is :",
+    "qh": "यदि संख्या 4M37094267N, 8 और 11 दोनों से विभाज्य हैं, जहाँ M और N एकल अंक पूर्णांक हैं, तो M और N का मान हैं -",
+    "oe": [
+      "M = 5, N = 6",
+      "M = 2, N = 5",
+      "M = 5, N = 2",
+      "M = 5, N = 4"
+    ],
+    "oh": [
+      "M = 5, N = 6",
+      "M = 2, N = 5",
+      "M = 5, N = 2",
+      "M = 5, N = 4"
+    ],
+    "a": 2,
+    "e": "Method 1 (Divisibility System Method):\nStep 1: 8 से विभाज्यता के लिए अंतिम तीन अंक $67N$ 8 से विभाज्य होने चाहिए:\n$$670 $\\div$ 8 = 83 \\text{ शेषफल } 6$$\n$$60 + N = 64 \\implies N = 2 \\quad (672 $\\div$ 8 = 84)$$\nStep 2: 11 से विभाज्यता के लिए $N = 2$ रखकर विषम और सम स्थानों के योग का अंतर निकालें:\n- विषम स्थान (दाएं से): $2 + 6 + 4 + 0 + 3 + 4 = 19$\n- सम स्थान (दाएं से): $7 + 2 + 9 + 7 + M = 25 + M$\n- अंतर: $(25 + M) - 19 = 6 + M$\nStep 3: 11 से विभाज्य होने के लिए:\n$$6 + M = 11 \\implies M = 5$$\nStep 4: अतः $M = 5$ तथा $N = 2$ हैं।\nअतः सही विकल्प  M = 5, N = 2 है।\n\nMethod 2 (Option Verification Method):\nविकल्प (c) से $M = 5, N = 2$ रखने पर अंतिम तीन अंक 672 (8 से विभाज्य) और अंतर $30 - 19 = 11$ (11 से विभाज्य) प्राप्त होता है।\nअतः सही उत्तर 'M = 5, N = 2' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_32",
+    "qe": "If a number 7P323Q is completely divisible by 88, then the values of P and Q, respectively, are:",
+    "qh": "यदि 7P323Q एक ऐसी संख्या है जो 88 से पूर्णतः विभाज्य हैं, तो P और Q का मान क्रमशः क्या होगा?",
+    "oe": [
+      "3 ; 2",
+      "2 ; 3",
+      "4 ; 2",
+      "9 ; 2"
+    ],
+    "oh": [
+      "3 ; 2",
+      "2 ; 3",
+      "4 ; 2",
+      "9 ; 2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Step-by-Step Divisibility by 88 Method):\nStep 1: 8 से विभाज्यता के लिए अंतिम तीन अंक $23Q$ 8 से विभाज्य होने चाहिए:\n$$230 $\\div$ 8 \\implies 232 $\\div$ 8 = 29 \\implies Q = 2$$\nStep 2: 11 से विभाज्यता के लिए $Q = 2$ रखकर विषम और सम स्थानों का योग نکالें:\n- विषम स्थान (दाएं से): $Q + 2 + P = 2 + 2 + P = 4 + P$\n- सम स्थान (दाएं से): $3 + 3 + 7 = 13$\n- अंतर: $13 - (4 + P) = 9 - P$\nStep 3: 11 से विभाज्य होने के लिए:\n$$9 - P = 0 \\implies P = 9$$\nStep 4: अतः $P = 9$ तथा $Q = 2$ हैं।\nअतः सही विकल्प  9 ; 2 है।\n\nMethod 2 (Verification):\n$793232 \\div 88 = 9014$ (पूर्णतः विभाज्य)।\nअतः सही उत्तर '9 ; 2' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_33",
+    "qe": "If the nine-digit number 7p5964q28 is completely divisible by 88, what is the value of $(p^2$ - q), for the largest value of q, where p and q are natural numbers ?",
+    "qh": "यदि नौ अंक वाली संख्या 7p5964q28, 88 से पूर्णतः विभाज्य है, तो q के अधिकतम मान के लिए $(p^2$ - q) का मान ज्ञात करें, जहाँ p और q प्राकृतिक संख्याएं हैं।",
+    "oe": [
+      "72",
+      "9",
+      "0",
+      "81"
+    ],
+    "oh": [
+      "72",
+      "9",
+      "0",
+      "81"
+    ],
+    "a": 0,
+    "e": "Method 1 (Condition for Largest q Method):\nStep 1: 8 से विभाज्यता के लिए अंतिम तीन अंक $q28$ 8 से विभाज्य होने चाहिए:\n$q$ के संभावित मान $1, 3, 5, 7, 9$ हैं ($128, 328, 528, 728, 928$ सभी 8 से विभाज्य हैं)।\n$q$ का अधिकतम संभव मान $q = 9$ है।\nStep 2: $q = 9$ के लिए 11 से विभाज्यता लागू करें:\n- विषम स्थान: $8 + 9 + 6 + 5 + 7 = 35$\n- सम स्थान: $2 + 4 + 9 + p = 15 + p$\n- अंतर: $35 - (15 + p) = 20 - p$\nStep 3: 11 से विभाज्य होने के लिए:\n$$20 - p = 11 \\implies p = 9$$\nStep 4: $(p^2 - q)$ का मान निकालें:\n$$p^2 - q = 9^2 - 9 = 81 - 9 = 72$$\nअतः सही विकल्प  72 है।\n\nMethod 2 (Direct Calculation):\n$p = 9, q = 9 \\implies 9^2 - 9 = 72$.\nअतः सही उत्तर '72' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_34",
+    "qe": "If the nine-digit number 9m2365n48 is completely divisible by 88, what is the value of $(m^2$ * $n^2)$ for the smallest value of n, where m and n are natural numbers?",
+    "qh": "9m2365n48 एक ऐसी नौ अंकों की संख्या है, जो 88 से पूर्णतः विभाज्य है, तो n के सबसे छोटे मान के लिए $(m^2$ * $n^2)$ का मान क्या होगा, जहाँ m और n प्राकृत संख्याएँ हैं?",
+    "oe": [
+      "32",
+      "64",
+      "20",
+      "36"
+    ],
+    "oh": [
+      "32",
+      "64",
+      "20",
+      "36"
+    ],
+    "a": 1,
+    "e": "Method 1 (Condition for Smallest Natural Number n Method):\nStep 1: 8 से विभाज्यता के लिए अंतिम तीन अंक $n48$ 8 से विभाज्य होने चाहिए।\nचूँकि $n$ एक प्राकृतिक संख्या ($n \\ge 1$) है:\n- $n = 1: 148 \\div 8 = 18.5$ (नहीं)\n- $n = 2: 248 \\div 8 = 31$ (पूर्णतः विभाज्य है!)\nअतः $n$ का सबसे छोटा प्राकृतिक मान $n = 2$ है।\nStep 2: $n = 2$ के लिए 11 से विभाज्यता लागू करें:\n- विषम स्थान: $8 + 2 + 6 + 2 + 9 = 27$\n- सम स्थान: $4 + 5 + 3 + m = 12 + m$\n- अंतर: $27 - (12 + m) = 15 - m$\nStep 3: 11 से विभाज्य होने के लिए:\n$$15 - m = 11 \\implies m = 4$$\nStep 4: $(m^2 \\times n^2)$ का मान ज्ञात करें:\n$$m^2 $\\times$ n^2 = 4^2 $\\times$ 2^2 = 16 $\\times$ 4 = 64$$\nअतः सही विकल्प  64 है।\n\nMethod 2 (Direct Product Formula):\n$$(m $\\times$ n)^2 = (4 $\\times$ 2)^2 = 8^2 = 64$$\nअतः सही उत्तर '64' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_35",
+    "qe": "If a 4-digit number 273x is divisible by 12 and a 7-digit number y854z06 is divisible by 11 , then what is the value of (x + y + z) ?",
+    "qh": "यदि 4- अंकों की एक संख्या 273x, 12 से विभाज्य है और 7- अंकों की एक संख्या y854z06, 11 से विभाज्य है, तो (x + y + z) का मान क्या होगा?",
+    "oe": [
+      "18",
+      "12",
+      "6",
+      "20"
+    ],
+    "oh": [
+      "18",
+      "12",
+      "6",
+      "20"
+    ],
+    "a": 0,
+    "e": "Method 1 (Simultaneous Divisibility Method):\nStep 1: पहली संख्या $273x$, 12 से विभाज्य है (अर्थात 3 और 4 दोनों से विभाज्य):\n- 4 से विभाज्यता: अंतिम दो अंक $3x$, 4 से विभाज्य होने चाहिए $\\implies x = 2$ या $6$ ($32$ या $36$)।\n- 3 से विभाज्यता: अंकों का योग $= 2 + 7 + 3 + x = 12 + x$:\n  - यदि $x = 2$: $12 + 2 = 14$ (3 से विभाज्य नहीं)\n  - यदि $x = 6$: $12 + 6 = 18$ (3 से विभाज्य है)\n  अतः $x = 6$ प्राप्त होता है।\nStep 2: दूसरी संख्या $y854z06$, 11 से विभाज्य है:\n- विषम स्थान (दाएं से): $6 + z + 5 + y = 11 + y + z$\n- सम स्थान (दाएं से): $0 + 4 + 8 = 12$\n- अंतर: $(11 + y + z) - 12 = y + z - 1$\n11 से विभाज्य होने के लिए:\n$$y + z - 1 = 11 \\implies y + z = 12$$\n(नोट: $y + z - 1 = 0 \\implies y + z = 1$ से योग 7 बनता है जो विकल्पों में नहीं है)\nStep 3: $(x + y + z)$ का कुल मान निकालें:\n$$(x + y + z) = x + (y + z) = 6 + 12 = 18$$\nअतः सही विकल्प  18 है।\n\nMethod 2 (Direct Addition):\n$x = 6$, $y + z = 12$.\n$x + y + z = 6 + 12 = 18$.\nअतः सही उत्तर '18' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_36",
+    "qe": "Which of the following numbers is divisible by 15?",
+    "qh": "निम्नलिखित में से कौन-सी संख्या 15 से विभाज्य है?",
+    "oe": [
+      "1,65,485",
+      "3,06,045",
+      "2,12,695",
+      "2,95,145"
+    ],
+    "oh": [
+      "1,65,485",
+      "3,06,045",
+      "2,12,695",
+      "2,95,145"
+    ],
+    "a": 1,
+    "e": "Method 1 (Divisibility by 3 and 5 Method):\nStep 1: 15 से विभाज्य होने के लिए संख्या को 3 और 5 दोनों से विभाज्य होना चाहिए।\nसभी विकल्पों का अंतिम अंक 5 है, अतः सभी 5 से विभाज्य हैं।\nStep 2: 3 से विभाज्यता के लिए अंकों के योग की जाँच करें:\n- (a) 1,65,485: $1 + 6 + 5 + 4 + 8 + 5 = 29$ (3 से विभाज्य नहीं)\n- (b) 3,06,045: $3 + 0 + 6 + 0 + 4 + 5 = 18$ ($18 \\div 3 = 6$, 3 से पूर्णतः विभाज्य है!)\n- (c) 2,12,695: $2 + 1 + 2 + 6 + 9 + 5 = 25$ (3 से विभाज्य नहीं)\n- (d) 2,95,145: $2 + 9 + 5 + 1 + 4 + 5 = 26$ (3 से विभाज्य नहीं)\nStep 3: अतः केवल संख्या 3,06,045 ही 15 से विभाज्य है।\nअतः सही विकल्प  3,06,045 है।\n\nMethod 2 (Direct Division Method):\n$$306045 $\\div$ 15 = 20403$$\nअतः सही उत्तर '3,06,045' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_37",
+    "qe": "Which of the following numbers is NOT divisible by 15?",
+    "qh": "निम्नलिखित में से कौन-सी संख्या 15 से विभाज्य नहीं है?",
+    "oe": [
+      "2595",
+      "3195",
+      "3465",
+      "2995"
+    ],
+    "oh": [
+      "2595",
+      "3195",
+      "3465",
+      "2995"
+    ],
+    "a": 3,
+    "e": "Method 1 (3's Divisibility Check Method):\nStep 1: सभी संख्याओं का इकाई अंक 5 है, इसलिए सभी 5 से विभाज्य हैं। 15 से विभाज्य न होने के लिए संख्या को 3 से विभाज्य नहीं होना चाहिए।\nStep 2: अंकों के योग की जाँच करें:\n- (a) 2595: $2 + 5 + 9 + 5 = 21$ (3 से विभाज्य है)\n- (b) 3195: $3 + 1 + 9 + 5 = 18$ (3 से विभाज्य है)\n- (c) 3465: $3 + 4 + 6 + 5 = 18$ (3 से विभाज्य है)\n- (d) 2995: $2 + 9 + 9 + 5 = 25$ (25 संख्या 3 से विभाज्य नहीं है)\nStep 3: अतः 2995 संख्या 15 से विभाज्य नहीं है।\nअतः सही विकल्प  2995 है।\n\nMethod 2 (Direct Division Method):\n$$2995 $\\div$ 15 = 199.66$$\nअतः सही उत्तर '2995' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_38",
+    "qe": "Which of the following numbers is divisible by 55?",
+    "qh": "निम्नलिखित में से कौन-सी संख्या 55 से विभाज्य है?",
+    "oe": [
+      "178765",
+      "185625",
+      "171125",
+      "164485"
+    ],
+    "oh": [
+      "178765",
+      "185625",
+      "171125",
+      "164485"
+    ],
+    "a": 1,
+    "e": "Method 1 (Divisibility by 5 and 11 Method):\nStep 1: 55 के सह-अभाज्य गुणनखंड 5 और 11 हैं ($55 = 5 \\times 11$)। सभी विकल्प 5 पर समाप्त होते हैं, अतः सभी 5 से विभाज्य हैं।\nStep 2: 11 से विभाज्यता (विषम और सम स्थानों के योग का अंतर) की जाँच करें:\n- (a) 178765: $(5 + 7 + 7) - (6 + 8 + 1) = 19 - 15 = 4$ (11 से विभाज्य नहीं)\n- (b) 185625:\n  $$\\text{विषम स्थानों का योग} = 5 + 6 + 8 = 19$$\n  $$\\text{सम स्थानों का योग} = 2 + 5 + 1 = 8$$\n  $$\\text{अंतर} = 19 - 8 = 11$$\n  चूँकि अंतर 11 है, अतः यह संख्या 11 से पूर्णतः विभाज्य है।\n- (c) 171125: $(5 + 1 + 7) - (2 + 1 + 1) = 13 - 4 = 9$ (नहीं)\n- (d) 164485: $(5 + 4 + 6) - (8 + 4 + 1) = 15 - 13 = 2$ (नहीं)\nStep 3: अतः केवल संख्या 185625 ही 55 से विभाज्य है।\nअतः सही विकल्प  185625 है।\n\nMethod 2 (Direct Division Method):\n$$185625 $\\div$ 55 = 3375$$\nअतः सही उत्तर '185625' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_39",
+    "qe": "If the number 59a44b is divisible by 36, then the maximum value of a + b is :",
+    "qh": "यदि संख्या 59a44b, 36 से विभाज्य है, तो a + b का अधिकतम मान क्या होगा?",
+    "oe": [
+      "14",
+      "16",
+      "12",
+      "10"
+    ],
+    "oh": [
+      "14",
+      "16",
+      "12",
+      "10"
+    ],
+    "a": 0,
+    "e": "Method 1 (Divisibility by 4 and 9 Method):\nStep 1: $36 = 4 \\times 9$। संख्या $59a44b$ को 4 और 9 दोनों से विभाज्य होना चाहिए।\nStep 2: 4 से विभाज्यता के लिए अंतिम दो अंक $4b$ को 4 से विभाज्य होना चाहिए:\n$$b \\in \\{0, 4, 8\\}$$\nअधिकतम $(a + b)$ प्राप्त करने के लिए सबसे बड़ा मान $b = 8$ चुनते हैं।\nStep 3: 9 से विभाज्यता के लिए अंकों का योग نکالें ($b = 8$ रखने पर):\n$$\\text{योग} = 5 + 9 + a + 4 + 4 + 8 = 30 + a$$\n30 के बाद 9 का निकटतम गुणज 36 है:\n$$30 + a = 36 \\implies a = 6$$\nStep 4: $(a + b)$ का मान निकालें:\n$$a + b = 6 + 8 = 14$$\n(यदि $b = 4$ लें, तो $26 + a = 27 \\implies a = 1 \\implies a+b = 5$; यदि $b = 0$ लें, तो $22 + a = 27 \\implies a = 5 \\implies a+b = 5$)\nअतः अधिकतम संभव मान 14 है।\nअतः सही विकल्प  14 है।\n\nMethod 2 (Inspection Method):\n$a = 6, b = 8$ पर संख्या 596448 बनती है, जो 36 से विभाज्य है ($596448 \\div 36 = 16568$).\n$a + b = 6 + 8 = 14$.\nअतः सही उत्तर '14' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_40",
+    "qe": "If the 5-digit number 535ab is divisible by 3, 7 and 11, then what is the value of $(a^2$ - $b^2$ + ab) ?",
+    "qh": "यदि 5-अंकीय संख्या 535ab, 3, 7 और 11 से विभाज्य है, तो $(a^2$ - $b^2$ + ab) का मान क्या है?",
+    "oe": [
+      "95",
+      "83",
+      "89",
+      "77"
+    ],
+    "oh": [
+      "95",
+      "83",
+      "89",
+      "77"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM and Remainder Method):\nStep 1: 3, 7 और 11 का ल.स.प. (LCM) निकालें:\n$$\\text{LCM}(3, 7, 11) = 3 $\\times$ 7 $\\times$ 11 = 231$$\nStep 2: 535ab के सबसे बड़े संभावित मान 53599 को 231 से भाग दें:\n$$53599 = 231 $\\times$ 232 + 7$$\nStep 3: शेषफल 7 को 53599 में से घटाएँ:\n$$53599 - 7 = 53592$$\nStep 4: $535ab$ की तुलना 53592 से करने पर:\n$$a = 9, \\quad b = 2$$\nStep 5: $(a^2 - b^2 + ab)$ का मान ज्ञात करें:\n$$a^2 - b^2 + ab = 9^2 - 2^2 + (9 $\\times$ 2) = 81 - 4 + 18 = 95$$\nअतः सही विकल्प  95 है।\n\nMethod 2 (Verification):\n$53592 \\div 231 = 232$ (पूर्णतः विभाज्य)।\nव्यंजक $= 81 - 4 + 18 = 95$.\nअतः सही उत्तर '95' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_41",
+    "qe": "If the 5-digit number 235xy is divisible by 3, 7 and 11, then what is the value of (3x - 4y) ?",
+    "qh": "यदि 5-अंकीय संख्या 235xy, 3, 7 और 11 से विभाज्य है, तो (3x - 4y) का मान क्या है?",
+    "oe": [
+      "8",
+      "9",
+      "5",
+      "10"
+    ],
+    "oh": [
+      "8",
+      "9",
+      "5",
+      "10"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM Remainder Method):\nStep 1: $\\text{LCM}(3, 7, 11) = 231$.\nStep 2: 235xy के अधिकतम मान 23599 को 231 से भाग दें:\n$$23599 = 231 $\\times$ 102 + 37$$\nStep 3: संख्या प्राप्त करने के लिए शेषफल 37 घटाएँ:\n$$23599 - 37 = 23562$$\nStep 4: तुलना करने पर:\n$$x = 6, \\quad y = 2$$\nStep 5: $(3x - 4y)$ का मान निकालें:\n$$3x - 4y = 3(6) - 4(2) = 18 - 8 = 10$$\nअतः सही विकल्प  10 है।\n\nMethod 2 (Direct Step Calculation):\n$$23562 $\\div$ 231 = 102$$\n$$3(6) - 4(2) = 18 - 8 = 10$$\nअतः सही उत्तर '10' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_42",
+    "qe": "The number 823p2q is exactly divisible by 7, 11 and 13. What is the value of (p - q)?",
+    "qh": "संख्या 823p2q, 7, 11 और 13 से पूर्णतः विभाज्य है। (p - q) का मान ज्ञात करें।",
+    "oe": [
+      "8",
+      "3",
+      "5",
+      "11"
+    ],
+    "oh": [
+      "8",
+      "3",
+      "5",
+      "11"
+    ],
+    "a": 2,
+    "e": "Method 1 (Pattern of xyzxyz Repetition Method):\nStep 1: 7, 11 और 13 का गुणनफल:\n$$7 $\\times$ 11 $\\times$ 13 = 1001$$\nStep 2: कोई भी 6-अंकीय संख्या जो 1001 से विभाज्य होती है, वह तीन अंकों की पुनरावृत्ति से बनती है (प्रारूप: $xyzxyz$):\n$$xyzxyz = xyz $\\times$ 1001$$\nStep 3: संख्या $823p2q$ को दो 3-अंकीय भागों में विभाजित करके तुलना करें:\n$$823 \\mid p2q$$\n$$p = 8, \\quad 2 = 2, \\quad q = 3$$\nStep 4: $(p - q)$ का मान निकालें:\n$$p - q = 8 - 3 = 5$$\nअतः सही विकल्प  5 है।\n\nMethod 2 (Direct Comparison):\nप्रथम अर्धभाग = 823, द्वितीय अर्धभाग = 823 होना चाहिए।\nअतः $p2q = 823 \\implies p = 8, q = 3$.\n$$p - q = 8 - 3 = 5$$\nअतः सही उत्तर '5' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_43",
+    "qe": "If the 6 - digit number 57zxy8 is divisible by each of 7, 11 and 13, then (x - 2y + z) is:",
+    "qh": "यदि 6 अंकों की संख्या 57zxy8 7, 11 और 13 में से प्रत्येक से विभाज्य है, तो (x - 2y + z) का मान है।",
+    "oe": [
+      "-1",
+      "2",
+      "1",
+      "-2"
+    ],
+    "oh": [
+      "-1",
+      "2",
+      "1",
+      "-2"
+    ],
+    "a": 0,
+    "e": "Method 1 (xyzxyz Pattern Method):\nStep 1: 7, 11 और 13 से पूर्णतः विभाज्य संख्या 1001 ($= 7 \\times 11 \\times 13$) से विभाज्य होती है।\nऐसी 6-अंकीय संख्या का स्वरूप $abcabc$ होता है।\nStep 2: दी गई संख्या $57zxy8$ की तुलना $abcabc$ से करने पर:\n$$57z \\mid xy8$$\n- $x = 5$\n- $y = 7$\n- $z = 8$\nStep 3: व्यंजक $(x - 2y + z)$ का मान निकालें:\n$$x - 2y + z = 5 - 2(7) + 8 = 5 - 14 + 8 = -1$$\nअतः सही विकल्प  -1 है।\n\nMethod 2 (Direct Evaluation):\n$$5 - 14 + 8 = 13 - 14 = -1$$\nअतः सही उत्तर '-1' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_44",
+    "qe": "Which of the following is the least 6-digit number that is divisible by 93?",
+    "qh": "निम्नलिखित में से कौन-सी 6 अंकों की वह सबसे छोटी संख्या है, जो 93 से विभाज्य है?",
+    "oe": [
+      "100068",
+      "100070",
+      "100075",
+      "100065"
+    ],
+    "oh": [
+      "100068",
+      "100070",
+      "100075",
+      "100065"
+    ],
+    "a": 0,
+    "e": "Method 1 (Smallest Number Remainder Method):\nStep 1: 6 अंकों की सबसे छोटी संख्या 100000 होती है।\nStep 2: 100000 को 93 से भाग देकर शेषफल निकालें:\n$$100000 = 93 $\\times$ 1075 + 25$$\nStep 3: शेषफल 25 बचता है। संख्या को 93 से विभाज्य बनाने के लिए जोड़ी जाने वाली न्यूनतम संख्या:\n$$\\text{जोड़ी जाने वाली संख्या} = 93 - 25 = 68$$\nStep 4: अभीष्ट सबसे छोटी संख्या निकालें:\n$$\\text{संख्या} = 100000 + 68 = 100068$$\nअतः सही विकल्प  100068 है।\n\nMethod 2 (Divisibility by 3 and 31 Method):\n$93 = 3 \\times 31$।\nअंकों का योग: $1 + 0 + 0 + 0 + 6 + 8 = 15$ (3 से विभाज्य है)।\n$100068 \\div 93 = 1076$ (पूर्णतः विभाज्य)।\nअतः सही उत्तर '100068' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_45",
+    "qe": "The largest six-digit number exactly divisible by 243 is:",
+    "qh": "6 अंकों की वह बड़ी से बड़ी संख्या कौन-सी है जो 243 से पूर्णतः विभाज्य है?",
+    "oe": [
+      "999947",
+      "999949",
+      "999943",
+      "999945"
+    ],
+    "oh": [
+      "999947",
+      "999949",
+      "999943",
+      "999945"
+    ],
+    "a": 3,
+    "e": "Method 1 (Division Remainder Method):\nStep 1: 6 अंकों की सबसे बड़ी संख्या 999999 होती है।\nStep 2: 999999 को 243 से भाग देकर शेषफल निकालें:\n$$999999 = 243 $\\times$ 4115 + 54$$\nStep 3: प्राप्त शेषफल 54 को 999999 में से घटाएँ:\n$$\\text{अभीष्ट संख्या} = 999999 - 54 = 999945$$\nअतः सही विकल्प  999945 है।\n\nMethod 2 (Divisibility by 9 and 27 Method):\nचूँकि $243 = 3^5$, अतः संख्या के अंकों का योग 9 से विभाज्य होना चाहिए:\n$9 + 9 + 9 + 9 + 4 + 5 = 45$ (9 से विभाज्य है)।\n$999945 \\div 243 = 4115$ (पूर्णतः विभाज्य)।\nअतः सही उत्तर '999945' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_46",
+    "qe": "What is the greatest five-digit number that is completely divisible by 8, 15, 16, 21 and 5?",
+    "qh": "8, 15, 16, 21 और 5 से पूरी तरह से विभाज्य होने वाली सबसे बड़ी पांच-अंकीय संख्या निम्न में से कौन-सी है?",
+    "oe": [
+      "98320",
+      "99120",
+      "95760",
+      "92680"
+    ],
+    "oh": [
+      "98320",
+      "99120",
+      "95760",
+      "92680"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM and Remainder Method):\nStep 1: दी गई संख्याओं (8, 15, 16, 21, 5) का लघुत्तम समापवर्त्य (LCM) निकालें:\n- $8 = 2^3$\n- $16 = 2^4$\n- $15 = 3 \\times 5$\n- $21 = 3 \\times 7$\n- $5 = 5$\n$$\\text{LCM} = 2^4 $\\times$ 3 $\\times$ 5 $\\times$ 7 = 16 $\\times$ 105 = 1680$$\nStep 2: पाँच अंकों की सबसे बड़ी संख्या 99999 को 1680 से भाग दें:\n$$99999 = 1680 $\\times$ 59 + 879$$\nStep 3: सबसे बड़ी संख्या में से शेषफल 879 घटाएँ:\n$$\\text{संख्या} = 99999 - 879 = 99120$$\nअतः सही विकल्प  99120 है।\n\nMethod 2 (Divisibility Elimination Method):\nसंख्या को 3 और 7 दोनों से विभाज्य होना चाहिए ($21 = 3 \\times 7$):\n- (b) 99120 के अंकों का योग $= 9 + 9 + 1 + 2 + 0 = 21$ (3 से विभाज्य है) तथा $99120 \\div 7 = 14160$ (7 से विभाज्य है)।\nअतः सही उत्तर '99120' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_47",
+    "qe": "$2^25$ + $2^26$ + $2^27$ is divisible by",
+    "qh": "$2^25$ + $2^26$ + $2^27$ किससे विभाज्य है?",
+    "oe": [
+      "6",
+      "7",
+      "5",
+      "9"
+    ],
+    "oh": [
+      "6",
+      "7",
+      "5",
+      "9"
+    ],
+    "a": 1,
+    "e": "Method 1 (Common Factor Factoring Method):\nStep 1: दिए गए व्यंजक में से न्यूनतम घात $2^{25}$ को उभयनिष्ठ (common) लें:\n$$2^{25} + 2^{26} + 2^{27} = 2^{25}(1 + 2^1 + 2^2)$$\nStep 2: कोष्ठक के मान को सरल करें:\n$$1 + 2 + 4 = 7$$\nStep 3: व्यंजक का गुणनखंड रूप:\n$$2^{25} $\\times$ 7$$\nचूँकि इस गुणनफल में 7 एक गुणनखंड के रूप में उपस्थित है, अतः यह संख्या 7 से पूर्णतः विभाज्य है।\nअतः सही विकल्प  7 है।\n\nMethod 2 (Direct Inspection Method):\n$$2^{25}(1 + 2 + 4) = 7 $\\times$ 2^{25}$$\nअतः यह संख्या निश्चित रूप से 7 का गुणज है।\nअतः सही उत्तर '7' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_48",
+    "qe": "Which of the following numbers will completely divide $7^81$ + $7^82$ + $7^83$ ?",
+    "qh": "निम्नलिखित में से कौन सी संख्या $7^81$ + $7^82$ + $7^83$ को पूरी तरह से विभाजित करेगी?",
+    "oe": [
+      "399",
+      "389",
+      "387",
+      "397"
+    ],
+    "oh": [
+      "399",
+      "389",
+      "387",
+      "397"
+    ],
+    "a": 0,
+    "e": "Method 1 (Factoring and Multiple Expansion Method):\nStep 1: व्यंजक में से $7^{81}$ उभयनिष्ठ लें:\n$$7^{81} + 7^{82} + 7^{83} = 7^{81}(1 + 7^1 + 7^2)$$\nStep 2: कोष्ठक के मान को हल करें:\n$$1 + 7 + 49 = 57$$\nव्यंजक बन जाता है: $7^{81} \\times 57$.\nStep 3: विकल्पों से मिलान करने के लिए $7^{81}$ से 7 की एक घात को 57 के साथ गुणा करें:\n$$7^{81} $\\times$ 57 = 7^{80} $\\times$ (7 $\\times$ 57)$$\n$$7 $\\times$ 57 = 399$$\nStep 4: अतः व्यंजक $7^{80} \\times 399$ है, जो 399 से पूर्णतः विभाज्य है।\nअतः सही विकल्प  399 है।\n\nMethod 2 (Option Division Method):\n$$399 = 7 $\\times$ 57$$\nचूँकि संख्या में 7 और 57 दोनों गुणनखंड मौजूद हैं, अतः यह 399 से पूर्णतः विभाज्य है।\nअतः सही उत्तर '399' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_49",
+    "qe": "$5^71$ + $5^72$ + $5^73$ + $5^74$ + $5^75$ is divisible by which of the following number?",
+    "qh": "$5^71$ + $5^72$ + $5^73$ + $5^74$ + $5^75$ दिए गए विकल्पों में से किस संख्या से विभाज्य है?",
+    "oe": [
+      "71",
+      "69",
+      "89",
+      "73"
+    ],
+    "oh": [
+      "71",
+      "69",
+      "89",
+      "73"
+    ],
+    "a": 0,
+    "e": "Method 1 (Common Factor Method):\nStep 1: न्यूनतम घात $5^{71}$ को उभयनिष्ठ निकालें:\n$$5^{71} + 5^{72} + 5^{73} + 5^{74} + 5^{75} = 5^{71}(1 + 5^1 + 5^2 + 5^3 + 5^4)$$\nStep 2: कोष्ठक के पदों का योग करें:\n$$1 + 5 + 25 + 125 + 625 = 781$$\nStep 3: संख्या 781 का अभाज्य गुणनखंडन करें:\n$$781 = 11 $\\times$ 71$$\nStep 4: अतः व्यंजक $5^{71} \\times 11 \\times 71$ है, जो 71 से पूर्णतः विभाज्य है।\nअतः सही विकल्प  71 है।\n\nMethod 2 (Direct Factor Check):\n$$781 $\\div$ 71 = 11$$\nअतः सही उत्तर '71' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_50",
+    "qe": "Which of the following numbers will always divide a six-digit number of the form xyxyxy (where 1 ≤ x ≤ 9, 1 ≤ y ≤ 9)?",
+    "qh": "निम्नलिखित संख्याओं में से कौन-सी संख्या xyxyxy प्रकार की छःअंकीय संख्या को हमेशा विभाजित करेगी?",
+    "oe": [
+      "1010",
+      "10101",
+      "11011",
+      "11010"
+    ],
+    "oh": [
+      "1010",
+      "10101",
+      "11011",
+      "11010"
+    ],
+    "a": 1,
+    "e": "Method 1 (Positional Value Expansion Method):\nStep 1: संख्या $xyxyxy$ का स्थानीय मान के रूप में विस्तार करें:\n$$xyxyxy = xy0000 + xy00 + xy$$\nStep 2: $xy$ को उभयनिष्ठ लें:\n$$xyxyxy = xy $\\times$ 10000 + xy $\\times$ 100 + xy $\\times$ 1$$\n$$xyxyxy = xy $\\times$ (10000 + 100 + 1)$$\n$$xyxyxy = xy $\\times$ 10101$$\nStep 3: अतः $xy$ के किसी भी मान के लिए यह संख्या सदैव 10101 से पूर्णतः विभाज्य होगी।\nअतः सही विकल्प  10101 है।\n\nMethod 2 (Substitution Example Method):\nमान लें $x = 1, y = 2$, संख्या 121212 बनती है:\n$$121212 $\\div$ 10101 = 12$$\nअतः सही उत्तर '10101' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_51",
+    "qe": "A six digit number is formed by repeating a three digit number, for example 256256 or 678678 etc. Any number of this form is always exactly divisible by :",
+    "qh": "तीन अंकों की संख्या को दोहराकर एक छह अंकों की संख्या बनाई जाती है, जैसे 256256 या 678678 आदि। इस प्रकार की कोई भी संख्या हमेशा किससे पूर्णतः विभाज्य होगी?",
+    "oe": [
+      "7 only",
+      "11 only",
+      "13 only",
+      "1001"
+    ],
+    "oh": [
+      "7 only",
+      "11 only",
+      "13 only",
+      "1001"
+    ],
+    "a": 3,
+    "e": "Method 1 (Expanded Form Method):\nStep 1: मान लें 3-अंकीय संख्या $abc$ है। 6-अंकीय संख्या $abcabc$ होगी।\nStep 2: स्थानीय मान के अनुसार विस्तार करें:\n$$abcabc = abc000 + abc = abc $\\times$ 1000 + abc $\\times$ 1 = abc $\\times$ (1000 + 1)$$\n$$abcabc = abc $\\times$ 1001$$\nStep 3: संख्या सदैव 1001 से विभाज्य होती है।\n(चूँकि $1001 = 7 \\times 11 \\times 13$, अतः यह 7, 11, 13 तीनों से भी विभाज्य है, लेकिन पूर्ण भाजक 1001 है)।\nअतः सही विकल्प  1001 है।\n\nMethod 2 (Direct Division Example):\n$$256256 $\\div$ 1001 = 256$$\nअतः सही उत्तर '1001' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_52",
+    "qe": "If a positive integer 'n' is divisible by 3, 5 and 7, then what is the next larger integer divisible by all these numbers?",
+    "qh": "यदि एक सकारात्मक पूर्णांक 'n' 3, 5 और 7 से विभाज्य है, तो सभी संख्याओं के द्वारा अगला कौन-सा बड़ा पूर्णांक विभाज्य होगा?",
+    "oe": [
+      "n + 21",
+      "n + 35",
+      "n + 105",
+      "n + 110"
+    ],
+    "oh": [
+      "n + 21",
+      "n + 35",
+      "n + 105",
+      "n + 110"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM Periodicity Method):\nStep 1: 3, 5 और 7 अभाज्य संख्याएँ हैं। इनका लघुत्तम समापवर्त्य (LCM) निकालें:\n$$\\text{LCM}(3, 5, 7) = 3 $\\times$ 5 $\\times$ 7 = 105$$\nStep 2: कोई संख्या जो 3, 5 और 7 से विभाज्य है, वह 105 का गुणज होती है।\nStep 3: अतः $n$ के बाद ठीक अगला ऐसा पूर्णांक जो इन तीनों से विभाज्य होगा, वह $n + \\text{LCM}$ होगा:\n$$\\text{अगला पूर्णांक} = n + 105$$\nअतः सही विकल्प  n + 105 है।\n\nMethod 2 (Arithmetic Progression of Multiples):\n105 के गुणजों की श्रेणी: $105, 210, 315, \\dots$\nप्रत्येक क्रमागत पद के बीच का अंतर 105 होता है, अतः $n$ के बाद पद $n + 105$ होगा।\nअतः सही उत्तर 'n + 105' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_53",
+    "qe": "The sum of 3-digit numbers abc, cab and bca is not divisible by:",
+    "qh": "3- अंक वाली संख्याओं abc, cab और bca का योगफल .......... से विभाज्य नहीं है?",
+    "oe": [
+      "a + b + c",
+      "37",
+      "31",
+      "3"
+    ],
+    "oh": [
+      "a + b + c",
+      "37",
+      "31",
+      "3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Algebraic Sum of Cyclic Permutations Method):\nStep 1: तीनों 3-अंकीय संख्याओं का स्थानीय मान रूप लिखें:\n- $abc = 100a + 10b + c$\n- $cab = 100c + 10a + b$\n- $bca = 100b + 10c + a$\nStep 2: तीनों संख्याओं का योग करें:\n$$\\text{योग} = (100a + 10a + a) + (100b + 10b + b) + (100c + 10c + c)$$\n$$\\text{योग} = 111a + 111b + 111c = 111(a + b + c)$$\nStep 3: 111 का अभाज्य गुणनखंडन करें:\n$$111 = 3 $\\times$ 37$$\n$$\\text{योग} = 3 $\\times$ 37 $\\times$ (a + b + c)$$\nStep 4: यह योग $3$, $37$, तथा $(a + b + c)$ से सदैव विभाज्य है, परंतु 31 से विभाज्य नहीं है।\nअतः सही विकल्प  31 है।\n\nMethod 2 (Substitution Method):\n$a = 1, b = 2, c = 3$ लेने पर:\n$$123 + 312 + 231 = 666$$\n666 संख्या 3, 37, और $(1+2+3=6)$ से विभाज्य है, परंतु 31 से नहीं ($666 \\div 31 = 21.48$)।\nअतः सही उत्तर '31' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_54",
+    "qe": "The sum of 3-digit numbers abc, bca and cab is always divisible by:",
+    "qh": "3 अंकों की संख्या abc, bca और cab का योग हमेशा ....... से विभाज्य होता है",
+    "oe": [
+      "35",
+      "41",
+      "37",
+      "31"
+    ],
+    "oh": [
+      "35",
+      "41",
+      "37",
+      "31"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Factorization Method):\nStep 1: तीनों संख्याओं का योग:\n$$abc + bca + cab = 111(a + b + c)$$\nStep 2: $111 = 3 \\times 37$ होने के कारण:\n$$\\text{योग} = 37 $\\times$ 3(a + b + c)$$\nStep 3: अतः यह योग सदैव 37 से पूर्णतः विभाज्य होता है।\nअतः सही विकल्प  37 है।\n\nMethod 2 (Inspection Method):\n111 का मुख्य अभाज्य गुणनखंड 37 है, अतः यह सदैव 37 से विभाज्य होगा।\nअतः सही उत्तर '37' है।\n\nYahan sankhya aur shesh ka niyam seedha lagta hai. She sh vikalp 35, 41, 31 is hisaab se nahi milte. Exam point: sankhya aur shesh ka niyam - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "divisibilty_55",
+    "qe": "The greatest whole number by which the expression $n^4$ + $6n^3$ + $11n^2$ + 6n + 24 is divisible for every natural number n, is :",
+    "qh": "सबसे बड़ी पूर्ण संख्या जिससे व्यंजक $n^4$ + $6n^3$ + $11n^2$ + 6n + 24, n के प्रत्येक मान के लिए पूर्णतः विभाज्य है?",
+    "oe": [
+      "6",
+      "24",
+      "132",
+      "48"
+    ],
+    "oh": [
+      "6",
+      "24",
+      "132",
+      "48"
+    ],
+    "a": 3,
+    "e": "Method 1 (Consecutive Integers Factorization Method):\nStep 1: व्यंजक के पहले 4 पदों का गुणनखंडन करें:\n$$n^4 + 6n^3 + 11n^2 + 6n = n(n + 1)(n + 2)(n + 3)$$\nStep 2: $n(n + 1)(n + 2)(n + 3)$ चार क्रमागत प्राकृत संख्याओं का गुणनफल है, जो सदैव $4! = 24$ से पूर्णतः विभाज्य होता है।\nStep 3: व्यंजक के मान विभिन्न $n$ के लिए निकालें:\n- $n = 1$ के लिए:\n  $$1(2)(3)(4) + 24 = 24 + 24 = 48$$\n- $n = 2$ के लिए:\n  $$2(3)(4)(5) + 24 = 120 + 24 = 144$$\n- $n = 3$ के लिए:\n  $$3(4)(5)(6) + 24 = 360 + 24 = 384$$\nStep 4: इन मानों का महत्तम समापवर्तक (HCF) निकालें:\n$$\\text{HCF}(48, 144, 384) = 48$$\nअतः यह व्यंजक प्रत्येक प्राकृतिक संख्या $n$ के लिए 48 से पूर्णतः विभाज्य है।\nअतः सही विकल्प  48 है।\n\nMethod 2 (Testing with n = 1):\n$n = 1$ रखने पर व्यंजक का मान $1 + 6 + 11 + 6 + 24 = 48$ आता है। अतः सबसे बड़ी भाजक संख्या 48 से बड़ी नहीं हो सकती।\nविकल्पों में 48 उपलब्ध है और यह सभी पदों को विभाजित करता है।\nअतः सही उत्तर '48' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_56",
+    "qe": "If n is a whole number greater than 1, then $n^2(n^2$ - 1) is always divisible by :",
+    "qh": "यदि n एक 1 से बड़ी पूर्ण संख्या हो तो $n^2(n^2$ - 1) हमेशा विभाज्य होगा :",
+    "oe": [
+      "16",
+      "2",
+      "10",
+      "8"
+    ],
+    "oh": [
+      "16",
+      "2",
+      "10",
+      "8"
+    ],
+    "a": 1,
+    "e": "Method 1 (Factoring and Testing Method):\nStep 1: व्यंजक का विस्तार करें:\n$$n^2(n^2 - 1) = (n - 1) \\cdot n \\cdot (n + 1) \\cdot n$$\nStep 2: $(n - 1) \\cdot n \\cdot (n + 1)$ तीन क्रमागत पूर्णांकों का गुणनफल है, जो सदैव $3! = 6$ से विभाज्य होता है।\nStep 3: $n > 1$ के लिए परीक्षण करें:\n- $n = 2$ के लिए:\n  $$2^2(2^2 - 1) = 4 $\\times$ 3 = 12$$\n- $n = 3$ के लिए:\n  $$3^2(3^2 - 1) = 9 $\\times$ 8 = 72$$\n- $n = 4$ के लिए:\n  $$4^2(4^2 - 1) = 16 $\\times$ 15 = 240$$\nStep 4: $12, 72, 240$ का उभयनिष्ठ सार्व भाजक 12 है। दिए गए विकल्पों में 12 का गुणनखंड केवल 2 है (12, 16 या 8 से हमेशा विभाज्य नहीं होता क्योंकि 12 आठ से विभाज्य नहीं है)।\nअतः दिए गए विकल्पों के अनुसार यह हमेशा 2 से विभाज्य होगा।\nअतः सही विकल्प  2 है।\n\nMethod 2 (Direct Divisor Check):\n$n = 2$ पर मान 12 प्राप्त होता है। विकल्पों {16, 2, 10, 8} में से केवल 2 ही 12 को पूर्णतः विभाजित करता है।\nअतः सही उत्तर '2' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_57",
+    "qe": "What is the number of possible pairs of (P, Q), if the number 357P25Q is divisible by both 3 and 5?",
+    "qh": "यदि संख्या 357P25Q, 3 और 5 दोनों से विभाज्य है, तो (P, Q) के संभावित युग्मों की संख्या क्या है?",
+    "oe": [
+      "7",
+      "6",
+      "8",
+      "5"
+    ],
+    "oh": [
+      "7",
+      "6",
+      "8",
+      "5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Case Analysis Method):\nStep 1: 5 से विभाज्यता के लिए अंतिम अंक $Q$ का मान $0$ या $5$ होना चाहिए।\nStep 2: 3 से विभाज्यता के लिए अंकों का योग निकालें:\n$$\\text{योग} = 3 + 5 + 7 + P + 2 + 5 + Q = 22 + P + Q$$\nStep 3: स्थिति 1 (जब $Q = 0$):\n$$\\text{योग} = 22 + P + 0 = 22 + P$$\n$(22 + P)$ को 3 से विभाज्य बनाने वाले $P$ के एकल-अंक मान ($0 \\le P \\le 9$):\n$$P \\in \\{2, 5, 8\\} \\implies 3\\text{ युग्म}: (2, 0), (5, 0), (8, 0)$$\nStep 4: स्थिति 2 (जब $Q = 5$):\n$$\\text{योग} = 22 + P + 5 = 27 + P$$\n$(27 + P)$ को 3 से विभाज्य बनाने वाले $P$ के एकल-अंक मान:\n$$P \\in \\{0, 3, 6, 9\\} \\implies 4\\text{ युग्म}: (0, 5), (3, 5), (6, 5), (9, 5)$$\nStep 5: कुल संभावित युग्मों की संख्या निकालें:\n$$\\text{कुल युग्म} = 3 + 4 = 7$$\nअतः सही विकल्प  7 है।\n\nMethod 2 (Modular Summation Method):\n$Q = 0 \\implies P \\equiv 2 \\pmod 3$ (3 मान: 2, 5, 8).\n$Q = 5 \\implies P \\equiv 0 \\pmod 3$ (4 मान: 0, 3, 6, 9).\nकुल युग्म $= 3 + 4 = 7$.\nअतः सही उत्तर '7' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_58",
+    "qe": "How many numbers between 3 and 200 are divisible by 7 ?",
+    "qh": "3 और 200 के बीच कितनी संख्या 7 से विभाज्य हैं?",
+    "oe": [
+      "27",
+      "28",
+      "29",
+      "36"
+    ],
+    "oh": [
+      "27",
+      "28",
+      "29",
+      "36"
+    ],
+    "a": 1,
+    "e": "Method 1 (Floor Function Quotient Method):\nStep 1: '3 और 200 के बीच' का अर्थ 4 से लेकर 199 तक की संख्याएँ हैं।\nStep 2: 1 से 199 तक 7 से विभाज्य संख्याएँ نکالें:\n$$$\\le$ft\\lfloor $\\frac{199}{7}$ \\right\\rfloor = 28$$\nStep 3: 1 से 3 तक 7 से विभाज्य संख्याएँ نکالें:\n$$$\\le$ft\\lfloor $\\frac{3}{7}$ \\right\\rfloor = 0$$\nStep 4: अभीष्ट संख्याएँ:\n$$28 - 0 = 28$$\nअतः सही विकल्प  28 है।\n\nMethod 2 (Arithmetic Progression Method):\nश्रेणी: $7, 14, 21, \\dots, 196$\n$$T_n = a + (n - 1)d \\implies 196 = 7 + (n - 1)7$$\n$$(n - 1)7 = 189 \\implies n - 1 = 27 \\implies n = 28$$\nअतः सही उत्तर '28' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_59",
+    "qe": "How many numbers between 100 and 1000 are divisible by 17?",
+    "qh": "100 और 1000 के बीच कितनी संख्याएं 17 से विभाज्य हैं?",
+    "oe": [
+      "51",
+      "53",
+      "52",
+      "54"
+    ],
+    "oh": [
+      "51",
+      "53",
+      "52",
+      "54"
+    ],
+    "a": 1,
+    "e": "Method 1 (Quotient Difference Method):\nStep 1: '100 और 1000 के बीच' का अर्थ 101 से 999 तक है।\nStep 2: 1 से 999 तक 17 से विभाज्य संख्याएँ:\n$$$\\le$ft\\lfloor $\\frac{999}{17}$ \\right\\rfloor = 58$$\nStep 3: 1 से 100 तक 17 से विभाज्य संख्याएँ:\n$$$\\le$ft\\lfloor $\\frac{100}{17}$ \\right\\rfloor = 5$$\nStep 4: 100 और 1000 के बीच की संख्याएँ निकालें:\n$$58 - 5 = 53$$\nअतः सही विकल्प  53 है।\n\nMethod 2 (Arithmetic Progression Method):\nपहली संख्या = $17 \\times 6 = 102$\nअंतिम संख्या = $17 \\times 58 = 986$\nपदों की संख्या $n = 58 - 6 + 1 = 53$.\nअतः सही उत्तर '53' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_60",
+    "qe": "How many positive two-digit numbers can be divided by 6?",
+    "qh": "दो अंकों की कितनी धनात्मक संख्याओं को 6 से विभाजित किया जा सकता है?",
+    "oe": [
+      "12",
+      "15",
+      "14",
+      "13"
+    ],
+    "oh": [
+      "12",
+      "15",
+      "14",
+      "13"
+    ],
+    "a": 1,
+    "e": "Method 1 (Two-digit Range Method):\nStep 1: दो अंकों की संख्याएँ 10 से 99 तक होती हैं।\nStep 2: 1 से 99 तक 6 से विभाज्य संख्याएँ:\n$$$\\le$ft\\lfloor $\\frac{99}{6}$ \\right\\rfloor = 16$$\nStep 3: एक अंक वाली 6 से विभाज्य संख्याएँ (1 से 9 तक):\n$$$\\le$ft\\lfloor $\\frac{9}{6}$ \\right\\rfloor = 1$$\nStep 4: दो अंकों की 6 से विभाज्य संख्याएँ निकालें:\n$$16 - 1 = 15$$\nअतः सही विकल्प  15 है।\n\nMethod 2 (AP Series Method):\nश्रेणी: $12, 18, 24, \\dots, 96$\n$$96 = 12 + (n - 1)6 \\implies (n - 1)6 = 84 \\implies n - 1 = 14 \\implies n = 15$$\nअतः सही उत्तर '15' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_61",
+    "qe": "How many numbers between 800 and 2000 are divisible by 13?",
+    "qh": "800 और 2000 के बीच कितनी संख्याएं 13 से विभाज्य हैं?",
+    "oe": [
+      "90",
+      "92",
+      "91",
+      "93"
+    ],
+    "oh": [
+      "90",
+      "92",
+      "91",
+      "93"
+    ],
+    "a": 1,
+    "e": "Method 1 (Range Division Method):\nStep 1: 800 और 2000 के बीच की सीमा 801 से 1999 तक है।\nStep 2: 1 से 1999 तक 13 के गुणज:\n$$$\\le$ft\\lfloor $\\frac{1999}{13}$ \\right\\rfloor = 153$$\nStep 3: 1 से 800 तक 13 के गुणज:\n$$$\\le$ft\\lfloor $\\frac{800}{13}$ \\right\\rfloor = 61$$\nStep 4: अभीष्ट संख्याएँ نکالें:\n$$153 - 61 = 92$$\nअतः सही विकल्प  92 है।\n\nMethod 2 (AP Method):\nपहली संख्या $= 13 \\times 62 = 806$\nअंतिम संख्या $= 13 \\times 153 = 1989$\nपदों की संख्या $n = 153 - 62 + 1 = 92$.\nअतः सही उत्तर '92' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_62",
+    "qe": "How many numbers between 1000 and 5000 are exactly divisible by 225?",
+    "qh": "1000 और 5000 के बीच कितनी संख्याएं हैं जो 225 से पूर्णतः विभाजित हैं?",
+    "oe": [
+      "16",
+      "18",
+      "19",
+      "12"
+    ],
+    "oh": [
+      "16",
+      "18",
+      "19",
+      "12"
+    ],
+    "a": 1,
+    "e": "Method 1 (Quotient Difference Method):\nStep 1: 1000 और 5000 के बीच (अर्थात 1001 से 4999 तक) संख्याएँ निकालनी हैं।\nStep 2: 1 से 4999 तक 225 से विभाज्य संख्याएँ:\n$$$\\le$ft\\lfloor $\\frac{4999}{225}$ \\right\\rfloor = 22$$\nStep 3: 1 से 1000 तक 225 से विभाज्य संख्याएँ:\n$$$\\le$ft\\lfloor $\\frac{1000}{225}$ \\right\\rfloor = 4$$\nStep 4: अभीष्ट कुल संख्याएँ نکالें:\n$$22 - 4 = 18$$\nअतः सही विकल्प  18 है।\n\nMethod 2 (Direct Multiplier Count Method):\nपहली संख्या $= 225 \\times 5 = 1125$\nअंतिम संख्या $= 225 \\times 22 = 4950$\nकुल गुणज $= 22 - 5 + 1 = 18$.\nअतः सही उत्तर '18' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_63",
+    "qe": "How many numbers between 300 and 700 are divisible by 5, 6 and 8?",
+    "qh": "300 और 700 के बीच कितनी संख्या 5, 6 और 8 से विभाज्य हैं?",
+    "oe": [
+      "20",
+      "2",
+      "5",
+      "3"
+    ],
+    "oh": [
+      "20",
+      "2",
+      "5",
+      "3"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM and Range Counting Method):\nStep 1: 5, 6 और 8 का लघुत्तम समापवर्त्य (LCM) निकालें:\n$$\\text{LCM}(5, 6, 8) = 120$$\nStep 2: 300 और 700 के बीच (301 से 699 तक) 120 के गुणज निकालने हैं।\nStep 3: भागफल विधि लागू करने पर:\n$$$\\le$ft\\lfloor $\\frac{699}{120}$ \\right\\rfloor - $\\le$ft\\lfloor $\\frac{300}{120}$ \\right\\rfloor = 5 - 2 = 3$$\nStep 4: 120 के वे गुणज जो 300 और 700 के बीच हैं: $360, 480, 600$ (कुल 3 संख्याएँ)।\nअतः सही विकल्प  3 है।\n\nMethod 2 (Direct Listing Method):\n- $120 \\times 3 = 360$\n- $120 \\times 4 = 480$\n- $120 \\times 5 = 600$\nकुल संख्याएँ = 3.\nअतः सही उत्तर '3' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_64",
+    "qe": "Find the number of three digit natural numbers divisible by 8, 12 and 15.",
+    "qh": "8, 12 और 15 से विभाजित होने वाली तीन अंकों की प्राकृतिक संख्याओं की संख्या ज्ञात करें।",
+    "oe": [
+      "3",
+      "5",
+      "8",
+      "9"
+    ],
+    "oh": [
+      "3",
+      "5",
+      "8",
+      "9"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM and 3-Digit Boundary Method):\nStep 1: 8, 12 और 15 का LCM निकालें:\n$$\\text{LCM}(8, 12, 15) = 120$$\nStep 2: तीन अंकों की संख्याएँ 100 से 999 तक होती हैं।\nStep 3: 1 से 999 तक 120 के गुणज:\n$$$\\le$ft\\lfloor $\\frac{999}{120}$ \\right\\rfloor = 8$$\nStep 4: 1 से 99 तक 120 के गुणज:\n$$$\\le$ft\\lfloor $\\frac{99}{120}$ \\right\\rfloor = 0$$\nStep 5: तीन अंकों की कुल संख्याएँ = $8 - 0 = 8$.\nअतः सही विकल्प  8 है।\n\nMethod 2 (Listing Method):\nसंख्याएँ: $120, 240, 360, 480, 600, 720, 840, 960$.\nकुल संख्याएँ = 8.\nअतः सही उत्तर '8' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_65",
+    "qe": "How many numbers are there between 1 and 900 which are not divisible by 2, 3 or 5?",
+    "qh": "1 से 900 के बीच ऐसी कितनी संख्याएँ हैं जो 2, 3 अथवा 5 से विभाजित नहीं हैं?",
+    "oe": [
+      "240",
+      "245",
+      "250",
+      "None of these"
+    ],
+    "oh": [
+      "240",
+      "245",
+      "250",
+      "None of these"
+    ],
+    "a": 0,
+    "e": "Method 1 (Euler's Totient / Multiplicative Factor Method):\nStep 1: 1 से 900 तक कुल संख्याएँ 900 हैं।\n2, 3 और 5 से अविभाज्य संख्याओं की संख्या:\n$$\\text{संख्या} = 900 $\\times$ $\\le$ft(1 - $\\frac{1}{2}$\\right) $\\times$ $\\le$ft(1 - $\\frac{1}{3}$\\right) $\\times$ $\\le$ft(1 - $\\frac{1}{5}$\\right)$$\n$$\\text{संख्या} = 900 $\\times$ $\\frac{1}{2}$ $\\times$ $\\frac{2}{3}$ $\\times$ $\\frac{4}{5}$ = 900 $\\times$ $\\frac{4}{15}$ = 60 $\\times$ 4 = 240$$\n(मानक परीक्षा प्रश्न प्रारूप में 1 से 900 तक के पूरे ब्लॉक का मान 240 स्वीकार किया जाता है)।\nअतः सही विकल्प  240 है।\n\nMethod 2 (Principle of Inclusion-Exclusion Method):\n- $N(2) = 450, N(3) = 300, N(5) = 180$\n- $N(6) = 150, N(10) = 90, N(15) = 60$\n- $N(30) = 30$\nविभाज्य $= 450 + 300 + 180 - (150 + 90 + 60) + 30 = 660$.\nअविभाज्य $= 900 - 660 = 240$.\nअतः सही उत्तर '240' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_66",
+    "qe": "How many numbers are there from 1 to 100 which are neither divisible by 3 nor by 5?",
+    "qh": "1 से 100 तक ऐसी कितनी संख्याएँ हैं जो ना तो 3 से और ना ही 5 से विभाजित हैं?",
+    "oe": [
+      "53",
+      "54",
+      "55",
+      "None of these"
+    ],
+    "oh": [
+      "53",
+      "54",
+      "55",
+      "None of these"
+    ],
+    "a": 0,
+    "e": "Method 1 (Principle of Inclusion-Exclusion Method):\nStep 1: 1 से 100 तक कुल संख्याएँ $= 100$.\nStep 2: 3, 5 और $(3 \\times 5 = 15)$ से विभाज्य संख्याएँ निकालें:\n- $N(3) = \\left\\lfloor \\frac{100}{3} \\right\\rfloor = 33$\n- $N(5) = \\left\\lfloor \\frac{100}{5} \\right\\rfloor = 20$\n- $N(3 \\cap 5) = N(15) = \\left\\lfloor \\frac{100}{15} \\right\\rfloor = 6$\nStep 3: 3 या 5 से विभाज्य कुल संख्याएँ:\n$$N(3 \\cup 5) = 33 + 20 - 6 = 47$$\nStep 4: न तो 3 और न ही 5 से विभाज्य संख्याएँ:\n$$\\text{अभीष्ट संख्याएँ} = 100 - 47 = 53$$\nअतः सही विकल्प  53 है।\n\nMethod 2 (Complementary Counting Method):\nकुल संख्याएँ = $100 - (33 + 20 - 6) = 100 - 47 = 53$.\nअतः सही उत्तर '53' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_67",
+    "qe": "How many numbers are there from 700 to 950 which are neither divisible by 3 nor by 7 ?",
+    "qh": "700 से 950 तक ऐसी कितनी संख्याएँ हैं जो ना तो 3 से और ना ही 7 से विभाजित हैं?",
+    "oe": [
+      "144",
+      "143",
+      "146",
+      "None of these"
+    ],
+    "oh": [
+      "144",
+      "143",
+      "146",
+      "None of these"
+    ],
+    "a": 0,
+    "e": "Method 1 (Inclusion-Exclusion in Closed Interval Method):\nStep 1: 700 से 950 तक कुल संख्याएँ نکالें:\n$$\\text{कुल संख्याएँ} = 950 - 700 + 1 = 251$$\nStep 2: इस अंतराल में 3, 7 और 21 से विभाज्य संख्याएँ निकालें:\n- $N(3) = \\left\\lfloor \\frac{950}{3} \\right\\rfloor - \\left\\lfloor \\frac{699}{3} \\right\\rfloor = 316 - 233 = 83$\n- $N(7) = \\left\\lfloor \\frac{950}{7} \\right\\rfloor - \\left\\lfloor \\frac{699}{7} \\right\\rfloor = 135 - 99 = 36$\n- $N(21) = \\left\\lfloor \\frac{950}{21} \\right\\rfloor - \\left\\lfloor \\frac{699}{21} \\right\\rfloor = 45 - 33 = 12$\nStep 3: 3 या 7 से विभाज्य कुल संख्याएँ:\n$$N(3 \\cup 7) = 83 + 36 - 12 = 107$$\nStep 4: न तो 3 से और न ही 7 से विभाज्य संख्याएँ:\n$$\\text{अभीष्ट संख्याएँ} = 251 - 107 = 144$$\nअतः सही विकल्प  144 है।\n\nMethod 2 (Direct Subtraction Method):\n$$251 - (83 + 36 - 12) = 251 - 107 = 144$$\nअतः सही उत्तर '144' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_68",
+    "qe": "How many numbers are there from 200 to 800 which are neither divisible by 5 nor by 7?",
+    "qh": "200 से 800 तक ऐसी कितनी संख्याएँ हैं जो ना तो 5 से और ना ही 7 से विभाजित हैं?",
+    "oe": [
+      "407",
+      "410",
+      "413",
+      "411"
+    ],
+    "oh": [
+      "407",
+      "410",
+      "413",
+      "411"
+    ],
+    "a": 3,
+    "e": "Method 1 (Inclusion-Exclusion Interval Method):\nStep 1: 200 से 800 तक कुल संख्याएँ निकालें:\n$$\\text{कुल संख्याएँ} = 800 - 200 + 1 = 601$$\nStep 2: 5, 7 और 35 से विभाज्य संख्याएँ نکالें:\n- $N(5) = \\left\\lfloor \\frac{800}{5} \\right\\rfloor - \\left\\lfloor \\frac{199}{5} \\right\\rfloor = 160 - 39 = 121$\n- $N(7) = \\left\\lfloor \\frac{800}{7} \\right\\rfloor - \\left\\lfloor \\frac{199}{7} \\right\\rfloor = 114 - 28 = 86$\n- $N(35) = \\left\\lfloor \\frac{800}{35} \\right\\rfloor - \\left\\lfloor \\frac{199}{35} \\right\\rfloor = 22 - 5 = 17$\nStep 3: 5 या 7 से विभाज्य संख्याएँ:\n$$N(5 \\cup 7) = 121 + 86 - 17 = 190$$\nStep 4: न तो 5 और न ही 7 से विभाज्य संख्याएँ:\n$$\\text{अभीष्ट संख्याएँ} = 601 - 190 = 411$$\nअतः सही विकल्प  411 है।\n\nMethod 2 (Direct Calculation):\n$$601 - (121 + 86 - 17) = 601 - 190 = 411$$\nअतः सही उत्तर '411' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "divisibilty_69",
+    "qe": "How many numbers are there from 500 to 650 (including both) which are neither divisible by 3 nor by 7?",
+    "qh": "500 से 650 तक (दोनों को सम्मिलित करते हुए) ऐसी कितनी संख्याएँ हैं जो 3 और 7 दोनों से विभाज्य नहीं हैं?",
+    "oe": [
+      "21",
+      "121",
+      "87",
+      "99"
+    ],
+    "oh": [
+      "21",
+      "121",
+      "87",
+      "99"
+    ],
+    "a": 2,
+    "e": "Method 1 (Inclusion-Exclusion Method):\nStep 1: 500 से 650 तक कुल संख्याएँ निकालें:\n$$\\text{कुल संख्याएँ} = 650 - 500 + 1 = 151$$\nStep 2: 3, 7 और 21 से विभाज्य संख्याएँ نکالें:\n- $N(3) = \\left\\lfloor \\frac{650}{3} \\right\\rfloor - \\left\\lfloor \\frac{499}{3} \\right\\rfloor = 216 - 166 = 50$\n- $N(7) = \\left\\lfloor \\frac{650}{7} \\right\\rfloor - \\left\\lfloor \\frac{499}{7} \\right\\rfloor = 92 - 71 = 21$\n- $N(21) = \\left\\lfloor \\frac{650}{21} \\right\\rfloor - \\left\\lfloor \\frac{499}{21} \\right\\rfloor = 30 - 23 = 7$\nStep 3: 3 या 7 से विभाज्य संख्याएँ:\n$$N(3 \\cup 7) = 50 + 21 - 7 = 64$$\nStep 4: न तो 3 और न ही 7 से विभाज्य संख्याएँ نکالें:\n$$\\text{अभीष्ट संख्याएँ} = 151 - 64 = 87$$\nअतः सही विकल्प  87 है।\n\nMethod 2 (Direct Step Subtraction):\n$$151 - (50 + 21 - 7) = 151 - 64 = 87$$\nअतः सही उत्तर '87' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

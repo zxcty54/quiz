@@ -1,0 +1,363 @@
+[
+  {
+    "p_id": "basic_1",
+    "qe": "The LCM of 144, 360 and 450 is:",
+    "qh": "144, 360 और 450 का लघुत्तम समापवर्त्य (LCM) क्या है:",
+    "oe": [
+      "4800",
+      "3600",
+      "7200",
+      "2400"
+    ],
+    "oh": [
+      "4800",
+      "3600",
+      "7200",
+      "2400"
+    ],
+    "a": 1,
+    "e": "Method 1 (Prime Factorisation Method):\nStep 1: दी गई संख्याओं के अभाज्य गुणनखंड ज्ञात करें:\n- $144 = 16 \\times 9 = 2^4 \\times 3^2$\n- $360 = 8 \\times 9 \\times 5 = 2^3 \\times 3^2 \\times 5^1$\n- $450 = 2 \\times 9 \\times 25 = 2^1 \\times 3^2 \\times 5^2$\nStep 2: प्रत्येक अभाज्य गुणनखंड की उच्चतम घात लें:\n- $2$ की उच्चतम घात = $2^4 = 16$\n- $3$ की उच्चतम घात = $3^2 = 9$\n- $5$ की उच्चतम घात = $5^2 = 25$\nStep 3: LCM = $2^4 \\times 3^2 \\times 5^2 = 16 \\times 9 \\times 25 = 3600$.\nअतः सही विकल्प  3600 है।\n\nMethod 2 (Division Method):\nStep 1: 144, 360, 450 को 18 से भाग देने पर भागफल क्रमशः 8, 20, 25 प्राप्त होते हैं।\nStep 2: LCM(8, 20, 25) = 200.\nStep 3: अभीष्ट LCM = $18 \\times 200 = 3600$.\nअतः सही उत्तर '3600' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_2",
+    "qe": "The HCF of three numbers 105, 335 and 465 will be:",
+    "qh": "तीन संख्याओं 105, 335 और 465 का महत्तम समापवर्तक (HCF) होगा:",
+    "oe": [
+      "11",
+      "5",
+      "7",
+      "3"
+    ],
+    "oh": [
+      "11",
+      "5",
+      "7",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Prime Factorisation Method):\nStep 1: अभाज्य गुणनखंड करें:\n- $105 = 3 \\times 5 \\times 7$\n- $335 = 5 \\times 67$\n- $465 = 3 \\times 5 \\times 31$\nStep 2: तीनों संख्याओं में केवल $5$ ही उभयनिष्ठ अभाज्य गुणनखंड है।\nअतः $\\text{HCF} = 5$.\nअतः सही विकल्प  5 है।\n\nMethod 2 (Difference / Option Elimination Method):\nStep 1: संख्याओं के इकाई का अंक 5 है, अतः वे निश्चित रूप से 5 से विभाज्य हैं।\nStep 2: 335 के अंकों का योग $3+3+5=11$ है जो 3 से नहीं कटता, अतः 3 HCF नहीं हो सकता। 7 और 11 भी 335 को विभाजित नहीं करते।\nअतः HCF केवल 5 है।\nअतः सही उत्तर '5' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_3",
+    "qe": "What is the largest common divisor of the numbers 1026, 2268 and 2430?",
+    "qh": "संख्याओं 1026, 2268 और 2430 का सबसे बड़ा उभयनिष्ठ भाजक (HCF) क्या है?",
+    "oe": [
+      "108",
+      "54",
+      "81",
+      "27"
+    ],
+    "oh": [
+      "108",
+      "54",
+      "81",
+      "27"
+    ],
+    "a": 1,
+    "e": "Method 1 (Difference Method):\nStep 1: निकटतम दो संख्याओं का अंतर ज्ञात करें:\n$$\\text{अंतर} = 2430 - 2268 = 162$$\nStep 2: HCF या तो 162 होगा या 162 का कोई गुणनखंड होगा:\n$162 = 54 \\times 3$.\nStep 3: 54 की विभाज्यता जाँचें:\n- $1026 / 54 = 19$\n- $2268 / 54 = 42$\n- $2430 / 54 = 45$\nचूँकि 1026 एक विषम संख्या के गुणज (19) पर समाप्त होता है और 108 से विभाज्य नहीं है ($1026 / 108 = 9.5$), अतः सबसे बड़ा उभयनिष्ठ भाजक 54 है।\nअतः सही विकल्प  54 है।\n\nMethod 2 (Prime Factorisation):\n- $1026 = 2 \\times 3^3 \\times 19 = 54 \\times 19$\n- $2268 = 2^2 \\times 3^4 \\times 7 = 54 \\times 42$\n- $2430 = 2 \\times 3^5 \\times 5 = 54 \\times 45$\nउभयनिष्ठ गुणनखंड = $2^1 \\times 3^3 = 54$.\nअतः सही उत्तर '54' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_4",
+    "qe": "The least common multiple of 48 and 64 is _____ times the highest common factor of 12 and 18.",
+    "qh": "48 और 64 का लघुत्तम समापवर्त्य, 12 और 18 के महत्तम समापवर्तक का _____ गुना है।",
+    "oe": [
+      "28",
+      "32",
+      "24",
+      "16"
+    ],
+    "oh": [
+      "28",
+      "32",
+      "24",
+      "16"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Calculation Method):\nStep 1: 48 और 64 का LCM निकालें:\n- $48 = 16 \\times 3 = 2^4 \\times 3$\n- $64 = 2^6$\n$$\\text{LCM}(48, 64) = 2^6 $\\times$ 3 = 64 $\\times$ 3 = 192$$\nStep 2: 12 और 18 का HCF निकालें:\n- $12 = 6 \\times 2$\n- $18 = 6 \\times 3$\n$$\\text{HCF}(12, 18) = 6$$\nStep 3: अभीष्ट अनुपात निकालें:\n$$\\text{गुना} = \\frac{\\text{LCM}(48, 64)}{\\text{HCF}(12, 18)} = $\\frac{192}{6}$ = 32$$\nअतः सही विकल्प  32 है।\n\nMethod 2 (Direct Division):\n$\\frac{192}{6} = 32$.\nअतः सही उत्तर '32' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_5",
+    "qe": "The highest common factor of 108, 72 and 5a is a. What can be the least common multiple of 108, 72 and a?",
+    "qh": "108, 72 और 5a का महत्तम समापवर्तक a है। 108, 72 और a का लघुत्तम समापवर्त्य क्या हो सकता है?",
+    "oe": [
+      "432",
+      "324",
+      "108",
+      "216"
+    ],
+    "oh": [
+      "432",
+      "324",
+      "108",
+      "216"
+    ],
+    "a": 3,
+    "e": "Method 1 (Factor & Property Method):\nStep 1: 108 और 72 का उभयनिष्ठ गुणनखंड निकालें:\n- $108 = 36 \\times 3$\n- $72 = 36 \\times 2$\n$$\\text{HCF}(108, 72) = 36$$\nStep 2: दिया गया है कि $\\text{HCF}(108, 72, 5a) = a$.\nचूँकि HCF संख्याओं के किसी भी उपसमुच्चय के HCF को विभाजित करता है, अतः $a$ को $\\text{HCF}(108, 72) = 36$ का एक भाजक होना चाहिए।\nStep 3: अब हमें $\\text{LCM}(108, 72, a)$ ज्ञात करना है:\n$$\\text{LCM}(108, 72) = 216$$\nचूँकि $a$, 36 का एक भाजक है, और 36 स्वयं 216 का एक गुणनखंड है, इसलिए $a$ सदैव 216 को पूर्णतः विभाजित करेगा।\nStep 4: किसी भी संख्या और उसके भाजक का LCM वह संख्या स्वयं होती है:\n$$\\text{LCM}(108, 72, a) = \\text{LCM}(\\text{LCM}(108, 72), a) = \\text{LCM}(216, a) = 216$$\nअतः सही विकल्प  216 है।\n\nMethod 2 (Verification with Value of a):\nमान लें $a = 36$: $\\text{HCF}(108, 72, 180) = 36 = a$ (संतुष्ट)।\nतब $\\text{LCM}(108, 72, 36) = 216$.\nअतः सही उत्तर '216' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_6",
+    "qe": "If P = 2^3 * 3^5, Q = 2^5 * 3^4, and R = 3^5 * 2^2 then what is the highest common factor of P, Q and R?",
+    "qh": "यदि P = 2^3 * 3^5, Q = 2^5 * 3^4, और R = 3^5 * 2^2 है, तो P, Q और R का महत्तम समापवर्तक क्या है?",
+    "oe": [
+      "2^3 * 3^4",
+      "2^5 * 3^5",
+      "2^2 * 3^4",
+      "2^4 * 3^5"
+    ],
+    "oh": [
+      "2^3 * 3^4",
+      "2^5 * 3^5",
+      "2^2 * 3^4",
+      "2^4 * 3^5"
+    ],
+    "a": 2,
+    "e": "Method 1 (Lowest Exponent Rule Method):\nStep 1: HCF निकालने के लिए प्रत्येक उभयनिष्ठ अभाज्य आधार की न्यूनतम घात (Lowest Power) ली जाती है:\n- $2$ की घातें: P में $3$, Q में $5$, R में $2$ हैं $\\implies$ न्यूनतम घात = $2^2$\n- $3$ की घातें: P में $5$, Q में $4$, R में $5$ हैं $\\implies$ न्यूनतम घात = $3^4$\nStep 2: $\\text{HCF} = 2^2 \\times 3^4$.\nअतः सही विकल्प  2^2 * 3^4 है।\n\nMethod 2 (Factor Inspection):\nउभयनिष्ठ पद = $\\min(2^3, 2^5, 2^2) \\times \\min(3^5, 3^4, 3^5) = 2^2 \\times 3^4$.\nअतः सही उत्तर '2^2 * 3^4' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_7",
+    "qe": "The LCM of 2^3 * 9^2 * 13, 2^7 * 13^2 * 19 and 9^3 * 13^2 * 19^2 is:",
+    "qh": "2^3 * 9^2 * 13, 2^7 * 13^2 * 19 और 9^3 * 13^2 * 19^2 का LCM क्या है:",
+    "oe": [
+      "2^3 * 9^2 * 13^2 * 19",
+      "2^3 * 9^3 * 13^2 * 19^2",
+      "2^7 * 9^2 * 13^2 * 19^2",
+      "2^7 * 9^3 * 13^2 * 19^2"
+    ],
+    "oh": [
+      "2^3 * 9^2 * 13^2 * 19",
+      "2^3 * 9^3 * 13^2 * 19^2",
+      "2^7 * 9^2 * 13^2 * 19^2",
+      "2^7 * 9^3 * 13^2 * 19^2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Highest Exponent Rule Method):\nStep 1: LCM के लिए प्रत्येक पद की उच्चतम घात (Highest Power) ली जाती है:\n- आधार 2 की उच्चतम घात = $2^7$\n- आधार 9 की उच्चतम घात = $9^3$\n- आधार 13 की उच्चतम घात = $13^2$\n- आधार 19 की उच्चतम घात = $19^2$\nStep 2: सभी उच्चतम घातों का गुणनफल करें:\n$$\\text{LCM} = 2^7 $\\times$ 9^3 $\\times$ 13^2 $\\times$ 19^2$$\nअतः सही विकल्प  2^7 * 9^3 * 13^2 * 19^2 है।\n\nMethod 2 (Direct Inspection):\nदी गई संख्याओं के सभी गुणनखंडों का समावेशन करने वाला न्यूनतम व्यंजक $2^7 \\times 9^3 \\times 13^2 \\times 19^2$ है।\nअतः सही उत्तर '2^7 * 9^3 * 13^2 * 19^2' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_8",
+    "qe": "The LCM of 3/8, 5/16 and 7/2 is:",
+    "qh": "3/8, 5/16 और 7/2 का लघुत्तम समापवर्त्य (LCM) है:",
+    "oe": [
+      "101$\\frac{1}{2}$",
+      "52$\\frac{1}{2}$",
+      "28$\\frac{1}{2}$",
+      "25$\\frac{1}{4}$"
+    ],
+    "oh": [
+      "101$\\frac{1}{2}$",
+      "52$\\frac{1}{2}$",
+      "28$\\frac{1}{2}$",
+      "25$\\frac{1}{4}$"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM of Fractions Formula Method):\nStep 1: भिन्नों का LCM ज्ञात करने का सूत्र:\n$$\\text{भिन्नों का LCM} = \\frac{\\text{अंशों (Numerators) का LCM}}{\\text{हरों (Denominators) का HCF}}$$\nStep 2: अंशों (3, 5, 7) का LCM निकालें:\n$$\\text{LCM}(3, 5, 7) = 3 $\\times$ 5 $\\times$ 7 = 105$$\nStep 3: हरों (8, 16, 2) का HCF निकालें:\n$$\\text{HCF}(8, 16, 2) = 2$$\nStep 4: मान सूत्र में रखने पर:\n$$\\text{LCM} = $\\frac{105}{2}$ = 52$\\frac{1}{2}$$$\nअतः सही विकल्प  52 1/2 है।\n\nMethod 2 (Division Verification):\n$105 / 2 = 52.5 = 52\\frac{1}{2}$.\nअतः सही उत्तर '52$\\frac{1}{2}$' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_9",
+    "qe": "The HCF of 1/2, 3/4, 5/6 and 7/8 is:",
+    "qh": "1/2, 3/4, 5/6 और 7/8 का महत्तम समापवर्तक (HCF) है:",
+    "oe": [
+      "$\\frac{105}{2}$",
+      "$\\frac{1}{24}$",
+      "$\\frac{7}{24}$",
+      "$\\frac{1}{48}$"
+    ],
+    "oh": [
+      "$\\frac{105}{2}$",
+      "$\\frac{1}{24}$",
+      "$\\frac{7}{24}$",
+      "$\\frac{1}{48}$"
+    ],
+    "a": 1,
+    "e": "Method 1 (HCF of Fractions Formula Method):\nStep 1: भिन्नों का HCF ज्ञात करने का सूत्र:\n$$\\text{भिन्नों का HCF} = \\frac{\\text{अंशों (Numerators) का HCF}}{\\text{हरों (Denominators) का LCM}}$$\nStep 2: अंशों (1, 3, 5, 7) का HCF निकालें:\n$$\\text{HCF}(1, 3, 5, 7) = 1$$\nStep 3: हरों (2, 4, 6, 8) का LCM निकालें:\n$$\\text{LCM}(2, 4, 6, 8) = 24$$\nStep 4: मान सूत्र में रखने पर:\n$$\\text{HCF} = $\\frac{1}{24}$$$\nअतः सही विकल्प  1/24 है।\n\nMethod 2 (Direct Observation):\nअंश 1 होने के कारण HCF का अंश केवल 1 हो सकता है। 2, 4, 6, 8 का LCM 24 है।\nअतः $\\text{HCF} = 1/24$.\nअतः सही उत्तर '$\\frac{1}{24}$' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_10",
+    "qe": "Calculate the HCF of 12/5, 14/15 and 16/17.",
+    "qh": "12/5, 14/15 और 16/17 का महत्तम समापवर्तक (HCF) ज्ञात कीजिए।",
+    "oe": [
+      "$\\frac{4}{255}$",
+      "$\\frac{3}{255}$",
+      "$\\frac{2}{255}$",
+      "$\\frac{1}{255}$"
+    ],
+    "oh": [
+      "$\\frac{4}{255}$",
+      "$\\frac{3}{255}$",
+      "$\\frac{2}{255}$",
+      "$\\frac{1}{255}$"
+    ],
+    "a": 2,
+    "e": "Method 1 (HCF of Fractions Method):\nStep 1: सूत्र:\n$$\\text{HCF} = \\frac{\\text{HCF}(12, 14, 16)}{\\text{LCM}(5, 15, 17)}$$\nStep 2: अंशों (12, 14, 16) का HCF निकालें:\n- $12 = 2 \\times 6$\n- $14 = 2 \\times 7$\n- $16 = 2 \\times 8$\n$$\\text{HCF}(12, 14, 16) = 2$$\nStep 3: हरों (5, 15, 17) का LCM निकालें:\n- $\\text{LCM}(5, 15) = 15$\n- चूँकि 17 एक अभाज्य संख्या है: $\\text{LCM}(15, 17) = 15 \\times 17 = 255$\nStep 4: मान रखने पर:\n$$\\text{HCF} = $\\frac{2}{255}$$$\nअतः सही विकल्प  2/255 है।\n\nMethod 2 (Factor Verification):\nअंशों का उभयनिष्ठ भाजक 2 है तथा हरों का LCM 255 है $\\implies \\frac{2}{255}$.\nअतः सही उत्तर '$\\frac{2}{255}$' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_11",
+    "qe": "What is the LCM of 0.15, 0.18 and 0.45?",
+    "qh": "0.15, 0.18 और 0.45 का लघुत्तम समापवर्त्य (LCM) क्या है?",
+    "oe": [
+      "0.6",
+      "0.9",
+      "0.81",
+      "0.09"
+    ],
+    "oh": [
+      "0.6",
+      "0.9",
+      "0.81",
+      "0.09"
+    ],
+    "a": 1,
+    "e": "Method 1 (Integer Scaling Method):\nStep 1: दशमलव के समान अंक (2 अंक) होने के कारण प्रत्येक संख्या को 100 से गुणा करें:\n- $0.15 \\times 100 = 15$\n- $0.18 \\times 100 = 18$\n- $0.45 \\times 100 = 45$\nStep 2: 15, 18 और 45 का LCM ज्ञात करें:\n- $15 = 3 \\times 5$\n- $18 = 2 \\times 3^2$\n- $45 = 3^2 \\times 5$\n$$\\text{LCM}(15, 18, 45) = 2 $\\times$ 3^2 $\\times$ 5 = 2 $\\times$ 9 $\\times$ 5 = 90$$\nStep 3: परिणाम को पुनः 100 से भाग दें:\n$$\\text{LCM} = $\\frac{90}{100}$ = 0.90 = 0.9$$\nअतः सही विकल्प  0.9 है।\n\nMethod 2 (Fraction Method):\n$\\frac{15}{100}, \\frac{18}{100}, \\frac{45}{100} \\implies \\frac{\\text{LCM}(15, 18, 45)}{100} = \\frac{90}{100} = 0.9$.\nअतः सही उत्तर '0.9' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_12",
+    "qe": "Find the LCM of 186.6 and 373.2.",
+    "qh": "186.6 और 373.2 का लघुत्तम समापवर्त्य (LCM) ज्ञात कीजिए।",
+    "oe": [
+      "373.2",
+      "398.2",
+      "186.6",
+      "276.6"
+    ],
+    "oh": [
+      "373.2",
+      "398.2",
+      "186.6",
+      "276.6"
+    ],
+    "a": 0,
+    "e": "Method 1 (Multiple Property Method):\nStep 1: दी गई संख्याओं के बीच संबंध देखें:\n$$186.6 $\\times$ 2 = 373.2$$\nStep 2: गणितीय नियम के अनुसार, यदि एक संख्या दूसरी संख्या का पूर्ण गुणज (Multiple) हो, तो बड़ी संख्या ही उनका LCM होती है:\n$$\\text{LCM}(186.6, 373.2) = 373.2$$\nअतः सही विकल्प  373.2 है।\n\nMethod 2 (Integer Conversion Method):\nStep 1: 10 से गुणा करने पर: 1866 और 3732.\nStep 2: $3732 = 1866 \\times 2 \\implies \\text{LCM} = 3732$.\nStep 3: 10 से भाग देने पर = 373.2.\nअतः सही उत्तर '373.2' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_13",
+    "qe": "What is the LCM of .126, 0.36 and 0.96?",
+    "qh": ".126, 0.36 और 0.96 का लघुत्तम समापवर्त्य (LCM) क्या है?",
+    "oe": [
+      "20160",
+      "20.16",
+      "201.60",
+      "2.016"
+    ],
+    "oh": [
+      "20160",
+      "20.16",
+      "201.60",
+      "2.016"
+    ],
+    "a": 1,
+    "e": "Method 1 (Standard Decimal LCM Method):\nStep 1: दशमलव के अधिकतम अंक 3 हैं, अतः सभी संख्याओं को दशमलव के बाद 3 अंकों में समान करें:\n- $0.126 = 126 / 1000$\n- $0.360 = 360 / 1000$\n- $0.960 = 960 / 1000$\nStep 2: 126, 360 और 960 का LCM निकालें:\n- $126 = 2 \\times 3^2 \\times 7$\n- $360 = 2^3 \\times 3^2 \\times 5$\n- $960 = 2^6 \\times 3 \\times 5$\n$$\\text{LCM} = 2^6 $\\times$ 3^2 $\\times$ 5 $\\times$ 7 = 64 $\\times$ 9 $\\times$ 35 = 576 $\\times$ 35 = 20160$$\nStep 3: परिणाम को 1000 से भाग दें:\n$$\\text{LCM} = $\\frac{20160}{1000}$ = 20.16$$\nअतः सही विकल्प  20.16 है।\n\nMethod 2 (Verification):\n$20.16 / 0.126 = 160$, $20.16 / 0.36 = 56$, $20.16 / 0.96 = 21$ (सभी पूर्णांक हैं)।\nअतः सही उत्तर '20.16' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_14",
+    "qe": "The LCM of x^2 - 8x + 15 and x^2 - 5x + 6 is:",
+    "qh": "x^2 - 8x + 15 और x^2 - 5x + 6 का लघुत्तम समापवर्त्य (LCM) क्या है:",
+    "oe": [
+      "(x + 5)(x + 2)(x + 3)",
+      "(x - 5)(x - 2)(x - 3)",
+      "(x + 5)(x - 2)(x - 3)",
+      "(x - 2)(x - 3)^2(x - 5)"
+    ],
+    "oh": [
+      "(x + 5)(x + 2)(x + 3)",
+      "(x - 5)(x - 2)(x - 3)",
+      "(x + 5)(x - 2)(x - 3)",
+      "(x - 2)(x - 3)^2(x - 5)"
+    ],
+    "a": 1,
+    "e": "Method 1 (Factorisation Method):\nStep 1: पहले द्विघात व्यंजक का गुणनखंड करें:\n$$x^2 - 8x + 15 = x^2 - 5x - 3x + 15 = x(x - 5) - 3(x - 5) = (x - 5)(x - 3)$$\nStep 2: दूसरे द्विघात व्यंजक का गुणनखंड करें:\n$$x^2 - 5x + 6 = x^2 - 3x - 2x + 6 = x(x - 3) - 2(x - 3) = (x - 2)(x - 3)$$\nStep 3: LCM ज्ञात करने के लिए सभी अद्वितीय गुणनखंडों की उच्चतम घात का गुणनफल करें:\n$$\\text{LCM} = (x - 5)(x - 2)(x - 3)$$\nअतः सही विकल्प  (x - 5)(x - 2)(x - 3) है।\n\nMethod 2 (Value Putting Method):\n$x = 0$ रखने पर: व्यंजक 15 और 6 बनते हैं। LCM(15, 6) = 30.\nविकल्प (b) में $x = 0$ रखने पर: $(-5)(-2)(-3) = -30$ (परिमाण 30)।\nअतः सही उत्तर '(x - 5)(x - 2)(x - 3)' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_15",
+    "qe": "What is the HCF of (x^6 - 1) & (x^4 - 1)?",
+    "qh": "(x^6 - 1) और (x^4 - 1) का महत्तम समापवर्तक (HCF) क्या है?",
+    "oe": [
+      "(1 + x^2)",
+      "(1 + x)",
+      "(x^2 - 1)",
+      "(1 - x)"
+    ],
+    "oh": [
+      "(1 + x^2)",
+      "(1 + x)",
+      "(x^2 - 1)",
+      "(1 - x)"
+    ],
+    "a": 2,
+    "e": "Method 1 (Algebraic Factorisation Method):\nStep 1: पहले व्यंजक $(x^6 - 1)$ का गुणनखंड करें:\n$$x^6 - 1 = (x^2)^3 - 1 = (x^2 - 1)(x^4 + x^2 + 1)$$\nStep 2: दूसरे व्यंजक $(x^4 - 1)$ का गुणनखंड करें:\n$$x^4 - 1 = (x^2)^2 - 1 = (x^2 - 1)(x^2 + 1)$$\nStep 3: दोनों व्यंजकों में उभयनिष्ठ गुणनखंड (HCF) निकालें:\n$$\\text{उभयनिष्ठ गुणनखंड} = (x^2 - 1)$$\nअतः सही विकल्प  (x^2 - 1) है।\n\nMethod 2 (Polynomial Degree Formula):\n$$\\text{HCF}(x^m - 1, x^n - 1) = x^{\\gcd(m, n)} - 1$$\nयहाँ $m = 6$ और $n = 4$ है:\n$$\\gcd(6, 4) = 2 \\implies \\text{HCF} = x^2 - 1$$\nअतः सही उत्तर '(x^2 - 1)' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_16",
+    "qe": "If the greatest common factor (HCF) of x and y is 15, then the HCF of 36x^2 - 81y^2 and 81x^2 - 9y^2 is divisible by _____.",
+    "qh": "यदि x और y का महत्तम समापवर्तक (HCF) 15 है, तो 36x^2 - 81y^2 और 81x^2 - 9y^2 का HCF किससे विभाज्य है?",
+    "oe": [
+      "135",
+      "120",
+      "90",
+      "180"
+    ],
+    "oh": [
+      "135",
+      "120",
+      "90",
+      "180"
+    ],
+    "a": 0,
+    "e": "Method 1 (Algebraic Factor Method):\nStep 1: दिया गया है $\\text{HCF}(x, y) = 15$, अतः मान लें $x = 15a$ और $y = 15b$, जहाँ $\\gcd(a, b) = 1$.\nStep 2: दोनों व्यंजकों का विश्लेषण करें:\n- पहला व्यंजक: $36x^2 - 81y^2 = 9(4x^2 - 9y^2) = 9 \\times [4(15a)^2 - 9(15b)^2] = 9 \\times 225 \\times (4a^2 - 9b^2) = 2025(4a^2 - 9b^2)$\n- दूसरा व्यंजक: $81x^2 - 9y^2 = 9(9x^2 - y^2) = 9 \\times [9(15a)^2 - (15b)^2] = 9 \\times 225 \\times (9a^2 - b^2) = 2025(9a^2 - b^2)$\nStep 3: दोनों व्यंजकों में संख्यात्मक उभयनिष्ठ गुणनखंड $2025$ उपस्थित है।\nअतः उनका HCF सदैव $2025$ का एक गुणज (या भाज्य) होगा।\nStep 4: विकल्पों की 2025 से विभाज्यता जाँचें:\n- $\\frac{2025}{135} = 15$ (पूर्णतः विभाज्य)\n- 120, 90, 180 सम संख्याएँ हैं जबकि $a$ और $b$ विषम होने पर व्यंजक विषम रह सकता है।\nअतः HCF निश्चित रूप से 135 से विभाज्य होगा।\nअतः सही विकल्प  135 है।\n\nMethod 2 (Testing with Minimum Values):\n$x = 15, y = 15$ रखने पर: $36(225) - 81(225) = -45(225)$ और $81(225) - 9(225) = 72(225)$.\n$\\text{HCF}(45 \\times 225, 72 \\times 225) = 225 \\times \\text{HCF}(45, 72) = 225 \\times 9 = 2025$.\n2025 विकल्पों में से केवल 135 से विभाज्य है।\nअतः सही उत्तर '135' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_17",
+    "qe": "What is the LCM of (8x^3 + 80x^2 + 200x) and (4x^4 + 16x^3 - 20x^2)?",
+    "qh": "(8x^3 + 80x^2 + 200x) और (4x^4 + 16x^3 - 20x^2) का लघुत्तम समापवर्त्य (LCM) क्या है?",
+    "oe": [
+      "8x^2(x + 5)^2(x - 1)",
+      "8x^2(x - 1)^2(x + 5)",
+      "4x^2(x - 1)^2(x + 5)",
+      "4x^2(x + 5)^2(x - 1)"
+    ],
+    "oh": [
+      "8x^2(x + 5)^2(x - 1)",
+      "8x^2(x - 1)^2(x + 5)",
+      "4x^2(x - 1)^2(x + 5)",
+      "4x^2(x + 5)^2(x - 1)"
+    ],
+    "a": 0,
+    "e": "Method 1 (Factorisation Method):\nStep 1: पहले व्यंजक का गुणनखंड करें:\n$$8x^3 + 80x^2 + 200x = 8x(x^2 + 10x + 25) = 8x(x + 5)^2$$\nStep 2: दूसरे व्यंजक का गुणनखंड करें:\n$$4x^4 + 16x^3 - 20x^2 = 4x^2(x^2 + 4x - 5) = 4x^2(x + 5)(x - 1)$$\nStep 3: LCM ज्ञात करने के लिए:\n- संख्यात्मक गुणांक: $\\text{LCM}(8, 4) = 8$\n- $x$ की घात: $\\max(x, x^2) = x^2$\n- $(x + 5)$ की घात: $\\max((x + 5)^2, (x + 5)) = (x + 5)^2$\n- शेष पद: $(x - 1)$\n$$\\text{LCM} = 8x^2(x + 5)^2(x - 1)$$\nअतः सही विकल्प  8x^2(x + 5)^2(x - 1) है।\n\nMethod 2 (Direct Inspection):\nगुणांक 8 और 4 का LCM = 8, $x$ और $x^2$ का LCM = $x^2$, $(x+5)^2$ और $(x-1)$ को सम्मिलित करने पर $8x^2(x + 5)^2(x - 1)$ प्राप्त होता है।\nअतः सही उत्तर '8x^2(x + 5)^2(x - 1)' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_18",
+    "qe": "What is the HCF of the polynomials (x^3 - 8), (x^3 - 6x^2 + 12x - 8) and (x^3 - 4x^2 + 4x)?",
+    "qh": "बहुपदों (x^3 - 8), (x^3 - 6x^2 + 12x - 8) और (x^3 - 4x^2 + 4x) का महत्तम समापवर्तक (HCF) क्या है?",
+    "oe": [
+      "(x - 2)",
+      "(x - 1)",
+      "(x - 4)",
+      "(x - 8)"
+    ],
+    "oh": [
+      "(x - 2)",
+      "(x - 1)",
+      "(x - 4)",
+      "(x - 8)"
+    ],
+    "a": 0,
+    "e": "Method 1 (Factorisation Method):\nStep 1: तीनों बहुपदों का अलग-अलग गुणनखंड करें:\n- पहला बहुपद: $x^3 - 8 = x^3 - 2^3 = (x - 2)(x^2 + 2x + 4)$\n- दूसरा बहुपद: $x^3 - 6x^2 + 12x - 8 = (x - 2)^3$\n- तीसरा बहुपद: $x^3 - 4x^2 + 4x = x(x^2 - 4x + 4) = x(x - 2)^2$\nStep 2: तीनों बहुपदों में उभयनिष्ठ गुणनखंड (HCF) निकालें:\n$$\\text{HCF} = (x - 2)^1 = (x - 2)$$\nअतः सही विकल्प  (x - 2) है।\n\nMethod 2 (Root Testing Method):\n$x = 2$ रखने पर तीनों व्यंजक शून्य हो जाते हैं:\n- $2^3 - 8 = 0$\n- $8 - 24 + 24 - 8 = 0$\n- $8 - 16 + 8 = 0$\nअतः $(x - 2)$ सभी का एक उभयनिष्ठ गुणनखंड है।\nअतः सही उत्तर '(x - 2)' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_19",
+    "qe": "If the HCF of xy^3, x^2y and x^3y^4 is xy, then their LCM is _____.",
+    "qh": "यदि xy^3, x^2y और x^3y^4 का HCF xy है, तो उनका LCM _____ है।",
+    "oe": [
+      "x^3y^4",
+      "x^2y^3",
+      "x^3y^3",
+      "x^2y^4"
+    ],
+    "oh": [
+      "x^3y^4",
+      "x^2y^3",
+      "x^3y^3",
+      "x^2y^4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Highest Power Rule Method):\nStep 1: पदों को अलग-अलग लिखें: $xy^3$, $x^2y^1$, $x^3y^4$.\nStep 2: LCM ज्ञात करने के लिए प्रत्येक चर की उच्चतम घात (Highest Power) ली जाती है:\n- $x$ की उच्चतम घात = $\\max(1, 2, 3) = 3 \\implies x^3$\n- $y$ की उच्चतम घात = $\\max(3, 1, 4) = 4 \\implies y^4$\nStep 3: $\\text{LCM} = x^3 y^4$.\nअतः सही विकल्प  x^3y^4 है।\n\nMethod 2 (Concept Verification):\nLCM वह न्यूनतम पद है जो $xy^3$, $x^2y$ और $x^3y^4$ तीनों से पूर्णतः विभाज्य हो। $x^3y^4$ तीनों से विभाज्य है।\nअतः सही उत्तर 'x^3y^4' है।\n\nExam point: HCF-LCM ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

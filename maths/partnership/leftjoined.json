@@ -1,0 +1,135 @@
+[
+  {
+    "p_id": "leftjoined_1",
+    "qe": "T and U start a business. T invests ₹40,000. After 3 months, U joins with ₹60,000. After 3 more months, T doubles his capital. If the business runs for 12 months, find the profit ratio of T to U.",
+    "qh": "T और U एक व्यवसाय शुरू करते हैं। T ₹40,000 का निवेश करता है। 3 महीने बाद, U ₹60,000 के साथ शामिल होता है। 3 और महीने बाद, T अपनी पूंजी दोगुनी कर देता है। यदि व्यवसाय 12 महीने तक चलता है, तो T और U का लाभ अनुपात ज्ञात कीजिए।",
+    "oe": [
+      "4 : 3",
+      "5 : 3",
+      "7 : 3",
+      "10 : 3"
+    ],
+    "oh": [
+      "4 : 3",
+      "5 : 3",
+      "7 : 3",
+      "10 : 3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Monthly Investment Units Method):\nStep 1: T का कुल प्रभावी निवेश निकालें:\n- पहले 6 महीने के लिए T का निवेश = ₹40,000 * 6 = ₹2,40,000.\n- अगले 6 महीने के लिए पूंजी दोगुनी (₹80,000) हो गई = ₹80,000 * 6 = ₹4,80,000.\nT की कुल समतुल्य पूंजी = 2,40,000 + 4,80,000 = ₹7,20,000.\nStep 2: U का कुल प्रभावी निवेश निकालें:\n- U 3 महीने बाद शामिल हुआ, अतः वह 12 - 3 = 9 महीने व्यवसाय में रहा।\nU की कुल समतुल्य पूंजी = ₹60,000 * 9 = ₹5,40,000.\nStep 3: लाभ का अनुपात T : U:\nT : U = 7,20,000 : 5,40,000 = 72 : 54 = 4 : 3 (18 से विभाजित करने पर)।\nअतः सही विकल्प  4 : 3 है।\n\nMethod 2 (Unit Ratio Method):\nStep 1: आधार मान 20,000 = 1 इकाई लें।\n- T = 2 इकाइयाँ (6 माह) + 4 इकाइयाँ (6 माह) = 12 + 24 = 36 इकाइयाँ।\n- U = 3 इकाइयाँ (9 माह) = 27 इकाइयाँ।\nStep 2: अनुपात = 36 : 27 = 4 : 3.\nअतः सही उत्तर '4 : 3' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftjoined_2",
+    "qe": "A started a business with ₹30,000. B joined after x months with ₹40,000. At the end of the year, their profit-sharing ratio is 3 : 2, What is the value of x?",
+    "qh": "A ने ₹30,000 के साथ एक व्यवसाय शुरू किया। B, x महीने बाद ₹40,000 के साथ शामिल हुआ। वर्ष के अंत में, उनका लाभ-साझाकरण अनुपात 3 : 2 है, तो x का मान क्या है?",
+    "oe": [
+      "5 months",
+      "6 months",
+      "7 months",
+      "8 months"
+    ],
+    "oh": [
+      "5 months",
+      "6 months",
+      "7 months",
+      "8 months"
+    ],
+    "a": 1,
+    "e": "Method 1 (Equation Method):\nStep 1: A पूरे 12 महीने व्यवसाय में रहा।\nमाना B व्यवसाय में (12 - x) महीने रहा।\nStep 2: लाभ अनुपात सूत्र में मान रखें:\n(पूंजी_A * समय_A) / (पूंजी_B * समय_B) = लाभ_A / लाभ_B\n(30,000 * 12) / [40,000 * (12 - x)] = 3 / 2.\nStep 3: सरल करने पर:\n360,000 / [40,000 * (12 - x)] = 9 / (12 - x) = 3 / 2.\nStep 4: तिर्यक गुणा करने पर:\n3 * (12 - x) = 18 ==> 12 - x = 6 ==> x = 12 - 6 = 6 महीने।\nअतः B व्यवसाय शुरू होने के 6 महीने बाद शामिल हुआ।\nअतः सही विकल्प  6 months है।\n\nMethod 2 (Direct Proportion Method):\nStep 1: A की इकाइयाँ = 3 * 12 = 36.\nStep 2: B की इकाइयाँ = 36 * (2 / 3) = 24.\nStep 3: B का समय = 24 / 4 = 6 महीने।\nStep 4: x = 12 - 6 = 6 महीने।\nअतः सही उत्तर '6 months' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftjoined_3",
+    "qe": "Arvind started a business by investing ₹80,000. After 4 months, Bhavin joined with ₹1,20,000. At the end of 8 months from the start, Chandan joined with ₹1,60,000. If the total profit is ₹1,05,000 at the end of the year, find the share of Chandan.",
+    "qh": "अरविंद ने ₹80,000 का निवेश करके एक व्यवसाय शुरू किया। 4 महीने बाद, भाविन ₹1,20,000 के साथ शामिल हुआ। शुरुआत से 8 महीने के अंत में, चंदन ₹1,60,000 के साथ शामिल हुआ। यदि वर्ष के अंत में कुल लाभ ₹1,05,000 है, तो चंदन का हिस्सा ज्ञात कीजिए।",
+    "oe": [
+      "₹26,500",
+      "₹26,000",
+      "₹26,200",
+      "₹26,250"
+    ],
+    "oh": [
+      "₹26,500",
+      "₹26,000",
+      "₹26,200",
+      "₹26,250"
+    ],
+    "a": 3,
+    "e": "Method 1 (Profit Sharing Ratio Method):\nStep 1: प्रत्येक साझेदार की प्रभावी पूंजी की गणना:\n- अरविंद = ₹80,000 * 12 = ₹9,60,000\n- भाविन = ₹1,20,000 * (12 - 4) = ₹1,20,000 * 8 = ₹9,60,000\n- चंदन = ₹1,60,000 * (12 - 8) = ₹1,60,000 * 4 = ₹6,40,000\nStep 2: लाभ का अनुपात:\nअरविंद : भाविन : चंदन = 960,000 : 960,000 : 640,000\n= 96 : 96 : 64 = 3 : 3 : 2 (32 से विभाजित करने पर)।\nStep 3: कुल अनुपाती इकाइयाँ = 3 + 3 + 2 = 8 इकाइयाँ।\nStep 4: कुल लाभ = ₹1,05,000.\nचंदन का हिस्सा (2 इकाइयाँ) = (2 / 8) * 1,05,000 = 1,05,000 / 4 = ₹26,250.\nअतः सही विकल्प  ₹26,250 है।\n\nMethod 2 (Unit Factorization Method):\nStep 1: पूंजी अनुपात = 80 : 120 : 160 = 2 : 3 : 4.\nसमय = 12 : 8 : 4 = 3 : 2 : 1.\nStep 2: लाभ = (2 * 3) : (3 * 2) : (4 * 1) = 6 : 6 : 4 = 3 : 3 : 2.\nStep 3: चंदन का हिस्सा = (2/8) * 1,05,000 = ₹26,250.\nअतः सही उत्तर '₹26,250' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftjoined_4",
+    "qe": "'A' started a business with a capital of ₹54,000 and admitted 'B' and 'C' after 4 months and 6 months, respectively. At the end of the year, the profit was divided in the ratio 1 : 4 : 5. What is the difference between the capitals invested by 'B' and 'C'?",
+    "qh": "'A' ने ₹54,000 की पूंजी के साथ एक व्यवसाय शुरू किया और क्रमशः 4 महीने और 6 महीने बाद 'B' और 'C' को शामिल किया। वर्ष के अंत में, लाभ को 1 : 4 : 5 के अनुपात में विभाजित किया गया था। 'B' और 'C' द्वारा निवेश की गई पूंजी के बीच का अंतर क्या है?",
+    "oe": [
+      "₹216000",
+      "₹324000",
+      "₹108000",
+      "₹162000"
+    ],
+    "oh": [
+      "₹216000",
+      "₹324000",
+      "₹108000",
+      "₹162000"
+    ],
+    "a": 0,
+    "e": "Method 1 (Investment from Profit & Time Method):\nStep 1: तीनों का समय काल:\n- A का समय = 12 महीने\n- B का समय = 12 - 4 = 8 महीने\n- C का समय = 12 - 6 = 6 महीने\nStep 2: A की कुल प्रभावी पूंजी = 54,000 * 12 = ₹6,48,000.\nप्रश्नानुसार लाभ अनुपात = 1 : 4 : 5.\nअतः 1 इकाई लाभ = ₹6,48,000 प्रभावी पूंजी।\nStep 3: B और C की पूंजी की गणना:\n- B की प्रभावी पूंजी = 4 * 6,48,000 = B की पूंजी * 8\nB की पूंजी = (4 * 6,48,000) / 8 = 6,48,000 / 2 = ₹3,24,000.\n- C की प्रभावी पूंजी = 5 * 6,48,000 = C की पूंजी * 6\nC की पूंजी = (5 * 6,48,000) / 6 = 5 * 1,08,000 = ₹5,40,000.\nStep 4: B और C की पूंजी का अंतर:\nअंतर = 5,40,000 - 3,24,000 = ₹2,16,000.\nअतः सही विकल्प  ₹216000 है।\n\nMethod 2 (Capital Ratio Method):\nStep 1: पूंजी अनुपात = (लाभ / समय) = (1 / 12) : (4 / 8) : (5 / 6) = (1 / 12) : (1 / 2) : (5 / 6).\nStep 2: 12 से गुणा करने पर = 1 : 6 : 10.\nStep 3: A का निवेश (1 इकाई) = ₹54,000.\nB और C का अंतर = 10 - 6 = 4 इकाइयाँ = 4 * 54,000 = ₹2,16,000.\nअतः सही उत्तर '₹216000' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftjoined_5",
+    "qe": "A and B enter into a partnership with ₹25,000 and ₹50,000, respectively, in a company for a year. After 7 months, C gets into a partnership with them with ₹30,000 and A withdraws his contribution after 9 months. What would be C's share in the profit, assuming a total profit of ₹3,900 at the end of the year?",
+    "qh": "A और B एक वर्ष के लिए एक कंपनी में क्रमशः ₹25,000 और ₹50,000 के साथ साझेदारी करते हैं। 7 महीने बाद, C उनके साथ ₹30,000 के साथ साझेदारी करता है और A 9 महीने बाद अपना योगदान वापस ले लेता है। वर्ष के अंत में ₹3,900 के कुल लाभ को मानते हुए, लाभ में C का हिस्सा क्या होगा?",
+    "oe": [
+      "₹1,200",
+      "₹800",
+      "₹600",
+      "₹1,000"
+    ],
+    "oh": [
+      "₹1,200",
+      "₹800",
+      "₹600",
+      "₹1,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Profit Sharing Ratio Method):\nStep 1: प्रत्येक का समय और पूंजी:\n- A: ₹25,000, 9 महीने के लिए = 25,000 * 9 = ₹2,25,000\n- B: ₹50,000, 12 महीने के लिए = 50,000 * 12 = ₹6,00,000\n- C: ₹30,000, (12 - 7) = 5 महीने के लिए = 30,000 * 5 = ₹1,50,000\nStep 2: लाभ का अनुपात:\nA : B : C = 225,000 : 600,000 : 150,000\n= 225 : 600 : 150 = 9 : 24 : 6 = 3 : 8 : 2 (75 से विभाजित करने पर)।\nStep 3: कुल अनुपाती इकाइयाँ = 3 + 8 + 2 = 13 इकाइयाँ।\nStep 4: दिया गया कुल लाभ = ₹3,900.\n1 इकाई = 3,900 / 13 = ₹300.\nStep 5: लाभ में C का हिस्सा (2 इकाइयाँ) = 2 * 300 = ₹600.\nअतः सही विकल्प  ₹600 है।\n\nMethod 2 (Simplification Method):\nStep 1: पूंजी अनुपात = 5 : 10 : 6. समय = 9 : 12 : 5.\nStep 2: लाभ = (5 * 9) : (10 * 12) : (6 * 5) = 45 : 120 : 30 = 3 : 8 : 2.\nStep 3: C का हिस्सा = (2 / 13) * 3,900 = ₹600.\nअतः सही उत्तर '₹600' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftjoined_6",
+    "qe": "A, B and C started a business with the investment of ₹100000, ₹140000 and ₹200000 respectively. After 3 months, C left the business. 7 months after C left the business, B also left the business. B and C took their investments with them. At the end of the year, C received his share of profit as ₹1155. What is the total share of profits of A and B?",
+    "qh": "A, B और C ने क्रमशः ₹100000, ₹140000 और ₹200000 के निवेश के साथ एक व्यवसाय शुरू किया। 3 महीने बाद, C ने व्यवसाय छोड़ दिया। C के व्यवसाय छोड़ने के 7 महीने बाद, B ने भी व्यवसाय छोड़ दिया। B और C अपने निवेश अपने साथ ले गए। वर्ष के अंत में, C को लाभ के अपने हिस्से के रूप में ₹1155 प्राप्त हुए। A और B के लाभ का कुल हिस्सा क्या है?",
+    "oe": [
+      "₹6150",
+      "₹5555",
+      "₹5005",
+      "₹4995"
+    ],
+    "oh": [
+      "₹6150",
+      "₹5555",
+      "₹5005",
+      "₹4995"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: प्रत्येक साझेदार की समयावधि:\n- C की अवधि = 3 महीने\n- B की अवधि = 3 + 7 = 10 महीने\n- A की अवधि = पूरा वर्ष (12 महीने)\nStep 2: प्रभावी निवेश की गणना:\n- A = 1,00,000 * 12 = 12,00,000\n- B = 1,40,000 * 10 = 14,00,000\n- C = 2,00,000 * 3 = 6,00,000\nStep 3: लाभ का अनुपात:\nA : B : C = 12 : 14 : 6 = 6 : 7 : 3.\nStep 4: C का हिस्सा (3 इकाइयाँ) = ₹1,155.\n1 इकाई = 1,155 / 3 = ₹385.\nStep 5: A और B का कुल संयुक्त लाभ:\nA + B = 6 + 7 = 13 इकाइयाँ।\nकुल हिस्सा = 13 * 385 = ₹5,005.\nअतः सही विकल्प  ₹5005 है।\n\nMethod 2 (Direct Proportion Method):\nStep 1: (A + B का लाभ) / (C का लाभ) = (6 + 7) / 3 = 13 / 3.\nStep 2: A + B का लाभ = 1,155 * (13 / 3) = 385 * 13 = ₹5,005.\nअतः सही उत्तर '₹5005' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftjoined_7",
+    "qe": "Kapil initiated a business with an investment of ₹30,00,000 in April 2022. After six months, his friend Kunal joined him with an investment of ₹25,00,000. In February 2023, Kapil's Ex-Class fellow Saloni also invested an amount equal to the total investment made by the earlier two partners. In what ratio the profit earned after 3 years from the date on which Kapil initiated the business, will be distributed?",
+    "qh": "कपिल ने अप्रैल 2022 में ₹30,00,000 के निवेश के साथ एक व्यवसाय शुरू किया। छह महीने बाद, उसका मित्र कुणाल ₹25,00,000 के निवेश के साथ उससे जुड़ गया। फरवरी 2023 में, कपिल की सहपाठी सलोनी ने भी पूर्व दोनों साझेदारों द्वारा किए गए कुल निवेश के बराबर राशि का निवेश किया। जिस तारीख को कपिल ने व्यवसाय शुरू किया था, उससे 3 वर्ष बाद अर्जित लाभ को किस अनुपात में वितरित किया जाएगा?",
+    "oe": [
+      "108 : 75 : 143",
+      "108 : 75 : 132",
+      "36 : 25 : 55",
+      "72 : 50 : 143"
+    ],
+    "oh": [
+      "108 : 75 : 143",
+      "108 : 75 : 132",
+      "36 : 25 : 55",
+      "72 : 50 : 143"
+    ],
+    "a": 0,
+    "e": "Method 1 (Month-by-Month Product Method):\nStep 1: कुल समय अवधि = 3 वर्ष = 36 महीने (अप्रैल 2022 से मार्च 2025 तक)।\nStep 2: प्रत्येक साझेदार की समयावधि और निवेश:\n- कपिल: निवेश = ₹30 लाख, समय = 36 महीने।\n- कुणाल: 6 महीने बाद (अक्टूबर 2022) जुड़ा ==> समय = 36 - 6 = 30 महीने, निवेश = ₹25 लाख।\n- सलोनी: फरवरी 2023 में जुड़ी (अप्रैल 2022 से 10 महीने बाद) ==> समय = 36 - 10 = 26 महीने।\nसलोनी का निवेश = दोनों के कुल निवेश के बराबर = 30 + 25 = ₹55 लाख।\nStep 3: लाभ का अनुपात:\nकपिल : कुणाल : सलोनी = (30 * 36) : (25 * 30) : (55 * 26)\n= 1080 : 750 : 1430.\nStep 4: 10 से विभाजित करने पर:\n= 108 : 75 : 143.\nअतः सही विकल्प  108 : 75 : 143 है।\n\nMethod 2 (Simplification Method):\nStep 1: पूंजी अनुपात = 30 : 25 : 55 = 6 : 5 : 11 (लाखों को 5 से विभाजित करने पर).\nStep 2: समय = 36 : 30 : 26 = 18 : 15 : 13 (2 से विभाजित करने पर).\nStep 3: लाभ अनुपात = (6 * 18) : (5 * 15) : (11 * 13) = 108 : 75 : 143.\nअतः सही उत्तर '108 : 75 : 143' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

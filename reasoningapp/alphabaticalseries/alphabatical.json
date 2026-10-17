@@ -1,0 +1,215 @@
+[
+  {
+    "p_id": "alphabatical_1",
+    "qe": "Based on the series: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y, which element will be 5th to the right of 4th from the left end?",
+    "qh": "दी गई श्रृंखला के आधार पर: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y, बाएँ छोर से चौथे तत्व के दाएँ 5वाँ तत्व कौन-सा होगा?",
+    "oe": [
+      "E",
+      "5",
+      "@",
+      "#"
+    ],
+    "oh": [
+      "E",
+      "5",
+      "@",
+      "#"
+    ],
+    "a": 1,
+    "e": "Method 1 (Left + Right Shortcut Trick):\nStep 1: Formula: Jab opposite directions (Left aur Right) hon, toh positions ko add karein:\n$$\\text{Position from Left end} = \\text{Left} + \\text{Right} = 4 + 5 = 9\\text{th element}$$\nStep 2: Diye gaye series me baayein (Left) se 9th element count karein:\n- 1:B, 2:2, 3:3, 4:C, 5:$, 6:4, 7:#, 8:E, 9:5.\n9th element '5' prapt hota hai.\nCorrect option  5 hai.\n\nMethod 2 (Step-by-Step Counting Method):\n- Baayein chhor se 4th element 'C' hai.\n- 'C' ke daayein 5 kadam aage badhein: $(1) \\$, (2) 4, (3) \\#, (4) E, (5) 5$.\nSahi uttar '5' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alphabatical_2",
+    "qe": "Based on the series: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y, which element will be 6th to the left of 17th from the left end?",
+    "qh": "दी गई श्रृंखला के आधार पर: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y, बाएँ छोर से 17वें तत्व के बाएँ छठा तत्व कौन-सा होगा?",
+    "oe": [
+      "©",
+      "6",
+      "H",
+      "@"
+    ],
+    "oh": [
+      "©",
+      "6",
+      "H",
+      "@"
+    ],
+    "a": 0,
+    "e": "Method 1 (Left - Left Shortcut Trick):\nStep 1: Samaan disha (Left aur Left) hone par positions ko ghataayein:\n$$\\text{Position from Left end} = 17 - 6 = 11\\text{th element}$$\nStep 2: Baayein chhor se 11th element count karein:\n- 1:B, 2:2, 3:3, 4:C, 5:$, 6:4, 7:#, 8:E, 9:5, 10:@, 11:©.\n11वाँ element '©' prapt hota hai.\nCorrect option  © hai.\n\nMethod 2 (Backward Counting Method):\n- 17th element '%' hai.\n- '%' ke baayein 6 sthan piche aane par: $J(1), Q(2), I(3), H(4), 6(5), ©(6)$.\nSahi uttar '©' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alphabatical_3",
+    "qe": "Based on the series: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y, which element will be exactly between the 5th element from left end and 4th element from the right end?",
+    "qh": "दी गई श्रृंखला के आधार पर: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y, बाएँ छोर से 5वें तत्व और दाएँ छोर से चौथे तत्व के ठीक बीच में कौन-सा तत्व होगा?",
+    "oe": [
+      "6",
+      "H",
+      "I",
+      "Q"
+    ],
+    "oh": [
+      "6",
+      "H",
+      "I",
+      "Q"
+    ],
+    "a": 1,
+    "e": "Method 1 (Average Position Shortcut Trick):\nStep 1: Kul elements ki sankhya count karein: Total = 24 elements.\nStep 2: Dono positions ko same end (Left) me badlein:\n- Left position $= 5$\n- Right position $= 4 \\implies \\text{Left} = (24 + 1) - 4 = 21$\nStep 3: Theek beech ka element (Mid-point) nikalein:\n$$\\text{Mid-position from Left} = $\\frac{5+21}{2}$ = $\\frac{26}{2}$ = 13\\text{th element}$$\nStep 4: Baayein se 13th element count karein:\n- Elements: B(1), 2(2), 3(3), C(4), $(5), 4(6), #(7), E(8), 5(9), @(10), ©(11), 6(12), H(13).\n13th element 'H' hai.\nCorrect option  H hai.\n\nMethod 2 (Direct Range Mid-point Method):\n- 5th from left = '$', 4th from right = '9'.\n- '$' aur '9' ke beech ke elements: $4, \\#, E, 5, @, ©, 6, H, I, Q, J, \\%, 7, 8, •$ (kul 15 elements).\n- 15 elements ka theek beech wala element 8th element hoga, jo ki 'H' hai.\nSahi uttar 'H' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alphabatical_4",
+    "qe": "Find the odd one out based on the series: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y",
+    "qh": "दी गई श्रृंखला के आधार पर विषम को चुनिए: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y",
+    "oe": [
+      "2 B 3",
+      "4 $ #",
+      "6 © H",
+      "J % Q",
+      "U 9 Z"
+    ],
+    "oh": [
+      "2 B 3",
+      "4 $ #",
+      "6 © H",
+      "J % Q",
+      "U 9 Z"
+    ],
+    "a": 3,
+    "e": "Method 1 (Movement Pattern Shortcut (-1, +1)):\nStep 1: Har vikalp ke elements ka relative position pattern check karein:\n- (A) 2 B 3: 2 se 1 piche 'B', aur 2 ke 1 aage '3' ($-1, +1$ pattern).\n- (B) 4 $ #: 4 se 1 piche '$', aur 4 ke 1 aage '#' ($-1, +1$ pattern).\n- (C) 6 © H: 6 se 1 piche '©', aur 6 ke 1 aage 'H' ($-1, +1$ pattern).\n- (E) U 9 Z: U se 1 piche '9', aur U ke 1 aage 'Z' ($-1, +1$ pattern).\n- (D) J % Q: J ke 1 aage '%' hai aur 1 piche 'Q' hai ($+1, -1$ pattern - ulta order).\nStep 2: 'J % Q' baki sabhi se alag (odd) hai.\nCorrect option  J % Q hai.\n\nMethod 2 (Visual Inspection Method):\nSabhi options me beech wale element se pehle baayein aur fir daayein ka element liya gaya hai, parantu (D) me pehle daayein aur fir baayein ka element liya gaya hai.\nSahi uttar 'J % Q' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alphabatical_5",
+    "qe": "In the series: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y, how many symbols are there which are followed by a digit and preceded by a letter?",
+    "qh": "दी गई श्रृंखला में: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y, ऐसे कितने प्रतीक (symbols) हैं जिनके ठीक बाद एक अंक (digit) और ठीक पहले एक अक्षर (letter) है?",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 1,
+    "e": "Method 1 (Pattern Blueprint Search Shortcut: Letter - Symbol - Digit):\nStep 1: Hume dhoondhna hai: `[Letter] [Symbol] [Digit]`.\nStep 2: Series me sabhi symbols ko scan karein:\n- '$': Iske pehle 'C' (Letter) aur baad me '4' (Digit) hai → `C $ 4` (Valid Pair 1)\n- '#': Pehle '4' (Digit hai, Letter nahi) → Invalid\n- '@': Pehle '5' (Digit) → Invalid\n- '©': Pehle '@' (Symbol) → Invalid\n- '%': Iske pehle 'J' (Letter) aur baad me '7' (Digit) hai → `J % 7` (Valid Pair 2)\n- '•': Pehle '8' (Digit) → Invalid\nStep 3: Aise kul 2 symbols hain.\nCorrect '2' hai.\n\nMethod 2 (Sequential Filtering Method):\nKewal do combinations bante hain jo shart poori karte hain: C$4 aur J%7. Total = 2.\nSahi uttar '2' hai.\n\nExam point: asamta ke chinha ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alphabatical_6",
+    "qe": "What will come next in the following series: 234, #E©, 6HJ, ......?\nSeries: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y",
+    "qh": "दी गई श्रृंखला के आधार पर अगला पद क्या होगा: 234, #E©, 6HJ, ......?\nश्रृंखला: B 2 3 C $ 4 # E 5 @ © 6 H I Q J % 7 8 • 9 U Z Y",
+    "oe": [
+      "% 7 8",
+      "% 7 9",
+      "7 8 •",
+      "% 8 •"
+    ],
+    "oh": [
+      "% 7 8",
+      "% 7 9",
+      "7 8 •",
+      "% 8 •"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step Gap & Triplet Pattern Shortcut):\nStep 1: Series me terms ke positions aur gapping dekhein:\n- Term 1 (234): 2 (2nd pos), 3 (3rd pos), 4 (6th pos) → (+1, +3)\n- Term 2 (#E©): # (7th pos), E (8th pos), © (11th pos) → (+1, +3)\n- Term 3 (6HJ): 6 (12th pos), H (13th pos), J (16th pos) → (+1, +3)\nStep 2: Starting elements ka kram: 2 → #(+5) → 6(+5) → Agla starting element $12 + 5 = 17$th element hoga, jo '%' hai.\nStep 3: Triplet complete karein: % (17th), agla 7 (18th), aur 3 sthan aage 9 (21st) → `% 7 9`.\nCorrect option  % 7 9 hai.\n\nMethod 2 (Direct Visual Sequence Method):\nHar triplet me do consecutive elements aur fir 2 chhod kar teesra element hai, aur agla group theek agle element se shuru hota hai: J ke theek baad '%' se shuru ho kar `% 7 9` banega.\nSahi uttar '% 7 9' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alphabatical_7",
+    "qe": "Based on the series: C 3 4 @ D 5 6 © E F G I J 7 % U * $ Z # 8 9 T S V, which element will be 7th to right of 8th from the left end?",
+    "qh": "दी गई श्रृंखला के आधार पर: C 3 4 @ D 5 6 © E F G I J 7 % U * $ Z # 8 9 T S V, बाएँ छोर से 8वें तत्व के दाएँ 7वाँ तत्व कौन-सा होगा?",
+    "oe": [
+      "7",
+      "%",
+      "U",
+      "*"
+    ],
+    "oh": [
+      "7",
+      "%",
+      "U",
+      "*"
+    ],
+    "a": 1,
+    "e": "Method 1 (Left + Right Shortcut Trick):\nStep 1: Formula: Opposite directions hone par sthanon ko add karein:\n$$\\text{Position from Left end} = 8 + 7 = 15\\text{th element}$$\nStep 2: Diye gaye series me baayein se 15वाँ element count karein:\n- 1:C, 2:3, 3:4, 4:@, 5:D, 6:5, 7:6, 8:©, 9:E, 10:F, 11:G, 12:I, 13:J, 14:7, 15:%.\n15th element '%' hai.\nCorrect option  % hai.\n\nMethod 2 (Step-by-Step Traversal):\n- Baayein se 8th element '©' hai.\n- '©' ke daayein 7 elements aage badhein: $E(1), F(2), G(3), I(4), J(5), 7(6), \\%(7)$.\nSahi uttar '%' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alphabatical_8",
+    "qe": "Based on the series: C 3 4 @ D 5 6 © E F G I J 7 % U * $ Z # 8 9 T S V, which element will be exactly between the 3rd element from the left end and 3rd element from the right end?",
+    "qh": "दी गई श्रृंखला के आधार पर: C 3 4 @ D 5 6 © E F G I J 7 % U * $ Z # 8 9 T S V, बाएँ छोर से तीसरे तत्व और दाएँ छोर से तीसरे तत्व के ठीक बीच में कौन-सा तत्व होगा?",
+    "oe": [
+      "I",
+      "J",
+      "7",
+      "G"
+    ],
+    "oh": [
+      "I",
+      "J",
+      "7",
+      "G"
+    ],
+    "a": 1,
+    "e": "Method 1 (Mid-Point Average Formula Shortcut):\nStep 1: Kul elements count karein: Total = 25 elements.\nStep 2: Dono sthanon ko Left end se likhein:\n- 3rd from left = 3\n- 3rd from right $= (25 + 1) - 3 = 23$rd from left.\nStep 3: Mid-point calculate karein:\n$$\\text{Mid-position from Left} = $\\frac{3+23}{2}$ = $\\frac{26}{2}$ = 13\\text{th element}$$\nStep 4: Baayein chhor se 13th element count karein:\n- C(1), 3(2), 4(3), @(4), D(5), 5(6), 6(7), ©(8), E(9), F(10), G(11), I(12), J(13).\n13th element 'J' prapt hota hai.\nCorrect option  J hai.\n\nMethod 2 (Symmetrical Elimination Method):\n3rd from left '4' hai aur 3rd from right 'T' hai. Dono chhoron se barabar elements chhodte hue aage badhne par theek madhya me 'J' sthit milta hai.\nSahi uttar 'J' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alphabatical_9",
+    "qe": "Find the odd one out based on the series: C 3 4 @ D 5 6 © E F G I J 7 % U * $ Z # 8 9 T S V",
+    "qh": "दी गई श्रृंखला के आधार पर विषम को चुनिए: C 3 4 @ D 5 6 © E F G I J 7 % U * $ Z # 8 9 T S V",
+    "oe": [
+      "3 4 C",
+      "5 6 ©",
+      "J 7 I",
+      "$ Z *",
+      "8 9 #"
+    ],
+    "oh": [
+      "3 4 C",
+      "5 6 ©",
+      "J 7 I",
+      "$ Z *",
+      "8 9 #"
+    ],
+    "a": 1,
+    "e": "Method 1 (Relative Distance Pattern Analysis Shortcut):\nStep 1: Har option ke teeno elements ka internal relation dekhein:\n- (A) 3 4 C: 3 ke aage '4' (+1), fir 3 ke piche 'C' (-1).\n- (C) J 7 I: J ke aage '7' (+1), fir J ke piche 'I' (-1).\n- (D) $ Z *: $ ke aage 'Z' (+1), fir $ ke piche '*' (-1).\n- (E) 8 9 #: 8 ke aage '9' (+1), fir 8 ke piche '#' (-1).\n- (B) 5 6 ©: 5 ke aage '6' (+1) toh hai, lekin agla element '©' 5 ke do kadam aage (+2) hai, piche ka element nahi hai.\nStep 2: Isliye (B) 5 6 © baaki sabhi se alag hai.\nCorrect option  5 6 © hai.\n\nMethod 2 (Direction Rule Check):\nBaki sabhi options me sequence $[X] [X+1] [X-1]$ chal raha hai, jabki '5 6 ©' me $[X] [X+1] [X+3]$ chal raha hai.\nSahi uttar '5 6 ©' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alphabatical_10",
+    "qe": "What will come next in the following series: 3 4 D, 5 6 E, F G J, 7 % *, ......?\nSeries: C 3 4 @ D 5 6 © E F G I J 7 % U * $ Z # 8 9 T S V",
+    "qh": "दी गई श्रृंखला के आधार पर अगला पद क्या होगा: 3 4 D, 5 6 E, F G J, 7 % *, ......?\nश्रृंखला: C 3 4 @ D 5 6 © E F G I J 7 % U * $ Z # 8 9 T S V",
+    "oe": [
+      "$ Z 8",
+      "* $ #",
+      "$ Z #",
+      "Z # 9"
+    ],
+    "oh": [
+      "$ Z 8",
+      "* $ #",
+      "$ Z #",
+      "Z # 9"
+    ],
+    "a": 0,
+    "e": "Method 1 (Element Gap & Group Progression Shortcut):\nStep 1: Groups ki banawat dekhein:\n- '3 4 D': 3, 4 kramik hain aur 1 chhod kar 'D' (+1, +2).\n- '5 6 E': 5, 6 kramik hain aur 1 chhod kar 'E' (+1, +2).\n- 'F G J': F, G kramik hain aur 1 chhod kar 'J' (+1, +2).\n- '7 % *': 7, % kramik hain aur 1 chhod kar '*' (+1, +2).\nStep 2: Starting elements ka pattern: 3 → 5 → F → 7 → Agla group '*' ke baad ek chhod kar '$' se shuru hoga.\nStep 3: '$' se wahi pattern lagayein: '$', agla 'Z', aur 1 chhod kar '8' → `$ Z 8`.\nCorrect option  $ Z 8 hai.\n\nMethod 2 (Visual Traversal Trick):\nHar term me pehle do kramik elements aur fir ek element skip karke teesra element aata hai. '*' ke baad valid triplet '$ Z 8' banta hai.\nSahi uttar '$ Z 8' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alphabatical_11",
+    "qe": "In the series: C 3 4 @ D 5 6 © E F G I J 7 % U * $ Z # 8 9 T S V, how many symbols are there which are immediately followed by a letter and preceded by a digit?",
+    "qh": "दी गई श्रृंखला में: C 3 4 @ D 5 6 © E F G I J 7 % U * $ Z # 8 9 T S V, ऐसे कितने प्रतीक हैं जिनके ठीक बाद एक अक्षर और ठीक पहले एक अंक है?",
+    "oe": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "oh": [
+      "2",
+      "3",
+      "4",
+      "1"
+    ],
+    "a": 1,
+    "e": "Method 1 (Pattern Blueprint Search Shortcut: Digit - Symbol - Letter):\nStep 1: Hume dhoondhna hai: `[Digit] [Symbol] [Letter]`.\nStep 2: Series me sabhi symbols ko scan karein:\n- '@': Pehle '4' (Digit) aur baad me 'D' (Letter) → `4 @ D` (Valid 1)\n- '©': Pehle '6' (Digit) aur baad me 'E' (Letter) → `6 © E` (Valid 2)\n- '%': Pehle '7' (Digit) aur baad me 'U' (Letter) → `7 % U` (Valid 3)\n- '*': Pehle 'U' (Letter hai, Digit nahi) → Invalid\n- '$': Pehle '*' (Symbol) → Invalid\n- '#': Pehle 'Z' (Letter) → Invalid\nStep 3: Kul 3 symbols shart ko santusht karte hain.\nCorrect '4' hai.\n\nMethod 2 (Direct Visual Scan Method):\nKewal 3 valid groups prapt hote hain: (4@D), (6©E), aur (7%U). Total = 3.\nSahi uttar '3' hai.\n\nExam point: asamta ke chinha ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

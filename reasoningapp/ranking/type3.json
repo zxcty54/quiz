@@ -1,0 +1,175 @@
+[
+  {
+    "p_id": "type3_1",
+    "qe": "Ajit is fatter than Ranjit, who is thinner than Bhushan. Mohan is thinner than Ajit but fatter than Bhushan. Two other men are fatter than Ajit. Who is the thinnest?",
+    "qh": "अजीत, रणजीत से मोटा है, जो भूषण से पतला है। मोहन, अजीत से पतला है लेकिन भूषण से मोटा है। दो अन्य व्यक्ति अजीत से मोटे हैं। सबसे पतला कौन है?",
+    "oe": [
+      "Ajit",
+      "Ranjit",
+      "Bhushan",
+      "Mohan"
+    ],
+    "oh": [
+      "Ajit",
+      "Ranjit",
+      "Bhushan",
+      "Mohan"
+    ],
+    "a": 1,
+    "e": "Method 1 (Inequality Chain Shortcut Trick):\nStep 1: Diye gaye kathano ko descending order (mote se patle) me likhein:\n- Ajit > Ranjit\n- Bhushan > Ranjit ('who' Ranjit ke liye hai)\n- Ajit > Mohan > Bhushan\n- Do anya vyakti Ajit se mote hain: (Two men) > Ajit\nStep 2: Sabhi ko ek kram me jodein:\n$$\\text{(Two other men)} > \\text{Ajit} > \\text{Mohan} > \\text{Bhushan} > \\text{Ranjit}$$\nStep 3: Kram me sabse antim sthan par Ranjit aata hai, atah Ranjit sabse patla (thinnest) hai.\nCorrect option  Ranjit hai.\n\nMethod 2 (Elimination Method):\nAjit, Mohan, aur Bhushan sabhi kisi na kisi se mote hain. Ranjit sabhi se patla hai aur kisi se mota nahi hai. Atah sabse patla Ranjit hoga.\nSahi uttar 'Ranjit' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3_2",
+    "qe": "If Anju is taller than Rohini but shorter than Manju and Rohini is as tall as Sarayu but taller than Shubhangi, then Sarayu is:",
+    "qh": "यदि अंजू, रोहिणी से लंबी है लेकिन मंजू से छोटी है और रोहिणी, सरयू के बराबर लंबी है लेकिन शुभांगी से लंबी है, तो सरयू है:",
+    "oe": [
+      "Taller than Manju",
+      "Shorter than Anju",
+      "As tall as Anju",
+      "Shorter than Shubhangi"
+    ],
+    "oh": [
+      "Taller than Manju",
+      "Shorter than Anju",
+      "As tall as Anju",
+      "Shorter than Shubhangi"
+    ],
+    "a": 1,
+    "e": "Method 1 (Height Order Chain Shortcut):\nStep 1: Diye gaye sambandho ko likhein:\n- Manju > Anju > Rohini\n- Rohini = Sarayu > Shubhangi\nStep 2: Dono ko combine karein:\n$$\\text{Manju} > \\text{Anju} > \\text{Rohini} = \\text{Sarayu} > \\text{Shubhangi}$$\nStep 3: Sarayu ki sthiti Anju ke baad aati hai, arthath Sarayu Anju se chhoti (Shorter than Anju) hai.\nCorrect option  Shorter than Anju hai.\n\nMethod 2 (Direct Comparison Method):\nAnju Rohini se lambi hai aur Rohini Sarayu ke barabar hai. Iska seedha arth hai ki Anju Sarayu se lambi hai, ya Sarayu Anju se chhoti hai.\nSahi uttar 'Shorter than Anju' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3_3",
+    "qe": "There are 5 books of different thickness: A, B, C, D and E. A is thicker than C and B is thicker than D. E is not as thick as B, but is thicker than C. D is not as thick as C. Which is the thinnest book?",
+    "qh": "विभिन्न मोटाई की 5 पुस्तकें हैं: A, B, C, D और E। A, C से मोटी है और B, D से मोटी है। E, B जितनी मोटी नहीं है, लेकिन C से मोटी है। D, C जितनी मोटी नहीं है। सबसे पतली पुस्तक कौन-सी है?",
+    "oe": [
+      "C",
+      "D",
+      "B",
+      "E"
+    ],
+    "oh": [
+      "C",
+      "D",
+      "B",
+      "E"
+    ],
+    "a": 1,
+    "e": "Method 1 (Descending Thickness Order Shortcut):\nStep 1: Diye gaye kathano ko inequalities me likhein:\n- A > C\n- B > E > C (E, B jitni moti nahi par C se moti hai)\n- C > D (D, C jitni moti nahi hai)\nStep 2: Sambandh jod kar dekhein:\n- A, B, E sabhi C se mote hain ($A, B, E > C$).\n- C swayam D se moti hai ($C > D$).\n- Atah D sabhi se patli (thinnest) pustak hai.\nCorrect 'E' hai.\n\nMethod 2 (Elimination of Thicker Books):\nA > C (A bahar), B > D (B bahar), E > C (E bahar), C > D (C bahar). Kewal D bachti hai jo kisi se moti nahi hai. Atah D sabse patli hai.\nSahi uttar 'D' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3_4",
+    "qe": "Among A, B, C, D and E, A is taller than B but shorter than C. B is taller than only E. C is not the tallest. Who among them will be in the middle if they stand in the order of their heights?",
+    "qh": "A, B, C, D और E में, A, B से लंबा है लेकिन C से छोटा है। B केवल E से लंबा है। C सबसे लंबा नहीं है। यदि वे अपनी लंबाई के क्रम में खड़े हों तो उनके बीच में कौन होगा?",
+    "oe": [
+      "A",
+      "B",
+      "C",
+      "Can't be determined"
+    ],
+    "oh": [
+      "A",
+      "B",
+      "C",
+      "Can't be determined"
+    ],
+    "a": 0,
+    "e": "Method 1 (Definite Slot Allocation Shortcut):\nStep 1: Kul 5 vyakti hain (1st se 5th lambai ke kram me):\n- 'B is taller than only E' $\\implies$ B kewal ek vyakti (E) se lamba hai, arthath E sabse chhota (5th) hai aur B 4th sthan par hai:\n$$\\_ > \\_ > \\_ > B(4\\text{th}) > E(5\\text{th})$$\nStep 2: 'A is taller than B but shorter than C': $C > A > B$.\n- Khali sthan 1st, 2nd, aur 3rd bache hain.\nStep 3: 'C is not the tallest' $\\implies$ C 1st nahi ho sakta, isliye C 2nd sthan par aayega aur D 1st sthan par aayega:\n$$\\text{D(1st)} > \\text{C(2nd)} > \\text{A(3rd)} > \\text{B(4th)} > \\text{E(5th)}$$\nStep 4: Theek beech (3rd position) me A sthit hai.\nCorrect 'A' hai.\n\nMethod 2 (Middle Rank Observation):\nB aur E aakhiri do hain. C sabse upar nahi hai, toh D sabse upar hoga aur C doosra hoga. Tisra (middle) anivarya roop se A hoga.\nSahi uttar 'A' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3_5",
+    "qe": "State B is better than State C but not as good as State A, which is worse than State E. State G is not as good as State E and not as bad as State A. How many states are better than State G?",
+    "qh": "राज्य B, राज्य C से बेहतर है लेकिन राज्य A जितना अच्छा नहीं है, जो राज्य E से खराब है। राज्य G, राज्य E जितना अच्छा नहीं है और राज्य A जितना खराब नहीं है। राज्य G से कितने राज्य बेहतर हैं?",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ranking Chain Shortcut Trick):\nStep 1: Diye gaye kathano ko kram me lagayein:\n- 'State B is better than C but not as good as A': $A > B > C$.\n- 'State A, which is worse than E': $E > A$.\n- 'State G is not as good as E and not as bad as A' $\\implies$ G, E se kharab hai lekin A se behtar hai: $E > G > A$.\nStep 2: Poora kram combine karein:\n$$E > G > A > B > C$$\nStep 3: G se behtar kewal ek hi rajya (State E) hai.\nCorrect '1' hai.\n\nMethod 2 (Direct Comparison):\nState G ki sthiti theek E aur A ke beech me hai ($E > G > A$). G ke aage kewal E aata hai, atah behtar rajyon ki sankhya 1 hai.\nSahi uttar '1' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3_6",
+    "qe": "Among M, N, O, P and Q, (i) N is taller than only P and (ii) O is the 2nd tallest person. To decide the tallest among them, the data in which of the following statements is (are) sufficient?\nStatements:\n(A) M is taller than N.\n(B) M, though taller than N, is not as tall as Q.\n(C) Q is taller than N.\n(D) O is taller than both M and N.",
+    "qh": "M, N, O, P और Q में, (i) N केवल P से लंबा है और (ii) O दूसरा सबसे लंबा व्यक्ति है। उनमें सबसे लंबा कौन है, यह तय करने के लिए निम्नलिखित में से किस कथन का डेटा पर्याप्त है?\nकथन:\n(A) M, N से लंबा है।\n(B) M, हालांकि N से लंबा है, Q जितना लंबा नहीं है।\n(C) Q, N से लंबा है।\n(D) O, M और N दोनों से लंबा है।",
+    "oe": [
+      "Only (D)",
+      "Either (B) alone or (D) alone",
+      "Only (B) or only (A) and (C) together",
+      "(B) and (D) together"
+    ],
+    "oh": [
+      "Only (D)",
+      "Either (B) alone or (D) alone",
+      "Only (B) or only (A) and (C) together",
+      "(B) and (D) together"
+    ],
+    "a": 1,
+    "e": "Method 1 (Data Sufficiency Slot-Fitting Shortcut):\nStep 1: Main conditions se slots bharein (1st se 5th):\n- N keval P se lamba hai $\\implies$ N 4th aur P 5th hai.\n- O doosra sabse lamba hai $\\implies$ O 2nd hai.\n$$\\text{Order: } [\\text{1st: ?}] > [\\text{2nd: O}] > [\\text{3rd: ?}] > [\\text{4th: N}] > [\\text{5th: P}]$$\nKhali bache vyakti M aur Q hain, jinki positions 1st aur 3rd ho sakti hain.\nStep 2: Statements test karein:\n- Statement (B): $Q > M \\implies$ Q 1st hoga aur M 3rd hoga (Tallest = Q tay ho gaya, atah (B) akela paryapt hai).\n- Statement (D): O, M se lamba hai ($O > M$). Chuki O 2nd hai, isliye M 1st nahi ho sakta. Atah M ko 3rd hona padega aur Q ko 1st hona padega (Tallest = Q tay ho gaya, atah (D) akela paryapt hai).\nAtah ya toh (B) akela ya (D) akela paryapt hai.\nCorrect option  Either (B) alone or (D) alone hai.\n\nMethod 2 (Elimination Verification):\nStatement A aur C se M aur Q ke aapas ke kram ka pata nahi chalta. Jabki B ya D me se kisi ek se bhi 1st rank par Q nishchit ho jata hai. Sahi vikalp  hai.\nSahi uttar 'Either (B) alone or (D) alone' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3_7",
+    "qe": "Among P, Q, R, S and T, Q is shorter than only T and P is taller than only S. Who will be third when they are arranged in descending order of their heights?",
+    "qh": "P, Q, R, S और T में, Q केवल T से छोटा है और P केवल S से लंबा है। जब उन्हें उनकी लंबाई के अवरोही क्रम में व्यवस्थित किया जाए, तो तीसरे स्थान पर कौन होगा?",
+    "oe": [
+      "R",
+      "S",
+      "T",
+      "Q"
+    ],
+    "oh": [
+      "R",
+      "S",
+      "T",
+      "Q"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Slot Mapping Shortcut):\nStep 1: 5 vyaktiyon ke slots banayein: 1(sabse lamba), 2, 3, 4, 5(sabse chhota).\nStep 2: 'Q is shorter than only T' $\\implies$ Q kewal ek vyakti (T) se chhota hai, arthath T 1st hai aur Q 2nd hai.\nStep 3: 'P is taller than only S' $\\implies$ P kewal ek vyakti (S) se lamba hai, arthath S 5th hai aur P 4th hai.\nStep 4: Poora kram:\n$$T(1\\text{st}) > Q(2\\text{nd}) > R(3\\text{rd}) > P(4\\text{th}) > S(5\\text{th})$$\nKewal R bachta hai jo 3rd position par aayega.\nCorrect option  R hai.\n\nMethod 2 (Symmetrical Elimination Method):\nTop 2 (T, Q) nirdharit hain aur Bottom 2 (P, S) nirdharit hain. Akela bacha sadasya R theek madhya (tisre sthan) par hoga.\nSahi uttar 'R' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3_8",
+    "qe": "Among six friends L, M, N, P, Q and S, each having a different height, N is taller than Q and P but shorter than M. P is taller than only Q while S is shorter than only L. Which of the following pairs represents the tallest and the shortest among the friends?",
+    "qh": "छह मित्रों L, M, N, P, Q और S में, जिनमें से प्रत्येक की लंबाई अलग है, N, Q और P से लंबा है लेकिन M से छोटा है। P केवल Q से लंबा है जबकि S केवल L से छोटा है। निम्नलिखित में से कौन-सा युग्म सबसे लंबे और सबसे छोटे मित्र को दर्शाता है?",
+    "oe": [
+      "M, P",
+      "L, Q",
+      "P, Q",
+      "Can't be determined"
+    ],
+    "oh": [
+      "M, P",
+      "L, Q",
+      "P, Q",
+      "Can't be determined"
+    ],
+    "a": 1,
+    "e": "Method 1 (Extreme Ends Identification Shortcut):\nStep 1: 'P is taller than only Q' $\\implies$ Q sabse chhota (6th) hai aur P 5th sthan par hai.\n- Shortest = Q.\nStep 2: 'S is shorter than only L' $\\implies$ L sabse lamba (1st) hai aur S 2nd sthan par hai.\n- Tallest = L.\nStep 3: Poora kram: $L(1\\text{st}) > S(2\\text{nd}) > M(3\\text{rd}) > N(4\\text{th}) > P(5\\text{th}) > Q(6\\text{th})$.\nStep 4: Sabse lamba L aur sabse chhota Q hai, jinka yugm (pair) 'L, Q' hai.\nCorrect option  L, Q hai.\n\nMethod 2 (Direct Clue Matching):\nShuruati shart se Tallest L aur Shortest Q bina madhya ke logon ko arrange kiye bhi spasht ho jate hain. Atah yugm L, Q hai.\nSahi uttar 'L, Q' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3_9",
+    "qe": "Among P, Q, T, A and B, each having a different height, T is taller than P and B but shorter than A and Q. P is not the shortest. Who among them is the tallest?",
+    "qh": "P, Q, T, A और B में, जिनमें से प्रत्येक की लंबाई अलग है, T, P और B से लंबा है लेकिन A और Q से छोटा है। P सबसे छोटा नहीं है। उनमें सबसे लंबा कौन है?",
+    "oe": [
+      "A",
+      "Q",
+      "P",
+      "P or B",
+      "Data inadequate"
+    ],
+    "oh": [
+      "A",
+      "Q",
+      "P",
+      "P or B",
+      "Data inadequate"
+    ],
+    "a": 4,
+    "e": "Method 1 (Unresolved Top Pair Shortcut):\nStep 1: Diye gaye sambandho ko likhein:\n- $T > P, B$\n- $A, Q > T$\n- Inhe milane par: $\\{A, Q\\} > T > \\{P, B\\}$.\nStep 2: 'P is not the shortest' $\\implies$ B sabse chhota hai, isliye $T > P > B$.\nStep 3: Lekin A aur Q ke beech lambai ka koi tulnatmak aakda (comparison) nahi diya gaya hai. A ya Q me se koi bhi sabse lamba ho sakta hai ($A > Q$ ya $Q > A$).\nAtah nishchit roop se sabse lamba kaun hai, yeh tay nahi kiya ja sakta (Data inadequate).\nCorrect option  Data inadequate hai.\n\nMethod 2 (Ambiguity Elimination Method):\nTop position ke liye do daavedar (A aur Q) bachte hain aur unka aapas ka relation anupasthit hai. Isliye uttar data inadequate hoga.\nSahi uttar 'Data inadequate' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

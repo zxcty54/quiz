@@ -1,0 +1,173 @@
+[
+  {
+    "p_id": "nooftime_1",
+    "qe": "An amount becomes double in 7 years on simple interest. The amount would be four times in ____ years on the same rate of simple interest.",
+    "qh": "साधारण ब्याज पर एक धनराशि 7 वर्ष में दोगुनी हो जाती है। साधारण ब्याज की समान दर पर धनराशि कितने वर्षों में चार गुना हो जाएगी?",
+    "oe": [
+      "14",
+      "28",
+      "21",
+      "18"
+    ],
+    "oh": [
+      "14",
+      "28",
+      "21",
+      "18"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: 7 वर्षों में राशि दोगुनी (2P) होती है ==> ब्याज SI1 = 2P - P = 1P.\n1P ब्याज अर्जित करने में लगा समय = 7 वर्ष।\nStep 2: राशि को चार गुना (4P) होना है ==> अभीष्ट ब्याज SI2 = 4P - P = 3P.\nStep 3: साधारण ब्याज समान रूप से बढ़ता है:\nसमय T2 = 3 * 7 = 21 वर्ष।\nअतः सही विकल्प  21 है।\n\nMethod 2 (Formula Method):\nStep 1: (N1 - 1) / T1 = (N2 - 1) / T2.\nStep 2: (2 - 1) / 7 = (4 - 1) / T2 ==> 1 / 7 = 3 / T2.\nStep 3: T2 = 7 * 3 = 21 वर्ष।\nअतः सही उत्तर '21' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "nooftime_2",
+    "qe": "A sum doubles in six years at simple interest. In how many years will the sum become ten times the original sum?",
+    "qh": "एक राशि साधारण ब्याज पर 6 वर्षों में दोगुनी हो जाती है। कितने वर्षों में यह राशि मूल राशि से दस गुनी हो जाएगी?",
+    "oe": [
+      "27",
+      "54",
+      "45",
+      "36"
+    ],
+    "oh": [
+      "27",
+      "54",
+      "45",
+      "36"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: राशि दोगुनी (2P) होने पर साधारण ब्याज SI1 = 2P - P = 1P.\n1P ब्याज मिलने में लगा समय = 6 वर्ष।\nStep 2: राशि को 10 गुना (10P) होने के लिए आवश्यक साधारण ब्याज SI2 = 10P - P = 9P.\nStep 3: 9P ब्याज प्राप्त करने में लगा समय = 9 * 6 = 54 वर्ष।\nअतः सही विकल्प  54 है।\n\nMethod 2 (Formula Method):\nStep 1: (N1 - 1) / T1 = (N2 - 1) / T2.\nStep 2: (2 - 1) / 6 = (10 - 1) / T2 ==> 1 / 6 = 9 / T2.\nStep 3: T2 = 6 * 9 = 54 वर्ष।\nअतः सही उत्तर '54' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "nooftime_3",
+    "qe": "A sum at simple interest becomes two times in 8 years at a certain rate of interest p.a. The time in which the same sum will be 4 times at the same rate of interest at simple interest is:",
+    "qh": "प्रति वर्ष साधारण ब्याज की एक निश्चित दर से एक राशि 8 वर्षों में दोगुनी हो जाती है। वह अवधि ज्ञात कीजिए जब यही राशि साधारण ब्याज की समान दर से 4 गुना हो जाएगी?",
+    "oe": [
+      "30 years",
+      "25 years",
+      "24 years",
+      "20 years"
+    ],
+    "oh": [
+      "30 years",
+      "25 years",
+      "24 years",
+      "20 years"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: 8 वर्षों में दोगुनी ==> SI1 = 2P - P = 1P.\n1P ब्याज = 8 वर्ष।\nStep 2: 4 गुना होने के लिए SI2 = 4P - P = 3P.\nStep 3: समय T = 3 * 8 = 24 वर्ष।\nअतः सही विकल्प  24 years है।\n\nMethod 2 (Formula Method):\nStep 1: T2 = [(N2 - 1) / (N1 - 1)] * T1.\nStep 2: T2 = [(4 - 1) / (2 - 1)] * 8 = (3 / 1) * 8 = 24 वर्ष।\nअतः सही उत्तर '24 years' है।\n\nIs prashn ka moolaadhaar saadharan byaaj ka sootra hai. She sh vikalp 30 years, 25 years, 20 years is hisaab se nahi milte. Exam point: saadharan byaaj ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "nooftime_4",
+    "qe": "A certain sum of money becomes three times of itself in 20 years at simple interest. In how many years does it become double of itself at the same rate of simple interest?",
+    "qh": "कोई धनराशि साधारण ब्याज की दर से 20 वर्ष में स्वयं की 3 गुना हो जाती है। कितने वर्षों में वह राशि साधारण ब्याज की उसी दर से स्वयं का 2 गुना हो जाती है?",
+    "oe": [
+      "8 years",
+      "10 years",
+      "12 years",
+      "14 years"
+    ],
+    "oh": [
+      "8 years",
+      "10 years",
+      "12 years",
+      "14 years"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: 20 वर्ष में 3 गुना ==> SI1 = 3P - P = 2P.\n2P ब्याज = 20 वर्ष ==> 1P ब्याज = 20 / 2 = 10 वर्ष।\nStep 2: स्वयं का 2 गुना होने के लिए SI2 = 2P - P = 1P.\nStep 3: 1P ब्याज प्राप्त करने में लगा समय = 10 वर्ष।\nअतः सही विकल्प  10 years है।\n\nMethod 2 (Formula Method):\nStep 1: (3 - 1) / 20 = (2 - 1) / T2.\nStep 2: 2 / 20 = 1 / T2 ==> 1 / 10 = 1 / T2 ==> T2 = 10 वर्ष।\nअतः सही उत्तर '10 years' है।\n\nYahan saadharan byaaj ka sootra seedha lagta hai. Vikalp 8 years, 12 years, 14 years is hal se mel nahi khaate. Exam point: saadharan byaaj ka sootra - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "nooftime_5",
+    "qe": "A certain sum of money becomes 4 times in 12 years when invested at simple interest. In how many years will it become 10 times of itself at the same rate?",
+    "qh": "एक निश्चित धनराशि साधारण ब्याज पर निवेश करने पर 12 वर्षों में 4 गुना हो जाती है। समान दर पर यह कितने वर्षों में स्वयं की 10 गुना हो जाएगी?",
+    "oe": [
+      "36 years",
+      "40 years",
+      "32 years",
+      "30 years"
+    ],
+    "oh": [
+      "36 years",
+      "40 years",
+      "32 years",
+      "30 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: 12 वर्ष में 4 गुना ==> ब्याज SI1 = 4P - P = 3P.\n3P ब्याज = 12 वर्ष ==> 1P ब्याज = 12 / 3 = 4 वर्ष।\nStep 2: 10 गुना होने के लिए ब्याज SI2 = 10P - P = 9P.\nStep 3: समय T2 = 9 * 4 = 36 वर्ष।\nअतः सही विकल्प  36 years है।\n\nMethod 2 (Formula Method):\nStep 1: T2 = [(N2 - 1) / (N1 - 1)] * T1.\nStep 2: T2 = [(10 - 1) / (4 - 1)] * 12 = (9 / 3) * 12 = 3 * 12 = 36 वर्ष।\nअतः सही उत्तर '36 years' है।\n\nYahan saadharan byaaj ka sootra seedha lagta hai. Vikalp 40 years, 32 years, 30 years is hal se mel nahi khaate. Exam point: saadharan byaaj ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "nooftime_6",
+    "qe": "What is that rate of simple interest at which a sum of money becomes three times of itself in 36 years?",
+    "qh": "साधारण ब्याज की वह दर क्या है जिस पर कोई धनराशि 36 वर्षों में अपने से तीन गुना हो जाती है?",
+    "oe": [
+      "7.28 percent",
+      "6.86 percent",
+      "5.55 percent",
+      "6.28 percent"
+    ],
+    "oh": [
+      "7.28 percent",
+      "6.86 percent",
+      "5.55 percent",
+      "6.28 percent"
+    ],
+    "a": 2,
+    "e": "Method 1 (Percentage Method):\nStep 1: 3 गुना होने पर साधारण ब्याज SI = 3P - P = 2P.\nStep 2: कुल ब्याज प्रतिशत = (2P / P) * 100% = 200%.\nStep 3: वार्षिक ब्याज दर R = कुल ब्याज% / समय = 200% / 36 = 50 / 9% ≈ 5.555...% ≈ 5.55%.\nअतः सही विकल्प  5.55 percent है।\n\nMethod 2 (Formula Method):\nStep 1: R = [(N - 1) * 100] / T.\nStep 2: R = [(3 - 1) * 100] / 36 = 200 / 36 = 5.55%.\nअतः सही उत्तर '5.55 percent' है।\n\nIs prashn ka moolaadhaar saadharan byaaj ka sootra hai. Vikalp 7.28 percent, 6.86 percent, 6.28 percent is hal se mel nahi khaate. Exam point: saadharan byaaj ka sootra - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "nooftime_7",
+    "qe": "A certain sum of money becomes seven times itself when invested at a certain rate of simple interest, in 14 years. How much time (in years, rounded off to 2 decimal places) will it take to become 18 times itself at the same rate?",
+    "qh": "साधारण ब्याज की एक निश्चित दर पर निवेश करने पर एक निश्चित धनराशि 14 वर्षों में स्वयं की सात गुना हो जाती है। इसे उसी ब्याज दर पर स्वयं की 18 गुना होने में कितना समय (वर्षों में, 2 दशमलव स्थानों तक पूर्णांकित) लगेगा?",
+    "oe": [
+      "27.33",
+      "39.67",
+      "42.78",
+      "35.5"
+    ],
+    "oh": [
+      "27.33",
+      "39.67",
+      "42.78",
+      "35.5"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: 14 वर्षों में 7 गुना ==> ब्याज SI1 = 7P - P = 6P.\n6P ब्याज = 14 वर्ष ==> 1P ब्याज = 14 / 6 = 7 / 3 वर्ष।\nStep 2: 18 गुना होने के लिए आवश्यक ब्याज SI2 = 18P - P = 17P.\nStep 3: 17P ब्याज के लिए समय = 17 * (7 / 3) = 119 / 3 = 39.666... ≈ 39.67 वर्ष।\nअतः सही विकल्प  39.67 है।\n\nMethod 2 (Formula Method):\nStep 1: (N1 - 1) / T1 = (N2 - 1) / T2.\nStep 2: (7 - 1) / 14 = (18 - 1) / T2 ==> 6 / 14 = 17 / T2 ==> 3 / 7 = 17 / T2.\nStep 3: T2 = (17 * 7) / 3 = 119 / 3 ≈ 39.67 वर्ष।\nअतः सही उत्तर '39.67' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "nooftime_8",
+    "qe": "A sum of money becomes five times its original value in 15 years when invested at a certain simple interest rate. If the sum was invested twice the time at the same rate of interest, what would be the final amount?",
+    "qh": "एक निश्चित धनराशि साधारण ब्याज की दर से निवेश करने पर वह 15 वर्षों में अपने मूल मूल्य से पांच गुना हो जाती है। यदि धनराशि को समान ब्याज दर पर दुगने समय के लिए निवेश किया जाए, तो अंतिम धनराशि क्या होगी?",
+    "oe": [
+      "The money becomes 7 times its original value/ धनराशि अपने मूल मूल्य से 7 गुना हो जाएगी",
+      "The money becomes 9 times its original value/ धनराशि अपने मूल मूल्य से 9 गुना हो जाएगी",
+      "The money becomes 6 times its original value/ धनराशि अपने मूल मूल्य से 6 गुना हो जाएगी",
+      "The money becomes 8 times its original value/ धनराशि अपने मूल मूल्य से 8 गुना हो जाएगी"
+    ],
+    "oh": [
+      "The money becomes 7 times its original value/ धनराशि अपने मूल मूल्य से 7 गुना हो जाएगी",
+      "The money becomes 9 times its original value/ धनराशि अपने मूल मूल्य से 9 गुना हो जाएगी",
+      "The money becomes 6 times its original value/ धनराशि अपने मूल मूल्य से 6 गुना हो जाएगी",
+      "The money becomes 8 times its original value/ धनराशि अपने मूल मूल्य से 8 गुना हो जाएगी"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: 15 वर्षों में 5 गुना ==> साधारण ब्याज SI1 = 5P - P = 4P.\nStep 2: समय को दोगुना (2 * 15 = 30 वर्ष) करने पर:\nचूँकि साधारण ब्याज समय के समानुपाती होता है (SI ∝ T):\nनया ब्याज SI2 = 2 * SI1 = 2 * 4P = 8P.\nStep 3: अंतिम मिश्रधन (Amount) = P + SI2 = P + 8P = 9P.\nअर्थात धनराशि अपने मूल मूल्य से 9 गुना हो जाएगी।\nअतः सही विकल्प  The money becomes 9 times its original value है।\n\nMethod 2 (Formula Method):\nStep 1: SI1 = 4P = (P * R * 15) / 100 ==> R = 400 / 15 = 80/3%.\nStep 2: नए समय (T2 = 30 वर्ष) के लिए SI2 = [P * (80/3) * 30] / 100 = 8P.\nStep 3: Final Amount = P + 8P = 9P.\nअतः सही उत्तर 'The money becomes 9 times its original value/ धनराशि अपने मूल मूल्य से 9 गुना हो जाएगी' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "nooftime_9",
+    "qe": "If a sum of money at a certain rate of simple interest per year doubles in 5 years and at a different rate of simple interest per year becomes three times in 12 years, the difference in the two rates of simple interest per years is:",
+    "qh": "यदि कोई धनराशि प्रति वर्ष साधारण ब्याज की एक निश्चित दर से 5 वर्षों में दोगुनी हो जाती है और प्रति वर्ष साधारण ब्याज की एक अलग दर से 12 वर्षों में तीन गुना हो जाती है, तो प्रति वर्ष साधारण ब्याज की दोनों दरों में अंतर है:",
+    "oe": [
+      "3$\\frac{1}{3}$%",
+      "2$\\frac{1}{2}$%",
+      "4$\\frac{1}{4}$%",
+      "3$\\frac{2}{3}$%"
+    ],
+    "oh": [
+      "3$\\frac{1}{3}$%",
+      "2$\\frac{1}{2}$%",
+      "4$\\frac{1}{4}$%",
+      "3$\\frac{2}{3}$%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Percentage Method):\nStep 1: पहली स्थिति (5 वर्षों में दोगुनी ==> SI1 = 1P = 100%):\nदर R1 = 100% / 5 = 20% प्रति वर्ष।\nStep 2: दूसरी स्थिति (12 वर्षों में तीन गुना ==> SI2 = 2P = 200%):\nदर R2 = 200% / 12 = 50 / 3% = 16$\\frac{2}{3}$% प्रति वर्ष।\nStep 3: दोनों दरों का अंतर = R1 - R2 = 20% - 16$\\frac{2}{3}$% = 3$\\frac{1}{3}$%.\nअतः सही विकल्प  3 1/3% है।\n\nMethod 2 (Formula Method):\nStep 1: R1 = (1 * 100) / 5 = 20%.\nStep 2: R2 = (2 * 100) / 12 = 50/3%.\nStep 3: Difference = 20 - 50/3 = 10/3% = 3$\\frac{1}{3}$%.\nअतः सही उत्तर '3$\\frac{1}{3}$%' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "p_id": "findrate_1",
+    "qe": "A sum of money becomes three times itself in 3 years at compound interest. What is the rate of interest?",
+    "qh": "कोई धनराशि चक्रवृद्धि ब्याज पर 3 वर्षों में स्वयं की तीन गुनी हो जाती है। ब्याज की दर क्या है?",
+    "oe": [
+      "44.2%",
+      "33.3%",
+      "100%",
+      "88%"
+    ],
+    "oh": [
+      "44.2%",
+      "33.3%",
+      "100%",
+      "88%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Formula Method):\nStep 1: दिया गया है कि मिश्रधन A = 3P और समय T = 3 वर्ष।\nStep 2: A = P(1 + R/100)^T सूत्र में मान रखने पर:\n3P = P(1 + R/100)^3 ==> (1 + R/100)^3 = 3.\nStep 3: दोनों पक्षों का घनमूल (cube root) लेने पर:\n1 + R/100 = 3^(1/3) ≈ 1.44225.\nStep 4: R/100 = 0.44225 ==> R ≈ 44.2% प्रति वर्ष।\nअतः सही विकल्प  44.2% है।\n\nMethod 2 (Option Elimination / Verification Method):\nStep 1: यदि दर 33.3% (1/3) हो, तो मिश्रधन गुणक = (4/3)^3 = 64/27 ≈ 2.37 गुना (3 से कम)।\nStep 2: यदि दर 44.2% हो, तो गुणक = (1.442)^3 ≈ 2.999 ≈ 3 गुना।\nअतः सही उत्तर '44.2%' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findrate_2",
+    "qe": "What interest rate is required for ₹4000 to amount to ₹4840 in 2 years with compound interest?",
+    "qh": "चक्रवृद्धि ब्याज के साथ 2 वर्षों में ₹4000 की राशि ₹4840 होने के लिए किस ब्याज दर की आवश्यकता है?",
+    "oe": [
+      "10%",
+      "9%",
+      "8%",
+      "11%"
+    ],
+    "oh": [
+      "10%",
+      "9%",
+      "8%",
+      "11%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio & Square Root Method):\nStep 1: मूलधन और मिश्रधन का अनुपात निकालें:\nP : A = 4,000 : 4,840 = 400 : 484 = 100 : 121.\nStep 2: समय 2 वर्ष होने के कारण दोनों पक्षों का वर्गमूल लें:\n1 वर्ष का अनुपात = √100 : √121 = 10 : 11.\nStep 3: 1 वर्ष में ₹10 पर ₹1 का ब्याज मिलता है:\nवार्षिक ब्याज दर R = (1 / 10) * 100% = 10% प्रति वर्ष।\nअतः सही विकल्प  10% है।\n\nMethod 2 (Formula Method):\nStep 1: 4,840 = 4,000 * (1 + R/100)^2 ==> (1 + R/100)^2 = 4,840 / 4,000 = 1.21.\nStep 2: 1 + R/100 = √1.21 = 1.1 ==> R/100 = 0.1 ==> R = 10%.\nअतः सही उत्तर '10%' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findrate_3",
+    "qe": "The compound interest on a sum of ₹8,000 becomes ₹9,261 in 18 months. Find the rate of interest if interest is compounded half-yearly.",
+    "qh": "₹8,000 की राशि 18 महीने में ₹9,261 हो जाती है। यदि ब्याज अर्धवार्षिक रूप से संयोजित होता है, तो ब्याज की दर ज्ञात कीजिए।",
+    "oe": [
+      "8%",
+      "10%",
+      "20%",
+      "12%"
+    ],
+    "oh": [
+      "8%",
+      "10%",
+      "20%",
+      "12%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: समय = 18 महीने = 3 छमाही (half-years).\nStep 2: मूलधन से मिश्रधन का अनुपात:\nP : A = 8,000 : 9,261.\nStep 3: 3 छमाही के लिए दोनों पक्षों का घनमूल (cube root) लें:\n1 छमाही का अनुपात = (8,000)^(1/3) : (9,261)^(1/3) = 20 : 21.\nStep 4: प्रति छमाही ब्याज दर r = (1 / 20) * 100% = 5%.\nStep 5: वार्षिक ब्याज दर (Annual Rate) R = 2 * r = 2 * 5% = 10% प्रति वर्ष।\nअतः सही विकल्प  10% है।\n\nMethod 2 (Formula Method):\nStep 1: 9,261 = 8,000 * (1 + r/100)^3 ==> (1 + r/100)^3 = 9,261 / 8,000 = (21/20)^3.\nStep 2: 1 + r/100 = 21/20 ==> r = 5% प्रति छमाही।\nStep 3: वार्षिक दर = 2 * 5% = 10% प्रति वर्ष।\nअतः सही उत्तर '10%' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findrate_4",
+    "qe": "A sum becomes 1.96 times of itself in 2 years when invested at compound interest (compounding annually). What is the annual rate of interest?",
+    "qh": "चक्रवृद्धि ब्याज (वार्षिक रूप से संयोजित) पर निवेश करने पर कोई धनराशि 2 वर्षों में स्वयं की 1.96 गुनी हो जाती है। ब्याज की वार्षिक दर क्या है?",
+    "oe": [
+      "20%",
+      "25%",
+      "40%",
+      "30%"
+    ],
+    "oh": [
+      "20%",
+      "25%",
+      "40%",
+      "30%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Square Root Method):\nStep 1: 2 वर्षों में मिश्रधन गुणक = 1.96.\nStep 2: 1 वर्ष का गुणक = √(1.96) = 1.4.\nStep 3: वार्षिक ब्याज दर R = (1.4 - 1) * 100% = 0.4 * 100% = 40% प्रति वर्ष।\nअतः सही विकल्प  40% है।\n\nMethod 2 (Ratio Method):\nStep 1: P : A = 1 : 1.96 = 100 : 196.\nStep 2: वर्गमूल लेने पर: √100 : √196 = 10 : 14.\nStep 3: 1 वर्ष का ब्याज = 14 - 10 = 4 इकाइयाँ।\nStep 4: दर R = (4 / 10) * 100% = 40% प्रति वर्ष।\nअतः सही उत्तर '40%' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findrate_5",
+    "qe": "At what rate percentage per annum will ₹14,400 amount to ₹15,876 in one year, if interest is compounded half-yearly?",
+    "qh": "किस वार्षिक ब्याज दर प्रतिशत पर ₹14,400 की राशि एक वर्ष में ₹15,876 हो जाएगी, यदि ब्याज अर्धवार्षिक रूप से संयोजित होता है?",
+    "oe": [
+      "15%",
+      "12%",
+      "8%",
+      "10%"
+    ],
+    "oh": [
+      "15%",
+      "12%",
+      "8%",
+      "10%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: समय = 1 वर्ष = 2 छमाही (half-yearly periods).\nStep 2: मूलधन और मिश्रधन का अनुपात:\nP : A = 14,400 : 15,876.\n36 से काटने पर: 400 : 441.\nStep 3: 2 चक्रों के लिए वर्गमूल लें:\n1 छमाही का अनुपात = √400 : √441 = 20 : 21.\nStep 4: प्रति छमाही ब्याज दर r = (1 / 20) * 100% = 5%.\nStep 5: वार्षिक ब्याज दर R = 2 * r = 2 * 5% = 10% प्रति वर्ष।\nअतः सही विकल्प  10% है।\n\nMethod 2 (Formula Method):\nStep 1: 15,876 = 14,400 * (1 + r/100)^2 ==> (1 + r/100)^2 = 15,876 / 14,400 = 441 / 400.\nStep 2: 1 + r/100 = 21 / 20 ==> r = 5% प्रति छमाही।\nStep 3: वार्षिक दर = 2 * 5% = 10% प्रति वर्ष।\nअतः सही उत्तर '10%' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findrate_6",
+    "qe": "Hema invested ₹1728 at the rate of compound interest (Compounded annually) for 3 years. She got ₹4,096 after the specified period. Find the rate of interest per annum Compounded annually.",
+    "qh": "हेमा ने 3 वर्षों के लिए वार्षिक रूप से संयोजित चक्रवृद्धि ब्याज पर ₹1728 का निवेश किया। निर्दिष्ट अवधि के बाद उसे ₹4,096 मिले। वार्षिक रूप से संयोजित प्रति वर्ष ब्याज दर ज्ञात कीजिए।",
+    "oe": [
+      "33$\\frac{1}{3}$%",
+      "33$\\frac{1}{2}$%",
+      "30$\\frac{1}{2}$%",
+      "30$\\frac{1}{3}$%"
+    ],
+    "oh": [
+      "33$\\frac{1}{3}$%",
+      "33$\\frac{1}{2}$%",
+      "30$\\frac{1}{2}$%",
+      "30$\\frac{1}{3}$%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio & Cube Root Method):\nStep 1: मूलधन और मिश्रधन का अनुपात:\nP : A = 1,728 : 4,096.\n8 से काटने पर: 216 : 512.\nStep 2: समय 3 वर्ष है, अतः दोनों पक्षों का घनमूल (cube root) लें:\n1 वर्ष का अनुपात = (216)^(1/3) : (512)^(1/3) = 6 : 8 = 3 : 4.\nStep 3: 1 वर्ष में 3 इकाइयों पर 1 इकाई का ब्याज मिलता है:\nदर R = (1 / 3) * 100% = 33$\\frac{1}{3}$% प्रति वर्ष।\nअतः सही विकल्प  33 1/3% है।\n\nMethod 2 (Formula Method):\nStep 1: 4,096 = 1,728 * (1 + R/100)^3 ==> (1 + R/100)^3 = 4,096 / 1,728 = 512 / 216 = (8/6)^3 = (4/3)^3.\nStep 2: 1 + R/100 = 4/3 ==> R/100 = 1/3 ==> R = 100/3% = 33$\\frac{1}{3}$%.\nअतः सही उत्तर '33$\\frac{1}{3}$%' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findrate_7",
+    "qe": "A certain sum amounts to ₹1,600 in two years and to ₹2,000 in three years at compound interest when compounded annually. Find the rate of interest.",
+    "qh": "एक निश्चित राशि वार्षिक चक्रवृद्धि ब्याज पर दो वर्षों में ₹1,600 और तीन वर्षों में ₹2,000 हो जाती है। ब्याज की दर ज्ञात कीजिए।",
+    "oe": [
+      "21%",
+      "19%",
+      "25%",
+      "20%"
+    ],
+    "oh": [
+      "21%",
+      "19%",
+      "25%",
+      "20%"
+    ],
+    "a": 2,
+    "e": "Method 1 (One-Year Multiplier Method):\nStep 1: 2 वर्ष बाद मिश्रधन (A2) = ₹1,600.\n3 वर्ष बाद मिश्रधन (A3) = ₹2,000.\nStep 2: तीसरे वर्ष के लिए ₹1,600 मूलधन के रूप में कार्य करता है:\nतीसरे वर्ष का ब्याज = 2,000 - 1,600 = ₹400.\nStep 3: वार्षिक ब्याज दर R निकालें:\nR = (ब्याज / A2) * 100% = (400 / 1,600) * 100% = (1 / 4) * 100% = 25% प्रति वर्ष।\nअतः सही विकल्प  25% है।\n\nMethod 2 (Ratio Method):\nStep 1: A2 : A3 = 1,600 : 2,000 = 4 : 5.\nStep 2: दर R = [(5 - 4) / 4] * 100% = (1 / 4) * 100% = 25%.\nअतः सही उत्तर '25%' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findrate_8",
+    "qe": "On a sum of money for 2 years compound interest is ₹550 and simple interest is ₹500 respectively. Find the rate of interest (in per annum).",
+    "qh": "किसी धनराशि पर 2 वर्षों के लिए चक्रवृद्धि ब्याज क्रमशः ₹550 और साधारण ब्याज ₹500 है। ब्याज की दर (प्रति वर्ष में) ज्ञात कीजिए।",
+    "oe": [
+      "40%",
+      "10%",
+      "20%",
+      "30%"
+    ],
+    "oh": [
+      "40%",
+      "10%",
+      "20%",
+      "30%"
+    ],
+    "a": 2,
+    "e": "Method 1 (One-Year SI Comparison Method):\nStep 1: 2 वर्षों का साधारण ब्याज = ₹500.\n1 वर्ष का साधारण ब्याज = 500 / 2 = ₹250.\nStep 2: 2 वर्षों के CI और SI का अंतर निकालें:\nअंतर = 550 - 500 = ₹50.\nStep 3: यह ₹50 का अंतर पहले वर्ष के ब्याज (₹250) पर प्राप्त दूसरे वर्ष का ब्याज है।\nStep 4: वार्षिक ब्याज दर R:\nR = (अंतर / 1 वर्ष का SI) * 100% = (50 / 250) * 100% = (1 / 5) * 100% = 20% प्रति वर्ष।\nअतः सही विकल्प  20% है।\n\nMethod 2 (Direct Formula Method):\nStep 1: सूत्र: R = [2 * (CI - SI) / SI] * 100%.\nStep 2: R = [2 * (550 - 500) / 500] * 100% = (100 / 500) * 100% = 20% प्रति वर्ष।\nअतः सही उत्तर '20%' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

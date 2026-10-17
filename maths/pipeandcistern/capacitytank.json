@@ -1,0 +1,97 @@
+[
+  {
+    "p_id": "capacitytank_1",
+    "qe": "There is a leak in a tank which empties it in 6 hours. A tap is turned on which fills the tank with 10 liters of water per minute. When it is full, it now takes 10 hours to empty. What is the capacity (in litres) of the tank?",
+    "qh": "एक टंकी में एक रिसाव है जो इसे 6 घंटे में खाली कर देता है। एक नल चालू किया जाता है जो टंकी में 10 लीटर प्रति मिनट पानी भरता है। पूरी भरी होने पर, अब इसे खाली होने में 10 घंटे लगते हैं। टंकी की क्षमता (लीटर में) क्या है?",
+    "oe": [
+      "8000",
+      "7500",
+      "9000",
+      "10000"
+    ],
+    "oh": [
+      "8000",
+      "7500",
+      "9000",
+      "10000"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM / Work Efficiency Method):\nStep 1: कुल क्षमता = LCM(6, 10) = 30 इकाइयाँ मान लें।\n- केवल रिसाव की खाली करने की दर = -30 / 6 = -5 इकाइयाँ/घंटा\n- रिसाव + नल की संयुक्त दर = -30 / 10 = -3 इकाइयाँ/घंटा\nStep 2: नल की भरने की दर निकालें:\nनल - 5 = -3 ==> नल = -3 + 5 = +2 इकाइयाँ/घंटा।\nStep 3: नल अकेले खाली टंकी को भरेगा = 30 / 2 = 15 घंटे में।\nStep 4: नल की वास्तविक गति = 10 लीटर/मिनट = 10 × 60 = 600 लीटर/घंटा।\nStep 5: टंकी की कुल क्षमता = 15 घंटे × 600 लीटर/घंटा = 9000 लीटर।\nअतः सही विकल्प  9000 है।\n\nMethod 2 (Formula Method):\nStep 1: नल द्वारा टंकी भरने में लगा समय = (xy) / (y - x) = (6 × 10) / (10 - 6) = 60 / 4 = 15 घंटे।\nStep 2: कुल धारिता = 15 × 60 मिनट × 10 लीटर/मिनट = 9000 लीटर।\nअतः सही उत्तर '9000' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "capacitytank_2",
+    "qe": "Pipe A and B fill a tank in 43.2 minutes and 108 minutes respectively. Pipe C can empty it at 3 litres/minutes. When all the three pipes are opened together, they will fill the tank in 54 minutes. The capacity (in litres) of the tank is:",
+    "qh": "पाइप A और B एक टंकी को क्रमशः 43.2 मिनट और 108 मिनट में भरते हैं। पाइप C इसे 3 लीटर/मिनट की दर से खाली कर सकता है। जब तीनों पाइपों को एक साथ खोल दिया जाता है, तो वे टंकी को 54 मिनट में भर देते हैं। टंकी की क्षमता (लीटर में) क्या है:",
+    "oe": [
+      "160",
+      "180",
+      "216",
+      "200"
+    ],
+    "oh": [
+      "160",
+      "180",
+      "216",
+      "200"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: 43.2 मिनट = 216 / 5 मिनट।\nअंशों 216, 108 और 54 का LCM = 216 इकाइयाँ (टंकी की कुल क्षमता)।\nStep 2: प्रत्येक पाइप की दक्षता निकालें:\n- पाइप A की दक्षता = +216 / (216/5) = +5 इकाइयाँ/मिनट\n- पाइप B की दक्षता = +216 / 108 = +2 इकाइयाँ/मिनट\n- तीनों पाइपों (A + B - C) की शुद्ध दक्षता = +216 / 54 = +4 इकाइयाँ/मिनट\nStep 3: पाइप C की खाली करने की दक्षता निकालें:\n5 + 2 - C = 4 ==> 7 - C = 4 ==> C = 3 इकाइयाँ/मिनट।\nStep 4: प्रश्न के अनुसार पाइप C की खाली करने की दर = 3 लीटर/मिनट।\nअतः 3 इकाइयाँ/मिनट = 3 लीटर/मिनट ==> 1 इकाई = 1 लीटर।\nStep 5: टंकी की कुल क्षमता = 216 इकाइयाँ = 216 लीटर।\nअतः सही विकल्प  216 है।\n\nMethod 2 (Fraction Method):\nStep 1: C की दर = (1/43.2 + 1/108) - 1/54 = (5/216 + 2/216) - 4/216 = 3/216 = 1/72 प्रति मिनट।\nStep 2: C अकेले पूरी टंकी को 72 मिनट में खाली कर सकता है।\nStep 3: कुल धारिता = 72 मिनट × 3 लीटर/मिनट = 216 लीटर।\nअतः सही उत्तर '216' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "capacitytank_3",
+    "qe": "Two pipes can fill a tank separately in 36 minutes and 45 minutes respectively. A drain pipe installed in the tank can remove 40 liters of water per minute. If all three pipes are opened together, the tank is filled in one hour. Find the capacity/holding (in litres) of the tank.",
+    "qh": "दो पाइप एक टंकी को अलग-अलग क्रमशः 36 मिनट और 45 मिनट में भर सकते हैं। टंकी में लगा एक निकास पाइप 40 लीटर पानी प्रति मिनट निकाल सकता है। यदि तीनों पाइपों को एक साथ खोल दिया जाए, तो टंकी एक घंटे में भर जाती है। टंकी की क्षमता/धारिता (लीटर में) ज्ञात कीजिए।",
+    "oe": [
+      "600",
+      "400",
+      "300",
+      "1200"
+    ],
+    "oh": [
+      "600",
+      "400",
+      "300",
+      "1200"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Rate Method):\nStep 1: 1 घंटा = 60 मिनट।\nकुल क्षमता = LCM(36, 45, 60) = 180 इकाइयाँ।\nStep 2: दक्षता निकालें:\n- पाइप 1 = +180 / 36 = +5 इकाइयाँ/मिनट\n- पाइप 2 = +180 / 45 = +4 इकाइयाँ/मिनट\n- तीनों पाइप (P1 + P2 - निकास) = +180 / 60 = +3 इकाइयाँ/मिनट\nStep 3: निकास पाइप की दक्षता निकालें:\n5 + 4 - निकास = 3 ==> 9 - निकास = 3 ==> निकास पाइप = 6 इकाइयाँ/मिनट।\nStep 4: निकास पाइप द्वारा अकेले पूरी टंकी को खाली करने में लगा समय:\nसमय = 180 / 6 = 30 मिनट।\nStep 5: निकास पाइप की गति 40 लीटर/मिनट है, अतः टंकी की कुल क्षमता:\nक्षमता = 30 मिनट × 40 लीटर/मिनट = 1200 लीटर।\nअतः सही विकल्प  1200 है।\n\nMethod 2 (Fraction Method):\nStep 1: निकास पाइप की दर = 1/36 + 1/45 - 1/60 = (5 + 4 - 3) / 180 = 6/180 = 1/30 भाग/मिनट।\nStep 2: पूरा खाली करने में समय = 30 मिनट।\nStep 3: क्षमता = 30 × 40 = 1200 लीटर।\nअतः सही उत्तर '1200' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "capacitytank_4",
+    "qe": "At a school building, there is an overhead tank. To fill this tank 50 buckets of water are required. Assume that the capacity of the bucket is reduced to two-fifth of the present. How many buckets of water are required to fill the same tank?",
+    "qh": "एक स्कूल की इमारत में, एक ऊपरी टंकी है। इस टंकी को भरने के लिए 50 बाल्टी पानी की आवश्यकता होती है। मान लीजिए कि बाल्टी की क्षमता वर्तमान की दो-पाँचवाँ (2/5) तक कम कर दी जाती है। उसी टंकी को भरने के लिए कितने बाल्टी पानी की आवश्यकता होगी?",
+    "oe": [
+      "62.5",
+      "20",
+      "125",
+      "60"
+    ],
+    "oh": [
+      "62.5",
+      "20",
+      "125",
+      "60"
+    ],
+    "a": 2,
+    "e": "Method 1 (Inverse Proportion Method):\nStep 1: टंकी की कुल क्षमता = बाल्टियों की संख्या × बाल्टी की क्षमता।\nमाना 1 बाल्टी की मूल क्षमता = 1 इकाई।\nटंकी की कुल क्षमता = 50 × 1 = 50 इकाइयाँ।\nStep 2: नई बाल्टी की क्षमता = 2/5 इकाई।\nStep 3: आवश्यक नई बाल्टियों की संख्या:\nसंख्या = कुल क्षमता / नई बाल्टी की क्षमता = 50 / (2/5) = (50 × 5) / 2 = 125 बाल्टी।\nअतः सही विकल्प  125 है।\n\nMethod 2 (Ratio Method):\nStep 1: बाल्टी की क्षमता का अनुपात = 1 : (2/5) = 5 : 2.\nStep 2: आवश्यक बाल्टियों का अनुपात क्षमता के व्युत्क्रमानुपाती होता है = 2 : 5.\nStep 3: 2 इकाइयाँ = 50 बाल्टी ==> 1 इकाई = 25 ==> 5 इकाइयाँ = 5 × 25 = 125 बाल्टी।\nअतः सही उत्तर '125' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "capacitytank_5",
+    "qe": "Pipe X can fill a tank in 60 hours while pipe Y can fill the tank in 72 hours. Both pipes are opened together for 20 hours. How much of the tank is left empty?",
+    "qh": "पाइप X एक टंकी को 60 घंटे में भर सकता है जबकि पाइप Y उसी टंकी को 72 घंटे में भर सकता है। दोनों पाइपों को 20 घंटे के लिए एक साथ खोला जाता है। टंकी का कितना भाग खाली रह जाता है?",
+    "oe": [
+      "$\\frac{11}{18}$",
+      "$\\frac{7}{18}$",
+      "$\\frac{5}{18}$",
+      "$\\frac{13}{18}$"
+    ],
+    "oh": [
+      "$\\frac{11}{18}$",
+      "$\\frac{7}{18}$",
+      "$\\frac{5}{18}$",
+      "$\\frac{13}{18}$"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल क्षमता = LCM(60, 72) = 360 इकाइयाँ।\n- पाइप X की दक्षता = 360 / 60 = 6 इकाइयाँ/घंटा\n- पाइप Y की दक्षता = 360 / 72 = 5 इकाइयाँ/घंटा\nStep 2: दोनों की संयुक्त दक्षता = 6 + 5 = 11 इकाइयाँ/घंटा।\nStep 3: 20 घंटों में दोनों द्वारा भरा गया जल = 20 × 11 = 220 इकाइयाँ।\nStep 4: शेष खाली भाग = 360 - 220 = 140 इकाइयाँ।\nStep 5: खाली भाग का भिन्न = 140 / 360 = 7 / 18 भाग।\nअतः सही विकल्प  7/18 है।\n\nMethod 2 (Fraction Addition Method):\nStep 1: 20 घंटे में दोनों द्वारा भरा गया भाग = 20 × (1/60 + 1/72) = 20 × (6 + 5)/360 = 20 × (11/360) = 11/18 भाग।\nStep 2: शेष खाली भाग = 1 - 11/18 = 7/18 भाग।\nअतः सही उत्तर '$\\frac{7}{18}$' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

@@ -1,0 +1,135 @@
+[
+  {
+    "p_id": "donationdistribution_1",
+    "qe": "A and B invest in a business in the ratio 3 : 1. If 5% of the total profit goes to charity and A's share is ₹855, what is the total profit ?",
+    "qh": "A और B 3 : 1 के अनुपात में एक व्यवसाय में निवेश करते हैं। यदि कुल लाभ का 5% दान में जाता है और A का हिस्सा ₹855 है, तो कुल लाभ क्या है?",
+    "oe": [
+      "₹1425",
+      "₹1200",
+      "₹1537",
+      "₹1600"
+    ],
+    "oh": [
+      "₹1425",
+      "₹1200",
+      "₹1537",
+      "₹1600"
+    ],
+    "a": 1,
+    "e": "Method 1 (Percentage & Ratio Method):\nStep 1: माना कुल लाभ = P.\nदान में दी गई राशि = 5% ==> वितरण योग्य शेष लाभ = 100% - 5% = 95% of P.\nStep 2: A और B के बीच लाभ का अनुपात = 3 : 1 (कुल 4 इकाइयाँ)।\nलाभ में A का हिस्सा = (3 / 4) * (95% of P).\nStep 3: A का हिस्सा ₹855 दिया गया है:\n(3 / 4) * (95 / 100) * P = 855\n(95 / 100) * P = (855 * 4) / 3 = 285 * 4 = 1,140.\nStep 4: कुल लाभ P की गणना:\nP = (1,140 * 100) / 95 = 12 * 100 = ₹1,200.\nअतः सही विकल्प  ₹1200 है।\n\nMethod 2 (Unit Assumption Method):\nStep 1: माना कुल लाभ = 100 इकाइयाँ।\nदान = 5 इकाइयाँ ==> शेष लाभ = 95 इकाइयाँ।\nStep 2: A का हिस्सा = 95 * (3 / 4) = 285 / 4 इकाइयाँ।\nStep 3: 285 / 4 इकाइयाँ = ₹855 ==> 1 इकाई = (855 * 4) / 285 = 3 * 4 = ₹12.\nStep 4: कुल लाभ (100 इकाइयाँ) = 100 * 12 = ₹1,200.\nअतः सही उत्तर '₹1200' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "donationdistribution_2",
+    "qe": "Three people, A, B and C, invest in a business in the ratio 2 : 3 : 5. It was decided that 9% of the profits will go to charity. If the total profit was ₹2,50,000, then find the share of C in the profit (in ₹).",
+    "qh": "तीन व्यक्ति, A, B और C, 2 : 3 : 5 के अनुपात में एक व्यवसाय में निवेश करते हैं। यह निर्णय लिया गया कि लाभ का 9% दान में जाएगा। यदि कुल लाभ ₹2,50,000 था, तो लाभ में C का हिस्सा (₹ में) ज्ञात कीजिए।",
+    "oe": [
+      "1,26,950",
+      "1,11,650",
+      "1,21,850",
+      "1,13,750"
+    ],
+    "oh": [
+      "1,26,950",
+      "1,11,650",
+      "1,21,850",
+      "1,13,750"
+    ],
+    "a": 3,
+    "e": "Method 1 (Step-by-Step Distribution Method):\nStep 1: कुल लाभ = ₹2,50,000.\nदान के बाद शेष वितरण योग्य लाभ = 100% - 9% = 91% of ₹2,50,000.\nशेष लाभ = (91 / 100) * 2,50,000 = 91 * 2,500 = ₹2,27,500.\nStep 2: A, B और C के बीच लाभ का अनुपात = 2 : 3 : 5.\nकुल अनुपाती इकाइयाँ = 2 + 3 + 5 = 10 इकाइयाँ।\nStep 3: C का हिस्सा (5 इकाइयाँ):\nC का हिस्सा = (5 / 10) * शेष लाभ = (1 / 2) * ₹2,27,500 = ₹1,13,750.\nअतः सही विकल्प  1,13,750 है।\n\nMethod 2 (Direct Fraction Method):\nStep 1: C का कुल लाभ में अंश = (5 / 10) * 91% = 1/2 * 91% = 45.5%.\nStep 2: C का हिस्सा = 45.5% of 2,50,000 = 0.455 * 2,50,000 = ₹1,13,750.\nअतः सही उत्तर '1,13,750' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "donationdistribution_3",
+    "qe": "Mayur and Aham enter into a partnership by making investments in the ratio 2 : 3. 10% of the total profit goes to charity. If Aham's share is ₹4,860, then what is the total profit (in ₹) earned?",
+    "qh": "मयूर और अहम 2 : 3 के अनुपात में निवेश करके एक साझेदारी में प्रवेश करते हैं। कुल लाभ का 10% दान में जाता है। यदि अहम का हिस्सा ₹4,860 है, तो अर्जित कुल लाभ (₹ में) क्या है?",
+    "oe": [
+      "7,200",
+      "9,000",
+      "11,000",
+      "8,500"
+    ],
+    "oh": [
+      "7,200",
+      "9,000",
+      "11,000",
+      "8,500"
+    ],
+    "a": 1,
+    "e": "Method 1 (Percentage & Ratio Method):\nStep 1: दान के बाद शेष वितरण योग्य लाभ = 100% - 10% = 90%.\nStep 2: मयूर और अहम का अनुपात = 2 : 3 (कुल 5 इकाइयाँ)।\nअहम का हिस्सा = 3 / 5 भाग।\nStep 3: कुल लाभ (P) के संदर्भ में अहम का हिस्सा:\nअहम का हिस्सा = (3 / 5) * 90% of P = 54% of P.\nStep 4: दिया गया अहम का हिस्सा = ₹4,860:\n54% of P = 4,860\nP = (4,860 / 54) * 100 = 90 * 100 = ₹9,000.\nअतः सही विकल्प  9,000 है।\n\nMethod 2 (Unit Method):\nStep 1: माना कुल लाभ = 100 इकाइयाँ ==> शेष लाभ = 90 इकाइयाँ।\nStep 2: अहम का हिस्सा = 90 * (3 / 5) = 54 इकाइयाँ।\nStep 3: 54 इकाइयाँ = ₹4,860 ==> 1 इकाई = 4,860 / 54 = ₹90.\nStep 4: कुल लाभ = 100 इकाइयाँ = 100 * 90 = ₹9,000.\nअतः सही उत्तर '9,000' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "donationdistribution_4",
+    "qe": "A and B invested money in a business in the ratio of 7 : 5. If 15% of the total profit goes for charity, and A's share in the profit is ₹5,950, then what is the total profit?",
+    "qh": "A और B ने 7 : 5 के अनुपात में एक व्यवसाय में धन का निवेश किया। यदि कुल लाभ का 15% दान में जाता है, और लाभ में A का हिस्सा ₹5,950 है, तो कुल लाभ क्या है?",
+    "oe": [
+      "₹12,500",
+      "₹12,000",
+      "₹10,500",
+      "₹11,750"
+    ],
+    "oh": [
+      "₹12,500",
+      "₹12,000",
+      "₹10,500",
+      "₹11,750"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio & Fraction Method):\nStep 1: दान के बाद शेष लाभ = 100% - 15% = 85% of P.\nStep 2: A और B का लाभ अनुपात = 7 : 5 (कुल इकाइयाँ = 12).\nA का लाभ में अंश = 7 / 12.\nStep 3: A का हिस्सा:\n(7 / 12) * (85% of P) = ₹5,950\n85% of P = (5,950 * 12) / 7 = 850 * 12 = ₹10,200.\nStep 4: कुल लाभ P की गणना:\nP = (10,200 / 85) * 100 = 120 * 100 = ₹12,000.\nअतः सही विकल्प  ₹12,000 है।\n\nMethod 2 (Unitary Method):\nStep 1: शेष लाभ में A का हिस्सा = 7 इकाइयाँ = ₹5,950 ==> 1 इकाई = 850.\nStep 2: कुल शेष लाभ (12 इकाइयाँ) = 12 * 850 = ₹10,200.\nStep 3: यह शेष लाभ कुल लाभ का 85% है:\nकुल लाभ = 10,200 / 0.85 = ₹12,000.\nअतः सही उत्तर '₹12,000' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "donationdistribution_5",
+    "qe": "Three partners decided to start a business. They decided to donate 10% of the profit to a charity organisation and then the remaining profit would be shared among first, second and third partner in the ratio 1 : 2 : 2. The total profit received was ₹1,80,000. Find the share of the first partner.",
+    "qh": "तीन साझेदारों ने एक व्यवसाय शुरू करने का निर्णय लिया। उन्होंने लाभ का 10% एक धर्मार्थ संगठन को दान करने का फैसला किया और फिर शेष लाभ को पहले, दूसरे और तीसरे साझेदार के बीच 1 : 2 : 2 के अनुपात में साझा किया जाएगा। प्राप्त कुल लाभ ₹1,80,000 था। पहले साझेदार का हिस्सा ज्ञात कीजिए।",
+    "oe": [
+      "₹32,400",
+      "₹36,000",
+      "₹30,000",
+      "₹28,800"
+    ],
+    "oh": [
+      "₹32,400",
+      "₹36,000",
+      "₹30,000",
+      "₹28,800"
+    ],
+    "a": 0,
+    "e": "Method 1 (Sequential Step Method):\nStep 1: कुल प्राप्त लाभ = ₹1,80,000.\nदान में दी गई राशि = 10% of 1,80,000 = ₹18,000.\nवितरण के लिए शेष लाभ = 1,80,000 - 18,000 = ₹1,62,000.\nStep 2: तीनों साझेदारों का लाभ अनुपात = 1 : 2 : 2.\nकुल अनुपाती इकाइयाँ = 1 + 2 + 2 = 5 इकाइयाँ।\nStep 3: पहले साझेदार का हिस्सा (1 इकाई):\nपहले साझेदार का हिस्सा = (1 / 5) * 1,62,000 = ₹32,400.\nअतः सही विकल्प  ₹32,400 है।\n\nMethod 2 (Effective Percentage Method):\nStep 1: पहले साझेदार का प्रतिशत = (1 / 5) * 90% = 18%.\nStep 2: पहला साझेदार = 18% of ₹1,80,000 = 18 * 1,800 = ₹32,400.\nअतः सही उत्तर '₹32,400' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "donationdistribution_6",
+    "qe": "Keshav, Surjeet and Thomas started a business with investments in the ratio 2 : 3 : 4. The ratio of their period of investments is 5 : 6 : 9. Twenty percent of the profit was spent on rent and maintenance of the office. Remaining profit was distributed among themselves. If the difference in the shares of profit of Keshav and Surjeet is ₹7264, then how much is the total profit (in ₹)?",
+    "qh": "केशव, सुरजीत और थॉमस ने 2 : 3 : 4 के अनुपात में निवेश के साथ एक व्यवसाय शुरू किया। उनके निवेश की अवधि का अनुपात 5 : 6 : 9 है। लाभ का बीस प्रतिशत कार्यालय के किराए और रखरखाव पर खर्च किया गया था। शेष लाभ आपस में वितरित किया गया था। यदि केशव और सुरजीत के लाभ के हिस्सों में अंतर ₹7264 है, तो कुल लाभ (₹ में) कितना है?",
+    "oe": [
+      "51060",
+      "58112",
+      "46490",
+      "72640"
+    ],
+    "oh": [
+      "51060",
+      "58112",
+      "46490",
+      "72640"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio & Percentage Method):\nStep 1: लाभ का अनुपात = (पूंजी का अनुपात * समय का अनुपात):\nकेशव : सुरजीत : थॉमस = (2 * 5) : (3 * 6) : (4 * 9)\n= 10 : 18 : 36 = 5 : 9 : 18 (2 से विभाजित करने पर)।\nStep 2: वितरित किए गए लाभ की कुल इकाइयाँ:\nकुल इकाइयाँ = 5 + 9 + 18 = 32 इकाइयाँ।\nStep 3: केशव और सुरजीत के लाभ का अंतर:\nअंतर = 9 - 5 = 4 इकाइयाँ।\nStep 4: दिया गया अंतर = ₹7,264:\n4 इकाइयाँ = 7,264 ==> 1 इकाई = 7,264 / 4 = ₹1,816.\nStep 5: कुल वितरित लाभ (80%):\nवितरित लाभ = 32 इकाइयाँ = 32 * 1,816 = ₹58,112.\nStep 6: कुल लाभ (100%) की गणना:\n20% खर्च होने के बाद शेष 80% वितरित हुआ था:\n80% of कुल लाभ = 58,112\nकुल लाभ = (58,112 / 80) * 100 = 726.4 * 100 = ₹72,640.\nअतः सही विकल्प  72640 है।\n\nMethod 2 (Unitary Direct Equating Method):\nStep 1: केशव और सुरजीत का अंतर अनुपात = 4 / 32 = 1/8 (वितरित लाभ का).\nStep 2: वितरित लाभ = कुल लाभ का 80% (अर्थात 4/5 भाग).\nStep 3: कुल लाभ का अंश = (1/8) * (4/5) = 1/10.\nStep 4: कुल लाभ = 10 * 7,264 = ₹72,640.\nअतः सही उत्तर '72640' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "donationdistribution_7",
+    "qe": "Two friends A and B started a business by investing ₹1,50,000 and ₹2,50,000, respectively. They agreed to distribute their earnings in the same ratio of their investments. After an year, the profit earned was ₹6,00,000. Each of them added ₹50,000 to their respective profits and invested in a different project. If this project gave an yield of ₹4,20,000, then A's share in the profit is:",
+    "qh": "दो मित्रों A और B ने क्रमशः ₹1,50,000 और ₹2,50,000 का निवेश करके एक व्यवसाय शुरू किया। वे अपनी कमाई को अपने निवेश के समान अनुपात में वितरित करने के लिए सहमत हुए। एक वर्ष के बाद, अर्जित लाभ ₹6,00,000 था। उनमें से प्रत्येक ने अपने संबंधित लाभ में ₹50,000 जोड़े और एक अलग परियोजना में निवेश किया। यदि इस परियोजना से ₹4,20,000 का प्रतिफल (लाभ) प्राप्त हुआ, तो इस लाभ में A का हिस्सा क्या है:",
+    "oe": [
+      "₹1,65,000",
+      "₹2,55,000",
+      "₹1,75,000",
+      "₹2,45,000"
+    ],
+    "oh": [
+      "₹1,65,000",
+      "₹2,55,000",
+      "₹1,75,000",
+      "₹2,45,000"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Investment Method):\nStep 1: पहले व्यवसाय में निवेश का अनुपात:\nA : B = 1,50,000 : 2,50,000 = 3 : 5.\nकुल अनुपाती इकाइयाँ = 3 + 5 = 8 इकाइयाँ।\nStep 2: पहले व्यवसाय से प्राप्त लाभ (₹6,00,000) का वितरण:\n- A का लाभ = (3 / 8) * 6,00,000 = 3 * 75,000 = ₹2,25,000.\n- B का लाभ = (5 / 8) * 6,00,000 = 5 * 75,000 = ₹3,75,000.\nStep 3: नई परियोजना में प्रत्येक द्वारा ₹50,000 जोड़ने के बाद नया निवेश:\n- A का नया निवेश = 2,25,000 + 50,000 = ₹2,75,000.\n- B का नया निवेश = 3,75,000 + 50,000 = ₹4,25,000.\nStep 4: नई परियोजना में निवेश का अनुपात:\nA : B = 2,75,000 : 4,25,000 = 275 : 425 = 11 : 17 (25 से विभाजित करने पर)।\nकुल इकाइयाँ = 11 + 17 = 28 इकाइयाँ।\nStep 5: नए लाभ (₹4,20,000) में A का हिस्सा:\nA का हिस्सा = (11 / 28) * 4,20,000 = 11 * 15,000 = ₹1,65,000.\nअतः सही विकल्प  ₹1,65,000 है।\n\nMethod 2 (Ratio Simplification Method):\nStep 1: A का लाभ = 225 हजार, B का लाभ = 375 हजार।\nStep 2: नया निवेश = 275 हजार और 425 हजार ==> अनुपात = 11 : 17.\nStep 3: A का हिस्सा = (11 / 28) * 4,20,000 = ₹1,65,000.\nअतः सही उत्तर '₹1,65,000' है।\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

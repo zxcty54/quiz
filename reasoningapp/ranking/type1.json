@@ -1,0 +1,230 @@
+[
+  {
+    "p_id": "type1_1",
+    "qe": "In a row, Mohan is 18th from left and 17th from right. How many persons are there in the row?",
+    "qh": "एक पंक्ति में, मोहन बाएँ से 18वें और दाएँ से 17वें स्थान पर है। पंक्ति में कुल कितने व्यक्ति हैं?",
+    "oe": [
+      "35",
+      "34",
+      "36",
+      "33"
+    ],
+    "oh": [
+      "35",
+      "34",
+      "36",
+      "33"
+    ],
+    "a": 1,
+    "e": "Method 1 (Total = Left + Right - 1 Formula Trick):\nStep 1: Jab ek hi vyakti ki dono chhoron (Left aur Right) se sthiti di gayi ho, toh Total nikalne ka formula hota hai:\n$$\\text{Total} = \\text{Left} + \\text{Right} - 1$$\nStep 2: Mohan ki position baayein se 18 aur daayein se 17 hai:\n$$\\text{Total} = 18 + 17 - 1 = 35 - 1 = 34$$\nCorrect '36'4 hai.\n\nMethod 2 (Distance / Overlap Method):\nMohan ko baayein aur daayein dono taraf se ginne par vah do baar count hota hai. Atah Mohan ko ek baar ghatane par: $18 + 17 - 1 = 34$ vyakti prapt hote hain.\nSahi uttar '34' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_2",
+    "qe": "There are total 50 persons in a row. If Mohan is 20th from the top, then what is his rank from the bottom?",
+    "qh": "एक पंक्ति में कुल 50 व्यक्ति हैं। यदि मोहन ऊपर से 20वें स्थान पर है, तो नीचे से उसका स्थान क्या होगा?",
+    "oe": [
+      "31st",
+      "30th",
+      "32nd",
+      "33rd"
+    ],
+    "oh": [
+      "31st",
+      "30th",
+      "32nd",
+      "33rd"
+    ],
+    "a": 0,
+    "e": "Method 1 (Opposite End Formula Trick):\nStep 1: Bottom rank nikalne ka formula:\n$$\\text{Rank from Bottom} = (\\text{Total} + 1) - \\text{Rank from Top}$$\nStep 2: Values substitute karein:\n$$\\text{Rank from Bottom} = (50 + 1) - 20 = 51 - 20 = 31\\text{st}$$\nCorrect '32nd'1st hai.\n\nMethod 2 (Exclusion & Addition Method):\nMohan ke baad neeche bache vyakti: $50 - 20 = 30$. Neeche se Mohan ka sthan: $30 + 1 = 31$st hoga.\nSahi uttar '31st' hai.\n\nExam point: kram-sthan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_3",
+    "qe": "In a row, there are total 40 persons. If Ram is 18th from right end then what is his rank from left end?",
+    "qh": "एक पंक्ति में कुल 40 व्यक्ति हैं। यदि राम दाएँ छोर से 18वें स्थान पर है, तो बाएँ छोर से उसका स्थान क्या होगा?",
+    "oe": [
+      "24th",
+      "21st",
+      "23rd",
+      "22nd"
+    ],
+    "oh": [
+      "24th",
+      "21st",
+      "23rd",
+      "22nd"
+    ],
+    "a": 2,
+    "e": "Method 1 (Left End Formula Trick):\nStep 1: Formula:\n$$\\text{Rank from Left} = (\\text{Total} + 1) - \\text{Rank from Right}$$\nStep 2: Values calculate karein:\n$$\\text{Rank from Left} = (40 + 1) - 18 = 41 - 18 = 23\\text{rd}$$\nCorrect '21st'3rd hai.\n\nMethod 2 (Basic Counting Method):\nRam ke baayein sthit vyakti: $40 - 18 = 22$. Baayein chhor se Ram ka sthan: $22 + 1 = 23$rd hoga.\nSahi uttar '23rd' hai.\n\nYahan kram-sthan ka niyam seedha lagta hai. Vikalp 24th, 21st, 22nd is hal se mel nahi khaate. Exam point: kram-sthan ka niyam - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type1_4",
+    "qe": "In a row, Ravi is 15th from the left end. Amit is 16th from the right end. Deepak is 4th to the right of Ravi. If Deepak is 5th to the left of Amit, then what is the rank of Ravi from the right end?",
+    "qh": "एक पंक्ति में, रवि बाएँ छोर से 15वें स्थान पर है। अमित दाएँ छोर से 16वें स्थान पर है। दीपक रवि के दाएँ चौथा है। यदि दीपक अमित के बाएँ 5वाँ है, तो दाएँ छोर से रवि का स्थान क्या है?",
+    "oe": [
+      "24th",
+      "25th",
+      "23rd",
+      "26th"
+    ],
+    "oh": [
+      "24th",
+      "25th",
+      "23rd",
+      "26th"
+    ],
+    "a": 1,
+    "e": "Method 1 (Distance & Rank Trick):\nStep 1: Distance map karein: Ravi (Left=15) $\\xrightarrow{+4}$ Deepak $\\xrightarrow{+5}$ Amit $\\xleftarrow{16}$ Right end.\nStep 2: Right end se Ravi ki doori (Rank):\n$$\\text{Rank of Ravi from Right} = 16 + 5 + 4 = 25\\text{th}$$\nCorrect '25th'5th hai.\n\nMethod 2 (Step-by-Step Position Addition):\nRight end se Amit = 16. Deepak Amit ke baayein 5th hai $\\implies$ Right se Deepak = $16 + 5 = 21$. Ravi Deepak ke baayein 4th hai $\\implies$ Right se Ravi = $21 + 4 = 25$th.\nSahi uttar '25th' hai.\n\nExam point: kram-sthan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_5",
+    "qe": "In a row, Ravi is 15th from the left end. Amit is 16th from the right end. Deepak is 4th to the right of Ravi and 5th to the left of Amit. What is the rank of Amit from the left end?",
+    "qh": "एक पंक्ति में, रवि बाएँ छोर से 15वें स्थान पर है। अमित दाएँ छोर से 16वें स्थान पर है। दीपक रवि के दाएँ चौथा और अमित के बाएँ 5वाँ है। बाएँ छोर से अमित का स्थान क्या है?",
+    "oe": [
+      "24th",
+      "22nd",
+      "23rd",
+      "25th"
+    ],
+    "oh": [
+      "24th",
+      "22nd",
+      "23rd",
+      "25th"
+    ],
+    "a": 0,
+    "e": "Method 1 (Distance from Left Shortcut):\nStep 1: Left end se dooriyan jodein: Left end $\\xrightarrow{15}$ Ravi $\\xrightarrow{+4}$ Deepak $\\xrightarrow{+5}$ Amit.\nStep 2: Total distance from Left to Amit:\n$$\\text{Rank of Amit from Left} = 15 + 4 + 5 = 24\\text{th}$$\nCorrect '22nd'4th hai.\n\nMethod 2 (Sequential Forward Steps):\nBaayein se Ravi = 15th. Deepak = $15 + 4 = 19$th. Amit = $19 + 5 = 24$th from Left.\nSahi uttar '24th' hai.\n\nExam point: kram-sthan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_6",
+    "qe": "In a row, Kamal is 18th from the left end. If Rohan is 7th from the left end, then how many persons are there between them?",
+    "qh": "एक पंक्ति में, कमल बाएँ छोर से 18वें स्थान पर है। यदि रोहन बाएँ छोर से 7वें स्थान पर है, तो उनके बीच कितने व्यक्ति हैं?",
+    "oe": [
+      "9",
+      "12",
+      "11",
+      "10"
+    ],
+    "oh": [
+      "9",
+      "12",
+      "11",
+      "10"
+    ],
+    "a": 3,
+    "e": "Method 1 (Same End Distance - 1 Shortcut Trick):\nStep 1: Dono ki sthiti baayein chhor (same end) se di gayi hai. Dono ke beech ki doori:\n$$\\text{Distance} = 18 - 7 = 11$$\nStep 2: Beech ke vyakti $= \\text{Distance} - 1$:\n$$\\text{Persons between them} = 11 - 1 = 10$$\nCorrect '9'0 hai.\n\nMethod 2 (Sequential Difference Method):\n7 ke baad aur 18 se pehle aane wale pad: $8, 9, 10, 11, 12, 13, 14, 15, 16, 17$ (kul 10 vyakti).\nSahi uttar '10' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_7",
+    "qe": "In a row, Mohit is 12th from the left end. Sumit is 15th from the right end. Sumit is right to Mohit. If there are 6 persons between them, then: (i) How many persons are there in the row?",
+    "qh": "एक पंक्ति में, मोहित बाएँ छोर से 12वें स्थान पर है। सुमित दाएँ छोर से 15वें स्थान पर है। सुमित मोहित के दाएँ है। यदि उनके बीच 6 व्यक्ति हैं, तो: (i) पंक्ति में कुल कितने व्यक्ति हैं?",
+    "oe": [
+      "32",
+      "33",
+      "34",
+      "35"
+    ],
+    "oh": [
+      "32",
+      "33",
+      "34",
+      "35"
+    ],
+    "a": 1,
+    "e": "Method 1 (Distance Concept Shortcut):\nStep 1: Beech me 6 vyakti hain $\\implies$ Mohit aur Sumit ke beech ki doori $= 6 + 1 = 7$.\nStep 2: Kul doori (Total Distance) jodein:\n$$\\text{Total Distance} = 12 + 7 + 15 = 34$$\nStep 3: Total persons $= \\text{Distance} - 1$:\n$$\\text{Total Persons} = 34 - 1 = 33$$\nCorrect '34'3 hai.\n\nMethod 2 (Direct Addition):\n$\\text{Total} = \\text{Left} + \\text{Middle} + \\text{Right} = 12 + 6 + 15 = 33$.\nSahi uttar '33' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_8",
+    "qe": "In a row, Mohit is 12th from the left end. Sumit is 15th from the right end. Sumit is right to Mohit. If there are 6 persons between them, then: (ii) What is the rank of Mohit from the right end?",
+    "qh": "एक पंक्ति में, मोहित बाएँ छोर से 12वें स्थान पर है। सुमित दाएँ छोर से 15वें स्थान पर है। सुमित मोहित के दाएँ है। यदि उनके बीच 6 व्यक्ति हैं, तो: (ii) दाएँ छोर से मोहित का स्थान क्या है?",
+    "oe": [
+      "22nd",
+      "21st",
+      "20th",
+      "23rd"
+    ],
+    "oh": [
+      "22nd",
+      "21st",
+      "20th",
+      "23rd"
+    ],
+    "a": 0,
+    "e": "Method 1 (Distance Shortcut Trick):\nStep 1: Mohit aur Sumit ke beech ki doori $= 6 + 1 = 7$.\nStep 2: Right end se Sumit tak ki doori 15 hai. Atah Right end se Mohit ki doori (Rank):\n$$\\text{Rank of Mohit from Right} = 15 + 7 = 22\\text{nd}$$\nCorrect '21st'2nd hai.\n\nMethod 2 (Formula Method):\nTotal $= 33$. $\\text{Rank from Right} = (\\text{Total} + 1) - \\text{Left Rank} = (33 + 1) - 12 = 34 - 12 = 22$nd.\nSahi uttar '22nd' hai.\n\nIs prashn ka moolaadhaar kram-sthan ka niyam hai. Vikalp 21st, 20th, 23rd is hal se mel nahi khaate. Exam point: kram-sthan ka niyam - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type1_9",
+    "qe": "In a row, Anupam is 11th from left end. Deepak is 13th from the right end. Deepak is left to Anupam. If there are 4 persons between them, then how many persons are there in the row?",
+    "qh": "एक पंक्ति में, अनुपम बाएँ छोर से 11वें स्थान पर है। दीपक दाएँ छोर से 13वें स्थान पर है। दीपक अनुपम के बाएँ है। यदि उनके बीच 4 व्यक्ति हैं, तो पंक्ति में कुल कितने व्यक्ति हैं?",
+    "oe": [
+      "16",
+      "19",
+      "17",
+      "18"
+    ],
+    "oh": [
+      "16",
+      "19",
+      "17",
+      "18"
+    ],
+    "a": 3,
+    "e": "Method 1 (Overlapping Case Formula Shortcut):\nStep 1: Diya hai ki Deepak Anupam ke baayein hai, arthath yeh overlapping (cross-over) ka case hai.\nStep 2: Overlapping me Total Persons ka formula:\n$$\\text{Total} = \\text{Left} + \\text{Right} - (\\text{Between} + 2)$$\n$$\\text{Total} = 11 + 13 - (4 + 2) = 24 - 6 = 18$$\nCorrect '16'8 hai.\n\nMethod 2 (Distance Concept Method):\n- Anupam aur Deepak ke beech doori $= 4 + 1 = 5$.\n- Deepak ka Left se rank $= 11 - 5 = 6$th.\n- Deepak ki dono taraf se doori: Left se 6 aur Right se 13 $\\implies$ Total distance $= 6 + 13 = 19$.\n- Total persons $= 19 - 1 = 18$.\nSahi uttar '18' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_10",
+    "qe": "In a row, Nikhil is 11th from right end. Rohan is 12th from left end. If there are 5 persons between them, then: (i) What could be the minimum number of persons in the row?",
+    "qh": "एक पंक्ति में, निखिल दाएँ छोर से 11वें स्थान पर है। रोहन बाएँ छोर से 12वें स्थान पर है। यदि उनके बीच 5 व्यक्ति हैं, तो: (i) पंक्ति में व्यक्तियों की न्यूनतम संख्या क्या हो सकती है?",
+    "oe": [
+      "20",
+      "18",
+      "16",
+      "15"
+    ],
+    "oh": [
+      "20",
+      "18",
+      "16",
+      "15"
+    ],
+    "a": 2,
+    "e": "Method 1 (Minimum Number / Overlap Shortcut Trick):\nStep 1: Nyuntam sankhya ke liye Overlapping case lagate hain:\n$$\\text{Minimum Total} = \\text{Left} + \\text{Right} - (\\text{Between} + 2)$$\nStep 2: Values substitute karein:\n$$\\text{Minimum Total} = 12 + 11 - (5 + 2) = 23 - 7 = 16$$\nCorrect '20'6 hai.\n\nMethod 2 (Distance Overlap Method):\nBetween = 5 $\\implies$ Distance $= 5 + 1 = 6$. Net overlap distance $= 12 + 11 - 6 = 17$. Minimum persons $= 17 - 1 = 16$.\nSahi uttar '16' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_11",
+    "qe": "In a row, Nikhil is 11th from right end. Rohan is 12th from left end. If there are 5 persons between them, then: (ii) What could be the maximum number of persons in the row?",
+    "qh": "एक पंक्ति में, निखिल दाएँ छोर से 11वें स्थान पर है। रोहन बाएँ छोर से 12वें स्थान पर है। यदि उनके बीच 5 व्यक्ति हैं, तो: (ii) पंक्ति में व्यक्तियों की अधिकतम संख्या क्या हो सकती है?",
+    "oe": [
+      "26",
+      "28",
+      "30",
+      "29"
+    ],
+    "oh": [
+      "26",
+      "28",
+      "30",
+      "29"
+    ],
+    "a": 1,
+    "e": "Method 1 (Maximum Number / Non-Overlap Shortcut Trick):\nStep 1: Adhiktam sankhya ke liye Simple Addition (Non-overlapping) case lagate hain:\n$$\\text{Maximum Total} = \\text{Left} + \\text{Between} + \\text{Right}$$\nStep 2: Values add karein:\n$$\\text{Maximum Total} = 12 + 5 + 11 = 28$$\nCorrect '28'8 hai.\n\nMethod 2 (Distance Concept Method):\nTotal Distance $= 12 + 6 + 11 = 29$. Total persons $= 29 - 1 = 28$.\nSahi uttar '28' hai.\n\nIs prashn ka moolaadhaar diye gaye tathyon ka sahi milan hai. Vikalp 26, 30, 29 is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type1_12",
+    "qe": "In a row, Indu is 7th from the left end. Jaya is 9th from the right end. When they interchange their positions then Indu becomes 17th from the left end. Then how many persons are there in the row?",
+    "qh": "एक पंक्ति में, इन्दु बाएँ छोर से 7वें स्थान पर है। जया दाएँ छोर से 9वें स्थान पर है। जब वे आपस में अपना स्थान बदल लेती हैं, तो इन्दु बाएँ छोर से 17वें स्थान पर आ जाती है। पंक्ति में कुल कितने व्यक्ति हैं?",
+    "oe": [
+      "25",
+      "26",
+      "24",
+      "27"
+    ],
+    "oh": [
+      "25",
+      "26",
+      "24",
+      "27"
+    ],
+    "a": 0,
+    "e": "Method 1 (Interchange Total Formula Shortcut):\nStep 1: Sthan badalne ke baad Indu ki nayi sthiti Jaya ke purane sthan par hogi.\n- Indu ki new position from Left = 17th.\n- Jaya ki original position from Right = 9th.\nStep 2: Ab usi ek sthan ki dono chhoron se position gyat hai:\n$$\\text{Total Persons} = \\text{Left} + \\text{Right} - 1 = 17 + 9 - 1 = 26 - 1 = 25$$\nCorrect '26'5 hai.\n\nMethod 2 (Distance Concept Method):\nIndu ki rank 7 se badhkar 17 hui, arthath rank me $17 - 7 = 10$ ki vriddhi hui (Distance between them = 10).\nKul doori (Total distance) $= 17 + 9 = 26$. Total persons $= 26 - 1 = 25$.\nSahi uttar '25' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

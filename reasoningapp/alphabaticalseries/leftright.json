@@ -1,0 +1,78 @@
+[
+  {
+    "p_id": "leftright_1",
+    "qe": "Which letter will be 6th to the right of 4th from left end in English alphabetical series?",
+    "qh": "अंग्रेजी वर्णमाला श्रृंखला में बाएँ छोर से चौथे अक्षर के दाएँ छठा अक्षर कौन-सा होगा?",
+    "oe": [
+      "I",
+      "J",
+      "K",
+      "H"
+    ],
+    "oh": [
+      "I",
+      "J",
+      "K",
+      "H"
+    ],
+    "a": 1,
+    "e": "Method 1 (Left + Right Shortcut Trick):\nStep 1: Niyam: Jab do viprit dishaayein (Opposite Directions - Left aur Right) di gayi hon, toh dono sthanon ko joda (+, add) jata hai aur reference hamesha aakhiri wali position (Left end) li jaati hai:\n$$\\text{Position from Left end} = \\text{Left} + \\text{Right} = 4 + 6 = 10$$\nStep 2: EJOTY rule ke anusaar baayein (Left) se 10th letter 'J' hota hai.\nCorrect option  J hai.\n\nMethod 2 (Step-by-Step Counting Method):\n- Baayein se 4th letter 'D' hota hai.\n- 'D' ke daayein 6th sthan par aage badhein: E(1), F(2), G(3), H(4), I(5), J(6).\nIs prakar 10th letter 'J' prapt hota hai.\nSahi uttar 'J' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftright_2",
+    "qe": "Which letter will be 10th to the right of 5th from left end in English alphabetical series?",
+    "qh": "अंग्रेजी वर्णमाला श्रृंखला में बाएँ छोर से 5वें अक्षर के दाएँ 10वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "N",
+      "P",
+      "O",
+      "M"
+    ],
+    "oh": [
+      "N",
+      "P",
+      "O",
+      "M"
+    ],
+    "a": 2,
+    "e": "Method 1 (Left + Right Shortcut Trick):\nStep 1: Formula: Opposite directions hone par positions ko add karein:\n$$\\text{Position from Left end} = \\text{Left} + \\text{Right} = 5 + 10 = 15$$\nStep 2: English alphabet me baayein se 15वाँ letter 'O' hota hai (EJOTY se $O = 15$).\nCorrect option  O hai.\n\nMethod 2 (Step-by-Step Sequential Method):\n- Baayein se 5th letter 'E' hai.\n- E (place value 5) ke daayein 10 kadam aage jane par: $5 + 10 = 15$, jo ki 'O' hota hai.\nSahi uttar 'O' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftright_3",
+    "qe": "Which letter will be 5th to the left of 15th from left end in English alphabetical series?",
+    "qh": "अंग्रेजी वर्णमाला श्रृंखला में बाएँ छोर से 15वें अक्षर के बाएँ 5वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "J",
+      "K",
+      "I",
+      "L"
+    ],
+    "oh": [
+      "J",
+      "K",
+      "I",
+      "L"
+    ],
+    "a": 0,
+    "e": "Method 1 (Left - Left Shortcut Trick):\nStep 1: Niyam: Jab dono sthan samaan disha (Same Directions - Left aur Left) me hon, toh dono ka antar (-, difference) nikalte hain:\n$$\\text{Position from Left end} = \\text{Left}_2 - \\text{Left}_1 = 15 - 5 = 10$$\nStep 2: Baayein se 10वाँ letter 'J' hota hai.\nCorrect option  J hai.\n\nMethod 2 (Backward Counting Method):\n- Baayein se 15th letter 'O' hota hai.\n- 'O' ke baayein 5 sthan piche aane par: $15 - 5 = 10$, jo ki 'J' hai.\nSahi uttar 'J' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftright_4",
+    "qe": "Which letter will be 7th to the left of 17th from the left end in English alphabetical series?",
+    "qh": "अंग्रेजी वर्णमाला श्रृंखला में बाएँ छोर से 17वें अक्षर के बाएँ 7वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "H",
+      "I",
+      "K",
+      "J"
+    ],
+    "oh": [
+      "H",
+      "I",
+      "K",
+      "J"
+    ],
+    "a": 3,
+    "e": "Method 1 (Left - Left Shortcut Trick):\nStep 1: Formula: Samaan dishaon (Left aur Left) ke liye ghataav (subtraction) karte hain:\n$$\\text{Position from Left end} = \\text{Left}_2 - \\text{Left}_1 = 17 - 7 = 10$$\nStep 2: Alphabetical series me baayein se 10th position par letter 'J' hota hai.\nCorrect option  J hai.\n\nMethod 2 (Direct Alphabetical Subtraction):\n- Baayein se 17th letter 'Q' hota hai.\n- 'Q' ke baayein 7 letter piche jaane par: $17 - 7 = 10$th letter 'J' prapt hota hai.\nSahi uttar 'J' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

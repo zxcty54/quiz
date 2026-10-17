@@ -1,0 +1,249 @@
+[
+  {
+    "p_id": "agedifference_1",
+    "qe": "Seven years ago, the ratio of the ages of A and B was 4 : 5. Eight years hence, the ratio of the ages of A and B will be 9 : 10. What is the difference between their present ages in years?",
+    "qh": "सात वर्ष पहले, A और B की आयु का अनुपात 4 : 5 था। आठ वर्ष बाद, A और B की आयु का अनुपात 9 : 10 होगा। उनकी वर्तमान आयु के बीच का अंतर वर्षों में क्या है?",
+    "oe": [
+      "4",
+      "2",
+      "3",
+      "6"
+    ],
+    "oh": [
+      "4",
+      "2",
+      "3",
+      "6"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Units Method):\nStep 1: 7 वर्ष पूर्व और 8 वर्ष बाद के बीच कुल समय अंतराल = 7 + 8 = 15 वर्ष।\nStep 2: अनुपातों का अंतर:\n7 वर्ष पूर्व = 4 : 5 (अंतर = 1 इकाई)\n8 वर्ष बाद = 9 : 10 (अंतर = 1 इकाई)\nStep 3: इकाइयों में वृद्धि = 9 - 4 = 5 इकाइयाँ तथा 10 - 5 = 5 इकाइयाँ।\n5 इकाइयाँ = 15 वर्ष ==> 1 इकाई = 3 वर्ष।\nStep 4: आयु का अंतर सदैव स्थिर रहता है:\nअंतर = 1 इकाई = 1 * 3 = 3 वर्ष।\nअतः सही विकल्प  3 है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना 7 वर्ष पूर्व आयु 4x और 5x थी।\n(4x + 15) / (5x + 15) = 9 / 10.\nStep 2: 10(4x + 15) = 9(5x + 15) ==> 40x + 150 = 45x + 135 ==> 5x = 15 ==> x = 3.\nStep 3: अंतर = 5x - 4x = x = 3 वर्ष।\nअतः सही उत्तर '3' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_2",
+    "qe": "The ratio of the ages of A and B, four years ago, was 4 : 5. Eight years from now, the ratio of the ages of A and B will be 11 : 13. What is the sum of their present ages?",
+    "qh": "चार वर्ष पहले, A और B की आयु का अनुपात 4 : 5 था। अब से आठ वर्ष बाद, A और B की आयु का अनुपात 11 : 13 होगा। उनकी वर्तमान आयु का योग क्या है?",
+    "oe": [
+      "80 years",
+      "96 years",
+      "72 years",
+      "76 years"
+    ],
+    "oh": [
+      "80 years",
+      "96 years",
+      "72 years",
+      "76 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Difference Method):\nStep 1: समय अंतराल = 4 वर्ष पूर्व + 8 वर्ष बाद = 12 वर्ष।\nStep 2: अनुपातों का अंतर समान करें:\n- 4 वर्ष पूर्व अनुपात = 4 : 5 (अंतर = 1 इकाई) ==> 2 से गुणा करने पर = 8 : 10 (अंतर = 2 इकाइयाँ)\n- 8 वर्ष बाद अनुपात = 11 : 13 (अंतर = 2 इकाइयाँ)\nStep 3: इकाइयों में वृद्धि:\nA: 11 - 8 = 3 इकाइयाँ; B: 13 - 10 = 3 इकाइयाँ।\n3 इकाइयाँ = 12 वर्ष ==> 1 इकाई = 4 वर्ष।\nStep 4: 4 वर्ष पूर्व दोनों की आयु का योग = 8 + 10 = 18 इकाइयाँ = 18 * 4 = 72 वर्ष।\nStep 5: वर्तमान आयु का योग = 72 + 4 + 4 = 80 वर्ष।\nअतः सही विकल्प  80 years है।\n\nMethod 2 (Cross-Multiplication Method):\nStep 1: (4x + 12) / (5x + 12) = 11 / 13 ==> 52x + 156 = 55x + 132 ==> 3x = 24 ==> x = 8.\nStep 2: 4 वर्ष पूर्व योग = 9x = 9 * 8 = 72 वर्ष ==> वर्तमान योग = 72 + 8 = 80 वर्ष।\nअतः सही उत्तर '80 years' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_3",
+    "qe": "The ratio of the present age of two girls is 3 : 4. After two year the ratio will be 7 : 9. Which of the following statement(s) is/are correct?\nI. Ratio of their ages after 10 year is 6 : 7.\nII. Ratio of their ages after 12 years is 6 : 7.",
+    "qh": "दो लड़कियों की वर्तमान आयु का अनुपात 3 : 4 है। दो वर्ष बाद यह अनुपात 7 : 9 होगा। निम्नलिखित में से कौन-सा/से कथन सही है/हैं?\nI. 10 वर्ष बाद उनकी आयु का अनुपात 6 : 7 होगा।\nII. 12 वर्ष बाद उनकी आयु का अनुपात 6 : 7 होगा।",
+    "oe": [
+      "Only II",
+      "Neither I nor II",
+      "Both I and II",
+      "Only I"
+    ],
+    "oh": [
+      "Only II",
+      "Neither I nor II",
+      "Both I and II",
+      "Only I"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: वर्तमान अनुपात = 3 : 4 (अंतर = 1 इकाई) ==> 2 से गुणा करने पर = 6 : 8 (अंतर = 2 इकाइयाँ)।\n2 वर्ष बाद अनुपात = 7 : 9 (अंतर = 2 इकाइयाँ)।\nStep 2: अनुपात में वृद्धि = 7 - 6 = 1 इकाई = 2 वर्ष।\nStep 3: वर्तमान आयु:\nलड़की 1 = 6 * 2 = 12 वर्ष, लड़की 2 = 8 * 2 = 16 वर्ष।\nStep 4: कथनों का परीक्षण:\n- कथन I (10 वर्ष बाद): (12 + 10) : (16 + 10) = 22 : 26 = 11 : 13 ≠ 6 : 7 (गलत)।\n- कथन II (12 वर्ष बाद): (12 + 12) : (16 + 12) = 24 : 28 = 6 : 7 (सही)।\nअतः केवल कथन II सही है।\nअतः सही विकल्प  Only II है।\n\nMethod 2 (Algebraic Method):\nStep 1: (3x + 2) / (4x + 2) = 7 / 9 ==> 27x + 18 = 28x + 14 ==> x = 4.\nStep 2: वर्तमान आयु = 12 वर्ष और 16 वर्ष। 12 वर्ष बाद = 24 और 28 (अनुपात 6 : 7).\nअतः सही उत्तर 'Only II' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_4",
+    "qe": "10 years ago, the age of Sunita was thrice the age of her daughter Tanya. 10 years hence, the age of Sunita will be twice the age of Tanya. What is the ratio of their present ages?",
+    "qh": "10 वर्ष पहले, सुनीता की आयु उसकी पुत्री तान्या की आयु की तीन गुनी थी। 10 वर्ष बाद, सुनीता की आयु तान्या की आयु की दोगुनी होगी। उनकी वर्तमान आयु का अनुपात क्या है?",
+    "oe": [
+      "3 : 7",
+      "7 : 3",
+      "2 : 7",
+      "7 : 2"
+    ],
+    "oh": [
+      "3 : 7",
+      "7 : 3",
+      "2 : 7",
+      "7 : 2"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Units Method):\nStep 1: कुल समय अंतराल = 10 वर्ष पूर्व + 10 वर्ष बाद = 20 वर्ष।\nStep 2: 10 वर्ष पूर्व अनुपात = 3 : 1 (अंतर = 2 इकाइयाँ)\n10 वर्ष बाद अनुपात = 2 : 1 (अंतर = 1 इकाई) ==> 2 से गुणा करने पर = 4 : 2 (अंतर = 2 इकाइयाँ)।\nStep 3: इकाइयों में वृद्धि:\nसुनीता: 4 - 3 = 1 इकाई; तान्या: 2 - 1 = 1 इकाई।\n1 इकाई = 20 वर्ष।\nStep 4: 10 वर्ष पूर्व आयु:\nसुनीता = 3 * 20 = 60 वर्ष, तान्या = 1 * 20 = 20 वर्ष।\nStep 5: वर्तमान आयु:\nसुनीता = 60 + 10 = 70 वर्ष, तान्या = 20 + 10 = 30 वर्ष।\nवर्तमान अनुपात (सुनीता : तान्या) = 70 : 30 = 7 : 3.\nअतः सही विकल्प  7 : 3 है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना 10 वर्ष पूर्व तान्या = x, सुनीता = 3x.\n(3x + 20) = 2(x + 20) ==> 3x + 20 = 2x + 40 ==> x = 20.\nStep 2: वर्तमान आयु = (3 * 20 + 10) : (20 + 10) = 70 : 30 = 7 : 3.\nअतः सही उत्तर '7 : 3' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_5",
+    "qe": "Four years ago, Ravi was four times as old as Kavya. Seven years from now, Ravi will be three times as old as Kavya. Find the sum of their present ages.",
+    "qh": "चार वर्ष पहले, रवि की आयु काव्या की आयु की चार गुनी थी। अब से सात वर्ष बाद, रवि की आयु काव्या की आयु की तीन गुनी होगी। उनकी वर्तमान आयु का योग ज्ञात कीजिए।",
+    "oe": [
+      "118 years",
+      "122 years",
+      "117 years",
+      "115 years"
+    ],
+    "oh": [
+      "118 years",
+      "122 years",
+      "117 years",
+      "115 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Algebraic Method):\nStep 1: माना 4 वर्ष पूर्व काव्या की आयु = k वर्ष तथा रवि की आयु = 4k वर्ष।\nStep 2: 4 वर्ष पूर्व से 7 वर्ष बाद तक का कुल समय अंतराल = 4 + 7 = 11 वर्ष।\nStep 3: 7 वर्ष बाद की स्थिति:\n(4k + 11) = 3 * (k + 11)\n4k + 11 = 3k + 33 ==> k = 22 वर्ष।\nStep 4: 4 वर्ष पूर्व दोनों की आयु:\nकाव्या = 22 वर्ष, रवि = 4 * 22 = 88 वर्ष।\nStep 5: दोनों की वर्तमान आयु:\nकाव्या = 22 + 4 = 26 वर्ष, रवि = 88 + 4 = 92 वर्ष।\nवर्तमान आयु का कुल योग = 92 + 26 = 118 वर्ष।\nअतः सही विकल्प  118 years है।\n\nMethod 2 (Ratio Method):\nStep 1: 4 वर्ष पूर्व = 4 : 1 (अंतर = 3 इकाइयाँ ==> 2 से गुणा करने पर 8 : 2)\n7 वर्ष बाद = 3 : 1 (अंतर = 2 इकाइयाँ ==> 3 से गुणा करने पर 9 : 3)\nStep 2: 9 - 8 = 1 इकाई = 11 वर्ष।\nStep 3: 4 वर्ष पूर्व योग = (8 + 2) * 11 = 110 वर्ष।\nवर्तमान योग = 110 + 4 + 4 = 118 वर्ष।\nअतः सही उत्तर '118 years' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_6",
+    "qe": "One year ago, the age of B was twice that of A. After 9 years, if the ratio of the ages of B and A would be 4 : 3, then the sum of their present ages is _____ years.",
+    "qh": "एक वर्ष पहले, B की आयु A की आयु की दोगुनी थी। 9 वर्ष बाद, यदि B और A की आयु का अनुपात 4 : 3 होगा, तो उनकी वर्तमान आयु का योग _____ वर्ष है।",
+    "oe": [
+      "20 years",
+      "15 years",
+      "17 years",
+      "21 years"
+    ],
+    "oh": [
+      "20 years",
+      "15 years",
+      "17 years",
+      "21 years"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: समय अंतराल = 1 वर्ष पूर्व + 9 वर्ष बाद = 10 वर्ष।\nStep 2: अनुपात (B : A):\n- 1 वर्ष पूर्व = 2 : 1 (अंतर = 1 इकाई)\n- 9 वर्ष बाद = 4 : 3 (अंतर = 1 इकाई)\nStep 3: इकाइयों में वृद्धि:\nB: 4 - 2 = 2 इकाइयाँ; A: 3 - 1 = 2 इकाइयाँ।\n2 इकाइयाँ = 10 वर्ष ==> 1 इकाई = 5 वर्ष।\nStep 4: 1 वर्ष पूर्व दोनों की आयु:\nB = 2 * 5 = 10 वर्ष, A = 1 * 5 = 5 वर्ष।\nStep 5: वर्तमान आयु:\nB = 10 + 1 = 11 वर्ष, A = 5 + 1 = 6 वर्ष।\nवर्तमान आयु का कुल योग = 11 + 6 = 17 वर्ष।\nअतः सही विकल्प  17 years है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना 1 वर्ष पूर्व A = x, B = 2x.\nStep 2: (2x + 10) / (x + 10) = 4 / 3 ==> 6x + 30 = 4x + 40 ==> 2x = 10 ==> x = 5.\nStep 3: वर्तमान योग = (x + 1) + (2x + 1) = 3x + 2 = 3(5) + 2 = 17 वर्ष।\nअतः सही उत्तर '17 years' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_7",
+    "qe": "The ratio of the ages of A and B, 3 years ago, was 5 : 7. The ratio of their ages, 13 years from now, will be 9 : 11. If the present age of C is 11 years less than that of B, then the present age of C, (in years) is:",
+    "qh": "3 वर्ष पहले, A और B की आयु का अनुपात 5 : 7 था। अब से 13 वर्ष बाद, उनकी आयु का अनुपात 9 : 11 होगा। यदि C की वर्तमान आयु B की वर्तमान आयु से 11 वर्ष कम है, तो C की वर्तमान आयु (वर्षों में) क्या है:",
+    "oe": [
+      "23",
+      "36",
+      "31",
+      "20"
+    ],
+    "oh": [
+      "23",
+      "36",
+      "31",
+      "20"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Units Method):\nStep 1: कुल समय अंतराल = 3 वर्ष पूर्व + 13 वर्ष बाद = 16 वर्ष।\nStep 2: 3 वर्ष पूर्व अनुपात = 5 : 7 (अंतर = 2 इकाइयाँ)\n13 वर्ष बाद अनुपात = 9 : 11 (अंतर = 2 इकाइयाँ)\nStep 3: इकाइयों में वृद्धि = 9 - 5 = 4 इकाइयाँ तथा 11 - 7 = 4 इकाइयाँ।\n4 इकाइयाँ = 16 वर्ष ==> 1 इकाई = 4 वर्ष।\nStep 4: 3 वर्ष पूर्व B की आयु = 7 * 4 = 28 वर्ष।\nB की वर्तमान आयु = 28 + 3 = 31 वर्ष।\nStep 5: C की वर्तमान आयु = B की वर्तमान आयु - 11 = 31 - 11 = 20 वर्ष।\nअतः सही विकल्प  20 है।\n\nMethod 2 (Algebraic Method):\nStep 1: (5x + 16) / (7x + 16) = 9 / 11 ==> 55x + 176 = 63x + 144 ==> 8x = 32 ==> x = 4.\nStep 2: B की वर्तमान आयु = 7(4) + 3 = 31 वर्ष ==> C = 31 - 11 = 20 वर्ष।\nअतः सही उत्तर '20' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_8",
+    "qe": "One year ago, the ratio of the age (in years) of A to that of B was 4 : 3. The ratio of their respective ages, 3 years from now, will be 6 : 5. What will be the ratio of respective ages of A and B, 9 years from now?",
+    "qh": "एक वर्ष पहले, A और B की आयु (वर्षों में) का अनुपात 4 : 3 था। अब से 3 वर्ष बाद, उनकी संबंधित आयु का अनुपात 6 : 5 होगा। अब से 9 वर्ष बाद A और B की संबंधित आयु का अनुपात क्या होगा?",
+    "oe": [
+      "7 : 6",
+      "10 : 9",
+      "9 : 8",
+      "8 : 7"
+    ],
+    "oh": [
+      "7 : 6",
+      "10 : 9",
+      "9 : 8",
+      "8 : 7"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Step Method):\nStep 1: समय अंतराल = 1 वर्ष पूर्व + 3 वर्ष बाद = 4 वर्ष।\nStep 2: अनुपातों का अंतर:\n1 वर्ष पूर्व = 4 : 3\n3 वर्ष बाद = 6 : 5\nइकाइयों में वृद्धि = 6 - 4 = 2 इकाइयाँ = 4 वर्ष ==> 1 इकाई = 2 वर्ष।\nStep 3: 1 वर्ष पूर्व आयु: A = 4 * 2 = 8 वर्ष, B = 3 * 2 = 6 वर्ष।\nवर्तमान आयु: A = 8 + 1 = 9 वर्ष, B = 6 + 1 = 7 वर्ष।\nStep 4: 9 वर्ष बाद आयु:\nA = 9 + 9 = 18 वर्ष, B = 7 + 9 = 16 वर्ष।\nअभीष्ट अनुपात = 18 : 16 = 9 : 8.\nअतः सही विकल्प  9 : 8 है।\n\nMethod 2 (Direct Ratio Increment Method):\nStep 1: 3 वर्ष बाद से 9 वर्ष बाद तक का समय = 6 वर्ष।\nStep 2: चूँकि 2 वर्ष = 1 इकाई, अतः 6 वर्ष = 3 इकाइयाँ।\nStep 3: 9 वर्ष बाद का अनुपात = (6 + 3) : (5 + 3) = 9 : 8.\nअतः सही उत्तर '9 : 8' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_9",
+    "qe": "The age of a father will be double the age of his son ten years later. 10 years ago, the father's age was six times the age of the son. How many years from now, the ratio of their ages will be 3 : 2?",
+    "qh": "दस वर्ष बाद पिता की आयु उसके पुत्र की आयु की दोगुनी होगी। 10 वर्ष पहले, पिता की आयु पुत्र की आयु की छह गुनी थी। अब से कितने वर्ष बाद उनकी आयु का अनुपात 3 : 2 होगा?",
+    "oe": [
+      "35 years",
+      "30 years",
+      "20 years",
+      "25 years"
+    ],
+    "oh": [
+      "35 years",
+      "30 years",
+      "20 years",
+      "25 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Equating Method):\nStep 1: कुल समय अंतराल = 10 वर्ष पूर्व + 10 वर्ष बाद = 20 वर्ष।\n10 वर्ष पूर्व अनुपात = 6 : 1 (अंतर = 5 इकाइयाँ)\n10 वर्ष बाद अनुपात = 2 : 1 (अंतर = 1 इकाई) ==> 5 से गुणा करने पर = 10 : 5 (अंतर = 5 इकाइयाँ)।\nStep 2: इकाइयों में वृद्धि = 10 - 6 = 4 इकाइयाँ = 20 वर्ष ==> 1 इकाई = 5 वर्ष।\nStep 3: 10 वर्ष पूर्व आयु:\nपिता = 6 * 5 = 30 वर्ष, पुत्र = 1 * 5 = 5 वर्ष।\nवर्तमान आयु:\nपिता = 30 + 10 = 40 वर्ष, पुत्र = 5 + 10 = 15 वर्ष।\nStep 4: माना अब से t वर्ष बाद अनुपात 3 : 2 होगा:\n(40 + t) / (15 + t) = 3 / 2\n80 + 2t = 45 + 3t ==> t = 35 वर्ष।\nअतः सही विकल्प  35 years है।\n\nMethod 2 (Age Difference Invariance):\nStep 1: पिता और पुत्र की आयु का अंतर = 40 - 15 = 25 वर्ष।\nStep 2: 3 : 2 के अनुपात में अंतर = 1 इकाई = 25 वर्ष।\nउस समय पिता = 3 * 25 = 75 वर्ष, पुत्र = 2 * 25 = 50 वर्ष।\nStep 3: आवश्यक समय t = 50 - 15 = 35 वर्ष।\nअतः सही उत्तर '35 years' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_10",
+    "qe": "Seven years ago, Prachi was four times as old as her daughter was at that time. Four years from now, Prachi will be two-and-a-half times as old as her daughter would then be. Find the sum of the present ages (in years) of Prachi and her daughter.",
+    "qh": "सात वर्ष पहले, प्राची की आयु उस समय उसकी पुत्री की आयु की चार गुनी थी। अब से चार वर्ष बाद, प्राची की आयु उसकी पुत्री की तत्कालीन आयु की ढाई गुना होगी। प्राची और उसकी पुत्री की वर्तमान आयु का योग (वर्षों में) ज्ञात कीजिए।",
+    "oe": [
+      "69 years",
+      "77 years",
+      "49 years",
+      "72 years"
+    ],
+    "oh": [
+      "69 years",
+      "77 years",
+      "49 years",
+      "72 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Algebraic Method):\nStep 1: माना 7 वर्ष पूर्व पुत्री की आयु = d वर्ष, प्राची = 4d वर्ष।\nStep 2: 7 वर्ष पूर्व से 4 वर्ष बाद तक कुल समय = 7 + 4 = 11 वर्ष।\nStep 3: 4 वर्ष बाद प्राची 2.5 (5/2) गुना होगी:\n(4d + 11) = 2.5 * (d + 11)\n2(4d + 11) = 5(d + 11)\n8d + 22 = 5d + 55 ==> 3d = 33 ==> d = 11 वर्ष।\nStep 4: 7 वर्ष पूर्व दोनों की आयु:\nपुत्री = 11 वर्ष, प्राची = 4 * 11 = 44 वर्ष।\nStep 5: वर्तमान आयु:\nपुत्री = 11 + 7 = 18 वर्ष, प्राची = 44 + 7 = 51 वर्ष।\nवर्तमान आयु का कुल योग = 51 + 18 = 69 वर्ष।\nअतः सही विकल्प  69 years है।\n\nMethod 2 (Ratio Method):\nStep 1: 7 वर्ष पूर्व = 4 : 1 (अंतर = 3 इकाइयाँ ==> 3 से गुणा = 12 : 3)\n4 वर्ष बाद = 5 : 2 (अंतर = 3 इकाइयाँ)\nStep 2: क्रॉस-मल्टीप्लिकेशन से हल करने पर वर्तमान योग = 69 वर्ष प्राप्त होता है।\nअतः सही उत्तर '69 years' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_11",
+    "qe": "Three years ago, the age of a person was six times the age of his younger brother. Eight years later, the age of the person will be three years less than twice the age of his younger brother. Find the present ages of the person and his younger brother.",
+    "qh": "तीन वर्ष पहले, एक व्यक्ति की आयु उसके छोटे भाई की आयु की छह गुनी थी। आठ वर्ष बाद, व्यक्ति की आयु उसके छोटे भाई की आयु के दोगुने से तीन वर्ष कम होगी। उस व्यक्ति और उसके छोटे भाई की वर्तमान आयु ज्ञात कीजिए।",
+    "oe": [
+      "15 yrs and 5 yrs",
+      "5 yrs and 15 yrs",
+      "12 yrs and 4 yrs",
+      "4 yrs and 12 yrs"
+    ],
+    "oh": [
+      "15 yrs and 5 yrs",
+      "5 yrs and 15 yrs",
+      "12 yrs and 4 yrs",
+      "4 yrs and 12 yrs"
+    ],
+    "a": 0,
+    "e": "Method 1 (Algebraic Method):\nStep 1: माना 3 वर्ष पूर्व छोटे भाई की आयु = b वर्ष, व्यक्ति की आयु = 6b वर्ष।\nStep 2: 3 वर्ष पूर्व से 8 वर्ष बाद तक का समय अंतराल = 3 + 8 = 11 वर्ष।\nStep 3: 8 वर्ष बाद की स्थिति:\nव्यक्ति की आयु = 6b + 11, छोटे भाई की आयु = b + 11.\nप्रश्नानुसार:\n(6b + 11) = 2(b + 11) - 3\n6b + 11 = 2b + 22 - 3\n6b + 11 = 2b + 19 ==> 4b = 8 ==> b = 2 वर्ष।\nStep 4: वर्तमान आयु की गणना:\n- छोटे भाई की वर्तमान आयु = b + 3 = 2 + 3 = 5 वर्ष।\n- व्यक्ति की वर्तमान आयु = 6b + 3 = 6(2) + 3 = 15 वर्ष।\nअतः सही विकल्प  15 yrs and 5 yrs है।\n\nMethod 2 (Option Verification):\nStep 1: विकल्प (a) 15 और 5 लेते हैं:\n3 वर्ष पूर्व: व्यक्ति = 12, भाई = 2 (12 = 6 * 2, पहली शर्त संतुष्ट)।\n8 वर्ष बाद: व्यक्ति = 23, भाई = 13 (2 * 13 - 3 = 26 - 3 = 23, दूसरी शर्त संतुष्ट)।\nअतः सही उत्तर '15 yrs and 5 yrs' है।\n\nExam point: umar ke prashn ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_12",
+    "qe": "5 years ago, the ratio of the age of A to that of B was 4 : 5. Five years hence, the ratio of the age of A to that of B will be 6 : 7. If, at present, C is 10 years younger than B, then what will be the ratio of the present age of A to that of C ?",
+    "qh": "5 वर्ष पहले, A और B की आयु का अनुपात 4 : 5 था। पाँच वर्ष बाद, A और B की आयु का अनुपात 6 : 7 होगा। यदि, वर्तमान में, C, B से 10 वर्ष छोटा है, तो A और C की वर्तमान आयु का अनुपात क्या होगा?",
+    "oe": [
+      "3 : 2",
+      "5 : 4",
+      "4 : 3",
+      "5 : 3"
+    ],
+    "oh": [
+      "3 : 2",
+      "5 : 4",
+      "4 : 3",
+      "5 : 3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Difference Method):\nStep 1: कुल समय अंतराल = 5 वर्ष पूर्व + 5 वर्ष बाद = 10 वर्ष।\nStep 2: अनुपातों का अंतर:\n5 वर्ष पूर्व = 4 : 5\n5 वर्ष बाद = 6 : 7\nइकाइयों में वृद्धि = 6 - 4 = 2 इकाइयाँ तथा 7 - 5 = 2 इकाइयाँ।\nStep 3: 2 इकाइयाँ = 10 वर्ष ==> 1 इकाई = 5 वर्ष।\nStep 4: 5 वर्ष पूर्व आयु:\nA = 4 * 5 = 20 वर्ष, B = 5 * 5 = 25 वर्ष।\nवर्तमान आयु:\nA = 20 + 5 = 25 वर्ष, B = 25 + 5 = 30 वर्ष।\nStep 5: C की वर्तमान आयु = B - 10 = 30 - 10 = 20 वर्ष।\nStep 6: A और C की वर्तमान आयु का अनुपात:\nA : C = 25 : 20 = 5 : 4.\nअतः सही विकल्प  5 : 4 है।\n\nMethod 2 (Algebraic Method):\nStep 1: (4x + 10) / (5x + 10) = 6 / 7 ==> 28x + 70 = 30x + 60 ==> 2x = 10 ==> x = 5.\nStep 2: A = 4(5) + 5 = 25 वर्ष, B = 5(5) + 5 = 30 वर्ष ==> C = 20 वर्ष।\nStep 3: A : C = 25 : 20 = 5 : 4.\nअतः सही उत्तर '5 : 4' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "agedifference_13",
+    "qe": "The ratio of the ages of A and B, 8 years ago, was 5 : 7. The ratio of their ages, 8 years from now, will be 9 : 11. If the present age of C is 13 years less than that of B, and the present age of D is 8 years less than that of the age of A, then the sum of the present ages of C and D, in years, is:",
+    "qh": "8 वर्ष पहले, A और B की आयु का अनुपात 5 : 7 था। अब से 8 वर्ष बाद, उनकी आयु का अनुपात 9 : 11 होगा। यदि C की वर्तमान आयु B की आयु से 13 वर्ष कम है, और D की वर्तमान आयु A की आयु से 8 वर्ष कम है, तो C और D की वर्तमान आयु का योग वर्षों में क्या है:",
+    "oe": [
+      "47 years",
+      "55 years",
+      "43 years",
+      "53 years"
+    ],
+    "oh": [
+      "47 years",
+      "55 years",
+      "43 years",
+      "53 years"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Difference Method):\nStep 1: कुल समय अंतराल = 8 वर्ष पूर्व + 8 वर्ष बाद = 16 वर्ष।\nStep 2: अनुपातों का अंतर:\n8 वर्ष पूर्व = 5 : 7 (अंतर = 2 इकाइयाँ)\n8 वर्ष बाद = 9 : 11 (अंतर = 2 इकाइयाँ)\nइकाइयों में वृद्धि = 9 - 5 = 4 इकाइयाँ तथा 11 - 7 = 4 इकाइयाँ।\nStep 3: 4 इकाइयाँ = 16 वर्ष ==> 1 इकाई = 4 वर्ष।\nStep 4: 8 वर्ष पूर्व आयु:\nA = 5 * 4 = 20 वर्ष, B = 7 * 4 = 28 वर्ष।\nवर्तमान आयु:\nA = 20 + 8 = 28 वर्ष, B = 28 + 8 = 36 वर्ष।\nStep 5: C और D की वर्तमान आयु की गणना:\n- C की आयु = B - 13 = 36 - 13 = 23 वर्ष\n- D की आयु = A - 8 = 28 - 8 = 20 वर्ष\nStep 6: C और D की वर्तमान आयु का कुल योग:\nयोग = 23 + 20 = 43 वर्ष।\nअतः सही विकल्प  43 years है।\n\nMethod 2 (Algebraic Method):\nStep 1: (5x + 16) / (7x + 16) = 9 / 11 ==> 55x + 176 = 63x + 144 ==> 8x = 32 ==> x = 4.\nStep 2: A = 5(4) + 8 = 28 वर्ष, B = 7(4) + 8 = 36 वर्ष।\nStep 3: C = 36 - 13 = 23, D = 28 - 8 = 20 ==> योग = 23 + 20 = 43 वर्ष।\nअतः सही उत्तर '43 years' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

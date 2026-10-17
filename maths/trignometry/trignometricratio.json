@@ -1,0 +1,382 @@
+[
+  {
+    "p_id": "trignometricratio_1",
+    "qe": "If 3 $sec^2x$ - 4 = 0, then the value of x (0 < x < 90°) will be :",
+    "qh": "यदि 3 $sec^2x$ - 4 = 0 है, तो x (0 < x < 90°) का मान क्या होगा?",
+    "oe": [
+      "15°",
+      "45°",
+      "30°",
+      "60°"
+    ],
+    "oh": [
+      "15°",
+      "45°",
+      "30°",
+      "60°"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Trigonometric Table Method):\nStep 1: Given equation ko simplify karte hain:\n$$3\\sec^2 x = 4 \\implies \\sec^2 x = $\\frac{4}{3}$$$\nStep 2: Square root lene par ($0 < x < 90^\\circ$ acute angle hai):\n$$\\sec x = \\frac{2}{$\\sqrt{3}$}$$\nStep 3: Standard table se angle check karein:\n$$\\sec 30^$\\circ$ = \\frac{2}{$\\sqrt{3}$} \\implies x = 30^$\\circ$$$\nCorrect '30°'0° hai.\n\nMethod 2 (Cosine Inversion Method):\n$$\\cos^2 x = $\\frac{1}{\\sec^2x}$ = $\\frac{3}{4}$ \\implies \\cos x = \\frac{$\\sqrt{3}$}{2}$$\n$$\\cos 30^$\\circ$ = \\frac{$\\sqrt{3}$}{2} \\implies x = 30^$\\circ$$$\nSahi uttar '30°' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_2",
+    "qe": "$If r sin \\theta = 1, r cos \\theta = \\sqrt 3,$ then the value $of (\\sqrt 3 tan \\theta + 1) is$ :",
+    "qh": "यदि $r sin \\theta = 1, r cos \\theta = \\sqrt 3$ है, तो $(\\sqrt 3 tan \\theta + 1)$ का मान क्या होगा?",
+    "oe": [
+      "√3",
+      "1/√3",
+      "1",
+      "2"
+    ],
+    "oh": [
+      "√3",
+      "1/√3",
+      "1",
+      "2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Division Method):\nStep 1: Dono equations ko divide karke $r$ ko eliminate karte hain:\n$$$\\frac{r\\sin\\theta}{r\\cos\\theta}$ = \\frac{1}{$\\sqrt{3}$} \\implies \\tan$\\theta$ = \\frac{1}{$\\sqrt{3}$}$$\nStep 2: Ab target expression $(\\sqrt{3}\\tan\\theta + 1)$ me $\\tan\\theta$ ki value put karte hain:\n$$$\\sqrt{3}$$\\le$ft(\\frac{1}{$\\sqrt{3}$}\\right) + 1 = 1 + 1 = 2$$\nCorrect '1/√3' hai.\n\nMethod 2 (Angle Determination Method):\n$$\\tan$\\theta$ = \\frac{1}{$\\sqrt{3}$} \\implies $\\theta$ = 30^$\\circ$$$\n$$$\\sqrt{3}$\\tan 30^$\\circ$ + 1 = $\\sqrt{3}$$\\le$ft(\\frac{1}{$\\sqrt{3}$}\\right) + 1 = 2$$\nSahi uttar '2' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_3",
+    "qe": "2 tan 30° / (1 - $tan^2$ 30°) = ?",
+    "qh": "2 tan 30° / (1 - $tan^2$ 30°) = ?",
+    "oe": [
+      "3",
+      "1/3",
+      "√3",
+      "1/√3"
+    ],
+    "oh": [
+      "3",
+      "1/3",
+      "√3",
+      "1/√3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Double Angle Formula Shortcut Method):\nStep 1: Standard formula yaad rakhein:\n$$\\tan 2A = $\\frac{2\\tanA}{1-\\tan^2A}$$$\nStep 2: Yahan $A = 30^\\circ$ diya gaya hai:\n$$$\\frac{2\\tan30^\\circ}{1-\\tan^230^\\circ}$ = \\tan(2 $\\times$ 30^$\\circ$) = \\tan 60^$\\circ$ = $\\sqrt{3}$$$\nBina value calculate kiye direct formula se 2 second me answer aa gaya.\nCorrect option  √3 hai.\n\nMethod 2 (Value Substitution Method):\n$\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$ substitute karein:\n$$\\frac{2$\\le$ft(\\frac{1}{$\\sqrt{3}$}\\right)}{1 - $\\le$ft(\\frac{1}{$\\sqrt{3}$}\\right)^2} = \\frac{\\frac{2}{$\\sqrt{3}$}}{1 - $\\frac{1}{3}$} = \\frac{\\frac{2}{$\\sqrt{3}$}}{$\\frac{2}{3}$} = \\frac{2}{$\\sqrt{3}$} $\\times$ $\\frac{3}{2}$ = \\frac{3}{$\\sqrt{3}$} = $\\sqrt{3}$$$\nSahi uttar '√3' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_4",
+    "qe": "If x sin 60° · tan 30° = sec 60° · cot 45°, then the value of x is :",
+    "qh": "यदि x sin 60° · tan 30° = sec 60° · cot 45° है, तो x का मान क्या होगा?",
+    "oe": [
+      "√3",
+      "1/√3",
+      "4",
+      "4√3"
+    ],
+    "oh": [
+      "√3",
+      "1/√3",
+      "4",
+      "4√3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Standard Table Value Method):\nStep 1: Sabhi standard angles ki values likhte hain:\n- $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2}$\n- $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}}$\n- $\\sec 60^\\circ = 2$\n- $\\cot 45^\\circ = 1$\nStep 2: Equation me values substitute karein:\n$$x $\\times$ $\\le$ft(\\frac{$\\sqrt{3}$}{2}\\right) $\\times$ $\\le$ft(\\frac{1}{$\\sqrt{3}$}\\right) = 2 $\\times$ 1$$\nStep 3: Solve karein:\n$$x $\\times$ $\\frac{1}{2}$ = 2 \\implies x = 4$$\nCorrect '4√3' hai.\n\nMethod 2 (Product Simplification Method):\n$$\\sin 60^$\\circ$ $\\times$ \\tan 30^$\\circ$ = \\sin 60^$\\circ$ $\\times$ $\\frac{\\sin30^\\circ}{\\cos30^\\circ}$ = \\frac{$\\sqrt{3}$}{2} $\\times$ \\frac{1/2}{$\\sqrt{3}$/2} = $\\frac{1}{2}$$$\n$$x $\\le$ft($\\frac{1}{2}$\\right) = 2 \\implies x = 4$$\nSahi uttar '4' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_5",
+    "qe": "If x sin 60° · tan 30° - $tan^2$ 45° = cosec 60° · cot 30° - $sec^2$ 45°, then the value of x is :",
+    "qh": "यदि x sin 60° · tan 30° - $tan^2$ 45° = cosec 60° · cot 30° - $sec^2$ 45° है, तो x का मान क्या होगा?",
+    "oe": [
+      "2",
+      "- 2",
+      "6",
+      "- 4"
+    ],
+    "oh": [
+      "2",
+      "- 2",
+      "6",
+      "- 4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Value Substitution Method):\nStep 1: LHS evaluate karte hain:\n$$\\text{LHS} = x $\\le$ft(\\frac{$\\sqrt{3}$}{2}\\right) $\\le$ft(\\frac{1}{$\\sqrt{3}$}\\right) - (1)^2 = $\\frac{x}{2}$ - 1$$\nStep 2: RHS evaluate karte hain:\n$$\\csc 60^$\\circ$ = \\frac{2}{$\\sqrt{3}$}, \\quad \\cot 30^$\\circ$ = $\\sqrt{3}$, \\quad \\sec 45^$\\circ$ = $\\sqrt{2}$$$\n$$\\text{RHS} = $\\le$ft(\\frac{2}{$\\sqrt{3}$}\\right) ($\\sqrt{3}$) - ($\\sqrt{2}$)^2 = 2 - 2 = 0$$\nStep 3: LHS = RHS equate karte hain:\n$$$\\frac{x}{2}$ - 1 = 0 \\implies $\\frac{x}{2}$ = 1 \\implies x = 2$$\nCorrect '- 2' hai.\n\nMethod 2 (Direct Simplification):\n$$$\\frac{x}{2}$ - 1 = 2 - 2 = 0 \\implies x = 2$$\nSahi uttar '2' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_6",
+    "qe": "The numerical value of $(cos^2$ 45° / $sin^2$ 60°) + $(cos^2$ 60° / $sin^2$ 45°) - $(tan^2$ 30° / $cot^2$ 45°) - $(sin^2$ 30° / $cot^2$ 30°) is :",
+    "qh": "$(cos^2$ 45° / $sin^2$ 60°) + $(cos^2$ 60° / $sin^2$ 45°) - $(tan^2$ 30° / $cot^2$ 45°) - $(sin^2$ 30° / $cot^2$ 30°) का संख्यात्मक मान क्या है?",
+    "oe": [
+      "1 (1/4)",
+      "3/4",
+      "1/4",
+      "1/2"
+    ],
+    "oh": [
+      "1 (1/4)",
+      "3/4",
+      "1/4",
+      "1/2"
+    ],
+    "a": 1,
+    "e": "Method 1 (Term-by-Term Evaluation Method):\nStep 1: Chaaron terms ko alag-alag solve karte hain:\n- Term 1: $\\frac{\\cos^2 45^\\circ}{\\sin^2 60^\\circ} = \\frac{(1/\\sqrt{2})^2}{(\\sqrt{3}/2)^2} = \\frac{1/2}{3/4} = \\frac{1}{2} \\times \\frac{4}{3} = \\frac{2}{3}$\n- Term 2: $\\frac{\\cos^2 60^\\circ}{\\sin^2 45^\\circ} = \\frac{(1/2)^2}{(1/\\sqrt{2})^2} = \\frac{1/4}{1/2} = \\frac{1}{2}$\n- Term 3: $\\frac{\\tan^2 30^\\circ}{\\cot^2 45^\\circ} = \\frac{(1/\\sqrt{3})^2}{(1)^2} = \\frac{1/3}{1} = \\frac{1}{3}$\n- Term 4: $\\frac{\\sin^2 30^\\circ}{\\cot^2 30^\\circ} = \\frac{(1/2)^2}{(\\sqrt{3})^2} = \\frac{1/4}{3} = \\frac{1}{12}$\nStep 2: Sabhi values ko add/subtract karte hain:\n$$\\text{Value} = $\\frac{2}{3}$ + $\\frac{1}{2}$ - $\\frac{1}{3}$ - $\\frac{1}{12}$$$\nStep 3: LCM = 12 lekar calculate karein:\n$$\\text{Value} = $\\le$ft($\\frac{2}{3}$ - $\\frac{1}{3}$\\right) + $\\frac{1}{2}$ - $\\frac{1}{12}$ = $\\frac{1}{3}$ + $\\frac{1}{2}$ - $\\frac{1}{12}$$$\n$$$\\frac{4+6-1}{12}$ = $\\frac{9}{12}$ = $\\frac{3}{4}$$$\nCorrect '1/4'/4 hai.\n\nMethod 2 (Common Denominator Method):\n$$$\\frac{8+6-4-1}{12}$ = $\\frac{9}{12}$ = $\\frac{3}{4}$$$\nSahi uttar '3/4' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_7",
+    "qe": "The value of $sin^2$ 30° $cos^2$ 45° + 4 $tan^2$ 30° + (1/2) $sin^2$ 90° + 2 cos 90° is :",
+    "qh": "$sin^2$ 30° $cos^2$ 45° + 4 $tan^2$ 30° + (1/2) $sin^2$ 90° + 2 cos 90° का मान क्या होगा?",
+    "oe": [
+      "15/8",
+      "47/24",
+      "23/12",
+      "2"
+    ],
+    "oh": [
+      "15/8",
+      "47/24",
+      "23/12",
+      "2"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Table Substitution Method):\nStep 1: Sabhi standard angle values rakhein:\n- $\\sin 30^\\circ = \\frac{1}{2} \\implies \\sin^2 30^\\circ = \\frac{1}{4}$\n- $\\cos 45^\\circ = \\frac{1}{\\sqrt{2}} \\implies \\cos^2 45^\\circ = \\frac{1}{2}$\n- $\\tan 30^\\circ = \\frac{1}{\\sqrt{3}} \\implies \\tan^2 30^\\circ = \\frac{1}{3}$\n- $\\sin 90^\\circ = 1 \\implies \\sin^2 90^\\circ = 1$\n- $\\cos 90^\\circ = 0$\nStep 2: Har term calculate karein:\n- Term 1: $\\frac{1}{4} \\times \\frac{1}{2} = \\frac{1}{8}$\n- Term 2: $4 \\times \\frac{1}{3} = \\frac{4}{3}$\n- Term 3: $\\frac{1}{2} \\times 1 = \\frac{1}{2}$\n- Term 4: $2 \\times 0 = 0$\nStep 3: Inhe add karein (LCM = 24):\n$$\\text{Total} = $\\frac{1}{8}$ + $\\frac{4}{3}$ + $\\frac{1}{2}$ = $\\frac{3+32+12}{24}$ = $\\frac{47}{24}$$$\nCorrect '2'7/24 hai.\n\nMethod 2 (Group Addition Method):\n$$$\\le$ft($\\frac{1}{8}$ + $\\frac{1}{2}$\\right) + $\\frac{4}{3}$ = $\\frac{5}{8}$ + $\\frac{4}{3}$ = $\\frac{15+32}{24}$ = $\\frac{47}{24}$$$\nSahi uttar '47/24' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_8",
+    "qe": "The value of [4 $tan^2$ 30° + (1/4) $sin^2$ 90° + (1/8) $cot^2$ 60° + $sin^2$ 30° · $cos^2$ 45°] / [sin 60° cos 30° - cos 60° sin 30°] is :",
+    "qh": "[4 $tan^2$ 30° + (1/4) $sin^2$ 90° + (1/8) $cot^2$ 60° + $sin^2$ 30° · $cos^2$ 45°] / [sin 60° cos 30° - cos 60° sin 30°] का मान क्या होगा?",
+    "oe": [
+      "1 (3/4)",
+      "4",
+      "2 (1/2)",
+      "3 (1/2)"
+    ],
+    "oh": [
+      "1 (3/4)",
+      "4",
+      "2 (1/2)",
+      "3 (1/2)"
+    ],
+    "a": 3,
+    "e": "Method 1 (Compound Angle & Table Method):\nStep 1: Denominator me identity $\\sin(A - B) = \\sin A\\cos B - \\cos A\\sin B$ lagate hain:\n$$\\text{Denominator} = \\sin(60^$\\circ$ - 30^$\\circ$) = \\sin 30^$\\circ$ = $\\frac{1}{2}$$$\nStep 2: Numerator evaluate karte hain:\n- $4\\tan^2 30^\\circ = 4\\left(\\frac{1}{3}\\right) = \\frac{4}{3}$\n- $\\frac{1}{4}\\sin^2 90^\\circ = \\frac{1}{4}(1) = \\frac{1}{4}$\n- $\\frac{1}{8}\\cot^2 60^\\circ = \\frac{1}{8}\\left(\\frac{1}{3}\\right) = \\frac{1}{24}$\n- $\\sin^2 30^\\circ\\cos^2 45^\\circ = \\frac{1}{4} \\times \\frac{1}{2} = \\frac{1}{8}$\nStep 3: Numerator ka sum calculate karein (LCM = 24):\n$$\\text{Num} = $\\frac{32+6+1+3}{24}$ = $\\frac{42}{24}$ = $\\frac{7}{4}$$$\nStep 4: Numerator ko Denominator se divide karein:\n$$\\text{Value} = \\frac{$\\frac{7}{4}$}{$\\frac{1}{2}$} = $\\frac{7}{4}$ $\\times$ 2 = $\\frac{7}{2}$ = 3$\\frac{1}{2}$$$\nCorrect '2 (1/2)' (1/2) hai.\n\nMethod 2 (Direct Simplification):\n$$$\\frac{7/4}{1/2}$ = $\\frac{7}{2}$ = 3.5$$\nSahi uttar '3 (1/2)' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_9",
+    "qe": "The value of (4/3) $tan^2$ 60° + 3 $cos^2$ 30° - 2 $sec^2$ 30° - (3/4) $cot^2$ 60° is equal to :",
+    "qh": "(4/3) $tan^2$ 60° + 3 $cos^2$ 30° - 2 $sec^2$ 30° - (3/4) $cot^2$ 60° किसके बराबर है?",
+    "oe": [
+      "8/3",
+      "5/4",
+      "10/3",
+      "7/3"
+    ],
+    "oh": [
+      "8/3",
+      "5/4",
+      "10/3",
+      "7/3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Term-by-Term Substitution Method):\nStep 1: Sabhi standard values rakhein:\n- $\\tan 60^\\circ = \\sqrt{3} \\implies \\tan^2 60^\\circ = 3$\n- $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2} \\implies \\cos^2 30^\\circ = \\frac{3}{4}$\n- $\\sec 30^\\circ = \\frac{2}{\\sqrt{3}} \\implies \\sec^2 30^\\circ = \\frac{4}{3}$\n- $\\cot 60^\\circ = \\frac{1}{\\sqrt{3}} \\implies \\cot^2 60^\\circ = \\frac{1}{3}$\nStep 2: Har term ko multiply karein:\n- Term 1: $\\frac{4}{3} \\times 3 = 4$\n- Term 2: $3 \\times \\frac{3}{4} = \\frac{9}{4}$\n- Term 3: $2 \\times \\frac{4}{3} = \\frac{8}{3}$\n- Term 4: $\\frac{3}{4} \\times \\frac{1}{3} = \\frac{1}{4}$\nStep 3: Terms ko arrange karke solve karein:\n$$\\text{Value} = 4 + $\\le$ft($\\frac{9}{4}$ - $\\frac{1}{4}$\\right) - $\\frac{8}{3}$ = 4 + $\\frac{8}{4}$ - $\\frac{8}{3}$$$\n$$\\text{Value} = 4 + 2 - $\\frac{8}{3}$ = 6 - $\\frac{8}{3}$ = $\\frac{18-8}{3}$ = $\\frac{10}{3}$$$\nCorrect '8/3'0/3 hai.\n\nMethod 2 (LCM of Fractions Method):\n$$4 + $\\frac{9}{4}$ - $\\frac{8}{3}$ - $\\frac{1}{4}$ = 4 + 2 - $\\frac{8}{3}$ = $\\frac{10}{3}$$$\nSahi uttar '10/3' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_10",
+    "qe": "The value of (tan 30° · cosec 60° + tan 60° · sec 30°) / $(sin^2$ 30° + 4 $cot^2$ 45° - $sec^2$ 60°) is :",
+    "qh": "(tan 30° · cosec 60° + tan 60° · sec 30°) / $(sin^2$ 30° + 4 $cot^2$ 45° - $sec^2$ 60°) का मान क्या होगा?",
+    "oe": [
+      "2/3",
+      "32/3",
+      "8/3",
+      "32/99"
+    ],
+    "oh": [
+      "2/3",
+      "32/3",
+      "8/3",
+      "32/99"
+    ],
+    "a": 1,
+    "e": "Method 1 (Standard Angles Table Method):\nStep 1: Numerator evaluate karte hain:\n$$\\tan 30^$\\circ$ = \\frac{1}{$\\sqrt{3}$}, \\quad \\csc 60^$\\circ$ = \\frac{2}{$\\sqrt{3}$}, \\quad \\tan 60^$\\circ$ = $\\sqrt{3}$, \\quad \\sec 30^$\\circ$ = \\frac{2}{$\\sqrt{3}$}$$\n$$\\text{Numerator} = $\\le$ft(\\frac{1}{$\\sqrt{3}$} $\\times$ \\frac{2}{$\\sqrt{3}$}\\right) + $\\le$ft($\\sqrt{3}$ $\\times$ \\frac{2}{$\\sqrt{3}$}\\right) = $\\frac{2}{3}$ + 2 = $\\frac{2+6}{3}$ = $\\frac{8}{3}$$$\nStep 2: Denominator evaluate karte hain:\n$$\\sin 30^$\\circ$ = $\\frac{1}{2}$, \\quad \\cot 45^$\\circ$ = 1, \\quad \\sec 60^$\\circ$ = 2$$\n$$\\text{Denominator} = $\\le$ft($\\frac{1}{2}$\\right)^2 + 4(1)^2 - (2)^2 = $\\frac{1}{4}$ + 4 - 4 = $\\frac{1}{4}$$$\nStep 3: Numerator ko Denominator se divide karein:\n$$\\text{Value} = \\frac{$\\frac{8}{3}$}{$\\frac{1}{4}$} = $\\frac{8}{3}$ $\\times$ 4 = $\\frac{32}{3}$$$\nCorrect '8/3'2/3 hai.\n\nMethod 2 (Direct Fraction Inversion):\n$$$\\frac{8/3}{1/4}$ = $\\frac{8\\times4}{3}$ = $\\frac{32}{3}$$$\nSahi uttar '32/3' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_11",
+    "qe": "The value of [$cosec^230$° $sin^245$° + $sec^260$°] / [tan60° $cosec^245$° - $sec^260$° tan45°] is :",
+    "qh": "[$cosec^230$° $sin^245$° + $sec^260$°] / [tan60° $cosec^245$° - $sec^260$° tan45°] का मान क्या होगा?",
+    "oe": [
+      "3(2 + √3)",
+      "2(√3 - 2)",
+      "- 2√3 - 2",
+      "- 3(2 + √3)"
+    ],
+    "oh": [
+      "3(2 + √3)",
+      "2(√3 - 2)",
+      "- 2√3 - 2",
+      "- 3(2 + √3)"
+    ],
+    "a": 3,
+    "e": "Method 1 (Standard Values and Rationalization Method):\nStep 1: Numerator ke sabhi terms evaluate karte hain:\n- $\\csc 30^\\circ = 2 \\implies \\csc^2 30^\\circ = 4$\n- $\\sin 45^\\circ = \\frac{1}{\\sqrt{2}} \\implies \\sin^2 45^\\circ = \\frac{1}{2}$\n- $\\sec 60^\\circ = 2 \\implies \\sec^2 60^\\circ = 4$\n$$\\text{Numerator} = 4 $\\le$ft($\\frac{1}{2}$\\right) + 4 = 2 + 4 = 6$$\nStep 2: Denominator ke terms evaluate karte hain:\n- $\\tan 60^\\circ = \\sqrt{3}$\n- $\\csc 45^\\circ = \\sqrt{2} \\implies \\csc^2 45^\\circ = 2$\n- $\\sec 60^\\circ = 2 \\implies \\sec^2 60^\\circ = 4$\n- $\\tan 45^\\circ = 1$\n$$\\text{Denominator} = $\\sqrt{3}$(2) - 4(1) = 2$\\sqrt{3}$ - 4 = 2($\\sqrt{3}$ - 2)$$\nStep 3: Fraction simplify karke rationalise karein:\n$$\\frac{6}{2($\\sqrt{3}$ - 2)} = \\frac{3}{$\\sqrt{3}$ - 2}$$\nConjugate $(\\sqrt{3} + 2)$ se multiply aur divide karein:\n$$= \\frac{3($\\sqrt{3}$ + 2)}{($\\sqrt{3}$)^2 - (2)^2} = \\frac{3(2 + $\\sqrt{3}$)}{3 - 4} = -3(2 + $\\sqrt{3}$)$$\nCorrect option  - 3(2 + √3) hai.\n\nMethod 2 (Sign Factor Method):\nDenominator me se minus common nikalne par:\n$$\\frac{3}{-(2 - $\\sqrt{3}$)} = -3(2 + $\\sqrt{3}$)$$\nSahi uttar '- 3(2 + √3)' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_12",
+    "qe": "The value of [$sin^230$° + $cos^260$° + sec45° sin45°] / [sec60° + cosec30°] is :",
+    "qh": "[$sin^230$° + $cos^260$° + sec45° sin45°] / [sec60° + cosec30°] का मान क्या होगा?",
+    "oe": [
+      "1/4",
+      "- 1/4",
+      "- 3/8",
+      "3/8"
+    ],
+    "oh": [
+      "1/4",
+      "- 1/4",
+      "- 3/8",
+      "3/8"
+    ],
+    "a": 3,
+    "e": "Method 1 (Table Value Method):\nStep 1: Numerator ki value calculate karte hain:\n- $\\sin 30^\\circ = \\frac{1}{2} \\implies \\sin^2 30^\\circ = \\frac{1}{4}$\n- $\\cos 60^\\circ = \\frac{1}{2} \\implies \\cos^2 60^\\circ = \\frac{1}{4}$\n- $\\sec 45^\\circ \\times \\sin 45^\\circ = \\sqrt{2} \\times \\frac{1}{\\sqrt{2}} = 1$\n$$\\text{Numerator} = $\\frac{1}{4}$ + $\\frac{1}{4}$ + 1 = $\\frac{1}{2}$ + 1 = $\\frac{3}{2}$$$\nStep 2: Denominator ki value calculate karte hain:\n- $\\sec 60^\\circ = 2$\n- $\\csc 30^\\circ = 2$\n$$\\text{Denominator} = 2 + 2 = 4$$\nStep 3: Dono ko divide karein:\n$$\\text{Value} = \\frac{$\\frac{3}{2}$}{4} = $\\frac{3}{8}$$$\nCorrect '- 3/8'/8 hai.\n\nMethod 2 (Direct Simplification):\n$$$\\frac{0.25+0.25+1}{2+2}$ = $\\frac{1.5}{4}$ = $\\frac{3}{8}$$$\nSahi uttar '3/8' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_13",
+    "qe": "Which among the following is an irrational quantity?",
+    "qh": "निम्नलिखित में से कौन-सी एक अपरिमेय (irrational) राशि है?",
+    "oe": [
+      "tan 30° · tan 60°",
+      "sin 30°",
+      "tan 45°",
+      "cos 30°"
+    ],
+    "oh": [
+      "tan 30° · tan 60°",
+      "sin 30°",
+      "tan 45°",
+      "cos 30°"
+    ],
+    "a": 3,
+    "e": "Method 1 (Evaluation of Options Method):\nStep 1: Sabhi options ki numeric values check karein:\n- (a) $\\tan 30^\\circ \\cdot \\tan 60^\\circ = \\frac{1}{\\sqrt{3}} \\times \\sqrt{3} = 1$ (Rational number hai)\n- (b) $\\sin 30^\\circ = \\frac{1}{2}$ (Rational number hai)\n- (c) $\\tan 45^\\circ = 1$ (Rational number hai)\n- (d) $\\cos 30^\\circ = \\frac{\\sqrt{3}}{2}$\nStep 2: $\\sqrt{3}$ ek non-terminating, non-repeating decimal hone ke karan irrational (अपरिमेय) number hai, isliye $\\frac{\\sqrt{3}}{2}$ bhi ek irrational quantity hai.\nCorrect option  cos 30° hai.\n\nMethod 2 (Definition Method):\nKeval $\\cos 30^\\circ$ ke expression me $\\sqrt{3}$ bachta hai jo square root se bahar nahi nikal sakta, baaki sabhi options me $\\sqrt{3}$ cancel ho jata hai ya present hi nahi hai.\nSahi uttar 'cos 30°' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_14",
+    "qe": "$If sin (\\theta + 30°) = 3/\\sqrt 12,$ then the value $of \\theta (0 < \\theta < 90°) is$ :",
+    "qh": "यदि $sin (\\theta + 30°) = 3/\\sqrt 12$ है, तो $\\theta (0 < \\theta < 90°)$ का मान क्या होगा?",
+    "oe": [
+      "60°",
+      "15°",
+      "45°",
+      "30°"
+    ],
+    "oh": [
+      "60°",
+      "15°",
+      "45°",
+      "30°"
+    ],
+    "a": 3,
+    "e": "Method 1 (Surds Simplification Method):\nStep 1: RHS ko simplify karte hain:\n$$$\\sqrt{12}$ = $\\sqrt{4\\times3}$ = 2$\\sqrt{3}$$$\n$$\\text{RHS} = \\frac{3}{$\\sqrt{12}$} = \\frac{3}{2$\\sqrt{3}$} = \\frac{$\\sqrt{3}$}{2}$$\nStep 2: Standard sine values se compare karein:\n$$\\sin($\\theta$ + 30^$\\circ$) = \\frac{$\\sqrt{3}$}{2} = \\sin 60^$\\circ$$$\nStep 3: Angles compare karein:\n$$$\\theta$ + 30^$\\circ$ = 60^$\\circ$ \\implies $\\theta$ = 60^$\\circ$ - 30^$\\circ$ = 30^$\\circ$$$\nCorrect '45°'0° hai.\n\nMethod 2 (Rationalization Method):\n$$\\frac{3}{$\\sqrt{12}$} = \\sqrt{$\\frac{9}{12}$} = \\sqrt{$\\frac{3}{4}$} = \\frac{$\\sqrt{3}$}{2}$$\n$$$\\theta$ + 30^$\\circ$ = 60^$\\circ$ \\implies $\\theta$ = 30^$\\circ$$$\nSahi uttar '30°' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_15",
+    "qe": "$If sin \\theta = \\sqrt 3 cos \\theta, 0° < \\theta < 90°,$ then the value of 2 $sin^2\\theta$ + $sec^2\\theta$ $+ sin \\theta \\cdot sec \\theta +$ cosec $\\theta is$ :",
+    "qh": "यदि $sin \\theta = \\sqrt 3 cos \\theta, 0° < \\theta < 90°$ है, तो 2 $sin^2\\theta$ + $sec^2\\theta$ $+ sin \\theta \\cdot sec \\theta +$ cosec θ का मान क्या होगा?",
+    "oe": [
+      "(33 + 10√3)/6",
+      "(19 + 10√3)/6",
+      "(33 + 10√3)/3",
+      "(19 + 10√3)/3"
+    ],
+    "oh": [
+      "(33 + 10√3)/6",
+      "(19 + 10√3)/6",
+      "(33 + 10√3)/3",
+      "(19 + 10√3)/3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Angle Determination Method):\nStep 1: Given equation se $\\theta$ find karte hain:\n$$$\\frac{\\sin\\theta}{\\cos\\theta}$ = $\\sqrt{3}$ \\implies \\tan$\\theta$ = $\\sqrt{3}$ \\implies $\\theta$ = 60^$\\circ$$$\nStep 2: $\\theta = 60^\\circ$ ke sabhi required values nikalte hain:\n- $\\sin 60^\\circ = \\frac{\\sqrt{3}}{2} \\implies \\sin^2 60^\\circ = \\frac{3}{4}$\n- $\\sec 60^\\circ = 2 \\implies \\sec^2 60^\\circ = 4$\n- $\\sin 60^\\circ \\cdot \\sec 60^\\circ = \\frac{\\sqrt{3}}{2} \\times 2 = \\sqrt{3}$\n- $\\csc 60^\\circ = \\frac{2}{\\sqrt{3}}$\nStep 3: Sabhi terms ko add karein:\n$$\\text{Value} = 2$\\le$ft($\\frac{3}{4}$\\right) + 4 + $\\sqrt{3}$ + \\frac{2}{$\\sqrt{3}$} = $\\frac{3}{2}$ + 4 + \\frac{3 + 2}{$\\sqrt{3}$} = $\\frac{11}{2}$ + \\frac{5}{$\\sqrt{3}$}$$\nStep 4: Denominator ko rationalize karke combine karein:\n$$$\\frac{11}{2}$ + \\frac{5$\\sqrt{3}$}{3} = \\frac{11 $\\times$ 3 + 2 $\\times$ 5$\\sqrt{3}$}{6} = \\frac{33 + 10$\\sqrt{3}$}{6}$$\nCorrect option  (33 + 10√3)/6 hai.\n\nMethod 2 (Direct LCM Calculation):\n$$$\\frac{11}{2}$ + \\frac{5}{$\\sqrt{3}$} = \\frac{11$\\sqrt{3}$ + 10}{2$\\sqrt{3}$} = \\frac{(11$\\sqrt{3}$ + 10)$\\sqrt{3}$}{6} = \\frac{33 + 10$\\sqrt{3}$}{6}$$\nSahi uttar '(33 + 10√3)/6' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_16",
+    "qe": "$If 0° < \\theta < 90° and$ $cos^2\\theta$ = $3(cot^2\\theta$ - $cos^2\\theta$), then the value $of (1/2 sec \\theta + sin$ θ$)^-1$ is :",
+    "qh": "यदि $0° < \\theta < 90°$ और $cos^2\\theta$ = $3(cot^2\\theta$ - $cos^2\\theta$) है, तो $(1/2 sec \\theta + sin$ θ$)^-1$ का मान क्या होगा?",
+    "oe": [
+      "√3 + 2",
+      "2(2 - √3)",
+      "2(√3 - 1)",
+      "√3 + 1"
+    ],
+    "oh": [
+      "√3 + 2",
+      "2(2 - √3)",
+      "2(√3 - 1)",
+      "√3 + 1"
+    ],
+    "a": 1,
+    "e": "Method 1 (Angle Extraction & Rationalization Method):\nStep 1: Diye gaye equation ko solve karte hain:\n$$\\cos^2$\\theta$ = 3$\\le$ft($\\frac{\\cos^2\\theta}{\\sin^2\\theta}$ - \\cos^2$\\theta$\\right) = 3\\cos^2$\\theta$$\\le$ft($\\frac{1}{\\sin^2\\theta}$ - 1\\right)$$\nChuki $0^\\circ < \\theta < 90^\\circ$ hai, $\\cos^2\\theta \\ne 0$, dono taraf $\\cos^2\\theta$ cancel ho jayega:\n$$1 = 3(\\csc^2$\\theta$ - 1) = 3\\cot^2$\\theta$$$\n$$\\cot^2$\\theta$ = $\\frac{1}{3}$ \\implies \\cot$\\theta$ = \\frac{1}{$\\sqrt{3}$} \\implies $\\theta$ = 60^$\\circ$$$\nStep 2: Target expression me $\\theta = 60^\\circ$ rakhein:\n$$$\\frac{1}{2}$\\sec 60^$\\circ$ + \\sin 60^$\\circ$ = $\\frac{1}{2}$(2) + \\frac{$\\sqrt{3}$}{2} = 1 + \\frac{$\\sqrt{3}$}{2} = \\frac{2 + $\\sqrt{3}$}{2}$$\nStep 3: Iska reciprocal (inverse) nikal kar rationalize karein:\n$$$\\le$ft(\\frac{2 + $\\sqrt{3}$}{2}\\right)^{-1} = \\frac{2}{2 + $\\sqrt{3}$} = \\frac{2(2 - $\\sqrt{3}$)}{(2)^2 - ($\\sqrt{3}$)^2} = \\frac{2(2 - $\\sqrt{3}$)}{4 - 3} = 2(2 - $\\sqrt{3}$)$$\nCorrect '2(2 - √3)'(2 - √3) hai.\n\nMethod 2 (Direct Step Inverse):\n$$\\frac{1}{1 + \\frac{$\\sqrt{3}$}{2}} = \\frac{2}{2 + $\\sqrt{3}$} = 2(2 - $\\sqrt{3}$)$$\nSahi uttar '2(2 - √3)' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_17",
+    "qe": "If $cos^2\\theta$ / $(cot^2\\theta$ - $cos^2\\theta$) $= 3, 0° < \\theta < 90°,$ then the value $of cot \\theta +$ cosec $\\theta is$ :",
+    "qh": "यदि $cos^2\\theta$ / $(cot^2\\theta$ - $cos^2\\theta$) $= 3, 0° < \\theta < 90°$ है, तो $cot \\theta +$ cosec θ का मान क्या होगा?",
+    "oe": [
+      "√3",
+      "√3/2",
+      "2√3",
+      "3√3/4"
+    ],
+    "oh": [
+      "√3",
+      "√3/2",
+      "2√3",
+      "3√3/4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Angle Evaluation Method):\nStep 1: Cross multiply karke angle determine karte hain:\n$$\\cos^2$\\theta$ = 3(\\cot^2$\\theta$ - \\cos^2$\\theta$)$$\n$$\\cos^2$\\theta$ = 3\\cos^2$\\theta$(\\csc^2$\\theta$ - 1) = 3\\cos^2$\\theta$ \\cdot \\cot^2$\\theta$$$\n$$\\cot^2$\\theta$ = $\\frac{1}{3}$ \\implies \\cot$\\theta$ = \\frac{1}{$\\sqrt{3}$} \\implies $\\theta$ = 60^$\\circ$$$\nStep 2: $\\cot\\theta + \\csc\\theta$ me $\\theta = 60^\\circ$ substitute karein:\n$$\\cot 60^$\\circ$ + \\csc 60^$\\circ$ = \\frac{1}{$\\sqrt{3}$} + \\frac{2}{$\\sqrt{3}$} = \\frac{3}{$\\sqrt{3}$} = $\\sqrt{3}$$$\nCorrect option  √3 hai.\n\nMethod 2 (Direct Identity Method):\n$$\\cot$\\theta$ + \\csc$\\theta$ = $\\frac{\\cos\\theta+1}{\\sin\\theta}$$$\n$\\theta = 60^\\circ$ rakhne par:\n$$\\frac{$\\frac{1}{2}$ + 1}{\\frac{$\\sqrt{3}$}{2}} = \\frac{$\\frac{3}{2}$}{\\frac{$\\sqrt{3}$}{2}} = \\frac{3}{$\\sqrt{3}$} = $\\sqrt{3}$$$\nSahi uttar '√3' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_18",
+    "qe": "If sin (A - B) = 1/2 and cos (A + B) = 1/2, where A > B > 0°, and A + B is an acute angle, then the value of A is :",
+    "qh": "यदि sin (A - B) = 1/2 और cos (A + B) = 1/2 है, जहाँ A > B > 0° है, और A + B एक न्यून कोण है, तो A का मान क्या होगा?",
+    "oe": [
+      "45°",
+      "30°",
+      "15°",
+      "75°"
+    ],
+    "oh": [
+      "45°",
+      "30°",
+      "15°",
+      "75°"
+    ],
+    "a": 0,
+    "e": "Method 1 (System of Linear Equations Method):\nStep 1: Standard trigonometric angles se equations banate hain:\n- $\\sin(A - B) = \\frac{1}{2} = \\sin 30^\\circ \\implies A - B = 30^\\circ \\quad \\text{--- (समीकरण 1)}$\n- $\\cos(A + B) = \\frac{1}{2} = \\cos 60^\\circ \\implies A + B = 60^\\circ \\quad \\text{--- (समीकरण 2)}$\nStep 2: Dono equations ko add karke $A$ solve karein:\n$$(A - B) + (A + B) = 30^$\\circ$ + 60^$\\circ$$$\n$$2A = 90^$\\circ$ \\implies A = 45^$\\circ$$$\nCorrect '75°'5° hai.\n\nMethod 2 (Inspection Method):\nSum $= 60^\\circ$, Difference $= 30^\\circ$.\n$$A = $\\frac{60^\\circ+30^\\circ}{2}$ = 45^$\\circ$, \\quad B = $\\frac{60^\\circ-30^\\circ}{2}$ = 15^$\\circ$$$\nSahi uttar '45°' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_19",
+    "qe": "If sin (A + B) = √3/2 and tan (A - B) = 1/√3, then (2A + 3B) is equal to :",
+    "qh": "यदि sin (A + B) = √3/2 और tan (A - B) = 1/√3 है, तो (2A + 3B) किसके बराबर होगा?",
+    "oe": [
+      "120°",
+      "135°",
+      "130°",
+      "125°"
+    ],
+    "oh": [
+      "120°",
+      "135°",
+      "130°",
+      "125°"
+    ],
+    "a": 1,
+    "e": "Method 1 (Angle Pair Solving Method):\nStep 1: Diye gaye ratios se angles nikalte hain:\n- $\\sin(A + B) = \\frac{\\sqrt{3}}{2} = \\sin 60^\\circ \\implies A + B = 60^\\circ$\n- $\\tan(A - B) = \\frac{1}{\\sqrt{3}} = \\tan 30^\\circ \\implies A - B = 30^\\circ$\nStep 2: $A$ aur $B$ solve karte hain:\n$$2A = 60^$\\circ$ + 30^$\\circ$ = 90^$\\circ$ \\implies A = 45^$\\circ$$$\n$$B = 60^$\\circ$ - 45^$\\circ$ = 15^$\\circ$$$\nStep 3: $(2A + 3B)$ evaluate karte hain:\n$$2A + 3B = 2(45^$\\circ$) + 3(15^$\\circ$) = 90^$\\circ$ + 45^$\\circ$ = 135^$\\circ$$$\nCorrect '120°'35° hai.\n\nMethod 2 (Direct Split Method):\n$$2A + 3B = 2(A + B) + B = 2(60^$\\circ$) + 15^$\\circ$ = 120^$\\circ$ + 15^$\\circ$ = 135^$\\circ$$$\nSahi uttar '135°' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trignometricratio_20",
+    "qe": "$For \\alpha and \\beta$ both being acute angles, it is given that $sin (\\alpha + \\beta) = 1, cos(\\alpha - \\beta) = 1/2. The$ values $of \\alpha and \\beta are$ :",
+    "qh": "α और β दोनों न्यून कोण हैं, दिया गया है कि $sin (\\alpha + \\beta) = 1, cos(\\alpha - \\beta) = 1/2$ है। α और β के मान हैं :",
+    "oe": [
+      "75°, 15°",
+      "45°, 15°",
+      "75°, 45°",
+      "60°, 30°"
+    ],
+    "oh": [
+      "75°, 15°",
+      "45°, 15°",
+      "75°, 45°",
+      "60°, 30°"
+    ],
+    "a": 0,
+    "e": "Method 1 (Standard Angles System Method):\nStep 1: Equations frame karte hain:\n- $\\sin(\\alpha + \\beta) = 1 = \\sin 90^\\circ \\implies \\alpha + \\beta = 90^\\circ$\n- $\\cos(\\alpha - \\beta) = \\frac{1}{2} = \\cos 60^\\circ \\implies \\alpha - \\beta = 60^\\circ$\nStep 2: $\\alpha$ aur $\\beta$ solve karte hain:\n$$2$\\alpha$ = 90^$\\circ$ + 60^$\\circ$ = 150^$\\circ$ \\implies $\\alpha$ = 75^$\\circ$$$\n$$$\\beta$ = 90^$\\circ$ - 75^$\\circ$ = 15^$\\circ$$$\nCorrect option  75°, 15° hai.\n\nMethod 2 (Option Verification Method):\nOptions check karein:\n(a) $75^\\circ + 15^\\circ = 90^\\circ \\implies \\sin 90^\\circ = 1$, aur $75^\\circ - 15^\\circ = 60^\\circ \\implies \\cos 60^\\circ = 1/2$ (Direct Match).\nSahi uttar '75°, 15°' hai.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

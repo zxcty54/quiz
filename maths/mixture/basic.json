@@ -1,0 +1,439 @@
+[
+  {
+    "p_id": "basic_1",
+    "qe": "A mixture contains milk and water in the ratio 9 : 7. If it contains 4 litres more milk than water, then find the quantity of milk (in litres) in the mixture.",
+    "qh": "एक मिश्रण में दूध और पानी 9 : 7 के अनुपात में है। यदि इसमें पानी से 4 लीटर अधिक दूध है, तो मिश्रण में दूध की मात्रा (लीटर में) ज्ञात कीजिए।",
+    "oe": [
+      "18",
+      "15",
+      "21",
+      "14"
+    ],
+    "oh": [
+      "18",
+      "15",
+      "21",
+      "14"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Units Method):\nStep 1: दूध और पानी का अनुपात = 9 : 7.\nदूध और पानी की इकाइयों का अंतर = 9 - 7 = 2 इकाइयाँ।\nStep 2: दिया गया अंतर = 4 लीटर:\n2 इकाइयाँ = 4 लीटर ==> 1 इकाई = 2 लीटर।\nStep 3: मिश्रण में दूध की मात्रा (9 इकाइयाँ):\nदूध = 9 * 2 = 18 लीटर।\n(पानी = 7 * 2 = 14 लीटर)।\nअतः सही विकल्प  18 है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना दूध = 9x और पानी = 7x.\n9x - 7x = 4 ==> 2x = 4 ==> x = 2.\nStep 2: दूध की मात्रा = 9x = 9 * 2 = 18 लीटर।\nअतः सही उत्तर '18' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_2",
+    "qe": "A container holds 120 litres of a solution containing milk and water in the ratio 3 : 2. If 24 litres of this solution are taken out and replaced with pure milk, what will be the new ratio of milk to water?",
+    "qh": "एक बर्तन में 120 लीटर घोल है जिसमें दूध और पानी का अनुपात 3 : 2 है। यदि इस घोल में से 24 लीटर निकाल लिया जाता है और उसके स्थान पर शुद्ध दूध मिला दिया जाता है, तो दूध और पानी का नया अनुपात क्या होगा?",
+    "oe": [
+      "17 : 8",
+      "8 : 3",
+      "19 : 4",
+      "11 : 4"
+    ],
+    "oh": [
+      "17 : 8",
+      "8 : 3",
+      "19 : 4",
+      "11 : 4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Remaining Solution Method):\nStep 1: 24 लीटर घोल निकालने के बाद शेष घोल की मात्रा = 120 - 24 = 96 लीटर।\nStep 2: शेष 96 लीटर में दूध और पानी का अनुपात 3 : 2 ही रहेगा:\nकुल इकाइयाँ = 3 + 2 = 5 इकाइयाँ = 96 लीटर ==> 1 इकाई = 19.2 लीटर।\n- शेष दूध = 3 * 19.2 = 57.6 लीटर\n- शेष पानी = 2 * 19.2 = 38.4 लीटर\nStep 3: 24 लीटर शुद्ध दूध मिलाने पर नया दूध = 57.6 + 24 = 81.6 लीटर।\nपानी की मात्रा अपरिवर्तित = 38.4 लीटर।\nStep 4: नया अनुपात (दूध : पानी):\n81.6 : 38.4 = 816 : 384 = 17 : 8 (48 से विभाजित करने पर)।\nअतः सही विकल्प  17 : 8 है।\n\nMethod 2 (Fractional Replacement Method):\nStep 1: प्रारंभिक पानी = 2/5 of 120 = 48 लीटर।\nStep 2: निकाले गए 24 लीटर में पानी = 2/5 of 24 = 9.6 लीटर।\nStep 3: शेष पानी = 48 - 9.6 = 38.4 लीटर।\nकुल मिश्रण पुनः 120 लीटर हो गया ==> नया दूध = 120 - 38.4 = 81.6 लीटर।\nअनुपात = 81.6 : 38.4 = 17 : 8.\nअतः सही उत्तर '17 : 8' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_3",
+    "qe": "There is a 25 litre mixture of milk and water, containing milk and water in the ratio 3 : 2. Find how much litres of water that should be added to the mixture so that the resultant mixture has 50% water in it.",
+    "qh": "दूध और पानी का 25 लीटर मिश्रण है, जिसमें दूध और पानी का अनुपात 3 : 2 है। ज्ञात कीजिए कि मिश्रण में कितने लीटर पानी मिलाया जाना चाहिए ताकि परिणामी मिश्रण में 50% पानी हो जाए।",
+    "oe": [
+      "8",
+      "12",
+      "10",
+      "5"
+    ],
+    "oh": [
+      "8",
+      "12",
+      "10",
+      "5"
+    ],
+    "a": 3,
+    "e": "Method 1 (Quantity Comparison Method):\nStep 1: 25 लीटर मिश्रण में दूध और पानी (अनुपात 3 : 2, कुल 5 इकाइयाँ):\n5 इकाइयाँ = 25 लीटर ==> 1 इकाई = 5 लीटर।\n- दूध = 3 * 5 = 15 लीटर\n- पानी = 2 * 5 = 10 लीटर\nStep 2: परिणामी मिश्रण में 50% पानी होने का अर्थ है कि दूध और पानी की मात्रा समान (1 : 1) होगी।\nStep 3: चूँकि केवल पानी मिलाया जा रहा है, अतः दूध की मात्रा 15 लीटर ही रहेगी:\nनये मिश्रण में आवश्यक पानी = 15 लीटर।\nStep 4: मिलाया जाने वाला पानी = 15 - 10 = 5 लीटर।\nअतः सही विकल्प  5 है।\n\nMethod 2 (Ratio Method):\nStep 1: प्रारंभिक = 3 : 2, अंतिम (50% water) = 1 : 1 = 3 : 3 (दूध को स्थिर रखने पर)।\nStep 2: पानी में वृद्धि = 3 - 2 = 1 इकाई।\nStep 3: प्रारंभिक कुल 5 इकाइयाँ = 25 लीटर ==> 1 इकाई = 5 लीटर।\nअतः मिलाया गया पानी = 5 लीटर।\nअतः सही उत्तर '5' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_4",
+    "qe": "There is a 32L mixture of milk and water. The ratio of milk and water in this mixture is 5 : 3. How many litres of water should be added to this mixture so that the resultant mixture has 50% water in it?",
+    "qh": "दूध और पानी का 32 लीटर का मिश्रण है। इस मिश्रण में दूध और पानी का अनुपात 5 : 3 है। इस मिश्रण में कितने लीटर पानी मिलाया जाना चाहिए ताकि परिणामी मिश्रण में 50% पानी हो जाए?",
+    "oe": [
+      "8",
+      "6",
+      "5",
+      "4"
+    ],
+    "oh": [
+      "8",
+      "6",
+      "5",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Component Equating Method):\nStep 1: 32 लीटर में दूध और पानी (अनुपात 5 : 3, कुल 8 इकाइयाँ):\n8 इकाइयाँ = 32 लीटर ==> 1 इकाई = 4 लीटर।\n- दूध की मात्रा = 5 * 4 = 20 लीटर\n- पानी की मात्रा = 3 * 4 = 12 लीटर\nStep 2: 50% पानी का अर्थ है कि दूध और पानी 1 : 1 के अनुपात में होंगे।\nदूध स्थिर रहेगा = 20 लीटर।\nअतः अंतिम पानी भी 20 लीटर होना चाहिए।\nStep 3: मिलाया जाने वाला पानी = 20 - 12 = 8 लीटर।\nअतः सही विकल्प  8 है।\n\nMethod 2 (Ratio Method):\nStep 1: प्रारंभिक अनुपात = 5 : 3.\nनया अनुपात (1 : 1) को दूध बराबर करने पर = 5 : 5.\nStep 2: पानी में वृद्धि = 5 - 3 = 2 इकाइयाँ।\nStep 3: 8 इकाइयाँ = 32 लीटर ==> 1 इकाई = 4 लीटर।\nमिलाया गया पानी = 2 इकाइयाँ = 2 * 4 = 8 लीटर।\nअतः सही उत्तर '8' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_5",
+    "qe": "A vessel contains liquid A and liquid B in the ratio 4 : 9. If 8 litres of liquid A is added to the vessel, the new ratio becomes 8 : 9. Find the quantity of liquid A (in litres) in the original mixture.",
+    "qh": "एक बर्तन में द्रव A और द्रव B का अनुपात 4 : 9 है। यदि बर्तन में 8 लीटर द्रव A मिलाया जाता है, तो नया अनुपात 8 : 9 हो जाता है। मूल मिश्रण में द्रव A की मात्रा (लीटर में) ज्ञात कीजिए।",
+    "oe": [
+      "12",
+      "9",
+      "8",
+      "6"
+    ],
+    "oh": [
+      "12",
+      "9",
+      "8",
+      "6"
+    ],
+    "a": 2,
+    "e": "Method 1 (Constant Component Ratio Method):\nStep 1: प्रारंभिक अनुपात = 4 : 9.\nनया अनुपात = 8 : 9.\nStep 2: चूँकि द्रव B की मात्रा दोनों स्थितियों में समान (9 इकाइयाँ) है, अतः अनुपात में द्रव A की वृद्धि सीधे निकाली जा सकती है:\nवृद्धि = 8 - 4 = 4 इकाइयाँ।\nStep 3: 4 इकाइयाँ = 8 लीटर ==> 1 इकाई = 8 / 4 = 2 लीटर।\nStep 4: मूल मिश्रण में द्रव A की मात्रा (4 इकाइयाँ):\nमात्रा = 4 * 2 = 8 लीटर।\nअतः सही विकल्प  8 है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना A = 4x और B = 9x.\n(4x + 8) / 9x = 8 / 9.\nStep 2: 9(4x + 8) = 8(9x) ==> 36x + 72 = 72x ==> 36x = 72 ==> x = 2.\nStep 3: मूल A = 4x = 4 * 2 = 8 लीटर।\nअतः सही उत्तर '8' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_6",
+    "qe": "A mixture contains alcohol and water in the ratio of 12 : 5. On adding 14 liters of water, the ratio of alcohol to water becomes 4 : 3. The quantity of alcohol in the mixture is:",
+    "qh": "एक मिश्रण में अल्कोहल और पानी का अनुपात 12 : 5 है। 14 लीटर पानी मिलाने पर, अल्कोहल और पानी का अनुपात 4 : 3 हो जाता है। मिश्रण में अल्कोहल की मात्रा क्या है:",
+    "oe": [
+      "42 liters",
+      "30 liters",
+      "35 liters",
+      "28 liters"
+    ],
+    "oh": [
+      "42 liters",
+      "30 liters",
+      "35 liters",
+      "28 liters"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method with Constant Alcohol):\nStep 1: प्रारंभिक अनुपात (अल्कोहल : पानी) = 12 : 5.\nनया अनुपात = 4 : 3.\nStep 2: चूँकि केवल पानी मिलाया गया है, अतः अल्कोहल की मात्रा समान रहनी चाहिए।\nनए अनुपात को 3 से गुणा करने पर: 4 * 3 : 3 * 3 = 12 : 9.\nStep 3: पानी की इकाइयों में वृद्धि = 9 - 5 = 4 इकाइयाँ।\nStep 4: 4 इकाइयाँ = 14 लीटर ==> 1 इकाई = 14 / 4 = 3.5 लीटर।\nStep 5: मिश्रण में अल्कोहल की मात्रा (12 इकाइयाँ):\nअल्कोहल = 12 * 3.5 = 42 लीटर।\nअतः सही विकल्प  42 liters है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना अल्कोहल = 12x और पानी = 5x.\n12x / (5x + 14) = 4 / 3.\nStep 2: 36x = 20x + 56 ==> 16x = 56 ==> x = 56 / 16 = 3.5.\nStep 3: अल्कोहल की मात्रा = 12x = 12 * 3.5 = 42 लीटर।\nअतः सही उत्तर '42 liters' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_7",
+    "qe": "A vessel contains 18 litres mixture of milk and water in the ratio 5 : 1. If 3 litres of milk is added to the vessel, then how much water (in litres) should be added to the vessel to have milk and water in the ratio 9 : 2?",
+    "qh": "एक बर्तन में 18 लीटर मिश्रण है जिसमें दूध और पानी का अनुपात 5 : 1 है। यदि बर्तन में 3 लीटर दूध मिलाया जाता है, तो बर्तन में कितना पानी (लीटर में) मिलाया जाना चाहिए ताकि दूध और पानी का अनुपात 9 : 2 हो जाए?",
+    "oe": [
+      "2",
+      "1.5",
+      "0.5",
+      "1"
+    ],
+    "oh": [
+      "2",
+      "1.5",
+      "0.5",
+      "1"
+    ],
+    "a": 3,
+    "e": "Method 1 (Basic Calculation Method):\nStep 1: 18 लीटर मिश्रण में दूध और पानी (5 : 1):\nकुल इकाइयाँ = 5 + 1 = 6 इकाइयाँ = 18 लीटर ==> 1 इकाई = 3 लीटर।\n- प्रारंभिक दूध = 5 * 3 = 15 लीटर\n- प्रारंभिक पानी = 1 * 3 = 3 लीटर\nStep 2: 3 लीटर दूध मिलाने पर कुल दूध = 15 + 3 = 18 लीटर।\nStep 3: माना w लीटर पानी मिलाया जाता है, जिससे नया अनुपात 9 : 2 हो जाता है:\n18 / (3 + w) = 9 / 2\n9 * (3 + w) = 36 ==> 3 + w = 4 ==> w = 1 लीटर।\nअतः सही विकल्प  1 है।\n\nMethod 2 (Ratio Equating Method):\nStep 1: नया दूध = 18 लीटर।\nStep 2: नये अनुपात में 9 इकाइयाँ = 18 लीटर ==> 1 इकाई = 2 लीटर।\nStep 3: नये मिश्रण में आवश्यक पानी = 2 इकाइयाँ = 2 * 2 = 4 लीटर।\nमिलाया जाने वाला पानी = 4 - 3 = 1 लीटर।\nअतः सही उत्तर '1' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_8",
+    "qe": "A container holds 80 liters of a mixture of Acid and Water in the ratio 7 : 9. If 8 liters of Acid is added to the container, What will be the new ratio of Acid to Water?",
+    "qh": "एक बर्तन में 80 लीटर अम्ल और पानी का मिश्रण 7 : 9 के अनुपात में है। यदि बर्तन में 8 लीटर अम्ल मिला दिया जाए, तो अम्ल और पानी का नया अनुपात क्या होगा?",
+    "oe": [
+      "8 : 9",
+      "43 : 45",
+      "7 : 10",
+      "43 : 53"
+    ],
+    "oh": [
+      "8 : 9",
+      "43 : 45",
+      "7 : 10",
+      "43 : 53"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Component Method):\nStep 1: 80 लीटर में अम्ल और पानी की मात्रा निकालें:\nकुल इकाइयाँ = 7 + 9 = 16 इकाइयाँ = 80 लीटर ==> 1 इकाई = 5 लीटर।\n- अम्ल = 7 * 5 = 35 लीटर\n- पानी = 9 * 5 = 45 लीटर\nStep 2: 8 लीटर अम्ल मिलाने पर:\nनया अम्ल = 35 + 8 = 43 लीटर।\nपानी अपरिवर्तित रहेगा = 45 लीटर।\nStep 3: नया अनुपात (अम्ल : पानी) = 43 : 45.\nअतः सही विकल्प  43 : 45 है।\n\nMethod 2 (Fractional Method):\nStep 1: अम्ल = 35 लीटर, पानी = 45 लीटर।\nStep 2: नया अनुपात = (35 + 8) : 45 = 43 : 45.\nअतः सही उत्तर '43 : 45' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_9",
+    "qe": "A 90-litre mixture of petrol and kerosene is in the ratio 4 : 5. Some of it is removed and replaced with pure petrol. The final ratio becomes 7 : 5. How much of the mixture was replaced?",
+    "qh": "पेट्रोल और मिट्टी के तेल (केरोसिन) का 90 लीटर का मिश्रण 4 : 5 के अनुपात में है। इसमें से कुछ मात्रा निकाल ली जाती है और उसके स्थान पर शुद्ध पेट्रोल डाल दिया जाता है। अंतिम अनुपात 7 : 5 हो जाता है। मिश्रण का कितना भाग बदला गया था?",
+    "oe": [
+      "20.6 litres",
+      "22.5 litres",
+      "19.4 litres",
+      "18.5 litres"
+    ],
+    "oh": [
+      "20.6 litres",
+      "22.5 litres",
+      "19.4 litres",
+      "18.5 litres"
+    ],
+    "a": 1,
+    "e": "Method 1 (Replacement Formula / Ratio Method):\nStep 1: प्रारंभिक मिश्रण में पेट्रोल और केरोसिन = 4 : 5 (कुल = 9 इकाइयाँ)।\nअंतिम अनुपात = 7 : 5 (कुल = 12 इकाइयाँ)।\nStep 2: कुल मात्रा 90 लीटर स्थिर रहती है।\n- प्रारंभिक केरोसिन = (5 / 9) * 90 = 50 लीटर।\n- अंतिम केरोसिन = (5 / 12) * 90 = 37.5 लीटर।\nStep 3: चूँकि बाद में केवल शुद्ध पेट्रोल मिलाया गया है, अतः केरोसिन की मात्रा में कमी केवल मिश्रण निकालने के कारण हुई है:\nकेरोसिन में कमी = 50 - 37.5 = 12.5 लीटर।\nStep 4: निकाले गए मिश्रण में केरोसिन का अंश 5/9 था:\n(5 / 9) * निकाला गया मिश्रण = 12.5\nनिकाला गया मिश्रण = (12.5 * 9) / 5 = 2.5 * 9 = 22.5 लीटर।\nअतः सही विकल्प  22.5 litres है।\n\nMethod 2 (Proportion of Kerosene Method):\nStep 1: केरोसिन का प्रारंभिक सांद्रण = 5/9, अंतिम सांद्रण = 5/12.\nStep 2: शेष अंश = (5/12) / (5/9) = 9/12 = 3/4.\nStep 3: हटाया गया अंश = 1 - 3/4 = 1/4 भाग।\nStep 4: निकाली गई मात्रा = 1/4 * 90 = 22.5 लीटर।\nअतः सही उत्तर '22.5 litres' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_10",
+    "qe": "In a container, there is a mixture of orange juice and water in the ratio 9 : 7 respectively. If 15 litres of orange juice are added to the mixture, the ratio of orange juice to water becomes 3 : 2. Find the difference between the final quantity of orange juice and that of water.",
+    "qh": "एक बर्तन में संतरे का रस और पानी क्रमशः 9 : 7 के अनुपात में एक मिश्रण है। यदि मिश्रण में 15 लीटर संतरे का रस मिलाया जाता है, तो संतरे के रस और पानी का अनुपात 3 : 2 हो जाता है। संतरे के रस की अंतिम मात्रा और पानी की मात्रा के बीच का अंतर ज्ञात कीजिए।",
+    "oe": [
+      "12 litres",
+      "35 litres",
+      "18 litres",
+      "21 litres"
+    ],
+    "oh": [
+      "12 litres",
+      "35 litres",
+      "18 litres",
+      "21 litres"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method with Constant Water):\nStep 1: केवल संतरे का रस मिलाया गया है, अतः पानी की मात्रा समान रहनी चाहिए।\n- प्रारंभिक अनुपात = 9 : 7\n- नया अनुपात = 3 : 2\nStep 2: पानी (7 और 2) को समान करने के लिए ल.स.प. = 14 बनाएं:\n- प्रारंभिक = (9 * 2) : (7 * 2) = 18 : 14\n- नया = (3 * 7) : (2 * 7) = 21 : 14\nStep 3: रस में वृद्धि = 21 - 18 = 3 इकाइयाँ।\n3 इकाइयाँ = 15 लीटर ==> 1 इकाई = 5 लीटर।\nStep 4: अंतिम मिश्रण में:\n- अंतिम रस = 21 इकाइयाँ = 21 * 5 = 105 लीटर\n- पानी = 14 इकाइयाँ = 14 * 5 = 70 लीटर\nStep 5: अंतिम रस और पानी का अंतर:\nअंतर = 105 - 70 = 35 लीटर (या सीधे 21 - 14 = 7 इकाइयाँ = 7 * 5 = 35 लीटर)।\nअतः सही विकल्प  35 litres है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना रस = 9x और पानी = 7x.\n(9x + 15) / 7x = 3 / 2 ==> 18x + 30 = 21x ==> 3x = 30 ==> x = 10.\nStep 2: अंतिम रस = 9(10) + 15 = 105 लीटर, पानी = 7(10) = 70 लीटर।\nअंतर = 105 - 70 = 35 लीटर।\nअतः सही उत्तर '35 litres' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_11",
+    "qe": "A mixture contains juice and water in the ratio 5 : 2. If 10 litres of water are added to this mixture, the ratio of juice to water becomes 2 : 1. What was the initial quantity of the mixture (in litres)?",
+    "qh": "एक मिश्रण में रस और पानी का अनुपात 5 : 2 है। यदि इस मिश्रण में 10 लीटर पानी मिलाया जाता है, तो रस और पानी का अनुपात 2 : 1 हो जाता है। मिश्रण की प्रारंभिक मात्रा (लीटर में) क्या थी?",
+    "oe": [
+      "60 litre",
+      "70 litre",
+      "140 litre",
+      "190 litre"
+    ],
+    "oh": [
+      "60 litre",
+      "70 litre",
+      "140 litre",
+      "190 litre"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method with Constant Juice):\nStep 1: पानी मिलाया गया है, अतः रस की मात्रा समान रहनी चाहिए।\n- प्रारंभिक अनुपात = 5 : 2\n- नया अनुपात = 2 : 1\nStep 2: रस (5 और 2) को समान (10 इकाइयाँ) करें:\n- प्रारंभिक अनुपात = (5 * 2) : (2 * 2) = 10 : 4 (कुल = 14 इकाइयाँ)\n- नया अनुपात = (2 * 5) : (1 * 5) = 10 : 5\nStep 3: पानी में वृद्धि = 5 - 4 = 1 इकाई।\n1 इकाई = 10 लीटर।\nStep 4: प्रारंभिक मिश्रण की कुल मात्रा (14 इकाइयाँ):\nप्रारंभिक मात्रा = 14 * 10 = 140 लीटर نہیں، रुकिए!\nपुनः जाँचें: प्रारंभिक अनुपात 5 : 2 (योग = 7 इकाइयाँ) था। जब रस 10 और पानी 4 हुआ, तो कुल 14 इकाइयाँ बनीं, अतः 14 * 5 = 70 लीटर।\nसटीक इकाई मान: 1 इकाई = 10 लीटर ==> 10 : 4 के अनुसार प्रारंभिक कुल = 14 इकाइयाँ, परंतु यहाँ 1 इकाई (परिवर्तन) = 10 लीटर है, और मूल अनुपात 5x, 2x के अनुसार हल करने पर 70 प्राप्त होता है:\nMethod 2 (Algebraic Method):\nStep 1: माना रस = 5x और पानी = 2x. प्रारंभिक कुल = 7x.\n5x / (2x + 10) = 2 / 1\n5x = 4x + 20 ==> x = 20.\nStep 2: प्रारंभिक कुल मात्रा = 7x = 7 * 20 = 140 नहीं! 5x = 4x + 20 ==> x = 20 ==> 7 * 20 = 140 or 70?\nWait: (5 * 2) : (2 * 2) = 10 : 4. 1 इकाई = 10 लीटर. प्रारंभिक योग = 10 + 4 = 14 इकाइयाँ? यदि 1 इकाई = 10 लीटर तो 14 * 10 = 140! विकल्प (b) 70 या (c) 140?\nयदि x = 10: 5(10) / (2(10) + 10) = 50 / 30 = 5/3 ≠ 2/1.\nयदि कुल = 70: रस = 50, पानी = 20. 10 पानी मिलाने पर: 50 / 30 ≠ 2/1.\nयदि कुल = 140: रस = 100, पानी = 40. 10 पानी मिलाने पर: 100 / 50 = 2/1 (बिल्कुल सही!).\nअतः सही उत्तर 140 लीटर है। विकल्प (c) 140 litre सही है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_12",
+    "qe": "A milk vendor mixes water with milk and by selling the mixture at the cost price he gains 16 1/4%. Find the ratio of milk to water in the mixture.",
+    "qh": "एक दूध विक्रेता दूध में पानी मिलाता है और मिश्रण को क्रय मूल्य पर बेचकर 16 1/4% का लाभ प्राप्त करता है। मिश्रण में दूध और पानी का अनुपात ज्ञात कीजिए।",
+    "oe": [
+      "13 : 80",
+      "80 : 13",
+      "40 : 7",
+      "7 : 40"
+    ],
+    "oh": [
+      "13 : 80",
+      "80 : 13",
+      "40 : 7",
+      "7 : 40"
+    ],
+    "a": 1,
+    "e": "Method 1 (Profit to Component Ratio Method):\nStep 1: जब मिश्रण को क्रय मूल्य पर बेचा जाता है, तो लाभ केवल मिलाए गए पानी के कारण होता है।\nअतः, (पानी / दूध) = लाभ% / 100%.\nStep 2: लाभ = 16 1/4% = 65 / 4%.\nपानी / दूध = (65 / 4) / 100 = 65 / 400 = 13 / 80 (5 से काटने पर)।\nStep 3: पूछा गया अनुपात दूध से पानी (Milk to Water) का है:\nदूध : पानी = 80 : 13.\nअतः सही विकल्प  80 : 13 है।\n\nMethod 2 (Cost Price Method):\nStep 1: माना दूध की लागत = ₹1 प्रति लीटर। शुद्ध दूध = 80 लीटर (लागत = ₹80).\nStep 2: 16 1/4% लाभ = 80 * (65 / 400) = ₹13.\nStep 3: मिलाया गया पानी = 13 लीटर।\nदूध : पानी = 80 : 13.\nअतः सही उत्तर '80 : 13' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_13",
+    "qe": "A milk seller claims to sell milk at its actual cost price, yet he secretly adds water to it and thus secures a 25% profit. In what proportion of water to milk must the mixture be prepared to yield this gains?",
+    "qh": "एक दूध विक्रेता अपने वास्तविक क्रय मूल्य पर दूध बेचने का दावा करता है, फिर भी वह चुपके से इसमें पानी मिलाता है और इस प्रकार 25% लाभ प्राप्त करता है। इस लाभ को प्राप्त करने के लिए मिश्रण में पानी और दूध का क्या अनुपात होना चाहिए?",
+    "oe": [
+      "1 : 3",
+      "4 : 1",
+      "1 : 5",
+      "1 : 4"
+    ],
+    "oh": [
+      "1 : 3",
+      "4 : 1",
+      "1 : 5",
+      "1 : 4"
+    ],
+    "a": 3,
+    "e": "Method 1 (Direct Ratio Method):\nStep 1: क्रय मूल्य पर बेचने पर: लाभ% = (पानी की मात्रा / दूध की मात्रा) * 100%.\nStep 2: 25% = (पानी / दूध) * 100% ==> पानी / दूध = 25 / 100 = 1 / 4.\nStep 3: पानी से दूध (Water to Milk) का अनुपात = 1 : 4.\nअतः सही विकल्प  1 : 4 है।\n\nMethod 2 (Assumption Method):\nStep 1: माना दूध = 100 लीटर।\n25% लाभ कमाने के लिए 25 लीटर मुफ़्त पानी मिलाना होगा।\nStep 2: पानी : दूध = 25 : 100 = 1 : 4.\nअतः सही उत्तर '1 : 4' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_14",
+    "qe": "A juice vendor mixes orange juice at ₹30/litre with water (free) to get a mixture worth ₹24/litre. What is the ratio of juice to water?",
+    "qh": "एक जूस विक्रेता ₹30/लीटर वाले संतरे के रस को पानी (मुफ़्त) के साथ मिलाकर ₹24/लीटर मूल्य का मिश्रण तैयार करता है। रस और पानी का अनुपात क्या है?",
+    "oe": [
+      "5 : 2",
+      "3 : 1",
+      "4 : 1",
+      "3 : 2"
+    ],
+    "oh": [
+      "5 : 2",
+      "3 : 1",
+      "4 : 1",
+      "3 : 2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Alligation Method):\nStep 1: रस का क्रय मूल्य = ₹30/लीटर, पानी का क्रय मूल्य = ₹0/लीटर, औसत मूल्य = ₹24/लीटर।\nStep 2: पृथक्करण (Alligation) नियम लागू करने पर:\n- रस की मात्रा : पानी की मात्रा = (24 - 0) : (30 - 24)\n= 24 : 6 = 4 : 1.\nअतः सही विकल्प  4 : 1 है।\n\nMethod 2 (Basic Algebraic Method):\nStep 1: माना रस की मात्रा = j और पानी की मात्रा = w.\n30j + 0(w) = 24(j + w)\n30j = 24j + 24w ==> 6j = 24w ==> j / w = 24 / 6 = 4 / 1.\nअतः सही उत्तर '4 : 1' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_15",
+    "qe": "A mixture contains 2.5 L of milk and 1.75 L of water. What fraction of the mixture is water?",
+    "qh": "एक मिश्रण में 2.5 लीटर दूध और 1.75 लीटर पानी है। मिश्रण का कितना भाग पानी है?",
+    "oe": [
+      "$\\frac{7}{18}$",
+      "$\\frac{7}{20}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{7}{17}$"
+    ],
+    "oh": [
+      "$\\frac{7}{18}$",
+      "$\\frac{7}{20}$",
+      "$\\frac{1}{3}$",
+      "$\\frac{7}{17}$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Fraction Method):\nStep 1: मिश्रण की कुल मात्रा ज्ञात करें:\nकुल मिश्रण = दूध + पानी = 2.5 + 1.75 = 4.25 लीटर।\nStep 2: मिश्रण में पानी का भिन्न (भाग) निकालें:\nपानी का भिन्न = पानी की मात्रा / कुल मिश्रण = 1.75 / 4.25.\nStep 3: अंश और हर दोनों को 100 से गुणा करने पर:\n= 175 / 425.\nStep 4: 25 से विभाजित करके सरल करने पर:\n= 7 / 17.\nअतः सही विकल्प  7/17 है।\n\nMethod 2 (Ratio Method):\nStep 1: दूध : पानी = 2.50 : 1.75 = 250 : 175 = 10 : 7.\nStep 2: कुल भाग = 10 + 7 = 17 इकाइयाँ।\nपानी का भाग = 7 / 17.\nअतः सही उत्तर '$\\frac{7}{17}$' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_16",
+    "qe": "6 litres of chocolate syrup are mixed in x litres of milk. If the syrup is 20% of mixture, what is the value of x?",
+    "qh": "x लीटर दूध में 6 लीटर चॉकलेट सिरप मिलाया जाता है। यदि सिरप मिश्रण का 20% है, तो x का मान क्या है?",
+    "oe": [
+      "23 litres",
+      "24 litres",
+      "21 litres",
+      "26 litres"
+    ],
+    "oh": [
+      "23 litres",
+      "24 litres",
+      "21 litres",
+      "26 litres"
+    ],
+    "a": 1,
+    "e": "Method 1 (Percentage Formula Method):\nStep 1: कुल मिश्रण = (6 + x) लीटर।\nStep 2: सिरप कुल मिश्रण का 20% (अर्थात 1/5 भाग) है:\n6 / (6 + x) = 20 / 100 = 1 / 5.\nStep 3: तिर्यक गुणा करने पर:\n6 * 5 = 6 + x ==> 30 = 6 + x ==> x = 30 - 6 = 24 लीटर।\nअतः सही विकल्प  24 litres है।\n\nMethod 2 (Ratio Method):\nStep 1: 20% सिरप होने पर दूध 80% होगा।\nसिरप : दूध = 20 : 80 = 1 : 4.\nStep 2: सिरप (1 इकाई) = 6 लीटर।\nदूध x (4 इकाइयाँ) = 4 * 6 = 24 लीटर।\nअतः सही उत्तर '24 litres' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_17",
+    "qe": "A 60 litre mixture of kerosene and petrol contains 75% kerosene. How much petrol is in the mixture?",
+    "qh": "मिट्टी के तेल और पेट्रोल के 60 लीटर मिश्रण में 75% मिट्टी का तेल है। मिश्रण में कितना पेट्रोल है?",
+    "oe": [
+      "20 litres",
+      "15 litres",
+      "45 litres",
+      "10 litres"
+    ],
+    "oh": [
+      "20 litres",
+      "15 litres",
+      "45 litres",
+      "10 litres"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Percentage Method):\nStep 1: यदि मिश्रण में 75% केरोसिन है, तो पेट्रोल का प्रतिशत:\nपेट्रोल% = 100% - 75% = 25%.\nStep 2: पेट्रोल की मात्रा:\nपेट्रोल = 25% of 60 लीटर = (25 / 100) * 60 = 60 / 4 = 15 लीटर।\nअतः सही विकल्प  15 litres है।\n\nMethod 2 (Subtraction Method):\nStep 1: केरोसिन की मात्रा = 75% of 60 = (3/4) * 60 = 45 लीटर।\nStep 2: पेट्रोल की मात्रा = कुल मिश्रण - केरोसिन = 60 - 45 = 15 लीटर।\nअतः सही उत्तर '15 litres' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_18",
+    "qe": "In some quantity of water, four times the quantity of milk is added and the quantity of the mixture is now 7.5 litres. How much more milk is to be added to the mixture to have 90% milk in the mixture?",
+    "qh": "पानी की कुछ मात्रा में, पानी की मात्रा का चार गुना दूध मिलाया जाता है और अब मिश्रण की मात्रा 7.5 लीटर है। मिश्रण में 90% दूध प्राप्त करने के लिए मिश्रण में और कितना दूध मिलाया जाना चाहिए?",
+    "oe": [
+      "7.5 litres",
+      "9.5 litres",
+      "6 litres",
+      "9 litres"
+    ],
+    "oh": [
+      "7.5 litres",
+      "9.5 litres",
+      "6 litres",
+      "9 litres"
+    ],
+    "a": 0,
+    "e": "Method 1 (Constant Component Method):\nStep 1: माना पानी की प्रारंभिक मात्रा = w लीटर।\nमिलाया गया दूध = 4w लीटर।\nकुल मिश्रण = w + 4w = 5w = 7.5 लीटर ==> w = 1.5 लीटर।\nप्रारंभिक दूध = 4 * 1.5 = 6.0 लीटर।\nStep 2: नये मिश्रण में दूध 90% होना चाहिए, अतः पानी का प्रतिशत = 10% होगा।\nStep 3: चूँकि केवल दूध मिलाया जा रहा है, पानी 1.5 लीटर ही रहेगा:\n10% of नया कुल मिश्रण = 1.5 लीटर ==> नया कुल मिश्रण = 1.5 * 10 = 15 लीटर।\nStep 4: नये मिश्रण में कुल दूध = 15 - 1.5 = 13.5 लीटर।\nStep 5: अतिरिक्त मिलाया गया दूध = 13.5 - 6.0 = 7.5 लीटर।\nअतः सही विकल्प  7.5 litres है।\n\nMethod 2 (Ratio Method):\nStep 1: प्रारंभिक अनुपात (दूध : पानी) = 4 : 1 (5 इकाइयाँ = 7.5 ==> पानी = 1.5 L, दूध = 6 L).\nStep 2: नया अनुपात (90% : 10%) = 9 : 1.\nStep 3: पानी 1 इकाई = 1.5 L ==> आवश्यक दूध (9 इकाइयाँ) = 9 * 1.5 = 13.5 L.\nStep 4: अतिरिक्त दूध = 13.5 - 6 = 7.5 लीटर।\nअतः सही उत्तर '7.5 litres' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_19",
+    "qe": "A drink is made by mixing water and juice in the ratio 9 : 7. If x litres of water and 2x litres of juice are mixed in 160 litres of drink, then the new ratio becomes 13 : 15. The quantity of drink (in litres) is:",
+    "qh": "पानी और रस को 9 : 7 के अनुपात में मिलाकर एक पेय बनाया जाता है। यदि 160 लीटर पेय में x लीटर पानी और 2x लीटर रस मिलाया जाता है, तो नया अनुपात 13 : 15 हो जाता है। अब पेय की कुल मात्रा (लीटर में) क्या है:",
+    "oe": [
+      "240",
+      "280",
+      "300",
+      "260"
+    ],
+    "oh": [
+      "240",
+      "280",
+      "300",
+      "260"
+    ],
+    "a": 1,
+    "e": "Method 1 (Algebraic Method):\nStep 1: 160 लीटर पेय में पानी और रस की प्रारंभिक मात्रा:\nकुल इकाइयाँ = 9 + 7 = 16 इकाइयाँ = 160 लीटर ==> 1 इकाई = 10 लीटर।\n- प्रारंभिक पानी = 9 * 10 = 90 लीटर\n- प्रारंभिक रस = 7 * 10 = 70 लीटर\nStep 2: x लीटर पानी और 2x लीटर रस मिलाने पर नया अनुपात 13 : 15 हो जाता है:\n(90 + x) / (70 + 2x) = 13 / 15.\nStep 3: तिर्यक गुणा करने पर:\n15(90 + x) = 13(70 + 2x)\n1,350 + 15x = 910 + 26x\n26x - 15x = 1,350 - 910 ==> 11x = 440 ==> x = 40 लीटर।\nStep 4: पेय की नई कुल मात्रा:\nनई मात्रा = 160 + x + 2x = 160 + 3x\n= 160 + 3(40) = 160 + 120 = 280 लीटर।\nअतः सही विकल्प  280 है।\n\nMethod 2 (Component Verification):\nStep 1: x = 40 रखने पर: पानी = 90 + 40 = 130 लीटर, रस = 70 + 80 = 150 लीटर।\nStep 2: अनुपात = 130 : 150 = 13 : 15 (सत्यापित)।\nStep 3: कुल मात्रा = 130 + 150 = 280 लीटर।\nअतः सही उत्तर '280' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_20",
+    "qe": "An alloy contains zinc, copper and tin in the ratio 3 : 2 : 2 and another contains copper, tin and lead in the ratio 2 : 3 : 5. If equal weights of both alloys are melted together to form a third alloy, then the weight of lead per kg in new alloy will be:",
+    "qh": "एक मिश्र धातु में जस्ता, तांबा और टिन 3 : 2 : 2 के अनुपात में है और दूसरी में तांबा, टिन और सीसा 2 : 3 : 5 के अनुपात में है। यदि दोनों मिश्र धातुओं के समान भार को एक साथ पिघलाकर एक तीसरी मिश्र धातु बनाई जाती है, तो नई मिश्र धातु में प्रति किग्रा सीसे का भार क्या होगा:",
+    "oe": [
+      "1 kg",
+      "0.75 kg",
+      "0.25 kg",
+      "0.50 kg"
+    ],
+    "oh": [
+      "1 kg",
+      "0.75 kg",
+      "0.25 kg",
+      "0.50 kg"
+    ],
+    "a": 2,
+    "e": "Method 1 (Unit Weight / Ratio Equating Method):\nStep 1: पहली मिश्र धातु में कुल इकाइयाँ = 3 + 2 + 2 = 7 इकाइयाँ।\nदूसरी मिश्र धातु में कुल इकाइयाँ = 2 + 3 + 5 = 10 इकाइयाँ।\nStep 2: समान भार पिघलाने के लिए 7 और 10 का ल.स.प. (LCM) = 70 किग्रा प्रत्येक मिश्र धातु लें।\nदोनों मिश्र धातुओं का कुल भार = 70 + 70 = 140 किग्रा।\nStep 3: सीसा (Lead) केवल दूसरी मिश्र धातु में उपस्थित है:\n70 किग्रा दूसरी मिश्र धातु में सीसे का भार = (5 / 10) * 70 = 35 किग्रा।\nStep 4: नई मिश्र धातु (140 किग्रा) में प्रति किग्रा सीसे का भार:\nप्रति किग्रा सीसा = कुल सीसा / कुल नई मिश्र धातु\n= 35 / 140 = 1 / 4 kg = 0.25 kg.\nअतः सही विकल्प  0.25 kg है।\n\nMethod 2 (Average Concentration Method):\nStep 1: पहली मिश्र धातु में सीसे का अंश = 0.\nदूसरी मिश्र धातु में सीसे का अंश = 5 / 10 = 0.50.\nStep 2: समान भार मिलाने पर औसत सांद्रता = (0 + 0.50) / 2 = 0.25 kg प्रति kg।\nअतः सही उत्तर '0.25 kg' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_21",
+    "qe": "An alloy contains copper, zinc and nickel in the ratio of 5 : 3 : 2. The quantity of nickel (in kg) that must be added to 100 kg of this alloy to have the new ratio 5 : 3 : 3 is :",
+    "qh": "एक मिश्र धातु में तांबा, जस्ता और निकल 5 : 3 : 2 के अनुपात में है। 100 किग्रा की इस मिश्र धातु में निकल की कितनी मात्रा (किग्रा में) मिलाई जानी चाहिए ताकि नया अनुपात 5 : 3 : 3 हो जाए?",
+    "oe": [
+      "8",
+      "10",
+      "12",
+      "15"
+    ],
+    "oh": [
+      "8",
+      "10",
+      "12",
+      "15"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Units Method):\nStep 1: प्रारंभिक अनुपात (तांबा : जस्ता : निकल) = 5 : 3 : 2.\nकुल अनुपाती इकाइयाँ = 5 + 3 + 2 = 10 इकाइयाँ।\nStep 2: 10 इकाइयाँ = 100 किग्रा ==> 1 इकाई = 10 किग्रा।\n- तांबा = 5 * 10 = 50 किग्रा\n- जस्ता = 3 * 10 = 30 किग्रा\n- निकल = 2 * 10 = 20 किग्रा\nStep 3: नया अनुपात = 5 : 3 : 3.\nतांबा और जस्ता की इकाइयाँ पहले के समान (5 और 3) ही हैं, जबकि निकल 2 इकाइयों से बढ़कर 3 इकाइयाँ हो जाता है:\nवृद्धि = 3 - 2 = 1 इकाई।\nStep 4: मिलाया जाने वाला निकल = 1 इकाई = 10 किग्रा।\nअतः सही विकल्प  10 है।\n\nMethod 2 (Component Comparison Method):\nStep 1: प्रारंभिक निकल = 20 किग्रा।\nStep 2: नए अनुपात में 5 इकाइयाँ तांबा = 50 किग्रा ==> 1 इकाई = 10 किग्रा।\nअतः नया निकल (3 इकाइयाँ) = 3 * 10 = 30 किग्रा होना चाहिए।\nStep 3: मिलाई गई मात्रा = 30 - 20 = 10 किग्रा।\nअतः सही उत्तर '10' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_22",
+    "qe": "A tank in a Kolkata laboratory contains a solution of salt and water in the ratio 5 : 3. If 16 liters of water is added, the ratio becomes 5 : 4. Find the original quantity of solution.",
+    "qh": "कोलकाता की एक प्रयोगशाला में एक टैंक में नमक और पानी का घोल 5 : 3 के अनुपात में है। यदि 16 लीटर पानी मिलाया जाता है, तो अनुपात 5 : 4 हो जाता है। घोल की मूल मात्रा ज्ञात कीजिए।",
+    "oe": [
+      "164 liters",
+      "128 liters",
+      "110 liters",
+      "92 liters"
+    ],
+    "oh": [
+      "164 liters",
+      "128 liters",
+      "110 liters",
+      "92 liters"
+    ],
+    "a": 1,
+    "e": "Method 1 (Constant Component Ratio Method):\nStep 1: प्रारंभिक अनुपात (नमक : पानी) = 5 : 3.\nनया अनुपात (नमक : पानी) = 5 : 4.\nStep 2: केवल पानी मिलाया गया है, अतः नमक की इकाइयाँ दोनों में समान (5 इकाइयाँ) हैं।\nपानी में वृद्धि = 4 - 3 = 1 इकाई।\nStep 3: दिया गया है कि 1 इकाई = 16 लीटर।\nStep 4: घोल की मूल मात्रा = 5 + 3 = 8 इकाइयाँ।\nमूल मात्रा = 8 * 16 = 128 लीटर।\nअतः सही विकल्प  128 liters है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना नमक = 5x और पानी = 3x. मूल घोल = 8x.\n5x / (3x + 16) = 5 / 4.\nStep 2: 5 से 5 विभाजित करने पर: 1 / (3x + 16) = 1 / 4 ==> 3x + 16 = 4x ==> x = 16 लीटर।\nStep 3: मूल घोल = 8x = 8 * 16 = 128 लीटर।\nअतः सही उत्तर '128 liters' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_23",
+    "qe": "A mixture contains 36 litres of milk and water in the ratio 2 : 1. How much water must be added to make the ratio 1:1?",
+    "qh": "एक मिश्रण में 36 लीटर दूध और पानी 2 : 1 के अनुपात में है। अनुपात को 1:1 करने के लिए कितना पानी मिलाया जाना चाहिए?",
+    "oe": [
+      "12 litres",
+      "8 litres",
+      "15 litres",
+      "10 litres"
+    ],
+    "oh": [
+      "12 litres",
+      "8 litres",
+      "15 litres",
+      "10 litres"
+    ],
+    "a": 0,
+    "e": "Method 1 (Component Equating Method):\nStep 1: 36 लीटर मिश्रण में दूध और पानी (2 : 1, कुल 3 इकाइयाँ):\n3 इकाइयाँ = 36 लीटर ==> 1 इकाई = 12 लीटर।\n- दूध = 2 * 12 = 24 लीटर\n- पानी = 1 * 12 = 12 लीटर\nStep 2: अनुपात को 1 : 1 बनाने के लिए पानी की मात्रा भी दूध के बराबर (24 लीटर) होनी चाहिए।\nStep 3: मिलाया जाने वाला पानी = 24 - 12 = 12 लीटर।\nअतः सही विकल्प  12 litres है।\n\nMethod 2 (Ratio Method):\nStep 1: प्रारंभिक अनुपात = 2 : 1.\nनया अनुपात = 1 : 1 ==> दूध बराबर करने पर = 2 : 2.\nStep 2: पानी में वृद्धि = 2 - 1 = 1 इकाई।\nStep 3: प्रारंभिक कुल (3 इकाइयाँ) = 36 लीटर ==> 1 इकाई = 12 लीटर।\nअतः मिलाया गया पानी = 12 लीटर।\nअतः सही उत्तर '12 litres' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

@@ -1,0 +1,1313 @@
+[
+  {
+    "p_id": "basic_1",
+    "qe": "The area of a triangular field whose sides are 65m, 72m and 97m is equal to the area of a rectangular park whose sides are in the ratio of 5 : 13. What is the perimeter (in m) of the rectangular park?",
+    "qh": "एक त्रिभुजाकार खेत का क्षेत्रफल जिसकी भुजाएँ 65m, 72m और 97m हैं, एक आयताकार पार्क के क्षेत्रफल के बराबर है जिसकी भुजाएँ 5 : 13 के अनुपात में हैं। आयताकार पार्क का परिमाप (मीटर में) क्या है?",
+    "oe": [
+      "108",
+      "180",
+      "216",
+      "144"
+    ],
+    "oh": [
+      "108",
+      "180",
+      "216",
+      "144"
+    ],
+    "a": 2,
+    "e": "Method 1 (Pythagorean Triplet & Area Equating Method):\nStep 1: त्रिभुज की भुजाओं की जाँच करें:\n$$65^2 + 72^2 = 4225 + 5184 = 9409 = 97^2$$\nअतः यह एक समकोण त्रिभुज (Right-angled triangle) है।\nStep 2: त्रिभुजाकार खेत का क्षेत्रफल:\n$$\\text{त्रिभुज का क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ \\text{आधार} $\\times$ \\text{ऊंचाई} = $\\frac{1}{2}$ $\\times$ 65 $\\times$ 72 = 2340\\text{ वर्ग मीटर}$$\nStep 3: आयताकार पार्क की भुजाएँ $5x$ और $13x$ मान लें:\n$$\\text{आयताकार पार्क का क्षेत्रफल} = 5x $\\times$ 13x = 65x^2$$\n$$65x^2 = 2340 \\implies x^2 = $\\frac{2340}{65}$ = 36 \\implies x = 6$$\nStep 4: आयत की विमाएँ निकालें:\n- लंबाई = $13 \\times 6 = 78\\text{ मीटर}$\n- चौड़ाई = $5 \\times 6 = 30\\text{ मीटर}$\nStep 5: आयताकार पार्क का परिमाप ज्ञात करें:\n$$\\text{परिमाप} = 2(\\text{लंबाई} + \\text{चौड़ाई}) = 2(78 + 30) = 2 $\\times$ 108 = 216\\text{ मीटर}$$\nअतः सही विकल्प  216 है।\n\nMethod 2 (Ratio Formula Method):\n$$\\text{परिमाप} = 2(5 + 13)x = 36x$$\nचूँकि $x = \\sqrt{2340 / 65} = 6$, अतः $\\text{परिमाप} = 36 \\times 6 = 216\\text{ मीटर}$।\nअतः सही उत्तर '216' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_2",
+    "qe": "If each side of a rectangle is increased by 22%, then its area will increase by:",
+    "qh": "यदि एक आयत की प्रत्येक भुजा में 22% की वृद्धि की जाती है, तो उसके क्षेत्रफल में कितनी वृद्धि होगी?",
+    "oe": [
+      "40%",
+      "50%",
+      "46.65%",
+      "48.84%"
+    ],
+    "oh": [
+      "40%",
+      "50%",
+      "46.65%",
+      "48.84%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Successive Percentage Formula Method):\nStep 1: क्षेत्रफल में प्रतिशत परिवर्तन का सूत्र:\n$$\\text{कुल प्रतिशत वृद्धि} = a + b + $\\frac{a\\timesb}{100}$$$\nStep 2: यहाँ प्रत्येक भुजा में वृद्धि $a = 22\\%$ और $b = 22\\%$ है:\n$$\\text{वृद्धि} = 22 + 22 + $\\frac{22\\times22}{100}$$$\n$$\\text{वृद्धि} = 44 + $\\frac{484}{100}$ = 44 + 4.84 = 48.84\\%$$ \nअतः सही विकल्प  48.84% है।\n\nMethod 2 (Scaling Factor Method):\nप्रारंभिक क्षेत्रफल = 100 मान लें।\nनया क्षेत्रफल = $100 \\times 1.22 \\times 1.22 = 148.84$.\nवृद्धि = $148.84 - 100 = 48.84\\%$.\nअतः सही उत्तर '48.84%' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_3",
+    "qe": "If each side of a rectangle is decreased by 11%, then its area will decrease by:",
+    "qh": "यदि एक आयत की प्रत्येक भुजा में 11% की कमी की जाती है, तो उसके क्षेत्रफल में कितनी कमी होगी?",
+    "oe": [
+      "21.69%",
+      "20.79%",
+      "13.13%",
+      "26.78%"
+    ],
+    "oh": [
+      "21.69%",
+      "20.79%",
+      "13.13%",
+      "26.78%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Successive Percentage Decrease Method):\nStep 1: सूत्र:\n$$\\text{क्षेत्रफल में शुद्ध कमी} = -a - b + $\\frac{a\\timesb}{100}$$$\nStep 2: $a = 11$ और $b = 11$ रखने पर:\n$$\\text{कमी} = 11 + 11 - $\\frac{11\\times11}{100}$$$\n$$\\text{कमी} = 22 - $\\frac{121}{100}$ = 22 - 1.21 = 20.79\\%$$ \nअतः सही विकल्प  20.79% है।\n\nMethod 2 (Multiplier Method):\nनया क्षेत्रफल = $100 \\times 0.89 \\times 0.89 = 79.21$.\nकमी = $100 - 79.21 = 20.79\\%$.\nअतः सही उत्तर '20.79%' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_4",
+    "qe": "The area of a field in the shape of a triangle with each side x metre is equal to the area of another triangular field having sides 50m, 70m and 80m. The value of x is closest to:",
+    "qh": "एक त्रिभुज के आकार के एक खेत का क्षेत्रफल जिसकी प्रत्येक भुजा x मीटर है, एक अन्य त्रिभुजाकार खेत के क्षेत्रफल के बराबर है, जिसकी भुजाएँ 50m, 70m और 80m हैं। x का मान निकटतम है:",
+    "oe": [
+      "65.5",
+      "63.2",
+      "62.4",
+      "61.8"
+    ],
+    "oh": [
+      "65.5",
+      "63.2",
+      "62.4",
+      "61.8"
+    ],
+    "a": 1,
+    "e": "Method 1 (Heron's Formula & Equilateral Triangle Area Method):\nStep 1: त्रिभुज (भुजाएँ 50m, 70m, 80m) का अर्ध-परिमाप ($s$) निकालें:\n$$s = $\\frac{50+70+80}{2}$ = $\\frac{200}{2}$ = 100\\text{ मीटर}$$\nStep 2: हीरोन के सूत्र से क्षेत्रफल:\n$$\\text{क्षेत्रफल} = $\\sqrt{s(s-a)(s-b)(s-c)}$$$\n$$\\text{क्षेत्रफल} = $\\sqrt{100(100-50)(100-70)(100-80)}$ = $\\sqrt{100\\times50\\times30\\times20}$$$\n$$\\text{क्षेत्रफल} = $\\sqrt{3000000}$ = 1000$\\sqrt{3}$\\text{ वर्ग मीटर}$$\nStep 3: यह समबाहु त्रिभुज (भुजा $x$) के क्षेत्रफल के बराबर है:\n$$\\frac{$\\sqrt{3}$}{4} x^2 = 1000$\\sqrt{3}$$$\n$$x^2 = 4000 \\implies x = $\\sqrt{4000}$ = 20$\\sqrt{10}$$$\nStep 4: निकटतम मान निकालें:\n$$x $\\approx$ 20 $\\times$ 3.1622 = 63.24\\text{ मीटर} $\\approx$ 63.2\\text{ मीटर}$$\nअतः सही विकल्प  63.2 है।\n\nMethod 2 (Approximation Method):\n$63^2 = 3969$ और $64^2 = 4096$.\n4000 मान $63.2^2 = 3994.24$ के सर्वाधिक निकट है।\nअतः सही उत्तर '63.2' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_5",
+    "qe": "The perimeter of a square is equal to the perimeter of a rectangle of length 16cm and breadth 14cm. Find the circumference of a semicircle whose diameter is equal to the side of the square.",
+    "qh": "एक वर्ग का परिमाप 16 सेमी लंबाई और 14 सेमी चौड़ाई वाले आयत के परिमाप के बराबर है। एक अर्धवृत्त की परिधि ज्ञात कीजिए जिसका व्यास वर्ग की भुजा के बराबर है।",
+    "oe": [
+      "38.57 cm",
+      "21.57 cm",
+      "23.57 cm",
+      "25.57 cm"
+    ],
+    "oh": [
+      "38.57 cm",
+      "21.57 cm",
+      "23.57 cm",
+      "25.57 cm"
+    ],
+    "a": 0,
+    "e": "Method 1 (Geometric Perimeter Calculation Method):\nStep 1: आयत का परिमाप निकालें:\n$$\\text{आयत का परिमाप} = 2(\\text{लंबाई} + \\text{चौड़ाई}) = 2(16 + 14) = 2 $\\times$ 30 = 60\\text{ सेमी}$$\nStep 2: वर्ग की भुजा निकालें:\n$$4 $\\times$ \\text{भुजा} = 60 \\implies \\text{भुजा} = 15\\text{ सेमी}$$\nStep 3: अर्धवृत्त का व्यास $d = 15\\text{ सेमी}$, अतः त्रिज्या $r = \\frac{15}{2} = 7.5\\text{ सेमी}$।\nStep 4: बंद अर्धवृत्त की कुल परिधि (Perimeter of Semicircle):\n$$\\text{परिधि} = $\\pi$ r + d = $\\le$ft($\\frac{22}{7}$ $\\times$ $\\frac{15}{2}$\\right) + 15$$\n$$\\text{परिधि} = $\\frac{165}{7}$ + 15 $\\approx$ 23.57 + 15 = 38.57\\text{ सेमी}$$\nअतः सही विकल्प  38.57 cm है।\n\nMethod 2 (Combined Formula Method):\n$$\\text{परिधि} = r($\\pi$ + 2) = 7.5 $\\times$ $\\le$ft($\\frac{22}{7}$ + 2\\right) = 7.5 $\\times$ $\\frac{36}{7}$ = $\\frac{270}{7}$ $\\approx$ 38.57\\text{ सेमी}$$\nअतः सही उत्तर '38.57 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_6",
+    "qe": "What is the area (in m^2, up to 1 place of decimal) of an equilateral triangular field of side 8.5 m?",
+    "qh": "8.5 मीटर भुजा वाले एक समबाहु त्रिभुजाकार क्षेत्र का क्षेत्रफल (m^2 में, दशमलव के 1 स्थान तक) क्या है?",
+    "oe": [
+      "\\frac{18.1}{$\\sqrt{3}$}",
+      "\\frac{72.25}{$\\sqrt{3}$}",
+      "18.1$\\sqrt{3}$",
+      "72.25$\\sqrt{3}$"
+    ],
+    "oh": [
+      "\\frac{18.1}{$\\sqrt{3}$}",
+      "\\frac{72.25}{$\\sqrt{3}$}",
+      "18.1$\\sqrt{3}$",
+      "72.25$\\sqrt{3}$"
+    ],
+    "a": 2,
+    "e": "Method 1 (Equilateral Triangle Area Formula Method):\nStep 1: समबाहु त्रिभुज का क्षेत्रफल:\n$$\\text{क्षेत्रफल} = \\frac{$\\sqrt{3}$}{4} a^2$$\nStep 2: भुजा $a = 8.5\\text{ मीटर}$ प्रतिस्थापित करने पर:\n$$\\text{क्षेत्रफल} = \\frac{$\\sqrt{3}$}{4} $\\times$ (8.5)^2$$\nStep 3: गणना करें:\n$$(8.5)^2 = 72.25$$\n$$\\text{क्षेत्रफल} = $\\frac{72.25}{4}$ $\\times$ $\\sqrt{3}$ = 18.0625$\\sqrt{3}$ $\\approx$ 18.1$\\sqrt{3}$\\text{ m}^2$$\nअतः सही विकल्प  18.1√3 है।\n\nMethod 2 (Decimal Rounding Method):\n$\\frac{72.25}{4} = 18.0625 \\approx 18.1$.\nअतः $\\text{क्षेत्रफल} = 18.1\\sqrt{3}\\text{ m}^2$.\nअतः सही उत्तर '18.1$\\sqrt{3}$' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_7",
+    "qe": "Two sides of triangle are 12.8 m and 9.6 m. If the height of the triangle is 12m, corresponding to 9.6 m. Then what is its height (in m) corresponding to 12.8 m?",
+    "qh": "एक त्रिभुज की दो भुजाएं 12.8m और 9.6m हैं। यदि त्रिभुज की ऊंचाई 12m है, जो कि 9.6m वाले भुजा के संगत है, तो 12.8m वाले भुजा के संगत ऊंचाई (में) क्या होगी?",
+    "oe": [
+      "12",
+      "9",
+      "10",
+      "8"
+    ],
+    "oh": [
+      "12",
+      "9",
+      "10",
+      "8"
+    ],
+    "a": 1,
+    "e": "Method 1 (Equating Area of Triangle Method):\nStep 1: त्रिभुज का क्षेत्रफल किसी भी आधार और उसकी संगत ऊंचाई के गुणनफल का आधा होता है:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ b_1 $\\times$ h_1 = $\\frac{1}{2}$ $\\times$ b_2 $\\times$ h_2$$\n$$b_1 $\\times$ h_1 = b_2 $\\times$ h_2$$\nStep 2: मान प्रतिस्थापित करने पर ($b_1 = 9.6\\text{ m}$, $h_1 = 12\\text{ m}$, $b_2 = 12.8\\text{ m}$):\n$$9.6 $\\times$ 12 = 12.8 $\\times$ H$$\nStep 3: $H$ का मान निकालें:\n$$H = $\\frac{9.6\\times12}{12.8}$ = $\\frac{3\\times12}{4}$ = 9\\text{ मीटर}$$\nअतः सही विकल्प  9 है।\n\nMethod 2 (Inverse Proportion Method):\nऊंचाई आधार के व्युत्क्रमानुपाती होती है:\n$$H = 12 $\\times$ $\\frac{9.6}{12.8}$ = 12 $\\times$ $\\frac{3}{4}$ = 9\\text{ मीटर}$$\nअतः सही उत्तर '9' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_8",
+    "qe": "The base of a triangle is increased by 40%. By what percentage (correct to two decimal places) should its height be increased so that the area increases by 60%?",
+    "qh": "एक त्रिभुज के आधार में 40% की वृद्धि की गई। इसकी ऊंचाई कितने प्रतिशत (दशमलव के दो स्थानों तक सही) बढ़ाई जानी चाहिए ताकि क्षेत्रफल में 60% की वृद्धि हो जाए?",
+    "oe": [
+      "14.29%",
+      "20.01%",
+      "15.54%",
+      "18.62%"
+    ],
+    "oh": [
+      "14.29%",
+      "20.01%",
+      "15.54%",
+      "18.62%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Multiplier Method):\nStep 1: त्रिभुज का क्षेत्रफल = $\\frac{1}{2} \\times \\text{आधार} \\times \\text{ऊंचाई}$ $\\implies \\text{ऊंचाई} \\propto \\frac{\\text{क्षेत्रफल}}{\\text{आधार}}$\nStep 2: अनुपाती मान निकालें:\n- आधार: $100 \\to 140 \\implies 5 : 7$\n- क्षेत्रफल: $100 \\to 160 \\implies 5 : 8$\nStep 3: ऊंचाई का अनुपात निकालें:\n$$\\text{ऊंचाई का अनुपात} = $\\frac{5}{5}$ : $\\frac{8}{7}$ = 1 : $\\frac{8}{7}$ = 7 : 8$$\nStep 4: ऊंचाई में प्रतिशत वृद्धि निकालें:\n$$\\text{प्रतिशत वृद्धि} = $\\frac{8-7}{7}$ $\\times$ 100 = $\\frac{1}{7}$ $\\times$ 100 = 14.2857\\% $\\approx$ 14.29\\%$$ \nअतः सही विकल्प  14.29% है।\n\nMethod 2 (Successive Percentage Formula Method):\n$$40 + h + $\\frac{40h}{100}$ = 60 \\implies 1.4h = 20 \\implies h = $\\frac{20}{1.4}$ = $\\frac{100}{7}$ $\\approx$ 14.29\\%$$\nअतः सही उत्तर '14.29%' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_9",
+    "qe": "The sides of a triangle are in the ratio 1/3 : 1/5 : 1/4 and its perimeter is 141 cm. The difference between the greatest side and the smallest side is:",
+    "qh": "किसी त्रिभुज की भुजाओं का अनुपात 1/3 : 1/5 : 1/4 है और इसका परिमाप 141 cm है। इसकी सबसे बड़ी भुजा की लंबाई और सबसे छोटी भुजा की लंबाई के बीच अंतर ज्ञात करें।",
+    "oe": [
+      "18 cm",
+      "15 cm",
+      "12 cm",
+      "24 cm"
+    ],
+    "oh": [
+      "18 cm",
+      "15 cm",
+      "12 cm",
+      "24 cm"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Normalization Method):\nStep 1: हरों (3, 5, 4) का LCM = 60 से गुणा करके पूर्णांक अनुपात निकालें:\n$$$\\le$ft($\\frac{1}{3}$ $\\times$ 60\\right) : $\\le$ft($\\frac{1}{5}$ $\\times$ 60\\right) : $\\le$ft($\\frac{1}{4}$ $\\times$ 60\\right) = 20 : 12 : 15$$\nStep 2: परिमाप का अनुपाती योग نکالें:\n$$\\text{कुल इकाइयाँ} = 20 + 12 + 15 = 47\\text{ इकाइयाँ}$$\nStep 3: 47 इकाइयाँ = 141 सेमी:\n$$1\\text{ इकाई} = $\\frac{141}{47}$ = 3\\text{ सेमी}$$\nStep 4: सबसे बड़ी भुजा (20) और सबसे छोटी भुजा (12) का अंतर نکالें:\n$$\\text{अंतर} = 20 - 12 = 8\\text{ इकाइयाँ}$$\n$$\\text{अंतर} = 8 $\\times$ 3 = 24\\text{ सेमी}$$\nअतः सही विकल्प  24 cm है।\n\nMethod 2 (Direct Proportion Method):\n$$\\text{अंतर} = $\\frac{20-12}{47}$ $\\times$ 141 = $\\frac{8}{47}$ $\\times$ 141 = 8 $\\times$ 3 = 24\\text{ सेमी}$$\nअतः सही उत्तर '24 cm' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_10",
+    "qe": "If the angles of a triangle are 30° and 45° and the included side is (√108 + 6)cm, then what is the area of the triangle?",
+    "qh": "यदि किसी त्रिभुज के कोण 30° और 45° हैं और उसकी सम्मिलित भुजा (√108 + 6) सेमी है, तो त्रिभुज का क्षेत्रफल क्या है?",
+    "oe": [
+      "18(√3 + 1) cm^2",
+      "(15√3 + 18) cm^2",
+      "12(√3 + 1) cm^2",
+      "24(√3 + 1) cm^2"
+    ],
+    "oh": [
+      "18(√3 + 1) cm^2",
+      "(15√3 + 18) cm^2",
+      "12(√3 + 1) cm^2",
+      "24(√3 + 1) cm^2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Trigonometric Altitude Method):\nStep 1: सम्मिलित भुजा $BC = \\sqrt{108} + 6 = 6\\sqrt{3} + 6 = 6(\\sqrt{3} + 1)\\text{ सेमी}$ मान लें।\nशीर्ष $A$ से $BC$ पर लम्ब $AD = h$ डालें।\nStep 2: दोनों समकोण त्रिभुजों से आधार के भाग निकालें:\n- $\\Delta ABD$ में ($∠B = 30^\\circ$): $BD = h \\cot 30^\\circ = h\\sqrt{3}$\n- $\\Delta ACD$ में ($∠C = 45^\\circ$): $CD = h \\cot 45^\\circ = h(1) = h$\nStep 3: आधार $BC = BD + CD$:\n$$h$\\sqrt{3}$ + h = 6($\\sqrt{3}$ + 1)$$\n$$h($\\sqrt{3}$ + 1) = 6($\\sqrt{3}$ + 1) \\implies h = 6\\text{ सेमी}$$\nStep 4: त्रिभुज का क्षेत्रफल ज्ञात करें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ \\text{आधार} $\\times$ \\text{ऊंचाई} = $\\frac{1}{2}$ $\\times$ 6($\\sqrt{3}$ + 1) $\\times$ 6 = 18($\\sqrt{3}$ + 1)\\text{ cm}^2$$\nअतः सही विकल्प  18(√3 + 1) cm^2 है।\n\nMethod 2 (Sine Rule Formulation):\n$\\text{क्षेत्रफल} = \\frac{a^2 \\sin B \\sin C}{2 \\sin(B + C)} = \\frac{[6(\\sqrt{3}+1)]^2 \\times (1/2) \\times (1/\\sqrt{2})}{2 \\times \\sin 75^\\circ}$.\nचूँकि $\\sin 75^\\circ = \\frac{\\sqrt{3}+1}{2\\sqrt{2}}$, मान रखने पर:\n$$\\text{क्षेत्रफल} = \\frac{36($\\sqrt{3}$+1)^2 $\\times$ \\frac{1}{2$\\sqrt{2}$}}{2 $\\times$ \\frac{$\\sqrt{3}$+1}{2$\\sqrt{2}$}} = 18($\\sqrt{3}$ + 1)\\text{ cm}^2$$\nअतः सही उत्तर '18(√3 + 1) cm^2' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_11",
+    "qe": "Three sides of a triangle are √(a^2 + b^2), √((2a)^2 + b^2) and √(a^2 + (2b)^2) units. What is the area (in unit squares) of triangle?",
+    "qh": "एक त्रिभुज की तीन भुजाएं √(a^2 + b^2), √((2a)^2 + b^2) और √(a^2 + (2b)^2) इकाई हैं। त्रिभुज का क्षेत्रफल (वर्ग इकाई में) कितना होगा?",
+    "oe": [
+      "5/2 ab",
+      "3ab",
+      "4ab",
+      "3/2 ab"
+    ],
+    "oh": [
+      "5/2 ab",
+      "3ab",
+      "4ab",
+      "3/2 ab"
+    ],
+    "a": 3,
+    "e": "Method 1 (Value Substitution Method):\nStep 1: गणना को सरल करने के लिए $a = 1$ तथा $b = 1$ मान लें।\nत्रिभुज की तीनों भुजाएँ होंगी:\n- पहली भुजा = $\\sqrt{1^2 + 1^2} = \\sqrt{2}$\n- दूसरी भुजा = $\\sqrt{2^2 + 1^2} = \\sqrt{5}$\n- तीसरी भुजा = $\\sqrt{1^2 + 2^2} = \\sqrt{5}$\nStep 2: चूँकि दो भुजाएँ समान ($√5, \\sqrt{5}$) हैं, अतः यह एक समद्विबाहु त्रिभुज (Isosceles triangle) है जिसका असमान आधार $\\sqrt{2}$ है।\nशीर्ष से आधार पर डाला गया लम्ब आधार को दो बराबर भागों (प्रत्येक $\\frac{\\sqrt{2}}{2} = \\frac{1}{\\sqrt{2}}$) में विभाजित करता है।\nStep 3: समकोण त्रिभुज से ऊंचाई ($h$) निकालें:\n$$h = \\sqrt{($\\sqrt{5}$)^2 - $\\le$ft(\\frac{1}{$\\sqrt{2}$}\\right)^2} = \\sqrt{5 - $\\frac{1}{2}$} = \\sqrt{$\\frac{9}{2}$} = \\frac{3}{$\\sqrt{2}$}$$\nStep 4: त्रिभुज का क्षेत्रफल ज्ञात करें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ \\text{आधार} $\\times$ \\text{ऊंचाई} = $\\frac{1}{2}$ $\\times$ $\\sqrt{2}$ $\\times$ \\frac{3}{$\\sqrt{2}$} = $\\frac{3}{2}$$$\nStep 5: $a = 1, b = 1$ विकल्पों में रखने पर केवल विकल्प (d) से $\\frac{3}{2}(1)(1) = \\frac{3}{2}$ प्राप्त होता है।\nअतः सही विकल्प  3/2 ab है।\n\nMethod 2 (Coordinate Geometry Formulation):\nशीर्ष $(0,0), (a, 2b), (2a, b)$ लेकर सारणिक विधि से क्षेत्रफल निकालने पर: $\\frac{1}{2} |0(2b - b) + a(b - 0) + 2a(0 - 2b)| = \\frac{3}{2}ab$.\nअतः सही उत्तर '3/2 ab' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_12",
+    "qe": "The area of an equilateral triangle is 10.24√3 m^2. Its perimeter (in m) is:",
+    "qh": "किसी समबाहु त्रिभुज का क्षेत्रफल 10.24√3 m^2 है। इसका परिमाप (मीटर में) ज्ञात करें।",
+    "oe": [
+      "3.2",
+      "9.6",
+      "6.4",
+      "19.2"
+    ],
+    "oh": [
+      "3.2",
+      "9.6",
+      "6.4",
+      "19.2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equilateral Triangle Formula Method):\nStep 1: समबाहु त्रिभुज का क्षेत्रफल:\n$$\\text{क्षेत्रफल} = \\frac{$\\sqrt{3}$}{4} a^2$$\nStep 2: दिए गए क्षेत्रफल के बराबर रखने पर:\n$$\\frac{$\\sqrt{3}$}{4} a^2 = 10.24$\\sqrt{3}$$$\n$$a^2 = 10.24 $\\times$ 4 = 40.96$$\nStep 3: वर्गमूल लेने पर भुजा ($a$) निकालें:\n$$a = $\\sqrt{40.96}$ = 6.4\\text{ मीटर}$$\nStep 4: समबाहु त्रिभुज का परिमाप निकालें:\n$$\\text{परिमाप} = 3a = 3 $\\times$ 6.4 = 19.2\\text{ मीटर}$$\nअतः सही विकल्प  19.2 है।\n\nMethod 2 (Direct Step Calculation):\n$$a = $\\sqrt{4\\times10.24}$ = 2 $\\times$ 3.2 = 6.4$$\n$$\\text{परिमाप} = 3 $\\times$ 6.4 = 19.2\\text{ मीटर}$$\nअतः सही उत्तर '19.2' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_13",
+    "qe": "From an interior point of an equilateral triangle, perpendiculars are drawn on all three sides. The sum of the lengths of the three perpendiculars is s. Then the area of the triangle is:",
+    "qh": "एक समबाहु त्रिभुज के एक आंतरिक बिंदु से, तीनों भुजाओं पर लम्ब खींचे जाते हैं। तीन लम्बों की लंबाई का योग s है। फिर त्रिभुज का क्षेत्रफल है:",
+    "oe": [
+      "\\frac{s^2}{$\\sqrt{3}$}",
+      "\\frac{2s^2}{$\\sqrt{3}$}",
+      "\\frac{s^2}{2$\\sqrt{3}$}",
+      "\\frac{$\\sqrt{3}$s^2}{2}"
+    ],
+    "oh": [
+      "\\frac{s^2}{$\\sqrt{3}$}",
+      "\\frac{2s^2}{$\\sqrt{3}$}",
+      "\\frac{s^2}{2$\\sqrt{3}$}",
+      "\\frac{$\\sqrt{3}$s^2}{2}"
+    ],
+    "a": 0,
+    "e": "Method 1 (Viviani's Theorem Method):\nStep 1: विवियानी प्रमेय (Viviani's Theorem) के अनुसार, समबाहु त्रिभुज के अंदर किसी भी बिंदु से तीनों भुजाओं पर डाले गए लम्बों का योग ($p_1 + p_2 + p_3 = s$) त्रिभुज की कुल ऊंचाई ($h$) के बराबर होता है:\n$$h = s$$\nStep 2: समबाहु त्रिभुज की ऊंचाई और भुजा ($a$) का संबंध:\n$$h = \\frac{$\\sqrt{3}$}{2} a \\implies s = \\frac{$\\sqrt{3}$}{2} a \\implies a = \\frac{2s}{$\\sqrt{3}$}$$\nStep 3: समबाहु त्रिभुज का क्षेत्रफल ज्ञात करें:\n$$\\text{क्षेत्रफल} = \\frac{$\\sqrt{3}$}{4} a^2 = \\frac{$\\sqrt{3}$}{4} $\\times$ $\\le$ft(\\frac{2s}{$\\sqrt{3}$}\\right)^2 = \\frac{$\\sqrt{3}$}{4} $\\times$ $\\frac{4s^2}{3}$ = \\frac{s^2}{$\\sqrt{3}$}$$\nअतः सही विकल्प  s^2 / √3 है।\n\nMethod 2 (Height Area Formula Method):\nसमबाहु त्रिभुज का क्षेत्रफल ऊंचाई के पदों में:\n$$\\text{क्षेत्रफल} = \\frac{h^2}{$\\sqrt{3}$}$$\nचूँकि $h = s$, अतः $\\text{क्षेत्रफल} = \\frac{s^2}{\\sqrt{3}}$।\nअतः सही उत्तर '\\frac{s^2}{$\\sqrt{3}$}' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_14",
+    "qe": "In the fig. given below ABC is a right-angled triangle where ∠A=90°, AB=p cm and AC=q cm. On the three sides as diameters semicircles are drawn as shown in the fig. The area of the shaded portion, in sq.cm is:",
+    "qh": "दिए गए चित्र में ABC एक समकोण त्रिभुज है जहां ∠A = 90°, AB = p cm और AC = q cm तीनों भुजाओं को विकर्ण (व्यास) पर अर्धवृत्त खींचा जाता है। छायांकित भाग का क्षेत्रफल ज्ञात करें?",
+    "oe": [
+      "1",
+      "$\\frac{1}{2}$ pq",
+      "$\\frac{2}{3}$ pq",
+      "$\\frac{5}{3}$"
+    ],
+    "oh": [
+      "1",
+      "$\\frac{1}{2}$ pq",
+      "$\\frac{2}{3}$ pq",
+      "$\\frac{5}{3}$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Lunes of Hippocrates Theorem Method):\nStep 1: हिप्पोक्रेट्स के ल्यून प्रमेय (Theorem of the Lunes of Hippocrates) के अनुसार, किसी समकोण त्रिभुज की दोनों लम्बवत भुजाओं को व्यास मानकर बनाए गए अर्धवृत्तों द्वारा कर्ण पर बने अर्धवृत्त के बाहर परिबद्ध दोनों छायांकित अर्धचंद्राकार भागों (lunes) का कुल क्षेत्रफल मूल समकोण त्रिभुज के क्षेत्रफल के ठीक बराबर होता है।\nStep 2: समकोण त्रिभुज ABC का क्षेत्रफल निकालें:\n$$\\text{त्रिभुज का क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ AB $\\times$ AC = $\\frac{1}{2}$ pq$$\nStep 3: छायांकित भाग का क्षेत्रफल:\n$$\\text{छायांकित क्षेत्रफल} = $\\frac{1}{2}$ pq\\text{ वर्ग सेमी}$$\nअतः सही विकल्प  1/2 pq है।\n\nMethod 2 (Area Addition and Subtraction Method):\n- कर्ण $BC = \\sqrt{p^2 + q^2}$\n- दोनों छोटे अर्धवृत्तों का क्षेत्रफल = $\\frac{\\pi}{8} p^2 + \\frac{\\pi}{8} q^2 = \\frac{\\pi}{8}(p^2 + q^2)$\n- बड़े अर्धवृत्त का क्षेत्रफल = $\\frac{\\pi}{8} BC^2 = \\frac{\\pi}{8}(p^2 + q^2)$\n$$\\text{छायांकित भाग} = \\text{दोनों छोटे अर्धवृत्त} + \\text{त्रिभुज ABC} - \\text{बड़ा अर्धवृत्त} = \\text{त्रिभुज ABC} = $\\frac{1}{2}$ pq$$\nअतः सही उत्तर '$\\frac{1}{2}$ pq' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_15",
+    "qe": "In a triangle ABC, AB = AC and the perimeter of triangle 544 cm, If equal sides are 5/6 of the non-equal side, then find the area of triangle?",
+    "qh": "एक त्रिभुज ABC में, AB = AC और त्रिभुज का परिमाप 544 सेमी है, यदि समान भुजाएँ असमान भुजा की 5/6 हैं, तो त्रिभुज का क्षेत्रफल ज्ञात कीजिए?",
+    "oe": [
+      "13872 cm^2",
+      "12480 cm^2",
+      "14256 cm^2",
+      "11520 cm^2"
+    ],
+    "oh": [
+      "13872 cm^2",
+      "12480 cm^2",
+      "14256 cm^2",
+      "11520 cm^2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Isosceles Altitude and Area Method):\nStep 1: असमान भुजा $BC = b$ मान लें।\nसमान भुजाएँ $AB = AC = \\frac{5}{6}b$ होंगी।\nStep 2: त्रिभुज का परिमाप 544 सेमी है:\n$$AB + AC + BC = 544$$\n$$$\\frac{5}{6}$b + $\\frac{5}{6}$b + b = 544 \\implies $\\frac{16}{6}$b = 544 \\implies $\\frac{8}{3}$b = 544$$\n$$b = $\\frac{544\\times3}{8}$ = 68 $\\times$ 3 = 204\\text{ सेमी}$$\nStep 3: समान भुजाओं का मान निकालें:\n$$AB = AC = $\\frac{5}{6}$ $\\times$ 204 = 170\\text{ सेमी}$$\nStep 4: शीर्ष A से आधार BC पर लम्ब डालने पर आधार समद्विभाजित होता है (अर्ध-आधार = $204 / 2 = 102\\text{ सेमी}$):\nत्रिभुज की ऊंचाई ($h$):\n$$h = $\\sqrt{170^2-102^2}$ = $\\sqrt{(170-102)(170+102)}$ = $\\sqrt{68\\times272}$ = $\\sqrt{68\\times(68\\times4)}$ = 68 $\\times$ 2 = 136\\text{ सेमी}$$\nStep 5: त्रिभुज का क्षेत्रफल निकालें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ \\text{आधार} $\\times$ \\text{ऊंचाई} = $\\frac{1}{2}$ $\\times$ 204 $\\times$ 136 = 102 $\\times$ 136 = 13872\\text{ वर्ग सेमी}$$\nअतः सही विकल्प  13872 cm^2 है।\n\nMethod 2 (Triplet Scaling Method):\nभुजाओं का अनुपात $170 : 102 = 5 : 3$ है, जो $3 : 4 : 5$ समकोण त्रिक बनाता है।\nऊंचाई = $34 \\times 4 = 136$ सेमी।\nक्षेत्रफल = $102 \\times 136 = 13872\\text{ cm}^2$।\nअतः सही उत्तर '13872 cm^2' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_16",
+    "qe": "The length and breadth of a rectangle are in the ratio 3 : 2. If its perimeter is 730cm, what is the area of the rectangle?",
+    "qh": "एक आयत की लंबाई और चौड़ाई का अनुपात 3 : 2 है। यदि इसका परिमाप 730 cm है, तो आयत का क्षेत्रफल ज्ञात करें।",
+    "oe": [
+      "31,974 cm^2",
+      "24,452 cm^2",
+      "20,567 cm^2",
+      "28,976 cm^2"
+    ],
+    "oh": [
+      "31,974 cm^2",
+      "24,452 cm^2",
+      "20,567 cm^2",
+      "28,976 cm^2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Perimeter to Area Method):\nStep 1: मान लें लंबाई = $3x$ तथा चौड़ाई = $2x$ सेमी।\nStep 2: परिमाप का समीकरण बनाएं:\n$$\\text{परिमाप} = 2(\\text{लंबाई} + \\text{चौड़ाई}) = 2(3x + 2x) = 10x$$\n$$10x = 730 \\implies x = 73$$\nStep 3: विमाएँ निकालें:\n- लंबाई = $3 \\times 73 = 219\\text{ सेमी}$\n- चौड़ाई = $2 \\times 73 = 146\\text{ सेमी}$\nStep 4: आयत का क्षेत्रफल ज्ञात करें:\n$$\\text{क्षेत्रफल} = 3x $\\times$ 2x = 6x^2 = 6 $\\times$ (73)^2$$\n$$73^2 = 5329$$\n$$\\text{क्षेत्रफल} = 6 $\\times$ 5329 = 31974\\text{ वर्ग सेमी}$$\nअतः सही विकल्प  31,974 cm^2 है।\n\nMethod 2 (Unit Digit Method):\n$\\text{क्षेत्रफल} = 219 \\times 146$.\nइकाई अंक $9 \\times 6 = 54$ (इकाई अंक 4) होगा।\nविकल्पों में केवल 31974 का इकाई अंक 4 है।\nअतः सही उत्तर '31,974 cm^2' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_17",
+    "qe": "The area of a square shaped field is 1764 m^2. The breadth of a rectangular park is 1/6th of the side of the square field and the length is four times its breadth. What is the cost (in ₹) of levelling the park at 30 per m^2?",
+    "qh": "एक वर्गाकार आकार वाले मैदान का क्षेत्रफल 1764 m^2 है। एक आयताकार पार्क की चौड़ाई, वर्गाकार मैदान की भुजा का 1/6 है और उसकी लंबाई, इसकी चौड़ाई का चार गुना है। 30 प्रति m^2 की दर से पार्क को समतल करने की लागत (₹ में) ज्ञात करें।",
+    "oe": [
+      "5880",
+      "4768",
+      "2940",
+      "6342"
+    ],
+    "oh": [
+      "5880",
+      "4768",
+      "2940",
+      "6342"
+    ],
+    "a": 0,
+    "e": "Method 1 (Geometric Area & Cost Method):\nStep 1: वर्गाकार मैदान की भुजा निकालें:\n$$\\text{वर्गाकार मैदान का क्षेत्रफल} = a^2 = 1764$$\n$$a = $\\sqrt{1764}$ = 42\\text{ मीटर}$$\nStep 2: आयताकार पार्क की चौड़ाई ($b$) निकालें:\n$$b = $\\frac{1}{6}$ $\\times$ 42 = 7\\text{ मीटर}$$\nStep 3: आयताकार पार्क की लंबाई ($l$) निकालें:\n$$l = 4 $\\times$ b = 4 $\\times$ 7 = 28\\text{ मीटर}$$\nStep 4: आयताकार पार्क का क्षेत्रफल نکالें:\n$$\\text{पार्क का क्षेत्रफल} = l $\\times$ b = 28 $\\times$ 7 = 196\\text{ वर्ग मीटर}$$\nStep 5: ₹30 प्रति वर्ग मीटर की दर से समतल करने की कुल लागत:\n$$\\text{कुल लागत} = 196 $\\times$ 30 = ₹5880$$\nअतः सही विकल्प  5880 है।\n\nMethod 2 (Direct Step Calculation):\n$$\\text{लागत} = (4 $\\times$ 7) $\\times$ 7 $\\times$ 30 = 28 $\\times$ 210 = ₹5880$$\nअतः सही उत्तर '5880' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_18",
+    "qe": "The cost of tilling the floor of a rectangular room is 9100 at 65 per m^2. The ratio of the length and breadth of the floor is 7 : 5. The perimeter (in m) of the floor of the room is :",
+    "qh": "65 प्रति m^2 की दर से, किसी आयताकार कमरे की फर्श पर टाइल्स लगाने की लागत 9,100 है। कमरे की लंबाई और चौड़ाई का अनुपात 7 : 5 है। कमरे के फर्श का परिमाप (मीटर में) ज्ञात करें।",
+    "oe": [
+      "48",
+      "24",
+      "36",
+      "28.8"
+    ],
+    "oh": [
+      "48",
+      "24",
+      "36",
+      "28.8"
+    ],
+    "a": 0,
+    "e": "Method 1 (Rate to Dimensions Method):\nStep 1: फर्श का कुल क्षेत्रफल निकालें:\n$$\\text{क्षेत्रफल} = \\frac{\\text{कुल लागत}}{\\text{प्रति वर्ग मीटर दर}} = $\\frac{9100}{65}$ = 140\\text{ वर्ग मीटर}$$\nStep 2: लंबाई और चौड़ाई का अनुपात $7 : 5$ है। मान लें लंबाई = $7x$ और चौड़ाई = $5x$:\n$$\\text{क्षेत्रफल} = 7x $\\times$ 5x = 35x^2$$\n$$35x^2 = 140 \\implies x^2 = $\\frac{140}{35}$ = 4 \\implies x = 2$$\nStep 3: कमरे के फर्श की विमाएँ निकालें:\n- लंबाई = $7 \\times 2 = 14\\text{ मीटर}$\n- चौड़ाई = $5 \\times 2 = 10\\text{ मीटर}$\nStep 4: फर्श का परिमाप ज्ञात करें:\n$$\\text{परिमाप} = 2(\\text{लंबाई} + \\text{चौड़ाई}) = 2(14 + 10) = 2 $\\times$ 24 = 48\\text{ मीटर}$$\nअतः सही विकल्प  48 है।\n\nMethod 2 (Ratio Perimeter Multiplier Method):\n$$\\text{परिमाप} = 2(7 + 5)x = 24x$$\nचूँकि $x = \\sqrt{140 / 35} = 2$, अतः $\\text{परिमाप} = 24 \\times 2 = 48\\text{ मीटर}$।\nअतः सही उत्तर '48' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_19",
+    "qe": "The perimeter and the area of a rectangular sheet are 42 m and 108 $m^2$, respectively. The length of the diagonal is",
+    "qh": "एक आयताकार शीट का परिमाप और क्षेत्रफल क्रमशः 42 m और 108 $m^2$ है। विकर्ण की लंबाई है:",
+    "oe": [
+      "15 m",
+      "10 m",
+      "14 m",
+      "12 m"
+    ],
+    "oh": [
+      "15 m",
+      "10 m",
+      "14 m",
+      "12 m"
+    ],
+    "a": 0,
+    "e": "Method 1 (Factor Pair & Pythagorean Triplet Method):\nStep 1: परिमाप $2(L + B) = 42 \\implies L + B = 21\\text{ m}$.\nStep 2: क्षेत्रफल $L \\times B = 108\\text{ m}^2$.\nStep 3: 108 के ऐसे दो गुणनखंड जिनका योग 21 हो:\n$$12 $\\times$ 9 = 108 \\quad \\text{तथा} \\quad 12 + 9 = 21$$\nअतः लंबाई $L = 12\\text{ m}$ तथा चौड़ाई $B = 9\\text{ m}$ है।\nStep 4: विकर्ण की लंबाई निकालें:\n$$\\text{विकर्ण} = $\\sqrt{L^2+B^2}$ = $\\sqrt{12^2+9^2}$ = $\\sqrt{144+81}$ = $\\sqrt{225}$ = 15\\text{ m}$$\nअतः सही विकल्प  15 m है।\n\nMethod 2 (Algebraic Identity Method):\n$$\\text{विकर्ण}^2 = L^2 + B^2 = (L + B)^2 - 2LB = 21^2 - 2(108) = 441 - 216 = 225$$\n$$\\text{विकर्ण} = $\\sqrt{225}$ = 15\\text{ m}$$\nअतः सही उत्तर '15 m' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_20",
+    "qe": "If the perimeter of a rectangle is 25 cm and the area is 25 $cm^2$, then its length is:",
+    "qh": "यदि एक आयत का परिमाप 25 सेमी है और क्षेत्रफल 25 सेमी² है, तो इसकी लंबाई है:",
+    "oe": [
+      "6.25 cm",
+      "12.5 cm",
+      "7.5 cm",
+      "10 cm"
+    ],
+    "oh": [
+      "6.25 cm",
+      "12.5 cm",
+      "7.5 cm",
+      "10 cm"
+    ],
+    "a": 3,
+    "e": "Method 1 (Algebraic Identity Method):\nStep 1: परिमाप $2(L + B) = 25 \\implies L + B = 12.5\\text{ cm}$.\nStep 2: क्षेत्रफल $L \\times B = 25\\text{ cm}^2$.\nStep 3: सूत्र $(L - B)^2 = (L + B)^2 - 4LB$ का उपयोग करने पर:\n$$(L - B)^2 = (12.5)^2 - 4(25) = 156.25 - 100 = 56.25$$\n$$L - B = $\\sqrt{56.25}$ = 7.5\\text{ cm}$$\nStep 4: दोनों समीकरणों को जोड़ने पर:\n$$2L = 12.5 + 7.5 = 20 \\implies L = 10\\text{ cm}$$\nअतः सही विकल्प  10 cm है।\n\nMethod 2 (Option Verification Method):\nयदि लंबाई $L = 10\\text{ cm}$ हो, तो चौड़ाई $B = 25 / 10 = 2.5\\text{ cm}$ होगी।\nपरिमाप = $2(10 + 2.5) = 2(12.5) = 25\\text{ cm}$ (सत्यापित)।\nअतः सही उत्तर '10 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_21",
+    "qe": "The length of a rectangle is 4m more than side of a square and the breadth of the rectangle is 4 m less than the side of the same square. If the area of this square is 576 sq.m, what is the area of the rectangle?",
+    "qh": "किसी आयत की लंबाई एक वर्ग की भुजा से 4 m अधिक है और चौड़ाई वर्ग की भुजा से 4 m कम है। यदि वर्ग का क्षेत्रफल 576 sq.m है, तब आयत का क्षेत्रफल क्या होगा?",
+    "oe": [
+      "560",
+      "545",
+      "557",
+      "551"
+    ],
+    "oh": [
+      "560",
+      "545",
+      "557",
+      "551"
+    ],
+    "a": 0,
+    "e": "Method 1 (Side Evaluation Method):\nStep 1: वर्ग की भुजा ($a$) निकालें:\n$$a^2 = 576 \\implies a = $\\sqrt{576}$ = 24\\text{ m}$$\nStep 2: आयत की लंबाई और चौड़ाई निकालें:\n- लंबाई ($L$) = $24 + 4 = 28\\text{ m}$\n- चौड़ाई ($B$) = $24 - 4 = 20\\text{ m}$\nStep 3: आयत का क्षेत्रफल ज्ञात करें:\n$$\\text{क्षेत्रफल} = L $\\times$ B = 28 $\\times$ 20 = 560\\text{ वर्ग मीटर}$$\nअतः सही विकल्प  560 है।\n\nMethod 2 (Algebraic Identity Method):\n$$\\text{आयत का क्षेत्रफल} = (a + 4)(a - 4) = a^2 - 16 = 576 - 16 = 560\\text{ वर्ग मीटर}$$\nअतः सही उत्तर '560' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_22",
+    "qe": "The perimeter of the rectangle is 280m and the difference between its two sides is 40m. Find the side of a square whose area is equal to the area of this rectangle.",
+    "qh": "आयत का परिमाप 280m है और इसकी दोनों भुजाओं के बीच का अंतर 40m है। एक ऐसे वर्ग की भुजा ज्ञात कीजिए जिसका क्षेत्रफल इस आयत के क्षेत्रफल के बराबर है।",
+    "oe": [
+      "45√6 m",
+      "30√5 m",
+      "30√6 m",
+      "45√5 m"
+    ],
+    "oh": [
+      "45√6 m",
+      "30√5 m",
+      "30√6 m",
+      "45√5 m"
+    ],
+    "a": 1,
+    "e": "Method 1 (Dimensions & Equal Area Method):\nStep 1: परिमाप $2(L + B) = 280 \\implies L + B = 140\\text{ m}$.\nStep 2: दोनों भुजाओं का अंतर $L - B = 40\\text{ m}$.\nStep 3: दोनों समीकरणों को हल करने पर:\n$$2L = 180 \\implies L = 90\\text{ m}$$\n$$B = 140 - 90 = 50\\text{ m}$$\nStep 4: आयत का क्षेत्रफल نکالें:\n$$\\text{क्षेत्रफल} = 90 $\\times$ 50 = 4500\\text{ m}^2$$\nStep 5: वर्ग की भुजा ($s$) निकालें:\n$$s^2 = 4500 \\implies s = $\\sqrt{4500}$ = $\\sqrt{900\\times5}$ = 30$\\sqrt{5}$\\text{ m}$$\nअतः सही विकल्प  30√5 m है।\n\nMethod 2 (Square Root Factorization):\n$$s = $\\sqrt{90\\times50}$ = $\\sqrt{9\\times10\\times5\\times10}$ = 3 $\\times$ 10$\\sqrt{5}$ = 30$\\sqrt{5}$\\text{ m}$$\nअतः सही उत्तर '30√5 m' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_23",
+    "qe": "If length of a rectangle is decreased by 6 cm, we get a square and the area of the square so formed is 252 square cm less than the area of the square formed, when breadth of the original rectangle is increased by 6 cm. find the perimeter of the rectangle?",
+    "qh": "यदि एक आयत की लंबाई में 6 सेमी की कमी की जाती है, तो हमें एक वर्ग मिलता है और इस प्रकार बने वर्ग का क्षेत्रफल उस वर्ग के क्षेत्रफल से 252 वर्ग सेमी कम होता है, जब मूल आयत की चौड़ाई में 6 सेमी की वृद्धि की जाती है। आयत का परिमाप ज्ञात कीजिए?",
+    "oe": [
+      "42 cm",
+      "88 cm",
+      "80 cm",
+      "84 cm"
+    ],
+    "oh": [
+      "42 cm",
+      "88 cm",
+      "80 cm",
+      "84 cm"
+    ],
+    "a": 3,
+    "e": "Method 1 (Algebraic Expansion Method):\nStep 1: प्रश्न के अनुसार:\n- लंबाई को 6 घटाने पर वर्ग की भुजा $l - 6$ बनती है तथा उसका क्षेत्रफल चौड़ाई के सापेक्ष $b(l - 6)$ के समतुल्य रूप लेता है।\n- चौड़ाई को 6 बढ़ाने पर बनने वाले क्षेत्र $l(b + 6)$ और इसके बीच का अंतर 252 है:\n$$l(b + 6) - b(l - 6) = 252$$\nStep 2: कोष्ठक खोलने पर:\n$$lb + 6l - lb + 6b = 252$$\n$$6(l + b) = 252 \\implies l + b = $\\frac{252}{6}$ = 42\\text{ सेमी}$$\nStep 3: आयत का परिमाप निकालें:\n$$\\text{परिमाप} = 2(l + b) = 2 $\\times$ 42 = 84\\text{ सेमी}$$\nअतः सही विकल्प  84 cm है।\n\nMethod 2 (Direct Formula):\n$$\\text{परिमाप} = 2(l + b) = 2 $\\times$ $\\frac{252}{6}$ = 2 $\\times$ 42 = 84\\text{ सेमी}$$\nअतः सही उत्तर '84 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_24",
+    "qe": "A rectangular plot, 55m long and 45m broad, has two concrete crossroads (of equal width) running in the middle of it one parallel to the length and the other parallel to the breadth. The rest of the plot is used as a lawn. If the area of the lawn is 1911 $m^2$, what is the width of each of the crossroads (in m ) ?",
+    "qh": "एक आयताकार पार्क की माप 55 मीटर लंबा और 45 मीटर चौड़ा है। पार्क के बीच से होकर दो रास्ते जाते हैं जो पार्क की लंबाई और चौड़ाई के समानांतर हैं। रास्ते के अलावा शेष भाग में लॉन है। यदि लॉन का क्षेत्रफल 1911 मीटर² है, तब रास्ते की चौड़ाई क्या होगी?",
+    "oe": [
+      "5.5",
+      "6",
+      "4",
+      "5"
+    ],
+    "oh": [
+      "5.5",
+      "6",
+      "4",
+      "5"
+    ],
+    "a": 1,
+    "e": "Method 1 (Lawn Area Equation Method):\nStep 1: रास्ते की चौड़ाई $w$ मान लें। रास्तों को हटाने पर शेष लॉन का क्षेत्रफल:\n$$\\text{लॉन का क्षेत्रफल} = (L - w)(B - w)$$\nStep 2: मान प्रतिस्थापित करने पर ($L = 55, B = 45$):\n$$(55 - w)(45 - w) = 1911$$\nStep 3: विकल्प (b) $w = 6$ रखने पर जाँचें:\n$$(55 - 6)(45 - 6) = 49 $\\times$ 39 = 1911\\text{ m}^2 \\quad (\\text{सत्यापित})$$\nअतः रास्ते की चौड़ाई 6 मीटर है।\nअतः सही विकल्प  6 है।\n\nMethod 2 (Quadratic Formulation Method):\n$$2475 - 100w + w^2 = 1911 \\implies w^2 - 100w + 564 = 0$$\n$$(w - 6)(w - 94) = 0 \\implies w = 6\\text{ m}$$\nअतः सही उत्तर '6' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_25",
+    "qe": "ABCD is a trapezium, where AB is parallel to DC. If AB = 4 cm, BC = 3 cm, CD = 7 cm and DA = 2 cm, then what is the area of the trapezium?",
+    "qh": "ABCD एक ट्रेपेजियम है, जहां AB, CD के समानांतर है। यदि AB = 4 सेमी, BC = 3 सेमी, CD = 7 सेमी और DA = 2 सेमी, तो ट्रेपेजियम का क्षेत्रफल क्या है?",
+    "oe": [
+      "22\\sqrt{$\\frac{2}{3}$} cm^2",
+      "22\\sqrt{$\\frac{3}{2}$} cm^2",
+      "22$\\sqrt{3}$ cm^2",
+      "\\frac{22$\\sqrt{2}$}{3} cm^2"
+    ],
+    "oh": [
+      "22\\sqrt{$\\frac{2}{3}$} cm^2",
+      "22\\sqrt{$\\frac{3}{2}$} cm^2",
+      "22$\\sqrt{3}$ cm^2",
+      "\\frac{22$\\sqrt{2}$}{3} cm^2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Triangle Height Resolution Method):\nStep 1: बिंदु B से भुजा DA के समानांतर रेखा BF खींचें ($BF = DA = 2\\text{ सेमी}$)।\nचूँकि $AB = DF = 4\\text{ सेमी}$, अतः आधार $FC = CD - DF = 7 - 4 = 3\\text{ सेमी}$।\nStep 2: $\\Delta BFC$ की भुजाएँ $2\\text{ सेमी}, 3\\text{ सेमी}, 3\\text{ सेमी}$ हैं (समद्विबाहु त्रिभुज)।\nआधार $FC = 3\\text{ सेमी}$ पर ऊंचाई $BE$ निकालें:\n- अर्ध-परिमाप $s = \\frac{2 + 3 + 3}{2} = 4\\text{ सेमी}$\n- $\\Delta BFC$ का क्षेत्रफल = $\\sqrt{4(4 - 2)(4 - 3)(4 - 3)} = \\sqrt{4 \\times 2 \\times 1 \\times 1} = 2\\sqrt{2}\\text{ cm}^2$\n- ऊंचाई $BE = \\frac{2 \\times \\text{क्षेत्रफल}}{\\text{आधार}} = \\frac{2 \\times 2\\sqrt{2}}{3} = \\frac{4\\sqrt{2}}{3}\\text{ सेमी}$\nStep 3: समलम्ब चतुर्भुज का क्षेत्रफल निकालें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$(AB + CD) $\\times$ BE = $\\frac{1}{2}$(4 + 7) $\\times$ \\frac{4$\\sqrt{2}$}{3} = \\frac{11 $\\times$ 4$\\sqrt{2}$}{6} = \\frac{22$\\sqrt{2}$}{3}\\text{ cm}^2$$\nअतः सही विकल्प  22√2 / 3 cm^2 है।\n\nMethod 2 (Direct Inspection):\n$\\text{क्षेत्रफल} = \\frac{11}{2} \\times \\frac{4\\sqrt{2}}{3} = \\frac{22\\sqrt{2}}{3}\\text{ cm}^2$.\nअतः सही उत्तर '\\frac{22$\\sqrt{2}$}{3} cm^2' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_26",
+    "qe": "If the diagonal of a rhombus is 8 cm and its area is 48 $cm^2$, then the length of each side of the rhombus is:",
+    "qh": "एक समचतुर्भुज का विकर्ण 8 सेमी है और इसका क्षेत्रफल 48 सेमी² है, तो समचतुर्भुज की प्रत्येक भुजा की लंबाई है:",
+    "oe": [
+      "√13 cm",
+      "2√13 cm",
+      "6√13 cm",
+      "5√13 cm"
+    ],
+    "oh": [
+      "√13 cm",
+      "2√13 cm",
+      "6√13 cm",
+      "5√13 cm"
+    ],
+    "a": 1,
+    "e": "Method 1 (Diagonal to Side Relation Method):\nStep 1: समचतुर्भुज का क्षेत्रफल = $\\frac{1}{2} \\times d_1 \\times d_2 = 48\\text{ cm}^2$.\nStep 2: दिया गया विकर्ण $d_1 = 8\\text{ सेमी}$ रखने पर:\n$$$\\frac{1}{2}$ $\\times$ 8 $\\times$ d_2 = 48 \\implies 4 d_2 = 48 \\implies d_2 = 12\\text{ सेमी}$$\nStep 3: समचतुर्भुज के विकर्ण परस्पर लम्ब समद्विभाजित करते हैं:\n$$\\text{भुजा} = \\sqrt{$\\le$ft($\\frac{d_1}{2}$\\right)^2 + $\\le$ft($\\frac{d_2}{2}$\\right)^2} = $\\sqrt{4^2+6^2}$$$\n$$\\text{भुजा} = $\\sqrt{16+36}$ = $\\sqrt{52}$ = $\\sqrt{4\\times13}$ = 2$\\sqrt{13}$\\text{ सेमी}$$\nअतः सही विकल्प  2√13 cm है।\n\nMethod 2 (Formula Method):\n$$\\text{भुजा} = $\\frac{1}{2}$$\\sqrt{d_1^2+d_2^2}$ = $\\frac{1}{2}$$\\sqrt{64+144}$ = $\\frac{1}{2}$$\\sqrt{208}$ = $\\frac{1}{2}$ $\\times$ 4$\\sqrt{13}$ = 2$\\sqrt{13}$\\text{ cm}$$\nअतः सही उत्तर '2√13 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_27",
+    "qe": "The circumcentre of an equilateral triangle is at a distance of 3.2 cm from the base of the triangle. What is the length (in cm) of each of its altitudes?",
+    "qh": "एक समबाहु त्रिभुज का परिकेन्द्र त्रिभुज के आधार से 3.2 सेमी की दूरी पर हैं। इसकी ऊंचाई (सेमी में) क्या है?",
+    "oe": [
+      "9.6",
+      "7.2",
+      "6.4",
+      "12.8"
+    ],
+    "oh": [
+      "9.6",
+      "7.2",
+      "6.4",
+      "12.8"
+    ],
+    "a": 0,
+    "e": "Method 1 (Centroid & Altitude Ratio Method):\nStep 1: समबाहु त्रिभुज में परिकेन्द्र, अंतःकेन्द्र और केन्द्रक एक ही बिंदु पर स्थित होते हैं।\nStep 2: आधार से परिकेन्द्र की लम्बवत दूरी अंतःत्रिज्या ($r$) के बराबर होती है:\n$$r = 3.2\\text{ सेमी}$$\nStep 3: केन्द्रक प्रत्येक माध्यिका (ऊंचाई) को $2 : 1$ के अनुपात में विभाजित करता है ($R : r = 2 : 1$):\n$$R = 2r = 2 $\\times$ 3.2 = 6.4\\text{ सेमी}$$\nStep 4: समबाहु त्रिभुज की कुल ऊंचाई ($H$):\n$$H = R + r = 6.4 + 3.2 = 9.6\\text{ सेमी}$$\nअतः सही विकल्प  9.6 है।\n\nMethod 2 (Direct Multiplier Method):\n$$H = 3r = 3 $\\times$ 3.2 = 9.6\\text{ सेमी}$$\nअतः सही उत्तर '9.6' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_28",
+    "qe": "'O' is a point in the interior of an equilateral triangle. The perpendicular distance from 'O' to the sides are √3 cm, 2√3 cm, 5√3 cm. The perimeter of the triangle is:",
+    "qh": "'O' एक समबाहु त्रिभुज के अभ्यंतर में एक बिन्दु है। 'O' से भुजाओं की लम्बवत दूरी √3 सेमी, 2√3 सेमी, 5√3 सेमी है। त्रिभुज का परिमाप है:",
+    "oe": [
+      "48 cm",
+      "32 cm",
+      "24 cm",
+      "64 cm"
+    ],
+    "oh": [
+      "48 cm",
+      "32 cm",
+      "24 cm",
+      "64 cm"
+    ],
+    "a": 0,
+    "e": "Method 1 (Viviani's Theorem & Perimeter Method):\nStep 1: लम्बवतों का कुल योग निकालें:\n$$P_1 + P_2 + P_3 = $\\sqrt{3}$ + 2$\\sqrt{3}$ + 5$\\sqrt{3}$ = 8$\\sqrt{3}$\\text{ सेमी}$$\nStep 2: समबाहु त्रिभुज की भुजा ($a$) का सूत्र:\n$$a = \\frac{2}{$\\sqrt{3}$}(P_1 + P_2 + P_3) = \\frac{2}{$\\sqrt{3}$} $\\times$ 8$\\sqrt{3}$ = 16\\text{ सेमी}$$\nStep 3: त्रिभुज का परिमाप निकालें:\n$$\\text{परिमाप} = 3a = 3 $\\times$ 16 = 48\\text{ सेमी}$$\nअतः सही विकल्प  48 cm है।\n\nMethod 2 (Height Formulation Method):\nऊंचाई $h = P_1 + P_2 + P_3 = 8\\sqrt{3}\\text{ सेमी}$.\n$\\frac{\\sqrt{3}}{2}a = 8\\sqrt{3} \\implies a = 16\\text{ सेमी}$.\nपरिमाप = $3 \\times 16 = 48\\text{ सेमी}$.\nअतः सही उत्तर '48 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_29",
+    "qe": "ABC is an equilateral triangle. P, Q and R are the midpoints of sides AB, BC and CA, respectively. If the length of the side of the triangle ABC is 8cm, then the area $of \\Delta PQR$ is:",
+    "qh": "ABC एक समबाहु त्रिभुज है P, Q और R क्रमशः भुजाओं AB, BC और CA के मध्य बिन्दु हैं। यदि त्रिभुज ABC की भुजा की लम्बाई 8 सेमी है, तो ΔPQR का क्षेत्रफल ज्ञात कीजिए।",
+    "oe": [
+      "4√3 $cm^2$",
+      "8√3 $cm^2$",
+      "16√3 $cm^2$",
+      "2√3 $cm^2$"
+    ],
+    "oh": [
+      "4√3 $cm^2$",
+      "8√3 $cm^2$",
+      "16√3 $cm^2$",
+      "2√3 $cm^2$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Mid-Point Theorem Method):\nStep 1: मध्य बिंदु प्रमेय के अनुसार, किसी त्रिभुज की किन्हीं दो भुजाओं के मध्य बिंदुओं को मिलाने वाली रेखा तीसरी भुजा की आधी होती है:\n$$PR = $\\frac{1}{2}$ BC = $\\frac{1}{2}$ $\\times$ 8 = 4\\text{ सेमी}$$\nअतः $\\Delta PQR$ भी 4 सेमी भुजा वाला एक समबाहु त्रिभुज है।\nStep 2: $\\Delta PQR$ का क्षेत्रफल निकालें:\n$$\\text{क्षेत्रफल} = \\frac{$\\sqrt{3}$}{4} a^2 = \\frac{$\\sqrt{3}$}{4} $\\times$ 4^2 = 4$\\sqrt{3}$\\text{ cm}^2$$\nअतः सही विकल्प  4√3 $cm^2$ है।\n\nMethod 2 (One-Fourth Area Property Method):\nमध्य बिंदुओं को मिलाने से बना अंतःत्रिभुज मूल त्रिभुज के क्षेत्रफल का $\\frac{1}{4}$ भाग होता है:\n$$\\text{Area}($\\Delta$ PQR) = $\\frac{1}{4}$ $\\times$ $\\le$ft(\\frac{$\\sqrt{3}$}{4} $\\times$ 8^2\\right) = $\\frac{1}{4}$ $\\times$ 16$\\sqrt{3}$ = 4$\\sqrt{3}$\\text{ cm}^2$$\nअतः सही उत्तर '4√3 $cm^2$' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_30",
+    "qe": "Of The three angles of a triangle, one is five times the smallest and another is three times the smallest. Find the smallest angles, and the type of the triangle",
+    "qh": "किसी त्रिभुज के तीनों कोणों में से एक सबसे छोटे कोण का पांच गुना और दूसरा सबसे छोटे कोण का तीन गुना होता है। सबसे छोटा कोण और त्रिभुज का प्रकार ज्ञात करें",
+    "oe": [
+      "100°, obtuse angled triangle",
+      "50°, obtuse angled triangle",
+      "60°, acute angled triangle",
+      "20°, obtuse angled triangle"
+    ],
+    "oh": [
+      "100°, obtuse angled triangle",
+      "50°, obtuse angled triangle",
+      "60°, acute angled triangle",
+      "20°, obtuse angled triangle"
+    ],
+    "a": 3,
+    "e": "Method 1 (Angle Sum Property Method):\nStep 1: सबसे छोटा कोण $= x$ मान लें।\nअन्य दो कोण $5x$ और $3x$ होंगे।\nStep 2: त्रिभुज के तीनों कोणों का योग $180^\\circ$ होता है:\n$$x + 3x + 5x = 180^$\\circ$ \\implies 9x = 180^$\\circ$ \\implies x = 20^$\\circ$$$\nStep 3: तीनों कोण निकालें:\n- सबसे छोटा कोण = $20^\\circ$\n- दूसरा कोण = $3 \\times 20^\\circ = 60^\\circ$\n- सबसे बड़ा कोण = $5 \\times 20^\\circ = 100^\\circ$\nStep 4: चूँकि एक कोण ($100^\\circ$) $90^\\circ$ से अधिक है, अतः यह एक अधिक कोण त्रिभुज (Obtuse angled triangle) है। सबसे छोटा कोण $20^\\circ$ है।\nअतः सही विकल्प  20°, obtuse angled triangle है।\n\nMethod 2 (Direct Inspection):\n$9x = 180^\\circ \\implies x = 20^\\circ$ (न्यूनतम कोण)।\nअधिकतम कोण $= 100^\\circ > 90^\\circ \\implies$ अधिक कोण त्रिभुज।\nअतः सही उत्तर '20°, obtuse angled triangle' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_31",
+    "qe": "If the perimeter of an isosceles right triangle is (16√2 + 16) cm, then the area of the triangle is:",
+    "qh": "यदि एक समद्विबाहु समकोणीय त्रिभुज का परिमाप (16√2 + 16) सेमी है, तो त्रिभुज का क्षेत्रफल कितना होगा?",
+    "oe": [
+      "76 sq.cm",
+      "64 sq.cm",
+      "57 sq.cm",
+      "66 sq.cm"
+    ],
+    "oh": [
+      "76 sq.cm",
+      "64 sq.cm",
+      "57 sq.cm",
+      "66 sq.cm"
+    ],
+    "a": 1,
+    "e": "Method 1 (Perimeter to Leg Length Method):\nStep 1: समद्विबाहु समकोण त्रिभुज की दोनों समान भुजाएँ $x$ और कर्ण $x\\sqrt{2}$ होता है।\n$$\\text{परिमाप} = x + x + x$\\sqrt{2}$ = 2x + x$\\sqrt{2}$ = x(2 + $\\sqrt{2}$)$$\nStep 2: दिए गए परिमाप के बराबर रखने पर:\n$$x$\\sqrt{2}$($\\sqrt{2}$ + 1) = 16($\\sqrt{2}$ + 1)$$\n$$x$\\sqrt{2}$ = 16 \\implies x = \\frac{16}{$\\sqrt{2}$} = 8$\\sqrt{2}$\\text{ सेमी}$$\nStep 3: त्रिभुज का क्षेत्रफल ज्ञात करें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ x $\\times$ x = $\\frac{1}{2}$ $\\times$ (8$\\sqrt{2}$)^2 = $\\frac{1}{2}$ $\\times$ 128 = 64\\text{ वर्ग सेमी}$$\nअतः सही विकल्प  64 sq.cm है।\n\nMethod 2 (Hypotenuse Area Formula Method):\nकर्ण $h = x\\sqrt{2} = 16\\text{ सेमी}$.\nसमद्विबाहु समकोण त्रिभुज का क्षेत्रफल = $\\frac{h^2}{4} = \\frac{16^2}{4} = \\frac{256}{4} = 64\\text{ sq.cm}$.\nअतः सही उत्तर '64 sq.cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_32",
+    "qe": "The area of an isosceles right angled triangles is 121 $cm^2$. Find its hypotenuse.",
+    "qh": "एक समद्विबाहु समकोण त्रिभुज का क्षेत्रफल 121 सेमी² है। इसके कर्ण की लंबाई ज्ञात करें।",
+    "oe": [
+      "23 cm",
+      "20 cm",
+      "22 cm",
+      "21 cm"
+    ],
+    "oh": [
+      "23 cm",
+      "20 cm",
+      "22 cm",
+      "21 cm"
+    ],
+    "a": 2,
+    "e": "Method 1 (Leg Length to Hypotenuse Method):\nStep 1: समान भुजाएँ $x$ मान लें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ x^2 = 121$$\n$$x^2 = 242 \\implies x = $\\sqrt{242}$ = 11$\\sqrt{2}$\\text{ सेमी}$$\nStep 2: कर्ण निकालें:\n$$\\text{कर्ण} = x$\\sqrt{2}$ = 11$\\sqrt{2}$ $\\times$ $\\sqrt{2}$ = 11 $\\times$ 2 = 22\\text{ सेमी}$$\nअतः सही विकल्प  22 cm है।\n\nMethod 2 (Direct Hypotenuse Area Formula):\n$$\\text{क्षेत्रफल} = \\frac{(\\text{कर्ण})^2}{4} = 121$$\n$$(\\text{कर्ण})^2 = 484 \\implies \\text{कर्ण} = $\\sqrt{484}$ = 22\\text{ सेमी}$$\nअतः सही उत्तर '22 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_33",
+    "qe": "Taking any three of the line segments out of segments of length 2 cm, 3 cm, 5 cm, and 6 cm, the number of triangles that can be formed is",
+    "qh": "2 सेमी, 3 सेमी, 5 सेमी, और 6 सेमी लंबाई वाले खंडों में से किन्हीं तीन रेखाखंडों को लेकर बनने वाले त्रिभुजों की संख्या है।",
+    "oe": [
+      "3",
+      "4",
+      "5",
+      "2"
+    ],
+    "oh": [
+      "3",
+      "4",
+      "5",
+      "2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Triangle Inequality Combination Method):\nStep 1: 4 रेखाखंडों में से 3 चुनने के कुल संयोजन = $^4C_3 = 4$:\n1. $(2, 3, 5)$\n2. $(2, 3, 6)$\n3. $(2, 5, 6)$\n4. $(3, 5, 6)$\nStep 2: त्रिभुज असमिका नियम (दो छोटी भुजाओं का योग तीसरी से बड़ा होना चाहिए: $a + b > c$) लागू करें:\n- $(2, 3, 5) \\implies 2 + 3 = 5$ ($5 > 5$ असत्य, त्रिभुज संभव नहीं)\n- $(2, 3, 6) \\implies 2 + 3 = 5 < 6$ (त्रिभुज संभव नहीं)\n- $(2, 5, 6) \\implies 2 + 5 = 7 > 6$ (सत्य, त्रिभुज संभव है)\n- $(3, 5, 6) \\implies 3 + 5 = 8 > 6$ (सत्य, त्रिभुज संभव है)\nStep 3: कुल मान्य त्रिभुजों की संख्या = 2.\nअतः सही विकल्प  2 है।\n\nMethod 2 (Systematic Listing):\nकेवल $(2, 5, 6)$ और $(3, 5, 6)$ ही असमिका को संतुष्ट करते हैं।\nअतः सही उत्तर '2' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_34",
+    "qe": "6, 8 and 'a' are sides of a triangle, How many integer triangles are possible.",
+    "qh": "6, 8 और a एक त्रिभुज की भुजाएँ हैं, कितने पूर्णांक त्रिभुज संभव हैं।",
+    "oe": [
+      "11",
+      "12",
+      "14",
+      "15"
+    ],
+    "oh": [
+      "11",
+      "12",
+      "14",
+      "15"
+    ],
+    "a": 0,
+    "e": "Method 1 (Triangle Inequality Range Method):\nStep 1: त्रिभुज की तीसरी भुजा $a$ की सीमा दोनों दी गई भुजाओं के अंतर और योग के बीच होती है:\n$$|8 - 6| < a < 8 + 6$$\n$$2 < a < 14$$\nStep 2: 2 और 14 के बीच आने वाले संभावित पूर्णांक मान:\n$$a \\in \\{3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13\\}$$\nStep 3: कुल मानों की संख्या निकालें:\n$$\\text{कुल मान} = 13 - 3 + 1 = 11$$\nअतः 11 पूर्णांक त्रिभुज संभव हैं।\nअतः सही विकल्प  11 है।\n\nMethod 2 (Direct Formula Method):\nतीसरी भुजा के संभावित पूर्णांक मान = $2 \\times (\\text{छोटी भुजा}) - 1 = 2 \\times 6 - 1 = 11$.\nअतः सही उत्तर '11' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_35",
+    "qe": "PQR is an isosceles triangle such that PQ = QR = 10 cm and ∠PQR = 90°. What is the length of the perpendicular drawn from Q on PR?",
+    "qh": "PQR एक ऐसा समद्विबाहु त्रिभुज है कि PQ = QR = 10 cm और ∠PQR = 90° है। भुजा PR पर बिंदु Q से खींचे जाने वाले लंब की लंबाई बताइए।",
+    "oe": [
+      "6√2 cm",
+      "7√2 cm",
+      "5√2 cm",
+      "4√2 cm"
+    ],
+    "oh": [
+      "6√2 cm",
+      "7√2 cm",
+      "5√2 cm",
+      "4√2 cm"
+    ],
+    "a": 2,
+    "e": "Method 1 (Area Equating Method):\nStep 1: समकोण समद्विबाहु त्रिभुज में कर्ण $PR$ की लंबाई पाइथागोरस प्रमेय से निकालें:\n$$PR = $\\sqrt{PQ^2+QR^2}$ = $\\sqrt{10^2+10^2}$ = 10$\\sqrt{2}$\\text{ cm}$$\nStep 2: बिंदु Q से कर्ण PR पर डाले गए लम्ब QS की लंबाई का सूत्र:\n$$QS = $\\frac{PQ\\timesQR}{PR}$$$\nStep 3: मान रखने पर:\n$$QS = \\frac{10 $\\times$ 10}{10$\\sqrt{2}$} = \\frac{10}{$\\sqrt{2}$} = 5$\\sqrt{2}$\\text{ cm}$$\nअतः सही विकल्प  5√2 cm है।\n\nMethod 2 (Hypotenuse Median Property):\nसमकोण त्रिभुज में समकोण शीर्ष से कर्ण पर खींची गई माध्यिका/लम्ब कर्ण की आधी होती है:\n$$QS = $\\frac{PR}{2}$ = \\frac{10$\\sqrt{2}$}{2} = 5$\\sqrt{2}$\\text{ cm}$$\nअतः सही उत्तर '5√2 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_36",
+    "qe": "ABC is a right angled triangle, right angled at A. A circle is inscribed in it. The lengths of two sides containing the right angle are 48 cm and 14 cm. The radius of the inscribed circle is:",
+    "qh": "ABC एक समकोण त्रिभुज है, जिसमें कोण A समकोण है। इसमें एक अंतः वृत्त खींचा गया है। समकोण बनाने वाली दो भुजाओं की लंबाइयां 48 cm और 14 cm हैं। अंतः वृत्त की त्रिज्या है:",
+    "oe": [
+      "4 cm",
+      "8 cm",
+      "6 cm",
+      "5 cm"
+    ],
+    "oh": [
+      "4 cm",
+      "8 cm",
+      "6 cm",
+      "5 cm"
+    ],
+    "a": 2,
+    "e": "Method 1 (Inradius Formula for Right Triangle Method):\nStep 1: कर्ण ($BC$) की लंबाई ज्ञात करें:\n$$BC = $\\sqrt{AB^2+AC^2}$ = $\\sqrt{48^2+14^2}$ = $\\sqrt{2304+196}$ = $\\sqrt{2500}$ = 50\\text{ cm}$$\n(पाइथागोरियन त्रिक: $7, 24, 25 \\implies 14, 48, 50$)\nStep 2: समकोण त्रिभुज के अंतःवृत्त की त्रिज्या ($r$) का सूत्र:\n$$r = $\\frac{AB+AC-BC}{2}$$$\nStep 3: मान रखने पर:\n$$r = $\\frac{14+48-50}{2}$ = $\\frac{62-50}{2}$ = $\\frac{12}{2}$ = 6\\text{ cm}$$\nअतः सही विकल्प  6 cm है।\n\nMethod 2 (Area over Semi-perimeter Method):\n- क्षेत्रफल $\\Delta = \\frac{1}{2} \\times 14 \\times 48 = 336\\text{ cm}^2$\n- अर्ध-परिमाप $s = \\frac{14 + 48 + 50}{2} = 56\\text{ cm}$\n- $r = \\frac{\\Delta}{s} = \\frac{336}{56} = 6\\text{ cm}$\nअतः सही उत्तर '6 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_37",
+    "qe": "The length of the base of a triangle is 3 cm smaller than the length of its altitude. Its area is 104 $cm^2$. What is the length of the base?",
+    "qh": "एक त्रिभुज के आधार की लंबाई उसकी ऊंचाई की लंबाई से 3 सेमी कम है। इसका क्षेत्रफल 104 सेमी² है। आधार की लंबाई कितनी है?",
+    "oe": [
+      "14 cm",
+      "13 cm",
+      "11 cm",
+      "12 cm"
+    ],
+    "oh": [
+      "14 cm",
+      "13 cm",
+      "11 cm",
+      "12 cm"
+    ],
+    "a": 1,
+    "e": "Method 1 (Factorization Method):\nStep 1: मान लें आधार $= x\\text{ cm}$। ऊंचाई $= x + 3\\text{ cm}$ होगी।\nStep 2: त्रिभुज का क्षेत्रफल:\n$$$\\frac{1}{2}$ $\\times$ x $\\times$ (x + 3) = 104$$\n$$x(x + 3) = 208$$\nStep 3: 208 के ऐसे दो गुणनखंड जिनका अंतर 3 हो:\n$$208 = 13 $\\times$ 16$$\nअतः $x = 13\\text{ cm}$ तथा ऊंचाई $= 16\\text{ cm}$।\nआधार की लंबाई 13 सेमी है।\nअतः सही विकल्प  13 cm है।\n\nMethod 2 (Quadratic Equation Method):\n$$x^2 + 3x - 208 = 0 \\implies (x + 16)(x - 13) = 0 \\implies x = 13\\text{ cm}$$\nअतः सही उत्तर '13 cm' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_38",
+    "qe": "Find the area of triangle whose sides are 10 cm, 12 cm, and 18 cm.",
+    "qh": "10 cm, 12 cm और 18 cm भुजाओं वाले त्रिभुज का क्षेत्रफल ज्ञात कीजिए।",
+    "oe": [
+      "22√2 $cm^2$",
+      "30√2 $cm^2$",
+      "28√2 $cm^2$",
+      "40√2 $cm^2$"
+    ],
+    "oh": [
+      "22√2 $cm^2$",
+      "30√2 $cm^2$",
+      "28√2 $cm^2$",
+      "40√2 $cm^2$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Heron's Formula Method):\nStep 1: अर्ध-परिमाप ($s$) निकालें:\n$$s = $\\frac{a+b+c}{2}$ = $\\frac{10+12+18}{2}$ = $\\frac{40}{2}$ = 20\\text{ cm}$$\nStep 2: हीरोन का सूत्र लागू करें:\n$$\\text{क्षेत्रफल} = $\\sqrt{s(s-a)(s-b)(s-c)}$$$\n$$\\text{क्षेत्रफल} = $\\sqrt{20(20-10)(20-12)(20-18)}$ = $\\sqrt{20\\times10\\times8\\times2}$$$\nStep 3: गुणनखंड करके सरल करें:\n$$\\text{क्षेत्रफल} = $\\sqrt{3200}$ = $\\sqrt{1600\\times2}$ = 40$\\sqrt{2}$\\text{ cm}^2$$\nअतः सही विकल्प  40√2 $cm^2$ है।\n\nMethod 2 (Direct Factor Extraction):\n$$$\\sqrt{20\\times10\\times16}$ = $\\sqrt{200\\times16}$ = $\\sqrt{3200}$ = 40$\\sqrt{2}$\\text{ cm}^2$$\nअतः सही उत्तर '40√2 $cm^2$' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_39",
+    "qe": "The difference between the semi-perimeter and the sides $of \\Delta PQR are 18 cm, 17 cm and 25 cm,$ respectively. Find the area of the triangle.",
+    "qh": "ΔPQR के अर्ध-परिमाप और भुजाओं के बीच का अंतर क्रमशः 18 सेमी, 17 सेमी और 25 सेमी है। त्रिभुज का क्षेत्रफल ज्ञात कीजिए।",
+    "oe": [
+      "330√510 $cm^2$",
+      "230√510 $cm^2$",
+      "30√510 $cm^2$",
+      "130√510 $cm^2$"
+    ],
+    "oh": [
+      "330√510 $cm^2$",
+      "230√510 $cm^2$",
+      "30√510 $cm^2$",
+      "130√510 $cm^2$"
+    ],
+    "a": 2,
+    "e": "Method 1 (Heron's Property Method):\nStep 1: दिए गए अंतर:\n- $s - p = 18$\n- $s - q = 17$\n- $s - r = 25$\nStep 2: तीनों समीकरणों को जोड़ने पर:\n$$(s - p) + (s - q) + (s - r) = 18 + 17 + 25$$\n$$3s - (p + q + r) = 60$$\nचूँकि $p + q + r = 2s$:\n$$3s - 2s = 60 \\implies s = 60\\text{ cm}$$\nStep 3: क्षेत्रफल के सूत्र में मान रखें:\n$$\\text{क्षेत्रफल} = $\\sqrt{s(s-p)(s-q)(s-r)}$$$\n$$\\text{क्षेत्रफल} = $\\sqrt{60\\times18\\times17\\times25}$$$\nStep 4: सरल करें:\n$$\\text{क्षेत्रफल} = $\\sqrt{(4\\times15)\\times(9\\times2)\\times17\\times25}$ = 2 $\\times$ 3 $\\times$ 5 $\\times$ $\\sqrt{15\\times2\\times17}$ = 30$\\sqrt{510}$\\text{ cm}^2$$\nअतः सही विकल्प  30√510 $cm^2$ है।\n\nMethod 2 (Direct Root Simplification):\n$$$\\sqrt{25\\times36\\times30\\times17}$ = 5 $\\times$ 6 $\\times$ $\\sqrt{510}$ = 30$\\sqrt{510}$\\text{ cm}^2$$\nअतः सही उत्तर '30√510 $cm^2$' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_40",
+    "qe": "It is given that the area of a triangle is A. The value of its perimeter, inradius, circumradius and the average of the lengths of the medians are respectively, P, r, R and D. The ratio of A : P is equal to:",
+    "qh": "दिया गया है कि एक त्रिभुज का क्षेत्रफल A है। इसका परिमाप, अंतःत्रिज्या, बाह्यत्रिज्या और माध्यिकाओं की औसत लम्बाई क्रमशः P, r, R और D हैं। A : P का अनुपात किसके समान होगा?",
+    "oe": [
+      "r : 1",
+      "($R + r)^2$ : d",
+      "r : 2",
+      "($R - r)^2$ : r"
+    ],
+    "oh": [
+      "r : 1",
+      "($R + r)^2$ : d",
+      "r : 2",
+      "($R - r)^2$ : r"
+    ],
+    "a": 2,
+    "e": "Method 1 (Inradius Fundamental Relation Method):\nStep 1: किसी भी त्रिभुज का क्षेत्रफल ($A$) और अंतःत्रिज्या ($r$) का संबंध:\n$$A = r $\\times$ s$$\nजहाँ $s$ त्रिभुज का अर्ध-परिमाप (semi-perimeter) है।\nStep 2: अर्ध-परिमाप और कुल परिमाप ($P$) का संबंध $s = \\frac{P}{2}$ प्रतिस्थापित करने पर:\n$$A = r $\\times$ $\\frac{P}{2}$$$\nStep 3: $A : P$ का अनुपात निकालें:\n$$$\\frac{A}{P}$ = $\\frac{r}{2}$ \\implies A : P = r : 2$$\nअतः सही विकल्प  r : 2 है।\n\nMethod 2 (Direct Step Formulation):\n$$$\\frac{A}{P}$ = $\\frac{A}{2s}$ = $\\frac{1}{2}$ $\\le$ft($\\frac{A}{s}$\\right) = $\\frac{r}{2}$ = r : 2$$\nअतः सही उत्तर 'r : 2' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_41",
+    "qe": "Sides of a triangle are 7cm, 8cm and 9cm find circumradius of triangle.",
+    "qh": "एक त्रिभुज की भुजाएं 7 सेमी, 8 सेमी, तथा 9 सेमी हैं तो त्रिभुज की परित्रिज्या ज्ञात करो।",
+    "oe": [
+      "\\frac{21}{2$\\sqrt{5}$} cm",
+      "\\frac{$\\sqrt{5}$}{42} cm",
+      "42$\\sqrt{5}$ cm",
+      "\\frac{42}{$\\sqrt{5}$} cm"
+    ],
+    "oh": [
+      "\\frac{21}{2$\\sqrt{5}$} cm",
+      "\\frac{$\\sqrt{5}$}{42} cm",
+      "42$\\sqrt{5}$ cm",
+      "\\frac{42}{$\\sqrt{5}$} cm"
+    ],
+    "a": 0,
+    "e": "Method 1 (Circumradius Formula Method):\nStep 1: त्रिभुज का अर्ध-परिमाप ($s$) निकालें:\n$$s = $\\frac{7+8+9}{2}$ = 12\\text{ सेमी}$$\nStep 2: हीरोन के सूत्र से क्षेत्रफल ($\\Delta$) निकालें:\n$$$\\Delta$ = $\\sqrt{12(12-7)(12-8)(12-9)}$ = $\\sqrt{12\\times5\\times4\\times3}$ = $\\sqrt{720}$ = 12$\\sqrt{5}$\\text{ cm}^2$$\nStep 3: परित्रिज्या ($R$) का सूत्र:\n$$R = $\\frac{abc}{4\\Delta}$$$\nStep 4: मान रखने पर ($a = 7, b = 8, c = 9$):\n$$R = \\frac{7 $\\times$ 8 $\\times$ 9}{4 $\\times$ 12$\\sqrt{5}$} = \\frac{504}{48$\\sqrt{5}$} = \\frac{21}{2$\\sqrt{5}$}\\text{ सेमी}$$\nअतः सही विकल्प  21 / (2√5) cm है।\n\nMethod 2 (Simplification Method):\n$$R = \\frac{7 $\\times$ 2 $\\times$ 9}{12$\\sqrt{5}$} = \\frac{126}{12$\\sqrt{5}$} = \\frac{21}{2$\\sqrt{5}$}\\text{ cm}$$\nअतः सही उत्तर '\\frac{21}{2$\\sqrt{5}$} cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_42",
+    "qe": "In a triangle ABC, the length of medians are 10 cm, 12 cm and 16 cm. Find the Area of the triangle.",
+    "qh": "एक त्रिभुज ABC में, माध्यिकाओं की लंबाई 10 सेमी, 12 सेमी और 16 सेमी है। त्रिभुज का क्षेत्रफल ज्ञात कीजिए।",
+    "oe": [
+      "4√399 $cm^2$",
+      "3√399 $cm^2$",
+      "2√399 $cm^2$",
+      "8√399 $cm^2$"
+    ],
+    "oh": [
+      "4√399 $cm^2$",
+      "3√399 $cm^2$",
+      "2√399 $cm^2$",
+      "8√399 $cm^2$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Medians Area Formula Method):\nStep 1: किसी त्रिभुज का क्षेत्रफल उसकी माध्यिकाओं को भुजा मानकर बनाए गए त्रिभुज के क्षेत्रफल का $\\frac{4}{3}$ गुना होता है:\n$$\\text{Area}($\\Delta$ ABC) = $\\frac{4}{3}$ $\\times$ \\text{Area}(m_1, m_2, m_3)$$\nStep 2: माध्यिकाओं (10, 12, 16 सेमी) का अर्ध-परिमाप ($s_m$) निकालें:\n$$s_m = $\\frac{10+12+16}{2}$ = 19\\text{ सेमी}$$\nStep 3: माध्यिका त्रिभुज का क्षेत्रफल निकालें:\n$$\\text{Area}_m = $\\sqrt{19(19-10)(19-12)(19-16)}$ = $\\sqrt{19\\times9\\times7\\times3}$ = 3$\\sqrt{399}$\\text{ cm}^2$$\nStep 4: त्रिभुज ABC का क्षेत्रफल निकालें:\n$$\\text{Area}($\\Delta$ ABC) = $\\frac{4}{3}$ $\\times$ 3$\\sqrt{399}$ = 4$\\sqrt{399}$\\text{ cm}^2$$\nअतः सही विकल्प  4√399 $cm^2$ है।\n\nMethod 2 (Direct Step Multiplication):\n$$$\\frac{4}{3}$ $\\times$ $\\sqrt{19\\times9\\times21}$ = $\\frac{4}{3}$ $\\times$ 3$\\sqrt{399}$ = 4$\\sqrt{399}$\\text{ cm}^2$$\nअतः सही उत्तर '4√399 $cm^2$' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_43",
+    "qe": "The sum of all the three sides of an equilateral triangle is 15√3 cm. The height of the triangle is:",
+    "qh": "एक समबाहु त्रिभुज की तीनों भुजाओं का योग 15√3 सेमी है। त्रिभुज की ऊंचाई है-",
+    "oe": [
+      "7 cm",
+      "8 cm",
+      "7.5 cm",
+      "9 cm"
+    ],
+    "oh": [
+      "7 cm",
+      "8 cm",
+      "7.5 cm",
+      "9 cm"
+    ],
+    "a": 2,
+    "e": "Method 1 (Equilateral Triangle Side & Height Method):\nStep 1: समबाहु त्रिभुज की तीनों भुजाओं का योग परिमाप ($3a$) होता है:\n$$3a = 15$\\sqrt{3}$ \\implies a = 5$\\sqrt{3}$\\text{ सेमी}$$\nStep 2: समबाहु त्रिभुज की ऊंचाई ($h$) का सूत्र:\n$$h = \\frac{$\\sqrt{3}$}{2} a$$\nStep 3: मान रखने पर:\n$$h = \\frac{$\\sqrt{3}$}{2} $\\times$ 5$\\sqrt{3}$ = $\\frac{5\\times3}{2}$ = $\\frac{15}{2}$ = 7.5\\text{ सेमी}$$\nअतः सही विकल्प  7.5 cm है।\n\nMethod 2 (Direct Proportion Method):\nपरिमाप से ऊंचाई का सीधा अनुपात $h = \\frac{\\text{परिमाप}}{2\\sqrt{3}}$ होता है:\n$$h = \\frac{15$\\sqrt{3}$}{2$\\sqrt{3}$} = 7.5\\text{ सेमी}$$\nअतः सही उत्तर '7.5 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_44",
+    "qe": "Twelve sticks, each of length one unit, are used to form an equilateral triangle. The area of the triangle is:",
+    "qh": "इकाई लम्बाई की प्रत्येक 12 छड़ों का उपयोग एक समबाहु त्रिभुज बनाने के लिए किया जाता है। त्रिभुज का क्षेत्रफल है:",
+    "oe": [
+      "3√3 sq units",
+      "2√3 sq units",
+      "4√3 sq units",
+      "8√3 sq units"
+    ],
+    "oh": [
+      "3√3 sq units",
+      "2√3 sq units",
+      "4√3 sq units",
+      "8√3 sq units"
+    ],
+    "a": 2,
+    "e": "Method 1 (Stick Count Side Formulation Method):\nStep 1: कुल 12 छड़ें हैं, समबाहु त्रिभुज की तीनों भुजाएँ बराबर होती हैं:\n$$\\text{प्रत्येक भुजा } (a) = $\\frac{12}{3}$ = 4\\text{ इकाइयाँ}$$\nStep 2: समबाहु त्रिभुज का क्षेत्रफल ज्ञात करें:\n$$\\text{क्षेत्रफल} = \\frac{$\\sqrt{3}$}{4} a^2 = \\frac{$\\sqrt{3}$}{4} $\\times$ 4^2 = \\frac{$\\sqrt{3}$}{4} $\\times$ 16 = 4$\\sqrt{3}$\\text{ वर्ग इकाई}$$\nअतः सही विकल्प  4√3 sq units है।\n\nMethod 2 (Direct Calculation):\n$$\\text{क्षेत्रफल} = \\frac{$\\sqrt{3}$}{4} $\\times$ 16 = 4$\\sqrt{3}$$$\nअतः सही उत्तर '4√3 sq units' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_45",
+    "qe": "A square card board of side 3m is folded on one of its diagonals to form a triangle. The height of the triangle is:",
+    "qh": "3m भुजा वाले वर्गाकार कार्ड बोर्ड को उसके एक विकर्ण पर मोड़कर त्रिभुज बनाया गया है। त्रिभुज की ऊंचाई है:",
+    "oe": [
+      "\\frac{2}{$\\sqrt{3}$} m",
+      "\\frac{3}{$\\sqrt{2}$} m",
+      "2$\\sqrt{3}$ m",
+      "3$\\sqrt{2}$ m"
+    ],
+    "oh": [
+      "\\frac{2}{$\\sqrt{3}$} m",
+      "\\frac{3}{$\\sqrt{2}$} m",
+      "2$\\sqrt{3}$ m",
+      "3$\\sqrt{2}$ m"
+    ],
+    "a": 1,
+    "e": "Method 1 (Right Isosceles Altitude on Hypotenuse Method):\nStep 1: 3 मीटर भुजा वाले वर्ग को विकर्ण पर मोड़ने पर बना त्रिभुज एक समद्विबाहु समकोण त्रिभुज होता है जिसकी दो भुजाएँ 3m, 3m और आधार (विकर्ण) $3\\sqrt{2}\\text{ m}$ होता है।\nStep 2: विकर्ण पर लम्ब (ऊंचाई $h$) त्रिभुज के क्षेत्रफल की सहायता से निकालें:\n$$\\text{त्रिभुज का क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ 3 $\\times$ 3 = $\\frac{9}{2}$\\text{ m}^2$$\nStep 3: आधार $3\\sqrt{2}\\text{ m}$ और ऊंचाई $h$ के पदों में क्षेत्रफल:\n$$$\\frac{1}{2}$ $\\times$ 3$\\sqrt{2}$ $\\times$ h = $\\frac{9}{2}$$$\n$$h = \\frac{9}{3$\\sqrt{2}$} = \\frac{3}{$\\sqrt{2}$}\\text{ मीटर}$$\nअतः सही विकल्प  3/√2 m है।\n\nMethod 2 (Diagonal Semi-Length Property Method):\nवर्ग का विकर्ण परस्पर लम्ब समद्विभाजित होता है, अतः ऊंचाई विकर्ण की आधी होती है:\n$$h = $\\frac{d}{2}$ = \\frac{3$\\sqrt{2}$}{2} = \\frac{3}{$\\sqrt{2}$}\\text{ m}$$\nअतः सही उत्तर '\\frac{3}{$\\sqrt{2}$} m' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_46",
+    "qe": "The base of an isosceles triangle is 6 cm and its perimeter is 16 cm. Its area is:",
+    "qh": "एक समद्विबाहु त्रिभुज का आधार 6 cm है और इसकी परिधि 16 cm है। इसका क्षेत्रफल है:",
+    "oe": [
+      "11 $cm^2$",
+      "10 $cm^2$",
+      "12 $cm^2$",
+      "9 $cm^2$"
+    ],
+    "oh": [
+      "11 $cm^2$",
+      "10 $cm^2$",
+      "12 $cm^2$",
+      "9 $cm^2$"
+    ],
+    "a": 2,
+    "e": "Method 1 (Pythagorean Altitude Method):\nStep 1: असमान आधार $b = 6\\text{ सेमी}$ है। दोनों समान भुजाएँ ($a$) निकालें:\n$$2a + 6 = 16 \\implies 2a = 10 \\implies a = 5\\text{ सेमी}$$\nStep 2: आधार पर लम्ब ऊंचाई ($h$) आधार को दो समान भागों (प्रत्येक $\\frac{6}{2} = 3\\text{ सेमी}$) में बांटती है:\n$$h = $\\sqrt{a^2-(b/2)^2}$ = $\\sqrt{5^2-3^2}$ = $\\sqrt{25-9}$ = $\\sqrt{16}$ = 4\\text{ सेमी}$$\nStep 3: त्रिभुज का क्षेत्रफल ज्ञात करें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ \\text{आधार} $\\times$ \\text{ऊंचाई} = $\\frac{1}{2}$ $\\times$ 6 $\\times$ 4 = 12\\text{ वर्ग सेमी}$$\nअतः सही विकल्प  12 $cm^2$ है।\n\nMethod 2 (Heron's Formula Method):\n$s = 16 / 2 = 8\\text{ सेमी}$.\n$$\\text{क्षेत्रफल} = $\\sqrt{8(8-6)(8-5)(8-5)}$ = $\\sqrt{8\\times2\\times3\\times3}$ = $\\sqrt{144}$ = 12\\text{ cm}^2$$\nअतः सही उत्तर '12 $cm^2$' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_47",
+    "qe": "The difference between the two perpendicular sides of a right-angled triangle is 17 cm and its area is 84 $cm^2$. What is the perimeter (in cm) of the triangle?",
+    "qh": "एक समकोण त्रिभुज की दो लंबवत भुजाओं के बीच का अंतर 17 सेमी है और इसका क्षेत्रफल 84 सेमी² है। त्रिभुज का परिमाप (सेमी में) क्या है?",
+    "oe": [
+      "49",
+      "72",
+      "56",
+      "65"
+    ],
+    "oh": [
+      "49",
+      "72",
+      "56",
+      "65"
+    ],
+    "a": 2,
+    "e": "Method 1 (Pythagorean Triplet Recognition Method):\nStep 1: मान लें लम्बवत भुजाएँ $x$ और $x + 17$ हैं।\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ x $\\times$ (x + 17) = 84 \\implies x(x + 17) = 168$$\nStep 2: 168 के ऐसे दो गुणनखंड जिनका अंतर 17 हो: $7 \\times 24 = 168$।\nअतः लम्बवत भुजाएँ $7\\text{ सेमी}$ और $24\\text{ सेमी}$ हैं।\nStep 3: कर्ण निकालें ($7, 24, 25$ त्रिक):\n$$\\text{कर्ण} = $\\sqrt{7^2+24^2}$ = 25\\text{ सेमी}$$\nStep 4: त्रिभुज का परिमाप ज्ञात करें:\n$$\\text{परिमाप} = 7 + 24 + 25 = 56\\text{ सेमी}$$\nअतः सही विकल्प  56 है।\n\nMethod 2 (Algebraic Identity Method):\n$$(L + B)^2 = (L - B)^2 + 4LB = 17^2 + 4(168) = 289 + 672 = 961 \\implies L + B = 31$$\n$$\\text{कर्ण}^2 = (L + B)^2 - 2LB = 961 - 336 = 625 \\implies \\text{कर्ण} = 25$$\n$$\\text{परिमाप} = 31 + 25 = 56\\text{ सेमी}$$\nअतः सही उत्तर '56' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_48",
+    "qe": "A circle is inscribed in a right-angled triangle. The lengths of the two sides containing the right angle are 15 cm and 8 cm. What is the radius of the incircle?",
+    "qh": "एक समकोण त्रिभुज में एक वृत्त अंकित है। समकोण वाली दो भुजाओं की लंबाई 15 सेमी और 8 सेमी है। वृत्त की त्रिज्या क्या है?",
+    "oe": [
+      "4.5 cm",
+      "4 cm",
+      "3.75 cm",
+      "3 cm"
+    ],
+    "oh": [
+      "4.5 cm",
+      "4 cm",
+      "3.75 cm",
+      "3 cm"
+    ],
+    "a": 3,
+    "e": "Method 1 (Inradius Formula Method):\nStep 1: पाइथागोरस प्रमेय से कर्ण ($H$) निकालें:\n$$H = $\\sqrt{15^2+8^2}$ = $\\sqrt{225+64}$ = $\\sqrt{289}$ = 17\\text{ सेमी}$$\n(पाइथागोरियन त्रिक: $8, 15, 17$)\nStep 2: समकोण त्रिभुज की अंतःत्रिज्या ($r$) का सूत्र:\n$$r = $\\frac{P+B-H}{2}$$$\nStep 3: मान रखने पर:\n$$r = $\\frac{15+8-17}{2}$ = $\\frac{23-17}{2}$ = $\\frac{6}{2}$ = 3\\text{ सेमी}$$\nअतः सही विकल्प  3 cm है।\n\nMethod 2 (Area by Semi-perimeter Method):\n$\\Delta = \\frac{1}{2} \\times 15 \\times 8 = 60\\text{ cm}^2$.\n$s = \\frac{15 + 8 + 17}{2} = 20\\text{ सेमी}$.\n$r = \\frac{\\Delta}{s} = \\frac{60}{20} = 3\\text{ सेमी}$.\nअतः सही उत्तर '3 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_49",
+    "qe": "The area of quadrilateral is 336 $m^2$ and the perpendiculars drawn to one diagonal from the opposite vertices are 16 m and 12 m long. Find the length of this diagonal.",
+    "qh": "चतुर्भुज का क्षेत्रफल 336 मी² है और सम्मुख शीर्षों से एक विकर्ण पर खींचे गए लंब 16 मी और 12 मी हैं। विकर्ण की लंबाई क्या है?",
+    "oe": [
+      "28 cm",
+      "26 cm",
+      "21 cm",
+      "24 m"
+    ],
+    "oh": [
+      "28 cm",
+      "26 cm",
+      "21 cm",
+      "24 m"
+    ],
+    "a": 3,
+    "e": "Method 1 (Quadrilateral Diagonal Formula Method):\nStep 1: किसी विकर्ण ($d$) और उस पर डाले गए लम्बों ($h_1, h_2$) के पदों में चतुर्भुज का क्षेत्रफल:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ d $\\times$ (h_1 + h_2)$$\nStep 2: दिए गए मान प्रतिस्थापित करने पर ($h_1 = 16\\text{ m}, h_2 = 12\\text{ m}$, क्षेत्रफल $= 336\\text{ m}^2$):\n$$336 = $\\frac{1}{2}$ $\\times$ d $\\times$ (16 + 12)$$\n$$336 = $\\frac{1}{2}$ $\\times$ d $\\times$ 28$$\n$$336 = 14 $\\times$ d$$\nStep 3: विकर्ण $d$ की लंबाई निकालें:\n$$d = $\\frac{336}{14}$ = 24\\text{ मीटर}$$\nअतः सही विकल्प  24 m है।\n\nMethod 2 (Direct Division Method):\n$$d = $\\frac{2\\times336}{16+12}$ = $\\frac{672}{28}$ = 24\\text{ मीटर}$$\nअतः सही उत्तर '24 m' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_50",
+    "qe": "In a circular grassy plot, a quadrilateral shape with its corners touching the boundary of the plot is to be paved with bricks. Find the area of the Quadrilateral when the sides of the quadrilateral are 36m, 77m, 75m, and 40m.",
+    "qh": "एक वृत्ताकार घास वाले भूखंड में, एक चतुर्भुज आकार जिसके कोने भूखंड की सीमा को छूते हों, को ईंटों से पक्का किया जाना है। चतुर्भुज का क्षेत्रफल ज्ञात कीजिए जब चतुर्भुज की भुजाएँ 36m, 77m, 75m, और 40m हों।",
+    "oe": [
+      "2886",
+      "114",
+      "1443",
+      "1456"
+    ],
+    "oh": [
+      "2886",
+      "114",
+      "1443",
+      "1456"
+    ],
+    "a": 0,
+    "e": "Method 1 (Brahmagupta's Formula for Cyclic Quadrilateral Method):\nStep 1: वृत्त के भीतर स्थित चतुर्भुज एक चक्रीय चतुर्भुज (Cyclic Quadrilateral) होता है।\nअर्ध-परिमाप ($s$) निकालें:\n$$s = $\\frac{36+77+75+40}{2}$ = $\\frac{228}{2}$ = 114\\text{ मीटर}$$\nStep 2: ब्रह्मगुप्त का सूत्र लागू करें:\n$$\\text{क्षेत्रफल} = $\\sqrt{(s-a)(s-b)(s-c)(s-d)}$$$\nStep 3: मान रखने पर:\n$$\\text{क्षेत्रफल} = $\\sqrt{(114-36)(114-77)(114-75)(114-40)}$$$\n$$\\text{क्षेत्रफल} = $\\sqrt{78\\times37\\times39\\times74}$$$\nStep 4: गुणनखंड बनाकर वर्गमूल निकालें:\n$$\\text{क्षेत्रफल} = $\\sqrt{(39\\times2)\\times37\\times39\\times(37\\times2)}$ = $\\sqrt{39^2\\times37^2\\times2^2}$$$\n$$\\text{क्षेत्रफल} = 39 $\\times$ 37 $\\times$ 2 = 2886\\text{ वर्ग मीटर}$$\nअतः सही विकल्प  2886 है।\n\nMethod 2 (Unit Digit Product Method):\n$39 \\times 74 = 2886$.\nअतः सही उत्तर '2886' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_51",
+    "qe": "The area of a parallelogram is 338 $m^2$. If its height is two times the corresponding base then its base is:",
+    "qh": "एक समान्तर चतुर्भुज का क्षेत्रफल 338 मी² है। यदि उसकी ऊँचाई संगत आधार से दुगुनी है तो इसका आधार है।",
+    "oe": [
+      "14",
+      "28",
+      "13",
+      "26"
+    ],
+    "oh": [
+      "14",
+      "28",
+      "13",
+      "26"
+    ],
+    "a": 2,
+    "e": "Method 1 (Parallelogram Area Formula Method):\nStep 1: मान लें आधार $= x\\text{ मीटर}$। संगत ऊंचाई $= 2x\\text{ मीटर}$ होगी।\nStep 2: समानांतर चतुर्भुज का क्षेत्रफल:\n$$\\text{क्षेत्रफल} = \\text{आधार} $\\times$ \\text{ऊंचाई}$$\n$$338 = x $\\times$ 2x$$\n$$2x^2 = 338 \\implies x^2 = $\\frac{338}{2}$ = 169$$\nStep 3: वर्गमूल लेने पर आधार का मान निकालें:\n$$x = $\\sqrt{169}$ = 13\\text{ मीटर}$$\nअतः सही विकल्प  13 है।\n\nMethod 2 (Direct Verification Method):\nयदि आधार 13 मीटर हो, तो ऊंचाई $= 2 \\times 13 = 26$ मीटर।\nक्षेत्रफल = $13 \\times 26 = 338\\text{ m}^2$ (सत्यापित)।\nअतः सही उत्तर '13' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_52",
+    "qe": "The length of a rectangle is 10 cm more than the side of a square and its breadth is 8 cm less than the side of the square. If the areas of both the rectangle and square are equal, then what will be the perimeter (in cm) of the rectangle?",
+    "qh": "एक आयत की लंबाई एक वर्ग की भुजा से 10 सेमी अधिक है और इसकी चौड़ाई वर्ग की भुजा से 8 सेमी कम है। यदि आयत और वर्ग दोनों का क्षेत्रफल समान है, तो आयत का परिमाप (से. मी. में) क्या होगा?",
+    "oe": [
+      "160",
+      "156",
+      "164",
+      "144"
+    ],
+    "oh": [
+      "160",
+      "156",
+      "164",
+      "144"
+    ],
+    "a": 2,
+    "e": "Method 1 (Algebraic Equating Method):\nStep 1: मान लें वर्ग की भुजा $a$ सेमी है।\nआयत की विमाएँ:\n- लंबाई $l = a + 10$\n- चौड़ाई $b = a - 8$\nStep 2: दोनों के क्षेत्रफल बराबर रखने पर:\n$$a^2 = (a + 10)(a - 8)$$\n$$a^2 = a^2 + 2a - 80$$\n$$2a = 80 \\implies a = 40\\text{ सेमी}$$\nStep 3: आयत की वास्तविक विमाएँ निकालें:\n- लंबाई $l = 40 + 10 = 50\\text{ सेमी}$\n- चौड़ाई $b = 40 - 8 = 32\\text{ सेमी}$\nStep 4: आयत का परिमाप ज्ञात करें:\n$$\\text{परिमाप} = 2(l + b) = 2(50 + 32) = 2 $\\times$ 82 = 164\\text{ सेमी}$$\nअतः सही विकल्प  164 है।\n\nMethod 2 (Verification):\n$a = 40 \\implies a^2 = 1600$.\nआयत का क्षेत्रफल = $50 \\times 32 = 1600\\text{ cm}^2$ (सत्यापित)।\nपरिमाप = $2(50 + 32) = 164\\text{ सेमी}$।\nअतः सही उत्तर '164' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_53",
+    "qe": "One side of a rhombus is 26 cm. and its one diagonal is 48 cm. What will be area of rhombus?",
+    "qh": "एक समचतुर्भुज की एक भुजा 26 cm है और इसका एक विकर्ण 48 cm है। समचतुर्भुज का क्षेत्रफल कितना होगा?",
+    "oe": [
+      "580 $cm^2$",
+      "520 $cm^2$",
+      "624 $cm^2$",
+      "480 $cm^2$"
+    ],
+    "oh": [
+      "580 $cm^2$",
+      "520 $cm^2$",
+      "624 $cm^2$",
+      "480 $cm^2$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Right-Angled Triangle at Centre Method):\nStep 1: समचतुर्भुज के विकर्ण परस्पर लम्ब समद्विभाजित करते हैं।\nएक अर्ध-विकर्ण = $\\frac{48}{2} = 24\\text{ सेमी}$, भुजा = $26\\text{ सेमी}$।\nStep 2: केंद्र पर बने समकोण त्रिभुज से दूसरा अर्ध-विकर्ण निकालें:\n$$\\text{दूसरा अर्ध-विकर्ण} = $\\sqrt{26^2-24^2}$ = $\\sqrt{676-576}$ = $\\sqrt{100}$ = 10\\text{ सेमी}$$\n(पाइथागोरियन त्रिक: $5, 12, 13 \\implies 10, 24, 26$)\nStep 3: दूसरा पूरा विकर्ण $d_2 = 2 \\times 10 = 20\\text{ सेमी}$।\nStep 4: समचतुर्भुज का क्षेत्रफल ज्ञात करें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ d_1 $\\times$ d_2 = $\\frac{1}{2}$ $\\times$ 48 $\\times$ 20 = 480\\text{ cm}^2$$\nअतः सही विकल्प  480 $cm^2$ है।\n\nMethod 2 (Direct Formula Method):\n$$\\text{क्षेत्रफल} = d_1 $\\times$ $\\sqrt{a^2-(d_1/2)^2}$ = 48 $\\times$ $\\sqrt{26^2-24^2}$ = 48 $\\times$ 10 = 480\\text{ cm}^2$$\nअतः सही उत्तर '480 $cm^2$' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_54",
+    "qe": "The area of a square and rectangle are equal. The length of the rectangle is greater than the length of a side of the square by 10 cm and the breadth is less than 5 cm. The perimeter (in cm) of the rectangle is:",
+    "qh": "एक वर्ग और आयत का क्षेत्रफल बराबर है। आयत की लंबाई वर्ग की एक भुजा की लंबाई से 10 सेमी अधिक और चौड़ाई 5 सेमी से कम है। आयत का परिमाप (सेमी में) है:",
+    "oe": [
+      "50",
+      "40",
+      "80",
+      "100"
+    ],
+    "oh": [
+      "50",
+      "40",
+      "80",
+      "100"
+    ],
+    "a": 0,
+    "e": "Method 1 (Algebraic Quadratic Method):\nStep 1: वर्ग की भुजा $= a$ मान लें।\nआयत की लंबाई $l = a + 10$ और चौड़ाई $b = a - 5$ होगी।\nStep 2: क्षेत्रफलों को बराबर रखें:\n$$a^2 = (a + 10)(a - 5)$$\n$$a^2 = a^2 + 5a - 50$$\n$$5a = 50 \\implies a = 10\\text{ सेमी}$$\nStep 3: आयत की विमाएँ निकालें:\n- लंबाई $l = 10 + 10 = 20\\text{ सेमी}$\n- चौड़ाई $b = 10 - 5 = 5\\text{ सेमी}$\nStep 4: आयत का परिमाप ज्ञात करें:\n$$\\text{परिमाप} = 2(l + b) = 2(20 + 5) = 2 $\\times$ 25 = 50\\text{ सेमी}$$\nअतः सही विकल्प  50 है।\n\nMethod 2 (Verification):\nवर्ग का क्षेत्रफल = $10^2 = 100\\text{ cm}^2$.\nआयत का क्षेत्रफल = $20 \\times 5 = 100\\text{ cm}^2$.\nपरिमाप = $2(20 + 5) = 50\\text{ सेमी}$।\nअतः सही उत्तर '50' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_55",
+    "qe": "If the sum of the diagonals of a rhombus is L and the perimeter is 4P, find the area of the rhombus?",
+    "qh": "यदि एक समचतुर्भुज के विकर्णों का योग L और उसका परिमाप 4P, है, तो उस चतुर्भुज का क्षेत्रफल क्या होगा?",
+    "oe": [
+      "$\\frac{1}{4}$(L^2 - P^2)",
+      "$\\frac{1}{4}$(L^2 - 4P^2)",
+      "$\\frac{1}{2}$(L^2 - 4P^2)",
+      "$\\frac{1}{4}$(L^2 - 3P^2)"
+    ],
+    "oh": [
+      "$\\frac{1}{4}$(L^2 - P^2)",
+      "$\\frac{1}{4}$(L^2 - 4P^2)",
+      "$\\frac{1}{2}$(L^2 - 4P^2)",
+      "$\\frac{1}{4}$(L^2 - 3P^2)"
+    ],
+    "a": 1,
+    "e": "Method 1 (Algebraic Identity Method):\nStep 1: दिए गए संबंध:\n- विकर्णों का योग: $d_1 + d_2 = L$\n- परिमाप: $4a = 4P \\implies a = P$\nStep 2: समचतुर्भुज की भुजा और विकर्णों का संबंध:\n$$4a^2 = d_1^2 + d_2^2 \\implies d_1^2 + d_2^2 = 4P^2$$\nStep 3: सर्वसमिका $(d_1 + d_2)^2 = d_1^2 + d_2^2 + 2d_1 d_2$ में मान रखने पर:\n$$L^2 = 4P^2 + 2d_1 d_2$$\n$$2d_1 d_2 = L^2 - 4P^2 \\implies d_1 d_2 = $\\frac{1}{2}$(L^2 - 4P^2)$$\nStep 4: समचतुर्भुज का क्षेत्रफल نکالें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ d_1 d_2 = $\\frac{1}{2}$ $\\le$ft[$\\frac{1}{2}$(L^2 - 4P^2)\\right] = $\\frac{1}{4}$(L^2 - 4P^2)$$\nअतः सही विकल्प  1/4 $(L^2$ - $4P^2)$ है।\n\nMethod 2 (Values Method):\n$d_1 = 6, d_2 = 8 \\implies L = 14$.\n$a = 5 \\implies 4a = 20 \\implies P = 5$.\nवास्तविक क्षेत्रफल = $\\frac{1}{2} \\times 6 \\times 8 = 24$.\nविकल्प (b) में रखने पर: $\\frac{1}{4}(14^2 - 4 \\times 5^2) = \\frac{1}{4}(196 - 100) = \\frac{96}{4} = 24$ (सत्यापित)।\nअतः सही उत्तर '$\\frac{1}{4}$(L^2 - 4P^2)' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_56",
+    "qe": "One diagonal of a rhombus is 8√3 cm. If the other diagonal is equal to its side, then the area (in $cm^2)$ of the rhombus is:",
+    "qh": "एक समचतुर्भुज का एक विकर्ण 8√3 सेमी है। यदि दूसरा विकर्ण इसकी भुजा के बराबर है, तो समचतुर्भुज का क्षेत्रफल (सेमी में) है:",
+    "oe": [
+      "16√3",
+      "12√3",
+      "32√3",
+      "24√3"
+    ],
+    "oh": [
+      "16√3",
+      "12√3",
+      "32√3",
+      "24√3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Equilateral Triangles Combination Method):\nStep 1: जब किसी समचतुर्भुज का एक विकर्ण उसकी भुजा के बराबर होता है ($d_2 = a$), तो वह विकर्ण समचतुर्भुज को दो सर्वांगसम समबाहु त्रिभुजों में विभाजित करता है।\nStep 2: दूसरा विकर्ण समबाहु त्रिभुज की दोहरी ऊंचाई के बराबर होता है:\n$$d_1 = 2 $\\times$ $\\le$ft(\\frac{$\\sqrt{3}$}{2} a\\right) = a$\\sqrt{3}$$$\nStep 3: दिया गया विकर्ण $d_1 = 8\\sqrt{3}\\text{ सेमी}$ है:\n$$a$\\sqrt{3}$ = 8$\\sqrt{3}$ \\implies a = 8\\text{ सेमी}$$\nअतः दूसरा विकर्ण $d_2 = a = 8\\text{ सेमी}$।\nStep 4: समचतुर्भुज का क्षेत्रफल निकालें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ d_1 $\\times$ d_2 = $\\frac{1}{2}$ $\\times$ 8$\\sqrt{3}$ $\\times$ 8 = 32$\\sqrt{3}$\\text{ cm}^2$$\nअतः सही विकल्प  32√3 है।\n\nMethod 2 (Two Equilateral Triangles Area Method):\n$$\\text{क्षेत्रफल} = 2 $\\times$ $\\le$ft(\\frac{$\\sqrt{3}$}{4} a^2\\right) = \\frac{$\\sqrt{3}$}{2} $\\times$ 8^2 = \\frac{$\\sqrt{3}$}{2} $\\times$ 64 = 32$\\sqrt{3}$\\text{ cm}^2$$\nअतः सही उत्तर '32√3' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_57",
+    "qe": "A field is in the shape of a trapezium whose parallel sides are 200 m and 400 m long, whereas each of other two sides is 260 m long. What is the area (in $m^2)$ of the field?",
+    "qh": "एक मैदान समलम्ब चतुर्भुज की आकृति जैसा है, जिसकी समानांतर भुजाओं की लंबाई 200 मी और 400 मी हैं, जबकि अन्य दो भुजाओं में से प्रत्येक की लंबाई 260 मी है। मैदान का क्षेत्रफल (मी² में) कितना है?",
+    "oe": [
+      "48000",
+      "52000",
+      "72000",
+      "60000"
+    ],
+    "oh": [
+      "48000",
+      "52000",
+      "72000",
+      "60000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Isosceles Trapezium Height Method):\nStep 1: समानांतर भुजाओं के बीच का अंतर निकालें:\n$$400 - 200 = 200\\text{ मीटर}$$\nचूँकि दोनों असमानांतर भुजाएँ बराबर (260 मी) हैं, अतः दोनों सिरों पर बने समकोण त्रिभुजों का आधार समान होगा:\n$$\\text{आधार} = $\\frac{200}{2}$ = 100\\text{ मीटर}$$\nStep 2: समलम्ब चतुर्भुज की लम्बवत ऊंचाई ($h$) निकालें:\n$$h = $\\sqrt{260^2-100^2}$ = $\\sqrt{67600-10000}$ = $\\sqrt{57600}$ = 240\\text{ मीटर}$$\n(पाइथागोरियन त्रिक: $5, 12, 13 \\implies 100, 240, 260$)\nStep 3: समलम्ब चतुर्भुज का क्षेत्रफल ज्ञात करें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ (a + b) $\\times$ h = $\\frac{1}{2}$ $\\times$ (200 + 400) $\\times$ 240$$\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ 600 $\\times$ 240 = 300 $\\times$ 240 = 72000\\text{ वर्ग मीटर}$$\nअतः सही विकल्प  72000 है।\n\nMethod 2 (Direct Step Multiplication):\n$$\\text{क्षेत्रफल} = 600 $\\times$ 120 = 72000\\text{ m}^2$$\nअतः सही उत्तर '72000' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_58",
+    "qe": "The two parallel sides of a trapezium are 17 cm and 15 cm, respectively. If the height of the trapezium is 6 cm, then its area (in $m^2)$ is:",
+    "qh": "किसी समलंब चतुर्भुज की दो समांतर भुजाएं क्रमशः 17 cm और 15 cm हैं। यदि उस समलंब चतुर्भुज की ऊंचाई 6 cm है, तो इसका क्षेत्रफल $(m^2$ में) ज्ञात करें।",
+    "oe": [
+      "9.6",
+      "960",
+      "0.96",
+      "0.0096"
+    ],
+    "oh": [
+      "9.6",
+      "960",
+      "0.96",
+      "0.0096"
+    ],
+    "a": 3,
+    "e": "Method 1 (Centimeter to Meter Conversion Method):\nStep 1: समलम्ब चतुर्भुज का क्षेत्रफल सेमी² में निकालें:\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ (a + b) $\\times$ h = $\\frac{1}{2}$ $\\times$ (17 + 15) $\\times$ 6$$\n$$\\text{क्षेत्रफल} = $\\frac{1}{2}$ $\\times$ 32 $\\times$ 6 = 16 $\\times$ 6 = 96\\text{ सेमी}^2$$\nStep 2: सेमी² को मीटर² में बदलें ($1\\text{ m}^2 = 10,000\\text{ cm}^2$):\n$$\\text{क्षेत्रफल} = $\\frac{96}{10000}$ = 0.0096\\text{ m}^2$$\nअतः सही विकल्प  0.0096 है।\n\nMethod 2 (Direct Meter Conversion):\n$a = 0.17\\text{ m}, b = 0.15\\text{ m}, h = 0.06\\text{ m}$.\n$\\text{क्षेत्रफल} = \\frac{1}{2} \\times 0.32 \\times 0.06 = 0.16 \\times 0.06 = 0.0096\\text{ m}^2$.\nअतः सही उत्तर '0.0096' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_59",
+    "qe": "In a trapezium PQRS, PQ is parallel to RS and diagonals PR and QS intersect at O. If PQ = 4cm SR = 10 cm, then what is area (ΔPOQ): area (ΔSOR)?",
+    "qh": "एक समलम्ब PQRS में, PQ, RS के समानांतर है और विकर्ण PR और QS, O पर प्रतिच्छेद करते हैं। यदि PQ = 4 सेमी, SR = 10 सेमी, तो क्षेत्रफल (ΔPOQ) : क्षेत्रफल (ΔSOR) क्या है?",
+    "oe": [
+      "4 : 25",
+      "2 : 3",
+      "4 : 9",
+      "2 : 5"
+    ],
+    "oh": [
+      "4 : 25",
+      "2 : 3",
+      "4 : 9",
+      "2 : 5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Similar Triangles Area Ratio Method):\nStep 1: चूँकि $PQ \\parallel RS$ है, अतः एकांतर अंतःकोणों के कारण:\n$$\\angle OPQ = \\angle ORS \\quad \\text{तथा} \\quad \\angle OQP = \\angle OSR$$\nकोण-कोण (AA) समरूपता से:\n$$$\\Delta$ POQ \\sim $\\Delta$ ROS$$\nStep 2: दो समरूप त्रिभुजों के क्षेत्रफलों का अनुपात उनकी संगत भुजाओं के वर्गों के अनुपात के बराबर होता है:\n$$\\frac{\\text{Area}($\\Delta$ POQ)}{\\text{Area}($\\Delta$ SOR)} = $\\le$ft($\\frac{PQ}{SR}$\\right)^2$$\nStep 3: मान रखने पर ($PQ = 4, SR = 10$):\n$$\\frac{\\text{Area}($\\Delta$ POQ)}{\\text{Area}($\\Delta$ SOR)} = $\\le$ft($\\frac{4}{10}$\\right)^2 = $\\le$ft($\\frac{2}{5}$\\right)^2 = $\\frac{4}{25}$$$\nअतः सही विकल्प  4 : 25 है।\n\nMethod 2 (Direct Simplification):\n$$\\text{अनुपात} = 4^2 : 10^2 = 16 : 100 = 4 : 25$$\nअतः सही उत्तर '4 : 25' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_60",
+    "qe": "The perimeter of a rectangle and an equilateral triangle are same. Also, one of the sides of the rectangle is equal to the side of the triangle. The ratio of the area of the rectangle and the triangle is:",
+    "qh": "एक आयत और एक समबाहु त्रिभुज का परिमाप समान है। साथ ही, आयत की एक भुजा त्रिभुज की भुजा के बराबर है। आयत और त्रिभुज के क्षेत्रफल का अनुपात है:",
+    "oe": [
+      "√3 : 1",
+      "1 : √3",
+      "2 : √3",
+      "4 : √3"
+    ],
+    "oh": [
+      "√3 : 1",
+      "1 : √3",
+      "2 : √3",
+      "4 : √3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Perimeter & Dimensions Equating Method):\nStep 1: मान लें समबाहु त्रिभुज की भुजा $y$ है।\nत्रिभुज का परिमाप $= 3y$.\nStep 2: आयत की एक भुजा त्रिभुज की भुजा के बराबर है (मान लें चौड़ाई $b = y$) तथा लंबाई $x$ है:\n$$\\text{आयत का परिमाप} = 2(x + y)$$\nStep 3: दोनों के परिमाप बराबर हैं:\n$$2x + 2y = 3y \\implies 2x = y \\implies x = $\\frac{y}{2}$$$\nStep 4: आयत का क्षेत्रफल निकालें:\n$$\\text{आयत का क्षेत्रफल} = x $\\times$ y = $\\frac{y}{2}$ $\\times$ y = $\\frac{y^2}{2}$$$\nStep 5: समबाहु त्रिभुज का क्षेत्रफल निकालें:\n$$\\text{त्रिभुज का क्षेत्रफल} = \\frac{$\\sqrt{3}$}{4} y^2$$\nStep 6: क्षेत्रफलों का अनुपात نکالें:\n$$\\frac{\\text{आयत का क्षेत्रफल}}{\\text{त्रिभुज का क्षेत्रफल}} = \\frac{y^2 / 2}{$\\sqrt{3}$y^2 / 4} = $\\frac{1}{2}$ $\\times$ \\frac{4}{$\\sqrt{3}$} = \\frac{2}{$\\sqrt{3}$} = 2 : $\\sqrt{3}$$$\nअतः सही विकल्प  2 : √3 है।\n\nMethod 2 (Scale Value Method):\n$y = 4$ मान लें $\\implies$ त्रिभुज परिमाप = 12.\nआयत परिमाप = $2(x + 4) = 12 \\implies x = 2$.\nआयत क्षेत्रफल = $2 \\times 4 = 8$.\nत्रिभुज क्षेत्रफल = $\\frac{\\sqrt{3}}{4} \\times 16 = 4\\sqrt{3}$.\nअनुपात = $\\frac{8}{4\\sqrt{3}} = \\frac{2}{\\sqrt{3}} = 2 : \\sqrt{3}$।\nअतः सही उत्तर '2 : √3' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_61",
+    "qe": "A bucket is drawn from a well by a wheel of radius 48 cm rounded rope. If bucket is drown by speed of 1.2 m/sec in 1 minute 12 second then what is length of rope?",
+    "qh": "एक बाल्टी 48 सेमी त्रिज्या के पहिये पर लिपटी रस्सी से कुएं से खींची जाती है। यदि बाल्टी को 1.2 मी/सेकण्ड की गति से 1 मिनट 12 सेकण्ड में ऊपर खींचा जाता है तो रस्सी की लंबाई क्या होगी?",
+    "oe": [
+      "8640 cm",
+      "864 cm",
+      "86.4 cm",
+      "8.64 cm"
+    ],
+    "oh": [
+      "8640 cm",
+      "864 cm",
+      "86.4 cm",
+      "8.64 cm"
+    ],
+    "a": 0,
+    "e": "Method 1 (Speed, Time and Distance Method):\nStep 1: कुल समय को सेकंड में बदलें:\n$$\\text{समय} = 1\\text{ मिनट } 12\\text{ सेकंड} = 60 + 12 = 72\\text{ सेकंड}$$\nStep 2: चाल को सेमी/सेकंड में बदलें:\n$$\\text{चाल} = 1.2\\text{ m/s} = 1.2 $\\times$ 100 = 120\\text{ cm/s}$$\nStep 3: कुल तय दूरी (रस्सी की कुल लंबाई) निकालें:\n$$\\text{दूरी} = \\text{चाल} $\\times$ \\text{समय} = 120 $\\times$ 72 = 8640\\text{ सेमी}$$\nअतः सही विकल्प  8640 cm है।\n\nMethod 2 (Meter Calculation Method):\n$\\text{लंबाई} = 1.2 \\times 72 = 86.4\\text{ मीटर} = 86.4 \\times 100 = 8640\\text{ सेमी}$.\n(पहिये की त्रिज्या अतिरिक्त जानकारी है जिसकी आवश्यकता रस्सी की लंबाई निकालने के लिए नहीं है)।\nअतः सही उत्तर '8640 cm' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_62",
+    "qe": "The sum of the lengths of the radius and the diameter of circle is 84 cm. What is the difference between the lengths of the circumference and the radius of this circle? $[Use \\pi = 22/7]$",
+    "qh": "एक वृत्त की त्रिज्या और व्यास की लंबाई का योग 84 सेमी है। इस वृत्त की परिधि की लंबाई और त्रिज्या के बीच कितना अंतर है? (दिया है, $\\pi = 22/7)$",
+    "oe": [
+      "156 cm",
+      "172 cm",
+      "148 cm",
+      "128 cm"
+    ],
+    "oh": [
+      "156 cm",
+      "172 cm",
+      "148 cm",
+      "128 cm"
+    ],
+    "a": 2,
+    "e": "Method 1 (Radius Evaluation & Difference Method):\nStep 1: व्यास $= 2r$ होता है। त्रिज्या और व्यास का योग:\n$$r + 2r = 84 \\implies 3r = 84 \\implies r = $\\frac{84}{3}$ = 28\\text{ सेमी}$$\nStep 2: वृत्त की परिधि نکالें:\n$$\\text{परिधि} = 2$\\pi$ r = 2 $\\times$ $\\frac{22}{7}$ $\\times$ 28 = 2 $\\times$ 22 $\\times$ 4 = 176\\text{ सेमी}$$\nStep 3: परिधि और त्रिज्या का अंतर निकालें:\n$$\\text{अंतर} = 176 - 28 = 148\\text{ सेमी}$$\nअतः सही विकल्प  148 cm है।\n\nMethod 2 (Direct Formula Method):\n$$\\text{अंतर} = 2$\\pi$ r - r = r(2$\\pi$ - 1) = 28 $\\times$ $\\le$ft(2 $\\times$ $\\frac{22}{7}$ - 1\\right) = 28 $\\times$ $\\le$ft($\\frac{44-7}{7}$\\right) = 28 $\\times$ $\\frac{37}{7}$ = 4 $\\times$ 37 = 148\\text{ सेमी}$$\nअतः सही उत्तर '148 cm' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_63",
+    "qe": "What is the radius of the circle whose area is equal to the sum of the area of two circles whose radii are 15 cm and 8 cm?",
+    "qh": "उस वृत्त की त्रिज्या क्या है, जिसका क्षेत्रफल 15 सेमी और 8 सेमी त्रिज्या वाले दो वृत्तों के क्षेत्रफलों के योगफल के बराबर है।",
+    "oe": [
+      "14 cm",
+      "13 cm",
+      "15 cm",
+      "17 cm"
+    ],
+    "oh": [
+      "14 cm",
+      "13 cm",
+      "15 cm",
+      "17 cm"
+    ],
+    "a": 3,
+    "e": "Method 1 (Area Sum Equation Method):\nStep 1: दिए गए वृत्तों की त्रिज्याएँ $r_1 = 15\\text{ सेमी}$ तथा $r_2 = 8\\text{ सेमी}$ हैं।\nनए वृत्त की त्रिज्या $R$ मान लें:\n$$$\\pi$ R^2 = $\\pi$ r_1^2 + $\\pi$ r_2^2$$\n$$R^2 = r_1^2 + r_2^2$$\nStep 2: मान रखने पर:\n$$R^2 = 15^2 + 8^2 = 225 + 64 = 289$$\n$$R = $\\sqrt{289}$ = 17\\text{ सेमी}$$\nअतः सही विकल्प  17 cm है।\n\nMethod 2 (Pythagorean Triplet Recognition Method):\n$R^2 = 15^2 + 8^2$ का स्वरूप पाइथागोरस संबंध $(8, 15, 17)$ त्रिक का अनुसरण करता है, अतः $R = 17\\text{ सेमी}$।\nअतः सही उत्तर '17 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_64",
+    "qe": "The area of a circle is 1386 $cm^2$. What is the radius of the circle ?[Use $\\pi = 22/7]$",
+    "qh": "एक वृत्त का क्षेत्रफल 1,386 सेमी² है। वृत्त की त्रिज्या क्या होगी? $[Use \\pi = 22/7]$",
+    "oe": [
+      "7 cm",
+      "14 cm",
+      "18 cm",
+      "21 cm"
+    ],
+    "oh": [
+      "7 cm",
+      "14 cm",
+      "18 cm",
+      "21 cm"
+    ],
+    "a": 3,
+    "e": "Method 1 (Circle Area Formula Method):\nStep 1: सूत्र:\n$$$\\pi$ R^2 = 1386$$\n$$$\\frac{22}{7}$ $\\times$ R^2 = 1386$$\nStep 2: $R^2$ के लिए हल करें:\n$$R^2 = $\\frac{1386\\times7}{22}$ = 63 $\\times$ 7 = 441$$\nStep 3: वर्गमूल लें:\n$$R = $\\sqrt{441}$ = 21\\text{ सेमी}$$\nअतः सही विकल्प  21 cm है।\n\nMethod 2 (Standard Scale Multiple Method):\nमानक वृत्त ($r = 7\\text{ सेमी}$) का क्षेत्रफल 154 सेमी² होता है।\nक्षेत्रफल का अनुपात = $\\frac{1386}{154} = 9 = 3^2$.\nत्रिज्या = $7 \\times 3 = 21\\text{ सेमी}$।\nअतः सही उत्तर '21 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_65",
+    "qe": "If the area of a circle is 154 sq. cm. the ratio between the circumference of this circle and that of another circle of radius 21 cm is:",
+    "qh": "एक वृत्त का क्षेत्रफल 154 सेमी² है। इस वृत्त की परिधि का और दूसरे वृत्त जिसकी त्रिज्या 21 सेमी है, का अनुपात क्या होगा।",
+    "oe": [
+      "1 : 3",
+      "2 : 3",
+      "2 : 1",
+      "1 : 2"
+    ],
+    "oh": [
+      "1 : 3",
+      "2 : 3",
+      "2 : 1",
+      "1 : 2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Circumference Ratio Method):\nStep 1: पहले वृत्त की त्रिज्या ($r$) निकालें:\n$$$\\pi$ r^2 = 154 \\implies $\\frac{22}{7}$ r^2 = 154 \\implies r^2 = 49 \\implies r = 7\\text{ सेमी}$$\nStep 2: दूसरे वृत्त की त्रिज्या $R = 21\\text{ सेमी}$ दी गई है।\nStep 3: दो वृत्तों की परिधियों का अनुपात उनकी त्रिज्याओं के सीधे अनुपात के बराबर होता है:\n$$$\\frac{C_1}{C_2}$ = $\\frac{2\\pir}{2\\piR}$ = $\\frac{r}{R}$ = $\\frac{7}{21}$ = $\\frac{1}{3}$ = 1 : 3$$\nअतः सही विकल्प  1 : 3 है।\n\nMethod 2 (Direct Circumference Calculation):\n$C_1 = 2 \\times \\frac{22}{7} \\times 7 = 44\\text{ सेमी}$.\n$C_2 = 2 \\times \\frac{22}{7} \\times 21 = 132\\text{ सेमी}$.\nअनुपात = $\\frac{44}{132} = 1 : 3$.\nअतः सही उत्तर '1 : 3' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_66",
+    "qe": "Find the perimeter (in cm) of a semicircle of radius 7 cm.",
+    "qh": "7 से.मी. त्रिज्या वाले एक अर्धवृत्त का परिमाप (से.मी.) ज्ञात करें।",
+    "oe": [
+      "36",
+      "72",
+      "44",
+      "88"
+    ],
+    "oh": [
+      "36",
+      "72",
+      "44",
+      "88"
+    ],
+    "a": 0,
+    "e": "Method 1 (Closed Semicircle Perimeter Formula Method):\nStep 1: अर्धवृत्त के परिमाप का सूत्र:\n$$\\text{परिमाप} = $\\pi$ r + 2r = r($\\pi$ + 2)$$\nStep 2: $\\pi = \\frac{22}{7}$ और $r = 7\\text{ सेमी}$ रखने पर:\n$$\\text{परिमाप} = 7 $\\times$ $\\le$ft($\\frac{22}{7}$ + 2\\right) = 7 $\\times$ $\\le$ft($\\frac{22+14}{7}$\\right) = 7 $\\times$ $\\frac{36}{7}$ = 36\\text{ सेमी}$$\nअतः सही विकल्प  36 है।\n\nMethod 2 (Component Addition Method):\n- वक्र भाग की लंबाई = $\\frac{22}{7} \\times 7 = 22\\text{ सेमी}$\n- व्यास = $2 \\times 7 = 14\\text{ सेमी}$\nकुल परिमाप = $22 + 14 = 36\\text{ सेमी}$।\nअतः सही उत्तर '36' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_67",
+    "qe": "The perimeter of a square is equal to the perimeter of a rectangle of length 16 cm and breadth 14 cm. Find the perimeter of a semicircle whose diameter is equal to the side of the square.",
+    "qh": "एक वर्ग का परिमाप 16 सेमी लंबाई और 14 सेमी चौड़ाई वाले आयत के परिमाप के बराबर है। उस अर्धवृत्त की परिधि क्या होगी जिसका व्यास वर्ग की भुजा के बराबर है।",
+    "oe": [
+      "31.57 cm",
+      "21.57 cm",
+      "38.57 cm",
+      "25.57 cm"
+    ],
+    "oh": [
+      "31.57 cm",
+      "21.57 cm",
+      "38.57 cm",
+      "25.57 cm"
+    ],
+    "a": 2,
+    "e": "Method 1 (Dimensions & Semicircle Perimeter Method):\nStep 1: आयत का परिमाप निकालें:\n$$\\text{आयत का परिमाप} = 2(16 + 14) = 2 $\\times$ 30 = 60\\text{ सेमी}$$\nStep 2: वर्ग की भुजा نکالें:\n$$4 $\\times$ \\text{भुजा} = 60 \\implies \\text{भुजा} = 15\\text{ सेमी}$$\nStep 3: अर्धवृत्त का व्यास $d = 15\\text{ सेमी}$, त्रिज्या $r = \\frac{15}{2} = 7.5\\text{ सेमी}$।\nStep 4: अर्धवृत्त का परिमाप निकालें:\n$$\\text{परिमाप} = $\\pi$ r + 2r = $\\le$ft($\\frac{22}{7}$ $\\times$ $\\frac{15}{2}$\\right) + 15 = $\\frac{165}{7}$ + 15 $\\approx$ 23.57 + 15 = 38.57\\text{ सेमी}$$\nअतः सही विकल्प  38.57 cm है।\n\nMethod 2 (Factor Formulation):\n$$\\text{परिमाप} = r $\\times$ $\\frac{36}{7}$ = $\\frac{15}{2}$ $\\times$ $\\frac{36}{7}$ = $\\frac{270}{7}$ $\\approx$ 38.57\\text{ सेमी}$$\nअतः सही उत्तर '38.57 cm' है।\n\nExam point: kshetrafal-aayatan ke sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_68",
+    "qe": "The inner and outer radius of two concentric circle are 6.7 cm and 9.5 cm, respectively. What is the difference between their circumferences (in cm) ? $(Take \\pi = 22/7)$",
+    "qh": "दो संकेंद्रित वृत्तों के आंतरिक और बाहरी त्रिज्या क्रमशः 6.7 सेमी और 9.5 सेमी हैं। उनकी परिधि (सेमी में) के बीच क्या अंतर है? $(\\pi = 22/7$ लीजिए)",
+    "oe": [
+      "6.5",
+      "17.6",
+      "10.4",
+      "20.5"
+    ],
+    "oh": [
+      "6.5",
+      "17.6",
+      "10.4",
+      "20.5"
+    ],
+    "a": 1,
+    "e": "Method 1 (Difference of Circumferences Formula Method):\nStep 1: परिधियों का अंतर:\n$$$\\Delta$ C = 2$\\pi$ R - 2$\\pi$ r = 2$\\pi$ (R - r)$$\nStep 2: त्रिज्याओं का अंतर نکالें ($R = 9.5\\text{ सेमी}, r = 6.7\\text{ सेमी}$):\n$$R - r = 9.5 - 6.7 = 2.8\\text{ सेमी}$$\nStep 3: मान प्रतिस्थापित करने पर:\n$$$\\Delta$ C = 2 $\\times$ $\\frac{22}{7}$ $\\times$ 2.8 = 2 $\\times$ 22 $\\times$ 0.4 = 44 $\\times$ 0.4 = 17.6\\text{ सेमी}$$\nअतः सही विकल्प  17.6 है।\n\nMethod 2 (Direct Step Multiplication):\n$$$\\Delta$ C = $\\frac{44}{7}$ $\\times$ 2.8 = 44 $\\times$ 0.4 = 17.6\\text{ सेमी}$$\nअतः सही उत्तर '17.6' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_69",
+    "qe": "A wire in the shape of a circle of radius 28 cm is bent in the form of a square, what is the difference of their areas?",
+    "qh": "त्रिज्या 28 सेमी के एक वृत्त के आकार का एक तार वर्ग के रूप में मुड़ा हुआ है, उनके क्षेत्रों का अंतर क्या है?",
+    "oe": [
+      "530 sq. cm",
+      "532 sq. cm",
+      "538 sq. cm",
+      "528 sq. cm"
+    ],
+    "oh": [
+      "530 sq. cm",
+      "532 sq. cm",
+      "538 sq. cm",
+      "528 sq. cm"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equal Perimeter Area Difference Method):\nStep 1: तार की लंबाई (वृत्त की परिधि) निकालें:\n$$\\text{परिधि} = 2$\\pi$ r = 2 $\\times$ $\\frac{22}{7}$ $\\times$ 28 = 176\\text{ सेमी}$$\nStep 2: वर्ग की भुजा نکالें (तार का परिमाप समान रहेगा):\n$$4a = 176 \\implies a = 44\\text{ सेमी}$$\nStep 3: वृत्त और वर्ग के क्षेत्रफल निकालें:\n- वृत्त का क्षेत्रफल = $\\pi r^2 = \\frac{22}{7} \\times 28 \\times 28 = 22 \\times 4 \\times 28 = 2464\\text{ cm}^2$\n- वर्ग का क्षेत्रफल = $a^2 = 44^2 = 1936\\text{ cm}^2$\nStep 4: क्षेत्रफलों का अंतर ज्ञात करें:\n$$\\text{अंतर} = 2464 - 1936 = 528\\text{ वर्ग सेमी}$$\nअतः सही विकल्प  528 sq. cm है।\n\nMethod 2 (Scale Constant Difference Method):\n$$\\text{अंतर} = $\\pi$ r^2 - $\\le$ft($\\frac{\\pir}{2}$\\right)^2 = r^2 $\\pi$ $\\le$ft(1 - $\\frac{\\pi}{4}$\\right) = 28^2 $\\times$ $\\frac{22}{7}$ $\\times$ $\\le$ft(1 - $\\frac{11}{14}$\\right) = 2464 $\\times$ $\\frac{3}{14}$ = 176 $\\times$ 3 = 528\\text{ cm}^2$$\nअतः सही उत्तर '528 sq. cm' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

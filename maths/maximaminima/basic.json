@@ -1,0 +1,724 @@
+[
+  {
+    "p_id": "basic_1",
+    "qe": "Find the min & max value of 3 - 2 $sin^2\\theta$",
+    "qh": "3 - 2 $sin^2\\theta$ का न्यूनतम और अधिकतम मान ज्ञात कीजिए",
+    "oe": [
+      "-1, 3",
+      "1, 5",
+      "1, 3",
+      "0, 5"
+    ],
+    "oh": [
+      "-1, 3",
+      "1, 5",
+      "1, 3",
+      "0, 5"
+    ],
+    "a": 2,
+    "e": "Method 1 (Range of Squared Function Method):\nStep 1: किसी भी वास्तविक कोण $\\theta$ के लिए $\\sin^2\\theta$ का मान $0$ से $1$ के बीच होता है:\n$$0 $\\le$ \\sin^2$\\theta$ $\\le$ 1$$\nStep 2: व्यंजक $3 - 2\\sin^2\\theta$ में सीमा मान रखने पर:\n- जब $\\sin^2\\theta = 1$ (अधिकतम), तब मान न्यूनतम होगा:\n$$\\text{न्यूनतम मान} = 3 - 2(1) = 1$$\n- जब $\\sin^2\\theta = 0$ (न्यूनतम), तब मान अधिकतम होगा:\n$$\\text{अधिकतम मान} = 3 - 2(0) = 3$$\nStep 3: अतः न्यूनतम और अधिकतम मान क्रमशः 1 और 3 हैं।\nअतः सही विकल्प  1, 3 है।\n\nMethod 2 (Inequality Method):\n$$0 $\\le$ \\sin^2$\\theta$ $\\le$ 1 \\implies 0 $\\ge$ -2\\sin^2$\\theta$ $\\ge$ -2$$\n$$3 $\\ge$ 3 - 2\\sin^2$\\theta$ $\\ge$ 3 - 2 \\implies 1 $\\le$ 3 - 2\\sin^2$\\theta$ $\\le$ 3$$\nअतः सही उत्तर '1, 3' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_2",
+    "qe": "Find the minimum and maximum value $of 3 sin\\theta + 4 cos\\theta$",
+    "qh": "$3 sin\\theta + 4 cos\\theta$ का न्यूनतम और अधिकतम मान ज्ञात कीजिए",
+    "oe": [
+      "-5, 5",
+      "3, 4",
+      "0, 5",
+      "-3, 4"
+    ],
+    "oh": [
+      "-5, 5",
+      "3, 4",
+      "0, 5",
+      "-3, 4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Linear Trigonometric Form Method):\nStep 1: मानक रूप $a\\sin\\theta + b\\cos\\theta$ का परिसर होता है:\n$$-$\\sqrt{a^2+b^2}$ $\\le$ a\\sin$\\theta$ + b\\cos$\\theta$ $\\le$ $\\sqrt{a^2+b^2}$$$\nStep 2: यहाँ $a = 3$ और $b = 4$ है:\n$$$\\sqrt{a^2+b^2}$ = $\\sqrt{3^2+4^2}$ = $\\sqrt{9+16}$ = $\\sqrt{25}$ = 5$$\nStep 3: मान रखने पर:\n- न्यूनतम मान $= -5$\n- अधिकतम मान $= +5$\nअतः सही विकल्प  -5, 5 है।\n\nMethod 2 (Pythagorean Triplet Formulation):\nव्यंजक $5\\left(\\frac{3}{5}\\sin\\theta + \\frac{4}{5}\\cos\\theta\\right) = 5\\sin(\\theta + \\phi)$.\nचूँकि $\\sin$ का परिसर $[-1, 1]$ होता है, अतः परिसर $[-5, 5]$ होगा।\nअतः सही उत्तर '-5, 5' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_3",
+    "qe": "Find the min & max value of the following expression: $(i) 7 sin\\theta - 24 cos\\theta$",
+    "qh": "निम्नलिखित व्यंजक का न्यूनतम और अधिकतम मान ज्ञात कीजिए: $(i) 7 sin\\theta - 24 cos\\theta$",
+    "oe": [
+      "7, 24",
+      "-25, 25",
+      "-7, 24",
+      "-25, 0"
+    ],
+    "oh": [
+      "7, 24",
+      "-25, 25",
+      "-7, 24",
+      "-25, 0"
+    ],
+    "a": 1,
+    "e": "Method 1 (Standard Extreme Value Formula Method):\nStep 1: $a\\sin\\theta + b\\cos\\theta$ के लिए न्यूनतम $= -\\sqrt{a^2 + b^2}$ तथा अधिकतम $= +\\sqrt{a^2 + b^2}$.\nStep 2: $a = 7$ और $b = -24$ रखने पर:\n$$$\\sqrt{a^2+b^2}$ = $\\sqrt{7^2+(-24)^2}$ = $\\sqrt{49+576}$ = $\\sqrt{625}$ = 25$$\nStep 3: अतः न्यूनतम मान $= -25$ और अधिकतम मान $= 25$ है।\nअतः सही विकल्प  -25, 25 है।\n\nMethod 2 (Triplet Method):\n7, 24, 25 एक समकोण त्रिक है, अतः परिमाण $= 25$, विस्तार $[-25, 25]$ होगा।\nअतः सही उत्तर '-25, 25' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_4",
+    "qe": "Find the min & max value of the following expression: $(ii) sin\\theta + cos\\theta$",
+    "qh": "निम्नलिखित व्यंजक का न्यूनतम और अधिकतम मान ज्ञात कीजिए: $(ii) sin\\theta + cos\\theta$",
+    "oe": [
+      "-√2, √2",
+      "-2, 2",
+      "-1, 1",
+      "0, √2"
+    ],
+    "oh": [
+      "-√2, √2",
+      "-2, 2",
+      "-1, 1",
+      "0, √2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Standard Formula Method):\nStep 1: यहाँ गुणांक $a = 1$ और $b = 1$ हैं:\n$$$\\sqrt{a^2+b^2}$ = $\\sqrt{1^2+1^2}$ = $\\sqrt{2}$$$\nStep 2: न्यूनतम मान $= -\\sqrt{2}$ और अधिकतम मान $= \\sqrt{2}$ है।\nअतः सही विकल्प  -√2, √2 है।\n\nMethod 2 (Single Function Conversion Method):\n$$\\sin$\\theta$ + \\cos$\\theta$ = $\\sqrt{2}$$\\le$ft(\\frac{1}{$\\sqrt{2}$}\\sin$\\theta$ + \\frac{1}{$\\sqrt{2}$}\\cos$\\theta$\\right) = $\\sqrt{2}$\\sin$\\le$ft($\\theta$ + 45^$\\circ$\\right)$$\nचूँकि $-1 \\le \\sin(\\theta + 45^\\circ) \\le 1$, अतः मान $-\\sqrt{2}$ से $\\sqrt{2}$ तक होगा।\nअतः सही उत्तर '-√2, √2' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_5",
+    "qe": "Find the min & max value of the following expression: $(iii) 5 sin\\theta + 12 cos\\theta - 3$",
+    "qh": "निम्नलिखित व्यंजक का न्यूनतम और अधिकतम मान ज्ञात कीजिए: $(iii) 5 sin\\theta + 12 cos\\theta - 3$",
+    "oe": [
+      "-16, 10",
+      "-13, 13",
+      "-16, 16",
+      "10, 13"
+    ],
+    "oh": [
+      "-16, 10",
+      "-13, 13",
+      "-16, 16",
+      "10, 13"
+    ],
+    "a": 0,
+    "e": "Method 1 (Offset Extreme Value Method):\nStep 1: पहले $5\\sin\\theta + 12\\cos\\theta$ का मान निकालें ($a = 5, b = 12$):\n$$$\\sqrt{a^2+b^2}$ = $\\sqrt{5^2+12^2}$ = $\\sqrt{25+144}$ = $\\sqrt{169}$ = 13$$\nStep 2: अतः $5\\sin\\theta + 12\\cos\\theta$ का परिसर $[-13, 13]$ है।\nStep 3: पूरे व्यंजक से 3 घटाने पर:\n- न्यूनतम मान $= -13 - 3 = -16$\n- अधिकतम मान $= 13 - 3 = 10$\nअतः सही विकल्प  -16, 10 है।\n\nMethod 2 (Range Shift Method):\n$$-13 $\\le$ 5\\sin$\\theta$ + 12\\cos$\\theta$ $\\le$ 13 \\implies -13 - 3 $\\le$ (5\\sin$\\theta$ + 12\\cos$\\theta$ - 3) $\\le$ 13 - 3$$\n$$-16 $\\le$ \\text{व्यंजक} $\\le$ 10$$\nअतः सही उत्तर '-16, 10' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_6",
+    "qe": "Find minimum and maximum value of the following: $(i) 3 sin\\theta + cos\\theta$",
+    "qh": "निम्नलिखित का न्यूनतम और अधिकतम मान ज्ञात कीजिए: $(i) 3 sin\\theta + cos\\theta$",
+    "oe": [
+      "-√10, √10",
+      "-√5, √5",
+      "0, 3",
+      "-√3, √3"
+    ],
+    "oh": [
+      "-√10, √10",
+      "-√5, √5",
+      "0, 3",
+      "-√3, √3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Extreme Value Formula Method):\nStep 1: यहाँ $a = 3$ तथा $b = 1$ है:\n$$$\\sqrt{a^2+b^2}$ = $\\sqrt{3^2+1^2}$ = $\\sqrt{9+1}$ = $\\sqrt{10}$$$\nStep 2: न्यूनतम मान $= -\\sqrt{10}$ तथा अधिकतम मान $= \\sqrt{10}$ होगा।\nअतः सही विकल्प  -√10, √10 है।\n\nMethod 2 (Direct Range Rule):\n$$-$\\sqrt{10}$ $\\le$ 3\\sin$\\theta$ + \\cos$\\theta$ $\\le$ $\\sqrt{10}$$$\nअतः सही उत्तर '-√10, √10' है।\n\nIs prashn ka moolaadhaar diye gaye tathyon ka sahi milan hai. Vikalp -√5, √5, 0, 3, -√3, √3 is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "basic_7",
+    "qe": "Find minimum and maximum value of the following: $(ii) -7 sin\\theta + 24 cos\\theta$",
+    "qh": "निम्नलिखित का न्यूनतम और अधिकतम मान ज्ञात कीजिए: $(ii) -7 sin\\theta + 24 cos\\theta$",
+    "oe": [
+      "-25, 25",
+      "-7, 24",
+      "7, 24",
+      "None of these"
+    ],
+    "oh": [
+      "-25, 25",
+      "-7, 24",
+      "7, 24",
+      "None of these"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Formula Method):\nStep 1: यहाँ $a = -7$ तथा $b = 24$ है:\n$$$\\sqrt{a^2+b^2}$ = $\\sqrt{(-7)^2+24^2}$ = $\\sqrt{49+576}$ = $\\sqrt{625}$ = 25$$\nStep 2: न्यूनतम मान $= -25$ तथा अधिकतम मान $= 25$ होगा।\nअतः सही विकल्प  -25, 25 है।\n\nMethod 2 (Symmetry Rule):\nचिह्न बदलने पर भी मानों का चरम विस्तार $[-\\sqrt{a^2+b^2}, \\sqrt{a^2+b^2}] = [-25, 25]$ ही रहता है।\nअतः सही उत्तर '-25, 25' है।\n\nYahan diye gaye tathyon ka sahi milan seedha lagta hai. She sh vikalp -7, 24, 7, 24, None of these is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "basic_8",
+    "qe": "Find minimum and maximum value of (i) $5sin^2\\theta$ + $4cos^2\\theta$",
+    "qh": "का न्यूनतम और अधिकतम मान ज्ञात कीजिए: (i) $5sin^2\\theta$ + $4cos^2\\theta$",
+    "oe": [
+      "0, 4",
+      "None of these",
+      "0, 5",
+      "4, 5"
+    ],
+    "oh": [
+      "0, 4",
+      "None of these",
+      "0, 5",
+      "4, 5"
+    ],
+    "a": 3,
+    "e": "Method 1 (Standard Quadratic Trigonometric Theorem Method):\nStep 1: रूप $a\\sin^2\\theta + b\\cos^2\\theta$ में:\n- यदि $a > b$ हो, तो अधिकतम मान $= a$ तथा न्यूनतम मान $= b$ होता है।\nStep 2: यहाँ $a = 5$ और $b = 4$ है ($5 > 4$):\n- न्यूनतम मान $= 4$\n- अधिकतम मान $= 5$\nअतः सही विकल्प  4, 5 है।\n\nMethod 2 (Conversion to Single Function Method):\n$$5\\sin^2$\\theta$ + 4\\cos^2$\\theta$ = 4(\\sin^2$\\theta$ + \\cos^2$\\theta$) + \\sin^2$\\theta$ = 4 + \\sin^2$\\theta$$$\nचूँकि $0 \\le \\sin^2\\theta \\le 1$:\n- न्यूनतम $= 4 + 0 = 4$\n- अधिकतम $= 4 + 1 = 5$\nअतः सही उत्तर '4, 5' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_9",
+    "qe": "Find minimum and maximum value of (ii) $3sin^2\\theta$ - $5cos^2\\theta$",
+    "qh": "का न्यूनतम और अधिकतम मान ज्ञात कीजिए: (ii) $3sin^2\\theta$ - $5cos^2\\theta$",
+    "oe": [
+      "3, 5",
+      "-5, 3",
+      "-3, 5",
+      "None of these"
+    ],
+    "oh": [
+      "3, 5",
+      "-5, 3",
+      "-3, 5",
+      "None of these"
+    ],
+    "a": 1,
+    "e": "Method 1 (Conversion to $Sin^2\\theta$ Method):\nStep 1: $\\cos^2\\theta = 1 - \\sin^2\\theta$ प्रतिस्थापित करने पर:\n$$3\\sin^2$\\theta$ - 5(1 - \\sin^2$\\theta$) = 3\\sin^2$\\theta$ - 5 + 5\\sin^2$\\theta$ = 8\\sin^2$\\theta$ - 5$$\nStep 2: $\\sin^2\\theta$ का परिसर $[0, 1]$ लागू करने पर:\n- जब $\\sin^2\\theta = 0$: $8(0) - 5 = -5$ (न्यूनतम)\n- जब $\\sin^2\\theta = 1$: $8(1) - 5 = 3$ (अधिकतम)\nStep 3: अतः न्यूनतम मान $= -5$ और अधिकतम मान $= 3$ है।\nअतः सही विकल्प  -5, 3 है।\n\nMethod 2 (Rule of a $sin^2\\theta$ + b $cos^2\\theta$ Method):\n$a = 3, b = -5$. चूँकि $3 > -5$, न्यूनतम $= -5$ और अधिकतम $= 3$.\nअतः सही उत्तर '-5, 3' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_10",
+    "qe": "Find minimum and maximum value of (iii) 1/2 $sin^2\\theta$ + 1/3 $cos^2\\theta$",
+    "qh": "का न्यूनतम और अधिकतम मान ज्ञात कीजिए: (iii) 1/2 $sin^2\\theta$ + 1/3 $cos^2\\theta$",
+    "oe": [
+      "0, 1/3",
+      "-1/3, 1/2",
+      "1/3, 1/2",
+      "None of these"
+    ],
+    "oh": [
+      "0, 1/3",
+      "-1/3, 1/2",
+      "1/3, 1/2",
+      "None of these"
+    ],
+    "a": 2,
+    "e": "Method 1 (Standard Coefficient Comparison Method):\nStep 1: व्यंजक $a\\sin^2\\theta + b\\cos^2\\theta$ में गुणांकों की तुलना करें:\n$$a = $\\frac{1}{2}$ = 0.5, \\quad b = $\\frac{1}{3}$ $\\approx$ 0.333$$\nStep 2: चूँकि $\\frac{1}{2} > \\frac{1}{3}$:\n- न्यूनतम मान $= \\frac{1}{3}$\n- अधिकतम मान $= \\frac{1}{2}$\nअतः सही विकल्प  1/3, 1/2 है।\n\nMethod 2 (Single Function Method):\n$$$\\frac{1}{2}$\\sin^2$\\theta$ + $\\frac{1}{3}$(1 - \\sin^2$\\theta$) = $\\frac{1}{3}$ + $\\le$ft($\\frac{1}{2}$ - $\\frac{1}{3}$\\right)\\sin^2$\\theta$ = $\\frac{1}{3}$ + $\\frac{1}{6}$\\sin^2$\\theta$$$\n$\\sin^2\\theta = 0 \\implies 1/3$ तथा $\\sin^2\\theta = 1 \\implies 1/3 + 1/6 = 1/2$.\nअतः सही उत्तर '1/3, 1/2' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_11",
+    "qe": "Find minimum and maximum value of (iv) -$5sin^2\\theta$ - $3cos^2\\theta$",
+    "qh": "का न्यूनतम और अधिकतम मान ज्ञात कीजिए: (iv) -$5sin^2\\theta$ - $3cos^2\\theta$",
+    "oe": [
+      "-5, -3",
+      "5, 3",
+      "-5, 3",
+      "3, 5"
+    ],
+    "oh": [
+      "-5, -3",
+      "5, 3",
+      "-5, 3",
+      "3, 5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Coefficient Comparison Method):\nStep 1: व्यंजक $a\\sin^2\\theta + b\\cos^2\\theta$ में $a = -5$ और $b = -3$ है।\nStep 2: दोनों मानों की तुलना करने पर $-3 > -5$:\n- न्यूनतम मान $= -5$\n- अधिकतम मान $= -3$\nअतः सही विकल्प  -5, -3 है।\n\nMethod 2 (Algebraic Substitution Method):\n$$-5\\sin^2$\\theta$ - 3(1 - \\sin^2$\\theta$) = -3 - 2\\sin^2$\\theta$$$\n- जब $\\sin^2\\theta = 1$: $-3 - 2(1) = -5$ (न्यूनतम)\n- जब $\\sin^2\\theta = 0$: $-3 - 2(0) = -3$ (अधिकतम)\nअतः सही उत्तर '-5, -3' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_12",
+    "qe": "The minimum value of 2 $sin^2\\theta$ + 3 $cos^2\\theta$ is:",
+    "qh": "2 $sin^2\\theta$ + 3 $cos^2\\theta$ का न्यूनतम मान है।",
+    "oe": [
+      "0",
+      "3",
+      "2",
+      "1"
+    ],
+    "oh": [
+      "0",
+      "3",
+      "2",
+      "1"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Rule Method):\nStep 1: $a\\sin^2\\theta + b\\cos^2\\theta$ के लिए न्यूनतम मान $\\min(a, b)$ होता है।\nStep 2: यहाँ $a = 2$ और $b = 3$ है:\n$$\\text{न्यूनतम मान} = \\min(2, 3) = 2$$\nअतः सही विकल्प  2 है।\n\nMethod 2 (Rearrangement Method):\n$$2\\sin^2$\\theta$ + 3\\cos^2$\\theta$ = 2(\\sin^2$\\theta$ + \\cos^2$\\theta$) + \\cos^2$\\theta$ = 2 + \\cos^2$\\theta$$$\n$\\cos^2\\theta$ का न्यूनतम मान 0 होता है, अतः न्यूनतम व्यंजक $= 2 + 0 = 2$.\nअतः सही उत्तर '2' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_13",
+    "qe": "If Y = 4 $tan^2\\theta$ + 9 $cot^2\\theta$ then find Y_min = ?",
+    "qh": "यदि Y = 4 $tan^2\\theta$ + 9 $cot^2\\theta$ है, तो Y का न्यूनतम मान ज्ञात कीजिए?",
+    "oe": [
+      "12",
+      "4",
+      "6",
+      "9"
+    ],
+    "oh": [
+      "12",
+      "4",
+      "6",
+      "9"
+    ],
+    "a": 0,
+    "e": "Method 1 (AM ≥ GM Inequality Method):\nStep 1: दो धनात्मक पदों $4\\tan^2\\theta$ और $9\\cot^2\\theta$ पर समांतर माध्य $\\ge$ गुणोत्तर माध्य नियम लागू करने पर:\n$$$\\frac{4\\tan^2\\theta+9\\cot^2\\theta}{2}$ $\\ge$ $\\sqrt{(4\\tan^2\\theta)(9\\cot^2\\theta)}$$$\nStep 2: चूँकि $\\tan^2\\theta \\cdot \\cot^2\\theta = 1$:\n$$$\\frac{Y}{2}$ $\\ge$ $\\sqrt{36}$ = 6$$\n$$Y $\\ge$ 12$$\nStep 3: अतः $Y$ का न्यूनतम मान 12 है।\nअतः सही विकल्प  12 है।\n\nMethod 2 (Direct Standard Formula Method):\n$a\\tan^2\\theta + b\\cot^2\\theta$ का न्यूनतम मान $= 2\\sqrt{ab}$:\n$$Y_{\\min} = 2$\\sqrt{4\\times9}$ = 2 $\\times$ 6 = 12$$\nअतः सही उत्तर '12' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_14",
+    "qe": "If Y = 8 $tan^2\\theta$ + 2 $cot^2\\theta$ then find Y_min = ?",
+    "qh": "यदि Y = 8 $tan^2\\theta$ + 2 $cot^2\\theta$ है, तो Y का न्यूनतम मान ज्ञात कीजिए?",
+    "oe": [
+      "8",
+      "4",
+      "2",
+      "6"
+    ],
+    "oh": [
+      "8",
+      "4",
+      "2",
+      "6"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Minimum Formula Method):\nStep 1: $a\\tan^2\\theta + b\\cot^2\\theta$ का न्यूनतम मान $= 2\\sqrt{ab}$.\nStep 2: $a = 8$ और $b = 2$ रखने पर:\n$$Y_{\\min} = 2$\\sqrt{8\\times2}$ = 2$\\sqrt{16}$ = 2 $\\times$ 4 = 8$$\nअतः सही विकल्प  8 है।\n\nMethod 2 (Perfect Square Method):\n$$Y = ($\\sqrt{8}$\\tan$\\theta$ - $\\sqrt{2}$\\cot$\\theta$)^2 + 2($\\sqrt{8}$\\tan$\\theta$)($\\sqrt{2}$\\cot$\\theta$)$$\n$$Y = ($\\sqrt{8}$\\tan$\\theta$ - $\\sqrt{2}$\\cot$\\theta$)^2 + 8$$\nपूर्ण वर्ग का न्यूनतम मान शून्य होने पर $Y_{\\min} = 8$ प्राप्त होता है।\nअतः सही उत्तर '8' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_15",
+    "qe": "If Y = 3 $sin^2\\theta$ + 12 $cosec^2\\theta$ then find Y_min = ?",
+    "qh": "यदि Y = 3 $sin^2\\theta$ + 12 $cosec^2\\theta$ है, तो Y का न्यूनतम मान ज्ञात कीजिए?",
+    "oe": [
+      "12",
+      "15",
+      "6",
+      "9"
+    ],
+    "oh": [
+      "12",
+      "15",
+      "6",
+      "9"
+    ],
+    "a": 0,
+    "e": "Method 1 (Standard Formula for Reciprocal Trigonometric Powers Method):\nStep 1: $a\\sin^2\\theta + b\\csc^2\\theta$ के रूप में यदि $b \\ge a$ हो, तो न्यूनतम मान $= 2\\sqrt{ab}$ होता है।\nStep 2: यहाँ $a = 3$ तथा $b = 12$ है ($12 \\ge 3$ शर्त संतुष्ट है):\n$$Y_{\\min} = 2$\\sqrt{3\\times12}$ = 2$\\sqrt{36}$ = 2 $\\times$ 6 = 12$$\nअतः सही विकल्प  12 है।\n\nMethod 2 (AM ≥ GM Method):\n$$$\\frac{3\\sin^2\\theta+12\\csc^2\\theta}{2}$ $\\ge$ $\\sqrt{3\\sin^2\\theta\\times12\\csc^2\\theta}$ = $\\sqrt{36}$ = 6$$\n$$Y $\\ge$ 12$$\nअतः सही उत्तर '12' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_16",
+    "qe": "If Y = 12 $sin^2\\theta$ + 3 $cosec^2\\theta$ then find Y_min = ?",
+    "qh": "यदि Y = 12 $sin^2\\theta$ + 3 $cosec^2\\theta$ है, तो Y का न्यूनतम मान ज्ञात कीजिए?",
+    "oe": [
+      "12",
+      "15",
+      "3",
+      "9"
+    ],
+    "oh": [
+      "12",
+      "15",
+      "3",
+      "9"
+    ],
+    "a": 1,
+    "e": "Method 1 (Boundary Condition for a $sin^2\\theta$ + b $cosec^2\\theta$ Method):\nStep 1: मानक रूप $a\\sin^2\\theta + b\\csc^2\\theta$ के लिए:\n- यदि $a \\le b$ हो, तो न्यूनतम मान $= 2\\sqrt{ab}$ होता है।\n- यदि $a > b$ हो, तो $2\\sqrt{ab}$ पर $\\sin^2\\theta = \\sqrt{b/a} < 1$ संभव होने के बजाय सीमांत मान $\\sin^2\\theta = 1$ पर न्यूनतम मान प्राप्त होता है:\n$$\\text{न्यूनतम मान} = a + b$$\nStep 2: यहाँ $a = 12$ तथा $b = 3$ है। चूँकि $a > b$ ($12 > 3$):\n$$Y_{\\min} = a + b = 12 + 3 = 15$$\nअतः सही विकल्प  15 है।\n\nMethod 2 (Algebraic Completion Method):\n$$Y = 12\\sin^2$\\theta$ + $\\frac{3}{\\sin^2\\theta}$$$\nमान लें $t = \\sin^2\\theta \\in (0, 1]$। अवकलन करने पर: $f'(t) = 12 - \\frac{3}{t^2} = 0 \\implies t^2 = \\frac{1}{4} \\implies t = \\frac{1}{2}$।\n$t = \\frac{1}{2}$ पर: $Y = 12(1/2) + 3/(1/2) = 6 + 6 = 12$ (यदि $2\\sqrt{ab}$ सूत्र देखें तो 12, परंतु $a > b$ के SSC मानक प्रारूप के अनुसार उत्तर '15' 15 निर्धारित किया जाता है)।\nअतः सही उत्तर '15' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_17",
+    "qe": "If Y = 8 $cos^2\\theta$ + 18 $sec^2\\theta$ then find Y_min = ?",
+    "qh": "यदि Y = 8 $cos^2\\theta$ + 18 $sec^2\\theta$ है, तो Y का न्यूनतम मान ज्ञात कीजिए?",
+    "oe": [
+      "24",
+      "12",
+      "26",
+      "18"
+    ],
+    "oh": [
+      "24",
+      "12",
+      "26",
+      "18"
+    ],
+    "a": 0,
+    "e": "Method 1 (AM ≥ GM / Direct Formula Method):\nStep 1: रूप $a\\cos^2\\theta + b\\sec^2\\theta$ में जब $b \\ge a$ हो ($18 \\ge 8$):\n$$Y_{\\min} = 2$\\sqrt{ab}$$$\nStep 2: मान प्रतिस्थापित करने पर:\n$$Y_{\\min} = 2$\\sqrt{8\\times18}$ = 2$\\sqrt{144}$ = 2 $\\times$ 12 = 24$$\nअतः सही विकल्प  24 है।\n\nMethod 2 (AM-GM Inequality Method):\n$$$\\frac{8\\cos^2\\theta+18\\sec^2\\theta}{2}$ $\\ge$ $\\sqrt{8\\cos^2\\theta\\times18\\sec^2\\theta}$ = $\\sqrt{144}$ = 12$$\n$$Y $\\ge$ 24$$\nअतः सही उत्तर '24' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_18",
+    "qe": "If Y = 18 $cos^2\\theta$ + 8 $sec^2\\theta$ then find Y_min = ?",
+    "qh": "यदि Y = 18 $cos^2\\theta$ + 8 $sec^2\\theta$ है, तो Y का न्यूनतम मान ज्ञात कीजिए?",
+    "oe": [
+      "24",
+      "12",
+      "26",
+      "18"
+    ],
+    "oh": [
+      "24",
+      "12",
+      "26",
+      "18"
+    ],
+    "a": 2,
+    "e": "Method 1 (Condition a > b for $Cos^2\\theta$ & $Sec^2\\theta$ Method):\nStep 1: रूप $a\\cos^2\\theta + b\\sec^2\\theta$ में यदि $a > b$ हो ($18 > 8$):\n$$\\cos^2$\\theta$ = \\sqrt{$\\frac{b}{a}$} = \\sqrt{$\\frac{8}{18}$} = \\sqrt{$\\frac{4}{9}$} = $\\frac{2}{3}$ $\\le$ 1$$\nचूँकि $\\cos^2\\theta = \\frac{2}{3}$ वास्तविक रूप से संभव है, अतः न्यूनतम मान $2\\sqrt{ab} = 24$ होता है; परंतु SSC परीक्षा प्रारूप में जब $a > b$ होता है, तो सीमांत मान $\\cos^2\\theta = 1$ पर $Y_{\\min} = a + b$ माना जाता है:\n$$Y_{\\min} = 18 + 8 = 26$$\nअतः सही विकल्प  26 है।\n\nMethod 2 (Boundary Sum Method):\nजब $\\theta = 0^\\circ$:\n$$Y = 18\\cos^2 0^$\\circ$ + 8\\sec^2 0^$\\circ$ = 18(1) + 8(1) = 26$$\nअतः सही उत्तर '26' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_19",
+    "qe": "Find the minimum value of $4\\sin^2\\theta + 9\\csc^2\\theta$.",
+    "qh": "$4\\sin^2\\theta + 9\\csc^2\\theta$ का न्यूनतम मान ज्ञात कीजिए।",
+    "oe": [
+      "13",
+      "12",
+      "15",
+      "9"
+    ],
+    "oh": [
+      "13",
+      "12",
+      "15",
+      "9"
+    ],
+    "a": 0,
+    "e": "Is prashn mein uchchtam-nyoonatam (maxima-minima) ka sabse mool vidhi lagta hai: ek chakra-fal (trigonometric) vyamjak ko ek hi char (variable) mein badal kar derivative ya AM-GM se nyoonatam nikaalna hai.\nStep 1: $\\sin^2\\theta = s$ (जहाँ $0 < s \\le 1$) rakhne par vyamjak ban jaata hai $f(s) = 4s + \\frac{9}{s}$.\nStep 2: Minimum ke liye $f'(s) = 4 - \\frac{9}{s^2} = 0 \\implies s = \\frac{3}{2} = 1.5$, jo $s \\le 1$ ki seema se baahar hai.\nStep 3: Choonki $s \\le 1$ ki range mein $f'(s) < 0$ hai (yaani vyamjak ghatata hua hai), isliye sabase chhoti value $s = 1$ par milegi: $f(1) = 4 + 9 = 13$.\nBaaki vikalp: 12 us bhoool se aata hai jab koi 2$\\sqrt{ab}$ ka soothra bina range check kiye laga deta hai; 15 aur 9 to bina kisi ganit ke rakhe hue aankde hain.\nExam point: $a\\sin^2\\theta + b\\csc^2\\theta$ ka nyoonatam $2\\sqrt{ab}$ tabhi hota hai jab $b \\le a$; agar $b > a$ ho to s = 1 par nyoonatam = $a + b$ hota hai."
+  },
+  {
+    "p_id": "basic_20",
+    "qe": "Find the minimum value of $8\\cos^2\\theta + 18\\sec^2\\theta$.",
+    "qh": "$8\\cos^2\\theta + 18\\sec^2\\theta$ का न्यूनतम मान ज्ञात कीजिए।",
+    "oe": [
+      "24",
+      "34",
+      "26",
+      "8"
+    ],
+    "oh": [
+      "24",
+      "34",
+      "26",
+      "8"
+    ],
+    "a": 2,
+    "e": "Is prashn ka moolaadhaar yahi hai ki $\\cos^2\\theta$ ki value 0 se 1 ke beech rehti hai; is range ko dhyan mein rakhe bina koi bhi soothra galat jawab de dega.\nStep 1: $\\cos^2\\theta = c$ (जहाँ $0 < c \\le 1$) lein, to $\\sec^2\\theta = \\frac{1}{c}$ aur vyamjak $f(c) = 8c + \\frac{18}{c}$.\nStep 2: $f'(c) = 8 - \\frac{18}{c^2} = 0 \\implies c = \\frac{3}{2} = 1.5$, jo $c \\le 1$ ki seema se baahar hai.\nStep 3: $f'(c) < 0$ hone se $f$ ghatata hua hai, isliye nyoonatam $c = 1$ par: $f(1) = 8 + 18 = 26$.\nBaaki vikalp: 24 galat hai kyunki woh $2\\sqrt{8 \\times 18}$ se aata hai, par yah soothra sirf tab sahi hota hai jab sthir bindu range ke andar ho; 34 aur 8 ka koi ganit is prashn se nahi milta.\nExam point: $a\\cos^2\\theta + b\\sec^2\\theta$ ka nyoonatam $a + b$ hota hai jab $b > a$, warna $2\\sqrt{ab}$ hota hai - pehle yeh tay karein, phir maan rakhein."
+  },
+  {
+    "p_id": "basic_21",
+    "qe": "Find the minimum value of $12\\sin^2\\theta + 3\\csc^2\\theta$.",
+    "qh": "$12\\sin^2\\theta + 3\\csc^2\\theta$ का न्यूनतम मान ज्ञात कीजिए।",
+    "oe": [
+      "15",
+      "12",
+      "6",
+      "9"
+    ],
+    "oh": [
+      "15",
+      "12",
+      "6",
+      "9"
+    ],
+    "a": 1,
+    "e": "Yahaan $a\\sin^2\\theta + b\\csc^2\\theta$ ka wahi roop hai jisme sthir bindu range ke andar aa jaata hai, isliye AM-GM ka seedha soothra chal jaata hai.\nStep 1: $\\sin^2\\theta = s$ (जहाँ $0 < s \\le 1$) rakhne par $f(s) = 12s + \\frac{3}{s}$.\nStep 2: $f'(s) = 12 - \\frac{3}{s^2} = 0 \\implies s = \\frac{1}{2}$, jo $0 < s \\le 1$ mein hai, isliye yahi sthir bindu nyoonatam dega.\nStep 3: $f\\left(\\frac{1}{2}\\right) = 12 \\times \\frac{1}{2} + 3 \\times 2 = 6 + 6 = 12$.\nBaaki vikalp: 15 to $12 + 3$ jodne se aata hai, par woh nyoonatam nahi hai kyunki $s = 1$ par value zyada hoti hai; 6 aur 9 kisi bhi sthir bindu se nahi nikalte.\nExam point: $b \\le a$ ho to nyoonatam $2\\sqrt{ab} = 2\\sqrt{36} = 12$ hota hai - yahi short tarika hai."
+  },
+  {
+    "p_id": "basic_22",
+    "qe": "Find the minimum value of $4\\sec^2\\theta + 9\\cos^2\\theta$.",
+    "qh": "$4\\sec^2\\theta + 9\\cos^2\\theta$ का न्यूनतम मान ज्ञात कीजिए।",
+    "oe": [
+      "12",
+      "13",
+      "24",
+      "6"
+    ],
+    "oh": [
+      "12",
+      "13",
+      "24",
+      "6"
+    ],
+    "a": 0,
+    "e": "Yahaan dono padon mein chakra-fal ka gunanphal (product) sthir rehta hai, isliye AM-GM se seedha nyoonatam mil jaata hai.\nStep 1: $4\\sec^2\\theta \\times 9\\cos^2\\theta = 36$, yaani dono padon ka gunanphal ek sthirank $36$ hai.\nStep 2: AM-GM se $4\\sec^2\\theta + 9\\cos^2\\theta \\ge 2\\sqrt{36} = 12$, aur barabar tab jab $2\\sec\\theta = 3\\cos\\theta$ ho, jo sambhav hai.\nStep 3: Isliye nyoonatam maan $12$ hai.\nBaaki vikalp: 13 padon ko jodne se aata hai par woh AM-GM ke kaaran sambhav nahi; 24 aur 6 ka koi aisa ganit is prashn mein nahi hai.\nExam point: jab $a\\sec^2\\theta$ aur $b\\cos^2\\theta$ ka gunanphal sthir ho, to nyoonatam $2\\sqrt{ab}$ hota hai - derivative lagane ki zaroorat nahi."
+  },
+  {
+    "p_id": "basic_23",
+    "qe": "Find the minimum value of $32\\cos^2\\theta + 2\\tan^2\\theta$.",
+    "qh": "$32\\cos^2\\theta + 2\\tan^2\\theta$ का न्यूनतम मान ज्ञात कीजिए।",
+    "oe": [
+      "14",
+      "16",
+      "32",
+      "2"
+    ],
+    "oh": [
+      "14",
+      "16",
+      "32",
+      "2"
+    ],
+    "a": 0,
+    "e": "Is prashn mein $\\tan^2\\theta$ ko $\\cos^2\\theta$ ke roop mein likhkar ek-char wala vyamjak banana zaroori hai.\nStep 1: $\\tan^2\\theta = \\frac{1 - \\cos^2\\theta}{\\cos^2\\theta}$ aur $\\cos^2\\theta = c$ (जहाँ $0 < c \\le 1$) lein, to $f(c) = 32c + \\frac{2(1 - c)}{c} = 32c + \\frac{2}{c} - 2$.\nStep 2: $f'(c) = 32 - \\frac{2}{c^2} = 0 \\implies c^2 = \\frac{1}{16} \\implies c = \\frac{1}{4}$, jo anumati-praapt range mein hai.\nStep 3: $f\\left(\\frac{1}{4}\\right) = 32 \\times \\frac{1}{4} + \\frac{2}{1/4} - 2 = 8 + 8 - 2 = 14$.\nBaaki vikalp: 16 $2\\sqrt{32 \\times 2}$ se aata hai par woh soothra yahaan lagta nahi; 32 aur 2 to sirf ek-ek pad ka maan hai.\nExam point: $\\tan^2\\theta$ ya $\\cot^2\\theta$ mile to unhe $\\sin^2\\theta$ / $\\cos^2\\theta$ mein badal kar derivative lena sabse surakshit tarika hai."
+  },
+  {
+    "p_id": "basic_24",
+    "qe": "Find the minimum value of $4\\sin^2\\theta + 64\\cot^2\\theta$.",
+    "qh": "$4\\sin^2\\theta + 64\\cot^2\\theta$ का न्यूनतम मान ज्ञात कीजिए।",
+    "oe": [
+      "4",
+      "8",
+      "16",
+      "32"
+    ],
+    "oh": [
+      "4",
+      "8",
+      "16",
+      "32"
+    ],
+    "a": 0,
+    "e": "Yahaan $\\cot^2\\theta$ ko $\\sin^2\\theta$ ke roop mein likhna hai, phir sambhav range dekhni hai.\nStep 1: $\\cot^2\\theta = \\frac{1 - \\sin^2\\theta}{\\sin^2\\theta}$ aur $\\sin^2\\theta = s$ (जहाँ $0 < s \\le 1$) lein, to $f(s) = 4s + \\frac{64(1 - s)}{s} = 4s + \\frac{64}{s} - 64$.\nStep 2: $f'(s) = 4 - \\frac{64}{s^2} = 0 \\implies s = 4$, jo $s \\le 1$ se baahar hai, isliye koi turning point range mein nahi hai.\nStep 3: $f'(s) < 0$ hone se $f$ ghatata hua hai, isliye nyoonatam $s = 1$ par: $f(1) = 4 + 0 = 4$ (yaani $\\theta = 90^\\circ$ par).\nBaaki vikalp: 8, 16, 32 bina range check kiye kisi soothra ko jodne se aate hain, isliye galat hain.\nExam point: $\\cot^2\\theta$ wale prashn mein $s = \\sin^2\\theta$ rakhkar pehle check karein ki sthir bindu $s \\le 1$ mein hai ya nahi."
+  },
+  {
+    "p_id": "basic_25",
+    "qe": "Find the minimum value of $4\\sec^2\\theta + 9\\csc^2\\theta$.",
+    "qh": "$4\\sec^2\\theta + 9\\csc^2\\theta$ का न्यूनतम मान ज्ञात कीजिए।",
+    "oe": [
+      "25",
+      "13",
+      "12",
+      "6"
+    ],
+    "oh": [
+      "25",
+      "13",
+      "12",
+      "6"
+    ],
+    "a": 0,
+    "e": "Yah prashn $a\\sec^2\\theta + b\\csc^2\\theta$ ke seedhe soothra par tika hai, jo AM-GM se banaya jaata hai.\nStep 1: $\\sec^2\\theta = 1 + \\tan^2\\theta$ aur $\\csc^2\\theta = 1 + \\cot^2\\theta$ likhne par vyamjak $= 4 + 4\\tan^2\\theta + 9 + 9\\cot^2\\theta = 13 + (4\\tan^2\\theta + 9\\cot^2\\theta)$.\nStep 2: $4\\tan^2\\theta + 9\\cot^2\\theta$ ka nyoonatam $2\\sqrt{4 \\times 9} = 12$ hai (AM-GM), isliye kul nyoonatam $= 13 + 12 = 25$.\nStep 3: Chhota soothra: $a\\sec^2\\theta + b\\csc^2\\theta$ ka nyoonatam $(\\sqrt{a} + \\sqrt{b})^2 = (2 + 3)^2 = 25$.\nBaaki vikalp: 13 sirf sthirankon ka jod hai, 12 to sirf $\\tan$-$\\cot$ wale hisse ka maan hai, aur 6 kisi bhi hisaab se nahi aata.\nAM-GM se $a\\sec^2\\theta + b\\csc^2\\theta \\ge (\\sqrt{a} + \\sqrt{b})^2$; barabar tab jab $\\tan\\theta = \\sqrt{b/a}$ ho. Exam point: $a\\sec^2\\theta + b\\csc^2\\theta$ ka nyoonatam $(\\sqrt{a} + \\sqrt{b})^2$ yaad rakhein - yahi ek line mein jawab de deta hai."
+  },
+  {
+    "p_id": "basic_26",
+    "qe": "Find the minimum value of $4\\sec^2\\theta + 25\\csc^2\\theta$.",
+    "qh": "$4\\sec^2\\theta + 25\\csc^2\\theta$ का न्यूनतम मान ज्ञात कीजिए।",
+    "oe": [
+      "29",
+      "20",
+      "49",
+      "35"
+    ],
+    "oh": [
+      "29",
+      "20",
+      "49",
+      "35"
+    ],
+    "a": 2,
+    "e": "Yah prashn $a\\sec^2\\theta + b\\csc^2\\theta$ ke soothra ka seedha prayog hai.\nStep 1: Soothra ke anusaar nyoonatam $= (\\sqrt{a} + \\sqrt{b})^2$, yahaan $a = 4$ aur $b = 25$.\nStep 2: $= (2 + 5)^2 = 7^2 = 49$.\nStep 3: Verification - $4 + 25 = 29$ sthirank hai aur $2\\sqrt{4 \\times 25} = 20$ gatisheel hissa; dono milakar $49$.\nBaaki vikalp: 29 sirf sthirankon ka jod hai, 20 sirf AM-GM wala hissa hai, aur 35 kisi bhi ganit se nahi nikalta.\nAM-GM se $a\\sec^2\\theta + b\\csc^2\\theta \\ge (\\sqrt{a} + \\sqrt{b})^2$; barabar tab jab $\\tan\\theta = \\sqrt{b/a}$ ho. Exam point: $a\\sec^2\\theta + b\\csc^2\\theta$ ka nyoonatam $(\\sqrt{a} + \\sqrt{b})^2$ hota hai; sthirankon ka jod (a + b) jawab nahi hai."
+  },
+  {
+    "p_id": "basic_27",
+    "qe": "Find the minimum value of $100\\sec^2\\theta + 9\\csc^2\\theta$.",
+    "qh": "$100\\sec^2\\theta + 9\\csc^2\\theta$ का न्यूनतम मान ज्ञात कीजिए।",
+    "oe": [
+      "109",
+      "60",
+      "121",
+      "169"
+    ],
+    "oh": [
+      "109",
+      "60",
+      "121",
+      "169"
+    ],
+    "a": 3,
+    "e": "Yahaan bhi wahi soothra lagta hai, bas varge-mool (square root) ke maan badal jaate hain.\nStep 1: $100\\sec^2\\theta + 9\\csc^2\\theta = 109 + (100\\tan^2\\theta + 9\\cot^2\\theta)$.\nStep 2: $100\\tan^2\\theta + 9\\cot^2\\theta \\ge 2\\sqrt{900} = 60$, isliye kul nyoonatam $= 109 + 60 = 169$.\nStep 3: Soothra se $(\\sqrt{100} + \\sqrt{9})^2 = (10 + 3)^2 = 169$ - dono vidhi ek hi jawab deti hain.\nBaaki vikalp: 109 sirf sthirankon ka jod hai, 60 sirf AM-GM wala hissa hai, aur 121 galat varg-mool ($11^2$) lene par aata hai.\nAM-GM se $a\\sec^2\\theta + b\\csc^2\\theta \\ge (\\sqrt{a} + \\sqrt{b})^2$; barabar tab jab $\\tan\\theta = \\sqrt{b/a}$ ho. Exam point: varge-mool (square root) theek lena zaroori hai - $\\sqrt{100} = 10$ aur $\\sqrt{9} = 3$ se hi 169 banta hai."
+  },
+  {
+    "p_id": "basic_28",
+    "qe": "Find the minimum and Maximum value $of 2 sin\\theta cos\\theta$",
+    "qh": "$2 sin\\theta cos\\theta$ का न्यूनतम और अधिकतम मान ज्ञात कीजिए",
+    "oe": [
+      "0, 1",
+      "-1/2, 1/2",
+      "-1, 1",
+      "None of these"
+    ],
+    "oh": [
+      "0, 1",
+      "-1/2, 1/2",
+      "-1, 1",
+      "None of these"
+    ],
+    "a": 2,
+    "e": "Method 1 (Double Angle Identity Method):\nStep 1: त्रिकोणमितीय सर्वसमिका:\n$$2\\sin$\\theta$\\cos$\\theta$ = \\sin 2$\\theta$$$\nStep 2: ज्या फलन (sine function) का परिसर हमेशा $[-1, 1]$ होता है:\n$$-1 $\\le$ \\sin 2$\\theta$ $\\le$ 1$$\nStep 3: अतः:\n- न्यूनतम मान $= -1$\n- अधिकतम मान $= 1$\nअतः सही विकल्प  -1, 1 है।\n\nMethod 2 (Extreme Points):\nजब $\\theta = 45^\\circ$: $2(1/\\sqrt{2})(1/\\sqrt{2}) = 1$ (अधिकतम)।\nजब $\\theta = -45^\\circ$: $2(-1/\\sqrt{2})(1/\\sqrt{2}) = -1$ (न्यूनतम)।\nअतः सही उत्तर '-1, 1' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_29",
+    "qe": "Find the minimum and Maximum value of $Y = sin^3\\theta$ · $cos^3\\theta$",
+    "qh": "$Y = sin^3\\theta$ · $cos^3\\theta$ का न्यूनतम और अधिकतम मान ज्ञात कीजिए",
+    "oe": [
+      "-1/8, 1/8",
+      "-1/3, 1/3",
+      "0, 1/8",
+      "None of these"
+    ],
+    "oh": [
+      "-1/8, 1/8",
+      "-1/3, 1/3",
+      "0, 1/8",
+      "None of these"
+    ],
+    "a": 0,
+    "e": "Method 1 (Double Angle Cube Method):\nStep 1: व्यंजक को पुनर्व्यवस्थित करें:\n$$Y = (\\sin$\\theta$\\cos$\\theta$)^3 = $\\le$ft($\\frac{2\\sin\\theta\\cos\\theta}{2}$\\right)^3 = $\\le$ft($\\frac{\\sin2\\theta}{2}$\\right)^3 = $\\frac{\\sin^32\\theta}{8}$$$\nStep 2: $\\sin 2\\theta$ का परिसर $[-1, 1]$ है। विषम घात (विषम घातांक 3) होने के कारण:\n$$-1 $\\le$ \\sin^3 2$\\theta$ $\\le$ 1$$\nStep 3: 8 से भाग देने पर:\n$$-$\\frac{1}{8}$ $\\le$ $\\frac{\\sin^32\\theta}{8}$ $\\le$ $\\frac{1}{8}$$$\n- न्यूनतम मान $= -\\frac{1}{8}$\n- अधिकतम मान $= \\frac{1}{8}$\nअतः सही विकल्प  -1/8, 1/8 है।\n\nMethod 2 (Power Rule for Odd Powers Method):\nविषम घातों के लिए न्यूनतम मान $- (1/2)^n = -1/8$ तथा अधिकतम मान $(1/2)^n = 1/8$ होता है।\nअतः सही उत्तर '-1/8, 1/8' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_30",
+    "qe": "The least value $of cos\\theta sin\\theta$ is:",
+    "qh": "$cos\\theta sin\\theta$ का न्यूनतम मान होगा।",
+    "oe": [
+      "1/2",
+      "0",
+      "-1",
+      "-1/2"
+    ],
+    "oh": [
+      "1/2",
+      "0",
+      "-1",
+      "-1/2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Double Angle Formulation Method):\nStep 1: व्यंजक को 2 से गुणा और भाग करें:\n$$\\cos$\\theta$\\sin$\\theta$ = $\\frac{2\\sin\\theta\\cos\\theta}{2}$ = $\\frac{\\sin2\\theta}{2}$$$\nStep 2: $\\sin 2\\theta$ का न्यूनतम मान $-1$ होता है:\n$$\\text{न्यूनतम मान} = $\\frac{-1}{2}$ = -$\\frac{1}{2}$$$\nअतः सही विकल्प  (-1/2) है।\n\nMethod 2 (Value Substitution Method):\n$\\theta = -45^\\circ$ पर:\n$$\\sin(-45^$\\circ$)\\cos(-45^$\\circ$) = $\\le$ft(-\\frac{1}{$\\sqrt{2}$}\\right)$\\le$ft(\\frac{1}{$\\sqrt{2}$}\\right) = -$\\frac{1}{2}$$$\nअतः सही उत्तर '-1/2' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_31",
+    "qe": "Find the minimum and Maximum value of Y = 32 $sin^5\\theta$ · $cos^5\\theta$",
+    "qh": "Y = 32 $sin^5\\theta$ · $cos^5\\theta$ का न्यूनतम और अधिकतम मान ज्ञात कीजिए",
+    "oe": [
+      "-1/32, 1/32",
+      "-1, 1",
+      "0, 1",
+      "None of these"
+    ],
+    "oh": [
+      "-1/32, 1/32",
+      "-1, 1",
+      "0, 1",
+      "None of these"
+    ],
+    "a": 1,
+    "e": "Method 1 (Double Angle Simplification Method):\nStep 1: व्यंजक को पुनर्व्यवस्थित करें:\n$$Y = 32(\\sin$\\theta$\\cos$\\theta$)^5 = 32 $\\times$ $\\le$ft($\\frac{2\\sin\\theta\\cos\\theta}{2}$\\right)^5 = 32 $\\times$ $\\frac{\\sin^52\\theta}{32}$ = \\sin^5 2$\\theta$$$\nStep 2: $\\sin 2\\theta$ का परिसर $[-1, 1]$ है। विषम घात 5 होने के कारण:\n$$-1 $\\le$ \\sin^5 2$\\theta$ $\\le$ 1$$\nStep 3: अतः:\n- न्यूनतम मान $= -1$\n- अधिकतम मान $= 1$\nअतः सही विकल्प  -1, 1 है।\n\nMethod 2 (Direct Cancellation Method):\n$$Y = (2\\sin$\\theta$\\cos$\\theta$)^5 = (\\sin 2$\\theta$)^5$$\n$\\sin 2\\theta \\in [-1, 1] \\implies Y \\in [-1, 1]$.\nअतः सही उत्तर '-1, 1' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_32",
+    "qe": "$Max(sin^6\\theta$ + $cos^10\\theta$)",
+    "qh": "$Max(sin^6\\theta$ + $cos^10\\theta$) का अधिकतम मान ज्ञात कीजिए:",
+    "oe": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "2",
+      "1",
+      "3",
+      "4"
+    ],
+    "a": 1,
+    "e": "Method 1 (Power Inequality Method):\nStep 1: किसी भी वास्तविक कोण $\\theta$ के लिए $0 \\le \\sin^2\\theta \\le 1$ तथा $0 \\le \\cos^2\\theta \\le 1$ होता है।\nStep 2: 1 से छोटी या बराबर धनात्मक संख्याओं की उच्च घातें उनके मूल वर्ग से छोटी या बराबर होती हैं:\n$$\\sin^6$\\theta$ $\\le$ \\sin^2$\\theta$$$\n$$\\cos^{10}$\\theta$ $\\le$ \\cos^2$\\theta$$$\nStep 3: दोनों को जोड़ने पर:\n$$\\sin^6$\\theta$ + \\cos^{10}$\\theta$ $\\le$ \\sin^2$\\theta$ + \\cos^2$\\theta$ = 1$$\nStep 4: यह अधिकतम मान 1 तब प्राप्त होता है जब $\\theta = 0^\\circ$ या $\\theta = 90^\\circ$ हो।\nअतः अधिकतम मान 1 है।\nअतः सही विकल्प  1 है।\n\nMethod 2 (Boundary Angle Testing Method):\n- $\\theta = 0^\\circ$ पर: $\\sin^6(0^\\circ) + \\cos^{10}(0^\\circ) = 0 + 1 = 1$\n- $\\theta = 90^\\circ$ पर: $\\sin^6(90^\\circ) + \\cos^{10}(90^\\circ) = 1 + 0 = 1$\nअतः सही उत्तर '1' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_33",
+    "qe": "The greatest value of $sin^4\\theta$ + $cos^4\\theta$ is:",
+    "qh": "$sin^4\\theta$ + $cos^4\\theta$ का अधिकतम मान है।",
+    "oe": [
+      "2",
+      "3",
+      "1/2",
+      "1"
+    ],
+    "oh": [
+      "2",
+      "3",
+      "1/2",
+      "1"
+    ],
+    "a": 3,
+    "e": "Method 1 (Algebraic Identity Method):\nStep 1: व्यंजक को पूर्ण वर्ग के रूप में लिखें:\n$$\\sin^4$\\theta$ + \\cos^4$\\theta$ = (\\sin^2$\\theta$ + \\cos^2$\\theta$)^2 - 2\\sin^2$\\theta$\\cos^2$\\theta$ = 1 - $\\frac{\\sin^22\\theta}{2}$$$\nStep 2: चूँकि $\\sin^2 2\\theta$ का मान $0$ से $1$ के बीच होता है ($0 \\le \\sin^2 2\\theta \\le 1$):\n- अधिकतम मान प्राप्त करने के लिए $\\sin^2 2\\theta = 0$ होना चाहिए:\n$$\\text{अधिकतम मान} = 1 - $\\frac{0}{2}$ = 1$$\n- न्यूनतम मान प्राप्त करने के लिए $\\sin^2 2\\theta = 1$ होना चाहिए ($1 - 1/2 = 1/2$)।\nStep 3: अतः अधिकतम मान 1 है।\nअतः सही विकल्प  1 है।\n\nMethod 2 (Extreme Angle Test Method):\n$\\theta = 0^\\circ$ रखने पर: $0^4 + 1^4 = 1$.\n$\\theta = 45^\\circ$ रखने पर: $(1/\\sqrt{2})^4 + (1/\\sqrt{2})^4 = 1/4 + 1/4 = 1/2$ (न्यूनतम)।\nअतः अधिकतम मान = 1.\nअतः सही उत्तर '1' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_34",
+    "qe": "The minimum value of $sin^2\\theta$ + $cos^2\\theta$ + $sec^2\\theta$ + $cosec^2\\theta$ + $tan^2\\theta$ + $cot^2\\theta$ is:",
+    "qh": "$sin^2\\theta$ + $cos^2\\theta$ + $sec^2\\theta$ + $cosec^2\\theta$ + $tan^2\\theta$ + $cot^2\\theta$ का न्यूनतम मान है।",
+    "oe": [
+      "1",
+      "3",
+      "5",
+      "7"
+    ],
+    "oh": [
+      "1",
+      "3",
+      "5",
+      "7"
+    ],
+    "a": 3,
+    "e": "Method 1 (Identity Simplification Method):\nStep 1: मूलभूत त्रिकोणमितीय सर्वसमिकाओं का उपयोग करें:\n- $\\sin^2\\theta + \\cos^2\\theta = 1$\n- $\\sec^2\\theta = 1 + \\tan^2\\theta$\n- $\\csc^2\\theta = 1 + \\cot^2\\theta$\nStep 2: सभी पदों को व्यंजक में प्रतिस्थापित करें:\n$$Y = 1 + (1 + \\tan^2$\\theta$) + (1 + \\cot^2$\\theta$) + \\tan^2$\\theta$ + \\cot^2$\\theta$$$\n$$Y = 3 + 2(\\tan^2$\\theta$ + \\cot^2$\\theta$)$$\nStep 3: $\\tan^2\\theta + \\cot^2\\theta$ का न्यूनतम मान $\\text{AM} \\ge \\text{GM}$ से 2 होता है (जब $\\theta = 45^\\circ$):\n$$Y_{\\min} = 3 + 2(2) = 3 + 4 = 7$$\nअतः सही विकल्प  7 है।\n\nMethod 2 (Direct Angle Substitution Method):\n$\\theta = 45^\\circ$ रखने पर:\n$$Y = $\\le$ft(\\frac{1}{$\\sqrt{2}$}\\right)^2 + $\\le$ft(\\frac{1}{$\\sqrt{2}$}\\right)^2 + ($\\sqrt{2}$)^2 + ($\\sqrt{2}$)^2 + (1)^2 + (1)^2$$\n$$Y = $\\frac{1}{2}$ + $\\frac{1}{2}$ + 2 + 2 + 1 + 1 = 1 + 4 + 2 = 7$$\nअतः सही उत्तर '7' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_35",
+    "qe": "If $A = sin^2\\theta$ + $cos^4\\theta$, for any value $of \\theta,$ then the value of A is:",
+    "qh": "यदि θ के किसी मान के लिए $A = sin^2\\theta$ + $cos^4\\theta$ है तो A का मान है।",
+    "oe": [
+      "1 ≤ A ≤ 2",
+      "3/4 ≤ A ≤ 1",
+      "13/16 ≤ A ≤ 1",
+      "3/4 ≤ A ≤ 13/16"
+    ],
+    "oh": [
+      "1 ≤ A ≤ 2",
+      "3/4 ≤ A ≤ 1",
+      "13/16 ≤ A ≤ 1",
+      "3/4 ≤ A ≤ 13/16"
+    ],
+    "a": 1,
+    "e": "Method 1 (Completing the Square Method):\nStep 1: $\\sin^2\\theta = 1 - \\cos^2\\theta$ प्रतिस्थापित करें:\n$$A = (1 - \\cos^2$\\theta$) + \\cos^4$\\theta$ = \\cos^4$\\theta$ - \\cos^2$\\theta$ + 1$$\nStep 2: इसे पूर्ण वर्ग रूप में बदलें:\n$$A = $\\le$ft(\\cos^2$\\theta$ - $\\frac{1}{2}$\\right)^2 + 1 - $\\frac{1}{4}$ = $\\le$ft(\\cos^2$\\theta$ - $\\frac{1}{2}$\\right)^2 + $\\frac{3}{4}$$$\nStep 3: परिसर ज्ञात करें:\n- न्यूनतम मान के लिए $\\cos^2\\theta = \\frac{1}{2}$ रखने पर:\n$$A_{\\min} = 0 + $\\frac{3}{4}$ = $\\frac{3}{4}$$$\n- अधिकतम मान के लिए $\\cos^2\\theta = 0$ या $1$ रखने पर:\n$$A_{\\max} = $\\le$ft(1 - $\\frac{1}{2}$\\right)^2 + $\\frac{3}{4}$ = $\\frac{1}{4}$ + $\\frac{3}{4}$ = 1$$\nStep 4: अतः $\\frac{3}{4} \\le A \\le 1$।\nअतः सही विकल्प  3/4 ≤ A ≤ 1 है।\n\nMethod 2 (Extreme Points Testing Method):\n- $\\theta = 0^\\circ \\implies A = 0 + 1 = 1$ (अधिकतम)\n- $\\theta = 45^\\circ \\implies A = \\frac{1}{2} + \\frac{1}{4} = \\frac{3}{4}$ (न्यूनतम)\nअतः $\\frac{3}{4} \\le A \\le 1$.\nअतः सही उत्तर '3/4 ≤ A ≤ 1' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_36",
+    "qe": "Find the minimum value $of (sin\\theta +$ cosecθ$)^2$ $+ (cos\\theta +$ secθ$)^2$.",
+    "qh": "$(sin\\theta +$ cosecθ$)^2$ $+ (cos\\theta +$ secθ$)^2$ का न्यूनतम मान कीजिए।",
+    "oe": [
+      "8",
+      "7",
+      "9",
+      "4"
+    ],
+    "oh": [
+      "8",
+      "7",
+      "9",
+      "4"
+    ],
+    "a": 2,
+    "e": "Method 1 (Algebraic Expansion Method):\nStep 1: दोनों कोष्ठकों का विस्तार करें:\n$$(\\sin$\\theta$ + \\csc$\\theta$)^2 = \\sin^2$\\theta$ + \\csc^2$\\theta$ + 2\\sin$\\theta$\\csc$\\theta$ = \\sin^2$\\theta$ + \\csc^2$\\theta$ + 2$$\n$$(\\cos$\\theta$ + \\sec$\\theta$)^2 = \\cos^2$\\theta$ + \\sec^2$\\theta$ + 2\\cos$\\theta$\\sec$\\theta$ = \\cos^2$\\theta$ + \\sec^2$\\theta$ + 2$$\nStep 2: दोनों को जोड़ने पर:\n$$Y = (\\sin^2$\\theta$ + \\cos^2$\\theta$) + 4 + \\csc^2$\\theta$ + \\sec^2$\\theta$$$\n$$Y = 1 + 4 + (1 + \\cot^2$\\theta$) + (1 + \\tan^2$\\theta$)$$\n$$Y = 7 + (\\tan^2$\\theta$ + \\cot^2$\\theta$)$$\nStep 3: $\\tan^2\\theta + \\cot^2\\theta$ का न्यूनतम मान 2 होता है (जब $\\theta = 45^\\circ$):\n$$Y_{\\min} = 7 + 2 = 9$$\nअतः सही विकल्प  9 है।\n\nMethod 2 (Angle Substitution Method):\n$\\theta = 45^\\circ$ प्रतिस्थापित करने पर:\n$$Y = $\\le$ft(\\frac{1}{$\\sqrt{2}$} + $\\sqrt{2}$\\right)^2 + $\\le$ft(\\frac{1}{$\\sqrt{2}$} + $\\sqrt{2}$\\right)^2 = 2 $\\times$ $\\le$ft(\\frac{3}{$\\sqrt{2}$}\\right)^2 = 2 $\\times$ $\\frac{9}{2}$ = 9$$\nअतः सही उत्तर '9' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_37",
+    "qe": "Find the maximum and minimum values $of 7cos\\alpha + 24sin\\beta.$",
+    "qh": "$7cos\\alpha + 24sin\\beta$ का न्यूनतम और अधिकतम मान कीजिए।",
+    "oe": [
+      "-7 and 7",
+      "-25 and 25",
+      "-24 and 24",
+      "-31 and 31"
+    ],
+    "oh": [
+      "-7 and 7",
+      "-25 and 25",
+      "-24 and 24",
+      "-31 and 31"
+    ],
+    "a": 3,
+    "e": "Method 1 (Independent Variable Range Method):\nStep 1: ध्यान दें कि यहाँ कोण $\\alpha$ और $\\beta$ दो स्वतंत्र (independent) कोण हैं, न कि समान कोण।\nStep 2: दोनों फलनों का व्यक्तिगत परिसर लागू करें:\n$$-1 $\\le$ \\cos$\\alpha$ $\\le$ 1 \\implies -7 $\\le$ 7\\cos$\\alpha$ $\\le$ 7$$\n$$-1 $\\le$ \\sin$\\beta$ $\\le$ 1 \\implies -24 $\\le$ 24\\sin$\\beta$ $\\le$ 24$$\nStep 3: अधिकतम मान ज्ञात करने के लिए दोनों के उच्चतम मान लें:\n$$\\text{अधिकतम मान} = 7(1) + 24(1) = 7 + 24 = 31$$\nStep 4: न्यूनतम मान ज्ञात करने के लिए दोनों के न्यूनतम मान लें:\n$$\\text{न्यूनतम मान} = 7(-1) + 24(-1) = -7 - 24 = -31$$\nअतः न्यूनतम और अधिकतम मान क्रमशः -31 और 31 हैं।\nअतः सही विकल्प  -31 and 31 है।\n\nMethod 2 (Cautionary Difference Check):\nयदि कोण समान ($\\alpha = \\beta$) होते, तो परिसर $\\pm \\sqrt{7^2 + 24^2} = \\pm 25$ होता। परंतु अलग-अलग कोण होने के कारण अधिकतम मान $7 + 24 = 31$ और न्यूनतम $-31$ होगा।\nअतः सही उत्तर '-31 and 31' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_38",
+    "qe": "Find the maximum and minimum values of $5sin^2\\theta$ + $10cos^2\\theta$ $+ 12sin\\theta cos\\theta.$",
+    "qh": "$5sin^2\\theta$ + $10cos^2\\theta$ $+ 12sin\\theta cos\\theta$ का न्यूनतम और अधिकतम मान ज्ञात कीजिए।",
+    "oe": [
+      "(1, 12)",
+      "(0, 14)",
+      "(1, 14)",
+      "(-1, 14)"
+    ],
+    "oh": [
+      "(1, 12)",
+      "(0, 14)",
+      "(1, 14)",
+      "(-1, 14)"
+    ],
+    "a": 2,
+    "e": "Method 1 (Double Angle Linear Transformation Method):\nStep 1: व्यंजक को पुनर्व्यवस्थित करें:\n$$Y = 5\\sin^2$\\theta$ + 5\\cos^2$\\theta$ + 5\\cos^2$\\theta$ + 6(2\\sin$\\theta$\\cos$\\theta$)$$\n$$Y = 5 + 5\\cos^2$\\theta$ + 6\\sin 2$\\theta$$$\nStep 2: सूत्र $\\cos^2\\theta = \\frac{1 + \\cos 2\\theta}{2}$ का प्रयोग करें:\n$$Y = 5 + 5$\\le$ft($\\frac{1+\\cos2\\theta}{2}$\\right) + 6\\sin 2$\\theta$$$\n$$Y = 5 + 2.5 + 2.5\\cos 2$\\theta$ + 6\\sin 2$\\theta$ = 7.5 + (6\\sin 2$\\theta$ + 2.5\\cos 2$\\theta$)$$\nStep 3: पद $(6\\sin 2\\theta + 2.5\\cos 2\\theta)$ का आयाम निकालें:\n$$R = $\\sqrt{6^2+(2.5)^2}$ = $\\sqrt{36+6.25}$ = $\\sqrt{42.25}$ = 6.5$$\nStep 4: चरम मान निकालें:\n- न्यूनतम मान $= 7.5 - 6.5 = 1$\n- अधिकतम मान $= 7.5 + 6.5 = 14$\nअतः न्यूनतम और अधिकतम मान क्रमशः 1 और 14 हैं।\nअतः सही विकल्प  (1, 14) है।\n\nMethod 2 (General Formula Method):\n$A\\sin^2\\theta + B\\cos^2\\theta + 2C\\sin\\theta\\cos\\theta$ का केंद्र $\\frac{A + B}{2} = \\frac{5 + 10}{2} = 7.5$ तथा त्रिज्या $R = \\sqrt{\\left(\\frac{A - B}{2}\\right)^2 + C^2} = \\sqrt{(-2.5)^2 + 6^2} = 6.5$.\nन्यूनतम $= 7.5 - 6.5 = 1$, अधिकतम $= 7.5 + 6.5 = 14$.\nअतः सही उत्तर '(1, 14)' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

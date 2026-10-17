@@ -1,0 +1,192 @@
+[
+  {
+    "p_id": "personsittingintrain_1",
+    "qe": "A train 120 meters long passes a man running at 6 km/h in the same direction in 6 seconds. What is the speed of the train?",
+    "qh": "120 मीटर लंबी एक ट्रेन उसी दिशा में 6 किमी/घंटा की गति से दौड़ रहे एक व्यक्ति को 6 सेकंड में पार करती है। ट्रेन की गति क्या है?",
+    "oe": [
+      "60 km/h",
+      "66 km/h",
+      "72 km/h",
+      "78 km/h"
+    ],
+    "oh": [
+      "60 km/h",
+      "66 km/h",
+      "72 km/h",
+      "78 km/h"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: व्यक्ति को पार करने में तय दूरी ट्रेन की लंबाई (120 मीटर) के बराबर होती है।\nसमान दिशा में सापेक्ष गति (मीटर/सेकंड में) निकालें:\n$$\\text{सापेक्ष गति} = $\\frac{120}{6}$ = 20\\text{ मीटर/सेकंड}$$\nStep 2: सापेक्ष गति को किमी/घंटा में बदलें:\n$$\\text{सापेक्ष गति} = 20 $\\times$ $\\frac{18}{5}$ = 4 $\\times$ 18 = 72\\text{ किमी/घंटा}$$\nStep 3: समान दिशा में सापेक्ष गति $S_{\\text{ट्रेन}} - S_{\\text{व्यक्ति}} = 72$ किमी/घंटा:\n$$S_{\\text{ट्रेन}} - 6 = 72 \\implies S_{\\text{ट्रेन}} = 72 + 6 = 78\\text{ किमी/घंटा}$$\nअतः सही विकल्प  78 km/h है।\n\nMethod 2 (Speed in m/s Conversion Method):\nStep 1: व्यक्ति की गति = $6 \\times \\frac{5}{18} = \\frac{5}{3}$ मीटर/सेकंड।\nStep 2: $S_{\\text{ट्रेन}} - \\frac{5}{3} = \\frac{120}{6} = 20 \\implies S_{\\text{ट्रेन}} = 20 + \\frac{5}{3} = \\frac{65}{3}$ मीटर/सेकंड।\nStep 3: किमी/घंटा में = $\\frac{65}{3} \\times \\frac{18}{5} = 13 \\times 6 = 78$ किमी/घंटा।\nअतः सही उत्तर '78 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "personsittingintrain_2",
+    "qe": "A 1800 metres long train crosses a man walking in opposite direction in 10 seconds. If the speed of train is 8 times to the speed of man, then what is the speed of train?",
+    "qh": "1800 मीटर लंबी एक ट्रेन विपरीत दिशा में चल रहे एक व्यक्ति को 10 सेकंड में पार करती है। यदि ट्रेन की गति व्यक्ति की गति की 8 गुना है, तो ट्रेन की गति क्या है?",
+    "oe": [
+      "576 km/hr",
+      "640 km/hr",
+      "596 km/hr",
+      "570 km/hr"
+    ],
+    "oh": [
+      "576 km/hr",
+      "640 km/hr",
+      "596 km/hr",
+      "570 km/hr"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relative Speed & Ratio Method):\nStep 1: विपरीत दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = $\\frac{1800}{10}$ = 180\\text{ मीटर/सेकंड}$$\nStep 2: सापेक्ष गति को किमी/घंटा में बदलें:\n$$\\text{सापेक्ष गति} = 180 $\\times$ $\\frac{18}{5}$ = 36 $\\times$ 18 = 648\\text{ किमी/घंटा}$$\nStep 3: दिया गया है कि ट्रेन की गति ($S_T$) व्यक्ति की गति ($S_M$) की 8 गुना है ($S_T = 8 S_M$):\nविपरीत दिशा में सापेक्ष गति = $S_T + S_M = 8 S_M + S_M = 9 S_M$.\n$$9 S_M = 648 \\implies S_M = 72\\text{ किमी/घंटा}$$\nStep 4: ट्रेन की गति निकालें:\n$$S_T = 8 $\\times$ 72 = 576\\text{ किमी/घंटा}$$\nअतः सही विकल्प  576 km/hr है।\n\nMethod 2 (Direct Proportion Method):\nStep 1: ट्रेन की गति = $\\frac{8}{9} \\times \\text{कुल सापेक्ष गति} = \\frac{8}{9} \\times 648 = 8 \\times 72 = 576$ किमी/घंटा।\nअतः सही उत्तर '576 km/hr' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "personsittingintrain_3",
+    "qe": "A 228 m long train is running at 125 km/h. In what time (in seconds), will it pass a man running at 17 km/h in the same direction in which the train is going?",
+    "qh": "228 मीटर लंबी एक ट्रेन 125 किमी/घंटा की गति से चल रही है। जिस दिशा में ट्रेन जा रही है, उसी दिशा में 17 किमी/घंटा की गति से दौड़ रहे एक व्यक्ति को यह कितने समय (सेकंड में) में पार कर लेगी?",
+    "oe": [
+      "9.2",
+      "8.5",
+      "6.2",
+      "7.6"
+    ],
+    "oh": [
+      "9.2",
+      "8.5",
+      "6.2",
+      "7.6"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: समान दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 125 - 17 = 108\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर:\n$$\\text{सापेक्ष गति} = 108 $\\times$ $\\frac{5}{18}$ = 6 $\\times$ 5 = 30\\text{ मीटर/सेकंड}$$\nStep 2: व्यक्ति को पार करने में तय दूरी = ट्रेन की लंबाई = 228 मीटर।\nStep 3: पार करने में लगा समय निकालें:\n$$\\text{समय} = $\\frac{228}{30}$ = 7.6\\text{ सेकंड}$$\nअतः सही विकल्प  7.6 है।\n\nMethod 2 (Direct Formula Method):\n$$\\text{समय} = \\frac{228}{(125 - 17) $\\times$ $\\frac{5}{18}$} = $\\frac{228}{30}$ = 7.6\\text{ सेकंड}$$\nअतः सही उत्तर '7.6' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "personsittingintrain_4",
+    "qe": "If a train 130 m long takes 6 1/2 seconds to cross a man who is walking at 12 km/h in the same direction in which the train going, then the speed of the train (in km/h) is:",
+    "qh": "यदि 130 मीटर लंबी एक ट्रेन उसी दिशा में 12 किमी/घंटा की गति से चल रहे एक व्यक्ति को पार करने में 6 1/2 सेकंड का समय लेती है, तो ट्रेन की गति (किमी/घंटा में) क्या है:",
+    "oe": [
+      "84",
+      "64",
+      "48",
+      "74"
+    ],
+    "oh": [
+      "84",
+      "64",
+      "48",
+      "74"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: समय = $6\\frac{1}{2} = \\frac{13}{2}$ सेकंड।\nसमान दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = $\\frac{130}{13/2}$ = $\\frac{130\\times2}{13}$ = 20\\text{ मीटर/सेकंड}$$\nStep 2: सापेक्ष गति को किमी/घंटा में बदलें:\n$$\\text{सापेक्ष गति} = 20 $\\times$ $\\frac{18}{5}$ = 4 $\\times$ 18 = 72\\text{ किमी/घंटा}$$\nStep 3: समान दिशा में $S_{\\text{ट्रेन}} - S_{\\text{व्यक्ति}} = 72$ किमी/घंटा:\n$$S_{\\text{ट्रेन}} - 12 = 72 \\implies S_{\\text{ट्रेन}} = 72 + 12 = 84\\text{ किमी/घंटा}$$\nअतः सही विकल्प  84 है।\n\nMethod 2 (Single Step Formulation):\n$$S_{\\text{ट्रेन}} = $\\le$ft($\\frac{130}{6.5}$ $\\times$ $\\frac{18}{5}$\\right) + 12 = (20 $\\times$ 3.6) + 12 = 72 + 12 = 84\\text{ किमी/घंटा}$$\nअतः सही उत्तर '84' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "personsittingintrain_5",
+    "qe": "A 240 m long train overtakes a man walking at 6 km/h, in the same direction, in 9 seconds. How much time (in seconds) will it take to pass a 372 m long tunnel with the same speed?",
+    "qh": "240 मीटर लंबी एक ट्रेन उसी दिशा में 6 किमी/घंटा की गति से चल रहे एक व्यक्ति को 9 सेकंड में ओवरटेक करती है। उसी गति से 372 मीटर लंबी सुरंग को पार करने में इसे कितना समय (सेकंड में) लगेगा?",
+    "oe": [
+      "21.6",
+      "20",
+      "18",
+      "20.4"
+    ],
+    "oh": [
+      "21.6",
+      "20",
+      "18",
+      "20.4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Speed & Distance Method):\nStep 1: व्यक्ति को पार करते समय सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = $\\frac{240}{9}$ = $\\frac{80}{3}$\\text{ मीटर/सेकंड}$$\nStep 2: व्यक्ति की गति = $6 \\times \\frac{5}{18} = \\frac{5}{3}$ मीटर/सेकंड।\nट्रेन की वास्तविक गति ($S_T$):\n$$S_T - $\\frac{5}{3}$ = $\\frac{80}{3}$ \\implies S_T = $\\frac{80}{3}$ + $\\frac{5}{3}$ = $\\frac{85}{3}$\\text{ मीटर/सेकंड}$$\nStep 3: 372 मीटर लंबी सुरंग को पार करने में तय कुल दूरी:\n$$\\text{कुल दूरी} = 240 + 372 = 612\\text{ मीटर}$$\nStep 4: सुरंग को पार करने में लगा समय निकालें:\n$$\\text{समय} = $\\frac{612}{85/3}$ = $\\frac{612\\times3}{85}$ = $\\frac{1836}{85}$ = 21.6\\text{ सेकंड}$$\nअतः सही विकल्प  21.6 है।\n\nMethod 2 (Proportional Method):\nStep 1: ट्रेन की गति = $\\frac{85}{3}$ m/s = 102 km/h.\nStep 2: समय = $\\frac{612}{85/3} = 21.6$ सेकंड।\nअतः सही उत्तर '21.6' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "personsittingintrain_6",
+    "qe": "A 252 m long train is running at a speed of 125 km/h. What is the time (in seconds) in which it will pass a man who starts from the engine running at the speed of 17 km/h in the same direction as that of the train?",
+    "qh": "252 मीटर लंबी एक ट्रेन 125 किमी/घंटा की गति से चल रही है। वह समय (सेकंड में) क्या है जिसमें यह इंजन से ट्रेन की ही दिशा में 17 किमी/घंटा की गति से दौड़ना शुरू करने वाले व्यक्ति को पार कर जाएगी?",
+    "oe": [
+      "8.4",
+      "8.0",
+      "7.8",
+      "9.0"
+    ],
+    "oh": [
+      "8.4",
+      "8.0",
+      "7.8",
+      "9.0"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: समान दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 125 - 17 = 108\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर:\n$$\\text{सापेक्ष गति} = 108 $\\times$ $\\frac{5}{18}$ = 30\\text{ मीटर/सेकंड}$$\nStep 2: ट्रेन को व्यक्ति के सापेक्ष अपनी पूरी लंबाई (252 मीटर) पार करनी होगी:\n$$\\text{समय} = $\\frac{252}{30}$ = 8.4\\text{ सेकंड}$$\nअतः सही विकल्प  8.4 है।\n\nMethod 2 (Direct Formula Method):\n$$\\text{समय} = \\frac{252}{(125 - 17) $\\times$ $\\frac{5}{18}$} = $\\frac{252}{30}$ = 8.4\\text{ सेकंड}$$\nअतः सही उत्तर '8.4' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "personsittingintrain_7",
+    "qe": "Two trains are moving in the same direction at 60 km/h and 42 km/h. The faster train crosses a man in the slower train in 36 seconds. Find the length of the faster train?",
+    "qh": "दो ट्रेनें एक ही दिशा में 60 किमी/घंटा और 42 किमी/घंटा की गति से चल रही हैं। तेज ट्रेन धीमी ट्रेन में बैठे एक व्यक्ति को 36 सेकंड में पार करती है। तेज ट्रेन की लंबाई ज्ञात कीजिए?",
+    "oe": [
+      "185 m",
+      "180 m",
+      "195 m",
+      "175 m"
+    ],
+    "oh": [
+      "185 m",
+      "180 m",
+      "195 m",
+      "175 m"
+    ],
+    "a": 1,
+    "e": "Method 1 (Relative Speed Concept Method):\nStep 1: मुख्य बिंदु: जब कोई ट्रेन दूसरी ट्रेन में बैठे व्यक्ति (जो कि एक बिंदु वस्तु है) को पार करती है, तो तय की गई दूरी केवल पार करने वाली (तेज) ट्रेन की लंबाई के बराबर होती है।\nStep 2: समान दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 60 - 42 = 18\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर: $18 \\times \\frac{5}{18} = 5$ मीटर/सेकंड।\nStep 3: तेज ट्रेन की लंबाई:\n$$\\text{लंबाई} = \\text{सापेक्ष गति} $\\times$ \\text{समय} = 5 $\\times$ 36 = 180\\text{ मीटर}$$\nअतः सही विकल्प  180 m है।\n\nMethod 2 (Single Step Formulation):\n$$\\text{लंबाई} = (60 - 42) $\\times$ $\\frac{5}{18}$ $\\times$ 36 = 5 $\\times$ 36 = 180\\text{ मीटर}$$\nअतः सही उत्तर '180 m' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "personsittingintrain_8",
+    "qe": "Renu was sitting inside train A, which was travelling at 50 km/h. Another train, B whose length was three times the length of A crossed her in the opposite direction in 15 seconds. If the speed of train B was 58 km/h, then the length of train A (in m) is:",
+    "qh": "रेणु ट्रेन A के अंदर बैठी थी, जो 50 किमी/घंटा की गति से चल रही थी। दूसरी ट्रेन B, जिसकी लंबाई A की लंबाई से तीन गुना थी, ने उसे विपरीत दिशा में 15 सेकंड में पार किया। यदि ट्रेन B की गति 58 किमी/घंटा थी, तो ट्रेन A की लंबाई (मीटर में) क्या है:",
+    "oe": [
+      "210",
+      "180",
+      "160",
+      "150"
+    ],
+    "oh": [
+      "210",
+      "180",
+      "160",
+      "150"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: विपरीत दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 50 + 58 = 108\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर:\n$$\\text{सापेक्ष गति} = 108 $\\times$ $\\frac{5}{18}$ = 6 $\\times$ 5 = 30\\text{ मीटर/सेकंड}$$\nStep 2: चूँकि ट्रेन B ने केवल रेणु (व्यक्ति) को पार किया है, अतः तय की गई दूरी ट्रेन B की अपनी लंबाई ($L_B$) होगी:\n$$L_B = 30 $\\times$ 15 = 450\\text{ मीटर}$$\nStep 3: दिया गया है कि ट्रेन B की लंबाई ट्रेन A की लंबाई ($L_A$) की 3 गुना है ($L_B = 3 L_A$):\n$$3 L_A = 450 \\implies L_A = $\\frac{450}{3}$ = 150\\text{ मीटर}$$\nअतः सही विकल्प  150 है।\n\nMethod 2 (Direct Proportion Method):\nStep 1: $L_B = (50 + 58) \\times \\frac{5}{18} \\times 15 = 30 \\times 15 = 450$ मीटर।\nStep 2: $L_A = \\frac{450}{3} = 150$ मीटर।\nअतः सही उत्तर '150' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "personsittingintrain_9",
+    "qe": "Two trains are moving in the same direction at the speed of 36 km/hr and 48 km/hr. The time taken by faster train to cross a man sitting in the slower train is 33 seconds. What will be the length of the faster train?",
+    "qh": "दो ट्रेनें 36 किमी/घंटा और 48 किमी/घंटा की गति से एक ही दिशा में चल रही हैं। धीमी ट्रेन में बैठे एक व्यक्ति को पार करने में तेज ट्रेन द्वारा लिया गया समय 33 सेकंड है। तेज ट्रेन की लंबाई क्या होगी?",
+    "oe": [
+      "770 metres",
+      "90 metres",
+      "110 metres",
+      "180 metres"
+    ],
+    "oh": [
+      "770 metres",
+      "90 metres",
+      "110 metres",
+      "180 metres"
+    ],
+    "a": 2,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: समान दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 48 - 36 = 12\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर:\n$$\\text{सापेक्ष गति} = 12 $\\times$ $\\frac{5}{18}$ = $\\frac{10}{3}$\\text{ मीटर/सेकंड}$$\nStep 2: धीमी ट्रेन में बैठे व्यक्ति को पार करने में तय दूरी केवल तेज ट्रेन की लंबाई के बराबर होती है:\n$$\\text{तेज ट्रेन की लंबाई} = $\\frac{10}{3}$ $\\times$ 33 = 10 $\\times$ 11 = 110\\text{ मीटर}$$\nअतः सही विकल्प  110 metres है।\n\nMethod 2 (Direct Formula Method):\n$$\\text{लंबाई} = (48 - 36) $\\times$ $\\frac{5}{18}$ $\\times$ 33 = $\\frac{10}{3}$ $\\times$ 33 = 110\\text{ मीटर}$$\nअतः सही उत्तर '110 metres' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "personsittingintrain_10",
+    "qe": "Trains P and Q are running in the same direction on parallel tracks with speeds of x km/h and 90 km/h (90 > x), respectively. The faster train passes a man sitting in the slower train in 30 seconds. If the length of train Q is 225 m, then what is the value of x?",
+    "qh": "ट्रेनें P और Q समानांतर पटरियों पर एक ही दिशा में क्रमशः x किमी/घंटा और 90 किमी/घंटा (90 > x) की गति से चल रही हैं। तेज ट्रेन धीमी ट्रेन में बैठे एक व्यक्ति को 30 सेकंड में पार करती है। यदि ट्रेन Q की लंबाई 225 मीटर है, तो x का मान क्या है?",
+    "oe": [
+      "65",
+      "60",
+      "68",
+      "63"
+    ],
+    "oh": [
+      "65",
+      "60",
+      "68",
+      "63"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Speed Equation Method):\nStep 1: यहाँ तेज ट्रेन Q (90 किमी/घंटा) है और धीमी ट्रेन P ($x$ किमी/घंटा) है।\nव्यक्ति को पार करने में तय दूरी = तेज ट्रेन Q की लंबाई = 225 मीटर।\nStep 2: समान दिशा में सापेक्ष गति (मीटर/सेकंड में) निकालें:\n$$\\text{सापेक्ष गति} = $\\frac{225}{30}$ = 7.5\\text{ मीटर/सेकंड}$$\nStep 3: सापेक्ष गति को किमी/घंटा में बदलें:\n$$\\text{सापेक्ष गति} = 7.5 $\\times$ $\\frac{18}{5}$ = 1.5 $\\times$ 18 = 27\\text{ किमी/घंटा}$$\nStep 4: समान दिशा में सापेक्ष गति $90 - x = 27$ किमी/घंटा:\n$$x = 90 - 27 = 63\\text{ किमी/घंटा}$$\nअतः सही विकल्प  63 है।\n\nMethod 2 (Single Line Algebraic Method):\n$$(90 - x) $\\times$ $\\frac{5}{18}$ $\\times$ 30 = 225 \\implies (90 - x) $\\times$ $\\frac{25}{3}$ = 225$$\n$$90 - x = $\\frac{225\\times3}{25}$ = 9 $\\times$ 3 = 27 \\implies x = 63$$\nअतः सही उत्तर '63' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

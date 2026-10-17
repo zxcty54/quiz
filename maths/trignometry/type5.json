@@ -1,0 +1,135 @@
+[
+  {
+    "p_id": "type5_1",
+    "qe": "If $3\\sin\\theta + 4\\cos\\theta = 5$, then $\\tan\\theta = ?$",
+    "qh": "यदि $3\\sin\\theta + 4\\cos\\theta = 5$ है, तो $\\tan\\theta$ का मान क्या होगा?",
+    "oe": [
+      "$\\frac{3}{4}$",
+      "$\\frac{5}{4}$",
+      "$\\frac{4}{5}$",
+      "$\\frac{3}{5}$"
+    ],
+    "oh": [
+      "$\\frac{3}{4}$",
+      "$\\frac{5}{4}$",
+      "$\\frac{4}{5}$",
+      "$\\frac{3}{5}$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Pythagorean Triplet / Comparison Method):\nStep 1: जब समीकरण $a\\sin\\theta + b\\cos\\theta = c$ के रूप में हो और $a^2 + b^2 = c^2$ को संतुष्ट करे:\nयहाँ $a = 3$, $b = 4$, $c = 5$ है।\nजाँच: $3^2 + 4^2 = 9 + 16 = 25 = 5^2$ (त्रिक संतुष्ट होता है)।\nStep 2: दोनों पक्षों को 5 से विभाजित करने पर:\n$$$\\frac{3}{5}$\\sin$\\theta$ + $\\frac{4}{5}$\\cos$\\theta$ = 1$$\nसर्वसमिका $\\sin^2\\theta + \\cos^2\\theta = 1$ से तुलना करने पर:\n$$\\sin$\\theta$ = $\\frac{3}{5}$, \\quad \\cos$\\theta$ = $\\frac{4}{5}$$$\nStep 3: $\\tan\\theta$ का मान:\n$$\\tan$\\theta$ = $\\frac{\\sin\\theta}{\\cos\\theta}$ = $\\frac{3/5}{4/5}$ = $\\frac{3}{4}$$$\nअतः सही विकल्प  $\\frac{3}{4}$ है।\n\nMethod 2 (Right-Angled Triangle Method):\nStep 1: $P = 3$, $B = 4$, $H = 5$.\nStep 2: $\\tan\\theta = \\frac{P}{B} = \\frac{3}{4}$.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5_2",
+    "qe": "If $5\\sin\\theta + 12\\cos\\theta = 13$, then $\\tan\\theta = ?$",
+    "qh": "यदि $5\\sin\\theta + 12\\cos\\theta = 13$ है, तो $\\tan\\theta$ का मान क्या होगा?",
+    "oe": [
+      "$\\frac{12}{5}$",
+      "$\\frac{5}{12}$",
+      "$\\frac{5}{13}$",
+      "$\\frac{13}{5}$"
+    ],
+    "oh": [
+      "$\\frac{12}{5}$",
+      "$\\frac{5}{12}$",
+      "$\\frac{5}{13}$",
+      "$\\frac{13}{5}$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Pythagorean Triplet Method):\nStep 1: समीकरण $a\\sin\\theta + b\\cos\\theta = c$ में $a = 5$, $b = 12$, $c = 13$ है।\nजाँच: $5^2 + 12^2 = 25 + 144 = 169 = 13^2$ (पाइथागोरस त्रिक)।\nStep 2: दोनों पक्षों को 13 से विभाजित करने पर:\n$$$\\frac{5}{13}$\\sin$\\theta$ + $\\frac{12}{13}$\\cos$\\theta$ = 1$$\nमानक सर्वसमिका $\\sin^2\\theta + \\cos^2\\theta = 1$ से तुलना करने पर:\n$$\\sin$\\theta$ = $\\frac{5}{13}$, \\quad \\cos$\\theta$ = $\\frac{12}{13}$$$\nStep 3: $\\tan\\theta$ का मान:\n$$\\tan$\\theta$ = $\\frac{\\sin\\theta}{\\cos\\theta}$ = $\\frac{5/13}{12/13}$ = $\\frac{5}{12}$$$\nअतः सही विकल्प  $\\frac{5}{12}$ है।\n\nMethod 2 (Direct Ratio Method):\nStep 1: $P = 5$, $B = 12$, $H = 13$.\nStep 2: $\\tan\\theta = \\frac{P}{B} = \\frac{5}{12}$.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5_3",
+    "qe": "$2xy\\sin\\theta + (x^2 - y^2)\\cos\\theta = x^2 + y^2$, then $\\tan\\theta = ?$",
+    "qh": "यदि $2xy\\sin\\theta + (x^2 - y^2)\\cos\\theta = x^2 + y^2$ है, तो $\\tan\\theta$ का मान क्या होगा?",
+    "oe": [
+      "$\\frac{2xy}{x^2 - y^2}$",
+      "$\\frac{2xy}{x^2 + y^2}$",
+      "$\\frac{x^2 - y^2}{x^2 + y^2}$",
+      "$1$"
+    ],
+    "oh": [
+      "$\\frac{2xy}{x^2 - y^2}$",
+      "$\\frac{2xy}{x^2 + y^2}$",
+      "$\\frac{x^2 - y^2}{x^2 + y^2}$",
+      "$1$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Identity Comparison Method):\nStep 1: दिए गए समीकरण में:\n$$a = 2xy, \\quad b = x^2 - y^2, \\quad c = x^2 + y^2$$\nStep 2: वर्गों का योग:\n$$a^2 + b^2 = (2xy)^2 + (x^2 - y^2)^2 = 4x^2y^2 + x^4 - 2x^2y^2 + y^4 = (x^2 + y^2)^2 = c^2$$\nअतः यह एक समकोण त्रिभुज बनाता है जहाँ लंब $P = 2xy$, आधार $B = x^2 - y^2$ तथा कर्ण $H = x^2 + y^2$ है।\nStep 3: $\\tan\\theta$ का मान:\n$$\\tan$\\theta$ = $\\frac{P}{B}$ = $\\frac{2xy}{x^2-y^2}$$$\nअतः सही विकल्प  $\\frac{2xy}{x^2 - y^2}$ है।\n\nMethod 2 (Direct Division Method):\nStep 1: समीकरण को $(x^2 + y^2)$ से विभाजित करके $\\sin^2\\theta + \\cos^2\\theta = 1$ से तुलना करने पर:\n$$\\sin$\\theta$ = $\\frac{2xy}{x^2+y^2}$, \\quad \\cos$\\theta$ = $\\frac{x^2-y^2}{x^2+y^2}$$$\nStep 2: $\\tan\\theta = \\frac{\\sin\\theta}{\\cos\\theta} = \\frac{2xy}{x^2 - y^2}$.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5_4",
+    "qe": "If $12\\sin\\theta + 35\\cos\\theta = 37$, then $\\operatorname{cosec}\\theta = ?$",
+    "qh": "यदि $12\\sin\\theta + 35\\cos\\theta = 37$ है, तो $\\operatorname{cosec}\\theta$ का मान क्या होगा?",
+    "oe": [
+      "$\\frac{12}{37}$",
+      "$\\frac{37}{12}$",
+      "$\\frac{35}{37}$",
+      "$\\frac{12}{35}$"
+    ],
+    "oh": [
+      "$\\frac{12}{37}$",
+      "$\\frac{37}{12}$",
+      "$\\frac{35}{37}$",
+      "$\\frac{12}{35}$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Pythagorean Triplet Method):\nStep 1: यहाँ $a = 12$, $b = 35$, $c = 37$ है।\nजाँच: $12^2 + 35^2 = 144 + 1225 = 1369 = 37^2$ (संतुष्ट)।\nStep 2: दोनों पक्षों को 37 से विभाजित करने पर:\n$$$\\frac{12}{37}$\\sin$\\theta$ + $\\frac{35}{37}$\\cos$\\theta$ = 1$$\n$\\sin^2\\theta + \\cos^2\\theta = 1$ से तुलना करने पर:\n$$\\sin$\\theta$ = $\\frac{12}{37}$$$\nStep 3: $\\operatorname{cosec}\\theta$ का मान:\n$$\\operatorname{cosec}$\\theta$ = $\\frac{1}{\\sin\\theta}$ = $\\frac{37}{12}$$$\nअतः सही विकल्प  $\\frac{37}{12}$ है।\n\nMethod 2 (Triangle Side Method):\nStep 1: $P = 12$, $B = 35$, $H = 37$.\nStep 2: $\\operatorname{cosec}\\theta = \\frac{H}{P} = \\frac{37}{12}$.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5_5",
+    "qe": "$(a^2 - 1)\\sin\\theta + 2a\\cos\\theta = a^2 + 1$, then $\\tan\\theta = ?$",
+    "qh": "यदि $(a^2 - 1)\\sin\\theta + 2a\\cos\\theta = a^2 + 1$ है, तो $\\tan\\theta$ का मान क्या होगा?",
+    "oe": [
+      "$\\frac{a^2 - 1}{2a}$",
+      "$\\frac{2a}{a^2 - 1}$",
+      "$\\frac{a^2 + 1}{a^2 - 1}$",
+      "$1$"
+    ],
+    "oh": [
+      "$\\frac{a^2 - 1}{2a}$",
+      "$\\frac{2a}{a^2 - 1}$",
+      "$\\frac{a^2 + 1}{a^2 - 1}$",
+      "$1$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Identity Comparison Method):\nStep 1: समीकरण में $P = a^2 - 1$, $B = 2a$, $H = a^2 + 1$ है।\nजाँच:\n$$(a^2 - 1)^2 + (2a)^2 = a^4 - 2a^2 + 1 + 4a^2 = a^4 + 2a^2 + 1 = (a^2 + 1)^2$$\nत्रिक पूरी तरह संतुष्ट होता है।\nStep 2: $\\tan\\theta$ का मान:\n$$\\tan$\\theta$ = $\\frac{P}{B}$ = $\\frac{a^2-1}{2a}$$$\nअतः सही विकल्प  $\\frac{a^2 - 1}{2a}$ है।\n\nMethod 2 (Value Putting Method):\nStep 1: मान लें $a = 2$.\nसमीकरण बनता है: $(2^2 - 1)\\sin\\theta + 2(2)\\cos\\theta = 2^2 + 1 \\implies 3\\sin\\theta + 4\\cos\\theta = 5$.\nStep 2: यहाँ $\\tan\\theta = \\frac{3}{4}$ मिलता है।\nStep 3: विकल्पों में $a = 2$ रखने पर विकल्प (a): $\\frac{2^2 - 1}{2(2)} = \\frac{3}{4}$ संतुष्ट होता है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5_6",
+    "qe": "If $10\\sin^4\\alpha + 15\\cos^4\\alpha = 6$, then find the value of $27\\operatorname{cosec}^6\\alpha + 8\\sec^6\\alpha$.",
+    "qh": "यदि $10\\sin^4\\alpha + 15\\cos^4\\alpha = 6$ है, तो $27\\operatorname{cosec}^6\\alpha + 8\\sec^6\\alpha$ का मान ज्ञात कीजिए।",
+    "oe": [
+      "$150$",
+      "$125$",
+      "$200$",
+      "$250$"
+    ],
+    "oh": [
+      "$150$",
+      "$125$",
+      "$200$",
+      "$250$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Standard Algebraic Comparison Method):\nStep 1: दोनों पक्षों को 6 से विभाजित करने पर:\n$$$\\frac{10}{6}$\\sin^4$\\alpha$ + $\\frac{15}{6}$\\cos^4$\\alpha$ = 1$$\n$$$\\le$ft($\\frac{5}{3}$\\sin^2$\\alpha$\\right)\\sin^2$\\alpha$ + $\\le$ft($\\frac{5}{2}$\\cos^2$\\alpha$\\right)\\cos^2$\\alpha$ = 1$$\nStep 2: सर्वसमिका $\\sin^2\\alpha + \\cos^2\\alpha = 1$ के साथ तुलना करने पर:\n$$$\\frac{5}{3}$\\sin^2$\\alpha$ = 1 \\implies \\sin^2$\\alpha$ = $\\frac{3}{5}$ \\implies \\operatorname{cosec}^2$\\alpha$ = $\\frac{5}{3}$$$\n$$$\\frac{5}{2}$\\cos^2$\\alpha$ = 1 \\implies \\cos^2$\\alpha$ = $\\frac{2}{5}$ \\implies \\sec^2$\\alpha$ = $\\frac{5}{2}$$$\nStep 3: अभीष्ट व्यंजक में मान रखने पर:\n$$27\\operatorname{cosec}^6$\\alpha$ + 8\\sec^6$\\alpha$ = 27(\\operatorname{cosec}^2$\\alpha$)^3 + 8(\\sec^2$\\alpha$)^3$$\n$$= 27$\\le$ft($\\frac{5}{3}$\\right)^3 + 8$\\le$ft($\\frac{5}{2}$\\right)^3 = 27 $\\times$ $\\frac{125}{27}$ + 8 $\\times$ $\\frac{125}{8}$$$\n$$= 125 + 125 = 250$$\nअतः सही विकल्प  250 है।\n\nMethod 2 (Quadratic in $\\tan^2\\alpha$ Method):\nStep 1: समीकरण को $\\cos^4\\alpha$ से विभाजित करके $\\tan^2\\alpha = t$ मानकर हल करने पर $t = \\frac{3}{2}$ प्राप्त होता है।\nStep 2: इससे $\\sin^2\\alpha = \\frac{3}{5}$ और $\\cos^2\\alpha = \\frac{2}{5}$ मान प्राप्त होकर उत्तर 250 आता है।\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5_7",
+    "qe": "If $15\\sin^3\\alpha + 20\\cos^3\\alpha = 12$, then find the value of $10\\sin\\alpha + 15\\cos\\alpha$.",
+    "qh": "यदि $15\\sin^3\\alpha + 20\\cos^3\\alpha = 12$ है, तो $10\\sin\\alpha + 15\\cos\\alpha$ का मान ज्ञात कीजिए।",
+    "oe": [
+      "$8$",
+      "$17$",
+      "$9$",
+      "None of these"
+    ],
+    "oh": [
+      "$8$",
+      "$17$",
+      "$9$",
+      "None of these"
+    ],
+    "a": 1,
+    "e": "Method 1 (Comparison with Standard Identity):\nStep 1: दोनों पक्षों को 12 से विभाजित करने पर:\n$$$\\frac{15}{12}$\\sin^3$\\alpha$ + $\\frac{20}{12}$\\cos^3$\\alpha$ = 1$$\n$$$\\le$ft($\\frac{5}{4}$\\sin$\\alpha$\\right)\\sin^2$\\alpha$ + $\\le$ft($\\frac{5}{3}$\\cos$\\alpha$\\right)\\cos^2$\\alpha$ = 1$$\nStep 2: सर्वसमिका $\\sin^2\\alpha + \\cos^2\\alpha = 1$ से तुलना करने पर:\n$$$\\frac{5}{4}$\\sin$\\alpha$ = 1 \\implies \\sin$\\alpha$ = $\\frac{4}{5}$$$\n$$$\\frac{5}{3}$\\cos$\\alpha$ = 1 \\implies \\cos$\\alpha$ = $\\frac{3}{5}$$$\n(जाँच: $\\sin^2\\alpha + \\cos^2\\alpha = (4/5)^2 + (3/5)^2 = 16/25 + 9/25 = 1$, संतुष्ट है।)\nStep 3: अभीष्ट मान ज्ञात करना:\n$$10\\sin$\\alpha$ + 15\\cos$\\alpha$ = 10$\\le$ft($\\frac{4}{5}$\\right) + 15$\\le$ft($\\frac{3}{5}$\\right) = 2(4) + 3(3) = 8 + 9 = 17$$\nअतः सही विकल्प  17 है।\n\nMethod 2 (Direct Value Substitution):\nStep 1: $\\sin\\alpha = 4/5$, $\\cos\\alpha = 3/5$.\nStep 2: $10(4/5) + 15(3/5) = 8 + 9 = 17$.\n\nExam point: trigonometry ke anupat - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

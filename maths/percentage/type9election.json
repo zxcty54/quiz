@@ -1,0 +1,895 @@
+[
+  {
+    "p_id": "type9election_1",
+    "qe": "Three persons ran for office and got 1136, 7636, and 11628 votes, respectively. What was the winning candidate's percentage of the total votes?",
+    "qh": "तीन व्यक्तियों ने चुनाव लड़ा और उन्हें क्रमशः 1136, 7636 और 11628 मत प्राप्त हुए। जीतने वाले उम्मीदवार को कुल मतों का कितना प्रतिशत प्राप्त हुआ?",
+    "oe": [
+      "57%",
+      "59%",
+      "52%",
+      "61%"
+    ],
+    "oh": [
+      "57%",
+      "59%",
+      "52%",
+      "61%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Percentage Method):\nTotal votes polled = 1136 + 7636 + 11628 = 20400.\nWinning candidate got maximum votes = 11628.\nWinning percentage = $\\frac{11628}{20400}$ $\\times$ 100% = $\\frac{11628}{204}$% = 57%.\nAtah sahi vikalp  57% hai.\n\nMethod 2 (Unit Digit / Divisibility Method):\n$\\frac{11628}{204}$ = $\\frac{2907}{51}$ = 57%. Since 204 $\\times$ 50 = 10200 and 204 $\\times$ 7 = 1428, 10200 + 1428 = 11628.\nAtah sahi uttar '57%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_2",
+    "qe": "The difference between 31% and 26% of votes for the same party at different places is 2350. What is 7% of those votes?",
+    "qh": "अलग-अलग स्थानों पर एक ही पार्टी के लिए 31% और 26% मतों के बीच का अंतर 2350 है। उन मतों का 7% कितना है?",
+    "oe": [
+      "2270",
+      "3090",
+      "4090",
+      "3290"
+    ],
+    "oh": [
+      "2270",
+      "3090",
+      "4090",
+      "3290"
+    ],
+    "a": 3,
+    "e": "Method 1 (Percentage Difference Method):\nDifference in percentage = 31% - 26% = 5%.\nGiven: 5% = 2350.\n1% = $\\frac{2350}{5}$ = 470.\nValue of 7% = 7 $\\times$ 470 = 3290.\nAtah sahi vikalp  3290 hai.\n\nMethod 2 (Unitary Ratio Method):\nRequired value = 2350 $\\times$ $\\frac{7}{5}$ = 470 $\\times$ 7 = 3290.\nAtah sahi uttar '3290' hai.\n\nYahan diye gaye tathyon ka sahi milan seedha lagta hai. She sh vikalp 2270, 3090, 4090 is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type9election_3",
+    "qe": "Two candidates contested an election. One of them got 64% of the votes and won by 434 votes. What was the total number of votes polled?",
+    "qh": "दो उम्मीदवारों ने एक चुनाव लड़ा। उनमें से एक को 64% मत मिले और वह 434 मतों से जीत गया। कुल डाले गए मतों की संख्या क्या थी?",
+    "oe": [
+      "1550",
+      "1345",
+      "1680",
+      "1684"
+    ],
+    "oh": [
+      "1550",
+      "1345",
+      "1680",
+      "1684"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nTotal votes = 100%.\nWinner got = 64% ==> Loser got = 100% - 64% = 36%.\nWinning majority margin = 64% - 36% = 28%.\nGiven: 28% = 434.\n1% = $\\frac{434}{28}$ = 15.5.\nTotal votes (100%) = 15.5 $\\times$ 100 = 1550.\nAtah sahi vikalp  1550 hai.\n\nMethod 2 (Ratio Method):\nWinner : Loser = 64 : 36 = 16 : 9.\nTotal = 25 units. Margin = 16 - 9 = 7 units.\n7 units = 434 ==> 1 unit = 62.\nTotal votes = 25 units = 25 $\\times$ 62 = 1550.\nAtah sahi uttar '1550' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_4",
+    "qe": "In an election between two candidates, the one who gets 88% of the votes is elected by a majority of 684 votes. What is the total number of votes polled? (all polled votes are valid)",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, 88% मत प्राप्त करने वाला उम्मीदवार 684 मतों के बहुमत से चुना जाता है। डाले गए मतों की कुल संख्या क्या है? (सभी डाले गए मत वैध हैं)",
+    "oe": [
+      "900",
+      "800",
+      "850",
+      "750"
+    ],
+    "oh": [
+      "900",
+      "800",
+      "850",
+      "750"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nWinner = 88%, Loser = 100% - 88% = 12%.\nMajority margin = 88% - 12% = 76%.\nGiven: 76% = 684.\n1% = $\\frac{684}{76}$ = 9.\nTotal votes (100%) = 9 $\\times$ 100 = 900.\nAtah sahi vikalp  900 hai.\n\nMethod 2 (Ratio Method):\nWinner : Loser = 88 : 12 = 22 : 3.\nTotal = 25 units. Difference = 22 - 3 = 19 units.\n19 units = 684 ==> 1 unit = 36.\nTotal votes = 25 $\\times$ 36 = 900.\nAtah sahi uttar '900' hai.\n\nIs prashn ka moolaadhaar diye gaye tathyon ka sahi milan hai. Vikalp 800, 850, 750 is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type9election_5",
+    "qe": "In an election, a candidate secured 41% of the votes polled and lost the election by 97,632. What is the number of votes obtained by the winning candidate?",
+    "qh": "एक चुनाव में, एक उम्मीदवार ने डाले गए मतों का 41% प्राप्त किया और वह 97,632 मतों से चुनाव हार गया। जीतने वाले उम्मीदवार द्वारा प्राप्त मतों की संख्या क्या है?",
+    "oe": [
+      "320016",
+      "542400",
+      "222384",
+      "360072"
+    ],
+    "oh": [
+      "320016",
+      "542400",
+      "222384",
+      "360072"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nLoser = 41% ==> Winner = 100% - 41% = 59%.\nMargin = 59% - 41% = 18%.\nGiven: 18% = 97632.\n1% = $\\frac{97632}{18}$ = 5424.\nWinning candidate got 59% = 59 $\\times$ 5424 = 320016.\nAtah sahi vikalp  320016 hai.\n\nMethod 2 (Direct Ratio Fraction Method):\nWinner's votes = 97632 $\\times$ $\\frac{59}{18}$ = 5424 $\\times$ 59 = 320016.\nAtah sahi uttar '320016' hai.\n\ndiye gaye tathyon ka sahi milan se hi is prashn ka jawab nikalta hai. Vikalp 542400, 222384, 360072 is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type9election_6",
+    "qe": "In an election between two candidates A and B, A got 33% of total votes casted and still lost by 55,522 votes. Find the total number of votes got by B.",
+    "qh": "दो उम्मीदवारों A और B के बीच एक चुनाव में, A को डाले गए कुल मतों का 33% मिला और फिर भी वह 55,522 मतों से हार गया। B द्वारा प्राप्त कुल मतों की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "1,09,411",
+      "1,09,511",
+      "1,09,311",
+      "1,08,411"
+    ],
+    "oh": [
+      "1,09,411",
+      "1,09,511",
+      "1,09,311",
+      "1,08,411"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nA = 33% ==> B = 100% - 33% = 67%.\nMargin between B and A = 67% - 33% = 34%.\nGiven: 34% = 55522.\n1% = $\\frac{55522}{34}$ = 1633.\nVotes got by B (67%) = 67 $\\times$ 1633 = 109411.\nAtah sahi vikalp  1,09,411 hai.\n\nMethod 2 (Ratio Formulation):\nB's votes = 55522 $\\times$ $\\frac{67}{34}$ = 1633 $\\times$ 67 = 109411.\nAtah sahi uttar '1,09,411' hai.\n\nYahan diye gaye tathyon ka sahi milan seedha lagta hai. She sh vikalp 1,09,511, 1,09,311, 1,08,411 is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type9election_7",
+    "qe": "In an election there were only two candidates. One of the candidates secured 35% of votes and is defeated by the other candidate by 381 votes. The total number of votes polled is:",
+    "qh": "एक चुनाव में केवल दो उम्मीदवार थे। उम्मीदवारों में से एक ने 35% मत प्राप्त किए और वह दूसरे उम्मीदवार से 381 मतों से पराजित हो गया। डाले गए कुल मतों की संख्या है:",
+    "oe": [
+      "1270",
+      "1028",
+      "635",
+      "514"
+    ],
+    "oh": [
+      "1270",
+      "1028",
+      "635",
+      "514"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nTotal votes polled = 100%.\nDefeated candidate = 35%.\nWinning candidate = 100% - 35% = 65%.\nDefeat margin = 65% - 35% = 30%.\nGiven: 30% = 381.\n1% = $\\frac{381}{30}$ = 12.7.\nTotal votes (100%) = 12.7 $\\times$ 100 = 1270.\nAtah sahi vikalp  1270 hai.\n\nMethod 2 (Ratio Method):\nRatio of votes (Winner : Loser) = 65 : 35 = 13 : 7.\nTotal votes = 13 + 7 = 20 units.\nMargin = 13 - 7 = 6 units.\n6 units = 381 ==> 1 unit = 63.5.\nTotal votes = 20 $\\times$ 63.5 = 1270.\nAtah sahi uttar '1270' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_8",
+    "qe": "In an election, a candidate secures 40% of the votes, but is defeated by the only other candidate with a majority of 298 votes. Find the total number of votes recorded.",
+    "qh": "एक चुनाव में, एक उम्मीदवार 40% मत प्राप्त करता है, लेकिन एकमात्र अन्य उम्मीदवार से 298 मतों के बहुमत से पराजित हो जाता है। डाले गए कुल मतों की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "1,470",
+      "1,490",
+      "1,270",
+      "1,290"
+    ],
+    "oh": [
+      "1,470",
+      "1,490",
+      "1,270",
+      "1,290"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nTotal votes = 100%.\nCandidate 1 (Loser) = 40%.\nCandidate 2 (Winner) = 100% - 40% = 60%.\nMargin = 60% - 40% = 20%.\nGiven: 20% = 298.\nMultiply both sides by 5 to get 100%:\nTotal votes (100%) = 298 $\\times$ 5 = 1490.\nAtah sahi vikalp  1,490 hai.\n\nMethod 2 (Ratio Method):\nWinner : Loser = 60 : 40 = 3 : 2.\nTotal = 5 units. Difference = 3 - 2 = 1 unit.\n1 unit = 298.\nTotal votes recorded = 5 $\\times$ 298 = 1490.\nAtah sahi uttar '1,490' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_9",
+    "qe": "In an election, there were only two candidates. One of the candidates secured 44% of the votes and is defeated by the other candidate by 1440 votes. If there were no invalid votes, then the total number of votes polled is:",
+    "qh": "एक चुनाव में केवल दो उम्मीदवार थे। उम्मीदवारों में से एक ने 44% मत प्राप्त किए और वह दूसरे उम्मीदवार से 1440 मतों से हार गया। यदि कोई अमान्य मत नहीं था, तो डाले गए मतों की कुल संख्या है:",
+    "oe": [
+      "14000",
+      "12000",
+      "15000",
+      "13000"
+    ],
+    "oh": [
+      "14000",
+      "12000",
+      "15000",
+      "13000"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nTotal votes = 100%.\nLoser = 44% ==> Winner = 100% - 44% = 56%.\nDefeat margin = 56% - 44% = 12%.\nGiven: 12% = 1440.\n1% = $\\frac{1440}{12}$ = 120.\nTotal votes polled (100%) = 120 $\\times$ 100 = 12000.\nAtah sahi vikalp  12000 hai.\n\nMethod 2 (Ratio Method):\nWinner : Loser = 56 : 44 = 14 : 11.\nDifference = 14 - 11 = 3 units.\n3 units = 1440 ==> 1 unit = 480.\nTotal votes = (14 + 11) $\\times$ 480 = 25 $\\times$ 480 = 12000.\nAtah sahi uttar '12000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_10",
+    "qe": "In an election a candidate secured 47% of the votes and lost to his only opponent by 276 votes. Find the total number of votes polled.",
+    "qh": "एक चुनाव में एक उम्मीदवार ने 47% मत प्राप्त किए और वह अपने एकमात्र प्रतिद्वंद्वी से 276 मतों से हार गया। डाले गए कुल मतों की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "4000",
+      "4200",
+      "3800",
+      "4600"
+    ],
+    "oh": [
+      "4000",
+      "4200",
+      "3800",
+      "4600"
+    ],
+    "a": 3,
+    "e": "Method 1 (100-Base Method):\nTotal votes = 100%.\nLoser = 47% ==> Winner = 100% - 47% = 53%.\nDifference = 53% - 47% = 6%.\nGiven: 6% = 276.\n1% = $\\frac{276}{6}$ = 46.\nTotal votes polled (100%) = 46 $\\times$ 100 = 4600.\nAtah sahi vikalp  4600 hai.\n\nMethod 2 (Ratio Method):\nWinner : Loser = 53 : 47.\nMargin = 53 - 47 = 6 units.\n6 units = 276 ==> 1 unit = 46.\nTotal votes = (53 + 47) $\\times$ 46 = 100 $\\times$ 46 = 4600.\nAtah sahi uttar '4600' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_11",
+    "qe": "In an election there were three candidates. The first candidate got 40% votes and second candidate got 35% votes. If the total votes in the election are 50,000, find the number of votes got by the third candidate.",
+    "qh": "एक चुनाव में तीन उम्मीदवार थे। पहले उम्मीदवार को 40% मत और दूसरे उम्मीदवार को 35% मत मिले। यदि चुनाव में कुल मत 50,000 हैं, तो तीसरे उम्मीदवार को मिले मतों की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "12,000",
+      "12,500",
+      "13,000",
+      "15,000"
+    ],
+    "oh": [
+      "12,000",
+      "12,500",
+      "13,000",
+      "15,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nTotal votes = 100% = 50,000.\nFirst candidate = 40%.\nSecond candidate = 35%.\nThird candidate = 100% - (40% + 35%) = 100% - 75% = 25%.\nVotes for 3rd candidate = 25% of 50000 = $\\frac{25}{100}$ $\\times$ 50000 = 12500.\nAtah sahi vikalp  12,500 hai.\n\nMethod 2 (Ratio Method):\nRatio of Candidates (1st : 2nd : 3rd) = 40 : 35 : 25 = 8 : 7 : 5.\nTotal units = 8 + 7 + 5 = 20 units.\n20 units = 50000 ==> 1 unit = 2500.\nThird candidate = 5 units = 5 $\\times$ 2500 = 12500.\nAtah sahi uttar '12,500' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_12",
+    "qe": "In an election between two candidates, one candidate gets 72% of the total votes cast. If the total votes are 1000, by how many votes does the winner win the election?",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, एक उम्मीदवार को डाले गए कुल मतों का 72% प्राप्त होता है। यदि कुल मत 1000 हैं, तो जीतने वाला उम्मीदवार कितने मतों से चुनाव जीतता है?",
+    "oe": [
+      "360",
+      "250",
+      "720",
+      "440"
+    ],
+    "oh": [
+      "360",
+      "250",
+      "720",
+      "440"
+    ],
+    "a": 3,
+    "e": "Method 1 (100-Base Method):\nTotal votes = 100% = 1000.\nWinner got = 72%.\nLoser got = 100% - 72% = 28%.\nWinning margin = 72% - 28% = 44%.\nNumber of votes by which winner wins = 44% of 1000 = $\\frac{44}{100}$ $\\times$ 1000 = 440.\nAtah sahi vikalp  440 hai.\n\nMethod 2 (Ratio Method):\nWinner : Loser = 72 : 28 = 18 : 7.\nTotal units = 18 + 7 = 25 units.\nGiven: 25 units = 1000 ==> 1 unit = $\\frac{1000}{25}$ = 40.\nWinning margin = 18 - 7 = 11 units.\nMargin in votes = 11 $\\times$ 40 = 440.\nAtah sahi uttar '440' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_13",
+    "qe": "In an election between two candidates, a candidate who gets 78% of the votes is elected by a majority of 448 votes. What is the total number of votes polled?",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, 78% मत प्राप्त करने वाला उम्मीदवार 448 मतों के बहुमत से निर्वाचित होता है। डाले गए मतों की कुल संख्या क्या है?",
+    "oe": [
+      "800",
+      "900",
+      "750",
+      "850"
+    ],
+    "oh": [
+      "800",
+      "900",
+      "750",
+      "850"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nTotal votes polled = 100%.\nWinning candidate = 78%.\nLosing candidate = 100% - 78% = 22%.\nWinning majority margin = 78% - 22% = 56%.\nGiven: 56% = 448.\n1% = $\\frac{448}{56}$ = 8.\nTotal number of votes polled (100%) = 8 $\\times$ 100 = 800.\nAtah sahi vikalp  800 hai.\n\nMethod 2 (Ratio Method):\nWinner : Loser = 78 : 22 = 39 : 11.\nTotal units = 39 + 11 = 50 units.\nDifference between them = 39 - 11 = 28 units.\nGiven: 28 units = 448 ==> 1 unit = $\\frac{448}{28}$ = 16.\nTotal votes polled = 50 units = 50 $\\times$ 16 = 800.\nAtah sahi uttar '800' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_14",
+    "qe": "In an election between two candidates, the candidate who gets 35% of the votes polled is defeated by 15,900 votes. What is the total number of votes polled?",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, डाले गए मतों का 35% मत प्राप्त करने वाला उम्मीदवार 15,900 मतों से पराजित हो जाता है। डाले गए मतों की कुल संख्या क्या है?",
+    "oe": [
+      "53,000",
+      "45,000",
+      "35,000",
+      "43,000"
+    ],
+    "oh": [
+      "53,000",
+      "45,000",
+      "35,000",
+      "43,000"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nTotal votes polled = 100%.\nLosing candidate = 35%.\nWinning candidate = 100% - 35% = 65%.\nDefeat margin = 65% - 35% = 30%.\nGiven: 30% = 15900.\n1% = $\\frac{15900}{30}$ = 530.\nTotal votes polled (100%) = 530 $\\times$ 100 = 53000.\nAtah sahi vikalp  53,000 hai.\n\nMethod 2 (Ratio Method):\nWinner : Loser = 65 : 35 = 13 : 7.\nMargin = 13 - 7 = 6 units.\n6 units = 15900 ==> 1 unit = $\\frac{15900}{6}$ = 2650.\nTotal votes = 13 + 7 = 20 units = 20 $\\times$ 2650 = 53000.\nAtah sahi uttar '53,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_15",
+    "qe": "Vinod and Sanjay were fighting against each other for the post of a village Pradhan. Sanjay got 47.5% votes and lost the election by 270 votes. How many votes did Vinod get (assuming that all the villagers participated in the voting)?",
+    "qh": "विनोद और संजय ग्राम प्रधान के पद के लिए एक-दूसरे के खिलाफ चुनाव लड़ रहे थे। संजय को 47.5% मत मिले और वह 270 मतों से चुनाव हार गया। विनोद को कितने मत मिले (यह मानते हुए कि सभी ग्रामीणों ने मतदान में भाग लिया)?",
+    "oe": [
+      "2385",
+      "2835",
+      "2565",
+      "2655"
+    ],
+    "oh": [
+      "2385",
+      "2835",
+      "2565",
+      "2655"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nTotal votes = 100%.\nSanjay = 47.5%.\nVinod = 100% - 47.5% = 52.5%.\nMargin between them = 52.5% - 47.5% = 5%.\nGiven: 5% = 270.\n1% = $\\frac{270}{5}$ = 54.\nVotes obtained by Vinod (52.5%) = 52.5 $\\times$ 54 = 2835.\nAtah sahi vikalp  2835 hai.\n\nMethod 2 (Ratio Method):\nVinod : Sanjay = 52.5 : 47.5 = 105 : 95 = 21 : 19.\nMargin = 21 - 19 = 2 units.\n2 units = 270 ==> 1 unit = 135.\nVinod's votes = 21 units = 21 $\\times$ 135 = 2835.\nAtah sahi uttar '2835' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_16",
+    "qe": "In an election, the candidate who gets 90% votes is elected by a margin of 800 votes. What is the total number of votes cast? Note: Only two candidates are participating in the election and assume all votes are valid.",
+    "qh": "एक चुनाव में, 90% मत प्राप्त करने वाला उम्मीदवार 800 मतों के अंतर से चुना जाता है। डाले गए मतों की कुल संख्या क्या है? नोट: चुनाव में केवल दो उम्मीदवार भाग ले रहे हैं और मान लें कि सभी मत वैध हैं।",
+    "oe": [
+      "900",
+      "1000",
+      "1050",
+      "950"
+    ],
+    "oh": [
+      "900",
+      "1000",
+      "1050",
+      "950"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nTotal votes cast = 100%.\nWinner = 90% ==> Loser = 100% - 90% = 10%.\nMargin = 90% - 10% = 80%.\nGiven: 80% = 800.\n1% = $\\frac{800}{80}$ = 10.\nTotal votes cast (100%) = 10 $\\times$ 100 = 1000.\nAtah sahi vikalp  1000 hai.\n\nMethod 2 (Ratio Method):\nWinner : Loser = 90 : 10 = 9 : 1.\nMargin = 9 - 1 = 8 units.\n8 units = 800 ==> 1 unit = 100.\nTotal votes = 9 + 1 = 10 units = 10 $\\times$ 100 = 1000.\nAtah sahi uttar '1000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_17",
+    "qe": "In an election between R and S, R gets 110% of the votes of S and beats S by 770 votes. If there were no invalid votes, then the total number of votes polled is:",
+    "qh": "R और S के बीच एक चुनाव में, R को S के मतों का 110% प्राप्त होता है और वह S को 770 मतों से हराता है। यदि कोई अमान्य मत नहीं था, तो डाले गए मतों की कुल संख्या है:",
+    "oe": [
+      "17610",
+      "17160",
+      "16170",
+      "16710"
+    ],
+    "oh": [
+      "17610",
+      "17160",
+      "16170",
+      "16710"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nLet votes of S = 100 units.\nThen votes of R = 110% of 100 = 110 units.\nRatio of R : S = 110 : 100 = 11 : 10.\nMargin by which R beats S = 11 - 10 = 1 unit.\nGiven: 1 unit = 770.\nTotal votes polled = 11 + 10 = 21 units.\nTotal votes = 21 $\\times$ 770 = 16170.\nAtah sahi vikalp  16170 hai.\n\nMethod 2 (Algebraic Method):\nLet S get x votes, then R gets 1.10x votes.\nDifference = 1.10x - x = 0.10x = 770 ==> x = 7700.\nTotal votes = x + 1.10x = 2.10x = 2.10 $\\times$ 7700 = 16170.\nAtah sahi uttar '16170' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_18",
+    "qe": "A total of 7,50,000 voters participated in an election. A candidate received 3,82,500 votes which was 60% of the total valid votes. What was the percentage of invalid votes in the election?",
+    "qh": "एक चुनाव में कुल 7,50,000 मतदाताओं ने भाग लिया। एक उम्मीदवार को 3,82,500 मत प्राप्त हुए जो कुल वैध मतों का 60% था। चुनाव में अमान्य मतों का प्रतिशत क्या था?",
+    "oe": [
+      "15%",
+      "20%",
+      "12%",
+      "18%"
+    ],
+    "oh": [
+      "15%",
+      "20%",
+      "12%",
+      "18%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Valid Votes to Invalid Percentage Method):\nCandidate received 60% of Valid Votes = 382500.\nTotal Valid Votes = $\\frac{382500}{60}$ $\\times$ 100 = 637500.\nInvalid Votes = Total Votes - Valid Votes = 750000 - 637500 = 112500.\nPercentage of invalid votes = $\\frac{112500}{750000}$ $\\times$ 100% = 15%.\nAtah sahi vikalp  15% hai.\n\nMethod 2 (Ratio Method):\nCandidate's votes / Total votes = $\\frac{382500}{750000}$ = 51%.\nSince Candidate got 60% of Valid Votes:\n60% of Valid Votes = 51% of Total Votes.\nValid Votes = $\\frac{51%}{0.60}$ = 85% of Total Votes.\nInvalid Votes = 100% - 85% = 15%.\nAtah sahi uttar '15%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_19",
+    "qe": "In an election, 95% of the total voters cast their votes. In this election, there were only two candidates A and B. The winner A, by obtaining 75% of the total votes, defeated his contestant B by 5500 votes. Find the total number of voters in the election.",
+    "qh": "एक चुनाव में कुल मतदाताओं में से 95% ने अपने मत डाले। इस चुनाव में केवल दो उम्मीदवार A और B थे। विजेता A ने कुल मतों का 75% प्राप्त करके अपने प्रतिद्वंद्वी B को 5500 मतों से हराया। चुनाव में मतदाताओं की कुल संख्या ज्ञात कीजिए।",
+    "oe": [
+      "11,000",
+      "10,000",
+      "13,000",
+      "12,000"
+    ],
+    "oh": [
+      "11,000",
+      "10,000",
+      "13,000",
+      "12,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nLet total voters registered = 100%.\nTotal votes cast = 95%.\nA gets 75% of total votes = 75%.\nVotes obtained by B = Total cast - Votes of A = 95% - 75% = 20%.\nWinning margin = 75% - 20% = 55%.\nGiven: 55% = 5500.\n1% = $\\frac{5500}{55}$ = 100.\nTotal number of voters (100%) = 100 $\\times$ 100 = 10000.\nAtah sahi vikalp  10,000 hai.\n\nMethod 2 (Ratio Method):\nA : B : Did not cast = 75 : 20 : 5 = 15 : 4 : 1.\nMargin between A and B = 15 - 4 = 11 units.\nGiven: 11 units = 5500 ==> 1 unit = 500.\nTotal voters = 15 + 4 + 1 = 20 units = 20 $\\times$ 500 = 10000.\nAtah sahi uttar '10,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_20",
+    "qe": "In an election, A received 27% of the votes and B received 125,982 votes. 19% did not cast their votes. Find the number of votes received by A.",
+    "qh": "एक चुनाव में, A को 27% मत प्राप्त हुए और B को 1,25,982 मत प्राप्त हुए। 19% लोगों ने अपने मत नहीं डाले। A द्वारा प्राप्त मतों की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "44,327",
+      "1,88,973",
+      "57,827",
+      "62,991"
+    ],
+    "oh": [
+      "44,327",
+      "1,88,973",
+      "57,827",
+      "62,991"
+    ],
+    "a": 3,
+    "e": "Method 1 (100-Base Method):\nTotal voters = 100%.\nA's votes = 27%.\nDid not vote = 19%.\nPercentage of votes received by B = 100% - (27% + 19%) = 100% - 46% = 54%.\nGiven: 54% = 125982.\n1% = $\\frac{125982}{54}$ = 2333.\nNumber of votes received by A (27%) = 27 $\\times$ 2333 = 62991.\nAtah sahi vikalp  62,991 hai.\n\nMethod 2 (Ratio Method):\nRatio of votes of A to B = 27% : 54% = 1 : 2.\nSince B has 2 units and A has 1 unit:\nA's votes = \\frac{\\text{B's votes}}{2} = $\\frac{125982}{2}$ = 62991.\nAtah sahi uttar '62,991' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_21",
+    "qe": "In an election between two candidates, one got 60% of the total valid votes, 90% of the votes were valid. If the total number of votes was 12000, then what was the number of valid votes that the other candidate got?",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, एक को कुल वैध मतों का 60% प्राप्त हुआ, 90% मत वैध थे। यदि मतों की कुल संख्या 12000 थी, तो दूसरे उम्मीदवार को प्राप्त वैध मतों की संख्या क्या थी?",
+    "oe": [
+      "8840",
+      "4320",
+      "10800",
+      "6200"
+    ],
+    "oh": [
+      "8840",
+      "4320",
+      "10800",
+      "6200"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Multiplication):\nTotal votes = 12000.\nValid votes = 90% of 12000 = 10800.\nOther candidate's valid votes = (100% - 60%) of 10800 = 40% of 10800 = 4320.\nAtah sahi vikalp  4320 hai.\n\nMethod 2 (Ratio Method):\nOther candidate's share = 12000 $\\times$ $\\frac{90}{100}$ $\\times$ $\\frac{40}{100}$ = 12000 $\\times$ $\\frac{9}{10}$ $\\times$ $\\frac{2}{5}$ = 4320.\nAtah sahi uttar '4320' hai.\n\ndiye gaye tathyon ka sahi milan se hi is prashn ka jawab nikalta hai. Vikalp 8840, 10800, 6200 is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type9election_22",
+    "qe": "In an election between two candidates, 15% of the votes were invalid and one candidate got 52% of the total valid votes. If the total number of votes was 8000, what was the number of valid votes that the other candidate got?",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, 15% मत अमान्य थे और एक उम्मीदवार को कुल वैध मतों का 52% प्राप्त हुआ। यदि मतों की कुल संख्या 8000 थी, तो दूसरे उम्मीदवार को प्राप्त वैध मतों की संख्या क्या थी?",
+    "oe": [
+      "3840",
+      "3536",
+      "6800",
+      "3264"
+    ],
+    "oh": [
+      "3840",
+      "3536",
+      "6800",
+      "3264"
+    ],
+    "a": 3,
+    "e": "Method 1 (Step-by-Step Percentage Method):\nTotal votes = 8000.\nInvalid votes = 15% of 8000 = 1200.\nValid votes = 8000 - 1200 = 6800.\nFirst candidate got 52% of valid votes, so the other candidate got:\n100% - 52% = 48% of valid votes.\nOther candidate's valid votes = 48% of 6800 = $\\frac{48}{100}$ $\\times$ 6800 = 3264.\nAtah sahi vikalp  3264 hai.\n\nMethod 2 (Direct Fraction Multiplier):\nOther candidate's votes = 8000 $\\times$ (1 - 0.15) $\\times$ (1 - 0.52) = 8000 $\\times$ 0.85 $\\times$ 0.48 = 3264.\nAtah sahi uttar '3264' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_23",
+    "qe": "In an election between two candidates, 10% of the registered voters did not cast their vote. The winning candidate got 60% of the total votes cast and defeated the other candidate by 1242 votes. Find the total number of registered voters.",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, पंजीकृत मतदाताओं में से 10% ने अपना मत नहीं डाला। जीतने वाले उम्मीदवार को डाले गए कुल मतों का 60% प्राप्त हुआ और उसने दूसरे उम्मीदवार को 1242 मतों से हराया। पंजीकृत मतदाताओं की कुल संख्या ज्ञात कीजिए।",
+    "oe": [
+      "8640",
+      "9600",
+      "6200",
+      "6900"
+    ],
+    "oh": [
+      "8640",
+      "9600",
+      "6200",
+      "6900"
+    ],
+    "a": 3,
+    "e": "Method 1 (100-Base Method):\nLet registered voters = 100%.\nVotes cast = 100% - 10% = 90%.\nWinner got = 60% of votes cast = 0.60 $\\times$ 90% = 54% of registered voters.\nLoser got = 40% of votes cast = 0.40 $\\times$ 90% = 36% of registered voters.\nWinning margin = 54% - 36% = 18% of registered voters.\nGiven: 18% = 1242.\n1% = $\\frac{1242}{18}$ = 69.\nTotal registered voters (100%) = 69 $\\times$ 100 = 6900.\nAtah sahi vikalp  6900 hai.\n\nMethod 2 (Ratio Method):\nMargin = $\\frac{1}{5}$ $\\times$ \\text{Votes Cast} = 1242 ==> Votes Cast = 1242 $\\times$ 5 = 6210.\nRegistered voters = 6210 $\\times$ $\\frac{10}{9}$ = 6900.\nAtah sahi uttar '6900' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_24",
+    "qe": "In an election between two candidates, one got 65% of the total valid votes. 20% of the votes were invalid. If the total number of votes was 7,500, the number of valid votes that the other candidate got was:",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, एक को कुल वैध मतों का 65% प्राप्त हुआ। 20% मत अमान्य थे। यदि मतों की कुल संख्या 7,500 थी, तो दूसरे उम्मीदवार को प्राप्त वैध मतों की संख्या थी:",
+    "oe": [
+      "4,300",
+      "1,700",
+      "1,900",
+      "2,100"
+    ],
+    "oh": [
+      "4,300",
+      "1,700",
+      "1,900",
+      "2,100"
+    ],
+    "a": 3,
+    "e": "Method 1 (Step-by-Step Method):\nTotal votes = 7500.\nValid votes = 80% of 7500 = 6000.\nOther candidate received = 100% - 65% = 35% of valid votes.\nOther candidate's valid votes = 35% of 6000 = $\\frac{35}{100}$ $\\times$ 6000 = 2100.\nAtah sahi vikalp  2,100 hai.\n\nMethod 2 (Ratio Method):\nValid votes = $\\frac{4}{5}$ $\\times$ 7500 = 6000.\nCandidate 2's share = 6000 $\\times$ $\\frac{35}{100}$ = 2100.\nAtah sahi uttar '2,100' hai.\n\nIs prashn ka moolaadhaar diye gaye tathyon ka sahi milan hai. She sh vikalp 4,300, 1,700, 1,900 is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type9election_25",
+    "qe": "In an election between two candidates, Anant and Arvind, Anant got 55% of the total valid votes, and 20% of the votes were invalid. If the total number of votes was 30,000, find the number of valid votes that Arvind got.",
+    "qh": "दो उम्मीदवारों अनंत और अरविंद के बीच एक चुनाव में, अनंत को कुल वैध मतों का 55% प्राप्त हुआ, और 20% मत अमान्य थे। यदि मतों की कुल संख्या 30,000 थी, तो अरविंद को मिले वैध मतों की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "10800",
+      "1080",
+      "13200",
+      "24000"
+    ],
+    "oh": [
+      "10800",
+      "1080",
+      "13200",
+      "24000"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Method):\nTotal votes = 30000.\nInvalid votes = 20% of 30000 = 6000.\nValid votes = 30000 - 6000 = 24000.\nArvind got = 100% - 55% = 45% of valid votes.\nArvind's valid votes = 45% of 24000 = $\\frac{45}{100}$ $\\times$ 24000 = 10800.\nAtah sahi vikalp  10800 hai.\n\nMethod 2 (Direct Fraction Multiplication):\nArvind's votes = 30000 $\\times$ $\\frac{4}{5}$ $\\times$ $\\frac{45}{100}$ = 24000 $\\times$ 0.45 = 10800.\nAtah sahi uttar '10800' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_26",
+    "qe": "In an election between two candidates, one got 60% of the total valid votes and 15% of the votes were invalid. If the total number of votes were 8400, the number of valid votes that the other candidate got were:",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, एक को कुल वैध मतों का 60% प्राप्त हुआ और 15% मत अमान्य थे। यदि मतों की कुल संख्या 8400 थी, तो दूसरे उम्मीदवार को प्राप्त वैध मतों की संख्या थी:",
+    "oe": [
+      "2998",
+      "2856",
+      "3213",
+      "3117"
+    ],
+    "oh": [
+      "2998",
+      "2856",
+      "3213",
+      "3117"
+    ],
+    "a": 1,
+    "e": "Method 1 (Percentage Step Method):\nTotal votes = 8400.\nValid votes = 85% of 8400 = $\\frac{85}{100}$ $\\times$ 8400 = 7140.\nOther candidate's valid votes = 40% of 7140 = $\\frac{40}{100}$ $\\times$ 7140 = 2856.\nAtah sahi vikalp  2856 hai.\n\nMethod 2 (Ratio Method):\nValid votes = 8400 $\\times$ $\\frac{17}{20}$ = 7140.\nOther candidate got $\\frac{2}{5}$ of valid votes = 7140 $\\times$ $\\frac{2}{5}$ = 2856.\nAtah sahi uttar '2856' hai.\n\nIs prashn ka moolaadhaar diye gaye tathyon ka sahi milan hai. Vikalp 2998, 3213, 3117 is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type9election_27",
+    "qe": "In an election between two candidates, one got 60% of the total valid votes. 25% of the votes were invalid. If the total number of votes was 15,000, then find the number of valid votes that the other candidate got.",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, एक को कुल वैध मतों का 60% प्राप्त हुआ। 25% मत अमान्य थे। यदि मतों की कुल संख्या 15,000 थी, तो दूसरे उम्मीदवार को प्राप्त वैध मतों की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "5,550",
+      "4,500",
+      "6,750",
+      "5,000"
+    ],
+    "oh": [
+      "5,550",
+      "4,500",
+      "6,750",
+      "5,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Method):\nTotal votes = 15000.\nValid votes = 75% of 15000 = $\\frac{3}{4}$ $\\times$ 15000 = 11250.\nOther candidate's valid votes = 40% of 11250 = $\\frac{2}{5}$ $\\times$ 11250 = 4500.\nAtah sahi vikalp  4,500 hai.\n\nMethod 2 (Direct Chain Fraction):\nOther candidate's votes = 15000 $\\times$ $\\frac{3}{4}$ $\\times$ $\\frac{2}{5}$ = 15000 $\\times$ $\\frac{3}{10}$ = 4500.\nAtah sahi uttar '4,500' hai.\n\ndiye gaye tathyon ka sahi milan se hi is prashn ka jawab nikalta hai. She sh vikalp 5,550, 6,750, 5,000 is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type9election_28",
+    "qe": "In an election, there were only two candidates. 12% of the voters did not cast their votes. The winner by obtaining 60% of the total votes defeated his opposite contestant by 1200 votes. Find the total number of votes.",
+    "qh": "एक चुनाव में केवल दो उम्मीदवार थे। 12% मतदाताओं ने अपने मत नहीं डाले। विजेता ने कुल मतों का 60% प्राप्त करके अपने प्रतिद्वंद्वी को 1200 मतों से हराया। मतों की कुल संख्या ज्ञात कीजिए।",
+    "oe": [
+      "3750",
+      "3570",
+      "4000",
+      "5730"
+    ],
+    "oh": [
+      "3750",
+      "3570",
+      "4000",
+      "5730"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nLet total registered voters = 100%.\nTotal polled votes = 100% - 12% = 88%.\nWinner got 60% of the total votes = 60%.\nLoser's votes = 88% - 60% = 28%.\nWinning margin = 60% - 28% = 32% of total votes.\nGiven: 32% = 1200.\n1% = $\\frac{1200}{32}$ = 37.5.\nTotal number of votes (100%) = 37.5 $\\times$ 100 = 3750.\nAtah sahi vikalp  3750 hai.\n\nMethod 2 (Equation Method):\nMargin = 0.60V - 0.28V = 0.32V = 1200.\nV = $\\frac{1200}{0.32}$ = 3750.\nAtah sahi uttar '3750' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_29",
+    "qe": "In an election between two candidates, the first gets 75% of the total valid votes. If 20% votes are invalid among 2,48,000 votes, then how many votes were cast in the favour of the other candidate?",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, पहले उम्मीदवार को कुल वैध मतों का 75% प्राप्त होता है। यदि 2,48,000 मतों में से 20% मत अमान्य हैं, तो दूसरे उम्मीदवार के पक्ष में कितने मत पड़े?",
+    "oe": [
+      "56600",
+      "46800",
+      "53800",
+      "49600"
+    ],
+    "oh": [
+      "56600",
+      "46800",
+      "53800",
+      "49600"
+    ],
+    "a": 3,
+    "e": "Method 1 (Step-by-Step Multiplication):\nTotal votes = 2,48,000.\nValid votes = 80% of 2,48,000 = 1,98,400.\nOther candidate gets = 100% - 75% = 25% of valid votes.\nVotes for other candidate = 25% of 1,98,400 = $\\frac{1}{4}$ $\\times$ 1,98,400 = 49,600.\nAtah sahi vikalp  49600 hai.\n\nMethod 2 (Direct Fraction Method):\nOther candidate's votes = 248000 $\\times$ $\\frac{4}{5}$ $\\times$ $\\frac{1}{4}$ = $\\frac{248000}{5}$ = 49600.\nAtah sahi uttar '49600' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_30",
+    "qe": "In an election between two candidates, 75% of the voters cast their votes, out of which 4% of the votes were declared invalid. A candidate got 9504 votes, which were 80% of the valid votes. Find the total number of votes enrolled in that election.",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, 75% मतदाताओं ने अपने मत डाले, जिनमें से 4% मत अमान्य घोषित कर दिए गए। एक उम्मीदवार को 9504 मत मिले, जो वैध मतों का 80% था। उस चुनाव में नामांकित कुल मतों की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "12,375",
+      "12,672",
+      "13,200",
+      "16,500"
+    ],
+    "oh": [
+      "12,375",
+      "12,672",
+      "13,200",
+      "16,500"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio / Step Backtrack Method):\nTotal Valid votes = $\\frac{9504}{0.80}$ = 11,880.\nVotes cast = $\\frac{11880}{0.96}$ = 12,375.\nTotal Enrolled = $\\frac{12375}{0.75}$ = 16,500.\nAtah sahi vikalp  16,500 hai.\n\nMethod 2 (Chain Multiplier Method):\nV $\\times$ $\\frac{3}{4}$ $\\times$ $\\frac{24}{25}$ $\\times$ $\\frac{4}{5}$ = 9504\nV $\\times$ $\\frac{72}{125}$ = 9504 ==> V = $\\frac{9504\\times125}{72}$ = 16500.\nAtah sahi uttar '16,500' hai.\n\nYahan diye gaye tathyon ka sahi milan seedha lagta hai. She sh vikalp 12,375, 12,672, 13,200 is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type9election_31",
+    "qe": "Two candidates A and B contested in an election. 80% of the voters cast their votes, out of which 2% of the votes were invalid. A got 9,408 votes which was 60% of the valid votes. Find the total number of votes.",
+    "qh": "दो उम्मीदवारों A और B ने एक चुनाव लड़ा। 80% मतदाताओं ने अपने मत डाले, जिनमें से 2% मत अमान्य थे। A को 9,408 मत मिले जो वैध मतों का 60% था। कुल मतों की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "12,000",
+      "22,000",
+      "20,000",
+      "21,000"
+    ],
+    "oh": [
+      "12,000",
+      "22,000",
+      "20,000",
+      "21,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Chain Fraction Method):\nT $\\times$ $\\frac{80}{100}$ $\\times$ $\\frac{98}{100}$ $\\times$ $\\frac{60}{100}$ = 9408\nT $\\times$ $\\frac{588}{1250}$ = 9408 ==> T = $\\frac{9408\\times1250}{588}$ = 20,000.\nAtah sahi vikalp  20,000 hai.\n\nMethod 2 (100-Base Step Method):\nValid votes = $\\frac{9408}{0.60}$ = 15,680.\nVotes polled = $\\frac{15680}{0.98}$ = 16,000.\nTotal votes = $\\frac{16000}{0.80}$ = 20,000.\nAtah sahi uttar '20,000' hai.\n\nIs prashn ka moolaadhaar diye gaye tathyon ka sahi milan hai. She sh vikalp 12,000, 22,000, 21,000 is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type9election_32",
+    "qe": "In an election, 80% of eligible voters cast their votes. Of these votes, 5% were declared invalid. If a winning candidate received 11,400 votes, which accounted for 60% of the total valid votes, what was the total number of eligible voters enrolled in that election?",
+    "qh": "एक चुनाव में, 80% पात्र मतदाताओं ने अपने मत डाले। इन मतों में से 5% अमान्य घोषित कर दिए गए। यदि जीतने वाले उम्मीदवार को 11,400 मत मिले, जो कुल वैध मतों का 60% था, तो उस चुनाव में नामांकित पात्र मतदाताओं की कुल संख्या क्या थी?",
+    "oe": [
+      "20,000",
+      "22,500",
+      "25,000",
+      "27,500"
+    ],
+    "oh": [
+      "20,000",
+      "22,500",
+      "25,000",
+      "27,500"
+    ],
+    "a": 2,
+    "e": "Method 1 (Chain Fraction Method):\nN $\\times$ $\\frac{4}{5}$ $\\times$ $\\frac{19}{20}$ $\\times$ $\\frac{3}{5}$ = 11400\nN $\\times$ $\\frac{228}{500}$ = 11400 ==> N = $\\frac{11400\\times500}{228}$ = 25,000.\nAtah sahi vikalp  25,000 hai.\n\nMethod 2 (Step Backtrack Method):\nValid votes = $\\frac{11400}{0.60}$ = 19,000.\nVotes cast = $\\frac{19000}{0.95}$ = 20,000.\nEligible voters = $\\frac{20000}{0.80}$ = 25,000.\nAtah sahi uttar '25,000' hai.\n\ndiye gaye tathyon ka sahi milan se hi is prashn ka jawab nikalta hai. Vikalp 20,000, 22,500, 27,500 is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type9election_33",
+    "qe": "In a constituency, 85% of the total number of people on the electoral roll cast their votes during an election. 10% of the votes cast were declared invalid. If there were 3,00,000 people on the electoral roll, and Dharam secured 1,37,700 valid votes, then what percentage of the total number of valid votes did Dharam secure?",
+    "qh": "एक निर्वाचन क्षेत्र में, चुनाव के दौरान मतदाता सूची में शामिल कुल लोगों में से 85% ने अपने मत डाले। डाले गए मतों में से 10% अमान्य घोषित कर दिए गए। यदि मतदाता सूची में 3,00,000 लोग थे, और धरम ने 1,37,700 वैध मत प्राप्त किए, तो धरम ने कुल वैध मतों का कितना प्रतिशत प्राप्त किया?",
+    "oe": [
+      "50.5%",
+      "70.2%",
+      "45.9%",
+      "60%"
+    ],
+    "oh": [
+      "50.5%",
+      "70.2%",
+      "45.9%",
+      "60%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Direct Calculation Method):\nTotal enrolled voters = 3,00,000.\nVotes cast = 85% of 3,00,000 = 2,55,000.\nValid votes = 90% of 2,55,000 = 2,29,500.\nDharam secured = 1,37,700 valid votes.\nPercentage of valid votes = $\\frac{137700}{229500}$ $\\times$ 100% = 60%.\nAtah sahi vikalp  60% hai.\n\nMethod 2 (Ratio Simplification Method):\n$\\frac{137700}{300000\\times0.85\\times0.90}$ = $\\frac{137700}{229500}$ = 0.60 = 60%.\nAtah sahi uttar '60%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_34",
+    "qe": "In an election between two candidates, one candidate got 60% of the valid votes. If the total number of votes polled were 8850, and 10% of the votes were invalid, then find the number of valid votes that the other candidate got.",
+    "qh": "दो उम्मीदवारों के बीच एक चुनाव में, एक उम्मीदवार को वैध मतों का 60% प्राप्त हुआ। यदि डाले गए कुल मत 8850 थे, और 10% मत अमान्य थे, तो ज्ञात कीजिए कि दूसरे उम्मीदवार को कितने वैध मत मिले।",
+    "oe": [
+      "3816",
+      "3186",
+      "3681",
+      "3618"
+    ],
+    "oh": [
+      "3816",
+      "3186",
+      "3681",
+      "3618"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Method):\nTotal votes polled = 8850.\nValid votes = 90% of 8850 = 7965.\nOther candidate's valid votes = 40% of 7965 = $\\frac{2}{5}$ $\\times$ 7965 = 3186.\nAtah sahi vikalp  3186 hai.\n\nMethod 2 (Single Line Multiplication):\nOther candidate's votes = 8850 $\\times$ $\\frac{90}{100}$ $\\times$ $\\frac{40}{100}$ = 8850 $\\times$ $\\frac{18}{50}$ = 3186.\nAtah sahi uttar '3186' hai.\n\nYahan diye gaye tathyon ka sahi milan seedha lagta hai. She sh vikalp 3816, 3681, 3618 is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type9election_35",
+    "qe": "In an election, 8% of the voters did not cast their votes. Two candidates contested the election in which the winning candidate got 48% of the total votes and won the election by 1100 votes. Find the total number of voters in the election, given that all the votes cast were valid.",
+    "qh": "एक चुनाव में, 8% मतदाताओं ने अपने मत नहीं डाले। दो उम्मीदवारों ने चुनाव लड़ा जिसमें जीतने वाले उम्मीदवार ने कुल मतों का 48% प्राप्त किया और 1100 मतों से चुनाव जीत गया। चुनाव में मतदाताओं की कुल संख्या ज्ञात कीजिए, यह देखते हुए कि डाले गए सभी मत वैध थे।",
+    "oe": [
+      "27,500",
+      "25,000",
+      "26,500",
+      "28,000"
+    ],
+    "oh": [
+      "27,500",
+      "25,000",
+      "26,500",
+      "28,000"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nLet total enrolled voters = 100%.\nTotal votes cast = 100% - 8% = 92%.\nWinner got = 48% of total votes.\nLoser got = 92% - 48% = 44% of total votes.\nWinning margin = 48% - 44% = 4% of total votes.\nGiven: 4% = 1100 ==> 1% = 275.\nTotal voters (100%) = 275 $\\times$ 100 = 27,500.\nAtah sahi vikalp  27,500 hai.\n\nMethod 2 (Ratio Method):\nMargin = 48 - 44 = 4 units.\n4 units = 1100 ==> 1 unit = 275.\nTotal voters = 100 units = 27,500.\nAtah sahi uttar '27,500' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_36",
+    "qe": "In a state election between two parties, 83% of the voters cast their votes, out of which 4% of the votes were declared invalid. Party A got 156611 votes which were 83% of the total valid votes. Find the total number of votes enrolled in that election. (Consider integer part only)",
+    "qh": "दो पार्टियों के बीच एक राज्य चुनाव में, 83% मतदाताओं ने अपने मत डाले, जिनमें से 4% मत अमान्य घोषित कर दिए गए। पार्टी A को 156611 मत मिले, जो कुल वैध मतों का 83% था। उस चुनाव में नामांकित मतों की कुल संख्या ज्ञात कीजिए। (केवल पूर्णांक भाग पर विचार करें)",
+    "oe": [
+      "2,58,233",
+      "2,34,888",
+      "2,36,807",
+      "23,46,807"
+    ],
+    "oh": [
+      "2,58,233",
+      "2,34,888",
+      "2,36,807",
+      "23,46,807"
+    ],
+    "a": 2,
+    "e": "Method 1 (Chain Multiplication Method):\nVotes = V.\nV $\\times$ 0.83 $\\times$ 0.96 $\\times$ 0.83 = 156611\nV $\\times$ 0.661344 = 156611 ==> V = $\\frac{156611}{0.661344}$ $\\approx$ 236807.\nAtah sahi vikalp  2,36,807 hai.\n\nMethod 2 (Step Backtrack Method):\nValid votes = $\\frac{156611}{0.83}$ $\\approx$ 188688.\nVotes cast = $\\frac{188688}{0.96}$ $\\approx$ 196550.\nTotal enrolled = $\\frac{196550}{0.83}$ $\\approx$ 236807.\nAtah sahi uttar '2,36,807' hai.\n\nYahan diye gaye tathyon ka sahi milan seedha lagta hai. Vikalp 2,58,233, 2,34,888, 23,46,807 is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type9election_37",
+    "qe": "In an election between P, R and S, 1/10 of the total votes polled are invalid. Votes polled in favour of R and S are half of the total votes polled, and they get equal votes. Due to a fault in the machine, half of the votes of S and half of the invalid votes are counted additionally in favour of R. What is the overall percentage of votes secured by R due to the fault?",
+    "qh": "P, R और S के बीच एक चुनाव में, डाले गए कुल मतों का 1/10 भाग अमान्य है। R और S के पक्ष में डाले गए मत, कुल डाले गए मतों के आधे हैं, और उन्हें बराबर मत प्राप्त होते हैं। मशीन में खराबी के कारण, S के आधे मत और अमान्य मतों के आधे मत अतिरिक्त रूप से R के पक्ष में गिने जाते हैं। खराबी के कारण R द्वारा प्राप्त मतों का कुल प्रतिशत क्या है?",
+    "oe": [
+      "37.55%",
+      "41.55%",
+      "38.5%",
+      "42.5%"
+    ],
+    "oh": [
+      "37.55%",
+      "41.55%",
+      "38.5%",
+      "42.5%"
+    ],
+    "a": 3,
+    "e": "Method 1 (100-Base Assumption Method):\nLet total votes polled = 100 units.\nInvalid votes = 10 units.\nVotes for R + S = 50 units ==> R = 25 units, S = 25 units.\nFault bonus for R = Half of S (12.5) + Half of invalid (5) = 17.5 units.\nTotal votes for R = 25 + 17.5 = 42.5 units.\nPercentage = $\\frac{42.5}{100}$ $\\times$ 100% = 42.5%.\nAtah sahi vikalp  42.5% hai.\n\nMethod 2 (Fraction Formulation):\nTotal fraction for R = $\\frac{1}{4}$ + $\\frac{1}{8}$ + $\\frac{1}{20}$ = 0.25 + 0.125 + 0.05 = 0.425 = 42.5%.\nAtah sahi uttar '42.5%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_38",
+    "qe": "Hari, Kamal and Lalit contested an election in which 6050 votes were polled and none of the votes were invalid. Kamal got 42% more votes than the total votes obtained by Hari and Lalit together. If Lalit obtained only 8% of the total polled votes, find the number of votes obtained by Hari.",
+    "qh": "हरि, कमल और ललित ने एक चुनाव लड़ा जिसमें 6050 मत पड़े और कोई भी मत अमान्य नहीं था। कमल को हरि और ललित द्वारा प्राप्त कुल मतों से 42% अधिक मत मिले। यदि ललित को कुल डाले गए मतों का केवल 8% प्राप्त हुआ, तो हरि द्वारा प्राप्त मतों की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "2016",
+      "1556",
+      "1912",
+      "1668"
+    ],
+    "oh": [
+      "2016",
+      "1556",
+      "1912",
+      "1668"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio & Algebra Method):\nLet (H + L) = 100 units ==> K = 142 units.\nTotal = 242 units = 6050 ==> 1 unit = 25.\n(H + L) = 2500.\nLalit = 8% of 6050 = 484.\nHari = 2500 - 484 = 2016.\nAtah sahi vikalp  2016 hai.\n\nMethod 2 (100-Base Method):\n2.42(H + L) = 6050 ==> H + L = 2500.\nL = 484 ==> H = 2500 - 484 = 2016.\nAtah sahi uttar '2016' hai.\n\nIs prashn ka moolaadhaar diye gaye tathyon ka sahi milan hai. Vikalp 1556, 1912, 1668 is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type9election_39",
+    "qe": "In an election between three candidates Arjun, Bhaskar and Saral contested for a post. Arjun got 50% votes more than Saral and Saral got 2% votes less than Bhaskar. The difference between the votes of Bhaskar and Saral is 1296. What is the half of the difference between the votes of Arjun and Bhaskar?",
+    "qh": "तीन उम्मीदवारों अर्जुन, भास्कर और सरल के बीच एक पद के लिए चुनाव हुआ। अर्जुन को सरल से 50% अधिक मत मिले और सरल को भास्कर से 2% कम मत मिले। भास्कर और सरल के मतों के बीच का अंतर 1296 है। अर्जुन और भास्कर के मतों के बीच के अंतर का आधा क्या है?",
+    "oe": [
+      "3888",
+      "13988",
+      "7766",
+      "15228"
+    ],
+    "oh": [
+      "3888",
+      "13988",
+      "7766",
+      "15228"
+    ],
+    "a": 3,
+    "e": "Method 1 (Step-by-Step Value Method):\nB - S = 2% of B = 1296 ==> B = 64800.\nS = 64800 - 1296 = 63504.\nA = 1.5 $\\times$ 63504 = 95256.\nA - B = 95256 - 64800 = 30456.\nHalf of difference = $\\frac{30456}{2}$ = 15228.\nAtah sahi vikalp  15228 hai.\n\nMethod 2 (Ratio Formulation Method):\nB = 100, S = 98 ==> 2 units = 1296 ==> 1 unit = 648.\nA = 1.5 $\\times$ 98 = 147 units.\nA - B = 47 units.\nHalf of difference = $\\frac{47}{2}$ $\\times$ 648 = 47 $\\times$ 324 = 15228.\nAtah sahi uttar '15228' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_40",
+    "qe": "Two candidates P and Q contested in an election. 70% of the registered voters are P supporters. If 60% of the P supporters and 30% of the Q supporters are expected to vote for candidate P, then what percentage of the registered voters are expected to vote for candidate P?",
+    "qh": "दो उम्मीदवारों P और Q ने एक चुनाव लड़ा। पंजीकृत मतदाताओं में से 70% P के समर्थक हैं। यदि P के 60% समर्थकों और Q के 30% समर्थकों से उम्मीदवार P को वोट देने की उम्मीद है, तो पंजीकृत मतदाताओं में से कितने प्रतिशत से उम्मीदवार P को वोट देने की उम्मीद है?",
+    "oe": [
+      "30%",
+      "51%",
+      "26%",
+      "47%"
+    ],
+    "oh": [
+      "30%",
+      "51%",
+      "26%",
+      "47%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nLet registered voters = 100.\nP supporters = 70, Q supporters = 30.\nVotes for P from P supporters = 60% of 70 = 42.\nVotes for P from Q supporters = 30% of 30 = 9.\nTotal expected votes for P = 42 + 9 = 51%.\nAtah sahi vikalp  51% hai.\n\nMethod 2 (Weighted Average Formula):\nExpected percentage = (0.70 $\\times$ 60%) + (0.30 $\\times$ 30%) = 42% + 9% = 51%.\nAtah sahi uttar '51%' hai.\n\nIs prashn ka moolaadhaar pratishat ka hisaab hai. She sh vikalp 30%, 26%, 47% is hisaab se nahi milte. Exam point: pratishat ka hisaab - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type9election_41",
+    "qe": "In an election, a voter has choices to vote for one candidate out of three candidates. There is also an option 'None Of The Above' (NOTA) to reject all candidates. The three candidates get votes that are 6 times NOTA. The winner gets votes that are twice the second runner-up's votes. The first runner-up gets 900 votes more than NOTA and defeats the second runner-up by 150 votes. What is the total number of votes polled?",
+    "qh": "एक चुनाव में, एक मतदाता के पास तीन उम्मीदवारों में से किसी एक उम्मीदवार को वोट देने का विकल्प होता है। सभी उम्मीदवारों को अस्वीकार करने के लिए 'उपरोक्त में से कोई नहीं' (नोटा) का विकल्प भी है। तीनों उम्मीदवारों को मिले मत नोटा के 6 गुना हैं। विजेता को दूसरे उपविजेता (तीसरे स्थान वाले) के मतों के दोगुने मत मिलते हैं। पहले उपविजेता को नोटा से 900 मत अधिक मिलते हैं और वह दूसरे उपविजेता को 150 मतों से हराता है। डाले गए मतों की कुल संख्या क्या है?",
+    "oe": [
+      "17,715",
+      "15,177",
+      "11,025",
+      "11,577"
+    ],
+    "oh": [
+      "17,715",
+      "15,177",
+      "11,025",
+      "11,577"
+    ],
+    "a": 2,
+    "e": "Method 1 (Algebraic Substitution Method):\nLet votes for NOTA = N.\nTotal polled = 6N + N = 7N.\nR_1 = N + 900.\nR_2 = N + 750.\nWinner (W) = 2(N + 750) = 2N + 1500.\nW + R_1 + R_2 = 4N + 3150 = 6N ==> 2N = 3150 ==> N = 1575.\nTotal votes polled = 7N = 7 $\\times$ 1575 = 11025.\nAtah sahi vikalp  11,025 hai.\n\nMethod 2 (Verification Method):\nIf N = 1575, Candidate sum = 4650 + 2475 + 2325 = 9450 = 6 $\\times$ 1575.\nTotal votes polled = 9450 + 1575 = 11025.\nAtah sahi uttar '11,025' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_42",
+    "qe": "Three candidates P, Q and R participated in an election. P got 35% more votes than Q, and R got 15% more votes than Q. P overtook R by 2,412 votes. If 90% voters voted and no invalid or illegal votes were cast, then what was the number of voters in the voting list?",
+    "qh": "तीन उम्मीदवारों P, Q और R ने एक चुनाव में भाग लिया। P को Q से 35% अधिक मत मिले, और R को Q से 15% अधिक मत मिले। P ने R को 2,412 मतों से पछाड़ा। यदि 90% मतदाताओं ने मतदान किया और कोई अमान्य या अवैध मत नहीं डाला गया, तो मतदाता सूची में मतदाताओं की संख्या क्या थी?",
+    "oe": [
+      "46,900",
+      "42,800",
+      "42,210",
+      "48,500"
+    ],
+    "oh": [
+      "46,900",
+      "42,800",
+      "42,210",
+      "48,500"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nQ = 100, P = 135, R = 115.\nP - R = 20 units = 2412 ==> 1 unit = 120.6.\nTotal polled = 135 + 100 + 115 = 350 units = 42210.\nVoting list = $\\frac{42210}{0.90}$ = 46900.\nAtah sahi vikalp  46,900 hai.\n\nMethod 2 (Ratio Method):\nP : Q : R = 27 : 20 : 23.\nP - R = 4 units = 2412 ==> 1 unit = 603.\nTotal polled = 70 units = 42210.\nVoters list = 42210 $\\times$ $\\frac{10}{9}$ = 46900.\nAtah sahi uttar '46,900' hai.\n\nYahan diye gaye tathyon ka sahi milan seedha lagta hai. She sh vikalp 42,800, 42,210, 48,500 is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type9election_43",
+    "qe": "28% of the people eligible to vote are between 20 to 25 years. In an election 75% of those eligible to vote who were between 20 to 25 years actually voted. In that election the number of persons between 20 to 25 who actually voted was what percentage of those eligible to vote?",
+    "qh": "मतदान के पात्र लोगों में से 28% की आयु 20 से 25 वर्ष के बीच है। एक चुनाव में 20 से 25 वर्ष के बीच के मतदान के पात्र लोगों में से 75% ने वास्तव में मतदान किया। उस चुनाव में 20 से 25 वर्ष के बीच के वास्तव में मतदान करने वाले व्यक्तियों की संख्या, मतदान के पात्र कुल व्यक्तियों का कितना प्रतिशत थी?",
+    "oe": [
+      "25%",
+      "21%",
+      "28%",
+      "22%"
+    ],
+    "oh": [
+      "25%",
+      "21%",
+      "28%",
+      "22%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Percentage Method):\nTotal eligible voters = 100.\nEligible (20-25 yrs) = 28.\nActually voted = 75% of 28 = $\\frac{3}{4}$ $\\times$ 28 = 21.\nPercentage of total eligible = $\\frac{21}{100}$ $\\times$ 100% = 21%.\nAtah sahi vikalp  21% hai.\n\nMethod 2 (Fraction Multiplication Method):\nFraction = 28% $\\times$ 75% = $\\frac{28}{100}$ $\\times$ $\\frac{3}{4}$ = $\\frac{21}{100}$ = 21%.\nAtah sahi uttar '21%' hai.\n\nIs prashn ka moolaadhaar pratishat ka hisaab hai. She sh vikalp 25%, 28%, 22% is hisaab se nahi milte. Exam point: pratishat ka hisaab - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type9election_44",
+    "qe": "In an election, 35% of the voter voted for candidate P whereas 50% of the remaining voted for candidate Q. The remaining voter did not vote. If the difference between those who voted for candidate P and those who did not vote was 1000, the number of individuals eligible for casting a vote in that election was:",
+    "qh": "एक चुनाव में, 35% मतदाताओं ने उम्मीदवार P को वोट दिया जबकि शेष के 50% ने उम्मीदवार Q को वोट दिया। शेष मतदाताओं ने मतदान नहीं किया। यदि उम्मीदवार P को वोट देने वालों और मतदान न करने वालों के बीच का अंतर 1000 था, तो उस चुनाव में मतदान करने के लिए पात्र व्यक्तियों की संख्या थी:",
+    "oe": [
+      "40000",
+      "60000",
+      "75000",
+      "55000"
+    ],
+    "oh": [
+      "40000",
+      "60000",
+      "75000",
+      "55000"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nTotal = 100%.\nP = 35%.\nRemaining = 65% ==> Q = 32.5%, Did not vote = 32.5%.\nDifference (P - Did not vote) = 35% - 32.5% = 2.5%.\n2.5% = 1000 ==> 1% = 400.\nTotal eligible (100%) = 400 $\\times$ 100 = 40000.\nAtah sahi vikalp  40000 hai.\n\nMethod 2 (Ratio Method):\nTotal = 200 units.\nP = 70 units, Q = 65 units, Did not vote = 65 units.\nDifference = 70 - 65 = 5 units = 1000 ==> 1 unit = 200.\nTotal = 200 $\\times$ 200 = 40000.\nAtah sahi uttar '40000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type9election_45",
+    "qe": "In a survey it was found that in a constituency, 55% of voters are male and the rest are female. 40% of the male voters are literate and 33 1/3% of the female voters are illiterate. What percentage of the voters are literate?",
+    "qh": "एक सर्वेक्षण में पाया गया कि एक निर्वाचन क्षेत्र में 55% मतदाता पुरुष हैं और शेष महिलाएं हैं। 40% पुरुष मतदाता साक्षर हैं और 33 1/3% महिला मतदाता निरक्षर हैं। कुल मतदाताओं का कितना प्रतिशत साक्षर है?",
+    "oe": [
+      "52%",
+      "48%",
+      "54%",
+      "37%"
+    ],
+    "oh": [
+      "52%",
+      "48%",
+      "54%",
+      "37%"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-Base Method):\nTotal voters = 100.\nMales = 55, Females = 45.\nLiterate males = 40% of 55 = 22.\nLiterate females = (1 - 1/3) of 45 = $\\frac{2}{3}$ $\\times$ 45 = 30.\nTotal literate = 22 + 30 = 52%.\nAtah sahi vikalp  52% hai.\n\nMethod 2 (Fraction / Ratio Method):\nLiterate part = ($\\frac{11}{20}$ $\\times$ $\\frac{2}{5}$) + ($\\frac{9}{20}$ $\\times$ $\\frac{2}{3}$) = $\\frac{22}{100}$ + $\\frac{30}{100}$ = 52%.\nAtah sahi uttar '52%' hai.\n\npratishat ka hisaab se hi is prashn ka jawab nikalta hai. Vikalp 48%, 54%, 37% is hal se mel nahi khaate. Exam point: pratishat ka hisaab - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type9election_46",
+    "qe": "In a constituency, 55% of the total number of voters are males and the rest are females. If 40% of the males are illiterate and 40% of the females are literate, then by what percentage is the number of illiterate females more than that of the illiterate males (correct to one decimal place)?",
+    "qh": "एक निर्वाचन क्षेत्र में, मतदाताओं की कुल संख्या का 55% पुरुष हैं और शेष महिलाएं हैं। यदि 40% पुरुष निरक्षर हैं और 40% महिलाएं साक्षर हैं, तो निरक्षर महिलाओं की संख्या निरक्षर पुरुषों की तुलना में कितने प्रतिशत अधिक है (एक दशमलव स्थान तक सही)?",
+    "oe": [
+      "21.5%",
+      "20.8%",
+      "16.4%",
+      "22.7%"
+    ],
+    "oh": [
+      "21.5%",
+      "20.8%",
+      "16.4%",
+      "22.7%"
+    ],
+    "a": 3,
+    "e": "Method 1 (100-Base Method):\nTotal voters = 100.\nMales = 55, Females = 45.\nIlliterate males = 40% of 55 = 22.\nIlliterate females = 60% of 45 = 27.\nDifference = 27 - 22 = 5.\nPercentage more = $\\frac{5}{22}$ $\\times$ 100% $\\approx$ 22.7%.\nAtah sahi vikalp  22.7% hai.\n\nMethod 2 (Ratio Method):\nIlliterate males : Illiterate females = 22 : 27.\nPercentage more = $\\frac{5}{22}$ $\\times$ 100% $\\approx$ 22.7%.\nAtah sahi uttar '22.7%' hai.\n\nIs prashn ka moolaadhaar pratishat ka hisaab hai. Vikalp 21.5%, 20.8%, 16.4% is hal se mel nahi khaate. Exam point: pratishat ka hisaab - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type9election_47",
+    "qe": "In a constituency, 45% of the total number of voters are males and the rest are females. If 60% of the males are illiterate and 60% of the females are literate, then by what percent is the number of illiterate females more than that of literate males? (Rounded off to 2 decimal places)",
+    "qh": "एक निर्वाचन क्षेत्र में, कुल मतदाताओं का 45% पुरुष हैं और बाकी महिलाएं हैं। यदि 60% पुरुष निरक्षर हैं और 60% महिलाएं साक्षर हैं, तो निरक्षर महिलाओं की संख्या साक्षर पुरुषों से कितने प्रतिशत अधिक है? (2 दशमलव स्थानों तक पूर्णांकित)",
+    "oe": [
+      "19.11%",
+      "27.23%",
+      "30.24%",
+      "22.22%"
+    ],
+    "oh": [
+      "19.11%",
+      "27.23%",
+      "30.24%",
+      "22.22%"
+    ],
+    "a": 3,
+    "e": "Method 1 (100-Base Method):\nTotal voters = 100.\nMales = 45, Females = 55.\nLiterate males = 40% of 45 = 18.\nIlliterate females = 40% of 55 = 22.\nDifference = 22 - 18 = 4.\nPercentage more = $\\frac{4}{18}$ $\\times$ 100% = $\\frac{2}{9}$ $\\times$ 100% $\\approx$ 22.22%.\nAtah sahi vikalp  22.22% hai.\n\nMethod 2 (Ratio Method):\nLiterate Males : Illiterate Females = (45 $\\times$ 0.40) : (55 $\\times$ 0.40) = 9 : 11.\nExcess = 2 units on base 9.\nPercentage more = $\\frac{2}{9}$ $\\times$ 100% $\\approx$ 22.22%.\nAtah sahi uttar '22.22%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

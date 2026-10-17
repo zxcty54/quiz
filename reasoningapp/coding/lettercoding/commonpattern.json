@@ -1,0 +1,59 @@
+[
+  {
+    "p_id": "commonpattern_1",
+    "qe": "If in a certain code language, ORANGE is written as ZYXUTV and GRAPES is written as TYXRVL, then how APPLE will be written in the same language?",
+    "qh": "यदि किसी निश्चित कूट भाषा में ORANGE को ZYXUTV और GRAPES को TYXRVL लिखा जाता है, तो उसी भाषा में APPLE को क्या लिखा जाएगा?",
+    "oe": [
+      "XRRSV",
+      "XRRYV",
+      "BQQMF",
+      "EDEFG"
+    ],
+    "oh": [
+      "XRRSV",
+      "XRRYV",
+      "BQQMF",
+      "EDEFG"
+    ],
+    "a": 0,
+    "e": "Method 1 (Common Letter Direct Substitution Shortcut):\nStep 1: Dono words me common letters ke codes compare karein:\n- ORANGE = Z Y X U T V\n- GRAPES = T Y X R V L\nCommon letters check karein:\n- R = Y, A = X, G = T, E = V (dono shabdon me same code hain, arthath yeh Common Pattern hai).\nStep 2: 'APPLE' ke har akshar ka direct code chunen:\n- A → X\n- P → R (GRAPES me 4th letter P = R)\n- P → R\n- L → S (New consonant assignment ya option verification)\n- E → V (ORANGE aur GRAPES dono me E = V)\nCode: XRRSV.\nCorrect option  XRRSV hai.\n\nMethod 2 (Option Elimination Method):\n- 'A' ka code 'X' hai, isliye options 'BQQMF' and 'EDEFG' seedhe eliminate ho gaye.\n- 'APPLE' me double P hai, isliye 2nd aur 3rd letter same hone chahiye (RR).\n- 'XRRYV' me 4th letter 'Y' diya hai jabki 'Y', 'R' ka code hai (L ka nahi). Isliye 'XRRSV' sahi uttar hai.\nSahi uttar 'XRRSV' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "commonpattern_2",
+    "qe": "If in a certain code language, FIRE is written as QHOE and MOVE is written as ZMWE, then how OVER will be written in the same code language?",
+    "qh": "यदि किसी निश्चित कूट भाषा में FIRE को QHOE और MOVE को ZMWE लिखा जाता है, तो उसी कूट भाषा में OVER को कैसे लिखा जाएगा?",
+    "oe": [
+      "MWED",
+      "MWEO",
+      "MWOE",
+      "MWZO"
+    ],
+    "oh": [
+      "MWED",
+      "MWEO",
+      "MWOE",
+      "MWZO"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Common Coding Shortcut):\nStep 1: Diye gaye shabdon se pratyek akshar ka code nikalte hain:\n- F I R E → Q H O E (R = O, E = E)\n- M O V E → Z M W E (O = M, V = W, E = E)\nStep 2: 'OVER' ke aksharon ke codes map karein:\n- O → M (MOVE se)\n- V → W (MOVE se)\n- E → E (dono me common)\n- R → O (FIRE se)\nCode: MWEO.\nCorrect option  MWEO hai.\n\nMethod 2 (Option Elimination by Last Letter):\n- 'R' ka code FIRE se 'O' prapt hota hai, isliye aakhiri letter 'O' hona anivarya hai. Isse 'MWED' eliminate ho gaya.\n- 'V' ka code 'W' aur 'E' ka code 'E' hai, isliye kram 'MWEO' banega ('MWOE' me 'OE' ulta hai, eliminate; 'MWZO' me 'Z' hai, eliminate). Keval 'MWEO' bachta hai.\nSahi uttar 'MWEO' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "commonpattern_3",
+    "qe": "If in a certain code language, PEN is written as NZO and BARK is written as CTSL, then how PRANK will be written in the same code language?",
+    "qh": "यदि किसी निश्चित कूट भाषा में PEN को NZO और BARK को CTSL लिखा जाता है, तो उसी कूट भाषा में PRANK को कैसे लिखा जाएगा?",
+    "oe": [
+      "CSTZN",
+      "NSTOL",
+      "NTSLO",
+      "NZTOL"
+    ],
+    "oh": [
+      "CSTZN",
+      "NSTOL",
+      "NTSLO",
+      "NZTOL"
+    ],
+    "a": 1,
+    "e": "Method 1 (Common Pattern Direct Mapping Method):\nStep 1: 'PEN' aur 'BARK' se pratyek letter ka code note karein:\n- P → N, E → Z, N → O\n- B → C, A → T, R → S, K → L\nStep 2: 'PRANK' ke liye aksharon ke codes uthayein:\n- P → N\n- R → S\n- A → T\n- N → O\n- K → L\nCode: NSTOL.\nCorrect option  NSTOL hai.\n\nMethod 2 (Option Elimination by First Two Letters):\n- P ka code 'N' hai, isliye 'C' se start hone wala 'CSTZN' eliminate ho gaya.\n- R ka code 'S' hai, isliye code 'NS...' se shuru hona chahiye. 'NTSLO' me 'NT' aur 'NZTOL' me 'NZ' diya hai, dono eliminate ho gaye. Keval 'NSTOL' sahi hai.\nSahi uttar 'NSTOL' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

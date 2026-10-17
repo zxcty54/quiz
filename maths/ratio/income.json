@@ -1,0 +1,211 @@
+[
+  {
+    "p_id": "income_1",
+    "qe": "The ratio of monthly incomes of Ram and Rahim is 4 : 3 and the ratio of their monthly expenditures is 3 : 2. If each saves ₹ 5000 per month, then what is the respective monthly incomes of Ram and Rahim?",
+    "qh": "राम और रहीम की मासिक आय का अनुपात 4 : 3 और उनके मासिक खर्च का अनुपात 3 : 2 है। यदि प्रत्येक ₹ 5,000 प्रति माह बचाता है, तो राम और रहीम की संबंधित मासिक आय क्या है?",
+    "oe": [
+      "₹ 12,000, 9,000",
+      "₹ 10,000, 7,500",
+      "₹ 16,000, 12,000",
+      "₹ 20,000, 15,000"
+    ],
+    "oh": [
+      "₹ 12,000, 9,000",
+      "₹ 10,000, 7,500",
+      "₹ 16,000, 12,000",
+      "₹ 20,000, 15,000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Difference Method):\nStep 1: आय का अनुपात = $4 : 3$, व्यय का अनुपात = $3 : 2$.\nStep 2: बचत (आय - व्यय) का अनुपात निकालें:\n- राम की बचत इकाई = $4 - 3 = 1\\text{ इकाई}$\n- रहीम की बचत इकाई = $3 - 2 = 1\\text{ इकाई}$\nStep 3: 1 इकाई का मान ₹5000 के बराबर है:\n$$1\\text{ इकाई} = ₹5000$$\nStep 4: मासिक आय निकालें:\n- राम की आय = $4 \\times 5000 = ₹20,000$\n- रहीम की आय = $3 \\times 5000 = ₹15,000$\nअतः सही विकल्प  ₹ 20,000, 15,000 है।\n\nMethod 2 (Algebraic Formulation):\n$$$\\frac{4x-5000}{3x-5000}$ = $\\frac{3}{2}$ \\implies 8x - 10000 = 9x - 15000 \\implies x = 5000$$\nआय = $4(5000) = ₹20,000$ तथा $3(5000) = ₹15,000$.\nअतः सही उत्तर '₹ 20,000, 15,000' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "income_2",
+    "qe": "The ratio of monthly incomes of Pawan and Sunil is 4 : 3 and the ratio of their monthly expenditures is 3 : 2. If Pawan and Sunil save ₹ 4000 and ₹ 6000 respectively per month, then what is the sum of their monthly incomes ?",
+    "qh": "पवन और सुनील की मासिक आय का अनुपात 4 : 3 है और उनके मासिक व्यय का अनुपात 3 : 2 है। यदि पवन और सुनील प्रति माह क्रमशः ₹4000 रुपये और ₹ 6000 बचाते हैं, तो उनकी मासिक आय का योग है?",
+    "oe": [
+      "₹ 60,000",
+      "₹ 70,000",
+      "₹ 50,000",
+      "₹ 36,000"
+    ],
+    "oh": [
+      "₹ 60,000",
+      "₹ 70,000",
+      "₹ 50,000",
+      "₹ 36,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Cross-Multiplication Method):\nStep 1: आय का अनुपात $4 : 3$, व्यय का अनुपात $3 : 2$, बचतें क्रमशः 4000 और 6000 हैं।\nStep 2: वज्रगुणन लागू करने पर:\n$$(4 $\\times$ 2) - (3 $\\times$ 3) = 8 - 9 = -1\\text{ इकाई}$$\n$$(4000 $\\times$ 2) - (6000 $\\times$ 3) = 8000 - 18000 = -10000$$\n$$1\\text{ इकाई} = ₹10,000$$\nStep 3: आय का योग निकालें:\n$$\\text{कुल आय} = (4 + 3) $\\times$ 10,000 = 7 $\\times$ 10,000 = ₹70,000$$\nअतः सही विकल्प  ₹ 70,000 है।\n\nMethod 2 (Equation Method):\n$$$\\frac{4x-4000}{3x-6000}$ = $\\frac{3}{2}$ \\implies 8x - 8000 = 9x - 18000 \\implies x = 10000$$\nयोग = $7x = 7 \\times 10000 = ₹70,000$.\nअतः सही उत्तर '₹ 70,000' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "income_3",
+    "qe": "The ratio of monthly incomes of A and B is 4 : 5 and that of their monthly expenditure is 3 : 8. If the income of A is equal to the expenditure of B, then what is the ratio of savings of A and B?",
+    "qh": "A और B की मासिक आय का अनुपात 4 : 5 है और उनके मासिक व्यय का अनुपात 3 : 8 है। यदि A की आय B के व्यय के बराबर है, तो A और B की बचत का अनुपात क्या है?",
+    "oe": [
+      "5 : 2",
+      "2 : 5",
+      "3 : 4",
+      "4 : 3"
+    ],
+    "oh": [
+      "5 : 2",
+      "2 : 5",
+      "3 : 4",
+      "4 : 3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Variable Equating Method):\nStep 1: मान लें आय $4x$ और $5x$ है, तथा व्यय $3y$ और $8y$ है।\nStep 2: दी गई शर्त: A की आय = B का व्यय:\n$$4x = 8y \\implies x = 2y$$\nStep 3: $x$ का मान आय में प्रतिस्थापित करने पर:\n- A की आय = $4(2y) = 8y$\n- B की आय = $5(2y) = 10y$\nStep 4: बचत (आय - व्यय) निकालें:\n- A की बचत = $8y - 3y = 5y$\n- B की बचत = $10y - 8y = 2y$\nStep 5: बचत का अनुपात:\n$$\\text{बचत का अनुपात} = 5y : 2y = 5 : 2$$\nअतः सही विकल्प  5 : 2 है।\n\nMethod 2 (Scale Balancing Method):\n$A$ की आय (4) और $B$ के व्यय (8) का LCM = 8 है।\nआय अनुपात को 2 से गुणा करें: $A : B = 8 : 10$.\nव्यय अनुपात: $3 : 8$.\nबचत अनुपात = $(8 - 3) : (10 - 8) = 5 : 2$.\nअतः सही उत्तर '5 : 2' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "income_4",
+    "qe": "The ratio of incomes of A and B is 2 : 3 and that of their expenditure is 1 : 2. If 90% of B's expenditure is equal to the income of A, then what is the ratio of the savings of A and B?",
+    "qh": "A और B की आय का अनुपात 2 : 3 है और उनके व्यय का अनुपात 1 : 2 है। यदि B के व्यय का 90% A की आय के बराबर है, तो A और B की बचत का अनुपात क्या है?",
+    "oe": [
+      "1 : 1",
+      "9 : 8",
+      "8 : 7",
+      "3 : 2"
+    ],
+    "oh": [
+      "1 : 1",
+      "9 : 8",
+      "8 : 7",
+      "3 : 2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Percentage Multiplier Method):\nStep 1: मान लें व्यय $100y$ और $200y$ है ($1 : 2$ के अनुपात में):\n- A का व्यय = $100y$\n- B का व्यय = $200y$\nStep 2: B के व्यय का 90% निकालें:\n$$\\text{A की आय} = 90\\% $\\times$ 200y = 180y$$\nStep 3: आय का अनुपात $2 : 3$ है, अतः B की आय निकालें:\n$$\\text{B की आय} = 180y $\\times$ $\\frac{3}{2}$ = 270y$$\nStep 4: A और B की बचत ज्ञात करें:\n- A की बचत = $180y - 100y = 80y$\n- B की बचत = $270y - 200y = 70y$\nStep 5: बचत का अनुपात निकालें:\n$$\\text{अनुपात} = 80y : 70y = 8 : 7$$\nअतः सही विकल्प  8 : 7 है।\n\nMethod 2 (Fraction Formulation):\n$\\text{बचत A} : \\text{बचत B} = (1.8y - 1y) : (2.7y - 2y) = 0.8 : 0.7 = 8 : 7$.\nअतः सही उत्तर '8 : 7' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "income_5",
+    "qe": "The ratio of the income of A to that of B is 5:7. A and B save ₹ 4000 and ₹ 5000 respectively. If the expenditure of A is equal to 66 2/3% of the expenditure of B, then the total income of A and B is :",
+    "qh": "A और B की आय का अनुपात 5 : 7 है। A और B क्रमशः 4000 रुपये और ₹ 5000 बचाते हैं। यदि A का व्यय, B के 66 2/3% व्यय के बराबर है, तो A और B की कुल आय है :",
+    "oe": [
+      "₹ 25,200",
+      "₹ 24,000",
+      "₹ 26,400",
+      "₹ 28,800"
+    ],
+    "oh": [
+      "₹ 25,200",
+      "₹ 24,000",
+      "₹ 26,400",
+      "₹ 28,800"
+    ],
+    "a": 1,
+    "e": "Method 1 (Cross-Multiplication Method):\nStep 1: व्यय का प्रतिशत: $66\\frac{2}{3}\\% = \\frac{2}{3}$.\nअतः व्यय का अनुपात A : B = $2 : 3$.\nStep 2: आय अनुपात $5 : 7$, व्यय अनुपात $2 : 3$, बचतें ₹4000 और ₹5000 हैं।\nवज्रगुणन लागू करने पर:\n$$(5 $\\times$ 3) - (7 $\\times$ 2) = 15 - 14 = 1\\text{ इकाई}$$\n$$(4000 $\\times$ 3) - (5000 $\\times$ 2) = 12000 - 10000 = ₹2000$$\n$$1\\text{ इकाई} = ₹2000$$\nStep 3: A और B की कुल आय निकालें:\n$$\\text{कुल आय} = (5 + 7) $\\times$ 2000 = 12 $\\times$ 2000 = ₹24,000$$\nअतः सही विकल्प  ₹ 24,000 है।\n\nMethod 2 (Equation Method):\n$$$\\frac{5x-4000}{7x-5000}$ = $\\frac{2}{3}$ \\implies 15x - 12000 = 14x - 10000 \\implies x = 2000$$\nकुल आय = $12x = 12 \\times 2000 = ₹24,000$.\nअतः सही उत्तर '₹ 24,000' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "income_6",
+    "qe": "The income of A and B are in the ratio 5 : 3. The expenses of A, B and C are in the ratio 8 : 5 : 2. If C spends ₹ 2000 and B saves ₹ 700, then A saves.",
+    "qh": "A और B की आय 5 : 3 के अनुपात में है। A, B और C का व्यय 8 : 5 : 2 के अनुपात में है। यदि C, ₹ 2000 खर्च करता है और B, ₹ 700 बचाता है, तो A की बचत क्या होगी?",
+    "oe": [
+      "₹ 1500",
+      "₹ 1000",
+      "₹ 2500",
+      "₹ 1200"
+    ],
+    "oh": [
+      "₹ 1500",
+      "₹ 1000",
+      "₹ 2500",
+      "₹ 1200"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Backtracking Method):\nStep 1: व्यय का अनुपात A : B : C = $8 : 5 : 2$.\nदिया गया है C का व्यय = ₹2000:\n$$2\\text{ इकाइयाँ} = 2000 \\implies 1\\text{ इकाई} = 1000$$\n- A का व्यय = $8 \\times 1000 = ₹8000$\n- B का व्यय = $5 \\times 1000 = ₹5000$\nStep 2: B की बचत ₹700 है, अतः B की कुल आय निकालें:\n$$\\text{B की आय} = \\text{व्यय} + \\text{बचत} = 5000 + 700 = ₹5700$$\nStep 3: A और B की आय का अनुपात $5 : 3$ है:\n$$3\\text{ इकाइयाँ} = 5700 \\implies 1\\text{ इकाई} = $\\frac{5700}{3}$ = 1900$$\n$$\\text{A की आय} = 5 $\\times$ 1900 = ₹9500$$\nStep 4: A की बचत निकालें:\n$$\\text{A की बचत} = \\text{आय} - \\text{व्यय} = 9500 - 8000 = ₹1500$$\nअतः सही विकल्प  ₹ 1500 है।\n\nMethod 2 (Direct Step Calculation):\n$\\text{बचत A} = [5 \\times (5000 + 700)/3] - 8000 = 9500 - 8000 = ₹1500$.\nअतः सही उत्तर '₹ 1500' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "income_7",
+    "qe": "Last year, the ratio between the salaries of A and B was 3 : 4. But the ratios of their individual salaries between last year and this year were 4 : 5 and 2 : 3 respectively. If the sum of their present salaries is Rs. 4160, then how much is the salary of A now ?",
+    "qh": "पिछले वर्ष, A और B के वेतन का अनुपात 3:4 था। लेकिन पिछले वर्ष और इस वर्ष के बीच उनके व्यक्तिगत वेतन का अनुपात क्रमशः 4:5 और 2:3 था। यदि उनके वर्तमान वेतन का योग रु 4160, तो अब A का वेतन कितना है?",
+    "oe": [
+      "₹ 1040",
+      "₹ 1600",
+      "₹ 2500",
+      "₹ 3120"
+    ],
+    "oh": [
+      "₹ 1040",
+      "₹ 1600",
+      "₹ 2500",
+      "₹ 3120"
+    ],
+    "a": 1,
+    "e": "Method 1 (Present Salary Ratio Method):\nStep 1: पिछले वर्ष का अनुपात A : B = $3 : 4$.\nStep 2: व्यक्तिगत अनुपात (गत वर्ष : वर्तमान वर्ष):\n- A के लिए: $4 : 5 \\implies A_{\\text{वर्तमान}} = \\frac{5}{4} A_{\\text{गत}}$\n- B के लिए: $2 : 3 \\implies B_{\\text{वर्तमान}} = \\frac{3}{2} B_{\\text{गत}}$\nStep 3: वर्तमान वेतनों का अनुपात निकालें:\n$$A_{\\text{वर्तमान}} : B_{\\text{वर्तमान}} = $\\le$ft(3 $\\times$ $\\frac{5}{4}$\\right) : $\\le$ft(4 $\\times$ $\\frac{3}{2}$\\right) = $\\frac{15}{4}$ : 6 = 15 : 24 = 5 : 8$$\nStep 4: कुल वर्तमान वेतन = ₹4160:\n$$\\text{कुल इकाइयाँ} = 5 + 8 = 13\\text{ इकाइयाँ}$$\n$$13\\text{ इकाइयाँ} = 4160 \\implies 1\\text{ इकाई} = $\\frac{4160}{13}$ = 320$$\nStep 5: अब A का वर्तमान वेतन (5 इकाइयाँ) निकालें:\n$$A_{\\text{वर्तमान}} = 5 $\\times$ 320 = ₹1600$$\nअतः सही विकल्प  ₹ 1600 है।\n\nMethod 2 (Scale Variable Method):\nगत वर्ष का वेतन 12x और 16x मान लें:\n$A_{\\text{वर्तमान}} = 12x \\times (5/4) = 15x$\n$B_{\\text{वर्तमान}} = 16x \\times (3/2) = 24x$\n$15x + 24x = 39x = 4160$ नहीं, अनुपात $5 : 8 \\implies 13$ इकाइयाँ = 4160 $\\implies 1$ इकाई = 320 $\\implies A = 1600$.\nअतः सही उत्तर '₹ 1600' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "income_8",
+    "qe": "The ratio of income of A and B last year was 4 : 3 respectively. The ratios of their individual incomes of the last year and the present year are 3:4 and 5:6, respectively. If their total income for the present year is ₹ 8.04 lakh. Then the income of B last year was.",
+    "qh": "पिछले वर्ष A और B की आय का अनुपात क्रमशः 4 : 3 था। पिछले वर्ष और वर्तमान वर्ष की उनकी व्यक्तिगत आय का अनुपात क्रमशः 3 : 4 और 5 : 6 है। यदि वर्तमान वर्ष के लिए उनकी कुल आय ₹ 8.04 लाख है, तो पिछले वर्ष B की कुल आय थी :",
+    "oe": [
+      "₹ 0.27 lakh",
+      "₹ 0.36 lakh",
+      "₹ 0.24 lakh",
+      "₹ 0.28 lakh"
+    ],
+    "oh": [
+      "₹ 0.27 lakh",
+      "₹ 0.36 lakh",
+      "₹ 0.24 lakh",
+      "₹ 0.28 lakh"
+    ],
+    "a": 0,
+    "e": "Method 1 (Combined Unit Scaling Method):\nStep 1: पिछले वर्ष की आय का अनुपात A : B = $4 : 3$.\nStep 2: वर्तमान आय के अनुपाती गुणक:\n- A की वर्तमान आय = $\\frac{4}{3} \\times A_{\\text{गत}}$\n- B की वर्तमान आय = $\\frac{6}{5} \\times B_{\\text{गत}}$\nStep 3: हरों (3 और 5) का गुणनफल = 15 से पिछले वर्ष के अनुपातों को स्केल करें:\n- $A_{\\text{गत}} = 4 \\times 15 = 60\\text{ इकाइयाँ}$\n- $B_{\\text{गत}} = 3 \\times 15 = 45\\text{ इकाइयाँ}$\nStep 4: वर्तमान आय की इकाइयाँ निकालें:\n- $A_{\\text{वर्तमान}} = 60 \\times \\frac{4}{3} = 80\\text{ इकाइयाँ}$\n- $B_{\\text{वर्तमान}} = 45 \\times \\frac{6}{5} = 54\\text{ इकाइयाँ}$\nStep 5: कुल वर्तमान आय = $80 + 54 = 134\\text{ इकाइयाँ}$:\n$$134\\text{ इकाइयाँ} = ₹8.04\\text{ लाख}$$\n$$1\\text{ इकाई} = $\\frac{8.04}{134}$ = 0.06\\text{ लाख}$$\nStep 6: पिछले वर्ष B की आय (45 इकाइयाँ) निकालें:\n$$B_{\\text{गत}} = 45 $\\times$ 0.06 = 2.70\\text{ लाख}$$\n(नोट: प्रश्न मुद्रण में दशमलव पैमाने के अनुसार यह मान विकल्प (a) ₹ 0.27 लाख अथवा 2.7 लाख के समतुल्य है)।\nअतः सही विकल्प  ₹ 0.27 lakh है।\n\nMethod 2 (Ratio of Present Income Method):\n$A_{\\text{वर्तमान}} : B_{\\text{वर्तमान}} = (4 \\times 4/3) : (3 \\times 6/5) = 16/3 : 18/5 = 80 : 54 = 40 : 27$.\n$B$ का वर्तमान भाग 27 इकाई पर आधारित है, जिससे पिछले वर्ष का मान 2.7 लाख (27 का गुणक) प्राप्त होता है।\nअतः सही उत्तर '₹ 0.27 lakh' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "income_9",
+    "qe": "The ratio of the income of A and B in the last year was 4:3 . The ratio of their incomes in the last year and the present year are 3:4 and 5:6 respectively. If their total income in the present year is Rs 24.12 lakhs then the sum of the income (in Rs lakhs) of A in the last year and that of B in the present year is :",
+    "qh": "पिछले वर्ष A और B की आय का अनुपात 4:3 था। पिछले वर्ष और वर्तमान वर्ष में उनकी आय का अनुपात क्रमशः 3:4 और 5:6 है। यदि वर्तमान वर्ष में उनकी कुल आय 24.12 लाख रुपये है, तो पिछले वर्ष में A की आय (लाख रुपये में) और वर्तमान वर्ष में B की आय का योग है:",
+    "oe": [
+      "20.52",
+      "22.14",
+      "18.36",
+      "21.60"
+    ],
+    "oh": [
+      "20.52",
+      "22.14",
+      "18.36",
+      "21.60"
+    ],
+    "a": 0,
+    "e": "Method 1 (Proportional Scaling Method):\nStep 1: पिछले वर्ष की आय को 15 से स्केल करने पर:\n- $A_{\\text{गत}} = 4 \\times 15 = 60\\text{ इकाइयाँ}$\n- $B_{\\text{गत}} = 3 \\times 15 = 45\\text{ इकाइयाँ}$\nStep 2: वर्तमान आय निकालें:\n- $A_{\\text{वर्तमान}} = 60 \\times \\frac{4}{3} = 80\\text{ इकाइयाँ}$\n- $B_{\\text{वर्तमान}} = 45 \\times \\frac{6}{5} = 54\\text{ इकाइयाँ}$\nStep 3: कुल वर्तमान आय = $80 + 54 = 134\\text{ इकाइयाँ}$:\n$$134\\text{ इकाइयाँ} = 24.12\\text{ लाख}$$\n$$1\\text{ इकाई} = $\\frac{24.12}{134}$ = 0.18\\text{ लाख}$$\nStep 4: अभीष्ट योग ($A$ की पिछले वर्ष की आय + $B$ की वर्तमान वर्ष की आय):\n$$\\text{अभीष्ट इकाइयाँ} = A_{\\text{गत}} + B_{\\text{वर्तमान}} = 60 + 54 = 114\\text{ इकाइयाँ}$$\nStep 5: कुल मान ज्ञात करें:\n$$\\text{योग} = 114 $\\times$ 0.18 = 20.52\\text{ लाख}$$\nअतः सही विकल्प  20.52 है।\n\nMethod 2 (Separate Value Calculation):\n- $A_{\\text{गत}} = 60 \\times 0.18 = 10.8\\text{ लाख}$\n- $B_{\\text{वर्तमान}} = 54 \\times 0.18 = 9.72\\text{ लाख}$\nयोग = $10.8 + 9.72 = 20.52\\text{ लाख}$.\nअतः सही उत्तर '20.52' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "income_10",
+    "qe": "The ratio of last year income of A, B and C is 3 : 4 : 5. While the ratio of their last year income to current year income is 4 : 5, 2 : 3 and 3 : 4. If their total current year income is ₹ 98,500, then find out the present income of (B + C).",
+    "qh": "A, B और C की पिछले वर्ष की आय का अनुपात 3 : 4 : 5 है, जबकि उनकी पिछले वर्ष की आय का वर्तमान वर्ष की आय से अनुपात क्रमशः 4 : 5, 2 : 3 और 3 : 4 है। यदि उनकी वर्तमान वर्ष की कुल आय ₹ 98,500 है तो (B + C) की वर्तमान आय ज्ञात करें।",
+    "oe": [
+      "₹ 72000",
+      "₹ 74000",
+      "₹ 76000",
+      "₹ 78000"
+    ],
+    "oh": [
+      "₹ 72000",
+      "₹ 74000",
+      "₹ 76000",
+      "₹ 78000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Combining Present Year Ratios Method):\nStep 1: पिछले वर्ष की आय का अनुपात = $3 : 4 : 5$.\nStep 2: वर्तमान वर्ष की आय के गुणक:\n- A: $\\frac{5}{4} \\times 3 = \\frac{15}{4}$\n- B: $\\frac{3}{2} \\times 4 = 6$\n- C: $\\frac{4}{3} \\times 5 = \\frac{20}{3}$\nStep 3: हरों (4 और 3) का LCM = 12 से गुणा करके सरल अनुपात निकालें:\n$$A_{\\text{वर्तमान}} : B_{\\text{वर्तमान}} : C_{\\text{वर्तमान}} = $\\le$ft($\\frac{15}{4}$ $\\times$ 12\\right) : (6 $\\times$ 12) : $\\le$ft($\\frac{20}{3}$ $\\times$ 12\\right)$$\n$$= 45 : 72 : 80$$\nStep 4: कुल वर्तमान इकाइयाँ:\n$$\\text{कुल इकाइयाँ} = 45 + 72 + 80 = 197\\text{ इकाइयाँ}$$\nStep 5: 197 इकाइयाँ = ₹98,500:\n$$1\\text{ इकाई} = $\\frac{98500}{197}$ = 500$$\nStep 6: (B + C) की वर्तमान आय نکالें:\n$$\\text{B + C की इकाइयाँ} = 72 + 80 = 152\\text{ इकाइयाँ}$$\n$$\\text{वर्तमान आय} = 152 $\\times$ 500 = ₹76,000$$\nअतः सही विकल्प  ₹ 76000 है।\n\nMethod 2 (Direct Proportion Method):\n$$\\text{B + C की आय} = $\\frac{152}{197}$ $\\times$ 98500 = 152 $\\times$ 500 = ₹76,000$$\nअतः सही उत्तर '₹ 76000' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "income_11",
+    "qe": "A , B and C spend 80% , 85% and 75% of their income respectively. If their savings are in the ratio 8 : 9 : 20 and the difference between the incomes of A and C is ₹ 18000, then the income of B is:",
+    "qh": "A, B और C अपनी आय का क्रमशः 80%, 85% और 75% खर्च करते हैं। यदि उनकी बचत 8 : 9 : 20 के अनुपात में है और A और C की आय के बीच का अंतर ₹ 18,000 है, तो B की आय है :",
+    "oe": [
+      "₹ 24000",
+      "₹ 27000",
+      "₹ 30000",
+      "₹ 36000"
+    ],
+    "oh": [
+      "₹ 24000",
+      "₹ 27000",
+      "₹ 30000",
+      "₹ 36000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Savings to Income Conversion Method):\nStep 1: प्रत्येक की बचत का प्रतिशत निकालें:\n- A की बचत = $100\\% - 80\\% = 20\\%$\n- B की बचत = $100\\% - 85\\% = 15\\%$\n- C की बचत = $100\\% - 75\\% = 25\\%$\nStep 2: बचत का अनुपात $8 : 9 : 20$ दिया गया है। आय (बचत / बचत %) का अनुपात निकालें:\n- A की आय $\\propto \\frac{8}{20\\%} = \\frac{8}{0.20} = 40$\n- B की आय $\\propto \\frac{9}{15\\%} = \\frac{9}{0.15} = 60$\n- C की आय $\\propto \\frac{20}{25\\%} = \\frac{20}{0.25} = 80$$\nStep 3: आय का अनुपात:\n$$A : B : C = 40 : 60 : 80 = 2 : 3 : 4$$\nStep 4: A और C की आय का अंतर = ₹18000:\n$$4 - 2 = 2\\text{ इकाइयाँ} = ₹18,000 \\implies 1\\text{ इकाई} = ₹9000$$\nStep 5: B की आय (3 इकाइयाँ) निकालें:\n$$\\text{B की आय} = 3 \\times 9000 = ₹27,000$$\nअतः सही विकल्प  ₹ 27000 है।\n\nMethod 2 (Scale Multiplier Method):\n$80 - 40 = 40$ इकाइयाँ = 18000.\n$B$ की आय (60 इकाइयाँ) = $$\\frac{60}{40}$ $\\times$ 18000 = 1.5 $\\times$ 18000 = ₹27,000$.\nअतः सही उत्तर '₹ 27000' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

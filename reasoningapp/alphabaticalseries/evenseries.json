@@ -1,0 +1,78 @@
+[
+  {
+    "p_id": "evenseries_1",
+    "qe": "If every alternative letter starting from A is deleted then which letter will be 4th to the right of 5th from the left end?",
+    "qh": "यदि A से शुरू करते हुए प्रत्येक एकांतर (alternative) अक्षर को हटा दिया जाए, तो बाएँ छोर से 5वें अक्षर के दाएँ चौथा अक्षर कौन-सा होगा?",
+    "oe": [
+      "P",
+      "R",
+      "Q",
+      "T"
+    ],
+    "oh": [
+      "P",
+      "R",
+      "Q",
+      "T"
+    ],
+    "a": 1,
+    "e": "Method 1 (Even Series $2n$ Shortcut Trick):\nStep 1: Series form samjhein:\n- A se shuru karke alternative letters (A, C, E, G, ...) hatane par kewal sam sthanon (even positions) wale letters bachenge:\n  $$\\text{Series}: \\text{B, D, F, H, J, L, N, P, R, T, V, X, Z (kul 13 letters)}$$\nStep 2: Position calculate karein (Left + Right):\n$$\\text{Position from Left} = 5 + 4 = 9\\text{th letter}$$\nStep 3: Even series me Left se $n$-th letter ki real alphabetical position $2 \\times n$ hoti hai:\n$$\\text{Original Position} = 9 $\\times$ 2 = 18$$\n18th letter 'R' hota hai.\nCorrect option  R hai.\n\nMethod 2 (Manual Even Counting Method):\nEven series: $B(1), D(2), F(3), H(4), J(5), L(6), N(7), P(8), R(9)$.\n9th position par letter 'R' prapt hota hai.\nSahi uttar 'R' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "evenseries_2",
+    "qe": "If every alternative letter starting from A is deleted then which letter will be 5th to the right of 5th from the left end?",
+    "qh": "यदि A से शुरू करते हुए प्रत्येक एकांतर अक्षर को हटा दिया जाए, तो बाएँ छोर से 5वें अक्षर के दाएँ 5वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "S",
+      "U",
+      "T",
+      "V"
+    ],
+    "oh": [
+      "S",
+      "U",
+      "T",
+      "V"
+    ],
+    "a": 2,
+    "e": "Method 1 (Even Series $2n$ Shortcut Trick):\nStep 1: Position from Left end nikalein (Opposite directions = Addition):\n$$\\text{Position from Left} = 5 + 5 = 10\\text{th letter}$$\nStep 2: Even series me baayein se $n$-th letter ki original place value $= 2 \\times n$:\n$$\\text{Original Position} = 10 $\\times$ 2 = 20$$\nStandard alphabet me 20वाँ letter 'T' hota hai.\nCorrect option  T hai.\n\nMethod 2 (Step-by-Step Counting Method):\nEven series: $B, D, F, H, J, L, N, P, R, T$.\n10th sthan par aane wala letter 'T' hai.\nSahi uttar 'T' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "evenseries_3",
+    "qe": "If every alternative letter starting from A is deleted then which letter will be 3rd to the left of 5th from the right end?",
+    "qh": "यदि A से शुरू करते हुए प्रत्येक एकांतर अक्षर को हटा दिया जाए, तो दाएँ छोर से 5वें अक्षर के बाएँ तीसरा अक्षर कौन-सा होगा?",
+    "oe": [
+      "J",
+      "L",
+      "N",
+      "K"
+    ],
+    "oh": [
+      "J",
+      "L",
+      "N",
+      "K"
+    ],
+    "a": 1,
+    "e": "Method 1 (Even Series Right-to-Left Conversion Shortcut):\nStep 1: Position from Right end nikalte hain (Right + Left):\n$$\\text{Position from Right} = 5 + 3 = 8\\text{th letter}$$\nStep 2: Even series me kul 13 letters hote hain, isliye Left end me badalne ke liye $(13 + 1) = 14$ me se ghataate hain:\n$$\\text{Position from Left} = 14 - 8 = 6\\text{th letter}$$\nStep 3: Original alphabet me position $= 2 \\times n$:\n$$\\text{Original Position} = 6 $\\times$ 2 = 12$$\n12th letter 'L' hota hai.\nCorrect option  L hai.\n\nMethod 2 (Direct Backward Counting Method):\nEven series right se: $Z(1), X(2), V(3), T(4), R(5), P(6), N(7), L(8)$.\nRight end se 8th letter 'L' prapt hota hai.\nSahi uttar 'L' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "evenseries_4",
+    "qe": "If every alternative letter starting from A is deleted then which letter will be 4th to the right of 10th from the right end?",
+    "qh": "यदि A से शुरू करते हुए प्रत्येक एकांतर अक्षर को हटा दिया जाए, तो दाएँ छोर से 10वें अक्षर के दाएँ चौथा अक्षर कौन-सा होगा?",
+    "oe": [
+      "P",
+      "R",
+      "N",
+      "O"
+    ],
+    "oh": [
+      "P",
+      "R",
+      "N",
+      "O"
+    ],
+    "a": 0,
+    "e": "Method 1 (Even Series Conversion Shortcut):\nStep 1: Samaan dishaon (Right aur Right) ke liye ghataav (subtraction) karein:\n$$\\text{Position from Right} = 10 - 4 = 6\\text{th letter}$$\nStep 2: Kul 13 letters hone ke karan isse Left end me convert karein:\n$$\\text{Position from Left} = (13 + 1) - 6 = 14 - 6 = 8\\text{th letter}$$\nStep 3: Real alphabetical position ke liye 2 se multiply karein:\n$$\\text{Original Position} = 8 $\\times$ 2 = 16$$\n16वाँ letter 'P' hota hai.\nCorrect option  P hai.\n\nMethod 2 (Right End Inspection Method):\nEven series right se: $Z(1), X(2), V(3), T(4), R(5), P(6)$.\nDaayein छोर se 6th letter 'P' hai.\nSahi uttar 'P' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

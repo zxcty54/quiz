@@ -1,0 +1,154 @@
+[
+  {
+    "p_id": "misc_1",
+    "qe": "A man can walk up a moving-up escalator in 30 seconds. The same man can walk down the same moving-up escalator in 90 sec. How long would it take him to walk up the escalator when it is not moving?",
+    "qh": "एक व्यक्ति ऊपर की ओर चलती एस्केलेटर पर 30 सेकंड में ऊपर चढ़ सकता है। वही व्यक्ति उसी ऊपर की ओर चलती एस्केलेटर पर 90 सेकंड में नीचे उतर सकता है। जब एस्केलेटर स्थिर (बंद) हो, तो उसे ऊपर चढ़ने में कितना समय लगेगा?",
+    "oe": [
+      "45 seconds",
+      "75 seconds",
+      "60 seconds",
+      "40 seconds"
+    ],
+    "oh": [
+      "45 seconds",
+      "75 seconds",
+      "60 seconds",
+      "40 seconds"
+    ],
+    "a": 0,
+    "e": "Method 1 (Harmonic Mean / Rate Method):\nStep 1: यह स्थिति नाव और धारा के समान है।\n- गति की दिशा में (Upwards with moving-up escalator): $v_m + v_e = \\frac{D}{30}$\n- गति के विपरीत दिशा में (Downwards against moving-up escalator): $v_m - v_e = \\frac{D}{90}$\nStep 2: दोनों समीकरणों को जोड़ने पर:\n$$2v_m = $\\frac{D}{30}$ + $\\frac{D}{90}$ = $\\frac{3D+D}{90}$ = $\\frac{4D}{90}$ = $\\frac{2D}{45}$$$\n$$v_m = $\\frac{D}{45}$$$\nStep 3: स्थिर एस्केलेटर पर व्यक्ति द्वारा लिया गया समय ($T$):\n$$T = $\\frac{D}{v_m}$ = $\\frac{D}{D/45}$ = 45\\text{ सेकंड}$$\nअतः सही विकल्प  45 seconds है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल सीढ़ियाँ (दूरी) = LCM(30, 90) = 90 इकाइयाँ।\n- ऊपर जाते समय दक्षता ($v_m + v_e$) = $90 / 30 = 3$ इकाइयाँ/सेकंड\n- नीचे आते समय दक्षता ($v_m - v_e$) = $90 / 90 = 1$ इकाई/सेकंड\nStep 2: व्यक्ति की वास्तविक दक्षता निकालें:\n$$v_m = $\\frac{3+1}{2}$ = 2\\text{ इकाइयाँ/सेकंड}$$\nStep 3: स्थिर एस्केलेटर पर लगा समय = $\\frac{90}{2} = 45$ सेकंड।\nअतः सही उत्तर '45 seconds' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_2",
+    "qe": "A man can row a distance of 900 meters against the stream in 12 minutes and returns to the starting points in 9 minutes. What is the speed (in km/h) of the man in still water?",
+    "qh": "एक व्यक्ति धारा के प्रतिकूल 900 मीटर की दूरी 12 मिनट में तय कर सकता है और 9 मिनट में शुरुआती बिंदु पर लौट आता है। शांत जल में व्यक्ति की गति (किमी/घंटा में) क्या है?",
+    "oe": [
+      "4$\\frac{1}{2}$",
+      "6",
+      "5$\\frac{1}{4}$",
+      "5"
+    ],
+    "oh": [
+      "4$\\frac{1}{2}$",
+      "6",
+      "5$\\frac{1}{4}$",
+      "5"
+    ],
+    "a": 2,
+    "e": "Method 1 (Velocity Calculation Method):\nStep 1: धारा के प्रतिकूल गति ($U$) निकालें:\n$$U = \\frac{900\\text{ m}}{12\\text{ min}} = 75\\text{ मीटर/मिनट}$$\nकिमी/घंटा में बदलने पर: $75 \\times \\frac{60}{1000} = 4.5\\text{ किमी/घंटा}$।\nStep 2: धारा के अनुकूल गति ($D$) निकालें:\n$$D = \\frac{900\\text{ m}}{9\\text{ min}} = 100\\text{ मीटर/मिनट}$$\nकिमी/घंटा में बदलने पर: $100 \\times \\frac{60}{1000} = 6\\text{ किमी/घंटा}$।\nStep 3: शांत जल में व्यक्ति की गति ($u$):\n$$u = $\\frac{D+U}{2}$ = $\\frac{6+4.5}{2}$ = $\\frac{10.5}{2}$ = 5.25 = 5$\\frac{1}{4}$\\text{ किमी/घंटा}$$\nअतः सही विकल्प  5 1/4 है।\n\nMethod 2 (Direct Hour Formulation):\n$U = \\frac{0.9}{12/60} = 4.5$ किमी/घंटा, $D = \\frac{0.9}{9/60} = 6$ किमी/घंटा।\n$u = \\frac{6 + 4.5}{2} = 5.25 = 5\\frac{1}{4}$ किमी/घंटा।\nअतः सही उत्तर '5$\\frac{1}{4}$' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_3",
+    "qe": "A man's speed in still water is 4 km/h more than the speed of the current. If the man takes a total of 10 hr to cover 45 km downstream and 35 km upstream, then the speed of the man in still water is:",
+    "qh": "शांत जल में एक व्यक्ति की गति धारा की गति से 4 किमी/घंटा अधिक है। यदि व्यक्ति को धारा के अनुकूल 45 किमी और धारा के प्रतिकूल 35 किमी की दूरी तय करने में कुल 10 घंटे लगते हैं, तो शांत जल में व्यक्ति की गति क्या है:",
+    "oe": [
+      "20 km/h",
+      "18 km/h",
+      "15 km/h",
+      "22 km/h"
+    ],
+    "oh": [
+      "20 km/h",
+      "18 km/h",
+      "15 km/h",
+      "22 km/h"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Speed Substitution Method):\nStep 1: दिया गया है कि शांत जल में गति ($u$) धारा की गति ($v$) से 4 अधिक है:\n$$u - v = 4\\text{ किमी/घंटा}$$\nअर्थात धारा के प्रतिकूल गति ($U$) = $u - v = 4$ किमी/घंटा।\nStep 2: 35 किमी धारा के प्रतिकूल जाने में लगा समय ($T_{\\text{up}}$):\n$$T_{\\text{up}} = $\\frac{35}{4}$ = 8.75\\text{ घंटे}$$\nStep 3: कुल समय 10 घंटे है, अतः धारा के अनुकूल जाने में लगा समय ($T_{\\text{down}}$):\n$$T_{\\text{down}} = 10 - 8.75 = 1.25\\text{ घंटे} = $\\frac{5}{4}$\\text{ घंटे}$$\nStep 4: धारा के अनुकूल गति ($D = u + v$) निकालें:\n$$D = $\\frac{45}{1.25}$ = 36\\text{ किमी/घंटा}$$\nStep 5: शांत जल में गति ($u$) निकालें:\n$$u = $\\frac{D+U}{2}$ = $\\frac{36+4}{2}$ = 20\\text{ किमी/घंटा}$$\nअतः सही विकल्प  20 km/h है।\n\nMethod 2 (Option Verification Method):\nविकल्प (a) $u = 20$ रखने पर: $v = 16$ किमी/घंटा।\n- $D = 20 + 16 = 36$ किमी/घंटा $\\implies 45 / 36 = 1.25$ घंटे\n- $U = 20 - 16 = 4$ किमी/घंटा $\\implies 35 / 4 = 8.75$ घंटे\nकुल समय = $1.25 + 8.75 = 10$ घंटे (सत्यापित)।\nअतः सही उत्तर '20 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_4",
+    "qe": "A swimmer swims from a point P against the current for 6 min and then swims back along the current for next 6 min and reaches at a point Q. If the distance between P and Q is 120 m then the speed of the current (in km/h) is:",
+    "qh": "एक तैराक बिंदु P से धारा के प्रतिकूल 6 मिनट तक तैरता है और फिर अगले 6 मिनट के लिए धारा के अनुकूल वापस तैरता है और बिंदु Q पर पहुँचता है। यदि P और Q के बीच की दूरी 120 मीटर है, तो धारा की गति (किमी/घंटा में) क्या है:",
+    "oe": [
+      "0.4",
+      "0.2",
+      "1",
+      "0.6"
+    ],
+    "oh": [
+      "0.4",
+      "0.2",
+      "1",
+      "0.6"
+    ],
+    "a": 3,
+    "e": "Method 1 (Algebraic Displacement Method):\nStep 1: माना तैराक की शांत जल में गति = $u$ तथा धारा की गति = $v$ (मीटर/मिनट में)।\n- धारा के प्रतिकूल 6 मिनट में तय दूरी = $6(u - v)$\n- धारा के अनुकूल 6 मिनट में वापस तय दूरी = $6(u + v)$\nStep 2: बिंदु P और Q के बीच की दूरी (शुद्ध विस्थापन):\n$$\\text{दूरी } PQ = 6(u + v) - 6(u - v) = 6u + 6v - 6u + 6v = 12v$$\nStep 3: दिया गया है $PQ = 120$ मीटर:\n$$12v = 120 \\implies v = 10\\text{ मीटर/मिनट}$$\nStep 4: धारा की गति को किमी/घंटा में बदलें:\n$$v = $\\frac{10\\times60}{1000}$ = 0.6\\text{ किमी/घंटा}$$\nअतः सही विकल्प  0.6 है।\n\nMethod 2 (Relative Concept Method):\nStep 1: तैराक के अपने प्रयास से तय दूरी आगे और पीछे जाने पर निरस्त हो जाती है। केवल धारा का प्रवाह दोनों दिशाओं में कुल 12 मिनट तक विस्थापन उत्पन्न करता है।\nStep 2: $v = \\frac{120\\text{ m}}{12\\text{ min}} = 10$ m/min = $0.6$ km/h.\nअतः सही उत्तर '0.6' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_5",
+    "qe": "A boat takes 20 hours for travelling downstream from point A to point B and comes back to a midpoint C between A and B. The speed of the stream is 5 km/h and the speed of the boat in still water is 10 km/h. Find the distance between A and B (in km).",
+    "qh": "एक नाव को बिंदु A से बिंदु B तक धारा के अनुकूल जाने और A और B के बीच एक मध्य बिंदु C पर वापस आने में 20 घंटे लगते हैं। धारा की गति 5 किमी/घंटा है और शांत जल में नाव की गति 10 किमी/घंटा है। A और B के बीच की दूरी (किमी में) ज्ञात कीजिए।",
+    "oe": [
+      "100",
+      "150",
+      "75",
+      "120"
+    ],
+    "oh": [
+      "100",
+      "150",
+      "75",
+      "120"
+    ],
+    "a": 3,
+    "e": "Method 1 (Distance and Time Equation Method):\nStep 1: गतियाँ निकालें:\n- धारा के अनुकूल गति ($D$) = $10 + 5 = 15$ किमी/घंटा\n- धारा के प्रतिकूल गति ($U$) = $10 - 5 = 5$ किमी/घंटा\nStep 2: माना A और B के बीच की कुल दूरी = $d$ किमी।\n- A से B (अनुकूल) तय दूरी = $d$ किमी\n- B से मध्य बिंदु C (प्रतिकूल) तय दूरी = $\\frac{d}{2}$ किमी\nStep 3: कुल समय का समीकरण बनाएं:\n$$$\\frac{d}{15}$ + $\\frac{d/2}{5}$ = 20$$\n$$$\\frac{d}{15}$ + $\\frac{d}{10}$ = 20$$\nStep 4: 15 और 10 का LCM = 30:\n$$$\\frac{2d+3d}{30}$ = 20 \\implies $\\frac{5d}{30}$ = 20$$\n$$$\\frac{d}{6}$ = 20 \\implies d = 120\\text{ किमी}$$\nअतः सही विकल्प  120 है।\n\nMethod 2 (Option Verification Method):\nविकल्प (d) $d = 120$ किमी रखने पर:\n- A से B का समय = $120 / 15 = 8$ घंटे\n- B से C का समय = $60 / 5 = 12$ घंटे\nकुल समय = $8 + 12 = 20$ घंटे (सत्यापित)।\nअतः सही उत्तर '120' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_6",
+    "qe": "A boat covers a round trip journey between two points A and B in a river in T hours. If its speed in still water becomes 2 times, it would take 80/161 T hours for the same journey. Find the ratio of its speed in still water to the speed of the river.",
+    "qh": "एक नाव एक नदी में दो बिंदुओं A और B के बीच की राउंड ट्रिप (आने-जाने की) यात्रा T घंटों में पूरी करती है। यदि शांत जल में इसकी गति 2 गुना हो जाती है, तो उसी यात्रा के लिए 80/161 T घंटे लगेंगे। शांत जल में इसकी गति का नदी की गति से अनुपात ज्ञात कीजिए।",
+    "oe": [
+      "11 : 1",
+      "161 : 40",
+      "1 : 11",
+      "2 : 1"
+    ],
+    "oh": [
+      "11 : 1",
+      "161 : 40",
+      "1 : 11",
+      "2 : 1"
+    ],
+    "a": 0,
+    "e": "Method 1 (Round Trip Formula Ratio Method):\nStep 1: राउंड ट्रिप का मानक सूत्र:\n$$T = $\\frac{2du}{u^2-v^2}$$$\nStep 2: जब शांत जल की गति $2u$ हो जाती है, तो नया समय ($T'$):\n$$T' = $\\frac{2d(2u)}{(2u)^2-v^2}$ = $\\frac{4du}{4u^2-v^2}$$$\nStep 3: दोनों समयों का अनुपात लेने पर:\n$$$\\frac{T'}{T}$ = \\frac{$\\frac{4du}{4u^2-v^2}$}{$\\frac{2du}{u^2-v^2}$} = $\\frac{2(u^2-v^2)}{4u^2-v^2}$$$\nStep 4: दिया गया है $\\frac{T'}{T} = \\frac{80}{161}$:\n$$$\\frac{2(u^2-v^2)}{4u^2-v^2}$ = $\\frac{80}{161}$ \\implies $\\frac{u^2-v^2}{4u^2-v^2}$ = $\\frac{40}{161}$$$\n$$161(u^2 - v^2) = 40(4u^2 - v^2)$$\n$$161u^2 - 161v^2 = 160u^2 - 40v^2$$\n$$161u^2 - 160u^2 = 161v^2 - 40v^2$$\n$$u^2 = 121v^2 \\implies $\\frac{u^2}{v^2}$ = 121$$\n$$$\\frac{u}{v}$ = $\\frac{11}{1}$$$\nअतः शांत जल में नाव की गति और नदी की गति का अनुपात = 11 : 1.\nअतः सही विकल्प  11 : 1 है।\n\nMethod 2 (Option Verification Method):\nविकल्प (a) $u = 11, v = 1$ रखने पर:\n$T \\propto \\frac{2(11)}{121 - 1} = \\frac{22}{120} = \\frac{11}{60}$.\nगति $2u = 22$ होने पर: $T' \\propto \\frac{2(22)}{484 - 1} = \\frac{44}{483}$.\nअनुपात = $\\frac{44/483}{11/60} = \\frac{44}{483} \\times \\frac{60}{11} = \\frac{4 \\times 20}{161} = \\frac{80}{161}$ (सत्यापित)।\nअतः सही उत्तर '11 : 1' है।\n\nExam point: bhoogol ke tathy - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_7",
+    "qe": "A person rowing a boat goes from J to K (upstream) and returns from K to J (downstream) in a total time of 15 hours. The distance between J and K is 300 km. The time taken by a man to row a boat a distance of 9 km downstream is equal to the time taken by him to row a boat a distance of 3 km upstream. What is the approximate speed of the boat in still water?",
+    "qh": "नाव चलाने वाला एक व्यक्ति J से K (प्रतिकूल) जाता है और K से J (अनुकूल) कुल 15 घंटे में लौटता है। J और K के बीच की दूरी 300 किमी है। एक व्यक्ति द्वारा धारा के अनुकूल 9 किमी की दूरी तय करने में लिया गया समय धारा के प्रतिकूल 3 किमी की दूरी तय करने में लिए गए समय के बराबर है। शांत जल में नाव की अनुमानित गति क्या है?",
+    "oe": [
+      "51.33 km/hr",
+      "47.67 km/hr",
+      "53.33 km/hr",
+      "43.67 km/hr"
+    ],
+    "oh": [
+      "51.33 km/hr",
+      "47.67 km/hr",
+      "53.33 km/hr",
+      "43.67 km/hr"
+    ],
+    "a": 2,
+    "e": "Method 1 (Speed Ratio and Total Time Method):\nStep 1: समान समय में तय दूरियों का अनुपात अनुकूल और प्रतिकूल गतियों का अनुपात होता है:\n$$$\\frac{D}{U}$ = $\\frac{9}{3}$ = $\\frac{3}{1}$ \\implies D = 3U$$\nStep 2: 300 किमी जाने और 300 किमी वापस आने में कुल 15 घंटे लगते हैं:\n$$$\\frac{300}{D}$ + $\\frac{300}{U}$ = 15$$\n$$D = 3U$$ रखने पर:\n$$$\\frac{300}{3U}$ + $\\frac{300}{U}$ = 15 \\implies $\\frac{100}{U}$ + $\\frac{300}{U}$ = 15$$\n$$$\\frac{400}{U}$ = 15 \\implies U = $\\frac{400}{15}$ = $\\frac{80}{3}$\\text{ किमी/घंटा}$$\nStep 3: अनुकूल गति ($D$) निकालें:\n$$D = 3 $\\times$ $\\frac{80}{3}$ = 80\\text{ किमी/घंटा}$$\nStep 4: शांत जल में नाव की गति ($u$):\n$$u = $\\frac{D+U}{2}$ = \\frac{80 + $\\frac{80}{3}$}{2} = \\frac{$\\frac{320}{3}$}{2} = $\\frac{160}{3}$ $\\approx$ 53.33\\text{ किमी/घंटा}$$\nअतः सही विकल्प  53.33 km/hr है।\n\nMethod 2 (Ratio Formulation Method):\n$u = 2v$. अनुकूल दर = $3v$, प्रतिकूल दर = $v$.\n$\\frac{300}{3v} + \\frac{300}{v} = 15 \\implies \\frac{400}{v} = 15 \\implies v = \\frac{80}{3}$.\n$u = 2v = \\frac{160}{3} = 53.33$ किमी/घंटा।\nअतः सही उत्तर '53.33 km/hr' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "misc_8",
+    "qe": "X, Y are two points in a river. Point P and Q divide the straight line XY into three equal parts. The river flows along XY and the time taken by a boat to row from X to Q and from Y to Q are in the ratio 4 : 5. The ratio of the speed of the boat downstream to that of the river current is equal to:",
+    "qh": "X, Y एक नदी में दो बिंदु हैं। बिंदु P और Q सीधी रेखा XY को तीन बराबर भागों में विभाजित करते हैं। नदी XY के अनुदिश बहती है और नाव द्वारा X से Q तक और Y से Q तक जाने में लिए गए समय का अनुपात 4 : 5 है। धारा के अनुकूल नाव की गति और नदी की धारा की गति का अनुपात किसके बराबर है:",
+    "oe": [
+      "3 : 10",
+      "3 : 4",
+      "10 : 3",
+      "4 : 3"
+    ],
+    "oh": [
+      "3 : 10",
+      "3 : 4",
+      "10 : 3",
+      "4 : 3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Distance-Time Ratio Method):\nStep 1: रेखा विभाजन समझें:\nबिंदु क्रम: $X$ --- (1 भाग) --- $P$ --- (1 भाग) --- $Q$ --- (1 भाग) --- $Y$.\n- नदी X से Y की दिशा में बह रही है (अनुकूल प्रवाह)।\n- X से Q तक की दूरी = 2 भाग (धारा के अनुकूल)।\n- Y से Q तक की दूरी = 1 भाग (धारा के प्रतिकूल)।\nStep 2: समय का अनुपात निकालें:\n$$T_{XQ} = $\\frac{2}{D}$ \\quad \\text{तथा} \\quad T_{YQ} = $\\frac{1}{U}$$$\nStep 3: दिया गया अनुपात $T_{XQ} : T_{YQ} = 4 : 5$:\n$$$\\frac{2/D}{1/U}$ = $\\frac{4}{5}$ \\implies $\\frac{2U}{D}$ = $\\frac{4}{5}$ \\implies $\\frac{U}{D}$ = $\\frac{2}{5}$ \\implies $\\frac{D}{U}$ = $\\frac{5}{2}$$$\nStep 4: मान लें $D = 5k$ तथा $U = 2k$:\nधारा की गति ($v$) = $\\frac{D - U}{2} = \\frac{5k - 2k}{2} = \\frac{3k}{2} = 1.5k$.\nStep 5: धारा के अनुकूल गति ($D$) का धारा की गति ($v$) से अनुपात निकालें:\n$$$\\frac{D}{v}$ = $\\frac{5k}{1.5k}$ = $\\frac{5}{1.5}$ = $\\frac{10}{3}$ = 10 : 3$$\nअतः सही विकल्प  10 : 3 है।\n\nMethod 2 (Direct Proportion Method):\nStep 1: $D = 5$, $U = 2$.\nStep 2: $v = \\frac{5 - 2}{2} = \\frac{3}{2} = 1.5$.\nStep 3: $\\frac{D}{v} = \\frac{5}{1.5} = \\frac{10}{3}$.\nअतः सही उत्तर '10 : 3' है।\n\nExam point: bhoogol ke tathy - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

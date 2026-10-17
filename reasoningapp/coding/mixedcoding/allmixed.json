@@ -1,0 +1,677 @@
+[
+  {
+    "p_id": "allmixed_1",
+    "qe": "In a code language, 'how are you' means 'nee tin fu' and 'are you there' means 'tin se nee'. (i) What is the code for 'how'?",
+    "qh": "एक कूट भाषा में, 'how are you' का अर्थ 'nee tin fu' है और 'are you there' का अर्थ 'tin se nee' है। (i) 'how' के लिए कोड क्या है?",
+    "oe": [
+      "nee",
+      "tin",
+      "fu",
+      "se"
+    ],
+    "oh": [
+      "nee",
+      "tin",
+      "fu",
+      "se"
+    ],
+    "a": 2,
+    "e": "Method 1 (Common Element Elimination Shortcut):\nStep 1: Dono statements compare karein:\n- 'how are you' = nee tin fu\n- 'are you there' = tin se nee\nStep 2: Common words 'are' aur 'you' hain, aur common codes 'nee' aur 'tin' hain.\nStep 3: Statement 1 me bacha hua unique word 'how' hai aur bacha hua code 'fu' hai.\nIsliye 'how' = 'fu'.\nCorrect option  fu hai.\n\nMethod 2 (Set Difference Method):\n$$\\{\\text{how, are, you}\\} \\setminus \\{\\text{are, you, there}\\} = \\{\\text{how}\\}$$\n$$\\{\\text{nee, tin, fu}\\} \\setminus \\{\\text{tin, se, nee}\\} = \\{\\text{fu}\\}$$\nSahi uttar 'fu' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_2",
+    "qe": "In a code language, 'how are you' means 'nee tin fu' and 'are you there' means 'tin se nee'. (ii) What is the code for 'there'?",
+    "qh": "एक कूट भाषा में, 'how are you' का अर्थ 'nee tin fu' है और 'are you there' का अर्थ 'tin se nee' है। (ii) 'there' के लिए कोड क्या है?",
+    "oe": [
+      "nee",
+      "tin",
+      "fu",
+      "se"
+    ],
+    "oh": [
+      "nee",
+      "tin",
+      "fu",
+      "se"
+    ],
+    "a": 3,
+    "e": "Method 1 (Direct Elimination Shortcut):\nStep 1: 'are you' ke codes 'nee' aur 'tin' hain.\nStep 2: Statement 2 ('are you there') me bacha hua akela word 'there' hai aur bacha hua code 'se' hai.\nIsliye 'there' ka code 'se' hoga.\nCorrect option  se hai.\n\nMethod 2 (Inspection Method):\n'there' keval second sentence me maujood hai aur code list me 'se' keval second code group me hai, isliye there = se.\nSahi uttar 'se' hai.\n\nIs prashn ka moolaadhaar code bhasha ka pattern hai. She sh vikalp nee, tin, fu is hisaab se nahi milte. Exam point: code bhasha ka pattern - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "allmixed_3",
+    "qe": "In a code language, 'how are you' means 'nee tin fu' and 'are you there' means 'tin se nee'. (iii) What is the code for 'are'?",
+    "qh": "एक कूट भाषा में, 'how are you' का अर्थ 'nee tin fu' है और 'are you there' का अर्थ 'tin se nee' है। (iii) 'are' के लिए कोड क्या है?",
+    "oe": [
+      "nee",
+      "tin",
+      "nee or tin",
+      "se"
+    ],
+    "oh": [
+      "nee",
+      "tin",
+      "nee or tin",
+      "se"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ambiguity & Option Mapping Method):\nStep 1: 'are' aur 'you' dono statements me common hain, aur 'nee' tatha 'tin' bhi dono me common hain.\nStep 2: Koi tisra statement na hone ke karan 'are' aur 'you' ko alag-alag nirdharit (distinguish) nahi kiya ja sakta.\nIsliye 'are' ka code 'nee ya tin' (nee or tin) hoga.\nCorrect option  nee or tin hai.\n\nMethod 2 (Logical Certainty Method):\nIndividual code确定 nahi hone par 'Either/Or' vikalp chuna jata hai.\nSahi uttar 'nee or tin' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_4",
+    "qe": "In a code language, 'how are you' means 'nee tin fu' and 'are you there' means 'tin se nee'. (iv) What is the code for 'you'?",
+    "qh": "एक कूट भाषा में, 'how are you' का अर्थ 'nee tin fu' है और 'are you there' का अर्थ 'tin se nee' है। (iv) 'you' के लिए कोड क्या है?",
+    "oe": [
+      "nee",
+      "tin",
+      "nee or tin",
+      "se"
+    ],
+    "oh": [
+      "nee",
+      "tin",
+      "nee or tin",
+      "se"
+    ],
+    "a": 2,
+    "e": "Method 1 (Common Element Analysis Method):\nStep 1: 'you' ke liye dono common codes 'nee' ya 'tin' me se koi bhi ho sakta hai.\nStep 2: Data insufficient hone par sambhavit uttar 'nee or tin' hoga.\nCorrect option  nee or tin hai.\n\nMethod 2 (Direct Inference):\n'are' / 'you' = nee / tin.\nSahi uttar 'nee or tin' hai.\n\ncode bhasha ka pattern se hi is prashn ka jawab nikalta hai. Vikalp nee, tin, se is hal se mel nahi khaate. Exam point: code bhasha ka pattern - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "allmixed_5",
+    "qe": "If 'she is good' means '1 2 5', 'is he bad' means '5 7 9' and 'we are good' means '2 8 4'. (i) What is the code for 'she'?",
+    "qh": "यदि 'she is good' का अर्थ '1 2 5', 'is he bad' का अर्थ '5 7 9' और 'we are good' का अर्थ '2 8 4' है। (i) 'she' के लिए कोड क्या है?",
+    "oe": [
+      "1",
+      "2",
+      "5",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "5",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Common Word Elimination Shortcut):\nStep 1: Statement 1 aur 2 me common word 'is' hai aur common digit '5' hai → is = 5.\nStep 2: Statement 1 aur 3 me common word 'good' hai aur common digit '2' hai → good = 2.\nStep 3: Statement 1 ('she is good' = 1 2 5) me bacha hua word 'she' hai aur bacha hua digit '1' hai.\nIsliye 'she' = 1.\nCorrect '1' hai.\n\nMethod 2 (Direct Inspection):\n$$1 2 5 - \\{5(\\text{is}), 2(\\text{good})\\} = 1(\\text{she})$$\nSahi uttar '1' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_6",
+    "qe": "If 'she is good' means '1 2 5', 'is he bad' means '5 7 9' and 'we are good' means '2 8 4'. (ii) What is the code for 'we bad'?",
+    "qh": "यदि 'she is good' का अर्थ '1 2 5', 'is he bad' का अर्थ '5 7 9' और 'we are good' का अर्थ '2 8 4' है। (ii) 'we bad' के लिए कोड क्या है?",
+    "oe": [
+      "48",
+      "79",
+      "36",
+      "98"
+    ],
+    "oh": [
+      "48",
+      "79",
+      "36",
+      "98"
+    ],
+    "a": 3,
+    "e": "Method 1 (Possibility & Option Elimination Method):\nStep 1: 'we' ka code: Statement 3 ('we are good' = 2 8 4) me se good = 2 hatane par 'we / are' = 8 / 4 bachta hai.\nStep 2: 'bad' ka code: Statement 2 ('is he bad' = 5 7 9) me se is = 5 hatane par 'he / bad' = 7 / 9 bachta hai.\nStep 3: 'we bad' ke code me ek digit {8, 4} me se aur ek digit {7, 9} me se aana chahiye:\n- '48' 48: dono digits {8, 4} se hain (galat).\n- '79' 79: dono digits {7, 9} se hain (galat).\n- '36' 36: naye digits hain (galat).\n- '98' 98: 9 (bad se) aur 8 (we se) valid combination hai.\nCorrect option  98 hai.\n\nMethod 2 (Direct Fit Verification):\nPair (8, 9) rules ko poori tarah satisfy karta hai.\nSahi uttar '98' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_7",
+    "qe": "If 'she is good' means '1 2 5', 'is he bad' means '5 7 9' and 'we are good' means '2 8 4'. (iii) What is the code for 'we'?",
+    "qh": "यदि 'she is good' का अर्थ '1 2 5', 'is he bad' का अर्थ '5 7 9' और 'we are good' का अर्थ '2 8 4' है। (iii) 'we' के लिए कोड क्या है?",
+    "oe": [
+      "2",
+      "8",
+      "4",
+      "4 or 8"
+    ],
+    "oh": [
+      "2",
+      "8",
+      "4",
+      "4 or 8"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ambiguity Resolution Method):\nStep 1: Statement 3 me 'we are good' = 2 8 4 hai, jahan good = 2 nikal chuka hai.\nStep 2: Bacha hua hissa 'we are' = 8 4 hai, jisme 'we' aur 'are' ko alag karne ke liye koi anya jankari nahi hai.\nIsliye 'we' ka code 4 ya 8 (4 or 8) hoga.\nCorrect '4 or 8' or 8 hai.\n\nMethod 2 (Option Inspection):\nKewal 4 ya kewal 8 nishchit nahi kiya ja sakta, isliye '4 or 8' sahi hai.\nSahi uttar '4 or 8' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_8",
+    "qe": "If 'she is good' means '1 2 5', 'is he bad' means '5 7 9' and 'we are good' means '2 8 4'. (iv) What is the code for 'are he go'?",
+    "qh": "यदि 'she is good' का अर्थ '1 2 5', 'is he bad' का अर्थ '5 7 9' और 'we are good' का अर्थ '2 8 4' है। (iv) 'are he go' के लिए कोड क्या है?",
+    "oe": [
+      "369",
+      "879",
+      "378",
+      "136"
+    ],
+    "oh": [
+      "369",
+      "879",
+      "378",
+      "136"
+    ],
+    "a": 2,
+    "e": "Method 1 (New Word & Candidate Digit Logic Method):\nStep 1: Pratyek shabd ki requirement samjhein:\n- 'are': {8, 4} me se koi ek digit hona chahiye.\n- 'he': {7, 9} me se koi ek digit hona chahiye.\n- 'go': Ek naya shabd (new word) hai, iska digit bhi ek naya digit hona chahiye (jo 1, 2, 5, 7, 9, 8, 4 me se na ho).\nStep 2: Options check karein:\n- '369' 369: do naye digits (3, 6) hain jabki naya shabd sirf ek hai (galat).\n- '879' 879: isme 8, 7, 9 hain (koi naya digit nahi hai, jabki 'go' naya shabd hai, galat).\n- '378' 378: 8 (are se), 7 (he se), aur 3 (naya digit 'go' ke liye) bilkul sahi fit baithta hai.\nCorrect '378'78 hai.\n\nMethod 2 (Elimination Method):\nNaye shabd 'go' ke liye kewal 1 naya code chahiye, jo '378' me '3' ke roop me maujood hai.\nSahi uttar '378' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_9",
+    "qe": "If 'men is black' means '$%#', 'black diamond gold' means '%©@' and 'diamond rose gold' means '@©*'. (i) What is the code for 'rose'?",
+    "qh": "यदि 'men is black' का अर्थ '$%#', 'black diamond gold' का अर्थ '%©@' और 'diamond rose gold' का अर्थ '@©*' है। (i) 'rose' के लिए कोड क्या है?",
+    "oe": [
+      "*",
+      "©",
+      "@",
+      "%"
+    ],
+    "oh": [
+      "*",
+      "©",
+      "@",
+      "%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Common Symbol Elimination Shortcut):\nStep 1: Statement 1 aur 2 me common word 'black' hai aur common symbol '%' hai → black = %.\nStep 2: Statement 2 aur 3 me common words 'diamond' aur 'gold' hain, aur common symbols '@' aur '©' hain.\nStep 3: Statement 3 ('diamond rose gold' = @©*) me bacha hua unique word 'rose' hai aur bacha hua unique symbol '*' hai.\nIsliye 'rose' = '*'.\nCorrect option  * hai.\n\nMethod 2 (Direct Inspection):\n$$\\{\\text{diamond, rose, gold}\\} \\setminus \\{\\text{diamond, gold}\\} = \\text{rose} \\implies \\{@, ©, *\\} \\setminus \\{@, ©\\} = \\{*\\}$$\nSahi uttar '*' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_10",
+    "qe": "If 'men is black' means '$%#', 'black diamond gold' means '%©@' and 'diamond rose gold' means '@©*'. (ii) What is the code for 'pink rose gold'?",
+    "qh": "यदि 'men is black' का अर्थ '$%#', 'black diamond gold' का अर्थ '%©@' और 'diamond rose gold' का अर्थ '@©*' है। (ii) 'pink rose gold' के लिए कोड क्या है?",
+    "oe": [
+      "@©*",
+      "*@α",
+      "αβγ",
+      "$\\alpha \\delta*$"
+    ],
+    "oh": [
+      "@©*",
+      "*@α",
+      "αβγ",
+      "$\\alpha \\delta*$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Element Composition & Elimination Method):\nStep 1: Har shabd ka code nirdharit karein:\n- 'rose' = '*'\n- 'gold' = '@' ya '©'\n- 'pink' = Naya shabd (naya symbol hona anivarya hai)\nStep 2: Options evaluate karein:\n- (A) @©*: koi naya symbol nahi hai (galat).\n- (C) αβγ: sabhi naye symbols hain (galat).\n- (D) αδ*: isme do naye symbols hain aur 'gold' ka code gayab hai (galat).\n- (B) *@α: isme '*' (rose ke liye), '@' (gold ke liye), aur 'α' (naye shabd pink ke liye naya symbol) poori tarah sahi hai.\nCorrect option  *@α hai.\n\nMethod 2 (New Symbol Check Trick):\nCode me '*' hona anivarya hai, aur theek 1 naya symbol hona chahiye jo '*@α' me 'α' hai.\nSahi uttar '*@α' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_11",
+    "qe": "If 'Economics is not money' means 'ka la ho ga', 'demand and supply economics' means 'mo ta pa ka', 'money makes only part' means 'zi la ne ki', 'demand makes supply economics' means 'zi mo ka ta'. (i) What is the code for 'makes'?",
+    "qh": "यदि 'Economics is not money' का अर्थ 'ka la ho ga', 'demand and supply economics' का अर्थ 'mo ta pa ka', 'money makes only part' का अर्थ 'zi la ne ki', 'demand makes supply economics' का अर्थ 'zi mo ka ta' है। (i) 'makes' के लिए कोड क्या है?",
+    "oe": [
+      "zi",
+      "la",
+      "ne",
+      "ki",
+      "Cannot be determined"
+    ],
+    "oh": [
+      "zi",
+      "la",
+      "ne",
+      "ki",
+      "Cannot be determined"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Sentence Matching Shortcut):\nStep 1: Statement 3 ('money makes only part' = zi la ne ki) aur Statement 4 ('demand makes supply economics' = zi mo ka ta) ki tulna karein.\nStep 2: Dono statements me common word 'makes' hai aur dono ke codes me common code 'zi' hai.\nIsliye 'makes' ka nishchit code 'zi' hoga.\nCorrect option  zi hai.\n\nMethod 2 (Step-by-Step Elimination):\n- 'Economics' = ka (sentences 1, 2, 4 me common).\n- Statement 4 me bache hue words 'demand', 'supply', 'makes' hain jinke codes {mo, ta, zi} hain.\n- Statement 3 me 'makes' repeat ho raha hai aur 'zi' common hai, isliye makes = zi.\nSahi uttar 'zi' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_12",
+    "qe": "If 'Economics is not money' means 'ka la ho ga', 'demand and supply economics' means 'mo ta pa ka', 'money makes only part' means 'zi la ne ki', 'demand makes supply economics' means 'zi mo ka ta'. (ii) What is the code for 'money'?",
+    "qh": "यदि 'Economics is not money' का अर्थ 'ka la ho ga', 'demand and supply economics' का अर्थ 'mo ta pa ka', 'money makes only part' का अर्थ 'zi la ne ki', 'demand makes supply economics' का अर्थ 'zi mo ka ta' है। (ii) 'money' के लिए कोड क्या है?",
+    "oe": [
+      "la",
+      "zi",
+      "ne",
+      "ki",
+      "Cannot be determined"
+    ],
+    "oh": [
+      "la",
+      "zi",
+      "ne",
+      "ki",
+      "Cannot be determined"
+    ],
+    "a": 0,
+    "e": "Method 1 (Common Word Extraction Shortcut):\nStep 1: Statement 1 ('Economics is not money' = ka la ho ga) aur Statement 3 ('money makes only part' = zi la ne ki) compare karein.\nStep 2: Dono sentences me akela common word 'money' hai aur akela common code 'la' hai.\nIsliye 'money' = 'la'.\nCorrect option  la hai.\n\nMethod 2 (Visual Scanning Trick):\n'money' 1st aur 3rd sentence me repeat ho raha hai aur 'la' 1st aur 3rd code list me repeat ho raha hai, isliye direct answer 'la' hai.\nSahi uttar 'la' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_13",
+    "qe": "If 'Economics is not money' means 'ka la ho ga', 'demand and supply economics' means 'mo ta pa ka', 'money makes only part' means 'zi la ne ki', 'demand makes supply economics' means 'zi mo ka ta'. (iii) What is the code for 'supply'?",
+    "qh": "यदि 'Economics is not money' का अर्थ 'ka la ho ga', 'demand and supply economics' का अर्थ 'mo ta pa ka', 'money makes only part' का अर्थ 'zi la ne ki', 'demand makes supply economics' का अर्थ 'zi mo ka ta' है। (iii) 'supply' के लिए कोड क्या है?",
+    "oe": [
+      "mo/ta",
+      "mo",
+      "ta",
+      "pa",
+      "Cannot be determined"
+    ],
+    "oh": [
+      "mo/ta",
+      "mo",
+      "ta",
+      "pa",
+      "Cannot be determined"
+    ],
+    "a": 0,
+    "e": "Method 1 (Pair Ambiguity Identification Method):\nStep 1: Statement 2 ('demand and supply economics' = mo ta pa ka) aur Statement 4 ('demand makes supply economics' = zi mo ka ta) me common words 'demand', 'supply', aur 'economics' hain.\nStep 2: 'economics' = 'ka' pehle se clear hai.\nStep 3: Bachenge do words 'demand' aur 'supply', aur unke do codes 'mo' aur 'ta'. Inhe alag-alag karne ke liye koi aur statement nahi hai.\nIsliye 'supply' ka code 'mo/ta' (mo ya ta) hoga.\nCorrect option  mo/ta hai.\n\nMethod 2 (Logical Either/Or Method):\nChuki demand = mo/ta aur supply = mo/ta, isliye nishchit code na hone ke karan vikalp (A) mo/ta sahi hai.\nSahi uttar 'mo/ta' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_14",
+    "qe": "If 'Economics is not money' means 'ka la ho ga', 'demand and supply economics' means 'mo ta pa ka', 'money makes only part' means 'zi la ne ki', 'demand makes supply economics' means 'zi mo ka ta'. (iv) What is the code for 'demand only more'?",
+    "qh": "यदि 'Economics is not money' का अर्थ 'ka la ho ga', 'demand and supply economics' का अर्थ 'mo ta pa ka', 'money makes only part' का अर्थ 'zi la ne ki', 'demand makes supply economics' का अर्थ 'zi mo ka ta' है। (iv) 'demand only more' के लिए कोड क्या है?",
+    "oe": [
+      "xi ne mo",
+      "mo zi ne",
+      "ki ne mo",
+      "xi ka ta",
+      "xi ki ta"
+    ],
+    "oh": [
+      "xi ne mo",
+      "mo zi ne",
+      "ki ne mo",
+      "xi ka ta",
+      "xi ki ta"
+    ],
+    "a": 0,
+    "e": "Method 1 (New Word & Feasible Digit Combination Shortcut):\nStep 1: Components check karein:\n- 'demand': {mo, ta} me se ek hona chahiye.\n- 'only': Statement 3 me 'only part' = {ne, ki} me se ek code aana chahiye.\n- 'more': Ek naya word hai, iska code bhi ek naya code hona chahiye jo kisi sentence me na ho (jaise 'xi').\nStep 2: Options evaluate karein:\n- (A) 'xi ne mo': isme 'mo' (demand se), 'ne' (only se), aur 'xi' (naya code) valid combination banata hai.\n- (B) 'mo zi ne': isme 'zi' (makes ka code) hai aur naya code gayab hai (galat).\n- (C) 'ki ne mo': dono words (ki, ne) aa gaye, naya code nahi hai (galat).\n- (D) 'xi ka ta': 'ka' economics ka code hai (galat).\nCorrect option  xi ne mo hai.\n\nMethod 2 (Elimination by New Word):\n'more' naya shabd hai jiske liye naya code 'xi' anivarya hai, jo options 'xi ne mo' and 'xi ka ta' me hai. 'xi ka ta' me 'ka' (Economics) aane se reject ho jata hai. Keval 'xi ne mo' bachta hai.\nSahi uttar 'xi ne mo' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_15",
+    "qe": "If 'Economics is not money' means 'ka la ho ga', 'demand and supply economics' means 'mo ta pa ka', 'money makes only part' means 'zi la ne ki', 'demand makes supply economics' means 'zi mo ka ta'. (v) What is the code for 'work and money'?",
+    "qh": "यदि 'Economics is not money' का अर्थ 'ka la ho ga', 'demand and supply economics' का अर्थ 'mo ta pa ka', 'money makes only part' का अर्थ 'zi la ne ki', 'demand makes supply economics' का अर्थ 'zi mo ka ta' है। (v) 'work and money' के लिए कोड क्या है?",
+    "oe": [
+      "pa la tu",
+      "pa ga la",
+      "mo la pa",
+      "tu la ga",
+      "pa la ne"
+    ],
+    "oh": [
+      "pa la tu",
+      "pa ga la",
+      "mo la pa",
+      "tu la ga",
+      "pa la ne"
+    ],
+    "a": 0,
+    "e": "Method 1 (Component Substitution Shortcut):\nStep 1: Shabdon ke codes nikalte hain:\n- 'money' = 'la'\n- 'and': Statement 2 ('demand and supply economics' = mo ta pa ka) me se demand/supply (mo/ta) aur economics (ka) nikalne ke baad akela bacha code 'pa' hai → and = pa.\n- 'work': Yeh ek naya word hai, iska code ek naya code hona chahiye (jo original context me na ho, jaise 'tu').\nStep 2: Combined group banega: {pa, la, [naya code]}.\n- 'pa la tu' 'pa la tu': isme pa, la aur ek naya code 'tu' hai jo poori tarah fit hai.\n- 'pa ga la' 'pa ga la': 'ga' is/not ka code hai (galat).\n- 'mo la pa' 'mo la pa': 'mo' demand/supply ka code hai (galat).\nCorrect option  pa la tu hai.\n\nMethod 2 (Option Elimination by Codes):\nCode me 'pa' aur 'la' dono ka hona anivarya hai aur sath me ek naya code hona chahiye, jo keval 'pa la tu' me satya hai.\nSahi uttar 'pa la tu' hai.\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_16",
+    "qe": "If 'red means yellow', 'yellow means blue', 'blue means orange', 'orange means green' and 'green means red', then what is the color of clear sky?",
+    "qh": "यदि 'लाल का अर्थ पीला', 'पीले का अर्थ नीला', 'नीले का अर्थ नारंगी', 'नारंगी का अर्थ हरा' और 'हरे का अर्थ लाल' है, तो स्वच्छ आकाश का रंग क्या होगा?",
+    "oe": [
+      "Yellow",
+      "Orange",
+      "Green",
+      "Red"
+    ],
+    "oh": [
+      "Yellow",
+      "Orange",
+      "Green",
+      "Red"
+    ],
+    "a": 0,
+    "e": "Method 1 ('Means' (का अर्थ है) Backward Rule Shortcut):\nStep 1: Swachh aakash (clear sky) ka vaastavik rang 'blue' (नीला) hota hai.\nStep 2: 'Means' (का अर्थ है) ke prashnon me hamesha piche wala shabd answer hota hai:\n- 'X means Y' ka arth hota hai ki Y ko darshane ke liye X ka upyog kiya gaya hai.\n- Diya gaya hai: 'yellow means blue' ('पीले का अर्थ नीला है').\nIsliye 'blue' ke liye sahi uttar 'yellow' hoga.\nCorrect option  Yellow hai.\n\nMethod 2 (Conceptual Rule Comparison):\n- Agar prashn 'is called' (कहा जाए) ka ho, toh aage badhte hain (Blue is called Orange → Orange).\n- Agar prashn 'means' (का अर्थ है) ka ho, toh piche aate hain (Yellow means Blue → Yellow).\nSahi uttar 'Yellow' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_17",
+    "qe": "If 'eye' is called 'hand', 'hand' is called 'mouth', 'mouth' is called 'ear', 'ear' is called 'nose' and 'nose' is called 'tongue', with which of the following would a person hear?",
+    "qh": "यदि 'आँख' को 'हाथ', 'हाथ' को 'मुँह', 'मुँह' को 'कान', 'कान' को 'नाक' और 'नाक' को 'जीभ' कहा जाए, तो व्यक्ति किससे सुनेगा?",
+    "oe": [
+      "Eye",
+      "Mouth",
+      "Nose",
+      "Ear"
+    ],
+    "oh": [
+      "Eye",
+      "Mouth",
+      "Nose",
+      "Ear"
+    ],
+    "a": 2,
+    "e": "Method 1 ('Is Called' Forward Rule Shortcut):\nStep 1: Manushya sunne ke liye 'ear' (कान) ka upyog karta hai.\nStep 2: 'Is called' wale sawalon me direct agla code dekhein:\n- 'ear is called nose' ('कान' को 'नाक' कहा गया है).\nIsliye sunne ke liye sahi uttar 'nose' hoga.\nCorrect option  Nose hai.\n\nMethod 2 (Direct Mapping Trick):\nReal organ = Ear → Code = Nose.\nSahi uttar 'Nose' hai.\n\nYahan diye gaye tathyon ka sahi milan seedha lagta hai. Vikalp Eye, Mouth, Ear is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "allmixed_18",
+    "qe": "If 'sky' is 'star', 'star' is 'cloud', 'cloud' is 'earth', 'earth' is 'tree' and 'tree' is 'book', then where do the birds fly?",
+    "qh": "यदि 'आकाश' 'तारा' है, 'तारा' 'बादल' है, 'बादल' 'पृथ्वी' है, 'पृथ्वी' 'पेड़' है और 'पेड़' 'पुस्तक' है, तो पक्षी कहाँ उड़ते हैं?",
+    "oe": [
+      "Cloud",
+      "Sky",
+      "Star",
+      "Tree"
+    ],
+    "oh": [
+      "Cloud",
+      "Sky",
+      "Star",
+      "Tree"
+    ],
+    "a": 2,
+    "e": "Method 1 (Substitution Shortcut Method):\nStep 1: Pakshi (birds) aakash ('sky') me udte hain.\nStep 2: Statement me dekhein: 'sky is star' ('आकाश' को 'तारा' कहा गया है).\nIsliye birds ke udne ka sthan 'star' hoga.\nCorrect option  Star hai.\n\nMethod 2 (One-Step Forward Substitution):\nNatural fact: Birds fly in the Sky.\nCode assignment: Sky → Star.\nSahi uttar 'Star' hai.\n\ndiye gaye tathyon ka sahi milan se hi is prashn ka jawab nikalta hai. Vikalp Cloud, Sky, Tree is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "allmixed_19",
+    "qe": "If 'book' is called 'watch', 'watch' is called 'bag', 'bag' is called 'dictionary' and 'dictionary' is called 'window', which is used to carry the books?",
+    "qh": "यदि 'पुस्तक' को 'घड़ी', 'घड़ी' को 'बैग', 'बैग' को 'शब्दकोश' और 'शब्दकोश' को 'खिड़की' कहा जाए, तो पुस्तकें ले जाने के लिए किसका उपयोग किया जाता है?",
+    "oe": [
+      "Dictionary",
+      "Bag",
+      "Book",
+      "Watch"
+    ],
+    "oh": [
+      "Dictionary",
+      "Bag",
+      "Book",
+      "Watch"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Factual Forward Shift Method):\nStep 1: Pustakein le jaane ke liye 'bag' (बस्ता/बैग) ka upyog hota hai.\nStep 2: Statement check karein: 'bag is called dictionary' ('बैग' को 'शब्दकोश' कहा गया है).\nIsliye sahi code 'dictionary' hoga.\nCorrect option  Dictionary hai.\n\nMethod 2 (Logical Chain Verification):\nTool = Bag.\nDirect assigned code: Bag → Dictionary.\nSahi uttar 'Dictionary' hai.\n\nIs prashn ka moolaadhaar diye gaye tathyon ka sahi milan hai. She sh vikalp Bag, Book, Watch is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "allmixed_20",
+    "qe": "If 'dust' is called 'air', 'air' is called 'fire', 'fire' is called 'water', 'water' is called 'colour', 'colour' is called 'rain' and 'rain' is called 'dust', then where do fish live?",
+    "qh": "यदि 'धूल' को 'हवा', 'हवा' को 'आग', 'आग' को 'पानी', 'पानी' को 'रंग', 'रंग' को 'वर्षा' और 'वर्षा' को 'धूल' कहा जाए, तो मछलियाँ कहाँ रहती हैं?",
+    "oe": [
+      "Fire",
+      "Water",
+      "Colour",
+      "Dust"
+    ],
+    "oh": [
+      "Fire",
+      "Water",
+      "Colour",
+      "Dust"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Mapping Shortcut):\nStep 1: Machhliyan (fish) 'water' (जल/पानी) me rehti hain.\nStep 2: Statement me mapping dekhein: 'water is called colour' ('पानी' को 'रंग' कहा गया है).\nIsliye sahi uttar 'colour' hoga.\nCorrect option  Colour hai.\n\nMethod 2 (Substitution Fact Method):\nHabitat = Water → Coded name = Colour.\nSahi uttar 'Colour' hai.\n\nYahan diye gaye tathyon ka sahi milan seedha lagta hai. She sh vikalp Fire, Water, Dust is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "allmixed_21",
+    "qe": "If 'orange' is called 'butter', 'butter' is called 'soap', 'soap' is called 'ink', 'ink' is called 'honey' and 'honey' is called 'orange', which of the following is used for washing clothes?",
+    "qh": "यदि 'संतरा' को 'मक्खन', 'मक्खन' को 'साबुन', 'साबुन' को 'स्याही', 'स्याही' को 'शहद' और 'शहद' को 'संतरा' कहा जाए, तो कपड़े धोने के लिए किसका उपयोग किया जाता है?",
+    "oe": [
+      "Honey",
+      "Butter",
+      "Soap",
+      "Ink"
+    ],
+    "oh": [
+      "Honey",
+      "Butter",
+      "Soap",
+      "Ink"
+    ],
+    "a": 3,
+    "e": "Method 1 (Direct Coded Replacement Shortcut):\nStep 1: Kapde dhone ke liye 'soap' (साबुन) ka istemaal kiya jata hai.\nStep 2: Statement dekhein: 'soap is called ink' ('साबुन' को 'स्याही' कहा गया है).\nIsliye kapde dhone ke liye 'ink' ka upyog hoga.\nCorrect option  Ink hai.\n\nMethod 2 (Direct Fact Conversion):\nRequired Item = Soap.\nCoded Name: Soap → Ink.\nSahi uttar 'Ink' hai.\n\nYahan diye gaye tathyon ka sahi milan seedha lagta hai. She sh vikalp Honey, Butter, Soap is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "allmixed_22",
+    "qe": "In a certain code language: 'Diverse place with beliefs' = C6F O4F V3I A6T. (i) What is the code for 'version'?",
+    "qh": "एक निश्चित कूट भाषा में: 'Diverse place with beliefs' = C6F O4F V3I A6T. (i) 'version' के लिए कोड क्या है?",
+    "oe": [
+      "C6F",
+      "U6O",
+      "X4T",
+      "K4U"
+    ],
+    "oh": [
+      "C6F",
+      "U6O",
+      "X4T",
+      "K4U"
+    ],
+    "a": 1,
+    "e": "Method 1 (Decoded Structural Rule Shortcut):\nStep 1: Code ka niyam decode karein:\n- First letter code = $(\\text{Word ka 1st letter} - 1)$\n- Number = $(\\text{Number of letters in word} - 1)$\n- Last letter code = $(\\text{Word ka last letter} + 1)$\nVerification: 'place' (5 letters) → P - 1 = O, 5 - 1 = 4, E + 1 = F → O4F.\nStep 2: 'version' (7 letters) par lagayein:\n- First letter: V - 1 = U\n- Number: 7 - 1 = 6\n- Last letter: N + 1 = O\nCode banega: U6O.\nCorrect option  U6O hai.\n\nMethod 2 (Option Elimination Method):\n'version' me 7 letters hain, isliye number $7 - 1 = 6$ aayega. options 'X4T' and 'K4U' me 4 diya hai, eliminate ho gaye. First letter V - 1 = U hoga ('C6F' me C hai, eliminate). Keval 'U6O' bachta hai.\nSahi uttar 'U6O' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_23",
+    "qe": "In a certain code language: 'Diverse place with beliefs' = C6F O4F V3I A6T. (ii) What is the code for 'Bad'?",
+    "qh": "एक निश्चित कूट भाषा में: 'Diverse place with beliefs' = C6F O4F V3I A6T. (ii) 'Bad' के लिए कोड क्या है?",
+    "oe": [
+      "A2E",
+      "U6O",
+      "X4T",
+      "E4U"
+    ],
+    "oh": [
+      "A2E",
+      "U6O",
+      "X4T",
+      "E4U"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Formula Application):\nStep 1: Formula: $(\\text{First letter} - 1) + (\\text{Length} - 1) + (\\text{Last letter} + 1)$.\nStep 2: 'Bad' (3 letters) ke components nikalein:\n- B - 1 = A\n- Length: 3 - 1 = 2\n- D + 1 = E\nCombined Code: A2E.\nCorrect option  A2E hai.\n\nMethod 2 (Length Inspection Method):\n3-letter word ke beech me digit $3 - 1 = 2$ aana anivarya hai. Sirf 'A2E' me '2' maujood hai.\nSahi uttar 'A2E' hai.\n\ncode bhasha ka pattern se hi is prashn ka jawab nikalta hai. Vikalp U6O, X4T, E4U is hal se mel nahi khaate. Exam point: code bhasha ka pattern - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "allmixed_24",
+    "qe": "In a certain code language, earlier in the last = 12#U, 20@F, 9*O, 5^S. (i) What is the code for 'Brief'?",
+    "qh": "एक निश्चित कूट भाषा में, earlier in the last = 12#U, 20@F, 9*O, 5^S. (i) 'Brief' के लिए कोड क्या है?",
+    "oe": [
+      "2$G",
+      "3%H",
+      "3$G",
+      "4#F"
+    ],
+    "oh": [
+      "2$G",
+      "3%H",
+      "3$G",
+      "4#F"
+    ],
+    "a": 0,
+    "e": "Method 1 (Decoded Component Method):\nStep 1: Code rules samjhein:\n- Number = First letter ki alphabetical position (B = 2).\n- Symbol = Total number of letters (Length 2=*, 3=@, 4=#, 5=$, 6=%, 7=^, 8=&).\n- Letter = $(\\text{Last letter} + 1)$.\nStep 2: 'Brief' (5 letters) par apply karein:\n- Pehla letter 'B' ki position = 2\n- 5 letters ke liye symbol = $\n- Aakhiri letter F + 1 = G\nCode: 2$G.\nCorrect '3%H'$G hai.\n\nMethod 2 (First Letter Position Check):\nB ki position 2 hoti hai, isliye code '2' se shuru hona anivarya hai. Chaaron options me sirf '2$G' '2' se shuru hota hai.\nSahi uttar '2$G' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_25",
+    "qe": "In a certain code language, earlier in the last = 12#U, 20@F, 9*O, 5^S. (ii) What is the code for 'Study'?",
+    "qh": "एक निश्चित कूट भाषा में, earlier in the last = 12#U, 20@F, 9*O, 5^S. (ii) 'Study' के लिए कोड क्या है?",
+    "oe": [
+      "20$Z",
+      "19$Z",
+      "22%F",
+      "9%F"
+    ],
+    "oh": [
+      "20$Z",
+      "19$Z",
+      "22%F",
+      "9%F"
+    ],
+    "a": 1,
+    "e": "Method 1 (Position-Symbol-NextLetter Method):\nStep 1: 'Study' (5 letters) ke components nikalte hain:\n- First letter 'S' ki position = 19\n- 5 letters ke liye symbol = $\n- Last letter Y + 1 = Z\nCode: 19$Z.\nCorrect '20$Z'9$Z hai.\n\nMethod 2 (Elimination Method):\nS ki position 19 hoti hai, isliye code 19 se shuru hoga. '20$Z' me 20 hai, eliminate. '19$Z' 19$Z bilkul sahi hai.\nSahi uttar '19$Z' hai.\n\nYahan code bhasha ka pattern seedha lagta hai. Vikalp 20$Z, 22%F, 9%F is hal se mel nahi khaate. Exam point: code bhasha ka pattern - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "allmixed_26",
+    "qe": "In a certain code language, earlier in the last = 12#U, 20@F, 9*O, 5^S. (iii) What is the code for 'Reason'?",
+    "qh": "एक निश्चित कूट भाषा में, earlier in the last = 12#U, 20@F, 9*O, 5^S. (iii) 'Reason' के लिए कोड क्या है?",
+    "oe": [
+      "15%E",
+      "14$F",
+      "18%O",
+      "5*E"
+    ],
+    "oh": [
+      "15%E",
+      "14$F",
+      "18%O",
+      "5*E"
+    ],
+    "a": 2,
+    "e": "Method 1 (Component Formulation Method):\nStep 1: 'Reason' (6 letters) par rules apply karein:\n- First letter 'R' ki position = 18\n- 6 letters ke liye symbol = %\n- Last letter N + 1 = O\nCode: 18%O.\nCorrect '15%E'8%O hai.\n\nMethod 2 (First Number Check):\nR ki position 18 hoti hai, isliye code 18 se shuru hoga. Sirf '18%O' 18 se shuru hota hai.\nSahi uttar '18%O' hai.\n\ncode bhasha ka pattern se hi is prashn ka jawab nikalta hai. Vikalp 15%E, 14$F, 5*E is hal se mel nahi khaate. Exam point: code bhasha ka pattern - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "allmixed_27",
+    "qe": "In a certain code language: who claimed form government = U%7, V%14, Y*23, E*12. (i) What is the code for 'Message'?",
+    "qh": "एक निश्चित कोड भाषा में: who claimed form government = U%7, V%14, Y*23, E*12. (i) 'Message' के लिए कोड क्या है?",
+    "oe": [
+      "O*22",
+      "H%7",
+      "U%7",
+      "E*13"
+    ],
+    "oh": [
+      "O*22",
+      "H%7",
+      "U%7",
+      "E*13"
+    ],
+    "a": 0,
+    "e": "Method 1 (Advanced Symbol-Letter Logic Method):\nStep 1: Rules decode karein:\n- First Letter = $(\\text{Opposite of 1st letter} + 1)$\n- Symbol = Odd length ke liye '*', Even length ke liye '%'\n- Number = Aakhiri letter ke opposite letter ki place value\nStep 2: 'Message' (7 letters - Odd length) par apply karein:\n- M ka opposite N, $N + 1 = O$\n- 7 letters (odd) ke liye symbol = *\n- Last letter E ka opposite V, jiski value = 22\nCode: O*22.\nCorrect option  O*22 hai.\n\nMethod 2 (Option Elimination Trick):\n'Message' me 7 letters (odd) hain, isliye symbol '*' hona chahiye (Options B aur C eliminate). Pehla letter M ka opposite N(+1)=O hoga, isliye 'O*22' sahi hai.\nSahi uttar 'O*22' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_28",
+    "qe": "In a certain code language: who claimed form government = U%7, V%14, Y*23, E*12. (ii) What is the code for 'Rapport'?",
+    "qh": "एक निश्चित कोड भाषा में: who claimed form government = U%7, V%14, Y*23, E*12. (ii) 'Rapport' के लिए कोड क्या है?",
+    "oe": [
+      "G*8",
+      "I%7",
+      "J*7",
+      "F%3"
+    ],
+    "oh": [
+      "G*8",
+      "I%7",
+      "J*7",
+      "F%3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Rule Application Method):\nStep 1: 'Rapport' me 7 letters (odd) hain:\n- First letter R ka opposite I, $I + 1 = J$\n- Odd letters hone ke karan symbol = *\n- Last letter T ka opposite G, jiski value = 7\nCode: J*7.\nCorrect option  J*7 hai.\n\nMethod 2 (First Letter Check Trick):\nR ka opposite I (+1) = J aayega. Keval 'J*7' 'J' se shuru ho raha hai.\nSahi uttar 'J*7' hai.\n\ncode bhasha ka pattern se hi is prashn ka jawab nikalta hai. She sh vikalp G*8, I%7, F%3 is hisaab se nahi milte. Exam point: code bhasha ka pattern - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "allmixed_29",
+    "qe": "In a certain code language: who claimed form government = U%7, V%14, Y*23, E*12. (iii) What is the code for 'Shall'?",
+    "qh": "एक निश्चित कोड भाषा में: who claimed form government = U%7, V%14, Y*23, E*12. (iii) 'Shall' के लिए कोड क्या है?",
+    "oe": [
+      "J*14",
+      "I%12",
+      "J%12",
+      "I*15"
+    ],
+    "oh": [
+      "J*14",
+      "I%12",
+      "J%12",
+      "I*15"
+    ],
+    "a": 3,
+    "e": "Method 1 (Complete Component Verification Method):\nStep 1: 'Shall' me 5 letters (odd) hain:\n- S ka opposite H, $H + 1 = I$\n- Odd letters hone ke karan symbol = *\n- Last letter L ka opposite O, jiski value = 15\nCode: I*15.\nCorrect option  I*15 hai.\n\nMethod 2 (First Letter Elimination):\nS ka opposite H(+1) = I aana chahiye, isliye 'J' se start hone wale options 'J*14' and 'J%12' eliminate ho gaye. Odd letters ke liye symbol '*' aayega, isliye 'I*15' sahi hai.\nSahi uttar 'I*15' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_30",
+    "qe": "In a certain code language: given time simple plane = @E4, &E5, %N5, #E6. (i) What is the code for 'STATE'?",
+    "qh": "एक निश्चित कूट भाषा में: given time simple plane = @E4, &E5, %N5, #E6. (i) 'STATE' के लिए कोड क्या है?",
+    "oe": [
+      "#E6",
+      "%N5",
+      "&T5",
+      "#E5"
+    ],
+    "oh": [
+      "#E6",
+      "%N5",
+      "&T5",
+      "#E5"
+    ],
+    "a": 3,
+    "e": "Method 1 (Symbol-Letter-Number Logic Shortcut):\nStep 1: Structure decode karein:\n- Symbol = First letter par aadharit hai ($S \\to \\#, P \\to \\&, G \\to \\%, T \\to @$)\n- Middle letter = Word ka aakhiri akshar (capitalized)\n- Number = Word me total letters ki sankhya\nStep 2: 'STATE' (5 letters) par lagayein:\n- First letter S hai → Symbol = #\n- Last letter E hai → Letter = E\n- Length = 5 → Number = 5\nCode: #E5.\nCorrect option  #E5 hai.\n\nMethod 2 (Direct Inspection Trick):\nS se shuru hone wale word ke liye symbol '#' aur length 5 hone ke karan aakhiri me 5 aayega → #E5.\nSahi uttar '#E5' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_31",
+    "qe": "In a certain code language: given time simple plane = @E4, &E5, %N5, #E6. (ii) What is the code for 'POVERTY'?",
+    "qh": "एक निश्चित कूट भाषा में: given time simple plane = @E4, &E5, %N5, #E6. (ii) 'POVERTY' के लिए कोड क्या है?",
+    "oe": [
+      "&T5",
+      "&N4",
+      "&Y7",
+      "%D4"
+    ],
+    "oh": [
+      "&T5",
+      "&N4",
+      "&Y7",
+      "%D4"
+    ],
+    "a": 2,
+    "e": "Method 1 (Rule Assembly Method):\nStep 1: 'POVERTY' ke components nikalte hain:\n- Starts with 'P' → Symbol = &\n- Ends with 'Y' → Letter = Y\n- Total letters = 7 → Number = 7\nCombined Code: &Y7.\nCorrect option  &Y7 hai.\n\nMethod 2 (Length Check Shortcut):\n'POVERTY' me 7 letters hain, isliye code ke aakhiri me 7 hona anivarya hai. Sirf '&Y7' me '7' hai.\nSahi uttar '&Y7' hai.\n\nIs prashn ka moolaadhaar code bhasha ka pattern hai. Vikalp &T5, &N4, %D4 is hal se mel nahi khaate. Exam point: code bhasha ka pattern - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "allmixed_32",
+    "qe": "In a certain code language: given time simple plane = @E4, &E5, %N5, #E6. (iii) What is the code for 'GLUTTON'?",
+    "qh": "एक निश्चित कूट भाषा में: given time simple plane = @E4, &E5, %N5, #E6. (iii) 'GLUTTON' के लिए कोड क्या है?",
+    "oe": [
+      "%T5",
+      "%N7",
+      "%N6",
+      "#E5"
+    ],
+    "oh": [
+      "%T5",
+      "%N7",
+      "%N6",
+      "#E5"
+    ],
+    "a": 1,
+    "e": "Method 1 (Component Formulation Method):\nStep 1: 'GLUTTON' ke niyam anusar ghatak nikalte hain:\n- Starts with 'G' → Symbol = %\n- Ends with 'N' → Letter = N\n- Total letters = 7 → Number = 7\nCode: %N7.\nCorrect option  %N7 hai.\n\nMethod 2 (Option Elimination Trick):\nWord 7 aksharon ka hai aur 'N' par samapt hota hai, isliye code '%N7' banega. '%N6' me 6 diya hai jo galat hai.\nSahi uttar '%N7' hai.\n\nIs prashn ka moolaadhaar code bhasha ka pattern hai. Exam point: code bhasha ka pattern - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "allmixed_33",
+    "qe": "In a certain code language: Scroll for sbi exam = @6l, @3i, $3r, #4m. (i) What is the code for 'school'?",
+    "qh": "एक निश्चित कोड भाषा में: Scroll for sbi exam = @6l, @3i, $3r, #4m. (i) 'school' के लिए कोड क्या है?",
+    "oe": [
+      "@6l",
+      "+3b",
+      "@7m",
+      "@8l"
+    ],
+    "oh": [
+      "@6l",
+      "+3b",
+      "@7m",
+      "@8l"
+    ],
+    "a": 0,
+    "e": "Method 1 (Word Structure Matching Method):\nStep 1: Rule decode karein:\n- Symbol = Word ke starting letter par nirdharit hai ('S' se start hone par '@')\n- Number = Word me kul aksharon ki sankhya\n- Letter = Word ka aakhiri akshar (lowercase me)\nStep 2: 'school' (6 letters) par apply karein:\n- Starts with 'S' → Symbol = @\n- Length = 6 → Number = 6\n- Ends with 'l' → Letter = l\nCode: @6l.\nCorrect option  @6l hai.\n\nMethod 2 (Direct Length Inspection):\n'school' me 6 letters hain aur last letter 'l' hai, isliye '@6l' sahi code hai.\nSahi uttar '@6l' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_34",
+    "qe": "In a certain code language: login careerwill and scroll = &3d, @6l, *5n, %10l. (ii) What is the code for 'new'?",
+    "qh": "एक निश्चित कोड भाषा में: login careerwill and scroll = &3d, @6l, *5n, %10l. (ii) 'new' के लिए कोड क्या है?",
+    "oe": [
+      "=4w",
+      "=3w",
+      "=9m",
+      "=6m"
+    ],
+    "oh": [
+      "=4w",
+      "=3w",
+      "=9m",
+      "=6m"
+    ],
+    "a": 1,
+    "e": "Method 1 (Length & Last Letter Mapping Shortcut):\nStep 1: 'new' shabd ki visheshataayein dekhein:\n- Length = 3 letters (Code ke beech me '3' aana chahiye)\n- Last letter = 'w' (Code ke aakhiri me 'w' aana chahiye)\nStep 2: Format banta hai: [Symbol] + 3 + w → '=3w'.\nCorrect option  =3w hai.\n\nMethod 2 (Direct Option Elimination):\nWord me 3 letters hain, isliye number '3' hona anivarya hai. options '=4w' and '=9m', aur (D) me 4, 9, 6 diye hain jo seedhe eliminate ho jate hain.\nSahi uttar '=3w' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "allmixed_35",
+    "qe": "In a certain code language: Study exam related notes = #4m, @5y, !7d, =5s. (iii) What is the code for 'Future'?",
+    "qh": "एक निश्चित कोड भाषा में: Study exam related notes = #4m, @5y, !7d, =5s. (iii) 'Future' के लिए कोड क्या है?",
+    "oe": [
+      "$6e",
+      "$7f",
+      "%7e",
+      "$3e"
+    ],
+    "oh": [
+      "$6e",
+      "$7f",
+      "%7e",
+      "$3e"
+    ],
+    "a": 0,
+    "e": "Method 1 (Length & Last Letter Logic Method):\nStep 1: 'Future' shabd ke ghatak evaluate karein:\n- Total number of letters = 6 (Number '6' aayega)\n- Last letter = 'e' (Code ke ant me 'e' aayega)\n- Starts with 'F' → Symbol '$' (jaise 'for' ke liye $3r use hua tha)\nCombined Code: $6e.\nCorrect option  $6e hai.\n\nMethod 2 (Length Inspection Method):\n'Future' me kul 6 letters hain, isliye beech ka digit 6 hona chahiye. Chaaron vikalpon me kewal '$6e' me '6' diya gaya hai.\nSahi uttar '$6e' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

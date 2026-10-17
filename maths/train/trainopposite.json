@@ -1,0 +1,249 @@
+[
+  {
+    "p_id": "trainopposite_1",
+    "qe": "Two trains 230 m and 270 m long are running in opposite directions at speeds of 42 km/h and 48 km/h, respectively. They cross each other in:",
+    "qh": "230 मीटर और 270 मीटर लंबी दो ट्रेनें विपरीत दिशाओं में क्रमशः 42 किमी/घंटा और 48 किमी/घंटा की गति से चल रही हैं। वे एक-दूसरे को कितने समय में पार करेंगी:",
+    "oe": [
+      "30 seconds",
+      "22 seconds",
+      "20 seconds",
+      "25 seconds"
+    ],
+    "oh": [
+      "30 seconds",
+      "22 seconds",
+      "20 seconds",
+      "25 seconds"
+    ],
+    "a": 2,
+    "e": "Method 1 (Relative Speed Formula Method):\nStep 1: विपरीत दिशा में चलने पर सापेक्ष गति (Relative Speed) जुड़ जाती है:\n$$\\text{सापेक्ष गति} = 42 + 48 = 90\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर:\n$$\\text{गति} = 90 $\\times$ $\\frac{5}{18}$ = 5 $\\times$ 5 = 25\\text{ मीटर/सेकंड}$$\nStep 2: एक-दूसरे को पार करने में तय की जाने वाली कुल दूरी दोनों ट्रेनों की लंबाइयों का योग होती है:\n$$\\text{कुल दूरी} = 230 + 270 = 500\\text{ मीटर}$$\nStep 3: पार करने में लगा समय निकालें:\n$$\\text{समय} = \\frac{\\text{कुल दूरी}}{\\text{सापेक्ष गति}} = $\\frac{500}{25}$ = 20\\text{ सेकंड}$$\nअतः सही विकल्प  20 seconds है।\n\nMethod 2 (Unitary Method):\nStep 1: 1 सेकंड में दोनों ट्रेनें मिलकर 25 मीटर की दूरी तय करती हैं।\nStep 2: 500 मीटर की दूरी तय करने में लगा समय = $\\frac{500}{25} = 20$ सेकंड।\nअतः सही उत्तर '20 seconds' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_2",
+    "qe": "Two trains, one 125 metres and the other 375 metres long are running in opposite directions on parallel tracks, at the speed of 81 km/hr and 63 km/hr respectively. How much time will they take to cross each other?",
+    "qh": "दो ट्रेनें, एक 125 मीटर और दूसरी 375 मीटर लंबी, समानांतर पटरियों पर विपरीत दिशाओं में क्रमशः 81 किमी/घंटा और 63 किमी/घंटा की गति से चल रही हैं। उन्हें एक-दूसरे को पार करने में कितना समय लगेगा?",
+    "oe": [
+      "25 sec.",
+      "15 sec.",
+      "12.5 sec.",
+      "22.5 sec."
+    ],
+    "oh": [
+      "25 sec.",
+      "15 sec.",
+      "12.5 sec.",
+      "22.5 sec."
+    ],
+    "a": 2,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: विपरीत दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 81 + 63 = 144\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर:\n$$\\text{गति} = 144 $\\times$ $\\frac{5}{18}$ = 8 $\\times$ 5 = 40\\text{ मीटर/सेकंड}$$\nStep 2: तय की जाने वाली कुल दूरी = $125 + 375 = 500$ मीटर।\nStep 3: पार करने में लगा समय:\n$$\\text{समय} = $\\frac{500}{40}$ = 12.5\\text{ सेकंड}$$\nअतः सही विकल्प  12.5 sec. है।\n\nMethod 2 (Direct Single Step Formula):\n$$\\text{समय} = \\frac{125 + 375}{(81 + 63) $\\times$ $\\frac{5}{18}$} = \\frac{500}{144 $\\times$ $\\frac{5}{18}$} = $\\frac{500}{40}$ = 12.5\\text{ सेकंड}$$\nअतः सही उत्तर '12.5 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_3",
+    "qe": "Two trains having lengths of 230 m and 240 m are 130 m apart. They start moving towards each other on parallel tracks, at speeds of 160 km/h and 200 km/h, respectively. In how much time will the trains cross each other?",
+    "qh": "230 मीटर और 240 मीटर लंबाई वाली दो ट्रेनें एक-दूसरे से 130 मीटर की दूरी पर हैं। वे समानांतर पटरियों पर क्रमशः 160 किमी/घंटा और 200 किमी/घंटा की गति से एक-दूसरे की ओर चलना शुरू करती हैं। ट्रेनें एक-दूसरे को कितने समय में पार कर लेंगी?",
+    "oe": [
+      "5 Sec",
+      "6 Sec",
+      "8 Sec",
+      "7 Sec"
+    ],
+    "oh": [
+      "5 Sec",
+      "6 Sec",
+      "8 Sec",
+      "7 Sec"
+    ],
+    "a": 1,
+    "e": "Method 1 (Total Clearance Distance Method):\nStep 1: ट्रेनों को पूरी तरह से एक-दूसरे को पार करने के लिए दोनों के बीच की प्रारंभिक दूरी तथा दोनों ट्रेनों की अपनी लंबाइयों के योग के बराबर दूरी तय करनी होगी:\n$$\\text{कुल दूरी} = 130 + 230 + 240 = 600\\text{ मीटर}$$\nStep 2: एक-दूसरे की ओर (विपरीत दिशा में) गतिमान होने पर सापेक्ष गति:\n$$\\text{सापेक्ष गति} = 160 + 200 = 360\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर:\n$$\\text{गति} = 360 $\\times$ $\\frac{5}{18}$ = 20 $\\times$ 5 = 100\\text{ मीटर/सेकंड}$$\nStep 3: पार करने में लगा समय:\n$$\\text{समय} = $\\frac{600}{100}$ = 6\\text{ सेकंड}$$\nअतः सही विकल्प  6 Sec है।\n\nMethod 2 (Phase Separation Verification):\nStep 1: दोनों को मिलने में लगा समय = $\\frac{130}{100} = 1.3$ सेकंड।\nStep 2: मिलने के बाद एक-दूसरे को पार करने में लगा समय = $\\frac{230 + 240}{100} = \\frac{470}{100} = 4.7$ सेकंड।\nStep 3: कुल समय = $1.3 + 4.7 = 6$ सेकंड।\nअतः सही उत्तर '6 Sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_4",
+    "qe": "A train 550 metres long is running at a speed of 78 km/h. How many seconds will it take to cross a 350 metres long train running in the opposite direction at a speed of 30 km/h?",
+    "qh": "550 मीटर लंबी एक ट्रेन 78 किमी/घंटा की गति से चल रही है। विपरीत दिशा में 30 किमी/घंटा की गति से चल रही 350 मीटर लंबी ट्रेन को पार करने में इसे कितने सेकंड लगेंगे?",
+    "oe": [
+      "40 seconds",
+      "20 seconds",
+      "50 seconds",
+      "30 seconds"
+    ],
+    "oh": [
+      "40 seconds",
+      "20 seconds",
+      "50 seconds",
+      "30 seconds"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: विपरीत दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 78 + 30 = 108\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर:\n$$\\text{गति} = 108 $\\times$ $\\frac{5}{18}$ = 6 $\\times$ 5 = 30\\text{ मीटर/सेकंड}$$\nStep 2: पार करने में तय कुल दूरी = $550 + 350 = 900$ मीटर।\nStep 3: लगा समय:\n$$\\text{समय} = $\\frac{900}{30}$ = 30\\text{ सेकंड}$$\nअतः सही विकल्प  30 seconds है।\n\nMethod 2 (Formula Method):\n$$\\text{समय} = \\frac{L_1 + L_2}{(S_1 + S_2) $\\times$ $\\frac{5}{18}$} = \\frac{900}{108 $\\times$ $\\frac{5}{18}$} = $\\frac{900}{30}$ = 30\\text{ सेकंड}$$\nअतः सही उत्तर '30 seconds' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_5",
+    "qe": "Two goods trains 132 m and 108 m in length are running towards each other on parallel tracks. The first train is running at a speed of 32 km/h and the second at a speed of 40 km/h. How much time will they take to cross each other after meeting?",
+    "qh": "132 मीटर और 108 मीटर लंबाई वाली दो मालगाड़ियाँ समानांतर पटरियों पर एक-दूसरे की ओर चल रही हैं। पहली ट्रेन 32 किमी/घंटा की गति से और दूसरी 40 किमी/घंटा की गति से चल रही है। मिलने के बाद वे एक-दूसरे को पार करने में कितना समय लेंगी?",
+    "oe": [
+      "12 sec",
+      "10 sec",
+      "13 sec",
+      "15 sec"
+    ],
+    "oh": [
+      "12 sec",
+      "10 sec",
+      "13 sec",
+      "15 sec"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: मिलने के बाद पार करने के लिए तय दूरी दोनों ट्रेनों की लंबाइयों का योग होती है:\n$$\\text{दूरी} = 132 + 108 = 240\\text{ मीटर}$$\nStep 2: विपरीत दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 32 + 40 = 72\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर:\n$$\\text{गति} = 72 $\\times$ $\\frac{5}{18}$ = 4 $\\times$ 5 = 20\\text{ मीटर/सेकंड}$$\nStep 3: पार करने में लगा समय:\n$$\\text{समय} = $\\frac{240}{20}$ = 12\\text{ सेकंड}$$\nअतः सही विकल्प  12 sec है।\n\nMethod 2 (Direct Proportion Method):\nStep 1: सापेक्ष गति = 20 मीटर/सेकंड।\nStep 2: 240 मीटर की दूरी तय करने में समय = $\\frac{240}{20} = 12$ सेकंड।\nअतः सही उत्तर '12 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_6",
+    "qe": "Two trains having the same speed are running in opposite directions. If the length of each train is 120 metres and they cross each other in 8 seconds, then, what is the speed of each train (in km/h)?",
+    "qh": "समान गति वाली दो ट्रेनें विपरीत दिशाओं में चल रही हैं। यदि प्रत्येक ट्रेन की लंबाई 120 मीटर है और वे एक-दूसरे को 8 सेकंड में पार करती हैं, तो प्रत्येक ट्रेन की गति (किमी/घंटा में) क्या है?",
+    "oe": [
+      "60",
+      "45",
+      "50",
+      "54"
+    ],
+    "oh": [
+      "60",
+      "45",
+      "50",
+      "54"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Speed Equation Method):\nStep 1: पार करने में तय कुल दूरी = $120 + 120 = 240$ मीटर।\nStep 2: दोनों ट्रेनों की सापेक्ष गति:\n$$\\text{सापेक्ष गति} = \\frac{\\text{कुल दूरी}}{\\text{समय}} = $\\frac{240}{8}$ = 30\\text{ मीटर/सेकंड}$$\nStep 3: चूँकि दोनों ट्रेनें विपरीत दिशा में समान गति ($s$) से चल रही हैं:\n$$\\text{सापेक्ष गति} = s + s = 2s = 30 \\implies s = 15\\text{ मीटर/सेकंड}$$\nStep 4: गति को किमी/घंटा में बदलें:\n$$\\text{गति} = 15 $\\times$ $\\frac{18}{5}$ = 3 $\\times$ 18 = 54\\text{ किमी/घंटा}$$\nअतः सही विकल्प  54 है।\n\nMethod 2 (Direct Conversion Method):\nStep 1: कुल सापेक्ष गति (किमी/घंटा में) = $30 \\times \\frac{18}{5} = 108$ किमी/घंटा।\nStep 2: प्रत्येक ट्रेन की गति = $\\frac{108}{2} = 54$ किमी/घंटा।\nअतः सही उत्तर '54' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_7",
+    "qe": "Two trains each 200m long are moving in opposite directions. They cross each other in 10 seconds. If the speed of one train is 90km/h, find the speed of the other train.",
+    "qh": "प्रत्येक 200 मीटर लंबी दो ट्रेनें विपरीत दिशाओं में चल रही हैं। वे एक-दूसरे को 10 सेकंड में पार करती हैं। यदि एक ट्रेन की गति 90 किमी/घंटा है, तो दूसरी ट्रेन की गति ज्ञात कीजिए।",
+    "oe": [
+      "90 km/h",
+      "45 km/h",
+      "54 km/h",
+      "36 km/h"
+    ],
+    "oh": [
+      "90 km/h",
+      "45 km/h",
+      "54 km/h",
+      "36 km/h"
+    ],
+    "a": 2,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: तय की जाने वाली कुल दूरी = $200 + 200 = 400$ मीटर।\nStep 2: दोनों ट्रेनों की कुल सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = $\\frac{400}{10}$ = 40\\text{ मीटर/सेकंड}$$\nStep 3: सापेक्ष गति को किमी/घंटा में बदलें:\n$$\\text{सापेक्ष गति} = 40 $\\times$ $\\frac{18}{5}$ = 8 $\\times$ 18 = 144\\text{ किमी/घंटा}$$\nStep 4: विपरीत दिशा में सापेक्ष गति दोनों की गतियों का योग होती है ($S_1 + S_2 = 144$ किमी/घंटा):\n$$90 + S_2 = 144 \\implies S_2 = 144 - 90 = 54\\text{ किमी/घंटा}$$\nअतः सही विकल्प  54 km/h है।\n\nMethod 2 (m/s Method):\nStep 1: पहली ट्रेन की गति = $90 \\times \\frac{5}{18} = 25$ मीटर/सेकंड।\nStep 2: कुल सापेक्ष गति = 40 मीटर/सेकंड $\\implies$ दूसरी ट्रेन की गति = $40 - 25 = 15$ मीटर/सेकंड।\nStep 3: किमी/घंटा में = $15 \\times \\frac{18}{5} = 54$ किमी/घंटा।\nअतः सही उत्तर '54 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_8",
+    "qe": "Two trains, P and Q, are running on parallel tracks in opposite directions with lengths of 110 m and 140 m, respectively. Train P is running at a speed of 70 km/h and took 5 seconds to cross train Q. The speed of train Q is:",
+    "qh": "दो ट्रेनें, P और Q, समानांतर पटरियों पर विपरीत दिशाओं में क्रमशः 110 मीटर और 140 मीटर की लंबाई के साथ चल रही हैं। ट्रेन P 70 किमी/घंटा की गति से चल रही है और ट्रेन Q को पार करने में 5 सेकंड का समय लेती है। ट्रेन Q की गति क्या है:",
+    "oe": [
+      "120 km/h",
+      "110 km/h",
+      "90 km/h",
+      "100 km/h"
+    ],
+    "oh": [
+      "120 km/h",
+      "110 km/h",
+      "90 km/h",
+      "100 km/h"
+    ],
+    "a": 1,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: कुल दूरी = $110 + 140 = 250$ मीटर।\nStep 2: दोनों ट्रेनों की संयुक्त सापेक्ष गति:\n$$\\text{सापेक्ष गति} = $\\frac{250}{5}$ = 50\\text{ मीटर/सेकंड}$$\nStep 3: सापेक्ष गति को किमी/घंटा में बदलें:\n$$\\text{सापेक्ष गति} = 50 $\\times$ $\\frac{18}{5}$ = 10 $\\times$ 18 = 180\\text{ किमी/घंटा}$$\nStep 4: विपरीत दिशा में सापेक्ष गति $S_P + S_Q = 180$ किमी/घंटा:\n$$70 + S_Q = 180 \\implies S_Q = 180 - 70 = 110\\text{ किमी/घंटा}$$\nअतः सही विकल्प  110 km/h है।\n\nMethod 2 (Formula Method):\n$$S_P + S_Q = $\\frac{110+140}{5}$ $\\times$ $\\frac{18}{5}$ = 50 $\\times$ 3.6 = 180\\text{ किमी/घंटा}$$\n$$S_Q = 180 - 70 = 110\\text{ किमी/घंटा}$$\nअतः सही उत्तर '110 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_9",
+    "qe": "Two trains Mumbai Rajdhani and Kissan Express of lengths 850 m and 700 m are 1050 m apart, and are running on parallel tracks towards each other. Mumbai Rajdhani is running at 62 km/h and Kissan Express is running at 55 km/h. In how much time (in sec) will the trains cross each other?",
+    "qh": "850 मीटर और 700 मीटर लंबाई वाली दो ट्रेनें मुंबई राजधानी और किसान एक्सप्रेस एक-दूसरे से 1050 मीटर की दूरी पर हैं, और समानांतर पटरियों पर एक-दूसरे की ओर चल रही हैं। मुंबई राजधानी 62 किमी/घंटा और किसान एक्सप्रेस 55 किमी/घंटा की गति से चल रही है। ट्रेनें एक-दूसरे को कितने समय (सेकंड में) में पार करेंगी?",
+    "oe": [
+      "80",
+      "70",
+      "75",
+      "45"
+    ],
+    "oh": [
+      "80",
+      "70",
+      "75",
+      "45"
+    ],
+    "a": 0,
+    "e": "Method 1 (Total Distance & Relative Speed Method):\nStep 1: ट्रेनों को एक-दूसरे को पूरी तरह पार करने के लिए तय कुल दूरी:\n$$\\text{कुल दूरी} = \\text{प्रारंभिक अंतर} + L_1 + L_2 = 1050 + 850 + 700 = 2600\\text{ मीटर}$$\nStep 2: एक-दूसरे की ओर चलने पर सापेक्ष गति:\n$$\\text{सापेक्ष गति} = 62 + 55 = 117\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर:\n$$\\text{गति} = 117 $\\times$ $\\frac{5}{18}$ = $\\frac{13\\times5}{2}$ = $\\frac{65}{2}$ = 32.5\\text{ मीटर/सेकंड}$$\nStep 3: पार करने में लगा समय निकालें:\n$$\\text{समय} = $\\frac{2600}{65/2}$ = $\\frac{2600\\times2}{65}$ = 40 $\\times$ 2 = 80\\text{ सेकंड}$$\nअतः सही विकल्प  80 है।\n\nMethod 2 (Direct Simplification):\n$$\\text{समय} = \\frac{2600}{117 $\\times$ $\\frac{5}{18}$} = $\\frac{2600\\times18}{585}$ = $\\frac{400\\times18}{90}$ = 40 $\\times$ 2 = 80\\text{ सेकंड}$$\nअतः सही उत्तर '80' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_10",
+    "qe": "A train of length 300 metres crosses a tree in 20 seconds and crosses another train of the same length travelling in opposite direction in 25 seconds. What is the speed of the second train?",
+    "qh": "300 मीटर लंबी एक ट्रेन 20 सेकंड में एक पेड़ को पार करती है और विपरीत दिशा में यात्रा कर रही समान लंबाई की दूसरी ट्रेन को 25 सेकंड में पार करती है। दूसरी ट्रेन की गति क्या है?",
+    "oe": [
+      "9 m/s (32.4 km/h)",
+      "12 m/s (43.2 km/h)",
+      "15 m/s (54 km/h)",
+      "18 m/s (64.8 km/h)"
+    ],
+    "oh": [
+      "9 m/s (32.4 km/h)",
+      "12 m/s (43.2 km/h)",
+      "15 m/s (54 km/h)",
+      "18 m/s (64.8 km/h)"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Relative Speed Method):\nStep 1: पहली ट्रेन पेड़ को 20 सेकंड में पार करती है (ट्रेन की लंबाई = 300 मीटर):\n$$\\text{पहली ट्रेन की गति } (S_1) = $\\frac{300}{20}$ = 15\\text{ मीटर/सेकंड}$$\nStep 2: दोनों ट्रेनों की लंबाइयाँ समान (300 मीटर प्रत्येक) हैं।\nविपरीत दिशा में एक-दूसरे को पार करने में तय कुल दूरी = $300 + 300 = 600$ मीटर।\nStep 3: पार करने में 25 सेकंड लगते हैं, अतः सापेक्ष गति:\n$$\\text{सापेक्ष गति} = $\\frac{600}{25}$ = 24\\text{ मीटर/सेकंड}$$\nStep 4: विपरीत दिशा में सापेक्ष गति $S_1 + S_2 = 24$ मीटर/सेकंड:\n$$15 + S_2 = 24 \\implies S_2 = 24 - 15 = 9\\text{ मीटर/सेकंड}$$\n(किमी/घंटा में: $9 \\times \\frac{18}{5} = 32.4$ किमी/घंटा)।\nअतः सही विकल्प  9 m/s (32.4 km/h) है।\n\nMethod 2 (Ratio Method):\nStep 1: पहली ट्रेन की गति = 15 m/s.\nStep 2: दोनों का योग = $600 / 25 = 24$ m/s.\nStep 3: दूसरी ट्रेन की गति = $24 - 15 = 9$ m/s = 32.4 km/h.\nअतः सही उत्तर '9 m/s (32.4 km/h)' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_11",
+    "qe": "A 320 m long train completely crosses a 240 m long train, coming from the opposite direction, in y seconds. If the first train is travelling at the speed of 44 km/h and the second train is travelling at 56.8 km/h, then what is the value of y?",
+    "qh": "320 मीटर लंबी एक ट्रेन, विपरीत दिशा से आ रही 240 मीटर लंबी एक ट्रेन को y सेकंड में पूरी तरह पार कर लेती है। यदि पहली ट्रेन 44 किमी/घंटा की गति से चल रही है और दूसरी ट्रेन 56.8 किमी/घंटा की गति से चल रही है, तो y का मान क्या है?",
+    "oe": [
+      "21",
+      "18",
+      "20",
+      "22"
+    ],
+    "oh": [
+      "21",
+      "18",
+      "20",
+      "22"
+    ],
+    "a": 2,
+    "e": "Method 1 (Relative Speed Formula Method):\nStep 1: पार करने में तय की जाने वाली कुल दूरी निकालें:\n$$\\text{कुल दूरी} = L_1 + L_2 = 320 + 240 = 560\\text{ मीटर}$$\nStep 2: विपरीत दिशा में सापेक्ष गति (Relative Speed) निकालें:\n$$\\text{सापेक्ष गति} = 44 + 56.8 = 100.8\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर:\n$$\\text{सापेक्ष गति} = 100.8 $\\times$ $\\frac{5}{18}$ = 5.6 $\\times$ 5 = 28\\text{ मीटर/सेकंड}$$\nStep 3: पार करने में लगा समय ($y$):\n$$y = \\frac{\\text{कुल दूरी}}{\\text{सापेक्ष गति}} = $\\frac{560}{28}$ = 20\\text{ सेकंड}$$\nअतः सही विकल्प  20 है।\n\nMethod 2 (Direct Single Step Formula):\n$$y = \\frac{320 + 240}{(44 + 56.8) $\\times$ $\\frac{5}{18}$} = \\frac{560}{100.8 $\\times$ $\\frac{5}{18}$} = $\\frac{560}{28}$ = 20\\text{ सेकंड}$$\nअतः सही उत्तर '20' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_12",
+    "qe": "A train of length 640 m crosses another train of length 920 m in 24 seconds. Two trains are running in opposite direction. If the speed of both the trains is same, what is the speed of the two trains?",
+    "qh": "640 मीटर लंबी एक ट्रेन विपरीत दिशा में चल रही 920 मीटर लंबी दूसरी ट्रेन को 24 सेकंड में पार करती है। यदि दोनों ट्रेनों की गति समान है, तो दोनों ट्रेनों की गति क्या है?",
+    "oe": [
+      "117 km/hr",
+      "105 km/hr",
+      "136 km/hr",
+      "129 km/hr"
+    ],
+    "oh": [
+      "117 km/hr",
+      "105 km/hr",
+      "136 km/hr",
+      "129 km/hr"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: दोनों ट्रेनों को एक-दूसरे को पार करने में तय कुल दूरी:\n$$\\text{कुल दूरी} = 640 + 920 = 1560\\text{ मीटर}$$\nStep 2: दोनों ट्रेनों की संयुक्त सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = \\frac{\\text{कुल दूरी}}{\\text{समय}} = $\\frac{1560}{24}$ = 65\\text{ मीटर/सेकंड}$$\nStep 3: चूँकि दोनों ट्रेनें विपरीत दिशा में समान गति ($s$) से चल रही हैं:\n$$\\text{सापेक्ष गति} = s + s = 2s = 65 \\implies s = 32.5\\text{ मीटर/सेकंड}$$\nStep 4: गति को किमी/घंटा में बदलें:\n$$s = 32.5 $\\times$ $\\frac{18}{5}$ = 6.5 $\\times$ 18 = 117\\text{ किमी/घंटा}$$\nअतः प्रत्येक ट्रेन की गति 117 किमी/घंटा है।\nअतः सही विकल्प  117 km/hr है।\n\nMethod 2 (Direct Conversion Method):\nStep 1: कुल सापेक्ष गति (किमी/घंटा में) = $\\frac{1560}{24} \\times \\frac{18}{5} = 65 \\times 3.6 = 234$ किमी/घंटा।\nStep 2: समान गति होने के कारण प्रत्येक की गति = $\\frac{234}{2} = 117$ किमी/घंटा।\nअतः सही उत्तर '117 km/hr' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "trainopposite_13",
+    "qe": "Train 'P' can cross a pole in 8 seconds, while train 'Q' takes 15 seconds to cross train 'P' when they travel in opposite directions on parallel tracks. If the ratio of length of train 'P' to that of train 'Q' is 2:3 and the speed of train 'P' is 54 km/h, then find the speed (in km/h) of train 'Q'.",
+    "qh": "ट्रेन 'P' एक खंभे को 8 सेकंड में पार कर सकती है, जबकि समानांतर पटरियों पर विपरीत दिशाओं में यात्रा करते समय ट्रेन 'Q' को ट्रेन 'P' को पार करने में 15 सेकंड का समय लगता है। यदि ट्रेन 'P' की लंबाई का ट्रेन 'Q' की लंबाई से अनुपात 2:3 है और ट्रेन 'P' की गति 54 किमी/घंटा है, तो ट्रेन 'Q' की गति (किमी/घंटा में) ज्ञात कीजिए।",
+    "oe": [
+      "28 km/h",
+      "12 km/h",
+      "22 km/h",
+      "18 km/h"
+    ],
+    "oh": [
+      "28 km/h",
+      "12 km/h",
+      "22 km/h",
+      "18 km/h"
+    ],
+    "a": 3,
+    "e": "Method 1 (Step-by-Step Distance & Relative Speed Method):\nStep 1: ट्रेन P की गति को मीटर/सेकंड में बदलें:\n$$S_P = 54 $\\times$ $\\frac{5}{18}$ = 15\\text{ मीटर/सेकंड}$$\nStep 2: ट्रेन P खंभे को 8 सेकंड में पार करती है, अतः ट्रेन P की लंबाई ($L_P$):\n$$L_P = S_P $\\times$ 8 = 15 $\\times$ 8 = 120\\text{ मीटर}$$\nStep 3: लंबाइयों का अनुपात $L_P : L_Q = 2 : 3$ दिया गया है:\n$$L_Q = 120 $\\times$ $\\frac{3}{2}$ = 180\\text{ मीटर}$$\nStep 4: एक-दूसरे को पार करने में तय कुल दूरी = $L_P + L_Q = 120 + 180 = 300$ मीटर।\nStep 5: विपरीत दिशा में सापेक्ष गति निकालें (समय = 15 सेकंड):\n$$\\text{सापेक्ष गति} = $\\frac{300}{15}$ = 20\\text{ मीटर/सेकंड}$$\nStep 6: विपरीत दिशा में सापेक्ष गति $S_P + S_Q = 20$ मीटर/सेकंड:\n$$15 + S_Q = 20 \\implies S_Q = 5\\text{ मीटर/सेकंड}$$\nStep 7: ट्रेन Q की गति को किमी/घंटा में बदलें:\n$$S_Q = 5 $\\times$ $\\frac{18}{5}$ = 18\\text{ किमी/घंटा}$$\nअतः सही विकल्प  18 km/h है।\n\nMethod 2 (Ratio Formulation Method):\nStep 1: $L_P = 15 \\times 8 = 120$ मीटर $\\implies L_Q = 180$ मीटर।\nStep 2: $S_P + S_Q = \\frac{120 + 180}{15} = 20$ मीटर/सेकंड।\nStep 3: $S_Q = 20 - 15 = 5$ मीटर/सेकंड = $5 \\times 3.6 = 18$ किमी/घंटा।\nअतः सही उत्तर '18 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]

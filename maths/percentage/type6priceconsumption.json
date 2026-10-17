@@ -1,0 +1,268 @@
+[
+  {
+    "p_id": "type6priceconsumption_1",
+    "qe": "If the price of a commodity is increased by 25%, by what percentage should its consumption be decreased so that the expenditure of the commodity stays the same?",
+    "qh": "यदि किसी वस्तु के मूल्य में 25% की वृद्धि होती है, तो उसके उपभोग में कितने प्रतिशत की कमी की जानी चाहिए ताकि वस्तु पर होने वाला खर्च समान रहे?",
+    "oe": [
+      "18.5%",
+      "20.0%",
+      "22.5%",
+      "25.0%"
+    ],
+    "oh": [
+      "18.5%",
+      "20.0%",
+      "22.5%",
+      "25.0%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nPrice me increase $= 25\\% = \\frac{1}{4}$.\nInitial Price : New Price $= 4 : 5$.\nHum jante hain ki $\\text{Expenditure} = \\text{Price} \\times \\text{Consumption}$.\nExpenditure constant rakhne ke liye consumption ka ratio price ka ulta hoga:\nConsumption ratio $= 5 : 4$.\nConsumption me kami $= 5 - 4 = 1$ unit (5 ke base par).\nPercentage decrease $= \\frac{1}{5} \\times 100\\% = 20.0\\%$.\nAtah sahi vikalp  20.0% hai.\n\nMethod 2 (100-Base Method):\nInitial expenditure $= 100$.\nPrice $25\\%$ badhne ke baad cost $= 125$.\nKharcha 100 par wapas laane ke liye cut $= 125 - 100 = 25$.\n125 ke base par percentage cut:\n$= \\frac{25}{125} \\times 100\\% = \\frac{1}{5} \\times 100\\% = 20.0\\%$.\nAtah sahi uttar '20.0%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_2",
+    "qe": "The cost of onions per kg is increased by 200%. A housewife reduces her consumption of onions by 60%. By what percentage does her expenditure on onions increase or decrease?",
+    "qh": "प्याज के प्रति किलोग्राम मूल्य में 200% की वृद्धि होती है। एक गृहिणी प्याज के अपने उपभोग में 60% की कमी करती है। प्याज पर उसके खर्च में कितने प्रतिशत की वृद्धि या कमी होती है?",
+    "oe": [
+      "Decreases, 20%",
+      "Increases, 20%",
+      "Decreases, 25%",
+      "Increases, 25%"
+    ],
+    "oh": [
+      "Decreases, 20%",
+      "Increases, 20%",
+      "Decreases, 25%",
+      "Increases, 25%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nPrice: $200\\%$ increase ka matlab price $(1 + 2) = 3$ guna ho gaya $\\implies$ Price ratio $= 1 : 3$.\nConsumption: $60\\%$ kami $= \\frac{3}{5} \\implies$ Consumption ratio $= 5 : (5 - 3) = 5 : 2$.\n$\\text{Expenditure} = \\text{Price} \\times \\text{Consumption}$.\nInitial Expenditure : New Expenditure $= (1 \\times 5) : (3 \\times 2) = 5 : 6$.\nExpenditure me increase $= 6 - 5 = 1$ unit (5 ke base par).\nPercentage increase $= \\frac{1}{5} \\times 100\\% = 20\\%$ (Increases, 20%).\nAtah sahi vikalp  Increases, 20% hai.\n\nMethod 2 (100-Base Method):\nInitial expenditure $= 100$.\nPrice $200\\%$ badhne ke baad intermediate cost $= 100 + 200 = 300$.\nConsumption $60\\%$ ghatne par new expenditure $= 300 - (60\\% \\text{ of } 300) = 300 - 180 = 120$.\nNet change over base $100 = 120 - 100 = +20\\%$ (Increases, 20%).\nAtah sahi uttar 'Increases, 20%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_3",
+    "qe": "The cost of wheat is increased by 20% but its consumption is decreased by 25%. Find the percentage increase or decrease in the expenditure of money.",
+    "qh": "गेहूं के मूल्य में 20% की वृद्धि होती है लेकिन इसके उपभोग में 25% की कमी आती है। खर्च में होने वाली प्रतिशत वृद्धि या कमी ज्ञात कीजिए।",
+    "oe": [
+      "10% decrease",
+      "10% increase",
+      "8% decrease",
+      "5% decrease"
+    ],
+    "oh": [
+      "10% decrease",
+      "10% increase",
+      "8% decrease",
+      "5% decrease"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nPrice ($+20\\% = \\frac{1}{5}$): ratio $= 5 : 6$.\nConsumption ($-25\\% = -\\frac{1}{4}$): ratio $= 4 : 3$.\n$\\text{Expenditure} = \\text{Price} \\times \\text{Consumption}$.\nInitial Expenditure : New Expenditure $= (5 \\times 4) : (6 \\times 3) = 20 : 18 = 10 : 9$.\nExpenditure me kami $= 10 - 9 = 1$ unit (10 ke base par).\nPercentage decrease $= \\frac{1}{10} \\times 100\\% = 10\\%$ decrease.\nAtah sahi vikalp  10% decrease hai.\n\nMethod 2 (Successive Formula):\nNet Change $= a + b + \\frac{ab}{100}$\nYahan $a = +20\\%$ aur $b = -25\\%$:\n$= 20 - 25 + \\frac{20 \\times (-25)}{100} = -5 - 5 = -10\\%$ (10% decrease).\nAtah sahi uttar '10% decrease' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_4",
+    "qe": "When the price of an article increased by 20%, a family reduced its consumption in such a way that the expenditure on it was only 8% more. By what percentage has the family reduced the consumption of the article?",
+    "qh": "जब किसी वस्तु के मूल्य में 20% की वृद्धि हुई, तो एक परिवार ने इसके उपभोग में इस प्रकार कमी की कि इस पर होने वाला खर्च केवल 8% ही बढ़ा। परिवार ने वस्तु के उपभोग में कितने प्रतिशत की कमी की?",
+    "oe": [
+      "10%",
+      "12%",
+      "15%",
+      "8%"
+    ],
+    "oh": [
+      "10%",
+      "12%",
+      "15%",
+      "8%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\n$\\text{Expenditure} = \\text{Price} \\times \\text{Consumption} \\implies \\text{Consumption} = \\frac{\\text{Expenditure}}{\\text{Price}}$.\nPrice ratio ($+20\\%$): $100 : 120 = 5 : 6$.\nExpenditure ratio ($+8\\%$): $100 : 108 = 25 : 27$.\nConsumption ratio $= \\frac{25}{5} : \\frac{27}{6} = 5 : 4.5 = 10 : 9$.\nConsumption me kami $= 10 - 9 = 1$ unit (10 ke base par).\nPercentage reduction $= \\frac{1}{10} \\times 100\\% = 10\\%$.\nAtah sahi vikalp  10% hai.\n\nMethod 2 (100-Base Method):\nInitial expenditure $= 100$.\nPrice badhne ke baad cost $= 120$.\nTarget expenditure $= 108$.\nConsumption me cut required $= 120 - 108 = 12$.\n120 ke base par percentage cut:\n$= \\frac{12}{120} \\times 100\\% = 10\\%$.\nAtah sahi uttar '10%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_5",
+    "qe": "The price of petrol is increased by 25%. A person wants to increase his expenditure by 15% only. By what percentage should he decrease his consumption?",
+    "qh": "पेट्रोल के मूल्य में 25% की वृद्धि होती है। एक व्यक्ति अपने खर्च में केवल 15% की वृद्धि करना चाहता है। उसे अपने उपभोग में कितने प्रतिशत की कमी करनी चाहिए?",
+    "oe": [
+      "6%",
+      "8%",
+      "10%",
+      "12%"
+    ],
+    "oh": [
+      "6%",
+      "8%",
+      "10%",
+      "12%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nPrice ratio: $100 : 125 = 4 : 5$.\nExpenditure ratio: $100 : 115 = 20 : 23$.\nConsumption ratio $= \\frac{\\text{Expenditure}}{\\text{Price}} = \\frac{20}{4} : \\frac{23}{5} = 5 : 4.6 = 25 : 23$.\nConsumption me kami $= 25 - 23 = 2$ units (25 par).\nPercentage decrease $= \\frac{2}{25} \\times 100\\% = 8\\%$.\nAtah sahi vikalp  8% hai.\n\nMethod 2 (100-Base Method):\nInitial Base $= 100$.\nPrice badhkar ho gayi $= 125$.\nAllowed expenditure $= 115$.\nKami kitni karni hogi $= 125 - 115 = 10$.\nBadhe hue rate 125 ke base par percentage decrease:\n$= \\frac{10}{125} \\times 100\\% = \\frac{2}{25} \\times 100\\% = 8\\%$.\nAtah sahi uttar '8%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_6",
+    "qe": "The price of sugar is decreased by 20% and therefore a household increased the consumption of sugar by 15 kg to keep the expenditure same. What was the earlier consumption?",
+    "qh": "चीनी के मूल्य में 20% की कमी आती है और इसलिए एक परिवार खर्च को समान रखने के लिए चीनी की खपत में 15 किग्रा की वृद्धि कर देता है। पहले की खपत कितनी थी?",
+    "oe": [
+      "50 kg",
+      "60 kg",
+      "75 kg",
+      "45 kg"
+    ],
+    "oh": [
+      "50 kg",
+      "60 kg",
+      "75 kg",
+      "45 kg"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nPrice decrease $= 20\\% = \\frac{1}{5}$.\nPrice ratio $= 5 : 4$.\nExpenditure same rakhne ke liye consumption ka ratio price ka ulta hoga:\nConsumption ratio $= 4 : 5$.\nConsumption me badhav $= 5 - 4 = 1$ unit.\nGiven: 1 unit $= 15\\text{ kg}$.\nEarlier consumption = 4 units $= 4 \\times 15 = 60\\text{ kg}$.\nAtah sahi vikalp  60 kg hai.\n\nMethod 2 (100-Base Method):\nBase expenditure $= 100$.\nPrice drop hone ke baad $= 80$.\nWapas 100 par aane ke liye consumption badhana hoga $= 100 - 80 = 20$.\nPercentage increase in consumption $= \\frac{20}{80} = \\frac{1}{4}$.\n$\\frac{1}{4}$ of original consumption $= 15\\text{ kg} \\implies \\text{Original Consumption} = 15 \\times 4 = 60\\text{ kg}$.\nAtah sahi uttar '60 kg' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_7",
+    "qe": "If the price of rice is reduced by 20%, it allows a person to buy 5 kg more rice for ₹1,200. The reduced rate of rice per kg is:",
+    "qh": "यदि चावल के मूल्य में 20% की कमी होती है, तो यह एक व्यक्ति को ₹1,200 में 5 किग्रा अधिक चावल खरीदने की अनुमति देता है। चावल का घटा हुआ मूल्य प्रति किग्रा क्या है?",
+    "oe": [
+      "₹40",
+      "₹48",
+      "₹50",
+      "₹60"
+    ],
+    "oh": [
+      "₹40",
+      "₹48",
+      "₹50",
+      "₹60"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Savings Method):\n₹1,200 par total bachat $= 20\\% \\text{ of } 1200 = \\frac{20}{100} \\times 1200 = ₹240$.\nIs ₹240 ki bachat ki wajah se hi 5 kg extra rice milti hai.\nReduced Rate per kg $= \\frac{₹240}{5\\text{ kg}} = ₹48\\text{ per kg}$.\nAtah sahi vikalp  ₹48 hai.\n\nMethod 2 (Ratio Method):\nPrice ratio: $20\\% = \\frac{1}{5} \\implies 5 : 4$.\nConsumption ratio $= 4 : 5$.\nConsumption increase $= 5 - 4 = 1$ unit $= 5\\text{ kg}$.\nNew total consumption = 5 units $= 5 \\times 5 = 25\\text{ kg}$.\nReduced rate $= \\frac{\\text{Total Amount}}{\\text{New Consumption}} = \\frac{1200}{25} = ₹48\\text{ per kg}$.\nAtah sahi uttar '₹48' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_8",
+    "qe": "A reduction of 20% in the price of detergent powder enables a buyer to obtain 4 kg more for ₹960. The original price of the detergent powder per kg is:",
+    "qh": "डिटर्जेंट पाउडर के मूल्य में 20% की कमी एक खरीदार को ₹960 में 4 किग्रा अधिक प्राप्त करने में सक्षम बनाती है। डिटर्जेंट पाउडर का मूल मूल्य प्रति किग्रा क्या है?",
+    "oe": [
+      "₹50",
+      "₹60",
+      "₹64",
+      "₹72"
+    ],
+    "oh": [
+      "₹50",
+      "₹60",
+      "₹64",
+      "₹72"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nPrice ratio: $20\\% = \\frac{1}{5} \\implies 5 : 4$.\nConsumption ratio $= 4 : 5$.\nIncrease in consumption $= 5 - 4 = 1$ unit.\nGiven: 1 unit $= 4\\text{ kg}$.\nOriginal consumption = 4 units $= 4 \\times 4 = 16\\text{ kg}$.\nOriginal Price per kg $= \\frac{\\text{Total Money}}{\\text{Original Consumption}} = \\frac{960}{16} = ₹60\\text{ per kg}$.\nAtah sahi vikalp  ₹60 hai.\n\nMethod 2 (100-Base / Reduced to Original Method):\n₹960 par $20\\%$ bachat $= 0.20 \\times 960 = ₹192$.\nReduced price per kg $= \\frac{192}{4} = ₹48\\text{ per kg}$.\nReduced price original price ka $80\\%$ hai:\n$80\\% = 48 \\implies 1\\% = 0.6 \\implies 100\\% = ₹60\\text{ per kg}$.\nAtah sahi uttar '₹60' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_9",
+    "qe": "A reduction of 25% in the price of wheat enables a person to buy 6 kg more for ₹600. What is the original price per kg?",
+    "qh": "गेहूं के मूल्य में 25% की कमी एक व्यक्ति को ₹600 में 6 किग्रा अधिक खरीदने में सक्षम बनाती है। गेहूं का मूल मूल्य प्रति किग्रा क्या है?",
+    "oe": [
+      "₹25",
+      "₹30",
+      "₹33.33",
+      "₹35"
+    ],
+    "oh": [
+      "₹25",
+      "₹30",
+      "₹33.33",
+      "₹35"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nPrice ratio: $25\\% = \\frac{1}{4} \\implies 4 : 3$.\nConsumption ratio $= 3 : 4$.\nIncrease in consumption $= 4 - 3 = 1$ unit.\nGiven: 1 unit $= 6\\text{ kg}$.\nOriginal consumption = 3 units $= 3 \\times 6 = 18\\text{ kg}$.\nOriginal Price per kg $= \\frac{600}{18} = \\frac{100}{3} = ₹33.33\\text{ per kg}$.\nAtah sahi vikalp  ₹33.33 hai.\n\nMethod 2 (Direct Savings Method):\n₹600 par $25\\%$ bachat $= \\frac{1}{4} \\times 600 = ₹150$.\nReduced price per kg $= \\frac{150}{6} = ₹25\\text{ per kg}$.\nOriginal Price $= \\frac{\\text{Reduced Price}}{1 - 0.25} = \\frac{25}{0.75} = \\frac{100}{3} = ₹33.33\\text{ per kg}$.\nAtah sahi uttar '₹33.33' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_10",
+    "qe": "If the price of a pen decreases by 20%, then a person can buy 4 more pens for ₹160. What is the new price (in ₹) of each pen?",
+    "qh": "यदि एक पेन के मूल्य में 20% की कमी होती है, तो एक व्यक्ति ₹160 में 4 पेन अधिक खरीद सकता है। प्रत्येक पेन का नया मूल्य (₹ में) क्या है?",
+    "oe": [
+      "₹6",
+      "₹8",
+      "₹10",
+      "₹12"
+    ],
+    "oh": [
+      "₹6",
+      "₹8",
+      "₹10",
+      "₹12"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Savings Method):\n₹160 par $20\\%$ ki bachat $= \\frac{20}{100} \\times 160 = ₹32$.\nIs bache hue ₹32 me 4 extra pen aate hain.\nNew Price of each pen $= \\frac{₹32}{4} = ₹8$.\nAtah sahi vikalp  ₹8 hai.\n\nMethod 2 (Ratio Method):\nPrice ratio: $5 : 4$.\nQuantity ratio: $4 : 5$.\nQuantity me increase $= 5 - 4 = 1$ unit $= 4\\text{ pens}$.\nNew total quantity = 5 units $= 5 \\times 4 = 20\\text{ pens}$.\nNew Price per pen $= \\frac{160}{20} = ₹8$.\nAtah sahi uttar '₹8' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_11",
+    "qe": "A 20% decrease in the cost of flour enables a consumer to purchase an additional 4 kg for ₹480. What was the initial price per kg of the flour?",
+    "qh": "आटे के मूल्य में 20% की कमी होने से एक उपभोक्ता ₹480 में 4 किग्रा अधिक आटा खरीद सकता है। आटे का प्रारंभिक मूल्य प्रति किग्रा क्या था?",
+    "oe": [
+      "₹24",
+      "₹30",
+      "₹32",
+      "₹36"
+    ],
+    "oh": [
+      "₹24",
+      "₹30",
+      "₹32",
+      "₹36"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nPrice me kami $= 20\\% = \\frac{1}{5}$.\nPrice ka ratio $= 5 : 4$.\nExpenditure same rakhne ke liye consumption ka ratio price ka ulta hoga:\nConsumption ratio $= 4 : 5$.\nConsumption me badhav $= 5 - 4 = 1$ unit.\nGiven: 1 unit $= 4\\text{ kg}$.\nInitial consumption = 4 units $= 4 \\times 4 = 16\\text{ kg}$.\nInitial price per kg $= \\frac{\\text{Total Money}}{\\text{Initial Consumption}} = \\frac{480}{16} = ₹30\\text{ per kg}$.\nAtah sahi vikalp  ₹30 hai.\n\nMethod 2 (Direct Savings Method):\n₹480 par total savings $= 20\\% \\text{ of } 480 = \\frac{20}{100} \\times 480 = ₹96$.\nIs ₹96 ki wajah se 4 kg extra aata milta hai.\nReduced price per kg $= \\frac{96}{4} = ₹24\\text{ per kg}$.\nKyunki reduced price original price ka $80\\%$ hai:\nOriginal Price $= \\frac{24}{0.80} = ₹30\\text{ per kg}$.\nAtah sahi uttar '₹30' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_12",
+    "qe": "The reduction of 20% in the price of salt enables a person to buy 4 kg more for ₹320. The reduced price of salt per kg (in ₹) is:",
+    "qh": "नमक के मूल्य में 20% की कमी होने पर एक व्यक्ति ₹320 में 4 किग्रा अधिक नमक खरीद सकता है। नमक का घटा हुआ मूल्य प्रति किग्रा (₹ में) क्या है?",
+    "oe": [
+      "₹16",
+      "₹18",
+      "₹20",
+      "₹22"
+    ],
+    "oh": [
+      "₹16",
+      "₹18",
+      "₹20",
+      "₹22"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Savings Method):\n₹320 par $20\\%$ ki bachat $= \\frac{20}{100} \\times 320 = ₹64$.\nIs bachat se 4 kg extra salt milti hai.\nReduced price per kg $= \\frac{₹64}{4\\text{ kg}} = ₹16\\text{ per kg}$.\nAtah sahi vikalp  ₹16 hai.\n\nMethod 2 (Ratio Method):\nPrice ratio: $20\\% = \\frac{1}{5} \\implies 5 : 4$.\nConsumption ratio $= 4 : 5$.\nConsumption increase $= 5 - 4 = 1$ unit $= 4\\text{ kg}$.\nNew total consumption = 5 units $= 5 \\times 4 = 20\\text{ kg}$.\nReduced rate per kg $= \\frac{320}{20} = ₹16\\text{ per kg}$.\nAtah sahi uttar '₹16' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_13",
+    "qe": "A reduction of 25% in the price of bananas enables a customer to buy 4 more bananas for ₹60. What is the reduced price of bananas per dozen (in ₹)?",
+    "qh": "केले के मूल्य में 25% की कमी एक ग्राहक को ₹60 में 4 केले अधिक खरीदने में सक्षम बनाती है। प्रति दर्जन केले का घटा हुआ मूल्य (₹ में) क्या है?",
+    "oe": [
+      "₹40",
+      "₹45",
+      "₹48",
+      "₹50"
+    ],
+    "oh": [
+      "₹40",
+      "₹45",
+      "₹48",
+      "₹50"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Savings Method):\n₹60 par total bachat $= 25\\% \\text{ of } 60 = \\frac{1}{4} \\times 60 = ₹15$.\nIs ₹15 me 4 extra bananas milte hain.\nReduced price per banana $= \\frac{₹15}{4}$.\n1 dozen me 12 bananas hote hain, isliye:\nReduced price per dozen $= \\frac{15}{4} \\times 12 = 15 \\times 3 = ₹45$.\nAtah sahi vikalp  ₹45 hai.\n\nMethod 2 (Ratio Method):\nPrice ratio: $25\\% = \\frac{1}{4} \\implies 4 : 3$.\nQuantity ratio $= 3 : 4$.\nIncrease in quantity $= 4 - 3 = 1$ unit $= 4\\text{ bananas}$.\nNew quantity = 4 units $= 4 \\times 4 = 16\\text{ bananas}$.\nReduced price for 16 bananas $= ₹60$.\nReduced price for 1 dozen (12 bananas) $= \\frac{60}{16} \\times 12 = \\frac{15}{4} \\times 12 = ₹45$.\nAtah sahi uttar '₹45' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type6priceconsumption_14",
+    "qe": "A reduction of 25% in the price of sugar enables a person to buy 4 kg more for ₹300. What is the original price per kg?",
+    "qh": "चीनी के मूल्य में 25% की कमी एक व्यक्ति को ₹300 में 4 किग्रा अधिक चीनी खरीदने में सक्षम बनाती है। चीनी का मूल मूल्य प्रति किग्रा क्या है?",
+    "oe": [
+      "₹20.00",
+      "₹22.50",
+      "₹25.00",
+      "₹27.50"
+    ],
+    "oh": [
+      "₹20.00",
+      "₹22.50",
+      "₹25.00",
+      "₹27.50"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nPrice ratio: $25\\% = \\frac{1}{4} \\implies 4 : 3$.\nConsumption ratio $= 3 : 4$.\nConsumption increase $= 4 - 3 = 1$ unit.\nGiven: 1 unit $= 4\\text{ kg}$.\nOriginal consumption = 3 units $= 3 \\times 4 = 12\\text{ kg}$.\nOriginal price per kg $= \\frac{\\text{Total Money}}{\\text{Original Consumption}} = \\frac{300}{12} = ₹25\\text{ per kg}$.\nAtah sahi vikalp  ₹25.00 hai.\n\nMethod 2 (Direct Savings Method):\n₹300 par $25\\%$ bachat $= \\frac{1}{4} \\times 300 = ₹75$.\nReduced rate per kg $= \\frac{75}{4} = ₹18.75\\text{ per kg}$.\nReduced price original price ka $75\\%$ ($0.75$) hai:\nOriginal Price $= \\frac{18.75}{0.75} = \\frac{1875}{75} = ₹25\\text{ per kg}$.\nAtah sahi uttar '₹25.00' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
