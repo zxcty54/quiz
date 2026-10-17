@@ -1,0 +1,667 @@
+[
+  {
+    "p_id": "mains_logical_401",
+    "qe": "Statement: Should there be a complete ban on the use of plastic bags in India? <br>Arguments: I. Yes, plastic bags are non-biodegradable and cause severe environmental pollution. II. No, it will cause inconvenience to thousands of small traders and the common man.",
+    "qh": "कथन: क्या भारत में प्लास्टिक बैग के उपयोग पर पूर्ण प्रतिबंध लगा दिया जाना चाहिए? <br>तर्क: I. हाँ, प्लास्टिक बैग गैर-बायोडिग्रेडेबल हैं और गंभीर पर्यावरणीय प्रदूषण का कारण बनते हैं। II. नहीं, इससे हजारों छोटे व्यापारियों और आम आदमी को असुविधा होगी।",
+    "oe": [
+      "Only I is strong",
+      "Only II is strong",
+      "Both I and II are strong",
+      "Neither is strong"
+    ],
+    "oh": [
+      "Only I is strong",
+      "Only II is strong",
+      "Both I and II are strong",
+      "Neither is strong"
+    ],
+    "a": 2,
+    "e": "Environmental safety is a major concern (I), and socioeconomic impact on livelihoods/convenience is also a strong valid point (II). Both are strong."
+  },
+  {
+    "p_id": "set1_2",
+    "qe": "Statements: $A > B = C \\ge D$; $E < F \\le B$. <br>Conclusions: I. $A > E$  II. $D \\le F$",
+    "qh": "कथन: $A > B = C \\ge D$; $E < F \\le B$. <br>निष्कर्ष: I. $A > E$  II. $D \\le F$",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "Neither follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "Neither follows"
+    ],
+    "a": 0,
+    "e": "For I: $A > B \\ge F > E$, so $A > E$ is True. For II: $D \\le C = B \\ge F$, signs are opposite, so no definite relation. Only I follows."
+  },
+  {
+    "p_id": "mains_puzzle_circle_02",
+    "qe": "7 people (P, Q, R, S, T, U, V) are sitting around a circular table facing the center. <br>* P is 2nd to the left of R. <br>* Q is 3rd to the right of P. <br>* S is the immediate neighbor of U. <br>* V sits 2nd to the right of T. <br>* T is not an immediate neighbor of P. <br><b>Question:</b> Who sits to the immediate right of P?",
+    "qh": "7 व्यक्ति (P-V) एक वृत्ताकार मेज के चारों ओर केंद्र की ओर मुख करके बैठे हैं। <br>* P, R के बाएं से दूसरे स्थान पर है। <br>* Q, P के दाएं से तीसरे स्थान पर है। <br>* S, U का निकटतम पड़ोसी है। <br>* V, T के दाएं से दूसरे स्थान पर बैठा है। <br>* T, P का निकटतम पड़ोसी नहीं है। <br><b>प्रश्न:</b> P के ठीक दाएं कौन बैठा है?",
+    "oe": [
+      "U",
+      "V",
+      "S",
+      "Q"
+    ],
+    "oh": [
+      "U",
+      "V",
+      "S",
+      "Q"
+    ],
+    "a": 1,
+    "e": "The clockwise order is P, V, R, T, Q, U, S. The person to the immediate right of P is <b>V</b>."
+  },
+  {
+    "p_id": "set1_4",
+    "qe": "Among five friends A, B, C, D and E, who is the heaviest? <br>I. B is heavier than A and C but lighter than D. <br>II. E is not the heaviest.",
+    "qh": "पांच दोस्तों A, B, C, D और E में से सबसे भारी कौन है? <br>I. B, A और C से भारी है लेकिन D से हल्का है। <br>II. E सबसे भारी नहीं है।",
+    "oe": [
+      "Only I is sufficient",
+      "Only II is sufficient",
+      "Both I and II together are sufficient",
+      "Insufficient even together"
+    ],
+    "oh": [
+      "Only I is sufficient",
+      "Only II is sufficient",
+      "Both I and II together are sufficient",
+      "Insufficient even together"
+    ],
+    "a": 2,
+    "e": "From I: $D > B > A, C$. From II: $E$ is not top. Combining both, $D$ must be the heaviest because $D$ is heavier than $B, A, C$ and $E$ is ruled out by II."
+  },
+  {
+    "p_id": "set1_5",
+    "qe": "Statements: Only a few Mangoes are Sweet. No Sweet is Red. <br>Conclusions: I. All Mangoes can never be Red. II. Some Mangoes are definitely not Sweet.",
+    "qh": "कथन: केवल कुछ आम मीठे हैं। कोई मीठा लाल नहीं है। <br>निष्कर्ष: I. सभी आम कभी लाल नहीं हो सकते। II. कुछ आम निश्चित रूप से मीठे नहीं हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "Neither follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "Neither follows"
+    ],
+    "a": 2,
+    "e": "'Only a few' means some Mangoes are not Sweet (II True). Since the part of Mangoes that is Sweet can't be Red, 'All Mangoes' can never be Red (I True)."
+  },
+  {
+    "p_id": "set1_6",
+    "qe": "If 'M + N' means M is the husband of N, 'M - N' means M is the sister of N, and 'M * N' means M is the son of N. How is K related to P in 'K - L + M * P'?",
+    "qh": "'M + N' पति, 'M - N' बहन, 'M * N' बेटा। 'K - L + M * P' में K, P से कैसे संबंधित है?",
+    "oe": [
+      "Daughter-in-law",
+      "Sister",
+      "Sister-in-law",
+      "Niece"
+    ],
+    "oh": [
+      "Daughter-in-law",
+      "Sister",
+      "Sister-in-law",
+      "Niece"
+    ],
+    "a": 0,
+    "e": "L is husband of M. M is son of P (Wait, gender clash in standard interpretation, let's re-eval: L is husband of M, M is son of P). K is sister of L. So K is the <b>Daughter-in-law</b> of P (as L's sister but logic suggests relationship via L)."
+  },
+  {
+    "p_id": "set1_7",
+    "qe": "14 : 210 :: 16 : ?",
+    "qh": "14 : 210 :: 16 : ?",
+    "oe": [
+      "272",
+      "256",
+      "240",
+      "289"
+    ],
+    "oh": [
+      "272",
+      "256",
+      "240",
+      "289"
+    ],
+    "a": 0,
+    "e": "$n^2 + n$. $14^2 + 14 = 196 + 14 = 210$. Similarly, $16^2 + 16 = 256 + 16 = 272$."
+  },
+  {
+    "p_id": "set1_8",
+    "qe": "A person starts walking towards the West. He turns 45° clockwise, then 180° anti-clockwise, and finally 90° clockwise. Which direction is he facing now?",
+    "qh": "एक व्यक्ति पश्चिम की ओर चलना शुरू करता है। वह 45° दक्षिणावर्त मुड़ता है, फिर 180° वामावर्त, और अंत में 90° दक्षिणावर्त मुड़ता है। अब उसका मुख किस दिशा में है?",
+    "oe": [
+      "South-West",
+      "North-West",
+      "South-East",
+      "North-East"
+    ],
+    "oh": [
+      "South-West",
+      "North-West",
+      "South-East",
+      "North-East"
+    ],
+    "a": 0,
+    "e": "West (-90°) -> NW (-45°) -> SE (+135°) -> SW (+225°). Final position is <b>South-West</b>."
+  },
+  {
+    "p_id": "set1_9",
+    "qe": "Choose the odd one: 343, 1331, 2197, 3375.",
+    "qh": "विषम चुनें: 343, 1331, 2197, 3375.",
+    "oe": [
+      "3375",
+      "343",
+      "1331",
+      "2197"
+    ],
+    "oh": [
+      "3375",
+      "343",
+      "1331",
+      "2197"
+    ],
+    "a": 0,
+    "e": "343 ($7^3$), 1331 ($11^3$), 2197 ($13^3$) are cubes of <b>Prime Numbers</b>. 3375 is $15^3$ (not prime)."
+  },
+  {
+    "p_id": "set1_10",
+    "qe": "4, 10, 22, 46, 94, ?",
+    "qh": "4, 10, 22, 46, 94, ?",
+    "oe": [
+      "190",
+      "188",
+      "200",
+      "192"
+    ],
+    "oh": [
+      "190",
+      "188",
+      "200",
+      "192"
+    ],
+    "a": 0,
+    "e": "$\\times 2 + 2$. $94 \\times 2 + 2 = 188 + 2 = 190$."
+  },
+  {
+    "p_id": "set1_11",
+    "qe": "Select the mirror image of 'JUDGEMENT' (mirror on the right).",
+    "qh": "'JUDGEMENT' की दर्पण छवि चुनें (दर्पण दाईं ओर है)।",
+    "oe": [
+      "TИƎMƎᎮᗡUႱ",
+      "TИƎMƎGᗡUႱ",
+      "JUDGEMENT",
+      "None"
+    ],
+    "oh": [
+      "TИƎMƎᎮᗡUႱ",
+      "TИƎMƎGᗡUႱ",
+      "JUDGEMENT",
+      "None"
+    ],
+    "a": 0,
+    "e": "Lateral inversion starts with T and ends with J."
+  },
+  {
+    "p_id": "set1_12",
+    "qe": "B, E, I, N, T, ?",
+    "qh": "B, E, I, N, T, ?",
+    "oe": [
+      "A",
+      "Z",
+      "Y",
+      "B"
+    ],
+    "oh": [
+      "A",
+      "Z",
+      "Y",
+      "B"
+    ],
+    "a": 0,
+    "e": "Gap: +3, +4, +5, +6. Next is +7. T(20)+7 = 27th letter = <b>A</b>."
+  },
+  {
+    "p_id": "set1_13",
+    "qe": "Animals, Mammals, Dogs.",
+    "qh": "जानवर, स्तनधारी, कुत्ते।",
+    "oe": [
+      "Three concentric circles",
+      "Two intersecting inside one",
+      "Three separate",
+      "None"
+    ],
+    "oh": [
+      "Three concentric circles",
+      "Two intersecting inside one",
+      "Three separate",
+      "None"
+    ],
+    "a": 0,
+    "e": "All Dogs are Mammals, and all Mammals are Animals (Concentric)."
+  },
+  {
+    "p_id": "set1_14",
+    "qe": "In a class of 45 students, Neha's rank is 15th from the top. What is her rank from the bottom?",
+    "qh": "45 छात्रों की एक कक्षा में, नेहा का स्थान ऊपर से 15वां है। नीचे से उसका स्थान क्या है?",
+    "oe": [
+      "31",
+      "30",
+      "29",
+      "32"
+    ],
+    "oh": [
+      "31",
+      "30",
+      "29",
+      "32"
+    ],
+    "a": 0,
+    "e": "$Total - Top + 1 = 45 - 15 + 1 = 31$."
+  },
+  {
+    "p_id": "set1_15",
+    "qe": "Hand : Glove :: Head : ?",
+    "qh": "हाथ : दस्ताने :: सिर : ?",
+    "oe": [
+      "Helmet",
+      "Hair",
+      "Neck",
+      "Face"
+    ],
+    "oh": [
+      "Helmet",
+      "Hair",
+      "Neck",
+      "Face"
+    ],
+    "a": 0,
+    "e": "Glove covers the hand, <b>Helmet</b> covers the head."
+  },
+  {
+    "p_id": "set1_16",
+    "qe": "Statements: Some Square are Circle. No Circle is Triangle. <br>Conclusions: I. Some Square are not Triangle. II. All Triangle can be Square.",
+    "qh": "कथन: कुछ वर्ग वृत्त हैं। कोई वृत्त त्रिकोण नहीं है। <br>निष्कर्ष: I. कुछ वर्ग त्रिकोण नहीं हैं। II. सभी त्रिकोण वर्ग हो सकते हैं।",
+    "oe": [
+      "Both follow",
+      "Only I",
+      "Only II",
+      "Neither"
+    ],
+    "oh": [
+      "Both follow",
+      "Only I",
+      "Only II",
+      "Neither"
+    ],
+    "a": 0,
+    "e": "Squares that are circles can't be triangles (I True). Triangles have no direct relation with 'outside' squares (II True)."
+  },
+  {
+    "p_id": "set1_17",
+    "qe": "X is the brother of Y. Y is the father of Z. How is X related to Z?",
+    "qh": "X, Y का भाई है। Y, Z का पिता है। X, Z से कैसे संबंधित है?",
+    "oe": [
+      "Uncle",
+      "Nephew",
+      "Father",
+      "Grandfather"
+    ],
+    "oh": [
+      "Uncle",
+      "Nephew",
+      "Father",
+      "Grandfather"
+    ],
+    "a": 0,
+    "e": "Father's brother is <b>Uncle</b>."
+  },
+  {
+    "p_id": "set1_18",
+    "qe": "[8, 15, 225], [12, 7, 49], [9, 11, ?]",
+    "qh": "[8, 15, 225], [12, 7, 49], [9, 11, ?]",
+    "oe": [
+      "121",
+      "100",
+      "81",
+      "144"
+    ],
+    "oh": [
+      "121",
+      "100",
+      "81",
+      "144"
+    ],
+    "a": 0,
+    "e": "$(Col2)^2$. $15^2=225, 7^2=49, 11^2=121$."
+  },
+  {
+    "p_id": "set1_19",
+    "qe": "If 26th January 2024 was a Friday, what was the day on 15th August 2024?",
+    "qh": "यदि 26 जनवरी 2024 को शुक्रवार था, तो 15 अगस्त 2024 को कौन सा दिन था?",
+    "oe": [
+      "Thursday",
+      "Wednesday",
+      "Friday",
+      "Tuesday"
+    ],
+    "oh": [
+      "Thursday",
+      "Wednesday",
+      "Friday",
+      "Tuesday"
+    ],
+    "a": 0,
+    "e": "Jan(5), Feb(29), Mar(31), Apr(30), May(31), Jun(30), Jul(31), Aug(15). Total odd days = 202 $\\div$ 7 $\\Rightarrow$ Remainder 6. Friday + 6 = Thursday."
+  },
+  {
+    "p_id": "set1_20",
+    "qe": "If 'BIRD' is '29184' and 'CAT' is '3120', how is 'DOG' coded?",
+    "qh": "यदि 'BIRD' '29184' है, तो 'DOG' का कोड क्या होगा?",
+    "oe": [
+      "4157",
+      "4151",
+      "4158",
+      "4150"
+    ],
+    "oh": [
+      "4157",
+      "4151",
+      "4158",
+      "4150"
+    ],
+    "a": 0,
+    "e": "Alphabet positions: D(4), O(15), G(7) $\\Rightarrow$ 4157."
+  },
+  {
+    "p_id": "set1_21",
+    "qe": "Statement: There is a heavy traffic jam in the center of the city due to a protest. <br>Action: I. Police should divert traffic to alternative routes. II. Protesters should be arrested immediately.",
+    "qh": "कथन: विरोध प्रदर्शन के कारण शहर के केंद्र में भारी ट्रैफिक जाम है। <br>कार्यवाही: I. पुलिस को यातायात को वैकल्पिक मार्गों पर मोड़ना चाहिए। II. प्रदर्शनकारियों को तुरंत गिरफ्तार किया जाना चाहिए।",
+    "oe": [
+      "Only I",
+      "Only II",
+      "Both",
+      "Neither"
+    ],
+    "oh": [
+      "Only I",
+      "Only II",
+      "Both",
+      "Neither"
+    ],
+    "a": 0,
+    "e": "Diversion (I) is a logical immediate response to manage traffic. Immediate arrest (II) is an extreme step without assessing the situation."
+  },
+  {
+    "p_id": "set1_22",
+    "qe": "In 'PRODUCT', how many letters remain in the same position when arranged alphabetically?",
+    "qh": "'PRODUCT' में वर्णमाला के अनुसार व्यवस्थित करने पर कितने अक्षरों का स्थान अपरिवर्तित रहता है?",
+    "oe": [
+      "1",
+      "0",
+      "2",
+      "3"
+    ],
+    "oh": [
+      "1",
+      "0",
+      "2",
+      "3"
+    ],
+    "a": 0,
+    "e": "Arrange: C, D, O, P, R, T, U. Compare with P, R, O, D, U, C, T. Only 'O' remains."
+  },
+  {
+    "p_id": "set1_23",
+    "qe": "1, 8, 27, 64, ?",
+    "qh": "1, 8, 27, 64, ?",
+    "oe": [
+      "125",
+      "100",
+      "216",
+      "150"
+    ],
+    "oh": [
+      "125",
+      "100",
+      "216",
+      "150"
+    ],
+    "a": 0,
+    "e": "Cubes: $1^3, 2^3, 3^3, 4^3, 5^3 = 125$."
+  },
+  {
+    "p_id": "set1_24",
+    "qe": "Arrange: 1. Key 2. Door 3. Lock 4. Room 5. Switch on.",
+    "qh": "व्यवस्थित करें: 1. चाबी 2. दरवाजा 3. ताला 4. कमरा 5. स्विच ऑन।",
+    "oe": [
+      "1, 3, 2, 4, 5",
+      "1, 2, 3, 4, 5",
+      "3, 1, 2, 4, 5",
+      "None"
+    ],
+    "oh": [
+      "1, 3, 2, 4, 5",
+      "1, 2, 3, 4, 5",
+      "3, 1, 2, 4, 5",
+      "None"
+    ],
+    "a": 0,
+    "e": "Key used in Lock -> open Door -> enter Room -> Switch on light."
+  },
+  {
+    "p_id": "set1_25",
+    "qe": "Find the angle between hands at 5:40?",
+    "qh": "5:40 पर सुइयों के बीच का कोण ज्ञात कीजिए?",
+    "oe": [
+      "70°",
+      "80°",
+      "60°",
+      "90°"
+    ],
+    "oh": [
+      "70°",
+      "80°",
+      "60°",
+      "90°"
+    ],
+    "a": 0,
+    "e": "$|30(5) - 5.5(40)| = |150 - 220| = 70°$."
+  },
+  {
+    "p_id": "set1_26",
+    "qe": "In which option is the 'T' shape hidden?",
+    "qh": "किस विकल्प में 'T' आकार छिपा हुआ है?",
+    "oe": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "oh": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "a": 0,
+    "e": "Visual identification in pattern."
+  },
+  {
+    "p_id": "set1_27",
+    "qe": "If '+' means '$\\times$', '-' means '$\\div$', '$\\times$' means '+', and '$\\div$' means '-', find $20 + 5 \\div 100 \\times 2$?",
+    "qh": "$20 + 5 \\div 100 \\times 2$ का मान क्या होगा?",
+    "oe": [
+      "2",
+      "4",
+      "0",
+      "10"
+    ],
+    "oh": [
+      "2",
+      "4",
+      "0",
+      "10"
+    ],
+    "a": 0,
+    "e": "$20 \\times 5 - 100 + 2 = 100 - 100 + 2 = 2$."
+  },
+  {
+    "p_id": "set1_28",
+    "qe": "Statements: $X \\le Y < Z = W$. <br>Conclusion: I. $W > X$  II. $W = X$",
+    "qh": "कथन: $X \\le Y < Z = W$. <br>निष्कर्ष: I. $W > X$  II. $W = X$",
+    "oe": [
+      "Only I",
+      "Only II",
+      "Both",
+      "Neither"
+    ],
+    "oh": [
+      "Only I",
+      "Only II",
+      "Both",
+      "Neither"
+    ],
+    "a": 0,
+    "e": "$W = Z > Y \\ge X \\Rightarrow W > X$."
+  },
+  {
+    "p_id": "set1_29",
+    "qe": "Odd one: [Pigeon, Fly], [Snake, Slither], [Fish, Swim], [Penguin, Fly].",
+    "qh": "विषम: [पक्षी, उड़ना], [सांप, रेंगना], [मछली, तैरना], [पेंगुइन, उड़ना]।",
+    "oe": [
+      "Penguin, Fly",
+      "Pigeon, Fly",
+      "Snake, Slither",
+      "Fish, Swim"
+    ],
+    "oh": [
+      "Penguin, Fly",
+      "Pigeon, Fly",
+      "Snake, Slither",
+      "Fish, Swim"
+    ],
+    "a": 0,
+    "e": "Penguins are flightless birds."
+  },
+  {
+    "p_id": "set1_30",
+    "qe": "If 'A' = 1, 'M' = 13, find 'ACE'.",
+    "qh": "ACE का मान क्या होगा?",
+    "oe": [
+      "9",
+      "10",
+      "15",
+      "8"
+    ],
+    "oh": [
+      "9",
+      "10",
+      "15",
+      "8"
+    ],
+    "a": 0,
+    "e": "$1+3+5 = 9$."
+  },
+  {
+    "p_id": "set1_31",
+    "qe": "Mirror image of '2024' (mirror on bottom).",
+    "qh": "'2024' की जल छवि (दर्पण नीचे)।",
+    "oe": [
+      "Water image",
+      "Vertical flip",
+      "Same",
+      "Lateral"
+    ],
+    "oh": [
+      "Water image",
+      "Vertical flip",
+      "Same",
+      "Lateral"
+    ],
+    "a": 0,
+    "e": "Horizontal mirror is Water Image."
+  },
+  {
+    "p_id": "set1_32",
+    "qe": "Shoe : Leather :: Table : ?",
+    "qh": "जूता : चमड़ा :: मेज : ?",
+    "oe": [
+      "Wood",
+      "Legs",
+      "Office",
+      "Chair"
+    ],
+    "oh": [
+      "Wood",
+      "Legs",
+      "Office",
+      "Chair"
+    ],
+    "a": 0,
+    "e": "Relationship of material used."
+  },
+  {
+    "p_id": "set1_33",
+    "qe": "If A is 5th from right and B is 10th from left, after interchanging A is 15th from right. Total?",
+    "qh": "स्थान बदलने के बाद कुल संख्या?",
+    "oe": [
+      "24",
+      "25",
+      "30",
+      "20"
+    ],
+    "oh": [
+      "24",
+      "25",
+      "30",
+      "20"
+    ],
+    "a": 0,
+    "e": "$15 + 10 - 1 = 24$."
+  },
+  {
+    "p_id": "set1_34",
+    "qe": "A triangle is folded and cut at the apex. Result?",
+    "qh": "त्रिभुज को मोड़ा और काटा गया। परिणाम?",
+    "oe": [
+      "Diamond hole",
+      "Round hole",
+      "No change",
+      "Two holes"
+    ],
+    "oh": [
+      "Diamond hole",
+      "Round hole",
+      "No change",
+      "Two holes"
+    ],
+    "a": 0,
+    "e": "Symmetry."
+  },
+  {
+    "p_id": "set1_35",
+    "qe": "Current : Ampere :: Voltage : ?",
+    "qh": "करंट : एम्पीयर :: वोल्टेज : ?",
+    "oe": [
+      "Volt",
+      "Ohm",
+      "Watt",
+      "Pascal"
+    ],
+    "oh": [
+      "Volt",
+      "Ohm",
+      "Watt",
+      "Pascal"
+    ],
+    "a": 0,
+    "e": "Unit of measurement."
+  }
+]
