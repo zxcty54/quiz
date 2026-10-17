@@ -1,0 +1,97 @@
+[
+  {
+    "p_id": "coins_1",
+    "qe": "In one bag 50 paisa, 25 paisa and 1 rupee coins are in the ratio of 5 : 8 : 1. If the total cost of all the coins is ₹ 55 then how many coins of 25 paisa are in the bag ?",
+    "qh": "एक बैग में 50 पैसे, 25 पैसे और 1 रुपये के सिक्के 5 : 8 : 1 के अनुपात में हैं। यदि सभी सिक्कों की कुल कीमत ₹ 55 है, तो बैग में 25 पैसे के कितने सिक्के हैं?",
+    "oe": [
+      "25",
+      "10",
+      "50",
+      "80"
+    ],
+    "oh": [
+      "25",
+      "10",
+      "50",
+      "80"
+    ],
+    "a": 3,
+    "e": "Method 1 (Value per Unit Method):\nStep 1: सिक्कों की संख्या का अनुपात: 50 पैसे : 25 पैसे : ₹1 = $5 : 8 : 1$.\nमान लें सिक्कों की संख्या क्रमशः $5x$, $8x$ और $1x$ है।\nStep 2: सभी सिक्कों का कुल मूल्य (रुपये में) निकालें:\n$$\\text{कुल मूल्य} = 5x $\\times$ 0.50 + 8x $\\times$ 0.25 + 1x $\\times$ 1.00$$\n$$\\text{कुल मूल्य} = 2.50x + 2.00x + 1.00x = 5.50x$$\nStep 3: कुल मूल्य ₹55 दिया गया है:\n$$5.50x = 55 \\implies x = $\\frac{55}{5.50}$ = 10$$\nStep 4: 25 पैसे के सिक्कों की संख्या ($8x$) निकालें:\n$$\\text{सिक्कों की संख्या} = 8 $\\times$ 10 = 80$$\nअतः सही विकल्प  80 है।\n\nMethod 2 (Paise Conversion Method):\nकुल मूल्य = $55 \\times 100 = 5500$ पैसे।\nमूल्य अनुपात = $(5 \\times 50) : (8 \\times 25) : (1 \\times 100) = 250 : 200 : 100 = 550$ पैसे प्रति इकाई।\nइकाइयाँ = $5500 / 550 = 10$.\n25 पैसे के सिक्के = $8 \\times 10 = 80$.\nअतः सही उत्तर '80' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "coins_2",
+    "qe": "In a bag, the ratio of the number of ₹2, ₹1 and 50 paise coins is 3 : 4 : 5. If the total amount in the bag is Rs 250, then how many ₹1 coins are there ?",
+    "qh": "एक बैग में ₹2, ₹1 और 50 पैसे के सिक्के की संख्या का अनुपात 3 : 4 : 5 है। यदि बैग में कुल राशि ₹ 250 है, तो बैग में ₹1 के कितने सिक्के हैं?",
+    "oe": [
+      "70",
+      "100",
+      "60",
+      "80"
+    ],
+    "oh": [
+      "70",
+      "100",
+      "60",
+      "80"
+    ],
+    "a": 3,
+    "e": "Method 1 (Denomination Value Method):\nStep 1: मान लें सिक्कों की संख्या क्रमशः $3x$, $4x$ और $5x$ है।\nStep 2: कुल धनराशि (रुपये में) का समीकरण बनाएं:\n$$\\text{कुल राशि} = 3x $\\times$ 2 + 4x $\\times$ 1 + 5x $\\times$ 0.50$$\n$$\\text{कुल राशि} = 6x + 4x + 2.5x = 12.5x$$\nStep 3: दिया गया कुल मान ₹250 है:\n$$12.5x = 250 \\implies x = $\\frac{250}{12.5}$ = 20$$\nStep 4: ₹1 के सिक्कों की संख्या ($4x$) निकालें:\n$$\\text{सिक्कों की संख्या} = 4 $\\times$ 20 = 80$$\nअतः सही विकल्प  80 है।\n\nMethod 2 (Ratio Value Method):\n1 इकाई का कुल मूल्य = ₹12.5.\nकुल इकाइयाँ = $250 / 12.5 = 20$.\n₹1 के सिक्के = $4 \\times 20 = 80$.\nअतः सही उत्तर '80' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "coins_3",
+    "qe": "A man has few coins of ₹ 1 rupee, 50 p and 25 p in the ratio 1/2 : 1/3 : 1/4. If the number of 50p coins is 96. Find the total amount of coins?",
+    "qh": "एक व्यक्ति के पास 1/2 : 1/3 : 1/4 के अनुपात में ₹1, 50 पैसे और 25 पैसे के कुछ सिक्के हैं। यदि 50 पैसे के सिक्कों की संख्या 96 है, तो सिक्कों की कुल राशि ज्ञात कीजिए?",
+    "oe": [
+      "Rs 210",
+      "Rs 220",
+      "Rs 200",
+      "Rs 240"
+    ],
+    "oh": [
+      "Rs 210",
+      "Rs 220",
+      "Rs 200",
+      "Rs 240"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Normalization Method):\nStep 1: भिन्न अनुपात को पूर्णांक में बदलें (2, 3, 4 का LCM = 12):\n$$$\\le$ft($\\frac{1}{2}$ $\\times$ 12\\right) : $\\le$ft($\\frac{1}{3}$ $\\times$ 12\\right) : $\\le$ft($\\frac{1}{4}$ $\\times$ 12\\right) = 6 : 4 : 3$$\nसिक्कों की संख्या का अनुपात = 6 : 4 : 3.\nStep 2: 50 पैसे के सिक्कों का अनुपात 4 इकाइयाँ है:\n$$4\\text{ इकाइयाँ} = 96 \\implies 1\\text{ इकाई} = $\\frac{96}{4}$ = 24$$\nStep 3: प्रत्येक प्रकार के सिक्कों की संख्या निकालें:\n- ₹1 के सिक्के = $6 \\times 24 = 144$\n- 50 पैसे के सिक्के = $4 \\times 24 = 96$\n- 25 पैसे के सिक्के = $3 \\times 24 = 72$\nStep 4: सभी सिक्कों की कुल धनराशि निकालें:\n$$\\text{कुल राशि} = (144 $\\times$ 1) + (96 $\\times$ 0.50) + (72 $\\times$ 0.25)$$\n$$\\text{कुल राशि} = 144 + 48 + 18 = ₹210$$\nअतः सही विकल्प  Rs 210 है।\n\nMethod 2 (Value per Unit Method):\n1 इकाई में मूल्य = $6(1) + 4(0.5) + 3(0.25) = 6 + 2 + 0.75 = 8.75$ रुपये।\nकुल मूल्य = $24 \\times 8.75 = ₹210$.\nअतः सही उत्तर 'Rs 210' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "coins_4",
+    "qe": "Atul purchased Bread costing Rs 20 and gave a 100 rupee note to the shopkeeper. The shopkeeper gave the balance money in coins of denomination Rs 2, Rs 5 and Rs 10. If these coins are in the ratio 5:4:1, then how many Rs 5 coins did the shopkeeper give?",
+    "qh": "अतुल 20 रुपये क्रय मूल्य वाला ब्रेड खरीदता है और दुकानदार को 100 रुपये का नोट देता है। दुकानदार 2 रुपये, 5 रुपये और 10 रुपये मूल्य वर्ग के सिक्कों में शेष धन देता है। यदि इन सिक्कों का अनुपात 5 : 4 : 1 है, तो दुकानदार 5 रुपये के कितने सिक्के देता है?",
+    "oe": [
+      "5",
+      "6",
+      "8",
+      "4"
+    ],
+    "oh": [
+      "5",
+      "6",
+      "8",
+      "4"
+    ],
+    "a": 2,
+    "e": "Method 1 (Balance Equation Method):\nStep 1: दुकानदार द्वारा वापस की गई शेष राशि:\n$$\\text{शेष राशि} = 100 - 20 = ₹80$$\nStep 2: सिक्कों की संख्या का अनुपात = ₹2 : ₹5 : ₹10 = $5 : 4 : 1$.\nमान लें सिक्कों की संख्या क्रमशः $5x$, $4x$ और $1x$ है।\nStep 3: कुल मूल्य का समीकरण बनाएं:\n$$5x $\\times$ 2 + 4x $\\times$ 5 + 1x $\\times$ 10 = 80$$\n$$10x + 20x + 10x = 80$$\n$$40x = 80 \\implies x = 2$$\nStep 4: 5 रुपये के सिक्कों की संख्या ($4x$) निकालें:\n$$\\text{संख्या} = 4 $\\times$ 2 = 8$$\nअतः सही विकल्प  8 है।\n\nMethod 2 (Unit Value Method):\n1 अनुपाती सेट का मान = $(5 \\times 2) + (4 \\times 5) + (1 \\times 10) = 10 + 20 + 10 = ₹40$.\nसेट की संख्या = $80 / 40 = 2$.\n₹5 के सिक्के = $4 \\times 2 = 8$.\nअतः सही उत्तर '8' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "coins_5",
+    "qe": "Hridaya opened her piggy bank and found coins of denomination Rs. 1, Rs. 2, Rs. 5 and Rs. 10 in the ratio 10 : 5 : 2 : 1. If there are 72 coins in all, then how much money (in Rs.) was there in the piggy bank in the form of coins?",
+    "qh": "हृदय, अपना गुल्लक खोलता है और उसे 1 रुपये, 2 रुपये, 5 रुपये और 10 रुपये मूल्यवर्ग के सिक्के 10 : 5 : 2 : 1 के अनुपात में मिले। यदि कुल 72 सिक्के थे, तो सिक्कों के रूप में गुल्लक में राशि (रू में) ज्ञात करें।",
+    "oe": [
+      "160",
+      "90",
+      "72",
+      "100"
+    ],
+    "oh": [
+      "160",
+      "90",
+      "72",
+      "100"
+    ],
+    "a": 0,
+    "e": "Method 1 (Coin Count & Total Value Method):\nStep 1: सिक्कों के अनुपात का कुल योग निकालें:\n$$\\text{कुल इकाइयाँ} = 10 + 5 + 2 + 1 = 18\\text{ इकाइयाँ}$$\nStep 2: कुल 72 सिक्के हैं:\n$$18\\text{ इकाइयाँ} = 72 \\implies 1\\text{ इकाई} = $\\frac{72}{18}$ = 4$$\nStep 3: प्रत्येक मूल्यवर्ग के सिक्कों की संख्या निकालें:\n- ₹1 के सिक्के = $10 \\times 4 = 40$\n- ₹2 के सिक्के = $5 \\times 4 = 20$\n- ₹5 के सिक्के = $2 \\times 4 = 8$\n- ₹10 के सिक्के = $1 \\times 4 = 4$\nStep 4: कुल धनराशि (रुपये में) निकालें:\n$$\\text{कुल राशि} = (40 $\\times$ 1) + (20 $\\times$ 2) + (8 $\\times$ 5) + (4 $\\times$ 10)$$\n$$\\text{कुल राशि} = 40 + 40 + 40 + 40 = ₹160$$\nअतः सही विकल्प  160 है।\n\nMethod 2 (Average Value per Coin Method):\n18 सिक्कों का कुल मूल्य = $(10 \\times 1) + (5 \\times 2) + (2 \\times 5) + (1 \\times 10) = 40$ रुपये।\n72 सिक्के = $40 \\times \\frac{72}{18} = 40 \\times 4 = ₹160$.\nअतः सही उत्तर '160' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
