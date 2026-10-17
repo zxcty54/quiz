@@ -26,14 +26,37 @@ class Question {
   });
 
   String getText(bool isHindi) {
+    String raw = '';
     if (isHindi) {
-      if (qh != null && qh!.trim().isNotEmpty) return qh!;
-      if (qe.trim().isNotEmpty) return qe;
+      raw = (qh != null && qh!.trim().isNotEmpty) ? qh! : qe;
     } else {
-      if (qe.trim().isNotEmpty) return qe;
-      if (qh != null && qh!.trim().isNotEmpty) return qh!;
+      raw = qe.trim().isNotEmpty ? qe : (qh ?? '');
     }
-    return "Question text not available.";
+    if (raw.trim().isEmpty) return "Question text not available.";
+    return _stripLeadingTopic(raw);
+  }
+
+  // Purane format me topic sawal ke andar chipka aata hai
+  // (jaise "<b>Coding-Decoding:</b> Asli sawal...") — use hata do,
+  // topic nahi dikhana hai. Sirf shuruaat wala chhota bold hissa katega.
+  static String _stripLeadingTopic(String text) {
+    final String trimmed = text.trimLeft();
+    final Match? match = RegExp(
+      r'^<(b|strong)>(.*?)</\1>\s*:?\s*',
+      caseSensitive: false,
+    ).firstMatch(trimmed);
+    if (match == null) return text;
+
+    final String inner = (match.group(2) ?? '').trim();
+    if (inner.isEmpty ||
+        inner.length > 90 ||
+        inner.contains('?') ||
+        inner.split(RegExp(r'\s+')).length > 12) {
+      return text;
+    }
+
+    final String rest = trimmed.substring(match.end).trimLeft();
+    return rest.isEmpty ? text : rest;
   }
 
   List<String> getOptions(bool isHindi) {

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_math_fork/flutter_math.dart';
 
 class LatexText extends StatelessWidget {
+  // Math wala $ nahi hai to use is nishan se badal kar chhupa dete hai
+  static const String _dollarMarker = '\uE000';
+
   final String text;
   final TextStyle? style;
 
@@ -68,7 +71,63 @@ class LatexText extends StatelessWidget {
     // Clean multiple dollars ($$$ -> $$)
     cleanText = cleanText.replaceAll(RegExp(r'\$\$+'), '\$\$');
 
+    // Reasoning ke chinh (Blood Relation ka 'P $ Q', aadi) ko
+    // math samajhne se bachao — $ tabhi math jab andar sach me ganit ho
+    cleanText = _protectNonMathDollars(cleanText);
+
     return cleanText;
+  }
+
+  static bool _looksMath(String inner) {
+    final String t = inner.trim();
+    if (t.isEmpty || t.length > 120) return false;
+    if (t.contains('\\') ||
+        t.contains('^') ||
+        t.contains('_') ||
+        t.contains('{') ||
+        t.contains('}')) {
+      return true;
+    }
+    final bool hasDigit = RegExp(r'\d').hasMatch(t);
+    final bool hasOperator = RegExp(r'[=<>+\-*/×÷√π]').hasMatch(t);
+    return hasDigit && hasOperator;
+  }
+
+  static String _protectNonMathDollars(String input) {
+    final StringBuffer out = StringBuffer();
+    int i = 0;
+    while (i < input.length) {
+      final String ch = input[i];
+      if (ch != r'$') {
+        out.write(ch);
+        i++;
+        continue;
+      }
+      // Display math ($$...$$) ko haath mat lagao
+      if (input.startsWith(r'$$', i)) {
+        final int close = input.indexOf(r'$$', i + 2);
+        if (close != -1) {
+          out.write(input.substring(i, close + 2));
+          i = close + 2;
+          continue;
+        }
+      }
+      final int next = input.indexOf(r'$', i + 1);
+      if (next == -1) {
+        out.write(_dollarMarker);
+        i++;
+        continue;
+      }
+      final String inner = input.substring(i + 1, next);
+      if (_looksMath(inner)) {
+        out.write(input.substring(i, next + 1));
+        i = next + 1;
+      } else {
+        out.write(_dollarMarker);
+        i++;
+      }
+    }
+    return out.toString();
   }
 
   @override
@@ -76,7 +135,10 @@ class LatexText extends StatelessWidget {
     final String sanitizedText = cleanAndFixLaTeX(text);
 
     if (!sanitizedText.contains('\$')) {
-      return Text(sanitizedText, style: style);
+      return Text(
+        sanitizedText.replaceAll(_dollarMarker, r'$'),
+        style: style,
+      );
     }
 
     final List<String> parts = sanitizedText.split('\$');
@@ -115,7 +177,9 @@ class LatexText extends StatelessWidget {
         );
       } else {
         // Normal text
-        spans.add(TextSpan(text: part, style: style));
+        spans.add(
+          TextSpan(text: part.replaceAll(_dollarMarker, r'$'), style: style),
+        );
       }
     }
 
