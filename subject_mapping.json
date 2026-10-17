@@ -1,91 +1,317 @@
 {
   "polity_mapping": {
-    "Historical Background": "historicalbackgroud.json",
-    "Making of Constitution": "makingofconstitution.json",
-    "FR, FD, DPSP & Amendments": "FR-FD-DPSP-Amend.json",
-    "President, VP & PM": "President_VP_PM.json",
-    "Governor, CM & COM": "Gover_CM_COM.json",
-    "The Parlimaent": "parliament.json",
-    "SC, HC & Sub. Courts": "SC_HC_Gram.json",
-    "Panchayati Raj & Municipalities": "Panchayati_Raj_Muncipal.json",
-    "Constitutional Bodies": "EC_UPSC_SPSC_FC_CAG_AG.json",
-    "Non-Constitutional Bodies": "Niti_NDC_HRC_CIC_SIC_CVC_lokpal.json",
-    "Emergency Provisions": "emergency.json",
-    "Federal System & Relations": "federal.json",
-    "Special Cat. (SC/ST/OBC)": "SC_ST_BC.json"
+    "Historical Background": "revision/general_science/polity/historicalbackgroud.json",
+    "Making of Constitution": "revision/general_science/polity/makingofconstitution.json",
+    "FR, FD, DPSP & Amendments": "revision/general_science/polity/FR-FD-DPSP-Amend.json",
+    "President, VP & PM": "revision/general_science/polity/President_VP_PM.json",
+    "Governor, CM & COM": "revision/general_science/polity/Gover_CM_COM.json",
+    "The Parlimaent": "revision/general_science/polity/parliament.json",
+    "SC, HC & Sub. Courts": "revision/general_science/polity/SC_HC_Gram.json",
+    "Panchayati Raj & Municipalities": "revision/general_science/polity/Panchayati_Raj_Muncipal.json",
+    "Constitutional Bodies": "revision/general_science/polity/EC_UPSC_SPSC_FC_CAG_AG.json",
+    "Non-Constitutional Bodies": "revision/general_science/polity/Niti_NDC_HRC_CIC_SIC_CVC_lokpal.json",
+    "Emergency Provisions": "revision/general_science/polity/emergency.json",
+    "Federal System & Relations": "revision/general_science/polity/federal.json",
+    "polity misc": "revision/general_science/polity/polity_misc.json"
   },
   "history_mapping": {
-    "1857 Revolt": "1857_revolt.json",
-    
-    "Medieval India": "medieval.json",
-    "Struggle 1939-1947": "towardfreedom.json",
-    "Development of Indian Press": "histpress.json",
-    "Economic Impact of British Rule": "economicimpact.json",
-    "Social & Religious Reforms": "histsocial.json",
-    "National Movement (1905-18)": "nationalmov1905-18.json",
-    "National Movement (1919-39)": "nationalmov1919-39.json",
-    "Peasant Movements": "peasantmov.json",
-    "Sur Dynasaty": "sur_dynasty.json",
-    "Akbar & Rajputs": "akbar_rajput.json",
-    "Babur": "babur_humayun.json",
-    "Beginning of Struggle": "strugglebegin.json"
+    "1857 Revolt": "revision/general_science/history/1857_revolt.json",
+    "Medieval India": "revision/general_science/history/medieval.json",
+    "Struggle 1939-1947": "revision/general_science/history/towardfreedom.json",
+    "Development of Indian Press": "revision/general_science/history/histpress.json",
+    "Economic Impact of British Rule": "revision/general_science/history/economicimpact.json",
+    "Social & Religious Reforms": "revision/general_science/history/histsocial.json",
+    "National Movement (1905-18)": "revision/general_science/history/nationalmov1905-18.json",
+    "National Movement (1919-39)": "revision/general_science/history/nationalmov1919-39.json",
+    "Peasant Movements": "revision/general_science/history/peasantmov.json",
+    "Sur Dynasaty": "revision/general_science/history/sur_dynasty.json",
+    "Akbar & Rajputs": "revision/general_science/history/akbar_rajput.json",
+    "Babur": "revision/general_science/history/babur_humayun.json",
+    "Beginning of Struggle": "revision/general_science/history/strugglebegin.json",
+    "History Misc": "revision/general_science/history/history_misc.json"
   },
   "geo_mapping": {
-    "Soils, Forests, Dams & Agri": "soil_forest_dams_agri.json",
-    "Astronomy & Solar System": "astronomy.json",
-    "Introduction & Indian Geo": "Indian_Geo.json",
-    "Drainage, Climate & Disaster": "drainage_climate_disaster.json",
-    "States & Union Territories": "states_ut.json",
-    "Physical Geography": "Physicalgeo.json",
-    "Resources & Industries": "resources.json"
+    "Soils, Forests, Dams & Agri": "revision/general_science/geography/soil_forest_dams_agri.json",
+    "Astronomy & Solar System": "revision/general_science/geography/astronomy.json",
+    "Introduction & Indian Geo": "revision/general_science/geography/Indian_Geo.json",
+    "Drainage, Climate & Disaster": "revision/general_science/geography/drainage_climate_disaster.json",
+    "States & Union Territories": "revision/general_science/geography/states_ut.json",
+    "Physical Geography": "revision/general_science/geography/Physicalgeo.json",
+    "Resources & Industries": "revision/general_science/geography/resources.json"
   },
   "eco_mapping": {
-    "Public Finance & Deficit": "public_finance_fiscal_deficit.json",
-    "Planning Commission & NITI": "planning_commission.json",
-    "Inflation": "price_inflation.json",
-    "Tax Structure": "tax_structure.json",
-    "Industry & Infrastructure": "Industry.json",
-    "Banking & RBI Policies": "banking.json",
-    "Sectors, GDP & National Income": "Sectors_GDP_NI.json",
-    "Agri & Land Reforms": "Agriculture_landreforms.json"
+    "Public Finance & Deficit": "revision/general_science/economy/public_finance_fiscal_deficit.json",
+    "Planning Commission & NITI": "revision/general_science/economy/planning_commission.json",
+    "Inflation": "revision/general_science/economy/price_inflation.json",
+    "Tax Structure": "revision/general_science/economy/tax_structure.json",
+    "Industry & Infrastructure": "revision/general_science/economy/Industry.json",
+    "Banking & RBI Policies": "revision/general_science/economy/banking.json",
+    "Sectors, GDP & National Income": "revision/general_science/economy/Sectors_GDP_NI.json",
+    "Agri & Land Reforms": "revision/general_science/economy/Agriculture_landreforms.json",
+    "Economy Misc": "revision/general_science/economy/economy_misc.json"
   },
   "phy_mapping": {
-    "Light & Optics": "optics.json",
-    "Electricity": "electrical_energy.json",
-    "Magnetism": "magnetic_energy.json",
-    "Force & Gravity": "force_gravity.json",
-    "Motion": "motions.json",
-    "Work, Energy & Power": "work_energy_power.json",
-    "Waves": "waves.json"
+    "Light & Optics": "revision/general_science/physics/optics.json",
+    "Electricity": "revision/general_science/physics/electrical_energy.json",
+    "Magnetism": "revision/general_science/physics/magnetic_energy.json",
+    "Force & Gravity": "revision/general_science/physics/force_gravity.json",
+    "Motion": "revision/general_science/physics/motions.json",
+    "Work, Energy & Power": "revision/general_science/physics/work_energy_power.json",
+    "Waves": "revision/general_science/physics/waves.json",
+    "Physics Misc": "revision/general_science/physics/physics_misc.json"
   },
   "bio_mapping": {
-    "Botany": "botany.json",
-    "Cell Biology": "cell_biology.json",
-    "Circulatory System": "circulatory_system.json",
-    "Classification": "classification.json",
-    "Digestive System": "digestive_system.json",
-    "Excretory System": "excreatory_system.json",
-    "Nervous System": "nervous_system_glands.json",
-    "Respiratory System": "resipiratory_system.json",
-    "Health & Diseases": "health.json",
-    "Inheritance": "inheritance.json",
-    "Ecosystem": "ecosystem.json",
-    "Biotech": "biotech.json"
+    "Botany": "revision/general_science/biology/botany.json",
+    "Cell Biology": "revision/general_science/biology/cell_biology.json",
+    "Circulatory System": "revision/general_science/biology/circulatory_system.json",
+    "Classification": "revision/general_science/biology/classification.json",
+    "Digestive System": "revision/general_science/biology/digestive_system.json",
+    "Excretory System": "revision/general_science/biology/excreatory_system.json",
+    "Nervous System": "revision/general_science/biology/nervous_system_glands.json",
+    "Respiratory System": "revision/general_science/biology/resipiratory_system.json",
+    "Health & Diseases": "revision/general_science/biology/health.json",
+    "Inheritance": "revision/general_science/biology/inheritance.json",
+    "Ecosystem": "revision/general_science/biology/ecosystem.json",
+    "Biotech": "revision/general_science/biology/biotech.json"
   },
   "chem_mapping": {
-    "Metals & Ores": "metals_compounds.json",
-    "Acids, Bases & Salts": "acid_base_salt.json",
-    "Atomic Structure": "atomic_structure.json",
-    "Bonding": "bonding.json",
-    "Carbon Compounds": "carbon_compounds.json",
-    "Matter": "matter.json",
-    "Non-Metals": "nonmetal_compounds.json",
-    "Periodic Table": "periodictable.json",
-    "Surface Chemistry": "surfacechem.json",
-    "Electrochemistry": "electrochem.json",
-    "Polymers": "polymer.json",
-    "Chemistry in Everyday Life": "cheminlife.json",
-    "Biomolecules": "biomolecules.json"
+    "Metals & Ores": "revision/general_science/chemistry/metals_compounds.json",
+    "Acids, Bases & Salts": "revision/general_science/chemistry/acid_base_salt.json",
+    "Atomic Structure": "revision/general_science/chemistry/atomic_structure.json",
+    "Bonding": "revision/general_science/chemistry/bonding.json",
+    "Carbon Compounds": "revision/general_science/chemistry/carbon_compounds.json",
+    "Matter": "revision/general_science/chemistry/matter.json",
+    "Non-Metals": "revision/general_science/chemistry/nonmetal_compounds.json",
+    "Periodic Table": "revision/general_science/chemistry/periodictable.json",
+    "Surface Chemistry": "revision/general_science/chemistry/surfacechem.json",
+    "Electrochemistry": "revision/general_science/chemistry/electrochem.json",
+    "Polymers": "revision/general_science/chemistry/polymer.json",
+    "Chemistry in Everyday Life": "revision/general_science/chemistry/cheminlife.json",
+    "Biomolecules": "revision/general_science/chemistry/biomolecules.json",
+    "Misc": "revision/general_science/chemistry/misc_concept.json"
+  },
+  "aptitude_mapping": {
+    "📊 Percentage": {
+      "Type 1: Basic Concepts": "revision/maths/percentage/type1basic.json",
+      "Type 2: Increase & Decrease": "revision/maths/percentage/type2increase_decrease.json",
+      "Type 3: Perimeter & Area Change": "revision/maths/percentage/type3changepermiter.json",
+      "Type 4: Successive Change": "revision/maths/percentage/type4successive.json",
+      "Type 5: Series Based": "revision/maths/percentage/type5series.json",
+      "Type 6: Price & Consumption": "revision/maths/percentage/type6priceconsumption.json",
+      "Type 7: Income & Expenditure": "revision/maths/percentage/type7incomeexpenditure.json",
+      "Type 8: Pass & Fail": "revision/maths/percentage/type8pasfail.json",
+      "Type 9: Election Based": "revision/maths/percentage/type9election.json",
+      "Commission Based": "revision/maths/percentage/commisison.json",
+      "Venn Diagram Based": "revision/maths/percentage/venndiagram.json",
+      "Percentage Miscellaneous": "revision/maths/percentage/misc.json"
+    },
+    "🏷️ Profit & Loss": {
+      "Basic Formulas": "revision/maths/profitloss/formula.json",
+      "Type 1: Basic Concept": "revision/maths/profitloss/type1.json",
+      "Type 2: Difference SP & CP": "revision/maths/profitloss/type2differencespcp.json",
+      "Type 3: SP Equal to CP": "revision/maths/profitloss/type3spequalcp.json",
+      "Profit & Loss on SP": "revision/maths/profitloss/profitlossonsp.json",
+      "Profit Equal to Loss": "revision/maths/profitloss/profitequalloss.json",
+      "Profit/Loss Equal SP/CP": "revision/maths/profitloss/profitlossequalspcp.json",
+      "CP is Same": "revision/maths/profitloss/cpissame.json",
+      "SP is Same": "revision/maths/profitloss/spissame.json",
+      "Two Articles Concept": "revision/maths/profitloss/twoarticles.json",
+      "Dishonest Dealer": "revision/maths/profitloss/dishonestdealer.json",
+      "Number of Articles": "revision/maths/profitloss/numberofartile.json",
+      "Alligation Method": "revision/maths/profitloss/alligation.json",
+      "Charminar Concept": "revision/maths/profitloss/charminar.json",
+      "Miscellaneous": "revision/maths/profitloss/misc.json"
+    },
+    "🏷️ Discount": {
+      "Basic Concepts": "revision/maths/discount/basic.json",
+      "2 Successive Discounts": "revision/maths/discount/2successive.json",
+      "3 Successive Discounts": "revision/maths/discount/3successive.json",
+      "Buy 1 Get 1 Free": "revision/maths/discount/buy1get1.json",
+      "CP & MP Relation": "revision/maths/discount/cpmprelation.json",
+      "Discount Series": "revision/maths/discount/series.json",
+      "Discount Miscellaneous": "revision/maths/discount/misc.json"
+    },
+    "📈 Simple Interest": {
+      "Basic Concept": "revision/maths/simpleinterest/basic.json",
+      "Rate of Interest": "revision/maths/simpleinterest/rateofinterest.json",
+      "Rate Higher / Lower": "revision/maths/simpleinterest/ratehigherlower.json",
+      "Principal & Amount Ratio": "revision/maths/simpleinterest/principleamountratio.json",
+      "N-Times Concept": "revision/maths/simpleinterest/nooftime.json",
+      "Equal SI Cases": "revision/maths/simpleinterest/equalsi.json",
+      "Total SI Concept": "revision/maths/simpleinterest/totalsi.json",
+      "Alligation Method": "revision/maths/simpleinterest/alligation.json",
+      "Average Method": "revision/maths/simpleinterest/average.json",
+      "Installments": "revision/maths/simpleinterest/installment.json",
+      "SI Miscellaneous": "revision/maths/simpleinterest/misc.json"
+    },
+    "📉 Compound Interest": {
+      "Basic Concepts": "revision/maths/compoundinterest/basic.json",
+      "Successive Method": "revision/maths/compoundinterest/successive.json",
+      "Time in Fraction": "revision/maths/compoundinterest/timeinfraction.json",
+      "Quarterly & Half-Yearly": "revision/maths/compoundinterest/quaterlytime.json",
+      "Find Rate": "revision/maths/compoundinterest/findrate.json",
+      "Find Time": "revision/maths/compoundinterest/findtime.json",
+      "Sum Becomes N-Times": "revision/maths/compoundinterest/ntimes.json",
+      "CI & SI Combined": "revision/maths/compoundinterest/ciandsi.json",
+      "CI - SI Difference": "revision/maths/compoundinterest/cisidifference.json",
+      "Installments": "revision/maths/compoundinterest/installment.json",
+      "Type 6 Advanced": "revision/maths/compoundinterest/type6.json",
+      "CI Miscellaneous": "revision/maths/compoundinterest/misc.json"
+    },
+    "⏱️ Time & Work": {
+      "Two Variables": "revision/maths/timeandwork/twovariable.json",
+      "Three Variables": "revision/maths/timeandwork/threevariable.json",
+      "Efficiency Based": "revision/maths/timeandwork/efficiency.json",
+      "Leaving & Joining Work": "revision/maths/timeandwork/leftingwork.json",
+      "Alternate Days": "revision/maths/timeandwork/alternatedays.json",
+      "MDH Formula": "revision/maths/timeandwork/mdh.json",
+      "Men, Women & Children": "revision/maths/timeandwork/mwc.json",
+      "Contractor & AP Concept": "revision/maths/timeandwork/contractor_ap.json",
+      "Work & Wages": "revision/maths/timeandwork/workwages.json"
+    },
+    "🚰 Pipe & Cistern": {
+      "Capacity of Tank": "revision/maths/pipeandcistern/capacitytank.json",
+      "Empty & Filled Concept": "revision/maths/pipeandcistern/empty_filled.json",
+      "Simultaneous Empty & Fill": "revision/maths/pipeandcistern/empty_filled_simultaneous.json",
+      "Leakage in Tank": "revision/maths/pipeandcistern/leakageintank.json",
+      "Alternate Open Taps": "revision/maths/pipeandcistern/tap_alternateopen.json",
+      "Tap Closed in Between": "revision/maths/pipeandcistern/tapclosed.json"
+    },
+    "🚆 Problems on Trains": {
+      "Bridge & Pole Crossing": "revision/maths/train/bridgepole.json",
+      "Train in Same Direction": "revision/maths/train/traininsame.json",
+      "Train in Opposite Direction": "revision/maths/train/trainopposite.json",
+      "Person Sitting in Train": "revision/maths/train/personsittingintrain.json",
+      "Two Running Persons": "revision/maths/train/tworunningperson.json",
+      "Train Mixed Problems": "revision/maths/train/mixed.json"
+    },
+    "🚣 Boat & Stream": {
+      "Basic Concepts": "revision/maths/boadandstream/basic.json",
+      "Formula Based": "revision/maths/boadandstream/formula.json",
+      "U & V Concept": "revision/maths/boadandstream/uvconcept.json",
+      "Boat & Stream Misc": "revision/maths/boadandstream/misc.json"
+    },
+    "🏃 Race & Circular Track": {
+      "Linear Race": "revision/maths/raceandcircular/linearrace.json",
+      "Circular Race": "revision/maths/raceandcircular/circular.json"
+    },
+    "⚖️ Ratio & Proportion": {
+      "Basic Concepts": "revision/maths/ratio/basic.json",
+      "Addition & Subtraction": "revision/maths/ratio/additionsubtraction.json",
+      "Income & Expenditure": "revision/maths/ratio/income.json",
+      "Coins Based": "revision/maths/ratio/coins.json",
+      "Ratio Miscellaneous": "revision/maths/ratio/misc.json"
+    },
+    "🥣 Mixture": {
+      "Basic Mixture": "revision/maths/mixture/basic.json",
+      "Mixing to Single": "revision/maths/mixture/mixingtosingle.json",
+      "Different to Single Ratio": "revision/maths/mixture/mixingdiffernttosingle.json",
+      "Replacement Method": "revision/maths/mixture/replacement.json",
+      "Mixture Series": "revision/maths/mixture/series.json",
+      "Mixture Miscellaneous": "revision/maths/mixture/misc.json"
+    },
+    "⚖️ Alligation": {
+      "Type 1: Basic Alligation": "revision/maths/alligation/type1.json",
+      "Type 2: Advanced Alligation": "revision/maths/alligation/type2.json"
+    },
+    "👥 Ages": {
+      "Basic Concepts": "revision/maths/age/basic.json",
+      "Age Difference": "revision/maths/age/agedifference.json",
+      "Average Age": "revision/maths/age/average.json"
+    },
+    "🤝 Partnership": {
+      "Basic Partnership": "revision/maths/partnership/basic.json",
+      "Investment Increase/Decrease": "revision/maths/partnership/increasedecrease.json",
+      "Partner Leaving & Joining": "revision/maths/partnership/leftjoined.json",
+      "Donation Distribution": "revision/maths/partnership/donationdistribution.json",
+      "Active/Sleeping Management": "revision/maths/partnership/management.json"
+    },
+    "🔢 Number System": {
+      "Divisibility Rules": "revision/maths/numbersystem/divisibilty.json",
+      "Unit Digit": "revision/maths/numbersystem/unitdigit.json",
+      "Number of Zeroes": "revision/maths/numbersystem/noofzero.json",
+      "Remainder Theorem": "revision/maths/numbersystem/remaindertheorum.json"
+    },
+    "🔢 HCF & LCM": {
+      "Basic Concepts": "revision/maths/hcfandlcm/basic.json",
+      "Application of HCF": "revision/maths/hcfandlcm/applicationofhcf.json",
+      "Application of LCM": "revision/maths/hcfandlcm/applicationoflcm.json",
+      "LCM & HCF of Numbers": "revision/maths/hcfandlcm/lcmhcfnumber12.json",
+      "Ratio of Numbers": "revision/maths/hcfandlcm/ratioofnumber.json",
+      "HCF & LCM Miscellaneous": "revision/maths/hcfandlcm/misc.json"
+    },
+    "📐 Trigonometry": {
+      "Basic Concepts": "revision/maths/trignometry/basic.json",
+      "Trigonometric Ratios": "revision/maths/trignometry/trignometricratio.json",
+      "Ratios in Quadrants": "revision/maths/trignometry/trignometricratioqudrant.json",
+      "Identities": "revision/maths/trignometry/identities.json",
+      "A + B = 90° Concept": "revision/maths/trignometry/aplusb90.json",
+      "Componendo & Dividendo": "revision/maths/trignometry/compedividendo.json",
+      "Value Putting Method": "revision/maths/trignometry/valueputting.json",
+      "Type 4 Questions": "revision/maths/trignometry/type4.json",
+      "Type 5 Questions": "revision/maths/trignometry/type5.json"
+    },
+    "📈 Maxima & Minima": {
+      "Basic Concepts": "revision/maths/maximaminima/basic.json"
+    },
+    "📐 Mensuration 2D": {
+      "Basic Concepts": "revision/maths/mensuration2d/basic.json"
+    }
+  },
+  "reasoning_mapping": {
+    "🔤 Alphabetical Series": {
+      "Alphabetical Basic": "revision/reasoningapp/alphabaticalseries/alphabatical.json",
+      "Left & Right Concept": "revision/reasoningapp/alphabaticalseries/leftright.json",
+      "Reverse Order": "revision/reasoningapp/alphabaticalseries/reverseorder.json",
+      "First Half Reverse": "revision/reasoningapp/alphabaticalseries/firsthalfreverse.json",
+      "Second Half Reverse": "revision/reasoningapp/alphabaticalseries/secondhalfreverse.json",
+      "Both Half Reverse": "revision/reasoningapp/alphabaticalseries/bothhalfreverseorder.json",
+      "Even Series": "revision/reasoningapp/alphabaticalseries/evenseries.json",
+      "Odd Series": "revision/reasoningapp/alphabaticalseries/oddseries.json"
+    },
+    "🔡 Letter Coding": {
+      "Forward Pattern": "revision/reasoningapp/coding/lettercoding/forwardpattern.json",
+      "Reverse Pattern": "revision/reasoningapp/coding/lettercoding/reversepattern.json",
+      "Cross Pattern": "revision/reasoningapp/coding/lettercoding/crosspattern.json",
+      "Position Pattern": "revision/reasoningapp/coding/lettercoding/positionpattern.json",
+      "Opposite Letter": "revision/reasoningapp/coding/lettercoding/oppositeletter.json",
+      "Common Pattern": "revision/reasoningapp/coding/lettercoding/commonpattern.json"
+    },
+    "🔢 Number Coding": {
+      "Pattern 1": "revision/reasoningapp/coding/numbercoding/pattern1.json",
+      "Pattern 2": "revision/reasoningapp/coding/numbercoding/pattern2.json"
+    },
+    "🔀 Mixed Coding": {
+      "All Mixed Patterns": "revision/reasoningapp/coding/mixedcoding/allmixed.json"
+    },
+    "👥 Blood Relation": {
+      "Pointing Form": "revision/reasoningapp/bloodrelation/pointing.json",
+      "Coded Relation": "revision/reasoningapp/bloodrelation/codedrelation.json",
+      "Puzzle Form": "revision/reasoningapp/bloodrelation/puzzle.json"
+    },
+    "⚖️ Inequality": {
+      "Type 1: Basic Inequality": "revision/reasoningapp/ineqality/type1.json",
+      "Possibility Cases": "revision/reasoningapp/ineqality/possibilty.json",
+      "Coded Inequality": "revision/reasoningapp/ineqality/coded.json"
+    },
+    "🔢 Order & Ranking": {
+      "Type 1: Basic Ranking": "revision/reasoningapp/ranking/type1.json",
+      "Interchange of Positions": "revision/reasoningapp/ranking/interchange.json",
+      "Type 3: Advanced Ranking": "revision/reasoningapp/ranking/type3.json"
+    },
+    "🔠 Pair Formation": {
+      "Letter Pair": "revision/reasoningapp/pairformation/letterpair.json",
+      "Type 2 Pair Formation": "revision/reasoningapp/pairformation/type2.json"
+    },
+    "🔤 Letter Series": {
+      "All Types": "revision/reasoningapp/letterseries/alltypes.json"
+    },
+    "➕ Coded Equation": {
+      "Coded Equation Practice": "revision/reasoningapp/codedequation.json"
+    },
+    "🎯 Syllogism": {
+      "Syllogism All Types": "revision/reasoningapp/syllogism.json"
+    }
   },
   "current_mapping": {
     "Jan 2026": "jan.json",
@@ -95,74 +321,93 @@
     "Bihar Special News": "bihar_news.json"
   },
   "static_phy_mapping": {
-    "⚡ Electricity & Circuits": "static/physics/electricity.json",
-    "💡 Light & Optics": "static/physics/light.json",
-    "🧲 Magnetism & Induction": "static/physics/magnetism.json",
-    "🏎️ Motion, Force & Work": "static/physics/motion.json",
-    "🔊 Sound & Waves": "static/physics/sound.json",
-    "📦 Physics Miscellaneous": "static/physics/misc.json"
+    "Electricity & Circuits": "revision/static/physics/electricity.json",
+    "Light & Optics": "revision/static/physics/light.json",
+    "Magnetism & Induction": "revision/static/physics/magnetism.json",
+    "Motion, Force & Work": "revision/static/physics/motion.json",
+    "Sound & Waves": "revision/static/physics/sound.json",
+    "Physics Miscellaneous": "revision/static/physics/misc.json"
   },
   "static_chem_mapping": {
-    "🧪 Atoms & Molecules": "static/chemistry/atoms.json",
-    "🧂 Acids, Bases & Salts": "static/chemistry/acidbase.json",
-    "💎 Carbon & its Compounds": "static/chemistry/carbon.json",
-    "🔥 Thermodynamics & Heat": "static/chemistry/heat.json",
-    "🏭 Industrial Chemistry": "static/chemistry/industrial_chem.json",
-    "🪙 Metals & Non-Metals": "static/chemistry/metals_nonmetals.json",
-    "☢️ Nuclear Chemistry": "static/chemistry/nuclear_chem.json",
-    "📊 Periodic Table": "static/chemistry/periodic_table.json",
-    "🔬 Physical Chemistry": "static/chemistry/physical_chem.json",
-    "📦 Chemistry Miscellaneous": "static/chemistry/misc.json"
+    "Atoms & Molecules": "revision/static/chemistry/atoms.json",
+    "Acids, Bases & Salts": "revision/static/chemistry/acidbase.json",
+    "Carbon & its Compounds": "revision/static/chemistry/carbon.json",
+    "Thermodynamics & Heat": "revision/static/chemistry/heat.json",
+    "Industrial Chemistry": "revision/static/chemistry/industrial_chem.json",
+    "Metals & Non-Metals": "revision/static/chemistry/metals_nonmetals.json",
+    "Nuclear Chemistry": "revision/static/chemistry/nuclear_chem.json",
+    "Periodic Table": "revision/static/chemistry/periodic_table.json",
+    "Physical Chemistry": "revision/static/chemistry/physical_chem.json",
+    "Chemistry Miscellaneous": "revision/static/chemistry/misc.json"
   },
   "static_bio_mapping": {
-    "🧬 Cell Biology": "static/biology/cell.json",
-    "🌿 Botany": "static/biology/botony.json",
-    "🫀 Circulatory System": "static/biology/circulatory.json",
-    "🥗 Digestive System": "static/biology/digestive.json",
-    "🦠 Human Diseases & Health": "static/biology/disease.json",
-    "🩺 Endocrine & Hormones": "static/biology/endocrine.json",
-    "🫘 Excretory System": "static/biology/excreatory.json",
-    "🧬 Genetics & Evolution": "static/biology/genetics.json",
-    "🧠 Nervous System": "static/biology/nervous.json",
-    "🚼 Reproduction System": "static/biology/reproduction.json",
-    "🫁 Respiratory System": "static/biology/respiratory.json",
-    "📦 Biology Mix Set 1": "static/biology/misc.json",
-    "📦 Biology Mix Set 2": "static/biology/misc2.json"
+    "Cell Biology": "revision/static/biology/cell.json",
+    "Botany": "revision/static/biology/botony.json",
+    "Circulatory System": "revision/static/biology/circulatory.json",
+    "Digestive System": "revision/static/biology/digestive.json",
+    "Human Diseases & Health": "revision/static/biology/disease.json",
+    "Endocrine & Hormones": "revision/static/biology/endocrine.json",
+    "Excretory System": "revision/static/biology/excreatory.json",
+    "Genetics & Evolution": "revision/static/biology/genetics.json",
+    "Nervous System": "revision/static/biology/nervous.json",
+    "Reproduction System": "revision/static/biology/reproduction.json",
+    "Respiratory System": "revision/static/biology/respiratory.json",
+    "Animal Kingdom": "revision/static/biology/animal_kingdom.json",
+    "Vertebrate Classes": "revision/static/biology/animal_kingdom2.json",
+    "Scientific Names": "revision/static/biology/scientific_names.json",
+    "Biology Basics & Discoveries": "revision/static/biology/bio_basics.json",
+    "Applied Biology": "revision/static/biology/applied_bio.json",
+    "Biology Mix Set 1": "revision/static/biology/misc.json",
+    "Biology Mix Set 2": "revision/static/biology/misc2.json"
   },
   "static_history_mapping": {
-    "🏛️ Ancient India History": "static/history/ancient.json",
-    "⚔️ Medieval India History": "static/history/medievel.json",
-    "🇮🇳 Modern India History": "static/history/modern.json",
-    "🔥 1857 Revolt & Freedom Movement": "static/history/1857.json"
+    "Ancient India History": "revision/static/history/ancient.json",
+    "Medieval India History": "revision/static/history/medievel.json",
+    "Modern India History": "revision/static/history/modern.json",
+    "1857 Revolt & Freedom Movement": "revision/static/history/1857.json"
   },
   "static_polity_mapping": {
-    "📜 Preamble & Features": "static/polity/preamble.json",
-    "⚖️ Fundamental Rights & Duties": "static/polity/rights.json",
-    "🏛️ Parliament & Union": "static/polity/parliament.json",
-    "👔 Executive & President": "static/polity/executive.json",
-    "⚖️ Supreme Court & Judiciary": "static/polity/judiciary.json",
-    "🏛️ State Legislature": "static/polity/state_legis.json",
-    "🗳️ Constitutional Bodies": "static/polity/consti_bodies.json",
-    "📑 Non-Constitutional Bodies": "static/polity/nonconsti_bodies.json",
-    "🏡 Panchayati Raj & Nagarpalika": "static/polity/panchayat.json",
-    "📦 Polity Miscellaneous": "static/polity/misc.json"
+    "Preamble & Features": "revision/static/polity/preamble.json",
+    "Fundamental Rights & Duties": "revision/static/polity/rights.json",
+    "Parliament & Union": "revision/static/polity/parliament.json",
+    "Executive & President": "revision/static/polity/executive.json",
+    "Supreme Court & Judiciary": "revision/static/polity/judiciary.json",
+    "State Legislature": "revision/static/polity/state_legis.json",
+    "Constitutional Bodies": "revision/static/polity/consti_bodies.json",
+    "Non-Constitutional Bodies": "revision/static/polity/nonconsti_bodies.json",
+    "Panchayati Raj & Nagarpalika": "revision/static/polity/panchayat.json",
+    "Polity Miscellaneous": "revision/static/polity/misc.json"
   },
   "static_geo_mapping": {
-    "🌍 Physical Geography": "static/geography/physicalgeo.json",
-    "🌦️ Climate & Monsoons": "static/geography/climate.json",
-    "🗺️ Indian & World Mapping": "static/geography/mapping.json",
-    "👥 Human & Economic Geography": "static/geography/humangeo.json"
+    "Physical Geography": "revision/static/geography/physicalgeo.json",
+    "Climate & Monsoons": "revision/static/geography/climate.json",
+    "Indian & World Mapping": "revision/static/geography/mapping.json",
+    "Human & Economic Geography": "revision/static/geography/humangeo.json"
   },
   "static_eco_mapping": {
-   
-    "💰 National Income & Growth": "static/economy/national_income.json",
-    "🏦 Banking System & RBI": "static/economy/banking.json",
-    "📊 Money & Capital Market": "static/economy/moneymarket.json",
-    "📉 Inflation & Price Index": "static/economy/inflation.json",
-    "📑 Union Budget & Fiscal Policy": "static/economy/budget.json",
-    "🌐 International Organizations": "static/economy/inter_org.json",
-    "🚀 Govt Schemes & Initiatives": "static/economy/schemes.json",
-    "🔥 Most Important Economy MCQs": "static/economy/mostimp.json",
-    "📦 Economy Miscellaneous": "static/economy/misc.json"
+    "National Income & Growth": "revision/static/economy/national_income.json",
+    "Banking System & RBI": "revision/static/economy/banking.json",
+    "Money & Capital Market": "revision/static/economy/moneymarket.json",
+    "Inflation & Price Index": "revision/static/economy/inflation.json",
+    "Union Budget & Fiscal Policy": "revision/static/economy/budget.json",
+    "International Organizations": "revision/static/economy/inter_org.json",
+    "Govt Schemes & Initiatives": "revision/static/economy/schemes.json",
+    "Most Important Economy MCQs": "revision/static/economy/mostimp.json",
+    "Economy Miscellaneous": "revision/static/economy/misc.json"
+  },
+  "bihar_special_mapping": {
+    "Ancient & Medieval Bihar - Magadha, Pataliputra, Palas & Sufis": "revision/bihar_special/history/bihar_history_ancient_medieval.json",
+    "European Companies & the Dutch in Bihar (1759-1782)": "revision/bihar_special/history/bihar_history_dutch_europeans.json",
+    "Modern Bihar - 1857, the Freedom Movement & Reform Movements": "revision/bihar_special/history/bihar_history_1857_freedom_reform.json",
+    "Patna District - City, Settlement, Land & Survey (18th-19th Century)": "revision/bihar_special/history/bihar_history_patna_modern.json",
+    "Castes, Tribes & Languages of Bihar & the Patna District": "revision/bihar_special/society/bihar_society_castes_tribes.json",
+    "Religion, Folk Beliefs & Songs of the Patna District": "revision/bihar_special/society/bihar_society_religion_folk.json",
+    "Census, Population, Village Officials, Education & Rural Life": "revision/bihar_special/society/bihar_society_census_population.json",
+    "Bihar Physical Geography, Rivers, Soils, Districts & Wildlife": "revision/bihar_special/geography/bihar_geography_physical_features.json",
+    "Minerals, Rocks & the Survey Tracts of South Bihar": "revision/bihar_special/geography/bihar_geography_resources_survey.json",
+    "Art, Culture, Crafts & Heritage of Bihar": "revision/bihar_special/art_culture/bihar_art_culture_heritage.json",
+    "Bihar Economy, Industry, Transport & the Dutch Cession": "revision/bihar_special/economy/bihar_economy_industry_transport.json",
+    "Bihar Polity, Governance & State Reorganisation": "revision/bihar_special/polity/bihar_polity_governance.json",
+    "Bihar Personalities, Writers & Reformers": "revision/bihar_special/general/bihar_personalities.json"
   }
 }
