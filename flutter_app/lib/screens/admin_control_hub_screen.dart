@@ -22,7 +22,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 4, vsync: this);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       _promptAdminPin();
     });
@@ -133,10 +133,18 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
       final creatorsRes = await client.from('creator_profiles').select().order('created_at', ascending: false);
       final postsRes = await client.from('community_posts').select().order('created_at', ascending: false).limit(60);
 
+      List<dynamic> premiumRes = [];
+      try {
+        premiumRes = await client.from('premium_requests').select().order('created_at', ascending: false).limit(100);
+      } catch (e) {
+        debugPrint("Premium requests load error (SQL chala hai?): $e");
+      }
+
       if (mounted) {
         setState(() {
           _creators = creatorsRes;
           _posts = postsRes;
+          _premiumRequests = premiumRes;
           _isLoading = false;
         });
       }
@@ -187,6 +195,97 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
         );
       }
     }
+  }
+
+  // 💰 Premium Approve — premium_until ko 30 din aage (baki par jodkar)
+  Future<void> _approvePremiumRequest(Map<String, dynamic> req) async {
+    HapticFeedback.mediumImpact();
+    try {
+      final String userId = (req['user_id'] ?? '').toString();
+      final existing = await client
+          .from('user_premium')
+          .select('premium_until')
+          .eq('user_id', userId)
+          .maybeSingle();
+      DateTime base = DateTime.now();
+      if (existing != null && existing['premium_until'] != null) {
+        final old = DateTime.tryParse(existing['premium_until'].toString());
+        if (old != null && old.isAfter(base)) base = old;
+      }
+      final DateTime newUntil = base.add(const Duration(days: 30));
+      await client.from('user_premium').upsert({
+        'user_id': userId,
+        'premium_until': newUntil.toUtc().toIso8601String(),
+        'updated_at': DateTime.now().toUtc().toIso8601String(),
+      }, onConflict: 'user_id');
+      await client.from('premium_requests').update({
+        'status': 'approved',
+        'reviewed_at': DateTime.now().toUtc().toIso8601String(),
+      }).eq('id', req['id']);
+
+      _loadAllAdminData();
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Premium ON ho gaya — ${newUntil.day}/${newUntil.month}/${newUntil.year} tak 👑'),
+            backgroundColor: const Color(0xFF16A34A),
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Approve failed: $e'), backgroundColor: Colors.black87),
+        );
+      }
+    }
+  }
+
+  Future<void> _rejectPremiumRequest(Map<String, dynamic> req) async {
+    HapticFeedback.heavyImpact();
+    try {
+      await client.from('premium_requests').update({
+        'status': 'rejected',
+        'reviewed_at': DateTime.now().toUtc().toIso8601String(),
+      }).eq('id', req['id']);
+      _loadAllAdminData();
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Request reject ho gayi'), backgroundColor: Colors.redAccent),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Reject failed: $e'), backgroundColor: Colors.black87),
+        );
+      }
+    }
+  }
+
+  void _showPremiumScreenshot(String url) {
+    showDialog(
+      context: context,
+      builder: (ctx) => Dialog(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            AppBar(
+              title: const Text('Payment Screenshot', style: TextStyle(fontSize: 14)),
+              automaticallyImplyLeading: false,
+              actions: [
+                IconButton(icon: const Icon(Icons.close), onPressed: () => Navigator.pop(ctx)),
+              ],
+            ),
+            Flexible(
+              child: InteractiveViewer(
+                child: Image.network(url, fit: BoxFit.contain),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 
   // 📢 3. Broadcast Official Admin Announcement
@@ -292,6 +391,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
           tabs: const [
             Tab(text: 'Creators'),
             Tab(text: 'Feed Purge'),
+            Tab(text: 'Premium'),
             Tab(text: 'System Broadcast'),
           ],
         ),
@@ -359,7 +459,141 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
                   },
                 ),
 
-                // TAB 3: Global System Announcements
+                // TAB 3: Premium Requests (pending upar)
+                Builder(builder: (ctx) {
+                  final sorted = [..._premiumRequests]..sort((a, b) {
+                      final sa = (a['status'] ?? '').toString() == 'pending' ? 0 : 1;
+                      final sb = (b['status'] ?? '').toString() == 'pending' ? 0 : 1;
+                      return sa.compareTo(sb);
+                    });
+                  if (sorted.isEmpty) {
+                    return const Center(
+                      child: Text('Abhi koi premium request nahi hai.',
+                          style: TextStyle(color: Colors.grey, fontSize: 13)),
+                    );
+                  }
+                  return ListView.builder(
+                    padding: const EdgeInsets.all(12),
+                    itemCount: sorted.length,
+                    itemBuilder: (ctx, idx) {
+                      final r = Map<String, dynamic>.from(sorted[idx] as Map);
+                      final status = (r['status'] ?? 'pending').toString();
+                      final shot = (r['screenshot_url'] ?? '').toString();
+                      final isPending = status == 'pending';
+                      return Card(
+                        color: cardBg,
+                        margin: const EdgeInsets.only(bottom: 8),
+                        child: Padding(
+                          padding: const EdgeInsets.all(10),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              if (shot.isNotEmpty)
+                                GestureDetector(
+                                  onTap: () => _showPremiumScreenshot(shot),
+                                  child: ClipRRect(
+                                    borderRadius: BorderRadius.circular(8),
+                                    child: Image.network(shot,
+                                        width: 52, height: 72, fit: BoxFit.cover),
+                                  ),
+                                ),
+                              if (shot.isNotEmpty) const SizedBox(width: 10),
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Row(
+                                      children: [
+                                        Expanded(
+                                          child: Text(r['user_name'] ?? 'Student',
+                                              style: const TextStyle(
+                                                  fontWeight: FontWeight.bold, fontSize: 13.5)),
+                                        ),
+                                        Container(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 8, vertical: 3),
+                                          decoration: BoxDecoration(
+                                            color: isPending
+                                                ? const Color(0xFFFEF3C7)
+                                                : (status == 'approved'
+                                                    ? const Color(0xFFDCFCE7)
+                                                    : const Color(0xFFFEE2E2)),
+                                            borderRadius: BorderRadius.circular(99),
+                                          ),
+                                          child: Text(
+                                            status.toUpperCase(),
+                                            style: const TextStyle(
+                                                fontSize: 9,
+                                                fontWeight: FontWeight.w900,
+                                                color: Color(0xFF334155)),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    const SizedBox(height: 3),
+                                    SelectableText(
+                                      '₹${r['amount'] ?? 49} • Ref: ${r['upi_ref'] ?? '-'}',
+                                      style: const TextStyle(
+                                          fontSize: 12, fontWeight: FontWeight.w700),
+                                    ),
+                                    Text(
+                                      'ID: ${r['user_id']} • ${(r['created_at'] ?? '').toString().replaceAll('T', ' ').split('.').first}',
+                                      style: const TextStyle(
+                                          fontSize: 10.5, color: Colors.grey),
+                                    ),
+                                    if (isPending) ...[
+                                      const SizedBox(height: 8),
+                                      Row(
+                                        children: [
+                                          ElevatedButton.icon(
+                                            style: ElevatedButton.styleFrom(
+                                              backgroundColor: const Color(0xFF16A34A),
+                                              foregroundColor: Colors.white,
+                                              visualDensity: VisualDensity.compact,
+                                              padding: const EdgeInsets.symmetric(
+                                                  horizontal: 10, vertical: 6),
+                                            ),
+                                            onPressed: () =>
+                                                _approvePremiumRequest(r),
+                                            icon: const Icon(Icons.check_rounded,
+                                                size: 15),
+                                            label: const Text('Approve',
+                                                style: TextStyle(
+                                                    fontSize: 11,
+                                                    fontWeight: FontWeight.bold)),
+                                          ),
+                                          const SizedBox(width: 8),
+                                          OutlinedButton.icon(
+                                            style: OutlinedButton.styleFrom(
+                                              foregroundColor: Colors.redAccent,
+                                              visualDensity: VisualDensity.compact,
+                                              padding: const EdgeInsets.symmetric(
+                                                  horizontal: 10, vertical: 6),
+                                            ),
+                                            onPressed: () =>
+                                                _rejectPremiumRequest(r),
+                                            icon: const Icon(Icons.close_rounded,
+                                                size: 15),
+                                            label: const Text('Reject',
+                                                style: TextStyle(
+                                                    fontSize: 11,
+                                                    fontWeight: FontWeight.bold)),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  );
+                }),
+
+                // TAB 4: Global System Announcements
                 Padding(
                   padding: const EdgeInsets.all(20),
                   child: Column(
