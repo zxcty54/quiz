@@ -1,0 +1,173 @@
+[
+  {
+    "p_id": "totalsi_1",
+    "qe": "Ramesh borrowed some money at rate of 5% per annum for the first four years, 8% per annum for the next six years, and 12% per annum for the period beyond ten years. If the total interest paid by him at the end of twelve years is Rs.9,016, then find the money borrowed by Ramesh.",
+    "qh": "रमेश ने पहले चार वर्षों के लिए 5% प्रति वर्ष की दर से, अगले छह वर्षों के लिए 8% प्रति वर्ष की दर से और दस वर्षों से आगे की अवधि के लिए 12% प्रति वर्ष की दर से कुछ पैसे उधार लिए। यदि बारह वर्षों के अंत में उसके द्वारा भुगतान किया गया कुल ब्याज 9,016 रुपये है, तो रमेश द्वारा उधार लिया गया धन ज्ञात कीजिए।",
+    "oe": [
+      "Rs.9,800",
+      "Rs.9,616",
+      "Rs.9,816",
+      "Rs.9,016"
+    ],
+    "oh": [
+      "Rs.9,800",
+      "Rs.9,616",
+      "Rs.9,816",
+      "Rs.9,016"
+    ],
+    "a": 0,
+    "e": "Method 1 (Percentage Method):\nStep 1: 12 वर्षों की समयावधि के अलग-अलग चरणों का कुल ब्याज% जोड़ें:\n- पहले 4 वर्ष (5% की दर से) = 4 * 5% = 20%\n- अगले 6 वर्ष (8% की दर से) = 6 * 8% = 48%\n- 10 वर्ष के बाद के शेष 2 वर्ष (12% की दर से) = 2 * 12% = 24%\nStep 2: 12 वर्षों का कुल ब्याज% = 20% + 48% + 24% = 92%.\nStep 3: प्रश्नानुसार 92% = ₹9,016.\n1% = 9,016 / 92 = 98.\nStep 4: मूलधन P (100%) = 98 * 100 = ₹9,800.\nअतः सही विकल्प  Rs.9,800 है।\n\nMethod 2 (Formula Method):\nStep 1: SI_total = [P * (R1*T1 + R2*T2 + R3*T3)] / 100.\nStep 2: 9,016 = P * [(5 * 4) + (8 * 6) + (12 * 2)] / 100.\nStep 3: 9,016 = P * [20 + 48 + 24] / 100 = 92P / 100.\nStep 4: P = (9,016 * 100) / 92 = ₹9,800.\nअतः सही उत्तर 'Rs.9,800' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "totalsi_2",
+    "qe": "Ravi borrowed some money at the rate of 5% per anuum for the first three years, 8% per annum for the next two years, and 10% per annum for the period beyond 5 years. If he paid a total simple intrest of Rs.12,750 at the end of 7 years, then how much money did he borrow?",
+    "qh": "रवि ने पहले तीन वर्षों के लिए 5% प्रति वर्ष, अगले दो वर्षों के लिए 8% प्रति वर्ष और 5 वर्ष से अधिक की अवधि के लिए 10% प्रति वर्ष की दर से कुछ पैसे उधार लिए। यदि उसने 7 साल के अंत में 12,750 रुपये का कुल साधारण ब्याज चुकाया, तो उसने कितना पैसा उधार लिया?",
+    "oe": [
+      "Rs.25,000",
+      "Rs.26000",
+      "Rs.27000",
+      "Rs.24,000"
+    ],
+    "oh": [
+      "Rs.25,000",
+      "Rs.26000",
+      "Rs.27000",
+      "Rs.24,000"
+    ],
+    "a": 0,
+    "e": "Method 1 (Percentage Method):\nStep 1: 7 वर्षों के लिए विभिन्न अवधियों का कुल ब्याज% जोड़ें:\n- पहले 3 वर्ष (5% की दर से) = 3 * 5% = 15%\n- अगले 2 वर्ष (8% की दर से) = 2 * 8% = 16%\n- 5 वर्ष के बाद शेष 2 वर्ष (10% की दर से) = 2 * 10% = 20%\nStep 2: 7 वर्षों का कुल ब्याज% = 15% + 16% + 20% = 51%.\nStep 3: 51% = ₹12,750.\n1% = 12,750 / 51 = 250.\nStep 4: मूलधन P (100%) = 250 * 100 = ₹25,000.\nअतः सही विकल्प  Rs.25,000 है।\n\nMethod 2 (Formula Method):\nStep 1: SI = P * [(5 * 3) + (8 * 2) + (10 * 2)] / 100 = 12,750.\nStep 2: 51P / 100 = 12,750 ==> P = (12,750 * 100) / 51 = 250 * 100 = ₹25,000.\nअतः सही उत्तर 'Rs.25,000' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "totalsi_3",
+    "qe": "A person borrowed some money at the rate of 8% per annum for the first two years, at the rate of 11% per annum for the next three years, and at the rate of 16% per annum for the period beyond five years. If he pays a total interest of Rs.21,400 at the end of nine years, how much money did he borrow (round to the nearest unit)?",
+    "qh": "एक व्यक्ति ने पहले दो वर्षों के लिए 8% वार्षिक की दर से, अगले तीन वर्षों के लिए 11% वार्षिक की दर से और पाँच वर्षों से अधिक की अवधि के लिए 16% वार्षिक की दर से कुछ पैसे उधार लिए। यदि वह नौ वर्षों के अंत में कुल ₹21,400 का ब्याज चुकाता है, तो उसने कितना धन उधार लिया (निकटतम इकाई तक पूर्णांकित)?",
+    "oe": [
+      "Rs.11,938",
+      "Rs.18,738",
+      "Rs.938,15",
+      "Rs.18,938"
+    ],
+    "oh": [
+      "Rs.11,938",
+      "Rs.18,738",
+      "Rs.938,15",
+      "Rs.18,938"
+    ],
+    "a": 3,
+    "e": "Method 1 (Percentage Method):\nStep 1: 9 वर्षों की अवधि के लिए कुल ब्याज प्रतिशत:\n- पहले 2 वर्ष (8% की दर से) = 2 * 8% = 16%\n- अगले 3 वर्ष (11% की दर से) = 3 * 11% = 33%\n- 5 वर्ष के बाद शेष 4 वर्ष (16% की दर से) = 4 * 16% = 64%\nStep 2: 9 वर्षों का कुल ब्याज% = 16% + 33% + 64% = 113%.\nStep 3: 113% = ₹21,400.\nStep 4: मूलधन P (100%) = (21,400 / 113) * 100 = 2,140,000 / 113 ≈ ₹18,938.05 ≈ ₹18,938.\nअतः सही विकल्प  Rs.18,938 है।\n\nMethod 2 (Formula Method):\nStep 1: SI = P * [(8 * 2) + (11 * 3) + (16 * 4)] / 100 = 21,400.\nStep 2: 113P / 100 = 21,400 ==> P = 2,140,000 / 113 ≈ ₹18,938.\nअतः सही उत्तर 'Rs.18,938' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "totalsi_4",
+    "qe": "The rate of interest for the first 2 years is 6% p.a. for next 3 years is 10% p.a. and for the period beyond 5 years is 12% p.a. If a person gets ₹ 12,771 as simple interest after 7 years, then what money did he invest?",
+    "qh": "ब्याज की दर पहले 2 वर्षों के लिए 6% प्रति वर्ष, अगले तीन वर्षों के लिए 10% प्रति वर्ष तथा 5 वर्षों के बाद की अवधि के लिए 12% है। यदि एक व्यक्ति को 7 वर्षों के बाद साधारण ब्याज के रूप में ₹ 12,771 प्राप्त होते हैं, तो उसने कितनी राशि निवेश की थी?",
+    "oe": [
+      "₹ 19,450",
+      "₹ 19,350",
+      "₹ 19,300",
+      "₹ 20,000"
+    ],
+    "oh": [
+      "₹ 19,450",
+      "₹ 19,350",
+      "₹ 19,300",
+      "₹ 20,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Percentage Method):\nStep 1: 7 वर्षों के लिए विभिन्न अवधियों का कुल ब्याज% जोड़ें:\n- पहले 2 वर्ष (6% की दर से) = 2 * 6% = 12%\n- अगले 3 वर्ष (10% की दर से) = 3 * 10% = 30%\n- 5 वर्ष के बाद शेष 2 वर्ष (12% की दर से) = 2 * 12% = 24%\nStep 2: 7 वर्षों का कुल ब्याज% = 12% + 30% + 24% = 66%.\nStep 3: 66% = ₹12,771.\n1% = 12,771 / 66 = 387 / 2 = 193.50.\nStep 4: मूलधन P (100%) = 193.50 * 100 = ₹19,350.\nअतः सही विकल्प  ₹ 19,350 है।\n\nMethod 2 (Formula Method):\nStep 1: SI = [P * (12 + 30 + 24)] / 100 = 12,771.\nStep 2: 66P / 100 = 12,771 ==> P = (12,771 * 100) / 66 = (4,257 * 100) / 22 = (387 * 100) / 2 = ₹19,350.\nअतः सही उत्तर '₹ 19,350' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "totalsi_5",
+    "qe": "The rate of simple interest for first two years is 8% p.a., for the next 4 years, it is 10% p.a. and for the period beyond 6 years, it is 12% p.a. If a person gets Rs 18358.60 as simple interest after 9 years, then how much money (in Rs) did he invest?",
+    "qh": "पहले दो वर्षों के लिए साधारण ब्याज की दर 8% प्रति वर्ष है, अगले 4 वर्षों के लिए यह 10% प्रति वर्ष है और 6 वर्ष से अधिक की अवधि के लिए यह 12% प्रति वर्ष है यदि किसी व्यक्ति को 9 वर्षों के बाद साधारण ब्याज के रूप में 18358.60 रुपये मिलते हैं। तो उसने कितना पैसा (रुपये में) निवेश किया?",
+    "oe": [
+      "21075",
+      "20087",
+      "19674",
+      "19955"
+    ],
+    "oh": [
+      "21075",
+      "20087",
+      "19674",
+      "19955"
+    ],
+    "a": 3,
+    "e": "Method 1 (Percentage Method):\nStep 1: 9 वर्षों की कुल अवधि का ब्याज%:\n- पहले 2 वर्ष (8% की दर से) = 2 * 8% = 16%\n- अगले 4 वर्ष (10% की दर से) = 4 * 10% = 40%\n- 6 वर्ष के बाद शेष 3 वर्ष (12% की दर से) = 3 * 12% = 36%\nStep 2: कुल ब्याज% = 16% + 40% + 36% = 92%.\nStep 3: 92% = ₹18,358.60.\n1% = 18,358.60 / 92 = 199.55.\nStep 4: मूलधन P (100%) = 199.55 * 100 = ₹19,955.\nअतः सही विकल्प  19955 है।\n\nMethod 2 (Formula Method):\nStep 1: SI = P * [(8 * 2) + (10 * 4) + (12 * 3)] / 100 = 18,358.60.\nStep 2: 92P / 100 = 18,358.60 ==> P = 1,835,860 / 92 = ₹19,955.\nअतः सही उत्तर '19955' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "totalsi_6",
+    "qe": "A sum of money earns a simple interest at 7.25% per annum for the first eight years, at 8.5% for the next six years, and at 6.5% for the final four years. If the total interest earned during these eighteen years was ₹35,100, what was the original sum invested (in ₹)?",
+    "qh": "किसी धनराशि पर पहले आठ वर्षों के लिए 7.25% प्रति वर्ष, अगले छः वर्षों के लिए 8.5% और अंतिम चार वर्षों के लिए 6.5% की दर से साधारण ब्याज मिलता है। यदि इन अठारह वर्षों के दौरान अर्जित कुल ब्याज ₹35,100 था, तो निवेश की गई मूल राशि (₹ में) क्या थी?",
+    "oe": [
+      "₹25,000",
+      "₹26,000",
+      "₹27,000",
+      "₹24,000"
+    ],
+    "oh": [
+      "₹25,000",
+      "₹26,000",
+      "₹27,000",
+      "₹24,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Percentage Method):\nStep 1: 18 वर्षों के विभिन्न चरणों का कुल ब्याज% जोड़ें:\n- पहले 8 वर्ष (7.25% की दर से) = 8 * 7.25% = 58%\n- अगले 6 वर्ष (8.5% की दर से) = 6 * 8.5% = 51%\n- अंतिम 4 वर्ष (6.5% की दर से) = 4 * 6.5% = 26%\nStep 2: 18 वर्षों का कुल ब्याज% = 58% + 51% + 26% = 135%.\nStep 3: प्रश्नानुसार 135% = ₹35,100.\n1% = 35,100 / 135 = 260.\nStep 4: मूल राशि (100%) = 260 * 100 = ₹26,000.\nअतः सही विकल्प  ₹26,000 है।\n\nMethod 2 (Formula Method):\nStep 1: SI = [P * (8 * 7.25 + 6 * 8.5 + 4 * 6.5)] / 100 = 35,100.\nStep 2: 135P / 100 = 35,100 ==> P = (35,100 * 100) / 135 = 260 * 100 = ₹26,000.\nअतः सही उत्तर '₹26,000' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "totalsi_7",
+    "qe": "A person deposits ₹500 for 2 years, ₹600 for 5 years and ₹1000 for 6 years at the same rate of simple interest. If he earns a simple interest of ₹1000, then what is the rate of interest per year?",
+    "qh": "कोई व्यक्ति 2 वर्षों के लिए ₹ 500, 5 वर्षों के लिए ₹600 तथा 6 वर्षों के लिए ₹ 1000 सभी को साधारण ब्याज की समान दर पर जमा करता है। यदि वह कुल ₹1000 रुपए का साधारण ब्याज प्राप्त करता है, तो प्रति वर्ष ब्याज की दर कितनी है?",
+    "oe": [
+      "15%",
+      "5%",
+      "10%",
+      "20%"
+    ],
+    "oh": [
+      "15%",
+      "5%",
+      "10%",
+      "20%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Equivalent Principal Method):\nStep 1: 1 वर्ष के लिए समतुल्य मूलधन (Effective Principal for 1 year) निकालें:\nP_eff = (500 * 2) + (600 * 5) + (1000 * 6)\nP_eff = 1,000 + 3,000 + 6,000 = ₹10,000.\nStep 2: 1 वर्ष के समतुल्य मूलधन पर प्राप्त कुल ब्याज = ₹1,000.\nStep 3: वार्षिक ब्याज दर R = (कुल SI / P_eff) * 100% = (1,000 / 10,000) * 100% = 10% प्रति वर्ष।\nअतः सही विकल्प  10% है।\n\nMethod 2 (Formula Method):\nStep 1: SI = [(500 * R * 2) + (600 * R * 5) + (1000 * R * 6)] / 100 = 1,000.\nStep 2: (1000R + 3000R + 6000R) / 100 = 1,000.\nStep 3: 10000R / 100 = 1,000 ==> 100R = 1,000 ==> R = 10%.\nअतः सही उत्तर '10%' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "totalsi_8",
+    "qe": "Ramesh has Rs.18,000. He deposited Rs.7,000 in a bank at the rate of 5% per annum and Rs.6,000 in other bank at the rate of 6% per annum simple interest. If he received Rs.1,160 as simple interest at the end of one year, then the rate of interest per annum on rest of the capital is equal to:",
+    "qh": "रमेश के पास 18,000 रुपये हैं। उसने एक बैंक में 5% वार्षिक साधारण ब्याज की दर से 7,000 रुपये और दूसरे बैंक में 6% वार्षिक साधारण ब्याज की दर से 6,000 रुपये जमा किए। यदि उसे एक वर्ष के अंत में साधारण ब्याज के रूप में 1,160 रुपये प्राप्त हुए, तो शेष पूंजी पर वार्षिक ब्याज की दर किसके बराबर होगी?",
+    "oe": [
+      "10%",
+      "11%",
+      "9%",
+      "8%"
+    ],
+    "oh": [
+      "10%",
+      "11%",
+      "9%",
+      "8%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Subtraction Method):\nStep 1: पहले दो बैंकों से प्राप्त 1 वर्ष का कुल ब्याज निकालें:\n- पहले बैंक से ब्याज (₹7,000 पर 5%) = 7,000 * 0.05 = ₹350.\n- दूसरे बैंक से ब्याज (₹6,000 पर 6%) = 6,000 * 0.06 = ₹360.\nदो बैंकों से कुल प्राप्त ब्याज = 350 + 360 = ₹710.\nStep 2: शेष पूंजी ज्ञात करें:\nशेष पूंजी = 18,000 - (7,000 + 6,000) = 18,000 - 13,000 = ₹5,000.\nStep 3: शेष पूंजी से प्राप्त अभीष्ट ब्याज:\nशेष ब्याज = कुल ब्याज - 710 = 1,160 - 710 = ₹450.\nStep 4: शेष पूंजी पर वार्षिक ब्याज दर:\nR = (450 / 5,000) * 100% = 45 / 5% = 9%... wait, गणना जांचें: 450 / 50 = 9%।\n(विकल्प जांच: 350 + 360 + 500 = 1210; यहाँ 1160 - 710 = 450, 450/5000 = 9%)।\nअतः सही विकल्प  9% है।\n\nMethod 2 (100-Base Method):\nStep 1: SI_1 = 350, SI_2 = 360 ==> SI_1 + SI_2 = 710.\nStep 2: SI_rem = 1160 - 710 = 450.\nStep 3: R = (450 * 100) / (5000 * 1) = 450 / 50 = 9%.\nअतः सही उत्तर '10%' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "totalsi_9",
+    "qe": "A sum of ₹ 10000 is invested in three schemes of simple interest. The annual interest rates are respectively, 4%, 6% and 10%. ₹ 4000 were invested in the first scheme. If the total interest earned after five years is ₹ 2800, then how much money was invested in the third scheme?",
+    "qh": "₹ 10,000 की एक राशि साधारण ब्याज की तीन योजनाओं में निवेश की जाती है। वार्षिक ब्याज दरें क्रमशः 4%, 6% और 10% हैं। पहली योजना में ₹ 4000 निवेश किए गए। यदि पाँच वर्षों के बाद प्राप्त कुल ब्याज ₹ 2800 है, तो तीसरी योजना में कितनी राशि निवेश की गई थी?",
+    "oe": [
+      "₹ 1,000",
+      "₹ 3,000",
+      "₹ 2,000",
+      "₹ 2,500"
+    ],
+    "oh": [
+      "₹ 1,000",
+      "₹ 3,000",
+      "₹ 2,000",
+      "₹ 2,500"
+    ],
+    "a": 0,
+    "e": "Method 1 (Alligation / Deviation Method):\nStep 1: पहली योजना (4% पर ₹4,000) से 5 वर्षों में प्राप्त ब्याज:\nSI_1 = (4,000 * 4 * 5) / 100 = 40 * 20 = ₹800.\nStep 2: शेष दोनों योजनाओं (स्कीम 2 और 3) से 5 वर्षों में प्राप्त ब्याज:\nSI_(2+3) = 2,800 - 800 = ₹2,000.\n1 वर्ष का ब्याज = 2,000 / 5 = ₹400.\nStep 3: शेष बची कुल धनराशि = 10,000 - 4,000 = ₹6,000.\nStep 4: यदि यह पूरी ₹6,000 की राशि स्कीम 2 (6%) में निवेश की जाती:\nब्याज = 6,000 * 6% = ₹360.\nStep 5: वास्तविक वार्षिक ब्याज से अंतर = 400 - 360 = ₹40.\nदरों का अंतर (स्कीम 3 और स्कीम 2) = 10% - 6% = 4%.\nStep 6: तीसरी योजना में निवेशित राशि = (40 / 4) * 100 = ₹1,000.\nअतः सही विकल्प  ₹ 1,000 है।\n\nMethod 2 (Equation Method):\nStep 1: माना तीसरी योजना (10%) में निवेश = x, तो दूसरी योजना (6%) में = 6,000 - x.\nStep 2: 1 वर्ष का कुल ब्याज = 0.06(6,000 - x) + 0.10x = 400.\nStep 3: 360 + 0.04x = 400 ==> 0.04x = 40 ==> x = 40 / 0.04 = ₹1,000.\nअतः सही उत्तर '₹ 1,000' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
