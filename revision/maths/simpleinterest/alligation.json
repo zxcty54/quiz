@@ -1,0 +1,230 @@
+[
+  {
+    "p_id": "alligation_1",
+    "qe": "A total of ₹2,00,000 is divided into two parts for investing in different banks on simple interest. One yields 4% p.a. while the other yields 6% p.a. If the total interest at the end of one year is equivalent to 4.7% p.a. on the whole amount, the amount (in ₹) invested in each bank is _________, respectively.",
+    "qh": "साधारण ब्याज पर विभिन्न बैंकों में निवेश करने के लिए कुल ₹2,00,000 को दो भागों में विभाजित किया गया है। एक पर 4% प्रति वर्ष जबकि दूसरे पर 6% प्रति वर्ष की दर से ब्याज मिलता है। यदि एक वर्ष के अंत में कुल ब्याज पूरी राशि पर 4.7% प्रति वर्ष के बराबर है, तो प्रत्येक बैंक में निवेश की गई राशि (₹ में) क्रमशः _________ है।",
+    "oe": [
+      "1,30,000 and 70,000",
+      "1,45,000 and 55,000",
+      "1,20,000 and 80,000",
+      "1,60,000 and 40,000"
+    ],
+    "oh": [
+      "1,30,000 and 70,000",
+      "1,45,000 and 55,000",
+      "1,20,000 and 80,000",
+      "1,60,000 and 40,000"
+    ],
+    "a": 0,
+    "e": "Method 1 (Alligation Method):\nStep 1: दोनों भागों की ब्याज दरें और औसत दर लिखें:\n- भाग 1: 4%\n- भाग 2: 6%\n- औसत दर: 4.7%\nStep 2: Alligation अनुपात निकालें:\nअनुपात = (6 - 4.7) : (4.7 - 4) = 1.3 : 0.7 = 13 : 7.\nStep 3: कुल अनुपात = 13 + 7 = 20 units.\n20 units = ₹2,00,000 ==> 1 unit = ₹10,000.\nStep 4: भाग 1 (4% पर) = 13 * 10,000 = ₹1,30,000.\nभाग 2 (6% पर) = 7 * 10,000 = ₹70,000.\nअतः सही विकल्प  1,30,000 and 70,000 है।\n\nMethod 2 (100-Base / Equation Method):\nStep 1: माना 4% पर निवेशित राशि = x, तो 6% पर निवेशित राशि = 2,00,000 - x.\nStep 2: 0.04x + 0.06(2,00,000 - x) = 2,00,000 * 0.047 = 9,400.\nStep 3: 0.04x + 12,000 - 0.06x = 9,400 ==> 0.02x = 2,600 ==> x = ₹1,30,000.\nStep 4: दूसरा भाग = 2,00,000 - 1,30,000 = ₹70,000.\nअतः सही उत्तर '1,30,000 and 70,000' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alligation_2",
+    "qe": "Kiran lent ₹4,000 to two persons such that one part of it at the rate of 8% per annum and the remaining part at the rate of 10% per annum. He got an annual simple interest of ₹352. Then the sum lent at 10% is:",
+    "qh": "किरण ने दो व्यक्तियों को ₹4,000 इस प्रकार उधार दिए कि इसका एक भाग 8% प्रति वर्ष की दर से और शेष भाग 10% प्रति वर्ष की दर से दिया गया। उसे ₹352 का वार्षिक साधारण ब्याज प्राप्त हुआ। 10% पर उधार दी गई राशि क्या है:",
+    "oe": [
+      "₹1,800",
+      "₹2,200",
+      "₹2,400",
+      "₹1,600"
+    ],
+    "oh": [
+      "₹1,800",
+      "₹2,200",
+      "₹2,400",
+      "₹1,600"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alligation Method):\nStep 1: समग्र औसत ब्याज दर निकालें:\nऔसत दर = (352 / 4,000) * 100% = 35.2 / 4% = 8.8% प्रति वर्ष।\nStep 2: Alligation नियम लागू करें:\n- पहला भाग (8%)\n- दूसरा भाग (10%)\n- औसत = 8.8%\nअनुपात = (10 - 8.8) : (8.8 - 8) = 1.2 : 0.8 = 3 : 2.\nStep 3: कुल अनुपात = 3 + 2 = 5 units = ₹4,000 ==> 1 unit = ₹800.\nStep 4: 10% पर दी गई राशि (2 units) = 2 * 800 = ₹1,600.\nअतः सही विकल्प  ₹1,600 है।\n\nMethod 2 (Deviation / Shift Method):\nStep 1: यदि पूरी ₹4,000 की राशि 8% पर दी जाती, तो ब्याज = 4,000 * 8% = ₹320.\nStep 2: वास्तविक ब्याज से अंतर = 352 - 320 = ₹32.\nStep 3: यह ₹32 का अंतर दूसरे भाग की अतिरिक्त 2% (10% - 8%) दर के कारण है:\n2% of Part_2 = ₹32 ==> Part_2 = (32 / 2) * 100 = ₹1,600.\nअतः सही उत्तर '₹1,600' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alligation_3",
+    "qe": "An amount of Rs.8,000 was invested for 2 years, partly in scheme 1 at the rate of 5% simple interest per annum and the rest in scheme 2 at the rate of 4% simple interest per annum. The total interest received at the end was ₹720. The amount of money invested in scheme 1 is:",
+    "qh": "8,000 रुपये की राशि 2 वर्षों के लिए निवेश की गई थी, आंशिक रूप से योजना 1 में 5% प्रति वर्ष साधारण ब्याज की दर से और शेष योजना 2 में 4% प्रति वर्ष साधारण ब्याज की दर से। अंत में प्राप्त कुल ब्याज ₹720 था। योजना 1 में निवेश की गई धनराशि है:",
+    "oe": [
+      "₹3,640",
+      "₹7,200",
+      "₹4,400",
+      "₹4,000"
+    ],
+    "oh": [
+      "₹3,640",
+      "₹7,200",
+      "₹4,400",
+      "₹4,000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alligation Method):\nStep 1: 1 वर्ष का साधारण ब्याज = 720 / 2 = ₹360.\nStep 2: समग्र औसत दर = (360 / 8,000) * 100% = 36 / 8% = 4.5% प्रति वर्ष।\nStep 3: Alligation नियम लागू करें:\n- स्कीम 1 (5%)\n- स्कीम 2 (4%)\n- औसत = 4.5%\nअनुपात = (4.5 - 4) : (5 - 4.5) = 0.5 : 0.5 = 1 : 1.\nStep 4: अनुपात 1 : 1 होने के कारण दोनों योजनाओं में बराबर राशि निवेश की गई:\nस्कीम 1 में निवेश = 8,000 / 2 = ₹4,000.\nअतः सही विकल्प  ₹4,000 है।\n\nMethod 2 (Shift Method):\nStep 1: यदि पूरी ₹8,000 की राशि 4% पर 2 वर्ष के लिए दी जाती, तो ब्याज = 8,000 * 4% * 2 = ₹640.\nStep 2: ब्याज में अंतर = 720 - 640 = ₹80.\nStep 3: स्कीम 1 पर 2 वर्षों में अतिरिक्त ब्याज% = (5% - 4%) * 2 = 2%.\nStep 4: स्कीम 1 में निवेश = (80 / 2) * 100 = ₹4,000.\nअतः सही उत्तर '₹4,000' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alligation_4",
+    "qe": "Mr Gogia invested an amount of ₹13,900 divided into two different schemes A and B at the simple interest rate of 14% pa and 11% pa, respectively. If the total amount of simple interest earned in 2 years is ₹3,508, what was the amount invested in scheme B?",
+    "qh": "श्री गोगिया ने ₹13,900 की राशि को दो अलग-अलग योजनाओं A और B में क्रमशः 14% प्रति वर्ष और 11% प्रति वर्ष की साधारण ब्याज दर पर विभाजित करके निवेश किया। यदि 2 वर्षों में अर्जित साधारण ब्याज की कुल राशि ₹3,508 है, तो योजना B में कितनी राशि का निवेश किया गया था?",
+    "oe": [
+      "₹7200",
+      "₹7500",
+      "₹6400",
+      "₹6500"
+    ],
+    "oh": [
+      "₹7200",
+      "₹7500",
+      "₹6400",
+      "₹6500"
+    ],
+    "a": 2,
+    "e": "Method 1 (Deviation / Assumption Method):\nStep 1: 1 वर्ष का कुल साधारण ब्याज = 3,508 / 2 = ₹1,754.\nStep 2: यदि पूरी ₹13,900 की राशि 14% (स्कीम A) पर निवेश की जाती:\nअपेक्षित वार्षिक ब्याज = 13,900 * 14% = 139 * 14 = ₹1,946.\nStep 3: वास्तविक ब्याज से अंतर = 1,946 - 1,754 = ₹192.\nStep 4: यह कमी स्कीम B की दर में (14% - 11% = 3%) की कमी के कारण है:\n3% of Scheme B = ₹192.\nScheme B = (192 / 3) * 100 = 64 * 100 = ₹6,400.\nअतः सही विकल्प  ₹6400 है।\n\nMethod 2 (Equation Method):\nStep 1: माना स्कीम B में निवेश = B, तो स्कीम A में = (13,900 - B).\nStep 2: 2 वर्ष का कुल ब्याज = 2 * [(13,900 - B) * 0.14 + B * 0.11] = 3,508.\nStep 3: 1,946 - 0.03B = 1,754 ==> 0.03B = 192 ==> B = ₹6,400.\nअतः सही उत्तर '₹6400' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alligation_5",
+    "qe": "A borrows ₹20,000 from B and C. B lends him a certain sum of money at 25% simple interest per annum, while C lends him the remaining sum of money at 21% simple interest per annum. The total interest paid by A in one year is ₹4,500. The sum (in ₹) borrowed from B is:",
+    "qh": "A, B और C से ₹20,000 उधार लेता है। B उसे 25% वार्षिक साधारण ब्याज पर एक निश्चित धनराशि उधार देता है, जबकि C उसे 21% वार्षिक साधारण ब्याज पर शेष धनराशि उधार देता है। एक वर्ष में A द्वारा भुगतान किया गया कुल ब्याज ₹4,500 है। B से उधार ली गई राशि (₹ में) है:",
+    "oe": [
+      "12,500",
+      "6,000",
+      "9,000",
+      "7,500"
+    ],
+    "oh": [
+      "12,500",
+      "6,000",
+      "9,000",
+      "7,500"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alligation Method):\nStep 1: समग्र औसत ब्याज दर = (4,500 / 20,000) * 100% = 45 / 2% = 22.5% प्रति वर्ष।\nStep 2: Alligation नियम लागू करें:\n- B की दर = 25%\n- C की दर = 21%\n- औसत दर = 22.5%\nअनुपात (B : C) = (22.5 - 21) : (25 - 22.5) = 1.5 : 2.5 = 3 : 5.\nStep 3: कुल अनुपात = 3 + 5 = 8 units = ₹20,000 ==> 1 unit = 20,000 / 8 = ₹2,500.\nStep 4: B से उधार ली गई राशि (3 units) = 3 * 2,500 = ₹7,500.\nअतः सही विकल्प  7,500 है।\n\nMethod 2 (Deviation Method):\nStep 1: यदि पूरी ₹20,000 की राशि 21% पर उधार ली जाती, तो ब्याज = 20,000 * 21% = ₹4,200.\nStep 2: वास्तविक ब्याज से अंतर = 4,500 - 4,200 = ₹300.\nStep 3: B की दर C से (25% - 21% = 4%) अधिक है:\n4% of B = ₹300 ==> B = (300 / 4) * 100 = 75 * 100 = ₹7,500.\nअतः सही उत्तर '7,500' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alligation_6",
+    "qe": "The simple interest earned on ₹2,800 at a rate of 10% per annum for 3 years is ₹x and ₹1,736 is the simple interest earned on ₹6,200 at a rate of 14% for y years, then the value of x/y is:",
+    "qh": "₹2,800 पर 10% प्रति वर्ष की दर से 3 वर्षों में अर्जित साधारण ब्याज ₹x है और ₹6,200 पर 14% की दर से y वर्षों में अर्जित साधारण ब्याज ₹1,736 है, तो x/y का मान क्या है:",
+    "oe": [
+      "420",
+      "480",
+      "360",
+      "400"
+    ],
+    "oh": [
+      "420",
+      "480",
+      "360",
+      "400"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Calculation Method):\nStep 1: x का मान निकालें (₹2,800 पर 10% की दर से 3 वर्ष का SI):\nx = (2,800 * 10 * 3) / 100 = 28 * 30 = ₹840.\nStep 2: y का मान निकालें (₹6,200 पर 14% की दर से y वर्ष का SI = ₹1,736):\n1,736 = (6,200 * 14 * y) / 100\n1,736 = 62 * 14 * y = 868 * y\ny = 1,736 / 868 = 2 वर्ष।\nStep 3: x/y का मान ज्ञात करें:\nx / y = 840 / 2 = 420.\nअतः सही विकल्प  420 है।\n\nMethod 2 (Ratio Method):\nStep 1: x = 28 * 10 * 3 = 840.\nStep 2: y = 1736 / (62 * 14) = 1736 / 868 = 2.\nStep 3: x / y = 840 / 2 = 420.\nअतः सही उत्तर '420' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alligation_7",
+    "qe": "A money lender lent ₹30,000 in two parts, one at the rate of 8% and the other at 9%. If the total annual simple interest on the amount is ₹2,650, then what is the amount of money lent the rate of 8%?",
+    "qh": "एक साहूकार ने ₹30,000 को दो भागों में उधार दिया, एक 8% की दर से और दूसरा 9% की दर से। यदि राशि पर कुल वार्षिक साधारण ब्याज ₹2,650 है, तो 8% की दर से उधार दी गई राशि क्या है?",
+    "oe": [
+      "₹6,600",
+      "₹5,000",
+      "₹4,500",
+      "₹5,500"
+    ],
+    "oh": [
+      "₹6,600",
+      "₹5,000",
+      "₹4,500",
+      "₹5,500"
+    ],
+    "a": 1,
+    "e": "Method 1 (Alligation Method):\nStep 1: समग्र वार्षिक औसत ब्याज दर निकालें:\nऔसत दर = (2,650 / 30,000) * 100% = 265 / 30% = 53 / 6%.\nStep 2: Alligation नियम लागू करें:\n- भाग 1 (8% = 48/6%)\n- भाग 2 (9% = 54/6%)\n- औसत दर = 53/6%\nअनुपात (भाग 1 : भाग 2) = (54/6 - 53/6) : (53/6 - 48/6) = 1 : 5.\nStep 3: कुल अनुपात = 1 + 5 = 6 units = ₹30,000 ==> 1 unit = ₹5,000.\nStep 4: 8% की दर पर उधार दी गई राशि (1 unit) = ₹5,000.\nअतः सही विकल्प  ₹5,000 है।\n\nMethod 2 (Shift / Deviation Method):\nStep 1: यदि पूरी ₹30,000 की राशि 9% पर दी जाती:\nकुल ब्याज = 30,000 * 9% = ₹2,700.\nStep 2: वास्तविक ब्याज से अंतर = 2,700 - 2,650 = ₹50.\nStep 3: दरों का अंतर = 9% - 8% = 1%.\nStep 4: 8% पर दी गई राशि = 50 / 1% = (50 / 1) * 100 = ₹5,000.\nअतः सही उत्तर '₹5,000' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alligation_8",
+    "qe": "S deposits a total of ₹ 50,000 in two accounts which give 8% and 12 % simple interest annually, respectively. After one year, he gets a total ₹5,200. How much money does he deposit in the account with a 12 % interest rate?",
+    "qh": "S दो खातों में कुल ₹ 50,000 जमा करता है जो क्रमशः 8% और 12% वार्षिक साधारण ब्याज देते हैं। एक वर्ष के बाद, उसे कुल ₹5,200 मिलते हैं। वह 12% ब्याज दर वाले खाते में कितना पैसा जमा करता है?",
+    "oe": [
+      "30000",
+      "20000",
+      "32000",
+      "25000"
+    ],
+    "oh": [
+      "30000",
+      "20000",
+      "32000",
+      "25000"
+    ],
+    "a": 0,
+    "e": "Method 1 (Alligation Method):\nStep 1: समग्र औसत ब्याज दर = (5,200 / 50,000) * 100% = 52 / 5% = 10.4%.\nStep 2: Alligation नियम लागू करें:\n- खाता 1 (8%)\n- खाता 2 (12%)\n- औसत = 10.4%\nअनुपात = (12 - 10.4) : (10.4 - 8) = 1.6 : 2.4 = 2 : 3.\nStep 3: कुल अनुपात = 2 + 3 = 5 units = ₹50,000 ==> 1 unit = ₹10,000.\nStep 4: 12% ब्याज दर वाले खाते में जमा राशि (3 units) = 3 * 10,000 = ₹30,000.\nअतः सही विकल्प  30000 है।\n\nMethod 2 (Deviation Method):\nStep 1: यदि पूरी ₹50,000 की राशि न्यूनतम दर (8%) पर जमा होती:\nकुल ब्याज = 50,000 * 8% = ₹4,000.\nStep 2: अतिरिक्त ब्याज = 5,200 - 4,000 = ₹1,200.\nStep 3: यह अतिरिक्त ब्याज दूसरे खाते की अतिरिक्त 4% (12% - 8%) दर के कारण है:\n4% of Account_2 = ₹1,200 ==> Account_2 = (1,200 / 4) * 100 = ₹30,000.\nअतः सही उत्तर '30000' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alligation_9",
+    "qe": "An investor divides a total of $25,000 into two different accounts. Account A earns simple interest at a rate of 4% per year, and Account B earns simple interest at a rate of 6.5% per year. After three years, the total interest earned from both accounts is $3,975. What is the amount of money invested in Account A?",
+    "qh": "एक निवेशक कुल $25,000 को दो अलग-अलग खातों में विभाजित करता है। खाता A प्रति वर्ष 4% की दर से साधारण ब्याज अर्जित करता है, और खाता B प्रति वर्ष 6.5% की दर से साधारण ब्याज अर्जित करता है। तीन वर्षों के बाद, दोनों खातों से अर्जित कुल ब्याज $3,975 है। खाता A में निवेश की गई राशि क्या है?",
+    "oe": [
+      "$13,000",
+      "$10,000",
+      "$15,000",
+      "$12,000"
+    ],
+    "oh": [
+      "$13,000",
+      "$10,000",
+      "$15,000",
+      "$12,000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Deviation / Assumption Method):\nStep 1: 1 वर्ष का कुल साधारण ब्याज = 3,975 / 3 = $1,325.\nStep 2: यदि पूरी $25,000 की राशि खाता B (6.5%) में निवेश की जाती:\nअपेक्षित वार्षिक ब्याज = 25,000 * 6.5% = $1,625.\nStep 3: वास्तविक ब्याज से अंतर = 1,625 - 1,325 = $300.\nStep 4: ब्याज दरों का अंतर = 6.5% - 4% = 2.5%.\nStep 5: खाता A में निवेशित राशि = 300 / 2.5% = (300 / 2.5) * 100 = $12,000.\nअतः सही विकल्प  $12,000 है।\n\nMethod 2 (Alligation Method):\nStep 1: 3 वर्षों में समग्र ब्याज% = (3,975 / 25,000) * 100% = 15.9%.\n1 वर्ष की औसत दर = 15.9% / 3 = 5.3%.\nStep 2: Alligation अनुपात:\nखाता A (4%) और खाता B (6.5%), औसत = 5.3%.\nअनुपात = (6.5 - 5.3) : (5.3 - 4) = 1.2 : 1.3 = 12 : 13.\nStep 3: कुल 25 units = $25,000 ==> 1 unit = $1,000.\nखाता A (12 units) = 12 * 1,000 = $12,000.\nअतः सही उत्तर '$12,000' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alligation_10",
+    "qe": "Rajesh invested ₹10,000 by dividing it into two different investment schemes, A and B, at simple interest rates of 8% and 10%, respectively. If the total interest earned in 2 years is ₹1,680, the amount invested in scheme A is:",
+    "qh": "राजेश ने ₹10,000 को दो अलग-अलग निवेश योजनाओं, A और B में क्रमशः 8% और 10% की साधारण ब्याज दरों पर विभाजित करके निवेश किया। यदि 2 वर्षों में अर्जित कुल ब्याज ₹1,680 है, तो योजना A में निवेश की गई राशि है:",
+    "oe": [
+      "₹4,000",
+      "₹2,000",
+      "₹6,000",
+      "₹8,000"
+    ],
+    "oh": [
+      "₹4,000",
+      "₹2,000",
+      "₹6,000",
+      "₹8,000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alligation Method):\nStep 1: 1 वर्ष का साधारण ब्याज = 1,680 / 2 = ₹840.\nStep 2: समग्र औसत वार्षिक दर = (840 / 10,000) * 100% = 8.4%.\nStep 3: Alligation नियम लागू करें:\n- स्कीम A (8%)\n- स्कीम B (10%)\n- औसत = 8.4%\nअनुपात (A : B) = (10 - 8.4) : (8.4 - 8) = 1.6 : 0.4 = 4 : 1.\nStep 4: कुल अनुपात = 4 + 1 = 5 units = ₹10,000 ==> 1 unit = ₹2,000.\nStep 5: स्कीम A में निवेश की गई राशि (4 units) = 4 * 2,000 = ₹8,000.\nअतः सही विकल्प  ₹8,000 है।\n\nMethod 2 (Deviation Method):\nStep 1: यदि पूरी ₹10,000 की राशि स्कीम B (10%) में निवेश की जाती:\n2 वर्ष का ब्याज = 10,000 * 10% * 2 = ₹2,000.\nStep 2: वास्तविक ब्याज से अंतर = 2,000 - 1,680 = ₹320.\nStep 3: 2 वर्षों में दरों का अंतर = (10% - 8%) * 2 = 4%.\nStep 4: स्कीम A में निवेश = (320 / 4) * 100 = ₹8,000.\nअतः सही उत्तर '₹8,000' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alligation_11",
+    "qe": "A sum of ₹5,000 was lent to two people, one at the rate of 16% and the other at the rate of 24%. If the simple interest after one year is ₹960, what is the sum lent at the higher rate?",
+    "qh": "₹5,000 की राशि दो लोगों को उधार दी गई थी, एक को 16% की दर से और दूसरे को 24% की दर से। यदि एक वर्ष के बाद साधारण ब्याज ₹960 है, तो उच्च दर पर उधार दी गई राशि क्या है?",
+    "oe": [
+      "₹1,500",
+      "₹3,000",
+      "₹2,500",
+      "₹2,000"
+    ],
+    "oh": [
+      "₹1,500",
+      "₹3,000",
+      "₹2,500",
+      "₹2,000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alligation Method):\nStep 1: समग्र औसत ब्याज दर = (960 / 5,000) * 100% = 96 / 5% = 19.2%.\nStep 2: Alligation नियम लागू करें:\n- निम्न दर (16%)\n- उच्च दर (24%)\n- औसत = 19.2%\nअनुपात = (24 - 19.2) : (19.2 - 16) = 4.8 : 3.2 = 3 : 2.\nStep 3: कुल अनुपात = 3 + 2 = 5 units = ₹5,000 ==> 1 unit = ₹1,000.\nStep 4: उच्च दर (24%) पर उधार दी गई राशि (2 units) = 2 * 1,000 = ₹2,000.\nअतः सही विकल्प  ₹2,000 है।\n\nMethod 2 (Deviation Method):\nStep 1: यदि पूरी ₹5,000 की राशि 16% पर दी जाती:\nब्याज = 5,000 * 16% = ₹800.\nStep 2: वास्तविक ब्याज से अंतर = 960 - 800 = ₹160.\nStep 3: दरों का अंतर = 24% - 16% = 8%.\nStep 4: उच्च दर पर दी गई राशि = (160 / 8) * 100 = ₹2,000.\nअतः सही उत्तर '₹2,000' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alligation_12",
+    "qe": "A man has ₹15,000. He lends a part of it to X for 3 years at 10% simple interest and the remaining to Y for 3 years at 12% simple interest. If the total interest received from both X and Y after 3 years is ₹4,950, find the amount lent to X.",
+    "qh": "एक व्यक्ति के पास ₹15,000 हैं। वह इसका एक भाग X को 3 वर्षों के लिए 10% साधारण ब्याज पर और शेष Y को 3 वर्षों के लिए 12% साधारण ब्याज पर उधार देता है। यदि 3 वर्षों के बाद X और Y दोनों से प्राप्त कुल ब्याज ₹4,950 है, तो X को उधार दी गई राशि ज्ञात कीजिए।",
+    "oe": [
+      "₹7,500",
+      "₹8,000",
+      "₹7,000",
+      "₹6,500"
+    ],
+    "oh": [
+      "₹7,500",
+      "₹8,000",
+      "₹7,000",
+      "₹6,500"
+    ],
+    "a": 0,
+    "e": "Method 1 (Alligation Method):\nStep 1: 1 वर्ष का कुल ब्याज = 4,950 / 3 = ₹1,650.\nStep 2: समग्र औसत दर = (1,650 / 15,000) * 100% = 165 / 15% = 11%.\nStep 3: Alligation अनुपात:\n- X को दी गई दर: 10%\n- Y को दी गई दर: 12%\n- औसत दर: 11%\nअनुपात (X : Y) = (12 - 11) : (11 - 10) = 1 : 1.\nStep 4: अनुपात 1 : 1 होने के कारण दोनों को समान राशि दी गई:\nX को दी गई राशि = 15,000 / 2 = ₹7,500.\nअतः सही विकल्प  ₹7,500 है।\n\nMethod 2 (Deviation Method):\nStep 1: यदि पूरी ₹15,000 की राशि Y को 12% पर 3 वर्ष के लिए दी जाती:\nब्याज = 15,000 * 12% * 3 = ₹5,400.\nStep 2: वास्तविक ब्याज से अंतर = 5,400 - 4,950 = ₹450.\nStep 3: 3 वर्षों में X और Y की दरों का अंतर = (12% - 10%) * 3 = 6%.\nStep 4: X को उधार दी गई राशि = (450 / 6) * 100 = 75 * 100 = ₹7,500.\nअतः सही उत्तर '₹7,500' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
