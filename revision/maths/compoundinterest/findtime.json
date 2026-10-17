@@ -1,0 +1,135 @@
+[
+  {
+    "p_id": "findtime_1",
+    "qe": "In how many years will ₹50,000 become ₹66,550 at 10% compound interest per annum?",
+    "qh": "10% वार्षिक चक्रवृद्धि ब्याज की दर से कितने वर्षों में ₹50,000 की राशि ₹66,550 हो जाएगी?",
+    "oe": [
+      "4",
+      "5",
+      "6",
+      "3"
+    ],
+    "oh": [
+      "4",
+      "5",
+      "6",
+      "3"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio & Index Method):\nStep 1: मूलधन और मिश्रधन का अनुपात निकालें:\nA / P = 66,550 / 50,000 = 6,655 / 5,000.\n5 से विभाजित करने पर: 1,331 / 1,000.\nStep 2: ब्याज दर R = 10% = 1/10 ==> 1 वर्ष का गुणक = 11/10.\nStep 3: आधारों को बराबर करें:\n(11 / 10)^T = 1,331 / 1,000 = (11 / 10)^3.\nStep 4: घातों की तुलना करने पर: T = 3 वर्ष।\nअतः सही विकल्प  3 है।\n\nMethod 2 (Tree Method):\nStep 1: ₹50,000 पर 10% वार्षिक दर:\n- वर्ष 1 ब्याज = ₹5,000 (कुल राशि = ₹55,000)\n- वर्ष 2 ब्याज = ₹5,500 (कुल राशि = ₹60,500)\n- वर्ष 3 ब्याज = ₹6,050 (कुल राशि = ₹66,550)\nStep 2: 3 वर्षों के अंत में राशि ₹66,550 हो जाती है।\nअतः सही उत्तर '3' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findtime_2",
+    "qe": "A principal of ₹1,00,000 is invested at 10% per annum compound interest, compounded annually. After how many years will the amount grow to ₹1,33,100?",
+    "qh": "₹1,00,000 का मूलधन 10% वार्षिक चक्रवृद्धि ब्याज (वार्षिक संयोजन) पर निवेश किया जाता है। कितने वर्षों के बाद यह राशि बढ़कर ₹1,33,100 हो जाएगी?",
+    "oe": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "oh": [
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: A / P = 1,33,100 / 1,00,000 = 1,331 / 1,000.\nStep 2: दर R = 10% = 1/10 ==> गुणक = 11/10.\nStep 3: (11 / 10)^T = (11 / 10)^3 ==> T = 3 वर्ष।\nअतः सही विकल्प  3 है।\n\nMethod 2 (Effective Rate Method):\nStep 1: कुल अर्जित CI = 1,33,100 - 1,00,000 = ₹33,100.\nकुल CI% = (33,100 / 1,00,000) * 100% = 33.1%.\nStep 2: हम जानते हैं कि 10% की दर से 33.1% ब्याज 3 वर्षों में प्राप्त होता है (10% + 10% + 10% का क्रमिक मान = 33.1%).\nअतः समय = 3 वर्ष।\nअतः सही उत्तर '3' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findtime_3",
+    "qe": "The compound interest on ₹10,000 at 20% per annum is ₹4,641, when interest is compounded half-yearly, then for how many years was the sum invested?",
+    "qh": "₹10,000 पर 20% प्रति वर्ष की दर से चक्रवृद्धि ब्याज ₹4,641 है, जब ब्याज अर्धवार्षिक रूप से संयोजित होता है, तो वह राशि कितने वर्षों के लिए निवेश की गई थी?",
+    "oe": [
+      "2 years",
+      "3 years",
+      "4 years",
+      "6 years"
+    ],
+    "oh": [
+      "2 years",
+      "3 years",
+      "4 years",
+      "6 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: कुल मिश्रधन A = मूलधन + CI = 10,000 + 4,641 = ₹14,641.\nStep 2: अर्धवार्षिक संयोजन के लिए दर r = 20% / 2 = 10% = 1/10.\nStep 3: अनुपात A / P = 14,641 / 10,000 = (11 / 10)^4.\nStep 4: अर्धवार्षिक अवधियों की संख्या (n) = 4 छमाही (half-years).\nStep 5: कुल समय = 4 / 2 = 2 वर्ष।\nअतः सही विकल्प  2 years है।\n\nMethod 2 (Effective Rate Method):\nStep 1: कुल CI% = (4,641 / 10,000) * 100% = 46.41%.\nStep 2: 10% प्रति छमाही की दर से 46.41% ब्याज 4 छमाही चक्रों (अर्थात् 2 वर्ष) में बनता है।\nअतः सही उत्तर '2 years' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findtime_4",
+    "qe": "In how many years will ₹1,60,000 become ₹2,79,841 at a compound interest (Compounded annually) rate of 15% per annum?",
+    "qh": "15% वार्षिक चक्रवृद्धि ब्याज (वार्षिक संयोजन) की दर से कितने वर्षों में ₹1,60,000 की राशि ₹2,79,841 हो जाएगी?",
+    "oe": [
+      "6 years",
+      "3 years",
+      "4 years",
+      "5 years"
+    ],
+    "oh": [
+      "6 years",
+      "3 years",
+      "4 years",
+      "5 years"
+    ],
+    "a": 2,
+    "e": "Method 1 (Power / Ratio Method):\nStep 1: दर R = 15% = 3/20 ==> गुणक = 23/20.\nStep 2: A / P = 2,79,841 / 1,60,000.\nStep 3: हर का विश्लेषण: 1,60,000 = 16 * 10,000 = 2^4 * 10^4 = 20^4.\nअंश का विश्लेषण: 23^4 = (529)^2 = 2,79,841.\nStep 4: (23 / 20)^T = (23 / 20)^4 ==> T = 4 वर्ष।\nअतः सही विकल्प  4 years है।\n\nMethod 2 (Unit Digit Method):\nStep 1: (1.15)^T के प्रसार में इकाई अंक का परीक्षण:\n(23/20)^T ==> 3^1 = 3, 3^2 = 9, 3^3 = 7, 3^4 = 1.\nStep 2: अंश का अंतिम अंक 1 है, अतः T = 4 वर्ष।\nअतः सही उत्तर '4 years' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findtime_5",
+    "qe": "In how many years will a sum of ₹800 become ₹1216.70 at 30% per annum C.I. compounding half-yearly?",
+    "qh": "30% वार्षिक चक्रवृद्धि ब्याज की दर से अर्धवार्षिक संयोजित होने पर ₹800 की राशि कितने वर्षों में ₹1216.70 हो जाएगी?",
+    "oe": [
+      "2 year",
+      "1 year",
+      "2.5 year",
+      "1.5 year"
+    ],
+    "oh": [
+      "2 year",
+      "1 year",
+      "2.5 year",
+      "1.5 year"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: अर्धवार्षिक संयोजन के लिए:\nदर r = 30% / 2 = 15% प्रति छमाही = 3/20.\nगुणक = 1 + 3/20 = 23/20.\nStep 2: A / P का अनुपात निकालें:\nA / P = 1,216.70 / 800 = 12,167 / 8,000.\nStep 3: घातों की तुलना करें:\n8,000 = 20^3 तथा 12,167 = 23^3.\n(23 / 20)^n = (23 / 20)^3 ==> n = 3 छमाही (half-years).\nStep 4: कुल समय = 3 / 2 = 1.5 वर्ष।\nअतः सही विकल्प  1.5 year है।\n\nMethod 2 (Formula Method):\nStep 1: 1216.70 = 800 * (1 + 15/100)^n ==> 1.520875 = (1.15)^n.\nStep 2: (1.15)^3 = 1.520875 ==> n = 3 छमाही = 1.5 वर्ष।\nअतः सही उत्तर '1.5 year' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findtime_6",
+    "qe": "The compound interest on ₹18,000 at 7% per annum, compounded annually, is ₹1,260. What is the period of time?",
+    "qh": "₹18,000 पर 7% वार्षिक दर से वार्षिक रूप से संयोजित चक्रवृद्धि ब्याज ₹1,260 है। समय अवधि क्या है?",
+    "oe": [
+      "1 years",
+      "2 years",
+      "3 years",
+      "4 years"
+    ],
+    "oh": [
+      "1 years",
+      "2 years",
+      "3 years",
+      "4 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Percentage Method):\nStep 1: ₹18,000 पर 7% की दर से 1 वर्ष का साधारण/चक्रवृद्धि ब्याज:\n1 वर्ष का ब्याज = 7% of ₹18,000 = (7 / 100) * 18,000 = 7 * 180 = ₹1,260.\nStep 2: दिया गया कुल ब्याज ठीक ₹1,260 है।\nचूँकि पहले वर्ष का CI और SI दोनों समान होते हैं और ₹1,260 के बराबर हैं, अतः समय = 1 वर्ष।\nअतः सही विकल्प  1 years है।\n\nMethod 2 (Formula Method):\nStep 1: Amount = 18,000 + 1,260 = ₹19,260.\nStep 2: 19,260 = 18,000 * (1 + 7/100)^T ==> (1.07)^T = 19,260 / 18,000 = 1.07.\nStep 3: (1.07)^T = (1.07)^1 ==> T = 1 वर्ष।\nअतः सही उत्तर '1 years' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "findtime_7",
+    "qe": "A sum of ₹7500 amounts to ₹9075 at 10% p.a. interest being compounded yearly in a certain time. The simple interest (in ₹) on the same sum for the same time and the same rate is:",
+    "qh": "₹7500 की राशि 10% वार्षिक चक्रवृद्धि ब्याज (वार्षिक संयोजन) पर एक निश्चित समय में ₹9075 हो जाती है। उसी राशि पर समान समय और समान दर के लिए साधारण ब्याज (₹ में) क्या है:",
+    "oe": [
+      "₹1,500",
+      "₹1,600",
+      "₹1,400",
+      "₹1,450"
+    ],
+    "oh": [
+      "₹1,500",
+      "₹1,600",
+      "₹1,400",
+      "₹1,450"
+    ],
+    "a": 0,
+    "e": "Method 1 (Two-Step Method):\nStep 1: समय T ज्ञात करें:\nA / P = 9,075 / 7,500.\n75 से विभाजित करने पर: 121 / 100 = (11 / 10)^2.\nदर 10% = 1/10 होने पर गुणक 11/10 होता है:\n(11 / 10)^T = (11 / 10)^2 ==> समय T = 2 वर्ष।\nStep 2: उसी राशि पर समान समय (2 वर्ष) और समान दर (10%) पर साधारण ब्याज (SI):\nSI = (P * R * T) / 100 = (7,500 * 10 * 2) / 100 = 75 * 20 = ₹1,500.\nअतः सही विकल्प  ₹1,500 है।\n\nMethod 2 (Percentage Method):\nStep 1: कुल CI% = (1,575 / 7,500) * 100% = 21%.\nहम जानते हैं कि 10% की दर से 21% CI केवल 2 वर्षों में होता है (T = 2 वर्ष)।\nStep 2: 2 वर्षों का SI% = 10% * 2 = 20%.\nStep 3: SI = 20% of ₹7,500 = 0.20 * 7,500 = ₹1,500.\nअतः सही उत्तर '₹1,500' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
