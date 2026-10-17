@@ -192,6 +192,14 @@ def clean_title(title):
     if title.lower().strip() in junk_titles or len(title.strip()) < 15:
         return ""
 
+    # Listing-card ka aage-wala kachra: "3 hours ago | Regional News 43 <asli title>"
+    title = re.sub(
+        r'^\d{1,3}\s*(?:hours?|hrs?|minutes?|mins?|days?)\s+ago\s*\|?\s*',
+        '', title, flags=re.I)
+    title = re.sub(
+        r'^(?:regional news|national|international|business|sports|state news|states|world)\s+\d{1,4}\s+',
+        '', title, flags=re.I)
+
     title = re.sub(
         r'\s*[-|–—]\s*(News On AIR|Prasar Bharati|Dainik Bhaskar|Amar Ujala|Prabhat Khabar|Live Hindustan)\s*$',
         '',
@@ -658,7 +666,7 @@ def fetch_generic_article_content(url, source=""):
 # ITEM BUILDER WITH STRICT TODAY'S DATE VALIDATION
 # ============================================================
 
-def make_item(source, title, url, date=None, content="", item_type="Scraped", is_bihar=False):
+def make_item(source, title, url, date=None, content="", item_type="Scraped", is_bihar=False, date_hint=""):
     clean_title_str = clean_title(title)
     clean_url_str = clean_url(url)
     clean_content_str = clean_text(content)
@@ -679,7 +687,13 @@ def make_item(source, title, url, date=None, content="", item_type="Scraped", is
         clean_content_str = trim_to_max_words(clean_content_str, MAX_CONTENT_WORDS)
         words_total = word_count(clean_content_str)
 
-    parsed_date = date or parse_date(clean_title_str)
+    parsed_date = date
+    if not parsed_date and date_hint:
+        parsed_date = parse_date(date_hint)
+        if parsed_date:
+            debug(f"DATE LISTING CARD SE ({date_hint}) | {source} | {clean_title_str[:45]}")
+    if not parsed_date:
+        parsed_date = parse_date(title)
     
     if not parsed_date or not is_strictly_today(parsed_date):
         pub_str = parsed_date.strftime("%d %b %Y") if parsed_date else "No Date Found"
@@ -747,13 +761,47 @@ def deduplicate(items):
 # PARALLEL KHABAR PROCESSOR (ladder per-URL chalegi, khabarein sath)
 # ============================================================
 
-def _one_article(source, title, url, item_type, is_bihar):
+def _card_time_hint(a):
+    """Listing-card se 'X hours/minutes ago' wala samay-ishaara.
+    Anchor ke apne text me na mile to card (parent) ke text me dhoondho.
+    Sirf ghante/minute lete hai; 'days ago' wali kal ki khabar hoti hai,
+    usey date nahi banate. Page par date ho to yahi kabhi nahi chalega."""
+    texts = []
+    try:
+        texts.append(a.get_text(" ", strip=True))
+    except Exception:
+        pass
+    node = a
+    for _ in range(3):
+        try:
+            node = node.parent
+        except Exception:
+            break
+        if node is None or getattr(node, "name", None) in ("body", "html", "[document]"):
+            break
+        try:
+            t = node.get_text(" ", strip=True)
+        except Exception:
+            break
+        if len(t) > 400:
+            break  # poora section bandal gaya — dusri khabar ka samay ghus sakta hai
+        texts.append(t)
+    for t in texts:
+        m = re.search(r'\b(\d{1,3})\s*(hours?|hrs?|minutes?|mins?)\s+ago\b',
+                      t, flags=re.I)
+        if m:
+            return m.group(0)
+    return ""
+
+
+def _one_article(source, title, url, hint, item_type, is_bihar):
     try:
         content, date = fetch_generic_article_content(url, source)
         if not content:
             return None
         return make_item(source=source, title=title, url=url, date=date,
-                         content=content, item_type=item_type, is_bihar=is_bihar)
+                         content=content, item_type=item_type, is_bihar=is_bihar,
+                         date_hint=hint)
     except Exception as e:
         warn(f"ARTICLE ERROR {url[:60]}: {e!r}")
         return None
@@ -764,7 +812,7 @@ _FILE_EXT_SKIP = ('.pdf', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.mp3', '.mp
 
 def _process_candidates(cands, source, item_type, is_bihar):
     """Khabrein batch me, parallel. MAX_PER_SOURCE ya budget par ruk jao."""
-    cands = [(t, u) for (t, u) in cands
+    cands = [(t, u, h) for (t, u, h) in cands
              if not u.split('?')[0].lower().endswith(_FILE_EXT_SKIP)]
     results = []
     deadline = min(time.time() + SOURCE_BUDGET_SEC, RUN_DEADLINE)
@@ -776,8 +824,8 @@ def _process_candidates(cands, source, item_type, is_bihar):
         batch = cands[idx:idx + MAX_WORKERS * 2]
         idx += len(batch)
         with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
-            futs = [ex.submit(_one_article, source, t, u, item_type, is_bihar)
-                    for t, u in batch]
+            futs = [ex.submit(_one_article, source, t, u, h, item_type, is_bihar)
+                    for t, u, h in batch]
             for fu in as_completed(futs):
                 try:
                     obj = fu.result()
@@ -792,7 +840,7 @@ def _process_candidates(cands, source, item_type, is_bihar):
 def _known_filter(unique):
     if not KNOWN_TODAY_URLS:
         return unique
-    fresh = [(t, u) for (t, u) in unique if clean_url(u) not in KNOWN_TODAY_URLS]
+    fresh = [(t, u, h) for (t, u, h) in unique if clean_url(u) not in KNOWN_TODAY_URLS]
     skip = len(unique) - len(fresh)
     if skip:
         print(f"♻️ {skip} khabarein aaj pehle aa chuki — dobara nahi khulegi")
@@ -828,14 +876,14 @@ def scrape_news_on_air():
             if "newsonair.gov.in" not in href:
                 continue
 
-            candidates.append((title, href))
+            candidates.append((title, href, _card_time_hint(a)))
 
     unique = []
     seen = set()
-    for title, url in candidates:
+    for title, url, hint in candidates:
         if url not in seen:
             seen.add(url)
-            unique.append((title, url))
+            unique.append((title, url, hint))
 
     unique = _known_filter(unique)
     results = _process_candidates(unique, "News On AIR", "Article", False)
@@ -876,14 +924,14 @@ def scrape_india_gov():
             if any(x in low for x in ["home", "about", "contact", "feedback", "sitemap", "login"]):
                 continue
 
-            candidates.append((title, href))
+            candidates.append((title, href, _card_time_hint(a)))
 
     unique = []
     seen = set()
-    for title, url in candidates:
+    for title, url, hint in candidates:
         if url not in seen:
             seen.add(url)
-            unique.append((title, url))
+            unique.append((title, url, hint))
 
     unique = _known_filter(unique)
     results = _process_candidates(unique, "India.gov.in", "Government Article", False)
