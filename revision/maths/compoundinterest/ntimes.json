@@ -1,0 +1,154 @@
+[
+  {
+    "p_id": "ntimes_1",
+    "qe": "An amount doubles in 7 years under compound interest. How many years will it take for the amount to grow to 16 times its original value?",
+    "qh": "चक्रवृद्धि ब्याज के तहत कोई धनराशि 7 वर्षों में दोगुनी हो जाती है। उस राशि को अपने मूल मान का 16 गुना होने में कितने वर्ष लगेंगे?",
+    "oe": [
+      "21 years",
+      "28 years",
+      "35 years",
+      "42 years"
+    ],
+    "oh": [
+      "21 years",
+      "28 years",
+      "35 years",
+      "42 years"
+    ],
+    "a": 1,
+    "e": "Method 1 (Power Rule Method):\nStep 1: दिया गया संबंध: 7 वर्षों में राशि 2 गुना (2^1) हो जाती है।\nStep 2: हमें 16 गुना ज्ञात करना है: 16 = 2^4.\nStep 3: चक्रवृद्धि ब्याज में यदि कोई राशि t वर्षों में 'a' गुना होती है, तो a^n गुना होने में n * t वर्ष लगते हैं।\nStep 4: अभीष्ट समय = 4 * 7 = 28 वर्ष।\nअतः सही विकल्प  28 years है।\n\nMethod 2 (Step-by-Step Multiplier Method):\nStep 1: 0 से 7 वर्ष: 1 -> 2 गुना\nStep 2: 7 से 14 वर्ष: 2 -> 4 गुना\nStep 3: 14 से 21 वर्ष: 4 -> 8 गुना\nStep 4: 21 से 28 वर्ष: 8 -> 16 गुना\nकुल समय = 28 वर्ष।\nअतः सही उत्तर '28 years' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "ntimes_2",
+    "qe": "A sum becomes 4 times its original value in 6 years under compound interest. In how many years will it become 16 times of the original amount?",
+    "qh": "चक्रवृद्धि ब्याज के तहत कोई धनराशि 6 वर्षों में अपने मूल मान की 4 गुनी हो जाती है। कितने वर्षों में यह मूल राशि की 16 गुनी हो जाएगी?",
+    "oe": [
+      "12 years",
+      "18 years",
+      "24 years",
+      "10 years"
+    ],
+    "oh": [
+      "12 years",
+      "18 years",
+      "24 years",
+      "10 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Power Rule Method):\nStep 1: दिया है: 6 वर्षों में राशि 4 गुना (4^1) हो जाती है।\nStep 2: अभीष्ट गुणक = 16 गुना = 4^2.\nStep 3: समय = घात (power) * प्रारंभिक समय = 2 * 6 = 12 वर्ष।\nअतः सही विकल्प  12 years है।\n\nMethod 2 (Successive Period Method):\nStep 1: पहले 6 वर्ष: 1 से बढ़कर 4 गुना।\nStep 2: अगले 6 वर्ष: 4 से बढ़कर 4 * 4 = 16 गुना।\nStep 3: कुल समय = 6 + 6 = 12 वर्ष।\nअतः सही उत्तर '12 years' है।\n\nchakravriddhi byaaj ka sootra se hi is prashn ka jawab nikalta hai. She sh vikalp 18 years, 24 years, 10 years is hisaab se nahi milte. Exam point: chakravriddhi byaaj ka sootra - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "ntimes_3",
+    "qe": "An amount is said to double in 5 years with compound interest. How many years will it take for the amount to grow to 8 times its original value?",
+    "qh": "चक्रवृद्धि ब्याज से कोई राशि 5 वर्षों में दोगुनी हो जाती है। राशि को अपने मूल मान का 8 गुना होने में कितने वर्ष लगेंगे?",
+    "oe": [
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "oh": [
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "a": 0,
+    "e": "Method 1 (Power Rule Method):\nStep 1: 5 वर्षों में राशि = 2^1 गुना।\nStep 2: 8 गुना = 2^3 गुना।\nStep 3: अभीष्ट समय = 3 * 5 = 15 वर्ष।\nअतः सही विकल्प  15 है।\n\nMethod 2 (Step Multiplier Method):\nStep 1: 5 वर्ष बाद = 2 गुना।\nStep 2: 10 वर्ष बाद = 2 * 2 = 4 गुना।\nStep 3: 15 वर्ष बाद = 4 * 2 = 8 गुना।\nअतः कुल समय = 15 वर्ष।\nअतः सही उत्तर '15' है।\n\nchakravriddhi byaaj ka sootra se hi is prashn ka jawab nikalta hai. Vikalp 16, 17, 18 is hal se mel nahi khaate. Exam point: chakravriddhi byaaj ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "ntimes_4",
+    "qe": "A certain amount of money triples in 8 years under compound interest. How many years will it take for that amount to increase to nine times its original value?",
+    "qh": "चक्रवृद्धि ब्याज के तहत एक निश्चित धनराशि 8 वर्षों में तीन गुनी हो जाती है। उस राशि को अपने मूल मान का नौ गुना होने में कितने वर्ष लगेंगे?",
+    "oe": [
+      "16",
+      "19",
+      "17",
+      "18"
+    ],
+    "oh": [
+      "16",
+      "19",
+      "17",
+      "18"
+    ],
+    "a": 0,
+    "e": "Method 1 (Power Rule Method):\nStep 1: 8 वर्षों में राशि 3 गुना (3^1) हो जाती है।\nStep 2: 9 गुना = 3^2.\nStep 3: अभीष्ट समय = 2 * 8 = 16 वर्ष।\nअतः सही विकल्प  16 है।\n\nMethod 2 (Step Method):\nStep 1: प्रारंभिक राशि = P.\n8 वर्ष बाद = 3P.\nअगले 8 वर्ष बाद = 3 * 3P = 9P.\nStep 2: कुल समय = 8 + 8 = 16 वर्ष।\nअतः सही उत्तर '16' है।\n\nIs prashn ka moolaadhaar chakravriddhi byaaj ka sootra hai. She sh vikalp 19, 17, 18 is hisaab se nahi milte. Exam point: chakravriddhi byaaj ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "ntimes_5",
+    "qe": "A sum of money doubles itself at compound interest in 15 years. In how many years will it become four times?",
+    "qh": "चक्रवृद्धि ब्याज पर कोई धनराशि 15 वर्षों में स्वयं की दोगुनी हो जाती है। कितने वर्षों में यह चार गुनी हो जाएगी?",
+    "oe": [
+      "20 years",
+      "30 years",
+      "45 years",
+      "40 years"
+    ],
+    "oh": [
+      "20 years",
+      "30 years",
+      "45 years",
+      "40 years"
+    ],
+    "a": 1,
+    "e": "Method 1 (Power Rule Method):\nStep 1: 15 वर्षों में राशि = 2^1 गुना।\nStep 2: 4 गुना = 2^2 गुना।\nStep 3: अभीष्ट समय = 2 * 15 = 30 वर्ष।\nअतः सही विकल्प  30 years है।\n\nMethod 2 (Successive Doubling Method):\nStep 1: 0 से 15 वर्ष: राशि 1 से 2 गुना।\nStep 2: 15 से 30 वर्ष: राशि 2 से 4 गुना।\nअतः कुल समय = 30 वर्ष।\nअतः सही उत्तर '30 years' है।\n\nYahan chakravriddhi byaaj ka sootra seedha lagta hai. She sh vikalp 20 years, 45 years, 40 years is hisaab se nahi milte. Exam point: chakravriddhi byaaj ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "ntimes_6",
+    "qe": "A sum of money at compound interest doubles itself in 4 years. In how many years does the sum become 8 times of itself at the same rate of interest?",
+    "qh": "चक्रवृद्धि ब्याज पर कोई धनराशि 4 वर्षों में स्वयं की दोगुनी हो जाती है। समान ब्याज दर पर कितने वर्षों में वह धनराशि स्वयं की 8 गुनी हो जाएगी?",
+    "oe": [
+      "15 years",
+      "12 years",
+      "8 years",
+      "10 years"
+    ],
+    "oh": [
+      "15 years",
+      "12 years",
+      "8 years",
+      "10 years"
+    ],
+    "a": 1,
+    "e": "Method 1 (Power Rule Method):\nStep 1: 4 वर्षों में राशि = 2^1 गुना।\nStep 2: 8 गुना = 2^3 गुना।\nStep 3: अभीष्ट समय = 3 * 4 = 12 वर्ष।\nअतः सही विकल्प  12 years है।\n\nMethod 2 (Step-by-Step Method):\nStep 1: 4 वर्ष में = 2 गुना।\nStep 2: 8 वर्ष में = 4 गुना।\nStep 3: 12 वर्ष में = 8 गुना।\nअतः सही उत्तर '12 years' है।\n\nYahan chakravriddhi byaaj ka sootra seedha lagta hai. She sh vikalp 15 years, 8 years, 10 years is hisaab se nahi milte. Exam point: chakravriddhi byaaj ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "ntimes_7",
+    "qe": "A certain amount of money becomes thrice in 5 years at compound interest. How many years it will take to become 9 times?",
+    "qh": "चक्रवृद्धि ब्याज पर एक निश्चित धनराशि 5 वर्षों में तीन गुनी हो जाती है। इसे 9 गुना होने में कितने वर्ष लगेंगे?",
+    "oe": [
+      "15 years",
+      "8 years",
+      "10 years",
+      "25 years"
+    ],
+    "oh": [
+      "15 years",
+      "8 years",
+      "10 years",
+      "25 years"
+    ],
+    "a": 2,
+    "e": "Method 1 (Power Rule Method):\nStep 1: 5 वर्षों में राशि = 3^1 गुना।\nStep 2: 9 गुना = 3^2 गुना।\nStep 3: अभीष्ट समय = 2 * 5 = 10 वर्ष।\nअतः सही विकल्प  10 years है।\n\nMethod 2 (Successive Multiplication Method):\nStep 1: पहले 5 वर्ष: 1 से 3 गुना।\nStep 2: अगले 5 वर्ष: 3 से 3 * 3 = 9 गुना।\nStep 3: कुल समय = 5 + 5 = 10 वर्ष।\nअतः सही उत्तर '10 years' है।\n\nchakravriddhi byaaj ka sootra se hi is prashn ka jawab nikalta hai. She sh vikalp 15 years, 8 years, 25 years is hisaab se nahi milte. Exam point: chakravriddhi byaaj ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "ntimes_8",
+    "qe": "Money is doubled in a bank account in 7 years, when the interest is compounded annually. What time in years is needed to make an amount 8 times in the bank?",
+    "qh": "जब ब्याज वार्षिक रूप से संयोजित होता है, तो बैंक खाते में 7 वर्षों में धन दोगुना हो जाता है। बैंक में किसी राशि को 8 गुना करने के लिए कितने वर्षों के समय की आवश्यकता है?",
+    "oe": [
+      "21 years",
+      "28 years",
+      "14 years",
+      "35 years"
+    ],
+    "oh": [
+      "21 years",
+      "28 years",
+      "14 years",
+      "35 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Power Rule Method):\nStep 1: 7 वर्षों में राशि = 2^1 गुना।\nStep 2: 8 गुना = 2^3 गुना।\nStep 3: अभीष्ट समय = 3 * 7 = 21 वर्ष।\nअतः सही विकल्प  21 years है।\n\nMethod 2 (Step-by-Step Doubling Method):\nStep 1: 7 वर्ष बाद = 2 गुना।\nStep 2: 14 वर्ष बाद = 4 गुना।\nStep 3: 21 वर्ष बाद = 8 गुना।\nअतः कुल समय = 21 वर्ष।\nअतः सही उत्तर '21 years' है।\n\nchakravriddhi byaaj ka sootra se hi is prashn ka jawab nikalta hai. Vikalp 28 years, 14 years, 35 years is hal se mel nahi khaate. Exam point: chakravriddhi byaaj ka sootra - ise yaad rakhein, samay bachega."
+  }
+]
