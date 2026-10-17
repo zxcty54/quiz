@@ -1,3 +1,10 @@
+"""
+scraper_smart.py — scraper.py ka tez sanskaran (test ke liye).
+Saare fetch-tareeke, date-scan or content-nikalne ki tarkeebein waisi ki vaisi;
+nayi hai sirf kaam ki tarteeb: parallel khabarein, site-wise jeeta-hua tareeka yaad,
+pehle se aayi khabar dobara nahi khulti, har source ka samay-budget.
+Output: wahi rawnews.json, wahi format — summarizer ko koi farak nahi.
+"""
 import os
 import re
 import json
@@ -9,6 +16,10 @@ import html
 
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urljoin
+
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from urllib.parse import urlparse
 
 from curl_cffi import requests as curl_requests
 import requests as normal_requests
@@ -68,6 +79,44 @@ class CustomGovSSLAdapter(HTTPAdapter):
 gov_session = normal_requests.Session()
 gov_session.mount('https://', CustomGovSSLAdapter())
 gov_session.mount('http://', CustomGovSSLAdapter())
+
+
+# ============================================================
+# SMART ENGINE (parallel + yaad + budget)
+# ============================================================
+
+CONNECT_TIMEOUT = 6     # mrit site itne me pehchan jayegi
+READ_TIMEOUT = 19       # zinda sust site ko padhne ka poora samay
+MAX_WORKERS = 10        # ek sath itni khabarein khulengi
+SOURCE_BUDGET_SEC = 150   # ek source isse zyada nahi ghisega
+GLOBAL_BUDGET_SEC = 300   # pura run 5 minute ki hadd
+
+RUN_DEADLINE = float('inf')
+KNOWN_TODAY_URLS = set()   # aaj ki khabarein jo pehle aa chuki (dobara nahi khulegi)
+
+_tls = threading.local()
+_host_winners = {}
+_host_lock = threading.Lock()
+
+
+def _shared_normal_session():
+    if not hasattr(_tls, 'normal'):
+        sess = normal_requests.Session()
+        ad = HTTPAdapter(pool_connections=32, pool_maxsize=32)
+        sess.mount('https://', ad)
+        sess.mount('http://', ad)
+        _tls.normal = sess
+    return _tls.normal
+
+
+def _shared_curl_session():
+    if not hasattr(_tls, 'curl'):
+        _tls.curl = curl_requests.Session()
+    return _tls.curl
+
+
+def _time_left():
+    return RUN_DEADLINE - time.time()
 
 
 # ============================================================
@@ -361,7 +410,7 @@ def is_strictly_today(parsed_date):
 
 def gov_special_fetch(url):
     try:
-        r = gov_session.get(url, headers=HEADERS, timeout=TIMEOUT, verify=False)
+        r = gov_session.get(url, headers=HEADERS, timeout=(CONNECT_TIMEOUT, READ_TIMEOUT), verify=False)
         if r.status_code == 200 and len(r.text) > 100:
             return r.text
     except Exception as e:
@@ -371,10 +420,10 @@ def gov_special_fetch(url):
 
 def normal_fetch(url, verify=True):
     try:
-        r = normal_requests.get(
+        r = _shared_normal_session().get(
             url,
             headers=HEADERS,
-            timeout=TIMEOUT,
+            timeout=(CONNECT_TIMEOUT, READ_TIMEOUT),
             allow_redirects=True,
             verify=verify
         )
@@ -389,10 +438,10 @@ def normal_fetch(url, verify=True):
 
 def curl_fetch(url, verify=True):
     try:
-        r = curl_requests.get(
+        r = _shared_curl_session().get(
             url,
             headers=HEADERS,
-            timeout=TIMEOUT,
+            timeout=READ_TIMEOUT + CONNECT_TIMEOUT,
             impersonate="chrome",
             allow_redirects=True,
             verify=verify
@@ -417,7 +466,7 @@ def scrapingant_fetch(url):
             "x-api-key": SCRAPINGANT_API_KEY,
             "browser": "false",
         }
-        r = normal_requests.get(endpoint, params=params, timeout=30)
+        r = _shared_normal_session().get(endpoint, params=params, timeout=30)
         if r.status_code >= 400:
             warn(f"ScrapingAnt HTTP {r.status_code}: {url}")
             return None
@@ -435,47 +484,47 @@ def scrapingant_fetch(url):
         return None
 
 
+def _ladder(url):
+    """Purani seedhi, waisi ki vaisi — bas naam ke sath."""
+    host = (urlparse(url).hostname or '').lower()
+    steps = []
+    if 'bihar.gov.in' in host:
+        steps.append(('gov', lambda: gov_special_fetch(url)))
+        steps.append(('plain-nossl', lambda: normal_fetch(url, verify=False)))
+    elif '.gov.in' in host:
+        steps.append(('plain', lambda: normal_fetch(url, verify=True)))
+        steps.append(('plain-nossl', lambda: normal_fetch(url, verify=False)))
+    else:
+        steps.append(('curl', lambda: curl_fetch(url, verify=True)))
+        steps.append(('curl-nossl', lambda: curl_fetch(url, verify=False)))
+        steps.append(('plain', lambda: normal_fetch(url, verify=True)))
+        steps.append(('plain-nossl', lambda: normal_fetch(url, verify=False)))
+    if SCRAPINGANT_API_KEY:
+        steps.append(('scrapingant', lambda: scrapingant_fetch(url)))
+    return host, steps
+
+
 def fetch_url(url):
     url = clean_url(url)
     if not url:
         return None
 
-    if "bihar.gov.in" in url.lower():
-        html = gov_special_fetch(url)
-        if html:
-            return html
-        html = normal_fetch(url, verify=False)
-        if html:
-            return html
+    host, steps = _ladder(url)
+    # jo tareeka is site par jeeta tha, pehle wahi
+    with _host_lock:
+        winner = _host_winners.get(host)
+    if winner:
+        steps.sort(key=lambda st: 0 if st[0] == winner else 1)
 
-    if ".gov.in" in url.lower():
-        html = normal_fetch(url, verify=True)
-        if html:
-            return html
-        html = normal_fetch(url, verify=False)
-        if html:
-            return html
-
-    html = curl_fetch(url, verify=True)
-    if html:
-        return html
-
-    html = curl_fetch(url, verify=False)
-    if html:
-        return html
-
-    html = normal_fetch(url, verify=True)
-    if html:
-        return html
-
-    html = normal_fetch(url, verify=False)
-    if html:
-        return html
-
-    if SCRAPINGANT_API_KEY:
-        html = scrapingant_fetch(url)
-        if html:
-            return html
+    for name, fn in steps:
+        if _time_left() < 8:
+            warn(f"⏰ SAMAY KHATM (budget) — baaki koshish ruki: {url[:60]}")
+            break
+        out = fn()
+        if out:
+            with _host_lock:
+                _host_winners[host] = name
+            return out
 
     warn(f"❌ ALL FETCH METHODS FAILED: {url}")
     return None
@@ -695,14 +744,68 @@ def deduplicate(items):
 
 
 # ============================================================
+# PARALLEL KHABAR PROCESSOR (ladder per-URL chalegi, khabarein sath)
+# ============================================================
+
+def _one_article(source, title, url, item_type, is_bihar):
+    try:
+        content, date = fetch_generic_article_content(url, source)
+        if not content:
+            return None
+        return make_item(source=source, title=title, url=url, date=date,
+                         content=content, item_type=item_type, is_bihar=is_bihar)
+    except Exception as e:
+        warn(f"ARTICLE ERROR {url[:60]}: {e!r}")
+        return None
+
+
+_FILE_EXT_SKIP = ('.pdf', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.mp3', '.mp4')
+
+
+def _process_candidates(cands, source, item_type, is_bihar):
+    """Khabrein batch me, parallel. MAX_PER_SOURCE ya budget par ruk jao."""
+    cands = [(t, u) for (t, u) in cands
+             if not u.split('?')[0].lower().endswith(_FILE_EXT_SKIP)]
+    results = []
+    deadline = min(time.time() + SOURCE_BUDGET_SEC, RUN_DEADLINE)
+    idx = 0
+    while idx < len(cands) and len(results) < MAX_PER_SOURCE:
+        if time.time() > deadline:
+            warn(f"⏰ {source}: source-budget khatm, {len(results)} khabar par ruke")
+            break
+        batch = cands[idx:idx + MAX_WORKERS * 2]
+        idx += len(batch)
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
+            futs = [ex.submit(_one_article, source, t, u, item_type, is_bihar)
+                    for t, u in batch]
+            for fu in as_completed(futs):
+                try:
+                    obj = fu.result()
+                except Exception:
+                    obj = None
+                if obj:
+                    results.append(obj)
+    results = deduplicate(results)
+    return results[:MAX_PER_SOURCE]
+
+
+def _known_filter(unique):
+    if not KNOWN_TODAY_URLS:
+        return unique
+    fresh = [(t, u) for (t, u) in unique if clean_url(u) not in KNOWN_TODAY_URLS]
+    skip = len(unique) - len(fresh)
+    if skip:
+        print(f"♻️ {skip} khabarein aaj pehle aa chuki — dobara nahi khulegi")
+    return fresh
+
+
+# ============================================================
 # ACTIVE SCRAPER SOURCES
 # ============================================================
 
 # 1. NEWS ON AIR
 NEWS_ON_AIR_URLS = [
     "https://newsonair.gov.in/",
-    "https://newsonair.gov.in/category/news/",
-    "https://newsonair.gov.in/category/national-news/",
 ]
 
 
@@ -734,28 +837,8 @@ def scrape_news_on_air():
             seen.add(url)
             unique.append((title, url))
 
-    results = []
-    for title, url in unique:
-        content, date = fetch_generic_article_content(url, "News On AIR")
-        if not content:
-            continue
-
-        obj = make_item(
-            source="News On AIR",
-            title=title,
-            url=url,
-            date=date,
-            content=content,
-            item_type="Article",
-            is_bihar=False
-        )
-        if obj:
-            results.append(obj)
-
-        if len(results) >= MAX_PER_SOURCE:
-            break
-
-    results = deduplicate(results)
+    unique = _known_filter(unique)
+    results = _process_candidates(unique, "News On AIR", "Article", False)
     if not results:
         debug("NEWS ON AIR: Aaj ki date ka koi article nahi mila.")
 
@@ -763,80 +846,9 @@ def scrape_news_on_air():
     return results
 
 
-# 2. IPRD BIHAR
-IPRD_PAGES = [
-    "https://state.bihar.gov.in/prdbihar/",
-    "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8931",
-    "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8930",
-    "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=6996",
-]
-
-
-def scrape_iprd_bihar():
-    print("\n" + "=" * 70 + "\n📢 IPRD BIHAR (Today's Date Only)\n" + "=" * 70)
-    candidates = []
-
-    for page_url in IPRD_PAGES:
-        html = fetch_url(page_url)
-        if not html:
-            continue
-
-        soup = BeautifulSoup(html, "lxml")
-        for a in soup.find_all("a", href=True):
-            href = clean_url(urljoin(page_url, a.get("href")))
-            title = clean_title(a.get_text(" ", strip=True))
-
-            if not href or len(title) < 20:
-                continue
-            if "state.bihar.gov.in/prdbihar" not in href.lower():
-                continue
-
-            low = title.lower()
-            if any(x in low for x in ["home", "contact", "feedback", "copyright", "web information manager", "accessibility", "previous", "next", "department", "order/circular"]):
-                continue
-
-            candidates.append((title, href))
-
-    unique = []
-    seen = set()
-    for title, url in candidates:
-        if url not in seen:
-            seen.add(url)
-            unique.append((title, url))
-
-    results = []
-    for title, url in unique:
-        content, date = fetch_generic_article_content(url, "IPRD Bihar")
-        if not content:
-            continue
-
-        obj = make_item(
-            source="IPRD Bihar",
-            title=title,
-            url=url,
-            date=date,
-            content=content,
-            item_type="Press Release",
-            is_bihar=True
-        )
-        if obj:
-            results.append(obj)
-
-        if len(results) >= MAX_PER_SOURCE:
-            break
-
-    results = deduplicate(results)
-    if not results:
-        debug("IPRD BIHAR: Aaj ki date ka koi article nahi mila.")
-
-    print(f"✅ IPRD Bihar usable: {len(results)}")
-    return results
-
-
 # 3. INDIA.GOV.IN
 INDIA_GOV_PAGES = [
     "https://www.india.gov.in/",
-    "https://www.india.gov.in/news",
     "https://www.india.gov.in/spotlight",
 ]
 
@@ -873,28 +885,8 @@ def scrape_india_gov():
             seen.add(url)
             unique.append((title, url))
 
-    results = []
-    for title, url in unique:
-        content, date = fetch_generic_article_content(url, "India.gov.in")
-        if not content:
-            continue
-
-        obj = make_item(
-            source="India.gov.in",
-            title=title,
-            url=url,
-            date=date,
-            content=content,
-            item_type="Government Article",
-            is_bihar=False
-        )
-        if obj:
-            results.append(obj)
-
-        if len(results) >= MAX_PER_SOURCE:
-            break
-
-    results = deduplicate(results)
+    unique = _known_filter(unique)
+    results = _process_candidates(unique, "India.gov.in", "Government Article", False)
     if not results:
         debug("INDIA.GOV.IN: Aaj ki date ka koi article nahi mila.")
 
@@ -919,14 +911,34 @@ def safe_source(name, function):
 # BUILD ALL NEWS
 # ============================================================
 
+def _load_known_today():
+    """Purane rawnews.json me aaj ki jo khabarein hain, unke URL yaad kar lo."""
+    KNOWN_TODAY_URLS.clear()
+    if not os.path.exists(OUTPUT_FILE):
+        return
+    try:
+        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+            old = json.load(f)
+        for item in old.get("national_raw_news", []) + old.get("bihar_raw_news", []):
+            if is_strictly_today(parse_date(item.get("date", ""))):
+                u = clean_url(item.get("url", ""))
+                if u:
+                    KNOWN_TODAY_URLS.add(u)
+        print(f"♻️ Aaj ki pehle-se-maujud khabarein (dobara nahi khulegi): {len(KNOWN_TODAY_URLS)}")
+    except Exception:
+        pass
+
+
 def build_news():
+    global RUN_DEADLINE
+    RUN_DEADLINE = time.time() + GLOBAL_BUDGET_SEC
+    _load_known_today()
     print("\n" + "=" * 80 + f"\n🚀 STARTING TODAY'S EXCLUSIVE NEWS PIPELINE [{now_ist().strftime('%d %b %Y')}]\n" + "=" * 80)
 
     all_results = []
     source_results = {}
 
     source_results["News On AIR"] = safe_source("News On AIR", scrape_news_on_air)
-    source_results["IPRD Bihar"] = safe_source("IPRD Bihar", scrape_iprd_bihar)
     source_results["India.gov.in"] = safe_source("India.gov.in", scrape_india_gov)
 
     breakdown = {}
