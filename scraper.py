@@ -961,15 +961,14 @@ def scrape_india_gov():
             continue
 
         soup = BeautifulSoup(html, "lxml")
-        # "News / Press Release" panel ke card hi umeedwar banege: har card par
-        # khabar ka samay ("X min/hr ago") chhapa hota hai or uska link asli
-        # site (NewsOnAir/PIB) par jata hai — isiliye bahari link chalega.
-        # Category/Scheme wale page-panel me kabhi khabar nahi mili, rend=sifar.
+        # "News / Press Release" panel ke card hi umeedwar hai. Asli bandish:
+        # samay ("27 min ago" / "3 hrs ago") <a> ke andar nahi, card ke upari
+        # hisse me hota hai — isiliye samay card ke aas-paas se hi milega
+        # (_card_time_hint). Link asli site (NewsOnAir/PIB/DD) par jata hai,
+        # isiliye bahari link bhi chalega.
         for a in soup.find_all("a", href=True):
-            txt = a.get_text(" ", strip=True)
-            m = re.search(r'\b\d{1,3}\s*(?:minutes?|mins?|hours?|hrs?)\s+ago\b',
-                          txt, flags=re.I)
-            if not m:
+            hint = _card_time_hint(a)
+            if not hint:
                 continue
 
             href = clean_url(urljoin(page_url, a.get("href")))
@@ -977,17 +976,15 @@ def scrape_india_gov():
                 continue
 
             span = a.select_one('span[class*="ellipsis"]')
-            if span:
-                title = clean_title(span.get_text(" ", strip=True))
-            else:
-                title = clean_title(re.sub(
-                    r'^.*?\d{1,3}\s*(?:minutes?|mins?|hours?|hrs?)\s+ago\s*',
-                    '', txt, flags=re.I))
-
+            title = clean_title(span.get_text(" ", strip=True)) if span else ""
+            if len(title) < 20:
+                card_li = a.find_parent("li")
+                if card_li and card_li.get("title"):
+                    title = clean_title(card_li.get("title"))
             if len(title) < 20:
                 continue
 
-            candidates.append((title, href, m.group(0)))
+            candidates.append((title, href, hint))
 
     unique = []
     seen = set()
