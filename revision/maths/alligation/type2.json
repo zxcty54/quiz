@@ -1,0 +1,439 @@
+[
+  {
+    "p_id": "type2_1",
+    "qe": "A shopkeeper mixes two types of rice costing ₹$\\frac{250}{5}$/kg and ₹$\\frac{280}{5}$/kg in the ratio 7 : 8. Find the net cost of the resultant mixture (per kg).",
+    "qh": "एक दुकानदार ₹$\\frac{250}{5}$/किग्रा और ₹$\\frac{280}{5}$/किग्रा मूल्य वाले दो प्रकार के चावल को 7 : 8 के अनुपात में मिलाता है। परिणामी मिश्रण की शुद्ध लागत (प्रति किग्रा) ज्ञात कीजिए।",
+    "oe": [
+      "Rs.32.50",
+      "Rs.53.20",
+      "Rs.52.30",
+      "Rs.25.30"
+    ],
+    "oh": [
+      "Rs.32.50",
+      "Rs.53.20",
+      "Rs.52.30",
+      "Rs.25.30"
+    ],
+    "a": 1,
+    "e": "Method 1 (Weighted Average Method):\nStep 1: दोनों प्रकार के चावल का प्रति किग्रा मूल्य निकालें:\n- पहले प्रकार का मूल्य = 250 / 5 = ₹50 प्रति किग्रा\n- दूसरे प्रकार का मूल्य = 280 / 5 = ₹56 प्रति किग्रा\nStep 2: मात्रा का अनुपात = 7 : 8 (कुल इकाइयाँ = 7 + 8 = 15 इकाइयाँ)।\nStep 3: मिश्रण का औसत मूल्य सूत्र:\nऔसत मूल्य = (7 * 50 + 8 * 56) / (7 + 8)\n= (350 + 448) / 15 = 798 / 15 = ₹53.20 प्रति किग्रा।\nअतः सही विकल्प  Rs.53.20 है।\n\nMethod 2 (Deviation Method):\nStep 1: आधार मूल्य ₹50 मान लें।\n- पहले प्रकार का विचलन = 0\n- दूसरे प्रकार का विचलन = 56 - 50 = +6 प्रति इकाई (8 इकाइयों पर कुल विचलन = 8 * 6 = +48)\nStep 2: शुद्ध विचलन को कुल 15 इकाइयों में बांटें = 48 / 15 = 3.20.\nऔसत मूल्य = 50 + 3.20 = ₹53.20 प्रति किग्रा।\nअतः सही उत्तर 'Rs.53.20' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_2",
+    "qe": "42 litres of milk at Rs.25 per litre is mixed with 28 litres of milk at Rs.40 per litre. Find the average price of the mixture?",
+    "qh": "₹25 प्रति लीटर वाले 42 लीटर दूध को ₹40 प्रति लीटर वाले 28 लीटर दूध के साथ मिलाया जाता है। मिश्रण का औसत मूल्य ज्ञात कीजिए?",
+    "oe": [
+      "Rs.31.5",
+      "Rs.32.5",
+      "Rs.32",
+      "Rs.31"
+    ],
+    "oh": [
+      "Rs.31.5",
+      "Rs.32.5",
+      "Rs.32",
+      "Rs.31"
+    ],
+    "a": 3,
+    "e": "Method 1 (Weighted Average Method):\nStep 1: दोनों प्रकार के दूध की मात्रा का अनुपात निकालें:\nमात्रा अनुपात = 42 : 28 = 3 : 2 (14 से विभाजित करने पर, कुल इकाइयाँ = 3 + 2 = 5).\nStep 2: मिश्रण का औसत मूल्य सूत्र में मान रखें:\nऔसत मूल्य = (3 * 25 + 2 * 40) / (3 + 2)\n= (75 + 80) / 5 = 155 / 5 = ₹31 प्रति लीटर।\nअतः सही विकल्प  Rs.31 है।\n\nMethod 2 (Alligation Reverse Method):\nStep 1: दोनों मूल्यों का अंतर = 40 - 25 = ₹15.\nStep 2: इस अंतर को मात्रा के अनुपात (3 : 2) के व्युत्क्रम में बांटें:\n2 इकाइयाँ (25 की तरफ) = 15 * (2 / 5) = ₹6.\nStep 3: औसत मूल्य = 25 + 6 = ₹31 प्रति लीटर।\nअतः सही उत्तर 'Rs.31' है।\n\nExam point: ausat ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_3",
+    "qe": "15 kg of Rs.10 per kg wheat is mixed with 5 kg of another type of wheat to get a mixture costing Rs.30 per kg. Find the price (per kg) of the costlier wheat.",
+    "qh": "₹10 प्रति किग्रा वाले 15 किग्रा गेहूं को दूसरे प्रकार के 5 किग्रा गेहूं के साथ मिलाकर ₹30 प्रति किग्रा मूल्य का मिश्रण प्राप्त किया जाता है। महंगे गेहूं का मूल्य (प्रति किग्रा) ज्ञात कीजिए।",
+    "oe": [
+      "Rs.70",
+      "Rs.80",
+      "Rs.60",
+      "Rs.90"
+    ],
+    "oh": [
+      "Rs.70",
+      "Rs.80",
+      "Rs.60",
+      "Rs.90"
+    ],
+    "a": 3,
+    "e": "Method 1 (Weighted Average Equation Method):\nStep 1: माना महंगे गेहूं का प्रति किग्रा मूल्य = ₹x.\nStep 2: कुल भार = 15 + 5 = 20 किग्रा, औसत मूल्य = ₹30 प्रति किग्रा।\n(15 * 10) + (5 * x) = 20 * 30\n150 + 5x = 600\nStep 3: x के लिए हल करने पर:\n5x = 600 - 150 = 450 ==> x = 450 / 5 = ₹90 प्रति किग्रा।\nअतः सही विकल्प  Rs.90 है।\n\nMethod 2 (Alligation Method):\nStep 1: मात्रा का अनुपात = 15 : 5 = 3 : 1.\nStep 2: सस्ते गेहूं पर अंतर = 30 - 10 = ₹20.\nStep 3: अनुपात के अनुसार 1 इकाई = ₹20, अतः 3 इकाइयाँ = 3 * 20 = ₹60.\nStep 4: महंगे गेहूं का मूल्य = 30 + 60 = ₹90 प्रति किग्रा।\nअतः सही उत्तर 'Rs.90' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_4",
+    "qe": "Ratna buys 10 kg of rice for Rs.88 per kg and another 20 kg of rice for Rs.187 per kg. What is the per kg cost (in Rs.) of the total mixture of rice for her?",
+    "qh": "रत्ना ₹88 प्रति किग्रा की दर से 10 किग्रा चावल और ₹187 प्रति किग्रा की दर से 20 किग्रा चावल खरीदती है। उसके लिए चावल के कुल मिश्रण का प्रति किग्रा मूल्य (₹ में) क्या है?",
+    "oe": [
+      "150",
+      "154",
+      "158",
+      "148"
+    ],
+    "oh": [
+      "150",
+      "154",
+      "158",
+      "148"
+    ],
+    "a": 1,
+    "e": "Method 1 (Weighted Average Method):\nStep 1: चावल की मात्रा का अनुपात = 10 : 20 = 1 : 2 (कुल इकाइयाँ = 1 + 2 = 3).\nStep 2: कुल मिश्रण का प्रति किग्रा औसत मूल्य:\nऔसत मूल्य = (1 * 88 + 2 * 187) / (1 + 2)\n= (88 + 374) / 3 = 462 / 3 = ₹154 प्रति किग्रा।\nअतः सही विकल्प  154 है।\n\nMethod 2 (Deviation Method):\nStep 1: आधार मूल्य ₹150 मान लें।\n- 10 kg पर विचलन = (88 - 150) * 1 = -62\n- 20 kg पर विचलन = (187 - 150) * 2 = +74\nStep 2: कुल विचलन = 74 - 62 = +12.\nप्रति इकाई विचलन = 12 / 3 = +4.\nऔसत मूल्य = 150 + 4 = ₹154.\nअतः सही उत्तर '154' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_5",
+    "qe": "A shopkeeper mixes 15 kg of sugar costing ₹11/kg with 22 kg of sugar costing ₹12/kg. What is the cost (in ₹) per kg of the mixture? (Rounded off to 2 decimal places)",
+    "qh": "एक दुकानदार ₹11/किग्रा मूल्य वाली 15 किग्रा चीनी को ₹12/किग्रा मूल्य वाली 22 किग्रा चीनी के साथ मिलाता है। मिश्रण का प्रति किग्रा मूल्य (₹ में) क्या है? (दशमलव के 2 स्थानों तक)",
+    "oe": [
+      "11.51",
+      "11.59",
+      "11.38",
+      "11.84"
+    ],
+    "oh": [
+      "11.51",
+      "11.59",
+      "11.38",
+      "11.84"
+    ],
+    "a": 1,
+    "e": "Method 1 (Total Cost / Total Quantity Method):\nStep 1: दोनों प्रकार की चीनी का कुल क्रय मूल्य निकालें:\n- 15 किग्रा का मूल्य = 15 * 11 = ₹165\n- 22 किग्रा का मूल्य = 22 * 12 = ₹264\nकुल क्रय मूल्य = 165 + 264 = ₹429.\nStep 2: कुल मात्रा = 15 + 22 = 37 किग्रा।\nStep 3: मिश्रण का प्रति किग्रा मूल्य:\nमूल्य = 429 / 37 ≈ 11.5945... ≈ ₹11.59 प्रति किग्रा।\nअतः सही विकल्प  11.59 है।\n\nMethod 2 (Deviation Method):\nStep 1: आधार मूल्य ₹11 मान लें।\n- 22 किग्रा पर अतिरिक्त मूल्य = (12 - 11) * 22 = +₹22.\nStep 2: 37 किग्रा पर प्रति किग्रा वृद्धि = 22 / 37 ≈ 0.5945.\nऔसत मूल्य = 11 + 0.59 = ₹11.59 प्रति किग्रा।\nअतः सही उत्तर '11.59' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_6",
+    "qe": "2 varieties of tea powders worth Rs.250/kg and Rs.300/kg are mixed with a third variety of tea powder in the ratio 1 : 1 : 2. If the mixture is worth Rs.350/kg, find the price of the third variety tea powder.",
+    "qh": "₹250/किग्रा और ₹300/किग्रा मूल्य वाली चाय पाउडर की 2 किस्मों को तीसरी किस्म के चाय पाउडर के साथ 1 : 1 : 2 के अनुपात में मिलाया जाता है। यदि मिश्रण का मूल्य ₹350/किग्रा है, तो तीसरी किस्म के चाय पाउडर का मूल्य ज्ञात कीजिए।",
+    "oe": [
+      "Rs.450/kg.",
+      "Rs.400/kg.",
+      "Rs.425/kg.",
+      "Rs.500/kg."
+    ],
+    "oh": [
+      "Rs.450/kg.",
+      "Rs.400/kg.",
+      "Rs.425/kg.",
+      "Rs.500/kg."
+    ],
+    "a": 2,
+    "e": "Method 1 (Weighted Average Equation Method):\nStep 1: अनुपात = 1 : 1 : 2 (कुल इकाइयाँ = 1 + 1 + 2 = 4 इकाइयाँ)।\nमाना तीसरी किस्म का मूल्य = ₹x प्रति किग्रा।\nStep 2: मिश्रण का औसत मूल्य = ₹350 प्रति किग्रा:\n(1 * 250 + 1 * 300 + 2 * x) / 4 = 350\nStep 3: समीकरण को हल करने पर:\n550 + 2x = 350 * 4 = 1,400\n2x = 1,400 - 550 = 850\nx = 850 / 2 = ₹425 प्रति किग्रा।\nअतः सही विकल्प  Rs.425/kg. है।\n\nMethod 2 (Deviation Method):\nStep 1: औसत मूल्य ₹350 के सापेक्ष विचलन:\n- किस्म 1 का विचलन = 250 - 350 = -100 (1 इकाई ==> -100)\n- किस्म 2 का विचलन = 300 - 350 = -50 (1 इकाई ==> -50)\nकुल कमी = -150.\nStep 2: शुद्ध विचलन शून्य करने के लिए किस्म 3 पर कुल अधिशेष = +150 होना चाहिए:\nकिस्म 3 की 2 इकाइयों पर अधिशेष = 150 / 2 = +75 प्रति इकाई।\nStep 3: किस्म 3 का मूल्य = 350 + 75 = ₹425 प्रति किग्रा।\nअतः सही उत्तर 'Rs.425/kg' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_7",
+    "qe": "Tea leaves worth ₹108 per kg and ₹120 per kg are mixed with a third variety in the ratio 2 : 3 : 5. If the mixture is worth ₹125 per kg, the price (in, rounded off to the nearest integer) of the third variety of tea leaves per kg will be:",
+    "qh": "₹108 प्रति किग्रा और ₹120 प्रति किग्रा मूल्य वाली चाय की पत्तियों को तीसरी किस्म के साथ 2 : 3 : 5 के अनुपात में मिलाया जाता है। यदि मिश्रण का मूल्य ₹125 प्रति किग्रा है, तो तीसरी किस्म की चाय की पत्तियों का मूल्य प्रति किग्रा (निकटतम पूर्णांक तक) क्या होगा:",
+    "oe": [
+      "135",
+      "132",
+      "140",
+      "130"
+    ],
+    "oh": [
+      "135",
+      "132",
+      "140",
+      "130"
+    ],
+    "a": 0,
+    "e": "Method 1 (Weighted Average Equation Method):\nStep 1: अनुपात = 2 : 3 : 5 (कुल इकाइयाँ = 2 + 3 + 5 = 10 इकाइयाँ)।\nमाना तीसरी किस्म का मूल्य = ₹x प्रति किग्रा।\nStep 2: मिश्रण का औसत मूल्य = ₹125 प्रति किग्रा:\n(2 * 108 + 3 * 120 + 5 * x) / 10 = 125\nStep 3: समीकरण को हल करने पर:\n(216 + 360 + 5x) = 1,250\n576 + 5x = 1,250\n5x = 1,250 - 576 = 674\nx = 674 / 5 = 134.8 ≈ ₹135 प्रति किग्रा।\nअतः सही विकल्प  135 है।\n\nMethod 2 (Deviation Method):\nStep 1: औसत मूल्य ₹125 के सापेक्ष विचलन:\n- किस्म 1: 108 - 125 = -17 (2 इकाइयाँ ==> 2 * (-17) = -34)\n- किस्म 2: 120 - 125 = -5 (3 इकाइयाँ ==> 3 * (-5) = -15)\nकुल कमी = -34 - 15 = -49.\nStep 2: शुद्ध विचलन शून्य करने के लिए किस्म 3 पर अधिशेष = +49 होना चाहिए:\nकिस्म 3 की 5 इकाइयों पर प्रति इकाई अधिशेष = 49 / 5 = 9.8.\nStep 3: किस्म 3 का मूल्य = 125 + 9.8 = 134.8 ≈ ₹135 प्रति किग्रा।\nअतः सही उत्तर '135' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_8",
+    "qe": "A man buys 10 kg of wheat at a rate of Rs.26/kg. The wheat is mixed with 6 kg of other good quality of wheat to get a mixture at a price of Rs.35/kg. The price of good quality wheat per kg (in Rs.) is:",
+    "qh": "एक व्यक्ति ₹26/किग्रा की दर से 10 किग्रा गेहूं खरीदता है। इस गेहूं को 6 किग्रा अन्य अच्छी गुणवत्ता वाले गेहूं के साथ मिलाकर ₹35/किग्रा मूल्य का मिश्रण प्राप्त किया जाता है। अच्छी गुणवत्ता वाले गेहूं का प्रति किग्रा मूल्य (₹ में) क्या है:",
+    "oe": [
+      "38",
+      "42",
+      "50",
+      "46"
+    ],
+    "oh": [
+      "38",
+      "42",
+      "50",
+      "46"
+    ],
+    "a": 2,
+    "e": "Method 1 (Total Cost Equation Method):\nStep 1: कुल गेहूं = 10 + 6 = 16 किग्रा।\nमिश्रण का कुल मूल्य = 16 * 35 = ₹560.\nStep 2: पहले प्रकार के 10 किग्रा गेहूं का मूल्य = 10 * 26 = ₹260.\nStep 3: अच्छी गुणवत्ता वाले 6 किग्रा गेहूं का कुल मूल्य:\nमूल्य = 560 - 260 = ₹300.\nStep 4: प्रति किग्रा मूल्य = 300 / 6 = ₹50 प्रति किग्रा।\nअतः सही विकल्प  50 है।\n\nMethod 2 (Alligation Method):\nStep 1: मात्रा का अनुपात = 10 : 6 = 5 : 3.\nStep 2: पहले प्रकार पर विचलन = 35 - 26 = ₹9.\nStep 3: अनुपात के अनुसार 3 इकाइयाँ = ₹9 ==> 1 इकाई = ₹3.\nअतः 5 इकाइयाँ = 5 * 3 = ₹15.\nअच्छी गुणवत्ता वाले गेहूं का मूल्य = 35 + 15 = ₹50 प्रति किग्रा।\nअतः सही उत्तर '50' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_9",
+    "qe": "How much rice of Rs.4/kg should be mixed to 15 kg of rice of Rs.10/kg, so as to make a mixture worth Rs.6.50/kg?",
+    "qh": "₹4 प्रति किग्रा वाले कितने चावल को ₹10 प्रति किग्रा वाले 15 किग्रा चावल में मिलाया जाना चाहिए, ताकि ₹6.50 प्रति किग्रा मूल्य का मिश्रण बन सके?",
+    "oe": [
+      "15 kg",
+      "21 kg",
+      "30 kg",
+      "40 kg"
+    ],
+    "oh": [
+      "15 kg",
+      "21 kg",
+      "30 kg",
+      "40 kg"
+    ],
+    "a": 1,
+    "e": "Method 1 (Alligation Method):\nStep 1: पृथक्करण (Alligation) नियम लागू करने पर:\nचावल 1 (₹4)           चावल 2 (₹10)\n             ₹6.50\n(10 - 6.50) = 3.50    (6.50 - 4) = 2.50\nStep 2: मात्रा का अनुपात:\nअनुपात = 3.50 : 2.50 = 7 : 5.\nStep 3: ₹10 वाले चावल की मात्रा 5 इकाइयाँ = 15 किग्रा दी गई है:\n1 इकाई = 15 / 5 = 3 किग्रा।\nStep 4: ₹4 वाले चावल की आवश्यक मात्रा (7 इकाइयाँ):\nमात्रा = 7 * 3 = 21 किग्रा।\nअतः सही विकल्प  21 kg है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना ₹4 वाले चावल की मात्रा = x किग्रा।\n4x + 10(15) = 6.50(x + 15)\n4x + 150 = 6.5x + 97.5 ==> 2.5x = 52.5 ==> x = 52.5 / 2.5 = 21 किग्रा।\nअतः सही उत्तर '21 kg' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_10",
+    "qe": "5 kg of ₹18 per kg wheat is mixed with 2 kg of another type of wheat to get a mixture costing ₹20 per kg. Find the price (per kg) of the costlier wheat.",
+    "qh": "₹18 प्रति किग्रा वाले 5 किग्रा गेहूं को दूसरे प्रकार के 2 किग्रा गेहूं के साथ मिलाकर ₹20 प्रति किग्रा मूल्य का मिश्रण प्राप्त किया जाता है। महंगे गेहूं का प्रति किग्रा मूल्य ज्ञात कीजिए।",
+    "oe": [
+      "₹27",
+      "₹25",
+      "₹29",
+      "₹30"
+    ],
+    "oh": [
+      "₹27",
+      "₹25",
+      "₹29",
+      "₹30"
+    ],
+    "a": 1,
+    "e": "Method 1 (Total Cost Method):\nStep 1: कुल गेहूं = 5 + 2 = 7 किग्रा।\nमिश्रण की कुल लागत = 7 * 20 = ₹140.\nStep 2: पहले प्रकार के 5 किग्रा गेहूं की लागत = 5 * 18 = ₹90.\nStep 3: महंगे 2 किग्रा गेहूं की कुल लागत = 140 - 90 = ₹50.\nप्रति किग्रा मूल्य = 50 / 2 = ₹25 प्रति किग्रा।\nअतः सही विकल्प  ₹25 है।\n\nMethod 2 (Alligation Method):\nStep 1: मात्रा का अनुपात = 5 : 2.\nStep 2: सस्ते गेहूं पर कमी = 20 - 18 = ₹2.\nStep 3: 2 इकाइयाँ = ₹2 ==> 1 इकाई = ₹1.\nअतः 5 इकाइयाँ = 5 * 1 = ₹5.\nमहंगे गेहूं का मूल्य = 20 + 5 = ₹25 प्रति किग्रा।\nअतः सही उत्तर '₹25' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_11",
+    "qe": "A 100 ml solution of H2SO4 having concentration of 20% is mixed with a 50% concentrated x ml mixture such that the net mixture is 30% concentrated. Determine x.",
+    "qh": "20% सांद्रता वाले H2SO4 के 100 मिलीलीटर घोल को 50% सांद्रता वाले x मिलीलीटर मिश्रण के साथ इस प्रकार मिलाया जाता है कि शुद्ध मिश्रण की सांद्रता 30% हो जाए। x का मान ज्ञात कीजिए।",
+    "oe": [
+      "70 ml",
+      "80 ml",
+      "60 ml",
+      "50 ml"
+    ],
+    "oh": [
+      "70 ml",
+      "80 ml",
+      "60 ml",
+      "50 ml"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alligation Method):\nStep 1: पृथक्करण नियम लागू करने पर:\nघोल 1 (20%)          घोल 2 (50%)\n             30%\n(50 - 30) = 20        (30 - 20) = 10\nStep 2: मात्रा का अनुपात = 20 : 10 = 2 : 1.\nStep 3: पहले घोल की मात्रा 2 इकाइयाँ = 100 ml दी गई है:\n1 इकाई = 100 / 2 = 50 ml.\nStep 4: दूसरे घोल की मात्रा x (1 इकाई) = 50 ml.\nअतः सही विकल्प  50 ml है।\n\nMethod 2 (Direct Solute Equation Method):\nStep 1: 20%(100) + 50%(x) = 30%(100 + x)\n20 + 0.5x = 30 + 0.3x ==> 0.2x = 10 ==> x = 10 / 0.2 = 50 ml.\nअतः सही उत्तर '50 ml' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_12",
+    "qe": "80% and 90% pure acid solutions are mixed to obtain 20 litres of 87% pure acid solution. Find the quantity (in litres) of 80% pure acid solution taken to form the mixture.",
+    "qh": "87% शुद्ध अम्ल का 20 लीटर घोल प्राप्त करने के लिए 80% और 90% शुद्ध अम्ल के घोल मिलाए जाते हैं। मिश्रण बनाने के लिए 80% शुद्ध अम्ल घोल की कितनी मात्रा (लीटर में) ली गई?",
+    "oe": [
+      "6",
+      "9",
+      "4",
+      "8"
+    ],
+    "oh": [
+      "6",
+      "9",
+      "4",
+      "8"
+    ],
+    "a": 0,
+    "e": "Method 1 (Alligation Method):\nStep 1: पृथक्करण नियम लागू करने पर:\nघोल 1 (80%)          घोल 2 (90%)\n             87%\n(90 - 87) = 3         (87 - 80) = 7\nStep 2: मात्रा का अनुपात = 3 : 7.\nकुल इकाइयाँ = 3 + 7 = 10 इकाइयाँ।\nStep 3: कुल मात्रा = 20 लीटर:\n10 इकाइयाँ = 20 लीटर ==> 1 इकाई = 2 लीटर।\nStep 4: 80% शुद्ध अम्ल के घोल की मात्रा (3 इकाइयाँ):\nमात्रा = 3 * 2 = 6 लीटर।\nअतः सही विकल्प  6 है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना 80% अम्ल घोल = x लीटर, अतः 90% घोल = (20 - x) लीटर।\n0.80x + 0.90(20 - x) = 0.87 * 20\n0.80x + 18 - 0.90x = 17.4 ==> 0.10x = 0.6 ==> x = 6 लीटर।\nअतः सही उत्तर '6' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_13",
+    "qe": "A solution of 45% alcohol is mixed with a solution of 60% alcohol in the ratio of 2 : 3. In what ratio should the resultant solution be mixed with a 72% alcohol solution to get a 66% alcohol solution?",
+    "qh": "45% अल्कोहल वाले घोल को 60% अल्कोहल वाले घोल के साथ 2 : 3 के अनुपात में मिलाया जाता है। परिणामी घोल को 72% अल्कोहल वाले घोल के साथ किस अनुपात में मिलाया जाना चाहिए ताकि 66% अल्कोहल वाला घोल प्राप्त हो सके?",
+    "oe": [
+      "1 : 3",
+      "3 : 1",
+      "1 : 2",
+      "2 : 3"
+    ],
+    "oh": [
+      "1 : 3",
+      "3 : 1",
+      "1 : 2",
+      "2 : 3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Two-Step Concentration & Alligation Method):\nStep 1: पहले दोनों घोलों के मिश्रण की सांद्रता निकालें:\nअनुपात = 2 : 3 (कुल 5 इकाइयाँ)।\nसांद्रता = (2 * 45% + 3 * 60%) / (2 + 3) = (90% + 180%) / 5 = 270% / 5 = 54%.\nStep 2: अब 54% वाले परिणामी घोल को 72% वाले घोल के साथ मिलाकर 66% का घोल बनाना है।\nStep 3: पृथक्करण (Alligation) नियम लागू करने पर:\nपरिणामी घोल (54%)     तीसरा घोल (72%)\n              66%\n(72 - 66) = 6         (66 - 54) = 12\nStep 4: अभीष्ट अनुपात = 6 : 12 = 1 : 2.\nअतः सही विकल्प  1 : 2 है।\n\nMethod 2 (Direct Weighted Average Method):\nStep 1: 54(a) + 72(b) = 66(a + b)\n72b - 66b = 66a - 54a ==> 6b = 12a ==> a / b = 6 / 12 = 1 / 2.\nअतः सही उत्तर '1 : 2' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_14",
+    "qe": "A chemistry laboratory requests for a 25% solution of ferrous sulphate. A supplier has 40 millilitres of 20% solution. How many millilitres of 40% solution should be added to make it a 25% solution (correct to two decimal places)?",
+    "qh": "एक रसायन विज्ञान प्रयोगशाला फेरस सल्फेट के 25% घोल का अनुरोध करती है। एक आपूर्तिकर्ता के पास 20% घोल का 40 मिलीलीटर है। इसे 25% घोल बनाने के लिए 40% घोल का कितना मिलीलीटर मिलाया जाना चाहिए (दो दशमलव स्थानों तक)?",
+    "oe": [
+      "14.30",
+      "15.20",
+      "16.40",
+      "13.33"
+    ],
+    "oh": [
+      "14.30",
+      "15.20",
+      "16.40",
+      "13.33"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alligation Method):\nStep 1: पृथक्करण नियम लागू करने पर:\nघोल 1 (20%)          घोल 2 (40%)\n             25%\n(40 - 25) = 15        (25 - 20) = 5\nStep 2: मात्रा का अनुपात = 15 : 5 = 3 : 1.\nStep 3: 20% वाले घोल की मात्रा 3 इकाइयाँ = 40 ml दी गई है:\n1 इकाई = 40 / 3 = 13.333... ≈ 13.33 ml.\nStep 4: मिलाए जाने वाले 40% घोल की मात्रा (1 इकाई) = 13.33 ml.\nअतः सही विकल्प  13.33 है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना मिलाई जाने वाली मात्रा = x ml.\n20%(40) + 40%(x) = 25%(40 + x)\n8 + 0.40x = 10 + 0.25x ==> 0.15x = 2 ==> x = 2 / 0.15 = 200 / 15 = 40 / 3 ≈ 13.33 ml.\nअतः सही उत्तर '13.33' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_15",
+    "qe": "A grocer purchased 50 kg of sugar at ₹40 per kg and mixed with 70 kg of sugar at ₹30 per kg. At what rate should he sell the mixture (per kg) to gain 20%?",
+    "qh": "एक पंसारी ने ₹40 प्रति किग्रा की दर से 50 किग्रा चीनी खरीदी और उसे ₹30 प्रति किग्रा की दर से 70 किग्रा चीनी के साथ मिला दिया। 20% का लाभ प्राप्त करने के लिए उसे मिश्रण को किस दर पर (प्रति किग्रा) बेचना चाहिए?",
+    "oe": [
+      "₹41",
+      "₹35",
+      "₹20",
+      "₹60"
+    ],
+    "oh": [
+      "₹41",
+      "₹35",
+      "₹20",
+      "₹60"
+    ],
+    "a": 0,
+    "e": "Method 1 (Total Cost and Profit Method):\nStep 1: दोनों प्रकार की चीनी का कुल क्रय मूल्य (CP) निकालें:\n- 50 किग्रा का क्रय मूल्य = 50 * 40 = ₹2,000\n- 70 किग्रा का क्रय मूल्य = 70 * 30 = ₹2,100\nकुल क्रय मूल्य = 2,000 + 2,100 = ₹4,100.\nStep 2: कुल चीनी की मात्रा = 50 + 70 = 120 किग्रा।\nStep 3: 20% लाभ पर कुल विक्रय मूल्य (SP):\nकुल SP = 4,100 * 1.20 = ₹4,920.\nStep 4: प्रति किग्रा विक्रय मूल्य:\nप्रति किग्रा SP = 4,920 / 120 = ₹41 प्रति किग्रा।\nअतः सही विकल्प  ₹41 है।\n\nMethod 2 (Average Cost Method):\nStep 1: औसत क्रय मूल्य = (50 * 40 + 70 * 30) / 120 = 4,100 / 120 = 41 / 1.2 प्रति किग्रा।\nStep 2: 20% लाभ पर विक्रय मूल्य = (41 / 1.2) * 1.20 = ₹41 प्रति किग्रा।\nअतः सही उत्तर '₹41' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_16",
+    "qe": "Rini has mixed two colours 'C1' and 'C2' in the ratio 2 : 3. If the rate of the colour 'C1' is ₹500 per unit and she is selling the mixture of the two colours at ₹650 per unit at breakeven price, then what is the rate (in ₹) per unit of the second colour, that is, 'C2'?",
+    "qh": "रिनी ने दो रंगों 'C1' और 'C2' को 2 : 3 के अनुपात में मिलाया है। यदि रंग 'C1' की दर ₹500 प्रति इकाई है और वह बिना किसी लाभ-हानि (ब्रेकईवन मूल्य) पर दोनों रंगों के मिश्रण को ₹650 प्रति इकाई पर बेच रही है, तो दूसरे रंग अर्थात 'C2' की प्रति इकाई दर (₹ में) क्या है?",
+    "oe": [
+      "750",
+      "725",
+      "760",
+      "765"
+    ],
+    "oh": [
+      "750",
+      "725",
+      "760",
+      "765"
+    ],
+    "a": 0,
+    "e": "Method 1 (Weighted Average Equation Method):\nStep 1: ब्रेकईवन मूल्य का अर्थ है कि विक्रय मूल्य ही औसत क्रय मूल्य है = ₹650 प्रति इकाई।\nStep 2: अनुपात = 2 : 3 (कुल इकाइयाँ = 5)। माना C2 की दर = ₹x प्रति इकाई।\n(2 * 500 + 3 * x) / 5 = 650\nStep 3: समीकरण को हल करने पर:\n1,000 + 3x = 650 * 5 = 3,250\n3x = 3,250 - 1,000 = 2,250\nx = 2,250 / 3 = ₹750 प्रति इकाई।\nअतः सही विकल्प  750 है।\n\nMethod 2 (Alligation Method):\nStep 1: मात्रा का अनुपात C1 : C2 = 2 : 3.\nStep 2: C1 पर कमी = 650 - 500 = ₹150.\nStep 3: अनुपात के अनुसार 3 इकाइयाँ = ₹150 ==> 1 इकाई = ₹50.\nअतः 2 इकाइयाँ = 2 * 50 = ₹100.\nC2 का मूल्य = 650 + 100 = ₹750 प्रति इकाई।\nअतः सही उत्तर '750' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_17",
+    "qe": "A milk merchant buys 30 litres of milk at the rate of ₹50 per litre and mixes 20 litres of water in it (water is free of cost). If he sells this mixture at the rate of ₹48 per litre, then what is the profit percentage?",
+    "qh": "एक दूध व्यापारी ₹50 प्रति लीटर की दर से 30 लीटर दूध खरीदता है और उसमें 20 लीटर पानी मिलाता है (पानी मुफ़्त है)। यदि वह इस मिश्रण को ₹48 प्रति लीटर की दर से बेचता है, तो लाभ प्रतिशत क्या है?",
+    "oe": [
+      "50%",
+      "60%",
+      "40%",
+      "66.66%"
+    ],
+    "oh": [
+      "50%",
+      "60%",
+      "40%",
+      "66.66%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Cost vs Revenue Method):\nStep 1: दूध का कुल क्रय मूल्य (CP):\nकुल CP = 30 लीटर * ₹50 = ₹1,500 (पानी का मूल्य ₹0 है)।\nStep 2: कुल मिश्रण की मात्रा = 30 + 20 = 50 लीटर।\nStep 3: कुल विक्रय मूल्य (SP):\nकुल SP = 50 लीटर * ₹48 = ₹2,400.\nStep 4: कुल लाभ = 2,400 - 1,500 = ₹900.\nStep 5: लाभ प्रतिशत:\nलाभ% = (900 / 1,500) * 100% = 90 / 1.5% = 60%.\nअतः सही विकल्प  60% है।\n\nMethod 2 (Unit Cost Method):\nStep 1: मिश्रण का प्रति लीटर क्रय मूल्य = 1,500 / 50 = ₹30 प्रति लीटर।\nStep 2: प्रति लीटर SP = ₹48.\nStep 3: लाभ% = [(48 - 30) / 30] * 100% = (18 / 30) * 100% = 60%.\nअतः सही उत्तर '60%' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_18",
+    "qe": "Ramu mixes 2 litres of water at 100° C and 18 litres of water at 32° C. What temperature will the water have after mixing?",
+    "qh": "रामू 100° C पर 2 लीटर पानी और 32° C पर 18 लीटर पानी मिलाता है। मिलाने के बाद पानी का तापमान क्या होगा?",
+    "oe": [
+      "66°C",
+      "20°C",
+      "38.8°C",
+      "40°C"
+    ],
+    "oh": [
+      "66°C",
+      "20°C",
+      "38.8°C",
+      "40°C"
+    ],
+    "a": 2,
+    "e": "Method 1 (Weighted Average / Heat Exchange Method):\nStep 1: कुल पानी = 2 + 18 = 20 लीटर।\nStep 2: भारित औसत तापमान सूत्र:\nअंतिम तापमान T = (m1*T1 + m2*T2) / (m1 + m2)\n= (2 * 100 + 18 * 32) / (2 + 18)\n= (200 + 576) / 20 = 776 / 20 = 38.8° C.\nअतः सही विकल्प  38.8°C है।\n\nMethod 2 (Ratio & Deviation Method):\nStep 1: मात्रा का अनुपात = 2 : 18 = 1 : 9 (कुल 10 इकाइयाँ)।\nStep 2: तापमान का अंतर = 100° - 32° = 68° C.\nStep 3: 1 इकाई (100° C वाला) के कारण 32° C में होने वाली वृद्धि = (1 / 10) * 68° = 6.8° C.\nअंतिम तापमान = 32° + 6.8° = 38.8° C.\nअतः सही उत्तर '38.8°C' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_19",
+    "qe": "Two varieties of tea costing ₹126 per kg and ₹135 per kg are mixed with a third variety in the ratio of 1 : 1 : 2. If the mixture is worth ₹153 per kg, then price of the third variety per kg (in ₹) is:",
+    "qh": "₹126 प्रति किग्रा और ₹135 प्रति किग्रा मूल्य वाली चाय की दो किस्मों को तीसरी किस्म के साथ 1 : 1 : 2 के अनुपात में मिलाया जाता है। यदि मिश्रण का मूल्य ₹153 प्रति किग्रा है, तो तीसरी किस्म का प्रति किग्रा मूल्य (₹ में) क्या है:",
+    "oe": [
+      "182.5",
+      "195.5",
+      "175.5",
+      "133.5"
+    ],
+    "oh": [
+      "182.5",
+      "195.5",
+      "175.5",
+      "133.5"
+    ],
+    "a": 2,
+    "e": "Method 1 (Weighted Average Equation Method):\nStep 1: अनुपात = 1 : 1 : 2 (कुल इकाइयाँ = 1 + 1 + 2 = 4 इकाइयाँ)।\nमाना तीसरी किस्म का मूल्य = ₹x प्रति किग्रा।\nStep 2: मिश्रण का औसत मूल्य = ₹153 प्रति किग्रा:\n(1 * 126 + 1 * 135 + 2 * x) / 4 = 153\nStep 3: समीकरण को हल करने पर:\n261 + 2x = 153 * 4 = 612\n2x = 612 - 261 = 351\nx = 351 / 2 = ₹175.5 प्रति किग्रा।\nअतः सही विकल्प  175.5 है।\n\nMethod 2 (Deviation Method):\nStep 1: औसत मूल्य ₹153 के सापेक्ष विचलन:\n- किस्म 1: 126 - 153 = -27 (1 इकाई ==> -27)\n- किस्म 2: 135 - 153 = -18 (1 इकाई ==> -18)\nकुल कमी = -27 - 18 = -45.\nStep 2: शुद्ध विचलन शून्य करने के लिए किस्म 3 की 2 इकाइयों पर अधिशेष = +45 होना चाहिए:\nप्रति इकाई अधिशेष = 45 / 2 = +22.5.\nStep 3: किस्म 3 का मूल्य = 153 + 22.5 = ₹175.5 प्रति किग्रा।\nअतः सही उत्तर '175.5' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_20",
+    "qe": "Pomegranate juice contains 10% sugar solution and orange juice contains 30% sugar solution. What is the percentage of sugar solution in a mixture of two litres of pomegranate juice and three litres of orange juice?",
+    "qh": "अनार के रस में 10% चीनी का घोल होता है और संतरे के रस में 30% चीनी का घोल होता है। दो लीटर अनार के रस और तीन लीटर संतरे के रस के मिश्रण में चीनी के घोल का प्रतिशत क्या है?",
+    "oe": [
+      "22%",
+      "25%",
+      "20%",
+      "40%"
+    ],
+    "oh": [
+      "22%",
+      "25%",
+      "20%",
+      "40%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Weighted Average Method):\nStep 1: कुल मिश्रण = 2 + 3 = 5 लीटर।\nStep 2: चीनी की कुल मात्रा निकालें:\n- अनार के रस से = 10% of 2 = 0.20 लीटर\n- संतरे के रस से = 30% of 3 = 0.90 लीटर\nकुल चीनी = 0.20 + 0.90 = 1.10 लीटर।\nStep 3: मिश्रण में चीनी का प्रतिशत:\nचीनी% = (1.10 / 5) * 100% = 110 / 5% = 22%.\nअतः सही विकल्प  22% है।\n\nMethod 2 (Weighted Formula Method):\nStep 1: चीनी% = (2 * 10% + 3 * 30%) / (2 + 3) = (20% + 90%) / 5 = 110% / 5 = 22%.\nअतः सही उत्तर '22%' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_21",
+    "qe": "A grocer purchased 50 kg of rice at ₹40 per kg and 20 kg of another variety of rice at ₹55 per kg. He mixed the two varieties and sold the entire mixture at ₹48 per kg. Find his total profit or loss in this transaction.",
+    "qh": "एक पंसारी ने ₹40 प्रति किग्रा की दर से 50 किग्रा चावल और ₹55 प्रति किग्रा की दर से दूसरी किस्म का 20 किग्रा चावल खरीदा। उसने दोनों किस्मों को मिलाया और पूरे मिश्रण को ₹48 प्रति किग्रा की दर से बेच दिया। इस लेन-देन में उसका कुल लाभ या हानि ज्ञात कीजिए।",
+    "oe": [
+      "Loss of ₹260",
+      "Loss of ₹240",
+      "Profit of ₹260",
+      "Loss of ₹290"
+    ],
+    "oh": [
+      "Loss of ₹260",
+      "Loss of ₹240",
+      "Profit of ₹260",
+      "Loss of ₹290"
+    ],
+    "a": 2,
+    "e": "Method 1 (Total Cost vs Total Revenue Method):\nStep 1: कुल क्रय मूल्य (CP) की गणना:\n- 50 किग्रा का CP = 50 * 40 = ₹2,000\n- 20 किग्रा का CP = 20 * 55 = ₹1,100\nकुल CP = 2,000 + 1,100 = ₹3,100.\nStep 2: कुल मिश्रण की मात्रा = 50 + 20 = 70 किग्रा।\nStep 3: कुल विक्रय मूल्य (SP) की गणना:\nकुल SP = 70 * 48 = ₹3,360.\nStep 4: लाभ या हानि का निर्धारण:\nचूँकि SP > CP, अतः लाभ = 3,360 - 3,100 = ₹260 का लाभ (Profit of ₹260).\nअतः सही विकल्प  Profit of ₹260 है।\n\nMethod 2 (Per-Unit Deviation Method):\nStep 1: 50 किग्रा पर लाभ = 50 * (48 - 40) = 50 * 8 = +₹400.\nStep 2: 20 किग्रा पर हानि = 20 * (48 - 55) = 20 * (-7) = -₹140.\nStep 3: शुद्ध परिणाम = 400 - 140 = +₹260 (लाभ)।\nअतः सही उत्तर 'Profit of ₹260' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_22",
+    "qe": "A shopkeeper mixes two varieties of pulses - one costing Rs.80 per kg and the other costing Rs.100 per kg, in the ratio 3 : 1. If he sells the mixed variety at Rs.91.80 per kg, find his gain or loss percent.",
+    "qh": "एक दुकानदार दो प्रकार की दालों को - एक का मूल्य ₹80 प्रति किग्रा और दूसरी का मूल्य ₹100 प्रति किग्रा है, 3 : 1 के अनुपात में मिलाता है। यदि वह मिश्रित किस्म को ₹91.80 प्रति किग्रा पर बेचता है, तो उसका लाभ या हानि प्रतिशत ज्ञात कीजिए।",
+    "oe": [
+      "8% Loss",
+      "10% Gain",
+      "8% Gain",
+      "10% Loss"
+    ],
+    "oh": [
+      "8% Loss",
+      "10% Gain",
+      "8% Gain",
+      "10% Loss"
+    ],
+    "a": 2,
+    "e": "Method 1 (Weighted Cost Price Method):\nStep 1: मिश्रण का औसत क्रय मूल्य (CP) निकालें:\nअनुपात = 3 : 1 (कुल 4 इकाइयाँ)।\nऔसत CP = (3 * 80 + 1 * 100) / (3 + 1) = (240 + 100) / 4 = 340 / 4 = ₹85 प्रति किग्रा।\nStep 2: दिया गया विक्रय मूल्य (SP) = ₹91.80 प्रति किग्रा।\nStep 3: प्रति किग्रा लाभ = 91.80 - 85 = ₹6.80.\nStep 4: लाभ प्रतिशत:\nलाभ% = (6.80 / 85) * 100% = 680 / 85% = 8% लाभ (8% Gain).\nअतः सही विकल्प  8% Gain है।\n\nMethod 2 (Direct Total Calculation Method):\nStep 1: माना 3 kg और 1 kg लिया गया (कुल 4 kg).\nकुल CP = 240 + 100 = ₹340.\nकुल SP = 4 * 91.80 = ₹367.20.\nStep 2: लाभ = 367.20 - 340 = ₹27.20.\nलाभ% = (27.20 / 340) * 100% = 272 / 34% = 8% Gain.\nअतः सही उत्तर '8% Gain' है।\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type2_23",
+    "qe": "A shopkeeper mixes 4 liters of a milk solution containing 25% fat with 6 liters of another milk solution containing 40% fat. What is the fat percentage in the final mixture?",
+    "qh": "एक दुकानदार 25% वसा वाले 4 लीटर दूध के घोल को 40% वसा वाले 6 लीटर दूसरे दूध के घोल में मिलाता है। अंतिम मिश्रण में वसा का प्रतिशत क्या है?",
+    "oe": [
+      "30%",
+      "32%",
+      "34%",
+      "35%"
+    ],
+    "oh": [
+      "30%",
+      "32%",
+      "34%",
+      "35%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Total Fat Component Method):\nStep 1: दोनों घोलों में वसा की कुल मात्रा निकालें:\n- पहले घोल से वसा = 25% of 4 लीटर = 1.0 लीटर\n- दूसरे घोल से वसा = 40% of 6 लीटर = 2.4 लीटर\nकुल वसा = 1.0 + 2.4 = 3.4 लीटर।\nStep 2: अंतिम मिश्रण का कुल आयतन = 4 + 6 = 10 लीटर।\nStep 3: अंतिम मिश्रण में वसा का प्रतिशत:\nवसा% = (3.4 / 10) * 100% = 34%.\nअतः सही विकल्प  34% है।\n\nMethod 2 (Weighted Average Ratio Method):\nStep 1: आयतन का अनुपात = 4 : 6 = 2 : 3 (कुल 5 इकाइयाँ)।\nStep 2: भारित औसत प्रतिशत = (2 * 25% + 3 * 40%) / (2 + 3) = (50% + 120%) / 5 = 170% / 5 = 34%.\nअतः सही उत्तर '34%' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
