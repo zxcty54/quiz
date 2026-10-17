@@ -1,0 +1,363 @@
+[
+  {
+    "p_id": "puzzle_1",
+    "qe": "In a family, A is the husband of B. C is the son of A. D is the daughter of B. F is the daughter of G. C is the father of F. (i) How is A related to F?",
+    "qh": "एक परिवार में, A, B का पति है। C, A का पुत्र है। D, B की पुत्री है। F, G की पुत्री है। C, F का पिता है। (i) A का F से क्या संबंध है?",
+    "oe": [
+      "Father",
+      "Paternal Grandfather",
+      "Maternal Grandfather",
+      "Son"
+    ],
+    "oh": [
+      "Father",
+      "Paternal Grandfather",
+      "Maternal Grandfather",
+      "Son"
+    ],
+    "a": 1,
+    "e": "Method 1 (Family Tree & Generation Gap Shortcut):\nStep 1: Relations map karein:\n- A (Male) aur B (Female) pati-patni hain: $[A(+)] \\iff [B(-)]$.\n- C, A ka beta hai ($C(+)$) aur D, B ki beti hai ($D(-)$), arthath C aur D bhai-behan hain.\n- C pita hai F ka ($C(+) \\to F(-)$) aur F beti hai G ki, iska matlab G, C ki patni hai ($[C] \\iff [G]$).\nStep 2: A aur F ka sambandh:\n- F ke pita C hain, aur C ke pita A hain.\n- Pita ke pita = Paternal Grandfather (दादाजी).\nCorrect option  Paternal Grandfather hai.\n\nMethod 2 (Generation Level Method):\n$A$ (Generation +2) $\\to$ $C$ (Generation +1) $\\to$ $F$ (Generation 0). A male hai aur pita ke pita hain, isliye Paternal Grandfather honge.\nSahi uttar 'Paternal Grandfather' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_2",
+    "qe": "In a family, A is the husband of B. C is the son of A. D is the daughter of B. F is the daughter of G. C is the father of F. (ii) How is C related to B?",
+    "qh": "एक परिवार में, A, B का पति है। C, A का पुत्र है। D, B की पुत्री है। F, G की पुत्री है। C, F का पिता है। (ii) C का B से क्या संबंध है?",
+    "oe": [
+      "Father",
+      "Paternal Grandfather",
+      "Maternal Grandfather",
+      "Son"
+    ],
+    "oh": [
+      "Father",
+      "Paternal Grandfather",
+      "Maternal Grandfather",
+      "Son"
+    ],
+    "a": 3,
+    "e": "Method 1 (Direct Parent-Child Relationship Shortcut):\nStep 1: A aur B pati-patni hain ($A = \\text{Husband}, B = \\text{Wife}$).\nStep 2: Diya gaya hai ki C, A ka putra hai ($C = \\text{Son of } A$).\n- Pati ka putra patni ka bhi putra (Son) hota hai.\nIsliye C, B ka 'Son' (पुत्र/बेटा) hai.\nCorrect option  Son hai.\n\nMethod 2 (Family Tree Verification):\nParents: $(A, B) \\to$ Children: $(C, D)$. $C$ male child hai, isliye B ka putra (Son) hai.\nSahi uttar 'Son' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_3",
+    "qe": "In a family, A is the husband of B. C is the son of A. D is the daughter of B. F is the daughter of G. C is the father of F. (iii) How is G related to B?",
+    "qh": "एक परिवार में, A, B का पति है। C, A का पुत्र है। D, B की पुत्री है। F, G की पुत्री है। C, F का पिता है। (iii) G का B से क्या संबंध है?",
+    "oe": [
+      "Daughter",
+      "Daughter-in-law",
+      "Mother",
+      "Father"
+    ],
+    "oh": [
+      "Daughter",
+      "Daughter-in-law",
+      "Mother",
+      "Father"
+    ],
+    "a": 1,
+    "e": "Method 1 (In-Law Relationship Shortcut):\nStep 1: C, F ka pita hai aur F, G ki beti hai. Iska arth hai ki C aur G vivahit joda (husband-wife) hain ($C = \\text{Husband}, G = \\text{Wife}$).\nStep 2: B, C ki mata (Mother) hai.\nStep 3: Bete (C) ki patni (G) mata (B) ki 'Daughter-in-law' (बहू / पुत्रवधू) hoti hai.\nCorrect option  Daughter-in-law hai.\n\nMethod 2 (Generation Flow Method):\n$B$ (Mother) $\\to$ $C$ (Son) $\\iff$ $G$ (Wife of Son = Daughter-in-law).\nSahi uttar 'Daughter-in-law' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_4",
+    "qe": "A is daughter of B. B is mother of C. D is brother of C. Then, how is D related to A?",
+    "qh": "A, B की पुत्री है। B, C की माता है। D, C का भाई है। तो D का A से क्या संबंध है?",
+    "oe": [
+      "Father",
+      "Grandfather",
+      "Brother",
+      "Son"
+    ],
+    "oh": [
+      "Father",
+      "Grandfather",
+      "Brother",
+      "Son"
+    ],
+    "a": 2,
+    "e": "Method 1 (Sibling Group Shortcut):\nStep 1: B mata hai A aur C ki ($B = \\text{Mother}$).\nStep 2: D, C ka bhai hai ($D = \\text{Male}$). Arthath A, C, aur D sabhi ek hi mata (B) ke bachhe (siblings) hain.\nStep 3: D purush (male) hone ke karan A ka 'Brother' (भाई) hoga.\nCorrect option  Brother hai.\n\nMethod 2 (Family Tree Level Method):\nSame generation (0 level): $A(-) \\leftrightarrow C \\leftrightarrow D(+)$. D purush hai, isliye A ka bhai (Brother) hai.\nSahi uttar 'Brother' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_5",
+    "qe": "P is Q's brother. R is Q's mother. S is R's father. T is S's mother. How is P related to T?",
+    "qh": "P, Q का भाई है। R, Q की माता है। S, R का पिता है। T, S की माता है। P का T से क्या संबंध है?",
+    "oe": [
+      "Grand daughter",
+      "Great Grandson",
+      "Grand son",
+      "Grand mother"
+    ],
+    "oh": [
+      "Grand daughter",
+      "Great Grandson",
+      "Grand son",
+      "Grand mother"
+    ],
+    "a": 1,
+    "e": "Method 1 (Generation Ladder Shortcut (+3 Generations)):\nStep 1: Generation hierarchy banayein:\n- $T$ (Mata) [Generation +3]\n- $S$ (Beta of T) [Generation +2]\n- $R$ (Beti of S) [Generation +1]\n- $P$ aur $Q$ (Bachhe of R) [Generation 0]\nStep 2: P ek purush hai ($P$ is brother of $Q$).\nStep 3: 3 generation piche ka purush vanshaj = 'Great Grandson' (परपोता / प्रपौत्र) hota hai.\nCorrect option  Great Grandson hai.\n\nMethod 2 (Chain Method):\nP's Mother = R → R's Father = S (Grandfather) → S's Mother = T (Great Grandmother). Toh P, T ka Great Grandson hoga.\nSahi uttar 'Great Grandson' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_6",
+    "qe": "A is the sister of B. B is the brother of C. C is the son of D. How is D related to A?",
+    "qh": "A, B की बहन है। B, C का भाई है। C, D का पुत्र है। D का A से क्या संबंध है?",
+    "oe": [
+      "Mother",
+      "Daughter",
+      "Son",
+      "Uncle"
+    ],
+    "oh": [
+      "Mother",
+      "Daughter",
+      "Son",
+      "Uncle"
+    ],
+    "a": 0,
+    "e": "Method 1 (Parent Identification & Option Elimination Method):\nStep 1: A, B, C aapas me siblings hain ($A = \\text{Sister}, B = \\text{Brother}, C = \\text{Brother/Son}$).\nStep 2: C, D ka putra hai, isliye D in sabhi ka janak (Parent - Father ya Mother) hai.\nStep 3: D ka gender prashn me spasht nahi hai (Mother ya Father), lekin diye gaye vikalpon me kewal 'Mother' maujood hai.\nCorrect option  Mother hai.\n\nMethod 2 (Generation Difference Verification):\nD, A se ek generation upar (+1) hai. Vikalp (B) Daughter (-1), (C) Son (-1) reject hote hain. Uncle collateral hote hain, jabki D direct parent hai. Isliye 'Mother' sahi hai.\nSahi uttar 'Mother' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_7",
+    "qe": "B is the brother of A and B's only sister is mother of C. D is maternal grandmother of C. How is A related to D?",
+    "qh": "B, A का भाई है और B की एकमात्र बहन C की माता है। D, C की नानी (maternal grandmother) है। A का D से क्या संबंध है?",
+    "oe": [
+      "Daughter-in-law",
+      "Daughter",
+      "Aunt",
+      "Nephew"
+    ],
+    "oh": [
+      "Daughter-in-law",
+      "Daughter",
+      "Aunt",
+      "Nephew"
+    ],
+    "a": 1,
+    "e": "Method 1 ('Only Sister' Deduction Shortcut):\nStep 1: B ka bhai A ho sakta tha ya behan, lekin diya hai ki 'B ki ekmatra behan C ki mata hai'.\n- Yadi A female hai, toh A hi B ki akeli behan aur C ki mata hogi ($A = \\text{Mother of } C$).\nStep 2: D, C ki maternal grandmother (नानी - mata ki mata) hai.\n- C ki mata A hai, aur A ki mata D hai.\nStep 3: A, D ki 'Daughter' (पुत्री/बेटी) hai.\nCorrect option  Daughter hai.\n\nMethod 2 (Possibility Checking):\n- Agar A bhai hota, toh B ki koi teesri behan hoti jo D ki beti hoti. Tab A, D ka beta hota (jo option me nahi hai).\n- Agar A behan hai, toh A, D ki putri (Daughter) hai (jo 'Daughter' me diya hai).\nSahi uttar 'Daughter' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_8",
+    "qe": "E is the sister of B. A is the father of C. B is the son of C. How is A related to E?",
+    "qh": "E, B की बहन है। A, C का पिता है। B, C का पुत्र है। A का E से क्या संबंध है?",
+    "oe": [
+      "Grand father",
+      "Grand daughter",
+      "Father",
+      "Great grand father"
+    ],
+    "oh": [
+      "Grand father",
+      "Grand daughter",
+      "Father",
+      "Great grand father"
+    ],
+    "a": 0,
+    "e": "Method 1 (Generation Gap Shortcut (+2 Generations)):\nStep 1: Sibling pair: E(-) aur B(+) bhai-behan hain.\nStep 2: B, C ka beta hai, iska matlab E bhi C ki santaan (beti) hai ($C = \\text{Parent}$).\nStep 3: A, C ka pita hai ($A = \\text{Male, Father of } C$).\nStep 4: E ke parent (C) ke pita A hain, isliye A, E ke 'Grandfather' (दादा/नाना) honge.\nCorrect option  Grand father hai.\n\nMethod 2 (Level Counting Method):\n$A(+)$ [Gen +2] $\\to$ $C$ [Gen +1] $\\to$ $E(-)$ [Gen 0]. Gen +2 par male person Grand father hota hai.\nSahi uttar 'Grand father' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_9",
+    "qe": "A is B's brother, C is A's mother, D is C's father, E is B's son. How is D related to A?",
+    "qh": "A, B का भाई है, C, A की माता है, D, C का पिता है, E, B का पुत्र है। D का A से क्या संबंध है?",
+    "oe": [
+      "Son",
+      "Grand son",
+      "Grand father",
+      "Great grandfather"
+    ],
+    "oh": [
+      "Son",
+      "Grand son",
+      "Grand father",
+      "Great grandfather"
+    ],
+    "a": 2,
+    "e": "Method 1 (Maternal Grandfather Direct Mapping Shortcut):\nStep 1: A ki mata C hai ($C = \\text{Mother}$).\nStep 2: C ke pita D hain ($D = \\text{Father of } C$).\nStep 3: Mata ke pita ko Maternal Grandfather (नाना / Grandfather) kaha jata hai.\nIsliye D, A ke Grand father hain.\nCorrect option  Grand father hai.\n\nMethod 2 (Generation Flow Method):\n$A$ [Gen 0] $\\to$ Mother $C$ [Gen +1] $\\to$ Mother's Father $D$ [Gen +2]. D male hai, isliye Grand father hoga.\nSahi uttar 'Grand father' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_10",
+    "qe": "A is B's sister, C is B's mother, D is C's father, E is D's mother. Then how is A related to D?",
+    "qh": "A, B की बहन है, C, B की माता है, D, C का पिता है, E, D की माता है। तो A का D से क्या संबंध है?",
+    "oe": [
+      "Grand father",
+      "Daughter",
+      "Grand mother",
+      "Grand daughter"
+    ],
+    "oh": [
+      "Grand father",
+      "Daughter",
+      "Grand mother",
+      "Grand daughter"
+    ],
+    "a": 3,
+    "e": "Method 1 (Reverse Relative Identification Shortcut):\nStep 1: A aur B behan-bhai hain; C inki mata hai ($A = \\text{Daughter of } C$).\nStep 2: D, C ke pita hain ($D = \\text{Maternal Grandfather of } A$).\nStep 3: Prashn me pucha hai 'A ka D se kya sambandh hai' (who is A?):\n- A mahila (female/sister) hai, isliye D ki 'Grand daughter' (नातिन / पौत्री) hogi.\nCorrect option  Grand daughter hai.\n\nMethod 2 (Gender & Generation Inspection):\nA female hai aur D se do generation neeche (-2) aati hai. -2 level par female 'Grand daughter' hoti hai.\nSahi uttar 'Grand daughter' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_11",
+    "qe": "A is the father of B, C is the daughter of B, D is the brother of B, E is the son of A. What is the relationship between C and E?",
+    "qh": "A, B का पिता है, C, B की पुत्री है, D, B का भाई है, E, A का पुत्र है। C और E के बीच क्या संबंध है?",
+    "oe": [
+      "Brother and Sister",
+      "Cousins",
+      "Niece and Uncle",
+      "Uncle and Aunt"
+    ],
+    "oh": [
+      "Brother and Sister",
+      "Cousins",
+      "Niece and Uncle",
+      "Uncle and Aunt"
+    ],
+    "a": 2,
+    "e": "Method 1 (Uncle-Niece Cross-Generation Shortcut):\nStep 1: A ke bachhe hain: B, D (brother of B), aur E (son of A). Yani B, D, aur E aapas me siblings (bhai-bhai ya bhai-behan) hain.\nStep 2: C, B ki beti hai ($C = \\text{Daughter, female}$).\nStep 3: E (jo B ka bhai hai), C ka chacha/mama (Uncle) hoga, aur C uski bhatiji/bhanji (Niece) hogi.\nIsliye C aur E ke beech ka rishta 'Niece and Uncle' (भांजी/भतीजी और चाचा/मामा) hai.\nCorrect option  Niece and Uncle hai.\n\nMethod 2 (Generation Gap Verification):\nC generation 0 me hai aur E generation +1 me hai. Ek generation ke antar par rishta 'Niece and Uncle' banta hai.\nSahi uttar 'Niece and Uncle' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_12",
+    "qe": "C is the wife of B, E is the son of C, A is the brother of B and father of D. What is the relationship of E to D?",
+    "qh": "C, B की पत्नी है, E, C का पुत्र है, A, B का भाई है और D का पिता है। E का D से क्या संबंध है?",
+    "oe": [
+      "Mother",
+      "Sister",
+      "Brother",
+      "Cousin"
+    ],
+    "oh": [
+      "Mother",
+      "Sister",
+      "Brother",
+      "Cousin"
+    ],
+    "a": 3,
+    "e": "Method 1 (Cousin Identification Shortcut):\nStep 1: B aur C pati-patni hain, aur E inka beta hai ($E = \\text{Son of } B$).\nStep 2: A, B ka bhai hai aur D ka pita hai ($D = \\text{Child of } A$).\nStep 3: E ke pita (B) aur D ke pita (A) aapas me saga bhai hain.\n- Do bhaiyon ke bachhe aapas me 'Cousin' (चचेरे भाई) hote hain.\nCorrect option  Cousin hai.\n\nMethod 2 (Same Generation Non-Sibling Rule):\nE aur D same generation me hain aur unke pita aapas me bhai hain, isliye direct relation 'Cousin' hoga.\nSahi uttar 'Cousin' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_13",
+    "qe": "X and Y are brothers. R is the father of Y. S is the brother of T and maternal uncle of X. What is the relationship of T to R?",
+    "qh": "X और Y भाई हैं। R, Y का पिता है। S, T का भाई है और X का मामा (maternal uncle) है। T का R से क्या संबंध है?",
+    "oe": [
+      "Mother",
+      "Wife",
+      "Sister",
+      "Brother"
+    ],
+    "oh": [
+      "Mother",
+      "Wife",
+      "Sister",
+      "Brother"
+    ],
+    "a": 1,
+    "e": "Method 1 (Maternal Uncle to Mother-Wife Shortcut):\nStep 1: X aur Y bhai hain, aur R inke pita hain ($R = \\text{Father}$).\nStep 2: S, X ka mama (maternal uncle) hai, arthath S, X ki mata ka bhai hai.\nStep 3: Diya hai ki S, T ka bhai hai. Yadi T hi X ki mata hai, toh T, pita R ki 'Wife' (पत्नी) hogi.\nCorrect option  Wife hai.\n\nMethod 2 (Case Analysis):\n- Case 1: T, X aur Y ki mata hai $\\implies$ R ki patni (Wife) hogi.\n- Case 2: T mama ya mausi ho sakti hai $\\implies$ R ka saala/saali (in-law). Vikalpon me 'Wife' diya gaya hai jo Case 1 ko satya sidhh karta hai.\nSahi uttar 'Wife' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_14",
+    "qe": "If P is the husband of Q and R is the mother of S and Q. What is the relationship of R to P?",
+    "qh": "यदि P, Q का पति है और R, S और Q की माता है। R का P से क्या संबंध है?",
+    "oe": [
+      "Mother",
+      "Sister",
+      "Aunt",
+      "Mother-in-law"
+    ],
+    "oh": [
+      "Mother",
+      "Sister",
+      "Aunt",
+      "Mother-in-law"
+    ],
+    "a": 3,
+    "e": "Method 1 (Spouse's Mother Shortcut Trick):\nStep 1: P aur Q pati-patni hain ($P = \\text{Husband}, Q = \\text{Wife}$).\nStep 2: R, Q ki mata hai ($R = \\text{Mother of } Q$).\nStep 3: Patni ki mata ko 'Mother-in-law' (सास) kaha jata hai.\nIsliye R, P ki Mother-in-law hai.\nCorrect option  Mother-in-law hai.\n\nMethod 2 (Direct Mapping):\n$P$ (Husband) $\\iff$ $Q$ (Wife) $\\leftarrow$ $R$ (Mother). Husband ke liye Wife ki Mother = Mother-in-law.\nSahi uttar 'Mother-in-law' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_15",
+    "qe": "A reads a book and finds the name of the author familiar. The author B is the paternal uncle of C. C is the daughter of A. How is B related to A?",
+    "qh": "A एक पुस्तक पढ़ता है और लेखक का नाम परिचित पाता है। लेखक B, C का चाचा (paternal uncle) है। C, A की पुत्री है। B का A से क्या संबंध है?",
+    "oe": [
+      "Brother",
+      "Sister",
+      "Father",
+      "Uncle"
+    ],
+    "oh": [
+      "Brother",
+      "Sister",
+      "Father",
+      "Uncle"
+    ],
+    "a": 0,
+    "e": "Method 1 (Paternal Uncle - Father Relation Shortcut):\nStep 1: C, A ki beti hai ($C = \\text{Daughter of } A$).\nStep 2: B, C ka paternal uncle (चाचा - pita ka bhai) hai.\n- Iska arth hai ki C ke pita ka bhai B hai.\nStep 3: Yadi A purush hai (C ke pita), toh B, A ka 'Brother' (भाई) hoga.\nCorrect option  Brother hai.\n\nMethod 2 (Option-Based Resolution):\n- Yadi A pita hai, toh B uska saga bhai (Brother) hai.\n- Yadi A mata hai, toh B uska devar/jeth (Brother-in-law) hota.\nVikalpon me kewal 'Brother' diya gaya hai, isliye 'Brother' sahi hai.\nSahi uttar 'Brother' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_16",
+    "qe": "A is B's brother, C is A's mother, D is C's father, F is A's son. How is F related to D?",
+    "qh": "A, B का भाई है, C, A की माता है, D, C का पिता है, F, A का पुत्र है। F का D से क्या संबंध है?",
+    "oe": [
+      "Son",
+      "Grand son",
+      "Great grand son",
+      "Grand daughter"
+    ],
+    "oh": [
+      "Son",
+      "Grand son",
+      "Great grand son",
+      "Grand daughter"
+    ],
+    "a": 2,
+    "e": "Method 1 (Generation Ladder Shortcut (-3 Generations)):\nStep 1: Pidhiyon (Generations) ka kram banayein:\n- $D$ (Purush, sabse upar) [Generation +3]\n- $C$ ($D$ ki putri, mata) [Generation +2]\n- $A$ ($C$ ka putra) [Generation +1]\n- $F$ ($A$ ka putra, purush) [Generation 0]\nStep 2: D se F tak kul 3 generation ka antar hai ($+3$ se $0$ tak).\nStep 3: Teesri generation ka male vanshaj 'Great grandson' (परपोता / प्रपौत्र) kehlata hai.\nIsliye F, D ka Great grand son hai.\nCorrect option  Great grand son hai.\n\nMethod 2 (Step-by-Step Relation Chain):\nF ke pita = A → A ki mata = C (Dadi/Nani) → C ke pita = D (Pardada/Parnana). Is prakar F, D ka Great grandson hoga.\nSahi uttar 'Great grand son' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_17",
+    "qe": "A, B, C, D, E and F are the six members of a family. Number of males is equal to number of females. A and E are the sons of F. B is a son of A. D is the mother of two, one boy and one girl. How is C related to A?",
+    "qh": "A, B, C, D, E और F एक परिवार के छह सदस्य हैं। पुरुषों की संख्या महिलाओं की संख्या के बराबर है। A और E, F के पुत्र हैं। B, A का पुत्र है। D दो बच्चों की माता है, जिनमें एक लड़का और एक लड़की है। C का A से क्या संबंध है?",
+    "oe": [
+      "Son",
+      "Daughter",
+      "Wife",
+      "Mother"
+    ],
+    "oh": [
+      "Son",
+      "Daughter",
+      "Wife",
+      "Mother"
+    ],
+    "a": 1,
+    "e": "Method 1 (Family Tree & Gender Balance Shortcut):\nStep 1: Kul 6 sadasya hain aur Male = Female hai, arthath 3 Males aur 3 Females hain.\nStep 2: Diye gaye purush sadasya (Males):\n- A(+) aur E(+) F ke bete hain (2 Males).\n- B(+) A ka beta hai (1 Male).\n- Kul 3 Males ($A, E, B$) ho gaye. Isliye bache hue teeno sadasya ($F, D, C$) anivarya roop se Females hain.\nStep 3: D do bachho ki mata hai (ek ladka aur ek ladki):\n- Ladka B(+) hai, isliye ladki anivarya roop se C(-) hogi.\n- D, A ki patni hai aur B tatha C inke bachhe hain.\nStep 4: C ek female child hai, isliye C, A ki 'Daughter' (पुत्री/बेटी) hai.\nCorrect option  Daughter hai.\n\nMethod 2 (Option Elimination Method):\nChuki C female hai, isliye 'Son' Son reject ho jata hai. D mata hai aur A pita hai, isliye C unki santaan (Daughter) hogi na ki Mother ya Wife. Keval 'Daughter' sahi hai.\nSahi uttar 'Daughter' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_18",
+    "qe": "Each child in a family has at least four brothers and three sisters. Then what will be the minimum number of children in the family?",
+    "qh": "एक परिवार में प्रत्येक बच्चे के कम से कम चार भाई और तीन बहनें हैं। तो परिवार में बच्चों की न्यूनतम संख्या क्या होगी?",
+    "oe": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "oh": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "a": 2,
+    "e": "Method 1 (Self-Exclusion Sibling Formula Shortcut):\nStep 1: Har ladke ke kam se kam 4 bhai hain:\n- Bhaiyon ki sankhya me woh swayam shamil nahi hota, isliye kul ladke (Boys):\n$$\\text{Minimum Boys} = 4 + 1 = 5$$\nStep 2: Har ladki ke kam se kam 3 behanein hain:\n- Behanon ki sankhya me woh swayam shamil nahi hoti, isliye kul ladkiyan (Girls):\n$$\\text{Minimum Girls} = 3 + 1 = 4$$\nStep 3: Kul bachho ki nyuntam sankhya (Total Children):\n$$\\text{Total} = 5 + 4 = 9$$\nCorrect option  9 hai.\n\nMethod 2 (Logical Verification Method):\n- Yadi 5 ladke hon, toh har ladke ke $5 - 1 = 4$ bhai honge.\n- Yadi 4 ladkiyan hon, toh har ladki ki $4 - 1 = 3$ behanein hongi.\nTotal children $= 5 + 4 = 9$.\nSahi uttar '9' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "puzzle_19",
+    "qe": "In a family there are one grand father and one grand mother. There are two fathers and two mothers. There are four children and three grand children in the family. There are one brother, two sisters, two sons, two daughters, one father-in-law, one mother-in-law and one daughter-in-law. How many members are there in the family?",
+    "qh": "एक परिवार में एक दादा और एक दादी हैं। दो पिता और दो माताएं हैं। परिवार में चार बच्चे और तीन पोते-पोतियाँ (या नाती-नातिन) हैं। एक भाई, दो बहनें, दो पुत्र, दो पुत्रियाँ, एक ससुर, एक सास और एक पुत्रवधू (बहू) हैं। परिवार में कुल कितने सदस्य हैं?",
+    "oe": [
+      "7",
+      "15",
+      "22",
+      "23"
+    ],
+    "oh": [
+      "7",
+      "15",
+      "22",
+      "23"
+    ],
+    "a": 0,
+    "e": "Method 1 (3-Generation Overlapping Roles Shortcut):\nStep 1: Ek hi vyakti vibhinn sambandhon me alag-alag bhumika nibhata hai. 3 pidhiyan banayein:\n- Generation 1: 1 Grandfather aur 1 Grandmother (Kul 2 log).\n- Generation 2: Inka 1 Putra (jo pita bhi hai) aur uski Patni (Mata / Daughter-in-law) (Kul 2 log).\n- Generation 3: Inke 3 bachhe: 1 ladka (Brother, Son) aur 2 ladkiyan (Sisters, Daughters) (Kul 3 log).\nStep 2: Sabhi conditions verify karein:\n- Grandfather (1) + Grandmother (1) = Satisfied.\n- Fathers (2): Grandfather aur Son.\n- Mothers (2): Grandmother aur Daughter-in-law.\n- Children (4): Generation 2 ka beta (1) + Generation 3 ke 3 bachhe $= 4$.\n- Grandchildren (3): Generation 3 ke teeno bachhe.\n- Brother (1) + Sisters (2): Generation 3 me 1 ladka aur 2 ladkiyan.\n- Sons (2): Gen 2 ka purush aur Gen 3 ka ladka.\n- Daughters (2): Gen 3 ki dono ladkiyan.\n- Father-in-law (1), Mother-in-law (1), Daughter-in-law (1): Gen 1 aur Gen 2 ke dampati se poora hota hai.\nStep 3: Total members $= 2 + 2 + 3 = 7$.\nCorrect option  7 hai.\n\nMethod 2 (Option Elimination by Minimal Family Logic):\nShart anusaar alag-alag rishton ko jodkar counting nahi karni hoti; ek hi sadasya dohre roop me gina jata hai. Minimum structure 3 generations ka 7 members ka standard puzzle hota hai.\nSahi uttar '7' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
