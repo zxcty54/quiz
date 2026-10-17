@@ -3,32 +3,39 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class ChallengeService {
   // Core pool files
   static final List<String> challengePoolFiles = [
-    'static/history/ancient.json',
-    'static/history/modern.json',
-    'static/polity/rights.json',
-    'static/polity/parliament.json',
-    'static/geography/mapping.json',
-    'static/economy/schemes.json',
-    'static/biology/disease.json',
-    'static/biology/cell.json',
-    'static/physics/light.json',
-    'static/chemistry/acidbase.json',
+    'revision/static/history/ancient.json',
+    'revision/static/history/modern.json',
+    'revision/static/polity/rights.json',
+    'revision/static/polity/parliament.json',
+    'revision/static/geography/mapping.json',
+    'revision/static/economy/schemes.json',
+    'revision/static/biology/disease.json',
+    'revision/static/biology/cell.json',
+    'revision/static/physics/light.json',
+    'revision/static/chemistry/acidbase.json',
   ];
 
   // 🌐 Single File Fetcher
   static Future<dynamic> _fetchOnline(String relativePath) async {
     final List<String> urls = [
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/$relativePath",
+      "$_contentProxyBase/$relativePath",
       "https://raw.githack.com/zxcty54/content_base/main/$relativePath",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$relativePath",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/$relativePath",
     ];
 
     for (String url in urls) {
       try {
-        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 3));
+        final res = await http.get(Uri.parse(url), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 3));
         if (res.statusCode == 200) {
           String rawBody = utf8.decode(res.bodyBytes).trim();
           if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
