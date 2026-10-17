@@ -1,0 +1,116 @@
+[
+  {
+    "p_id": "reversepattern_1",
+    "qe": "If in a code language, SHYAM is written as JXVEP, then how PINKU will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में SHYAM को JXVEP लिखा जाता है, तो उसी कूट भाषा में PINKU को कैसे लिखा जाएगा?",
+    "oe": [
+      "RHPFM",
+      "RHKFM",
+      "SGPFM",
+      "RHPEK"
+    ],
+    "oh": [
+      "RHPFM",
+      "RHKFM",
+      "SGPFM",
+      "RHPEK"
+    ],
+    "a": 1,
+    "e": "Method 1 (Reverse Pattern with Constant (-3) Shift):\nStep 1: Reverse pattern concept samjhein:\nWord ka pehla letter code ke aakhiri sthan par aur aakhiri letter pehle sthan par shift hota hai (Complete Cross):\n- M(13) - 3 = 10 (J) [First letter of code]\n- A(27) - 3 = 24 (X)\n- Y(25) - 3 = 22 (V)\n- H(8) - 3 = 5 (E)\n- S(19) - 3 = 16 (P) [Last letter of code]\nLogic: Word ko reverse karke har letter me se -3 kiya gaya hai.\nStep 2: 'PINKU' par reverse order me -3 lagayein:\n- Last letter U(21) - 3 = 18 (R) [1st code]\n- K(11) - 3 = 8 (H) [2nd code]\n- N(14) - 3 = 11 (K) [3rd code]\n- I(9) - 3 = 6 (F) [4th code]\n- P(16) - 3 = 13 (M) [5th code]\nCode: RHKFM.\nCorrect option  RHKFM hai.\n\nMethod 2 (Middle Letter Check Trick):\nMiddle letter N(14) - 3 = 11 (K) aayega. options 'RHPFM' and 'SGPFM' me middle letter 'P' hai, eliminate. 'RHKFM' me 'K' match karta hai.\nSahi uttar 'RHKFM' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "reversepattern_2",
+    "qe": "If in a code language, HEALTH is written as GSKZDG, then how NORTH will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में HEALTH को GSKZDG लिखा जाता है, तो उसी भाषा में NORTH को क्या लिखा जाएगा?",
+    "oe": [
+      "RHPFM",
+      "RHKFM",
+      "SGPFM",
+      "GSQNM"
+    ],
+    "oh": [
+      "RHPFM",
+      "RHKFM",
+      "SGPFM",
+      "GSQNM"
+    ],
+    "a": 3,
+    "e": "Method 1 (Reverse Pattern with Constant (-1) Shift):\nStep 1: 'HEALTH' ka reverse relation dekhein:\n- H(8) - 1 = 7 (G) [6th to 1st]\n- T(20) - 1 = 19 (S) [5th to 2nd]\n- L(12) - 1 = 11 (K) [4th to 3rd]\n- A(1) - 1 = 26 (Z) [3rd to 4th]\n- E(5) - 1 = 4 (D) [2nd to 5th]\n- H(8) - 1 = 7 (G) [1st to 6th]\nLogic: Reverse order me har letter se -1 ho raha hai.\nStep 2: 'NORTH' par reverse order me -1 apply karein:\n- H(8) - 1 = 7 (G)\n- T(20) - 1 = 19 (S)\n- R(18) - 1 = 17 (Q)\n- O(15) - 1 = 14 (N)\n- N(14) - 1 = 13 (M)\nCode: GSQNM.\nCorrect option  GSQNM hai.\n\nMethod 2 (Fast First/Last Letter Elimination):\n- H(8) - 1 = G (Options A, B, C seedhe eliminate ho gaye kyunki sab R ya S se shuru ho rahe hain).\n- Keval 'GSQNM' 'G' se shuru ho raha hai.\nSahi uttar 'GSQNM' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "reversepattern_3",
+    "qe": "If in a code language, HARVEST is written as VUGXTCJ, then how FARMER will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में HARVEST को VUGXTCJ लिखा जाता है, तो उसी कूट भाषा में FARMER को क्या लिखा जाएगा?",
+    "oe": [
+      "SGOTCH",
+      "TGOTCH",
+      "SGOTBH",
+      "TGOTBH"
+    ],
+    "oh": [
+      "SGOTCH",
+      "TGOTCH",
+      "SGOTBH",
+      "TGOTBH"
+    ],
+    "a": 1,
+    "e": "Method 1 (Reverse Pattern with Constant (+2) Shift):\nStep 1: 'HARVEST' ka code analyze karein:\n- T(20) + 2 = 22 (V) [Last se 1st]\n- S(19) + 2 = 21 (U)\n- E(5) + 2 = 7 (G)\n- V(22) + 2 = 24 (X)\n- R(18) + 2 = 20 (T)\n- A(1) + 2 = 3 (C)\n- H(8) + 2 = 10 (J) [1st se Last]\nLogic: Pure word ko reverse karke sabhi letters me +2 kiya gaya hai.\nStep 2: 'FARMER' par reverse order me +2 apply karein:\n- R(18) + 2 = 20 (T)\n- E(5) + 2 = 7 (G)\n- M(13) + 2 = 15 (O)\n- R(18) + 2 = 20 (T)\n- A(1) + 2 = 3 (C)\n- F(6) + 2 = 8 (H)\nCode: TGOTCH.\nCorrect option  TGOTCH hai.\n\nMethod 2 (Option Elimination by First & Last Letter):\n- Aakhiri letter 'R' ka code pehle aayega: R + 2 = T (Options A aur C eliminate).\n- 5th letter A + 2 = C hona chahiye, 'TGOTBH' me 'B' diya hai, isliye (D) eliminate ho gaya.\nSahi uttar 'TGOTCH' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "reversepattern_4",
+    "qe": "If in a code language, TEACHER is written as TGJECGV, then how CHILDREN will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में TEACHER को TGJECGV लिखा जाता है, तो उसी कूट भाषा में CHILDREN को क्या लिखा जाएगा?",
+    "oe": [
+      "PGTFNKJE",
+      "QGTFNKJE",
+      "PGTFNLJE",
+      "QGTFNLJE"
+    ],
+    "oh": [
+      "PGTFNKJE",
+      "QGTFNKJE",
+      "PGTFNLJE",
+      "QGTFNLJE"
+    ],
+    "a": 0,
+    "e": "Method 1 (Reverse Pattern (+2 Shift) Shortcut):\nStep 1: 'TEACHER' ka reverse pattern check karein:\n- R(18) + 2 = 20 (T) [Last se 1st]\n- E(5) + 2 = 7 (G) [6th se 2nd]\n- H(8) + 2 = 10 (J) [5th se 3rd]\n- C(3) + 2 = 5 (E) [4th se 4th]\n- A(1) + 2 = 3 (C) [3rd se 5th]\n- E(5) + 2 = 7 (G) [2nd se 6th]\n- T(20) + 2 = 22 (V) [1st se Last]\nLogic: Word ko reverse order me likh kar sabhi letters me +2 kiya gaya hai.\nStep 2: 'CHILDREN' par reverse order me +2 apply karein:\n- N(14) + 2 = 16 (P) [Pehla letter]\n- E(5) + 2 = 7 (G)\n- R(18) + 2 = 20 (T)\n- D(4) + 2 = 6 (F)\n- L(12) + 2 = 14 (N)\n- I(9) + 2 = 11 (K)\n- H(8) + 2 = 10 (J)\n- C(3) + 2 = 5 (E) [Aakhiri letter]\nCode: PGTFNKJE.\nCorrect option  PGTFNKJE hai.\n\nMethod 2 (Option Elimination by First & 6th Letter):\n- Aakhiri letter N(14) + 2 = 16 (P) pehle aayega, isliye 'Q' se shuru hone wale options 'QGTFNKJE' and 'QGTFNLJE' seedhe eliminate ho gaye.\n- 6th letter I(9) + 2 = 11 (K) hona chahiye, 'PGTFNLJE' me 'L' diya hai jo galat hai. Keval 'PGTFNKJE' bachta hai.\nSahi uttar 'PGTFNKJE' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "reversepattern_5",
+    "qe": "If in a code language, ROAST is written as RUYQP, then how SLOPPY will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में ROAST को RUYQP लिखा जाता है, तो उसी कूट भाषा में SLOPPY को क्या लिखा जाएगा?",
+    "oe": [
+      "ANRNMQ",
+      "BNRNMQ",
+      "ANRMNQ",
+      "BNRMNQ"
+    ],
+    "oh": [
+      "ANRNMQ",
+      "BNRNMQ",
+      "ANRMNQ",
+      "BNRMNQ"
+    ],
+    "a": 2,
+    "e": "Method 1 (Reverse Pattern with Alternate (-2, +2) Shift):\nStep 1: 'ROAST' ka reverse logic dekhein:\n- T(20) - 2 = 18 (R) [5th to 1st]\n- S(19) + 2 = 21 (U) [4th to 2nd]\n- A(1 ya 27) - 2 = 25 (Y) [3rd to 3rd]\n- O(15) + 2 = 17 (Q) [2nd to 4th]\n- R(18) - 2 = 16 (P) [1st to 5th]\nLogic: Reverse order me chalte hue alternate -2, +2, -2, +2, -2 ka shift hai.\nStep 2: 'SLOPPY' (6 letters) par reverse order me -2, +2 lagayein:\n- Y(25) + 2 = 27 ≡ 1 (A) [1st letter]\n- P(16) - 2 = 14 (N) [2nd letter]\n- P(16) + 2 = 18 (R) [3rd letter]\n- O(15) - 2 = 13 (M) [4th letter]\n- L(12) + 2 = 14 (N) [5th letter]\n- S(19) - 2 = 17 (Q) [6th letter]\nCode: ANRMNQ.\nCorrect option  ANRMNQ hai.\n\nMethod 2 (Fast Option Elimination Method):\n- Y(25) + 2 = A, isliye options 'BNRNMQ' and 'BNRMNQ' eliminate ho gaye.\n- 4th letter O(15) - 2 = 13 (M) hona chahiye, 'ANRNMQ' me 4th letter 'N' hai jo galat hai. Isliye 'ANRMNQ' sahi hai.\nSahi uttar 'ANRMNQ' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "reversepattern_6",
+    "qe": "If in a code language, BEAT is written as SDDE, then how MILD will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में BEAT को SDDE लिखा जाता है, तो उसी कूट भाषा में MILD को क्या लिखा जाएगा?",
+    "oe": [
+      "BOHP",
+      "COHP",
+      "BOHQ",
+      "COHQ"
+    ],
+    "oh": [
+      "BOHP",
+      "COHP",
+      "BOHQ",
+      "COHQ"
+    ],
+    "a": 1,
+    "e": "Method 1 (Reverse Pattern with Alternate (-1, +3) Shift):\nStep 1: 'BEAT' ka reverse order shift dekhein:\n- T(20) - 1 = 19 (S) [4th to 1st]\n- A(1) + 3 = 4 (D) [3rd to 2nd]\n- E(5) - 1 = 4 (D) [2nd to 3rd]\n- B(2) + 3 = 5 (E) [1st to 4th]\nLogic: Word ko reverse karte hue alternate -1, +3, -1, +3 kiya gaya hai.\nStep 2: 'MILD' par reverse order me same logic apply karein:\n- D(4) - 1 = 3 (C) [1st letter]\n- L(12) + 3 = 15 (O) [2nd letter]\n- I(9) - 1 = 8 (H) [3rd letter]\n- M(13) + 3 = 16 (P) [4th letter]\nCode: COHP.\nCorrect option  COHP hai.\n\nMethod 2 (First Letter Elimination Method):\nD(4) - 1 = 3 (C). Shuruat 'C' se hogi, isliye options 'BOHP' and 'BOHQ' eliminate ho gaye. Last letter M(13) + 3 = 16 (P) hoga, jisse 'COHQ' eliminate ho gaya.\nSahi uttar 'COHP' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
