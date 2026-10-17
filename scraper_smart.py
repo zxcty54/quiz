@@ -759,8 +759,13 @@ def _one_article(source, title, url, item_type, is_bihar):
         return None
 
 
+_FILE_EXT_SKIP = ('.pdf', '.doc', '.docx', '.xls', '.xlsx', '.zip', '.mp3', '.mp4')
+
+
 def _process_candidates(cands, source, item_type, is_bihar):
     """Khabrein batch me, parallel. MAX_PER_SOURCE ya budget par ruk jao."""
+    cands = [(t, u) for (t, u) in cands
+             if not u.split('?')[0].lower().endswith(_FILE_EXT_SKIP)]
     results = []
     deadline = min(time.time() + SOURCE_BUDGET_SEC, RUN_DEADLINE)
     idx = 0
@@ -801,8 +806,6 @@ def _known_filter(unique):
 # 1. NEWS ON AIR
 NEWS_ON_AIR_URLS = [
     "https://newsonair.gov.in/",
-    "https://newsonair.gov.in/category/news/",
-    "https://newsonair.gov.in/category/national-news/",
 ]
 
 
@@ -843,60 +846,9 @@ def scrape_news_on_air():
     return results
 
 
-# 2. IPRD BIHAR
-IPRD_PAGES = [
-    "https://state.bihar.gov.in/prdbihar/",
-    "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8931",
-    "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=8930",
-    "https://state.bihar.gov.in/prdbihar/SectionInformation.html?editForm&rowId=6996",
-]
-
-
-def scrape_iprd_bihar():
-    print("\n" + "=" * 70 + "\n📢 IPRD BIHAR (Today's Date Only)\n" + "=" * 70)
-    candidates = []
-
-    for page_url in IPRD_PAGES:
-        html = fetch_url(page_url)
-        if not html:
-            continue
-
-        soup = BeautifulSoup(html, "lxml")
-        for a in soup.find_all("a", href=True):
-            href = clean_url(urljoin(page_url, a.get("href")))
-            title = clean_title(a.get_text(" ", strip=True))
-
-            if not href or len(title) < 20:
-                continue
-            if "state.bihar.gov.in/prdbihar" not in href.lower():
-                continue
-
-            low = title.lower()
-            if any(x in low for x in ["home", "contact", "feedback", "copyright", "web information manager", "accessibility", "previous", "next", "department", "order/circular"]):
-                continue
-
-            candidates.append((title, href))
-
-    unique = []
-    seen = set()
-    for title, url in candidates:
-        if url not in seen:
-            seen.add(url)
-            unique.append((title, url))
-
-    unique = _known_filter(unique)
-    results = _process_candidates(unique, "IPRD Bihar", "Press Release", True)
-    if not results:
-        debug("IPRD BIHAR: Aaj ki date ka koi article nahi mila.")
-
-    print(f"✅ IPRD Bihar usable: {len(results)}")
-    return results
-
-
 # 3. INDIA.GOV.IN
 INDIA_GOV_PAGES = [
     "https://www.india.gov.in/",
-    "https://www.india.gov.in/news",
     "https://www.india.gov.in/spotlight",
 ]
 
@@ -987,7 +939,6 @@ def build_news():
     source_results = {}
 
     source_results["News On AIR"] = safe_source("News On AIR", scrape_news_on_air)
-    source_results["IPRD Bihar"] = safe_source("IPRD Bihar", scrape_iprd_bihar)
     source_results["India.gov.in"] = safe_source("India.gov.in", scrape_india_gov)
 
     breakdown = {}
