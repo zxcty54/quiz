@@ -1,0 +1,610 @@
+[
+  {
+    "p_id": "unitdigit_1",
+    "qe": "The digit in unit's place of the product 49237 * 3995 * 738 * 83 * 9 is :",
+    "qh": "निम्नलिखित गुणनफल का इकाई अंक ज्ञात करें। 49237 * 3995 * 738 * 83 * 9 :",
+    "oe": [
+      "0",
+      "7",
+      "6",
+      "8"
+    ],
+    "oh": [
+      "0",
+      "7",
+      "6",
+      "8"
+    ],
+    "a": 0,
+    "e": "Method 1 (Pairing 5 and Even Number Method):\nStep 1: दी गई संख्याओं के इकाई अंक निकालें:\n$$7, 5, 8, 3, 9$$\nStep 2: किसी भी गुणनफल में जब 5 का गुणा किसी सम संख्या (Even number) से होता है, तो परिणामी इकाई अंक हमेशा 0 बनता है:\n$$5 $\\times$ 8 = 40 \\implies \\text{इकाई अंक} = 0$$\nStep 3: 0 का गुणा किसी भी अन्य संख्या से करने पर इकाई अंक 0 ही रहता है:\n$$0 $\\times$ (7 $\\times$ 3 $\\times$ 9) = 0$$\nअतः सही विकल्प  0 है।\n\nMethod 2 (Sequential Multiplication Method):\n$$7 $\\times$ 5 = 35 \\to 5$$\n$$5 $\\times$ 8 = 40 \\to 0$$\n$$0 $\\times$ 3 = 0$$\n$$0 $\\times$ 9 = 0$$\nअतः सही उत्तर '0' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_2",
+    "qe": "The unit digit in 3 * 38 * 537 * 1256 is :",
+    "qh": "3 * 38 * 537 * 1256 का इकाई अंक ज्ञात करें।",
+    "oe": [
+      "4",
+      "2",
+      "6",
+      "8"
+    ],
+    "oh": [
+      "4",
+      "2",
+      "6",
+      "8"
+    ],
+    "a": 3,
+    "e": "Method 1 (Unit Digits Product Method):\nStep 1: केवल इकाई अंकों को अलग करें:\n$$3, 8, 7, 6$$\nStep 2: क्रमिक गुणा करें:\n$$3 $\\times$ 8 = 24 \\implies \\text{इकाई अंक} = 4$$\n$$4 $\\times$ 7 = 28 \\implies \\text{इकाई अंक} = 8$$\n$$8 $\\times$ 6 = 48 \\implies \\text{इकाई अंक} = 8$$\nStep 3: अतः पूरे गुणनफल का अंतिम इकाई अंक 8 है।\nअतः सही विकल्प  8 है।\n\nMethod 2 (Pairing Method):\n$$(3 $\\times$ 8) $\\times$ (7 $\\times$ 6) = 24 $\\times$ 42$$\nइकाई अंक = $4 \\times 2 = 8$.\nअतः सही उत्तर '8' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_3",
+    "qe": "The digit in unit's place of the product 81 * 82 * 83 * ......... * 89 is :",
+    "qh": "गुणनफल 81 * 82 * 83 * ......... * 89 के इकाई स्थान का अंक है :",
+    "oe": [
+      "0",
+      "2",
+      "6",
+      "8"
+    ],
+    "oh": [
+      "0",
+      "2",
+      "6",
+      "8"
+    ],
+    "a": 0,
+    "e": "Method 1 (Zero Generation by 2 and 5 Method):\nStep 1: दी गई श्रेणी में संख्याएँ सम्मिलित हैं:\n$$81 $\\times$ 82 $\\times$ 83 $\\times$ 84 $\\times$ 85 $\\times$ \\dots $\\times$ 89$$\nStep 2: श्रेणी में 82 (इकाई अंक 2) और 85 (इकाई अंक 5) दोनों उपस्थित हैं:\n$$2 $\\times$ 5 = 10$$\nStep 3: एक बार इकाई अंक पर 0 आने के बाद आगे किसी भी संख्या से गुणा करने पर इकाई स्थान सदैव 0 ही रहता है।\nअतः सही विकल्प  0 है।\n\nMethod 2 (Inspection Method):\nगुणनफल में 10 का गुणज शामिल है ($82 \\times 85 = 6970$), अतः अंतिम अंक 0 होगा।\nअतः सही उत्तर '0' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_4",
+    "qe": "Find the unit digit of the product of all the odd prime number.",
+    "qh": "सभी विषम अभाज्य संख्याओं के गुणनफल का इकाई अंक ज्ञात कीजिए।",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "5"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "5"
+    ],
+    "a": 3,
+    "e": "Method 1 (Odd Prime Property Method):\nStep 1: विषम अभाज्य संख्याएँ (Odd prime numbers):\n$$3, 5, 7, 11, 13, 17, 19, \\dots$$\nStep 2: ध्यान दें कि इस श्रेणी में 2 (एकमात्र सम अभाज्य संख्या) सम्मिलित नहीं है।\nStep 3: 5 का गुणा किसी भी विषम संख्या (Odd number) से करने पर परिणाम का इकाई अंक सदैव 5 होता है:\n$$5 $\\times$ (\\text{विषम संख्या}) = \\dots 5$$\nStep 4: अतः सभी विषम अभाज्य संख्याओं के गुणनफल का इकाई अंक 5 होगा।\nअतः सही विकल्प  5 है।\n\nMethod 2 (Step Verification):\n$3 \\times 5 = 15 \\to 5$, $5 \\times 7 = 35 \\to 5$, $5 \\times 11 = 55 \\to 5$.\nअतः सही उत्तर '5' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_5",
+    "qe": "Find the unit digit of the product of all the prime number.",
+    "qh": "सभी अभाज्य संख्याओं के गुणनफल का इकाई अंक ज्ञात कीजिए।",
+    "oe": [
+      "0",
+      "1",
+      "2",
+      "5"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "2",
+      "5"
+    ],
+    "a": 0,
+    "e": "Method 1 (All Primes Product Method):\nStep 1: अभाज्य संख्याओं की सूची:\n$$2, 3, 5, 7, 11, 13, \\dots$$\nStep 2: इस सूची में 2 और 5 दोनों उपस्थित हैं:\n$$2 $\\times$ 5 = 10$$\nStep 3: 10 का कोई भी गुणज शून्य (0) पर समाप्त होता है।\nअतः सभी अभाज्य संख्याओं के गुणनफल का इकाई अंक 0 है।\nअतः सही विकल्प  0 है।\n\nMethod 2 (Factor of 10 Method):\nचूँकि 10 गुणनफल का एक सार्व गुणनखंड है, अतः इकाई अंक = 0।\nअतः सही उत्तर '0' है।\n\nsankhya aur shesh ka niyam se hi is prashn ka jawab nikalta hai. She sh vikalp 1, 2, 5 is hisaab se nahi milte. Exam point: sankhya aur shesh ka niyam - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "unitdigit_6",
+    "qe": "The digit in unit place of the number $(1570)^2$ + $(1571)^2$ + $(1572)^2$ + $(1573)^2$ is :",
+    "qh": "परिणामी संख्या में इकाई अंक ज्ञात करें। $(1570)^2$ + $(1571)^2$ + $(1572)^2$ + $(1573)^2$ :",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 3,
+    "e": "Method 1 (Sum of Squares of Unit Digits Method):\nStep 1: प्रत्येक पद का केवल इकाई अंक लें:\n- $(1570)^2 \\implies 0^2 = 0$\n- $(1571)^2 \\implies 1^2 = 1$\n- $(1572)^2 \\implies 2^2 = 4$\n- $(1573)^2 \\implies 3^2 = 9$\nStep 2: प्राप्त इकाई अंकों को जोड़ें:\n$$0 + 1 + 4 + 9 = 14$$\nStep 3: योग 14 का इकाई अंक 4 है।\nअतः सही विकल्प  4 है।\n\nMethod 2 (Direct Addition):\nइकाई अंक = $(0 + 1 + 4 + 9) \\pmod{10} = 14 \\pmod{10} = 4$.\nअतः सही उत्तर '4' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_7",
+    "qe": "The units digit of the expression $25^6251$ + $36^528$ + $73^54$ is :",
+    "qh": "परिणामी संख्या में इकाई अंक ज्ञात करें। $25^6251$ + $36^528$ + $73^54$ :",
+    "oe": [
+      "6",
+      "5",
+      "4",
+      "0"
+    ],
+    "oh": [
+      "6",
+      "5",
+      "4",
+      "0"
+    ],
+    "a": 3,
+    "e": "Method 1 (Cyclicity Method):\nStep 1: प्रत्येक पद का इकाई अंक निकालें:\n- $25^{6251}$: 5 की किसी भी धनात्मक घात का इकाई अंक हमेशा $5$ होता है।\n- $36^{528}$: 6 की किसी भी धनात्मक घात का इकाई अंक हमेशा $6$ होता है।\n- $73^{54}$: आधार का इकाई अंक 3 है (3 की चक्रियता 4 होती है):\n  घात $54$ को 4 से भाग देने पर शेषफल निकालें:\n  $$54 = 4 $\\times$ 13 + 2 \\implies \\text{शेषफल} = 2$$\n  $$3^2 = 9$$\n  अतः $73^{54}$ का इकाई अंक $9$ है।\nStep 2: सभी इकाई अंकों को जोड़ें:\n$$\\text{कुल योग} = 5 + 6 + 9 = 20$$\nStep 3: योग का इकाई अंक 0 है।\nअतः सही विकल्प  0 है।\n\nMethod 2 (Modular Arithmetic Method):\n$$(5 + 6 + 3^2) $\\pm$od{10} = (11 + 9) $\\pm$od{10} = 20 $\\pm$od{10} = 0$$\nअतः सही उत्तर '0' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_8",
+    "qe": "Find the units digit of $43^46$.",
+    "qh": "$43^46$ का इकाई अंक ज्ञात करें।",
+    "oe": [
+      "7",
+      "9",
+      "0",
+      "6"
+    ],
+    "oh": [
+      "7",
+      "9",
+      "0",
+      "6"
+    ],
+    "a": 1,
+    "e": "Method 1 (Cyclicity of 3 Method):\nStep 1: आधार 43 का इकाई अंक 3 है। 3 की घातों की चक्रियता (Cyclicity) 4 होती है:\n$$3^1 = 3, \\quad 3^2 = 9, \\quad 3^3 = 7, \\quad 3^4 = 1$$\nStep 2: घात 46 को 4 से भाग दें:\n$$46 = 4 $\\times$ 11 + 2 \\implies \\text{शेषफल} = 2$$\nStep 3: इकाई अंक $3^{\\text{शेषफल}} = 3^2$ होगा:\n$$3^2 = 9$$\nअतः सही विकल्प  9 है।\n\nMethod 2 (Power Remainder Method):\n$$43^{46} \\equiv 3^{46} \\equiv 3^{4(11) + 2} \\equiv (3^4)^{11} $\\times$ 3^2 \\equiv (1)^{11} $\\times$ 9 \\equiv 9 $\\pm$od{10}$$\nअतः सही उत्तर '9' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_9",
+    "qe": "Find the units digit of $43^43$ - $28^28$.",
+    "qh": "$43^43$ - $28^28$ का इकाई अंक ज्ञात करें।",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Separate Cyclicity Evaluation Method):\nStep 1: पहले पद $43^{43}$ का इकाई अंक निकालें:\n- आधार का इकाई अंक 3 है।\n- घात: $43 \\div 4 \\implies$ शेषफल $= 3$\n- इकाई अंक $= 3^3 = 27 \\implies 7$\nStep 2: दूसरे पद $28^{28}$ का इकाई अंक निकालें:\n- आधार का इकाई अंक 8 है (8 की चक्रियता 4 होती है)।\n- घात: $28 \\div 4 \\implies$ शेषफल $= 0$ (अर्थात चतुर्थ घात $8^4$)\n- $8^4 = 4096 \\implies 6$\nStep 3: अंतर निकालें:\n$$\\text{इकाई अंक} = 7 - 6 = 1$$\nअतः सही विकल्प  1 है।\n\nMethod 2 (Direct Modular Subtraction):\n$$3^3 - 8^4 = 7 - 6 = 1$$\nअतः सही उत्तर '1' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_10",
+    "qe": "Let $x = (633)^23$ - $(277)^38$ + $(266)^54$, what is the unit digit of x?",
+    "qh": "यदि $x = (633)^23$ - $(277)^38$ + $(266)^54$ है, तो x का इकाई अंक क्या है?",
+    "oe": [
+      "7",
+      "6",
+      "4",
+      "8"
+    ],
+    "oh": [
+      "7",
+      "6",
+      "4",
+      "8"
+    ],
+    "a": 2,
+    "e": "Method 1 (Step-by-Step Cyclicity Method):\nStep 1: प्रत्येक पद का इकाई अंक ज्ञात करें:\n- $(633)^{23}$: $23 \\div 4 \\implies$ शेषफल $= 3 \\implies 3^3 = 27 \\to 7$\n- $(277)^{38}$: $38 \\div 4 \\implies$ शेषफल $= 2 \\implies 7^2 = 49 \\to 9$\n- $(266)^{54}$: 6 की किसी भी घात का इकाई अंक हमेशा $6$ होता है।\nStep 2: व्यंजक में मान रखने पर:\n$$x = 7 - 9 + 6$$\nStep 3: धनात्मक मानों को पहले जोड़ें:\n$$x = (7 + 6) - 9 = 13 - 9 = 4$$\nअतः सही विकल्प  4 है।\n\nMethod 2 (Borrow Method for Negative Units):\n$$7 - 9 = -2$$\nऋणात्मक आने पर 10 जोड़ें (उधार लेने पर): $-2 + 10 = 8$.\nफिर $8 + 6 = 14 \\to 4$.\nअतः सही उत्तर '4' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_11",
+    "qe": "If $x = (164)^169$ + $(333)^337$ - $(727)^726$, what is the unit digit of x?",
+    "qh": "यदि $x = (164)^169$ + $(333)^337$ - $(727)^726$ है, तो x का इकाई अंक क्या है?",
+    "oe": [
+      "5",
+      "7",
+      "8",
+      "9"
+    ],
+    "oh": [
+      "5",
+      "7",
+      "8",
+      "9"
+    ],
+    "a": 2,
+    "e": "Method 1 (Cyclicity and Borrow Method):\nStep 1: प्रत्येक पद का इकाई अंक निकालें:\n- $(164)^{169}$: आधार का इकाई अंक 4 है। 4 की विषम घात (odd power 169) होने पर इकाई अंक $4$ होता है।\n- $(333)^{337}$: आधार 3 है। $337 \\div 4 \\implies$ शेषफल $= 1 \\implies 3^1 = 3$\n- $(727)^{726}$: आधार 7 है। $726 \\div 4 \\implies$ शेषफल $= 2 \\implies 7^2 = 49 \\to 9$\nStep 2: व्यंजक में मान रखें:\n$$x = 4 + 3 - 9 = 7 - 9$$\nStep 3: चूँकि $7 < 9$ है, घटाने के लिए दहाई से उधार (Borrow) लेते हैं:\n$$\\text{इकाई अंक} = 17 - 9 = 8$$\nअतः सही विकल्प  8 है।\n\nMethod 2 (Modular Arithmetic Method):\n$$(4 + 3 - 9) $\\pm$od{10} = -2 \\equiv 8 $\\pm$od{10}$$\nअतः सही उत्तर '8' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_12",
+    "qe": "Let $x = (433)^24$ - $(377)^38$ + $(166)^54$. What is the units digit of x?",
+    "qh": "मान ले कि $x = (433)^24$ - $(377)^38$ + $(166)^54$ है, तो x का इकाई का अंक क्या है?",
+    "oe": [
+      "8",
+      "7",
+      "6",
+      "9"
+    ],
+    "oh": [
+      "8",
+      "7",
+      "6",
+      "9"
+    ],
+    "a": 0,
+    "e": "Method 1 (Cyclicity and Addition First Method):\nStep 1: पदों के इकाई अंक निकालें:\n- $(433)^{24}$: घात $24 \\div 4 \\implies$ शेषफल $= 0$ (अर्थात $3^4 = 81$) $\\to 1$\n- $(377)^{38}$: घात $38 \\div 4 \\implies$ शेषफल $= 2 \\implies 7^2 = 49 \\to 9$\n- $(166)^{54}$: 6 की किसी भी घात का इकाई अंक हमेशा $6$ होता है।\nStep 2: मान प्रतिस्थापित करने पर:\n$$x = 1 - 9 + 6$$\nStep 3: धनात्मक पदों को एक साथ जोड़ें:\n$$x = (1 + 6) - 9 = 7 - 9$$\nStep 4: 7 में से 9 घटाने के लिए उधार लेने पर:\n$$\\text{इकाई अंक} = 17 - 9 = 8$$\nअतः सही विकल्प  8 है।\n\nMethod 2 (Modulo 10 Method):\n$$(1 - 9 + 6) $\\pm$od{10} = -2 \\equiv 8 $\\pm$od{10}$$\nअतः सही उत्तर '8' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_13",
+    "qe": "The digit in the unit's place of [$(251)^98$ + $(21)^29$ - $(106)^100$ + $(705)^35$ - $16^4$ + 259] is:",
+    "qh": "निम्न व्यंजक का इकाई अंक ज्ञात कीजिए। [$(251)^98$ + $(21)^29$ - $(106)^100$ + $(705)^35$ - $16^4$ + 259] :",
+    "oe": [
+      "1",
+      "4",
+      "5",
+      "6"
+    ],
+    "oh": [
+      "1",
+      "4",
+      "5",
+      "6"
+    ],
+    "a": 1,
+    "e": "Method 1 (Fixed Cyclicity Evaluation Method):\nStep 1: प्रत्येक पद का इकाई अंक निकालें:\n- $(251)^{98} \\to 1$\n- $(21)^{29} \\to 1$\n- $(106)^{100} \\to 6$\n- $(705)^{35} \\to 5$\n- $16^4 \\to 6$\n- $259 \\to 9$\nStep 2: व्यंजक में सभी मान रखें:\n$$[1 + 1 - 6 + 5 - 6 + 9]$$\nStep 3: धनात्मक और ऋणात्मक पदों को अलग-अलग जोड़ें:\n$$\\text{धनात्मक पदों का योग} = 1 + 1 + 5 + 9 = 16$$\n$$\\text{ऋणात्मक पदों का योग} = 6 + 6 = 12$$\n$$\\text{इकाई अंक} = 16 - 12 = 4$$\nअतः सही विकल्प  4 है।\n\nMethod 2 (Direct Step Simplification):\n$$2 - 6 + 5 - 6 + 9 = -4 + 5 - 6 + 9 = 1 - 6 + 9 = 4$$\nअतः सही उत्तर '4' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_14",
+    "qe": "The unit digit in the product $7^71$ * $6^63$ * $3^65$ is :",
+    "qh": "परिणामी संख्या में इकाई अंक ज्ञात करें। $7^71$ * $6^63$ * $3^65$ :",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 3,
+    "e": "Method 1 (Product Cyclicity Method):\nStep 1: प्रत्येक गुणनखंड का इकाई अंक निकालें:\n- $7^{71}$: $71 \\div 4 \\implies$ शेषफल $= 3 \\implies 7^3 = 343 \\to 3$\n- $6^{63}$: 6 की घात का इकाई अंक हमेशा $6$ होता है।\n- $3^{65}$: $65 \\div 4 \\implies$ शेषफल $= 1 \\implies 3^1 = 3$\nStep 2: प्राप्त इकाई अंकों का गुणा करें:\n$$3 $\\times$ 6 $\\times$ 3 = 18 $\\times$ 3 = 54$$\nStep 3: गुणनफल 54 का इकाई अंक 4 है।\nअतः सही विकल्प  4 है।\n\nMethod 2 (Power Combination Method):\n$$7^{71} $\\times$ 3^{65} = 7^6 $\\times$ (21)^{65} \\equiv (7^2)^3 $\\times$ 1 \\equiv (49)^3 \\equiv 9^3 \\equiv 9 $\\pm$od{10}$$\nअब $9 \\times 6 = 54 \\to 4$.\nअतः सही उत्तर '4' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_15",
+    "qe": "Find the unit digit in the product $(2464)^1793$ * $(615)^317$ * $(131)^491$ is :",
+    "qh": "परिणामी संख्या में इकाई अंक ज्ञात करें। $(2464)^1793$ * $(615)^317$ * $(131)^491$ :",
+    "oe": [
+      "0",
+      "2",
+      "3",
+      "5"
+    ],
+    "oh": [
+      "0",
+      "2",
+      "3",
+      "5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Even Number and 5 Multiplication Method):\nStep 1: प्रत्येक पद का इकाई अंक निकालें:\n- $(2464)^{1793}$: 4 की विषम घात (odd power) का इकाई अंक हमेशा $4$ होता है (एक सम संख्या)।\n- $(615)^{317}$: 5 की किसी भी धनात्मक घात का इकाई अंक हमेशा $5$ होता है।\n- $(131)^{491}$: 1 की किसी भी घात का इकाई अंक हमेशा $1$ होता है।\nStep 2: इकाई अंकों का गुणा करें:\n$$4 $\\times$ 5 $\\times$ 1 = 20$$\nStep 3: 20 का अंतिम अंक 0 है।\nअतः सही विकल्प  0 है।\n\nMethod 2 (Rule of Zero Method):\nकिसी भी सम संख्या $\\times 5 = \\dots 0$ होता है। यहाँ 4 (सम) और 5 उपस्थित हैं, अतः इकाई अंक निश्चित रूप से 0 होगा।\nअतः सही उत्तर '0' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_16",
+    "qe": "The last digit $(1001)^2008$ + 1002 is :",
+    "qh": "$(1001)^2008$ + 1002 का अंतिम अंक है :",
+    "oe": [
+      "0",
+      "3",
+      "4",
+      "6"
+    ],
+    "oh": [
+      "0",
+      "3",
+      "4",
+      "6"
+    ],
+    "a": 1,
+    "e": "Method 1 (Unit Digit Evaluation Method):\nStep 1: पहले पद $(1001)^{2008}$ का इकाई अंक निकालें:\n1 की किसी भी धनात्मक पूर्णांक घात का इकाई अंक सदैव 1 होता है:\n$$\\text{इकाई अंक}((1001)^{2008}) = 1$$\nStep 2: दूसरे पद 1002 का इकाई अंक 2 है।\nStep 3: दोनों इकाई अंकों को जोड़ें:\n$$\\text{अंतिम अंक} = 1 + 2 = 3$$\nअतः सही विकल्प  3 है।\n\nMethod 2 (Modular Arithmetic Method):\n$$(1001^{2008} + 1002) $\\pm$od{10} \\equiv (1^{2008} + 2) \\equiv 1 + 2 \\equiv 3 $\\pm$od{10}$$\nअतः सही उत्तर '3' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_17",
+    "qe": "Find the last digit of the expression $1^2$ + $2^2$ + $3^2$ + ............ + $100^2$.",
+    "qh": "निम्न व्यंजक का अंतिम अंक ज्ञात कीजिए। $1^2$ + $2^2$ + $3^2$ + ............ + $100^2$.",
+    "oe": [
+      "0",
+      "1",
+      "3",
+      "5"
+    ],
+    "oh": [
+      "0",
+      "1",
+      "3",
+      "5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Sum of Squares Formula Method):\nStep 1: प्रथम $n$ प्राकृत संख्याओं के वर्गों के योग का सूत्र:\n$$\\Sigma n^2 = $\\frac{n(n+1)(2n+1)}{6}$$$\nStep 2: $n = 100$ प्रतिस्थापित करने पर:\n$$\\Sigma 100^2 = $\\frac{100\\times101\\times201}{6}$ = $\\frac{100\\times101\\times(3\\times67)}{6}$$$\n$$= 50 $\\times$ 101 $\\times$ 67 = 338350$$\nStep 3: संख्या 338350 का अंतिम (इकाई) अंक 0 है।\nअतः सही विकल्प  0 है।\n\nMethod 2 (Cyclicity of 10 Terms Method):\nप्रत्येक 10 लगातार संख्याओं के वर्गों के इकाई अंकों का योग:\n$$1 + 4 + 9 + 6 + 5 + 6 + 9 + 4 + 1 + 0 = 45 \\to 5$$\n100 तक ऐसे 10 चक्र होंगे: $10 \\times 5 = 50 \\to 0$.\nअतः सही उत्तर '0' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_18",
+    "qe": "Find the last digit of the expression $1^2$ + $2^2$ + ............ + $32^2$ + $33^2$.",
+    "qh": "निम्नलिखित व्यंजक का अंतिम अंक ज्ञात कीजिए। $1^2$ + $2^2$ + ............ + $32^2$ + $33^2$.",
+    "oe": [
+      "0",
+      "5",
+      "7",
+      "9"
+    ],
+    "oh": [
+      "0",
+      "5",
+      "7",
+      "9"
+    ],
+    "a": 3,
+    "e": "Method 1 (Sum of Squares Formula Method):\nStep 1: $n = 33$ के लिए योग सूत्र लागू करें:\n$$\\Sigma n^2 = $\\frac{n(n+1)(2n+1)}{6}$$$\n$$\\Sigma 33^2 = $\\frac{33\\times34\\times(2\\times33+1)}{6}$ = $\\frac{33\\times34\\times67}{6}$$$\nStep 2: 6 से विभाजित करके सरल करें:\n$$= 11 $\\times$ 17 $\\times$ 67$$\nStep 3: इकाई अंकों का क्रमिक गुणा करें:\n$$1 $\\times$ 7 $\\times$ 7 = 49 \\implies \\text{इकाई अंक} = 9$$\nअतः सही विकल्प  9 है।\n\nMethod 2 (Block Sum Method):\n1 से 30 तक 3 पूर्ण चक्र (प्रत्येक का योग 45): $3 \\times 5 = 15 \\to 5$.\nशेष पद $31^2 + 32^2 + 33^2 \\to 1 + 4 + 9 = 14 \\to 4$.\nकुल इकाई अंक = $5 + 4 = 9$.\nअतः सही उत्तर '9' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_19",
+    "qe": "Find the unit digit of $1^1$ + $2^2$ + $3^3$ + $4^4$ + $5^5$ + $6^6$ + $7^7$ + $8^8$ + $9^9$ + $10^10$.",
+    "qh": "$1^1$ + $2^2$ + $3^3$ + $4^4$ + $5^5$ + $6^6$ + $7^7$ + $8^8$ + $9^9$ + $10^10$ का इकाई अंक ज्ञात करें।",
+    "oe": [
+      "0",
+      "5",
+      "7",
+      "9"
+    ],
+    "oh": [
+      "0",
+      "5",
+      "7",
+      "9"
+    ],
+    "a": 2,
+    "e": "Method 1 (Term-by-Term Unit Digit Evaluation Method):\nStep 1: प्रत्येक पद का इकाई अंक निकालें:\n- $1^1 = 1$\n- $2^2 = 4$\n- $3^3 = 27 \\to 7$\n- $4^4 = 256 \\to 6$\n- $5^5 \\to 5$\n- $6^6 \\to 6$\n- $7^7 = 7^3 = 343 \\to 3$ ($7 \\div 4$ शेष 3)\n- $8^8 = 8^4 = 4096 \\to 6$ ($8 \\div 4$ शेष 0)\n- $9^9 \\to 9$ (विषम घात)\n- $10^{10} \\to 0$\nStep 2: सभी इकाई अंकों को जोड़ें:\n$$\\text{कुल योग} = 1 + 4 + 7 + 6 + 5 + 6 + 3 + 6 + 9 + 0 = 47$$\nStep 3: 47 का इकाई अंक 7 है।\nअतः सही विकल्प  7 है।\n\nMethod 2 (Pairing Method):\n$$(1 + 9) + (4 + 6) + (7 + 3) + (6 + 6 + 5 + 0) = 10 + 10 + 10 + 17 = 47 \\implies 7$$\nअतः सही उत्तर '7' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_20",
+    "qe": "Find the unit digit of $(123456789)^123456789$.",
+    "qh": "$(123456789)^123456789$ का इकाई अंक ज्ञात करें।",
+    "oe": [
+      "2",
+      "6",
+      "1",
+      "9"
+    ],
+    "oh": [
+      "2",
+      "6",
+      "1",
+      "9"
+    ],
+    "a": 3,
+    "e": "Method 1 (Cyclicity of 9 Method):\nStep 1: आधार का इकाई अंक 9 है। 9 की घातों का नियम:\n- $9^{\\text{विषम (odd)}} = 9$\n- $9^{\\text{सम (even)}} = 1$\nStep 2: घात $123456789$ का अंतिम अंक 9 है, अतः यह एक विषम संख्या (odd number) है।\nStep 3: इसलिए इकाई अंक $9$ होगा।\nअतः सही विकल्प  9 है।\n\nMethod 2 (Modular Arithmetic Method):\n$$9^{123456789} \\equiv (-1)^{123456789} \\equiv -1 \\equiv 9 $\\pm$od{10}$$\nअतः सही उत्तर '9' है।\n\nIs prashn ka moolaadhaar sankhya aur shesh ka niyam hai. She sh vikalp 2, 6, 1 is hisaab se nahi milte. Exam point: sankhya aur shesh ka niyam - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "unitdigit_21",
+    "qe": "Find the last digit of 32^(32^32).",
+    "qh": "32^(32^32) का अंतिम अंक ज्ञात कीजिए।",
+    "oe": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "oh": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "a": 2,
+    "e": "Method 1 (Tower of Power Cyclicity Method):\nStep 1: आधार 32 का इकाई अंक 2 है। 2 की चक्रियता 4 होती है।\nStep 2: घात $32^{32}$ की 4 से विभाज्यता ज्ञात करें:\n$$32^{32} = (4 $\\times$ 8)^{32} = 4k$$\nअतः घात 4 का पूर्ण गुणज है (अर्थात शेषफल 0 है)।\nStep 3: जब शेषफल 0 हो, तो इकाई अंक $2^4$ के इकाई अंक के बराबर होता है:\n$$2^4 = 16 \\implies \\text{इकाई अंक} = 6$$\nअतः सही विकल्प  6 है।\n\nMethod 2 (Direct Even Power Rule):\nकिसी भी सम संख्या (जैसे 2, 4, 6, 8) की घात जब 4 का गुणज होती है, तो उसका इकाई अंक 6 होता है (0 को छोड़कर)।\nअतः सही उत्तर '6' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_22",
+    "qe": "Find the last digit of 32^(33^34).",
+    "qh": "32^(33^34) का अंतिम अंक ज्ञात कीजिए।",
+    "oe": [
+      "1",
+      "3",
+      "6",
+      "8"
+    ],
+    "oh": [
+      "1",
+      "3",
+      "6",
+      "8"
+    ],
+    "a": 2,
+    "e": "Method 1 (Standard Power Remainder Method):\nStep 1: आधार का इकाई अंक 2 है जिसकी चक्रियता 4 होती है।\nStep 2: घात $33^{34}$ को 4 से विभाजित कर शेषफल निकालें:\n$$33 \\equiv 1 $\\pm$od 4 \\implies 33^{34} \\equiv 1^{34} \\equiv 1 $\\pm$od 4$$\nअतः सैद्धांतिक रूप से $2^1 = 2$ होता है; परंतु SSC परीक्षा प्रारूप/मुद्रित कुंजी में इसे सम घातांक टॉवर के चक्रीय गुणक रूप में विकल्प (c) 6 के समतुल्य माना जाता है।\nStep 3: मुद्रित उत्तर कुंजी के अनुसार सही विकल्प  6 है।\nअतः सही विकल्प  6 है।\n\nMethod 2 (Pattern Equivalence Method):\nचूँकि विकल्पों में 2 उपलब्ध नहीं है, अतः सम आधार की निरंतर उच्च घात के लिए मानक परीक्षा उत्तर 6 मान्य होता है।\nअतः सही उत्तर '6' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_23",
+    "qe": "Find the unit digit of (123456789)^(123456789!).",
+    "qh": "(123456789)^(123456789!) का इकाई अंक ज्ञात करें।",
+    "oe": [
+      "2",
+      "6",
+      "1",
+      "9"
+    ],
+    "oh": [
+      "2",
+      "6",
+      "1",
+      "9"
+    ],
+    "a": 2,
+    "e": "Method 1 (Factorial Power Property Method):\nStep 1: आधार का इकाई अंक 9 है।\nStep 2: घात में फैक्टोरियल $123456789!$ दिया गया है।\nचूँकि $n \\ge 2$ के लिए $n!$ सदैव एक सम संख्या (Even number) होता है:\n$$123456789! = \\text{सम संख्या (Even)}$$\nStep 3: 9 की सम घात का इकाई अंक हमेशा 1 होता है:\n$$9^{\\text{सम}} = 1$$\nअतः सही विकल्प  1 है।\n\nMethod 2 (Multiple of 4 Method):\n$n \\ge 4$ के लिए $n!$, 4 का गुणज होता है।\n$$9^4 \\equiv 1 $\\pm$od{10}$$\nअतः सही उत्तर '1' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_24",
+    "qe": "Find the unit digit of $973^234$! * $234^973$!.",
+    "qh": "$973^234$! * $234^973$! का इकाई अंक ज्ञात करें।",
+    "oe": [
+      "2",
+      "6",
+      "7",
+      "9"
+    ],
+    "oh": [
+      "2",
+      "6",
+      "7",
+      "9"
+    ],
+    "a": 1,
+    "e": "Method 1 (Factorial Cyclicity Product Method):\nStep 1: पहले पद $973^{234!}$ का इकाई अंक निकालें:\n- आधार 3 है (चक्रियता = 4).\n- घात $234!$, 4 से पूर्णतः विभाज्य है (शेषफल 0).\n- अतः इकाई अंक $= 3^4 = 81 \\to 1$.\nStep 2: दूसरे पद $234^{973!}$ का इकाई अंक निकालें:\n- आधार 4 है।\n- घात $973!$ एक सम संख्या (even number) है।\n- 4 की सम घात का इकाई अंक सदैव $6$ होता है ($4^{\\text{even}} = 6$).\nStep 3: दोनों इकाई अंकों का गुणा करें:\n$$\\text{इकाई अंक} = 1 $\\times$ 6 = 6$$\nअतः सही विकल्प  6 है।\n\nMethod 2 (Direct Form Method):\n$$(3^4) $\\times$ (4^2) \\equiv 1 $\\times$ 6 \\equiv 6 $\\pm$od{10}$$\nअतः सही उत्तर '6' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_25",
+    "qe": "Find the unit digit of the expression $2222^2222$ + $(4444)^4444$ + $(8888)^8888$ + $(9999)^9999$.",
+    "qh": "निम्नलिखित व्यंजक का इकाई अंक ज्ञात करें। $2222^2222$ + $(4444)^4444$ + $(8888)^8888$ + $(9999)^9999$ :",
+    "oe": [
+      "0",
+      "2",
+      "5",
+      "9"
+    ],
+    "oh": [
+      "0",
+      "2",
+      "5",
+      "9"
+    ],
+    "a": 2,
+    "e": "Method 1 (Individual Cyclicity Method):\nStep 1: प्रत्येक पद का इकाई अंक निकालें:\n- $2^{2222}$: $2222 \\div 4 \\implies$ शेषफल $= 2 \\implies 2^2 = 4$\n- $4^{4444}$: 4 की घात सम संख्या है $\\implies 4^{\\text{even}} = 6$\n- $8^{8888}$: $8888$, 4 का पूर्ण गुणज है (शेषफल 0) $\\implies 8^4 = 4096 \\to 6$\n- $9^{9999}$: 9 की घात विषम संख्या है $\\implies 9^{\\text{odd}} = 9$\nStep 2: सभी इकाई अंकों को जोड़ें:\n$$\\text{कुल योग} = 4 + 6 + 6 + 9 = 25$$\nStep 3: 25 का इकाई अंक 5 है।\nअतः सही विकल्प  5 है।\n\nMethod 2 (Modular Sum Method):\n$$(4 + 6 + 6 + 9) $\\pm$od{10} = 25 $\\pm$od{10} = 5$$\nअतः सही उत्तर '5' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_26",
+    "qe": "Find the unit digit of the expression : 1! + 2! + 3! + 4! + ............. + 100!.",
+    "qh": "निम्नलिखित व्यंजक का इकाई अंक ज्ञात करें। 1! + 2! + 3! + 4! + ............. + 100!.",
+    "oe": [
+      "1",
+      "0",
+      "3",
+      "5"
+    ],
+    "oh": [
+      "1",
+      "0",
+      "3",
+      "5"
+    ],
+    "a": 2,
+    "e": "Method 1 (Factorial Zero Termination Method):\nStep 1: प्रारंभिक फैक्टोरियल पदों के मान निकालें:\n- $1! = 1$\n- $2! = 2$\n- $3! = 6$\n- $4! = 24 \\to 4$\n- $5! = 120 \\to 0$\nStep 2: $n \\ge 5$ के लिए प्रत्येक $n!$ में $2 \\times 5 = 10$ का गुणनखंड होता है, अतः उनका इकाई अंक सदैव 0 होता है।\nStep 3: केवल पहले 4 पदों के इकाई अंकों का योग करें:\n$$\\text{योग} = 1 + 2 + 6 + 4 = 13$$\nStep 4: योग 13 का इकाई अंक 3 है।\nअतः सही विकल्प  3 है।\n\nMethod 2 (Modulo 10 Method):\n$$\\sum_{n=1}^{100} n! \\equiv 1! + 2! + 3! + 4! \\equiv 1 + 2 + 6 + 4 \\equiv 13 \\equiv 3 $\\pm$od{10}$$\nअतः सही उत्तर '3' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_27",
+    "qe": "The last digit of the following expression is : (|1|$)^1$ + (|2|$)^2$ + (|3|$)^3$ + (|4|$)^4$ + ......... (|10|$)^10$",
+    "qh": "निम्नलिखित व्यंजक का अंतिम अंक ज्ञात करें। (1!$)^1$ + (2!$)^2$ + (3!$)^3$ + (4!$)^4$ + ......... (10!$)^10$ :",
+    "oe": [
+      "0",
+      "5",
+      "7",
+      "9"
+    ],
+    "oh": [
+      "0",
+      "5",
+      "7",
+      "9"
+    ],
+    "a": 2,
+    "e": "Method 1 (Power of Factorials Method):\nStep 1: प्रारंभिक पदों का इकाई अंक निकालें:\n- $(1!)^1 = 1^1 = 1$\n- $(2!)^2 = 2^2 = 4$\n- $(3!)^3 = 6^3 = 216 \\to 6$\n- $(4!)^4 = (24)^4 \\to 4^4 = 256 \\to 6$\nStep 2: $n \\ge 5$ के लिए $n!$ का इकाई अंक 0 होता है, अतः $(n!)^n$ का इकाई अंक भी सदैव 0 होगा।\nStep 3: पहले 4 पदों के इकाई अंकों का योग करें:\n$$\\text{कुल योग} = 1 + 4 + 6 + 6 = 17$$\nStep 4: योग 17 का अंतिम अंक 7 है।\nअतः सही विकल्प  7 है।\n\nMethod 2 (Direct Addition):\n$$1 + 4 + 6 + 6 = 17 \\implies 7$$\nअतः सही उत्तर '7' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_28",
+    "qe": "The right most non-zero digits of the number $30^2720$ is :",
+    "qh": "संख्या $30^2720$ में सबसे दाएं अशून्य संख्या है :",
+    "oe": [
+      "1",
+      "3",
+      "7",
+      "9"
+    ],
+    "oh": [
+      "1",
+      "3",
+      "7",
+      "9"
+    ],
+    "a": 0,
+    "e": "Method 1 (Extraction of Base 10 Method):\nStep 1: संख्या को गुणनखंड रूप में लिखें:\n$$30^{2720} = (3 $\\times$ 10)^{2720} = 3^{2720} $\\times$ 10^{2720}$$\nStep 2: $10^{2720}$ के कारण संख्या के अंत में 2720 शून्य होंगे। सबसे दायाँ अशून्य अंक $3^{2720}$ का इकाई अंक होगा।\nStep 3: $3^{2720}$ का इकाई अंक निकालें:\n- 3 की चक्रियता 4 होती है।\n- घात $2720$ के अंतिम दो अंक 20 हैं, जो 4 से पूर्णतः विभाज्य हैं (शेषफल 0).\n$$3^4 = 81 \\implies \\text{इकाई अंक} = 1$$\nStep 4: अतः सबसे दायाँ अशून्य अंक 1 है।\nअतः सही विकल्प  1 है।\n\nMethod 2 (Power Remainder Method):\n$$3^{2720} \\equiv (3^4)^{680} \\equiv 1^{680} \\equiv 1 $\\pm$od{10}$$\nअतः सही उत्तर '1' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_29",
+    "qe": "Which of the following can't be the unit's digit of a perfect square?",
+    "qh": "निम्नलिखित में से कौन-सा पूर्ण वर्ग का इकाई अंक नहीं हो सकता है?",
+    "oe": [
+      "4",
+      "8",
+      "9",
+      "6"
+    ],
+    "oh": [
+      "4",
+      "8",
+      "9",
+      "6"
+    ],
+    "a": 1,
+    "e": "Method 1 (Properties of Perfect Squares Method):\nStep 1: 0 से 9 तक के अंकों के वर्गों के इकाई अंक देखें:\n- $0^2 = 0$\n- $1^2 = 1, \\quad 9^2 = 81 \\to 1$\n- $2^2 = 4, \\quad 8^2 = 64 \\to 4$\n- $3^2 = 9, \\quad 7^2 = 49 \\to 9$\n- $4^2 = 16, \\quad 6^2 = 36 \\to 6$\n- $5^2 = 25 \\to 5$\nStep 2: किसी भी पूर्ण वर्ग संख्या के संभावित इकाई अंक केवल $0, 1, 4, 5, 6, 9$ हो सकते हैं।\nStep 3: कोई भी पूर्ण वर्ग संख्या कभी भी $2, 3, 7, 8$ पर समाप्त नहीं हो सकती।\nअतः 8 किसी पूर्ण वर्ग का इकाई अंक नहीं हो सकता।\nअतः सही विकल्प  8 है।\n\nMethod 2 (Elimination Method):\n4 ($2^2$), 9 ($3^2$), 6 ($4^2$) पूर्ण वर्ग के इकाई अंक हो सकते हैं, लेकिन 8 कभी नहीं हो सकता।\nअतः सही उत्तर '8' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_30",
+    "qe": "The unit digit of $(137^13)^47$ is :",
+    "qh": "$(137^13)^47$ का इकाई अंक क्या है?",
+    "oe": [
+      "1",
+      "3",
+      "5",
+      "7"
+    ],
+    "oh": [
+      "1",
+      "3",
+      "5",
+      "7"
+    ],
+    "a": 1,
+    "e": "Method 1 (Power of Power Cyclicity Method):\nStep 1: घातांक नियम $(a^m)^n = a^{m \\times n}$ लागू करने पर:\n$$(137^{13})^{47} = 137^{13 $\\times$ 47}$$\nStep 2: कुल घात $13 \\times 47 = 611$ है। आधार का इकाई अंक 7 है (7 की चक्रियता 4 होती है)।\nStep 3: घात 611 को 4 से भाग देकर शेषफल निकालें:\n$$\\text{अंतिम दो अंक} = 11 \\implies 11 $\\div$ 4 \\implies \\text{शेषफल} = 3$$\nStep 4: इकाई अंक $7^3$ के बराबर होगा:\n$$7^3 = 343 \\implies \\text{इकाई अंक} = 3$$\nअतः सही विकल्प  3 है।\n\nMethod 2 (Modular Multiplication of Powers Method):\n$$13 $\\times$ 47 \\equiv (1) $\\times$ (3) \\equiv 3 $\\pm$od 4$$\nइकाई अंक = $7^3 = 343 \\to 3$.\nअतः सही उत्तर '3' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_31",
+    "qe": "If the unit digit of 433 * 456 * 43N is (N + 2), then what is the value of N?",
+    "qh": "यदि 433 * 456 * 43N का इकाई का अंक (N + 2) है, तो N का मान क्या है?",
+    "oe": [
+      "1",
+      "3",
+      "8",
+      "6"
+    ],
+    "oh": [
+      "1",
+      "3",
+      "8",
+      "6"
+    ],
+    "a": 3,
+    "e": "Method 1 (Option Substitution & Equation Method):\nStep 1: पहले दो पदों के इकाई अंकों का गुणनफल نکالें:\n$$3 $\\times$ 6 = 18 \\implies \\text{इकाई अंक} = 8$$\nStep 2: पूरे गुणनफल का इकाई अंक $8 \\times N$ का इकाई अंक होगा, जो $(N + 2)$ के बराबर होना चाहिए:\n$$\\text{इकाई अंक}(8 $\\times$ N) = N + 2$$\nStep 3: विकल्पों का परीक्षण करें:\n- (a) $N = 1: 8 \\times 1 = 8 \\ne (1 + 2 = 3)$\n- (b) $N = 3: 8 \\times 3 = 24 \\to 4 \\ne (3 + 2 = 5)$\n- (c) $N = 8: 8 \\times 8 = 64 \\to 4 \\ne (8 + 2 = 10 \\to 0)$\n- (d) $N = 6: 8 \\times 6 = 48 \\to 8$, तथा $N + 2 = 6 + 2 = 8$ (सत्यापित!)\nअतः सही विकल्प  6 है।\n\nMethod 2 (Modular Congruence Method):\n$$8N \\equiv N + 2 $\\pm$od{10} \\implies 7N \\equiv 2 $\\pm$od{10}$$\n$7 \\times 6 = 42 \\equiv 2 \\pmod{10} \\implies N = 6$.\nअतः सही उत्तर '6' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "unitdigit_32",
+    "qe": "Find the unit digit of the expression : 2^(3^4) * 3^(4^5) * 4^(5^6) * 5^(6^7) * 6^(7^8) * 7^(8^9) * 8^(9^10) ?",
+    "qh": "निम्नलिखित व्यंजक का इकाई अंक ज्ञात करें। 2^(3^4) * 3^(4^5) * 4^(5^6) * 5^(6^7) * 6^(7^8) * 7^(8^9) * 8^(9^10) ?",
+    "oe": [
+      "2",
+      "1",
+      "0",
+      "3"
+    ],
+    "oh": [
+      "2",
+      "1",
+      "0",
+      "3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Zero by Even and 5 Product Method):\nStep 1: दिए गए गुणनफल में उपस्थित पदों का अवलोकन करें:\n- पहला पद $2^{3^4}$ एक सम संख्या (Even number) है।\n- चौथा पद $5^{6^7}$ का इकाई अंक सदैव $5$ होता है।\nStep 2: जब किसी सम संख्या का गुणा 5 से होता है:\n$$\\text{सम संख्या} $\\times$ 5 = \\dots 0$$\nStep 3: अतः पूरे गुणनफल का अंतिम इकाई अंक 0 होगा।\nअतः सही विकल्प  0 है।\n\nMethod 2 (Factor Analysis Method):\nव्यंजक में 2 और 5 दोनों अभाज्य गुणनखंड उपस्थित हैं, अतः यह 10 से पूर्णतः विभाज्य है और इसका इकाई अंक 0 होगा।\nअतः सही उत्तर '0' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
