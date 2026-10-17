@@ -1,0 +1,135 @@
+[
+  {
+    "p_id": "average_1",
+    "qe": "Three boys, on an average, are 25 years old, and their age are in the ratio of 3 : 5 : 7. What is the age of the youngest boy?",
+    "qh": "तीन लड़कों की औसत आयु 25 वर्ष है, और उनकी आयु 3 : 5 : 7 के अनुपात में है। सबसे छोटे लड़के की आयु क्या है?",
+    "oe": [
+      "12 years",
+      "15 years",
+      "21 years",
+      "24 years"
+    ],
+    "oh": [
+      "12 years",
+      "15 years",
+      "21 years",
+      "24 years"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Units Method):\nStep 1: तीनों लड़कों की आयु का कुल योग:\nकुल योग = औसत * संख्या = 25 * 3 = 75 वर्ष।\nStep 2: अनुपाती इकाइयों का योग = 3 + 5 + 7 = 15 इकाइयाँ।\n15 इकाइयाँ = 75 वर्ष ==> 1 इकाई = 75 / 15 = 5 वर्ष।\nStep 3: सबसे छोटे लड़के की आयु (3 इकाइयाँ):\nआयु = 3 * 5 = 15 वर्ष।\nअतः सही विकल्प  15 years है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना आयु क्रमशः 3x, 5x और 7x है।\n(3x + 5x + 7x) / 3 = 25 ==> 15x / 3 = 25 ==> 5x = 25 ==> x = 5.\nStep 2: सबसे छोटा लड़का = 3x = 3 * 5 = 15 वर्ष।\nअतः सही उत्तर '15 years' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "average_2",
+    "qe": "A family, consists of a father, mother and son. The ratio of their present ages is 8 : 5 : 2 and the present age of the father is 48 years. What will be the average age of family after 3 years?",
+    "qh": "एक परिवार में पिता, माता और पुत्र शामिल हैं। उनकी वर्तमान आयु का अनुपात 8 : 5 : 2 है और पिता की वर्तमान आयु 48 वर्ष है। 3 वर्ष बाद परिवार की औसत आयु क्या होगी?",
+    "oe": [
+      "30 years",
+      "31 years",
+      "33 years",
+      "35 years"
+    ],
+    "oh": [
+      "30 years",
+      "31 years",
+      "33 years",
+      "35 years"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: पिता की आयु का अनुपात = 8 इकाइयाँ = 48 वर्ष।\n1 इकाई = 48 / 8 = 6 वर्ष।\nStep 2: तीनों सदस्यों की वर्तमान आयु:\n- पिता = 8 * 6 = 48 वर्ष\n- माता = 5 * 6 = 30 वर्ष\n- पुत्र = 2 * 6 = 12 वर्ष\nStep 3: वर्तमान औसत आयु = (48 + 30 + 12) / 3 = 90 / 3 = 30 वर्ष।\nStep 4: प्रत्येक व्यक्ति की आयु में 3 वर्ष की वृद्धि होने पर औसत में भी 3 वर्ष की वृद्धि होगी:\n3 वर्ष बाद औसत आयु = 30 + 3 = 33 वर्ष।\nअतः सही विकल्प  33 years है।\n\nMethod 2 (Direct Average Unit Method):\nStep 1: वर्तमान औसत इकाइयाँ = (8 + 5 + 2) / 3 = 15 / 3 = 5 इकाइयाँ।\nStep 2: 1 इकाई = 6 वर्ष ==> वर्तमान औसत = 5 * 6 = 30 वर्ष।\nStep 3: 3 वर्ष बाद औसत = 30 + 3 = 33 वर्ष।\nअतः सही उत्तर '33 years' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "average_3",
+    "qe": "The average age of A, B and C is 20 years. Two years ago the sum of the ages of A and B was 6 more than that of C. Find the present age of C?",
+    "qh": "A, B और C की औसत आयु 20 वर्ष है। दो वर्ष पूर्व A और B की आयु का योग C की आयु से 6 अधिक था। C की वर्तमान आयु ज्ञात कीजिए?",
+    "oe": [
+      "28 years",
+      "29 years",
+      "26 years",
+      "25 years"
+    ],
+    "oh": [
+      "28 years",
+      "29 years",
+      "26 years",
+      "25 years"
+    ],
+    "a": 2,
+    "e": "Method 1 (Algebraic Method):\nStep 1: वर्तमान में A, B और C की आयु का कुल योग:\nA + B + C = 20 * 3 = 60 वर्ष ==> A + B = 60 - C.\nStep 2: दो वर्ष पूर्व की स्थिति:\n(A - 2) + (B - 2) = (C - 2) + 6\nA + B - 4 = C + 4 ==> A + B = C + 8.\nStep 3: A + B का मान रखने पर:\n60 - C = C + 8\n2C = 60 - 8 = 52 ==> C = 26 वर्ष।\nअतः सही विकल्प  26 years है।\n\nMethod 2 (Substitution Method):\nStep 1: वर्तमान में (A + B) - C = 8.\nStep 2: (A + B) + C = 60.\nStep 3: घटाने पर: 2C = 52 ==> C = 26 वर्ष।\nअतः सही उत्तर '26 years' है।\n\nExam point: ausat ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "average_4",
+    "qe": "The average age of Ruby and Soni is 40 years. The ratio of their ages is 11 : 5, respectively. What is the age (in years) of Soni?",
+    "qh": "रूबी और सोनी की औसत आयु 40 वर्ष है। उनकी आयु का अनुपात क्रमशः 11 : 5 है। सोनी की आयु (वर्षों में) क्या है?",
+    "oe": [
+      "15",
+      "55",
+      "30",
+      "25"
+    ],
+    "oh": [
+      "15",
+      "55",
+      "30",
+      "25"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Units Method):\nStep 1: रूबी और सोनी की आयु का कुल योग = 40 * 2 = 80 वर्ष।\nStep 2: कुल अनुपाती इकाइयाँ = 11 + 5 = 16 इकाइयाँ।\n16 इकाइयाँ = 80 वर्ष ==> 1 इकाई = 80 / 16 = 5 वर्ष।\nStep 3: सोनी की आयु (5 इकाइयाँ):\nसोनी की आयु = 5 * 5 = 25 वर्ष।\n(रूबी की आयु = 11 * 5 = 55 वर्ष)।\nअतः सही विकल्प  25 है।\n\nMethod 2 (Algebraic Method):\nStep 1: 11x + 5x = 80 ==> 16x = 80 ==> x = 5.\nStep 2: सोनी की आयु = 5x = 5 * 5 = 25 वर्ष।\nअतः सही उत्तर '25' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "average_5",
+    "qe": "The current average age of a family of five members is 24. If the present age of the youngest member in the family is 8 years. What was the average age of the family members just before the birth of this youngest member?",
+    "qh": "पाँच सदस्यों वाले एक परिवार की वर्तमान औसत आयु 24 वर्ष है। यदि परिवार के सबसे छोटे सदस्य की वर्तमान आयु 8 वर्ष है, तो इस सबसे छोटे सदस्य के जन्म से ठीक पहले परिवार के सदस्यों की औसत आयु क्या थी?",
+    "oe": [
+      "24 years",
+      "20 years",
+      "28 years",
+      "16 years"
+    ],
+    "oh": [
+      "24 years",
+      "20 years",
+      "28 years",
+      "16 years"
+    ],
+    "a": 1,
+    "e": "Method 1 (Sum of Ages Method):\nStep 1: 5 सदस्यों की वर्तमान आयु का योग = 5 * 24 = 120 वर्ष।\nStep 2: सबसे छोटे सदस्य के जन्म के समय (8 वर्ष पूर्व) परिवार के सभी 5 सदस्यों की आयु का कुल योग:\n8 वर्ष पूर्व योग = 120 - (5 * 8) = 120 - 40 = 80 वर्ष।\nStep 3: सबसे छोटे सदस्य के जन्म से ठीक पहले परिवार में केवल 4 सदस्य थे:\nउस समय 4 सदस्यों की औसत आयु = 80 / 4 = 20 वर्ष।\nअतः सही विकल्प  20 years है।\n\nMethod 2 (Average Shift Method):\nStep 1: 8 वर्ष पूर्व 5 सदस्यों का औसत = 24 - 8 = 16 वर्ष (कुल योग = 16 * 5 = 80 वर्ष)।\nStep 2: जन्म से ठीक पहले 4 सदस्यों का औसत = 80 / 4 = 20 वर्ष।\nअतः सही उत्तर '20 years' है।\n\nExam point: ausat ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "average_6",
+    "qe": "8 years ago, the average age of Rahul's family consisting of 6 members was 35 years. One year ago a new baby was born in this family. What will be the average age of the family four years hence?",
+    "qh": "8 वर्ष पहले, राहुल के 6 सदस्यों वाले परिवार की औसत आयु 35 वर्ष थी। एक वर्ष पहले इस परिवार में एक नए बच्चे का जन्म हुआ। अब से चार वर्ष बाद परिवार की औसत आयु क्या होगी?",
+    "oe": [
+      "41 years",
+      "42 years",
+      "39 years",
+      "40 years"
+    ],
+    "oh": [
+      "41 years",
+      "42 years",
+      "39 years",
+      "40 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Sum Method):\nStep 1: 8 वर्ष पूर्व 6 सदस्यों की आयु का योग = 6 * 35 = 210 वर्ष।\nStep 2: वर्तमान में इन 6 सदस्यों की आयु का कुल योग:\nवर्तमान योग (6 सदस्य) = 210 + (6 * 8) = 210 + 48 = 258 वर्ष।\nStep 3: 1 वर्ष पूर्व बच्चे का जन्म हुआ था, अतः बच्चे की वर्तमान आयु = 1 वर्ष।\nवर्तमान में परिवार के सभी 7 सदस्यों की आयु का योग = 258 + 1 = 259 वर्ष।\nStep 4: अब से 4 वर्ष बाद 7 सदस्यों की आयु में वृद्धि = 7 * 4 = 28 वर्ष।\n4 वर्ष बाद कुल योग = 259 + 28 = 287 वर्ष।\nStep 5: 4 वर्ष बाद परिवार की औसत आयु:\nऔसत = 287 / 7 = 41 वर्ष।\nअतः सही विकल्प  41 years है।\n\nMethod 2 (Deviation Method):\nStep 1: 6 मूल सदस्यों की वर्तमान औसत आयु = 35 + 8 = 43 वर्ष (योग = 258).\nStep 2: 4 वर्ष बाद 6 सदस्यों का योग = 6 * 47 = 282 वर्ष।\nStep 3: 4 वर्ष बाद बच्चे की आयु = 1 + 4 = 5 वर्ष।\nStep 4: 7 सदस्यों का कुल योग = 282 + 5 = 287 वर्ष ==> औसत = 287 / 7 = 41 वर्ष।\nअतः सही उत्तर '41 years' है।\n\nExam point: ausat ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "average_7",
+    "qe": "Six years ago, the average of the ages of Ravi, Mohan and Govind was 32 years. If Shyam joins them now, the average of the ages of all four of them is 36 years. The present age of Shyam is:",
+    "qh": "छह वर्ष पहले, रवि, मोहन और गोविंद की आयु का औसत 32 वर्ष था। यदि श्याम अब उनके साथ जुड़ता है, तो उन चारों की आयु का औसत 36 वर्ष हो जाता है। श्याम की वर्तमान आयु क्या है:",
+    "oe": [
+      "35 years",
+      "32 years",
+      "40 years",
+      "30 years"
+    ],
+    "oh": [
+      "35 years",
+      "32 years",
+      "40 years",
+      "30 years"
+    ],
+    "a": 3,
+    "e": "Method 1 (Sum Method):\nStep 1: 6 वर्ष पहले 3 व्यक्तियों (रवि, मोहन, गोविंद) की औसत आयु = 32 वर्ष।\nवर्तमान में इन तीनों की औसत आयु = 32 + 6 = 38 वर्ष।\nStep 2: वर्तमान में तीनों की आयु का कुल योग = 3 * 38 = 114 वर्ष।\nStep 3: श्याम के शामिल होने पर 4 व्यक्तियों की कुल वर्तमान आयु = 4 * 36 = 144 वर्ष।\nStep 4: श्याम की वर्तमान आयु = चारों का योग - तीनों का योग\nश्याम की आयु = 144 - 114 = 30 वर्ष।\nअतः सही विकल्प  30 years है।\n\nMethod 2 (Deviation Method):\nStep 1: 3 व्यक्तियों का वर्तमान औसत = 38 वर्ष।\nनया औसत = 36 वर्ष (कमी = 38 - 36 = -2 प्रति व्यक्ति)।\nStep 2: 3 व्यक्तियों में कुल कमी = 3 * (-2) = -6 वर्ष।\nStep 3: श्याम की आयु = नया औसत + विचलन = 36 - 6 = 30 वर्ष।\nअतः सही उत्तर '30 years' है।\n\nExam point: ausat ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
