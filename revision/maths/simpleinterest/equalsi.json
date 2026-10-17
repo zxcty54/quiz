@@ -1,0 +1,192 @@
+[
+  {
+    "p_id": "equalsi_1",
+    "qe": "A person invested a total sum of ₹2200 in three different schemes of simple interest at 4%, 5%, and 10% per annum. At the end of one year, he got the same interest from all three schemes. What was the amount (in ₹) invested at 5%?",
+    "qh": "एक व्यक्ति ने साधारण ब्याज की तीन अलग-अलग योजनाओं में 4%, 5% और 10% वार्षिक दर पर कुल ₹2200 की राशि का निवेश किया। एक वर्ष के अंत में, उसे तीनों योजनाओं से समान ब्याज प्राप्त हुआ। 5% पर निवेश की गई राशि (₹ में) क्या थी?",
+    "oe": [
+      "Rs.1000",
+      "Rs.800",
+      "Rs.600",
+      "Rs.400"
+    ],
+    "oh": [
+      "Rs.1000",
+      "Rs.800",
+      "Rs.600",
+      "Rs.400"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Balancing Method):\nStep 1: समान ब्याज होने पर: P1 * R1 * T = P2 * R2 * T = P3 * R3 * T.\nसमय T = 1 वर्ष समान है ==> 4% of P1 = 5% of P2 = 10% of P3.\nStep 2: 4, 5 और 10 का LCM = 20.\nमूलधनों का अनुपात P1 : P2 : P3 = (20/4) : (20/5) : (20/10) = 5 : 4 : 2.\nStep 3: कुल अनुपात = 5 + 4 + 2 = 11 units.\n11 units = ₹2,200 ==> 1 unit = 2,200 / 11 = ₹200.\nStep 4: 5% पर निवेशित राशि (P2 = 4 units) = 4 * 200 = ₹800.\nअतः सही विकल्प  Rs.800 है।\n\nMethod 2 (Formula Method):\nStep 1: P1 : P2 : P3 = (1/R1) : (1/R2) : (1/R3) = 1/4 : 1/5 : 1/10 = 5 : 4 : 2.\nStep 2: Amount at 5% = (4 / 11) * 2,200 = 4 * 200 = ₹800.\nअतः सही उत्तर 'Rs.800' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "equalsi_2",
+    "qe": "If the simple interest on ₹7,200 in 3 years at the rate of 16% per annum equals the simple interest on ₹9,600 at the rate of x% per annum in 4 years. The value of x is equal to:",
+    "qh": "यदि ₹7,200 पर 16% प्रति वर्ष की दर से 3 वर्षों में साधारण ब्याज ₹9,600 पर 4 वर्षों में x% प्रति वर्ष की दर से साधारण ब्याज के बराबर है, तो x का मान बराबर है:",
+    "oe": [
+      "9",
+      "11",
+      "8",
+      "10"
+    ],
+    "oh": [
+      "9",
+      "11",
+      "8",
+      "10"
+    ],
+    "a": 0,
+    "e": "Method 1 (Equating Interest Method):\nStep 1: पहली स्थिति में कुल ब्याज = (7,200 * 16 * 3) / 100 = 72 * 48 = ₹3,456.\nStep 2: दूसरी स्थिति में ब्याज = (9,600 * x * 4) / 100 = 384x.\nStep 3: दोनों ब्याजों को बराबर रखें:\n384x = 3,456 ==> x = 3,456 / 384 = 9%.\nअतः सही विकल्प  9 है।\n\nMethod 2 (Ratio / Cancellation Method):\nStep 1: P1 * R1 * T1 = P2 * R2 * T2.\n7,200 * 16 * 3 = 9,600 * x * 4.\nStep 2: (7,200 / 9,600) * (48 / 4) = x ==> (3 / 4) * 12 = x ==> x = 9.\nअतः सही उत्तर '9' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "equalsi_3",
+    "qe": "In how much time will ₹5,000 at 4% per annum simple interest produce the same interest as ₹8,000 in 2 1/2 years at 8% per annum simple interest?",
+    "qh": "कितने समय में ₹5,000 पर 4% वार्षिक साधारण ब्याज की दर से वही ब्याज प्राप्त होगा जो ₹8,000 पर 2 1/2 वर्षों में 8% वार्षिक साधारण ब्याज से प्राप्त होता है?",
+    "oe": [
+      "8 years",
+      "5 years",
+      "4 years",
+      "2 years"
+    ],
+    "oh": [
+      "8 years",
+      "5 years",
+      "4 years",
+      "2 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Formula Equating Method):\nStep 1: P1 * R1 * T1 = P2 * R2 * T2.\nStep 2: मान रखें: 5,000 * 4 * T = 8,000 * 8 * 2.5.\nStep 3: 20,000 * T = 8,000 * 20 = 160,000.\nStep 4: T = 160,000 / 20,000 = 8 वर्ष।\nअतः सही विकल्प  8 years है।\n\nMethod 2 (Percentage Method):\nStep 1: ₹8,000 पर ब्याज = 8,000 * 8% * 2.5 = 8,000 * 20% = ₹1,600.\nStep 2: ₹5,000 पर प्रति वर्ष 4% ब्याज = 5,000 * 4% = ₹200 प्रति वर्ष।\nStep 3: समय T = 1,600 / 200 = 8 वर्ष।\nअतः सही उत्तर '8 years' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "equalsi_4",
+    "qe": "In what time will ₹10,000 at 4% per annum, give the same interest as ₹8,000 does in 4 years at 5% simple interest?",
+    "qh": "कितने समय में ₹10,000 पर 4% प्रति वर्ष की दर से वही ब्याज मिलेगा जो ₹8,000 पर 5% साधारण ब्याज की दर से 4 वर्षों में मिलता है?",
+    "oe": [
+      "5 year",
+      "3 year",
+      "4 year",
+      "6 year"
+    ],
+    "oh": [
+      "5 year",
+      "3 year",
+      "4 year",
+      "6 year"
+    ],
+    "a": 2,
+    "e": "Method 1 (Formula Equating Method):\nStep 1: P1 * R1 * T1 = P2 * R2 * T2.\nStep 2: 10,000 * 4 * T = 8,000 * 5 * 4.\nStep 3: 40,000 * T = 160,000 ==> T = 160,000 / 40,000 = 4 वर्ष।\nअतः सही विकल्प  4 year है।\n\nMethod 2 (Direct Ratio Method):\nStep 1: दूसरी स्थिति का ब्याज = 8,000 * 20% = ₹1,600.\nStep 2: पहली स्थिति का वार्षिक ब्याज = 10,000 * 4% = ₹400.\nStep 3: अभीष्ट समय T = 1,600 / 400 = 4 वर्ष।\nअतः सही उत्तर '4 year' है।\n\nIs prashn ka moolaadhaar saadharan byaaj ka sootra hai. She sh vikalp 5 year, 3 year, 6 year is hisaab se nahi milte. Exam point: saadharan byaaj ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "equalsi_5",
+    "qe": "The simple interest on ₹800 for 6 years at 5.5% per annum is equal to the simple interest on ₹600 at 4% per annum for a certain period of time. The period of time is:",
+    "qh": "₹800 पर 5.5% प्रति वर्ष की दर से 6 वर्षों का साधारण ब्याज एक निश्चित समयावधि के लिए ₹600 पर 4% प्रति वर्ष की दर से साधारण ब्याज के बराबर है। वह समयावधि क्या है:",
+    "oe": [
+      "11 years",
+      "9 years",
+      "12 years",
+      "10 years"
+    ],
+    "oh": [
+      "11 years",
+      "9 years",
+      "12 years",
+      "10 years"
+    ],
+    "a": 0,
+    "e": "Method 1 (Formula Equating Method):\nStep 1: P1 * R1 * T1 = P2 * R2 * T2.\nStep 2: 800 * 5.5 * 6 = 600 * 4 * T.\nStep 3: 4,800 * 5.5 = 2,400 * T.\nStep 4: 2 * 5.5 = T ==> T = 11 वर्ष।\nअतः सही विकल्प  11 years है।\n\nMethod 2 (Step-by-Step Calculation Method):\nStep 1: पहला ब्याज = (800 * 5.5 * 6) / 100 = 8 * 33 = ₹264.\nStep 2: दूसरे मूलधन पर प्रति वर्ष ब्याज = (600 * 4) / 100 = ₹24 प्रति वर्ष।\nStep 3: समय T = 264 / 24 = 11 वर्ष।\nअतः सही उत्तर '11 years' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "equalsi_6",
+    "qe": "The simple interest earned on ₹7,000 in 2 years at the rate of R% per annum equals to the simple interest earned on ₹5,000 at the rate of 5% per annum in 14 years. The value of R (in percentage) is:",
+    "qh": "₹7,000 पर R% प्रति वर्ष की दर से 2 वर्षों में अर्जित साधारण ब्याज ₹5,000 पर 5% प्रति वर्ष की दर से 14 वर्षों में अर्जित साधारण ब्याज के बराबर है। R का मान (प्रतिशत में) है:",
+    "oe": [
+      "28%",
+      "15%",
+      "25%",
+      "20%"
+    ],
+    "oh": [
+      "28%",
+      "15%",
+      "25%",
+      "20%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Formula Equating Method):\nStep 1: P1 * R1 * T1 = P2 * R2 * T2.\nStep 2: 7,000 * R * 2 = 5,000 * 5 * 14.\nStep 3: 14,000 * R = 350,000.\nStep 4: R = 350,000 / 14,000 = 350 / 14 = 25%.\nअतः सही विकल्प  25% है।\n\nMethod 2 (Percentage Calculation Method):\nStep 1: दूसरी स्थिति में कुल ब्याज = (5,000 * 5 * 14) / 100 = 50 * 70 = ₹3,500.\nStep 2: पहली स्थिति में: (7,000 * R * 2) / 100 = 3,500.\nStep 3: 140R = 3,500 ==> R = 3,500 / 140 = 25%.\nअतः सही उत्तर '25%' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "equalsi_7",
+    "qe": "A man invests an amount of ₹1,05,750 at simple interest in the name of his son, daughter and his wife in such a way that they get the same interest after 3, 4 and 5 years, respectively. If the rate of interest is 5% per annum, then the amount invested for the wife is:",
+    "qh": "एक व्यक्ति अपने बेटे, बेटी और अपनी पत्नी के नाम पर साधारण ब्याज पर ₹1,05,750 की राशि इस तरह निवेश करता है कि उन्हें क्रमशः 3, 4 और 5 साल बाद समान ब्याज मिले। यदि ब्याज दर 5% प्रति वर्ष है, तो पत्नी के लिए निवेश की गई राशि है:",
+    "oe": [
+      "₹25,000",
+      "₹28,000",
+      "₹27,000",
+      "₹30,000"
+    ],
+    "oh": [
+      "₹25,000",
+      "₹28,000",
+      "₹27,000",
+      "₹30,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Inverse Ratio Method):\nStep 1: चूँकि ब्याज दर R = 5% सभी के लिए समान है और ब्याज बराबर है:\nP_son * 3 = P_daughter * 4 = P_wife * 5.\nStep 2: 3, 4 और 5 का LCM = 60.\nअनुपात निकालें: P_son : P_daughter : P_wife = (60/3) : (60/4) : (60/5) = 20 : 15 : 12.\nStep 3: कुल अनुपात = 20 + 15 + 12 = 47 units.\nStep 4: 47 units = ₹1,05,750.\n1 unit = 105,750 / 47 = ₹2,250.\nStep 5: पत्नी के नाम निवेशित राशि (12 units) = 12 * 2,250 = ₹27,000.\nअतः सही विकल्प  ₹27,000 है।\n\nMethod 2 (Formula Method):\nStep 1: P ∝ 1/T (चूँकि SI और R समान हैं) ==> P1 : P2 : P3 = 1/3 : 1/4 : 1/5 = 20 : 15 : 12.\nStep 2: P_wife = [12 / (20 + 15 + 12)] * 1,05,750 = (12 / 47) * 1,05,750 = 12 * 2,250 = ₹27,000.\nअतः सही उत्तर '₹27,000' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "equalsi_8",
+    "qe": "If the amount obtained by A by investing Rs 9,100 for three years at a rate of 10% p.a. on simple interest is equal to the amount obtained by B by investing a certain sum of money for five years at a rate of 8% p.a. on simple interest, then find the sum invested by B.",
+    "qh": "यदि A द्वारा ₹9,100 को साधारण ब्याज पर 10% वार्षिक दर से तीन वर्षों के लिए निवेश करके प्राप्त मिश्रधन, B द्वारा एक निश्चित धनराशि को साधारण ब्याज पर 8% वार्षिक दर से पाँच वर्षों के लिए निवेश करके प्राप्त मिश्रधन के बराबर है, तो B द्वारा निवेश की गई राशि ज्ञात कीजिए।",
+    "oe": [
+      "₹8,450",
+      "₹8,250",
+      "₹8,500",
+      "₹8,300"
+    ],
+    "oh": [
+      "₹8,450",
+      "₹8,250",
+      "₹8,500",
+      "₹8,300"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: A का मिश्रधन प्रतिशत:\nRate = 10%, Time = 3 वर्ष ==> कुल SI = 10% * 3 = 30%.\nAmount_A = 100% + 30% = 130% of P_A.\nStep 2: B का मिश्रधन प्रतिशत:\nRate = 8%, Time = 5 वर्ष ==> कुल SI = 8% * 5 = 40%.\nAmount_B = 100% + 40% = 140% of P_B.\nStep 3: दोनों मिश्रधन बराबर हैं:\n130% of P_A = 140% of P_B ==> P_A / P_B = 140 / 130 = 14 / 13.\nStep 4: दिया है P_A (14 units) = ₹9,100.\n1 unit = 9,100 / 14 = ₹650.\nStep 5: B द्वारा निवेशित राशि (P_B = 13 units) = 13 * 650 = ₹8,450.\nअतः सही विकल्प  ₹8,450 है।\n\nMethod 2 (100-Base Method):\nStep 1: Amount_A = 9,100 * (1 + 0.10 * 3) = 9,100 * 1.30 = ₹11,830.\nStep 2: Amount_B = P_B * (1 + 0.08 * 5) = 1.40 * P_B.\nStep 3: 1.40 * P_B = 11,830 ==> P_B = 11,830 / 1.40 = ₹8,450.\nअतः सही उत्तर '₹8,450' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "equalsi_9",
+    "qe": "₹21,750 is invested by a person in the bank account of his two sons whose ages are 9 years and 13 years in such a way that they will get equal amount at an age of 21 years at the rate of 4.5% per annum. Find the share of younger child.",
+    "qh": "एक व्यक्ति द्वारा ₹21,750 की राशि अपने दो पुत्रों, जिनकी आयु 9 वर्ष और 13 वर्ष है, के बैंक खातों में इस प्रकार निवेश की जाती है कि उन्हें 4.5% प्रति वर्ष की दर से 21 वर्ष की आयु होने पर समान मिश्रधन प्राप्त हो। छोटे बच्चे का हिस्सा ज्ञात कीजिए।",
+    "oe": [
+      "₹10,200",
+      "₹11,550",
+      "₹10,500",
+      "₹10,800"
+    ],
+    "oh": [
+      "₹10,200",
+      "₹11,550",
+      "₹10,500",
+      "₹10,800"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: दोनों बच्चों के लिए निवेश का समय (21 वर्ष की आयु तक):\n- छोटे बेटे के लिए समय T1 = 21 - 9 = 12 वर्ष\n- बड़े बेटे के लिए समय T2 = 21 - 13 = 8 वर्ष\nStep 2: 4.5% की दर से दोनों का मिश्रधन प्रतिशत:\n- छोटे बेटे का मिश्रधन = 100 + (4.5 * 12) = 100 + 54 = 154%\n- बड़े बेटे का मिश्रधन = 100 + (4.5 * 8) = 100 + 36 = 136%\nStep 3: मिश्रधन समान होने पर मूलधनों का अनुपात:\nP1 * 154 = P2 * 136 ==> P1 / P2 = 136 / 154 = 68 / 77.\nStep 4: कुल अनुपात = 68 + 77 = 145 units.\n145 units = ₹21,750 ==> 1 unit = 21,750 / 145 = ₹150.\nStep 5: छोटे बच्चे का हिस्सा (P1 = 68 units) = 68 * 150 = ₹10,200.\n(बड़े बच्चे का हिस्सा = 77 * 150 = ₹11,550).\nअतः सही विकल्प  ₹10,200 है।\n\nMethod 2 (Formula Method):\nStep 1: P1 : P2 = [1 / (100 + R*T1)] : [1 / (100 + R*T2)] = 1/154 : 1/136 = 136 : 154 = 68 : 77.\nStep 2: P1 = [68 / (68 + 77)] * 21,750 = (68 / 145) * 21,750 = 68 * 150 = ₹10,200.\nअतः सही उत्तर '₹10,200' है।\n\nExam point: umar ke prashn ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "equalsi_10",
+    "qe": "A sum of Rs.23,790 is divided into three parts and given on loan at 5% simple interest to A, B and C for 2, 3 and 4 years respectively. If the amounts of all three are equal after their respective periods of loan, then A received a loan of:",
+    "qh": "₹23,790 की राशि को तीन भागों में विभाजित किया गया है और A, B तथा C को 5% साधारण ब्याज की दर से क्रमशः 2, 3 और 4 वर्षों के लिए ऋण पर दिया गया है। यदि तीनों की ऋण अवधि के बाद उनके मिश्रधन बराबर हैं, तो A को कितना ऋण प्राप्त हुआ:",
+    "oe": [
+      "Rs.8,280",
+      "Rs.7,920",
+      "Rs.7,590",
+      "Rs.8,400"
+    ],
+    "oh": [
+      "Rs.8,280",
+      "Rs.7,920",
+      "Rs.7,590",
+      "Rs.8,400"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: तीनों के मिश्रधन प्रतिशत निकालें (दर = 5%):\n- A का मिश्रधन = 100 + (5 * 2) = 110%\n- B का मिश्रधन = 100 + (5 * 3) = 115%\n- C का मिश्रधन = 100 + (5 * 4) = 120%\nStep 2: प्रश्नानुसार तीनों के मिश्रधन बराबर हैं:\n110 * A = 115 * B = 120 * C\n5 से भाग देने पर: 22 * A = 23 * B = 24 * C.\nStep 3: A, B और C का अनुपात निकालने के लिए 22, 23, 24 का LCM लें:\nLCM = 6,072.\n- A = 6,072 / 22 = 276 इकाइयाँ\n- B = 6,072 / 23 = 264 इकाइयाँ\n- C = 6,072 / 24 = 253 इकाइयाँ\nStep 4: कुल अनुपात = 276 + 264 + 253 = 793 units.\n793 units = ₹23,790 ==> 1 unit = 23,790 / 793 = ₹30.\nStep 5: A को प्राप्त ऋण (276 units) = 276 * 30 = ₹8,280.\n(B का भाग = 264 * 30 = ₹7,920, C का भाग = 253 * 30 = ₹7,590).\nअतः सही विकल्प  Rs.8,280 है।\n\nMethod 2 (Inverse Formula Method):\nStep 1: A : B : C = [1 / (100 + R1*T1)] : [1 / (100 + R2*T2)] : [1 / (100 + R3*T3)].\n= 1/110 : 1/115 : 1/120 = 1/22 : 1/23 : 1/24 = 276 : 264 : 253.\nStep 2: A का हिस्सा = (276 / 793) * 23,790 = 276 * 30 = ₹8,280.\nअतः सही उत्तर 'Rs.8,280' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
