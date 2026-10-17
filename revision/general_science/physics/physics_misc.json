@@ -1,0 +1,344 @@
+[
+  {
+    "p_id": "gs_phy_un_01",
+    "qe": "How many base quantities are there in the International System of Units (SI), and which of the following is NOT one of them?",
+    "qh": "अंतर्राष्ट्रीय मात्रक प्रणाली (SI) में कितनी मूल राशियाँ हैं, तथा निम्नलिखित में से कौन-सी उनमें सम्मिलित नहीं है?",
+    "oe": [
+      "Seven; electric current is not a base quantity",
+      "Seven; luminous intensity is not a base quantity",
+      "Nine; amount of substance is not a base quantity",
+      "Seven; plane angle is not a base quantity"
+    ],
+    "oh": [
+      "सात; विद्युत धारा मूल राशि नहीं है",
+      "सात; ज्योति तीव्रता मूल राशि नहीं है",
+      "नौ; पदार्थ की मात्रा मूल राशि नहीं है",
+      "सात; समतल कोण मूल राशि नहीं है"
+    ],
+    "a": 3,
+    "e": "SI pranali me saat mool raashiyan (base quantities) hain aur unke saat mool matrak: lambai ka metre, dravyaman ka kilogram, samay ka second, vidyut dhara ka ampere, tapaman ka kelvin, padarth ki matra ka mole tatha jyoti teevrta ka candela. Vidyut dhara, jyoti teevrta tatha padarth ki matra - teeno is sauchi suchi ka hissa hain, isliye unhe 'mool raashi nahi' kehna galat hai. Plane angle (samatal kon) SI me 'supplementary unit' hai jiska matrak radiant hai; isi tarah solid angle ka matrak steradian hai. Rashtriya SI me saat mool matrakon ke alava vyutpann matrak (derived units) hote hain, jaise newton (bal), joule (urja), watt (shakti) tatha pascal (dabav). Isliye samatal kon mool raashiyon me nahi ginte - yahi is prashn ka sahi uttar hai. Exam point: SI ke saat mool matrak = metre, kilogram, second, ampere, kelvin, mole, candela; samatal kon tatha thos kon supplementary units hain (radian, steradian)."
+  },
+  {
+    "p_id": "gs_phy_un_02",
+    "qe": "'Light year' is a unit of which physical quantity?",
+    "qh": "'प्रकाश वर्ष' (light year) किस भौतिक राशि का मात्रक है?",
+    "oe": [
+      "Time",
+      "Distance",
+      "Luminosity of stars",
+      "Speed of light"
+    ],
+    "oh": [
+      "समय",
+      "दूरी",
+      "तारों की दीप्ति",
+      "प्रकाश की चाल"
+    ],
+    "a": 1,
+    "e": "Naam me 'year' (varsh) hone ke kaaran bahut se vidyarthi light year ko samay ka matrak samajh lete hain, lekin yah galat hai. Light year ek dURi ka matrak hai - yah woh doori hai jo prakash ek varsh me nirvaat (vacuum) me tay karta hai. Ganna aasan hai: prakash ki chaal lagbhag 3 lakh kilometre prati second hoti hai, isliye ek varsh (365 din) me prakash karib 9.46 laakh crore kilometre (9.46 x 10^12 km) tay karta hai. Khagol vigyan me doori itni badi hoti hai ki kilometre me likhna mushkil ho jaata hai, isliye light year, parsec tatha astronomical unit (AU) ka prayog hota hai. Speed of light ek chaal hai jiska matrak metre prati second hota hai, light year nahi. Isliye light year ke 'year' shabd se dhokha na khayein; yah kaale samay ke bajaye doori batata hai. Exam point: light year = doori ka matrak (ek varsh me prakash dwara tay doori, karib 9.46 x 10^12 km); AU = prithvi se sooraj ki ausat doori; parsec = doori ka badi ikai."
+  },
+  {
+    "p_id": "gs_phy_un_03",
+    "qe": "The instrument used to measure the relative humidity of air is:",
+    "qh": "वायु की आपेक्षिक आर्द्रता (relative humidity) मापने वाला यंत्र है -",
+    "oe": [
+      "Barometer",
+      "Hygrometer",
+      "Anemometer",
+      "Hydrometer"
+    ],
+    "oh": [
+      "बैरोमीटर",
+      "हाइग्रोमीटर",
+      "एनीमोमीटर",
+      "हाइड्रोमीटर"
+    ],
+    "a": 1,
+    "e": "Hygrometer ek yantra hai jo hawa me jal-vashp (water vapour) ki matra, yaani aapekshik aardrata (relative humidity) maapta hai; mausam-vigyan me yah bahut kaam aata hai aur kheti tatha swasthya dono ke liye mahatvapurn hai. Barometer wayumandalik dabav (atmospheric pressure) maapta hai - jise aksar log hygrometer samajh lete hain, lekin dono alag hain. Anemometer hawa ki chaal (wind speed) maapta hai, isliye yah bhi is prashn ka jawab nahi hai; hawa ki disha ke liye wind vane ka prayog hota hai. Hydrometer drav ke ghanatva (density) ya vishesh gurutva (specific gravity) nikaalne me kaam aata hai - doodh ki shuddhta jaanchne wala yantra isi ka vishesh roop lactometer hai. Isliye sahi uttar hygrometer hai aur baaki teen yantra doosri maatraaon se jude hain. Exam point: hygrometer = aapekshik aardrata; barometer = wayumandalik dabav; anemometer = hawa ki chaal; hydrometer = drav ka ghanatva (lactometer = doodh ki shuddhta)."
+  },
+  {
+    "p_id": "gs_phy_un_04",
+    "qe": "Which of the following pairs of measuring instruments is correctly matched?",
+    "qh": "मापन यंत्रों के निम्नलिखित युग्मों में कौन-सा सही सुमेलित है?",
+    "oe": [
+      "Sphygmomanometer - blood pressure",
+      "Seismograph - wind speed",
+      "Lactometer - blood sugar",
+      "Galvanometer - earthquake intensity"
+    ],
+    "oh": [
+      "स्फिग्मोमैनोमीटर - रक्तचाप",
+      "सीस्मोग्राफ - पवन की चाल",
+      "लेक्टोमीटर - रक्त शर्करा",
+      "गैल्वेनोमीटर - भूकंप की तीव्रता"
+    ],
+    "a": 0,
+    "e": "Sphygmomanometer woh yantra hai jisse dhmaniyon (arteries) ka raktchaap (blood pressure) maapa jaata hai; isme ek rubber cuff hota hai jo bhujaa par baandha jaata hai aur uske reading se systolic-dystolic dabav pata chalta hai. Seismograph bhookamp ki tivrta aur jhatke record karta hai, pawan ki chaal nahi, isliye doosri jodi galat hai (pawan ki chaal ke liye anemometer). Lactometer doodh ka ghanatva ya shuddhta naapta hai, rakt shakara (blood sugar) nahi; rakt shakara ke liye glucometer ka prayog hota hai. Galvanometer bahut chhoti vidyut dhara tatha uski disha batata hai; bhookamp ke aakde ke liye woh kaam nahi aata. Is tarah pehli jodi hi sahi hai; baaki teeno jodiyan galat yantra se judi hain. Exam point: raktchaap = sphygmomanometer, bhookamp = seismograph, pawan chaal = anemometer, rakt shakara = glucometer, chhoti dhara = galvanometer."
+  },
+  {
+    "p_id": "gs_phy_un_05",
+    "qe": "Which of the following is a derived SI unit?",
+    "qh": "निम्नलिखित में से कौन-सा व्युत्पन्न SI मात्रक है?",
+    "oe": [
+      "Ampere",
+      "Kelvin",
+      "Newton",
+      "Mole"
+    ],
+    "oh": [
+      "ऐम्पियर",
+      "केल्विन",
+      "न्यूटन",
+      "मोल"
+    ],
+    "a": 2,
+    "e": "SI ke saat mool matrak hain - metre, kilogram, second, ampere, kelvin, mole tatha candela. Ampere vidyut dhara ka mool matrak, kelvin tapaman ka mool matrak tatha mole padarth ki matra ka mool matrak hai; isliye teeno vikalp is prashn se mel nahi khate. Newton ek vyutpann (derived) matrak hai jo bal naapta hai aur ise mool matrakon se banaya jaata hai: ek newton = ek kilogram-metre prati second ka varg (kg-m/s^2), yaani jo bal ek kilogram dravyaman par ek metre prati second ke ek varg wala tvaran utpann kare. Isi tarah joule (urja), watt (shakti), pascal (dabav) aur volt bhi vyutpann matrak hain. Vyutpann matrakon ka matlab yah hai ki woh mool matrakon ke gunan-phal tatha bhaag se nikalte hain, apne aap independent nahi hote. Exam point: mool matrak = 7; vyutpann matrak = newton (bal), joule (urja), watt (shakti), pascal (dabav); newton = kg m s^-2."
+  },
+  {
+    "p_id": "gs_phy_un_06",
+    "qe": "One astronomical unit (AU), used to express distances within the solar system, is equal to approximately:",
+    "qh": "सौरमंडल के भीतर की दूरियाँ बताने में प्रयुक्त एक खगोलीय मात्रक (AU) लगभग किसके बराबर है?",
+    "oe": [
+      "The distance of the Moon from the Earth",
+      "The average distance of the Earth from the Sun",
+      "The distance light travels in one year",
+      "The diameter of the Milky Way galaxy"
+    ],
+    "oh": [
+      "पृथ्वी से चंद्रमा की दूरी",
+      "पृथ्वी की सूर्य से औसत दूरी",
+      "एक वर्ष में प्रकाश द्वारा तय दूरी",
+      "मंदाकिनी (Milky Way) का व्यास"
+    ],
+    "a": 1,
+    "e": "Astronomical unit (khagoliya matrak) paas wali duriyon ko likhne ka sabse suvidhajanak tareeka hai. Ek AU prithvi ki sooraj se ausat (average) doori ke barabar hota hai, jo lagbhag 15 crore kilometre (1.496 x 10^8 km) hai. Isi AU me sooraj se grahon ki doori likhi jaati hai - budh karib 0.39 AU, prithvi 1 AU, tatha neptune karib 30 AU par hai. Prithvi tatha chandrama ke beech ki ausat doori lagbhag 3.84 lakh kilometre hoti hai, jo ek AU ka chhota hissa hai, isliye pehla vikalp galat hai. Ek varsh me prakash dwara tay ki gayi doori 'light year' kehlati hai, jo AU se lagbhag 63,000 guna badi hai; isliye teesra vikalp galat hai. Milky Way ka vyaas karib 1 lakh light year hota hai - woh aur bhi bahut bada aakda hai. Exam point: 1 AU = prithvi-sooraj ki ausat doori karib 15 crore km; sooraj ke sabse nikat grah budh ki doori 0.39 AU; light year aur AU alag ikaiyaan hain."
+  },
+  {
+    "p_id": "gs_phy_mp_01",
+    "qe": "The hydrogen bomb is based on which nuclear process, and how does it differ from the process used in an atom bomb?",
+    "qh": "हाइड्रोजन बम किस नाभिकीय प्रक्रिया पर आधारित है, और यह परमाणु बम में प्रयुक्त प्रक्रिया से किस प्रकार भिन्न है?",
+    "oe": [
+      "Nuclear fission; it uses uranium instead of plutonium",
+      "Nuclear fusion; it joins light nuclei, whereas an atom bomb splits heavy nuclei",
+      "Chemical reaction; it burns hydrogen gas",
+      "Radioactive decay; it uses the heat of decay"
+    ],
+    "oh": [
+      "नाभिकीय विखंडन; यह प्लूटोनियम के स्थान पर यूरेनियम का उपयोग करता है",
+      "नाभिकीय संलयन; यह हल्के नाभिकों को जोड़ता है, जबकि परमाणु बम भारी नाभिकों को विभाजित करता है",
+      "रासायनिक अभिक्रिया; यह हाइड्रोजन गैस जलाता है",
+      "रेडियोधर्मी क्षय; यह क्षय की ऊष्मा का उपयोग करता है"
+    ],
+    "a": 1,
+    "e": "Do tarah ke paramanu hathyar me do bilkul alag nabhekiya (nuclear) kriyayein lagti hain. Paramandu bam (atom bomb) me bhari nabhik jaise uranium-235 ya plutonium-239 ko toda jaata hai - yah vikhandan (fission) hai aur isme nikat achhut urja tatha aur nabhik nikalte hain, jo aage aisi hi kriya karate hain. Hydrogen bomb me ulta hota hai - halke nabhik (hydrogen ke samsthani isotope deuterium tatha tritium) aapas me jud kar bhari nabhik (helium) banate hain, ise sangalan (fusion) kehte hain; isme vikhandan se bhi zyada urja nikalta hai, jo sooraj me bhi hoti hai. Isliye hydrogen bomb fusion par aur atom bomb fission par chalta hai. 'Hydrogen gas jalna' rasayanik kriya hai jo aisi urja nahi deti; aur khachan (decay) se itni urja nahi milti, isliye yeh vikalp galat hain. Exam point: atom bomb = vikhandan (fission, bhari nabhik), hydrogen bomb = sangalan (fusion, halke nabhik); sooraj ki urja bhi sangalan se hi banti hai."
+  },
+  {
+    "p_id": "gs_phy_mp_02",
+    "qe": "Who discovered X-rays, and in which year?",
+    "qh": "एक्स-किरणों की खोज किसने तथा किस वर्ष की?",
+    "oe": [
+      "Henri Becquerel, 1896",
+      "Wilhelm Conrad Roentgen, 1895",
+      "Marie Curie, 1898",
+      "J.J. Thomson, 1897"
+    ],
+    "oh": [
+      "हेनरी बेकरेल, 1896",
+      "विल्हेम कॉनराड रॉन्टजेन, 1895",
+      "मैरी क्यूरी, 1898",
+      "जे.जे. थॉमसन, 1897"
+    ],
+    "a": 1,
+    "e": "X-kirnon ki khoj 1895 me German vaigyanik Wilhelm Conrad Roentgen ne ki thi; is khoj ke liye unhe 1901 me pehla Nobel Puraskar (Physics) mila. X-kiranein ek prakash ki tarah ki vidyut-chumbakiya tarangein hain, lekin unki tarang-dairghya bahut kam hoti hai, isliye woh mansa tatha haddiyon me ghuskar unki chhavi (image) bana sakti hain - isi liye chikitsa me X-ray ka bada upyog hai. Henri Becquerel ne 1896 me radioactivity ki khoj ki thi, X-ray ki nahi. Marie Curie ne radium tatha polonium ke kshetra me mahatvapurn kaam kiya (1898 ke aas-paas), isliye woh bhi is prashn ka uttar nahi hain. J.J. Thomson ne 1897 me electron ki khoj ki; isliye unka naam bhi alag vishay se juda hai. Exam point: X-ray = Roentgen, 1895 (pehla Nobel Pariskar 1901); electron = J.J. Thomson, 1897; radioactivity = Becquerel, 1896; radium = Marie Curie."
+  },
+  {
+    "p_id": "gs_phy_mp_03",
+    "qe": "India conducted its first nuclear test, code-named 'Smiling Buddha', in which year and at which place?",
+    "qh": "भारत ने अपना पहला परमाणु परीक्षण, जिसका कूटनाम 'स्माइलिंग बुद्धा' था, किस वर्ष तथा किस स्थान पर किया?",
+    "oe": [
+      "1974, Pokhran (Rajasthan)",
+      "1998, Pokhran (Rajasthan)",
+      "1974, Kalpakkam (Tamil Nadu)",
+      "1980, Chandipur (Odisha)"
+    ],
+    "oh": [
+      "1974, पोखरण (राजस्थान)",
+      "1998, पोखरण (राजस्थान)",
+      "1974, कल्पक्कम (तमिलनाडु)",
+      "1980, चांदीपुर (ओडिशा)"
+    ],
+    "a": 0,
+    "e": "Bharat ne apna pehla parmanu parikshan 18 May 1974 ko Pokhran, Rajasthan ke Thar marusthal me kiya; iska kod-naam 'Smiling Buddha' tha aur ise shantipurn parmanu visfot (Peaceful Nuclear Explosion) kaha gaya. Is parikshan ke baad bharat ne 1998 me Pokhran-II naam se paanch parikshan kiye (Operation Shakti), jiske baad bharat ne khud ko parmanu shakti sanpann desh ghoshit kiya. Isliye 1974 tatha Pokhran ka jod sahi hai; 1998 wala vikalp Pokhran-II ka saal hai, pehla parikshan nahi. Kalpakkam (Tamil Nadu) me bharat ka fast breeder test reactor tatha anya parmanu suvidhaayein hain, lekin pehla parmanu visfot wahan nahi hua. Chandipur (Odisha) ek missile test range hai jahan mishailon ka parikshan hota hai - 1980 me wahan parmanu parikshan nahi hua. Exam point: pehla parmanu parikshan = 1974, Pokhran (Smiling Buddha); doosra = 1998 Pokhran-II (Operation Shakti); Chandipur = missile test range."
+  },
+  {
+    "p_id": "gs_phy_mp_04",
+    "qe": "Which of the following is a correct statement about radioactivity?",
+    "qh": "रेडियोधर्मिता के संबंध में निम्नलिखित में से कौन-सा कथन सही है?",
+    "oe": [
+      "It is a chemical process that can be speeded up by heating the substance",
+      "It is a spontaneous nuclear process, unaffected by external factors such as temperature and pressure",
+      "It occurs only in artificially prepared elements",
+      "It can be stopped by keeping the radioactive substance in a vacuum"
+    ],
+    "oh": [
+      "यह रासायनिक प्रक्रिया है जिसे पदार्थ को गर्म करके तेज़ किया जा सकता है",
+      "यह स्वतःस्फूर्त नाभिकीय प्रक्रिया है, जिस पर तापमान तथा दाब जैसे बाह्य कारकों का प्रभाव नहीं पड़ता",
+      "यह केवल कृत्रिम रूप से बनाए तत्वों में होती है",
+      "रेडियोधर्मी पदार्थ को निर्वात में रखकर इसे रोका जा सकता है"
+    ],
+    "a": 1,
+    "e": "Radiyodharmita (radioactivity) ek nabhikiya kriya hai, rasayanik nahi. Isme kisi ashabal nabhik (unstable nucleus) se apne aap alpha kan, beta kan ya gamma kirane nikal kar naya tatva ban jaata hai. Sabse mahatvapurn baat yah hai ki yah prakriya swatah-sfoorit (spontaneous) hoti hai - ise na tez kiya ja sakta hai na dheema; tapaman, dabav, rasayanik badlav ya nirvat (vacuum) rakhne se iski dar badalti nahi. Is karan radiydharmi padarth ki aayu (half-life) ek sthirank hoti hai, jise chaahe jaisi paristhiti me rakh dein, wahi rehti hai. Uranium, radium, thorium jaise tatva prakritik roop se bhi radiydharmi hain, isliye 'keval kritrim tatvon me' wala kathan galat hai. Fred Bq Becquerel ne 1896 me tab ise khoja jab unhe iska pata bhi nahi tha - yahi iski swatah-sfooritata ka sabse bada praman hai. Exam point: radiydharmita = swatah-sfoorit nabhik kriya, tapaman-dabav ka prabhav nahi, alpha-beta-gamma kirane nikalna; uranium tatha radium prakritik radiydharmi tatva hain."
+  },
+  {
+    "p_id": "gs_phy_mp_05",
+    "qe": "In a nuclear power plant, the role of a 'moderator' such as graphite or heavy water is to:",
+    "qh": "परमाणु ऊर्जा केंद्र में ग्रेफाइट या भारी जल जैसे 'मंदक' (moderator) की भूमिका क्या होती है?",
+    "oe": [
+      "Absorb the neutrons completely and stop the chain reaction",
+      "Slow down the fast neutrons so that they can sustain the fission chain reaction",
+      "Increase the energy of neutrons to make them faster",
+      "Cool the reactor core and generate steam"
+    ],
+    "oh": [
+      "न्यूट्रॉनों को पूर्णतः अवशोषित करके श्रृंखला अभिक्रिया रोकना",
+      "तेज़ न्यूट्रॉनों को धीमा करना ताकि वे विखंडन की श्रृंखला अभिक्रिया को बनाए रख सकें",
+      "न्यूट्रॉनों की ऊर्जा बढ़ाकर उन्हें और तेज़ बनाना",
+      "रिएक्टर कोर को ठंडा करना तथा भाप बनाना"
+    ],
+    "a": 1,
+    "e": "Vikhandan (fission) ke samay uranium-235 se jo naitron nikalte hain, ve bahut tez (fast) hote hain aur tez naitron se aage vikhandan karvana mushkil hota hai. Isliye reactor me graphite ya bhaari jal (heavy water) jaisa 'mandak' (moderator) rakha jaata hai, jiska kaam in tez naitron ki chaal ko dheema karna hai taaki ve aage chain reaction banaye rakhein. Control rods - jaise boron ya cadmium ki chhadiyan - naitron ko sokh (absorb) karti hain, jisse chain reaction niyantrit hoti hai ya band ho jaati hai; isliye poori tarah sokh lene wala vikalp control rods ka kaam bata raha hai, moderator ka nahi. Shitlan (coolant) woh drav ya gas hoti hai jo core se ushma lekar baahar jaati hai aur bhaap (steam) banakar turbine chalati hai; woh moderator se alag cheez hai. Is tarah moderator ka sahi kaam naitron ko dheema karna hai. Exam point: moderator (graphite/bhaari jal) = naitron dheeme karna; control rod (boron/cadmium) = naitron sokh kar chain reaction niyantrit karna; shitlan = ushma nikalna tatha bhaap banana."
+  },
+  {
+    "p_id": "gs_phy_mp_06",
+    "qe": "The nuclear reactors in India that use natural uranium as fuel require heavy water because:",
+    "qh": "भारत के जो परमाणु रिएक्टर ईंधन के रूप में प्राकृतिक यूरेनियम का उपयोग करते हैं, उनमें भारी जल की आवश्यकता होती है क्योंकि -",
+    "oe": [
+      "heavy water is cheaper than ordinary water and acts as fuel",
+      "heavy water absorbs very few neutrons and acts as a moderator with natural uranium",
+      "heavy water is a strong absorber of neutrons, which controls the reaction",
+      "heavy water is used as a coolant but not as a moderator"
+    ],
+    "oh": [
+      "भारी जल साधारण जल से सस्ता होता है और ईंधन का काम करता है",
+      "भारी जल बहुत कम न्यूट्रॉन अवशोषित करता है और प्राकृतिक यूरेनियम के साथ मंदक का काम करता है",
+      "भारी जल न्यूट्रॉनों का सशक्त अवशोषक है, जिससे अभिक्रिया नियंत्रित होती है",
+      "भारी जल शीतलक के रूप में प्रयुक्त होता है, मंदक के रूप में नहीं"
+    ],
+    "a": 1,
+    "e": "Prakritik uranium me vikhandan-yogya uranium-235 keval lagbhag 0.7% hota hai aur baaki uranium-238 hota hai. Sadharan jal (ordinary water) naitron ko kaafi sokh leta hai, isliye woh prakritik uranium ke saath chain reaction chalane me samarth nahi hota; uske liye samriddh (enriched) uranium chahiye hota hai. Bhar bhari jal (heavy water, D2O) ki khas baat hai ki woh naitron ko bahut kam sokhta hai, isliye woh mandak ke roop me bahut accha kaam karta hai aur prakritik uranium ke saath bhi chain reaction banaye rakhta hai. Isi karan bharat ke PHWR (Pressurised Heavy Water Reactor) - jaise Rawatbhata, Kalpakkam, Kakrapar, Kaiga tatha Narora - bhaari jal ka istemal karte hain. Bhaari jal itna sasta bhi nahi hai aur woh indhan ka kaam nahi karta, isliye pehla vikalp galat hai; naitron ka 'sashakt avshoshak' hone ka matlab hi hai ki woh us reactor ke liye upyogi nahi hoga, isliye teesra vikalp bhi galat hai. Chotha vikalp tabhi sahi hota jab bhaari jal keval shitlan ho - lekin uski mukhya bhoomika mandak ki hai. Exam point: PHWR = prakritik uranium plus bhaari jal mandak; bhaari jal naitron ko kam sokhta hai, isliye wo chain reaction banaye rakhta hai."
+  },
+  {
+    "p_id": "gs_phy_el_01",
+    "qe": "A 'n-type' semiconductor is obtained by doping silicon with which type of impurity, and what are the majority charge carriers?",
+    "qh": "सिलिकॉन को किस प्रकार की अशुद्धि मिलाकर 'n-प्रकार' अर्धचालक बनाया जाता है, तथा उसमें बहुसंख्यक आवेश वाहक कौन होते हैं?",
+    "oe": [
+      "Trivalent impurity such as boron; holes",
+      "Pentavalent impurity such as phosphorus; electrons",
+      "Trivalent impurity such as phosphorus; electrons",
+      "Pentavalent impurity such as boron; holes"
+    ],
+    "oh": [
+      "भोरॉन जैसी त्रिसंयोजी अशुद्धि; कोटर (holes)",
+      "फॉस्फोरस जैसी पंचसंयोजी अशुद्धि; इलेक्ट्रॉन",
+      "फॉस्फोरस जैसी त्रिसंयोजी अशुद्धि; इलेक्ट्रॉन",
+      "भोरॉन जैसी पंचसंयोजी अशुद्धि; कोटर"
+    ],
+    "a": 1,
+    "e": "Shuddh silicon me chaaron taraf se chaar electron bandhe hote hain. Jab usme paanch mukhya electron wali panchsanyoji ashuddhi (pentavalent impurity) - jaise phosphorus, arsenic ya antimony - daali jaati hai, to char electron bandhan me lag jaate hain aur paanchwa electron muzt reh jaata hai. Yahi muzt electron vidyut pravah karate hain, isliye aise ardhchalak ko n-type kehte hain (n = negative, kyunki vaahak electron negative hote hain) aur bahusankhyak vaahak electron hote hain. Iske ulta, jab trisanyoji ashuddhi (boron, aluminium, indium) daali jaati hai, to ek electron ki kami se ek khaali sthan ya 'kota' (hole) banta hai; use p-type kehte hain aur bahusankhyak vaahak kota hote hain. Isliye 'trisanyoji boron tatha electron' ya 'panchsanyoji boron tatha kota' jaisi jodiyaan galat hain, kyunki ashuddhi ka prakar tatha vaahak dono ulta ho jaate hain. Exam point: n-type = panchsanyoji ashuddhi (phosphorus), bahusankhyak vaahak electron; p-type = trisanyoji ashuddhi (boron), bahusankhyak vaahak kota."
+  },
+  {
+    "p_id": "gs_phy_el_02",
+    "qe": "A p-n junction diode allows current to flow:",
+    "qh": "p-n संधि डायोड धारा को बहने देता है -",
+    "oe": [
+      "In both directions equally",
+      "Mainly in forward bias, i.e. when p is connected to the positive terminal and n to the negative terminal",
+      "Only when connected to an alternating source",
+      "Only when both p and n are connected to the positive terminal"
+    ],
+    "oh": [
+      "दोनों दिशाओं में समान रूप से",
+      "मुख्यतः अग्र अभिनति में, अर्थात् p को धन टर्मिनल तथा n को ऋण टर्मिनल से जोड़ने पर",
+      "केवल प्रत्यावर्ती स्रोत से जोड़ने पर",
+      "केवल जब p तथा n दोनों धन टर्मिनल से जुड़े हों"
+    ],
+    "a": 1,
+    "e": "p-n junction diode ek adhichalak yantra hai jisme p-type tatha n-type ardhchalak jode jaate hain. Jab p-side ko positive tatha n-side ko negative terminal se joda jaata hai (ise agra abhinati ya forward bias kehte hain), to junction ke paas ka roka hat jaata hai aur dhara aasani se bahti hai; ise diode ka 'on' state kehte hain. Ulta connection karne par yaani ulta abhinati (reverse bias) me junction ki abrodhak parat chaudi ho jaati hai aur dhara na ke barabar rehti hai - ise 'off' state kehte hain; keval bahut kam 'leakej' dhara bahti hai. Isi khabhiyat ke karan diode ka upyog rectify - action me hota hai, jisse AC ko DC me badla jaata hai; anya prayogon me woh khata ke bina tarang ka 'pata lagane' (detector) ka kaam bhi karta hai. Isliye 'dono disha me samaan' ya 'dono terminal positive' wale vikalp galat hain. Exam point: diode = ek-tarfa dvara (forward bias me chalu, reverse bias me bandh); iska upyog rectifier me AC se DC banane ke liye hota hai."
+  },
+  {
+    "p_id": "gs_phy_el_03",
+    "qe": "A light emitting diode (LED) works on the principle that it:",
+    "qh": "प्रकाश उत्सर्जक डायोड (LED) किस सिद्धांत पर कार्य करता है?",
+    "oe": [
+      "Converts light into electrical energy when reverse biased",
+      "Converts electrical energy into light when a current is passed through it in forward bias",
+      "Works as a variable resistor whose resistance changes with light",
+      "Stores charge like a capacitor and releases light on discharge"
+    ],
+    "oh": [
+      "उलटी अभिनति में प्रकाश को विद्युत ऊर्जा में बदलता है",
+      "अग्र अभिनति में धारा प्रवाहित करने पर विद्युत ऊर्जा को प्रकाश में बदलता है",
+      "प्रकाश के साथ प्रतिरोध बदलने वाले परिवर्ती प्रतिरोधक की तरह काम करता है",
+      "संधारित्र की तरह आवेश संचित करके विसर्जन पर प्रकाश देता है"
+    ],
+    "a": 1,
+    "e": "LED ek vishesh prakar ka p-n junction diode hai jisme kuchh aise padarth (jaise gallium arsenic phosfide) ka istemal hota hai jo agra abhinati (forward bias) me ek electron tatha ek kota ke milan par urja ko prakash ke roop me bahar nikalte hain. Isi karan LED vidyut urja ko prakash urja me badalta hai tatha bijli ki khapat bahut kam karta hai, isliye ghar-gar me bulb, traffic signal tatha torches me LED ka upyog badh gaya hai. Prashn me 'light into electrical energy' (prakash se bijli) wala vikalp ulta hai - woh khoobi LED ke ulta 'solar cell' ki hoti hai (photovoltaic effect). Photo-diode ya LDR ka kaam prakash ke hisaab se dhara ya pratirodh badalna hota hai, isliye teesa vikalp unke liye sahi hai, LED ke liye nahi. LED kisi aavesh ko sanchit karke nahi rakhta, isliye capacitor jaisa vyavahar nahi karta. Exam point: LED = agra abhinati me vidyut urja ka prakash me rupantaran (electroluminescence); solar cell = prakash se bijli; LDR/photo-diode = prakash se pratirodh/dhara badalna (yahi jodiyaan prashn me baar-baar poochhi jaati hain)."
+  },
+  {
+    "p_id": "gs_phy_el_04",
+    "qe": "The transistor, which revolutionised electronics, was invented in 1947 at Bell Laboratories by:",
+    "qh": "इलेक्ट्रॉनिकी में क्रांति लाने वाले ट्रांजिस्टर का आविष्कार 1947 में बेल प्रयोगशाला में किसने किया?",
+    "oe": [
+      "John Bardeen, Walter Brattain and William Shockley",
+      "Michael Faraday and James Clerk Maxwell",
+      "Guglielmo Marconi and Karl Ferdinand Braun",
+      "Alexander Graham Bell and Thomas Edison"
+    ],
+    "oh": [
+      "जॉन बार्डीन, वाल्टर ब्रैटन तथा विलियम शॉक्ले",
+      "माइकल फैराडे तथा जेम्स क्लर्क मैक्सवेल",
+      "गुग्लिएल्मो मार्कोनी तथा कार्ल फर्डिनेंड ब्राउन",
+      "अलेक्जेंडर ग्राहम बेल तथा थॉमस एडिसन"
+    ],
+    "a": 0,
+    "e": "Transistor ka aavishkar 1947 me America ki Bell Laboratories me hua; John Bardeen, Walter Brattain tatha William Shockley ne milkar yeh kaam kiya, isliye teenon ko 1956 ka Physics ka Nobel Puraskar mila. Transistor ek ardhchalak (semiconductor) yantra hai jo chhoti si dhara se badi dhara ko niyantrit karta hai; isne bade aur bhaari valve (vacuum tube) ki jagah li, jisse radio, TV, computer tatha mobile phone jaisi chhoti aur sasti yantra-kranti sambhav hui. Michael Faraday tatha James Clerk Maxwell ke naam vidyut-chumbakiya prerna aur vidyut-chumbakiya tarangon ke siddhanton se jude hain, transistor se nahi. Marconi tatha Braun ka naam radio sanchar se juda hai (Braun ko 1909 me Nobel mila). Alexander Graham Bell ne telephone banaya aur Thomas Edison ne bulb-bijli ke kshetra me kaam kiya; inme se kisi ne transistor nahi banaya. Exam point: transistor = 1947, Bell Labs, John Bardeen, Walter Brattain tatha William Shockley (Nobel 1956)."
+  },
+  {
+    "p_id": "gs_phy_el_05",
+    "qe": "In a semiconductor, when the temperature is increased, its electrical resistance generally:",
+    "qh": "अर्धचालक में तापमान बढ़ाने पर उसका विद्युत प्रतिरोध सामान्यतः -",
+    "oe": [
+      "Increases, as in metals",
+      "Decreases, because more charge carriers are generated",
+      "Remains exactly constant",
+      "Becomes zero suddenly at room temperature"
+    ],
+    "oh": [
+      "धातुओं की तरह बढ़ जाता है",
+      "घट जाता है, क्योंकि अधिक आवेश वाहक उत्पन्न होते हैं",
+      "बिल्कुल अपरिवर्तित रहता है",
+      "कमरे के तापमान पर अचानक शून्य हो जाता है"
+    ],
+    "a": 1,
+    "e": "Dhatu (metal) tatha ardhchalak (semiconductor) me tapaman ka prabhav ulta hota hai. Dhatu me tapaman badhne par aayan (ions) ki kaampan badhti hai, jisse electron ka rasta rokta hai aur pratirodh badh jaata hai - isliye bulb ka taar (filament) garam hokar zyada pratirodh deta hai. Ardhchalak me ulta hota hai: tapaman badhne par zyada electron-kota jode (electron-hole pairs) bante hain, yaani aavesh vaahak badh jaate hain, isliye pratirodh ghat jaata hai tatha dhara badh jaati hai. Yahi karan hai ki ardhchalak ka tapaman-gunank (temperature coefficient) rin (negative) hota hai; isi gun se thermistor jaise yantra tapaman naapne me kaam aate hain. 'Dhatuon ki tarah badhta hai', 'sada sthir', ya 'kamre ke tapaman par shunya' - yeh teeno kathan semiconductor ke vyavahar se mel nahi khaate. Exam point: dhatu = tapaman badhne par pratirodh badhta hai (positive coefficient); ardhchalak = tapaman badhne par pratirodh ghatta hai (negative coefficient), kyunki vaahak badh jaate hain."
+  },
+  {
+    "p_id": "gs_phy_el_06",
+    "qe": "Which of the following is an intrinsic (pure) semiconductor?",
+    "qh": "निम्नलिखित में से कौन-सा आंतरिक (शुद्ध) अर्धचालक है?",
+    "oe": [
+      "Silicon doped with phosphorus",
+      "Pure silicon and pure germanium",
+      "Silicon doped with boron",
+      "Copper and aluminium"
+    ],
+    "oh": [
+      "फॉस्फोरस मिलाया हुआ सिलिकॉन",
+      "शुद्ध सिलिकॉन तथा शुद्ध जरमेनियम",
+      "बोरॉन मिलाया हुआ सिलिकॉन",
+      "ताँबा तथा एल्यूमिनियम"
+    ],
+    "a": 1,
+    "e": "Ardhchalak do tarah ke hote hain - antarik (intrinsic) yaani shuddh, tatha bahya (extrinsic) yaani ashuddhi-milaya hua. Antrik ardhchalak me koi bahari ashuddhi nahi hoti; usme vaahak electron tatha kota dono barabar sankhya me hote hain aur unka nirman keval tapaman ke karan hota hai. Shuddh silicon tatha shuddh germanium is ke prasiddh udaharan hain. Jab silicon me phosphorus (panchsanyoji) milaya jaata hai to woh n-type ban jaata hai, aur boron (trisanyoji) milane par p-type - isliye dono 'doped' ya bahya ardhchalak hain, antrik nahi. Tamba (copper) tatha aluminium achhe chalak (conductor) hain; unme vidyut aasani se bahti hai, isliye woh ardhchalak nahi hain. Isliye is prashn ka sahi jawab shuddh silicon tatha shuddh germanium hai. Exam point: antrik (intrinsic) ardhchalak = shuddh silicon ya germanium; n-type = panchsanyoji ashuddhi; p-type = trisanyoji ashuddhi; tamba tatha aluminium chalak hain."
+  }
+]
