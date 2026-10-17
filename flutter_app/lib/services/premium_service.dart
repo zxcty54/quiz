@@ -91,6 +91,34 @@ class PremiumService {
     return until != null && until.isAfter(DateTime.now());
   }
 
+  // ---------- Owner Mode (app malik ke liye sab unlock) ----------
+  static const String _ownerKey = 'owner_full_access';
+
+  static Future<bool> isOwnerMode() async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getBool(_ownerKey) ?? false;
+  }
+
+  static Future<void> setOwnerMode(bool value) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool(_ownerKey, value);
+  }
+
+  /// Admin Hub wala Master PIN hi chalega (admin_config table se check)
+  static Future<bool> verifyOwnerPin(String pin) async {
+    try {
+      final res = await _client
+          .from('admin_config')
+          .select('master_pin')
+          .eq('master_pin', pin.trim())
+          .maybeSingle();
+      return res != null;
+    } catch (e) {
+      debugPrint('Owner PIN verify error: $e');
+      return false;
+    }
+  }
+
   // ---------- Requests ----------
   static Future<Map<String, dynamic>?> fetchMyLatestRequest() async {
     try {

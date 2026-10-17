@@ -61,6 +61,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
   Timer? _refreshTimer;
   bool _refreshPending = false;
   bool _isPremium = false;
+  bool _isOwner = false;
   DateTime? _premiumUntil;
 
   @override
@@ -92,10 +93,13 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
 
   Future<void> _loadPremium() async {
     final until = await PremiumService.fetchPremiumUntil();
+    final owner = await PremiumService.isOwnerMode();
     if (!mounted) return;
     setState(() {
       _premiumUntil = until;
-      _isPremium = until != null && until.isAfter(DateTime.now());
+      _isOwner = owner;
+      _isPremium =
+          owner || (until != null && until.isAfter(DateTime.now()));
     });
   }
 
@@ -240,11 +244,16 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                   style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 10.5, fontWeight: FontWeight.w800),
                 ),
                 const SizedBox(height: 3),
-                Text(
-                  _isPremium
-                      ? '👑 Premium Active • ${_premiumUntil!.difference(DateTime.now()).inDays + 1} din baki — saare Set khule hai'
-                      : '🔓 Set 01 Free • Baki Set Premium (₹49/month)',
-                  style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 10.5, fontWeight: FontWeight.w700),
+                GestureDetector(
+                  onTap: _openPaywall,
+                  child: Text(
+                    _isOwner
+                        ? '🛠 Owner Mode ON • Sab Set unlock (band karne ke liye dabao)'
+                        : (_isPremium
+                            ? '👑 Premium Active • ${_premiumUntil!.difference(DateTime.now()).inDays + 1} din baki — saare Set khule hai'
+                            : '🔓 Set 01 Free • Baki Set Premium (₹49/month)'),
+                    style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 10.5, fontWeight: FontWeight.w700),
+                  ),
                 ),
               ],
             ),

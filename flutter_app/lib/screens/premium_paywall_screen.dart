@@ -26,6 +26,7 @@ class _PremiumPaywallScreenState extends State<PremiumPaywallScreen> {
   bool _loading = true;
   Map<String, dynamic> _config = {};
   DateTime? _premiumUntil;
+  bool _isOwner = false;
   Map<String, dynamic>? _myRequest;
 
   File? _screenshot;
@@ -68,14 +69,119 @@ class _PremiumPaywallScreenState extends State<PremiumPaywallScreen> {
   Future<void> _loadAll() async {
     final config = await PremiumService.getPaymentConfig();
     final until = await PremiumService.fetchPremiumUntil();
+    final owner = await PremiumService.isOwnerMode();
     final req = await PremiumService.fetchMyLatestRequest();
     if (!mounted) return;
     setState(() {
       _config = config;
       _premiumUntil = until;
+      _isOwner = owner;
       _myRequest = req;
       _loading = false;
     });
+  }
+
+  Future<void> _turnOffOwner() async {
+    await PremiumService.setOwnerMode(false);
+    if (!mounted) return;
+    setState(() => _isOwner = false);
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+          content: Text('Owner Mode band — ab student wala view dikhega.')),
+    );
+  }
+
+  Future<void> _showOwnerPinDialog() async {
+    final pinCtrl = TextEditingController();
+    bool verifying = false;
+    await showDialog(
+      context: context,
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setDialogState) => AlertDialog(
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          title: const Row(
+            children: [
+              Icon(Icons.security_rounded, color: Color(0xFFDC2626)),
+              SizedBox(width: 8),
+              Text('Owner Access',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
+            ],
+          ),
+          content: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const Text(
+                'Admin wala Master PIN dalo — is phone par saare Set unlock ho jayenge.',
+                style: TextStyle(fontSize: 12.5),
+              ),
+              const SizedBox(height: 12),
+              TextField(
+                controller: pinCtrl,
+                obscureText: true,
+                keyboardType: TextInputType.number,
+                autofocus: true,
+                decoration: const InputDecoration(
+                  labelText: 'Master PIN',
+                  border: OutlineInputBorder(),
+                  prefixIcon: Icon(Icons.lock_outline),
+                ),
+              ),
+            ],
+          ),
+          actions: [
+            TextButton(
+              onPressed: () => Navigator.pop(ctx),
+              child: const Text('Cancel', style: TextStyle(color: Colors.grey)),
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF2563EB),
+                foregroundColor: Colors.white,
+              ),
+              onPressed: verifying
+                  ? null
+                  : () async {
+                      final pin = pinCtrl.text.trim();
+                      if (pin.isEmpty) return;
+                      setDialogState(() => verifying = true);
+                      final ok = await PremiumService.verifyOwnerPin(pin);
+                      if (!mounted) return;
+                      if (ok) {
+                        await PremiumService.setOwnerMode(true);
+                        if (!mounted) return;
+                        Navigator.pop(ctx);
+                        setState(() => _isOwner = true);
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text(
+                                '👑 Owner Mode ON — saare Set unlock ho gaye!'),
+                            backgroundColor: Color(0xFF16A34A),
+                          ),
+                        );
+                      } else {
+                        setDialogState(() => verifying = false);
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text('Galat PIN! Access nahi milega.'),
+                            backgroundColor: Colors.redAccent,
+                          ),
+                        );
+                      }
+                    },
+              child: verifying
+                  ? const SizedBox(
+                      width: 15,
+                      height: 15,
+                      child: CircularProgressIndicator(
+                          color: Colors.white, strokeWidth: 2))
+                  : const Text('Unlock'),
+            ),
+          ],
+        ),
+      ),
+    );
+    pinCtrl.dispose();
   }
 
   Future<void> _refreshStatus() async {
@@ -314,7 +420,41 @@ class _PremiumPaywallScreenState extends State<PremiumPaywallScreen> {
                   ),
                   const SizedBox(height: 14),
 
-                  if (_isPremium)
+                  if (!_isOwner)
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton.icon(
+                        onPressed: _showOwnerPinDialog,
+                        icon: Icon(Icons.admin_panel_settings_rounded,
+                            size: 16, color: subColor),
+                        label: Text('Owner ho? Owner Access',
+                            style: TextStyle(
+                                color: subColor,
+                                fontSize: 11.5,
+                                fontWeight: FontWeight.w700)),
+                      ),
+                    ),
+
+                  if (_isOwner) ...[
+                    _statusCard(
+                      cardBg,
+                      const Color(0xFF2563EB),
+                      '🛠 Owner Mode Chalu Hai',
+                      'Is phone par saare Set tumhare liye unlock hai — live me bhi bina rukawat check/test kar sakte ho. '
+                          'Student ko kaisa dikhta hai, wo dekhna ho to Owner Mode band karke dekho.',
+                      textColor,
+                      subColor,
+                    ),
+                    const SizedBox(height: 10),
+                    SizedBox(
+                      width: double.infinity,
+                      child: OutlinedButton.icon(
+                        onPressed: _turnOffOwner,
+                        icon: const Icon(Icons.lock_rounded, size: 17),
+                        label: const Text('Owner Mode Band Karo'),
+                      ),
+                    ),
+                  ] else if (_isPremium)
                     _statusCard(
                       cardBg,
                       const Color(0xFF16A34A),
