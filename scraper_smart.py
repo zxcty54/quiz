@@ -948,7 +948,6 @@ def scrape_news_on_air():
 # 3. INDIA.GOV.IN
 INDIA_GOV_PAGES = [
     "https://www.india.gov.in/",
-    "https://www.india.gov.in/spotlight",
 ]
 
 
@@ -962,20 +961,33 @@ def scrape_india_gov():
             continue
 
         soup = BeautifulSoup(html, "lxml")
+        # "News / Press Release" panel ke card hi umeedwar banege: har card par
+        # khabar ka samay ("X min/hr ago") chhapa hota hai or uska link asli
+        # site (NewsOnAir/PIB) par jata hai — isiliye bahari link chalega.
+        # Category/Scheme wale page-panel me kabhi khabar nahi mili, rend=sifar.
         for a in soup.find_all("a", href=True):
+            txt = a.get_text(" ", strip=True)
+            m = re.search(r'\b\d{1,3}\s*(?:minutes?|mins?|hours?|hrs?)\s+ago\b',
+                          txt, flags=re.I)
+            if not m:
+                continue
+
             href = clean_url(urljoin(page_url, a.get("href")))
-            title = clean_title(a.get_text(" ", strip=True))
-
-            if not href or len(title) < 20:
-                continue
-            if "india.gov.in" not in href:
+            if not href or not href.startswith("http"):
                 continue
 
-            low = title.lower()
-            if any(x in low for x in ["home", "about", "contact", "feedback", "sitemap", "login"]):
+            span = a.select_one('span[class*="ellipsis"]')
+            if span:
+                title = clean_title(span.get_text(" ", strip=True))
+            else:
+                title = clean_title(re.sub(
+                    r'^.*?\d{1,3}\s*(?:minutes?|mins?|hours?|hrs?)\s+ago\s*',
+                    '', txt, flags=re.I))
+
+            if len(title) < 20:
                 continue
 
-            candidates.append((title, href, _card_time_hint(a)))
+            candidates.append((title, href, m.group(0)))
 
     unique = []
     seen = set()
