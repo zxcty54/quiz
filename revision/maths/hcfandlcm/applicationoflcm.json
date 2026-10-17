@@ -1,0 +1,306 @@
+[
+  {
+    "p_id": "applicationoflcm_1",
+    "qe": "Find the least number divisible by 2, 3, 5, 6, 9 and 18, which is a perfect square.",
+    "qh": "2, 3, 5, 6, 9 और 18 से विभाज्य सबसे छोटी संख्या ज्ञात कीजिए, जो एक पूर्ण वर्ग है।",
+    "oe": [
+      "900",
+      "400",
+      "144",
+      "3600"
+    ],
+    "oh": [
+      "900",
+      "400",
+      "144",
+      "3600"
+    ],
+    "a": 0,
+    "e": "Method 1 (Prime Factorisation Method):\nStep 1: दी गई संख्याओं (2, 3, 5, 6, 9, 18) का LCM निकालें:\n- $2 = 2$\n- $3 = 3$\n- $5 = 5$\n- $6 = 2 \\times 3$\n- $9 = 3^2$\n- $18 = 2 \\times 3^2$\n$$\\text{LCM} = 2^1 $\\times$ 3^2 $\\times$ 5^1 = 90$$\nStep 2: पूर्ण वर्ग बनाने के लिए सभी अभाज्य गुणनखंडों की घात सम (even) होनी चाहिए:\n- $3^2$ पहले से ही पूर्ण वर्ग है।\n- $2^1$ और $5^1$ को युग्मित करने के लिए $2 \\times 5 = 10$ से गुणा करना होगा:\n$$\\text{पूर्ण वर्ग संख्या} = 90 $\\times$ (2 $\\times$ 5) = 90 $\\times$ 10 = 900$$\nअतः सही विकल्प  900 है।\n\nMethod 2 (Option Testing Method):\n- 144, 5 से विभाज्य नहीं है।\n- 400, 9 और 18 से विभाज्य नहीं है।\n- 900 सभी संख्याओं से विभाज्य सबसे छोटी पूर्ण वर्ग संख्या है ($30^2 = 900$).\nअतः सही उत्तर '900' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_2",
+    "qe": "What is the smallest perfect square number which is completely divisible by 4, 6, 9, 12 and 15?",
+    "qh": "वह सबसे छोटी पूर्ण वर्ग संख्या कौन सी है जो 4, 6, 9, 12 और 15 से पूर्णतः विभाज्य है?",
+    "oe": [
+      "900",
+      "961",
+      "784",
+      "841"
+    ],
+    "oh": [
+      "900",
+      "961",
+      "784",
+      "841"
+    ],
+    "a": 0,
+    "e": "Method 1 (Prime Factorisation Method):\nStep 1: 4, 6, 9, 12, 15 का LCM ज्ञात करें:\n- $4 = 2^2$\n- $6 = 2 \\times 3$\n- $9 = 3^2$\n- $12 = 2^2 \\times 3$\n- $15 = 3 \\times 5$\n$$\\text{LCM} = 2^2 $\\times$ 3^2 $\\times$ 5^1 = 4 $\\times$ 9 $\\times$ 5 = 180$$\nStep 2: इसे पूर्ण वर्ग बनाने के लिए अयुग्मित गुणनखंड 5 से गुणा करें:\n$$\\text{संख्या} = 180 $\\times$ 5 = 900$$\nअतः सही विकल्प  900 है।\n\nMethod 2 (Divisibility Elimination):\nसंख्या 15 से विभाज्य होने के लिए इकाई अंक 0 या 5 होना चाहिए। विकल्पों (b) 961, (c) 784, और (d) 841 में इकाई अंक 0 नहीं है। केवल 900 ही संभव है।\nअतः सही उत्तर '900' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_3",
+    "qe": "Find the least number which is exactly divisible by 20, 28, 34, 60 and 75.",
+    "qh": "वह सबसे छोटी संख्या ज्ञात कीजिए जो 20, 28, 34, 60 और 75 से पूर्णतः विभाज्य हो।",
+    "oe": [
+      "34500",
+      "35900",
+      "35700",
+      "36220"
+    ],
+    "oh": [
+      "34500",
+      "35900",
+      "35700",
+      "36220"
+    ],
+    "a": 2,
+    "e": "Method 1 (Prime Factorisation Method):\nStep 1: प्रत्येक संख्या के अभाज्य गुणनखंड लिखें:\n- $20 = 2^2 \\times 5$\n- $28 = 2^2 \\times 7$\n- $34 = 2 \\times 17$\n- $60 = 2^2 \\times 3 \\times 5$\n- $75 = 3 \\times 5^2$\nStep 2: प्रत्येक गुणनखंड की उच्चतम घात लेकर LCM निकालें:\n$$\\text{LCM} = 2^2 $\\times$ 3^1 $\\times$ 5^2 $\\times$ 7^1 $\\times$ 17^1$$\n$$\\text{LCM} = 4 $\\times$ 3 $\\times$ 25 $\\times$ 7 $\\times$ 17 = 300 $\\times$ 119 = 35700$$\nअतः सही विकल्प  35700 है।\n\nMethod 2 (Divisibility Rule of 17):\nचूँकि 34 सूची में है, अतः संख्या 17 से विभाज्य होनी चाहिए। विकल्पों में केवल 35700 ही 17 से पूर्णतः विभाज्य है ($35700 / 17 = 2100$).\nअतः सही उत्तर '35700' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_4",
+    "qe": "Six bells begin to toll together and toll, respectively, at intervals of 3, 4, 6, 7, 8 and 12 seconds. After how many seconds, will they toll together again?",
+    "qh": "छह घंटियाँ एक साथ बजना शुरू होती हैं और क्रमशः 3, 4, 6, 7, 8 और 12 सेकंड के अंतराल पर बजती हैं। कितने सेकंड के बाद वे फिर से एक साथ बजेंगी?",
+    "oe": [
+      "167",
+      "168",
+      "176",
+      "186"
+    ],
+    "oh": [
+      "167",
+      "168",
+      "176",
+      "186"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM of Time Intervals Method):\nStep 1: घंटियों के पुनः एक साथ बजने का समय अंतरालों का LCM होता है:\n$$\\text{समय} = \\text{LCM}(3, 4, 6, 7, 8, 12)$$\nStep 2: अभाज्य गुणनखंड विधि:\n- $3 = 3^1$\n- $4 = 2^2$\n- $6 = 2 \\times 3$\n- $7 = 7^1$\n- $8 = 2^3$\n- $12 = 2^2 \\times 3$\n$$\\text{LCM} = 2^3 $\\times$ 3^1 $\\times$ 7^1 = 8 $\\times$ 3 $\\times$ 7 = 168\\text{ सेकंड}$$\nअतः सही विकल्प  168 है।\n\nMethod 2 (Division Method):\n$\\text{LCM}(3, 4, 6, 8, 12) = 24$. अब $\\text{LCM}(24, 7) = 24 \\times 7 = 168$ सेकंड।\nअतः सही उत्तर '168' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_5",
+    "qe": "Six bells commence tolling together at 7 : 59 am. They toll at intervals of 3, 6, 9, 12 and 15 seconds respectively. How many time will they toll together till 8:16 am? (excluding the toll at 7:59 am)",
+    "qh": "छह घंटियाँ सुबह 7:59 बजे एक साथ बजना शुरू करती हैं। वे क्रमशः 3, 6, 9, 12 और 15 सेकंड के अंतराल पर बजती हैं। सुबह 8:16 बजे तक वे कितनी बार एक साथ बजेंगी? (7:59 बजे बजने वाली घंटी को छोड़कर)",
+    "oe": [
+      "5",
+      "6",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "5",
+      "6",
+      "3",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (Interval Frequency Method):\nStep 1: अंतरालों (3, 6, 9, 12, 15 सेकंड) का LCM निकालें:\n$$\\text{LCM} = 2^2 $\\times$ 3^2 $\\times$ 5 = 4 $\\times$ 9 $\\times$ 5 = 180\\text{ सेकंड}$$\nमिनटों में बदलने पर: $180 / 60 = 3$ मिनट।\nStep 2: 7:59 am से 8:16 am के बीच की कुल समयावधि निकालें:\n$$\\text{कुल समय} = 16 - (-1) = 17\\text{ मिनट}$$\nStep 3: 7:59 am के बाद एक साथ बजने की संख्या:\n$$\\text{संख्या} = $\\le$ft\\lfloor $\\frac{17}{3}$ \\right\\rfloor = 5\\text{ बार}$$\n(नोट: घंटियाँ 8:02, 8:05, 8:08, 8:11, और 8:14 am पर एक साथ बजेंगी)।\nअतः सही विकल्प  5 है।\n\nMethod 2 (Timeline Counting):\n17 मिनट में 3-3 मिनट के 5 पूर्ण अंतराल आते हैं: $17 // 3 = 5$.\nअतः सही उत्तर '5' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_6",
+    "qe": "The least number which is exactly divisible by 5, 6, 8, 10 and 12 is:",
+    "qh": "वह सबसे छोटी संख्या जो 5, 6, 8, 10 और 12 से पूर्णतः विभाज्य है, वह है:",
+    "oe": [
+      "180",
+      "150",
+      "240",
+      "120"
+    ],
+    "oh": [
+      "180",
+      "150",
+      "240",
+      "120"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM Formula Method):\nStep 1: संख्याओं 5, 6, 8, 10, 12 का LCM ज्ञात करें:\n- $5 = 5$\n- $6 = 2 \\times 3$\n- $8 = 2^3$\n- $10 = 2 \\times 5$\n- $12 = 2^2 \\times 3$\nStep 2: $\\text{LCM} = 2^3 \\times 3 \\times 5 = 8 \\times 3 \\times 5 = 120$.\nअतः सही विकल्प  120 है।\n\nMethod 2 (Option Check Method):\n120 इन सभी संख्याओं से पूर्णतः विभाज्य सबसे छोटी संख्या है।\nअतः सही उत्तर '120' है।\n\nIs prashn ka moolaadhaar sankhya aur shesh ka niyam hai. Vikalp 180, 150, 240 is hal se mel nahi khaate. Exam point: sankhya aur shesh ka niyam - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "applicationoflcm_7",
+    "qe": "Five bells ring together at the intervals of 3, 5, 8, 9 and 10 seconds. All the bells ring simultaneously at the same time. They will again ring simultaneously after _____",
+    "qh": "पाँच घंटियाँ 3, 5, 8, 9 और 10 सेकंड के अंतराल पर एक साथ बजती हैं। सभी घंटियाँ एक ही समय पर एक साथ बजती हैं। वे फिर से एक साथ कितने समय बाद बजेंगी?",
+    "oe": [
+      "8 minutes",
+      "9 minutes",
+      "4 minutes",
+      "6 minutes"
+    ],
+    "oh": [
+      "8 minutes",
+      "9 minutes",
+      "4 minutes",
+      "6 minutes"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM & Unit Conversion Method):\nStep 1: अंतरालों (3, 5, 8, 9, 10) का LCM निकालें:\n- $3 = 3$\n- $5 = 5$\n- $8 = 2^3$\n- $9 = 3^2$\n- $10 = 2 \\times 5$\n$$\\text{LCM} = 2^3 $\\times$ 3^2 $\\times$ 5 = 8 $\\times$ 9 $\\times$ 5 = 360\\text{ सेकंड}$$\nStep 2: सेकंड को मिनटों में बदलें:\n$$\\text{समय} = $\\frac{360}{60}$ = 6\\text{ मिनट}$$\nअतः सही विकल्प  6 minutes है।\n\nMethod 2 (Direct Conversion):\n$360$ सेकंड = $6$ मिनट।\nअतः सही उत्तर '6 minutes' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_8",
+    "qe": "What is the smallest multiple of 7, which when divided by 8, 9, 12 and 15 leaves a remainder of 5 in each case?",
+    "qh": "7 का वह सबसे छोटा गुणज कौन सा है, जिसे 8, 9, 12 और 15 से विभाजित करने पर प्रत्येक स्थिति में 5 शेषफल बचता है?",
+    "oe": [
+      "365",
+      "1085",
+      "2525",
+      "725"
+    ],
+    "oh": [
+      "365",
+      "1085",
+      "2525",
+      "725"
+    ],
+    "a": 1,
+    "e": "Method 1 (Linear Congruence Method):\nStep 1: 8, 9, 12, 15 का LCM ज्ञात करें:\n$$\\text{LCM}(8, 9, 12, 15) = 360$$\nStep 2: अभीष्ट संख्या का रूप होगा: $N = 360k + 5$.\nStep 3: संख्या 7 का गुणज होनी चाहिए:\n$$360k + 5 = (7 $\\times$ 51k + 3k) + 5 = 3k + 5 $\\pm$od 7$$\n$$(3k + 5)$$ को 7 से विभाज्य होना चाहिए:\n- यदि $k = 1$: $3(1) + 5 = 8$ (7 से विभाज्य नहीं)\n- यदि $k = 2$: $3(2) + 5 = 11$ (7 से विभाज्य नहीं)\n- यदि $k = 3$: $3(3) + 5 = 14$ (7 से पूर्णतः विभाज्य)\nStep 4: $k = 3$ रखने पर:\n$$N = 360(3) + 5 = 1080 + 5 = 1085$$\nअतः सही विकल्प  1085 है।\n\nMethod 2 (Option Testing Method):\nविकल्पों की 7 से विभाज्यता जाँचें:\n- $365 / 7 = 52.14$ (नहीं)\n- $1085 / 7 = 155$ (पूर्णतः विभाज्य)\nसाथ ही $1085 = 360 \\times 3 + 5$ (शेषफल 5 देता है)।\nअतः सही उत्तर '1085' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_9",
+    "qe": "Find the smallest natural number 'x' which must be subtracted from 1800 so that (1800 - x) is divided by 7, 11 and 23 leaving a remainder of 5 in each case.",
+    "qh": "वह सबसे छोटी प्राकृतिक संख्या 'x' ज्ञात कीजिए जिसे 1800 में से घटाया जाना चाहिए ताकि (1800 - x) को 7, 11 और 23 से विभाजित करने पर प्रत्येक स्थिति में 5 शेषफल बचे।",
+    "oe": [
+      "24",
+      "25",
+      "26",
+      "20"
+    ],
+    "oh": [
+      "24",
+      "25",
+      "26",
+      "20"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM & Remainder Method):\nStep 1: 7, 11 और 23 तीनों अभाज्य संख्याएँ हैं, अतः इनका LCM:\n$$\\text{LCM}(7, 11, 23) = 7 $\\times$ 11 $\\times$ 23 = 77 $\\times$ 23 = 1771$$\nStep 2: 5 शेषफल देने वाली संख्या:\n$$N = 1771k + 5$$\n1800 से निकटतम छोटी संख्या के लिए $k = 1$ रखने पर:\n$$N = 1771 + 5 = 1776$$\nStep 3: $1800 - x = 1776$ समीकरण से $x$ निकालें:\n$$x = 1800 - 1776 = 24$$\nअतः सही विकल्प  24 है।\n\nMethod 2 (Direct Subtraction Verification):\n$1800 - 24 = 1776$.\n$1776 - 5 = 1771$, जो $7 \\times 11 \\times 23$ से पूर्णतः विभाज्य है।\nअतः सही उत्तर '24' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_10",
+    "qe": "The largest number of four digits that is exactly divisible by 17 and 36 is:",
+    "qh": "चार अंकों की वह सबसे बड़ी संख्या जो 17 और 36 से पूर्णतः विभाज्य है:",
+    "oe": [
+      "8568",
+      "9180",
+      "9792",
+      "7958"
+    ],
+    "oh": [
+      "8568",
+      "9180",
+      "9792",
+      "7958"
+    ],
+    "a": 2,
+    "e": "Method 1 (Division Method from Largest 4-Digit Number):\nStep 1: 17 और 36 सह-अभाज्य हैं, अतः इनका LCM निकालें:\n$$\\text{LCM}(17, 36) = 17 $\\times$ 36 = 612$$\nStep 2: चार अंकों की सबसे बड़ी संख्या 9999 को 612 से विभाजित करें:\n$$9999 = 612 $\\times$ 16 + 207$$\nयहाँ शेषफल = 207 है।\nStep 3: चार अंकों की सबसे बड़ी विभाज्य संख्या निकालें:\n$$\\text{संख्या} = 9999 - 207 = 9792$$\nअतः सही विकल्प  9792 है।\n\nMethod 2 (Direct Multiplier Verification):\n$612 \\times 16 = 9792$.\n$612 \\times 17 = 10404$ (5 अंकों की हो जाती है)।\nअतः सही उत्तर '9792' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_11",
+    "qe": "The least number which should be added to 1351 so that the sum is exactly divisible by 2, 4, 6 and 8 is:",
+    "qh": "1351 में वह सबसे छोटी संख्या कौन सी जोड़ी जानी चाहिए ताकि प्राप्त योग 2, 4, 6 और 8 से पूर्णतः विभाज्य हो:",
+    "oe": [
+      "13",
+      "11",
+      "15",
+      "17"
+    ],
+    "oh": [
+      "13",
+      "11",
+      "15",
+      "17"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM & Remainder Method):\nStep 1: 2, 4, 6 और 8 का LCM निकालें:\n$$\\text{LCM}(2, 4, 6, 8) = 24$$\nStep 2: 1351 को 24 से विभाजित करें:\n$$1351 = 24 $\\times$ 56 + 7$$\nयहाँ शेषफल = 7 है।\nStep 3: संख्या को 24 से पूर्णतः विभाज्य बनाने के लिए जोड़ी जाने वाली न्यूनतम संख्या:\n$$\\text{जोड़ी जाने वाली संख्या} = 24 - 7 = 17$$\nStep 4: योग = $1351 + 17 = 1368$ (जो 24 से विभाज्य है)।\nअतः सही विकल्प  17 है।\n\nMethod 2 (Option Testing Method):\n- $1351 + 17 = 1368$.\n- 1368 के अंतिम तीन अंक 368 हैं जो 8 से विभाज्य हैं, तथा अंकों का योग $1+3+6+8 = 18$ है जो 3 से विभाज्य है। अतः यह 24 से पूर्ण विभाज्य है।\nअतः सही उत्तर '17' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_12",
+    "qe": "What is the greatest six digits number which when divided by each of 16, 24, 72 and 84, leaves the remainder 15?",
+    "qh": "छह अंकों की वह सबसे बड़ी संख्या कौन सी है जिसे 16, 24, 72 और 84 में से प्रत्येक से विभाजित करने पर 15 शेषफल बचता है?",
+    "oe": [
+      "999981",
+      "999951",
+      "999963",
+      "999915"
+    ],
+    "oh": [
+      "999981",
+      "999951",
+      "999963",
+      "999915"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM and Remainder Algorithm Method):\nStep 1: 16, 24, 72 और 84 का LCM निकालें:\n- $16 = 2^4$\n- $24 = 2^3 \\times 3$\n- $72 = 2^3 \\times 3^2$\n- $84 = 2^2 \\times 3 \\times 7$\n$$\\text{LCM} = 2^4 $\\times$ 3^2 $\\times$ 7 = 16 $\\times$ 9 $\\times$ 7 = 1008$$\nStep 2: छह अंकों की सबसे बड़ी संख्या 999999 को 1008 से भाग दें:\n$$999999 = 1008 $\\times$ 992 + 63$$\nयहाँ शेषफल = 63 है।\nStep 3: 1008 से पूर्णतः विभाज्य छह अंकों की सबसे बड़ी संख्या:\n$$999999 - 63 = 999936$$\nStep 4: प्रत्येक स्थिति में 15 शेषफल छोड़ने वाली संख्या:\n$$\\text{संख्या} = 999936 + 15 = 999951$$\nअतः सही विकल्प  999951 है।\n\nMethod 2 (Divisibility Verification):\n$999951 - 15 = 999936$.\n$999936 / 1008 = 992$ (पूर्णतः विभाज्य)।\nअतः सही उत्तर '999951' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_13",
+    "qe": "What is the largest four digit number which when divided by 6, 7 and 8 leaves remainder 4, 5 and 6 respectively?",
+    "qh": "चार अंकों की वह सबसे बड़ी संख्या कौन सी है जिसे 6, 7 और 8 से विभाजित करने पर क्रमशः 4, 5 और 6 शेषफल बचता है?",
+    "oe": [
+      "9910",
+      "9920",
+      "9921",
+      "9912"
+    ],
+    "oh": [
+      "9910",
+      "9920",
+      "9921",
+      "9912"
+    ],
+    "a": 0,
+    "e": "Method 1 (Common Difference Remainder Method):\nStep 1: भाजक और शेषफल का समान अंतर ($k$) निकालें:\n$$6 - 4 = 2$$\n$$7 - 5 = 2$$\n$$8 - 6 = 2$$\nअतः समान अंतर $k = 2$ है।\nStep 2: 6, 7 और 8 का LCM निकालें:\n$$\\text{LCM}(6, 7, 8) = 168$$\nStep 3: चार अंकों की सबसे बड़ी संख्या 9999 को 168 से विभाजित करें:\n$$9999 = 168 $\\times$ 59 + 87$$\nStep 4: 168 से विभाज्य चार अंकों की सबसे बड़ी संख्या:\n$$9999 - 87 = 9912$$\nStep 5: अभीष्ट संख्या निकालें:\n$$\\text{संख्या} = 9912 - k = 9912 - 2 = 9910$$\nअतः सही विकल्प  9910 है।\n\nMethod 2 (Option Testing Method):\nविकल्पों में 2 जोड़ने पर प्राप्त संख्या 168 से विभाज्य होनी चाहिए:\n$9910 + 2 = 9912$.\n$9912 / 168 = 59$ (पूर्ण विभाज्य)।\nअतः सही उत्तर '9910' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_14",
+    "qe": "What is the least number when divided by 15, 18 and 36 leaves the same remainder 9 in each case and is divisible by 11?",
+    "qh": "वह सबसे छोटी संख्या कौन सी है जिसे 15, 18 और 36 से विभाजित करने पर प्रत्येक स्थिति में 9 शेषफल बचता है और वह 11 से विभाज्य है?",
+    "oe": [
+      "1269",
+      "1089",
+      "1080",
+      "1071"
+    ],
+    "oh": [
+      "1269",
+      "1089",
+      "1080",
+      "1071"
+    ],
+    "a": 1,
+    "e": "Method 1 (Congruence & LCM Method):\nStep 1: 15, 18 और 36 का LCM निकालें:\n$$\\text{LCM}(15, 18, 36) = 180$$\nStep 2: संख्या का स्वरूप: $N = 180k + 9$.\nStep 3: संख्या 11 से विभाज्य होनी चाहिए:\n$$180k + 9 = (11 $\\times$ 16k + 4k) + 9 = 4k + 9 $\\pm$od{11}$$\n$$(4k + 9)$$ को 11 से पूर्णतः विभाज्य होना चाहिए:\n- $k = 1 \\implies 13$ (नहीं)\n- $k = 2 \\implies 17$ (नहीं)\n- $k = 6 \\implies 4(6) + 9 = 33$ (11 से पूर्णतः विभाज्य)\nStep 4: $k = 6$ रखने पर:\n$$N = 180(6) + 9 = 1080 + 9 = 1089$$\nअतः सही विकल्प  1089 है।\n\nMethod 2 (Divisibility of 11 Test on Options):\n- (a) $1269: (1+6) - (2+9) = -4$ (11 से विभाज्य नहीं)\n- (b) $1089: (1+8) - (0+9) = 0$ (11 से पूर्णतः विभाज्य)\nसाथ ही $1089 = 180 \\times 6 + 9$ (शेषफल 9 देता है)।\nअतः सही उत्तर '1089' है।\n\nExam point: sankhya aur shesh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_15",
+    "qe": "There is a circular path around a sports field. Rahul takes 15 minutes to drive one round of the field, while Anil takes 18 minutes for the same. Suppose they both start from the same point and at the same time, and go in the same direction. After how many minutes will they meet again at the starting point?",
+    "qh": "एक खेल के मैदान के चारों ओर एक वृत्ताकार पथ है। राहुल को मैदान का एक चक्कर लगाने में 15 मिनट लगते हैं, जबकि अनिल को उसी के लिए 18 मिनट लगते हैं। मान लीजिए कि वे दोनों एक ही बिंदु से और एक ही समय पर शुरुआत करते हैं, और एक ही दिशा में जाते हैं। वे शुरुआती बिंदु पर फिर से कितने मिनट बाद मिलेंगे?",
+    "oe": [
+      "120",
+      "100",
+      "80",
+      "90"
+    ],
+    "oh": [
+      "120",
+      "100",
+      "80",
+      "90"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM of Lap Times Method):\nStep 1: शुरुआती बिंदु पर पुनः मिलने का समय दोनों के 1 चक्कर के समयों का LCM होता है:\n$$\\text{समय} = \\text{LCM}(15, 18)$$\nStep 2: अभाज्य गुणनखंड करें:\n- $15 = 3 \\times 5$\n- $18 = 2 \\times 3^2$\n$$\\text{LCM} = 2 $\\times$ 3^2 $\\times$ 5 = 2 $\\times$ 9 $\\times$ 5 = 90\\text{ मिनट}$$\nअतः सही विकल्प  90 है।\n\nMethod 2 (Laps Verification Method):\n90 मिनट में राहुल $90 / 15 = 6$ पूरे चक्कर लगाता है और अनिल $90 / 18 = 5$ पूरे चक्कर लगाता है। दोनों ठीक 90 मिनट पर एक साथ शुरुआती बिंदु पर होंगे।\nअतः सही उत्तर '90' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "applicationoflcm_16",
+    "qe": "The traffic lights at 3 different road crossings change after every 48 sec, 72 sec and 108 sec, respectively. If they all change simultaneously at 8:20 a.m., then at what time will they next change again simultaneously?",
+    "qh": "3 अलग-अलग सड़क चौराहों पर ट्रैफिक लाइटें क्रमशः प्रत्येक 48 सेकंड, 72 सेकंड और 108 सेकंड के बाद बदलती हैं। यदि वे सभी सुबह 8:20 बजे एक साथ बदलती हैं, तो वे अगली बार किस समय एक साथ बदलेंगी?",
+    "oe": [
+      "8 : 27 : 12 a.m.",
+      "8 : 33 : 22 a.m.",
+      "8 : 31 : 24 a.m.",
+      "8 : 30 : 00 a.m."
+    ],
+    "oh": [
+      "8 : 27 : 12 a.m.",
+      "8 : 33 : 22 a.m.",
+      "8 : 31 : 24 a.m.",
+      "8 : 30 : 00 a.m."
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM of Time Intervals Method):\nStep 1: 48, 72 और 108 सेकंड का LCM निकालें:\n- $48 = 2^4 \\times 3$\n- $72 = 2^3 \\times 3^2$\n- $108 = 2^2 \\times 3^3$\n$$\\text{LCM} = 2^4 $\\times$ 3^3 = 16 $\\times$ 27 = 432\\text{ सेकंड}$$\nStep 2: 432 सेकंड को मिनट और सेकंड में बदलें:\n$$$\\frac{432}{60}$ = 7\\text{ मिनट } 12\\text{ सेकंड}$$\nStep 3: अगला समय निकालें:\n$$\\text{समय} = 8:20:00\\text{ a.m.} + 0:07:12 = 8:27:12\\text{ a.m.}$$\nअतः सही विकल्प  8 : 27 : 12 a.m. है।\n\nMethod 2 (Direct Addition):\n$8\\text{ hr } 20\\text{ min} + 7\\text{ min } 12\\text{ sec} = 8 : 27 : 12\\text{ a.m.}$\nअतः सही उत्तर '8 : 27 : 12 a.m' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
