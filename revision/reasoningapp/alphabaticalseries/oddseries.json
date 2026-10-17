@@ -1,0 +1,78 @@
+[
+  {
+    "p_id": "oddseries_1",
+    "qe": "If every alternative letter starting from B is deleted then which letter will be 5th to the right of 4th from the left end?",
+    "qh": "यदि B से शुरू करते हुए प्रत्येक एकांतर (alternative) अक्षर को हटा दिया जाए, तो बाएँ छोर से चौथे अक्षर के दाएँ 5वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ],
+    "oh": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ],
+    "a": 1,
+    "e": "Method 1 (Odd Series $(2n - 1)$ Shortcut Trick):\nStep 1: B se shuru karke alternative letters (B, D, F, ...) hatane par visham sthanon (odd positions) wale letters bachenge:\n$$\\text{Series}: \\text{A, C, E, G, I, K, M, O, Q, S, U, W, Y (kul 13 letters)}$$\nStep 2: Position from Left end calculate karein (Opposite directions = Addition):\n$$\\text{Position from Left} = 4 + 5 = 9\\text{th letter}$$\nStep 3: Odd series me baayein se $n$-th letter ki real alphabetical position $(2n - 1)$ hoti hai:\n$$\\text{Original Position} = (9 $\\times$ 2) - 1 = 18 - 1 = 17$$\nStandard alphabet me 17वाँ letter 'Q' hota hai.\nCorrect option  Q hai.\n\nMethod 2 (Manual Counting Method):\nOdd series: A(1), C(2), E(3), G(4), I(5), K(6), M(7), O(8), Q(9).\nBaayein se 9th sthan par aane wala letter 'Q' hai.\nSahi uttar 'Q' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "oddseries_2",
+    "qe": "If every alternative letter starting from B is deleted then which letter will be 5th to the left of 12th from the left end?",
+    "qh": "यदि B से शुरू करते हुए प्रत्येक एकांतर अक्षर को हटा दिया जाए, तो बाएँ छोर से 12वें अक्षर के बाएँ 5वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "M",
+      "N",
+      "K",
+      "O"
+    ],
+    "oh": [
+      "M",
+      "N",
+      "K",
+      "O"
+    ],
+    "a": 0,
+    "e": "Method 1 (Odd Series $(2n - 1)$ Shortcut Trick):\nStep 1: Samaan dishaon (Left aur Left) ke liye ghataav (subtraction) karein:\n$$\\text{Position from Left} = 12 - 5 = 7\\text{th letter}$$\nStep 2: Odd series me original position nikalne ka formula $(2n - 1)$ lagayein:\n$$\\text{Original Position} = (7 $\\times$ 2) - 1 = 14 - 1 = 13$$\n13वाँ letter 'M' hota hai.\nCorrect option  M hai.\n\nMethod 2 (Direct Odd Sequence Counting):\nOdd series: A(1), C(2), E(3), G(4), I(5), K(6), M(7).\n7th position par letter 'M' prapt hota hai.\nSahi uttar 'M' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "oddseries_3",
+    "qe": "If every alternative letter starting from B is deleted then which letter will be 3rd to the left of 7th from the right end?",
+    "qh": "यदि B से शुरू करते हुए प्रत्येक एकांतर अक्षर को हटा दिया जाए, तो दाएँ छोर से 7वें अक्षर के बाएँ तीसरा अक्षर कौन-सा होगा?",
+    "oe": [
+      "E",
+      "F",
+      "G",
+      "I"
+    ],
+    "oh": [
+      "E",
+      "F",
+      "G",
+      "I"
+    ],
+    "a": 2,
+    "e": "Method 1 (Odd Series Right-to-Left Conversion Shortcut):\nStep 1: Position from Right end nikalein (Right + Left):\n$$\\text{Position from Right} = 7 + 3 = 10\\text{th letter}$$\nStep 2: Odd series me kul 13 letters hote hain, isliye Left end me convert karne ke liye $(13 + 1) = 14$ me se ghataayein:\n$$\\text{Position from Left} = 14 - 10 = 4\\text{th letter}$$\nStep 3: Original alphabetical position ke liye $(2n - 1)$ apply karein:\n$$\\text{Original Position} = (4 $\\times$ 2) - 1 = 8 - 1 = 7$$\n7वाँ letter 'G' hota hai.\nCorrect option  G hai.\n\nMethod 2 (Direct Backward Counting Method):\nOdd series daayein se: Y(1), W(2), U(3), S(4), Q(5), O(6), M(7), K(8), I(9), G(10).\nDaayein छोर se 10वाँ letter 'G' prapt hota hai.\nSahi uttar 'G' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "oddseries_4",
+    "qe": "If every alternative letter starting from B is deleted then which letter will be 6th to the right of 12th from the right end?",
+    "qh": "यदि B से शुरू करते हुए प्रत्येक एकांतर अक्षर को हटा दिया जाए, तो दाएँ छोर से 12वें अक्षर के दाएँ छठा अक्षर कौन-सा होगा?",
+    "oe": [
+      "M",
+      "N",
+      "O",
+      "Q"
+    ],
+    "oh": [
+      "M",
+      "N",
+      "O",
+      "Q"
+    ],
+    "a": 2,
+    "e": "Method 1 (Odd Series Conversion Shortcut):\nStep 1: Samaan dishaon (Right aur Right) ke liye ghataayein:\n$$\\text{Position from Right} = 12 - 6 = 6\\text{th letter}$$\nStep 2: Total 13 letters hone ke karan Left end me badlein:\n$$\\text{Position from Left} = (13 + 1) - 6 = 14 - 6 = 8\\text{th letter}$$\nStep 3: Formula $(2n - 1)$ se original alphabet position nikalein:\n$$\\text{Original Position} = (8 $\\times$ 2) - 1 = 16 - 1 = 15$$\n15वाँ letter 'O' hota hai.\nCorrect option  O hai.\n\nMethod 2 (Right End Inspection Method):\nOdd series piche se: Y(1), W(2), U(3), S(4), Q(5), O(6).\nDaayein chhor se 6th sthan par letter 'O' aata hai.\nSahi uttar 'O' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
