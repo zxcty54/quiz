@@ -1,0 +1,230 @@
+[
+  {
+    "p_id": "type3spequalcp_1",
+    "qe": "The selling price of 84 items is equal to the cost price of 105 items. What is the percentage of profit gained in the transaction?",
+    "qh": "84 वस्तुओं का विक्रय मूल्य 105 वस्तुओं के क्रय मूल्य के बराबर है। लेन-देन में प्राप्त लाभ का प्रतिशत क्या है?",
+    "oe": [
+      "28%",
+      "20%",
+      "25%",
+      "21%"
+    ],
+    "oh": [
+      "28%",
+      "20%",
+      "25%",
+      "21%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Prashnanusar:\n84 * SP = 105 * CP\nSP / CP = 105 / 84 = 5 / 4\nStep 2: CP = 4 units, SP = 5 units.\nProfit = SP - CP = 5 - 4 = 1 unit.\nStep 3: Profit% = (Profit / CP) * 100% = (1 / 4) * 100% = 25%.\nAtah sahi vikalp  25% hai.\n\nMethod 2 (100-Base Method):\nMana 1 vastu ka CP = ₹100.\n105 vastuo ka CP = 105 * 100 = ₹10,500.\nPrashnanusar, 84 vastuo ka SP = ₹10,500.\n1 vastu ka SP = 10500 / 84 = ₹125.\nProfit = 125 - 100 = ₹25.\nProfit% = 25%.\nAtah sahi uttar '25%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3spequalcp_2",
+    "qe": "The selling price of 80 items is equal to the cost price of 72 items. What is the percentage of loss incurred in the transaction?",
+    "qh": "80 वस्तुओं का विक्रय मूल्य 72 वस्तुओं के क्रय मूल्य के बराबर है। लेन-देन में हुई हानि का प्रतिशत क्या है?",
+    "oe": [
+      "12%",
+      "10%",
+      "9%",
+      "11$\\frac{1}{9}$%"
+    ],
+    "oh": [
+      "12%",
+      "10%",
+      "9%",
+      "11$\\frac{1}{9}$%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Prashnanusar:\n80 * SP = 72 * CP\nSP / CP = 72 / 80 = 9 / 10\nStep 2: CP = 10 units, SP = 9 units.\nLoss = CP - SP = 10 - 9 = 1 unit.\nStep 3: Loss% = (Loss / CP) * 100% = (1 / 10) * 100% = 10%.\nAtah sahi vikalp  10% hai.\n\nMethod 2 (100-Base Method):\nMana 1 vastu ka CP = ₹100.\n72 vastuo ka CP = 72 * 100 = ₹7,200.\n80 vastuo ka SP = ₹7,200.\n1 vastu ka SP = 7200 / 80 = ₹90.\nLoss = 100 - 90 = ₹10.\nLoss% = 10%.\nAtah sahi uttar '10%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3spequalcp_3",
+    "qe": "A shopkeeper bought 30 books and sold 25 books for same price. What percentage had he gained or lost?",
+    "qh": "एक दुकानदार ने 30 किताबें खरीदीं और 25 किताबें उसी कीमत पर बेच दीं। उसे कितने प्रतिशत लाभ या हानि हुई?",
+    "oe": [
+      "20% loss",
+      "20% gain",
+      "25% gain",
+      "25% loss"
+    ],
+    "oh": [
+      "20% loss",
+      "20% gain",
+      "25% gain",
+      "25% loss"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Prashnanusar:\n25 kitabo ka SP = 30 kitabo ka CP\n25 * SP = 30 * CP\nSP / CP = 30 / 25 = 6 / 5\nStep 2: CP = 5 units, SP = 6 units.\nProfit = SP - CP = 6 - 5 = 1 unit.\nStep 3: Profit% = (Profit / CP) * 100% = (1 / 5) * 100% = 20% gain.\nAtah sahi vikalp  20% gain hai.\n\nMethod 2 (100-Base Method):\nMana 1 kitab ka CP = ₹100.\n30 kitabo ka CP = 30 * 100 = ₹3,000.\n25 kitabo ka SP = ₹3,000.\n1 kitab ka SP = 3000 / 25 = ₹120.\nProfit = 120 - 100 = ₹20.\nProfit% = 20% gain.\nAtah sahi uttar '20% gain' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3spequalcp_4",
+    "qe": "If the selling price of 50 articles is equal to the cost price of 42 articles, then what is the approximate loss or profit percentage?",
+    "qh": "यदि 50 वस्तुओं का विक्रय मूल्य 42 वस्तुओं के क्रय मूल्य के बराबर है, तो अनुमानित हानि या लाभ प्रतिशत क्या है?",
+    "oe": [
+      "8% profit",
+      "16% loss",
+      "10% loss",
+      "20% profit"
+    ],
+    "oh": [
+      "8% profit",
+      "16% loss",
+      "10% loss",
+      "20% profit"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Prashnanusar:\n50 * SP = 42 * CP\nSP / CP = 42 / 50 = 21 / 25\nStep 2: CP = 25 units, SP = 21 units.\nLoss = CP - SP = 25 - 21 = 4 units.\nStep 3: Loss% = (Loss / CP) * 100% = (4 / 25) * 100% = 16% loss.\nAtah sahi vikalp  16% loss hai.\n\nMethod 2 (100-Base Method):\nMana 1 vastu ka CP = ₹100.\n42 vastuo ka CP = 42 * 100 = ₹4,200.\n50 vastuo ka SP = ₹4,200.\n1 vastu ka SP = 4200 / 50 = ₹84.\nLoss = 100 - 84 = ₹16.\nLoss% = 16% loss.\nAtah sahi uttar '16% loss' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3spequalcp_5",
+    "qe": "The cost price of 36 articles is the same as the selling price of N articles. If the profit is 20%, then the value of N is:",
+    "qh": "36 वस्तुओं का क्रय मूल्य N वस्तुओं के विक्रय मूल्य के समान है। यदि लाभ 20% है, तो N का मान क्या है?",
+    "oe": [
+      "25",
+      "42",
+      "40",
+      "30"
+    ],
+    "oh": [
+      "25",
+      "42",
+      "40",
+      "30"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit% = 20% = 1/5.\nCP : SP = 5 : 6.\nStep 2: Prashnanusar:\n36 * CP = N * SP\nN / 36 = CP / SP\nN / 36 = 5 / 6\nStep 3: N = (5 / 6) * 36 = 5 * 6 = 30.\nAtah sahi vikalp  30 hai.\n\nMethod 2 (100-Base Method):\nMana 1 vastu ka CP = 100.\n20% labh par, 1 vastu ka SP = 120.\n36 vastuo ka kul CP = 36 * 100 = 3600.\nN vastuo ka kul SP = 3600.\nN * 120 = 3600 ==> N = 3600 / 120 = 30.\nAtah sahi uttar '30' hai.\n\nYahan labh-haani ka niyam seedha lagta hai. Vikalp 25, 42, 40 is hal se mel nahi khaate. Exam point: labh-haani ka niyam - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type3spequalcp_6",
+    "qe": "The selling price of y items is equal to the cost price of 540 items. If the profit made is 44%, then find the value of y.",
+    "qh": "y वस्तुओं का विक्रय मूल्य 540 वस्तुओं के क्रय मूल्य के बराबर है। यदि अर्जित लाभ 44% है, तो y का मान ज्ञात कीजिए।",
+    "oe": [
+      "375",
+      "400",
+      "360",
+      "380"
+    ],
+    "oh": [
+      "375",
+      "400",
+      "360",
+      "380"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit% = 44% = 44/100 = 11/25.\nCP : SP = 25 : (25 + 11) = 25 : 36.\nStep 2: Prashnanusar:\ny * SP = 540 * CP\ny / 540 = CP / SP\ny / 540 = 25 / 36\nStep 3: y = (25 / 36) * 540 = 25 * 15 = 375.\nAtah sahi vikalp  375 hai.\n\nMethod 2 (100-Base Method):\nMana 1 vastu ka CP = 100.\n44% labh par, 1 vastu ka SP = 144.\n540 vastuo ka kul CP = 540 * 100 = 54,000.\ny vastuo ka kul SP = 54,000.\ny * 144 = 54,000 ==> y = 54000 / 144 = 375.\nAtah sahi uttar '375' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3spequalcp_7",
+    "qe": "The cost price of 240 articles is the same as the selling price of x articles. If profit is 20%, find the value of x.",
+    "qh": "240 वस्तुओं का क्रय मूल्य x वस्तुओं के विक्रय मूल्य के समान है। यदि लाभ 20% है, तो x का मान ज्ञात कीजिए।",
+    "oe": [
+      "200",
+      "210",
+      "180",
+      "240"
+    ],
+    "oh": [
+      "200",
+      "210",
+      "180",
+      "240"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit% = 20% = 1/5.\nCP : SP = 5 : 6.\nStep 2: Prashnanusar:\n240 * CP = x * SP\nx / 240 = CP / SP\nx / 240 = 5 / 6\nStep 3: x = (5 / 6) * 240 = 5 * 40 = 200.\nAtah sahi vikalp  200 hai.\n\nMethod 2 (100-Base Method):\nMana 1 vastu ka CP = 100.\n20% labh par, 1 vastu ka SP = 120.\n240 vastuo ka kul CP = 240 * 100 = 24,000.\nx vastuo ka kul SP = 24,000.\nx * 120 = 24,000 ==> x = 24000 / 120 = 200.\nAtah sahi uttar '200' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3spequalcp_8",
+    "qe": "If the selling price of 15 items is equal to the cost price of 20 items, what is the percentage profit or loss?",
+    "qh": "यदि 15 वस्तुओं का विक्रय मूल्य 20 वस्तुओं के क्रय मूल्य के बराबर है, तो प्रतिशत लाभ या हानि क्या है?",
+    "oe": [
+      "33.33% profit",
+      "25% profit",
+      "20% loss",
+      "25% loss"
+    ],
+    "oh": [
+      "33.33% profit",
+      "25% profit",
+      "20% loss",
+      "25% loss"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Prashnanusar:\n15 * SP = 20 * CP\nSP / CP = 20 / 15 = 4 / 3\nStep 2: CP = 3 units, SP = 4 units.\nProfit = SP - CP = 4 - 3 = 1 unit.\nStep 3: Profit% = (Profit / CP) * 100% = (1 / 3) * 100% = 33.33% profit.\nAtah sahi vikalp  33.33% profit hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana 1 vastu ka CP = ₹100.\nStep 2: 20 vastuo ka CP = 20 * 100 = ₹2,000.\nStep 3: 15 vastuo ka SP = ₹2,000 ==> 1 vastu ka SP = 2000 / 15 = ₹133.33.\nStep 4: Profit = 133.33 - 100 = ₹33.33 ==> Profit% = 33.33% profit.\nAtah sahi uttar '33.33% profit' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3spequalcp_9",
+    "qe": "If the selling price of 40 articles is equal to the cost price of 50 articles, then the percentage gain is:",
+    "qh": "यदि 40 वस्तुओं का विक्रय मूल्य 50 वस्तुओं के क्रय मूल्य के बराबर है, तो लाभ प्रतिशत क्या है?",
+    "oe": [
+      "25%",
+      "20%",
+      "35%",
+      "30%"
+    ],
+    "oh": [
+      "25%",
+      "20%",
+      "35%",
+      "30%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Prashnanusar:\n40 * SP = 50 * CP\nSP / CP = 50 / 40 = 5 / 4\nStep 2: CP = 4 units, SP = 5 units.\nProfit = SP - CP = 5 - 4 = 1 unit.\nStep 3: Profit% = (Profit / CP) * 100% = (1 / 4) * 100% = 25%.\nAtah sahi vikalp  25% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana 1 vastu ka CP = ₹100.\nStep 2: 50 vastuo ka CP = 50 * 100 = ₹5,000.\nStep 3: 40 vastuo ka SP = ₹5,000 ==> 1 vastu ka SP = 5000 / 40 = ₹125.\nStep 4: Profit = 125 - 100 = ₹25 ==> Profit% = 25%.\nAtah sahi uttar '25%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3spequalcp_10",
+    "qe": "If the selling price of 100 pens is equal to the cost price of 140 pens, find the profit percentage.",
+    "qh": "यदि 100 पेनों का विक्रय मूल्य 140 पेनों के क्रय मूल्य के बराबर है, तो लाभ प्रतिशत ज्ञात कीजिए।",
+    "oe": [
+      "40%",
+      "28.57%",
+      "35%",
+      "30%"
+    ],
+    "oh": [
+      "40%",
+      "28.57%",
+      "35%",
+      "30%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Prashnanusar:\n100 * SP = 140 * CP\nSP / CP = 140 / 100 = 7 / 5\nStep 2: CP = 5 units, SP = 7 units.\nProfit = SP - CP = 7 - 5 = 2 units.\nStep 3: Profit% = (Profit / CP) * 100% = (2 / 5) * 100% = 40%.\nAtah sahi vikalp  40% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana 1 pen ka CP = ₹100.\nStep 2: 140 peno ka CP = 140 * 100 = ₹14,000.\nStep 3: 100 peno ka SP = ₹14,000 ==> 1 pen ka SP = 14000 / 100 = ₹140.\nStep 4: Profit = 140 - 100 = ₹40 ==> Profit% = 40%.\nAtah sahi uttar '40%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3spequalcp_11",
+    "qe": "The cost price of 44 items is the same as the selling price of x items. If the profit is 10%, then what is the value of x?",
+    "qh": "44 वस्तुओं का क्रय मूल्य x वस्तुओं के विक्रय मूल्य के समान है। यदि लाभ 10% है, तो x का मान क्या है?",
+    "oe": [
+      "55",
+      "40",
+      "60",
+      "50"
+    ],
+    "oh": [
+      "55",
+      "40",
+      "60",
+      "50"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Profit% = 10% = 1/10.\nCP : SP = 10 : 11.\nStep 2: Prashnanusar:\n44 * CP = x * SP\nx / 44 = CP / SP\nx / 44 = 10 / 11\nStep 3: x = (10 / 11) * 44 = 10 * 4 = 40.\nAtah sahi vikalp  40 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana 1 vastu ka CP = 100.\nStep 2: 10% labh par, 1 vastu ka SP = 110.\nStep 3: 44 vastuo ka kul CP = 44 * 100 = 4400.\nStep 4: x vastuo ka kul SP = 4400 ==> x * 110 = 4400 ==> x = 4400 / 110 = 40.\nAtah sahi uttar '40' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type3spequalcp_12",
+    "qe": "If 70% of the cost price of an article is equal to 40% of its selling price, what is the profit percentage?",
+    "qh": "यदि एक वस्तु के क्रय मूल्य का 70% उसके विक्रय मूल्य के 40% के बराबर है, तो लाभ प्रतिशत क्या है?",
+    "oe": [
+      "85%",
+      "80%",
+      "70%",
+      "75%"
+    ],
+    "oh": [
+      "85%",
+      "80%",
+      "70%",
+      "75%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Prashnanusar:\n70% of CP = 40% of SP\n70 * CP = 40 * SP\nSP / CP = 70 / 40 = 7 / 4\nStep 2: CP = 4 units, SP = 7 units.\nProfit = SP - CP = 7 - 4 = 3 units.\nStep 3: Profit% = (Profit / CP) * 100% = (3 / 4) * 100% = 75%.\nAtah sahi vikalp  75% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana CP = 100.\nStep 2: 70% of CP = 70.\nStep 3: 40% of SP = 70 ==> SP = (70 / 40) * 100 = 175.\nStep 4: Profit = SP - CP = 175 - 100 = 75 ==> Profit% = 75%.\nAtah sahi uttar '75%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
