@@ -5,6 +5,12 @@ import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'learn_chat_screen.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class LearnHubScreen extends StatefulWidget {
   const LearnHubScreen({super.key});
 
@@ -63,6 +69,7 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     // 🚀 Updated to public content_base repo
     final List<String> urls = [
+      "$_contentProxyBase/learn_data.json",
       "https://raw.githubusercontent.com/zxcty54/content_base/main/learn_data.json?t=$ts",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/learn_data.json?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/learn_data.json?t=$ts",
@@ -70,7 +77,7 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
 
     for (String url in urls) {
       try {
-        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 3));
+        final res = await http.get(Uri.parse(url), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 3));
         if (res.statusCode == 200) {
           final dynamic parsed = jsonDecode(utf8.decode(res.bodyBytes));
           List<Map<String, dynamic>> loadedList = [];

@@ -3,6 +3,12 @@ import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import '../models/bpsc_daily_card_model.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class DayConfig {
   final List<String> filePool;
   final String cycleDay;
@@ -96,6 +102,7 @@ class BpscRotationService {
 
   static Future<dynamic> _fetchWithMirrors(String fileName) async {
     final List<String> mirrors = [
+      "$_contentProxyBase/knowyourbihar/$fileName",
       "https://raw.githubusercontent.com/zxcty54/content_base/main/knowyourbihar/$fileName",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/knowyourbihar/$fileName",
       "https://raw.githack.com/zxcty54/content_base/main/knowyourbihar/$fileName",
@@ -104,7 +111,7 @@ class BpscRotationService {
     for (String url in mirrors) {
       try {
         debugPrint("Fetching: $url");
-        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 12));
+        final res = await http.get(Uri.parse(url), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 12));
         if (res.statusCode == 200) {
           String body = utf8.decode(res.bodyBytes).trim();
           if (body.startsWith('\uFEFF')) body = body.substring(1).trim();

@@ -11,17 +11,22 @@ import 'screens/home_screen.dart';
 import 'screens/onboarding_welcome_screen.dart';
 import 'screens/splash_screen.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 // 🌓 Global Theme Controller
 final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.light);
 
 // 🔄 GitHub Remote Config Fetcher
 Future<void> _syncAppConfig() async {
   try {
-    final Uri url = Uri.parse(
-      'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/app_config.json',
-    );
+    final Uri url = Uri.parse('$_contentProxyBase/app_config.json');
 
-    final response = await http.get(url).timeout(const Duration(seconds: 10));
+    final response =
+        await http.get(url, headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 10));
 
     if (response.statusCode == 200) {
       final Map<String, dynamic> config = jsonDecode(utf8.decode(response.bodyBytes));

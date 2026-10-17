@@ -30,6 +30,12 @@ import '../widgets/exam_photo_resizer_screen.dart';
 import '../widgets/exam_doc_merger_screen.dart';
 import '../widgets/cartoon_avatar.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -248,6 +254,24 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
     final int ts = DateTime.now().millisecondsSinceEpoch;
     String encodedPath = Uri.encodeFull(cleanPath);
+
+    // 0. Cloudflare Worker (private content_base ka darwaza) — sabse pehle
+    try {
+      final workerRes = await http.get(
+        Uri.parse("$_contentProxyBase/$encodedPath"),
+        headers: {'X-App-Key': _contentAppKey},
+      ).timeout(const Duration(seconds: 6));
+
+      if (workerRes.statusCode == 200) {
+        String rawBody = utf8.decode(workerRes.bodyBytes).trim();
+        if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
+        rawBody = rawBody.replaceAll(r'```json', '').replaceAll(r'```', '').trim();
+        if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
+          final dynamic parsed = jsonDecode(rawBody);
+          if (parsed != null) return parsed;
+        }
+      }
+    } catch (_) {}
 
     final String apiUrl = "https://api.github.com/repos/zxcty54/content_base/contents/$encodedPath?ref=main&t=$ts";
     try {

@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class LatestJobsWidget extends StatefulWidget {
   final bool isDarkMode;
 
@@ -71,6 +77,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
     final timestamp = DateTime.now().millisecondsSinceEpoch;
 
     final List<String> endpoints = [
+      '$_contentProxyBase/sarkarijob.json',
       'https://raw.githubusercontent.com/zxcty54/content_base/main/sarkarijob.json?t=$timestamp',
       'https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/sarkarijob.json?t=$timestamp',
       'https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/sarkarijob.json?t=$timestamp',
@@ -83,6 +90,7 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
             .get(
               Uri.parse(endpoint),
               headers: const {
+                'X-App-Key': _contentAppKey,
                 'Accept': 'application/json',
                 'Cache-Control': 'no-cache, no-store, must-revalidate',
               },

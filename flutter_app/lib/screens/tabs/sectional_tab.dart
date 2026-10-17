@@ -7,6 +7,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../services/premium_service.dart';
 import '../sectional_exam_screen.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class SectionalTab extends StatefulWidget {
   final Map<String, dynamic> sectionalData;
   final bool isDarkMode;
@@ -96,6 +102,7 @@ class _SectionalTabState extends State<SectionalTab> {
 
     final int ts = DateTime.now().millisecondsSinceEpoch;
     final List<String> urls = [
+      "$_contentProxyBase/sectional_data.json",
       "https://raw.githubusercontent.com/zxcty54/content_base/main/sectional_data.json?t=$ts",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/sectional_data.json?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/sectional_data.json?t=$ts",
@@ -103,7 +110,7 @@ class _SectionalTabState extends State<SectionalTab> {
 
     for (String url in urls) {
       try {
-        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 3));
+        final res = await http.get(Uri.parse(url), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 3));
         if (res.statusCode == 200) {
           final dynamic parsed = jsonDecode(utf8.decode(res.bodyBytes));
           if (parsed is Map && mounted) {

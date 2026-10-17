@@ -5,6 +5,12 @@ import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class FirstInIndiaWidget extends StatefulWidget {
   final bool isDarkMode;
   const FirstInIndiaWidget({super.key, required this.isDarkMode});
@@ -136,10 +142,10 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
 
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
     final String newsUrl =
-        "https://raw.githubusercontent.com/zxcty54/content_base/main/app_alerts_news.json?t=$timestamp";
+        "$_contentProxyBase/app_alerts_news.json?t=$timestamp";
 
     try {
-      final res = await http.get(Uri.parse(newsUrl)).timeout(const Duration(seconds: 5));
+      final res = await http.get(Uri.parse(newsUrl), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 5));
       if (res.statusCode == 200) {
         String decoded = utf8.decode(res.bodyBytes);
         final data = jsonDecode(decoded);

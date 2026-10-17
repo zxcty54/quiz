@@ -4,6 +4,12 @@ import 'package:http/http.dart' as http;
 import '../../../models/question_model.dart';
 import '../../revision_practice_screen.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class MonthAffairConfig {
   final String label;
   final String fileName;
@@ -52,9 +58,9 @@ class _RevisionCurrentAffairsCardState extends State<RevisionCurrentAffairsCard>
 
     try {
       final String url =
-          'https://raw.githubusercontent.com/zxcty54/content_base/main/current_affair/${month.fileName}?t=${DateTime.now().millisecondsSinceEpoch}';
+          '$_contentProxyBase/current_affair/${month.fileName}?t=${DateTime.now().millisecondsSinceEpoch}';
 
-      final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 8));
+      final res = await http.get(Uri.parse(url), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 8));
 
       if (res.statusCode == 200 && mounted) {
         String body = utf8.decode(res.bodyBytes).trim();
@@ -115,9 +121,9 @@ class _RevisionCurrentAffairsCardState extends State<RevisionCurrentAffairsCard>
     try {
       final String fetchUrl = jsonPath.startsWith('http')
           ? '$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}'
-          : 'https://raw.githubusercontent.com/zxcty54/content_base/main/$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}';
+          : '$_contentProxyBase/$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}';
 
-      final res = await http.get(Uri.parse(fetchUrl)).timeout(const Duration(seconds: 10));
+      final res = await http.get(Uri.parse(fetchUrl), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 10));
 
       if (res.statusCode == 200 && context.mounted) {
         String body = utf8.decode(res.bodyBytes).trim();

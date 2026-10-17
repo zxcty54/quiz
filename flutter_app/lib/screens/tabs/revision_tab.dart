@@ -6,6 +6,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../revision_chapters_screen.dart';
 import 'widgets/revision_current_affairs.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 /// Ek subject tile ki definition (grid + chapters screen dono ke liye).
 class _HubSubject {
   final String title;
@@ -173,6 +179,7 @@ class _RevisionTabState extends State<RevisionTab> {
     setState(() => _isLoading = true);
     final int ts = DateTime.now().millisecondsSinceEpoch;
     final List<String> urls = [
+      "$_contentProxyBase/subject_mapping.json",
       "https://raw.githubusercontent.com/zxcty54/content_base/main/subject_mapping.json?t=$ts",
       "https://raw.githack.com/zxcty54/content_base/main/subject_mapping.json",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/subject_mapping.json?t=$ts",
@@ -180,7 +187,7 @@ class _RevisionTabState extends State<RevisionTab> {
 
     for (String url in urls) {
       try {
-        final res = await http.get(Uri.parse(url), headers: {'Cache-Control': 'no-cache'}).timeout(const Duration(seconds: 4));
+        final res = await http.get(Uri.parse(url), headers: {'Cache-Control': 'no-cache', 'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 4));
         if (res.statusCode == 200) {
           String rawBody = utf8.decode(res.bodyBytes).trim().replaceAll('```json', '').replaceAll('```', '').trim();
           final dynamic parsed = jsonDecode(rawBody);

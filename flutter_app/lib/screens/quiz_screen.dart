@@ -4,6 +4,12 @@ import 'package:http/http.dart' as http;
 import '../models/question_model.dart';
 import 'sectional_cbt_screen.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class QuizScreen extends StatefulWidget {
   final String title;
   final String jsonPath;
@@ -31,8 +37,8 @@ class _QuizScreenState extends State<QuizScreen> {
   Future<void> _fetchQuestions() async {
     try {
       // 🚀 Updated Base URL to content_base repository
-      final url = "https://raw.githubusercontent.com/zxcty54/content_base/main/${widget.jsonPath}";
-      final res = await http.get(Uri.parse(url));
+      final url = "$_contentProxyBase/${widget.jsonPath}";
+      final res = await http.get(Uri.parse(url), headers: {'X-App-Key': _contentAppKey});
 
       if (res.statusCode == 200) {
         List body = jsonDecode(utf8.decode(res.bodyBytes));

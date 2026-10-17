@@ -3,6 +3,12 @@ import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class ChallengeService {
   // Core pool files
   static final List<String> challengePoolFiles = [
@@ -21,6 +27,7 @@ class ChallengeService {
   // 🌐 Single File Fetcher
   static Future<dynamic> _fetchOnline(String relativePath) async {
     final List<String> urls = [
+      "$_contentProxyBase/$relativePath",
       "https://raw.githubusercontent.com/zxcty54/content_base/main/$relativePath",
       "https://raw.githack.com/zxcty54/content_base/main/$relativePath",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$relativePath",
@@ -28,7 +35,7 @@ class ChallengeService {
 
     for (String url in urls) {
       try {
-        final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 3));
+        final res = await http.get(Uri.parse(url), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 3));
         if (res.statusCode == 200) {
           String rawBody = utf8.decode(res.bodyBytes).trim();
           if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();

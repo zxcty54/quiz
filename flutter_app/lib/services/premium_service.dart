@@ -13,8 +13,8 @@ import 'user_stats_service.dart';
 /// admin Admin Hub se Approve karta hai -> premium_until set.
 /// Lock/unlock isi premium_until date se chalta hai.
 class PremiumService {
-  static const String _configUrl =
-      'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/app_config.json';
+  static const String _configUrl = 'https://content-proxy.nitesh-skyhigh.workers.dev/app_config.json';
+  static const String _configAppKey = 'mt_4bd7ba22c736af380d9d3905';
   static const String _configCacheKey = 'premium_payment_config_cache';
   static const String _untilCacheKey = 'premium_until_cache';
 
@@ -39,8 +39,9 @@ class PremiumService {
           config = {...config, ...Map<String, dynamic>.from(decoded)};
         }
       }
-      final res =
-          await http.get(Uri.parse(_configUrl)).timeout(const Duration(seconds: 8));
+      final res = await http
+          .get(Uri.parse(_configUrl), headers: {'X-App-Key': _configAppKey})
+          .timeout(const Duration(seconds: 8));
       if (res.statusCode == 200) {
         final root = jsonDecode(utf8.decode(res.bodyBytes));
         if (root is Map && root['payment'] is Map) {

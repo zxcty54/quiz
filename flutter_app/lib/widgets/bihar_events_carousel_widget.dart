@@ -29,7 +29,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
   late Animation<double> _pulseAnimation;
 
   static const String _jsonBaseUrl =
-      'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/biharevents.json';
+      'https://content-proxy.nitesh-skyhigh.workers.dev/biharevents.json';
   static const String _cacheKey = 'cached_bihar_events_json';
 
   @override
@@ -89,6 +89,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
       final res = await http.get(
         Uri.parse(freshUrl),
         headers: {
+          'X-App-Key': 'mt_4bd7ba22c736af380d9d3905',
           'Cache-Control': 'no-cache, no-store, must-revalidate',
           'Pragma': 'no-cache',
           'Expires': '0',

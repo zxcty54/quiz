@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class DailyBulletinWidget extends StatefulWidget {
   final bool isDarkMode;
   const DailyBulletinWidget({super.key, required this.isDarkMode});
@@ -105,10 +111,10 @@ class DailyBulletinWidgetState extends State<DailyBulletinWidget> {
 
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
     // 🚀 Updated: Point to public content_base repository
-    final String newsUrl = "https://raw.githubusercontent.com/zxcty54/content_base/main/finalnews.json?t=$timestamp";
+    final String newsUrl = "$_contentProxyBase/finalnews.json?t=$timestamp";
 
     try {
-      final res = await http.get(Uri.parse(newsUrl)).timeout(const Duration(seconds: 5));
+      final res = await http.get(Uri.parse(newsUrl), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 5));
 
       if (res.statusCode == 200) {
         String decoded = utf8.decode(res.bodyBytes);

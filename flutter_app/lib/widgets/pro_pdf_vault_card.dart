@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class ProPdfVaultCard extends StatefulWidget {
   final bool isDarkMode;
   final String? customWebsiteUrl;
@@ -85,6 +91,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
     final int ts = DateTime.now().millisecondsSinceEpoch;
 
     final List<String> endpoints = [
+      "$_contentProxyBase/books_database.json",
       "https://raw.githubusercontent.com/zxcty54/content_base/main/books_database.json?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/books_database.json?t=$ts",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/books_database.json?t=$ts",
@@ -95,6 +102,7 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
         final res = await http.get(
           Uri.parse(url),
           headers: const {
+            'X-App-Key': _contentAppKey,
             'Accept': 'application/json',
             'Cache-Control': 'no-cache, no-store, must-revalidate',
             'Pragma': 'no-cache',
