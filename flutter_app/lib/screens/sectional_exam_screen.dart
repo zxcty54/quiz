@@ -1,6 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 
+import '../services/premium_service.dart';
+import 'premium_paywall_screen.dart';
+
 /// sectional_data.json se bana ek section group (jaise "Reasoning Sets").
 /// Sets hamesha JSON ke count se auto-generate hote hain — kuch hardcoded nahi.
 class SectionalExamGroup {
@@ -57,17 +60,22 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
   String _filter = 'all'; // all | left | done
   Timer? _refreshTimer;
   bool _refreshPending = false;
+  bool _isPremium = false;
+  bool _isOwner = false;
+  DateTime? _premiumUntil;
 
   @override
   void initState() {
     super.initState();
     _reloadProgress();
+    _loadPremium();
     // Test khatm karke wapas aane par rows auto-refresh ho jayein
     _refreshTimer = Timer.periodic(const Duration(seconds: 2), (_) {
       if (!mounted) return;
       if (_refreshPending && (ModalRoute.of(context)?.isCurrent ?? false)) {
         _refreshPending = false;
         _reloadProgress();
+        _loadPremium();
       }
     });
   }
@@ -83,7 +91,35 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
     if (mounted) setState(() => _progress = data);
   }
 
+  Future<void> _loadPremium() async {
+    final until = await PremiumService.fetchPremiumUntil();
+    final owner = await PremiumService.isOwnerMode();
+    if (!mounted) return;
+    setState(() {
+      _premiumUntil = until;
+      _isOwner = owner;
+      _isPremium =
+          owner || (until != null && until.isAfter(DateTime.now()));
+    });
+  }
+
+  bool _isSetLocked(int setNum) => setNum > 1 && !_isPremium;
+
+  Future<void> _openPaywall() async {
+    await Navigator.of(context).push(
+      MaterialPageRoute(
+        builder: (_) => PremiumPaywallScreen(isDarkMode: widget.isDarkMode),
+      ),
+    );
+    await _loadPremium();
+  }
+
   void _launch(SectionalExamGroup group, int setNum) {
+    // Set 01 free, baki Premium — seedha ghusne par bhi rok yahi lagegi
+    if (_isSetLocked(setNum)) {
+      _openPaywall();
+      return;
+    }
     _refreshPending = true;
     widget.onLaunchCbtMock(
       context,
@@ -206,6 +242,18 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                 Text(
                   '$done / $total sets complete',
                   style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 10.5, fontWeight: FontWeight.w800),
+                ),
+                const SizedBox(height: 3),
+                GestureDetector(
+                  onTap: _openPaywall,
+                  child: Text(
+                    _isOwner
+                        ? '🛠 Owner Mode ON • Sab Set unlock (band karne ke liye dabao)'
+                        : (_isPremium
+                            ? '👑 Premium Active • ${_premiumUntil!.difference(DateTime.now()).inDays + 1} din baki — saare Set khule hai'
+                            : '🔓 Set 01 Free • Baki Set Premium (₹49/month)'),
+                    style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 10.5, fontWeight: FontWeight.w700),
+                  ),
                 ),
               ],
             ),
@@ -349,6 +397,10 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
     bool isDone,
     bool isInProgress,
   ) {
+    // Premium lock (Set 01 hamesha free)
+    if (_isSetLocked(setNum)) {
+      return _premiumLockedRow(group, setNum, isDark, textColor);
+    }
     final data = _progress[group.launchTitle(setNum)];
     final String label = 'Set ${setNum.toString().padLeft(2, '0')}';
 
@@ -435,6 +487,70 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                 ),
                 child: Text(isInProgress ? 'Resume →' : 'Start →', style: const TextStyle(fontSize: 11, fontWeight: FontWeight.w900)),
               ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _premiumLockedRow(SectionalExamGroup group, int setNum, bool isDark, Color textColor) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 7),
+      child: Container(
+        padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 10),
+        decoration: BoxDecoration(
+          color: isDark ? const Color(0xFF0F172A) : const Color(0xFFFFFBEB),
+          borderRadius: BorderRadius.circular(14),
+          border: Border.all(color: const Color(0xFFF59E0B).withOpacity(isDark ? 0.45 : 0.55)),
+        ),
+        child: Row(
+          children: [
+            Container(
+              width: 42,
+              height: 38,
+              decoration: BoxDecoration(
+                color: const Color(0xFFF59E0B).withOpacity(0.16),
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Center(
+                child: Text(
+                  'SET\n${setNum.toString().padLeft(2, '0')}',
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(fontSize: 9.5, height: 1.15, fontWeight: FontWeight.w900, color: Color(0xFFB45309)),
+                ),
+              ),
+            ),
+            const SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Set ${setNum.toString().padLeft(2, '0')}',
+                    style: TextStyle(fontSize: 12.5, fontWeight: FontWeight.w800, color: textColor),
+                  ),
+                  const SizedBox(height: 2),
+                  const Text(
+                    '🔒 Premium • ₹49/month me saare Set khulenge',
+                    style: TextStyle(fontSize: 10, fontWeight: FontWeight.w700, color: Color(0xFFB45309)),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(width: 8),
+            ElevatedButton(
+              onPressed: _openPaywall,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFFD97706),
+                foregroundColor: Colors.white,
+                elevation: 0,
+                padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 8),
+                minimumSize: Size.zero,
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(99)),
+              ),
+              child: const Text('Unlock 👑', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900)),
+            ),
           ],
         ),
       ),
