@@ -29,7 +29,7 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
   late Animation<double> _pulseAnimation;
 
   static const String _jsonBaseUrl =
-      'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/biharevents.json';
+      'https://content-proxy.nitesh-skyhigh.workers.dev/biharevents.json';
   static const String _cacheKey = 'cached_bihar_events_json';
 
   @override
@@ -83,19 +83,35 @@ class _BiharEventsCarouselWidgetState extends State<BiharEventsCarouselWidget>
 
     // 2️⃣ Background Fresh Fetch with Cache-Buster
     try {
-      final freshUrl =
-          '$_jsonBaseUrl?t=${DateTime.now().millisecondsSinceEpoch}';
+      final int bts = DateTime.now().millisecondsSinceEpoch;
+      // Do raste: 1) Cloudflare Worker 2) GitHub CDN mirrors (raw aakhir me)
+      final List<String> freshUrls = [
+        '$_jsonBaseUrl?t=$bts',
+        'https://raw.githack.com/zxcty54/content_base/main/biharevents.json',
+        'https://cdn.statically.io/gh/zxcty54/content_base/main/biharevents.json',
+        'https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/biharevents.json?t=$bts',
+        'https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/biharevents.json?t=$bts',
+        'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/biharevents.json',
+      ];
 
-      final res = await http.get(
-        Uri.parse(freshUrl),
-        headers: {
-          'Cache-Control': 'no-cache, no-store, must-revalidate',
-          'Pragma': 'no-cache',
-          'Expires': '0',
-        },
-      ).timeout(const Duration(seconds: 6));
+      http.Response? res;
+      for (final u in freshUrls) {
+        try {
+          final r = await http.get(
+            Uri.parse(u),
+            headers: {
+              'X-App-Key': 'mt_4bd7ba22c736af380d9d3905',
+              'Cache-Control': 'no-cache, no-store, must-revalidate',
+              'Pragma': 'no-cache',
+              'Expires': '0',
+            },
+          ).timeout(const Duration(seconds: 6));
+          res = r;
+          if (r.statusCode == 200) break;
+        } catch (_) {}
+      }
 
-      if (res.statusCode == 200) {
+      if (res != null && res.statusCode == 200) {
         String body = utf8.decode(res.bodyBytes).trim();
         if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
 
