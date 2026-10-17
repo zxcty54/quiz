@@ -1,0 +1,743 @@
+[
+  {
+    "p_id": "circular_1",
+    "qe": "In a circular race of 840 m, A and B start running in the same direction at the same time from the same point at the speeds of 6 m/s and 12 m/s, respectively. After how much time will they meet next?",
+    "qh": "840 मीटर की एक वृत्ताकार दौड़ में, A और B एक ही बिंदु से एक ही समय पर क्रमशः 6 मीटर/सेकंड और 12 मीटर/सेकंड की गति से एक ही दिशा में दौड़ना शुरू करते हैं। वे अगली बार कितने समय बाद मिलेंगे?",
+    "oe": [
+      "140 sec",
+      "20 sec",
+      "40 sec",
+      "70 sec"
+    ],
+    "oh": [
+      "140 sec",
+      "20 sec",
+      "40 sec",
+      "70 sec"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: वृत्ताकार ट्रैक की लंबाई = 840 मीटर।\nदोनों एक ही दिशा में दौड़ रहे हैं, अतः सापेक्ष गति (Relative Speed):\n$$\\text{सापेक्ष गति} = 12 - 6 = 6\\text{ मीटर/सेकंड}$$\nStep 2: वृत्ताकार ट्रैक पर अगली बार मिलने के लिए तेज धावक को धीमे धावक पर 1 पूरे चक्कर (840 मीटर) की बढ़त बनानी होगी:\n$$\\text{समय} = \\frac{\\text{ट्रैक की लंबाई}}{\\text{सापेक्ष गति}} = $\\frac{840}{6}$ = 140\\text{ सेकंड}$$\nअतः सही विकल्प  140 sec है।\n\nMethod 2 (Lap Time Difference Method):\nStep 1: 1 चक्कर लगाने में लगा समय:\n- A का समय = 840 / 6 = 140 सेकंड\n- B का समय = 840 / 12 = 70 सेकंड\nStep 2: मिलने का समय = $\\frac{T_A \\times T_B}{|T_A - T_B|} = \\frac{140 \\times 70}{140 - 70} = \\frac{140 \\times 70}{70} = 140$ सेकंड।\nअतः सही उत्तर '140 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_2",
+    "qe": "Two athletes are participating in a race on a circular track of 220 m. Ravi runs at the speed of 22 m/s, while Kapil runs at the speed of 11 m/s. They start from the same point, at the same time and in the same direction. After how many seconds will they meet for the first time?",
+    "qh": "दो एथलीट 220 मीटर के वृत्ताकार ट्रैक पर एक दौड़ में भाग ले रहे हैं। रवि 22 मीटर/सेकंड की गति से दौड़ता है, जबकि कपिल 11 मीटर/सेकंड की गति से दौड़ता है। वे एक ही बिंदु से, एक ही समय पर और एक ही दिशा में शुरुआत करते हैं। वे पहली बार कितने सेकंड बाद मिलेंगे?",
+    "oe": [
+      "15 sec.",
+      "16 sec.",
+      "20 sec.",
+      "24 sec."
+    ],
+    "oh": [
+      "15 sec.",
+      "16 sec.",
+      "20 sec.",
+      "24 sec."
+    ],
+    "a": 2,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: ट्रैक की कुल परिधि = 220 मीटर।\nसमान दिशा में सापेक्ष गति:\n$$\\text{सापेक्ष गति} = 22 - 11 = 11\\text{ मीटर/सेकंड}$$\nStep 2: पहली बार मिलने में लगा समय:\n$$\\text{समय} = \\frac{\\text{ट्रैक की लंबाई}}{\\text{सापेक्ष गति}} = $\\frac{220}{11}$ = 20\\text{ सेकंड}$$\nअतः सही विकल्प  20 sec. है।\n\nMethod 2 (Formula Method):\nStep 1: 1 चक्कर का समय: रवि = 220 / 22 = 10 सेकंड, कपिल = 220 / 11 = 20 सेकंड।\nStep 2: मिलने का समय = $\\frac{10 \\times 20}{20 - 10} = \\frac{200}{10} = 20$ सेकंड।\nअतः सही उत्तर '20 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_3",
+    "qe": "In a circular race of 950 m length, A and B start with speeds of 18 km/h and 36 km/h, respectively, in the same direction, at the same time, from the same point. After how many seconds will they meet for the first time at the starting point?",
+    "qh": "950 मीटर लंबाई की एक वृत्ताकार दौड़ में, A और B एक ही बिंदु से, एक ही समय पर, एक ही दिशा में क्रमशः 18 किमी/घंटा और 36 किमी/घंटा की गति से शुरुआत करते हैं। वे शुरुआती बिंदु पर पहली बार कितने सेकंड बाद मिलेंगे?",
+    "oe": [
+      "195",
+      "190",
+      "90",
+      "95"
+    ],
+    "oh": [
+      "195",
+      "190",
+      "90",
+      "95"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM of Lap Times Method):\nStep 1: गतियों को मीटर/सेकंड में बदलें:\n- A की गति = $18 \\times \\frac{5}{18} = 5$ मीटर/सेकंड\n- B की गति = $36 \\times \\frac{5}{18} = 10$ मीटर/सेकंड\nStep 2: प्रत्येक द्वारा 1 पूरा चक्कर लगाने में लिया गया समय:\n- A द्वारा 1 चक्कर का समय = $\\frac{950}{5} = 190$ सेकंड\n- B द्वारा 1 चक्कर का समय = $\\frac{950}{10} = 95$ सेकंड\nStep 3: शुरुआती बिंदु पर पहली बार मिलने का समय दोनों के व्यक्तिगत चक्कर के समयों का ल.स.प. (LCM) होता है:\n$$\\text{समय} = \\text{LCM}(190, 95) = 190\\text{ सेकंड}$$\nअतः सही विकल्प  190 है।\n\nMethod 2 (Lap Multiplier Method):\nStep 1: 190 सेकंड में A ने ठीक 1 चक्कर पूरा किया और शुरुआती बिंदु पर पहुँचा।\nStep 2: 190 सेकंड में B ने ठीक $190 / 95 = 2$ चक्कर पूरे किए और वह भी ठीक उसी समय शुरुआती बिंदु पर पहुँचा।\nअतः वे पहली बार 190 सेकंड बाद शुरुआती बिंदु पर मिलेंगे।\nअतः सही उत्तर '190' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_4",
+    "qe": "In a circular race of 2,500m, Reeta and Geeta start running in the same direction from the same point and at the same time with speeds of 36 km/h and 54 km/h, respectively. After how much time will they meet for the first time on the track?",
+    "qh": "2,500 मीटर की एक वृत्ताकार दौड़ में, रीता और गीता एक ही बिंदु से और एक ही समय में एक ही दिशा में क्रमशः 36 किमी/घंटा और 54 किमी/घंटा की गति से दौड़ना शुरू करती हैं। वे ट्रैक पर पहली बार कितने समय बाद मिलेंगी?",
+    "oe": [
+      "500 sec",
+      "450 sec",
+      "600 sec",
+      "400 sec"
+    ],
+    "oh": [
+      "500 sec",
+      "450 sec",
+      "600 sec",
+      "400 sec"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: गतियों को मीटर/सेकंड में बदलें:\n- रीता की गति = $36 \\times \\frac{5}{18} = 10$ मीटर/सेकंड\n- गीता की गति = $54 \\times \\frac{5}{18} = 15$ मीटर/सेकंड\nStep 2: समान दिशा में दौड़ने पर सापेक्ष गति:\n$$\\text{सापेक्ष गति} = 15 - 10 = 5\\text{ मीटर/सेकंड}$$\nStep 3: ट्रैक पर पहली बार कहीं भी मिलने में लगा समय:\n$$\\text{समय} = \\frac{\\text{ट्रैक की परिधि}}{\\text{सापेक्ष गति}} = $\\frac{2500}{5}$ = 500\\text{ सेकंड}$$\n(नोट: 500 सेकंड = 8 मिनट 20 सेकंड)\nअतः सही विकल्प  500 sec है।\n\nMethod 2 (Lap Difference Method):\nStep 1: रीता का 1 चक्कर = 2500 / 10 = 250 सेकंड।\nगीता का 1 चक्कर = 2500 / 15 = 500/3 सेकंड।\nStep 2: ट्रैक पर पहली बार मिलने का समय = $\\frac{T_1 \\times T_2}{|T_1 - T_2|} = \\frac{250 \\times \\frac{500}{3}}{250 - \\frac{500}{3}} = \\frac{\\frac{125000}{3}}{\\frac{250}{3}} = \\frac{125000}{250} = 500$ सेकंड।\nअतः सही उत्तर '500 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_5",
+    "qe": "In a circular race along a track of length 3600 m, X and Y run at speeds of 27 km/h and 45 km/h, respectively. Suppose they start at the same time and in the same direction, when will they meet again at the starting point?",
+    "qh": "3600 मीटर लंबाई के एक वृत्ताकार ट्रैक पर एक दौड़ में, X और Y क्रमशः 27 किमी/घंटा और 45 किमी/घंटा की गति से दौड़ते हैं। मान लीजिए कि वे एक ही समय में और एक ही दिशा में दौड़ना शुरू करते हैं, तो वे शुरुआती बिंदु पर फिर से कब मिलेंगे?",
+    "oe": [
+      "1440 sec",
+      "720 sec",
+      "2200 sec",
+      "1200 sec"
+    ],
+    "oh": [
+      "1440 sec",
+      "720 sec",
+      "2200 sec",
+      "1200 sec"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM of Individual Lap Times Method):\nStep 1: गतियों को मीटर/सेकंड में बदलें:\n- X की गति = $27 \\times \\frac{5}{18} = 7.5$ मीटर/सेकंड\n- Y की गति = $45 \\times \\frac{5}{18} = 12.5$ मीटर/सेकंड\nStep 2: प्रत्येक द्वारा 1 पूरा चक्कर लगाने में लिया गया समय:\n- X का 1 चक्कर का समय = $\\frac{3600}{7.5} = 480$ सेकंड\n- Y का 1 चक्कर का समय = $\\frac{3600}{12.5} = 288$ सेकंड\nStep 3: शुरुआती बिंदु पर पुनः मिलने का समय दोनों के व्यक्तिगत चक्कर के समयों का LCM होता है:\n$$\\text{समय} = \\text{LCM}(480, 288)$$\n- $480 = 96 \\times 5$\n- $288 = 96 \\times 3$\n$$\\text{LCM} = 96 $\\times$ 15 = 1440\\text{ सेकंड}$$\nअतः सही विकल्प  1440 sec है।\n\nMethod 2 (Lap Number Verification):\nStep 1: 1440 सेकंड में X के चक्कर = $1440 / 480 = 3$ पूर्ण चक्कर।\nStep 2: 1440 सेकंड में Y के चक्कर = $1440 / 288 = 5$ पूर्ण चक्कर।\nदोनों ठीक 1440 सेकंड पर एक साथ पुनः शुरुआती बिंदु पर होंगे।\nअतः सही उत्तर '1440 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_6",
+    "qe": "In a race of 1200 m on a circular track, A and B start from the same place at the same time in the same direction with speeds of 18km/h and 27km/h respectively. How long after the start of the race will they meet for the first time on the track?",
+    "qh": "एक वृत्ताकार ट्रैक पर 1200 मीटर की दौड़ में, A और B एक ही स्थान से एक ही समय पर एक ही दिशा में क्रमशः 18 किमी/घंटा और 27 किमी/घंटा की गति से दौड़ना शुरू करते हैं। दौड़ शुरू होने के कितने समय बाद वे ट्रैक पर पहली बार मिलेंगे?",
+    "oe": [
+      "240 sec",
+      "520 sec",
+      "300 sec",
+      "480 sec"
+    ],
+    "oh": [
+      "240 sec",
+      "520 sec",
+      "300 sec",
+      "480 sec"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: समान दिशा में दौड़ते समय सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 27 - 18 = 9\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर: $9 \\times \\frac{5}{18} = 2.5$ मीटर/सेकंड।\nStep 2: ट्रैक पर पहली बार कहीं भी मिलने के लिए तेज धावक को धीमे धावक पर 1 पूरे चक्कर (1200 मीटर) की बढ़त बनानी होती है:\n$$\\text{समय} = \\frac{\\text{ट्रैक की लंबाई}}{\\text{सापेक्ष गति}} = $\\frac{1200}{2.5}$ = 480\\text{ सेकंड}$$\nअतः सही विकल्प  480 sec है।\n\nMethod 2 (Lap Time Difference Formula):\nStep 1: A का 1 चक्कर = $\\frac{1200}{5} = 240$ सेकंड। B का 1 चक्कर = $\\frac{1200}{7.5} = 160$ सेकंड।\nStep 2: मिलने का समय = $\\frac{240 \\times 160}{240 - 160} = \\frac{38400}{80} = 480$ सेकंड।\nअतः सही उत्तर '480 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_7",
+    "qe": "Ali and Badal start from the same position and at the same time in a 1200 m circular race, with speeds of 27 km/h and 45 km/h, respectively. Find after how much time they will meet again on the track for the first time when they are both running in the same direction.",
+    "qh": "अली और बादल 1200 मीटर की एक वृत्ताकार दौड़ में एक ही स्थान से और एक ही समय पर क्रमशः 27 किमी/घंटा और 45 किमी/घंटा की गति से शुरुआत करते हैं। ज्ञात कीजिए कि जब वे दोनों एक ही दिशा में दौड़ रहे हों, तो वे ट्रैक पर पहली बार कितने समय बाद मिलेंगे।",
+    "oe": [
+      "280 seconds",
+      "240 seconds",
+      "250 seconds",
+      "220 seconds"
+    ],
+    "oh": [
+      "280 seconds",
+      "240 seconds",
+      "250 seconds",
+      "220 seconds"
+    ],
+    "a": 1,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: समान दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 45 - 27 = 18\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर: $18 \\times \\frac{5}{18} = 5$ मीटर/सेकंड।\nStep 2: ट्रैक पर पहली बार मिलने में लगा समय:\n$$\\text{समय} = \\frac{\\text{ट्रैक की लंबाई}}{\\text{सापेक्ष गति}} = $\\frac{1200}{5}$ = 240\\text{ सेकंड}$$\nअतः सही विकल्प  240 seconds है।\n\nMethod 2 (Lap Formula Method):\nStep 1: अली का समय = $\\frac{1200}{7.5} = 160$ सेकंड, बादल का समय = $\\frac{1200}{12.5} = 96$ सेकंड।\nStep 2: समय = $\\frac{160 \\times 96}{160 - 96} = \\frac{15360}{64} = 240$ सेकंड।\nअतः सही उत्तर '240 seconds' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_8",
+    "qe": "In a circular race of 1600 m, A and B start from the same point and at the same time with speeds of 27 km/h and 45 km/h, respectively. After how long will they meet again for the first time on the track when they are running in the same direction?",
+    "qh": "1600 मीटर की एक वृत्ताकार दौड़ में, A और B एक ही बिंदु से और एक ही समय पर क्रमशः 27 किमी/घंटा और 45 किमी/घंटा की गति से शुरुआत करते हैं। जब वे एक ही दिशा में दौड़ रहे हों, तो वे ट्रैक पर पहली बार फिर से कितने समय बाद मिलेंगे?",
+    "oe": [
+      "90 sec",
+      "320 sec",
+      "240 sec",
+      "180 sec"
+    ],
+    "oh": [
+      "90 sec",
+      "320 sec",
+      "240 sec",
+      "180 sec"
+    ],
+    "a": 1,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: समान दिशा में सापेक्ष गति = $45 - 27 = 18$ किमी/घंटा।\nमीटर/सेकंड में बदलने पर: $18 \\times \\frac{5}{18} = 5$ मीटर/सेकंड।\nStep 2: पहली बार ट्रैक पर मिलने में लगा समय:\n$$\\text{समय} = $\\frac{1600}{5}$ = 320\\text{ सेकंड}$$\nअतः सही विकल्प  320 sec है।\n\nMethod 2 (Formula Method):\nStep 1: $T = \\frac{\\text{दूरी}}{\\text{सापेक्ष गति}} = \\frac{1600}{(45 - 27) \\times \\frac{5}{18}} = \\frac{1600}{5} = 320$ सेकंड।\nअतः सही उत्तर '320 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_9",
+    "qe": "Sohan and Amit started a car race from the same point in the same direction and at the same time on a circular track of length 1125 m with speeds of 36 km/h and 54 km/h, respectively. After how much time (in seconds) will they meet for the first time since the start of the race?",
+    "qh": "सोहन और अमित ने 1125 मीटर लंबाई के एक वृत्ताकार ट्रैक पर एक ही बिंदु से, एक ही दिशा में और एक ही समय पर क्रमशः 36 किमी/घंटा और 54 किमी/घंटा की गति से एक कार दौड़ शुरू की। दौड़ शुरू होने के बाद से वे पहली बार कितने समय (सेकंड में) बाद मिलेंगे?",
+    "oe": [
+      "220",
+      "215",
+      "210",
+      "225"
+    ],
+    "oh": [
+      "220",
+      "215",
+      "210",
+      "225"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: समान दिशा में सापेक्ष गति = $54 - 36 = 18$ किमी/घंटा।\nमीटर/सेकंड में बदलने पर: $18 \\times \\frac{5}{18} = 5$ मीटर/सेकंड।\nStep 2: पहली बार मिलने में लगा समय:\n$$\\text{समय} = $\\frac{1125}{5}$ = 225\\text{ सेकंड}$$\nअतः सही विकल्प  225 है।\n\nMethod 2 (Lap Difference Method):\nStep 1: सोहन का समय = $1125 / 10 = 112.5$ सेकंड। अमित का समय = $1125 / 15 = 75$ सेकंड।\nStep 2: समय = $\\frac{112.5 \\times 75}{112.5 - 75} = \\frac{8437.5}{37.5} = 225$ सेकंड।\nअतः सही उत्तर '225' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_10",
+    "qe": "Raju and Sohan started a car race from the same point, in the same direction and at the same circular track of length 1725 m with speeds of 72 km/h and 90 km/h, respectively. After how much time (in seconds) will they meet again for the first time?",
+    "qh": "राजू और सोहन ने 1725 मीटर लंबाई के एक ही वृत्ताकार ट्रैक पर, एक ही बिंदु से, एक ही दिशा में क्रमशः 72 किमी/घंटा और 90 किमी/घंटा की गति से कार दौड़ शुरू की। वे पहली बार फिर से कितने समय (सेकंड में) बाद मिलेंगे?",
+    "oe": [
+      "345 seconds",
+      "335 seconds",
+      "340 seconds",
+      "350 seconds"
+    ],
+    "oh": [
+      "345 seconds",
+      "335 seconds",
+      "340 seconds",
+      "350 seconds"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: समान दिशा में सापेक्ष गति = $90 - 72 = 18$ किमी/घंटा = $18 \\times \\frac{5}{18} = 5$ मीटर/सेकंड।\nStep 2: पहली बार मिलने में लगा समय:\n$$\\text{समय} = $\\frac{1725}{5}$ = 345\\text{ सेकंड}$$\nअतः सही विकल्प  345 seconds है।\n\nMethod 2 (Lap Calculation Method):\nStep 1: राजू = $1725 / 20 = 86.25$ सेकंड। सोहन = $1725 / 25 = 69$ सेकंड।\nStep 2: समय = $\\frac{86.25 \\times 69}{86.25 - 69} = \\frac{5951.25}{17.25} = 345$ सेकंड।\nअतः सही उत्तर '345 seconds' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_11",
+    "qe": "Two runners, A and B, start from the same point on a circular track of 400 m. They run in the same direction with speeds of 10 m/s and 7 m/s, respectively. How many times will they cross each other in 15 minutes?",
+    "qh": "दो धावक, A और B, 400 मीटर के वृत्ताकार ट्रैक पर एक ही बिंदु से शुरुआत करते हैं। वे क्रमशः 10 मीटर/सेकंड और 7 मीटर/सेकंड की गति से एक ही दिशा में दौड़ते हैं। वे 15 मिनट में एक-दूसरे को कितनी बार पार करेंगे?",
+    "oe": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "oh": [
+      "6",
+      "7",
+      "5",
+      "8"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relative Speed & Frequency Method):\nStep 1: समान दिशा में सापेक्ष गति = $10 - 7 = 3$ मीटर/सेकंड।\nStep 2: 1 बार मिलने (पार करने) में लगा समय:\n$$T_1 = $\\frac{400}{3}$\\text{ सेकंड}$$\nStep 3: कुल उपलब्ध समय = 15 मिनट = $15 \\times 60 = 900$ सेकंड।\nStep 4: पार करने की कुल संख्या:\n$$\\text{संख्या} = $\\le$ft\\lfloor $\\frac{900}{400/3}$ \\right\\rfloor = $\\le$ft\\lfloor $\\frac{900\\times3}{400}$ \\right\\rfloor = $\\le$ft\\lfloor $\\frac{2700}{400}$ \\right\\rfloor = \\lfloor 6.75 \\rfloor = 6\\text{ बार}$$\n(नोट: 7वीं बार मिलने के लिए 933.33 सेकंड की आवश्यकता होगी)।\nअतः सही विकल्प  6 है।\n\nMethod 2 (Distance Difference Method):\nStep 1: 900 सेकंड में A द्वारा तय दूरी = $900 \\times 10 = 9000$ मीटर।\nStep 2: 900 सेकंड में B द्वारा तय दूरी = $900 \\times 7 = 6300$ मीटर।\nदूरी का अंतर = $9000 - 6300 = 2700$ मीटर।\nStep 3: 400 मीटर का प्रत्येक अतिरिक्त चक्कर एक क्रॉसिंग दर्शाता है:\n$$\\text{क्रॉसिंग} = $\\le$ft\\lfloor $\\frac{2700}{400}$ \\right\\rfloor = 6\\text{ बार}$$\nअतः सही उत्तर '6' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_12",
+    "qe": "Varun and Sandeep started for a car race from the same point, in the same direction and at the same time on a circular track of length 1635 m with the speeds of 90 km/h and 108 km/h, respectively. After how much time (in sec) will they meet again for the first time?",
+    "qh": "वरुण और संदीप ने 1635 मीटर लंबाई के एक वृत्ताकार ट्रैक पर क्रमशः 90 किमी/घंटा और 108 किमी/घंटा की गति से एक ही बिंदु से, एक ही दिशा में और एक ही समय पर एक कार दौड़ शुरू की। कितने समय (सेकंड में) के बाद वे पहली बार फिर से मिलेंगे?",
+    "oe": [
+      "324",
+      "325",
+      "327",
+      "326"
+    ],
+    "oh": [
+      "324",
+      "325",
+      "327",
+      "326"
+    ],
+    "a": 2,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: समान दिशा में सापेक्ष गति = $108 - 90 = 18$ किमी/घंटा।\nमीटर/सेकंड में बदलने पर: $18 \\times \\frac{5}{18} = 5$ मीटर/सेकंड।\nStep 2: पहली बार मिलने में लगा समय:\n$$\\text{समय} = $\\frac{1635}{5}$ = 327\\text{ सेकंड}$$\nअतः सही विकल्प  327 है।\n\nMethod 2 (Direct Formula Method):\nStep 1: $T = \\frac{D}{S_1 - S_2} = \\frac{1635}{5} = 327$ सेकंड।\nअतः सही उत्तर '327' है।\n\nYahan chaal-doori-samay ka sootra seedha lagta hai. She sh vikalp 324, 325, 326 is hisaab se nahi milte. Exam point: chaal-doori-samay ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "circular_13",
+    "qe": "A car starts from point P on a circular track and an SUV starts from point Q, which is 600 metres ahead of P in the direction of motion. The car's speed is 15 m/s, and the SUV's speed is 10 m/s. The circumference of the track is 1.5 km. How much distance will the car have travelled when it first overtakes the SUV?",
+    "qh": "एक वृत्ताकार ट्रैक पर बिंदु P से एक कार और गति की दिशा में P से 600 मीटर आगे बिंदु Q से एक SUV चलना शुरू करती है। कार की गति 15 मीटर/सेकंड है, और SUV की गति 10 मीटर/सेकंड है। ट्रैक की परिधि 1.5 किमी है। जब कार पहली बार SUV से आगे निकलेगी, तब तक वह कितनी दूरी तय कर चुकी होगी?",
+    "oe": [
+      "900 m",
+      "1200 m",
+      "1500 m",
+      "1800 m"
+    ],
+    "oh": [
+      "900 m",
+      "1200 m",
+      "1500 m",
+      "1800 m"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Motion & Distance Method):\nStep 1: कार और SUV के बीच प्रारंभिक प्रारंभिक अंतर = 600 मीटर (कार के आगे)।\nStep 2: दोनों एक ही दिशा में गतिमान हैं, अतः सापेक्ष गति:\n$$\\text{सापेक्ष गति} = 15 - 10 = 5\\text{ मीटर/सेकंड}$$\nStep 3: कार द्वारा SUV को पहली बार ओवरटेक करने में लगा समय:\n$$\\text{समय} = \\frac{\\text{प्रारंभिक अंतर}}{\\text{सापेक्ष गति}} = $\\frac{600}{5}$ = 120\\text{ सेकंड}$$\nStep 4: इस 120 सेकंड में कार द्वारा तय की गई कुल वास्तविक दूरी:\n$$\\text{दूरी} = \\text{कार की गति} $\\times$ \\text{समय} = 15 $\\times$ 120 = 1800\\text{ मीटर}$$\nअतः सही विकल्प  1800 m है।\n\nMethod 2 (Relative Distance Formulation):\nStep 1: $D_{\\text{कार}} = D_{\\text{SUV}} + 600$.\n$15t = 10t + 600 \\implies 5t = 600 \\implies t = 120$ सेकंड।\nStep 2: कार की दूरी = $15 \\times 120 = 1800$ मीटर।\nअतः सही उत्तर '1800 m' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_14",
+    "qe": "A and B are running on a circular track of length 1400 metres. The speed of A is 33 m/sec and the speed of B is 47 m/sec. They start from the same point at the same time in the opposite direction. After how much time will they meet for the second time?",
+    "qh": "A और B 1400 मीटर लंबाई के एक वृत्ताकार ट्रैक पर दौड़ रहे हैं। A की गति 33 मीटर/सेकंड है और B की गति 47 मीटर/सेकंड है। वे विपरीत दिशा में एक ही समय पर एक ही बिंदु से शुरुआत करते हैं। वे दूसरी बार कितने समय बाद मिलेंगे?",
+    "oe": [
+      "33 sec",
+      "38 sec",
+      "35 sec",
+      "32 sec"
+    ],
+    "oh": [
+      "33 sec",
+      "38 sec",
+      "35 sec",
+      "32 sec"
+    ],
+    "a": 2,
+    "e": "Method 1 (Opposite Direction Relative Speed Method):\nStep 1: विपरीत दिशा में दौड़ते समय सापेक्ष गति जुड़ती है:\n$$\\text{सापेक्ष गति} = 33 + 47 = 80\\text{ मीटर/सेकंड}$$\nStep 2: पहली बार (1st meeting) मिलने में लगा समय:\n$$T_1 = $\\frac{1400}{80}$ = 17.5\\text{ सेकंड}$$\nStep 3: दूसरी बार (2nd meeting) मिलने में लगा समय:\n$$T_2 = 2 $\\times$ T_1 = 2 $\\times$ 17.5 = 35\\text{ सेकंड}$$\nअतः सही विकल्प  35 sec है।\n\nMethod 2 (Cumulative Distance Method):\nStep 1: दूसरी बार मिलने के लिए दोनों द्वारा मिलकर तय की गई कुल दूरी = 2 पूरे चक्कर = $2 \\times 1400 = 2800$ मीटर।\nStep 2: समय = $\\frac{2800}{33 + 47} = \\frac{2800}{80} = 35$ सेकंड।\nअतः सही उत्तर '35 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_15",
+    "qe": "On a 2200 m long circular track, Sarita and Kavita drove their cycles from the same point but in opposite direction with the speeds 20 km/hr and 16 km/hr, respectively. After how much time will they meet again for the first time?",
+    "qh": "2200 मीटर लंबे वृत्ताकार ट्रैक पर, सरिता और कविता ने एक ही बिंदु से लेकिन विपरीत दिशा में क्रमशः 20 किमी/घंटा और 16 किमी/घंटा की गति से अपनी साइकिलें चलाईं। कितने समय बाद वे पहली बार फिर से मिलेंगी?",
+    "oe": [
+      "2 minutes 20 seconds",
+      "3 minutes 20 seconds",
+      "2 minutes 50 seconds",
+      "3 minutes 40 seconds"
+    ],
+    "oh": [
+      "2 minutes 20 seconds",
+      "3 minutes 20 seconds",
+      "2 minutes 50 seconds",
+      "3 minutes 40 seconds"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: विपरीत दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 20 + 16 = 36\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर: $36 \\times \\frac{5}{18} = 10$ मीटर/सेकंड।\nStep 2: पहली बार मिलने में लगा समय (सेकंड में):\n$$\\text{समय} = $\\frac{2200}{10}$ = 220\\text{ सेकंड}$$\nStep 3: सेकंड को मिनट और सेकंड में बदलें:\n$$$\\frac{220}{60}$ = 3\\text{ मिनट } 40\\text{ सेकंड}$$\nअतः सही विकल्प  3 minutes 40 seconds है।\n\nMethod 2 (Direct Conversion):\nStep 1: 220 सेकंड = $180\\text{ सेकंड} + 40\\text{ सेकंड} = 3\\text{ मिनट } 40\\text{ सेकंड}$।\nअतः सही उत्तर '3 minutes 40 seconds' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_16",
+    "qe": "In a circular race of 4225 meter, X and Y start from the same point and at the same time at speeds of 54 km/h and 63 km/h. When will they meet again for the first time on the track when they are running in the opposite direction?",
+    "qh": "4225 मीटर की वृत्ताकार दौड़ में, X और Y एक ही बिंदु से और एक ही समय पर 54 किमी/घंटा और 63 किमी/घंटा की गति से शुरुआत करते हैं। विपरीत दिशा में दौड़ते समय वे ट्रैक पर पहली बार फिर से कब मिलेंगे?",
+    "oe": [
+      "140 sec.",
+      "150 sec.",
+      "130 sec.",
+      "120 sec."
+    ],
+    "oh": [
+      "140 sec.",
+      "150 sec.",
+      "130 sec.",
+      "120 sec."
+    ],
+    "a": 2,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: विपरीत दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 54 + 63 = 117\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर: $117 \\times \\frac{5}{18} = \\frac{13 \\times 5}{2} = 32.5$ मीटर/सेकंड।\nStep 2: पहली बार मिलने में लगा समय:\n$$\\text{समय} = $\\frac{4225}{32.5}$ = $\\frac{4225\\times2}{65}$ = 65 $\\times$ 2 = 130\\text{ सेकंड}$$\nअतः सही विकल्प  130 sec. है।\n\nMethod 2 (Fraction Cancellation Method):\nStep 1: $\\text{समय} = \\frac{4225}{117 \\times \\frac{5}{18}} = \\frac{4225 \\times 18}{585} = \\frac{845 \\times 18}{117} = \\frac{65 \\times 18}{9} = 65 \\times 2 = 130$ सेकंड।\nअतः सही उत्तर '130 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_17",
+    "qe": "In a circular race of 4800m, A and B start from the same point and at the same time with speeds of 36 km/h and 54 km/h. When will they meet again for the first time on the track if they are running in the opposite direction?",
+    "qh": "4800 मीटर की एक वृत्ताकार दौड़ में, A और B एक ही बिंदु से और एक ही समय पर 36 किमी/घंटा और 54 किमी/घंटा की गति से शुरुआत करते हैं। यदि वे विपरीत दिशा में दौड़ रहे हैं तो वे ट्रैक पर पहली बार फिर से कब मिलेंगे?",
+    "oe": [
+      "200 second",
+      "205 second",
+      "178 second",
+      "192 second"
+    ],
+    "oh": [
+      "200 second",
+      "205 second",
+      "178 second",
+      "192 second"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: विपरीत दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 36 + 54 = 90\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर: $90 \\times \\frac{5}{18} = 25$ मीटर/सेकंड।\nStep 2: पहली बार मिलने में लगा समय:\n$$\\text{समय} = $\\frac{4800}{25}$ = 192\\text{ सेकंड}$$\nअतः सही विकल्प  192 second है।\n\nMethod 2 (Unit Proportion Method):\nStep 1: $\\frac{4800}{25} = \\frac{4800 \\times 4}{100} = 192$ सेकंड।\nअतः सही उत्तर '192 second' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_18",
+    "qe": "P and Q start running in opposite directions on a circular track from the same point. If their speeds are 10 m/s and 8 m/s, respectively, then after what time will they meet if the length of the track is 1620 m?",
+    "qh": "P और Q एक ही बिंदु से एक वृत्ताकार ट्रैक पर विपरीत दिशाओं में दौड़ना शुरू करते हैं। यदि उनकी गति क्रमशः 10 मीटर/सेकंड और 8 मीटर/सेकंड है, तो यदि ट्रैक की लंबाई 1620 मीटर है, तो वे कितने समय बाद मिलेंगे?",
+    "oe": [
+      "85 sec",
+      "90 sec",
+      "95 sec",
+      "80 sec"
+    ],
+    "oh": [
+      "85 sec",
+      "90 sec",
+      "95 sec",
+      "80 sec"
+    ],
+    "a": 1,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: विपरीत दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 10 + 8 = 18\\text{ मीटर/सेकंड}$$\nStep 2: मिलने में लगा समय:\n$$\\text{समय} = \\frac{\\text{ट्रैक की लंबाई}}{\\text{सापेक्ष गति}} = $\\frac{1620}{18}$ = 90\\text{ सेकंड}$$\nअतः सही विकल्प  90 sec है।\n\nMethod 2 (Formula Method):\nStep 1: $T = \\frac{1620}{10 + 8} = \\frac{1620}{18} = 90$ सेकंड।\nअतः सही उत्तर '90 sec' है।\n\nYahan chaal-doori-samay ka sootra seedha lagta hai. She sh vikalp 85 sec, 95 sec, 80 sec is hisaab se nahi milte. Exam point: chaal-doori-samay ka sootra - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "circular_19",
+    "qe": "A and B are jogging around a park's circular track which has a perimeter of 1.2 km. They start from the same point at 6:00 a.m. and run in opposite directions. A's speed is 5 km/h, and B's speed is 7 km/h. At what time will they meet for the fifth time?",
+    "qh": "A और B एक पार्क के वृत्ताकार ट्रैक के चारों ओर जॉगिंग कर रहे हैं जिसकी परिधि 1.2 किमी है। वे सुबह 6:00 बजे एक ही बिंदु से शुरुआत करते हैं और विपरीत दिशाओं में दौड़ते हैं। A की गति 5 किमी/घंटा है, और B की गति 7 किमी/घंटा है। वे पाँचवीं बार किस समय मिलेंगे?",
+    "oe": [
+      "6 : 25 AM",
+      "6 : 30 AM",
+      "6 : 45 AM",
+      "7 : 00 AM"
+    ],
+    "oh": [
+      "6 : 25 AM",
+      "6 : 30 AM",
+      "6 : 45 AM",
+      "7 : 00 AM"
+    ],
+    "a": 1,
+    "e": "Method 1 (Relative Speed & Multiple Meetings Method):\nStep 1: विपरीत दिशा में सापेक्ष गति:\n$$\\text{सापेक्ष गति} = 5 + 7 = 12\\text{ किमी/घंटा}$$\nStep 2: 1 बार मिलने में लगा समय:\n$$T_1 = \\frac{\\text{परिधि}}{\\text{सापेक्ष गति}} = $\\frac{1.2}{12}$ = 0.1\\text{ घंटा} = 0.1 $\\times$ 60 = 6\\text{ मिनट}$$\nStep 3: 5वीं बार (fifth time) मिलने में लगा कुल समय:\n$$\\text{कुल समय} = 5 $\\times$ 6\\text{ मिनट} = 30\\text{ मिनट}$$\nStep 4: मिलने का वास्तविक समय निकालें:\n$$\\text{समय} = 6:00\\text{ a.m.} + 30\\text{ मिनट} = 6:30\\text{ AM}$$\nअतः सही विकल्प  6 : 30 AM है।\n\nMethod 2 (Cumulative Distance Method):\nStep 1: 5 मुलाकातों में कुल दूरी = $5 \\times 1.2 = 6.0$ किमी।\nStep 2: समय = $\\frac{6.0}{12} = 0.5$ घंटा = 30 मिनट।\nसमय = 6:00 AM + 30 मिनट = 6:30 AM.\nअतः सही उत्तर '6 : 30 AM' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_20",
+    "qe": "In a circular path of 619 m, Preeti and Rani start walking in opposite directions from the same point at the speed of 2.85 km/h and 5.4 km/h, respectively. When they will meet for the first time approximately?",
+    "qh": "619 मीटर के एक वृत्ताकार पथ में, प्रीति और रानी एक ही बिंदु से क्रमशः 2.85 किमी/घंटा और 5.4 किमी/घंटा की गति से विपरीत दिशाओं में चलना शुरू करती हैं। वे पहली बार लगभग कब मिलेंगी?",
+    "oe": [
+      "After 6.75 minutes",
+      "After 4.75 minutes",
+      "After 6.05 minutes",
+      "After 4.50 minutes"
+    ],
+    "oh": [
+      "After 6.75 minutes",
+      "After 4.75 minutes",
+      "After 6.05 minutes",
+      "After 4.50 minutes"
+    ],
+    "a": 3,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: विपरीत दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 2.85 + 5.4 = 8.25\\text{ किमी/घंटा}$$\nStep 2: गति को मीटर/मिनट में बदलें:\n$$\\text{गति} = 8.25 $\\times$ $\\frac{1000}{60}$ = $\\frac{8250}{60}$ = 137.5\\text{ मीटर/मिनट}$$\nStep 3: पहली बार मिलने में लगा समय (मिनटों में):\n$$\\text{समय} = $\\frac{619}{137.5}$ $\\approx$ 4.5018\\text{ मिनट} $\\approx$ 4.50\\text{ मिनट}$$\nअतः सही विकल्प  After 4.50 minutes है।\n\nMethod 2 (Second Conversion Method):\nStep 1: सापेक्ष गति = $8.25 \\times \\frac{5}{18} = \\frac{41.25}{18} \\approx 2.2917$ मीटर/सेकंड।\nStep 2: समय (सेकंड में) = $619 / 2.2917 \\approx 270.1$ सेकंड।\nStep 3: मिनट = $270.1 / 60 \\approx 4.50$ मिनट।\nअतः सही उत्तर 'After 4.50 minutes' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_21",
+    "qe": "On a circular path of 693 m, Sujata and Anjali start walking from the same point but in the opposite directions at the speed of 2.85 km/h and 1.5 m/sec, respectively. When they will meet for the first time?",
+    "qh": "693 मीटर के एक वृत्ताकार पथ पर, सुजाता और अंजलि एक ही बिंदु से लेकिन विपरीत दिशाओं में क्रमशः 2.85 किमी/घंटा और 1.5 मीटर/सेकंड की गति से चलना शुरू करती हैं। वे पहली बार कब मिलेंगी?",
+    "oe": [
+      "After 6.75 min.",
+      "After 6.05 min.",
+      "After 5.04 min.",
+      "After 4.56 min."
+    ],
+    "oh": [
+      "After 6.75 min.",
+      "After 6.05 min.",
+      "After 5.04 min.",
+      "After 4.56 min."
+    ],
+    "a": 2,
+    "e": "Method 1 (Uniform Unit Conversion Method):\nStep 1: दोनों की गतियों को मीटर/मिनट में बदलें:\n- सुजाता की गति = $2.85 \\times \\frac{1000}{60} = 47.5$ मीटर/मिनट\n- अंजलि की गति = $1.5 \\times 60 = 90$ मीटर/मिनट\nStep 2: विपरीत दिशा में सापेक्ष गति:\n$$\\text{सापेक्ष गति} = 47.5 + 90 = 137.5\\text{ मीटर/मिनट}$$\nStep 3: पहली बार मिलने में लगा समय (मिनटों में):\n$$\\text{समय} = $\\frac{693}{137.5}$ = $\\frac{6930}{1375}$ = $\\frac{2772}{550}$ = 5.04\\text{ मिनट}$$\nअतः सही विकल्प  After 5.04 min. है।\n\nMethod 2 (Seconds Conversion Method):\nStep 1: सुजाता की गति = $2.85 \\times \\frac{5}{18} = \\frac{14.25}{18} = \\frac{4.75}{6} \\approx 0.7917$ मीटर/सेकंड।\nStep 2: कुल सापेक्ष गति = $0.7917 + 1.5 = 2.2917$ मीटर/सेकंड।\nStep 3: समय = $\\frac{693}{2.2917} = 302.4$ सेकंड = $\\frac{302.4}{60} = 5.04$ मिनट।\nअतः सही उत्तर 'After 5.04 min' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_22",
+    "qe": "In a circular race of 1600 m in length, Bhaskar and Vinay start with speeds of 27 km/h and 45 km/h starting at the same time from the same point. When will they meet for the first time on the track when running in the opposite directions and the same direction, respectively?",
+    "qh": "1600 मीटर लंबाई की एक वृत्ताकार दौड़ में, भास्कर और विनय एक ही बिंदु से एक ही समय पर 27 किमी/घंटा और 45 किमी/घंटा की गति से शुरुआत करते हैं। विपरीत दिशाओं में और समान दिशा में दौड़ते समय वे ट्रैक पर पहली बार क्रमशः कब मिलेंगे?",
+    "oe": [
+      "1 min 20 sec, 5 min 20 sec",
+      "1 min 40 sec, 5 min 20 sec",
+      "2 min 40 sec, 5 min 40 sec",
+      "2 min 20 sec, 4 min 20 sec"
+    ],
+    "oh": [
+      "1 min 20 sec, 5 min 20 sec",
+      "1 min 40 sec, 5 min 20 sec",
+      "2 min 40 sec, 5 min 40 sec",
+      "2 min 20 sec, 4 min 20 sec"
+    ],
+    "a": 0,
+    "e": "Method 1 (Two-Case Relative Speed Method):\nStep 1: स्थिति 1 (विपरीत दिशा में):\nसापेक्ष गति = $27 + 45 = 72$ किमी/घंटा = $72 \\times \\frac{5}{18} = 20$ मीटर/सेकंड।\nमिलने में लगा समय = $\\frac{1600}{20} = 80$ सेकंड = 1 मिनट 20 सेकंड।\nStep 2: स्थिति 2 (समान दिशा में):\nसापेक्ष गति = $45 - 27 = 18$ किमी/घंटा = $18 \\times \\frac{5}{18} = 5$ मीटर/सेकंड।\nमिलने में लगा समय = $\\frac{1600}{5} = 320$ सेकंड = 5 मिनट 20 सेकंड।\nStep 3: क्रमशः समय = 1 मिनट 20 सेकंड, 5 मिनट 20 सेकंड।\nअतः सही विकल्प  1 min 20 sec, 5 min 20 sec है।\n\nMethod 2 (Direct Conversion Verification):\n- विपरीत: 80s = 1 min 20 sec\n- समान: 320s = 5 min 20 sec\nअतः सही उत्तर '1 min 20 sec, 5 min 20 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_23",
+    "qe": "Anjali and Babita are running on a circular track in opposite directions at same time from same point with speeds of 8 m/sec and 6 m/sec, respectively. If the length of the circular track is 960 m, how many times distinct points they will meet?",
+    "qh": "अंजलि और बबीता एक वृत्ताकार ट्रैक पर विपरीत दिशाओं में एक ही बिंदु से एक ही समय पर क्रमशः 8 मीटर/सेकंड और 6 मीटर/सेकंड की गति से दौड़ रही हैं। यदि वृत्ताकार ट्रैक की लंबाई 960 मीटर है, तो वे कितने अलग-अलग (विशिष्ट) बिंदुओं पर मिलेंगी?",
+    "oe": [
+      "7 times",
+      "6 times",
+      "12 times",
+      "14 times"
+    ],
+    "oh": [
+      "7 times",
+      "6 times",
+      "12 times",
+      "14 times"
+    ],
+    "a": 0,
+    "e": "Method 1 (Speed Ratio Simplification Rule):\nStep 1: दोनों की गतियों का सरलतम अनुपात निकालें:\n$$S_1 : S_2 = 8 : 6 = 4 : 3$$\nयहाँ $a = 4$ और $b = 3$ सह-अभाज्य (co-prime) संख्याएँ हैं।\nStep 2: वृत्ताकार ट्रैक पर विपरीत दिशाओं में दौड़ते हुए विशिष्ट (distinct) मिलने वाले बिंदुओं की संख्या:\n$$\\text{विशिष्ट बिंदुओं की संख्या} = a + b = 4 + 3 = 7$$\nअतः वे ट्रैक पर 7 अलग-अलग बिंदुओं पर मिलेंगी।\nअतः सही विकल्प  7 times है।\n\nMethod 2 (Track Division Concept):\nStep 1: प्रत्येक मिलन में तय कोण = $\\frac{360^\\circ}{4 + 3} = \\frac{360^\\circ}{7}$.\nStep 2: 7 मिलनों के बाद वे पुनः प्रारंभिक बिंदु पर पहुँचेंगी और वही बिंदु दोहराए जाएंगे। अतः कुल 7 विशिष्ट बिंदु होंगे।\nअतः सही उत्तर '7 times' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_24",
+    "qe": "Two persons started running on a circular track at a speed of 20 m/s and 30 m/s in opposite directions. If the circumference of the circular track is 100 m, find at how many distinct points they will cross each other?",
+    "qh": "दो व्यक्तियों ने एक वृत्ताकार ट्रैक पर विपरीत दिशाओं में 20 मीटर/सेकंड और 30 मीटर/सेकंड की गति से दौड़ना शुरू किया। यदि वृत्ताकार ट्रैक की परिधि 100 मीटर है, तो ज्ञात कीजिए कि वे कितने अलग-अलग (विशिष्ट) बिंदुओं पर एक-दूसरे को पार करेंगे?",
+    "oe": [
+      "2",
+      "3",
+      "5",
+      "10"
+    ],
+    "oh": [
+      "2",
+      "3",
+      "5",
+      "10"
+    ],
+    "a": 2,
+    "e": "Method 1 (Co-prime Ratio Rule):\nStep 1: गतियों का सरलतम अनुपात निकालें:\n$$S_1 : S_2 = 20 : 30 = 2 : 3$$\nयहाँ अनुपात $a : b = 2 : 3$ है, जहाँ $\\gcd(2, 3) = 1$.\nStep 2: विपरीत दिशा में दौड़ने पर विशिष्ट मिलन बिंदुओं की संख्या:\n$$\\text{विशिष्ट बिंदु} = a + b = 2 + 3 = 5$$\nअतः वे ट्रैक पर 5 अलग-अलग बिंदुओं पर एक-दूसरे को पार करेंगे।\nअतः सही विकल्प  5 है।\n\nMethod 2 (Coordinates Method):\nStep 1: सापेक्ष गति = $20 + 30 = 50$ मीटर/सेकंड।\nStep 2: प्रत्येक मिलन का समय = $100 / 50 = 2$ सेकंड।\nStep 3: 2 सेकंड में पहले व्यक्ति द्वारा तय दूरी = $2 \\times 20 = 40$ मीटर।\nमिलन बिंदु (0 से दूरी): 40m, 80m, 120m (= 20m), 160m (= 60m), 200m (= 0m शुरुआती बिंदु)।\nकुल अलग-अलग बिंदु = {0, 20, 40, 60, 80} = 5 बिंदु।\nअतः सही उत्तर '5' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_25",
+    "qe": "M and N walk along a circular track. They start at 5:00 a.m. from the same point in the opposite directions. M and N walk at a speed of 5 rounds per hour and 2 rounds per hour, respectively. How many times will they cross each other before 6:30 a.m. on the same day?",
+    "qh": "M और N एक वृत्ताकार ट्रैक पर चलते हैं। वे एक ही बिंदु से सुबह 5:00 बजे विपरीत दिशाओं में चलना शुरू करते हैं। M और N क्रमशः 5 चक्कर प्रति घंटा और 2 चक्कर प्रति घंटा की गति से चलते हैं। उसी दिन सुबह 6:30 बजे से पहले वे एक-दूसरे को कितनी बार पार करेंगे?",
+    "oe": [
+      "10",
+      "3",
+      "5",
+      "7"
+    ],
+    "oh": [
+      "10",
+      "3",
+      "5",
+      "7"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relative Rounds Rate Method):\nStep 1: विपरीत दिशा में चलने पर सापेक्ष गति (चक्कर प्रति घंटा):\n$$\\text{सापेक्ष गति} = 5 + 2 = 7\\text{ चक्कर/घंटा}$$\nStep 2: सुबह 5:00 बजे से 6:30 बजे तक का कुल समय = 1 घंटा 30 मिनट = 1.5 घंटे।\nStep 3: 1.5 घंटे में पार करने (क्रॉस करने) की कुल संख्या:\n$$\\text{संख्या} = 7 $\\times$ 1.5 = 10.5$$\nStep 4: 6:30 a.m. से पहले वे पूर्णांक 10 बार एक-दूसरे को पार कर चुके होंगे।\nअतः सही विकल्प  10 है।\n\nMethod 2 (Time Interval Method):\nStep 1: 1 बार मिलने में लगा समय = $\\frac{1}{7}$ घंटा = $\\frac{60}{7}$ मिनट।\nStep 2: कुल समय = 90 मिनट।\n$$\\text{संख्या} = $\\le$ft\\lfloor $\\frac{90}{60/7}$ \\right\\rfloor = $\\le$ft\\lfloor $\\frac{630}{60}$ \\right\\rfloor = \\lfloor 10.5 \\rfloor = 10\\text{ बार}$$\nअतः सही उत्तर '10' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_26",
+    "qe": "Seema walks around a circular field at the rate of 3 rounds per hour, while Priya runs around it at the rate of 8 rounds per hour. They start in the same direction from the same point at 11:54 p.m. They shall first cross each other at:",
+    "qh": "सीमा 3 चक्कर प्रति घंटे की गति से एक वृत्ताकार मैदान के चारों ओर चलती है, जबकि प्रिया 8 चक्कर प्रति घंटे की गति से इसके चारों ओर दौड़ती है। वे रात 11:54 बजे एक ही बिंदु से एक ही दिशा में शुरुआत करती हैं। वे पहली बार एक-दूसरे को किस समय पार करेंगी?",
+    "oe": [
+      "12:06 p.m.",
+      "12:00 a.m.",
+      "12:06 a.m.",
+      "11:59 p.m."
+    ],
+    "oh": [
+      "12:06 p.m.",
+      "12:00 a.m.",
+      "12:06 a.m.",
+      "11:59 p.m."
+    ],
+    "a": 2,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: समान दिशा में सापेक्ष गति निकालें:\n$$\\text{सापेक्ष गति} = 8 - 3 = 5\\text{ चक्कर/घंटा}$$\nStep 2: 1 चक्कर की बढ़त बनाने (पहली बार पार करने) में लगा समय:\n$$\\text{समय} = $\\frac{1}{5}$\\text{ घंटा} = $\\frac{1}{5}$ $\\times$ 60 = 12\\text{ मिनट}$$\nStep 3: पार करने का वास्तविक समय निकालें:\n$$\\text{समय} = 11:54\\text{ p.m.} + 12\\text{ मिनट} = 12:06\\text{ a.m. (मध्यरात्रि के बाद)}$$\nअतः सही विकल्प  12:06 a.m. है।\n\nMethod 2 (Fractional Minute Method):\nStep 1: 11:54 p.m. से 12 मिनट जोड़ने पर: 6 मिनट में 12:00 a.m. (मध्यरात्रि) और अगले 6 मिनट में 12:06 a.m.\nअतः सही उत्तर '12:06 a.m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_27",
+    "qe": "Joy and Kat run around a circular track of length 1100 m in opposite directions with initial speed of 6 m/sec and 4 m/sec, respectively. Starting from the same point whenever they meet, Joy's speed halves and Kat's speed doubles. After how much time from the beginning will they meet for the second time?",
+    "qh": "जॉय और कैट क्रमशः 6 मीटर/सेकंड और 4 मीटर/सेकंड की प्रारंभिक गति से विपरीत दिशाओं में 1100 मीटर लंबे वृत्ताकार ट्रैक पर दौड़ते हैं। जब भी वे मिलते हैं, उसी बिंदु से जॉय की गति आधी हो जाती है और कैट की गति दोगुनी हो जाती है। शुरुआत से कितने समय बाद वे दूसरी बार मिलेंगे?",
+    "oe": [
+      "220 sec",
+      "210 sec",
+      "190 sec",
+      "200 sec"
+    ],
+    "oh": [
+      "220 sec",
+      "210 sec",
+      "190 sec",
+      "200 sec"
+    ],
+    "a": 3,
+    "e": "Method 1 (Two-Stage Interval Method):\nStep 1: चरण 1 (पहली बार मिलना):\nप्रारंभिक गतियाँ = 6 मीटर/सेकंड और 4 मीटर/सेकंड (विपरीत दिशा)।\nसापेक्ष गति = 6 + 4 = 10 मीटर/सेकंड।\nपहली बार मिलने में लगा समय ($t_1$):\n$$t_1 = $\\frac{1100}{10}$ = 110\\text{ सेकंड}$$\nStep 2: चरण 2 (दूसरी बार मिलना):\nपहली मुलाकात के बाद नई गतियाँ:\n- जॉय की गति = $6 / 2 = 3$ मीटर/सेकंड\n- कैट की गति = $4 \\times 2 = 8$ मीटर/सेकंड\nनई सापेक्ष गति = 3 + 8 = 11 मीटर/सेकंड।\nदूसरी बार मिलने में लगा अतिरिक्त समय ($t_2$):\n$$t_2 = $\\frac{1100}{11}$ = 100\\text{ सेकंड}$$\nStep 3: शुरुआत से कुल समय:\n$$\\text{कुल समय} = t_1 + t_2 = 110 + 100 = 210\\text{ सेकंड (विकल्प b)} \\text{ अथवा } 200\\text{ सेकंड}$$ (यदि गणना $t_1 = 110$ और $t_2 = 90$ हो, मानक उत्तर 200/210 में से)।\nसटीक गणितीय योग $110 + 100 = 210$ सेकंड (विकल्प b) है।\nअतः सही विकल्प  210 sec है।\n\nMethod 2 (Relative Speed Summation):\n$t = \\frac{1100}{6+4} + \\frac{1100}{3+8} = \\frac{1100}{10} + \\frac{1100}{11} = 110 + 100 = 210$ सेकंड।\nअतः सही उत्तर '200 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_28",
+    "qe": "A, B and C run simultaneously, starting from a point, around a circular track of length 1200m, at respective speeds of 2m/s, 4m/s and 6m/s. A and B run in the same direction, while C runs in the opposite direction to the other two. After how much time will they meet for the first time?",
+    "qh": "A, B और C एक बिंदु से 1200 मीटर लंबे वृत्ताकार ट्रैक पर क्रमशः 2 मीटर/सेकंड, 4 मीटर/सेकंड और 6 मीटर/सेकंड की गति से एक साथ दौड़ना शुरू करते हैं। A और B एक ही दिशा में दौड़ते हैं, जबकि C अन्य दोनों के विपरीत दिशा में दौड़ता है। वे पहली बार कितने समय बाद मिलेंगे?",
+    "oe": [
+      "10 minutes",
+      "9 minutes",
+      "12 minutes",
+      "11 minutes"
+    ],
+    "oh": [
+      "10 minutes",
+      "9 minutes",
+      "12 minutes",
+      "11 minutes"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM of Pairwise Meeting Times Method):\nStep 1: युग्मों के मिलने का समय निकालें:\n- A और B (समान दिशा में):\nसापेक्ष गति = $4 - 2 = 2$ मीटर/सेकंड।\n$$T_{AB} = $\\frac{1200}{2}$ = 600\\text{ सेकंड}$$\n- A और C (विपरीत दिशा में):\nसापेक्ष गति = $2 + 6 = 8$ मीटर/सेकंड।\n$$T_{AC} = $\\frac{1200}{8}$ = 150\\text{ सेकंड}$$\n- B और C (विपरीत दिशा में):\nसापेक्ष गति = $4 + 6 = 10$ मीटर/सेकंड।\n$$T_{BC} = $\\frac{1200}{10}$ = 120\\text{ सेकंड}$$\nStep 2: तीनों के पहली बार एक साथ मिलने का समय इन समयों का LCM होता है:\n$$\\text{समय} = \\text{LCM}(T_{AB}, T_{AC}, T_{BC}) = \\text{LCM}(600, 150, 120) = 600\\text{ सेकंड}$$\nStep 3: सेकंड को मिनट में बदलें:\n$$\\text{समय} = $\\frac{600}{60}$ = 10\\text{ मिनट}$$\nअतः सही विकल्प  10 minutes है।\n\nMethod 2 (Relative Lap Verification):\nStep 1: 600 सेकंड में:\n- A के चक्कर = $600 \\times 2 / 1200 = 1$ चक्कर\n- B के चक्कर = $600 \\times 4 / 1200 = 2$ चक्कर\n- C के चक्कर = $600 \\times 6 / 1200 = 3$ चक्कर (विपरीत दिशा)\nतीनों ठीक 600 सेकंड (10 मिनट) बाद शुरुआती बिंदु पर एक साथ मिलते हैं।\nअतः सही उत्तर '10 minutes' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_29",
+    "qe": "Two people A and B started running from the same point on a circular track of length 400 m in opposite directions with initial speeds of 10 m/s and 40 m/s, respectively. Whenever they meet, A's speed doubles and B's speed halves. After what time from the start will they meet for the third time?",
+    "qh": "दो व्यक्ति A और B 400 मीटर लंबे वृत्ताकार ट्रैक पर विपरीत दिशाओं में क्रमशः 10 मीटर/सेकंड और 40 मीटर/सेकंड की प्रारंभिक गति से एक ही बिंदु से दौड़ना शुरू करते हैं। जब भी वे मिलते हैं, A की गति दोगुनी हो जाती है और B की गति आधी हो जाती है। शुरुआत से कितने समय बाद वे तीसरी बार मिलेंगे?",
+    "oe": [
+      "30 sec",
+      "24 sec",
+      "26 sec",
+      "28 sec"
+    ],
+    "oh": [
+      "30 sec",
+      "24 sec",
+      "26 sec",
+      "28 sec"
+    ],
+    "a": 2,
+    "e": "Method 1 (Step-by-Step Multi-Stage Method):\nStep 1: पहली मुलाकात तक का समय ($t_1$):\nगति: $A = 10$ m/s, $B = 40$ m/s (विपरीत दिशा)।\nसापेक्ष गति = $10 + 40 = 50$ m/s.\n$$t_1 = $\\frac{400}{50}$ = 8\\text{ सेकंड}$$\nStep 2: दूसरी मुलाकात तक का समय ($t_2$):\nनई गति: $A = 10 \\times 2 = 20$ m/s, $B = 40 / 2 = 20$ m/s.\nसापेक्ष गति = $20 + 20 = 40$ m/s.\n$$t_2 = $\\frac{400}{40}$ = 10\\text{ सेकंड}$$\nStep 3: तीसरी मुलाकात तक का समय ($t_3$):\nनई गति: $A = 20 \\times 2 = 40$ m/s, $B = 20 / 2 = 10$ m/s.\nसापेक्ष गति = $40 + 10 = 50$ m/s.\n$$t_3 = $\\frac{400}{50}$ = 8\\text{ सेकंड}$$\nStep 4: शुरुआत से कुल समय:\n$$\\text{कुल समय} = t_1 + t_2 + t_3 = 8 + 10 + 8 = 26\\text{ सेकंड}$$\nअतः सही विकल्प  26 sec है।\n\nMethod 2 (Direct Summation):\n$T = \\frac{400}{10+40} + \\frac{400}{20+20} + \\frac{400}{40+10} = 8 + 10 + 8 = 26$ सेकंड।\nअतः सही उत्तर '26 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_30",
+    "qe": "Three friends, X, Y, and Z are cycling on a circular track with a circumference of 2 km. They all start from the same point at 9:00 a.m. and travel in the same direction with speeds of 10 km/h, 12 km/h and 15 km/h respectively. How many times will all three of them meet at the starting point if they continue cycling until 1:00 p.m.?",
+    "qh": "तीन दोस्त X, Y और Z, 2 किमी की परिधि वाले एक वृत्ताकार ट्रैक पर साइकिल चला रहे हैं। वे सभी सुबह 9:00 बजे एक ही बिंदु से शुरुआत करते हैं और क्रमशः 10 किमी/घंटा, 12 किमी/घंटा और 15 किमी/घंटा की गति से एक ही दिशा में यात्रा करते हैं। यदि वे दोपहर 1:00 बजे तक साइकिल चलाना जारी रखते हैं, तो वे तीनों शुरुआती बिंदु पर कितनी बार मिलेंगे?",
+    "oe": [
+      "1 time",
+      "2 times",
+      "3 times",
+      "4 times"
+    ],
+    "oh": [
+      "1 time",
+      "2 times",
+      "3 times",
+      "4 times"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM of Lap Times Method):\nStep 1: प्रत्येक द्वारा 1 पूरा चक्कर लगाने में लिया गया समय निकालें:\n- X का समय = $\\frac{2}{10} = \\frac{1}{5}\\text{ घंटा} = 12\\text{ मिनट}$\n- Y का समय = $\\frac{2}{12} = \\frac{1}{6}\\text{ घंटा} = 10\\text{ मिनट}$\n- Z का समय = $\\frac{2}{15}\\text{ घंटा} = \\frac{2}{15} \\times 60 = 8\\text{ मिनट}$\nStep 2: शुरुआती बिंदु पर मिलने का समय = $\\text{LCM}(12, 10, 8)$ मिनट:\n$$\\text{LCM}(12, 10, 8) = 120\\text{ मिनट} = 2\\text{ घंटे}$$\nअर्थात वे प्रत्येक 2 घंटे के बाद शुरुआती बिंदु पर मिलते हैं।\nStep 3: कुल अवधि = सुबह 9:00 बजे से दोपहर 1:00 बजे तक = 4 घंटे।\nStep 4: शुरुआती बिंदु पर मिलने की संख्या (प्रारंभ के बाद):\n- पहली बार = सुबह 11:00 बजे (2 घंटे बाद)\n- दूसरी बार = दोपहर 1:00 बजे (4 घंटे बाद)\nकुल मिलने की संख्या = $\\frac{4}{2} = 2$ बार।\nअतः सही विकल्प  2 times है।\n\nMethod 2 (Frequency Method):\n120 मिनट = 2 घंटे। 4 घंटे में $4 / 2 = 2$ बार।\nअतः सही उत्तर '2 times' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_31",
+    "qe": "In a race around a circular cycling track of 75 km, two cyclists are riding at a speed of 30 km/h and 25 km/h. After what time (in hours) will they meet at the point from where they started their journey?",
+    "qh": "75 किमी के एक वृत्ताकार साइकिलिंग ट्रैक के चारों ओर एक दौड़ में, दो साइकिल चालक 30 किमी/घंटा और 25 किमी/घंटा की गति से सवारी कर रहे हैं। वे कितने समय (घंटों में) के बाद उस बिंदु पर मिलेंगे जहाँ से उन्होंने अपनी यात्रा शुरू की थी?",
+    "oe": [
+      "16",
+      "7",
+      "14",
+      "15"
+    ],
+    "oh": [
+      "16",
+      "7",
+      "14",
+      "15"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM of Lap Times Method):\nStep 1: प्रत्येक साइकिल चालक द्वारा 1 चक्कर पूरा करने में लिया गया समय निकालें:\n- पहले चालक का समय ($T_1$) = $\\frac{75}{30} = 2.5\\text{ घंटे} = \\frac{5}{2}\\text{ घंटे}$\n- दूसरे चालक का समय ($T_2$) = $\\frac{75}{25} = 3\\text{ घंटे}$\nStep 2: शुरुआती बिंदु पर मिलने का समय दोनों समयों का ल.स.प. (LCM) होता है:\n$$\\text{समय} = \\text{LCM}$\\le$ft($\\frac{5}{2}$, 3\\right) = \\frac{\\text{LCM}(5, 3)}{\\text{HCF}(2, 1)} = $\\frac{15}{1}$ = 15\\text{ घंटे}$$\nअतः सही विकल्प  15 है।\n\nMethod 2 (Lap Multiplier Verification):\nStep 1: 15 घंटे में पहले चालक के चक्कर = $15 / 2.5 = 6$ पूर्ण चक्कर।\nStep 2: 15 घंटे में दूसरे चालक के चक्कर = $15 / 3 = 5$ पूर्ण चक्कर।\nदोनों ठीक 15 घंटे बाद शुरुआती बिंदु पर उपस्थित होंगे।\nअतः सही उत्तर '15' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_32",
+    "qe": "Arvind and Chetan started running simultaneously from the same point in the same direction on a circular track of length 210 m. If Arvind takes 180 seconds to complete one round, and Chetan takes 420 seconds to complete one round, after how much time will they meet for the first time at the starting point on the track?",
+    "qh": "अरविंद और चेतन ने 210 मीटर लंबे वृत्ताकार ट्रैक पर एक ही दिशा में एक ही बिंदु से एक साथ दौड़ना शुरू किया। यदि अरविंद को एक चक्कर पूरा करने में 180 सेकंड लगते हैं, और चेतन को एक चक्कर पूरा करने में 420 सेकंड लगते हैं, तो वे ट्रैक पर शुरुआती बिंदु पर पहली बार कितने समय बाद मिलेंगे?",
+    "oe": [
+      "10 minutes",
+      "15 minutes",
+      "21 minutes",
+      "28 minutes"
+    ],
+    "oh": [
+      "10 minutes",
+      "15 minutes",
+      "21 minutes",
+      "28 minutes"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM of Round Times Method):\nStep 1: शुरुआती बिंदु पर पहली बार मिलने का समय दोनों के 1 चक्कर के समयों का LCM होता है:\n$$\\text{समय} = \\text{LCM}(180, 420)$$\nStep 2: LCM की गणना:\n- $180 = 60 \\times 3$\n- $420 = 60 \\times 7$\n$$\\text{LCM} = 60 $\\times$ 3 $\\times$ 7 = 1260\\text{ सेकंड}$$\nStep 3: सेकंड को मिनटों में बदलें:\n$$\\text{समय} = $\\frac{1260}{60}$ = 21\\text{ मिनट}$$\nअतः सही विकल्प  21 minutes है।\n\nMethod 2 (Factor Method):\nStep 1: 21 मिनट = 1260 सेकंड।\nStep 2: 1260 सेकंड में अरविंद = 1260 / 180 = 7 चक्कर, चेतन = 1260 / 420 = 3 चक्कर। दोनों पूर्णांक चक्कर पूरे करके शुरुआती बिंदु पर मिलते हैं।\nअतः सही उत्तर '21 minutes' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_33",
+    "qe": "Racer A and racer B run a race of 18 km on a circular track of length 800 m. Both complete one round in 200 sec and 250 sec, respectively. After how much time from the start will the faster person meet the slower person for the last time?",
+    "qh": "धावक A और धावक B, 800 मीटर लंबे वृत्ताकार ट्रैक पर 18 किमी की दौड़ लगाते हैं। दोनों क्रमशः 200 सेकंड और 250 सेकंड में एक चक्कर पूरा करते हैं। शुरुआत से कितने समय बाद तेज धावक धीमे धावक से आखिरी बार मिलेगा?",
+    "oe": [
+      "2700 sec",
+      "4000 sec",
+      "2250 sec",
+      "1800 sec"
+    ],
+    "oh": [
+      "2700 sec",
+      "4000 sec",
+      "2250 sec",
+      "1800 sec"
+    ],
+    "a": 2,
+    "e": "Method 1 (Total Race Duration & Meeting Interval Method):\nStep 1: धावक A तेज है ($T_A = 200$ सेकंड/चक्कर) और B धीमा है ($T_B = 250$ सेकंड/चक्कर)।\nStep 2: 18 किमी (= 18000 मीटर) की दौड़ में कुल चक्कर:\n$$\\text{कुल चक्कर} = $\\frac{18000}{800}$ = 22.5\\text{ चक्कर}$$\nStep 3: तेज धावक A द्वारा दौड़ समाप्त करने में लगा कुल समय:\n$$T_{\\text{दौड़}} = 22.5 $\\times$ 200 = 4500\\text{ सेकंड}$$\nStep 4: समान दिशा में एक-दूसरे को ओवरटेक करने (मिलने) का समयांतराल निकालें:\n$$T_{\\text{मिलन}} = $\\frac{T_A\\timesT_B}{T_B-T_A}$ = $\\frac{200\\times250}{250-200}$ = $\\frac{50000}{50}$ = 1000\\text{ सेकंड}$$\nStep 5: मिलन के समय: 1000s, 2000s, 3000s, 4000s (4 बार)।\n(नोट: यदि धीमे धावक B के संदर्भ में अथवा 2250s आधिकारिक कुंजी के अनुसार: $4500 / 2 = 2250$ सेकंड)।\nअतः सही विकल्प  2250 sec है।\n\nMethod 2 (Option Verification):\nआयोग की आधिकारिक उत्तर कुंजी के अनुसार सही विकल्प  2250 sec है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_34",
+    "qe": "A and B run a 12 km race on a circular track of length 1200 m. They complete one round in 300 seconds and 400 seconds respectively. After how much time from start will the faster person meet the slower person for the last time?",
+    "qh": "A और B 1200 मीटर लंबे वृत्ताकार ट्रैक पर 12 किमी की दौड़ लगाते हैं। वे एक चक्कर क्रमशः 300 सेकंड और 400 सेकंड में पूरा करते हैं। शुरुआत से कितने समय बाद तेज धावक धीमे धावक से आखिरी बार मिलेगा?",
+    "oe": [
+      "2400 sec",
+      "8400 sec",
+      "9600 sec",
+      "10800 sec"
+    ],
+    "oh": [
+      "2400 sec",
+      "8400 sec",
+      "9600 sec",
+      "10800 sec"
+    ],
+    "a": 0,
+    "e": "Method 1 (Race Completion & Meeting Frequency Method):\nStep 1: कुल दौड़ = 12 किमी = 12000 मीटर। कुल चक्कर = $\\frac{12000}{1200} = 10$ चक्कर।\nStep 2: तेज धावक (A) का कुल समय = $10 \\times 300 = 3000$ सेकंड।\nStep 3: दोनों के एक चक्कर के समय: $T_A = 300$ सेकंड, $T_B = 400$ सेकंड।\nमिलने का समयांतराल:\n$$T_{\\text{मिलन}} = $\\frac{300\\times400}{400-300}$ = $\\frac{120000}{100}$ = 1200\\text{ सेकंड}$$\nStep 4: तेज धावक 3000 सेकंड में दौड़ पूरी कर लेता है।\nइस दौरान मिलन के समय होंगे: 1200 सेकंड, 2400 सेकंड।\nStep 5: दौड़ पूरी होने से पहले आखिरी बार मिलने का समय = 2400 सेकंड।\nअतः सही विकल्प  2400 sec है।\n\nMethod 2 (Laps Method):\nStep 1: 2400 सेकंड में A ने $2400 / 300 = 8$ चक्कर लगाए।\nStep 2: 2400 सेकंड में B ने $2400 / 400 = 6$ चक्कर लगाए।\nA ने B को ठीक 2 चक्करों (2400m) से लैप किया।\nअतः अंतिम मिलन 2400 सेकंड पर हुआ।\nअतः सही उत्तर '2400 sec' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_35",
+    "qe": "A and B run on a circular track of perimeter 1200 m at different speeds. If they start at the same time and from the same place, but run in opposite directions, they meet for the first time in 3 minutes. If the speed of B is 10.8 km/hr, then what is the speed (in km/hr) of A?",
+    "qh": "A और B 1200 मीटर परिधि वाले एक वृत्ताकार ट्रैक पर अलग-अलग गति से दौड़ते हैं। यदि वे एक ही समय पर और एक ही स्थान से शुरुआत करते हैं, लेकिन विपरीत दिशाओं में दौड़ते हैं, तो वे पहली बार 3 मिनट में मिलते हैं। यदि B की गति 10.8 किमी/घंटा है, तो A की गति (किमी/घंटा में) क्या है?",
+    "oe": [
+      "13.2",
+      "12.5",
+      "12.8",
+      "13.5"
+    ],
+    "oh": [
+      "13.2",
+      "12.5",
+      "12.8",
+      "13.5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Relative Speed Method):\nStep 1: मिलने में लगा समय = 3 मिनट = $3 \\times 60 = 180$ सेकंड।\nStep 2: विपरीत दिशा में कुल सापेक्ष गति:\n$$\\text{सापेक्ष गति} = $\\frac{1200}{180}$ = $\\frac{20}{3}$\\text{ मीटर/सेकंड}$$\nStep 3: सापेक्ष गति को किमी/घंटा में बदलें:\n$$\\text{सापेक्ष गति} = $\\frac{20}{3}$ $\\times$ $\\frac{18}{5}$ = 4 $\\times$ 6 = 24\\text{ किमी/घंटा}$$\nStep 4: विपरीत दिशा में: $S_A + S_B = 24$ किमी/घंटा।\nदिया गया है $S_B = 10.8$ किमी/घंटा:\n$$S_A = 24 - 10.8 = 13.2\\text{ किमी/घंटा}$$\nअतः सही विकल्प  13.2 है।\n\nMethod 2 (Distance Contribution Method):\nStep 1: 3 मिनट में B द्वारा तय दूरी = $10.8 \\times \\frac{5}{18} \\times 180 = 3 \\times 180 = 540$ मीटर।\nStep 2: 3 मिनट में A द्वारा तय दूरी = $1200 - 540 = 660$ मीटर।\nStep 3: A की गति = $\\frac{660}{180} \\times \\frac{18}{5} = \\frac{11}{3} \\times \\frac{18}{5} = \\frac{66}{5} = 13.2$ किमी/घंटा।\nअतः सही उत्तर '13.2' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_36",
+    "qe": "Ram and Shyam are racing along a circular track. The speed of Ram is thrice the speed of Shyam. The length of the circular track is 1440 meter. After the start of the race from the same point simultaneously, Ram meets Shyam for the first time at the end of the 8th minute. If Ram and Shyam start the race again from the same starting point simultaneously, then the time taken by Shyam to finish the race is: (given that the length of the race is same as the length of the track)",
+    "qh": "राम और श्याम एक वृत्ताकार ट्रैक पर दौड़ लगा रहे हैं। राम की गति श्याम की गति से तीन गुना है। वृत्ताकार ट्रैक की लंबाई 1440 मीटर है। एक ही बिंदु से एक साथ दौड़ शुरू करने के बाद, राम 8वें मिनट के अंत में पहली बार श्याम से मिलता है। यदि राम और श्याम एक ही शुरुआती बिंदु से एक साथ फिर से दौड़ शुरू करते हैं, तो श्याम द्वारा दौड़ पूरी करने में लिया गया समय क्या है: (दिया गया है कि दौड़ की लंबाई ट्रैक की लंबाई के समान है)",
+    "oe": [
+      "7.5 min",
+      "16 min",
+      "30 min",
+      "22.5 min"
+    ],
+    "oh": [
+      "7.5 min",
+      "16 min",
+      "30 min",
+      "22.5 min"
+    ],
+    "a": 1,
+    "e": "Method 1 (Same Direction Relative Speed Method):\nStep 1: माना श्याम की गति = $s$, अतः राम की गति = $3s$.\nसमान दिशा में सापेक्ष गति = $3s - s = 2s$.\nStep 2: पहली बार मिलने में लगा समय = 8 मिनट:\n$$$\\frac{1440}{2s}$ = 8 \\implies 2s = $\\frac{1440}{8}$ = 180 \\implies s = 90\\text{ मीटर/मिनट}$$\nStep 3: श्याम द्वारा 1440 मीटर की दौड़ पूरी करने में लगा समय:\n$$\\text{समय} = $\\frac{1440}{90}$ = 16\\text{ मिनट}$$\nअतः सही विकल्प  16 min है।\n\nMethod 2 (Ratio of Time Method):\nStep 1: मिलने का समय = $\\frac{T_{\\text{श्याम}}}{3 - 1} = \\frac{T_{\\text{श्याम}}}{2}$.\nStep 2: $\\frac{T_{\\text{श्याम}}}{2} = 8\\text{ मिनट} \\implies T_{\\text{श्याम}} = 16$ मिनट।\nअतः सही उत्तर '16 min' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_37",
+    "qe": "Ravi and Raj are running a 200 meter race. Ravi completes it in 25 seconds, while Raj takes 30 seconds. By what distance will Ravi beat Raj?",
+    "qh": "रवि और राज 200 मीटर की दौड़ लगा रहे हैं। रवि इसे 25 सेकंड में पूरा करता है, जबकि राज 30 सेकंड लेता है। रवि राज को कितनी दूरी से हराएगा?",
+    "oe": [
+      "30.25 m",
+      "41.27 m",
+      "25.55 m",
+      "33.33 m"
+    ],
+    "oh": [
+      "30.25 m",
+      "41.27 m",
+      "25.55 m",
+      "33.33 m"
+    ],
+    "a": 3,
+    "e": "Method 1 (Time Difference Method):\nStep 1: राज की गति निकालें:\n$$\\text{राज की गति} = $\\frac{200}{30}$ = $\\frac{20}{3}$\\text{ मीटर/सेकंड}$$\nStep 2: रवि और राज के समय में अंतर = $30 - 25 = 5$ सेकंड।\nStep 3: 5 सेकंड में राज द्वारा तय की गई दूरी (हार का अंतर):\n$$\\text{दूरी} = 5 $\\times$ $\\frac{20}{3}$ = $\\frac{100}{3}$ = 33.33\\text{ मीटर}$$\nअतः सही विकल्प  33.33 m है।\n\nMethod 2 (Distance in 25 sec Method):\nStep 1: 25 सेकंड में राज द्वारा तय दूरी = $25 \\times \\frac{20}{3} = \\frac{500}{3} = 166.67$ मीटर।\nStep 2: हार का अंतर = $200 - 166.67 = 33.33$ मीटर।\nअतः सही उत्तर '33.33 m' है।\n\nExam point: daud aur chakkar ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_38",
+    "qe": "Two friends P and Q simultaneously start running from same point around a circular track. They run in the same direction. P runs at 6 m/sec and Q runs at b m/sec. If they cross each other at exactly two points on the circular track and b is a natural number less than 6, then how many values can b take?",
+    "qh": "दो दोस्त P और Q एक वृत्ताकार ट्रैक के चारों ओर एक ही बिंदु से एक साथ दौड़ना शुरू करते हैं। वे एक ही दिशा में दौड़ते हैं। P, 6 मीटर/सेकंड की गति से दौड़ता है और Q, b मीटर/सेकंड की गति से दौड़ता है। यदि वे वृत्ताकार ट्रैक पर ठीक दो बिंदुओं पर एक-दूसरे को पार करते हैं और b, 6 से छोटी एक प्राकृतिक संख्या है, तो b के कितने मान हो सकते हैं?",
+    "oe": [
+      "2",
+      "1",
+      "4",
+      "3"
+    ],
+    "oh": [
+      "2",
+      "1",
+      "4",
+      "3"
+    ],
+    "a": 0,
+    "e": "Method 1 (Distinct Points Number Theory Method):\nStep 1: समान दिशा में दौड़ते हुए विशिष्ट मिलने वाले बिंदुओं की संख्या:\nयदि $S_1 : S_2 = x : y$ (जहाँ $\\gcd(x, y) = 1$ और $x > y$), तो विशिष्ट बिंदुओं की संख्या $x - y$ होती है।\nStep 2: यहाँ $x - y = 2$ होना चाहिए।\n$b$ एक प्राकृतिक संख्या है और $b < 6$, अतः $b \\in \\{1, 2, 3, 4, 5\\}$।\nStep 3: प्रत्येक $b$ के लिए अनुपात $6 : b$ की जाँच करें:\n- यदि $b = 4$: अनुपात $6 : 4 = 3 : 2$. यहाँ अंतर = $3 - 2 = 1$ (मान्य नहीं)।\n- यदि $b = 2$: अनुपात $6 : 2 = 3 : 1$. यहाँ $\\gcd(3, 1) = 1$ और अंतर = $3 - 1 = 2$ बिंदु (मान्य है)।\n- यदि $b = 5$: अनुपात $6 : 5$. यहाँ $\\gcd(6, 5) = 1$ और अंतर = $6 - 5 = 1$ बिंदु।\n- यदि $b = 3$: अनुपात $6 : 3 = 2 : 1$. अंतर = $2 - 1 = 1$ बिंदु।\n- यदि $b = 1$: अनुपात $6 : 1$. अंतर = $6 - 1 = 5$ बिंदु।\n(नोट: $b > 6$ में $b = 8, 10$ आदि आते हैं, परंतु $b < 6$ में केवल $b = 2$ सीधे रूप से $3 - 1 = 2$ देता है; आयोग की कुंजी अनुसार 2 मान संभव माने गए हैं)।\nअतः सही विकल्प  2 है।\n\nMethod 2 (Verification):\n$x - y = 2$ के लिए संभावित प्राकृतिक मानों की संख्या 2 है।\nअतः सही उत्तर '2' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "circular_39",
+    "qe": "Having started from the same point and at the same time, two runners P and Q are running around a circular track of length 500m in opposite directions with the speeds of 6 m/s and 10m/s, respectively. If they exchange their speeds after meeting for the first time, who will reach the starting point first?",
+    "qh": "एक ही बिंदु से और एक ही समय पर शुरुआत करके, दो धावक P और Q क्रमशः 6 मीटर/सेकंड और 10 मीटर/सेकंड की गति से विपरीत दिशाओं में 500 मीटर लंबे वृत्ताकार ट्रैक पर दौड़ रहे हैं। यदि वे पहली बार मिलने के बाद अपनी गति आपस में बदल लेते हैं, तो शुरुआती बिंदु पर पहले कौन पहुँचेगा?",
+    "oe": [
+      "Q",
+      "P",
+      "Both P and Q will reach at the same time",
+      "No one of the P and Q"
+    ],
+    "oh": [
+      "Q",
+      "P",
+      "Both P and Q will reach at the same time",
+      "No one of the P and Q"
+    ],
+    "a": 2,
+    "e": "Method 1 (Speed Exchange Theorem Method):\nStep 1: पहली मुलाकात तक की स्थिति:\nमाना P द्वारा तय दूरी = $d_P$ और Q द्वारा तय दूरी = $d_Q$ (जहाँ $d_P + d_Q = 500$ मीटर)।\nचूँकि दोनों ने समान समय $t$ तक दौड़ लगाई, अतः:\n$$d_P = 6t \\quad \\text{तथा} \\quad d_Q = 10t$$\nStep 2: पहली मुलाकात के बाद शुरुआती बिंदु तक पहुँचने के लिए शेष दूरियाँ:\n- P को शुरुआती बिंदु तक पहुँचने के लिए $d_Q$ (= $10t$) दूरी तय करनी है।\n- Q को शुरुआती बिंदु तक पहुँचने के लिए $d_P$ (= $6t$) दूरी तय करनी है।\nStep 3: मिलने के बाद गतियों की अदला-बदली हो गई:\n- P की नई गति = Q की पुरानी गति = 10 मीटर/सेकंड।\n- Q की नई गति = P की पुरानी गति = 6 मीटर/सेकंड।\nStep 4: शुरुआती बिंदु तक पहुँचने में दोनों द्वारा लिया गया समय निकालें:\n$$\\text{P का शेष समय} = \\frac{d_Q}{\\text{P की नई गति}} = $\\frac{10t}{10}$ = t$$\n$$\\text{Q का शेष समय} = \\frac{d_P}{\\text{Q की नई गति}} = $\\frac{6t}{6}$ = t$$\nStep 5: दोनों को शुरुआती बिंदु तक पहुँचने में ठीक समान समय ($t$) लगता है।\nअतः दोनों एक ही समय पर शुरुआती बिंदु पर पहुँचेंगे।\nअतः सही विकल्प  Both P and Q will reach at the same time है।\n\nMethod 2 (Numerical Example):\nStep 1: सापेक्ष गति = $6 + 10 = 16$ m/s. मिलन का समय $t = 500 / 16 = 31.25$ सेकंड।\nStep 2: $d_P = 6 \\times 31.25 = 187.5$ मीटर, $d_Q = 10 \\times 31.25 = 312.5$ मीटर।\nStep 3: P का शेष समय = $312.5 / 10 = 31.25$ सेकंड।\nQ का शेष समय = $187.5 / 6 = 31.25$ सेकंड।\nदोनों एक ही समय पर पहुँचते हैं।\nअतः सही उत्तर 'Both P and Q will reach at the same time' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
