@@ -1,0 +1,154 @@
+[
+  {
+    "p_id": "leakageintank_1",
+    "qe": "A pump can fill a tank with water in 1 hour. Because of a leak, it took 1 1/3 hours to fill the tank. In how many hours can the leak alone drain all the water of the tank when it is full?",
+    "qh": "एक पंप एक टंकी को 1 घंटे में पानी से भर सकता है। एक रिसाव के कारण, टंकी को भरने में 1 1/3 घंटे का समय लगा। जब टंकी पूरी भरी हो, तो अकेले रिसाव टंकी के सारे पानी को कितने घंटों में बाहर निकाल सकता है?",
+    "oe": [
+      "2",
+      "1",
+      "4",
+      "5"
+    ],
+    "oh": [
+      "2",
+      "1",
+      "4",
+      "5"
+    ],
+    "a": 2,
+    "e": "Method 1 (Work Rate Method):\nStep 1: पंप की भरने की दर = 1 कार्य/घंटा।\nरिसाव सहित भरने की दर = 1 / (1 1/3) = 1 / (4/3) = 3/4 कार्य/घंटा।\nStep 2: रिसाव की खाली करने की दर निकालें:\nरिसाव की दर = 1 - 3/4 = 1/4 कार्य/घंटा।\nStep 3: रिसाव द्वारा पूरी टंकी खाली करने में लगा समय = 1 / (1/4) = 4 घंटे।\nअतः सही विकल्प  4 है।\n\nMethod 2 (Formula Method):\nStep 1: खाली करने का समय = (x × y) / (y - x)\n= (1 × 4/3) / (4/3 - 1) = (4/3) / (1/3) = 4 घंटे।\nअतः सही उत्तर '4' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leakageintank_2",
+    "qe": "A pump can fill a tank with water in 3 hours. Because of a leak, it took 3 1/3 hours to fill the tank. In how many hours can the leak alone drain all the water of the tank when it is full?",
+    "qh": "एक पंप एक टंकी को 3 घंटे में पानी से भर सकता है। एक रिसाव के कारण, टंकी को भरने में 3 1/3 घंटे का समय लगा। जब टंकी पूरी भरी हो, तो अकेले रिसाव टंकी के सारे पानी को कितने घंटों में बाहर निकाल सकता है?",
+    "oe": [
+      "21",
+      "15",
+      "30",
+      "10"
+    ],
+    "oh": [
+      "21",
+      "15",
+      "30",
+      "10"
+    ],
+    "a": 2,
+    "e": "Method 1 (Formula Method):\nStep 1: x = 3 घंटे, y = 3 1/3 = 10/3 घंटे।\nStep 2: खाली करने का समय = (x × y) / (y - x)\n= (3 × 10/3) / (10/3 - 3) = 10 / (1/3) = 30 घंटे।\nअतः सही विकल्प  30 है।\n\nMethod 2 (LCM Units Method):\nStep 1: 3 और 10 का LCM = 30 इकाइयाँ (टंकी की कुल क्षमता)।\n- पंप की दक्षता = 30 / 3 = +10 इकाइयाँ/घंटा\n- (पंप - रिसाव) की दक्षता = 30 / (10/3) = +9 इकाइयाँ/घंटा\nStep 2: रिसाव की दक्षता = 10 - 9 = 1 इकाई/घंटा।\nStep 3: रिसाव द्वारा अकेले खाली करने में लगा समय = 30 / 1 = 30 घंटे।\nअतः सही उत्तर '30' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leakageintank_3",
+    "qe": "A pipe can fill a tank in 30 hours. Due to a leakage at the bottom, it is filled in 50 hours. How much time will the leakage take to empty the completely filled tank?",
+    "qh": "एक पाइप एक टंकी को 30 घंटे में भर सकता है। तल में रिसाव के कारण यह 50 घंटे में भरती है। पूरी तरह भरी हुई टंकी को खाली करने में रिसाव को कितना समय लगेगा?",
+    "oe": [
+      "70 hours",
+      "80 hours",
+      "75 hours",
+      "65 hours"
+    ],
+    "oh": [
+      "70 hours",
+      "80 hours",
+      "75 hours",
+      "65 hours"
+    ],
+    "a": 2,
+    "e": "Method 1 (Formula Method):\nStep 1: खाली करने में लगा समय = (xy) / (y - x)\n= (30 × 50) / (50 - 30) = 1500 / 20 = 75 घंटे।\nअतः सही विकल्प  75 hours है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल क्षमता = LCM(30, 50) = 150 इकाइयाँ।\n- भरने वाले पाइप की दक्षता = +150 / 30 = +5 इकाइयाँ/घंटा\n- (पाइप - रिसाव) की दक्षता = +150 / 50 = +3 इकाइयाँ/घंटा\nStep 2: रिसाव की दक्षता = 5 - 3 = 2 इकाइयाँ/घंटा।\nStep 3: रिसाव द्वारा खाली करने का समय = 150 / 2 = 75 घंटे।\nअतः सही उत्तर '75 hours' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leakageintank_4",
+    "qe": "Pipe A usually fills a tank in 6 hours. But due to a leak at the bottom of the tank, it takes extra 2 hours to fill the tank. If the tank is full, then how much time will it take to get emptied due to the leak?",
+    "qh": "पाइप A आमतौर पर एक टंकी को 6 घंटे में भरता है। लेकिन टंकी के तल में रिसाव के कारण टंकी को भरने में 2 घंटे अतिरिक्त लगते हैं। यदि टंकी भरी हुई है, तो रिसाव के कारण इसे खाली होने में कितना समय लगेगा?",
+    "oe": [
+      "16 hours",
+      "20 hours",
+      "12 hours",
+      "24 hours"
+    ],
+    "oh": [
+      "16 hours",
+      "20 hours",
+      "12 hours",
+      "24 hours"
+    ],
+    "a": 3,
+    "e": "Method 1 (Formula Method):\nStep 1: सामान्य समय (x) = 6 घंटे।\nरिसाव के साथ समय (y) = 6 + 2 = 8 घंटे।\nStep 2: खाली करने में लगा समय = (xy) / (y - x)\n= (6 × 8) / (8 - 6) = 48 / 2 = 24 घंटे।\nअतः सही विकल्प  24 hours है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल क्षमता = LCM(6, 8) = 24 इकाइयाँ।\n- पाइप A की दक्षता = +24 / 6 = +4 इकाइयाँ/घंटा\n- (A - रिसाव) की दक्षता = +24 / 8 = +3 इकाइयाँ/घंटा\nStep 2: रिसाव की दक्षता = 4 - 3 = 1 इकाई/घंटा।\nStep 3: रिसाव द्वारा अकेले खाली करने में लगा समय = 24 / 1 = 24 घंटे।\nअतः सही उत्तर '24 hours' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leakageintank_5",
+    "qe": "A tank has two pipes, one can fill it with water in 14 hours and the other can empty it in 8 hours. In how many hours will the tank be emptied if both the pipes are opened together when 1/4 th of the tank is already filled with water?",
+    "qh": "एक टंकी में दो पाइप हैं, एक इसे 14 घंटे में पानी से भर सकता है और दूसरा इसे 8 घंटे में खाली कर सकता है। यदि टंकी का 1/4 भाग पहले से पानी से भरा हो और दोनों पाइपों को एक साथ खोल दिया जाए, तो टंकी कितने घंटों में खाली हो जाएगी?",
+    "oe": [
+      "6 hours",
+      "5 hours",
+      "3 hr 20 min",
+      "4 hr 40 min"
+    ],
+    "oh": [
+      "6 hours",
+      "5 hours",
+      "3 hr 20 min",
+      "4 hr 40 min"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Net Emptying Rate Method):\nStep 1: कुल क्षमता = LCM(14, 8) = 56 इकाइयाँ।\n- भरने वाले पाइप की दक्षता = +56 / 14 = +4 इकाइयाँ/घंटा\n- खाली करने वाले पाइप की दक्षता = -56 / 8 = -7 इकाइयाँ/घंटा\nStep 2: दोनों की संयुक्त शुद्ध खाली करने की दक्षता = -7 + 4 = -3 इकाइयाँ/घंटा।\nStep 3: टंकी में पहले से मौजूद जल (1/4 भाग) = 56 × (1/4) = 14 इकाइयाँ।\nStep 4: 14 इकाइयों को खाली करने में लगा समय = 14 / 3 = 4 2/3 घंटे।\nStep 5: 2/3 घंटा = (2/3) × 60 = 40 मिनट ==> 4 घंटे 40 मिनट।\nअतः सही विकल्प  4 hr 40 min है।\n\nMethod 2 (Fraction Method):\nStep 1: शुद्ध खाली करने की दर = 1/8 - 1/14 = (7 - 4) / 56 = 3 / 56 कार्य/घंटा।\nStep 2: 1/4 भाग खाली करने में समय = (1/4) / (3/56) = 56 / 12 = 14 / 3 = 4 घंटे 40 मिनट।\nअतः सही उत्तर '4 hr 40 min' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leakageintank_6",
+    "qe": "Two pipes A and B can fill a cistern in 12 1/2 hours and 25 hours, respectively. The pipes were opened simultaneously, and it was found that, due to leakage in the bottom, it took one hour 40 minutes more to fill the cistern. If the cistern is full, in how much time (in hours) will the leak alone empty 70% of the cistern?",
+    "qh": "दो पाइप A और B एक टंकी को क्रमशः 12 1/2 घंटे और 25 घंटे में भर सकते हैं। पाइपों को एक साथ खोला गया, और पाया गया कि तल में रिसाव के कारण टंकी को भरने में 1 घंटा 40 मिनट अधिक समय लगा। यदि टंकी पूरी भरी है, तो अकेले रिसाव टंकी का 70% भाग कितने समय (घंटों में) में खाली कर देगा?",
+    "oe": [
+      "35",
+      "40",
+      "30",
+      "50"
+    ],
+    "oh": [
+      "35",
+      "40",
+      "30",
+      "50"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: बिना रिसाव के A और B द्वारा लिया गया समय:\nA = 12.5 = 25/2 घंटे, B = 25 घंटे।\nकुल क्षमता = 25 इकाइयाँ। A = 2 इकाइयाँ/घंटा, B = 1 इकाई/घंटा ==> संयुक्त = 3 इकाइयाँ/घंटा।\nसामान्य समय = 25 / 3 = 8 घंटे 20 मिनट।\nStep 2: रिसाव के साथ वास्तविक समय = 8 घंटे 20 मिनट + 1 घंटा 40 मिनट = 10 घंटे।\nStep 3: रिसाव सहित शुद्ध दक्षता = 25 / 10 = 2.5 इकाइयाँ/घंटा।\nरिसाव की दक्षता = (A + B की दक्षता) - शुद्ध दक्षता = 3 - 2.5 = 0.5 इकाइयाँ/घंटा।\nStep 4: टंकी का 70% भाग = 70% of 25 = 17.5 इकाइयाँ।\nStep 5: रिसाव द्वारा 17.5 इकाइयाँ खाली करने में लगा समय = 17.5 / 0.5 = 35 घंटे।\nअतः सही विकल्प  35 है।\n\nMethod 2 (Rate Method):\nStep 1: रिसाव की दर = 3/25 - 1/10 = 1/50 भाग/घंटा (पूरी टंकी 50 घंटे में खाली)।\nStep 2: 70% खाली करने में समय = 50 × 0.70 = 35 घंटे।\nअतः सही उत्तर '35' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leakageintank_7",
+    "qe": "Two pipes A and B can fill a tank in 20 and 30 hours, respectively. Both pipes are opened to fill the tank, but when the tank is one-third full, a leak develops through which one-fourth of the water supplied by both pipes goes out. Find the total time (in hours) taken to fill the tank.",
+    "qh": "दो पाइप A और B एक टंकी को क्रमशः 20 और 30 घंटे में भर सकते हैं। टंकी को भरने के लिए दोनों पाइप खोले जाते हैं, लेकिन जब टंकी एक-तिहाई भर जाती है, तो एक रिसाव विकसित होता है जिससे दोनों पाइपों द्वारा आपूर्ति किए गए पानी का एक-चौथाई हिस्सा बाहर निकल जाता है। टंकी को भरने में लगा कुल समय (घंटों में) ज्ञात कीजिए।",
+    "oe": [
+      "14$\\frac{2}{3}$",
+      "14",
+      "11$\\frac{2}{5}$",
+      "12$\\frac{1}{3}$"
+    ],
+    "oh": [
+      "14$\\frac{2}{3}$",
+      "14",
+      "11$\\frac{2}{5}$",
+      "12$\\frac{1}{3}$"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Two-Phase Method):\nStep 1: कुल क्षमता = LCM(20, 30) = 60 इकाइयाँ।\n- A की दक्षता = 60 / 20 = 3 इकाइयाँ/घंटा\n- B की दक्षता = 60 / 30 = 2 इकाइयाँ/घंटा\nदोनों की सामान्य संयुक्त दक्षता = 3 + 2 = 5 इकाइयाँ/घंटा।\nStep 2: चरण 1 (1/3 भाग भरना):\n1/3 भाग = 60 / 3 = 20 इकाइयाँ।\nचरण 1 में लगा समय = 20 / 5 = 4 घंटे।\nStep 3: चरण 2 (शेष 2/3 भाग भरना):\nशेष क्षमता = 60 - 20 = 40 इकाइयाँ।\nरिसाव के कारण आपूर्ति का 1/4 भाग बाहर निकल जाता है, अतः प्रभावी शुद्ध दक्षता:\nप्रभावी दक्षता = 5 × (1 - 1/4) = 5 × (3/4) = 15/4 इकाइयाँ/घंटा।\nStep 4: शेष 40 इकाइयों को भरने में लगा समय = 40 / (15/4) = 160 / 15 = 32 / 3 = 10 2/3 घंटे।\nStep 5: कुल लिया गया समय = 4 + 10 2/3 = 14 2/3 घंटे।\nअतः सही विकल्प  14 2/3 है।\n\nMethod 2 (Fraction Method):\nStep 1: सामान्य समय = (20 × 30) / 50 = 12 घंटे।\n1/3 भाग का समय = 12 / 3 = 4 घंटे।\nStep 2: शेष 2/3 भाग का सामान्य समय = 8 घंटे।\nदक्षता 3/4 होने पर समय 4/3 गुना हो जाएगा = 8 × (4/3) = 32/3 = 10 2/3 घंटे।\nStep 3: कुल समय = 4 + 10 2/3 = 14 2/3 घंटे।\nअतः सही उत्तर '14$\\frac{2}{3}$' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leakageintank_8",
+    "qe": "Pipe A and B can fill a tank in 10 hours and 40 hours, respectively. C is an outlet pipe attached to the tank. If all the three pipes are opened simultaneously, it takes 80 minutes more time than what A and B together take to fill the tank. A and B are kept open for 7 hours and then closed and C is opened. C will now empty the tank in:",
+    "qh": "पाइप A और B एक टंकी को क्रमशः 10 घंटे और 40 घंटे में भर सकते हैं। C टंकी से जुड़ा एक निकास पाइप है। यदि तीनों पाइपों को एक साथ खोल दिया जाए, तो A और B द्वारा मिलकर टंकी भरने में लगने वाले समय से 80 मिनट अधिक समय लगता है। A और B को 7 घंटे तक खुला रखा जाता है और फिर बंद कर दिया जाता है तथा C को खोल दिया जाता है। C अब टंकी को कितने समय में खाली करेगा:",
+    "oe": [
+      "42 hours",
+      "49 hours",
+      "45 hours",
+      "56 hours"
+    ],
+    "oh": [
+      "42 hours",
+      "49 hours",
+      "45 hours",
+      "56 hours"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल क्षमता = LCM(10, 40) = 40 इकाइयाँ।\n- A = 40 / 10 = 4 इकाइयाँ/घंटा\n- B = 40 / 40 = 1 इकाई/घंटा\nA और B की संयुक्त दक्षता = 4 + 1 = 5 इकाइयाँ/घंटा।\nStep 2: A और B द्वारा मिलकर टंकी भरने में लगा सामान्य समय = 40 / 5 = 8 घंटे।\nStep 3: तीनों पाइपों के साथ लगा समय = 8 घंटे + 80 मिनट = 8 घंटे + 4/3 घंटे = 28/3 घंटे।\nStep 4: तीनों पाइपों (A + B - C) की शुद्ध दक्षता = 40 / (28/3) = 120 / 28 = 30 / 7 इकाइयाँ/घंटा।\nStep 5: निकास पाइप C की खाली करने की दक्षता निकालें:\n5 - C = 30/7 ==> C = 5 - 30/7 = 5/7 इकाइयाँ/घंटा।\nStep 6: A और B ने 7 घंटे में जल भरा = 7 × 5 = 35 इकाइयाँ।\nStep 7: C द्वारा इन 35 इकाइयों को खाली करने में लगा समय = 35 / (5/7) = 35 × (7/5) = 49 घंटे।\nअतः सही विकल्प  49 hours है।\n\nMethod 2 (Rate Method):\nStep 1: C की दर = 1/8 - 3/28 = (7 - 6) / 56 = 1/56 भाग/घंटा (पूरी टंकी 56 घंटे में खाली)।\nStep 2: 7 घंटे में भरा गया भाग = 7 / 8 भाग।\nStep 3: C द्वारा खाली करने में समय = (7/8) × 56 = 49 घंटे।\nअतः सही उत्तर '49 hours' है।\n\nExam point: nalkon-tanki ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
