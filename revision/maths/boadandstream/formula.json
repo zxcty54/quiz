@@ -1,0 +1,382 @@
+[
+  {
+    "p_id": "formula_1",
+    "qe": "A boat covers a certain distance downstream in 2 hours, while it comes back in 2 1/2 hours. If the speed of the stream is 3 km/h, then what is the speed of the boat in still water?",
+    "qh": "एक नाव धारा के अनुकूल एक निश्चित दूरी 2 घंटे में तय करती है, जबकि यह 2 1/2 घंटे में वापस आती है। यदि धारा की गति 3 किमी/घंटा है, तो शांत जल में नाव की गति क्या है?",
+    "oe": [
+      "29 km/h",
+      "25 km/h",
+      "20 km/h",
+      "27 km/h"
+    ],
+    "oh": [
+      "29 km/h",
+      "25 km/h",
+      "20 km/h",
+      "27 km/h"
+    ],
+    "a": 3,
+    "e": "Method 1 (Distance Equating Method):\nStep 1: दोनों दिशाओं में दूरी समान है।\nमाना शांत जल में नाव की गति = $u$ किमी/घंटा।\nधारा की गति ($v$) = 3 किमी/घंटा।\n- धारा के अनुकूल गति = $(u + 3)$ किमी/घंटा, समय = 2 घंटे\n- धारा के प्रतिकूल गति = $(u - 3)$ किमी/घंटा, समय = $2\\frac{1}{2} = 2.5$ घंटे\nStep 2: दूरी बराबर करने पर:\n$$(u + 3) $\\times$ 2 = (u - 3) $\\times$ 2.5$$\n$$2u + 6 = 2.5u - 7.5$$\n$$2.5u - 2u = 6 + 7.5$$\n$$0.5u = 13.5 \\implies u = $\\frac{13.5}{0.5}$ = 27\\text{ किमी/घंटा}$$\nअतः सही विकल्प  27 km/h है।\n\nMethod 2 (Formula Method):\n$$u = v $\\times$ \\frac{T_{\\text{up}} + T_{\\text{down}}}{T_{\\text{up}} - T_{\\text{down}}} = 3 $\\times$ $\\frac{2.5+2}{2.5-2}$ = 3 $\\times$ $\\frac{4.5}{0.5}$ = 3 $\\times$ 9 = 27\\text{ किमी/घंटा}$$\nअतः सही उत्तर '27 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_2",
+    "qe": "A motorboat takes 18 hours to go downstream, and it takes 36 hours to return the same distance. Find the ratio of the speed of the boat in still water to the speed of the stream.",
+    "qh": "एक मोटरबोट को धारा के अनुकूल जाने में 18 घंटे लगते हैं, और समान दूरी पर वापस लौटने में 36 घंटे लगते हैं। शांत जल में नाव की गति का धारा की गति से अनुपात ज्ञात कीजिए।",
+    "oe": [
+      "3 : 1",
+      "2 : 3",
+      "2 : 1",
+      "3 : 2"
+    ],
+    "oh": [
+      "3 : 1",
+      "2 : 3",
+      "2 : 1",
+      "3 : 2"
+    ],
+    "a": 0,
+    "e": "Method 1 (Componendo and Dividendo Method):\nStep 1: दूरी समान होने पर गतियों का अनुपात समय के व्युत्क्रमानुपाती होता है:\n$$\\frac{S_{\\text{down}}}{S_{\\text{up}}} = \\frac{T_{\\text{up}}}{T_{\\text{down}}} = $\\frac{36}{18}$ = $\\frac{2}{1}$$$\n$$$\\frac{u+v}{u-v}$ = $\\frac{2}{1}$$$\nStep 2: योगांतरानुपात (C&D) लागू करने पर:\n$$$\\frac{(u+v)+(u-v)}{(u+v)-(u-v)}$ = $\\frac{2+1}{2-1}$$$\n$$$\\frac{2u}{2v}$ = $\\frac{3}{1}$ \\implies $\\frac{u}{v}$ = $\\frac{3}{1}$$$\nअतः अनुपात 3 : 1 है।\nअतः सही विकल्प  3 : 1 है।\n\nMethod 2 (Direct Formula Method):\n$$$\\frac{u}{v}$ = $\\frac{T_1+T_2}{T_1-T_2}$ = $\\frac{36+18}{36-18}$ = $\\frac{54}{18}$ = $\\frac{3}{1}$$$\nअतः सही उत्तर '3 : 1' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_3",
+    "qe": "A boat takes 11 hours to travel a distance upstream and takes 5 hours to travel the same distance downstream. If the speed of the boat in still water is 2 2/9 m/sec, then the speed of the stream (in km/h) is:",
+    "qh": "एक नाव को एक दूरी धारा के प्रतिकूल तय करने में 11 घंटे लगते हैं और उसी दूरी को धारा के अनुकूल तय करने में 5 घंटे लगते हैं। यदि शांत जल में नाव की गति 2 2/9 मीटर/सेकंड है, तो धारा की गति (किमी/घंटा में) क्या है:",
+    "oe": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "oh": [
+      "2",
+      "3",
+      "1",
+      "4"
+    ],
+    "a": 1,
+    "e": "Method 1 (Unit Conversion & Ratio Method):\nStep 1: शांत जल में नाव की गति ($u$) को किमी/घंटा में बदलें:\n$$u = 2$\\frac{2}{9}$\\text{ m/sec} = $\\frac{20}{9}$ $\\times$ $\\frac{18}{5}$ = 4 $\\times$ 2 = 8\\text{ किमी/घंटा}$$\nStep 2: गतियों का अनुपात समय के व्युत्क्रमानुपाती होता है:\n$$$\\frac{u+v}{u-v}$ = \\frac{T_{\\text{up}}}{T_{\\text{down}}} = $\\frac{11}{5}$$$\nStep 3: $u = 8$ किमी/घंटा रखने पर:\n$$$\\frac{8+v}{8-v}$ = $\\frac{11}{5}$$$\n$$5(8 + v) = 11(8 - v)$$\n$$40 + 5v = 88 - 11v$$\n$$16v = 48 \\implies v = 3\\text{ किमी/घंटा}$$\nअतः सही विकल्प  3 है।\n\nMethod 2 (Formula Method):\n$$v = u $\\times$ \\frac{T_{\\text{up}} - T_{\\text{down}}}{T_{\\text{up}} + T_{\\text{down}}} = 8 $\\times$ $\\frac{11-5}{11+5}$ = 8 $\\times$ $\\frac{6}{16}$ = 3\\text{ किमी/घंटा}$$\nअतः सही उत्तर '3' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_4",
+    "qe": "The ratio of the speed of a boat to that of the current water is 35 : 8. The boat goes along with the current in 5 hours 10 minutes. What will be the time taken by the boat to come back?",
+    "qh": "एक नाव की गति और धारा की गति का अनुपात 35 : 8 है। नाव धारा के साथ 5 घंटे 10 मिनट में जाती है। नाव को वापस आने में कितना समय लगेगा?",
+    "oe": [
+      "5 hours 15 minutes 58 seconds",
+      "6 hours 45 minutes 10 seconds",
+      "8 hours 13 minutes 48 seconds",
+      "9 hours 30 minutes 49 seconds"
+    ],
+    "oh": [
+      "5 hours 15 minutes 58 seconds",
+      "6 hours 45 minutes 10 seconds",
+      "8 hours 13 minutes 48 seconds",
+      "9 hours 30 minutes 49 seconds"
+    ],
+    "a": 2,
+    "e": "Method 1 (Inverse Ratio of Speed & Time Method):\nStep 1: शांत जल में गति $u = 35x$ और धारा की गति $v = 8x$.\n- अनुकूल गति ($S_{\\text{down}}$) = $35x + 8x = 43x$\n- प्रतिकूल गति ($S_{\\text{up}}$) = $35x - 8x = 27x$\nStep 2: दूरी समान होने पर समय का अनुपात गति के व्युत्क्रमानुपाती होता है:\n$$\\frac{T_{\\text{up}}}{T_{\\text{down}}} = \\frac{S_{\\text{down}}}{S_{\\text{up}}} = $\\frac{43}{27}$$$\nStep 3: दिया गया अनुकूल समय ($T_{\\text{down}}$) = 5 घंटे 10 मिनट = $5 \\times 60 + 10 = 310$ मिनट।\nStep 4: वापस आने (प्रतिकूल) में लगा समय ($T_{\\text{up}}$):\n$$T_{\\text{up}} = 310 $\\times$ $\\frac{43}{27}$ = $\\frac{13330}{27}$\\text{ मिनट} $\\approx$ 493.70\\text{ मिनट}$$\nStep 5: मिनटों को घंटे, मिनट और सेकंड में बदलें:\n$$$\\frac{493.70}{60}$ = 8\\text{ घंटे } + 13.70\\text{ मिनट}$$\n$$0.70 $\\times$ 60 $\\approx$ 42\\text{ सेकंड} \\implies 8\\text{ घंटे } 13\\text{ मिनट } 48\\text{ सेकंड}$$\nअतः सही विकल्प  8 hours 13 minutes 48 seconds है।\n\nMethod 2 (Direct Proportion Verification):\n$T_{\\text{up}} = \\frac{310 \\times 43}{27} = 493\\frac{19}{27}$ मिनट = 8 घंटे 13 मिनट 42~48 सेकंड।\nअतः सही उत्तर '8 hours 13 minutes 48 seconds' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_5",
+    "qe": "The ratio of the speed of a motorboat to that of the current of water is 31 : 6. The motorboat starts from a point and covers a certain distance along the current in 4 hr 10 min. Find the time taken by the motorboat to come back to its initial point.",
+    "qh": "एक मोटरबोट की गति और धारा की गति का अनुपात 31 : 6 है। मोटरबोट एक बिंदु से शुरू होकर धारा के अनुकूल एक निश्चित दूरी 4 घंटे 10 मिनट में तय करती है। मोटरबोट को अपने प्रारंभिक बिंदु पर वापस आने में कितना समय लगेगा?",
+    "oe": [
+      "4 hr 10 min",
+      "5 hr 10 min",
+      "5 hr 50 min",
+      "6 hr 10 min"
+    ],
+    "oh": [
+      "4 hr 10 min",
+      "5 hr 10 min",
+      "5 hr 50 min",
+      "6 hr 10 min"
+    ],
+    "a": 3,
+    "e": "Method 1 (Speed and Time Ratio Method):\nStep 1: अनुपाती गतियाँ निकालें:\n- अनुकूल गति ($S_{\\text{down}}$) = $31 + 6 = 37$ इकाइयाँ\n- प्रतिकूल गति ($S_{\\text{up}}$) = $31 - 6 = 25$ इकाइयाँ\nStep 2: दूरी समान होने पर समय का अनुपात गति के व्युत्क्रमानुपाती होता है:\n$$\\frac{T_{\\text{up}}}{T_{\\text{down}}} = \\frac{S_{\\text{down}}}{S_{\\text{up}}} = $\\frac{37}{25}$$$\nStep 3: अनुकूल समय ($T_{\\text{down}}$) = 4 घंटे 10 मिनट = $4 \\times 60 + 10 = 250$ मिनट।\nStep 4: वापस आने में लगा समय ($T_{\\text{up}}$):\n$$T_{\\text{up}} = 250 $\\times$ $\\frac{37}{25}$ = 10 $\\times$ 37 = 370\\text{ मिनट}$$\nStep 5: मिनटों को घंटों में बदलें:\n$$370\\text{ मिनट} = 6\\text{ घंटे } 10\\text{ मिनट}$$\nअतः सही विकल्प  6 hr 10 min है।\n\nMethod 2 (Fractional Hour Method):\n$T_{\\text{down}} = 4\\frac{1}{6} = \\frac{25}{6}$ घंटा।\n$T_{\\text{up}} = \\frac{25}{6} \\times \\frac{37}{25} = \\frac{37}{6} = 6\\frac{1}{6}$ घंटा = 6 घंटे 10 मिनट।\nअतः सही उत्तर '6 hr 10 min' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_6",
+    "qe": "The speed of a boat in still water is thrice the speed of the stream. If the boat takes 15.5 sec to go to a certain place downstream, then find the additional time required to cover the same distance travelling upstream.",
+    "qh": "शांत जल में एक नाव की गति धारा की गति की तीन गुना है। यदि नाव को धारा के अनुकूल एक निश्चित स्थान तक जाने में 15.5 सेकंड का समय लगता है, तो उसी दूरी को धारा के प्रतिकूल तय करने में आवश्यक अतिरिक्त समय ज्ञात कीजिए।",
+    "oe": [
+      "15.5 sec",
+      "31 sec",
+      "16 sec",
+      "14.5 sec"
+    ],
+    "oh": [
+      "15.5 sec",
+      "31 sec",
+      "16 sec",
+      "14.5 sec"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: दिया गया है $u = 3v$.\n- अनुकूल गति ($D$) = $u + v = 3v + v = 4v$\n- प्रतिकूल गति ($U$) = $u - v = 3v - v = 2v$\nStep 2: दूरी समान होने पर समय का अनुपात गति का उल्टा होता है:\n$$\\frac{T_{\\text{up}}}{T_{\\text{down}}} = $\\frac{D}{U}$ = $\\frac{4v}{2v}$ = 2$$\nStep 3: प्रतिकूल जाने में लगा कुल समय:\n$$T_{\\text{up}} = 2 $\\times$ T_{\\text{down}} = 2 $\\times$ 15.5 = 31\\text{ सेकंड}$$\nStep 4: आवश्यक अतिरिक्त समय (Additional Time):\n$$\\text{अतिरिक्त समय} = T_{\\text{up}} - T_{\\text{down}} = 31 - 15.5 = 15.5\\text{ सेकंड}$$\nअतः सही विकल्प  15.5 sec है।\n\nMethod 2 (Direct Percentage / Difference Method):\nचूँकि प्रतिकूल गति अनुकूल गति की आधी ($2v = \\frac{1}{2} \\times 4v$) है, अतः समय दोगुना लगेगा।\nअतिरिक्त समय = $15.5 \\times (2 - 1) = 15.5$ सेकंड।\nअतः सही उत्तर '15.5 sec' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_7",
+    "qe": "A motorboat, whose speed in 15 km/h in still water goes 50 km downstream and comes back in a total of 7 hours 30 minutes. The speed of the stream (in km/h) is?",
+    "qh": "शांत जल में 15 किमी/घंटा की गति वाली एक मोटरबोट धारा के अनुकूल 50 किमी जाती है और कुल 7 घंटे 30 मिनट में वापस आती है। धारा की गति (किमी/घंटा में) क्या है?",
+    "oe": [
+      "9 km/h",
+      "5 km/h",
+      "11 km/h",
+      "7 km/h"
+    ],
+    "oh": [
+      "9 km/h",
+      "5 km/h",
+      "11 km/h",
+      "7 km/h"
+    ],
+    "a": 1,
+    "e": "Method 1 (Option Substitution Method):\nStep 1: कुल समय = 7 घंटे 30 मिनट = $7.5$ घंटे। शांत जल में गति ($u$) = 15 किमी/घंटा।\nसमीकरण:\n$$$\\frac{50}{15+v}$ + $\\frac{50}{15-v}$ = 7.5$$\nStep 2: विकल्प (b) $v = 5$ किमी/घंटा रखने पर:\n- धारा के अनुकूल समय = $\\frac{50}{15 + 5} = \\frac{50}{20} = 2.5$ घंटे\n- धारा के प्रतिकूल समय = $\\frac{50}{15 - 5} = \\frac{50}{10} = 5$ घंटे\nकुल समय = $2.5 + 5 = 7.5$ घंटे (सत्यापित)।\nअतः सही विकल्प  5 km/h है।\n\nMethod 2 (Algebraic Quadratic Method):\n$$50 $\\times$ $\\le$ft($\\frac{15-v+15+v}{225-v^2}$\\right) = $\\frac{15}{2}$ \\implies $\\frac{50\\times30}{225-v^2}$ = $\\frac{15}{2}$$$\n$$$\\frac{100}{225-v^2}$ = $\\frac{1}{2}$ \\implies 225 - v^2 = 200 \\implies v^2 = 25 \\implies v = 5\\text{ किमी/घंटा}$$\nअतः सही उत्तर '5 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_8",
+    "qe": "A motorboat, whose speed is 20 km/h in still water goes 75 km downstream and comes back in a total of 8 hours. The speed of the stream is:",
+    "qh": "शांत जल में 20 किमी/घंटा की गति वाली एक मोटरबोट धारा के अनुकूल 75 किमी जाती है और कुल 8 घंटे में वापस आती है। धारा की गति क्या है:",
+    "oe": [
+      "5 km/h",
+      "6 km/h",
+      "4.5 km/h",
+      "6.5 km/h"
+    ],
+    "oh": [
+      "5 km/h",
+      "6 km/h",
+      "4.5 km/h",
+      "6.5 km/h"
+    ],
+    "a": 0,
+    "e": "Method 1 (Option Testing Method):\nStep 1: कुल समय = 8 घंटे। शांत जल में गति ($u$) = 20 किमी/घंटा।\nसमीकरण:\n$$$\\frac{75}{20+v}$ + $\\frac{75}{20-v}$ = 8$$\nStep 2: विकल्प (a) $v = 5$ किमी/घंटा रखने पर:\n- धारा के अनुकूल समय = $\\frac{75}{20 + 5} = \\frac{75}{25} = 3$ घंटे\n- धारा के प्रतिकूल समय = $\\frac{75}{20 - 5} = \\frac{75}{15} = 5$ घंटे\nकुल समय = $3 + 5 = 8$ घंटे (सत्यापित)।\nअतः सही विकल्प  5 km/h है।\n\nMethod 2 (Quadratic Equation Method):\n$$75 $\\times$ $\\le$ft($\\frac{20-v+20+v}{400-v^2}$\\right) = 8 \\implies $\\frac{75\\times40}{400-v^2}$ = 8$$\n$$$\\frac{3000}{400-v^2}$ = 8 \\implies 400 - v^2 = 375 \\implies v^2 = 25 \\implies v = 5\\text{ किमी/घंटा}$$\nअतः सही उत्तर '5 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_9",
+    "qe": "The speed of boat in still water is 18 km/h and the speed of the current is 6 km/h. In how much time (in hours) will the boat travel a distance of 90 km upstream and the same distance downstream?",
+    "qh": "शांत जल में नाव की गति 18 किमी/घंटा है और धारा की गति 6 किमी/घंटा है। नाव को धारा के प्रतिकूल 90 किमी और उतनी ही दूरी धारा के अनुकूल तय करने में कितना समय (घंटों में) लगेगा?",
+    "oe": [
+      "9$\\frac{1}{2}$",
+      "11$\\frac{1}{4}$",
+      "12",
+      "10"
+    ],
+    "oh": [
+      "9$\\frac{1}{2}$",
+      "11$\\frac{1}{4}$",
+      "12",
+      "10"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Velocity Method):\nStep 1: धारा के अनुकूल और प्रतिकूल गतियाँ निकालें:\n- धारा के अनुकूल गति ($D$) = $18 + 6 = 24$ किमी/घंटा\n- धारा के प्रतिकूल गति ($U$) = $18 - 6 = 12$ किमी/घंटा\nStep 2: 90 किमी अनुकूल जाने में लगा समय:\n$$T_1 = $\\frac{90}{24}$ = $\\frac{15}{4}$ = 3.75\\text{ घंटे}$$\nStep 3: 90 किमी प्रतिकूल जाने में लगा समय:\n$$T_2 = $\\frac{90}{12}$ = 7.5\\text{ घंटे}$$\nStep 4: कुल लिया गया समय:\n$$\\text{कुल समय} = 3.75 + 7.5 = 11.25\\text{ घंटे} = 11$\\frac{1}{4}$\\text{ घंटे}$$\nअतः सही विकल्प  11 1/4 है।\n\nMethod 2 (Formula Method):\n$$\\text{समय} = $\\frac{2\\timesd\\timesu}{u^2-v^2}$ = $\\frac{2\\times90\\times18}{18^2-6^2}$ = $\\frac{3240}{324-36}$ = $\\frac{3240}{288}$ = $\\frac{45}{4}$ = 11$\\frac{1}{4}$\\text{ घंटे}$$\nअतः सही उत्तर '11$\\frac{1}{4}$' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_10",
+    "qe": "A man can row 5 km/h in still water. If the speed of the current is 2.5 km/h, it takes 4 hours more in upstream than in the downstream for the same distance. The distance is:",
+    "qh": "एक व्यक्ति शांत जल में 5 किमी/घंटा की गति से नाव चला सकता है। यदि धारा की गति 2.5 किमी/घंटा है, तो उसे समान दूरी के लिए धारा के अनुकूल की तुलना में धारा के प्रतिकूल जाने में 4 घंटे अधिक लगते हैं। वह दूरी क्या है:",
+    "oe": [
+      "10.5 km",
+      "15 km",
+      "7.5 km",
+      "12 km"
+    ],
+    "oh": [
+      "10.5 km",
+      "15 km",
+      "7.5 km",
+      "12 km"
+    ],
+    "a": 1,
+    "e": "Method 1 (Time Difference Equation Method):\nStep 1: गतियाँ निकालें:\n- अनुकूल गति ($D$) = $5 + 2.5 = 7.5$ किमी/घंटा\n- प्रतिकूल गति ($U$) = $5 - 2.5 = 2.5$ किमी/घंटा\nStep 2: माना दूरी = $d$ किमी। समय का अंतर 4 घंटे है:\n$$$\\frac{d}{2.5}$ - $\\frac{d}{7.5}$ = 4$$\nStep 3: समीकरण को हल करने पर:\n$$$\\frac{3d-d}{7.5}$ = 4 \\implies $\\frac{2d}{7.5}$ = 4$$\n$$2d = 30 \\implies d = 15\\text{ किमी}$$\nअतः सही विकल्प  15 km है।\n\nMethod 2 (Direct Formula Method):\n$$\\text{दूरी } (d) = $\\frac{u^2-v^2}{2v}$ $\\times$ $\\Delta$ T = $\\frac{5^2-2.5^2}{2\\times2.5}$ $\\times$ 4 = $\\frac{25-6.25}{5}$ $\\times$ 4 = $\\frac{18.75}{5}$ $\\times$ 4 = 3.75 $\\times$ 4 = 15\\text{ किमी}$$\nअतः सही उत्तर '15 km' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_11",
+    "qe": "A motorboat, whose speed is 15 km/h in still water goes 20 km downstream and comes back in a total of 4 hours. The speed of the stream (in km/h) is:",
+    "qh": "शांत जल में 15 किमी/घंटा की गति वाली एक मोटरबोट धारा के अनुकूल 20 किमी जाती है और कुल 4 घंटे में वापस आती है। धारा की गति (किमी/घंटा में) क्या है:",
+    "oe": [
+      "7$\\sqrt{3}$",
+      "5$\\sqrt{3}$",
+      "4$\\sqrt{3}$",
+      "6$\\sqrt{3}$"
+    ],
+    "oh": [
+      "7$\\sqrt{3}$",
+      "5$\\sqrt{3}$",
+      "4$\\sqrt{3}$",
+      "6$\\sqrt{3}$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Quadratic Equation Method):\nStep 1: दिए गए मान: $u = 15$ किमी/घंटा, दूरी = 20 किमी, कुल समय = 4 घंटे।\nसमीकरण स्थापित करने पर:\n$$$\\frac{20}{15+v}$ + $\\frac{20}{15-v}$ = 4$$\nStep 2: 4 से दोनों पक्षों को विभाजित करने पर:\n$$$\\frac{5}{15+v}$ + $\\frac{5}{15-v}$ = 1$$\n$$5 $\\times$ $\\le$ft($\\frac{15-v+15+v}{225-v^2}$\\right) = 1$$\n$$$\\frac{5\\times30}{225-v^2}$ = 1 \\implies $\\frac{150}{225-v^2}$ = 1$$\nStep 3: हल करने पर:\n$$225 - v^2 = 150 \\implies v^2 = 225 - 150 = 75$$\n$$v = $\\sqrt{75}$ = $\\sqrt{25\\times3}$ = 5$\\sqrt{3}$\\text{ किमी/घंटा}$$\nअतः सही विकल्प  5√3 है।\n\nMethod 2 (Formula Verification):\n$$\\text{कुल समय} = $\\frac{2\\timesd\\timesu}{u^2-v^2}$ \\implies 4 = $\\frac{2\\times20\\times15}{225-v^2}$ = $\\frac{600}{225-v^2}$$$\n$$225 - v^2 = 150 \\implies v = 5$\\sqrt{3}$\\text{ किमी/घंटा}$$\nअतः सही उत्तर '5$\\sqrt{3}$' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_12",
+    "qe": "The speed of a boat in still water is 6 km/h and the speed of the stream is 1.5 km/h. In going from point A to point B and returning to A, the boatman takes 2 hours 40 min. Find the distance between points A and B.",
+    "qh": "शांत जल में एक नाव की गति 6 किमी/घंटा है और धारा की गति 1.5 किमी/घंटा है। बिंदु A से बिंदु B तक जाने और A पर वापस लौटने में नाविक को 2 घंटे 40 मिनट का समय लगता है। बिंदु A और B के बीच की दूरी ज्ञात कीजिए।",
+    "oe": [
+      "7.5 km",
+      "7 km",
+      "8 km",
+      "8.5 km"
+    ],
+    "oh": [
+      "7.5 km",
+      "7 km",
+      "8 km",
+      "8.5 km"
+    ],
+    "a": 0,
+    "e": "Method 1 (Total Time Equation Method):\nStep 1: गतियाँ निकालें:\n- अनुकूल गति ($D$) = $6 + 1.5 = 7.5$ किमी/घंटा\n- प्रतिकूल गति ($U$) = $6 - 1.5 = 4.5$ किमी/घंटा\nStep 2: कुल समय = 2 घंटे 40 मिनट = $2 + \\frac{40}{60} = 2 + \\frac{2}{3} = \\frac{8}{3}$ घंटे।\nStep 3: माना A और B के बीच की दूरी = $d$ किमी:\n$$$\\frac{d}{7.5}$ + $\\frac{d}{4.5}$ = $\\frac{8}{3}$$$\nदशमलव को भिन्न में बदलने पर:\n$$$\\frac{2d}{15}$ + $\\frac{2d}{9}$ = $\\frac{8}{3}$$$\nStep 4: 15 और 9 का LCM = 45:\n$$$\\frac{6d+10d}{45}$ = $\\frac{8}{3}$ \\implies $\\frac{16d}{45}$ = $\\frac{8}{3}$$$\n$$16d = $\\frac{8}{3}$ $\\times$ 45 = 8 $\\times$ 15 = 120$$\n$$d = $\\frac{120}{16}$ = 7.5\\text{ किमी}$$\nअतः सही विकल्प  7.5 km है।\n\nMethod 2 (Direct Distance Formula Method):\n$$d = T_{\\text{कुल}} $\\times$ $\\frac{u^2-v^2}{2u}$ = $\\frac{8}{3}$ $\\times$ $\\frac{6^2-1.5^2}{2\\times6}$ = $\\frac{8}{3}$ $\\times$ $\\frac{36-2.25}{12}$ = $\\frac{2}{9}$ $\\times$ 33.75 = 7.5\\text{ किमी}$$\nअतः सही उत्तर '7.5 km' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_13",
+    "qe": "In a stream running at 3 km/h, a motorboat goes 12 km upstream and back to the starting point in 60 min. Find the speed of the motorboat in still water, (in km/h)",
+    "qh": "3 किमी/घंटा की गति से बहने वाली एक धारा में, एक मोटरबोट धारा के प्रतिकूल 12 किमी जाती है और 60 मिनट में शुरुआती बिंदु पर वापस आती है। शांत जल में मोटरबोट की गति (किमी/घंटा में) ज्ञात कीजिए।",
+    "oe": [
+      "24.37 km/h",
+      "25 km/h",
+      "27 km/h",
+      "26 km/h"
+    ],
+    "oh": [
+      "24.37 km/h",
+      "25 km/h",
+      "27 km/h",
+      "26 km/h"
+    ],
+    "a": 0,
+    "e": "Method 1 (Quadratic Formula Method):\nStep 1: धारा की गति ($v$) = 3 किमी/घंटा, दूरी = 12 किमी, कुल समय = 60 मिनट = 1 घंटा।\nसमीकरण स्थापित करने पर:\n$$$\\frac{12}{u-3}$ + $\\frac{12}{u+3}$ = 1$$\nStep 2: ल.स.प. लेकर हल करने पर:\n$$12 $\\times$ $\\le$ft($\\frac{u+3+u-3}{u^2-9}$\\right) = 1$$\n$$$\\frac{12\\times2u}{u^2-9}$ = 1 \\implies $\\frac{24u}{u^2-9}$ = 1$$\n$$u^2 - 24u - 9 = 0$$\nStep 3: द्विघात सूत्र $u = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}$ लागू करने पर:\n$$u = \\frac{24 + $\\sqrt{(-24)^2-4(1)(-9)}$}{2} = \\frac{24 + $\\sqrt{576+36}$}{2}$$\n$$u = \\frac{24 + $\\sqrt{612}$}{2} = $\\frac{24+24.7386}{2}$ = $\\frac{48.7386}{2}$ $\\approx$ 24.37\\text{ किमी/घंटा}$$\nअतः शांत जल में मोटरबोट की गति लगभग 24.37 किमी/घंटा है।\nअतः सही विकल्प  24.37 km/h है।\n\nMethod 2 (Approximate Testing):\nयदि $u = 24.37$ किमी/घंटा:\nप्रतिकूल समय = $12 / 21.37 \\approx 0.5615$ घंटा (33.7 मिनट)।\nअनुकूल समय = $12 / 27.37 \\approx 0.4384$ घंटा (26.3 मिनट)।\nकुल समय = $33.7 + 26.3 = 60$ मिनट (सत्यापित)।\nअतः सही उत्तर '24.37 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_14",
+    "qe": "The speed of a boat in still water is 18 km/h and the speed of the stream is 3 km/h. How much time (in hours) will it take to cover a distance of 105 km in downstream and in coming back?",
+    "qh": "शांत जल में एक नाव की गति 18 किमी/घंटा है और धारा की गति 3 किमी/घंटा है। धारा के अनुकूल 105 किमी की दूरी तय करने और वापस आने में इसे कितना समय (घंटों में) लगेगा?",
+    "oe": [
+      "12",
+      "10",
+      "15",
+      "9"
+    ],
+    "oh": [
+      "12",
+      "10",
+      "15",
+      "9"
+    ],
+    "a": 0,
+    "e": "Method 1 (Two-Way Time Addition Method):\nStep 1: धारा के अनुकूल और प्रतिकूल गतियाँ निकालें:\n- धारा के अनुकूल गति ($D$) = $18 + 3 = 21$ किमी/घंटा\n- धारा के प्रतिकूल गति ($U$) = $18 - 3 = 15$ किमी/घंटा\nStep 2: 105 किमी अनुकूल जाने में लगा समय ($T_{\\text{down}}$):\n$$T_{\\text{down}} = $\\frac{105}{21}$ = 5\\text{ घंटे}$$\nStep 3: 105 किमी प्रतिकूल वापस आने में लगा समय ($T_{\\text{up}}$):\n$$T_{\\text{up}} = $\\frac{105}{15}$ = 7\\text{ घंटे}$$\nStep 4: कुल लिया गया समय:\n$$\\text{कुल समय} = 5 + 7 = 12\\text{ घंटे}$$\nअतः सही विकल्प  12 है।\n\nMethod 2 (Formula Method):\n$$\\text{कुल समय} = $\\frac{2\\timesd\\timesu}{u^2-v^2}$ = $\\frac{2\\times105\\times18}{18^2-3^2}$ = $\\frac{3780}{324-9}$ = $\\frac{3780}{315}$ = 12\\text{ घंटे}$$\nअतः सही उत्तर '12' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_15",
+    "qe": "The speed of a boat in still water is 12 km/h, and the speed of the stream is 3 km/h. A man goes to a place by boat, 45 km and comes back to the starting point. Find the total time taken by him.",
+    "qh": "शांत जल में एक नाव की गति 12 किमी/घंटा है, और धारा की गति 3 किमी/घंटा है। एक व्यक्ति नाव द्वारा 45 किमी दूर एक स्थान तक जाता है और शुरुआती बिंदु पर वापस आता है। उसके द्वारा लिया गया कुल समय ज्ञात कीजिए।",
+    "oe": [
+      "6 hours",
+      "7 hours",
+      "9 hours",
+      "8 hours"
+    ],
+    "oh": [
+      "6 hours",
+      "7 hours",
+      "9 hours",
+      "8 hours"
+    ],
+    "a": 3,
+    "e": "Method 1 (Step-by-Step Velocity Method):\nStep 1: धारा के अनुकूल गति ($D$) = $12 + 3 = 15$ किमी/घंटा।\nधारा के प्रतिकूल गति ($U$) = $12 - 3 = 9$ किमी/घंटा।\nStep 2: जाने में लगा समय = $\\frac{45}{15} = 3$ घंटे।\nStep 3: वापस आने में लगा समय = $\\frac{45}{9} = 5$ घंटे।\nStep 4: कुल लगा समय = $3 + 5 = 8$ घंटे।\nअतः सही विकल्प  8 hours है।\n\nMethod 2 (Direct Formula Method):\n$$\\text{समय} = $\\frac{2du}{u^2-v^2}$ = $\\frac{2\\times45\\times12}{12^2-3^2}$ = $\\frac{1080}{144-9}$ = $\\frac{1080}{135}$ = 8\\text{ घंटे}$$\nअतः सही उत्तर '8 hours' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_16",
+    "qe": "The speed of a boat in a still river is 15 km/h and the speed of the current is 5 km/h. In what time (in hours) will the boat cover a distance of 60 km downstream and the same distance upstream?",
+    "qh": "शांत नदी में एक नाव की गति 15 किमी/घंटा है और धारा की गति 5 किमी/घंटा है। नाव धारा के अनुकूल 60 किमी की दूरी और धारा के प्रतिकूल उतनी ही दूरी कितने समय (घंटों में) में तय करेगी?",
+    "oe": [
+      "12",
+      "9",
+      "10",
+      "20"
+    ],
+    "oh": [
+      "12",
+      "9",
+      "10",
+      "20"
+    ],
+    "a": 1,
+    "e": "Method 1 (Time Addition Method):\nStep 1: धारा के अनुकूल गति ($D$) = $15 + 5 = 20$ किमी/घंटा।\nधारा के प्रतिकूल गति ($U$) = $15 - 5 = 10$ किमी/घंटा।\nStep 2: 60 किमी अनुकूल जाने में समय = $\\frac{60}{20} = 3$ घंटे।\nStep 3: 60 किमी प्रतिकूल जाने में समय = $\\frac{60}{10} = 6$ घंटे।\nStep 4: कुल समय = $3 + 6 = 9$ घंटे।\nअतः सही विकल्प  9 है।\n\nMethod 2 (Formula Method):\n$$\\text{समय} = $\\frac{2\\times60\\times15}{15^2-5^2}$ = $\\frac{1800}{225-25}$ = $\\frac{1800}{200}$ = 9\\text{ घंटे}$$\nअतः सही उत्तर '9' है।\n\nExam point: bhoogol ke tathy - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_17",
+    "qe": "The speed of a boat in standing water is 6 km/h and the speed of the stream is 2.5 km/h. A man rows to a place at a distance of 59.5 km and comes back to the starting point. The total time taken by him is:",
+    "qh": "शांत जल में एक नाव की गति 6 किमी/घंटा है और धारा की गति 2.5 किमी/घंटा है। एक व्यक्ति 59.5 किमी की दूरी पर स्थित एक स्थान पर नाव चलाकर जाता है और शुरुआती बिंदु पर वापस आता है। उसके द्वारा लिया गया कुल समय है:",
+    "oe": [
+      "22 hours",
+      "18 hours",
+      "16 hours",
+      "24 hours"
+    ],
+    "oh": [
+      "22 hours",
+      "18 hours",
+      "16 hours",
+      "24 hours"
+    ],
+    "a": 3,
+    "e": "Method 1 (Step-by-Step Velocity Method):\nStep 1: गतियाँ निकालें:\n- अनुकूल गति ($D$) = $6 + 2.5 = 8.5$ किमी/घंटा\n- प्रतिकूल गति ($U$) = $6 - 2.5 = 3.5$ किमी/घंटा\nStep 2: 59.5 किमी अनुकूल जाने में समय:\n$$T_{\\text{down}} = $\\frac{59.5}{8.5}$ = 7\\text{ घंटे}$$\nStep 3: 59.5 किमी प्रतिकूल वापस आने में समय:\n$$T_{\\text{up}} = $\\frac{59.5}{3.5}$ = 17\\text{ घंटे}$$\nStep 4: कुल समय = $7 + 17 = 24$ घंटे।\nअतः सही विकल्प  24 hours है।\n\nMethod 2 (Formula Method):\n$$\\text{समय} = $\\frac{2\\times59.5\\times6}{6^2-2.5^2}$ = $\\frac{714}{36-6.25}$ = $\\frac{714}{29.75}$ = 24\\text{ घंटे}$$\nअतः सही उत्तर '24 hours' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_18",
+    "qe": "A boat racer can row 21 3/2 km/h in still water. If the speed of river is 12.5 km/h, it takes him 40 minutes to row to a place and back, how far off is the place?",
+    "qh": "एक नाव धावक शांत जल में 21 3/2 किमी/घंटा की गति से नाव चला सकता है। यदि नदी की गति 12.5 किमी/घंटा है, तो उसे एक स्थान तक जाने और वापस आने में 40 मिनट लगते हैं, वह स्थान कितनी दूर है?",
+    "oe": [
+      "5$\\frac{5}{27}$\\text{ km}",
+      "5$\\frac{5}{2}$\\text{ km}",
+      "4$\\frac{5}{27}$\\text{ km}",
+      "3$\\frac{5}{27}$\\text{ km}"
+    ],
+    "oh": [
+      "5$\\frac{5}{27}$\\text{ km}",
+      "5$\\frac{5}{2}$\\text{ km}",
+      "4$\\frac{5}{27}$\\text{ km}",
+      "3$\\frac{5}{27}$\\text{ km}"
+    ],
+    "a": 0,
+    "e": "Method 1 (Distance Formula Method):\nStep 1: शांत जल में गति $u = 21\\frac{3}{2} = 21 + 1.5 = 22.5$ किमी/घंटा।\nधारा की गति ($v$) = 12.5 किमी/घंटा।\nStep 2: अनुकूल और प्रतिकूल गतियाँ निकालें:\n- $D = 22.5 + 12.5 = 35$ किमी/घंटा\n- $U = 22.5 - 12.5 = 10$ किमी/घंटा\nStep 3: कुल समय = 40 मिनट = $\\frac{40}{60} = \\frac{2}{3}$ घंटा।\nStep 4: माना दूरी = $d$ किमी:\n$$$\\frac{d}{35}$ + $\\frac{d}{10}$ = $\\frac{2}{3}$$$\n35 और 10 का LCM = 70:\n$$$\\frac{2d+7d}{70}$ = $\\frac{2}{3}$ \\implies $\\frac{9d}{70}$ = $\\frac{2}{3}$$$\n$$9d = $\\frac{140}{3}$ \\implies d = $\\frac{140}{27}$\\text{ किमी}$$\nStep 5: मिश्रित भिन्न में बदलने पर:\n$$d = 5$\\frac{5}{27}$\\text{ किमी}$$\nअतः सही विकल्प  5 5/27 km है।\n\nMethod 2 (Direct Formula Method):\n$$d = \\frac{T_{\\text{कुल}} $\\times$ (u^2 - v^2)}{2u} = \\frac{$\\frac{2}{3}$ $\\times$ (35 $\\times$ 10)}{2 $\\times$ 22.5} = \\frac{$\\frac{2}{3}$ $\\times$ 350}{45} = $\\frac{700}{135}$ = $\\frac{140}{27}$ = 5$\\frac{5}{27}$\\text{ किमी}$$\nअतः सही उत्तर '5$\\frac{5}{27}$\\text{ km}' है.\n\nExam point: bhoogol ke tathy - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_19",
+    "qe": "The speed of a boat in still water is 20 km/h, while the river is flowing at a speed of 8 km/h and the time taken to cover a certain distance upstream is 6 hr more than the time taken to cover the same distance downstream. Find the distance.",
+    "qh": "शांत जल में एक नाव की गति 20 किमी/घंटा है, जबकि नदी 8 किमी/घंटा की गति से बह रही है और धारा के प्रतिकूल एक निश्चित दूरी तय करने में लिया गया समय उसी दूरी को धारा के अनुकूल तय करने में लिए गए समय से 6 घंटे अधिक है। दूरी ज्ञात कीजिए।",
+    "oe": [
+      "126 km",
+      "125 km",
+      "120 km",
+      "336 km"
+    ],
+    "oh": [
+      "126 km",
+      "125 km",
+      "120 km",
+      "336 km"
+    ],
+    "a": 0,
+    "e": "Method 1 (Time Difference Equation Method):\nStep 1: गतियाँ निकालें:\n- धारा के अनुकूल गति ($D$) = $20 + 8 = 28$ किमी/घंटा\n- धारा के प्रतिकूल गति ($U$) = $20 - 8 = 12$ किमी/घंटा\nStep 2: माना दूरी = $d$ किमी। समय का अंतर 6 घंटे है:\n$$$\\frac{d}{12}$ - $\\frac{d}{28}$ = 6$$\nStep 3: 12 और 28 का LCM = 84:\n$$$\\frac{7d-3d}{84}$ = 6 \\implies $\\frac{4d}{84}$ = 6$$\n$$$\\frac{d}{21}$ = 6 \\implies d = 21 $\\times$ 6 = 126\\text{ किमी}$$\nअतः सही विकल्प  126 km है।\n\nMethod 2 (Direct Distance Formula Method):\n$$d = $\\frac{u^2-v^2}{2v}$ $\\times$ $\\Delta$ T = $\\frac{20^2-8^2}{2\\times8}$ $\\times$ 6 = $\\frac{400-64}{16}$ $\\times$ 6 = $\\frac{336}{16}$ $\\times$ 6 = 21 $\\times$ 6 = 126\\text{ किमी}$$\nअतः सही उत्तर '126 km' है।\n\nExam point: bhoogol ke tathy - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "formula_20",
+    "qe": "A motorboat whose speed is 20 km/h in still water takes 30 minutes more to go 24 km upstream than to cover the same distance downstream. If the speed of the boat in still water is increased by 2 km/h, then how much time will it take to go 39 km downstream and 30 km upstream?",
+    "qh": "शांत जल में 20 किमी/घंटा की गति वाली एक मोटरबोट को धारा के प्रतिकूल 24 किमी जाने में उसी दूरी को धारा के अनुकूल तय करने की तुलना में 30 मिनट अधिक समय लगता है। यदि शांत जल में नाव की गति 2 किमी/घंटा बढ़ा दी जाए, तो उसे धारा के अनुकूल 39 किमी और धारा के प्रतिकूल 30 किमी जाने में कितना समय लगेगा?",
+    "oe": [
+      "2 hr 40 min",
+      "3 hr 10 min",
+      "3 hr 40 min",
+      "2 hr 50 min"
+    ],
+    "oh": [
+      "2 hr 40 min",
+      "3 hr 10 min",
+      "3 hr 40 min",
+      "2 hr 50 min"
+    ],
+    "a": 1,
+    "e": "Method 1 (Quadratic Solution for Stream Speed):\nStep 1: माना धारा की गति = $v$ किमी/घंटा। 30 मिनट = $\\frac{1}{2}$ घंटा।\n$$$\\frac{24}{20-v}$ - $\\frac{24}{20+v}$ = $\\frac{1}{2}$$$\n$$24 $\\le$ft($\\frac{20+v-20+v}{400-v^2}$\\right) = $\\frac{1}{2}$ \\implies $\\frac{48v}{400-v^2}$ = $\\frac{1}{2}$$$\n$$96v = 400 - v^2 \\implies v^2 + 96v - 400 = 0$$\n$$(v + 100)(v - 4) = 0 \\implies v = 4\\text{ किमी/घंटा}$$\nStep 2: शांत जल में नई गति = $20 + 2 = 22$ किमी/घंटा।\n- नई अनुकूल गति = $22 + 4 = 26$ किमी/घंटा\n- नई प्रतिकूल गति = $22 - 4 = 18$ किमी/घंटा\nStep 3: 39 किमी अनुकूल और 30 किमी प्रतिकूल में लगा कुल समय:\n$$\\text{समय} = $\\frac{39}{26}$ + $\\frac{30}{18}$ = $\\frac{3}{2}$ + $\\frac{5}{3}$ = $\\frac{9+10}{6}$ = $\\frac{19}{6}$\\text{ घंटे}$$\nStep 4: मिनटों में बदलने पर:\n$$$\\frac{19}{6}$ $\\times$ 60 = 190\\text{ मिनट} = 3\\text{ घंटे } 10\\text{ मिनट}$$\nअतः सही विकल्प  3 hr 10 min है।\n\nMethod 2 (Value Putting / Verification Method):\nStep 1: समीकरण $\\frac{24}{20 - v} - \\frac{24}{20 + v} = 0.5$ में $v = 4$ रखने पर: $24/16 - 24/24 = 1.5 - 1 = 0.5$ (सत्यापित)।\nStep 2: नया समय = $39/26 + 30/18 = 1.5 + 1.666... = 3.166...$ घंटे = 3 घंटे 10 मिनट।\nअतः सही उत्तर '3 hr 10 min' है.\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
