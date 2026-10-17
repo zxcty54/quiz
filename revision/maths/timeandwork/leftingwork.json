@@ -1,0 +1,344 @@
+[
+  {
+    "p_id": "leftingwork_1",
+    "qe": "P and Q can do a work together in 30 days. Q and R can do the same work together in 24 days and R and P together in 20 days. They started the work together, but Q and R left after 10 days. How many more days will P take to finish the remaining work?",
+    "qh": "P और Q मिलकर एक कार्य को 30 दिनों में कर सकते हैं। Q और R मिलकर उसी कार्य को 24 दिनों में तथा R और P मिलकर 20 दिनों में कर सकते हैं। उन्होंने एक साथ कार्य शुरू किया, लेकिन 10 दिनों के बाद Q और R ने कार्य छोड़ दिया। शेष कार्य को पूरा करने में P को कितने दिन और लगेंगे?",
+    "oe": [
+      "23 days",
+      "19 days",
+      "21 days",
+      "18 days"
+    ],
+    "oh": [
+      "23 days",
+      "19 days",
+      "21 days",
+      "18 days"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(30, 24, 20) = 120 इकाइयाँ।\nStep 2: युग्मों की कार्यक्षमता:\n- (P + Q) की दक्षता = 120 / 30 = 4 इकाइयाँ/दिन\n- (Q + R) की दक्षता = 120 / 24 = 5 इकाइयाँ/दिन\n- (R + P) की दक्षता = 120 / 20 = 6 इकाइयाँ/दिन\nStep 3: तीनों को जोड़ने पर:\n2(P + Q + R) = 4 + 5 + 6 = 15 इकाइयाँ/दिन ==> (P + Q + R) = 7.5 इकाइयाँ/दिन।\nStep 4: P की व्यक्तिगत दक्षता = (P + Q + R) - (Q + R) = 7.5 - 5 = 2.5 इकाइयाँ/दिन।\nStep 5: तीनों द्वारा पहले 10 दिनों में किया गया कार्य = 10 × 7.5 = 75 इकाइयाँ।\nशेष कार्य = 120 - 75 = 45 इकाइयाँ।\nStep 6: P द्वारा शेष कार्य समाप्त करने में लगा अतिरिक्त समय = 45 / 2.5 = 18 दिन।\nअतः सही विकल्प  18 days है।\n\nMethod 2 (Fraction Method):\nStep 1: (P + Q + R) का 10 दिन का कार्य = 10 × (15 / 240) = 150 / 240 = 5 / 8 भाग।\nशेष कार्य = 1 - 5/8 = 3/8 भाग।\nStep 2: P की कार्य दर = 1/48 कार्य/दिन।\nStep 3: P द्वारा समय = (3/8) / (1/48) = (3/8) × 48 = 18 दिन।\nअतः सही उत्तर '18 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_2",
+    "qe": "Rohan alone can complete a work in 12 days and Hari alone can complete it in 16 days. They both work for 3 days and then Rohan leaves the work. After that Hari works alone and completes the work. In how many days will the total work be completed?",
+    "qh": "रोहन अकेले एक कार्य को 12 दिनों में और हरी अकेले इसे 16 दिनों में पूरा कर सकता है। वे दोनों 3 दिनों तक कार्य करते हैं और फिर रोहन कार्य छोड़ देता है। उसके बाद हरी अकेले कार्य करता है और कार्य पूरा करता है। कुल कार्य कितने दिनों में पूरा होगा?",
+    "oe": [
+      "9 days",
+      "12$\\frac{1}{3}$ days",
+      "12$\\frac{2}{3}$ days",
+      "12 days"
+    ],
+    "oh": [
+      "9 days",
+      "12$\\frac{1}{3}$ days",
+      "12$\\frac{2}{3}$ days",
+      "12 days"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Step-by-Step Method):\nStep 1: कुल कार्य = LCM(12, 16) = 48 इकाइयाँ।\n- रोहन की दक्षता = 48 / 12 = 4 इकाइयाँ/दिन\n- हरी की दक्षता = 48 / 16 = 3 इकाइयाँ/दिन\nStep 2: दोनों द्वारा 3 दिनों में किया गया कार्य = 3 × (4 + 3) = 21 इकाइयाँ।\nशेष कार्य = 48 - 21 = 27 इकाइयाँ।\nStep 3: हरी द्वारा शेष कार्य पूरा करने में लगा समय = 27 / 3 = 9 दिन।\nStep 4: कुल कार्य पूरा होने में लगा कुल समय = 3 + 9 = 12 दिन।\nअतः सही विकल्प  12 days है।\n\nMethod 2 (Hari's Total Work Method):\nStep 1: माना कुल कार्य D दिनों में पूरा हुआ। रोहन ने केवल 3 दिन कार्य किया और हरी ने पूरे D दिन कार्य किया:\n4 × 3 + 3 × D = 48 ==> 12 + 3D = 48 ==> 3D = 36 ==> D = 12 दिन।\nअतः सही उत्तर '12 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_3",
+    "qe": "P can do a piece of work in 30 days and Q in 40 days. They work together for 4 days and then Q leaves. The number of days taken by P to finish the remaining work is:",
+    "qh": "P एक कार्य को 30 दिनों में और Q 40 दिनों में कर सकता है। वे 4 दिनों तक एक साथ कार्य करते हैं और फिर Q छोड़ देता है। शेष कार्य को पूरा करने में P द्वारा लिए गए दिनों की संख्या है:",
+    "oe": [
+      "23 days",
+      "28 days",
+      "30 days",
+      "7 days"
+    ],
+    "oh": [
+      "23 days",
+      "28 days",
+      "30 days",
+      "7 days"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(30, 40) = 120 इकाइयाँ।\n- P की दक्षता = 120 / 30 = 4 इकाइयाँ/दिन\n- Q की दक्षता = 120 / 40 = 3 इकाइयाँ/दिन\nStep 2: P और Q द्वारा 4 दिनों में किया गया कार्य = 4 × (4 + 3) = 28 इकाइयाँ।\nशेष कार्य = 120 - 28 = 92 इकाइयाँ।\nStep 3: P द्वारा शेष कार्य पूरा करने में लगा समय = 92 / 4 = 23 दिन।\nअतः सही विकल्प  23 days है।\n\nMethod 2 (Fraction Method):\nStep 1: 4 दिनों में कार्य = 4 × (1/30 + 1/40) = 4 × (7/120) = 7/30 भाग।\nशेष कार्य = 1 - 7/30 = 23/30 भाग।\nStep 2: P द्वारा लिया गया समय = (23/30) × 30 = 23 दिन।\nअतः सही उत्तर '23 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_4",
+    "qe": "A and B can do a work in 15 days and 30 days, respectively. They start working together, but A leaves after 3 days. How much time will B take to complete the remaining work?",
+    "qh": "A और B एक कार्य को क्रमशः 15 दिन और 30 दिन में कर सकते हैं। वे एक साथ कार्य करना शुरू करते हैं, लेकिन A 3 दिनों के बाद छोड़ देता है। B को शेष कार्य पूरा करने में कितना समय लगेगा?",
+    "oe": [
+      "21 days",
+      "28 days",
+      "24 days",
+      "32 days"
+    ],
+    "oh": [
+      "21 days",
+      "28 days",
+      "24 days",
+      "32 days"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM Method):\nStep 1: कुल कार्य = LCM(15, 30) = 30 इकाइयाँ।\n- A की दक्षता = 30 / 15 = 2 इकाइयाँ/दिन\n- B की दक्षता = 30 / 30 = 1 इकाई/दिन\nStep 2: 3 दिनों में दोनों द्वारा किया गया कार्य = 3 × (2 + 1) = 9 इकाइयाँ।\nशेष कार्य = 30 - 9 = 21 इकाइयाँ।\nStep 3: B द्वारा शेष कार्य पूरा करने में लगा समय = 21 / 1 = 21 दिन।\nअतः सही विकल्प  21 days है।\n\nMethod 2 (Fraction Method):\nStep 1: 3 दिनों में कार्य = 3 × (1/15 + 1/30) = 3 × (3/30) = 3/10 भाग।\nशेष कार्य = 1 - 3/10 = 7/10 भाग।\nStep 2: B द्वारा समय = (7/10) × 30 = 21 दिन।\nअतः सही उत्तर '21 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_5",
+    "qe": "A can do a work in 15 days, B in 30 days. They start together but A leaves after 5 days. In how more days will B complete the remaining work?",
+    "qh": "A एक कार्य को 15 दिनों में, B 30 दिनों में कर सकता है। वे एक साथ शुरू करते हैं लेकिन A 5 दिनों के बाद छोड़ देता है। B शेष कार्य को कितने और दिनों में पूरा करेगा?",
+    "oe": [
+      "15 days",
+      "6 days",
+      "7 days",
+      "8 days"
+    ],
+    "oh": [
+      "15 days",
+      "6 days",
+      "7 days",
+      "8 days"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(15, 30) = 30 इकाइयाँ।\n- A की दक्षता = 30 / 15 = 2 इकाइयाँ/दिन\n- B की दक्षता = 30 / 30 = 1 इकाई/दिन\nStep 2: 5 दिनों में दोनों द्वारा किया गया कार्य = 5 × (2 + 1) = 15 इकाइयाँ।\nशेष कार्य = 30 - 15 = 15 इकाइयाँ।\nStep 3: B द्वारा शेष कार्य समाप्त करने में लगा समय = 15 / 1 = 15 दिन।\nअतः सही विकल्प  15 days है।\n\nMethod 2 (Fraction Method):\nStep 1: 5 दिनों में कार्य = 5 × (1/15 + 1/30) = 5 × (1/10) = 1/2 भाग।\nशेष कार्य = 1/2 भाग।\nStep 2: B द्वारा लिया गया समय = (1/2) × 30 = 15 दिन।\nअतः सही उत्तर '15 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_6",
+    "qe": "A and B can complete a work in 36 days and 45 days respectively. They worked together for 2 days and then A left the work. In how many days will B complete the remaining work?",
+    "qh": "A और B एक कार्य को क्रमशः 36 दिनों और 45 दिनों में पूरा कर सकते हैं। उन्होंने 2 दिनों तक एक साथ कार्य किया और फिर A ने कार्य छोड़ दिया। B शेष कार्य को कितने दिनों में पूरा करेगा?",
+    "oe": [
+      "41.5",
+      "40",
+      "41",
+      "40.5"
+    ],
+    "oh": [
+      "41.5",
+      "40",
+      "41",
+      "40.5"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(36, 45) = 180 इकाइयाँ।\n- A की दक्षता = 180 / 36 = 5 इकाइयाँ/दिन\n- B की दक्षता = 180 / 45 = 4 इकाइयाँ/दिन\nStep 2: 2 दिनों में दोनों द्वारा किया गया कार्य = 2 × (5 + 4) = 18 इकाइयाँ।\nशेष कार्य = 180 - 18 = 162 इकाइयाँ।\nStep 3: B द्वारा शेष कार्य पूरा करने में लगा समय = 162 / 4 = 40.5 दिन।\nअतः सही विकल्प  40.5 है।\n\nMethod 2 (Fraction Method):\nStep 1: 2 दिनों में कार्य = 2 × (1/36 + 1/45) = 2 × (9/180) = 1/10 भाग।\nशेष कार्य = 1 - 1/10 = 9/10 भाग।\nStep 2: B द्वारा लिया गया समय = (9/10) × 45 = 81 / 2 = 40.5 दिन।\nअतः सही उत्तर '40.5' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_7",
+    "qe": "X can complete half of the work in 20 days and Y can do one-fifth of the same work in 10 days. X started the work and left after 8 days. Then Y took over to complete the remaining work. The total number of days taken by them to complete the work is:",
+    "qh": "X कार्य का आधा भाग 20 दिनों में पूरा कर सकता है और Y उसी कार्य का 1/5 भाग 10 दिनों में कर सकता है। X ने कार्य शुरू किया और 8 दिनों के बाद छोड़ दिया। फिर Y ने शेष कार्य पूरा करने का जिम्मा लिया। कार्य को पूरा करने में उनके द्वारा लिए गए कुल दिनों की संख्या है:",
+    "oe": [
+      "40 days",
+      "48 days",
+      "50 days",
+      "45 days"
+    ],
+    "oh": [
+      "40 days",
+      "48 days",
+      "50 days",
+      "45 days"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM Method):\nStep 1: पूरा कार्य करने में समय:\n- X का पूरा समय = 20 × 2 = 40 दिन\n- Y का पूरा समय = 10 × 5 = 50 दिन\nStep 2: कुल कार्य = LCM(40, 50) = 200 इकाइयाँ।\n- X की दक्षता = 200 / 40 = 5 इकाइयाँ/दिन\n- Y की दक्षता = 200 / 50 = 4 इकाइयाँ/दिन\nStep 3: X द्वारा 8 दिनों में किया गया कार्य = 8 × 5 = 40 इकाइयाँ।\nशेष कार्य = 200 - 40 = 160 इकाइयाँ।\nStep 4: Y द्वारा 160 इकाइयाँ पूरा करने में लगा समय = 160 / 4 = 40 दिन।\nStep 5: कार्य पूरा होने में लगा कुल समय = 8 + 40 = 48 दिन।\nअतः सही विकल्प  48 days है।\n\nMethod 2 (Fraction Method):\nStep 1: 8 दिनों में X द्वारा किया गया कार्य = 8 / 40 = 1 / 5 भाग।\nशेष कार्य = 1 - 1/5 = 4 / 5 भाग।\nStep 2: Y द्वारा 4/5 भाग पूरा करने में लगा समय = (4/5) × 50 = 40 दिन।\nStep 3: कुल समय = 8 + 40 = 48 दिन।\nअतः सही उत्तर '48 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_8",
+    "qe": "A can do a work in 18 days, B in 27 days. They start together, but after 6 days, A leaves. In how many more days will B finish the remaining work?",
+    "qh": "A एक कार्य को 18 दिनों में, B 27 दिनों में कर सकता है। वे एक साथ शुरू करते हैं, लेकिन 6 दिनों के बाद, A छोड़ देता है। B शेष कार्य को कितने और दिनों में पूरा करेगा?",
+    "oe": [
+      "10 days",
+      "11 days",
+      "12 days",
+      "13 days"
+    ],
+    "oh": [
+      "10 days",
+      "11 days",
+      "12 days",
+      "13 days"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(18, 27) = 54 इकाइयाँ।\n- A की दक्षता = 54 / 18 = 3 इकाइयाँ/दिन\n- B की दक्षता = 54 / 27 = 2 इकाइयाँ/दिन\nStep 2: 6 दिनों में दोनों द्वारा किया गया कार्य = 6 × (3 + 2) = 30 इकाइयाँ।\nशेष कार्य = 54 - 30 = 24 इकाइयाँ।\nStep 3: B द्वारा शेष कार्य पूरा करने में लगा समय = 24 / 2 = 12 दिन।\nअतः सही विकल्प  12 days है।\n\nMethod 2 (Fraction Method):\nStep 1: 6 दिनों में कार्य = 6 × (1/18 + 1/27) = 6 × (5/54) = 5/9 भाग।\nशेष कार्य = 1 - 5/9 = 4/9 भाग।\nStep 2: B द्वारा लिया गया समय = (4/9) × 27 = 12 दिन।\nअतः सही उत्तर '12 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_9",
+    "qe": "A can do a work in 10 days, B in 15 days, and C in 30 days. If all three work together for 3 days and then A leaves, in how many more days will the remaining work be finished?",
+    "qh": "A एक कार्य को 10 दिनों में, B 15 दिनों में और C 30 दिनों में कर सकता है। यदि तीनों 3 दिनों तक एक साथ कार्य करते हैं और फिर A छोड़ देता है, तो शेष कार्य कितने और दिनों में समाप्त होगा?",
+    "oe": [
+      "3 days",
+      "4 days",
+      "5 days",
+      "6 days"
+    ],
+    "oh": [
+      "3 days",
+      "4 days",
+      "5 days",
+      "6 days"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(10, 15, 30) = 30 इकाइयाँ।\n- A की दक्षता = 30 / 10 = 3 इकाइयाँ/दिन\n- B की दक्षता = 30 / 15 = 2 इकाइयाँ/दिन\n- C की दक्षता = 30 / 30 = 1 इकाई/दिन\nStep 2: तीनों द्वारा 3 दिनों में किया गया कार्य = 3 × (3 + 2 + 1) = 18 इकाइयाँ।\nशेष कार्य = 30 - 18 = 12 इकाइयाँ।\nStep 3: A के छोड़ने के बाद B और C की संयुक्त दक्षता = 2 + 1 = 3 इकाइयाँ/दिन।\nStep 4: शेष कार्य समाप्त करने में लगा समय = 12 / 3 = 4 दिन।\nअतः सही विकल्प  4 days है।\n\nMethod 2 (Fraction Method):\nStep 1: 3 दिनों में कार्य = 3 × (1/10 + 1/15 + 1/30) = 3 × (6/30) = 3/5 भाग।\nशेष कार्य = 1 - 3/5 = 2/5 भाग।\nStep 2: (B + C) की दर = 1/15 + 1/30 = 1/10 भाग/दिन।\nStep 3: समय = (2/5) / (1/10) = 4 दिन।\nअतः सही उत्तर '4 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_10",
+    "qe": "A and B can finish a certain job in 28 and 35 days, respectively. They started working together, but A left after a while, and B managed to complete the remaining work in 17 days. How many days did A work before leaving?",
+    "qh": "A और B एक निश्चित कार्य को क्रमशः 28 और 35 दिनों में पूरा कर सकते हैं। उन्होंने एक साथ कार्य करना शुरू किया, लेकिन A कुछ समय बाद छोड़ गया, और B शेष कार्य को 17 दिनों में पूरा करने में सफल रहा। A ने जाने से पहले कितने दिन कार्य किया?",
+    "oe": [
+      "8 days",
+      "5 days",
+      "6$\\frac{7}{2}$ days",
+      "7$\\frac{5}{2}$ days"
+    ],
+    "oh": [
+      "8 days",
+      "5 days",
+      "6$\\frac{7}{2}$ days",
+      "7$\\frac{5}{2}$ days"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(28, 35) = 140 इकाइयाँ।\n- A की दक्षता = 140 / 28 = 5 इकाइयाँ/दिन\n- B की दक्षता = 140 / 35 = 4 इकाइयाँ/दिन\nStep 2: B ने अकेले अंत में 17 दिन कार्य किया:\nB द्वारा अकेले किया गया कार्य = 17 × 4 = 68 इकाइयाँ।\nStep 3: A और B द्वारा मिलकर किया गया प्रारंभिक कार्य = 140 - 68 = 72 इकाइयाँ।\nStep 4: दोनों की संयुक्त दक्षता = 5 + 4 = 9 इकाइयाँ/दिन।\nStep 5: A और B ने मिलकर कार्य किया = 72 / 9 = 8 दिन।\nअतः A ने छोड़ने से पहले 8 दिन कार्य किया।\nअतः सही विकल्प  8 days है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना A ने t दिनों तक कार्य किया। तब B ने (t + 17) दिन कार्य किया:\n5t + 4(t + 17) = 140 ==> 9t + 68 = 140 ==> 9t = 72 ==> t = 8 दिन।\nअतः सही उत्तर '8 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_11",
+    "qe": "Shivam can do a piece of work in 6 days and Vivek in 24 days. They started work together but Shivam left the work 3 days before its completion. In how many days was the work completed?",
+    "qh": "शिवम एक कार्य को 6 दिनों में और विवेक 24 दिनों में कर सकता है। उन्होंने एक साथ कार्य शुरू किया लेकिन शिवम ने कार्य पूरा होने से 3 दिन पहले कार्य छोड़ दिया। कार्य कितने दिनों में पूरा हुआ?",
+    "oe": [
+      "7$\\frac{4}{5}$ days",
+      "7$\\frac{2}{5}$ days",
+      "7$\\frac{3}{5}$ days",
+      "7$\\frac{1}{5}$ days"
+    ],
+    "oh": [
+      "7$\\frac{4}{5}$ days",
+      "7$\\frac{2}{5}$ days",
+      "7$\\frac{3}{5}$ days",
+      "7$\\frac{1}{5}$ days"
+    ],
+    "a": 3,
+    "e": "Method 1 (Addition of Work Method):\nStep 1: कुल कार्य = LCM(6, 24) = 24 इकाइयाँ।\n- शिवम की दक्षता = 24 / 6 = 4 इकाइयाँ/दिन\n- विवेक की दक्षता = 24 / 24 = 1 इकाई/दिन\nStep 2: यदि कोई व्यक्ति कार्य पूरा होने से पहले छोड़ता है, तो उसके उतने दिनों का कार्य कुल कार्य में जोड़ दिया जाता है:\nशिवम का 3 दिनों का कार्य = 3 × 4 = 12 इकाइयाँ।\nकाल्पनिक कुल कार्य = 24 + 12 = 36 इकाइयाँ।\nStep 3: दोनों की संयुक्त दक्षता = 4 + 1 = 5 इकाइयाँ/दिन।\nStep 4: कुल कार्य पूरा होने में लगा समय = 36 / 5 = 7 1/5 दिन।\nअतः सही विकल्प  7 1/5 days है।\n\nMethod 2 (Step-by-Step Method):\nStep 1: अंतिम 3 दिनों में केवल विवेक ने कार्य किया = 3 × 1 = 3 इकाइयाँ।\nStep 2: शेष 24 - 3 = 21 इकाइयाँ दोनों ने मिलकर कीं।\nStep 3: साथ में समय = 21 / 5 = 4 1/5 दिन।\nकुल समय = 4 1/5 + 3 = 7 1/5 दिन।\nअतः सही उत्तर '7$\\frac{1}{5}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_12",
+    "qe": "A and B can individually complete a piece of work in 18 days and 30 days, respectively. A and B started working together, but A left 16 2/3 days before the work is completed and B alone completed the rest of the work. For how many days did A work?",
+    "qh": "A और B व्यक्तिगत रूप से एक कार्य को क्रमशः 18 दिनों और 30 दिनों में पूरा कर सकते हैं। A और B ने एक साथ कार्य करना शुरू किया, लेकिन A कार्य पूरा होने से 16 2/3 दिन पहले छोड़ गया और B ने अकेले शेष कार्य पूरा किया। A ने कितने दिनों तक कार्य किया?",
+    "oe": [
+      "4",
+      "5",
+      "6",
+      "3"
+    ],
+    "oh": [
+      "4",
+      "5",
+      "6",
+      "3"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(18, 30) = 90 इकाइयाँ।\n- A की दक्षता = 90 / 18 = 5 इकाइयाँ/दिन\n- B की दक्षता = 90 / 30 = 3 इकाइयाँ/दिन\nStep 2: 16 2/3 दिन = 50 / 3 दिन।\nअंतिम 50/3 दिनों में केवल B ने अकेले कार्य किया:\nB द्वारा किया गया कार्य = (50 / 3) × 3 = 50 इकाइयाँ।\nStep 3: प्रारंभ में A और B द्वारा मिलकर किया गया कार्य = 90 - 50 = 40 इकाइयाँ।\nStep 4: दोनों की संयुक्त दक्षता = 5 + 3 = 8 इकाइयाँ/दिन।\nStep 5: A ने जितने दिन कार्य किया = 40 / 8 = 5 दिन।\nअतः सही विकल्प  5 है।\n\nMethod 2 (Fraction Method):\nStep 1: अंतिम 50/3 दिनों में B का कार्य = (50/3) × (1/30) = 5/9 भाग।\nशेष भाग = 1 - 5/9 = 4/9 भाग।\nStep 2: (A + B) की दर = 1/18 + 1/30 = 8/90 = 4/45.\nStep 3: समय = (4/9) / (4/45) = 5 दिन।\nअतः सही उत्तर '5' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_13",
+    "qe": "P, Q and R, when working individually, can complete a job in, respectively, 36 days, 48 days and 144 days. P, Q and R start working together. P leaves the job 12 days before completion and Q leaves the job 8 days before completion. R works from the beginning till the end of the job. Determine the total number of days taken to complete the job.",
+    "qh": "P, Q और R, व्यक्तिगत रूप से कार्य करते हुए, एक कार्य को क्रमशः 36 दिन, 48 दिन और 144 दिन में पूरा कर सकते हैं। P, Q और R एक साथ कार्य करना शुरू करते हैं। P कार्य पूरा होने से 12 दिन पहले कार्य छोड़ देता है और Q कार्य पूरा होने से 8 दिन पहले कार्य छोड़ देता है। R शुरू से अंत तक कार्य करता है। कार्य पूरा करने में लिए गए कुल दिनों की संख्या निर्धारित कीजिए।",
+    "oe": [
+      "24 days",
+      "27 days",
+      "30 days",
+      "21 days"
+    ],
+    "oh": [
+      "24 days",
+      "27 days",
+      "30 days",
+      "21 days"
+    ],
+    "a": 1,
+    "e": "Method 1 (Work Addition Trick Method):\nStep 1: कुल कार्य = LCM(36, 48, 144) = 144 इकाइयाँ।\n- P की दक्षता = 144 / 36 = 4 इकाइयाँ/दिन\n- Q की दक्षता = 144 / 48 = 3 इकाइयाँ/दिन\n- R की दक्षता = 144 / 144 = 1 इकाई/दिन\nStep 2: जो व्यक्ति कार्य समाप्ति से पहले छोड़ते हैं, उनके छोड़े गए दिनों का कार्य कुल कार्य में जोड़ें:\n- P का 12 दिनों का कार्य = 12 × 4 = 48 इकाइयाँ\n- Q का 8 दिनों का कार्य = 8 × 3 = 24 इकाइयाँ\nसंशोधित कुल कार्य = 144 + 48 + 24 = 216 इकाइयाँ।\nStep 3: तीनों की संयुक्त दक्षता = 4 + 3 + 1 = 8 इकाइयाँ/दिन।\nStep 4: कुल लिया गया समय = 216 / 8 = 27 दिन।\nअतः सही विकल्प  27 days है।\n\nMethod 2 (Algebraic Equation Method):\nStep 1: माना कार्य D दिनों में पूरा हुआ:\n4(D - 12) + 3(D - 8) + 1(D) = 144\n4D - 48 + 3D - 24 + D = 144 ==> 8D - 72 = 144 ==> 8D = 216 ==> D = 27 दिन।\nअतः सही उत्तर '27 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_14",
+    "qe": "Benny can do a piece of work in 24 days. Chetan and David can do the same work individually in 36 and 48 days respectively. All of them begin the work together. However, Benny leaves the work 4 days before the completion of work and Chetan leaves the work 10 days before the completion of the work. David worked till the end and completed the work. Find the number of days in which the work was completed.",
+    "qh": "बेनी एक कार्य को 24 दिनों में कर सकता है। चेतन और डेविड व्यक्तिगत रूप से उसी कार्य को क्रमशः 36 और 48 दिनों में कर सकते हैं। वे सभी एक साथ कार्य शुरू करते हैं। हालाँकि, बेनी कार्य पूरा होने से 4 दिन पहले कार्य छोड़ देता है और चेतन कार्य पूरा होने से 10 दिन पहले कार्य छोड़ देता है। डेविड ने अंत तक कार्य किया और कार्य पूरा किया। उन दिनों की संख्या ज्ञात कीजिए जिनमें कार्य पूरा हुआ था।",
+    "oe": [
+      "16",
+      "20",
+      "18",
+      "15"
+    ],
+    "oh": [
+      "16",
+      "20",
+      "18",
+      "15"
+    ],
+    "a": 0,
+    "e": "Method 1 (Work Addition Trick Method):\nStep 1: कुल कार्य = LCM(24, 36, 48) = 144 इकाइयाँ।\n- बेनी की दक्षता = 144 / 24 = 6 इकाइयाँ/दिन\n- चेतन की दक्षता = 144 / 36 = 4 इकाइयाँ/दिन\n- डेविड की दक्षता = 144 / 48 = 3 इकाइयाँ/दिन\nStep 2: पहले छोड़े गए कार्य को कुल कार्य में जोड़ें:\n- बेनी का 4 दिनों का कार्य = 4 × 6 = 24 इकाइयाँ\n- चेतन का 10 दिनों का कार्य = 10 × 4 = 40 इकाइयाँ\nसंशोधित कुल कार्य = 144 + 24 + 40 = 208 इकाइयाँ।\nStep 3: तीनों की कुल संयुक्त दक्षता = 6 + 4 + 3 = 13 इकाइयाँ/दिन।\nStep 4: कुल कार्य पूरा होने में लगा समय = 208 / 13 = 16 दिन।\nअतः सही विकल्प  16 है।\n\nMethod 2 (Algebraic Equation Method):\nStep 1: माना कार्य कुल D दिनों तक चला:\n6(D - 4) + 4(D - 10) + 3D = 144\n6D - 24 + 4D - 40 + 3D = 144 ==> 13D - 64 = 144 ==> 13D = 208 ==> D = 16 दिन।\nअतः सही उत्तर '16' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_15",
+    "qe": "P, Q and R working alone can complete a work in 24, 30 and 40 days respectively. All three of them started the work together but after 8 days P left the work. Q left the work 6 days before the work was completed. R completed the remaining work alone. In how many days was the total work completed?",
+    "qh": "P, Q और R अकेले कार्य करते हुए एक कार्य को क्रमशः 24, 30 और 40 दिनों में पूरा कर सकते हैं। उन तीनों ने एक साथ कार्य शुरू किया लेकिन 8 दिनों के बाद P ने कार्य छोड़ दिया। Q ने कार्य पूरा होने से 6 दिन पहले कार्य छोड़ दिया। R ने शेष कार्य अकेले पूरा किया। कुल कार्य कितने दिनों में पूरा हुआ?",
+    "oe": [
+      "$\\frac{97}{7}$",
+      "$\\frac{104}{7}$",
+      "$\\frac{109}{7}$",
+      "$\\frac{152}{7}$"
+    ],
+    "oh": [
+      "$\\frac{97}{7}$",
+      "$\\frac{104}{7}$",
+      "$\\frac{109}{7}$",
+      "$\\frac{152}{7}$"
+    ],
+    "a": 1,
+    "e": "Method 1 (Algebraic Equation Method):\nStep 1: कुल कार्य = LCM(24, 30, 40) = 120 इकाइयाँ।\n- P की दक्षता = 120 / 24 = 5 इकाइयाँ/दिन\n- Q की दक्षता = 120 / 30 = 4 इकाइयाँ/दिन\n- R की दक्षता = 120 / 40 = 3 इकाइयाँ/दिन\nStep 2: माना कुल कार्य D दिनों में पूरा हुआ:\n- P ने केवल 8 दिन कार्य किया: कार्य = 8 × 5 = 40 इकाइयाँ\n- Q ने (D - 6) दिन कार्य किया: कार्य = 4(D - 6)\n- R ने पूरे D दिन कार्य किया: कार्य = 3D\nStep 3: कुल कार्य समीकरण:\n40 + 4(D - 6) + 3D = 120\n40 + 4D - 24 + 3D = 120\n7D + 16 = 120 ==> 7D = 104 ==> D = 104 / 7 दिन।\nअतः सही विकल्प  104/7 है।\n\nMethod 2 (Remaining Work Method):\nStep 1: P द्वारा 8 दिनों में किया गया कार्य = 40 इकाइयाँ। शेष कार्य = 120 - 40 = 80 इकाइयाँ।\nStep 2: इस 80 इकाइयों के लिए Q कार्य पूरा होने से 6 दिन पहले छोड़ता है, अतः Q का 6 दिन का कार्य जोड़ें = 6 × 4 = 24 इकाइयाँ।\nसंशोधित शेष कार्य = 80 + 24 = 104 इकाइयाँ।\nStep 3: (Q + R) की दक्षता = 4 + 3 = 7 इकाइयाँ/दिन।\nकुल समय = 104 / 7 दिन।\nअतः सही उत्तर '$\\frac{104}{7}$' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_16",
+    "qe": "Aarif, Arun and Abraham can do a work in 12, 20 and 24 days, respectively. They all begin together. Aarif leaves the work 1 day, Arun 3 days and Abraham 4 days before its completion. In how many days is the work finished?",
+    "qh": "आरिफ, अरुण और अब्राहम एक कार्य को क्रमशः 12, 20 और 24 दिनों में कर सकते हैं। वे सभी एक साथ शुरू करते हैं। आरिफ कार्य पूरा होने से 1 दिन पहले, अरुण 3 दिन पहले और अब्राहम 4 दिन पहले कार्य छोड़ देता है। कार्य कितने दिनों में समाप्त होता है?",
+    "oe": [
+      "8",
+      "10",
+      "11",
+      "9"
+    ],
+    "oh": [
+      "8",
+      "10",
+      "11",
+      "9"
+    ],
+    "a": 0,
+    "e": "Method 1 (Work Addition Method):\nStep 1: कुल कार्य = LCM(12, 20, 24) = 120 इकाइयाँ।\n- आरिफ की दक्षता = 120 / 12 = 10 इकाइयाँ/दिन\n- अरुण की दक्षता = 120 / 20 = 6 इकाइयाँ/दिन\n- अब्राहम की दक्षता = 120 / 24 = 5 इकाइयाँ/दिन\nStep 2: तीनों कार्य समाप्ति से पहले छोड़ते हैं, अतः उनके छोड़े गए दिनों का कार्य जोड़ें:\n- आरिफ का 1 दिन का कार्य = 1 × 10 = 10 इकाइयाँ\n- अरुण का 3 दिनों का कार्य = 3 × 6 = 18 इकाइयाँ\n- अब्राहम का 4 दिनों का कार्य = 4 × 5 = 20 इकाइयाँ\nसंशोधित कुल कार्य = 120 + 10 + 18 + 20 = 168 इकाइयाँ।\nStep 3: तीनों की कुल दक्षता = 10 + 6 + 5 = 21 इकाइयाँ/दिन।\nStep 4: कुल कार्य समाप्त होने में लगा समय = 168 / 21 = 8 दिन।\nअतः सही विकल्प  8 है।\n\nMethod 2 (Algebraic Equation Method):\nStep 1: माना कुल दिन = D.\n10(D - 1) + 6(D - 3) + 5(D - 4) = 120\n10D - 10 + 6D - 18 + 5D - 20 = 120 ==> 21D - 48 = 120 ==> 21D = 168 ==> D = 8 दिन।\nअतः सही उत्तर '8' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_17",
+    "qe": "A alone can do a work in 14 days. B alone can do the same work in 28 days. C alone can do the same work in 56 days. They started working together and completed the work such that B was not working on last 2 days and A did not work in last 3 days. In how many days (total) was the work completed?",
+    "qh": "A अकेले एक कार्य को 14 दिनों में कर सकता है। B अकेले उसी कार्य को 28 दिनों में कर सकता है। C अकेले उसी कार्य को 56 दिनों में कर सकता है। उन्होंने एक साथ कार्य करना शुरू किया और कार्य इस प्रकार पूरा किया कि B ने अंतिम 2 दिनों में कार्य नहीं किया और A ने अंतिम 3 दिनों में कार्य नहीं किया। कार्य कितने दिनों में (कुल) पूरा हुआ?",
+    "oe": [
+      "$\\frac{72}{7}$ days",
+      "$\\frac{87}{7}$ days",
+      "$\\frac{79}{7}$ days",
+      "$\\frac{65}{7}$ days"
+    ],
+    "oh": [
+      "$\\frac{72}{7}$ days",
+      "$\\frac{87}{7}$ days",
+      "$\\frac{79}{7}$ days",
+      "$\\frac{65}{7}$ days"
+    ],
+    "a": 0,
+    "e": "Method 1 (Work Addition Trick Method):\nStep 1: कुल कार्य = LCM(14, 28, 56) = 56 इकाइयाँ।\n- A की दक्षता = 56 / 14 = 4 इकाइयाँ/दिन\n- B की दक्षता = 56 / 28 = 2 इकाइयाँ/दिन\n- C की दक्षता = 56 / 56 = 1 इकाई/दिन\nStep 2: A और B अंतिम दिनों में अनुपस्थित रहे, उनके अनुपस्थित दिनों का कार्य जोड़ें:\n- A का 3 दिनों का कार्य = 3 × 4 = 12 इकाइयाँ\n- B का 2 दिनों का कार्य = 2 × 2 = 4 इकाइयाँ\nसंशोधित कुल कार्य = 56 + 12 + 4 = 72 इकाइयाँ।\nStep 3: तीनों की कुल दक्षता = 4 + 2 + 1 = 7 इकाइयाँ/दिन।\nStep 4: कुल लगा समय = 72 / 7 दिन।\nअतः सही विकल्प  72/7 days है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना कुल समय = D दिन।\n4(D - 3) + 2(D - 2) + 1(D) = 56\n4D - 12 + 2D - 4 + D = 56 ==> 7D - 16 = 56 ==> 7D = 72 ==> D = 72 / 7 दिन।\nअतः सही उत्तर '$\\frac{72}{7}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "leftingwork_18",
+    "qe": "P, Q and R working alone can complete a work in 15, 20 and 30 days respectively. All three of them started the work together but after 4 days P left the work. Q left the work 6 days before the work was completed. R completed the remaining work alone. In how many days was the total work completed?",
+    "qh": "P, Q और R अकेले कार्य करते हुए एक कार्य को क्रमशः 15, 20 और 30 दिनों में पूरा कर सकते हैं। उन तीनों ने एक साथ कार्य शुरू किया लेकिन 4 दिनों के बाद P ने कार्य छोड़ दिया। Q ने कार्य पूरा होने से 6 दिन पहले कार्य छोड़ दिया। R ने शेष कार्य अकेले पूरा किया। कुल कार्य कितने दिनों में पूरा हुआ?",
+    "oe": [
+      "12 days",
+      "$\\frac{62}{5}$ days",
+      "14 days",
+      "$\\frac{68}{5}$ days"
+    ],
+    "oh": [
+      "12 days",
+      "$\\frac{62}{5}$ days",
+      "14 days",
+      "$\\frac{68}{5}$ days"
+    ],
+    "a": 1,
+    "e": "Method 1 (Algebraic Equation Method):\nStep 1: कुल कार्य = LCM(15, 20, 30) = 60 इकाइयाँ।\n- P की दक्षता = 60 / 15 = 4 इकाइयाँ/दिन\n- Q की दक्षता = 60 / 20 = 3 इकाइयाँ/दिन\n- R की दक्षता = 60 / 30 = 2 इकाइयाँ/दिन\nStep 2: माना कुल समय = D दिन:\n- P ने केवल 4 दिन कार्य किया: 4 × 4 = 16 इकाइयाँ\n- Q ने (D - 6) दिन कार्य किया: 3(D - 6)\n- R ने पूरे D दिन कार्य किया: 2D\nStep 3: कुल समीकरण:\n16 + 3(D - 6) + 2D = 60\n16 + 3D - 18 + 2D = 60\n5D - 2 = 60 ==> 5D = 62 ==> D = 62 / 5 दिन।\nअतः सही विकल्प  62/5 days है।\n\nMethod 2 (Remaining Work Method):\nStep 1: P द्वारा 4 दिनों में किया गया कार्य = 16 इकाइयाँ। शेष कार्य = 60 - 16 = 44 इकाइयाँ।\nStep 2: Q कार्य समाप्ति से 6 दिन पहले छोड़ता है, अतः Q का 6 दिन का कार्य जोड़ें = 6 × 3 = 18 इकाइयाँ।\nसंशोधित शेष कार्य = 44 + 18 = 62 इकाइयाँ।\nStep 3: (Q + R) की संयुक्त दक्षता = 3 + 2 = 5 इकाइयाँ/दिन।\nकुल समय = 62 / 5 दिन।\nअतः सही उत्तर '$\\frac{62}{5}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
