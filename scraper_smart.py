@@ -560,6 +560,10 @@ def _ladder(url):
         steps.append(('plain-nossl', lambda: normal_fetch(url, verify=False)))
     if SCRAPINGANT_API_KEY:
         steps.append(('scrapingant', lambda: scrapingant_fetch(url)))
+    if SCRAPINGANT_API_KEY and 'india.gov.in' not in host:
+        # Aakhri ilaaj: puri seedhi gir jaye tab browser-render lagega.
+        # Safal fetch par ye kadam kabhi chalta hi nahi — credit sifar.
+        steps.append(('render-last', lambda: scrapingant_render_fetch(url)))
     return host, steps
 
 
@@ -581,8 +585,9 @@ def fetch_url(url):
             break
         out = fn()
         if out:
-            with _host_lock:
-                _host_winners[host] = name
+            if name != 'render-last':
+                with _host_lock:
+                    _host_winners[host] = name
             return out
 
     warn(f"❌ ALL FETCH METHODS FAILED: {url}")
