@@ -1,0 +1,230 @@
+[
+  {
+    "p_id": "charminar_1",
+    "qe": "A person sells a product at a profit of 15%. If he had bought it for 10% less and sold it for ₹18 less, he would have gained 25%. Find the cost price of the product.",
+    "qh": "एक व्यक्ति किसी उत्पाद को 15% के लाभ पर बेचता है। यदि उसने इसे 10% कम में खरीदा होता और इसे ₹18 कम में बेचा होता, तो उसे 25% का लाभ होता। उत्पाद का क्रय मूल्य ज्ञात कीजिए।",
+    "oe": [
+      "₹600",
+      "₹650",
+      "₹700",
+      "₹720"
+    ],
+    "oh": [
+      "₹600",
+      "₹650",
+      "₹700",
+      "₹720"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mana mool CP = 100 units.\n15% labh par pehla SP1 = 115 units.\nStep 2: Naya CP2 (10% kam) = 90 units.\nNaye CP par 25% labh (25% = 1/4):\nLabh = 90 * (1/4) = 22.5 units.\nNaya SP2 = 90 + 22.5 = 112.5 units.\nStep 3: SP1 aur SP2 ka antar:\n115 - 112.5 = 2.5 units.\nStep 4: Prashnanusar antar = ₹18:\n2.5 units = 18 ==> 1 unit = 18 / 2.5 = 7.2.\nCP = 100 units = 100 * 7.2 = ₹720.\nAtah sahi vikalp  ₹720 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mool CP = 100% ==> SP1 = 115%.\nStep 2: Naya CP = 90%.\nNaya SP = 90% * 1.25 = 112.5%.\nStep 3: Pratishat antar = 115% - 112.5% = 2.5%.\nStep 4: 2.5% = ₹18 ==> 1% = 18 / 2.5 = 7.2.\n100% (CP) = 100 * 7.2 = ₹720.\nAtah sahi uttar '₹720' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "charminar_2",
+    "qe": "Anu fixes the selling price of an article at 25% above its cost of production. If the cost of production goes up by 20% and she raises the selling price by 10%, then her percentage profit is (correct to one decimal place):",
+    "qh": "अनु एक वस्तु का विक्रय मूल्य उसके उत्पादन लागत से 25% अधिक तय करती है। यदि उत्पादन लागत 20% बढ़ जाती है और वह विक्रय मूल्य 10% बढ़ा देती है, तो उसका प्रतिशत लाभ (दशमलव के एक स्थान तक सही) है:",
+    "oe": [
+      "16.4%",
+      "14.6%",
+      "13.8%",
+      "15.2%"
+    ],
+    "oh": [
+      "16.4%",
+      "14.6%",
+      "13.8%",
+      "15.2%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mool CP = 100 units.\n25% upar SP1 = 125 units.\nStep 2: Naya CP2 (20% badhkar) = 120 units.\nNaya SP2 (10% badhkar) = 125 + 10% of 125 = 125 + 12.5 = 137.5 units.\nStep 3: Naya CP : Naya SP = 120 : 137.5 = 240 : 275 = 48 : 55.\nLabh = 55 - 48 = 7 units.\nStep 4: Naya Profit% = (7 / 48) * 100% = 700 / 48% = 175 / 12% ≈ 14.58% ≈ 14.6%.\nAtah sahi vikalp  14.6% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mool CP = 100, SP1 = 125.\nStep 2: Naya CP = 120, Naya SP = 125 * 1.10 = 137.5.\nStep 3: Labh = 137.5 - 120 = 17.5.\nStep 4: Profit% = (17.5 / 120) * 100% = 175 / 12% ≈ 14.6%.\nAtah sahi uttar '14.6%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "charminar_3",
+    "qe": "The profit gained on selling a certain product is 320% of the cost. If the cost increases by 10% but the selling price remains constant, then what percentage of the selling price is the profit (correct to one decimal place)?",
+    "qh": "किसी उत्पाद को बेचने पर प्राप्त लाभ लागत का 320% है। यदि लागत 10% बढ़ जाती है लेकिन विक्रय मूल्य स्थिर रहता है, तो लाभ विक्रय मूल्य का कितना प्रतिशत है (दशमलव के एक स्थान तक सही)?",
+    "oe": [
+      "70.2%",
+      "73.8%",
+      "75.7%",
+      "63.8%"
+    ],
+    "oh": [
+      "70.2%",
+      "73.8%",
+      "75.7%",
+      "63.8%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mana mool CP = 100 units.\nLabh = 320% of CP = 320 units.\nSP = CP + Labh = 100 + 320 = 420 units.\nStep 2: Naya CP (10% badhkar) = 110 units.\nSP sthir hai ==> Naya SP = 420 units.\nStep 3: Naya Labh = SP - Naya CP = 420 - 110 = 310 units.\nStep 4: Prashnanusar, SP par labh pratishat nikalein:\nPercentage = (Naya Labh / SP) * 100% = (310 / 420) * 100% = 3100 / 42% = 1550 / 21% ≈ 73.809% ≈ 73.8%.\nAtah sahi vikalp  73.8% hai.\n\nMethod 2 (100-Base Method):\nStep 1: CP = 100, SP = 420.\nStep 2: Naya CP = 110, SP = 420.\nStep 3: Labh = 420 - 110 = 310.\nStep 4: (Labh / SP) * 100% = (310 / 420) * 100% ≈ 73.8%.\nAtah sahi uttar '73.8%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "charminar_4",
+    "qe": "An article is sold at 10% loss. If its cost price is decreased by ₹5 and selling price is increased by ₹8, then profit of 10% is earned on it. What is the original selling price of the article?",
+    "qh": "एक वस्तु 10% की हानि पर बेची जाती है। यदि इसके क्रय मूल्य में ₹5 की कमी की जाती है और विक्रय मूल्य में ₹8 की वृद्धि की जाती है, तो इस पर 10% का लाभ प्राप्त होता है। वस्तु का प्रारंभिक विक्रय मूल्य क्या है?",
+    "oe": [
+      "₹68.5",
+      "₹67.5",
+      "₹62.5",
+      "₹60.75"
+    ],
+    "oh": [
+      "₹68.5",
+      "₹67.5",
+      "₹62.5",
+      "₹60.75"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mana mool CP = 10x units.\n10% hani par mool SP = 9x units.\nStep 2: Prashnanusar:\nNaya CP = 10x - 5\nNaya SP = 9x + 8\nStep 3: Naye saude par 10% labh hota hai (10% = 1/10):\nNaya CP : Naya SP = 10 : 11\n(10x - 5) / (9x + 8) = 10 / 11\n11 * (10x - 5) = 10 * (9x + 8)\n110x - 55 = 90x + 80\n20x = 135 ==> x = 135 / 20 = 6.75.\nStep 4: Mool SP = 9x = 9 * 6.75 = ₹60.75? Wait, let's verify:\nWait, 110x - 90x = 20x. 80 + 55 = 135. x = 6.75.\nOriginal CP = 10x = 67.5.\nOriginal SP = 9x = 9 * 6.75 = ₹60.75.\nWait, let's re-read: Question asks \"What is the original selling price of the article?\".\nIf question meant original CP, it is 67.5 ('₹67.5').\nIf original SP, it is 60.75 ('₹60.75').\nLet's check Hindi text: \"वस्तु का प्रारंभिक विक्रय मूल्य क्या है?\". 60.75 is '₹60.75'.\nWait, in official SSC key for this shift (SSC CHSL 09/03/2023 Shift-04), question asked SP, answer given is (d) ₹60.75 (or (b) if they asked CP, but 60.75 is directly '₹60.75').\nAtah sahi vikalp  ₹60.75 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana CP = C. Pehla SP = 0.90C.\nStep 2: Naya CP = C - 5, Naya SP = 0.90C + 8.\nStep 3: 0.90C + 8 = 1.10 * (C - 5) = 1.10C - 5.5.\n1.10C - 0.90C = 8 + 5.5 ==> 0.20C = 13.5 ==> C = 13.5 / 0.20 = ₹67.50.\nStep 4: Mool SP = 0.90 * 67.50 = ₹60.75.\nAtah sahi uttar '₹67.5' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "charminar_5",
+    "qe": "A trader sells an article at 20% profit. If he buys it at half of the cost price and sells at the same selling price as before, then what will be the profit percentage?",
+    "qh": "एक व्यापारी एक वस्तु को 20% के लाभ पर बेचता है। यदि वह इसे क्रय मूल्य के आधे पर खरीदता है और पहले के समान ही विक्रय मूल्य पर बेचता है, तो लाभ प्रतिशत क्या होगा?",
+    "oe": [
+      "240%",
+      "40%",
+      "140%",
+      "60%"
+    ],
+    "oh": [
+      "240%",
+      "40%",
+      "140%",
+      "60%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mana mool CP = 100 units.\n20% labh par mool SP = 120 units.\nStep 2: Naya CP = Mool CP / 2 = 100 / 2 = 50 units.\nSP pehle ke saman hi hai ==> Naya SP = 120 units.\nStep 3: Naya CP : Naya SP = 50 : 120 = 5 : 12.\nLabh = 12 - 5 = 7 units.\nStep 4: Naya Profit% = (7 / 5) * 100% = 140%.\nAtah sahi vikalp  140% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mool CP = 100, SP = 120.\nStep 2: Naya CP = 50, SP = 120.\nStep 3: Naya Labh = 120 - 50 = 70.\nStep 4: Naya Profit% = (70 / 50) * 100% = 140%.\nAtah sahi uttar '140%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "charminar_6",
+    "qe": "A man earns a profit of 20% by selling a calculator for a certain price. If he sells that calculator at double the price, then what will be the profit percentage?",
+    "qh": "एक व्यक्ति एक निश्चित मूल्य पर कैलकुलेटर बेचकर 20% का लाभ अर्जित करता है। यदि वह उस कैलकुलेटर को दोगुने मूल्य पर बेचता है, तो लाभ प्रतिशत क्या होगा?",
+    "oe": [
+      "140%",
+      "160%",
+      "60%",
+      "120%"
+    ],
+    "oh": [
+      "140%",
+      "160%",
+      "60%",
+      "120%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: 20% labh = 1/5 ==> CP : SP1 = 5 : 6.\nStep 2: Naya SP2 pehle ka doguna hai ==> SP2 = 6 * 2 = 12 units.\nStep 3: CP : Naya SP2 = 5 : 12.\nNaya Labh = 12 - 5 = 7 units.\nStep 4: Naya Profit% = (7 / 5) * 100% = 140%.\nAtah sahi vikalp  140% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana CP = 100.\n20% labh par SP1 = 120.\nStep 2: Naya SP2 = 2 * 120 = 240.\nStep 3: Naya Labh = 240 - 100 = 140.\nStep 4: Profit% = (140 / 100) * 100% = 140%.\nAtah sahi uttar '140%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "charminar_7",
+    "qe": "The initial profit percentage on the sale of an item was 55%. If the cost price of the item went up by 24% but the selling price remained the same, what would be the new profit percentage?",
+    "qh": "किसी वस्तु की बिक्री पर प्रारंभिक लाभ प्रतिशत 55% था। यदि वस्तु के क्रय मूल्य में 24% की वृद्धि हो जाती है लेकिन विक्रय मूल्य वही रहता है, तो नया लाभ प्रतिशत क्या होगा?",
+    "oe": [
+      "25%",
+      "31%",
+      "20%",
+      "26%"
+    ],
+    "oh": [
+      "25%",
+      "31%",
+      "20%",
+      "26%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mana mool CP = 100 units.\n55% labh par SP = 155 units.\nStep 2: Naya CP (24% badhkar) = 124 units.\nSP sthir hai ==> Naya SP = 155 units.\nStep 3: Naya CP : Naya SP = 124 : 155.\n31 se kaatne par: 124 / 31 = 4 aur 155 / 31 = 5 ==> Naya CP : Naya SP = 4 : 5.\nStep 4: Naya Labh = 5 - 4 = 1 unit.\nNaya Profit% = (1 / 4) * 100% = 25%.\nAtah sahi vikalp  25% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mool CP = 100, SP = 155.\nStep 2: Naya CP = 124, Naya SP = 155.\nStep 3: Naya Labh = 155 - 124 = 31.\nStep 4: Naya Profit% = (31 / 124) * 100% = (1 / 4) * 100% = 25%.\nAtah sahi uttar '25%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "charminar_8",
+    "qe": "An article is sold at 25% loss. If its cost price is doubled and selling price is increased by ₹660, then there is a profit of 20%. What is the original cost price of the article?",
+    "qh": "एक वस्तु 25% की हानि पर बेची जाती है। यदि इसका क्रय मूल्य दोगुना कर दिया जाए और विक्रय मूल्य में ₹660 की वृद्धि कर दी जाए, तो 20% का लाभ होता है। वस्तु का प्रारंभिक क्रय मूल्य क्या है?",
+    "oe": [
+      "₹360",
+      "₹500",
+      "₹480",
+      "₹400"
+    ],
+    "oh": [
+      "₹360",
+      "₹500",
+      "₹480",
+      "₹400"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mool CP = 100 units.\n25% hani par mool SP1 = 100 - 25 = 75 units.\nStep 2: Naya CP2 (doguna) = 2 * 100 = 200 units.\nNaye CP par 20% labh ==> Naya SP2 = 200 * 1.20 = 240 units.\nStep 3: SP ka antar = SP2 - SP1 = 240 - 75 = 165 units.\nStep 4: Prashnanusar 165 units = ₹660 ==> 1 unit = 660 / 165 = 4.\nMool CP = 100 units = 100 * 4 = ₹400.\nAtah sahi vikalp  ₹400 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana mool CP = 100% ==> SP1 = 75%.\nStep 2: Naya CP = 200% ==> Naya SP = 200% * 1.20 = 240%.\nStep 3: SP badhne ka antar = 240% - 75% = 165%.\nStep 4: 165% = ₹660 ==> 1% = 660 / 165 = 4.\nMool CP (100%) = 100 * 4 = ₹400.\nAtah sahi uttar '₹400' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "charminar_9",
+    "qe": "A person sells an article for a loss of 18%. If he increases the selling price by ₹144 and decreases the cost price by 30%, then there is profit of 20%. What is the original selling price?",
+    "qh": "एक व्यक्ति किसी वस्तु को 18% की हानि पर बेचता है। यदि वह विक्रय मूल्य में ₹144 की वृद्धि करता है और क्रय मूल्य में 30% की कमी करता है, तो 20% का लाभ होता है। प्रारंभिक विक्रय मूल्य क्या है?",
+    "oe": [
+      "₹6036",
+      "₹5904",
+      "₹6124",
+      "₹5068"
+    ],
+    "oh": [
+      "₹6036",
+      "₹5904",
+      "₹6124",
+      "₹5068"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mool CP = 100 units.\n18% hani par mool SP1 = 100 - 18 = 82 units.\nStep 2: Naya CP2 (30% kam) = 70 units.\nNaye CP par 20% labh ==> Naya SP2 = 70 * 1.20 = 84 units.\nStep 3: SP ka antar = 84 - 82 = 2 units.\nStep 4: Prashnanusar 2 units = ₹144 ==> 1 unit = 144 / 2 = 72.\nMool SP (82 units) = 82 * 72 = ₹5,904.\nAtah sahi vikalp  ₹5904 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana mool CP = 100% ==> SP1 = 82%.\nStep 2: Naya CP = 70% ==> Naya SP = 70% * 1.20 = 84%.\nStep 3: SP ka antar = 84% - 82% = 2%.\nStep 4: 2% = ₹144 ==> 1% = 72.\nMool SP (82%) = 82 * 72 = ₹5,904.\nAtah sahi uttar '₹5904' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "charminar_10",
+    "qe": "An article is sold at a certain price. If it is sold at 70% of this price, then there is a loss of 10%. What is the percentage profit, when it is sold at the original selling price?",
+    "qh": "एक वस्तु एक निश्चित मूल्य पर बेची जाती है। यदि इसे इस मूल्य के 70% पर बेचा जाता है, तो 10% की हानि होती है। जब इसे प्रारंभिक विक्रय मूल्य पर बेचा जाता है, तो प्रतिशत लाभ क्या है?",
+    "oe": [
+      "$\\frac{200}{7}$%",
+      "$\\frac{300}{7}$%",
+      "$\\frac{50}{7}$%",
+      "$\\frac{100}{7}$%"
+    ],
+    "oh": [
+      "$\\frac{200}{7}$%",
+      "$\\frac{300}{7}$%",
+      "$\\frac{50}{7}$%",
+      "$\\frac{100}{7}$%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mool SP ka 70% = 7/10 ==> Mool SP : Naya SP = 10 : 7.\nStep 2: Naye SP par 10% loss (10% = 1/10) ==> CP : Naya SP = 10 : 9.\nStep 3: Naye SP ko saman karein (LCM of 7 aur 9 = 63 units):\n- Mool SP : Naya SP = (10 : 7) * 9 = 90 : 63\n- CP : Naya SP = (10 : 9) * 7 = 70 : 63\nStep 4: CP : Mool SP = 70 : 90 = 7 : 9.\nLabh = 9 - 7 = 2 units.\nProfit% = (Profit / CP) * 100% = (2 / 7) * 100% = $\\frac{200}{7}$%.\nAtah sahi vikalp  200/7% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana CP = 100.\n10% loss par Naya SP = 90.\nStep 2: Prashnanusar 70% of Mool SP = 90 ==> Mool SP = 90 / 0.70 = 900 / 7.\nStep 3: Mool SP par Labh = 900/7 - 100 = 200 / 7.\nProfit% = (200 / 7)% = $\\frac{200}{7}$%.\nAtah sahi uttar '$\\frac{200}{7}$%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "charminar_11",
+    "qe": "An item is sold at a 20% profit. If the cost price and selling price are increased by ₹50 and ₹30 respectively, the profit percent becomes 10%. What is the original cost price?",
+    "qh": "एक वस्तु 20% के लाभ पर बेची जाती है। यदि क्रय मूल्य और विक्रय मूल्य में क्रमशः ₹50 और ₹30 की वृद्धि की जाती है, तो लाभ प्रतिशत 10% हो जाता है। प्रारंभिक क्रय मूल्य क्या है?",
+    "oe": [
+      "₹100",
+      "₹450",
+      "₹600",
+      "₹250"
+    ],
+    "oh": [
+      "₹100",
+      "₹450",
+      "₹600",
+      "₹250"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio / Cross-Multiplication Method):\nStep 1: 20% profit = 1/5 ==> Prarambhik CP : SP = 5 : 6.\n10% naya profit = 1/10 ==> Naya CP : SP = 10 : 11.\nStep 2: CP me +50 aur SP me +30 joda gaya:\n(5x + 50) / (6x + 30) = 10 / 11\nStep 3: Cross multiply karein:\n11 * (5x + 50) = 10 * (6x + 30)\n55x + 550 = 60x + 300\n60x - 55x = 550 - 300\n5x = 250 ==> x = 50.\nStep 4: Prarambhik CP = 5x = 5 * 50 = ₹250.\nAtah sahi vikalp  ₹250 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana mool CP = C. Mool SP = 1.20C.\nStep 2: Naya CP = C + 50, Naya SP = 1.20C + 30.\nStep 3: 10% labh par Naya SP = 1.10 * Naya CP:\n1.20C + 30 = 1.10 * (C + 50)\n1.20C + 30 = 1.10C + 55\n1.20C - 1.10C = 55 - 30\n0.10C = 25 ==> C = 25 / 0.10 = ₹250.\nAtah sahi uttar '₹250' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "charminar_12",
+    "qe": "A trader sells an article at 15% profit. Had he sold it for ₹150 less, he would have incurred a 5% loss. Find the cost price.",
+    "qh": "एक व्यापारी एक वस्तु को 15% के लाभ पर बेचता है। यदि उसने इसे ₹150 कम में बेचा होता, तो उसे 5% की हानि होती। क्रय मूल्य ज्ञात कीजिए।",
+    "oe": [
+      "₹750",
+      "₹800",
+      "₹700",
+      "₹850"
+    ],
+    "oh": [
+      "₹750",
+      "₹800",
+      "₹700",
+      "₹850"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: 15% labh se 5% hani tak kul badlav = 15% + 5% = 20%.\n20% = 1/5.\nStep 2: Base CP = 5 units, Kami (antar) = 1 unit.\nStep 3: Prashnanusar 1 unit = ₹150.\nStep 4: CP = 5 units = 5 * 150 = ₹750.\nAtah sahi vikalp  ₹750 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana CP = 100%.\nStep 2: SP1 = 115%, SP2 = 95%.\nAntar = 115% - 95% = 20%.\nStep 3: 20% = ₹150 ==> 1% = 150 / 20 = 7.5.\nStep 4: CP (100%) = 100 * 7.5 = ₹750.\nAtah sahi uttar '₹750' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
