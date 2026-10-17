@@ -1,0 +1,724 @@
+[
+  {
+    "p_id": "type4successive_1",
+    "qe": "Aman's salary was increased by 40%. After some time, his new salary was also increased by 40%. Find his overall percentage gain in salary.",
+    "qh": "अमन के वेतन में 40% की वृद्धि की गई। कुछ समय बाद उसके नए वेतन में भी 40% की वृद्धि की गई। उसके वेतन में कुल कितने प्रतिशत का लाभ हुआ?",
+    "oe": [
+      "80%",
+      "96%",
+      "84%",
+      "92%"
+    ],
+    "oh": [
+      "80%",
+      "96%",
+      "84%",
+      "92%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Successive Formula):\nFormula: $a + b + \\frac{ab}{100}$\nYahan $a = +40\\%$ aur $b = +40\\%$:\n$= 40 + 40 + \\frac{40 \\times 40}{100} = 80 + 16 = 96\\%$.\nAtah sahi vikalp  96% hai.\n\nMethod 2 (Ratio Method):\n$40\\% = \\frac{2}{5} \\implies$ Har baar salary $5$ se badhkar $7$ ho rahi hai.\nInitial Salary : Final Salary $= (5 \\times 5) : (7 \\times 7) = 25 : 49$.\nNet increase $= 49 - 25 = 24$ units (25 ke base par).\nPercentage gain $= \\frac{24}{25} \\times 100\\% = 96\\%$.\nAtah sahi uttar '96%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_2",
+    "qe": "The salary of a technician is increased by 20% and then the increased salary is reduced by 20%. The percentage loss in the salary of the technician is:",
+    "qh": "एक तकनीशियन के वेतन में 20% की वृद्धि की जाती है और फिर बढ़े हुए वेतन में 20% की कमी की जाती है। तकनीशियन के वेतन में प्रतिशत हानि क्या है?",
+    "oe": [
+      "2%",
+      "4%",
+      "5%",
+      "1%"
+    ],
+    "oh": [
+      "2%",
+      "4%",
+      "5%",
+      "1%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Shortcut for Equal Change):\nJab kisi value ko pehle $x\\%$ badhayein aur fir $x\\%$ ghatayein, toh hamesha loss hota hai:\n$\\text{Loss}\\% = \\frac{x^2}{100} = \\frac{20^2}{100} = \\frac{400}{100} = 4\\%$.\nAtah sahi vikalp  4% hai.\n\nMethod 2 (Ratio Method):\nIncrease: $20\\% = \\frac{1}{5} \\implies 5 : 6$.\nDecrease: $20\\% = \\frac{1}{5} \\implies 5 : 4$.\nInitial : Final $= (5 \\times 5) : (6 \\times 4) = 25 : 24$.\nLoss $= 25 - 24 = 1$ unit.\nPercentage loss $= \\frac{1}{25} \\times 100\\% = 4\\%$.\nAtah sahi uttar '4%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_3",
+    "qe": "The price of a jacket is increased by 25% and then again increased by 20%. What is the net percentage increase in price?",
+    "qh": "एक जैकेट के मूल्य में 25% की वृद्धि की जाती है और फिर से 20% की वृद्धि की जाती है। मूल्य में कुल कितने प्रतिशत की वृद्धि हुई?",
+    "oe": [
+      "45%",
+      "48%",
+      "50%",
+      "52%"
+    ],
+    "oh": [
+      "45%",
+      "48%",
+      "50%",
+      "52%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Successive Formula):\nFormula: $a + b + \\frac{ab}{100}$\nYahan $a = +25\\%$ aur $b = +20\\%$:\n$= 25 + 20 + \\frac{25 \\times 20}{100} = 45 + 5 = 50\\%$.\nAtah sahi vikalp  50% hai.\n\nMethod 2 (Ratio Method):\n$25\\% = \\frac{1}{4} \\implies 4 : 5$.\n$20\\% = \\frac{1}{5} \\implies 5 : 6$.\nInitial : Final $= (4 \\times 5) : (5 \\times 6) = 4 : 6 = 2 : 3$.\nIncrease $= 3 - 2 = 1$ unit (2 ke base par).\nPercentage increase $= \\frac{1}{2} \\times 100\\% = 50\\%$.\nAtah sahi uttar '50%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_4",
+    "qe": "A number was mistakenly increased by 30% instead of being decreased by 10%. By what percent is the final result more than the correct value?",
+    "qh": "एक संख्या में 10% की कमी करने के बजाय गलती से 30% की वृद्धि कर दी गई। अंतिम परिणाम सही मान से कितने प्रतिशत अधिक है?",
+    "oe": [
+      "40.00%",
+      "44.44%",
+      "42.50%",
+      "45.25%"
+    ],
+    "oh": [
+      "40.00%",
+      "44.44%",
+      "42.50%",
+      "45.25%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nOriginal number ko $100$ maan lo.\nCorrect value $= 100 - 10 = 90$.\nIncorrect obtained value $= 100 + 30 = 130$.\nDifference $= 130 - 90 = 40$.\nCorrect value (90) ke base par percentage excess:\n$= \\frac{40}{90} \\times 100\\% = \\frac{4}{9} \\times 100\\% = 44.44\\%$.\nAtah sahi vikalp  44.44% hai.\n\nMethod 2 (Ratio Method):\nCorrect ratio $= \\frac{9}{10}$, Obtained ratio $= \\frac{13}{10}$.\nCorrect : Obtained $= 9 : 13$.\nExcess $= 13 - 9 = 4$ units on base 9.\nPercentage excess $= \\frac{4}{9} = 44.44\\%$.\nAtah sahi uttar '44.44%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_5",
+    "qe": "In an organization, all employees get equal wages. If the number of employees is increased by 25% and their wages per head are decreased by 12%, what is the percentage change in total wages?",
+    "qh": "एक संस्था में सभी कर्मचारियों को समान मजदूरी मिलती है। यदि कर्मचारियों की संख्या में 25% की वृद्धि की जाती है और प्रति व्यक्ति मजदूरी में 12% की कमी की जाती है, तो कुल मजदूरी में प्रतिशत परिवर्तन क्या है?",
+    "oe": [
+      "8% increase",
+      "10% increase",
+      "12% increase",
+      "10% decrease"
+    ],
+    "oh": [
+      "8% increase",
+      "10% increase",
+      "12% increase",
+      "10% decrease"
+    ],
+    "a": 1,
+    "e": "Method 1 (Successive Formula):\n$\\text{Total Wages} = \\text{Employees} \\times \\text{Wages per head}$.\nFormula: $a + b + \\frac{ab}{100}$\nYahan $a = +25\\%$ aur $b = -12\\%$:\n$= 25 - 12 + \\frac{25 \\times (-12)}{100} = 13 - 3 = +10\\%$ (10% increase).\nAtah sahi vikalp  10% increase hai.\n\nMethod 2 (Ratio Method):\nEmployees: $25\\% = \\frac{1}{4} \\implies 4 : 5$.\nWages: $12\\% = \\frac{3}{25} \\implies 25 : 22$.\nTotal Wages $= (4 \\times 25) : (5 \\times 22) = 100 : 110$.\nIncrease $= 110 - 100 = 10\\%$ increase.\nAtah sahi uttar '10% increase' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_6",
+    "qe": "If the price of an article increases successively by 20% and 15%, respectively, then what is the single percentage price increase equivalent to these two increases?",
+    "qh": "यदि किसी वस्तु के मूल्य में क्रमशः 20% और 15% की क्रमिक वृद्धि होती है, तो इन दोनों वृद्धियों के समतुल्य एकल प्रतिशत मूल्य वृद्धि क्या है?",
+    "oe": [
+      "35%",
+      "36%",
+      "38%",
+      "40%"
+    ],
+    "oh": [
+      "35%",
+      "36%",
+      "38%",
+      "40%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Successive Formula):\nNet Change $= a + b + \\frac{ab}{100}$\nYahan $a = 20\\%$ aur $b = 15\\%$:\n$= 20 + 15 + \\frac{20 \\times 15}{100} = 35 + 3 = 38\\%$.\nAtah sahi vikalp  38% hai.\n\nMethod 2 (Ratio Method):\n$20\\% = \\frac{1}{5} \\implies 5 : 6$.\n$15\\% = \\frac{3}{20} \\implies 20 : 23$.\nInitial : Final $= (5 \\times 20) : (6 \\times 23) = 100 : 138$.\nDirect 100 par increase $= 138 - 100 = 38\\%$.\nAtah sahi uttar '38%' hai.\n\nIs prashn ka moolaadhaar pratishat ka hisaab hai. She sh vikalp 35%, 36%, 40% is hisaab se nahi milte. Exam point: pratishat ka hisaab - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type4successive_7",
+    "qe": "The population of a city first decreased by 15% due to an epidemic. The next year, the population increased by 20% due to better healthcare facilities. What is the net percentage change in the population?",
+    "qh": "एक महामारी के कारण एक शहर की जनसंख्या में पहले 15% की कमी आई। अगले वर्ष, बेहतर स्वास्थ्य सुविधाओं के कारण जनसंख्या में 20% की वृद्धि हुई। जनसंख्या में शुद्ध प्रतिशत परिवर्तन क्या है?",
+    "oe": [
+      "2% increase",
+      "5% increase",
+      "2% decrease",
+      "4% decrease"
+    ],
+    "oh": [
+      "2% increase",
+      "5% increase",
+      "2% decrease",
+      "4% decrease"
+    ],
+    "a": 0,
+    "e": "Method 1 (Successive Formula):\nFormula: $a + b + \\frac{ab}{100}$\nYahan $a = -15\\%$ aur $b = +20\\%$:\n$= -15 + 20 + \\frac{(-15) \\times 20}{100} = 5 - 3 = +2\\%$ (2% increase).\nAtah sahi vikalp  2% increase hai.\n\nMethod 2 (Ratio Method):\nDecrease: $15\\% = \\frac{3}{20} \\implies 20 : 17$.\nIncrease: $20\\% = \\frac{1}{5} \\implies 5 : 6$.\nInitial : Final $= (20 \\times 5) : (17 \\times 6) = 100 : 102$.\nNet change $= 102 - 100 = 2\\%$ increase.\nAtah sahi uttar '2% increase' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_8",
+    "qe": "The price of a watch is first increased by 30% and then decreased by 40% due to clearance sale. Find the net percentage change in the final price of the watch.",
+    "qh": "एक घड़ी के मूल्य में पहले 30% की वृद्धि की जाती है और फिर क्लीयरेंस सेल के कारण 40% की कमी की जाती है। घड़ी के अंतिम मूल्य में शुद्ध प्रतिशत परिवर्तन ज्ञात कीजिए।",
+    "oe": [
+      "-18%",
+      "-22%",
+      "+18%",
+      "-10%"
+    ],
+    "oh": [
+      "-18%",
+      "-22%",
+      "+18%",
+      "-10%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Successive Formula):\nFormula: $a + b + \\frac{ab}{100}$\nYahan $a = +30\\%$ aur $b = -40\\%$:\n$= 30 - 40 + \\frac{30 \\times (-40)}{100} = -10 - 12 = -22\\%$ (22% decrease).\nAtah sahi vikalp  -22% hai.\n\nMethod 2 (100-Base Method):\nInitial price $= 100$.\nPehle $30\\%$ badha $\\implies 100 + 30 = 130$.\nAb $130$ par $40\\%$ kami $= 130 - 52 = 78$.\nNet change over base $100 = 78 - 100 = -22\\%$.\nAtah sahi uttar '-22%' hai.\n\nIs prashn ka moolaadhaar pratishat ka hisaab hai. Vikalp -18%, +18%, -10% is hal se mel nahi khaate. Exam point: pratishat ka hisaab - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type4successive_9",
+    "qe": "A number is first decreased by 15% and the resulting number is then increased by 20%. What is the overall percentage change in the original number?",
+    "qh": "एक संख्या में पहले 15% की कमी की जाती है और परिणामी संख्या में फिर 20% की वृद्धि की जाती है। मूल संख्या में कुल कितने प्रतिशत का परिवर्तन हुआ?",
+    "oe": [
+      "Increase by 2%",
+      "Decrease by 2%",
+      "Increase by 5%",
+      "Decrease by 3.5%"
+    ],
+    "oh": [
+      "Increase by 2%",
+      "Decrease by 2%",
+      "Increase by 5%",
+      "Decrease by 3.5%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Successive Formula):\nFormula: $a + b + \\frac{ab}{100}$\nYahan $a = -15\\%$ aur $b = +20\\%$:\n$= -15 + 20 + \\frac{(-15) \\times 20}{100} = 5 - 3 = +2\\%$ (Increase by 2%).\nAtah sahi vikalp  Increase by 2% hai.\n\nMethod 2 (Ratio Method):\nDecrease: $15\\% = \\frac{3}{20} \\implies 20 : 17$.\nIncrease: $20\\% = \\frac{1}{5} \\implies 5 : 6$.\nInitial : Final $= (20 \\times 5) : (17 \\times 6) = 100 : 102$.\nOverall change $= 102 - 100 = +2\\%$ (Increase by 2%).\nAtah sahi uttar 'Increase by 2%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_10",
+    "qe": "The price of a product increases by 15% in the first year and 20% in the second year. What is the overall percentage increase in the price of the product over the two years?",
+    "qh": "एक वस्तु के मूल्य में पहले वर्ष में 15% और दूसरे वर्ष में 20% की वृद्धि होती है। दो वर्षों में वस्तु के मूल्य में कुल कितने प्रतिशत की वृद्धि होगी?",
+    "oe": [
+      "35%",
+      "38%",
+      "36%",
+      "40%"
+    ],
+    "oh": [
+      "35%",
+      "38%",
+      "36%",
+      "40%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Successive Formula):\nNet Increase $= a + b + \\frac{ab}{100}$\nYahan $a = 15\\%$ aur $b = 20\\%$:\n$= 15 + 20 + \\frac{15 \\times 20}{100} = 35 + 3 = 38\\%$.\nAtah sahi vikalp  38% hai.\n\nMethod 2 (Ratio Method):\nYear 1: $15\\% = \\frac{3}{20} \\implies 20 : 23$.\nYear 2: $20\\% = \\frac{1}{5} \\implies 5 : 6$.\nInitial : Final $= (20 \\times 5) : (23 \\times 6) = 100 : 138$.\nTotal increase $= 138 - 100 = 38\\%$.\nAtah sahi uttar '38%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_11",
+    "qe": "The price of an electric bicycle increases successively by 10%, 15%, and 20%. What is the total percentage increase in the price of the bicycle?",
+    "qh": "एक इलेक्ट्रिक साइकिल के मूल्य में क्रमशः 10%, 15% और 20% की क्रमिक वृद्धि होती है। साइकिल के मूल्य में कुल कितने प्रतिशत की वृद्धि हुई?",
+    "oe": [
+      "48.5%",
+      "51.8%",
+      "50.4%",
+      "52.2%"
+    ],
+    "oh": [
+      "48.5%",
+      "51.8%",
+      "50.4%",
+      "52.2%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\n$10\\% = \\frac{1}{10} \\implies 10 : 11$.\n$15\\% = \\frac{3}{20} \\implies 20 : 23$.\n$20\\% = \\frac{1}{5} \\implies 5 : 6$.\nInitial Price : Final Price $= (10 \\times 20 \\times 5) : (11 \\times 23 \\times 6) = 1000 : 1518$.\nNet increase $= 1518 - 1000 = 518$ units.\nPercentage increase $= \\frac{518}{1000} \\times 100\\% = 51.8\\%$.\nAtah sahi vikalp  51.8% hai.\n\nMethod 2 (Successive Formula Step-by-Step):\nPehle do changes ($10\\%$ aur $15\\%$) ka net:\n$= 10 + 15 + \\frac{10 \\times 15}{100} = 26.5\\%$.\nAb $26.5\\%$ aur teesre change ($20\\%$) ka net:\n$= 26.5 + 20 + \\frac{26.5 \\times 20}{100} = 46.5 + 5.3 = 51.8\\%$.\nAtah sahi uttar '51.8%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_12",
+    "qe": "Instead of increasing a number successively by 10% and 20%, it is mistakenly decreased by 15%. The resultant value obtained is what percentage of the required correct value?",
+    "qh": "किसी संख्या में क्रमशः 10% और 20% की क्रमिक वृद्धि करने के बजाय, इसे गलती से 15% घटा दिया जाता है। प्राप्त परिणामी मान आवश्यक सही मान का कितना प्रतिशत है?",
+    "oe": [
+      "62.5%",
+      "64.39%",
+      "65.0%",
+      "66.67%"
+    ],
+    "oh": [
+      "62.5%",
+      "64.39%",
+      "65.0%",
+      "66.67%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nOriginal number ko $100$ maan lo.\nCorrect value: $10\\%$ aur $20\\%$ badhne ke baad:\n$= 10 + 20 + \\frac{10 \\times 20}{100} = 32\\% \\implies \\text{Correct Value} = 132$.\nIncorrect value: $15\\%$ ghatne ke baad $= 100 - 15 = 85$.\nPercentage of correct value $= \\frac{85}{132} \\times 100\\% \\approx 64.39\\%$.\nAtah sahi vikalp  64.39% hai.\n\nMethod 2 (Ratio Method):\nCorrect multiplier $= \\frac{132}{100}$, Incorrect multiplier $= \\frac{85}{100}$.\nRatio $= \\frac{85}{132}$.\nPercentage $= \\frac{85}{132} \\times 100\\% \\approx 64.39\\%$.\nAtah sahi uttar '64.39%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_13",
+    "qe": "The price of a machine increases and decreases in alternate years by 20%. It started with an increase in 2021. What is the overall percentage change in the price of the machine in 2024 as compared to 2021?",
+    "qh": "एक मशीन के मूल्य में प्रत्येक एकांतर वर्ष में 20% की वृद्धि और कमी होती है। इसकी शुरुआत 2021 में वृद्धि के साथ हुई थी। 2021 की तुलना में 2024 में मशीन के मूल्य में कुल कितने प्रतिशत का परिवर्तन हुआ?",
+    "oe": [
+      "15.2% increase",
+      "15.2% decrease",
+      "12.5% increase",
+      "12.5% decrease"
+    ],
+    "oh": [
+      "15.2% increase",
+      "15.2% decrease",
+      "12.5% increase",
+      "12.5% decrease"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nTotal 3 saal ka badlav (2021-22: +20%, 2022-23: -20%, 2023-24: +20%):\nInitial : Final $= (5 \\times 5 \\times 5) : (6 \\times 4 \\times 6) = 125 : 144$.\nIncrease $= 144 - 125 = 19$ units (125 par).\nPercentage change $= \\frac{19}{125} \\times 100\\% = 15.2\\%$ increase.\nAtah sahi vikalp  15.2% increase hai.\n\nMethod 2 (100-Base Method):\nInitial price $= 100$.\nYear 1: $100 + 20\\% = 120$.\nYear 2: $120 - 20\\% = 96$.\nYear 3: $96 + 20\\% = 115.2$.\nNet change $= 115.2 - 100 = +15.2\\%$ increase.\nAtah sahi uttar '15.2% increase' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_14",
+    "qe": "Two successive percentage decreases of 20% each is by what percentage less than two successive percentage increases of 20% each?",
+    "qh": "प्रत्येक 20% की दो क्रमिक प्रतिशत कमियां, प्रत्येक 20% की दो क्रमिक प्रतिशत वृद्धियों से कितने प्रतिशत कम हैं?",
+    "oe": [
+      "50.00%",
+      "55.56%",
+      "44.44%",
+      "52.50%"
+    ],
+    "oh": [
+      "50.00%",
+      "55.56%",
+      "44.44%",
+      "52.50%"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nInitial base $= 100$.\n1. Two successive increases of $20\\% \\implies 100 + 44 = 144$.\n2. Two successive decreases of $20\\% \\implies 100 - 36 = 64$.\nDifference $= 144 - 64 = 80$.\nPercentage reduction (comparing with increased value 144):\n$= \\frac{80}{144} \\times 100\\% = \\frac{5}{9} \\times 100\\% = 55.56\\%$.\nAtah sahi vikalp  55.56% hai.\n\nMethod 2 (Ratio Method):\nRatio $= 144 : 64 = 9 : 4$.\nKami $= 9 - 4 = 5$ units (base 9 par).\nPercentage less $= \\frac{5}{9} \\times 100\\% = 55.56\\%$.\nAtah sahi uttar '55.56%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_15",
+    "qe": "After two successive equal percentage increments, a person's salary became 144% of the original salary. What was the percentage of each increment?",
+    "qh": "दो समान क्रमिक प्रतिशत वृद्धियों के बाद, एक व्यक्ति का वेतन मूल वेतन का 144% हो गया। प्रत्येक वृद्धि का प्रतिशत क्या था?",
+    "oe": [
+      "18%",
+      "20%",
+      "22%",
+      "24%"
+    ],
+    "oh": [
+      "18%",
+      "20%",
+      "22%",
+      "24%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nInitial Salary : Final Salary $= 100 : 144$.\nSingle step ratio $= \\sqrt{100} : \\sqrt{144} = 10 : 12 = 5 : 6$.\nIncrease per step $= 6 - 5 = 1$ unit (5 par).\nPercentage of each increment $= \\frac{1}{5} \\times 100\\% = 20\\%$.\nAtah sahi vikalp  20% hai.\n\nMethod 2 (Successive Check Method):\nAgar each increment $x = 20\\%$:\nNet change $= 20 + 20 + \\frac{20 \\times 20}{100} = 44\\%$.\nSalary $100\\% + 44\\% = 144\\%$ ho jayegi, jo data se match karta hai.\nAtah sahi uttar '20%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_16",
+    "qe": "An investor invested ₹3,00,000 in shares. The shares rose by 20% on the first day, fell by 10% on the second day, and then fell by 5% on the third day. What is the net percentage change in the value of the investor's shares?",
+    "qh": "एक निवेशक ने शेयरों में ₹3,00,000 का निवेश किया। पहले दिन शेयरों में 20% की वृद्धि हुई, दूसरे दिन 10% की गिरावट आई और फिर तीसरे दिन 5% की गिरावट आई। निवेशक के शेयरों के मूल्य में कुल कितने प्रतिशत का परिवर्तन हुआ?",
+    "oe": [
+      "2.6% increase",
+      "2.6% decrease",
+      "3.2% increase",
+      "3.2% decrease"
+    ],
+    "oh": [
+      "2.6% increase",
+      "2.6% decrease",
+      "3.2% increase",
+      "3.2% decrease"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nDay 1 (+20%): $5 : 6$\nDay 2 (-10%): $10 : 9$\nDay 3 (-5%): $20 : 19$\nInitial : Final $= (5 \\times 10 \\times 20) : (6 \\times 9 \\times 19) = 1000 : 1026$.\nNet change $= 1026 - 1000 = +26$ units.\nPercentage increase $= \\frac{26}{1000} \\times 100\\% = 2.6\\%$ increase.\nAtah sahi vikalp  2.6% increase hai.\n\nMethod 2 (100-Base Method):\nInitial value $= 100$.\nAfter Day 1: $120$.\nAfter Day 2: $120 - 12 = 108$.\nAfter Day 3: $108 - 5.4 = 102.6$.\nNet change $= 102.6 - 100 = +2.6\\%$ (2.6% increase).\nAtah sahi uttar '2.6% increase' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_17",
+    "qe": "If Rohan's salary was decreased by 40% and subsequently increased by 40%, then how much percent did he lose?",
+    "qh": "यदि रोहन के वेतन में 40% की कमी की गई और उसके बाद 40% की वृद्धि की गई, तो उसे कितने प्रतिशत का नुकसान हुआ?",
+    "oe": [
+      "12%",
+      "16%",
+      "20%",
+      "24%"
+    ],
+    "oh": [
+      "12%",
+      "16%",
+      "20%",
+      "24%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Equal Change Direct Shortcut):\nJab kisi value ko pehle $x\\%$ ghataya jaye aur fir $x\\%$ badhaya jaye, toh hamesha loss hota hai:\n$\\text{Loss}\\% = \\frac{x^2}{100} = \\frac{40^2}{100} = 16\\%$.\nAtah sahi vikalp  16% hai.\n\nMethod 2 (Ratio Method):\nDecrease: $5 : 3$, Increase: $5 : 7$.\nInitial : Final $= (5 \\times 5) : (3 \\times 7) = 25 : 21$.\nLoss $= 25 - 21 = 4$ units (25 ke base par).\nPercentage loss $= \\frac{4}{25} \\times 100\\% = 16\\%$.\nAtah sahi uttar '16%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_18",
+    "qe": "Two successive price increases of 30% and 30% of an article are equivalent to a single price increase of:",
+    "qh": "किसी वस्तु के मूल्य में 30% और 30% की दो क्रमिक वृद्धियां एकल मूल्य वृद्धि के कितने प्रतिशत के बराबर हैं?",
+    "oe": [
+      "60.00%",
+      "66.00%",
+      "69.00%",
+      "72.00%"
+    ],
+    "oh": [
+      "60.00%",
+      "66.00%",
+      "69.00%",
+      "72.00%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Successive Formula):\nNet Increase $= a + b + \\frac{ab}{100}$\nYahan $a = +30\\%$ aur $b = +30\\%$:\n$= 30 + 30 + \\frac{30 \\times 30}{100} = 60 + 9 = 69\\%$.\nAtah sahi vikalp  69.00% hai.\n\nMethod 2 (Ratio Method):\nInitial Price : Final Price $= (10 \\times 10) : (13 \\times 13) = 100 : 169$.\nBase 100 par net increase $= 169 - 100 = 69\\%$.\nAtah sahi uttar '69.00%' hai.\n\nYahan pratishat ka hisaab seedha lagta hai. Vikalp 60.00%, 66.00%, 72.00% is hal se mel nahi khaate. Exam point: pratishat ka hisaab - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type4successive_19",
+    "qe": "If the price of diesel increased by 9%, then by what percentage should the consumption be decreased by the consumer, if the expenditure on diesel remains unchanged?",
+    "qh": "यदि डीजल के मूल्य में 9% की वृद्धि होती है, तो उपभोक्ता द्वारा इसके उपभोग में कितने प्रतिशत की कमी की जानी चाहिए ताकि डीजल पर होने वाला खर्च अपरिवर्तित रहे?",
+    "oe": [
+      "8$\\frac{28}{109}$%",
+      "7$\\frac{25}{109}$%",
+      "8$\\frac{15}{109}$%",
+      "7$\\frac{32}{109}$%"
+    ],
+    "oh": [
+      "8$\\frac{28}{109}$%",
+      "7$\\frac{25}{109}$%",
+      "8$\\frac{15}{109}$%",
+      "7$\\frac{32}{109}$%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nPrice me increase $= 9\\% = \\frac{9}{100}$.\nInitial Price : New Price $= 100 : 109$.\nExpenditure constant rakhne ke liye consumption ratio $= 109 : 100$.\nConsumption me reduction $= 109 - 100 = 9$ units (109 ke base par).\nPercentage reduction $= \\frac{9}{109} \\times 100\\% = \\frac{900}{109}\\% = 8\\frac{28}{109}\\%$.\nAtah sahi vikalp  8 28/109% hai.\n\nMethod 2 (100-Base Method):\nInitial expenditure $= 100$.\nPrice $9\\%$ badhne ke baad new cost $= 109$.\nKharcha wapas 100 par laane ke liye kami $= 9$.\nNew base 109 par percentage reduction $= \\frac{9}{109} \\times 100\\% = 8\\frac{28}{109}\\%$.\nAtah sahi uttar '8$\\frac{28}{109}$%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_20",
+    "qe": "If the price of sugar is decreased by 20%, then by how much percentage consumption should be increased, so that the expenditure remains the same?",
+    "qh": "यदि चीनी के मूल्य में 20% की कमी होती है, तो उपभोग में कितने प्रतिशत की वृद्धि की जानी चाहिए ताकि खर्च समान रहे?",
+    "oe": [
+      "20%",
+      "25%",
+      "30%",
+      "33.33%"
+    ],
+    "oh": [
+      "20%",
+      "25%",
+      "30%",
+      "33.33%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nPrice decrease $= 20\\% = \\frac{1}{5}$.\nInitial Price : Reduced Price $= 5 : 4$.\nExpenditure constant rakhne ke liye consumption ratio $= 4 : 5$.\nConsumption me increase $= 5 - 4 = 1$ unit (4 ke base par).\nPercentage increase $= \\frac{1}{4} \\times 100\\% = 25\\%$.\nAtah sahi vikalp  25% hai.\n\nMethod 2 (100-Base Method):\nInitial expenditure $= 100$.\n$20\\%$ cut ke baad cost $= 80$.\nWapas 100 tak pahunchne ke liye required increase $= 100 - 80 = 20$.\nNew base 80 par percentage increase $= \\frac{20}{80} \\times 100\\% = 25\\%$.\nAtah sahi uttar '25%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_21",
+    "qe": "If the price of coffee is increased by 25%, by how what percentage must the consumption of coffee be decreased so as not to increase the expenditure?",
+    "qh": "यदि कॉफी के मूल्य में 25% की वृद्धि होती है, तो कॉफी के उपभोग में कितने प्रतिशत की कमी की जानी चाहिए ताकि खर्च में कोई वृद्धि न हो?",
+    "oe": [
+      "15%",
+      "20%",
+      "25%",
+      "16.66%"
+    ],
+    "oh": [
+      "15%",
+      "20%",
+      "25%",
+      "16.66%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nPrice increase $= 25\\% = \\frac{1}{4}$.\nPrice ratio $= 4 : 5$.\nExpenditure unaltered rakhne ke liye consumption ratio $= 5 : 4$.\nConsumption me kami $= 5 - 4 = 1$ unit (5 ke base par).\nPercentage decrease $= \\frac{1}{5} \\times 100\\% = 20\\%$.\nAtah sahi vikalp  20% hai.\n\nMethod 2 (100-Base Method):\nInitial expenditure $= 100$.\n$25\\%$ badhne ke baad new cost $= 125$.\nKharcha 100 rakhne ke liye reduction $= 125 - 100 = 25$.\n125 ke base par percentage decrease $= \\frac{25}{125} \\times 100\\% = 20\\%$.\nAtah sahi uttar '20%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_22",
+    "qe": "A project was estimated to be completed in 150 days. Due to heavy rainfall, only 75% of the days were productive. If the total work done on each productive day remains constant, by what percent must daily output be increased to complete the project on time?",
+    "qh": "एक परियोजना को 150 दिनों में पूरा करने का अनुमान लगाया गया था। भारी बारिश के कारण केवल 75% दिन ही उत्पादक रहे। यदि प्रत्येक उत्पादक दिन किया गया कार्य स्थिर रहता है, तो परियोजना को समय पर पूरा करने के लिए दैनिक उत्पादन में कितने प्रतिशत की वृद्धि की जानी चाहिए?",
+    "oe": [
+      "25%",
+      "30%",
+      "33.33%",
+      "35%"
+    ],
+    "oh": [
+      "25%",
+      "30%",
+      "33.33%",
+      "35%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nTotal Work $=$ Days $\\times$ Daily Output $=$ Constant.\nProductive days $= 75\\% = \\frac{3}{4}$ of scheduled days.\nDays ratio $= 4 : 3$.\nOutput ko inversely badhana hoga: Daily output ratio $= 3 : 4$.\nIncrease $= 4 - 3 = 1$ unit (3 ke base par).\nPercentage increase $= \\frac{1}{3} \\times 100\\% = 33.33\\%$.\nAtah sahi vikalp  33.33% hai.\n\nMethod 2 (100-Base Method):\nProductive capacity available $= 75\\%$.\nTarget capacity required $= 100\\%$.\nShortfall to cover $= 100 - 75 = 25$.\nAvailable base 75 par required increase $= \\frac{25}{75} \\times 100\\% = 33.33\\%$.\nAtah sahi uttar '33.33%' hai.\n\nExam point: bhoogol ke tathy - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_23",
+    "qe": "The cost of liquefied petroleum gas (LPG) per cylinder is increased by 60%. By what percentage must a family reduce its consumption of LPG so as not to increase its expenditure?",
+    "qh": "एलपीजी सिलेंडर के मूल्य में 60% की वृद्धि होती है। एक परिवार को एलपीजी के उपभोग में कितने प्रतिशत की कमी करनी चाहिए ताकि उसका खर्च न बढ़े?",
+    "oe": [
+      "35.0%",
+      "37.5%",
+      "40.0%",
+      "42.5%"
+    ],
+    "oh": [
+      "35.0%",
+      "37.5%",
+      "40.0%",
+      "42.5%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nCost increase $= 60\\% = \\frac{3}{5}$.\nPrice ratio $= 5 : 8$.\nExpenditure same rakhne ke liye consumption ratio $= 8 : 5$.\nConsumption me kami $= 8 - 5 = 3$ units (8 ke base par).\nPercentage reduction $= \\frac{3}{8} \\times 100\\% = 37.5\\%$.\nAtah sahi vikalp  37.5% hai.\n\nMethod 2 (100-Base Method):\nInitial expenditure $= 100$.\nPrice $60\\%$ badhne par $= 160$.\nKharcha 100 par wapas laane ke liye cut $= 160 - 100 = 60$.\n160 ke base par percentage cut $= \\frac{60}{160} \\times 100\\% = 37.5\\%$.\nAtah sahi uttar '37.5%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_24",
+    "qe": "If the price of an entry ticket increased by 15% and the sale of tickets also increased by 10%, then find the overall percentage change in revenue.",
+    "qh": "यदि प्रवेश टिकट के मूल्य में 15% की वृद्धि होती है और टिकटों की बिक्री में भी 10% की वृद्धि होती है, तो कुल राजस्व में प्रतिशत परिवर्तन ज्ञात कीजिए।",
+    "oe": [
+      "25.0%",
+      "26.5%",
+      "27.2%",
+      "28.0%"
+    ],
+    "oh": [
+      "25.0%",
+      "26.5%",
+      "27.2%",
+      "28.0%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Successive Formula):\n$\\text{Revenue} = \\text{Price} \\times \\text{Sale}$.\nNet Change $= a + b + \\frac{ab}{100}$\nYahan $a = +15\\%$ aur $b = +10\\%$:\n$= 15 + 10 + \\frac{15 \\times 10}{100} = 25 + 1.5 = 26.5\\%$.\nAtah sahi vikalp  26.5% hai.\n\nMethod 2 (Ratio Method):\nPrice: $20 : 23$, Sale: $10 : 11$.\nRevenue ratio $= (20 \\times 10) : (23 \\times 11) = 200 : 253 = 100 : 126.5$.\nNet increase $= 126.5 - 100 = 26.5\\%$.\nAtah sahi uttar '26.5%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_25",
+    "qe": "Monthly salary of Tanuj in the month of December 2021 was ₹32,000. Every year his salary increases by 10% from the month of January. What was his monthly salary (in ₹) in the month of February 2023?",
+    "qh": "दिसंबर 2021 के महीने में तनुज का मासिक वेतन ₹32,000 था। प्रत्येक वर्ष जनवरी माह से उसके वेतन में 10% की वृद्धि होती है। फरवरी 2023 के महीने में उसका मासिक वेतन (₹ में) क्या था?",
+    "oe": [
+      "38,400",
+      "38,720",
+      "39,200",
+      "39,600"
+    ],
+    "oh": [
+      "38,400",
+      "38,720",
+      "39,200",
+      "39,600"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nDecember 2021 se February 2023 tak do baar January aayega (January 2022 aur January 2023), yaani 2 baar successive hike lagegi.\n$10\\% = \\frac{1}{10} \\implies$ Multiplier $= \\frac{11}{10}$.\nSalary in Feb 2023 $= 32000 \\times \\frac{11}{10} \\times \\frac{11}{10} = 320 \\times 121 = ₹38720$.\nAtah sahi vikalp  38,720 hai.\n\nMethod 2 (100-Base Method):\n2 successive $10\\%$ hikes ka net effective hike $= 10 + 10 + \\frac{10 \\times 10}{100} = 21\\%$.\nFinal Salary $= 32000 + (21\\% \\text{ of } 32000) = 32000 + 6720 = ₹38720$.\nAtah sahi uttar '38,720' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_26",
+    "qe": "The population of a city increases every year at the rate of 10%. If the present population of the city is 25,000, what will be the population after 2 years?",
+    "qh": "एक शहर की जनसंख्या में प्रत्येक वर्ष 10% की दर से वृद्धि होती है। यदि शहर की वर्तमान जनसंख्या 25,000 है, तो 2 वर्ष बाद जनसंख्या क्या होगी?",
+    "oe": [
+      "30,000",
+      "30,250",
+      "30,500",
+      "31,000"
+    ],
+    "oh": [
+      "30,000",
+      "30,250",
+      "30,500",
+      "31,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\n$10\\% = \\frac{1}{10}$.\n2 saal baad ratio $= 10^2 : 11^2 = 100 : 121$.\nInitial base 100 units $= 25000 \\implies 1 \\text{ unit} = 250$.\nPopulation after 2 years $= 121 \\times 250 = 30250$.\nAtah sahi vikalp  30,250 hai.\n\nMethod 2 (100-Base Method):\n2 saal ka net percentage increase $= 10 + 10 + \\frac{10 \\times 10}{100} = 21\\%$.\nPopulation after 2 years $= 25000 + (21\\% \\text{ of } 25000) = 25000 + 5250 = 30250$.\nAtah sahi uttar '30,250' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_27",
+    "qe": "A worker's salary was reduced by 10%, and then the reduced salary was increased by 10%. By what percentage is his new salary more or less as compared to his original salary?",
+    "qh": "एक कर्मचारी के वेतन में 10% की कमी की गई, और फिर घटे हुए वेतन में 10% की वृद्धि की गई। मूल वेतन की तुलना में उसका नया वेतन कितने प्रतिशत कम या अधिक है?",
+    "oe": [
+      "1% more",
+      "1% less",
+      "2% less",
+      "No change"
+    ],
+    "oh": [
+      "1% more",
+      "1% less",
+      "2% less",
+      "No change"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Shortcut):\nJab equal percentage decrease aur increase ho, toh hamesha loss hota hai:\n$\\text{Loss}\\% = \\frac{x^2}{100} = \\frac{10^2}{100} = 1\\%$ less.\nAtah sahi vikalp  1% less hai.\n\nMethod 2 (Ratio Method):\nInitial : Final $= (10 \\times 10) : (9 \\times 11) = 100 : 99$.\nNet change $= 99 - 100 = -1$ unit (1% less).\nAtah sahi uttar '1% less' hai.\n\nIs prashn ka moolaadhaar pratishat ka hisaab hai. Vikalp 1% more, 2% less, No change is hal se mel nahi khaate. Exam point: pratishat ka hisaab - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "type4successive_28",
+    "qe": "A worker gets an increase of 20% in his wage rate per hour, but there is a drop of 15% in the number of hours worked per week. If his original weekly wages for a week of 40 hours was ₹24,000, then what is the percentage change in his total weekly wages?",
+    "qh": "एक कर्मचारी की प्रति घंटे मजदूरी दर में 20% की वृद्धि होती है, लेकिन प्रति सप्ताह काम करने के घंटों में 15% की गिरावट आती है। यदि 40 घंटे के एक सप्ताह के लिए उसकी मूल साप्ताहिक मजदूरी ₹24,000 थी, तो उसकी कुल साप्ताहिक मजदूरी में प्रतिशत परिवर्तन क्या है?",
+    "oe": [
+      "2% increase",
+      "2% decrease",
+      "3% increase",
+      "4% increase"
+    ],
+    "oh": [
+      "2% increase",
+      "2% decrease",
+      "3% increase",
+      "4% increase"
+    ],
+    "a": 0,
+    "e": "Method 1 (Successive Formula):\n$\\text{Weekly Wages} = \\text{Hourly Rate} \\times \\text{Hours Worked}$.\nNet Change $= a + b + \\frac{ab}{100}$\nYahan $a = +20\\%$ aur $b = -15\\%$:\n$= 20 - 15 + \\frac{20 \\times (-15)}{100} = 5 - 3 = +2\\%$ (2% increase).\nAtah sahi vikalp  2% increase hai.\n\nMethod 2 (Ratio Method):\nHourly rate: $5 : 6$, Hours: $20 : 17$.\nTotal Wages ratio $= (5 \\times 20) : (6 \\times 17) = 100 : 102$.\nNet change $= 102 - 100 = +2\\%$ (2% increase).\nAtah sahi uttar '2% increase' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_29",
+    "qe": "When the price of an article was reduced by 10%, its sale increased by x%. If there is an increase of 17% in the receipt of revenue, then find the value of x.",
+    "qh": "जब किसी वस्तु के मूल्य में 10% की कमी की गई, तो उसकी बिक्री में x% की वृद्धि हुई। यदि राजस्व की प्राप्ति में 17% की वृद्धि होती है, तो x का मान ज्ञात कीजिए।",
+    "oe": [
+      "25",
+      "28",
+      "30",
+      "32"
+    ],
+    "oh": [
+      "25",
+      "28",
+      "30",
+      "32"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\n$\\text{Revenue} = \\text{Price} \\times \\text{Sale} \\implies \\text{Sale} = \\frac{\\text{Revenue}}{\\text{Price}}$.\nPrice ratio: $10 : 9$, Revenue ratio: $100 : 117$.\nSale ratio $= \\frac{100}{10} : \\frac{117}{9} = 10 : 13$.\nSale me increase $= 13 - 10 = 3$ units (10 ke base par).\n$x\\% = \\frac{3}{10} \\times 100\\% = 30\\% \\implies x = 30$.\nAtah sahi vikalp  30 hai.\n\nMethod 2 (100-Base Method):\nInitial revenue $= 100$.\nPrice $10\\%$ ghatne ke baad revenue $= 90$.\nTarget revenue $= 117$.\nRequired increase $= 117 - 90 = 27$.\n$x = \\frac{27}{90} \\times 100 = 30$.\nAtah sahi uttar '30' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_30",
+    "qe": "The income of P is 75% of Q's income, and the expenditure of P is 50% of Q's expenditure. If the income of P is equal to 80% of Q's expenditure, then by what percentage are the savings of P more than Q's savings?",
+    "qh": "P की आय Q की आय का 75% है, और P का खर्च Q के खर्च का 50% है। यदि P की आय Q के खर्च के 80% के बराबर है, तो P की बचत Q की बचत से कितने प्रतिशत अधिक है?",
+    "oe": [
+      "100%",
+      "120%",
+      "350%",
+      "150%"
+    ],
+    "oh": [
+      "100%",
+      "120%",
+      "350%",
+      "150%"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Reference Method):\nQ ke expenditure ko standard base $100$ maan lete hain.\n1. P ki income $= 80\\% \\text{ of Q's expenditure} = 80$.\n2. P ki income Q ki income ka $75\\% (\\frac{3}{4})$ hai:\n   $\\frac{3}{4} \\times \\text{Q's income} = 80 \\implies \\text{Q's income} = \\frac{320}{3}$.\n3. P ka expenditure $= 50\\% \\text{ of Q's expenditure} = 50$.\nSavings ($\\text{Income} - \\text{Expenditure}$):\n• P ki savings $= 80 - 50 = 30$.\n• Q ki savings $= \\frac{320}{3} - 100 = \\frac{20}{3}$.\nDifference $= 30 - \\frac{20}{3} = \\frac{70}{3}$.\nPercentage more than Q's savings $= \\frac{70/3}{20/3} \\times 100\\% = \\frac{7}{2} \\times 100\\% = 350\\%$.\nAtah sahi vikalp  350% hai.\n\nMethod 2 (Ratio Integer Scaling Method):\nQ's expenditure $= 300$ units lete hain.\nP's income $= 80\\% \\text{ of } 300 = 240$ units.\nQ's income $= 240 \\div \\frac{3}{4} = 320$ units.\nP's expenditure $= 50\\% \\text{ of } 300 = 150$ units.\nSavings:\n• P's savings $= 240 - 150 = 90$ units.\n• Q's savings $= 320 - 300 = 20$ units.\nP's excess savings $= 90 - 20 = 70$ units.\nPercentage excess $= \\frac{70}{20} \\times 100\\% = 350\\%$.\nAtah sahi uttar '350%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_31",
+    "qe": "If the price of an article is increased by 12.5% and the expenditure on it remains constant, by what percentage should the consumption be reduced?",
+    "qh": "यदि किसी वस्तु के मूल्य में 12.5% की वृद्धि होती है और उस पर होने वाला खर्च स्थिर रहता है, तो उपभोग में कितने प्रतिशत की कमी की जानी चाहिए?",
+    "oe": [
+      "10.00%",
+      "11.11%",
+      "12.50%",
+      "14.28%"
+    ],
+    "oh": [
+      "10.00%",
+      "11.11%",
+      "12.50%",
+      "14.28%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nPrice me increase $= 12.5\\% = \\frac{1}{8}$.\nInitial Price : New Price $= 8 : 9$.\nExpenditure constant rakhne ke liye consumption ratio $= 9 : 8$.\nConsumption me kami $= 9 - 8 = 1$ unit (9 ke base par).\nPercentage reduction $= \\frac{1}{9} \\times 100\\% = 11.11\\%$.\nAtah sahi vikalp  11.11% hai.\n\nMethod 2 (100-Base Method):\nInitial expenditure $= 100$.\nPrice $12.5\\%$ badhne ke baad cost $= 112.5$.\nWapas 100 par laane ke liye cut $= 112.5 - 100 = 12.5$.\nNew base 112.5 par percentage cut:\n$= \\frac{12.5}{112.5} \\times 100\\% = \\frac{1}{9} \\times 100\\% = 11.11\\%$.\nAtah sahi uttar '11.11%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_32",
+    "qe": "If the price of a movie ticket increased by 12.5% and the sale of tickets also increased by 8.5%, then find the percentage change in income.",
+    "qh": "यदि एक सिनेमा टिकट के मूल्य में 12.5% की वृद्धि होती है और टिकटों की बिक्री में भी 8.5% की वृद्धि होती है, तो कुल आय में प्रतिशत परिवर्तन ज्ञात कीजिए।",
+    "oe": [
+      "21.00%",
+      "21.56%",
+      "22.06%",
+      "23.12%"
+    ],
+    "oh": [
+      "21.00%",
+      "21.56%",
+      "22.06%",
+      "23.12%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Successive Formula):\n$\\text{Income} = \\text{Price} \\times \\text{Sale}$.\nNet Change $= a + b + \\frac{ab}{100}$\nYahan $a = +12.5\\%$ aur $b = +8.5\\%$:\n$= 12.5 + 8.5 + \\frac{12.5 \\times 8.5}{100} = 21 + 1.0625 = 22.0625\\% \\approx 22.06\\%$.\nAtah sahi vikalp  22.06% hai.\n\nMethod 2 (Ratio Method):\nPrice factor $= 1.125$, Sale factor $= 1.085$.\nIncome factor $= 1.125 \\times 1.085 = 1.220625$.\nPercentage change over base $1 = (1.220625 - 1) \\times 100\\% \\approx 22.06\\%$ increase.\nAtah sahi uttar '22.06%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_33",
+    "qe": "The strength of a college increases and decreases every alternate year by 10%. It started with an increase in 2019. What is the strength of the college at the start of 2022 as compared to that of 2019?",
+    "qh": "एक कॉलेज की छात्र संख्या में प्रत्येक एकांतर वर्ष में 10% की वृद्धि और कमी होती है। इसकी शुरुआत 2019 में वृद्धि के साथ हुई थी। 2019 की तुलना में 2022 की शुरुआत में कॉलेज की छात्र संख्या में कितने प्रतिशत का परिवर्तन हुआ?",
+    "oe": [
+      "Decrease by 8.9%",
+      "Increase by 8.9%",
+      "Decrease by 9.1%",
+      "Increase by 9.1%"
+    ],
+    "oh": [
+      "Decrease by 8.9%",
+      "Increase by 8.9%",
+      "Decrease by 9.1%",
+      "Increase by 9.1%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\n2019 se 2022 ki shuruat tak kul 3 saal ka badlav hoga (Year 1: +10%, Year 2: -10%, Year 3: +10%):\nInitial Strength : Final Strength $= (10 \\times 10 \\times 10) : (11 \\times 9 \\times 11) = 1000 : 1089$.\nNet increase $= 1089 - 1000 = 89$ units (1000 ke base par).\nPercentage increase $= \\frac{89}{1000} \\times 100\\% = 8.9\\%$ (Increase by 8.9%).\nAtah sahi vikalp  Increase by 8.9% hai.\n\nMethod 2 (100-Base Method):\nInitial strength $= 100$.\nYear 1: $110$, Year 2: $99$, Year 3: $99 + 9.9 = 108.9$.\nNet change over base $100 = 108.9 - 100 = +8.9\\%$ (Increase by 8.9%).\nAtah sahi uttar 'Increase by 8.9%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_34",
+    "qe": "The strength of a school increases and decreases every alternate year by 20%. If it started with an increase in 2015, then the strength of the school in the beginning of 2018, as compared to that in 2015, had:",
+    "qh": "एक स्कूल की छात्र संख्या में प्रत्येक एकांतर वर्ष में 20% की वृद्धि और कमी होती है। यदि इसकी शुरुआत 2015 में वृद्धि के साथ हुई थी, तो 2015 की तुलना में 2018 की शुरुआत में स्कूल की छात्र संख्या में:",
+    "oe": [
+      "Decreased by 15.2%",
+      "Increased by 15.2%",
+      "Decreased by 16.4%",
+      "Increased by 16.4%"
+    ],
+    "oh": [
+      "Decreased by 15.2%",
+      "Increased by 15.2%",
+      "Decreased by 16.4%",
+      "Increased by 16.4%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nKul 3 saal ka change (2015-16: +20%, 2016-17: -20%, 2017-18: +20%):\nInitial : Final $= (5 \\times 5 \\times 5) : (6 \\times 4 \\times 6) = 125 : 144$.\nIncrease $= 144 - 125 = 19$ units (125 par).\nPercentage increase $= \\frac{19}{125} \\times 100\\% = 15.2\\%$ (Increased by 15.2%).\nAtah sahi vikalp  Increased by 15.2% hai.\n\nMethod 2 (Successive Formula):\nPehle do saal: $+20 - 20 + \\frac{20 \\times (-20)}{100} = -4\\%$.\nTeesre saal ke sath: $-4 + 20 + \\frac{(-4) \\times 20}{100} = 16 - 0.8 = +15.2\\%$ (Increased by 15.2%).\nAtah sahi uttar 'Increased by 15.2%' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_35",
+    "qe": "A number is first decreased by 15%, then increased by 20% and then further it is decreased by 10%. What is the net decrease percentage in the number?",
+    "qh": "एक संख्या में पहले 15% की कमी की जाती है, फिर 20% की वृद्धि की जाती है और फिर 10% की कमी की जाती है। संख्या में शुद्ध प्रतिशत कमी क्या है?",
+    "oe": [
+      "7$\\frac{4}{5}$%",
+      "8$\\frac{1}{5}$%",
+      "8$\\frac{3}{5}$%",
+      "9$\\frac{1}{5}$%"
+    ],
+    "oh": [
+      "7$\\frac{4}{5}$%",
+      "8$\\frac{1}{5}$%",
+      "8$\\frac{3}{5}$%",
+      "9$\\frac{1}{5}$%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\n1. $-15\\% \\implies 20 : 17$\n2. $+20\\% \\implies 5 : 6$\n3. $-10\\% \\implies 10 : 9$\nInitial : Final $= (20 \\times 5 \\times 10) : (17 \\times 6 \\times 9) = 1000 : 918$.\nNet decrease $= 1000 - 918 = 82$ units.\nPercentage decrease $= \\frac{82}{1000} \\times 100\\% = 8.2\\% = 8\\frac{1}{5}\\%$.\nAtah sahi vikalp  8 1/5% hai.\n\nMethod 2 (100-Base Method):\nInitial number $= 100$.\n1. $100 - 15 = 85$.\n2. $85 + 17 = 102$.\n3. $102 - 10.2 = 91.8$.\nNet decrease $= 100 - 91.8 = 8.2\\% = 8\\frac{1}{5}\\%$.\nAtah sahi uttar '8$\\frac{1}{5}$%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_36",
+    "qe": "A number is first increased by 15% and then increased by 25%. The number so obtained is now decreased by 35%. What is the net increase or decrease percent in the original number (nearest to an integer)?",
+    "qh": "एक संख्या में पहले 15% की वृद्धि की जाती है और फिर 25% की वृद्धि की जाती है। इस प्रकार प्राप्त संख्या में अब 35% की कमी की जाती है। मूल संख्या में शुद्ध प्रतिशत वृद्धि या कमी क्या है (निकटतम पूर्णांक तक)?",
+    "oe": [
+      "7% decrease",
+      "7% increase",
+      "5% decrease",
+      "5% increase"
+    ],
+    "oh": [
+      "7% decrease",
+      "7% increase",
+      "5% decrease",
+      "5% increase"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\n1. $+15\\% \\implies 20 : 23$\n2. $+25\\% \\implies 4 : 5$\n3. $-35\\% \\implies 20 : 13$\nInitial : Final $= (20 \\times 4 \\times 20) : (23 \\times 5 \\times 13) = 1600 : 1495$.\nNet decrease $= 1600 - 1495 = 105$ units.\nPercentage decrease $= \\frac{105}{1600} \\times 100\\% = 6.5625\\% \\approx 7\\%$ decrease.\nAtah sahi vikalp  7% decrease hai.\n\nMethod 2 (100-Base Method):\nInitial $= 100$.\nAfter $+15\\% \\implies 115$.\nAfter $+25\\% \\implies 143.75$.\nAfter $-35\\% \\implies 143.75 \\times 0.65 = 93.4375$.\nNet change $= 93.4375 - 100 = -6.5625\\% \\approx -7\\%$ (7% decrease).\nAtah sahi uttar '7% decrease' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_37",
+    "qe": "The value of a motorcycle depreciated from ₹62,500 to ₹32,000 in 3 years. Find the yearly rate of depreciation.",
+    "qh": "एक मोटरसाइकिल का मूल्य 3 वर्षों में ₹62,500 से घटकर ₹32,000 हो गया। मूल्यह्रास (depreciation) की वार्षिक दर ज्ञात कीजिए।",
+    "oe": [
+      "15%",
+      "18%",
+      "20%",
+      "25%"
+    ],
+    "oh": [
+      "15%",
+      "18%",
+      "20%",
+      "25%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nInitial Value : Final Value $= 62500 : 32000 = 125 : 64$.\nTime period $= 3$ years, isliye 1 year ratio $= \\sqrt[3]{125} : \\sqrt[3]{64} = 5 : 4$.\nKami $= 5 - 4 = 1$ unit (5 ke base par).\nYearly rate of depreciation $= \\frac{1}{5} \\times 100\\% = 20\\%$.\nAtah sahi vikalp  20% hai.\n\nMethod 2 (100-Base Reverse Check Method):\n$20\\%$ depreciation par multiplier $= \\frac{4}{5}$.\n3 saal baad value $= 62500 \\times \\left(\\frac{4}{5}\\right)^3 = 62500 \\times \\frac{64}{125} = ₹32000$.\nYeh given value ₹32,000 se match karta hai.\nAtah sahi uttar '20%' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type4successive_38",
+    "qe": "The population of a town increased from 1,00,000 to 1,61,051 in 5 years. What is the compounded percent increase of population per year?",
+    "qh": "एक कस्बे की जनसंख्या 5 वर्षों में 1,00,000 से बढ़कर 1,61,051 हो गई। प्रति वर्ष जनसंख्या में चक्रवृद्धि प्रतिशत वृद्धि क्या है?",
+    "oe": [
+      "8%",
+      "10%",
+      "12%",
+      "15%"
+    ],
+    "oh": [
+      "8%",
+      "10%",
+      "12%",
+      "15%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nInitial Population : Final Population $= 100000 : 161051$.\nTime period $= 5$ years, isliye 1 year factor $= \\sqrt[5]{100000} : \\sqrt[5]{161051} = 10 : 11$.\nHar saal badhav $= 11 - 10 = 1$ unit (10 ke base par).\nCompounded annual growth rate $= \\frac{1}{10} \\times 100\\% = 10\\%$.\nAtah sahi vikalp  10% hai.\n\nMethod 2 (100-Base Reference Method):\nGrowth multiplier $= \\frac{161051}{100000} = 1.61051$.\n$(1 + r)^5 = 1.61051 \\implies 1 + r = 1.10 \\implies r = 10\\%$.\nAtah sahi uttar '10%' hai.\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
