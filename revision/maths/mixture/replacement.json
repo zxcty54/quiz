@@ -1,0 +1,287 @@
+[
+  {
+    "p_id": "replacement_1",
+    "qe": "A vessel contains some milk. 6 litre of the milk was taken out of the vessel and replaced with 6 litre of water and again 6 litre of mixture was taken out and was replaced with water. Now the ratio of milk to water become 100 : 69. Find the initial quantity of milk in the vessel.",
+    "qh": "एक बर्तन में कुछ दूध है। बर्तन से 6 लीटर दूध निकाला गया और उसके स्थान पर 6 लीटर पानी डाला गया और पुनः 6 लीटर मिश्रण निकाला गया और पानी से बदल दिया गया। अब दूध और पानी का अनुपात 100 : 69 हो जाता है। बर्तन में दूध की प्रारंभिक मात्रा ज्ञात कीजिए।",
+    "oe": [
+      "28 litre",
+      "26 litre",
+      "36 litre",
+      "46 litre"
+    ],
+    "oh": [
+      "28 litre",
+      "26 litre",
+      "36 litre",
+      "46 litre"
+    ],
+    "a": 1,
+    "e": "Method 1 (Replacement Formula Method):\nStep 1: यह प्रक्रिया n = 2 बार दोहराई गई है।\nअंतिम दूध और कुल मिश्रण का अनुपात:\nदूध / कुल मिश्रण = 100 / (100 + 69) = 100 / 169.\nStep 2: प्रतिस्थापन सूत्र:\nअंतिम दूध / प्रारंभिक दूध = (1 - x / V)^n\nजहाँ x = 6 लीटर, n = 2, और V = प्रारंभिक मात्रा (कुल आयतन) है।\nStep 3: मान रखने पर:\n(1 - 6 / V)^2 = 100 / 169.\nदोनों पक्षों का वर्गमूल लेने पर:\n1 - 6 / V = 10 / 13.\nStep 4: V का मान ज्ञात करने पर:\n6 / V = 1 - 10 / 13 = 3 / 13\n3V = 78 ==> V = 26 लीटर।\nअतः सही विकल्प  26 litre है।\n\nMethod 2 (Ratio Back-Calculation Method):\nStep 1: 2 प्रक्रियाओं के बाद दूध का अनुपात (10/13)^2 = 100/169.\nStep 2: प्रत्येक प्रक्रिया में शेष रहने वाला दूध = 10/13 भाग, अर्थात निकाला गया भाग = 1 - 10/13 = 3/13.\nStep 3: 3/13 भाग = 6 लीटर ==> कुल मात्रा = 6 * (13 / 3) = 26 लीटर।\nअतः सही उत्तर '26 litre' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_2",
+    "qe": "From a container having pure milk, 35% is replaced by water and the process is repeated thrice. At the end of the third operation, the purity of the milk is:",
+    "qh": "शुद्ध दूध वाले एक कंटेनर से 35% को पानी से बदल दिया जाता है और इस प्रक्रिया को तीन बार दोहराया जाता है। तीसरे संचालन के अंत में, दूध की शुद्धता क्या है:",
+    "oe": [
+      "37$\\frac{21}{80}$\\%",
+      "21$\\frac{33}{80}$\\%",
+      "23$\\frac{37}{80}$\\%",
+      "27$\\frac{37}{80}$\\%"
+    ],
+    "oh": [
+      "37$\\frac{21}{80}$\\%",
+      "21$\\frac{33}{80}$\\%",
+      "23$\\frac{37}{80}$\\%",
+      "27$\\frac{37}{80}$\\%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Fractional Reduction Method):\nStep 1: प्रत्येक प्रक्रिया में 35% निकाला जाता है:\nशेष दूध का अंश = 100% - 35% = 65% = 65 / 100 = 13 / 20 भाग।\nStep 2: प्रक्रिया को 3 बार दोहराने पर (n = 3):\nतीसरी प्रक्रिया के अंत में दूध की शुद्धता = (13 / 20)^3 = 2,197 / 8,000.\nStep 3: प्रतिशत में बदलने पर:\nशुद्धता% = (2,197 / 8,000) * 100% = 2,197 / 80%.\nStep 4: मिश्रित भिन्न में बदलने पर:\n2,197 को 80 से भाग देने पर भागफल 27 और शेषफल 37 प्राप्त होता है:\n= 27$\\frac{37}{80}$%.\nअतः सही विकल्प  27 37/80% है।\n\nMethod 2 (Step-by-Step Percentage Method):\nStep 1: प्रारंभिक = 100%.\n- ऑपरेशन 1 के बाद = 65%.\n- ऑपरेशन 2 के बाद = 65 * 0.65 = 42.25%.\n- ऑपरेशन 3 के बाद = 42.25 * 0.65 = 27.4625%.\nStep 2: 27.4625% = 27 + 0.4625 = 27 + 37/80 = 27$\\frac{37}{80}$%.\nअतः सही उत्तर '27$\\frac{37}{80}$\\%' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_3",
+    "qe": "From a cask of milk containing 64 litres, 8 litres are drawn out and the cask is filled up with water. If the same process is repeated a second, then a third time, what will be the proportion of milk to water in the resulting mixture?",
+    "qh": "64 लीटर दूध वाले एक पीपे से 8 लीटर निकाला जाता है और पीपे को पानी से भर दिया जाता है। यदि यही प्रक्रिया दूसरी बार और फिर तीसरी बार दोहराई जाती है, तो परिणामी मिश्रण में दूध और पानी का अनुपात क्या होगा?",
+    "oe": [
+      "343 : 179",
+      "333 : 169",
+      "443 : 179",
+      "343 : 169"
+    ],
+    "oh": [
+      "343 : 179",
+      "333 : 169",
+      "443 : 179",
+      "343 : 169"
+    ],
+    "a": 3,
+    "e": "Method 1 (Standard Replacement Ratio Method):\nStep 1: कुल मात्रा V = 64 लीटर, प्रत्येक बार निकाली गई मात्रा x = 8 लीटर।\nप्रत्येक बार निकाला गया अंश = 8 / 64 = 1 / 8.\nप्रत्येक बार शेष रहने वाला दूध का अंश = 1 - 1/8 = 7 / 8.\nStep 2: यह प्रक्रिया कुल 3 बार (n = 3) की जाती है:\nशेष दूध / कुल मिश्रण = (7 / 8)^3 = 343 / 512.\nStep 3: कुल मिश्रण = 512 इकाइयाँ, शेष दूध = 343 इकाइयाँ।\nपानी की मात्रा = 512 - 343 = 169 इकाइयाँ।\nStep 4: दूध और पानी का अभीष्ट अनुपात:\nदूध : पानी = 343 : 169.\nअतः सही विकल्प  343 : 169 है।\n\nMethod 2 (Value Calculation Method):\nStep 1: 3 प्रक्रिया के बाद दूध की मात्रा = 64 * (7/8)^3 = 64 * (343 / 512) = 343 / 8 = 42.875 लीटर।\nStep 2: पानी की मात्रा = 64 - 42.875 = 21.125 लीटर।\nStep 3: अनुपात = 42.875 : 21.125 = 343 : 169.\nअतः सही उत्तर '343 : 169' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_4",
+    "qe": "A 10-litre solution of milk and water contains 8 litres of milk. 2 litres of the solution is replaced by pure milk and mixed. The process is repeated two more times. How much milk (in litres) is present in the mixture so obtained?",
+    "qh": "दूध और पानी के 10 लीटर घोल में 8 लीटर दूध है। 2 लीटर घोल को शुद्ध दूध से बदल दिया जाता है और मिलाया जाता है। इस प्रक्रिया को दो बार और दोहराया जाता है। इस प्रकार प्राप्त मिश्रण में कितना दूध (लीटर में) मौजूद है?",
+    "oe": [
+      "8.976",
+      "8.597",
+      "9.124",
+      "8.784"
+    ],
+    "oh": [
+      "8.976",
+      "8.597",
+      "9.124",
+      "8.784"
+    ],
+    "a": 0,
+    "e": "Method 1 (Tracking Unadded Component Method):\nStep 1: चूँकि प्रतिस्थापन में शुद्ध दूध मिलाया जा रहा है, अतः हम पानी के सांद्रण में होने वाले क्रमिक ह्रास की गणना करेंगे।\nप्रारंभिक पानी की मात्रा = 10 - 8 = 2 लीटर।\nStep 2: प्रत्येक बार 10 लीटर में से 2 लीटर निकाला जाता है:\nनिकाला गया अंश = 2 / 10 = 1 / 5.\nशेष रहने वाला पानी का अंश = 1 - 1/5 = 4 / 5.\nStep 3: कुल 3 बार (1 बार + 2 बार और) प्रक्रिया के बाद शेष पानी:\nअंतिम पानी = प्रारंभिक पानी * (4 / 5)^3 = 2 * (64 / 125) = 128 / 125 = 1.024 लीटर।\nStep 4: कुल घोल सदैव 10 लीटर रहता है:\nअंतिम मिश्रण में दूध = 10 - 1.024 = 8.976 लीटर।\nअतः सही विकल्प  8.976 है।\n\nMethod 2 (Percentage Calculation Method):\nStep 1: प्रारंभिक पानी = 20%.\nStep 2: 3 ऑपरेशनों के बाद पानी% = 20% * (0.8)^3 = 20% * 0.512 = 10.24%.\nStep 3: दूध% = 100% - 10.24% = 89.76%.\nStep 4: 10 लीटर का 89.76% = 8.976 लीटर।\nअतः सही उत्तर '8.976' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_5",
+    "qe": "A drum of 80 litres contains 90% pure acid solution. If 8 litres of this solution are removed and replaced with 8 litres of pure water, what is the new percentage of acid in the solution?",
+    "qh": "80 लीटर के ड्रम में 90% शुद्ध अम्ल का घोल है। यदि इस घोल में से 8 लीटर घोल निकाल लिया जाए और उसके स्थान पर 8 लीटर शुद्ध पानी डाल दिया जाए, तो घोल में अम्ल का नया प्रतिशत क्या है?",
+    "oe": [
+      "80%",
+      "81%",
+      "82.5%",
+      "85%"
+    ],
+    "oh": [
+      "80%",
+      "81%",
+      "82.5%",
+      "85%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Fractional Reduction Method):\nStep 1: कुल आयतन = 80 लीटर, निकाला गया घोल = 8 लीटर।\nनिकाला गया भाग = 8 / 80 = 1 / 10 भाग (अर्थात 10% कमी)।\nStep 2: शेष घोल का अंश = 1 - 1/10 = 9 / 10 भाग।\nStep 3: चूँकि पानी मिलाने से अम्ल की मात्रा में कोई वृद्धि नहीं होती है, अतः अम्ल का नया सांद्रण प्रारंभिक सांद्रण का 9/10 भाग होगा:\nनया अम्ल प्रतिशत = 90% * (9 / 10) = 81%.\nअतः सही विकल्प  81% है।\n\nMethod 2 (Quantity Method):\nStep 1: प्रारंभिक अम्ल = 90% of 80 = 72 लीटर।\nStep 2: निकाले गए 8 लीटर घोल में अम्ल = 90% of 8 = 7.2 लीटर।\nStep 3: शेष अम्ल = 72 - 7.2 = 64.8 लीटर।\nStep 4: 8 लीटर पानी मिलाने के बाद कुल आयतन = 80 लीटर।\nनया अम्ल% = (64.8 / 80) * 100% = 81%.\nअतः सही उत्तर '81%' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_6",
+    "qe": "A container can hold 50 liters of milk. First, 5 liters of milk are removed and the same amount of water is poured in to refill the container. The mixture is then thoroughly stirred. This entire process of removing 5 liters of liquid and replacing it with water is carried out once again. After these two successive operations, how many liters of pure milk remain in the container?",
+    "qh": "एक कंटेनर में 50 लीटर दूध आ सकता है। सबसे पहले, 5 लीटर दूध निकाला जाता है और कंटेनर को फिर से भरने के लिए उतनी ही मात्रा में पानी डाला जाता है। फिर मिश्रण को अच्छी तरह मिलाया जाता है। 5 लीटर तरल निकालने और उसके स्थान पर पानी डालने की यह पूरी प्रक्रिया एक बार फिर दोहराई जाती है। इन दो क्रमिक परिचालनों के बाद, कंटेनर में कितने लीटर शुद्ध दूध बचता है?",
+    "oe": [
+      "40 liters",
+      "45 liters",
+      "40.5 liters",
+      "38.5 liters"
+    ],
+    "oh": [
+      "40 liters",
+      "45 liters",
+      "40.5 liters",
+      "38.5 liters"
+    ],
+    "a": 2,
+    "e": "Method 1 (Replacement Formula Method):\nStep 1: प्रारंभिक मात्रा V = 50 लीटर, प्रतिस्थापन मात्रा x = 5 लीटर, कुल प्रक्रियाएँ n = 2.\nStep 2: शेष दूध का सूत्र:\nअंतिम दूध = V * (1 - x / V)^n\n= 50 * (1 - 5 / 50)^2\n= 50 * (1 - 1/10)^2\n= 50 * (9 / 10)^2.\nStep 3: गणना करने पर:\nअंतिम दूध = 50 * (81 / 100) = 81 / 2 = 40.5 लीटर।\nअतः सही विकल्प  40.5 liters है।\n\nMethod 2 (Step-by-Step Subtraction Method):\nStep 1: पहले ऑपरेशन के बाद दूध = 50 - 5 = 45 लीटर (पानी = 5 लीटर)।\nStep 2: दूसरे ऑपरेशन में निकाले गए 5 लीटर में दूध = 5 * (45 / 50) = 4.5 लीटर।\nStep 3: शेष दूध = 45 - 4.5 = 40.5 लीटर।\nअतः सही उत्तर '40.5 liters' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_7",
+    "qe": "3 litres are drawn from a cask full of wine and are then filled with water. This operation is performed two more times. The ratio of the quantity of wine now left in the cask to that of water is 8 : 19. How much wine did the cask hold originally?",
+    "qh": "शराब से भरे एक पीपे से 3 लीटर शराब निकाली जाती है और फिर उसमें पानी भर दिया जाता है। यह प्रक्रिया दो बार और दोहराई जाती है। पीपे में अब बची शराब की मात्रा का पानी की मात्रा से अनुपात 8 : 19 है। पीपे में मूल रूप से कितनी शराब थी?",
+    "oe": [
+      "11 litres",
+      "6.88 litres",
+      "7.5 litres",
+      "9 litres"
+    ],
+    "oh": [
+      "11 litres",
+      "6.88 litres",
+      "7.5 litres",
+      "9 litres"
+    ],
+    "a": 3,
+    "e": "Method 1 (Replacement Formula Method):\nStep 1: कुल प्रक्रियाएँ n = 1 + 2 = 3 बार।\nअंतिम शराब और कुल क्षमता का अनुपात:\nशराब / कुल = 8 / (8 + 19) = 8 / 27.\nStep 2: प्रतिस्थापन सूत्र:\nशराब / कुल = (1 - x / V)^n\nजहाँ x = 3 लीटर और n = 3.\n(1 - 3 / V)^3 = 8 / 27.\nStep 3: दोनों पक्षों का घनमूल (cube root) लेने पर:\n1 - 3 / V = 2 / 3.\nStep 4: V के लिए हल करने पर:\n3 / V = 1 - 2 / 3 = 1 / 3\nV = 3 * 3 = 9 लीटर।\nअतः सही विकल्प  9 litres है।\n\nMethod 2 (Ratio Elimination Method):\nStep 1: 3 चक्रों के बाद अनुपात (2/3)^3 = 8/27.\nStep 2: प्रत्येक चक्र में 1 - 2/3 = 1/3 भाग निकाला गया।\nStep 3: 1/3 भाग = 3 लीटर ==> कुल मूल क्षमता = 3 * 3 = 9 लीटर।\nअतः सही उत्तर '9 litres' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_8",
+    "qe": "A 200 litre container contains 150 litres of milk and 50 litres of water. 10 litres of mixture is taken out and 10 litre of water is added. The second time 20 litre of mixture taken out and 20 litre of water is added and third time 50 litre of mixture is taken out and 50 litre of water is added. Find the quantity of milk left in the end?",
+    "qh": "200 लीटर के एक कंटेनर में 150 लीटर दूध और 50 लीटर पानी है। 10 लीटर मिश्रण निकाला जाता है और 10 लीटर पानी मिलाया जाता है। दूसरी बार 20 लीटर मिश्रण निकाला जाता है और 20 लीटर पानी मिलाया जाता है तथा तीसरी बार 50 लीटर मिश्रण निकाला जाता है और 50 लीटर पानी मिलाया जाता है। अंत में बचे दूध की मात्रा ज्ञात कीजिए?",
+    "oe": [
+      "96.18",
+      "94.12",
+      "96.62",
+      "94.18"
+    ],
+    "oh": [
+      "96.18",
+      "94.12",
+      "96.62",
+      "94.18"
+    ],
+    "a": 0,
+    "e": "Method 1 (Successive Multiplying Factors Method):\nStep 1: प्रारंभिक दूध = 150 लीटर, कुल आयतन स्थिर = 200 लीटर।\nStep 2: प्रत्येक चरण में दूध के शेष रहने वाले भिन्न (गुणक) निकालें:\n- चरण 1 (10 लीटर निकाला): (1 - 10 / 200) = 190 / 200 = 19 / 20\n- चरण 2 (20 लीटर निकाला): (1 - 20 / 200) = 180 / 200 = 9 / 10\n- चरण 3 (50 लीटर निकाला): (1 - 50 / 200) = 150 / 200 = 3 / 4\nStep 3: अंत में शेष दूध की मात्रा:\nअंतिम दूध = 150 * (19 / 20) * (9 / 10) * (3 / 4)\n= 150 * (513 / 800) = (15 * 513) / 80 = (3 * 513) / 16\n= 1,539 / 16 = 96.1875 ≈ 96.18 लीटर।\nअतः सही विकल्प  96.18 है।\n\nMethod 2 (Percentage Reduction Method):\nStep 1: चरण 1 के बाद दूध = 150 * 0.95 = 142.5 लीटर।\nStep 2: चरण 2 के बाद दूध = 142.5 * 0.90 = 128.25 लीटर।\nStep 3: चरण 3 के बाद दूध = 128.25 * 0.75 = 96.1875 ≈ 96.18 लीटर।\nअतः सही उत्तर '96.18' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_9",
+    "qe": "A bottle is filled with liquid of which 4 parts are water and 5 parts are fruit extract. How much of the mixture must be drawn off and replaced with water so that the mixture may be half water and half fruit extract?",
+    "qh": "एक बोतल में तरल भरा है जिसका 4 भाग पानी और 5 भाग फलों का अर्क है। मिश्रण का कितना भाग निकालकर पानी से बदल दिया जाना चाहिए ताकि मिश्रण आधा पानी और आधा फलों का अर्क हो जाए?",
+    "oe": [
+      "$\\frac{1}{10}$",
+      "$\\frac{9}{10}$",
+      "$\\frac{4}{9}$",
+      "$\\frac{5}{9}$"
+    ],
+    "oh": [
+      "$\\frac{1}{10}$",
+      "$\\frac{9}{10}$",
+      "$\\frac{4}{9}$",
+      "$\\frac{5}{9}$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Concentration Ratio Method):\nStep 1: प्रारंभिक मिश्रण में फलों का अर्क (Fruit Extract) का अंश = 5 / (4 + 5) = 5 / 9.\nStep 2: अंतिम मिश्रण में अर्क आधा (1/2) होना चाहिए।\nचूँकि केवल पानी मिलाया जा रहा है, अतः अर्क के प्रारंभिक और अंतिम अनुपात से शेष बचा अंश निकालें:\nशेष बचा अंश = (अंतिम अर्क) / (प्रारंभिक अर्क) = (1 / 2) / (5 / 9) = 9 / 10.\nStep 3: निकाला और बदला गया भाग:\nहटाया गया भाग = 1 - 9 / 10 = 1 / 10.\nअतः सही विकल्प  1/10 है।\n\nMethod 2 (Alligation Method):\nStep 1: निकाले जाने वाले मिश्रण में पानी = 4/9, मिलाए जाने वाले शुद्ध पानी में पानी = 1 (या 100%), परिणामी पानी = 1/2.\nStep 2: पृथक्करण (Alligation):\n(1 - 1/2) : (1/2 - 4/9) = 1/2 : 1/18 = 9 : 1.\nStep 3: कुल मिश्रण = 9 + 1 = 10 इकाइयाँ, जिसमें बदला गया भाग = 1 इकाई = 1 / 10.\nअतः सही उत्तर '$\\frac{1}{10}$' है।\n\nExam point: milawan ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_10",
+    "qe": "A vessel is filled with liquid, 5 parts of which are water and 11 parts syrup. What part of the mixture must be drawn off and replaced with water so that the mixture may have syrup and water in the ratio 3 : 2?",
+    "qh": "एक बर्तन तरल से भरा है, जिसमें 5 भाग पानी और 11 भाग सिरप है। मिश्रण का कितना भाग निकालकर पानी से प्रतिस्थापित किया जाना चाहिए ताकि मिश्रण में सिरप और पानी का अनुपात 3 : 2 हो जाए?",
+    "oe": [
+      "$\\frac{14}{45}$",
+      "$\\frac{27}{35}$",
+      "$\\frac{36}{65}$",
+      "$\\frac{7}{55}$"
+    ],
+    "oh": [
+      "$\\frac{14}{45}$",
+      "$\\frac{27}{35}$",
+      "$\\frac{36}{65}$",
+      "$\\frac{7}{55}$"
+    ],
+    "a": 3,
+    "e": "Method 1 (Concentration Ratio Method):\nStep 1: प्रारंभिक मिश्रण में सिरप का अंश = 11 / (5 + 11) = 11 / 16.\nStep 2: अंतिम मिश्रण में सिरप का अंश (अनुपात 3 : 2) = 3 / (3 + 2) = 3 / 5.\nStep 3: केवल पानी मिलाया जा रहा है, अतः मिश्रण का शेष अंश:\nशेष अंश = (अंतिम सिरप) / (प्रारंभिक सिरप) = (3 / 5) / (11 / 16) = (3 * 16) / (5 * 11) = 48 / 55.\nStep 4: निकाला गया और बदला गया भाग:\nहटाया गया भाग = 1 - (48 / 55) = 7 / 55.\nअतः सही विकल्प  7/55 है।\n\nMethod 2 (Ratio Equating Method):\nStep 1: माना कुल आयतन = 80 इकाइयाँ (16 और 5 का ल.स.प.)।\nप्रारंभिक सिरप = (11/16) * 80 = 55 इकाइयाँ।\nअंतिम सिरप = (3/5) * 80 = 48 इकाइयाँ।\nStep 2: सिरप में कमी = 55 - 48 = 7 इकाइयाँ।\nStep 3: हटाया गया भाग = 7 / 55.\nअतः सही उत्तर '$\\frac{7}{55}$' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_11",
+    "qe": "A container contains a mixture of two liquids, A and B, in the proportion 7 : 5. If 9 liters of the mixture is replaced by 9 liters of Liquid B, then the ratio of the two liquids becomes 7 : 9. How much of liquid A was there in the container initially?",
+    "qh": "एक कंटेनर में दो तरल पदार्थ A और B, 7 : 5 के अनुपात में हैं। यदि 9 लीटर मिश्रण को 9 लीटर तरल B से बदल दिया जाए, तो दोनों तरल पदार्थों का अनुपात 7 : 9 हो जाता है। प्रारंभ में कंटेनर में कितना तरल A था?",
+    "oe": [
+      "21 liters",
+      "35 liters",
+      "40 liters",
+      "19 liters"
+    ],
+    "oh": [
+      "21 liters",
+      "35 liters",
+      "40 liters",
+      "19 liters"
+    ],
+    "a": 0,
+    "e": "Method 1 (Remaining Ratio Method):\nStep 1: 9 लीटर मिश्रण निकालने के बाद शेष बचे मिश्रण में A और B का अनुपात 7 : 5 ही रहता है।\nStep 2: जब इसमें 9 लीटर तरल B मिलाया जाता है, तो नया अनुपात 7 : 9 हो जाता है।\nStep 3: चूँकि तरल A की मात्रा स्थिर (7 इकाइयाँ) रहती है, अतः B में वृद्धि:\nवृद्धि = 9 - 5 = 4 इकाइयाँ = 9 लीटर ==> 1 इकाई = 9 / 4 लीटर।\nStep 4: अंतिम कुल मिश्रण = 7 + 9 = 16 इकाइयाँ:\nकुल आयतन = 16 * (9 / 4) = 36 लीटर।\nStep 5: प्रारंभिक मिश्रण (36 लीटर) में तरल A की मात्रा:\nप्रारंभिक A = (7 / 12) * 36 = 7 * 3 = 21 लीटर।\nअतः सही विकल्प  21 liters है।\n\nMethod 2 (Algebraic Method):\nStep 1: माना प्रारंभिक A = 7x और B = 5x (कुल = 12x).\n9 लीटर मिश्रण निकालने के बाद A = 7x - 9*(7/12) = 7x - 21/4.\nB = 5x - 9*(5/12) + 9 = 5x - 15/4 + 9 = 5x + 21/4.\nStep 2: (7x - 21/4) / (5x + 21/4) = 7 / 9 ==> 9(7x - 21/4) = 7(5x + 21/4)\n63x - 189/4 = 35x + 147/4 ==> 28x = 336/4 = 84 ==> x = 3.\nStep 3: प्रारंभिक A = 7x = 7 * 3 = 21 लीटर।\nअतः सही उत्तर '21 liters' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_12",
+    "qe": "A 90-liter mixture contains milk and water in the ratio 8 : 7. If 15 liters of this mixture is taken out and replaced with 15 liters of pure milk, what is the new ratio of milk to water?",
+    "qh": "90 लीटर के मिश्रण में दूध और पानी का अनुपात 8 : 7 है। यदि इस मिश्रण में से 15 लीटर निकाल लिया जाए और उसके स्थान पर 15 लीटर शुद्ध दूध मिला दिया जाए, तो दूध और पानी का नया अनुपात क्या होगा?",
+    "oe": [
+      "9 : 7",
+      "8 : 5",
+      "11 : 7",
+      "11 : 5"
+    ],
+    "oh": [
+      "9 : 7",
+      "8 : 5",
+      "11 : 7",
+      "11 : 5"
+    ],
+    "a": 2,
+    "e": "Method 1 (Remaining Mixture Method):\nStep 1: 15 लीटर मिश्रण निकालने के बाद शेष मिश्रण = 90 - 15 = 75 लीटर।\nStep 2: शेष 75 लीटर में दूध और पानी (8 : 7, कुल 15 इकाइयाँ):\n15 इकाइयाँ = 75 लीटर ==> 1 इकाई = 5 लीटर।\n- शेष दूध = 8 * 5 = 40 लीटर\n- शेष पानी = 7 * 5 = 35 लीटर\nStep 3: 15 लीटर शुद्ध दूध मिलाने पर:\nनया दूध = 40 + 15 = 55 लीटर।\nपानी की मात्रा अपरिवर्तित = 35 लीटर।\nStep 4: नया अनुपात (दूध : पानी):\n55 : 35 = 11 : 7 (5 से विभाजित करने पर)।\nअतः सही विकल्प  11 : 7 है।\n\nMethod 2 (Component Tracking Method):\nStep 1: प्रारंभिक पानी = (7/15) * 90 = 42 लीटर।\n15 लीटर में निकाला गया पानी = (7/15) * 15 = 7 लीटर।\nStep 2: शेष पानी = 42 - 7 = 35 लीटर।\nकुल मिश्रण पुनः 90 लीटर हो जाता है ==> नया दूध = 90 - 35 = 55 लीटर।\nदूध : पानी = 55 : 35 = 11 : 7.\nअतः सही उत्तर '11 : 7' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_13",
+    "qe": "A vessel contained a solution of acid and water, in which water was 64%. Four litres of the solution was taken out of the vessel and the same quantity of water was added. If the resulting solution contains 30% acid, the quantity (in litres) of the water in the solution, at the beginning in the vessel, was:",
+    "qh": "एक बर्तन में अम्ल और पानी का घोल था, जिसमें पानी 64% था। बर्तन में से चार लीटर घोल निकाला गया और उतनी ही मात्रा में पानी मिला दिया गया। यदि परिणामी घोल में 30% अम्ल है, तो शुरुआत में बर्तन में पानी की मात्रा (लीटर में) क्या थी:",
+    "oe": [
+      "11.36",
+      "15.36",
+      "8.64",
+      "12.64"
+    ],
+    "oh": [
+      "11.36",
+      "15.36",
+      "8.64",
+      "12.64"
+    ],
+    "a": 1,
+    "e": "Method 1 (Constant Solute Replacement Method):\nStep 1: प्रारंभिक अम्ल प्रतिशत = 100% - 64% = 36%.\nअंतिम अम्ल प्रतिशत = 30%.\nStep 2: चूँकि पानी मिलाया गया है, अतः अम्ल की मात्रा में परिवर्तन केवल 4 लीटर घोल निकालने से हुआ है:\nअम्ल का शेष अनुपात = 30% / 36% = 5 / 6.\nStep 3: निकाला गया भाग = 1 - 5/6 = 1 / 6 भाग।\n1/6 भाग = 4 लीटर ==> कुल प्रारंभिक आयतन V = 4 * 6 = 24 लीटर।\nStep 4: शुरुआत में पानी की मात्रा (64%):\nपानी = 64% of 24 = (64 / 100) * 24 = 15.36 लीटर।\nअतः सही विकल्प  15.36 है।\n\nMethod 2 (Formula Method):\nStep 1: 30 = 36 * (1 - 4/V) ==> 30/36 = 1 - 4/V ==> 5/6 = 1 - 4/V.\nStep 2: 4/V = 1/6 ==> V = 24 लीटर।\nStep 3: पानी = 0.64 * 24 = 15.36 लीटर।\nअतः सही उत्तर '15.36' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_14",
+    "qe": "A vessel contains a solution of two liquids A and B in the ratio 5 : 3. When 10 litres of the solution is taken out and replaced by the same quantity of B, the ratio of A and B in the vessel becomes 10 : 11. The quantity (in litres) of the solution, in the vessel was _____.",
+    "qh": "एक बर्तन में दो तरल पदार्थों A और B का घोल 5 : 3 के अनुपात में है। जब 10 लीटर घोल निकाला जाता है और उतनी ही मात्रा में B डाला जाता है, तो बर्तन में A और B का अनुपात 10 : 11 हो जाता है। बर्तन में घोल की मात्रा (लीटर में) _____ थी।",
+    "oe": [
+      "48",
+      "52",
+      "42",
+      "44"
+    ],
+    "oh": [
+      "48",
+      "52",
+      "42",
+      "44"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Equating Method):\nStep 1: 10 लीटर निकालने के बाद शेष घोल में अनुपात A : B = 5 : 3.\nनया अनुपात (10 लीटर B मिलाने के बाद) = 10 : 11.\nStep 2: A की मात्रा को समान करने के लिए शेष अनुपात में 2 से गुणा करें:\nशेष अनुपात = (5 * 2) : (3 * 2) = 10 : 6.\nनया अनुपात = 10 : 11.\nStep 3: B की इकाइयों में वृद्धि = 11 - 6 = 5 इकाइयाँ।\n5 इकाइयाँ = 10 लीटर ==> 1 इकाई = 2 लीटर।\nStep 4: बर्तन में घोल की कुल अंतिम (तथा प्रारंभिक) क्षमता:\nकुल क्षमता = 10 + 11 = 21 इकाइयाँ = 21 * 2 = 42 लीटर।\nअतः सही विकल्प  42 है।\n\nMethod 2 (Solute Proportion Method):\nStep 1: प्रारंभिक A = 5/8, अंतिम A = 10/21.\nStep 2: (1 - 10/V) = (10/21) / (5/8) = (10 * 8) / (21 * 5) = 16 / 21.\nStep 3: 10 / V = 1 - 16/21 = 5 / 21 ==> V = (10 * 21) / 5 = 42 लीटर।\nअतः सही उत्तर '42' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "replacement_15",
+    "qe": "A container initially holds a mixture of milk and water in the proportion 4 : 1. Some quantity of this mixture is removed and replaced with an equal quantity of water. After this operation, the new mixture has milk and water in the ratio 2 : 3. What percentage of the original mixture was taken out and substituted with water?",
+    "qh": "एक कंटेनर में प्रारंभ में दूध और पानी का मिश्रण 4 : 1 के अनुपात में है। इस मिश्रण की कुछ मात्रा निकाल ली जाती है और उतनी ही मात्रा में पानी मिला दिया जाता है। इस ऑपरेशन के बाद, नए मिश्रण में दूध और पानी का अनुपात 2 : 3 हो जाता है। मूल मिश्रण का कितना प्रतिशत निकाला गया और पानी से बदला गया था?",
+    "oe": [
+      "40%",
+      "50%",
+      "60%",
+      "45%"
+    ],
+    "oh": [
+      "40%",
+      "50%",
+      "60%",
+      "45%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Milk Concentration Method):\nStep 1: मूल मिश्रण में दूध का अंश = 4 / (4 + 1) = 4 / 5 = 80%.\nStep 2: अंतिम मिश्रण में दूध का अंश = 2 / (2 + 3) = 2 / 5 = 40%.\nStep 3: चूँकि पानी मिलाया गया है, अतः दूध के सांद्रण में कमी सीधे निकाले गए मिश्रण के अंश को दर्शाती है:\nशेष रहा दूध का अंश = (अंतिम दूध) / (प्रारंभिक दूध) = (2 / 5) / (4 / 5) = 2 / 4 = 1 / 2.\nStep 4: निकाला गया भाग = 1 - 1/2 = 1/2 भाग।\nप्रतिशत में मान = (1 / 2) * 100% = 50%.\nअतः सही विकल्प  50% है।\n\nMethod 2 (Ratio Equating Method):\nStep 1: प्रारंभिक मिश्रण = 4 : 1 (कुल 5 इकाइयाँ)।\nअंतिम मिश्रण = 2 : 3 (कुल 5 इकाइयाँ)।\nStep 2: दूध 4 से घटकर 2 हो जाता है (कमी = 2 इकाइयाँ)।\nStep 3: निकाला गया प्रतिशत = (2 / 4) * 100% = 50%.\nअतः सही उत्तर '50%' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
