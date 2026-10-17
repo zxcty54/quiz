@@ -1,0 +1,249 @@
+[
+  {
+    "p_id": "venndiagram_1",
+    "qe": "A school conducted a scholarship test where 60% of the students passed in English, 70% passed in Math, and 45% passed in both. What is the percentage of students who passed in at least one subject?",
+    "qh": "एक विद्यालय ने एक छात्रवृत्ति परीक्षा आयोजित की जिसमें 60% छात्र अंग्रेजी में, 70% गणित में और 45% दोनों में उत्तीर्ण हुए। कम से कम एक विषय में उत्तीर्ण होने वाले छात्रों का प्रतिशत क्या है?",
+    "oe": [
+      "90%",
+      "75%",
+      "85%",
+      "80%"
+    ],
+    "oh": [
+      "90%",
+      "75%",
+      "85%",
+      "80%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Set Theory Formula):\nAt least one subject me pass hone wale students:\n$P(E \\cup M) = P(E) + P(M) - P(E \\cap M)$\n$= 60\\% + 70\\% - 45\\% = 130\\% - 45\\% = 85\\%$.\nAtah sahi vikalp  85% hai.\n\nMethod 2 (Venn Diagram Method):\nOnly English me pass = $60\\% - 45\\% = 15\\%$.\nOnly Math me pass = $70\\% - 45\\% = 25\\%$.\nBoth English & Math = $45\\%$.\nAt least one subject = $15\\% + 25\\% + 45\\% = 85\\%$.\nAtah sahi uttar '85%' hai.\n\nIs prashn ka moolaadhaar pratishat ka hisaab hai. Vikalp 90%, 75%, 80% is hal se mel nahi khaate. Exam point: pratishat ka hisaab - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "venndiagram_2",
+    "qe": "In a school, the total no. of students who play tennis and cricket both is 180. In that school 70% of the total students play tennis and 60% of the total students play cricket. If the percentage of the students who do not play any game is 25% of the percentage of the students who play cricket, then find the total number of students?",
+    "qh": "एक विद्यालय में टेनिस और क्रिकेट दोनों खेलने वाले विद्यार्थियों की कुल संख्या 180 है। उस विद्यालय में कुल विद्यार्थियों में से 70% टेनिस खेलते हैं और 60% क्रिकेट खेलते हैं। यदि कोई भी खेल न खेलने वाले विद्यार्थियों का प्रतिशत, क्रिकेट खेलने वाले विद्यार्थियों के प्रतिशत का 25% है, तो विद्यार्थियों की कुल संख्या ज्ञात कीजिए।",
+    "oe": [
+      "500",
+      "600",
+      "400",
+      "480"
+    ],
+    "oh": [
+      "500",
+      "600",
+      "400",
+      "480"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-Base Method):\nTotal students = $100\\%$.\nTennis ($T$) = $70\\%$.\nCricket ($C$) = $60\\%$.\nNeither game = $25\\% \\text{ of } 60\\% = \\frac{1}{4} \\times 60\\% = 15\\%$.\nAt least one game ($T \\cup C$) = $100\\% - 15\\% = 85\\%$.\nWe know: $n(T \\cup C) = n(T) + n(C) - n(T \\cap C)$.\n$85\\% = 70\\% + 60\\% - n(T \\cap C)$\n$85\\% = 130\\% - n(T \\cap C) \\implies n(T \\cap C) = 130\\% - 85\\% = 45\\%$.\nGiven: $45\\% = 180$.\n$1\\% = \\frac{180}{45} = 4$.\nTotal number of students ($100\\%$) = $4 \\times 100 = 400$.\nAtah sahi vikalp  400 hai.\n\nMethod 2 (Ratio Method):\nBoth sports percentage = $45\\% = \\frac{9}{20}$.\nGiven: $9\\text{ units} = 180 \\implies 1\\text{ unit} = 20$.\nTotal students = $20\\text{ units} = 20 \\times 20 = 400$.\nAtah sahi uttar '400' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "venndiagram_3",
+    "qe": "In a survey conducted at a university, it was found that 55% of the students like Mathematics, 45% like Physics, and 30% like both Mathematics and Physics. Among the remaining students, 25% prefer Computer Science, while the rest have no preference. If the total number of students surveyed is 800, how many students had no preference for any of the three subjects?",
+    "qh": "एक विश्वविद्यालय में किए गए एक सर्वेक्षण में पाया गया कि 55% छात्र गणित पसंद करते हैं, 45% भौतिकी पसंद करते हैं, और 30% गणित और भौतिकी दोनों पसंद करते हैं। शेष छात्रों में से 25% कंप्यूटर विज्ञान पसंद करते हैं, जबकि शेष की कोई प्राथमिकता नहीं है। यदि सर्वेक्षण में शामिल कुल छात्रों की संख्या 800 है, तो कितने छात्रों की तीनों विषयों में से किसी के लिए भी कोई प्राथमिकता नहीं थी?",
+    "oe": [
+      "160",
+      "200",
+      "220",
+      "180"
+    ],
+    "oh": [
+      "160",
+      "200",
+      "220",
+      "180"
+    ],
+    "a": 3,
+    "e": "Method 1 (Percentage Multiplier Method):\nStudents liking Math or Physics:\n$n(M \\cup P) = 55\\% + 45\\% - 30\\% = 70\\%$.\nRemaining students = $100\\% - 70\\% = 30\\%$.\nAmong the remaining, $25\\%$ prefer Computer Science, so the rest with no preference:\n$= (100\\% - 25\\%) \\text{ of } 30\\% = 75\\% \\text{ of } 30\\% = \\frac{3}{4} \\times 30\\% = 22.5\\%$.\nTotal students with no preference = $22.5\\% \\text{ of } 800 = \\frac{22.5}{100} \\times 800 = 22.5 \\times 8 = 180$.\nAtah sahi vikalp  180 hai.\n\nMethod 2 (Direct Count Method):\nTotal students = $800$.\nRemaining count = $30\\% \\text{ of } 800 = 240$.\nComputer Science count = $25\\% \\text{ of } 240 = 60$.\nNo preference count = $240 - 60 = 180$.\nAtah sahi uttar '180' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "venndiagram_4",
+    "qe": "In a village of 800 people, 60% speaks Hindi, 20% speak English only. If the number of people who did not speak any language is equal to the number of people who speak both languages, then find the number of people who speak both languages.",
+    "qh": "800 लोगों के एक गांव में, 60% हिंदी बोलते हैं, 20% केवल अंग्रेजी बोलते हैं। यदि कोई भी भाषा न बोलने वाले लोगों की संख्या दोनों भाषाएं बोलने वाले लोगों की संख्या के बराबर है, तो दोनों भाषाएं बोलने वाले लोगों की संख्या ज्ञात कीजिए।",
+    "oe": [
+      "320",
+      "160",
+      "200",
+      "180"
+    ],
+    "oh": [
+      "320",
+      "160",
+      "200",
+      "180"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-Base Method):\nTotal people = $100\\% = 800$.\nHindi ($H$) = $60\\%$.\nOnly English = $20\\%$.\nLet both languages = $x\\%$.\nThen neither language = $x\\%$.\nTotal = (People who speak Hindi) + (Only English) + (Neither language)\n$100\\% = 60\\% + 20\\% + x\\%$\n$100\\% = 80\\% + x\\% \\implies x\\% = 20\\%$.\nNumber of people who speak both languages = $20\\% \\text{ of } 800 = \\frac{20}{100} \\times 800 = 160$.\nAtah sahi vikalp  160 hai.\n\nMethod 2 (Count Equation Method):\nTotal = $800$.\nHindi speaking = $60\\% \\text{ of } 800 = 480$.\nOnly English = $20\\% \\text{ of } 800 = 160$.\nLet both = $B$. Then neither = $B$.\nTotal = (Hindi) + (Only English) + (Neither)\n$800 = 480 + 160 + B \\implies 800 = 640 + B \\implies B = 160$.\nAtah sahi uttar '160' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "venndiagram_5",
+    "qe": "A company conducted a survey for THE HINDU and TIMES OF INDIA. By survey it is known that the number of people who like both is equal to the people who did not like anyone. 630 people like only TIMES OF INDIA and 48% like TIMES OF INDIA. If there are a total of 1750 people in the survey, then find the percentage of people who like only THE HINDU.",
+    "qh": "एक कंपनी ने द हिंदू और टाइम्स ऑफ इंडिया के लिए एक सर्वेक्षण किया। सर्वेक्षण से यह ज्ञात हुआ कि दोनों को पसंद करने वाले लोगों की संख्या उन लोगों के बराबर है जो किसी को भी पसंद नहीं करते हैं। 630 लोग केवल टाइम्स ऑफ इंडिया पसंद करते हैं और 48% टाइम्स ऑफ इंडिया पसंद करते हैं। यदि सर्वेक्षण में कुल 1750 लोग हैं, तो केवल द हिंदू पसंद करने वाले लोगों का प्रतिशत ज्ञात कीजिए।",
+    "oe": [
+      "40%",
+      "25%",
+      "30%",
+      "60%"
+    ],
+    "oh": [
+      "40%",
+      "25%",
+      "30%",
+      "60%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Absolute Count Method):\nTotal people surveyed = $1750$.\nPeople who like Times of India (TOI) = $48\\% \\text{ of } 1750 = 0.48 \\times 1750 = 840$.\nOnly TOI = $630$.\nPeople who like both = $\\text{TOI} - \\text{Only TOI} = 840 - 630 = 210$.\nGiven: People who did not like either (Neither) = Both = $210$.\nNow, Total = (Only Hindu) + (TOI) + (Neither)\n$1750 = \\text{Only Hindu} + 840 + 210$\n$1750 = \\text{Only Hindu} + 1050 \\implies \\text{Only Hindu} = 1750 - 1050 = 700$.\nPercentage of people who like only The Hindu = $\\frac{700}{1750} \\times 100\\% = \\frac{2}{5} \\times 100\\% = 40\\%$.\nAtah sahi vikalp  40% hai.\n\nMethod 2 (100-Base Method):\nOnly TOI percentage = $\\frac{630}{1750} \\times 100\\% = 36\\%$.\nBoth percentage = $48\\% - 36\\% = 12\\%$.\nNeither percentage = Both percentage = $12\\%$.\nTotal ($100\\%$) = (Only Hindu) + (TOI) + (Neither)\n$100\\% = \\text{Only Hindu} + 48\\% + 12\\% \\implies \\text{Only Hindu} = 100\\% - 60\\% = 40\\%$.\nAtah sahi uttar '40%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "venndiagram_6",
+    "qe": "In an examination, 50% students passed in physics, 37.5% students passed in chemistry, and 12.5% students passed in both. If in that exam the number of girls is equal to the number of failed students, and 25% of the failed students are girls, which is 20, then find what percent of boys failed?",
+    "qh": "एक परीक्षा में 50% छात्र भौतिकी में, 37.5% छात्र रसायन विज्ञान में और 12.5% छात्र दोनों में उत्तीर्ण हुए। यदि उस परीक्षा में लड़कियों की संख्या अनुत्तीर्ण छात्रों की संख्या के बराबर है और अनुत्तीर्ण छात्रों में से 25% लड़कियां हैं, जो कि 20 हैं, तो अनुत्तीर्ण होने वाले लड़कों का प्रतिशत ज्ञात कीजिए?",
+    "oe": [
+      "50%",
+      "60%",
+      "25%",
+      "66.67%"
+    ],
+    "oh": [
+      "50%",
+      "60%",
+      "25%",
+      "66.67%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Venn Diagram & Step Breakdown):\nPassed in at least one subject:\n$P(P \\cup C) = 50\\% + 37.5\\% - 12.5\\% = 75\\%$.\nTotal failed students (failed in both) = $100\\% - 75\\% = 25\\%$.\nGiven: $25\\%$ of failed students are girls, which is 20:\n$0.25 \\times \\text{Total Failed} = 20 \\implies \\text{Total Failed} = 80$.\nNumber of failed boys = $80 - 20 = 60$.\nTotal students in the exam:\n$25\\% \\text{ of Total Students} = 80 \\implies \\text{Total Students} = 80 \\times 4 = 320$.\nTotal girls = Total failed students = $80$.\nTotal boys = $\\text{Total Students} - \\text{Total Girls} = 320 - 80 = 240$.\nPercent of boys who failed = $\\frac{\\text{Failed Boys}}{\\text{Total Boys}} \\times 100\\% = \\frac{60}{240} \\times 100\\% = 25\\%$.\nAtah sahi vikalp  25% hai.\n\nMethod 2 (Ratio Method):\nFailed boys = 60, Total boys = 240.\nRatio = $\\frac{60}{240} = \\frac{1}{4} = 25\\%$.\nAtah sahi uttar '25%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "venndiagram_7",
+    "qe": "In a college exam, 43 passed in accounts, 42 passed in digital marketing and 40 passed in social science. In all the three exams 10 got passing marks. 22 passed accounts and digital marketing, 23 passed in accounts and social science, 16 passed in digital marketing and social science. Find how much percentage of the students passed only in two subjects to students passed only in one subject.",
+    "qh": "एक कॉलेज परीक्षा में, 43 छात्र अकाउंट्स में, 42 डिजिटल मार्केटिंग में और 40 सोशल साइंस में उत्तीर्ण हुए। तीनों परीक्षाओं में 10 को उत्तीर्ण अंक प्राप्त हुए। 22 अकाउंट्स और डिजिटल मार्केटिंग में, 23 अकाउंट्स और सोशल साइंस में, 16 डिजिटल मार्केटिंग और सोशल साइंस में उत्तीर्ण हुए। ज्ञात कीजिए कि केवल दो विषयों में उत्तीर्ण होने वाले छात्रों की संख्या, केवल एक विषय में उत्तीर्ण होने वाले छात्रों की संख्या का कितना प्रतिशत है?",
+    "oe": [
+      "93.99%",
+      "9.3%",
+      "11.11%",
+      "95%"
+    ],
+    "oh": [
+      "93.99%",
+      "9.3%",
+      "11.11%",
+      "95%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Venn Diagram Method):\nGiven:\n- All three subjects = 10\n- Students passed in exactly two subjects:\n  - Accounts & Digital Marketing only = 22 - 10 = 12\n  - Accounts & Social Science only = 23 - 10 = 13\n  - Digital Marketing & Social Science only = 16 - 10 = 6\n  - Total passed in exactly two subjects = 12 + 13 + 6 = 31\n- Students passed in exactly one subject:\n  - Accounts only = 43 - (12 + 13 + 10) = 43 - 35 = 8\n  - Digital Marketing only = 42 - (12 + 6 + 10) = 42 - 28 = 14\n  - Social Science only = 40 - (13 + 6 + 10) = 40 - 29 = 11\n  - Total passed in exactly one subject = 8 + 14 + 11 = 33\nRequired percentage = (31 / 33) * 100% ≈ 93.939% ≈ 93.99%.\nAtah sahi vikalp  93.99% hai.\n\nMethod 2 (Formula Method):\nSum of double intersections = 22 + 23 + 16 = 61.\nNumber of students in exactly two subjects = 61 - 3 * 10 = 31.\nSum of single subjects = 43 + 42 + 40 = 125.\nNumber of students in exactly one subject = 125 - 2 * 61 + 3 * 10 = 125 - 122 + 30 = 33.\nRequired percentage = (31 / 33) * 100% ≈ 93.99%.\nAtah sahi uttar '93.99%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "venndiagram_8",
+    "qe": "In an examination, 53% of students passed in Mathematics, 61% passed in Physics, and 60% passed in Chemistry. In pair combinations, 24% passed in Math & Physics, 35% in Physics & Chemistry, and 27% in Math & Chemistry. If 5% of students passed in none of the subjects, find the ratio of the percentage of students passing in Math & Chemistry but not Physics to those passing in Physics & Chemistry but not Math.",
+    "qh": "एक परीक्षा में 53% विद्यार्थी गणित में, 61% भौतिकी में और 60% रसायन विज्ञान में उत्तीर्ण हुए। युग्मों में, 24% गणित और भौतिकी में, 35% भौतिकी और रसायन में तथा 27% गणित और रसायन में उत्तीर्ण हुए। यदि 5% विद्यार्थी किसी भी विषय में उत्तीर्ण नहीं हुए, तो गणित और रसायन में उत्तीर्ण लेकिन भौतिकी में नहीं, का भौतिकी और रसायन में उत्तीर्ण लेकिन गणित में नहीं होने वाले विद्यार्थियों से अनुपात क्या है?",
+    "oe": [
+      "7 : 5",
+      "5 : 7",
+      "4 : 5",
+      "5 : 4"
+    ],
+    "oh": [
+      "7 : 5",
+      "5 : 7",
+      "4 : 5",
+      "5 : 4"
+    ],
+    "a": 1,
+    "e": "Method 1 (Set Theory Union Formula):\nStudents passing in at least one subject = 100% - 5% = 95%.\nLet x% be the percentage passing in all three subjects.\nUsing the three-set principle:\n95 = (53 + 61 + 60) - (24 + 35 + 27) + x\n95 = 174 - 86 + x\n95 = 88 + x ==> x = 7%.\n\nNow find the exclusive two-subject regions:\n- Passing Math & Chemistry but not Physics = (Math ∩ Chemistry) - (All three) = 27% - 7% = 20%.\n- Passing Physics & Chemistry but not Math = (Physics ∩ Chemistry) - (All three) = 35% - 7% = 28%.\n\nRequired Ratio = 20% : 28% = 5 : 7.\nAtah sahi vikalp  5 : 7 hai.\n\nMethod 2 (Region Allocation):\nDirectly subtracting the central triple intersection x = 7%:\nOnly (M ∩ C) = 27 - 7 = 20%.\nOnly (P ∩ C) = 35 - 7 = 28%.\nRatio = 20 : 28 = 5 : 7.\nAtah sahi uttar '5 : 7' hai.\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "venndiagram_9",
+    "qe": "In a class of 50 students, 20 play hockey, 15 play cricket, and 11 play football. Exactly 7 play both hockey and cricket, 4 play cricket and football, and 5 play hockey and football. If 18 students do not play any of the three sports, find the ratio of students who play all three sports to those who play exactly two of these sports.",
+    "qh": "50 विद्यार्थियों की एक कक्षा में, 20 हॉकी खेलते हैं, 15 क्रिकेट खेलते हैं और 11 फुटबॉल खेलते हैं। 7 विद्यार्थी हॉकी और क्रिकेट दोनों खेलते हैं, 4 क्रिकेट और फुटबॉल खेलते हैं, तथा 5 हॉकी और फुटबॉल खेलते हैं। यदि 18 विद्यार्थी इनमें से कोई भी खेल नहीं खेलते हैं, तो तीनों खेल खेलने वाले विद्यार्थियों का केवल दो खेल खेलने वाले विद्यार्थियों से अनुपात ज्ञात कीजिए।",
+    "oe": [
+      "1 : 3",
+      "1 : 7",
+      "1 : 5",
+      "4 : 3"
+    ],
+    "oh": [
+      "1 : 3",
+      "1 : 7",
+      "1 : 5",
+      "4 : 3"
+    ],
+    "a": 2,
+    "e": "Method 1 (Inclusion-Exclusion Principle):\nStudents playing at least one game = 50 - 18 = 32.\nLet k denote the number of students playing all three games.\nUsing the union formula:\n32 = (20 + 15 + 11) - (7 + 4 + 5) + k\n32 = 46 - 16 + k\n32 = 30 + k ==> k = 2.\n\nStudents playing exactly two sports:\n= (7 - k) + (4 - k) + (5 - k)\n= (7 - 2) + (4 - 2) + (5 - 2) = 5 + 2 + 3 = 10.\n\nRequired Ratio = (All three) : (Exactly two) = 2 : 10 = 1 : 5.\nAtah sahi vikalp  1 : 5 hai.\n\nMethod 2 (Venn Diagram Regions):\nTriple overlap = 2.\nHockey & Cricket only = 7 - 2 = 5.\nCricket & Football only = 4 - 2 = 2.\nHockey & Football only = 5 - 2 = 3.\nTotal in exactly two = 5 + 2 + 3 = 10.\nRatio = 2 : 10 = 1 : 5.\nAtah sahi uttar '1 : 5' hai.\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "venndiagram_10",
+    "qe": "A company pays 13% commission on overall sales. Alternatively, a salesman can opt for a fixed monthly salary of ₹4,700 along with a 7% commission on sales exceeding ₹12,000. Under the second option, his earnings are ₹620 higher. Find the total sales made by the salesman.",
+    "qh": "एक कंपनी कुल बिक्री पर 13% कमीशन देती है। वैकल्पिक रूप से, विक्रेता ₹4,700 का निश्चित वेतन और ₹12,000 से अधिक की बिक्री पर 7% कमीशन प्राप्त कर सकता है। दूसरे विकल्प के तहत उसे ₹620 अधिक मिलते हैं। विक्रेता द्वारा की गई कुल बिक्री ज्ञात कीजिए।",
+    "oe": [
+      "₹50,000",
+      "₹52,000",
+      "₹57,000",
+      "₹54,000"
+    ],
+    "oh": [
+      "₹50,000",
+      "₹52,000",
+      "₹57,000",
+      "₹54,000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equation Method):\nLet total sales be S.\nCommission under '₹50,000' = 0.13 * S.\nEarnings under '₹52,000' = 4700 + 0.07 * (S - 12000)\n= 4700 + 0.07 * S - 840 = 3860 + 0.07 * S.\nGiven:\n(3860 + 0.07 * S) - 0.13 * S = 620\n3860 - 0.06 * S = 620\n0.06 * S = 3860 - 620 = 3240\nS = 3240 / 0.06 = ₹54,000.\nAtah sahi vikalp  ₹54,000 hai.\n\nMethod 2 (Shift Method):\nIf the 7% rate applied from zero sales, the fixed amount would reduce by 7% of 12000 = ₹840, giving 4700 - 840 = ₹3860.\nThe net difference between 13% and 7% on total sales must bridge ₹3860 down to the net advantage of ₹620:\n(13% - 7%) of S = 3860 - 620\n6% of S = 3240 ==> S = 3240 / 0.06 = ₹54,000.\nAtah sahi uttar '₹54,000' hai.\n\nExam point: sansthaon aur unke karyon ka milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "venndiagram_11",
+    "qe": "A marketing agent earns 2% commission on the first ₹2,00,000 of sales, 1.5% on the next ₹2,00,000, and 1% on any remaining balance in a month. If the total sales generated in April 2018 were ₹5,68,000, what was the total commission earned?",
+    "qh": "एक विपणन एजेंट को महीने में पहले ₹2,00,000 की बिक्री पर 2%, अगले ₹2,00,000 पर 1.5% और शेष बिक्री पर 1% कमीशन मिलता है। यदि अप्रैल 2018 में अर्जित कुल बिक्री ₹5,68,000 थी, तो कुल कितना कमीशन मिला?",
+    "oe": [
+      "₹8,680",
+      "₹7,730",
+      "₹8,240",
+      "₹7,105"
+    ],
+    "oh": [
+      "₹8,680",
+      "₹7,730",
+      "₹8,240",
+      "₹7,105"
+    ],
+    "a": 0,
+    "e": "Method 1 (Slab Breakdown):\n- Slab 1 (First ₹2,00,000): 2% of 2,00,000 = ₹4,000\n- Slab 2 (Next ₹2,00,000): 1.5% of 2,00,000 = ₹3,000\n- Slab 3 (Balance sales above ₹4,00,000): 5,68,000 - 4,00,000 = ₹1,68,000\n  Commission = 1% of 1,68,000 = ₹1,680\n\nTotal Commission = 4000 + 3000 + 1680 = ₹8,680.\nAtah sahi vikalp  ₹8,680 hai.\n\nMethod 2 (Direct Weighted Sum):\nTotal = (200000 * 0.02) + (200000 * 0.015) + (168000 * 0.01)\n= 4000 + 3000 + 1680 = ₹8,680.\nAtah sahi uttar '₹8,680' hai.\n\nExam point: sansthaon aur unke karyon ka milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "venndiagram_12",
+    "qe": "Two saleswomen, Kavitha and Kalyani, receive 12% and 15% commission respectively on their total sales. Kavitha gets an extra 3% bonus and Kalyani gets an extra 5% bonus on sales exceeding ₹20,000. If each made the same total sales and the difference between their earnings is ₹7,600, find Kavitha's total earnings.",
+    "qh": "दो महिला विक्रेताओं, कविता और कल्याणी को कुल बिक्री पर क्रमशः 12% और 15% कमीशन मिलता है। कविता को ₹20,000 से अधिक की बिक्री पर 3% और कल्याणी को 5% अतिरिक्त बोनस मिलता है। यदि दोनों की कुल बिक्री समान है और उनकी कुल कमाई का अंतर ₹7,600 है, तो कविता की कुल कमाई ज्ञात कीजिए।",
+    "oe": [
+      "₹19,200",
+      "₹21,600",
+      "₹17,800",
+      "₹23,400"
+    ],
+    "oh": [
+      "₹19,200",
+      "₹21,600",
+      "₹17,800",
+      "₹23,400"
+    ],
+    "a": 3,
+    "e": "Method 1 (Algebraic Setup):\nLet total sales made by each be S (where S > 20000).\n- Kavitha's total earnings = 12% of S + 3% of (S - 20000) = 15% of S - 600\n- Kalyani's total earnings = 15% of S + 5% of (S - 20000) = 20% of S - 1000\n\nDifference in earnings (Kalyani - Kavitha):\n(0.20 * S - 1000) - (0.15 * S - 600) = 7600\n0.05 * S - 400 = 7600\n0.05 * S = 8000 ==> S = 8000 / 0.05 = ₹1,60,000.\n\nKavitha's total earnings:\n= (15% of 160000) - 600 = 24000 - 600 = ₹23,400.\nAtah sahi vikalp  ₹23,400 hai.\n\nMethod 2 (Rate Difference Breakdown):\n- On first ₹20,000: Rate difference = 15% - 12% = 3% ==> ₹600.\n- On sales above ₹20,000: Effective rates are (12 + 3) = 15% and (15 + 5) = 20%. Difference = 5%.\nTotal difference = 600 + 5% of (S - 20000) = 7600\n5% of (S - 20000) = 7000 ==> S - 20000 = 1,40,000 ==> S = 1,60,000.\nKavitha's earnings = (12% of 160000) + (3% of 140000) = 19200 + 4200 = ₹23,400.\nAtah sahi uttar '₹23,400' hai.\n\nExam point: sansthaon aur unke karyon ka milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "venndiagram_13",
+    "qe": "A salesman receives a commission of a% on the first ₹3,000 worth of sales and b% on all sales beyond that. In January, his commission was ₹960 on sales of ₹7,000. In February, his commission was ₹1,110 on sales of ₹8,000. Find the values of a and b.",
+    "qh": "एक विक्रेता को पहले ₹3,000 की बिक्री पर a% तथा उससे आगे की बिक्री पर b% कमीशन मिलता है। जनवरी में ₹7,000 की बिक्री पर उसने ₹960 अर्जित किए और फरवरी में ₹8,000 की बिक्री पर ₹1,110 अर्जित किए। a और b का मान ज्ञात कीजिए।",
+    "oe": [
+      "12%, 15%",
+      "15%, 12%",
+      "10%, 15%",
+      "12%, 10%"
+    ],
+    "oh": [
+      "12%, 15%",
+      "15%, 12%",
+      "10%, 15%",
+      "12%, 10%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Incremental Difference Method):\n- Sales above ₹3,000 in January = 7000 - 3000 = ₹4,000.\n- Sales above ₹3,000 in February = 8000 - 3000 = ₹5,000.\nIncrease in sales = 5000 - 4000 = ₹1,000.\nIncrease in commission = 1110 - 960 = ₹150.\nSince the additional sales fall completely in the second slab:\nb% of 1000 = 150 ==> b = (150 / 1000) * 100% = 15%.\n\nSubstitute b = 15% into January's earnings:\nCommission from first ₹3,000 = 960 - (15% of 4000) = 960 - 600 = ₹360.\na% of 3000 = 360 ==> a = (360 / 3000) * 100% = 12%.\nHence, a = 12% and b = 15%.\nAtah sahi vikalp  12%, 15% hai.\n\nMethod 2 (Simultaneous Equations):\n30a + 40b = 960 --- (1)\n30a + 50b = 1110 --- (2)\nSubtracting (1) from (2): 10b = 150 ==> b = 15%.\nFrom (1): 30a + 40(15) = 960 ==> 30a = 360 ==> a = 12%.\nAtah sahi uttar '12%, 15%' hai.\n\nExam point: sansthaon aur unke karyon ka milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
