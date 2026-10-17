@@ -1,0 +1,97 @@
+[
+  {
+    "p_id": "contractor_ap_1",
+    "qe": "A contractor employs 15 men to complete a work in 24 days, working 8 hours per day. After six days, he adds five more men but also reduces the working hours to six per day from the seventh day onwards. If all men work with the same efficiency throughout, how many more days will be required to finish the remaining work?",
+    "qh": "एक ठेकेदार प्रतिदिन 8 घंटे कार्य करके 24 दिनों में एक कार्य पूरा करने के लिए 15 पुरुषों को काम पर रखता है। छह दिनों के बाद, वह पाँच और पुरुषों को शामिल करता है लेकिन सातवें दिन से कार्य के घंटों को घटाकर छह घंटे प्रतिदिन कर देता है। यदि सभी पुरुष पूरे समय समान दक्षता से कार्य करते हैं, तो शेष कार्य को पूरा करने के लिए कितने और दिनों की आवश्यकता होगी?",
+    "oe": [
+      "20",
+      "18",
+      "21",
+      "22"
+    ],
+    "oh": [
+      "20",
+      "18",
+      "21",
+      "22"
+    ],
+    "a": 1,
+    "e": "Method 1 (Remaining Work Hours Method):\nStep 1: 15 पुरुषों के लिए 6 दिन कार्य करने के बाद शेष दिन = 24 - 6 = 18 दिन।\nशेष कार्य (मानव-घंटे) = 15 पुरुष × 18 दिन × 8 घंटे/दिन = 2160 मानव-घंटे।\nStep 2: 7वें दिन से पुरुषों की कुल संख्या = 15 + 5 = 20 पुरुष।\nप्रतिदिन नए कार्य के घंटे = 6 घंटे/दिन।\nप्रतिदिन होने वाला कुल कार्य = 20 × 6 = 120 मानव-घंटे/दिन।\nStep 3: शेष कार्य को पूरा करने में लगा अतिरिक्त समय = 2160 / 120 = 18 दिन।\nअतः सही विकल्प  18 है।\n\nMethod 2 (MDH Formula Method):\nStep 1: सूत्र: M1 × D1 × H1 = M2 × D2 × H2\n15 × 18 × 8 = 20 × D2 × 6\nStep 2: D2 के लिए हल करने पर:\nD2 = (15 × 18 × 8) / (20 × 6) = (270 × 8) / 120 = 2160 / 120 = 18 दिन।\nअतः सही उत्तर '18' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "contractor_ap_2",
+    "qe": "A contractor decided to complete a work in 80 days and employed 60 men at the beginning and 20 men additionally after 20 days and got the work completed as per schedule. If he had not employed the additional men, how many extra days would he have needed to complete the work (round off to the nearest integer)?",
+    "qh": "एक ठेकेदार ने 80 दिनों में एक कार्य पूरा करने का निर्णय लिया और शुरुआत में 60 पुरुषों को काम पर रखा और 20 दिनों के बाद अतिरिक्त 20 पुरुषों को काम पर रखा और कार्य निर्धारित समय पर पूरा कर लिया। यदि उसने अतिरिक्त पुरुषों को काम पर नहीं रखा होता, तो उसे कार्य पूरा करने के लिए कितने अतिरिक्त दिनों की आवश्यकता होती (निकटतम पूर्णांक तक)?",
+    "oe": [
+      "32 days",
+      "20 days",
+      "30 days",
+      "26 days"
+    ],
+    "oh": [
+      "32 days",
+      "20 days",
+      "30 days",
+      "26 days"
+    ],
+    "a": 1,
+    "e": "Method 1 (Total Work Equating Method):\nStep 1: वास्तविक निष्पादित कार्य की गणना:\n- पहले 20 दिन 60 पुरुषों ने कार्य किया: 60 × 20 = 1200 मानव-दिन।\n- शेष 80 - 20 = 60 दिन (60 + 20 = 80) पुरुषों ने कार्य किया: 80 × 60 = 4800 मानव-दिन।\nकुल कार्य = 1200 + 4800 = 6000 मानव-दिन।\nStep 2: यदि केवल मूल 60 पुरुष ही पूरे समय कार्य करते:\nलिया गया कुल समय = 6000 / 60 = 100 दिन।\nStep 3: निर्धारित समय 80 दिन था, अतः आवश्यक अतिरिक्त दिन:\nअतिरिक्त दिन = 100 - 80 = 20 दिन।\nअतः सही विकल्प  20 days है।\n\nMethod 2 (Additional Work Shift Method):\nStep 1: 20 अतिरिक्त पुरुषों ने 60 दिन कार्य किया = 20 × 60 = 1200 मानव-दिन।\nStep 2: इस 1200 मानव-दिन के कार्य को मूल 60 पुरुषों द्वारा पूरा करने में अतिरिक्त दिन लगेंगे:\nअतिरिक्त दिन = 1200 / 60 = 20 दिन।\nअतः सही उत्तर '20 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "contractor_ap_3",
+    "qe": "A civil contractor planned to build an over bridge of 3 km distance in 600 days. For this purpose, he employed 90 workers. After 200 days of work, it was observed that only 0.5 km of the bridge was completed. What is the number of extra workers required to complete the work in time?",
+    "qh": "एक सिविल ठेकेदार ने 600 दिनों में 3 किमी दूरी का एक ओवरब्रिज बनाने की योजना बनाई। इस उद्देश्य के लिए, उसने 90 श्रमिकों को नियोजित किया। 200 दिनों के कार्य के बाद, यह देखा गया कि पुल का केवल 0.5 किमी ही पूरा हुआ था। कार्य को समय पर पूरा करने के लिए आवश्यक अतिरिक्त श्रमिकों की संख्या क्या है?",
+    "oe": [
+      "100",
+      "140",
+      "125",
+      "135"
+    ],
+    "oh": [
+      "100",
+      "140",
+      "125",
+      "135"
+    ],
+    "a": 3,
+    "e": "Method 1 (MD / W Formula Method):\nStep 1: पहली स्थिति: M1 = 90 श्रमिक, D1 = 200 दिन, W1 = 0.5 किमी।\nदूसरी स्थिति: शेष कार्य W2 = 3 - 0.5 = 2.5 किमी, शेष समय D2 = 600 - 200 = 400 दिन, कुल श्रमिक = M2।\nStep 2: सूत्र (M1 × D1) / W1 = (M2 × D2) / W2 में मान रखने पर:\n(90 × 200) / 0.5 = (M2 × 400) / 2.5\nStep 3: गणना करने पर:\n18000 / 0.5 = 400M2 / 2.5\n36000 = 160M2\nM2 = 36000 / 160 = 225 श्रमिक।\nStep 4: आवश्यक अतिरिक्त श्रमिक = M2 - M1 = 225 - 90 = 135 श्रमिक।\nअतः सही विकल्प  135 है।\n\nMethod 2 (Proportion Ratio Method):\nStep 1: कार्य का अनुपात = 2.5 / 0.5 = 5 गुना।\nसमय का अनुपात = 400 / 200 = 2 गुना।\nStep 2: आवश्यक कुल श्रमिक = 90 × (5 / 2) = 225 श्रमिक।\nStep 3: अतिरिक्त श्रमिक = 225 - 90 = 135 श्रमिक।\nअतः सही उत्तर '135' है।\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "contractor_ap_4",
+    "qe": "60 men can complete a work in 40 days. They start work together but after every 10 day, 5 men leave the work. In how many days will the work be completed?",
+    "qh": "60 पुरुष एक कार्य को 40 दिनों में पूरा कर सकते हैं। वे एक साथ कार्य शुरू करते हैं लेकिन प्रत्येक 10 दिन के बाद, 5 पुरुष कार्य छोड़ देते हैं। कार्य कितने दिनों में पूरा होगा?",
+    "oe": [
+      "47.5",
+      "49.5",
+      "42.5",
+      "45.5"
+    ],
+    "oh": [
+      "47.5",
+      "49.5",
+      "42.5",
+      "45.5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step 10-Day Interval Method):\nStep 1: कुल कार्य = 60 × 40 = 2400 मानव-दिन।\nStep 2: प्रत्येक 10 दिनों के अंतराल में किया गया कार्य निकालें:\n- पहले 10 दिन (60 पुरुष): 60 × 10 = 600 (कुल = 600)\n- 11 से 20 दिन (55 पुरुष): 55 × 10 = 550 (कुल = 1150)\n- 21 से 30 दिन (50 पुरुष): 50 × 10 = 500 (कुल = 1650)\n- 31 से 40 दिन (45 पुरुष): 45 × 10 = 450 (कुल = 2100)\nStep 3: 40 दिनों के बाद शेष कार्य = 2400 - 2100 = 300 मानव-दिन।\nStep 4: 41वें दिन से कार्य करने वाले पुरुष = 45 - 5 = 40 पुरुष।\nStep 5: 300 मानव-दिन पूरा करने में लगा समय = 300 / 40 = 7.5 दिन।\nStep 6: कुल समय = 40 + 7.5 = 47.5 दिन।\nअतः सही विकल्प  47.5 है।\n\nMethod 2 (Arithmetic Progression Verification):\nStep 1: 40 दिनों में कार्य = 10 × (60 + 55 + 50 + 45) = 10 × 210 = 2100 इकाइयाँ।\nStep 2: शेष = 300 इकाइयाँ। अगले चरण में 40 व्यक्ति काम करेंगे ==> 300 / 40 = 7.5 दिन।\nकुल दिन = 40 + 7.5 = 47.5 दिन।\nअतः सही उत्तर '47.5' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "contractor_ap_5",
+    "qe": "Each one of five men independently can complete a work in 20 days. The work is started by one person. Next day one more person joins and every next day one more person joins. From the fifth day, five persons continued working as a team. In how many days, will the work be completed?",
+    "qh": "पाँच पुरुषों में से प्रत्येक स्वतंत्र रूप से 20 दिनों में एक कार्य पूरा कर सकता है। कार्य एक व्यक्ति द्वारा शुरू किया जाता है। अगले दिन एक और व्यक्ति जुड़ता है और प्रत्येक अगले दिन एक और व्यक्ति जुड़ता है। पाँचवें दिन से, पाँचों व्यक्ति एक टीम के रूप में कार्य करना जारी रखते हैं। कार्य कितने दिनों में पूरा होगा?",
+    "oe": [
+      "2",
+      "6",
+      "3",
+      "5"
+    ],
+    "oh": [
+      "2",
+      "6",
+      "3",
+      "5"
+    ],
+    "a": 1,
+    "e": "Method 1 (Day-by-Day Progression Method):\nStep 1: प्रत्येक पुरुष अकेले 20 दिनों में कार्य पूरा करता है, अतः कुल कार्य = 20 इकाइयाँ (प्रत्येक व्यक्ति की दक्षता = 1 इकाई/दिन)।\nStep 2: प्रारंभिक 4 दिनों का कार्य निकालें:\n- दिन 1 (1 व्यक्ति) = 1 इकाई\n- दिन 2 (2 व्यक्ति) = 2 इकाइयाँ\n- दिन 3 (3 व्यक्ति) = 3 इकाइयाँ\n- दिन 4 (4 व्यक्ति) = 4 इकाइयाँ\nपहले 4 दिनों में कुल कार्य = 1 + 2 + 3 + 4 = 10 इकाइयाँ।\nStep 3: शेष कार्य = 20 - 10 = 10 इकाइयाँ।\nStep 4: 5वें दिन से सभी 5 व्यक्ति कार्य करते हैं (दक्षता = 5 इकाइयाँ/दिन):\nशेष 10 इकाइयों को पूरा करने में लगा समय = 10 / 5 = 2 दिन (दिन 5 और दिन 6)।\nStep 5: कार्य पूरा होने में लगे कुल दिन = 4 + 2 = 6 दिन।\nअतः सही विकल्प  6 है।\n\nMethod 2 (Unit Work Summation):\nदिन 1: 1\nदिन 2: 2 (योग = 3)\nदिन 3: 3 (योग = 6)\nदिन 4: 4 (योग = 10)\nदिन 5: 5 (योग = 15)\nदिन 6: 5 (योग = 20 - कार्य समाप्त!)\nकुल दिन = 6 दिन।\nअतः सही उत्तर '6' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
