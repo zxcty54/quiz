@@ -1,0 +1,97 @@
+[
+  {
+    "p_id": "3successive_1",
+    "qe": "A store offers three successive of 20%, 10%, and 5% on a shirt. What is the single equivalent discount?",
+    "qh": "एक स्टोर एक शर्ट पर 20%, 10% और 5% की तीन क्रमिक छूट प्रदान करता है। एकल समतुल्य छूट क्या है?",
+    "oe": [
+      "35.4%",
+      "31.6%",
+      "36.6%",
+      "34%"
+    ],
+    "oh": [
+      "35.4%",
+      "31.6%",
+      "36.6%",
+      "34%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Convert percentage discounts into fractional ratios:\n- 20% discount = 1/5 ==> MP : SP1 = 5 : 4\n- 10% discount = 1/10 ==> SP1 : SP2 = 10 : 9\n- 5% discount = 1/20 ==> SP2 : SP3 = 20 : 19\nStep 2: Combine ratios across successive transactions:\nInitial MP : Final SP = (5 * 10 * 20) : (4 * 9 * 19) = 1000 : 684 = 100 : 68.4.\nStep 3: Calculate net discount percentage:\nNet Discount = 100 - 68.4 = 31.6%.\nHence, correct option is (b) 31.6%.\n\nMethod 2 (100-Base Method):\nStep 1: Let base Marked Price = 100.\nStep 2: After 20% discount: 100 * 0.80 = 80.\nStep 3: After 10% discount: 80 * 0.90 = 72.\nStep 4: After 5% discount: 72 * 0.95 = 68.4.\nStep 5: Single equivalent discount = 100 - 68.4 = 31.6%.\nHence, correct answer is '31.6%'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "3successive_2",
+    "qe": "The single discount equivalent to the discount series of 15%, 20% and 5% is:",
+    "qh": "15%, 20% और 5% की छूट श्रृंखला के समतुल्य एकल छूट है:",
+    "oe": [
+      "35.4%",
+      "20%",
+      "32%",
+      "32.5%"
+    ],
+    "oh": [
+      "35.4%",
+      "20%",
+      "32%",
+      "32.5%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Convert percentage discounts into fractional multipliers:\n- 15% discount = 3/20 ==> 20 : 17\n- 20% discount = 1/5 ==> 5 : 4\n- 5% discount = 1/20 ==> 20 : 19\nStep 2: Composite ratio:\nInitial MP : Final SP = (20 * 5 * 20) : (17 * 4 * 19) = 2000 : 1292 = 100 : 64.6.\nStep 3: Net equivalent discount = 100 - 64.6 = 35.4%.\nHence, correct option is (a) 35.4%.\n\nMethod 2 (100-Base Method):\nStep 1: Successive formula for 20% and 15%: 20 + 15 - (20 * 15 / 100) = 35 - 3 = 32%.\nStep 2: Combine 32% with remaining 5%: 32 + 5 - (32 * 5 / 100) = 37 - 1.6 = 35.4%.\nHence, correct answer is '35.4%'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "3successive_3",
+    "qe": "A shopkeeper wanted to sell ₹2,000 worth of products. But he had two options, giving three successive discounts of 10% each or giving a single discount of 28%. What was the difference between the two options of discounts (in rupees)?",
+    "qh": "एक दुकानदार ₹2,000 मूल्य के उत्पाद बेचना चाहता था। लेकिन उसके पास दो विकल्प थे, प्रत्येक 10% की तीन क्रमिक छूट देना या 28% की एकल छूट देना। छूट के दोनों विकल्पों के बीच क्या अंतर था (रुपये में)?",
+    "oe": [
+      "₹28",
+      "₹18",
+      "₹16",
+      "₹22"
+    ],
+    "oh": [
+      "₹28",
+      "₹18",
+      "₹16",
+      "₹22"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Three successive discounts of 10% each (1/10 each):\nMP : SP = 10^3 : 9^3 = 1000 : 729 = 100 : 72.9.\nNet Discount 1 = 100 - 72.9 = 27.1%.\nStep 2: '₹18' offers a single flat discount:\nNet Discount 2 = 28%.\nStep 3: Difference between the two discount percentages:\nDifference% = 28% - 27.1% = 0.9%.\nStep 4: Compute cash value of difference on ₹2,000:\nDifference = 0.9% of 2000 = (0.9 / 100) * 2000 = ₹18? Wait, let's verify:\nWait, 0.9 * 20 = ₹18 ('₹18')!\nLet's check '₹18': ₹18. '₹22' is ₹22, '₹28' is ₹28, '₹16' is ₹16.\nCalculation: 28% of 2000 = ₹560.\nThree 10% successive discounts on 2000:\nFirst: 2000 - 200 = 1800.\nSecond: 1800 - 180 = 1620.\nThird: 1620 - 162 = 1458.\nTotal Discount 1 = 2000 - 1458 = ₹542.\nDifference = 560 - 542 = ₹18.\nHence, correct option is (b) ₹18.\n\nMethod 2 (100-Base Method):\nStep 1: D1 = 100 - (0.90)^3 * 100 = 100 - 72.9 = 27.1%.\nStep 2: D2 = 28%.\nStep 3: Difference% = 28% - 27.1% = 0.9%.\nStep 4: Difference in amount = 2000 * 0.009 = ₹18.\nHence, correct answer is '₹22'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "3successive_4",
+    "qe": "Find a single discount equivalent to the successive discount of 12%, 20%, 24% and 32%. (Correct to two places of decimals)",
+    "qh": "12%, 20%, 24% और 32% की क्रमिक छूट के समतुल्य एकल छूट ज्ञात कीजिए। (दो दशमलव स्थानों तक सही)",
+    "oe": [
+      "43.41%",
+      "73.71%",
+      "63.62%",
+      "53.51%"
+    ],
+    "oh": [
+      "43.41%",
+      "73.71%",
+      "63.62%",
+      "53.51%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Multiplicative Factor Method):\nStep 1: Determine remaining multipliers for each successive discount:\n- 12% discount ==> 0.88\n- 20% discount ==> 0.80\n- 24% discount ==> 0.76\n- 32% discount ==> 0.68\nStep 2: Compute composite final price ratio:\nFinal SP / Initial MP = 0.88 * 0.80 * 0.76 * 0.68\n= 0.704 * 0.5168\n= 0.3638272 ≈ 36.38%.\nStep 3: Effective single discount percentage:\nSingle Discount% = 100% - 36.38% = 63.62%.\nHence, correct option is (c) 63.62%.\n\nMethod 2 (100-Base Method):\nStep 1: Base MP = 100.\nStep 2: SP = 100 * (1 - 0.12) * (1 - 0.20) * (1 - 0.24) * (1 - 0.32) = 100 * 0.88 * 0.80 * 0.76 * 0.68 = 36.38.\nStep 3: Net equivalent discount = 100 - 36.38 = 63.62%.\nHence, correct answer is '63.62%'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "3successive_5",
+    "qe": "What is the single discount equivalent to the successive discounts of 20%, 35%, and 10%?",
+    "qh": "20%, 35% और 10% की क्रमिक छूटों के समतुल्य एकल छूट क्या है?",
+    "oe": [
+      "53.20%",
+      "48.75%",
+      "52.40%",
+      "55.00%"
+    ],
+    "oh": [
+      "53.20%",
+      "48.75%",
+      "52.40%",
+      "55.00%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Convert percentage discounts into fractional multipliers:\n- 20% discount = 1/5 ==> 5 : 4\n- 35% discount = 7/20 ==> 20 : 13\n- 10% discount = 1/10 ==> 10 : 9\nStep 2: Combine ratios:\nInitial MP : Final SP = (5 * 20 * 10) : (4 * 13 * 9) = 1000 : 468 = 100 : 46.8.\nStep 3: Single equivalent discount = 100 - 46.8 = 53.20%.\nHence, correct option is (a) 53.20%.\n\nMethod 2 (100-Base Method):\nStep 1: Successive discount of 20% and 35%: 20 + 35 - (20 * 35 / 100) = 55 - 7 = 48%.\nStep 2: Combine 48% with 10%: 48 + 10 - (48 * 10 / 100) = 58 - 4.8 = 53.20%.\nHence, correct answer is '53.20%'.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
