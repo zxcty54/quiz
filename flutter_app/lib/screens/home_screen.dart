@@ -273,29 +273,6 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
       }
     } catch (_) {}
 
-    final String apiUrl = "https://api.github.com/repos/zxcty54/content_base/contents/$encodedPath?ref=main&t=$ts";
-    try {
-      final apiRes = await http.get(
-        Uri.parse(apiUrl),
-        headers: {
-          'Accept': 'application/vnd.github.v3.raw',
-          'User-Agent': 'MockTesterApp-Flutter',
-          'Cache-Control': 'no-cache, no-store, must-revalidate',
-          'Pragma': 'no-cache',
-        },
-      ).timeout(const Duration(seconds: 4));
-
-      if (apiRes.statusCode == 200) {
-        String rawBody = utf8.decode(apiRes.bodyBytes).trim();
-        if (rawBody.startsWith('\uFEFF')) rawBody = rawBody.substring(1).trim();
-        rawBody = rawBody.replaceAll(r'```json', '').replaceAll(r'```', '').trim();
-        if (!rawBody.startsWith('<') && !rawBody.startsWith('<!DOCTYPE')) {
-          final dynamic parsed = jsonDecode(rawBody);
-          if (parsed != null) return parsed;
-        }
-      }
-    } catch (_) {}
-
     List<String> mirrorUrls = [
       "https://raw.githack.com/zxcty54/content_base/main/$encodedPath",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",

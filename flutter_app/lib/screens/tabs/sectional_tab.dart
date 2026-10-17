@@ -103,9 +103,9 @@ class _SectionalTabState extends State<SectionalTab> {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     final List<String> urls = [
       "$_contentProxyBase/sectional_data.json",
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/sectional_data.json?t=$ts",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/sectional_data.json?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/sectional_data.json?t=$ts",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/sectional_data.json?t=$ts",
     ];
 
     for (String url in urls) {

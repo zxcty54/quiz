@@ -103,9 +103,9 @@ class BpscRotationService {
   static Future<dynamic> _fetchWithMirrors(String fileName) async {
     final List<String> mirrors = [
       "$_contentProxyBase/knowyourbihar/$fileName",
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/knowyourbihar/$fileName",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/knowyourbihar/$fileName",
       "https://raw.githack.com/zxcty54/content_base/main/knowyourbihar/$fileName",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/knowyourbihar/$fileName",
     ];
 
     for (String url in mirrors) {

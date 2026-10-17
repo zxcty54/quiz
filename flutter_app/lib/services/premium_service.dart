@@ -59,17 +59,28 @@ class PremiumService {
     return config;
   }
 
-  // Config lao: pehle Cloudflare Worker, gir jaye to GitHub raw backup
+  // Config lao: 1) Cloudflare Worker (auto-pilot) 2) GitHub CDN mirrors
+  // (raw sabse aakhir me — kuch ISP par direct raw block ho jata hai)
   static Future<http.Response> _fetchConfig() async {
-    try {
-      final r = await http
-          .get(Uri.parse(_configUrl), headers: {'X-App-Key': _configAppKey})
-          .timeout(const Duration(seconds: 8));
-      if (r.statusCode == 200) return r;
-    } catch (_) {}
-    return http
-        .get(Uri.parse(_configGithubUrl))
-        .timeout(const Duration(seconds: 8));
+    final int ts = DateTime.now().millisecondsSinceEpoch;
+    final List<String> urls = [
+      _configUrl,
+      'https://raw.githack.com/zxcty54/content_base/main/app_config.json',
+      'https://cdn.statically.io/gh/zxcty54/content_base/main/app_config.json',
+      'https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/app_config.json?t=$ts',
+      'https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/app_config.json?t=$ts',
+      _configGithubUrl,
+    ];
+    for (final u in urls) {
+      try {
+        final r = await http
+            .get(Uri.parse(u),
+                headers: u == _configUrl ? {'X-App-Key': _configAppKey} : null)
+            .timeout(const Duration(seconds: 8));
+        if (r.statusCode == 200) return r;
+      } catch (_) {}
+    }
+    return http.Response('', 599);
   }
 
   static Future<String> currentUserId() async {

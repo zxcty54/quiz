@@ -28,9 +28,9 @@ class ChallengeService {
   static Future<dynamic> _fetchOnline(String relativePath) async {
     final List<String> urls = [
       "$_contentProxyBase/$relativePath",
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/$relativePath",
       "https://raw.githack.com/zxcty54/content_base/main/$relativePath",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$relativePath",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/$relativePath",
     ];
 
     for (String url in urls) {

@@ -23,27 +23,36 @@ final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.lig
 // 🔄 GitHub Remote Config Fetcher
 Future<void> _syncAppConfig() async {
   try {
-    http.Response response;
-    try {
-      response = await http
-          .get(Uri.parse('$_contentProxyBase/app_config.json'),
-              headers: {'X-App-Key': _contentAppKey})
-          .timeout(const Duration(seconds: 10));
-      if (response.statusCode != 200) throw Exception('proxy status');
-    } catch (_) {
-      // Backup rasta: GitHub raw se seedha (repo public rehte hi chalega)
-      response = await http
-          .get(Uri.parse(
-              'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/app_config.json'))
-          .timeout(const Duration(seconds: 10));
+    // Do raste: 1) Cloudflare Worker (auto-pilot) 2) GitHub CDN mirrors
+    final int cts = DateTime.now().millisecondsSinceEpoch;
+    final List<String> configUrls = [
+      '$_contentProxyBase/app_config.json',
+      'https://raw.githack.com/zxcty54/content_base/main/app_config.json',
+      'https://cdn.statically.io/gh/zxcty54/content_base/main/app_config.json',
+      'https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/app_config.json?t=$cts',
+      'https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/app_config.json?t=$cts',
+      'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/app_config.json',
+    ];
+    http.Response? response;
+    for (final u in configUrls) {
+      try {
+        final r = await http
+            .get(Uri.parse(u),
+                headers: u.startsWith(_contentProxyBase)
+                    ? {'X-App-Key': _contentAppKey}
+                    : null)
+            .timeout(const Duration(seconds: 10));
+        response = r;
+        if (r.statusCode == 200) break;
+      } catch (_) {}
     }
 
-    if (response.statusCode == 200) {
+    if (response != null && response.statusCode == 200) {
       final Map<String, dynamic> config = jsonDecode(utf8.decode(response.bodyBytes));
       AiExplainerService.updateModelFromConfig(config);
       debugPrint("✅ App config successfully synced with AiExplainerService");
     } else {
-      debugPrint("⚠️ Failed to load app_config.json: Status ${response.statusCode}");
+      debugPrint("⚠️ Failed to load app_config.json: Status ${response?.statusCode}");
     }
   } catch (e) {
     debugPrint("Config sync network error: $e");

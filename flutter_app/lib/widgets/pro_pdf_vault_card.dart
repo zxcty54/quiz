@@ -92,9 +92,9 @@ class ProPdfVaultCardState extends State<ProPdfVaultCard> {
 
     final List<String> endpoints = [
       "$_contentProxyBase/books_database.json",
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/books_database.json?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/books_database.json?t=$ts",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/books_database.json?t=$ts",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/books_database.json?t=$ts",
     ];
 
     for (final url in endpoints) {

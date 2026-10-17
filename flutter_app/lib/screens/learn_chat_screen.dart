@@ -130,15 +130,18 @@ class _LearnChatScreenState extends State<LearnChatScreen> {
 
     // 🚀 Robust Multi-CDN Fallback Order targeting content_base
     List<String> mirrorUrls = [
-      // 1. Direct Raw GitHub with Cache Buster (100% Guaranteed Source)
+      // 0. Cloudflare Worker (private content_base ka darwaza)
       "$_contentProxyBase/$encodedPath",
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/$encodedPath?t=$ts",
-      // 2. GitHack Cloudflare Dev Gateway
+      // 1. GitHack Gateway
       "https://raw.githack.com/zxcty54/content_base/main/$encodedPath",
-      // 3. Statically CDN
+      // 2. Statically CDN
       "https://cdn.statically.io/gh/zxcty54/content_base/main/$encodedPath",
-      // 4. Fastly CDN
+      // 3. Fastly CDN
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
+      // 4. jsDelivr CDN
+      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/$encodedPath?t=$ts",
+      // 5. Direct Raw GitHub (aakhri — kuch ISP par block hota hai)
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/$encodedPath?t=$ts",
     ];
 
     for (String url in mirrorUrls) {

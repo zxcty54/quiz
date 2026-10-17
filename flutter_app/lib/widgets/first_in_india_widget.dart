@@ -141,15 +141,23 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
     }
 
     final int timestamp = DateTime.now().millisecondsSinceEpoch;
-    final String newsUrl =
-        "$_contentProxyBase/app_alerts_news.json?t=$timestamp";
+    // Do raste: 1) Cloudflare Worker  2) GitHub CDN mirrors (raw aakhir me)
+    final List<String> newsUrls = [
+      "$_contentProxyBase/app_alerts_news.json?t=$timestamp",
+      "https://raw.githack.com/zxcty54/content_base/main/app_alerts_news.json",
+      "https://cdn.statically.io/gh/zxcty54/content_base/main/app_alerts_news.json",
+      "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/app_alerts_news.json?t=$timestamp",
+      "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/app_alerts_news.json?t=$timestamp",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/app_alerts_news.json?t=$timestamp",
+    ];
 
-    try {
-      final res = await http.get(Uri.parse(newsUrl), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 5));
-      if (res.statusCode == 200) {
+    bool loadedNews = false;
+    for (final u in newsUrls) {
+      try {
+        final res = await http.get(Uri.parse(u), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 5));
+        if (res.statusCode != 200) continue;
         String decoded = utf8.decode(res.bodyBytes);
         final data = jsonDecode(decoded);
-
         if (mounted) {
           setState(() {
             _alertNewsList = _extractList(data);
@@ -158,12 +166,11 @@ class FirstInIndiaWidgetState extends State<FirstInIndiaWidget> {
         }
         await prefs.setString(cacheDataKey, decoded);
         await prefs.setString(cacheDateKey, todayStr);
-      } else {
-        if (mounted) setState(() => _isLoading = false);
-      }
-    } catch (_) {
-      if (mounted) setState(() => _isLoading = false);
+        loadedNews = true;
+        break;
+      } catch (_) {}
     }
+    if (!loadedNews && mounted) setState(() => _isLoading = false);
   }
 
   List<dynamic> _extractList(dynamic data) {

@@ -78,10 +78,10 @@ class LatestJobsWidgetState extends State<LatestJobsWidget>
 
     final List<String> endpoints = [
       '$_contentProxyBase/sarkarijob.json',
-      'https://raw.githubusercontent.com/zxcty54/content_base/main/sarkarijob.json?t=$timestamp',
       'https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/sarkarijob.json?t=$timestamp',
       'https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/sarkarijob.json?t=$timestamp',
       'https://raw.githack.com/zxcty54/content_base/main/sarkarijob.json?t=$timestamp',
+      'https://raw.githubusercontent.com/zxcty54/content_base/main/sarkarijob.json?t=$timestamp',
     ];
 
     for (final endpoint in endpoints) {

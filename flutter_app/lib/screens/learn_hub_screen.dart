@@ -70,9 +70,9 @@ class _LearnHubScreenState extends State<LearnHubScreen> {
     // 🚀 Updated to public content_base repo
     final List<String> urls = [
       "$_contentProxyBase/learn_data.json",
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/learn_data.json?t=$ts",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/learn_data.json?t=$ts",
       "https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/learn_data.json?t=$ts",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/learn_data.json?t=$ts",
     ];
 
     for (String url in urls) {

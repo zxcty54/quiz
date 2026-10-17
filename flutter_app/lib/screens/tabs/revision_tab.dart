@@ -180,9 +180,9 @@ class _RevisionTabState extends State<RevisionTab> {
     final int ts = DateTime.now().millisecondsSinceEpoch;
     final List<String> urls = [
       "$_contentProxyBase/subject_mapping.json",
-      "https://raw.githubusercontent.com/zxcty54/content_base/main/subject_mapping.json?t=$ts",
       "https://raw.githack.com/zxcty54/content_base/main/subject_mapping.json",
       "https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/subject_mapping.json?t=$ts",
+      "https://raw.githubusercontent.com/zxcty54/content_base/main/subject_mapping.json?t=$ts",
     ];
 
     for (String url in urls) {
