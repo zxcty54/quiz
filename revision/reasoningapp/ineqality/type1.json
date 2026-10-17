@@ -1,0 +1,291 @@
+[
+  {
+    "p_id": "type1_1",
+    "qe": "Statement: A > B = C ≥ D\nConclusions: I. A ≥ C, II. B = D",
+    "qh": "कथन: A > B = C ≥ D\nनिष्कर्ष: I. A ≥ C, II. B = D",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (Inequality Priority Shortcut):\nStep 1: A se C tak ke chinh dekhein: '>' aur '='.\n- Priority rule: '>' aur '=' me hamesha '>' ko prathmikta milti hai, atah sahi sambandh $A > C$ hai. Conclusion I ($A \\ge C$) galat hai.\nStep 2: B se D tak ke chinh dekhein: '=' aur '≥'.\n- Priority rule: '=' aur '≥' me hamesha '≥' ko prathmikta milti hai, atah sahi sambandh $B \\ge D$ hai. Conclusion II ($B = D$) galat hai.\nAtah dono nishkarsh asatya hain.\nCorrect option  Neither I nor II follows hai.\n\nMethod 2 (Definite Relation Check):\n$A > B = C \\implies A > C$. $B = C \\ge D \\implies B \\ge D$. Kisi bhi sthiti me $A \\ge C$ ya $B = D$ nishchit nahi hai.\nSahi uttar 'Neither I nor II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_2",
+    "qe": "Statement: M ≥ R > T = U\nConclusions: I. M > T, II. R > U",
+    "qh": "कथन: M ≥ R > T = U\nनिष्कर्ष: I. M > T, II. R > U",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Priority Hierarchy Shortcut):\nStep 1: Conclusion I ($M > T$): M se T ke beech chinh '≥' aur '>' hain. High priority sign '>' hone ke karan nishkarsh $M > T$ poori tarah satya hai (Follows).\nStep 2: Conclusion II ($R > U$): R se U ke beech chinh '>' aur '=' hain. High priority sign '>' hone ke karan nishkarsh $R > U$ bhi poori tarah satya hai (Follows).\nDono nishkarsh follow karte hain.\nCorrect option  Both I and II follow hai.\n\nMethod 2 (Step-by-Step Traversal):\n$M \\ge R > T \\implies M > T$ (True). $R > T = U \\implies R > U$ (True). Dono satya hain.\nSahi uttar 'Both I and II follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_3",
+    "qe": "Statement: U < R = T ≤ P = S ≥ Q > U\nConclusions: I. U < T, II. R ≤ P, III. S > U",
+    "qh": "कथन: U < R = T ≤ P = S ≥ Q > U\nनिष्कर्ष: I. U < T, II. R ≤ P, III. S > U",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "All follow"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "All follow"
+    ],
+    "a": 3,
+    "e": "Method 1 (Sign Priority Shortcut):\nStep 1: U se T ke beech: '<' aur '=' $\\implies U < T$ satya hai (I follows).\nStep 2: R se P ke beech: '=' aur '≤' $\\implies R \\le P$ satya hai (II follows).\nStep 3: S se U ke beech: '≥' aur '>' $\\implies S > U$ satya hai (III follows).\nTeeno nishkarsh nishchit roop se follow karte hain.\nCorrect option  All follow hai.\n\nMethod 2 (Direct Inspection):\n$U < R = T \\implies U < T$. $R = T \\le P \\implies R \\le P$. $S \\ge Q > U \\implies S > U$. Sabhi satya hain.\nSahi uttar 'All follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_4",
+    "qe": "Statement: A = B < C ≤ D\nConclusions: I. C > A, II. C < A",
+    "qh": "कथन: A = B < C ≤ D\nनिष्कर्ष: I. C > A, II. C < A",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (Reverse Direction Shortcut):\nStep 1: Statement me A se C ki taraf jane par chinh '=' aur '<' hain, jisse $A < C$ banta hai.\nStep 2: Jab C se A ki taraf dekhenge (right to left), toh chinh ulat jate hain ($<$ ban jata hai $>$). Atah sahi sambandh $C > A$ hai.\nStep 3: Conclusion I ($C > A$) satya hai aur Conclusion II ($C < A$) asatya hai.\nCorrect option  Only I follows hai.\n\nMethod 2 (Simple Substitution):\n$A = B$ hai aur $B < C$ hai $\\implies A < C$, jise $C > A$ bhi likha ja sakta hai. Kewal Conclusion I follow karta hai.\nSahi uttar 'Only I follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_5",
+    "qe": "Statement: M < R > T > U ≥ S\nConclusions: I. T > M, II. T < M, III. S < T, IV. S > T",
+    "qh": "कथन: M < R > T > U ≥ S\nनिष्कर्ष: I. T > M, II. T < M, III. S < T, IV. S > T",
+    "oe": [
+      "Only I and II follow",
+      "Only II and III follow",
+      "Only I and III follow",
+      "Only III follows"
+    ],
+    "oh": [
+      "Only I and II follow",
+      "Only II and III follow",
+      "Only I and III follow",
+      "Only III follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (Opposite Family Sign / Block Condition Shortcut):\nStep 1: T aur M ke beech me dekhein: M < R aur R > T. Yahan dono viprit parivar ke chinh ('<' aur '>') aapas me takra rahe hain (Condition Block).\n- Condition Block hone par koi definite sambandh nahi banta, isliye Conclusion I aur II dono galat hain.\nStep 2: S se T ke beech dekhein: T > U ≥ S $\\implies T > S$, jise ulat kar likhne par $S < T$ satya banta hai (Conclusion III follows).\n- Conclusion IV ($S > T$) asatya hai.\nAtah kewal Conclusion III follow karta hai.\nCorrect option  Only III follows hai.\n\nMethod 2 (Sign Analysis):\nM aur T ke beech opposite signs hain isliye I aur II galat hain. T se S ki or '>' aur '≥' hain, jisse $T > S \\implies S < T$ satya hai.\nSahi uttar 'Only III follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_6",
+    "qe": "Statement: A > B < C\nConclusions: I. A > C, II. A ≥ C, III. A = C",
+    "qh": "कथन: A > B < C\nनिष्कर्ष: I. A > C, II. A ≥ C, III. A = C",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "None follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (Condition Block Rule Shortcut):\nStep 1: A se C ke beech jane par viprit parivar ke chinh '>' aur '<' aate hain.\nStep 2: Golden Rule: Jab bhi do tatvon ke beech viprit chinh ('<' aur '>') aa jayein, toh unke beech Condition Block ban jata hai aur unka koi nishchit sambandh (definite relation) nahi banta.\nStep 3: Atah A aur C ke beech ka koi bhi nishchit nishkarsh (I, II, III) satya nahi hoga.\nCorrect option  None follows hai.\n\nMethod 2 (Logical Independence Method):\nA bhi B se bada hai aur C bhi B se bada hai. Lekin A aur C me se kaun bada hai ya dono barabar hain, yeh tay nahi kiya ja sakta.\nSahi uttar 'None follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_7",
+    "qe": "Statements: A > B ; C ≥ D ; B = C\nConclusions: I. A > C, II. B ≥ D",
+    "qh": "कथन: A > B ; C ≥ D ; B = C\nनिष्कर्ष: I. A > C, II. B ≥ D",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Common Term Combining Shortcut):\nStep 1: Common term ke madhyam se sabhi ko ek sath jodein: $A > B = C \\ge D$.\nStep 2: A se C tak dekhein: '>' aur '=' me prathmikta '>' ko milti hai $\\implies A > C$ 100% satya hai (I follows).\nStep 3: B se D tak dekhein: '=' aur '≥' me prathmikta '≥' ko milti hai $\\implies B \\ge D$ 100% satya hai (II follows).\nDono nishkarsh follow karte hain.\nCorrect option  Both I and II follow hai.\n\nMethod 2 (Direct Substitution):\n$B = C$ hone ke karan $A > B \\implies A > C$. Isi tarah $C \\ge D \\implies B \\ge D$. Dono satya hain.\nSahi uttar 'Both I and II follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_8",
+    "qe": "Statements: R > T ; U < T ; U > P\nConclusions: I. R > U, II. T > P",
+    "qh": "कथन: R > T ; U < T ; U > P\nनिष्कर्ष: I. R > U, II. T > P",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Chain Formation Shortcut):\nStep 1: Kathano ko ek chain me jodein: $R > T > U > P$.\nStep 2: Conclusion I ($R > U$): R se U tak sabhi chinh '>' hain, atah $R > U$ satya hai (Follows).\nStep 3: Conclusion II ($T > P$): T se P tak sabhi chinh '>' hain, atah $T > P$ satya hai (Follows).\nDono nishkarsh follow karte hain.\nCorrect option  Both I and II follow hai.\n\nMethod 2 (Direct Inspection):\n$R > T$ aur $T > U \\implies R > U$. $T > U$ aur $U > P \\implies T > P$. Dono anivarya roop se satya hain.\nSahi uttar 'Both I and II follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_9",
+    "qe": "Statements: M > N ≤ R ; P ≤ N > U\nConclusions: I. M > U, II. M > P, III. R < U",
+    "qh": "कथन: M > N ≤ R ; P ≤ N > U\nनिष्कर्ष: I. M > U, II. M > P, III. R < U",
+    "oe": [
+      "Only I and III follow",
+      "Only I and II follow",
+      "Only III follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I and III follow",
+      "Only I and II follow",
+      "Only III follows",
+      "None follows"
+    ],
+    "a": 1,
+    "e": "Method 1 (Common Term 'N' Connection Shortcut):\nStep 1: Common term 'N' ke madhyam se sambandh banayein:\n- M se U tak: $M > N > U \\implies$ High priority sign '>' hone se $M > U$ satya hai (Conclusion I follows).\n- M se P tak: $M > N \\ge P \\implies$ High priority sign '>' hone se $M > P$ satya hai (Conclusion II follows).\n- R se U tak: $R \\ge N > U \\implies R > U$ banta hai, parantu Conclusion III me $R < U$ diya hai (Does not follow).\nAtah kewal I aur II follow karte hain.\nCorrect option  Only I and II follow hai.\n\nMethod 2 (Step-by-Step Priority Check):\n$M > N > U \\implies M > U$ (True). $M > N \\ge P \\implies M > P$ (True). $R \\ge N > U \\implies R > U \\ne R < U$ (False).\nSahi uttar 'Only I and II follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_10",
+    "qe": "Statements: M > N ≥ T ; R < N ≤ P\nConclusions: I. M > R, II. M > P, III. T ≤ P",
+    "qh": "कथन: M > N ≥ T ; R < N ≤ P\nनिष्कर्ष: I. M > R, II. M > P, III. T ≤ P",
+    "oe": [
+      "Only I and III follow",
+      "Only I and II follow",
+      "Only III follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I and III follow",
+      "Only I and II follow",
+      "Only III follows",
+      "None follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (Sign Alignment & Direction Shortcut):\nStep 1: M se R tak: $M > N > R \\implies M > R$ bilkul sahi hai (Conclusion I follows).\nStep 2: M se P tak: $M > N$ aur $N \\le P$ $\\implies M > N \\le P$ (Viprit chinh aane se condition block ho gayi, Conclusion II does not follow).\nStep 3: T se P tak: $T \\le N \\le P \\implies T \\le P$ bilkul sahi hai (Conclusion III follows).\nAtah kewal I aur III follow karte hain.\nCorrect option  Only I and III follow hai.\n\nMethod 2 (Block Condition Identification):\nM aur P ke beech '>' aur '≤' aate hain jo block banate hain. R se M aur T se P ke beech ek hi parivar ke chinh hain, atah I aur III satya hain.\nSahi uttar 'Only I and III follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_11",
+    "qe": "Statements: R > P ≥ U = S ; P < W = Y\nConclusions: I. R > W, II. U < W",
+    "qh": "कथन: R > P ≥ U = S ; P < W = Y\nनिष्कर्ष: I. R > W, II. U < W",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "a": 1,
+    "e": "Method 1 (Common Element 'P' Shortcut):\nStep 1: Conclusion I ($R > W$): R se W tak jane ke liye $R > P < W$ banta hai. Yahan viprit chinh ('>' aur '<') aane ke karan block banta hai, atah Conclusion I galat hai.\nStep 2: Conclusion II ($U < W$): U se W tak: $U \\le P < W \\implies U < W$ satya hai (Conclusion II follows).\nAtah kewal II follow karta hai.\nCorrect option  Only II follows hai.\n\nMethod 2 (Direct Path Method):\n$W > P \\ge U \\implies W > U$, jise $U < W$ likha jata hai. $R$ aur $W$ me koi seedha marg nahi hai kyunki $P$ beech me aakar sign flip karta hai. Kewal II sahi hai.\nSahi uttar 'Only II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_12",
+    "qe": "Statements: M > N ≥ R ; N > T ≤ U\nConclusions: I. M ≥ R, II. N ≤ U",
+    "qh": "कथन: M > N ≥ R ; N > T ≤ U\nनिष्कर्ष: I. M ≥ R, II. N ≤ U",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (Sign Priority & Block Rule Shortcut):\nStep 1: Conclusion I ($M \\ge R$): M se R tak $M > N \\ge R$ hai. Yahan high priority sign '>' hai, isliye sahi nishkarsh $M > R$ hoga. Conclusion I ($M \\ge R$) galat hai.\nStep 2: Conclusion II ($N \\le U$): N se U tak $N > T \\le U$ hai. Viprit chinh ('>' aur '≤') aane ke karan relation block ho jata hai, atah Conclusion II galat hai.\nAtah koi bhi follow nahi karta.\nCorrect option  None follows hai.\n\nMethod 2 (Direct Inspection):\n$M > N \\ge R \\implies M > R \\ne M \\ge R$. $N > T \\le U$ me opposite signs hone se $N$ aur $U$ me koi nishchit sambandh nahi banta.\nSahi uttar 'None follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_13",
+    "qe": "Statement: R > U ≥ P ≤ S > T\nConclusions: I. R < P, II. P ≤ T, III. P < T",
+    "qh": "कथन: R > U ≥ P ≤ S > T\nनिष्कर्ष: I. R < P, II. P ≤ T, III. P < T",
+    "oe": [
+      "Only I and II follow",
+      "Only II and III follow",
+      "Only II follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I and II follow",
+      "Only II and III follow",
+      "Only II follows",
+      "None follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (Direction & Block Evaluation Shortcut):\nStep 1: R se P tak dekhein: $R > U \\ge P \\implies R > P$. Conclusion I me $R < P$ diya hai, atah yeh galat hai.\nStep 2: P se T tak dekhein: $P \\le S > T$. Yahan '≤' aur '>' viprit parivar ke chinh aate hain (Block condition), jisse P aur T ke beech koi definite sambandh nahi nikalta.\n- Atah Conclusion II ($P \\le T$) aur Conclusion III ($P < T$) dono asatya hain.\nKoyi bhi nishkarsh follow nahi karta.\nCorrect option  None follows hai.\n\nMethod 2 (Direct Path Verification):\n$R > P$ hone ke karan $R < P$ asatya hai. $P$ aur $T$ ke beech opposite signs aane se koi bhi definite conclusion nikalna sambhav nahi hai.\nSahi uttar 'None follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_14",
+    "qe": "Which of the following options makes 'M > P' and 'U ≤ R' definitely true in the expression: M _ N _ U _ P _ Q _ R",
+    "qh": "निम्नलिखित में से कौन-सा विकल्प अभिव्यक्ति M _ N _ U _ P _ Q _ R में 'M > P' और 'U ≤ R' को निश्चित रूप से सत्य बनाता है?",
+    "oe": [
+      "≥, >, =, <, <",
+      "≤, ≤, ≤, ≤, ≤",
+      "≤, =, >, >, >",
+      ">, >, =, <, ≤",
+      ">, =, =, ≤, ≤"
+    ],
+    "oh": [
+      "≥, >, =, <, <",
+      "≤, ≤, ≤, ≤, ≤",
+      "≤, =, >, >, >",
+      ">, >, =, <, ≤",
+      ">, =, =, ≤, ≤"
+    ],
+    "a": 4,
+    "e": "Method 1 (Sign Family Filter Shortcut):\nStep 1: 'M > P' ko satya banane ke liye M se P tak Greater family ke chinh hone chahiye aur kam se kam ek '>' chinh anivarya hai. Isse options '≤, ≤, ≤, ≤, ≤' and '≤, =, >, >, >' eliminate ho jate hain.\nStep 2: 'U ≤ R' ko satya banane ke liye U se R tak Less-than-or-equal family ('≤', '=') ke chinh hone chahiye aur koi bhi '<' chinh nahi aana chahiye (kyunki '<' aane par $U < R$ ban jayega).\n- options '≥, >, =, <, <' and '>, >, =, <, ≤' me '<' chinh maujood hai jo $U < R$ bana dega, isliye yeh galat hain.\nStep 3: '>, =, =, ≤, ≤' check karein: $M > N = U = P \\le Q \\le R$.\n- $M > N = U = P \\implies M > P$ (Satya).\n- $U = P \\le Q \\le R \\implies U \\le R$ (Satya).\nCorrect option  hai.\n\nMethod 2 (Strict Equality Matching):\n$U \\le R$ me strict equality hold karne ke liye kewal '≤' aur '=' ka aana zaroori hai. '>, =, =, ≤, ≤' dono sharton ko santusht karta hai.\nSahi uttar '>, =, =, ≤, ≤' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type1_15",
+    "qe": "Which of the following options makes 'A > D' and 'C ≤ F' definitely true in the expression: A _ B _ C _ D _ E _ F",
+    "qh": "निम्नलिखित में से कौन-सा विकल्प अभिव्यक्ति A _ B _ C _ D _ E _ F में 'A > D' और 'C ≤ F' को निश्चित रूप से सत्य बनाता है?",
+    "oe": [
+      ">, ≥, =, <, <",
+      "≥, >, =, <, <",
+      ">, ≥, =, ≤, ≤",
+      ">, <, =, ≤, ≤",
+      ">, =, >, ≤, ≤"
+    ],
+    "oh": [
+      ">, ≥, =, <, <",
+      "≥, >, =, <, <",
+      ">, ≥, =, ≤, ≤",
+      ">, <, =, ≤, ≤",
+      ">, =, >, ≤, ≤"
+    ],
+    "a": 2,
+    "e": "Method 1 (Dual Condition Elimination Shortcut):\nStep 1: 'C ≤ F' ko satya hone ke liye C se F tak kewal '≤' aur '=' chinh aane chahiye, koi '<' nahi aana chahiye.\n- options '>, ≥, =, <, <' and '≥, >, =, <, <' me antim do chinh '<, <' hain, isliye yeh eliminate ho gaye.\nStep 2: 'A > D' ko satya hone ke liye A se D tak greater family ke chinh hone chahiye bina kisi opposite sign ke.\n- '>, <, =, ≤, ≤' me doosra chinh '<' aa jata hai jo condition block banata hai, isliye eliminate.\nStep 3: '>, ≥, =, ≤, ≤' test karein: $A > B \\ge C = D \\le E \\le F$:\n- A se D tak: $A > B \\ge C = D \\implies A > D$ (Satya).\n- C se F tak: $C = D \\le E \\le F \\implies C \\le F$ (Satya).\nCorrect option  hai.\n\nMethod 2 (Direct Priority Verification):\n'>, ≥, =, ≤, ≤' me A se D tak high priority '>' maujood hai aur C se F tak kewal '=' tatha '≤' hain. Dono maange gaye nishkarsh 100% sidhh hote hain.\nSahi uttar '>, ≥, =, ≤, ≤' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
