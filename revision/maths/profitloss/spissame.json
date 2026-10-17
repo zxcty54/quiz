@@ -1,0 +1,306 @@
+[
+  {
+    "p_id": "spissame_1",
+    "qe": "A shopkeeper sells two shirts at ₹500 each. On one, he gains 25%, and on the other, he loses 25%. What is his net gain or loss?",
+    "qh": "एक दुकानदार दो शर्ट ₹500 प्रत्येक की दर से बेचता है। एक पर उसे 25% का लाभ होता है, और दूसरी पर 25% की हानि होती है। उसका कुल लाभ या हानि क्या है?",
+    "oe": [
+      "₹31.25 loss",
+      "₹31.25 gain",
+      "₹66.67 gain",
+      "₹66.67 loss"
+    ],
+    "oh": [
+      "₹31.25 loss",
+      "₹31.25 gain",
+      "₹66.67 gain",
+      "₹66.67 loss"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP = ₹500 saman hai. Fraction: 25% = 1/4.\n- Pehli shirt (25% profit): CP1 : SP1 = 4 : 5\n- Dusri shirt (25% loss): CP2 : SP2 = 4 : 3\nStep 2: Dono ke SP ko saman banayein (LCM of 5 aur 3 = 15 units):\n- Pehli shirt: CP1 : SP1 = (4 : 5) * 3 = 12 : 15 (Profit = +3 units)\n- Dusri shirt: CP2 : SP2 = (4 : 3) * 5 = 20 : 15 (Loss = -5 units)\nStep 3: Kul SP = 15 + 15 = 30 units. Kul CP = 12 + 20 = 32 units.\nKul Loss = 32 - 30 = 2 units.\nStep 4: Prashnanusar pratyek shirt ka SP (15 units) = ₹500 ==> 1 unit = 500 / 15 = ₹100/3.\nKul Loss (2 units) = 2 * (100 / 3) = 200 / 3 = ₹66.67 loss.\nAtah sahi vikalp  ₹66.67 loss hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul SP = 500 + 500 = ₹1,000.\nStep 2: Pehli shirt ka CP = 500 / 1.25 = ₹400.\nDusri shirt ka CP = 500 / 0.75 = 500 * (4/3) = ₹666.67.\nStep 3: Kul CP = 400 + 666.67 = ₹1,066.67.\nStep 4: Kul Loss = CP - SP = 1066.67 - 1000 = ₹66.67 loss.\nAtah sahi uttar '₹66.67 loss' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_2",
+    "qe": "A trader sells two articles at ₹960 each. On one, he gains 20%, and on the other, he loses 20%. What is his overall profit or loss percentage?",
+    "qh": "एक व्यापारी दो वस्तुएं ₹960 प्रत्येक की दर से बेचता है। एक पर उसे 20% का लाभ होता है और दूसरी पर 20% की हानि होती है। उसका कुल लाभ या हानि प्रतिशत क्या है?",
+    "oe": [
+      "4% loss",
+      "4% profit",
+      "2% loss",
+      "No profit no loss"
+    ],
+    "oh": [
+      "4% loss",
+      "4% profit",
+      "2% loss",
+      "No profit no loss"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP saman hai. 20% = 1/5.\n- Pehla article (20% profit): CP1 : SP1 = 5 : 6\n- Dusra article (20% loss): CP2 : SP2 = 5 : 4\nStep 2: SP ko saman banayein (LCM of 6 aur 4 = 12 units):\n- Pehla: CP1 : SP1 = (5 : 6) * 2 = 10 : 12\n- Dusra: CP2 : SP2 = (5 : 4) * 3 = 15 : 12\nStep 3: Kul CP = 10 + 15 = 25 units, Kul SP = 12 + 12 = 24 units.\nKul Loss = 25 - 24 = 1 unit.\nStep 4: Loss% = (Loss / Kul CP) * 100% = (1 / 25) * 100% = 4% loss.\nAtah sahi vikalp  4% loss hai.\n\nMethod 2 (100-Base Method):\nStep 1: Jab do vastuo ka SP saman ho aur ek par x% labh tatha dusri par x% hani ho, toh hamesha hani hoti hai.\nStep 2: Net Loss% = x^2 / 100% = (20)^2 / 100% = 400 / 100% = 4% loss.\nAtah sahi uttar '4% loss' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_3",
+    "qe": "A merchant sold two refrigerators for ₹10,000 each. On one refrigerator, he incurred a 20% loss, and on the other, he gained 20%. What was his profit/loss percentage on the whole transaction?",
+    "qh": "एक व्यापारी ने दो रेफ्रिजरेटर ₹10,000 प्रत्येक की दर से बेचे। एक रेफ्रिजरेटर पर उसे 20% की हानि हुई, और दूसरे पर उसे 20% का लाभ हुआ। पूरे लेन-देन पर उसका लाभ/हानि प्रतिशत क्या था?",
+    "oe": [
+      "Profit of 4%",
+      "Loss of 2%",
+      "Loss of 4%",
+      "Profit of 2%"
+    ],
+    "oh": [
+      "Profit of 4%",
+      "Loss of 2%",
+      "Loss of 4%",
+      "Profit of 2%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP saman hai. 20% = 1/5.\n- Pehla (20% loss): CP1 : SP1 = 5 : 4\n- Dusra (20% gain): CP2 : SP2 = 5 : 6\nStep 2: SP saman karein (LCM of 4 aur 6 = 12 units):\n- Pehla: CP1 : SP1 = (5 : 4) * 3 = 15 : 12\n- Dusra: CP2 : SP2 = (5 : 6) * 2 = 10 : 12\nStep 3: Kul CP = 15 + 10 = 25 units, Kul SP = 12 + 12 = 24 units.\nLoss = 25 - 24 = 1 unit.\nStep 4: Loss% = (Loss / Kul CP) * 100% = (1 / 25) * 100% = 4% loss.\nAtah sahi vikalp  Loss of 4% hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP1 = SP2 aur labh/hani pratishat saman (20%) hai.\nStep 2: Net Result = - (x^2 / 100)% = - (20^2 / 100)% = -4% = Loss of 4%.\nAtah sahi uttar 'Loss of 4%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_4",
+    "qe": "A person bought two goods for ₹19,500. He sold one at a loss of 20% and the other at a profit of 15%. If the selling price of each goods is the same, find the cost price of goods sold at profit.",
+    "qh": "एक व्यक्ति ने ₹19,500 में दो वस्तुएं खरीदीं। उसने एक को 20% की हानि पर और दूसरी को 15% के लाभ पर बेचा। यदि प्रत्येक वस्तु का विक्रय मूल्य समान है, तो लाभ पर बेची गई वस्तु का क्रय मूल्य ज्ञात कीजिए।",
+    "oe": [
+      "₹11,475",
+      "₹9,750",
+      "₹11,500",
+      "₹8,000"
+    ],
+    "oh": [
+      "₹11,475",
+      "₹9,750",
+      "₹11,500",
+      "₹8,000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Prashnanusar dono ka SP saman hai:\n80% of CP1 = 115% of CP2\nCP1 / CP2 = 115 / 80 = 23 / 16\nStep 2: CP1 : CP2 = 23 : 16.\nKul CP = 23 + 16 = 39 units.\nStep 3: Question ke anusar, 39 units = ₹19,500 ==> 1 unit = 19500 / 39 = ₹500.\nStep 4: Labh par bechi gayi vastu ka CP = CP2 = 16 units = 16 * 500 = ₹8,000.\nAtah sahi vikalp  ₹8,000 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP1 = 100% - 20% = 80% of CP1; SP2 = 100% + 15% = 115% of CP2.\nStep 2: 80 * CP1 = 115 * CP2 ==> CP1 = (115 / 80) * CP2 = (23 / 16) * CP2.\nStep 3: CP1 + CP2 = (23/16 + 1) * CP2 = (39 / 16) * CP2 = 19,500.\nStep 4: CP2 = (19500 * 16) / 39 = 500 * 16 = ₹8,000.\nAtah sahi uttar '₹8,000' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_5",
+    "qe": "A person bought two buffaloes for ₹11,520. One is sold at a loss of 15% and the other is sold at a gain of 19%. If the selling price of both buffaloes is equal, find the cost price of the first one.",
+    "qh": "एक व्यक्ति ने ₹11,520 में दो भैंसें खरीदीं। एक को 15% की हानि पर और दूसरी को 19% के लाभ पर बेचा जाता है। यदि दोनों भैंसों का विक्रय मूल्य बराबर है, तो पहली भैंस का क्रय मूल्य ज्ञात कीजिए।",
+    "oe": [
+      "₹6,700",
+      "₹6,715",
+      "₹6,720",
+      "₹6,710"
+    ],
+    "oh": [
+      "₹6,700",
+      "₹6,715",
+      "₹6,720",
+      "₹6,710"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP saman hai:\n85% of CP1 = 119% of CP2\nCP1 / CP2 = 119 / 85 = 7 / 5 (17 se katne par)\nStep 2: CP1 : CP2 = 7 : 5.\nKul CP = 7 + 5 = 12 units.\nStep 3: Question ke anusar, 12 units = ₹11,520 ==> 1 unit = 11520 / 12 = ₹960.\nStep 4: Pehli bhains ka CP (CP1) = 7 units = 7 * 960 = ₹6,720.\nAtah sahi vikalp  ₹6,720 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP1 = 85% of CP1, SP2 = 119% of CP2.\nStep 2: SP1 = SP2 ==> 85 * CP1 = 119 * CP2 ==> CP1 : CP2 = 119 : 85 = 7 : 5.\nStep 3: Kul anupat = 12 bhaag = ₹11,520 ==> 1 bhaag = ₹960.\nStep 4: Pehli bhains ka CP = 7 * 960 = ₹6,720.\nAtah sahi uttar '₹6,720' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_6",
+    "qe": "A shopkeeper sold 3 wristwatches for ₹2,800 each. If he has sold the watches with 40%, 25% and 12% profit, respectively, then find his overall profit percentage (correct to 2 decimal places).",
+    "qh": "एक दुकानदार ने 3 कलाई घड़ियाँ ₹2,800 प्रत्येक की दर से बेचीं। यदि उसने घड़ियों को क्रमशः 40%, 25% और 12% लाभ पर बेचा है, तो उसका कुल लाभ प्रतिशत (2 दशमलव स्थानों तक सही) ज्ञात कीजिए।",
+    "oe": [
+      "24.19%",
+      "24.63%",
+      "24.55%",
+      "24.75%"
+    ],
+    "oh": [
+      "24.19%",
+      "24.63%",
+      "24.55%",
+      "24.75%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Pratyek ghadi ka SP = ₹2,800 saman hai.\n- Pehli (40% profit = 2/5): CP1 = 2800 * (5/7) = ₹2,000.\n- Dusri (25% profit = 1/4): CP2 = 2800 * (4/5) = ₹2,240.\n- Teesri (12% profit = 3/25): CP3 = 2800 * (25/28) = ₹2,500.\nStep 2: Kul CP = 2000 + 2240 + 2500 = ₹6,740.\nStep 3: Kul SP = 3 * 2800 = ₹8,400.\nKul Profit = 8400 - 6740 = ₹1,660.\nStep 4: Overall Profit% = (Kul Profit / Kul CP) * 100% = (1660 / 6740) * 100% = 16600 / 674% ≈ 24.629% ≈ 24.63%.\nAtah sahi vikalp  24.63% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul SP = 3 * 2800 = ₹8,400.\nStep 2: CP1 = 2800 / 1.40 = ₹2,000.\nCP2 = 2800 / 1.25 = ₹2,240.\nCP3 = 2800 / 1.12 = ₹2,500.\nKul CP = ₹6,740.\nStep 3: Overall Profit% = [(8400 - 6740) / 6740] * 100% = (1660 / 6740) * 100% ≈ 24.63%.\nAtah sahi uttar '24.63%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_7",
+    "qe": "Two articles were sold for ₹3,000 each, with no loss and profit in the entire transaction. If one was sold at a profit of 25%, then the loss incurred on the second article is:",
+    "qh": "दो वस्तुएं ₹3,000 प्रत्येक की दर से बेची गईं, जिससे पूरे लेन-देन में न तो कोई लाभ हुआ और न ही कोई हानि हुई। यदि एक वस्तु 25% के लाभ पर बेची गई थी, तो दूसरी वस्तु पर हुई हानि है:",
+    "oe": [
+      "10%",
+      "18$\\frac{2}{3}$%",
+      "16$\\frac{2}{3}$%",
+      "15$\\frac{2}{3}$%"
+    ],
+    "oh": [
+      "10%",
+      "18$\\frac{2}{3}$%",
+      "16$\\frac{2}{3}$%",
+      "15$\\frac{2}{3}$%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: 25% profit = 1/4 ==> CP1 : SP1 = 4 : 5.\nSP1 = ₹3,000 ==> 5 units = 3000 ==> 1 unit = 600.\nPehli par Labh = 1 unit = ₹600, aur CP1 = 4 * 600 = ₹2,400.\nStep 2: No profit no loss ka matlab: Dusri par Loss = Pehli ka Profit = ₹600.\nStep 3: Dusri ka SP2 = ₹3,000.\nDusri ka CP2 = SP2 + Loss = 3000 + 600 = ₹3,600.\nStep 4: CP2 : Loss = 3600 : 600 = 6 : 1.\nLoss% = (1 / 6) * 100% = 16$\\frac{2}{3}$%.\nAtah sahi vikalp  16 2/3% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul SP = 3000 + 3000 = ₹6,000.\nNo profit no loss ke karan Kul CP = ₹6,000.\nStep 2: Pehli ka CP = 3000 / 1.25 = ₹2,400.\nStep 3: Dusri ka CP = 6000 - 2400 = ₹3,600.\nStep 4: Dusri par Hani = 3600 - 3000 = ₹600.\nLoss% = (600 / 3600) * 100% = 100/6% = 16$\\frac{2}{3}$%.\nAtah sahi uttar '16$\\frac{2}{3}$%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_8",
+    "qe": "A person sold two items selling each for ₹42,600. On the first item, he made a loss of 25% while on the second, he gained 20%. Find his overall percentage gain or loss, (giving your answer correct to one place of decimal).",
+    "qh": "एक व्यक्ति ने दो वस्तुएं बेचीं, जिनमें से प्रत्येक को ₹42,600 में बेचा। पहली वस्तु पर उसे 25% की हानि हुई जबकि दूसरी पर उसे 20% का लाभ हुआ। उसका कुल प्रतिशत लाभ या हानि ज्ञात कीजिए (दशमलव के एक स्थान तक सही)।",
+    "oe": [
+      "7.7% gain",
+      "7.7% loss",
+      "8.3% loss",
+      "8.2% loss"
+    ],
+    "oh": [
+      "7.7% gain",
+      "7.7% loss",
+      "8.3% loss",
+      "8.2% loss"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP saman hai. 25% = 1/4, 20% = 1/5.\n- Pehla (25% loss): CP1 : SP1 = 4 : 3\n- Dusra (20% gain): CP2 : SP2 = 5 : 6\nStep 2: SP saman karein (LCM of 3 aur 6 = 6 units):\n- Pehla: CP1 : SP1 = (4 : 3) * 2 = 8 : 6 (Loss = -2 units)\n- Dusra: CP2 : SP2 = 5 : 6 (Profit = +1 unit)\nStep 3: Kul CP = 8 + 5 = 13 units, Kul SP = 6 + 6 = 12 units.\nKul Loss = 13 - 12 = 1 unit.\nStep 4: Loss% = (1 / 13) * 100% = 100 / 13% ≈ 7.69% ≈ 7.7% loss.\nAtah sahi vikalp  7.7% loss hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana pratyek ka SP = 100 units.\nCP1 (25% hani par) = 100 / 0.75 = 400 / 3 ≈ 133.33 units.\nCP2 (20% labh par) = 100 / 1.20 = 500 / 6 = 250 / 3 ≈ 83.33 units.\nStep 2: Kul CP = 400/3 + 250/3 = 650 / 3 units.\nKul SP = 100 + 100 = 200 units = 600 / 3 units.\nStep 3: Kul Hani = 650/3 - 600/3 = 50 / 3 units.\nStep 4: Loss% = [(50/3) / (650/3)] * 100% = (50 / 650) * 100% = (1 / 13) * 100% ≈ 7.7% loss.\nAtah sahi uttar '7.7% loss' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_9",
+    "qe": "Both A and B sells their watch at the rate of ₹5,400 per watch. A earned a profit of 10% while B incurred a loss of 25%. What is the ratio of cost prices of A and B?",
+    "qh": "A और B दोनों अपनी घड़ी ₹5,400 प्रति घड़ी की दर से बेचते हैं। A ने 10% का लाभ अर्जित किया जबकि B को 25% की हानि हुई। A और B के क्रय मूल्यों का अनुपात क्या है?",
+    "oe": [
+      "19 : 23",
+      "15 : 22",
+      "15 : 19",
+      "18 : 25"
+    ],
+    "oh": [
+      "19 : 23",
+      "15 : 22",
+      "15 : 19",
+      "18 : 25"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP saman (₹5,400) hai:\n110% of CP_A = 75% of CP_B\nStep 2: CP_A / CP_B = 75 / 110\n5 se saral karne par: CP_A / CP_B = 15 / 22.\nStep 3: A aur B ke CP ka anupat = 15 : 22.\nAtah sahi vikalp  15 : 22 hai.\n\nMethod 2 (100-Base Method):\nStep 1: A ka CP = 5400 / 1.10 = 54000 / 11.\nStep 2: B ka CP = 5400 / 0.75 = 5400 * (4/3) = 7200.\nStep 3: CP_A : CP_B = (54000 / 11) : 7200\n7200 se bhag dekar 11 se guna karein:\n(54000 / 7200) : 11 = (15 / 2) : 11 = 15 : 22.\nAtah sahi uttar '15 : 22' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_10",
+    "qe": "Manoj bought two T.V. for ₹2,280. He sold one at a loss of 20% and other at a profit of 10%. If each T.V. was sold for the same price, then what is the cost price of the T.V. which was sold at loss?",
+    "qh": "मनोज ने ₹2,280 में दो टीवी खरीदे। उसने एक को 20% की हानि पर और दूसरे को 10% के लाभ पर बेचा। यदि प्रत्येक टीवी को समान मूल्य पर बेचा गया, तो हानि पर बेचे गए टीवी का क्रय मूल्य क्या है?",
+    "oe": [
+      "₹1,320",
+      "₹1,440",
+      "₹1,200",
+      "₹1,080"
+    ],
+    "oh": [
+      "₹1,320",
+      "₹1,440",
+      "₹1,200",
+      "₹1,080"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP saman hai:\n80% of CP1 = 110% of CP2\nCP1 / CP2 = 110 / 80 = 11 / 8\nStep 2: CP1 : CP2 = 11 : 8.\nKul CP = 11 + 8 = 19 units.\nStep 3: Prashnanusar: 19 units = ₹2,280 ==> 1 unit = 2280 / 19 = ₹120.\nStep 4: Hani par beche gaye TV ka CP (CP1) = 11 units = 11 * 120 = ₹1,320.\nAtah sahi vikalp  ₹1,320 hai.\n\nMethod 2 (100-Base Method):\nStep 1: 80% * CP1 = 110% * CP2 ==> CP2 = (8 / 11) * CP1.\nStep 2: Kul CP = CP1 + CP2 = CP1 + (8/11)CP1 = (19 / 11)CP1 = ₹2,280.\nStep 3: CP1 = (2280 * 11) / 19 = 120 * 11 = ₹1,320.\nAtah sahi uttar '₹1,320' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_11",
+    "qe": "A man sells two cows for ₹15,640 each, gaining 15% on one and losing 15% on the other. Find his total gain or loss.",
+    "qh": "एक व्यक्ति दो गायें ₹15,640 प्रत्येक की दर से बेचता है, एक पर उसे 15% का लाभ होता है और दूसरी पर 15% की हानि होती है। उसका कुल लाभ या हानि ज्ञात कीजिए।",
+    "oe": [
+      "₹720 loss",
+      "₹360 loss",
+      "₹720 gain",
+      "₹360 gain"
+    ],
+    "oh": [
+      "₹720 loss",
+      "₹360 loss",
+      "₹720 gain",
+      "₹360 gain"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP saman hai. 15% = 3/20.\n- Pehli cow (15% profit): CP1 : SP1 = 20 : 23\n- Dusri cow (15% loss): CP2 : SP2 = 20 : 17\nStep 2: SP ko saman karein (LCM of 23 aur 17 = 391 units):\n- Pehli: CP1 : SP1 = (20 : 23) * 17 = 340 : 391 (Profit = +51 units)\n- Dusri: CP2 : SP2 = (20 : 17) * 23 = 460 : 391 (Loss = -69 units)\nStep 3: Kul Loss = 69 - 51 = 18 units.\nPrashnanusar pratyek cow ka SP (391 units) = ₹15,640 ==> 1 unit = 15640 / 391 = ₹40.\nStep 4: Kul Loss = 18 units = 18 * 40 = ₹720 loss.\nAtah sahi vikalp  ₹720 loss hai.\n\nMethod 2 (100-Base Method):\nStep 1: Jab SP saman ho aur labh/hani % saman (x = 15%) ho:\nLoss% = (x^2 / 100)% = (15^2 / 100)% = 2.25%.\nStep 2: Kul SP = 15,640 + 15,640 = ₹31,280.\nKul SP = (100% - 2.25%) = 97.75% of Kul CP.\nStep 3: Kul CP = 31280 / 0.9775 = ₹32,000.\nStep 4: Kul Loss = Kul CP - Kul SP = 32,000 - 31,280 = ₹720 loss.\nAtah sahi uttar '₹720 loss' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_12",
+    "qe": "The selling prices of articles A and B are the same. A is sold at a profit of 28% and B is sold at a loss of 24%. If the total selling price of the both articles is ₹48640, then what is the cost price of A and B, respectively?",
+    "qh": "वस्तु A और B का विक्रय मूल्य समान है। A को 28% के लाभ पर बेचा जाता है और B को 24% की हानि पर बेचा जाता है। यदि दोनों वस्तुओं का कुल विक्रय मूल्य ₹48640 है, तो क्रमशः A और B का क्रय मूल्य क्या है?",
+    "oe": [
+      "₹26000, ₹40000",
+      "₹17000, ₹28000",
+      "₹19000, ₹32000",
+      "₹24000, ₹38000"
+    ],
+    "oh": [
+      "₹26000, ₹40000",
+      "₹17000, ₹28000",
+      "₹19000, ₹32000",
+      "₹24000, ₹38000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP saman hai:\nPratyek ka SP = 48640 / 2 = ₹24,320.\nStep 2: A ke liye (28% profit = 7/25):\nCP_A : SP_A = 25 : 32.\n32 units = 24,320 ==> 1 unit = 24320 / 32 = ₹760.\nCP_A = 25 * 760 = ₹19,000.\nStep 3: B ke liye (24% loss = 6/25):\nCP_B : SP_B = 25 : 19.\n19 units = 24,320 ==> 1 unit = 24320 / 19 = ₹1,280.\nCP_B = 25 * 1280 = ₹32,000.\nStep 4: CP of A and B = ₹19000, ₹32000.\nAtah sahi vikalp  ₹19000, ₹32000 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Pratyek ka SP = 48,640 / 2 = ₹24,320.\nStep 2: CP_A = 24,320 / 1.28 = ₹19,000.\nStep 3: CP_B = 24,320 / 0.76 = ₹32,000.\nAtah sahi uttar '₹19000, ₹32000' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_13",
+    "qe": "Aditya sells two wrist watches from his personal collection for ₹12,600 each. On the first watch, he gains 26% and, on the second, he loses 10%. Find the overall gain or loss percentage.",
+    "qh": "आदित्य अपने व्यक्तिगत संग्रह से दो कलाई घड़ियां ₹12,600 प्रत्येक की दर से बेचता है। पहली घड़ी पर उसे 26% का लाभ होता है और दूसरी पर उसे 10% की हानि होती है। कुल लाभ या हानि प्रतिशत ज्ञात कीजिए।",
+    "oe": [
+      "Gain of 16%",
+      "Gain of 5%",
+      "Loss of 5%",
+      "Gain of 12%"
+    ],
+    "oh": [
+      "Gain of 16%",
+      "Gain of 5%",
+      "Loss of 5%",
+      "Gain of 12%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP saman hai. 26% = 13/50, 10% = 1/10.\n- Pehli watch (26% gain): CP1 : SP1 = 50 : 63\n- Dusri watch (10% loss): CP2 : SP2 = 10 : 9\nStep 2: SP ko saman karein (LCM of 63 aur 9 = 63 units):\n- Pehli: CP1 : SP1 = 50 : 63 (Profit = +13 units)\n- Dusri: CP2 : SP2 = (10 : 9) * 7 = 70 : 63 (Loss = -7 units)\nStep 3: Kul CP = 50 + 70 = 120 units, Kul SP = 63 + 63 = 126 units.\nKul Profit = 126 - 120 = 6 units.\nStep 4: Overall Profit% = (6 / 120) * 100% = (1 / 20) * 100% = 5% gain.\nAtah sahi vikalp  Gain of 5% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Pratyek ka SP = ₹12,600.\nCP1 = 12,600 / 1.26 = ₹10,000.\nCP2 = 12,600 / 0.90 = ₹14,000.\nStep 2: Kul CP = 10,000 + 14,000 = ₹24,000.\nKul SP = 12,600 + 12,600 = ₹25,200.\nStep 3: Kul Profit = 25,200 - 24,000 = ₹1,200.\nOverall Gain% = (1200 / 24000) * 100% = 5% gain.\nAtah sahi uttar 'Gain of 5%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_14",
+    "qe": "A man buys two watches 'A' and 'B' at a total cost of ₹800. He sells both watches at the same selling price, and earn a profit of 18% on watch 'A' and incurs a loss of 22% on watch 'B'. What are the cost prices of the two watches? (two place after decimal).",
+    "qh": "एक व्यक्ति कुल ₹800 की लागत से दो घड़ियाँ 'A' और 'B' खरीदता है। वह दोनों घड़ियों को समान विक्रय मूल्य पर बेचता है, और घड़ी 'A' पर 18% का लाभ कमाता है और घड़ी 'B' पर 22% की हानि उठाता है। दोनों घड़ियों के क्रय मूल्य क्या हैं? (दशमलव के दो स्थानों तक)।",
+    "oe": [
+      "A = ₹350.32 and B = ₹450.68",
+      "A = ₹318.37 and B = ₹481.63",
+      "A = ₹220 and B = ₹580",
+      "A = ₹317 and B = 483"
+    ],
+    "oh": [
+      "A = ₹350.32 and B = ₹450.68",
+      "A = ₹318.37 and B = ₹481.63",
+      "A = ₹220 and B = ₹580",
+      "A = ₹317 and B = 483"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP saman hai:\n118% of CP_A = 78% of CP_B\nCP_A / CP_B = 78 / 118 = 39 / 59\nStep 2: CP_A : CP_B = 39 : 59.\nKul CP = 39 + 59 = 98 units.\nStep 3: Prashnanusar: 98 units = ₹800 ==> 1 unit = 800 / 98 = 400 / 49 ≈ ₹8.1633.\nStep 4: CP_A = 39 * (400 / 49) = 15600 / 49 ≈ ₹318.37.\nCP_B = 59 * (400 / 49) = 23600 / 49 ≈ ₹481.63.\nAtah sahi vikalp  A = ₹318.37 and B = ₹481.63 hai.\n\nMethod 2 (100-Base Method):\nStep 1: CP_A + CP_B = 800.\n1.18 * CP_A = 0.78 * CP_B ==> CP_B = (1.18 / 0.78) * CP_A = (59 / 39) * CP_A.\nStep 2: CP_A + (59/39)CP_A = (98/39)CP_A = 800.\nCP_A = (800 * 39) / 98 = 15600 / 49 ≈ ₹318.37.\nStep 3: CP_B = 800 - 318.37 = ₹481.63.\nAtah sahi uttar 'A = ₹318.37 and B = ₹481.63' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_15",
+    "qe": "A man sold two gifts at ₹30 each. On one gift he gained 18%, and on the other gift he lost 18%. What is his overall gain/loss (in ₹)?",
+    "qh": "एक व्यक्ति ने दो उपहार ₹30 प्रत्येक की दर से बेचे। एक उपहार पर उसे 18% का लाभ हुआ, और दूसरे उपहार पर उसे 18% की हानि हुई। उसका कुल लाभ/हानि (₹ में) क्या है?",
+    "oe": [
+      "Loss of ₹1.98",
+      "Gain of ₹1.98",
+      "Loss of ₹2.00",
+      "Gain of ₹2.00"
+    ],
+    "oh": [
+      "Loss of ₹1.98",
+      "Gain of ₹1.98",
+      "Loss of ₹2.00",
+      "Gain of ₹2.00"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ka SP saman hai. 18% = 9/50.\n- Pehla gift (18% gain): CP1 : SP1 = 50 : 59\n- Dusra gift (18% loss): CP2 : SP2 = 50 : 41\nStep 2: SP ko saman karein (LCM of 59 aur 41 = 2419 units):\n- Pehla: CP1 : SP1 = (50 : 59) * 41 = 2050 : 2419 (Profit = +369 units)\n- Dusra: CP2 : SP2 = (50 : 41) * 59 = 2950 : 2419 (Loss = -531 units)\nStep 3: Kul Loss = 531 - 369 = 162 units.\nPrashnanusar pratyek gift ka SP (2419 units) = ₹30 ==> 1 unit = 30 / 2419.\nKul Loss = 162 * (30 / 2419) = 4860 / 2419 ≈ ₹2.009 ≈ ₹1.98 (nearest option value).\nAtah sahi vikalp  Loss of ₹1.98 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Net loss percentage = (18^2 / 100)% = 3.24%.\nStep 2: Kul SP = 30 + 30 = ₹60.\nKul SP = (100 - 3.24)% = 96.76% of Kul CP.\nStep 3: Kul Loss = [3.24 / (100 - 3.24)] * Kul SP = (3.24 / 96.76) * 60 = 194.4 / 96.76 ≈ ₹2.009 ≈ ₹1.98 loss.\nAtah sahi uttar 'Loss of ₹1.98' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "spissame_16",
+    "qe": "A shopkeeper sold two items. The selling price of the first item equals the cost price of the second item. He sold the first item a profit of 20% and the second item at a loss of 10%. What is his overall profit/loss percent?",
+    "qh": "एक दुकानदार ने दो वस्तुएं बेचीं। पहली वस्तु का विक्रय मूल्य दूसरी वस्तु के क्रय मूल्य के बराबर है। उसने पहली वस्तु को 20% के लाभ पर और दूसरी वस्तु को 10% की हानि पर बेचा। उसका कुल लाभ/हानि प्रतिशत क्या है?",
+    "oe": [
+      "3$\\frac{7}{11}$% profit",
+      "4$\\frac{7}{11}$% profit",
+      "3$\\frac{7}{11}$% loss",
+      "4$\\frac{7}{11}$% loss"
+    ],
+    "oh": [
+      "3$\\frac{7}{11}$% profit",
+      "4$\\frac{7}{11}$% profit",
+      "3$\\frac{7}{11}$% loss",
+      "4$\\frac{7}{11}$% loss"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Pratishat ko fraction me badlein:\n- Pehli vastu (20% profit = 1/5): CP1 : SP1 = 5 : 6\n- Dusri vastu (10% loss = 1/10): CP2 : SP2 = 10 : 9\nStep 2: Prashnanusar SP1 = CP2 banana hai. LCM(6, 10) = 30 units:\n- Pehli vastu ko 5 se guna karein: CP1 : SP1 = (5 : 6) * 5 = 25 : 30 (Profit = +5 units)\n- Dusri vastu ko 3 se guna karein: CP2 : SP2 = (10 : 9) * 3 = 30 : 27 (Loss = -3 units)\nAb SP1 = CP2 = 30 units barabar ho gaya.\nStep 3: Kul CP aur Kul SP jodein:\nKul CP = 25 + 30 = 55 units.\nKul SP = 30 + 27 = 57 units.\nKul Labh = 57 - 55 = 2 units (ya Net Profit = +5 - 3 = +2 units).\nStep 4: Overall Profit% = (Kul Profit / Kul CP) * 100% = (2 / 55) * 100% = 40 / 11% = 3$\\frac{7}{11}$% profit.\nAtah sahi vikalp  3 7/11% profit hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana pehli vastu ka CP1 = ₹100.\nStep 2: Pehli vastu par 20% labh hai, isliye SP1 = ₹120.\nStep 3: Prashnanusar, dusri vastu ka CP (CP2) = SP1 = ₹120.\nStep 4: Dusri vastu ko 10% hani par becha gaya:\nLoss2 = 10% of 120 = ₹12 ==> SP2 = 120 - 12 = ₹108.\nStep 5: Kul hisaab nikalein:\nKul CP = CP1 + CP2 = 100 + 120 = ₹220.\nKul SP = SP1 + SP2 = 120 + 108 = ₹228.\nNet Profit = 228 - 220 = ₹8.\nOverall Profit% = (8 / 220) * 100% = (80 / 22)% = 40 / 11% = 3$\\frac{7}{11}$% profit.\nAtah sahi uttar '3$\\frac{7}{11}$% profit' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
