@@ -1,0 +1,135 @@
+[
+  {
+    "p_id": "secondhalfreverse_1",
+    "qe": "If the second half is written in the reverse order then which letter will be 10th to the left of 14th from the left end?",
+    "qh": "यदि द्वितीय अर्द्धांश को उल्टे क्रम में लिखा जाए, तो बाएँ छोर से 14वें अक्षर के बाएँ 10वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "oh": [
+      "C",
+      "D",
+      "E",
+      "F"
+    ],
+    "a": 1,
+    "e": "Method 1 (First Half Unchanged Shortcut Trick):\nStep 1: Series structure samjhein:\n- First half (A se M): Normal sequence $A, B, C, \\dots, L, M$ (1 se 13 tak).\n- Second half (N se Z) reversed: $Z, Y, X, \\dots, O, N$ (14 se 26 tak).\nStep 2: Samaan dishaon (Left aur Left) ke liye positions ko ghataayein:\n$$\\text{Position from Left} = 14 - 10 = 4\\text{th letter}$$\nStep 3: Chuki $4 \\le 13$, yeh letter unchanged first half me aata hai.\n- 'A' se shuru hone wali normal series me 4th letter 'D' hota hai.\nCorrect 'F' hai.\n\nMethod 2 (Direct Alphabet Inspection):\nFirst half bilkul normal order me hai, isliye baayein se chautha letter seedhe 'D' hoga.\nSahi uttar 'D' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "secondhalfreverse_2",
+    "qe": "If the second half is written in the reverse order then which letter will be 6th to the left of 15th from the left end?",
+    "qh": "यदि द्वितीय अर्द्धांश को उल्टे क्रम में लिखा जाए, तो बाएँ छोर से 15वें अक्षर के बाएँ छठा अक्षर कौन-सा होगा?",
+    "oe": [
+      "H",
+      "I",
+      "J",
+      "K"
+    ],
+    "oh": [
+      "H",
+      "I",
+      "J",
+      "K"
+    ],
+    "a": 1,
+    "e": "Method 1 (Within First-Half Boundary Shortcut):\nStep 1: Left se net position calculate karein:\n$$\\text{Position from Left} = 15 - 6 = 9\\text{th letter}$$\nStep 2: $9 \\le 13$ hone ke karan yeh letter normal first half ($A \\dots M$) me hi sthit hai.\nStep 3: Normal alphabet me baayein se 9वाँ letter 'I' hota hai.\nCorrect option  I hai.\n\nMethod 2 (Visual Offset Method):\n15th letter second half me tha, lekin 6 sthan piche aane par sthiti 9th ban jaati hai jo first half ka hissa hai. 'A' se 9th letter 'I' prapt hota hai.\nSahi uttar 'I' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "secondhalfreverse_3",
+    "qe": "If the second half is written in the reverse order then which letter will be 5th to the right of 10th from the left end?",
+    "qh": "यदि द्वितीय अर्द्धांश को उल्टे क्रम में लिखा जाए, तो बाएँ छोर से 10वें अक्षर के दाएँ 5वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "X",
+      "Y",
+      "Z",
+      "W"
+    ],
+    "oh": [
+      "X",
+      "Y",
+      "Z",
+      "W"
+    ],
+    "a": 1,
+    "e": "Method 1 (Reversed Second-Half Offset Trick):\nStep 1: Baayein chhor se kul sthiti nikalein (Left + Right):\n$$\\text{Position from Left} = 10 + 5 = 15\\text{th letter}$$\nStep 2: Pehle 13 letters first half ke paar karne par second half ($Z \\dots N$) me sthiti:\n$$15 - 13 = 2\\text{nd letter from 'Z'}$$\nStep 3: 'Z' se countdown karein ($Z$ = 1st, $Y$ = 2nd) ya formula $(26 + 1 - 2 = 25)$ lagayein:\n$$\\text{Original Position} = 25$$\n25वाँ letter 'Y' hota hai.\nCorrect option  Y hai.\n\nMethod 2 (Direct Inspection in Second Half):\nSecond half baayein se shuru hota hai: $Z(14\\text{th}), Y(15\\text{th})$.\n15th position par letter 'Y' aata hai.\nSahi uttar 'Y' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "secondhalfreverse_4",
+    "qe": "If the second half is written in the reverse order then which letter will be 7th to the right of 13th from the left end?",
+    "qh": "यदि द्वितीय अर्द्धांश को उल्टे क्रम में लिखा जाए, तो बाएँ छोर से 13वें अक्षर के दाएँ 7वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "S",
+      "T",
+      "U",
+      "V"
+    ],
+    "oh": [
+      "S",
+      "T",
+      "U",
+      "V"
+    ],
+    "a": 1,
+    "e": "Method 1 (Second-Half Inversion Shortcut):\nStep 1: Left end se effective position nikalein:\n$$\\text{Position from Left} = 13 + 7 = 20\\text{th letter}$$\nStep 2: First half (13 letters) hatane par second half me sthiti:\n$$20 - 13 = 7\\text{th letter from 'Z'}$$\nStep 3: 'Z' ki taraf se 7th letter ki original place value:\n$$\\text{Original Position} = (26 + 1) - 7 = 20$$\nAlphabet me 20वाँ letter 'T' hota hai.\nCorrect option  T hai.\n\nMethod 2 (Direct Countdown from Z):\nSecond half sequence: $Z(1), Y(2), X(3), W(4), V(5), U(6), T(7)$.\n7th letter 'T' prapt hota hai.\nSahi uttar 'T' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "secondhalfreverse_5",
+    "qe": "If the second half is written in the reverse order then which letter will be 5th to the right of 10th from the right end?",
+    "qh": "यदि द्वितीय अर्द्धांश को उल्टे क्रम में लिखा जाए, तो दाएँ छोर से 10वें अक्षर के दाएँ 5वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "Q",
+      "R",
+      "S",
+      "P"
+    ],
+    "oh": [
+      "Q",
+      "R",
+      "S",
+      "P"
+    ],
+    "a": 1,
+    "e": "Method 1 (Right-to-Left in Second Half Shortcut):\nStep 1: Same directions (Right aur Right) hone par ghataayein:\n$$\\text{Position from Right} = 10 - 5 = 5\\text{th letter}$$\nStep 2: Chuki $5 \\le 13$, yeh letter reversed second half ($Z \\dots N$) me daayein chhor par sthit hai.\nStep 3: Daayein (Right) end par letter 'N' (original 14th letter) hai, isliye 'N' se 5 kadam aage badhein:\n$$\\text{Original Position} = 13 + 5 = 18$$\n18वाँ letter 'R' hota hai.\nCorrect option  R hai.\n\nMethod 2 (Sequential Counting from N):\nDaayein छोर se sequence: $N(1), O(2), P(3), Q(4), R(5)$.\n5th letter 'R' hai.\nSahi uttar 'R' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "secondhalfreverse_6",
+    "qe": "If the second half is written in the reverse order then which letter will be 5th to the right of 15th from the right end?",
+    "qh": "यदि द्वितीय अर्द्धांश को उल्टे क्रम में लिखा जाए, तो दाएँ छोर से 15वें अक्षर के दाएँ 5वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "V",
+      "W",
+      "X",
+      "U"
+    ],
+    "oh": [
+      "V",
+      "W",
+      "X",
+      "U"
+    ],
+    "a": 1,
+    "e": "Method 1 (Second Half Offset from N Shortcut):\nStep 1: Right end se net position nikalein:\n$$\\text{Position from Right} = 15 - 5 = 10\\text{th letter}$$\nStep 2: $10 \\le 13$ hone ke karan yeh letter second half me hi hai.\nStep 3: Daayein chhor par 'N' (14th) hone se 'N' se 10वाँ letter:\n$$\\text{Original Position} = 13 + 10 = 23$$\n23वाँ letter 'W' hota hai.\nCorrect option  W hai.\n\nMethod 2 (Counting from N Method):\n$N(1), O(2), P(3), Q(4), R(5), S(6), T(7), U(8), V(9), W(10)$.\nDaayein se 10th letter 'W' prapt hota hai.\nSahi uttar 'W' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "secondhalfreverse_7",
+    "qe": "If the second half is written in the reverse order then which letter will be 5th to the left of 11th from the right end?",
+    "qh": "यदि द्वितीय अर्द्धांश को उल्टे क्रम में लिखा जाए, तो दाएँ छोर से 11वें अक्षर के बाएँ 5वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "J",
+      "K",
+      "L",
+      "I"
+    ],
+    "oh": [
+      "J",
+      "K",
+      "L",
+      "I"
+    ],
+    "a": 1,
+    "e": "Method 1 (Right-End Crossing into First Half Shortcut):\nStep 1: Right end se total position nikalein (Right + Left):\n$$\\text{Position from Right} = 11 + 5 = 16\\text{th letter}$$\nStep 2: Total 26 letters me right se 16th letter ki left se sthiti nikalein:\n$$\\text{Position from Left} = (26 + 1) - 16 = 11\\text{th letter}$$\nStep 3: Chuki $11 \\le 13$, yeh letter normal first half ($A \\dots M$) me sthit hai.\n- Normal alphabet me 11वाँ letter 'K' hota hai.\nCorrect option  K hai.\n\nMethod 2 (Boundary Subtraction Method):\nSecond half ke 13 letters cross karne ke baad: $16 - 13 = 3$rd letter into first half from 'M'.\n'M' se piche ki or: $M(1), L(2), K(3)$.\nSahi uttar 'K' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
