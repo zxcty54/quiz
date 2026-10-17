@@ -1,0 +1,154 @@
+[
+  {
+    "p_id": "bothhalfreverseorder_1",
+    "qe": "If first half and second half both are written in the reverse order respectively then which letter will be 10th to the left of 9th from the right end?",
+    "qh": "यदि प्रथम अर्द्धांश और द्वितीय अर्द्धांश दोनों को क्रमशः उल्टे क्रम में लिखा जाए, तो दाएँ छोर से 9वें अक्षर के बाएँ 10वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "oh": [
+      "E",
+      "F",
+      "G",
+      "H"
+    ],
+    "a": 1,
+    "e": "Method 1 (Two Halves Reverse Shortcut Trick):\nStep 1: Series structure samjhein:\n- First half (A se M) reversed: $M, L, K, \\dots, B, A$ (1 se 13 tak).\n- Second half (N se Z) reversed: $Z, Y, X, \\dots, O, N$ (14 se 26 tak).\nStep 2: Effective position from Right end nikalte hain (Right + Left):\n$$\\text{Position from Right} = 9 + 10 = 19\\text{th letter}$$\nStep 3: Daayein (Right) se aane par pehle 13 letters second half ($N \\to Z$) ke aayenge. Bachenge:\n$$19 - 13 = 6\\text{th letter from first half (A ki taraf se)}$$\n- First half me 'A' boundary par hai ($A, B, C, D, E, F$), isliye 'A' se 6th letter 'F' hoga.\nCorrect option  F hai.\n\nMethod 2 (Left-End Conversion Method):\n- Total letters = 26. Position from Left end $= (26 + 1) - 19 = 8$th from Left.\n- First half me Left se shuruat 'M' (13) se hoti hai, isliye baayein se 8th letter: $14 - 8 = 6$th letter of alphabet = 'F'.\nSahi uttar 'F' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "bothhalfreverseorder_2",
+    "qe": "If first half and second half both are written in the reverse order respectively then which letter will be 8th to the left of 15th from the right end?",
+    "qh": "यदि प्रथम अर्द्धांश और द्वितीय अर्द्धांश दोनों को क्रमशः उल्टे क्रम में लिखा जाए, तो दाएँ छोर से 15वें अक्षर के बाएँ 8वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "I",
+      "K",
+      "J",
+      "H"
+    ],
+    "oh": [
+      "I",
+      "K",
+      "J",
+      "H"
+    ],
+    "a": 2,
+    "e": "Method 1 (Boundary Crossing Shortcut Trick):\nStep 1: Position from Right end nikalte hain (Right + Left):\n$$\\text{Position from Right} = 15 + 8 = 23\\text{rd letter}$$\nStep 2: Second half ke 13 letters cross karne ke baad:\n$$23 - 13 = 10\\text{th letter into first half from 'A'}$$\nStep 3: First half me 'A' se shuru karte hue 10वाँ letter 'J' hota hai.\nCorrect option  J hai.\n\nMethod 2 (Left-End Offset Method):\n- Left se position $= (26 + 1) - 23 = 4$th from Left.\n- Baayein se 4th letter 'M' se counting me: $M(1), L(2), K(3), J(4)$.\nSahi uttar 'J' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "bothhalfreverseorder_3",
+    "qe": "If first half and second half both are written in the reverse order respectively then which letter will be 6th to the right of 15th from the right end?",
+    "qh": "यदि प्रथम अर्द्धांश और द्वितीय अर्द्धांश दोनों को क्रमशः उल्टे क्रम में लिखा जाए, तो दाएँ छोर से 15वें अक्षर के दाएँ छठा अक्षर कौन-सा होगा?",
+    "oe": [
+      "U",
+      "V",
+      "W",
+      "T"
+    ],
+    "oh": [
+      "U",
+      "V",
+      "W",
+      "T"
+    ],
+    "a": 1,
+    "e": "Method 1 (Second-Half Direct Offset Trick):\nStep 1: Samaan disha (Right aur Right) hone par ghataate hain:\n$$\\text{Position from Right} = 15 - 6 = 9\\text{th letter}$$\nStep 2: Chuki $9 \\le 13$, yeh letter second half ($Z \\to N$) me hi sthit hai.\nStep 3: Second half me daayein (Right) end par 'N' (14th) hai, isliye 'N' se 9 kadam aage:\n$$\\text{Original Position} = 13 + 9 = 22$$\nAlphabet me 22वाँ letter 'V' hota hai.\nCorrect option  V hai.\n\nMethod 2 (Sequential Forward Counting from N):\nSecond half daayein se: $N(1), O(2), P(3), Q(4), R(5), S(6), T(7), U(8), V(9)$.\n9th letter 'V' prapt hota hai.\nSahi uttar 'V' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "bothhalfreverseorder_4",
+    "qe": "If first half and second half both are written in the reverse order respectively then which letter will be 11th to the right of 14th from the right end?",
+    "qh": "यदि प्रथम अर्द्धांश और द्वितीय अर्द्धांश दोनों को क्रमशः उल्टे क्रम में लिखा जाए, तो दाएँ छोर से 14वें अक्षर के दाएँ 11वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "P",
+      "Q",
+      "O",
+      "R"
+    ],
+    "oh": [
+      "P",
+      "Q",
+      "O",
+      "R"
+    ],
+    "a": 0,
+    "e": "Method 1 (Second-Half Subtraction Trick):\nStep 1: Same directions (Right aur Right) ke liye ghataav karein:\n$$\\text{Position from Right} = 14 - 11 = 3\\text{rd letter}$$\nStep 2: $3 \\le 13$ hone se yeh second half me hai jahan Right end par 'N' hai:\n$$\\text{Original Position} = 13 + 3 = 16$$\n16वाँ letter 'P' hota hai.\nCorrect option  P hai.\n\nMethod 2 (Right-End Direct Counting Method):\nSecond half daayein chhor se shuru hota hai: $N(1), O(2), P(3)$.\n3rd position par aane wala letter 'P' hai.\nSahi uttar 'P' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "bothhalfreverseorder_5",
+    "qe": "If first half and second half both are written in the reverse order respectively then which letter will be 8th to the right of 11th from the left end?",
+    "qh": "यदि प्रथम अर्द्धांश और द्वितीय अर्द्धांश दोनों को क्रमशः उल्टे क्रम में लिखा जाए, तो बाएँ छोर से 11वें अक्षर के दाएँ 8वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "T",
+      "U",
+      "V",
+      "W"
+    ],
+    "oh": [
+      "T",
+      "U",
+      "V",
+      "W"
+    ],
+    "a": 1,
+    "e": "Method 1 (Left-to-Right Crossing into Second Half Trick):\nStep 1: Position from Left end nikalte hain (Left + Right):\n$$\\text{Position from Left} = 11 + 8 = 19\\text{th letter}$$\nStep 2: Pehle 13 letters first half ($M \\to A$) cross karne ke baad second half ($Z \\to N$) me pravesh karein:\n$$19 - 13 = 6\\text{th letter from 'Z'}$$\nStep 3: 'Z' se 6th letter nikalne ke liye standard conversion rule $(27 - 6)$ lagayein:\n$$\\text{Original Position} = 27 - 6 = 21$$\nAlphabet me 21वाँ letter 'U' hota hai.\nCorrect option  U hai.\n\nMethod 2 (Direct Reverse Second Half Counting):\nSecond half $Z$ se shuru hota hai: $Z(1), Y(2), X(3), W(4), V(5), U(6)$.\n6th position par aane wala letter 'U' hai.\nSahi uttar 'U' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "bothhalfreverseorder_6",
+    "qe": "If first half and second half both are written in the reverse order respectively then which letter will be 7th to the right of 16th from the left end?",
+    "qh": "यदि प्रथम अर्द्धांश और द्वितीय अर्द्धांश दोनों को क्रमशः उल्टे क्रम में लिखा जाए, तो बाएँ छोर से 16वें अक्षर के दाएँ 7वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ],
+    "oh": [
+      "P",
+      "Q",
+      "R",
+      "S"
+    ],
+    "a": 1,
+    "e": "Method 1 (Second-Half Left Offset Trick):\nStep 1: Position from Left end nikalein (Left + Right):\n$$\\text{Position from Left} = 16 + 7 = 23\\text{rd letter}$$\nStep 2: Second half me 'Z' ki taraf se sthiti nikalein:\n$$23 - 13 = 10\\text{th letter from 'Z'}$$\nStep 3: 'Z' se 10th letter ka alphabetical code:\n$$\\text{Original Position} = 27 - 10 = 17$$\n17वाँ letter 'Q' hota hai.\nCorrect option  Q hai.\n\nMethod 2 (Right-End Equivalent Method):\n- Right end se position $= (26 + 1) - 23 = 4$th from Right.\n- Second half daayein se 'N' se start hota hai: $N(1), O(2), P(3), Q(4)$.\nSahi uttar 'Q' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "bothhalfreverseorder_7",
+    "qe": "If first half and second half both are written in the reverse order respectively then which letter will be 5th to the left of 14th from the left end?",
+    "qh": "यदि प्रथम अर्द्धांश और द्वितीय अर्द्धांश दोनों को क्रमशः उल्टे क्रम में लिखा जाए, तो बाएँ छोर से 14वें अक्षर के बाएँ 5वाँ अक्षर कौन-सा होगा?",
+    "oe": [
+      "D",
+      "F",
+      "E",
+      "G"
+    ],
+    "oh": [
+      "D",
+      "F",
+      "E",
+      "G"
+    ],
+    "a": 2,
+    "e": "Method 1 (First-Half Within-Boundary Shortcut):\nStep 1: Samaan disha (Left aur Left) ke liye ghataayein:\n$$\\text{Position from Left} = 14 - 5 = 9\\text{th letter}$$\nStep 2: Chuki $9 \\le 13$, yeh first half ($M \\to A$) me hi sthit hai.\nStep 3: First half me baayein se 'M' (13) se shuru hota hai. Iski actual value nikalne ke liye $(13 + 1) - 9$ karein:\n$$\\text{Original Position} = 14 - 9 = 5$$\n5वाँ letter 'E' hota hai.\nCorrect 'E' hai.\n\nMethod 2 (Direct Countdown from M):\nFirst half baayein se: $M(1), L(2), K(3), J(4), I(5), H(6), G(7), F(8), E(9)$.\n9th letter 'E' prapt hota hai.\nSahi uttar 'E' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "bothhalfreverseorder_8",
+    "qe": "If first half and second half both are written in the reverse order respectively then which letter will be 6th to the left of 10th from the left end?",
+    "qh": "यदि प्रथम अर्द्धांश और द्वितीय अर्द्धांश दोनों को क्रमशः उल्टे क्रम में लिखा जाए, तो बाएँ छोर से 10वें अक्षर के बाएँ छठा अक्षर कौन-सा होगा?",
+    "oe": [
+      "I",
+      "J",
+      "K",
+      "H"
+    ],
+    "oh": [
+      "I",
+      "J",
+      "K",
+      "H"
+    ],
+    "a": 1,
+    "e": "Method 1 (First-Half Left Subtraction Trick):\nStep 1: Same directions (Left aur Left) hone par ghataav karein:\n$$\\text{Position from Left} = 10 - 6 = 4\\text{th letter}$$\nStep 2: Yeh first half ($M \\to A$) me hi aata hai. 'M' se 4th letter ki normal position nikalein:\n$$\\text{Original Position} = (13 + 1) - 4 = 14 - 4 = 10$$\nAlphabet me 10वाँ letter 'J' hota hai.\nCorrect option  J hai.\n\nMethod 2 (Manual Inspection Method):\nFirst half: $M(1), L(2), K(3), J(4)$.\nBaayein chhor se chautha letter 'J' hai.\nSahi uttar 'J' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
