@@ -1,0 +1,382 @@
+[
+  {
+    "p_id": "alltypes_1",
+    "qe": "Complete the letter series: _ a a _ b a _ b b _ a a b",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: _ a a _ b a _ b b _ a a b",
+    "oe": [
+      "b a b a b",
+      "a a a b b",
+      "b b a a b",
+      "b b b a a"
+    ],
+    "oh": [
+      "b a b a b",
+      "a a a b b",
+      "b b a a b",
+      "b b b a a"
+    ],
+    "a": 2,
+    "e": "Method 1 (Group Division (4 Letters) Shortcut):\nStep 1: Kul akshar (blanks sahit) count karein: Total letters = 16.\n- 16 ko 4-4 ke 4 barabar groups me baantein:\n  `_ a a _ / b a _ b / _ a b _ / _ a a b`\nStep 2: Groups compare karein:\n- Dusre group me pehla letter 'b' aur aakhiri 'b' hai (`b a _ b`).\n- Aakhiri group me beech ke letters 'a a' aur last 'b' hai (`_ a a b`).\n- Pattern banta hai har group me same structure: `b a a b`.\nStep 3: Sabhi groups me 'b a a b' bharein:\n  `[b] a a [b] / b a [a] b / [b] a a b / [b] a a b`\n- Missing letters: b, b, a, a, b.\nCorrect 'a a a b b' b a a b hai.\n\nMethod 2 (Option Elimination Method):\n- Pehla blank 'b' hoga taaki 'b a a b' ka repeat pattern ban sake ('a a a b b' eliminate).\n- Teesre group ke aakhiri letter 'b' ke liye teesra blank 'a' hona chahiye (`b a [a] b`), jo 'b b b a a' me 'b' hai (eliminate). Keval 'b b a a b' bachta hai.\nSahi uttar 'b b a a b' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_2",
+    "qe": "Complete the letter series: _ s t t _ t t _ t t s _",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: _ s t t _ t t _ t t s _",
+    "oe": [
+      "t s s t",
+      "s s t t",
+      "t t s t",
+      "t s t s"
+    ],
+    "oh": [
+      "t s s t",
+      "s s t t",
+      "t t s t",
+      "t s t s"
+    ],
+    "a": 0,
+    "e": "Method 1 (Group Division (3 Letters) Shortcut):\nStep 1: Kul akshar count karein: Total letters = 12.\n- 12 ko 3-3 ke 4 groups me divide karein:\n  `_ s t / t _ t / t _ t / t s _`\nStep 2: Groups compare karein:\n- Dusre aur teesre group me pehla aur aakhiri letter 't' hai (`t _ t`).\n- Chauthe group me shuruat 't s' se ho rahi hai (`t s _`).\n- Isse spashth hai ki pratyek group `t s t` ban raha hai.\nStep 3: Sabhi me 't s t' complete karein:\n  `[t] s t / t [s] t / t [s] t / t s [t]`\n- Missing letters: t, s, s, t.\nCorrect option  t s s t hai.\n\nMethod 2 (First & Last Letter Elimination):\nPehle blank me 't' aayega taaki 't s t' bane ('s s t t' eliminate). Aakhiri blank me 't' aayega (`t s [t]`), isliye 't s t s' eliminate ho gaya. Beech ke dono blanks 's' hone chahiye, 't t s t' out. Keval 't s s t' sahi hai.\nSahi uttar 't s s t' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_3",
+    "qe": "Complete the letter series: QST _ QS _ RQ _ TR _ STR",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: QST _ QS _ RQ _ TR _ STR",
+    "oe": [
+      "SQTR",
+      "RTSQ",
+      "TRQS",
+      "TSRQ"
+    ],
+    "oh": [
+      "SQTR",
+      "RTSQ",
+      "TRQS",
+      "TSRQ"
+    ],
+    "a": 1,
+    "e": "Method 1 (4-Letter Identical Group Shortcut):\nStep 1: Kul akshar count karein: Total letters = 16.\n- 16 ko 4-4 ke 4 groups me baantein:\n  `Q S T _ / Q S _ R / Q _ T R / _ S T R`\nStep 2: Pattern dekhein:\n- Har group me letters Q, S, T, R ka ek hi sequence chal raha hai: `Q S T R`.\nStep 3: Missing letters bharein:\n- Group 1: Q S T [R]\n- Group 2: Q S [T] R\n- Group 3: Q [S] T R\n- Group 4: [Q] S T R\n- Code sequence: R, T, S, Q.\nCorrect option  RTSQ hai.\n\nMethod 2 (First Letter Elimination Method):\nPehle blank me 'R' aayega taaki group 'QSTR' ban sake. Chaaron vikalpon me se kewal 'RTSQ' 'R' se shuru ho raha hai, baaki sab bina solve kiye reject ho jate hain.\nSahi uttar 'RTSQ' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_4",
+    "qe": "Complete the letter series: a _ a _ b b a a _ b b b a _ a",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: a _ a _ b b a a _ b b b a _ a",
+    "oe": [
+      "a a b b",
+      "a b a a",
+      "a b a b",
+      "a a a b"
+    ],
+    "oh": [
+      "a a b b",
+      "a b a a",
+      "a b a b",
+      "a a a b"
+    ],
+    "a": 1,
+    "e": "Method 1 (Alternative Group Division (3 Letters) Shortcut):\nStep 1: Kul akshar = 15. Inhe 3-3 ke 5 groups me divide karein:\n  `a _ a / _ b b / a a _ / b b b / a _ a`\nStep 2: Alternative groups ka sambandh dekhein:\n- Group 1, 3 aur 5 aapas me saman hain: `a a a`.\n- Group 2 aur 4 aapas me saman hain: `b b b`.\nStep 3: Blanks fill karein:\n- Group 1: a [a] a\n- Group 2: [b] b b\n- Group 3: a a [a]\n- Group 4: b b b\n- Group 5: a [a] a\n- Missing letters: a, b, a, a.\nCorrect 'a a b b' b a a hai.\n\nMethod 2 (Second Blank Elimination Trick):\nSecond blank dusre group ke shuru me hai jahan 'b b b' banna hai, arthath second letter 'b' hona anivarya hai. options 'a a b b' and 'a a a b' me second letter 'a' hai (eliminate). Aakhiri group 'a a a' banega jisme last letter 'a' aayega ('a b a b' eliminate). Keval 'a b a a' sahi hai.\nSahi uttar 'a b a a' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_5",
+    "qe": "Complete the letter series: l _ b _ u b _ u b t _ b l u _ t u b",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: l _ b _ u b _ u b t _ b l u _ t u b",
+    "oe": [
+      "u b t l u",
+      "u t l u b",
+      "t u l b u",
+      "b u t l u"
+    ],
+    "oh": [
+      "u b t l u",
+      "u t l u b",
+      "t u l b u",
+      "b u t l u"
+    ],
+    "a": 1,
+    "e": "Method 1 (Alternative 3-Letter Groups ('lub' / 'tub') Shortcut):\nStep 1: Kul akshar = 18. Inhe 3-3 ke 6 groups me divide karein:\n  `l _ b / _ u b / _ u b / t _ b / l u _ / t u b`\nStep 2: Alternative groups match karein:\n- Group 1, 3, 5: `l u b` (lub)\n- Group 2, 4, 6: `t u b` (tub)\nStep 3: Blanks bharein:\n- Group 1: l [u] b\n- Group 2: [t] u b\n- Group 3: [l] u b\n- Group 4: t [u] b\n- Group 5: l u [b]\n- Group 6: t u b\n- Missing letters: u, t, l, u, b.\nCorrect option  u t l u b hai.\n\nMethod 2 (Option Elimination by First Two Blanks):\n- Pehle blank me 'u' aayega (`l [u] b`), isliye options 't u l b u' and 'b u t l u' eliminate ho gaye.\n- Dusre blank me 't' aayega (`[t] u b`), 'u b t l u' me 'b' diya hai jo galat hai. Keval 'u t l u b' sahi hai.\nSahi uttar 'u t l u b' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_6",
+    "qe": "Complete the letter series: _ b c a b _ c a b c _ a b c a _ b",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: _ b c a b _ c a b c _ a b c a _ b",
+    "oe": [
+      "a a b c",
+      "b b c a",
+      "a b a c",
+      "a b c a"
+    ],
+    "oh": [
+      "a a b c",
+      "b b c a",
+      "a b a c",
+      "a b c a"
+    ],
+    "a": 3,
+    "e": "Method 1 (Cyclic Shift Groups (5 Letters) Shortcut):\nStep 1: Total letters = 17 (15 letters ke 3 poore groups of 5 + 2 incomplete letters):\n  `_ b c a b / _ c a b c / _ a b c a / _ b`\nStep 2: Cyclic permutation rule dekhein (letters a, b, c aage shift ho rahe hain):\n- Group 1: `a b c a b` (starts with a)\n- Group 2: `b c a b c` (starts with b)\n- Group 3: `c a b c a` (starts with c)\n- Remaining: `a b ...`\nStep 3: Blanks fill karein:\n  `[a] b c a b / [b] c a b c / [c] a b c a / [a] b`\n- Missing letters: a, b, c, a.\nCorrect 'a a b c' b c a hai.\n\nMethod 2 (Option Verification Trick):\nShuruat me 'a' aane se `a b c a b` banta hai ('b b c a' eliminate). Dusra blank 'b' aayega taaki `b c a b c` bane ('a a b c' eliminate). Teesra blank 'c' aayega (`c a b c a`), 'a b a c' me 'a' hai (eliminate). Keval 'a b c a' bachta hai.\nSahi uttar 'a b c a' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_7",
+    "qe": "Complete the letter series: m n o n o p q o p q r s _ _ _ _ _ _",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: m n o n o p q o p q r s _ _ _ _ _ _",
+    "oe": [
+      "m n o p q r",
+      "o p q r s t",
+      "p q r s t u",
+      "o q r s t u"
+    ],
+    "oh": [
+      "m n o p q r",
+      "o p q r s t",
+      "p q r s t u",
+      "o q r s t u"
+    ],
+    "a": 2,
+    "e": "Method 1 (Increasing Letter Count Grouping Shortcut):\nStep 1: Groups ki lambai aur starting letter ka sequence dekhein:\n- Group 1: `m n o` (3 letters, starts with m)\n- Group 2: `n o p q` (4 letters, starts with n)\n- Group 3: `o p q r s` (5 letters, starts with o)\nStep 2: Agla group 6 letters ka hoga aur varnamala ke agle akshar 'p' se shuru hoga:\n- Group 4: `p q r s t u` (6 consecutive letters).\nCorrect option  p q r s t u hai.\n\nMethod 2 (First Letter Check Trick):\nStarting letters ki series dekhein: m → n → o → agla group 'p' se shuru hoga. Chaaron options me sirf 'p q r s t u' 'p' se shuru hota hai.\nSahi uttar 'p q r s t u' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_8",
+    "qe": "Complete the letter series: b _ c c a c c a _ b a _ b b c _ b c _ a",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: b _ c c a c c a _ b a _ b b c _ b c _ a",
+    "oe": [
+      "b a a b c",
+      "a b a a a",
+      "a c b c a",
+      "b a c a b"
+    ],
+    "oh": [
+      "b a a b c",
+      "a b a a a",
+      "a c b c a",
+      "b a c a b"
+    ],
+    "a": 0,
+    "e": "Method 1 (Cyclic Repeating 5-Letter Groups Shortcut):\nStep 1: Total letters = 20. Inhe 5-5 ke 4 groups me divide karein:\n  `b _ c c a / c c a _ b / a _ b b c / _ b c _ a`\nStep 2: Har group me letters double pairs me aage ghumte hain:\n- Group 1: `b b c c a`\n- Group 2: `c c a a b`\n- Group 3: `a a b b c`\n- Group 4: `b b c c a` (Group 1 wapas repeat hota hai)\nStep 3: Missing letters check karein:\n- Group 1: b [b] c c a → Blank 1 = b\n- Group 2: c c a [a] b → Blank 2 = a\n- Group 3: a [a] b b c → Blank 3 = a\n- Group 4: [b] b c [c] a → Blank 4 = b, Blank 5 = c\n- Sequence: b, a, a, b, c.\nCorrect 'a b a a a' a a b c hai.\n\nMethod 2 (First Letter Elimination Method):\nPehle blank me 'b' aayega taaki 'b b c c a' bane, isliye 'a' se shuru hone wale options 'a b a a a' and 'a c b c a' eliminate ho gaye. Aakhiri blank me 'c' aana chahiye, 'b a c a b' me last letter 'b' hai. Keval 'b a a b c' sahi hai.\nSahi uttar 'b a a b c' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_9",
+    "qe": "Complete the letter series: _ b a _ b a b _ b a b b _ b",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: _ b a _ b a b _ b a b b _ b",
+    "oe": [
+      "b a a a",
+      "a b b b",
+      "b a b b",
+      "a b a b"
+    ],
+    "oh": [
+      "b a a a",
+      "a b b b",
+      "b a b b",
+      "a b a b"
+    ],
+    "a": 1,
+    "e": "Method 1 (Increasing Number of 'b' Pattern Shortcut):\nStep 1: Kul akshar = 14. Series me 'a' ke baad aane wale 'b' ki badhti hui sankhya ko observe karein:\n- Pehle segment me: 1 baar 'b'\n- Dusre segment me: 2 baar 'b'\n- Teesre segment me: 3 baar 'b'\n- Chauthe segment me: 4 baar 'b'\nStep 2: Groups banayein:\n  `a b / a b b / a b b b / a b b b b`\nStep 3: Blanks fill karein:\n  `[a] b / a [b] b / a b [b] b / a b b [b] b`\n- Missing letters: a, b, b, b.\nCorrect 'b a a a' b b b hai.\n\nMethod 2 (Option Elimination Method):\n- Agar pehla blank 'a' ho toh standard increasing series 'ab, abb, abbb...' banti hai, isliye 'b' se shuru hone wale options 'b a a a' and 'b a b b' eliminate ho gaye.\n- Teesre blank me 'b' aayega taaki 'abbb' poora ho sake, 'a b a b' me 'a' diya hai jo galat hai. Keval 'a b b b' sahi hai.\nSahi uttar 'a b b b' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_10",
+    "qe": "Complete the letter series: _ o p _ m o n _ _ p n m o p _",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: _ o p _ m o n _ _ p n m o p _",
+    "oe": [
+      "m n p m o n",
+      "m p n m o p",
+      "m n o m p n",
+      "m n p o m n"
+    ],
+    "oh": [
+      "m n p m o n",
+      "m p n m o p",
+      "m n o m p n",
+      "m n p o m n"
+    ],
+    "a": 0,
+    "e": "Method 1 (4-Letter Identical Group Shortcut):\nStep 1: Total letters (blanks sahit) = 16. Inhe 4-4 ke 4 barabar groups me baantein:\n  `_ o p _ / m o _ n / _ _ p n / m o p _`\nStep 2: Groups compare karein:\n- Chauthe group me shuruat 'm o p' se hai (`m o p _`).\n- Dusre group me 'm o _ n' hai, jisse aakhiri letter 'n' nikalta hai.\n- Har group ka nishchit pattern bana: `m o p n`.\nStep 3: Missing letters fill karein:\n  `[m] o p [n] / m o [p] n / [m] [o] p n / m o p [n]`\n- Filled sequence: m, n, p, m, o, n.\nCorrect option  m n p m o n hai.\n\nMethod 2 (First Two Blanks Elimination Method):\n- Group 1: [m] o p [n] → Shuruat 'm n' se hogi. 'm p n m o p' 'm p' se shuru hai, eliminate ho gaya.\n- Teesra blank p banega ('m n o m p n' me 'o' hai, out). Aakhiri blank n banega ('m n p o m n' me last letter n hai lekin beech ka order galat hai). Keval 'm n p m o n' sahi hai.\nSahi uttar 'm n p m o n' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_11",
+    "qe": "Complete the letter series: _ t u _ r t _ s _ _ u s r t u _",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: _ t u _ r t _ s _ _ u s r t u _",
+    "oe": [
+      "r t u s r u",
+      "r s u r t r",
+      "r s u t r r",
+      "r s u r t s"
+    ],
+    "oh": [
+      "r t u s r u",
+      "r s u r t r",
+      "r s u t r r",
+      "r s u r t s"
+    ],
+    "a": 3,
+    "e": "Method 1 (4-Letter Identical Group Shortcut):\nStep 1: Total letters = 16. Inhe 4-4 ke 4 groups me divide karein:\n  `_ t u _ / r t _ s / _ _ u s / r t u _`\nStep 2: Letters matching:\n- Dusre group me shuruat 'r t' aur end 's' hai (`r t _ s`).\n- Chauthe group me shuruat 'r t u' hai (`r t u _`).\n- Har group ka uniform structure bana: `r t u s`.\nStep 3: Blanks complete karein:\n  `[r] t u [s] / r t [u] s / [r] [t] u s / r t u [s]`\n- Missing letters: r, s, u, r, t, s.\nCorrect option  r s u r t s hai.\n\nMethod 2 (Option Elimination by 2nd & Last Blank):\n- Dusra blank 's' aayega (`r t u [s]`), isliye 'r t u s r u' eliminate ho gaya.\n- Aakhiri blank 's' aayega (`r t u [s]`), options 'r s u r t r' and 'r s u t r r' ke ant me 'r' hai jo galat hai. Keval 'r s u r t s' bachta hai.\nSahi uttar 'r s u r t s' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_12",
+    "qe": "Complete the letter series: M _ O M M N _ M _ N O M M N _ M",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: M _ O M M N _ M _ N O M M N _ M",
+    "oe": [
+      "O N M O",
+      "N O M O",
+      "M O N M",
+      "N N M O"
+    ],
+    "oh": [
+      "O N M O",
+      "N O M O",
+      "M O N M",
+      "N N M O"
+    ],
+    "a": 1,
+    "e": "Method 1 (4-Letter Identical Group Shortcut):\nStep 1: Total letters = 16. Inhe 4-4 ke 4 groups me baantein:\n  `M _ O M / M N _ M / _ N O M / M N _ M`\nStep 2: Groups observe karein:\n- Sabhi groups me shuruat 'M' aur ant 'M' par ho raha hai.\n- Group 2 aur 4 me 'M N _ M' hai, aur Group 3 me '_ N O M' hai.\n- Har group ka repeated pattern bana: `M N O M`.\nStep 3: Blanks fill karein:\n  `M [N] O M / M N [O] M / [M] N O M / M N [O] M`\n- Missing letters: N, O, M, O.\nCorrect option  N O M O hai.\n\nMethod 2 (First Letter Elimination Method):\nPehle blank me 'N' aana anivarya hai taaki 'MNOM' bane. options 'O N M O' and 'M O N M' eliminate ho gaye. Dusre blank me 'O' aayega, isliye 'N N M O' reject ho gaya. Keval 'N O M O' sahi hai.\nSahi uttar 'N O M O' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_13",
+    "qe": "Complete the letter series: _ s r _ t r _ s r s _ r _ s r _ t _",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: _ s r _ t r _ s r s _ r _ s r _ t _",
+    "oe": [
+      "t t s s r r",
+      "t s r t s r",
+      "s t r t r s",
+      "t s t t t r"
+    ],
+    "oh": [
+      "t t s s r r",
+      "t s r t s r",
+      "s t r t r s",
+      "t s t t t r"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alternative 3-Letter Groups ('tsr' / 'str') Shortcut):\nStep 1: Total letters = 18. Inhe 3-3 ke 6 groups me divide karein:\n  `_ s r / _ t r / _ s r / s _ r / _ s r / _ t _`\nStep 2: Alternate groups ka relation dekhein:\n- Odd groups (1, 3, 5) sabhi me '_ s r' hai → Ye bante hain `t s r`.\n- Even groups (2, 4, 6) sabhi me '_ t r' / 's _ r' hai → Ye bante hain `s t r`.\nStep 3: Blanks fill karein:\n  `[t] s r / [s] t r / [t] s r / s [t] r / [t] s r / [s] t [r]` (ya sequence ke anusaar blanks: t, s, t, t, t, r).\nCorrect option  t s t t t r hai.\n\nMethod 2 (First Two Blanks Elimination):\n- Pehle blank me 't' aayega (`[t] s r`), isliye 's t r t r s' eliminate ho gaya.\n- Dusre blank me 's' aayega (`[s] t r`), isliye 't t s s r r' eliminate ho gaya. Pattern match karne par 't s t t t r' bilkul sahi fit baithta hai.\nSahi uttar 't s t t t r' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_14",
+    "qe": "Complete the letter series: g f e _ i g _ e i i _ f e i _ g f _ i i",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: g f e _ i g _ e i i _ f e i _ g f _ i i",
+    "oe": [
+      "i f g i e",
+      "i g i f e",
+      "f g i i e",
+      "e g f i i"
+    ],
+    "oh": [
+      "i f g i e",
+      "i g i f e",
+      "f g i i e",
+      "e g f i i"
+    ],
+    "a": 2,
+    "e": "Method 1 (5-Letter Symmetrical Groups Shortcut):\nStep 1: Total letters = 20. Inhe 5-5 ke 4 groups me divide karein:\n  `g f e _ i / g _ e i i / _ f e i _ / g f _ i i`\nStep 2: Groups compare karein:\n- Group 2 me 'g _ e i i' aur Group 4 me 'g f _ i i' hai, jisse pattern `g f e i i` nikalta hai (ya consecutive changing pattern).\n- Options ke through check karne par: sequence `f, g, i, i, e` bhare jaane par har group `g f e i i` ya balanced sequence banata hai.\nCorrect option  f g i i e hai.\n\nMethod 2 (Option Verification Method):\nBlanks me 'f, g, i, i, e' rakhne par uniform structure prapt hota hai: Group 1 me `g f e [f] i` ya `g f e [i] i`. Verification se 'f g i i e' match karta hai.\nSahi uttar 'f g i i e' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_15",
+    "qe": "Complete the letter series: a _ c a _ c _ d c _ d _ a d _",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: a _ c a _ c _ d c _ d _ a d _",
+    "oe": [
+      "d d c c a a",
+      "d d a a c c",
+      "c c a d a d",
+      "a d c a d c"
+    ],
+    "oh": [
+      "d d c c a a",
+      "d d a a c c",
+      "c c a d a d",
+      "a d c a d c"
+    ],
+    "a": 1,
+    "e": "Method 1 (3-Letter Repeating Groups ('adc') Shortcut):\nStep 1: Total letters = 15. Inhe 3-3 ke 5 groups me baantein:\n  `a _ c / a _ c / _ d c / _ d _ / a d _`\nStep 2: Groups compare karein:\n- Aakhiri group me shuruat 'a d' se hai (`a d _`), aur teesre group me end 'd c' par hai (`_ d c`).\n- Isse spashth hota hai ki har group `a d c` ban raha hai.\nStep 3: Blanks fill karein:\n  `a [d] c / a [d] c / [a] d c / [a] d [c] / a d [c]`\n- Missing letters: d, d, a, a, c, c.\nCorrect 'a d c a d c' d a a c c hai.\n\nMethod 2 (First Two Blanks Elimination):\nPehle do groups me beech ka letter 'd' aayega (`a [d] c`), isliye shuruat 'd d' se honi chahiye. options 'c c a d a d' and 'a d c a d c' seedhe eliminate ho gaye. Aakhiri do blanks 'c c' honge, 'd d c c a a' me 'a a' diya hai. Keval 'd d a a c c' sahi hai.\nSahi uttar 'd d a a c c' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_16",
+    "qe": "Complete the letter series: p _ r s _ q r _ p q _ s p q _ s",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: p _ r s _ q r _ p q _ s p q _ s",
+    "oe": [
+      "p q s r r",
+      "q r r s p",
+      "q p s r r",
+      "p r r s q"
+    ],
+    "oh": [
+      "p q s r r",
+      "q r r s p",
+      "q p s r r",
+      "p r r s q"
+    ],
+    "a": 2,
+    "e": "Method 1 (4-Letter Repeating Groups ('pqrs') Shortcut):\nStep 1: Total letters = 16. Inhe 4-4 ke 4 groups me divide karein:\n  `p _ r s / _ q r _ / p q _ s / p q _ s`\nStep 2: Groups compare karein:\n- Group 1: `p _ r s` (missing q)\n- Group 3 aur 4: `p q _ s` (missing r)\n- Har group me letters 'p q r s' ka continuous sequence chal raha hai.\nStep 3: Blanks fill karein:\n  `p [q] r s / [p] q r [s] / p q [r] s / p q [r] s`\n- Missing letters sequence: q, p, s, r, r.\nCorrect option  q p s r r hai.\n\nMethod 2 (First Letter Elimination Method):\nPehle blank me 'q' aana anivarya hai taaki 'pqrs' bane. Isliye options 'p q s r r' and 'p r r s q' seedhe eliminate ho gaye. Dusre blank me 'p' aayega (`[p] q r s`), 'q r r s p' me 'r' diya hai jo galat hai. Keval 'q p s r r' sahi hai.\nSahi uttar 'q p s r r' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_17",
+    "qe": "Complete the letter series: b a b _ a b a _ _ a _ _ b a a",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: b a b _ a b a _ _ a _ _ b a a",
+    "oe": [
+      "a b a b a",
+      "b a a b a",
+      "b a b a b",
+      "a a a b b"
+    ],
+    "oh": [
+      "a b a b a",
+      "b a a b a",
+      "b a b a b",
+      "a a a b b"
+    ],
+    "a": 0,
+    "e": "Method 1 (5-Letter Repeating Groups ('babaa') Shortcut):\nStep 1: Total letters = 15. Inhe 5-5 ke 3 groups me baantein:\n  `b a b _ a / b a _ _ a / _ _ b a a`\nStep 2: Groups compare karein:\n- Group 1: `b a b _ a`\n- Group 3: `_ _ b a a`\n- Dono ke milan se har group ka repeated structure nikalta hai: `b a b a a`.\nStep 3: Blanks fill karein:\n  `b a b [a] a / b a [b] [a] a / [b] [a] b a a` (Missing sequence: a, b, a, b, a).\nCorrect 'a b a b a' b a b a hai.\n\nMethod 2 (First Blank Elimination Method):\nGroup 1 ko 'b a b a a' banane ke liye pehla blank 'a' hona chahiye. Isliye 'b' se shuru hone wale options 'b a a b a' and 'b a b a b' eliminate ho gaye. Dusra blank 'b' aayega, 'a a a b b' me 'a' diya hai. Keval 'a b a b a' bachta hai.\nSahi uttar 'a b a b a' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_18",
+    "qe": "Complete the letter series: b _ c d _ d _ b c c _ c d b _",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: b _ c d _ d _ b c c _ c d b _",
+    "oe": [
+      "c b d d b",
+      "b d d c b",
+      "b d d b c",
+      "c d d b b"
+    ],
+    "oh": [
+      "c b d d b",
+      "b d d c b",
+      "b d d b c",
+      "c d d b b"
+    ],
+    "a": 1,
+    "e": "Method 1 (5-Letter Cyclic Repeating Groups Shortcut):\nStep 1: Total letters = 15. Inhe 5-5 ke 3 groups me divide karein:\n  `b _ c d _ / d _ b c c / _ c d b _`\nStep 2: Groups compare karein:\n- Group 1: `b [b] c d [d]` (pehla aur aakhiri letter double: bb c dd)\n- Group 2: `d [d] b c c` (dd b cc)\n- Group 3: `[a/g/c] c d b [b]` → pattern cyclic rotation me double letters banata hai: `b b c d d / d d b c c / c c d b b`.\nStep 3: Missing letters nikalte hain: b, d, d, c, b.\nCorrect 'b d d c b' d d c b hai.\n\nMethod 2 (Option Elimination by First Blank):\nPehle blank me 'b' bhara jayega taaki 'b b c d d' bane, isliye 'c' se start hone wale options 'c b d d b' and 'c d d b b' eliminate ho gaye. Aakhiri blank me 'b' aayega (`c c d b [b]`), 'b d d b c' ke aakhiri me 'c' hai jo galat hai. Keval 'b d d c b' bachta hai.\nSahi uttar 'b d d c b' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_19",
+    "qe": "Complete the letter series: a b _ d d a _ c c d _ b b _ d _",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: a b _ d d a _ c c d _ b b _ d _",
+    "oe": [
+      "c b a c a",
+      "c b b e d",
+      "e b e b a",
+      "e e a a e"
+    ],
+    "oh": [
+      "c b a c a",
+      "c b b e d",
+      "e b e b a",
+      "e e a a e"
+    ],
+    "a": 0,
+    "e": "Method 1 (4-Letter Cyclic Shift Groups Shortcut):\nStep 1: Total letters = 16. Inhe 4-4 ke 4 groups me divide karein:\n  `a b _ d / d a _ c / c d _ b / b _ d _`\nStep 2: Cyclic order logic dekhein (har group ka aakhiri letter agle group ka pehla letter banta hai, letters a, b, c, d hain):\n- Group 1: `a b c d` (ends in d)\n- Group 2: `d a b c` (ends in c)\n- Group 3: `c d a b` (ends in b)\n- Group 4: `b c d a` (ends in a)\nStep 3: Blanks fill karein:\n  `a b [c] d / d a [b] c / c d [a] b / b [c] d [a]`\n- Missing sequence: c, b, a, c, a.\nCorrect 'e b e b a' b a c a hai.\n\nMethod 2 (First Blank Elimination Method):\nPehle group 'a b _ d' ko chaar letters (a,b,c,d) se poora karne ke liye pehla blank 'c' hona anivarya hai. Isliye options 'e b e b a' and 'e e a a e' eliminate ho gaye. Aakhiri blank me 'a' aayega, 'c b b e d' me 'd' diya hai. Keval 'c b a c a' sahi hai.\nSahi uttar 'c b a c a' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "alltypes_20",
+    "qe": "Complete the letter series: _ d b e _ d _ e a _ b e a d _ e _ d b _",
+    "qh": "दी गई अक्षर श्रृंखला को पूरा कीजिए: _ d b e _ d _ e a _ b e a d _ e _ d b _",
+    "oe": [
+      "a a b d b a e",
+      "b b d e a a d",
+      "e e b b a d e",
+      "a e a d d b e"
+    ],
+    "oh": [
+      "a a b d b a e",
+      "b b d e a a d",
+      "e e b b a d e",
+      "a e a d d b e"
+    ],
+    "a": 0,
+    "e": "Method 1 (4-Letter Identical Group ('adbe') Shortcut):\nStep 1: Total letters = 20. Inhe 4-4 ke 5 groups me divide karein:\n  `_ d b e / _ d _ e / a _ b e / a d _ e / _ d b _`\nStep 2: Groups compare karein:\n- Group 3 me 'a _ b e' aur Group 4 me 'a d _ e' hai.\n- Dono ko milane par har group ka uniform pattern nikalta hai: `a d b e`.\nStep 3: Blanks fill karein:\n  `[a] d b e / [a] d [b] e / a [d] b e / a d [b] e / [a] d b [e]`\n- Missing letters sequence: a, a, b, d, b, a, e.\nCorrect 'a a b d b a e' a b d b a e hai.\n\nMethod 2 (First Two Blanks Elimination Trick):\nGroup 1 aur Group 2 dono 'a' se shuru honge (`[a] d b e`), isliye shuruat me 'a a' aana anivarya hai. options 'b b d e a a d' and 'e e b b a d e', aur (D) seedhe eliminate ho jate hain. Keval 'a a b d b a e' bachta hai.\nSahi uttar 'a a b d b a e' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
