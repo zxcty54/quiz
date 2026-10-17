@@ -1,7 +1,7 @@
 {
   "bpsc": {
     "title": "🏛️ BPSC PCS Special Zone",
-    "total_sets": 28,
+    "total_sets": 6,
     "path_prefix": "sectional_mock/bpsc/set"
   },
   "ssc": [
@@ -35,7 +35,7 @@
   ],
   "bssc_inter": [
     {
-      "title": "🧠 Mental Ability & Reasoning Sets",
+      "title": "🧠 Mental Ability &amp; Reasoning Sets",
       "sets": 5,
       "folder": "sectional_mock/bssc_inter/reasoning"
     },
@@ -49,7 +49,9 @@
     {
       "title": "🎯 Bihar SI Practice Sets",
       "sets": 5,
-      "folder": "sectional_mock/bihar_si"
+      "folder": "sectional_mock/bihar_si",
+      "upcoming_sets": 2,
+      "upcoming_text": "Live Tomorrow 8 PM"
     }
   ]
 }
