@@ -1,0 +1,515 @@
+[
+  {
+    "p_id": "basic_1",
+    "qe": "A computer is sold at ₹7650 after applying a 15% discount. What was its market price?",
+    "qh": "15% की छूट लागू करने के बाद एक कंप्यूटर ₹7650 में बेचा जाता है। इसका बाजार मूल्य क्या था?",
+    "oe": [
+      "₹8500",
+      "₹8800",
+      "₹9000",
+      "₹9500"
+    ],
+    "oh": [
+      "₹8500",
+      "₹8800",
+      "₹9000",
+      "₹9500"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: 15% chhoot = 3/20 ==> MP : SP = 20 : (20 - 3) = 20 : 17.\nStep 2: Prashnanusar SP (17 units) = ₹7,650.\n1 unit = 7650 / 17 = 450.\nStep 3: Market Price (MP) = 20 units = 20 * 450 = ₹9,000.\nAtah sahi vikalp  ₹9000 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP = 100% - 15% = 85% of MP.\nStep 2: 85% = ₹7,650 ==> 1% = 7650 / 85 = 90.\nStep 3: MP (100%) = 100 * 90 = ₹9,000.\nAtah sahi uttar '₹9000' hai.\n\nYahan chhoot aur ankitan moolya ka niyam seedha lagta hai. Vikalp ₹8500, ₹8800, ₹9500 is hal se mel nahi khaate. Exam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "basic_2",
+    "qe": "In a store, an item with marked price of ₹82,500 is available at a discounted price of ₹79,200. What is the percentage of discount given on that item?",
+    "qh": "एक स्टोर में, ₹82,500 के अंकित मूल्य वाली एक वस्तु ₹79,200 के रियायती मूल्य पर उपलब्ध है। उस वस्तु पर दी गई छूट का प्रतिशत क्या है?",
+    "oe": [
+      "4%",
+      "3%",
+      "1%",
+      "2%"
+    ],
+    "oh": [
+      "4%",
+      "3%",
+      "1%",
+      "2%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: MP aur SP ka anupat banayein:\nMP : SP = 82,500 : 79,200 = 825 : 792.\n33 se kaatne par: 825 / 33 = 25 aur 792 / 33 = 24 ==> MP : SP = 25 : 24.\nStep 2: Chhoot (Discount) = 25 - 24 = 1 unit.\nStep 3: Discount% = (Discount / MP) * 100% = (1 / 25) * 100% = 4%.\nAtah sahi vikalp  4% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul Chhoot = MP - SP = 82,500 - 79,200 = ₹3,300.\nStep 2: Discount% = (3,300 / 82,500) * 100% = 3300 / 825% = 4%.\nAtah sahi uttar '4%' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_3",
+    "qe": "The selling price of a vintage vase is ₹1800 and the discount given is 4%. What is the marked price of the vase?",
+    "qh": "एक विंटेज फूलदान का विक्रय मूल्य ₹1800 है और दी गई छूट 4% है। फूलदान का अंकित मूल्य क्या है?",
+    "oe": [
+      "₹1768",
+      "₹1700",
+      "₹1850",
+      "₹1875"
+    ],
+    "oh": [
+      "₹1768",
+      "₹1700",
+      "₹1850",
+      "₹1875"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: 4% discount = 1/25 ==> MP : SP = 25 : 24.\nStep 2: Prashnanusar SP (24 units) = ₹1,800.\n1 unit = 1800 / 24 = 75.\nStep 3: Marked Price (MP) = 25 units = 25 * 75 = ₹1,875.\nAtah sahi vikalp  ₹1875 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP = 100% - 4% = 96% of MP.\nStep 2: 96% = ₹1,800 ==> 1% = 1800 / 96 = 18.75.\nStep 3: MP (100%) = 100 * 18.75 = ₹1,875.\nAtah sahi uttar '₹1875' hai.\n\nYahan chhoot aur ankitan moolya ka niyam seedha lagta hai. Vikalp ₹1768, ₹1700, ₹1850 is hal se mel nahi khaate. Exam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "basic_4",
+    "qe": "A dress is marked at ₹3,500. A discount offer changes from 10% to 15%. How much extra discount does a customer get?",
+    "qh": "एक पोशाक पर ₹3,500 अंकित है। छूट का प्रस्ताव 10% से बदलकर 15% हो जाता है। ग्राहक को कितनी अतिरिक्त छूट मिलती है?",
+    "oe": [
+      "₹175",
+      "₹185",
+      "₹195",
+      "₹200"
+    ],
+    "oh": [
+      "₹175",
+      "₹185",
+      "₹195",
+      "₹200"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Chhoot me antar = 15% - 10% = 5%.\n5% = 1/20.\nStep 2: Extra discount = (1/20) of MP = (1/20) * 3500 = ₹175.\nAtah sahi vikalp  ₹175 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Pehli chhoot = 10% of 3500 = ₹350.\nStep 2: Nayi chhoot = 15% of 3500 = ₹525.\nStep 3: Atirikt chhoot = 525 - 350 = ₹175.\nAtah sahi uttar '₹175' hai.\n\nIs prashn ka moolaadhaar chhoot aur ankitan moolya ka niyam hai. Vikalp ₹185, ₹195, ₹200 is hal se mel nahi khaate. Exam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "basic_5",
+    "qe": "A merchant advertise 10% off on the items bought from his store. Find the discount got by a customer who bought a bag worth ₹560, an exercise book worth ₹90 and a pen worth ₹45.",
+    "qh": "एक व्यापारी अपने स्टोर से खरीदी गई वस्तुओं पर 10% की छूट का विज्ञापन करता है। उस ग्राहक को मिलने वाली छूट ज्ञात कीजिए जिसने ₹560 का बैग, ₹90 की नोटबुक और ₹45 का पेन खरीदा।",
+    "oe": [
+      "₹59",
+      "₹69.50",
+      "₹65",
+      "₹67.50"
+    ],
+    "oh": [
+      "₹59",
+      "₹69.50",
+      "₹65",
+      "₹67.50"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Kul ankit moolya (Total MP) = 560 + 90 + 45 = ₹695.\nStep 2: 10% chhoot (1/10) ==> Discount = 695 / 10 = ₹69.50.\nAtah sahi vikalp  ₹69.50 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul kharid rashi = ₹695.\nStep 2: Discount = 10% of 695 = 0.10 * 695 = ₹69.50.\nAtah sahi uttar '₹69.50' hai.\n\nchhoot aur ankitan moolya ka niyam se hi is prashn ka jawab nikalta hai. She sh vikalp ₹59, ₹65, ₹67.50 is hisaab se nahi milte. Exam point: chhoot aur ankitan moolya ka niyam - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "basic_6",
+    "qe": "The marked price of an electronic watch in a store is ₹15,620 and it is available at a discount of 27%. What is the price (in ₹) to the nearest tens that a customer pays if he buys from the store?",
+    "qh": "एक स्टोर में एक इलेक्ट्रॉनिक घड़ी का अंकित मूल्य ₹15,620 है और यह 27% की छूट पर उपलब्ध है। यदि कोई ग्राहक स्टोर से खरीदता है तो वह निकटतम दहाई में क्या कीमत (₹ में) चुकाता है?",
+    "oe": [
+      "₹12,500",
+      "₹11,400",
+      "₹9,880",
+      "₹10,880"
+    ],
+    "oh": [
+      "₹12,500",
+      "₹11,400",
+      "₹9,880",
+      "₹10,880"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: 27% discount par SP anupat: MP : SP = 100 : 73.\nStep 2: MP = ₹15,620.\nSP = 15620 * (73 / 100) = 156.20 * 73.\nStep 3: Guna karein: 156.2 * 73 = 11,402.60.\nStep 4: Nearest tens (nikattam dahai) me maapne par: 11,402.60 ≈ ₹11,400.\nAtah sahi vikalp  ₹11,400 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP = (100% - 27%) of 15,620 = 73% of 15,620.\nStep 2: SP = 0.73 * 15,620 = ₹11,402.60.\nStep 3: Nikattam dahai = ₹11,400.\nAtah sahi uttar '₹11,400' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_7",
+    "qe": "A laptop is listed at ₹60,000. If seller offers a festival discount of 20% followed by a cashback of ₹2,000. What is the effective price paid?",
+    "qh": "एक लैपटॉप ₹60,000 पर सूचीबद्ध है। यदि विक्रेता 20% की त्योहारी छूट और उसके बाद ₹2,000 का कैशबैक प्रदान करता है। भुगतान की गई प्रभावी कीमत क्या है?",
+    "oe": [
+      "₹46,000",
+      "₹48,000",
+      "₹48,800",
+      "₹47,000"
+    ],
+    "oh": [
+      "₹46,000",
+      "₹48,000",
+      "₹48,800",
+      "₹47,000"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: 20% discount (1/5) ==> MP : SP1 = 5 : 4.\n5 units = ₹60,000 ==> 1 unit = 12,000 ==> SP1 = 4 * 12,000 = ₹48,000.\nStep 2: ₹2,000 ka cashback ghatane par:\nEffective price = 48,000 - 2,000 = ₹46,000.\nAtah sahi vikalp  ₹46,000 hai.\n\nMethod 2 (100-Base Method):\nStep 1: 20% chhoot ke baad moolya = 60,000 * 0.80 = ₹48,000.\nStep 2: Cashback ke baad antim moolya = 48,000 - 2,000 = ₹46,000.\nAtah sahi uttar '₹46,000' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_8",
+    "qe": "12 books each of ₹360 are sold at ₹3600. What is the percentage of the discount given?",
+    "qh": "₹360 प्रत्येक की 12 पुस्तकें ₹3600 में बेची जाती हैं। दी गई छूट का प्रतिशत क्या है?",
+    "oe": [
+      "16.67%",
+      "18%",
+      "15.5%",
+      "14.57%"
+    ],
+    "oh": [
+      "16.67%",
+      "18%",
+      "15.5%",
+      "14.57%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Kul MP = 12 * 360 = ₹4,320.\nKul SP = ₹3,600.\nStep 2: MP : SP = 4320 : 3600 = 432 : 360 = 6 : 5.\nStep 3: Chhoot = 6 - 5 = 1 unit.\nDiscount% = (1 / 6) * 100% = 16.67%.\nAtah sahi vikalp  16.67% hai.\n\nMethod 2 (100-Base Method):\nStep 1: 1 pustak ka SP = 3600 / 12 = ₹300.\nStep 2: 1 pustak par chhoot = 360 - 300 = ₹60.\nStep 3: Discount% = (60 / 360) * 100% = (1 / 6) * 100% = 16.67%.\nAtah sahi uttar '16.67%' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_9",
+    "qe": "At a clearance sale, a shopkeeper gives 45% discount. If a customer paid ₹330 during the sale, then what is the marked price of that shirt?",
+    "qh": "एक क्लीयरेंस सेल में, एक दुकानदार 45% की छूट देता है। यदि किसी ग्राहक ने सेल के दौरान ₹330 का भुगतान किया, तो उस कमीज का अंकित मूल्य क्या है?",
+    "oe": [
+      "₹550",
+      "₹600",
+      "₹500",
+      "₹650"
+    ],
+    "oh": [
+      "₹550",
+      "₹600",
+      "₹500",
+      "₹650"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: 45% discount = 45/100 = 9/20 ==> MP : SP = 20 : (20 - 9) = 20 : 11.\nStep 2: Grahak ne ₹330 chukaye ==> SP (11 units) = ₹330.\n1 unit = 330 / 11 = ₹30.\nStep 3: Marked Price (MP) = 20 units = 20 * 30 = ₹600.\nAtah sahi vikalp  ₹600 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP = 100% - 45% = 55% of MP.\nStep 2: 55% = ₹330 ==> 1% = 330 / 55 = 6.\nStep 3: MP (100%) = 100 * 6 = ₹600.\nAtah sahi uttar '₹600' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_10",
+    "qe": "Marked price of an article is 140 percent of the value of discount. Marked price is what percent of the selling price?",
+    "qh": "एक वस्तु का अंकित मूल्य छूट के मूल्य का 140 प्रतिशत है। अंकित मूल्य विक्रय मूल्य का कितना प्रतिशत है?",
+    "oe": [
+      "350%",
+      "300%",
+      "250%",
+      "275%"
+    ],
+    "oh": [
+      "350%",
+      "300%",
+      "250%",
+      "275%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: MP = 140% of Discount ==> MP / Discount = 140 / 100 = 7 / 5.\nMP = 7 units, Discount = 5 units.\nStep 2: Selling Price (SP) = MP - Discount = 7 - 5 = 2 units.\nStep 3: MP aur SP ka anupat: MP : SP = 7 : 2.\nStep 4: MP, SP ka pratishat = (MP / SP) * 100% = (7 / 2) * 100% = 350%.\nAtah sahi vikalp  350% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana Discount = ₹100 ==> MP = ₹140.\nStep 2: SP = MP - Discount = 140 - 100 = ₹40.\nStep 3: (MP / SP) * 100% = (140 / 40) * 100% = (7 / 2) * 100% = 350%.\nAtah sahi uttar '350%' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_11",
+    "qe": "If the selling price of an article is 90% of its marked price and the cost price is 80% of the marked price, what is the profit percentage?",
+    "qh": "यदि किसी वस्तु का विक्रय मूल्य उसके अंकित मूल्य का 90% है और क्रय मूल्य अंकित मूल्य का 80% है, तो लाभ प्रतिशत क्या है?",
+    "oe": [
+      "10%",
+      "12.5%",
+      "15%",
+      "20.5%"
+    ],
+    "oh": [
+      "10%",
+      "12.5%",
+      "15%",
+      "20.5%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Mana Marked Price (MP) = 100 units.\nSP = 90 units, CP = 80 units.\nStep 2: CP aur SP ka anupat banayein:\nCP : SP = 80 : 90 = 8 : 9.\nStep 3: Profit = 9 - 8 = 1 unit.\nStep 4: Profit% = (Profit / CP) * 100% = (1 / 8) * 100% = 12.5%.\nAtah sahi vikalp  12.5% hai.\n\nMethod 2 (100-Base Method):\nStep 1: MP = 100, CP = 80, SP = 90.\nStep 2: Labh = SP - CP = 90 - 80 = 10.\nStep 3: Profit% = (10 / 80) * 100% = (1 / 8) * 100% = 12.5%.\nAtah sahi uttar '12.5%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_12",
+    "qe": "A shopkeeper marks an article at ₹720 and gives a discount of ₹144. He earns a profit of ₹36. What is the cost price?",
+    "qh": "एक दुकानदार एक वस्तु पर ₹720 अंकित करता है और ₹144 की छूट देता है। वह ₹36 का लाभ अर्जित करता है। क्रय मूल्य क्या है?",
+    "oe": [
+      "₹500",
+      "₹520",
+      "₹540",
+      "₹560"
+    ],
+    "oh": [
+      "₹500",
+      "₹520",
+      "₹540",
+      "₹560"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Selling Price (SP) nikalein:\nSP = MP - Discount = 720 - 144 = ₹576.\nStep 2: Cost Price (CP) nikalein:\nCP = SP - Profit = 576 - 36 = ₹540.\nStep 3: Anupat roop me dekhein: CP : Profit = 540 : 36 = 15 : 1.\nAtah sahi vikalp  ₹540 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP = 720 - 144 = ₹576.\nStep 2: CP = SP - Profit = 576 - 36 = ₹540.\nAtah sahi uttar '₹540' hai.\n\nIs prashn ka moolaadhaar labh-haani ka niyam hai. She sh vikalp ₹500, ₹520, ₹560 is hisaab se nahi milte. Exam point: labh-haani ka niyam - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "basic_13",
+    "qe": "A shopkeeper announced 17% rebate on the marked price of an article. If the selling price of the article is ₹1,245, then the marked price (in ₹) of the article is :",
+    "qh": "एक दुकानदार ने एक वस्तु के अंकित मूल्य पर 17% छूट की घोषणा की। यदि वस्तु का विक्रय मूल्य ₹1,245 है, तो वस्तु का अंकित मूल्य (₹ में) है:",
+    "oe": [
+      "₹1500",
+      "₹1820",
+      "₹1780",
+      "₹1600"
+    ],
+    "oh": [
+      "₹1500",
+      "₹1820",
+      "₹1780",
+      "₹1600"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: 17% chhoot ==> MP : SP = 100 : (100 - 17) = 100 : 83.\nStep 2: Prashnanusar SP (83 units) = ₹1,245.\n1 unit = 1245 / 83 = 15.\nStep 3: Marked Price (MP) = 100 units = 100 * 15 = ₹1,500.\nAtah sahi vikalp  ₹1500 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP = (100 - 17)% = 83% of MP.\nStep 2: 83% = ₹1,245 ==> 1% = 1245 / 83 = 15.\nStep 3: MP (100%) = 100 * 15 = ₹1,500.\nAtah sahi uttar '₹1500' hai.\n\nIs prashn ka moolaadhaar chhoot aur ankitan moolya ka niyam hai. Vikalp ₹1820, ₹1780, ₹1600 is hal se mel nahi khaate. Exam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "basic_14",
+    "qe": "The marked price of one pen is ₹x. The selling price of one packet of x pens after a discount of 15%, is ₹1,360. What is the value of 'x'?",
+    "qh": "एक पेन का अंकित मूल्य ₹x है। 15% की छूट के बाद x पेनों के एक पैकेट का विक्रय मूल्य ₹1,360 है। 'x' का मान क्या है?",
+    "oe": [
+      "20",
+      "40",
+      "30",
+      "45"
+    ],
+    "oh": [
+      "20",
+      "40",
+      "30",
+      "45"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: x penon ka kul MP = x * x = x^2.\nStep 2: 15% discount (3/20) ke baad SP anupat: MP : SP = 20 : 17.\n17 units = ₹1,360 ==> 1 unit = 1360 / 17 = 80.\nStep 3: Kul MP (20 units) = 20 * 80 = 1,600.\nStep 4: x^2 = 1600 ==> x = √1600 = 40.\nAtah sahi vikalp  40 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Packet ka SP = 85% of Total MP = 0.85 * x^2.\nStep 2: 0.85 * x^2 = 1360.\nx^2 = 1360 / 0.85 = 136000 / 85 = 1600.\nStep 3: x = 40.\nAtah sahi uttar '40' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_15",
+    "qe": "A dealer sells a packet of cookies at ₹120 after giving a 25% discount on the marked price. If the profit earned is 20%, find the cost price.",
+    "qh": "एक डीलर अंकित मूल्य पर 25% की छूट देने के बाद कुकीज़ का एक पैकेट ₹120 पर बेचता है। यदि अर्जित लाभ 20% है, तो क्रय मूल्य ज्ञात कीजिए।",
+    "oe": [
+      "₹96",
+      "₹90",
+      "₹100",
+      "₹80"
+    ],
+    "oh": [
+      "₹96",
+      "₹90",
+      "₹100",
+      "₹80"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Vastu ka SP = ₹120 aur labh = 20% (1/5).\nCP : SP = 5 : 6.\nStep 2: Prashnanusar SP (6 units) = ₹120.\n1 unit = 120 / 6 = 20.\nStep 3: Cost Price (CP) = 5 units = 5 * 20 = ₹100.\n(Note: Yahan CP nikalne ke liye MP ya 25% discount ki zaroorat nahi padti, sidha SP aur Profit% se hal ho jata hai).\nAtah sahi vikalp  ₹100 hai.\n\nMethod 2 (100-Base Method):\nStep 1: SP = 120% of CP = ₹120.\nStep 2: CP = 120 / 1.20 = ₹100.\nAtah sahi uttar '₹100' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_16",
+    "qe": "A laptop is priced at ₹40,000. A customer gets a discount of ₹4,000 on it. After the discount, the customer buys a mouse for ₹1,500 at a 20% discount. What is the total amount the customer spends on both items?",
+    "qh": "एक लैपटॉप की कीमत ₹40,000 है। एक ग्राहक को इस पर ₹4,000 की छूट मिलती है। छूट के बाद, ग्राहक 20% की छूट पर ₹1,500 का माउस खरीदता है। ग्राहक दोनों वस्तुओं पर कुल कितनी राशि खर्च करता है?",
+    "oe": [
+      "₹37,200",
+      "₹37,500",
+      "₹36,200",
+      "₹36,500"
+    ],
+    "oh": [
+      "₹37,200",
+      "₹37,500",
+      "₹36,200",
+      "₹36,500"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Laptop par kharch = 40,000 - 4,000 = ₹36,000.\nStep 2: Mouse ka moolya = ₹1,500. 20% chhoot (1/5) ==> MP : SP = 5 : 4.\n5 units = 1500 ==> 1 unit = 300 ==> Mouse ka SP = 4 * 300 = ₹1,200.\nStep 3: Dono vastuon par kul kharch = 36,000 + 1,200 = ₹37,200.\nAtah sahi vikalp  ₹37,200 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Laptop ka SP = 40,000 - 4,000 = ₹36,000.\nStep 2: Mouse ka SP = 1,500 * (1 - 0.20) = 1,500 * 0.80 = ₹1,200.\nStep 3: Kul bhugtan = 36,000 + 1,200 = ₹37,200.\nAtah sahi uttar '₹37,200' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_17",
+    "qe": "A shopkeeper offers a festival deal, \"Flat ₹150 off on every purchase above ₹1000.\" What is the effective discount percentage if a buyer purchases an item marked ₹1200?",
+    "qh": "एक दुकानदार त्योहारी ऑफर देता है, \"₹1000 से ऊपर की प्रत्येक खरीद पर ₹150 की सीधी छूट।\" यदि कोई खरीदार ₹1200 अंकित मूल्य वाली वस्तु खरीदता है तो प्रभावी छूट प्रतिशत क्या है?",
+    "oe": [
+      "12.5%",
+      "15.5%",
+      "10.25%",
+      "11.25%"
+    ],
+    "oh": [
+      "12.5%",
+      "15.5%",
+      "10.25%",
+      "11.25%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: MP = ₹1200, Chhoot (Discount) = ₹150.\nStep 2: Discount aur MP ka anupat banayein:\nDiscount : MP = 150 : 1200 = 1 : 8.\nStep 3: Effective Discount% = (1 / 8) * 100% = 12.5%.\nAtah sahi vikalp  12.5% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Discount% = (Chhoot / Ankit Mulya) * 100%.\nStep 2: Discount% = (150 / 1200) * 100% = 150 / 12% = 12.5%.\nAtah sahi uttar '12.5%' hai.\n\nchhoot aur ankitan moolya ka niyam se hi is prashn ka jawab nikalta hai. She sh vikalp 15.5%, 10.25%, 11.25% is hisaab se nahi milte. Exam point: chhoot aur ankitan moolya ka niyam - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "basic_18",
+    "qe": "The value of discount given on an article is (2/17) of the marked price. What is the ratio of the value of discount to the selling price?",
+    "qh": "किसी वस्तु पर दी गई छूट का मान अंकित मूल्य का (2/17) है। छूट के मान का विक्रय मूल्य से अनुपात क्या है?",
+    "oe": [
+      "15 : 17",
+      "2 : 19",
+      "2 : 15",
+      "15 : 19"
+    ],
+    "oh": [
+      "15 : 17",
+      "2 : 19",
+      "2 : 15",
+      "15 : 19"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Prashnanusar: Discount = (2/17) * MP ==> Discount / MP = 2 / 17.\nDiscount = 2 units, MP = 17 units.\nStep 2: Selling Price (SP) = MP - Discount = 17 - 2 = 15 units.\nStep 3: Discount aur SP ka anupat = Discount : SP = 2 : 15.\nAtah sahi vikalp  2 : 15 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana MP = 170.\nDiscount = (2/17) * 170 = 20.\nStep 2: SP = 170 - 20 = 150.\nStep 3: Ratio = 20 : 150 = 2 : 15.\nAtah sahi uttar '2 : 15' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_19",
+    "qe": "On the occasion of Republic Day, a retail store offers a scheme where customers can avail a discount of 26% on their total purchase. If Manish buys items worth Rs.2,050, how much money (in) will he save through the scheme discount?",
+    "qh": "गणतंत्र दिवस के अवसर पर, एक खुदरा स्टोर एक योजना प्रस्तुत करता है जहां ग्राहक अपनी कुल खरीद पर 26% की छूट प्राप्त कर सकते हैं। यदि मनीष ₹2,050 की वस्तुएं खरीदता है, तो वह योजना छूट के माध्यम से कितने पैसे (₹ में) बचाएगा?",
+    "oe": [
+      "₹533",
+      "₹544",
+      "₹522",
+      "₹511"
+    ],
+    "oh": [
+      "₹533",
+      "₹544",
+      "₹522",
+      "₹511"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: 26% discount = 26/100 = 13/50.\nBachat (Discount) : Kul Moolya = 13 : 50.\nStep 2: Kul moolya (50 units) = ₹2,050.\n1 unit = 2050 / 50 = 41.\nStep 3: Bachat (13 units) = 13 * 41 = ₹533.\nAtah sahi vikalp  ₹533 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Bachat = 26% of 2050.\nStep 2: Bachat = (26 / 100) * 2050 = 26 * 20.5 = ₹533.\nAtah sahi uttar '₹533' hai.\n\nsarkari yojana ka tathya se hi is prashn ka jawab nikalta hai. Vikalp ₹544, ₹522, ₹511 is hal se mel nahi khaate. Exam point: sarkari yojana ka tathya - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "basic_20",
+    "qe": "A product marked at ₹1800 is sold with a 10% discount and then taxed with 18% GST. What is the amount of GST charged?",
+    "qh": "₹1800 अंकित एक उत्पाद 10% की छूट के साथ बेचा जाता है और फिर 18% GST लगाया जाता है। लगाए गए GST की राशि क्या है?",
+    "oe": [
+      "₹250.2",
+      "₹280.8",
+      "₹291.6",
+      "₹324.0"
+    ],
+    "oh": [
+      "₹250.2",
+      "₹280.8",
+      "₹291.6",
+      "₹324.0"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: 10% discount ke baad kar-yogya moolya (Taxable value/SP):\n10% discount (1/10) ==> MP : SP = 10 : 9.\n10 units = ₹1800 ==> 1 unit = 180 ==> SP = 9 * 180 = ₹1,620.\nStep 2: GST 18% lagta hai (18% = 9/50):\nGST amount = 1620 * (18 / 100) = 16.2 * 18 = ₹291.60.\nAtah sahi vikalp  ₹291.6 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Chhoot ke baad mulya = 1800 * 0.90 = ₹1,620.\nStep 2: GST rashi = 18% of 1620 = 0.18 * 1620 = ₹291.60.\nAtah sahi uttar '₹291.6' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_21",
+    "qe": "A shopkeeper has announced a 25% rebate on the prices of stationery items. If anyone needs to have a rebate of ₹40, then how many stationery items costing ₹32 should be purchased?",
+    "qh": "एक दुकानदार ने स्टेशनरी वस्तुओं की कीमतों पर 25% छूट की घोषणा की है। यदि किसी को ₹40 की छूट प्राप्त करनी है, तो ₹32 लागत वाली कितनी स्टेशनरी वस्तुएं खरीदी जानी चाहिए?",
+    "oe": [
+      "5 items",
+      "6 items",
+      "4 items",
+      "3 items"
+    ],
+    "oh": [
+      "5 items",
+      "6 items",
+      "4 items",
+      "3 items"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: 1 vastu ka moolya = ₹32. Chhoot = 25% = 1/4.\n1 vastu par chhoot = 32 * (1/4) = ₹8.\nStep 2: Chhoot aur vastuo ki sankhya ka anupat:\n1 vastu : ₹8 chhoot.\nStep 3: ₹40 ki chhoot ke liye aavashyak vastuyein = 40 / 8 = 5 items.\nAtah sahi vikalp  5 items hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul aavashyak kharid rashi jis par 25% chhoot = ₹40 ho:\n25% of Kul Rashi = 40 ==> Kul Rashi = 40 / 0.25 = ₹160.\nStep 2: Vastuo ki sankhya = Kul Rashi / 1 vastu ka moolya = 160 / 32 = 5 items.\nAtah sahi uttar '5 items' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_22",
+    "qe": "In a scheme, a shopkeeper offers a 10% discount if you buy two or more books. Kiran buys two books for ₹540. If the shopkeeper still makes a 20% profit, find the profit he would make if he sold the books without the discount.",
+    "qh": "एक योजना में, यदि आप दो या दो से अधिक पुस्तकें खरीदते हैं तो एक दुकानदार 10% की छूट प्रदान करता है। किरण ₹540 में दो पुस्तकें खरीदती है। यदि दुकानदार फिर भी 20% का लाभ कमाता है, तो बिना छूट के पुस्तकें बेचने पर उसे कितना लाभ होता?",
+    "oe": [
+      "₹120",
+      "₹150",
+      "₹180",
+      "₹200"
+    ],
+    "oh": [
+      "₹120",
+      "₹150",
+      "₹180",
+      "₹200"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: 10% discount ke baad becha gaya moolya SP = ₹540.\n10% discount (1/10) ==> MP : SP = 10 : 9.\n9 units = ₹540 ==> 1 unit = 60 ==> MP = 10 * 60 = ₹600.\nStep 2: Dukandar 20% labh kamata hai (20% = 1/5) ==> CP : SP = 5 : 6.\n6 units = ₹540 ==> 1 unit = 90 ==> CP = 5 * 90 = ₹450.\nStep 3: Bina chhoot ke bechne par naya SP = MP = ₹600.\nNaya Labh = MP - CP = 600 - 450 = ₹150.\nAtah sahi vikalp  ₹150 hai.\n\nMethod 2 (100-Base Method):\nStep 1: MP = 540 / 0.90 = ₹600.\nStep 2: CP = 540 / 1.20 = ₹450.\nStep 3: Bina discount ke bechne par Profit = MP - CP = 600 - 450 = ₹150.\nAtah sahi uttar '₹150' hai.\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_23",
+    "qe": "A seller marks up his goods at 40% over the cost price. If the difference between the profits if he allows a 15% discount on the marked price and if he allows a discount of 20% on the marked price is ₹94.85, find the cost price (in ₹).",
+    "qh": "एक विक्रेता अपने माल पर क्रय मूल्य से 40% अधिक मूल्य अंकित करता है। यदि अंकित मूल्य पर 15% की छूट देने पर और अंकित मूल्य पर 20% की छूट देने पर होने वाले लाभों के बीच का अंतर ₹94.85 है, तो क्रय मूल्य (₹ में) ज्ञात कीजिए।",
+    "oe": [
+      "₹1,355",
+      "₹1,345",
+      "₹1,365",
+      "₹1,375"
+    ],
+    "oh": [
+      "₹1,355",
+      "₹1,345",
+      "₹1,365",
+      "₹1,375"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: CP aur MP ka anupat: 40% markup (2/5) ==> CP : MP = 100 : 140.\nStep 2: Chhoot ka antar = 20% - 15% = 5% of MP.\nChunki CP dono sthitiyo me saman hai, atah labho ka antar = chhoot ka antar.\n5% of MP = ₹94.85 ==> MP = 94.85 / 0.05 = 94.85 * 20 = ₹1,897.\nStep 3: CP : MP = 100 : 140 = 5 : 7.\n7 units = 1897 ==> 1 unit = 1897 / 7 = 271.\nCP (5 units) = 5 * 271 = ₹1,355.\nAtah sahi vikalp  ₹1,355 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana CP = 100% ==> MP = 140%.\nStep 2: Labh ka antar = MP par (20% - 15%) discount ka antar = 5% of MP.\n5% of 140% of CP = 0.05 * 1.40 * CP = 0.07 * CP = 7% of CP.\nStep 3: 7% of CP = ₹94.85.\n1% of CP = 94.85 / 7 = 13.55.\nStep 4: CP (100%) = 100 * 13.55 = ₹1,355.\nAtah sahi uttar '₹1,355' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_24",
+    "qe": "A person bought a cycle at a discount of 20% on the marked price. He spent ₹400 on repairs and sold it for ₹4,800, gaining 25%. What was the marked price?",
+    "qh": "एक व्यक्ति ने अंकित मूल्य पर 20% की छूट पर एक साइकिल खरीदी। उसने मरम्मत पर ₹400 खर्च किए और इसे ₹4,800 में बेचकर 25% का लाभ कमाया। अंकित मूल्य क्या था?",
+    "oe": [
+      "₹5,500",
+      "₹6,000",
+      "₹5,600",
+      "₹4,300"
+    ],
+    "oh": [
+      "₹5,500",
+      "₹6,000",
+      "₹5,600",
+      "₹4,300"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: 25% profit = 1/4 ==> Total CP : SP = 4 : 5.\n5 units = ₹4,800 ==> 1 unit = 4800 / 5 = ₹960.\nTotal CP = 4 * 960 = ₹3,840.\nStep 2: Repairs par ₹400 kharch huye the, isliye kharid mulya (Purchase Price) = 3840 - 400 = ₹3,440.\nStep 3: Cycle 20% discount (1/5) par kharidi gayi thi ==> MP : Purchase Price = 5 : 4.\n4 units = ₹3,440 ==> 1 unit = 3440 / 4 = ₹860.\nMarked Price (MP) = 5 units = 5 * 860 = ₹4,300.\nAtah sahi vikalp  ₹4,300 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Total CP = 4,800 / 1.25 = ₹3,840.\nStep 2: Purchase Price = 3,840 - 400 = ₹3,440.\nStep 3: 80% of MP = ₹3,440 ==> MP = 3440 / 0.80 = ₹4,300.\nAtah sahi uttar '₹5,500' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_25",
+    "qe": "A shopkeeper sells an article at a discount of 12%. Had he given only a 5% discount, he would have earned ₹504 more as profit. If the cost price of the article is ₹3000, then find the marked price?",
+    "qh": "एक दुकानदार एक वस्तु को 12% की छूट पर बेचता है। यदि उसने केवल 5% की छूट दी होती, तो उसे लाभ के रूप में ₹504 अधिक प्राप्त होते। यदि वस्तु का क्रय मूल्य ₹3000 है, तो अंकित मूल्य ज्ञात कीजिए?",
+    "oe": [
+      "₹7200",
+      "₹6800",
+      "₹6500",
+      "₹7500"
+    ],
+    "oh": [
+      "₹7200",
+      "₹6800",
+      "₹6500",
+      "₹7500"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Discount me antar = 12% - 5% = 7% of MP.\nChunki CP dono sthitiyo me saman hai, isliye labh ka antar = chhoot ka antar.\nStep 2: 7% of MP = ₹504.\n7/100 of MP = 504 ==> 1 unit = 504 / 7 = 72.\nStep 3: Marked Price (MP) = 100 units = 100 * 72 = ₹7,200.\nAtah sahi vikalp  ₹7200 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Labh me vriddhi = MP par bachi hui chhoot = (12% - 5%) of MP = 7% of MP.\nStep 2: 7% of MP = ₹504 ==> 1% of MP = 72.\nStep 3: MP (100%) = 100 * 72 = ₹7,200.\nAtah sahi uttar '₹7200' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_26",
+    "qe": "After deducting 25% from the marked price, the item's selling price is ₹7200. If the discount is raised to 30%, what will the selling price be?",
+    "qh": "अंकित मूल्य से 25% घटाने के बाद, वस्तु का विक्रय मूल्य ₹7200 है। यदि छूट बढ़ाकर 30% कर दी जाए, तो विक्रय मूल्य क्या होगा?",
+    "oe": [
+      "₹6720",
+      "₹6500",
+      "₹6000",
+      "₹5500"
+    ],
+    "oh": [
+      "₹6720",
+      "₹6500",
+      "₹6000",
+      "₹5500"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Pehla SP1 = 100% - 25% = 75% of MP.\nNaya SP2 = 100% - 30% = 70% of MP.\nStep 2: SP1 aur SP2 ka anupat banayein:\nSP1 : SP2 = 75 : 70 = 15 : 14.\nStep 3: Prashnanusar SP1 (15 units) = ₹7,200.\n1 unit = 7200 / 15 = 480.\nStep 4: Naya SP2 (14 units) = 14 * 480 = ₹6,720.\nAtah sahi vikalp  ₹6720 hai.\n\nMethod 2 (100-Base Method):\nStep 1: MP = 7200 / 0.75 = ₹9,600.\nStep 2: 30% chhoot par Naya SP = 9600 * (1 - 0.30) = 9600 * 0.70 = ₹6,720.\nAtah sahi uttar '₹6720' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "basic_27",
+    "qe": "Profit of Ravindra while selling a book to Meeta is ₹68. Despite a discount of 15% on the book, Ravindra managed to get a 10% profit. What must be the list price of the book?",
+    "qh": "मीता को एक किताब बेचते समय रवींद्र का लाभ ₹68 है। किताब पर 15% की छूट के बावजूद, रवींद्र 10% लाभ प्राप्त करने में सफल रहा। किताब का सूची मूल्य (अंकित मूल्य) क्या होना चाहिए?",
+    "oe": [
+      "₹800",
+      "₹880",
+      "₹850",
+      "₹920"
+    ],
+    "oh": [
+      "₹800",
+      "₹880",
+      "₹850",
+      "₹920"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: CP aur MP ka sambandh sutra: CP / MP = (100 - Discount%) / (100 + Profit%).\nCP / MP = (100 - 15) / (100 + 10) = 85 / 110 = 17 / 22.\nStep 2: 10% labh CP par hota hai: Profit = 10% of CP = 10% of 17 units = 1.7 units.\nStep 3: Prashnanusar 1.7 units = ₹68 ==> 1 unit = 68 / 1.7 = 40.\nStep 4: List Price (MP) = 22 units = 22 * 40 = ₹880.\nAtah sahi vikalp  ₹880 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Labh = 10% of CP = ₹68 ==> CP = 68 / 0.10 = ₹680.\nStep 2: SP = CP + Profit = 680 + 68 = ₹748.\nStep 3: SP = 85% of List Price ==> List Price = 748 / 0.85 = 74800 / 85 = ₹880.\nAtah sahi uttar '₹880' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
