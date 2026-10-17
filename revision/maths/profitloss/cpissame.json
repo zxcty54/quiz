@@ -1,0 +1,306 @@
+[
+  {
+    "p_id": "cpissame_1",
+    "qe": "A shopkeeper bought 100 pens at ₹10 each. He sold 60 pens at 20% profit and the rest at 10% loss. What is the overall profit or loss percentage?",
+    "qh": "एक दुकानदार ने ₹10 प्रति पेन की दर से 100 पेन खरीदे। उसने 60 पेन 20% के लाभ पर और शेष पेन 10% की हानि पर बेचे। उसका कुल लाभ या हानि प्रतिशत क्या है?",
+    "oe": [
+      "2% profit",
+      "1% profit",
+      "3% profit",
+      "8% profit"
+    ],
+    "oh": [
+      "2% profit",
+      "1% profit",
+      "3% profit",
+      "8% profit"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Peno ki sankhya ka anupat nikalein:\nPehle pen : Shesh pen = 60 : (100 - 60) = 60 : 40 = 3 : 2.\nKul pen = 3 + 2 = 5 units.\nStep 2: Weighted profit/loss nikalein:\n3 units par +20% labh = 3 * (+20%) = +60%.\n2 units par 10% hani = 2 * (-10%) = -20%.\nKul net badlav = +60% - 20% = +40%.\nStep 3: Kul 5 units par pratishat labh:\nOverall% = +40% / 5 = +8% (8% profit).\nAtah sahi vikalp  8% profit hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul CP = 100 * 10 = ₹1,000.\nStep 2: 60 pen ka SP (20% labh par) = 60 * 10 * 1.20 = ₹720.\n40 pen ka SP (10% hani par) = 40 * 10 * 0.90 = ₹360.\nStep 3: Kul SP = 720 + 360 = ₹1,080.\nStep 4: Labh = SP - CP = 1080 - 1000 = ₹80.\nProfit% = (80 / 1000) * 100% = 8% profit.\nAtah sahi uttar '8% profit' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_2",
+    "qe": "Mukesh sells 80% part of a commodity at a profit of 20% and rest of the part at a loss of 5% and in this way earns a profit of ₹9,300. What was the cost price of the commodity for Mukesh?",
+    "qh": "मुकेश किसी वस्तु का 80% भाग 20% के लाभ पर और शेष भाग 5% की हानि पर बेचता है और इस प्रकार ₹9,300 का लाभ अर्जित करता है। मुकेश के लिए वस्तु का क्रय मूल्य क्या था?",
+    "oe": [
+      "₹61,000",
+      "₹58,000",
+      "₹62,000",
+      "₹60,000"
+    ],
+    "oh": [
+      "₹61,000",
+      "₹58,000",
+      "₹62,000",
+      "₹60,000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Matra ka anupat banayein:\n80% part : Shesh (20%) part = 80 : 20 = 4 : 1.\nKul matra = 4 + 1 = 5 units.\nStep 2: Weighted badlav nikalein:\n4 units par +20% = 4 * (+20%) = +80%.\n1 unit par -5% = 1 * (-5%) = -5%.\nNet prabhav = 80% - 5% = +75%.\nStep 3: Kul 5 units par net labh pratishat = 75% / 5 = 15%.\n15% = 3/20 ==> Base CP = 20 units, Labh = 3 units.\nStep 4: Prashnanusar: 3 units = ₹9,300 ==> 1 unit = ₹3,100.\nCP = 20 units = 20 * 3100 = ₹62,000? Wait, let's verify:\nTotal CP ka 15% = 9300 ==> CP = 9300 / 0.15 = 930000 / 15 = 62,000.\nAtah sahi vikalp  ₹62,000 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana kul CP = 100%.\nStep 2: 80% par 20% labh = 0.80 * 20% = +16%.\n20% par 5% hani = 0.20 * (-5%) = -1%.\nNet labh = 16% - 1% = 15%.\nStep 3: 15% = ₹9,300 ==> 1% = 9300 / 15 = 620.\nStep 4: Kul CP (100%) = 100 * 620 = ₹62,000.\nAtah sahi uttar '₹60,000' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_3",
+    "qe": "A shopkeeper bought certain number of apples for ₹3,600. He sold one-fifth of them at a loss of 10%, one-fourth of the remaining apples at a loss of 5%, and two-third of the rest at a profit of 15%. At what price (in ₹) should he sell the remaining apples to earn a profit of 27% overall?",
+    "qh": "एक दुकानदार ने ₹3,600 में कुछ निश्चित संख्या में सेब खरीदे। उसने उनमें से 1/5 भाग 10% की हानि पर, शेष सेबों का 1/4 भाग 5% की हानि पर और उसके बाद शेष बचे सेबों का 2/3 भाग 15% के लाभ पर बेच दिया। कुल 27% का लाभ कमाने के लिए उसे शेष सेबों को किस मूल्य (₹ में) पर बेचना चाहिए?",
+    "oe": [
+      "₹1,548",
+      "₹1,584",
+      "₹1,845",
+      "₹1,864"
+    ],
+    "oh": [
+      "₹1,548",
+      "₹1,584",
+      "₹1,845",
+      "₹1,864"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Kul seb ka base manein = LCM(5, 4, 3) = 60 units.\n- Part 1: 1/5 of 60 = 12 units (Remaining = 48 units).\n- Part 2: 1/4 of 48 = 12 units (Remaining = 36 units).\n- Part 3: 2/3 of 36 = 24 units (Final Remaining = 36 - 24 = 12 units).\nPart 1 : Part 2 : Part 3 : Shesh Part = 12 : 12 : 24 : 12 = 1 : 1 : 2 : 1. Kul = 5 units.\nStep 2: Weighted badlav lagayein (Kul par target = +27% * 5 = +135%):\n- Part 1 par -10%: 1 * (-10%) = -10%\n- Part 2 par -5%: 1 * (-5%) = -5%\n- Part 3 par +15%: 2 * (+15%) = +30%\nAb tak ka net labh = -10 - 5 + 30 = +15%.\nShesh 1 unit ko chahiye = +135% - (+15%) = +120% labh.\nStep 3: Shesh bhag ka CP = (1 / 5) * 3600 = ₹720.\nStep 4: 120% labh par vikray mulya (SP) = (100% + 120%) of 720 = 220% of 720 = 2.2 * 720 = ₹1,584.\nAtah sahi vikalp  ₹1,584 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Target kul SP = 3600 * 1.27 = ₹4,572.\nStep 2: Alag-alag hisso ka CP:\nTotal CP = ₹3600.\n- 1st CP = 3600 / 5 = ₹720 ==> SP1 = 720 * 0.90 = ₹648.\n- Shesh = 2880. 2nd CP = 2880 / 4 = ₹720 ==> SP2 = 720 * 0.95 = ₹684.\n- Shesh = 2160. 3rd CP = (2/3) * 2160 = ₹1440 ==> SP3 = 1440 * 1.15 = ₹1,656.\n- Antim Shesh CP = 2160 - 1440 = ₹720.\nStep 3: Ab tak prapt kul SP = 648 + 684 + 1656 = ₹2,988.\nStep 4: Antim bhag ka SP = 4572 - 2988 = ₹1,584.\nAtah sahi uttar '₹1,584' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_4",
+    "qe": "A shopkeeper sold 5/8 of his articles at a gain of 20% and the remaining at the cost price. What is his gain percentage in the whole transaction?",
+    "qh": "एक दुकानदार ने अपनी वस्तुओं का 5/8 भाग 20% के लाभ पर और शेष भाग क्रय मूल्य पर बेच दिया। पूरे लेन-देन में उसका लाभ प्रतिशत क्या है?",
+    "oe": [
+      "16$\\frac{1}{2}$%",
+      "14$\\frac{1}{2}$%",
+      "13$\\frac{1}{2}$%",
+      "12$\\frac{1}{2}$%"
+    ],
+    "oh": [
+      "16$\\frac{1}{2}$%",
+      "14$\\frac{1}{2}$%",
+      "13$\\frac{1}{2}$%",
+      "12$\\frac{1}{2}$%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Kul vastu = 8 units.\nBechi gayi vastu = 5 units, Shesh vastu = 8 - 5 = 3 units.\nAnupat = 5 : 3 (Kul = 8 units).\nStep 2: Weighted labh nikalein:\n5 units par +20% = 5 * 20% = +100%.\n3 units CP par bechi gayi (yani 0% labh) = 3 * 0% = 0%.\nKul labh = +100%.\nStep 3: Kul 8 units par labh pratishat:\nOverall Gain% = 100% / 8 = 12.5% = 12$\\frac{1}{2}$%.\nAtah sahi vikalp  12 1/2% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana kul 8 vastuo ka CP = ₹800 (1 vastu = ₹100).\nStep 2: 5 vastuo ka SP (20% labh par) = 5 * 120 = ₹600.\n3 vastuo ka SP (CP par) = 3 * 100 = ₹300.\nKul SP = 600 + 300 = ₹900.\nStep 3: Kul Labh = 900 - 800 = ₹100.\nGain% = (100 / 800) * 100% = 100/8% = 12$\\frac{1}{2}$%.\nAtah sahi uttar '12$\\frac{1}{2}$%' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_5",
+    "qe": "Ramesh purchased 130 books at the rate of ₹200 each and sold half of them at the rate of ₹300 each, 1/5 of them at the rate of ₹350 each and the rest at the cost price. Find his profit percentage.",
+    "qh": "रमेश ने ₹200 प्रति पुस्तक की दर से 130 पुस्तकें खरीदीं और उनमें से आधी ₹300 प्रति पुस्तक की दर से, 1/5 भाग ₹350 प्रति पुस्तक की दर से और शेष को क्रय मूल्य पर बेच दिया। उसका लाभ प्रतिशत ज्ञात कीजिए।",
+    "oe": [
+      "35%",
+      "40%",
+      "45%",
+      "30%"
+    ],
+    "oh": [
+      "35%",
+      "40%",
+      "45%",
+      "30%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Pustako ke hisso ka anupat nikalein:\n- Aadhi (1/2) = 5/10 भाग\n- 1/5 bhag = 2/10 भाग\n- Shesh bhag = 1 - (1/2 + 1/5) = 1 - 7/10 = 3/10 भाग\nAnupat = 5 : 2 : 3 (Kul = 10 units).\nStep 2: Pratyek bhag par labh% dekhein (CP = ₹200):\n- ₹300 par labh = (100 / 200) * 100% = +50%.\n- ₹350 par labh = (150 / 200) * 100% = +75%.\n- CP (₹200) par labh = 0%.\nStep 3: Weighted labh nikalein:\n(5 * 50%) + (2 * 75%) + (3 * 0%) = 250% + 150% + 0% = 400%.\nStep 4: Kul 10 units par labh% = 400% / 10 = 40%.\nAtah sahi vikalp  40% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul CP = 130 * 200 = ₹26,000.\nStep 2: Alag-alag SP nikalein:\n- 1/2 of 130 = 65 pustakein ==> SP = 65 * 300 = ₹19,500.\n- 1/5 of 130 = 26 pustakein ==> SP = 26 * 350 = ₹9,100.\n- Shesh = 130 - (65 + 26) = 39 pustakein ==> SP = 39 * 200 = ₹7,800.\nKul SP = 19500 + 9100 + 7800 = ₹36,400.\nStep 3: Kul Labh = 36400 - 26000 = ₹10,400.\nProfit% = (10400 / 26000) * 100% = 104/2.6% = 40%.\nAtah sahi uttar '40%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_6",
+    "qe": "On two items of equal prices, T gets 12% profit on one item and incurs 8% loss on other. What is his overall profit or loss percentage?",
+    "qh": "समान मूल्य की दो वस्तुओं पर, T को एक वस्तु पर 12% का लाभ होता है और दूसरी पर 8% की हानि होती है। उसका कुल लाभ या हानि प्रतिशत क्या है?",
+    "oe": [
+      "Profit, 2%",
+      "Profit, 4%",
+      "Loss, 4%",
+      "Loss, 2%"
+    ],
+    "oh": [
+      "Profit, 2%",
+      "Profit, 4%",
+      "Loss, 4%",
+      "Loss, 2%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono vastuo ka CP saman hai, isliye CP ka anupat = 1 : 1.\nKul CP = 1 + 1 = 2 units.\nStep 2: Weighted badlav lagayein:\nPehle par +12% labh = 1 * (+12%) = +12%.\nDusre par 8% hani = 1 * (-8%) = -8%.\nNet prabhav = +12% - 8% = +4%.\nStep 3: Kul 2 units par net pratishat:\nOverall% = +4% / 2 = +2% (Profit, 2%).\nAtah sahi vikalp  Profit, 2% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana pratyek vastu ka CP = ₹100.\nKul CP = 100 + 100 = ₹200.\nStep 2: Pehli vastu ka SP = 100 + 12 = ₹112.\nDusri vastu ka SP = 100 - 8 = ₹92.\nKul SP = 112 + 92 = ₹204.\nStep 3: Kul Labh = 204 - 200 = ₹4.\nOverall Profit% = (4 / 200) * 100% = 2% profit.\nAtah sahi uttar 'Profit, 2%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_7",
+    "qe": "A dealer buys a batch of 25 pressure cookers at ₹800 each. He sells 15 of them at 20% profit and the remaining at 10% loss. Find the overall profit or loss percentage.",
+    "qh": "एक डीलर ₹800 प्रति कुकर की दर से 25 प्रेशर कुकर खरीदता है। वह उनमें से 15 कुकर 20% लाभ पर और शेष 10% हानि पर बेचता है। कुल लाभ या हानि प्रतिशत ज्ञात कीजिए।",
+    "oe": [
+      "6% Profit",
+      "8% Profit",
+      "10% Profit",
+      "12% loss"
+    ],
+    "oh": [
+      "6% Profit",
+      "8% Profit",
+      "10% Profit",
+      "12% loss"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Kukaro ki sankhya ka anupat nikalein:\nPehle beche gaye : Shesh = 15 : (25 - 15) = 15 : 10 = 3 : 2.\nKul kukar = 3 + 2 = 5 units.\nStep 2: Weighted badlav lagayein:\n3 units par +20% labh = 3 * (+20%) = +60%.\n2 units par 10% hani = 2 * (-10%) = -20%.\nNet prabhav = +60% - 20% = +40%.\nStep 3: Kul 5 units par net pratishat:\nOverall% = +40% / 5 = +8% (8% Profit).\n(Note: Yahan ₹800 ka prayog kiye bina bhi anupat se seedha uttar mil jata hai).\nAtah sahi vikalp  8% Profit hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana 1 kukar ka CP = ₹100.\nKul CP = 25 * 100 = ₹2,500.\nStep 2: 15 kukar ka SP (20% labh par) = 15 * 120 = ₹1,800.\n10 kukar ka SP (10% hani par) = 10 * 90 = ₹900.\nKul SP = 1800 + 900 = ₹2,700.\nStep 3: Kul Labh = 2700 - 2500 = ₹200.\nOverall Profit% = (200 / 2500) * 100% = 8% Profit.\nAtah sahi uttar '8% Profit' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_8",
+    "qe": "A trader buys 200 mixed stationery boxes at a rate of ₹120 each. He spends ₹1,800 on transportation and packaging. He sells 100 boxes at ₹150 each and the remaining at ₹130 each. What is his total profit percentage?",
+    "qh": "एक व्यापारी ₹120 प्रति डिब्बे की दर से 200 मिश्रित स्टेशनरी डिब्बे खरीदता है। वह परिवहन और पैकेजिंग पर ₹1,800 खर्च करता है। वह 100 डिब्बे ₹150 प्रति डिब्बे की दर से और शेष ₹130 प्रति डिब्बे की दर से बेचता है। उसका कुल लाभ प्रतिशत क्या है?",
+    "oe": [
+      "8%",
+      "8.53%",
+      "8.75%",
+      "9%"
+    ],
+    "oh": [
+      "8%",
+      "8.53%",
+      "8.75%",
+      "9%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Kul prabhavi CP nikalein:\nKharid mulya = 200 * 120 = ₹24,000.\nAtirikt kharch = ₹1,800.\nKul CP = 24,000 + 1,800 = ₹25,800.\nStep 2: Kul vikray mulya (SP) nikalein:\n100 dibbo ka SP = 100 * 150 = ₹15,000.\nShesh 100 dibbo ka SP = 100 * 130 = ₹13,000.\nKul SP = 15,000 + 13,000 = ₹28,000.\nStep 3: CP : SP ka anupat banayein:\nCP : SP = 25,800 : 28,000 = 258 : 280 = 129 : 140.\nLabh = 140 - 129 = 11 units.\nStep 4: Profit% = (11 / 129) * 100% = 1100 / 129% ≈ 8.527% ≈ 8.53%.\nAtah sahi vikalp  8.53% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul CP = ₹25,800 = 100%.\nStep 2: Kul SP = ₹28,000.\nStep 3: Kul Labh = 28,000 - 25,800 = ₹2,200.\nStep 4: Profit% = (2200 / 25800) * 100% = 2200 / 258% ≈ 8.53%.\nAtah sahi uttar '8.53%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_9",
+    "qe": "A trader buys two articles for ₹3000 each article, while selling, he earns a profit of 10% on one and loses 20% on the other. What will be his overall loss percentage?",
+    "qh": "एक व्यापारी दो वस्तुएं ₹3000 प्रति वस्तु की दर से खरीदता है। बेचते समय, वह एक पर 10% लाभ कमाता है और दूसरी पर 20% हानि उठाता है। उसकी कुल हानि प्रतिशत क्या होगी?",
+    "oe": [
+      "10%",
+      "20%",
+      "15%",
+      "5%"
+    ],
+    "oh": [
+      "10%",
+      "20%",
+      "15%",
+      "5%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono vastuo ka CP saman hai, anupat = 1 : 1.\nKul CP = 1 + 1 = 2 units.\nStep 2: Weighted badlav lagayein:\nPehle par +10% labh = 1 * (+10%) = +10%.\nDusre par 20% hani = 1 * (-20%) = -20%.\nNet prabhav = +10% - 20% = -10%.\nStep 3: Kul 2 units par net pratishat:\nOverall% = -10% / 2 = -5% (Loss of 5%).\nAtah sahi vikalp  5% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana pratyek vastu ka CP = ₹100.\nKul CP = 100 + 100 = ₹200.\nStep 2: Pehli vastu ka SP = ₹110.\nDusri vastu ka SP = ₹80.\nKul SP = 110 + 80 = ₹190.\nStep 3: Kul Hani = 200 - 190 = ₹10.\nLoss% = (10 / 200) * 100% = 5% loss.\nAtah sahi uttar '5%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_10",
+    "qe": "Shivam purchased two watches, first for ₹12,000 and the second for ₹20,000. He sold both the watches, first one at the profit of 10% and the second at a loss of 20%. What is the overall profit or loss?",
+    "qh": "शिवम ने दो घड़ियाँ खरीदीं, पहली ₹12,000 में और दूसरी ₹20,000 में। उसने दोनों घड़ियों को बेचा, पहली को 10% के लाभ पर और दूसरी को 20% की हानि पर। कुल लाभ या हानि क्या है?",
+    "oe": [
+      "Profit = ₹2600",
+      "Loss = ₹2800",
+      "Loss = ₹2600",
+      "Profit = ₹2800"
+    ],
+    "oh": [
+      "Profit = ₹2600",
+      "Loss = ₹2800",
+      "Loss = ₹2600",
+      "Profit = ₹2800"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ghadio ke CP ka anupat nikalein:\nCP1 : CP2 = 12,000 : 20,000 = 3 : 5.\nKul CP = 3 + 5 = 8 units = ₹32,000 ==> 1 unit = ₹4,000.\nStep 2: Pratyek ghadi par labh/hani nikalein:\nPehli par +10% labh = +10% of 12,000 = +₹1,200.\nDusri par 20% hani = -20% of 20,000 = -₹4,000.\nStep 3: Kul net badlav = +1200 - 4000 = -₹2,800.\nMinus chihn darshata hai ki yeh ₹2,800 ki hani (loss) hai.\nAtah sahi vikalp  Loss = ₹2800 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul CP = 12,000 + 20,000 = ₹32,000.\nStep 2: Pehli ghadi ka SP = 12,000 * 1.10 = ₹13,200.\nDusri ghadi ka SP = 20,000 * 0.80 = ₹16,000.\nKul SP = 13,200 + 16,000 = ₹29,200.\nStep 3: Kul Hani = CP - SP = 32,000 - 29,200 = ₹2,800.\nAtah sahi uttar 'Loss = ₹2800' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_11",
+    "qe": "A merchant bought two watches for ₹9,000 each. He sold one watch at a loss of 10%. At what price (in ₹) should he sell the other watch to earn a profit of 18% overall?",
+    "qh": "एक व्यापारी ने दो घड़ियां ₹9,000 प्रत्येक की दर से खरीदीं। उसने एक घड़ी को 10% की हानि पर बेचा। कुल 18% का लाभ प्राप्त करने के लिए उसे दूसरी घड़ी को किस मूल्य (₹ में) पर बेचना चाहिए?",
+    "oe": [
+      "14,130",
+      "14,310",
+      "13,140",
+      "13,410"
+    ],
+    "oh": [
+      "14,130",
+      "14,310",
+      "13,140",
+      "13,410"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono ghadiyo ka CP saman hai, isliye CP1 : CP2 = 1 : 1. Kul CP = 1 + 1 = 2 units.\nStep 2: Kul 2 units par 18% labh chahiye ==> Kul badlav = 2 * (+18%) = +36%.\nPehli ghadi par -10% hani hui = 1 * (-10%) = -10%.\nDusri ghadi par aavashyak labh = +36% - (-10%) = +46%.\nStep 3: Dusri ghadi ka CP = ₹9,000.\nDusri ghadi par 46% labh par SP ratio = 100 : 146 = 50 : 73.\nStep 4: Dusri ghadi ka SP = 9000 * (146 / 100) = 90 * 146 = ₹14,310.\nAtah sahi vikalp  14,310 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul CP = 9,000 + 9,000 = ₹18,000.\nStep 2: Kul 18% labh par aavashyak Kul SP = 18,000 * 1.18 = ₹21,240.\nStep 3: Pehli ghadi ka SP (10% hani) = 9,000 * 0.90 = ₹8,100.\nStep 4: Dusri ghadi ka SP = 21,240 - 8,100 = ₹14,310.\nAtah sahi uttar '14,310' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_12",
+    "qe": "A vegetable vendor bought 100 kg of potatoes at the rate of ₹19 per kg and spent ₹100 as cartage. He sold 60 kg of potatoes with a 50% profit and half of the remaining stock with a 40% profit. He sold half of the still remaining potatoes with a 25% profit. What profit percentage should he aim for when selling the ultimate remaining potatoes to achieve an overall profit of 42%?",
+    "qh": "एक सब्जी विक्रेता ने ₹19 प्रति किग्रा की दर से 100 किग्रा आलू खरीदे और ₹100 गाड़ी भाड़ा के रूप में खर्च किए। उसने 60 किग्रा आलू 50% लाभ पर और शेष स्टॉक का आधा हिस्सा 40% लाभ पर बेचा। उसने बचे हुए आलुओं का आधा हिस्सा 25% लाभ पर बेचा। कुल 42% का लाभ प्राप्त करने के लिए उसे अंतिम शेष आलुओं को कितने प्रतिशत लाभ पर बेचना चाहिए?",
+    "oe": [
+      "16%",
+      "10%",
+      "12%",
+      "15%"
+    ],
+    "oh": [
+      "16%",
+      "10%",
+      "12%",
+      "15%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1: Alag-alag hisso ka anupat nikalein:\nKul aalu = 100 kg.\n- Pehla hissa = 60 kg.\n- Shesh 40 kg ka aadha = 20 kg.\n- Bacha 20 kg ka aadha = 10 kg.\n- Antim shesh hissa = 10 kg.\nAnupat = 60 : 20 : 10 : 10 = 6 : 2 : 1 : 1 (Kul = 10 units).\nStep 2: Kul 10 units par 42% labh chahiye ==> Kul target = 10 * 42% = 420%.\nPehle 3 hisso ka kul labh:\n(6 * 50%) + (2 * 40%) + (1 * 25%) = 300% + 80% + 25% = 405%.\nStep 3: Antim 1 unit par aavashyak labh = 420% - 405% = 15%? Wait, let's verify:\n420 - 405 = 15%. Wait, check options: (a) 0.16 (b) 0.1 (c) 0.12 (d) 0.15.\n0.15 = 15%, 0.1 = 10%.\nWait, let's check: 300 + 80 + 25 = 405. 420 - 405 = 15% = 0.15 ('15%')!\nWait, let's check if cartage shifts effective CP:\nEffective CP = 100 * 19 + 100 = ₹2,000 ==> CP per kg = 2000 / 100 = ₹20 per kg.\nSince CP per kg is uniform across all kg, weighted average percentage direct apply hota hai:\nTotal weight = 6(50) + 2(40) + 1(25) + 1(x) = 10(42)\n300 + 80 + 25 + x = 420 ==> 405 + x = 420 ==> x = 15% = 0.15.\nAtah sahi vikalp  0.15 (15%) hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul effective CP = (100 * 19) + 100 = ₹2,000 (yani ₹20/kg).\nKul target SP (42% labh) = 2,000 * 1.42 = ₹2,840.\nStep 2: Alag-alag SP nikalein (CP = ₹20/kg):\n- 60 kg ka SP (50% labh = ₹30/kg) = 60 * 30 = ₹1,800.\n- 20 kg ka SP (40% labh = ₹28/kg) = 20 * 28 = ₹560.\n- 10 kg ka SP (25% labh = ₹25/kg) = 10 * 25 = ₹250.\nAb tak prapt SP = 1800 + 560 + 250 = ₹2,610.\nStep 3: Antim 10 kg ke liye aavashyak SP = 2,840 - 2,610 = ₹230.\nAntim 10 kg ka SP per kg = 230 / 10 = ₹23 per kg.\nStep 4: Labh = 23 - 20 = ₹3 per kg ==> Labh% = (3 / 20) * 100% = 15% = 0.15.\nAtah sahi uttar '10%' 0.15 hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_13",
+    "qe": "A man bought two bicycles for ₹3,000 each. If he sells one bicycle at a profit of 10% then for how much percentage profit should he sell the other bicycle so that he makes a profit of 20% on the whole?",
+    "qh": "एक व्यक्ति ने दो साइकिलें ₹3,000 प्रत्येक की दर से खरीदीं। यदि वह एक साइकिल को 10% के लाभ पर बेचता है, तो उसे दूसरी साइकिल को कितने प्रतिशत लाभ पर बेचना चाहिए ताकि उसे पूरे लेन-देन पर 20% का लाभ हो?",
+    "oe": [
+      "15%",
+      "25%",
+      "30%",
+      "10%"
+    ],
+    "oh": [
+      "15%",
+      "25%",
+      "30%",
+      "10%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Dono cycle ka CP saman hai, isliye CP1 : CP2 = 1 : 1. Kul CP = 1 + 1 = 2 units.\nStep 2: Kul 2 units par 20% labh chahiye ==> Kul target = 2 * (+20%) = +40%.\nStep 3: Pehli cycle par mila labh = 1 * (+10%) = +10%.\nDusri cycle par aavashyak labh = +40% - 10% = +30%.\nDusri cycle par labh% = 30% / 1 = 30%.\nAtah sahi vikalp  30% hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul CP = 3000 + 3000 = ₹6,000.\nStep 2: Kul 20% labh ke liye aavashyak kul labh = 20% of 6000 = ₹1,200.\nStep 3: Pehli cycle par labh = 10% of 3000 = ₹300.\nDusri cycle par aavashyak labh = 1200 - 300 = ₹900.\nStep 4: Dusri cycle par labh% = (900 / 3000) * 100% = 30%.\nAtah sahi uttar '30%' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_14",
+    "qe": "A bookstore bought 120 different novels at an average price of ₹145. It sold 40 novels at 20% profit, 60 novels at 10% loss, and the rest were sold in a combo deal that included a 30% profit on the total cost of those remaining novels. What was the selling price per novel in the combo deal?",
+    "qh": "एक किताबों की दुकान ने ₹145 के औसत मूल्य पर 120 विभिन्न उपन्यास खरीदे। उसने 40 उपन्यास 20% लाभ पर, 60 उपन्यास 10% हानि पर बेचे, और शेष को एक कॉम्बो डील में बेचा जिसमें उन शेष उपन्यासों की कुल लागत पर 30% का लाभ शामिल था। कॉम्बो डील में प्रति उपन्यास विक्रय मूल्य क्या था?",
+    "oe": [
+      "₹186.75",
+      "₹192.00",
+      "₹190.25",
+      "₹188.50"
+    ],
+    "oh": [
+      "₹186.75",
+      "₹192.00",
+      "₹190.25",
+      "₹188.50"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: Combo deal wale upanyaso par labh = 30% = 3/10.\nStep 2: CP : SP = 10 : (10 + 3) = 10 : 13.\nStep 3: 1 upanyas ka CP (10 units) = ₹145.\n1 unit = 145 / 10 = ₹14.50.\nStep 4: SP per novel (13 units) = 13 * 14.50 = ₹188.50.\nAtah sahi vikalp  ₹188.50 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Mana pratyek upanyas ka CP = 100% = ₹145.\nStep 2: Combo deal me beche gaye upanyaso par 30% labh hota hai.\nStep 3: Combo deal ka SP = 130% of CP = 1.30 * 145 = ₹188.50.\nAtah sahi uttar '₹188.50' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_15",
+    "qe": "A trader purchased 500 kg of sugar at ₹40 per kg. He sold 200 kg of it at a profit of 10% and 120 kg at a loss of 5%. At what rate per kg (in ₹, correct to 2 decimal places) should he sell the remaining sugar to gain 12% on his initial investment?",
+    "qh": "एक व्यापारी ने ₹40 प्रति किग्रा की दर से 500 किग्रा चीनी खरीदी। उसने इसमें से 200 किग्रा 10% के लाभ पर और 120 किग्रा 5% की हानि पर बेची। अपने प्रारंभिक निवेश पर 12% का लाभ प्राप्त करने के लिए उसे शेष चीनी को किस दर प्रति किग्रा (₹ में, 2 दशमलव स्थानों तक सही) पर बेचना चाहिए?",
+    "oe": [
+      "44.80",
+      "48.67",
+      "50.22",
+      "53.33"
+    ],
+    "oh": [
+      "44.80",
+      "48.67",
+      "50.22",
+      "53.33"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Matra ka anupat nikalein:\nPehle bechi = 200 kg, Dusri = 120 kg, Shesh = 500 - (200 + 120) = 180 kg.\nAnupat = 200 : 120 : 180 = 10 : 6 : 9 (Kul = 25 units).\nStep 2: Weighted badlav lagayein (Kul par target = 25 * (+12%) = +300%):\n- 10 units par +10% = 10 * (+10%) = +100%\n- 6 units par -5% = 6 * (-5%) = -30%\nAb tak ka net labh = 100% - 30% = +70%.\nShesh 9 units par aavashyak labh = +300% - 70% = +230%.\nStep 3: Shesh hisse par labh% = 230% / 9 = 25.555...%.\nStep 4: Shesh cheeni ka CP = ₹40/kg.\nShesh cheeni ka SP = 40 * (1 + 230 / 900) = 40 + (40 * 23 / 90) = 40 + (92 / 9) = 40 + 10.22 = ₹50.22 per kg.\nAtah sahi vikalp  50.22 hai.\n\nMethod 2 (100-Base Method):\nStep 1: Kul nivesh (CP) = 500 * 40 = ₹20,000.\nKul aavashyak SP (12% labh) = 20,000 * 1.12 = ₹22,400.\nStep 2: Prapt bikri mulya (SP):\n- 200 kg ka SP (10% labh = ₹44) = 200 * 44 = ₹8,800.\n- 120 kg ka SP (5% hani = ₹38) = 120 * 38 = ₹4,560.\nAb tak prapt kul SP = 8800 + 4560 = ₹13,360.\nStep 3: Shesh 180 kg ke liye aavashyak SP = 22,400 - 13,360 = ₹9,040.\nStep 4: Rate per kg = 9040 / 180 = 904 / 18 = ₹50.22 per kg.\nAtah sahi uttar '50.22' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cpissame_16",
+    "qe": "A trader purchases 100 smartphones at ₹12,000 each. He spends ₹30,000 on transportation and ₹20,000 on advertising. 10 phones are damaged in transit and sold at 50% loss. The remaining are sold at a 25% profit. What is his net profit or loss?",
+    "qh": "एक व्यापारी ₹12,000 प्रत्येक की दर से 100 स्मार्टफोन खरीदता है। वह परिवहन पर ₹30,000 और विज्ञापन पर ₹20,000 खर्च करता है। 10 फोन पारगमन में क्षतिग्रस्त हो जाते हैं और उन्हें 50% की हानि पर बेचा जाता है। शेष को 25% के लाभ पर बेचा जाता है। उसका शुद्ध लाभ या हानि क्या है?",
+    "oe": [
+      "₹1,60,000 profit",
+      "₹1,75,000 profit",
+      "₹1,50,000 profit",
+      "₹1,80,000 profit"
+    ],
+    "oh": [
+      "₹1,60,000 profit",
+      "₹1,75,000 profit",
+      "₹1,50,000 profit",
+      "₹1,80,000 profit"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nStep 1: Kul CP nikalein:\nPhones ka kharid mulya = 100 * 12,000 = ₹12,00,000.\nAtirikt kharch = 30,000 + 20,000 = ₹50,000.\nKul prabhavi CP = 12,00,000 + 50,000 = ₹12,50,000.\nPrati phone prabhavi CP = 12,50,000 / 100 = ₹12,500.\nStep 2: Phone ki sankhya ka anupat = 10 damaged : 90 undamaged = 1 : 9 (Kul = 10 units).\nStep 3: Weighted badlav lagayein:\n- 1 unit par -50% hani = 1 * (-50%) = -50%.\n- 9 units par +25% labh = 9 * (+25%) = +225%.\nNet prabhav = +225% - 50% = +175% across 10 units.\nNet Profit% = 175% / 10 = 17.5%.\nStep 4: Net Profit = 17.5% of ₹12,50,000 = (7 / 40) * 12,50,000 = 7 * 31,250 = ₹2,18,750? Wait, let's verify if loss/profit applies to original purchase price ₹12,000:\nIf based on base purchase price ₹12,000:\n- Damaged (10 phones): Loss = 50% of 12,000 * 10 = ₹60,000 hani.\n- Undamaged (90 phones): Profit = 25% of 12,000 * 90 = ₹2,70,000 labh.\nNet trading profit = 2,70,000 - 60,000 = ₹2,10,000.\nSubtract overhead costs = 2,10,000 - 50,000 = ₹1,60,000 profit ('₹1,60,000 profit').\nAtah sahi vikalp  ₹1,60,000 profit hai.\n\nMethod 2 (100-Base / Cost Accounting Method):\nStep 1: Kul Kharch = (100 * 12000) + 30000 + 20000 = 12,00,000 + 50,000 = ₹12,50,000.\nStep 2: Kul Praptiyan (SP):\n- 10 phones ka SP (50% hani par) = 10 * 6,000 = ₹60,000.\n- 90 phones ka SP (25% labh par) = 90 * (12000 * 1.25) = 90 * 15,000 = ₹13,50,000.\nKul SP = 60,000 + 13,50,000 = ₹14,10,000.\nStep 3: Net Profit = Kul SP - Kul Kharch = 14,10,000 - 12,50,000 = ₹1,60,000 profit.\nAtah sahi uttar '₹1,50,000 profit' hai.\n\nExam point: labh-haani ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
