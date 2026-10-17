@@ -1,0 +1,84 @@
+[
+  {
+    "p_id": "coded_1",
+    "qe": "Directions: A $ B means A ≥ B; A © B means A > B; A @ B means A = B; A # B means A ≤ B; A % B means A < B.\nStatements: M $ N ; N © T ; T @ U\nConclusions: I. M © T, II. N @ U",
+    "qh": "निर्देश: A $ B का अर्थ A ≥ B; A © B का अर्थ A > B; A @ B का अर्थ A = B; A # B का अर्थ A ≤ B; A % B का अर्थ A < B है।\nकथन: M $ N ; N © T ; T @ U\nनिष्कर्ष: I. M © T, II. N @ U",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "Neither I nor II follows",
+      "Both I and II follow"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "Neither I nor II follows",
+      "Both I and II follow"
+    ],
+    "a": 0,
+    "e": "Method 1 (Coded Inequality Box Method Shortcut):\nStep 1: Symbols decode karein:\n- Statement: $M \\ge N > T = U$.\nStep 2: Conclusion I (M © T $\\equiv M > T$):\n- M se T tak: '≥' aur '>' me high priority '>' (©) ko milti hai $\\implies M > T$ bilkul sahi hai (Follows).\nStep 3: Conclusion II (N @ U $\\equiv N = U$):\n- N se U tak: $N > T = U \\implies N > U$. Parantu conclusion me '=' diya hai (Does not follow).\nAtah kewal I follow karta hai.\nCorrect option  Only I follows hai.\n\nMethod 2 (Direct Priority Inspection):\n$M \\ge N > T \\implies M > T$ (I true). $N > U \\ne N = U$ (II false). Kewal Conclusion I satya hai.\nSahi uttar 'Only I follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "coded_2",
+    "qe": "Directions (36–38): P ÷ Q means P = Q ; P + Q means P < Q ; P - Q means P > Q ; P × Q means P ≥ Q ; P $ Q means P ≤ Q.\n\nEx36. Statements: M + N ; R × N ; R $ U\nConclusions: I. M + R, II. U × N",
+    "qh": "निर्देश (36–38): P ÷ Q का अर्थ P = Q ; P + Q का अर्थ P < Q ; P - Q का अर्थ P > Q ; P × Q का अर्थ P ≥ Q ; P $ Q का अर्थ P ≤ Q है।\n\nEx36. कथन: M + N ; R × N ; R $ U\nनिष्कर्ष: I. M + R, II. U × N",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Coded Inequality Decoding & Priority Shortcut):\nStep 1: Prateekon (Symbols) ko decode karein:\n- `÷` $\\implies =$\n- `+` $\\implies <$\n- `-` $\\implies >$\n- `×` $\\implies \\ge$\n- `$` $\\implies $\\le$$\nStep 2: Statements decode karke ek chain banayein:\n- $M < N$\n- $R $\\ge$ N \\implies N $\\le$ R$\n- $R $\\le$ U$\n- Sanyukt chain: $M < N $\\le$ R $\\le$ U$.\nStep 3: Conclusions evaluate karein:\n- Conclusion I (`M + R` $\\equiv M < R$): M se R tak '<' aur '≤' me high priority '<' ko milti hai $\\implies M < R$ 100% satya hai (Follows).\n- Conclusion II (`U × N` $\\equiv U $\\ge$ N$): U se N tak sabhi chinh '≥' parivar ke hain ($U $\\ge$ R $\\ge$ N \\implies U $\\ge$ N$) jo 100% satya hai (Follows).\nAtah dono nishkarsh follow karte hain.\nCorrect option  Both I and II follow hai.\n\nMethod 2 (Direct Chain Inspection):\n$M < N $\\le$ R \\implies M < R$ (I true). $N $\\le$ R $\\le$ U \\implies U $\\ge$ N$ (II true). Dono nishkarsh anivarya roop se satya hain.\nSahi uttar 'Both I and II follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "coded_3",
+    "qe": "Directions (36–38): P ÷ Q means P = Q ; P + Q means P < Q ; P - Q means P > Q ; P × Q means P ≥ Q ; P $ Q means P ≤ Q.\n\nEx37. Statements: P × Q ÷ R ; R × T\nConclusions: I. P - T, II. P ÷ T, III. Q × T",
+    "qh": "निर्देश (36–38): P ÷ Q का अर्थ P = Q ; P + Q का अर्थ P < Q ; P - Q का अर्थ P > Q ; P × Q का अर्थ P ≥ Q ; P $ Q का अर्थ P ≤ Q है।\n\nEx37. कथन: P × Q ÷ R ; R × T\nनिष्कर्ष: I. P - T, II. P ÷ T, III. Q × T",
+    "oe": [
+      "Only II follows",
+      "Either I or II follows",
+      "Only either I or II and III follow",
+      "Only I follows",
+      "Only III follows"
+    ],
+    "oh": [
+      "Only II follows",
+      "Either I or II follows",
+      "Only either I or II and III follow",
+      "Only I follows",
+      "Only III follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Independent True + Either-Or Shortcut Trick):\nStep 1: Statements decode karein:\n- $P \\ge Q = R$\n- $R \\ge T$\n- Sanyukt chain: $P \\ge Q = R \\ge T$.\nStep 2: P aur T ke beech relation dekhein:\n- $P \\ge T$ definite relation nikalta hai.\n- $P \\ge T$ do sambhavnaon me tootta hai: $P > T$ (`P - T`) ya $P = T$ (`P ÷ T`).\n- Atah Conclusion I aur II ke beech 'Either I or II follows' banega.\nStep 3: Q aur T ke beech relation dekhein:\n- $Q = R \\ge T \\implies Q \\ge T$ (`Q × T`) 100% nishchit satya hai (Conclusion III follows).\nStep 4: Dono ko milane par: 'Only either I or II and III follow'.\nCorrect option  hai.\n\nMethod 2 (Sign Splitting Method):\nConclusion III direct satya hai. $P \\ge T$ se '>' aur '=' ke liye Either-Or case banta hai. Sahi vikalp  hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "coded_4",
+    "qe": "Directions (36–38): P ÷ Q means P = Q ; P + Q means P < Q ; P - Q means P > Q ; P × Q means P ≥ Q ; P $ Q means P ≤ Q.\n\nEx38. Statements: M - N ÷ T ; R × U ÷ N\nConclusions: I. M - R, II. M $ R, III. R - N, IV. R ÷ N",
+    "qh": "निर्देश (36–38): P ÷ Q का अर्थ P = Q ; P + Q का अर्थ P < Q ; P - Q का अर्थ P > Q ; P × Q का अर्थ P ≥ Q ; P $ Q का अर्थ P ≤ Q है।\n\nEx38. कथन: M - N ÷ T ; R × U ÷ N\nनिष्कर्ष: I. M - R, II. M $ R, III. R - N, IV. R ÷ N",
+    "oe": [
+      "Only I follows",
+      "Only IV follows",
+      "Only either I or II follows",
+      "Only either III or IV follows",
+      "None of these"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only IV follows",
+      "Only either I or II follows",
+      "Only either III or IV follows",
+      "None of these"
+    ],
+    "a": 4,
+    "e": "Method 1 (Dual Either-Or Identification Shortcut):\nStep 1: Statements decode karein:\n- $M > N = T$\n- $R \\ge U = N \\implies R \\ge N$.\nStep 2: Conclusions evaluate karein:\n- Case 1 (R aur N ke beech): $R \\ge N$ definite hai. Yeh do bhagon me tootta hai: $R > N$ (`R - N`) ya $R = N$ (`R ÷ N`). Isse Conclusion III aur IV ke beech 'Either III or IV follows' banta hai.\n- Case 2 (M aur R ke beech): $M > N \\le R$. Yahan viprit chinh aane se condition block banta hai (no definite relation). Condition block me jab teeno chinh ($>$, $<$, $=$) shamil hon, toh Either-Or banta hai.\n  - Conclusion I: $M > R$ (`M - R`)\n  - Conclusion II: $M \\le R$ (`M $ R`, arthath $<$ aur $=$)\n  - Atah Conclusion I aur II ke beech bhi 'Either I or II follows' banega.\nStep 3: Pura uttar 'Either I or II and either III or IV follow' hoga.\n- Chuki yeh vikalp (A, B, C, D) me poora maujood nahi hai, atah (E) None of these sahi hai.\nCorrect option  None of these hai.\n\nMethod 2 (Exhaustive Pair Verification):\nI aur II milkar 3-sign block condition ka Either-Or banate hain. III aur IV milkar '≥' ka Either-Or banate hain. Dono pairs valid hain, isliye 'None of these' sahi hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
