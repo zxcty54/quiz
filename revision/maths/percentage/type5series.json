@@ -1,0 +1,857 @@
+[
+  {
+    "p_id": "type5series_1",
+    "qe": "After decreasing by 25%, the cost of a jacket becomes ₹4,500. Find its original cost.",
+    "qh": "25% की कमी के बाद, एक जैकेट का मूल्य ₹4,500 हो जाता है। इसका मूल मूल्य ज्ञात कीजिए।",
+    "oe": [
+      "₹5,500",
+      "₹6,000",
+      "₹6,500",
+      "₹5,800"
+    ],
+    "oh": [
+      "₹5,500",
+      "₹6,000",
+      "₹6,500",
+      "₹5,800"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\n$25\\% = \\frac{1}{4}$.\nOriginal Cost : Decreased Cost $= 4 : (4 - 1) = 4 : 3$.\nGiven: 3 units $= ₹4500 \\implies 1 \\text{ unit} = \\frac{4500}{3} = ₹1500$.\nOriginal Cost = 4 units $= 4 \\times 1500 = ₹6000$.\nAtah sahi vikalp  ₹6,000 hai.\n\nMethod 2 (100-Base Method):\nOriginal cost ko $100\\%$ maan lo.\n$25\\%$ decrease ke baad cost $= 100\\% - 25\\% = 75\\%$.\nGiven: $75\\% = ₹4500$.\n$1\\% = \\frac{4500}{75} = ₹60$.\nOriginal Cost ($100\\%$) $= 60 \\times 100 = ₹6000$.\nAtah sahi uttar '₹6,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_2",
+    "qe": "The price of a laptop was ₹80,000 last year. This year, its price decreased by 20%. What is the price (in ₹) of the laptop this year?",
+    "qh": "पिछले वर्ष एक लैपटॉप का मूल्य ₹80,000 था। इस वर्ष इसके मूल्य में 20% की कमी आई। इस वर्ष लैपटॉप का मूल्य (₹ में) क्या है?",
+    "oe": [
+      "₹60,000",
+      "₹62,000",
+      "₹64,000",
+      "₹66,000"
+    ],
+    "oh": [
+      "₹60,000",
+      "₹62,000",
+      "₹64,000",
+      "₹66,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\n$20\\% = \\frac{1}{5}$.\nOriginal Price : New Price $= 5 : 4$.\nGiven: 5 units $= ₹80000 \\implies 1 \\text{ unit} = \\frac{80000}{5} = ₹16000$.\nNew Price = 4 units $= 4 \\times 16000 = ₹64000$.\nAtah sahi vikalp  ₹64,000 hai.\n\nMethod 2 (100-Base Method):\nOriginal Price $= 100\\% = ₹80000$.\nPrice $20\\%$ decrease hone ke baad bacha $= 80\\%$.\nNew Price $= 80\\% \\text{ of } 80000 = \\frac{80}{100} \\times 80000 = ₹64000$.\nAtah sahi uttar '₹64,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_3",
+    "qe": "Rahul's salary in 2021 was ₹30,000. He gets an increment of 10% every year. What was his salary in 2023?",
+    "qh": "2021 में राहुल का वेतन ₹30,000 था। उसे प्रत्येक वर्ष 10% की वेतन वृद्धि मिलती है। 2023 में उसका वेतन क्या था?",
+    "oe": [
+      "₹36,000",
+      "₹36,300",
+      "₹35,800",
+      "₹37,200"
+    ],
+    "oh": [
+      "₹36,000",
+      "₹36,300",
+      "₹35,800",
+      "₹37,200"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\n$10\\% = \\frac{1}{10}$.\nHar saal salary ka ratio $= 10 : 11$.\n2 saal (2021 se 2023) me ratio $= 10^2 : 11^2 = 100 : 121$.\nGiven: 100 units $= ₹30000 \\implies 1 \\text{ unit} = ₹300$.\nSalary in 2023 = 121 units $= 121 \\times 300 = ₹36300$.\nAtah sahi vikalp  ₹36,300 hai.\n\nMethod 2 (100-Base / Successive Formula):\nTwo successive hikes of $10\\%$:\nNet hike $= 10 + 10 + \\frac{10 \\times 10}{100} = 21\\%$.\nSalary in 2023 $= 30000 + (21\\% \\text{ of } 30000) = 30000 + 6300 = ₹36300$.\nAtah sahi uttar '₹36,300' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_4",
+    "qe": "A motorcycle is sold for ₹72,000, which is 20% less than its original price. What was the original price of the motorcycle?",
+    "qh": "एक मोटरसाइकिल ₹72,000 में बेची जाती है, जो इसके मूल मूल्य से 20% कम है। मोटरसाइकिल का मूल मूल्य क्या था?",
+    "oe": [
+      "₹85,000",
+      "₹88,000",
+      "₹90,000",
+      "₹95,000"
+    ],
+    "oh": [
+      "₹85,000",
+      "₹88,000",
+      "₹90,000",
+      "₹95,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\n$20\\% = \\frac{1}{5}$.\nOriginal Price : Selling Price $= 5 : 4$.\nGiven: 4 units $= ₹72000 \\implies 1 \\text{ unit} = \\frac{72000}{4} = ₹18000$.\nOriginal Price = 5 units $= 5 \\times 18000 = ₹90000$.\nAtah sahi vikalp  ₹90,000 hai.\n\nMethod 2 (100-Base Method):\nOriginal price $= 100\\%$.\nSelling price after $20\\%$ reduction $= 80\\%$.\nGiven: $80\\% = ₹72000$.\n$1\\% = \\frac{72000}{80} = ₹900$.\nOriginal Price ($100\\%$) $= 900 \\times 100 = ₹90000$.\nAtah sahi uttar '₹90,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_5",
+    "qe": "If 25% of 40% of a number is 180, then 15% of that number is:",
+    "qh": "यदि किसी संख्या के 40% का 25% मान 180 है, तो उस संख्या का 15% क्या होगा?",
+    "oe": [
+      "250",
+      "270",
+      "285",
+      "300"
+    ],
+    "oh": [
+      "250",
+      "270",
+      "285",
+      "300"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\n$25\\% = \\frac{1}{4}$ aur $40\\% = \\frac{2}{5}$.\nFractional part $= \\frac{1}{4} \\times \\frac{2}{5} = \\frac{1}{10}$.\nGiven: $\\frac{1}{10}$ of number $= 180 \\implies \\text{Number} = 1800$.\nAb number ka $15\\%$ nikaalna hai:\n$15\\% = \\frac{3}{20} \\implies \\frac{3}{20} \\times 1800 = 3 \\times 90 = 270$.\nAtah sahi vikalp  270 hai.\n\nMethod 2 (100-Base Method):\nLet the number be $100\\%$.\n$40\\% \\text{ of } 100\\% = 40\\%$.\n$25\\% \\text{ of } 40\\% = 10\\%$.\nGiven: $10\\% = 180$.\n$1\\% = 18$.\nRequired $15\\% = 15 \\times 18 = 270$.\nAtah sahi uttar '270' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_6",
+    "qe": "During the first year, the population of a town increased by 10% and during the second year it decreased by 10%. At the end of the second year, its population was 59,400. What was the population at the beginning of the first year?",
+    "qh": "पहले वर्ष के दौरान एक कस्बे की जनसंख्या में 10% की वृद्धि हुई और दूसरे वर्ष के दौरान इसमें 10% की कमी आई। दूसरे वर्ष के अंत में इसकी जनसंख्या 59,400 थी। पहले वर्ष की शुरुआत में जनसंख्या कितनी थी?",
+    "oe": [
+      "60,000",
+      "62,000",
+      "58,000",
+      "65,000"
+    ],
+    "oh": [
+      "60,000",
+      "62,000",
+      "58,000",
+      "65,000"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nYear 1 (+10%): $10 : 11$.\nYear 2 (-10%): $10 : 9$.\nInitial Population : Final Population $= (10 \\times 10) : (11 \\times 9) = 100 : 99$.\nGiven: 99 units $= 59400 \\implies 1 \\text{ unit} = \\frac{59400}{99} = 600$.\nInitial Population = 100 units $= 100 \\times 600 = 60000$.\nAtah sahi vikalp  60,000 hai.\n\nMethod 2 (Successive Formula):\nNet percentage change $= +10 - 10 - \\frac{10 \\times 10}{100} = -1\\%$.\nFinal population $= 100\\% - 1\\% = 99\\%$.\n$99\\% = 59400 \\implies 1\\% = 600$.\nInitial population ($100\\%$) $= 600 \\times 100 = 60000$.\nAtah sahi uttar '60,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_7",
+    "qe": "Pankaj gets a 10% increase in his sales in the first year and a 20% increase in the second year. If his present sales amount is ₹1,58,400, what was his sales amount two years ago?",
+    "qh": "पंकज की बिक्री में पहले वर्ष 10% और दूसरे वर्ष 20% की वृद्धि होती है। यदि उसकी वर्तमान बिक्री राशि ₹1,58,400 है, तो दो वर्ष पहले उसकी बिक्री राशि क्या थी?",
+    "oe": [
+      "₹1,10,000",
+      "₹1,15,000",
+      "₹1,20,000",
+      "₹1,25,000"
+    ],
+    "oh": [
+      "₹1,10,000",
+      "₹1,15,000",
+      "₹1,20,000",
+      "₹1,25,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nYear 1 (+10%): $10\\% = \\frac{1}{10} \\implies 10 : 11$.\nYear 2 (+20%): $20\\% = \\frac{1}{5} \\implies 5 : 6$.\nInitial Sales : Present Sales $= (10 \\times 5) : (11 \\times 6) = 50 : 66 = 25 : 33$.\nGiven: 33 units $= ₹158400 \\implies 1 \\text{ unit} = \\frac{158400}{33} = ₹4800$.\nInitial Sales = 25 units $= 25 \\times 4800 = ₹120000$.\nAtah sahi vikalp  ₹1,20,000 hai.\n\nMethod 2 (100-Base Method):\nNet increase $= 10 + 20 + \\frac{10 \\times 20}{100} = 32\\%$.\nPresent Sales $= 100\\% + 32\\% = 132\\%$.\nGiven: $132\\% = ₹158400$.\n$1\\% = \\frac{158400}{132} = ₹1200$.\nSales 2 years ago ($100\\%$) $= 1200 \\times 100 = ₹120000$.\nAtah sahi uttar '₹1,20,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_8",
+    "qe": "After a discount of 15%, an electronic gadget is available for ₹1,19,000. Find its marked price.",
+    "qh": "15% की छूट के बाद, एक इलेक्ट्रॉनिक उपकरण ₹1,19,000 में उपलब्ध है। इसका अंकित मूल्य ज्ञात कीजिए।",
+    "oe": [
+      "₹1,35,000",
+      "₹1,40,000",
+      "₹1,42,000",
+      "₹1,45,000"
+    ],
+    "oh": [
+      "₹1,35,000",
+      "₹1,40,000",
+      "₹1,42,000",
+      "₹1,45,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\n$15\\% = \\frac{3}{20}$.\nMarked Price : Discounted Price $= 20 : (20 - 3) = 20 : 17$.\nGiven: 17 units $= ₹119000 \\implies 1 \\text{ unit} = \\frac{119000}{17} = ₹7000$.\nMarked Price = 20 units $= 20 \\times 7000 = ₹140000$.\nAtah sahi vikalp  ₹1,40,000 hai.\n\nMethod 2 (100-Base Method):\nMarked Price $= 100\\%$.\nPrice after $15\\%$ discount $= 85\\%$.\nGiven: $85\\% = ₹119000$.\n$1\\% = \\frac{119000}{85} = ₹1400$.\nMarked Price ($100\\%$) $= 1400 \\times 100 = ₹140000$.\nAtah sahi uttar '₹1,40,000' hai.\n\nExam point: chhoot aur ankitan moolya ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_9",
+    "qe": "Two years ago, the population of a town was 80,000. Due to industrial development, it increases every year at the rate of 5%. The present population of the town is:",
+    "qh": "दो वर्ष पहले, एक शहर की जनसंख्या 80,000 थी। औद्योगिक विकास के कारण, इसमें प्रत्येक वर्ष 5% की दर से वृद्धि होती है। शहर की वर्तमान जनसंख्या क्या है?",
+    "oe": [
+      "88,000",
+      "88,200",
+      "89,000",
+      "89,200"
+    ],
+    "oh": [
+      "88,000",
+      "88,200",
+      "89,000",
+      "89,200"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\n$5\\% = \\frac{1}{20}$.\nHar saal population ratio $= 20 : 21$.\n2 saal me compound change $= 20^2 : 21^2 = 400 : 441$.\nGiven: 400 units $= 80000 \\implies 1 \\text{ unit} = \\frac{80000}{400} = 200$.\nPresent population = 441 units $= 441 \\times 200 = 88200$.\nAtah sahi vikalp  88,200 hai.\n\nMethod 2 (100-Base / Successive Formula):\n2 saal ka net percentage increase $= 5 + 5 + \\frac{5 \\times 5}{100} = 10.25\\%$.\nPresent population $= 80000 + (10.25\\% \\text{ of } 80000) = 80000 + 8200 = 88200$.\nAtah sahi uttar '88,200' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_10",
+    "qe": "Sumit gets a 5% increase in his sale amount in the first year and 10% in the second year. If his present sale is ₹1,38,600, what was his sale (in ₹) two years ago?",
+    "qh": "सुमित की बिक्री राशि में पहले वर्ष 5% और दूसरे वर्ष 10% की वृद्धि होती है। यदि उसकी वर्तमान बिक्री ₹1,38,600 है, तो दो वर्ष पहले उसकी बिक्री (₹ में) क्या थी?",
+    "oe": [
+      "₹1,15,000",
+      "₹1,20,000",
+      "₹1,25,000",
+      "₹1,30,000"
+    ],
+    "oh": [
+      "₹1,15,000",
+      "₹1,20,000",
+      "₹1,25,000",
+      "₹1,30,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nYear 1 (+5%): $5\\% = \\frac{1}{20} \\implies 20 : 21$.\nYear 2 (+10%): $10\\% = \\frac{1}{10} \\implies 10 : 11$.\nInitial Sale : Present Sale $= (20 \\times 10) : (21 \\times 11) = 200 : 231$.\nGiven: 231 units $= ₹138600 \\implies 1 \\text{ unit} = \\frac{138600}{231} = ₹600$.\nSale 2 years ago = 200 units $= 200 \\times 600 = ₹120000$.\nAtah sahi vikalp  ₹1,20,000 hai.\n\nMethod 2 (100-Base Method):\nNet increase over 2 years $= 5 + 10 + \\frac{5 \\times 10}{100} = 15.5\\%$.\nPresent sale $= 100\\% + 15.5\\% = 115.5\\%$.\nGiven: $115.5\\% = ₹138600$.\n$1\\% = \\frac{138600}{115.5} = ₹1200$.\nOriginal sale ($100\\%$) $= 1200 \\times 100 = ₹120000$.\nAtah sahi uttar '₹1,20,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_11",
+    "qe": "The price of an article is increased by k%. The new price was decreased by k% later. Now the latest price is ₹P. What was the original price of the article?",
+    "qh": "एक वस्तु के मूल्य में k% की वृद्धि की जाती है। बाद में नए मूल्य में k% की कमी की जाती है। अब नवीनतम मूल्य ₹P है। वस्तु का मूल मूल्य क्या था?",
+    "oe": [
+      "$\\frac{10000P}{10000-k^2}$",
+      "$\\frac{(10000-k^2)P}{10000}$",
+      "$\\frac{100P}{100-k^2}$",
+      "$\\frac{100P}{1-k^2}$"
+    ],
+    "oh": [
+      "$\\frac{10000P}{10000-k^2}$",
+      "$\\frac{(10000-k^2)P}{10000}$",
+      "$\\frac{100P}{100-k^2}$",
+      "$\\frac{100P}{1-k^2}$"
+    ],
+    "a": 0,
+    "e": "Method 1 (Successive Multiplier Method):\nPehle $k\\%$ badhane par factor $= \\left(1 + \\frac{k}{100}\\right)$.\nFir $k\\%$ ghatane par factor $= \\left(1 - \\frac{k}{100}\\right)$.\nNet Multiplier $= \\left(1 + \\frac{k}{100}\\right)\\left(1 - \\frac{k}{100}\\right) = 1 - \\frac{k^2}{10000} = \\frac{10000 - k^2}{10000}$.\nLatest Price $= \\text{Original Price} \\times \\frac{10000 - k^2}{10000} = P$.\n$\\implies \\text{Original Price} = \\frac{10000 P}{10000 - k^2}$.\nAtah sahi vikalp  $\\frac{10000P}{10000-k^2}$ hai.\n\nMethod 2 (100-Base / Direct Loss Formula):\nJab kisi value ko pehle $k\\%$ badhayein aur fir $k\\%$ ghatayein, toh net loss $= \\frac{k^2}{100}\\%$ hota hai.\nFinal percentage $= 100\\% - \\frac{k^2}{100}\\% = \\frac{10000 - k^2}{100}\\%$.\nYe value $P$ ke barabar hai:\n$\\frac{10000 - k^2}{10000} \\times \\text{Original} = P \\implies \\text{Original} = \\frac{10000 P}{10000 - k^2}$.\nAtah sahi uttar '$\\frac{10000P}{10000-k^2}$' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_12",
+    "qe": "The population of a village was 2,50,000. It increased by 10% in the first year and increased by 20% in the second year. Its population after two years is:",
+    "qh": "एक गाँव की जनसंख्या 2,50,000 थी। पहले वर्ष में इसमें 10% की वृद्धि हुई और दूसरे वर्ष में 20% की वृद्धि हुई। दो वर्ष बाद इसकी जनसंख्या क्या होगी?",
+    "oe": [
+      "3,25,000",
+      "3,30,000",
+      "3,35,000",
+      "3,40,000"
+    ],
+    "oh": [
+      "3,25,000",
+      "3,30,000",
+      "3,35,000",
+      "3,40,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nYear 1 (+10%): $10 : 11$.\nYear 2 (+20%): $5 : 6$.\nInitial Population : Final Population $= (10 \\times 5) : (11 \\times 6) = 50 : 66 = 25 : 33$.\nGiven: 25 units $= 250000 \\implies 1 \\text{ unit} = 10000$.\nPopulation after 2 years = 33 units $= 33 \\times 10000 = 330000$.\nAtah sahi vikalp  3,30,000 hai.\n\nMethod 2 (100-Base / Successive Formula):\nTwo successive increases of $10\\%$ and $20\\%$:\nNet increase $= 10 + 20 + \\frac{10 \\times 20}{100} = 32\\%$.\nPopulation after 2 years $= 250000 + (32\\% \\text{ of } 250000) = 250000 + 80000 = 330000$.\nAtah sahi uttar '3,30,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_13",
+    "qe": "The population of a town increases by 10% in the first year, decreases by 20% in the second year, and again increases by 30% in the third year. If the population at the beginning was 50,000, what will it be after 3 years?",
+    "qh": "एक शहर की जनसंख्या पहले वर्ष में 10% बढ़ती है, दूसरे वर्ष में 20% घटती है, और तीसरे वर्ष में पुनः 30% बढ़ती है। यदि शुरुआत में जनसंख्या 50,000 थी, तो 3 वर्ष बाद यह कितनी होगी?",
+    "oe": [
+      "56,800",
+      "57,200",
+      "57,600",
+      "58,400"
+    ],
+    "oh": [
+      "56,800",
+      "57,200",
+      "57,600",
+      "58,400"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nYear 1 (+10%): $10 : 11$.\nYear 2 (-20%): $5 : 4$.\nYear 3 (+30%): $10 : 13$.\nInitial : Final $= (10 \\times 5 \\times 10) : (11 \\times 4 \\times 13) = 500 : 572$.\nGiven: 500 units $= 50000 \\implies 1 \\text{ unit} = 100$.\nPopulation after 3 years = 572 units $= 572 \\times 100 = 57200$.\nAtah sahi vikalp  57,200 hai.\n\nMethod 2 (100-Base Method):\nInitial population $= 100$.\nAfter Year 1 (+10%): $100 + 10 = 110$.\nAfter Year 2 (-20%): $110 - (20\\% \\text{ of } 110) = 110 - 22 = 88$.\nAfter Year 3 (+30%): $88 + (30\\% \\text{ of } 88) = 88 + 26.4 = 114.4$.\nPopulation after 3 years $= 50000 \\times \\frac{114.4}{100} = 500 \\times 114.4 = 57200$.\nAtah sahi uttar '57,200' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_14",
+    "qe": "The population of a city is 60,000. It increases by 10% in the first year and decreases by 5% in the second year. What will be the population of the city after 2 years?",
+    "qh": "एक शहर की जनसंख्या 60,000 है। पहले वर्ष में इसमें 10% की वृद्धि होती है और दूसरे वर्ष में 5% की कमी होती है। 2 वर्ष बाद शहर की जनसंख्या क्या होगी?",
+    "oe": [
+      "62,500",
+      "62,700",
+      "63,000",
+      "63,200"
+    ],
+    "oh": [
+      "62,500",
+      "62,700",
+      "63,000",
+      "63,200"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nYear 1 (+10%): $10\\% = \\frac{1}{10} \\implies 10 : 11$.\nYear 2 (-5%): $5\\% = \\frac{1}{20} \\implies 20 : 19$.\nInitial : Final $= (10 \\times 20) : (11 \\times 19) = 200 : 209$.\nGiven: 200 units $= 60000 \\implies 1 \\text{ unit} = \\frac{60000}{200} = 300$.\nPopulation after 2 years = 209 units $= 209 \\times 300 = 62700$.\nAtah sahi vikalp  62,700 hai.\n\nMethod 2 (Successive Formula):\nNet percentage change $= +10 - 5 + \\frac{10 \\times (-5)}{100} = 5 - 0.5 = +4.5\\%$.\nPopulation after 2 years $= 60000 + (4.5\\% \\text{ of } 60000) = 60000 + 2700 = 62700$.\nAtah sahi uttar '62,700' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_15",
+    "qe": "The price of a digital camera is first reduced by 20% and then increased by 40%. If the resulting price of the digital camera is ₹8,960, then what was its original price (in ₹)?",
+    "qh": "एक डिजिटल कैमरे के मूल्य में पहले 20% की कमी की जाती है और फिर 40% की वृद्धि की जाती है। यदि डिजिटल कैमरे का परिणामी मूल्य ₹8,960 है, तो इसका मूल मूल्य (₹ में) क्या था?",
+    "oe": [
+      "₹7,500",
+      "₹8,000",
+      "₹8,200",
+      "₹8,500"
+    ],
+    "oh": [
+      "₹7,500",
+      "₹8,000",
+      "₹8,200",
+      "₹8,500"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nReduction: $20\\% = \\frac{1}{5} \\implies 5 : 4$.\nIncrease: $40\\% = \\frac{2}{5} \\implies 5 : 7$.\nInitial Price : Resulting Price $= (5 \\times 5) : (4 \\times 7) = 25 : 28$.\nGiven: 28 units $= ₹8960 \\implies 1 \\text{ unit} = \\frac{8960}{28} = ₹320$.\nOriginal Price = 25 units $= 25 \\times 320 = ₹8000$.\nAtah sahi vikalp  ₹8,000 hai.\n\nMethod 2 (100-Base Method):\nInitial Price $= 100\\%$.\nNet Change $= -20 + 40 + \\frac{(-20) \\times 40}{100} = 20 - 8 = +12\\%$.\nResulting Price $= 100\\% + 12\\% = 112\\%$.\nGiven: $112\\% = ₹8960$.\n$1\\% = \\frac{8960}{112} = ₹80$.\nOriginal Price ($100\\%$) $= 80 \\times 100 = ₹8000$.\nAtah sahi uttar '₹8,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_16",
+    "qe": "The price of an electronic printer decreased by 10%, 10%, and 20% during the first three years. What will be the price of the printer after three years if the value at the beginning was ₹15,000?",
+    "qh": "एक इलेक्ट्रॉनिक प्रिंटर के मूल्य में पहले तीन वर्षों के दौरान क्रमशः 10%, 10% और 20% की कमी आई। यदि शुरुआत में इसका मूल्य ₹15,000 था, तो तीन वर्ष बाद प्रिंटर का मूल्य क्या होगा?",
+    "oe": [
+      "₹9,720",
+      "₹9,850",
+      "₹10,200",
+      "₹10,500"
+    ],
+    "oh": [
+      "₹9,720",
+      "₹9,850",
+      "₹10,200",
+      "₹10,500"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nYear 1 (-10%): $10 : 9$\nYear 2 (-10%): $10 : 9$\nYear 3 (-20%): $5 : 4$\nInitial Value : Value after 3 years $= (10 \\times 10 \\times 5) : (9 \\times 9 \\times 4) = 500 : 324$.\nGiven: 500 units $= ₹15000 \\implies 1 \\text{ unit} = \\frac{15000}{500} = ₹30$.\nPrice after 3 years = 324 units $= 324 \\times 30 = ₹9720$.\nAtah sahi vikalp  ₹9,720 hai.\n\nMethod 2 (100-Base Method):\nInitial Value $= ₹15000$.\nAfter Year 1: $15000 \\times 0.90 = 13500$.\nAfter Year 2: $13500 \\times 0.90 = 12150$.\nAfter Year 3: $12150 \\times 0.80 = ₹9720$.\nAtah sahi uttar '₹9,720' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_17",
+    "qe": "The population of a town is 20,000. If the population increases by 10% in the first year, by 20% in the second year, and due to migration it decreases by 5% in the third year, what will be its population after 3 years?",
+    "qh": "एक शहर की जनसंख्या 20,000 है। यदि पहले वर्ष में जनसंख्या में 10% की वृद्धि होती है, दूसरे वर्ष में 20% की वृद्धि होती है, और प्रवास के कारण तीसरे वर्ष में 5% की कमी होती है, तो 3 वर्ष बाद इसकी जनसंख्या क्या होगी?",
+    "oe": [
+      "24,850",
+      "25,080",
+      "25,240",
+      "26,120"
+    ],
+    "oh": [
+      "24,850",
+      "25,080",
+      "25,240",
+      "26,120"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nYear 1 (+10%): $10 : 11$\nYear 2 (+20%): $5 : 6$\nYear 3 (-5%): $20 : 19$\nInitial : Final $= (10 \\times 5 \\times 20) : (11 \\times 6 \\times 19) = 1000 : 1254$.\nGiven: 1000 units $= 20000 \\implies 1 \\text{ unit} = 20$.\nPopulation after 3 years = 1254 units $= 1254 \\times 20 = 25080$.\nAtah sahi vikalp  25,080 hai.\n\nMethod 2 (100-Base Method):\nInitial population $= 20000$.\nAfter Year 1 (+10%): $20000 + 2000 = 22000$.\nAfter Year 2 (+20%): $22000 + 4400 = 26400$.\nAfter Year 3 (-5%): $26400 - (5\\% \\text{ of } 26400) = 26400 - 1320 = 25080$.\nAtah sahi uttar '25,080' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_18",
+    "qe": "Deepak studies the pattern of daily sale of a grocery shop. He finds that on Monday, the sale was decreased by 20% in comparison to the sale on Sunday. On Tuesday, the sale was increased by 20% in comparison to the sale of Monday. If the sale on Tuesday was of ₹2,880, how much was the sale on Sunday?",
+    "qh": "दीपक एक किराना दुकान की दैनिक बिक्री के पैटर्न का अध्ययन करता है। वह पाता है कि रविवार की बिक्री की तुलना में सोमवार को बिक्री में 20% की कमी आई। सोमवार की बिक्री की तुलना में मंगलवार को बिक्री में 20% की वृद्धि हुई। यदि मंगलवार को ₹2,880 की बिक्री हुई, तो रविवार को बिक्री कितनी थी?",
+    "oe": [
+      "₹2,900",
+      "₹3,000",
+      "₹3,150",
+      "₹3,200"
+    ],
+    "oh": [
+      "₹2,900",
+      "₹3,000",
+      "₹3,150",
+      "₹3,200"
+    ],
+    "a": 1,
+    "e": "Method 1 (Equal Change Direct Shortcut):\nJab kisi base value ko pehle $x\\%$ ghatayein aur fir $x\\%$ badhayein, toh net loss $= \\frac{x^2}{100}\\%$ hota hai.\nNet loss $= \\frac{20^2}{100}\\% = 4\\%$.\nSunday ki sale ke mukable Tuesday ki sale $= 100\\% - 4\\% = 96\\%$.\nGiven: $96\\% = ₹2880$.\n$1\\% = \\frac{2880}{96} = ₹30$.\nSunday ki sale ($100\\%$) $= 30 \\times 100 = ₹3000$.\nAtah sahi vikalp  ₹3,000 hai.\n\nMethod 2 (Ratio Method):\nMonday (-20%): $5 : 4$.\nTuesday (+20%): $5 : 6$.\nSunday : Tuesday $= (5 \\times 5) : (4 \\times 6) = 25 : 24$.\nGiven: 24 units $= ₹2880 \\implies 1 \\text{ unit} = \\frac{2880}{24} = ₹120$.\nSunday's sale = 25 units $= 25 \\times 120 = ₹3000$.\nAtah sahi uttar '₹3,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_19",
+    "qe": "The price of a car increases by 25% in the first year and decreases by 20% in the second year. If its final price becomes ₹4,80,000, find the original price of the car.",
+    "qh": "एक कार के मूल्य में पहले वर्ष 25% की वृद्धि होती है और दूसरे वर्ष 20% की कमी होती है। यदि इसका अंतिम मूल्य ₹4,80,000 हो जाता है, तो कार का मूल मूल्य ज्ञात कीजिए।",
+    "oe": [
+      "₹4,50,000",
+      "₹4,60,000",
+      "₹4,80,000",
+      "₹5,00,000"
+    ],
+    "oh": [
+      "₹4,50,000",
+      "₹4,60,000",
+      "₹4,80,000",
+      "₹5,00,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nYear 1 (+25%): $25\\% = \\frac{1}{4} \\implies 4 : 5$.\nYear 2 (-20%): $20\\% = \\frac{1}{5} \\implies 5 : 4$.\nOriginal Price : Final Price $= (4 \\times 5) : (5 \\times 4) = 20 : 20 = 1 : 1$.\nSince ratio is $1 : 1$, Original Price $=$ Final Price $= ₹480000$.\nAtah sahi vikalp  ₹4,80,000 hai.\n\nMethod 2 (Successive Formula):\nNet Change $= +25 - 20 + \\frac{25 \\times (-20)}{100} = 5 - 5 = 0\\%$.\nKyunki net change $0\\%$ hai, isliye price unaltered rahega.\nOriginal Price $= ₹480000$.\nAtah sahi uttar '₹4,80,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_20",
+    "qe": "10% of the inhabitants of a village having died of an epidemic, a panic set in, during which 20% of the remaining inhabitants left the village. The population was then reduced to 14,400. What was the number of inhabitants initially?",
+    "qh": "एक महामारी से एक गाँव के 10% निवासियों की मृत्यु हो जाने के बाद, दहशत फैल गई, जिसके दौरान शेष निवासियों में से 20% ने गाँव छोड़ दिया। इसके बाद जनसंख्या घटकर 14,400 हो गई। शुरुआत में निवासियों की संख्या क्या थी?",
+    "oe": [
+      "18,000",
+      "20,000",
+      "22,500",
+      "24,000"
+    ],
+    "oh": [
+      "18,000",
+      "20,000",
+      "22,500",
+      "24,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1 (-10%): $10 : 9$.\nStep 2 (-20%): $5 : 4$.\nInitial Population : Final Population $= (10 \\times 5) : (9 \\times 4) = 50 : 36 = 25 : 18$.\nGiven: 18 units $= 14400 \\implies 1 \\text{ unit} = \\frac{14400}{18} = 800$.\nInitial Population = 25 units $= 25 \\times 800 = 20000$.\nAtah sahi vikalp  20,000 hai.\n\nMethod 2 (100-Base Method):\nInitial population $= 100\\%$.\nAfter epidemic deaths: $100 - 10 = 90\\%$.\nAfter migration of remaining: $90\\% - (20\\% \\text{ of } 90\\%) = 90 - 18 = 72\\%$.\nGiven: $72\\% = 14400$.\n$1\\% = \\frac{14400}{72} = 200$.\nInitial Population ($100\\%$) $= 200 \\times 100 = 20000$.\nAtah sahi uttar '20,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_21",
+    "qe": "On account of a viral outbreak, 10% of the population of a village died. Out of the remaining population, 25% fled due to panic. If the present population is 5,400, then what was the population of the village before the outbreak?",
+    "qh": "वायरस के प्रकोप के कारण एक गाँव की 10% जनसंख्या की मृत्यु हो गई। शेष जनसंख्या में से 25% दहशत के कारण भाग गए। यदि वर्तमान जनसंख्या 5,400 है, तो प्रकोप से पहले गाँव की जनसंख्या क्या थी?",
+    "oe": [
+      "7,500",
+      "8,000",
+      "8,400",
+      "8,800"
+    ],
+    "oh": [
+      "7,500",
+      "8,000",
+      "8,400",
+      "8,800"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStep 1 (-10%): $10 : 9$.\nStep 2 (-25%): $4 : 3$.\nInitial Population : Present Population $= (10 \\times 4) : (9 \\times 3) = 40 : 27$.\nGiven: 27 units $= 5400 \\implies 1 \\text{ unit} = \\frac{5400}{27} = 200$.\nInitial Population = 40 units $= 40 \\times 200 = 8000$.\nAtah sahi vikalp  8,000 hai.\n\nMethod 2 (100-Base Method):\nInitial population $= 100\\%$.\nAfter deaths: $100 - 10 = 90\\%$.\nAfter panic exit: $90\\% - (25\\% \\text{ of } 90\\%) = 90 - 22.5 = 67.5\\%$.\nGiven: $67.5\\% = 5400$.\n$1\\% = \\frac{5400}{67.5} = 80$.\nInitial Population ($100\\%$) $= 80 \\times 100 = 8000$.\nAtah sahi uttar '8,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_22",
+    "qe": "A town has a present population of 1,60,000. Every year the population increases by a birth rate of 15% and decreases by a death rate of 5%. Find the population of the town at the end of 3 years.",
+    "qh": "एक शहर की वर्तमान जनसंख्या 1,60,000 है। प्रत्येक वर्ष जनसंख्या में 15% की जन्म दर से वृद्धि होती है और 5% की मृत्यु दर से कमी होती है। 3 वर्ष के अंत में शहर की जनसंख्या ज्ञात कीजिए।",
+    "oe": [
+      "2,10,500",
+      "2,12,960",
+      "2,15,400",
+      "2,18,000"
+    ],
+    "oh": [
+      "2,10,500",
+      "2,12,960",
+      "2,15,400",
+      "2,18,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nNet annual growth rate $= \\text{Birth Rate} - \\text{Death Rate} = 15\\% - 5\\% = 10\\%$.\n$10\\% = \\frac{1}{10} \\implies$ Har saal population ratio $= 10 : 11$.\n3 saal baad ratio $= 10^3 : 11^3 = 1000 : 1331$.\nInitial base 1000 units $= 160000 \\implies 1 \\text{ unit} = 160$.\nPopulation at the end of 3 years $= 1331 \\times 160 = 212960$.\nAtah sahi vikalp  2,12,960 hai.\n\nMethod 2 (100-Base / Multiplier Method):\nHar saal net growth $10\\%$ hai, isliye multiplier factor $= 1.10$ hoga.\nPopulation after 3 years $= 160000 \\times (1.10)^3 = 160000 \\times 1.331 = 212960$.\nAtah sahi uttar '2,12,960' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_23",
+    "qe": "The number of items produced by a manufacturing unit in 2020 was 40,000, which increased by 25% in 2021. In 2022, the production was affected by a raw material shortage and it fell by 20%. How many total items were manufactured in these three years combined?",
+    "qh": "2020 में एक विनिर्माण इकाई द्वारा उत्पादित वस्तुओं की संख्या 40,000 थी, जो 2021 में 25% बढ़ गई। 2022 में, कच्चे माल की कमी से उत्पादन प्रभावित हुआ और यह 20% गिर गया। इन तीन वर्षों में कुल मिलाकर कितनी वस्तुओं का निर्माण किया गया?",
+    "oe": [
+      "1,20,000",
+      "1,25,000",
+      "1,30,000",
+      "1,35,000"
+    ],
+    "oh": [
+      "1,20,000",
+      "1,25,000",
+      "1,30,000",
+      "1,35,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Step-by-Step Production Method):\n• Production in 2020 $= 40000$.\n• Production in 2021 ($+25\\%$): $40000 + (25\\% \\text{ of } 40000) = 40000 + 10000 = 50000$.\n• Production in 2022 ($-20\\%$ on 2021): $50000 - (20\\% \\text{ of } 50000) = 50000 - 10000 = 40000$.\nTotal production in three years $= 40000 + 50000 + 40000 = 130000$.\nAtah sahi vikalp  1,30,000 hai.\n\nMethod 2 (Ratio Multiplier Method):\nProduction in 2020 $= 40000$.\nProduction in 2021 $= 40000 \\times \\frac{5}{4} = 50000$.\nProduction in 2022 $= 50000 \\times \\frac{4}{5} = 40000$.\nTotal $= 40000 + 50000 + 40000 = 130000$.\nAtah sahi uttar '1,30,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_24",
+    "qe": "During 2022, the population of a town increased by 10% and in 2023, it increased by 20%. At the end of 2023, its population was 66,000. What was the population of the town at the end of 2022?",
+    "qh": "2022 के दौरान, एक शहर की जनसंख्या में 10% की वृद्धि हुई और 2023 में इसमें 20% की वृद्धि हुई। 2023 के अंत में इसकी जनसंख्या 66,000 थी। 2022 के अंत में शहर की जनसंख्या कितनी थी?",
+    "oe": [
+      "50,000",
+      "52,500",
+      "55,000",
+      "57,500"
+    ],
+    "oh": [
+      "50,000",
+      "52,500",
+      "55,000",
+      "57,500"
+    ],
+    "a": 2,
+    "e": "Method 1 (Single Step Backtrack Method):\nQuestion me specifically end of 2022 ki population puchi gayi hai. 2022 ke end se 2023 ke end tak sirf $20\\%$ ki increase hui hai:\n$20\\% = \\frac{1}{5} \\implies$ Population at end of 2022 : Population at end of 2023 $= 5 : 6$.\nGiven: 6 units $= 66000 \\implies 1 \\text{ unit} = 11000$.\nPopulation at end of 2022 = 5 units $= 5 \\times 11000 = 55000$.\nAtah sahi vikalp  55,000 hai.\n\nMethod 2 (100-Base Method):\nEnd of 2022 ki population ko $100\\%$ maan lo.\n2023 ke end me population $= 100\\% + 20\\% = 120\\%$.\nGiven: $120\\% = 66000$.\n$1\\% = \\frac{66000}{120} = 550$.\nPopulation at end of 2022 ($100\\%$) $= 550 \\times 100 = 55000$.\nAtah sahi uttar '55,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_25",
+    "qe": "Two years ago, the population of a locality was 80,000. It increased by 10% in the first year, but due to health issues, it decreased by 5% in the second year. What is its present population?",
+    "qh": "दो वर्ष पहले, एक इलाके की जनसंख्या 80,000 थी। पहले वर्ष में इसमें 10% की वृद्धि हुई, लेकिन स्वास्थ्य समस्याओं के कारण दूसरे वर्ष में 5% की कमी आई। इसकी वर्तमान जनसंख्या क्या है?",
+    "oe": [
+      "82,400",
+      "83,600",
+      "84,000",
+      "85,200"
+    ],
+    "oh": [
+      "82,400",
+      "83,600",
+      "84,000",
+      "85,200"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nYear 1 (+10%): $10 : 11$.\nYear 2 (-5%): $20 : 19$.\nInitial Population : Present Population $= (10 \\times 20) : (11 \\times 19) = 200 : 209$.\nGiven: 200 units $= 80000 \\implies 1 \\text{ unit} = \\frac{80000}{200} = 400$.\nPresent population = 209 units $= 209 \\times 400 = 83600$.\nAtah sahi vikalp  83,600 hai.\n\nMethod 2 (Successive Net Change Method):\nNet percentage change $= +10 - 5 + \\frac{10 \\times (-5)}{100} = 5 - 0.5 = +4.5\\%$.\nPresent population $= 80000 + (4.5\\% \\text{ of } 80000) = 80000 + 3600 = 83600$.\nAtah sahi uttar '83,600' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_26",
+    "qe": "A bacteria culture increases by 10% every hour for the first 2 hours, then decreases by 20% in the 3rd hour, and finally increases by 25% in the 4th hour. If the initial count was 10,000, what will be the count after 4 hours?",
+    "qh": "एक बैक्टीरिया संवर्धन (culture) में पहले 2 घंटों में प्रत्येक घंटे 10% की वृद्धि होती है, फिर तीसरे घंटे में 20% की कमी होती है, और अंत में चौथे घंटे में 25% की वृद्धि होती है। यदि प्रारंभिक संख्या 10,000 थी, तो 4 घंटे बाद संख्या क्या होगी?",
+    "oe": [
+      "11,800",
+      "12,100",
+      "12,500",
+      "12,800"
+    ],
+    "oh": [
+      "11,800",
+      "12,100",
+      "12,500",
+      "12,800"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Multiplication Method):\n1st hour (+10%): $\\frac{11}{10}$\n2nd hour (+10%): $\\frac{11}{10}$\n3rd hour (-20%): $\\frac{4}{5}$\n4th hour (+25%): $\\frac{5}{4}$\nFinal Count $= 10000 \\times \\frac{11}{10} \\times \\frac{11}{10} \\times \\frac{4}{5} \\times \\frac{5}{4} = 10000 \\times \\frac{121}{100} \\times 1 = 12100$.\nAtah sahi vikalp  12,100 hai.\n\nMethod 2 (100-Base Step Method):\nInitial count $= 10000$.\nAfter 1st hour: $10000 + 1000 = 11000$.\nAfter 2nd hour: $11000 + 1100 = 12100$.\nAfter 3rd hour: $12100 - (20\\% \\text{ of } 12100) = 12100 - 2420 = 9680$.\nAfter 4th hour: $9680 + (25\\% \\text{ of } 9680) = 9680 + 2420 = 12100$.\nAtah sahi uttar '12,100' hai.\n\nExam point: jiv vigyan ke tathy - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_27",
+    "qe": "In the first year, the population of a town decreased by 10%. In the next year, it decreased again by 10%, and in the third year, it increased by 10%. At the end of the third year, the population was 89,100. What was the population at the beginning of the first year?",
+    "qh": "पहले वर्ष में एक कस्बे की जनसंख्या में 10% की कमी आई। अगले वर्ष इसमें फिर से 10% की कमी आई और तीसरे वर्ष इसमें 10% की वृद्धि हुई। तीसरे वर्ष के अंत में जनसंख्या 89,100 थी। पहले वर्ष की शुरुआत में जनसंख्या कितनी थी?",
+    "oe": [
+      "95,000",
+      "1,00,000",
+      "1,05,000",
+      "1,10,000"
+    ],
+    "oh": [
+      "95,000",
+      "1,00,000",
+      "1,05,000",
+      "1,10,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nYear 1 (-10%): $10 : 9$\nYear 2 (-10%): $10 : 9$\nYear 3 (+10%): $10 : 11$\nInitial Population : Final Population $= (10 \\times 10 \\times 10) : (9 \\times 9 \\times 11) = 1000 : 891$.\nGiven: 891 units $= 89100 \\implies 1 \\text{ unit} = 100$.\nInitial Population = 1000 units $= 1000 \\times 100 = 100000$.\nAtah sahi vikalp  1,00,000 hai.\n\nMethod 2 (100-Base Fraction Method):\nFinal population factor $= \\frac{9}{10} \\times \\frac{9}{10} \\times \\frac{11}{10} = \\frac{891}{1000}$.\n$\\text{Initial Population} \\times \\frac{891}{1000} = 89100 \\implies \\text{Initial Population} = 100000$.\nAtah sahi uttar '1,00,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_28",
+    "qe": "The number of students in a school is 50,000 and it is increasing annually by 20%. What will be the number of students in the school at the end of 3 years?",
+    "qh": "एक विद्यालय में विद्यार्थियों की संख्या 50,000 है और इसमें प्रतिवर्ष 20% की वृद्धि हो रही है। 3 वर्ष के अंत में विद्यालय में विद्यार्थियों की संख्या क्या होगी?",
+    "oe": [
+      "84,400",
+      "86,400",
+      "88,000",
+      "90,200"
+    ],
+    "oh": [
+      "84,400",
+      "86,400",
+      "88,000",
+      "90,200"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\n$20\\% = \\frac{1}{5} \\implies$ Growth ratio $= 5 : 6$.\nAfter 3 years, ratio $= 5^3 : 6^3 = 125 : 216$.\nGiven: 125 units $= 50000 \\implies 1 \\text{ unit} = \\frac{50000}{125} = 400$.\nStudents after 3 years = 216 units $= 216 \\times 400 = 86400$.\nAtah sahi vikalp  86,400 hai.\n\nMethod 2 (100-Base Successive Formula):\n3 successive increases of $20\\%$:\nStep 1 (2 years): $20 + 20 + \\frac{20 \\times 20}{100} = 44\\%$.\nStep 2 (3 years): $44 + 20 + \\frac{44 \\times 20}{100} = 64 + 8.8 = 72.8\\%$.\nStudents after 3 years $= 50000 + (72.8\\% \\text{ of } 50000) = 50000 + 36400 = 86400$.\nAtah sahi uttar '86,400' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_29",
+    "qe": "The strength of a school increases and decreases in alternate years by 10%. It started with an increase in 2016 and the initial strength was 5,000. Find the strength of the school in 2018 and the net percentage increase from 2016, respectively.",
+    "qh": "एक विद्यालय की छात्र संख्या में प्रत्येक एकांतर वर्ष में 10% की वृद्धि और कमी होती है। इसकी शुरुआत 2016 में वृद्धि के साथ हुई और प्रारंभिक छात्र संख्या 5,000 थी। वर्ष 2018 में विद्यालय की छात्र संख्या तथा छात्र संख्या में कुल प्रतिशत वृद्धि क्रमशः ज्ञात कीजिए।",
+    "oe": [
+      "4,950, 1% decrease",
+      "4,950, 1% increase",
+      "5,050, 1% increase",
+      "5,100, 2% increase"
+    ],
+    "oh": [
+      "4,950, 1% decrease",
+      "4,950, 1% increase",
+      "5,050, 1% increase",
+      "5,100, 2% increase"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\n2016 se 2018 tak kul 2 saal ka badlav hua (Year 1: $+10\\%$, Year 2: $-10\\%$):\nYear 1: $10 : 11$, Year 2: $10 : 9$.\nInitial : Final $= (10 \\times 10) : (11 \\times 9) = 100 : 99$.\n100 units $= 5000 \\implies 1 \\text{ unit} = 50$.\nFinal strength $= 99 \\times 50 = 4950$.\nNet change $= 99 - 100 = -1\\%$ (1% decrease).\nAtah sahi vikalp  4,950, 1% decrease hai.\n\nMethod 2 (100-Base Method):\nInitial strength $= 5000$.\n2017 ke end me ($+10\\%$): $5000 + 500 = 5500$.\n2018 ke end me ($-10\\%$): $5500 - 550 = 4950$.\nNet decrease $= 5000 - 4950 = 50$.\nPercentage change $= \\frac{50}{5000} \\times 100\\% = 1\\%$ decrease.\nAtah sahi uttar '4,950, 1% decrease' hai.\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_30",
+    "qe": "The population of a city increased to 40,000 from 2018 to 2020 at the rate of 10% per annum, and continued the same trend for the next 2 years. If X is the population in 2018 and Y is the population in 2022, find the value of Y - X (rounded to nearest integer).",
+    "qh": "एक शहर की जनसंख्या 2018 से 2020 तक 10% वार्षिक दर से बढ़कर 40,000 हो गई, और अगले 2 वर्षों तक यही क्रम जारी रहा। यदि X वर्ष 2018 की जनसंख्या है और Y वर्ष 2022 की जनसंख्या है, तो Y - X का मान ज्ञात कीजिए (निकटतम पूर्णांक तक)।",
+    "oe": [
+      "15,340",
+      "15,342",
+      "15,350",
+      "15,355"
+    ],
+    "oh": [
+      "15,340",
+      "15,342",
+      "15,350",
+      "15,355"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nAnnual growth $= 10\\% = \\frac{1}{10} \\implies$ Multiplier per year $= \\frac{11}{10}$.\n2020 ki population $= 40000$.\n2018 ki population ($X$) $= 40000 \\times \\left(\\frac{10}{11}\\right)^2 = \\frac{4000000}{121} \\approx 33057.85$.\n2022 ki population ($Y$) $= 40000 \\times \\left(\\frac{11}{10}\\right)^2 = 40000 \\times 1.21 = 48400$.\nDifference $Y - X = 48400 - 33057.85 = 15342.15 \\approx 15342$.\nAtah sahi vikalp  15,342 hai.\n\nMethod 2 (100-Base Method):\n$X = \\frac{40000}{1.21} = 33057.85$.\n$Y = 40000 \\times 1.21 = 48400$.\n$Y - X = 48400 - 33057.85 \\approx 15342$.\nAtah sahi uttar '15,342' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_31",
+    "qe": "Suresh spends 20% of his monthly salary on house rent and 60% of the remaining on other household expenses. If he saves ₹4,800 per month, find his total monthly salary (in ₹).",
+    "qh": "सुरेश अपने मासिक वेतन का 20% घर के किराए पर और शेष का 60% अन्य घरेलू खर्चों पर खर्च करता है। यदि वह प्रति माह ₹4,800 बचाता है, तो उसका कुल मासिक वेतन (₹ में) ज्ञात कीजिए।",
+    "oe": [
+      "₹12,000",
+      "₹14,000",
+      "₹15,000",
+      "₹16,000"
+    ],
+    "oh": [
+      "₹12,000",
+      "₹14,000",
+      "₹15,000",
+      "₹16,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nRent: $20\\% = \\frac{1}{5} \\implies$ Remaining $= 5 - 1 = 4$ units.\nHousehold: $60\\% = \\frac{3}{5} \\implies$ Remaining savings $= 5 - 3 = 2$ units.\nTotal : Savings $= (5 \\times 5) : (4 \\times 2) = 25 : 8$.\nGiven: 8 units $= ₹4800 \\implies 1 \\text{ unit} = \\frac{4800}{8} = ₹600$.\nTotal Salary = 25 units $= 25 \\times 600 = ₹15000$.\nAtah sahi vikalp  ₹15,000 hai.\n\nMethod 2 (100-Base Method):\nTotal salary $= 100\\%$.\nRent $= 20\\% \\implies$ Remaining $= 80\\%$.\nHousehold expenses $= 60\\% \\text{ of } 80\\% = 48\\%$.\nSavings $= 80\\% - 48\\% = 32\\%$.\nGiven: $32\\% = ₹4800$.\n$1\\% = \\frac{4800}{32} = ₹150$.\nTotal salary ($100\\%$) $= 150 \\times 100 = ₹15000$.\nAtah sahi uttar '₹15,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_32",
+    "qe": "A man spent 50% of his salary on household expenses, 25% of his salary on rent, and out of the remaining salary, he donated 60% to a charitable trust. If he is left with ₹16,000, then what is his total salary?",
+    "qh": "एक व्यक्ति ने अपने वेतन का 50% घरेलू खर्चों पर, 25% किराए पर खर्च किया और शेष वेतन में से 60% एक धर्मार्थ ट्रस्ट को दान कर दिया। यदि उसके पास ₹16,000 शेष बचते हैं, तो उसका कुल वेतन क्या है?",
+    "oe": [
+      "₹1,20,000",
+      "₹1,50,000",
+      "₹1,60,000",
+      "₹1,80,000"
+    ],
+    "oh": [
+      "₹1,20,000",
+      "₹1,50,000",
+      "₹1,60,000",
+      "₹1,80,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nDirect expenses on salary $= 50\\% + 25\\% = 75\\% = \\frac{3}{4}$.\nRemaining salary $= 1 - \\frac{3}{4} = \\frac{1}{4}$.\nDonation out of remaining $= 60\\% = \\frac{3}{5} \\implies$ Final savings $= 1 - \\frac{3}{5} = \\frac{2}{5}$ of remaining.\nNet fraction left $= \\frac{1}{4} \\times \\frac{2}{5} = \\frac{1}{10}$.\nGiven: 1 unit $= ₹16000$.\nTotal Salary = 10 units $= 10 \\times 16000 = ₹160000$.\nAtah sahi vikalp  ₹1,60,000 hai.\n\nMethod 2 (100-Base Method):\nTotal salary $= 100\\%$.\nHousehold + Rent $= 50\\% + 25\\% = 75\\%$.\nRemaining $= 100\\% - 75\\% = 25\\%$.\nDonation $= 60\\% \\text{ of } 25\\% = 15\\%$.\nRemaining balance $= 25\\% - 15\\% = 10\\%$.\nGiven: $10\\% = ₹16000$.\nTotal salary ($100\\%$) $= 16000 \\times 10 = ₹160000$.\nAtah sahi uttar '₹1,60,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_33",
+    "qe": "A person spends 50% of his salary on family expenses, 15% on medical expenses, 10% on charity, and saves the remaining amount. If the amount of savings is ₹6,000, find his monthly salary.",
+    "qh": "एक व्यक्ति अपने वेतन का 50% पारिवारिक खर्चों पर, 15% चिकित्सा खर्चों पर, 10% दान पर खर्च करता है, और शेष राशि बचाता है। यदि बचत की राशि ₹6,000 है, तो उसका मासिक वेतन ज्ञात कीजिए।",
+    "oe": [
+      "₹20,000",
+      "₹22,000",
+      "₹24,000",
+      "₹25,000"
+    ],
+    "oh": [
+      "₹20,000",
+      "₹22,000",
+      "₹24,000",
+      "₹25,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nTotal expenditure percentage $= 50\\% + 15\\% + 10\\% = 75\\% = \\frac{3}{4}$.\nSavings fraction $= 1 - \\frac{3}{4} = \\frac{1}{4}$.\nGiven: 1 unit of savings $= ₹6000$.\nTotal monthly salary = 4 units $= 4 \\times 6000 = ₹24000$.\nAtah sahi vikalp  ₹24,000 hai.\n\nMethod 2 (100-Base Method):\nTotal salary $= 100\\%$.\nTotal spent $= 50\\% + 15\\% + 10\\% = 75\\%$.\nSavings $= 100\\% - 75\\% = 25\\%$.\nGiven: $25\\% = ₹6000$.\nMonthly Salary ($100\\%$) $= 6000 \\times 4 = ₹24000$.\nAtah sahi uttar '₹24,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_34",
+    "qe": "Imran spends 25% of his monthly income on food, 20% of the remaining on transport, and saves 15% of the rest. If his monthly salary is ₹60,000, how much money does he save every month?",
+    "qh": "इमरान अपनी मासिक आय का 25% भोजन पर, शेष का 20% परिवहन पर खर्च करता है, और बाकी का 15% बचाता है। यदि उसका मासिक वेतन ₹60,000 है, तो वह प्रत्येक माह कितने रुपये बचाता है?",
+    "oe": [
+      "₹4,800",
+      "₹5,400",
+      "₹5,600",
+      "₹6,000"
+    ],
+    "oh": [
+      "₹4,800",
+      "₹5,400",
+      "₹5,600",
+      "₹6,000"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nFood: $25\\% = \\frac{1}{4} \\implies$ Remaining $= 4 - 1 = 3$ units.\nTransport: $20\\% = \\frac{1}{5} \\implies$ Remaining $= 5 - 1 = 4$ units.\nRest amount fraction $= \\frac{3}{4} \\times \\frac{4}{5} = \\frac{3}{5}$.\nRest amount $= \\frac{3}{5} \\times 60000 = ₹36000$.\nSavings $= 15\\% \\text{ of } 36000 = \\frac{3}{20} \\times 36000 = ₹5400$.\nAtah sahi vikalp  ₹5,400 hai.\n\nMethod 2 (100-Base Method):\nTotal salary $= ₹60000 = 100\\%$.\nAfter food ($25\\%$ cut): $60000 \\times 0.75 = ₹45000$.\nAfter transport ($20\\%$ cut of remainder): $45000 \\times 0.80 = ₹36000$.\nSavings $= 15\\% \\text{ of } 36000 = 0.15 \\times 36000 = ₹5400$.\nAtah sahi uttar '₹5,400' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_35",
+    "qe": "A man spent 20% of his monthly income on house rent. He spent 25% of the remaining amount on food. 20% of the remaining amount was used for other expenses. If ₹1,44,000 was left with him, then what was his monthly income?",
+    "qh": "एक व्यक्ति ने अपनी मासिक आय का 20% घर के किराए पर खर्च किया। उसने शेष राशि का 25% भोजन पर खर्च किया। बची हुई राशि का 20% अन्य खर्चों के लिए उपयोग किया गया। यदि उसके पास ₹1,44,000 शेष बचे, तो उसकी मासिक आय क्या थी?",
+    "oe": [
+      "₹2,50,000",
+      "₹2,80,000",
+      "₹3,00,000",
+      "₹3,20,000"
+    ],
+    "oh": [
+      "₹2,50,000",
+      "₹2,80,000",
+      "₹3,00,000",
+      "₹3,20,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nRent: $20\\% = \\frac{1}{5} \\implies 5 : 4$.\nFood: $25\\% = \\frac{1}{4} \\implies 4 : 3$.\nOther: $20\\% = \\frac{1}{5} \\implies 5 : 4$.\nTotal Income : Final Balance $= (5 \\times 4 \\times 5) : (4 \\times 3 \\times 4) = 100 : 48 = 25 : 12$.\nGiven: 12 units $= ₹144000 \\implies 1 \\text{ unit} = \\frac{144000}{12} = ₹12000$.\nTotal Income = 25 units $= 25 \\times 12000 = ₹300000$.\nAtah sahi vikalp  ₹3,00,000 hai.\n\nMethod 2 (100-Base Method):\nTotal income $= 100$.\nAfter rent ($20\\%$ cut) $= 80$.\nAfter food ($25\\%$ of 80 cut) $= 80 - 20 = 60$.\nAfter other expenses ($20\\%$ of 60 cut) $= 60 - 12 = 48$.\nGiven: $48\\% = ₹144000$.\n$1\\% = \\frac{144000}{48} = ₹3000$.\nTotal monthly income ($100\\%$) $= 3000 \\times 100 = ₹300000$.\nAtah sahi uttar '₹3,00,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_36",
+    "qe": "A person spends 20% of his income on goods of daily uses. Furthermore, he spends 25% of the rest on house rent and 10% of the rest on travel. After that, only ₹1,080 is left with him. What is his salary?",
+    "qh": "एक व्यक्ति अपनी आय का 20% दैनिक उपयोग की वस्तुओं पर खर्च करता है। इसके अलावा, वह शेष राशि का 25% घर के किराए पर और शेष राशि का 10% यात्रा पर खर्च करता है। उसके बाद, उसके पास केवल ₹1,080 बचते हैं। उसका वेतन क्या है?",
+    "oe": [
+      "₹1,800",
+      "₹2,000",
+      "₹2,200",
+      "₹2,400"
+    ],
+    "oh": [
+      "₹1,800",
+      "₹2,000",
+      "₹2,200",
+      "₹2,400"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nDaily uses: $20\\% = \\frac{1}{5} \\implies 5 : 4$.\nHouse rent: $25\\% = \\frac{1}{4} \\implies 4 : 3$.\nTravel: $10\\% = \\frac{1}{10} \\implies 10 : 9$.\nTotal Salary : Final Balance $= (5 \\times 4 \\times 10) : (4 \\times 3 \\times 9) = 200 : 108 = 50 : 27$.\nGiven: 27 units $= ₹1080 \\implies 1 \\text{ unit} = \\frac{1080}{27} = ₹40$.\nTotal Salary = 50 units $= 50 \\times 40 = ₹2000$.\nAtah sahi vikalp  ₹2,000 hai.\n\nMethod 2 (100-Base Method):\nTotal salary $= 100$.\nAfter daily uses ($20\\%$ cut) $= 80$.\nAfter house rent ($25\\% \\text{ of } 80 = 20$ cut) $= 60$.\nAfter travel ($10\\% \\text{ of } 60 = 6$ cut) $= 54$.\nGiven: $54\\% = ₹1080$.\n$1\\% = \\frac{1080}{54} = ₹20$.\nTotal Salary ($100\\%$) $= 20 \\times 100 = ₹2000$.\nAtah sahi uttar '₹2,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_37",
+    "qe": "A father gives 10% of his monthly income to both his sons as pocket money. The elder son gets 80% of the total amount given to both the sons. He spends 75% of his amount and saves ₹50. What is the monthly income of the father?",
+    "qh": "एक पिता अपनी मासिक आय का 10% अपने दोनों बेटों को जेब खर्च के रूप में देता है। बड़े बेटे को दोनों बेटों को दी गई कुल राशि का 80% मिलता है। वह अपनी राशि का 75% खर्च करता है और ₹50 बचाता है। पिता की मासिक आय क्या है?",
+    "oe": [
+      "₹2,000",
+      "₹2,500",
+      "₹3,000",
+      "₹3,200"
+    ],
+    "oh": [
+      "₹2,000",
+      "₹2,500",
+      "₹3,000",
+      "₹3,200"
+    ],
+    "a": 1,
+    "e": "Method 1 (Fraction / Ratio Method):\nPocket money $= \\frac{1}{10}$ of father's income.\nElder son's share $= 80\\% = \\frac{4}{5}$ of pocket money.\nElder son's savings $= 100\\% - 75\\% = 25\\% = \\frac{1}{4}$ of his share.\nFather's income ka fraction jo elder son bachata hai $= \\frac{1}{10} \\times \\frac{4}{5} \\times \\frac{1}{4} = \\frac{1}{50}$.\nGiven: $\\frac{1}{50}$ of Father's Income $= ₹50$.\nFather's Income $= 50 \\times 50 = ₹2500$.\nAtah sahi vikalp  ₹2,500 hai.\n\nMethod 2 (100-Base Method):\nFather's income $= 100\\%$.\nTotal pocket money $= 10\\%$.\nElder son's pocket money $= 80\\% \\text{ of } 10\\% = 8\\%$.\nElder son saves $25\\%$ of his amount:\nSavings $= 25\\% \\text{ of } 8\\% = 2\\%$.\nGiven: $2\\% = ₹50$.\n$1\\% = ₹25$.\nFather's monthly income ($100\\%$) $= 25 \\times 100 = ₹2500$.\nAtah sahi uttar '₹2,500' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_38",
+    "qe": "Three years ago, Raman's salary was ₹50,000. His salary was increased by 20%, A%, and 10% in the first, second, and third year, respectively. Raman's present salary is ₹79,200. What is the value of A?",
+    "qh": "तीन वर्ष पहले, रमन का वेतन ₹50,000 था। उसके वेतन में पहले, दूसरे और तीसरे वर्ष में क्रमशः 20%, A% और 10% की वृद्धि हुई। रमन का वर्तमान वेतन ₹79,200 है। A का मान क्या है?",
+    "oe": [
+      "15%",
+      "20%",
+      "25%",
+      "18%"
+    ],
+    "oh": [
+      "15%",
+      "20%",
+      "25%",
+      "18%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Backtrack Method):\nInitial salary (3 years ago) $= ₹50000$.\nAfter Year 1 (+20%): $50000 + 10000 = ₹60000$.\nPresent salary (after Year 3) $= ₹79200$.\nYear 3 me $10\\%$ hike mili thi, isliye Year 2 ke end ka salary:\n$\\text{Salary after Year 2} \\times \\frac{110}{100} = 79200 \\implies \\text{Salary after Year 2} = \\frac{79200 \\times 10}{11} = ₹72000$.\nAb Year 1 ke end ($₹60000$) se Year 2 ke end ($₹72000$) tak ka hike:\n$\\text{Increase} = 72000 - 60000 = ₹12000$.\n$A = \\frac{12000}{60000} \\times 100\\% = 20\\%$.\nAtah sahi vikalp  20% hai.\n\nMethod 2 (Ratio Method):\nOverall multiplier $= \\frac{79200}{50000} = \\frac{198}{125}$.\nYear 1 multiplier $= \\frac{6}{5}$, Year 3 multiplier $= \\frac{11}{10}$.\nYear 2 multiplier $= \\frac{198}{125} \\div \\left(\\frac{6}{5} \\times \\frac{11}{10}\\right) = \\frac{198}{125} \\times \\frac{25}{33} = \\frac{6}{5}$.\nMultiplier $\\frac{6}{5} \\implies A = \\frac{6 - 5}{5} \\times 100\\% = 20\\%$.\nAtah sahi uttar '20%' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_39",
+    "qe": "60% of students in a class are girls and 75% of girls have chosen badminton as their favourite sport. If 135 girls have chosen badminton as their favourite sport, what is the total number of students in the class?",
+    "qh": "एक कक्षा में 60% विद्यार्थी लड़कियां हैं और 75% लड़कियों ने बैडमिंटन को अपने पसंदीदा खेल के रूप में चुना है। यदि 135 लड़कियों ने बैडमिंटन को अपने पसंदीदा खेल के रूप में चुना है, तो कक्षा में विद्यार्थियों की कुल संख्या क्या है?",
+    "oe": [
+      "250",
+      "280",
+      "300",
+      "320"
+    ],
+    "oh": [
+      "250",
+      "280",
+      "300",
+      "320"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nTotal students me girls ka ratio $= 60\\% = \\frac{3}{5}$.\nGirls me se badminton select karne waliyon ka ratio $= 75\\% = \\frac{3}{4}$.\nTotal students ka fraction jo badminton chunti hain $= \\frac{3}{5} \\times \\frac{3}{4} = \\frac{9}{20}$.\nGiven: 9 units $= 135 \\implies 1 \\text{ unit} = \\frac{135}{9} = 15$.\nTotal students = 20 units $= 20 \\times 15 = 300$.\nAtah sahi vikalp  300 hai.\n\nMethod 2 (100-Base Method):\nTotal students in the class $= 100\\%$.\nNumber of girls $= 60\\%$.\nGirls choosing badminton $= 75\\% \\text{ of } 60\\% = 45\\%$.\nGiven: $45\\% = 135$.\n$1\\% = \\frac{135}{45} = 3$.\nTotal students in the class ($100\\%$) $= 3 \\times 100 = 300$.\nAtah sahi uttar '300' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_40",
+    "qe": "The population of a city grew from 50 lakh to 56 lakh in one year. Find the rate of growth per annum.",
+    "qh": "एक शहर की जनसंख्या एक वर्ष में 50 लाख से बढ़कर 56 लाख हो गई। प्रति वर्ष वृद्धि की दर ज्ञात कीजिए।",
+    "oe": [
+      "10%",
+      "12%",
+      "14%",
+      "15%"
+    ],
+    "oh": [
+      "10%",
+      "12%",
+      "14%",
+      "15%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nInitial Population : New Population $= 50 : 56 = 25 : 28$.\nIncrease in 1 year $= 28 - 25 = 3$ units (25 ke base par).\nGrowth rate per annum $= \\frac{3}{25} \\times 100\\% = 12\\%$.\nAtah sahi vikalp  12% hai.\n\nMethod 2 (100-Base Method):\nPopulation increase $= 56 - 50 = 6\\text{ lakh}$.\nRate of growth $= \\frac{6}{50} \\times 100\\% = 12\\%$.\nAtah sahi uttar '12%' hai.\n\ndiye gaye tathyon ka sahi milan se hi is prashn ka jawab nikalta hai. She sh vikalp 10%, 14%, 15% is hisaab se nahi milte. Exam point: diye gaye tathyon ka sahi milan - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "type5series_41",
+    "qe": "The population of a town in 2005 was 8,000, and in 2008 it grew to 10,648. Find the rate of growth per annum if it increases at a constant rate every year.",
+    "qh": "2005 में एक कस्बे की जनसंख्या 8,000 थी, और 2008 में यह बढ़कर 10,648 हो गई। यदि यह प्रत्येक वर्ष एक समान दर से बढ़ती है, तो प्रति वर्ष वृद्धि की दर ज्ञात कीजिए।",
+    "oe": [
+      "8%",
+      "10%",
+      "12%",
+      "15%"
+    ],
+    "oh": [
+      "8%",
+      "10%",
+      "12%",
+      "15%"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nTime period $= 2008 - 2005 = 3\\text{ years}$.\nInitial Population : Final Population $= 8000 : 10648 = 1000 : 1331$.\n3 saal ka compounding hai, isliye 1 saal ka ratio nikalne ke liye cube root $(\\sqrt[3]{\\phantom{x}})$ lenge:\n1-Year Ratio $= \\sqrt[3]{1000} : \\sqrt[3]{1331} = 10 : 11$.\nIncrease per year $= 11 - 10 = 1$ unit (10 ke base par).\nRate of growth per annum $= \\frac{1}{10} \\times 100\\% = 10\\%$.\nAtah sahi vikalp  10% hai.\n\nMethod 2 (Formula Method):\n$\\frac{10648}{8000} = \\left(1 + \\frac{r}{100}\\right)^3 \\implies \\left(\\frac{11}{10}\\right)^3 = \\left(1 + \\frac{r}{100}\\right)^3$.\n$1 + \\frac{r}{100} = \\frac{11}{10} \\implies r = 10\\%$.\nAtah sahi uttar '10%' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_42",
+    "qe": "The income of a company increases by x% per year. If its income is ₹43,20,000 in the year 2020, and the income in 2018 was ₹30,00,000, then what is the value of x?",
+    "qh": "एक कंपनी की आय प्रति वर्ष x% बढ़ती है। यदि 2020 में इसकी आय ₹43,20,000 है, और 2018 में आय ₹30,00,000 थी, तो x का मान क्या है?",
+    "oe": [
+      "15%",
+      "18%",
+      "20%",
+      "25%"
+    ],
+    "oh": [
+      "15%",
+      "18%",
+      "20%",
+      "25%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nTime period $= 2020 - 2018 = 2\\text{ years}$.\nIncome 2018 : Income 2020 $= 3000000 : 4320000 = 25 : 36$.\n2 saal ka successive multiplier hai, isliye 1 saal ka factor nikalne ke liye square root lenge:\n1-Year Ratio $= \\sqrt{25} : \\sqrt{36} = 5 : 6$.\nAnnual growth $= 6 - 5 = 1$ unit (5 ke base par).\n$x = \\frac{1}{5} \\times 100\\% = 20\\%$.\nAtah sahi vikalp  20% hai.\n\nMethod 2 (100-Base Method):\n2 saal ka total growth factor $= \\frac{4320000}{3000000} = 1.44$.\n$(1 + x\\%)^2 = 1.44 \\implies 1 + x\\% = 1.20 \\implies x\\% = 20\\%$.\nAtah sahi uttar '20%' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_43",
+    "qe": "A shopkeeper has a certain length of cable wire. 20% of the wire is stolen and 60% of the remaining was sold out. Find the original length of the wire if 960 meters is still left.",
+    "qh": "एक दुकानदार के पास एक निश्चित लंबाई का केबल तार है। 20% तार चोरी हो जाता है और शेष का 60% बेच दिया जाता है। यदि अभी भी 960 मीटर तार शेष बचा है, तो तार की मूल लंबाई ज्ञात कीजिए।",
+    "oe": [
+      "2,800 meters",
+      "3,000 meters",
+      "3,200 meters",
+      "3,500 meters"
+    ],
+    "oh": [
+      "2,800 meters",
+      "3,000 meters",
+      "3,200 meters",
+      "3,500 meters"
+    ],
+    "a": 1,
+    "e": "Method 1 (Ratio Method):\nStolen: $20\\% = \\frac{1}{5} \\implies$ Remaining $= 5 - 1 = 4$ units.\nSold: $60\\% = \\frac{3}{5} \\implies$ Remaining $= 5 - 3 = 2$ units.\nInitial Length : Left Wire $= (5 \\times 5) : (4 \\times 2) = 25 : 8$.\nGiven: 8 units $= 960\\text{ meters} \\implies 1 \\text{ unit} = \\frac{960}{8} = 120\\text{ meters}$.\nOriginal length = 25 units $= 25 \\times 120 = 3000\\text{ meters}$.\nAtah sahi vikalp  3,000 meters hai.\n\nMethod 2 (100-Base Method):\nTotal length $= 100\\%$.\n$20\\%$ chori hone ke baad bacha $= 80\\%$.\n$80\\%$ ka $60\\%$ bech diya $= 48\\%$.\nRemaining balance $= 80\\% - 48\\% = 32\\%$.\nGiven: $32\\% = 960\\text{ meters}$.\n$1\\% = \\frac{960}{32} = 30\\text{ meters}$.\nOriginal length ($100\\%$) $= 30 \\times 100 = 3000\\text{ meters}$.\nAtah sahi uttar '3,000 meters' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_44",
+    "qe": "In a library, 10% of the books are in Hindi, 40% of the remaining are in English, and 50% of the remaining are in French, while the rest 8,100 books are in regional languages. Find the total number of books in the library.",
+    "qh": "एक पुस्तकालय में 10% पुस्तकें हिंदी में हैं, शेष की 40% अंग्रेजी में हैं, और शेष की 50% फ्रेंच में हैं, जबकि शेष 8,100 पुस्तकें क्षेत्रीय भाषाओं में हैं। पुस्तकालय में पुस्तकों की कुल संख्या ज्ञात कीजिए।",
+    "oe": [
+      "25,000",
+      "28,000",
+      "30,000",
+      "32,000"
+    ],
+    "oh": [
+      "25,000",
+      "28,000",
+      "30,000",
+      "32,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Ratio Method):\nHindi: $10\\% = \\frac{1}{10} \\implies$ Left $= 10 - 1 = 9$ units.\nEnglish: $40\\% = \\frac{2}{5} \\implies$ Left $= 5 - 2 = 3$ units.\nFrench: $50\\% = \\frac{1}{2} \\implies$ Left $= 2 - 1 = 1$ unit.\nTotal Books : Regional Language Books $= (10 \\times 5 \\times 2) : (9 \\times 3 \\times 1) = 100 : 27$.\nGiven: 27 units $= 8100 \\implies 1 \\text{ unit} = \\frac{8100}{27} = 300$.\nTotal books = 100 units $= 100 \\times 300 = 30000$.\nAtah sahi vikalp  30,000 hai.\n\nMethod 2 (100-Base Method):\nTotal books $= 100\\%$.\nAfter Hindi ($10\\%$): $100 - 10 = 90\\%$.\nAfter English ($40\\% \\text{ of } 90\\% = 36\\%$): $90 - 36 = 54\\%$.\nAfter French ($50\\% \\text{ of } 54\\% = 27\\%$): $54 - 27 = 27\\%$.\nGiven: $27\\% = 8100$.\n$1\\% = \\frac{8100}{27} = 300$.\nTotal books ($100\\%$) $= 300 \\times 100 = 30000$.\nAtah sahi uttar '30,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "type5series_45",
+    "qe": "Pooja spends 10% of her total income on travelling and 25% of the rest on food. She then donates ₹200 to an orphanage and is still left with ₹2,500. Find her total income.",
+    "qh": "पूजा अपनी कुल आय का 10% यात्रा पर और शेष का 25% भोजन पर खर्च करती है। फिर वह एक अनाथालय में ₹200 दान करती है और फिर भी उसके पास ₹2,500 शेष बचते हैं। उसकी कुल आय ज्ञात कीजिए।",
+    "oe": [
+      "₹3,600",
+      "₹4,000",
+      "₹4,200",
+      "₹4,500"
+    ],
+    "oh": [
+      "₹3,600",
+      "₹4,000",
+      "₹4,200",
+      "₹4,500"
+    ],
+    "a": 1,
+    "e": "Method 1 (Backtrack Method):\nDonation dene se pehle bachi hui rashi $= ₹2500 + ₹200 = ₹2700$.\nTravelling ke baad bachi hui income ka $25\\% (\\frac{1}{4})$ khane me kharch hua, toh bacha $\\frac{3}{4}$:\n$\\frac{3}{4} \\times \\text{Remaining after travel} = 2700 \\implies \\text{Remaining after travel} = 2700 \\times \\frac{4}{3} = ₹3600$.\nTravelling me total income ka $10\\% (\\frac{1}{10})$ gaya, toh bacha $\\frac{9}{10}$:\n$\\frac{9}{10} \\times \\text{Total Income} = 3600 \\implies \\text{Total Income} = 3600 \\times \\frac{10}{9} = ₹4000$.\nAtah sahi vikalp  ₹4,000 hai.\n\nMethod 2 (100-Base Method):\nTotal income $= 100\\%$.\nAfter travel ($10\\%$): $100 - 10 = 90\\%$.\nFood expense $= 25\\% \\text{ of } 90\\% = 22.5\\%$.\nRemaining percentage $= 90\\% - 22.5\\% = 67.5\\%$.\nDonation ke baad bacha ₹2500, yaani donation milakar bachi amount $= 2500 + 200 = ₹2700$.\n$67.5\\% = ₹2700$.\n$1\\% = \\frac{2700}{67.5} = ₹40$.\nTotal Income ($100\\%$) $= 40 \\times 100 = ₹4000$.\nAtah sahi uttar '₹4,000' hai.\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
