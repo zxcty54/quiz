@@ -16,6 +16,7 @@ class _AdminControlHubScreenState extends State<AdminControlHubScreen> with Sing
 
   List<dynamic> _creators = [];
   List<dynamic> _posts = [];
+  List<dynamic> _premiumRequests = [];
   bool _isLoading = true;
   bool _isAuthorized = false;
 
