@@ -1,0 +1,135 @@
+[
+  {
+    "p_id": "positionpattern_1",
+    "qe": "In a certain code language, MOTHERS is written as SREHTOM, then how BROUGHT will be written in the same language?",
+    "qh": "किसी निश्चित कूट भाषा में MOTHERS को SREHTOM लिखा जाता है, तो उसी कूट भाषा में BROUGHT को कैसे लिखा जाएगा?",
+    "oe": [
+      "UBHUORB",
+      "UBGRORB",
+      "THGOURB",
+      "THGUORB"
+    ],
+    "oh": [
+      "UBHUORB",
+      "UBGRORB",
+      "THGOURB",
+      "THGUORB"
+    ],
+    "a": 3,
+    "e": "Method 1 (Complete Reverse Order Shortcut):\nStep 1: 'MOTHERS' ke sabhi aksharon ko ulte kram (reverse order) me likha gaya hai:\n- M O T H E R S → S R E H T O M.\nStep 2: 'BROUGHT' ko bhi piche se aage (reverse order) me likhein:\n- B R O U G H T → T H G U O R B.\nCorrect option  THGUORB hai.\n\nMethod 2 (Option Elimination Method):\n- Last letter 'T' sabse pehle aayega aur 1st letter 'B' sabse aakhiri me aayega, isliye 'U' se shuru hone wale options 'UBHUORB' and 'UBGRORB' eliminate ho gaye.\n- Word me 'U' pehle aur 'O' baad me aata hai (U G H T), toh reverse me 'T H G U O...' aayega, 'THGOURB' me 'O' pehle de rakha hai jo galat hai. Keval 'THGUORB' bachta hai.\nSahi uttar 'THGUORB' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "positionpattern_2",
+    "qe": "If in a certain code language, DISTRIBUTION is written as IRTSIDNOITUB, then how SUBSTITUTION will be written in the same language?",
+    "qh": "यदि किसी निश्चित कूट भाषा में DISTRIBUTION को IRTSIDNOITUB लिखा जाता है, तो उसी कूट भाषा में SUBSTITUTION को कैसे लिखा जाएगा?",
+    "oe": [
+      "NTSBUSTUTION",
+      "ITSBUSTUTION",
+      "NTSBUSNOITUT",
+      "ITSBUSNOITUT"
+    ],
+    "oh": [
+      "NTSBUSTUTION",
+      "ITSBUSTUTION",
+      "NTSBUSNOITUT",
+      "ITSBUSNOITUT"
+    ],
+    "a": 3,
+    "e": "Method 1 (Two Equal Halves Reverse Shortcut):\nStep 1: 12-letter word ko do barabar hisson (6-6 letters) me baantein aur dono ko alag-alag reverse karein:\n- Part 1 (D I S T R I) reversed → I R T S I D\n- Part 2 (B U T I O N) reversed → N O I T U B\nCombined Code: IRTSIDNOITUB.\nStep 2: 'SUBSTITUTION' (12 letters) par same pattern apply karein:\n- Part 1: S U B S T I (First 6 letters) ka reverse → I T S B U S\n- Part 2: T U T I O N (Last 6 letters) ka reverse → N O I T U T\nCombined Code: ITSBUSNOITUT.\nCorrect option  ITSBUSNOITUT hai.\n\nMethod 2 (First Letter Elimination Method):\nPehle 6 letters ka reverse 'I' se shuru hoga (S U B S T I → I T S B U S). Isliye 'N' se shuru hone wale options 'NTSBUSTUTION' and 'NTSBUSNOITUT' eliminate ho gaye. Last 6 letters ka reverse 'N' se shuru hoga ('ITSBUSTUTION' me 'T' se shuru hai, eliminate). Keval 'ITSBUSNOITUT' bachta hai.\nSahi uttar 'ITSBUSNOITUT' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "positionpattern_3",
+    "qe": "If in a certain code language, HUMIDITY is written as UHIMIDTY, then how POLITICS will be written in the same language?",
+    "qh": "यदि किसी निश्चित कूट भाषा में HUMIDITY को UHIMIDTY लिखा जाता है, तो उसी कूट भाषा में POLITICS को कैसे लिखा जाएगा?",
+    "oe": [
+      "OPILITCS",
+      "POILITCS",
+      "OPILIICS",
+      "POILIICS"
+    ],
+    "oh": [
+      "OPILITCS",
+      "POILITCS",
+      "OPILIICS",
+      "POILIICS"
+    ],
+    "a": 0,
+    "e": "Method 1 (Pair Reversal with Fixed Last Pair Method):\nStep 1: 'HUMIDITY' ko 2-2 letters ke pairs me dekhein:\n- (H U) swap → U H\n- (M I) swap → I M\n- (D I) swap → I D\n- (T Y) unchange rehta hai → T Y\nCombined: UHIMIDTY.\nStep 2: 'POLITICS' par same pattern apply karein:\n- (P O) swap → O P\n- (L I) swap → I L\n- (T I) swap → I T\n- (C S) unchange rahega → C S\nCombined Code: OPILITCS.\nCorrect option  OPILITCS hai.\n\nMethod 2 (Option Elimination Method):\n- Pehla pair (P O) swap hokar 'OP' banega, isliye 'PO' se shuru hone wale options 'POILITCS' and 'POILIICS' eliminate ho gaye.\n- Aakhiri pair 'CS' unchange rahega, jabki 'OPILIICS' me 'ICS' galat diya hai. Keval 'OPILITCS' bachta hai.\nSahi uttar 'OPILITCS' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "positionpattern_4",
+    "qe": "If in a certain code language, MANUFACTURE is written as AMFUNUTCARE, then how ELECTRONICS will be written in the same language?",
+    "qh": "यदि किसी निश्चित कूट भाषा में MANUFACTURE को AMFUNUTCARE लिखा जाता है, तो उसी कूट भाषा में ELECTRONICS को कैसे लिखा जाएगा?",
+    "oe": [
+      "ELTCEINORCS",
+      "LETCEINORCS",
+      "ELTCEINOPCS",
+      "LETCEINOPCS"
+    ],
+    "oh": [
+      "ELTCEINORCS",
+      "LETCEINORCS",
+      "ELTCEINOPCS",
+      "LETCEINOPCS"
+    ],
+    "a": 1,
+    "e": "Method 1 (Group Reversal (2, 3, 4 Letters) Method):\nStep 1: 'MANUFACTURE' (11 letters) ko groups me baant kar reverse karein:\n- Group 1 (Pehle 2 letters): M A reverse → A M\n- Group 2 (Agle 3 letters): N U F reverse → F U N\n- Group 3 (Agle 4 letters): A C T U reverse → U T C A\n- Group 4 (Aakhiri 2 letters): R E unchange rehta hai → R E\nCombined: AM + FUN + UTCA + RE = AMFUNUTCARE.\nStep 2: 'ELECTRONICS' (11 letters) par same rule apply karein:\n- Pehle 2 letters: E L reverse → L E\n- Agle 3 letters: E C T reverse → T C E\n- Agle 4 letters: R O N I reverse → I N O R\n- Aakhiri 2 letters: C S unchange rahega → C S\nCombined Code: LE + TCE + INOR + CS = LETCEINORCS.\nCorrect option  LETCEINORCS hai.\n\nMethod 2 (Fast Option Elimination Method):\nPehle 2 letters 'EL' reverse hokar 'LE' banenge, isliye 'EL' se shuru hone wale options 'ELTCEINORCS' and 'ELTCEINOPCS' eliminate ho gaye. 4th group 'RONI' reverse hokar 'INOR' banega, 'LETCEINOPCS' me 'INOP' galat diya hai. Keval 'LETCEINORCS' bachta hai.\nSahi uttar 'LETCEINORCS' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "positionpattern_5",
+    "qe": "If in a certain code language, BREAKTHROUGH is written as EAOUHRBRGHKT, then how SUBSTITUTION will be written in the same language?",
+    "qh": "यदि किसी निश्चित कूट भाषा में BREAKTHROUGH को EAOUHRBRGHKT लिखा जाता है, तो उसी कूट भाषा में SUBSTITUTION को कैसे लिखा जाएगा?",
+    "oe": [
+      "BSTITUSUONTI",
+      "ASTITUSUONTI",
+      "BTSITUSUONTI",
+      "ATSITUSUONTI"
+    ],
+    "oh": [
+      "BSTITUSUONTI",
+      "ASTITUSUONTI",
+      "BTSITUSUONTI",
+      "ATSITUSUONTI"
+    ],
+    "a": 0,
+    "e": "Method 1 (Pair Shuffling / Index Mapping Method):\nStep 1: 'BREAKTHROUGH' ko 2-2 letters ke 6 pairs me baantein:\n- Pair 1: BR, Pair 2: EA, Pair 3: KT, Pair 4: HR, Pair 5: OU, Pair 6: GH\n- Code bana: EA(2) OU(5) HR(4) BR(1) GH(6) KT(3) → Pair order bana: [2, 5, 4, 1, 6, 3].\nStep 2: 'SUBSTITUTION' ko 6 pairs me baantein:\n- Pair 1: SU, Pair 2: BS, Pair 3: TI, Pair 4: TU, Pair 5: TI, Pair 6: ON\nStep 3: Same order [2, 5, 4, 1, 6, 3] me arrange karein:\n- Pair 2 → BS\n- Pair 5 → TI\n- Pair 4 → TU\n- Pair 1 → SU\n- Pair 6 → ON\n- Pair 3 → TI\nCombined Code: BS + TI + TU + SU + ON + TI = BSTITUSUONTI.\nCorrect option  BSTITUSUONTI hai.\n\nMethod 2 (First Pair Elimination Method):\nOriginal word ka Pair 2 ('BS') sabse pehle aayega, isliye word 'BS' se hi shuru hoga. options 'ASTITUSUONTI' and 'BTSITUSUONTI', aur (D) seedhe eliminate ho gaye.\nSahi uttar 'BSTITUSUONTI' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "positionpattern_6",
+    "qe": "If in a certain code language, PHYSICS is written as CHIPSSY, then how HISTORY will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में PHYSICS को CHIPSSY लिखा जाता है, तो उसी भाषा में HISTORY को कैसे लिखा जाएगा?",
+    "oe": [
+      "HIOSRTY",
+      "HIORTSY",
+      "HIORSYT",
+      "HIORSTY"
+    ],
+    "oh": [
+      "HIOSRTY",
+      "HIORTSY",
+      "HIORSYT",
+      "HIORSTY"
+    ],
+    "a": 3,
+    "e": "Method 1 (Alphabetical Sorting Shortcut Method):\nStep 1: 'PHYSICS' ke sabhi aksharon ko varnamala kram (alphabetical / dictionary order) me lagaya gaya hai:\n- P(16), H(8), Y(25), S(19), I(9), C(3), S(19)\n- Ascending order: C(3) < H(8) < I(9) < P(16) < S(19) ≤ S(19) < Y(25) → CHIPSSY.\nStep 2: 'HISTORY' ke aksharon ko alphabetical order me arrange karein:\n- H(8), I(9), S(19), T(20), O(15), R(18), Y(25)\n- Ascending order: H(8) < I(9) < O(15) < R(18) < S(19) < T(20) < Y(25)\nCombined Code: HIORSTY.\nCorrect option  HIORSTY hai.\n\nMethod 2 (Fast Option Check Method):\nLetters 'R', 'S', 'T' ka natural order 'R' ke baad 'S' aur fir 'T' hota hai (RST). options 'HIOSRTY' and 'HIORTSY', (C) me ye kram tut raha hai, keval 'HIORSTY' me '...RSTY' bilkul sahi alphabetical order me hai.\nSahi uttar 'HIORSTY' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "positionpattern_7",
+    "qe": "If in a certain code language, THANKS is written as SKNTHA, then how STUPID will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में THANKS को SKNTHA लिखा जाता है, तो उसी कूट भाषा में STUPID को कैसे लिखा जाएगा?",
+    "oe": [
+      "DIPUTS",
+      "DISPUT",
+      "DIPUST",
+      "DIPSTU"
+    ],
+    "oh": [
+      "DIPUTS",
+      "DISPUT",
+      "DIPUST",
+      "DIPSTU"
+    ],
+    "a": 3,
+    "e": "Method 1 (Two Halves Reverse and Swap Method):\nStep 1: 'THANKS' ko do hisson me baantein (Part 1: THA, Part 2: NKS):\n- Part 2 (NKS) ko reverse karke pehle rakhein → S K N\n- Part 1 (THA) ko bina badle baad me rakhein → T H A\nCombined: SKN + THA = SKNTHA.\nStep 2: 'STUPID' par same rule apply karein (Part 1: STU, Part 2: PID):\n- Part 2 (PID) ko reverse karke aage layein → D I P\n- Part 1 (STU) ko as-it-is piche jodein → S T U\nCombined Code: DIP + STU = DIPSTU.\nCorrect option  DIPSTU hai.\n\nMethod 2 (Option Elimination by Ending Letters):\nPart 1 'STU' bina kisi badlav ke aakhiri 3 sthanon par aayega, isliye code ke ant me 'STU' hona anivarya hai. options 'DIPUTS' and 'DISPUT', (C) me aakhiri me 'UTS', 'PUT', ya 'UST' hai jo galat hain. Keval 'DIPSTU' me 'STU' aakhiri me hai.\nSahi uttar 'DIPSTU' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
