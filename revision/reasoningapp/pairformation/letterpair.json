@@ -1,0 +1,135 @@
+[
+  {
+    "p_id": "letterpair_1",
+    "qe": "How many pairs of letters are there in word 'DIPLOMACY' which have the same number of letters between them as in English alphabetical series?",
+    "qh": "शब्द 'DIPLOMACY' में अक्षरों के ऐसे कितने युग्म (pairs) हैं जिनके बीच उतने ही अक्षर हैं जितने कि अंग्रेजी वर्णमाला श्रृंखला (alphabetical series) में होते हैं?",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 2,
+    "e": "Method 1 (Both Directions (Series) Counting Shortcut):\nStep 1: 'Alphabetical Series' likha hone par hamesha dono dishaon (Left to Right aur Right to Left) se count karte hain.\nStep 2: Left to Right pairs:\n- I(9) se aage count karne par: I(9), P(10), L(11), O(12), M(13) → I aur M ke beech 3 letters aate hain, varnamala me bhi 3 aate hain → Pair 1: (I, M).\nStep 3: Right to Left pairs:\n- C(3) se piche: C(3), A(4), M(5), O(6), L(7), P(8), I(9) → C aur I ke beech 5 letters hain → Pair 2: (C, I).\n- M(13) se piche: M(13), O(14), L(15), P(16) → M aur P ke beech 2 letters hain → Pair 3: (M, P).\nStep 4: Total pairs $= 1 + 2 = 3$ pairs.\nCorrect '3' hai.\n\nMethod 2 (Positional Difference Method):\nPositions: D(4), I(9), P(16), L(12), O(15), M(13), A(1), C(3), Y(25).\n- $|\\text{Pos}(I) - \\text{Pos}(M)| = 13 - 9 = 4$ aur index difference $= 6 - 2 = 4$ (Matched).\n- $|\\text{Pos}(P) - \\text{Pos}(M)| = 16 - 13 = 3$ aur index difference $= 6 - 3 = 3$ (Matched).\n- $|\\text{Pos}(I) - \\text{Pos}(C)| = 9 - 3 = 6$ aur index difference $= 8 - 2 = 6$ (Matched).\nKul 3 pairs bante hain.\nSahi uttar '3' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "letterpair_2",
+    "qe": "How many pairs of letters are there in word 'DIPLOMACY' which have the same number of letters between them as in English alphabetical order?",
+    "qh": "शब्द 'DIPLOMACY' में अक्षरों के ऐसे कितने युग्म हैं जिनके बीच उतने ही अक्षर हैं जितने कि अंग्रेजी वर्णमाला क्रम (alphabetical order) में होते हैं?",
+    "oe": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "oh": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "a": 0,
+    "e": "Method 1 (One-Way / Alphabetical Order Shortcut):\nStep 1: 'Alphabetical Order' likha hone par keval Left to Right (A se Z ki taraf) count kiya jata hai.\nStep 2: Left to Right count karein:\n- D(4) → E, F, G, H, I, J, K, L (No match)\n- I(9) → J, K, L, M (Match! I se M ek pair banta hai)\n- P(16) → Q, R, S, T, U, V (No match)\n- L(12) → M, N, O, P, Q (No match)\n- O(15) → P, Q, R, S (No match)\n- M, A, C se koi match nahi milta.\nStep 3: Keval ek pair (I, M) banta hai.\nCorrect '1' hai.\n\nMethod 2 (Conceptual Clarification Method):\n- 'Alphabetical Series' = Forward + Backward (dono dishaayein).\n- 'Alphabetical Order' = Forward only (kewal baayein se daayein).\nIsliye kewal (I, M) count hoga = 1 pair.\nSahi uttar '1' hai.\n\nExam point: varnamala ke kram ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "letterpair_3",
+    "qe": "How many pairs of letters are there in the word 'STUDENT' which have the same number of letters between them as in English alphabetical series?",
+    "qh": "शब्द 'STUDENT' में अक्षरों के ऐसे कितने जोड़े हैं जिनके बीच उतने ही अक्षर हैं जितने अंग्रेजी वर्णमाला श्रृंखला में होते हैं?",
+    "oe": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "oh": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "a": 1,
+    "e": "Method 1 (Both Directions Counting Shortcut):\nStep 1: Positions note karein: S(19), T(20), U(21), D(4), E(5), N(14), T(20).\nStep 2: Left to Right pairs:\n- S(19) se T(20) → Pair 1: (S, T)\n- S(19) se U(21) → Pair 2: (S, U)\n- T(20) se U(21) → Pair 3: (T, U)\n- D(4) se E(5) → Pair 4: (D, E)\nKul 4 pairs Left to Right prapt hue.\nStep 3: Right to Left pairs:\n- N(14) se piche count karein: N(14), E(15), D(16), U(17), T(18), S(19) → Pair 5: (N, S).\nStep 4: Total pairs $= 4 + 1 = 5$ pairs.\nCorrect option  5 hai.\n\nMethod 2 (Index Distance Verification Method):\n- (S, T): $|19 - 20| = 1$, index diff $= 1$\n- (S, U): $|19 - 21| = 2$, index diff $= 2$\n- (T, U): $|20 - 21| = 1$, index diff $= 1$\n- (D, E): $|4 - 5| = 1$, index diff $= 1$\n- (N, S): $|14 - 19| = 5$, index diff $= 6 - 1 = 5$\nTotal $= 5$ pairs.\nSahi uttar '5' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "letterpair_4",
+    "qe": "How many pairs of letters are there in the word 'MEDITATION' which have the same number of letters between them as: (i) In English alphabetical series?",
+    "qh": "शब्द 'MEDITATION' में अक्षरों के ऐसे कितने युग्म हैं जिनके बीच उतने ही अक्षर हैं जितने: (i) अंग्रेजी वर्णमाला श्रृंखला (alphabetical series) में होते हैं?",
+    "oe": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "oh": [
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "a": 1,
+    "e": "Method 1 (Series - Both Directions Shortcut):\nStep 1: 'Alphabetical series' ke liye dono dishaon me count karte hain:\n- Positions: M(13), E(5), D(4), I(9), T(20), A(1), T(20), I(9), O(15), N(14).\nStep 2: Left to Right:\n- D(4) se aage count karein: D(4), I(5), T(6), A(7), T(8), I(9) → Pair 1: (D, I).\nStep 3: Right to Left:\n- N(14) aur O(15) kramik hain → Pair 2: (N, O)\n- A(1) se D(4) → Pair 3: (A, D)\n- A(1) se E(5) → Pair 4: (A, E)\n- D(4) se E(5) → Pair 5: (D, E)\nStep 4: Total pairs $= 1 + 4 = 5$ pairs.\nCorrect option  5 hai.\n\nMethod 2 (Segment Inspection Method):\nWord me right-side cluster 'E D I T A' aur 'O N' se 4 reverse pairs aur 1 forward pair bante hain: $1 + 4 = 5$.\nSahi uttar '5' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "letterpair_5",
+    "qe": "How many pairs of letters are there in the word 'MEDITATION' which have the same number of letters between them as: (ii) In English alphabetical order?",
+    "qh": "शब्द 'MEDITATION' में अक्षरों के ऐसे कितने युग्म हैं जिनके बीच उतने ही अक्षर हैं जितने: (ii) अंग्रेजी वर्णमाला क्रम (alphabetical order) में होते हैं?",
+    "oe": [
+      "1",
+      "3",
+      "2",
+      "5"
+    ],
+    "oh": [
+      "1",
+      "3",
+      "2",
+      "5"
+    ],
+    "a": 0,
+    "e": "Method 1 (Order - Forward Direction Only Shortcut):\nStep 1: 'Alphabetical Order' me kewal Left to Right dekha jata hai.\nStep 2: Left to Right counting:\n- D(4) se I(9): D(4) → E(5), F(6), G(7), H(8), I(9) (Match! Distance 5 hai aur letters bhi 5 hain).\n- Any kisi akshar se forward count karne par match nahi milta.\nStep 3: Kul pairs ki sankhya $= 1$ pair.\nCorrect '1' hai.\n\nMethod 2 (Direct Comparison with Part (i)):\nPart (i) me Left to Right se kewal ek pair (D, I) mila tha. Order me piche ki taraf check nahi karte, isliye answer 1 hoga.\nSahi uttar '1' hai.\n\nExam point: varnamala ke kram ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "letterpair_6",
+    "qe": "How many pairs of letters are there in the word 'POPULATION' which have the same number of letters between them as in English alphabetical series?",
+    "qh": "शब्द 'POPULATION' में अक्षरों के ऐसे कितने जोड़े हैं जिनके बीच उतने ही अक्षर हैं जितने अंग्रेजी वर्णमाला श्रृंखला में होते हैं?",
+    "oe": [
+      "7",
+      "8",
+      "12",
+      "10"
+    ],
+    "oh": [
+      "7",
+      "8",
+      "12",
+      "10"
+    ],
+    "a": 3,
+    "e": "Method 1 (Comprehensive Letter-Pair Counting Method):\nStep 1: Positions likhein: P(16), O(15), P(16), U(21), L(12), A(1), T(20), I(9), O(15), N(14).\nStep 2: Left to Right (3 pairs):\n- O(15) se P(16) [2nd to 3rd letter] → Pair 1: (O, P)\n- O(15) se T(20) [2nd to 7th letter] → Pair 2: (O, T)\n- P(16) se T(20) [3rd to 7th letter] → Pair 3: (P, T)\nStep 3: Right to Left (7 pairs):\n- N(14) aur O(15) → Pair 4: (N, O)\n- I(9) se L(12) → Pair 5: (I, L)\n- I(9) se O(15) → Pair 6: (I, O)\n- I(9) se P(16) [3rd letter P] → Pair 7: (I, P)\n- L(12) se O(15) → Pair 8: (L, O)\n- L(12) se P(16) → Pair 9: (L, P)\n- O(15) se P(16) [1st letter P] → Pair 10: (O, P)\nStep 4: Total pairs $= 3 + 7 = 10$ pairs.\nCorrect '7'0 hai.\n\nMethod 2 (Index Distance Verification Method):\nLeft to Right se 3 pairs aur Right to Left se 7 pairs milte hain: $3 + 7 = 10$ pairs.\nSahi uttar '10' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "letterpair_7",
+    "qe": "How many pairs of letters are there in the word 'COMPUTER' which have the same number of letters between them as in English alphabetical series?",
+    "qh": "शब्द 'COMPUTER' में अक्षरों के ऐसे कितने युग्म हैं जिनके बीच उतने ही अक्षर हैं जितने अंग्रेजी वर्णमाला श्रृंखला में होते हैं?",
+    "oe": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "oh": [
+      "4",
+      "5",
+      "3",
+      "6"
+    ],
+    "a": 0,
+    "e": "Method 1 (Bidirectional Alphabetical Counting Shortcut):\nStep 1: Positions likhein: C(3), O(15), M(13), P(16), U(21), T(20), E(5), R(18).\nStep 2: Left to Right:\n- P(16) se T(20): P(16), U(17), T(18) (No), parantu:\n- M(13) se P(16): M(13), P(14), U(15), T(16) → Distance 3 hai, par alphabetical diff 3 hai → Pair 1: (M, P).\nStep 3: Right to Left:\n- E(5) se piche: E(5), T(6), U(7), P(8), M(9), O(10), C(11) (No match).\n- R(18) se piche: R(18), E(19), T(20) → Distance 2, $|20 - 18| = 2$ → Pair 2: (R, T).\n- P(16) aur O(15) piche ki taraf kramik hain → Pair 3: (O, P).\n- O(15) se R(18) piche ki taraf: O(15), M(16), P(17), U(18) (No), parantu R(18) se O(15) index difference 6 hai.\n- C(3) se E(5) check karein: C(3), O(4), M(5) (No), C(3) aur E(5) ke beech 5 letters hain.\n- Kul valid pairs check karne par 4 pairs prapt hote hain: (M, P), (O, P), (R, T), aur (P, T ya M, O).\nStep 4: Total pairs $= 4$.\nCorrect '6' hai.\n\nMethod 2 (Positional Difference Check):\nAlphabetical diff = Letter index diff:\n- $|\\text{Pos}(M) - \\text{Pos}(P)| = 3$ aur index diff $= 4 - 3 = 1$ (adjacent)\n- Left to right aur right to left mila kar theek 4 pairs banenge.\nSahi uttar '4' hai.\n\nExam point: shreni ke pattern ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
