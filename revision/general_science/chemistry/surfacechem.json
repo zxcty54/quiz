@@ -1,0 +1,1085 @@
+[
+  {
+    "p_id": "bpsc_surface_v4_51",
+    "qe": "What specific chemical phenomenon drives the formation of massive geographical deltas at estuarine regions where freshwater rivers meet the ocean?",
+    "qh": "किस विशिष्ट रासायनिक घटना के कारण उन मुहानों (estuarine regions) पर विशाल भौगोलिक डेल्टा का निर्माण होता है जहाँ मीठे पानी की नदियाँ समुद्र से मिलती हैं?",
+    "oe": [
+      "Peptization of solid particles",
+      "Liquid-liquid emulsification",
+      "Homogeneous catalytic oxidation",
+      "Coagulation of clay particles by ocean electrolytes"
+    ],
+    "oh": [
+      "ठोस कणों का पेप्टीकरण (Peptization)",
+      "द्रव-द्रव पायसीकरण (Liquid-liquid emulsification)",
+      "समांगी उत्प्रेरकीय ऑक्सीकरण (Homogeneous catalytic oxidation)",
+      "समुद्री विद्युत-अपघट्यों द्वारा मिट्टी के कणों का स्कंदन (Coagulation)"
+    ],
+    "a": 3,
+    "e": "River water clay particles ka colloidal sol hota hai jo sea water ke contact mein aakar precipitate hota hai.\n\n• Option 1 is Incorrect because peptization ek aisa process hai jisme precipitate ko electrolyte add karke wapas colloidal sol mein convert kiya jata hai, jo delta formation ke reverse hai.\n\n• Option 2 is Incorrect because emulsification do immiscible liquids ka colloidal dispersion hota hai, river sediment settling nahi.\n\n• Option 3 is Incorrect because delta formation ek physical colloidal precipitation process hai, homogeneous catalytic oxidation reaction nahi.\n\n• Option 4 is Correct because river water ek aqueous colloidal sol hota hai jisme negatively charged clay aur silt particles suspended rehte hain. Sea water mein dissolved mineral electrolytes (jaise $\text{Na}^+$, $\text{Mg}^{2+}$, $\text{Ca}^{2+}$) ki high concentration hoti hai. Jab river water sea water se milta hai, toh seawater ke cations colloidal particles ke negative charge ko neutralize kar dete hain, triggering coagulation aur flocculation jisse clay particles settle hokar geographical deltas form karte hain."
+  },
+  {
+    "p_id": "bpsc_surface_v4_52",
+    "qe": "Applying base-10 logarithms to the empirical Freundlich power law converts it into which specific graphical linear relationship?",
+    "qh": "अनुभवजन्य फ्रेंडलिक पावर लॉ (empirical Freundlich power law) पर बेस-10 लघुगणक लागू करने से यह किस विशिष्ट ग्राफिकल रैखिक संबंध में बदल जाता है?",
+    "oe": [
+      "A parabolic curve that flattens at absolute thresholds",
+      "A straight line when plotting $log(x/m)$ versus $log p$, featuring a slope equal to $1/n$ and a y-intercept of $log k$",
+      "A vertical exponential line running parallel to the mass axis",
+      "A localized hyperbolic plot centered around zero pressure indices"
+    ],
+    "oh": [
+      "एक परवलयिक वक्र जो पूर्ण सीमाओं पर समतल हो जाता है",
+      "$log(x/m)$ बनाम $log p$ का आलेखन करने पर एक सीधी रेखा, जिसमें ढलान $1/n$ के बराबर और y-अवरोधन $log k$ होता है",
+      "द्रव्यमान अक्ष के समानांतर चलने वाली एक ऊर्ध्वाधर घातीय रेखा",
+      "शून्य दबाव सूचकांकों के आसपास केंद्रित एक स्थानीयकृत अतिपरवलयिक भूखंड"
+    ],
+    "a": 1,
+    "e": "Freundlich adsorption isotherm logarithmic form mein straight line equation follow karta hai.\n\n• Option 1 is Incorrect because logarithm lene par power function straight line equation mein convert ho jata hai, parabolic curve mein nahi.\n\n• Option 2 is Correct because Freundlich adsorption isotherm equation $\frac{x}{m} = k cdot p^{1/n}$ hoti hai. Dono taraf base-10 logarithm lene par: $logleft(\frac{x}{m}\right) = log k + \frac{1}{n}log p$. Isko straight-line equation ($y = mx + c$) se compare karne par, $log(x/m)$ vs $log p$ ka plot ek straight line deta hai jiska slope $\frac{1}{n}$ aur y-intercept $log k$ hota hai.\n\n• Option 3 is Incorrect because resulting graph ek inclined straight line hota hai, vertical exponential line nahi.\n\n• Option 4 is Incorrect because logarithmic transformation power-law curves ko straight line mein convert karta hai, hyperbolic plot mein nahi."
+  },
+  {
+    "p_id": "bpsc_surface_v4_53",
+    "qe": "Which physical process is entirely unrelated to the origin or stabilization of electrical surface charges across colloidal sol particles?",
+    "qh": "कौन सी भौतिक प्रक्रिया कोलाइडल सॉल कणों पर विद्युत सतह आवेशों (electrical surface charges) की उत्पत्ति या स्थिरीकरण से पूरी तरह से असंबंधित है?",
+    "oe": [
+      "Deep bulk absorption of ionic species from the surrounding solution",
+      "Preferential adsorption of specific ionic species from the liquid phase",
+      "The architectural formation of a Helmholtz electrical double layer",
+      "Electron capture by sol units during mechanical electro-dispersion"
+    ],
+    "oh": [
+      "आसपास के घोल से आयनिक प्रजातियों का गहरा आंतरिक अवशोषण (Deep bulk absorption)",
+      "तरल प्रावस्था से विशिष्ट आयनिक प्रजातियों का अधिमान्य अधिशोषण (Preferential adsorption)",
+      "हेल्महोल्ट्ज़ विद्युत दोहरी परत (Helmholtz electrical double layer) का निर्माण",
+      "यांत्रिक इलेक्ट्रो-फैलाव के दौरान सॉल इकाइयों द्वारा इलेक्ट्रॉन ग्रहण"
+    ],
+    "a": 0,
+    "e": "Colloidal particles par electrical surface charge interfacial surface phenomena se originate hota hai.\n\n• Option 1 is Correct because absorption ek bulk phenomenon hai jisme substance uniform distributed rehta hai; yeh phase boundaries par ions ko concentrate nahi karta aur colloidal particles ke surface charge ya zeta potential generation se completely unrelated hai.\n\n• Option 2 is Incorrect because solution se common ions ka preferential adsorption colloidal particles par surface charge development ka primary mechanism hai.\n\n• Option 3 is Incorrect because fixed charged layer ke baad counter-ion layer ka banna Helmholtz electrical double layer form karta hai jo colloidal stability ko stabilize karta hai.\n\n• Option 4 is Incorrect because electro-dispersion (Bredig's arc method) ke dauran colloidal particles electrons capture karke negative surface charge acquire karte hain."
+  },
+  {
+    "p_id": "bpsc_surface_v4_54",
+    "qe": "What precise surface chemical process explains why passing raw, yellowish-brown sugarcane juice through an active column of animal charcoal yields a clear, colorless filtrate?",
+    "qh": "कौन सी सटीक सतह रासायनिक प्रक्रिया यह बताती है कि एक सक्रिय पशु चारकोल कॉलम के माध्यम से कच्चे, पीले-भूरे रंग के गन्ने के रस को पारित करने से एक स्पष्ट, रंगहीन छानना (filtrate) प्राप्त होता है?",
+    "oe": [
+      "Electrolytic coagulation inside the liquid mass",
+      "Surface adsorption of colored organic impurities onto the charcoal active sites",
+      "Deep internal fluid absorption",
+      "Monomolecular emulsification of plant lipids"
+    ],
+    "oh": [
+      "तरल द्रव्यमान के अंदर विद्युत-अपघटनी स्कंदन",
+      "चारकोल के सक्रिय स्थलों पर रंगीन कार्बनिक अशुद्धियों का सतही अधिशोषण (Surface adsorption)",
+      "गहरा आंतरिक तरल अवशोषण (Deep internal fluid absorption)",
+      "पादप लिपिड का एकल-आणविक पायसीकरण"
+    ],
+    "a": 1,
+    "e": "Animal charcoal organic impurities ko selectively remove karne ke liye adsorbent ki tarah act karta hai.\n\n• Option 1 is Incorrect because clarification process mein koi electrolytic coagulation shamil nahi hota.\n\n• Option 2 is Correct because animal charcoal ek highly porous solid hai jiska surface area bohot large hota hai. Jab raw colored sugarcane juice ko animal charcoal bed ke through pass kiya jata hai, toh colored organic dye impurities charcoal ke surface active sites par physical/chemical surface adsorption ke through selectively retain ho jaati hain, yielding a clear and colorless sugar solution.\n\n• Option 3 is Incorrect because absorption ek non-selective bulk process hai, selective decolorization nahi.\n\n• Option 4 is Incorrect because decolorization process mein lipid emulsification shamil nahi hota."
+  },
+  {
+    "p_id": "bpsc_surface_v4_55",
+    "qe": "What happens to the structure of aggregated micelles if a concentrated colloidal soap solution is diluted with an excessive volume of pure water?",
+    "qh": "यदि एक सांद्र कोलाइडल साबुन के घोल को शुद्ध पानी की अत्यधिक मात्रा से पतला (dilute) किया जाता है, तो एकत्रित मिसेल्स की संरचना का क्या होता है?",
+    "oe": [
+      "They develop covalent methylene bridges that lock the structure completely",
+      "The intermolecular forces decrease, causing the micelles to break apart and revert into individual ions",
+      "They undergo spontaneous oxidation into open-chain saccharic acids",
+      "They permanently fuse into an insoluble rigid thermosetting block"
+    ],
+    "oh": [
+      "वे सहसंयोजक मेथिलीन पुल विकसित करते हैं जो संरचना को पूरी तरह से बंद कर देते हैं",
+      "अंतर-आणविक बल कम हो जाते हैं, जिससे मिसेल टूट जाते हैं और व्यक्तिगत आयनों में वापस आ जाते हैं",
+      "वे खुली श्रृंखला वाले सैकेरिक अम्लों में स्वतःस्फूर्त ऑक्सीकरण से गुजरते हैं",
+      "वे स्थायी रूप से एक अघुलनशील कठोर थर्मोसेटिंग ब्लॉक में विलीन हो जाते हैं"
+    ],
+    "a": 1,
+    "e": "Micelle formation ek concentration-dependent reversible equilibrium process hai.\n\n• Option 1 is Incorrect because methylene bridges Bakelite thermoset formation mein bante hain, soap solutions mein nahi.\n\n• Option 2 is Correct because soap molecules associated colloids hote hain jo sirf Critical Micelle Concentration (CMC) ke upar aggregated micelles form karte hain. Jab concentrated soap solution ko heavily dilute kiya jata hai, toh concentration CMC ke niche drop ho jaati hai, jisse hydrophobic interactions disrupt ho jaate hain aur micelles break hokar individual dispersed ions mein revert ho jaate hain.\n\n• Option 3 is Incorrect because dilution process mein koi chemical redox oxidation shamil nahi hota.\n\n• Option 4 is Incorrect because micellization ek reversible process hai, irreversible thermosetting fusion nahi."
+  },
+  {
+    "p_id": "bpsc_surface_v4_56",
+    "qe": "How do different solid transition metal catalysts influence the reaction outcome when processing identical starting gaseous reactants like carbon monoxide ($CO$) and hydrogen ($H_2$)?",
+    "qh": "समान प्रारंभिक गैसीय अभिकारकों जैसे कार्बन मोनोऑक्साइड ($CO$) और हाइड्रोजन ($H_2$) को संसाधित करते समय विभिन्न ठोस संक्रमण धातु उत्प्रेरक प्रतिक्रिया के परिणाम को कैसे प्रभावित करते हैं?",
+    "oe": [
+      "They convert the reactants into water-soluble linear synthetic polyolefins",
+      "They permanently alter the absolute values of the reaction's total mass change",
+      "They yield identical products because catalysts cannot alter reaction pathways",
+      "Different catalysts display unique surface specificities, directing the exact same reactants toward entirely different chemical products"
+    ],
+    "oh": [
+      "वे अभिकारकों को पानी में घुलनशील रैखिक सिंथेटिक पॉलीओलेफ़िन में परिवर्तित करते हैं",
+      "वे प्रतिक्रिया के कुल द्रव्यमान परिवर्तन के निरपेक्ष मूल्यों को स्थायी रूप से बदल देते हैं",
+      "वे समान उत्पाद देते हैं क्योंकि उत्प्रेरक प्रतिक्रिया मार्गों को नहीं बदल सकते हैं",
+      "विभिन्न उत्प्रेरक अद्वितीय सतह विशिष्टताओं को प्रदर्शित करते हैं, जो बिल्कुल समान अभिकारकों को पूरी तरह से अलग रासायनिक उत्पादों की ओर निर्देशित करते हैं"
+    ],
+    "a": 3,
+    "e": "Solid heterogeneous catalysts chemical reactions mein catalytic selectivity exhibit karte hain.\n\n• Option 1 is Incorrect because ye Ziegler-Natta polymerization ko describe karta hai, simple synthesis gas reaction ko nahi.\n\n• Option 2 is Incorrect because total mass change alter nahi hota (Law of Conservation of Mass).\n\n• Option 3 is Incorrect because catalysts alternative pathways provide karke different products direct kar sakte hain.\n\n• Option 4 is Correct because heterogeneous catalysts Catalytic Selectivity possess karte hain: $\text{CO}$ aur $\text{H}_2$ ke reaction mein $\text{Ni}$ catalyst methane ($\text{CH}_4$) banata hai ($\text{CO} + 3\text{H}_2 xrightarrow{\text{Ni}} \text{CH}_4 + \text{H}_2\text{O}$), $\text{Cu/ZnO-Cr}_2\text{O}_3$ catalyst methanol ($\text{CH}_3\text{OH}$) banata hai ($\text{CO} + 2\text{H}_2 xrightarrow{\text{Cu/ZnO-Cr}_2\text{O}_3} \text{CH}_3\text{OH}$), aur pure $\text{Cu}$ formaldehyde ($\text{HCHO}$) produce karta hai ($\text{CO} + \text{H}_2 xrightarrow{\text{Cu}} \text{HCHO}$)."
+  },
+  {
+    "p_id": "bpsc_surface_v4_57",
+    "qe": "What happens to the standard enthalpy change ($Delta H$) of a chemical reaction when a highly active solid catalyst is introduced into the system?",
+    "qh": "जब एक अत्यधिक सक्रिय ठोस उत्प्रेरक को प्रणाली में पेश किया जाता है तो रासायनिक प्रतिक्रिया के मानक एन्थैल्पी परिवर्तन ($Delta H$) का क्या होता है?",
+    "oe": [
+      "The value of $Delta H$ increases exponentially due to local heating parameters",
+      "The reaction switches from an exothermic to an endothermic configuration",
+      "The value of $Delta H$ drops to absolute zero via structural charring",
+      "The value of $Delta H$ remains completely unchanged because a catalyst does not alter the energy states of reactants and products"
+    ],
+    "oh": [
+      "स्थानीय हीटिंग मापदंडों के कारण $Delta H$ का मान तेजी से बढ़ता है",
+      "प्रतिक्रिया एक ऊष्माक्षेपी से ऊष्माशोषी विन्यास में बदल जाती है",
+      "संरचनात्मक झुलसने (charring) के माध्यम से $Delta H$ का मान पूर्ण शून्य हो जाता है",
+      "$Delta H$ का मान पूरी तरह से अपरिवर्तित रहता है क्योंकि एक उत्प्रेरक अभिकारकों और उत्पादों की ऊर्जा अवस्थाओं को नहीं बदलता है"
+    ],
+    "a": 3,
+    "e": "Catalysts reaction ki kinetics ko alter karte hain par thermodynamics ko affect nahi karte.\n\n• Option 1 is Incorrect because catalyst enthalpy of reaction ko increase nahi karta.\n\n• Option 2 is Incorrect because catalyst exothermic reaction ko endothermic mein convert nahi kar sakta.\n\n• Option 3 is Incorrect because $Delta H$ zero par drop nahi hota.\n\n• Option 4 is Correct because standard enthalpy of reaction ($Delta H$) aur Gibbs free energy change ($Delta G$) thermodynamic state functions hain jo sirf initial reactants aur final products ki energy states par depend karte hain. Catalyst sirf activation energy ($E_a$) ko lower karke reaction rate accelerate karta hai, isliye $Delta H$ completely unchanged rehta hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_58",
+    "qe": "According to the Freundlich isotherm ($x/m = k cdot p^{1/n}$), how does the extent of adsorption behave when the exponent factor $\frac{1}{n}$ drops exactly to zero?",
+    "qh": "फ्रेंडलिक समताप ($x/m = k cdot p^{1/n}$) के अनुसार, जब घातांक कारक $\frac{1}{n}$ बिल्कुल शून्य हो जाता है तो अधिशोषण की सीमा कैसा व्यवहार करती है?",
+    "oe": [
+      "The adsorption becomes directly proportional to the square root of concentration",
+      "The adsorption becomes completely independent of pressure, yielding a horizontal straight line plot ($x/m = k$)",
+      "The adsorption drops immediately to a zero absolute neutral index",
+      "The adsorption increases linearly with pressure up to infinity"
+    ],
+    "oh": [
+      "अधिशोषण सांद्रता के वर्गमूल के सीधे आनुपातिक हो जाता है",
+      "अधिशोषण दबाव से पूरी तरह स्वतंत्र हो जाता है, जिससे एक क्षैतिज सीधी रेखा का ग्राफ ($x/m = k$) प्राप्त होता है",
+      "अधिशोषण तुरंत शून्य निरपेक्ष तटस्थ सूचकांक पर गिर जाता है",
+      "दबाव के साथ अधिशोषण अनंत तक रैखिक रूप से बढ़ता है"
+    ],
+    "a": 1,
+    "e": "Freundlich isotherm mein exponent factor pressure dependence ko define karta hai.\n\n• Option 1 is Incorrect because square root dependency $1/n = 0.5$ par hoti hai, $0$ par nahi.\n\n• Option 2 is Correct because Freundlich equation $\frac{x}{m} = k cdot p^{1/n}$ mein jab $\frac{1}{n} = 0$ hota hai (high pressure saturation limit par), toh $\frac{x}{m} = k cdot p^0 = k$ (constant) ban jata hai, jiska matlab hai ki adsorption pressure se completely independent ho jata hai aur graph par ek horizontal straight line form hoti hai.\n\n• Option 3 is Incorrect because adsorption zero par drop nahi hota balki constant maximum plateau par rehta hai.\n\n• Option 4 is Incorrect because linear increase tab hota hai jab $\frac{1}{n} = 1$ ho."
+  },
+  {
+    "p_id": "bpsc_surface_v4_59",
+    "qe": "Why does hydrogen gas ($H_2$) display exceptionally low surface adsorption on a sample of activated charcoal compared to easily liquefiable gases like sulfur dioxide ($SO_2$)?",
+    "qh": "सल्फर डाइऑक्साइड ($SO_2$) जैसी आसानी से द्रवीकृत होने वाली गैसों की तुलना में हाइड्रोजन गैस ($H_2$) सक्रिय चारकोल के नमूने पर असाधारण रूप से कम सतह अधिशोषण क्यों प्रदर्शित करती है?",
+    "oe": [
+      "Because hydrogen gas undergoes rapid chemical polymerization into a rigid resin",
+      "Because it acts as a permanent suicide enzyme inhibitor on the carbon surface",
+      "Because hydrogen atoms contain dense repeating amide networks",
+      "Due to its exceptionally low critical temperature ($33\text{ K}$), which reflects very weak intermolecular van der Waals forces of attraction"
+    ],
+    "oh": [
+      "क्योंकि हाइड्रोजन गैस एक कठोर राल में तेजी से रासायनिक बहुलकीकरण से गुजरती है",
+      "क्योंकि यह कार्बन सतह पर एक स्थायी आत्मघाती एंजाइम अवरोधक के रूप में कार्य करता है",
+      "क्योंकि हाइड्रोजन परमाणुओं में घने दोहराव वाले एमाइड नेटवर्क होते हैं",
+      "इसके असाधारण रूप से कम क्रांतिक तापमान ($33\text{ K}$) के कारण, जो आकर्षण के बहुत कमजोर अंतर-आणविक वांडर वाल्स बलों को दर्शाता है"
+    ],
+    "a": 3,
+    "e": "Gas physisorption directly gas ke critical temperature aur van der Waals forces par depend karta hai.\n\n• Option 1 is Incorrect because hydrogen gas physisorption ke dauran polymerization undergo nahi karti.\n\n• Option 2 is Incorrect because enzyme inhibition biological concept hai, gas adsorption se unrelated hai.\n\n• Option 3 is Incorrect because hydrogen gas mein amide networks nahi hote.\n\n• Option 4 is Correct because physical adsorption van der Waals attractive forces par depend karta hai jo gas ke Critical Temperature ($T_c$) ke directly proportional hote hain. Easily liquefiable gases jaise $\text{SO}_2$ ($T_c = 630\text{ K}$) strong van der Waals forces rakhti hain aur readily adsorb hoti hain, jabki permanent gases jaise Hydrogen ($\text{H}_2$, $T_c = 33\text{ K}$) extremely weak intermolecular van der Waals forces possess karti hain, resulting in exceptionally low adsorption."
+  },
+  {
+    "p_id": "bpsc_surface_v4_60",
+    "qe": "What unique conformational parameter provides long-term kinetic stability to colloidal dispersions, preventing single particles from colliding and precipitating?",
+    "qh": "कौन सा अनूठा संरचनात्मक पैरामीटर कोलाइडल फैलाव (colloidal dispersions) को दीर्घकालिक गतिज स्थिरता प्रदान करता है, एकल कणों को आपस में टकराने और अवक्षेपित होने से रोकता है?",
+    "oe": [
+      "The presence of equal and similar electrical charges on all dispersed colloidal particles, causing mutual electrostatic repulsion",
+      "The random amorphous looping of unbranched polyolefin tail branches",
+      "The total presence of short-chain aromatic links that absorb moisture",
+      "The complete conversion of all surface functional groups into volatile non-ionic ethers"
+    ],
+    "oh": [
+      "सभी परिक्षेपित कोलाइडल कणों पर समान विद्युत आवेशों की उपस्थिति, जिससे पारस्परिक स्थिरवैद्युत प्रतिकर्षण होता है",
+      "अशाखित पॉलीओलेफ़िन पूंछ शाखाओं का यादृच्छिक अनाकार लूपिंग",
+      "शॉर्ट-चेन एरोमैटिक लिंक की कुल उपस्थिति जो नमी को अवशोषित करती है",
+      "सभी सतह कार्यात्मक समूहों का वाष्पशील गैर-आयनिक ईथर में पूर्ण रूपांतरण"
+    ],
+    "a": 0,
+    "e": "Colloidal sol particles surface charge repulsion ke karan stable rehte hain.\n\n• Option 1 is Correct because kisi colloidal dispersion ke sabhi dispersed particles par same sign ka electrical charge (ya toh completely positive ya completely negative) hota hai. Brownian motion ke dauran jab ye particles paas aate hain, toh identical surface charges ke kaaran strong mutual electrostatic repulsion develop hota hai jo particles ko coalesce aur precipitate hone se prevent karta hai aur long-term stability provide karta hai.\n\n• Option 2 is Incorrect because polyolefin looping polymer physics ka feature hai.\n\n• Option 3 is Incorrect because aromatic moisture absorption colloidal stability ka factor nahi hai.\n\n• Option 4 is Incorrect because non-ionic ether conversion unrelated hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_61",
+    "qe": "Why can an established liquid-liquid emulsion typically not be broken or separated by adding an additional volume of the continuous dispersion medium?",
+    "qh": "निरंतर फैलाव माध्यम (dispersion medium) की अतिरिक्त मात्रा मिलाने से आमतौर पर एक स्थापित तरल-तरल इमल्शन (liquid-liquid emulsion) को क्यों नहीं तोड़ा या अलग किया जा सकता है?",
+    "oe": [
+      "Because adding the medium merely dilutes the system while the protective emulsifying agent continues to stabilize the droplets",
+      "Because it eliminates all electrostatic forces of attraction across domains instantly",
+      "Because the extra fluid triggers high-pressure ring-opening polymerization runs",
+      "Because it causes the immediate transformation of lipids into linear Novolac strings"
+    ],
+    "oh": [
+      "क्योंकि माध्यम मिलाने से केवल प्रणाली तनु होती है जबकि सुरक्षात्मक पायसीकारी एजेंट बूंदों को स्थिर करना जारी रखता है",
+      "क्योंकि यह सभी डोमेन में आकर्षण के सभी स्थिरवैद्युत बलों को तुरंत समाप्त कर देता है",
+      "क्योंकि अतिरिक्त तरल उच्च दबाव रिंग-ओपनिंग पोलीमराइजेशन रन को ट्रिगर करता है",
+      "क्योंकि यह लिपिड को रैखिक नोवोलेक स्ट्रिंग्स में तत्काल बदलने का कारण बनता है"
+    ],
+    "a": 0,
+    "e": "Emulsions continuous medium ke addition par dilute ho jaate hain bina break hue.\n\n• Option 1 is Correct because emulsion droplets ke चारों taraf emulsifying agent ek interfacial protective film form karta hai jo interfacial tension ko lower karke droplets ko coalesce hone se rokta hai. Continuous dispersion medium add karne se system sirf dilute hota hai, par emulsifier ki protective film displace nahi hoti, isliye emulsion intact rehta hai.\n\n• Option 2 is Incorrect because dilution se electrostatic forces completely eliminate nahi hote.\n\n• Option 3 is Incorrect because ring-opening polymerization nylon synthesis mein hoti hai, emulsions mein nahi.\n\n• Option 4 is Incorrect because Novolac phenol-formaldehyde resin hai, lipid emulsion dilution se unrelated hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_62",
+    "qe": "Which specific category of substances can be added to an aqueous solution to cleanly precipitate a negatively charged emulsion?",
+    "qh": "ऋणात्मक रूप से आवेशित इमल्शन को साफ रूप से अवक्षेपित करने के लिए जलीय घोल में किस विशिष्ट श्रेणी के पदार्थों को मिलाया जा सकता है?",
+    "oe": [
+      "Fluorinated vinylic addition thermoplastics processed under vacuum",
+      "Linear unbranched polysaccharides derived from plant starches",
+      "Non-electrolytes like glucose or urea that do not yield ions",
+      "Strong mineral electrolytes like $\text{NaCl}$ or $\text{KCl}$ that supply counter-cations to neutralize droplet charges"
+    ],
+    "oh": [
+      "वैक्यूम के तहत संसाधित फ्लोरिनेटेड विनाइलिक अतिरिक्त थर्मोप्लास्टिक्स",
+      "पौधों के स्टार्च से प्राप्त रैखिक अशाखित पॉलीसेकेराइड",
+      "ग्लूकोज या यूरिया जैसे गैर-इलेक्ट्रोलाइट्स जो आयन उत्पन्न नहीं करते हैं",
+      "$\text{NaCl}$ या $\text{KCl}$ जैसे मजबूत खनिज विद्युत-अपघट्य जो बूंदों के आवेश को बेअसर करने के लिए विरोधी-धनायनों की आपूर्ति करते हैं"
+    ],
+    "a": 3,
+    "e": "Emulsion droplets surface charges carry karti hain jinhe electrolytes add karke coagulate kiya ja sakta hai.\n\n• Option 1 is Incorrect because thermoplastics coagulating counter-ions supply nahi karte.\n\n• Option 2 is Incorrect because uncharged polysaccharides droplet charges ko neutralize nahi karte.\n\n• Option 3 is Incorrect because non-electrolytes (glucose, urea) water mein ionize nahi hote aur charges neutralize nahi kar sakte.\n\n• Option 4 is Correct because strong mineral electrolytes ($\text{NaCl}, \text{KCl}$) dissociate hokar positively charged counter-ions ($\text{Na}^+, \text{K}^+$) supply karte hain jo negatively charged emulsion droplets ke surface charge ko neutralize kar dete hain, triggering coalescence aur clean precipitation (demulsification)."
+  },
+  {
+    "p_id": "bpsc_surface_v4_63",
+    "qe": "Which primary category of colloidal dispersions is highly resistant to coagulation and cannot be easily precipitated by trace electrolyte additions?",
+    "qh": "कोलाइडल फैलाव की कौन सी प्राथमिक श्रेणी जमावट (coagulation) के प्रति अत्यधिक प्रतिरोधी है और ट्रेस इलेक्ट्रोलाइट परिवर्धन द्वारा आसानी से अवक्षेपित नहीं हो सकती है?",
+    "oe": [
+      "Lyophilic colloids, also known as reversible colloids",
+      "Lyophobic colloids with irreversible architectures",
+      "Heavily branched cross-linked phenolic net resins",
+      "Unbranched non-ionic long-chain polyolefin bars"
+    ],
+    "oh": [
+      "द्रवस्नेही कोलाइड (Lyophilic colloids), जिन्हें उत्क्रमणीय कोलाइड भी कहा जाता है",
+      "अपरिवर्तनीय संरचनाओं वाले द्रवविरोधी कोलाइड (Lyophobic colloids)",
+      "भारी शाखित क्रॉस-लिंक्ड फेनोलिक नेट रेजिन",
+      "अशाखित गैर-आयनिक लंबी श्रृंखला वाले पॉलीओलेफ़िन बार"
+    ],
+    "a": 0,
+    "e": "Colloidal systems lyophilic aur lyophobic classes mein divide hote hain.\n\n• Option 1 is Correct because Lyophilic Colloids (liquid-loving, jaise gelatin, starch, gum) dual stabilization possess karte hain—charge ke sath-sath extensive solvation (hydration sheath)—isliye ye trace electrolytes ke addition se easily coagulate nahi hote aur highly stable reversible sols hote hain.\n\n• Option 2 is Incorrect because lyophobic colloids (metal sols, $\text{As}_2\text{S}_3$) trace electrolytes add karne par readily coagulate ho jaate hain.\n\n• Option 3 is Incorrect because cross-linked phenolic resins solid polymers hain.\n\n• Option 4 is Incorrect because polyolefin bars colloids nahi hain."
+  },
+  {
+    "p_id": "bpsc_surface_v4_64",
+    "qe": "What physical scenario proceeds when a protective lyophilic sol is deliberately blended into an unstable lyophobic sol sample?",
+    "qh": "जब एक सुरक्षात्मक लायोफिलिक सॉल (lyophilic sol) को जानबूझकर एक अस्थिर लायोफोबिक सॉल नमूने में मिलाया जाता है तो कौन सा भौतिक परिदृश्य आगे बढ़ता है?",
+    "oe": [
+      "The lyophilic sol undergoes immediate structural denaturation into single amino acids",
+      "The framework triggers the automatic common-ion precipitation of the medium",
+      "The mixture converts into a volatile open-chain non-polar gas cloud",
+      "The lyophilic particles form a protective film or layer over the lyophobic cores, shielding them from coagulation"
+    ],
+    "oh": [
+      "लायोफिलिक सॉल एकल अमीनो एसिड में तत्काल संरचनात्मक विकृतीकरण से गुजरता है",
+      "ढांचा माध्यम के स्वचालित उभयनिष्ठ-आयन अवक्षेपण को ट्रिगर करता है",
+      "मिश्रण एक वाष्पशील खुली श्रृंखला वाली गैर-ध्रुवीय गैस क्लाउड में परिवर्तित हो जाता है",
+      "लायोफिलिक कण लायोफोबिक कोर पर एक सुरक्षात्मक फिल्म या परत बनाते हैं, जो उन्हें स्कंदन (coagulation) से बचाते हैं"
+    ],
+    "a": 3,
+    "e": "Lyophilic colloids lyophobic sols ke liye protective colloids ki tarah act karte hain.\n\n• Option 1 is Incorrect because lyophilic macromolecules amino acids mein hydrolyze nahi hote.\n\n• Option 2 is Incorrect because common-ion precipitation trigger nahi hota.\n\n• Option 3 is Incorrect because gaseous phase conversion impossible hai.\n\n• Option 4 is Correct because jab lyophobic sol (jaise gold sol) mein Lyophilic Sol (Protective Colloid, jaise gelatin ya gum) add kiya jata hai, toh lyophilic particles lyophobic sol particles ke around ek protective sheath adsorb kar lete hain jo electrolyte counter-ions ko contact mein aane se shield karti hai aur coagulation prevent karti hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_65",
+    "qe": "What surface chemical phenomenon describes the scenario where the continuous dispersion medium begins to migrate through an electric field because the movement of colloidal particles is mechanically blocked?",
+    "qh": "कौन सा पृष्ठ रासायनिक सिद्धांत उस परिदृश्य का वर्णन करता है जहां निरंतर फैलाव माध्यम (dispersion medium) एक विद्युत क्षेत्र के माध्यम से पलायन करना शुरू करता है क्योंकि कोलाइडल कणों की गति यंत्रवत् अवरुद्ध होती है?",
+    "oe": [
+      "Electrophoretic chain unzipping",
+      "Ziegler-Natta coordination polymerization",
+      "Reverse osmosis desalination",
+      "Electroosmosis"
+    ],
+    "oh": [
+      "इलेक्ट्रोफोरेटिक चेन अनजिपिंग",
+      "ज़िग्लर-नट्टा समन्वय बहुलकीकरण",
+      "रिवर्स ऑस्मोसिस डिसेलिनेशन (Reverse osmosis)",
+      "विद्युत-परासरण (Electroosmosis)"
+    ],
+    "a": 3,
+    "e": "Electrokinetic phenomena electrical double layer movement par based hote hain.\n\n• Option 1 is Incorrect because chain unzipping polymer degradation mechanism hai.\n\n• Option 2 is Incorrect because Ziegler-Natta polymerization coordination plastics synthesis mein use hoti hai.\n\n• Option 3 is Incorrect because reverse osmosis membrane water purification process hai.\n\n• Option 4 is Correct because jab colloidal particles ke movement ko porous barrier ya semi-permeable membrane se mechanically block kar diya jata hai, tab applied electric field ke under liquid dispersion medium oppositely charged electrode ki taraf migrate karta hai, jise Electroosmosis (विद्युत-परासरण) kehte hain."
+  },
+  {
+    "p_id": "bpsc_surface_v4_66",
+    "qe": "In what specific ways can a solid catalyst change physically or qualitatively after completing a chemical reaction cycle, while remaining quantitatively intact?",
+    "qh": "एक ठोस उत्प्रेरक एक रासायनिक प्रतिक्रिया चक्र को पूरा करने के बाद मात्रात्मक रूप से बरकरार रहने के बावजूद भौतिक या गुणात्मक रूप से किन विशिष्ट तरीकों से बदल सकता है?",
+    "oe": [
+      "It splits into alternative open-chain dicarboxylic saccharic fractions",
+      "It undergoes automatic chemical conversion into an essential amino acid sequence",
+      "It can change its physical state or surface texture, becoming finer or rougher, while its total mass and chemical composition remain unaltered",
+      "It loses its covalent single bonds entirely to transform into a liquid polyol"
+    ],
+    "oh": [
+      "यह वैकल्पिक खुली श्रृंखला वाले डाइकार्बोक्सिलिक सैकेरिक अंशों में विभाजित हो जाता है",
+      "यह एक आवश्यक अमीनो एसिड अनुक्रम में स्वचालित रासायनिक रूपांतरण से गुजरता है",
+      "यह अपनी भौतिक अवस्था या सतह की बनावट को बदल सकता है, महीन या खुरदरा हो सकता है, जबकि इसका कुल द्रव्यमान और रासायनिक संरचना अपरिवर्तित रहती है",
+      "यह एक तरल पॉलीओल में बदलने के लिए अपने सहसंयोजक एकल बंधों को पूरी तरह से खो देता है"
+    ],
+    "a": 2,
+    "e": "Catalyst reaction ke end mein chemically unchanged rehta hai par physically alter ho sakta hai.\n\n• Option 1 is Incorrect because catalyst chemical fractions mein split nahi hota.\n\n• Option 2 is Incorrect because catalyst amino acid sequence mein convert nahi hota.\n\n• Option 3 is Correct because catalyst ka total mass aur chemical composition reaction cycle ke end mein quantitatively unaltered ($m_{\text{initial}} = m_{\text{final}}$) rehta hai, lekin cyclic adsorption aur desorption ke kaaran uski physical state, particle size, ya surface texture (finer, rougher, ya powdered) qualitatively change ho sakti hai.\n\n• Option 4 is Incorrect because catalyst liquid polyol mein degrade nahi hota."
+  },
+  {
+    "p_id": "bpsc_surface_v4_67",
+    "qe": "What twin surface phenomena proceed simultaneously when a dry stick of white chalk is dipped into a container of colored ink?",
+    "qh": "जब सफेद चाक की एक सूखी छड़ी को रंगीन स्याही के कंटेनर में डुबोया जाता है तो कौन सी दोहरी सतह घटनाएं (twin surface phenomena) एक साथ आगे बढ़ती हैं?",
+    "oe": [
+      "The surface adsorption of colored pigment molecules accompanied by the deep bulk absorption of the solvent liquid",
+      "The absolute laboratory conversion of glucose rings into saccharic acid domains",
+      "The continuous free-radical addition polymerization of highly branched vinylic alkenes",
+      "The hydrolytic ring-opening cleavage of cross-linked thermosetting resins"
+    ],
+    "oh": [
+      "विलायक तरल के गहरे आंतरिक अवशोषण (Absorption) के साथ रंगीन वर्णक अणुओं का सतही अधिशोषण (Adsorption)",
+      "ग्लूकोज के छल्लों का सैकेरिक एसिड डोमेन में पूर्ण प्रयोगशाला रूपांतरण",
+      "अत्यधिक शाखित विनाइलिक एल्केन्स का निरंतर मुक्त-कण जोड़ बहुलकीकरण",
+      "क्रॉस-लिंक्ड थर्मोसेटिंग रेजिन का हाइड्रोलाइटिक रिंग-ओपनिंग क्लीवेज"
+    ],
+    "a": 0,
+    "e": "Chalk-ink interaction adsorption aur absorption (Sorption) dono ko demonstrate karta hai.\n\n• Option 1 is Correct because jab white chalk ko ink mein dip kiya jata hai, toh colored dye molecules chalk ke surface par hold ho jaate hain (Adsorption), jabki water/solvent molecules capillary action se chalk ke porous bulk interior mein penetrate kar jaate hain (Absorption). Chalk todne par andar se wet par white/colorless nikalta hai.\n\n• Option 2 is Incorrect because glucose oxidation se unrelated hai.\n\n• Option 3 is Incorrect because alkene polymerization se unrelated hai.\n\n• Option 4 is Incorrect because resin cleavage se unrelated hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_68",
+    "qe": "Why is maintaining an ultra-clean solid surface under ultra-high vacuum conditions vital when conducting scientific surface chemistry investigations?",
+    "qh": "वैज्ञानिक पृष्ठ रसायन अनुसंधान करते समय अल्ट्रा-हाई वैक्यूम परिस्थितियों में एक अल्ट्रा-क्लीन ठोस सतह को बनाए रखना क्यों महत्वपूर्ण है?",
+    "oe": [
+      "To render the entire solid mass highly water-soluble at room parameters",
+      "To completely eliminate all carbon-carbon covalent single bonds from the matrix",
+      "To convert the flexible base into a volatile linear non-ionic detergent sheet",
+      "To clear away ambient atmospheric gas layers, ensuring that active sites are fully open to adsorb only the desired target species"
+    ],
+    "oh": [
+      "कमरे के मापदंडों पर पूरे ठोस द्रव्यमान को अत्यधिक पानी में घुलनशील बनाने के लिए",
+      "मैट्रिक्स से सभी कार्बन-कार्बन सहसंयोजक एकल बंधों को पूरी तरह से समाप्त करने के लिए",
+      "लचीले आधार को वाष्पशील रैखिक गैर-आयनिक डिटर्जेंट शीट में बदलने के लिए",
+      "परिवेशी वायुमंडलीय गैस परतों को दूर करने के लिए, यह सुनिश्चित करते हुए कि सक्रिय स्थल केवल वांछित लक्ष्य प्रजातियों को अधिशोषित करने के लिए पूरी तरह से खुले हैं"
+    ],
+    "a": 3,
+    "e": "Surface chemistry investigations ultra-clean surfaces demand karti hain.\n\n• Option 1 is Incorrect because vacuum solid mass ko water-soluble nahi banata.\n\n• Option 2 is Incorrect because substrate ke covalent single bonds eliminate nahi hote.\n\n• Option 3 is Incorrect because detergent sheet conversion unrelated hai.\n\n• Option 4 is Correct because solid surfaces ambient conditions par atmospheric gases ($\text{O}_2, \text{N}_2, \text{CO}_2, \text{H}_2\text{O}$) ko instantly adsorb karke active sites ko block kar deti hain. Precise surface investigations ke liye Ultra-High Vacuum ($10^{-8}\text{ to }10^{-9}\text{ Pa}$) maintain karke background gases ko clear kiya jata hai taaki active sites sirf desired target species ke liye open rahein."
+  },
+  {
+    "p_id": "bpsc_surface_v4_69",
+    "qe": "Why is chemical adsorption (chemisorption) often referred to as activated adsorption by physical chemists?",
+    "qh": "भौतिक रसायनविदों द्वारा रासायनिक अधिशोषण (chemisorption) को अक्सर सक्रिय अधिशोषण (activated adsorption) क्यों कहा जाता है?",
+    "oe": [
+      "It is composed entirely of cross-linked phenolic resins containing methylene bridges",
+      "Because it involves true chemical bond formation, requiring a high activation energy barrier that accelerates with temperature",
+      "Because it contains an abundance of permanent arsenic-arsenic double bond units",
+      "It undergoes rapid environmental biodegradation within natural water cycles"
+    ],
+    "oh": [
+      "यह पूरी तरह से मेथिलीन पुलों वाले क्रॉस-लिंक्ड फेनोलिक रेजिन से बना है",
+      "क्योंकि इसमें वास्तविक रासायनिक बंध निर्माण शामिल है, जिसके लिए एक उच्च संक्रियण ऊर्जा बाधा की आवश्यकता होती है जो तापमान के साथ तेज होती है",
+      "क्योंकि इसमें स्थायी आर्सेनिक-आर्सेनिक डबल बॉन्ड इकाइयों की प्रचुरता होती है",
+      "यह प्राकृतिक जल चक्रों के भीतर तेजी से पर्यावरणीय बायोडिग्रेडेशन से गुजरता है"
+    ],
+    "a": 1,
+    "e": "Chemisorption chemical bond formation aur activation energy require karta hai.\n\n• Option 1 is Incorrect because phenolic resins Bakelite polymers se related hain.\n\n• Option 2 is Correct because Chemisorption mein adsorbate aur adsorbent ke beech genuine covalent/ionic chemical bonds bante hain. Kisi chemical reaction ki tarah in bonds ko form karne ke liye ek Activation Energy ($E_a$) barrier overcome karna hota hai, isliye temperature raise karne par initial chemisorption rate accelerate hota hai, making it known as Activated Adsorption.\n\n• Option 3 is Incorrect because arsenic double bonds chemisorption se unrelated hain.\n\n• Option 4 is Incorrect because biodegradation se unrelated hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_70",
+    "qe": "What architectural change defines the transition of a surfactant soap solution from a true molecular solution into a colloidal dispersion as its concentration is scaled up?",
+    "qh": "सर्फेक्टेंट साबुन के घोल की सांद्रता बढ़ने पर उसका एक वास्तविक आणविक विलयन से कोलाइडल फैलाव में परिवर्तन किस संरचनात्मक परिवर्तन को परिभाषित करता है?",
+    "oe": [
+      "The treatment converts the sodium fatty acid salts into narrow-spectrum antibiotics",
+      "The individual ions undergo complete chemical degradation into volatile mineral gases",
+      "The solution enters an intricate non-ionic furanose sugar matrix layer",
+      "Once the concentration passes the critical micelle concentration (CMC), individual soap molecules aggregate into structural clusters called micelles"
+    ],
+    "oh": [
+      "उपचार सोडियम फैटी एसिड लवणों को संकीर्ण-स्पेक्ट्रम एंटीबायोटिक्स में परिवर्तित करता है",
+      "व्यक्तिगत आयन वाष्पशील खनिज गैसों में पूर्ण रासायनिक क्षरण से गुजरते हैं",
+      "घोल एक जटिल गैर-आयनिक फुरानोज चीनी मैट्रिक्स परत में प्रवेश करता है",
+      "एक बार जब सांद्रता क्रांतिक मिसेल सांद्रता (CMC) को पार कर जाती है, तो व्यक्तिगत साबुन के अणु मिसेल नामक संरचनात्मक समूहों में एकत्रित हो जाते हैं"
+    ],
+    "a": 3,
+    "e": "Surfactants concentration ke basis par true solution se associated colloids mein switch karte hain.\n\n• Option 1 is Incorrect because soap molecules antibiotics mein convert nahi hote.\n\n• Option 2 is Incorrect because soap ions volatile gases mein degrade nahi hote.\n\n• Option 3 is Incorrect because furanose sugar matrix carbohydrate chemistry ka part hai.\n\n• Option 4 is Correct because low concentrations par soap individual ions ke roop mein true electrolyte solution behave karta hai; par jaise hi concentration Critical Micelle Concentration (CMC) ko exceed karti hai, hydrophobic tails inward orient hokar 50–100 molecules ke spherical clusters form kar leti hain jinhe Micelles kehte hain, transforming the system into an associated colloidal dispersion."
+  },
+  {
+    "p_id": "bpsc_surface_v4_71",
+    "qe": "Which specific organic compound functions as the core monomer building block required to construct a synthetic rubber elastomer like Neoprene?",
+    "qh": "सिंथेटिक इलास्टोमर नियोप्रीन जैसे सिंथेटिक रबर का निर्माण करने के लिए आवश्यक मुख्य मोनोमर बिल्डिंग ब्लॉक के रूप में कौन सा विशिष्ट कार्बनिक अणु कार्य करता है?",
+    "oe": [
+      "Isoprene (2-methylbuta-1,3-diene)",
+      "Styrene (phenylethylene) vinyl aromatic",
+      "Acrylonitrile (prop-2-enonitrile)",
+      "Chloroprene (2-chlorobuta-1,3-diene)"
+    ],
+    "oh": [
+      "आइसोप्रीन (2-मिथाइलब्यूटा-1,3-डाईन)",
+      "स्टाइरीन (फेनिलएथिलीन)",
+      "एक्रिलोनाइट्राइल (प्रॉप-2-ईननाइट्राइल)",
+      "क्लोरोप्रीन (2-क्लोरोब्यूटा-1,3-डाईन)"
+    ],
+    "a": 3,
+    "e": "Neoprene ek synthetic elastomer hai jo specialized monomer se synthesize hota hai.\n\n• Option 1 is Incorrect because Isoprene natural rubber (cis-1,4-polyisoprene) ka monomer hai.\n\n• Option 2 is Incorrect because Styrene polystyrene aur Buna-S rubber ka monomer hai.\n\n• Option 3 is Incorrect because Acrylonitrile PAN aur Buna-N rubber ka monomer hai.\n\n• Option 4 is Correct because Chloroprene (2-chlorobuta-1,3-diene, $\text{CH}_2=\text{CCl}-\text{CH}=\text{CH}_2$) ke addition polymerization se synthetic rubber Neoprene (polychloroprene) banta hai: $n(\text{CH}_2=\text{CCl}-\text{CH}=\text{CH}_2) \rightarrow [-\text{CH}_2-\text{CCl}=\text{CH}-\text{CH}_2-]_n$."
+  },
+  {
+    "p_id": "bpsc_surface_v4_72",
+    "qe": "What type of macromolecular structural linkage connects consecutive nucleotide monomers together along a strand of DNA or RNA?",
+    "qh": "डीएनए या आरएनए की एक श्रृंखला के साथ लगातार न्यूक्लियोटाइड मोनोमर्स को किस प्रकार का मैक्रोमोलेक्यूलर संरचनात्मक लिंकेज जोड़ता है?",
+    "oe": [
+      "Phosphodiester linkage establishing bridges between 5' and 3' carbons",
+      "Methylene bridge framework generated via condensation polymerization",
+      "Amide linkage systematically identical to a biological peptide bond",
+      "Glycosidic carbon-oxygen linkage bridging components"
+    ],
+    "oh": [
+      "5' और 3' कार्बन के बीच सेतु स्थापित करने वाला फॉस्फोडिएस्टर लिंकेज (Phosphodiester linkage)",
+      "संक्षेपण बहुलकीकरण के माध्यम से उत्पन्न मेथिलीन ब्रिज ढांचा",
+      "जैविक पेप्टाइड बंध के समान एमाइड लिंकेज",
+      "ग्लाइकोसिडिक कार्बन-ऑक्सीजन लिंकेज ब्रिजिंग घटक"
+    ],
+    "a": 0,
+    "e": "Nucleic acid polymers nucleotide monomers ke covalent bridges se bante hain.\n\n• Option 1 is Correct because DNA aur RNA mein nucleotides ek doosre se $3', 5'$-Phosphodiester Linkages ke through join hote hain, jisme ek nucleotide ke pentose sugar ka $5'$ phosphate group adjacent nucleotide ke $3'$ hydroxyl group ke sath ester link banata hai.\n\n• Option 2 is Incorrect because methylene bridges Bakelite thermoset polymers mein bante hain.\n\n• Option 3 is Incorrect because amide/peptide linkages proteins mein amino acids ko connect karti hain.\n\n• Option 4 is Incorrect because glycosidic linkage carbohydrates mein monosaccharides ko link karti hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_73",
+    "qe": "What architectural guidelines define a catalytic scenario classified under the structural heading of homogeneous catalysis?",
+    "qh": "कौन से संरचनात्मक दिशानिर्देश समांगी उत्प्रेरण (homogeneous catalysis) के संरचनात्मक शीर्षक के तहत वर्गीकृत एक उत्प्रेरक परिदृश्य को परिभाषित करते हैं?",
+    "oe": [
+      "The system lacks covalent chemical bonds across its reactive domains",
+      "The catalyst must dissolve entirely into the product liquid phase profile",
+      "The process must be driven entirely by biological enzyme molecules",
+      "The reacting chemical species and the catalyst exist in the exact same physical phase"
+    ],
+    "oh": [
+      "प्रणाली में इसके प्रतिक्रियाशील डोमेन में सहसंयोजक रासायनिक बंधों की कमी है",
+      "उत्प्रेरक को उत्पाद तरल चरण प्रोफ़ाइल में पूरी तरह से घुलना चाहिए",
+      "प्रक्रिया पूरी तरह से जैविक एंजाइम अणुओं द्वारा संचालित होनी चाहिए",
+      "प्रतिक्रियाशील रासायनिक प्रजातियां (अभिकारक) और उत्प्रेरक बिल्कुल समान भौतिक प्रावस्था (phase) में मौजूद हैं"
+    ],
+    "a": 3,
+    "e": "Catalysis physical phases ke distribution ke base par classify hoti hai.\n\n• Option 1 is Incorrect because covalent bonds phase classification se unrelated hain.\n\n• Option 2 is Incorrect because phase homogeneity reactants aur catalyst par apply hoti hai.\n\n• Option 3 is Incorrect because biological enzymes biocatalysts hote hain jo homogeneous ya heterogeneous dono ho sakte hain.\n\n• Option 4 is Correct because Homogeneous Catalysis (समांगी उत्प्रेरण) mein reactants aur catalyst exact same physical state (phase) mein present hote hain (e.g., Lead Chamber process mein gaseous $\text{SO}_2$ aur $\text{O}_2$ ka oxidation gaseous $\text{NO}$ catalyst dwara: $2\text{SO}_2\text{(g)} + \text{O}_2\text{(g)} xrightarrow{\text{NO(g)}} 2\text{SO}_3\text{(g)}$)."
+  },
+  {
+    "p_id": "bpsc_surface_v4_74",
+    "qe": "What specific suffix is universally applied to denote the standard nomenclature of almost all catalytic enzymes in biochemistry?",
+    "qh": "जैव रसायन में लगभग सभी उत्प्रेरक एंजाइमों के मानक नामकरण को दर्शाने के लिए कौन सा विशिष्ट प्रत्यय (suffix) सार्वभौमिक रूप से लागू किया जाता है?",
+    "oe": [
+      "The suffix -ose typical of simple carbohydrates",
+      "The suffix -ol found across long-chain alcohols",
+      "The suffix -amide marking synthetic fiber strands",
+      "The suffix -ase"
+    ],
+    "oh": [
+      "सरल कार्बोहाइड्रेट का विशिष्ट प्रत्यय -ose",
+      "लंबी श्रृंखला वाले अल्कोहल में पाया जाने वाला प्रत्यय -ol",
+      "सिंथेटिक फाइबर स्ट्रैंड्स को चिह्नित करने वाला प्रत्यय -amide",
+      "प्रत्यय -ase (जैसे माल्टेस, जाइमेज)"
+    ],
+    "a": 3,
+    "e": "Biochemical nomenclature guidelines enzymes ke naming standards define karti hain.\n\n• Option 1 is Incorrect because suffix -ose carbohydrates (glucose, fructose, maltose) ke liye use hota hai.\n\n• Option 2 is Incorrect because suffix -ol alcohols (ethanol, glycerol) ke liye use hota hai.\n\n• Option 3 is Incorrect because suffix -amide polyamides (Nylon) ke liye use hota hai.\n\n• Option 4 is Correct because modern biochemistry mein catalytic enzymes ke name unke substrate ya reaction type ke aage suffix -ase append karke banaye jaate hain (e.g., Maltase, Urease, Lactase, Invertase, Polymerase, Dehydrogenase)."
+  },
+  {
+    "p_id": "bpsc_surface_v4_75",
+    "qe": "What structural name is assigned to the functional covalent amide bridge generated when glycine and alanine condense into a dipeptide?",
+    "qh": "उस कार्यात्मक सहसंयोजक एमाइड पुल (covalent amide bridge) को क्या संरचनात्मक नाम दिया गया है जो तब उत्पन्न होता है जब ग्लाइसिन और एलेनिन एक डिपेप्टाइड में संघनित होते हैं?",
+    "oe": [
+      "Peptide linkage",
+      "Glycosidic connection",
+      "Phosphodiester channel",
+      "Disulfide bridge link"
+    ],
+    "oh": [
+      "पेप्टाइड बंध (Peptide linkage / Peptide bond)",
+      "ग्लाइकोसिडिक संबंध (Glycosidic connection)",
+      "फॉस्फोडिएस्टर चैनल",
+      "डाइसल्फाइड ब्रिज लिंक"
+    ],
+    "a": 0,
+    "e": "Amino acid residues covalent amide bonds ke through join hote hain.\n\n• Option 1 is Correct because jab do $alpha$-amino acids (jaise Glycine aur Alanine) condense hote hain, toh ek ka carboxyl group ($-\text{COOH}$) aur dusre ka amino group ($-\text{NH}_2$) water molecule eliminate karke covalent amide linkage ($-\text{CO}-\text{NH}-$) form karte hain, jise Peptide Linkage (Peptide Bond) kehte hain.\n\n• Option 2 is Incorrect because glycosidic linkage monosaccharides ke beech banne wala ether bond hai.\n\n• Option 3 is Incorrect because phosphodiester linkage nucleic acid nucleotides ko link karta hai.\n\n• Option 4 is Incorrect because disulfide bridge cysteine thiol groups ke oxidation se banta hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_76",
+    "qe": "What happens to the structure of linear Novolac strands if they are mixed with excess formaldehyde gas and subjected to high thermal curing?",
+    "qh": "यदि रैखिक नोवोलेक स्ट्रैंड्स को अतिरिक्त फॉर्मलाडेहाइड गैस के साथ मिलाया जाए और उच्च थर्मल क्यूरिंग के अधीन किया जाए तो उनकी संरचना का क्या होता है?",
+    "oe": [
+      "They break down into volatile liquid phenols via hydrolytic cleavage",
+      "They develop extensive covalent methylene cross-links, transforming the linear resin into the rigid thermosetting network Bakelite",
+      "They form an explicit water-soluble non-ionic surfactant lattice balanced by sodium",
+      "They convert into a unbranched biodegradable polyester chain configuration"
+    ],
+    "oh": [
+      "वे हाइड्रोलाइटिक क्लीवेज के माध्यम से वाष्पशील तरल फिनोल में टूट जाते हैं",
+      "वे व्यापक सहसंयोजक मेथिलीन क्रॉस-लिंक विकसित करते हैं, जो रैखिक राल को कठोर थर्मोसेटिंग नेटवर्क बैकेलाइट (Bakelite) में बदल देते हैं",
+      "वे सोडियम द्वारा संतुलित एक स्पष्ट पानी में घुलनशील गैर-आयनिक सर्फेक्टेंट जाली बनाते हैं",
+      "वे एक अशाखित बायोडिग्रेडेबल पॉलिएस्टर श्रृंखला विन्यास में परिवर्तित होते हैं"
+    ],
+    "a": 1,
+    "e": "Phenol-formaldehyde polymerization linear Novolac se cross-linked Bakelite banata hai.\n\n• Option 1 is Incorrect because thermal curing polymerization karwati hai, hydrolytic cleavage nahi.\n\n• Option 2 is Correct because linear Novolac polymer ko jab additional formaldehyde ke sath heat aur cure kiya jata hai, toh formaldehyde reactive methylene groups ($-\text{CH}_2-$) supply karta hai jo adjacent phenolic chains ke beech extensive covalent cross-links form karte hain, producing the rigid 3D thermosetting polymer Bakelite.\n\n• Option 3 is Incorrect because non-ionic surfactant formation unrelated hai.\n\n• Option 4 is Incorrect because biodegradable polyester (PHBV) unrelated hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_77",
+    "qe": "Which physical properties characteristically separate water-soluble globular proteins like insulin from water-insoluble fibrous options?",
+    "qh": "कौन से भौतिक गुण पानी में घुलनशील ग्लोबुलर प्रोटीन जैसे इंसुलिन को पानी में अघुलनशील रेशेदार विकल्पों से विशिष्ट रूप से अलग करते हैं?",
+    "oe": [
+      "Globular proteins are structured as long linear sheets held by coordinate ionic centers",
+      "Globular proteins turn completely volatile under normal room parameters",
+      "Globular proteins contain extensive networks of unbranched synthetic polyolefins",
+      "Globular proteins form compact spherical shapes with polar groups on the exterior, rendering them water-soluble"
+    ],
+    "oh": [
+      "ग्लोबुलर प्रोटीन लंबे रैखिक शीट्स के रूप में संरचित होते हैं जो समन्वय आयनिक केंद्रों द्वारा आयोजित होते हैं",
+      "ग्लोबुलर प्रोटीन सामान्य कमरे के मापदंडों के तहत पूरी तरह से वाष्पशील हो जाते हैं",
+      "ग्लोबुलर प्रोटीन में अशाखित सिंथेटिक पॉलीओलेफ़िन के व्यापक नेटवर्क होते हैं",
+      "ग्लोबुलर प्रोटीन बाहर की तरफ ध्रुवीय समूहों के साथ कॉम्पैक्ट गोलाकार आकार बनाते हैं, जिससे वे पानी में घुलनशील (Water-soluble) हो जाते हैं"
+    ],
+    "a": 3,
+    "e": "Proteins molecular shape ke basis par globular aur fibrous categories mein classify hote hain.\n\n• Option 1 is Incorrect because long linear sheets fibrous proteins (keratin, myosin) form karte hain.\n\n• Option 2 is Incorrect because proteins non-volatile macromolecules hote hain.\n\n• Option 3 is Incorrect because polyolefins synthetic hydrocarbon polymers hote hain.\n\n• Option 4 is Correct because Globular Proteins (jaise Insulin, Albumin) compact spherical 3D conformations mein fold hote hain jahan hydrophilic polar side chains exterior surface par expose hoti hain, making them readily soluble in water, whereas fibrous proteins insoluble thread-like fibers form karte hain."
+  },
+  {
+    "p_id": "bpsc_chem_v4_255",
+    "qe": "What is the correct mathematical expression used to calculate the degree of dissociation ($alpha$) of a weak electrolyte from its molar conductivity values?",
+    "qh": "इलेक्ट्रोलाइट मानों से कमजोर इलेक्ट्रोलाइट के विघटन की डिग्री ($alpha$) की गणना करने के लिए उपयोग किया जाने वाला सही गणितीय व्यंजक क्या है?",
+    "oe": [
+      "$alpha = \frac{Lambda_m}{Lambda_m^circ}$",
+      "$alpha = Lambda_m cdot Lambda_m^circ$",
+      "$alpha = nF E^circ_{\text{cell}}$",
+      "$alpha = \frac{kappa cdot 1000}{M}$"
+    ],
+    "oh": [
+      "$alpha = \frac{Lambda_m}{Lambda_m^circ}$",
+      "$alpha = Lambda_m cdot Lambda_m^circ$",
+      "$alpha = nF E^circ_{\text{cell}}$",
+      "$alpha = \frac{kappa cdot 1000}{M}$"
+    ],
+    "a": 0,
+    "e": "Weak electrolytes ka degree of dissociation molar conductivity ratio se derive hota hai.\n\n• Option 1 is Correct because Kohlrausch's law ke application ke anusar, kisi concentration ($c$) par weak electrolyte ka Degree of Dissociation ($alpha$) us concentration par molar conductivity ($Lambda_m$) aur infinite dilution par limiting molar conductivity ($Lambda_m^circ$) ke ratio ke barabar hota hai: $mathbf{alpha = \frac{Lambda_m}{Lambda_m^circ}}$.\n\n• Option 2 is Incorrect because molar conductivities ka product degree of dissociation nahi deta.\n\n• Option 3 is Incorrect because $nFE^circ_{\text{cell}}$ standard Gibbs free energy change ($Delta G^circ = -nFE^circ$) se relate karta hai.\n\n• Option 4 is Incorrect because $\frac{kappa cdot 1000}{M}$ molar conductivity ($Lambda_m$) calculate karne ka formula hai, $alpha$ ka nahi."
+  },
+  {
+    "p_id": "bpsc_chem_v4_245",
+    "qe": "What is the core mathematical formula used to calculate the Molar Conductivity ($Lambda_m$) of a solution from its specific conductivity ($kappa$) and molarity ($M$) in standard laboratory units?",
+    "qh": "मानक प्रयोगशाला इकाइयों में समाधान की विशिष्ट चालकता ($kappa$) और मोलरिटी ($M$) से उसकी मोलर चालकता ($Lambda_m$) की गणना करने के लिए उपयोग किया जाने वाला मुख्य गणितीय सूत्र क्या है?",
+    "oe": [
+      "$Lambda_m = \frac{1000 cdot kappa}{M}$",
+      "$Lambda_m = kappa cdot G^*$",
+      "$Lambda_m = \frac{kappa cdot R}{M}$",
+      "$Lambda_m = \frac{M cdot kappa}{1000}$"
+    ],
+    "oh": [
+      "$Lambda_m = \frac{1000 cdot kappa}{M}$",
+      "$Lambda_m = kappa cdot G^*$",
+      "$Lambda_m = \frac{kappa cdot R}{M}$",
+      "$Lambda_m = \frac{M cdot kappa}{1000}$"
+    ],
+    "a": 0,
+    "e": "Molar conductivity specific conductance aur electrolytic concentration se define hoti hai.\n\n• Option 1 is Correct because standard practical CGS units mein, jab specific conductivity $kappa$ $\text{S}cdot\text{cm}^{-1}$ mein ho aur concentration $M$ Molarity ($\text{mol}/\text{L}$) mein ho, $1\text{ L} = 1000\text{ cm}^3$ volume factor ke sath working formula hota hai: $mathbf{Lambda_m = \frac{1000 cdot kappa}{M}}$ (units: $\text{S}cdot\text{cm}^2cdot\text{mol}^{-1}$).\n\n• Option 2 is Incorrect because cell constant $G^*$ specific conductivity ke formula ($kappa = G cdot G^*$) mein use hota hai.\n\n• Option 3 is Incorrect because resistance $R$ se direct multiplication invalid hai.\n\n• Option 4 is Incorrect because yeh inverted ratio formula hai."
+  },
+  {
+    "p_id": "bpsc_biomol_v4_22",
+    "qe": "What architectural spatial arrangement characterizes the alpha-helix conformation commonly encountered in the secondary structure of proteins?",
+    "qh": "प्रोटीन की माध्यमिक संरचना में आमतौर पर सामना किए जाने वाले अल्फा-हेलिक्स विन्यास की कौन सी संरचनात्मक स्थानिक व्यवस्था विशेषता है?",
+    "oe": [
+      "A continuous polypeptide chain coiled tightly into a right-handed screw geometry stabilized by hydrogen bonds",
+      "An open open-chain carbohydrate mesh locked by loose glycosidic units",
+      "Individual strands lying parallel to each other held by broad inter-chain linkages",
+      "A cross-linked network layer centered around a quaternary nitrogen group"
+    ],
+    "oh": [
+      "हाइड्रोजन बंधों द्वारा स्थिर एक दाहिने हाथ की पेंच (right-handed screw) जैसी ज्यामिति में कसकर कुंडलित एक सतत पॉलीपेप्टाइड श्रृंखला",
+      "ढीली ग्लाइकोसिडिक इकाइयों द्वारा बंद एक खुली श्रृंखला कार्बोहाइड्रेट जाल",
+      "व्यापक अंतर-श्रृंखला लिंकेज द्वारा आयोजित एक दूसरे के समानांतर पड़ी व्यक्तिगत किस्में",
+      "चतुर्धातुक नाइट्रोजन समूह के आसपास केंद्रित एक क्रॉस-लिंक्ड नेटवर्क परत"
+    ],
+    "a": 0,
+    "e": "Protein secondary structure mein $alpha$-helix primary structural motif hai.\n\n• Option 1 is Correct because $alpha$-Helix conformation mein single linear polypeptide chain regularly ek right-handed (clockwise) screw geometry mein tightly coil hoti hai, jo har turn par amino acid residue ($n$) ke carbonyl oxygen ($-C=O$) aur chauthe residue ($n+4$) ke amide hydrogen ($-NH-$) ke beech Intramolecular Hydrogen Bonds dwara stabilize hoti hai.\n\n• Option 2 is Incorrect because open carbohydrate mesh polysaccharides ka structure hai.\n\n• Option 3 is Incorrect because parallel strands inter-chain hydrogen bonds ke sath $\beta$-pleated sheet conformation ko describe karte hain.\n\n• Option 4 is Incorrect because quaternary nitrogen synthetic surfactants ka feature hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_51_dup",
+    "qe": "What precise physical scenario proceeds when a protective lyophilic agent like gelatin is deliberately introduced into an unstable gold sol?",
+    "qh": "जब एक सुरक्षात्मक लायोफिलिक एजेंट जैसे जिलेटिन को जानबूझकर एक अस्थिर गोल्ड सॉल (gold sol) में मिलाया जाता है तो क्या सटीक भौतिक परिदृश्य आगे बढ़ता है?",
+    "oe": [
+      "Gelatin forms a protective lyophilic envelope around the gold particles, stabilizing the lyophobic sol",
+      "The gold particles disintegrate completely into a volatile gas phase configuration",
+      "The system forms a permanent cross-linked network typical of a thermosetting matrix",
+      "The entire mixture undergoes spontaneous chemical reduction to open-chain carbohydrates"
+    ],
+    "oh": [
+      "जिलेटिन सोने के कणों के चारों ओर एक सुरक्षात्मक लायोफिलिक आवरण बनाता है, जो लायोफोबिक सॉल को स्थिर करता है",
+      "सोने के कण पूरी तरह से एक वाष्पशील गैस चरण विन्यास में विघटित हो जाते हैं",
+      "प्रणाली एक थर्मोसेटिंग मैट्रिक्स का एक स्थायी क्रॉस-लिंक्ड नेटवर्क बनाती है",
+      "पूरा मिश्रण खुली श्रृंखला वाले कार्बोहाइड्रेट के लिए सहज रासायनिक कमी से गुजरता है"
+    ],
+    "a": 0,
+    "e": "Gelatin lyophobic gold sol ke liye protective colloid ki tarah act karta hai.\n\n• Option 1 is Correct because Gold sol ek unstable lyophobic sol hai jo trace electrolytes se precipitate ho jata hai. Jab Gelatin (lyophilic colloid) add kiya jata hai, toh gelatin macromolecules gold particles ke surface par adsorb hokar ek protective hydrophilic hydration sheath create kar dete hain, jo electrolytes ke coagulating ions ko gold core ke contact mein aane se rokti hai aur sol ko stabilize karti hai.\n\n• Option 2 is Incorrect because gold particles gas phase mein disintegrate nahi hote.\n\n• Option 3 is Incorrect because thermosetting cross-linked matrix formation nahi hota.\n\n• Option 4 is Incorrect because carbohydrate reduction unrelated hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_52_dup",
+    "qe": "Through what surface chemical mechanism does spraying silver iodide particles onto rain clouds generate artificial rainfall in global meteorology?",
+    "qh": "वैश्विक मौसम विज्ञान में वर्षा बादलों पर सिल्वर आयोडाइड कणों का छिड़काव करने से किस सतही रासायनिक तंत्र द्वारा कृत्रिम वर्षा उत्पन्न होती है?",
+    "oe": [
+      "It forms a highly regular crystalline matrix centered around uncharged starch",
+      "It acts as an electrolyte, driving the coagulation of charged colloidal water droplets into heavy rain particles",
+      "It transforms passing clouds into volatile non-ionic long-chain polyolefins",
+      "It lowers the atmospheric temperature down to absolute zero boundaries"
+    ],
+    "oh": [
+      "यह अपरिवर्तित स्टार्च के आसपास केंद्रित एक अत्यधिक नियमित क्रिस्टलीय मैट्रिक्स बनाता है",
+      "यह एक विद्युत-अपघट्य/न्यूक्लिएटिंग एजेंट के रूप में कार्य करता है, जो आवेशित कोलाइडल पानी की बूंदों के भारी बारिश के कणों में स्कंदन (Coagulation) को संचालित करता है",
+      "यह गुजरने वाले बादलों को वाष्पशील गैर-आयनिक लंबी श्रृंखला वाले पॉलीओलेफ़िन में बदल देता है",
+      "यह वायुमंडलीय तापमान को पूर्ण शून्य सीमाओं तक कम कर देता है"
+    ],
+    "a": 1,
+    "e": "Cloud seeding colloidal coagulation aur condensation principles par operate karta hai.\n\n• Option 1 is Incorrect because starch matrix formation se unrelated hai.\n\n• Option 2 is Correct because atmospheric clouds water droplets ke colloidal aerosol dispersions hote hain jo mutual electrostatic repulsion se suspended rehte hain. Silver Iodide ($\text{AgI}$) spray karne par ye crystalline nuclei aur counter-ions provide karta hai jo colloidal water droplets ke surface charges ko neutralize kar deta hai, driving rapid coagulation into heavy raindrops jo artificial rain ke roop mein girti hain.\n\n• Option 3 is Incorrect because polyolefin transformation unrelated hai.\n\n• Option 4 is Incorrect because open atmosphere mein absolute zero temperature achieve nahi kiya ja sakta."
+  },
+  {
+    "p_id": "bpsc_surface_v4_53_dup",
+    "qe": "What specific formulation role does the peptide gelatin assumes when deliberately added during the manufacturing of commercial ice-creams?",
+    "qh": "व्यावसायिक आइसक्रीम के निर्माण के दौरान जानबूझकर मिलाए जाने पर पेप्टाइड जिलेटिन कौन सी विशिष्ट फॉर्मूलेशन भूमिका निभाता है?",
+    "oe": [
+      "It behaves as an emulsifying agent that forms an interfacial stabilizing layer between the droplets and medium",
+      "It converts natural sucrose into a zero-calorie chlorinated derivative",
+      "It acts as a non-competitive irreversible suicide enzyme inhibitor",
+      "It functions as a highly volatile liquid non-polar solvent builder"
+    ],
+    "oh": [
+      "यह एक पायसीकारी एजेंट (Emulsifying agent) के रूप में कार्य करता है जो बूंदों और माध्यम के बीच एक इंटरफेशियल स्थिर परत बनाता है",
+      "यह प्राकृतिक सुक्रोज को शून्य-कैलोरी क्लोरीनयुक्त व्युत्पन्न में परिवर्तित करता है",
+      "यह एक गैर-प्रतिस्पर्धी अपरिवर्तनीय आत्मघाती एंजाइम अवरोधक के रूप में कार्य करता है",
+      "यह एक अत्यधिक वाष्पशील तरल गैर-ध्रुवीय विलायक निर्माता के रूप में कार्य करता है"
+    ],
+    "a": 0,
+    "e": "Ice-cream formulations mein gelatin colloidal stabilizer aur emulsifier ka kaam karta hai.\n\n• Option 1 is Correct because Ice cream ek complex emulsion aur foam colloid hai jisme fat droplets aur water naturally separate hone ki tendency rakhte hain. Gelatin add karne par ye ek protective emulsifying agent ki tarah act karta hai, oil-water interface par protective viscoelastic layer form karta hai jo fat coalescence aur large ice crystal growth ko inhibit karke smooth creamy texture provide karta hai.\n\n• Option 2 is Incorrect because sucrose chlorinated derivative (sucralose) mein convert nahi hota.\n\n• Option 3 is Incorrect because gelatin toxic enzyme inhibitor nahi hai.\n\n• Option 4 is Incorrect because gelatin volatile solvent builder nahi hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_54_dup",
+    "qe": "What precise chemical formulation and composition defines the specialized industrial mixture known as collodion?",
+    "qh": "कौन सा सटीक रासायनिक फॉर्मूलेशन और संरचना कोलोडियन (collodion) के रूप में जाने जाने वाले विशेष औद्योगिक मिश्रण को परिभाषित करती है?",
+    "oe": [
+      "A quaternary ammonium halide compound dissolved in fuming nitric acid",
+      "A cross-linked phenolic resin syrup dissolved in concentrated basic minerals",
+      "A $4\\%$ solution of nitrocellulose in a volatile mixture of alcohol and ether",
+      "A $10\\%$ solution of unbranched natural cellulose in pure water"
+    ],
+    "oh": [
+      "धूम्रपान नाइट्रिक एसिड में भंग एक चतुर्धातुक अमोनियम हैलाइड यौगिक",
+      "सांद्र बुनियादी खनिजों में भंग एक क्रॉस-लिंक्ड फेनोलिक राल सिरप",
+      "अल्कोहल और ईथर के वाष्पशील मिश्रण में नाइट्रोसेल्यूलोज का $4\\%$ घोल",
+      "शुद्ध पानी में अशाखित प्राकृतिक सेल्यूलोज का $10\\%$ घोल"
+    ],
+    "a": 2,
+    "e": "Collodion ultrafilter papers prepare karne ke liye standard industrial reagent hai.\n\n• Option 1 is Incorrect because fuming nitric acid ammonium halide mixture collodion nahi hota.\n\n• Option 2 is Incorrect because phenolic resin syrup Bakelite chemistry ka part hai.\n\n• Option 3 is Correct because Collodion (कोलोडियन) alcohol aur diethyl ether ke volatile mixture mein Cellulose Nitrate (Nitrocellulose) ka $4\\%$ solution hota hai. Colloid chemistry mein ordinary filter paper ko collodion mein soak karke ultrafilter paper banaya jata hai jisse colloidal particles retain ho sakein.\n\n• Option 4 is Incorrect because natural cellulose pure water mein insoluble hota hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_55_dup",
+    "qe": "Why is the chemical substance alum systematically added to turbid municipal water supplies during primary water purification steps?",
+    "qh": "प्राथमिक जल शुद्धिकरण चरणों के दौरान गंदे पानी की आपूर्ति में रासायनिक पदार्थ फिटकरी (alum) को व्यवस्थित रूप से क्यों जोड़ा जाता है?",
+    "oe": [
+      "Its highly charged aluminum cations coagulate the suspended negatively charged colloidal impurities, forcing them to settle down",
+      "It dissolves the mud particles completely into a volatile gas phase configuration",
+      "It alters the internal molecular weight of water molecules up to infinite thresholds",
+      "It transforms natural micro-organisms into unbranched linear synthetic polyolefins"
+    ],
+    "oh": [
+      "इसके अत्यधिक आवेशित एल्युमिनियम धनायन निलंबित ऋणावेशित कोलाइडल अशुद्धियों को स्कंदित करते हैं, जिससे वे नीचे बैठ जाती हैं",
+      "यह मिट्टी के कणों को पूरी तरह से वाष्पशील गैस चरण विन्यास में घोल देता है",
+      "यह पानी के अणुओं के आंतरिक आणविक भार को अनंत सीमाओं तक बदल देता है",
+      "यह प्राकृतिक सूक्ष्मजीवों को अशाखित रैखिक सिंथेटिक पॉलीओलेफ़िन में बदल देता है"
+    ],
+    "a": 0,
+    "e": "Water purification mein coagulating electrolytes mud particles ko settle karate hain.\n\n• Option 1 is Correct because muddy water negatively charged clay aur silt colloidal particles contain karta hai. Alum [$\text{K}_2\text{SO}_4 cdot \text{Al}_2(\text{SO}_4)_3 cdot 24\text{H}_2\text{O}$] add karne par release hone wale trivalent Aluminum cations ($\text{Al}^{3+}$) Hardy-Schulze rule ke according suspended negative colloidal particles ko rapidly neutralize aur coagulate kar dete hain, forcing them to aggregate and settle down at the bottom.\n\n• Option 2 is Incorrect because mud particles gases mein dissolve nahi hote.\n\n• Option 3 is Incorrect because water ka molecular weight alter nahi hota.\n\n• Option 4 is Incorrect because micro-organisms polyolefins mein transform nahi hote."
+  },
+  {
+    "p_id": "bpsc_surface_v4_56_dup",
+    "qe": "What physical phenomenon occurs when a continuous electric field is applied across a standard sample of a colloidal dispersion?",
+    "qh": "जब एक कोलाइडल फैलाव (colloidal dispersion) के मानक नमूने पर एक निरंतर विद्युत क्षेत्र लागू किया जाता है तो क्या भौतिक घटना घटित होती है?",
+    "oe": [
+      "The solution undergoes immediate transformation into an open-chain dicarboxylic acid",
+      "The charged colloidal particles migrate through the dispersion medium toward the oppositely charged electrode terminal, a process termed electrophoresis",
+      "The individual ions convert into a highly branched cross-linked thermoplastic",
+      "The system structures an explicit water-soluble uncharged non-ionic surfactant lattice"
+    ],
+    "oh": [
+      "घोल एक खुली श्रृंखला वाले डाइकार्बोक्सिलिक एसिड में तत्काल परिवर्तन से गुजरता है",
+      "आवेशित कोलाइडल कण परिक्षेपण माध्यम से होकर विपरीत आवेशित इलेक्ट्रोड टर्मिनल की ओर गति करते हैं, इस प्रक्रिया को वैद्युतकणसंचलन (Electrophoresis) कहा जाता है",
+      "व्यक्तिगत आयन अत्यधिक शाखित क्रॉस-लिंक्ड थर्मोप्लास्टिक में परिवर्तित होते हैं",
+      "प्रणाली एक स्पष्ट पानी में घुलनशील अपरिवर्तित गैर-आयनिक सर्फेक्टेंट जाली बनाती है"
+    ],
+    "a": 1,
+    "e": "Colloidal particles electric potential gradient ke under directional movement show karte hain.\n\n• Option 1 is Incorrect because dicarboxylic acid transformation unrelated hai.\n\n• Option 2 is Correct because colloidal particles electrical surface charge carry karte hain. External electric field apply karne par charged colloidal particles dispersion medium ke through oppositely charged electrode ki taraf migrate karte hain, jise Electrophoresis (वैद्युतकणसंचलन) kaha jata hai.\n\n• Option 3 is Incorrect because thermoplastic conversion unrelated hai.\n\n• Option 4 is Incorrect because surfactant lattice structure form nahi hoti."
+  },
+  {
+    "p_id": "bpsc_surface_v4_57",
+    "qe": "What mechanical boundary phenomenon drives the continuous, erratic zig-zag Brownian movement displayed by colloidal particles?",
+    "qh": "कौन सी यांत्रिक घटना (mechanical boundary phenomenon) कोलाइडल कणों द्वारा प्रदर्शित निरंतर, अनियमित टेढ़े-मेढ़े ब्राउनियन गति (Brownian movement) को संचालित करती है?",
+    "oe": [
+      "The chemical cross-linking of linear intermediate resins around active sites",
+      "The unbalanced kinetic bombardment of the dispersed phase particles by the highly active molecules of the continuous dispersion medium",
+      "The complete conversion of all carbonyl groups into volatile non-ionic ethers",
+      "The spontaneous magnetic attraction across the non-polar coordinate cells"
+    ],
+    "oh": [
+      "सक्रिय स्थलों के चारों ओर रैखिक मध्यवर्ती रेजिन का रासायनिक क्रॉस-लिंकिंग",
+      "निरंतर परिक्षेपण माध्यम के अत्यधिक सक्रिय अणुओं द्वारा परिक्षेपित प्रावस्था के कणों पर असंतुलित गतिज प्रहार",
+      "सभी कार्बोनिल समूहों का वाष्पशील गैर-आयनिक ईथरों में पूर्ण रूपांतरण",
+      "गैर-ध्रुवीय समन्वय कोशिकाओं में स्वतःस्फूर्त चुंबकीय आकर्षण"
+    ],
+    "a": 1,
+    "e": "Brownian movement colloidal particles par continuous molecular collisions ke kaaran hota hai.\n\n• Option 1 is Incorrect because resin cross-linking polymerization process hai.\n\n• Option 2 is Correct because Brownian movement liquid dispersion medium ke rapidly moving thermal molecules dwara colloidal particles par deliver kiye jaane wale continuous, random aur unbalanced kinetic bombardment se drive hota hai. Opposing collisions cancel out na hone ke karan particles continuous erratic zig-zag trajectory follow karte hain.\n\n• Option 3 is Incorrect because carbonyl reduction reaction se unrelated hai.\n\n• Option 4 is Incorrect because magnetic attraction nahi hota."
+  },
+  {
+    "p_id": "bpsc_surface_v4_58",
+    "qe": "When a small sample of iron(III) chloride ($\text{FeCl}_3$) is added into an excess volume of boiling water, what type of colloidal sol is synthesized?",
+    "qh": "जब उबलते पानी की अत्यधिक मात्रा में आयरन(III) क्लोराइड ($\text{FeCl}_3$) का एक छोटा नमूना मिलाया जाता है, तो किस प्रकार का कोलाइडल सॉल संश्लेषित होता है?",
+    "oe": [
+      "An uncharged non-ionic dynamic linear polyester polymer grid",
+      "A negatively charged sol stabilized by chloride anions",
+      "A positively charged sol of hydrated ferric oxide due to preferential adsorption of $\text{Fe}^{3+}$ ions",
+      "A three-dimensional cross-linked phenolic thermosetting net bar"
+    ],
+    "oh": [
+      "एक अनावेशित गैर-आयनिक गतिशील रैखिक पॉलिएस्टर बहुलक ग्रिड",
+      "क्लोराइड ऋणायनों द्वारा स्थिर किया गया एक ऋणावेशित सॉल",
+      "$\text{Fe}^{3+}$ आयनों के प्राथमिक अधिशोषण के कारण जलयोजित फेरिक ऑक्साइड का एक धनावेशित सॉल",
+      "एक त्रि-आयामी क्रॉस-लिंक्ड फेनोलिक थर्मोसेटिंग नेट बार"
+    ],
+    "a": 2,
+    "e": "Sol synthesis ke dauran preferential ion adsorption charge determine karta hai.\n\n• Option 1 is Incorrect because polyester grids synthetic polymers hote hain.\n\n• Option 2 is Incorrect because $\text{FeCl}_3$ ko boiling water mein add karne par positively charged sol banta hai ($\text{FeCl}_3$ ko excess $\text{NaOH}$ mein add karne par negatively charged sol banta hai).\n\n• Option 3 is Correct because boiling water mein $\text{FeCl}_3$ add karne par hydrolysis hoti hai ($\text{FeCl}_3 + 3\text{H}_2\text{O} \rightarrow \text{Fe}_2\text{O}_3 cdot x\text{H}_2\text{O} + 3\text{HCl}$). Resulting hydrated ferric oxide particles solution se common $\text{Fe}^{3+}$ cations ko preferentially adsorb kar lete hain, forming a positively charged sol ($[\text{Fe}_2\text{O}_3 cdot x\text{H}_2\text{O}]\text{Fe}^{3+}$).\n\n• Option 4 is Incorrect because phenolic resin unrelated hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_59",
+    "qe": "What physical consequence occurs if an excessive concentration of sodium chloride ($\text{NaCl}$) is mixed into a positively charged sol of hydrated ferric oxide?",
+    "qh": "यदि हाइड्रेटेड फेरिक ऑक्साइड के धनात्मक रूप से आवेशित सॉल में सोडियम क्लोराइड ($\text{NaCl}$) की अत्यधिक सांद्रता मिला दी जाए तो क्या भौतिक परिणाम होता है?",
+    "oe": [
+      "The iron atoms undergo direct transformation into a chlorinated furanose sugar",
+      "The negatively charged chloride ions ($\text{Cl}^-$) neutralize the positive surface charges, triggering rapid coagulation and precipitation",
+      "The colloid turns completely transparent and fluidly volatile",
+      "The framework dissolves into an open-chain aliphatic polyolefin tail matrix"
+    ],
+    "oh": [
+      "लोहे के परमाणु सीधे क्लोरीनयुक्त फुरानोज शर्करा में परिवर्तित हो जाते हैं",
+      "ऋणावेशित क्लोराइड आयन ($\text{Cl}^-$) धनात्मक सतह आवेशों को बेअसर करते हैं, जिससे तीव्र स्कंदन (Coagulation) और अवक्षेपण होता है",
+      "कोलाइड पूरी तरह से पारदर्शी और तरल रूप से वाष्पशील हो जाता है",
+      "ढांचा एक खुली श्रृंखला वाले एलिफैटिक पॉलीओलेफिन टेल मैट्रिक्स में घुल जाता है"
+    ],
+    "a": 1,
+    "e": "Electrolytes colloidal surface charges ko neutralize karke coagulation cause karte hain.\n\n• Option 1 is Incorrect because iron furanose sugar mein transform nahi hota.\n\n• Option 2 is Correct because hydrated ferric oxide sol positively charged ($[\text{Fe}_2\text{O}_3 cdot x\text{H}_2\text{O}]\text{Fe}^{3+}$) hota hai. Hardy-Schulze rule ke according, jab electrolyte $\text{NaCl}$ add kiya jata hai, toh negatively charged chloride anions ($\text{Cl}^-$) positive surface charges ko neutralize kar dete hain; electrostatic repulsion eliminate hone ke karan particles aggregate hokar rapid coagulation and precipitation undergo karte hain.\n\n• Option 3 is Incorrect because coagulation se turbidity aur sedimentation hoti hai, transparent volatility nahi.\n\n• Option 4 is Incorrect because polyolefin matrix surfactant micelle structure se related hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_60",
+    "qe": "Why do therapeutic drug formulations often exhibit dramatically enhanced operational efficacy when administered to a patient in a colloidal state?",
+    "qh": "चिकित्सीय दवा फार्मूलेशन अक्सर कोलाइडल अवस्था (colloidal state) में रोगी को दिए जाने पर नाटकीय रूप से बढ़ी हुई परिचालन प्रभावकारिता क्यों प्रदर्शित करते हैं?",
+    "oe": [
+      "Because they completely lack any ionizable functional groups across their backbones",
+      "Because they convert internal stomach contents into highly stable non-ionic polyols",
+      "Because the colloidal form provides an immense surface area that optimizes speed of assimilation and biological uptake within the body",
+      "Because they rely on strong covalent bonds that block all allosteric sites permanently"
+    ],
+    "oh": [
+      "क्योंकि उनकी मुख्य श्रृंखला में किसी भी आयनीकरण योग्य कार्यात्मक समूह का पूरी तरह से अभाव होता है",
+      "क्योंकि वे आंतरिक पेट की सामग्री को अत्यधिक स्थिर गैर-आयनिक पॉलीओल्स में बदल देते हैं",
+      "क्योंकि कोलाइडल रूप एक विशाल पृष्ठीय क्षेत्रफल प्रदान करता है जो शरीर के भीतर अवशोषण और जैविक उपयोग की गति को अनुकूलित करता है",
+      "क्योंकि वे मजबूत सहसंयोजक बंधों पर निर्भर करते हैं जो सभी एलोस्टेरिक साइटों को स्थायी रूप से अवरुद्ध करते हैं"
+    ],
+    "a": 2,
+    "e": "Colloidal medicines particle size aur specific surface area optimize karti hain.\n\n• Option 1 is Incorrect because ionizable groups ki absence efficacy ka cause nahi hai.\n\n• Option 2 is Incorrect because colloidal drugs stomach contents ko polyols mein convert nahi karti.\n\n• Option 3 is Correct because colloidal state ($1-1000\text{ nm}$) per unit mass ek immense specific surface area provide karti hai. Ye increased active surface area drug dissolution rates, membrane permeability, aur biological uptake ko accelerate karta hai, enabling faster assimilation aur higher therapeutic efficacy.\n\n• Option 4 is Incorrect because therapeutic drugs mostly reversible interactions use karti hain, permanent allosteric poisoning nahi."
+  },
+  {
+    "p_id": "bpsc_surface_v4_61",
+    "qe": "Through what surface chemical phenomenon does raw animal hide transform into tough, hard, and resilient structural leather during commercial tanning processes?",
+    "qh": "कच्ची पशु खाल (raw animal hide) किस सतही रासायनिक घटना के माध्यम से व्यावसायिक टैनिंग प्रक्रियाओं के दौरान सख्त, कठोर और लचीले संरचनात्मक चमड़े में बदल जाती है?",
+    "oe": [
+      "Continuous monomolecular liquid-liquid emulsification",
+      "Hydrolytic ring-opening cleavage of cross-linked resin segments",
+      "The step-growth condensation rate profile acceleration via basic mineral salts",
+      "Mutual coagulation triggered when positively charged hide particles combine with negatively charged tannin colloids"
+    ],
+    "oh": [
+      "निरंतर एकल-आणविक द्रव-द्रव पायसीकरण (Liquid-liquid emulsification)",
+      "क्रॉस-लिंक्ड रेजिन खंडों का हाइड्रोलाइटिक रिंग-ओपनिंग विखंडन",
+      "क्षारीय खनिज लवणों के माध्यम से चरण-वृद्धि संघनन दर प्रोफ़ाइल त्वरण",
+      "पारस्परिक स्कंदन (Mutual coagulation) जो तब शुरू होता है जब धनावेशित खाल के कण ऋणावेशित टैनिन कोलाइड के साथ संयोजित होते हैं"
+    ],
+    "a": 3,
+    "e": "Leather tanning mutual coagulation ke principle par operate karta hai.\n\n• Option 1 is Incorrect because tanning solid-phase mutual precipitation process hai, liquid-liquid emulsion nahi.\n\n• Option 2 is Incorrect because ring-opening cleavage polymer chemistry ka mechanism hai.\n\n• Option 3 is Incorrect because step-growth condensation synthetic polymers mein hoti hai.\n\n• Option 4 is Correct because raw animal hide positively charged collagen protein fibers se bani hoti hai, jabki tannins aur chromium compounds negatively charged colloidal sols hote hain. Jab hides ko tanning bath mein soak kiya jata hai, toh Mutual Coagulation occur hoti hai jo protein chains ko cross-link karke hard, non-decomposable leather mein harden kar deti hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_62",
+    "qe": "How does an industrial Cottrell precipitator successfully remove toxic soot and carbon smoke particles from factory chimney exhaust emissions?",
+    "qh": "एक औद्योगिक कॉटरेल अवक्षेपक (Cottrell precipitator) कारखाने की चिमनी के निकास उत्सर्जन से जहरीली कालिख और कार्बन धुएं के कणों को सफलतापूर्वक कैसे हटाता है?",
+    "oe": [
+      "By boiling the gas stream to convert carbon into volatile open-chain methane",
+      "By deploying cross-linked phenolic thermosetting network resins inside the flue gas",
+      "By passing the charged smoke particles through a high-voltage chamber containing oppositely charged plates, neutralizing and precipitating the soot",
+      "By transforming the aerosol into a water-soluble non-ionic carbohydrate grid"
+    ],
+    "oh": [
+      "कार्बन को वाष्पशील खुली श्रृंखला वाले मीथेन में बदलने के लिए गैस स्ट्रीम को उबालकर",
+      "फ्लू गैस के अंदर क्रॉस-लिंक्ड फेनोलिक थर्मोसेटिंग नेटवर्क रेजिन को तैनात करके",
+      "आवेशित धुएं के कणों को विपरीत आवेशित प्लेटों वाले उच्च-वोल्टेज कक्ष से गुजारकर, कालिख को उदासीन और अवक्षेपित करके",
+      "एरोसोल को पानी में घुलनशील गैर-आयनिक कार्बोहाइड्रेट ग्रिड में बदलकर"
+    ],
+    "a": 2,
+    "e": "Cottrell precipitator smoke aerosol ko electrostatic field se purify karta hai.\n\n• Option 1 is Incorrect because soot boiling se methane mein convert nahi hota.\n\n• Option 2 is Incorrect because phenolic resins precipitators mein use nahi hote.\n\n• Option 3 is Correct because smoke ek charged colloidal aerosol (soot particles in hot gases) hota hai. Cottrell Precipitator mein smoke ko $30,000-50,000\text{ V}$ ke high-voltage oppositely charged electrode plates ke beech se pass kiya jata hai; charged soot particles opposite electrode par touch hokar discharge hote hain, coagulate karte hain, aur hopper mein precipitate hokar clean gas release karte hain.\n\n• Option 4 is Incorrect because aerosol carbohydrates mein transform nahi hota."
+  },
+  {
+    "p_id": "bpsc_surface_v4_63",
+    "qe": "Which analytical testing method allows a chemical technician to definitively determine which phase is the dispersed phase versus the dispersion medium inside an unknown emulsion sample?",
+    "qh": "कौन सी विश्लेषणात्मक परीक्षण विधि एक रासायनिक तकनीशियन को निश्चित रूप से यह निर्धारित करने की अनुमति देती है कि एक अज्ञात पायस (emulsion) नमूने के भीतर कौन सा चरण बिखरा हुआ चरण (dispersed phase) बनाम फैलाव माध्यम (dispersion medium) है?",
+    "oe": [
+      "Subjecting the sample to fuming nitric acid distillation pathways",
+      "Verifying if the material undergoes rapid free-radical coordination transformations",
+      "Measuring the cross-linking density of the methylene bridges under pressure",
+      "Dilution testing: adding excess dispersion medium blends smoothly, while adding excess dispersed phase separates into a distinct isolated layer"
+    ],
+    "oh": [
+      "नमूने को सधूम नाइट्रिक एसिड आसवन मार्गों के अधीन करना",
+      "यह सत्यापित करना कि क्या सामग्री तेजी से मुक्त-कण समन्वय परिवर्तनों से गुजरती है",
+      "दबाव में मेथिलीन पुलों के क्रॉस-लिंकिंग घनत्व को मापना",
+      "तनुकरण परीक्षण (Dilution testing): अतिरिक्त परिक्षेपण माध्यम मिलाने पर वह आसानी से मिल जाता है, जबकि अतिरिक्त परिक्षेपित प्रावस्था मिलाने पर वह एक अलग पृथक परत में विभाजित हो जाता है"
+    ],
+    "a": 3,
+    "e": "Dilution test emulsion type determine karne ka standard diagnostic method hai.\n\n• Option 1 is Incorrect because fuming nitric acid destructive reagent hai, emulsion test nahi.\n\n• Option 2 is Incorrect because free-radical transformations polymer chemistry ka part hain.\n\n• Option 3 is Incorrect because methylene bridge density Bakelite resin testing hai.\n\n• Option 4 is Correct because Dilution Test ke mutabiq, emulsion ko uske continuous dispersion medium ka excess add karke smoothly dilute kiya ja sakta hai bina break hue; par agar dispersed phase ko excess mein add kiya jaye, toh wo mix nahi hota aur ek separate immiscible layer form kar leta hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_64",
+    "qe": "Why do physical adsorption (physisorption) and chemical adsorption (chemisorption) show opposite trends when the system operational temperature is raised?",
+    "qh": "प्रणाली के परिचालन तापमान को बढ़ाने पर भौतिक अधिशोषण (physisorption) और रासायनिक अधिशोषण (chemisorption) विपरीत प्रवृत्तियाँ क्यों दिखाते हैं?",
+    "oe": [
+      "There is no operational difference; both follow identical exothermic thresholds",
+      "Physisorption is an open open-chain carbohydrate mesh, while chemisorption is a phenolic network",
+      "Physisorption relies on weak van der Waals forces that break easily at high temperatures, whereas chemisorption requires activation energy to form chemical bonds and is initially favored by heat",
+      "Physisorption is driven by strong ionic links that fracture under heat"
+    ],
+    "oh": [
+      "कोई परिचालन अंतर नहीं है; दोनों समान ऊष्माक्षेपी सीमाओं का पालन करते हैं",
+      "भौतिक अधिशोषण एक खुली श्रृंखला कार्बोहाइड्रेट जाल है, जबकि रासायनिक अधिशोषण एक फेनोलिक नेटवर्क है",
+      "भौतिक अधिशोषण कमजोर वांडर वाल्स बलों पर निर्भर करता है जो उच्च तापमान पर आसानी से टूट जाते हैं, जबकि रासायनिक अधिशोषण के लिए रासायनिक बंध बनाने हेतु सक्रियण ऊर्जा की आवश्यकता होती है और प्रारंभ में गर्मी इसके अनुकूल होती है",
+      "भौतिक अधिशोषण मजबूत आयनिक बंधों द्वारा संचालित होता है जो गर्मी के तहत टूट जाते हैं"
+    ],
+    "a": 2,
+    "e": "Physisorption aur chemisorption bonding aur activation energy differences ke karan distinct temperature responses display karte hain.\n\n• Option 1 is Incorrect because dono opposite initial temperature curves follow karte hain.\n\n• Option 2 is Incorrect because carbohydrate aur phenolic descriptions unrelated hain.\n\n• Option 3 is Correct because Physisorption weak van der Waals forces par depend karta hai aur exothermic hone ke kaaran temperature badhane par desorption trigger hota hai (monotonically decreases); jabki Chemisorption chemical bond formation involve karta hai jiske liye Activation Energy ($E_a$) chahiye hoti hai, isliye initial temperature increase reaction barrier overcome karke chemisorption ko increase karta hai before declining at high temperatures.\n\n• Option 4 is Incorrect because physisorption weak van der Waals forces par based hai, strong ionic links par nahi."
+  },
+  {
+    "p_id": "bpsc_surface_v4_65",
+    "qe": "What serious hazard occurs within a stable colloidal dispersion if the purification step known as dialysis is carried out for a prolonged period?",
+    "qh": "यदि डायलिसिस (dialysis) के रूप में जाने जाने वाले शुद्धिकरण चरण को लंबे समय तक चलाया जाए तो एक स्थिर कोलाइडल फैलाव के भीतर क्या गंभीर खतरा पैदा होता है?",
+    "oe": [
+      "The individual ions convert into a highly branched cross-linked thermoplastic resin",
+      "The trace stabilizing electrolytes are completely stripped away, destroying the surface charges and triggering rapid coagulation",
+      "The continuous medium turns entirely volatile and boils away into gas",
+      "The entire mixture converts into an open-chain dicarboxylic acid fragment"
+    ],
+    "oh": [
+      "व्यक्तिगत आयन एक अत्यधिक शाखित क्रॉस-लिंक्ड थर्मोप्लास्टिक राल में परिवर्तित होते हैं",
+      "ट्रेस स्थिर करने वाले विद्युत-अपघट्य (electrolytes) पूरी तरह से छिन जाते हैं, जिससे सतह के आवेश नष्ट हो जाते हैं और तीव्र स्कंदन (coagulation) शुरू हो जाता है",
+      "निरंतर माध्यम पूरी तरह से वाष्पशील हो जाता है और गैस में उबल जाता है",
+      "पूरा मिश्रण एक खुली श्रृंखला वाले डाइकार्बोक्सिलिक एसिड टुकड़े में बदल जाता है"
+    ],
+    "a": 1,
+    "e": "Dialysis se crystalloid impurities remove hoti hain par trace electrolyte sol stability ke liye mandatory hota hai.\n\n• Option 1 is Incorrect because thermoplastic resin conversion polymer chemistry ka part hai.\n\n• Option 2 is Correct because colloidal particles ki electrical double layer aur surface charge maintain karne ke liye dissolved electrolyte ki trace quantity fundamentally essential hoti hai. Agar dialysis excessively prolonged period ke liye continue ki jaye, toh ye essential stabilizing electrolytes bhi diffuse out ho jaate hain, destroying the surface charge and triggering rapid coagulation and precipitation.\n\n• Option 3 is Incorrect because dispersion medium boil away nahi hota.\n\n• Option 4 is Incorrect because dicarboxylic acid fragment formation nahi hota."
+  },
+  {
+    "p_id": "bpsc_surface_v4_66",
+    "qe": "Why does a white precipitate of a silver halide turn into a colored solid mass when exposed to an aqueous solution containing the dye eosin?",
+    "qh": "सिल्वर हैलाइड का एक सफेद अवक्षेप (white precipitate) ईोसिन डाई युक्त जलीय घोल के संपर्क में आने पर रंगीन ठोस द्रव्यमान में क्यों बदल जाता है?",
+    "oe": [
+      "Because it forms a highly volatile open-chain carbohydrate mesh under heat",
+      "Because the colored dye molecules undergo selective surface adsorption onto the silver halide crystal faces",
+      "Because the treatment converts the halide ions into narrow-spectrum antibiotics",
+      "Because the dye dissolves the silver lattice completely via basic mineral buffering"
+    ],
+    "oh": [
+      "क्योंकि यह गर्मी के तहत अत्यधिक वाष्पशील खुली श्रृंखला कार्बोहाइड्रेट जाल बनाता है",
+      "क्योंकि रंगीन डाई के अणु सिल्वर हैलाइड क्रिस्टल चेहरों पर चयनात्मक सतही अधिशोषण (selective surface adsorption) से गुजरते हैं",
+      "क्योंकि उपचार हैलाइड आयनों को संकीर्ण-स्पेक्ट्रम एंटीबायोटिक्स में परिवर्तित करता है",
+      "क्योंकि डाई बुनियादी खनिज बफरिंग के माध्यम से चांदी के जालक को पूरी तरह से घोल देती है"
+    ],
+    "a": 1,
+    "e": "Adsorption indicators precipitation titrations mein surface adsorption ke through color change impart karte hain.\n\n• Option 1 is Incorrect because carbohydrate mesh formation unrelated hai.\n\n• Option 2 is Correct because argentometric titrations (Fajans method) mein silver halide precipitate equivalence point par excess $\text{Ag}^+$ ions adsorb karke positively charged ho jata hai. Ye charged crystal surfaces eosin dye ke colored organic anions ko selective surface adsorption ke through adsorb kar leti hain, turning the white precipitate into a distinctly colored solid mass.\n\n• Option 3 is Incorrect because antibiotics formation unrelated hai.\n\n• Option 4 is Incorrect because dye silver precipitate lattice ko dissolve nahi karta."
+  },
+  {
+    "p_id": "bpsc_surface_v4_67",
+    "qe": "What surface chemical mechanism allows a moist lump of alum to quickly stop bleeding when rubbed over a minor skin cut?",
+    "qh": "कौन सा सतही रासायनिक तंत्र फिटकरी (alum) के एक नम टुकड़े को मामूली त्वचा कटने पर रगड़ने से रक्तस्राव को जल्दी रोकने की अनुमति देता है?",
+    "oe": [
+      "The alum dissolves the red blood cells into a volatile gas phase configuration",
+      "It alters the internal molecular weight of water molecules up to infinite thresholds",
+      "It transforms the vascular boundary walls into unbranched synthetic polyolefins",
+      "The highly charged aluminum cations in alum induce the rapid coagulation of the negatively charged colloidal blood particles, forming a clot plug"
+    ],
+    "oh": [
+      "फिटकरी लाल रक्त कोशिकाओं को वाष्पशील गैस चरण विन्यास में पूरी तरह से घोल देती है",
+      "यह पानी के अणुओं के आंतरिक आणविक भार को अनंत सीमाओं तक बदल देता है",
+      "यह संवहनी सीमा दीवारों को अशाखित सिंथेटिक पॉलीओलेफ़िन में बदल देता है",
+      "फिटकरी में मौजूद अत्यधिक आवेशित एल्युमिनियम धनायन ऋणावेशित कोलाइडल रक्त कणों के तेजी से स्कंदन (coagulation) को प्रेरित करते हैं, जिससे एक थक्का प्लग बनता है"
+    ],
+    "a": 3,
+    "e": "Blood ek negatively charged biological colloidal sol hai jo multivalent cations se coagulate hota hai.\n\n• Option 1 is Incorrect because alum blood cells ko gas phase mein dissolve nahi karta.\n\n• Option 2 is Incorrect because water ka molecular weight alter nahi hota.\n\n• Option 3 is Incorrect because polyolefin transformation unrelated hai.\n\n• Option 4 is Correct because blood negatively charged colloidal proteins aur cellular fragments contain karta hai. Alum [$\text{K}_2\text{SO}_4 cdot \text{Al}_2(\text{SO}_4)_3 cdot 24\text{H}_2\text{O}$] ke trivalent Aluminum cations ($\text{Al}^{3+}$) Hardy-Schulze rule ke according blood ke negative charges ko rapidly neutralize aur coagulate kar dete hain, forming an insoluble clot plug that arrests bleeding."
+  },
+  {
+    "p_id": "bpsc_surface_v4_68",
+    "qe": "What happens to the internal mechanical structure of raw animal hides when they are soaked inside a chromium salt tanning bath?",
+    "qh": "कच्ची पशु खाल (raw animal hides) की आंतरिक यांत्रिक संरचना का क्या होता है जब उन्हें क्रोमियम सॉल्ट टैनिंग बाथ के भीतर भिगोया जाता है?",
+    "oe": [
+      "The structural chains are broken completely down into single amino units",
+      "The positively charged hide fibers undergo mutual coagulation with the tanning complexes, inducing robust cross-linking that hardens the matrix into leather",
+      "The functional domains are reduced to water-soluble linear starch granules",
+      "The entire matrix converts into an amorphous non-ionic carbohydrate project"
+    ],
+    "oh": [
+      "संरचनात्मक श्रृंखलाएं पूरी तरह से एकल अमीनो इकाइयों में टूट जाती हैं",
+      "धनावेशित खाल के रेशे टैनिंग कॉम्प्लेक्स के साथ पारस्परिक स्कंदन (mutual coagulation) से गुजरते हैं, जिससे मजबूत क्रॉस-लिंकिंग प्रेरित होती है जो मैट्रिक्स को चमड़े में कठोर कर देती है",
+      "कार्यात्मक डोमेन पानी में घुलनशील रैखिक स्टार्च कणिकाओं में कम हो जाते हैं",
+      "पूरा मैट्रिक्स एक अनाकार गैर-आयनिक कार्बोहाइड्रेट परियोजना में परिवर्तित हो जाता है"
+    ],
+    "a": 1,
+    "e": "Chrome tanning collagen fibers ko mutual precipitation aur cross-linking se harden karta hai.\n\n• Option 1 is Incorrect because collagen networks amino acids mein degrade nahi hote.\n\n• Option 2 is Correct because raw animal hide positively charged collagen protein fibers se compose hoti hai. Chromium tanning bath mein negatively charged chromium coordination complexes collagen fibers ke sath mutual coagulation aur coordinate cross-linking establish karte hain, locking the matrix into tough, durable, heat-resistant leather.\n\n• Option 3 is Incorrect because starch reduction unrelated hai.\n\n• Option 4 is Incorrect because carbohydrate conversion unrelated hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_69",
+    "qe": "According to the Hardy-Schulze rule, why does a trivalent phosphate anion ($\text{PO}_4^{3-}$) exhibit a dramatically greater coagulating power than a monovalent chloride anion ($\text{Cl}^-$)?",
+    "qh": "हार्डी-शुल्ज़ नियम के अनुसार, एक त्रिसंयोजक फॉस्फेट ऋणायन ($\text{PO}_4^{3-}$) एक एकसंयोजक क्लोराइड ऋणायन ($\text{Cl}^-$) की तुलना में नाटकीय रूप से अधिक स्कंदन क्षमता (coagulating power) क्यों प्रदर्शित करता है?",
+    "oe": [
+      "The phosphate configuration is a natural biopolymer that dissolves instantly in water",
+      "The phosphate ion completely lacks oxygen atoms within its framework",
+      "The coagulating power scales sharply with the valency of the counter-ion, and the higher $-3$ charge of phosphate neutralizes sols far more efficiently than the $-1$ charge of chloride",
+      "Phosphate contains an abundance of volatile ester functional groups"
+    ],
+    "oh": [
+      "फॉस्फेट विन्यास एक प्राकृतिक बायोपोलीमर है जो पानी में तुरंत घुल जाता है",
+      "फॉस्फेट आयन में इसके ढांचे के भीतर ऑक्सीजन परमाणुओं की पूरी तरह से कमी होती है",
+      "स्कंदन क्षमता विरोधी आयन (counter-ion) की संयोजकता के साथ तेजी से बढ़ती है, और फॉस्फेट का उच्च $-3$ आवेश क्लोराइड के $-1$ आवेश की तुलना में सॉल को अधिक कुशलता से उदासीन करता है",
+      "फॉस्फेट में वाष्पशील एस्टर कार्यात्मक समूहों की प्रचुरता होती है"
+    ],
+    "a": 2,
+    "e": "Hardy-Schulze rule coagulating power aur counter-ion valency ke relation ko dictate karta hai.\n\n• Option 1 is Incorrect because phosphate inorganic anion hai, biopolymer nahi.\n\n• Option 2 is Incorrect because phosphate ion ($\text{PO}_4^{3-}$) 4 oxygen atoms contain karta hai.\n\n• Option 3 is Correct because Hardy-Schulze Rule ke anusar, active counter-ion ki coagulating power uske charge/valency ($z$) ke directly proportional hoti hai (roughly $propto z^4$). Positively charged sol ke liye, trivalent Phosphate anion ($\text{PO}_4^{3-}$, charge $-3$) monovalent Chloride anion ($\text{Cl}^-$, charge $-1$) se exponentially greater coagulating power exhibit karta hai.\n\n• Option 4 is Incorrect because inorganic phosphate ester groups contain nahi karta."
+  },
+  {
+    "p_id": "bpsc_surface_v4_70",
+    "qe": "What structural feature characterizes the continuous zig-zag path of colloidal particles observed under an ultra-microscope?",
+    "qh": "अल्ट्रा-माइक्रोस्कोप के तहत देखे गए कोलाइडल कणों के निरंतर टेढ़े-मेढ़े मार्ग (continuous zig-zag path) की क्या संरचनात्मक विशेषता है?",
+    "oe": [
+      "It represents an open-chain carbohydrate mesh supported by glycosidic blocks",
+      "It represents a single-stranded linear array of unbranched volatile oligomers",
+      "It is an amorphous cross-linked three-dimensional network held by sulfur links",
+      "It is the Brownian movement driven by the constant kinetic impact of highly active dispersion medium molecules against the colloidal cores"
+    ],
+    "oh": [
+      "यह ग्लाइकोसिडिक ब्लॉकों द्वारा समर्थित एक खुली श्रृंखला कार्बोहाइड्रेट जाल का प्रतिनिधित्व करता है",
+      "यह अशाखित वाष्पशील ओलिगोमर्स की एकल-फंसे रैखिक सरणी का प्रतिनिधित्व करता है",
+      "यह सल्फर लिंक द्वारा आयोजित एक अनाकार क्रॉस-लिंक्ड तीन-आयामी नेटवर्क है",
+      "यह अत्यधिक सक्रिय परिक्षेपण माध्यम के अणुओं द्वारा कोलाइडल कोर पर निरंतर गतिज प्रभाव द्वारा संचालित ब्राउनियन गति (Brownian movement) है"
+    ],
+    "a": 3,
+    "e": "Ultramicroscope ke under colloidal particles dynamic erratic zig-zag motion show karte hain.\n\n• Option 1 is Incorrect because carbohydrate mesh static polymer structure hai.\n\n• Option 2 is Incorrect because linear oligomeric array se unrelated hai.\n\n• Option 3 is Incorrect because vulcanized network se unrelated hai.\n\n• Option 4 is Correct because ultramicroscope ke under observe hone wala continuous erratic zig-zag trajectory Brownian Movement hai, jo surrounding liquid dispersion medium ke rapidly moving molecules dwara colloidal cores par deliver kiye gaye continuous, random aur unbalanced kinetic impacts se drive hota hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_71",
+    "qe": "Which specific organic functional group is generated when the carboxyl group of one amino acid condenses with the amino group of an adjacent unit to build a protein?",
+    "qh": "कौन सा विशिष्ट कार्बनिक कार्यात्मक समूह तब उत्पन्न होता है जब एक अमीनो एसिड का कार्बोक्सिल समूह प्रोटीन बनाने के लिए आसन्न इकाई के अमीनो समूह के साथ संघनित होता है?",
+    "oe": [
+      "Sulfur disulfide cross-link system anchoring paths",
+      "Glycosidic connection bridging rings together",
+      "Peptide linkage / Amide bond",
+      "Phosphodiester coordinate bridge balancing frames"
+    ],
+    "oh": [
+      "सल्फर डाइसल्फाइड क्रॉस-लिंक प्रणाली जो पथों को एंकर करती है",
+      "ग्लाइकोसिडिक संबंध (Glycosidic connection) जो छल्लों को आपस में जोड़ता है",
+      "पेप्टाइड लिंकेज / एमाइड बंध (Peptide linkage / Amide bond)",
+      "फॉस्फोडिएस्टर समन्वय पुल जो फ्रेम को संतुलित करता है"
+    ],
+    "a": 2,
+    "e": "Amino acids condensation se linear polypeptide chains form karte hain.\n\n• Option 1 is Incorrect because disulfide bridges cysteine thiol oxidation se bante hain.\n\n• Option 2 is Incorrect because glycosidic connections carbohydrates mein monosaccharide rings ko join karte hain.\n\n• Option 3 is Correct because ek $alpha$-amino acid ke carboxyl group ($-\text{COOH}$) aur adjacent amino acid ke amino group ($-\text{NH}_2$) ke condensation se water molecule eliminate hokar covalent amide linkage ($-\text{CO}-\text{NH}-$) banta hai, jise biochemistry mein Peptide Linkage (Peptide Bond) kehte hain.\n\n• Option 4 is Incorrect because phosphodiester bridges nucleic acids mein nucleotides ko link karte hain."
+  },
+  {
+    "p_id": "bpsc_surface_v4_72",
+    "qe": "What precise modern structural and chemical definition is assigned to the macro-class of materials known as carbohydrates?",
+    "qh": "कार्बोहाइड्रेट के रूप में जाने जाने वाले सामग्रियों के व्यापक वर्ग को दी गई सटीक आधुनिक संरचनात्मक और रासायनिक परिभाषा क्या है?",
+    "oe": [
+      "Suicidal competitive enzyme inhibitors with irreversible networks",
+      "Optically active polyhydroxy aldehydes or ketones, or compounds yielding them upon hydrolysis",
+      "Optically inactive linear aromatic hydrocarbons with single bonds",
+      "Unbranched non-ionic long-chain potassium fatty acid salts"
+    ],
+    "oh": [
+      "अपरिवर्तनीय नेटवर्क के साथ आत्मघाती प्रतिस्पर्धी एंजाइम अवरोधक",
+      "प्रकाशिक रूप से सक्रिय पॉलीहाइड्रॉक्सी एल्डिहाइड या कीटोन, या ऐसे यौगिक जो जल-अपघटन पर इन्हें उत्पन्न करते हैं",
+      "एकल बंध वाले प्रकाशिक रूप से अक्रिय रैखिक एरोमैटिक हाइड्रोकार्बन",
+      "अशाखित गैर-आयनिक लंबी श्रृंखला वाले पोटेशियम फैटी एसिड लवण"
+    ],
+    "a": 1,
+    "e": "Carbohydrates unke functional structure ke base par systematically defined hote hain.\n\n• Option 1 is Incorrect because carbohydrates enzyme poisons nahi hain.\n\n• Option 2 is Correct because modern biochemistry Carbohydrates ko strictly Optically active polyhydroxy aldehydes (aldoses) ya polyhydroxy ketones (ketoses), ya aise complex substances jo hydrolysis par ye basic units yield karte hain, ke roop mein define karti hai.\n\n• Option 3 is Incorrect because carbohydrates multiple chiral centers contain karne wale aliphatic oxygenated compounds hain, optically inactive aromatic hydrocarbons nahi.\n\n• Option 4 is Incorrect because fatty acid salts soaps hote hain."
+  },
+  {
+    "p_id": "bpsc_surface_v4_73",
+    "qe": "What architectural spatial arrangement characterizes the alpha-helix conformation commonly encountered in the secondary structure of proteins?",
+    "qh": "प्रोटीन की माध्यमिक संरचना में आमतौर पर सामना किए जाने वाले अल्फा-हेलिक्स विन्यास की कौन सी संरचनात्मक स्थानिक व्यवस्था विशेषता है?",
+    "oe": [
+      "Individual strands lying parallel to each other held by broad inter-chain linkages",
+      "A continuous polypeptide chain coiled tightly into a right-handed screw geometry stabilized by hydrogen bonds",
+      "An open open-chain carbohydrate mesh locked by loose glycosidic units",
+      "A cross-linked network layer centered around a quaternary nitrogen group"
+    ],
+    "oh": [
+      "व्यापक अंतर-श्रृंखला लिंकेज द्वारा आयोजित एक दूसरे के समानांतर पड़ी व्यक्तिगत किस्में",
+      "हाइड्रोजन बंधों द्वारा स्थिर एक दाहिने हाथ की पेंच (right-handed screw) जैसी ज्यामिति में कसकर कुंडलित एक सतत पॉलीपेप्टाइड श्रृंखला",
+      "ढीली ग्लाइकोसिडिक इकाइयों द्वारा बंद एक खुली श्रृंखला कार्बोहाइड्रेट जाल",
+      "चतुर्धातुक नाइट्रोजन समूह के आसपास केंद्रित एक क्रॉस-लिंक्ड नेटवर्क परत"
+    ],
+    "a": 1,
+    "e": "Protein secondary structure mein $alpha$-helix fundamental motif hai.\n\n• Option 1 is Incorrect because parallel strands inter-chain hydrogen bonds ke sath $\beta$-pleated sheet conformation form karte hain.\n\n• Option 2 is Correct because $alpha$-Helix conformation mein single continuous polypeptide chain tightly ek right-handed (clockwise) screw geometry mein twist hoti hai, jo amino acid $n$ ke carbonyl group ($-\text{C}=\text{O}$) aur fourth amino acid $n+4$ ke amide group ($-\text{NH}-$) ke beech regular Intramolecular Hydrogen Bonds dwara stabilize hoti hai.\n\n• Option 3 is Incorrect because carbohydrate mesh polysaccharides ka structure hai.\n\n• Option 4 is Incorrect because quaternary nitrogen surfactant networks ka feature hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_74",
+    "qe": "Which specific organic compound is generated when D-glucose undergoes complete chemical reduction using hydrogen iodide ($\text{HI}$) under thermal conditions?",
+    "qh": "जब D-ग्लूकोज थर्मल स्थितियों के तहत हाइड्रोजन आयोडाइड ($\text{HI}$) का उपयोग करके पूर्ण रासायनिक अपचयन से गुजरता है तो कौन सा विशिष्ट कार्बनिक यौगिक उत्पन्न होता है?",
+    "oe": [
+      "Pentaacetylated glucose crystal matrix",
+      "n-Hexane unbranched straight-chain alkane",
+      "Saccharic acid containing terminal dicarboxylic groups",
+      "Gluconic acid monocarboxylic derivative sheet"
+    ],
+    "oh": [
+      "पेंटाएसिटिलेटेड ग्लूकोज क्रिस्टल मैट्रिक्स",
+      "$n$-हेक्सेन ($n$-Hexane) अशाखित सीधी श्रृंखला वाला एल्केन",
+      "टर्मिनल डाइकार्बोक्सिलिक समूहों वाला सैकेरिक एसिड",
+      "ग्लूकोनिक एसिड मोनोकार्बोक्सिलिक व्युत्पन्न शीट"
+    ],
+    "a": 1,
+    "e": "D-glucose ka red P/$\text{HI}$ reduction straight chain structure prove karta hai.\n\n• Option 1 is Incorrect because glucose pentaacetate acetic anhydride acetylation se banta hai.\n\n• Option 2 is Correct because D-Glucose ($\text{C}_6\text{H}_{12}\text{O}_6$) ko jab concentrated $\text{HI}$ ke sath red phosphorus ki presence mein heat kiya jata hai, toh ye complete chemical reduction undergo karke 6-carbon unbranched straight-chain alkane $n$-Hexane ($\text{CH}_3-\text{CH}_2-\text{CH}_2-\text{CH}_2-\text{CH}_2-\text{CH}_3$) yield karta hai, proving all six carbons are linked in a continuous unbranched chain.\n\n• Option 3 is Incorrect because saccharic acid concentrated $\text{HNO}_3$ oxidation se banta hai.\n\n• Option 4 is Incorrect because gluconic acid mild bromine water oxidation se banta hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_75",
+    "qe": "What happens to the structure of a carbohydrate like starch or cellulose when it undergoes complete biochemical digestion in a living organism?",
+    "qh": "जब एक जीवित जीव में स्टार्च या सेलुलोज जैसे कार्बोहाइड्रेट का पूर्ण जैव रासायनिक पाचन होता है तो उसकी संरचना का क्या होता है?",
+    "oe": [
+      "It cross-links into an insoluble three-dimensional thermosetting network",
+      "It undergoes hydrolytic cleavage of its glycosidic linkages to release single monosaccharide sugar units like glucose",
+      "It forms a volatile uncharged non-polar polyolefin tail grid",
+      "It converts into fuming nitric acid vapors inside cellular channels"
+    ],
+    "oh": [
+      "यह एक अघुलनशील तीन-आयामी थर्मोसेटिंग नेटवर्क में क्रॉस-लिंक करता है",
+      "यह ग्लूकोज जैसी एकल मोनोसैकेराइड शर्करा इकाइयों को छोड़ने के लिए अपने ग्लाइकोसिडिक लिंकेज के हाइड्रोलाइटिक विखंडन (जल-अपघटन) से गुजरता है",
+      "यह एक वाष्पशील अनावेशित गैर-ध्रुवीय पॉलीओलेफ़िन टेल ग्रिड बनाता है",
+      "यह कोशिकीय चैनलों के अंदर सधूम नाइट्रिक एसिड वाष्प में परिवर्तित हो जाता है"
+    ],
+    "a": 1,
+    "e": "Polysaccharide digestion digestive enzymes dwara catalyzed hydrolysis hoti hai.\n\n• Option 1 is Incorrect because digestion catabolic breakdown process hai, polymer cross-linking nahi.\n\n• Option 2 is Correct because starch aur cellulose repeating monosaccharide units ke polymers hote hain jo glycosidic bonds se linked rehte hain. Biochemical digestion ke dauran hydrolytic digestive enzymes (jaise amylase, maltase) glycosidic linkages ka Hydrolytic Cleavage catalyze karte hain, releasing single monosaccharide units jaise D-Glucose.\n\n• Option 3 is Incorrect because polyolefin tail grids synthetic surfactant chemistry ka part hain.\n\n• Option 4 is Incorrect because nitric acid vapors cell mein generate nahi hote."
+  },
+  {
+    "p_id": "bpsc_surface_v4_76",
+    "qe": "Which operational catalyst enzyme decomposes the disaccharide maltose into two clean units of D-glucose inside chemical channels?",
+    "qh": "कौन सा परिचालन उत्प्रेरक एंजाइम रासायनिक चैनलों के भीतर डिसेकेराइड माल्टोज़ को डी-ग्लूकोज की दो स्वच्छ इकाइयों में विघटित (decomposes) करता है?",
+    "oe": [
+      "Urease nitrogen clearing module",
+      "Invertase sugar clearing fluid",
+      "Pepsin proteolytic enzyme",
+      "Maltase"
+    ],
+    "oh": [
+      "यूरिएस नाइट्रोजन शोधन मॉड्यूल",
+      "इन्वर्टेज शर्करा शोधन तरल",
+      "पेप्सिन प्रोटियोलिटिक एंजाइम",
+      "माल्टेस (Maltase)"
+    ],
+    "a": 3,
+    "e": "Disaccharide hydrolyzing enzymes specific glycosidic linkages target karte hain.\n\n• Option 1 is Incorrect because Urease enzyme urea ko ammonia aur carbon dioxide mein hydrolyze karta hai.\n\n• Option 2 is Incorrect because Invertase (Sucrase) sucrose ko glucose aur fructose mein hydrolyze karta hai.\n\n• Option 3 is Incorrect because Pepsin gastric juice mein proteins ko peptides mein digest karta hai.\n\n• Option 4 is Correct because Maltase enzyme maltose disaccharide ($\text{C}_{12}\text{H}_{22}\text{O}_{11}$) ke $alpha(1\to 4)$ glycosidic bond ko specifically hydrolyze karke do D-Glucose units ($\text{C}_{12}\text{H}_{22}\text{O}_{11} + \text{H}_2\text{O} xrightarrow{\text{Maltase}} 2 \text{C}_6\text{H}_{12}\text{O}_6$) mein convert karta hai."
+  },
+  {
+    "p_id": "bpsc_surface_v4_77",
+    "qe": "What direct mechanical change occurs to the native protein architecture inside an egg white when it undergoes thermal coagulation upon boiling?",
+    "qh": "जब एक अंडे की सफेदी को उबालने पर थर्मल जमावट (thermal coagulation) होती है, तो उसके भीतर की प्राकृतिक प्रोटीन संरचना में क्या सीधा यांत्रिक परिवर्तन होता है?",
+    "oe": [
+      "The native hydrogen bonds are disrupted, causing structural globules to unfold and helices to uncoil, resulting in a loss of biological activity",
+      "The carbon backbone converts into a volatile open-chain gas cloud",
+      "The covalent peptide linkages are broken, returning the protein to single units",
+      "The functional domains are reduced to non-ionic starch granules"
+    ],
+    "oh": [
+      "प्राकृतिक हाइड्रोजन बंध टूट जाते हैं, जिससे संरचनात्मक ग्लोब्यूल्स खुल जाते हैं और हेलिक्स खुल जाते हैं, जिसके परिणामस्वरूप जैविक गतिविधि का नुकसान होता है (विकृतीकरण)",
+      "कार्बन रीढ़ एक वाष्पशील खुली श्रृंखला वाली गैस क्लाउड में परिवर्तित हो जाती है",
+      "सहसंयोजक पेप्टाइड लिंकेज टूट जाते हैं, जिससे प्रोटीन एकल इकाइयों में लौट आता है",
+      "कार्यात्मक डोमेन गैर-आयनिक स्टार्च कणिकाओं में कम हो जाते हैं"
+    ],
+    "a": 0,
+    "e": "Boiling se proteins ka thermal denaturation aur coagulation hota hai.\n\n• Option 1 is Correct because egg white mein soluble globular protein Ovalbumin present hota hai. Boiling ke dauran thermal energy delicate intramolecular hydrogen bonds aur tertiary/secondary folded structures ko disrupt kar deti hai; globules unfold hokar aur helices uncoil hokar aapas mein randomly entangle ho jaate hain, forming an insoluble opaque white solid gel coagulum (Denaturation of Protein).\n\n• Option 2 is Incorrect because carbon backbone gas cloud mein convert nahi hoti.\n\n• Option 3 is Incorrect because primary covalent peptide bonds intact rehte hain, individual amino acids mein cleavage nahi hota.\n\n• Option 4 is Incorrect because proteins starch granules mein reduce nahi hote."
+  }
+]
