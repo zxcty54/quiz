@@ -1,0 +1,173 @@
+[
+  {
+    "p_id": "rateofinterest_1",
+    "qe": "A certain sum of money amounts to Rs.1,860 in 2 years and to Rs.2,130 in 3 1/2 years at simple interest. Find the sum and the rate of interest, respectively.",
+    "qh": "साधारण ब्याज पर एक निश्चित धनराशि 2 वर्षों में 1,860 रुपये और 3 1/2 वर्षों में 2,130 रुपये हो जाती है। क्रमशः धनराशि (मूलधन) और ब्याज दर ज्ञात कीजिए।",
+    "oe": [
+      "Rs.1,500, 12%",
+      "Rs.1,200, 10%",
+      "Rs.1,500, 15%",
+      "Rs.1,200, 12%"
+    ],
+    "oh": [
+      "Rs.1,500, 12%",
+      "Rs.1,200, 10%",
+      "Rs.1,500, 15%",
+      "Rs.1,200, 12%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Difference / Munni Method):\nStep 1: समयावधि का अंतर = 3.5 वर्ष - 2 वर्ष = 1.5 वर्ष (3/2 वर्ष)।\n1.5 वर्षों का साधारण ब्याज = 2,130 - 1,860 = ₹270.\nStep 2: 1 वर्ष का साधारण ब्याज = 270 / 1.5 = ₹180.\nStep 3: 2 वर्षों का साधारण ब्याज = 180 * 2 = ₹360.\nStep 4: मूलधन P = मिश्रधन (2 वर्ष) - SI (2 वर्ष) = 1,860 - 360 = ₹1,500.\nStep 5: वार्षिक ब्याज दर R = (1 वर्ष का SI / P) * 100% = (180 / 1,500) * 100% = 12%.\nअतः सही विकल्प  Rs.1,500, 12% है।\n\nMethod 2 (Formula Method):\nStep 1: P + 2(SI_yr) = 1860 तथा P + 3.5(SI_yr) = 2130.\nStep 2: घटाने पर: 1.5(SI_yr) = 270 ==> SI_yr = 180.\nStep 3: P = 1860 - 360 = ₹1,500; R = (180 * 100) / 1500 = 12%.\nअतः सही उत्तर 'Rs.1,500, 12%' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "rateofinterest_2",
+    "qe": "A certain sum of money is lent out at simple interest. If that money becomes Rs.24,000 in 2 years and Rs.32,000 in 4 years, the annual rate of interest is:",
+    "qh": "साधारण ब्याज पर एक निश्चित धनराशि ऋण पर दी जाती है। यदि वह धनराशि 2 वर्षों में 24,000 रुपये और 4 वर्षों में 32,000 रुपये हो जाती है, तो वार्षिक ब्याज दर क्या है?",
+    "oe": [
+      "30%",
+      "16%",
+      "25%",
+      "20%"
+    ],
+    "oh": [
+      "30%",
+      "16%",
+      "25%",
+      "20%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Difference Method):\nStep 1: 4 वर्ष और 2 वर्ष का अंतर = 2 वर्ष।\n2 वर्षों का साधारण ब्याज = 32,000 - 24,000 = ₹8,000.\nStep 2: 1 वर्ष का साधारण ब्याज = 8,000 / 2 = ₹4,000.\nStep 3: मूलधन P = 2 वर्ष का मिश्रधन - 2 वर्ष का ब्याज = 24,000 - 8,000 = ₹16,000.\nStep 4: वार्षिक ब्याज दर R = (1 वर्ष का SI / P) * 100% = (4,000 / 16,000) * 100% = (1 / 4) * 100% = 25%.\nअतः सही विकल्प  25% है।\n\nMethod 2 (100-Base Method):\nStep 1: P = 16,000 तथा 1 वर्ष का ब्याज = 4,000.\nStep 2: R = (4,000 / 16,000) * 100% = 25%.\nअतः सही उत्तर '25%' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "rateofinterest_3",
+    "qe": "If a sum of money becomes Rs 6,000 in 3 years and Rs 10,500 in 7 years and 6 months at the same rate of simple interest, then what is the rate of interest?",
+    "qh": "यदि कोई धनराशि समान साधारण ब्याज दर पर 3 वर्ष में 6,000 रुपये और 7 वर्ष 6 महीने में 10,500 रुपये हो जाती है, तो ब्याज की दर क्या है?",
+    "oe": [
+      "33$\\frac{1}{3}$%",
+      "25$\\frac{1}{2}$%",
+      "45$\\frac{2}{3}$%",
+      "66$\\frac{1}{3}$%"
+    ],
+    "oh": [
+      "33$\\frac{1}{3}$%",
+      "25$\\frac{1}{2}$%",
+      "45$\\frac{2}{3}$%",
+      "66$\\frac{1}{3}$%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Difference Method):\nStep 1: समय का अंतर = 7.5 वर्ष - 3 वर्ष = 4.5 वर्ष (9/2 वर्ष)।\n4.5 वर्षों का साधारण ब्याज = 10,500 - 6,000 = ₹4,500.\nStep 2: 1 वर्ष का साधारण ब्याज = 4,500 / 4.5 = ₹1,000.\nStep 3: 3 वर्षों का साधारण ब्याज = 3 * 1,000 = ₹3,000.\nStep 4: मूलधन P = 6,000 - 3,000 = ₹3,000.\nStep 5: वार्षिक ब्याज दर R = (1 वर्ष का SI / P) * 100% = (1,000 / 3,000) * 100% = 33$\\frac{1}{3}$%.\nअतः सही विकल्प  33 1/3% है।\n\nMethod 2 (Ratio Method):\nStep 1: 1 वर्ष का ब्याज = 1,000; मूलधन = 3,000.\nStep 2: R = 1000 / 3000 = 1/3 = 33$\\frac{1}{3}$%.\nअतः सही उत्तर '33$\\frac{1}{3}$%' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "rateofinterest_4",
+    "qe": "A sum of money lent at simple interest amounts to Rs 9,920 after 2 years and to Rs 12,800 after 5 years. Find the rate of interest per annum.",
+    "qh": "साधारण ब्याज पर दी गई एक धनराशि 2 वर्ष के बाद रु. 9,920 तथा 5 वर्ष के बाद रु. 12,800 हो जाती है। वार्षिक ब्याज दर ज्ञात करें।",
+    "oe": [
+      "12%",
+      "6.57%",
+      "18%",
+      "9.68%"
+    ],
+    "oh": [
+      "12%",
+      "6.57%",
+      "18%",
+      "9.68%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Difference Method):\nStep 1: 5 वर्ष और 2 वर्ष का अंतर = 3 वर्ष।\n3 वर्षों का साधारण ब्याज = 12,800 - 9,920 = ₹2,880.\nStep 2: 1 वर्ष का साधारण ब्याज = 2,880 / 3 = ₹960.\nStep 3: 2 वर्षों का साधारण ब्याज = 2 * 960 = ₹1,920.\nStep 4: मूलधन P = 9,920 - 1,920 = ₹8,000.\nStep 5: वार्षिक ब्याज दर R = (1 वर्ष का SI / P) * 100% = (960 / 8,000) * 100% = 12%.\nअतः सही विकल्प  12% है।\n\nMethod 2 (Formula Method):\nStep 1: P = 8,000, SI (1 yr) = 960.\nStep 2: R = (960 * 100) / 8000 = 12%.\nअतः सही उत्तर '12%' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "rateofinterest_5",
+    "qe": "A sum of money at a fixed rate of simple interest amounts to ₹1,630 in 3 years and to ₹1,708 in 4 years. Find the sum (in ₹).",
+    "qh": "साधारण ब्याज की एक निश्चित दर पर एक धनराशि पर 3 वर्षों में प्राप्त मिश्रधन ₹1,630 और 4 वर्षों में प्राप्त मिश्रधन ₹1,708 है। वह धनराशि (₹ में) ज्ञात करें।",
+    "oe": [
+      "1132",
+      "1296",
+      "1396",
+      "1448"
+    ],
+    "oh": [
+      "1132",
+      "1296",
+      "1396",
+      "1448"
+    ],
+    "a": 2,
+    "e": "Method 1 (Difference Method):\nStep 1: 1 वर्ष का साधारण ब्याज = मिश्रधन (4 वर्ष) - मिश्रधन (3 वर्ष) = 1,708 - 1,630 = ₹78.\nStep 2: 3 वर्षों का कुल साधारण ब्याज = 3 * 78 = ₹234.\nStep 3: मूलधन (Sum) = मिश्रधन (3 वर्ष) - SI (3 वर्ष) = 1,630 - 234 = ₹1,396.\nअतः सही विकल्प  1396 है।\n\nMethod 2 (Direct Equation Method):\nStep 1: SI_1yr = 1708 - 1630 = 78.\nStep 2: P = 1708 - (4 * 78) = 1708 - 312 = ₹1,396.\nअतः सही उत्तर '1396' है।\n\nYahan saadharan byaaj ka sootra seedha lagta hai. She sh vikalp 1132, 1296, 1448 is hisaab se nahi milte. Exam point: saadharan byaaj ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "rateofinterest_6",
+    "qe": "A sum amounts to Rs.7,656 in 4 years and to Rs.8,120 in 5 years at a certain simple interest rate per cent per annum. The rate of interest is:",
+    "qh": "प्रति वर्ष एक निश्चित साधारण ब्याज दर पर एक राशि 4 वर्षों में 7,656 रुपये और 5 वर्षों में 8,120 रुपये हो जाती है। ब्याज दर है:",
+    "oe": [
+      "4%",
+      "3%",
+      "7%",
+      "8%"
+    ],
+    "oh": [
+      "4%",
+      "3%",
+      "7%",
+      "8%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Difference Method):\nStep 1: 1 वर्ष का साधारण ब्याज = 8,120 - 7,656 = ₹464.\nStep 2: 4 वर्षों का साधारण ब्याज = 4 * 464 = ₹1,856.\nStep 3: मूलधन P = 7,656 - 1,856 = ₹5,800.\nStep 4: वार्षिक ब्याज दर R = (464 / 5,800) * 100% = 464 / 58% = 8%.\nअतः सही विकल्प  8% है।\n\nMethod 2 (100-Base Method):\nStep 1: P = 5,800 तथा SI प्रति वर्ष = 464.\nStep 2: R = (464 / 5800) * 100% = 8%.\nअतः सही उत्तर '8%' है।\n\nsaadharan byaaj ka sootra se hi is prashn ka jawab nikalta hai. Vikalp 4%, 3%, 7% is hal se mel nahi khaate. Exam point: saadharan byaaj ka sootra - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "rateofinterest_7",
+    "qe": "A sum of money invested at a certain rate of simple interest per annum amounts to Rs.14,522 in seven years and to Rs.18,906 in eleven years. Find the sum invested (in Rs.).",
+    "qh": "यदि वार्षिक साधारण ब्याज की एक निश्चित दर पर निवेश की गई राशि पर सात वर्षों में प्राप्त मिश्रधन 14,522 रु और ग्यारह वर्षों में प्राप्त मिश्रधन 18,906 रु है, तो निवेश की गई राशि (रु. में) ज्ञात कीजिए।",
+    "oe": [
+      "6850",
+      "6900",
+      "6800",
+      "6750"
+    ],
+    "oh": [
+      "6850",
+      "6900",
+      "6800",
+      "6750"
+    ],
+    "a": 0,
+    "e": "Method 1 (Difference Method):\nStep 1: समय का अंतर = 11 वर्ष - 7 वर्ष = 4 वर्ष।\n4 वर्षों का साधारण ब्याज = 18,906 - 14,522 = ₹4,384.\nStep 2: 1 वर्ष का साधारण ब्याज = 4,384 / 4 = ₹1,096.\nStep 3: 7 वर्षों का साधारण ब्याज = 7 * 1,096 = ₹7,672.\nStep 4: मूलधन (Sum invested) = 14,522 - 7,672 = ₹6,850.\nअतः सही विकल्प  6850 है।\n\nMethod 2 (11-Year Subtraction Method):\nStep 1: SI_1yr = 1,096.\nStep 2: P = 18,906 - (11 * 1,096) = 18,906 - 12,056 = ₹6,850.\nअतः सही उत्तर '6850' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "rateofinterest_8",
+    "qe": "A sum at a certain rate of simple interest becomes Rs. 14880 after 3 years and Rs, 16800 after 5 years. Find the simple interest on the same sum at 10% per annum for 4 years (in Rs.)",
+    "qh": "साधारण ब्याज की एक निश्चित दर पर एक राशि 3 साल बाद 14880 रुपये और 5 साल बाद 16800 रुपये हो जाती है। उसी राशि पर 10% प्रतिवर्ष की दर से 4 वर्षों का साधारण ब्याज (रुपये में) ज्ञात करें।",
+    "oe": [
+      "4740",
+      "4800",
+      "4860",
+      "5184"
+    ],
+    "oh": [
+      "4740",
+      "4800",
+      "4860",
+      "5184"
+    ],
+    "a": 1,
+    "e": "Method 1 (Difference Method):\nStep 1: 2 वर्षों (5 - 3) का साधारण ब्याज = 16,800 - 14,880 = ₹1,920.\nStep 2: 1 वर्ष का साधारण ब्याज = 1,920 / 2 = ₹960.\nStep 3: 3 वर्षों का साधारण ब्याज = 3 * 960 = ₹2,880.\nStep 4: मूलधन P = 14,880 - 2,880 = ₹12,000.\nStep 5: उसी मूलधन (₹12,000) पर 10% की दर से 4 वर्षों का साधारण ब्याज:\nSI = (12,000 * 10 * 4) / 100 = 120 * 40 = ₹4,800.\nअतः सही विकल्प  4800 है।\n\nMethod 2 (Percentage Method):\nStep 1: P = ₹12,000.\nStep 2: 10% की दर से 4 वर्षों का ब्याज% = 40%.\nStep 3: SI = 40% of 12,000 = ₹4,800.\nअतः सही उत्तर '4800' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "rateofinterest_9",
+    "qe": "A certain sum amounts to Rs 4,600 after 5 years and to Rs 6,000 after 8 years at the same rate of simple interest per annum. What will be the simple interest on a sum of Rs 8,500 for 6 1/2 years at the same rate?",
+    "qh": "एक निश्चित राशि 5 वर्षों के बाद 4,600 रुपये और समान वार्षिक साधारण ब्याज दर पर 8 वर्षों के बाद 6,000 रुपये हो जाती है। उसी दर पर 6 1/2 वर्षों के लिए 8,500 रुपये की राशि पर साधारण ब्याज क्या होगा?",
+    "oe": [
+      "Rs. 11,375",
+      "Rs. 11,475",
+      "Rs. 11,275",
+      "Rs. 11,575"
+    ],
+    "oh": [
+      "Rs. 11,375",
+      "Rs. 11,475",
+      "Rs. 11,275",
+      "Rs. 11,575"
+    ],
+    "a": 0,
+    "e": "Method 1 (Difference Method):\nStep 1: 3 वर्षों (8 - 5) का साधारण ब्याज = 6,000 - 4,600 = ₹1,400.\n1 वर्ष का साधारण ब्याज = 1,400 / 3 रुपये।\nStep 2: 5 वर्षों का साधारण ब्याज = 5 * (1,400 / 3) = ₹7,000 / 3.\nStep 3: मूलधन P = 4,600 - (7,000 / 3) = (13,800 - 7,000) / 3 = ₹6,800 / 3.\nStep 4: वार्षिक ब्याज दर R:\nR = [(1,400 / 3) / (6,800 / 3)] * 100% = (1,400 / 6,800) * 100% = 350 / 17%.\nStep 5: ₹8,500 पर 6 1/2 वर्ष (13/2 वर्ष) के लिए साधारण ब्याज:\nSI = [8,500 * (350 / 17) * (13 / 2)] / 100\nSI = 85 * (350 / 17) * 6.5 = 5 * 350 * 6.5 = 1,750 * 6.5 = ₹11,375.\nअतः सही उत्तर 'Rs. 11,375' Rs. 11,375 है।\n\nMethod 2 (Proportionality Method):\nStep 1: प्रति वर्ष ब्याज दर भिन्न = 14 / 68 = 7 / 34.\nStep 2: SI = 8,500 * (7 / 34) * (13 / 2) = (8,500 * 91) / 68 = 125 * 91 = ₹11,375.\nअतः सही उत्तर 'Rs. 11,375' है।\n\nExam point: saadharan byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
