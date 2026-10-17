@@ -1,0 +1,59 @@
+[
+  {
+    "p_id": "tworunningperson_1",
+    "qe": "A train running at 48 km/h crosses a man going with the speed of 12 km/h, in the same direction, in 18 seconds and passes a woman coming from the opposite direction in 12 seconds. The speed (in km/h) of the woman is:",
+    "qh": "48 किमी/घंटा की गति से चल रही एक ट्रेन उसी दिशा में 12 किमी/घंटा की गति से जा रहे एक व्यक्ति को 18 सेकंड में पार करती है और विपरीत दिशा से आ रही एक महिला को 12 सेकंड में पार करती है। महिला की गति (किमी/घंटा में) क्या है:",
+    "oe": [
+      "8",
+      "9",
+      "6",
+      "10"
+    ],
+    "oh": [
+      "8",
+      "9",
+      "6",
+      "10"
+    ],
+    "a": 2,
+    "e": "Method 1 (Relative Speed & Train Length Method):\nStep 1: व्यक्ति के सापेक्ष गति निकालें (समान दिशा में):\n$$\\text{सापेक्ष गति} = 48 - 12 = 36\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर: $36 \\times \\frac{5}{18} = 10\\text{ मीटर/सेकंड}$।\nStep 2: ट्रेन की लंबाई ($L$) निकालें (समय = 18 सेकंड):\n$$L = 10 $\\times$ 18 = 180\\text{ मीटर}$$\nStep 3: विपरीत दिशा से आ रही महिला को पार करते समय सापेक्ष गति निकालें (समय = 12 सेकंड):\n$$\\text{सापेक्ष गति} = $\\frac{180}{12}$ = 15\\text{ मीटर/सेकंड}$$\nकिमी/घंटा में बदलने पर: $15 \\times \\frac{18}{5} = 3 \\times 18 = 54\\text{ किमी/घंटा}$।\nStep 4: विपरीत दिशा में सापेक्ष गति $S_{\\text{ट्रेन}} + S_{\\text{महिला}} = 54$ किमी/घंटा:\n$$48 + S_{\\text{महिला}} = 54 \\implies S_{\\text{महिला}} = 54 - 48 = 6\\text{ किमी/घंटा}$$\nअतः सही विकल्प  6 है।\n\nMethod 2 (Ratio of Time Method):\nStep 1: समान दूरी ($L$) तय करने के लिए समय का अनुपात = 18 : 12 = 3 : 2.\nStep 2: सापेक्ष गति का अनुपात = 2 : 3.\nयहाँ 2 इकाइयाँ = $(48 - 12) = 36$ किमी/घंटा $\\implies 1\\text{ इकाई} = 18$ किमी/घंटा।\nStep 3: 3 इकाइयाँ = $3 \\times 18 = 54$ किमी/घंटा ($S_T + S_W$).\n$$S_W = 54 - 48 = 6\\text{ किमी/घंटा}$$\nअतः सही उत्तर '6' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "tworunningperson_2",
+    "qe": "A train crosses two persons travelling at 4 km/h and 6 km/h in the same direction in 12sec and 14 sec, respectively. The speed of the train is _____.",
+    "qh": "एक ट्रेन एक ही दिशा में क्रमशः 4 किमी/घंटा और 6 किमी/घंटा की गति से यात्रा कर रहे दो व्यक्तियों को क्रमशः 12 सेकंड और 14 सेकंड में पार करती है। ट्रेन की गति _____ है।",
+    "oe": [
+      "18 km/h",
+      "26 km/h",
+      "20 km/h",
+      "24 km/h"
+    ],
+    "oh": [
+      "18 km/h",
+      "26 km/h",
+      "20 km/h",
+      "24 km/h"
+    ],
+    "a": 0,
+    "e": "Method 1 (Distance Equating Method):\nStep 1: माना ट्रेन की गति = $S$ किमी/घंटा।\nदोनों व्यक्तियों को पार करने में ट्रेन अपनी ही लंबाई ($L$) तय करती है, अतः दोनों स्थितियों में दूरी समान होगी:\n$$L = (S - 4) $\\times$ $\\frac{5}{18}$ $\\times$ 12 = (S - 6) $\\times$ $\\frac{5}{18}$ $\\times$ 14$$\nStep 2: दोनों पक्षों से $\\frac{5}{18}$ काटने पर:\n$$12(S - 4) = 14(S - 6)$$\n$$6(S - 4) = 7(S - 6)$$\n$$6S - 24 = 7S - 42$$\n$$7S - 6S = 42 - 24 \\implies S = 18\\text{ किमी/घंटा}$$\nअतः सही विकल्प  18 km/h है।\n\nMethod 2 (Direct Formula Method):\n$$S = $\\frac{S_2T_2-S_1T_1}{T_2-T_1}$ = $\\frac{(6\\times14)-(4\\times12)}{14-12}$ = $\\frac{84-48}{2}$ = $\\frac{36}{2}$ = 18\\text{ किमी/घंटा}$$\nअतः सही उत्तर '18 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "tworunningperson_3",
+    "qe": "A 234 m long train passes a person running at 9 km/h in the opposite direction, in 6 seconds. In how much time (in seconds) will it pass another person who is moving at 23.4 km/h, in the same direction?",
+    "qh": "234 मीटर लंबी एक ट्रेन विपरीत दिशा में 9 किमी/घंटा की गति से दौड़ रहे एक व्यक्ति को 6 सेकंड में पार करती है। उसी दिशा में 23.4 किमी/घंटा की गति से चल रहे दूसरे व्यक्ति को यह कितने समय (सेकंड में) में पार करेगी?",
+    "oe": [
+      "8",
+      "8.4",
+      "7.2",
+      "7.8"
+    ],
+    "oh": [
+      "8",
+      "8.4",
+      "7.2",
+      "7.8"
+    ],
+    "a": 3,
+    "e": "Method 1 (Two-Phase Relative Speed Method):\nStep 1: पहले व्यक्ति के साथ सापेक्ष गति निकालें (विपरीत दिशा):\n$$\\text{सापेक्ष गति} = $\\frac{234}{6}$ = 39\\text{ मीटर/सेकंड}$$\nकिमी/घंटा में बदलने पर: $39 \\times \\frac{18}{5} = \\frac{702}{5} = 140.4\\text{ किमी/घंटा}$।\nStep 2: ट्रेन की वास्तविक गति ($S_T$) निकालें:\n$$S_T + 9 = 140.4 \\implies S_T = 140.4 - 9 = 131.4\\text{ किमी/घंटा}$$\nStep 3: दूसरे व्यक्ति के साथ सापेक्ष गति निकालें (समान दिशा में):\n$$\\text{सापेक्ष गति} = 131.4 - 23.4 = 108\\text{ किमी/घंटा}$$\nमीटर/सेकंड में बदलने पर: $108 \\times \\frac{5}{18} = 6 \\times 5 = 30\\text{ मीटर/सेकंड}$।\nStep 4: दूसरे व्यक्ति को पार करने में लगा समय निकालें:\n$$\\text{समय} = $\\frac{234}{30}$ = 7.8\\text{ सेकंड}$$\nअतः सही विकल्प  7.8 है।\n\nMethod 2 (Direct Step Calculation):\nStep 1: $S_T = (39 \\times 3.6) - 9 = 140.4 - 9 = 131.4$ किमी/घंटा।\nStep 2: नई सापेक्ष गति = $131.4 - 23.4 = 108$ किमी/घंटा = 30 मीटर/सेकंड।\nStep 3: समय = $\\frac{234}{30} = 7.8$ सेकंड।\nअतः सही उत्तर '7.8' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
