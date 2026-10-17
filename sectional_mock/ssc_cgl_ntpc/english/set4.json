@@ -1,0 +1,667 @@
+[
+  {
+    "p_id": "set4_1",
+    "qe": "Select the part that contains an error: <br>'The performance (A) / of our players (B) / was worst than (C) / I had expected (D).'",
+    "qh": "उस भाग का चयन करें जिसमें त्रुटि है: <br>'The performance (A) / of our players (B) / was worst than (C) / I had expected (D).'",
+    "oe": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "oh": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "a": 2,
+    "e": "For comparison between two states (expected vs actual), we use the comparative degree <b>'worse'</b> instead of the superlative 'worst'."
+  },
+  {
+    "p_id": "set4_2",
+    "qe": "The Captain said to the soldiers, 'Don't move from your posts.'",
+    "qh": "The Captain said to the soldiers, 'Don't move from your posts.'",
+    "oe": [
+      "The Captain ordered the soldiers not to move from their posts",
+      "The Captain told the soldiers that don't move",
+      "The Captain commanded the soldiers to not move",
+      "The Captain asked the soldiers no moving"
+    ],
+    "oh": [
+      "The Captain ordered the soldiers not to move from their posts",
+      "The Captain told the soldiers that don't move",
+      "The Captain commanded the soldiers to not move",
+      "The Captain asked the soldiers no moving"
+    ],
+    "a": 0,
+    "e": "Negative imperative sentences use <b>'ordered/commanded + not to + V1'</b>. 'Your' changes to 'their' to match the object."
+  },
+  {
+    "p_id": "set4_3",
+    "qe": "'The manager decided to ______ the meeting until next Monday.'",
+    "qh": "'The manager decided to ______ the meeting until next Monday.'",
+    "oe": [
+      "put off",
+      "put out",
+      "put away",
+      "put up"
+    ],
+    "oh": [
+      "put off",
+      "put out",
+      "put away",
+      "put up"
+    ],
+    "a": 0,
+    "e": "<b>'Put off'</b> means to postpone. 'Put out' means to extinguish."
+  },
+  {
+    "p_id": "set4_4",
+    "qe": "'A person who is fluent in two languages.'",
+    "qh": "'वह व्यक्ति जो दो भाषाओं में धाराप्रवाह हो।'",
+    "oe": [
+      "Bilingual",
+      "Biologist",
+      "Bigot",
+      "Brittle"
+    ],
+    "oh": [
+      "Bilingual",
+      "Biologist",
+      "Bigot",
+      "Brittle"
+    ],
+    "a": 0,
+    "e": "<b>Bilingual</b> (द्विभाषी) is the term for someone who can speak two languages fluently."
+  },
+  {
+    "p_id": "set4_5",
+    "qe": "'Hardly <u>had the sun rose</u> when the birds started chirping.'",
+    "qh": "'Hardly <u>had the sun rose</u> when the birds started chirping.'",
+    "oe": [
+      "had the sun risen",
+      "the sun had risen",
+      "did the sun rise",
+      "No improvement"
+    ],
+    "oh": [
+      "had the sun risen",
+      "the sun had risen",
+      "did the sun rise",
+      "No improvement"
+    ],
+    "a": 0,
+    "e": "With 'had', the third form of the verb (V3) is used. The V3 of rise is <b>risen</b> (Rise-Rose-Risen)."
+  },
+  {
+    "p_id": "set4_6",
+    "qe": "Select the most appropriate synonym of: <b>'TACITURN'</b>",
+    "qh": "<b>'TACITURN'</b> का पर्यायवाची चुनें।",
+    "oe": [
+      "Reticent",
+      "Talkative",
+      "Loud",
+      "Cheerful"
+    ],
+    "oh": [
+      "Reticent",
+      "Talkative",
+      "Loud",
+      "Cheerful"
+    ],
+    "a": 0,
+    "e": "Taciturn means reserved or uncommunicative in speech. <b>Reticent</b> is its closest synonym."
+  },
+  {
+    "p_id": "set4_7",
+    "qe": "Select the most appropriate antonym of: <b>'ZENITH'</b>",
+    "qh": "<b>'ZENITH'</b> का विपरीतार्थक चुनें।",
+    "oe": [
+      "Nadir",
+      "Peak",
+      "Summit",
+      "Horizon"
+    ],
+    "oh": [
+      "Nadir",
+      "Peak",
+      "Summit",
+      "Horizon"
+    ],
+    "a": 0,
+    "e": "Zenith means the highest point. <b>Nadir</b> (पाताल/न्यूनतम बिंदु) means the lowest point."
+  },
+  {
+    "p_id": "set4_8",
+    "qe": "'To hold one's tongue.'",
+    "qh": "'To hold one's tongue.'",
+    "oe": [
+      "To keep quiet",
+      "To be very angry",
+      "To speak loudly",
+      "To be rude"
+    ],
+    "oh": [
+      "To keep quiet",
+      "To be very angry",
+      "To speak loudly",
+      "To be rude"
+    ],
+    "a": 0,
+    "e": "To refrain from speaking or to <b>stay silent</b>."
+  },
+  {
+    "p_id": "set4_9",
+    "qe": "'Who painted this beautiful picture?'",
+    "qh": "'Who painted this beautiful picture?'",
+    "oe": [
+      "By whom was this beautiful picture painted?",
+      "Who was this picture painted by?",
+      "By whom this picture was painted?",
+      "Both A and B"
+    ],
+    "oh": [
+      "By whom was this beautiful picture painted?",
+      "Who was this picture painted by?",
+      "By whom this picture was painted?",
+      "Both A and B"
+    ],
+    "a": 3,
+    "e": "'Who' changes to 'By whom' or 'Who...by'. Simple Past (V2) changes to 'was/were + V3'."
+  },
+  {
+    "p_id": "set4_10",
+    "qe": "'The cost (A) / of living (B) / is higher than (C) / the last year (D).'",
+    "qh": "'The cost (A) / of living (B) / is higher than (C) / the last year (D).'",
+    "oe": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "oh": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "a": 3,
+    "e": "Faulty comparison. We must compare the 'cost' of this year with the 'cost' of last year. Correct: <b>'higher than that of last year'</b>."
+  },
+  {
+    "p_id": "set4_11",
+    "qe": "Select the correctly spelled word.",
+    "qh": "सही शब्द चुनें।",
+    "oe": [
+      "Hierarchy",
+      "Hierachy",
+      "Heirarchy",
+      "Hierarcky"
+    ],
+    "oh": [
+      "Hierarchy",
+      "Hierachy",
+      "Heirarchy",
+      "Hierarcky"
+    ],
+    "a": 0,
+    "e": "<b>Hierarchy</b> is the correct spelling."
+  },
+  {
+    "p_id": "set4_12",
+    "qe": "'If you ______ the instructions, you wouldn't have made these mistakes.'",
+    "qh": "'If you ______ the instructions, you wouldn't have made these mistakes.'",
+    "oe": [
+      "had followed",
+      "followed",
+      "would follow",
+      "follow"
+    ],
+    "oh": [
+      "had followed",
+      "followed",
+      "would follow",
+      "follow"
+    ],
+    "a": 0,
+    "e": "Type 3 Conditional follows the pattern: <b>'If + had + V3, would have + V3'</b>."
+  },
+  {
+    "p_id": "set4_13",
+    "qe": "'To play second fiddle.'",
+    "qh": "'To play second fiddle.'",
+    "oe": [
+      "To be in a subordinate position",
+      "To be the lead player",
+      "To play a musical instrument",
+      "To be happy"
+    ],
+    "oh": [
+      "To be in a subordinate position",
+      "To be the lead player",
+      "To play a musical instrument",
+      "To be happy"
+    ],
+    "a": 0,
+    "e": "To take a <b>less important</b> or subordinate role compared to someone else."
+  },
+  {
+    "p_id": "set4_14",
+    "qe": "'Not only the students (A) / but also the teacher (B) / were happy (C) / with the results (D).'",
+    "qh": "'Not only the students (A) / but also the teacher (B) / were happy (C) / with the results (D).'",
+    "oe": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "oh": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "a": 2,
+    "e": "For 'Not only...but also', the verb agrees with the <b>nearest subject</b>. 'The teacher' is singular, so it should be 'was'."
+  },
+  {
+    "p_id": "set4_15",
+    "qe": "'A small boy was flying a colorful kite.'",
+    "qh": "'A small boy was flying a colorful kite.'",
+    "oe": [
+      "A colorful kite was being flown by a small boy",
+      "A kite was flown",
+      "A kite is being flown",
+      "None"
+    ],
+    "oh": [
+      "A colorful kite was being flown by a small boy",
+      "A kite was flown",
+      "A kite is being flown",
+      "None"
+    ],
+    "a": 0,
+    "e": "Past Continuous changes to <b>'was/were + being + V3'</b> (Fly-Flew-Flown)."
+  },
+  {
+    "p_id": "set4_16",
+    "qe": "Antonym of <b>'BENEVOLENT'</b>.",
+    "qh": "<b>'BENEVOLENT'</b> का विलोम।",
+    "oe": [
+      "Malevolent",
+      "Kind",
+      "Generous",
+      "Friendly"
+    ],
+    "oh": [
+      "Malevolent",
+      "Kind",
+      "Generous",
+      "Friendly"
+    ],
+    "a": 0,
+    "e": "Benevolent means kind. <b>Malevolent</b> (द्रोही/बुरा चाहने वाला) means having a wish to do evil."
+  },
+  {
+    "p_id": "set4_17",
+    "qe": "'A person who hates mankind.'",
+    "qh": "'वह व्यक्ति जो मानव जाति से घृणा करता है।'",
+    "oe": [
+      "Misanthrope",
+      "Philanthropist",
+      "Misogynist",
+      "Misogamist"
+    ],
+    "oh": [
+      "Misanthrope",
+      "Philanthropist",
+      "Misogynist",
+      "Misogamist"
+    ],
+    "a": 0,
+    "e": "<b>Misanthrope</b> (मानवद्वेषी) is the correct term. Philanthropist is the opposite."
+  },
+  {
+    "p_id": "set4_18",
+    "qe": "'The news <u>was too good being true</u>.'",
+    "qh": "'The news <u>was too good being true</u>.'",
+    "oe": [
+      "too good to be true",
+      "very good being true",
+      "too good to true",
+      "No improvement"
+    ],
+    "oh": [
+      "too good to be true",
+      "very good being true",
+      "too good to true",
+      "No improvement"
+    ],
+    "a": 0,
+    "e": "The structure is <b>'Too + Adjective + To + V1'</b>."
+  },
+  {
+    "p_id": "set4_19",
+    "qe": "He asked me, 'Where do you live?'",
+    "qh": "He asked me, 'Where do you live?'",
+    "oe": [
+      "He asked me where I lived",
+      "He asked me where did I live",
+      "He asked me where I live",
+      "He asked where was my home"
+    ],
+    "oh": [
+      "He asked me where I lived",
+      "He asked me where did I live",
+      "He asked me where I live",
+      "He asked where was my home"
+    ],
+    "a": 0,
+    "e": "In indirect questions, the sentence becomes assertive (Subject + Verb). Simple Present changes to <b>Simple Past</b>."
+  },
+  {
+    "p_id": "set4_20",
+    "qe": "'You must dispense ______ his services.'",
+    "qh": "'You must dispense ______ his services.'",
+    "oe": [
+      "with",
+      "of",
+      "off",
+      "at"
+    ],
+    "oh": [
+      "with",
+      "of",
+      "off",
+      "at"
+    ],
+    "a": 0,
+    "e": "<b>'Dispense with'</b> means to stop using or get rid of something."
+  },
+  {
+    "p_id": "set4_21",
+    "qe": "'Shut all the doors.'",
+    "qh": "'Shut all the doors.'",
+    "oe": [
+      "Let all the doors be shut",
+      "The doors were shut",
+      "All doors are shut",
+      "You are ordered to shut"
+    ],
+    "oh": [
+      "Let all the doors be shut",
+      "The doors were shut",
+      "All doors are shut",
+      "You are ordered to shut"
+    ],
+    "a": 0,
+    "e": "Imperative passive starts with <b>'Let + object + be + V3'</b>."
+  },
+  {
+    "p_id": "set4_22",
+    "qe": "Synonym of <b>'AFFLUENT'</b>.",
+    "qh": "<b>'AFFLUENT'</b> का पर्यायवाची।",
+    "oe": [
+      "Wealthy",
+      "Poor",
+      "Greedy",
+      "Silent"
+    ],
+    "oh": [
+      "Wealthy",
+      "Poor",
+      "Greedy",
+      "Silent"
+    ],
+    "a": 0,
+    "e": "Affluent means having a great deal of money or <b>wealthy</b>."
+  },
+  {
+    "p_id": "set4_23",
+    "qe": "'He is senior (A) / than me (B) / in service (C) / No error (D).'",
+    "qh": "'He is senior (A) / than me (B) / in service (C) / No error (D).'",
+    "oe": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "oh": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "a": 1,
+    "e": "'Senior' takes the preposition <b>'to'</b>, not 'than'."
+  },
+  {
+    "p_id": "set4_24",
+    "qe": "'To bite the dust.'",
+    "qh": "'To bite the dust.'",
+    "oe": [
+      "To be defeated",
+      "To be successful",
+      "To work hard",
+      "To eat dirt"
+    ],
+    "oh": [
+      "To be defeated",
+      "To be successful",
+      "To work hard",
+      "To eat dirt"
+    ],
+    "a": 0,
+    "e": "To fail or <b>be defeated</b>, often in a humiliating way."
+  },
+  {
+    "p_id": "set4_25",
+    "qe": "Correct spelling of 'Maintanance'.",
+    "qh": "'Maintanance' की सही वर्तनी चुनें।",
+    "oe": [
+      "Maintenance",
+      "Maintainence",
+      "Maintanence",
+      "Maintenence"
+    ],
+    "oh": [
+      "Maintenance",
+      "Maintainence",
+      "Maintanence",
+      "Maintenence"
+    ],
+    "a": 0,
+    "e": "The correct spelling is <b>Maintenance</b>."
+  },
+  {
+    "p_id": "set4_26",
+    "qe": "Antonym of <b>'ARTIFICIAL'</b>.",
+    "qh": "<b>'ARTIFICIAL'</b> का विलोम।",
+    "oe": [
+      "Natural",
+      "Fake",
+      "Solid",
+      "True"
+    ],
+    "oh": [
+      "Natural",
+      "Fake",
+      "Solid",
+      "True"
+    ],
+    "a": 0,
+    "e": "The opposite of artificial (कृत्रिम) is <b>Natural</b> (प्राकृतिक)."
+  },
+  {
+    "p_id": "set4_27",
+    "qe": "'I prefer tea ______ coffee.'",
+    "qh": "'I prefer tea ______ coffee.'",
+    "oe": [
+      "to",
+      "than",
+      "for",
+      "with"
+    ],
+    "oh": [
+      "to",
+      "than",
+      "for",
+      "with"
+    ],
+    "a": 0,
+    "e": "The verb <b>'prefer'</b> takes 'to' for comparison between two nouns."
+  },
+  {
+    "p_id": "set4_28",
+    "qe": "'A collection of poems.'",
+    "qh": "'कविताओं का संग्रह।'",
+    "oe": [
+      "Anthology",
+      "Pathology",
+      "Etymology",
+      "Biology"
+    ],
+    "oh": [
+      "Anthology",
+      "Pathology",
+      "Etymology",
+      "Biology"
+    ],
+    "a": 0,
+    "e": "<b>Anthology</b> is the specific word for a collection of literary works."
+  },
+  {
+    "p_id": "set4_29",
+    "qe": "'If I <u>am</u> you, I wouldn't forgive him.'",
+    "qh": "'If I <u>am</u> you, I wouldn't forgive him.'",
+    "oe": [
+      "were",
+      "was",
+      "had been",
+      "No improvement"
+    ],
+    "oh": [
+      "were",
+      "was",
+      "had been",
+      "No improvement"
+    ],
+    "a": 0,
+    "e": "For hypothetical/imaginary situations, <b>'were'</b> is used with all subjects."
+  },
+  {
+    "p_id": "set4_30",
+    "qe": "'The jury (A) / were (B) / unanimous (C) / in its decision (D).'",
+    "qh": "'The jury (A) / were (B) / unanimous (C) / in its decision (D).'",
+    "oe": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "oh": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "a": 1,
+    "e": "When a collective noun acts as a <b>single unit</b> (unanimous), it takes a singular verb ('was')."
+  },
+  {
+    "p_id": "set4_31",
+    "qe": "My mother said, 'Honesty is the best policy.'",
+    "qh": "My mother said, 'Honesty is the best policy.'",
+    "oe": [
+      "My mother said that honesty is the best policy",
+      "My mother said that honesty was the best policy",
+      "My mother told honesty is the best policy",
+      "None"
+    ],
+    "oh": [
+      "My mother said that honesty is the best policy",
+      "My mother said that honesty was the best policy",
+      "My mother told honesty is the best policy",
+      "None"
+    ],
+    "a": 0,
+    "e": "Tense does not change for <b>Proverbs/Universal Truths</b>."
+  },
+  {
+    "p_id": "set4_32",
+    "qe": "'He died ______ cholera.'",
+    "qh": "'He died ______ cholera.'",
+    "oe": [
+      "of",
+      "from",
+      "with",
+      "by"
+    ],
+    "oh": [
+      "of",
+      "from",
+      "with",
+      "by"
+    ],
+    "a": 0,
+    "e": "'Die of' is used for <b>diseases</b>."
+  },
+  {
+    "p_id": "set4_33",
+    "qe": "'To let the cat out of the bag.'",
+    "qh": "'To let the cat out of the bag.'",
+    "oe": [
+      "To reveal a secret accidentally",
+      "To keep a pet",
+      "To be careless",
+      "To play a trick"
+    ],
+    "oh": [
+      "To reveal a secret accidentally",
+      "To keep a pet",
+      "To be careless",
+      "To play a trick"
+    ],
+    "a": 0,
+    "e": "To reveal a <b>secret</b>, usually by mistake."
+  },
+  {
+    "p_id": "set4_34",
+    "qe": "'They are laughing at the poor man.'",
+    "qh": "'They are laughing at the poor man.'",
+    "oe": [
+      "The poor man is being laughed at by them",
+      "The poor man was laughed",
+      "The man is laughed",
+      "None"
+    ],
+    "oh": [
+      "The poor man is being laughed at by them",
+      "The poor man was laughed",
+      "The man is laughed",
+      "None"
+    ],
+    "a": 0,
+    "e": "Present Continuous passive: <b>'is/am/are + being + V3'</b>. Don't forget the preposition 'at'."
+  },
+  {
+    "p_id": "set4_35",
+    "qe": "Synonym of <b>'CANDID'</b>.",
+    "qh": "<b>'CANDID'</b> का पर्यायवाची।",
+    "oe": [
+      "Frank",
+      "Deceptive",
+      "Sweet",
+      "Greedy"
+    ],
+    "oh": [
+      "Frank",
+      "Deceptive",
+      "Sweet",
+      "Greedy"
+    ],
+    "a": 0,
+    "e": "Candid means honest and straightforward, or <b>Frank</b>."
+  }
+]
