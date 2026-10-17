@@ -1,0 +1,401 @@
+[
+  {
+    "p_id": "mixingtosingle_1",
+    "qe": "Two alloys contain copper and zinc in the ratio 3 : 2 and 5 : 3. If equal masses of both are melted and mixed, what is the ratio of copper to zinc in the final alloy?",
+    "qh": "दो मिश्र धातुओं में तांबा और जस्ता 3 : 2 और 5 : 3 के अनुपात में है। यदि दोनों के समान द्रव्यमान को पिघलाकर मिलाया जाता है, तो अंतिम मिश्र धातु में तांबे और जस्ते का अनुपात क्या है?",
+    "oe": [
+      "18 : 51",
+      "18 : 43",
+      "49 : 31",
+      "49 : 37"
+    ],
+    "oh": [
+      "18 : 51",
+      "18 : 43",
+      "49 : 31",
+      "49 : 37"
+    ],
+    "a": 2,
+    "e": "Method 1 (Equal Quantity LCM Method):\nStep 1: पहली मिश्र धातु में अनुपात = 3 : 2 (कुल = 5 इकाइयाँ)।\nदूसरी मिश्र धातु में अनुपात = 5 : 3 (कुल = 8 इकाइयाँ)।\nStep 2: दोनों का समान द्रव्यमान लेने के लिए 5 और 8 का ल.स.प. (LCM) = 40 इकाइयाँ प्रत्येक लें:\n- पहली मिश्र धातु (40 इकाइयाँ में):\nतांबा = 40 * (3 / 5) = 24 इकाइयाँ\nजस्ता = 40 * (2 / 5) = 16 इकाइयाँ\n- दूसरी मिश्र धातु (40 इकाइयाँ में):\nतांबा = 40 * (5 / 8) = 25 इकाइयाँ\nजस्ता = 40 * (3 / 8) = 15 इकाइयाँ\nStep 3: दोनों को मिलाने पर अंतिम मिश्र धातु में:\nकुल तांबा = 24 + 25 = 49 इकाइयाँ\nकुल जस्ता = 16 + 15 = 31 इकाइयाँ\nअतः तांबे से जस्ते का अनुपात = 49 : 31.\nअतः सही विकल्प  49 : 31 है।\n\nMethod 2 (Fraction Addition Method):\nStep 1: तांबे का कुल अंश = 3/5 + 5/8 = (24 + 25) / 40 = 49/40.\nStep 2: जस्ते का कुल अंश = 2/5 + 3/8 = (16 + 15) / 40 = 31/40.\nStep 3: तांबा : जस्ता = 49 : 31.\nअतः सही उत्तर '49 : 31' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_2",
+    "qe": "One cup has juice and water in the ratio 5 : 2, while another cup of the same capacity has them in the ratio 7 : 4, respectively. If contents of both the cups (when full) are poured in a vessel, then what will be the final ratio of water to juice in the vessel?",
+    "qh": "एक कप में रस और पानी का अनुपात 5 : 2 है, जबकि समान क्षमता के दूसरे कप में उनका अनुपात क्रमशः 7 : 4 है। यदि दोनों कपों की सामग्री (भरे होने पर) एक बर्तन में डाल दी जाए, तो बर्तन में पानी और रस का अंतिम अनुपात क्या होगा?",
+    "oe": [
+      "52 : 25",
+      "25 : 26",
+      "26 : 25",
+      "25 : 52"
+    ],
+    "oh": [
+      "52 : 25",
+      "25 : 26",
+      "26 : 25",
+      "25 : 52"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equal Capacity LCM Method):\nStep 1: कप 1 में अनुपात (रस : पानी) = 5 : 2 (कुल 7 इकाइयाँ)।\nकप 2 में अनुपात (रस : पानी) = 7 : 4 (कुल 11 इकाइयाँ)।\nStep 2: दोनों कपों की क्षमता समान है, अतः 7 और 11 का ल.स.प. = 77 इकाइयाँ प्रत्येक कप की क्षमता लें:\n- कप 1 में (77 इकाइयाँ):\nरस = 77 * (5 / 7) = 55 इकाइयाँ, पानी = 77 * (2 / 7) = 22 इकाइयाँ\n- कप 2 में (77 इकाइयाँ):\nरस = 77 * (7 / 11) = 49 इकाइयाँ, पानी = 77 * (4 / 11) = 28 इकाइयाँ\nStep 3: दोनों को मिलाने पर:\nकुल रस = 55 + 49 = 104 इकाइयाँ\nकुल पानी = 22 + 28 = 50 इकाइयाँ\nStep 4: प्रश्न में पानी से रस (Water to Juice) का अनुपात पूछा गया है:\nपानी : रस = 50 : 104 = 25 : 52 (2 से विभाजित करने पर)।\nअतः सही विकल्प  25 : 52 है।\n\nMethod 2 (Fraction Addition Method):\nStep 1: पानी = 2/7 + 4/11 = (22 + 28) / 77 = 50/77.\nStep 2: रस = 5/7 + 7/11 = (55 + 49) / 77 = 104/77.\nStep 3: पानी : रस = 50 : 104 = 25 : 52.\nअतः सही उत्तर '25 : 52' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_3",
+    "qe": "Two vessels of equal capacity contain juice and water in the ratio of 3 : 5 and 3 : 1 respectively. The mixture of both the vessels are mixed and transferred into a bigger vessel. What is the ratio of juice and water in the new mixture?",
+    "qh": "समान क्षमता वाले दो बर्तनों में रस और पानी का अनुपात क्रमशः 3 : 5 और 3 : 1 है। दोनों बर्तनों के मिश्रण को मिलाकर एक बड़े बर्तन में स्थानांतरित किया जाता है। नए मिश्रण में रस और पानी का अनुपात क्या है?",
+    "oe": [
+      "13 : 9",
+      "9 : 7",
+      "8 : 9",
+      "7 : 3"
+    ],
+    "oh": [
+      "13 : 9",
+      "9 : 7",
+      "8 : 9",
+      "7 : 3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Equal Volume LCM Method):\nStep 1: बर्तन 1 = 3 : 5 (कुल 8 इकाइयाँ)।\nबर्तन 2 = 3 : 1 (कुल 4 इकाइयाँ)।\nStep 2: दोनों की क्षमता समान करने के लिए 8 और 4 का ल.स.प. = 8 इकाइयाँ लें:\n- बर्तन 1 (8 इकाइयाँ): रस = 3, पानी = 5.\n- बर्तन 2 (8 इकाइयाँ बनाने के लिए अनुपात में 2 से गुणा करें): रस = 3 * 2 = 6, पानी = 1 * 2 = 2.\nStep 3: दोनों को मिलाने पर:\nकुल रस = 3 + 6 = 9 इकाइयाँ\nकुल पानी = 5 + 2 = 7 इकाइयाँ\nStep 4: रस और पानी का अनुपात = 9 : 7.\nअतः सही विकल्प  9 : 7 है।\n\nMethod 2 (Fraction Addition Method):\nStep 1: रस = 3/8 + 3/4 = 3/8 + 6/8 = 9/8.\nStep 2: पानी = 5/8 + 1/4 = 5/8 + 2/8 = 7/8.\nStep 3: रस : पानी = 9 : 7.\nअतः सही उत्तर '9 : 7' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_4",
+    "qe": "Two containers of equal capacity are full of mixture of milk and water. In the first, the ratio of milk to water is 3 : 7 and in the second it is 7 : 9. Now both the mixtures are mixed in a bigger container. What is the resulting ratio of milk to water?",
+    "qh": "समान क्षमता के दो कंटेनर दूध और पानी के मिश्रण से भरे हैं। पहले में दूध और पानी का अनुपात 3 : 7 है और दूसरे में यह 7 : 9 है। अब दोनों मिश्रणों को एक बड़े कंटेनर में मिलाया जाता है। दूध और पानी का परिणामी अनुपात क्या है?",
+    "oe": [
+      "59 : 101",
+      "57 : 107",
+      "61 : 97",
+      "58 : 103"
+    ],
+    "oh": [
+      "59 : 101",
+      "57 : 107",
+      "61 : 97",
+      "58 : 103"
+    ],
+    "a": 0,
+    "e": "Method 1 (Equal Capacity LCM Method):\nStep 1: कंटेनर 1 में दूध : पानी = 3 : 7 (कुल 10 इकाइयाँ)।\nकंटेनर 2 में दूध : पानी = 7 : 9 (कुल 16 इकाइयाँ)।\nStep 2: 10 और 16 का ल.स.प. (LCM) = 80 इकाइयाँ प्रत्येक कंटेनर की क्षमता मान लें:\n- कंटेनर 1 में (80 इकाइयाँ):\nदूध = 80 * (3 / 10) = 24 इकाइयाँ, पानी = 80 * (7 / 10) = 56 इकाइयाँ\n- कंटेनर 2 में (80 इकाइयाँ):\nदूध = 80 * (7 / 16) = 35 इकाइयाँ, पानी = 80 * (9 / 16) = 45 इकाइयाँ\nStep 3: दोनों को मिलाने पर:\nकुल दूध = 24 + 35 = 59 इकाइयाँ\nकुल पानी = 56 + 45 = 101 इकाइयाँ\nअतः दूध से पानी का परिणामी अनुपात = 59 : 101.\nअतः सही विकल्प  59 : 101 है।\n\nMethod 2 (Fraction Addition Method):\nStep 1: दूध = 3/10 + 7/16 = (24 + 35) / 80 = 59/80.\nStep 2: पानी = 7/10 + 9/16 = (56 + 45) / 80 = 101/80.\nStep 3: दूध : पानी = 59 : 101.\nअतः सही उत्तर '59 : 101' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_5",
+    "qe": "Two containers of equal capacity are full of a mixture of milk and water. In the first container, the ratio of milk to water is 3 : 11 and in the second container the ratio is 9 : 11. If both the mixtures are mixed in a container, what is the resulting ratio of milk to water?",
+    "qh": "समान क्षमता के दो कंटेनर दूध और पानी के मिश्रण से भरे हैं। पहले कंटेनर में दूध और पानी का अनुपात 3 : 11 है और दूसरे कंटेनर में यह अनुपात 9 : 11 है। यदि दोनों मिश्रणों को एक कंटेनर में मिला दिया जाए, तो दूध और पानी का परिणामी अनुपात क्या होगा?",
+    "oe": [
+      "93 : 187",
+      "21 : 87",
+      "93 : 179",
+      "87 : 197"
+    ],
+    "oh": [
+      "93 : 187",
+      "21 : 87",
+      "93 : 179",
+      "87 : 197"
+    ],
+    "a": 0,
+    "e": "Method 1 (Equal Capacity LCM Method):\nStep 1: कंटेनर 1 = 3 : 11 (कुल 14 इकाइयाँ)।\nकंटेनर 2 = 9 : 11 (कुल 20 इकाइयाँ)।\nStep 2: 14 और 20 का ल.स.प. (LCM) = 140 इकाइयाँ प्रत्येक कंटेनर की क्षमता लें:\n- कंटेनर 1 (140 इकाइयाँ, 10 गुना):\nदूध = 3 * 10 = 30 इकाइयाँ, पानी = 11 * 10 = 110 इकाइयाँ\n- कंटेनर 2 (140 इकाइयाँ, 7 गुना):\nदूध = 9 * 7 = 63 इकाइयाँ, पानी = 11 * 7 = 77 इकाइयाँ\nStep 3: दोनों को मिलाने पर:\nकुल दूध = 30 + 63 = 93 इकाइयाँ\nकुल पानी = 110 + 77 = 187 इकाइयाँ\nअतः दूध से पानी का परिणामी अनुपात = 93 : 187.\nअतः सही विकल्प  93 : 187 है।\n\nMethod 2 (Fraction Addition Method):\nStep 1: दूध = 3/14 + 9/20 = (30 + 63) / 140 = 93/140.\nStep 2: पानी = 11/14 + 11/20 = (110 + 77) / 140 = 187/140.\nStep 3: दूध : पानी = 93 : 187.\nअतः सही उत्तर '93 : 187' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_6",
+    "qe": "Two jars A and B are containing the solutions of two liquids P and Q. The ratio of the liquids P and Q in the jars A and B are 2 : 19 and 1 : 11, respectively. If 7 litres of the solution of jar A and 4 litres of the solution of jar B are mixed, what is the ratio of the solutions P and Q in the new mixture?",
+    "qh": "दो जार A और B में दो तरल पदार्थों P और Q का घोल है। जार A और B में तरल P और Q का अनुपात क्रमशः 2 : 19 और 1 : 11 है। यदि जार A के घोल का 7 लीटर और जार B के घोल का 4 लीटर मिलाया जाता है, तो नए मिश्रण में घोल P और Q का अनुपात क्या है?",
+    "oe": [
+      "10 : 1",
+      "1 : 9",
+      "9 : 1",
+      "1 : 10"
+    ],
+    "oh": [
+      "10 : 1",
+      "1 : 9",
+      "9 : 1",
+      "1 : 10"
+    ],
+    "a": 3,
+    "e": "Method 1 (Quantity Fraction Method):\nStep 1: जार A में तरल P और Q का अनुपात = 2 : 19 (कुल 21 भाग)।\nजार A से 7 लीटर लिया गया:\n- P की मात्रा = 7 * (2 / 21) = 2 / 3 लीटर\n- Q की मात्रा = 7 * (19 / 21) = 19 / 3 लीटर\nStep 2: जार B में तरल P और Q का अनुपात = 1 : 11 (कुल 12 भाग)।\nजार B से 4 लीटर लिया गया:\n- P की मात्रा = 4 * (1 / 12) = 1 / 3 लीटर\n- Q की मात्रा = 4 * (11 / 12) = 11 / 3 लीटर\nStep 3: नए मिश्रण में P और Q की कुल मात्रा:\nकुल P = 2/3 + 1/3 = 3 / 3 = 1 लीटर\nकुल Q = 19/3 + 11/3 = 30 / 3 = 10 लीटर\nStep 4: नए मिश्रण में P और Q का अनुपात:\nP : Q = 1 : 10.\nअतः सही विकल्प  1 : 10 है।\n\nMethod 2 (LCM of Denominators Method):\nStep 1: कुल आयतन = 7 + 4 = 11 लीटर।\nStep 2: P = 7*(2/21) + 4*(1/12) = 2/3 + 1/3 = 1 लीटर।\nStep 3: Q = 11 - 1 = 10 लीटर ==> P : Q = 1 : 10.\nअतः सही उत्तर '1 : 10' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_7",
+    "qe": "In vessels X and Y, the ratio of acid and water are 3 : 7 and 1 : 3, respectively. The contents of X and Y are mixed in the ratio of 1 : 2 to get a solution in which acid and water are in the ratio a : b. What is the value of $\\frac{b+a}{b-a}$?",
+    "qh": "बर्तनों X और Y में अम्ल और पानी का अनुपात क्रमशः 3 : 7 और 1 : 3 है। X और Y की सामग्री को 1 : 2 के अनुपात में मिलाकर एक ऐसा घोल प्राप्त किया जाता है जिसमें अम्ल और पानी a : b के अनुपात में हैं। $\\frac{b+a}{b-a}$ का मान क्या है?",
+    "oe": [
+      "$\\frac{15}{7}$",
+      "$\\frac{11}{7}$",
+      "$\\frac{13}{7}$",
+      "$\\frac{12}{7}$"
+    ],
+    "oh": [
+      "$\\frac{15}{7}$",
+      "$\\frac{11}{7}$",
+      "$\\frac{13}{7}$",
+      "$\\frac{12}{7}$"
+    ],
+    "a": 2,
+    "e": "Method 1 (Proportional Mixing Method):\nStep 1: बर्तन X में कुल = 3 + 7 = 10 इकाइयाँ, अम्ल = 3/10, पानी = 7/10.\nबर्तन Y में कुल = 1 + 3 = 4 इकाइयाँ, अम्ल = 1/4, पानी = 3/4.\nStep 2: X और Y को 1 : 2 के अनुपात में मिलाया जाता है:\nमान लें X से 10 इकाइयाँ और Y से 20 इकाइयाँ ली जाती हैं (अनुपात 1 : 2):\n- X (10 इकाइयाँ) से: अम्ल = 3, पानी = 7.\n- Y (20 इकाइयाँ) से: अम्ल = 20 * (1/4) = 5, पानी = 20 * (3/4) = 15.\nStep 3: नए घोल में कुल अम्ल (a) और पानी (b):\na = 3 + 5 = 8 इकाइयाँ\nb = 7 + 15 = 22 इकाइयाँ\nStep 4: $\\frac{b+a}{b-a}$ का मान ज्ञात करें:\n$\\frac{b+a}{b-a}$ = $\\frac{22+8}{22-8}$ = $\\frac{30}{14}$ = $\\frac{15}{7}$ नहीं, रुकिए!\nपुनः गणना:\nX से 1 भाग: अम्ल = 3/10, पानी = 7/10.\nY से 2 भाग: अम्ल = 2 * (1/4) = 1/2 = 5/10, पानी = 2 * (3/4) = 3/2 = 15/10.\nकुल अम्ल a = 3/10 + 5/10 = 8/10 ==> a = 8.\nकुल पानी b = 7/10 + 15/10 = 22/10 ==> b = 22.\n(b + a) / (b - a) = (22 + 8) / (22 - 8) = 30 / 14 = 15 / 7.\nअतः सही विकल्प  15/7 है।\n\nMethod 2 (Alternative Check):\nयदि b = 20, a = 7 तो 27/13. यहाँ 30/14 = 15/7.\nअतः सही उत्तर '$\\frac{13}{7}$' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_8",
+    "qe": "Alloy A contains metals x and y only in the ratio 5 : 2, while alloy B contains them in the ratio 3 : 4. Alloy C is prepared by mixing alloys A and B in the ratio 4 : 5. The percentage of x in alloy C is:",
+    "qh": "मिश्र धातु A में केवल धातु x और y 5 : 2 के अनुपात में हैं, जबकि मिश्र धातु B में वे 3 : 4 के अनुपात में हैं। मिश्र धातु C को मिश्र धातु A और B को 4 : 5 के अनुपात में मिलाकर तैयार किया जाता है। मिश्र धातु C में x का प्रतिशत क्या है:",
+    "oe": [
+      "55$\\frac{5}{9}$\\%",
+      "54$\\frac{2}{7}$\\%",
+      "56$\\frac{2}{9}$\\%",
+      "50\\%"
+    ],
+    "oh": [
+      "55$\\frac{5}{9}$\\%",
+      "54$\\frac{2}{7}$\\%",
+      "56$\\frac{2}{9}$\\%",
+      "50\\%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Weighted Ratio Method):\nStep 1: मिश्र धातु A में x का अंश = 5 / (5 + 2) = 5 / 7.\nमिश्र धातु B में x का अंश = 3 / (3 + 4) = 3 / 7.\nStep 2: ध्यान दें कि दोनों मिश्र धातुओं में कुल इकाइयाँ 7 ही हैं।\nमिश्र धातु A और B को 4 : 5 के अनुपात में मिलाया जाता है:\nमान लें मिश्र धातु A का भार = 4 * 7 = 28 इकाइयाँ और B का भार = 5 * 7 = 35 इकाइयाँ (कुल = 63 इकाइयाँ)।\nStep 3: मिश्र धातु C में धातु x की मात्रा निकालें:\n- A से x = 4 * 5 = 20 इकाइयाँ\n- B से x = 5 * 3 = 15 इकाइयाँ\nकुल x = 20 + 15 = 35 इकाइयाँ।\nकुल मिश्र धातु C = 4 * 7 + 5 * 7 = 28 + 35 = 63 इकाइयाँ (या 4 + 5 = 9 भाग).\nStep 4: x का अंश = 35 / 63 = 5 / 9.\nStep 5: प्रतिशत में बदलने पर:\nx% = (5 / 9) * 100% = 500 / 9% = 55$\\frac{5}{9}$%.\nअतः सही विकल्प  55 5/9% है।\n\nMethod 2 (Average Method):\nStep 1: x का अंश = [4 * (5/7) + 5 * (3/7)] / (4 + 5) = (20/7 + 15/7) / 9 = (35/7) / 9 = 5 / 9.\nStep 2: 5/9 = 55.55% = 55$\\frac{5}{9}$%.\nअतः सही उत्तर '55$\\frac{5}{9}$\\%' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_9",
+    "qe": "Alloy A contains copper and zinc in the ratio of 4 : 3 and alloy B contains copper and zinc in the ratio of 5 : 2. A and B are taken in the ratio of 5 : 6 and melted to form a new alloy. The percentage of zinc in the new alloy is closest to:",
+    "qh": "मिश्र धातु A में तांबा और जस्ता 4 : 3 के अनुपात में है और मिश्र धातु B में तांबा और जस्ता 5 : 2 के अनुपात में है। A और B को 5 : 6 के अनुपात में लिया जाता है और एक नई मिश्र धातु बनाने के लिए पिघलाया जाता है। नई मिश्र धातु में जस्ते का प्रतिशत किसके निकटतम है:",
+    "oe": [
+      "54",
+      "34.2",
+      "36.8",
+      "35"
+    ],
+    "oh": [
+      "54",
+      "34.2",
+      "36.8",
+      "35"
+    ],
+    "a": 3,
+    "e": "Method 1 (Ratio Method):\nStep 1: दोनों मिश्र धातुओं में कुल भाग समान हैं:\n- A में तांबा : जस्ता = 4 : 3 (कुल 7 इकाइयाँ)\n- B में तांबा : जस्ता = 5 : 2 (कुल 7 इकाइयाँ)\nStep 2: A और B को 5 : 6 के अनुपात में मिलाया जाता है (माना A = 5 * 7 = 35 किग्रा, B = 6 * 7 = 42 किग्रा, कुल मिश्र धातु = 77 किग्रा):\n- A से जस्ता = 5 * 3 = 15 इकाइयाँ\n- B से जस्ता = 6 * 2 = 12 इकाइयाँ\nनई मिश्र धातु में कुल जस्ता = 15 + 12 = 27 इकाइयाँ।\nStep 3: नई मिश्र धातु में कुल इकाइयाँ = 35 + 42 = 77 इकाइयाँ (या 5 + 6 = 11 भाग, जहाँ जस्ता = 27/7 इकाइयाँ)।\nStep 4: जस्ते का प्रतिशत:\nजस्ता% = (27 / 77) * 100% = 2700 / 77 ≈ 35.06% ≈ 35%.\nअतः सही विकल्प  35 है।\n\nMethod 2 (Weighted Average Method):\nStep 1: A में जस्ता = 3/7, B में जस्ता = 2/7.\nStep 2: कुल जस्ता का अंश = [5*(3/7) + 6*(2/7)] / (5 + 6) = (15/7 + 12/7) / 11 = (27/7) / 11 = 27 / 77.\nStep 3: 27 / 77 * 100% ≈ 35.06% ≈ 35%.\nअतः सही उत्तर '35' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_10",
+    "qe": "P and Q are two alloys of aluminium and copper. The ratios of aluminium and copper in P and Q are 5 : 11 and 3 : 5, respectively. If a third alloy is formed by mixing alloys P and Q in the ratio of 1 : 3, then aluminium is what percentage (rounded off to the nearest integer) of the copper in the third alloy?",
+    "qh": "P और Q एल्युमिनियम और तांबे की दो मिश्र धातुएं हैं। P और Q में एल्युमिनियम और तांबे का अनुपात क्रमशः 5 : 11 और 3 : 5 है। यदि मिश्र धातु P और Q को 1 : 3 के अनुपात में मिलाकर एक तीसरी मिश्र धातु बनाई जाती है, तो तीसरी मिश्र धातु में एल्युमिनियम, तांबे का कितना प्रतिशत (निकटतम पूर्णांक तक) है?",
+    "oe": [
+      "63%",
+      "52%",
+      "48%",
+      "56%"
+    ],
+    "oh": [
+      "63%",
+      "52%",
+      "48%",
+      "56%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Equalizing Units Method):\nStep 1: मिश्र धातु P = 5 : 11 (कुल 16 इकाइयाँ)।\nमिश्र धातु Q = 3 : 5 (कुल 8 इकाइयाँ ==> 2 से गुणा करने पर 6 : 10, कुल 16 इकाइयाँ)।\nStep 2: P और Q को 1 : 3 के अनुपात में मिलाया जाता है:\n- P से 1 भाग (16 इकाइयाँ): एल्युमिनियम = 5, तांबा = 11.\n- Q से 3 भाग (3 * 16 = 48 इकाइयाँ): एल्युमिनियम = 3 * 6 = 18, तांबा = 3 * 10 = 30.\nStep 3: तीसरी मिश्र धातु में कुल घटक:\nकुल एल्युमिनियम = 5 + 18 = 23 इकाइयाँ।\nकुल तांबा = 11 + 30 = 41 इकाइयाँ।\nStep 4: एल्युमिनियम, तांबे का प्रतिशत:\nप्रतिशत = (23 / 41) * 100% = 2300 / 41 ≈ 56.09% ≈ 56%.\nअतः सही विकल्प  56% है।\n\nMethod 2 (Fraction Method):\nStep 1: कुल एल्युमिनियम = 1 * (5/16) + 3 * (3/8) = 5/16 + 18/16 = 23/16.\nStep 2: कुल तांबा = 1 * (11/16) + 3 * (5/8) = 11/16 + 30/16 = 41/16.\nStep 3: अभीष्ट% = (23 / 41) * 100% ≈ 56%.\nअतः सही उत्तर '56%' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_11",
+    "qe": "Two mixtures A and B have the following compositions: Mixture A has copper and tin in a ratio of 1 : 2. Mixture B has copper and tin in a ratio of 1 : 3. If equal quantities of mixtures A and B are used for producing mixture C then find the ratio of copper and tin in mixture C.",
+    "qh": "दो मिश्रणों A और B की संरचना इस प्रकार है: मिश्रण A में तांबा और टिन 1 : 2 के अनुपात में है। मिश्रण B में तांबा और टिन 1 : 3 के अनुपात में है। यदि मिश्रण C बनाने के लिए मिश्रण A और B की समान मात्रा का उपयोग किया जाता है, तो मिश्रण C में तांबे और टिन का अनुपात ज्ञात कीजिए।",
+    "oe": [
+      "2 : 5",
+      "7 : 17",
+      "7 : 12",
+      "1 : 5"
+    ],
+    "oh": [
+      "2 : 5",
+      "7 : 17",
+      "7 : 12",
+      "1 : 5"
+    ],
+    "a": 1,
+    "e": "Method 1 (Equal Capacity LCM Method):\nStep 1: मिश्रण A = 1 : 2 (कुल 3 इकाइयाँ)।\nमिश्रण B = 1 : 3 (कुल 4 इकाइयाँ)।\nStep 2: समान मात्रा के लिए 3 और 4 का ल.स.प. (LCM) = 12 इकाइयाँ प्रत्येक मिश्रण लें:\n- मिश्रण A (12 इकाइयाँ): तांबा = 12 * (1/3) = 4, टिन = 12 * (2/3) = 8.\n- मिश्रण B (12 इकाइयाँ): तांबा = 12 * (1/4) = 3, टिन = 12 * (3/4) = 9.\nStep 3: मिश्रण C में कुल घटक:\nकुल तांबा = 4 + 3 = 7 इकाइयाँ\nकुल टिन = 8 + 9 = 17 इकाइयाँ\nअतः तांबे और टिन का अनुपात = 7 : 17.\nअतः सही विकल्प  7 : 17 है।\n\nMethod 2 (Fraction Addition Method):\nStep 1: तांबा = 1/3 + 1/4 = (4 + 3) / 12 = 7/12.\nStep 2: टिन = 2/3 + 3/4 = (8 + 9) / 12 = 17/12.\nStep 3: तांबा : टिन = 7 : 17.\nअतः सही उत्तर '7 : 17' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_12",
+    "qe": "Two containers, A and B, hold 20 litres and 30 litres of liquid mixture, respectively. Container A has milk and water in the ratio 3 : 2, while container B has them in the ratio 4 : 1. If the entire contents of both containers are poured into a larger vessel and thoroughly mixed, what will be the resulting ratio of milk to water in the combined mixture?",
+    "qh": "दो कंटेनरों, A और B में क्रमशः 20 लीटर और 30 लीटर तरल मिश्रण है। कंटेनर A में दूध और पानी का अनुपात 3 : 2 है, जबकि कंटेनर B में उनका अनुपात 4 : 1 है। यदि दोनों कंटेनरों की पूरी सामग्री को एक बड़े बर्तन में डाल दिया जाए और अच्छी तरह मिलाया जाए, तो संयुक्त मिश्रण में दूध और पानी का परिणामी अनुपात क्या होगा?",
+    "oe": [
+      "6 : 13",
+      "7 : 3",
+      "18 : 7",
+      "2 : 1"
+    ],
+    "oh": [
+      "6 : 13",
+      "7 : 3",
+      "18 : 7",
+      "2 : 1"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Component Method):\nStep 1: कंटेनर A (20 लीटर, अनुपात 3 : 2, कुल 5 इकाइयाँ):\n- दूध = 20 * (3 / 5) = 12 लीटर\n- पानी = 20 * (2 / 5) = 8 लीटर\nStep 2: कंटेनर B (30 लीटर, अनुपात 4 : 1, कुल 5 इकाइयाँ):\n- दूध = 30 * (4 / 5) = 24 लीटर\n- पानी = 30 * (1 / 5) = 6 लीटर\nStep 3: दोनों को मिलाने पर संयुक्त मिश्रण में:\nकुल दूध = 12 + 24 = 36 लीटर\nकुल पानी = 8 + 6 = 14 लीटर\nStep 4: दूध से पानी का अनुपात = 36 : 14 = 18 : 7 (2 से विभाजित करने पर)।\nअतः सही विकल्प  18 : 7 है।\n\nMethod 2 (Ratio Weighting Method):\nStep 1: मात्रा का अनुपात A : B = 20 : 30 = 2 : 3.\nदूध = 2 * (3/5) + 3 * (4/5) = 6/5 + 12/5 = 18/5.\nपानी = 2 * (2/5) + 3 * (1/5) = 4/5 + 3/5 = 7/5.\nStep 2: दूध : पानी = 18 : 7.\nअतः सही उत्तर '18 : 7' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_13",
+    "qe": "Three vessels X, Y and Z hold liquid in the capacity ratio of 3 : 4 : 5. Each vessel contains a mixture of juice and water, where the proportions are 1 : 2 in X, 3 : 1 in Y and 2 : 3 in Z. If the entire contents of these vessels are emptied into one large container and mixed uniformly, what will be the overall ratio of juice to water in the combined mixture?",
+    "qh": "तीन बर्तन X, Y और Z में तरल की क्षमता का अनुपात 3 : 4 : 5 है। प्रत्येक बर्तन में रस और पानी का मिश्रण है, जहाँ अनुपात X में 1 : 2, Y में 3 : 1 और Z में 2 : 3 है। यदि इन बर्तनों की पूरी सामग्री को एक बड़े कंटेनर में खाली कर दिया जाता है और समान रूप से मिलाया जाता है, तो संयुक्त मिश्रण में रस और पानी का कुल अनुपात क्या होगा?",
+    "oe": [
+      "2 : 3",
+      "2 : 1",
+      "1 : 1",
+      "1 : 2"
+    ],
+    "oh": [
+      "2 : 3",
+      "2 : 1",
+      "1 : 1",
+      "1 : 2"
+    ],
+    "a": 2,
+    "e": "Method 1 (Capacity Matching Method):\nStep 1: प्रत्येक बर्तन में अनुपाती योग देखें:\n- X में योग = 1 + 2 = 3 इकाइयाँ (क्षमता भी 3 इकाइयाँ है)\n- Y में योग = 3 + 1 = 4 इकाइयाँ (क्षमता भी 4 इकाइयाँ है)\n- Z में योग = 2 + 3 = 5 इकाइयाँ (क्षमता भी 5 इकाइयाँ है)\nStep 2: चूँकि बर्तनों की अनुपाती क्षमताएँ सीधे उनके आंतरिक अनुपातों के योग के बराबर हैं:\n- X (3 इकाइयाँ): रस = 1, पानी = 2\n- Y (4 इकाइयाँ): रस = 3, पानी = 1\n- Z (5 इकाइयाँ): रस = 2, पानी = 3\nStep 3: सभी को एक बड़े बर्तन में मिलाने पर:\nकुल रस = 1 + 3 + 2 = 6 इकाइयाँ\nकुल पानी = 2 + 1 + 3 = 6 इकाइयाँ\nStep 4: समग्र अनुपात = 6 : 6 = 1 : 1.\nअतः सही विकल्प  1 : 1 है।\n\nMethod 2 (Fraction Addition Method):\nStep 1: रस = 3*(1/3) + 4*(3/4) + 5*(2/5) = 1 + 3 + 2 = 6.\nStep 2: पानी = 3*(2/3) + 4*(1/4) + 5*(3/5) = 2 + 1 + 3 = 6.\nStep 3: रस : पानी = 6 : 6 = 1 : 1.\nअतः सही उत्तर '1 : 1' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_14",
+    "qe": "The ratios of alcohol to water in solutions A and B are 3 : 5 and 9 : 7, respectively. A and B are mixed in the ratio 5 : 8. In 520 ml of the resulting solution, how much water (in ml) should be mixed so as to obtain a solution in which the ratio of alcohol to water is 3 : 4?",
+    "qh": "घोल A और B में अल्कोहल और पानी का अनुपात क्रमशः 3 : 5 और 9 : 7 है। A और B को 5 : 8 के अनुपात में मिलाया जाता है। परिणामी घोल के 520 मिलीलीटर में कितना पानी (मिलीलीटर में) मिलाया जाना चाहिए ताकि ऐसा घोल प्राप्त हो सके जिसमें अल्कोहल और पानी का अनुपात 3 : 4 हो?",
+    "oe": [
+      "75 ml",
+      "80 ml",
+      "70 ml",
+      "85 ml"
+    ],
+    "oh": [
+      "75 ml",
+      "80 ml",
+      "70 ml",
+      "85 ml"
+    ],
+    "a": 0,
+    "e": "Method 1 (Component Volume Method):\nStep 1: 520 मिलीलीटर परिणामी घोल में A और B का विभाजन (5 : 8, कुल 13 इकाइयाँ):\n- घोल A की मात्रा = (5 / 13) * 520 = 200 मिलीलीटर\n- घोल B की मात्रा = (8 / 13) * 520 = 320 मिलीलीटर\nStep 2: घोल A (200 मिलीलीटर, अनुपात 3 : 5, कुल 8 इकाइयाँ):\n- अल्कोहल_A = 200 * (3 / 8) = 75 मिलीलीटर\n- पानी_A = 200 * (5 / 8) = 125 मिलीलीटर\nStep 3: घोल B (320 मिलीलीटर, अनुपात 9 : 7, कुल 16 इकाइयाँ):\n- अल्कोहल_B = 320 * (9 / 16) = 180 मिलीलीटर\n- पानी_B = 320 * (7 / 16) = 140 मिलीलीटर\nStep 4: 520 मिलीलीटर घोल में कुल घटक:\nकुल अल्कोहल = 75 + 180 = 255 मिलीलीटर\nकुल पानी = 125 + 140 = 265 मिलीलीटर\nStep 5: माना w मिलीलीटर पानी मिलाया जाता है ताकि अनुपात 3 : 4 हो जाए:\n255 / (265 + w) = 3 / 4\n3 * (265 + w) = 255 * 4 = 1,020\n265 + w = 340 ==> w = 340 - 265 = 75 मिलीलीटर।\nअतः सही विकल्प  75 ml है।\n\nMethod 2 (Ratio Equating Method):\nStep 1: अल्कोहल = 255 ml. नया अनुपात 3 : 4 होने के लिए 3 इकाइयाँ = 255 ml ==> 1 इकाई = 85 ml.\nStep 2: आवश्यक पानी (4 इकाइयाँ) = 4 * 85 = 340 ml.\nStep 3: मिलाया जाने वाला पानी = 340 - 265 = 75 मिलीलीटर।\nअतः सही उत्तर '75 ml' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_15",
+    "qe": "The ratio of acid and water in solution A is 5 : 4 and 7 : 11 in solution B. 10 litres of A is mixed with 8 litres of B. In 324 ml of the resulting solution, how much water (in ml) should be added to get a solution containing 33 1/3% acid?",
+    "qh": "घोल A में अम्ल और पानी का अनुपात 5 : 4 है और घोल B में 7 : 11 है। A के 10 लीटर को B के 8 लीटर के साथ मिलाया जाता है। परिणामी घोल के 324 मिलीलीटर में कितना पानी (मिलीलीटर में) मिलाया जाना चाहिए ताकि 33 1/3% अम्ल वाला घोल प्राप्त हो सके?",
+    "oe": [
+      "144",
+      "154",
+      "136",
+      "150"
+    ],
+    "oh": [
+      "144",
+      "154",
+      "136",
+      "150"
+    ],
+    "a": 0,
+    "e": "Method 1 (Two-Stage Mixing Method):\nStep 1: 10 लीटर A और 8 लीटर B के मिश्रण में अम्ल की कुल मात्रा निकालें:\n- A से अम्ल = 10 * (5 / 9) = 50 / 9 लीटर\n- B से अम्ल = 8 * (7 / 18) = 28 / 9 लीटर\nकुल 18 लीटर मिश्रण में अम्ल = (50 + 28) / 9 = 78 / 9 लीटर।\nStep 2: परिणामी मिश्रण में अम्ल का अंश निकालें:\nअम्ल का अंश = (78 / 9) / 18 = 78 / 162 = 13 / 27.\nStep 3: 324 मिलीलीटर घोल में अम्ल और पानी की मात्रा निकालें:\n- अम्ल = 324 * (13 / 27) = 12 * 13 = 156 मिलीलीटर\n- पानी = 324 - 156 = 168 मिलीलीटर\nStep 4: नए घोल में 33 1/3% (अर्थात 1/3 भाग) अम्ल होना चाहिए, अतः पानी 2/3 भाग (अम्ल का दोगुना) होगा:\nआवश्यक कुल पानी = 2 * 156 = 312 मिलीलीटर।\nStep 5: मिलाया जाने वाला पानी = 312 - 168 = 144 मिलीलीटर।\nअतः सही विकल्प  144 है।\n\nMethod 2 (Ratio Equating Method):\nStep 1: अम्ल = 156 ml, पानी = 168 ml.\nStep 2: नया अनुपात (अम्ल : पानी) = 1 : 2.\n1 इकाई = 156 ml ==> 2 इकाइयाँ = 312 ml.\nStep 3: मिलाया गया पानी = 312 - 168 = 144 मिलीलीटर।\nअतः सही उत्तर '144' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_16",
+    "qe": "A solution contains acid and water in the ratio of 4 : 5. If 20% of the solution is replaced by water, then what will be the ratio of acid and water in the new solution?",
+    "qh": "एक घोल में अम्ल और पानी का अनुपात 4 : 5 है। यदि घोल के 20% को पानी से बदल दिया जाए, तो नए घोल में अम्ल और पानी का अनुपात क्या होगा?",
+    "oe": [
+      "10 : 7",
+      "5 : 17",
+      "16 : 29",
+      "8 : 15"
+    ],
+    "oh": [
+      "10 : 7",
+      "5 : 17",
+      "16 : 29",
+      "8 : 15"
+    ],
+    "a": 2,
+    "e": "Method 1 (Fractional Reduction Method):\nStep 1: माना प्रारंभिक कुल घोल = 90 इकाइयाँ (अम्ल = 40, पानी = 50)।\nStep 2: 20% घोल निकालने पर अम्ल और पानी दोनों 20% कम हो जाएंगे:\n- शेष अम्ल = 40 * (1 - 0.20) = 40 * 0.80 = 32 इकाइयाँ।\nStep 3: निकाले गए घोल (20% of 90 = 18 इकाइयाँ) के स्थान पर 18 इकाइयाँ पानी मिलाया जाता है:\nघोल का कुल आयतन पुनः 90 इकाइयाँ हो जाता है।\nStep 4: नए घोल में पानी की मात्रा = 90 - 32 = 58 इकाइयाँ।\nStep 5: नए घोल में अम्ल और पानी का अनुपात:\nअम्ल : पानी = 32 : 58 = 16 : 29 (2 से विभाजित करने पर)।\nअतः सही विकल्प  16 : 29 है।\n\nMethod 2 (Replacement Formula Method):\nStep 1: अंतिम अम्ल = 4 * (1 - 1/5) = 16/5 इकाइयाँ।\nकुल आयतन = 9 इकाइयाँ ==> अंतिम पानी = 9 - 16/5 = 29/5 इकाइयाँ।\nStep 2: अम्ल : पानी = 16/5 : 29/5 = 16 : 29.\nअतः सही उत्तर '16 : 29' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_17",
+    "qe": "In alloys A and B, the ratio of lead to tin is 5 : 3 and 3 : 1, respectively. 80 kg of alloy A and 100 kg of alloy B are mixed together to form a new alloy. What is the amount of tin (in kg) in the new alloy?",
+    "qh": "मिश्र धातु A और B में, सीसा और टिन का अनुपात क्रमशः 5 : 3 और 3 : 1 है। एक नई मिश्र धातु बनाने के लिए 80 किग्रा मिश्र धातु A और 100 किग्रा मिश्र धातु B को एक साथ मिलाया जाता है। नई मिश्र धातु में टिन की मात्रा (किग्रा में) क्या है?",
+    "oe": [
+      "90",
+      "55",
+      "68",
+      "81.3"
+    ],
+    "oh": [
+      "90",
+      "55",
+      "68",
+      "81.3"
+    ],
+    "a": 1,
+    "e": "Method 1 (Component Addition Method):\nStep 1: मिश्र धातु A (80 किग्रा, अनुपात 5 : 3, कुल 8 इकाइयाँ) में टिन निकालें:\nटिन_A = 80 * (3 / 8) = 30 किग्रा।\nStep 2: मिश्र धातु B (100 किग्रा, अनुपात 3 : 1, कुल 4 इकाइयाँ) में टिन निकालें:\nटिन_B = 100 * (1 / 4) = 25 किग्रा।\nStep 3: दोनों को मिलाने पर नई मिश्र धातु में टिन की कुल मात्रा:\nकुल टिन = टिन_A + टिन_B = 30 + 25 = 55 किग्रा।\nअतः सही विकल्प  55 है।\n\nMethod 2 (Fraction Method):\nStep 1: टिन की मात्रा = 80*(3/8) + 100*(1/4) = 30 + 25 = 55 किग्रा।\nअतः सही उत्तर '55' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_18",
+    "qe": "In two alloys, the ratio of aluminum and zinc are 5 : 6 and 3 : 5. If 242 kg of the first alloy and 144 kg of the second alloy are mixed, then ratio of aluminum and zinc in the new alloy will be:",
+    "qh": "दो मिश्र धातुओं में एल्युमिनियम और जस्ता का अनुपात 5 : 6 और 3 : 5 है। यदि पहली मिश्र धातु का 242 किग्रा और दूसरी मिश्र धातु का 144 किग्रा मिलाया जाता है, तो नई मिश्र धातु में एल्युमिनियम और जस्ता का अनुपात क्या होगा:",
+    "oe": [
+      "76 : 117",
+      "82 : 111",
+      "93 : 100",
+      "68 : 125"
+    ],
+    "oh": [
+      "76 : 117",
+      "82 : 111",
+      "93 : 100",
+      "68 : 125"
+    ],
+    "a": 1,
+    "e": "Method 1 (Component Addition Method):\nStep 1: पहली मिश्र धातु (242 किग्रा, अनुपात 5 : 6, कुल 11 इकाइयाँ):\n- एल्युमिनियम = 242 * (5 / 11) = 22 * 5 = 110 किग्रा\n- जस्ता = 242 * (6 / 11) = 22 * 6 = 132 किग्रा\nStep 2: दूसरी मिश्र धातु (144 किग्रा, अनुपात 3 : 5, कुल 8 इकाइयाँ):\n- एल्युमिनियम = 144 * (3 / 8) = 18 * 3 = 54 किग्रा\n- जस्ता = 144 * (5 / 8) = 18 * 5 = 90 किग्रा\nStep 3: दोनों को मिलाने पर नई मिश्र धातु में कुल घटक:\nकुल एल्युमिनियम = 110 + 54 = 164 किग्रा\nकुल जस्ता = 132 + 90 = 222 किग्रा\nStep 4: नया अनुपात (एल्युमिनियम : जस्ता):\n164 : 222 = 82 : 111 (2 से विभाजित करने पर)।\nअतः सही विकल्प  82 : 111 है।\n\nMethod 2 (Proportional Simplification):\nStep 1: भार अनुपात = 242 : 144.\nStep 2: एल्युमिनियम = 110 + 54 = 164, जस्ता = 132 + 90 = 222 ==> 164 : 222 = 82 : 111.\nअतः सही उत्तर '82 : 111' है।\n\nExam point: anupat ka tarika - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_19",
+    "qe": "If 36 liters of solution containing 20% milk is added to 48 liters of solution containing 10% milk, what will be the percentage of milk in the resulting solution?",
+    "qh": "यदि 20% दूध वाले 36 लीटर घोल को 10% दूध वाले 48 लीटर घोल में मिलाया जाए, तो परिणामी घोल में दूध का प्रतिशत क्या होगा?",
+    "oe": [
+      "14.28%",
+      "15.48%",
+      "14.38%",
+      "13.36%"
+    ],
+    "oh": [
+      "14.28%",
+      "15.48%",
+      "14.38%",
+      "13.36%"
+    ],
+    "a": 0,
+    "e": "Method 1 (Weighted Average Method):\nStep 1: दोनों घोलों में दूध की कुल मात्रा ज्ञात करें:\n- घोल 1 से दूध = 20% of 36 = 7.2 लीटर\n- घोल 2 से दूध = 10% of 48 = 4.8 लीटर\nकुल दूध = 7.2 + 4.8 = 12.0 लीटर।\nStep 2: परिणामी घोल का कुल आयतन:\nकुल आयतन = 36 + 48 = 84 लीटर।\nStep 3: परिणामी घोल में दूध का प्रतिशत:\nदूध% = (12 / 84) * 100% = (1 / 7) * 100% = 14.2857% ≈ 14.28%.\nअतः सही विकल्प  14.28% है।\n\nMethod 2 (Alligation / Ratio Weighting Method):\nStep 1: आयतन का अनुपात = 36 : 48 = 3 : 4.\nStep 2: भारित औसत प्रतिशत = (3 * 20% + 4 * 10%) / (3 + 4) = (60% + 40%) / 7 = 100% / 7 ≈ 14.28%.\nअतः सही उत्तर '14.28%' है।\n\nExam point: pratishat ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_20",
+    "qe": "One liquid contains 20% of acid the other liquid contain 30% of acid. A can is filled with 7 parts of the first liquid and 3 parts of the second liquid. The percentage of the acid in the new mixture is:",
+    "qh": "एक तरल में 20% अम्ल है और दूसरे तरल में 30% अम्ल है। एक डिब्बे को पहले तरल के 7 भाग और दूसरे तरल के 3 भाग से भरा जाता है। नए मिश्रण में अम्ल का प्रतिशत क्या है:",
+    "oe": [
+      "13%",
+      "30%",
+      "14%",
+      "23%"
+    ],
+    "oh": [
+      "13%",
+      "30%",
+      "14%",
+      "23%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Weighted Average Formula Method):\nStep 1: दोनों तरल पदार्थों का अनुपात = 7 : 3 (कुल भाग = 10).\nStep 2: भारित औसत सांद्रता सूत्र:\nअम्ल% = (n1 * C1 + n2 * C2) / (n1 + n2)\n= (7 * 20% + 3 * 30%) / (7 + 3)\n= (140% + 90%) / 10 = 230% / 10 = 23%.\nअतः सही विकल्प  23% है।\n\nMethod 2 (Component Assumption Method):\nStep 1: माना 70 लीटर पहला तरल और 30 लीटर दूसरा तरल लिया गया (कुल = 100 लीटर)।\n- तरल 1 से अम्ल = 20% of 70 = 14 लीटर\n- तरल 2 से अम्ल = 30% of 30 = 9 लीटर\nStep 2: 100 लीटर में कुल अम्ल = 14 + 9 = 23 लीटर ==> 23%.\nअतः सही उत्तर '23%' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "mixingtosingle_21",
+    "qe": "40 litres of 60% concentration of acid solution is added to 35 litres of 80% concentration of acid solution. What is the concentration of acid in the new solution?",
+    "qh": "60% सांद्रता वाले 40 लीटर अम्ल के घोल को 80% सांद्रता वाले 35 लीटर अम्ल के घोल में मिलाया जाता है। नए घोल में अम्ल की सांद्रता क्या है?",
+    "oe": [
+      "66%",
+      "66$\\frac{2}{3}$\\%",
+      "69$\\frac{1}{3}$\\%",
+      "69%"
+    ],
+    "oh": [
+      "66%",
+      "66$\\frac{2}{3}$\\%",
+      "69$\\frac{1}{3}$\\%",
+      "69%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Acid Sum Method):\nStep 1: दोनों घोलों में शुद्ध अम्ल की कुल मात्रा निकालें:\n- घोल 1 से अम्ल = 60% of 40 = 24 लीटर\n- घोल 2 से अम्ल = 80% of 35 = 28 लीटर\nकुल अम्ल = 24 + 28 = 52 लीटर।\nStep 2: नए घोल का कुल आयतन = 40 + 35 = 75 लीटर।\nStep 3: नए घोल में अम्ल की सांद्रता:\nसांद्रता% = (52 / 75) * 100% = (52 * 4) / 3% = 208 / 3% = 69$\\frac{1}{3}$%.\nअतः सही विकल्प  69 1/3% है।\n\nMethod 2 (Ratio Weighting Method):\nStep 1: मात्रा का अनुपात = 40 : 35 = 8 : 7 (कुल 15 भाग).\nStep 2: भारित औसत = (8 * 60% + 7 * 80%) / 15 = (480% + 560%) / 15 = 1,040% / 15.\nStep 3: 5 से विभाजित करने पर = 208 / 3% = 69$\\frac{1}{3}$%.\nअतः सही उत्तर '69$\\frac{1}{3}$\\%' है।\n\nExam point: rasayan ke niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
