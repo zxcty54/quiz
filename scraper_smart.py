@@ -492,10 +492,61 @@ def scrapingant_fetch(url):
         return None
 
 
+# Browser-render aam mangte se mehnga (credit) padta hai — ek run me sima rakhi.
+RENDER_MAX_PER_RUN = 12
+_render_used = 0
+_render_lock = threading.Lock()
+
+
+def _render_slot():
+    global _render_used
+    with _render_lock:
+        if _render_used >= RENDER_MAX_PER_RUN:
+            return False
+        _render_used += 1
+        return True
+
+
+def scrapingant_render_fetch(url):
+    """JavaScript se banni wali site ka browser-render mangta (browser=true).
+    Khali-khokha (Loading...) wali musibat yahi suljhata hai. Render-cap khatm
+    ya API key na ho to None — seedhi ke aam kadam apne-aap chal padenge."""
+    if not SCRAPINGANT_API_KEY:
+        return None
+    if not _render_slot():
+        debug(f"Render sima khatm, aam mangta chalega: {url[:60]}")
+        return None
+    try:
+        r = _shared_normal_session().get(
+            "https://api.scrapingant.com/v2/general",
+            params={"url": url, "x-api-key": SCRAPINGANT_API_KEY, "browser": "true"},
+            timeout=60)
+        if r.status_code >= 400:
+            warn(f"ScrapingAnt Render HTTP {r.status_code}: {url}")
+            return None
+        body = None
+        try:
+            data = r.json()
+            if isinstance(data, dict) and "content" in data:
+                body = data["content"]
+        except Exception:
+            pass
+        if body is None:
+            body = r.text
+        if body:
+            debug(f"ScrapingAnt render safal: {url[:60]}")
+        return body
+    except Exception as e:
+        warn(f"ScrapingAnt Render failed: {url} | {e}")
+        return None
+
+
 def _ladder(url):
     """Purani seedhi, waisi ki vaisi — bas naam ke sath."""
     host = (urlparse(url).hostname or '').lower()
     steps = []
+    if 'india.gov.in' in host:
+        steps.append(('render', lambda: scrapingant_render_fetch(url)))
     if 'bihar.gov.in' in host:
         steps.append(('gov', lambda: gov_special_fetch(url)))
         steps.append(('plain-nossl', lambda: normal_fetch(url, verify=False)))
@@ -521,7 +572,7 @@ def fetch_url(url):
     # jo tareeka is site par jeeta tha, pehle wahi
     with _host_lock:
         winner = _host_winners.get(host)
-    if winner:
+    if winner and not (steps and steps[0][0] == 'render'):
         steps.sort(key=lambda st: 0 if st[0] == winner else 1)
 
     for name, fn in steps:
