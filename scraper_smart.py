@@ -790,6 +790,49 @@ def normalize_for_hash(text):
     return text.strip()
 
 
+_TITLE_TOKENS_MIN = 4
+_TITLE_SIM = 0.60   # title ke asal shabdon ka milaank — itna mile to ek hi khabar
+_BODY_SIM = 0.80    # katha ke agram hisse ka milaank (shabd-shabd-Peru copy ke liye)
+
+_STOPWORDS = {
+    "the", "a", "an", "in", "on", "of", "to", "for", "and", "or", "by",
+    "with", "is", "are", "was", "were", "be", "been", "at", "from", "as",
+    "it", "its", "this", "that", "has", "have", "had", "will", "would",
+    "says", "said", "over", "after", "before", "amid", "during", "into",
+}
+
+
+def _tokens(text, stopwords=False):
+    out = set()
+    for t in normalize_for_hash(text).split():
+        if len(t) < 3:
+            continue
+        if stopwords and t in _STOPWORDS:
+            continue
+        out.add(t)
+    return out
+
+
+def _jaccard(a, b):
+    if not a or not b:
+        return 0.0
+    return len(a & b) / len(a | b)
+
+
+def _same_story(x, y):
+    """Alag URL/title ho par katha ek hi ho to True."""
+    tx = _tokens(x.get("title", ""), stopwords=True)
+    ty = _tokens(y.get("title", ""), stopwords=True)
+    if len(tx) >= _TITLE_TOKENS_MIN and len(ty) >= _TITLE_TOKENS_MIN:
+        if _jaccard(tx, ty) >= _TITLE_SIM:
+            return True
+    hx = _tokens((x.get("content", "") or "")[:600])
+    hy = _tokens((y.get("content", "") or "")[:600])
+    if hx and hy and len(hx & hy) / min(len(hx), len(hy)) >= _BODY_SIM:
+        return True
+    return False
+
+
 def deduplicate(items):
     seen = set()
     output = []
@@ -809,8 +852,17 @@ def deduplicate(items):
         seen.add(key)
         output.append(item)
 
-    print(f"🧹 Deduplication: Input={len(items)} | Dropped={dropped} | Unique={len(output)}")
-    return output
+    # dusri seedhi: katha-milaank — pehle aayi khabar jeetti hai
+    kept = []
+    for item in output:
+        if any(_same_story(item, k) for k in kept):
+            dropped += 1
+            debug(f"DUPLICATE DROP (dohri katha): {item.get('title', '')[:60]}")
+            continue
+        kept.append(item)
+
+    print(f"🧹 Deduplication: Input={len(items)} | Dropped={dropped} | Unique={len(kept)}")
+    return kept
 
 
 # ============================================================
@@ -1116,7 +1168,7 @@ def save_output(national, bihar, breakdown):
             if is_strictly_today(parsed_d) and key not in seen_keys:
                 merged.append(item)
                 seen_keys.add(key)
-        return merged
+        return deduplicate(merged)
 
     final_national = merge_today_records(national, existing_national)
     final_bihar = merge_today_records(bihar, existing_bihar)
