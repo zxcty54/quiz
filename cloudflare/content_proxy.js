@@ -75,10 +75,19 @@ export default {
       });
     }
 
+    // GitHub ka header "download" type ka ata hai; json/txt ko sahi type do
+    // taki browser me file dikhe bhi or app ke liye bhi saaf rahe
+    const ext = path.split(".").pop().toLowerCase();
+    const TEXT_TYPES = {
+      json: "application/json; charset=utf-8",
+      txt: "text/plain; charset=utf-8",
+      md: "text/plain; charset=utf-8",
+    };
+
     const res = new Response(gh.body, {
       status: 200,
       headers: {
-        "Content-Type": gh.headers.get("Content-Type") || "application/json; charset=utf-8",
+        "Content-Type": TEXT_TYPES[ext] || gh.headers.get("Content-Type") || "application/octet-stream",
         "Cache-Control": `public, max-age=${ttlFor(path)}`,
         "X-Proxy-Cache": "MISS",
       },
