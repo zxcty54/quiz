@@ -16,8 +16,8 @@ const String _contentProxyBase =
     'https://content-proxy.nitesh-skyhigh.workers.dev';
 const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
 
-// 🌓 Global Theme Controller
-final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.light);
+// 🌓 Global Theme Controller (Default Dark Mode)
+final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.dark);
 
 // 🔄 Remote Config Fetcher (Worker + CDN Fallbacks)
 Future<void> _syncAppConfig() async {
@@ -80,9 +80,9 @@ void main() async {
     anonKey: supabaseAnonKey,
   );
 
-  // 📱 3. SharedPreferences: Theme & Onboarding Check
+  // 📱 3. SharedPreferences: Theme & Onboarding Check (Default: Dark Mode)
   final prefs = await SharedPreferences.getInstance();
-  final bool isDark = prefs.getBool('is_dark_mode') ?? false;
+  final bool isDark = prefs.getBool('is_dark_mode') ?? true; // 👈 By default Dark rakha hai
   final bool isOnboarded = prefs.getBool('is_onboarded') ?? false;
 
   globalThemeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
@@ -108,11 +108,10 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           themeMode: currentMode,
 
-          // 🎨 Cohesive Royal Blue & Deep Slate Theme
+          // 🎨 Midnight Deep Dark Theme
           theme: _buildTheme(Brightness.light),
           darkTheme: _buildTheme(Brightness.dark),
 
-          // 🚀 Splash screen handles routing seamlessly
           home: isOnboarded
               ? const SplashScreen()
               : const SplashScreen(nextScreen: OnboardingWelcomeScreen()),
@@ -128,24 +127,24 @@ class MyApp extends StatelessWidget {
       seedColor: const Color(0xFF2563EB),
       brightness: brightness,
       primary: isDark ? const Color(0xFF60A5FA) : const Color(0xFF2563EB),
-      secondary: isDark ? const Color(0xFF38BDF8) : const Color(0xFF0284C7), // Clean Sky Blue (No Purple)
-      tertiary: const Color(0xFFF59E0B), // Warm Amber
-      surface: isDark ? const Color(0xFF1E293B) : Colors.white,
+      secondary: isDark ? const Color(0xFFA78BFA) : const Color(0xFF7C3AED),
+      tertiary: const Color(0xFFF59E0B),
+      surface: isDark ? const Color(0xFF111C30) : Colors.white,
     );
 
     final surface = scheme.surface;
-    final border = isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0);
+    final border = isDark ? const Color(0xFF263449) : const Color(0xFFE3E9F5);
 
     return ThemeData(
       useMaterial3: true,
       brightness: brightness,
       colorScheme: scheme,
-      scaffoldBackgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+      scaffoldBackgroundColor: isDark ? const Color(0xFF070B14) : const Color(0xFFF5F7FF),
       cardColor: surface,
       dividerColor: border,
       appBarTheme: AppBarTheme(
         centerTitle: true,
-        backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+        backgroundColor: isDark ? const Color(0xFF0B1220) : Colors.white,
         foregroundColor: isDark ? Colors.white : const Color(0xFF0F172A),
         elevation: 0,
         scrolledUnderElevation: 0.5,
@@ -171,7 +170,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       drawerTheme: DrawerThemeData(
-        backgroundColor: isDark ? const Color(0xFF0F172A) : Colors.white,
+        backgroundColor: isDark ? const Color(0xFF0B1220) : Colors.white,
         surfaceTintColor: Colors.transparent,
         elevation: 0,
         shape: const RoundedRectangleBorder(
@@ -197,7 +196,7 @@ class MyApp extends StatelessWidget {
       ),
       navigationBarTheme: NavigationBarThemeData(
         height: 68,
-        backgroundColor: isDark ? const Color(0xFF1E293B) : Colors.white,
+        backgroundColor: isDark ? const Color(0xFF0B1220) : Colors.white,
         surfaceTintColor: Colors.transparent,
         indicatorColor: scheme.primary.withValues(alpha: isDark ? 0.22 : 0.12),
         labelTextStyle: WidgetStateProperty.resolveWith((states) {
@@ -217,18 +216,18 @@ class MyApp extends StatelessWidget {
         }),
       ),
       chipTheme: ChipThemeData(
-        backgroundColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFEFF6FF),
+        backgroundColor: isDark ? const Color(0xFF1A2740) : const Color(0xFFEFF4FF),
         selectedColor: scheme.primary.withValues(alpha: isDark ? 0.28 : 0.14),
         side: BorderSide(color: border),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(99)),
         labelStyle: TextStyle(
-          color: isDark ? Colors.white : const Color(0xFF1E40AF),
+          color: isDark ? Colors.white : const Color(0xFF1E3A8A),
           fontWeight: FontWeight.w700,
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(
         filled: true,
-        fillColor: isDark ? const Color(0xFF0F172A) : const Color(0xFFF8FAFC),
+        fillColor: isDark ? const Color(0xFF0D1628) : const Color(0xFFF8FAFF),
         contentPadding: const EdgeInsets.symmetric(horizontal: 14, vertical: 13),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(16),
@@ -273,8 +272,8 @@ class MyApp extends StatelessWidget {
       ),
       progressIndicatorTheme: ProgressIndicatorThemeData(
         color: scheme.primary,
-        linearTrackColor: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
-        circularTrackColor: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0),
+        linearTrackColor: isDark ? const Color(0xFF263449) : const Color(0xFFE2E8F0),
+        circularTrackColor: isDark ? const Color(0xFF263449) : const Color(0xFFE2E8F0),
       ),
     );
   }
