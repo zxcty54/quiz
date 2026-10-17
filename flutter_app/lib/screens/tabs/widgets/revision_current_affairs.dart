@@ -4,6 +4,12 @@ import 'package:http/http.dart' as http;
 import '../../../models/question_model.dart';
 import '../../revision_practice_screen.dart';
 
+// --- Content Proxy (Private content_base ka darwaza: Cloudflare Worker) ---
+const String _contentProxyBase =
+    'https://content-proxy.nitesh-skyhigh.workers.dev';
+const String _contentAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+
 class MonthAffairConfig {
   final String label;
   final String fileName;
@@ -51,12 +57,28 @@ class _RevisionCurrentAffairsCardState extends State<RevisionCurrentAffairsCard>
     });
 
     try {
-      final String url =
-          'https://raw.githubusercontent.com/zxcty54/content_base/main/current_affair/${month.fileName}?t=${DateTime.now().millisecondsSinceEpoch}';
+      final int cts = DateTime.now().millisecondsSinceEpoch;
+      // Do raste: 1) Cloudflare Worker  2) GitHub CDN mirrors (raw aakhir me)
+      final List<String> countUrls = [
+        '$_contentProxyBase/current_affair/${month.fileName}?t=$cts',
+        'https://raw.githack.com/zxcty54/content_base/main/current_affair/${month.fileName}',
+        'https://cdn.statically.io/gh/zxcty54/content_base/main/current_affair/${month.fileName}',
+        'https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/current_affair/${month.fileName}?t=$cts',
+        'https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/current_affair/${month.fileName}?t=$cts',
+        'https://raw.githubusercontent.com/zxcty54/content_base/main/current_affair/${month.fileName}?t=$cts',
+      ];
+      http.Response? res;
+      for (final u in countUrls) {
+        try {
+          final r = await http.get(Uri.parse(u), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 8));
+          if (r.statusCode == 200) {
+            res = r;
+            break;
+          }
+        } catch (_) {}
+      }
 
-      final res = await http.get(Uri.parse(url)).timeout(const Duration(seconds: 8));
-
-      if (res.statusCode == 200 && mounted) {
+      if (res != null && res.statusCode == 200 && mounted) {
         String body = utf8.decode(res.bodyBytes).trim();
         if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
 
@@ -113,13 +135,30 @@ class _RevisionCurrentAffairsCardState extends State<RevisionCurrentAffairsCard>
     );
 
     try {
-      final String fetchUrl = jsonPath.startsWith('http')
-          ? '$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}'
-          : 'https://raw.githubusercontent.com/zxcty54/content_base/main/$jsonPath?t=${DateTime.now().millisecondsSinceEpoch}';
+      final int ots = DateTime.now().millisecondsSinceEpoch;
+      // Do raste: 1) Cloudflare Worker  2) GitHub CDN mirrors (raw aakhir me)
+      final List<String> fetchUrls = jsonPath.startsWith('http')
+          ? ['$jsonPath?t=$ots']
+          : [
+              '$_contentProxyBase/$jsonPath?t=$ots',
+              'https://raw.githack.com/zxcty54/content_base/main/$jsonPath',
+              'https://cdn.statically.io/gh/zxcty54/content_base/main/$jsonPath',
+              'https://fastly.jsdelivr.net/gh/zxcty54/content_base@main/$jsonPath?t=$ots',
+              'https://cdn.jsdelivr.net/gh/zxcty54/content_base@main/$jsonPath?t=$ots',
+              'https://raw.githubusercontent.com/zxcty54/content_base/main/$jsonPath?t=$ots',
+            ];
+      http.Response? res;
+      for (final u in fetchUrls) {
+        try {
+          final r = await http.get(Uri.parse(u), headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 10));
+          if (r.statusCode == 200) {
+            res = r;
+            break;
+          }
+        } catch (_) {}
+      }
 
-      final res = await http.get(Uri.parse(fetchUrl)).timeout(const Duration(seconds: 10));
-
-      if (res.statusCode == 200 && context.mounted) {
+      if (res != null && res.statusCode == 200 && context.mounted) {
         String body = utf8.decode(res.bodyBytes).trim();
         if (body.startsWith('\uFEFF')) body = body.substring(1).trim();
 
@@ -156,7 +195,7 @@ class _RevisionCurrentAffairsCardState extends State<RevisionCurrentAffairsCard>
               const SnackBar(content: Text('⚠️ इस महीने में कोई प्रश्न नहीं मिला!')));
         }
       } else {
-        throw Exception('HTTP ${res.statusCode}');
+        throw Exception('HTTP ${res?.statusCode}');
       }
     } catch (e) {
       if (context.mounted) {
