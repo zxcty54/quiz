@@ -1,0 +1,572 @@
+[
+  {
+    "p_id": "animal_kingdom2_1",
+    "qe": "Which of the following is a jawless vertebrate (Agnatha)?",
+    "qh": "इनमें से कौन जबड़ा-रहित कशेरुकी (Agnatha) है?",
+    "oe": [
+      "Rohu",
+      "Frog",
+      "Lamprey (Petromyzon)",
+      "Shark"
+    ],
+    "oh": [
+      "Rohu",
+      "Frog",
+      "Lamprey (Petromyzon)",
+      "Shark"
+    ],
+    "a": 2,
+    "e": "Concept: Agnatha ka matlab hai 'bina jabde wale' kasheruk - inke munh gol/chusne wale hote hain aur wo doosre jeev ke khoon ya sharir se chipak kar khate hain. Lamprey (Petromyzon) aur Hagfish isi group me aate hain; ye sabse purane kasherukon me maane jate hain (unki koi asli haddi wali jabda nahi hoti, sirf cartilage). Baaki teen me jabde hote hain: Shark (Chondrichthyes), Rohu (Osteichthyes), Frog (Amphibia). Exam point: 'Jawless vertebrate = Lamprey/cyclostome (Agnatha)'."
+  },
+  {
+    "p_id": "animal_kingdom2_2",
+    "qe": "Fishes with a skeleton made entirely of cartilage (not true bone) belong to which class?",
+    "qh": "जिन मछलियों का कंकाल पूरी तरह उपास्थि (cartilage) का बना होता है, वे किस वर्ग के हैं?",
+    "oe": [
+      "Osteichthyes",
+      "Chondrichthyes",
+      "Cyclostomata",
+      "Amphibia"
+    ],
+    "oh": [
+      "Osteichthyes",
+      "Chondrichthyes",
+      "Cyclostomata",
+      "Amphibia"
+    ],
+    "a": 1,
+    "e": "Concept: Chondrichthyes (cartilaginous fishes) ke kasheruk me asli haddi ki jagah upasthi (cartilage - lachila padarth) hoti hai; unki chamdi par chhote kathor plates/shagreen scales hote hain, gills ke dhakkan (operculum) nahi hote (gills alag-alag slits me khulti hain), aur air bladder (swim bladder) bhi nahi hoti - isliye wo tairne ke liye hamesha chalte rehte hain. Baaki teen alag hain: Osteichthyes me sachchi haddi, Cyclostomata jawless, Amphibia zameen-paani dono. Exam point: 'Cartilage wali machhli = Chondrichthyes (shark, ray)'."
+  },
+  {
+    "p_id": "animal_kingdom2_3",
+    "qe": "Which of the following is a cartilaginous fish?",
+    "qh": "इनमें से कौन उपास्थि-मछली (cartilaginous fish) है?",
+    "oe": [
+      "Shark",
+      "Salmon",
+      "Catla",
+      "Rohu"
+    ],
+    "oh": [
+      "Shark",
+      "Salmon",
+      "Catla",
+      "Rohu"
+    ],
+    "a": 0,
+    "e": "Concept: Shark ek Chondrichthyes hai - iska kankal cartilage ka banta hai, iski chamdi par chhote tez (sharp) plates (placoid scales) hote hain jo ragadne par ret (sandpaper) jaise lagte hain, aur iska jabda itna shaktishali hota hai ki wo samudri jeevon ko kha jata hai. Rohu, Catla aur Salmon 'bony fishes' (Osteichthyes) hain - unke kankal me asli haddi hoti hai, gills ke upar dhakkan (operculum) aur air bladder hoti hai. Exam point: 'Cartilaginous = shark, ray, skate; bony = rohu, catla, sea horse'."
+  },
+  {
+    "p_id": "animal_kingdom2_4",
+    "qe": "Which of the following is a bony fish (Osteichthyes)?",
+    "qh": "इनमें से कौन अस्थिल मछली (bony fish) है?",
+    "oe": [
+      "Electric ray",
+      "Shark",
+      "Stingray",
+      "Rohu"
+    ],
+    "oh": [
+      "Electric ray",
+      "Shark",
+      "Stingray",
+      "Rohu"
+    ],
+    "a": 3,
+    "e": "Concept: Osteichthyes ke kasheruk ka kankal asli haddi (bone) ka banta hai, gills ke bahar ek dhakkan (operculum) hota hai jisse machhli bina hilaye saans le sakti hai, aur andar ek gas wali thaili (swim bladder/air bladder) hoti hai jisse wo paani me tairti rehti hai. Rohu, Catla, Tilapia, Sea horse sab bony fish hain. Baaki teen cartilaginous (Chondrichthyes) hain: Shark, Electric ray, Stingray. Exam point: 'Bony fish = rohu/catla (operculum + swim bladder); shark/ray = cartilage'."
+  },
+  {
+    "p_id": "animal_kingdom2_5",
+    "qe": "Which class of vertebrates is known for moist, glandular skin and usually lays its eggs in water?",
+    "qh": "कौन-सा कशेरुकी वर्ग चिकनी, ग्रंथिल त्वचा के लिए जाना जाता है और अंडे प्रायः पानी में देता है?",
+    "oe": [
+      "Pisces",
+      "Aves",
+      "Amphibia",
+      "Reptilia"
+    ],
+    "oh": [
+      "Pisces",
+      "Aves",
+      "Amphibia",
+      "Reptilia"
+    ],
+    "a": 2,
+    "e": "Concept: Amphibia (ubhaychar - mendhak, toad, salamander) ke naam ka matlab hi hai 'dono jagah jeevan' - unki chamdi narm, nem aur gland (garam) wali hoti hai jisse wo paani se saans bhi le sakte hain, aur unke ande (jelly wali chaddar ke saath) paani me hi diye jate hain; larva (tadpole) paani me saans ke liye gills use karta hai aur bada hone par lungs. Baaki teen classes ki chamdi sookhi/scale/feather wali hoti hai aur unke ande zameen par (shell ke saath) ya shareer me hi hote hain. Exam point: 'Narm nem chamdi + ande paani me = Amphibia'."
+  },
+  {
+    "p_id": "animal_kingdom2_6",
+    "qe": "Which of the following is an amphibian?",
+    "qh": "इनमें से कौन उभयचर (amphibian) है?",
+    "oe": [
+      "Crocodile",
+      "Salamander",
+      "Lizard",
+      "Turtle"
+    ],
+    "oh": [
+      "Crocodile",
+      "Salamander",
+      "Lizard",
+      "Turtle"
+    ],
+    "a": 1,
+    "e": "Concept: Salamander ek amphibian hai - ye mendhak jaise group ka hai (paani aur zameen dono par reh sakta hai, narm chamdi, ande paani ke paas). Baaki teen reptilian hain: Turtle (kachhua), Lizard (chhipkali) aur Crocodile (magarmach) - inki chamdi sookhi aur shagreened scale wali hoti hai aur ye zameen par shell wale ande dete hain. Yaad rakhne ka tarika: 'Salamander-Frog-Toad = Amphibia; Turtle-Lizard-Snake-Crocodile = Reptilia'. Exam point: 'Salamander = amphibian; chhipkali/kachhua/magarmach = reptiles'."
+  },
+  {
+    "p_id": "animal_kingdom2_7",
+    "qe": "Which class of vertebrates has dry, scaly skin and lays shelled eggs on land?",
+    "qh": "किस कशेरुकी वर्ग की त्वचा सूखी व शल्कित होती है और वह जमीन पर कवचयुक्त अंडे देता है?",
+    "oe": [
+      "Reptilia",
+      "Pisces",
+      "Amphibia",
+      "Mammalia"
+    ],
+    "oh": [
+      "Reptilia",
+      "Pisces",
+      "Amphibia",
+      "Mammalia"
+    ],
+    "a": 0,
+    "e": "Concept: Reptilia (sarisrip - chhipkali, saanp, kachhua, magarmach) ka sarir sookhi keratin wali scales se dhaka hota hai, jisse paani sharir se bahar nahi jata - isliye wo sookhi jagah reh sakte hain. Unke ande zameen par dete hain, jinke bahar ek kathor kavach (shell) hota hai jisme bachcha paani ke bina vikas kar leta hai (ye 'amniotic egg' evolutionary success hai). Baaki teen alag hain (Amphibia: narm nem chamdi; Pisces: gills/paani; Mammalia: baal + doodh). Exam point: 'Sookhi shalq wali chamdi + zameen par shelled ande = Reptilia'."
+  },
+  {
+    "p_id": "animal_kingdom2_8",
+    "qe": "Which of the following is a reptile?",
+    "qh": "इनमें से कौन सरीसृप (reptile) है?",
+    "oe": [
+      "Frog",
+      "Salamander",
+      "Toad",
+      "Turtle"
+    ],
+    "oh": [
+      "Frog",
+      "Salamander",
+      "Toad",
+      "Turtle"
+    ],
+    "a": 3,
+    "e": "Concept: Turtle (kachhua) ek reptile hai - chamdi sookhi, scale wali, sarir par kathor shell (jiska bahari hissa keratin scutes ka aur andar haddi ka banta hai), saans lungs se, aur zameen par ande deta hai (kai turtles samudra me rehte hain par saans lene upar aate hain). Baaki teen amphibian hain: Frog (mendhak), Salamander, Toad (bhaunkar mendhak) - inki chamdi narm/nem hoti hai aur ande paani me dete hain. Exam point: 'Kachhua (turtle) = reptile; mendhak/toad/salamander = amphibian'."
+  },
+  {
+    "p_id": "animal_kingdom2_9",
+    "qe": "Which class of vertebrates has feathers and a toothless beak?",
+    "qh": "किस कशेरुकी वर्ग में पंख (feathers) और बिना दाँत की चोंच होती है?",
+    "oe": [
+      "Amphibia",
+      "Mammalia",
+      "Aves (birds)",
+      "Reptilia"
+    ],
+    "oh": [
+      "Amphibia",
+      "Mammalia",
+      "Aves (birds)",
+      "Reptilia"
+    ],
+    "a": 2,
+    "e": "Concept: Aves (pakshi) ki pehchaan: poora sharir pankhon se dhaka, jabde wali haddi ki jagah halki hawa bhari hui (pneumatic) haddiyan, daant nahi balki khaane ko pakadne/khane ke liye chonch (beak), aur udne ke liye khaas system - upari saans ki thailiyaan (air sacs) jo double breathing karti hain. Baaki teen classes me pankh nahi hote (Mammalia me baal, Reptilia me scales, Amphibia me narm chamdi). Exam point: 'Pankh + chonch + pneumatic haddiyan = Aves (birds)'."
+  },
+  {
+    "p_id": "animal_kingdom2_10",
+    "qe": "Birds excrete their nitrogenous waste mainly in which form?",
+    "qh": "पक्षी अपना नाइट्रोजनयुक्त अपशिष्ट मुख्यतः किस रूप में बाहर निकालते हैं?",
+    "oe": [
+      "Ammonia",
+      "Uric acid",
+      "Urea",
+      "Glucose"
+    ],
+    "oh": [
+      "Ammonia",
+      "Uric acid",
+      "Urea",
+      "Glucose"
+    ],
+    "a": 1,
+    "e": "Concept: Sharir me protein tootne se nitrogen wala waste banta hai; jeev use teen shaklon me bahar nikalte hain - ammonia (sabse zehreela, paani me ghulta hai, machhli), urea (kam zehreela, stanpaayi/insaan) aur uric acid (sabse kam zehreela, semi-solid paste, pakshi + sarisrip). Pakshi urdaan ke liye halka rehna chahte hain, isliye wo paani ki bachat karte hue uric acid (safed semi-solid) ke roop me waste nikalte hain aur unka urinary bladder bhi nahi hota. Baaki teen galat/doosre jeevon ke hain. Exam point: 'Pakshi/Sarisrip = Uric acid (semi-solid); insaan/mammal = Urea; machhli = Ammonia'."
+  },
+  {
+    "p_id": "animal_kingdom2_11",
+    "qe": "The penguin is classified under which class?",
+    "qh": "पेंगुइन किस वर्ग में आता है?",
+    "oe": [
+      "Aves (birds)",
+      "Reptilia",
+      "Mammalia",
+      "Pisces"
+    ],
+    "oh": [
+      "Aves (birds)",
+      "Reptilia",
+      "Mammalia",
+      "Pisces"
+    ],
+    "a": 0,
+    "e": "Concept: Penguin udta nahi aur paani me tairta hai (isteelath paani me 'udd raha hai' jaisa), isliye kai log ise machhli ya mammal samajh lete hain - par uska sharir pankhon se dhaka hota hai, daant nahi balki chonch hoti hai, ande deta hai aur bacchon ko doodh jaisa padarth (crop milk) khilata hai; ye saare lakshan 'Aves' (pakshi) ke hain. Warm-blooded (homeothermic) hone ke kaaran ye Antarctica ki thand me bhi jeevit rehta hai. Baaki teen classes galat hain. Exam point: 'Penguin = Aves (ud nahi sakta par pakshi hai)'."
+  },
+  {
+    "p_id": "animal_kingdom2_12",
+    "qe": "Which is the only mammal capable of true self-powered flight?",
+    "qh": "स्वयं उड़ने में सक्षम एकमात्र स्तनपायी कौन है?",
+    "oe": [
+      "Flying squirrel",
+      "Flying fish",
+      "Penguin",
+      "Bat"
+    ],
+    "oh": [
+      "Flying squirrel",
+      "Flying fish",
+      "Penguin",
+      "Bat"
+    ],
+    "a": 3,
+    "e": "Concept: Chamgadar (bat) ek sachcha udne wala mammal hai - uske agle pair ki ungliyon ke beech patli chamdi ki jhilli (patagium) hoti hai jise wo hilata hai, aur wo echolocation (ultrasound se andhere me 'dekhna') bhi karti hai. Flying squirrel aur flying fish udte nahi, sirf hawa me 'glide' (fisalti) karte hain; penguin ud nahi sakta. Isliye 'only flying mammal = bat' yaad rakho. Exam point: 'Udne wala mammal = chamgadar (bat); flying squirrel = glider (udna nahi)'."
+  },
+  {
+    "p_id": "animal_kingdom2_13",
+    "qe": "Female mammals nourish their newborn young with milk secreted by:",
+    "qh": "मादा स्तनधारी अपने नवजात बच्चों को किससे स्रावित दूध पिलाती हैं?",
+    "oe": [
+      "Thyroid gland",
+      "Sebaceous glands",
+      "Mammary glands",
+      "Salivary glands"
+    ],
+    "oh": [
+      "Thyroid gland",
+      "Sebaceous glands",
+      "Mammary glands",
+      "Salivary glands"
+    ],
+    "a": 2,
+    "e": "Concept: 'Mammalia' (stanpaayi) naam hi 'mamma' = than/dudh se aaya hai - ye class ki sabse badi pehchaan yahi hai ki maa apne bachche ko apni khaas doodh banane wali granthiyon (mammary glands) se dudh pilati hai; doodh me protein, charbi, sugar, vitamin aur antibodies hote hain jo naye bachche ko poori khaana + immunity dete hain. Baaki teen glands alag kaam karti hain: Salivary (laar, khana chatna), Sebaceous (chamdi ka tel), Thyroid (metabolism ka hormone). Exam point: 'Stanpaayi ki pehchan = mammary glands (doodh) + baal'."
+  },
+  {
+    "p_id": "animal_kingdom2_14",
+    "qe": "Which of the following animals is a mammal?",
+    "qh": "इनमें से कौन स्तनधारी (mammal) है?",
+    "oe": [
+      "Crocodile",
+      "Dolphin",
+      "Penguin",
+      "Shark"
+    ],
+    "oh": [
+      "Crocodile",
+      "Dolphin",
+      "Penguin",
+      "Shark"
+    ],
+    "a": 1,
+    "e": "Concept: Dolphin paani me rehta hai par mammal hai - uske gills nahi balki lungs hote hain aur wo saans lene upar aata hai (blowhole se), uski maa use doodh pilati hai, uske sharir par baal (bahut kam) hote hain aur wo warm-blooded hai. Baaki teen alag classes ke hain: Shark (cartilaginous fish), Penguin (bird), Crocodile (reptile). Ye classic exam trap hai - duniya me jo paani me rehta hai wo zaroori nahi machhli ho. Exam point: 'Dolphin/whale = mammal (lungs + doodh), machhli nahi'."
+  },
+  {
+    "p_id": "animal_kingdom2_15",
+    "qe": "In mature red blood cells of mammals, the nucleus is:",
+    "qh": "स्तनधारियों की परिपक्व लाल रक्त कोशिकाओं (RBC) में नाभिक (nucleus) होता है:",
+    "oe": [
+      "Absent (RBC has no nucleus)",
+      "Present only in males",
+      "Double",
+      "Single and large"
+    ],
+    "oh": [
+      "Absent (RBC has no nucleus)",
+      "Present only in males",
+      "Double",
+      "Single and large"
+    ],
+    "a": 0,
+    "e": "Concept: Insaan/mammal ki pakki RBC (red blood cell) me saflidadan (nucleus) nahi hota - ye ek khaas design hai: bina nucleus ki RBC me haemoglobin (oxygen dhaane wala laal protein) ke liye zyada jagah bachti hai aur wo khaas 'biconcave disc' (dono taraf dabbe gol) shakal me hoti hai, jisse oxygen bandhna aur chhodna aasan hota hai; isi wajah se wo lagbhag 120 din jeevit reh 'dil se sharir tak' oxygen pahunchati hai. Baaki teen galat hain. Exam point: 'Mammal ki mature RBC = bina nucleus (oxygen ke liye zyada jagah)'."
+  },
+  {
+    "p_id": "animal_kingdom2_16",
+    "qe": "The kangaroo is best described as:",
+    "qh": "कंगारू का सबसे सही वर्णन क्या है?",
+    "oe": [
+      "A placental mammal",
+      "An egg-laying mammal",
+      "A reptile",
+      "A marsupial mammal that carries its young in a pouch"
+    ],
+    "oh": [
+      "A placental mammal",
+      "An egg-laying mammal",
+      "A reptile",
+      "A marsupial mammal that carries its young in a pouch"
+    ],
+    "a": 3,
+    "e": "Concept: Stanpaayiyon ki teen kismein hoti hain: (1) Monotreme - ande dene wale (platypus), (2) Marsupial - bachcha poora bina vikas ke paida hota hai aur maa ke pet ki theli (marsupium/pouch) me latak kar doodh peeta hai (kangaroo, koala), (3) Placental - bachcha maa ke pet me placenta (khaana-oxygen dene wali jhillee) ke through poora vikas kar ke paida hota hai (insaan, cow). Kangaroo marsupial hai kyunki uske pet ki theli me baccha palta hai. Baaki teen galat hain. Exam point: 'Kangaroo = marsupial (pouch wala mammal)'."
+  },
+  {
+    "p_id": "animal_kingdom2_17",
+    "qe": "In cold-blooded (poikilothermic) animals, the body temperature:",
+    "qh": "ठंडे खून वाले (poikilothermic) जंतुओं का शरीर तापमान:",
+    "oe": [
+      "Remains constant throughout the year",
+      "Is always fixed at 37 degrees C",
+      "Is kept constant by sweating",
+      "Changes with the temperature of the surroundings"
+    ],
+    "oh": [
+      "Remains constant throughout the year",
+      "Is always fixed at 37 degrees C",
+      "Is kept constant by sweating",
+      "Changes with the temperature of the surroundings"
+    ],
+    "a": 3,
+    "e": "Concept: Poikilothermic (cold-blooded) jeevon jaise machhli, mendhak aur sarisrip me body temperature ke andar se control nahi hota - wo apne mahaul ke taapman ke saath badal jata hai. Sard me unka temperature gira jaata hai isliye wo dhoop me baith kar (basking) ya mitti/paani me gehre jaakar garam hote hain, aur garmi me shade dhoondhte hain. Doosri taraf homeothermic (warm-blooded) jeev (pakshi + stanpaayi) metabolism se heat bana kar temperature lagbhag fixed rakhte hain - isliye wo thandi-garm jagah dono me chal sakte hain. Exam point: 'Poikilothermic = body temperature mahaul ke saath badalta hai; homeothermic = fixed (bird + mammal)'."
+  },
+  {
+    "p_id": "animal_kingdom2_18",
+    "qe": "Which of the following is a warm-blooded (homeothermic) animal?",
+    "qh": "इनमें से कौन गर्म खून वाला (homeothermic) जंतु है?",
+    "oe": [
+      "Frog",
+      "Dolphin",
+      "Fish",
+      "Snake"
+    ],
+    "oh": [
+      "Frog",
+      "Dolphin",
+      "Fish",
+      "Snake"
+    ],
+    "a": 1,
+    "e": "Concept: Homeothermic (warm-blooded) jeev apne metabolism (sharir ki rasayanik kriyayein) se heat paida karke sharir ka temperature ek jaisa rakhte hain - chahe bahar thand ho ya garmi; isi liye wo thandi jagah bhi reh sakte hain. Sirf do classes aisi hain: Aves (pakshi) aur Mammalia (stanpaayi) - jaise Dolphin (mammal). Baaki teen cold-blooded/poikilothermic hain: Frog (amphibian), Snake (reptile), Fish (machhli) - inka temperature bahar ke hisaab se badalta hai. Exam point: 'Warm-blooded = bird + mammal; baaki sab (machhli/ubhaychar/sarisrip) = cold-blooded'."
+  },
+  {
+    "p_id": "animal_kingdom2_19",
+    "qe": "The change of a tadpole into an adult frog is an example of:",
+    "qh": "टैडपोल का वयस्क मेंढक में बदलना किसका उदाहरण है?",
+    "oe": [
+      "Metamorphosis",
+      "Moulting",
+      "Hibernation",
+      "Regeneration"
+    ],
+    "oh": [
+      "Metamorphosis",
+      "Moulting",
+      "Hibernation",
+      "Regeneration"
+    ],
+    "a": 0,
+    "e": "Concept: Metamorphosis matlab ek jeev apni zindagi me poori tarah aakar badal leta hai - mendhak ka baccha 'tadpole' paani me rehta hai, usme poonch hoti hai, gills se saans leta hai; bada hone par poonch gayab, pair nikal, lungs ban jate hain aur wo zameen par aa jata hai. Ye 'indirect development' zyada tar mendhak, titli (caterpillar se titli), khaas hai. Baaki teen alag hain: Hibernation (sardi ki neend), Regeneration (kata hissa ugana), Moulting (purani khaal/coat chhodna - keede, saanp). Exam point: 'Tadpole -> frog = Metamorphosis (roop-antar)'."
+  },
+  {
+    "p_id": "animal_kingdom2_20",
+    "qe": "The presence of a muscular diaphragm and (almost always) seven cervical vertebrae is characteristic of which class?",
+    "qh": "पेशीय डायफ्राम (पसली-पर्दा) और (लगभग हमेशा) सात ग्रीवा कशेरुकाओं की उपस्थिति किस वर्ग की विशेषता है?",
+    "oe": [
+      "Aves",
+      "Reptilia",
+      "Amphibia",
+      "Mammalia"
+    ],
+    "oh": [
+      "Aves",
+      "Reptilia",
+      "Amphibia",
+      "Mammalia"
+    ],
+    "a": 3,
+    "e": "Concept: Stanpaayiyon (Mammalia) ki ek badi khaas baat hai 'diaphragm' - seene aur pet ko alag karne wali moti muscle jo saans lene me madad karti hai (insaan, kutta, whale sab me hoti hai). Doosri khaas baat: lagbhag sabhi mammals me gardan ki haddiyan (cervical vertebrae) saat hi hoti hain - chahe giraffe ki lambi gardan ho ya whale ki bahut chhoti. Baaki teen classes me diaphragm nahi hota aur cervical count alag hota hai. Exam point: 'Diaphragm + 7 cervical vertebrae = Mammalia'."
+  },
+  {
+    "p_id": "animal_kingdom2_21",
+    "qe": "Which of the following animals has a four-chambered heart and is warm-blooded?",
+    "qh": "इनमें से किसका चार-कक्षीय हृदय है और जो गर्म खून वाला है?",
+    "oe": [
+      "Frog",
+      "Crocodile",
+      "Dolphin",
+      "Shark"
+    ],
+    "oh": [
+      "Frog",
+      "Crocodile",
+      "Dolphin",
+      "Shark"
+    ],
+    "a": 2,
+    "e": "Concept: Char-kakshi hriday (4 chambers - 2 atrium + 2 ventricle) se oxygen wala aur bina-oxygen wala khoon bilkul alag rehta hai, aur yahi khaas hai warm-blooded jeevon me (pakshi + stanpaayi) - jaise Dolphin (mammal, warm-blooded). Dhyaan do: Crocodile ka bhi 4-chambered heart hota hai par wo cold-blooded/poikilothermic hai (ye classic trap hai). Frog ka 3-chamber aur shark ka 2-chamber heart hota hai. Exam point: '4 chamber + warm-blooded = mammal/bird; crocodile 4-chamber par cold-blooded'."
+  },
+  {
+    "p_id": "animal_kingdom2_22",
+    "qe": "Which class of vertebrates contains the largest number of species?",
+    "qh": "कशेरुकियों के किस वर्ग में प्रजातियों की संख्या सबसे अधिक है?",
+    "oe": [
+      "Amphibia",
+      "Pisces (fishes)",
+      "Mammalia",
+      "Aves (birds)"
+    ],
+    "oh": [
+      "Amphibia",
+      "Pisces (fishes)",
+      "Mammalia",
+      "Aves (birds)"
+    ],
+    "a": 1,
+    "e": "Concept: Kasherukon me machhliyan sabse badi group hain (duniya me lagbhag 34,000 se zyada fish species hain) - kyunki paani duniya ka sabse bada aur purana aashiyana hai aur machhliyan har tarah ke paani me (nadi, talaab, samudra, gehri khayi, dhruviya paani) dhal chuki hain. Iske baad birds (~10,000), reptiles, amphibians aur sabse kam mammals (~6,000). Baaki teen kam hain. Exam point: 'Sabse zyada species = Pisces (fishes), sabse kam = Amphibia/mammals'."
+  },
+  {
+    "p_id": "animal_kingdom2_23",
+    "qe": "The shell of a turtle is made up of:",
+    "qh": "कछुए का खोल (shell) किससे बना होता है?",
+    "oe": [
+      "Bony plates covered by horny scutes",
+      "Only cartilage",
+      "Only keratin fibre",
+      "Only chitin"
+    ],
+    "oh": [
+      "Bony plates covered by horny scutes",
+      "Only cartilage",
+      "Only keratin fibre",
+      "Only chitin"
+    ],
+    "a": 0,
+    "e": "Concept: Kachhue ka shell ek bahut mazboot dhaancha hai - iske andar ki parat haddi (bony plates) ki hoti hai (jo uski vertebae aur pasliyon se jud jaati hai) aur bahar ki parat keratin ke kathor chhote tukdon (scutes ya plaques) ki hoti hai (wahi keratin jo hamare naakhun/baal me hota hai). Isi wajah se ye shell dabaav aur shikari ke daanto se bachaata hai. Baaki teen galat hain: cartilage (chondrichthyes ka), chitin (keeton ka), ya sirf keratin fibre (naakhun/baal ka). Exam point: 'Turtle shell = andar bony plates + bahar keratin scutes'."
+  },
+  {
+    "p_id": "animal_kingdom2_24",
+    "qe": "Fish respire (breathe) mainly through:",
+    "qh": "मछलियाँ मुख्यतः किसके द्वारा श्वसन करती हैं?",
+    "oe": [
+      "Lungs",
+      "Spiracles",
+      "Book lungs",
+      "Gills"
+    ],
+    "oh": [
+      "Lungs",
+      "Spiracles",
+      "Book lungs",
+      "Gills"
+    ],
+    "a": 3,
+    "e": "Concept: Machhli paani me gills (gills = kaan jaisa parat wala ang) se saans leti hai - paani munh se gusata hai, gills ki patli pattiyon (filaments) par oxygen seedha khoon me chali jaati hai aur CO2 paani me nikal jaata hai; gills ke bahar dhakkan (operculum - bony fish me) hota hai. Baaki teen doosre jeevon ke ang hain: Lungs (zameen ke kasheruk/whale), Spiracles (keet), Book lungs (makdi/bichchhu). Exam point: 'Machhli = gills se saans (paani me ghuli oxygen)'; 'whale = lungs (blowhole)'."
+  },
+  {
+    "p_id": "animal_kingdom2_25",
+    "qe": "Which of the following is an aquatic mammal?",
+    "qh": "इनमें से कौन जल-स्तनपायी (aquatic mammal) है?",
+    "oe": [
+      "Octopus",
+      "Shark",
+      "Whale",
+      "Prawn"
+    ],
+    "oh": [
+      "Octopus",
+      "Shark",
+      "Whale",
+      "Prawn"
+    ],
+    "a": 2,
+    "e": "Concept: Whale paani me rehti hai par mammal hai: uske gills nahi, lungs hote hain aur wo saans lene upar aati hai (blowhole = sar ke upar naak ka chhed), wo live young (bacche) ko janm deti hai aur doodh pilati hai, warm-blooded hai; uski poori zindagi saagar me hoti hai par saans ke liye aana padta hai. Baaki teen aquatic hain par mammal nahi: Shark (cartilaginous fish), Octopus (mollusc), Prawn (arthropod). Exam point: 'Whale/dolphin = mammal; shark/octopus/prawn = non-mammal'."
+  },
+  {
+    "p_id": "animal_kingdom2_26",
+    "qe": "The ability of some lizards to shed their tail to escape a predator is called:",
+    "qh": "कुछ छिपकलियों का शिकारी से बचने के लिए अपनी पूँछ गिरा देने के गुण को कहते हैं:",
+    "oe": [
+      "Metamorphosis",
+      "Autotomy",
+      "Moulting",
+      "Hibernation"
+    ],
+    "oh": [
+      "Metamorphosis",
+      "Autotomy",
+      "Moulting",
+      "Hibernation"
+    ],
+    "a": 1,
+    "e": "Concept: Autotomy matlab 'khud apna ang kaatna' - jab shikari chhipkali ki poonch pakadta hai to wo apni poonch ko khaas 'breaking point' se chhod deti hai; girne wali poonch kuch der hilti rehti hai jisse shikari ka dhyan bant jata hai aur chhipkali bach ke bhaag jaati hai; phir kuch samay me nayi poonch ugi aati hai (regeneration). Baaki teen alag hain: Metamorphosis (roop badalna), Moulting (purani khaal chhodna), Hibernation (sardi ki neend). Exam point: 'Chhipkali ka poonch girana = Autotomy'."
+  },
+  {
+    "p_id": "animal_kingdom2_27",
+    "qe": "Which amphibian has dry, warty skin and lives more on land?",
+    "qh": "किस उभयचर की त्वचा सूखी और दानेदार (warty) होती है तथा जो अधिकतर जमीन पर रहता है?",
+    "oe": [
+      "Toad",
+      "Frog",
+      "Salamander",
+      "Newt"
+    ],
+    "oh": [
+      "Toad",
+      "Frog",
+      "Salamander",
+      "Newt"
+    ],
+    "a": 0,
+    "e": "Concept: Toad (bhaunkar mendhak) aur Frog (meendhak) dono amphibian hain par alag hain - Toad ki chamdi sookhi aur bhurbhur (warty) hoti hai, uske pair chhote hote hain, isliye wo zyada chhalang nahi lagata aur sookhi jagah zyada rehta hai; Frog ki chamdi narm-nem, spast aur lambi pair wali hoti hai (chhalang lagta hai) aur wo paani ke kareeb rehta hai. Baaki teen (Frog, Salamander, Newt) giili/nem chamdi wale hain. Exam point: 'Toad = sookhi warty chamdi, zameen par; Frog = narm nem chamdi, paani ke paas'."
+  },
+  {
+    "p_id": "animal_kingdom2_28",
+    "qe": "Which is the largest living mammal?",
+    "qh": "जीवित सबसे बड़ा स्तनधारी कौन है?",
+    "oe": [
+      "Giraffe",
+      "Hippopotamus",
+      "African elephant",
+      "Blue whale"
+    ],
+    "oh": [
+      "Giraffe",
+      "Hippopotamus",
+      "African elephant",
+      "Blue whale"
+    ],
+    "a": 3,
+    "e": "Concept: Blue whale (neeli whale) samudra me rehti hai par mammal hai - ye duniya ka sabse bada jeev hai jo aaj tak hua: lambai 25-30 metre tak aur wazan lagbhag 150-170 tonne (kai haathi ke barabar). Ye gills ke bajay lungs se saans leti hai, kshudra planktons (samudra ke chhote jeev) khakar jeeti hai, aur uske munh me daant nahi hote - balki baleen plates (keratin ki jhaal) hoti hain jo chhote jeev chaan leti hain. Baaki teen zameen ke mammal hain aur unse bahut chhote hain. Exam point: 'Sabse bada mammal (aur sabse bada jeev) = Blue whale (paani me, par mammal)'."
+  },
+  {
+    "p_id": "animal_kingdom2_29",
+    "qe": "Which is the tallest living animal?",
+    "qh": "जीवित सबसे ऊँचा जंतु कौन है?",
+    "oe": [
+      "Elephant",
+      "Ostrich",
+      "Giraffe",
+      "Camel"
+    ],
+    "oh": [
+      "Elephant",
+      "Ostrich",
+      "Giraffe",
+      "Camel"
+    ],
+    "a": 2,
+    "e": "Concept: Giraffe duniya ka sabse uncha jeev hai (male 5.5 metre tak) - uski gardan bahut lambi hoti hai par usme bhi doosre mammals ki tarah sirf 7 cervical vertebrae hoti hain (bas har vertebra bahut lambi hoti hai); lambi gardan se wo unche ped ke patte kha leta hai aur door tak shikari dekh leta hai. Baaki teen unche nahi hain: Elephant (sabse bada zameen par rehne wala mammal), Ostrich (sabse bada pakshi), Camel. Exam point: 'Sabse uncha jeev = giraffe; sabse bada zameen par = African elephant; sabse bada mammal/biosphere = blue whale'."
+  },
+  {
+    "p_id": "animal_kingdom2_30",
+    "qe": "Frogs can breathe through their skin as well as their lungs. This skin-based respiration is called:",
+    "qh": "मेंढक फेफड़ों के साथ-साथ त्वचा से भी श्वसन करते हैं; त्वचा द्वारा श्वसन को कहते हैं:",
+    "oe": [
+      "Branchial respiration",
+      "Cutaneous respiration",
+      "Pulmonary respiration",
+      "Tracheal respiration"
+    ],
+    "oh": [
+      "Branchial respiration",
+      "Cutaneous respiration",
+      "Pulmonary respiration",
+      "Tracheal respiration"
+    ],
+    "a": 1,
+    "e": "Concept: Cutaneous (chamdi wala) respiration me oxygen seedha nem chamdi ke through khoon ki naliyon me chali jaati hai (aur CO2 bahar) - ye tab khaas hoti hai jab mendhak paani ya mitti me lambe samay rehta hai ya sust (hibernation) me hota hai, kyunki uski chamdi patli, nem aur khoon ki naliyon se bhari hoti hai. Baaki teen doosre jeevon ke tarike hain: Tracheal (keet ki naliyan), Branchial (gills se), Pulmonary (lungs se). Exam point: 'Chamdi se saans = cutaneous respiration (mendhak, kenchua bhi bahut had tak)'."
+  }
+]
