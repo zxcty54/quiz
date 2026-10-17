@@ -1,0 +1,268 @@
+[
+  {
+    "p_id": "uvconcept_1",
+    "qe": "A boat can go 40 km downstream and 25 km upstream in 7 hours 30 minutes. It can go 48 km downstream and 36 km upstream in 10 hours. What is the speed (in km/h) of the boat in still water?",
+    "qh": "एक नाव धारा के अनुकूल 40 किमी और धारा के प्रतिकूल 25 किमी की दूरी 7 घंटे 30 मिनट में तय कर सकती है। यह 48 किमी धारा के अनुकूल और 36 किमी धारा के प्रतिकूल 10 घंटे में जा सकती है। शांत जल में नाव की गति (किमी/घंटा में) क्या है?",
+    "oe": [
+      "6",
+      "12",
+      "9",
+      "15"
+    ],
+    "oh": [
+      "6",
+      "12",
+      "9",
+      "15"
+    ],
+    "a": 2,
+    "e": "Method 1 (Simultaneous Linear Equations Method):\nStep 1: माना अनुकूल गति = $D$ तथा प्रतिकूल गति = $U$ किमी/घंटा।\nदी गई शर्तों के अनुसार:\n$$$\\frac{40}{D}$ + $\\frac{25}{U}$ = 7.5 \\quad \\text{--- (1)}$$\n$$$\\frac{48}{D}$ + $\\frac{36}{U}$ = 10 \\quad \\text{--- (2)}$$\nStep 2: समीकरण (1) को 6 से और (2) को 5 से गुणा करके घटाने पर:\n$$6 $\\times$ $\\le$ft($\\frac{40}{D}$ + $\\frac{25}{U}$\\right) = 45 \\implies $\\frac{240}{D}$ + $\\frac{150}{U}$ = 45$$\n$$5 $\\times$ $\\le$ft($\\frac{48}{D}$ + $\\frac{36}{U}$\\right) = 50 \\implies $\\frac{240}{D}$ + $\\frac{180}{U}$ = 50$$\nघटाने पर: $\\frac{30}{U} = 5 \\implies U = 6$ किमी/घंटा।\nStep 3: $U = 6$ का मान समीकरण (2) में रखने पर:\n$$$\\frac{48}{D}$ + $\\frac{36}{6}$ = 10 \\implies $\\frac{48}{D}$ + 6 = 10 \\implies $\\frac{48}{D}$ = 4 \\implies D = 12\\text{ किमी/घंटा}$$\nStep 4: शांत जल में नाव की गति ($u$):\n$$u = $\\frac{D+U}{2}$ = $\\frac{12+6}{2}$ = 9\\text{ किमी/घंटा}$$\nअतः सही विकल्प  9 है।\n\nMethod 2 (HCF Factor Method):\nStep 1: $D$ के लिए 40 और 48 का HCF संभावित 12 हो सकता है।\nStep 2: यदि $D = 12$, तो समीकरण (1) से: $40/12 + 25/U = 7.5 \\implies 10/3 + 25/U = 15/2 \\implies 25/U = 25/6 \\implies U = 6$.\nStep 3: शांत जल में गति = $(12 + 6)/2 = 9$ किमी/घंटा।\nअतः सही उत्तर '9' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_2",
+    "qe": "A motorboat travelling at a certain speed can cover a distance of 24 km upstream and 40 km downstream in 17 hours. At the same speed it can travel 32 km downstream and 12 km upstream in 10 hours. What is the speed of the current?",
+    "qh": "एक निश्चित गति से चलने वाली एक मोटरबोट 17 घंटे में धारा के प्रतिकूल 24 किमी और धारा के अनुकूल 40 किमी की दूरी तय कर सकती है। उसी गति से यह 10 घंटे में 32 किमी धारा के अनुकूल और 12 किमी धारा के प्रतिकूल यात्रा कर सकती है। धारा की गति क्या है?",
+    "oe": [
+      "5 km/h",
+      "4 km/h",
+      "2 km/h",
+      "3 km/h"
+    ],
+    "oh": [
+      "5 km/h",
+      "4 km/h",
+      "2 km/h",
+      "3 km/h"
+    ],
+    "a": 3,
+    "e": "Method 1 (Simultaneous Equations Method):\nStep 1: समीकरण बनाएं:\n$$$\\frac{40}{D}$ + $\\frac{24}{U}$ = 17 \\quad \\text{--- (1)}$$\n$$$\\frac{32}{D}$ + $\\frac{12}{U}$ = 10 \\quad \\text{--- (2)}$$\nStep 2: समीकरण (2) को 2 से गुणा करें:\n$$$\\frac{64}{D}$ + $\\frac{24}{U}$ = 20 \\quad \\text{--- (3)}$$\nStep 3: समीकरण (3) में से (1) घटाने पर:\n$$$\\frac{64-40}{D}$ = 20 - 17 \\implies $\\frac{24}{D}$ = 3 \\implies D = 8\\text{ किमी/घंटा}$$\nStep 4: $D = 8$ समीकरण (2) में रखने पर:\n$$$\\frac{32}{8}$ + $\\frac{12}{U}$ = 10 \\implies 4 + $\\frac{12}{U}$ = 10 \\implies $\\frac{12}{U}$ = 6 \\implies U = 2\\text{ किमी/घंटा}$$\nStep 5: धारा की गति ($v$):\n$$v = $\\frac{D-U}{2}$ = $\\frac{8-2}{2}$ = 3\\text{ किमी/घंटा}$$\nअतः सही विकल्प  3 km/h है।\n\nMethod 2 (Factor Method):\n32 और 40 का उभयनिष्ठ गुणनखंड $D = 8$ लेने पर: $40/8 = 5$, तो $24/U = 12 \\implies U = 2$.\nदूसरे समीकरण में जाँच: $32/8 + 12/2 = 4 + 6 = 10$ (सत्यापित)।\nधारा की गति = $(8 - 2)/2 = 3$ किमी/घंटा।\nअतः सही उत्तर '3 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_3",
+    "qe": "A boat covers 24 km upstream and 36 km downstream in 10 hours, and 36 km upstream and 24 km downstream in 12 hours. The speed of the current is:",
+    "qh": "एक नाव 10 घंटे में धारा के प्रतिकूल 24 किमी और धारा के अनुकूल 36 किमी की दूरी तय करती है, तथा 12 घंटे में 36 किमी धारा के प्रतिकूल और 24 किमी धारा के अनुकूल तय करती है। धारा की गति क्या है:",
+    "oe": [
+      "$\\frac{26}{9}$\\text{ km/h}",
+      "$\\frac{33}{13}$\\text{ km/h}",
+      "$\\frac{25}{8}$\\text{ km/h}",
+      "$\\frac{24}{7}$\\text{ km/h}"
+    ],
+    "oh": [
+      "$\\frac{26}{9}$\\text{ km/h}",
+      "$\\frac{33}{13}$\\text{ km/h}",
+      "$\\frac{25}{8}$\\text{ km/h}",
+      "$\\frac{24}{7}$\\text{ km/h}"
+    ],
+    "a": 2,
+    "e": "Method 1 (Symmetric Equations Method):\nStep 1: दिए गए समीकरण:\n$$$\\frac{36}{D}$ + $\\frac{24}{U}$ = 10 \\quad \\text{--- (1)}$$\n$$$\\frac{24}{D}$ + $\\frac{36}{U}$ = 12 \\quad \\text{--- (2)}$$\nStep 2: दोनों समीकरणों को जोड़ने पर:\n$$$\\frac{60}{D}$ + $\\frac{60}{U}$ = 22 \\implies 60$\\le$ft($\\frac{1}{D}$ + $\\frac{1}{U}$\\right) = 22 \\implies $\\frac{1}{D}$ + $\\frac{1}{U}$ = $\\frac{11}{30}$ \\quad \\text{--- (3)}$$\nStep 3: समीकरण (2) में से (1) घटाने पर:\n$$-$\\frac{12}{D}$ + $\\frac{12}{U}$ = 2 \\implies 12$\\le$ft($\\frac{1}{U}$ - $\\frac{1}{D}$\\right) = 2 \\implies $\\frac{1}{U}$ - $\\frac{1}{D}$ = $\\frac{1}{6}$ = $\\frac{5}{30}$ \\quad \\text{--- (4)}$$\nStep 4: समीकरण (3) और (4) को जोड़ने पर:\n$$$\\frac{2}{U}$ = $\\frac{16}{30}$ \\implies $\\frac{1}{U}$ = $\\frac{8}{30}$ = $\\frac{4}{15}$ \\implies U = $\\frac{15}{4}$ = 3.75\\text{ किमी/घंटा}$$\nघटाने पर:\n$$$\\frac{2}{D}$ = $\\frac{6}{30}$ \\implies $\\frac{1}{D}$ = $\\frac{3}{30}$ = $\\frac{1}{10}$ \\implies D = 10\\text{ किमी/घंटा}$$\nStep 5: धारा की गति ($v$):\n$$v = $\\frac{D-U}{2}$ = $\\frac{10-3.75}{2}$ = $\\frac{6.25}{2}$ = 3.125 = $\\frac{25}{8}$\\text{ किमी/घंटा}$$\nअतः सही विकल्प  25/8 km/h है।\n\nMethod 2 (Fractional Conversion):\n$v = \\frac{10 - 15/4}{2} = \\frac{25/4}{2} = \\frac{25}{8}$ किमी/घंटा।\nअतः सही उत्तर '$\\frac{25}{8}$\\text{ km/h}' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_4",
+    "qe": "A boat can go 60 km downstream and 40 km upstream in 12 hours 30 minutes. It can go 84 km downstream and 63 km upstream in 18 hours 54 minutes. What is the speed (in km/h, to the nearest integer) of the boat in still water?",
+    "qh": "एक नाव 12 घंटे 30 मिनट में धारा के अनुकूल 60 किमी और धारा के प्रतिकूल 40 किमी जा सकती है। यह 18 घंटे 54 मिनट में 84 किमी धारा के अनुकूल और 63 किमी धारा के प्रतिकूल जा सकती है। शांत जल में नाव की गति (किमी/घंटा में, निकटतम पूर्णांक तक) क्या है?",
+    "oe": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "oh": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "a": 2,
+    "e": "Method 1 (Simultaneous Linear Equations Method):\nStep 1: समय को दशमलव में बदलें:\n- $12\\text{ घंटे } 30\\text{ मिनट} = 12.5\\text{ घंटे}$\n- $18\\text{ घंटे } 54\\text{ मिनट} = 18 + \\frac{54}{60} = 18.9\\text{ घंटे}$\nसमीकरण:\n$$$\\frac{60}{D}$ + $\\frac{40}{U}$ = 12.5 \\quad \\text{--- (1)}$$\n$$$\\frac{84}{D}$ + $\\frac{63}{U}$ = 18.9 \\quad \\text{--- (2)}$$\nStep 2: समीकरण (1) को 63 से और (2) को 40 से गुणा करके घटाने पर:\n$$63 $\\times$ $\\frac{60}{D}$ - 40 $\\times$ $\\frac{84}{D}$ = (63 $\\times$ 12.5) - (40 $\\times$ 18.9)$$\n$$$\\frac{3780-3360}{D}$ = 787.5 - 756$$\n$$$\\frac{420}{D}$ = 31.5 \\implies D = $\\frac{420}{31.5}$ = $\\frac{40}{3}$ = 13.33\\text{ किमी/घंटा}$$\nStep 3: $D = 40/3$ का मान समीकरण (1) में रखने पर:\n$$$\\frac{60}{40/3}$ + $\\frac{40}{U}$ = 12.5 \\implies 4.5 + $\\frac{40}{U}$ = 12.5 \\implies $\\frac{40}{U}$ = 8 \\implies U = 5\\text{ किमी/घंटा}$$\nStep 4: शांत जल में नाव की गति ($u$):\n$$u = $\\frac{D+U}{2}$ = \\frac{$\\frac{40}{3}$ + 5}{2} = $\\frac{55}{6}$ $\\approx$ 9.17\\text{ किमी/घंटा}$$\nनिकटतम पूर्णांक तक मान = 9 किमी/घंटा।\nअतः सही विकल्प  9 है।\n\nMethod 2 (Nearest Integer Estimation):\n$D \\approx 13.33$, $U = 5 \\implies u = (13.33 + 5)/2 = 9.166... \\approx 9$ किमी/घंटा।\nअतः सही उत्तर '9' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_5",
+    "qe": "A boat can go 15 km downstream and 8 km upstream in 2 hr. It can go 20 km downstream and 12 km upstream in 2 hr 50 min . What is the speed (in km/h) of the boat while going downstream?",
+    "qh": "एक नाव धारा के अनुकूल 15 किमी और धारा के प्रतिकूल 8 किमी की दूरी 2 घंटे में तय कर सकती है। यह 20 किमी धारा के अनुकूल और 12 किमी धारा के प्रतिकूल 2 घंटे 50 मिनट में जा सकती है। धारा के अनुकूल जाते समय नाव की गति (किमी/घंटा में) क्या है?",
+    "oe": [
+      "20",
+      "18",
+      "15",
+      "16"
+    ],
+    "oh": [
+      "20",
+      "18",
+      "15",
+      "16"
+    ],
+    "a": 2,
+    "e": "Method 1 (Simultaneous Equations Method):\nStep 1: 2 घंटे 50 मिनट = $2 + \\frac{50}{60} = \\frac{17}{6}$ घंटे।\nसमीकरण:\n$$$\\frac{15}{D}$ + $\\frac{8}{U}$ = 2 \\quad \\text{--- (1)}$$\n$$$\\frac{20}{D}$ + $\\frac{12}{U}$ = $\\frac{17}{6}$ \\quad \\text{--- (2)}$$\nStep 2: $U$ को समाप्त करने के लिए (1) को 3 से और (2) को 2 से गुणा करके घटाने पर:\n$$3 $\\times$ $\\le$ft($\\frac{15}{D}$ + $\\frac{8}{U}$\\right) = 6 \\implies $\\frac{45}{D}$ + $\\frac{24}{U}$ = 6$$\n$$2 $\\times$ $\\le$ft($\\frac{20}{D}$ + $\\frac{12}{U}$\\right) = $\\frac{17}{3}$ \\implies $\\frac{40}{D}$ + $\\frac{24}{U}$ = $\\frac{17}{3}$$$\nघटाने पर:\n$$$\\frac{5}{D}$ = 6 - $\\frac{17}{3}$ = $\\frac{1}{3}$ \\implies D = 15\\text{ किमी/घंटा}$$\nअतः धारा के अनुकूल गति 15 किमी/घंटा है।\nअतः सही विकल्प  15 है।\n\nMethod 2 (Option Testing Method):\nविकल्प (c) $D = 15$ रखने पर:\n$15/15 + 8/U = 2 \\implies 1 + 8/U = 2 \\implies U = 8$.\nसमीकरण (2) में जाँच: $20/15 + 12/8 = 4/3 + 3/2 = 17/6$ (सत्यापित)।\nअतः सही उत्तर '15' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_6",
+    "qe": "A boat can cover a distance of 7.2 km downstream and 3.2 km upstream in 2 hours. It can also cover 1.5 km downstream and 0.6 km upstream in 24 minutes. What is the speed of the boat when going downstream (in km/hr)?",
+    "qh": "एक नाव 2 घंटे में धारा के अनुकूल 7.2 किमी और धारा के प्रतिकूल 3.2 किमी की दूरी तय कर सकती है। यह 24 मिनट में 1.5 किमी धारा के अनुकूल और 0.6 किमी धारा के प्रतिकूल भी तय कर सकती है। धारा के अनुकूल जाते समय नाव की गति (किमी/घंटा में) क्या है?",
+    "oe": [
+      "6 km/h",
+      "7.5 km/h",
+      "8 km/h",
+      "9 km/h"
+    ],
+    "oh": [
+      "6 km/h",
+      "7.5 km/h",
+      "8 km/h",
+      "9 km/h"
+    ],
+    "a": 0,
+    "e": "Method 1 (Simultaneous Equations Method):\nStep 1: 24 मिनट = $\\frac{24}{60} = 0.4$ घंटा।\nसमीकरण:\n$$$\\frac{7.2}{D}$ + $\\frac{3.2}{U}$ = 2 \\quad \\text{--- (1)}$$\n$$$\\frac{1.5}{D}$ + $\\frac{0.6}{U}$ = 0.4 \\quad \\text{--- (2)}$$\nStep 2: $U$ को निरस्त करने के लिए समीकरण (2) को $\\frac{3.2}{0.6} = \\frac{16}{3}$ से गुणा करने पर:\n$$$\\frac{16}{3}$ $\\times$ $\\le$ft($\\frac{1.5}{D}$ + $\\frac{0.6}{U}$\\right) = $\\frac{16}{3}$ $\\times$ 0.4$$\n$$$\\frac{8}{D}$ + $\\frac{3.2}{U}$ = $\\frac{6.4}{3}$ = 2.1333 \\quad \\text{--- (3)}$$\nStep 3: समीकरण (3) में से (1) घटाने पर:\n$$$\\frac{8-7.2}{D}$ = $\\frac{6.4}{3}$ - 2 \\implies $\\frac{0.8}{D}$ = $\\frac{0.4}{3}$$$\n$$D = $\\frac{0.8\\times3}{0.4}$ = 6\\text{ किमी/घंटा}$$\nअतः धारा के अनुकूल गति 6 किमी/घंटा है।\nअतः सही विकल्प  6 km/h है।\n\nMethod 2 (Testing D = 6):\nयदि $D = 6$: समीकरण (1) से $7.2/6 + 3.2/U = 2 \\implies 1.2 + 3.2/U = 2 \\implies U = 4$.\nसमीकरण (2) में जाँच: $1.5/6 + 0.6/4 = 0.25 + 0.15 = 0.4$ घंटा = 24 मिनट (सत्यापित)।\nअतः सही उत्तर '6 km/h' है।\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_7",
+    "qe": "A boat can go 5 km upstream and 7 1/2 km downstream in 45 minutes. It can also go 5 km downstream and 2.5 km upstream in 25 minutes. How much time (in minutes) will it take to go 6 km upstream ?",
+    "qh": "एक नाव 45 मिनट में धारा के प्रतिकूल 5 किमी और धारा के अनुकूल 7 1/2 किमी जा सकती है। यह 25 मिनट में 5 किमी धारा के अनुकूल और 2.5 किमी धारा के प्रतिकूल भी जा सकती है। धारा के प्रतिकूल 6 किमी जाने में इसे कितना समय (मिनटों में) लगेगा?",
+    "oe": [
+      "30",
+      "24",
+      "36",
+      "32"
+    ],
+    "oh": [
+      "30",
+      "24",
+      "36",
+      "32"
+    ],
+    "a": 2,
+    "e": "Method 1 (Simultaneous Equations in Minutes Method):\nStep 1: समय को मिनटों में ही रखते हुए समीकरण बनाएं:\n$$$\\frac{7.5}{D}$ + $\\frac{5}{U}$ = 45 \\quad \\text{--- (1)}$$\n$$$\\frac{5}{D}$ + $\\frac{2.5}{U}$ = 25 \\quad \\text{--- (2)}$$\nStep 2: $U$ को समाप्त करने के लिए समीकरण (2) को 2 से गुणा करें:\n$$2 $\\times$ $\\le$ft($\\frac{5}{D}$ + $\\frac{2.5}{U}$\\right) = 50 \\implies $\\frac{10}{D}$ + $\\frac{5}{U}$ = 50 \\quad \\text{--- (3)}$$\nStep 3: समीकरण (3) में से (1) घटाने पर:\n$$$\\frac{10-7.5}{D}$ = 50 - 45 \\implies $\\frac{2.5}{D}$ = 5 \\implies D = 0.5\\text{ किमी/मिनट} = 30\\text{ किमी/घंटा}$$\nStep 4: $D = 0.5$ का मान समीकरण (2) में रखने पर:\n$$$\\frac{5}{0.5}$ + $\\frac{2.5}{U}$ = 25 \\implies 10 + $\\frac{2.5}{U}$ = 25 \\implies $\\frac{2.5}{U}$ = 15 \\implies U = $\\frac{2.5}{15}$ = $\\frac{1}{6}$\\text{ किमी/मिनट}$$\n(अर्थात $U = 10$ किमी/घंटा)।\nStep 5: 6 किमी प्रतिकूल जाने में लगा समय निकालें:\n$$\\text{समय} = $\\frac{6}{1/6}$ = 36\\text{ मिनट}$$\nअतः सही विकल्प  36 है।\n\nMethod 2 (Hours Method):\n$U = 10$ किमी/घंटा।\n6 किमी प्रतिकूल का समय = $\\frac{6}{10} \\times 60 = 36$ मिनट।\nअतः सही उत्तर '36' है।\n\nExam point: dhaara-naav ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_8",
+    "qe": "A boat can go 5 km upstream and 7 1/2 km downstream in 45 minutes. It can also go 5 km downstream and 2.5 km upstream in 25 minute. How much time (in minutes) will it take to go 6 km downstream?",
+    "qh": "एक नाव 45 मिनट में धारा के प्रतिकूल 5 किमी और धारा के अनुकूल 7 1/2 किमी जा सकती है। यह 25 मिनट में 5 किमी धारा के अनुकूल और 2.5 किमी धारा के प्रतिकूल भी जा सकती है। धारा के अनुकूल 6 किमी जाने में इसे कितना समय (मिनटों में) लगेगा?",
+    "oe": [
+      "20",
+      "10",
+      "15",
+      "12"
+    ],
+    "oh": [
+      "20",
+      "10",
+      "15",
+      "12"
+    ],
+    "a": 3,
+    "e": "Method 1 (Direct Downstream Speed Application Method):\nStep 1: पूर्व प्रश्न के समीकरणों को हल करने पर:\n$$$\\frac{7.5}{D}$ + $\\frac{5}{U}$ = 45$$\n$$$\\frac{5}{D}$ + $\\frac{2.5}{U}$ = 25$$\nStep 2: समीकरण (2) को 2 से गुणा करके घटाने पर:\n$$$\\frac{10}{D}$ - $\\frac{7.5}{D}$ = 50 - 45 \\implies $\\frac{2.5}{D}$ = 5 \\implies D = 0.5\\text{ किमी/मिनट}$$\nकिमी/घंटा में: $D = 0.5 \\times 60 = 30\\text{ किमी/घंटा}$।\nStep 3: 6 किमी धारा के अनुकूल जाने में लगा समय (मिनटों में):\n$$\\text{समय} = \\frac{6\\text{ किमी}}{0.5\\text{ किमी/मिनट}} = 12\\text{ मिनट}$$\nअतः सही विकल्प  12 है।\n\nMethod 2 (Hours Method):\n$\\text{समय} = \\frac{6}{30} = \\frac{1}{5}\\text{ घंटा} = \\frac{1}{5} \\times 60 = 12$ मिनट।\nअतः सही उत्तर '12' है।\n\nExam point: dhaara-naav ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_9",
+    "qe": "A boat can go 3 km upstream and 5 km downstream in 55 minutes. It can also go 4 km upstream and 9 km downstream in 1 hour 25 minutes. In how much time (in hours) will it go 43.2 km downstream?",
+    "qh": "एक नाव 55 मिनट में धारा के प्रतिकूल 3 किमी और धारा के अनुकूल 5 किमी जा सकती है। यह 1 घंटा 25 मिनट में 4 किमी धारा के प्रतिकूल और 9 किमी धारा के अनुकूल भी जा सकती है। 43.2 किमी धारा के अनुकूल जाने में इसे कितना समय (घंटों में) लगेगा?",
+    "oe": [
+      "4.8",
+      "5.4",
+      "3.6",
+      "4.4"
+    ],
+    "oh": [
+      "4.8",
+      "5.4",
+      "3.6",
+      "4.4"
+    ],
+    "a": 2,
+    "e": "Method 1 (Simultaneous Equations Method):\nStep 1: समय को घंटों में बदलें:\n- 55 मिनट = $\\frac{55}{60} = \\frac{11}{12}$ घंटा\n- 1 घंटा 25 मिनट = $1 + \\frac{25}{60} = \\frac{17}{12}$ घंटा\nसमीकरण:\n$$$\\frac{5}{D}$ + $\\frac{3}{U}$ = $\\frac{11}{12}$ \\quad \\text{--- (1)}$$\n$$$\\frac{9}{D}$ + $\\frac{4}{U}$ = $\\frac{17}{12}$ \\quad \\text{--- (2)}$$\nStep 2: $U$ को समाप्त करने के लिए (1) को 4 से और (2) को 3 से गुणा करके घटाने पर:\n$$4 $\\times$ $\\le$ft($\\frac{5}{D}$ + $\\frac{3}{U}$\\right) = $\\frac{44}{12}$ \\implies $\\frac{20}{D}$ + $\\frac{12}{U}$ = $\\frac{44}{12}$$$\n$$3 $\\times$ $\\le$ft($\\frac{9}{D}$ + $\\frac{4}{U}$\\right) = $\\frac{51}{12}$ \\implies $\\frac{27}{D}$ + $\\frac{12}{U}$ = $\\frac{51}{12}$$$\nघटाने पर:\n$$$\\frac{7}{D}$ = $\\frac{51-44}{12}$ = $\\frac{7}{12}$ \\implies D = 12\\text{ किमी/घंटा}$$\nStep 3: 43.2 किमी धारा के अनुकूल जाने में लगा समय निकालें:\n$$\\text{समय} = $\\frac{43.2}{12}$ = 3.6\\text{ घंटे}$$\nअतः सही विकल्प  3.6 है।\n\nMethod 2 (Direct Division Method):\n$\\text{समय} = \\frac{43.2}{12} = 3.6$ घंटे।\nअतः सही उत्तर '3.6' है।\n\nExam point: dhaara-naav ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_10",
+    "qe": "A boat goes 27 km upstream and 33 km downstream in 6 hours. In the same time it can go 36 km upstream and 22 km downstream. How much time will it take to go 36 km upstream and 44 km downstream?",
+    "qh": "एक नाव धारा के प्रतिकूल 27 किमी और धारा के अनुकूल 33 किमी 6 घंटे में जाती है। उसी समय में यह 36 किमी धारा के प्रतिकूल और 22 किमी धारा के अनुकूल जा सकती है। 36 किमी धारा के प्रतिकूल और 44 किमी धारा के अनुकूल जाने में इसे कितना समय लगेगा?",
+    "oe": [
+      "8hr",
+      "8hr 10 min",
+      "7hr 50 min",
+      "8hr 30 min"
+    ],
+    "oh": [
+      "8hr",
+      "8hr 10 min",
+      "7hr 50 min",
+      "8hr 30 min"
+    ],
+    "a": 0,
+    "e": "Method 1 (Linear Combination Method):\nStep 1: समीकरण:\n$$$\\frac{33}{D}$ + $\\frac{27}{U}$ = 6 \\quad \\text{--- (1)}$$\n$$$\\frac{22}{D}$ + $\\frac{36}{U}$ = 6 \\quad \\text{--- (2)}$$\nStep 2: दोनों समीकरणों के समय बराबर हैं:\n$$$\\frac{33}{D}$ + $\\frac{27}{U}$ = $\\frac{22}{D}$ + $\\frac{36}{U}$ \\implies $\\frac{11}{D}$ = $\\frac{9}{U}$ \\implies $\\frac{D}{U}$ = $\\frac{11}{9}$$$\nStep 3: मान लें $D = 11k$ और $U = 9k$. समीकरण (1) में रखने पर:\n$$$\\frac{33}{11k}$ + $\\frac{27}{9k}$ = 6 \\implies $\\frac{3}{k}$ + $\\frac{3}{k}$ = 6 \\implies $\\frac{6}{k}$ = 6 \\implies k = 1$$\nअतः $D = 11$ किमी/घंटा और $U = 9$ किमी/घंटा।\nStep 4: 36 किमी प्रतिकूल और 44 किमी अनुकूल जाने में लगा समय निकालें:\n$$\\text{समय} = $\\frac{44}{D}$ + $\\frac{36}{U}$ = $\\frac{44}{11}$ + $\\frac{36}{9}$ = 4 + 4 = 8\\text{ घंटे}$$\nअतः सही विकल्प  8hr है।\n\nMethod 2 (Factor Observation):\n$D = 11$ (33 और 22 का म.स.प.), $U = 9$ (27 और 36 का म.स.प.)।\nजाँच: $33/11 + 27/9 = 3 + 3 = 6$ घंटे।\nअभीष्ट समय = $44/11 + 36/9 = 4 + 4 = 8$ घंटे।\nअतः सही उत्तर '8hr' है।\n\nExam point: dhaara-naav ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_11",
+    "qe": "A boat can travel 78 km upstream and back in a total of 32 hours. It can travel 15 km upstream and 52 km downstream in a total of 9 hours. How much distance will the boat cover in 12 hours in still water?",
+    "qh": "एक नाव धारा के प्रतिकूल 78 किमी जाने और वापस आने में कुल 32 घंटे का समय ले सकती है। यह कुल 9 घंटे में 15 किमी धारा के प्रतिकूल और 52 किमी धारा के अनुकूल यात्रा कर सकती है। शांत जल में नाव 12 घंटे में कितनी दूरी तय करेगी?",
+    "oe": [
+      "92 km",
+      "96 km",
+      "104 km",
+      "100 km"
+    ],
+    "oh": [
+      "92 km",
+      "96 km",
+      "104 km",
+      "100 km"
+    ],
+    "a": 1,
+    "e": "Method 1 (HCF & Factor Substitution Method):\nStep 1: समीकरण:\n$$$\\frac{78}{D}$ + $\\frac{78}{U}$ = 32 \\quad \\text{--- (1)}$$\n$$$\\frac{52}{D}$ + $\\frac{15}{U}$ = 9 \\quad \\text{--- (2)}$$\nStep 2: $D$ के अंश 78 और 52 हैं, जिनका HCF 26 या 13 हो सकता है।\nयदि $D = 13$ रखें:\nसमीकरण (2) से: $\\frac{52}{13} + \\frac{15}{U} = 9 \\implies 4 + \\frac{15}{U} = 9 \\implies \\frac{15}{U} = 5 \\implies U = 3\\text{ किमी/घंटा}$।\nStep 3: समीकरण (1) में जाँच करने पर:\n$$$\\frac{78}{13}$ + $\\frac{78}{3}$ = 6 + 26 = 32\\text{ घंटे (पूर्णतः संतुष्ट)}$$\nStep 4: शांत जल में नाव की गति ($u$):\n$$u = $\\frac{D+U}{2}$ = $\\frac{13+3}{2}$ = $\\frac{16}{2}$ = 8\\text{ किमी/घंटा}$$\nStep 5: शांत जल में 12 घंटे में तय की गई दूरी:\n$$\\text{दूरी} = u $\\times$ 12 = 8 $\\times$ 12 = 96\\text{ किमी}$$\nअतः सही विकल्प  96 km है।\n\nMethod 2 (Simultaneous Elimination Method):\nसमीकरणों को हल करने पर $D = 13$ और $U = 3$ प्राप्त होता है।\nशांत जल में गति = 8 किमी/घंटा।\n12 घंटे में दूरी = $8 \\times 12 = 96$ किमी।\nअतः सही उत्तर '96 km' है।\n\nExam point: dhaara-naav ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_12",
+    "qe": "Abhi rows upstream a distance of 28 km in 4h and rows downstream a distance of 50 km in 2h. To row a distance of 44.8 km in still water, he will take:",
+    "qh": "अभि धारा के प्रतिकूल 28 किमी की दूरी 4 घंटे में और धारा के अनुकूल 50 किमी की दूरी 2 घंटे में तय करता है। शांत जल में 44.8 किमी की दूरी तय करने में उसे कितना समय लगेगा:",
+    "oe": [
+      "2.8 hours",
+      "3.2 hours",
+      "2.4 hours",
+      "3.0 hours"
+    ],
+    "oh": [
+      "2.8 hours",
+      "3.2 hours",
+      "2.4 hours",
+      "3.0 hours"
+    ],
+    "a": 0,
+    "e": "Method 1 (Basic Boat and Stream Formula Method):\nStep 1: धारा के प्रतिकूल गति ($U$) निकालें:\n$$U = $\\frac{28}{4}$ = 7\\text{ किमी/घंटा}$$\nStep 2: धारा के अनुकूल गति ($D$) निकालें:\n$$D = $\\frac{50}{2}$ = 25\\text{ किमी/घंटा}$$\nStep 3: शांत जल में नाव (अभि) की गति ($u$):\n$$u = $\\frac{D+U}{2}$ = $\\frac{25+7}{2}$ = $\\frac{32}{2}$ = 16\\text{ किमी/घंटा}$$\nStep 4: शांत जल में 44.8 किमी की दूरी तय करने में लगा समय:\n$$\\text{समय} = $\\frac{44.8}{16}$ = 2.8\\text{ घंटे}$$\n(नोट: $2.8\\text{ घंटे} = 2\\text{ घंटे } 48\\text{ मिनट}$)।\nअतः सही विकल्प  2.8 hours है।\n\nMethod 2 (Direct Step Calculation):\n$$\\text{समय} = \\frac{44.8}{$\\frac{1}{2}$$\\le$ft($\\frac{50}{2}$ + $\\frac{28}{4}$\\right)} = \\frac{44.8}{$\\frac{25+7}{2}$} = $\\frac{44.8}{16}$ = 2.8\\text{ घंटे}$$\nअतः सही उत्तर '2.8 hours' है।\n\nExam point: dhaara-naav ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_13",
+    "qe": "A person rows upstream a distance of 55 km in 5 hours and rows downstream a distance of 75 km in 3 hours. How much time will he take to cover a distance of 96 km in still water?",
+    "qh": "एक व्यक्ति धारा के प्रतिकूल 55 किमी की दूरी 5 घंटे में तय करता है और धारा के अनुकूल 75 किमी की दूरी 3 घंटे में तय करता है। शांत जल में 96 किमी की दूरी तय करने में उसे कितना समय लगेगा?",
+    "oe": [
+      "4 hours 40 minutes",
+      "5 hours 20 minutes",
+      "6 hours 10 minutes",
+      "5 hours 45 minutes"
+    ],
+    "oh": [
+      "4 hours 40 minutes",
+      "5 hours 20 minutes",
+      "6 hours 10 minutes",
+      "5 hours 45 minutes"
+    ],
+    "a": 1,
+    "e": "Method 1 (Basic Speed Formula Method):\nStep 1: धारा के प्रतिकूल गति ($U$) निकालें:\n$$U = $\\frac{55}{5}$ = 11\\text{ किमी/घंटा}$$\nStep 2: धारा के अनुकूल गति ($D$) निकालें:\n$$D = $\\frac{75}{3}$ = 25\\text{ किमी/घंटा}$$\nStep 3: शांत जल में व्यक्ति की गति ($u$):\n$$u = $\\frac{D+U}{2}$ = $\\frac{25+11}{2}$ = $\\frac{36}{2}$ = 18\\text{ किमी/घंटा}$$\nStep 4: शांत जल में 96 किमी की दूरी तय करने में लगा समय:\n$$\\text{समय} = $\\frac{96}{18}$ = $\\frac{16}{3}$\\text{ घंटे} = 5$\\frac{1}{3}$\\text{ घंटे}$$\nStep 5: भिन्न को मिनट में बदलें:\n$$$\\frac{1}{3}$\\text{ घंटा} = $\\frac{1}{3}$ $\\times$ 60 = 20\\text{ मिनट}$$\nअतः कुल समय = 5 घंटे 20 मिनट।\nअतः सही विकल्प  5 hours 20 minutes है।\n\nMethod 2 (Fraction Verification):\nStep 1: $u = 18$ किमी/घंटा।\nStep 2: समय = $96 / 18 = 5.333...$ घंटे = 5 घंटे 20 मिनट।\nअतः सही उत्तर '5 hours 20 minutes' है।\n\nExam point: dhaara-naav ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "uvconcept_14",
+    "qe": "A boat travels 3 km upstream in 1 hr and 1 km downstream in 12 min. How much time will it take for the boat to go 6 km in still water?",
+    "qh": "एक नाव धारा के प्रतिकूल 1 घंटे में 3 किमी और धारा के अनुकूल 12 मिनट में 1 किमी जाती है। शांत जल में 6 किमी जाने में नाव को कितना समय लगेगा?",
+    "oe": [
+      "1 hr 30 min",
+      "1 hr 25 min",
+      "1 hr 20 min",
+      "1 hr 15 min"
+    ],
+    "oh": [
+      "1 hr 30 min",
+      "1 hr 25 min",
+      "1 hr 20 min",
+      "1 hr 15 min"
+    ],
+    "a": 0,
+    "e": "Method 1 (Step-by-Step Velocity Method):\nStep 1: धारा के प्रतिकूल गति ($U$):\n$$U = $\\frac{3}{1}$ = 3\\text{ किमी/घंटा}$$\nStep 2: 12 मिनट = $\\frac{12}{60} = \\frac{1}{5}$ घंटा।\nधारा के अनुकूल गति ($D$):\n$$D = $\\frac{1}{1/5}$ = 5\\text{ किमी/घंटा}$$\nStep 3: शांत जल में नाव की गति ($u$):\n$$u = $\\frac{D+U}{2}$ = $\\frac{5+3}{2}$ = $\\frac{8}{2}$ = 4\\text{ किमी/घंटा}$$\nStep 4: शांत जल में 6 किमी जाने में लगा समय:\n$$\\text{समय} = $\\frac{6}{4}$ = 1.5\\text{ घंटे} = 1\\text{ घंटा } 30\\text{ मिनट}$$\nअतः सही विकल्प  1 hr 30 min है।\n\nMethod 2 (Proportional Method):\nStep 1: शांत जल की गति = 4 किमी/घंटा।\nStep 2: 4 किमी = 60 मिनट $\\implies 6$ किमी = $60 \\times \\frac{6}{4} = 90$ मिनट = 1 घंटा 30 मिनट।\nअतः सही उत्तर '1 hr 30 min' है।\n\nExam point: dhaara-naav ka hisaab - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
