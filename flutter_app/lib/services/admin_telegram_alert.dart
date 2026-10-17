@@ -63,4 +63,38 @@ class AdminTelegramAlert {
     }
   }
 
+  /// 💰 Naya Premium Payment Request — screenshot ke saath admin ko khabar
+  static Future<bool> sendPremiumPaymentRequest({
+    required String userName,
+    required String userId,
+    required int amount,
+    String? upiRef,
+    String? screenshotUrl,
+  }) async {
+    try {
+      final String caption = '''
+💰 <b>NAYA PREMIUM REQUEST</b>
+━━━━━━━━━━━━━━━━━━━━
+👤 <b>Student:</b> ${_escapeHtml(userName)}
+🆔 <b>User ID:</b> <code>${_escapeHtml(userId)}</code>
+💵 <b>Amount:</b> ₹$amount
+🔢 <b>UPI Ref:</b> <code>${_escapeHtml(upiRef ?? 'photo se nahi mila')}</code>
+🕒 <b>Time:</b> ${DateTime.now().toLocal().toString().split('.')[0]}
+━━━━━━━━━━━━━━━━━━━━
+<i>PhonePe Business me paisa mila lo, phir Admin Hub → Premium tab se Approve karo.</i>
+''';
+
+      final ok = await TelegramWorker.send(
+        text: caption,
+        parseMode: 'HTML',
+        photoUrl: screenshotUrl,
+      );
+      debugPrint("Premium Telegram Alert bheja: $ok");
+      return ok;
+    } catch (e) {
+      debugPrint("❌ Premium Telegram Alert Error: $e");
+      return false;
+    }
+  }
+
 }
