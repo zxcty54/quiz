@@ -1,0 +1,325 @@
+[
+  {
+    "p_id": "workwages_1",
+    "qe": "A and B undertake a project worth ₹36,000. A alone can do the work in 25 days. They worked together for 5 days. For the next five days, B worked alone. After that, A substituted B and completed the remaining work in 5 days. The share of A in the earnings is:",
+    "qh": "A और B ₹36,000 की लागत वाली एक परियोजना शुरू करते हैं। A अकेले उस कार्य को 25 दिनों में कर सकता है। उन्होंने 5 दिनों तक एक साथ कार्य किया। अगले पांच दिनों तक B ने अकेले कार्य किया। उसके बाद, A ने B का स्थान लिया और शेष कार्य को 5 दिनों में पूरा किया। कमाई में A का हिस्सा क्या है?",
+    "oe": [
+      "₹21,600",
+      "₹14,400",
+      "₹14,600",
+      "₹21,400"
+    ],
+    "oh": [
+      "₹21,600",
+      "₹14,400",
+      "₹14,600",
+      "₹21,400"
+    ],
+    "a": 1,
+    "e": "Method 1 (Work Done Proportion Method):\nStep 1: A द्वारा किए गए कुल दिनों की संख्या निकालें:\n- A ने पहले 5 दिन B के साथ कार्य किया = 5 दिन\n- A ने अंत में अकेले कार्य किया = 5 दिन\nA द्वारा कार्य किए गए कुल दिन = 5 + 5 = 10 दिन।\nStep 2: A अकेले पूरे कार्य को 25 दिनों में पूरा कर सकता है।\n10 दिनों में A द्वारा किया गया कार्य = 10 / 25 = 2 / 5 भाग।\nStep 3: मजदूरी का विभाजन किए गए कार्य के अनुपात में होता है:\nA का हिस्सा = (2 / 5) × ₹36,000 = 2 × 7,200 = ₹14,400.\nअतः सही विकल्प  ₹14,400 है।\n\nMethod 2 (Units Method):\nStep 1: कुल कार्य = 25 इकाइयाँ मान लें (A की दक्षता = 1 इकाई/दिन)।\nStep 2: 10 दिनों में A ने कुल 10 इकाइयाँ कार्य किया।\nStep 3: A का पारिश्रमिक = (10 / 25) × 36,000 = ₹14,400.\nअतः सही उत्तर '₹14,400' है।\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_2",
+    "qe": "Mohit and Rohit undertook a work for Rs.6600. Mohit alone can do that work in 25 days. Rohit alone can do the same work in 30 days. They work together. What will be the difference in the amount (in Rs.) they receive?",
+    "qh": "मोहित और रोहित ने ₹6600 में एक कार्य करने का जिम्मा लिया। मोहित अकेले उस कार्य को 25 दिनों में कर सकता है। रोहित अकेले उसी कार्य को 30 दिनों में कर सकता है। वे एक साथ कार्य करते हैं। उन्हें प्राप्त होने वाली राशि (₹ में) में क्या अंतर होगा?",
+    "oe": [
+      "650",
+      "500",
+      "600",
+      "550"
+    ],
+    "oh": [
+      "650",
+      "500",
+      "600",
+      "550"
+    ],
+    "a": 2,
+    "e": "Method 1 (Efficiency Ratio Method):\nStep 1: समय का अनुपात (मोहित : रोहित) = 25 : 30 = 5 : 6.\nStep 2: कार्यक्षमता (मजदूरी) का अनुपात = 6 : 5.\nStep 3: कुल अनुपाती इकाइयाँ = 6 + 5 = 11 इकाइयाँ।\n11 इकाइयाँ = ₹6,600 ==> 1 इकाई = 6,600 / 11 = ₹600.\nStep 4: दोनों की राशि में अंतर (6 - 5 = 1 इकाई):\nअंतर = 1 × 600 = ₹600.\nअतः सही विकल्प  600 है।\n\nMethod 2 (Direct Share Method):\nStep 1: मोहित का हिस्सा = (6/11) × 6600 = ₹3600.\nरोहित का हिस्सा = (5/11) × 6600 = ₹3000.\nStep 2: अंतर = 3600 - 3000 = ₹600.\nअतः सही उत्तर '600' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_3",
+    "qe": "Fifteen persons working 12 hours a day earn ₹18,000 per week. How many rupees will 18 persons working 9 hours a day earn per week?",
+    "qh": "प्रतिदिन 12 घंटे कार्य करने वाले 15 व्यक्ति प्रति सप्ताह ₹18,000 कमाते हैं। प्रतिदिन 9 घंटे कार्य करने वाले 18 व्यक्ति प्रति सप्ताह कितने रुपये कमाएंगे?",
+    "oe": [
+      "Rs. 16,020",
+      "Rs. 12,600",
+      "Rs. 12,060",
+      "Rs. 16,200"
+    ],
+    "oh": [
+      "Rs. 16,020",
+      "Rs. 12,600",
+      "Rs. 12,060",
+      "Rs. 16,200"
+    ],
+    "a": 3,
+    "e": "Method 1 (MDH / Earnings Formula Method):\nStep 1: कुल कमाई कार्य के समानुपाती होती है: (M1 × H1) / W1 = (M2 × H2) / W2.\n(दोनों स्थितियों में 1 सप्ताह = 7 दिन समान है)।\nStep 2: मान रखने पर:\n(15 × 12) / 18,000 = (18 × 9) / W2\n180 / 18,000 = 162 / W2\n1 / 100 = 162 / W2\nStep 3: W2 = 162 × 100 = ₹16,200.\nअतः सही विकल्प  Rs. 16,200 है।\n\nMethod 2 (Unit Earnings Method):\nStep 1: प्रति मानव-घंटा कमाई = 18,000 / (15 × 12) = 18,000 / 180 = ₹100 प्रति घंटा।\nStep 2: दूसरे समूह के कुल मानव-घंटे = 18 × 9 = 162 घंटे।\nStep 3: कुल कमाई = 162 × 100 = ₹16,200.\nअतः सही उत्तर 'Rs. 16,200' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_4",
+    "qe": "P and Q can do a work in 12 days and 9 days, respectively. They both worked together and earned ₹63,000. The share of P (in ₹) is:",
+    "qh": "P और Q एक कार्य को क्रमशः 12 दिनों और 9 दिनों में कर सकते हैं। उन दोनों ने एक साथ कार्य किया और ₹63,000 कमाए। P का हिस्सा (₹ में) क्या है:",
+    "oe": [
+      "36,000",
+      "21,000",
+      "27,000",
+      "9,000"
+    ],
+    "oh": [
+      "36,000",
+      "21,000",
+      "27,000",
+      "9,000"
+    ],
+    "a": 2,
+    "e": "Method 1 (Efficiency Ratio Method):\nStep 1: समय का अनुपात P : Q = 12 : 9 = 4 : 3.\nStep 2: कार्यक्षमता (मजदूरी) का अनुपात P : Q = 3 : 4.\nStep 3: कुल इकाइयाँ = 3 + 4 = 7 इकाइयाँ।\n7 इकाइयाँ = ₹63,000 ==> 1 इकाई = 63,000 / 7 = ₹9,000.\nStep 4: P का हिस्सा (3 इकाइयाँ) = 3 × 9,000 = ₹27,000.\nअतः सही विकल्प  27,000 है।\n\nMethod 2 (Fractional Share Method):\nStep 1: P का अंश = 3 / 7.\nStep 2: P का हिस्सा = (3 / 7) × 63,000 = 3 × 9,000 = ₹27,000.\nअतः सही उत्तर '27,000' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_5",
+    "qe": "A alone can complete a job in 12 days and B alone in 18 days. A and B agree to do the work for ₹7,200. With C's help they finish it in 5 days. How much should C be paid?",
+    "qh": "A अकेले एक कार्य को 12 दिनों में और B अकेले 18 दिनों में पूरा कर सकता है। A और B ₹7,200 में कार्य करने के लिए सहमत होते हैं। C की सहायता से वे इसे 5 दिनों में पूरा करते हैं। C को कितना भुगतान किया जाना चाहिए?",
+    "oe": [
+      "₹2,200",
+      "₹2,400",
+      "₹2,600",
+      "₹2,800"
+    ],
+    "oh": [
+      "₹2,200",
+      "₹2,400",
+      "₹2,600",
+      "₹2,800"
+    ],
+    "a": 0,
+    "e": "Method 1 (Work Fraction Method):\nStep 1: तीनों ने मिलकर 5 दिनों में कार्य पूरा किया:\n- A द्वारा 5 दिनों में किया गया कार्य = 5 / 12 भाग\n- B द्वारा 5 दिनों में किया गया कार्य = 5 / 18 भाग\nStep 2: (A + B) द्वारा मिलकर 5 दिनों में किया गया कुल कार्य:\nकुल कार्य = 5/12 + 5/18 = (15 + 10) / 36 = 25 / 36 भाग।\nStep 3: C द्वारा किया गया शेष कार्य:\nC का कार्य = 1 - 25/36 = 11 / 36 भाग।\nStep 4: C का पारिश्रमिक:\nभुगतान = (11 / 36) × ₹7,200 = 11 × 200 = ₹2,200.\nअतः सही विकल्प  ₹2,200 है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल कार्य = LCM(12, 18) = 36 इकाइयाँ।\nA = 3 इकाई/दिन, B = 2 इकाई/दिन।\nStep 2: 5 दिनों में A और B का कार्य = 5 × (3 + 2) = 25 इकाइयाँ।\nC का कार्य = 36 - 25 = 11 इकाइयाँ।\nStep 3: C का हिस्सा = (11 / 36) × 7,200 = ₹2,200.\nअतः सही उत्तर '₹2,200' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_6",
+    "qe": "4 women and 7 men earn a total of ₹11,480 in 7 days, while 10 women and 17 men earn a total of ₹36,360 in 9 days. How much will 11 women and 9 men together earn (in ₹) in 13 days?",
+    "qh": "4 महिलाएं और 7 पुरुष 7 दिनों में कुल ₹11,480 कमाते हैं, जबकि 10 महिलाएं और 17 पुरुष 9 दिनों में कुल ₹36,360 कमाते हैं। 11 महिलाएं और 9 पुरुष मिलकर 13 दिनों में कितना (₹ में) कमाएंगे?",
+    "oe": [
+      "₹42,770",
+      "₹42,640",
+      "₹42,510",
+      "₹42,900"
+    ],
+    "oh": [
+      "₹42,770",
+      "₹42,640",
+      "₹42,510",
+      "₹42,900"
+    ],
+    "a": 1,
+    "e": "Method 1 (Daily Wage Linear System Method):\nStep 1: दोनों स्थितियों में प्रतिदिन की कुल कमाई निकालें:\n- 4W + 7M = 11,480 / 7 = ₹1,640 प्रति दिन ... (समीकरण 1)\n- 10W + 17M = 36,360 / 9 = ₹4,040 प्रति दिन ... (समीकरण 2)\nStep 2: समीकरणों को हल करें:\nसमीकरण (1) को 5 से गुणा करें: 20W + 35M = 8,200\nसमीकरण (2) को 2 से गुणा करें: 20W + 34M = 8,080\nघटाने पर: (35M - 34M) = 8,200 - 8,080 ==> 1M = ₹120 प्रति दिन।\nStep 3: W का मान निकालें:\n4W + 7(120) = 1,640 ==> 4W + 840 = 1,640 ==> 4W = 800 ==> 1W = ₹200 प्रति दिन।\nStep 4: 11 महिलाओं और 9 पुरुषों की 1 दिन की कमाई:\nदैनिक कमाई = 11(200) + 9(120) = 2,200 + 1,080 = ₹3,280 प्रति दिन।\nStep 5: 13 दिनों की कुल कमाई = 3,280 × 13 = ₹42,640.\nअतः सही विकल्प  ₹42,640 है।\n\nMethod 2 (Arithmetic Verification):\n3280 × 13 = 3280 × 10 + 3280 × 3 = 32800 + 9840 = ₹42,640.\nअतः सही उत्तर '₹42,640' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_7",
+    "qe": "Ashok and Anil undertake to do a piece of work for ₹4,500. Ashok alone could do the work in 8 days and Anil in 12 days. With the assistance of Amar, they finished the work in 4 days. What is the share of Amar?",
+    "qh": "अशोक और अनिल ₹4,500 में एक कार्य करने का बीड़ा उठाते हैं। अशोक अकेले उस कार्य को 8 दिनों में और अनिल 12 दिनों में कर सकता था। अमर की सहायता से उन्होंने कार्य 4 दिनों में पूरा कर लिया। अमर का हिस्सा क्या है?",
+    "oe": [
+      "₹1,500",
+      "₹750",
+      "₹2,250",
+      "₹2,500"
+    ],
+    "oh": [
+      "₹1,500",
+      "₹750",
+      "₹2,250",
+      "₹2,500"
+    ],
+    "a": 1,
+    "e": "Method 1 (Work Done Fraction Method):\nStep 1: 4 दिनों में प्रत्येक द्वारा किया गया कार्य निकालें:\n- अशोक का कार्य = 4 / 8 = 1 / 2 भाग\n- अनिल का कार्य = 4 / 12 = 1 / 3 भाग\nStep 2: अशोक और अनिल का संयुक्त कार्य = 1/2 + 1/3 = 5/6 भाग।\nStep 3: अमर द्वारा किया गया कार्य = 1 - 5/6 = 1/6 भाग।\nStep 4: अमर का हिस्सा = (1 / 6) × ₹4,500 = ₹750.\nअतः सही विकल्प  ₹750 है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल कार्य = LCM(8, 12, 4) = 24 इकाइयाँ।\nअशोक = 3 इकाइयाँ/दिन, अनिल = 2 इकाइयाँ/दिन, तीनों = 6 इकाइयाँ/दिन।\nStep 2: अमर की दक्षता = 6 - (3 + 2) = 1 इकाई/दिन।\nStep 3: अमर का हिस्सा = (1 / 6) × 4,500 = ₹750.\nअतः सही उत्तर '₹750' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_8",
+    "qe": "A can complete a task by himself in 6 days, while B can do it alone in 8 days. Together with C's assistance, they've agreed to finish the work for Rs.3200. They successfully completed the task in 3 days. What amount should be given to C?",
+    "qh": "A अकेले एक कार्य को 6 दिनों में पूरा कर सकता है, जबकि B अकेले इसे 8 दिनों में कर सकता है। C की सहायता से, वे ₹3200 में कार्य समाप्त करने के लिए सहमत हुए। उन्होंने 3 दिनों में सफलतापूर्वक कार्य पूरा किया। C को कितनी राशि दी जानी चाहिए?",
+    "oe": [
+      "₹400",
+      "₹500",
+      "₹800",
+      "₹900"
+    ],
+    "oh": [
+      "₹400",
+      "₹500",
+      "₹800",
+      "₹900"
+    ],
+    "a": 0,
+    "e": "Method 1 (Work Fraction Method):\nStep 1: 3 दिनों में A और B द्वारा किया गया कार्य:\n- A का कार्य = 3 / 6 = 1 / 2 भाग\n- B का कार्य = 3 / 8 भाग\nStep 2: (A + B) का कुल कार्य = 1/2 + 3/8 = 7 / 8 भाग।\nStep 3: C का कार्य = 1 - 7/8 = 1 / 8 भाग।\nStep 4: C को दी जाने वाली राशि = (1 / 8) × ₹3,200 = ₹400.\nअतः सही विकल्प  ₹400 है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल कार्य = 24 इकाइयाँ।\nA = 4 इकाइयाँ/दिन, B = 3 इकाइयाँ/दिन, तीनों = 24 / 3 = 8 इकाइयाँ/दिन।\nStep 2: C की दक्षता = 8 - (4 + 3) = 1 इकाई/दिन।\nStep 3: C का हिस्सा = (1 / 8) × 3,200 = ₹400.\nअतः सही उत्तर '₹400' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_9",
+    "qe": "X, Y and Z can do a piece of work in 4 days, 5 days and 7 days, respectively. They get ₹415 for completing the work. If X, Y and Z have worked together to complete the work, what is X's share?",
+    "qh": "X, Y और Z एक कार्य को क्रमशः 4 दिन, 5 दिन और 7 दिन में कर सकते हैं। कार्य पूरा करने पर उन्हें ₹415 मिलते हैं। यदि X, Y और Z ने कार्य पूरा करने के लिए एक साथ कार्य किया है, तो X का हिस्सा क्या है?",
+    "oe": [
+      "₹275",
+      "₹175",
+      "₹200",
+      "₹225"
+    ],
+    "oh": [
+      "₹275",
+      "₹175",
+      "₹200",
+      "₹225"
+    ],
+    "a": 1,
+    "e": "Method 1 (Efficiency Ratio Method):\nStep 1: कार्यक्षमता का अनुपात समय के व्युत्क्रमानुपाती होता है:\nX : Y : Z = 1/4 : 1/5 : 1/7.\nStep 2: 4, 5, 7 का LCM = 140 से प्रत्येक पद में गुणा करने पर:\nX : Y : Z = 35 : 28 : 20.\nStep 3: कुल अनुपाती इकाइयाँ = 35 + 28 + 20 = 83 इकाइयाँ।\n83 इकाइयाँ = ₹415 ==> 1 इकाई = 415 / 83 = ₹5.\nStep 4: X का हिस्सा (35 इकाइयाँ) = 35 × 5 = ₹175.\nअतः सही विकल्प  ₹175 है।\n\nMethod 2 (Direct Proportion Method):\nStep 1: X का अंश = 35 / 83.\nStep 2: X का हिस्सा = (35 / 83) × 415 = 35 × 5 = ₹175.\nअतः सही उत्तर '₹175' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_10",
+    "qe": "Tina alone can do a piece of work in 12 days and Meena alone can do the same work in 15 days. If Tina and Meena undertook to do this work for ₹18,000, then how much amount will Meena get, if they work together?",
+    "qh": "टीना अकेले एक कार्य को 12 दिनों में और मीना अकेले उसी कार्य को 15 दिनों में कर सकती है। यदि टीना और मीना ने ₹18,000 में यह कार्य करने का बीड़ा उठाया, तो एक साथ कार्य करने पर मीना को कितनी राशि मिलेगी?",
+    "oe": [
+      "₹10,000",
+      "₹6,000",
+      "₹12,000",
+      "₹8,000"
+    ],
+    "oh": [
+      "₹10,000",
+      "₹6,000",
+      "₹12,000",
+      "₹8,000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Efficiency Ratio Method):\nStep 1: समय का अनुपात (टीना : मीना) = 12 : 15 = 4 : 5.\nStep 2: कार्यक्षमता (मजदूरी) का अनुपात = 5 : 4.\nStep 3: कुल इकाइयाँ = 5 + 4 = 9 इकाइयाँ।\n9 इकाइयाँ = ₹18,000 ==> 1 इकाई = 18,000 / 9 = ₹2,000.\nStep 4: मीना का हिस्सा (4 इकाइयाँ) = 4 × 2,000 = ₹8,000.\nअतः सही विकल्प  ₹8,000 है।\n\nMethod 2 (Direct Share Method):\nStep 1: मीना का हिस्सा = (4 / 9) × 18,000 = 4 × 2,000 = ₹8,000.\nअतः सही उत्तर '₹8,000' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_11",
+    "qe": "Mohit and Rohit undertook a work for ₹4400. Mohit alone can do that work in 10 days and Rohit alone can do the same work in 15 days. If they work together, then what will be the difference in the amount they receive?",
+    "qh": "मोहित और रोहित ने ₹4400 में एक कार्य करने का जिम्मा लिया। मोहित अकेले उस कार्य को 10 दिनों में कर सकता है और रोहित अकेले उसी कार्य को 15 दिनों में कर सकता है। यदि वे एक साथ कार्य करते हैं, तो उन्हें प्राप्त होने वाली राशि में क्या अंतर होगा?",
+    "oe": [
+      "₹880",
+      "₹800",
+      "₹920",
+      "₹750"
+    ],
+    "oh": [
+      "₹880",
+      "₹800",
+      "₹920",
+      "₹750"
+    ],
+    "a": 0,
+    "e": "Method 1 (Efficiency Ratio Method):\nStep 1: समय का अनुपात (मोहित : रोहित) = 10 : 15 = 2 : 3.\nStep 2: कार्यक्षमता (मजदूरी) का अनुपात = 3 : 2.\nStep 3: कुल इकाइयाँ = 3 + 2 = 5 इकाइयाँ।\n5 इकाइयाँ = ₹4,400 ==> 1 इकाई = 4,400 / 5 = ₹880.\nStep 4: प्राप्त राशि में अंतर = 3 - 2 = 1 इकाई = ₹880.\nअतः सही विकल्प  ₹880 है।\n\nMethod 2 (Direct Calculation Method):\nStep 1: मोहित = (3/5) × 4400 = ₹2640.\nरोहित = (2/5) × 4400 = ₹1760.\nStep 2: अंतर = 2640 - 1760 = ₹880.\nअतः सही उत्तर '₹880' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_12",
+    "qe": "A alone can complete the project in 10 days; B alone can complete it in 20 days while C alone can complete it in 30 days. They together earn ₹1,100 for the project. By how much do the total earnings of A and C exceed the earnings of B ?",
+    "qh": "A अकेले एक परियोजना को 10 दिनों में पूरा कर सकता है; B अकेले इसे 20 दिनों में पूरा कर सकता है जबकि C अकेले इसे 30 दिनों में पूरा कर सकता है। वे एक साथ परियोजना के लिए ₹1,100 कमाते हैं। A और C की कुल कमाई, B की कमाई से कितनी अधिक है?",
+    "oe": [
+      "₹600",
+      "₹900",
+      "₹700",
+      "₹500"
+    ],
+    "oh": [
+      "₹600",
+      "₹900",
+      "₹700",
+      "₹500"
+    ],
+    "a": 3,
+    "e": "Method 1 (Efficiency Ratio Method):\nStep 1: समय का अनुपात = 10 : 20 : 30 = 1 : 2 : 3.\nStep 2: कार्यक्षमता (मजदूरी) का अनुपात:\nA : B : C = $\\frac{1}{10}$ : $\\frac{1}{20}$ : $\\frac{1}{30}$\n10, 20 और 30 का LCM = 60 से गुणा करने पर:\nA : B : C = 6 : 3 : 2.\nStep 3: कुल अनुपाती इकाइयाँ = 6 + 3 + 2 = 11 इकाइयाँ।\n11 इकाइयाँ = ₹1,100 ==> 1 इकाई = 1,100 / 11 = ₹100.\nStep 4: (A + C) की कुल कमाई = (6 + 2) इकाइयाँ = 8 इकाइयाँ = 8 × 100 = ₹800.\nB की कमाई = 3 इकाइयाँ = 3 × 100 = ₹300.\nStep 5: अंतर = 800 - 300 = ₹500.\nअतः सही विकल्प  ₹500 है।\n\nMethod 2 (Direct Unit Difference Method):\nStep 1: (A + C) - B = (6 + 2) - 3 = 8 - 3 = 5 इकाइयाँ।\nStep 2: 1 इकाई = ₹100 ==> 5 इकाइयाँ = 5 × 100 = ₹500.\nअतः सही उत्तर '₹500' है।\n\nExam point: sarkari yojana ka tathya - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_13",
+    "qe": "A can complete a task in 12 days and B can complete the same task in 18 days. They start working together but A works for only 2 days. The remaining work is completed by B. If the total wage is ₹2,400, then what is B's share (in ₹)?",
+    "qh": "A एक कार्य को 12 दिनों में पूरा कर सकता है और B उसी कार्य को 18 दिनों में पूरा कर सकता है। वे एक साथ कार्य करना शुरू करते हैं लेकिन A केवल 2 दिनों के लिए कार्य करता है। शेष कार्य B द्वारा पूरा किया जाता है। यदि कुल मजदूरी ₹2,400 है, तो B का हिस्सा (₹ में) क्या है?",
+    "oe": [
+      "1600",
+      "1800",
+      "1200",
+      "2000"
+    ],
+    "oh": [
+      "1600",
+      "1800",
+      "1200",
+      "2000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Work Done Fraction Method):\nStep 1: A ने कुल 2 दिन कार्य किया।\nA द्वारा किया गया कार्य = 2 / 12 = 1 / 6 भाग।\nStep 2: B द्वारा किया गया शेष कार्य = 1 - 1/6 = 5 / 6 भाग।\nStep 3: पारिश्रमिक किए गए कार्य के समानुपाती होता है:\nB का हिस्सा = (5 / 6) × ₹2,400 = 5 × 400 = ₹2,000.\nअतः सही विकल्प  2000 है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल कार्य = LCM(12, 18) = 36 इकाइयाँ।\nA = 3 इकाइयाँ/दिन, B = 2 इकाइयाँ/दिन।\nStep 2: A ने 2 दिनों में किया = 2 × 3 = 6 इकाइयाँ।\nB द्वारा किया गया कार्य = 36 - 6 = 30 इकाइयाँ।\nStep 3: B का हिस्सा = (30 / 36) × 2400 = (5 / 6) × 2400 = ₹2,000.\nअतः सही उत्तर '2000' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_14",
+    "qe": "A, B and C can do a work in 8, 10 and 12 days, respectively. After completing the work together, they received ₹5,550. What is the share of B (in ₹) in the amount received?",
+    "qh": "A, B और C एक कार्य को क्रमशः 8, 10 और 12 दिनों में कर सकते हैं। एक साथ कार्य पूरा करने के बाद, उन्हें ₹5,550 प्राप्त हुए। प्राप्त राशि में B का हिस्सा (₹ में) क्या है?",
+    "oe": [
+      "1500",
+      "1850",
+      "1800",
+      "1696"
+    ],
+    "oh": [
+      "1500",
+      "1850",
+      "1800",
+      "1696"
+    ],
+    "a": 2,
+    "e": "Method 1 (Efficiency Ratio Method):\nStep 1: समय का अनुपात = 8 : 10 : 12.\nStep 2: कार्यक्षमता (मजदूरी) का अनुपात:\nA : B : C = $\\frac{1}{8}$ : $\\frac{1}{10}$ : $\\frac{1}{12}$\n8, 10 और 12 का LCM = 120 से प्रत्येक पद में गुणा करने पर:\nA : B : C = 15 : 12 : 10.\nStep 3: कुल अनुपाती इकाइयाँ = 15 + 12 + 10 = 37 इकाइयाँ।\n37 इकाइयाँ = ₹5,550 ==> 1 इकाई = 5,550 / 37 = ₹150.\nStep 4: B का हिस्सा (12 इकाइयाँ):\nB का हिस्सा = 12 × 150 = ₹1,800.\nअतः सही विकल्प  1800 है।\n\nMethod 2 (Fractional Share Method):\nStep 1: B का अंश = 12 / 37.\nStep 2: B का हिस्सा = (12 / 37) × 5,550 = 12 × 150 = ₹1,800.\nअतः सही उत्तर '1800' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_15",
+    "qe": "A and B worked together and received a total of ₹18,000 for 15 days. A's efficiency in the work was 5 times that of B's. The daily wage of A (in ₹) was:",
+    "qh": "A और B ने एक साथ कार्य किया और 15 दिनों के लिए कुल ₹18,000 प्राप्त किए। कार्य में A की कार्यक्षमता B की कार्यक्षमता की 5 गुना थी। A का दैनिक वेतन (₹ में) क्या था:",
+    "oe": [
+      "800",
+      "600",
+      "1200",
+      "1000"
+    ],
+    "oh": [
+      "800",
+      "600",
+      "1200",
+      "1000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Daily Earnings Distribution Method):\nStep 1: दोनों की प्रतिदिन की संयुक्त कमाई निकालें:\nप्रतिदिन कुल कमाई = ₹18,000 / 15 = ₹1,200 प्रति दिन।\nStep 2: कार्यक्षमता का अनुपात A : B = 5 : 1.\nStep 3: कुल इकाइयाँ = 5 + 1 = 6 इकाइयाँ।\n6 इकाइयाँ = ₹1,200 ==> 1 इकाई = 1,200 / 6 = ₹200.\nStep 4: A का दैनिक वेतन (5 इकाइयाँ) = 5 × 200 = ₹1,000 प्रति दिन।\nअतः सही विकल्प  1000 है।\n\nMethod 2 (Total Share Method):\nStep 1: कुल राशि में A का हिस्सा = (5 / 6) × 18,000 = ₹15,000.\nStep 2: A का दैनिक वेतन = 15,000 / 15 = ₹1,000 प्रति दिन।\nअतः सही उत्तर '1000' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_16",
+    "qe": "A can do a piece of work in 8 days while B alone can do it in 12 days. They work together for 4 days and the remaining work is completed by C alone in 2 days. They are paid ₹7,200 for the completion of the entire work. The earnings of A, B and C, respectively, are:",
+    "qh": "A एक कार्य को 8 दिनों में कर सकता है जबकि B अकेले इसे 12 दिनों में कर सकता है। वे 4 दिनों तक एक साथ कार्य करते हैं और शेष कार्य C अकेले 2 दिनों में पूरा करता है। पूरे कार्य को पूरा करने के लिए उन्हें ₹7,200 का भुगतान किया जाता है। A, B और C की कमाई क्रमशः है:",
+    "oe": [
+      "₹2400, ₹2400 ₹2400",
+      "₹4000, ₹2400 ₹800",
+      "₹3600, ₹2400 ₹1200",
+      "₹3000, ₹3000 ₹1200"
+    ],
+    "oh": [
+      "₹2400, ₹2400 ₹2400",
+      "₹4000, ₹2400 ₹800",
+      "₹3600, ₹2400 ₹1200",
+      "₹3000, ₹3000 ₹1200"
+    ],
+    "a": 2,
+    "e": "Method 1 (Work Fraction Method):\nStep 1: प्रत्येक व्यक्ति द्वारा किए गए कार्य का अंश निकालें:\n- A ने 4 दिन कार्य किया ==> A का कार्य = 4 / 8 = 1 / 2 भाग।\n- B ने 4 दिन कार्य किया ==> B का कार्य = 4 / 12 = 1 / 3 भाग।\nStep 2: (A + B) का संयुक्त कार्य = 1/2 + 1/3 = 5 / 6 भाग।\nStep 3: C द्वारा किया गया शेष कार्य = 1 - 5/6 = 1 / 6 भाग।\nStep 4: कुल ₹7,200 में प्रत्येक का पारिश्रमिक:\n- A की कमाई = (1 / 2) × 7,200 = ₹3,600\n- B की कमाई = (1 / 3) × 7,200 = ₹2,400\n- C की कमाई = (1 / 6) × 7,200 = ₹1,200\nअतः क्रमशः कमाई = ₹3600, ₹2400, ₹1200.\nअतः सही विकल्प  ₹3600, ₹2400 ₹1200 है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल कार्य = LCM(8, 12) = 24 इकाइयाँ।\nA = 3 इकाइयाँ/दिन, B = 2 इकाइयाँ/दिन।\nStep 2: 4 दिनों में A = 4 × 3 = 12 इकाइयाँ।\n4 दिनों में B = 4 × 2 = 8 इकाइयाँ।\nC का शेष कार्य = 24 - (12 + 8) = 4 इकाइयाँ।\nStep 3: कार्य अनुपात A : B : C = 12 : 8 : 4 = 3 : 2 : 1.\nकुल 6 इकाइयाँ = ₹7,200 ==> 1 इकाई = ₹1,200.\nकमाई = 3 × 1200 = ₹3600, 2 × 1200 = ₹2400, 1 × 1200 = ₹1200.\nअतः सही उत्तर '₹3600, ₹2400 ₹1200' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "workwages_17",
+    "qe": "Samir and Puneet can complete the same work in 10 days and 15 days respectively. The work was assigned for ₹4500. After working together for 3 days Samir and Puneet involved Ashok. The work was completed in total 5 days. What amount (in ₹) was paid to Ashok?",
+    "qh": "समीर और पुनीत उसी कार्य को क्रमशः 10 दिनों और 15 दिनों में पूरा कर सकते हैं। यह कार्य ₹4500 में सौंपा गया था। 3 दिनों तक एक साथ कार्य करने के बाद समीर और पुनीत ने अशोक को शामिल किया। कार्य कुल 5 दिनों में पूरा हुआ। अशोक को कितनी राशि (₹ में) का भुगतान किया गया?",
+    "oe": [
+      "750",
+      "1500",
+      "1071",
+      "800"
+    ],
+    "oh": [
+      "750",
+      "1500",
+      "1071",
+      "800"
+    ],
+    "a": 0,
+    "e": "Method 1 (Total Work Contribution Method):\nStep 1: कार्य कुल 5 दिनों में समाप्त हुआ, अतः समीर और पुनीत ने पूरे 5 दिन कार्य किया:\n- समीर द्वारा 5 दिनों में किया गया कार्य = 5 / 10 = 1 / 2 भाग।\n- पुनीत द्वारा 5 दिनों में किया गया कार्य = 5 / 15 = 1 / 3 भाग।\nStep 2: समीर और पुनीत का कुल संयुक्त कार्य = 1/2 + 1/3 = 5 / 6 भाग।\nStep 3: अशोक द्वारा किया गया शेष कार्य = 1 - 5/6 = 1 / 6 भाग।\nStep 4: अशोक को भुगतान की गई राशि = (1 / 6) × ₹4,500 = ₹750.\nअतः सही विकल्प  750 है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल कार्य = LCM(10, 15) = 30 इकाइयाँ।\nसमीर = 3 इकाइयाँ/दिन, पुनीत = 2 इकाइयाँ/दिन।\nStep 2: 5 दिनों में समीर = 5 × 3 = 15 इकाइयाँ।\n5 दिनों में पुनीत = 5 × 2 = 10 इकाइयाँ।\nअशोक द्वारा किया गया कार्य = 30 - (15 + 10) = 5 इकाइयाँ।\nStep 3: अशोक का हिस्सा = (5 / 30) × 4,500 = (1 / 6) × 4,500 = ₹750.\nअतः सही उत्तर '750' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
