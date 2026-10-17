@@ -2,54 +2,54 @@
   "bpsc": {
     "title": "🏛️ BPSC PCS Special Zone",
     "total_sets": 28,
-    "path_prefix": "bpsc/set"
+    "path_prefix": "sectional_mock/bpsc/set"
   },
   "ssc": [
     {
       "title": "⚡ General Reasoning Sets",
       "sets": 5,
-      "folder": "ssc_cgl_ntpc/reasoning"
+      "folder": "sectional_mock/ssc_cgl_ntpc/reasoning"
     },
     {
       "title": "📐 Quantitative Aptitude Sets",
       "sets": 5,
-      "folder": "ssc_cgl_ntpc/aptitude"
+      "folder": "sectional_mock/ssc_cgl_ntpc/aptitude"
     },
     {
       "title": "📖 English Language Sets",
       "sets": 5,
-      "folder": "ssc_cgl_ntpc/english"
+      "folder": "sectional_mock/ssc_cgl_ntpc/english"
     }
   ],
   "bssc_cgl": [
     {
       "title": "🧠 BSSC CGL Reasoning Sets",
       "sets": 5,
-      "folder": "bssc_cgl/reasoning"
+      "folder": "sectional_mock/bssc_cgl/reasoning"
     },
     {
       "title": "📐 BSSC CGL Mathematics / Aptitude Sets",
       "sets": 7,
-      "folder": "bssc_cgl/aptitude"
+      "folder": "sectional_mock/bssc_cgl/aptitude"
     }
   ],
   "bssc_inter": [
     {
       "title": "🧠 Mental Ability & Reasoning Sets",
       "sets": 5,
-      "folder": "bssc_inter/reasoning"
+      "folder": "sectional_mock/bssc_inter/reasoning"
     },
     {
       "title": "📐 General Mathematics Sets",
       "sets": 5,
-      "folder": "bssc_inter/aptitude"
+      "folder": "sectional_mock/bssc_inter/aptitude"
     }
   ],
   "bihar_si": [
     {
       "title": "🎯 Bihar SI Practice Sets",
       "sets": 5,
-      "folder": "bihar_si"
+      "folder": "sectional_mock/bihar_si"
     }
   ]
 }
