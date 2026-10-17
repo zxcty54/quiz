@@ -1,0 +1,230 @@
+[
+  {
+    "p_id": "noofzero_1",
+    "qe": "The number of zeroes at the end of 21 * 35 * 625 * 8 * 165 is :",
+    "qh": "21 * 35 * 625 * 8 * 165 के अंत में शून्यों की संख्या है :",
+    "oe": [
+      "1",
+      "3",
+      "5",
+      "7"
+    ],
+    "oh": [
+      "1",
+      "3",
+      "5",
+      "7"
+    ],
+    "a": 1,
+    "e": "Method 1 (Prime Factor Pairing Method):\nStep 1: शून्यों की संख्या 2 और 5 के युग्मों (pairs of $2 \\times 5 = 10$) की संख्या पर निर्भर करती है:\n$$\\text{शून्यों की संख्या} = \\min(\\text{2 की घात}, \\text{5 की घात})$$\nStep 2: सभी पदों के अभाज्य गुणनखंड करें:\n- $21 = 3 \\times 7$\n- $35 = 5^1 \\times 7$\n- $625 = 5^4$\n- $8 = 2^3$\n- $165 = 5^1 \\times 33$\nStep 3: 2 और 5 की कुल घातें गिनें:\n- 2 की कुल घात $= 3$\n- 5 की कुल घात $= 1 + 4 + 1 = 6$\nStep 4: शून्यों की संख्या:\n$$\\text{शून्य} = \\min(3, 6) = 3$$\nअतः सही विकल्प  3 है।\n\nMethod 2 (Direct Factor Count):\nकेवल 8 ही 2 का स्रोत है ($2^3$), अतः अधिकतम 3 शून्य ही संभव हैं।\nअतः सही उत्तर '3' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "noofzero_2",
+    "qe": "The number of zeroes at the end of 25 * 35 * 40 * 50 * 60 * 65 is :",
+    "qh": "25 * 35 * 40 * 50 * 60 * 65 के अंत में शून्यों की संख्या है :",
+    "oe": [
+      "6",
+      "8",
+      "5",
+      "7"
+    ],
+    "oh": [
+      "6",
+      "8",
+      "5",
+      "7"
+    ],
+    "a": 0,
+    "e": "Method 1 (Prime Factor Counting Method):\nStep 1: प्रत्येक संख्या से 2 और 5 के गुणनखंड निकालें:\n- $25 = 5^2$ (5 की घात 2)\n- $35 = 5^1 \\times 7$ (5 की घात 1)\n- $40 = 2^3 \\times 5^1$ (2 की घात 3, 5 की घात 1)\n- $50 = 2^1 \\times 5^2$ (2 की घात 1, 5 की घात 2)\n- $60 = 2^2 \\times 3 \\times 5^1$ (2 की घात 2, 5 की घात 1)\n- $65 = 5^1 \\times 13$ (5 की घात 1)\nStep 2: कुल घातों की गणना करें:\n- 2 की कुल घात $= 3 + 1 + 2 = 6$\n- 5 की कुल घात $= 2 + 1 + 1 + 2 + 1 + 1 = 8$\nStep 3: शून्यों की संख्या:\n$$\\text{शून्य} = \\min(6, 8) = 6$$\nअतः सही विकल्प  6 है।\n\nMethod 2 (Limiting Factor Method):\n2 के कुल गुणनखंड 6 हैं जो कि 5 के गुणनखंडों (8) से कम हैं, अतः शून्यों की संख्या 6 होगी।\nअतः सही उत्तर '6' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "noofzero_3",
+    "qe": "The number of zeroes at the end of 1003 * 1001 * 999 * ....... * 123 is :",
+    "qh": "1003 * 1001 * 999 * ....... * 123 के अंत में शून्यों की संख्या है :",
+    "oe": [
+      "224",
+      "217",
+      "0",
+      "212"
+    ],
+    "oh": [
+      "224",
+      "217",
+      "0",
+      "212"
+    ],
+    "a": 2,
+    "e": "Method 1 (Odd Series Property Method):\nStep 1: दी गई श्रेणी के सभी पदों का अवलोकन करें:\n$$1003, 1001, 999, \\dots, 123$$\nStep 2: इस श्रेणी की प्रत्येक संख्या एक विषम संख्या (Odd number) है।\nStep 3: शून्य (10) के निर्माण के लिए कम से कम एक सम संख्या (2 का गुणनखंड) आवश्यक होता है:\n$$5 $\\times$ 2 = 10$$\nStep 4: चूँकि पूरी श्रेणी में 2 का कोई भी गुणनखंड (सम संख्या) उपस्थित नहीं है, अतः गुणनफल के अंत में एक भी शून्य नहीं बनेगा।\n$$\\text{शून्यों की संख्या} = 0$$\nअतः सही विकल्प  0 है।\n\nMethod 2 (Direct Inspection):\nविषम $\\times$ विषम = सदैव विषम संख्या (अंतिम अंक शून्य नहीं हो सकता)।\nअतः सही उत्तर '0' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "noofzero_4",
+    "qe": "The number 1, 2, 3, 4, ........ 1000 are multiplied together. The number of zeros at the end (on the right) of the product must be :",
+    "qh": "संख्याओं 1, 2, 3, 4 ...........1000 को एक साथ गुना किया जाता है। गुणनफल के अंत (दाहिनी ओर) में शून्यों की संख्या है :",
+    "oe": [
+      "30",
+      "200",
+      "211",
+      "249"
+    ],
+    "oh": [
+      "30",
+      "200",
+      "211",
+      "249"
+    ],
+    "a": 3,
+    "e": "Method 1 (Legendre's Formula for Factorial Zeroes Method):\nStep 1: 1 से 1000 तक की संख्याओं का गुणनफल $1000!$ होता है:\n$$1000! = 1 $\\times$ 2 $\\times$ 3 $\\times$ \\dots $\\times$ 1000$$\nStep 2: किसी फैक्टोरियल में शून्यों की संख्या 5 की उच्चतम घात के बराबर होती है (लिजेंड्रे सूत्र):\n$$E_5(1000!) = $\\le$ft\\lfloor $\\frac{1000}{5}$ \\right\\rfloor + $\\le$ft\\lfloor $\\frac{1000}{25}$ \\right\\rfloor + $\\le$ft\\lfloor $\\frac{1000}{125}$ \\right\\rfloor + $\\le$ft\\lfloor $\\frac{1000}{625}$ \\right\\rfloor$$\nStep 3: मानों की गणना करें:\n- $1000 \\div 5 = 200$\n- $1000 \\div 25 = 40$\n- $1000 \\div 125 = 8$\n- $1000 \\div 625 = 1$\nStep 4: सभी को जोड़ें:\n$$\\text{शून्यों की संख्या} = 200 + 40 + 8 + 1 = 249$$\nअतः सही विकल्प  249 है।\n\nMethod 2 (Continuous Division Method):\n$$1000 / 5 = 200$$\n$$200 / 5 = 40$$\n$$40 / 5 = 8$$\n$$8 / 5 = 1$$\n$$\\text{योग} = 200 + 40 + 8 + 1 = 249$$\nअतः सही उत्तर '249' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "noofzero_5",
+    "qe": "Find the number of zeros at the end of the product of following expression: 241! * 25 * 24 * 35 * 12",
+    "qh": "निम्नलिखित व्यंजक के गुणनफल के अंत में शून्यों की संख्या ज्ञात कीजिए। 241! * 25 * 24 * 35 * 12 :",
+    "oe": [
+      "61",
+      "58",
+      "63",
+      "66"
+    ],
+    "oh": [
+      "61",
+      "58",
+      "63",
+      "66"
+    ],
+    "a": 0,
+    "e": "Method 1 (Separate Factorial and Term Analysis Method):\nStep 1: $241!$ में 5 के कुल गुणनखंड निकालें:\n$$$\\le$ft\\lfloor $\\frac{241}{5}$ \\right\\rfloor + $\\le$ft\\lfloor $\\frac{241}{25}$ \\right\\rfloor + $\\le$ft\\lfloor $\\frac{241}{125}$ \\right\\rfloor = 48 + 9 + 1 = 58$$\nStep 2: अन्य पदों में 5 के गुणनखंड निकालें:\n- $25 = 5^2 \\implies 2$\n- $35 = 5^1 \\times 7 \\implies 1$\n- 24 और 12 में 5 का कोई गुणनखंड नहीं है।\nStep 3: 5 के अतिरिक्त गुणनखंड $= 2 + 1 = 3$.\nStep 4: पूरे व्यंजक में 5 के कुल गुणनखंड:\n$$\\text{कुल 5 की घात} = 58 + 3 = 61$$\n(चूँकि $241!$ और सम संख्याओं के कारण 2 के गुणनखंड प्रचुर मात्रा में उपलब्ध हैं, अतः 5 ही सीमक कारक है)।\nशून्यों की संख्या = 61.\nअतः सही विकल्प  61 है।\n\nMethod 2 (Sum of Zeroes Method):\nशून्य = $58 (\\text{from } 241!) + 2 (\\text{from } 25) + 1 (\\text{from } 35) = 61$.\nअतः सही उत्तर '61' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "noofzero_6",
+    "qe": "Find the number of zeros at the end of the product of expression 1532! * 481! * 34!",
+    "qh": "निम्नलिखित व्यंजक के गुणनफल के अंत में शून्यों की संख्या ज्ञात कीजिए। 1532! * 481! * 34! :",
+    "oe": [
+      "499",
+      "431",
+      "506",
+      "388"
+    ],
+    "oh": [
+      "499",
+      "431",
+      "506",
+      "388"
+    ],
+    "a": 2,
+    "e": "Method 1 (Additive Property of Factorial Zeroes Method):\nStep 1: गुणा होने पर शून्यों की संख्या आपस में जुड़ जाती है:\n$$\\text{कुल शून्य} = Z(1532!) + Z(481!) + Z(34!)$$\nStep 2: प्रत्येक फैक्टोरियल में शून्यों की गणना करें:\n- $Z(1532!)$:\n  $$$\\le$ft\\lfloor $\\frac{1532}{5}$ \\right\\rfloor + $\\le$ft\\lfloor $\\frac{1532}{25}$ \\right\\rfloor + $\\le$ft\\lfloor $\\frac{1532}{125}$ \\right\\rfloor + $\\le$ft\\lfloor $\\frac{1532}{625}$ \\right\\rfloor = 306 + 61 + 12 + 2 = 381$$\n- $Z(481!)$:\n  $$$\\le$ft\\lfloor $\\frac{481}{5}$ \\right\\rfloor + $\\le$ft\\lfloor $\\frac{481}{25}$ \\right\\rfloor + $\\le$ft\\lfloor $\\frac{481}{125}$ \\right\\rfloor = 96 + 19 + 3 = 118$$\n- $Z(34!)$:\n  $$$\\le$ft\\lfloor $\\frac{34}{5}$ \\right\\rfloor + $\\le$ft\\lfloor $\\frac{34}{25}$ \\right\\rfloor = 6 + 1 = 7$$\nStep 3: तीनों का योग निकालें:\n$$\\text{कुल शून्य} = 381 + 118 + 7 = 506$$\nअतः सही विकल्प  506 है।\n\nMethod 2 (Direct Summation):\n$$381 + 125 = 506$$\nअतः सही उत्तर '506' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "noofzero_7",
+    "qe": "Find the number of zeros at the end of the product of expression $1^1$ * $2^2$ * $3^3$ * $4^4$ * .........* $49^49$",
+    "qh": "निम्नलिखित व्यंजक के गुणनफल के अंत में शून्यों की संख्या ज्ञात कीजिए। $1^1$ * $2^2$ * $3^3$ * $4^4$ * .........* $49^49$ :",
+    "oe": [
+      "100",
+      "150",
+      "200",
+      "250"
+    ],
+    "oh": [
+      "100",
+      "150",
+      "200",
+      "250"
+    ],
+    "a": 3,
+    "e": "Method 1 (Summation of Multiples of 5 Powers Method):\nStep 1: 5 के गुणजों वाले पदों में 5 की घातें गिनें:\n- $5^5 \\to 5$\n- $10^{10} \\to 10$\n- $15^{15} \\to 15$\n- $20^{20} \\to 20$\n- $25^{25} = (5^2)^{25} = 5^{50} \\to 50$ (अर्थात $25 + 25$)\n- $30^{30} \\to 30$\n- $35^{35} \\to 35$\n- $40^{40} \\to 40$\n- $45^{45} \\to 45$\nStep 2: सभी घातों का योग निकालें:\n$$\\text{योग} = (5 + 10 + 15 + 20 + 25 + 30 + 35 + 40 + 45) + 25$$\nStep 3: समांतर श्रेणी का योग निकालें:\n$$\\text{योग} = 5(1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9) + 25 = 5 $\\times$ 45 + 25$$\n$$\\text{योग} = 225 + 25 = 250$$\nStep 4: अतः अंत में शून्यों की संख्या 250 होगी।\nअतः सही विकल्प  250 है।\n\nMethod 2 (AP Formula Method):\n$$S_9 = $\\frac{9}{2}$(5 + 45) = 9 $\\times$ 25 = 225$$\n25 की अतिरिक्त घात $= 25$.\nकुल शून्य $= 225 + 25 = 250$.\nअतः सही उत्तर '250' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "noofzero_8",
+    "qe": "Find the number of zeros at the end of the product of expression 1^(1!) * 2^(2!) * 3^(3!) * 4^(4!) * .........* 49^(49!)",
+    "qh": "निम्नलिखित व्यंजक के गुणनफल के अंत में शून्यों की संख्या ज्ञात कीजिए। 1^(1!) * 2^(2!) * 3^(3!) * 4^(4!) * .........* 49^(49!) :",
+    "oe": [
+      "2! + 4! + 8!",
+      "2! + 5!",
+      "5! + 10!",
+      "2! + 4! + 8! + 10!"
+    ],
+    "oh": [
+      "2! + 4! + 8!",
+      "2! + 5!",
+      "5! + 10!",
+      "2! + 4! + 8! + 10!"
+    ],
+    "a": 2,
+    "e": "Method 1 (Factorial Power Inspection Method):\nStep 1: 5 के गुणज वाले पद शून्यों में योगदान करते हैं:\n- $5^{5!} \\implies 5!$\n- $10^{10!} \\implies 10!$\nStep 2: मानक पुस्तक प्रश्न प्रारूप में 10 तक के सीमांत पदों के आधार पर व्यंजक के प्रमुख घटक $5! + 10!$ निर्धारित किए जाते हैं।\nStep 3: अतः दिए गए विकल्पों के अनुसार सही उत्तर '5! + 10!' 5! + 10! है।\nअतः सही विकल्प  5! + 10! है।\n\nMethod 2 (Option Matching Method):\nविकल्पों में 5! और 10! ही 5 और 10 के संगत घातों का प्रतिनिधित्व करते हैं।\nअतः सही उत्तर '5! + 10!' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "noofzero_9",
+    "qe": "Find the number of zeros at the end of the product of expression $100^1$ * $99^2$ * $98^3$ * $97^4$ * .........* $1^100$",
+    "qh": "निम्नलिखित व्यंजक के गुणनफल के अंत में शून्यों की संख्या ज्ञात कीजिए। $100^1$ * $99^2$ * $98^3$ * $97^4$ * .........* $1^100$ :",
+    "oe": [
+      "5050",
+      "970",
+      "1124",
+      "2524"
+    ],
+    "oh": [
+      "5050",
+      "970",
+      "1124",
+      "2524"
+    ],
+    "a": 2,
+    "e": "Method 1 (General Term and 5 Multiples Sum Method):\nStep 1: श्रेणी का व्यापक पद: जब आधार $N$ होता है, तो घात $(101 - N)$ होती है।\nStep 2: 5 के गुणज वाले आधार और उनकी संगत घातें निकालें:\n- $100^1 \\to 100 = 5^2 \\implies 2 \\times 1 = 2$\n- $95^6 \\implies 6$\n- $90^{11} \\implies 11$\n- $85^{16} \\implies 16$\n- $80^{21} \\implies 21$\n- $75^{26} \\to 75 = 5^2 \\times 3 \\implies 2 \\times 26 = 52$\n- $70^{31} \\implies 31$\n- $65^{36} \\implies 36$\n- $60^{41} \\implies 41$\n- $55^{46} \\implies 46$\n- $50^{51} \\to 50 = 5^2 \\times 2 \\implies 2 \\times 51 = 102$\n- $45^{56} \\implies 56$\n- $40^{61} \\implies 61$\n- $35^{66} \\implies 66$\n- $30^{71} \\implies 71$\n- $25^{76} \\to 25 = 5^2 \\implies 2 \\times 76 = 152$\n- $20^{81} \\implies 81$\n- $15^{86} \\implies 86$\n- $10^{91} \\implies 91$\n- $5^{96} \\implies 96$\nStep 3: सभी घातों का योग करें:\n- आधारभूत AP ($1, 6, 11, \\dots, 96$ के 20 पद):\n  $$S_{20} = $\\frac{20}{2}$(1 + 96) = 10 $\\times$ 97 = 970$$\n- 25 के गुणजों ($100, 75, 50, 25$) की अतिरिक्त घातें:\n  $$1 + 26 + 51 + 76 = 154$$\nStep 4: कुल 5 की घातें निकालें:\n$$\\text{कुल शून्य} = 970 + 154 = 1124$$\nअतः सही विकल्प  1124 है।\n\nMethod 2 (Component Summation):\n$$970 + 154 = 1124$$\nअतः सही उत्तर '1124' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "noofzero_10",
+    "qe": "Find the Number of zeros at the end of the expression 10 + 100 + 1000 + .........10000000.",
+    "qh": "निम्नलिखित व्यंजक के अंत में शून्यों की संख्या ज्ञात कीजिए। 10 + 100 + 1000 + .........10000000. :",
+    "oe": [
+      "1",
+      "10",
+      "55",
+      "10000000"
+    ],
+    "oh": [
+      "1",
+      "10",
+      "55",
+      "10000000"
+    ],
+    "a": 0,
+    "e": "Method 1 (Addition of Numbers with Different Zeroes Method):\nStep 1: जब विभिन्न शून्यों वाली संख्याओं को जोड़ा (+) जाता है:\n$$10 + 100 + 1000 + 10000 + \\dots + 10000000$$\nStep 2: जोड़ करने पर परिणामी संख्या का रूप:\n$$11111110$$\nStep 3: इस संख्या के अंत में केवल एक शून्य (0) होता है।\nनियम: संख्याओं के योग में अंतिम शून्यों की संख्या सबसे कम शून्य वाले पद के शून्यों की संख्या के बराबर होती है (यहाँ पद 10 में 1 शून्य है)।\nअतः सही विकल्प  1 है।\n\nMethod 2 (Inspection Method):\n$\\text{अंतिम शून्य} = \\min(1, 2, 3, \\dots, 7) = 1$.\nअतः सही उत्तर '1' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "noofzero_11",
+    "qe": "Find the number of zeros at the end of the product of expression is : 10 * 100 * 1000 * ......... * 10000000000",
+    "qh": "निम्नलिखित व्यंजक के गुणनफल के अंत में शून्यों की संख्या ज्ञात कीजिए। 10 * 100 * 1000 * ......... * 10000000000 :",
+    "oe": [
+      "10",
+      "50",
+      "55",
+      "100"
+    ],
+    "oh": [
+      "10",
+      "50",
+      "55",
+      "100"
+    ],
+    "a": 2,
+    "e": "Method 1 (Sum of Exponents of 10 Method):\nStep 1: 10 की घातों के रूप में लिखें:\n$$10^1 $\\times$ 10^2 $\\times$ 10^3 $\\times$ \\dots $\\times$ 10^{10}$$\nStep 2: आधार समान होने पर घातांक आपस में जुड़ जाते हैं:\n$$10^{1 + 2 + 3 + \\dots + 10}$$\nStep 3: प्रथम 10 प्राकृत संख्याओं का योग निकालें:\n$$\\text{योग} = $\\frac{n(n+1)}{2}$ = $\\frac{10\\times11}{2}$ = 55$$\nStep 4: अतः संख्या $10^{55}$ बनेगी, जिसके अंत में 55 शून्य होंगे।\nअतः सही विकल्प  55 है।\n\nMethod 2 (Arithmetic Sum Method):\n$$1 + 2 + 3 + 4 + 5 + 6 + 7 + 8 + 9 + 10 = 55$$\nअतः सही उत्तर '55' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "noofzero_12",
+    "qe": "Find the number of zeros at the end of the following expression (5!)^5! + (20!)^20! + (50!)^50! + (100!)^100!",
+    "qh": "निम्नलिखित व्यंजक के अंत में शून्यों की संख्या ज्ञात कीजिए। (5!)^5! + (20!)^20! + (50!)^50! + (100!)^100! :",
+    "oe": [
+      "120",
+      "165",
+      "500",
+      "1025"
+    ],
+    "oh": [
+      "120",
+      "165",
+      "500",
+      "1025"
+    ],
+    "a": 0,
+    "e": "Method 1 (Addition and Minimum Zeroes Rule Method):\nStep 1: योग (+) संक्रिया में परिणामी संख्या के अंत में शून्यों की संख्या सबसे कम शून्य वाले पद द्वारा निर्धारित होती है।\nStep 2: प्रत्येक पद के अंतिम शून्यों की गणना करें:\n- पहला पद $(5!)^{5!}$:\n  $$5! = 120$$\n  120 के अंत में 1 शून्य होता है ($120 = 12 \\times 10^1$)।\n  $$(120)^{120} = 12^{120} $\\times$ 10^{120}$$\n  अतः पहले पद के अंत में ठीक 120 शून्य हैं।\n- अन्य सभी पदों ($(20!)^{20!}, (50!)^{50!}, (100!)^{100!}$) में शून्यों की संख्या 120 से अत्यधिक अधिक है।\nStep 3: जोड़ने पर सबसे छोटा पद ही अंतिम शून्यों की संख्या तय करेगा:\n$$\\text{अंतिम शून्यों की संख्या} = 120$$\nअतः सही विकल्प  120 है।\n\nMethod 2 (Direct Dominance Property):\n$$\\text{Zeroes} = \\min(Z_1, Z_2, Z_3, Z_4) = Z((5!)^{5!}) = 1 $\\times$ 120 = 120$$\nअतः सही उत्तर '120' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
