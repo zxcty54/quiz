@@ -15,6 +15,11 @@ import 'user_stats_service.dart';
 class PremiumService {
   static const String _configUrl = 'https://content-proxy.nitesh-skyhigh.workers.dev/app_config.json';
   static const String _configAppKey = 'mt_4bd7ba22c736af380d9d3905';
+
+  // Backup rasta: GitHub raw se seedha (repo public rehte hi chalega).
+  // Worker kabhi gir jaye to app_config yaha se milti rahegi.
+  static const String _configGithubUrl =
+      'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/app_config.json';
   static const String _configCacheKey = 'premium_payment_config_cache';
   static const String _untilCacheKey = 'premium_until_cache';
 
@@ -39,9 +44,7 @@ class PremiumService {
           config = {...config, ...Map<String, dynamic>.from(decoded)};
         }
       }
-      final res = await http
-          .get(Uri.parse(_configUrl), headers: {'X-App-Key': _configAppKey})
-          .timeout(const Duration(seconds: 8));
+      final res = await _fetchConfig();
       if (res.statusCode == 200) {
         final root = jsonDecode(utf8.decode(res.bodyBytes));
         if (root is Map && root['payment'] is Map) {
@@ -54,6 +57,19 @@ class PremiumService {
       debugPrint('Premium config error: $e');
     }
     return config;
+  }
+
+  // Config lao: pehle Cloudflare Worker, gir jaye to GitHub raw backup
+  static Future<http.Response> _fetchConfig() async {
+    try {
+      final r = await http
+          .get(Uri.parse(_configUrl), headers: {'X-App-Key': _configAppKey})
+          .timeout(const Duration(seconds: 8));
+      if (r.statusCode == 200) return r;
+    } catch (_) {}
+    return http
+        .get(Uri.parse(_configGithubUrl))
+        .timeout(const Duration(seconds: 8));
   }
 
   static Future<String> currentUserId() async {

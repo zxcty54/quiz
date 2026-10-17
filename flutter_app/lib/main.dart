@@ -23,10 +23,20 @@ final ValueNotifier<ThemeMode> globalThemeNotifier = ValueNotifier(ThemeMode.lig
 // 🔄 GitHub Remote Config Fetcher
 Future<void> _syncAppConfig() async {
   try {
-    final Uri url = Uri.parse('$_contentProxyBase/app_config.json');
-
-    final response =
-        await http.get(url, headers: {'X-App-Key': _contentAppKey}).timeout(const Duration(seconds: 10));
+    http.Response response;
+    try {
+      response = await http
+          .get(Uri.parse('$_contentProxyBase/app_config.json'),
+              headers: {'X-App-Key': _contentAppKey})
+          .timeout(const Duration(seconds: 10));
+      if (response.statusCode != 200) throw Exception('proxy status');
+    } catch (_) {
+      // Backup rasta: GitHub raw se seedha (repo public rehte hi chalega)
+      response = await http
+          .get(Uri.parse(
+              'https://raw.githubusercontent.com/zxcty54/content_base/refs/heads/main/app_config.json'))
+          .timeout(const Duration(seconds: 10));
+    }
 
     if (response.statusCode == 200) {
       final Map<String, dynamic> config = jsonDecode(utf8.decode(response.bodyBytes));
