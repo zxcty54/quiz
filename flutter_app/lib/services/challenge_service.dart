@@ -6,16 +6,16 @@ import 'package:http/http.dart' as http;
 class ChallengeService {
   // Core pool files
   static final List<String> challengePoolFiles = [
-    'static/history/ancient.json',
-    'static/history/modern.json',
-    'static/polity/rights.json',
-    'static/polity/parliament.json',
-    'static/geography/mapping.json',
-    'static/economy/schemes.json',
-    'static/biology/disease.json',
-    'static/biology/cell.json',
-    'static/physics/light.json',
-    'static/chemistry/acidbase.json',
+    'revision/static/history/ancient.json',
+    'revision/static/history/modern.json',
+    'revision/static/polity/rights.json',
+    'revision/static/polity/parliament.json',
+    'revision/static/geography/mapping.json',
+    'revision/static/economy/schemes.json',
+    'revision/static/biology/disease.json',
+    'revision/static/biology/cell.json',
+    'revision/static/physics/light.json',
+    'revision/static/chemistry/acidbase.json',
   ];
 
   // 🌐 Single File Fetcher
