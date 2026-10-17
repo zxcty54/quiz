@@ -1,0 +1,743 @@
+[
+  {
+    "p_id": "twovariable_1",
+    "qe": "X can complete a work in 2 days and Y in 4 days. How long will it take them to finish the work if they work together?",
+    "qh": "X एक कार्य को 2 दिनों में और Y 4 दिनों में पूरा कर सकता है। यदि वे एक साथ कार्य करते हैं तो उन्हें कार्य समाप्त करने में कितना समय लगेगा?",
+    "oe": [
+      "$\\frac{1}{2}$ days",
+      "$\\frac{4}{3}$ days",
+      "$\\frac{3}{4}$ days",
+      "$\\frac{4}{7}$ days"
+    ],
+    "oh": [
+      "$\\frac{1}{2}$ days",
+      "$\\frac{4}{3}$ days",
+      "$\\frac{3}{4}$ days",
+      "$\\frac{4}{7}$ days"
+    ],
+    "a": 1,
+    "e": "Method 1 (Formula Method):\nStep 1: दो व्यक्तियों द्वारा मिलकर कार्य पूरा करने का समय = $\\frac{xy}{x+y}$.\nStep 2: x = 2 दिन, y = 4 दिन रखने पर:\nसमय = $\\frac{2\\times4}{2+4}$ = $\\frac{8}{6}$ = $\\frac{4}{3}$ दिन।\nअतः सही विकल्प  4/3 days है।\n\nMethod 2 (LCM / Efficiency Method):\nStep 1: 2 और 4 का LCM = 4 इकाइयाँ (कुल कार्य)।\nStep 2: X की कार्यक्षमता = 4 / 2 = 2 इकाई/दिन, Y की कार्यक्षमता = 4 / 4 = 1 इकाई/दिन।\nStep 3: संयुक्त कार्यक्षमता = 2 + 1 = 3 इकाइयाँ/दिन।\nStep 4: आवश्यक समय = 4 / 3 दिन।\nअतः सही उत्तर '$\\frac{4}{3}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_2",
+    "qe": "A completes a piece of work in 4 days and B completes it in 6 days. How long will it take to complete the same piece of work if they both work together?",
+    "qh": "A एक कार्य को 4 दिनों में पूरा करता है और B इसे 6 दिनों में पूरा करता है। यदि वे दोनों एक साथ कार्य करते हैं तो उसी कार्य को पूरा करने में कितना समय लगेगा?",
+    "oe": [
+      "2$\\frac{3}{5}$ days",
+      "3 days",
+      "2$\\frac{2}{5}$ days",
+      "4 days"
+    ],
+    "oh": [
+      "2$\\frac{3}{5}$ days",
+      "3 days",
+      "2$\\frac{2}{5}$ days",
+      "4 days"
+    ],
+    "a": 2,
+    "e": "Method 1 (Formula Method):\nStep 1: साथ मिलकर कार्य करने का समय = $\\frac{xy}{x+y}$.\nStep 2: मान रखने पर: $\\frac{4\\times6}{4+6}$ = $\\frac{24}{10}$ = $\\frac{12}{5}$ = 2$\\frac{2}{5}$ दिन।\nअतः सही विकल्प  2 2/5 days है।\n\nMethod 2 (LCM Method):\nStep 1: कुल कार्य = LCM(4, 6) = 12 इकाइयाँ।\nStep 2: A की कार्यक्षमता = 12 / 4 = 3 इकाई/दिन, B की कार्यक्षमता = 12 / 6 = 2 इकाई/दिन।\nStep 3: दोनों की कुल कार्यक्षमता = 3 + 2 = 5 इकाई/दिन।\nStep 4: अभीष्ट समय = 12 / 5 = 2$\\frac{2}{5}$ दिन।\nअतः सही उत्तर '2$\\frac{2}{5}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_3",
+    "qe": "A takes 12 days to finish a job, while B takes 36 days to complete the same job. If they collaborate, how many days they take to complete the work together?",
+    "qh": "A को एक कार्य पूरा करने में 12 दिन लगते हैं, जबकि B को उसी कार्य को पूरा करने में 36 दिन लगते हैं। यदि वे मिलकर कार्य करते हैं, तो उन्हें एक साथ कार्य पूरा करने में कितने दिन लगेंगे?",
+    "oe": [
+      "7 days",
+      "8 days",
+      "9 days",
+      "10 days"
+    ],
+    "oh": [
+      "7 days",
+      "8 days",
+      "9 days",
+      "10 days"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(12, 36) = 36 इकाइयाँ।\nStep 2: A की कार्यक्षमता = 36 / 12 = 3 इकाई/दिन, B की कार्यक्षमता = 36 / 36 = 1 इकाई/दिन।\nStep 3: (A + B) की कुल कार्यक्षमता = 3 + 1 = 4 इकाई/दिन।\nStep 4: लिया गया समय = 36 / 4 = 9 दिन।\nअतः सही विकल्प  9 days है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{12\\times36}{12+36}$ = $\\frac{432}{48}$ = 9 दिन।\nअतः सही उत्तर '9 days' है।\n\nIs prashn ka moolaadhaar kaam aur samay ka sootra hai. Vikalp 7 days, 8 days, 10 days is hal se mel nahi khaate. Exam point: kaam aur samay ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "twovariable_4",
+    "qe": "Akhil can complete a piece of work in 24 days. Shyam can complete the same piece of work in 12 days. If both of them work together, in how many days can they complete the same piece of work?",
+    "qh": "अखिल एक कार्य को 24 दिनों में पूरा कर सकता है। श्याम उसी कार्य को 12 दिनों में पूरा कर सकता है। यदि वे दोनों एक साथ कार्य करते हैं, तो वे उसी कार्य को कितने दिनों में पूरा कर सकते हैं?",
+    "oe": [
+      "6 days",
+      "8 days",
+      "10 days",
+      "12 days"
+    ],
+    "oh": [
+      "6 days",
+      "8 days",
+      "10 days",
+      "12 days"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(24, 12) = 24 इकाइयाँ।\nStep 2: अखिल की कार्यक्षमता = 24 / 24 = 1 इकाई/दिन, श्याम की कार्यक्षमता = 24 / 12 = 2 इकाई/दिन।\nStep 3: दोनों की कुल कार्यक्षमता = 1 + 2 = 3 इकाई/दिन।\nStep 4: कार्य पूरा करने में लगा समय = 24 / 3 = 8 दिन।\nअतः सही विकल्प  8 days है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{24\\times12}{24+12}$ = $\\frac{288}{36}$ = 8 दिन।\nअतः सही उत्तर '8 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_5",
+    "qe": "A can finish a piece of work by working alone in 4 days. B, while working alone, can finish the same work in 12 days. If both of them work together, then in how many days will the work be completed?",
+    "qh": "A अकेले कार्य करके एक कार्य को 4 दिनों में समाप्त कर सकता है। B अकेले कार्य करते हुए उसी कार्य को 12 दिनों में समाप्त कर सकता है। यदि वे दोनों एक साथ कार्य करते हैं, तो कार्य कितने दिनों में पूरा होगा?",
+    "oe": [
+      "8",
+      "3",
+      "4",
+      "6"
+    ],
+    "oh": [
+      "8",
+      "3",
+      "4",
+      "6"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM Method):\nStep 1: कुल कार्य = LCM(4, 12) = 12 इकाइयाँ।\nStep 2: A की कार्यक्षमता = 12 / 4 = 3 इकाई/दिन, B की कार्यक्षमता = 12 / 12 = 1 इकाई/दिन।\nStep 3: कुल कार्यक्षमता = 3 + 1 = 4 इकाई/दिन।\nStep 4: समय = 12 / 4 = 3 दिन।\nअतः सही विकल्प  3 है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{4\\times12}{4+12}$ = $\\frac{48}{16}$ = 3 दिन।\nअतः सही उत्तर '3' है।\n\nIs prashn ka moolaadhaar kaam aur samay ka sootra hai. Vikalp 8, 4, 6 is hal se mel nahi khaate. Exam point: kaam aur samay ka sootra - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "twovariable_6",
+    "qe": "A can complete a task in 15 days and B can complete the same task in 20 days. How long will it take them to complete the task together?",
+    "qh": "A एक कार्य को 15 दिनों में पूरा कर सकता है और B उसी कार्य को 20 दिनों में पूरा कर सकता है। दोनों को एक साथ कार्य पूरा करने में कितना समय लगेगा?",
+    "oe": [
+      "5.5 days",
+      "6.5 days",
+      "8$\\frac{4}{7}$ days",
+      "7$\\frac{1}{7}$ days"
+    ],
+    "oh": [
+      "5.5 days",
+      "6.5 days",
+      "8$\\frac{4}{7}$ days",
+      "7$\\frac{1}{7}$ days"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(15, 20) = 60 इकाइयाँ।\nStep 2: A की कार्यक्षमता = 60 / 15 = 4 इकाई/दिन, B की कार्यक्षमता = 60 / 20 = 3 इकाई/दिन।\nStep 3: (A + B) की कुल कार्यक्षमता = 4 + 3 = 7 इकाई/दिन।\nStep 4: समय = $\\frac{60}{7}$ = 8$\\frac{4}{7}$ दिन।\nअतः सही विकल्प  8 4/7 days है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{15\\times20}{15+20}$ = $\\frac{300}{35}$ = $\\frac{60}{7}$ = 8$\\frac{4}{7}$ दिन।\nअतः सही उत्तर '8$\\frac{4}{7}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_7",
+    "qe": "P completes a work in 12 days and Q in 24 days. In how many days P and Q working together can complete the same work?",
+    "qh": "P एक कार्य को 12 दिनों में और Q 24 दिनों में पूरा करता है। P और Q एक साथ कार्य करते हुए उसी कार्य को कितने दिनों में पूरा कर सकते हैं?",
+    "oe": [
+      "16 days",
+      "8 days",
+      "6 days",
+      "12 days"
+    ],
+    "oh": [
+      "16 days",
+      "8 days",
+      "6 days",
+      "12 days"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM Method):\nStep 1: कुल कार्य = LCM(12, 24) = 24 इकाइयाँ।\nStep 2: P की कार्यक्षमता = 24 / 12 = 2 इकाई/दिन, Q की कार्यक्षमता = 24 / 24 = 1 इकाई/दिन।\nStep 3: (P + Q) की कार्यक्षमता = 2 + 1 = 3 इकाई/दिन।\nStep 4: लिया गया समय = 24 / 3 = 8 दिन।\nअतः सही विकल्प  8 days है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{12\\times24}{12+24}$ = $\\frac{288}{36}$ = 8 दिन।\nअतः सही उत्तर '8 days' है।\n\nIs prashn ka moolaadhaar kaam aur samay ka sootra hai. Vikalp 16 days, 6 days, 12 days is hal se mel nahi khaate. Exam point: kaam aur samay ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "twovariable_8",
+    "qe": "A and B can do a work in 10 days and 40 days, respectively. How long will it take together to complete the work?",
+    "qh": "A और B एक कार्य को क्रमशः 10 दिनों और 40 दिनों में कर सकते हैं। कार्य को पूरा करने में उन्हें एक साथ कितना समय लगेगा?",
+    "oe": [
+      "12 days",
+      "8 days",
+      "20 days",
+      "15 days"
+    ],
+    "oh": [
+      "12 days",
+      "8 days",
+      "20 days",
+      "15 days"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM Method):\nStep 1: कुल कार्य = LCM(10, 40) = 40 इकाइयाँ।\nStep 2: A की कार्यक्षमता = 40 / 10 = 4 इकाई/दिन, B की कार्यक्षमता = 40 / 40 = 1 इकाई/दिन।\nStep 3: दोनों की कुल कार्यक्षमता = 4 + 1 = 5 इकाई/दिन।\nStep 4: समय = 40 / 5 = 8 दिन।\nअतः सही विकल्प  8 days है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{10\\times40}{10+40}$ = $\\frac{400}{50}$ = 8 दिन।\nअतः सही उत्तर '8 days' है।\n\nYahan kaam aur samay ka sootra seedha lagta hai. Vikalp 12 days, 20 days, 15 days is hal se mel nahi khaate. Exam point: kaam aur samay ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "twovariable_9",
+    "qe": "A does 1/3 of work in 10 days, B completes 1/4 of the same work in 5 days. Who is more efficient and by what percentage?",
+    "qh": "A किसी कार्य का 1/3 भाग 10 दिनों में करता है, B उसी कार्य का 1/4 भाग 5 दिनों में पूरा करता है। कौन अधिक कुशल है और कितने प्रतिशत से?",
+    "oe": [
+      "A is 10% more efficient",
+      "B is 20% more efficient",
+      "A is 25% more efficient",
+      "B is 50% more efficient"
+    ],
+    "oh": [
+      "A is 10% more efficient",
+      "B is 20% more efficient",
+      "A is 25% more efficient",
+      "B is 50% more efficient"
+    ],
+    "a": 3,
+    "e": "Method 1 (Daily Work Comparison Method):\nStep 1: A का पूरा कार्य करने का समय = 10 $\\times$ 3 = 30 दिन।\nA की 1 दिन की कार्यक्षमता = $\\frac{1}{30}$.\nStep 2: B का पूरा कार्य करने का समय = 5 $\\times$ 4 = 20 दिन।\nB की 1 दिन की कार्यक्षमता = $\\frac{1}{20}$.\nStep 3: चूँकि $\\frac{1}{20}$ > $\\frac{1}{30}$, अतः B अधिक कुशल है।\nStep 4: B की A की तुलना में अधिक कार्यक्षमता का प्रतिशत:\nप्रतिशत = \\frac{$\\frac{1}{20}$ - $\\frac{1}{30}$}{$\\frac{1}{30}$} $\\times$ 100% = \\frac{$\\frac{1}{60}$}{$\\frac{1}{30}$} $\\times$ 100% = $\\frac{1}{2}$ $\\times$ 100% = 50%.\nअतः B, A से 50% अधिक कुशल है।\nअतः सही विकल्प  B is 50% more efficient है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल कार्य = LCM(30, 20) = 60 इकाइयाँ।\nStep 2: A की दक्षता = 60 / 30 = 2 इकाई/दिन, B की दक्षता = 60 / 20 = 3 इकाई/दिन।\nStep 3: अंतर = 3 - 2 = 1 इकाई। प्रतिशत वृद्धि = (1 / 2) $\\times$ 100% = 50%.\nअतः सही उत्तर 'B is 50% more efficient' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_10",
+    "qe": "A can complete 1/3 of a work in 7 days and B can complete 2/7 of the same work in 10 days. In how many days can both A and B together complete the work?",
+    "qh": "A एक कार्य का 1/3 भाग 7 दिनों में पूरा कर सकता है और B उसी कार्य का 2/7 भाग 10 दिनों में पूरा कर सकता है। A और B दोनों मिलकर उस कार्य को कितने दिनों में पूरा कर सकते हैं?",
+    "oe": [
+      "12$\\frac{3}{8}$",
+      "11$\\frac{7}{8}$",
+      "13$\\frac{1}{8}$",
+      "15$\\frac{1}{7}$"
+    ],
+    "oh": [
+      "12$\\frac{3}{8}$",
+      "11$\\frac{7}{8}$",
+      "13$\\frac{1}{8}$",
+      "15$\\frac{1}{7}$"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: A द्वारा पूरा कार्य करने में लिया गया समय = 7 $\\times$ 3 = 21 दिन।\nB द्वारा पूरा कार्य करने में लिया गया समय = 10 $\\times$ $\\frac{7}{2}$ = 35 दिन।\nStep 2: कुल कार्य = LCM(21, 35) = 105 इकाइयाँ।\nStep 3: A की कार्यक्षमता = 105 / 21 = 5 इकाई/दिन, B की कार्यक्षमता = 105 / 35 = 3 इकाई/दिन।\nStep 4: (A + B) की कुल कार्यक्षमता = 5 + 3 = 8 इकाई/दिन।\nStep 5: कार्य पूरा करने का समय = $\\frac{105}{8}$ = 13$\\frac{1}{8}$ दिन।\nअतः सही विकल्प  13 1/8 है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{21\\times35}{21+35}$ = $\\frac{735}{56}$ = $\\frac{105}{8}$ = 13$\\frac{1}{8}$ दिन।\nअतः सही उत्तर '13$\\frac{1}{8}$' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_11",
+    "qe": "A can do 1/4 part of a work in 9 days. B can do 2/3 part of the same work in 28 days. Working together, in how many days can A and B complete the whole work?",
+    "qh": "A किसी कार्य का 1/4 भाग 9 दिनों में कर सकता है। B उसी कार्य का 2/3 भाग 28 दिनों में कर सकता है। एक साथ कार्य करते हुए, A और B पूरे कार्य को कितने दिनों में पूरा कर सकते हैं?",
+    "oe": [
+      "$\\frac{261}{15}$ days",
+      "$\\frac{198}{17}$ days",
+      "$\\frac{252}{13}$ days",
+      "$\\frac{262}{11}$ days"
+    ],
+    "oh": [
+      "$\\frac{261}{15}$ days",
+      "$\\frac{198}{17}$ days",
+      "$\\frac{252}{13}$ days",
+      "$\\frac{262}{11}$ days"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: A का पूरा कार्य करने का समय = 9 $\\times$ 4 = 36 दिन।\nB का पूरा कार्य करने का समय = 28 $\\times$ $\\frac{3}{2}$ = 42 दिन।\nStep 2: कुल कार्य = LCM(36, 42) = 252 इकाइयाँ।\nStep 3: A की कार्यक्षमता = 252 / 36 = 7 इकाई/दिन, B की कार्यक्षमता = 252 / 42 = 6 इकाई/दिन।\nStep 4: (A + B) की कुल कार्यक्षमता = 7 + 6 = 13 इकाई/दिन।\nStep 5: अभीष्ट समय = $\\frac{252}{13}$ दिन।\nअतः सही विकल्प  252/13 days है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{36\\times42}{36+42}$ = $\\frac{1512}{78}$ = $\\frac{252}{13}$ दिन।\nअतः सही उत्तर '$\\frac{252}{13}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_12",
+    "qe": "Disha takes 12 hours to copy a 75-page manuscript, while Mohit can copy the same manuscript in 10 hours. How many hours will it take to copy a 150-page manuscript if they work together?",
+    "qh": "दिशा को 75-पृष्ठों की पांडुलिपि की प्रतिलिपि बनाने में 12 घंटे लगते हैं, जबकि मोहित उसी पांडुलिपि की प्रतिलिपि 10 घंटे में बना सकता है। यदि वे एक साथ कार्य करते हैं तो 150-पृष्ठों की पांडुलिपि की प्रतिलिपि बनाने में कितने घंटे लगेंगे?",
+    "oe": [
+      "9$\\frac{9}{11}$ hours",
+      "10$\\frac{10}{11}$ hours",
+      "8$\\frac{9}{11}$ hours",
+      "11$\\frac{10}{11}$ hours"
+    ],
+    "oh": [
+      "9$\\frac{9}{11}$ hours",
+      "10$\\frac{10}{11}$ hours",
+      "8$\\frac{9}{11}$ hours",
+      "11$\\frac{10}{11}$ hours"
+    ],
+    "a": 1,
+    "e": "Method 1 (Rate of Work Method):\nStep 1: दिशा की गति = 75 / 12 = $\\frac{25}{4}$ पृष्ठ/घंटा।\nमोहित की गति = 75 / 10 = $\\frac{15}{2}$ = $\\frac{30}{4}$ पृष्ठ/घंटा।\nStep 2: दोनों की संयुक्त गति = $\\frac{25}{4}$ + $\\frac{30}{4}$ = $\\frac{55}{4}$ पृष्ठ/घंटा।\nStep 3: 150 पृष्ठों के लिए लिया गया समय:\nसमय = \\frac{150}{$\\frac{55}{4}$} = $\\frac{150\\times4}{55}$ = $\\frac{600}{55}$ = $\\frac{120}{11}$ = 10$\\frac{10}{11}$ घंटे।\nअतः सही विकल्प  10 10/11 hours है।\n\nMethod 2 (75-page Combination Method):\nStep 1: दोनों को मिलकर 75 पृष्ठ पूरा करने में समय = $\\frac{12\\times10}{12+10}$ = $\\frac{120}{22}$ = $\\frac{60}{11}$ घंटे।\nStep 2: 150 पृष्ठ (दोगुने पृष्ठ) के लिए समय = 2 $\\times$ $\\frac{60}{11}$ = $\\frac{120}{11}$ = 10$\\frac{10}{11}$ घंटे।\nअतः सही उत्तर '10$\\frac{10}{11}$ hours' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_13",
+    "qe": "Jason can do a piece of work alone in 23.4 days, while Rafique can do the same piece of work alone in 39 days. In how many days can the duo complete the same if they work together?",
+    "qh": "जेसन अकेले एक कार्य को 23.4 दिनों में पूरा कर सकता है, जबकि रफीक अकेले उसी कार्य को 39 दिनों में पूरा कर सकता है। यदि वे दोनों एक साथ कार्य करते हैं तो वे इसे कितने दिनों में पूरा कर सकते हैं?",
+    "oe": [
+      "14.750",
+      "14.625",
+      "14.875",
+      "14.375"
+    ],
+    "oh": [
+      "14.750",
+      "14.625",
+      "14.875",
+      "14.375"
+    ],
+    "a": 1,
+    "e": "Method 1 (Formula Method):\nStep 1: संयुक्त समय का सूत्र = $\\frac{xy}{x+y}$.\nStep 2: x = 23.4 और y = 39 रखने पर:\nसमय = $\\frac{23.4\\times39}{23.4+39}$ = $\\frac{912.6}{62.4}$.\nStep 3: दशमलव हटाने पर:\n= $\\frac{9126}{624}$ = 14.625 दिन।\nअतः सही विकल्प  14.625 है।\n\nMethod 2 (Fraction / Rate Method):\nStep 1: 23.4 = 117 / 5 दिन ==> जेसन की दर = 5 / 117 कार्य/दिन।\nरफीक की दर = 1 / 39 = 3 / 117 कार्य/दिन।\nStep 2: कुल दर = $\\frac{5+3}{117}$ = $\\frac{8}{117}$ कार्य/दिन।\nStep 3: अभीष्ट समय = $\\frac{117}{8}$ = 14.625 दिन।\nअतः सही उत्तर '14.625' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_14",
+    "qe": "A can do 20% of a job in 7 days and B can do 25% of the job in 7 days if they worked alone. How much of the job (in percentage) can they complete in 7 days if they worked together?",
+    "qh": "यदि वे अकेले कार्य करते हैं तो A 7 दिनों में एक कार्य का 20% कर सकता है और B 7 दिनों में 25% कार्य कर सकता है। यदि वे एक साथ कार्य करते हैं तो वे 7 दिनों में कार्य का कितना हिस्सा (प्रतिशत में) पूरा कर सकते हैं?",
+    "oe": [
+      "38%",
+      "52%",
+      "56%",
+      "45%"
+    ],
+    "oh": [
+      "38%",
+      "52%",
+      "56%",
+      "45%"
+    ],
+    "a": 3,
+    "e": "Method 1 (Direct Percentage Addition Method):\nStep 1: A द्वारा 7 दिनों में किया गया कार्य = 20%.\nStep 2: B द्वारा समान 7 दिनों में किया गया कार्य = 25%.\nStep 3: चूँकि दोनों 7 दिन ही कार्य करते हैं, अतः संयुक्त कार्य दोनों के व्यक्तिगत कार्यों का सीधा योग होगा:\nसंयुक्त कार्य = 20% + 25% = 45%.\nअतः सही विकल्प  45% है।\n\nMethod 2 (Fractional Work Method):\nStep 1: 7 दिनों में A का कार्य = 1/5, B का कार्य = 1/4.\nStep 2: कुल कार्य = 1/5 + 1/4 = 9/20.\nStep 3: प्रतिशत = (9 / 20) $\\times$ 100% = 45%.\nअतः सही उत्तर '45%' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_15",
+    "qe": "A can complete 3/8 part of a work in 36 days. B can complete 1/2 part of the same work in 27 days. Which of the following statement(s) is/are correct?\nI. A is less efficient than B.\nII. A and B working together can complete 11/15 part of the same work in 36 days.",
+    "qh": "A एक कार्य का 3/8 भाग 36 दिनों में पूरा कर सकता है। B उसी कार्य का 1/2 भाग 27 दिनों में पूरा कर सकता है। निम्नलिखित में से कौन सा/से कथन सही है/हैं?\nI. A, B से कम कुशल है।\nII. A और B एक साथ कार्य करते हुए उसी कार्य का 11/15 भाग 36 दिनों में पूरा कर सकते हैं।",
+    "oe": [
+      "Neither I nor II",
+      "Only I",
+      "Only II",
+      "Both I & II"
+    ],
+    "oh": [
+      "Neither I nor II",
+      "Only I",
+      "Only II",
+      "Both I & II"
+    ],
+    "a": 1,
+    "e": "Method 1 (Step-by-Step Statement Verification):\nStep 1: A का पूरा कार्य करने का समय = 36 $\\times$ $\\frac{8}{3}$ = 96 दिन।\nB का पूरा कार्य करने का समय = 27 $\\times$ 2 = 54 दिन।\nStep 2: कथन I की जाँच: A को कार्य पूरा करने में 96 दिन लगते हैं जबकि B को केवल 54 दिन लगते हैं। अधिक समय लेने वाला कम कुशल होता है, अतः 'A, B से कम कुशल है' कथन I सही है।\nStep 3: कथन II की जाँच:\n(A + B) का 1 दिन का कार्य = $\\frac{1}{96}$ + $\\frac{1}{54}$ = $\\frac{9+16}{864}$ = $\\frac{25}{864}$.\n36 दिनों में किया गया कार्य = 36 $\\times$ $\\frac{25}{864}$ = $\\frac{25}{24}$ > 1.\nपरंतु दिया गया है 11/15, अतः कथन II गलत है।\nअतः केवल कथन I सही है।\nअतः सही विकल्प  Only I है।\n\nMethod 2 (Efficiency Ratio Verification):\nStep 1: समय का अनुपात A : B = 96 : 54 = 16 : 9.\nStep 2: दक्षता अनुपात A : B = 9 : 16 ==> A की दक्षता B से कम है (I सत्य है)।\nअतः सही उत्तर 'Only I' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_16",
+    "qe": "A and B can do a piece of work in 25 days. B alone can do 66 2/3% of the same work in 30 days. In how many days can A alone do 4/15 part of the same work?",
+    "qh": "A और B एक कार्य को 25 दिनों में कर सकते हैं। B अकेले उसी कार्य का 66 2/3% 30 दिनों में कर सकता है। A अकेले उसी कार्य का 4/15 भाग कितने दिनों में कर सकता है?",
+    "oe": [
+      "15",
+      "20",
+      "18",
+      "12"
+    ],
+    "oh": [
+      "15",
+      "20",
+      "18",
+      "12"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM Method):\nStep 1: B का पूरा कार्य करने का समय (66 2/3% = 2/3 भाग 30 दिनों में):\nB का कुल समय = 30 $\\times$ $\\frac{3}{2}$ = 45 दिन।\nStep 2: (A + B) = 25 दिन, B = 45 दिन।\nकुल कार्य = LCM(25, 45) = 225 इकाइयाँ।\nStep 3: (A + B) की कार्यक्षमता = 225 / 25 = 9 इकाई/दिन।\nB की कार्यक्षमता = 225 / 45 = 5 इकाई/दिन।\nA की कार्यक्षमता = 9 - 5 = 4 इकाई/दिन।\nStep 4: कुल कार्य का 4/15 भाग = 225 $\\times$ $\\frac{4}{15}$ = 15 $\\times$ 4 = 60 इकाइयाँ।\nStep 5: A द्वारा 60 इकाइयाँ करने में लगा समय = 60 / 4 = 15 दिन।\nअतः सही विकल्प  15 है।\n\nMethod 2 (Fractional Subtraction Method):\nStep 1: A की 1 दिन की कार्यक्षमता = $\\frac{1}{25}$ - $\\frac{1}{45}$ = $\\frac{9-5}{225}$ = $\\frac{4}{225}$.\nStep 2: 4/15 भाग कार्य करने में समय = $\\frac{4/15}{4/225}$ = $\\frac{4}{15}$ $\\times$ $\\frac{225}{4}$ = 15 दिन।\nअतः सही उत्तर '15' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_17",
+    "qe": "Raju and Pintu together can clean a garden in 10 hours. If Raju alone can do it in 15 hours, how many hours will Pintu alone take?",
+    "qh": "राजू और पिंटू मिलकर एक बगीचे को 10 घंटे में साफ कर सकते हैं। यदि राजू अकेले इसे 15 घंटे में कर सकता है, तो पिंटू को अकेले कितना समय लगेगा?",
+    "oe": [
+      "20 hours",
+      "30 hours",
+      "25 hours",
+      "40 hours"
+    ],
+    "oh": [
+      "20 hours",
+      "30 hours",
+      "25 hours",
+      "40 hours"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(10, 15) = 30 इकाइयाँ।\nStep 2: (राजू + पिंटू) की दक्षता = 30 / 10 = 3 इकाई/घंटा।\nराजू की दक्षता = 30 / 15 = 2 इकाई/घंटा।\nStep 3: पिंटू की कार्यक्षमता = 3 - 2 = 1 इकाई/घंटा।\nStep 4: पिंटू द्वारा लिया गया समय = 30 / 1 = 30 घंटे।\nअतः सही विकल्प  30 hours है।\n\nMethod 2 (Formula Method):\nStep 1: अकेले कार्य करने का समय = $\\frac{xy}{y-x}$.\nStep 2: समय = $\\frac{10\\times15}{15-10}$ = $\\frac{150}{5}$ = 30 घंटे।\nअतः सही उत्तर '30 hours' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_18",
+    "qe": "Dhaval and Dhiraj together can do a piece of work in 12 days. Dhaval alone can do it in 20 days. In how many days can Dhiraj alone do it?",
+    "qh": "धवल और धीरज मिलकर एक कार्य को 12 दिनों में कर सकते हैं। धवल अकेले इसे 20 दिनों में कर सकता है। धीरज अकेले इसे कितने दिनों में कर सकता है?",
+    "oe": [
+      "30",
+      "28",
+      "25",
+      "32"
+    ],
+    "oh": [
+      "30",
+      "28",
+      "25",
+      "32"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(12, 20) = 60 इकाइयाँ।\nStep 2: (धवल + धीरज) की कार्यक्षमता = 60 / 12 = 5 इकाई/दिन।\nधवल की कार्यक्षमता = 60 / 20 = 3 इकाई/दिन।\nStep 3: धीरज की कार्यक्षमता = 5 - 3 = 2 इकाई/दिन।\nStep 4: धीरज द्वारा लिया गया समय = 60 / 2 = 30 दिन।\nअतः सही विकल्प  30 है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{12\\times20}{20-12}$ = $\\frac{240}{8}$ = 30 दिन।\nअतः सही उत्तर '30' है।\n\nYahan kaam aur samay ka sootra seedha lagta hai. She sh vikalp 28, 25, 32 is hisaab se nahi milte. Exam point: kaam aur samay ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "twovariable_19",
+    "qe": "Varun and Raju, working together, can complete a job in 40 hours whereas Varun alone can complete the same job in 50 hours. The number of hours required by Raju to complete the job alone is:",
+    "qh": "वरुण और राजू एक साथ कार्य करते हुए एक कार्य को 40 घंटों में पूरा कर सकते हैं, जबकि वरुण अकेले उसी कार्य को 50 घंटों में पूरा कर सकता है। राजू द्वारा अकेले कार्य पूरा करने के लिए आवश्यक घंटों की संख्या क्या है:",
+    "oe": [
+      "200",
+      "150",
+      "170",
+      "190"
+    ],
+    "oh": [
+      "200",
+      "150",
+      "170",
+      "190"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(40, 50) = 200 इकाइयाँ।\nStep 2: (वरुण + राजू) की दक्षता = 200 / 40 = 5 इकाइयाँ/घंटा।\nवरुण की दक्षता = 200 / 50 = 4 इकाइयाँ/घंटा।\nStep 3: राजू की दक्षता = 5 - 4 = 1 इकाई/घंटा।\nStep 4: राजू द्वारा लिया गया समय = 200 / 1 = 200 घंटे।\nअतः सही विकल्प  200 है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{xy}{y-x}$ = $\\frac{40\\times50}{50-40}$ = $\\frac{2000}{10}$ = 200 घंटे।\nअतः सही उत्तर '200' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_20",
+    "qe": "A and B, working together, take 15 days to complete a piece of work. If A alone can complete the job in 18 days, how long will B take to complete the same job?",
+    "qh": "A और B एक साथ कार्य करते हुए किसी कार्य को पूरा करने में 15 दिन लेते हैं। यदि A अकेले उस कार्य को 18 दिनों में पूरा कर सकता है, तो B को उसी कार्य को पूरा करने में कितना समय लगेगा?",
+    "oe": [
+      "90 days",
+      "33 days",
+      "15 days",
+      "8 days"
+    ],
+    "oh": [
+      "90 days",
+      "33 days",
+      "15 days",
+      "8 days"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(15, 18) = 90 इकाइयाँ।\nStep 2: (A + B) की कार्यक्षमता = 90 / 15 = 6 इकाइयाँ/दिन।\nA की कार्यक्षमता = 90 / 18 = 5 इकाइयाँ/दिन।\nStep 3: B की कार्यक्षमता = 6 - 5 = 1 इकाई/दिन।\nStep 4: B द्वारा लिया गया समय = 90 / 1 = 90 दिन।\nअतः सही विकल्प  90 days है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{15\\times18}{18-15}$ = $\\frac{270}{3}$ = 90 दिन।\nअतः सही उत्तर '90 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_21",
+    "qe": "Rohan takes 10 hours to mow a large lawn. Rohan and Mohan together can mow it in 4 hours. How long will Mohan take to mow the lawn if he works alone?",
+    "qh": "रोहन को एक बड़े लॉन की घास काटने में 10 घंटे लगते हैं। रोहन और मोहन मिलकर इसे 4 घंटे में काट सकते हैं। यदि मोहन अकेले कार्य करता है तो उसे लॉन की घास काटने में कितना समय लगेगा?",
+    "oe": [
+      "$\\frac{16}{3}$ hours",
+      "$\\frac{40}{3}$ hours",
+      "$\\frac{10}{3}$ hours",
+      "$\\frac{20}{3}$ hours"
+    ],
+    "oh": [
+      "$\\frac{16}{3}$ hours",
+      "$\\frac{40}{3}$ hours",
+      "$\\frac{10}{3}$ hours",
+      "$\\frac{20}{3}$ hours"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM Method):\nStep 1: कुल कार्य = LCM(10, 4) = 20 इकाइयाँ।\nStep 2: रोहन की दक्षता = 20 / 10 = 2 इकाइयाँ/घंटा।\n(रोहन + मोहन) की दक्षता = 20 / 4 = 5 इकाइयाँ/घंटा।\nStep 3: मोहन की दक्षता = 5 - 2 = 3 इकाइयाँ/घंटा।\nStep 4: मोहन द्वारा अकेले लिया गया समय = $\\frac{20}{3}$ घंटे।\nअतः सही विकल्प  20/3 hours है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{10\\times4}{10-4}$ = $\\frac{40}{6}$ = $\\frac{20}{3}$ घंटे।\nअतः सही उत्तर '$\\frac{20}{3}$ hours' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_22",
+    "qe": "Sapna finishes a job in 12 hours working alone. If Sapna and Riya finish the same job in 8 hours working together at their respective constant rates, then, in how many hours can Riya do the job working alone?",
+    "qh": "सपना अकेले कार्य करते हुए एक कार्य को 12 घंटे में समाप्त करती है। यदि सपना और रिया अपनी संबंधित स्थिर दरों पर एक साथ कार्य करते हुए उसी कार्य को 8 घंटे में समाप्त करती हैं, तो रिया अकेले कार्य करते हुए कितने घंटों में वह कार्य कर सकती है?",
+    "oe": [
+      "24",
+      "18",
+      "16",
+      "20"
+    ],
+    "oh": [
+      "24",
+      "18",
+      "16",
+      "20"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM Method):\nStep 1: कुल कार्य = LCM(12, 8) = 24 इकाइयाँ।\nStep 2: सपना की दक्षता = 24 / 12 = 2 इकाइयाँ/घंटा।\n(सपना + रिया) की दक्षता = 24 / 8 = 3 इकाइयाँ/घंटा।\nStep 3: रिया की दक्षता = 3 - 2 = 1 इकाई/घंटा।\nStep 4: रिया द्वारा लिया गया समय = 24 / 1 = 24 घंटे।\nअतः सही विकल्प  24 है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{12\\times8}{12-8}$ = $\\frac{96}{4}$ = 24 घंटे।\nअतः सही उत्तर '24' है।\n\nIs prashn ka moolaadhaar diye gaye tathyon ka sahi milan hai. Vikalp 18, 16, 20 is hal se mel nahi khaate. Exam point: diye gaye tathyon ka sahi milan - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "twovariable_23",
+    "qe": "Antony and Julie can simultaneously complete a work of floor decoration in 15 days and Julie alone in 20 days. In how many days can Antony alone complete the work of floor decoration?",
+    "qh": "एंटनी और जूली एक साथ फर्श सजावट का काम 15 दिनों में और जूली अकेले 20 दिनों में पूरा कर सकती है। एंटनी अकेले फर्श सजावट का काम कितने दिनों में पूरा कर सकता है?",
+    "oe": [
+      "55",
+      "60",
+      "45",
+      "50"
+    ],
+    "oh": [
+      "55",
+      "60",
+      "45",
+      "50"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(15, 20) = 60 इकाइयाँ।\nStep 2: (एंटनी + जूली) की कार्यक्षमता = 60 / 15 = 4 इकाइयाँ/दिन।\nजूली की कार्यक्षमता = 60 / 20 = 3 इकाइयाँ/दिन।\nStep 3: एंटनी की कार्यक्षमता = 4 - 3 = 1 इकाई/दिन।\nStep 4: एंटनी द्वारा अकेले लिया गया समय = 60 / 1 = 60 दिन।\nअतः सही विकल्प  60 है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{15\\times20}{20-15}$ = $\\frac{300}{5}$ = 60 दिन।\nअतः सही उत्तर '60' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_24",
+    "qe": "A and B can do a piece of work in 8 days and B alone can do it in 16 days. In how many days can A do it alone?",
+    "qh": "A और B एक कार्य को 8 दिनों में कर सकते हैं और B अकेले इसे 16 दिनों में कर सकता है। A अकेले इसे कितने दिनों में कर सकता है?",
+    "oe": [
+      "24 days",
+      "16 days",
+      "18 days",
+      "10 days"
+    ],
+    "oh": [
+      "24 days",
+      "16 days",
+      "18 days",
+      "10 days"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM Method):\nStep 1: कुल कार्य = LCM(8, 16) = 16 इकाइयाँ।\nStep 2: (A + B) की कार्यक्षमता = 16 / 8 = 2 इकाई/दिन।\nB की कार्यक्षमता = 16 / 16 = 1 इकाई/दिन।\nStep 3: A की कार्यक्षमता = 2 - 1 = 1 इकाई/दिन।\nStep 4: A द्वारा लिया गया समय = 16 / 1 = 16 दिन।\nअतः सही विकल्प  16 days है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{8\\times16}{16-8}$ = $\\frac{128}{8}$ = 16 दिन।\nअतः सही उत्तर '16 days' है।\n\nkaam aur samay ka sootra se hi is prashn ka jawab nikalta hai. Vikalp 24 days, 18 days, 10 days is hal se mel nahi khaate. Exam point: kaam aur samay ka sootra - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "twovariable_25",
+    "qe": "Sumit and Rajiv, working together, can do a job in 20 hours whereas Sumit alone can do the same job in 25 hours. In how many hours can Rajiv alone do the job?",
+    "qh": "सुमित और राजीव एक साथ कार्य करते हुए एक कार्य को 20 घंटों में कर सकते हैं जबकि सुमित अकेले उसी कार्य को 25 घंटों में कर सकता है। राजीव अकेले उस कार्य को कितने घंटों में कर सकता है?",
+    "oe": [
+      "70",
+      "90",
+      "80",
+      "100"
+    ],
+    "oh": [
+      "70",
+      "90",
+      "80",
+      "100"
+    ],
+    "a": 3,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(20, 25) = 100 इकाइयाँ।\nStep 2: (सुमित + राजीव) की दक्षता = 100 / 20 = 5 इकाइयाँ/घंटा।\nसुमित की दक्षता = 100 / 25 = 4 इकाइयाँ/घंटा।\nStep 3: राजीव की दक्षता = 5 - 4 = 1 इकाई/घंटा।\nStep 4: राजीव द्वारा अकेले लिया गया समय = 100 / 1 = 100 घंटे।\nअतः सही विकल्प  100 है।\n\nMethod 2 (Formula Method):\nStep 1: समय = $\\frac{20\\times25}{25-20}$ = $\\frac{500}{5}$ = 100 घंटे।\nअतः सही उत्तर '100' है।\n\nExam point: diye gaye tathyon ka sahi milan - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_26",
+    "qe": "P and Q can do a piece of work in 20 days and 30 days, respectively. They work together for 6 days, and then Q is replaced by R. If the rest of the work is completed by P and R in 8 more days, in how many days can R alone complete 60% of the work?",
+    "qh": "P और Q एक कार्य को क्रमशः 20 दिनों और 30 दिनों में कर सकते हैं। वे 6 दिनों तक एक साथ कार्य करते हैं, और फिर Q को R द्वारा बदल दिया जाता है। यदि शेष कार्य P और R द्वारा 8 और दिनों में पूरा किया जाता है, तो R अकेले 60% कार्य को कितने दिनों में पूरा कर सकता है?",
+    "oe": [
+      "36 days",
+      "48 days",
+      "42 days",
+      "40 days"
+    ],
+    "oh": [
+      "36 days",
+      "48 days",
+      "42 days",
+      "40 days"
+    ],
+    "a": 1,
+    "e": "Method 1 (LCM / Step-by-Step Method):\nStep 1: कुल कार्य = LCM(20, 30) = 60 इकाइयाँ।\nStep 2: P की दक्षता = 60 / 20 = 3 इकाइयाँ/दिन, Q की दक्षता = 60 / 30 = 2 इकाइयाँ/दिन।\nStep 3: P और Q द्वारा 6 दिनों में किया गया कार्य = 6 $\\times$ (3 + 2) = 6 $\\times$ 5 = 30 इकाइयाँ।\nशेष कार्य = 60 - 30 = 30 इकाइयाँ।\nStep 4: शेष 30 इकाइयों को P और R ने 8 दिनों में पूरा किया:\n(P + R) की दक्षता = 30 / 8 = 3.75 इकाई/दिन।\nR की दक्षता = 3.75 - P की दक्षता = 3.75 - 3 = 0.75 = $\\frac{3}{4}$ इकाई/दिन।\nStep 5: कार्य का 60% = 60% of 60 = 36 इकाइयाँ।\nR द्वारा 36 इकाइयाँ पूरा करने में लिया गया समय = $\\frac{36}{3/4}$ = $\\frac{36\\times4}{3}$ = 48 दिन।\nअतः सही विकल्प  48 days है।\n\nMethod 2 (Fraction Method):\nStep 1: 6 दिनों में (P + Q) का कार्य = 6(1/20 + 1/30) = 6(5/60) = 1/2. शेष कार्य = 1/2.\nStep 2: 8(1/20 + 1/R) = 1/2 ==> 1/20 + 1/R = 1/16 ==> 1/R = 1/16 - 1/20 = 1/80 (पूरा कार्य 80 दिन में)।\nStep 3: 60% कार्य के लिए समय = 80 $\\times$ 0.60 = 48 दिन।\nअतः सही उत्तर '48 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_27",
+    "qe": "A can complete a task in 10 days and B can finish a task in 15 days respectively. A start the work and works for 4 days, after which B joins A. How many more days will they take to complete the task?",
+    "qh": "A एक कार्य को 10 दिनों में और B 15 दिनों में पूरा कर सकता है। A कार्य शुरू करता है और 4 दिनों तक कार्य करता है, जिसके बाद B, A के साथ जुड़ जाता है। कार्य को पूरा करने में उन्हें कितने दिन और लगेंगे?",
+    "oe": [
+      "3.6 days",
+      "2.8 days",
+      "7.8 days",
+      "1.4 days"
+    ],
+    "oh": [
+      "3.6 days",
+      "2.8 days",
+      "7.8 days",
+      "1.4 days"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(10, 15) = 30 इकाइयाँ।\nStep 2: A की कार्यक्षमता = 30 / 10 = 3 इकाइयाँ/दिन, B की कार्यक्षमता = 30 / 15 = 2 इकाइयाँ/दिन।\nStep 3: A द्वारा पहले 4 दिनों में किया गया कार्य = 4 $\\times$ 3 = 12 इकाइयाँ।\nशेष कार्य = 30 - 12 = 18 इकाइयाँ।\nStep 4: अब A और B दोनों मिलकर कार्य करते हैं, कुल दक्षता = 3 + 2 = 5 इकाइयाँ/दिन।\nStep 5: शेष कार्य को पूरा करने में लगा अतिरिक्त समय = 18 / 5 = 3.6 दिन।\nअतः सही विकल्प  3.6 days है।\n\nMethod 2 (Fraction Method):\nStep 1: 4 दिनों में A द्वारा किया गया कार्य = 4 / 10 = 2 / 5 भाग।\nशेष भाग = 1 - 2/5 = 3/5 भाग।\nStep 2: (A + B) का 1 दिन का कार्य = 1/10 + 1/15 = 5/30 = 1/6 भाग।\nStep 3: अतिरिक्त समय = $\\frac{3/5}{1/6}$ = $\\frac{18}{5}$ = 3.6 दिन।\nअतः सही उत्तर '3.6 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_28",
+    "qe": "George can do 35% of the total work in 6 days. Jim and George together completed a piece of work in 12 days. In how many days could Jim, working alone, complete the entire task?",
+    "qh": "जॉर्ज कुल कार्य का 35% 6 दिनों में कर सकता है। जिम और जॉर्ज ने मिलकर एक कार्य 12 दिनों में पूरा किया। जिम अकेले कार्य करते हुए पूरे कार्य को कितने दिनों में पूरा कर सकता था?",
+    "oe": [
+      "36",
+      "40",
+      "42",
+      "45"
+    ],
+    "oh": [
+      "36",
+      "40",
+      "42",
+      "45"
+    ],
+    "a": 1,
+    "e": "Method 1 (Efficiency / Work Rate Method):\nStep 1: जॉर्ज का पूरा कार्य करने का समय:\nजॉर्ज 35% (= 7/20 भाग) 6 दिनों में करता है ==> पूरा कार्य = 6 $\\times$ $\\frac{20}{7}$ = $\\frac{120}{7}$ दिन।\nStep 2: जॉर्ज की प्रतिदिन कार्य दर = $\\frac{7}{120}$ कार्य/दिन।\nStep 3: जिम और जॉर्ज की संयुक्त दर = $\\frac{1}{12}$ = $\\frac{10}{120}$ कार्य/दिन।\nStep 4: जिम की अकेले की कार्य दर = $\\frac{10}{120}$ - $\\frac{7}{120}$ = $\\frac{3}{120}$ = $\\frac{1}{40}$ कार्य/दिन।\nStep 5: जिम द्वारा पूरा कार्य अकेले करने में लगा समय = 40 दिन।\nअतः सही विकल्प  40 है।\n\nMethod 2 (LCM Units Method):\nStep 1: कुल कार्य = 120 इकाइयाँ।\nजॉर्ज 6 दिन में 35% = 42 इकाइयाँ करता है ==> जॉर्ज की दक्षता = 42 / 6 = 7 इकाई/दिन।\nStep 2: 12 दिन में (जिम + जॉर्ज) = 120 इकाइयाँ ==> संयुक्त दक्षता = 10 इकाई/दिन।\nजिम की दक्षता = 10 - 7 = 3 इकाई/दिन।\nStep 3: समय = 120 / 3 = 40 दिन।\nअतः सही उत्तर '40' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_29",
+    "qe": "A is able to complete a task in 15 days, while B takes 20 days to finish the same task. If they collaborate and work together for 4 days, what fraction of the work will still remain?",
+    "qh": "A एक कार्य को 15 दिनों में पूरा करने में सक्षम है, जबकि B को उसी कार्य को पूरा करने में 20 दिन लगते हैं। यदि वे सहयोग करते हैं और 4 दिनों तक एक साथ कार्य करते हैं, तो कार्य का कितना भाग अभी भी शेष रहेगा?",
+    "oe": [
+      "$\\frac{1}{4}$",
+      "$\\frac{7}{15}$",
+      "$\\frac{8}{15}$",
+      "$\\frac{11}{15}$"
+    ],
+    "oh": [
+      "$\\frac{1}{4}$",
+      "$\\frac{7}{15}$",
+      "$\\frac{8}{15}$",
+      "$\\frac{11}{15}$"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(15, 20) = 60 इकाइयाँ।\nStep 2: A की कार्यक्षमता = 60 / 15 = 4 इकाई/दिन, B की कार्यक्षमता = 60 / 20 = 3 इकाई/दिन।\nStep 3: दोनों की संयुक्त कार्यक्षमता = 4 + 3 = 7 इकाइयाँ/दिन।\nStep 4: 4 दिनों में किया गया कार्य = 4 $\\times$ 7 = 28 इकाइयाँ।\nStep 5: शेष कार्य = 60 - 28 = 32 इकाइयाँ।\nStep 6: शेष कार्य का भिन्न = $\\frac{32}{60}$ = $\\frac{8}{15}$ (4 से विभाजित करने पर)।\nअतः सही विकल्प  8/15 है।\n\nMethod 2 (Fraction Addition Method):\nStep 1: 4 दिनों में किया गया कार्य = 4 $\\times$ ($\\frac{1}{15}$ + $\\frac{1}{20}$) = 4 $\\times$ $\\frac{7}{60}$ = $\\frac{7}{15}$.\nStep 2: शेष भाग = 1 - $\\frac{7}{15}$ = $\\frac{8}{15}$.\nअतः सही उत्तर '$\\frac{8}{15}$' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_30",
+    "qe": "A alone can do 1/10 part of a work in 8 hours. B alone can do 1/5 part of same work in 4 hours. If they work together, then how many hours will they take to complete 9/16 part of the same work?",
+    "qh": "A अकेले किसी कार्य का 1/10 भाग 8 घंटे में कर सकता है। B अकेले उसी कार्य का 1/5 भाग 4 घंटे में कर सकता है। यदि वे एक साथ कार्य करते हैं, तो उन्हें उसी कार्य का 9/16 भाग पूरा करने में कितने घंटे लगेंगे?",
+    "oe": [
+      "9 hours",
+      "5 hours",
+      "8 hours",
+      "4 hours"
+    ],
+    "oh": [
+      "9 hours",
+      "5 hours",
+      "8 hours",
+      "4 hours"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM Method):\nStep 1: A का पूरा कार्य करने का समय = 8 $\\times$ 10 = 80 घंटे।\nB का पूरा कार्य करने का समय = 4 $\\times$ 5 = 20 घंटे।\nStep 2: कुल कार्य = LCM(80, 20) = 80 इकाइयाँ।\nStep 3: A की दक्षता = 80 / 80 = 1 इकाई/घंटा, B की दक्षता = 80 / 20 = 4 इकाइयाँ/घंटा।\nसंयुक्त दक्षता = 1 + 4 = 5 इकाइयाँ/घंटा।\nStep 4: कार्य का 9/16 भाग = $\\frac{9}{16}$ $\\times$ 80 = 9 $\\times$ 5 = 45 इकाइयाँ।\nStep 5: लिया गया समय = 45 / 5 = 9 घंटे।\nअतः सही विकल्प  9 hours है।\n\nMethod 2 (Hourly Rate Method):\nStep 1: A की दर = 1/80, B की दर = 1/20 = 4/80.\nसंयुक्त दर = 5/80 = 1/16 कार्य/घंटा।\nStep 2: 9/16 भाग पूरा करने में समय = $\\frac{9/16}{1/16}$ = 9 घंटे।\nअतः सही उत्तर '9 hours' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_31",
+    "qe": "Riya and Sangeeta can finish a work in 6 days and 8 days, respectively. Riya started the work alone and then after 3 days, Sangeeta joined Riya. They both finish the remaining work. How long did the total work last?",
+    "qh": "रिया और संगीता एक कार्य को क्रमशः 6 दिनों और 8 दिनों में पूरा कर सकती हैं। रिया ने अकेले कार्य शुरू किया और फिर 3 दिनों के बाद, संगीता रिया के साथ शामिल हो गई। वे दोनों शेष कार्य पूरा करती हैं। कुल कार्य कितने समय तक चला?",
+    "oe": [
+      "4$\\frac{1}{7}$ days",
+      "4$\\frac{2}{7}$ days",
+      "4$\\frac{5}{7}$ days",
+      "4$\\frac{3}{7}$ days"
+    ],
+    "oh": [
+      "4$\\frac{1}{7}$ days",
+      "4$\\frac{2}{7}$ days",
+      "4$\\frac{5}{7}$ days",
+      "4$\\frac{3}{7}$ days"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(6, 8) = 24 इकाइयाँ।\nStep 2: रिया की दक्षता = 24 / 6 = 4 इकाइयाँ/दिन, संगीता की दक्षता = 24 / 8 = 3 इकाइयाँ/दिन।\nStep 3: रिया द्वारा पहले 3 दिनों में किया गया कार्य = 3 $\\times$ 4 = 12 इकाइयाँ।\nशेष कार्य = 24 - 12 = 12 इकाइयाँ।\nStep 4: शेष कार्य को दोनों मिलकर करती हैं, संयुक्त दक्षता = 4 + 3 = 7 इकाइयाँ/दिन।\nशेष कार्य में लगा समय = $\\frac{12}{7}$ = 1$\\frac{5}{7}$ दिन।\nStep 5: कुल कार्य की अवधि = 3 + 1$\\frac{5}{7}$ = 4$\\frac{5}{7}$ दिन।\nअतः सही विकल्प  4 5/7 days है।\n\nMethod 2 (Direct Equation Method):\nStep 1: माना कुल समय = T दिन। रिया ने T दिन काम किया और संगीता ने (T - 3) दिन काम किया:\n4T + 3(T - 3) = 24 ==> 7T - 9 = 24 ==> 7T = 33 ==> T = $\\frac{33}{7}$ = 4$\\frac{5}{7}$ दिन।\nअतः सही उत्तर '4$\\frac{5}{7}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_32",
+    "qe": "Rani can complete a stitching order in 24 days. After working for 6 days, her sister joins her and they finish it in 10 more days. In how many days can her sister alone complete the work?",
+    "qh": "रानी एक सिलाई का ऑर्डर 24 दिनों में पूरा कर सकती है। 6 दिनों तक कार्य करने के बाद, उसकी बहन उसके साथ जुड़ती है और वे इसे 10 और दिनों में पूरा करती हैं। उसकी बहन अकेले उस कार्य को कितने दिनों में पूरा कर सकती है?",
+    "oe": [
+      "30 days",
+      "24 days",
+      "36 days",
+      "48 days"
+    ],
+    "oh": [
+      "30 days",
+      "24 days",
+      "36 days",
+      "48 days"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: माना कुल कार्य = 24 इकाइयाँ।\nरानी की कार्यक्षमता = 24 / 24 = 1 इकाई/दिन।\nStep 2: रानी द्वारा 6 दिनों में किया गया कार्य = 6 $\\times$ 1 = 6 इकाइयाँ।\nशेष कार्य = 24 - 6 = 18 इकाइयाँ।\nStep 3: शेष 18 इकाइयों को रानी और उसकी बहन ने 10 दिनों में पूरा किया:\n(रानी + बहन) की दक्षता = 18 / 10 = 1.8 इकाइयाँ/दिन।\nबहन की दक्षता = 1.8 - 1 = 0.8 = $\\frac{4}{5}$ इकाई/दिन।\nStep 4: बहन द्वारा अकेले कार्य पूरा करने में लगा समय = $\\frac{24}{4/5}$ = $\\frac{24\\times5}{4}$ = 30 दिन।\nअतः सही विकल्प  30 days है।\n\nMethod 2 (Fraction Method):\nStep 1: रानी ने कुल 6 + 10 = 16 दिन काम किया ==> रानी का कार्य = 16 / 24 = 2 / 3 भाग।\nStep 2: बहन द्वारा 10 दिनों में किया गया कार्य = 1 - 2/3 = 1/3 भाग।\nStep 3: बहन द्वारा पूरा कार्य करने में समय = 10 $\\times$ 3 = 30 दिन।\nअतः सही उत्तर '30 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_33",
+    "qe": "A can finish a work in 25 days, and B can do the same work in 15 days. B worked for 10 days and left the job. In how many days' time can A alone finish the remaining work?",
+    "qh": "A एक कार्य को 25 दिनों में पूरा कर सकता है, और B उसी कार्य को 15 दिनों में कर सकता है। B ने 10 दिनों तक कार्य किया और कार्य छोड़ दिया। A अकेले शेष कार्य को कितने दिनों में पूरा कर सकता है?",
+    "oe": [
+      "7$\\frac{1}{3}$ days",
+      "6$\\frac{1}{3}$ days",
+      "8$\\frac{1}{3}$ days",
+      "5$\\frac{1}{3}$ days"
+    ],
+    "oh": [
+      "7$\\frac{1}{3}$ days",
+      "6$\\frac{1}{3}$ days",
+      "8$\\frac{1}{3}$ days",
+      "5$\\frac{1}{3}$ days"
+    ],
+    "a": 2,
+    "e": "Method 1 (LCM / Efficiency Method):\nStep 1: कुल कार्य = LCM(25, 15) = 75 इकाइयाँ।\nStep 2: A की कार्यक्षमता = 75 / 25 = 3 इकाइयाँ/दिन, B की कार्यक्षमता = 75 / 15 = 5 इकाइयाँ/दिन।\nStep 3: B द्वारा 10 दिनों में किया गया कार्य = 10 $\\times$ 5 = 50 इकाइयाँ।\nशेष कार्य = 75 - 50 = 25 इकाइयाँ।\nStep 4: A द्वारा शेष कार्य पूरा करने में लिया गया समय = $\\frac{25}{3}$ = 8$\\frac{1}{3}$ दिन।\nअतः सही विकल्प  8 1/3 days है।\n\nMethod 2 (Fraction Method):\nStep 1: B द्वारा 10 दिनों में किया गया कार्य = 10 / 15 = 2 / 3 भाग।\nशेष कार्य = 1 - 2/3 = 1/3 भाग।\nStep 2: A द्वारा 1/3 भाग पूरा करने में लगा समय = 25 $\\times$ $\\frac{1}{3}$ = $\\frac{25}{3}$ = 8$\\frac{1}{3}$ दिन।\nअतः सही उत्तर '8$\\frac{1}{3}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_34",
+    "qe": "Raju and Akbar take 4 hours and 6 hours to type 32 pages and 48 pages, respectively, on a computer. They are given an assignment of typing 256 pages. If they work together, typing on two different computers, starting at the same time, how much time will they take to complete the assignment (in hours)?",
+    "qh": "राजू और अकबर को कंप्यूटर पर क्रमशः 32 पृष्ठ और 48 पृष्ठ टाइप करने में 4 घंटे और 6 घंटे लगते हैं। उन्हें 256 पृष्ठ टाइप करने का असाइनमेंट दिया गया है। यदि वे एक ही समय में शुरू करते हुए, दो अलग-अलग कंप्यूटरों पर एक साथ कार्य करते हैं, तो उन्हें असाइनमेंट पूरा करने में कितना समय लगेगा (घंटों में)?",
+    "oe": [
+      "16",
+      "14",
+      "18",
+      "12"
+    ],
+    "oh": [
+      "16",
+      "14",
+      "18",
+      "12"
+    ],
+    "a": 0,
+    "e": "Method 1 (Hourly Typing Rate Method):\nStep 1: प्रत्येक की प्रति घंटा टाइपिंग गति ज्ञात करें:\n- राजू की गति = 32 / 4 = 8 पृष्ठ/घंटा\n- अकबर की गति = 48 / 6 = 8 पृष्ठ/घंटा\nStep 2: दोनों की संयुक्त टाइपिंग गति = 8 + 8 = 16 पृष्ठ/घंटा।\nStep 3: 256 पृष्ठ टाइप करने में लगा कुल समय:\nसमय = 256 / 16 = 16 घंटे।\nअतः सही विकल्प  16 है।\n\nMethod 2 (Unit Work Method):\nStep 1: 1 घंटे में दोनों मिलकर टाइप करते हैं = 8 + 8 = 16 पृष्ठ।\nStep 2: आवश्यक समय = 256 / 16 = 16 घंटे।\nअतः सही उत्तर '16' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_35",
+    "qe": "Suresh alone can do a work in 10 days working 1 hour a day. Shalu alone can do the same work in 2 days working 5 hours a day. How many hours do they need to work together in a day to complete the same work in 10 days?",
+    "qh": "सुरेश अकेले प्रतिदिन 1 घंटा कार्य करके 10 दिनों में एक कार्य कर सकता है। शालू अकेले प्रतिदिन 5 घंटे कार्य करके 2 दिनों में उसी कार्य को कर सकती है। उसी कार्य को 10 दिनों में पूरा करने के लिए उन्हें एक दिन में कितने घंटे एक साथ कार्य करने की आवश्यकता है?",
+    "oe": [
+      "1.5 hours",
+      "0.5 hours",
+      "1 hour",
+      "2 hours"
+    ],
+    "oh": [
+      "1.5 hours",
+      "0.5 hours",
+      "1 hour",
+      "2 hours"
+    ],
+    "a": 1,
+    "e": "Method 1 (Total Hours Method):\nStep 1: कार्य पूरा करने के लिए आवश्यक कुल घंटे निकालें:\n- सुरेश का कुल समय = 10 दिन $\\times$ 1 घंटा/दिन = 10 घंटे।\n- शालू का कुल समय = 2 दिन $\\times$ 5 घंटे/दिन = 10 घंटे।\nStep 2: दोनों द्वारा मिलकर कार्य पूरा करने में लगे कुल घंटे:\nकुल घंटे = $\\frac{10\\times10}{10+10}$ = $\\frac{100}{20}$ = 5 घंटे।\nStep 3: इस 5 घंटे के कार्य को 10 दिनों में पूरा करना है:\nप्रतिदिन आवश्यक घंटे = 5 घंटे / 10 दिन = 0.5 घंटे/दिन।\nअतः सही विकल्प  0.5 hours है।\n\nMethod 2 (Formula M1*D1*H1 = M2*D2*H2):\nStep 1: कुल कार्य = 10 मानव-घंटे।\n(सुरेश + शालू) 1 घंटे में 1/10 + 1/10 = 2/10 = 1/5 कार्य करते हैं।\nStep 2: 10 दिनों में कार्य समाप्त करने के लिए प्रतिदिन h घंटे:\n10 $\\times$ h $\\times$ (1/5) = 1 ==> 2h = 1 ==> h = 0.5 घंटे।\nअतः सही उत्तर '0.5 hours' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_36",
+    "qe": "Ram alone can do a work in 5 days working 4 hours a day. Seema alone can do the same work in 3 days working 10 hours a day. How many hours do they need to work together in a day to complete the same work in 6 days?",
+    "qh": "राम अकेले प्रतिदिन 4 घंटे कार्य करके 5 दिनों में एक कार्य कर सकता है। सीमा अकेले प्रतिदिन 10 घंटे कार्य करके 3 दिनों में उसी कार्य को कर सकती है। उसी कार्य को 6 दिनों में पूरा करने के लिए उन्हें एक दिन में कितने घंटे एक साथ कार्य करने की आवश्यकता है?",
+    "oe": [
+      "1 hour",
+      "3 hours",
+      "5 hours",
+      "2 hours"
+    ],
+    "oh": [
+      "1 hour",
+      "3 hours",
+      "5 hours",
+      "2 hours"
+    ],
+    "a": 3,
+    "e": "Method 1 (Total Hours Method):\nStep 1: कुल आवश्यक कार्य घंटे निकालें:\n- राम का कुल समय = 5 $\\times$ 4 = 20 घंटे\n- सीमा का कुल समय = 3 $\\times$ 10 = 30 घंटे\nStep 2: दोनों द्वारा मिलकर कार्य समाप्त करने में लगे कुल घंटे:\nकुल घंटे = $\\frac{20\\times30}{20+30}$ = $\\frac{600}{50}$ = 12 घंटे।\nStep 3: 12 घंटे के कार्य को 6 दिनों में समाप्त करना है:\nप्रतिदिन आवश्यक घंटे = 12 / 6 = 2 घंटे/दिन।\nअतः सही विकल्प  2 hours है।\n\nMethod 2 (LCM Method):\nStep 1: कुल कार्य = LCM(20, 30) = 60 इकाइयाँ।\nराम की दक्षता = 3 इकाई/घंटा, सीमा की दक्षता = 2 इकाई/घंटा ==> संयुक्त = 5 इकाइयाँ/घंटा।\nStep 2: 6 दिनों में प्रतिदिन h घंटे कार्य करते हुए:\n6 $\\times$ h $\\times$ 5 = 60 ==> 30h = 60 ==> h = 2 घंटे।\nअतः सही उत्तर '2 hours' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_37",
+    "qe": "Rajesh, in his printing press, got an order to print some books, out of which he completed 17/27 of the order in 34 days. In how many days did he complete the entire order of printing?",
+    "qh": "राजेश को अपनी प्रिंटिंग प्रेस में कुछ पुस्तकें छापने का ऑर्डर मिला, जिसमें से उसने ऑर्डर का 17/27 भाग 34 दिनों में पूरा किया। उसने छपाई का पूरा ऑर्डर कितने दिनों में पूरा किया?",
+    "oe": [
+      "60",
+      "20",
+      "54",
+      "56"
+    ],
+    "oh": [
+      "60",
+      "20",
+      "54",
+      "56"
+    ],
+    "a": 2,
+    "e": "Method 1 (Unitary Method):\nStep 1: 17/27 भाग कार्य पूरा करने में लगा समय = 34 दिन।\nStep 2: 1/27 भाग कार्य पूरा करने में लगा समय = 34 / 17 = 2 दिन।\nStep 3: पूरा कार्य (27/27 भाग) पूरा करने में लगा समय:\nकुल समय = 27 $\\times$ 2 = 54 दिन।\nअतः सही विकल्प  54 है।\n\nMethod 2 (Direct Fraction Method):\nStep 1: कुल समय = 34 $\\times$ $\\frac{27}{17}$ = 2 $\\times$ 27 = 54 दिन।\nअतः सही उत्तर '54' है।\n\nYahan kaam aur samay ka sootra seedha lagta hai. She sh vikalp 60, 20, 56 is hisaab se nahi milte. Exam point: kaam aur samay ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "twovariable_38",
+    "qe": "If Arun can complete 2/3 rd of a work in 12 days, then in how many days can he complete 1/6 th of the same work?",
+    "qh": "यदि अरुण एक कार्य का 2/3 भाग 12 दिनों में पूरा कर सकता है, तो वह उसी कार्य का 1/6 भाग कितने दिनों में पूरा कर सकता है?",
+    "oe": [
+      "4 days",
+      "5 days",
+      "2 days",
+      "3 days"
+    ],
+    "oh": [
+      "4 days",
+      "5 days",
+      "2 days",
+      "3 days"
+    ],
+    "a": 3,
+    "e": "Method 1 (Unitary Proportion Method):\nStep 1: 2/3 भाग = 12 दिन।\nअरुण को पूरा कार्य (1 इकाई) करने में लगा समय = 12 $\\times$ $\\frac{3}{2}$ = 18 दिन।\nStep 2: कार्य का 1/6 भाग पूरा करने में लगा समय:\nसमय = 18 $\\times$ $\\frac{1}{6}$ = 3 दिन।\nअतः सही विकल्प  3 days है।\n\nMethod 2 (Direct Ratio Method):\nStep 1: दिनों का अनुपात कार्यों के अनुपात के बराबर होता है:\n$\\frac{D}{12}$ = $\\frac{1/6}{2/3}$ = $\\frac{1}{6}$ $\\times$ $\\frac{3}{2}$ = $\\frac{1}{4}$.\nStep 2: D = $\\frac{12}{4}$ = 3 दिन।\nअतः सही उत्तर '3 days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "twovariable_39",
+    "qe": "A can build up a wall in 8 days while B can break it in 3 days. A has worked for 4 days and then B joined to work with A two days more. In how many days will A alone build up the remaining part of the wall?",
+    "qh": "A एक दीवार को 8 दिनों में बना सकता है जबकि B इसे 3 दिनों में तोड़ सकता है। A ने 4 दिनों तक कार्य किया और फिर B, A के साथ दो दिन और कार्य करने के लिए शामिल हो गया। A अकेले दीवार के शेष भाग को कितने दिनों में बनाएगा?",
+    "oe": [
+      "7$\\frac{1}{3}$ days",
+      "8$\\frac{2}{5}$ days",
+      "6$\\frac{1}{4}$ days",
+      "7 days"
+    ],
+    "oh": [
+      "7$\\frac{1}{3}$ days",
+      "8$\\frac{2}{5}$ days",
+      "6$\\frac{1}{4}$ days",
+      "7 days"
+    ],
+    "a": 0,
+    "e": "Method 1 (LCM / Net Work Method):\nStep 1: कुल कार्य = LCM(8, 3) = 24 इकाइयाँ।\nStep 2: A की कार्यक्षमता (निर्माण) = +24 / 8 = +3 इकाइयाँ/दिन।\nB की कार्यक्षमता (विनाश) = -24 / 3 = -8 इकाइयाँ/दिन।\nStep 3: A द्वारा पहले 4 दिनों में किया गया कार्य = 4 $\\times$ (+3) = +12 इकाइयाँ।\nStep 4: अगले 2 दिनों में (A + B) का कार्य:\nसंयुक्त दक्षता = 3 - 8 = -5 इकाइयाँ/दिन।\n2 दिनों में कार्य = 2 $\\times$ (-5) = -10 इकाइयाँ।\nStep 5: 6 दिनों के बाद निर्मित दीवार = 12 - 10 = 2 इकाइयाँ।\nदीवार का शेष भाग जो बनाया जाना है = 24 - 2 = 22 इकाइयाँ।\nStep 6: A द्वारा अकेले 22 इकाइयाँ बनाने में लगा समय = $\\frac{22}{3}$ = 7$\\frac{1}{3}$ दिन।\nअतः सही विकल्प  7 1/3 days है।\n\nMethod 2 (Fractional Net Work Method):\nStep 1: 4 दिन A ने काम किया = 4/8 = 1/2 भाग निर्मित।\nStep 2: 2 दिन (A - B) ने काम किया = 2(1/8 - 1/3) = 2(-5/24) = -5/12 भाग।\nStep 3: कुल निर्मित भाग = 1/2 - 5/12 = 1/12 भाग।\nशेष भाग = 1 - 1/12 = 11/12 भाग।\nStep 4: A द्वारा समय = $\\frac{11/12}{1/8}$ = $\\frac{11}{12}$ $\\times$ 8 = $\\frac{22}{3}$ = 7$\\frac{1}{3}$ दिन।\nअतः सही उत्तर '7$\\frac{1}{3}$ days' है।\n\nExam point: kaam aur samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
