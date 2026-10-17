@@ -1,0 +1,1255 @@
+[
+  {
+    "p_id": "syllogism_1",
+    "qe": "Statement: All mangoes are apples.\nConclusions:\nI. Some apples are mangoes.\nII. All apples are mangoes.\nIII. Some mangoes are apples.\nIV. Some apples are not mangoes.\nV. Some mangoes are not apples.\nVI. No mango is apple.\nVII. No apple is mango.",
+    "qh": "कथन: सभी आम सेब हैं।\nनिष्कर्ष:\nI. कुछ सेब आम हैं।\nII. सभी सेब आम हैं।\nIII. कुछ आम सेब हैं।\nIV. कुछ सेब आम नहीं हैं।\nV. कुछ आम सेब नहीं हैं।\nVI. कोई आम सेब नहीं है।\nVII. कोई सेब आम नहीं है।",
+    "oe": [
+      "Only I follows",
+      "Only I and III follow",
+      "Only II follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only I and III follow",
+      "Only II follows",
+      "None follows"
+    ],
+    "a": 1,
+    "e": "Method 1 (100-50 / Sign Rules Shortcut):\nStep 1: Statement positive (+) hai: All mangoes (100) are apples (50).\n- Positive statement se kewal positive conclusions hi nikale ja sakte hain. Isliye negative conclusions IV, V, VI, VII sidhe galat ho gaye.\nStep 2: Positive conclusions check karein:\n- Conclusion I: Some apples (50) are mangoes (50) - Dono ka karch 50 hai jo valid hai (Follows).\n- Conclusion II: All apples (100) are mangoes (50) - Yahan apples ka karch 100 ho gaya jabki aamadani kewal 50 thi (Does not follow).\n- Conclusion III: Some mangoes (50) are apples (50) - Mangoes 100 me se 50 karch kar sakte hain (Follows).\nAtah kewal I aur III follow karte hain.\nCorrect option  Only I and III follow hai.\n\nMethod 2 (Venn Diagram Method):\n'Mangoes' ka poora circle 'Apples' ke andar hai. Isse 'Some apples are mangoes' aur 'Some mangoes are apples' nishchit roop se satya hain, jabki poore apples ka mangoes hona anivarya nahi hai.\nSahi uttar 'Only I and III follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_2",
+    "qe": "Statement: Some dogs are cats.\nConclusions:\nI. Some cats are dogs.\nII. All cats are dogs.\nIII. All dogs are cats.\nIV. No dog is cat.\nV. No cat is dog.\nVI. Some cats are not dogs.\nVII. Some dogs are not cats.",
+    "qh": "कथन: कुछ कुत्ते बिल्लियाँ हैं।\nनिष्कर्ष:\nI. कुछ बिल्लियाँ कुत्ते हैं।\nII. सभी बिल्लियाँ कुत्ते हैं।\nIII. सभी कुत्ते बिल्लियाँ हैं।\nIV. कोई कुत्ता बिल्ली नहीं है।\nV. कोई बिल्ली कुत्ता नहीं है।\nVI. कुछ बिल्लियाँ कुत्ते नहीं हैं।\nVII. कुछ कुत्ते बिल्लियाँ नहीं हैं।",
+    "oe": [
+      "Only I, II and III follow",
+      "Only I and II follow",
+      "Only I follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I, II and III follow",
+      "Only I and II follow",
+      "Only I follows",
+      "None follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-50 Income-Expenditure Shortcut):\nStep 1: Statement (+) type hai: Some dogs (50) are cats (50).\n- Negative conclusions (IV, V, VI, VII) kabhi follow nahi karenge.\nStep 2: Baki positive conclusions dekhein:\n- Conclusion I: Some cats (50) are dogs (50) - Valid conversion (Follows).\n- Conclusion II: All cats (100) are dogs (50) - Cats 50 se 100 nahi ho sakti (Does not follow).\n- Conclusion III: All dogs (100) are cats (50) - Dogs 50 se 100 nahi ho sakte (Does not follow).\nKewal I follow karta hai.\nCorrect option  Only I follows hai.\n\nMethod 2 (Conversion Rule Method):\n'Some A are B' ka valid conversion kewal 'Some B are A' hota hai. Iske alawa koi definite conclusion nahi nikalta.\nSahi uttar 'Only I follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_3",
+    "qe": "Statement: No book is copy.\nConclusions:\nI. No copy is book.\nII. Some copies are not books.\nIII. Some books are not copies.\nIV. All books are copies.\nV. All copies are books.\nVI. Some copies are books.\nVII. Some books are copies.",
+    "qh": "कथन: कोई किताब कॉपी नहीं है।\nनिष्कर्ष:\nI. कोई कॉपी किताब नहीं है।\nII. कुछ कॉपी किताब नहीं हैं।\nIII. कुछ किताब कॉपी नहीं हैं।\nIV. सभी किताबें कॉपी हैं।\nV. सभी कॉपी किताबें हैं।\nVI. कुछ कॉपी किताबें हैं।\nVII. कुछ किताबें कॉपी हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only I, II and III follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only I, II and III follow",
+      "None follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Negative Statement 100-100 Shortcut):\nStep 1: Statement (-) type hai: No book (100) is copy (100).\n- Negative statement se kabhi positive conclusion nahi banta, isliye IV, V, VI, VII sidhe eliminate ho gaye.\nStep 2: Negative conclusions check karein:\n- Conclusion I: No copy (100) is book (100) - Both 100, fully valid (Follows).\n- Conclusion II: Some copies (50) are not books (100) - Valid (Follows).\n- Conclusion III: Some books (50) are not copies (100) - Valid (Follows).\nKewal I, II aur III follow karte hain.\nCorrect option  Only I, II and III follow hai.\n\nMethod 2 (Venn Diagram Method):\nBooks aur Copies ke circles poori tarah alag hain. Isliye na toh koi copy book hai, aur unka koi bhi bhag aapas me jud nahi sakta. I, II, III nishchit satya hain.\nSahi uttar 'Only I, II and III follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_4",
+    "qe": "Statement: Some cars are not buses.\nConclusions:\nI. Some buses are not cars.\nII. No bus is car.\nIII. No car is bus.\nIV. Some buses are cars.\nV. Some cars are buses.\nVI. All cars are buses.\nVII. All buses are cars.",
+    "qh": "कथन: कुछ कार बस नहीं हैं।\nनिष्कर्ष:\nI. कुछ बस कार नहीं हैं।\nII. कोई बस कार नहीं है।\nIII. कोई कार बस नहीं है।\nIV. कुछ बस कार हैं।\nV. कुछ कार बस हैं।\nVI. सभी कार बस हैं।\nVII. सभी बस कार हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "None follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (Some Not (O-type) Rule Shortcut):\nStep 1: Statement (-) type hai: Some cars (50) are not buses (100).\n- Positive conclusions (IV, V, VI, VII) sidhe reject ho gaye.\nStep 2: Negative conclusions me 'Cars' ki aamadani kewal 50 hai:\n- Conclusion I: Some buses (50) are not cars (100) - Cars ka karch 100 ho gaya (Does not follow).\n- Conclusion II: No bus (100) is car (100) - Cars ka karch 100 ho gaya (Does not follow).\n- Conclusion III: No car (100) is bus (100) - Cars ka karch 100 ho gaya (Does not follow).\nKoyi bhi nishkarsh follow nahi karta.\nCorrect option  None follows hai.\n\nMethod 2 (Definite Inference Rule):\n'Some A are not B' (O-type statement) ka koi bhi definite conversion ya inference nahi hota hai.\nSahi uttar 'None follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_5",
+    "qe": "Statements: (1) All mangoes are apples. (2) All apples are grapes.\nConclusions:\nI. Some grapes are apples.\nII. Some apples are not mangoes.",
+    "qh": "कथन: (1) सभी आम सेब हैं। (2) सभी सेब अंगूर हैं।\nनिष्कर्ष:\nI. कुछ अंगूर सेब हैं।\nII. कुछ सेब आम नहीं हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (Positive Statement Rule Shortcut):\nStep 1: Dono statements positive (+) hain:\n- (1) All mangoes (100) are apples (50) (+)\n- (2) All apples (100) are grapes (50) (+)\n- Positive statements se negative conclusion nahi nikal sakta, isliye Conclusion II (negative) sidhe galat hai.\nStep 2: Conclusion I: Some grapes are apples.\n- Statement (2) 'All apples are grapes' ka conversion 'Some grapes (50) are apples (50)' hota hai, jo poori tarah valid hai (Follows).\nAtah kewal I follow karta hai.\nCorrect option  Only I follows hai.\n\nMethod 2 (Venn Diagram Method):\n'Apples' ka poora hissa 'Grapes' ke andar hai, toh grapes ka kuch hissa apples zaroor hoga. Conclusion II ke baare me nishchit nahi kaha ja sakta. Kewal I satya hai.\nSahi uttar 'Only I follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_6",
+    "qe": "Statements: (1) All mangoes are apples. (2) All apples are grapes.\nConclusions:\nI. Some grapes are not apples.\nII. Some apples are mangoes.",
+    "qh": "कथन: (1) सभी आम सेब हैं। (2) सभी सेब अंगूर हैं।\nनिष्कर्ष:\nI. कुछ अंगूर सेब नहीं हैं।\nII. कुछ सेब आम हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "a": 1,
+    "e": "Method 1 (Direct Conversion Shortcut):\nStep 1: Conclusion I negative hai, jabki diye gaye dono statements positive hain, isliye Conclusion I reject ho jata hai.\nStep 2: Conclusion II: 'Some apples are mangoes'.\n- Statement (1) 'All mangoes are apples' ka conversion 'Some apples (50) are mangoes (50)' poori tarah satya hai (Follows).\nAtah kewal II follow karta hai.\nCorrect option  Only II follows hai.\n\nMethod 2 (Venn Diagram Inspection):\nMangoes apples ke andar hain, isliye apples ka kuch hissa mangoes hoga hi. Kewal Conclusion II follow karta hai.\nSahi uttar 'Only II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_7",
+    "qe": "Statements: (1) All mangoes are apples. (2) All apples are grapes.\nConclusions:\nI. Some mangoes are apples.\nII. Some apples are grapes.",
+    "qh": "कथन: (1) सभी आम सेब हैं। (2) सभी सेब अंगूर हैं।\nनिष्कर्ष:\nI. कुछ आम सेब हैं।\nII. कुछ सेब अंगूर हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Universal to Particular Shortcut):\nStep 1: Statement (1) All mangoes (100) are apples (50) se: Some mangoes (50) are apples (50) nishchit roop se satya hai (Conclusion I follows).\nStep 2: Statement (2) All apples (100) are grapes (50) se: Some apples (50) are grapes (50) bhi poori tarah satya hai (Conclusion II follows).\nDono निष्कर्ष follow karte hain.\nCorrect option  Both follow hai.\n\nMethod 2 (Direct Truth Verification):\nYadi sabhi mangoes apples hain, toh kuch mangoes bhi apples honge. Isi tarah sabhi apples grapes hain, toh kuch apples bhi grapes honge. Dono valid hain.\nSahi uttar 'Both follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_8",
+    "qe": "Statements: (1) All mangoes are apples. (2) All apples are grapes.\nConclusions:\nI. All apples are mangoes.\nII. All grapes are apples.",
+    "qh": "कथन: (1) सभी आम सेब हैं। (2) सभी सेब अंगूर हैं।\nनिष्कर्ष:\nI. सभी सेब आम हैं।\nII. सभी अंगूर सेब हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (100-50 Income-Expense Shortcut):\nStep 1: Statement (1) me Apples ki value 50 hai. Conclusion I me 'All apples' (100) manga gaya hai, jo sambhav nahi hai (Does not follow).\nStep 2: Statement (2) me Grapes ki value 50 hai. Conclusion II me 'All grapes' (100) manga gaya hai, jo sambhav nahi hai (Does not follow).\nKoyi bhi follow nahi karta.\nCorrect option  None follows hai.\n\nMethod 2 (Venn Diagram Inspection):\nBahar wale circle se andar wale circle ke liye 'All' ka relation nishchit roop se satya nahi hota (kewal 'Some' satya hota hai). Atah dono galat hain.\nSahi uttar 'None follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_9",
+    "qe": "Statements: (1) All rains are water. (2) All water are blue.\nConclusions:\nI. All rains are blue.\nII. Some rains are blue.\nIII. All blue are rains.\nIV. Some blue are rains.\nV. No rain is blue.\nVI. No blue is rain.\nVII. Some rains are not blue.\nVIII. Some blue are not rains.",
+    "qh": "कथन: (1) सभी वर्षा पानी हैं। (2) सभी पानी नीले हैं।\nनिष्कर्ष:\nI. सभी वर्षा नीले हैं।\nII. कुछ वर्षा नीले हैं।\nIII. सभी नीले वर्षा हैं।\nIV. कुछ नीले वर्षा हैं।\nV. कोई वर्षा नीला नहीं है।\nVI. कोई नीला वर्षा नहीं है।\nVII. कुछ वर्षा नीले नहीं हैं।\nVIII. कुछ नीले वर्षा नहीं हैं।",
+    "oe": [
+      "Only I, II and IV follow",
+      "Only I and II follow",
+      "Only II and III follow",
+      "Only III and IV follow"
+    ],
+    "oh": [
+      "Only I, II and IV follow",
+      "Only I and II follow",
+      "Only II and III follow",
+      "Only III and IV follow"
+    ],
+    "a": 0,
+    "e": "Method 1 (Chain Connecting Rule Shortcut):\nStep 1: Common term 'water' ki value Statement (2) me 100 hai, isliye dono statements jud jayenge (+ and + = +):\n- Combined result: All rains (100) are blue (50).\nStep 2: Negative conclusions (V, VI, VII, VIII) sidhe eliminate ho gaye.\nStep 3: Positive conclusions check karein:\n- I. All rains (100) are blue (50) - Follows.\n- II. Some rains (50) are blue (50) - Follows.\n- III. All blue (100) are rains (50) - Blue 50 se 100 nahi ho sakta (Does not follow).\n- IV. Some blue (50) are rains (50) - Follows.\nAtah kewal I, II aur IV follow karte hain.\nCorrect option  Only I, II and IV follow hai.\n\nMethod 2 (Concentric Circles Method):\nRains $\\subset$ Water $\\subset$ Blue. Isse All rains are blue, Some rains are blue aur Some blue are rains poori tarah sidhh hote hain.\nSahi uttar 'Only I, II and IV follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_10",
+    "qe": "Statements: (1) All cars are buses. (2) All trains are cars.\nConclusions:\nI. All trains are buses.\nII. Some trains are buses.\nIII. Some buses are trains.\nIV. All buses are trains.\nV. No bus is train.",
+    "qh": "कथन: (1) सभी कार बस हैं। (2) सभी ट्रेन कार हैं।\nनिष्कर्ष:\nI. सभी ट्रेन बस हैं।\nII. कुछ ट्रेन बस हैं।\nIII. कुछ बस ट्रेन हैं।\nIV. सभी बस ट्रेन हैं।\nV. कोई बस ट्रेन नहीं है।",
+    "oe": [
+      "Only I follows",
+      "Only I, II and III follow",
+      "Only II and III follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only I, II and III follow",
+      "Only II and III follow",
+      "None follows"
+    ],
+    "a": 1,
+    "e": "Method 1 (Chain Rule Shortcut):\nStep 1: Statements ko kram me lagayein: (2) All trains (100) are cars (50) + (1) All cars (100) are buses (50).\n- Common term 'cars' Statement (1) me 100 hai, atah dono jud kar denge: 'All trains (100) are buses (50)'.\nStep 2: Conclusion V negative hone ke karan eliminate ho gaya.\nStep 3: Positive conclusions evaluate karein:\n- I. All trains (100) are buses (50) - Follows.\n- II. Some trains (50) are buses (50) - Follows.\n- III. Some buses (50) are trains (50) - Follows.\n- IV. All buses (100) are trains (50) - Buses 50 se 100 nahi ho sakti (Does not follow).\nKewal I, II aur III follow karte hain.\nCorrect option  Only I, II and III follow hai.\n\nMethod 2 (Venn Diagram Method):\nTrains $\\subset$ Cars $\\subset$ Buses. Trains poori tarah Buses ke andar hain, isliye I, II aur III nishchit roop se satya hain.\nSahi uttar 'Only I, II and III follow' hai.\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_11",
+    "qe": "Statements: (1) All locks are keys. (2) All locks are windows.\nConclusions:\nI. All keys are windows.\nII. Some keys are windows.\nIII. Some windows are keys.\nIV. All windows are keys.",
+    "qh": "कथन: (1) सभी ताले चाबियाँ हैं। (2) सभी ताले खिड़कियाँ हैं।\nनिष्कर्ष:\nI. सभी चाबियाँ खिड़कियाँ हैं।\nII. कुछ चाबियाँ खिड़कियाँ हैं।\nIII. कुछ खिड़कियाँ चाबियाँ हैं।\nIV. सभी खिड़कियाँ चाबियाँ हैं।",
+    "oe": [
+      "Only I follows",
+      "Only IV follows",
+      "Only I and IV follow",
+      "Only II and III follow"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only IV follows",
+      "Only I and IV follow",
+      "Only II and III follow"
+    ],
+    "a": 3,
+    "e": "Method 1 (Common Term 100 Rule Shortcut):\nStep 1: Statements values: (1) All locks (100) are keys (50); (2) All locks (100) are windows (50).\n- Common term 'locks' dono me 100 hai, atah dono statements jud jayenge.\nStep 2: Chuki 'keys' (50) aur 'windows' (50) dono ki value 50 hai, isliye inke beech 'All' (100) ka conclusion nahi ban sakta:\n- Conclusion I (All keys 100) - Does not follow.\n- Conclusion IV (All windows 100) - Does not follow.\nStep 3: 'Some' wale conclusions dono 50-50 hone ke karan valid hain:\n- Conclusion II: Some keys (50) are windows (50) - Follows.\n- Conclusion III: Some windows (50) are keys (50) - Follows.\nKewal II aur III follow karte hain.\nCorrect option  Only II and III follow hai.\n\nMethod 2 (Income-Expense Elimination):\nKeys aur Windows dono ki income 50 hai, isliye All (100 expense) wale I aur IV galat hain. Kewal Some (50 expense) wale II aur III sahi hain.\nSahi uttar 'Only II and III follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_12",
+    "qe": "Statements: (1) All books are pens. (2) All copies are pens.\nConclusions:\nI. All books are copies.\nII. Some books are copies.\nIII. All copies are books.\nIV. Some copies are pens.",
+    "qh": "कथन: (1) सभी किताबें पेन हैं। (2) सभी कॉपी पेन हैं।\nनिष्कर्ष:\nI. सभी किताबें कॉपी हैं।\nII. कुछ किताबें कॉपी हैं।\nIII. सभी कॉपी किताबें हैं।\nIV. कुछ कॉपी पेन हैं।",
+    "oe": [
+      "Only I follows",
+      "Only I and II follow",
+      "Only IV follows",
+      "Only III and IV follow"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only I and II follow",
+      "Only IV follows",
+      "Only III and IV follow"
+    ],
+    "a": 2,
+    "e": "Method 1 (Unconnected Common Term Rule Shortcut):\nStep 1: Statements values: (1) All books (100) are pens (50); (2) All copies (100) are pens (50).\n- Common term 'pens' dono statements me 50 hai (kisi me bhi 100 nahi hai).\n- Niyam: Yadi common term kam se kam ek jagah 100 na ho, toh dono statements aapas me connect nahi ho sakte. Atah 'books' aur 'copies' ke beech koi definite relation nahi banega (I, II, III sabhi galat).\nStep 2: Conclusion IV Statement (2) ka direct conversion hai:\n- 'All copies are pens' $\\implies$ 'Some copies (50) are pens (50)' poori tarah valid hai (Follows).\nKewal IV follow karta hai.\nCorrect option  Only IV follows hai.\n\nMethod 2 (Venn Diagram Method):\nBooks aur Copies dono Pens ke andar alag-alag sthit ho sakte hain, unka aapas me koi direct sambandh nishchit nahi hai. Lekin copies ka pen hona nishchit hai, atah kewal IV sahi hai.\nSahi uttar 'Only IV follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_13",
+    "qe": "Statements: (1) All human are birds. (2) All children are human.\nConclusions:\nI. Some birds are human.\nII. Some birds are not human.\nIII. Some human are children.\nIV. All human are children.\nV. All children are birds.\nVI. All birds are children.\nVII. Some birds are children.\nVIII. Some birds are not children.",
+    "qh": "कथन: (1) सभी मनुष्य पक्षी हैं। (2) सभी बच्चे मनुष्य हैं।\nनिष्कर्ष:\nI. कुछ पक्षी मनुष्य हैं।\nII. कुछ पक्षी मनुष्य नहीं हैं।\nIII. कुछ मनुष्य बच्चे हैं।\nIV. सभी मनुष्य बच्चे हैं।\nV. सभी बच्चे पक्षी हैं।\nVI. सभी पक्षी बच्चे हैं।\nVII. कुछ पक्षी बच्चे हैं।\nVIII. कुछ पक्षी बच्चे नहीं हैं।",
+    "oe": [
+      "Only I, II and IV follow",
+      "Only II, III and IV follow",
+      "Only I, III, V and VII follow",
+      "Only II, IV, VI and VIII follow"
+    ],
+    "oh": [
+      "Only I, II and IV follow",
+      "Only II, III and IV follow",
+      "Only I, III, V and VII follow",
+      "Only II, IV, VI and VIII follow"
+    ],
+    "a": 2,
+    "e": "Method 1 (Connection & Income-Expense Shortcut):\nStep 1: Statements rearrange karein: (2) All children (100) are human (50) + (1) All human (100) are birds (50).\n- Common term 'human' 100 hai, connection bana: 'All children (100) are birds (50)'.\nStep 2: Negative conclusions (II aur VIII) eliminate ho gaye.\nStep 3: Positive conclusions check karein:\n- I. Some birds (50) are human (50) - Statement (1) ka conversion (Follows).\n- III. Some human (50) are children (50) - Statement (2) ka conversion (Follows).\n- IV. All human (100) are children (50) - Human 50 se 100 nahi ho sakta (Does not follow).\n- V. All children (100) are birds (50) - Combined result (Follows).\n- VI. All birds (100) are children (50) - Birds 50 se 100 nahi ho sakta (Does not follow).\n- VII. Some birds (50) are children (50) - Combined result ka conversion (Follows).\nKewal I, III, V aur VII follow karte hain.\nCorrect option  Only I, III, V and VII follow hai.\n\nMethod 2 (Venn Diagram Method):\nChildren $\\subset$ Human $\\subset$ Birds. Is hierarchy se I, III, V aur VII poori tarah sidhh hote hain.\nSahi uttar 'Only I, III, V and VII follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_14",
+    "qe": "Statements: (1) All grapes are oranges. (2) All oranges are mangoes. (3) Some oranges are apples.\nConclusions:\nI. Some grapes are mangoes.\nII. Some mangoes are apples.\nIII. All grapes are apples.",
+    "qh": "कथन: (1) सभी अंगूर संतरे हैं। (2) सभी संतरे आम हैं। (3) कुछ संतरे सेब हैं।\nनिष्कर्ष:\nI. कुछ अंगूर आम हैं।\nII. कुछ आम सेब हैं।\nIII. सभी अंगूर सेब हैं।",
+    "oe": [
+      "Only I and II follow",
+      "Only II and III follow",
+      "Only II follows",
+      "Only I follows"
+    ],
+    "oh": [
+      "Only I and II follow",
+      "Only II and III follow",
+      "Only II follows",
+      "Only I follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (Multi-Statement Connection Shortcut):\nStep 1: Statement (1) aur (2) ko connect karein:\n- All grapes (100) are oranges (50) + All oranges (100) are mangoes (50).\n- Common term 'oranges' 100 hai $\\implies$ 'All grapes are mangoes' banta hai, jisse 'Some grapes are mangoes' (Conclusion I) poori tarah valid hai (Follows).\nStep 2: Statement (2) aur (3) ko connect karein:\n- All oranges (100) are mangoes (50) + Some oranges (50) are apples (50).\n- Common term 'oranges' Statement (2) me 100 hai $\\implies$ Inse 'Some mangoes (50) are apples (50)' (Conclusion II) valid roop se nikalta hai (Follows).\nStep 3: Conclusion III: Statement (1) aur (3) me common term 'oranges' dono jagah 50 hai, isliye grapes aur apples ke beech koi definite relation nahi banega (Does not follow).\nAtah kewal I aur II follow karte hain.\nCorrect option  Only I and II follow hai.\n\nMethod 2 (Direct Inspection Method):\nGrapes mangoes ke andar hain, isliye Conclusion I satya hai. Mangoes aur apples ka common area oranges ke zariye judta hai, isliye Conclusion II satya hai. Grapes aur apples ka direct sambandh nishchit nahi hai.\nSahi uttar 'Only I and II follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_15",
+    "qe": "Statements:\n(1) All dogs are cats.\n(2) All cats are mice.\n(3) All mice are human.\nConclusions:\nI. All dogs are human.\nII. Some dogs are human.\nIII. All human are dogs.\nIV. Some human are dogs.",
+    "qh": "कथन:\n(1) सभी कुत्ते बिल्लियाँ हैं।\n(2) सभी बिल्लियाँ चूहे हैं।\n(3) सभी चूहे मनुष्य हैं।\nनिष्कर्ष:\nI. सभी कुत्ते मनुष्य हैं।\nII. कुछ कुत्ते मनुष्य हैं।\nIII. सभी मनुष्य कुत्ते हैं।\nIV. कुछ मनुष्य कुत्ते हैं।",
+    "oe": [
+      "Only I and II follow",
+      "Only I, II and IV follow",
+      "Only II and III follow",
+      "Only II and IV follow"
+    ],
+    "oh": [
+      "Only I and II follow",
+      "Only I, II and IV follow",
+      "Only II and III follow",
+      "Only II and IV follow"
+    ],
+    "a": 1,
+    "e": "Method 1 (Chain Connecting Rule Shortcut):\nStep 1: Statements ko chain me jodein:\n- Dogs(100) → Cats(50); Cats(100) → Mice(50); Mice(100) → Human(50).\n- Common terms 'cats' aur 'mice' dono 100 value rakhte hain, isliye direct connection banega: 'All dogs (100) are human (50)'.\nStep 2: Conclusions evaluate karein:\n- Conclusion I: All dogs (100) are human (50) - Bilkul sahi (Follows).\n- Conclusion II: Some dogs (50) are human (50) - 100 se 50 valid hai (Follows).\n- Conclusion III: All human (100) are dogs (50) - Human ki income 50 hai, expense 100 nahi ho sakta (Does not follow).\n- Conclusion IV: Some human (50) are dogs (50) - Valid conversion (Follows).\nAtah I, II aur IV follow karte hain.\nCorrect option  Only I, II and IV follow hai.\n\nMethod 2 (Venn Diagram Method):\nDogs ⊂ Cats ⊂ Mice ⊂ Human. Concentric circles me andar se bahar 'All' aur 'Some' dono satya hote hain, jabki bahar se andar kewal 'Some' satya hota hai. Isliye I, II aur IV nishchit roop se satya hain.\nSahi uttar 'Only I, II and IV follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_16",
+    "qe": "Statements:\n(1) Some students are actors.\n(2) All actors are fools.\n(3) All students are boys.\nConclusions:\nI. Some boys are fools.\nII. All boys are fools.\nIII. No boy is fool.",
+    "qh": "कथन:\n(1) कुछ छात्र अभिनेता हैं।\n(2) सभी अभिनेता मूर्ख हैं।\n(3) सभी छात्र लड़के हैं।\nनिष्कर्ष:\nI. कुछ लड़के मूर्ख हैं।\nII. सभी लड़के मूर्ख हैं।\nIII. कोई लड़का मूर्ख नहीं है।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Only I and II follow"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Only I and II follow"
+    ],
+    "a": 0,
+    "e": "Method 1 (Indirect Connection & Sign Shortcut):\nStep 1: Sabhi teen statements positive (+) hain. Positive statements se negative conclusion nahi nikal sakta, atah Conclusion III (negative) sidhe galat ho gaya.\nStep 2: Statements connect karein:\n- Statement (1) aur (2) se: Actors common term 100 hai → 'Some students are fools'.\n- Ab isse Statement (3) 'All students (100) are boys (50)' ke sath connect karein: Students common term 100 hai → 'Some boys (50) are fools (50)'.\nStep 3: Conclusions check karein:\n- Conclusion I: Some boys (50) are fools (50) - Follows.\n- Conclusion II: All boys (100) are fools (50) - Boys 50 se 100 nahi ho sakta (Does not follow).\nKewal I follow karta hai.\nCorrect option  Only I follows hai.\n\nMethod 2 (Income-Expense Verification):\nBoys ki aamadani kewal 50 hai, isliye 'All boys' (100) galat hai aur negative III asambhav hai. Kewal Conclusion I follow karta hai.\nSahi uttar 'Only I follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_17",
+    "qe": "Statements:\n(1) All rains are water.\n(2) No water is blue.\nConclusions:\nI. Some water are rains.\nII. Some blue are water.",
+    "qh": "कथन:\n(1) सभी वर्षा पानी हैं।\n(2) कोई पानी नीला नहीं है।\nनिष्कर्ष:\nI. कुछ पानी वर्षा हैं।\nII. कुछ नीले पानी हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (Single Statement Conversion Shortcut):\nStep 1: Conclusion I 'water' aur 'rains' ke beech hai, jo kewal Statement (1) se aayega:\n- Statement (1): All rains (100) are water (50) (+)\n- Iska conversion hota hai: Some water (50) are rains (50) (+) → Conclusion I poori tarah valid hai (Follows).\nStep 2: Conclusion II 'blue' aur 'water' ke beech hai, jo Statement (2) se aayega:\n- Statement (2): No water is blue (-)\n- Negative statement se positive conclusion nahi ban sakta, jabki Conclusion II positive (+) hai → Does not follow.\nAtah kewal I follow karta hai.\nCorrect option  Only I follows hai.\n\nMethod 2 (Venn Diagram Method):\nRains water ke andar hai, isliye water ka kuch hissa rains zaroor hai. Water aur blue ke beech koi relation nahi hai (cross relation), isliye blue kabhi water nahi ho sakta. Kewal I satya hai.\nSahi uttar 'Only I follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_18",
+    "qe": "Statements:\n(1) All rains are water.\n(2) No water is blue.\nConclusions:\nI. Some water are not rains.\nII. Some blue are not water.",
+    "qh": "कथन:\n(1) सभी वर्षा पानी हैं।\n(2) कोई पानी नीला नहीं है।\nनिष्कर्ष:\nI. कुछ पानी वर्षा नहीं हैं।\nII. कुछ नीले पानी नहीं हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both follow",
+      "None follows"
+    ],
+    "a": 1,
+    "e": "Method 1 (Sign Rules & 100-50 Shortcut):\nStep 1: Conclusion I negative (-) hai aur 'water' tatha 'rains' ke beech hai. Statement (1) positive (+) hai, aur positive se negative conclusion nahi banta → Conclusion I does not follow.\nStep 2: Conclusion II 'blue' aur 'water' ke beech hai. Statement (2) negative (-) hai: No water (100) is blue (100).\n- Iska valid sub-inference: Some blue (50) are not water (100) (-) hota hai → Conclusion II follows.\nAtah kewal II follow karta hai.\nCorrect option  Only II follows hai.\n\nMethod 2 (Direct Inference Rule):\nJab 'No A is B' satya hota hai, toh 'Some B are not A' nishchit roop se satya hota hai. Isliye Conclusion II satya hai.\nSahi uttar 'Only II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_19",
+    "qe": "Statements:\n(1) All rains are water.\n(2) No water is blue.\nConclusions:\nI. Some rains are water.\nII. Some water are not blue.",
+    "qh": "कथन:\n(1) सभी वर्षा पानी हैं।\n(2) कोई पानी नीला नहीं है।\nनिष्कर्ष:\nI. कुछ वर्षा पानी हैं।\nII. कुछ पानी नीले नहीं हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Individual Statement Inferences Shortcut):\nStep 1: Statement (1): All rains (100) are water (50) (+).\n- Isse 'Some rains (50) are water (50)' (+) sidhe nikalta hai → Conclusion I follows.\nStep 2: Statement (2): No water (100) is blue (100) (-).\n- Isse 'Some water (50) are not blue (100)' (-) sidhe nikalta hai → Conclusion II follows.\nDono nishkarsh follow karte hain.\nCorrect option  Both I and II follow hai.\n\nMethod 2 (Truth Value Verification):\nSabhi rains water hain toh kuch rains bhi water honge (I true). Koi water blue nahi hai toh kuch water bhi blue nahi honge (II true). Dono nishkarsh nishchit satya hain.\nSahi uttar 'Both I and II follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_20",
+    "qe": "Statements:\n(1) All rains are water.\n(2) No water is blue.\nConclusions:\nI. All rains are blue.\nII. Some rains are blue.\nIII. Some blue are rains.\nIV. All blue are rains.\nV. No rain is blue.\nVI. No blue is rain.\nVII. Some rains are not blue.\nVIII. Some blue are not rains.",
+    "qh": "कथन:\n(1) सभी वर्षा पानी हैं।\n(2) कोई पानी नीला नहीं है।\nनिष्कर्ष:\nI. सभी वर्षा नीले हैं।\nII. कुछ वर्षा नीले हैं।\nIII. कुछ नीले वर्षा हैं।\nIV. सभी नीले वर्षा हैं।\nV. कोई वर्षा नीला नहीं है।\nVI. कोई नीला वर्षा नहीं है।\nVII. कुछ वर्षा नीले नहीं हैं।\nVIII. कुछ नीले वर्षा नहीं हैं।",
+    "oe": [
+      "Only I and II follow",
+      "Only I, II, V and VI follow",
+      "Only V, VI, VII and VIII follow",
+      "Only VII and VIII follow"
+    ],
+    "oh": [
+      "Only I and II follow",
+      "Only I, II, V and VI follow",
+      "Only V, VI, VII and VIII follow",
+      "Only VII and VIII follow"
+    ],
+    "a": 2,
+    "e": "Method 1 (Positive + Negative = Negative Conclusion Shortcut):\nStep 1: Statement (1) (+) hai aur Statement (2) (-) hai. Dono ko jodne par nikalne wale sabhi conclusions negative (-) hone chahiye. Atah positive conclusions (I, II, III, IV) sidhe eliminate ho gaye.\nStep 2: Statements combine karein:\n- All rains (100) are water (50) + No water (100) is blue (100).\n- Common term 'water' 100 hai, connection bana: 'No rain (100) is blue (100)'.\nStep 3: Negative conclusions check karein:\n- V. No rain (100) is blue (100) - Follows.\n- VI. No blue (100) is rain (100) - Follows.\n- VII. Some rains (50) are not blue (100) - Follows.\n- VIII. Some blue (50) are not rains (100) - Follows.\nAtah V, VI, VII aur VIII charo follow karte hain.\nCorrect option  Only V, VI, VII and VIII follow hai.\n\nMethod 2 (Venn Diagram Method):\nRains water ke andar hai, aur water ka blue se koi connection nahi hai. Isliye poora rain blue se alag rahega. Isse No rain is blue, No blue is rain, aur unke Some-not roop poori tarah sidhh hote hain.\nSahi uttar 'Only V, VI, VII and VIII follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_21",
+    "qe": "Statements:\n(1) All cars are buses.\n(2) No car is train.\nConclusions:\nI. Some buses are not trains.\nII. No bus is train.\nIII. No train is bus.\nIV. Some trains are not buses.",
+    "qh": "कथन:\n(1) सभी कार बस हैं।\n(2) कोई कार ट्रेन नहीं है।\nनिष्कर्ष:\nI. कुछ बस ट्रेन नहीं हैं।\nII. कोई बस ट्रेन नहीं है।\nIII. कोई ट्रेन बस नहीं है।\nIV. कुछ ट्रेन बस नहीं हैं।",
+    "oe": [
+      "Only I follows",
+      "Only I and II follow",
+      "Only I, II and III follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only I and II follow",
+      "Only I, II and III follow",
+      "None follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (100-50 Income-Expenditure Shortcut):\nStep 1: Statements: (1) All cars (100) are buses (50) (+); (2) No car (100) is train (100) (-).\n- Positive + Negative = Negative conclusions. Common term 'car' 100 hai, connection valid hai.\n- Elements ki value: Buses = 50, Trains = 100.\nStep 2: Negative conclusions evaluate karein:\n- Conclusion I: Some buses (50) are not trains (100) - Buses 50 karch kar rahi hai, Trains 100 (Follows).\n- Conclusion II: No bus (100) is train (100) - Buses ka karch 100 ho gaya jabki aamadani 50 thi (Does not follow).\n- Conclusion III: No train (100) is bus (100) - Buses 100 nahi ho sakti (Does not follow).\n- Conclusion IV: Some trains (50) are not buses (100) - Buses ka karch 100 ho gaya (Does not follow).\nKewal Conclusion I follow karta hai.\nCorrect option  Only I follows hai.\n\nMethod 2 (Venn Diagram Method):\nBuses ka woh hissa jo Cars hai, kabhi Train nahi ho sakta. Atah 'Some buses are not trains' nishchit satya hai. Poori buses ke baare me nishchit nahi kaha ja sakta.\nSahi uttar 'Only I follows' hai.\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_22",
+    "qe": "Statements:\n(1) All books are copies.\n(2) No copy is pen.\n(3) No book is test.\nConclusions:\nI. No book is pen.\nII. Some copies are not tests.\nIII. Some tests are not copies.\nIV. All copies are tests.",
+    "qh": "कथन:\n(1) सभी किताबें कॉपी हैं।\n(2) कोई कॉपी पेन नहीं है।\n(3) कोई किताब टेस्ट नहीं है।\nनिष्कर्ष:\nI. कोई किताब पेन नहीं है।\nII. कुछ कॉपी टेस्ट नहीं हैं।\nIII. कुछ टेस्ट कॉपी नहीं हैं।\nIV. सभी कॉपी टेस्ट हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III and IV follow",
+      "Only I and II follow"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III and IV follow",
+      "Only I and II follow"
+    ],
+    "a": 3,
+    "e": "Method 1 (Chain Rules & 100-50 Shortcut):\nStep 1: Statement (1) All books (100) are copies (50) (+) aur Statement (2) No copy (100) is pen (100) (-):\n- Common term 'copy' 100 hai. (+) and (-) = (-). Result: 'No book (100) is pen (100)' → Conclusion I follows.\nStep 2: Statement (1) All books (100) are copies (50) (+) aur Statement (3) No book (100) is test (100) (-):\n- Common term 'book' 100 hai. Result: 'Some copies (50) are not tests (100)' → Conclusion II follows.\nStep 3: Conclusion III: Some tests (50) are not copies (100) - Yahan copies ka karch 100 ho gaya jabki aamadani 50 thi → Does not follow.\nStep 4: Conclusion IV positive hai jabki result negative hona chahiye → Does not follow.\nAtah kewal I aur II follow karte hain.\nCorrect option  Only I and II follow hai.\n\nMethod 2 (Elimination Method):\nPositive statement aur negative statement ke milan se kewal negative conclusion banta hai, isliye IV eliminate ho gaya. Copies 50 hone ke karan III me 100 nahi ho sakti. Kewal I aur II sahi hain.\nSahi uttar 'Only I and II follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_23",
+    "qe": "Statements:\n(1) No tea is hot.\n(2) No hot is coffee.\nConclusions:\nI. No hot is tea.\nII. Some coffee are not hot.\nIII. No tea is coffee.\nIV. All tea are coffee.\nV. Some coffee are not tea.\nVI. No coffee is tea.",
+    "qh": "कथन:\n(1) कोई चाय गर्म नहीं है।\n(2) कोई गर्म कॉफी नहीं है।\nनिष्कर्ष:\nI. कोई गर्म चाय नहीं है।\nII. कुछ कॉफी गर्म नहीं हैं।\nIII. कोई चाय कॉफी नहीं है।\nIV. सभी चाय कॉफी हैं।\nV. कुछ कॉफी चाय नहीं हैं।\nVI. कोई कॉफी चाय नहीं है।",
+    "oe": [
+      "Only I and II follow",
+      "Only II and III follow",
+      "Only I, II, III and IV follow",
+      "Only V and VI follow"
+    ],
+    "oh": [
+      "Only I and II follow",
+      "Only II and III follow",
+      "Only I, II, III and IV follow",
+      "Only V and VI follow"
+    ],
+    "a": 0,
+    "e": "Method 1 (No Relation Between Two Negatives Shortcut):\nStep 1: Niyam: Jab do negative statements (-) aur (-) ko joda jata hai, toh unke beech 'No Relation' hota hai, arthath tea aur coffee ke beech koi bhi nishchit nishkarsh nahi nikal sakta. Isliye III, IV, V, VI sabhi galat hain.\nStep 2: Individual statements ke inferences check karein:\n- Statement (1) No tea (100) is hot (100) ka conversion: No hot (100) is tea (100) → Conclusion I follows.\n- Statement (2) No hot (100) is coffee (100) ka sub-inference: Some coffee (50) are not hot (100) → Conclusion II follows.\nAtah kewal I aur II follow karte hain.\nCorrect option  Only I and II follow hai.\n\nMethod 2 (Direct Conversion Method):\nTea aur coffee dono negative statements me alag-alag hain isliye unka direct sambandh tay nahi ho sakta. Statement 1 se Conclusion I aur Statement 2 se Conclusion II seedhe satya sidhh hote hain.\nSahi uttar 'Only I and II follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_24",
+    "qe": "Statements:\n(1) All A are B.\n(2) No B is C.\n(3) No A is D.\nConclusions:\nI. All A are C.\nII. No A is C.\nIII. Some D are not B.\nIV. Some B are not D.\nV. No C is D.\nVI. No D is C.\nVII. All C are D.",
+    "qh": "कथन:\n(1) सभी A, B हैं।\n(2) कोई B, C नहीं है।\n(3) कोई A, D नहीं है।\nनिष्कर्ष:\nI. सभी A, C हैं।\nII. कोई A, C नहीं है।\nIII. कुछ D, B नहीं हैं।\nIV. कुछ B, D नहीं हैं।\nV. कोई C, D नहीं है।\nVI. कोई D, C नहीं है।\nVII. सभी C, D हैं।",
+    "oe": [
+      "Only II and III follow",
+      "Only III and IV follow",
+      "Only II and IV follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only II and III follow",
+      "Only III and IV follow",
+      "Only II and IV follow",
+      "None follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (100-50 & Negative Combination Shortcut):\nStep 1: Statement (1) All A (100) are B (50) (+) aur Statement (2) No B (100) is C (100) (-):\n- Common term 'B' 100 hai, (+) and (-) = (-). Result: 'No A (100) is C (100)' → Conclusion II follows (Conclusion I positive hone ke karan galat hai).\nStep 2: Statement (1) All A (100) are B (50) (+) aur Statement (3) No A (100) is D (100) (-):\n- Common term 'A' 100 hai, (+) and (-) = (-). Result: 'Some B (50) are not D (100)' → Conclusion IV follows.\n- Conclusion III: 'Some D are not B' me B ka expense 100 ho gaya jabki B ki income kewal 50 hai → Does not follow.\nStep 3: Statement (2) aur (3) dono negative hain, isliye C aur D ke beech koi relation nahi banega (V, VI, VII sabhi galat hain).\nAtah kewal II aur IV follow karte hain.\nCorrect option  Only II and IV follow hai.\n\nMethod 2 (Income-Expense Rule Check):\nB ki value kewal 50 hai, isliye D se B ki taraf 100 expense wala Conclusion III galat hai. Kewal II aur IV valid hain.\nSahi uttar 'Only II and IV follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_25",
+    "qe": "Statements:\n(1) All boys are actors.\n(2) All hero are zero.\n(3) No actor is zero.\nConclusions:\nI. All boys are hero.\nII. Some boys are hero.\nIII. All hero are boys.\nIV. Some hero are boys.\nV. No hero is boy.\nVI. No boy is hero.\nVII. Some hero are not boys.\nVIII. Some boys are not hero.",
+    "qh": "कथन:\n(1) सभी लड़के अभिनेता हैं।\n(2) सभी हीरो जीरो हैं।\n(3) कोई अभिनेता जीरो नहीं है।\nनिष्कर्ष:\nI. सभी लड़के हीरो हैं।\nII. कुछ लड़के हीरो हैं।\nIII. सभी हीरो लड़के हैं।\nIV. कुछ हीरो लड़के हैं।\nV. कोई हीरो लड़का नहीं है।\nVI. कोई लड़का हीरो नहीं है।\nVII. कुछ हीरो लड़के नहीं हैं।\nVIII. कुछ लड़के हीरो नहीं हैं।",
+    "oe": [
+      "Only I, II, III and IV follow",
+      "Only V and VI follow",
+      "Only VII and VIII follow",
+      "Only V, VI, VII and VIII follow"
+    ],
+    "oh": [
+      "Only I, II, III and IV follow",
+      "Only V and VI follow",
+      "Only VII and VIII follow",
+      "Only V, VI, VII and VIII follow"
+    ],
+    "a": 3,
+    "e": "Method 1 (Indirect Negative Chain Shortcut):\nStep 1: Statements values: (1) All boys (100) are actors (50) (+); (2) All hero (100) are zero (50) (+); (3) No actor (100) is zero (100) (-).\n- Statement (1) aur (3) ko jodein: Actor common term 100 hai → 'No boy (100) is zero (100)'.\n- Ab isse Statement (2) ke sath jodein: Zero common term 100 hai → 'No boy (100) is hero (100)' ya 'No hero (100) is boy (100)'.\nStep 2: Negative conclusion nikalne ke karan sabhi positive conclusions (I, II, III, IV) galat hain.\nStep 3: 'No hero is boy' se charo negative conclusions valid hote hain:\n- V. No hero (100) is boy (100) - Follows.\n- VI. No boy (100) is hero (100) - Follows.\n- VII. Some hero (50) are not boys (100) - Follows.\n- VIII. Some boys (50) are not hero (100) - Follows.\nAtah V, VI, VII aur VIII charo follow karte hain.\nCorrect option  Only V, VI, VII and VIII follow hai.\n\nMethod 2 (Disjoint Set Verification):\nBoys ⊂ Actors aur Hero ⊂ Zero. Chuki Actors aur Zero poori tarah alag hain, isliye Boys aur Hero bhi poori tarah alag honge. Dono sets disjoint hone par No aur Some-not ke sabhi 4 conclusions satya hote hain.\nSahi uttar 'Only V, VI, VII and VIII follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_26",
+    "qe": "Statements: (1) All boys are actors. (2) All zero are hero. (3) No actor is zero.\nConclusions:\nI. No boy is hero.\nII. Some boys are not hero.\nIII. No hero is boy.\nIV. Some hero are not boys.",
+    "qh": "कथन: (1) सभी लड़के अभिनेता हैं। (2) सभी जीरो हीरो हैं। (3) कोई अभिनेता जीरो नहीं है।\nनिष्कर्ष:\nI. कोई लड़का हीरो नहीं है।\nII. कुछ लड़के हीरो नहीं हैं।\nIII. कोई हीरो लड़का नहीं है।\nIV. कुछ हीरो लड़के नहीं हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Only IV follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Only IV follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (100-50 Income & Expenditure Shortcut):\nStep 1: Statements values: (1) All boys(100) are actors(50) [+]; (2) All zero(100) are hero(50) [+]; (3) No actor(100) is zero(100) [-].\nStep 2: Connecting statements:\n- (1) aur (3) ko jodein: Actor common term 100 hai → 'No boy(100) is zero(100)'.\n- Ab isse (2) All zero(100) are hero(50) ke sath jodein: Zero common term 100 hai. Connection banta hai: 'Some hero(50) are not boys(100)' [-].\nStep 3: Income-Expenditure check karein:\n- Hero ki income statement (2) me kewal 50 hai.\n- Conclusion I, II, III me Hero ka expenditure 100 ho jata hai (Does not follow).\n- Conclusion IV: Some hero(50) are not boys(100) [-] me Hero(50) aur Boys(100) ka expenditure valid hai (Follows).\nCorrect option  Only IV follows hai.\n\nMethod 2 (Venn Diagram Method):\nZero poora ka poora Hero ke andar hai, aur Zero ka Actor se koi sambandh nahi hai. Iska arth hai ki Hero ka jo hissa Zero hai, vah kabhi Boys nahi hoga ('Some hero are not boys'). Poore Hero ya Boys ke baare me nishchit nahi kaha ja sakta.\nSahi uttar 'Only IV follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_27",
+    "qe": "Statements: (1) All mangoes are grapes. (2) All apples are oranges. (3) No mango is apple.\nConclusions:\nI. No grapes is orange.\nII. No orange is grapes.\nIII. Some oranges are not grapes.\nIV. Some grapes are not oranges.",
+    "qh": "कथन: (1) सभी आम अंगूर हैं। (2) सभी सेब संतरे हैं। (3) कोई आम सेब नहीं है।\nनिष्कर्ष:\nI. कोई अंगूर संतरा नहीं है।\nII. कोई संतरा अंगूर नहीं है।\nIII. कुछ संतरे अंगूर नहीं हैं।\nIV. कुछ अंगूर संतरे नहीं हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Only IV follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Only IV follows",
+      "None follows"
+    ],
+    "a": 4,
+    "e": "Method 1 (100-50 Rule Shortcut):\nStep 1: Statement (1) me Grapes ki value 50 hai aur Statement (2) me Oranges ki value 50 hai.\nStep 2: Negative connection banne par dono predicate terms me se kisi na kisi ka expenditure 100 hona padega:\n- I, II me Grapes aur Oranges dono 100 hain (Invalid, dono ki income 50 hai).\n- III me Grapes predicate hai jo 100 hoga (Invalid, Grapes income = 50).\n- IV me Oranges predicate hai jo 100 hoga (Invalid, Oranges income = 50).\nAtah koi bhi nishkarsh 100% nishchit nahi hai.\nCorrect option  None follows hai.\n\nMethod 2 (Venn Diagram Method):\nMangoes Grapes ke andar hain aur Apples Oranges ke andar hain. Yadi Mango aur Apple alag hain, fir bhi Grapes aur Oranges ek doosre ko overlap kar sakte hain. Isliye koi bhi definite negative nishkarsh follow nahi karta.\nSahi uttar 'None follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_28",
+    "qe": "Statements: (1) All mangoes are grapes. (2) All apples are oranges. (3) No mango is apple.\nConclusions:\nI. All grapes are oranges.\nII. All oranges are grapes.\nIII. Some oranges are grapes.\nIV. Some grapes are oranges.",
+    "qh": "कथन: (1) सभी आम अंगूर हैं। (2) सभी सेब संतरे हैं। (3) कोई आम सेब नहीं है।\nनिष्कर्ष:\nI. सभी अंगूर संतरे हैं।\nII. सभी संतरे अंगूर हैं।\nIII. कुछ संतरे अंगूर हैं।\nIV. कुछ अंगूर संतरे हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "None follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (Sign Combination Rule Shortcut):\nStep 1: Grapes aur Oranges ko jodne ke liye do positive statements (1 aur 2) ke sath ek negative statement (3) ka upayog hota hai.\n- Niyam: $(+) + (+) + (-) = (-)$ nishkarsh nikalta hai.\nStep 2: Diye gaye sabhi charo conclusions positive (+) hain. Negative chain se positive conclusion kabhi nikal hi nahi sakta.\nAtah charo conclusions galat hain.\nCorrect option  None follows hai.\n\nMethod 2 (Direct Inspection Method):\nNegative premise judne par positive sambandh ka nishchit hona asambhav hai. Atah seedhe None follows hoga.\nSahi uttar 'None follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_29",
+    "qe": "Statements: (1) Some dogs are mice. (2) Some mice are cats.\nConclusions:\nI. No dog is cat.\nII. Some dogs are cats.",
+    "qh": "कथन: (1) कुछ कुत्ते चूहे हैं। (2) कुछ चूहे बिल्लियाँ हैं।\nनिष्कर्ष:\nI. कोई कुत्ता बिल्ली नहीं है।\nII. कुछ कुत्ते बिल्लियाँ हैं।",
+    "oe": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "oh": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Either-Or Conditions Shortcut):\nStep 1: Common term 'mice' dono statements me 50 hai (kisi me 100 nahi hai), isliye statements connect nahi honge aur dogs tatha cats ke beech dono conclusions akele me galat (independently false) hain.\nStep 2: Either-Or ki 3 conditions check karein:\n1. Dono conclusions galat hain.\n2. Subject (dog) aur Object (cat) dono me samaan hain.\n3. Ek conclusion positive ('Some') aur doosra negative ('No') hai (Complementary Pair: Some + No).\nTeeno conditions poori hoti hain, isliye 'Either I or II follows' banega.\nCorrect option  hai.\n\nMethod 2 (Venn Diagram Method):\nDogs aur Cats aapas me jud bhi sakte hain aur alag bhi reh sakte hain. Yadi ek satya hoga toh doosra asatya hoga. Atah ya toh I ya II sahi hai.\nSahi uttar 'If either I or II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_30",
+    "qe": "Statements: (1) Some dogs are mice. (2) Some mice are cats.\nConclusions:\nI. Some dogs are not cats.\nII. All dogs are cats.",
+    "qh": "कथन: (1) कुछ कुत्ते चूहे हैं। (2) कुछ चूहे बिल्लियाँ हैं।\nनिष्कर्ष:\nI. कुछ कुत्ते बिल्लियाँ नहीं हैं।\nII. सभी कुत्ते बिल्लियाँ हैं।",
+    "oe": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "oh": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Either-Or Complementary Pair (All + Some Not) Shortcut):\nStep 1: 'Dogs' aur 'Cats' ke beech koi direct connection nahi banta, isliye dono conclusions akele me asatya hain.\nStep 2: Check complementary pair rules:\n1. Dono conclusions independently false hain.\n2. Subject (dogs) aur Object (cats) dono me samaan hain.\n3. Ek 'All' (positive) aur doosra 'Some not' (negative) hai.\nYeh standard complementary pair banata hai, atah 'Either I or II follows' valid hai.\nCorrect option  hai.\n\nMethod 2 (Logic Complement Method):\n'All' ka theek viprit 'Some not' hota hai. Dono me se kisi ek ka satya hona anivarya hai. Isliye Either-Or case lagu hota hai.\nSahi uttar 'If either I or II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_31",
+    "qe": "Statements: (1) Some dogs are mice. (2) Some mice are cats.\nConclusions:\nI. All dogs are cats.\nII. No dog is cat.",
+    "qh": "कथन: (1) कुछ कुत्ते चूहे हैं। (2) कुछ चूहे बिल्लियाँ हैं।\nनिष्कर्ष:\nI. सभी कुत्ते बिल्लियाँ हैं।\nII. कोई कुत्ता बिल्ली नहीं है।",
+    "oe": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "oh": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "a": 4,
+    "e": "Method 1 ('All + No' Exception Rule Shortcut):\nStep 1: Statements connect nahi ho sakte, atah dono conclusions individually wrong hain.\nStep 2: Niyam: 'All' aur 'No' kabhi bhi complementary pair nahi banate (dono ek sath asatya ho sakte hain yadi 'Some dogs are cats' satya ho).\nStep 3: Chuki 'All + No' me Either-Or case nahi banta, isliye 'Neither I nor II follows' lagu hoga.\nCorrect option  If neither I nor II follows hai.\n\nMethod 2 (Venn Diagram Counter-example):\nYadi Dogs aur Cats aapas me aam taur par kuch hissa share karein (Some dogs are cats), toh na toh All dogs are cats sahi hoga aur na hi No dog is cat sahi hoga. Dono asatya ho sakte hain, isliye Neither-Nor hoga.\nSahi uttar 'If neither I nor II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_32",
+    "qe": "Statements: (1) Some dogs are mice. (2) Some mice are cats.\nConclusions:\nI. All dogs are cats.\nII. Some dogs are not mice.",
+    "qh": "कथन: (1) कुछ कुत्ते चूहे हैं। (2) कुछ चूहे बिल्लियाँ हैं।\nनिष्कर्ष:\nI. सभी कुत्ते बिल्लियाँ हैं।\nII. कुछ कुत्ते चूहे नहीं हैं।",
+    "oe": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "oh": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "a": 4,
+    "e": "Method 1 (Subject-Object Mismatch Shortcut):\nStep 1: Conclusion I me elements 'dogs' aur 'cats' hain, jo connection na hone ke karan galat hai.\nStep 2: Conclusion II negative hai jabki Statement (1) 'Some dogs are mice' positive hai, isliye II bhi galat hai.\nStep 3: Either-Or check karein:\n- Conclusion I ka object 'cats' hai jabki Conclusion II ka object 'mice' hai. Elements same nahi hain, isliye Either-Or nahi banega.\nAtah 'Neither I nor II follows' sahi hai.\nCorrect option  If neither I nor II follows hai.\n\nMethod 2 (Elimination Method):\nDono nishkarsh niyamit roop se asatya hain aur elements alag hone ke karan Either-Or ki shart poori nahi hoti. Seedhe Neither I nor II follows.\nSahi uttar 'If neither I nor II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_33",
+    "qe": "Statements: (1) Some mangoes are apples. (2) Some mangoes are oranges.\nConclusions:\nI. Some apples are oranges.\nII. No orange is apple.",
+    "qh": "कथन: (1) कुछ आम सेब हैं। (2) कुछ आम संतरे हैं।\nनिष्कर्ष:\nI. कुछ सेब संतरे हैं।\nII. कोई संतरा सेब नहीं है।",
+    "oe": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "oh": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Cross Subject-Object Interchange Shortcut):\nStep 1: Common term 'mangoes' dono me 50 hai, isliye apples aur oranges ke beech dono nishkarsh akele me galat hain.\nStep 2: Elements check karein:\n- Conclusion I me: apples (50), oranges (50) → 'Some apples are oranges' = 'Some oranges are apples'.\n- Conclusion II me: orange (100), apple (100) → 'No orange is apple' = 'No apple is orange'.\n- Subject aur Object ko aapas me badal kar same banaya ja sakta hai.\nStep 3: Ek positive (Some) aur ek negative (No) hai. Atah Either-Or case lagu hota hai.\nCorrect option  If either I or II follows hai.\n\nMethod 2 (Venn Diagram Method):\nApples aur Oranges ke beech koi direct shart nahi hai, isliye ya toh unke beech kuch hissa common hoga ya koi bhi nahi hoga. Either I or II follows.\nSahi uttar 'If either I or II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_34",
+    "qe": "Statements: (1) Some mangoes are apples. (2) Some mangoes are oranges.\nConclusions:\nI. All apples are oranges.\nII. Some oranges are not apples.",
+    "qh": "कथन: (1) कुछ आम सेब हैं। (2) कुछ आम संतरे हैं।\nनिष्कर्ष:\nI. सभी सेब संतरे हैं।\nII. कुछ संतरे सेब नहीं हैं।",
+    "oe": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "oh": [
+      "If only conclusion I follows",
+      "If only conclusion II follows",
+      "If either I or II follows",
+      "If both I and II follow",
+      "If neither I nor II follows"
+    ],
+    "a": 4,
+    "e": "Method 1 (All + Some Not Subject-Object Position Rule Shortcut):\nStep 1: Dono conclusions individually false hain.\nStep 2: Niyam: 'All + Some not' me Either-Or tabhi banta hai jab Subject aur Object ka kram dono conclusions me bilkul samaan ho:\n- Conclusion I me Subject 'apples' aur Object 'oranges' hai.\n- Conclusion II me Subject 'oranges' aur Object 'apples' hai (cross ho gaye).\n- 'All' aur 'Some not' me Subject aur Object ko aapas me interchange nahi kiya ja sakta ($A \\ne I, O \\ne I$).\nStep 3: Kramaank match na hone ke karan Either-Or nahi banega. Atah Neither I nor II follows hoga.\nCorrect option  If neither I nor II follows hai.\n\nMethod 2 (Counter-Example Method):\nYadi Orange ka circle Apples ke andar poora chala jaye, toh All apples are oranges galat hoga aur Some oranges are not apples bhi galat hoga. Isliye dono ek sath asatya ho sakte hain. Sahi uttar Neither-Nor hai.\nSahi uttar 'If neither I nor II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_35",
+    "qe": "Statements: (1) Some rains are water. (2) Some rains are blue.\nConclusions:\nI. Some water are blue.\nII. No water is blue.\nIII. All water are blue.",
+    "qh": "कथन: (1) कुछ वर्षा पानी हैं। (2) कुछ वर्षा नीले हैं।\nनिष्कर्ष:\nI. कुछ पानी नीले हैं।\nII. कोई पानी नीला नहीं है।\nIII. सभी पानी नीले हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "Only III follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "Only III follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Option Testing for Complementary Pairs Shortcut):\nStep 1: Common term 'rains' 50 hai, isliye water aur blue ke sabhi nishkarsh nishchit roop se asatya hain (I, II, III wrong).\nStep 2: Conclusions I aur II ko dekhein:\n- Subject (water) aur Object (blue) dono me samaan hain.\n- Conclusion I positive ('Some') hai aur Conclusion II negative ('No') hai.\n- 'Some + No' standard complementary pair banate hain.\nStep 3: Conclusion II aur III me 'All + No' hone ke karan Either-Or nahi banta.\nAtah kewal Conclusion I aur II ke beech Either-Or lagu hota hai.\nCorrect option  Either I or II follows hai.\n\nMethod 2 (Logic Exclusion):\nWater aur Blue ke beech do hi sthitiyan ho sakti hain: ya toh unka aapas me kuch sambandh hoga (Some water are blue) ya bilkul nahi hoga (No water is blue). Dono me se ek satya hona anivarya hai.\nSahi uttar 'Either I or II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_36",
+    "qe": "Statements: (1) Some mangoes are apples. (2) Some mangoes are oranges.\nConclusions:\nI. Some apples are oranges.\nII. Some oranges are mangoes.\nIII. No apple is orange.",
+    "qh": "कथन: (1) कुछ आम सेब हैं। (2) कुछ आम संतरे हैं।\nनिष्कर्ष:\nI. कुछ सेब संतरे हैं।\nII. कुछ संतरे आम हैं।\nIII. कोई सेब संतरा नहीं है।",
+    "oe": [
+      "Only II follows",
+      "Only III follows",
+      "Only II and either I or III follow",
+      "Either I or III follows"
+    ],
+    "oh": [
+      "Only II follows",
+      "Only III follows",
+      "Only II and either I or III follow",
+      "Either I or III follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Independent True + Either-Or Combination Shortcut):\nStep 1: Statement (2) 'Some mangoes are oranges' ka conversion 'Some oranges are mangoes' (Conclusion II) 100% nishchit satya hai (Follows).\nStep 2: Apples aur Oranges ke beech statements connect nahi ho sakte, isliye I aur III individually galat hain.\nStep 3: Conclusion I (Some apples are oranges) aur Conclusion III (No apple is orange) me:\n- Elements same hain aur pair 'Some + No' ka hai, isliye inme 'Either I or III' banega.\nStep 4: Atah nishkarsh banta hai: 'Only II and either I or III follow'.\nCorrect option  hai.\n\nMethod 2 (Step-by-Step Verification):\nConclusion II statement ka direct valid conversion hai. Baki bache I aur III complementary pair banate hain. Atah 'Only II and either I or III follow' bilkul sahi hai.\nSahi uttar 'Only II and either I or III follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_37",
+    "qe": "Statements: (1) At least some boys are doctors. (2) Every doctor is engineer.\nConclusions:\nI. Some boys are engineers.\nII. No boy is engineer.\nIII. All boys are engineers.",
+    "qh": "कथन: (1) कम से कम कुछ लड़के डॉक्टर हैं। (2) प्रत्येक डॉक्टर इंजीनियर है।\nनिष्कर्ष:\nI. कुछ लड़के इंजीनियर हैं।\nII. कोई लड़का इंजीनियर नहीं है।\nIII. सभी लड़के इंजीनियर हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Either I or II follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Either I or II follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (Keyword Conversion & 100-50 Shortcut):\nStep 1: Specific words decode karein:\n- 'At least some' = 'Some' → Some boys(50) are doctors(50) [+].\n- 'Every' = 'All' → All doctors(100) are engineers(50) [+].\nStep 2: Common term 'doctors' Statement (2) me 100 hai, isliye dono judkar denge:\n- Result: 'Some boys(50) are engineers(50)' [+].\nStep 3: Conclusions check karein:\n- Conclusion I: Some boys are engineers - 100% nishchit satya hai (Follows).\n- Conclusion II: Negative hai, galat.\n- Conclusion III: Boys ki value 50 se 100 nahi ho sakti, galat.\nJab Conclusion I nishchit roop se satya hai, toh Either-Or ki avashyakta nahi hoti.\nCorrect option  Only I follows hai.\n\nMethod 2 (Venn Diagram Method):\nBoys ka kuch hissa Doctors hai, aur sabhi Doctors Engineers ke andar hain. Isse Boys ka vah hissa anivarya roop se Engineers ban jata hai. Kewal I satya hai.\nSahi uttar 'Only I follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_38",
+    "qe": "Statements: (1) Some boys are engineers. (2) All engineers are doctors.\nConclusions:\nI. 60% boys are doctors.\nII. Some boys are doctors.",
+    "qh": "कथन: (1) कुछ लड़के इंजीनियर हैं। (2) सभी इंजीनियर डॉक्टर हैं।\nनिष्कर्ष:\nI. 60% लड़के डॉक्टर हैं।\nII. कुछ लड़के डॉक्टर हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Either I or II follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Either I or II follows"
+    ],
+    "a": 1,
+    "e": "Method 1 (Percentage vs 'Some' Rule Shortcut):\nStep 1: Statements ko jodein: Some boys(50) are engineers(50) + All engineers(100) are doctors(50).\n- Common term 'engineers' 100 hai, atah connection bana: 'Some boys are doctors'.\nStep 2: Niyam: 'Some' ka arth koi bhi pratishat (1% se 99%) ho sakta hai, hum kisi nishchit pratishat (jaise theek 60%) ka daava nahi kar sakte.\n- Isliye Conclusion I (60% boys are doctors) galat hai.\n- Conclusion II (Some boys are doctors) poori tarah satya hai.\nCorrect option  Only II follows hai.\n\nMethod 2 (Definite Deduction Rule):\nGeneral term 'Some' se specific percentage nikalna logical syllogism me invalid hota hai. Kewal qualitative conclusion (Some) hi satya hai.\nSahi uttar 'Only II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_39",
+    "qe": "Statements: (1) 60% boys are engineers. (2) All engineers are doctors.\nConclusions:\nI. Some boys are doctors.\nII. Some boys are not doctors.",
+    "qh": "कथन: (1) 60% लड़के इंजीनियर हैं। (2) सभी इंजीनियर डॉक्टर हैं।\nनिष्कर्ष:\nI. कुछ लड़के डॉक्टर हैं।\nII. कुछ लड़के डॉक्टर नहीं हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Either I or II follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Either I or II follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (Percentage to 'Some' Conversion Shortcut):\nStep 1: Statement (1) me '60% boys are engineers' ko standard form me 'Some boys are engineers' padha jata hai (kyunki less than 100% = 'Some').\nStep 2: Dono statements positive (+) hain:\n- Some boys(50) are engineers(50) + All engineers(100) are doctors(50) $\\implies$ 'Some boys are doctors' [+].\nStep 3: Positive statements se negative conclusion nahi banta, isliye Conclusion II (Some boys are not doctors) galat hai.\nConclusion I poori tarah satya hai.\nCorrect option  Only I follows hai.\n\nMethod 2 (Income-Expense Verification):\nStatements positive hain, isliye negative conclusion nikalna niyam virudh hai. Kewal Conclusion I follow karta hai.\nSahi uttar 'Only I follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_40",
+    "qe": "Statements: (1) Some students are singers. (2) No singer is dancer.\nConclusions:\nI. All students are not dancers.\nII. No student is dancer.",
+    "qh": "कथन: (1) कुछ छात्र गायक हैं। (2) कोई गायक नर्तक नहीं है।\nनिष्कर्ष:\nI. सभी छात्र नर्तक नहीं हैं।\nII. कोई छात्र नर्तक नहीं है।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "None follows"
+    ],
+    "a": 0,
+    "e": "Method 1 ('All...not' Meaning Shortcut):\nStep 1: Important Rule: Syllogism me 'All A are not B' ka arth 'Some A are not B' (कुछ A, B नहीं हैं) hota hai, jisme Subject ki value 50 aur Predicate ki value 100 hoti hai.\nStep 2: Statements connect karein: Some students(50) are singers(50) [+] + No singer(100) is dancer(100) [-].\n- Result: 'Some students(50) are not dancers(100)' [-].\nStep 3: Conclusions check karein:\n- Conclusion I: All students are not dancers $\\equiv$ Some students are not dancers (Follows).\n- Conclusion II: No student(100) is dancer(100) - Students ki income 50 hai, 100 nahi ho sakti (Does not follow).\nAtah kewal I follow karta hai.\nCorrect option  Only I follows hai.\n\nMethod 2 (Venn Diagram Method):\nStudents ka jo hissa Singers hai, vah kabhi Dancers nahi ho sakta. Iska arth hai ki kuch students dancers nahi hain ('All students are not dancers'). Poore students ke bare me 'No' kehna galat hai.\nSahi uttar 'Only I follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_41",
+    "qe": "Statements: (1) Only boys are doctors. (2) Some doctors are engineers.\nConclusions:\nI. Only boys are engineers.\nII. Some boys are engineers.\nIII. All boys are engineers.",
+    "qh": "कथन: (1) केवल लड़के डॉक्टर हैं। (2) कुछ डॉक्टर इंजीनियर हैं।\nनिष्कर्ष:\nI. केवल लड़के इंजीनियर हैं।\nII. कुछ लड़के इंजीनियर हैं।\nIII. सभी लड़के इंजीनियर हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "None follows"
+    ],
+    "a": 1,
+    "e": "Method 1 ('Only A is B' Conversion Shortcut):\nStep 1: Niyam: 'Only A is B' ka arth hota hai 'All B are A' (Subject aur Object interchange ho jate hain):\n- Statement (1): All doctors(100) are boys(50) [+].\n- Statement (2): Some doctors(50) are engineers(50) [+].\nStep 2: Connection banayein:\n- Doctors common term 100 hai, isliye dono judkar 'Some boys(50) are engineers(50)' banate hain.\nStep 3: Conclusions evaluate karein:\n- Conclusion II: Some boys are engineers - Bilkul sahi (Follows).\n- Conclusion I: Only boys are engineers $\\equiv$ All engineers are boys (Engineers 50 se 100 nahi ho sakte, galat).\n- Conclusion III: All boys are engineers (Boys 50 se 100 nahi ho sakte, galat).\nKewal Conclusion II follow karta hai.\nCorrect option  Only II follows hai.\n\nMethod 2 (Logical Meaning Method):\nYadi kewal ladke hi doctor hain, iska matlab sabhi doctor ladke hain. Chuki kuch doctor engineer hain, atah ve ladke bhi anivarya roop se engineer honge. Isse 'Some boys are engineers' sidhh hota hai.\nSahi uttar 'Only II follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_42",
+    "qe": "Statements:\n(1) Only a few boys are engineers.\n(2) All boys are doctors.\nConclusions:\nI. Some doctors are engineers.\nII. Some doctors are not engineers.\nIII. No doctor is engineer.\nIV. No engineer is doctor.",
+    "qh": "कथन:\n(1) केवल कुछ ही लड़के इंजीनियर हैं।\n(2) सभी लड़के डॉक्टर हैं।\nनिष्कर्ष:\nI. कुछ डॉक्टर इंजीनियर हैं।\nII. कुछ डॉक्टर इंजीनियर नहीं हैं।\nIII. कोई डॉक्टर इंजीनियर नहीं है।\nIV. कोई इंजीनियर डॉक्टर नहीं है।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only I and II follow",
+      "Only III follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only I and II follow",
+      "Only III follows"
+    ],
+    "a": 2,
+    "e": "Method 1 ('Only a few' Dual Nature Shortcut Trick):\nStep 1: 'Only a few A are B' do statements ka combination hota hai: 'Some A are B' (+) tatha 'Some A are not B' (-).\n- Statement (1) ka positive hissa: Some boys (50) are engineers (50) [+].\n- Statement (1) ka negative hissa: Some boys (50) are not engineers (100) [-].\n- Statement (2): All boys (100) are doctors (50) [+].\nStep 2: Common term 'boys' Statement (2) me 100 hai, isliye connection banega:\n- Positive connection: 'Some boys are engineers' [+] + 'All boys are doctors' [+] $\\implies$ 'Some doctors (50) are engineers (50)' [+] (Conclusion I follows).\n- Negative connection: 'Some boys are not engineers' [-] + 'All boys are doctors' [+] $\\implies$ 'Some doctors (50) are not engineers (100)' [-] (Conclusion II follows).\nStep 3: Conclusion III aur IV me Doctors ka karch 100 ho jata hai jabki doctors ki aamadani kewal 50 hai (Does not follow).\nAtah kewal I aur II follow karte hain.\nCorrect option  Only I and II follow hai.\n\nMethod 2 (Venn Diagram Method):\nBoys ka ek hissa Doctors ke andar poori tarah hai. Boys ka kewal kuch hi hissa Engineers hai aur kuch hissa Engineers nahi hai. Chuki Boys poore Doctors ke andar hain, atah Doctors ka kuch hissa Engineers hoga (I) aur kuch hissa Engineers nahi hoga (II). Dono I aur II satya hain.\nSahi uttar 'Only I and II follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_43",
+    "qe": "Statements:\n(1) Only a few rains are water.\n(2) All water are clouds.\nConclusions:\nI. Some rains are clouds.\nII. No rain is cloud.\nIII. Some rains are not clouds.\nIV. Some clouds are not rains.",
+    "qh": "कथन:\n(1) केवल कुछ ही वर्षा पानी हैं।\n(2) सभी पानी बादल हैं।\nनिष्कर्ष:\nI. कुछ वर्षा बादल हैं।\nII. कोई वर्षा बादल नहीं है।\nIII. कुछ वर्षा बादल नहीं हैं।\nIV. कुछ बादल वर्षा नहीं हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Only IV follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Only IV follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (Connection & Income-Expenditure Shortcut):\nStep 1: Statements split karein:\n- (1a) Some rains (50) are water (50) [+]\n- (1b) Some rains (50) are not water (100) [-]\n- (2) All water (100) are clouds (50) [+]\nStep 2: Statement (1a) aur (2) ko connect karein (Water common term = 100):\n- Result: 'Some rains (50) are clouds (50)' [+] $\\implies$ Conclusion I 100% true (Follows).\nStep 3: Statement (1b) [-] aur (2) [+] ko connect karne par 'clouds' par negative conclusion draw nahi kiya ja sakta kyunki statement (1b) me 'water' predicate (100) hai par Statement (2) me water subject (100) hone par bhi Clouds (50) ka expense negative me 100 nahi ho sakta. Atah Conclusion II, III, IV follow nahi karte.\nKewal Conclusion I follow karta hai.\nCorrect option  Only I follows hai.\n\nMethod 2 (Venn Diagram Method):\nRains ka jo hissa Water hai, vah Clouds ke andar anivarya roop se aayega. Isliye 'Some rains are clouds' nishchit satya hai. Rains aur Clouds ke baaki hisson ke bare me definite negative relation nirdharit nahi kiya ja sakta.\nSahi uttar 'Only I follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_44",
+    "qe": "Statements:\n(1) Only a few mangoes are apples.\n(2) No mango is orange.\nConclusions:\nI. Some apples are oranges.\nII. Some apples are not oranges.\nIII. No apple is orange.\nIV. Only a few apples are oranges.",
+    "qh": "कथन:\n(1) केवल कुछ ही आम सेब हैं।\n(2) कोई आम संतरा नहीं है।\nनिष्कर्ष:\nI. कुछ सेब संतरे हैं।\nII. कुछ सेब संतरे नहीं हैं।\nIII. कोई सेब संतरा नहीं है।\nIV. केवल कुछ ही सेब संतरे हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only I and II follow",
+      "Only III follows",
+      "Only II and either I or III follow"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only I and II follow",
+      "Only III follows",
+      "Only II and either I or III follow"
+    ],
+    "a": 4,
+    "e": "Method 1 (Definite True + Either-Or Combination Shortcut):\nStep 1: Statement (1) ka positive hissa: Some apples (50) are mangoes (50) [+].\n- Isse Statement (2) 'No mango (100) is orange (100)' [-] ke sath jodein (Mango common term = 100):\n- Result: 'Some apples (50) are not oranges (100)' [-] $\\implies$ Conclusion II 100% nishchit satya hai (Follows).\nStep 2: Conclusion I (Some apples are oranges) aur Conclusion III (No apple is orange) dono individually galat hain kyunki apples ki income 50 hai aur unke beech koi direct positive ya universal negative relation definite nahi hai.\nStep 3: Conclusion I (Some) aur III (No) ke elements bilkul samaan hain (Apples aur Oranges), atah yeh 'Some + No' ka complementary pair banate hain $\\implies$ 'Either I or III follows'.\nAtah final answer banta hai: 'Only II and either I or III follow'.\nCorrect option  hai.\n\nMethod 2 (Venn Diagram Inspection):\nApples ka jo hissa Mangoes hai vah kabhi Orange nahi ho sakta, isliye 'Some apples are not oranges' nishchit roop se satya hai (II follows). Baki bache hue hisse ke liye apples aur orange me ya toh overlap hoga ya bilkul nahi hoga (Either I or III). Sahi vikalp  hai.\nSahi uttar 'Only II and either I or III follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_45",
+    "qe": "Statements:\n(1) Some A are B.\n(2) All B are C.\nConclusions (Possibility from A to C):\nI. All A are C is a possibility.\nII. Some A are C is a possibility.\nIII. Some A are not C is a possibility.\nIV. No A is C is a possibility.",
+    "qh": "कथन:\n(1) कुछ A, B हैं।\n(2) सभी B, C हैं।\nनिष्कर्ष (A से C की संभावना):\nI. सभी A के C होने की संभावना है।\nII. कुछ A के C होने की संभावना है।\nIII. कुछ A के C नहीं होने की संभावना है।\nIV. कोई A के C नहीं होने की संभावना है।",
+    "oe": [
+      "Only I and II follow",
+      "Only I and III follow",
+      "Only II and III follow",
+      "Only I and IV follow"
+    ],
+    "oh": [
+      "Only I and II follow",
+      "Only I and III follow",
+      "Only II and III follow",
+      "Only I and IV follow"
+    ],
+    "a": 1,
+    "e": "Method 1 (Possibility Rules Shortcut):\nStep 1: A aur C ke beech definite result nikalein: Some A (50) are B (50) + All B (100) are C (50) $\\implies$ 'Some A are C' definite result (100% satya) hai.\nStep 2: Possibility ke mukhya niyam:\n- Jo baat 100% satya (definite) hoti hai, uski possibility hamesha galat (False) hoti hai $\\implies$ Conclusion II galat hai.\n- Jo baat 100% asatya hoti hai, uski possibility bhi galat hoti hai. Yahan 'Some A are C' satya hai toh 'No A is C' 100% galat hai, isliye Conclusion IV ki possibility galat hai.\n- Definite 'Some' hone par 'All' aur 'Some not' ki possibility hamesha satya hoti hai:\n  - Conclusion I (All A are C is a possibility) $\\implies$ Correct.\n  - Conclusion III (Some A are not C is a possibility) $\\implies$ Correct.\nAtah kewal I aur III follow karte hain.\nCorrect option  Only I and III follow hai.\n\nMethod 2 (Venn Diagram Method):\nA aur C me kuch hissa common hai. Sambhavna hai ki poora A, C ke andar chala jaye (I possible), ya A ka bacha hua hissa C ke bahar hi rahe (III possible). Lekin 'No A is C' asambhav hai aur 'Some A are C' pehle se nishchit hai. Atah I aur III sahi hain.\nSahi uttar 'Only I and III follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_46",
+    "qe": "Statements:\n(1) Some A are B.\n(2) All B are C.\nConclusions (Possibility from C to A):\nI. All C are A is a possibility.\nII. Some C are A is a possibility.\nIII. Some C are not A is a possibility.\nIV. No C is A is a possibility.",
+    "qh": "कथन:\n(1) कुछ A, B हैं।\n(2) सभी B, C हैं।\nनिष्कर्ष (C से A की संभावना):\nI. सभी C के A होने की संभावना है।\nII. कुछ C के A होने की संभावना है।\nIII. कुछ C के A नहीं होने की संभावना है।\nIV. कोई C के A नहीं होने की संभावना है।",
+    "oe": [
+      "Only I and III follow",
+      "Only I and II follow",
+      "Only II and IV follow",
+      "Only III and IV follow"
+    ],
+    "oh": [
+      "Only I and III follow",
+      "Only I and II follow",
+      "Only II and IV follow",
+      "Only III and IV follow"
+    ],
+    "a": 0,
+    "e": "Method 1 (Possibility from C to A Shortcut):\nStep 1: C se A ki or definite result nikalein: 'Some C are A' 100% nishchit satya hai.\nStep 2: Possibility check karein:\n- Conclusion II: 'Some C are A is a possibility' - Chuki yeh pehle se definite satya hai, isliye iski possibility galat hai.\n- Conclusion IV: 'No C is A is a possibility' - Yeh definite result ke viprit (100% galat) hai, isliye iski possibility galat hai.\n- Conclusion I: 'All C are A is a possibility' - Definite 'Some' se 'All' ki possibility banti hai (Correct).\n- Conclusion III: 'Some C are not A is a possibility' - Bacha hua C bahar reh sakta hai (Correct).\nAtah kewal I aur III follow karte hain.\nCorrect option  Only I and III follow hai.\n\nMethod 2 (Direct Inference Rule):\nJab do elements ke beech 'Some' ka nishchit sambandh ho, toh dono dishaon se 'All' aur 'Some not' ki possibilities satya hoti hain. Isliye I aur III satya hain.\nSahi uttar 'Only I and III follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_47",
+    "qe": "Statements:\n(1) All pens are pencils.\n(2) All pencils are black.\nConclusions:\nI. All pens are black is a possibility.\nII. Some pens are black is a possibility.\nIII. Some pens are not black is a possibility.\nIV. No pen is black is a possibility.",
+    "qh": "कथन:\n(1) सभी पेन पेंसिल हैं।\n(2) सभी पेंसिल काली हैं।\nनिष्कर्ष:\nI. सभी पेन के काले होने की संभावना है।\nII. कुछ पेन के काले होने की संभावना है।\nIII. कुछ पेन के काले नहीं होने की संभावना है।\nIV. कोई पेन के काले नहीं होने की संभावना है।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only I and III follow",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only I and III follow",
+      "None follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (Definite Truth vs Possibility Shortcut):\nStep 1: Statements ko jodein: All pens (100) are pencils (50) + All pencils (100) are black (50) $\\implies$ Definite result hai: 'All pens are black' (100% nishchit satya).\nStep 2: Niyam: Jahan nishchit parinaam (certainty) gyat ho, wahan sambhavna (possibility) ka astitva nahi hota:\n- I. 'All pens are black' pehle se 100% satya hai, isliye iski possibility galat hai.\n- II. 'Some pens are black' bhi 100% satya hai, isliye possibility galat hai.\n- III. 'Some pens are not black' 100% asatya hai, isliye possibility galat hai.\n- IV. 'No pen is black' 100% asatya hai, isliye possibility galat hai.\nAtah koi bhi possibility follow nahi karti.\nCorrect option  None follows hai.\n\nMethod 2 (Venn Diagram Method):\nPens poori tarah Black ke andar hain. Jo pehle se nishchit hai uski sambhavna nahi hoti aur jo asambhav hai uski bhi sambhavna nahi hoti. Isliye sabhi galat hain.\nSahi uttar 'None follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_48",
+    "qe": "Statements:\n(1) Some markers are pens.\n(2) All pens are black.\nConclusions:\nI. All markers are black is a possibility.\nII. Some markers are black is a possibility.\nIII. No marker is black is a possibility.\nIV. Some markers are not black is a possibility.",
+    "qh": "कथन:\n(1) कुछ मार्कर पेन हैं।\n(2) सभी पेन काले हैं।\nनिष्कर्ष:\nI. सभी मार्कर के काले होने की संभावना है।\nII. कुछ मार्कर के काले होने की संभावना है।\nIII. कोई मार्कर के काले नहीं होने की संभावना है।\nIV. कुछ मार्कर के काले नहीं होने की संभावना है।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Only I and IV follow"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "Only I and IV follow"
+    ],
+    "a": 3,
+    "e": "Method 1 (Definite 'Some' Possibility Shortcut):\nStep 1: Definite result nikalein: Some markers (50) are pens (50) + All pens (100) are black (50) $\\implies$ 'Some markers are black' 100% nishchit satya hai.\nStep 2: Possibilities evaluate karein:\n- Conclusion II: 'Some markers are black is a possibility' - Definite satya hone ke karan possibility galat hai.\n- Conclusion III: 'No marker is black is a possibility' - 100% asatya hone ke karan possibility galat hai.\n- Conclusion I: 'All markers are black is a possibility' - Bacha hua marker black ho sakta hai (Follows).\n- Conclusion IV: 'Some markers are not black is a possibility' - Bacha hua marker black se bahar reh sakta hai (Follows).\nAtah kewal I aur IV follow karte hain.\nCorrect option  Only I and IV follow hai.\n\nMethod 2 (Venn Diagram Inspection):\nMarkers aur Black ka common area pen ke dwara ban chuka hai. Poore Markers Black me ja sakte hain (I true), aur bache hue Markers Black se bahar bhi reh sakte hain (IV true). I aur IV sahi hain.\nSahi uttar 'Only I and IV follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_49",
+    "qe": "Statements:\n(1) All markers are pens.\n(2) No pen is black.\nConclusions:\nI. All markers are black is a possibility.\nII. Some markers are black is a possibility.\nIII. Some markers are not black is a possibility.\nIV. No marker is black is a possibility.",
+    "qh": "कथन:\n(1) सभी मार्कर पेन हैं।\n(2) कोई पेन काला नहीं है।\nनिष्कर्ष:\nI. सभी मार्कर के काले होने की संभावना है।\nII. कुछ मार्कर के काले होने की संभावना है।\nIII. कुछ मार्कर के काले नहीं होने की संभावना है।\nIV. कोई मार्कर के काले नहीं होने की संभावना है।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "None follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only III follows",
+      "None follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (Definite Universal Negative Possibility Shortcut):\nStep 1: Definite result nikalein: All markers (100) are pens (50) [+] + No pen (100) is black (100) [-] $\\implies$ 'No marker is black' 100% nishchit satya hai.\nStep 2: Possibility check karein:\n- 'No marker is black' aur 'Some markers are not black' dono definite facts hain, isliye III aur IV ki possibility galat hai.\n- 'All markers are black' aur 'Some markers are black' 100% asatya hain, isliye I aur II ki possibility bhi galat hai.\nAtah koi bhi possibility follow nahi karti.\nCorrect option  None follows hai.\n\nMethod 2 (Disjoint Set Method):\nMarkers Pens ke andar hain aur Pens ka Black se koi naata nahi hai. Isliye Markers kabhi Black nahi ho sakte. Nishchit sthiti hone ke karan sabhi possibilities galat hain.\nSahi uttar 'None follows' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_50",
+    "qe": "Statements:\n(1) Some markers are pens.\n(2) No pen is black.\nConclusions:\nI. All markers are black is a possibility.\nII. Some markers are black is a possibility.\nIII. Some markers are not black is a possibility.\nIV. No marker is black is a possibility.",
+    "qh": "कथन:\n(1) कुछ मार्कर पेन हैं।\n(2) कोई पेन काला नहीं है।\nनिष्कर्ष:\nI. सभी मार्कर के काले होने की संभावना है।\nII. कुछ मार्कर के काले होने की संभावना है।\nIII. कुछ मार्कर के काले नहीं होने की संभावना है।\nIV. कोई मार्कर के काले नहीं होने की संभावना है।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only II and IV follow",
+      "Only IV follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only II and IV follow",
+      "Only IV follows"
+    ],
+    "a": 2,
+    "e": "Method 1 (Definite 'Some Not' Possibility Shortcut):\nStep 1: Definite result nikalein: Some markers (50) are pens (50) [+] + No pen (100) is black (100) [-] $\\implies$ 'Some markers (50) are not black (100)' [-] 100% nishchit satya hai.\nStep 2: Possibilities test karein:\n- Conclusion III: 'Some markers are not black is a possibility' - Yeh nishchit satya hai, atah possibility galat hai.\n- Conclusion I: 'All markers are black is a possibility' - Chuki kuch markers kabhi black nahi ho sakte, isliye sabhi ke black hone ki sambhavna 100% asatya hai (Galat).\n- Conclusion II: 'Some markers are black is a possibility' - Bacha hua markers ka hissa black ho sakta hai (Follows).\n- Conclusion IV: 'No marker is black is a possibility' - Poora marker black se alag reh sakta hai (Follows).\nAtah kewal II aur IV follow karte hain.\nCorrect option  Only II and IV follow hai.\n\nMethod 2 (Venn Diagram Method):\nMarkers ka jo hissa Pen hai vah Black nahi ho sakta. Bacha hua Markers Black ke sath overlap kar bhi sakta hai (II possible) aur poori tarah bahar bhi reh sakta hai (IV possible). II aur IV sahi hain.\nSahi uttar 'Only II and IV follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_51",
+    "qe": "Statements:\n(1) No dog is cat.\n(2) No cat is mouse.\n(3) No mouse is bird.\nConclusions:\nI. All dogs are birds is a possibility.\nII. Some dogs are birds is a possibility.\nIII. Some dogs are not birds is a possibility.\nIV. No dog is bird is a possibility.",
+    "qh": "कथन:\n(1) कोई कुत्ता बिल्ली नहीं है।\n(2) कोई बिल्ली चूहा नहीं है।\n(3) कोई चूहा पक्षी नहीं है।\nनिष्कर्ष:\nI. सभी कुत्तों के पक्षी होने की संभावना है।\nII. कुछ कुत्तों के पक्षी होने की संभावना है।\nIII. कुछ कुत्तों के पक्षी नहीं होने की संभावना है।\nIV. कोई कुत्ते के पक्षी नहीं होने की संभावना है।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Only IV follows",
+      "All follow"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Only IV follows",
+      "All follow"
+    ],
+    "a": 3,
+    "e": "Method 1 ('No Relation' All Possibilities Rule Shortcut):\nStep 1: Statements (1) aur (3) negative hain. Niyam: Do ya do se adhik negative statements ke beech koi definite relation draw nahi kiya ja sakta.\n- Atah 'Dogs' aur 'Birds' ke beech 'No Relation' (poorna anishchitta / complete uncertainty) ki sthiti hai.\nStep 2: Golden Rule: Jab do elements ke beech koi nishchit sambandh na ho, toh unke beech sabhi charo possibilities (All, Some, Some-not, No) poori tarah satya hoti hain.\nStep 3: I, II, III aur IV sabhi follow karte hain.\nCorrect option  All follow hai.\n\nMethod 2 (Venn Diagram Method):\nDogs aur Birds ke beech koi direct pratibandh nahi hai. Ve ek doosre ke andar aa sakte hain, overlap kar sakte hain, ya poori tarah alag reh sakte hain. Isliye sabhi sambhavnaayein satya hain.\nSahi uttar 'All follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_52",
+    "qe": "Statements:\n(1) All books are copies.\n(2) No copy is pen.\n(3) No book is test.\nConclusions:\nI. All copies are books is a possibility.\nII. Some pens are not copies is a possibility.\nIII. All books are pens is a possibility.\nIV. All copies are tests is a possibility.\nV. All tests are copies is a possibility.",
+    "qh": "कथन:\n(1) सभी किताबें कॉपी हैं।\n(2) कोई कॉपी पेन नहीं है।\n(3) कोई किताब टेस्ट नहीं है।\nनिष्कर्ष:\nI. सभी कॉपी के किताबें होने की संभावना है।\nII. कुछ पेन के कॉपी नहीं होने की संभावना है।\nIII. सभी किताबों के पेन होने की संभावना है।\nIV. सभी कॉपी के टेस्ट होने की संभावना है।\nV. सभी टेस्ट के कॉपी होने की संभावना है।",
+    "oe": [
+      "Only I and II follow",
+      "Only II and IV follow",
+      "Only III and IV follow",
+      "Only I and V follow"
+    ],
+    "oh": [
+      "Only I and II follow",
+      "Only II and IV follow",
+      "Only III and IV follow",
+      "Only I and V follow"
+    ],
+    "a": 3,
+    "e": "Method 1 (Definite vs Possibility Analysis Shortcut):\nStep 1: Conclusions ka ek-ek karke vishleshan karein:\n- Conclusion I: Statement (1) All books are copies se definite result 'Some copies are books' hai. Atah 'All copies are books is a possibility' bilkul satya hai (Follows).\n- Conclusion II: Statement (2) No copy is pen se 'Some pens are not copies' 100% nishchit satya hai. Nishchit hone ke karan iski possibility galat hai.\n- Conclusion III: Statement (1) aur (2) se 'No book is pen' definite satya hai, atah 'All books are pens' 100% asatya hai (Possibility galat).\n- Conclusion IV: Statement (1) aur (3) se 'Some copies are not tests' definite satya hai, atah 'All copies are tests' kabhi sambhav nahi hai (Possibility galat).\n- Conclusion V: Test se Copy ki taraf 'No Relation' ki sthiti banti hai kyunki Copy ki value 100 nahi ho sakti, atah 'All tests are copies is a possibility' poori tarah satya hai (Follows).\nAtah kewal I aur V follow karte hain.\nCorrect option  Only I and V follow hai.\n\nMethod 2 (Venn Diagram Method):\nCopies ka circle bada hokar Books ke barabar ho sakta hai (I true). Tests ka poora circle Copies ke us hisse me aa sakta hai jo Books nahi hai (V true). Baki sambhavnaayein diye gaye statements ka kandan karti hain ya pehle se nishchit hain. I aur V sahi hain.\nSahi uttar 'Only I and V follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_53",
+    "qe": "Statements:\n(1) All men are black.\n(2) All women are white.\n(3) No man is woman.\nConclusions:\nI. All black are men is a possibility.\nII. Some women are not men is a possibility.\nIII. All black are women is a possibility.\nIV. All women are black is a possibility.\nV. All men are white is a possibility.\nVI. All white are men is a possibility.\nVII. All white are black is a possibility.",
+    "qh": "कथन:\n(1) सभी पुरुष काले हैं।\n(2) सभी महिलाएँ सफेद हैं।\n(3) कोई पुरुष महिला नहीं है।\nनिष्कर्ष:\nI. सभी काले के पुरुष होने की संभावना है।\nII. कुछ महिलाओं के पुरुष नहीं होने की संभावना है।\nIII. सभी काले के महिला होने की संभावना है।\nIV. सभी महिलाओं के काले होने की संभावना है।\nV. सभी पुरुषों के सफेद होने की संभावना है।\nVI. सभी सफेद के पुरुष होने की संभावना है।\nVII. सभी सफेद के काले होने की संभावना है।",
+    "oe": [
+      "Only II, III and IV follow",
+      "Only I, IV and V follow",
+      "Only I, IV, V and VII follow",
+      "Only III, IV and V follow"
+    ],
+    "oh": [
+      "Only II, III and IV follow",
+      "Only I, IV and V follow",
+      "Only I, IV, V and VII follow",
+      "Only III, IV and V follow"
+    ],
+    "a": 2,
+    "e": "Method 1 (Definite vs Possibility Rules Shortcut):\nStep 1: Check each conclusion against definite inferences:\n- Conclusion I: Statement (1) se 'Some black are men' definite hai, isliye bache hue black ke men hone ki sambhavna (All black are men is a possibility) sahi hai (Follows).\n- Conclusion II: Statement (3) se 'No woman is man' definite hai, jisse 'Some women are not men' bhi 100% nishchit satya hai. Niyamit roop se jo 100% true ho, uski possibility galat hoti hai (Does not follow).\n- Conclusion III: 'Some black are men' aur 'No man is woman' milkar 'Some black are not women' definite dete hain. Isliye 'All black are women' ki possibility 100% galat hai (Does not follow).\n- Conclusion IV: Women se Black ki or 'No Relation' banta hai kyunki black ki value 100 nahi ho sakti, atah 'All women are black is a possibility' sahi hai (Follows).\n- Conclusion V: Men se White ki taraf negative conclusion banta hai par white ki value 100 nahi ho sakti, isliye 'All men are white is a possibility' valid hai (Follows).\n- Conclusion VI: White se Men ki taraf 'Some white are not men' definite nikalta hai, atah 'All white are men' ki sambhavna galat hai (Does not follow).\n- Conclusion VII: White aur Black ke beech do positive statements ek negative se judte hain par dono 50 hain, isliye uncertainty ke chalte 'All white are black is a possibility' sahi hai (Follows).\nAtah kewal I, IV, V aur VII follow karte hain.\nCorrect option  Only I, IV, V and VII follow hai.\n\nMethod 2 (Venn Diagram Method):\nMen ⊂ Black, Women ⊂ White, aur Men aur Women disjoint hain. Black ka circle bada hokar Women ko chhodkar Men ke barabar ho sakta hai (I). Women poora Black ke us hisse me ja sakti hai jo Men nahi hai (IV). Is tarah I, IV, V aur VII valid possibilities hain.\nSahi uttar 'Only I, IV, V and VII follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_54",
+    "qe": "Statement: Only a few cars are buses.\nConclusions:\nI. All cars are buses is a possibility.\nII. No car is bus is a possibility.\nIII. Some cars are buses is a possibility.\nIV. Some cars are not buses is a possibility.\nV. All buses are cars is a possibility.\nVI. Some buses are cars is a possibility.\nVII. No bus is car is a possibility.\nVIII. Some buses are not cars is a possibility.",
+    "qh": "कथन: केवल कुछ ही कार बस हैं।\nनिष्कर्ष:\nI. सभी कार के बस होने की संभावना है।\nII. कोई कार के बस नहीं होने की संभावना है।\nIII. कुछ कार के बस होने की संभावना है।\nIV. कुछ कार के बस नहीं होने की संभावना है।\nV. सभी बस के कार होने की संभावना है।\nVI. कुछ बस के कार होने की संभावना है।\nVII. कोई बस के कार नहीं होने की संभावना है।\nVIII. कुछ बस के कार नहीं होने की संभावना है।",
+    "oe": [
+      "Only I, II, III and V follow",
+      "Only V and VIII follow",
+      "Only V, VII and VIII follow",
+      "Only VII and VIII follow"
+    ],
+    "oh": [
+      "Only I, II, III and V follow",
+      "Only V and VIII follow",
+      "Only V, VII and VIII follow",
+      "Only VII and VIII follow"
+    ],
+    "a": 1,
+    "e": "Method 1 ('Only a Few' Possibility Filter Shortcut):\nStep 1: 'Only a few cars are buses' se do definite conclusions nikalte hain:\n- 1. 'Some cars are buses' (100% Definite True)\n- 2. 'Some cars are not buses' (100% Definite True)\nStep 2: Testing conclusions I to IV (Cars to Buses):\n- I: 'All cars are buses' asambhav hai kyunki kuch cars bus nahi hain (False).\n- II: 'No car is bus' asambhav hai kyunki kuch cars bus hain (False).\n- III & IV: Dono pehle se definite satya hain, isliye inki possibility galat hoti hai.\nStep 3: Testing conclusions V to VIII (Buses to Cars):\n- Buses se Cars ki taraf kewal ek definite result hai: 'Some buses are cars'.\n- VI: 'Some buses are cars is a possibility' galat hai (definite fact).\n- VII: 'No bus is car' definite result ke viprit hai (False).\n- V: Poori Buses Cars ke andar aa sakti hain, atah 'All buses are cars is a possibility' sahi hai (Follows).\n- VIII: Bachi hui buses cars se bahar reh sakti hain, atah 'Some buses are not cars is a possibility' sahi hai (Follows).\nAtah kewal V aur VIII follow karte hain.\nCorrect option  Only V and VIII follow hai.\n\nMethod 2 (Venn Diagram Method):\nCars ka ek hissa anivarya roop se Buses se bahar rahega, isliye poori Cars kabhi Buses nahi ban sakti. Parantu poora Buses circle Cars ke us hisse me sama sakta hai jo common hai (V possible), ya bahar bhi reh sakta hai (VIII possible). Atah V aur VIII sahi hain.\nSahi uttar 'Only V and VIII follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_55",
+    "qe": "Statements:\n(1) Only a few boys are hero.\n(2) All boys are zero.\nConclusions:\nI. All boys are hero is a possibility.\nII. No boy is hero is a possibility.\nIII. All hero are boys is a possibility.\nIV. No hero is boy is a possibility.\nV. All hero are zero is a possibility.\nVI. No hero is zero is a possibility.\nVII. No zero is hero is a possibility.",
+    "qh": "कथन:\n(1) केवल कुछ ही लड़के हीरो हैं।\n(2) सभी लड़के जीरो हैं।\nनिष्कर्ष:\nI. सभी लड़कों के हीरो होने की संभावना है।\nII. कोई लड़के के हीरो नहीं होने की संभावना है।\nIII. सभी हीरो के लड़के होने की संभावना है।\nIV. कोई हीरो के लड़का नहीं होने की संभावना है।\nV. सभी हीरो के जीरो होने की संभावना है।\nVI. कोई हीरो के जीरो नहीं होने की संभावना है।\nVII. कोई जीरो के हीरो नहीं होने की संभावना है।",
+    "oe": [
+      "Only I, II and III follow",
+      "Only III and V follow",
+      "Only III, V and VI follow",
+      "Only V and VII follow"
+    ],
+    "oh": [
+      "Only I, II and III follow",
+      "Only III and V follow",
+      "Only III, V and VI follow",
+      "Only V and VII follow"
+    ],
+    "a": 1,
+    "e": "Method 1 (Dual Statement Possibility Evaluation Shortcut):\nStep 1: Boys aur Hero ke beech 'Only a few' hai $\\implies$ 'Some boys are hero' (+) aur 'Some boys are not hero' (-) dono definite hain:\n- Conclusion I galat hai (negative definite result ka ulanghan).\n- Conclusion II galat hai (positive definite result ka ulanghan).\nStep 2: Hero se Boys ki taraf kewal 'Some hero are boys' definite hai:\n- Conclusion III: 'All hero are boys is a possibility' bilkul sahi hai (Follows).\n- Conclusion IV: 'No hero is boy is a possibility' galat hai kyunki kuch hero pehle se boys hain.\nStep 3: Hero aur Zero ka sambandh:\n- 'Some hero are boys' [+] + 'All boys are zero' [+] $\\implies$ Definite result hai: 'Some hero are zero' [+].\n- Conclusion V: 'All hero are zero is a possibility' satya hai kyunki 'Some' se 'All' ki sambhavna banti hai (Follows).\n- Conclusion VI & VII: 'No hero is zero' aur 'No zero is hero' 100% asatya hain kyunki dono me kuch hissa common hai (Possibility galat).\nAtah kewal III aur V follow karte hain.\nCorrect option  Only III and V follow hai.\n\nMethod 2 (Venn Diagram Method):\nBoys poore Zero ke andar hain aur Hero ka Boys ke sath kewal aamne-samne ka kuch hissa juda hai. Poora Hero, Boys ke andar aa sakta hai (III true), aur poora Hero, Zero ke andar bhi aa sakta hai (V true). Kewal III aur V sahi hain.\nSahi uttar 'Only III and V follow' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_56",
+    "qe": "Statements:\n(1) All books are copies.\n(2) No book is pen.\nConclusions:\nI. All copies are books.\nII. Some pens are not books.\nIII. All pens are copies.\nIV. All copies are pens.\nV. Some copies are not pens.\nWhich of the conclusions will definitely not follow (100% false)?",
+    "qh": "कथन:\n(1) सभी किताबें कॉपी हैं।\n(2) कोई किताब पेन नहीं है।\nनिष्कर्ष:\nI. सभी कॉपी किताबें हैं।\nII. कुछ पेन किताबें नहीं हैं।\nIII. सभी पेन कॉपी हैं।\nIV. सभी कॉपी पेन हैं।\nV. कुछ कॉपी पेन नहीं हैं।\nइनमें से कौन-सा निष्कर्ष निश्चित रूप से गलत (definitely not follow / 100% false) है?",
+    "oe": [
+      "Only I",
+      "Only III",
+      "Only IV",
+      "Only I and IV"
+    ],
+    "oh": [
+      "Only I",
+      "Only III",
+      "Only IV",
+      "Only I and IV"
+    ],
+    "a": 2,
+    "e": "Method 1 ('Definitely Not Follow' Rule Shortcut):\nStep 1: 'Definitely not follow' (100% False) ka niyam: Aisa nishkarsh jo na toh 100% satya ho aur na hi uske satya hone ki koi sambhavna (possibility) ho.\nStep 2: Check each conclusion:\n- I. All copies are books: Definite result 'Some copies are books' hai, atah 'All copies are books' ki possibility exist karti hai (Yeh 100% false nahi hai).\n- II. Some pens are not books: Statement (2) No book is pen se yeh 100% True conclusion hai.\n- III. All pens are copies: Pen se Copy me No Relation (uncertainty) hai, atah iski possibility ban sakti hai (100% false nahi hai).\n- V. Some copies are not pens: Statement (1) aur (2) se 'Some copies (Books) are not pens' 100% True hai.\n- IV. All copies are pens: Chuki 'Some copies are not pens' 100% satya hai, isliye sabhi copies kabhi pen nahi ho sakti. Iski sambhavna 0% hai (100% False / Definitely not follow).\nAtah kewal Conclusion IV definitely not follow karta hai.\nCorrect option  Only IV hai.\n\nMethod 2 (Logical Contradiction Method):\nCopies ka jo hissa Books hai vah kabhi Pen nahi ho sakta. Atah 'All copies are pens' purna roop se asambhav (contradictory) hai. Kewal IV definitely not follow karega.\nSahi uttar 'Only IV' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_57",
+    "qe": "Statements:\n(1) All cars are buses.\n(2) All trains are planes.\n(3) No car is plane.\nConclusions:\nI. Some buses are cars.\nII. Some trains are planes.\nIII. No train is car.\nIV. Some buses are planes.\nV. All trains are buses.\nVI. All buses are trains.\nVII. All trains are cars.\n(i) Which are the conclusions that will definitely follow?\n(ii) Which are the conclusions that are likely to be true (possibility)?\n(iii) Which are the conclusions that will definitely not follow?",
+    "qh": "कथन:\n(1) सभी कार बस हैं।\n(2) सभी ट्रेन प्लेन हैं।\n(3) कोई कार प्लेन नहीं है।\nनिष्कर्ष:\nI. कुछ बस कार हैं।\nII. कुछ ट्रेन प्लेन हैं।\nIII. कोई ट्रेन कार नहीं है।\nIV. कुछ बस प्लेन हैं।\nV. सभी ट्रेन बस हैं।\nVI. सभी बस ट्रेन हैं।\nVII. सभी ट्रेन कार हैं।\n(i) कौन-से निष्कर्ष निश्चित रूप से अनुसरण करेंगे?\n(ii) किन निष्कर्षों के सत्य होने की संभावना है?\n(iii) कौन-से निष्कर्ष निश्चित रूप से गलत (definitely not follow) हैं?",
+    "oe": [
+      "(i) Only I, II, III; (ii) IV, V; (iii) VI, VII",
+      "(i) Only I and II; (ii) III, IV; (iii) V, VI",
+      "(i) Only I and III; (ii) V; (iii) IV, VII",
+      "(i) Only II and III; (ii) IV, VI; (iii) I, VII"
+    ],
+    "oh": [
+      "(i) Only I, II, III; (ii) IV, V; (iii) VI, VII",
+      "(i) Only I and II; (ii) III, IV; (iii) V, VI",
+      "(i) Only I and III; (ii) V; (iii) IV, VII",
+      "(i) Only II and III; (ii) IV, VI; (iii) I, VII"
+    ],
+    "a": 0,
+    "e": "Method 1 (Three-Category Classification Shortcut):\nStep 1: Definitely True conclusions (100% Follows):\n- I: Statement (1) se conversion 'Some buses are cars' 100% true hai.\n- II: Statement (2) se conversion 'Some trains are planes' 100% true hai.\n- III: Statement (2) All trains are planes [+] aur (3) No car is plane [-] milkar 'No train is car' 100% true dete hain.\nAtah (i) Definitely Follow: Only I, II and III.\nStep 2: Likely to be true (Valid Possibilities):\n- IV: Buses se Plane me definite result 'Some buses are not planes' hai, isliye 'Some buses are planes' ki possibility satya hai.\n- V: Trains se Buses me koi negative lock nahi hai kyunki bus ki value 100 nahi ho sakti, isliye 'All trains are buses' ki possibility satya hai.\nAtah (ii) Likely to be true: IV and V.\nStep 3: Definitely Not Follow (100% False):\n- VI: All buses are trains - Buses ka jo hissa Cars hai vah kabhi Plane/Train nahi ho sakta, isliye all buses trains kabhi nahi ho sakti (100% False).\n- VII: All trains are cars - Chuki 'No train is car' 100% satya hai, isliye yeh 100% asambhav hai (100% False).\nAtah (iii) Definitely not follow: VI and VII.\nCorrect option  hai.\n\nMethod 2 (Venn Diagram Method):\nCars ⊂ Buses, Trains ⊂ Planes, aur Cars ∩ Planes = ∅. Trains aur Cars poori tarah alag hain (III true). Buses ka kuch hissa Cars hone ke karan Trains se bahar rahega, atah VI aur VII 100% asatya hain. '(i) Only I, II, III; (ii) IV, V; (iii) VI, VII' sahi hai.\nSahi uttar '(i) Only I, II, III; (ii) IV, V; (iii) VI, VII' hai.\n\nExam point: chaal-doori-samay ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_58",
+    "qe": "Statements:\n(1) Only a few chairs are tables.\n(2) All chairs are desks.\nConclusions:\nI. All chairs are tables.\nII. All tables are chairs.\nIII. All tables are desks.\nIV. All desks are tables.\nV. Some tables are desks.\nVI. Some desks are not tables.\nVII. Some desks are tables.\n(i) Which are the conclusions that will definitely follow?\n(ii) Which are the conclusions that are likely to be true?\n(iii) Which are the conclusions that will definitely not follow?",
+    "qh": "कथन:\n(1) केवल कुछ ही कुर्सियाँ मेज हैं।\n(2) सभी कुर्सियाँ डेस्क हैं।\nनिष्कर्ष:\nI. सभी कुर्सियाँ मेज हैं।\nII. सभी मेज कुर्सियाँ हैं।\nIII. सभी मेज डेस्क हैं।\nIV. सभी डेस्क मेज हैं।\nV. कुछ मेज डेस्क हैं।\nVI. कुछ डेस्क मेज नहीं हैं।\nVII. कुछ डेस्क मेज हैं।\n(i) कौन-से निष्कर्ष निश्चित रूप से अनुसरण करेंगे?\n(ii) किन निष्कर्षों के सत्य होने की संभावना है?\n(iii) कौन-से निष्कर्ष निश्चित रूप से गलत (definitely not follow) हैं?",
+    "oe": [
+      "(i) Only V, VI, VII; (ii) II, III; (iii) I, IV",
+      "(i) Only V and VII; (ii) I, II; (iii) III, IV",
+      "(i) Only VI and VII; (ii) III, IV; (iii) I, II",
+      "(i) Only V and VI; (ii) II, IV; (iii) I, III"
+    ],
+    "oh": [
+      "(i) Only V, VI, VII; (ii) II, III; (iii) I, IV",
+      "(i) Only V and VII; (ii) I, II; (iii) III, IV",
+      "(i) Only VI and VII; (ii) III, IV; (iii) I, II",
+      "(i) Only V and VI; (ii) II, IV; (iii) I, III"
+    ],
+    "a": 0,
+    "e": "Method 1 (Category-wise Complete Analysis Shortcut):\nStep 1: Definitely True conclusions:\n- Statement (1) ka positive hissa 'Some chairs are tables' aur Statement (2) 'All chairs are desks' milkar 'Some tables are desks' (V) aur iska conversion 'Some desks are tables' (VII) 100% satya dete hain.\n- Statement (1) ka negative hissa 'Some chairs are not tables' aur Statement (2) 'All chairs are desks' milkar 'Some desks are not tables' (VI) 100% satya dete hain.\nAtah (i) Definitely Follow: V, VI and VII.\nStep 2: Likely to be true (Possibilities):\n- II: Tables se Chairs me definite result 'Some tables are chairs' hai, atah 'All tables are chairs' ki sambhavna satya hai.\n- III: Tables se Desks me definite result 'Some tables are desks' hai, atah 'All tables are desks' ki sambhavna satya hai.\nAtah (ii) Likely to be true: II and III.\nStep 3: Definitely Not Follow (100% False):\n- I: 'Only a few chairs are tables' hone ke karan 'All chairs are tables' 100% galat hai.\n- IV: Desks ka jo hissa Chairs hai vah poora tables nahi ho sakta, atah 'All desks are tables' 100% asambhav hai.\nAtah (iii) Definitely not follow: I and IV.\nCorrect option  hai.\n\nMethod 2 (Definite vs Possibility Rule Verification):\nV, VI, VII pratyaksh roop se sidhh hain. Tables dono me samahit ho sakti hain (II, III possibility true). Chairs aur Desks kabhi poori tables nahi ho sakti (I, IV definitely false). Sahi uttar '(i) Only V, VI, VII; (ii) II, III; (iii) I, IV' hai.\nSahi uttar '(i) Only V, VI, VII; (ii) II, III; (iii) I, IV' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_59",
+    "qe": "Inverse Syllogism: Which of the following sets of statements produces the given conclusions?\nConclusions:\nI. All rains are water.\nII. No rain is cloud.",
+    "qh": "प्रतिलोम न्याय वाक्य (Inverse Syllogism): निम्नलिखित में से कथनों का कौन-सा समूह दिए गए निष्कर्षों को प्राप्त करता है?\nनिष्कर्ष:\nI. सभी वर्षा पानी हैं।\nII. कोई वर्षा बादल नहीं है।",
+    "oe": [
+      "Statements: (1) All rains are blue. (2) All blue are clouds. (3) All clouds are water.",
+      "Statements: (1) No rain is blue. (2) No blue is water. (3) No water is cloud.",
+      "Statements: (1) All rains are blue. (2) All blue are water. (3) Some water are not clouds.",
+      "Statements: (1) All rains are blue. (2) Some blue are water. (3) No water is cloud.",
+      "Statements: (1) All rains are blue. (2) All blue are water. (3) No water is cloud."
+    ],
+    "oh": [
+      "Statements: (1) All rains are blue. (2) All blue are clouds. (3) All clouds are water.",
+      "Statements: (1) No rain is blue. (2) No blue is water. (3) No water is cloud.",
+      "Statements: (1) All rains are blue. (2) All blue are water. (3) Some water are not clouds.",
+      "Statements: (1) All rains are blue. (2) Some blue are water. (3) No water is cloud.",
+      "Statements: (1) All rains are blue. (2) All blue are water. (3) No water is cloud."
+    ],
+    "a": 4,
+    "e": "Method 1 (Inverse Syllogism Elimination Shortcut):\nStep 1: Check Conclusion I ('All rains are water' [+]):\n- Rains aur Water dono positive hone chahiye aur Rains 100 hona chahiye.\n- 'Statements: (1) No rain is blue. (2) No blue is water. (3) No water is cloud' me sabhi negative hain, positive ban hi nahi sakta (Eliminate).\n- 'Statements: (1) All rains are blue. (2) Some blue are water. (3) No water is cloud' me 'Some blue are water' hai (Blue = 50), statement connect nahi hoga (Eliminate).\nStep 2: Check Conclusion II ('No rain is cloud' [-]):\n- 'Statements: (1) All rains are blue. (2) All blue are clouds. (3) All clouds are water' me sabhi statements positive hain, positive se negative conclusion kabhi nahi ban sakta (Eliminate).\n- 'Statements: (1) All rains are blue. (2) All blue are water. (3) Some water are not clouds' me 'Some water are not clouds' (Particular negative) hai, isse universal negative 'No rain is cloud' nahi ban sakta (Eliminate).\nStep 3: 'Statements: (1) All rains are blue. (2) All blue are water. (3) No water is cloud' test karein:\n- (1) All rains (100) are blue (50) [+] + (2) All blue (100) are water (50) [+] $\\implies$ 'All rains are water' (Conclusion I verified).\n- Ab isse (3) 'No water (100) is cloud (100)' [-] ke sath jodein (Water common term = 100):\n  - Result: 'No rain (100) is cloud (100)' (Conclusion II verified).\nCorrect option  hai.\n\nMethod 2 (Sign & Value Inspection):\nRains ⊂ Blue ⊂ Water aur Water ∩ Cloud = ∅. Isse saaf sidhh hota hai ki sabhi Rains Water ke andar hain (I follows) aur koi bhi Rain Cloud nahi ho sakti (II follows). Kewal 'Statements: (1) All rains are blue. (2) All blue are water. (3) No water is cloud' sahi set hai.\nSahi uttar 'Statements: (1) All rains are blue. (2) All blue are water. (3) No water is cloud' hai.\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_60",
+    "qe": "Statements: (1) All cars are buses. (2) All trains are planes. (3) ?\nConclusion: I. Some buses are not trains.\nWhich of the statements given below can be used with statement (1) and (2) so that conclusion-I can be formed?\n(i) All cars are planes.\n(ii) No plane is car.\n(iii) All planes are not cars.\n(iv) All cars are not planes.\n(v) Some cars are planes.",
+    "qh": "कथन: (1) सभी कार बस हैं। (2) सभी ट्रेन प्लेन हैं। (3) ?\nनिष्कर्ष: I. कुछ बस ट्रेन नहीं हैं।\nनीचे दिए गए कथनों में से कौन-सा कथन (1) और (2) के साथ प्रयोग किया जा सकता है ताकि निष्कर्ष-I प्राप्त हो सके?\n(i) सभी कार प्लेन हैं।\n(ii) कोई प्लेन कार नहीं है।\n(iii) सभी प्लेन कार नहीं हैं।\n(iv) सभी कार प्लेन नहीं हैं।\n(v) कुछ कार प्लेन हैं।",
+    "oe": [
+      "Only statement (i) or (iii)",
+      "Only statement (ii) or (iv)",
+      "Only statement (iii) or (v)",
+      "Only statement (iv) or (v)"
+    ],
+    "oh": [
+      "Only statement (i) or (iii)",
+      "Only statement (ii) or (iv)",
+      "Only statement (iii) or (v)",
+      "Only statement (iv) or (v)"
+    ],
+    "a": 1,
+    "e": "Method 1 (Negative Connection & Income-Expense Elimination Shortcut):\nStep 1: Conclusion 'Some buses are not trains' ek negative (-) nishkarsh hai[cite: 43]. Chuki Statement (1) aur (2) dono positive (+) hain, atah Statement (3) anivarya roop se negative (-) hona chahiye[cite: 43]. Isliye positive statements (i) aur (v) sidhe eliminate ho jate hain[cite: 43].\nStep 2: Statements (ii) aur (iv) ko test karein[cite: 43]:\n- Case 1 (Statement ii: 'No plane is car' [-]): Statement (2) 'All trains (100) are planes (50)' [+] aur 'No plane (100) is car (100)' [-] milkar 'No train (100) is car (100)' dete hain[cite: 43]. Ab ise Statement (1) 'All cars (100) are buses (50)' [+] ke sath jodne par valid conclusion banta hai: 'Some buses (50) are not trains (100)'[cite: 43]. Atah statement (ii) sahi hai[cite: 43].\n- Case 2 (Statement iv: 'All cars are not planes' [-]): 'All...not' ka standard conversion 'Some cars (50) are not planes (100)' hota hai[cite: 36, 43]. Yahan 'planes' 100 hone par Statement (2) 'All trains (100) are planes (50)' connect hokar buses aur trains ke beech 'Some buses are not trains' nikalta hai[cite: 43]. Atah statement (iv) bhi sahi hai[cite: 43].\nStep 3: Statement (iii) 'All planes are not cars' me planes ki value 50 rehti hai, jisse Statement (2) ke sath common term 100 na hone ke karan connection nahi ban pata[cite: 43].\nAtah kewal statement (ii) ya (iv) ka upayog kiya ja sakta hai[cite: 43].\nCorrect option  Only statement (ii) or (iv) hai[cite: 43].\n\nMethod 2 (Sign & Option Elimination Method):\noptions 'Only statement (i) or (iii)' and 'Only statement (iii) or (v)', aur (D) me positive statements (i ya v) ya invalid statement (iii) shamil hain[cite: 43]. Kewal 'Only statement (ii) or (iv)' me dono valid negative statements (ii aur iv) maujood hain[cite: 43].\nSahi uttar 'Only statement (ii) or (iv)' hai[cite: 43].\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_61",
+    "qe": "Statements: (1) Some A are B. (2) All A are C.\nConclusions:\nI. Those A which are not B, are also C.\nII. Those A which are not B, are not also C.",
+    "qh": "कथन: (1) कुछ A, B हैं। (2) सभी A, C हैं।\nनिष्कर्ष:\nI. वे A जो B नहीं हैं, वे C भी हैं।\nII. वे A जो B नहीं हैं, वे C भी नहीं हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "Neither I nor II follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Either I or II follows",
+      "Neither I nor II follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (Universal Subset Inclusion Shortcut):\nStep 1: Statement (2) me spasht roop se kaha gaya hai ki 'All A are C' (Sabhi A, C ke andar aate hain)[cite: 43].\nStep 2: Iska nishchit arth hai ki A ka pratyek hissa chahe vah B ho ya B na ho, anivarya roop se C ka bhag hoga hi[cite: 43].\nStep 3: Conclusions evaluate karein:\n- Conclusion I: 'Those A which are not B, are also C' 100% satya hai kyunki sabhi A, C ke bhitar hain[cite: 43].\n- Conclusion II: Yeh Statement (2) ka seedha kandan karta hai, atah asatya hai[cite: 43].\nAtah kewal Conclusion I follow karta hai[cite: 43].\nCorrect option  Only I follows hai[cite: 43].\n\nMethod 2 (Venn Diagram Inspection Method):\nA ka poora circle C ke andar sthit hai[cite: 43]. B ka circle chahe A ke kuch hisse ko kaate ya na kaate, A ka har ek bindu C ke hi kshetra me rahega[cite: 43]. Isliye A ka jo hissa B me nahi hai, vah bhi C me hi hoga[cite: 43].\nSahi uttar 'Only I follows' hai[cite: 43].\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_62",
+    "qe": "Statements: (1) All English movies are violent. (2) Some people like watching English movies.\nConclusions:\nI. All people watching English movies like violence.\nII. All people who like violence watch English movies.",
+    "qh": "कथन: (1) सभी अंग्रेजी फिल्में हिंसक हैं। (2) कुछ लोग अंग्रेजी फिल्में देखना पसंद करते हैं।\nनिष्कर्ष:\nI. अंग्रेजी फिल्में देखने वाले सभी लोग हिंसा पसंद करते हैं।\nII. हिंसा पसंद करने वाले सभी लोग अंग्रेजी फिल्में देखते हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (Predicate to Subject Non-Reversibility Shortcut):\nStep 1: Statement (1) kehta hai ki sabhi English movies violent hain[cite: 43]. Atah jo bhi vyakti English movies dekhega ya pasand karega, vah anivarya roop se violence ko pasand karega[cite: 44].\n- Isliye Conclusion I ('All people watching English movies like violence') 100% nishchit satya hai[cite: 43, 44].\nStep 2: Statement se 'All violent are English movies' nikalna galat conversion hoga (All A are B does not mean All B are A)[cite: 44]. Atah violence pasand karne wale sabhi log English movies dekhein, yeh nishchit nahi hai[cite: 44].\n- Isliye Conclusion II galat hai[cite: 44].\nAtah kewal I follow karta hai[cite: 44].\nCorrect option  Only I follows hai[cite: 44].\n\nMethod 2 (Venn Diagram Method):\nEnglish Movies poori tarah Violence ke circle ke andar hain[cite: 43]. Jo log English Movies ke circle me hain, ve nishchit roop se Violence ke andar honge (I true)[cite: 44]. Parantu Violence ka baki kshetra English Movies ke bahar bhi faila ho sakta hai (II false)[cite: 44].\nSahi uttar 'Only I follows' hai[cite: 44].\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_63",
+    "qe": "Statements: (1) Most players are men. (2) Some men are singers.\nConclusions:\nI. Some singers are men.\nII. Some players are singers.",
+    "qh": "कथन: (1) अधिकांश खिलाड़ी पुरुष हैं। (2) कुछ पुरुष गायक हैं।\nनिष्कर्ष:\nI. कुछ गायक पुरुष हैं।\nII. कुछ खिलाड़ी गायक हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "a": 0,
+    "e": "Method 1 (Keyword Conversion & 100-50 Shortcut):\nStep 1: 'Most' ka arth logical reasoning me 'Some' hota hai[cite: 44]:\n- Statement (1): Some players (50) are men (50) [+][cite: 44].\n- Statement (2): Some men (50) are singers (50) [+][cite: 44].\nStep 2: Statements connection test:\n- Common term 'men' dono statements me 50 hai (kisi me bhi 100 nahi hai)[cite: 44]. Isliye dono statements connect nahi ho sakte aur players tatha singers ke beech koi definite relation nahi banega[cite: 44].\n- Isliye Conclusion II (Some players are singers) galat hai[cite: 44].\nStep 3: Statement (2) ka direct conversion:\n- 'Some men are singers' ka conversion 'Some singers are men' 100% valid hota hai[cite: 44].\n- Isliye Conclusion I follow karta hai[cite: 44].\nAtah kewal I follow karta hai[cite: 44].\nCorrect option  Only I follows hai[cite: 44].\n\nMethod 2 (Direct Conversion vs Unconnected Terms):\nConclusion I ek direct valid conversion hai jabki Conclusion II do 'Some' statements ko jodne ka prayas hai jo anishchit hota hai[cite: 44]. Kewal Conclusion I satya hai[cite: 44].\nSahi uttar 'Only I follows' hai[cite: 44].\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_64",
+    "qe": "Statements: (1) All mangoes are golden in colour. (2) No golden coloured things are cheap.\nConclusions:\nI. All mangoes are cheap.\nII. Golden-coloured mangoes are not cheap.",
+    "qh": "कथन: (1) सभी आम सुनहरे रंग के हैं। (2) कोई सुनहरे रंग की वस्तु सस्ती नहीं है।\nनिष्कर्ष:\nI. सभी आम सस्ते हैं।\nII. सुनहरे रंग के आम सस्ते नहीं हैं।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "a": 1,
+    "e": "Method 1 (Sign Rules & Deductive Inference Shortcut):\nStep 1: Statement (1) (+) hai aur Statement (2) (-) hai[cite: 44]. Inke connection se nikalne wala koi bhi parinaam kewal negative (-) hi ho sakta hai[cite: 44].\n- Conclusion I positive (+) hone ke karan sidhe galat ho jata hai[cite: 44].\nStep 2: Statement (2) kehta hai ki koi bhi sunahri cheez sasti nahi hai[cite: 44].\n- Chuki sabhi aam sunahre rang ke hain (aur unka sunahra hissa statement 1 me hai), atah sunahre rang ke aam kabhi bhi saste nahi ho sakte ('Golden-coloured mangoes are not cheap' [-])[cite: 44].\n- Isliye Conclusion II 100% nishchit satya hai[cite: 44].\nAtah kewal II follow karta hai[cite: 44].\nCorrect option  Only II follows hai[cite: 44].\n\nMethod 2 (Disjoint Set Method):\nMangoes ⊂ Golden Coloured Things aur Golden Coloured Things ∩ Cheap = ∅[cite: 44]. Isliye koi bhi aam sasta nahi ho sakta[cite: 44]. All mangoes are cheap galat hai aur Golden-coloured mangoes are not cheap bilkul satya hai[cite: 44].\nSahi uttar 'Only II follows' hai[cite: 44].\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "syllogism_65",
+    "qe": "Statements: (1) Some water is cold. (2) No cold is milk. (3) Some milk is water.\nConclusions:\nI. Some water that is cold is milk.\nII. Some milk that is water is cold.",
+    "qh": "कथन: (1) कुछ पानी ठंडा है। (2) कोई ठंडा दूध नहीं है। (3) कुछ दूध पानी है।\nनिष्कर्ष:\nI. कुछ पानी जो ठंडा है, वह दूध है।\nII. कुछ दूध जो पानी है, वह ठंडा है।",
+    "oe": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "oh": [
+      "Only I follows",
+      "Only II follows",
+      "Both I and II follow",
+      "Neither I nor II follows"
+    ],
+    "a": 3,
+    "e": "Method 1 (Direct Negative Restriction Shortcut):\nStep 1: Statement (2) spasht niyamit karta hai: 'No cold is milk' (Koi bhi thanda padarth doodh nahi ho sakta)[cite: 44].\nStep 2: Conclusions ki shart dekhein:\n- Conclusion I: 'Some water that is cold is milk' $\\implies$ Pani ka vah hissa jo thanda hai, doodh hai[cite: 44]. Lekin thanda hissa kabhi doodh nahi ho sakta, atah yeh 100% asatya hai[cite: 44].\n- Conclusion II: 'Some milk that is water is cold' $\\implies$ Doodh ka vah hissa jo thanda hai[cite: 44]. Parantu doodh aur thande ke beech 'No' ka sambandh hai, atah doodh ka koi bhi hissa kabhi thanda nahi ho sakta[cite: 44]. Isliye yeh bhi 100% asatya hai[cite: 44].\nAtah dono me se koi bhi nishkarsh follow nahi karta[cite: 44].\nCorrect option  Neither I nor II follows hai[cite: 44].\n\nMethod 2 (Logical Contradiction Method):\nStatement (2) ke anusaar 'Cold' aur 'Milk' ka kshetra poori tarah alag (disjoint) hai[cite: 44]. Dono conclusions me thande aur doodh ko ek sath jodne ka prayas kiya gaya hai jo statement ka seedha kandan karta hai[cite: 44].\nSahi uttar 'Neither I nor II follows' hai[cite: 44].\n\nExam point: kathan-nishkarsh ka niyam - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
