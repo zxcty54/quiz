@@ -1,0 +1,154 @@
+[
+  {
+    "p_id": "pattern1_1",
+    "qe": "If in a code language, BAT is written as 23 and CAT is written as 24, then how BALL will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में BAT को 23 और CAT को 24 लिखा जाता है, तो उसी कूट भाषा में BALL को कैसे लिखा जाएगा?",
+    "oe": [
+      "27",
+      "28",
+      "32",
+      "120"
+    ],
+    "oh": [
+      "27",
+      "28",
+      "32",
+      "120"
+    ],
+    "a": 0,
+    "e": "Method 1 (Direct Positional Sum Shortcut):\nStep 1: 'BAT' aur 'CAT' ke letters ki alphabetical positions ka sum check karein:\n- B(2) + A(1) + T(20) = 23\n- C(3) + A(1) + T(20) = 24\nLogic: Word me maujood sabhi aksharon ke standard place values ko direct joda gaya hai.\nStep 2: 'BALL' ke letters ka sum karein:\n- B = 2\n- A = 1\n- L = 12\n- L = 12\n$$\\text{Total Sum} = 2 + 1 + 12 + 12 = 27$$\nCorrect '28'7 hai.\n\nMethod 2 (Step-by-Step Addition Method):\n$$\\text{B} (2) + \\text{A} (1) + \\text{L} (12) + \\text{L} (12) = 3 + 24 = 27$$\nSahi uttar '27' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern1_2",
+    "qe": "If in a certain code language A = 2, M = 26 and Z = 52, then how BET will be written in the same language?",
+    "qh": "यदि किसी कूट भाषा में A = 2, M = 26 और Z = 52 है, तो उसी कूट भाषा में BET को कैसे लिखा जाएगा?",
+    "oe": [
+      "44",
+      "54",
+      "64",
+      "72"
+    ],
+    "oh": [
+      "44",
+      "54",
+      "64",
+      "72"
+    ],
+    "a": 1,
+    "e": "Method 1 (Positional Value Doubling Shortcut):\nStep 1: Har letter ki alphabetical position ko 2 se multiply kiya gaya hai:\n- A(1) × 2 = 2\n- M(13) × 2 = 26\n- Z(26) × 2 = 52\nStep 2: 'BET' ke letters ka basic sum nikal kar double karein:\n- B = 2, E = 5, T = 20\n$$\\text{Sum} = 2 + 5 + 20 = 27$$\n$$\\text{Code} = 27 $\\times$ 2 = 54$$\nCorrect option  54 hai.\n\nMethod 2 (Individual Doubling Method):\n$$\\text{BET} = (2 $\\times$ 2) + (5 $\\times$ 2) + (20 $\\times$ 2) = 4 + 10 + 40 = 54$$\nSahi uttar '54' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern1_3",
+    "qe": "In a certain code language DEEP = 120 and RABIT = 250, then how HAIR will be written in the same language?",
+    "qh": "किसी कूट भाषा में DEEP = 120 और RABIT = 250 है, तो उसी कूट भाषा में HAIR को क्या लिखा जाएगा?",
+    "oe": [
+      "120",
+      "122",
+      "144",
+      "140"
+    ],
+    "oh": [
+      "120",
+      "122",
+      "144",
+      "140"
+    ],
+    "a": 2,
+    "e": "Method 1 (Sum × Number of Letters Shortcut):\nStep 1: Rule check karein: $\\text{Code} = (\\sum \\text{Positions}) \\times \\text{Number of Letters}$.\n- 'DEEP': $(4 + 5 + 5 + 16) = 30$, aur letters $= 4 \\implies 30 \\times 4 = 120$.\n- 'RABIT': $(18 + 1 + 2 + 9 + 20) = 50$, aur letters $= 5 \\implies 50 \\times 5 = 250$.\nStep 2: 'HAIR' par apply karein:\n- Positions ka sum: $H(8) + A(1) + I(9) + R(18) = 36$\n- Number of letters $= 4$\n$$\\text{Code} = 36 $\\times$ 4 = 144$$\nCorrect '120'44 hai.\n\nMethod 2 (Unit Digit Method):\nSum ka unit digit 6 hai ($8+1+9+8 = 26 \\to 6$) aur 4 letters hain: $6 \\times 4 = 24$ (unit digit 4 aayega). Vikalpon me sirf 144 ka unit digit 4 hai.\nSahi uttar '144' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern1_4",
+    "qe": "If E = 5, HOTEL = 12, then how LAMB will be written in the code language?",
+    "qh": "यदि E = 5, HOTEL = 12 है, तो कूट भाषा में LAMB को कैसे लिखा जाएगा?",
+    "oe": [
+      "7",
+      "10",
+      "26",
+      "28"
+    ],
+    "oh": [
+      "7",
+      "10",
+      "26",
+      "28"
+    ],
+    "a": 0,
+    "e": "Method 1 (Average of Letter Positions Shortcut):\nStep 1: Rule: $\\text{Code} = \\frac{\\sum \\text{Positions}}{\\text{Number of Letters}}$ (Letters ka average nikala gaya hai):\n- E: $\\frac{5}{1} = 5$\n- HOTEL: $\\text{Sum} = 8 + 15 + 20 + 5 + 12 = 60$, letters $= 5 \\implies \\frac{60}{5} = 12$.\nStep 2: 'LAMB' par apply karein:\n- Sum: $L(12) + A(1) + M(13) + B(2) = 28$\n- Letters ki sankhya $= 4$\n$$\\text{Code} = $\\frac{28}{4}$ = 7$$\nCorrect option  7 hai.\n\nMethod 2 (Direct Division Method):\n$$12 + 1 + 13 + 2 = 28 \\implies 28 / 4 = 7$$\nSahi uttar '7' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern1_5",
+    "qe": "If KITES = 2, MONDAY = 2 and AIR = 2, then how SUNDAY will be written in the code language?",
+    "qh": "यदि KITES = 2, MONDAY = 2 और AIR = 2 है, तो कूट भाषा में SUNDAY को कैसे लिखा जाएगा?",
+    "oe": [
+      "3",
+      "1",
+      "4",
+      "2"
+    ],
+    "oh": [
+      "3",
+      "1",
+      "4",
+      "2"
+    ],
+    "a": 3,
+    "e": "Method 1 (Vowel Count Shortcut Method):\nStep 1: Diye gaye shabdon me vowels (A, E, I, O, U) count karein:\n- KITES me vowels: I, E (Total = 2)\n- MONDAY me vowels: O, A (Total = 2)\n- AIR me vowels: A, I (Total = 2)\nLogic: Code shabd me maujood kul swaron (vowels) ki sankhya hai.\nStep 2: 'SUNDAY' me vowels dekhein:\n- U aur A (kul 2 vowels hain)\n$$\\text{Code} = 2$$\nCorrect '1' hai.\n\nMethod 2 (Direct Observation):\nSabhi shabdon ka code unme aane wale vowels ki sankhya par aadharit hai, SUNDAY me 2 vowels hain, isliye code 2 hoga.\nSahi uttar '2' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern1_6",
+    "qe": "If TO = 19, MY = 16, then how HE will be written in the code language?",
+    "qh": "यदि TO = 19, MY = 16 है, तो कूट भाषा में HE को कैसे लिखा जाएगा?",
+    "oe": [
+      "41",
+      "40",
+      "42",
+      "39"
+    ],
+    "oh": [
+      "41",
+      "40",
+      "42",
+      "39"
+    ],
+    "a": 0,
+    "e": "Method 1 (Opposite Position Sum Shortcut):\nStep 1: Reverse positions (27 - Position) ka sum nikalte hain:\n- 'TO': T ka opposite G(7), O ka opposite L(12) → $7 + 12 = 19$.\n- 'MY': M ka opposite N(14), Y ka opposite B(2) → $14 + 2 = 16$.\nLogic: Har letter ke reverse alphabetical value ka sum liya gaya hai.\nStep 2: 'HE' par same rule lagayein:\n- H ka opposite letter S(19)\n- E ka opposite letter V(22)\n$$\\text{Total Sum} = 19 + 22 = 41$$\nCorrect '39'1 hai.\n\nMethod 2 (Formula Method):\n$$\\text{Code} = (27 $\\times$ 2) - (\\text{H} + \\text{E}) = 54 - (8 + 5) = 54 - 13 = 41$$\nSahi uttar '41' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern1_7",
+    "qe": "If ZIP = 198, ZAP = 246, then how MAP will be written in the code language?",
+    "qh": "यदि ZIP = 198, ZAP = 246 है, तो कूट भाषा में MAP को कैसे लिखा जाएगा?",
+    "oe": [
+      "324",
+      "334",
+      "234",
+      "243"
+    ],
+    "oh": [
+      "324",
+      "334",
+      "234",
+      "243"
+    ],
+    "a": 0,
+    "e": "Method 1 (Opposite Position Sum × 6 + 18 Shortcut):\nStep 1: Letters ke reverse alphabetical values (opposite positions) ka sum nikalein:\n- 'ZIP': Z ↔ A(1), I ↔ R(18), P ↔ K(11)\n  $$\\text{Sum} = 1 + 18 + 11 = 30$$\n  $$\\text{Code} = (30 $\\times$ 6) + 18 = 180 + 18 = 198$$\n- 'ZAP': Z ↔ A(1), A ↔ Z(26), P ↔ K(11)\n  $$\\text{Sum} = 1 + 26 + 11 = 38$$\n  $$\\text{Code} = (38 $\\times$ 6) + 18 = 228 + 18 = 246$$\nLogic: $\\text{Code} = (\\sum \\text{Opposite Values}) \\times 6 + 18$.\nStep 2: 'MAP' par same formula apply karein:\n- M ↔ N(14), A ↔ Z(26), P ↔ K(11)\n  $$\\text{Sum} = 14 + 26 + 11 = 51$$\n  $$\\text{Code} = (51 $\\times$ 6) + 18 = 306 + 18 = 324$$\nCorrect '234'24 hai.\n\nMethod 2 (Factorized Shortcut Method):\nEquation ko simplify karein: $(\\text{Sum} \\times 6) + 18 = (\\text{Sum} + 3) \\times 6$.\n- 'MAP' ke opposite positions ka sum $= 51$.\n$$\\text{Code} = (51 + 3) $\\times$ 6 = 54 $\\times$ 6 = 324$$\nSahi uttar '324' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "pattern1_8",
+    "qe": "If DRIVER = 12, PEDESTRIAN = 20, then how ACCIDENT will be written in the code language?",
+    "qh": "यदि DRIVER = 12, PEDESTRIAN = 20 है, तो कूट भाषा में ACCIDENT को कैसे लिखा जाएगा?",
+    "oe": [
+      "3",
+      "16",
+      "8",
+      "10"
+    ],
+    "oh": [
+      "3",
+      "16",
+      "8",
+      "10"
+    ],
+    "a": 1,
+    "e": "Method 1 (Letter Count Doubling Shortcut):\nStep 1: Diye gaye shabdon me letters ki kul sankhya count karke use 2 se multiply kiya gaya hai:\n- 'DRIVER' me 6 letters hain → $6 \\times 2 = 12$\n- 'PEDESTRIAN' me 10 letters hain → $10 \\times 2 = 20$\nLogic: $\\text{Code} = \\text{Number of letters} \\times 2$.\nStep 2: 'ACCIDENT' me letters count karein:\n- A-C-C-I-D-E-N-T me kul 8 letters hain:\n$$\\text{Code} = 8 $\\times$ 2 = 16$$\nCorrect '3'6 hai.\n\nMethod 2 (Direct Inspection Method):\nWord ki length ka direct dugna answer hai: $8 \\times 2 = 16$. options '3' and '8', (D) seedhe eliminate ho jate hain.\nSahi uttar '16' hai.\n\nExam point: code bhasha ka pattern - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
