@@ -55,6 +55,13 @@ class Question {
       return text;
     }
 
+    // Topic ki asal pehchan: andar ':' ho ya 'topic' se shuru ho.
+    // Warna ye sawal ka hissa ho sakta hai (jaise <b>'FRUGAL'</b> ka vilom).
+    final String lowerInner = inner.toLowerCase();
+    if (!inner.contains(':') && !lowerInner.startsWith('topic')) {
+      return text;
+    }
+
     final String rest = trimmed.substring(match.end).trimLeft();
     return rest.isEmpty ? text : rest;
   }
