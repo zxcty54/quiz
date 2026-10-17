@@ -1,0 +1,268 @@
+[
+  {
+    "p_id": "cisidifference_1",
+    "qe": "The difference between the simple interest and the compound interest on a certain amount at 9% per annum for two years is ₹162, what is the principal?",
+    "qh": "किसी निश्चित राशि पर 9% प्रति वर्ष की दर से दो वर्षों के लिए साधारण ब्याज और चक्रवृद्धि ब्याज के बीच का अंतर ₹162 है, तो मूलधन क्या है?",
+    "oe": [
+      "₹19700",
+      "₹19000",
+      "₹20000",
+      "₹18500"
+    ],
+    "oh": [
+      "₹19700",
+      "₹19000",
+      "₹20000",
+      "₹18500"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Difference Formula):\nStep 1: 2 वर्षों के लिए CI और SI के अंतर का सूत्र:\nDiff = P * (R / 100)^2\n162 = P * (9 / 100)^2 = P * (81 / 10,000).\nStep 2: P की गणना:\nP = (162 * 10,000) / 81 = 2 * 10,000 = ₹20,000.\nअतः सही विकल्प  ₹20000 है।\n\nMethod 2 (Percentage Method):\nStep 1: 2 वर्ष का SI% = 9% * 2 = 18%.\n2 वर्ष का CI% = 9 + 9 + (81 / 100) = 18.81%.\nStep 2: अंतर% = 18.81% - 18% = 0.81%.\nStep 3: 0.81% of P = ₹162 ==> P = (162 / 0.81) * 100 = 200 * 100 = ₹20,000.\nअतः सही उत्तर '₹20000' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cisidifference_2",
+    "qe": "The difference between the compound interest and the simple interest on a given principal is ₹1,725 in 2 years and the rate of interest in both cases is 25% per annum. Find the principal.",
+    "qh": "किसी दिए गए मूलधन पर 2 वर्षों में चक्रवृद्धि ब्याज और साधारण ब्याज के बीच का अंतर ₹1,725 है और दोनों मामलों में ब्याज की दर 25% प्रति वर्ष है। मूलधन ज्ञात कीजिए।",
+    "oe": [
+      "₹27,600",
+      "₹28,500",
+      "₹26,400",
+      "₹25,000"
+    ],
+    "oh": [
+      "₹27,600",
+      "₹28,500",
+      "₹26,400",
+      "₹25,000"
+    ],
+    "a": 0,
+    "e": "Method 1 (Formula Method):\nStep 1: 2 वर्षों के अंतर का सूत्र: Diff = P * (R / 100)^2.\nयहाँ R = 25% ==> R / 100 = 1/4.\nStep 2: सूत्र में मान रखने पर:\n1,725 = P * (1 / 4)^2 = P / 16.\nStep 3: P = 1,725 * 16 = ₹27,600.\nअतः सही विकल्प  ₹27,600 है।\n\nMethod 2 (Ratio Method):\nStep 1: 25% = 1/4. माना मूलधन P = 4^2 = 16 इकाइयाँ।\n- पहले वर्ष का ब्याज = 4 इकाइयाँ\n- दूसरे वर्ष का ब्याज = 4 इकाइयाँ + 1 इकाई (ब्याज पर ब्याज)\nStep 2: CI और SI का अंतर = 1 इकाई = ₹1,725.\nStep 3: मूलधन (16 इकाइयाँ) = 16 * 1,725 = ₹27,600.\nअतः सही उत्तर '₹27,600' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cisidifference_3",
+    "qe": "If the difference between the compound interest and simple interest on a certain sum of money for 3 years at the rate of 4% per annum is ₹76, then what is the sum?",
+    "qh": "यदि किसी निश्चित धनराशि पर 4% वार्षिक दर से 3 वर्षों के लिए चक्रवृद्धि ब्याज और साधारण ब्याज के बीच का अंतर ₹76 है, तो वह धनराशि क्या है?",
+    "oe": [
+      "₹16,725",
+      "₹12,925",
+      "₹15,625",
+      "₹18,825"
+    ],
+    "oh": [
+      "₹16,725",
+      "₹12,925",
+      "₹15,625",
+      "₹18,825"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct 3-Year Formula):\nStep 1: 3 वर्षों के अंतर का सूत्र:\nDiff = P * (R / 100)^2 * (3 + R / 100)\n76 = P * (4 / 100)^2 * (3 + 4 / 100)\n76 = P * (1 / 25)^2 * (76 / 25) = P * (1 / 625) * (76 / 25) = P * (76 / 15,625).\nStep 2: P = (76 * 15,625) / 76 = ₹15,625.\nअतः सही विकल्प  ₹15,625 है।\n\nMethod 2 (Ratio Method):\nStep 1: 4% = 1/25. माना मूलधन P = 25^3 = 15,625 इकाइयाँ।\nStep 2: 3 वर्ष के CI और SI के अंतर की इकाइयाँ (3A + 3B + C के आधार पर):\nअंतर = 3B + C = 3(25) + 1 = 75 + 1 = 76 इकाइयाँ।\nStep 3: 76 इकाइयाँ = ₹76 ==> 1 इकाई = ₹1.\nStep 4: मूलधन = 15,625 * 1 = ₹15,625.\nअतः सही उत्तर '₹15,625' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cisidifference_4",
+    "qe": "Find the difference between the compound interest and simple interest when a sum of ₹15,625 is invested for 3 years at 4% per annum.",
+    "qh": "जब ₹15,625 की राशि 4% वार्षिक दर पर 3 वर्षों के लिए निवेश की जाती है, तो चक्रवृद्धि ब्याज और साधारण ब्याज के बीच का अंतर ज्ञात कीजिए।",
+    "oe": [
+      "₹76",
+      "₹96",
+      "₹56",
+      "₹86"
+    ],
+    "oh": [
+      "₹76",
+      "₹96",
+      "₹56",
+      "₹86"
+    ],
+    "a": 0,
+    "e": "Method 1 (3-Year Formula Method):\nStep 1: Diff = P * (R / 100)^2 * (3 + R / 100).\nStep 2: मान रखने पर:\nDiff = 15,625 * (1 / 25)^2 * (3 + 1 / 25)\n= 15,625 * (1 / 625) * (76 / 25) = 25 * (76 / 25) = ₹76.\nअतः सही विकल्प  ₹76 है।\n\nMethod 2 (Tree Method):\nStep 1: P = 15,625, R = 4% = 1/25.\n- A = 15,625 / 25 = 625\n- B = 625 / 25 = 25\n- C = 25 / 25 = 1\nStep 2: 3 वर्ष के CI और SI का अंतर = 3B + C = 3(25) + 1 = 75 + 1 = ₹76.\nअतः सही उत्तर '₹76' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cisidifference_5",
+    "qe": "On what sum of money will the difference between the simple interest and compound interest (Compounded annually) for 3 years at 5% per annum be ₹15.25?",
+    "qh": "किस धनराशि पर 5% वार्षिक दर से 3 वर्षों के लिए साधारण ब्याज और चक्रवृद्धि ब्याज (वार्षिक रूप से संयोजित) के बीच का अंतर ₹15.25 होगा?",
+    "oe": [
+      "₹2,000",
+      "₹2,500",
+      "₹4,000",
+      "₹1,000"
+    ],
+    "oh": [
+      "₹2,000",
+      "₹2,500",
+      "₹4,000",
+      "₹1,000"
+    ],
+    "a": 0,
+    "e": "Method 1 (Ratio Method):\nStep 1: दर R = 5% = 1/20. माना मूलधन P = 20^3 = 8,000 इकाइयाँ।\nStep 2: 3 वर्ष के अंतर की इकाइयाँ (3B + C):\n- A = 8,000 / 20 = 400\n- B = 400 / 20 = 20\n- C = 20 / 20 = 1\nअंतर = 3B + C = 3(20) + 1 = 60 + 1 = 61 इकाइयाँ।\nStep 3: 61 इकाइयाँ = ₹15.25 ==> 1 इकाई = 15.25 / 61 = ₹0.25 (1/4).\nStep 4: मूलधन (8,000 इकाइयाँ) = 8,000 * 0.25 = ₹2,000.\nअतः सही विकल्प  ₹2,000 है।\n\nMethod 2 (Formula Method):\nStep 1: 15.25 = P * (5 / 100)^2 * (3 + 5 / 100) = P * (1 / 400) * (61 / 20) = P * (61 / 8,000).\nStep 2: P = (15.25 * 8,000) / 61 = 122,000 / 61 = ₹2,000.\nअतः सही उत्तर '₹2,000' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cisidifference_6",
+    "qe": "Find the difference between the simple interest and the compound interest payable annually on a sum of ₹6,500 at 7% per annum for 3 years. [Correct two decimal places.]",
+    "qh": "₹6,500 की राशि पर 7% वार्षिक दर से 3 वर्षों के लिए देय साधारण ब्याज और वार्षिक चक्रवृद्धि ब्याज के बीच का अंतर ज्ञात कीजिए। [दशमलव के दो स्थानों तक सही।]",
+    "oe": [
+      "₹94.34",
+      "₹97.78",
+      "₹98.73",
+      "₹95.67"
+    ],
+    "oh": [
+      "₹94.34",
+      "₹97.78",
+      "₹98.73",
+      "₹95.67"
+    ],
+    "a": 1,
+    "e": "Method 1 (Formula Method):\nStep 1: Diff = P * (R / 100)^2 * (3 + R / 100).\nStep 2: मान रखने पर:\nDiff = 6,500 * (7 / 100)^2 * (3 + 7 / 100)\n= 6,500 * (49 / 10,000) * 3.07\n= 65 * 0.49 * 3.07 = 31.85 * 3.07 = ₹97.7795 ≈ ₹97.78.\nअतः सही विकल्प  ₹97.78 है।\n\nMethod 2 (Tree Method):\nStep 1: P = ₹6,500, R = 7%.\n- A = 7% of 6,500 = ₹455\n- B = 7% of 455 = ₹31.85\n- C = 7% of 31.85 = ₹2.2295\nStep 2: 3 वर्षों का अंतर = 3B + C = 3(31.85) + 2.2295 = 95.55 + 2.2295 = ₹97.7795 ≈ ₹97.78.\nअतः सही उत्तर '₹97.78' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cisidifference_7",
+    "qe": "A deposited ₹1,56,250 at 8% simple interest for 2 years. How much more money will A have in his account at the end of two years, if at the same rate of interest the sum is invested on compound interest, compounded annually?",
+    "qh": "A ने 2 वर्षों के लिए 8% साधारण ब्याज पर ₹1,56,250 जमा किए। यदि समान ब्याज दर पर यह राशि वार्षिक रूप से संयोजित चक्रवृद्धि ब्याज पर निवेश की जाती, तो दो वर्ष के अंत में A के खाते में कितनी अधिक राशि होती?",
+    "oe": [
+      "₹1,740.90",
+      "₹1,000",
+      "₹2,000",
+      "₹1,540.40"
+    ],
+    "oh": [
+      "₹1,740.90",
+      "₹1,000",
+      "₹2,000",
+      "₹1,540.40"
+    ],
+    "a": 1,
+    "e": "Method 1 (2-Year Difference Formula):\nStep 1: अतिरिक्त प्राप्त राशि = 2 वर्षों के CI और SI का अंतर।\nDiff = P * (R / 100)^2.\nStep 2: मान रखने पर:\nDiff = 1,56,250 * (8 / 100)^2 = 1,56,250 * (64 / 10,000)\n= 15.625 * 64 = ₹1,000.\nअतः सही विकल्प  ₹1,000 है।\n\nMethod 2 (Percentage Method):\nStep 1: अंतर% = (R^2 / 100)% = (64 / 100)% = 0.64%.\nStep 2: अंतर = 0.64% of ₹1,56,250 = (0.64 / 100) * 1,56,250 = 0.64 * 1,562.5 = ₹1,000.\nअतः सही उत्तर '₹1,000' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cisidifference_8",
+    "qe": "Nutan gets two offers of loan from a bank and an app. The app offered ₹10,000 at 15% per annum compounded annually for 2 years and the bank offered the same amount at the same rate for the same time but on simple interest. Find the difference between the interests.",
+    "qh": "नूतन को एक बैंक और एक ऐप से ऋण के दो प्रस्ताव मिलते हैं। ऐप ने 2 वर्षों के लिए 15% वार्षिक चक्रवृद्धि ब्याज (वार्षिक रूप से संयोजित) पर ₹10,000 की पेशकश की और बैंक ने समान राशि समान दर पर समान समय के लिए लेकिन साधारण ब्याज पर पेश की। ब्याजों के बीच का अंतर ज्ञात कीजिए।",
+    "oe": [
+      "₹375",
+      "₹400",
+      "₹250",
+      "₹225"
+    ],
+    "oh": [
+      "₹375",
+      "₹400",
+      "₹250",
+      "₹225"
+    ],
+    "a": 3,
+    "e": "Method 1 (Formula Method):\nStep 1: 2 वर्षों के लिए अंतर: Diff = P * (R / 100)^2.\nStep 2: मान रखने पर:\nDiff = 10,000 * (15 / 100)^2 = 10,000 * (225 / 10,000) = ₹225.\nअतः सही विकल्प  ₹225 है।\n\nMethod 2 (Percentage Method):\nStep 1: अंतर% = (15^2 / 100)% = 2.25%.\nStep 2: Diff = 2.25% of ₹10,000 = (2.25 / 100) * 10,000 = ₹225.\nअतः सही उत्तर '₹225' है।\n\nchakravriddhi byaaj ka sootra se hi is prashn ka jawab nikalta hai. Vikalp ₹375, ₹400, ₹250 is hal se mel nahi khaate. Exam point: chakravriddhi byaaj ka sootra - ise yaad rakhein, samay bachega."
+  },
+  {
+    "p_id": "cisidifference_9",
+    "qe": "A certain sum was invested at the rate of 10% for a period of 2 years at compound interest compounded annually. The same sum was invested for the same period and same rate of interest at simple interest. If the difference of compound interest and simple interest was ₹200, find the sum.",
+    "qh": "एक निश्चित राशि 10% की दर से 2 वर्ष की अवधि के लिए वार्षिक रूप से संयोजित चक्रवृद्धि ब्याज पर निवेश की गई थी। वही राशि समान अवधि और समान ब्याज दर पर साधारण ब्याज पर निवेश की गई थी। यदि चक्रवृद्धि ब्याज और साधारण ब्याज का अंतर ₹200 था, तो वह राशि ज्ञात कीजिए।",
+    "oe": [
+      "₹30,000",
+      "₹25,000",
+      "₹22,000",
+      "₹20,000"
+    ],
+    "oh": [
+      "₹30,000",
+      "₹25,000",
+      "₹22,000",
+      "₹20,000"
+    ],
+    "a": 3,
+    "e": "Method 1 (Formula Method):\nStep 1: Diff = P * (R / 100)^2.\nStep 2: 200 = P * (10 / 100)^2 = P * (1 / 100).\nStep 3: P = 200 * 100 = ₹20,000.\nअतः सही विकल्प  ₹20,000 है।\n\nMethod 2 (Percentage Method):\nStep 1: 10% की दर से 2 वर्ष का अंतर% = (10 * 10 / 100)% = 1%.\nStep 2: 1% of P = ₹200 ==> P (100%) = 200 * 100 = ₹20,000.\nअतः सही उत्तर '₹20,000' है।\n\nchakravriddhi byaaj ka sootra se hi is prashn ka jawab nikalta hai. She sh vikalp ₹30,000, ₹25,000, ₹22,000 is hisaab se nahi milte. Exam point: chakravriddhi byaaj ka sootra - yahi short tarika pariksha mein kaam aata hai."
+  },
+  {
+    "p_id": "cisidifference_10",
+    "qe": "A man invested ₹30,000 each in two separate schemes at 10% p.a. for 4 years. One scheme gives simple interest, while the other gives compound interest, compounded annually. Find the difference between the total interest earned from both?",
+    "qh": "एक व्यक्ति ने 4 वर्षों के लिए 10% प्रति वर्ष की दर से दो अलग-अलग योजनाओं में प्रत्येक में ₹30,000 का निवेश किया। एक योजना साधारण ब्याज देती है, जबकि दूसरी वार्षिक रूप से संयोजित चक्रवृद्धि ब्याज देती है। दोनों से अर्जित कुल ब्याज के बीच का अंतर ज्ञात कीजिए?",
+    "oe": [
+      "₹1,923",
+      "₹1,823",
+      "₹2,023",
+      "₹1,950"
+    ],
+    "oh": [
+      "₹1,923",
+      "₹1,823",
+      "₹2,023",
+      "₹1,950"
+    ],
+    "a": 0,
+    "e": "Method 1 (Percentage Difference Method):\nStep 1: 10% की दर से 4 वर्ष का साधारण ब्याज प्रतिशत:\nSI% = 10% * 4 = 40%.\nStep 2: 10% की दर से 4 वर्ष का चक्रवृद्धि ब्याज प्रतिशत:\nCI% = (1.10)^4 - 1 = 1.4641 - 1 = 0.4641 = 46.41%.\nStep 3: ब्याजों का अंतर प्रतिशत = 46.41% - 40% = 6.41%.\nStep 4: ₹30,000 पर अंतर का मूल्य:\nDiff = 6.41% of ₹30,000 = (6.41 / 100) * 30,000 = 6.41 * 300 = ₹1,923.\nअतः सही विकल्प  ₹1,923 है।\n\nMethod 2 (Pascal Triangle 4:6:4:1 Method):\nStep 1: P = ₹30,000, R = 10%.\n- A = 10% of 30,000 = 3,000 (यह SI भाग है)\n- B = 10% of 3,000 = 300\n- C = 10% of 300 = 30\n- D = 10% of 30 = 3\nStep 2: 4 वर्ष के CI और SI का अंतर = 6B + 4C + 1D\n= 6(300) + 4(30) + 1(3) = 1,800 + 120 + 3 = ₹1,923.\nअतः सही उत्तर '₹1,923' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cisidifference_11",
+    "qe": "A sum of ₹7,500 is invested in a scheme offering r% compound interest for 2 years. Find the value of 'r' if the difference in the simple interest and compound interest for the same amount at the same rate of interest after 2 years is ₹108.",
+    "qh": "₹7,500 की राशि 2 वर्षों के लिए r% चक्रवृद्धि ब्याज की पेशकश करने वाली एक योजना में निवेश की जाती है। 'r' का मान ज्ञात कीजिए यदि 2 वर्ष बाद समान राशि पर समान ब्याज दर पर साधारण ब्याज और चक्रवृद्धि ब्याज में अंतर ₹108 है।",
+    "oe": [
+      "10%",
+      "8%",
+      "12%",
+      "9%"
+    ],
+    "oh": [
+      "10%",
+      "8%",
+      "12%",
+      "9%"
+    ],
+    "a": 2,
+    "e": "Method 1 (Direct Difference Formula):\nStep 1: 2 वर्षों के लिए चक्रवृद्धि ब्याज और साधारण ब्याज के अंतर का सूत्र:\nDiff = P * (r / 100)^2.\nStep 2: दिए गए मान रखने पर:\n108 = 7,500 * (r / 100)^2\n108 = 7,500 * (r^2 / 10,000) = 0.75 * r^2 = (3 / 4) * r^2.\nStep 3: r^2 = (108 * 4) / 3 = 36 * 4 = 144.\nStep 4: r = √144 = 12% प्रति वर्ष।\nअतः सही विकल्प  12% है।\n\nMethod 2 (Percentage Method):\nStep 1: 2 वर्षों के अंतर का प्रतिशत = (Diff / P) * 100%\nअंतर% = (108 / 7,500) * 100% = 108 / 75% = 1.44%.\nStep 2: हम जानते हैं कि 2 वर्ष का अंतर% = (r^2 / 100)% होता है।\nr^2 / 100 = 1.44 ==> r^2 = 144 ==> r = 12%.\nअतः सही उत्तर '12%' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cisidifference_12",
+    "qe": "The difference between compound interest compounded annually and simple interest on a certain sum at a rate of 15% per annum for 2 years is ₹1,944. Find the compound interest compounded annually (in ₹) on the same sum for the same period at a rate of 10% per annum.",
+    "qh": "एक निश्चित राशि पर 2 वर्ष के लिए 15% वार्षिक दर से वार्षिक रूप से संयोजित चक्रवृद्धि ब्याज और साधारण ब्याज के बीच का अंतर ₹1,944 है। उसी राशि पर समान अवधि के लिए 10% वार्षिक दर से वार्षिक रूप से संयोजित चक्रवृद्धि ब्याज (₹ में) ज्ञात कीजिए।",
+    "oe": [
+      "18,060",
+      "27,216",
+      "18,144",
+      "20,500"
+    ],
+    "oh": [
+      "18,060",
+      "27,216",
+      "18,144",
+      "20,500"
+    ],
+    "a": 2,
+    "e": "Method 1 (Formula & Percentage Method):\nStep 1: 15% की दर से 2 वर्ष के अंतर का सूत्र: Diff = P * (R / 100)^2.\n1,944 = P * (15 / 100)^2 = P * (225 / 10,000) = 0.0225 P.\nStep 2: मूलधन P = 1,944 / 0.0225 = ₹86,400.\nStep 3: समान मूलधन (₹86,400) पर 10% वार्षिक दर से 2 वर्ष का चक्रवृद्धि ब्याज:\n10% की दर से 2 वर्ष का प्रभावी CI% = 10 + 10 + (10 * 10 / 100) = 21%.\nStep 4: CI = 21% of ₹86,400 = 864 * 21 = ₹18,144.\nअतः सही विकल्प  18,144 है।\n\nMethod 2 (Direct Ratio Method):\nStep 1: पहले मामले का अंतर% = (15^2 / 100)% = 2.25%.\nStep 2: दूसरे मामले का CI% = (10 + 10 + 1)% = 21%.\nStep 3: 2.25% = ₹1,944 ==> 21% = (1,944 / 2.25) * 21 = 864 * 21 = ₹18,144.\nअतः सही उत्तर '18,144' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cisidifference_13",
+    "qe": "Ravi invested ₹25,000 in two schemes for 3 years. Both schemes offer 12% p.a. interest. One gives simple interest and the other gives compound interest (compounded annually). Find the difference between the interests earned from both schemes?",
+    "qh": "रवि ने 3 वर्षों के लिए दो योजनाओं में प्रत्येक में ₹25,000 का निवेश किया। दोनों योजनाएँ 12% वार्षिक ब्याज प्रदान करती हैं। एक साधारण ब्याज देती है और दूसरी चक्रवृद्धि ब्याज (वार्षिक रूप से संयोजित) देती है। दोनों योजनाओं से अर्जित ब्याजों के बीच का अंतर ज्ञात कीजिए?",
+    "oe": [
+      "₹1123.2",
+      "₹1080.25",
+      "₹1536",
+      "₹1336"
+    ],
+    "oh": [
+      "₹1123.2",
+      "₹1080.25",
+      "₹1536",
+      "₹1336"
+    ],
+    "a": 0,
+    "e": "Method 1 (3-Year Difference Formula):\nStep 1: 3 वर्षों के लिए CI और SI के अंतर का सूत्र:\nDiff = P * (R / 100)^2 * (3 + R / 100).\nStep 2: मान रखने पर:\nDiff = 25,000 * (12 / 100)^2 * (3 + 12 / 100)\n= 25,000 * (144 / 10,000) * (3.12)\n= 2.5 * 144 * 3.12 = 360 * 3.12 = ₹1,123.20.\nअतः सही विकल्प  ₹1123.2 है।\n\nMethod 2 (Tree Method):\nStep 1: P = ₹25,000, R = 12%.\n- A = 12% of 25,000 = ₹3,000\n- B = 12% of 3,000 = ₹360\n- C = 12% of 360 = ₹43.20\nStep 2: 3 वर्ष के CI और SI का अंतर = 3B + C\n= 3(360) + 43.20 = 1,080 + 43.20 = ₹1,123.20.\nअतः सही उत्तर '₹1123.2' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  },
+  {
+    "p_id": "cisidifference_14",
+    "qe": "Peter invested a certain sum of money in a scheme paying 10% simple interest per annum, while Rachel invested half of the sum that Peter invested in a scheme paying 10% interest per annum compounded annually. Also, while Peter invested for 2 years, Rachel invested for 3 years. If the difference in the interest earned by Peter and Rachel was ₹897, what was the sum that Rachel had invested?",
+    "qh": "पीटर ने 10% वार्षिक साधारण ब्याज देने वाली एक योजना में एक निश्चित धनराशि का निवेश किया, जबकि रेचल ने पीटर द्वारा निवेश की गई राशि की आधी राशि 10% वार्षिक चक्रवृद्धि ब्याज (वार्षिक संयोजन) देने वाली योजना में निवेश की। साथ ही, जहाँ पीटर ने 2 वर्षों के लिए निवेश किया, वहीं रेचल ने 3 वर्षों के लिए निवेश किया। यदि पीटर और रेचल द्वारा अर्जित ब्याज में अंतर ₹897 था, तो रेचल द्वारा निवेश की गई राशि क्या थी?",
+    "oe": [
+      "₹12,900",
+      "₹13,000",
+      "₹13,100",
+      "₹12,960"
+    ],
+    "oh": [
+      "₹12,900",
+      "₹13,000",
+      "₹13,100",
+      "₹12,960"
+    ],
+    "a": 1,
+    "e": "Method 1 (Unit / Equation Method):\nStep 1: माना रेचल द्वारा निवेश की गई राशि = P_R.\nपीटर द्वारा निवेश की गई राशि = 2 * P_R.\nStep 2: पीटर का साधारण ब्याज (10%, 2 वर्ष):\nSI_Peter = (2 * P_R * 10 * 2) / 100 = 0.40 * P_R (अर्थात 40% of P_R).\nStep 3: रेचल का चक्रवृद्धि ब्याज (10%, 3 वर्ष):\n10% की दर से 3 वर्ष का प्रभावी CI% = (1.10)^3 - 1 = 33.1%.\nCI_Rachel = 0.331 * P_R (अर्थात 33.1% of P_R).\nStep 4: ब्याजों का अंतर निकालें:\nDifference = 0.40 * P_R - 0.331 * P_R = 0.069 * P_R.\nStep 5: दिया गया अंतर = ₹897:\n0.069 * P_R = 897\nP_R = 897 / 0.069 = 897,000 / 69 = ₹13,000.\nअतः सही विकल्प  ₹13,000 है।\n\nMethod 2 (Fraction / Ratio Method):\nStep 1: रेचल का मूलधन = 1000 इकाइयाँ, पीटर का मूलधन = 2000 इकाइयाँ।\nStep 2: पीटर का ब्याज = 2000 * 20% = 400 इकाइयाँ।\nStep 3: रेचल का ब्याज = 1000 * 33.1% = 331 इकाइयाँ।\nStep 4: अंतर = 400 - 331 = 69 इकाइयाँ।\nStep 5: 69 इकाइयाँ = ₹897 ==> 1 इकाई = 897 / 69 = 13.\nStep 6: रेचल का निवेश (1000 इकाइयाँ) = 1000 * 13 = ₹13,000.\nअतः सही उत्तर '₹13,000' है।\n\nExam point: chakravriddhi byaaj ka sootra - ise yaad rakhein; isi tarah ke prashn pariksha mein doharaaye jaate hain."
+  }
+]
