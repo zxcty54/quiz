@@ -317,7 +317,10 @@ def parse_date(value):
             elif "min" in unit or "मिनट" in unit:
                 return current_now - timedelta(minutes=num)
 
-    value2 = re.sub(r'\b(IST|GMT|UTC)\b', '', value, flags=re.I).strip()
+    # Preserve the timestamp's timezone. These abbreviations are not parsed
+    # reliably by strptime's %z directive, so normalize them to UTC offsets.
+    value2 = re.sub(r'\bIST\b', '+0530', value, flags=re.I)
+    value2 = re.sub(r'\b(?:GMT|UTC)\b', '+0000', value2, flags=re.I).strip()
 
     for fmt in DATE_FORMATS:
         try:
