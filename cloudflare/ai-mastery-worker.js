@@ -209,6 +209,150 @@ async function fetchModelsFromRemoteConfig(env) {
   return [];
 }
 
+function asFiniteNumber(value) {
+  if (value === null || value === undefined || value === "") return null;
+  const n = Number(value);
+  return Number.isFinite(n) ? n : null;
+}
+
+function clampPercent(value) {
+  const n = asFiniteNumber(value);
+  return n === null ? null : Math.max(0, Math.min(100, n));
+}
+
+// The model classifies each question from its text and returns exact counts for
+// this batch. Keep cumulative accuracy arithmetic deterministic in code.
+function mergeSubjectAnalysis(currentReport, batchSubjectRows) {
+  const bySubject = new Map();
+  const oldRows = Array.isArray(currentReport?.subject_analysis)
+    ? currentReport.subject_analysis
+    : [];
+
+  for (const oldRow of oldRows) {
+    if (!oldRow || typeof oldRow !== "object") continue;
+    const subject = String(oldRow.subject || "").trim();
+    const key = normalize(subject);
+    if (!key) continue;
+
+    const rawAttempts = asFiniteNumber(oldRow.total_attempts);
+    // Legacy reports did not store per-subject counts; use a small one-time
+    // baseline weight, then exact counts are persisted for future updates.
+    const totalAttempts = Number.isInteger(rawAttempts) && rawAttempts > 0
+      ? rawAttempts
+      : 10;
+    const rawCorrect = asFiniteNumber(oldRow.correct_attempts);
+    const correctAttempts = Number.isInteger(rawCorrect) && rawCorrect >= 0 && rawCorrect <= totalAttempts
+      ? rawCorrect
+      : Math.round(totalAttempts * (clampPercent(oldRow.accuracy_pct) ?? 0) / 100);
+
+    bySubject.set(key, {
+      ...oldRow,
+      subject,
+      accuracy_pct: Math.round(clampPercent(oldRow.accuracy_pct) ?? 0),
+      total_attempts: totalAttempts,
+      correct_attempts: correctAttempts,
+    });
+  }
+
+  for (const batchRow of (Array.isArray(batchSubjectRows) ? batchSubjectRows : [])) {
+    if (!batchRow || typeof batchRow !== "object") continue;
+    const subject = String(batchRow.subject || "").trim();
+    const key = normalize(subject);
+    const batchAttempts = Number(batchRow.batch_attempts);
+    const batchCorrect = Number(batchRow.batch_correct);
+    if (!key || !Number.isInteger(batchAttempts) || batchAttempts <= 0 ||
+        !Number.isInteger(batchCorrect) || batchCorrect < 0 || batchCorrect > batchAttempts) {
+      continue;
+    }
+
+    const previous = bySubject.get(key);
+    const oldAttempts = previous?.total_attempts ?? 0;
+    const oldCorrect = previous?.correct_attempts ?? 0;
+    const totalAttempts = oldAttempts + batchAttempts;
+    const correctAttempts = oldCorrect + batchCorrect;
+    const merged = {
+      ...(previous || {}),
+      ...batchRow,
+      subject: previous?.subject || subject,
+      total_attempts: totalAttempts,
+      correct_attempts: correctAttempts,
+      accuracy_pct: Math.round((correctAttempts / totalAttempts) * 100),
+    };
+    delete merged.batch_attempts;
+    delete merged.batch_correct;
+    bySubject.set(key, merged);
+  }
+
+  return Array.from(bySubject.values());
+}
+
+// Keep the original lifetime baseline, but always derive the current endpoint
+// from merged subject accuracy so the journey cannot stay frozen on an old AI value.
+function mergeProgressDelta(currentReport, modelDeltaRows, cumulativeSubjects) {
+  const oldDeltas = Array.isArray(currentReport?.progress_delta)
+    ? currentReport.progress_delta
+    : [];
+  const oldSubjects = Array.isArray(currentReport?.subject_analysis)
+    ? currentReport.subject_analysis
+    : [];
+  const modelDeltas = Array.isArray(modelDeltaRows) ? modelDeltaRows : [];
+  const subjectByKey = new Map();
+  const oldDeltaByKey = new Map();
+  const oldSubjectByKey = new Map();
+  const modelDeltaByKey = new Map();
+
+  for (const row of cumulativeSubjects || []) {
+    const key = normalize(row?.subject);
+    if (key) subjectByKey.set(key, row);
+  }
+  for (const row of oldDeltas) {
+    const key = normalize(row?.subject);
+    if (key) oldDeltaByKey.set(key, row);
+  }
+  for (const row of oldSubjects) {
+    const key = normalize(row?.subject);
+    if (key) oldSubjectByKey.set(key, row);
+  }
+  for (const row of modelDeltas) {
+    const key = normalize(row?.subject);
+    if (key) modelDeltaByKey.set(key, row);
+  }
+
+  const keys = new Set([
+    ...subjectByKey.keys(),
+    ...oldDeltaByKey.keys(),
+    ...modelDeltaByKey.keys(),
+  ]);
+  const result = [];
+
+  for (const key of keys) {
+    const subjectRow = subjectByKey.get(key);
+    const oldDelta = oldDeltaByKey.get(key);
+    const oldSubject = oldSubjectByKey.get(key);
+    const modelDelta = modelDeltaByKey.get(key);
+    const currentPct = clampPercent(subjectRow?.accuracy_pct) ??
+      clampPercent(modelDelta?.to_pct) ??
+      clampPercent(oldDelta?.to_pct);
+    if (currentPct === null) continue;
+
+    const fromPct = clampPercent(oldDelta?.from_pct) ??
+      clampPercent(oldDelta?.to_pct) ??
+      clampPercent(oldSubject?.accuracy_pct) ??
+      clampPercent(modelDelta?.from_pct) ??
+      currentPct;
+    const from = Math.round(fromPct);
+    const to = Math.round(currentPct);
+    result.push({
+      subject: subjectRow?.subject || oldDelta?.subject || modelDelta?.subject || key,
+      from_pct: from,
+      to_pct: to,
+      diff: to - from,
+    });
+  }
+
+  return result;
+}
+
 // 🧠 Core Engine
 async function handleAutoMasterySync(env, overrideModels = null) {
   const supabaseUrl = env.SUPABASE_URL;
@@ -309,7 +453,10 @@ LIFETIME LEARNING & COGNITIVE RULES:
    - BIHAR SPECIAL RULE (VERY IMPORTANT): Any question about the state of Bihar — its history (Magadha, Maurya & Pataliputra, Pala dynasty, Sher Shah, 1857 and the freedom movement in Bihar), geography (rivers, districts, soil, climate of Bihar), polity and governance of Bihar, Bihar economy, art and culture (Madhubani painting, folk songs, festivals of Bihar), society (castes, tribes, languages of Bihar), or famous personalities of Bihar — MUST be classified as subject "Bihar Special". NEVER put a Bihar question into History, Geography or Polity, even if it looks like general history or geography.
    - If a question mentions Bihar, Patna, or any Bihar district, place or person, prefer "Bihar Special" over the generic subject.
    - Keep topic names SHORT and CONSISTENT (2-4 words, e.g. "Bihar Art Culture", "Magadha Empire", "Ray Optics"), so the same topic is recognised again in future batches. For Bihar questions in critical_traps_detailed, always use subject "Bihar Special" with such short topic names.
-   - Add a subject to subject_analysis only if it has at least 2 attempts in this batch OR it already exists in the lifetime report.
+   - For subject_analysis, include EVERY subject found in this NEW BATCH, even if it has only one attempt.
+   - For each subject, return batch_attempts and batch_correct for this NEW BATCH ONLY. Count each input attempt exactly once; the sum of batch_attempts across subjects MUST equal ${compactBatchData.length}.
+   - Calculate accuracy_pct as round(batch_correct / batch_attempts * 100). Do NOT use lifetime accuracy for this field; the Worker merges lifetime counts deterministically.
+   - Question text may be in Hindi or English; classify each new attempt from question_text only. New attempts carry no subject, topic, exam, or chapter tags; the prior report is lifetime context, not labels for new attempts.
 2. TIME TELEMETRY & BEHAVIOR:
    Analyze "sec" for attempts:
    - Wrong attempt < 20s: "Impulsive Guesswork / Rushed Trap"
@@ -327,9 +474,9 @@ OUTPUT STRICT VALID JSON ONLY:
 {
   "ai_headline": "Physics accuracy improving but Optics numericals remain trap-prone",
   "subject_analysis": [
-    { "subject": "Physics", "accuracy_pct": 68 },
-    { "subject": "Chemistry", "accuracy_pct": 75 },
-    { "subject": "Bihar Special", "accuracy_pct": 45 }
+    { "subject": "Physics", "batch_attempts": 5, "batch_correct": 3, "accuracy_pct": 60 },
+    { "subject": "Chemistry", "batch_attempts": 4, "batch_correct": 3, "accuracy_pct": 75 },
+    { "subject": "Bihar Special", "batch_attempts": 2, "batch_correct": 1, "accuracy_pct": 50 }
   ],
   "behavioral_pattern": "Impulsive Guesswork",
   "summary_verdict": "Candidate basic facts me confident hai lekin Optics me rushed decisions se trap me phasta hai.",
@@ -455,9 +602,21 @@ ${JSON.stringify(compactBatchData)}
               "summary_verdict"
             ];
             const isSchemaValid = requiredKeys.every(k => tempJson[k] !== undefined && tempJson[k] !== null);
+            const batchSubjects = Array.isArray(tempJson.subject_analysis) ? tempJson.subject_analysis : [];
+            const validBatchSubjectCounts = batchSubjects.length > 0 && batchSubjects.every(s => {
+              const attempted = Number(s?.batch_attempts);
+              const correct = Number(s?.batch_correct);
+              return typeof s?.subject === "string" && s.subject.trim().length > 0 &&
+                Number.isInteger(attempted) && attempted > 0 &&
+                Number.isInteger(correct) && correct >= 0 && correct <= attempted;
+            });
+            const countedAttempts = batchSubjects.reduce(
+              (sum, s) => sum + (Number(s?.batch_attempts) || 0),
+              0
+            );
 
-            if (!isSchemaValid) {
-              console.warn(`⚠️ [SCHEMA INVALID] Model ${model} missing mandatory keys. Trying next fallback...`);
+            if (!isSchemaValid || !validBatchSubjectCounts || countedAttempts !== batch.length) {
+              console.warn(`⚠️ [SCHEMA INVALID] Model ${model} omitted/incorrectly counted subject batch stats (${countedAttempts}/${batch.length}). Trying next fallback...`);
               continue;
             }
 
@@ -476,8 +635,22 @@ ${JSON.stringify(compactBatchData)}
 
       const updatedReport = parsedReport;
 
+      // Subject accuracy chips use actual per-subject counts from this batch,
+      // merged with the stored lifetime counts (not the whole batch per subject).
+      updatedReport.subject_analysis = mergeSubjectAnalysis(
+        currentReport,
+        updatedReport.subject_analysis
+      );
+      updatedReport.progress_delta = mergeProgressDelta(
+        currentReport,
+        updatedReport.progress_delta,
+        updatedReport.subject_analysis
+      );
+
       // 🛡️ Deterministic Code-Level Confidence Calculation
-      const distinctSubjectsCount = new Set((updatedReport.subject_analysis || []).map(s => s.subject)).size;
+      const distinctSubjectsCount = new Set(
+        (updatedReport.subject_analysis || []).map(s => normalize(s.subject))
+      ).size;
       let calculatedConfidence = "Low";
       let calculatedBadge = "Developing";
 
@@ -496,67 +669,21 @@ ${JSON.stringify(compactBatchData)}
         badge: calculatedBadge
       };
 
-      // 🛡️ Code-Level Deep Merging (Zero Data Loss Architecture)
-      if (currentReport) {
-        // A. Subject Analysis: Retention & Mathematical Weighted Accuracy
-        if (Array.isArray(currentReport.subject_analysis)) {
-          const newSubjectMap = new Map();
-          (updatedReport.subject_analysis || []).forEach(s => newSubjectMap.set(normalize(s.subject), s));
+      // 🛡️ Critical Traps: Normalized Deduplication & Persistence until Mastered (>= 75%)
+      if (Array.isArray(currentReport?.critical_traps_detailed)) {
+        const newTrapKeys = new Set(
+          (updatedReport.critical_traps_detailed || []).map(
+            t => `${normalize(t.subject)}_${normalize(t.topic)}_${normalize(t.subtopic)}`
+          )
+        );
 
-          for (const oldSub of currentReport.subject_analysis) {
-            const normKey = normalize(oldSub.subject);
-            if (!newSubjectMap.has(normKey)) {
-              // Subject naye batch me nahi tha, retain karein
-              updatedReport.subject_analysis.push(oldSub);
-            } else {
-              // Subject naye batch me bhi hai: Weighted accuracy merge formula
-              const newSub = newSubjectMap.get(normKey);
-              const oldAttempts = oldSub.total_attempts || 10;
-              const newAttempts = compactBatchData.length;
-              const oldAcc = oldSub.accuracy_pct ?? 0;
-              const newAcc = newSub.accuracy_pct ?? oldAcc;
+        for (const oldTrap of currentReport.critical_traps_detailed) {
+          const trapKey = `${normalize(oldTrap.subject)}_${normalize(oldTrap.topic)}_${normalize(oldTrap.subtopic)}`;
+          const trapAcc = oldTrap.accuracy_pct ?? 0;
 
-              const weightedAcc = Math.round(
-                ((oldAttempts * oldAcc) + (newAttempts * newAcc)) / (oldAttempts + newAttempts)
-              );
-
-              newSub.accuracy_pct = weightedAcc;
-              newSub.total_attempts = oldAttempts + newAttempts;
-            }
-          }
-        }
-
-        // B. Critical Traps: Normalized Deduplication & Persistence until Mastered (>= 75%)
-        if (Array.isArray(currentReport.critical_traps_detailed)) {
-          const newTrapKeys = new Set(
-            (updatedReport.critical_traps_detailed || []).map(
-              t => `${normalize(t.subject)}_${normalize(t.topic)}_${normalize(t.subtopic)}`
-            )
-          );
-
-          for (const oldTrap of currentReport.critical_traps_detailed) {
-            const trapKey = `${normalize(oldTrap.subject)}_${normalize(oldTrap.topic)}_${normalize(oldTrap.subtopic)}`;
-            const trapAcc = oldTrap.accuracy_pct ?? 0;
-
-            // Agar naye report me missing hai aur master nahi hua (<75%), safely retain karein
-            if (!newTrapKeys.has(trapKey) && trapAcc < 75) {
-              updatedReport.critical_traps_detailed.push(oldTrap);
-            }
-          }
-        }
-
-        // C. Progress Delta: Preserve Lifetime Baseline for all historical subjects
-        if (Array.isArray(currentReport.progress_delta)) {
-          const newDeltaSubjects = new Set((updatedReport.progress_delta || []).map(d => normalize(d.subject)));
-          for (const oldDelta of currentReport.progress_delta) {
-            if (!newDeltaSubjects.has(normalize(oldDelta.subject))) {
-              updatedReport.progress_delta.push({
-                subject: oldDelta.subject,
-                from_pct: oldDelta.from_pct ?? oldDelta.to_pct ?? 0,
-                to_pct: oldDelta.to_pct ?? 0,
-                diff: 0
-              });
-            }
+          // Agar naye report me missing hai aur master nahi hua (<75%), safely retain karein
+          if (!newTrapKeys.has(trapKey) && trapAcc < 75) {
+            updatedReport.critical_traps_detailed.push(oldTrap);
           }
         }
       }
