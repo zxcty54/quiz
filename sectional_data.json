@@ -53,5 +53,25 @@
       "upcoming_sets": 2,
       "upcoming_text": "Live Tomorrow 8 PM"
     }
-  ]
+  ],
+  "bpsc_tre_primary": {
+    "display_name": "BPSC TRE Primary (Class 1–5)",
+    "badge": "CLASS 1–5",
+    "items": [
+      {
+        "title": "Language (Hindi Option)",
+        "sets": 1,
+        "upcoming_sets": 4,
+        "upcoming_text": "More 30-question sets coming soon",
+        "folder": "sectional_mock/bpsc_tre/primary/language"
+      },
+      {
+        "title": "General Studies",
+        "sets": 1,
+        "upcoming_sets": 4,
+        "upcoming_text": "More 30-question sets coming soon",
+        "folder": "sectional_mock/bpsc_tre/primary/general_studies"
+      }
+    ]
+  }
 }
