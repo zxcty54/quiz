@@ -62,15 +62,40 @@
         "title": "Language (Hindi Option)",
         "sets": 5,
         "upcoming_sets": 0,
-        "upcoming_text": "More 30-question sets coming soon",
         "folder": "sectional_mock/bpsc_tre/primary/language"
       },
       {
         "title": "General Studies",
         "sets": 5,
         "upcoming_sets": 0,
-        "upcoming_text": "More 30-question sets coming soon",
         "folder": "sectional_mock/bpsc_tre/primary/general_studies"
+      }
+    ]
+  },
+  "bpsc_tre_middle": {
+    "display_name": "BPSC TRE Middle (Class 6–8)",
+    "badge": "CLASS 6–8",
+    "items": [
+      {
+        "title": "Language (8 common English + Hindi option)",
+        "sets": 1,
+        "upcoming_sets": 4,
+        "upcoming_text": "Four more original 30-question sets planned",
+        "folder": "sectional_mock/bpsc_tre/middle/language"
+      },
+      {
+        "title": "General Studies",
+        "sets": 1,
+        "upcoming_sets": 4,
+        "upcoming_text": "Four more original 30-question sets planned",
+        "folder": "sectional_mock/bpsc_tre/middle/general_studies"
+      },
+      {
+        "title": "English (Concerned Subject)",
+        "sets": 1,
+        "upcoming_sets": 4,
+        "upcoming_text": "Four more original 30-question sets planned",
+        "folder": "sectional_mock/bpsc_tre/middle/english"
       }
     ]
   }
