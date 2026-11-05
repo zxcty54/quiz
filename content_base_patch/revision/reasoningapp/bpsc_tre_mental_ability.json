@@ -1,0 +1,282 @@
+[
+  {
+    "qe": "What number comes next in the series 2, 5, 8, 11, ...?",
+    "qh": "श्रृंखला 2, 5, 8, 11, ... में अगली संख्या क्या है?",
+    "o": [
+      "14",
+      "13",
+      "15",
+      "16",
+      "17"
+    ],
+    "oh": [
+      "14",
+      "13",
+      "15",
+      "16",
+      "17"
+    ],
+    "a": 0,
+    "e": "Each term increases by 3, so the next term is 11 + 3 = 14.",
+    "eh": "हर पद में 3 जोड़ा गया है, इसलिए अगला पद 11 + 3 = 14 है।",
+    "oe": [
+      "14",
+      "13",
+      "15",
+      "16",
+      "17"
+    ]
+  },
+  {
+    "qe": "Find the next letter: A, C, F, J, ...",
+    "qh": "अगला अक्षर ज्ञात कीजिए: A, C, F, J, ...",
+    "o": [
+      "O",
+      "N",
+      "M",
+      "P",
+      "Q"
+    ],
+    "oh": [
+      "O",
+      "N",
+      "M",
+      "P",
+      "Q"
+    ],
+    "a": 0,
+    "e": "The steps advance by 2, 3, 4 and then 5 letters: A→C→F→J→O.",
+    "eh": "अक्षरों की छलाँग क्रमशः 2, 3, 4 और फिर 5 स्थान की है: A→C→F→J→O।",
+    "oe": [
+      "O",
+      "N",
+      "M",
+      "P",
+      "Q"
+    ]
+  },
+  {
+    "qe": "A person walks 4 km east, then 3 km north, and finally 4 km west. Where are they relative to the starting point?",
+    "qh": "एक व्यक्ति 4 किमी पूर्व, फिर 3 किमी उत्तर और अंत में 4 किमी पश्चिम चलता है। वह आरंभिक बिंदु के सापेक्ष कहाँ है?",
+    "o": [
+      "3 km north",
+      "3 km south",
+      "4 km east",
+      "4 km west",
+      "At the starting point"
+    ],
+    "oh": [
+      "3 किमी उत्तर",
+      "3 किमी दक्षिण",
+      "4 किमी पूर्व",
+      "4 किमी पश्चिम",
+      "आरंभिक बिंदु पर"
+    ],
+    "a": 0,
+    "e": "The 4 km east and 4 km west movements cancel; the remaining displacement is 3 km north.",
+    "eh": "4 किमी पूर्व और 4 किमी पश्चिम की चाल निरस्त हो जाती है; शेष विस्थापन 3 किमी उत्तर है।",
+    "oe": [
+      "3 km north",
+      "3 km south",
+      "4 km east",
+      "4 km west",
+      "At the starting point"
+    ]
+  },
+  {
+    "qe": "Which one does not belong with the others: square, triangle, circle, cube, rectangle?",
+    "qh": "वर्ग, त्रिभुज, वृत्त, घन और आयत में कौन अलग है?",
+    "o": [
+      "Cube",
+      "Square",
+      "Triangle",
+      "Circle",
+      "Rectangle"
+    ],
+    "oh": [
+      "घन",
+      "वर्ग",
+      "त्रिभुज",
+      "वृत्त",
+      "आयत"
+    ],
+    "a": 0,
+    "e": "A cube is three-dimensional; the other four are two-dimensional plane figures.",
+    "eh": "घन त्रि-आयामी है; बाकी चार समतलीय द्वि-आयामी आकृतियाँ हैं।",
+    "oe": [
+      "Cube",
+      "Square",
+      "Triangle",
+      "Circle",
+      "Rectangle"
+    ]
+  },
+  {
+    "qe": "Hand is to glove as foot is to what?",
+    "qh": "हाथ का संबंध दस्ताने से है, उसी प्रकार पैर का संबंध किससे है?",
+    "o": [
+      "Shoe",
+      "Hat",
+      "Belt",
+      "Scarf",
+      "Watch"
+    ],
+    "oh": [
+      "जूता",
+      "टोपी",
+      "बेल्ट",
+      "स्कार्फ",
+      "घड़ी"
+    ],
+    "a": 0,
+    "e": "A glove is worn on a hand; a shoe is worn on a foot.",
+    "eh": "दस्ताना हाथ में पहना जाता है; जूता पैर में पहना जाता है।",
+    "oe": [
+      "Shoe",
+      "Hat",
+      "Belt",
+      "Scarf",
+      "Watch"
+    ]
+  },
+  {
+    "qe": "If every red box is heavy and a particular box is red, what must be true?",
+    "qh": "यदि हर लाल डिब्बा भारी है और एक विशेष डिब्बा लाल है, तो उसके बारे में क्या निश्चित रूप से सही है?",
+    "o": [
+      "The box is heavy",
+      "The box is light",
+      "Every heavy box is red",
+      "No red box is heavy",
+      "The box is empty"
+    ],
+    "oh": [
+      "डिब्बा भारी है",
+      "डिब्बा हल्का है",
+      "हर भारी डिब्बा लाल है",
+      "कोई लाल डिब्बा भारी नहीं है",
+      "डिब्बा खाली है"
+    ],
+    "a": 0,
+    "e": "The first statement applies to every red box; since this box is red, it must be heavy.",
+    "eh": "पहला कथन हर लाल डिब्बे पर लागू होता है; यह डिब्बा लाल है, इसलिए यह भारी होगा।",
+    "oe": [
+      "The box is heavy",
+      "The box is light",
+      "Every heavy box is red",
+      "No red box is heavy",
+      "The box is empty"
+    ]
+  },
+  {
+    "qe": "In a row of 12 students, Riya is 4th from the left. What is her position from the right?",
+    "qh": "12 विद्यार्थियों की पंक्ति में रिया बाएँ से चौथे स्थान पर है। वह दाएँ से किस स्थान पर है?",
+    "o": [
+      "9th",
+      "8th",
+      "7th",
+      "10th",
+      "4th"
+    ],
+    "oh": [
+      "नौवें",
+      "आठवें",
+      "सातवें",
+      "दसवें",
+      "चौथे"
+    ],
+    "a": 0,
+    "e": "Position from the right = total − position from the left + 1 = 12 − 4 + 1 = 9.",
+    "eh": "दाएँ से स्थान = कुल − बाएँ से स्थान + 1 = 12 − 4 + 1 = 9।",
+    "oe": [
+      "9th",
+      "8th",
+      "7th",
+      "10th",
+      "4th"
+    ]
+  },
+  {
+    "qe": "If CAT is coded by moving each letter one step forward in the alphabet, how is CAT written?",
+    "qh": "यदि CAT के प्रत्येक अक्षर को वर्णमाला में एक स्थान आगे करके कूटबद्ध किया जाए, तो CAT कैसे लिखा जाएगा?",
+    "o": [
+      "DBU",
+      "DBT",
+      "CBU",
+      "EBU",
+      "DAS"
+    ],
+    "oh": [
+      "DBU",
+      "DBT",
+      "CBU",
+      "EBU",
+      "DAS"
+    ],
+    "a": 0,
+    "e": "C moves to D, A to B and T to U, giving DBU.",
+    "eh": "C से D, A से B और T से U बनता है; इसलिए कूट DBU है।",
+    "oe": [
+      "DBU",
+      "DBT",
+      "CBU",
+      "EBU",
+      "DAS"
+    ]
+  },
+  {
+    "qe": "A is taller than B, and B is taller than C. Which person is the shortest?",
+    "qh": "A, B से लंबा है और B, C से लंबा है। सबसे छोटा कौन है?",
+    "o": [
+      "C",
+      "A",
+      "B",
+      "A and B are equal",
+      "Cannot be determined"
+    ],
+    "oh": [
+      "C",
+      "A",
+      "B",
+      "A और B बराबर हैं",
+      "निर्धारित नहीं किया जा सकता"
+    ],
+    "a": 0,
+    "e": "The order is A > B > C in height, so C is the shortest.",
+    "eh": "लंबाई का क्रम A > B > C है, इसलिए C सबसे छोटा है।",
+    "oe": [
+      "C",
+      "A",
+      "B",
+      "A and B are equal",
+      "Cannot be determined"
+    ]
+  },
+  {
+    "qe": "Which number is the odd one out: 9, 16, 25, 36, 48?",
+    "qh": "9, 16, 25, 36, 48 में कौन-सी संख्या अलग है?",
+    "o": [
+      "48",
+      "9",
+      "16",
+      "25",
+      "36"
+    ],
+    "oh": [
+      "48",
+      "9",
+      "16",
+      "25",
+      "36"
+    ],
+    "a": 0,
+    "e": "9, 16, 25 and 36 are perfect squares; 48 is not.",
+    "eh": "9, 16, 25 और 36 पूर्ण वर्ग हैं; 48 पूर्ण वर्ग नहीं है।",
+    "oe": [
+      "48",
+      "9",
+      "16",
+      "25",
+      "36"
+    ]
+  }
+]

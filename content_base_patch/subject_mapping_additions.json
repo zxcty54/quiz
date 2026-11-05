@@ -1,0 +1,51 @@
+{
+  "merge_into_subject_mapping": {
+    "aptitude_mapping": {
+      "BPSC TRE • Primary Mathematics (Classes 1–5)": "revision/maths/bpsc_tre_primary_math.json",
+      "BPSC TRE • Middle–Secondary Mathematics (Classes 6–10)": "revision/maths/bpsc_tre_middle_secondary_math.json"
+    },
+    "reasoning_mapping": {
+      "BPSC TRE • Mental Ability (Classes 1–10)": "revision/reasoningapp/bpsc_tre_mental_ability.json"
+    },
+    "phy_mapping": {
+      "BPSC TRE • General Science: Physics (Classes 1–10)": "revision/general_science/physics/bpsc_tre_physics_gs.json"
+    },
+    "chem_mapping": {
+      "BPSC TRE • General Science: Chemistry (Classes 1–10)": "revision/general_science/chemistry/bpsc_tre_chemistry_gs.json"
+    },
+    "bio_mapping": {
+      "BPSC TRE • General Science: Biology (Classes 1–10)": "revision/general_science/biology/bpsc_tre_biology_gs.json"
+    },
+    "history_mapping": {
+      "BPSC TRE • History for General Studies (Classes 1–10)": "revision/general_science/history/bpsc_tre_history_gs.json",
+      "BPSC TRE • Middle History (Classes 6–8)": "revision/general_science/history/bpsc_tre_middle_history.json",
+      "BPSC TRE • Secondary History (Classes 9–10)": "revision/general_science/history/bpsc_tre_secondary_history.json"
+    },
+    "geo_mapping": {
+      "BPSC TRE • Geography for General Studies (Classes 1–10)": "revision/general_science/geography/bpsc_tre_geography_gs.json",
+      "BPSC TRE • Middle Geography (Classes 6–8)": "revision/general_science/geography/bpsc_tre_middle_geography.json",
+      "BPSC TRE • Secondary Geography (Classes 9–10)": "revision/general_science/geography/bpsc_tre_secondary_geography.json"
+    },
+    "eco_mapping": {
+      "BPSC TRE • Economy for General Studies (Classes 1–10)": "revision/general_science/economy/bpsc_tre_economy_gs.json",
+      "BPSC TRE • Middle Economics (Classes 6–8)": "revision/general_science/economy/bpsc_tre_middle_economics.json",
+      "BPSC TRE • Secondary Economics (Classes 9–10)": "revision/general_science/economy/bpsc_tre_secondary_economics.json"
+    },
+    "polity_mapping": {
+      "BPSC TRE • Polity for General Studies (Classes 1–10)": "revision/general_science/polity/bpsc_tre_polity_gs.json",
+      "BPSC TRE • Middle Political Science (Classes 6–8)": "revision/general_science/polity/bpsc_tre_middle_political_science.json",
+      "BPSC TRE • Secondary Political Science (Classes 9–10)": "revision/general_science/polity/bpsc_tre_secondary_political_science.json"
+    },
+    "bihar_special_mapping": {
+      "BPSC TRE • Bihar Context and General Awareness (Classes 1–10)": "revision/bihar_special/general/bpsc_tre_bihar_context.json"
+    },
+    "language_mapping": {
+      "BPSC TRE • Qualifying English": "revision/language/english/bpsc_tre_qualifying_english.json",
+      "BPSC TRE • Qualifying Hindi": "revision/language/hindi/bpsc_tre_qualifying_hindi.json",
+      "BPSC TRE • Middle English Subject (Classes 6–8)": "revision/language/english/bpsc_tre_middle_english_subject.json",
+      "BPSC TRE • Middle Hindi Subject (Classes 6–8)": "revision/language/hindi/bpsc_tre_middle_hindi_subject.json",
+      "BPSC TRE • Middle Sanskrit Subject (Classes 6–8)": "revision/language/sanskrit/bpsc_tre_middle_sanskrit_subject.json",
+      "BPSC TRE • Secondary English Subject (Classes 9–10)": "revision/language/english/bpsc_tre_secondary_english_subject.json"
+    }
+  }
+}
