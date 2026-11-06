@@ -6,7 +6,15 @@ The user-approved scope is Primary Language + GS; Middle Language + GS + English
 
 ## Release gate before copying
 
-Do not publish this content until all applicable class/subject/topic rows in `COVERAGE_MATRIX.md` have mapped banks, the official-source gaps are resolved or explicitly accepted, and the full JSON/mapping validation passes. The existing `subject_mapping_additions.json` is a draft overlay, not approval to enable these banks.
+**Production status: HOLD — do not release.** See `PRODUCTION_READINESS.md` for the gate-by-gate blockers. Do not publish this content until all applicable class/subject/unit rows in `COVERAGE_MATRIX.md` have complete mapped coverage, the official-source gaps are resolved or explicitly accepted, independent subject/language review is complete, the app integration gaps are addressed, and final validation and smoke tests pass. The existing `subject_mapping_additions.json` is a draft overlay, not approval to enable these banks.
+
+Run the structural-only validator with:
+
+```bash
+python3 content_base_patch/scripts/validate_revision_banks.py
+```
+
+A pass checks JSON shape and mapping integrity only; it does **not** certify answer accuracy, translations, syllabus coverage, expert review, or app integration.
 
 ## Planned integration after completion and approval
 
