@@ -1,6 +1,6 @@
 # DRAFT — INCOMPLETE — DO NOT COPY TO THE LIVE APP
 
-This package is **not release-ready**. It currently contains only 25 Revision banks / 627 questions (an expanding draft), which do not exhaust the BPSC TRE syllabus for Classes 1–10. Keep it on the Arena branch for review and expansion; do not merge or copy it into the live Content Base yet.
+This package is **not release-ready**. It currently contains only 27 Revision banks / 677 questions (an expanding draft), which do not exhaust the BPSC TRE syllabus for Classes 1–10. Keep it on the Arena branch for review and expansion; do not merge or copy it into the live Content Base yet.
 
 The user-approved scope is Primary Language + GS; Middle Language + GS + English, Hindi, Sanskrit, Mathematics, Science, History, Geography, Economics and Political Science; and Secondary Language + GS + English, Mathematics and the four Social Science choice banks. See the release gate at the end of `COVERAGE_MATRIX.md`.
 
@@ -12,7 +12,7 @@ Do not publish this content until all applicable class/subject/topic rows in `CO
 
 1. Copy `content_base_patch/revision/` into the root of the Content Base repository, preserving relative paths.
 2. Merge—not replace—the entries in `subject_mapping_additions.json` into the existing `subject_mapping.json`.
-3. The current Revision screen has no Language hub. Language banks will remain inaccessible until app-side Language support is added; no Flutter/app code has been changed in this package.
+3. The current Revision screen has no Language hub. Language banks (including provisional Urdu/Bengali banks requiring native review) will remain inaccessible until app-side Language support is added; no Flutter/app code has been changed in this package.
 
 ## Current JSON format
 
@@ -20,7 +20,7 @@ Each bank is an array of records using the Revision model's supported keys: `qe`
 
 ## Source-confidence warning
 
-The official BPSC Advertisement 15/2026 PDF is listed in BPSC's media index, but its full contents could not be retrieved/parsed during this audit. The readable TRE-4 syllabus transcription is hosted by a third party and contains an internal Main-duration inconsistency. Therefore the current high-level stage/section mapping is provisional; the current 627-question draft does not claim exhaustive or officially verified chapter-level TRE-4 coverage. Re-check the official advertisement and any later BPSC corrigenda before release.
+The official BPSC Advertisement 15/2026 PDF is listed in BPSC's media index, but its full contents could not be retrieved/parsed during this audit. The readable TRE-4 syllabus transcription is hosted by a third party and contains an internal Main-duration inconsistency. Therefore the current high-level stage/section mapping is provisional; the current 677-question draft does not claim exhaustive or officially verified chapter-level TRE-4 coverage. Re-check the official advertisement and any later BPSC corrigenda before release.
 
 ## Source links
 

@@ -2,7 +2,7 @@
 
 **Status:** DRAFT — incomplete, not release-ready, and not to be copied into the live app. This is not an exhaustive official TRE-4 chapter map.
 
-**Current draft set:** 25 JSON banks containing 627 original MCQs. Twenty-three banks have 25 questions each and two have 26 questions each. Every question has five answer choices and uses the current Revision model's bilingual fields; no per-question topic or subject tags are present. This draft is not sufficient to claim complete syllabus coverage.
+**Current draft set:** 27 JSON banks containing 677 original MCQs. Twenty-five banks have 25 questions each and two have 26 questions each. Every question has five answer choices and uses the current Revision model's bilingual fields; no per-question topic or subject tags are present. This draft is not sufficient to claim complete syllabus coverage.
 
 ## Scope and evidence
 
@@ -30,7 +30,7 @@ The question files are original practice built around the broad Preliminary GS a
 | Mathematics / quantitative practice | `revision/maths/bpsc_tre_primary_math.json`; `revision/maths/bpsc_tre_middle_secondary_math.json` | `aptitude_mapping` | Foundational practice for supplied levels; not every SCERT/NCERT chapter is represented. |
 | Mental ability | `revision/reasoningapp/bpsc_tre_mental_ability.json` | `reasoning_mapping` | Selected foundational practice only. |
 | Middle / Secondary Social Science choices | `revision/general_science/history/bpsc_tre_middle_history.json`; `.../geography/bpsc_tre_middle_geography.json`; `.../economy/bpsc_tre_middle_economics.json`; `.../polity/bpsc_tre_middle_political_science.json`; corresponding four `bpsc_tre_secondary_*.json` files | `history_mapping`, `geo_mapping`, `eco_mapping`, `polity_mapping` | Separate original practice for all four choices. Paper choice rule remains: choose two; History or Geography must be one. This rule is documented here, not encoded as an in-app lock. |
-| Qualifying Language and supplied subject-language papers | `revision/language/english/bpsc_tre_qualifying_english.json`; `revision/language/hindi/bpsc_tre_qualifying_hindi.json`; Middle English/Hindi/Sanskrit and Secondary English files under `revision/language/` | Proposed `language_mapping` only | Content-ready, but the current Revision UI has no Language hub and does not consume a new mapping key. It will not surface until app-side Language support is added. Urdu, Bengali and other language choices are not covered. |
+| Qualifying Language and supplied subject-language papers | `revision/language/english/bpsc_tre_qualifying_english.json`; Hindi, Urdu and Bengali qualifying banks under `revision/language/`; Middle English/Hindi/Sanskrit and Secondary English files under `revision/language/` | Proposed `language_mapping` only | Draft practice now exists for the reviewed English + Hindi/Urdu/Bengali choice pattern. Urdu/Bengali wording needs native-language review. The current Revision UI has no Language hub and does not consume the proposed mapping key, so none of these banks will surface until app-side Language support is added. |
 | Dynamic current affairs | No new bank in this overlay | Existing current-affairs content remains independent | Not duplicated here; current-affairs facts need date-stamped updates and separate verification. |
 
 ## Important non-claims / remaining work
@@ -39,7 +39,7 @@ The question files are original practice built around the broad Preliminary GS a
 - Question wording is original practice inspired by the broad syllabus and paper structure; it is **not official PYQ text**, and no bank is labelled PYQ.
 - The source set does not establish the exact TRE-4 chapter list, chapter weights, current paper duration, negative marking, or every optional subject. Do not claim “complete verified TRE-4 syllabus coverage.”
 - Middle Mathematics and Science were combined in the supplied 80-question subject paper; the Revision banks separate their practice for navigation, not as a claim about the official paper's exact allocation.
-- Secondary Science, Secondary Hindi/Sanskrit, Urdu/Bengali choices, and other optional subjects were not part of the supplied Secondary booklets reviewed for this build. They are not represented as covered.
+- Secondary Science, Secondary Hindi/Sanskrit subject papers, and other optional Secondary subjects were not part of the supplied Secondary booklets reviewed and are outside the approved scope. Urdu/Bengali are represented only as provisional common qualifying-Language practice, not as Secondary subject papers.
 - A full source-backed completion pass requires successful review of the official Advertisement 15/2026 PDF, rendered-page review/OCR of the image-only Primary booklet, and official confirmation of any TRE-4 changes to the TRE-3 paper structure.
 
 ## Bank inventory
@@ -69,6 +69,8 @@ All paths are relative to Content Base root; question counts are confirmed from 
 | `revision/general_science/polity/bpsc_tre_secondary_political_science.json` | 26 | Secondary Social Science Political Science, Classes 9–10 |
 | `revision/language/english/bpsc_tre_qualifying_english.json` | 25 | Qualifying Language: English, foundational practice |
 | `revision/language/hindi/bpsc_tre_qualifying_hindi.json` | 25 | Qualifying Language: Hindi choice, foundational practice |
+| `revision/language/urdu/bpsc_tre_qualifying_urdu.json` | 25 | Qualifying Language: Urdu choice, provisional practice requiring native review |
+| `revision/language/bengali/bpsc_tre_qualifying_bengali.json` | 25 | Qualifying Language: Bengali choice, provisional practice requiring native review |
 | `revision/language/english/bpsc_tre_middle_english_subject.json` | 25 | Middle English subject, Classes 6–8 |
 | `revision/language/hindi/bpsc_tre_middle_hindi_subject.json` | 25 | Middle Hindi subject, Classes 6–8 |
 | `revision/language/sanskrit/bpsc_tre_middle_sanskrit_subject.json` | 26 | Middle Sanskrit subject, Classes 6–8 |
@@ -83,7 +85,7 @@ This build's accepted scope is **Revision banks only**, Classes **1–10**, with
 - **Primary (1–5):** qualifying Language + General Studies.
 - **Middle (6–8):** qualifying Language + General Studies + English, Hindi, Sanskrit, Mathematics, Science, History, Geography, Economics and Political Science.
 - **Secondary (9–10):** qualifying Language + General Studies + English + Mathematics + Social Science choice banks for History, Geography, Economics and Political Science. The exam choice rule is any two Social Science sections, with History or Geography mandatory.
-- The qualifying Language evidence reviewed so far is English plus a choice of Hindi/Urdu/Bengali. Urdu and Bengali banks must be added before calling Language coverage complete.
+- The reviewed common Language pattern includes English plus a choice among Hindi/Urdu/Bengali. Draft qualifying banks now exist for all four languages, but Urdu/Bengali need native-language review and the Revision UI still has no Language hub.
 - **Exclude** Classes 11–12, Learning lessons and sectional mocks. For Secondary, do not add subject options outside the list above unless the user separately expands scope.
 
 ### Release acceptance criteria
@@ -94,13 +96,13 @@ This build's accepted scope is **Revision banks only**, Classes **1–10**, with
 4. Every path referenced by the mapping exists, every question passes schema and answer checks, and a coverage audit reports no unserved approved unit.
 5. Content stays on the Arena branch as a draft. Do not copy or publish to the live app until the matrix is complete and the user approves it.
 
-**Current release status: FAIL / NOT READY.** The 627-question draft meets the minimum question count per existing bank, but approved class/subject mapping and syllabus-unit coverage remain incomplete; the counts do not prove every syllabus unit is served. Language UI support is absent from the current Revision screen; no app code has been authorized or changed.
+**Current release status: FAIL / NOT READY.** The 677-question draft meets the minimum question count per existing bank, but approved class/subject mapping and syllabus-unit coverage remain incomplete; the counts do not prove every syllabus unit is served. Language UI support is absent from the current Revision screen; Urdu/Bengali also require native review. No app code has been authorized or changed.
 ### Band-by-band completion tracker
 
 | Band | Approved sections | Current bank depth | Remaining coverage work | Status |
 |---|---|---|---|---|
-| Primary (Classes 1–5) | Qualifying Language; General Studies | Primary Mathematics has 25 questions; other GS banks are 25-question mixed-level banks. English/Hindi qualifying banks have 25 each. | Build a grade-appropriate Primary unit crosswalk; establish separate Primary depth for GS/science/mental ability rather than relying on mixed-level banks; add Urdu/Bengali Language-choice content and expert review. | **Incomplete** |
-| Middle (Classes 6–8) | Qualifying Language; General Studies; English, Hindi, Sanskrit, Mathematics, Science, History, Geography, Economics, Political Science | English/Hindi/Sanskrit subject banks have 25–26 each; the four Social Science choice banks have 25 each; Mathematics is still one combined Classes 6–10 bank; General Science and GS foundations are mixed-level. | Split Middle Mathematics from Secondary Mathematics; map every approved subject to readable syllabus units and grade-appropriate practice; add Urdu/Bengali Language-choice content and expert review. | **Incomplete** |
-| Secondary (Classes 9–10) | Qualifying Language; General Studies; English; Mathematics; History/Geography/Economics/Political Science Social Science choices | English subject and all four Social Science choice banks have 25–26 each; Mathematics is still one combined Classes 6–10 bank; GS foundations are mixed-level. | Split Secondary Mathematics; map every approved subject to readable syllabus units and grade-appropriate practice; add Urdu/Bengali Language-choice content and expert review. Preserve the rule: select two Social Science sections, one must be History or Geography. | **Incomplete** |
+| Primary (Classes 1–5) | Qualifying Language; General Studies | Primary Mathematics has 25 questions; other GS banks are 25-question mixed-level banks. English/Hindi/Urdu/Bengali qualifying banks each have 25 questions; Urdu/Bengali require native review. | Build a grade-appropriate Primary unit crosswalk; establish separate Primary depth for GS/science/mental ability rather than relying on mixed-level banks; complete native-language review of the Urdu/Bengali choice banks and add Language UI support. | **Incomplete** |
+| Middle (Classes 6–8) | Qualifying Language; General Studies; English, Hindi, Sanskrit, Mathematics, Science, History, Geography, Economics, Political Science | English/Hindi/Sanskrit subject banks have 25–26 each; the four Social Science choice banks have 25 each; Mathematics is still one combined Classes 6–10 bank; General Science and GS foundations are mixed-level. | Split Middle Mathematics from Secondary Mathematics; map every approved subject to readable syllabus units and grade-appropriate practice; complete native-language review of the Urdu/Bengali choice banks and add Language UI support. | **Incomplete** |
+| Secondary (Classes 9–10) | Qualifying Language; General Studies; English; Mathematics; History/Geography/Economics/Political Science Social Science choices | English subject and all four Social Science choice banks have 25–26 each; Mathematics is still one combined Classes 6–10 bank; GS foundations are mixed-level. | Split Secondary Mathematics; map every approved subject to readable syllabus units and grade-appropriate practice; complete native-language review of the Urdu/Bengali choice banks and add Language UI support. Preserve the rule: select two Social Science sections, one must be History or Geography. | **Incomplete** |
 
 **Coverage distinction:** the 25-question minimum is now met for each of the 25 existing banks. It is only a minimum bank-size check—not a claim that every chapter, subtopic, grade band, exam skill or Language option is covered. No live-copy approval is implied.
