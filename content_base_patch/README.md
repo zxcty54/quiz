@@ -28,11 +28,12 @@ Each bank is an array of records using the Revision model's supported keys: `qe`
 
 ## Source-confidence warning
 
-The official BPSC Advertisement 15/2026 PDF is listed in BPSC's media index, but its full contents could not be retrieved/parsed during this audit. The readable TRE-4 syllabus transcription is hosted by a third party and contains an internal Main-duration inconsistency. Therefore the current high-level stage/section mapping is provisional; the current 677-question draft does not claim exhaustive or officially verified chapter-level TRE-4 coverage. Re-check the official advertisement and any later BPSC corrigenda before release.
+The user supplied the 24-page BPSC notice identified on its first page as Advertisement 14/2026 (18 August 2026). Printed pages 13–17 were reviewed, and the separate five-page “Syllabus Exam Pattern” PDF matches those pages exactly. This confirms the broad Prelim/Main pattern and section-choice rules in that version, but the notice contradicts itself on Main duration (2:30 in the class-wise table on p.14 vs 2:00 in the general rule on p.16) and does not provide a class-by-class, unit-level syllabus. An earlier source audit identified a later Advertisement 15/2026 and an October extension notice with a different vacancy total; Advertisement 15/2026 and applicable corrigenda still need reconciliation. The current 677-question draft does not claim exhaustive or final-version verified TRE-4 coverage. See `PRODUCTION_READINESS.md`.
 
 ## Source links
 
 - BPSC Advertisement 15/2026 (official PDF URL listed in BPSC media index): https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Advertisement-152026-TRE-4.0_BPSC-20260922-dbsf04.pdf
+- BPSC application-extension notice (26 October 2026): https://bpsc.bihar.gov.in/wp-content/uploads/BPSC_content/Notices/Image_125_BPSC-20261026-l3wn9q.pdf
 - BPSC media index search for TRE-4.0: https://bpsc.bihar.gov.in/wp-json/wp/v2/media?search=TRE-4.0&per_page=100
 - BPSC question-booklet archive: https://bpsc.bihar.gov.in/question-booklets/
 - Official BPSC exam calendar: https://bpsc.bihar.gov.in/exam-calendar/
