@@ -28,7 +28,7 @@ Each bank is an array of records using the Revision model's supported keys: `qe`
 
 ## Source-confidence warning
 
-The user supplied the 24-page BPSC notice identified on its first page as Advertisement 14/2026 (18 August 2026). Printed pages 13–17 were reviewed, and the separate five-page “Syllabus Exam Pattern” PDF matches those pages exactly. This confirms the broad Prelim/Main pattern and section-choice rules in that version, but the notice contradicts itself on Main duration (2:30 in the class-wise table on p.14 vs 2:00 in the general rule on p.16) and does not provide a class-by-class, unit-level syllabus. An earlier source audit identified a later Advertisement 15/2026 and an October extension notice with a different vacancy total; Advertisement 15/2026 and applicable corrigenda still need reconciliation. The current 677-question draft does not claim exhaustive or final-version verified TRE-4 coverage. See `PRODUCTION_READINESS.md`.
+The user supplied the scanned BPSC Advertisement 15/2026 (22 September 2026). Its first page cancels Advertisement 14/2026; printed pages 1 and 13–16 were visually reviewed. It confirms the objective written-paper pattern (150 questions/marks, 2.5 hours), qualifying Language and subject sections, and the Social Science choice rule; it does not provide a class-by-class unit syllabus. Do not use the canceled Advertisement 14/2026's separate Preliminary stage or duration conflict as the current pattern. A later official extension notice identified in the earlier audit reports 33,320 vacancies versus 32,388 in Advertisement 15/2026; verify the latest administrative count and any post-advertisement corrigenda. The current 677-question draft does not claim exhaustive TRE-4 coverage. See `PRODUCTION_READINESS.md`.
 
 ## Source links
 
@@ -37,6 +37,6 @@ The user supplied the 24-page BPSC notice identified on its first page as Advert
 - BPSC media index search for TRE-4.0: https://bpsc.bihar.gov.in/wp-json/wp/v2/media?search=TRE-4.0&per_page=100
 - BPSC question-booklet archive: https://bpsc.bihar.gov.in/question-booklets/
 - Official BPSC exam calendar: https://bpsc.bihar.gov.in/exam-calendar/
-- Provisional third-party TRE syllabus transcription (not a BPSC-hosted file): https://www.sarkariresult.com/wp-content/uploads/2026/08/bpsc_Syllabus_TRE_SarkariResult.pdf
+- Older third-party TRE syllabus transcription (not BPSC-hosted; superseded for exam pattern by Advertisement 15/2026): https://www.sarkariresult.com/wp-content/uploads/2026/08/bpsc_Syllabus_TRE_SarkariResult.pdf
 - Bihar SCERT eResources catalogue: https://scert.bihar.gov.in/eresources/
 - Supplied paper filenames and scope limitations are recorded in `COVERAGE_MATRIX.md`.
