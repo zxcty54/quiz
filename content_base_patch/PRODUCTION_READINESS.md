@@ -14,6 +14,8 @@ Advertisement 15/2026 confirms, at a high level:
 - Printed page 15 specifies one-third negative marking, five choices A–E, and E for unanswered. The Middle/Secondary Social Science rule uses two sections: choose History or Geography in Section I; Section II options then depend on that selection. This matches the approved “two of four, History or Geography mandatory” rule.
 - The notice refers to SCERT/NCERT and the candidate's prescribed level, but it does **not** enumerate class-by-class chapters, units or question weights. It establishes paper structure, not exhaustive syllabus coverage.
 
+**Working content policy from the user's direction:** use every relevant chapter in the latest Bihar SCERT books for the approved classes/subjects as the coverage checklist, with NCERT as a cross-check or supplement where SCERT coverage is missing. This is a conservative product-completeness policy—not a claim that BPSC officially mandates every page/chapter.
+
 The earlier Advertisement 14/2026 upload and its five-page extract are superseded; their Preliminary-stage language and internal duration conflict should not be used as the current exam pattern. A later official application-extension notice identified in the earlier audit reports 33,320 vacancies versus Advertisement 15/2026's 32,388. That vacancy discrepancy needs current administrative verification, but does not itself supply a different syllabus. Check any post-Advertisement-15 corrigenda before release.
 
 ## Release-gate status
@@ -23,6 +25,7 @@ The earlier Advertisement 14/2026 upload and its five-page extract are supersede
 | JSON/schema, five-choice answer arrays, answer-index range, no question-level `topic`/`subject`, duplicate exact stems | **PASS — structural only** | Run `python3 content_base_patch/scripts/validate_revision_banks.py`. This checks shape, not whether the marked answer is correct. |
 | Mapping references and bank-file inventory | **PASS — structural only** | The draft overlay should map every bank once. The validator checks missing, duplicate, unsafe and unreferenced paths. |
 | Advertisement 15/2026 exam-pattern verification | **PASS — high-level only** | Scanned pages 1 and 13–16 were reviewed. The 150-question / 2.5-hour pattern, section split, marking and Social Science rule are clear in this notice. Check later corrigenda before release. |
+| SCERT/NCERT book corpus and edition inventory | **BLOCKED — inputs missing** | The uploaded files are notices and past papers; no Class 1–10 textbook PDFs, chapter lists or edition/year manifest were supplied. Provide the latest relevant Bihar SCERT books/contents or exact book titles and editions before a reliable full-book crosswalk can be built. |
 | Class- and unit-level coverage for the approved Classes 1–10 scope | **FAIL / INCOMPLETE** | `COVERAGE_MATRIX.md` identifies mixed-level General Studies/science banks, a combined Classes 6–10 Mathematics bank, and missing per-unit crosswalks. The notice is broad and does not provide a chapter-by-chapter syllabus. Twenty-five questions in a broad subject bank do not equal 25 per syllabus unit. |
 | Primary March 2024 booklet topic review | **BLOCKED** | `BPSC-TRE-3.0-Primary-Question-Papers-2024-PDFs-March-2024.pdf` remains image-only in this audit; OCR/rendered page-by-page review was not completed. A separate text-extractable Primary booklet is coded 2023 and does not replace the 2024 review. |
 | Subject-matter and answer-key review | **NOT DONE** | No independent teacher/subject-expert sign-off is recorded for these original practice questions or their answer keys. Review every item before charging users. |
@@ -34,7 +37,7 @@ The earlier Advertisement 14/2026 upload and its five-page extract are supersede
 
 ## Minimum release blockers
 
-1. Complete a class-band and syllabus-unit crosswalk for every approved Main-paper section, using reviewed source material. Add sufficient original practice to every unit—not merely every subject file.
+1. Establish the exact latest Bihar SCERT books/editions for each approved class and subject (with NCERT used only as a recorded cross-check/supplement), then build the class-band/chapter crosswalk. Add sufficient original practice to every unit—not merely every subject file.
 2. Complete the Primary 2024 booklet review and obtain independent subject-matter answer-key and bilingual editorial review. Urdu/Bengali additionally need native-language review.
 3. Confirm no post-Advertisement-15 corrigendum changes the paper structure or approved subject scope; verify the latest administrative vacancy notice separately if the app displays vacancy data.
 4. Resolve the Language-hub/app-visibility gap and verify the Social Science selection rule in the installed app, with explicit authorization for any app changes.

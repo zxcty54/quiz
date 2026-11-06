@@ -16,6 +16,12 @@
 | Secondary papers | Supplied Secondary English, Maths and Social Science papers dated 21 July 2024, alongside Advertisement 15/2026 printed pages 13–14. | The broad 30 + 40 + 80 structure is confirmed. Official Social Science choice is sequential: Section I is History or Geography; Section II choices depend on that selection. This matches two of the four approved areas, with History or Geography mandatory. | 2024 papers are TRE-3 evidence; later amendments still need checking. App enforcement is untested. |
 | Official archive | BPSC question-booklet page was inspected; its PDF widget was unavailable in the fetched page. | Identifies the official archive. | Supplied PDFs are used for pattern review; no inaccessible archive PDF is claimed as a source. |
 
+## Full-book coverage assumption and source gap
+
+At the user's direction, treat **every relevant chapter** in the latest Bihar SCERT books for the approved classes/subjects as the conservative coverage checklist; use NCERT as a recorded cross-check or supplement where SCERT coverage is missing. This is a product-completeness rule, **not** a claim that BPSC officially includes every textbook chapter. Keep chapter mapping in this matrix (or a separate unit manifest), not in question-level `topic`/`subject` fields.
+
+The uploaded materials include BPSC notices and exam booklets, but no Class 1–10 SCERT/NCERT textbooks, contents pages, or edition/year list. Therefore the chapter inventory cannot yet be filled accurately. The current broad bank map below is not a substitute for that inventory; do not invent chapter names or claim full-book coverage until the exact books/editions are supplied or verified.
+
 ## Coverage plan for this overlay
 
 The question files are original practice built around broad Main-paper GS headings in Advertisement 15/2026, the supplied paper structure, and the level of the supplied Class 1–10 papers. Paths listed below are relative to the Content Base root after copying `content_base_patch/revision/`. Ad15 cancels the earlier Advertisement 14/2026 and does not list a separate Preliminary stage.
