@@ -1,8 +1,8 @@
 # BPSC TRE content coverage and evidence matrix
 
-**Status:** provisional, source-traceable build. This is not an exhaustive official TRE-4 chapter map.
+**Status:** DRAFT — incomplete, not release-ready, and not to be copied into the live app. This is not an exhaustive official TRE-4 chapter map.
 
-**Delivered in this overlay:** 25 JSON banks containing 252 original MCQs. Every question has five answer choices and uses the current Revision model's bilingual fields; no per-question topic or subject tags are present.
+**Current starter set:** 25 JSON banks containing 252 original MCQs. Every question has five answer choices and uses the current Revision model's bilingual fields; no per-question topic or subject tags are present. The starter set is not sufficient to claim complete syllabus coverage.
 
 ## Scope and evidence
 

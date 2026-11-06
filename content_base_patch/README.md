@@ -1,21 +1,24 @@
-# BPSC TRE Revision Banks — copy-ready Content Base overlay
+# DRAFT — INCOMPLETE — DO NOT COPY TO THE LIVE APP
 
-This directory contains **25 original Revision practice banks (252 MCQs)** for BPSC TRE Primary (Classes 1–5), Middle (6–8), and Secondary (9–10). It does not add sectional mocks, Learning lessons, or Classes 11–12 content. The questions are newly written practice items; none are labelled or represented as official previous-year questions. See `COVERAGE_MATRIX.md` for source confidence, bank-by-bank inventory, and unresolved gaps.
+This package is **not release-ready**. It currently contains only 25 starter Revision banks / 252 questions, which do not exhaust the BPSC TRE syllabus for Classes 1–10. Keep it on the Arena branch for review and expansion; do not merge or copy it into the live Content Base yet.
 
-## Copying into `content_base`
+## Release gate before copying
 
-1. Copy `content_base_patch/revision/` into the root of the Content Base repository, preserving the relative paths.
-2. Merge the entries in `subject_mapping_additions.json` into the matching objects in Content Base's existing `subject_mapping.json`. **Do not replace the entire mapping** with the additions file.
-3. The current Revision screen has no Language hub. Language files and their proposed `language_mapping` entries are included as copy-ready data but will not be reachable in that UI until a Language hub is added. No Flutter/app code was changed in this work.
-4. `COVERAGE_MATRIX.md` records the evidence and the remaining verification gaps.
+Do not publish this content until all applicable class/subject/topic rows in `COVERAGE_MATRIX.md` have mapped banks, the official-source gaps are resolved or explicitly accepted, and the full JSON/mapping validation passes. The existing `subject_mapping_additions.json` is a draft overlay, not approval to enable these banks.
 
-## JSON format
+## Planned integration after completion and approval
 
-Each bank is an array of records using the Revision model's supported keys: `qe`, `qh`, `o`, `oe`, `oh`, `a`, `e`, and `eh`. `o`/`oe` contain the English choices and `oh` contains the Hindi choices; `a` is a zero-based integer from 0 to 4. Each question has five choices. `o` is retained for compatibility with older Content Base readers. The bank records contain no `topic`/`subject` tags. Hindi question text and explanations are supplied; English is the fallback. Files are original practice, not copied PYQ text.
+1. Copy `content_base_patch/revision/` into the root of the Content Base repository, preserving relative paths.
+2. Merge—not replace—the entries in `subject_mapping_additions.json` into the existing `subject_mapping.json`.
+3. The current Revision screen has no Language hub. Language banks will remain inaccessible until app-side Language support is added; no Flutter/app code has been changed in this package.
 
-## Provisional-source warning
+## Current JSON format
 
-The official BPSC Advertisement 15/2026 PDF is listed in BPSC's media index, but its full contents could not be retrieved/parsed during this audit. The readable TRE-4 syllabus transcription is hosted by a third party and contains an internal Main-duration inconsistency. Therefore the high-level stage/section mapping is **provisional**; this package does not claim exhaustive or officially verified chapter-level TRE-4 coverage. Please re-check the official advertisement/admit-card instructions before using any timing or marking assumptions.
+Each bank is an array of records using the Revision model's supported keys: `qe`, `qh`, `o`, `oe`, `oh`, `a`, `e`, and `eh`. `o`/`oe` contain English choices and `oh` contains Hindi choices; `a` is a zero-based integer from 0 to 4. Each question has five choices. `o` is retained for compatibility with older Content Base readers. The bank records contain no per-question `topic` or `subject` tags. Questions and explanations are original practice, not copied PYQ text.
+
+## Source-confidence warning
+
+The official BPSC Advertisement 15/2026 PDF is listed in BPSC's media index, but its full contents could not be retrieved/parsed during this audit. The readable TRE-4 syllabus transcription is hosted by a third party and contains an internal Main-duration inconsistency. Therefore the current high-level stage/section mapping is provisional; the current 252-question starter set does not claim exhaustive or officially verified chapter-level TRE-4 coverage. Re-check the official advertisement and any later BPSC corrigenda before release.
 
 ## Source links
 
@@ -25,4 +28,4 @@ The official BPSC Advertisement 15/2026 PDF is listed in BPSC's media index, but
 - Official BPSC exam calendar: https://bpsc.bihar.gov.in/exam-calendar/
 - Provisional third-party TRE syllabus transcription (not a BPSC-hosted file): https://www.sarkariresult.com/wp-content/uploads/2026/08/bpsc_Syllabus_TRE_SarkariResult.pdf
 - Bihar SCERT eResources catalogue: https://scert.bihar.gov.in/eresources/
-- Supplied booklets used for structure/pattern review are listed by filename in `COVERAGE_MATRIX.md`; they remain in the supplied upload area and are not copied into this patch.
+- Supplied paper filenames and scope limitations are recorded in `COVERAGE_MATRIX.md`.
