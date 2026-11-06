@@ -278,5 +278,425 @@
       "A desert basin with no outlet",
       "A mountain pass between peaks"
     ]
+  },
+  {
+    "qe": "Which movement of Earth around the Sun, together with its tilted axis, is mainly responsible for seasons?",
+    "qh": "पृथ्वी की धुरी के झुकाव के साथ सूर्य के चारों ओर उसकी कौन-सी गति ऋतुओं का मुख्य कारण है?",
+    "o": [
+      "Revolution",
+      "Rotation",
+      "Tidal motion",
+      "Precession alone",
+      "Daily wobble"
+    ],
+    "oe": [
+      "Revolution",
+      "Rotation",
+      "Tidal motion",
+      "Precession alone",
+      "Daily wobble"
+    ],
+    "oh": [
+      "परिक्रमण",
+      "घूर्णन",
+      "ज्वारीय गति",
+      "केवल अयन",
+      "दैनिक डगमगाहट"
+    ],
+    "a": 0,
+    "e": "Earth’s annual revolution and tilted axis change the angle and duration of sunlight over the year.",
+    "eh": "पृथ्वी का वार्षिक परिक्रमण और झुकी धुरी वर्ष भर सूर्य-किरणों का कोण और अवधि बदलते हैं।"
+  },
+  {
+    "qe": "What is the latitude of the Equator?",
+    "qh": "भूमध्य रेखा का अक्षांश कितना है?",
+    "o": [
+      "0°",
+      "23.5° N",
+      "23.5° S",
+      "66.5° N",
+      "90°"
+    ],
+    "oe": [
+      "0°",
+      "23.5° N",
+      "23.5° S",
+      "66.5° N",
+      "90°"
+    ],
+    "oh": [
+      "0°",
+      "23.5° उत्तर",
+      "23.5° दक्षिण",
+      "66.5° उत्तर",
+      "90°"
+    ],
+    "a": 0,
+    "e": "The Equator is the reference line at 0° latitude, halfway between the poles.",
+    "eh": "भूमध्य रेखा 0° अक्षांश की संदर्भ रेखा है और दोनों ध्रुवों के बीच स्थित है।"
+  },
+  {
+    "qe": "The Prime Meridian passes through which longitude?",
+    "qh": "प्रधान मध्याह्न रेखा किस देशांतर से गुजरती है?",
+    "o": [
+      "0°",
+      "90° E",
+      "90° W",
+      "180°",
+      "23.5° E"
+    ],
+    "oe": [
+      "0°",
+      "90° E",
+      "90° W",
+      "180°",
+      "23.5° E"
+    ],
+    "oh": [
+      "0°",
+      "90° पूर्व",
+      "90° पश्चिम",
+      "180°",
+      "23.5° पूर्व"
+    ],
+    "a": 0,
+    "e": "The Prime Meridian is 0° longitude and passes through Greenwich in the United Kingdom.",
+    "eh": "प्रधान मध्याह्न 0° देशांतर है और यूनाइटेड किंगडम के ग्रीनविच से गुजरता है।"
+  },
+  {
+    "qe": "Which practice helps reduce soil erosion on steep hillsides?",
+    "qh": "खड़ी पहाड़ियों पर मृदा अपरदन कम करने में कौन-सी विधि मदद करती है?",
+    "o": [
+      "Terrace farming",
+      "Removing all vegetation",
+      "Ploughing straight down the slope",
+      "Leaving soil bare",
+      "Burning crop residues"
+    ],
+    "oe": [
+      "Terrace farming",
+      "Removing all vegetation",
+      "Ploughing straight down the slope",
+      "Leaving soil bare",
+      "Burning crop residues"
+    ],
+    "oh": [
+      "सीढ़ीदार खेती",
+      "सारी वनस्पति हटाना",
+      "ढलान के सीधे नीचे जुताई",
+      "मिट्टी को खुला छोड़ना",
+      "फसल-अवशेष जलाना"
+    ],
+    "a": 0,
+    "e": "Terraces slow surface runoff and reduce the amount of soil carried downhill.",
+    "eh": "सीढ़ियाँ सतही बहाव को धीमा करती हैं और ढलान से नीचे बहने वाली मिट्टी घटाती हैं।"
+  },
+  {
+    "qe": "The Sundarbans are famous for which type of ecosystem?",
+    "qh": "सुंदरबन किस प्रकार के पारितंत्र के लिए प्रसिद्ध है?",
+    "o": [
+      "Mangrove forest",
+      "Alpine meadow",
+      "Cold desert",
+      "Coniferous forest",
+      "Coral atoll"
+    ],
+    "oe": [
+      "Mangrove forest",
+      "Alpine meadow",
+      "Cold desert",
+      "Coniferous forest",
+      "Coral atoll"
+    ],
+    "oh": [
+      "मैंग्रोव वन",
+      "अल्पाइन घासभूमि",
+      "शीत मरुस्थल",
+      "शंकुधारी वन",
+      "प्रवाल द्वीप"
+    ],
+    "a": 0,
+    "e": "The Sundarbans contain extensive tidal mangrove forests in the Ganga-Brahmaputra delta.",
+    "eh": "सुंदरबन गंगा-ब्रह्मपुत्र डेल्टा में विस्तृत ज्वारीय मैंग्रोव वनों के लिए प्रसिद्ध है।"
+  },
+  {
+    "qe": "Why are many Himalayan rivers called perennial?",
+    "qh": "अनेक हिमालयी नदियों को बारहमासी क्यों कहा जाता है?",
+    "o": [
+      "They receive water from both rainfall and snow/glacier melt",
+      "They flow only during one monsoon month",
+      "They have no source in mountains",
+      "They are filled only by tides",
+      "They never change their course"
+    ],
+    "oe": [
+      "They receive water from both rainfall and snow/glacier melt",
+      "They flow only during one monsoon month",
+      "They have no source in mountains",
+      "They are filled only by tides",
+      "They never change their course"
+    ],
+    "oh": [
+      "उन्हें वर्षा और हिम/हिमनद के पिघलने दोनों से जल मिलता है",
+      "वे केवल मानसून के एक महीने बहती हैं",
+      "उनका स्रोत पहाड़ों में नहीं है",
+      "वे केवल ज्वार से भरती हैं",
+      "वे अपना मार्ग कभी नहीं बदलतीं"
+    ],
+    "a": 0,
+    "e": "Many Himalayan rivers are fed by monsoon rain as well as melting snow and glaciers, though their flow varies seasonally.",
+    "eh": "अनेक हिमालयी नदियों को मानसूनी वर्षा और पिघलती बर्फ/हिमनद दोनों से जल मिलता है, हालांकि प्रवाह ऋतु के साथ बदलता है।"
+  },
+  {
+    "qe": "Indian Standard Time is based on which standard meridian?",
+    "qh": "भारतीय मानक समय किस मानक मध्याह्न रेखा पर आधारित है?",
+    "o": [
+      "82°30′ E",
+      "0°",
+      "90° W",
+      "23°30′ N",
+      "180°"
+    ],
+    "oe": [
+      "82°30′ E",
+      "0°",
+      "90° W",
+      "23°30′ N",
+      "180°"
+    ],
+    "oh": [
+      "82°30′ पूर्व",
+      "0°",
+      "90° पश्चिम",
+      "23°30′ उत्तर",
+      "180°"
+    ],
+    "a": 0,
+    "e": "India’s standard time is based on 82°30′ east longitude, close to Mirzapur in Uttar Pradesh.",
+    "eh": "भारत का मानक समय 82°30′ पूर्व देशांतर पर आधारित है, जो उत्तर प्रदेश के मिर्जापुर के पास है।"
+  },
+  {
+    "qe": "What does a contour line on a topographic map connect?",
+    "qh": "स्थलाकृतिक मानचित्र पर समोच्च रेखा किन बिंदुओं को जोड़ती है?",
+    "o": [
+      "Points of equal elevation",
+      "Places with equal rainfall only",
+      "Road junctions only",
+      "Points of equal population",
+      "Different time zones"
+    ],
+    "oe": [
+      "Points of equal elevation",
+      "Places with equal rainfall only",
+      "Road junctions only",
+      "Points of equal population",
+      "Different time zones"
+    ],
+    "oh": [
+      "समान ऊँचाई वाले बिंदु",
+      "केवल समान वर्षा वाले स्थान",
+      "केवल सड़क चौराहे",
+      "समान जनसंख्या वाले बिंदु",
+      "अलग-अलग समय क्षेत्र"
+    ],
+    "a": 0,
+    "e": "A contour line joins points at the same elevation above a chosen reference level.",
+    "eh": "समोच्च रेखा चुने गए संदर्भ स्तर से समान ऊँचाई वाले बिंदुओं को जोड़ती है।"
+  },
+  {
+    "qe": "Which process changes liquid water into water vapour in the water cycle?",
+    "qh": "जल-चक्र में द्रव पानी को जलवाष्प में बदलने की प्रक्रिया क्या है?",
+    "o": [
+      "Evaporation",
+      "Condensation",
+      "Precipitation",
+      "Infiltration",
+      "Freezing"
+    ],
+    "oe": [
+      "Evaporation",
+      "Condensation",
+      "Precipitation",
+      "Infiltration",
+      "Freezing"
+    ],
+    "oh": [
+      "वाष्पीकरण",
+      "संघनन",
+      "वर्षण",
+      "अंतःस्यंदन",
+      "जमना"
+    ],
+    "a": 0,
+    "e": "Evaporation changes liquid water into vapour, often driven by solar energy.",
+    "eh": "वाष्पीकरण द्रव पानी को वाष्प में बदलता है; इसे अक्सर सौर ऊर्जा चलाती है।"
+  },
+  {
+    "qe": "Which climate is generally associated with very low annual rainfall and sparse vegetation?",
+    "qh": "बहुत कम वार्षिक वर्षा और विरल वनस्पति सामान्यतः किस जलवायु की विशेषता है?",
+    "o": [
+      "Arid climate",
+      "Humid equatorial climate",
+      "Monsoon forest climate",
+      "Tundra climate",
+      "Marine west-coast climate"
+    ],
+    "oe": [
+      "Arid climate",
+      "Humid equatorial climate",
+      "Monsoon forest climate",
+      "Tundra climate",
+      "Marine west-coast climate"
+    ],
+    "oh": [
+      "शुष्क जलवायु",
+      "आर्द्र विषुवतीय जलवायु",
+      "मानसूनी वन जलवायु",
+      "टुंड्रा जलवायु",
+      "समुद्री पश्चिमी तटीय जलवायु"
+    ],
+    "a": 0,
+    "e": "Arid regions receive little precipitation, so plant cover is typically sparse.",
+    "eh": "शुष्क क्षेत्रों में वर्षण कम होता है, इसलिए वनस्पति सामान्यतः विरल होती है।"
+  },
+  {
+    "qe": "Which instrument helps a traveller identify north, south, east and west?",
+    "qh": "यात्री को उत्तर, दक्षिण, पूर्व और पश्चिम पहचानने में कौन-सा यंत्र मदद करता है?",
+    "o": [
+      "Compass",
+      "Barometer",
+      "Thermometer",
+      "Rain gauge",
+      "Seismograph"
+    ],
+    "oe": [
+      "Compass",
+      "Barometer",
+      "Thermometer",
+      "Rain gauge",
+      "Seismograph"
+    ],
+    "oh": [
+      "दिशासूचक यंत्र",
+      "बैरोमीटर",
+      "थर्मामीटर",
+      "वर्षामापी",
+      "भूकंपलेखी"
+    ],
+    "a": 0,
+    "e": "A magnetic compass needle aligns approximately north-south and helps determine direction.",
+    "eh": "चुंबकीय दिशासूचक की सुई लगभग उत्तर-दक्षिण दिशा में ठहरती है और दिशा बताती है।"
+  },
+  {
+    "qe": "A globe is often more useful than a flat map for showing which feature accurately?",
+    "qh": "किस विशेषता को दिखाने में ग्लोब अक्सर समतल मानचित्र से अधिक उपयोगी होता है?",
+    "o": [
+      "The overall spherical shape of Earth",
+      "Every street address in a town",
+      "A building’s floor plan",
+      "Today’s rainfall at one village",
+      "A bus timetable"
+    ],
+    "oe": [
+      "The overall spherical shape of Earth",
+      "Every street address in a town",
+      "A building’s floor plan",
+      "Today’s rainfall at one village",
+      "A bus timetable"
+    ],
+    "oh": [
+      "पृथ्वी का समग्र गोलाकार आकार",
+      "कस्बे के हर सड़क-पते",
+      "इमारत का नक्शा",
+      "एक गाँव की आज की वर्षा",
+      "बस समय-सारणी"
+    ],
+    "a": 0,
+    "e": "A globe models Earth’s spherical form with less projection distortion than a flat world map.",
+    "eh": "ग्लोब समतल विश्व-मानचित्र की तुलना में कम प्रक्षेप-विकृति के साथ पृथ्वी का गोलाकार रूप दिखाता है।"
+  },
+  {
+    "qe": "What is the name for the wearing away and transport of soil or rock by water, wind or ice?",
+    "qh": "पानी, हवा या बर्फ द्वारा मिट्टी/चट्टान के कटाव और परिवहन को क्या कहते हैं?",
+    "o": [
+      "Erosion",
+      "Condensation",
+      "Deposition only",
+      "Rotation",
+      "Transpiration"
+    ],
+    "oe": [
+      "Erosion",
+      "Condensation",
+      "Deposition only",
+      "Rotation",
+      "Transpiration"
+    ],
+    "oh": [
+      "अपरदन",
+      "संघनन",
+      "केवल निक्षेपण",
+      "घूर्णन",
+      "वाष्पोत्सर्जन"
+    ],
+    "a": 0,
+    "e": "Erosion is the wearing away and movement of material by agents such as water, wind and ice.",
+    "eh": "पानी, हवा और बर्फ जैसे कारकों द्वारा पदार्थ के कटने और स्थानांतरित होने को अपरदन कहते हैं।"
+  },
+  {
+    "qe": "Which line of latitude divides Earth into the Northern and Southern Hemispheres?",
+    "qh": "कौन-सी अक्षांश रेखा पृथ्वी को उत्तरी और दक्षिणी गोलार्ध में बाँटती है?",
+    "o": [
+      "Equator",
+      "Tropic of Cancer",
+      "Arctic Circle",
+      "Tropic of Capricorn",
+      "Prime Meridian"
+    ],
+    "oe": [
+      "Equator",
+      "Tropic of Cancer",
+      "Arctic Circle",
+      "Tropic of Capricorn",
+      "Prime Meridian"
+    ],
+    "oh": [
+      "भूमध्य रेखा",
+      "कर्क रेखा",
+      "आर्कटिक वृत्त",
+      "मकर रेखा",
+      "प्रधान मध्याह्न"
+    ],
+    "a": 0,
+    "e": "The Equator divides Earth into the Northern and Southern Hemispheres.",
+    "eh": "भूमध्य रेखा पृथ्वी को उत्तरी और दक्षिणी गोलार्ध में बाँटती है।"
+  },
+  {
+    "qe": "Which farming method is most directly suited to conserving water in a dry region?",
+    "qh": "शुष्क क्षेत्र में पानी बचाने के लिए कौन-सी खेती-पद्धति सबसे सीधे उपयोगी है?",
+    "o": [
+      "Drip irrigation",
+      "Flooding fields continuously",
+      "Leaving canals unlined",
+      "Watering at midday in strong heat",
+      "Removing mulch"
+    ],
+    "oe": [
+      "Drip irrigation",
+      "Flooding fields continuously",
+      "Leaving canals unlined",
+      "Watering at midday in strong heat",
+      "Removing mulch"
+    ],
+    "oh": [
+      "टपक सिंचाई",
+      "खेतों में लगातार पानी भरना",
+      "नहरों को बिना पक्का छोड़ा",
+      "तेज़ गर्मी में दोपहर को पानी देना",
+      "मल्च हटाना"
+    ],
+    "a": 0,
+    "e": "Drip irrigation delivers water near plant roots and can reduce evaporation and runoff losses.",
+    "eh": "टपक सिंचाई जड़ों के पास पानी देती है और वाष्पीकरण तथा बहाव से होने वाली हानि कम कर सकती है।"
   }
 ]

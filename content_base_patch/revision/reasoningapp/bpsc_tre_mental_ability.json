@@ -278,5 +278,425 @@
       "25",
       "36"
     ]
+  },
+  {
+    "qe": "What number comes next: 3, 6, 12, 24, ...?",
+    "qh": "3, 6, 12, 24, ... में अगली संख्या क्या है?",
+    "o": [
+      "48",
+      "36",
+      "42",
+      "30",
+      "54"
+    ],
+    "oe": [
+      "48",
+      "36",
+      "42",
+      "30",
+      "54"
+    ],
+    "oh": [
+      "48",
+      "36",
+      "42",
+      "30",
+      "54"
+    ],
+    "a": 0,
+    "e": "Each term is doubled: 24 × 2 = 48.",
+    "eh": "हर पद दुगुना है: 24 × 2 = 48।"
+  },
+  {
+    "qe": "Which letter comes next: B, E, H, K, ...?",
+    "qh": "अगला अक्षर कौन-सा है: B, E, H, K, ...?",
+    "o": [
+      "N",
+      "M",
+      "O",
+      "P",
+      "Q"
+    ],
+    "oe": [
+      "N",
+      "M",
+      "O",
+      "P",
+      "Q"
+    ],
+    "oh": [
+      "N",
+      "M",
+      "O",
+      "P",
+      "Q"
+    ],
+    "a": 0,
+    "e": "The sequence advances three letters each time: B, E, H, K, N.",
+    "eh": "हर बार तीन अक्षर आगे बढ़ते हैं: B, E, H, K, N।"
+  },
+  {
+    "qe": "A person faces north, turns right, then turns right again. Which direction are they facing?",
+    "qh": "एक व्यक्ति उत्तर की ओर है, दाएँ मुड़ता है और फिर एक बार और दाएँ मुड़ता है। अब वह किस दिशा में है?",
+    "o": [
+      "South",
+      "North",
+      "East",
+      "West",
+      "North-east"
+    ],
+    "oe": [
+      "South",
+      "North",
+      "East",
+      "West",
+      "North-east"
+    ],
+    "oh": [
+      "दक्षिण",
+      "उत्तर",
+      "पूर्व",
+      "पश्चिम",
+      "उत्तर-पूर्व"
+    ],
+    "a": 0,
+    "e": "A right turn from north faces east; a second right turn faces south.",
+    "eh": "उत्तर से दाएँ मुड़ने पर पूर्व और फिर दाएँ मुड़ने पर दक्षिण दिशा होती है।"
+  },
+  {
+    "qe": "If MONDAY is coded as NPOEBZ by moving every letter one step forward, how is SUNDAY coded?",
+    "qh": "यदि हर अक्षर को एक स्थान आगे करके MONDAY को NPOEBZ लिखा जाता है, तो SUNDAY कैसे लिखा जाएगा?",
+    "o": [
+      "TVOEBZ",
+      "RTMCZX",
+      "TVNEBZ",
+      "TVOFCZ",
+      "SUOEBZ"
+    ],
+    "oe": [
+      "TVOEBZ",
+      "RTMCZX",
+      "TVNEBZ",
+      "TVOFCZ",
+      "SUOEBZ"
+    ],
+    "oh": [
+      "TVOEBZ",
+      "RTMCZX",
+      "TVNEBZ",
+      "TVOFCZ",
+      "SUOEBZ"
+    ],
+    "a": 0,
+    "e": "Move each letter one step forward: S→T, U→V, N→O, D→E, A→B, Y→Z.",
+    "eh": "हर अक्षर एक स्थान आगे करें: S→T, U→V, N→O, D→E, A→B, Y→Z।"
+  },
+  {
+    "qe": "A is the sister of B. B is the father of C. How is A related to C?",
+    "qh": "A, B की बहन है। B, C का पिता है। A का C से क्या संबंध है?",
+    "o": [
+      "Aunt",
+      "Mother",
+      "Sister",
+      "Grandmother",
+      "Cousin"
+    ],
+    "oe": [
+      "Aunt",
+      "Mother",
+      "Sister",
+      "Grandmother",
+      "Cousin"
+    ],
+    "oh": [
+      "बुआ/फूफी",
+      "माता",
+      "बहन",
+      "दादी/नानी",
+      "चचेरी बहन"
+    ],
+    "a": 0,
+    "e": "A is the sister of C’s father, so A is C’s paternal aunt.",
+    "eh": "A, C के पिता की बहन है, इसलिए वह C की बुआ है।"
+  },
+  {
+    "qe": "If all roses are flowers and all flowers are plants, which conclusion must be true?",
+    "qh": "यदि सभी गुलाब फूल हैं और सभी फूल पौधे हैं, तो कौन-सा निष्कर्ष निश्चित रूप से सही है?",
+    "o": [
+      "All roses are plants",
+      "All plants are roses",
+      "Some plants are not flowers",
+      "No rose is a plant",
+      "All flowers are roses"
+    ],
+    "oe": [
+      "All roses are plants",
+      "All plants are roses",
+      "Some plants are not flowers",
+      "No rose is a plant",
+      "All flowers are roses"
+    ],
+    "oh": [
+      "सभी गुलाब पौधे हैं",
+      "सभी पौधे गुलाब हैं",
+      "कुछ पौधे फूल नहीं हैं",
+      "कोई गुलाब पौधा नहीं है",
+      "सभी फूल गुलाब हैं"
+    ],
+    "a": 0,
+    "e": "The relationship is roses ⊂ flowers ⊂ plants, so every rose is a plant.",
+    "eh": "संबंध गुलाब ⊂ फूल ⊂ पौधे है; इसलिए हर गुलाब पौधा है।"
+  },
+  {
+    "qe": "In a row, P is 7th from the left and 6th from the right. How many people are in the row?",
+    "qh": "एक पंक्ति में P बाएँ से 7वाँ और दाएँ से 6वाँ है। पंक्ति में कुल कितने लोग हैं?",
+    "o": [
+      "12",
+      "13",
+      "11",
+      "14",
+      "7"
+    ],
+    "oe": [
+      "12",
+      "13",
+      "11",
+      "14",
+      "7"
+    ],
+    "oh": [
+      "12",
+      "13",
+      "11",
+      "14",
+      "7"
+    ],
+    "a": 0,
+    "e": "Total = left position + right position − 1 = 7 + 6 − 1 = 12.",
+    "eh": "कुल = बाएँ स्थान + दाएँ स्थान − 1 = 7 + 6 − 1 = 12।"
+  },
+  {
+    "qe": "Which day comes 3 days after Tuesday?",
+    "qh": "मंगलवार के 3 दिन बाद कौन-सा दिन होगा?",
+    "o": [
+      "Friday",
+      "Thursday",
+      "Saturday",
+      "Sunday",
+      "Monday"
+    ],
+    "oe": [
+      "Friday",
+      "Thursday",
+      "Saturday",
+      "Sunday",
+      "Monday"
+    ],
+    "oh": [
+      "शुक्रवार",
+      "गुरुवार",
+      "शनिवार",
+      "रविवार",
+      "सोमवार"
+    ],
+    "a": 0,
+    "e": "Count forward: Wednesday (1), Thursday (2), Friday (3).",
+    "eh": "आगे गिनें: बुधवार (1), गुरुवार (2), शुक्रवार (3)।"
+  },
+  {
+    "qe": "Choose the odd one out: 2, 3, 5, 9, 11.",
+    "qh": "अलग संख्या चुनिए: 2, 3, 5, 9, 11।",
+    "o": [
+      "9",
+      "2",
+      "3",
+      "5",
+      "11"
+    ],
+    "oe": [
+      "9",
+      "2",
+      "3",
+      "5",
+      "11"
+    ],
+    "oh": [
+      "9",
+      "2",
+      "3",
+      "5",
+      "11"
+    ],
+    "a": 0,
+    "e": "All the others are prime numbers; 9 is composite because 9 = 3 × 3.",
+    "eh": "बाकी सभी अभाज्य संख्याएँ हैं; 9 भाज्य है क्योंकि 9 = 3 × 3।"
+  },
+  {
+    "qe": "If 4 workers complete a task in 6 days at the same rate, how many worker-days does the task require?",
+    "qh": "यदि 4 कर्मचारी समान गति से एक काम 6 दिन में पूरा करते हैं, तो काम में कितने कर्मचारी-दिन लगते हैं?",
+    "o": [
+      "24",
+      "10",
+      "12",
+      "18",
+      "30"
+    ],
+    "oe": [
+      "24",
+      "10",
+      "12",
+      "18",
+      "30"
+    ],
+    "oh": [
+      "24",
+      "10",
+      "12",
+      "18",
+      "30"
+    ],
+    "a": 0,
+    "e": "Worker-days = workers × days = 4 × 6 = 24.",
+    "eh": "कर्मचारी-दिन = कर्मचारी × दिन = 4 × 6 = 24।"
+  },
+  {
+    "qe": "Which number completes the pattern: 2, 4, 8; 3, 6, 12; 5, 10, __?",
+    "qh": "पैटर्न पूरा कीजिए: 2, 4, 8; 3, 6, 12; 5, 10, __?",
+    "o": [
+      "20",
+      "15",
+      "18",
+      "25",
+      "30"
+    ],
+    "oe": [
+      "20",
+      "15",
+      "18",
+      "25",
+      "30"
+    ],
+    "oh": [
+      "20",
+      "15",
+      "18",
+      "25",
+      "30"
+    ],
+    "a": 0,
+    "e": "In each row, the second number is twice the first and the third is twice the second; 10 × 2 = 20.",
+    "eh": "हर पंक्ति में दूसरा अंक पहले का दुगुना और तीसरा दूसरे का दुगुना है; 10 × 2 = 20।"
+  },
+  {
+    "qe": "Ravi is older than Meena, and Meena is older than Salim. Who is the youngest?",
+    "qh": "रवि, मीना से बड़ा है और मीना, सलीम से बड़ी है। सबसे छोटा कौन है?",
+    "o": [
+      "Salim",
+      "Ravi",
+      "Meena",
+      "Ravi and Meena are equal",
+      "Cannot be determined"
+    ],
+    "oe": [
+      "Salim",
+      "Ravi",
+      "Meena",
+      "Ravi and Meena are equal",
+      "Cannot be determined"
+    ],
+    "oh": [
+      "सलीम",
+      "रवि",
+      "मीना",
+      "रवि और मीना बराबर हैं",
+      "निर्धारित नहीं किया जा सकता"
+    ],
+    "a": 0,
+    "e": "The age order is Ravi > Meena > Salim, so Salim is the youngest.",
+    "eh": "आयु का क्रम रवि > मीना > सलीम है, इसलिए सलीम सबसे छोटा है।"
+  },
+  {
+    "qe": "A clock shows 6:00. What is the smaller angle between its hands?",
+    "qh": "घड़ी में 6:00 बजे हैं। उसकी सुइयों के बीच छोटा कोण कितना है?",
+    "o": [
+      "180°",
+      "90°",
+      "120°",
+      "150°",
+      "60°"
+    ],
+    "oe": [
+      "180°",
+      "90°",
+      "120°",
+      "150°",
+      "60°"
+    ],
+    "oh": [
+      "180°",
+      "90°",
+      "120°",
+      "150°",
+      "60°"
+    ],
+    "a": 0,
+    "e": "At 6:00 the minute hand points at 12 and the hour hand at 6, forming a straight angle of 180°.",
+    "eh": "6:00 बजे मिनट की सुई 12 और घंटे की सुई 6 पर होती है; दोनों 180° का सरल कोण बनाती हैं।"
+  },
+  {
+    "qe": "If every book in a shelf is numbered, what comes immediately before book 40?",
+    "qh": "यदि शेल्फ की हर पुस्तक क्रमांकित है, तो पुस्तक 40 से ठीक पहले कौन-सा क्रमांक होगा?",
+    "o": [
+      "39",
+      "38",
+      "41",
+      "30",
+      "49"
+    ],
+    "oe": [
+      "39",
+      "38",
+      "41",
+      "30",
+      "49"
+    ],
+    "oh": [
+      "39",
+      "38",
+      "41",
+      "30",
+      "49"
+    ],
+    "a": 0,
+    "e": "The number immediately preceding 40 is 39.",
+    "eh": "40 से ठीक पहले की संख्या 39 है।"
+  },
+  {
+    "qe": "Which pair has the same relationship as “Bird : Nest”?",
+    "qh": "किस जोड़े का संबंध “पक्षी : घोंसला” जैसा है?",
+    "o": [
+      "Bee : Hive",
+      "Fish : Tree",
+      "Horse : Sky",
+      "Cow : Burrow",
+      "Ant : Pond"
+    ],
+    "oe": [
+      "Bee : Hive",
+      "Fish : Tree",
+      "Horse : Sky",
+      "Cow : Burrow",
+      "Ant : Pond"
+    ],
+    "oh": [
+      "मधुमक्खी : छत्ता",
+      "मछली : पेड़",
+      "घोड़ा : आकाश",
+      "गाय : बिल",
+      "चींटी : तालाब"
+    ],
+    "a": 0,
+    "e": "A nest is a bird’s home; a hive is the home of a bee colony.",
+    "eh": "घोंसला पक्षी का निवास है; छत्ता मधुमक्खियों के समूह का निवास है।"
   }
 ]

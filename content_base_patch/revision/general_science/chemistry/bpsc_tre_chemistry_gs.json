@@ -278,5 +278,425 @@
       "Precipitate",
       "Indicator paper"
     ]
+  },
+  {
+    "qe": "What is the chemical formula of water?",
+    "qh": "पानी का रासायनिक सूत्र क्या है?",
+    "o": [
+      "H₂O",
+      "CO₂",
+      "O₂",
+      "NaCl",
+      "H₂"
+    ],
+    "oe": [
+      "H₂O",
+      "CO₂",
+      "O₂",
+      "NaCl",
+      "H₂"
+    ],
+    "oh": [
+      "H₂O",
+      "CO₂",
+      "O₂",
+      "NaCl",
+      "H₂"
+    ],
+    "a": 0,
+    "e": "A water molecule contains two hydrogen atoms bonded to one oxygen atom, so its formula is H₂O.",
+    "eh": "पानी के एक अणु में दो हाइड्रोजन और एक ऑक्सीजन परमाणु होते हैं; इसलिए सूत्र H₂O है।"
+  },
+  {
+    "qe": "Which change is a chemical change?",
+    "qh": "कौन-सा परिवर्तन रासायनिक परिवर्तन है?",
+    "o": [
+      "Iron rusting",
+      "Ice melting",
+      "Sugar dissolving in water",
+      "Cutting paper",
+      "Breaking glass"
+    ],
+    "oe": [
+      "Iron rusting",
+      "Ice melting",
+      "Sugar dissolving in water",
+      "Cutting paper",
+      "Breaking glass"
+    ],
+    "oh": [
+      "लोहे में जंग लगना",
+      "बर्फ पिघलना",
+      "पानी में चीनी घुलना",
+      "कागज़ काटना",
+      "काँच टूटना"
+    ],
+    "a": 0,
+    "e": "Rusting forms new iron compounds, unlike the other listed physical changes.",
+    "eh": "जंग लगने पर लोहे के नए यौगिक बनते हैं; अन्य विकल्प भौतिक परिवर्तन हैं।"
+  },
+  {
+    "qe": "Which gas turns clear limewater milky?",
+    "qh": "कौन-सी गैस स्वच्छ चूने के पानी को दूधिया कर देती है?",
+    "o": [
+      "Carbon dioxide",
+      "Oxygen",
+      "Hydrogen",
+      "Nitrogen",
+      "Helium"
+    ],
+    "oe": [
+      "Carbon dioxide",
+      "Oxygen",
+      "Hydrogen",
+      "Nitrogen",
+      "Helium"
+    ],
+    "oh": [
+      "कार्बन डाइऑक्साइड",
+      "ऑक्सीजन",
+      "हाइड्रोजन",
+      "नाइट्रोजन",
+      "हीलियम"
+    ],
+    "a": 0,
+    "e": "Carbon dioxide reacts with limewater to form insoluble calcium carbonate, making it appear milky.",
+    "eh": "कार्बन डाइऑक्साइड चूने के पानी से अभिक्रिया करके अघुलनशील कैल्शियम कार्बोनेट बनाती है, जिससे वह दूधिया दिखता है।"
+  },
+  {
+    "qe": "What happens to blue litmus paper in an acidic solution?",
+    "qh": "अम्लीय विलयन में नीले लिटमस पत्र का क्या होता है?",
+    "o": [
+      "It turns red",
+      "It turns green",
+      "It remains blue in every case",
+      "It turns black",
+      "It dissolves immediately"
+    ],
+    "oe": [
+      "It turns red",
+      "It turns green",
+      "It remains blue in every case",
+      "It turns black",
+      "It dissolves immediately"
+    ],
+    "oh": [
+      "वह लाल हो जाता है",
+      "वह हरा हो जाता है",
+      "हर स्थिति में नीला रहता है",
+      "वह काला हो जाता है",
+      "वह तुरंत घुल जाता है"
+    ],
+    "a": 0,
+    "e": "Acids turn blue litmus red; this is a common indicator test.",
+    "eh": "अम्ल नीले लिटमस को लाल करते हैं; यह सामान्य सूचक परीक्षण है।"
+  },
+  {
+    "qe": "Which method can recover dissolved salt from salt water?",
+    "qh": "नमक के घोल से घुला हुआ नमक वापस पाने के लिए कौन-सी विधि उपयोगी है?",
+    "o": [
+      "Evaporation",
+      "Filtration alone",
+      "Sieving",
+      "Magnetic separation",
+      "Decanting without evaporation"
+    ],
+    "oe": [
+      "Evaporation",
+      "Filtration alone",
+      "Sieving",
+      "Magnetic separation",
+      "Decanting without evaporation"
+    ],
+    "oh": [
+      "वाष्पीकरण",
+      "केवल निस्यंदन",
+      "छलनी से छानना",
+      "चुंबकीय पृथक्करण",
+      "बिना वाष्पीकरण के निथारना"
+    ],
+    "a": 0,
+    "e": "Evaporation removes the water as vapour and leaves the dissolved salt behind.",
+    "eh": "वाष्पीकरण में पानी भाप बनकर निकल जाता है और घुला नमक पीछे रह जाता है।"
+  },
+  {
+    "qe": "In the modern periodic table, elements are arranged in order of increasing what?",
+    "qh": "आधुनिक आवर्त सारणी में तत्वों को किसके बढ़ते क्रम में रखा जाता है?",
+    "o": [
+      "Atomic number",
+      "Atomic mass only",
+      "Number of neutrons only",
+      "Density",
+      "Melting point"
+    ],
+    "oe": [
+      "Atomic number",
+      "Atomic mass only",
+      "Number of neutrons only",
+      "Density",
+      "Melting point"
+    ],
+    "oh": [
+      "परमाणु संख्या",
+      "केवल परमाणु द्रव्यमान",
+      "केवल न्यूट्रॉनों की संख्या",
+      "घनत्व",
+      "गलनांक"
+    ],
+    "a": 0,
+    "e": "The modern periodic law is based on increasing atomic number.",
+    "eh": "आधुनिक आवर्त नियम बढ़ती परमाणु संख्या पर आधारित है।"
+  },
+  {
+    "qe": "Which gas is necessary for ordinary combustion?",
+    "qh": "सामान्य दहन के लिए कौन-सी गैस आवश्यक है?",
+    "o": [
+      "Oxygen",
+      "Helium",
+      "Neon",
+      "Argon",
+      "Hydrogen only"
+    ],
+    "oe": [
+      "Oxygen",
+      "Helium",
+      "Neon",
+      "Argon",
+      "Hydrogen only"
+    ],
+    "oh": [
+      "ऑक्सीजन",
+      "हीलियम",
+      "नियॉन",
+      "आर्गन",
+      "केवल हाइड्रोजन"
+    ],
+    "a": 0,
+    "e": "Oxygen supports combustion; removing oxygen is one way to extinguish many fires.",
+    "eh": "ऑक्सीजन दहन में सहायक है; कई आग बुझाने का एक तरीका ऑक्सीजन की आपूर्ति रोकना है।"
+  },
+  {
+    "qe": "Which state of matter has a fixed volume but no fixed shape?",
+    "qh": "पदार्थ की कौन-सी अवस्था का आयतन निश्चित होता है, पर आकार निश्चित नहीं होता?",
+    "o": [
+      "Liquid",
+      "Solid",
+      "Gas",
+      "Plasma only",
+      "Vacuum"
+    ],
+    "oe": [
+      "Liquid",
+      "Solid",
+      "Gas",
+      "Plasma only",
+      "Vacuum"
+    ],
+    "oh": [
+      "द्रव",
+      "ठोस",
+      "गैस",
+      "केवल प्लाज़्मा",
+      "निर्वात"
+    ],
+    "a": 0,
+    "e": "A liquid has a definite volume but takes the shape of its container.",
+    "eh": "द्रव का आयतन निश्चित होता है, पर वह पात्र का आकार ग्रहण करता है।"
+  },
+  {
+    "qe": "Which pair is made of a metal and a non-metal?",
+    "qh": "कौन-सा जोड़ा एक धातु और एक अधातु से बना है?",
+    "o": [
+      "Sodium and chlorine",
+      "Oxygen and nitrogen",
+      "Sulphur and carbon",
+      "Hydrogen and oxygen",
+      "Chlorine and bromine"
+    ],
+    "oe": [
+      "Sodium and chlorine",
+      "Oxygen and nitrogen",
+      "Sulphur and carbon",
+      "Hydrogen and oxygen",
+      "Chlorine and bromine"
+    ],
+    "oh": [
+      "सोडियम और क्लोरीन",
+      "ऑक्सीजन और नाइट्रोजन",
+      "गंधक और कार्बन",
+      "हाइड्रोजन और ऑक्सीजन",
+      "क्लोरीन और ब्रोमीन"
+    ],
+    "a": 0,
+    "e": "Sodium is a metal and chlorine is a non-metal; they combine to form sodium chloride.",
+    "eh": "सोडियम धातु और क्लोरीन अधातु है; दोनों मिलकर सोडियम क्लोराइड बनाते हैं।"
+  },
+  {
+    "qe": "What is formed when an acid reacts with a base in a neutralisation reaction?",
+    "qh": "उदासीनीकरण अभिक्रिया में अम्ल और क्षार की अभिक्रिया से क्या बनता है?",
+    "o": [
+      "Salt and water",
+      "Only oxygen",
+      "A metal and hydrogen",
+      "Sugar and carbon",
+      "Only carbon dioxide"
+    ],
+    "oe": [
+      "Salt and water",
+      "Only oxygen",
+      "A metal and hydrogen",
+      "Sugar and carbon",
+      "Only carbon dioxide"
+    ],
+    "oh": [
+      "लवण और पानी",
+      "केवल ऑक्सीजन",
+      "धातु और हाइड्रोजन",
+      "चीनी और कार्बन",
+      "केवल कार्बन डाइऑक्साइड"
+    ],
+    "a": 0,
+    "e": "In a typical neutralisation reaction, acid + base produces salt + water.",
+    "eh": "सामान्य उदासीनीकरण अभिक्रिया में अम्ल + क्षार से लवण + पानी बनता है।"
+  },
+  {
+    "qe": "Which observation is strongest evidence that a new substance has formed in a reaction?",
+    "qh": "अभिक्रिया में नया पदार्थ बनने का सबसे मज़बूत संकेत कौन-सा है?",
+    "o": [
+      "A persistent colour change or gas formation under controlled conditions",
+      "The material is only cut into smaller pieces",
+      "The container is moved",
+      "A solid is merely crushed",
+      "The shape changes without other evidence"
+    ],
+    "oe": [
+      "A persistent colour change or gas formation under controlled conditions",
+      "The material is only cut into smaller pieces",
+      "The container is moved",
+      "A solid is merely crushed",
+      "The shape changes without other evidence"
+    ],
+    "oh": [
+      "नियंत्रित दशाओं में स्थायी रंग-परिवर्तन या गैस बनना",
+      "पदार्थ को केवल छोटे टुकड़ों में काटना",
+      "पात्र को हिलाना",
+      "ठोस को केवल पीसना",
+      "अन्य साक्ष्य बिना केवल आकार बदलना"
+    ],
+    "a": 0,
+    "e": "A persistent colour change or gas formation can indicate a chemical reaction, though observations should be interpreted with context.",
+    "eh": "स्थायी रंग-परिवर्तन या गैस बनना रासायनिक अभिक्रिया का संकेत हो सकता है; फिर भी निरीक्षण का संदर्भ देखना चाहिए।"
+  },
+  {
+    "qe": "Why can a gas be compressed more easily than a liquid?",
+    "qh": "गैस को द्रव की तुलना में अधिक आसानी से संपीडित क्यों किया जा सकता है?",
+    "o": [
+      "Gas particles are much farther apart",
+      "Gas particles are larger than all liquid particles",
+      "Liquids contain no particles",
+      "Gas particles have no mass",
+      "Liquid particles never move"
+    ],
+    "oe": [
+      "Gas particles are much farther apart",
+      "Gas particles are larger than all liquid particles",
+      "Liquids contain no particles",
+      "Gas particles have no mass",
+      "Liquid particles never move"
+    ],
+    "oh": [
+      "गैस के कण एक-दूसरे से बहुत दूर होते हैं",
+      "गैस के कण हर द्रव-कण से बड़े होते हैं",
+      "द्रव में कण नहीं होते",
+      "गैस-कणों का द्रव्यमान नहीं होता",
+      "द्रव-कण कभी नहीं चलते"
+    ],
+    "a": 0,
+    "e": "There is much more empty space between gas particles, so pressure can bring them closer together.",
+    "eh": "गैस के कणों के बीच अधिक खाली स्थान होता है; इसलिए दाब उन्हें पास ला सकता है।"
+  },
+  {
+    "qe": "Which statement about a pure compound is correct?",
+    "qh": "शुद्ध यौगिक के बारे में कौन-सा कथन सही है?",
+    "o": [
+      "Its elements are chemically combined in a fixed proportion",
+      "It can always be separated by filtration",
+      "It is a physical mixture of visible parts",
+      "Its composition changes whenever it is heated",
+      "It contains only one type of atom"
+    ],
+    "oe": [
+      "Its elements are chemically combined in a fixed proportion",
+      "It can always be separated by filtration",
+      "It is a physical mixture of visible parts",
+      "Its composition changes whenever it is heated",
+      "It contains only one type of atom"
+    ],
+    "oh": [
+      "इसके तत्व निश्चित अनुपात में रासायनिक रूप से जुड़े होते हैं",
+      "इसे हमेशा निस्यंदन से अलग किया जा सकता है",
+      "यह दिखने वाले भागों का भौतिक मिश्रण है",
+      "गर्म करते ही इसकी संरचना हमेशा बदलती है",
+      "इसमें केवल एक प्रकार का परमाणु होता है"
+    ],
+    "a": 0,
+    "e": "A compound has elements chemically combined in a definite ratio; separating them generally requires chemical processes.",
+    "eh": "यौगिक में तत्व निश्चित अनुपात में रासायनिक रूप से जुड़े होते हैं; उन्हें अलग करने के लिए सामान्यतः रासायनिक प्रक्रिया चाहिए।"
+  },
+  {
+    "qe": "What is the name of the process in which a solid changes directly into gas without becoming liquid first?",
+    "qh": "किस प्रक्रिया में ठोस बिना द्रव बने सीधे गैस में बदलता है?",
+    "o": [
+      "Sublimation",
+      "Condensation",
+      "Freezing",
+      "Melting",
+      "Neutralisation"
+    ],
+    "oe": [
+      "Sublimation",
+      "Condensation",
+      "Freezing",
+      "Melting",
+      "Neutralisation"
+    ],
+    "oh": [
+      "ऊर्ध्वपातन",
+      "संघनन",
+      "जमना",
+      "पिघलना",
+      "उदासीनीकरण"
+    ],
+    "a": 0,
+    "e": "Sublimation is the direct change from solid to gas; dry ice is a familiar example.",
+    "eh": "ऊर्ध्वपातन ठोस से सीधे गैस में परिवर्तन है; शुष्क बर्फ इसका जाना-पहचाना उदाहरण है।"
+  },
+  {
+    "qe": "Which particle has a negative electric charge?",
+    "qh": "किस कण पर ऋणात्मक विद्युत आवेश होता है?",
+    "o": [
+      "Electron",
+      "Proton",
+      "Neutron",
+      "Nucleus as a whole in every atom",
+      "Photon"
+    ],
+    "oe": [
+      "Electron",
+      "Proton",
+      "Neutron",
+      "Nucleus as a whole in every atom",
+      "Photon"
+    ],
+    "oh": [
+      "इलेक्ट्रॉन",
+      "प्रोटॉन",
+      "न्यूट्रॉन",
+      "हर परमाणु का पूरा नाभिक",
+      "फोटॉन"
+    ],
+    "a": 0,
+    "e": "Electrons carry negative charge; protons are positive and neutrons are neutral.",
+    "eh": "इलेक्ट्रॉन ऋणात्मक आवेश रखते हैं; प्रोटॉन धनात्मक और न्यूट्रॉन उदासीन होते हैं।"
   }
 ]

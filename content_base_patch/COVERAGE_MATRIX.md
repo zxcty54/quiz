@@ -2,7 +2,7 @@
 
 **Status:** DRAFT — incomplete, not release-ready, and not to be copied into the live app. This is not an exhaustive official TRE-4 chapter map.
 
-**Current starter set:** 25 JSON banks containing 252 original MCQs. Every question has five answer choices and uses the current Revision model's bilingual fields; no per-question topic or subject tags are present. The starter set is not sufficient to claim complete syllabus coverage.
+**Current draft set:** 25 JSON banks containing 627 original MCQs. Twenty-three banks have 25 questions each and two have 26 questions each. Every question has five answer choices and uses the current Revision model's bilingual fields; no per-question topic or subject tags are present. This draft is not sufficient to claim complete syllabus coverage.
 
 ## Scope and evidence
 
@@ -48,30 +48,59 @@ All paths are relative to Content Base root; question counts are confirmed from 
 
 | File | Questions | Intended band / section |
 |---|---:|---|
-| `revision/general_science/history/bpsc_tre_history_gs.json` | 10 | General Studies, Classes 1–10 (mixed-level foundation) |
-| `revision/general_science/geography/bpsc_tre_geography_gs.json` | 10 | General Studies, Classes 1–10 (mixed-level foundation) |
-| `revision/general_science/economy/bpsc_tre_economy_gs.json` | 10 | General Studies, Classes 1–10 (mixed-level foundation) |
-| `revision/general_science/polity/bpsc_tre_polity_gs.json` | 10 | General Studies, Classes 1–10 (mixed-level foundation) |
-| `revision/general_science/physics/bpsc_tre_physics_gs.json` | 10 | General Science, Classes 1–10 (mixed-level foundation) |
-| `revision/general_science/chemistry/bpsc_tre_chemistry_gs.json` | 10 | General Science, Classes 1–10 (mixed-level foundation) |
-| `revision/general_science/biology/bpsc_tre_biology_gs.json` | 10 | General Science, Classes 1–10 (mixed-level foundation) |
-| `revision/bihar_special/general/bpsc_tre_bihar_context.json` | 10 | Bihar context for General Studies, Classes 1–10 |
-| `revision/maths/bpsc_tre_primary_math.json` | 10 | Primary General Studies / elementary mathematics, Classes 1–5 |
-| `revision/maths/bpsc_tre_middle_secondary_math.json` | 12 | Mathematics foundation, Classes 6–10 |
-| `revision/reasoningapp/bpsc_tre_mental_ability.json` | 10 | Mental ability, Classes 1–10 (mixed-level foundation) |
-| `revision/general_science/history/bpsc_tre_middle_history.json` | 10 | Middle subject / Social Science History, Classes 6–8 |
-| `revision/general_science/geography/bpsc_tre_middle_geography.json` | 10 | Middle subject / Social Science Geography, Classes 6–8 |
-| `revision/general_science/economy/bpsc_tre_middle_economics.json` | 10 | Middle subject / Social Science Economics, Classes 6–8 |
-| `revision/general_science/polity/bpsc_tre_middle_political_science.json` | 10 | Middle subject / Social Science Political Science, Classes 6–8 |
-| `revision/general_science/history/bpsc_tre_secondary_history.json` | 10 | Secondary Social Science History, Classes 9–10 |
-| `revision/general_science/geography/bpsc_tre_secondary_geography.json` | 10 | Secondary Social Science Geography, Classes 9–10 |
-| `revision/general_science/economy/bpsc_tre_secondary_economics.json` | 10 | Secondary Social Science Economics, Classes 9–10 |
-| `revision/general_science/polity/bpsc_tre_secondary_political_science.json` | 10 | Secondary Social Science Political Science, Classes 9–10 |
-| `revision/language/english/bpsc_tre_qualifying_english.json` | 10 | Qualifying Language: English, foundational practice |
-| `revision/language/hindi/bpsc_tre_qualifying_hindi.json` | 10 | Qualifying Language: Hindi choice, foundational practice |
-| `revision/language/english/bpsc_tre_middle_english_subject.json` | 10 | Middle English subject, Classes 6–8 |
-| `revision/language/hindi/bpsc_tre_middle_hindi_subject.json` | 10 | Middle Hindi subject, Classes 6–8 |
-| `revision/language/sanskrit/bpsc_tre_middle_sanskrit_subject.json` | 10 | Middle Sanskrit subject, Classes 6–8 |
-| `revision/language/english/bpsc_tre_secondary_english_subject.json` | 10 | Secondary English subject, Classes 9–10 |
+| `revision/general_science/history/bpsc_tre_history_gs.json` | 25 | General Studies, Classes 1–10 (mixed-level foundation) |
+| `revision/general_science/geography/bpsc_tre_geography_gs.json` | 25 | General Studies, Classes 1–10 (mixed-level foundation) |
+| `revision/general_science/economy/bpsc_tre_economy_gs.json` | 25 | General Studies, Classes 1–10 (mixed-level foundation) |
+| `revision/general_science/polity/bpsc_tre_polity_gs.json` | 25 | General Studies, Classes 1–10 (mixed-level foundation) |
+| `revision/general_science/physics/bpsc_tre_physics_gs.json` | 25 | General Science, Classes 1–10 (mixed-level foundation) |
+| `revision/general_science/chemistry/bpsc_tre_chemistry_gs.json` | 25 | General Science, Classes 1–10 (mixed-level foundation) |
+| `revision/general_science/biology/bpsc_tre_biology_gs.json` | 25 | General Science, Classes 1–10 (mixed-level foundation) |
+| `revision/bihar_special/general/bpsc_tre_bihar_context.json` | 25 | Bihar context for General Studies, Classes 1–10 |
+| `revision/maths/bpsc_tre_primary_math.json` | 25 | Primary General Studies / elementary mathematics, Classes 1–5 |
+| `revision/maths/bpsc_tre_middle_secondary_math.json` | 25 | Mathematics foundation, Classes 6–10 |
+| `revision/reasoningapp/bpsc_tre_mental_ability.json` | 25 | Mental ability, Classes 1–10 (mixed-level foundation) |
+| `revision/general_science/history/bpsc_tre_middle_history.json` | 25 | Middle subject / Social Science History, Classes 6–8 |
+| `revision/general_science/geography/bpsc_tre_middle_geography.json` | 25 | Middle subject / Social Science Geography, Classes 6–8 |
+| `revision/general_science/economy/bpsc_tre_middle_economics.json` | 25 | Middle subject / Social Science Economics, Classes 6–8 |
+| `revision/general_science/polity/bpsc_tre_middle_political_science.json` | 25 | Middle subject / Social Science Political Science, Classes 6–8 |
+| `revision/general_science/history/bpsc_tre_secondary_history.json` | 25 | Secondary Social Science History, Classes 9–10 |
+| `revision/general_science/geography/bpsc_tre_secondary_geography.json` | 25 | Secondary Social Science Geography, Classes 9–10 |
+| `revision/general_science/economy/bpsc_tre_secondary_economics.json` | 25 | Secondary Social Science Economics, Classes 9–10 |
+| `revision/general_science/polity/bpsc_tre_secondary_political_science.json` | 26 | Secondary Social Science Political Science, Classes 9–10 |
+| `revision/language/english/bpsc_tre_qualifying_english.json` | 25 | Qualifying Language: English, foundational practice |
+| `revision/language/hindi/bpsc_tre_qualifying_hindi.json` | 25 | Qualifying Language: Hindi choice, foundational practice |
+| `revision/language/english/bpsc_tre_middle_english_subject.json` | 25 | Middle English subject, Classes 6–8 |
+| `revision/language/hindi/bpsc_tre_middle_hindi_subject.json` | 25 | Middle Hindi subject, Classes 6–8 |
+| `revision/language/sanskrit/bpsc_tre_middle_sanskrit_subject.json` | 26 | Middle Sanskrit subject, Classes 6–8 |
+| `revision/language/english/bpsc_tre_secondary_english_subject.json` | 25 | Secondary English subject, Classes 9–10 |
 
-The bank inventory is a **starter set of revision items per mapped area**, not a claim that 10–12 questions exhaust any subject. “Classes 1–10” mixed-level files intentionally avoid an unsupported claim of exact grade-by-grade TRE-4 mapping.
+The bank inventory is a **starter set of revision items per mapped area**, not a claim that 25–26 questions exhaust any subject or syllabus unit. Several “Classes 1–10” files remain mixed-level and do not establish grade-by-grade TRE-4 coverage.
+
+## Approved scope and release gate (user clarification, 2026-11-06)
+
+This build's accepted scope is **Revision banks only**, Classes **1–10**, with the previously approved subject list:
+
+- **Primary (1–5):** qualifying Language + General Studies.
+- **Middle (6–8):** qualifying Language + General Studies + English, Hindi, Sanskrit, Mathematics, Science, History, Geography, Economics and Political Science.
+- **Secondary (9–10):** qualifying Language + General Studies + English + Mathematics + Social Science choice banks for History, Geography, Economics and Political Science. The exam choice rule is any two Social Science sections, with History or Geography mandatory.
+- The qualifying Language evidence reviewed so far is English plus a choice of Hindi/Urdu/Bengali. Urdu and Bengali banks must be added before calling Language coverage complete.
+- **Exclude** Classes 11–12, Learning lessons and sectional mocks. For Secondary, do not add subject options outside the list above unless the user separately expands scope.
+
+### Release acceptance criteria
+
+1. Every listed class/section/subject and each syllabus unit in the final source-to-content matrix has at least one explicitly mapped bank; broad mixed-level “Classes 1–10” placeholders do not count as complete class-band coverage.
+2. Each mapped syllabus unit has at least **25 original, non-duplicated practice questions** with a balanced easy/standard/challenge mix; especially broad units may need more.
+3. Questions retain five A–E choices, zero-based answer index, bilingual prompt/options/explanation, no `topic`/`subject` fields, and clear worked reasoning for calculations or logic.
+4. Every path referenced by the mapping exists, every question passes schema and answer checks, and a coverage audit reports no unserved approved unit.
+5. Content stays on the Arena branch as a draft. Do not copy or publish to the live app until the matrix is complete and the user approves it.
+
+**Current release status: FAIL / NOT READY.** The 627-question draft meets the minimum question count per existing bank, but approved class/subject mapping and syllabus-unit coverage remain incomplete; the counts do not prove every syllabus unit is served. Language UI support is absent from the current Revision screen; no app code has been authorized or changed.
+### Band-by-band completion tracker
+
+| Band | Approved sections | Current bank depth | Remaining coverage work | Status |
+|---|---|---|---|---|
+| Primary (Classes 1–5) | Qualifying Language; General Studies | Primary Mathematics has 25 questions; other GS banks are 25-question mixed-level banks. English/Hindi qualifying banks have 25 each. | Build a grade-appropriate Primary unit crosswalk; establish separate Primary depth for GS/science/mental ability rather than relying on mixed-level banks; add Urdu/Bengali Language-choice content and expert review. | **Incomplete** |
+| Middle (Classes 6–8) | Qualifying Language; General Studies; English, Hindi, Sanskrit, Mathematics, Science, History, Geography, Economics, Political Science | English/Hindi/Sanskrit subject banks have 25–26 each; the four Social Science choice banks have 25 each; Mathematics is still one combined Classes 6–10 bank; General Science and GS foundations are mixed-level. | Split Middle Mathematics from Secondary Mathematics; map every approved subject to readable syllabus units and grade-appropriate practice; add Urdu/Bengali Language-choice content and expert review. | **Incomplete** |
+| Secondary (Classes 9–10) | Qualifying Language; General Studies; English; Mathematics; History/Geography/Economics/Political Science Social Science choices | English subject and all four Social Science choice banks have 25–26 each; Mathematics is still one combined Classes 6–10 bank; GS foundations are mixed-level. | Split Secondary Mathematics; map every approved subject to readable syllabus units and grade-appropriate practice; add Urdu/Bengali Language-choice content and expert review. Preserve the rule: select two Social Science sections, one must be History or Geography. | **Incomplete** |
+
+**Coverage distinction:** the 25-question minimum is now met for each of the 25 existing banks. It is only a minimum bank-size check—not a claim that every chapter, subtopic, grade band, exam skill or Language option is covered. No live-copy approval is implied.

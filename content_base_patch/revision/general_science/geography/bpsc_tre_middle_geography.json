@@ -278,5 +278,425 @@
       "The Equator shifts northward",
       "The Sun stops rotating"
     ]
+  },
+  {
+    "qe": "On a weather map, an isobar joins places with equal values of what?",
+    "qh": "मौसम मानचित्र पर समदाब रेखा किन स्थानों को जोड़ती है?",
+    "o": [
+      "Air pressure",
+      "Rainfall",
+      "Temperature",
+      "Elevation",
+      "Population"
+    ],
+    "oe": [
+      "Air pressure",
+      "Rainfall",
+      "Temperature",
+      "Elevation",
+      "Population"
+    ],
+    "oh": [
+      "वायुदाब",
+      "वर्षा",
+      "तापमान",
+      "ऊँचाई",
+      "जनसंख्या"
+    ],
+    "a": 0,
+    "e": "Isobars connect places with equal atmospheric pressure.",
+    "eh": "समदाब रेखाएँ समान वायुमंडलीय दाब वाले स्थान जोड़ती हैं।"
+  },
+  {
+    "qe": "Which conditions support the formation of a tropical cyclone over warm ocean water?",
+    "qh": "गर्म समुद्री जल के ऊपर उष्णकटिबंधीय चक्रवात बनने में कौन-सी स्थितियाँ मदद करती हैं?",
+    "o": [
+      "Warm moist air and a low-pressure disturbance",
+      "Very cold dry air only",
+      "High pressure with sinking air only",
+      "No evaporation",
+      "A permanent land breeze"
+    ],
+    "oe": [
+      "Warm moist air and a low-pressure disturbance",
+      "Very cold dry air only",
+      "High pressure with sinking air only",
+      "No evaporation",
+      "A permanent land breeze"
+    ],
+    "oh": [
+      "गर्म नम हवा और निम्न-दाब विक्षोभ",
+      "केवल बहुत ठंडी शुष्क हवा",
+      "केवल नीचे उतरती उच्च-दाब हवा",
+      "वाष्पीकरण न होना",
+      "स्थायी स्थल-समीर"
+    ],
+    "a": 0,
+    "e": "Warm ocean water supplies moisture and energy; a suitable low-pressure disturbance can organise rotating winds.",
+    "eh": "गर्म समुद्री जल नमी और ऊर्जा देता है; उपयुक्त निम्न-दाब विक्षोभ घूमती हवाओं को संगठित कर सकता है।"
+  },
+  {
+    "qe": "Which rock type forms when existing rocks change under heat and pressure?",
+    "qh": "ताप और दाब से पहले की चट्टानों में बदलाव होने पर कौन-सी चट्टान बनती है?",
+    "o": [
+      "Metamorphic rock",
+      "Igneous rock",
+      "Sedimentary rock",
+      "Volcanic ash",
+      "Coral only"
+    ],
+    "oe": [
+      "Metamorphic rock",
+      "Igneous rock",
+      "Sedimentary rock",
+      "Volcanic ash",
+      "Coral only"
+    ],
+    "oh": [
+      "कायांतरित चट्टान",
+      "आग्नेय चट्टान",
+      "अवसादी चट्टान",
+      "ज्वालामुखीय राख",
+      "केवल प्रवाल"
+    ],
+    "a": 0,
+    "e": "Heat and pressure can alter rocks into metamorphic rocks without fully melting them.",
+    "eh": "ताप और दाब चट्टानों को पूरी तरह पिघलाए बिना कायांतरित कर सकते हैं।"
+  },
+  {
+    "qe": "Which landform is elevated but has a broad, relatively level top?",
+    "qh": "कौन-सा स्थलरूप ऊँचा होता है, पर ऊपर से विस्तृत और अपेक्षाकृत समतल होता है?",
+    "o": [
+      "Plateau",
+      "Plain",
+      "Delta",
+      "Valley",
+      "Beach"
+    ],
+    "oe": [
+      "Plateau",
+      "Plain",
+      "Delta",
+      "Valley",
+      "Beach"
+    ],
+    "oh": [
+      "पठार",
+      "मैदान",
+      "डेल्टा",
+      "घाटी",
+      "समुद्र-तट"
+    ],
+    "a": 0,
+    "e": "A plateau is an elevated area with a broad, comparatively level surface.",
+    "eh": "पठार ऊँचा क्षेत्र है जिसकी सतह विस्तृत और तुलनात्मक रूप से समतल होती है।"
+  },
+  {
+    "qe": "Which process adds water vapour to the air from plant leaves?",
+    "qh": "पौधों की पत्तियों से हवा में जलवाष्प जोड़ने वाली प्रक्रिया क्या है?",
+    "o": [
+      "Transpiration",
+      "Condensation",
+      "Runoff",
+      "Freezing",
+      "Deposition"
+    ],
+    "oe": [
+      "Transpiration",
+      "Condensation",
+      "Runoff",
+      "Freezing",
+      "Deposition"
+    ],
+    "oh": [
+      "वाष्पोत्सर्जन",
+      "संघनन",
+      "अपवाह",
+      "जमना",
+      "निक्षेपण"
+    ],
+    "a": 0,
+    "e": "Plants release water vapour mainly through stomata; this is transpiration.",
+    "eh": "पौधे मुख्यतः रंध्रों से जलवाष्प छोड़ते हैं; इसे वाष्पोत्सर्जन कहते हैं।"
+  },
+  {
+    "qe": "Which set lists the common “3 Rs” for reducing waste?",
+    "qh": "कचरा घटाने के सामान्य “3R” कौन-से हैं?",
+    "o": [
+      "Reduce, reuse, recycle",
+      "Read, repeat, remember",
+      "Run, rest, recover",
+      "Return, repair, replace",
+      "Rain, river, reservoir"
+    ],
+    "oe": [
+      "Reduce, reuse, recycle",
+      "Read, repeat, remember",
+      "Run, rest, recover",
+      "Return, repair, replace",
+      "Rain, river, reservoir"
+    ],
+    "oh": [
+      "कम करना, पुनः उपयोग, पुनर्चक्रण",
+      "पढ़ना, दोहराना, याद रखना",
+      "दौड़ना, विश्राम, स्वस्थ होना",
+      "लौटाना, मरम्मत, बदलना",
+      "वर्षा, नदी, जलाशय"
+    ],
+    "a": 0,
+    "e": "Reducing consumption, reusing items and recycling materials can lower waste and resource demand.",
+    "eh": "उपभोग घटाना, पुनः उपयोग और पुनर्चक्रण कचरा तथा संसाधन-माँग कम कर सकते हैं।"
+  },
+  {
+    "qe": "A wide, flat area built by river deposits over time is commonly called what?",
+    "qh": "नदी के निक्षेप से लंबे समय में बना विस्तृत समतल क्षेत्र क्या कहलाता है?",
+    "o": [
+      "Alluvial plain",
+      "Volcanic cone",
+      "Glacial cirque",
+      "Coral reef",
+      "Sand dune"
+    ],
+    "oe": [
+      "Alluvial plain",
+      "Volcanic cone",
+      "Glacial cirque",
+      "Coral reef",
+      "Sand dune"
+    ],
+    "oh": [
+      "जलोढ़ मैदान",
+      "ज्वालामुखीय शंकु",
+      "हिमानी गर्त",
+      "प्रवाल-भित्ति",
+      "बालू का टीला"
+    ],
+    "a": 0,
+    "e": "Rivers deposit alluvium and can build fertile plains over long periods.",
+    "eh": "नदियाँ जलोढ़ मिट्टी जमा कर लंबे समय में उपजाऊ मैदान बना सकती हैं।"
+  },
+  {
+    "qe": "Which country shares Bihar’s northern international boundary?",
+    "qh": "बिहार की उत्तरी अंतरराष्ट्रीय सीमा किस देश से लगती है?",
+    "o": [
+      "Nepal",
+      "Bhutan",
+      "Bangladesh",
+      "Myanmar",
+      "Sri Lanka"
+    ],
+    "oe": [
+      "Nepal",
+      "Bhutan",
+      "Bangladesh",
+      "Myanmar",
+      "Sri Lanka"
+    ],
+    "oh": [
+      "नेपाल",
+      "भूटान",
+      "बांग्लादेश",
+      "म्यांमार",
+      "श्रीलंका"
+    ],
+    "a": 0,
+    "e": "Bihar shares its northern international boundary with Nepal.",
+    "eh": "बिहार की उत्तरी अंतरराष्ट्रीय सीमा नेपाल से लगती है।"
+  },
+  {
+    "qe": "Which action can reduce household water waste from leaking plumbing?",
+    "qh": "रिसते नल या पाइप से घरेलू पानी की बर्बादी कौन-सा उपाय घटा सकता है?",
+    "o": [
+      "Repair leaks promptly",
+      "Leave taps running",
+      "Ignore pipe leaks",
+      "Overwater plants",
+      "Wash one item under a hose"
+    ],
+    "oe": [
+      "Repair leaks promptly",
+      "Leave taps running",
+      "Ignore pipe leaks",
+      "Overwater plants",
+      "Wash one item under a hose"
+    ],
+    "oh": [
+      "रिसाव तुरंत ठीक करना",
+      "नल खुला छोड़ना",
+      "पाइप रिसाव अनदेखा करना",
+      "पौधों में अधिक पानी देना",
+      "नली से एक वस्तु धोना"
+    ],
+    "a": 0,
+    "e": "Repairing leaks prevents treated water from being wasted before use.",
+    "eh": "रिसाव ठीक करने से शुद्ध किया गया पानी उपयोग से पहले व्यर्थ नहीं जाता।"
+  },
+  {
+    "qe": "What is a tributary?",
+    "qh": "सहायक नदी क्या होती है?",
+    "o": [
+      "A smaller river or stream flowing into a larger river",
+      "A river flowing only underground",
+      "A mountain lake",
+      "A line of equal height",
+      "A coastal sand ridge"
+    ],
+    "oe": [
+      "A smaller river or stream flowing into a larger river",
+      "A river flowing only underground",
+      "A mountain lake",
+      "A line of equal height",
+      "A coastal sand ridge"
+    ],
+    "oh": [
+      "छोटी नदी या धारा जो बड़ी नदी में मिलती है",
+      "केवल भूमिगत नदी",
+      "पहाड़ी झील",
+      "समान ऊँचाई की रेखा",
+      "तटीय बालू-टीला"
+    ],
+    "a": 0,
+    "e": "A tributary joins a larger river and contributes water to its flow.",
+    "eh": "सहायक नदी बड़ी नदी में मिलकर उसके प्रवाह में जल जोड़ती है।"
+  },
+  {
+    "qe": "Which vegetation is adapted to saline, tidal coastal wetlands?",
+    "qh": "लवणीय, ज्वारीय तटीय आर्द्रभूमि के अनुकूल कौन-सी वनस्पति है?",
+    "o": [
+      "Mangroves",
+      "Alpine conifers",
+      "Cactus scrub only",
+      "Temperate grassland",
+      "Tundra moss"
+    ],
+    "oe": [
+      "Mangroves",
+      "Alpine conifers",
+      "Cactus scrub only",
+      "Temperate grassland",
+      "Tundra moss"
+    ],
+    "oh": [
+      "मैंग्रोव",
+      "अल्पाइन शंकुधारी वन",
+      "केवल कैक्टस झाड़ियाँ",
+      "समशीतोष्ण घासभूमि",
+      "टुंड्रा काई"
+    ],
+    "a": 0,
+    "e": "Mangroves tolerate saline water and tidal conditions in tropical and subtropical coasts.",
+    "eh": "मैंग्रोव उष्ण और उपोष्ण तटों के खारे पानी तथा ज्वारीय दशाओं को सहन करते हैं।"
+  },
+  {
+    "qe": "When rising warm air cools, which process can turn vapour into cloud droplets?",
+    "qh": "गर्म हवा ऊपर उठकर ठंडी होती है तो कौन-सी प्रक्रिया जलवाष्प को बादल-बूंदों में बदल सकती है?",
+    "o": [
+      "Condensation",
+      "Evaporation",
+      "Erosion",
+      "Infiltration",
+      "Sublimation only"
+    ],
+    "oe": [
+      "Condensation",
+      "Evaporation",
+      "Erosion",
+      "Infiltration",
+      "Sublimation only"
+    ],
+    "oh": [
+      "संघनन",
+      "वाष्पीकरण",
+      "अपरदन",
+      "अंतःस्यंदन",
+      "केवल ऊर्ध्वपातन"
+    ],
+    "a": 0,
+    "e": "Cooling can bring air to saturation, causing water vapour to condense into tiny droplets.",
+    "eh": "ठंडा होने पर हवा संतृप्त हो सकती है और जलवाष्प छोटी बूंदों में संघनित होती है।"
+  },
+  {
+    "qe": "What does a map legend explain?",
+    "qh": "मानचित्र का संकेत-पटल क्या समझाता है?",
+    "o": [
+      "The meaning of symbols and colours",
+      "Every flood date",
+      "Each household’s population",
+      "How to fold the map",
+      "The height of every building"
+    ],
+    "oe": [
+      "The meaning of symbols and colours",
+      "Every flood date",
+      "Each household’s population",
+      "How to fold the map",
+      "The height of every building"
+    ],
+    "oh": [
+      "चिह्नों और रंगों का अर्थ",
+      "हर बाढ़ की तारीख",
+      "हर घर की जनसंख्या",
+      "मानचित्र मोड़ने का तरीका",
+      "हर भवन की ऊँचाई"
+    ],
+    "a": 0,
+    "e": "A legend explains the symbols, colours and line styles used on a map.",
+    "eh": "संकेत-पटल मानचित्र के चिह्नों, रंगों और रेखा-शैलियों का अर्थ बताता है।"
+  },
+  {
+    "qe": "Which ocean is largest by surface area?",
+    "qh": "सतही क्षेत्रफल के आधार पर सबसे बड़ा महासागर कौन-सा है?",
+    "o": [
+      "Pacific Ocean",
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arctic Ocean",
+      "Mediterranean Sea"
+    ],
+    "oe": [
+      "Pacific Ocean",
+      "Atlantic Ocean",
+      "Indian Ocean",
+      "Arctic Ocean",
+      "Mediterranean Sea"
+    ],
+    "oh": [
+      "प्रशांत महासागर",
+      "अटलांटिक महासागर",
+      "हिंद महासागर",
+      "आर्कटिक महासागर",
+      "भूमध्य सागर"
+    ],
+    "a": 0,
+    "e": "The Pacific Ocean is the largest ocean by surface area.",
+    "eh": "प्रशांत महासागर सतही क्षेत्रफल के आधार पर सबसे बड़ा महासागर है।"
+  },
+  {
+    "qe": "How can trees on degraded slopes help reduce erosion?",
+    "qh": "क्षरित ढलानों पर पेड़ अपरदन घटाने में कैसे मदद कर सकते हैं?",
+    "o": [
+      "Roots help bind soil and vegetation slows runoff",
+      "They increase bare-soil erosion",
+      "They stop all rainfall",
+      "Leaves remove all groundwater",
+      "They prevent every hazard"
+    ],
+    "oe": [
+      "Roots help bind soil and vegetation slows runoff",
+      "They increase bare-soil erosion",
+      "They stop all rainfall",
+      "Leaves remove all groundwater",
+      "They prevent every hazard"
+    ],
+    "oh": [
+      "जड़ें मिट्टी बाँधती हैं और वनस्पति अपवाह धीमा करती है",
+      "वे खुली मिट्टी का अपरदन बढ़ाते हैं",
+      "वे सारी वर्षा रोकते हैं",
+      "पत्तियाँ सारा भूजल हटा देती हैं",
+      "वे हर आपदा रोकते हैं"
+    ],
+    "a": 0,
+    "e": "Roots stabilise soil and vegetation can slow runoff, though trees cannot prevent every hazard.",
+    "eh": "जड़ें मिट्टी स्थिर करती हैं और वनस्पति अपवाह धीमा कर सकती है; पेड़ हर आपदा नहीं रोकते।"
   }
 ]

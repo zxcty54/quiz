@@ -278,5 +278,425 @@
       "The formation of a river delta",
       "The conversion of rainfall into snow"
     ]
+  },
+  {
+    "qe": "Which crop is commonly grown as a kharif crop in much of India?",
+    "qh": "भारत के अधिकांश भागों में कौन-सी फसल खरीफ में उगाई जाती है?",
+    "o": [
+      "Rice",
+      "Wheat",
+      "Gram",
+      "Mustard",
+      "Peas"
+    ],
+    "oe": [
+      "Rice",
+      "Wheat",
+      "Gram",
+      "Mustard",
+      "Peas"
+    ],
+    "oh": [
+      "धान",
+      "गेहूँ",
+      "चना",
+      "सरसों",
+      "मटर"
+    ],
+    "a": 0,
+    "e": "Rice is commonly grown during the monsoon kharif season, though calendars vary by region.",
+    "eh": "धान सामान्यतः मानसूनी खरीफ मौसम में उगाया जाता है, हालांकि फसल-चक्र क्षेत्रानुसार बदलता है।"
+  },
+  {
+    "qe": "Which crop is commonly grown as a rabi crop in northern India?",
+    "qh": "उत्तर भारत में कौन-सी फसल सामान्यतः रबी में उगाई जाती है?",
+    "o": [
+      "Wheat",
+      "Jute",
+      "Kharif rice",
+      "Cotton only",
+      "Millet only"
+    ],
+    "oe": [
+      "Wheat",
+      "Jute",
+      "Kharif rice",
+      "Cotton only",
+      "Millet only"
+    ],
+    "oh": [
+      "गेहूँ",
+      "जूट",
+      "खरीफ धान",
+      "केवल कपास",
+      "केवल बाजरा"
+    ],
+    "a": 0,
+    "e": "Wheat is a major rabi crop, sown in cooler months and harvested in spring in much of northern India.",
+    "eh": "गेहूँ प्रमुख रबी फसल है; उत्तर भारत में इसे ठंडे महीनों में बोकर वसंत में काटते हैं।"
+  },
+  {
+    "qe": "Which soil is widespread in northern India and is renewed by river deposits?",
+    "qh": "उत्तरी भारत में व्यापक और नदी-निक्षेप से नवीकृत होने वाली मिट्टी कौन-सी है?",
+    "o": [
+      "Alluvial soil",
+      "Laterite only",
+      "Mountain podzol only",
+      "Desert regur only",
+      "Peat only"
+    ],
+    "oe": [
+      "Alluvial soil",
+      "Laterite only",
+      "Mountain podzol only",
+      "Desert regur only",
+      "Peat only"
+    ],
+    "oh": [
+      "जलोढ़ मिट्टी",
+      "केवल लैटेराइट",
+      "केवल पर्वतीय पॉडज़ोल",
+      "केवल मरुस्थलीय रेगुर",
+      "केवल पीट"
+    ],
+    "a": 0,
+    "e": "Alluvial soils deposited by rivers cover large parts of the northern plains.",
+    "eh": "नदियों द्वारा जमा जलोढ़ मिट्टियाँ उत्तरी मैदानों के बड़े भाग में फैली हैं।"
+  },
+  {
+    "qe": "A mountain’s rain-shadow region is usually on which side of the prevailing moist wind?",
+    "qh": "पर्वत का वर्षा-छाया क्षेत्र प्रचलित नम हवा की किस ओर होता है?",
+    "o": [
+      "Leeward side",
+      "Windward side",
+      "At the Equator only",
+      "Ocean centre",
+      "North Pole only"
+    ],
+    "oe": [
+      "Leeward side",
+      "Windward side",
+      "At the Equator only",
+      "Ocean centre",
+      "North Pole only"
+    ],
+    "oh": [
+      "पवन-विमुख ओर",
+      "पवनाभिमुख ओर",
+      "केवल भूमध्य रेखा",
+      "महासागर का मध्य",
+      "केवल उत्तरी ध्रुव"
+    ],
+    "a": 0,
+    "e": "Moist air loses water on the windward side; descending air on the leeward side is generally drier.",
+    "eh": "नम हवा पवनाभिमुख ओर पानी बरसा देती है; पवन-विमुख ओर उतरती हवा सामान्यतः शुष्क होती है।"
+  },
+  {
+    "qe": "Which sector includes farming, forestry and fishing?",
+    "qh": "कृषि, वानिकी और मत्स्य-पालन किस क्षेत्र में आते हैं?",
+    "o": [
+      "Primary sector",
+      "Secondary sector",
+      "Tertiary sector",
+      "Quaternary only",
+      "Public sector only"
+    ],
+    "oe": [
+      "Primary sector",
+      "Secondary sector",
+      "Tertiary sector",
+      "Quaternary only",
+      "Public sector only"
+    ],
+    "oh": [
+      "प्राथमिक क्षेत्र",
+      "द्वितीयक क्षेत्र",
+      "तृतीयक क्षेत्र",
+      "केवल चतुर्थक",
+      "केवल सार्वजनिक क्षेत्र"
+    ],
+    "a": 0,
+    "e": "The primary sector directly obtains or uses natural resources.",
+    "eh": "प्राथमिक क्षेत्र सीधे प्राकृतिक संसाधन प्राप्त करता या उनका उपयोग करता है।"
+  },
+  {
+    "qe": "Which measure is calculated by dividing population by land area?",
+    "qh": "जनसंख्या को भूमि-क्षेत्रफल से भाग देकर कौन-सा माप निकाला जाता है?",
+    "o": [
+      "Population density",
+      "Birth rate",
+      "Literacy rate",
+      "Life expectancy",
+      "Migration balance"
+    ],
+    "oe": [
+      "Population density",
+      "Birth rate",
+      "Literacy rate",
+      "Life expectancy",
+      "Migration balance"
+    ],
+    "oh": [
+      "जनसंख्या घनत्व",
+      "जन्म-दर",
+      "साक्षरता-दर",
+      "जीवन प्रत्याशा",
+      "प्रवास संतुलन"
+    ],
+    "a": 0,
+    "e": "Population density is the number of people per unit area.",
+    "eh": "जनसंख्या घनत्व प्रति इकाई क्षेत्र में लोगों की संख्या है।"
+  },
+  {
+    "qe": "Bauxite is the principal ore used to produce which metal?",
+    "qh": "बॉक्साइट किस धातु के उत्पादन का मुख्य अयस्क है?",
+    "o": [
+      "Aluminium",
+      "Copper",
+      "Iron",
+      "Zinc",
+      "Lead"
+    ],
+    "oe": [
+      "Aluminium",
+      "Copper",
+      "Iron",
+      "Zinc",
+      "Lead"
+    ],
+    "oh": [
+      "एल्युमिनियम",
+      "ताँबा",
+      "लोहा",
+      "जस्ता",
+      "सीसा"
+    ],
+    "a": 0,
+    "e": "Aluminium is extracted from bauxite through industrial processes.",
+    "eh": "औद्योगिक प्रक्रियाओं से बॉक्साइट से एल्युमिनियम निकाला जाता है।"
+  },
+  {
+    "qe": "Which energy source uses heat from within Earth?",
+    "qh": "पृथ्वी के भीतर की ऊष्मा का उपयोग कौन-सा ऊर्जा स्रोत करता है?",
+    "o": [
+      "Geothermal energy",
+      "Tidal energy",
+      "Wind energy",
+      "Solar energy",
+      "Biomass only"
+    ],
+    "oe": [
+      "Geothermal energy",
+      "Tidal energy",
+      "Wind energy",
+      "Solar energy",
+      "Biomass only"
+    ],
+    "oh": [
+      "भूतापीय ऊर्जा",
+      "ज्वारीय ऊर्जा",
+      "पवन ऊर्जा",
+      "सौर ऊर्जा",
+      "केवल जैव-पिंड ऊर्जा"
+    ],
+    "a": 0,
+    "e": "Geothermal energy uses heat stored within Earth.",
+    "eh": "भूतापीय ऊर्जा पृथ्वी के भीतर संचित ऊष्मा का उपयोग करती है।"
+  },
+  {
+    "qe": "What is a major risk of excessive groundwater pumping?",
+    "qh": "भूजल की अत्यधिक पंपिंग का बड़ा जोखिम क्या है?",
+    "o": [
+      "The water table may fall",
+      "Rainfall permanently increases",
+      "New rivers form",
+      "Drought disappears",
+      "More glaciers form"
+    ],
+    "oe": [
+      "The water table may fall",
+      "Rainfall permanently increases",
+      "New rivers form",
+      "Drought disappears",
+      "More glaciers form"
+    ],
+    "oh": [
+      "भूजल-स्तर गिर सकता है",
+      "वर्षा स्थायी रूप से बढ़ती है",
+      "नई नदियाँ बनती हैं",
+      "सूखा समाप्त होता है",
+      "अधिक हिमनद बनते हैं"
+    ],
+    "a": 0,
+    "e": "Over-pumping can lower the water table and make wells less reliable.",
+    "eh": "अत्यधिक पंपिंग से भूजल-स्तर गिर सकता है और कुएँ कम भरोसेमंद हो सकते हैं।"
+  },
+  {
+    "qe": "Which transport mode is well suited to moving heavy bulk goods over long land distances?",
+    "qh": "लंबी स्थलीय दूरी पर भारी थोक माल ढोने के लिए कौन-सा साधन उपयुक्त है?",
+    "o": [
+      "Railways",
+      "Bicycles",
+      "Hand carts",
+      "Passenger lifts",
+      "Footpaths"
+    ],
+    "oe": [
+      "Railways",
+      "Bicycles",
+      "Hand carts",
+      "Passenger lifts",
+      "Footpaths"
+    ],
+    "oh": [
+      "रेलवे",
+      "साइकिल",
+      "हाथ-गाड़ियाँ",
+      "यात्री लिफ्ट",
+      "पगडंडियाँ"
+    ],
+    "a": 0,
+    "e": "Railways can move large quantities of bulk goods over long distances efficiently.",
+    "eh": "रेलवे लंबी दूरी पर भारी मात्रा में थोक माल कुशलता से ले जा सकती है।"
+  },
+  {
+    "qe": "What is a watershed or drainage basin?",
+    "qh": "जल-विभाजक या अपवाह-क्षेत्र क्या होता है?",
+    "o": [
+      "Land area draining to a common outlet",
+      "A deep ocean trench",
+      "A line of equal temperature",
+      "A market boundary",
+      "A desert wind"
+    ],
+    "oe": [
+      "Land area draining to a common outlet",
+      "A deep ocean trench",
+      "A line of equal temperature",
+      "A market boundary",
+      "A desert wind"
+    ],
+    "oh": [
+      "साझे निकास की ओर जल बहाने वाला भूमि-क्षेत्र",
+      "गहरी महासागरीय खाई",
+      "समान ताप की रेखा",
+      "बाज़ार सीमा",
+      "मरुस्थलीय हवा"
+    ],
+    "a": 0,
+    "e": "A drainage basin collects runoff flowing toward a common stream, river or outlet.",
+    "eh": "अपवाह-क्षेत्र उस जल को एकत्र करता है जो साझा धारा, नदी या निकास की ओर बहता है।"
+  },
+  {
+    "qe": "Which source is renewable on a human timescale when naturally replenished?",
+    "qh": "प्राकृतिक रूप से पुनर्भरित होने पर मानव समय-मान पर कौन-सा स्रोत नवीकरणीय है?",
+    "o": [
+      "Solar power",
+      "Coal",
+      "Petroleum",
+      "Natural gas",
+      "Uranium ore"
+    ],
+    "oe": [
+      "Solar power",
+      "Coal",
+      "Petroleum",
+      "Natural gas",
+      "Uranium ore"
+    ],
+    "oh": [
+      "सौर ऊर्जा",
+      "कोयला",
+      "पेट्रोलियम",
+      "प्राकृतिक गैस",
+      "यूरेनियम अयस्क"
+    ],
+    "a": 0,
+    "e": "Sunlight is continually replenished on human timescales, unlike fossil fuels and uranium ore.",
+    "eh": "मानव समय-मान पर सूर्य-प्रकाश लगातार मिलता है, जीवाश्म ईंधन और यूरेनियम की तरह सीमित नहीं।"
+  },
+  {
+    "qe": "Why do coastal areas often have a smaller annual temperature range than inland areas?",
+    "qh": "तटीय क्षेत्रों का वार्षिक तापांतर भीतरी क्षेत्रों से कम क्यों होता है?",
+    "o": [
+      "The sea heats and cools more slowly than land",
+      "Coasts receive no sunlight",
+      "Seas have no currents",
+      "All coastal winds are cold",
+      "Land stores no heat"
+    ],
+    "oe": [
+      "The sea heats and cools more slowly than land",
+      "Coasts receive no sunlight",
+      "Seas have no currents",
+      "All coastal winds are cold",
+      "Land stores no heat"
+    ],
+    "oh": [
+      "समुद्र भूमि से धीरे गर्म और ठंडा होता है",
+      "तटों पर सूर्य नहीं चमकता",
+      "समुद्र में धाराएँ नहीं होतीं",
+      "तटीय हवाएँ हमेशा ठंडी होती हैं",
+      "भूमि ऊष्मा नहीं रखती"
+    ],
+    "a": 0,
+    "e": "Water’s high heat capacity moderates nearby temperatures in many coastal places.",
+    "eh": "पानी की ऊष्मा-धारण क्षमता अधिक है और कई तटीय स्थानों का तापमान संतुलित रखती है।"
+  },
+  {
+    "qe": "What is often distorted near the poles on common flat world maps?",
+    "qh": "सामान्य समतल विश्व-मानचित्रों में ध्रुवों के पास अक्सर क्या विकृत होता है?",
+    "o": [
+      "Area and shape",
+      "Longitude entirely",
+      "All oceans",
+      "The Equator",
+      "Every scale"
+    ],
+    "oe": [
+      "Area and shape",
+      "Longitude entirely",
+      "All oceans",
+      "The Equator",
+      "Every scale"
+    ],
+    "oh": [
+      "क्षेत्रफल और आकार",
+      "पूरा देशांतर",
+      "सभी महासागर",
+      "भूमध्य रेखा",
+      "हर मानक"
+    ],
+    "a": 0,
+    "e": "Map projections distort area, shape, distance or direction in different ways.",
+    "eh": "मानचित्र-प्रक्षेप अलग-अलग रूप में क्षेत्रफल, आकार, दूरी या दिशा विकृत करते हैं।"
+  },
+  {
+    "qe": "Which land-use decision can reduce flood exposure on a river floodplain?",
+    "qh": "नदी के बाढ़-मैदान में कौन-सा भूमि-उपयोग निर्णय बाढ़ का जोखिम घटा सकता है?",
+    "o": [
+      "Avoid dense construction in high-risk zones",
+      "Block natural drainage",
+      "Build homes on the riverbed",
+      "Remove all wetlands",
+      "Pave every open surface"
+    ],
+    "oe": [
+      "Avoid dense construction in high-risk zones",
+      "Block natural drainage",
+      "Build homes on the riverbed",
+      "Remove all wetlands",
+      "Pave every open surface"
+    ],
+    "oh": [
+      "अधिक जोखिम वाले क्षेत्र में घना निर्माण टालना",
+      "प्राकृतिक जल-निकासी रोकना",
+      "नदी-तल पर घर बनाना",
+      "सभी आर्द्रभूमि हटाना",
+      "हर खुली सतह पक्की करना"
+    ],
+    "a": 0,
+    "e": "Risk-aware land use and protected floodways can reduce exposure, though not eliminate floods.",
+    "eh": "जोखिम-सचेत भूमि-उपयोग और सुरक्षित बाढ़-मार्ग जोखिम घटा सकते हैं, बाढ़ पूरी तरह नहीं रोकते।"
   }
 ]
