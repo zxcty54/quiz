@@ -1,6 +1,6 @@
 # Production readiness — HOLD
 
-**Decision: DO NOT RELEASE OR COPY THIS PACKAGE TO THE LIVE APP.** The current draft has 27 banks / 677 questions; it is not a production-approved course. The structural validator passes, but that is necessary and not sufficient.
+**Decision: DO NOT RELEASE OR COPY THIS PACKAGE TO THE LIVE APP.** The current draft has 27 banks / 727 questions, including two limited Class 9 chapter-based increments; it is not a production-approved course. The structural validator passes, but that is necessary and not sufficient.
 
 ## Current official source review
 
@@ -25,7 +25,7 @@ The earlier Advertisement 14/2026 upload and its five-page extract are supersede
 | JSON/schema, five-choice answer arrays, answer-index range, no question-level `topic`/`subject`, duplicate exact stems | **PASS — structural only** | Run `python3 content_base_patch/scripts/validate_revision_banks.py`. This checks shape, not whether the marked answer is correct. |
 | Mapping references and bank-file inventory | **PASS — structural only** | The draft overlay should map every bank once. The validator checks missing, duplicate, unsafe and unreferenced paths. |
 | Advertisement 15/2026 exam-pattern verification | **PASS — high-level only** | Scanned pages 1 and 13–16 were reviewed. The 150-question / 2.5-hour pattern, section split, marking and Social Science rule are clear in this notice. Check later corrigenda before release. |
-| SCERT/NCERT book corpus and edition inventory | **BLOCKED — inputs missing** | The uploaded files are notices and past papers; no Class 1–10 textbook PDFs, chapter lists or edition/year manifest were supplied. Provide the latest relevant Bihar SCERT books/contents or exact book titles and editions before a reliable full-book crosswalk can be built. |
+| SCERT/NCERT book corpus and edition inventory | **BLOCKED — partial Drive corpus; editions unverified** | Drive search on 2026-11-07 found Bihar-named books for Classes 5–9; no `bihar10` file was found. Exact latest SCERT/NCERT titles, editions and contents are unverified. Readable excerpts were obtained only from Class 9 Economics Chapter 1 (`bihar9eco.pdf`) and Political Science Chapter 1 (`bihar9polity.pdf`); other sampled files are no-text scans, legacy-font-garbled, duplicated or above the 25 MB reader cap, including the 84 MB Class 8 Civics DOCX. The current excerpts do not support a full-book crosswalk. |
 | Class- and unit-level coverage for the approved Classes 1–10 scope | **FAIL / INCOMPLETE** | `COVERAGE_MATRIX.md` identifies mixed-level General Studies/science banks, a combined Classes 6–10 Mathematics bank, and missing per-unit crosswalks. The notice is broad and does not provide a chapter-by-chapter syllabus. Twenty-five questions in a broad subject bank do not equal 25 per syllabus unit. |
 | Primary March 2024 booklet topic review | **BLOCKED — partial visual sample only** | The supplied `BPSC-TRE-3.0-Primary-Question-Papers-2024-PDFs-March-2024.pdf` has no text layer. Sample renders are legible, but the file includes promotional pages and its printed-page sequence/completeness has not been verified; a full topic review is not done. A separate text-extractable Primary booklet is coded 2023 and does not replace it. |
 | Subject-matter and answer-key review | **NOT DONE** | No independent teacher/subject-expert sign-off is recorded for these original practice questions or their answer keys. Review every item before charging users. |
@@ -37,7 +37,7 @@ The earlier Advertisement 14/2026 upload and its five-page extract are supersede
 
 ## Minimum release blockers
 
-1. Establish the exact latest Bihar SCERT books/editions for each approved class and subject (with NCERT used only as a recorded cross-check/supplement), then build the class-band/chapter crosswalk. Add sufficient original practice to every unit—not merely every subject file.
+1. Verify exact latest Bihar SCERT books/editions for each approved class and subject (with NCERT as a recorded cross-check/supplement), then complete the class-band/chapter crosswalk. Use the readable Class 9 Economics and Political Science excerpts as partial inputs; OCR or otherwise obtain readable text for the remaining books and add at least 25 original questions per mapped unit—not merely per subject file.
 2. Complete the Primary 2024 booklet review and obtain independent subject-matter answer-key and bilingual editorial review. Urdu/Bengali additionally need native-language review.
 3. Confirm no post-Advertisement-15 corrigendum changes the paper structure or approved subject scope; verify the latest administrative vacancy notice separately if the app displays vacancy data.
 4. Resolve the Language-hub/app-visibility gap and verify the Social Science selection rule in the installed app, with explicit authorization for any app changes.

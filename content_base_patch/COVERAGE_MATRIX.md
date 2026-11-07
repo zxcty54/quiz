@@ -2,7 +2,7 @@
 
 **Status:** DRAFT — incomplete, not release-ready, and not to be copied into the live app. This is not an exhaustive official TRE-4 chapter map.
 
-**Current draft set:** 27 JSON banks containing 677 original MCQs. Twenty-five banks have 25 questions each and two have 26 questions each. Every question has five answer choices and uses the current Revision model's bilingual fields; no per-question topic or subject tags are present. This draft is not sufficient to claim complete syllabus coverage.
+**Current draft set:** 27 JSON banks containing 727 original MCQs. Every question has five answer choices and uses the current Revision model's bilingual fields; no per-question topic or subject tags are present. The latest increment adds 25 original questions each from readable excerpts of one Class 9 Economics chapter and one Class 9 Political Science chapter. This draft is not sufficient to claim complete syllabus coverage.
 
 ## Scope and evidence
 
@@ -15,12 +15,13 @@
 | Middle papers | Supplied Middle English, Hindi, Sanskrit, Math-Science and Social Science booklets dated 19 July 2024, alongside Advertisement 15/2026 printed pages 13–14. | The 2024 booklets and Ad15 show the same broad 150-question Main pattern: Language 30 + GS 40 + chosen subject 80. The common Language section includes English E-1–E-8 plus a choice among Hindi/Urdu/Bengali questions 9–30. | 2024 papers are TRE-3 evidence. Some legacy-font Hindi/Sanskrit extraction was garbled; further post-Ad15 amendments still need checking. |
 | Secondary papers | Supplied Secondary English, Maths and Social Science papers dated 21 July 2024, alongside Advertisement 15/2026 printed pages 13–14. | The broad 30 + 40 + 80 structure is confirmed. Official Social Science choice is sequential: Section I is History or Geography; Section II choices depend on that selection. This matches two of the four approved areas, with History or Geography mandatory. | 2024 papers are TRE-3 evidence; later amendments still need checking. App enforcement is untested. |
 | Official archive | BPSC question-booklet page was inspected; its PDF widget was unavailable in the fetched page. | Identifies the official archive. | Supplied PDFs are used for pattern review; no inaccessible archive PDF is claimed as a source. |
+| Bihar textbook files in connected Drive | Search on 2026-11-07 found Bihar-named textbook files for Classes 5–9; no `bihar10` file was found by the same prefix search. `bihar9eco.pdf` and `bihar9polity.pdf` yielded readable text. | Supports 25 new original questions each from Class 9 Economics Chapter 1, “The Story of a Village in Bihar,” and Political Science Chapter 1, “Gradual Development of Democracy.” | Filenames do not establish latest edition or official status. Class 9 History was not found; Science is over the reader cap; English extraction returned no text; Math/Geography Hindi extraction is legacy-font-garbled; a duplicate Economics PDF and 84 MB Class 8 Civics DOCX remain unread. Samples of Class 5–8 PDFs returned no extractable text. This is partial source use, not a full-book audit. |
 
 ## Full-book coverage assumption and source gap
 
 At the user's direction, treat **every relevant chapter** in the latest Bihar SCERT books for the approved classes/subjects as the conservative coverage checklist; use NCERT as a recorded cross-check or supplement where SCERT coverage is missing. This is a product-completeness rule, **not** a claim that BPSC officially includes every textbook chapter. Keep chapter mapping in this matrix (or a separate unit manifest), not in question-level `topic`/`subject` fields.
 
-The uploaded materials include BPSC notices and exam booklets, but no Class 1–10 SCERT/NCERT textbooks, contents pages, or edition/year list. Therefore the chapter inventory cannot yet be filled accurately. The current broad bank map below is not a substitute for that inventory; do not invent chapter names or claim full-book coverage until the exact books/editions are supplied or verified.
+The connected Drive now contains Bihar-named textbook files for Classes 5–9, but this is only a partial source corpus: latest editions and full subject-to-class coverage are not verified, and the Class 10 prefix search returned no file. Some book text is readable; other files are scans with no extracted text, legacy-font-garbled, duplicated or above the 25 MB extraction cap. Use the readable Class 9 Economics and Political Science excerpts for the limited additions documented here, but do not treat those first chapters as a full-book syllabus map. The user-approved product rule remains full coverage of relevant latest Bihar SCERT chapters, with NCERT as a recorded cross-check/supplement—not a claim that BPSC officially requires every textbook chapter.
 
 ## Coverage plan for this overlay
 
@@ -71,8 +72,8 @@ All paths are relative to Content Base root; question counts are confirmed from 
 | `revision/general_science/polity/bpsc_tre_middle_political_science.json` | 25 | Middle subject / Social Science Political Science, Classes 6–8 |
 | `revision/general_science/history/bpsc_tre_secondary_history.json` | 25 | Secondary Social Science History, Classes 9–10 |
 | `revision/general_science/geography/bpsc_tre_secondary_geography.json` | 25 | Secondary Social Science Geography, Classes 9–10 |
-| `revision/general_science/economy/bpsc_tre_secondary_economics.json` | 25 | Secondary Social Science Economics, Classes 9–10 |
-| `revision/general_science/polity/bpsc_tre_secondary_political_science.json` | 26 | Secondary Social Science Political Science, Classes 9–10 |
+| `revision/general_science/economy/bpsc_tre_secondary_economics.json` | 50 | Secondary Social Science Economics, Classes 9–10 |
+| `revision/general_science/polity/bpsc_tre_secondary_political_science.json` | 51 | Secondary Social Science Political Science, Classes 9–10 |
 | `revision/language/english/bpsc_tre_qualifying_english.json` | 25 | Qualifying Language: English, foundational practice |
 | `revision/language/hindi/bpsc_tre_qualifying_hindi.json` | 25 | Qualifying Language: Hindi choice, foundational practice |
 | `revision/language/urdu/bpsc_tre_qualifying_urdu.json` | 25 | Qualifying Language: Urdu choice, provisional practice requiring native review |
@@ -82,7 +83,7 @@ All paths are relative to Content Base root; question counts are confirmed from 
 | `revision/language/sanskrit/bpsc_tre_middle_sanskrit_subject.json` | 26 | Middle Sanskrit subject, Classes 6–8 |
 | `revision/language/english/bpsc_tre_secondary_english_subject.json` | 25 | Secondary English subject, Classes 9–10 |
 
-The bank inventory is a **starter set of revision items per mapped area**, not a claim that 25–26 questions exhaust any subject or syllabus unit. Several “Classes 1–10” files remain mixed-level and do not establish grade-by-grade TRE-4 coverage.
+The bank inventory is a **starter set of revision items per mapped area**, not a claim that 25–51 questions exhaust any subject or syllabus unit. The two expanded Secondary banks each include 25 questions from one readable Class 9 chapter excerpt; this does not establish full-book coverage. Several “Classes 1–10” files remain mixed-level and do not establish grade-by-grade TRE-4 coverage.
 
 ## Approved scope and release gate (user clarification, 2026-11-06)
 
@@ -103,13 +104,13 @@ This build's accepted scope is **Revision banks only**, Classes **1–10**, with
 4. Every path referenced by the mapping exists, every question passes schema and answer checks, and a coverage audit reports no unserved approved unit.
 5. Content stays on the Arena branch as a draft. Do not copy or publish to the live app until the matrix is complete and the user approves it.
 
-**Current release status: FAIL / NOT READY.** The 677-question draft meets the minimum question count per existing bank, but approved class/subject mapping and syllabus-unit coverage remain incomplete; the counts do not prove every syllabus unit is served. Language UI support is absent from the current Revision screen; Urdu/Bengali also require native review. No app code has been authorized or changed.
+**Current release status: FAIL / NOT READY.** The 727-question draft includes two limited Class 9 chapter-based increments, but approved class/subject mapping and full syllabus-unit coverage remain incomplete; the counts do not prove every unit is served. Language UI support is absent from the current Revision screen; Urdu/Bengali also require native review. No app code has been authorized or changed.
 ### Band-by-band completion tracker
 
 | Band | Approved sections | Current bank depth | Remaining coverage work | Status |
 |---|---|---|---|---|
 | Primary (Classes 1–5) | Qualifying Language; General Studies | Primary Mathematics has 25 questions; other GS banks are 25-question mixed-level banks. English/Hindi/Urdu/Bengali qualifying banks each have 25 questions; Urdu/Bengali require native review. | Build a grade-appropriate Primary unit crosswalk; establish separate Primary depth for GS/science/mental ability rather than relying on mixed-level banks; complete native-language review of the Urdu/Bengali choice banks and add Language UI support. | **Incomplete** |
 | Middle (Classes 6–8) | Qualifying Language; General Studies; English, Hindi, Sanskrit, Mathematics, Science, History, Geography, Economics, Political Science | English/Hindi/Sanskrit subject banks have 25–26 each; the four Social Science choice banks have 25 each; Mathematics is still one combined Classes 6–10 bank; General Science and GS foundations are mixed-level. | Split Middle Mathematics from Secondary Mathematics; map every approved subject to readable syllabus units and grade-appropriate practice; complete native-language review of the Urdu/Bengali choice banks and add Language UI support. | **Incomplete** |
-| Secondary (Classes 9–10) | Qualifying Language; General Studies; English; Mathematics; History/Geography/Economics/Political Science Social Science choices | English subject and all four Social Science choice banks have 25–26 each; Mathematics is still one combined Classes 6–10 bank; GS foundations are mixed-level. | Split Secondary Mathematics; map every approved subject to readable syllabus units and grade-appropriate practice; complete native-language review of the Urdu/Bengali choice banks and add Language UI support. Preserve the rule: select two Social Science sections, one must be History or Geography. | **Incomplete** |
+| Secondary (Classes 9–10) | Qualifying Language; General Studies; English; Mathematics; History/Geography/Economics/Political Science Social Science choices | English subject and all four Social Science choice banks have 25–51 each; the Class 9 Economics and Political Science banks each include 25 questions from one readable textbook chapter; Mathematics is still one combined Classes 6–10 bank; GS foundations are mixed-level. | Split Secondary Mathematics; map every approved subject to readable syllabus units and grade-appropriate practice; complete native-language review of the Urdu/Bengali choice banks and add Language UI support. Preserve the rule: select two Social Science sections, one must be History or Geography. | **Incomplete** |
 
-**Coverage distinction:** the 25-question minimum is now met for each of the 25 existing banks. It is only a minimum bank-size check—not a claim that every chapter, subtopic, grade band, exam skill or Language option is covered. No live-copy approval is implied.
+**Coverage distinction:** the 25-question minimum is met for all 27 existing banks. The two source-based increments add depth to the Class 9 Economics and Political Science banks only; this is a bank-size check, not a claim that every chapter, subtopic, grade band, exam skill or Language option is covered. No live-copy approval is implied.
