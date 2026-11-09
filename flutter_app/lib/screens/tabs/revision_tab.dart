@@ -404,7 +404,7 @@ class _RevisionTabState extends State<RevisionTab> {
               color: cardBg,
               borderRadius: BorderRadius.circular(16),
               border: Border.all(color: borderColor, width: 1.4),
-              boxShadow: isDark ? null : [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 8, offset: const Offset(0, 2))],
+              boxShadow: isDark ? null : [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8, offset: const Offset(0, 2))],
             ),
             child: TextField(
               controller: _searchController,
@@ -489,7 +489,7 @@ class _RevisionTabState extends State<RevisionTab> {
                           color: cardBg,
                           borderRadius: BorderRadius.circular(18),
                           border: Border.all(color: borderColor),
-                          boxShadow: isDark ? null : [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 8, offset: const Offset(0, 2))],
+                          boxShadow: isDark ? null : [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8, offset: const Offset(0, 2))],
                         ),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -579,7 +579,7 @@ class _RevisionTabState extends State<RevisionTab> {
                                   ],
                                 ),
                               ),
-                              Icon(Icons.play_circle_fill_rounded, size: 22, color: const Color(0xFF16A34A)),
+                              const Icon(Icons.play_circle_fill_rounded, size: 22, color: Color(0xFF16A34A)),
                             ],
                           ),
                         ),
@@ -641,7 +641,7 @@ class _RevisionTabState extends State<RevisionTab> {
                       Container(
                         width: 42,
                         height: 42,
-                        decoration: BoxDecoration(color: const Color(0xFF7C3AED).withOpacity(isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(13)),
+                        decoration: BoxDecoration(color: const Color(0xFF7C3AED).withValues(alpha: isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(13)),
                         child: const Center(child: Text('📰', style: TextStyle(fontSize: 20))),
                       ),
                       const SizedBox(width: 12),
@@ -657,7 +657,7 @@ class _RevisionTabState extends State<RevisionTab> {
                       ),
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                        decoration: BoxDecoration(color: const Color(0xFF7C3AED).withOpacity(isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(99)),
+                        decoration: BoxDecoration(color: const Color(0xFF7C3AED).withValues(alpha: isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(99)),
                         child: const Text('MONTHLY', style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.w900, color: Color(0xFF7C3AED))),
                       ),
                       const SizedBox(width: 4),
@@ -722,7 +722,7 @@ class _RevisionTabState extends State<RevisionTab> {
               Container(
                 width: 42,
                 height: 42,
-                decoration: BoxDecoration(color: color.withOpacity(isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(13)),
+                decoration: BoxDecoration(color: color.withValues(alpha: isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(13)),
                 child: Center(child: Text(icon, style: const TextStyle(fontSize: 20))),
               ),
               const SizedBox(height: 10),
@@ -744,7 +744,7 @@ class _RevisionTabState extends State<RevisionTab> {
                 children: [
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
-                    decoration: BoxDecoration(color: color.withOpacity(isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(99)),
+                    decoration: BoxDecoration(color: color.withValues(alpha: isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(99)),
                     child: Text(countLabel, style: TextStyle(fontSize: 9.5, fontWeight: FontWeight.w900, color: color)),
                   ),
                   const Spacer(),

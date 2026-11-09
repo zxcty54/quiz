@@ -465,7 +465,7 @@ class _SectionalTabState extends State<SectionalTab> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('🎉 Badhai Ho!', style: TextStyle(color: Colors.white, fontSize: 17, fontWeight: FontWeight.w900)),
-                    const SizedBox(height: 4),
+                    SizedBox(height: 4),
                     Text(
                       'Saare available sets complete ho gaye hain. Kisi bhi set ko Re-attempt karke apna score aur improve karo!',
                       style: TextStyle(color: Colors.white70, fontSize: 11.5, fontWeight: FontWeight.w600, height: 1.45),
@@ -513,7 +513,7 @@ class _SectionalTabState extends State<SectionalTab> {
                           Container(
                             width: 42,
                             height: 42,
-                            decoration: BoxDecoration(color: color.withOpacity(isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(13)),
+                            decoration: BoxDecoration(color: color.withValues(alpha: isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(13)),
                             child: Center(child: Text(_examIcon(key), style: const TextStyle(fontSize: 20))),
                           ),
                           const SizedBox(height: 10),
@@ -526,7 +526,7 @@ class _SectionalTabState extends State<SectionalTab> {
                           const SizedBox(height: 5),
                           Container(
                             padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 3),
-                            decoration: BoxDecoration(color: color.withOpacity(isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(99)),
+                            decoration: BoxDecoration(color: color.withValues(alpha: isDark ? 0.25 : 0.10), borderRadius: BorderRadius.circular(99)),
                             child: Text(
                               _formatExamBadge(key, data),
                               style: TextStyle(fontSize: 8.5, fontWeight: FontWeight.w900, color: color, letterSpacing: 0.6),
@@ -612,7 +612,7 @@ class _SectionalTabState extends State<SectionalTab> {
           borderRadius: BorderRadius.circular(22),
           boxShadow: [
             BoxShadow(
-              color: const Color(0xFF1E40AF).withOpacity(0.32),
+              color: const Color(0xFF1E40AF).withValues(alpha: 0.32),
               blurRadius: 14,
               offset: const Offset(0, 6),
             ),
@@ -639,7 +639,7 @@ class _SectionalTabState extends State<SectionalTab> {
               inProgress
                   ? 'Ye set aadha attempt hua hai — wahi se resume karo!'
                   : 'Yahi se apni practice aage badhao — $examTitle ka agla set.',
-              style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 11.5, fontWeight: FontWeight.w600, height: 1.4),
+              style: TextStyle(color: Colors.white.withValues(alpha: 0.85), fontSize: 11.5, fontWeight: FontWeight.w600, height: 1.4),
             ),
             const SizedBox(height: 13),
             ClipRRect(
@@ -647,7 +647,7 @@ class _SectionalTabState extends State<SectionalTab> {
               child: LinearProgressIndicator(
                 value: total == 0 ? 0 : done / total,
                 minHeight: 6,
-                backgroundColor: Colors.white.withOpacity(0.22),
+                backgroundColor: Colors.white.withValues(alpha: 0.22),
                 valueColor: const AlwaysStoppedAnimation<Color>(Color(0xFFFBBF24)),
               ),
             ),
@@ -656,7 +656,7 @@ class _SectionalTabState extends State<SectionalTab> {
               children: [
                 Text(
                   '$examTitle • $done / $total sets complete',
-                  style: TextStyle(color: Colors.white.withOpacity(0.85), fontSize: 10, fontWeight: FontWeight.w800),
+                  style: TextStyle(color: Colors.white.withValues(alpha: 0.85), fontSize: 10, fontWeight: FontWeight.w800),
                 ),
                 const Spacer(),
                 Container(

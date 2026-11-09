@@ -90,7 +90,7 @@ class StudentCbtReportScreen extends StatelessWidget {
               border: Border.all(color: const Color(0xFFE2E8F0)),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.black.withOpacity(0.02),
+                  color: Colors.black.withValues(alpha: 0.02),
                   blurRadius: 10,
                   offset: const Offset(0, 4),
                 ),
@@ -114,7 +114,7 @@ class StudentCbtReportScreen extends StatelessWidget {
                     Container(
                       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                       decoration: BoxDecoration(
-                        color: _primaryBlue.withOpacity(0.1),
+                        color: _primaryBlue.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(
@@ -207,8 +207,8 @@ class StudentCbtReportScreen extends StatelessWidget {
                   color: isSkipped
                       ? Colors.grey.shade300
                       : isCorrect
-                          ? _successGreen.withOpacity(0.35)
-                          : _dangerRed.withOpacity(0.3),
+                          ? _successGreen.withValues(alpha: 0.35)
+                          : _dangerRed.withValues(alpha: 0.3),
                   width: 1.1,
                 ),
               ),
@@ -260,8 +260,8 @@ class StudentCbtReportScreen extends StatelessWidget {
                           color: isSkipped
                               ? Colors.grey.shade100
                               : isCorrect
-                                  ? _successGreen.withOpacity(0.12)
-                                  : _dangerRed.withOpacity(0.08),
+                                  ? _successGreen.withValues(alpha: 0.12)
+                                  : _dangerRed.withValues(alpha: 0.08),
                           borderRadius: BorderRadius.circular(4),
                         ),
                         child: Text(
@@ -291,7 +291,7 @@ class StudentCbtReportScreen extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2.5),
                       margin: const EdgeInsets.only(bottom: 6),
                       decoration: BoxDecoration(
-                        color: _primaryBlue.withOpacity(0.08),
+                        color: _primaryBlue.withValues(alpha: 0.08),
                         borderRadius: BorderRadius.circular(4),
                       ),
                       child: Text(
@@ -325,15 +325,15 @@ class StudentCbtReportScreen extends StatelessWidget {
                       color: isSkipped
                           ? Colors.grey.shade50
                           : isCorrect
-                              ? _successGreen.withOpacity(0.07)
-                              : _dangerRed.withOpacity(0.06),
+                              ? _successGreen.withValues(alpha: 0.07)
+                              : _dangerRed.withValues(alpha: 0.06),
                       borderRadius: BorderRadius.circular(7),
                       border: Border.all(
                         color: isSkipped
                             ? Colors.grey.shade200
                             : isCorrect
-                                ? _successGreen.withOpacity(0.2)
-                                : _dangerRed.withOpacity(0.15),
+                                ? _successGreen.withValues(alpha: 0.2)
+                                : _dangerRed.withValues(alpha: 0.15),
                       ),
                     ),
                     child: Text(
@@ -357,9 +357,9 @@ class StudentCbtReportScreen extends StatelessWidget {
                       width: double.infinity,
                       padding: const EdgeInsets.all(9),
                       decoration: BoxDecoration(
-                        color: _successGreen.withOpacity(0.07),
+                        color: _successGreen.withValues(alpha: 0.07),
                         borderRadius: BorderRadius.circular(7),
-                        border: Border.all(color: _successGreen.withOpacity(0.2)),
+                        border: Border.all(color: _successGreen.withValues(alpha: 0.2)),
                       ),
                       child: Text(
                         "Correct Answer: ${qData['correct_option'] ?? ''}",

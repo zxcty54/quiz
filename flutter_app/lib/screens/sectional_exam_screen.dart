@@ -153,7 +153,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
               borderRadius: BorderRadius.circular(20),
               boxShadow: [
                 BoxShadow(
-                  color: widget.color.withOpacity(0.30),
+                  color: widget.color.withValues(alpha: 0.30),
                   blurRadius: 14,
                   offset: const Offset(0, 6),
                 ),
@@ -168,9 +168,9 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                       width: 46,
                       height: 46,
                       decoration: BoxDecoration(
-                        color: Colors.white.withOpacity(0.20),
+                        color: Colors.white.withValues(alpha: 0.20),
                         borderRadius: BorderRadius.circular(14),
-                        border: Border.all(color: Colors.white.withOpacity(0.35)),
+                        border: Border.all(color: Colors.white.withValues(alpha: 0.35)),
                       ),
                       child: Center(child: Text(widget.icon, style: const TextStyle(fontSize: 22))),
                     ),
@@ -186,7 +186,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                           const SizedBox(height: 3),
                           Text(
                             '${widget.badge} • Real CBT Pattern',
-                            style: TextStyle(color: Colors.white.withOpacity(0.88), fontSize: 11, fontWeight: FontWeight.w700),
+                            style: TextStyle(color: Colors.white.withValues(alpha: 0.88), fontSize: 11, fontWeight: FontWeight.w700),
                           ),
                         ],
                       ),
@@ -199,20 +199,20 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                   child: LinearProgressIndicator(
                     value: total == 0 ? 0 : done / total,
                     minHeight: 6,
-                    backgroundColor: Colors.white.withOpacity(0.25),
+                    backgroundColor: Colors.white.withValues(alpha: 0.25),
                     valueColor: const AlwaysStoppedAnimation<Color>(Colors.white),
                   ),
                 ),
                 const SizedBox(height: 7),
                 Text(
                   '$done / $total sets complete',
-                  style: TextStyle(color: Colors.white.withOpacity(0.9), fontSize: 10.5, fontWeight: FontWeight.w800),
+                  style: TextStyle(color: Colors.white.withValues(alpha: 0.9), fontSize: 10.5, fontWeight: FontWeight.w800),
                 ),
                 const SizedBox(height: 3),
                 Text(
                   '🎉 All sectional mock sets are free in this release.',
                   style: TextStyle(
-                    color: Colors.white.withOpacity(0.9),
+                    color: Colors.white.withValues(alpha: 0.9),
                     fontSize: 10.5,
                     fontWeight: FontWeight.w700,
                   ),
@@ -308,7 +308,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
         color: isDark ? const Color(0xFF1E293B) : Colors.white,
         borderRadius: BorderRadius.circular(19),
         border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE8EDF7)),
-        boxShadow: isDark ? null : [BoxShadow(color: Colors.black.withOpacity(0.04), blurRadius: 8, offset: const Offset(0, 2))],
+        boxShadow: isDark ? null : [BoxShadow(color: Colors.black.withValues(alpha: 0.04), blurRadius: 8, offset: const Offset(0, 2))],
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -386,7 +386,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
               width: 42,
               height: 38,
               decoration: BoxDecoration(
-                color: widget.color.withOpacity(isDark ? 0.25 : 0.10),
+                color: widget.color.withValues(alpha: isDark ? 0.25 : 0.10),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Center(
@@ -423,7 +423,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                 onPressed: () => _launch(group, setNum),
                 style: OutlinedButton.styleFrom(
                   foregroundColor: widget.color,
-                  side: BorderSide(color: widget.color.withOpacity(0.5)),
+                  side: BorderSide(color: widget.color.withValues(alpha: 0.5)),
                   padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
                   minimumSize: Size.zero,
                   tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -470,7 +470,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
                 width: 42,
                 height: 38,
                 decoration: BoxDecoration(
-                  color: Colors.grey.withOpacity(0.15),
+                  color: Colors.grey.withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Center(
@@ -500,7 +500,7 @@ class _SectionalExamScreenState extends State<SectionalExamScreen> {
               ),
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 7),
-                decoration: BoxDecoration(color: Colors.grey.withOpacity(0.15), borderRadius: BorderRadius.circular(99)),
+                decoration: BoxDecoration(color: Colors.grey.withValues(alpha: 0.15), borderRadius: BorderRadius.circular(99)),
                 child: const Text('🔒 Soon', style: TextStyle(fontSize: 11, fontWeight: FontWeight.w900, color: Colors.grey)),
               ),
             ],

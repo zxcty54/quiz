@@ -49,7 +49,7 @@ class RevisionDirectCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(14),
         side: BorderSide(
-          color: isDark ? brandColor.withOpacity(0.5) : brandColor.withOpacity(0.3),
+          color: isDark ? brandColor.withValues(alpha: 0.5) : brandColor.withValues(alpha: 0.3),
           width: 1.2,
         ),
       ),
@@ -67,7 +67,7 @@ class RevisionDirectCard extends StatelessWidget {
               badgeText,
               style: TextStyle(
                 fontSize: 11,
-                color: isDark ? brandColor.withOpacity(0.95) : brandColor.withOpacity(0.9),
+                color: isDark ? brandColor.withValues(alpha: 0.95) : brandColor.withValues(alpha: 0.9),
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -85,7 +85,7 @@ class RevisionDirectCard extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   decoration: BoxDecoration(
-                    color: brandColor.withOpacity(0.12),
+                    color: brandColor.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Text(
@@ -109,7 +109,7 @@ class RevisionDirectCard extends StatelessWidget {
                   width: double.infinity,
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: isDark ? const Color(0xFF0F172A).withOpacity(0.5) : const Color(0xFFF8FAFC),
+                    color: isDark ? const Color(0xFF0F172A).withValues(alpha: 0.5) : const Color(0xFFF8FAFC),
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
                   ),
@@ -121,8 +121,8 @@ class RevisionDirectCard extends StatelessWidget {
 
                       return ActionChip(
                         elevation: 1,
-                        backgroundColor: isDark ? brandColor.withOpacity(0.2) : Colors.white,
-                        side: BorderSide(color: isDark ? brandColor.withOpacity(0.5) : brandColor.withOpacity(0.35)),
+                        backgroundColor: isDark ? brandColor.withValues(alpha: 0.2) : Colors.white,
+                        side: BorderSide(color: isDark ? brandColor.withValues(alpha: 0.5) : brandColor.withValues(alpha: 0.35)),
                         avatar: hasSubTypes ? Icon(Icons.folder, size: 15, color: brandColor) : null,
                         label: Text(
                           entry.key,
@@ -201,7 +201,7 @@ class RevisionSegmentedCard extends StatelessWidget {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(14),
         side: BorderSide(
-          color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.3),
+          color: isDark ? color.withValues(alpha: 0.5) : color.withValues(alpha: 0.3),
           width: 1.2,
         ),
       ),
@@ -215,7 +215,7 @@ class RevisionSegmentedCard extends StatelessWidget {
           children: [
             Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15.5, color: color)),
             const SizedBox(height: 2),
-            Text(badgeText, style: TextStyle(fontSize: 11, color: isDark ? color.withOpacity(0.95) : color.withOpacity(0.9), fontWeight: FontWeight.bold)),
+            Text(badgeText, style: TextStyle(fontSize: 11, color: isDark ? color.withValues(alpha: 0.95) : color.withValues(alpha: 0.9), fontWeight: FontWeight.bold)),
           ],
         ),
         childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 14),
@@ -262,7 +262,7 @@ class RevisionSegmentedCard extends StatelessWidget {
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
                   decoration: BoxDecoration(
-                    color: color.withOpacity(0.12),
+                    color: color.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(6),
                   ),
                   child: Text(
@@ -286,7 +286,7 @@ class RevisionSegmentedCard extends StatelessWidget {
                   width: double.infinity,
                   padding: const EdgeInsets.all(10),
                   decoration: BoxDecoration(
-                    color: isDark ? const Color(0xFF0F172A).withOpacity(0.5) : const Color(0xFFF8FAFC),
+                    color: isDark ? const Color(0xFF0F172A).withValues(alpha: 0.5) : const Color(0xFFF8FAFC),
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(color: isDark ? const Color(0xFF334155) : const Color(0xFFE2E8F0)),
                   ),
@@ -296,8 +296,8 @@ class RevisionSegmentedCard extends StatelessWidget {
                     children: activeChapters.entries.map((entry) {
                       return ActionChip(
                         elevation: 1,
-                        backgroundColor: isDark ? color.withOpacity(0.2) : Colors.white,
-                        side: BorderSide(color: isDark ? color.withOpacity(0.5) : color.withOpacity(0.35)),
+                        backgroundColor: isDark ? color.withValues(alpha: 0.2) : Colors.white,
+                        side: BorderSide(color: isDark ? color.withValues(alpha: 0.5) : color.withValues(alpha: 0.35)),
                         label: Text(
                           entry.key,
                           style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold, color: isDark ? Colors.white : color),

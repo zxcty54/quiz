@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import '../models/question_model.dart';
-import 'revision_practice_screen.dart';
 
 class SubjectDirectoryScreen extends StatefulWidget {
   final String title;

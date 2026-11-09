@@ -533,7 +533,7 @@ class _HomeTabState extends State<HomeTab> {
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
                     decoration: BoxDecoration(
-                      color: cardThemeColor.withOpacity(0.12),
+                      color: cardThemeColor.withValues(alpha: 0.12),
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Text(
@@ -568,7 +568,7 @@ class _HomeTabState extends State<HomeTab> {
                             ),
                           ),
                         ),
-                        Icon(Icons.open_in_new_rounded, size: 13, color: cardThemeColor.withOpacity(0.6)),
+                        Icon(Icons.open_in_new_rounded, size: 13, color: cardThemeColor.withValues(alpha: 0.6)),
                       ],
                     ),
                   ),
