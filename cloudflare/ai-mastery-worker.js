@@ -1,3 +1,10 @@
+// 🎯 Default Dynamic Proxy Priority: Groq 120B -> Groq 20B -> Gemini fallback.
+const DEFAULT_MODEL_HIERARCHY = [
+  "openai/gpt-oss-120b",
+  "openai/gpt-oss-20b",
+  "gemini-3.5-flash-lite"
+];
+
 export default {
   // 🌐 1. Dynamic Proxy (Doubt Solver, Why Wrong, etc.)
   async fetch(request, env, ctx) {
@@ -58,11 +65,9 @@ export default {
       const googleKeys = [env.GOOGLE_API_KEY, env.GOOGLE_API_KEY2].filter(k => k && k.trim().length > 0);
       const groqKeys = [env.GROQ_API_KEY, env.GROQ_API_KEY2].filter(k => k && k.trim().length > 0);
 
-      const models = activeModelHierarchy || [
-        "gemini-2.0-flash",
-        "llama-3.3-70b-versatile",
-        "llama-3.1-8b-instant",
-      ];
+      const models = (activeModelHierarchy && activeModelHierarchy.length > 0)
+        ? activeModelHierarchy
+        : DEFAULT_MODEL_HIERARCHY;
 
       const fullPrompt = `${systemPrompt}\n\n${userPrompt}`;
 
@@ -396,13 +401,19 @@ async function handleAutoMasterySync(env, overrideModels = null) {
 
   console.log(`📊 [MASTERY] Found ${attempts.length} un-analyzed attempts to process.`);
 
-  let models = overrideModels;
-  if (!models || models.length === 0) {
-    models = await fetchModelsFromRemoteConfig(env);
+  let remoteModels = overrideModels;
+  if (!remoteModels || remoteModels.length === 0) {
+    remoteModels = await fetchModelsFromRemoteConfig(env);
   }
-  if (!models || models.length === 0) {
-    models = ["openai/gpt-oss-20b", "gemini-3.5-flash-lite", "openai/gpt-oss-120b", "gemini-3.1-flash-lite"];
-  }
+
+  const groqPriority = ["openai/gpt-oss-120b", "openai/gpt-oss-20b"];
+  const geminiLastFallback = ["gemini-2.5-flash"];
+  const models = [...new Set([
+    ...groqPriority,
+    ...(remoteModels || []),
+    ...geminiLastFallback,
+  ])];
+  console.log("⚡ [MASTERY] Active Execution Priority:", JSON.stringify(models));
 
   // User grouping
   const userGroups = {};
