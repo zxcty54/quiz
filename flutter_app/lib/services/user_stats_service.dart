@@ -122,6 +122,7 @@ class UserStatsService {
     Map<String, dynamic>? wrongQuestionJson,
     String? userSelectedOption,
     String? questionText,
+    String? topicTag,
     int timeTakenSeconds = 0,
     String testType = 'revision',
     bool deferCloudSync = false,
@@ -216,6 +217,11 @@ class UserStatsService {
         'is_analyzed': false,
         'attempted_at': DateTime.now().toUtc().toIso8601String(),
       };
+
+      final String? cleanTopicTag = topicTag?.trim();
+      if (cleanTopicTag != null && cleanTopicTag.isNotEmpty) {
+        cloudRow['topic_tag'] = cleanTopicTag;
+      }
 
       if (deferCloudSync) {
         // CBT submit loop ke liye: row abhi sirf queue me, end me ek saath jayegi

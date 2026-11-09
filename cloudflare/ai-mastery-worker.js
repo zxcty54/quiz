@@ -173,6 +173,13 @@ function chunkArray(array, size) {
 // 🔤 String Normalizer for safe deduplication
 const normalize = (s) => (s ? s.toString().toLowerCase().trim().replace(/\s+/g, " ") : "");
 
+// Tagged traps deduplicate by canonical tag; legacy untagged reports keep the old key.
+function criticalTrapKey(trap) {
+  const topicTag = typeof trap?.topic_tag === "string" ? trap.topic_tag.trim() : "";
+  if (topicTag) return `tag:${normalize(topicTag)}`;
+  return `${normalize(trap?.subject)}_${normalize(trap?.topic)}_${normalize(trap?.subtopic)}`;
+}
+
 // 🧠 Helper: Remote Config fetch
 async function fetchModelsFromRemoteConfig(env) {
   try {
@@ -372,7 +379,7 @@ async function handleAutoMasterySync(env, overrideModels = null) {
 
   // 1️⃣ Fresh un-analyzed attempts uthayenge
   const attemptsRes = await fetch(
-    `${supabaseUrl}/rest/v1/user_question_attempts?is_analyzed=eq.false&select=id,user_id,user_name,question_text,is_correct,time_taken_seconds,attempted_at&order=attempted_at.asc&limit=150`,
+    `${supabaseUrl}/rest/v1/user_question_attempts?is_analyzed=eq.false&select=id,user_id,user_name,question_text,topic_tag,is_correct,time_taken_seconds,attempted_at&order=attempted_at.asc&limit=150`,
     { headers }
   );
 
@@ -435,6 +442,7 @@ async function handleAutoMasterySync(env, overrideModels = null) {
 
       const compactBatchData = batch.map(a => ({
         q: a.question_text ? (a.question_text.length > 400 ? a.question_text.substring(0, 400).trim() : a.question_text.trim()) : '',
+        topic_tag: typeof a.topic_tag === "string" && a.topic_tag.trim() ? a.topic_tag.trim() : null,
         correct: a.is_correct,
         sec: a.time_taken_seconds || 0
       }));
@@ -448,15 +456,20 @@ Analyze this NEW BATCH of ${compactBatchData.length} attempted questions by cand
 
 LIFETIME LEARNING & COGNITIVE RULES:
 1. STRICT SUBJECT INDEPENDENCE: Never merge subjects into combined strings (e.g., do NOT output "History & Polity"). Keep "History", "Polity", "Physics", "Chemistry", "Biology", "Economics", "Quantitative Aptitude" strictly separate.
-1B. SUBJECT CLASSIFICATION FROM QUESTION TEXT (no topic/subject tags are provided — YOU must infer the subject from the question itself):
+1B. CANONICAL TOPIC TAGS:
+   - An attempt may include "topic_tag" in the approved subject.domain.topic format. When present, it is the exact canonical topic identity; reuse it verbatim to group related attempts. Never invent, rename, split, or substitute a tag.
+   - For a trap supported by tagged attempts, copy the exact input tag into "critical_traps_detailed.topic_tag". Do not create a more detailed tag from a fact in the question or explanation.
+   - If no input attempt has a topic_tag for a trap, omit topic_tag; do not generate free-text tags.
+   - Topic and subtopic are display labels only. Keep mastery grouping at the canonical tag's granularity.
+1C. SUBJECT CLASSIFICATION FROM QUESTION TEXT (infer the subject from question_text; topic_tag identifies a topic only):
    - The subject you infer MUST be one of ONLY these: "Physics", "Chemistry", "Biology", "Polity", "History", "Geography", "Economics", "Quantitative Aptitude", "Reasoning", "English", "Bihar Special", "Static GK", "Current Affairs".
-   - BIHAR SPECIAL RULE (VERY IMPORTANT): Any question about the state of Bihar — its history (Magadha, Maurya & Pataliputra, Pala dynasty, Sher Shah, 1857 and the freedom movement in Bihar), geography (rivers, districts, soil, climate of Bihar), polity and governance of Bihar, Bihar economy, art and culture (Madhubani painting, folk songs, festivals of Bihar), society (castes, tribes, languages of Bihar), or famous personalities of Bihar — MUST be classified as subject "Bihar Special". NEVER put a Bihar question into History, Geography or Polity, even if it looks like general history or geography.
+   - BIHAR SPECIAL RULE (VERY IMPORTANT): Any question about the state of Bihar — its history (Magadha, Maurya & Pataliputra, Pala dynasty, Sher Shah, 1857 and the freedom movement in Bihar), geography (rivers, districts, soil, climate of Bihar), polity and governance of Bihar, Bihar economy, art and culture (Madhubani painting, folk songs, festivals of Bihar), society (castes, tribes, languages of Bihar), or famous personalities of Bihar — MUST be classified as subject "Bihar Special". NEVER put a Bihar question into History, Geography or Polity based only on its canonical tag prefix; keep its topic_tag unchanged.
    - If a question mentions Bihar, Patna, or any Bihar district, place or person, prefer "Bihar Special" over the generic subject.
-   - Keep topic names SHORT and CONSISTENT (2-4 words, e.g. "Bihar Art Culture", "Magadha Empire", "Ray Optics"), so the same topic is recognised again in future batches. For Bihar questions in critical_traps_detailed, always use subject "Bihar Special" with such short topic names.
+   - Keep display topic names SHORT and CONSISTENT (2-4 words, e.g. "Bihar Art Culture", "Magadha Empire", "Ray Optics"). For Bihar questions in critical_traps_detailed, use subject "Bihar Special" while preserving the exact topic_tag.
    - For subject_analysis, include EVERY subject found in this NEW BATCH, even if it has only one attempt.
    - For each subject, return batch_attempts and batch_correct for this NEW BATCH ONLY. Count each input attempt exactly once; the sum of batch_attempts across subjects MUST equal ${compactBatchData.length}.
    - Calculate accuracy_pct as round(batch_correct / batch_attempts * 100). Do NOT use lifetime accuracy for this field; the Worker merges lifetime counts deterministically.
-   - Question text may be in Hindi or English; classify each new attempt from question_text only. New attempts carry no subject, topic, exam, or chapter tags; the prior report is lifetime context, not labels for new attempts.
+   - Question text may be in Hindi or English; infer subject from question_text. topic_tag is only a canonical topic label and must not determine or alter the subject. The prior report is lifetime context, not labels for new attempts.
 2. TIME TELEMETRY & BEHAVIOR:
    Analyze "sec" for attempts:
    - Wrong attempt < 20s: "Impulsive Guesswork / Rushed Trap"
@@ -464,7 +477,8 @@ LIFETIME LEARNING & COGNITIVE RULES:
    - Correct attempt > 100s: "Slow Accuracy (Needs Speed Drill)"
 3. PERSISTENT WEAK TRAPS:
    - Must have at least 2 attempts AND at least 2 repeated errors.
-   - Include "subject", "topic", and "subtopic".
+   - Include "subject", "topic", and "subtopic"; include "topic_tag" when a canonical tag exists for that trap.
+   - Copy topic_tag verbatim from an input attempt and group tagged attempts by exact topic_tag, not by a newly generated micro-topic.
    - If candidate achieved >= 75% accuracy on a topic, omit it (mastered).
 4. AI HEADLINE & VERDICT:
    - "ai_headline": 6-10 words punchy summary of learning state.
@@ -485,6 +499,7 @@ OUTPUT STRICT VALID JSON ONLY:
       "subject": "Physics",
       "topic": "Optics",
       "subtopic": "Ray Optics",
+      "topic_tag": "physics.optics.light_and_optics",
       "accuracy_pct": 30,
       "attempts": 6,
       "repeated_errors": 4
@@ -511,7 +526,7 @@ OUTPUT STRICT VALID JSON ONLY:
 CANDIDATE'S LIFETIME SAVED PROGRESS (DO NOT ERASE):
 ${currentReport ? JSON.stringify(currentReport) : "No previous record found. Initial baseline batch."}
 
-NEW BATCH ATTEMPTS (Contains text, correctness & time in seconds):
+NEW BATCH ATTEMPTS (question text, optional canonical topic_tag, correctness & time in seconds):
 ${JSON.stringify(compactBatchData)}
 `;
 
@@ -635,6 +650,26 @@ ${JSON.stringify(compactBatchData)}
 
       const updatedReport = parsedReport;
 
+      // Accept only canonical tags present in this batch; never persist AI-invented tags.
+      const knownTopicTags = new Set(
+        compactBatchData
+          .map(item => item.topic_tag)
+          .filter(tag => typeof tag === "string" && tag.trim())
+          .map(tag => tag.trim())
+      );
+      const reportedTraps = Array.isArray(updatedReport.critical_traps_detailed)
+        ? updatedReport.critical_traps_detailed.filter(trap => trap && typeof trap === "object" && !Array.isArray(trap))
+        : [];
+      updatedReport.critical_traps_detailed = reportedTraps;
+      for (const trap of reportedTraps) {
+        const proposedTag = typeof trap.topic_tag === "string" ? trap.topic_tag.trim() : "";
+        if (proposedTag && knownTopicTags.has(proposedTag)) {
+          trap.topic_tag = proposedTag;
+        } else {
+          delete trap.topic_tag;
+        }
+      }
+
       // Subject accuracy chips use actual per-subject counts from this batch,
       // merged with the stored lifetime counts (not the whole batch per subject).
       updatedReport.subject_analysis = mergeSubjectAnalysis(
@@ -672,13 +707,11 @@ ${JSON.stringify(compactBatchData)}
       // 🛡️ Critical Traps: Normalized Deduplication & Persistence until Mastered (>= 75%)
       if (Array.isArray(currentReport?.critical_traps_detailed)) {
         const newTrapKeys = new Set(
-          (updatedReport.critical_traps_detailed || []).map(
-            t => `${normalize(t.subject)}_${normalize(t.topic)}_${normalize(t.subtopic)}`
-          )
+          (updatedReport.critical_traps_detailed || []).map(criticalTrapKey)
         );
 
         for (const oldTrap of currentReport.critical_traps_detailed) {
-          const trapKey = `${normalize(oldTrap.subject)}_${normalize(oldTrap.topic)}_${normalize(oldTrap.subtopic)}`;
+          const trapKey = criticalTrapKey(oldTrap);
           const trapAcc = oldTrap.accuracy_pct ?? 0;
 
           // Agar naye report me missing hai aur master nahi hua (<75%), safely retain karein

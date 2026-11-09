@@ -448,6 +448,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
         'time_spent': _questionTimers[i] ?? 0,
         'explanation': q.explanation,
         'subtopic': detectedConcept,
+        'topic_tag': q.topicTag,
       });
 
       // Only attempted questions count here
@@ -477,6 +478,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             chapterName: widget.testTitle,
             chapterPath: widget.subFolder,
             questionText: qTextClean,
+            topicTag: q.topicTag,
             timeTakenSeconds: timeSpent,
             testType: currentTestType,
             deferCloudSync: true,
@@ -492,6 +494,7 @@ class _SectionalCbtScreenState extends State<SectionalCbtScreen> {
             chapterName: widget.testTitle,
             chapterPath: widget.subFolder,
             questionText: qTextClean,
+            topicTag: q.topicTag,
             timeTakenSeconds: timeSpent,
             testType: currentTestType,
             deferCloudSync: true,

@@ -10,6 +10,7 @@ class Question {
   final String explanation;
   final String? ee;
   final String? eh;
+  final String? topicTag;
 
   Question({
     required this.qe,
@@ -23,6 +24,7 @@ class Question {
     required this.explanation,
     this.ee,
     this.eh,
+    this.topicTag,
   });
 
   String getText(bool isHindi) {
@@ -144,6 +146,8 @@ class Question {
     String exp = json['e'] ?? json['explanation'] ?? '';
     String? expE = json['ee'];
     String? expH = json['eh'];
+    final dynamic rawTopicTag = json['topic_tag'] ?? json['topicTag'];
+    final String? parsedTopicTag = rawTopicTag?.toString().trim();
 
     return Question(
       qe: mainQe,
@@ -157,6 +161,7 @@ class Question {
       explanation: exp,
       ee: expE,
       eh: expH,
+      topicTag: parsedTopicTag?.isNotEmpty == true ? parsedTopicTag : null,
     );
   }
 
@@ -175,6 +180,7 @@ class Question {
       'e': explanation,
       'ee': ee,
       'eh': eh,
+      'topic_tag': topicTag,
     };
   }
 }
